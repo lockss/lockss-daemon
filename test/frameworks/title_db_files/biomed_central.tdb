@@ -1,0 +1,434 @@
+# @formatString=x,S,P,j,t,p,%,%,%
+# @namePrefix=BMC
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 42	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147
+	volume_name=42
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 43	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=43
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 44	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=44
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 45	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=45
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 46	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=46
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 47	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=47
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 48	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=48
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 49	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=49
+	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 50	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=50
+	exists	BioMed Central	AIDS Research and Therapy	AIDS Research and Therapy Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=1
+	exists	BioMed Central	AIDS Research and Therapy	AIDS Research and Therapy Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=2
+	exists	BioMed Central	AIDS Research and Therapy	AIDS Research and Therapy Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=3
+	exists	BioMed Central	AIDS Research and Therapy	AIDS Research and Therapy Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=4
+	exists	BioMed Central	AIDS Research and Therapy	AIDS Research and Therapy Volume 5	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=5
+	exists	BioMed Central	Algorithms for Molecular Biology	Algorithms for Molecular Biology Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=1
+	exists	BioMed Central	Algorithms for Molecular Biology	Algorithms for Molecular Biology Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=2
+	exists	BioMed Central	Algorithms for Molecular Biology	Algorithms for Molecular Biology Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=3
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=1
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=2
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=3
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=4
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 5	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=5
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 6	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=6
+	exists	BioMed Central	Annals of Clinical Microbiology and Antimicrobials	Annals of Clinical Microbiology and Antimicrobials Volume 7	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=7
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=1
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=2
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=3
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=4
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 5	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=5
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 6	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=6
+	exists	BioMed Central	Annals of General Psychiatry	Annals of General Psychiatry Volume 7	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=7
+	exists	BioMed Central	Annals of Surgical Innovation and Research	Annals of Surgical Innovation and Research Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.asir-journal.com/	journal_issn=1750-1164	volume_name=1
+	exists	BioMed Central	Australia and New Zealand Health Policy	Australia and New Zealand Health Policy Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=1
+	exists	BioMed Central	Australia and New Zealand Health Policy	Australia and New Zealand Health Policy Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=2
+	exists	BioMed Central	Australia and New Zealand Health Policy	Australia and New Zealand Health Policy Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=3
+	exists	BioMed Central	Australia and New Zealand Health Policy	Australia and New Zealand Health Policy Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=4
+	exists	BioMed Central	Behavioral and Brain Functions	Behavioral and Brain Functions Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=1
+	exists	BioMed Central	Behavioral and Brain Functions	Behavioral and Brain Functions Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=2
+	exists	BioMed Central	Behavioral and Brain Functions	Behavioral and Brain Functions Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=3
+	exists	BioMed Central	Behavioral and Brain Functions	Behavioral and Brain Functions Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=4
+	exists	BioMed Central	Beilstein Journal of Organic Chemistry	Beilstein Journal of Organic Chemistry Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=1
+	exists	BioMed Central	Beilstein Journal of Organic Chemistry	Beilstein Journal of Organic Chemistry Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=2
+	exists	BioMed Central	Beilstein Journal of Organic Chemistry	Beilstein Journal of Organic Chemistry Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=3
+	exists	BioMed Central	Beilstein Journal of Organic Chemistry	Beilstein Journal of Organic Chemistry Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=4
+	exists	BioMed Central	Biology Direct	Biology Direct Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=1
+	exists	BioMed Central	Biology Direct	Biology Direct Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=2
+	exists	BioMed Central	Biology Direct	Biology Direct Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=3
+	exists	BioMed Central	BioMagnetic Research and Technology	BioMagnetic Research and Technology Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=1
+	exists	BioMed Central	BioMagnetic Research and Technology	BioMagnetic Research and Technology Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=2
+	exists	BioMed Central	BioMagnetic Research and Technology	BioMagnetic Research and Technology Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=3
+	exists	BioMed Central	BioMagnetic Research and Technology	BioMagnetic Research and Technology Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=4
+	exists	BioMed Central	BioMagnetic Research and Technology	BioMagnetic Research and Technology Volume 5	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=5
+	exists	BioMed Central	BioMagnetic Research and Technology	BioMagnetic Research and Technology Volume 6	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=6
+	exists	BioMed Central	Biomedical Digital Libraries	Biomedical Digital Libraries Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=1
+	exists	BioMed Central	Biomedical Digital Libraries	Biomedical Digital Libraries Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=2
+	exists	BioMed Central	Biomedical Digital Libraries	Biomedical Digital Libraries Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=3
+	exists	BioMed Central	Biomedical Digital Libraries	Biomedical Digital Libraries Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=4
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=1
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=2
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 3	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=3
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 4	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=4
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 5	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=5
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 6	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=6
+	exists	BioMed Central	BioMedical Engineering OnLine	BioMedical Engineering OnLine Volume 7	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=7
+	exists	BioMed Central	BioPsychoSocial Medicine	BioPsychoSocial Medicine Volume 1	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=1
+	exists	BioMed Central	BioPsychoSocial Medicine	BioPsychoSocial Medicine Volume 2	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=2
+	released	BioMed Central	BMC Anesthesiology	BMC Anesthesiology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=1
+	released	BioMed Central	BMC Anesthesiology	BMC Anesthesiology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=2
+	released	BioMed Central	BMC Anesthesiology	BMC Anesthesiology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=3
+	released	BioMed Central	BMC Anesthesiology	BMC Anesthesiology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=4
+	released	BioMed Central	BMC Anesthesiology	BMC Anesthesiology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=5
+	released	BioMed Central	BMC Anesthesiology	BMC Anesthesiology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=6
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=1
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=2
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=3
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=4
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=5
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=6
+	released	BioMed Central	BMC Biochemistry	BMC Biochemistry Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=7
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=1
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=2
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=3
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=4
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=5
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=6
+	released	BioMed Central	BMC Bioinformatics	BMC Bioinformatics Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=7
+	released	BioMed Central	BMC Biology	BMC Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=1
+	released	BioMed Central	BMC Biology	BMC Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=2
+	released	BioMed Central	BMC Biology	BMC Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=3
+	released	BioMed Central	BMC Biology	BMC Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=4
+	released	BioMed Central	BMC Biotechnology	BMC Biotechnology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=1
+	released	BioMed Central	BMC Biotechnology	BMC Biotechnology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=2
+	released	BioMed Central	BMC Biotechnology	BMC Biotechnology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=3
+	released	BioMed Central	BMC Biotechnology	BMC Biotechnology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=4
+	released	BioMed Central	BMC Biotechnology	BMC Biotechnology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=5
+	released	BioMed Central	BMC Biotechnology	BMC Biotechnology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=6
+	released	BioMed Central	BMC Blood Disorders	BMC Blood Disorders Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=1
+	released	BioMed Central	BMC Blood Disorders	BMC Blood Disorders Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=2
+	released	BioMed Central	BMC Blood Disorders	BMC Blood Disorders Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=3
+	released	BioMed Central	BMC Blood Disorders	BMC Blood Disorders Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=4
+	released	BioMed Central	BMC Blood Disorders	BMC Blood Disorders Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=5
+	released	BioMed Central	BMC Blood Disorders	BMC Blood Disorders Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=6
+	released	BioMed Central	BMC Cancer	BMC Cancer Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=1
+	released	BioMed Central	BMC Cancer	BMC Cancer Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=2
+	released	BioMed Central	BMC Cancer	BMC Cancer Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=3
+	released	BioMed Central	BMC Cancer	BMC Cancer Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=4
+	released	BioMed Central	BMC Cancer	BMC Cancer Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=5
+	released	BioMed Central	BMC Cancer	BMC Cancer Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=6
+	released	BioMed Central	BMC Cardiovascular Disorders	BMC Cardiovascular Disorders Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=1
+	released	BioMed Central	BMC Cardiovascular Disorders	BMC Cardiovascular Disorders Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=2
+	released	BioMed Central	BMC Cardiovascular Disorders	BMC Cardiovascular Disorders Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=3
+	released	BioMed Central	BMC Cardiovascular Disorders	BMC Cardiovascular Disorders Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=4
+	released	BioMed Central	BMC Cardiovascular Disorders	BMC Cardiovascular Disorders Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=5
+	released	BioMed Central	BMC Cardiovascular Disorders	BMC Cardiovascular Disorders Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=6
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=1
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=2
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=3
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=4
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=5
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=6
+	released	BioMed Central	BMC Cell Biology	BMC Cell Biology Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=7
+	released	BioMed Central	BMC Chemical Biology	BMC Chemical Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=1
+	released	BioMed Central	BMC Chemical Biology	BMC Chemical Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=2
+	released	BioMed Central	BMC Chemical Biology	BMC Chemical Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=3
+	released	BioMed Central	BMC Chemical Biology	BMC Chemical Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=4
+	released	BioMed Central	BMC Chemical Biology	BMC Chemical Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=5
+	released	BioMed Central	BMC Chemical Biology	BMC Chemical Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=6
+	released	BioMed Central	BMC Clinical Pathology	BMC Clinical Pathology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=1
+	released	BioMed Central	BMC Clinical Pathology	BMC Clinical Pathology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=2
+	released	BioMed Central	BMC Clinical Pathology	BMC Clinical Pathology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=3
+	released	BioMed Central	BMC Clinical Pathology	BMC Clinical Pathology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=4
+	released	BioMed Central	BMC Clinical Pathology	BMC Clinical Pathology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=5
+	released	BioMed Central	BMC Clinical Pathology	BMC Clinical Pathology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=6
+	released	BioMed Central	BMC Clinical Pharmacology	BMC Clinical Pharmacology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=1
+	released	BioMed Central	BMC Clinical Pharmacology	BMC Clinical Pharmacology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=2
+	released	BioMed Central	BMC Clinical Pharmacology	BMC Clinical Pharmacology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=3
+	released	BioMed Central	BMC Clinical Pharmacology	BMC Clinical Pharmacology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=4
+	released	BioMed Central	BMC Clinical Pharmacology	BMC Clinical Pharmacology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=5
+	released	BioMed Central	BMC Clinical Pharmacology	BMC Clinical Pharmacology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=6
+	released	BioMed Central	BMC Complementary and Alternative Medicine	BMC Complementary and Alternative Medicine Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=1
+	released	BioMed Central	BMC Complementary and Alternative Medicine	BMC Complementary and Alternative Medicine Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=2
+	released	BioMed Central	BMC Complementary and Alternative Medicine	BMC Complementary and Alternative Medicine Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=3
+	released	BioMed Central	BMC Complementary and Alternative Medicine	BMC Complementary and Alternative Medicine Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=4
+	released	BioMed Central	BMC Complementary and Alternative Medicine	BMC Complementary and Alternative Medicine Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=5
+	released	BioMed Central	BMC Complementary and Alternative Medicine	BMC Complementary and Alternative Medicine Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=6
+	released	BioMed Central	BMC Dermatology	BMC Dermatology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=1
+	released	BioMed Central	BMC Dermatology	BMC Dermatology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=2
+	released	BioMed Central	BMC Dermatology	BMC Dermatology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=3
+	released	BioMed Central	BMC Dermatology	BMC Dermatology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=4
+	released	BioMed Central	BMC Dermatology	BMC Dermatology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=5
+	released	BioMed Central	BMC Dermatology	BMC Dermatology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=6
+	released	BioMed Central	BMC Developmental Biology	BMC Developmental Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=1
+	released	BioMed Central	BMC Developmental Biology	BMC Developmental Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=2
+	released	BioMed Central	BMC Developmental Biology	BMC Developmental Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=3
+	released	BioMed Central	BMC Developmental Biology	BMC Developmental Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=4
+	released	BioMed Central	BMC Developmental Biology	BMC Developmental Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=5
+	released	BioMed Central	BMC Developmental Biology	BMC Developmental Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=6
+	released	BioMed Central	BMC Ear, Nose and Throat Disorders	BMC Ear, Nose and Throat Disorders Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=1
+	released	BioMed Central	BMC Ear, Nose and Throat Disorders	BMC Ear, Nose and Throat Disorders Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=2
+	released	BioMed Central	BMC Ear, Nose and Throat Disorders	BMC Ear, Nose and Throat Disorders Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=3
+	released	BioMed Central	BMC Ear, Nose and Throat Disorders	BMC Ear, Nose and Throat Disorders Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=4
+	released	BioMed Central	BMC Ear, Nose and Throat Disorders	BMC Ear, Nose and Throat Disorders Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=5
+	released	BioMed Central	BMC Ear, Nose and Throat Disorders	BMC Ear, Nose and Throat Disorders Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=6
+	released	BioMed Central	BMC Ecology	BMC Ecology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=1
+	released	BioMed Central	BMC Ecology	BMC Ecology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=2
+	released	BioMed Central	BMC Ecology	BMC Ecology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=3
+	released	BioMed Central	BMC Ecology	BMC Ecology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=4
+	released	BioMed Central	BMC Ecology	BMC Ecology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=5
+	released	BioMed Central	BMC Ecology	BMC Ecology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=6
+	released	BioMed Central	BMC Emergency Medicine	BMC Emergency Medicine Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=1
+	released	BioMed Central	BMC Emergency Medicine	BMC Emergency Medicine Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=2
+	released	BioMed Central	BMC Emergency Medicine	BMC Emergency Medicine Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=3
+	released	BioMed Central	BMC Emergency Medicine	BMC Emergency Medicine Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=4
+	released	BioMed Central	BMC Emergency Medicine	BMC Emergency Medicine Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=5
+	released	BioMed Central	BMC Emergency Medicine	BMC Emergency Medicine Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=6
+	released	BioMed Central	BMC Endocrine Disorders	BMC Endocrine Disorders Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=1
+	released	BioMed Central	BMC Endocrine Disorders	BMC Endocrine Disorders Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=2
+	released	BioMed Central	BMC Endocrine Disorders	BMC Endocrine Disorders Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=3
+	released	BioMed Central	BMC Endocrine Disorders	BMC Endocrine Disorders Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=4
+	released	BioMed Central	BMC Endocrine Disorders	BMC Endocrine Disorders Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=5
+	released	BioMed Central	BMC Endocrine Disorders	BMC Endocrine Disorders Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=6
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=1
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=2
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=3
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=4
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=5
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=6
+	released	BioMed Central	BMC Evolutionary Biology	BMC Evolutionary Biology Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=7
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=1
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=2
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=3
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=4
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=5
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=6
+	released	BioMed Central	BMC Family Practice	BMC Family Practice Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=7
+	released	BioMed Central	BMC Gastroenterology	BMC Gastroenterology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=1
+	released	BioMed Central	BMC Gastroenterology	BMC Gastroenterology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=2
+	released	BioMed Central	BMC Gastroenterology	BMC Gastroenterology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=3
+	released	BioMed Central	BMC Gastroenterology	BMC Gastroenterology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=4
+	released	BioMed Central	BMC Gastroenterology	BMC Gastroenterology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=5
+	released	BioMed Central	BMC Gastroenterology	BMC Gastroenterology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=6
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=1
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=2
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=3
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=4
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=5
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=6
+	released	BioMed Central	BMC Genetics	BMC Genetics Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=7
+	released	BioMed Central	BMC Genomics	BMC Genomics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=1
+	released	BioMed Central	BMC Genomics	BMC Genomics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=2
+	released	BioMed Central	BMC Genomics	BMC Genomics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=3
+	released	BioMed Central	BMC Genomics	BMC Genomics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=4
+	released	BioMed Central	BMC Genomics	BMC Genomics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=5
+	released	BioMed Central	BMC Genomics	BMC Genomics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=6
+	released	BioMed Central	BMC Geriatrics	BMC Geriatrics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=1
+	released	BioMed Central	BMC Geriatrics	BMC Geriatrics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=2
+	released	BioMed Central	BMC Geriatrics	BMC Geriatrics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=3
+	released	BioMed Central	BMC Geriatrics	BMC Geriatrics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=4
+	released	BioMed Central	BMC Geriatrics	BMC Geriatrics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=5
+	released	BioMed Central	BMC Geriatrics	BMC Geriatrics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=6
+	released	BioMed Central	BMC Health Services Research	BMC Health Services Research Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=1
+	released	BioMed Central	BMC Health Services Research	BMC Health Services Research Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=2
+	released	BioMed Central	BMC Health Services Research	BMC Health Services Research Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=3
+	released	BioMed Central	BMC Health Services Research	BMC Health Services Research Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=4
+	released	BioMed Central	BMC Health Services Research	BMC Health Services Research Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=5
+	released	BioMed Central	BMC Health Services Research	BMC Health Services Research Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=6
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=1
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=2
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=3
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=4
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=5
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=6
+	released	BioMed Central	BMC Immunology	BMC Immunology Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=7
+	released	BioMed Central	BMC Infectious Diseases	BMC Infectious Diseases Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=1
+	released	BioMed Central	BMC Infectious Diseases	BMC Infectious Diseases Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=2
+	released	BioMed Central	BMC Infectious Diseases	BMC Infectious Diseases Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=3
+	released	BioMed Central	BMC Infectious Diseases	BMC Infectious Diseases Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=4
+	released	BioMed Central	BMC Infectious Diseases	BMC Infectious Diseases Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=5
+	released	BioMed Central	BMC Infectious Diseases	BMC Infectious Diseases Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=6
+	released	BioMed Central	BMC International Health and Human Rights	BMC International Health and Human Rights Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=1
+	released	BioMed Central	BMC International Health and Human Rights	BMC International Health and Human Rights Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=2
+	released	BioMed Central	BMC International Health and Human Rights	BMC International Health and Human Rights Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=3
+	released	BioMed Central	BMC International Health and Human Rights	BMC International Health and Human Rights Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=4
+	released	BioMed Central	BMC International Health and Human Rights	BMC International Health and Human Rights Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=5
+	released	BioMed Central	BMC International Health and Human Rights	BMC International Health and Human Rights Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=6
+	released	BioMed Central	BMC Medical Education	BMC Medical Education Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=1
+	released	BioMed Central	BMC Medical Education	BMC Medical Education Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=2
+	released	BioMed Central	BMC Medical Education	BMC Medical Education Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=3
+	released	BioMed Central	BMC Medical Education	BMC Medical Education Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=4
+	released	BioMed Central	BMC Medical Education	BMC Medical Education Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=5
+	released	BioMed Central	BMC Medical Education	BMC Medical Education Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=6
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=1
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=2
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=3
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=4
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=5
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=6
+	released	BioMed Central	BMC Medical Ethics	BMC Medical Ethics Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=7
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=1
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=2
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=3
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=4
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=5
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=6
+	released	BioMed Central	BMC Medical Genetics	BMC Medical Genetics Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=7
+	released	BioMed Central	BMC Medical Imaging	BMC Medical Imaging Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=1
+	released	BioMed Central	BMC Medical Imaging	BMC Medical Imaging Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=2
+	released	BioMed Central	BMC Medical Imaging	BMC Medical Imaging Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=3
+	released	BioMed Central	BMC Medical Imaging	BMC Medical Imaging Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=4
+	released	BioMed Central	BMC Medical Imaging	BMC Medical Imaging Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=5
+	released	BioMed Central	BMC Medical Imaging	BMC Medical Imaging Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=6
+	released	BioMed Central	BMC Medical Informatics and Decision Making	BMC Medical Informatics and Decision Making Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=1
+	released	BioMed Central	BMC Medical Informatics and Decision Making	BMC Medical Informatics and Decision Making Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=2
+	released	BioMed Central	BMC Medical Informatics and Decision Making	BMC Medical Informatics and Decision Making Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=3
+	released	BioMed Central	BMC Medical Informatics and Decision Making	BMC Medical Informatics and Decision Making Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=4
+	released	BioMed Central	BMC Medical Informatics and Decision Making	BMC Medical Informatics and Decision Making Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=5
+	released	BioMed Central	BMC Medical Informatics and Decision Making	BMC Medical Informatics and Decision Making Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=6
+	released	BioMed Central	BMC Medical Research Methodology	BMC Medical Research Methodology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=1
+	released	BioMed Central	BMC Medical Research Methodology	BMC Medical Research Methodology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=2
+	released	BioMed Central	BMC Medical Research Methodology	BMC Medical Research Methodology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=3
+	released	BioMed Central	BMC Medical Research Methodology	BMC Medical Research Methodology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=4
+	released	BioMed Central	BMC Medical Research Methodology	BMC Medical Research Methodology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=5
+	released	BioMed Central	BMC Medical Research Methodology	BMC Medical Research Methodology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=6
+	released	BioMed Central	BMC Medicine	BMC Medicine Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=1
+	released	BioMed Central	BMC Medicine	BMC Medicine Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=2
+	released	BioMed Central	BMC Medicine	BMC Medicine Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=3
+	released	BioMed Central	BMC Medicine	BMC Medicine Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=4
+	released	BioMed Central	BMC Microbiology	BMC Microbiology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=1
+	released	BioMed Central	BMC Microbiology	BMC Microbiology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=2
+	released	BioMed Central	BMC Microbiology	BMC Microbiology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=3
+	released	BioMed Central	BMC Microbiology	BMC Microbiology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=4
+	released	BioMed Central	BMC Microbiology	BMC Microbiology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=5
+	released	BioMed Central	BMC Microbiology	BMC Microbiology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=6
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=1
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=2
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=3
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=4
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=5
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=6
+	released	BioMed Central	BMC Molecular Biology	BMC Molecular Biology Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=7
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=1
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=2
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=3
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=4
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=5
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=6
+	released	BioMed Central	BMC Musculoskeletal Disorders	BMC Musculoskeletal Disorders Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=7
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=1
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=2
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=3
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=4
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=5
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=6
+	released	BioMed Central	BMC Nephrology	BMC Nephrology Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=7
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=1
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=2
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=3
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=4
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=5
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=6
+	released	BioMed Central	BMC Neurology	BMC Neurology Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=7
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=1
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=2
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=3
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=4
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=5
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=6
+	released	BioMed Central	BMC Neuroscience	BMC Neuroscience Volume 7	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=7
+	released	BioMed Central	BMC Nuclear Medicine	BMC Nuclear Medicine Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=1
+	released	BioMed Central	BMC Nuclear Medicine	BMC Nuclear Medicine Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=2
+	released	BioMed Central	BMC Nuclear Medicine	BMC Nuclear Medicine Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=3
+	released	BioMed Central	BMC Nuclear Medicine	BMC Nuclear Medicine Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=4
+	released	BioMed Central	BMC Nuclear Medicine	BMC Nuclear Medicine Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=5
+	released	BioMed Central	BMC Nuclear Medicine	BMC Nuclear Medicine Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=6
+	released	BioMed Central	BMC Nursing	BMC Nursing Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=1
+	released	BioMed Central	BMC Nursing	BMC Nursing Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=2
+	released	BioMed Central	BMC Nursing	BMC Nursing Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=3
+	released	BioMed Central	BMC Nursing	BMC Nursing Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=4
+	released	BioMed Central	BMC Nursing	BMC Nursing Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=5
+	released	BioMed Central	BMC Ophthalmology	BMC Ophthalmology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=1
+	released	BioMed Central	BMC Ophthalmology	BMC Ophthalmology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=2
+	released	BioMed Central	BMC Ophthalmology	BMC Ophthalmology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=3
+	released	BioMed Central	BMC Ophthalmology	BMC Ophthalmology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=4
+	released	BioMed Central	BMC Ophthalmology	BMC Ophthalmology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=5
+	released	BioMed Central	BMC Ophthalmology	BMC Ophthalmology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=6
+	released	BioMed Central	BMC Oral Health	BMC Oral Health Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=1
+	released	BioMed Central	BMC Oral Health	BMC Oral Health Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=2
+	released	BioMed Central	BMC Oral Health	BMC Oral Health Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=3
+	released	BioMed Central	BMC Oral Health	BMC Oral Health Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=4
+	released	BioMed Central	BMC Oral Health	BMC Oral Health Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=5
+	released	BioMed Central	BMC Oral Health	BMC Oral Health Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=6
+	released	BioMed Central	BMC Palliative Care	BMC Palliative Care Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=1
+	released	BioMed Central	BMC Palliative Care	BMC Palliative Care Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=2
+	released	BioMed Central	BMC Palliative Care	BMC Palliative Care Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=3
+	released	BioMed Central	BMC Palliative Care	BMC Palliative Care Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=4
+	released	BioMed Central	BMC Palliative Care	BMC Palliative Care Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=5
+	released	BioMed Central	BMC Pediatrics	BMC Pediatrics Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=1
+	released	BioMed Central	BMC Pediatrics	BMC Pediatrics Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=2
+	released	BioMed Central	BMC Pediatrics	BMC Pediatrics Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=3
+	released	BioMed Central	BMC Pediatrics	BMC Pediatrics Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=4
+	released	BioMed Central	BMC Pediatrics	BMC Pediatrics Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=5
+	released	BioMed Central	BMC Pediatrics	BMC Pediatrics Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=6
+	released	BioMed Central	BMC Pharmacology	BMC Pharmacology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=1
+	released	BioMed Central	BMC Pharmacology	BMC Pharmacology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=2
+	released	BioMed Central	BMC Pharmacology	BMC Pharmacology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=3
+	released	BioMed Central	BMC Pharmacology	BMC Pharmacology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=4
+	released	BioMed Central	BMC Pharmacology	BMC Pharmacology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=5
+	released	BioMed Central	BMC Pharmacology	BMC Pharmacology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=6
+	released	BioMed Central	BMC Physiology	BMC Physiology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=1
+	released	BioMed Central	BMC Physiology	BMC Physiology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=2
+	released	BioMed Central	BMC Physiology	BMC Physiology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=3
+	released	BioMed Central	BMC Physiology	BMC Physiology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=4
+	released	BioMed Central	BMC Physiology	BMC Physiology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=5
+	released	BioMed Central	BMC Physiology	BMC Physiology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=6
+	released	BioMed Central	BMC Plant Biology	BMC Plant Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=1
+	released	BioMed Central	BMC Plant Biology	BMC Plant Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=2
+	released	BioMed Central	BMC Plant Biology	BMC Plant Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=3
+	released	BioMed Central	BMC Plant Biology	BMC Plant Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=4
+	released	BioMed Central	BMC Plant Biology	BMC Plant Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=5
+	released	BioMed Central	BMC Plant Biology	BMC Plant Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=6
+	released	BioMed Central	BMC Pregnancy and Childbirth	BMC Pregnancy and Childbirth Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=1
+	released	BioMed Central	BMC Pregnancy and Childbirth	BMC Pregnancy and Childbirth Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=2
+	released	BioMed Central	BMC Pregnancy and Childbirth	BMC Pregnancy and Childbirth Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=3
+	released	BioMed Central	BMC Pregnancy and Childbirth	BMC Pregnancy and Childbirth Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=4
+	released	BioMed Central	BMC Pregnancy and Childbirth	BMC Pregnancy and Childbirth Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=5
+	released	BioMed Central	BMC Pregnancy and Childbirth	BMC Pregnancy and Childbirth Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=6
+	released	BioMed Central	BMC Psychiatry	BMC Psychiatry Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=1
+	released	BioMed Central	BMC Psychiatry	BMC Psychiatry Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=2
+	released	BioMed Central	BMC Psychiatry	BMC Psychiatry Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=3
+	released	BioMed Central	BMC Psychiatry	BMC Psychiatry Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=4
+	released	BioMed Central	BMC Psychiatry	BMC Psychiatry Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=5
+	released	BioMed Central	BMC Psychiatry	BMC Psychiatry Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=6
+	released	BioMed Central	BMC Public Health	BMC Public Health Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=1
+	released	BioMed Central	BMC Public Health	BMC Public Health Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=2
+	released	BioMed Central	BMC Public Health	BMC Public Health Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=3
+	released	BioMed Central	BMC Public Health	BMC Public Health Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=4
+	released	BioMed Central	BMC Public Health	BMC Public Health Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=5
+	released	BioMed Central	BMC Public Health	BMC Public Health Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=6
+	released	BioMed Central	BMC Pulmonary Medicine	BMC Pulmonary Medicine Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=1
+	released	BioMed Central	BMC Pulmonary Medicine	BMC Pulmonary Medicine Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=2
+	released	BioMed Central	BMC Pulmonary Medicine	BMC Pulmonary Medicine Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=3
+	released	BioMed Central	BMC Pulmonary Medicine	BMC Pulmonary Medicine Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=4
+	released	BioMed Central	BMC Pulmonary Medicine	BMC Pulmonary Medicine Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=5
+	released	BioMed Central	BMC Pulmonary Medicine	BMC Pulmonary Medicine Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=6
+	released	BioMed Central	BMC Structural Biology	BMC Structural Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=1
+	released	BioMed Central	BMC Structural Biology	BMC Structural Biology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=2
+	released	BioMed Central	BMC Structural Biology	BMC Structural Biology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=3
+	released	BioMed Central	BMC Structural Biology	BMC Structural Biology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=4
+	released	BioMed Central	BMC Structural Biology	BMC Structural Biology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=5
+	released	BioMed Central	BMC Structural Biology	BMC Structural Biology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=6
+	released	BioMed Central	BMC Surgery	BMC Surgery Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=1
+	released	BioMed Central	BMC Surgery	BMC Surgery Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=2
+	released	BioMed Central	BMC Surgery	BMC Surgery Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=3
+	released	BioMed Central	BMC Surgery	BMC Surgery Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=4
+	released	BioMed Central	BMC Surgery	BMC Surgery Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=5
+	released	BioMed Central	BMC Surgery	BMC Surgery Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=6
+	released	BioMed Central	BMC Systems Biology	BMC Systems Biology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1752-0509	volume_name=1
+	released	BioMed Central	BMC Urology	BMC Urology Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=1
+	released	BioMed Central	BMC Urology	BMC Urology Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=2
+	released	BioMed Central	BMC Urology	BMC Urology Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=3
+	released	BioMed Central	BMC Urology	BMC Urology Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=4
+	released	BioMed Central	BMC Urology	BMC Urology Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=5
+	released	BioMed Central	BMC Urology	BMC Urology Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=6
+	released	BioMed Central	BMC Veterinary Research	BMC Veterinary Research Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1746-6148	volume_name=1
+	released	BioMed Central	BMC Veterinary Research	BMC Veterinary Research Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1746-6148	volume_name=2
+	released	BioMed Central	BMC Women's Health	BMC Women's Health Volume 1	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=1
+	released	BioMed Central	BMC Women's Health	BMC Women's Health Volume 2	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=2
+	released	BioMed Central	BMC Women's Health	BMC Women's Health Volume 3	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=3
+	released	BioMed Central	BMC Women's Health	BMC Women's Health Volume 4	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=4
+	released	BioMed Central	BMC Women's Health	BMC Women's Health Volume 5	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=5
+	released	BioMed Central	BMC Women's Health	BMC Women's Health Volume 6	org.lockss.plugin.bmc.BMCPlugin	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=6
