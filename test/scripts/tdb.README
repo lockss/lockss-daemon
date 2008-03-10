@@ -9,7 +9,7 @@ The .tdb file format
 Title database files conventionally have a .tdb extension. They are
 made of comment lines and archival unit lines. A comment line has a
 pound sign (#) in the first position. Other lines are archival unit
-lines. They consist of tab-separated fields.
+lines. They consist of tab-separated fields. Blank lines or lines made entirely of tabs are ignored.
 
 If a comment line has a space in the second position, an at sign (@)
 in the third position, and an equal sign (=) in a later position, it

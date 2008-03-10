@@ -162,6 +162,11 @@ function xml(_str) {
 # PATTERNS
 #
 
+# Blank lines
+/^\t*$/ {
+ next
+}
+
 # Format line
 /^# @formatString=/ {
  if (preamble && formatString == "") {
