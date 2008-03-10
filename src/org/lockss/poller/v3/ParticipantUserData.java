@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.17 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.17.2.1 2008-03-10 22:03:59 tlipkis Exp $
  */
 
 /*
@@ -235,9 +235,20 @@ public class ParticipantUserData implements LockssSerializable {
   /**
    * @return true if this peer has agreed to participate in the poll.
    */
+  // XXX This is fragile, find a better way.
   public boolean isParticipating() {
-    return (status >= V3Poller.PEER_STATUS_ACCEPTED_POLL);
+    switch (status) {
+    case V3Poller.PEER_STATUS_ACCEPTED_POLL:
+    case V3Poller.PEER_STATUS_NOMINATED:
+    case V3Poller.PEER_STATUS_WAITING_VOTE:
+    case V3Poller.PEER_STATUS_VOTED:
+    case V3Poller.PEER_STATUS_COMPLETE:
+      return true;
+    default:
+      return false;
+    }
   }
+
   /**
    * Return the vote block iterator for this peer.
    * @return the vote block iterator for this peer.
