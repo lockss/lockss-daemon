@@ -392,6 +392,12 @@
         <property name="xpath" value="[attributes/publisher='Royal College of Psychiatrists']" />
       </property>
 
+      <property name="Royal Society of Chemistry">
+        <property name="name" value="All Royal Society of Chemistry Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Royal Society of Chemistry']" />
+      </property>
+
       <property name="Society for General Microbiology">
         <property name="name" value="All Society for General Microbiology Titles" />
         <property name="class" value="xpath" />
