@@ -4640,7 +4640,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="teslej9">
+      <property name="teslej9old">
 	<property name="title" value="TESL-EJ Volume 9" />
 	<property name="estSize" value="1.9MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4659,7 +4659,7 @@
 	</property>
       </property>
 
-      <property name="teslej8">
+      <property name="teslej8old">
 	<property name="title" value="TESL-EJ Volume 8" />
 	<property name="estSize" value="1.8MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4678,7 +4678,7 @@
 	</property>
       </property>
 
-      <property name="teslej7">
+      <property name="teslej7old">
 	<property name="title" value="TESL-EJ Volume 7" />
 	<property name="estSize" value="1.7MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4697,7 +4697,7 @@
 	</property>
       </property>
 
-      <property name="teslej6">
+      <property name="teslej6old">
 	<property name="title" value="TESL-EJ Volume 6" />
 	<property name="estSize" value="1.6MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4716,7 +4716,7 @@
 	</property>
       </property>
 
-      <property name="teslej5">
+      <property name="teslej5old">
 	<property name="title" value="TESL-EJ Volume 5" />
 	<property name="estSize" value="1.5MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4735,7 +4735,7 @@
 	</property>
       </property>
 
-      <property name="teslej4">
+      <property name="teslej4old">
 	<property name="title" value="TESL-EJ Volume 4" />
 	<property name="estSize" value="1.4MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4754,7 +4754,7 @@
 	</property>
       </property>
 
-      <property name="teslej3">
+      <property name="teslej3old">
 	<property name="title" value="TESL-EJ Volume 3" />
 	<property name="estSize" value="1.3MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4773,7 +4773,7 @@
 	</property>
       </property>
 
-      <property name="teslej2">
+      <property name="teslej2old">
 	<property name="title" value="TESL-EJ Volume 2" />
 	<property name="estSize" value="1.2MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4792,7 +4792,7 @@
 	</property>
       </property>
 
-      <property name="teslej1">
+      <property name="teslej1old">
 	<property name="title" value="TESL-EJ Volume 1" />
 	<property name="estSize" value="1.1MB" />
 	<property name="journalTitle" value="TESL-EJ" />
@@ -4808,6 +4808,215 @@
 	<property name="param.3">
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="01-04" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ1">
+	<property name="title" value="TESL-EJ Volume 1" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="01-04" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ2">
+	<property name="title" value="TESL-EJ Volume 2" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="2" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="05-08" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ3">
+	<property name="title" value="TESL-EJ Volume 3" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="3" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="09-12" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ4">
+	<property name="title" value="TESL-EJ Volume 4" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="4" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="13-16" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ5">
+	<property name="title" value="TESL-EJ Volume 5" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="5" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="17-20" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ6">
+	<property name="title" value="TESL-EJ Volume 6" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="6" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="21-24" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ7">
+	<property name="title" value="TESL-EJ Volume 7" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="7" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="25-28" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ8">
+	<property name="title" value="TESL-EJ Volume 8" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="29-32" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ9">
+	<property name="title" value="TESL-EJ Volume 9" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="9" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="33-36" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ10">
+	<property name="title" value="TESL-EJ Volume 10" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="10" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="37-40" />
+	</property>
+      </property>
+
+      <property name="TESLE_EJ11">
+	<property name="title" value="TESL-EJ Volume 11" />
+	<property name="estSize" value="1.1MB" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="org.lockss.plugin.teslej.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://tesl-ej.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="11" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="41-44" />
 	</property>
       </property>
 
