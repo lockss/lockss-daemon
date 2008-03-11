@@ -43,11 +43,10 @@
       <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Journal=&amp;VolumeYear=%d&amp;Volume=%s&amp;JournalCode=%s.*&amp;Type=Issue&amp;Page=&quot;, base_url, journal_code, year, volume_name, journal_code</string>
       <string>2,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=.*&amp;type=ForwardLink&quot;, base_url, journal_code</string>
       <string>1,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=&quot;, base_url, journal_code</string>
-      <string>2,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&amp;Year=%d&amp;ManuscriptID=[^&amp;]+$&quot;, base_url, journal_code, year</string>
-      <string>1,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&amp;Year=%d&amp;ManuscriptID=&quot;, base_url, journal_code, year</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&amp;Year=%d&amp;ManuscriptID=[^&amp;]+&amp;type=citonly$&quot;, base_url, journal_code, year</string>
       <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.(cfm|asp)\?doi=.*&amp;JournalCode=%s&quot;, base_url, journal_code</string>
       <string>1,&quot;^%ssuppdata/%s/&quot;, base_url, journal_code</string>
-      <string>1,&quot;^%s(ej|ejarchive)/%s/%d/.*\.pdf&quot;, base_url, journal_code, year</string>
+      <string>1,&quot;^%s(ej|ejarchive|ejga|ejpdfcontents)/%s/%d/&quot;, base_url, journal_code, year</string>
       <string>1,&quot;^%s.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
