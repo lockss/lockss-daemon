@@ -1,0 +1,33 @@
+This is the source tree for LOCKSS.  See http://www.lockss.org for
+information about the project.
+
+Obtaining Source
+----------------
+
+The latest version of this code can be obtained via CVS with
+
+ export CVSROOT=:pserver:anonymous@cvs.sourceforge.net:/cvsroot/lockss
+ cvs checkout lockss-daemon
+
+A tar of the sources for the latest release can be found at 
+ http://sourceforge.net/projects/lockss/
+
+Prerequisites
+-------------
+
+- Ant (at least version 1.6.2), is used to build the system and run unit
+  tests.  Download the latest version from http://ant.apache.org/ .
+  Installation instructions are at http://ant.apache.org/manual/
+
+- Junit is included in the LOCKSS source distribution, but the Ant targets
+  that invoke JUnit (test-xxx) require the JUnit jar to be on Ant's
+  classpath.  The easiest way to do that is to copy lib/junit.jar into
+  Ant's lib directory (<ant-install-dir>/ant/lib).
+
+To Build
+--------
+
+ant test-all		Builds the system and runs all tests
+ant test-one -Dclass=org.lockss.foo.TestBar
+			Builds the system and runs the tests for one class
+ant -projecthelp	Lists other build options
