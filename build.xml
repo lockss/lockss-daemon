@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.226 2008-01-27 06:43:18 tlipkis Exp $
+ $Id: build.xml,v 1.226.2.1 2008-03-12 22:27:02 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1123,7 +1123,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="tar.lockss.etc" value="${tar.root}/etc/lockss" />
     <property name="tar.scripts"
  	value="etc/lockss/hostconfig etc/lockss/rundaemon etc/lockss/runforever etc/init.d/lockss" />
-    <property name="tarfile" value="./lockss-daemon-${releasename}.tgz" />
+    <property name="tarfile" value="./lockss-daemon-${releasename}.tar" />
 
     <!-- make classpath to substitute into start script -->
     <pathconvert refid="prod.run.classpath" property="tar.clspth"
@@ -1146,7 +1146,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <copy todir="${tar.jardir}" flatten="true" >
      <fileset refid="tar.jars.set" />
     </copy>
-    <tar destfile="${tarfile}" compression="gzip">
+    <tar destfile="${tarfile}" >
      <tarfileset dir="${tar.top}" includes="${tar.scripts}" mode="755" />
      <tarfileset dir="${tar.top}" excludes="${tar.scripts}" />
     </tar>
