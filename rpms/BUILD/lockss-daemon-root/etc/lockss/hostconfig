@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # Query user and write local LOCKSS config values to /etc/lockss/config.dat
@@ -108,7 +108,7 @@ read_config() {
     local OLD_IFS="${IFS}"
     IFS='
 '
-    for A in `sed -e '/[[:alnum:]_]* *= *.*/!d' -e 's/\([[:alnum:]_]*\) *= *\(.*\)/\
+    for A in `sed -e '/[a-zA-Z0-9_]* *= *.*/!d' -e 's/\([a-zA-Z0-9_]*\) *= *\(.*\)/\
 \1=\2/' $1` ; do
       eval "$A"
     done
@@ -194,22 +194,26 @@ init_one_dir() {
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)
+        if [ "${LOCKSS_HOME}X" = X]
+	then
+		LOCKSS_HOME=~lockss
+	fi
         LOCKSS_USER=lockss
         CONFIG_USER=`/usr/ucb/whoami`
-        LOCKSS_HOME=~lockss
-	CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-	PATH=/usr/ucb:$PATH
+	PATH=/usr/ucb:/sbin:$PATH
 	LOCAL_HOSTNAME=`uname -n`
 	LOCAL_IPADDR=`ifconfig -a | grep inet | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
+	SHA1SUM="digest -a sha1"
         ;;
 Linux)
         LOCKSS_USER=lockss
         CONFIG_USER=`whoami`
-	CONFIG_FILE=/etc/lockss/config.dat
 	LOCAL_HOSTNAME=`hostname -f`
 	LOCAL_IPADDR=`hostname -i`
+	SHA1SUM=sha1sum
         ;;
 esac
+CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 
 echo "LOCKSS host configuration for ${OS_TYPE}.  For more information see /etc/lockss/README"
 
@@ -348,7 +352,7 @@ until is_yes ${CONFIG_OK}; do
 	done
 	ask_for_input_shadow "Password for web UI administration (again)" ""
 	if [ "X${ANS}" = "X${P1}" ]; then
-	    SHA1=`echo -n "${P1}" | sha1sum`
+	    SHA1=`echo -n "${P1}" | ${SHA1SUM}`
 	    SHA1=`echo ${SHA1} | sed 's/ .*$//'`
 	    LOCKSS_ADMIN_PASSWD="SHA1:${SHA1}"
 	fi
@@ -390,8 +394,24 @@ EOF
 	    exit 1
 	fi
 	echo Done
-	echo "LOCKSS will start automatically at next reboot, or you may"
-	echo " start it now by running   /etc/init.d/lockss start"
+	case ${OS_TYPE} in
+	SunOS)
+		echo ${LOCKSS_HOME}/etc/lockss/runforever to run the daemon.
+		;;
+	Linux)
+		if [ -x /etc/init.d/lockss ]
+		then
+			if [ ! -L /etc/rc3.d/S99lockss ]
+			then
+				chkconfig --add lockss
+			fi
+			echo "LOCKSS will start automatically at next reboot, or you may"
+			echo " start it now by running   /etc/init.d/lockss start"
+		else
+			echo "Start LOCKSS by ${LOCKSS_HOME}/etc/init.d/lockss"
+		fi
+		;;
+	esac
 	CONFIG_OK=Y
     fi
     if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
