@@ -194,7 +194,7 @@ init_one_dir() {
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)
-        if [ "${LOCKSS_HOME}X" = X]
+        if [ "${LOCKSS_HOME}X" = X ]
 	then
 		LOCKSS_HOME=~lockss
 	fi
