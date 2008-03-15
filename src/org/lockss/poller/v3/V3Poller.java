@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.73 2008-02-24 02:32:57 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.74 2008-03-15 04:54:14 tlipkis Exp $
  */
 
 /*
@@ -344,6 +344,7 @@ public class V3Poller extends BasePoll {
   private TimerQueue.Request invitationRequest;
   private TimerQueue.Request pollCompleteRequest;
   private TimerQueue.Request voteCompleteRequest;
+  private Deadline voteTallyStart;
   private long bytesHashedSinceLastCheckpoint = 0;
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
@@ -616,30 +617,31 @@ public class V3Poller extends BasePoll {
    */
   protected void restoreParticipants()
       throws V3Serializer.PollSerializerException {
-    Collection peers = serializer.loadVoterStates();
-    for (Iterator iter = peers.iterator(); iter.hasNext();) {
-      final ParticipantUserData voterState = (ParticipantUserData) iter.next();
-      PeerIdentity id = voterState.getVoterId();
-      PsmInterpStateBean pisb = voterState.getPsmInterpState();
-      PsmMachine machine = makeMachine();
-      PsmInterp interp = newPsmInterp(machine, voterState);
-      voterState.setPsmInterpState(pisb);
-      interp.setCheckpointer(new PsmInterp.Checkpointer() {
-        public void checkpoint(PsmInterpStateBean resumeStateBean) {
-          // Replace the statebean in this machine's state object.
-          voterState.setPsmInterpState(resumeStateBean);
-          try {
-            checkpointParticipant(voterState);
-          } catch (PollSerializerException ex) {
-            log.error("Unable to save participant state for peer " +
-                      voterState.getVoterId());
-          }
-        }
-      });
-      voterState.setPsmInterp(interp);
-      voterState.setPollState(pollerState);
-      voterState.setPoller(this);
-      synchronized (theParticipants) {
+    synchronized (theParticipants) {
+      Collection peers = serializer.loadVoterStates();
+      for (Iterator iter = peers.iterator(); iter.hasNext();) {
+	final ParticipantUserData voterState =
+	  (ParticipantUserData)iter.next();
+	PeerIdentity id = voterState.getVoterId();
+	PsmInterpStateBean pisb = voterState.getPsmInterpState();
+	PsmMachine machine = makeMachine();
+	PsmInterp interp = newPsmInterp(machine, voterState);
+	voterState.setPsmInterpState(pisb);
+	interp.setCheckpointer(new PsmInterp.Checkpointer() {
+	    public void checkpoint(PsmInterpStateBean resumeStateBean) {
+	      // Replace the statebean in this machine's state object.
+	      voterState.setPsmInterpState(resumeStateBean);
+	      try {
+		checkpointParticipant(voterState);
+	      } catch (PollSerializerException ex) {
+		log.error("Unable to save participant state for peer " +
+			  voterState.getVoterId());
+	      }
+	    }
+	  });
+	voterState.setPsmInterp(interp);
+	voterState.setPollState(pollerState);
+	voterState.setPoller(this);
 	theParticipants.put(id, voterState);
       }
     }
@@ -688,23 +690,23 @@ public class V3Poller extends BasePoll {
               " to complete by " +
 	      Deadline.restoreDeadlineAt(pollerState.getPollDeadline()));
 
-    Deadline voteCompleteDeadline = null;
     Deadline pollDeadline = null;
 
     if (resumedPoll) {
       // Bypass sanity check.
-      voteCompleteDeadline = Deadline.restoreDeadlineAt(pollerState.getVoteDeadline());
+      voteTallyStart =
+	Deadline.restoreDeadlineAt(pollerState.getVoteDeadline());
       pollDeadline = Deadline.restoreDeadlineAt(pollerState.getPollDeadline());
     } else {
       // Sanity check
-      voteCompleteDeadline = Deadline.at(pollerState.getVoteDeadline());
+      voteTallyStart = Deadline.at(pollerState.getVoteDeadline());
       pollDeadline = Deadline.at(pollerState.getPollDeadline());
     }
     tallyEnd = pollerState.getPollDeadline() - calculateReceiptBuffer();
 
     // Schedule the vote tally callback.  The poll will tally votes no earlier
     // than this deadline.
-    if ((voteCompleteDeadline.expired() &&
+    if ((voteTallyStart.expired() &&
         pollerState.votedPeerCount() < pollerState.getQuorum()) ||
         pollDeadline.expired()) {
       String msg = "Poll expired before tallying could complete";
@@ -714,7 +716,7 @@ public class V3Poller extends BasePoll {
       return;
     } else {
       voteCompleteRequest =
-        TimerQueue.schedule(voteCompleteDeadline, voteTallyCallback, this);
+        TimerQueue.schedule(voteTallyStart, voteTallyCallback, this);
     }
 
     if (reserveScheduleTime(getPollSize())) {
@@ -806,11 +808,13 @@ public class V3Poller extends BasePoll {
    * Stop the poll, and set the supplied status.
    */
   public void stopPoll(final int status) {
-    if (activePoll) {
-      activePoll = false;
-    } else {
-      log.debug("Poll has already been closed: " + getKey());
-      return;
+    synchronized (this) {
+      if (activePoll) {
+	activePoll = false;
+      } else {
+	log.debug("Poll has already been closed: " + getKey());
+	return;
+      }
     }
 
     log.info("Stopping poll " + getKey() + " with status " + 
@@ -1007,6 +1011,8 @@ public class V3Poller extends BasePoll {
     peer.setNominees(nominatedPeers);
     pollerState.signalVoterNominated(id);
     checkpointPoll();
+    // XXX Probably shouldn't start outer circle in participant state
+    // machine thread.
     if (pollerState.sufficientPeers()) {
       pollOuterCircle();
     }
@@ -1301,16 +1307,7 @@ public class V3Poller extends BasePoll {
     if (pollerState.votedPeerCount() == getPollSize()) {
       log.debug("All invited peers have voted.  Rescheduling vote deadline.");
 
-      TimerQueue.cancel(voteCompleteRequest);
-      // Running in another thread, so we must be careful not to make this
-      // run twice.  It may have been ready to go moments before we sent
-      // the cancel request, and too late to stop.
-      if (!voteTallyCallback.tallyStarted()) {
-        voteCompleteRequest =
-          TimerQueue.schedule(Deadline.EXPIRED,
-                              voteTallyCallback,
-                              this);
-      }
+      voteTallyStart.expire();
     }
     
     return true;
@@ -1571,7 +1568,7 @@ public class V3Poller extends BasePoll {
         BlockTally tally = new BlockTally(pollerState.getQuorum());
         synchronized(theParticipants) {
           for (Iterator iter = theParticipants.keySet().iterator();
-          iter.hasNext(); ) {
+	       iter.hasNext(); ) {
             digestIndex++;
             PeerIdentity id = (PeerIdentity)iter.next();
             VoteBlock vb = 
@@ -1798,6 +1795,10 @@ public class V3Poller extends BasePoll {
     try {
       synchronized(theParticipants) {
         ParticipantUserData ud = getParticipant(id);
+	if (ud == null) {
+	  // already removed
+	  return;
+	}
 	if (peerStatus > 0) {
 	  ud.setStatus(peerStatus);
 	}
@@ -1948,13 +1949,17 @@ public class V3Poller extends BasePoll {
     if (pid.isLocalIdentity()) {
       return false;
     }
-    if (theParticipants.containsKey(pid)) {
-      // already participating in this poll
-      return false;
-    }
-    if (exParticipants.containsKey(pid)) {
-      // already dropped out of this poll
-      return false;
+    synchronized (theParticipants) {
+      if (theParticipants.containsKey(pid)) {
+	// already participating in this poll
+	return false;
+      }
+      synchronized (exParticipants) {
+	if (exParticipants.containsKey(pid)) {
+	  // already dropped out of this poll
+	  return false;
+	}
+      }
     }
     PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
     if (status != null) {
@@ -2050,37 +2055,37 @@ public class V3Poller extends BasePoll {
             participatingPeers++;
           }
         }
-      }
 
-      if (participatingPeers >= getQuorum()) {
-        log.debug("[InvitationCallback] Enough peers are participating for " +
-                  "quorum.  Count=" + participatingPeers);
-      } else {
-        // Invite  invitationSize more peers to participate.
-        Collection newPeers =
-          choosePeers(getReferenceList(), theParticipants.keySet(),
-                      invitationSize);
-
-	if (newPeers.isEmpty()) {
-	  log.debug("[InvitationCallback] No more peers to invite");
+	if (participatingPeers >= getQuorum()) {
+	  log.debug("[InvitationCallback] Enough peers are participating for " +
+		    "quorum.  Count=" + participatingPeers);
 	} else {
-	  log.debug("[InvitationCallback] Inviting " + newPeers.size()
-		    + " new peers to participate.");
+	  // Invite  invitationSize more peers to participate.
+	  Collection newPeers =
+	    choosePeers(getReferenceList(), theParticipants.keySet(),
+			invitationSize);
 
-	  // CR: refactor
-	  for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
-	    PeerIdentity id = (PeerIdentity)it.next();
-	    ParticipantUserData participant = addInnerCircleVoter(id);
-	    // Start the participant running to send in the invitation.
-	    startParticipant(participant, false);
-	  }
+	  if (newPeers.isEmpty()) {
+	    log.debug("[InvitationCallback] No more peers to invite");
+	  } else {
+	    log.debug("[InvitationCallback] Inviting " + newPeers.size()
+		      + " new peers to participate.");
 
-	  if (isPollActive()) {
-	    // Schedule another check
-	    invitationRequest =
-	      TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
-				  new InvitationCallback(),
-				  cookie);
+	    // CR: refactor
+	    for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
+	      PeerIdentity id = (PeerIdentity)it.next();
+	      ParticipantUserData participant = addInnerCircleVoter(id);
+	      // Start the participant running to send in the invitation.
+	      startParticipant(participant, false);
+	    }
+
+	    if (isPollActive()) {
+	      // Schedule another check
+	      invitationRequest =
+		TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+				    new InvitationCallback(),
+				    cookie);
+	    }
 	  }
 	}
       }
@@ -2099,15 +2104,18 @@ public class V3Poller extends BasePoll {
    */
   private class VoteTallyCallback implements TimerQueue.Callback {
     
-    private volatile boolean tallyStarted = false;
+    private boolean tallyStarted = false;
 
-    public boolean tallyStarted() {
-      return tallyStarted;
-    }
-    
     public void timerExpired(Object cookie) {
       
-      tallyStarted = true;
+      if (!isPollActive()) return;
+
+      synchronized (this) {
+	if (tallyStarted) {
+	  return;
+	}
+	tallyStarted = true;
+      }
       
       // Ensure that the invitation timer is cancelled.
       if (invitationRequest != null) {
@@ -2124,6 +2132,10 @@ public class V3Poller extends BasePoll {
       }
       for (PeerIdentity id : peerListCopy) {
 	ParticipantUserData ud = getParticipant(id);
+	if (ud == null) {
+	  // already removed
+	  continue;
+	}
         if (!pollerState.hasPeerVoted(id)) {
 	  // XXX move to state machine
 	  switch (ud.getStatus()) {

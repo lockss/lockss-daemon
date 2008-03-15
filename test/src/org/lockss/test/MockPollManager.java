@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.19 2005-11-16 07:44:08 smorabito Exp $
+* $Id: MockPollManager.java,v 1.20 2008-03-15 04:54:14 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class MockPollManager extends PollManager {
     thePolls.put(key, SUSPENDED);
   }
 
-  public void resumePoll(boolean replayNeeded, Object key) {
+  public void resumePoll(boolean replayNeeded, String key) {
     thePolls.put(key, RESUMED);
   }
 
