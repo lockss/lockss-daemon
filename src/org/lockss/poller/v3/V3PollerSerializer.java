@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.12 2006-11-28 23:12:24 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.13 2008-03-15 04:55:06 tlipkis Exp $
  */
 
 /*
@@ -95,8 +95,7 @@ public class V3PollerSerializer extends V3Serializer {
     try {
       getSerializer().serialize(pollerStateBeanFile, state);
     } catch (Exception ex) {
-      throw new PollSerializerException("Unable to save state for poll.  " +
-                                        "Caused by: " + ex, ex);
+      throw new PollSerializerException("Unable to save state for poll", ex);
     }
   }
 
@@ -162,9 +161,13 @@ public class V3PollerSerializer extends V3Serializer {
   public void removePollerUserData(PeerIdentity id)
       throws IOException, SerializationException {
     File f = (File)peerMapping.get(id);
-    if (f == null || !f.delete())
+    if (f == null) {
+      log.warning("Poller user data file does not exist, can't remove " + f);
+    }
+    if (!f.delete()) {
       throw new SerializationException("Could not remove poller user " +
                                        "data file " + f);
+    }
   }
 
   /**
