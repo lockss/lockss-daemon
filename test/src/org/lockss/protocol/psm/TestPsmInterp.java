@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.14 2008-02-27 06:07:35 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.15 2008-03-15 04:35:00 tlipkis Exp $
  */
 
 /*
@@ -722,9 +722,7 @@ public class TestPsmInterp extends LockssTestCase {
       new ER(statesCheck[2], Sched, null, null),
     };
     // Should get to state No, with last resumable state Yes
-    while (!CollectionUtil.isIsomorphic(exp1, interp.events)) {
-      assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
-    }
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
     assertIsomorphic(exp1, interp.events);
     assertEquals(1, cptr.cnt);
     PsmInterpStateBean resumeBean = cptr.lastBean;
