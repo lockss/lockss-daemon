@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.229 2008-03-15 04:53:19 tlipkis Exp $
+ $Id: build.xml,v 1.230 2008-03-15 05:07:05 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1586,7 +1586,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 
   <!-- ==================================================================== -->
   <target name="test-all"
-   depends="package,test-unit,test-func,test-plugins,test-tools,test-xml"
+   depends="package,test-unit,test-func,test-plugins,test-tools,load-xml"
    description="Run all unit tests, functional tests and plugin unit tests" >
   </target>
 
