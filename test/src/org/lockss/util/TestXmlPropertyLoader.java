@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.25 2008-02-29 23:01:21 edwardsb1 Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.26 2008-03-15 04:56:11 tlipkis Exp $
  */
 
 /*
@@ -1295,58 +1295,6 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     // Verify that the added elements are present.
     assertTrue(vs.contains("3"));
     assertTrue(vs.contains("4"));
-  }
-  
-  /**
-   * As part of bug 2334, Brent changed all files loaded by XmlPropertyLoader. 
-   * According to Tom, no test makes sure that all .xml files are even readable.
-   * This test fixes that problem: it ensures that all files are, at least,
-   * readable.
-   * 
-   * The test does not verify that the files have sane content.
-   * 
-   * This test contains no assertions; it only exists to throw exceptions if
-   * something bad happens.
-   */
-  public void testXMLFiles() throws IOException, SAXException, 
-    IllegalArgumentException, ParserConfigurationException {
-    File[] files;
-    isXmlFile xmlFileTest = new isXmlFile();
-    
-    // Important note: the directories do NOT contain "configtest.xml" in this list.
-    // This is because the same directory (test/src/org/lockss/util) contains
-    // "marshaltest.xml", which depends on a no-longer-existing DTD at 
-    // castor.exolab.org.
-    
-    String[] directories = new String[] {
-        "test/frameworks/",
-        "test/frameworks/title_db_files/",
-        "test/frameworks/title_db_files/clockss/"
-    };
-    
-    for (String directory : directories) {
-      File fileDirectory = new File(directory);
-      files = fileDirectory.listFiles(xmlFileTest);
-      
-      for (File file : files) {
-        log.debug2("theFile.getAbsolutePath == " + file.getAbsolutePath());
-        InputStream istr = new FileInputStream(file);
-              
-        PropertyTree props = new PropertyTree();
-        m_xmlPropertyLoader.loadProperties(props, istr);
-      }
-    }
-  }
-  
-  
-  private class isXmlFile implements FilenameFilter
-  {
-    /* (non-Javadoc)
-     * @see java.io.FilenameFilter#accept(java.io.File, java.lang.String)
-     */
-    public boolean accept(File dir, String name) {
-      return name.endsWith(".xml");
-    }
   }
   
   /**
