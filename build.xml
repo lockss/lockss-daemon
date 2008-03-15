@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.228 2008-03-12 22:37:36 dshr Exp $
+ $Id: build.xml,v 1.229 2008-03-15 04:53:19 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1586,7 +1586,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 
   <!-- ==================================================================== -->
   <target name="test-all"
-   depends="package,test-unit,test-func,test-plugins,test-tools"
+   depends="package,test-unit,test-func,test-plugins,test-tools,test-xml"
    description="Run all unit tests, functional tests and plugin unit tests" >
   </target>
 
@@ -1766,7 +1766,37 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
-  <target name="test-xml"
+  <target name="test-xml" depends="xmllint,load-xml"
+   description="Run xmllint and load-xml" />
+
+  <target name="load-xml" depends="jar-tests"
+   description="Load xml config files to ensure well-formed" >
+    <fileset id="xml.files.filesetid" dir="${basedir}">
+      <include name="test/frameworks/*.xml"/>
+      <include name="test/frameworks/title_db_files/**/*.xml"/>
+    </fileset>
+    <!-- convert the list of files to a string -->
+    <pathconvert refid="xml.files.filesetid"
+      property="xml.files"
+      pathsep=" "
+      targetos="${detected.os}" />
+    <if>
+     <not> <equals arg1="${xml.files}" arg2="" /> </not>
+     <then>
+      <echo message="Loading xml config files"/>
+      <java classname="ConfigDump" fork="true" failonerror="true" >
+	<classpath refid="test.run.classpath" />
+        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+	<arg line="-v -g prod -h host.foo ${xml.files}" />
+      </java>
+     </then>
+     <else>
+      <echo message="No xml config files found"/>
+     </else>
+    </if>
+  </target>
+
+  <target name="xmllint"
    description="Run xmllint on xml files" >
     <echo message="Checking .xml files"/>
     <apply executable="xmllint" dir="${basedir}"
@@ -1776,6 +1806,8 @@ Test results in ${test.results}
            parallel="false">
       <arg value="--noout"/>
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
+      <fileset dir="${basedir}"
+               includes="test/frameworks/title_db_files/**/*.xml"/>
       <fileset dir="${basedir}" includes="src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/*/src/**/*.xml"/>
