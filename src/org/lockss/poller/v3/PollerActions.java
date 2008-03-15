@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.24 2008-02-15 09:10:56 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.25 2008-03-15 04:54:39 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class PollerActions {
   public static PsmEvent handleProveIntroEffort(PsmEvent evt,
                                                 PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     log.debug2("Proving intro effort for poll ID " + ud.getKey());
     // XXX: Generate real poll intro effort, TBD
     byte[] proof = ByteArray.makeRandomBytes(20);
@@ -69,6 +70,7 @@ public class PollerActions {
   @SendMessages("msgPoll")
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     // For auditing purposes, log the poller nonce.
     log.info("Inviting peer " + ud.getVoterId() + " into poll " +
              ud.getKey() + " with poller nonce " +
@@ -97,6 +99,7 @@ public class PollerActions {
   public static PsmEvent handleReceivePollAck(PsmMsgEvent evt,
                                               PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     log.debug2("Received poll ACK from voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
@@ -134,6 +137,7 @@ public class PollerActions {
   public static PsmEvent handleDeclinePoll(PsmEvent evt,  PsmInterp interp) {
     // Remove the participant from the poll.
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtFinalize;
     IdentityManager idMgr = ud.getPoller().getIdentityManager();
     ud.setStatus(V3Poller.PEER_STATUS_DECLINED_POLL,
 		 ud.getPollNak().toString());
@@ -173,6 +177,7 @@ public class PollerActions {
   @SendMessages("msgPollProof")
   public static PsmEvent handleSendPollProof(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     log.debug2("Sending poll effort proof for voter " + ud.getVoterId()
                + " in poll " + ud.getKey());
     try {
@@ -190,6 +195,7 @@ public class PollerActions {
   public static PsmEvent handleReceiveNominate(PsmMsgEvent evt,
                                                PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     List nominees = msg.getNominees();
     log.debug2("Received outer circle nominations from voter " + ud.getVoterId()
@@ -204,6 +210,7 @@ public class PollerActions {
   public static PsmEvent handleSendVoteRequest(PsmEvent evt,
                                                PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_VOTE_REQ);
     log.debug2("Sending vote request to voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
@@ -221,6 +228,7 @@ public class PollerActions {
   @ReturnEvents("evtOk,evtError")
   public static PsmEvent handleReceiveVote(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     PollNak nak = msg.getNak();
     if (nak != null) {
@@ -252,6 +260,7 @@ public class PollerActions {
   @ReturnEvents("evtOk,evtError")
   public static PsmEvent handleReceiveRepair(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
     log.debug2("Received repair from voter "
                + msg.getOriginatorId() + " in poll "
