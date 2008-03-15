@@ -32,8 +32,12 @@ org.lockss.poll.v3.pollStarterInterval=5m
 org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3131
 
-# Cral starter interval
+# Crawl starter interval
 org.lockss.crawler.startCrawlsInterval=5m
 org.lockss.crawler.threadPool.max=5
 
 org.lockss.crawlStatus.keepUrls=all
+
+# UI username-passwd = test/test
+org.lockss.platform.ui.username=test
+org.lockss.platform.ui.password=SHA1:a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
