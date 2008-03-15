@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.13 2007-08-01 04:50:03 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.14 2008-03-15 04:55:48 tlipkis Exp $
  */
 
 /*
@@ -43,15 +43,17 @@ import org.lockss.test.*;
  * diffing.
  */
 public class ConfigDump {
+  static Logger log = Logger.getLogger("ConfigDump");
   static String PREFIX_TITLE_DB = ConfigManager.PARAM_TITLE_DB + ".";
   static List excludeBelow = ListUtil.list(PREFIX_TITLE_DB);
 
   public static void main(String argv[]) throws Exception {
-    List configUrls = new ArrayList();
-    String groupName = null;
+    List<String> configUrls = new ArrayList();
     String outputFile = null;
-    String hostName = null;
     boolean xmlHack = false;
+    boolean quiet = false;
+    Configuration platConfig = ConfigManager.newConfiguration();
+
 
     if (argv.length == 0) {
       usage();
@@ -62,9 +64,17 @@ public class ConfigDump {
 	if        (arg.startsWith("-t")) {
 	  excludeBelow.remove(PREFIX_TITLE_DB);
 	} else if (arg.startsWith("-g")) {
-	  groupName = argv[++ix];
+ 	  platConfig.put(ConfigManager.PARAM_DAEMON_GROUPS,
+			 argv[++ix].toLowerCase());
 	} else if (arg.startsWith("-h")) {
-	  hostName = argv[++ix];
+	  platConfig.put(ConfigManager.PARAM_PLATFORM_FQDN,
+			 argv[++ix]);
+	} else if (arg.startsWith("-d")) {
+	  platConfig.put(ConfigManager.PARAM_DAEMON_VERSION,
+			 argv[++ix]);
+	} else if (arg.startsWith("-p")) {
+	  platConfig.put(ConfigManager.PARAM_PLATFORM_VERSION,
+			 argv[++ix]);
 	} else if (arg.startsWith("-k")) {
 	  xmlHack = true;
 	} else if (arg.startsWith("-x")) {
@@ -78,6 +88,8 @@ public class ConfigDump {
 	  excludeBelow.add(exclude);
 	} else if (arg.startsWith("-o")) {
 	  outputFile = argv[++ix];
+	} else if (arg.equals("-v")) {
+	  quiet = true;
 	} else if (arg.startsWith("-")) {
 	  usage();
 	} else {
@@ -98,23 +110,36 @@ public class ConfigDump {
       pout = new PrintStream(fos);
     }
 
-    if (hostName != null) {
-      String localConfig = createLocalConfig(hostName);
-      configUrls.add(localConfig);
-    }
-
     ConfigManager mgr = ConfigManager.makeConfigManager();
-    MockLockssDaemon daemon = new MyMockLockssDaemon();
-    Configuration config = mgr.readConfig(configUrls, groupName);
-    if (config == null) {
-      System.err.println("Couldn't load config");
-      System.exit(1);
+    if (!platConfig.isEmpty()) {
+      ConfigManager.setPlatformConfig(platConfig);
     }
-    SortedSet keys = new TreeSet(config.keySet());
-    for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      if (!isExcluded(key)) {
-	pout.println(key + " = " + (String)config.get(key));
+    if (quiet) {
+      for (String url : configUrls) {
+	try {
+	  ConfigCache configCache = new ConfigCache();
+	  ConfigFile cf = configCache.find(url);
+	  log.debug(url);
+	  cf.getConfiguration();
+	} catch (Exception e) {
+	  // Assumption is that ConfigFile logs a more specific error
+	  System.err.println("Couldn't load config file: " + url);
+	  System.exit(1);
+	}
+      }
+    } else {
+      MockLockssDaemon daemon = new MyMockLockssDaemon();
+      Configuration config = mgr.readConfig(configUrls);
+      if (config == null) {
+	System.err.println("Couldn't load config");
+	System.exit(1);
+      }
+      SortedSet keys = new TreeSet(config.keySet());
+      for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	if (!isExcluded(key)) {
+	  pout.println(key + " = " + (String)config.get(key));
+	}
       }
     }
   }
@@ -148,12 +173,17 @@ public class ConfigDump {
 
   static void usage() {
     System.err.println("Usage: ConfigDump [-t] [-k] [-x excludebelow ] [-o outfile] <urls-or-files ...>");
-    System.err.println("         -g <group>   set daemon group name");
-    System.err.println("         -h <nost>    set host name");
-    System.err.println("         -x prefix    exclude subtree below prefix");
-    System.err.println("         -t           include title db entries");
-    System.err.println("         -k           enable .txt -> .xml kludge");
-    System.err.println("         -o outfile   write to outfile, else stdout");
+    System.err.println("     -g <group>   set daemon group name");
+    System.err.println("     -p <version> set platform version");
+    System.err.println("     -d <version> set daemon version");
+    System.err.println("     -h <nost>    set host name");
+    System.err.println("     -x prefix    exclude subtree below prefix");
+    System.err.println("     -t           include title db entries");
+    System.err.println("     -k           enable .txt -> .xml kludge");
+    System.err.println("     -o outfile   write to outfile, else stdout");
+    System.err.println("     -v           verify mode.  No output, just");
+    System.err.println("                    check that files load,");
+    System.err.println("                    exit with error if any fail");
     System.exit(1);
   }
 
