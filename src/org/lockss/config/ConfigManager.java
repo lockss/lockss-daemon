@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.54 2007-12-19 05:12:56 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.55 2008-03-15 04:53:35 tlipkis Exp $
  */
 
 /*
@@ -364,6 +364,15 @@ public class ConfigManager implements LockssManager {
       res = platformConfig;
     }
     return res;
+  }
+
+  public static void setPlatformConfig(Configuration config) {
+    if (platformConfig.isEmpty()) {
+      platformConfig = config;
+    } else {
+      throw
+	new IllegalStateException("Can't override existing  platform config");
+    }
   }
 
   private static PlatformVersion platVer = null;
