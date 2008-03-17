@@ -25,18 +25,19 @@ BEGIN {
  # Archival unit statuses
  STATUS_DOES_NOT_EXIST = "does_not_exist"
  STATUS_DO_NOT_PROCESS = "do_not_process"
- STATUS_DOWN           = "down"
  STATUS_EXISTS         = "exists"
  STATUS_MANIFEST       = "manifest"
- STATUS_PRE_RELEASED   = "pre_released"
- STATUS_READY          = "ready"
- STATUS_RELEASED       = "released"
- STATUS_RETRACTED      = "retracted"
  STATUS_TESTING        = "testing"
+ STATUS_READY          = "ready"
+ STATUS_PRE_RELEASED   = "pre_released"
+ STATUS_RELEASED       = "released"
+ STATUS_DOWN           = "down"
+ STATUS_SUPERSEDED     = "superseded"
+ STATUS_RETRACTED      = "retracted"
 
  # Output levels and corresponding archival unit statuses
  LEVEL_PRODUCTION              = "production"
- STATUSES_PRODUCTION           = STATUS_RETRACTED "," STATUS_DOWN "," STATUS_RELEASED
+ STATUSES_PRODUCTION           = STATUS_RETRACTED "," STATUS_SUPERSEDED "," STATUS_DOWN "," STATUS_RELEASED
  LEVEL_CONTENT_TESTING         = "contentTesting"
  STATUSES_CONTENT_TESTING      = STATUSES_PRODUCTION "," STATUS_PRE_RELEASED "," STATUS_READY "," STATUS_TESTING "," STATUS_MANIFEST "," STATUS_EXISTS
  LEVEL_DANGEROUS               = "dangerous"
@@ -224,7 +225,7 @@ function printOneXmlEntry(        _status, _param, _attr) {
   printOneXmlParameter(_param, _pair)
  }
  # Down AUs are denoted by a parameter
- if (_status == STATUS_DOWN) { printOneXmlParameter(99, "pub_down=true") }
+ if (_status == STATUS_DOWN || _status == STATUS_SUPERSEDED) { printOneXmlParameter(99, "pub_down=true") }
 
  # Then any additional parameters
  for (_attr = 1 ; _attr <= numAdditionalAttributes ; ++_attr) {
