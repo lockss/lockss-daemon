@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.14 2007-04-28 00:21:50 dshr Exp $
+ * $Id: TestIcpManager.java,v 1.15 2008-03-19 18:33:57 dshr Exp $
  */
 
 /*
@@ -151,7 +151,7 @@ public class TestIcpManager extends LockssTestCase {
   }
 
   private int getNewPort() {
-    return port += 7;
+    return port += 7; // Used to be +1 but that failed on Solaris
   }
 
   private void setEnabled(boolean enabled, int port) {
