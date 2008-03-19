@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,@
-# @namePrefix=CLOCKSSSAGE
+#	@formatString	x,S,P,j,t,p,%,%,@
+#	@namePrefix	CLOCKSSSAGE
 	released	SAGE Publications	American Journal of Evaluation	American Journal of Evaluation Volume 20	org.lockss.plugin.highwire.ClockssHighWirePlugin	base_url=http://aje.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	SAGE Publications	American Journal of Evaluation	American Journal of Evaluation Volume 21	org.lockss.plugin.highwire.ClockssHighWirePlugin	base_url=http://aje.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	SAGE Publications	American Journal of Evaluation	American Journal of Evaluation Volume 22	org.lockss.plugin.highwire.ClockssHighWirePlugin	base_url=http://aje.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified

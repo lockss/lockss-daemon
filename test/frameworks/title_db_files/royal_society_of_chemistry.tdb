@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,%,%,%										
-# @namePrefix=RSC										
+#	@formatString	x,S,P,j,t,p,%,%,%,%,%										
+#	@namePrefix	RSC										
 	manifest	Royal Society of Chemistry	The Analyst	The Analyst Volume 122	org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=122	year=1997
 	manifest	Royal Society of Chemistry	The Analyst	The Analyst Volume 123	org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=123	year=1998
 	manifest	Royal Society of Chemistry	The Analyst	The Analyst Volume 124	org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=124	year=1999

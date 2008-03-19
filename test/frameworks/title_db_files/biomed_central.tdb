@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,%
-# @namePrefix=BMC
+#	@formatString	x,S,P,j,t,p,%,%,%
+#	@namePrefix	BMC
 	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 42	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147
 	volume_name=42
 	exists	BioMed Central	Acta Veterinaria Scandinavica	Acta Veterinaria Scandinavica Volume 43	org.lockss.plugin.bmc.BioMedCentralPlugin	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=43

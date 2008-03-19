@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,@								
-# @namePrefix=HW								
+#	@formatString	x,S,P,j,t,p,%,%,@								
+#	@namePrefix	HW								
 old	released	SAGE Publications	Accounting History	Accounting History Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	SAGE Publications	Accounting History	Accounting History Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	SAGE Publications	Accounting History	Accounting History Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified

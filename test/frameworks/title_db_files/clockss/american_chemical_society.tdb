@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,%,%
-# @namePrefix=CLOCKSSACS
+#	@formatString	x,S,P,j,t,p,%,%,%,%
+#	@namePrefix	CLOCKSSACS
 	released	American Chemical Society	ACS Chemical Biology	ACS Chemical Biology Volume 1	org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin	base_url=http://pubs3.acs.org/	article_url=http://pubs.acs.org/	journal_key=acbcct	volume_name=1
 	released	American Chemical Society	ACS Chemical Biology	ACS Chemical Biology Volume 2	org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin	base_url=http://pubs3.acs.org/	article_url=http://pubs.acs.org/	journal_key=acbcct	volume_name=2
 	released	American Chemical Society	Chemistry of Materials	Chemistry of Materials Volume 1	org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin	base_url=http://pubs3.acs.org/	article_url=http://pubs.acs.org/	journal_key=cmatex	volume_name=1

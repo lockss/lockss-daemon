@@ -9,17 +9,18 @@ The .tdb file format
 Title database files conventionally have a .tdb extension. They are
 made of comment lines and archival unit lines. A comment line has a
 pound sign (#) in the first position. Other lines are archival unit
-lines. They consist of tab-separated fields. Blank lines or lines made entirely of tabs are ignored.
+lines. All lines consist of tab-separated fields. Blank lines or lines
+made entirely of tabs are ignored.
 
-If a comment line has a space in the second position, an at sign (@)
-in the third position, and an equal sign (=) in a later position, it
-is a directive. Directives tell automatic processing tools how to
-interpret the title database file. The string between the at sign and
-the equal sign is the name of the directive, and the string following
-the equal sign is the directive's value. It is recommended that
-directive names be keyword strings without whitespace. Usually,
-directives are referred to by name including the at sign, for
-instance, "the @formatString directive".
+If in a comment line the first field is only the pound sign and the
+second field starts with an at sign (@), that comment line is a
+directive. Directives tell automatic processing tools how to interpret
+the title database file. The string after the at sign in the second
+field is the name of the directive. If the directive requires values,
+the values are read one each from the third and later fields. It is
+recommended that directive names be keyword strings without
+whitespace. Usually, directives are referred to by name including the
+at sign, for instance, "the @formatString directive".
 
 If a comment line is not a directive, it is ignored by automatic
 processing tools.
@@ -31,14 +32,14 @@ preceding @formatString directive.
 Character set
 =============
 
-All title database files are UTF-8 data.
+All title database files are in UTF-8.
 
 ==========
 Directives
 ==========
 
 -------------------------
-@formatString=<formatstr>
+@formatString <formatstr>
 -------------------------
 
 The @formatString directive sets the format of all following archival
@@ -66,12 +67,12 @@ X	Ignored		no / yes
 See the "Columns" section for more details.
 
 ----------------------
-@namePrefix=<namepref>
+@namePrefix <namepref>
 ----------------------
 
 The @namePrefix directive is a hint to automatic processing tools that
 the string <namepref> should be used as a prefix to disambiguate
-between potentially similarly-named archival units acros different
+between potentially similarly-named archival units across different
 title databases. This is useful if archival units that are "the same"
 exist in more than one context, for example more than one LOCKSS
 network with plugins named differently.
@@ -98,6 +99,7 @@ The status column can only contain one of the following statuses:
 	pre_released
 	released
 	down
+	superseded
 	retracted
 
 -------------------------------
@@ -124,10 +126,10 @@ The tdb.awk script is a basic Awk script that can produce XML suitable
 for consumption by LOCKSS daemons and other statistics about title
 database files. The basic invocation is:
 
-	awk -f tdb.awk [-v <option>=<value>]... <file>.tdb...
+	tdb.awk [-v <option>=<value>]... <file>.tdb...
 
-Tdb.awk can be invoked in a pipeline. If <file>.tdb is -, input is
-read from stdin.
+It can be invoked in a pipeline. If <file>.tdb is -, input is read
+from stdin.
 
 ----------------------
 outputLevel=<statuses>
@@ -154,26 +156,31 @@ ready               o o o o
 pre-released      o o o o o
 released        o   o o o o
 down            o   o   o o
+superseded      o   o   o o
 retracted       o   o   o o
 
 ----------------------
 outputStyle=<outstyle>
 ----------------------
 
-The outputStyle option controls the style of XML output. The value
+The outputStyle option controls the style of output. The value
 <outstyle> can be one of:
 
-	entriesOnly
-	legacyXml
-	standardXml
+	xmlEntries
+	xmlLegacy
+	xml
 
-By default, the value is entriesOnly.
+By default, the value is xmlEntries.
 
-In entriesOnly mode, successive title database entries are generated
-in XML, for later inclusion with other entries, i.e. with no top-level
+In xmlEntries mode, successive title database entries are generated in
+XML, for later inclusion with other entries, i.e. with no top-level
 XML element to encapsulate them.
 
-The legacyXml and standardXml modes are currently unimplemented.
+In xmlLegacy mode, the output is an XML document rooted at
+<lockss-config>, with a DTD, containing only title database entries
+(no title sets).
+
+The xml mode is currently unimplemented.
 
 ----------------------
 Unimplemented features

@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,%
-# @namePrefix=EGP
+#	@formatString	x,S,P,j,t,p,%,%,%
+#	@namePrefix	EGP
 	manifest	Emerald Group Publishing	Accounting, Auditing & Accountability Journal	Accounting, Auditing & Accountability Journal Volume 1	org.lockss.plugin.emerald.EmeraldPlugin	base_url=http://www.emeraldinsight.com/	journal_issn=0951-3574	volume_name=1
 	manifest	Emerald Group Publishing	Accounting, Auditing & Accountability Journal	Accounting, Auditing & Accountability Journal Volume 2	org.lockss.plugin.emerald.EmeraldPlugin	base_url=http://www.emeraldinsight.com/	journal_issn=0951-3574	volume_name=2
 	manifest	Emerald Group Publishing	Accounting, Auditing & Accountability Journal	Accounting, Auditing & Accountability Journal Volume 3	org.lockss.plugin.emerald.EmeraldPlugin	base_url=http://www.emeraldinsight.com/	journal_issn=0951-3574	volume_name=3

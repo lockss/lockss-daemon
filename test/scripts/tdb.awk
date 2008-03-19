@@ -311,8 +311,8 @@ function xml(_str) {
 #
 # Format line
 #
-/^# @formatString=/ {
- formatString = substr($1, 17, length($1) - 16)
+$1 == "#" && $2 == "@formatString" {
+ formatString = $3
  parseFormatString()
  next
 }
@@ -320,8 +320,8 @@ function xml(_str) {
 #
 # Name prefix line
 #
-/^# @namePrefix=/ {
- namePrefix = substr($1, 15, length($1) - 14)
+$1 == "#" && $2 == "@namePrefix" {
+ namePrefix = $3
  next
 }
 

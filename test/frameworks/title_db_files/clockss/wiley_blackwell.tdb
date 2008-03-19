@@ -1,5 +1,5 @@
-# @formatString=x,S,P,j,t,p,%,%,%,%
-# @namePrefix=CLOCKSSWB
+#	@formatString	x,S,P,j,t,p,%,%,%,%
+#	@namePrefix	CLOCKSSWB
 	released	Wiley-Blackwell	Abacus	Abacus Volume 1	org.lockss.plugin.blackwell.BlackwellPlugin	base_url=http://www.blackwell-synergy.com/	journal_issn=1467-6281	journal_id=abac	volume_name=1
 	released	Wiley-Blackwell	Abacus	Abacus Volume 2	org.lockss.plugin.blackwell.BlackwellPlugin	base_url=http://www.blackwell-synergy.com/	journal_issn=1467-6281	journal_id=abac	volume_name=2
 	released	Wiley-Blackwell	Abacus	Abacus Volume 3	org.lockss.plugin.blackwell.BlackwellPlugin	base_url=http://www.blackwell-synergy.com/	journal_issn=1467-6281	journal_id=abac	volume_name=3
