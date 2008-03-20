@@ -1,5 +1,6 @@
 #	@formatString	x,S,t,p,%,%,@					
-#	@namePrefix	HW					
+#	@namePrefix	HW
+#	@publisherTitleSet	publisher=SAGE Publications					
 #	@fixedValues	P=SAGE Publications					
 #	@fixedValues	j=Accounting History
 old	released	Accounting History Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified

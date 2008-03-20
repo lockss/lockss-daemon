@@ -1,5 +1,6 @@
 #	@formatString	x,S,t,%,%,@			
 #	@namePrefix	CLOCKSSAPS			
+#	@publisherTitleSet	publisher=American Physiological Society
 #	@fixedValues	P=American Physiological Society	p=org.lockss.plugin.highwire.ClockssHighWirePlugin	j=Journal of Applied Physiology	
 	released	Journal of Applied Physiology Volume 1	base_url=http://jap.physiology.org/	volume_name=1	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 	released	Journal of Applied Physiology Volume 2	base_url=http://jap.physiology.org/	volume_name=2	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform

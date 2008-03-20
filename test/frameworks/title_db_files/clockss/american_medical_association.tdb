@@ -1,5 +1,6 @@
 #	@formatString	x,S,t,%,%		
-#	@namePrefix	CLOCKSSAMA		
+#	@namePrefix	CLOCKSSAMA	
+#	@publisherTitleSet	publisher=American Medical Association	
 #	@fixedValues	P=American Medical Association	p=org.lockss.plugin.highwire.ClockssHighWirePlugin	j=Journal of the American Medical Association
 	released	Journal of the American Medical Association Volume 195	base_url=http://jama.ama-assn.org/	volume_name=195
 	released	Journal of the American Medical Association Volume 196	base_url=http://jama.ama-assn.org/	volume_name=196

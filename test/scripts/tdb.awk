@@ -9,6 +9,12 @@ BEGIN {
  false = 0;
  true = 1;
 
+ # Directives
+ DIRECTIVE_FIXED_VALUES        = "@fixedValues"
+ DIRECTIVE_FORMAT_STRING       = "@formatString"
+ DIRECTIVE_NAME_PREFIX         = "@namePrefix"
+ DIRECTIVE_PUBLISHER_TITLE_SET = "@publisherTitleSet"
+
  # Format codes
  CODE_ATTRIBUTE      = "@"
  CODE_CODEN          = "c"
@@ -23,11 +29,6 @@ BEGIN {
  CODE_SKIP_2         = "X"
  CODE_STATUS         = "S"
  CODE_TITLE          = "t"
-
- # Directives
- DIRECTIVE_FORMAT_STRING = "@formatString"
- DIRECTIVE_NAME_PREFIX   = "@namePrefix"
- DIRECTIVE_FIXED_VALUES  = "@fixedValues"
 
  # Archival unit statuses
  STATUS_DOES_NOT_EXIST = "does_not_exist"
@@ -82,10 +83,6 @@ BEGIN {
 # parseCommandLine
 #
 function parseCommandLine() {
- # Disallow overrides # FIXME: remove these after beginning of file is handled
- formatString = ""
- namePrefix = ""
-
  # Defaults
  if (outputStyle == "") { outputStyle = STYLE_DEFAULT }
  if (outputLevel == "") { outputLevel = LEVEL_DEFAULT }
@@ -163,44 +160,44 @@ function parseFixedValues(        _i, _code) {
 function preambleXml() {
  xmlInOrgLockssTitle = false;
 
- printf  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
- printf  "<!DOCTYPE lockss-config [\n"
- printf  "<!ELEMENT lockss-config (if|property)+>\n"
- printf  "<!ELEMENT property (property|list|value|if)*>\n"
- printf  "<!ELEMENT list (value)+>\n"
- printf  "<!ELEMENT value (#PCDATA)>\n"
- printf  "<!ELEMENT test EMPTY>\n"
- printf  "<!ELEMENT and (and|or|not|test)*>\n"
- printf  "<!ELEMENT or (and|or|not|test)*>\n"
- printf  "<!ELEMENT not (and|or|not|test)*>\n"
- printf  "<!ELEMENT if (and|or|not|then|else|test|property)*>\n"
- printf  "<!ELEMENT then (if|property)*>\n"
- printf  "<!ELEMENT else (if|property)*>\n"
- printf  "<!ATTLIST property name CDATA #REQUIRED>\n"
- printf  "<!ATTLIST property value CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test hostname CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test group CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test daemonVersionMin CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test daemonVersionMax CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test daemonVersion CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test platformVersionMin CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test platformVersionMax CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test platformVersion CDATA #IMPLIED>\n"
- printf  "<!ATTLIST test platformName CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if hostname CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if group CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if daemonVersionMin CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if daemonVersionMax CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if daemonVersion CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if platformVersionMin CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if platformVersionMax CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if platformVersion CDATA #IMPLIED>\n"
- printf  "<!ATTLIST if platformName CDATA #IMPLIED>\n"
- printf  "<!ATTLIST list append CDATA #IMPLIED>\n"
- printf  "]>\n"
- printf  "\n"
- printf  "<lockss-config>\n"
- printf  "\n"
+ printf   "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+ printf   "<!DOCTYPE lockss-config [\n"
+ printf   "<!ELEMENT lockss-config (if|property)+>\n"
+ printf   "<!ELEMENT property (property|list|value|if)*>\n"
+ printf   "<!ELEMENT list (value)+>\n"
+ printf   "<!ELEMENT value (#PCDATA)>\n"
+ printf   "<!ELEMENT test EMPTY>\n"
+ printf   "<!ELEMENT and (and|or|not|test)*>\n"
+ printf   "<!ELEMENT or (and|or|not|test)*>\n"
+ printf   "<!ELEMENT not (and|or|not|test)*>\n"
+ printf   "<!ELEMENT if (and|or|not|then|else|test|property)*>\n"
+ printf   "<!ELEMENT then (if|property)*>\n"
+ printf   "<!ELEMENT else (if|property)*>\n"
+ printf   "<!ATTLIST property name CDATA #REQUIRED>\n"
+ printf   "<!ATTLIST property value CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test hostname CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test group CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test daemonVersionMin CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test daemonVersionMax CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test daemonVersion CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test platformVersionMin CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test platformVersionMax CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test platformVersion CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST test platformName CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if hostname CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if group CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if daemonVersionMin CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if daemonVersionMax CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if daemonVersion CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if platformVersionMin CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if platformVersionMax CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if platformVersion CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST if platformName CDATA #IMPLIED>\n"
+ printf   "<!ATTLIST list append CDATA #IMPLIED>\n"
+ printf   "]>\n"
+ printf   "\n"
+ printf   "<lockss-config>\n"
+ printf   "\n"
 }
 
 #
@@ -209,10 +206,10 @@ function preambleXml() {
 function postambleXml() {
  if (xmlInOrgLockssTitle) {
   xmlInOrgLockssTitle = false;
-  printf " </property>\n"
-  printf "\n"
+  printf  " </property>\n"
+  printf  "\n"
  }
- printf  "</lockss-config>\n"
+ printf   "</lockss-config>\n"
 }
 
 #
@@ -226,12 +223,12 @@ function printOneXmlEntry(        _status, _i) {
  # Start config subtree if needed
  if ((outputStyle == STYLE_XML || outputStyle == STYLE_XML_LEGACY) && !xmlInOrgLockssTitle) {
   xmlInOrgLockssTitle = true;
-  printf " <property name=\"org.lockss.title\">\n"
-  printf "\n"
+  printf  " <property name=\"org.lockss.title\">\n"
+  printf  "\n"
  }
 
  # Begin
- printf  "  <property name=\"%s\">\n", getOpaqueName(get(CODE_TITLE))
+ printf   "  <property name=\"%s\">\n", getOpaqueName(get(CODE_TITLE))
 
  # First the publisher
  printOneXmlAttribute("publisher=" xml(get(CODE_PUBLISHER)))
@@ -257,8 +254,33 @@ function printOneXmlEntry(        _status, _i) {
  if (_status == STATUS_PRE_RELEASED) { printOneXmlAttribute("releaseStatus=pre-release") }
 
  # End
- printf  "  </property>\n"
- printf  "\n"
+ printf   "  </property>\n"
+ printf   "\n"
+}
+
+#
+# printOneXmlPublisherTitleSet
+#
+function printOneXmlPublisherTitleSet(        _pub) {
+ if (getKey($3) == "publisher") {
+  if (xmlInOrgLockssTitle) {
+   xmlInOrgLockssTitle = false;
+   printf " </property>\n"
+   printf "\n"
+  }
+  _pub = xml(getValue($3))
+  printf  " <property name=\"org.lockss.titleSet\">\n"
+  printf  "\n"
+  printf  "  <property name=\"%s\">\n", _pub)
+  printOneXmlProperty("name=All " _pub " Titles")
+  printOneXmlProperty("class=xpath")
+  printOneXmlProperty("xpath=[attributes/publisher='" _pub "']")
+  printf  "  </property>\n"
+  printf  "\n"
+  printf  " </property>\n"
+  printf  "\n"
+ }
+ # FIXME: invalid format
 }
 
 #
@@ -266,10 +288,10 @@ function printOneXmlEntry(        _status, _i) {
 #
 function printOneXmlParameter(_num, _pair) {
  if (_pair == "") { return }
- printf  "   <property name=\"param.%d\">\n", _num
+ printf   "   <property name=\"param.%d\">\n", _num
  printOneXmlProperty("key=" getKey(_pair), " ")
  printOneXmlProperty("value=" getValue(_pair), " ")
- printf  "   </property>\n"
+ printf   "   </property>\n"
 }
 
 #
@@ -285,7 +307,7 @@ function printOneXmlAttribute(_pair) {
 function printOneXmlProperty(_pair, _pad) {
  if (_pair == "" || getValue(_pair) == "") { return }
  if (_pad != "") { printf "%s", _pad }
- printf  "   <property name=\"%s\" value=\"%s\" />\n", getKey(_pair), getValue(_pair)
+ printf   "   <property name=\"%s\" value=\"%s\" />\n", getKey(_pair), getValue(_pair)
 }
 
 #
@@ -346,12 +368,23 @@ function xml(_str) {
 # Beginning of file
 # unconditional
 #
-# #FIXME: if at beginning of file, invalidate formatString and namePrefix
+FNR == 1 {
+ formatString = ""
+ namePrefix = ""
+}
 
 #
 # Blank line
 #
 /^\t*$/ {
+ next
+}
+
+#
+# Fixed values line
+#
+$1 == "#" && $2 == DIRECTIVE_FIXED_VALUES {
+ parseFixedValues()
  next
 }
 
@@ -373,10 +406,10 @@ $1 == "#" && $2 == DIRECTIVE_NAME_PREFIX {
 }
 
 #
-# Fixed values line
+# Publisher title set line
 #
-$1 == "#" && $2 == DIRECTIVE_FIXED_VALUES {
- parseFixedValues()
+$1 == "#" && $2 == DIRECTIVE_PUBLISHER_TITLE_SET {
+ if (outputStyle == STYLE_XML) { printOneXmlPublisherTitleSet() }
  next
 }
 

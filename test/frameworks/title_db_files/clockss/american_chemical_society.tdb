@@ -1,5 +1,6 @@
 #	@formatString	x,S,t,%,%,%,%					
-#	@namePrefix	CLOCKSSACS					
+#	@namePrefix	CLOCKSSACS
+#	@publisherTitleSet	publisher=American Chemical Society
 #	@fixedValues	P=American Chemical Society	p=org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin				
 #	@fixedValues	j=ACS Chemical Biology
 	released	ACS Chemical Biology Volume 1	base_url=http://pubs3.acs.org/	article_url=http://pubs.acs.org/	journal_key=acbcct	volume_name=1

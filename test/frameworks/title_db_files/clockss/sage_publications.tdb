@@ -1,5 +1,6 @@
 #	@formatString	x,S,t,%,%,@				
 #	@namePrefix	CLOCKSSSAGE				
+#	@publisherTitleSet	publisher=SAGE Publications
 #	@fixedValues	P=SAGE Publications	p=org.lockss.plugin.highwire.ClockssHighWirePlugin			
 #	@fixedValues	j=American Journal of Evaluation
 	released	American Journal of Evaluation Volume 20	base_url=http://aje.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified

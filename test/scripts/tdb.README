@@ -67,9 +67,7 @@ x	Ignored		no / yes
 X	Ignored		no / yes
 -------+---------------+---------------+---------------------
 
-Columns for which the value would repeat from row to row can be
-specified with the @fixedValues directive. See the "Columns" section
-for more details.
+See the "Columns" section for more details.
 
 ----------------------
 @namePrefix <namepref>
@@ -84,6 +82,26 @@ network with plugins named differently.
 
 The directive applies until the end of the file or until overridden by
 another @namePrefix directive.
+
+-----------------------------------
+@publisherTitleSet publisher=<publ>
+-----------------------------------
+
+This directive declares that there is a title set for a whole
+publisher, identified by <publ>.
+
+-----------------------------
+@fixedValues <key>=<value>...
+-----------------------------
+
+The @fixedValues directive accepts a list of key-value pairs. Keys are
+column codes for CODEN, ISSN, journal title, plugin, publisher or
+rights. Values are then used for all subsequent archival unit lines,
+overriding the column with the same name if it also exists (or simply
+providing an implicit value if it does not), until another
+@fixedValues directive sets the value for the key to another value or
+a @formatString directive is encountered (which always resets fixed
+values).
 
 =======
 Columns
@@ -122,19 +140,6 @@ Journal title and title columns
 Journal title and title columns contain human-readable data. Automatic
 processing tools are responsible for encoding the strings properly for
 the output medium.
-
------------------------------
-@fixedValues <key>=<value>...
------------------------------
-
-The @fixedValues directive accepts a list of key-value pairs. Keys are
-column codes for CODEN, ISSN, journal title, plugin, publisher or
-rights. Values are then used for all subsequent archival unit lines,
-overriding the column with the same name if it also exists (or simply
-providing an implicit value if it does not), until another
-@fixedValues directive sets the value for the key to another value or
-a @formatString directive is encountered (which always resets fixed
-values).
 
 ==================
 The tdb.awk script
@@ -198,7 +203,8 @@ In xmlLegacy mode, the output is an XML document rooted at
 <lockss-config>, with a DTD, containing only title database entries
 (no title sets).
 
-The xml mode is currently unimplemented.
+In xml mode, the output is an XML document rooted at <lockss-config>,
+with a DTD, containing both title sets and title database entries.
 
 ----------------------
 Unimplemented features
