@@ -11,7 +11,9 @@ BEGIN {
 
  # Format codes
  CODE_ATTRIBUTE      = "@"
+ CODE_CODEN          = "c"
  CODE_ESTIMATED_SIZE = "e"
+ CODE_ISSN           = "i"
  CODE_JOURNAL_TITLE  = "j"
  CODE_PARAMETER      = "%"
  CODE_PLUGIN         = "p"
@@ -21,6 +23,11 @@ BEGIN {
  CODE_SKIP_2         = "X"
  CODE_STATUS         = "S"
  CODE_TITLE          = "t"
+
+ # Directives
+ DIRECTIVE_FORMAT_STRING = "@formatString"
+ DIRECTIVE_NAME_PREFIX   = "@namePrefix"
+ DIRECTIVE_FIXED_VALUES  = "@fixedValues"
 
  # Archival unit statuses
  STATUS_DOES_NOT_EXIST = "does_not_exist"
@@ -75,7 +82,7 @@ BEGIN {
 # parseCommandLine
 #
 function parseCommandLine() {
- # Disallow overrides
+ # Disallow overrides # FIXME: remove these after beginning of file is handled
  formatString = ""
  namePrefix = ""
 
@@ -85,29 +92,6 @@ function parseCommandLine() {
 
  # Parse
  parseOutputLevel()
-}
-
-#
-# parseFormatString
-#
-function parseFormatString(        _splitFormatString, _numFields, _field, _code) {
- # Reset format information
- delete indexOf
- numAdditionalParameters = 0
- delete indexAdditionalAttributes
- numParameters = 0
- delete indexParameters
-
- # For each format code...
- _numFields = split(formatString, _splitFormatString, ",")
- for (_field = 1 ; _field <= _numFields ; ++_field) {
-  _code = _splitFormatString[_field]
-  if (_code == CODE_SKIP_1 || _code == CODE_SKIP_2) { continue }
-  else if (_code == CODE_ESTIMATED_SIZE || _code == CODE_JOURNAL_TITLE || _code == CODE_PLUGIN || _code == CODE_TITLE || _code == CODE_PUBLISHER || _code == CODE_STATUS || _code == CODE_RIGHTS) { indexOf[_code] = _field }
-  else if (_code == CODE_ATTRIBUTE) { indexAdditionalAttributes[++numAdditionalAttributes] = _field }
-  else if (_code == CODE_PARAMETER) { indexParameters[++numParameters] = _field }
-  # FIXME: unknown code
- }
 }
 
 #
@@ -130,7 +114,46 @@ function parseOutputLevel(        _splitOutputLevel, _i, _statuses, _splitStatus
   else { _statuses = _splitOutputLevel[_i] } # Not a synonym
   # For each status...
   split(_statuses, _splitStatuses, ",")
-  for (_j in _splitStatuses) { outputLevels[_splitStatuses[_j]] = true; }
+  for (_j in _splitStatuses) { outputLevels[_splitStatuses[_j]] = true }
+ }
+}
+
+#
+# parseFormatString
+#
+function parseFormatString(        _splitFormatString, _numFields, _field, _code) {
+ # Reset format information
+ delete indexOf
+ numAdditionalParameters = 0
+ delete indexAdditionalAttributes
+ numParameters = 0
+ delete indexParameters
+ delete fixedValue
+
+ # For each format code...
+ _numFields = split(formatString, _splitFormatString, ",")
+ for (_field = 1 ; _field <= _numFields ; ++_field) {
+  _code = _splitFormatString[_field]
+  if (_code == CODE_SKIP_1 || _code == CODE_SKIP_2) { continue }
+  else if (_code == CODE_CODEN || _code == CODE_ESTIMATED_SIZE || _code == CODE_ISSN || _code == CODE_JOURNAL_TITLE || _code == CODE_PLUGIN || _code == CODE_PUBLISHER || _code == CODE_RIGHTS || _code == CODE_STATUS || _code == CODE_TITLE) { indexOf[_code] = _field }
+  else if (_code == CODE_ATTRIBUTE) { indexAdditionalAttributes[++numAdditionalAttributes] = _field }
+  else if (_code == CODE_PARAMETER) { indexParameters[++numParameters] = _field }
+  # FIXME: unknown code
+ }
+}
+
+#
+# parseFixedValues
+#
+function parseFixedValues(        _i, _code) {
+ for (_i = 3 ; _i <= NF ; ++_i) {
+  _code = getKey($_i)
+  if (_code == "") { continue }
+  if (_code == CODE_CODEN || _code == CODE_ISSN || _code == CODE_JOURNAL_TITLE || _code == CODE_PLUGIN || _code == CODE_PUBLISHER || _code == CODE_RIGHTS) {
+   indexOf[_code] = -1
+   fixedValue[_code] = getValue($_i)
+  }
+  # FIXME: unknown or illegal code
  }
 }
 
@@ -195,9 +218,9 @@ function postambleXml() {
 #
 # printOneXmlEntry
 #
-function printOneXmlEntry(        _status, _param, _attr) {
+function printOneXmlEntry(        _status, _i) {
  # Skip based on output level
- _status = $indexOf[CODE_STATUS]
+ _status = get(CODE_STATUS)
  if (!outputLevels[_status]) { return }
 
  # Start config subtree if needed
@@ -208,37 +231,29 @@ function printOneXmlEntry(        _status, _param, _attr) {
  }
 
  # Begin
- printf  "  <property name=\"%s\">\n", getOpaqueName($indexOf[CODE_TITLE])
+ printf  "  <property name=\"%s\">\n", getOpaqueName(get(CODE_TITLE))
 
- # First the publisher if there is one
- if (indexOf[CODE_PUBLISHER] != "") { printOneXmlAttribute("publisher=" xml($indexOf[CODE_PUBLISHER])) }
+ # First the publisher
+ printOneXmlAttribute("publisher=" xml(get(CODE_PUBLISHER)))
 
- # Then the journal title, archival unit title and plugin
- printf  "   <property name=\"journalTitle\" value=\"%s\" />\n", xml($indexOf[CODE_JOURNAL_TITLE])
- printf  "   <property name=\"title\" value=\"%s%s\" />\n", xml($indexOf[CODE_TITLE]), (_status == STATUS_PRE_RELEASED ? " (Pre-release)" : "")
- printf  "   <property name=\"plugin\" value=\"%s\" />\n", $indexOf[CODE_PLUGIN]
+ # Then the ISSN, CODEN, journal title, archival unit title and plugin
+ printOneXmlProperty("issn=" get(CODE_ISSN))
+ printOneXmlProperty("coden=" get(CODE_CODEN))
+ printOneXmlProperty("journalTitle=" xml(get(CODE_JOURNAL_TITLE)))
+ printOneXmlProperty("title=" xml(get(CODE_TITLE)) (_status == STATUS_PRE_RELEASED ? " (pre-release)" : "") (_status == STATUS_SUPERSEDED ? " (superseded)" : ""))
+ printOneXmlProperty("plugin=" get(CODE_PLUGIN))
 
  # Then the parameters
- for (_param = 1 ; _param <= numParameters ; ++_param) {
-  _pair = $indexParameters[_param]
-  if (_pair == "") { continue }
-  printOneXmlParameter(_param, _pair)
- }
+ for (_i = 1 ; _i <= numParameters ; ++_i) { printOneXmlParameter(_i, $indexParameters[_i]) }
  # Down AUs are denoted by a parameter
  if (_status == STATUS_DOWN || _status == STATUS_SUPERSEDED) { printOneXmlParameter(99, "pub_down=true") }
 
- # Then any additional parameters
- for (_attr = 1 ; _attr <= numAdditionalAttributes ; ++_attr) {
-  _pair = $indexAdditionalAttributes[_attr]
-  if (_pair == "") { continue }
-  printOneXmlAttribute(_pair)
- }
+ # Then any additional attributes
+ for (_i = 1 ; _i <= numAdditionalAttributes ; ++_i) { printOneXmlAttribute($indexAdditionalAttributes[_i]) }
 
  # Then other tidbits
- if (indexOf[CODE_RIGHTS] != "" && $indexOf[CODE_RIGHTS] == "openaccess") { printOneXmlAttribute("rights=openaccess") }
- if (indexOf[CODE_ESTIMATED_SIZE] != "" && $indexOf[CODE_ESTIMATED_SIZE] != "") {
-  printf "   <property name=\"estSize\" value=\"%s\" />\n", $indexOf[CODE_ESTIMATED_SIZE]
- }
+ if (get(CODE_RIGHTS) == "openaccess") { printOneXmlAttribute("rights=openaccess") }
+ printOneXmlProperty("estSize=" get(CODE_ESTIMATED_SIZE))
  if (_status == STATUS_PRE_RELEASED) { printOneXmlAttribute("releaseStatus=pre-release") }
 
  # End
@@ -250,9 +265,10 @@ function printOneXmlEntry(        _status, _param, _attr) {
 # printOneXmlParameter
 #
 function printOneXmlParameter(_num, _pair) {
+ if (_pair == "") { return }
  printf  "   <property name=\"param.%d\">\n", _num
- printf  "    <property name=\"key\" value=\"%s\" />\n", getKey(_pair)
- printf  "    <property name=\"value\" value=\"%s\" />\n", getValue(_pair)
+ printOneXmlProperty("key=" getKey(_pair), " ")
+ printOneXmlProperty("value=" getValue(_pair), " ")
  printf  "   </property>\n"
 }
 
@@ -260,7 +276,25 @@ function printOneXmlParameter(_num, _pair) {
 # printOneXmlAttribute
 #
 function printOneXmlAttribute(_pair) {
- printf  "   <property name=\"attributes.%s\" value=\"%s\" />\n", getKey(_pair), getValue(_pair)
+ printOneXmlProperty("attributes." _pair)
+}
+
+#
+# printOneXmlProperty
+#
+function printOneXmlProperty(_pair, _pad) {
+ if (_pair == "" || getValue(_pair) == "") { return }
+ if (_pad != "") { printf "%s", _pad }
+ printf  "   <property name=\"%s\" value=\"%s\" />\n", getKey(_pair), getValue(_pair)
+}
+
+#
+# get
+#
+function get(_code) {
+ if (indexOf[_code] < 0) { return fixedValue[_code] }
+ if (indexOf[_code] > 0) { return $indexOf[_code] }
+ return "";
 }
 
 #
@@ -276,6 +310,8 @@ function getOpaqueName(_str) {
 #
 # getKey
 #
+# Returns the key in a key=value pair.
+#
 function getKey(_str) {
  return match(_str, /^[^=]+=/) ? substr(_str, 1, RLENGTH - 1) : _str
 }
@@ -283,12 +319,17 @@ function getKey(_str) {
 #
 # getValue
 #
+# Returns the value in a key=value pair.
+#
 function getValue(_str) {
  return match(_str, /^[^=]+=/) ? substr(_str, RLENGTH + 1, length(_str) - RLENGTH) : _str
 }
 
 #
 # xml
+#
+# Encodes a string's ampersands and angle brackets for XML output.
+# Assumes UTF-8 input; produces UTF-8 output.
 #
 function xml(_str) {
  gsub(/&/, "\&amp;", _str);
@@ -302,6 +343,12 @@ function xml(_str) {
 ##########
 
 #
+# Beginning of file
+# unconditional
+#
+# #FIXME: if at beginning of file, invalidate formatString and namePrefix
+
+#
 # Blank line
 #
 /^\t*$/ {
@@ -311,7 +358,7 @@ function xml(_str) {
 #
 # Format line
 #
-$1 == "#" && $2 == "@formatString" {
+$1 == "#" && $2 == DIRECTIVE_FORMAT_STRING {
  formatString = $3
  parseFormatString()
  next
@@ -320,8 +367,16 @@ $1 == "#" && $2 == "@formatString" {
 #
 # Name prefix line
 #
-$1 == "#" && $2 == "@namePrefix" {
+$1 == "#" && $2 == DIRECTIVE_NAME_PREFIX {
  namePrefix = $3
+ next
+}
+
+#
+# Fixed values line
+#
+$1 == "#" && $2 == DIRECTIVE_FIXED_VALUES {
+ parseFixedValues()
  next
 }
 

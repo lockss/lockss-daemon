@@ -17,10 +17,11 @@ second field starts with an at sign (@), that comment line is a
 directive. Directives tell automatic processing tools how to interpret
 the title database file. The string after the at sign in the second
 field is the name of the directive. If the directive requires values,
-the values are read one each from the third and later fields. It is
-recommended that directive names be keyword strings without
-whitespace. Usually, directives are referred to by name including the
-at sign, for instance, "the @formatString directive".
+the values are read one each from the third and later fields (and can
+be referred to as a list of values). It is recommended that directive
+names be keyword strings without whitespace. Usually, directives are
+referred to by name including the at sign, for instance, "the
+@formatString directive".
 
 If a comment line is not a directive, it is ignored by automatic
 processing tools.
@@ -53,7 +54,9 @@ Code	Meaning		Can repeat	equivalent
 -------+---------------+---------------+---------------------
 @	Attribute	no / yes	attributes.<...>
 %	Parameter	no / yes	param.<...>
+c       CODEN           no / no         coden
 e	Estimated size	no / no		estSize
+i       ISSN            no / no         issn
 j	Journal title	yes / no	journalTitle
 p	Plugin		yes / no	plugin
 P	Publisher	no / no		attributes.publisher
@@ -64,7 +67,9 @@ x	Ignored		no / yes
 X	Ignored		no / yes
 -------+---------------+---------------+---------------------
 
-See the "Columns" section for more details.
+Columns for which the value would repeat from row to row can be
+specified with the @fixedValues directive. See the "Columns" section
+for more details.
 
 ----------------------
 @namePrefix <namepref>
@@ -117,6 +122,19 @@ Journal title and title columns
 Journal title and title columns contain human-readable data. Automatic
 processing tools are responsible for encoding the strings properly for
 the output medium.
+
+-----------------------------
+@fixedValues <key>=<value>...
+-----------------------------
+
+The @fixedValues directive accepts a list of key-value pairs. Keys are
+column codes for CODEN, ISSN, journal title, plugin, publisher or
+rights. Values are then used for all subsequent archival unit lines,
+overriding the column with the same name if it also exists (or simply
+providing an implicit value if it does not), until another
+@fixedValues directive sets the value for the key to another value or
+a @formatString directive is encountered (which always resets fixed
+values).
 
 ==================
 The tdb.awk script
