@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.4 2005-09-19 19:22:11 tlipkis Exp $
+ * $Id: LockssTiming.java,v 1.5 2008-03-20 17:28:41 edwardsb1 Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class LockssTiming extends LockssTestCase {
     reporter.report(delta, cnt);
   }
 
-  interface TimingReporter {
+  protected interface TimingReporter {
     void report(long totalTime, int rpt);
   }
 
