@@ -54,9 +54,9 @@ Code	Meaning		Can repeat	equivalent
 -------+---------------+---------------+---------------------
 @	Attribute	no / yes	attributes.<...>
 %	Parameter	no / yes	param.<...>
-c       CODEN           no / no         coden
+c	CODEN		no / no		coden
 e	Estimated size	no / no		estSize
-i       ISSN            no / no         issn
+i	ISSN		no / no		issn
 j	Journal title	yes / no	journalTitle
 p	Plugin		yes / no	plugin
 P	Publisher	no / no		attributes.publisher
