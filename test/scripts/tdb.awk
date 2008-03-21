@@ -271,7 +271,7 @@ function printOneXmlPublisherTitleSet(        _pub) {
   _pub = xml(getValue($3))
   printf  " <property name=\"org.lockss.titleSet\">\n"
   printf  "\n"
-  printf  "  <property name=\"%s\">\n", _pub)
+  printf  "  <property name=\"%s\">\n", _pub
   printOneXmlProperty("name=All " _pub " Titles")
   printOneXmlProperty("class=xpath")
   printOneXmlProperty("xpath=[attributes/publisher='" _pub "']")
