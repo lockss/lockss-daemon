@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.8 2008-03-21 21:53:11 edwardsb1 Exp $
+ * $Id: JarValidator.java,v 1.9 2008-03-21 23:50:59 edwardsb1 Exp $
  */
 
 /*
@@ -50,12 +50,14 @@ import java.security.cert.*;
 public class JarValidator {
   private KeyStore m_keystore;
   private File m_pluginDir;
+  private boolean m_allowExpired;
 
   private static Logger log = Logger.getLogger("JarValidator");
 
   public JarValidator(KeyStore keystore, File pluginDir) {
     this.m_keystore = keystore;
     this.m_pluginDir = pluginDir;
+    m_allowExpired = false;
   }
 
   /**
@@ -198,8 +200,13 @@ public class JarValidator {
 	jarEntryCert.checkValidity();
       } catch (CertificateExpiredException ex) {
 	log.warning("Certificate is no longer valid.");
-        throw new JarValidationException("Jar entry " + je.getName() + " is no longer valid." +
+        
+        if (m_allowExpired) {
+          log.warning("...but we're allowing it anyway.");
+        } else {
+          throw new JarValidationException("Jar entry " + je.getName() + " is no longer valid." +
             "Invalid certificates are not allowed.");
+        }
       } catch (CertificateNotYetValidException ex) {
 	log.warning("Certificate is not yet valid.");
         throw new JarValidationException("Jar entry " + je.getName() + " is not yet valid." +
@@ -293,5 +300,20 @@ public class JarValidator {
     JarValidationException(String s) {
       super(s);
     }
+  }
+
+  
+  /**
+   * Tom Lipkis requested:
+   * 
+   * You forgot the part about a config param that determines whether
+   * expired (and not yet valid) certificates are allowed, whose default
+   * value is to allow.  At least some PLNs are known to have at least some
+   * plugins with expired certs, so we need to avoid breaking them.
+   * 
+   * @param b
+   */
+  public void allowExpired(boolean b) {
+    m_allowExpired = b;
   }
 }

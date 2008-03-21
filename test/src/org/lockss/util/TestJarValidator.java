@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.10 2008-03-21 21:53:11 edwardsb1 Exp $
+ * $Id: TestJarValidator.java,v 1.11 2008-03-21 23:50:59 edwardsb1 Exp $
  */
 
 /*
@@ -517,9 +517,53 @@ public class TestJarValidator extends LockssTestCase {
       // The expected behavior.
     }
   }
+  
+  // Verify that turning off the expired flag allows us to read expired jars.
+  public void testAllowExpired() throws Exception {
+    MockCachedUrl mcuExpired2 =
+      new MockCachedUrl("http://foo.com/Expired2.jar", Expired2Jar, true);
+    examineInputStream(mcuExpired2);
+    
+    JarValidator validator =
+      new JarValidator(m_pubKeystore, getTempDir());
+    File f = null;
+    validator.allowExpired(true);
+      
+    f = validator.getBlessedJar(mcuExpired2);
+    
+    assertNotNull(f);
+    assertTrue(f.exists());
+  }
+  
+  
+  // Verify that turning on the expired flag disallows us to read expired jars.
+  public void testDisallowExpired() throws Exception {
+    MockCachedUrl mcuExpired2 =
+      new MockCachedUrl("http://foo.com/Expired2.jar", Expired2Jar, true);
+    examineInputStream(mcuExpired2);
+    
+    JarValidator validator =
+      new JarValidator(m_pubKeystore, getTempDir());
+    File f = null;
+    try {
+      validator.allowExpired(false);
+      
+      f = validator.getBlessedJar(mcuExpired2);
+      fail("testExpired2: getting an expired jar should have caused an exception.");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);
+  }
 
+  // If you have lots of time, reproduce every .jar test twice,
+  // once with validator.allowExpired(false), and once with 
+  // validator.allowExpired(true), just to make sure that you
+  // get the same answers.
+
+  
   /**
-   * @param mcuTest
+   * @param mcuTest -- the mock cached url that we want to verify exists.
    * @throws IOException
    */
   private void examineInputStream(MockCachedUrl mcuTest) throws IOException {
