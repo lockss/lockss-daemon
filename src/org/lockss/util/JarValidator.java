@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.7 2007-05-09 10:34:13 smorabito Exp $
+ * $Id: JarValidator.java,v 1.8 2008-03-21 21:53:11 edwardsb1 Exp $
  */
 
 /*
@@ -197,11 +197,13 @@ public class JarValidator {
       try {
 	jarEntryCert.checkValidity();
       } catch (CertificateExpiredException ex) {
-	log.warning("Certificate is no longer valid, skipping.");
-	continue;
+	log.warning("Certificate is no longer valid.");
+        throw new JarValidationException("Jar entry " + je.getName() + " is no longer valid." +
+            "Invalid certificates are not allowed.");
       } catch (CertificateNotYetValidException ex) {
-	log.warning("Certificate is not yet valid, skipping.");
-	continue;
+	log.warning("Certificate is not yet valid.");
+        throw new JarValidationException("Jar entry " + je.getName() + " is not yet valid." +
+            "Invalid certificates are not allowed.");
       }
 
       X509Certificate issuerCert = null;
