@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.11 2008-03-22 00:27:48 edwardsb1 Exp $
+ * $Id: JarValidator.java,v 1.12 2008-03-22 00:55:01 edwardsb1 Exp $
  */
 
 /*
@@ -305,9 +305,9 @@ public class JarValidator {
   
   /**
    ** If set true, accept otherwise-valid certificates that are expired
-   * or not yet valid.  In a preservation system, refusing to run
-   * code (e.g., a plugin) signed by a valid certificate that has now
-   * expired may be a bigger security risk than running it.
+   * or not yet valid. In a preservation system, refusing to run
+   * code (e.g., a plugin) signed by a valid certificate that has now
+   * expired may be a bigger security risk than running it.
    * 
    * @param b (whether to allow expired certificates)
    */
