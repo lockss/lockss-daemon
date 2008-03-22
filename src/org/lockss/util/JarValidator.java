@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.10 2008-03-22 00:13:46 edwardsb1 Exp $
+ * $Id: JarValidator.java,v 1.11 2008-03-22 00:27:48 edwardsb1 Exp $
  */
 
 /*
@@ -304,10 +304,12 @@ public class JarValidator {
 
   
   /**
-   * Some PLNs are known to have at least some plugins with expired 
-   * certs, so we need to avoid breaking them.
+   ** If set true, accept otherwise-valid certificates that are expired
+   * or not yet valid.  In a preservation system, refusing to run
+   * code (e.g., a plugin) signed by a valid certificate that has now
+   * expired may be a bigger security risk than running it.
    * 
-   * @param b
+   * @param b (whether to allow expired certificates)
    */
   public void allowExpired(boolean b) {
     m_allowExpired = b;
