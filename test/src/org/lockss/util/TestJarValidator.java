@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.11 2008-03-21 23:50:59 edwardsb1 Exp $
+ * $Id: TestJarValidator.java,v 1.12 2008-03-22 21:53:37 edwardsb1 Exp $
  */
 
 /*
@@ -77,8 +77,7 @@ public class TestJarValidator extends LockssTestCase {
   
   private String dirNonExisting = "/aftae/gthua/hjtno/gueao/";
   private String fileExisting = "org/lockss/util/FileExisting";
-  private String dirUnwritable = "/usr/local/";
-  
+
   private String pubKeystoreName = "org/lockss/test/public.keystore";
   private KeyStore m_pubKeystore;
 
@@ -476,16 +475,25 @@ public class TestJarValidator extends LockssTestCase {
   
   // What happens if pluginDir can't be written to?
   public void testPlugInDirUnwritable() throws Exception {
+    File fileUnwritable;
+    
+    fileUnwritable = getTempDir();
+    if (fileUnwritable.canWrite()) {
+      fileUnwritable.setReadOnly();
+    }
+    
     try {
       MockCachedUrl mcuGood2 =
         new MockCachedUrl("http://foo.com/Good2.jar", Good2Jar, true);
-      JarValidator validator = new JarValidator(m_pubKeystore, new File(dirUnwritable));
+      JarValidator validator = new JarValidator(m_pubKeystore, fileUnwritable);
       validator.getBlessedJar(mcuGood2);
       
       fail("testPlugInDirUnwritable: We should have caused an exception when we got the blessed jar.");      
     } catch (Exception e) {
       // The expected behavior.
     }
+    
+    fileUnwritable.delete();
   }
   
   // ** Tests of getBlessedJob
