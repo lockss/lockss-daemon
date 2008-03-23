@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.191 2008-03-15 04:54:15 tlipkis Exp $
+ * $Id: PollManager.java,v 1.192 2008-03-23 00:53:16 tlipkis Exp $
  */
 
 /*
@@ -1694,10 +1694,10 @@ public class PollManager
 	if (req != null) {
 	  startPoll(req);
 	  return true;
-	} else {
-	  startOneWait.expireIn(paramQueueEmptySleep);
 	}
       }
+    } else {
+      startOneWait.expireIn(paramQueueEmptySleep);
     }
     v3Status.setNextPollStartTime(startOneWait);
     while (!startOneWait.expired()) {
