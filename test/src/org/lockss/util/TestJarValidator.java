@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.13 2008-03-23 17:02:46 tlipkis Exp $
+ * $Id: TestJarValidator.java,v 1.14 2008-03-23 20:38:34 tlipkis Exp $
  */
 
 /*
@@ -473,8 +473,11 @@ public class TestJarValidator extends LockssTestCase {
     }
   }
   
+  // Disabled because the official build runs as root, which can write into
+  // the read-only dir
+
   // What happens if pluginDir can't be written to?
-  public void testPlugInDirUnwritable() throws Exception {
+  public void donttestPlugInDirUnwritable() throws Exception {
     File fileUnwritable;
     
     fileUnwritable = getTempDir("readonly");
