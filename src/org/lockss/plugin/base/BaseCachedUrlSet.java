@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.22 2007-08-30 03:52:39 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.23 2008-03-23 08:08:02 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
+import org.lockss.scheduler.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
@@ -210,7 +211,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 		 ", " + err + "), cur = " +
 		 StringUtil.timeIntervalToString(currentEstimate));
     if (err!=null) {
-      if (err instanceof HashService.Timeout) {
+      if (err instanceof HashService.Timeout
+	  || err instanceof SchedService.Timeout) {
         // timed out - guess 50% longer next time
         if (currentEstimate > elapsed) {
           // But if the current estimate is longer than this one took, we
