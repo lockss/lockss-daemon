@@ -1,10 +1,24 @@
-You must create a local.txt file in this directory with the properties that
-would be set in a dev cache's local.txt.
+run_dev runs a development daemon that mimics a production daemon,
+downloading global config from a prop server.  You must create a local.txt
+file in this directory with the essential machine config properties that
+would be set in a real LOCKSS box's local.txt.
 
 You will probably want at least these:
 
 org.lockss.platform.diskSpacePaths=./cache
-org.lockss.platform.localIPAddress=<routable-IP-address>
-org.lockss.platform.localIPs=<routable-IP-address>
-org.lockss.platform.accesssubnet=<local subnet>
+org.lockss.platform.localIPAddress=<IP-address>
+org.lockss.platform.accesssubnet=<local-subnet>
+org.lockss.platform.v3.identity=TCP:[<IP-address>]:9729
+
+You may want:
+
+org.lockss.platform.fqdn=<fqdn>>
 org.lockss.platform.smtphost=<smtp-host>
+org.lockss.platform.sysadminemail=<email-addr>
+
+
+To run:
+  cd test/frameworks/run_dev
+  ./start -p <prop-url>
+  ...   (connect to daemon on port 8081)
+  ./stop

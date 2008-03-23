@@ -4,6 +4,8 @@ group="dev"
 
 arg_mem="-Xmx250m"
 
+prop_url="http://props.lockss.org:8001/daemon/lockss.xml"
+
 while true ; do
   case "$1" in
     "-classpath" )
@@ -52,6 +54,9 @@ while true ; do
     -Xmx* )
       arg_mem="$1"
       shift; continue;;
+    -p )
+      prop_url="$2"
+      shift; shift; continue;;
     -* )
       args="$args $1"
       shift; continue;;
@@ -64,8 +69,7 @@ if [ -z "$args" ]; then
   PATH="$JAVA_HOME/bin:$PATH"
 fi
 
-#PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/forbidden.xml -p local.txt"
-PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
+PROP_URL_LIST="-p $prop_url -p local.txt"
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib

@@ -1,0 +1,13 @@
+run_one_daemon runs a standalone development daemon.  Useful for testing
+basic daemon behavior through the UI, and crawling behavior of plugins
+(crawl fules, URL normalizers, etc.).
+
+To run:
+  cd test/frameworks/run_one_daemon
+  ./start
+  ...   (connect to daemon on port 8081)
+  ./stop
+
+To test a new plugin, put it in the appropriate package dir in the
+toplevel plugins/ tree, add its name to org.lockss.plugin.registry (in
+common.xml), "ant jar-plugins" then start the daemon.
