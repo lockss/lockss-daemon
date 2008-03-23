@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.33 2008-02-19 01:35:27 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.34 2008-03-23 00:53:33 tlipkis Exp $
  */
 
 /*
@@ -142,8 +142,7 @@ public class BlockingStreamComm
     PREFIX + "minFileMessageSize";
   public static final int DEFAULT_MIN_FILE_MESSAGE_SIZE = 1024;
 
-  /** FilePeerMessage will be used for messages larger than this, else
-   * MemoryPeerMessage */
+  /** Maximum allowable received message size */
   public static final String PARAM_MAX_MESSAGE_SIZE =
     PREFIX + "maxMessageSize";
   public static final int DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024;
@@ -165,6 +164,12 @@ public class BlockingStreamComm
    * worker threads to exit.  Zero disables wait.  */
   public static final String PARAM_WAIT_EXIT = PREFIX + "waitExit";
   public static final long DEFAULT_WAIT_EXIT = 2 * Constants.SECOND;
+
+  /** If true, associated channels that refuse messages will be immediately
+   * dissociated */
+  public static final String PARAM_DISSOCIATE_ON_NO_SEND =
+    PREFIX + "dissociateOnNoSend";
+  public static final boolean DEFAULT_DISSOCIATE_ON_NO_SEND = true;
 
   static final String WDOG_PARAM_SCOMM = "SComm";
   static final long WDOG_DEFAULT_SCOMM = 1 * Constants.HOUR;
@@ -210,6 +215,7 @@ public class BlockingStreamComm
   protected SSLSocketFactory sslSocketFactory = null;
   protected SSLServerSocketFactory sslServerSocketFactory = null;
   private String paramSslKeyStorePassword = null;
+  private boolean paramDissociateOnNoSend = DEFAULT_DISSOCIATE_ON_NO_SEND;
 
   private boolean enabled = DEFAULT_ENABLED;
   private boolean running = false;
@@ -322,7 +328,7 @@ public class BlockingStreamComm
       paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
 					     DEFAULT_WAIT_EXIT);
 
-      if (changedKeys.contains(PARAM_DATA_DIR)) {
+      if (changedKeys.contains(PREFIX)) {
 	String paramDataDir = config.get(PARAM_DATA_DIR,
 					 PlatformUtil.getSystemTempDir());
 	File dir = new File(paramDataDir);
@@ -333,20 +339,24 @@ public class BlockingStreamComm
 	  log.warning("No message data dir: " + dir);
 	  dataDir = null;
 	}
-      }
 
-      paramMaxChannels = config.getInt(PARAM_MAX_CHANNELS,
-				       DEFAULT_MAX_CHANNELS);
-      paramConnectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT,
-						   DEFAULT_CONNECT_TIMEOUT);
-      paramSoTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
-					      DEFAULT_DATA_TIMEOUT);
-      paramSendWakeupTime = config.getTimeInterval(PARAM_SEND_WAKEUP_TIME,
-						   DEFAULT_SEND_WAKEUP_TIME);
-      paramChannelIdleTime = config.getTimeInterval(PARAM_CHANNEL_IDLE_TIME,
-						    DEFAULT_CHANNEL_IDLE_TIME);
-      paramDrainInputTime = config.getTimeInterval(PARAM_DRAIN_INPUT_TIME,
-						    DEFAULT_DRAIN_INPUT_TIME);
+	paramMaxChannels = config.getInt(PARAM_MAX_CHANNELS,
+					 DEFAULT_MAX_CHANNELS);
+	paramConnectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT,
+						     DEFAULT_CONNECT_TIMEOUT);
+	paramSoTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
+						DEFAULT_DATA_TIMEOUT);
+	paramSendWakeupTime = config.getTimeInterval(PARAM_SEND_WAKEUP_TIME,
+						     DEFAULT_SEND_WAKEUP_TIME);
+	paramChannelIdleTime =
+	  config.getTimeInterval(PARAM_CHANNEL_IDLE_TIME,
+				 DEFAULT_CHANNEL_IDLE_TIME);
+	paramDrainInputTime = config.getTimeInterval(PARAM_DRAIN_INPUT_TIME,
+						     DEFAULT_DRAIN_INPUT_TIME);
+	paramDissociateOnNoSend =
+	  config.getBoolean(PARAM_DISSOCIATE_ON_NO_SEND,
+			    DEFAULT_DISSOCIATE_ON_NO_SEND);
+      }
     }
   }
 
@@ -760,6 +770,9 @@ public class BlockingStreamComm
       }
 
       last = chan;
+      if (paramDissociateOnNoSend) {
+	dissociateChannelFromPeer(chan, id);
+      }
     }
     log.error("Couldn't enqueue msg after 3 tries: " + msg);
   }

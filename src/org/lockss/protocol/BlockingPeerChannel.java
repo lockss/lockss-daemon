@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.19 2007-11-07 08:15:24 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.20 2008-03-23 00:53:33 tlipkis Exp $
  */
 
 /*
@@ -256,6 +256,10 @@ class BlockingPeerChannel implements PeerChannel {
     return state == ChannelState.CLOSED || state == ChannelState.CLOSING;
   }
 
+  boolean isOpen() {
+    return state == ChannelState.OPEN;
+  }
+
   // These are the main entry points from BlockingStreamComm
 
   /** Start thread to connect to the peer and start channel threads.
@@ -339,11 +343,14 @@ class BlockingPeerChannel implements PeerChannel {
 	outs = new BufferedOutputStream(outs, COPY_BUFFER_SIZE);
 	if (log.isDebug3()) log.debug3(p()+"Buffering output");
       }
+
+      stateTrans(ChannelState.STARTING, ChannelState.OPEN);
+
       // writer must be started first as reader refers to writer thread (to
       // set name when peerid received)
       startWriter();
       startReader();
-      stateTrans(ChannelState.STARTING, ChannelState.OPEN);
+
     } catch (IOException e) {
       log.error("Channel didn't start", e);
       throw e;
@@ -379,12 +386,12 @@ class BlockingPeerChannel implements PeerChannel {
     ChannelState.CLOSING};
 
   void stopChannel(boolean abort, String msg, Throwable t) {
+    scomm.dissociateChannelFromPeer(this, peer);
     if (notStateTrans(stopIgnStates, ChannelState.CLOSING)) {
       if (msg != null || t != null) {
 	if (msg == null) msg = "Aborting " + peer.getIdString();
 	log.warning(msg, t);
       }
-      scomm.dissociateChannelFromPeer(this, peer);
       IOUtil.safeClose(sock);
       IOUtil.safeClose(ins);
       if (abort && socket_outs != null) {
@@ -567,8 +574,9 @@ class BlockingPeerChannel implements PeerChannel {
 	synchronized (stateLock) {
 	  if (state != ChannelState.CLOSING) {
 	    // reader, writer can get set to null while in ChannelState.CLOSING
-	    if (reader != null) reader.setRunnerName();
-	    if (writer != null) writer.setRunnerName();
+	    ChannelRunner tmp;
+	    if ((tmp = reader) != null) runner.setRunnerName();
+	    if ((tmp = writer) != null) runner.setRunnerName();
 	  }
 	}
 	break;
@@ -611,7 +619,11 @@ class BlockingPeerChannel implements PeerChannel {
       // connection to peerid just received, send an echo nonce message
       // over that connection and ensure we receive the nonce on this
       // connection, then close outgoing conn
-      scomm.associateChannelWithPeer(this, peer);
+      synchronized (stateLock) {
+	if (isOpen() && !isOriginate()) {
+	  scomm.associateChannelWithPeer(this, peer);
+	}
+      }
     } else if (!pid.equals(peer)) {
       String msg = "Received conflicting peerid msg: " + pid + " was: " + peer;
       log.warning(msg);
@@ -768,10 +780,11 @@ class BlockingPeerChannel implements PeerChannel {
 	      TimeBase.msSince(lastActiveTime) > scomm.getChannelIdleTime()) {
 	    // time to close channel.  shutdown output only in case peer is
 	    // now sending message
-	    setState(ChannelState.DRAIN_INPUT);
 	    // No longer can send messages so must dissociate now
 	    scomm.dissociateChannelFromPeer(this, peer);
 	    scomm.addDrainingChannel(this);
+
+	    setState(ChannelState.DRAIN_INPUT);
 
 	    reader.setTimeout(scomm.getDrainInputTime() / 2);
 	    try {
