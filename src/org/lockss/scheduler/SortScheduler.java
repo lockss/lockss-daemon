@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.14 2008-02-15 09:14:41 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.15 2008-03-23 00:53:52 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,13 @@ public class SortScheduler implements Scheduler {
     return rawTasks;
   }
 
+  /** Set all the tasks in this scheduler as having been accepted */
+  public void acceptTasks() {
+    for (SchedulableTask task : rawTasks) {
+      task.setAccepted(true);
+    }
+  }
+
   public Schedule getSchedule() {
     if (!scheduleCreated) {
       throw new IllegalStateException("Attempt to get nonexistent schedule");
@@ -192,6 +199,7 @@ public class SortScheduler implements Scheduler {
     long cumBackTime = 0;		// cumulative background time
     Set<TaskData> cumBackTasks = new HashSet();
     Set<TaskData> cumForeTasks = new HashSet();
+    boolean seenNewTask = false;
     int ix = 0;
     Iterator beIter = bdTasks.entrySet().iterator();
     Map.Entry lentry = (Map.Entry)beIter.next();
@@ -212,6 +220,9 @@ public class SortScheduler implements Scheduler {
       }
       if (lbt.startingTasks != null) {
 	for (TaskData std : lbt.startingTasks) {
+	  if (!std.isAccepted()) {
+	    seenNewTask = true;
+	  }
 	  if (std.task.isBackgroundTask()) {
 	    BackgroundTask btask = (BackgroundTask)std.task;
 	    intrvl.loadFactor -= btask.getLoadFactor();
@@ -225,6 +236,7 @@ public class SortScheduler implements Scheduler {
 	}
       }
       intrvl.competingTaskList = new ArrayList(cumForeTasks);
+      intrvl.seenNewTask = seenNewTask;
       if (intrvl.loadFactor < 0.0) {
 	if (log.isDebug2())
 	  log.debug2("initIntrTskList: loadFactor < 0: " + intrvl);
@@ -448,6 +460,10 @@ public class SortScheduler implements Scheduler {
       return getWEnd().minus(getWStart());
     }
 
+    public boolean isAccepted() {
+      return task.isAccepted();
+    }
+
     public String toString() {
       return "[TD: t=" + task + "]";
     }
@@ -502,6 +518,7 @@ public class SortScheduler implements Scheduler {
     List endingTaskList;
     TaskData[] endingTasks;
     List<Schedule.Chunk> chunks;	// scheduled chunks (result)
+    boolean seenNewTask = false;
 
     double loadFactor = 1.0;
 
@@ -639,7 +656,7 @@ public class SortScheduler implements Scheduler {
       if (endingTasks != null) {
 	for (TaskData etd : endingTasks) {
 	  if (etd.unschedTaskTime > 0) {
-	    if (etd.task.isAccepted()) {
+	    if (!seenNewTask) {
 	      // don't fail to generate a schedule because no longer time
 	      // to satisfy already-accepted tasks
 	      if (log.isDebug2()) {
