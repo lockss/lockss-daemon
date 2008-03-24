@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	European Union for Coastal Conservation
+#	@fixedValues	P=European Union for Coastal Conservation	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1400-0350	j=Journal of Coastal Conservation
+	ready	Journal of Coastal Conservation Volume 8	base_url=http://www.bioone.org/	journal_id=1400-0350	volume=8
+	released	Journal of Coastal Conservation Volume 9	base_url=http://www.bioone.org/	journal_id=1400-0350	volume=9
+	ready	Journal of Coastal Conservation Volume 10	base_url=http://www.bioone.org/	journal_id=1400-0350	volume=10

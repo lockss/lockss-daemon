@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Zoological Society of Japan
+#	@fixedValues	P=Zoological Society of Japan	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0289-0003	j=Zoological Science
+	manifest	Zoological Science Volume 22	base_url=http://www.bioone.org/	journal_id=0289-0003	volume=22
+	manifest	Zoological Science Volume 23	base_url=http://www.bioone.org/	journal_id=0289-0003	volume=23
+	manifest	Zoological Science Volume 24	base_url=http://www.bioone.org/	journal_id=0289-0003	volume=24

@@ -1,0 +1,11 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Biological Society of Washington
+#	@fixedValues	P=Biological Society of Washington	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0097-0298	j=Bulletin of the Biological Society of Washington
+	released	Bulletin of the Biological Society of Washington Volume 13	base_url=http://www.bioone.org/	journal_id=0097-0298	volume=13
+	released	Bulletin of the Biological Society of Washington Volume 14	base_url=http://www.bioone.org/	journal_id=0097-0298	volume=14
+#	@fixedValues	i=0006-324X	j=Proceedings of the Biological Society of Washington
+	manifest	Proceedings of the Biological Society of Washington Volume 118	base_url=http://www.bioone.org/	journal_id=0006-324X	volume=118
+	manifest	Proceedings of the Biological Society of Washington Volume 119	base_url=http://www.bioone.org/	journal_id=0006-324X	volume=119
+	manifest	Proceedings of the Biological Society of Washington Volume 120	base_url=http://www.bioone.org/	journal_id=0006-324X	volume=120

@@ -1,0 +1,9 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	International Association for Bear Research and Management
+#	@fixedValues	P=International Association for Bear Research and Management	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1537-6176	j=Ursus
+	manifest	Ursus Volume 15	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=15
+	manifest	Ursus Volume 16	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=16
+	manifest	Ursus Volume 17	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=17
+	manifest	Ursus Volume 18	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=18

@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	California Botanical Society
+#	@fixedValues	P=California Botanical Society	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0024-9637	j=Madroño
+	manifest	Madroño Volume 52	base_url=http://www.bioone.org/	journal_id=0024-9637	volume=52
+	ready	Madroño Volume 53	base_url=http://www.bioone.org/	journal_id=0024-9637	volume=53
+	manifest	Madroño Volume 54	base_url=http://www.bioone.org/	journal_id=0024-9637	volume=54

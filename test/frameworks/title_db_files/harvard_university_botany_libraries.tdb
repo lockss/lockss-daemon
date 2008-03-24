@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Harvard University Botany Libraries
+#	@fixedValues	P=Harvard University Botany Libraries	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1043-4534	j=Harvard Papers in Botany
+	ready	Harvard Papers in Botany Volume 10	base_url=http://www.bioone.org/	journal_id=1043-4534	volume=10
+	ready	Harvard Papers in Botany Volume 11	base_url=http://www.bioone.org/	journal_id=1043-4534	volume=11
+	ready	Harvard Papers in Botany Volume 12	base_url=http://www.bioone.org/	journal_id=1043-4534	volume=12

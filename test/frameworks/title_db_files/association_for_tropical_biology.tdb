@@ -1,0 +1,11 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Association for Tropical Biology
+#	@fixedValues	P=Association for Tropical Biology	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0006-3606	j=BIOTROPICA
+	released	BIOTROPICA Volume 32	base_url=http://www.bioone.org/	journal_id=0006-3606	volume=32
+	released	BIOTROPICA Volume 33	base_url=http://www.bioone.org/	journal_id=0006-3606	volume=33
+	released	BIOTROPICA Volume 34	base_url=http://www.bioone.org/	journal_id=0006-3606	volume=34
+	released	BIOTROPICA Volume 35	base_url=http://www.bioone.org/	journal_id=0006-3606	volume=35
+	released	BIOTROPICA Volume 36	base_url=http://www.bioone.org/	journal_id=0006-3606	volume=036
+	do_not_process	BIOTROPICA Volume 36	base_url=http://www.bioone.org/	journal_id=0006-3606	volume=36

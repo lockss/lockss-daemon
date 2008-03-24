@@ -1,0 +1,25 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	New York Botanical Garden
+#	@fixedValues	P=New York Botanical Garden	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0007-196X	j=Brittonia
+	ready	Brittonia Volume 54	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=54
+	ready	Brittonia Volume 55	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=55
+	released	Brittonia Volume 56	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=56
+	ready	Brittonia Volume 57	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=57
+	manifest	Brittonia Volume 58	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=58
+	ready	Brittonia Volume 59	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=59
+#	@fixedValues	i=0013-0001	j=Economic Botany
+	ready	Economic Botany Volume 56	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=56
+	ready	Economic Botany Volume 57	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=57
+	released	Economic Botany Volume 58	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=58
+	ready	Economic Botany Volume 59	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=59
+	ready	Economic Botany Volume 60	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=60
+	ready	Economic Botany Volume 61	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=61
+#	@fixedValues	i=0006-8101	j=The Botanical Review
+	manifest	The Botanical Review Volume 68	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=68
+	manifest	The Botanical Review Volume 69	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=69
+	released	The Botanical Review Volume 70	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=70
+	manifest	The Botanical Review Volume 71	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=71
+	manifest	The Botanical Review Volume 72	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=72
+	manifest	The Botanical Review Volume 73	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=73

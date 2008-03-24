@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Kentucky Academy of Science
+#	@fixedValues	P=Kentucky Academy of Science	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1098-7096	j=Journal of the Kentucky Academy of Science
+	ready	Journal of the Kentucky Academy of Science Volume 66	base_url=http://www.bioone.org/	journal_id=1098-7096	volume=66
+	ready	Journal of the Kentucky Academy of Science Volume 67	base_url=http://www.bioone.org/	journal_id=1098-7096	volume=67
+	ready	Journal of the Kentucky Academy of Science Volume 68	base_url=http://www.bioone.org/	journal_id=1098-7096	volume=68

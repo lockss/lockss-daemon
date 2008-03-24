@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Museum and Institute of Zoology at the Polish Academy of Science
+#	@fixedValues	P=Museum and Institute of Zoology at the Polish Academy of Science	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1733-5329	j=Acta Chiropterologica
+	ready	Acta Chiropterologica Volume 7	base_url=http://www.bioone.org/	journal_id=1733-5329	volume=7
+	ready	Acta Chiropterologica Volume 8	base_url=http://www.bioone.org/	journal_id=1733-5329	volume=8
+	ready	Acta Chiropterologica Volume 9	base_url=http://www.bioone.org/	journal_id=1733-5329	volume=9

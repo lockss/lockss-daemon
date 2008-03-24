@@ -1,0 +1,12 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Association of Field Ornithologists
+#	@fixedValues	P=Association of Field Ornithologists	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0273-8570	j=Journal of Field Ornithology
+	released	Journal of Field Ornithology Volume 71	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=71
+	released	Journal of Field Ornithology Volume 72	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=72
+	released	Journal of Field Ornithology Volume 73	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=73
+	released	Journal of Field Ornithology Volume 74	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=74
+	released	Journal of Field Ornithology Volume 75	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=75
+	released	Journal of Field Ornithology Volume 76	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=076
+	do_not_process	Journal of Field Ornithology Volume 76	base_url=http://www.bioone.org/	journal_id=0273-8570	volume=76

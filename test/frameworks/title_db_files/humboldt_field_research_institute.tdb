@@ -1,0 +1,20 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Humboldt Field Research Institute
+#	@fixedValues	P=Humboldt Field Research Institute	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1092-6194	j=Northeastern Naturalist
+	manifest	Northeastern Naturalist Volume 7	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=7
+	manifest	Northeastern Naturalist Volume 8	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=8
+	manifest	Northeastern Naturalist Volume 9	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=9
+	manifest	Northeastern Naturalist Volume 10	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=10
+	released	Northeastern Naturalist Volume 11	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=11
+	manifest	Northeastern Naturalist Volume 12	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=12
+	manifest	Northeastern Naturalist Volume 13	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=13
+	manifest	Northeastern Naturalist Volume 14	base_url=http://www.bioone.org/	journal_id=1092-6194	volume=14
+#	@fixedValues	i=1528-7092	j=Southeastern Naturalist
+	manifest	Southeastern Naturalist Volume 1	base_url=http://www.bioone.org/	journal_id=1528-7092	volume=1
+	manifest	Southeastern Naturalist Volume 2	base_url=http://www.bioone.org/	journal_id=1528-7092	volume=2
+	released	Southeastern Naturalist Volume 3	base_url=http://www.bioone.org/	journal_id=1528-7092	volume=3
+	manifest	Southeastern Naturalist Volume 4	base_url=http://www.bioone.org/	journal_id=1528-7092	volume=4
+	manifest	Southeastern Naturalist Volume 5	base_url=http://www.bioone.org/	journal_id=1528-7092	volume=5
+	manifest	Southeastern Naturalist Volume 6	base_url=http://www.bioone.org/	journal_id=1528-7092	volume=6

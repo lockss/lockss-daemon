@@ -1,0 +1,18 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	International Association of Vegetation Science
+#	@fixedValues	P=International Association of Vegetation Science	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1402-2001	j=Applied Vegetation Science
+	manifest	Applied Vegetation Science Volume 5	base_url=http://www.bioone.org/	journal_id=1402-2001	volume=5
+	manifest	Applied Vegetation Science Volume 6	base_url=http://www.bioone.org/	journal_id=1402-2001	volume=6
+	released	Applied Vegetation Science Volume 7	base_url=http://www.bioone.org/	journal_id=1402-2001	volume=7
+	manifest	Applied Vegetation Science Volume 8	base_url=http://www.bioone.org/	journal_id=1402-2001	volume=8
+	manifest	Applied Vegetation Science Volume 9	base_url=http://www.bioone.org/	journal_id=1402-2001	volume=9
+	manifest	Applied Vegetation Science Volume 10	base_url=http://www.bioone.org/	journal_id=1402-2001	volume=10
+#	@fixedValues	i=1100-9233	j=Journal of Vegetation Science
+	manifest	Journal of Vegetation Science Volume 13	base_url=http://www.bioone.org/	journal_id=1100-9233	volume=13
+	manifest	Journal of Vegetation Science Volume 14	base_url=http://www.bioone.org/	journal_id=1100-9233	volume=14
+	released	Journal of Vegetation Science Volume 15	base_url=http://www.bioone.org/	journal_id=1100-9233	volume=15
+	manifest	Journal of Vegetation Science Volume 16	base_url=http://www.bioone.org/	journal_id=1100-9233	volume=16
+	manifest	Journal of Vegetation Science Volume 17	base_url=http://www.bioone.org/	journal_id=1100-9233	volume=17
+	manifest	Journal of Vegetation Science Volume 18	base_url=http://www.bioone.org/	journal_id=1100-9233	volume=18

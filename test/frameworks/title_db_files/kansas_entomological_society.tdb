@@ -1,0 +1,9 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Kansas Entomological Society
+#	@fixedValues	P=Kansas Entomological Society	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0022-8567	j=Journal of the Kansas Entomological Society
+	ready	Journal of the Kansas Entomological Society Volume 77	base_url=http://www.bioone.org/	journal_id=0022-8567	volume=77
+	ready	Journal of the Kansas Entomological Society Volume 78	base_url=http://www.bioone.org/	journal_id=0022-8567	volume=78
+	ready	Journal of the Kansas Entomological Society Volume 79	base_url=http://www.bioone.org/	journal_id=0022-8567	volume=79
+	ready	Journal of the Kansas Entomological Society Volume 80	base_url=http://www.bioone.org/	journal_id=0022-8567	volume=80

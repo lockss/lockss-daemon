@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	BO
+#	@publisherTitleSet	Herpetological Society of Japan
+#	@fixedValues	P=Herpetological Society of Japan	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1881-1019	j=Current Herpetology
+	ready	Current Herpetology Volume 24	base_url=http://www.bioone.org/	journal_id=1881-1019	volume=24
+	manifest	Current Herpetology Volume 25	base_url=http://www.bioone.org/	journal_id=1881-1019	volume=25
+	ready	Current Herpetology Volume 26	base_url=http://www.bioone.org/	journal_id=1881-1019	volume=26
