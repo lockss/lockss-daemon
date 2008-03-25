@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.23 2007-02-20 01:35:47 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.24 2008-03-25 21:43:41 edwardsb1 Exp $
  */
 
 /*
@@ -44,13 +44,16 @@ import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.*;
-import org.mortbay.http.HttpFields;
+// import org.mortbay.http.HttpFields;
 
 /** ProxyConfig servlet supplies configuration files or fragments for
  * configuring browsers or external proxies to use the lockss cache as a
  * proxy for (at least) those URLs contained on the cache.
  */
 public class ProxyConfig extends LockssServlet {
+  
+  // Used for serialization
+  private static final long serialVersionUID = 1L;  // To stop an Eclipse complaint.  See "http://www.eaze.org/patrick/java/objectserialization.jsp"
 
   private static final String MIME_TYPE_PAC = "application/x-ns-proxy-autoconfig";
   private static final String TAG_MIME = "mime";
@@ -60,9 +63,9 @@ public class ProxyConfig extends LockssServlet {
   private static final String TAG_COMBINED_PAC = "Combined PAC";
   private static final String TAG_PAC = "pac";
   private String action;
-  private String auth;
+  // private String auth;
   private PrintWriter wrtr = null;
-  private String encapsulate;
+  // private String encapsulate;
   private ProxyInfo pi;
   private Set urlStems;
   private boolean pacform;
@@ -72,7 +75,7 @@ public class ProxyConfig extends LockssServlet {
   // don't hold onto objects after request finished
   protected void resetLocals() {
     wrtr = null;
-    auth = null;
+  //  auth = null;
     super.resetLocals();
   }
 
@@ -86,7 +89,9 @@ public class ProxyConfig extends LockssServlet {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
-    auth = req.getHeader(HttpFields.__Authorization);
+    boolean isDirectFirst;
+    
+ //   auth = req.getHeader(HttpFields.__Authorization);
     action = getParameter("action");
     if (StringUtil.isNullString(action)) {
       // remain compatible with previous PAC URL, which people may have
@@ -113,9 +118,12 @@ public class ProxyConfig extends LockssServlet {
 
     // assume will send text.  Error & form display will override.
     resp.setContentType("text/plain");
-
+    
+    // TODO: Retrieve whether the user specified that s/he wants "direct" first or last.
+    isDirectFirst = false;
+    
     try {
-      generateProxyFile(action);
+      generateProxyFile(action, isDirectFirst);
     } catch (IOException e) {
       if (wrtr != null) {
 	// Error occurred after we created writer, default error page won't
@@ -144,7 +152,7 @@ public class ProxyConfig extends LockssServlet {
     }
   }
 
-  void generateProxyFile(String format) throws IOException {
+  void generateProxyFile(String format, boolean isDirectFirst) throws IOException {
     pi = new ProxyInfo(getMachineName());
     urlStems = pi.getUrlStems();
 
@@ -152,10 +160,10 @@ public class ProxyConfig extends LockssServlet {
       resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE);
     }
     else if (format.equalsIgnoreCase(TAG_PAC)) {
-      generatePacFile();
+      generatePacFile(isDirectFirst);
     }
     else if (format.equalsIgnoreCase(TAG_COMBINED_PAC)) {
-      generateEncapsulatedPacFile();
+      generateEncapsulatedPacFile(isDirectFirst);
     }
     else if (format.equalsIgnoreCase(TAG_EZPROXY)) {
       generateEZProxyFile();
@@ -183,7 +191,7 @@ public class ProxyConfig extends LockssServlet {
     wrtr.print(pi.generateSquidConfigFragment(urlStems));
   }
 
-  void generatePacFile() throws IOException {
+  void generatePacFile(boolean isDirectFirst) throws IOException {
     wrtr = resp.getWriter();
 
     // Serve as PAC mime type if requested
@@ -192,10 +200,10 @@ public class ProxyConfig extends LockssServlet {
       resp.setContentType(MIME_TYPE_PAC);
     }
 
-    wrtr.print(pi.generatePacFile(urlStems));
+    wrtr.print(pi.generatePacFile(urlStems, isDirectFirst));
   }
 
-  void generateEncapsulatedPacFile() throws IOException {
+  void generateEncapsulatedPacFile(boolean isDirectFirst) throws IOException {
     String url = getParameter("encapsulated_url");
     String pac;
     try {
@@ -212,11 +220,11 @@ public class ProxyConfig extends LockssServlet {
 	  displayForm("Please provide an existing PAC file in one of the three fields below");
 	  return;
 	}
-	pac = pi.generateEncapsulatedPacFile(urlStems, encap, null);
+	pac = pi.generateEncapsulatedPacFile(urlStems, encap, null, isDirectFirst);
       } else {
 	try {
 // 	  pac = pi.encapsulatePacFileFromURL(urlStems, url, auth);
-	  pac = pi.generateEncapsulatedPacFileFromURL(urlStems, url);
+	  pac = pi.generateEncapsulatedPacFileFromURL(urlStems, url, isDirectFirst);
 	} catch (UnknownHostException e) {
 	  displayForm("Error reading PAC file from URL: " + url +
 		      "<br>No such host: " + e.getMessage());

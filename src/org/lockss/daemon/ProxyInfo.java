@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.27 2008-02-27 06:06:32 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.28 2008-03-25 21:43:41 edwardsb1 Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
-import java.util.Map.Entry;
+// import java.util.Map.Entry;
 
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
@@ -175,6 +175,17 @@ public class ProxyInfo {
    * @author Thib Guicherd-Callin
    */
   class PacFileFragmentBuilder extends FragmentBuilder {
+    private boolean m_isDirectFirst;
+    
+    private PacFileFragmentBuilder() {
+      throw new UnsupportedOperationException("Please use the constructor with the boolean parameter, PacFileFragmentBuilder(boolean).");   
+    }
+    
+    public PacFileFragmentBuilder(boolean isCacheFirst) {
+      super();
+      
+      m_isDirectFirst = isCacheFirst;
+    }
 
     /* Inherit documentation */
     public void generateBeginning(StringBuffer buffer) {
@@ -190,7 +201,7 @@ public class ProxyInfo {
 
     /* Inherit documentation */
     public void generateEnd(StringBuffer buffer) {
-      buffer.append(" return \"DIRECT\";\n");
+      buffer.append(" return \"DIRECT\";\n");      
       buffer.append("}\n");
     }
 
@@ -203,11 +214,19 @@ public class ProxyInfo {
       buffer.append(" if (shExpMatch(url, \"");
       buffer.append(shPattern(urlStem));
       buffer.append("\"))\n");
-      buffer.append(" { return \"PROXY ");
+      buffer.append(" { return \"");
+      if (m_isDirectFirst) {
+        buffer.append("DIRECT; ");
+      }
+      buffer.append("PROXY ");
       buffer.append(getProxyHost());
       buffer.append(":");
       buffer.append(getProxyPort());
-      buffer.append("; DIRECT\"; }\n\n");
+      if (m_isDirectFirst) {
+        buffer.append("\"; }\n\n");
+      } else {
+        buffer.append("; DIRECT\"; }\n\n");
+      }
     }
 
     /**
@@ -256,9 +275,13 @@ public class ProxyInfo {
      * instance.</p>
      * @param pacFileToBeEncapsulated The PAC file being encapsulated.
      * @param message                 An additional message.
+     * @param isDirectFirst           Whether "DIRECT" occurs before or after the list of proxies.
      */
     public EncapsulatedPacFileFragmentBuilder(String pacFileToBeEncapsulated,
-                                              String message) {
+                                              String message,
+                                              boolean isDirectFirst) {
+      super(isDirectFirst);
+      
       this.pacFileToBeEncapsulated = pacFileToBeEncapsulated;
       this.message = message;
     }
@@ -612,16 +635,18 @@ public class ProxyInfo {
    * found. */
   public String generateEncapsulatedPacFile(Set urlStems,
 				            String pacFileToBeEncapsulated,
-				            String message) {
+				            String message, 
+                                            boolean isDirectFirst) {
     return new EncapsulatedPacFileFragmentBuilder(
-        pacFileToBeEncapsulated, message).generateFragment(urlStems);
+        pacFileToBeEncapsulated, message, isDirectFirst).generateFragment(urlStems);
   }
 
   /** Generate a PAC file string from the URL stem map, delegating to the
    * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
    * found. */
   public String generateEncapsulatedPacFileFromURL(Set urlStems,
-                                                   String url)
+                                                   String url,
+                                                   boolean isDirectFirst)
       throws IOException {
     InputStream bis = null;
     try {
@@ -629,7 +654,7 @@ public class ProxyInfo {
       bis = new BufferedInputStream(istr);
       String old = StringUtil.fromInputStream(bis, MAX_ENCAPSULATED_PAC_SIZE);
       return generateEncapsulatedPacFile(urlStems, old,
-          " (generated from " + url + ")");
+          " (generated from " + url + ")", isDirectFirst);
     }
     finally {
       if (bis != null) {
@@ -648,8 +673,8 @@ public class ProxyInfo {
   }
 
   /** Generate a PAC file string from the URL stem map */
-  public String generatePacFile(Set urlStems) {
-    return new PacFileFragmentBuilder().generateFragment(urlStems);
+  public String generatePacFile(Set urlStems, boolean isDirectFirst) {
+    return new PacFileFragmentBuilder(isDirectFirst).generateFragment(urlStems);
   }
 
   public String generateSquidConfigFragment(Set urlStems) {
@@ -710,9 +735,9 @@ public class ProxyInfo {
   }
 
   /** Convenience method to get all AUs */
-  private Collection getAus() {
-    return getPluginMgr().getAllAus();
-  }
+//  private Collection getAus() {
+//    return getPluginMgr().getAllAus();
+//  }
 
   protected static Logger log = Logger.getLogger("ProxyInfo");
 

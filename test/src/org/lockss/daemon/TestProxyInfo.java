@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.21 2008-02-27 06:06:31 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.22 2008-03-25 21:43:41 edwardsb1 Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.daemon;
 
 import java.util.*;
 
-import org.lockss.app.LockssDaemon;
+// import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.ProxyInfo.*;
 import org.lockss.plugin.*;
@@ -128,12 +128,16 @@ public class TestProxyInfo extends LockssTestCase {
     final String tailRE =
         " return \\\"DIRECT\\\";\\n"
       + "}\\n";
-    String pf = pi.generatePacFile(makeUrlStemSet());
+    String pf = pi.generatePacFile(makeUrlStemSet(), false);
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    headRE + ifsRE + tailRE, pf);
   }
 
+  
   public void testGenerateEncapsulatedPacFile() throws Exception {
+    
+    // Test one: the test created by Thib.
+    
     final String oldfile = "# foo\n" +
       "function FindProxyForURL(url, host) {\n" +
       "return some_logic(url, host);\n}\n";
@@ -152,7 +156,7 @@ public class TestProxyInfo extends LockssTestCase {
     final String pat =
       headRE + ifsRE + tailRE + StringUtil.escapeNonAlphaNum(encapsulated);
 
-    String pf = pi.generateEncapsulatedPacFile(makeUrlStemSet(), oldfile, "(msg)");
+    String pf = pi.generateEncapsulatedPacFile(makeUrlStemSet(), oldfile, "(msg)", false);
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    pat, pf);
   }
@@ -212,8 +216,8 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public void testFragmentBuilder() {
-    final String url1 = "http://bar.com";
-    final String url2 = "http://foo.com";
+//    final String url1 = "http://bar.com";
+//    final String url2 = "http://foo.com";
 
     FragmentBuilder builder = pi.new FragmentBuilder() {
       protected void generateEntry(StringBuffer buffer, String urlStem, String comment) {}
@@ -235,7 +239,7 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public void testFragmentBuilderComment() {
-    final List comments = new ArrayList();
+    final List<String> comments = new ArrayList<String>();
 
     FragmentBuilder builder = pi.new FragmentBuilder() {
       protected void generateEntry(StringBuffer buffer, String urlStem,
@@ -335,23 +339,40 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public void testPacFileFragmentBuilder() {
-    PacFileFragmentBuilder builder = pi.new PacFileFragmentBuilder();
-
     StringBuffer buffer;
-
+    PacFileFragmentBuilder builder;
+    
+    // Test one: the Direct goes last.
     buffer = new StringBuffer();
+    
+    builder = pi.new PacFileFragmentBuilder(false);
     builder.generateEntry(buffer, "http://foo.com", "Foo");
+
     assertMatchesRE(
           " // Foo\\n"
         + " if \\(shExpMatch\\(url, \\\"http://foo\\.com/\\*\\\"\\)\\)\\n"
         + " { return \\\"PROXY " + HOST + ":9090; DIRECT\\\"; }",
         removeEmptyLines(buffer.toString())
     );
+    
+    // Test two: the Direct goes first.
+    buffer = new StringBuffer();
+    
+    builder = pi.new PacFileFragmentBuilder(true);
+    builder.generateEntry(buffer, "http://foo.com", "Foo");
+
+    assertMatchesRE(
+          " // Foo\\n"
+        + " if \\(shExpMatch\\(url, \\\"http://foo\\.com/\\*\\\"\\)\\)\\n"
+        + " { return \\\"DIRECT; PROXY " + HOST + ":9090\\\"; }",
+        removeEmptyLines(buffer.toString())
+    );
+
   }
 
   public void testEncapsulatedPacFileFragmentBuilder() throws Exception {
     EncapsulatedPacFileFragmentBuilder builder =
-      pi.new EncapsulatedPacFileFragmentBuilder(null, null);
+      pi.new EncapsulatedPacFileFragmentBuilder(null, null, false);
 
     final String js1 = "function func0(foo, bar) { stmt; }\n";
     final String js2 = "function func1(foo, bar) { stmt; }\n";
