@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.18 2007-08-12 04:53:29 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.19 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.definable;
 
+import java.io.*;
+import java.net.*;
 import java.util.*;
 
 import org.lockss.app.LockssDaemon;
@@ -247,24 +249,48 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   }
 
+  HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
+    return (HttpResultMap)plugin.getCacheResultMap();
+  }
+
+  class IOEParent extends IOException {
+  }
+  class IOEChild extends IOEParent {
+  }
+
   public void testInstallCacheExceptionEntries() throws Exception {
     DefinablePlugin plugin = new DefinablePlugin();
     ExternalizableMap map = plugin.getDefinitionMap();
-    plugin.initResultMap();
-    // nothing installed should give the default
-    String name = "org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException";
-    Class expected = Class.forName(name);
-    Class found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
-    assertEquals(expected, found);
+    IOException ioe1 = new SocketException("sock1");
+    IOException ioe2 = new ConnectException("conn1");
 
-    // test using a single entry
-    name = "org.lockss.util.urlconn.CacheException$RetryDeadLinkException";
-    map.putCollection(DefinablePlugin.KEY_EXCEPTION_LIST,
-        ListUtil.list("404="+name));
     plugin.initResultMap();
-    expected = Class.forName(name);
-    found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
-    assertEquals(expected, found);
+
+    // nothing installed should give the default
+    assertEquals(CacheException.NoRetryDeadLinkException.class,
+		 getHttpResultMap(plugin).getExceptionClass(404));
+    assertEquals(CacheException.RetryableNetworkException_3_30S.class,
+		 getHttpResultMap(plugin).mapException(null, ioe1, null).getClass());
+    assertEquals(CacheException.RetryableNetworkException_3_30S.class,
+		 getHttpResultMap(plugin).mapException(null, ioe2, null).getClass());
+
+    String spec1 =
+      "404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException";
+    String spec2 =
+      "java.net.SocketException" +
+      "=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_5M";
+
+    map.putCollection(DefinablePlugin.KEY_EXCEPTION_LIST,
+		      ListUtil.list(spec1, spec2));
+    plugin.initResultMap();
+    assertEquals(CacheException.RetryDeadLinkException.class,
+		 getHttpResultMap(plugin).getExceptionClass(404));
+    // changing just SocketException should change result for
+    // ConnectException as well
+    assertEquals(CacheException.RetryableNetworkException_2_5M.class,
+		 getHttpResultMap(plugin).mapException(null, ioe1, null).getClass());
+    assertEquals(CacheException.RetryableNetworkException_2_5M.class,
+		 getHttpResultMap(plugin).mapException(null, ioe2, null).getClass());
   }
 
   public void testSiteNormalizeUrlNull() {

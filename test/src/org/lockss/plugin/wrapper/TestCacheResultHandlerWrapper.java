@@ -1,5 +1,5 @@
 /*
- * $Id: TestCacheResultHandlerWrapper.java,v 1.2 2007-08-17 07:37:02 smorabito Exp $
+ * $Id: TestCacheResultHandlerWrapper.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,15 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
     public CacheException handleResult(int code,
 				       LockssUrlConnection connection) {
       args = ListUtil.list(new Integer(code), connection);
+      if (error != null) {
+	throw error;
+      }
+      return new CacheException("bar");
+    }
+
+    public CacheException handleResult(Exception ex,
+				       LockssUrlConnection connection) {
+      args = ListUtil.list(ex, connection);
       if (error != null) {
 	throw error;
       }

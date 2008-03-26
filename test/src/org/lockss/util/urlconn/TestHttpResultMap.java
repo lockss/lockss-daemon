@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.5 2006-08-07 07:43:17 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.6 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
+import java.net.*;
+import java.util.*;
+
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 
@@ -53,9 +56,8 @@ public class TestHttpResultMap extends LockssTestCase {
     assertTrue("code:" + code, cls.isInstance(exception));
   }
 
-  public void testGetException() {
+  public void testGetResultCodeException() {
     CacheException exception;
-    int[] checkArray;
     int result_code = 0;
     int ic;
 
@@ -115,6 +117,34 @@ public class TestHttpResultMap extends LockssTestCase {
     assertX(505, CacheException.UnexpectedNoRetryFailException.class);
   }
 
+  public void testGetExceptionException() {
+    CacheException exception;
+
+    //check unknown exception
+    exception = resultMap.mapException(null, new Exception(), "foo");
+    assertTrue(exception instanceof CacheException.UnknownExceptionException);
+
+    exception = resultMap.mapException(null, new RuntimeException(), "foo");
+    assertTrue(exception instanceof CacheException.UnknownExceptionException);
+
+    exception = resultMap.mapException(null, new SocketException(), "foo");
+    assertTrue(exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
+    exception = resultMap.mapException(null, new ConnectException(), "foo");
+    assertTrue(exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
+    exception = resultMap.mapException(null, new NoRouteToHostException(),
+				       "foo");
+    assertTrue(exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
+    exception = resultMap.mapException(null, new UnknownHostException(),
+				       "foo");
+    assertTrue(exception instanceof
+	       CacheException.RetryableNetworkException_2_30S);
+  }
 
   public void testInitExceptionTable() {
     int[] checkArray;
@@ -280,6 +310,7 @@ public class TestHttpResultMap extends LockssTestCase {
   static public class MyMockHttpResultHandler
       implements CacheResultHandler {
     private static int[] m_returnCodes;
+    private static Map<Exception,Object> m_exceptions;
 
     public MyMockHttpResultHandler() {
     }
@@ -292,6 +323,10 @@ public class TestHttpResultMap extends LockssTestCase {
     }
     void setHandledCodes(int[] returnCodes) {
       m_returnCodes = returnCodes;
+    }
+
+    void setHandledExceptions(Map<Exception,Object> exceptions) {
+      m_exceptions = exceptions;
     }
 
     /**
@@ -307,6 +342,15 @@ public class TestHttpResultMap extends LockssTestCase {
         if(m_returnCodes[i] == code) {
           return new CacheException("Handled Exception");
         }
+      }
+      return null;
+    }
+
+    public CacheException handleResult(Exception ex,
+				       LockssUrlConnection connection) {
+      Object ret = m_exceptions.get(ex);
+      if (ret != null) {
+	return new CacheException("Handled Exception");
       }
       return null;
     }

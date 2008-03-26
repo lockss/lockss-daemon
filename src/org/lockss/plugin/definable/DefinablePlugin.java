@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.30 2007-09-24 18:37:12 dshr Exp $
+ * $Id: DefinablePlugin.java,v 1.31 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -253,9 +253,12 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   protected void initResultMap() throws PluginException.InvalidDefinition {
-    resultMap = new HttpResultMap();
-    // we support two form of result handlers... either a class which handles
-    // installing the numbers as well as handling any exceptions
+    HttpResultMap hResultMap = new HttpResultMap();
+    // XXX Currently this only allows a CacheResultHandler class to
+    // initialize the result map.  Instead, don't use a CacheResultMap
+    // directly, use either the plugin's CacheResultHandler, if specified,
+    // or a default one that wraps the CacheResultMap
+
     String handler_class = null;
     handler_class = definitionMap.getString(KEY_EXCEPTION_HANDLER, null);
     if (handler_class != null) {
@@ -263,7 +266,7 @@ public class DefinablePlugin extends BasePlugin {
         resultHandler =
             (CacheResultHandler)newAuxClass(handler_class,
 					    CacheResultHandler.class);
-        resultHandler.init(resultMap);
+        resultHandler.init(hResultMap);
       }
       catch (Exception ex) {
         throw new PluginException.InvalidDefinition(mapName
@@ -275,40 +278,69 @@ public class DefinablePlugin extends BasePlugin {
 	    le);
 
       }
-    }
-    else {// or a list of individual exception remappings
-      Collection results;
-      results = definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
-      if (results != null) {
+    } else {
+      // Expect a list of mappings from either result code or exception
+      // name to CacheException name
+      Collection<String> mappings =
+	definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
+      if (mappings != null) {
         // add each entry
-        for (Iterator it = results.iterator(); it.hasNext(); ) {
-          String entry = (String) it.next();
-	  String class_name = null;
+        for (String entry : mappings) {
+	  String first;
+	  String ceName;
+	  Class ceClass;
           try {
-            Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
-            class_name = (String) s_vec.get(1);
-            int code = Integer.parseInt(((String) s_vec.get(0)));
-	    // Add the result class to the map.  Result classes are loaded
-	    // from system classpath - there's no need for plugin-local
-	    // exceptions
-            Class result_class = null;
-	    // 
-            result_class = Class.forName(class_name);
-            ( (HttpResultMap) resultMap).storeMapEntry(code, result_class);
-          }
-          catch (Exception ex) {
-            throw new PluginException.InvalidDefinition(mapName
-                                                 + " has invalid entry: "
-                                                 + entry);
+            List<String> pair = StringUtil.breakAt(entry, '=', 2, true, true);
+            first = pair.get(0);
+            ceName = pair.get(1);
+          } catch (Exception ex) {
+            throw new PluginException.InvalidDefinition("Invalid syntax: " +
+						    entry + "in " + mapName);
 	  }
-	  catch (LinkageError le) {
-	    throw new PluginException.InvalidDefinition("Can't load " +
-							class_name,
+          try {
+	    ceClass = Class.forName(ceName);
+          } catch (Exception ex) {
+            throw new
+	      PluginException.InvalidDefinition("Second arg not a " +
+						"CacheException class: " +
+						entry + ", in " + mapName);
+	  } catch (LinkageError le) {
+	    throw new PluginException.InvalidDefinition("Can't load " + ceName,
 							le);
 	  }
-        }
+	  try {
+	    int code = Integer.parseInt(first);
+	    // If parseable as an integer, it's a result code.
+	    // Might need to make this load from plugin classpath
+	    hResultMap.storeMapEntry(code, ceClass);
+	  } catch (NumberFormatException e) {
+	    try {
+	      Class eClass = Class.forName(first);
+	      // If a class name, it should be an exception class
+	      // Might need to make this load ceName from plugin classpath
+	      if (Exception.class.isAssignableFrom(eClass)) {
+		hResultMap.storeMapEntry(eClass, ceClass);
+	      } else {
+		throw new
+		  PluginException.InvalidDefinition("First arg not an " +
+						    "Exception class: " +
+						    entry + ", in " + mapName);
+	      }		  
+	    } catch (Exception ex) {
+	      throw new
+		PluginException.InvalidDefinition("First arg not a " +
+						  "number or class: " +
+						  entry + ", in " + mapName);
+	    } catch (LinkageError le) {
+	      throw new PluginException.InvalidDefinition("Can't load " +
+							  first,
+							  le);
+	    }
+	  }
+	}
       }
     }
+    resultMap = hResultMap;
   }
 
   /** Create a CrawlWindow if necessary and return it.  The CrawlWindow

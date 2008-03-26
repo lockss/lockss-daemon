@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.6 2006-08-07 07:43:17 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.7 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.util.*;
+import java.net.*;
+
+import org.lockss.util.*;
 
 /**
  * Maps an HTTP result to success (null) or an exception, usually one under
@@ -39,6 +42,8 @@ import java.util.*;
  */
 
 public class HttpResultMap implements CacheResultMap {
+  static Logger log = Logger.getLogger("HttpResultMap");
+
   int[] SuccessCodes = {200, 203, 304};
   int[] SameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
   int[] MovePermCodes = {301};
@@ -53,13 +58,14 @@ public class HttpResultMap implements CacheResultMap {
       411, 412, 416, 417, 501, 505};
   int[] UnexpectedNoFailCodes = { 414, 415 };
 
-  HashMap exceptionTable = new HashMap();
+  HashMap<Object,Class> exceptionTable = new HashMap();
 
   public HttpResultMap() {
     initExceptionTable();
   }
 
   protected void initExceptionTable() {
+    // HTTP result codes
     storeArrayEntries(SuccessCodes, CacheSuccess.MARKER);
     storeArrayEntries(SameUrlCodes,
                       CacheException.RetrySameUrlException.class);
@@ -81,6 +87,19 @@ public class HttpResultMap implements CacheResultMap {
                       CacheException.RetryDeadLinkException.class);
     storeArrayEntries(NoRetryDeadLinkCodes,
                       CacheException.NoRetryDeadLinkException.class);
+
+    // IOExceptions
+    storeMapEntry(UnknownHostException.class,
+ 		  CacheException.RetryableNetworkException_2_30S.class);
+    // SocketException subsumes ConnectException, NoRouteToHostException
+    // and PortUnreachableException
+    storeMapEntry(SocketException.class,
+ 		  CacheException.RetryableNetworkException_3_30S.class);
+    // I don't think these can happen
+    storeMapEntry(ProtocolException.class,
+ 		  CacheException.RetryableNetworkException_3_30S.class);
+    storeMapEntry(java.nio.channels.ClosedChannelException.class,
+ 		  CacheException.RetryableNetworkException_3_30S.class);
   }
 
   public void storeArrayEntries(int[] codeArray, Class exceptionClass) {
@@ -89,14 +108,24 @@ public class HttpResultMap implements CacheResultMap {
     }
   }
 
+  /** Map the http result code to the CacheException class */
   public void storeMapEntry(int code, Class exceptionClass) {
     exceptionTable.put(new Integer(code), exceptionClass);
   }
 
+  /** Map the fetch exception (SocketException, IOException, etc.) to the
+   * CacheException class */
+  public void storeMapEntry(Class fetchExceptionClass, Class exceptionClass) {
+    exceptionTable.put(fetchExceptionClass, exceptionClass);
+  }
 
   public Class getExceptionClass(int resultCode) {
-    return (Class) exceptionTable.get(new Integer(resultCode));
+    return exceptionTable.get(resultCode);
   }
+
+//   public Class getExceptionClass(Class cls) {
+//     return exceptionTable.get(cls);
+//   }
 
   public CacheException getHostException(Exception nestedException) {
     return new CacheException.HostException(nestedException);
@@ -116,16 +145,16 @@ public class HttpResultMap implements CacheResultMap {
       String msg = connection.getResponseMessage();
       return mapException(connection, code, msg);
     }
-    catch (Exception ex) {
+    catch (RuntimeException ex) {
       return getHostException(ex);
     }
   }
 
-  protected CacheException mapException(LockssUrlConnection connection,
-                                        int resultCode, String message)  {
+  public CacheException mapException(LockssUrlConnection connection,
+				     int resultCode, String message)  {
 
     Integer key = new Integer(resultCode);
-    Class exceptionClass = (Class)exceptionTable.get(key);
+    Class exceptionClass = exceptionTable.get(key);
 
     // Marker class means success
     if (exceptionClass == CacheSuccess.MARKER) {
@@ -143,23 +172,80 @@ public class HttpResultMap implements CacheResultMap {
     try {
       Object exception = exceptionClass.newInstance();
       CacheException cacheException;
-      // check for an instance of handler class
-      if (exception instanceof CacheResultHandler) {
-	CacheResultHandler handler = (CacheResultHandler)exception;
-        cacheException = handler.handleResult(resultCode, connection);
-      }
-      else {
+//       // check for an instance of handler class
+//       if (exception instanceof CacheResultHandler) {
+// 	CacheResultHandler handler = (CacheResultHandler)exception;
+//         cacheException = handler.handleResult(resultCode, connection);
+//       }
+//       else {
         cacheException = (CacheException)exception;
         cacheException.initMessage((message != null)
 				   ? (resultCode + " " + message)
 				   : Integer.toString(resultCode));
-      }
+//       }
       return cacheException;
     }
     catch (Exception ex) {
+      log.error("Can't make CacheException for: " + resultCode, ex);
       return new CacheException.UnknownCodeException(
           "Unable to make exception:" + ex.getMessage());
     }
   }
 
+  public CacheException mapException(LockssUrlConnection connection,
+				     Exception fetchException,
+				     String message)  {
+
+    Class exceptionClass = findNearestException(fetchException);
+
+    // Marker class means success
+    if (exceptionClass == CacheSuccess.MARKER) {
+      return null;
+    }
+    if (exceptionClass == null) {
+      if (message != null) {
+	return new CacheException.UnknownExceptionException(
+          "Unmapped exception: " + fetchException + ": " + message);
+      } else {
+	return new CacheException.UnknownExceptionException(
+          "Unmapped exception: " + fetchException);
+      }
+    }
+    try {
+      Object exception = exceptionClass.newInstance();
+      CacheException cacheException;
+//       // check for an instance of handler class
+//       if (exception instanceof CacheResultHandler) {
+// 	CacheResultHandler handler = (CacheResultHandler)exception;
+//         cacheException = handler.handleResult(fetchException, connection);
+//       }
+//       else {
+        cacheException = (CacheException)exception;
+	if (fetchException != null) {
+	  cacheException.initCause(fetchException);
+	}
+        cacheException.initMessage((message != null)
+				   ? (fetchException.getMessage() +
+				      " " + message)
+				   : fetchException.getMessage());
+//       }
+      return cacheException;
+    }
+    catch (Exception ex) {
+      log.error("Can't make CacheException for: " + fetchException, ex);
+      return new CacheException.UnknownExceptionException(
+          "Unable to make exception:" + ex.getMessage());
+    }
+  }
+
+  Class findNearestException(Exception fetchException) {
+    Class exClass = fetchException.getClass();
+    Class resultClass;
+    do {
+      resultClass = exceptionTable.get(exClass);
+    } while (resultClass == null
+	     && ((exClass = exClass.getSuperclass()) != null
+		 && exClass != Exception.class));
+    return resultClass;
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpResultHandler.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockHttpResultHandler.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,11 @@ public class MockHttpResultHandler implements CacheResultHandler {
   }
 
   public CacheException handleResult(int code,
+				     LockssUrlConnection connection) {
+    return null;
+  }
+
+  public CacheException handleResult(Exception ex,
 				     LockssUrlConnection connection) {
     return null;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultHandler.java,v 1.2 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: CacheResultHandler.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ import org.lockss.daemon.*;
 public interface CacheResultHandler {
   public void init(CacheResultMap map) throws PluginException;
   public CacheException handleResult(int code,
+				     LockssUrlConnection connection)
+      throws PluginException;
+  public CacheException handleResult(Exception ex,
 				     LockssUrlConnection connection)
       throws PluginException;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultHandlerWrapper.java,v 1.2 2006-12-09 07:14:59 tlipkis Exp $
+ * $Id: CacheResultHandlerWrapper.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,16 @@ public class CacheResultHandlerWrapper
       throws PluginException {
     try {
       return inst.handleResult(code, connection);
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError(e);
+    }
+  }
+
+  public CacheException handleResult(Exception ex,
+				     LockssUrlConnection connection)
+      throws PluginException {
+    try {
+      return inst.handleResult(ex, connection);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
