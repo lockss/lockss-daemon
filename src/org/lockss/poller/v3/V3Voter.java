@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.53 2008-02-21 01:08:20 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.54 2008-03-26 04:52:28 tlipkis Exp $
  */
 
 /*
@@ -384,13 +384,9 @@ public class V3Voter extends BasePoll {
 
     boolean suc = theDaemon.getSchedService().scheduleTask(task);
     if (!suc) {
-      String msg = "No time for V3 Voter in poll " + getKey() + ". " +
-                   " Requested time for step task with earliest start at " +
-                   earliestStart +", latest finish at " + latestFinish + ", " +
-                   "with an estimated hash duration of " + estimatedHashDuration +
-                   "ms as of " + TimeBase.nowDate();
-      voterUserData.setErrorDetail(msg);
-      log.warning(msg);
+      voterUserData.setErrorDetail("No time for hash: " + task +
+				   " at " + TimeBase.nowDate());
+      log.warning("No time for hash: " + task);
     }
     return suc;
   }
