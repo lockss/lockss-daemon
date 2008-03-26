@@ -1,25 +1,25 @@
-#	@formatString	x,S,t,%,%,%,%,%						
-#	@namePrefix	RSC						
-#	@publisherTitleSet	publisher=Royal Society of Chemistry						
-#	@fixedValues	P=Royal Society of Chemistry	p=org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin					
-#	@fixedValues	j=The Analyst
+#	@formatString	x,S,t,%,%,%,%,%					
+#	@namePrefix	RSC					
+#	@publisherTitleSet	publisher=Royal Society of Chemistry					
+#	@fixedValues	P=Royal Society of Chemistry	p=org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin				
+#	@fixedValues	j=The Analyst					
 	manifest	The Analyst Volume 122	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=122	year=1997
 	manifest	The Analyst Volume 123	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=123	year=1998
-	ready	The Analyst Volume 124	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=124	year=1999
-	ready	The Analyst Volume 125	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=125	year=2000
-	ready	The Analyst Volume 126	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=126	year=2001
-	ready	The Analyst Volume 127	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=127	year=2002
-	ready	The Analyst Volume 128	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=128	year=2003
-	ready	The Analyst Volume 129	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=129	year=2004
-	ready	The Analyst Volume 130	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=130	year=2005
-	ready	The Analyst Volume 131	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=131	year=2006
-	ready	The Analyst Volume 132	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=132	year=2007
+	released	The Analyst Volume 124	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=124	year=1999
+	released	The Analyst Volume 125	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=125	year=2000
+	released	The Analyst Volume 126	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=126	year=2001
+	released	The Analyst Volume 127	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=127	year=2002
+	released	The Analyst Volume 128	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=128	year=2003
+	released	The Analyst Volume 129	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=129	year=2004
+	released	The Analyst Volume 130	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=130	year=2005
+	released	The Analyst Volume 131	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=131	year=2006
+	released	The Analyst Volume 132	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=132	year=2007
 	manifest	The Analyst Volume 133	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=133	year=2008
-#	@fixedValues	j=Analytical Communications
+#	@fixedValues	j=Analytical Communications					
 	manifest	Analytical Communications Volume 34	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=34	year=1997
 	manifest	Analytical Communications Volume 35	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=35	year=1998
 	manifest	Analytical Communications Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=36	year=1999
-#	@fixedValues	j=Chemical Communications
+#	@fixedValues	j=Chemical Communications					
 	manifest	Chemical Communications 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1997
 	manifest	Chemical Communications 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1998
 	manifest	Chemical Communications 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1999
@@ -32,7 +32,7 @@
 	manifest	Chemical Communications 2006	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2006
 	manifest	Chemical Communications 2007	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2007
 	manifest	Chemical Communications 2008	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2008
-#	@fixedValues	j=Chemical Society Reviews
+#	@fixedValues	j=Chemical Society Reviews					
 	manifest	Chemical Society Reviews Volume 26	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=26	year=1997
 	manifest	Chemical Society Reviews Volume 27	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=27	year=1998
 	manifest	Chemical Society Reviews Volume 28	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=28	year=1999
@@ -45,22 +45,22 @@
 	manifest	Chemical Society Reviews Volume 35	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=35	year=2006
 	manifest	Chemical Society Reviews Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=36	year=2007
 	manifest	Chemical Society Reviews Volume 37	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=37	year=2008
-#	@fixedValues	j=Chemistry Education Research and Practice
+#	@fixedValues	j=Chemistry Education Research and Practice					
 	manifest	Chemistry Education Research and Practice Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rp	volume_name=9	year=2008
-#	@fixedValues	j=Contemporary Organic Synthesis
+#	@fixedValues	j=Contemporary Organic Synthesis					
 	manifest	Contemporary Organic Synthesis Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=co	volume_name=4	year=1997
-#	@fixedValues	j=CrystEngComm
-	ready	CrystEngComm Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=1	year=1999
-	ready	CrystEngComm Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=2	year=2000
-	ready	CrystEngComm Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=3	year=2001
-	ready	CrystEngComm Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=4	year=2002
-	ready	CrystEngComm Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=5	year=2003
-	ready	CrystEngComm Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=6	year=2004
-	ready	CrystEngComm Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=7	year=2005
-	ready	CrystEngComm Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=8	year=2006
-	ready	CrystEngComm Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=9	year=2007
-	ready	CrystEngComm Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=10	year=2008
-#	@fixedValues	j=Dalton Transactions
+#	@fixedValues	j=CrystEngComm					
+	released	CrystEngComm Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=1	year=1999
+	released	CrystEngComm Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=2	year=2000
+	released	CrystEngComm Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=3	year=2001
+	released	CrystEngComm Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=4	year=2002
+	released	CrystEngComm Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=5	year=2003
+	released	CrystEngComm Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=6	year=2004
+	released	CrystEngComm Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=7	year=2005
+	released	CrystEngComm Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=8	year=2006
+	released	CrystEngComm Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=9	year=2007
+	released	CrystEngComm Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ce	volume_name=10	year=2008
+#	@fixedValues	j=Dalton Transactions					
 	manifest	Dalton Transactions 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1997
 	manifest	Dalton Transactions 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1998
 	manifest	Dalton Transactions 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1999
@@ -73,58 +73,58 @@
 	manifest	Dalton Transactions 2006	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2006
 	manifest	Dalton Transactions 2007	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2007
 	manifest	Dalton Transactions 2008	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2008
-#	@fixedValues	j=Geochemical Transactions
-	ready	Geochemical Transactions Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=1	year=2000
-	ready	Geochemical Transactions Volume 2 (2001)	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=2	year=2001
-	ready	Geochemical Transactions Volume 2 (2002)	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=2	year=2002
-	ready	Geochemical Transactions Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=3	year=2002
-	ready	Geochemical Transactions Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=4	year=2003
-#	@fixedValues	j=Green Chemistry
-	ready	Green Chemistry Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=1	year=1999
+#	@fixedValues	j=Geochemical Transactions					
+	released	Geochemical Transactions Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=1	year=2000
+	released	Geochemical Transactions Volume 2 (2001)	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=2	year=2001
+	released	Geochemical Transactions Volume 2 (2002)	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=2	year=2002
+	released	Geochemical Transactions Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=3	year=2002
+	released	Geochemical Transactions Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gt	volume_name=4	year=2003
+#	@fixedValues	j=Green Chemistry					
+	released	Green Chemistry Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=1	year=1999
 	manifest	Green Chemistry Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=2	year=2000
-	ready	Green Chemistry Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=3	year=2001
-	ready	Green Chemistry Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=4	year=2002
-	ready	Green Chemistry Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=5	year=2003
-	ready	Green Chemistry Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=6	year=2004
-	ready	Green Chemistry Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=7	year=2005
-	ready	Green Chemistry Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=8	year=2006
-	ready	Green Chemistry Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=9	year=2007
-	ready	Green Chemistry Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=10	year=2008
-#	@fixedValues	j=Journal of Analytical Atomic Spectrometry
+	released	Green Chemistry Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=3	year=2001
+	released	Green Chemistry Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=4	year=2002
+	released	Green Chemistry Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=5	year=2003
+	released	Green Chemistry Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=6	year=2004
+	released	Green Chemistry Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=7	year=2005
+	released	Green Chemistry Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=8	year=2006
+	released	Green Chemistry Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=9	year=2007
+	released	Green Chemistry Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=gc	volume_name=10	year=2008
+#	@fixedValues	j=Journal of Analytical Atomic Spectrometry					
 	manifest	Journal of Analytical Atomic Spectrometry Volume 12	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=12	year=1997
 	manifest	Journal of Analytical Atomic Spectrometry Volume 13	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=13	year=1998
 	manifest	Journal of Analytical Atomic Spectrometry Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=14	year=1999
-	ready	Journal of Analytical Atomic Spectrometry Volume 15	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=15	year=2000
-	ready	Journal of Analytical Atomic Spectrometry Volume 16	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=16	year=2001
-	ready	Journal of Analytical Atomic Spectrometry Volume 17	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=17	year=2002
-	ready	Journal of Analytical Atomic Spectrometry Volume 18	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=18	year=2003
-	ready	Journal of Analytical Atomic Spectrometry Volume 19	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=19	year=2004
+	released	Journal of Analytical Atomic Spectrometry Volume 15	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=15	year=2000
+	released	Journal of Analytical Atomic Spectrometry Volume 16	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=16	year=2001
+	released	Journal of Analytical Atomic Spectrometry Volume 17	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=17	year=2002
+	released	Journal of Analytical Atomic Spectrometry Volume 18	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=18	year=2003
+	released	Journal of Analytical Atomic Spectrometry Volume 19	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=19	year=2004
 	manifest	Journal of Analytical Atomic Spectrometry Volume 20	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=20	year=2005
 	manifest	Journal of Analytical Atomic Spectrometry Volume 21	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=21	year=2006
-	ready	Journal of Analytical Atomic Spectrometry Volume 22	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=22	year=2007
-	ready	Journal of Analytical Atomic Spectrometry Volume 23	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=23	year=2008
-#	@fixedValues	j=Journal of Chemical Research, Synopses
+	released	Journal of Analytical Atomic Spectrometry Volume 22	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=22	year=2007
+	released	Journal of Analytical Atomic Spectrometry Volume 23	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ja	volume_name=23	year=2008
+#	@fixedValues	j=Journal of Chemical Research, Synopses					
 	manifest	Journal of Chemical Research, Synopses 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1997
 	manifest	Journal of Chemical Research, Synopses 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1998
 	manifest	Journal of Chemical Research, Synopses 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1999
-#	@fixedValues	j=Journal of the Chemical Society, Faraday Transactions
+#	@fixedValues	j=Journal of the Chemical Society, Faraday Transactions					
 	manifest	Journal of the Chemical Society, Faraday Transactions Volume 93	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ft	volume_name=93	year=1997
 	manifest	Journal of the Chemical Society, Faraday Transactions Volume 94	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ft	volume_name=94	year=1998
-#	@fixedValues	j=Journal of the Chemical Society, Perkin Transactions 1
+#	@fixedValues	j=Journal of the Chemical Society, Perkin Transactions 1					
 	manifest	Journal of the Chemical Society, Perkin Transactions 1 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=1997
 	manifest	Journal of the Chemical Society, Perkin Transactions 1 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=1998
 	manifest	Journal of the Chemical Society, Perkin Transactions 1 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=1999
 	manifest	Journal of the Chemical Society, Perkin Transactions 1 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2000
 	manifest	Journal of the Chemical Society, Perkin Transactions 1 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2001
 	manifest	Journal of the Chemical Society, Perkin Transactions 1 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2002
-#	@fixedValues	j=Journal of the Chemical Society, Perkin Transactions 2
+#	@fixedValues	j=Journal of the Chemical Society, Perkin Transactions 2					
 	manifest	Journal of the Chemical Society, Perkin Transactions 2 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=1997
 	manifest	Journal of the Chemical Society, Perkin Transactions 2 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=1998
 	manifest	Journal of the Chemical Society, Perkin Transactions 2 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=1999
 	manifest	Journal of the Chemical Society, Perkin Transactions 2 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2000
 	manifest	Journal of the Chemical Society, Perkin Transactions 2 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2001
 	manifest	Journal of the Chemical Society, Perkin Transactions 2 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2002
-#	@fixedValues	j=Journal of Environmental Monitoring
+#	@fixedValues	j=Journal of Environmental Monitoring					
 	manifest	Journal of Environmental Monitoring Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=1	year=1999
 	manifest	Journal of Environmental Monitoring Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=2	year=2000
 	manifest	Journal of Environmental Monitoring Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=3	year=2001
@@ -135,7 +135,7 @@
 	manifest	Journal of Environmental Monitoring Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=8	year=2006
 	manifest	Journal of Environmental Monitoring Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=9	year=2007
 	manifest	Journal of Environmental Monitoring Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=10	year=2008
-#	@fixedValues	j=Journal of Materials Chemistry
+#	@fixedValues	j=Journal of Materials Chemistry					
 	manifest	Journal of Materials Chemistry Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=7	year=1997
 	manifest	Journal of Materials Chemistry Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=8	year=1998
 	manifest	Journal of Materials Chemistry Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=9	year=1999
@@ -148,7 +148,7 @@
 	manifest	Journal of Materials Chemistry Volume 16	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=16	year=2006
 	manifest	Journal of Materials Chemistry Volume 17	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=17	year=2007
 	manifest	Journal of Materials Chemistry Volume 18	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=18	year=2008
-#	@fixedValues	j=Lab on a Chip
+#	@fixedValues	j=Lab on a Chip					
 	manifest	Lab on a Chip Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=1	year=2001
 	manifest	Lab on a Chip Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=2	year=2002
 	manifest	Lab on a Chip Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=3	year=2003
@@ -157,7 +157,7 @@
 	manifest	Lab on a Chip Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=6	year=2006
 	manifest	Lab on a Chip Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=7	year=2007
 	manifest	Lab on a Chip Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=8	year=2008
-#	@fixedValues	j=Mendeleev Communications
+#	@fixedValues	j=Mendeleev Communications					
 	manifest	Mendeleev Communications Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=7	year=1997
 	manifest	Mendeleev Communications Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=8	year=1998
 	manifest	Mendeleev Communications Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=9	year=1999
@@ -166,12 +166,12 @@
 	manifest	Mendeleev Communications Volume 12	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=12	year=2002
 	manifest	Mendeleev Communications Volume 13	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=13	year=2003
 	manifest	Mendeleev Communications Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=14	year=2004
-#	@fixedValues	j=Molecular BioSystems
+#	@fixedValues	j=Molecular BioSystems					
 	manifest	Molecular BioSystems Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=1	year=2005
 	manifest	Molecular BioSystems Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=2	year=2006
 	manifest	Molecular BioSystems Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=3	year=2007
 	manifest	Molecular BioSystems Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=4	year=2008
-#	@fixedValues	j=Natural Product Reports
+#	@fixedValues	j=Natural Product Reports					
 	manifest	Natural Product Reports Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=14	year=1997
 	manifest	Natural Product Reports Volume 15	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=15	year=1998
 	manifest	Natural Product Reports Volume 16	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=16	year=1999
@@ -184,7 +184,7 @@
 	manifest	Natural Product Reports Volume 23	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=23	year=2006
 	manifest	Natural Product Reports Volume 24	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=24	year=2007
 	manifest	Natural Product Reports Volume 25	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=25	year=2008
-#	@fixedValues	j=New Journal of Chemistry
+#	@fixedValues	j=New Journal of Chemistry					
 	manifest	New Journal of Chemistry Volume 22	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=22	year=1998
 	manifest	New Journal of Chemistry Volume 23	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=23	year=1999
 	manifest	New Journal of Chemistry Volume 24	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=24	year=2000
@@ -196,19 +196,19 @@
 	manifest	New Journal of Chemistry Volume 30	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=30	year=2006
 	manifest	New Journal of Chemistry Volume 31	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=31	year=2007
 	manifest	New Journal of Chemistry Volume 32	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=32	year=2008
-#	@fixedValues	j=Organic & Biomolecular Chemistry
+#	@fixedValues	j=Organic & Biomolecular Chemistry					
 	manifest	Organic & Biomolecular Chemistry Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=1	year=2003
 	manifest	Organic & Biomolecular Chemistry Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=2	year=2004
 	manifest	Organic & Biomolecular Chemistry Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=3	year=2005
 	manifest	Organic & Biomolecular Chemistry Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=4	year=2006
 	manifest	Organic & Biomolecular Chemistry Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=5	year=2007
 	manifest	Organic & Biomolecular Chemistry Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=6	year=2008
-#	@fixedValues	j=Pesticide Outlook
+#	@fixedValues	j=Pesticide Outlook					
 	manifest	Pesticide Outlook Volume 11	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=11	year=2000
 	manifest	Pesticide Outlook Volume 12	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=12	year=2001
 	manifest	Pesticide Outlook Volume 13	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=13	year=2002
 	manifest	Pesticide Outlook Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=14	year=2003
-#	@fixedValues	j=Photochemical & Photobiological Sciences
+#	@fixedValues	j=Photochemical & Photobiological Sciences					
 	manifest	Photochemical & Photobiological Sciences Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=1	year=2002
 	manifest	Photochemical & Photobiological Sciences Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=2	year=2003
 	manifest	Photochemical & Photobiological Sciences Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=3	year=2004
@@ -216,14 +216,14 @@
 	manifest	Photochemical & Photobiological Sciences Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=5	year=2006
 	manifest	Photochemical & Photobiological Sciences Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=6	year=2007
 	manifest	Photochemical & Photobiological Sciences Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=7	year=2008
-#	@fixedValues	j=PhysChemComm
+#	@fixedValues	j=PhysChemComm					
 	manifest	PhysChemComm Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=1	year=1998
-	ready	PhysChemComm Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=2	year=1999
+	released	PhysChemComm Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=2	year=1999
 	manifest	PhysChemComm Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=3	year=2000
 	manifest	PhysChemComm Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=4	year=2001
 	manifest	PhysChemComm Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=5	year=2002
 	manifest	PhysChemComm Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=6	year=2003
-#	@fixedValues	j=Physical Chemistry Chemical Physics
+#	@fixedValues	j=Physical Chemistry Chemical Physics					
 	manifest	Physical Chemistry Chemical Physics Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=1	year=1999
 	manifest	Physical Chemistry Chemical Physics Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=2	year=2000
 	manifest	Physical Chemistry Chemical Physics Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=3	year=2001
@@ -234,18 +234,16 @@
 	manifest	Physical Chemistry Chemical Physics Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=8	year=2006
 	manifest	Physical Chemistry Chemical Physics Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=9	year=2007
 	manifest	Physical Chemistry Chemical Physics Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=10	year=2008
-#	@fixedValues	j=Russian Chemical Reviews
+#	@fixedValues	j=Russian Chemical Reviews					
 	manifest	Russian Chemical Reviews Volume 67	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=67	year=1998
-	ready	Russian Chemical Reviews Volume 68	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=68	year=1999
-	ready	Russian Chemical Reviews Volume 69	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=69	year=2000
-	ready	Russian Chemical Reviews Volume 70	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=70	year=2001
-	ready	Russian Chemical Reviews Volume 71	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=71	year=2002
-	ready	Russian Chemical Reviews Volume 72	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=72	year=2003
-	ready	Russian Chemical Reviews Volume 73	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=73	year=2004
-#	@fixedValues	j=Soft Matter
+	released	Russian Chemical Reviews Volume 68	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=68	year=1999
+	released	Russian Chemical Reviews Volume 69	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=69	year=2000
+	released	Russian Chemical Reviews Volume 70	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=70	year=2001
+	released	Russian Chemical Reviews Volume 71	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=71	year=2002
+	released	Russian Chemical Reviews Volume 72	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=72	year=2003
+	released	Russian Chemical Reviews Volume 73	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=73	year=2004
+#	@fixedValues	j=Soft Matter					
 	manifest	Soft Matter Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=sm	volume_name=1	year=2005
 	manifest	Soft Matter Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=sm	volume_name=2	year=2006
 	manifest	Soft Matter Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=sm	volume_name=3	year=2007
 	manifest	Soft Matter Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=sm	volume_name=4	year=2008
-#	@fixedValues	j=
-							
