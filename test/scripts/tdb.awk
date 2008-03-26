@@ -14,6 +14,7 @@ BEGIN {
  DIRECTIVE_FORMAT_STRING       = "@formatString"
  DIRECTIVE_NAME_PREFIX         = "@namePrefix"
  DIRECTIVE_PUBLISHER_TITLE_SET = "@publisherTitleSet"
+ DIRECTIVE_PUBLISHING_PLATFORM = "@publishingPlatform"
 
  # Format codes
  CODE_ATTRIBUTE      = "@"
@@ -21,6 +22,7 @@ BEGIN {
  CODE_ESTIMATED_SIZE = "e"
  CODE_ISSN           = "i"
  CODE_JOURNAL_TITLE  = "j"
+ CODE_OCLC           = "o"
  CODE_PARAMETER      = "%"
  CODE_PLUGIN         = "p"
  CODE_PUBLISHER      = "P"
@@ -59,10 +61,18 @@ BEGIN {
  LEVEL_DEFAULT                 = LEVEL_PRODUCTION
 
  # Output styles
- STYLE_XML         = "xml"
- STYLE_XML_ENTRIES = "xmlEntries"
- STYLE_XML_LEGACY  = "xmlLegacy"
- STYLE_DEFAULT     = STYLE_XML_ENTRIES
+ STYLE_MEDIAWIKI_PUBLISHER        = "mediawikiPublisher"
+ STYLE_MEDIAWIKI_PUBLISHER_LIST   = "mediawikiPublisherList"
+ STYLE_MEDIAWIKI_PUBLISHER_LIST_2 = "mediawikiPublisherList2"
+ STYLE_XML                        = "xml"
+ STYLE_XML_ENTRIES                = "xmlEntries"
+ STYLE_XML_LEGACY                 = "xmlLegacy"
+ STYLE_DEFAULT                    = STYLE_XML_ENTRIES
+
+ # Publishing platforms
+ PLATFORM_BIOONE         = "BioOne"
+ PLATFORM_HIGHWIRE_PRESS = "HighWire Press"
+ PLATFORM_PROJECT_MUSE   = "Project Muse"
 
  # Exit codes
  EXIT_NO_FORMAT_STRING = 11
@@ -132,10 +142,10 @@ function parseFormatString(        _splitFormatString, _numFields, _field, _code
  for (_field = 1 ; _field <= _numFields ; ++_field) {
   _code = _splitFormatString[_field]
   if (_code == CODE_SKIP_1 || _code == CODE_SKIP_2) { continue }
-  else if (_code == CODE_CODEN || _code == CODE_ESTIMATED_SIZE || _code == CODE_ISSN || _code == CODE_JOURNAL_TITLE || _code == CODE_PLUGIN || _code == CODE_PUBLISHER || _code == CODE_RIGHTS || _code == CODE_STATUS || _code == CODE_TITLE) { indexOf[_code] = _field }
+  else if (_code == CODE_CODEN || _code == CODE_ESTIMATED_SIZE || _code == CODE_ISSN || _code == CODE_JOURNAL_TITLE || _code == CODE_OCLC || _code == CODE_PLUGIN || _code == CODE_PUBLISHER || _code == CODE_RIGHTS || _code == CODE_STATUS || _code == CODE_TITLE) { indexOf[_code] = _field }
   else if (_code == CODE_ATTRIBUTE) { indexAdditionalAttributes[++numAdditionalAttributes] = _field }
   else if (_code == CODE_PARAMETER) { indexParameters[++numParameters] = _field }
-  # FIXME: unknown code
+  else { warning(DIRECTIVE_FORMAT_STRING ": unknown code: " _code) }
  }
 }
 
@@ -146,11 +156,11 @@ function parseFixedValues(        _i, _code) {
  for (_i = 3 ; _i <= NF ; ++_i) {
   _code = getKey($_i)
   if (_code == "") { continue }
-  if (_code == CODE_CODEN || _code == CODE_ISSN || _code == CODE_JOURNAL_TITLE || _code == CODE_PLUGIN || _code == CODE_PUBLISHER || _code == CODE_RIGHTS) {
+  if (_code == CODE_CODEN || _code == CODE_ISSN || _code == CODE_JOURNAL_TITLE || _code == CODE_OCLC || _code == CODE_PLUGIN || _code == CODE_PUBLISHER || _code == CODE_RIGHTS) {
    indexOf[_code] = -1
    fixedValue[_code] = getValue($_i)
   }
-  # FIXME: unknown or illegal code
+  else { warning(DIRECTIVE_FIXED_VALUES ": illegal code: " _code) }
  }
 }
 
@@ -235,7 +245,6 @@ function printOneXmlEntry(        _status, _i) {
 
  # Then the ISSN, CODEN, journal title, archival unit title and plugin
  printOneXmlProperty("issn=" get(CODE_ISSN))
- printOneXmlProperty("coden=" get(CODE_CODEN))
  printOneXmlProperty("journalTitle=" xml(get(CODE_JOURNAL_TITLE)))
  printOneXmlProperty("title=" xml(get(CODE_TITLE)) (_status == STATUS_PRE_RELEASED ? " (pre-release)" : "") (_status == STATUS_SUPERSEDED ? " (superseded)" : ""))
  printOneXmlProperty("plugin=" get(CODE_PLUGIN))
@@ -280,7 +289,7 @@ function printOneXmlPublisherTitleSet(        _pub) {
   printf  " </property>\n"
   printf  "\n"
  }
- # FIXME: invalid format
+ else { error(DIRECTIVE_PUBLISHER_TITLE_SET ": illegal key: " getKey($3)) }
 }
 
 #
@@ -311,6 +320,60 @@ function printOneXmlProperty(_pair, _pad) {
 }
 
 #
+# postambleMediawikiList
+#
+function postambleMediawikiList(        _sorted, _i, _n, _letter) {
+ _n = librarianSort(setOfPublishers, _sorted)
+ for (_i = 1 ; _i <= _n ; ++_i) {
+  _letter = toupper(substr(_sorted[_i], 1, 1))
+  if (outputStyle == STYLE_MEDIAWIKI_PUBLISHER_LIST) {
+   if (_letter != toupper(substr(_sorted[_i - 1], 1, 1))) { printf "{{Anchor|%s}}{{Big|%s}}\n", _letter, _letter }
+   printf "* [[%s]]\n", _sorted[_i]
+  }
+  else if (outputStyle == STYLE_MEDIAWIKI_PUBLISHER_LIST_2) {
+   if (_letter != toupper(substr(_sorted[_i - 1], 1, 1))) { printf "{{Anchor|%s}}\n", _letter }
+   printf "{{IncludePublisherPage|%s}}\n", _sorted[_i]
+  }
+  else { error("wrong output style: " outputStyle) }
+ }
+}
+
+#
+# registerOnePublisher{{Anchor|A}}{{Big|A}}
+#
+function registerOnePublisher() {
+ setOfPublishers[get(CODE_PUBLISHER)] = true;
+}
+
+#
+# librarianSort
+#
+function librarianSort(_unsorted, _sorted,        _s1, _s2, _i, _j, _size) {
+ _size = 0
+ for (_i in _unsorted) {
+  _j = _size++
+  while (_j > 0 && librarianNormalize(_sorted[_j]) > librarianNormalize(_i)) {
+   _sorted[_j + 1] = _sorted[_j]
+   --_j
+  }
+  _sorted[_j + 1] = _i
+ }
+ return _size
+}
+
+#
+# librarianNormalize
+#
+function librarianNormalize(_str) {
+ _str = tolower(_str)
+ gsub(/[^A-Za-z]/, "", _str)
+ gsub(/^the /, "", _str)
+ gsub(/^an? /, "", _str)
+ return _str
+}
+
+
+#
 # get
 #
 function get(_code) {
@@ -323,10 +386,11 @@ function get(_code) {
 # getOpaqueName
 #
 function getOpaqueName(_str) {
+ _str = (publishingPlatform != "" ? publishingPlatform : namePrefix) _str
  gsub(/ Volume /, "", _str); # FIXME
  gsub(/&/, "and", _str);
  gsub(/[^a-zA-Z0-9]/, "", _str);
- return namePrefix _str
+ return _str
 }
 
 #
@@ -360,6 +424,20 @@ function xml(_str) {
  return _str
 }
 
+#
+# Displays a warning to stderr
+#
+function warning(_str) {
+ printf "Warning: %s line %d: %s\n", _str, FILENAME, FNR > "/dev/stderr"
+}
+
+#
+# Displays an error message to stderr
+#
+function error(_str) {
+ printf "Error: %s line %d: %s\n", _str, FILENAME, FNR > "/dev/stderr"
+}
+
 ##########
 # PATTERNS
 ##########
@@ -371,6 +449,7 @@ function xml(_str) {
 FNR == 1 {
  formatString = ""
  namePrefix = ""
+ publishingPlatform = ""
 }
 
 #
@@ -402,6 +481,7 @@ $1 == "#" && $2 == DIRECTIVE_FORMAT_STRING {
 #
 $1 == "#" && $2 == DIRECTIVE_NAME_PREFIX {
  namePrefix = $3
+ publishingPlatform = ""
  next
 }
 
@@ -410,6 +490,12 @@ $1 == "#" && $2 == DIRECTIVE_NAME_PREFIX {
 #
 $1 == "#" && $2 == DIRECTIVE_PUBLISHER_TITLE_SET {
  if (outputStyle == STYLE_XML) { printOneXmlPublisherTitleSet() }
+ next
+}
+
+$1 == "#" && $2 == DIRECTIVE_PUBLISHING_PLATFORM {
+ publishingPlatform = $3
+ namePrefix = ""
  next
 }
 
@@ -423,8 +509,12 @@ $1 == "#" && $2 == DIRECTIVE_PUBLISHER_TITLE_SET {
 # Normal line
 # unconditional
 {
- if (formatString == "") { exit EXIT_NO_FORMAT_STRING }
- if (outputStyle == STYLE_XML || outputStyle == STYLE_XML_ENTRIES || outputStyle == STYLE_XML_LEGACY) { printOneXmlEntry() }
+ if (formatString == "") {
+  error("fatal: no current " DIRECTIVE_FORMAT_STRING " directive")
+  exit EXIT_NO_FORMAT_STRING
+ }
+ if (outputStyle == STYLE_MEDIAWIKI_PUBLISHER_LIST || outputStyle == STYLE_MEDIAWIKI_PUBLISHER_LIST_2) { registerOnePublisher() }
+ else if (outputStyle == STYLE_XML || outputStyle == STYLE_XML_ENTRIES || outputStyle == STYLE_XML_LEGACY) { printOneXmlEntry() }
  next
 }
 
@@ -434,6 +524,7 @@ $1 == "#" && $2 == DIRECTIVE_PUBLISHER_TITLE_SET {
 
 END {
  # Postamble
- if (outputStyle == STYLE_XML || outputStyle == STYLE_XML_LEGACY) { postambleXml() }
+ if (outputStyle == STYLE_MEDIAWIKI_PUBLISHER_LIST || outputStyle == STYLE_MEDIAWIKI_PUBLISHER_LIST_2) { postambleMediawikiList() }
+ else if (outputStyle == STYLE_XML || outputStyle == STYLE_XML_LEGACY) { postambleXml() }
 }
 

@@ -58,6 +58,7 @@ c	CODEN		no / no		coden
 e	Estimated size	no / no		estSize
 i	ISSN		no / no		issn
 j	Journal title	yes / no	journalTitle
+o	OCLC code	no / no		oclc
 p	Plugin		yes / no	plugin
 P	Publisher	no / no		attributes.publisher
 R	Rights		no / no		attributes.rights
@@ -81,7 +82,22 @@ exist in more than one context, for example more than one LOCKSS
 network with plugins named differently.
 
 The directive applies until the end of the file or until overridden by
-another @namePrefix directive.
+another @namePrefix directive or until mutually excluded by a
+@publishingPlatform directive.
+
+-----------------------------
+@publishingPlatform <pubplat>
+-----------------------------
+
+This directive tags the following archival unit lines as being under
+the umbrella of a publishing platform. The name of the publishing
+platform may in turn be used to prefix entries in the way the
+@namePrefix works. Currently, the @namePrefix and @publishingPlatform
+directives are mutually exclusive.
+
+The directive applies until the end of the file or until overridden by
+another @publishingPlatform directive or until mutually excluded by a
+@namePrefix directive.
 
 -----------------------------------
 @publisherTitleSet publisher=<publ>
@@ -189,11 +205,21 @@ outputStyle=<outstyle>
 The outputStyle option controls the style of output. The value
 <outstyle> can be one of:
 
+	mediawikiPublisher
+	mediawikiPublisherList
+	mediawikiPublisherList2
 	xmlEntries
 	xmlLegacy
 	xml
 
 By default, the value is xmlEntries.
+
+The output of the mediawikiPublisherList style is MediaWiki wikitext
+suitable for the alphabetical list of publishers at [[Publishers and
+Titles]].
+
+Likewise, the mediawikiPublisherList2 style produces output suitable
+for [[Publishers and Titles List]].
 
 In xmlEntries mode, successive title database entries are generated in
 XML, for later inclusion with other entries, i.e. with no top-level
@@ -209,6 +235,8 @@ with a DTD, containing both title sets and title database entries.
 ----------------------
 Unimplemented features
 ----------------------
+
+The mediawikiPublisher output style is currently unimplemented.
 
 The script should understand various commands that cull statistics
 from title databases, such as number and list of archival units,
