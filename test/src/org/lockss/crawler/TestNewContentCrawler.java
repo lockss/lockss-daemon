@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.66 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.67 2008-03-26 04:51:06 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ import org.lockss.state.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.extractor.*;
 
+import static org.lockss.crawler.BaseCrawler.PARAM_DEFAULT_RETRY_COUNT;
+import static org.lockss.crawler.BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT;
+
 /**
  * Tests for the new content crawler.
  */
@@ -62,16 +65,6 @@ public class TestNewContentCrawler extends LockssTestCase {
   protected List startUrls;
   protected BaseCrawler crawler = null;
   protected MockLinkExtractor extractor = new MockLinkExtractor();
-
-  private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "BaseCrawler.numCacheRetries";
-  private static final int DEFAULT_RETRY_TIMES = 3;
-
-  public static final String PARAM_CLEAR_DAMAGE_ON_FETCH =
-    Configuration.PREFIX + "BaseCrawler.clearDamageOnFetch";
-
-  public static final String PARAM_REFETCH_IF_DAMAGED =
-    Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
 
 
   public void setUp() throws Exception {
@@ -98,7 +91,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.setCrawlSpec(spec);
     mau.setLinkExtractor("*", extractor);
     Properties p = new Properties();
-    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(NewContentCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
+    p.setProperty(FollowLinkCrawler.PARAM_MIN_RETRY_DELAY, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
@@ -175,9 +169,9 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testPassesParamsToUrlCacherParamsNeg() {
     Properties p = new Properties();
-    p.setProperty(PARAM_REFETCH_IF_DAMAGED, "false");
-    p.setProperty(PARAM_CLEAR_DAMAGE_ON_FETCH, "false");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    p.setProperty(FollowLinkCrawler.PARAM_REFETCH_IF_DAMAGED, "false");
+    p.setProperty(FollowLinkCrawler.PARAM_CLEAR_DAMAGE_ON_FETCH, "false");
+    ConfigurationUtil.addFromProps(p);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
@@ -193,9 +187,9 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testPassesParamsToUrlCacherParamsPos() {
     Properties p = new Properties();
-    p.setProperty(PARAM_REFETCH_IF_DAMAGED, "true");
-    p.setProperty(PARAM_CLEAR_DAMAGE_ON_FETCH, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    p.setProperty(FollowLinkCrawler.PARAM_REFETCH_IF_DAMAGED, "true");
+    p.setProperty(FollowLinkCrawler.PARAM_CLEAR_DAMAGE_ON_FETCH, "true");
+    ConfigurationUtil.addFromProps(p);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
@@ -240,7 +234,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -267,7 +261,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
     Set expected =
       SetUtil.set(permissionPage, startUrl, url1, url2, url3, url4);
     assertEquals(expected, cus.getCachedUrls());
@@ -323,7 +317,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
     Set expected =
       SetUtil.set(permissionPage, startUrl, url1, url2, url3, url4);
     assertEquals(expected, cus.getCachedUrls());
@@ -340,9 +334,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockUnretryableCacheException exception =
       new MyMockUnretryableCacheException("Test exception");
-    mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES);
+    mau.addUrl(startUrl, exception, DEFAULT_DEFAULT_RETRY_COUNT);
 
-    assertFalse(crawler.doCrawl0());
+    assertFalse(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -351,18 +345,18 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockCacheException exception =
       new MyMockCacheException("Test exception");
-    mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES);
+    mau.addUrl(startUrl, exception, DEFAULT_DEFAULT_RETRY_COUNT);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
   }
 
   public void testReturnsFalseWhenIOExceptionThrownOnStartUrl() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    mau.addUrl(startUrl, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
+    mau.addUrl(startUrl, new IOException("Test exception"), DEFAULT_DEFAULT_RETRY_COUNT);
 
-    assertFalse(crawler.doCrawl0());
+    assertFalse(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -371,13 +365,13 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockRetryableCacheException exception =
       new MyMockRetryableCacheException("Test exception");
-    mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES-1);
+    mau.addUrl(startUrl, exception, DEFAULT_DEFAULT_RETRY_COUNT-1);
     String url1="http://www.example.com/blah.html";
     mau.addUrl(url1, false, true);
     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
     crawlRule.addUrlToCrawl(url1);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -398,7 +392,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockRetryableCacheException exception =
       new MyMockRetryableCacheException("Test exception");
-    mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES);
+    mau.addUrl(startUrl, exception, DEFAULT_DEFAULT_RETRY_COUNT);
     mau.addUrl(startUrl2, true, true);
     crawlRule.addUrlToCrawl(startUrl2);
 
@@ -411,21 +405,21 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockUnretryableCacheException exception =
       new MyMockUnretryableCacheException("Test exception");
-    mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES-1);
+    mau.addUrl(startUrl, exception, DEFAULT_DEFAULT_RETRY_COUNT-1);
 
-    assertFalse(crawler.doCrawl0());
+    assertFalse(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
   }
 
   public void testRetryNumSetByParamOnStartUrl() {
-    int retryNum = DEFAULT_RETRY_TIMES + 3;
+    int retryNum = DEFAULT_DEFAULT_RETRY_COUNT + 3;
     assertTrue("Test is worthless unless retryNum is greater than "
-	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
+	       +"DEFAULT_DEFAULT_RETRY_COUNT", retryNum > DEFAULT_DEFAULT_RETRY_COUNT);
     Properties p = new Properties();
-    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    p.setProperty(PARAM_DEFAULT_RETRY_COUNT, String.valueOf(retryNum));
+    p.setProperty(NewContentCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
+    ConfigurationUtil.addFromProps(p);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl,
@@ -704,7 +698,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
-    mau.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
+    mau.addUrl(url1, new IOException("Test exception"), DEFAULT_DEFAULT_RETRY_COUNT);
     crawlRule.addUrlToCrawl(url1);
 
     crawler.doCrawl();
@@ -727,7 +721,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     mau.addUrl(permissionPage,
 	       new CacheException.ExpectedNoRetryException("Test exception"),
- 	       DEFAULT_RETRY_TIMES);
+ 	       DEFAULT_DEFAULT_RETRY_COUNT);
 
     crawler.doCrawl();
     CrawlerStatus crawlStatus = crawler.getStatus();
@@ -753,7 +747,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.setCrawlSpec(spec);
     mau.addUrl(permissionPage,
 	       new CacheException.RepositoryException("Test exception"),
- 	       DEFAULT_RETRY_TIMES);
+ 	       DEFAULT_DEFAULT_RETRY_COUNT);
 
     crawler.doCrawl();
     CrawlerStatus crawlStatus = crawler.getStatus();
@@ -773,7 +767,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
     mau.addUrl(url1,
  	       new CacheException.RepositoryException("Test exception"),
-  	       DEFAULT_RETRY_TIMES);
+  	       DEFAULT_DEFAULT_RETRY_COUNT);
     crawlRule.addUrlToCrawl(url1);
     assertFalse(crawler.doCrawl());
     CrawlerStatus crawlStatus = crawler.getStatus();
@@ -998,9 +992,12 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   private static void setProperty(String prop, String value) {
-    Properties p = new Properties();
-    p.setProperty(prop, value);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(prop, value);
+  }
+
+  boolean doCrawl0(BaseCrawler crawler) {
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    return crawler.doCrawl0();
   }
 
   private static class MyNewContentCrawler extends NewContentCrawler {

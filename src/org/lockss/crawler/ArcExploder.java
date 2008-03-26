@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.4 2008-02-11 05:06:42 dshr Exp $
+ * $Id: ArcExploder.java,v 1.5 2008-03-26 04:51:07 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class ArcExploder extends Exploder {
 		arcUrl + (explodeFiles ? " will" : " won't") + " explode");
     try {
       if (storeArchive) {
-	crawler.cacheWithRetries(urlCacher, maxRetries);
+	crawler.cacheWithRetries(urlCacher);
 	// Get a stream from which the ARC data can be read
 	logger.debug3("About to get ARC stream from " + urlCacher.toString());
 	cachedUrl = urlCacher.getCachedUrl();

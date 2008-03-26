@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.55 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.56 2008-03-26 04:51:07 tlipkis Exp $
  */
 
 /*
@@ -81,15 +81,10 @@ public class NewContentCrawler extends FollowLinkCrawler {
 		  ") overridden by parameter (" + refetchDepth + ")");
     }
 
-    //maxDepth should be greater than refetchDepth
-    if (refetchDepth > maxDepth){ //it should not happen
-      logger.error("Max. depth is set smaller than refetchDepth." +
-		   " Abort Crawl of " + au);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
-				 "Max crawl depth less than refetch depth");
-      abortCrawl();
-      //return null;
-    }
+    // Do *not* check that maxDepth is greater than refetchDepth.  Plugins
+    // writers set refetchDepth high to mean infinite, and there's no
+    // reason to prevent the crawl from starting just becuase they set it
+    // larger than maxDepth.
 
     Collection startUrls = spec.getStartingUrls();
     for (Iterator iter = SetUtil.theSet(startUrls).iterator();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.27 2008-02-02 20:05:48 dshr Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.28 2008-03-26 04:51:06 tlipkis Exp $
  */
 
 /*
@@ -58,8 +58,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   private MockLinkExtractor extractor = new MockLinkExtractor();
 
   private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "BaseCrawler.numCacheRetries";
-  private static final int DEFAULT_RETRY_TIMES = 3;
+    BaseCrawler.PARAM_DEFAULT_RETRY_COUNT;
+  private static final int DEFAULT_RETRY_TIMES =
+    BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT;;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -85,7 +86,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.setCrawlSpec(spec);
     mau.setLinkExtractor("text/html", extractor);
     Properties p = new Properties();
-    p.setProperty(FollowLinkCrawler.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(FollowLinkCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
+    p.setProperty(FollowLinkCrawler.PARAM_MIN_RETRY_DELAY, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
@@ -137,7 +139,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
     p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
     p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
 
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     mau.addUrl(startUrl);
@@ -154,7 +156,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(url1, false, true);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
    }
 
   //Fetch startUrl, extractor will return a single url that already exists
@@ -280,7 +282,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
-    assertFalse(crawler.doCrawl0());
+    assertFalse(doCrawl0(crawler));
   }
 
   public void testReturnsFalseWhenIOExceptionThrown() {
@@ -292,7 +294,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
                DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
-    assertFalse(crawler.doCrawl0());
+    assertFalse(doCrawl0(crawler));
   }
 
   public void testReturnsTrueWhenNonFailingUnretryableExceptionThrown() {
@@ -305,7 +307,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
-    assertTrue(crawler.doCrawl0());
+    assertTrue(doCrawl0(crawler));
   }
 
   public void testReturnsRetriesWhenRetryableExceptionThrown() {
@@ -318,7 +320,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
     crawlRule.addUrlToCrawl(url1);
 
-    crawler.doCrawl0();
+    doCrawl0(crawler);
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -346,7 +348,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url3);
     crawlRule.addUrlToCrawl(url3);
 
-    assertFalse(crawler.doCrawl0());
+    assertFalse(doCrawl0(crawler));
   }
 
 
@@ -362,7 +364,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
     crawlRule.addUrlToCrawl(url1);
 
-    crawler.doCrawl0();
+    doCrawl0(crawler);
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
     //fail("fail to check what is in the cus : " + cus.getCachedUrls().toString() );
@@ -372,10 +374,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     int retryNum = DEFAULT_RETRY_TIMES + 3;
     assertTrue("Test is worthless unless retryNum is greater than "
 	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
-    Properties p = new Properties();
-    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(TestableFollowLinkCrawler.PARAM_RETRY_PAUSE, "0");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(PARAM_RETRY_TIMES, String.valueOf(retryNum));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
@@ -390,13 +389,121 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
+  public void testRetryCountInException() {
+    int retryNum = DEFAULT_RETRY_TIMES + 3;
+    assertTrue("Test is worthless unless retryNum is greater than "
+	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
+    mau.addUrl(url1,
+	       new MyMockRetryableCacheException("Test exception",
+						 retryNum, 0),
+	       retryNum-1);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl();
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testMaxRetryCountInException() {
+    int MAX_RETRIES = BaseCrawler.DEFAULT_MAX_RETRY_COUNT;
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
+    mau.addUrl(url1,
+	       new MyMockRetryableCacheException("Test exception",
+						 MAX_RETRIES + 5, 0),
+	       MAX_RETRIES-1);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl();
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testGetRetryCount() {
+    int maxRetries = BaseCrawler.DEFAULT_MAX_RETRY_COUNT;
+    CacheException ce;
+
+    ce = new MyMockRetryableCacheException("Test exception",
+					   maxRetries + 5,
+					   0);
+    assertEquals(maxRetries, crawler.getRetryCount(ce));
+
+    maxRetries = BaseCrawler.DEFAULT_MAX_RETRY_COUNT + 47;
+
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_MAX_RETRY_COUNT,
+				  String.valueOf(maxRetries));
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+
+    ce = new MyMockRetryableCacheException("Test exception",
+					   maxRetries - 7,
+					   0);
+    assertEquals(maxRetries - 7, crawler.getRetryCount(ce));
+
+    ce = new MyMockRetryableCacheException("Test exception",
+					   maxRetries + 5,
+					   0);
+    assertEquals(maxRetries, crawler.getRetryCount(ce));
+
+    ce = new MyMockRetryableCacheException("Test exception");
+    assertEquals(BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT,
+		 crawler.getRetryCount(ce));
+
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_DEFAULT_RETRY_COUNT, "7");
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+
+    ce = new MyMockRetryableCacheException("Test exception");
+    assertEquals(7, crawler.getRetryCount(ce));
+  }
+
+  public void testGetRetryDelay() {
+    long minRetryDelay = BaseCrawler.DEFAULT_MIN_RETRY_DELAY;
+    CacheException ce;
+
+    ce = new MyMockRetryableCacheException("Test exception",
+					   0,
+					   minRetryDelay - 5);
+    assertEquals(minRetryDelay, crawler.getRetryDelay(ce));
+
+    minRetryDelay = BaseCrawler.DEFAULT_MIN_RETRY_DELAY - 7;
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_MIN_RETRY_DELAY,
+				  String.valueOf(minRetryDelay));
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+
+    ce = new MyMockRetryableCacheException("Test exception",
+					   0,
+					   minRetryDelay + 3);
+    assertEquals(minRetryDelay + 3, crawler.getRetryDelay(ce));
+
+    ce = new MyMockRetryableCacheException("Test exception",
+					   0,
+					   minRetryDelay - 2);
+    assertEquals(minRetryDelay, crawler.getRetryDelay(ce));
+
+    ConfigurationUtil.setCurrentConfigFromProps(new Properties());
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+
+    ce = new MyMockRetryableCacheException("Test exception");
+    assertEquals(BaseCrawler.DEFAULT_DEFAULT_RETRY_DELAY,
+		 crawler.getRetryDelay(ce));
+
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_DEFAULT_RETRY_DELAY,
+				  "765432");
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+
+    ce = new MyMockRetryableCacheException("Test exception");
+    assertEquals(765432, crawler.getRetryDelay(ce));
+  }
+
   public void testCachesFailedFetches() {
     int retryNum = 3;
-    Properties p = new Properties();
-    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(TestableFollowLinkCrawler.PARAM_RETRY_PAUSE, "0");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-
+    ConfigurationUtil.addFromArgs(PARAM_RETRY_TIMES,
+				  String.valueOf(retryNum));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     String url2="http://www.example.com/blah2.html";
@@ -458,9 +565,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testWillNotParseExistingPagesForUrlsIfParam() {
-    Properties p = new Properties();
-    p.setProperty(TestableFollowLinkCrawler.PARAM_REPARSE_ALL, "false");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(TestableFollowLinkCrawler.PARAM_REPARSE_ALL,
+				  "false");
 
     String url1 = "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link4.html";
@@ -889,7 +995,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testPermissionPageShouldFailAsFetchPermissionFailTwice(){
-    ConfigurationUtil.setFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 				  "false",
 				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
 				  "true");
@@ -915,7 +1021,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testPermissionPageFailOnceAndOkAfterRefetch(){
-    ConfigurationUtil.setFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 				  "false",
 				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
 				  "true");
@@ -959,9 +1065,12 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   private static void setProperty(String prop, String value) {
-    Properties p = new Properties();
-    p.setProperty(prop, value);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(prop, value);
+  }
+
+  boolean doCrawl0(BaseCrawler crawler) {
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    return crawler.doCrawl0();
   }
 
   private class MyMockArchivalUnit extends MockArchivalUnit {
@@ -1035,8 +1144,24 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   private class MyMockRetryableCacheException
     extends CacheException.RetryableException {
+
+    private int retryCount = -1;
+    private long retryDelay = -1;
+
     public MyMockRetryableCacheException(String msg) {
       super(msg);
+    }
+    public MyMockRetryableCacheException(String msg,
+					 int retryCount, long retryDelay) {
+      this(msg);
+      this.retryCount = retryCount;
+      this.retryDelay = retryDelay;
+    }
+    public int getRetryCount() {
+      return retryCount;
+    }
+    public long getRetryDelay() {
+      return retryDelay;
     }
   }
 

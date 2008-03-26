@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.9 2008-02-11 05:06:42 dshr Exp $
+ * $Id: TarExploder.java,v 1.10 2008-03-26 04:51:07 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class TarExploder extends Exploder {
       goodEntries = 0;
       badEntries = 0;
       if (storeArchive) {
-	crawler.cacheWithRetries(urlCacher, maxRetries);
+	crawler.cacheWithRetries(urlCacher);
 	// Get a stream from which the TAR data can be read
 	logger.debug3("About to get TAR stream from " + urlCacher.toString());
 	cachedUrl = urlCacher.getCachedUrl();

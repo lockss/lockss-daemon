@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.28 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.29 2008-03-26 04:51:07 tlipkis Exp $
  */
 
 /*
@@ -63,40 +63,62 @@ public abstract class BaseCrawler
 
   static Logger logger = Logger.getLogger("BaseCrawler");
 
+  public static final String PREFIX = Configuration.PREFIX + "crawler.";
+
   // See comments regarding connect timeouts in HttpClientUrlConnection
   public static final String PARAM_CONNECT_TIMEOUT =
-    Configuration.PREFIX + "crawler.timeout.connect";
+    PREFIX + "timeout.connect";
   public static final long DEFAULT_CONNECT_TIMEOUT = 60 * Constants.SECOND;
 
   public static final String PARAM_DATA_TIMEOUT =
-    Configuration.PREFIX + "crawler.timeout.data";
+    PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
+
+  public static final String PARAM_DEFAULT_RETRY_COUNT =
+    PREFIX + "retryCount";
+  public static final int DEFAULT_DEFAULT_RETRY_COUNT = 3;
+
+  public static final String PARAM_DEFAULT_RETRY_DELAY =
+    PREFIX + "retryDelay";
+  public static final long DEFAULT_DEFAULT_RETRY_DELAY = 10 * Constants.SECOND;
+
+  public static final String PARAM_MAX_RETRY_COUNT =
+    PREFIX + "maxRetryCount";
+  public static final int DEFAULT_MAX_RETRY_COUNT = 10;
+
+  public static final String PARAM_MIN_RETRY_DELAY =
+    PREFIX + "minRetryDelay";
+  public static final long DEFAULT_MIN_RETRY_DELAY = 1 * Constants.SECOND;
+
+  public static final String PARAM_EXPLODER_RETRY_COUNT =
+    PREFIX + "exploderRetryCount";
+  public static final int DEFAULT_EXPLODER_RETRY_COUNT = 3;
 
   /** Proxy crawls if true (except repair-from-cache) */
   public static final String PARAM_PROXY_ENABLED =
-    Configuration.PREFIX + "crawler.proxy.enabled";
+    PREFIX + "proxy.enabled";
   public static final boolean DEFAULT_PROXY_ENABLED = false;
 
   /** Proxy host for crawls (except repair-from-cache) */
   public static final String PARAM_PROXY_HOST =
-    Configuration.PREFIX + "crawler.proxy.host";
+    PREFIX + "proxy.host";
 
   /** Proxy port for crawls (except repair-from-cache) */
   public static final String PARAM_PROXY_PORT =
-    Configuration.PREFIX + "crawler.proxy.port";
+    PREFIX + "proxy.port";
   public static final int DEFAULT_PROXY_PORT = -1;
 
   public static final String PARAM_REFETCH_PERMISSIONS_PAGE =
-    Configuration.PREFIX + "crawler.storePermissionsRefetch";
+    PREFIX + "storePermissionsRefetch";
   public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
 
   public static final String PARAM_ABORT_ON_FIRST_NO_PERMISSION =
-    Configuration.PREFIX + "BaseCrawler.abortOnFirstNoPermission";
+    PREFIX + "abortOnFirstNoPermission";
   public static final boolean DEFAULT_ABORT_ON_FIRST_NO_PERMISSION =
     true;
 
   public static final String PARAM_MIME_TYPE_PAUSE_AFTER_304 =
-    Configuration.PREFIX + "crawler.mimeTypePauseAfter304";
+    PREFIX + "mimeTypePauseAfter304";
   public static final boolean DEFAULT_MIME_TYPE_PAUSE_AFTER_304 =
     false;
 
@@ -431,7 +453,7 @@ public abstract class BaseCrawler
     return crawlStatus;
   }
 
-  protected void cacheWithRetries(UrlCacher uc, int maxRetries)
-      throws IOException {
+  protected void cacheWithRetries(UrlCacher uc) throws IOException {
+    throw new UnsupportedOperationException("BaseCrawler doesn't do cacheWithRetries()");
   }
 }

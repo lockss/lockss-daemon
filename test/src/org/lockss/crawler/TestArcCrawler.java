@@ -1,5 +1,5 @@
 /*
- * $Id: TestArcCrawler.java,v 1.4 2007-09-24 18:37:13 dshr Exp $
+ * $Id: TestArcCrawler.java,v 1.5 2008-03-26 04:51:06 tlipkis Exp $
  */
 
 /*
@@ -207,11 +207,12 @@ public class TestArcCrawler extends TestNewContentCrawler {
       mockArchiveReader = mock;
     }
 
-    protected Exploder getExploder(UrlCacher uc, int maxRetries) {
+    @Override
+    protected Exploder getExploder(UrlCacher uc) {
       Exploder ret = null;
       if (uc.getUrl().endsWith(".arc.gz")) {
-	ret = new MyArcExploder(uc, maxRetries, crawlSpec, this, explodeFiles,
-				storeArchive);
+	ret = new MyArcExploder(uc, exploderRetries, crawlSpec, this,
+				explodeFiles, storeArchive);
       }
       return ret;
     }

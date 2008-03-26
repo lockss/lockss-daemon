@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.66 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.67 2008-03-26 04:51:07 tlipkis Exp $
  */
 
 /*
@@ -53,61 +53,46 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
   static Logger logger = Logger.getLogger("FollowLinkCrawler");
 
-  // Cache recent negative results from au.shouldBeCached().  This is set
-  // to an LRUMsp when crawl is initialzed, it's initialized here to a
-  // simple map for the sake of test code, which doesn't call
-  // this.setCrawlConfig().  If we want to report all excluded URLs, this
-  // can be changed to a simple Set.
-  private Map excludedUrlCache = new HashMap();
-  private Set failedUrls = new HashSet();
-  protected Set urlsToCrawl = Collections.EMPTY_SET;
-
-  private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "BaseCrawler.numCacheRetries";
-  private static final int DEFAULT_RETRY_TIMES = 3;
-
-  public static final String PARAM_RETRY_PAUSE =
-    Configuration.PREFIX + "BaseCrawler.retryPause";
-  public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
+  public static final String PREFIX = Configuration.PREFIX + "crawler.";
 
   public static final String PARAM_REPARSE_ALL =
-    Configuration.PREFIX + "BaseCrawler.reparse_all";
+    PREFIX + "reparseAll";
   public static final boolean DEFAULT_REPARSE_ALL = true;
 
   public static final String PARAM_PARSE_USE_CHARSET =
-    Configuration.PREFIX + "BaseCrawler.parse_use_charset";
+    PREFIX + "parseUseCharset";
   public static final boolean DEFAULT_PARSE_USE_CHARSET = false;
 
   public static final String PARAM_PERSIST_CRAWL_LIST =
-    Configuration.PREFIX + "BaseCrawler.persist_crawl_list";
+    PREFIX + "persistCrawlList";
   public static final boolean DEFAULT_PERSIST_CRAWL_LIST = false;
 
   public static final String PARAM_EXCLUDED_CACHE_SIZE =
-    Configuration.PREFIX + "BaseCrawler.excluded_cache_size";
+    PREFIX + "excludedCacheSize";
   public static final int DEFAULT_EXCLUDED_CACHE_SIZE = 1000;
 
   public static final String PARAM_REFETCH_DEPTH =
-    Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
+    PREFIX + "refetchDepth.au.<auid>";
 
   public static final String PARAM_MAX_CRAWL_DEPTH =
-    Configuration.PREFIX + "BaseCrawler.maxCrawlDepth";
+    PREFIX + "maxCrawlDepth";
   //testing max. crawl Depth of a site, subject to be changed
   public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
   public static final String PARAM_CLEAR_DAMAGE_ON_FETCH =
-    Configuration.PREFIX + "BaseCrawler.clearDamageOnFetch";
+    PREFIX + "clearDamageOnFetch";
   public static final boolean DEFAULT_CLEAR_DAMAGE_ON_FETCH = true;
 
   public static final String PARAM_REFETCH_IF_DAMAGED =
-    Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
+    PREFIX + "refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
 
   public static final String PARAM_EXPLODE_ARCHIVES =
-    Configuration.PREFIX + "BaseCrawler.explodeArchives";
+    PREFIX + "explodeArchives";
   public static final boolean DEFAULT_EXPLODE_ARCHIVES = true;
 
   public static final String PARAM_STORE_ARCHIVES =
-    Configuration.PREFIX + "BaseCrawler.storeArchives";
+    PREFIX + "storeArchives";
   public static final boolean DEFAULT_STORE_ARCHIVES = false;
 
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
@@ -115,7 +100,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   private boolean parseUseCharset = DEFAULT_PARSE_USE_CHARSET;
 
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
-  private int maxRetries = DEFAULT_RETRY_TIMES;
+
+  protected int defaultRetries = DEFAULT_DEFAULT_RETRY_COUNT;
+  protected int maxRetries = DEFAULT_MAX_RETRY_COUNT;
+  protected long defaultRetryDelay = DEFAULT_DEFAULT_RETRY_DELAY;
+  protected long minRetryDelay = DEFAULT_MIN_RETRY_DELAY;
+  protected int exploderRetries = DEFAULT_EXPLODER_RETRY_COUNT;
+
   protected int lvlCnt = 0;
   protected CachedUrlSet cus;
   protected Set parsedPages;
@@ -127,6 +118,15 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected CrawlSpec crawlSpec = null;
   protected boolean explodeFiles = true;
   protected boolean storeArchive = false;  // XXX need to keep stub archive
+
+  // Cache recent negative results from au.shouldBeCached().  This is set
+  // to an LRUMsp when crawl is initialzed, it's initialized here to a
+  // simple map for the sake of test code, which doesn't call
+  // this.setCrawlConfig().  If we want to report all excluded URLs, this
+  // can be changed to a simple Set.
+  private Map excludedUrlCache = new HashMap();
+  private Set failedUrls = new HashSet();
+  protected Set urlsToCrawl = Collections.EMPTY_SET;
 
   public FollowLinkCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
@@ -152,7 +152,18 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     usePersistantList = config.getBoolean(PARAM_PERSIST_CRAWL_LIST,
 					  DEFAULT_PERSIST_CRAWL_LIST);
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
-    maxRetries = config.getInt(PARAM_RETRY_TIMES, DEFAULT_RETRY_TIMES);
+
+
+    defaultRetries = config.getInt(PARAM_DEFAULT_RETRY_COUNT,
+				   DEFAULT_DEFAULT_RETRY_COUNT);
+    maxRetries = config.getInt(PARAM_MAX_RETRY_COUNT,
+			       DEFAULT_MAX_RETRY_COUNT);
+    defaultRetryDelay = config.getLong(PARAM_DEFAULT_RETRY_DELAY,
+				       DEFAULT_DEFAULT_RETRY_DELAY);
+    minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
+				   DEFAULT_MIN_RETRY_DELAY);
+    exploderRetries = config.getInt(PARAM_EXPLODER_RETRY_COUNT,
+				   DEFAULT_EXPLODER_RETRY_COUNT);
 
     excludedUrlCache =
       new LRUMap(config.getInt(PARAM_EXCLUDED_CACHE_SIZE,
@@ -261,12 +272,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     } // end of outer while
 
     if (!urlsToCrawl.isEmpty() && !crawlAborted) {
-      //when there are more Url to crawl in  new content crawl or follow link moded oai crawl
-      logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " +
-		   au.getName() + " at depth " + lvlCnt);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
-				 "Site depth exceeded max. crawl depth");
+      // If there are still unprocessed URLs, depth exceeds maxDepth
+      String msg = "Site depth exceeds max crawl depth (" + maxDepth + ")";
+      logger.error(msg + ". Stopped crawl of " + au.getName());
       logger.debug("urlsToCrawl contains: " + urlsToCrawl);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, msg);
     }
     logger.info("Crawled depth = " + lvlCnt);
 
@@ -350,9 +360,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  if (exploderPattern != null &&
 	      RegexpUtil.isMatchRe(uc.getUrl(), exploderPattern)) {
 	    // This url matches the pattern for archives to be exploded.
-	    explodeArchive(uc, maxRetries);
+	    explodeArchive(uc);
 	  } else {
-	    cacheWithRetries(uc, maxRetries);
+	    cacheWithRetries(uc);
 	  }
 	}
       } catch (CacheException.RepositoryException ex) {
@@ -472,9 +482,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     return res;
   }
 
-  protected void cacheWithRetries(UrlCacher uc, int maxTries)
+  protected void cacheWithRetries(UrlCacher uc)
       throws IOException {
-    int retriesLeft = maxTries;
+    int retriesLeft = -1;
+    int totalRetries = -1;
     logger.debug2("Fetching " + uc.getUrl());
     while (true) {
       try {
@@ -482,36 +493,48 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  wdog.pokeWDog();
 	}
 	updateCacheStats(uc.cache(), uc);
-	return; //cache didn't throw
-      } catch (CacheException.RetryableException e) {
-	logger.debug("Exception when trying to cache "+uc, e);
+	// success
+	return;
+      } catch (CacheException e) {
+	if (!e.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {
+	  throw e;
+	}
+	if (retriesLeft < 0) {
+	  retriesLeft = getRetryCount(e);
+	  totalRetries = retriesLeft;
+	}
+	if (logger.isDebug2()) {
+	  logger.debug("Retryable (" + retriesLeft + ") exception caching "
+		       + uc, e);
+	} else {
+	  logger.debug("Retryable (" + retriesLeft + ") exception caching "
+		       + uc + ": " + e.toString());
+	}
 	if (--retriesLeft > 0) {
-	  long pauseTime =
-            CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
-                                               DEFAULT_RETRY_PAUSE);
-	  Deadline pause = Deadline.in(pauseTime);
-	  logger.debug3("Sleeping for " +
-			StringUtil.timeIntervalToString(pauseTime));
-	  while (!pause.expired()) {
+	  long delayTime = getRetryDelay(e);
+	  Deadline wait = Deadline.in(delayTime);
+	  logger.debug3("Waiting " +
+			StringUtil.timeIntervalToString(delayTime) +
+			" before retry");
+	  while (!wait.expired()) {
 	    try {
-	      pause.sleep();
+	      wait.sleep();
 	    } catch (InterruptedException ie) {
 	      // no action
 	    }
 	  }
-
-	  //makeUrlCacher needed to handle connection pool
 	  uc = makeUrlCacher(uc.getUrl());
+
 	} else {
 	  if (cachingStartUrls) { //if cannot fetch anyone of StartUrls
-	    logger.error("Failed to cache " + maxTries +" times on start url " +
-			 uc.getUrl() + " .Skipping it.");
+	    logger.error("Failed to cache (" + totalRetries + ") start url: "
+			 + uc.getUrl());
 	    crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
 				       "Failed to cache start url: "+
 				       uc.getUrl() );
 	  } else {
-	    logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
-			   + uc);
+	    logger.warning("Failed to cache (" + totalRetries + "), skipping: "
+			 + uc.getUrl());
 	  }
 	  throw e;
 	}
@@ -519,30 +542,46 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
-  protected Exploder getExploder(UrlCacher uc, int maxRetries) {
+  int getRetryCount(CacheException e) {
+    int res = e.getRetryCount();
+    if (res < 0) {
+      res = defaultRetries;
+    }
+    return Math.min(res, maxRetries);
+  }
+
+  long getRetryDelay(CacheException e) {
+    long delay = e.getRetryDelay();
+    if (delay < 0) {
+      delay = defaultRetryDelay;
+    }
+    return Math.max(delay, minRetryDelay);
+  }
+
+  protected Exploder getExploder(UrlCacher uc) {
     Exploder ret = null;
     String url = uc.getUrl();
     if (url.endsWith(".arc.gz")) {
-      ret = new ArcExploder(uc, maxRetries, crawlSpec, this,
+      ret = new ArcExploder(uc, exploderRetries, crawlSpec, this,
 			    explodeFiles, storeArchive);
     } else if (url.endsWith(".zip")) {
-      ret = new ZipExploder(uc, maxRetries, crawlSpec, this,
+      ret = new ZipExploder(uc, exploderRetries, crawlSpec, this,
 			    explodeFiles, storeArchive);
     } else if (url.endsWith(".tar")) {
-      ret = new TarExploder(uc, maxRetries, crawlSpec, this,
+      ret = new TarExploder(uc, exploderRetries, crawlSpec, this,
 			    explodeFiles, storeArchive);
     }
     return ret;
   }
 
-  protected void explodeArchive(UrlCacher uc, int maxRetries)
+  protected void explodeArchive(UrlCacher uc)
       throws IOException {
-    Exploder exploder = getExploder(uc, maxRetries);
+    Exploder exploder = getExploder(uc);
     if (exploder != null) {
       exploder.explodeUrl();
     } else {
       logger.warning("No exploder for " + uc.getUrl());
-      cacheWithRetries(uc, maxRetries);
+      cacheWithRetries(uc);
     }
   }
 
