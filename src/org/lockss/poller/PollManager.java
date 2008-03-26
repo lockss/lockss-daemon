@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.192 2008-03-23 00:53:16 tlipkis Exp $
+ * $Id: PollManager.java,v 1.193 2008-03-26 00:51:55 tlipkis Exp $
  */
 
 /*
@@ -1685,7 +1685,9 @@ public class PollManager
   }
 
   boolean startOnePoll() throws InterruptedException {
-    if (enableV3Poller) {
+    if (!enableV3Poller) {
+      startOneWait.expireIn(paramMaxPollersSleep);
+    } else {
       int activePollers = getActiveV3Pollers().size();
       if (activePollers >= maxSimultaneousPollers) {
 	startOneWait.expireIn(paramMaxPollersSleep);
@@ -1694,10 +1696,10 @@ public class PollManager
 	if (req != null) {
 	  startPoll(req);
 	  return true;
+	} else {
+	  startOneWait.expireIn(paramQueueEmptySleep);
 	}
       }
-    } else {
-      startOneWait.expireIn(paramQueueEmptySleep);
     }
     v3Status.setNextPollStartTime(startOneWait);
     while (!startOneWait.expired()) {
