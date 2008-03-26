@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.9 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.10 2008-03-26 04:53:02 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,11 @@ public class PlatformUtil {
    */
   public static String getSystemTempDir() {
     return System.getProperty("java.io.tmpdir");
+  }
+
+  /** Return the current working dir name */
+  public static String getCwd() {
+    return new File(".").getAbsoluteFile().getParent();
   }
 
   public List getUnfilteredTcpPorts() {

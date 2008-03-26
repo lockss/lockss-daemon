@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.5 2007-08-15 07:11:14 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.6 2008-03-26 04:53:02 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,10 @@ public class TestPlatformUtil extends LockssTestCase {
     String parmtmp = "/another/tmp/dir";
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_TMPDIR, parmtmp);
     assertEquals(parmtmp, PlatformUtil.getSystemTempDir());
+  }
+
+  public void testGetCwd() {
+    log.info("cwd: " + info.getCwd());
   }
 
   public void testGetUnfilteredTcpPorts() throws Exception {
