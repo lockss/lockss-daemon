@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigStatus.java,v 1.2 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: PlatformConfigStatus.java,v 1.3 2008-03-26 04:50:07 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,9 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
       addSum(res, "Admin Email", config.get(PARAM_PLATFORM_ADMIN_EMAIL));
       addSum(res, "Disks",
 	     seplist(config.getList(PARAM_PLATFORM_DISK_SPACE_LIST)));
+      addSum(res, "Cwd",
+	     PlatformUtil.getInstance().getCwd());
+
       return res;
     }
     
