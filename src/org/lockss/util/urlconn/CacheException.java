@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.11 2007-07-26 03:43:33 tlipkis Exp $
+ * $Id: CacheException.java,v 1.12 2008-03-26 04:53:37 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -33,6 +33,10 @@ package org.lockss.util.urlconn;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.util.Constants;
+import org.lockss.config.*;
+import org.lockss.crawler.BaseCrawler;
+
 /** Hierarchy of exceptions that may be returned from a plugin's {@link
  * org.lockss.plugin.UrlCacher#cache()} method, or its componenet methods
  * (<i>eg</i> {@link org.lockss.plugin.UrlCacher#getUncachedInputStream()}.
@@ -55,7 +59,6 @@ public class CacheException extends IOException {
   protected static boolean defaultSuppressStackTrace = true;
 
   protected String message;
-  protected Exception nestedException = null;
   protected BitSet attributeBits = new BitSet();
 
   // Most of these exceptions are created at a known place (in
@@ -89,11 +92,6 @@ public class CacheException extends IOException {
     return message;
   }
 
-  /** Return the nested (causal) exception, if any. */
-  public Exception getNestedException() {
-    return nestedException;
-  }
-
   public boolean isAttributeSet(int attribute) {
     return attributeBits.get(attribute);
   }
@@ -102,14 +100,22 @@ public class CacheException extends IOException {
 
   }
 
+  public long getRetryDelay() {
+    return -1;
+  }
+
+  public int getRetryCount() {
+    return -1;
+  }
+
   /** If stack trace is suppressed, substitute the stack trace of the
    * nested exception, if any.  Should be cleaned up, but achieves the
    * desired effect for now. */
   public void printStackTrace() {
     if (!suppressStackTrace) {
       super.printStackTrace();
-    } else if (nestedException != null) {
-      nestedException.printStackTrace();
+    } else if (getCause() != null) {
+      getCause().printStackTrace();
     } else {
       System.err.println(this);
     }
@@ -121,8 +127,8 @@ public class CacheException extends IOException {
   public void printStackTrace(java.io.PrintStream s) {
     if (!suppressStackTrace) {
       super.printStackTrace(s);
-    } else if (nestedException != null) {
-      nestedException.printStackTrace(s);
+    } else if (getCause() != null) {
+      getCause().printStackTrace(s);
     } else {
       s.println(this);
     }
@@ -134,8 +140,8 @@ public class CacheException extends IOException {
   public void printStackTrace(java.io.PrintWriter s) {
     if (!suppressStackTrace) {
       super.printStackTrace(s);
-    } else if (nestedException != null) {
-      nestedException.printStackTrace(s);
+    } else if (getCause() != null) {
+      getCause().printStackTrace(s);
     } else {
       s.println(this);
     }
@@ -149,6 +155,22 @@ public class CacheException extends IOException {
     }
 
     public UnknownCodeException(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.set(ATTRIBUTE_FAIL);
+    }
+  }
+
+  /** Unknown exception exception */
+  public static class UnknownExceptionException extends CacheException {
+
+    public UnknownExceptionException() {
+      super();
+    }
+
+    public UnknownExceptionException(String message) {
       super(message);
     }
 
@@ -173,6 +195,244 @@ public class CacheException extends IOException {
       attributeBits.set(ATTRIBUTE_FAIL);
     }
   }
+
+  /** An error that is likely permanent and not likely to succeed if
+   * retried.
+   */
+  public static class UnretryableException
+      extends CacheException {
+    public UnretryableException() {
+      super();
+    }
+
+    public UnretryableException(String message) {
+      super(message);
+    }
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_RETRY);
+      attributeBits.set(ATTRIBUTE_FAIL);
+    }
+  }
+
+  /** Retryable network error; two tries with default */
+  public static class RetryableNetworkException_2 extends RetryableException {
+    public RetryableNetworkException_2() {
+      super();
+    }
+
+    public RetryableNetworkException_2(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_2(Exception e) {
+      super(e.toString());
+      initCause(e);
+    }
+
+    public int getRetryCount() {
+      return 2;
+    }
+  }
+
+  /** Retryable network error; three tries with default */
+  public static class RetryableNetworkException_3 extends RetryableException {
+    public RetryableNetworkException_3() {
+      super();
+    }
+
+    public RetryableNetworkException_3(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_3(Exception e) {
+      super(e.toString());
+      initCause(e);
+    }
+
+    public int getRetryCount() {
+      return 3;
+    }
+  }
+
+  /** Retryable network error; two tries with 10 second delay */
+  public static class RetryableNetworkException_2_10S
+    extends RetryableNetworkException_2 {
+    public RetryableNetworkException_2_10S() {
+      super();
+    }
+
+    public RetryableNetworkException_2_10S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_2_10S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 10 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; two tries with 30 second delay */
+  public static class RetryableNetworkException_2_30S
+    extends RetryableNetworkException_2 {
+    public RetryableNetworkException_2_30S() {
+      super();
+    }
+
+    public RetryableNetworkException_2_30S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_2_30S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 30 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; two tries with 60 second delay */
+  public static class RetryableNetworkException_2_60S
+    extends RetryableNetworkException_2 {
+    public RetryableNetworkException_2_60S() {
+      super();
+    }
+
+    public RetryableNetworkException_2_60S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_2_60S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 60 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; two tries with 5 minute delay */
+  public static class RetryableNetworkException_2_5M
+    extends RetryableNetworkException_2 {
+    public RetryableNetworkException_2_5M() {
+      super();
+    }
+
+    public RetryableNetworkException_2_5M(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_2_5M(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 5 * Constants.MINUTE;
+    }
+
+  }
+
+  /** Retryable network error; three tries with 10 second delay */
+  public static class RetryableNetworkException_3_10S
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_3_10S() {
+      super();
+    }
+
+    public RetryableNetworkException_3_10S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_3_10S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 10 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; three tries with 30 second delay */
+  public static class RetryableNetworkException_3_30S
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_3_30S() {
+      super();
+    }
+
+    public RetryableNetworkException_3_30S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_3_30S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 30 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; three tries with 60 second delay */
+  public static class RetryableNetworkException_3_60S
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_3_60S() {
+      super();
+    }
+
+    public RetryableNetworkException_3_60S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_3_60S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 60 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; three tries with 5 minute delay */
+  public static class RetryableNetworkException_3_5M
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_3_5M() {
+      super();
+    }
+
+    public RetryableNetworkException_3_5M(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_3_5M(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 5 * Constants.MINUTE;
+    }
+
+  }
+
+
 
   /** An error that should be retried with the same URL */
   public static class RetrySameUrlException
@@ -202,24 +462,6 @@ public class CacheException extends IOException {
     }
   }
 
-
-  /** An error that is likely permanent and not likely to succeed if
-   * retried.
-   */
-  public static class UnretryableException
-      extends CacheException {
-    public UnretryableException() {
-      super();
-    }
-
-    public UnretryableException(String message) {
-      super(message);
-    }
-    protected void setAttributes() {
-      attributeBits.clear(ATTRIBUTE_RETRY);
-      attributeBits.set(ATTRIBUTE_FAIL);
-    }
-  }
 
   public static class PermissionException extends UnretryableException {
     public PermissionException() {
@@ -253,7 +495,7 @@ public class CacheException extends IOException {
     /** Create this if details of causal exception are more relevant. */
     public HostException(Exception e) {
       super(e.toString());
-      nestedException = e;
+      initCause(e);
     }
   }
 
@@ -273,7 +515,7 @@ public class CacheException extends IOException {
     /** Create this if details of causal exception are more relevant. */
     public MalformedURLException(Exception e) {
       super(e.toString());
-      nestedException = e;
+      initCause(e);
     }
 
     protected void setAttributes() {
@@ -312,7 +554,7 @@ public class CacheException extends IOException {
     /** Create this if details of causal exception are more relevant. */
     public RepositoryException(Exception e) {
       super(e.toString());
-      nestedException = e;
+      initCause(e);
     }
   }
 
@@ -332,7 +574,6 @@ public class CacheException extends IOException {
       attributeBits.clear(ATTRIBUTE_RETRY);
       attributeBits.clear(ATTRIBUTE_FAIL);
     }
-
   }
 
   /** Permanent redirect */

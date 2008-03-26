@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.25 2007-07-26 03:43:33 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.26 2008-03-26 04:53:37 tlipkis Exp $
  */
 
 /*
@@ -161,34 +161,47 @@ public class TestEditableDefinablePlugin
     assertIsomorphic("defined params", expected, actual);
   }
 
+  String[] cenames = {
+    "UnknownCodeException",
+    "UnknownExceptionException",
+    "RetryableException",
+    "RetrySameUrlException",
+    "RetryDeadLinkException",
+    "UnretryableException",
+    "HostException",
+    "RepositoryException",
+    "NoRetryNewUrlException",
+    "NoRetryPermUrlException",
+    "NoRetryTempUrlException",
+    "RedirectOutsideCrawlSpecException",
+    "PermissionException",
+    "ExpectedNoRetryException",
+    "NoRetryDeadLinkException",
+    "UnexpectedNoRetryFailException",
+    "UnexpectedNoRetryNoFailException",
+    "NoRetryHostException",
+    "NoRetryRepositoryException",
+    "UnimplementedCodeException",
+    "MalformedURLException",
+    "RetryableNetworkException_2",
+    "RetryableNetworkException_3",
+    "RetryableNetworkException_2_10S",
+    "RetryableNetworkException_2_30S",
+    "RetryableNetworkException_2_60S",
+    "RetryableNetworkException_2_5M",
+    "RetryableNetworkException_3_10S",
+    "RetryableNetworkException_3_30S",
+    "RetryableNetworkException_3_60S",
+    "RetryableNetworkException_3_5M",
+  };
+
   public void testGetKnownCacheExceptions() {
     HashSet set = new HashSet();
     set.add("org.lockss.util.urlconn.CacheSuccess");
-    set.add("org.lockss.util.urlconn.CacheException$UnknownCodeException");
-    set.add("org.lockss.util.urlconn.CacheException$RetryableException");
-    set.add("org.lockss.util.urlconn.CacheException$RetrySameUrlException");
-    set.add("org.lockss.util.urlconn.CacheException$RetryDeadLinkException");
-    set.add("org.lockss.util.urlconn.CacheException$UnretryableException");
-    set.add("org.lockss.util.urlconn.CacheException$HostException");
-    set.add("org.lockss.util.urlconn.CacheException$RepositoryException");
-    set.add("org.lockss.util.urlconn.CacheException$NoRetryNewUrlException");
-    set.add("org.lockss.util.urlconn.CacheException$NoRetryPermUrlException");
-    set.add("org.lockss.util.urlconn.CacheException$NoRetryTempUrlException");
-    set.add("org.lockss.util.urlconn.CacheException$RedirectOutsideCrawlSpecException");
-    set.add("org.lockss.util.urlconn.CacheException$PermissionException");
-    set.add("org.lockss.util.urlconn.CacheException$ExpectedNoRetryException");
-    set.add("org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException");
-    set.add(
-        "org.lockss.util.urlconn.CacheException$UnexpectedNoRetryFailException");
-    set.add(
-        "org.lockss.util.urlconn.CacheException$UnexpectedNoRetryNoFailException");
-    set.add("org.lockss.util.urlconn.CacheException$NoRetryHostException");
-    set.add("org.lockss.util.urlconn.CacheException$NoRetryRepositoryException");
-    set.add("org.lockss.util.urlconn.CacheException$UnimplementedCodeException");
-    set.add("org.lockss.util.urlconn.CacheException$MalformedURLException");
-
-    Collection actual = edPlugin.getKnownCacheExceptions();
-    assertEquals("return value", set, actual);
+    for (String ce : cenames) {
+      set.add("org.lockss.util.urlconn.CacheException$" + ce);
+    }
+    assertEquals("Known exceptions", set, edPlugin.getKnownCacheExceptions());
 
   }
 
