@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.22 2008-03-25 21:43:41 edwardsb1 Exp $
+ * $Id: TestProxyInfo.java,v 1.23 2008-03-29 00:22:08 edwardsb1 Exp $
  */
 
 /*
@@ -124,11 +124,12 @@ public class TestProxyInfo extends LockssTestCase {
     final String headRE =
         "// PAC file\\n"
       + "// Generated .* by LOCKSS cache .*\\n\\n"
+      + "// Generated from .*\n"
       + "function FindProxyForURL\\(url, host\\) {\\n";
     final String tailRE =
         " return \\\"DIRECT\\\";\\n"
       + "}\\n";
-    String pf = pi.generatePacFile(makeUrlStemSet(), false);
+    String pf = pi.generatePacFile(makeUrlStemSet(), "http://www.foobar.com/test", false);
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    headRE + ifsRE + tailRE, pf);
   }
@@ -148,6 +149,7 @@ public class TestProxyInfo extends LockssTestCase {
     final String headRE =
         "// PAC file\\n"
       + "// Generated .* by LOCKSS cache .*\\n\\n"
+      + "// Generated from .*\\n"
       + "function FindProxyForURL\\(url, host\\) {\\n";
     final String tailRE =
         " return FindProxyForURL_0\\(url, host\\);\\n"
@@ -156,7 +158,7 @@ public class TestProxyInfo extends LockssTestCase {
     final String pat =
       headRE + ifsRE + tailRE + StringUtil.escapeNonAlphaNum(encapsulated);
 
-    String pf = pi.generateEncapsulatedPacFile(makeUrlStemSet(), oldfile, "(msg)", false);
+    String pf = pi.generateEncapsulatedPacFile(makeUrlStemSet(), oldfile, "(msg)", "http://www.foobar.com/test", false);
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    pat, pf);
   }
@@ -181,7 +183,7 @@ public class TestProxyInfo extends LockssTestCase {
       + "\n"
       + "Proxy\n";
 
-    String s = pi.generateEZProxyFragment(makeUrlStemSet());
+    String s = pi.generateEZProxyFragment(makeUrlStemSet(), "http://www.foobar.com/test.html");
     assertTrue(s.startsWith("#"));
     assertEquals(frag, removeCommentLines(s));
   }
@@ -219,7 +221,7 @@ public class TestProxyInfo extends LockssTestCase {
 //    final String url1 = "http://bar.com";
 //    final String url2 = "http://foo.com";
 
-    FragmentBuilder builder = pi.new FragmentBuilder() {
+    FragmentBuilder builder = pi.new FragmentBuilder("http://www.foobar.com/test") {
       protected void generateEntry(StringBuffer buffer, String urlStem, String comment) {}
     };
 
@@ -241,7 +243,7 @@ public class TestProxyInfo extends LockssTestCase {
   public void testFragmentBuilderComment() {
     final List<String> comments = new ArrayList<String>();
 
-    FragmentBuilder builder = pi.new FragmentBuilder() {
+    FragmentBuilder builder = pi.new FragmentBuilder("http://www.foobar.com/test") {
       protected void generateEntry(StringBuffer buffer, String urlStem,
 				   String comment) {
 	comments.add(comment);
@@ -275,7 +277,7 @@ public class TestProxyInfo extends LockssTestCase {
     mockLockssDaemon.setDaemonInited(true);
     testableIcpManager.startService();
     
-    SquidFragmentBuilder builder = pi.new SquidFragmentBuilder() {
+    SquidFragmentBuilder builder = pi.new SquidFragmentBuilder("http://www.foobar.com/test") {
       protected void generateEntry(StringBuffer buffer, String urlStem, String comment) {}
     };
 
@@ -298,7 +300,7 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public void testExternalSquidFragmentBuilder() {
-    ExternalSquidFragmentBuilder builder = pi.new ExternalSquidFragmentBuilder();
+    ExternalSquidFragmentBuilder builder = pi.new ExternalSquidFragmentBuilder("http://www.foobar.com/test");
 
     StringBuffer buffer;
 
@@ -307,24 +309,71 @@ public class TestProxyInfo extends LockssTestCase {
     assertMatchesRE("# Foo\\n" + "foo.com",
 		    removeEmptyLines(buffer.toString())
     );
+
+    // Verify that we're including the URL.
+    // Important note: at this time, the IcpManager is not available on my machine,
+    // therefore I cannot run the following test.
+    
+//    buffer = new StringBuffer();
+//    builder.generateBeginning(buffer);
+//    assertMatchesRE("http://www.foobar.com/test",
+//        removeEmptyLines(buffer.toString())
+//    );
+
   }
 
   public void testSquidConfigFragmentBuilder() {
-    SquidConfigFragmentBuilder builder = pi.new SquidConfigFragmentBuilder();
-
     StringBuffer buffer;
-
+    SquidConfigFragmentBuilder builder;
+    
+    // Verify the entry
     buffer = new StringBuffer();
+
+    builder = pi.new SquidConfigFragmentBuilder("http://www.foobar.com/test", false);
     builder.generateEntry(buffer, "http://foo.com", "Foo");
     assertMatchesRE(
           "# Foo\\n"
         + "acl " + builder.encodeAclName() + " dstdomain foo.com",
         removeEmptyLines(buffer.toString())
     );
+    
+    // Verify the fragment building.  
+    Set<String> urlStems;
+    
+    urlStems = new HashSet<String>();
+    urlStems.add("foo.com");
+    
+    // isDirectFirst = true.
+    buffer = new StringBuffer();
+    
+    builder = pi.new SquidConfigFragmentBuilder("http://www.foobar.com/test", true);
+    builder.generateBeginning(buffer);
+    assertMatchesRE(
+          "prefer_direct on",
+        removeEmptyLines(buffer.toString())
+    );
+    assertMatchesRE("http://www.foobar.com/test",
+        removeEmptyLines(buffer.toString())
+    );
+    
+    // isDirectFirst = false
+    buffer = new StringBuffer();
+    
+    builder = pi.new SquidConfigFragmentBuilder("http://www.foobar.com/test", false);
+    builder.generateBeginning(buffer);
+    assertNotMatchesRE(
+          "prefer_direct on",
+        removeEmptyLines(buffer.toString())
+    );
+    assertMatchesRE("http://www.foobar.com/test",
+        removeEmptyLines(buffer.toString())
+    );
+   
+    
   }
 
   public void testEZProxyFragmentBuilder() {
-    EZProxyFragmentBuilder builder = pi.new EZProxyFragmentBuilder();
+    EZProxyFragmentBuilder builder = pi.new EZProxyFragmentBuilder("http://www.foobar.com/test");
 
     StringBuffer buffer;
 
@@ -336,6 +385,13 @@ public class TestProxyInfo extends LockssTestCase {
         + "Domain foo.com",
         removeEmptyLines(buffer.toString())
     );
+    
+    // Verify that we include the source URL.
+    buffer = new StringBuffer();
+    builder.generateBeginning(buffer);
+    assertMatchesRE("http://www.foobar.com/test",
+        removeEmptyLines(buffer.toString())
+    );
   }
 
   public void testPacFileFragmentBuilder() {
@@ -345,7 +401,7 @@ public class TestProxyInfo extends LockssTestCase {
     // Test one: the Direct goes last.
     buffer = new StringBuffer();
     
-    builder = pi.new PacFileFragmentBuilder(false);
+    builder = pi.new PacFileFragmentBuilder("http://www.foobar.com/test", false);
     builder.generateEntry(buffer, "http://foo.com", "Foo");
 
     assertMatchesRE(
@@ -355,10 +411,17 @@ public class TestProxyInfo extends LockssTestCase {
         removeEmptyLines(buffer.toString())
     );
     
+    // Verify that we have the original URL in the output.
+    buffer = new StringBuffer();
+    builder.generateBeginning(buffer);
+    assertMatchesRE("http://www.foobar.com/test",
+            removeEmptyLines(buffer.toString())
+        );
+    
     // Test two: the Direct goes first.
     buffer = new StringBuffer();
     
-    builder = pi.new PacFileFragmentBuilder(true);
+    builder = pi.new PacFileFragmentBuilder("http://www.foobar.com/test/", true);
     builder.generateEntry(buffer, "http://foo.com", "Foo");
 
     assertMatchesRE(
@@ -368,11 +431,18 @@ public class TestProxyInfo extends LockssTestCase {
         removeEmptyLines(buffer.toString())
     );
 
+    // Verify that we have the original URL in the output.
+    buffer = new StringBuffer();
+    builder.generateBeginning(buffer);
+    assertMatchesRE("http://www.foobar.com/test",
+            removeEmptyLines(buffer.toString())
+        );
+
   }
 
   public void testEncapsulatedPacFileFragmentBuilder() throws Exception {
     EncapsulatedPacFileFragmentBuilder builder =
-      pi.new EncapsulatedPacFileFragmentBuilder(null, null, false);
+      pi.new EncapsulatedPacFileFragmentBuilder(null, null, "http://www.foobar.com/test/", false);
 
     final String js1 = "function func0(foo, bar) { stmt; }\n";
     final String js2 = "function func1(foo, bar) { stmt; }\n";

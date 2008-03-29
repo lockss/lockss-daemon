@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.28 2008-03-25 21:43:41 edwardsb1 Exp $
+ * $Id: ProxyInfo.java,v 1.29 2008-03-29 00:22:07 edwardsb1 Exp $
  */
 
 /*
@@ -63,6 +63,13 @@ public class ProxyInfo {
    * @see #generateFragment
    */
   public abstract class FragmentBuilder {
+    
+    protected String m_URL;
+    
+    public FragmentBuilder(String URL)
+    {
+      m_URL = URL;
+    }
 
     /**
      * <p>A template method that generates a fragment from a map of
@@ -177,19 +184,16 @@ public class ProxyInfo {
   class PacFileFragmentBuilder extends FragmentBuilder {
     private boolean m_isDirectFirst;
     
-    private PacFileFragmentBuilder() {
-      throw new UnsupportedOperationException("Please use the constructor with the boolean parameter, PacFileFragmentBuilder(boolean).");   
-    }
-    
-    public PacFileFragmentBuilder(boolean isCacheFirst) {
-      super();
+    public PacFileFragmentBuilder(String URL, boolean isDirectFirst) {
+      super(URL);
       
-      m_isDirectFirst = isCacheFirst;
+      m_isDirectFirst = isDirectFirst;
     }
 
     /* Inherit documentation */
     public void generateBeginning(StringBuffer buffer) {
       commonHeader(buffer);
+      buffer.append("// Generated from " + m_URL + "\n");
       buffer.append("function FindProxyForURL(url, host) {\n");
     }
 
@@ -251,7 +255,7 @@ public class ProxyInfo {
       return urlStem + "/*";
     }
 
-  }
+  }  // END: PacFileFragmentBuilder
 
   /**
    * <p>A version of {@link PacFileFragmentBuilder} specialized to
@@ -279,8 +283,9 @@ public class ProxyInfo {
      */
     public EncapsulatedPacFileFragmentBuilder(String pacFileToBeEncapsulated,
                                               String message,
+                                              String URL, 
                                               boolean isDirectFirst) {
-      super(isDirectFirst);
+      super(URL, isDirectFirst);
       
       this.pacFileToBeEncapsulated = pacFileToBeEncapsulated;
       this.message = message;
@@ -340,17 +345,22 @@ public class ProxyInfo {
                              js, Util.SUBSTITUTE_ALL);
     }
 
-  }
+  } // END: EncapsulatedPacFileFragmentBuilder
 
   /**
    * <p>A version of {@link FragmentBuilder} specialized to generate
    * an EZproxy configuration fragment.</p>
    * @author Thib Guicherd-Callin
    */
-  class EZProxyFragmentBuilder extends FragmentBuilder {
+  class EZProxyFragmentBuilder extends FragmentBuilder {   
+    public EZProxyFragmentBuilder(String URL)
+    {
+      super(URL);
+    }
 
     /* Inherit documentation */
     public void generateBeginning(StringBuffer buffer) {
+      buffer.append("# Generated from " + m_URL + "\n");
       commonHeader(buffer);
       buffer.append("Proxy ");
       buffer.append(getProxyHost());
@@ -402,7 +412,7 @@ public class ProxyInfo {
       buffer.append('\n');
     }
 
-  }
+  } // END: EZProxyFragmentBuilder
 
   /**
    * <p>A version of {#link FragmentBuilder} specialized for Squid
@@ -410,6 +420,11 @@ public class ProxyInfo {
    * @author Thib Guicherd-Callin
    */
   abstract class SquidFragmentBuilder extends FragmentBuilder {
+    
+    public SquidFragmentBuilder(String URL)
+    {
+      super(URL);
+    }
 
     /**
      * <p>Generates a typical header.</p>
@@ -524,7 +539,7 @@ public class ProxyInfo {
       return getProxyHost().replaceAll("\\.", "-") + "-domains";
     }
 
-  }
+  } // END: SquidFragmentBuilder
 
   /**
    * <p>A version of {@link SquidFragmentBuilder} specialized to
@@ -532,11 +547,16 @@ public class ProxyInfo {
    * @author Thib Guicherd-Callin
    */
   class ExternalSquidFragmentBuilder extends SquidFragmentBuilder {
+    
+    public ExternalSquidFragmentBuilder(String URL) {
+      super(URL);
+    }
 
     /* Inherit documentation */
     public void generateBeginning(StringBuffer buffer) {
       buffer.append("# LOCKSS dstdomain file for Squid\n");
-
+      buffer.append("# Generated from " + m_URL + "\n");
+      
       commonHeader(buffer);
 
       buffer.append("# Suggested file name: ");
@@ -569,7 +589,7 @@ public class ProxyInfo {
       buffer.append(UrlUtil.stripProtocol(urlStem) + "\n\n");
     }
 
-  }
+  } // END: ExternalSquidFragmentBuilder
 
   /**
    * <p>A version of {@link SquidFragmentBuilder} specialized to
@@ -578,12 +598,29 @@ public class ProxyInfo {
    * @author Thib Guicherd-Callin
    */
   class SquidConfigFragmentBuilder extends SquidFragmentBuilder {
+    private boolean m_isDirectFirst;
+        
+    public SquidConfigFragmentBuilder(String URL, boolean isDirectFirst) {
+      super(URL);
+      
+      m_isDirectFirst = isDirectFirst;
+    }
 
     /* Inherit documentation */
     public void generateBeginning(StringBuffer buffer) {
       buffer.append("# LOCKSS configuration fragment for Squid\n");
+      buffer.append("# Generated from " + m_URL + "\n");
+      
       commonHeader(buffer);
       buffer.append("# Go look for further instructions after all the following \"dstdomain\" lines.\n\n");
+      
+      if (m_isDirectFirst) {
+        buffer.append("# You asked that the proxy prefer direct connections over using the cache.\n");
+        buffer.append("# Squid's setting for this request is global (rather than per connection).\n");
+        buffer.append("# If you wish to turn on direct connection for all connections, then uncomment\n");
+        buffer.append("# (ie: remove the '#' from) the next line.\n");
+        buffer.append("# prefer_direct on\n\n");
+      }
     }
 
     /* Inherit documentation */
@@ -609,7 +646,7 @@ public class ProxyInfo {
 		    UrlUtil.stripProtocol(urlStem) + "\n\n");
     }
 
-  }
+  } // END: SquidConfigFragmentBuilder
 
   static final String PARAM_MAX_COMMENT_AUS =
     Configuration.PREFIX + "proxyInfo.maxCommentAus";
@@ -636,9 +673,10 @@ public class ProxyInfo {
   public String generateEncapsulatedPacFile(Set urlStems,
 				            String pacFileToBeEncapsulated,
 				            String message, 
+                                            String URL, 
                                             boolean isDirectFirst) {
     return new EncapsulatedPacFileFragmentBuilder(
-        pacFileToBeEncapsulated, message, isDirectFirst).generateFragment(urlStems);
+        pacFileToBeEncapsulated, message, URL, isDirectFirst).generateFragment(urlStems);
   }
 
   /** Generate a PAC file string from the URL stem map, delegating to the
@@ -654,7 +692,7 @@ public class ProxyInfo {
       bis = new BufferedInputStream(istr);
       String old = StringUtil.fromInputStream(bis, MAX_ENCAPSULATED_PAC_SIZE);
       return generateEncapsulatedPacFile(urlStems, old,
-          " (generated from " + url + ")", isDirectFirst);
+          " (generated from " + url + ")", url, isDirectFirst);
     }
     finally {
       if (bis != null) {
@@ -663,22 +701,22 @@ public class ProxyInfo {
     }
   }
 
-  public String generateExternalSquidFragment(Set urlStems) {
-    return new ExternalSquidFragmentBuilder().generateFragment(urlStems);
+  public String generateExternalSquidFragment(Set urlStems, String URL) {
+    return new ExternalSquidFragmentBuilder(URL).generateFragment(urlStems);
   }
 
   /** Generate an EZproxy config fragment from the URL stem map */
-  public String generateEZProxyFragment(Set urlStems) {
-    return new EZProxyFragmentBuilder().generateFragment(urlStems);
+  public String generateEZProxyFragment(Set urlStems, String URL) {
+    return new EZProxyFragmentBuilder(URL).generateFragment(urlStems);
   }
 
   /** Generate a PAC file string from the URL stem map */
-  public String generatePacFile(Set urlStems, boolean isDirectFirst) {
-    return new PacFileFragmentBuilder(isDirectFirst).generateFragment(urlStems);
+  public String generatePacFile(Set urlStems, String URL, boolean isDirectFirst) {
+    return new PacFileFragmentBuilder(URL, isDirectFirst).generateFragment(urlStems);
   }
 
-  public String generateSquidConfigFragment(Set urlStems) {
-    return new SquidConfigFragmentBuilder().generateFragment(urlStems);
+  public String generateSquidConfigFragment(Set urlStems, String URL, boolean isDirectFirst) {
+    return new SquidConfigFragmentBuilder(URL, isDirectFirst).generateFragment(urlStems);
   }
 
   /** Convenience method to get URL stem map for all AUs */

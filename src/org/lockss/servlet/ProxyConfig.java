@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.24 2008-03-25 21:43:41 edwardsb1 Exp $
+ * $Id: ProxyConfig.java,v 1.25 2008-03-29 00:22:07 edwardsb1 Exp $
  */
 
 /*
@@ -90,6 +90,7 @@ public class ProxyConfig extends LockssServlet {
    */
   public void lockssHandleRequest() throws IOException {
     boolean isDirectFirst;
+    String strDirectFirst;
     
  //   auth = req.getHeader(HttpFields.__Authorization);
     action = getParameter("action");
@@ -119,9 +120,18 @@ public class ProxyConfig extends LockssServlet {
     // assume will send text.  Error & form display will override.
     resp.setContentType("text/plain");
     
-    // TODO: Retrieve whether the user specified that s/he wants "direct" first or last.
-    isDirectFirst = false;
+    // Retrieve whether the user specified that s/he wants "direct" first or last.
+    strDirectFirst = getParameter("DirectFirst");
     
+    if (strDirectFirst == null) {
+      isDirectFirst = false;
+    } else if (strDirectFirst.equalsIgnoreCase("True")) {
+      isDirectFirst = true;
+    } else {
+      isDirectFirst = false;
+    }
+    
+    // Generate the proxy file!
     try {
       generateProxyFile(action, isDirectFirst);
     } catch (IOException e) {
@@ -172,7 +182,7 @@ public class ProxyConfig extends LockssServlet {
       generateExternalSquidFragment();
     }
     else if (format.equalsIgnoreCase(TAG_SQUID_CONFIG)) {
-      generateSquidConfigFragment();
+      generateSquidConfigFragment(isDirectFirst);
     }
     else {
       displayForm("Unknown proxy config format: " + format);
@@ -182,13 +192,13 @@ public class ProxyConfig extends LockssServlet {
   void generateExternalSquidFragment()
       throws IOException {
     wrtr = resp.getWriter();
-    wrtr.print(pi.generateExternalSquidFragment(urlStems));
+    wrtr.print(pi.generateExternalSquidFragment(urlStems, req.getRequestURI()));
   }
 
-  void generateSquidConfigFragment()
+  void generateSquidConfigFragment(boolean isDirectFirst)
       throws IOException {
     wrtr = resp.getWriter();
-    wrtr.print(pi.generateSquidConfigFragment(urlStems));
+    wrtr.print(pi.generateSquidConfigFragment(urlStems, req.getRequestURI(), isDirectFirst));
   }
 
   void generatePacFile(boolean isDirectFirst) throws IOException {
@@ -200,7 +210,7 @@ public class ProxyConfig extends LockssServlet {
       resp.setContentType(MIME_TYPE_PAC);
     }
 
-    wrtr.print(pi.generatePacFile(urlStems, isDirectFirst));
+    wrtr.print(pi.generatePacFile(urlStems, req.getRequestURI(), isDirectFirst));
   }
 
   void generateEncapsulatedPacFile(boolean isDirectFirst) throws IOException {
@@ -220,7 +230,7 @@ public class ProxyConfig extends LockssServlet {
 	  displayForm("Please provide an existing PAC file in one of the three fields below");
 	  return;
 	}
-	pac = pi.generateEncapsulatedPacFile(urlStems, encap, null, isDirectFirst);
+	pac = pi.generateEncapsulatedPacFile(urlStems, encap, null, req.getRequestURI(), isDirectFirst);
       } else {
 	try {
 // 	  pac = pi.encapsulatePacFileFromURL(urlStems, url, auth);
@@ -254,7 +264,7 @@ public class ProxyConfig extends LockssServlet {
   void generateEZProxyFile()
       throws IOException {
     wrtr = resp.getWriter();
-    wrtr.print(pi.generateEZProxyFragment(urlStems));
+    wrtr.print(pi.generateEZProxyFragment(urlStems, req.getRequestURI()));
   }
 
   void generateHelpPage(String error) throws IOException {
@@ -275,18 +285,24 @@ public class ProxyConfig extends LockssServlet {
       frm.add("</font>");
     }
 
+    frm.add("<p>Choose your options:</p>");
+    addFmtElement(frm, "Proxy first", "DirectFirst", "false",
+        "Prefer using the proxy rather than connecting directly to the web server.");
+    addFmtElement(frm, "Direct first", "DirectFirst", "false",
+        "Prefer connecting directly to the web server rather than using the proxy.");
+    
     frm.add("<p>Choose a supported format: ");
     frm.add("<ul>");
-    addFmtElement(frm, "EZproxy config fragment", TAG_EZPROXY,
-	"Generate text to insert into an EZproxy config file (#)");
-    addFmtElement(frm, "Generate a dstdomain file for Squid", TAG_SQUID,
-        "Generate a text file that can be used for a Squid \"dstdomain\" rule (#)");
-    addFmtElement(frm, "Generate a configuration fragment for Squid", TAG_SQUID_CONFIG,
-        "Generate text to insert into a Squid configuration file (#)");
-    addFmtElement(frm, "PAC file", TAG_PAC,
+    addFmtElement(frm, "EZproxy config fragment", "action", TAG_EZPROXY,
+	"Generate text to insert into an EZproxy config file");
+    addFmtElement(frm, "Generate a dstdomain file for Squid", "action", TAG_SQUID,
+        "Generate a text file that can be used for a Squid \"dstdomain\" rule");
+    addFmtElement(frm, "Generate a configuration fragment for Squid", "action", TAG_SQUID_CONFIG,
+        "Generate text to insert into a Squid configuration file");
+    addFmtElement(frm, "PAC file", "action", TAG_PAC,
 	"Automatic proxy configuration for browsers. " +
 	"Place the contents of this file on a server for your users " +
-	"to configure their browsers (#)" +
+	"to configure their browsers" +
 	srvAbsLink(myServletDescr(), ".", "action=pac&mime=pac"));
 
     Composite urlform = new Composite();
@@ -304,22 +320,23 @@ public class ProxyConfig extends LockssServlet {
     ServletUtil.writePage(resp, page);
   }
 
-  void addFmtElement(Composite comp, String title, String format,
-		     String text) {
-    ServletDescr desc = myServletDescr();
-    String fmt = "action=" + format;
-    String absUrl = "<code>" + srvAbsURL(desc, fmt) + "</code>";
+  void addFmtElement(Composite comp, String title, String fieldName, 
+                     String format, String text) {
+ //   ServletDescr desc = myServletDescr();
+    String fmt = fieldName + "=" + format;
+ //   String absUrl = "<code>" + srvAbsURL(desc, fmt) + "</code>";
     Composite elem = new Composite();
-    elem.add(StringUtil.replaceString(text, "#", absUrl));
-    addFmtElement(comp, title, format, elem);
+ // We are no longer including the URL in the output.
+ //   elem.add(StringUtil.replaceString(text, "#", absUrl));
+    elem.add(text);
+    addFmtElement(comp, title, fmt, elem);
   }
 
   void addFmtElement(Composite comp, String title, String format,
 		     Element elem) {
     ServletDescr desc = myServletDescr();
-    String fmt = "action=" + format;
     comp.add("<li>");
-    comp.add(srvLink(desc, title, fmt));
+    comp.add(srvLink(desc, title, format));
     comp.add(". ");
     comp.add(elem);
     comp.add("</li>");
