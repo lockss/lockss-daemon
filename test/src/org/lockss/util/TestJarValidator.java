@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.15 2008-03-24 20:36:10 edwardsb1 Exp $
+ * $Id: TestJarValidator.java,v 1.16 2008-03-31 22:34:42 edwardsb1 Exp $
  */
 
 /*
@@ -33,15 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.*;
-import java.net.*;
+// import java.util.*;
+// import java.net.*;
 import java.security.KeyStore;
-import junit.framework.*;
+// import junit.framework.*;
 
 import org.lockss.test.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.daemon.*;
+// import org.lockss.plugin.*;
+// import org.lockss.plugin.base.*;
+// import org.lockss.daemon.*;
 
 
 /**
@@ -223,20 +223,19 @@ public class TestJarValidator extends LockssTestCase {
   
   // Does the validator accept JAR files of one .java file whose signature is expired?
   public void testExpired1() throws Exception {
+    File f = null;
+
     MockCachedUrl mcuExpired1 =
       new MockCachedUrl("http://foo.com/Expired1.jar", Expired1Jar, true);
     examineInputStream(mcuExpired1);
     
     JarValidator validator =
       new JarValidator(m_pubKeystore, getTempDir());
-    File f = null;
-    try {
-      f = validator.getBlessedJar(mcuExpired1);
-      fail("testExpired1: getting an expired jar should have caused an exception.");
-    } catch (JarValidator.JarValidationException ignore) {
-      // Expected; ignore.
-    }
-    assertNull(f);
+    f = validator.getBlessedJar(mcuExpired1);
+    
+    // The default behavior is to allow expired .jar files.
+    assertNotNull(f);
+    assertTrue(f.exists());
   }
 
   // Does the validator accept JAR files of one .java file whose signature is not yet available?
@@ -304,7 +303,7 @@ public class TestJarValidator extends LockssTestCase {
     File f = null;
     try {
       f = validator.getBlessedJar(mcuUnrecognized1);
-      fail("testModified1: getting a modified jar should have caused an exception.");
+      fail("testModified1: getting an unrecognized jar should have caused an exception.");
     } catch (JarValidator.JarValidationException ignore) {
       // Expected; ignore.
     }
@@ -325,7 +324,7 @@ public class TestJarValidator extends LockssTestCase {
     File f = null;
     try {
       f = validator.getBlessedJar(mcuExpired1);
-      fail("testExpired1Unrecognized: getting an expired jar should have caused an exception.");
+      fail("testExpired1Unrecognized: getting an unrecognized jar should have caused an exception.");
     } catch (JarValidator.JarValidationException ignore) {
       // Expected; ignore.
     }
@@ -335,7 +334,7 @@ public class TestJarValidator extends LockssTestCase {
     validator.allowExpired(true);
     try {
       f = validator.getBlessedJar(mcuExpired1);
-      fail("testExpired1Unrecognized: getting an expired jar should have caused an exception, even after allowExpired(true).");
+      fail("testExpired1Unrecognized: getting an unrecognized jar should have caused an exception, even after allowExpired(true).");
     } catch (JarValidator.JarValidationException ignore) {
       // Expected; ignore.
     }
@@ -345,7 +344,7 @@ public class TestJarValidator extends LockssTestCase {
     validator.allowExpired(false);
     try {
       f = validator.getBlessedJar(mcuExpired1);
-      fail("testExpired1Unrecognized: getting an expired jar should have caused an exception, even after allowExpired(false).");
+      fail("testExpired1Unrecognized: getting an unrecognized jar should have caused an exception, even after allowExpired(false).");
     } catch (JarValidator.JarValidationException ignore) {
       // Expected; ignore.
     }
@@ -409,20 +408,18 @@ public class TestJarValidator extends LockssTestCase {
   
   // Does the validator accept JAR files with two .java file whose signature is expired?
   public void testExpired2() throws Exception {
+    File f = null;
+
     MockCachedUrl mcuExpired2 =
       new MockCachedUrl("http://foo.com/Expired2.jar", Expired2Jar, true);
     examineInputStream(mcuExpired2);
     
     JarValidator validator =
       new JarValidator(m_pubKeystore, getTempDir());
-    File f = null;
-    try {
-      f = validator.getBlessedJar(mcuExpired2);
-      fail("testExpired2: getting an expired jar should have caused an exception.");
-    } catch (JarValidator.JarValidationException ignore) {
-      // Expected; ignore.
-    }
-    assertNull(f);
+    f = validator.getBlessedJar(mcuExpired2);
+    
+    assertNotNull(f);
+    assertTrue(f.exists());
   }
 
   // Does the validator accept JAR files with two .java files whose signature is not yet available?
@@ -490,12 +487,94 @@ public class TestJarValidator extends LockssTestCase {
     File f = null;
     try {
       f = validator.getBlessedJar(mcuUnrecognized2);
-      fail("testModified2: getting a modified jar should have caused an exception.");
+      fail("testModified2: getting an unrecognized jar should have caused an exception.");
     } catch (JarValidator.JarValidationException ignore) {
       // Expected; ignore.
     }
     assertNull(f);
   }
+  
+  
+  // Does the validator accept JAR files of a .java file whose signature is expired, 
+  // and that is not in the list of signatures?
+  public void testExpired2Unrecognized() throws Exception {
+    MockCachedUrl mcuExpired2Unrecognized =
+      new MockCachedUrl("http://foo.com/Expired2Unrecognized.jar", Expired2UnrecognizedJar, true);
+    examineInputStream(mcuExpired2Unrecognized);
+    
+    // Step one: Without a call to allowExpired
+    JarValidator validator =
+      new JarValidator(m_pubKeystore, getTempDir());
+    File f = null;
+    try {
+      f = validator.getBlessedJar(mcuExpired2Unrecognized);
+      fail("testExpired1Unrecognized: getting an unrecognized jar should have caused an exception.");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);
+    
+    // Step two: After a call to allowExpired(true)
+    validator.allowExpired(true);
+    try {
+      f = validator.getBlessedJar(mcuExpired2Unrecognized);
+      fail("testExpired1Unrecognized: getting an unrecognized jar should have caused an exception, even after allowExpired(true).");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);
+    
+    // Step three: After a call to allowExpired(false).  Yes, this is a bit silly.
+    validator.allowExpired(false);
+    try {
+      f = validator.getBlessedJar(mcuExpired2Unrecognized);
+      fail("testExpired1Unrecognized: getting an unrecognized jar should have caused an exception, even after allowExpired(false).");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);    
+  }
+
+
+  // Does the validator accept JAR files of one .java file whose signature is not yet available?
+  public void testFuture2Unrecognized() throws Exception {
+    MockCachedUrl mcuFuture2Unrecognized =
+      new MockCachedUrl("http://foo.com/Future2Unrecognized.jar", Future2UnrecognizedJar, true);
+    examineInputStream(mcuFuture2Unrecognized);
+
+    // Step one: Without a call to allowExpired().
+    JarValidator validator =
+      new JarValidator(m_pubKeystore, getTempDir());
+    File f = null;
+    try {
+      f = validator.getBlessedJar(mcuFuture2Unrecognized);
+      fail("testFuture1Unrecognized: getting a future jar should have caused an exception.");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);
+    
+    // Step two: After a call to allowExpired(true).
+    validator.allowExpired(true);
+    try {
+      f = validator.getBlessedJar(mcuFuture2Unrecognized);
+      fail("testFuture1Unrecognized: getting a future jar should have caused an exception, even after a call to allowExpired(true).");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);
+    
+    // Step two: After a call to allowExpired(false).
+    validator.allowExpired(false);
+    try {
+      f = validator.getBlessedJar(mcuFuture2Unrecognized);
+      fail("testFuture1Unrecognized: getting a future jar should have caused an exception, even after a call to allowExpired(false).");
+    } catch (JarValidator.JarValidationException ignore) {
+      // Expected; ignore.
+    }
+    assertNull(f);
+  }
+  
   
   // ** Tests of JarValidator:
   

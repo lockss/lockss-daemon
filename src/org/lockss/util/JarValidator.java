@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.12 2008-03-22 00:55:01 edwardsb1 Exp $
+ * $Id: JarValidator.java,v 1.13 2008-03-31 22:34:42 edwardsb1 Exp $
  */
 
 /*
@@ -33,10 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.lang.reflect.*;
+// import java.lang.reflect.*;
 import java.util.*;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
+// import org.lockss.util.*;
+// import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import java.util.jar.*;
 import java.security.CodeSigner;
@@ -57,7 +57,7 @@ public class JarValidator {
   public JarValidator(KeyStore keystore, File pluginDir) {
     this.m_keystore = keystore;
     this.m_pluginDir = pluginDir;
-    m_allowExpired = false;
+    m_allowExpired = true;  // Request: default to ALLOWING expired certificates.
   }
 
   /**
@@ -81,7 +81,7 @@ public class JarValidator {
       cuis = cu.getUnfilteredInputStream();
       f = File.createTempFile("plugin-", ".jar", m_pluginDir);
       fos = new FileOutputStream(f);
-      long bytes = StreamUtil.copy(cuis, fos);
+      StreamUtil.copy(cuis, fos);
     } finally {
       if (fos != null) {
 	fos.close();
@@ -160,8 +160,8 @@ public class JarValidator {
   private void verifyDigests(JarInputStream is, JarEntry entry)
       throws SecurityException, IOException {
     byte[] buffer = new byte[8192];
-    int n = 0;
-    while ((n = is.read (buffer, 0, buffer.length)) != -1) {
+//    int n = 0;
+    while ((is.read (buffer, 0, buffer.length)) != -1) {
       // Read the entry, do nothing with the contents.  This will
       // throw a SecurityException if the jar entry is tainted.
     }
@@ -297,6 +297,8 @@ public class JarValidator {
    * explain exactly why.
    */
   public static class JarValidationException extends Exception {
+    private static final long serialVersionUID = 1;
+    
     JarValidationException(String s) {
       super(s);
     }
