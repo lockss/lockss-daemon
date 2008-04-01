@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.23 2008-02-15 09:11:26 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.24 2008-04-01 08:02:41 tlipkis Exp $
  */
 
 /*
@@ -76,8 +76,8 @@ public class V3PollFactory extends BasePollFactory {
     return true;
   }
 
-  private void sendNak(LockssDaemon daemon, PollNak nak,
-		       String auid, V3LcapMessage msg) {
+  protected void sendNak(LockssDaemon daemon, PollNak nak,
+			 String auid, V3LcapMessage msg) {
     IdentityManager idMgr = daemon.getIdentityManager();
     V3LcapMessage response =
       new V3LcapMessage(auid, msg.getKey(),
@@ -142,6 +142,10 @@ public class V3PollFactory extends BasePollFactory {
         retPoll = makeV3Poller(daemon, pollspec, orig, duration, hashAlg);
       } else {
         // If there's a message, we're making a voter
+	if (msg.getOpcode() != V3LcapMessage.MSG_POLL) {
+	  log.warning("Received msg for nonexistent poll: " + msg);
+	  return null;
+	}
         retPoll = makeV3Voter(daemon, msg, pollspec, orig);
       }
     } catch (V3Serializer.PollSerializerException ex) {
@@ -221,10 +225,9 @@ public class V3PollFactory extends BasePollFactory {
     }
     ArchivalUnit au = cus.getArchivalUnit();
 
-    if (AuUtil.getAuState(au).getLastCrawlTime() <= 0 &&
-	!AuUtil.isPubDown(au)) { 
-      log.debug("AU not crawled & pub not down, not voting: " +
-		pollspec.getAuId());
+    // Never vote if not crawled, even if pub down
+    if (AuUtil.getAuState(au).getLastCrawlTime() <= 0) { 
+      log.debug("AU not crawled, not voting: " + pollspec.getAuId());
       sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
       return null;
     }
