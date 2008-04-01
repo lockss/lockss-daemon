@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.26 2008-03-26 04:53:37 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.27 2008-04-01 08:02:11 tlipkis Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class TestEditableDefinablePlugin
     "RetrySameUrlException",
     "RetryDeadLinkException",
     "UnretryableException",
-    "HostException",
+    "ExploderException",
     "RepositoryException",
     "NoRetryNewUrlException",
     "NoRetryPermUrlException",

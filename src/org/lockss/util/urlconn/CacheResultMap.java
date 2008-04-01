@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultMap.java,v 1.3 2004-11-11 00:40:45 troberts Exp $
+ * $Id: CacheResultMap.java,v 1.4 2008-04-01 08:02:11 tlipkis Exp $
  */
 
 /*
@@ -41,11 +41,13 @@ package org.lockss.util.urlconn;
  */
 
 public interface CacheResultMap {
-  public CacheException getHostException(Exception nestedException);
-
   public CacheException getMalformedURLException(Exception nestedException);
 
   public CacheException getRepositoryException(Exception nestedException);
 
   public CacheException checkResult(LockssUrlConnection connection);
+
+  public CacheException mapException(LockssUrlConnection connection,
+				     Exception fetchException,
+				     String message);
 }

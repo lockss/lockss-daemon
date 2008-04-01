@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.7 2008-03-26 04:52:12 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.8 2008-04-01 08:02:11 tlipkis Exp $
  */
 
 /*
@@ -123,14 +123,6 @@ public class HttpResultMap implements CacheResultMap {
     return exceptionTable.get(resultCode);
   }
 
-//   public Class getExceptionClass(Class cls) {
-//     return exceptionTable.get(cls);
-//   }
-
-  public CacheException getHostException(Exception nestedException) {
-    return new CacheException.HostException(nestedException);
-  }
-
   public CacheException getMalformedURLException(Exception nestedException) {
     return new CacheException.MalformedURLException(nestedException);
   }
@@ -146,7 +138,7 @@ public class HttpResultMap implements CacheResultMap {
       return mapException(connection, code, msg);
     }
     catch (RuntimeException ex) {
-      return getHostException(ex);
+      return new CacheException.UnknownExceptionException(ex);
     }
   }
 

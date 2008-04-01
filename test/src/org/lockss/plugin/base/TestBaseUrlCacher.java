@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.57 2007-09-10 22:22:49 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.58 2008-04-01 08:02:11 tlipkis Exp $
  */
 
 /*
@@ -385,6 +385,45 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
+  public void testConnTimeout() throws IOException {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    ThrowingMockLockssUrlConnection mconn =
+      new ThrowingMockLockssUrlConnection(new java.net.ConnectException());
+    muc.addConnection(mconn);
+    try {
+      muc.cache();
+      fail("Should have thrown");
+    } catch (CacheException.RetryableNetworkException_3_30S ex) {
+    }
+  }
+
+  public void testSocketTimeout() throws IOException {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    ThrowingMockLockssUrlConnection mconn =
+      new ThrowingMockLockssUrlConnection(new java.net.SocketException());
+    muc.addConnection(mconn);
+    try {
+      muc.cache();
+      fail("Should have thrown");
+    } catch (CacheException.RetryableNetworkException_3_30S ex) {
+    }
+  }
+
+  public void testUnknownHostTimeout() throws IOException {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    ThrowingMockLockssUrlConnection mconn =
+      new ThrowingMockLockssUrlConnection(new java.net.UnknownHostException());
+    muc.addConnection(mconn);
+    try {
+      muc.cache();
+      fail("Should have thrown");
+    } catch (CacheException.RetryableNetworkException_2_30S ex) {
+    }
+  }
+
   public void testNoProxy() throws Exception {
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
@@ -499,20 +538,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   // Should throw exception derived from response code
   public void testConnectionError() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
-    MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
-    muc.addConnection(mconn);
-    try {
-      InputStream is = muc.getUncachedInputStream();
-      fail("Should have thrown ExpectedNoRetryException");
-    } catch (CacheException.ExpectedNoRetryException e) {
-      assertEquals("404 Not fond", e.getMessage());
-    }
-  }
-
-  // the url connection may throw a MalformedUrlException
-  public void testMalformedUrlError() throws Exception {
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
