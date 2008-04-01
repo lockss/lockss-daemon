@@ -14,7 +14,7 @@
 	released	The Analyst Volume 130	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=130	year=2005
 	released	The Analyst Volume 131	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=131	year=2006
 	released	The Analyst Volume 132	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=132	year=2007
-	testing	The Analyst Volume 133	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=133	year=2008
+	ready	The Analyst Volume 133	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=133	year=2008
 #	@fixedValues	j=Analytical Communications					
 	manifest	Analytical Communications Volume 34	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=34	year=1997
 	manifest	Analytical Communications Volume 35	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=35	year=1998
@@ -149,7 +149,7 @@
 	manifest	Journal of Materials Chemistry Volume 17	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=17	year=2007
 	ready	Journal of Materials Chemistry Volume 18	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=18	year=2008
 #	@fixedValues	j=Lab on a Chip					
-	manifest	Lab on a Chip Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=1	year=2001
+	ready	Lab on a Chip Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=1	year=2001
 	manifest	Lab on a Chip Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=2	year=2002
 	manifest	Lab on a Chip Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=3	year=2003
 	testing	Lab on a Chip Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=4	year=2004
@@ -169,7 +169,7 @@
 #	@fixedValues	j=Molecular BioSystems					
 	manifest	Molecular BioSystems Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=1	year=2005
 	manifest	Molecular BioSystems Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=2	year=2006
-	manifest	Molecular BioSystems Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=3	year=2007
+	ready	Molecular BioSystems Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=3	year=2007
 	manifest	Molecular BioSystems Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=4	year=2008
 #	@fixedValues	j=Natural Product Reports					
 	manifest	Natural Product Reports Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=14	year=1997
@@ -219,7 +219,7 @@
 #	@fixedValues	j=PhysChemComm					
 	ready	PhysChemComm Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=1	year=1998
 	released	PhysChemComm Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=2	year=1999
-	testing	PhysChemComm Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=3	year=2000
+	ready	PhysChemComm Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=3	year=2000
 	testing	PhysChemComm Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=4	year=2001
 	ready	PhysChemComm Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=5	year=2002
 	ready	PhysChemComm Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=6	year=2003
