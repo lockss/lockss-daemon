@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.33 2008-02-15 09:16:15 tlipkis Exp $
+ * $Id: AuState.java,v 1.34 2008-04-01 08:03:49 tlipkis Exp $
  */
 
 /*
@@ -151,6 +151,13 @@ public class AuState implements LockssSerializable {
     return previousPollState != null;
   }
 
+  /**
+   * Returns the date/time the au was created.
+   * @return au creation time
+   */
+  public long getAuCreationTime() {
+    return historyRepo.getAuCreationTime();
+  }
 
   /**
    * Returns the last new content crawl time of the au.

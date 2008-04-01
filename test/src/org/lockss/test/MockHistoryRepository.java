@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.16 2008-01-27 06:47:53 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.17 2008-04-01 08:03:49 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,10 @@ public class MockHistoryRepository implements HistoryRepository {
 
   public File getAuStateFile() {
     return auStateFile;
+  }
+
+  public long getAuCreationTime() {
+    return -1;
   }
 
   public void setAuStateFile(File file) {

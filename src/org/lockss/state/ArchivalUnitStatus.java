@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.67 2008-02-19 01:44:23 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.68 2008-04-01 08:03:49 tlipkis Exp $
  */
 
 /*
@@ -772,6 +772,9 @@ public class ArchivalUnitStatus
 // 						ColumnDescriptor.TYPE_INT,
 // 						new Integer(AuUtil.getProtocolVersion(au))));
 
+      res.add(new StatusTable.SummaryInfo("Created",
+					  ColumnDescriptor.TYPE_DATE,
+					  new Long(state.getAuCreationTime())));
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,

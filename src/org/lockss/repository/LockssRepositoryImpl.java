@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.78 2008-02-15 09:12:11 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.79 2008-04-01 08:03:49 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class LockssRepositoryImpl
   static Map localRepositories = new HashMap();
 
   // starts with a '#' so no possibility of clashing with a URL
-  static final String AU_ID_FILE = "#au_id_file";
+  public static final String AU_ID_FILE = "#au_id_file";
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
   static final char ESCAPE_CHAR = '#';

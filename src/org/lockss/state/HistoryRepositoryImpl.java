@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.81 2008-02-15 09:16:15 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.82 2008-04-01 08:03:49 tlipkis Exp $
  */
 
 /*
@@ -132,6 +132,11 @@ public class HistoryRepositoryImpl
 
   public File getAuStateFile() {
     return new File(rootLocation, AU_FILE_NAME);
+  }
+
+  public long getAuCreationTime() {
+    File auidfile = new File(rootLocation, LockssRepositoryImpl.AU_ID_FILE);
+    return auidfile.lastModified();
   }
 
   /**

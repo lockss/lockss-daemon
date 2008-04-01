@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.13 2008-01-27 06:47:53 tlipkis Exp $
+ * $Id: HistoryRepository.java,v 1.14 2008-04-01 08:03:49 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,11 @@ public interface HistoryRepository extends LockssAuManager {
   /** Return AuState File for this AU
    */
   public File getAuStateFile();
+
+  /**
+   * Return the date/time the au was created.
+   */
+  public long getAuCreationTime();
 
   /**
    * Stores the AuState for this ArchivalUnit
