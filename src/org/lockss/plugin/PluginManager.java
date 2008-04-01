@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.186 2007-11-07 08:14:51 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.187 2008-04-01 08:01:13 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,8 @@ import org.lockss.util.*;
 public class PluginManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
+  public static final String PREFIX = Configuration.PREFIX + "plugin.";
+
   public static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
 
   /** The location on the platform to store downloaded plugins once they have
@@ -69,35 +71,31 @@ public class PluginManager
   static final String DEFAULT_PLUGIN_LOCATION = "plugins";
 
   /** A list of plugins to load at startup. */
-  static final String PARAM_PLUGIN_REGISTRY =
-    Configuration.PREFIX + "plugin.registry";
+  static final String PARAM_PLUGIN_REGISTRY = PREFIX + "registry";
 
   /** List of plugins not to load, or to remove if already loaded. */
-  static final String PARAM_PLUGIN_RETRACT =
-    Configuration.PREFIX + "plugin.retract";
+  static final String PARAM_PLUGIN_RETRACT = PREFIX + "retract";
 
-  static final String PARAM_REMOVE_STOPPED_AUS =
-    Configuration.PREFIX + "plugin.removeStoppedAus";
+  static final String PARAM_REMOVE_STOPPED_AUS = PREFIX + "removeStoppedAus";
   static final boolean DEFAULT_REMOVE_STOPPED_AUS = true;
 
   /** Global list of plugin registry URLs. */
-  static final String PARAM_PLUGIN_REGISTRIES =
-    Configuration.PREFIX + "plugin.registries";
+  static final String PARAM_PLUGIN_REGISTRIES = PREFIX + "registries";
 
   /** List of user-specified plugin registry URLs. */
   public static final String PARAM_USER_PLUGIN_REGISTRIES =
-    Configuration.PREFIX + "plugin.userRegistries";
+    PREFIX + "userRegistries";
 
   /** If true, default list of plugin registries from prop server is used
    * in addition to user-specified registries */
   public static final String PARAM_USE_DEFAULT_PLUGIN_REGISTRIES =
-    Configuration.PREFIX + "plugin.useDefaultRegistries";
+    PREFIX + "useDefaultRegistries";
   public static final boolean DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES = true;
 
   /** If true, default plugin signature keystore is used in addition to
    * user-specified keystore */
   public static final String PARAM_USE_DEFAULT_KEYSTORE =
-    Configuration.PREFIX + "plugin.useDefaultKeystore";
+    PREFIX + "useDefaultKeystore";
   public static final boolean DEFAULT_USE_DEFAULT_KEYSTORE = true;
 
   /** If true (the default), plugins that appear both in a loadable plugin
@@ -108,12 +106,11 @@ public class PluginManager
    * production behavior, loading plugins from registry.  Set false to test
    * plugins from the local build. */
   static final String PARAM_PREFER_LOADABLE_PLUGIN =
-    Configuration.PREFIX + "plugin.preferLoadable";
+    PREFIX + "preferLoadable";
   static final boolean DEFAULT_PREFER_LOADABLE_PLUGIN = true;
 
   /** Common prefix of plugin keystore params */
-  static final String KEYSTORE_PREFIX =
-    Configuration.PREFIX + "plugin.keystore.";
+  static final String KEYSTORE_PREFIX = PREFIX + "keystore.";
 
   /** The location of a Java JKS keystore to use for verifying
       loadable plugins (optional). */
@@ -126,8 +123,7 @@ public class PluginManager
   static final String DEFAULT_KEYSTORE_PASSWORD = "password";
 
   /** Common prefix of user-specified plugin keystore params */
-  static final String USER_KEYSTORE_PREFIX =
-    Configuration.PREFIX + "plugin.userKeystore.";
+  static final String USER_KEYSTORE_PREFIX = PREFIX + "userKeystore.";
 
   /** The location of a Java JKS keystore to use for verifying
       loadable plugins (optional). */
@@ -138,19 +134,24 @@ public class PluginManager
   public static final String PARAM_USER_KEYSTORE_PASSWORD =
     USER_KEYSTORE_PREFIX + "password";
 
+  /** If true, accept plugins signed by otherwise-valid certificates that
+   * are expired or not yet valid. */
+  static final String PARAM_ACCEPT_EXPIRED_CERTS = 
+    PREFIX + "acceptExpiredCertificates";
+  static final boolean DEFAULT_ACCEPT_EXPIRED_CERTS = true;
 
   /** The amount of time to wait when processing loadable plugins.
       This process delays the start of AUs, so the timeout should not
       be too long. */
   public static final String PARAM_PLUGIN_LOAD_TIMEOUT =
-    Configuration.PREFIX + "plugin.load.timeout";
+    PREFIX + "load.timeout";
   public static final long DEFAULT_PLUGIN_LOAD_TIMEOUT =
     Constants.MINUTE;
 
   /** The type of plugin we prefer to load, if both are present.
       Can be either "class" or "xml" (case insensitive) */
   public static final String PARAM_PREFERRED_PLUGIN_TYPE =
-    Configuration.PREFIX + "plugin.preferredType";
+    PREFIX + "preferredType";
   public static final String DEFAULT_PREFERRED_PLUGIN_TYPE =
     "xml";
 
@@ -237,6 +238,7 @@ public class PluginManager
   private boolean loadablePluginsReady = false;
   private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
   private long registryTimeout = DEFAULT_PLUGIN_LOAD_TIMEOUT;
+  private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
 
   private Map titleMap = null;
   private List allTitles = null;
@@ -335,32 +337,35 @@ public class PluginManager
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
 
-    if (changedKeys.contains(PARAM_PLUGIN_LOAD_TIMEOUT)) {
+    if (changedKeys.contains(PREFIX)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
 					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
-    }
 
-    if (changedKeys.contains(PARAM_PREFER_LOADABLE_PLUGIN)) {
       preferLoadablePlugin = config.getBoolean(PARAM_PREFER_LOADABLE_PLUGIN,
 					       DEFAULT_PREFER_LOADABLE_PLUGIN);
-    }
 
-    // must set retract before loadablePluginsReady is true as
-    // retrievePlugin() may be called before that
-    if (changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
-      retract = config.getList(PARAM_PLUGIN_RETRACT);
-    }
+      acceptExpiredCertificates =
+	config.getBoolean(PARAM_ACCEPT_EXPIRED_CERTS,
+			  DEFAULT_ACCEPT_EXPIRED_CERTS);
 
-    // If the keystore or password has changed, update.
-    if (changedKeys.contains(KEYSTORE_PREFIX) ||
-	changedKeys.contains(USER_KEYSTORE_PREFIX)) {
-      keystoreInited = false;
-      initKeystore(configMgr.getCurrentConfig());
-    }
+      // must set retract before loadablePluginsReady is true as
+      // retrievePlugin() may be called before that
+      if (changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
+	retract = config.getList(PARAM_PLUGIN_RETRACT);
+      }
 
-    useDefaultPluginRegistries =
-      config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
-			DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
+      // If the keystore or password has changed, update.
+      if (changedKeys.contains(KEYSTORE_PREFIX) ||
+	  changedKeys.contains(USER_KEYSTORE_PREFIX)) {
+	keystoreInited = false;
+	initKeystore(configMgr.getCurrentConfig());
+      }
+
+      useDefaultPluginRegistries =
+	config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
+			  DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
+
+    }
 
     // Process any changed TitleSets
     if (changedKeys.contains(PARAM_TITLE_SETS)) {
@@ -2000,6 +2005,7 @@ public class PluginManager
     if (jarValidator == null) {
       jarValidator = new JarValidator(keystore, pluginDir);
     }
+    jarValidator.allowExpired(acceptExpiredCertificates);
 
     // Create temporary plugin and classloader maps
     HashMap tmpMap = new HashMap();
