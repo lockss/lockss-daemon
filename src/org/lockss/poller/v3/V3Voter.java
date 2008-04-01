@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.54 2008-03-26 04:52:28 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.55 2008-04-01 08:03:09 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,20 @@ public class V3Voter extends BasePoll {
   public static final String DEFAULT_V3_MESSAGE_REL_DIR = 
     V3Poller.DEFAULT_V3_MESSAGE_REL_DIR;
   
+  /** 
+   * Allowance for vote message send time: hash time multiplier
+   */
+  public static final String PARAM_VOTE_SEND_HASH_MULTIPLIER =
+    PREFIX + "voteMsgHashMultiplier";
+  public static final double DEFAULT_VOTE_SEND_HASH_MULTIPLIER = 0.01;
+
+  /** 
+   * Allowance for vote message send time: padding
+   */
+  public static final String PARAM_VOTE_SEND_PADDING =
+    PREFIX + "voteMsgPadding";
+  public static final long DEFAULT_VOTE_SEND_PADDING = 15 * Constants.SECOND;
+
   /** 
    * Extra time added to the poll deadline (as sent by the poller) to 
    * wait for a receipt message.
@@ -391,15 +405,16 @@ public class V3Voter extends BasePoll {
     return suc;
   }
 
-  /* This is wrong.  We want to get the number of URLs in the AU to make a
-   * WAG about how long the message might take to send.  I can't seem to do
-   * that, so instead this will compute a percentage of the hash estimate,
-   * with a lower bound of 500ms. 
-   */
+  /* XXX Ideally this would be a function of the number of vote blocks, but
+   * that isn't available.  Instead, proportional to hash estimate, plus
+   * padding  */
   private long calculateMessageSendPadding(long hashEst) {
-    long minVal = 500;
-    long computedVal = (long)(0.02 * hashEst);  
-    return Math.max(computedVal, minVal);
+    double mult =
+      CurrentConfig.getDoubleParam(PARAM_VOTE_SEND_HASH_MULTIPLIER,
+				   DEFAULT_VOTE_SEND_HASH_MULTIPLIER);
+    return (long)(hashEst * mult)
+      + CurrentConfig.getTimeIntervalParam(PARAM_VOTE_SEND_PADDING,
+					   DEFAULT_VOTE_SEND_PADDING);
   }
 
   PsmInterp.ErrorHandler ehAbortPoll(final String msg) {
@@ -895,6 +910,10 @@ public class V3Voter extends BasePoll {
      */
     public void hashingFinished(CachedUrlSet cus, Object cookie,
                                 CachedUrlSetHasher hasher, Exception e) {
+      if (!isPollActive()) {
+	log.warning("Hash finished after poll closed: " + getKey());
+	return;
+      }
       if (e == null) {
         hashComplete();
       } else {
@@ -918,6 +937,8 @@ public class V3Voter extends BasePoll {
                  + block.getUrl());
     }
     public void blockDone(HashBlock block) {
+      if (!isPollActive()) return;
+
       log.debug2("Poll " + getKey() + ": Ending hash for block " 
                  + block.getUrl());
       blockHashComplete(block);

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.21 2008-02-15 09:12:46 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.22 2008-04-01 08:03:09 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class VoterActions {
   @ReturnEvents("evtOk")
   public static PsmEvent handleProvePollAck(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     // XXX: Implement effort service.
     //
     // If we don't want to participate, just send back a pollack
@@ -83,6 +84,7 @@ public class VoterActions {
     // before this point.  See V3PollFactory.
     
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
@@ -106,8 +108,8 @@ public class VoterActions {
   @ReturnEvents("evtOk")
   public static PsmEvent handleReceivePollProof(PsmMsgEvent evt,
                                                 PsmInterp interp) {
-    log.debug2("Received PollProof message");
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
     ud.setRemainingEffortProof(msg.getEffortProof());
     return V3Events.evtOk;
@@ -117,6 +119,7 @@ public class VoterActions {
   public static PsmEvent handleVerifyPollProof(PsmEvent evt,
                                                PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     // XXX: Implement effort service
     // After effort has been proven, prepare to nominate some peers.
     ud.nominatePeers();
@@ -127,6 +130,7 @@ public class VoterActions {
   @SendMessages("msgNominate")
   public static PsmEvent handleSendNominate(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_NOMINATE);
     msg.setNominees(ud.getNominees());
     try {
@@ -141,6 +145,7 @@ public class VoterActions {
   @ReturnEvents("evtOk,evtError")
   public static PsmEvent handleGenerateVote(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     try {
       if (ud.generateVote()) {
         ud.setStatus(V3Voter.STATUS_HASHING);
@@ -158,6 +163,7 @@ public class VoterActions {
   public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt,
                                                   PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     // If we've finished hashing, vote, else wait
     ud.voteRequested(true);
     if (ud.hashingDone()) {
@@ -170,6 +176,7 @@ public class VoterActions {
   @ReturnEvents("evtReadyToVote,evtWait")
   public static PsmEvent handleHashingDone(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     // If we've gotten a vote request, vote, else wait
     ud.hashingDone(true);
     if (ud.voteRequested()) {
@@ -183,6 +190,7 @@ public class VoterActions {
   @SendMessages("msgVote")
   public static PsmEvent handleSendVote(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_VOTE);
     // XXX: Fix when multiple-message voting is supported.
     msg.setVoteComplete(true);
@@ -202,6 +210,7 @@ public class VoterActions {
   public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt,
                                                     PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtNoSuchRepair;
     V3Voter voter = ud.getVoter();
     IdentityManager idmgr = voter.getIdentityManager();
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
@@ -226,6 +235,7 @@ public class VoterActions {
   @SendMessages("msgRepair")
   public static PsmEvent handleSendRepair(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtError;
     log.debug2("Sending repair to " + ud.getPollerId() + " for URL : " +
                ud.getRepairTarget());
     try {
@@ -253,6 +263,7 @@ public class VoterActions {
   @ReturnEvents("evtOk")
   public static PsmEvent handleProcessReceipt(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    if (!ud.isPollActive()) return V3Events.evtOk;
     // XXX: Once the receipt is a bit more interesting, use it here.
     ud.getVoter().stopPoll(V3Voter.STATUS_COMPLETE);
     return V3Events.evtOk;
