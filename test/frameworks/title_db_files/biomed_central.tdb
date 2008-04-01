@@ -3,7 +3,7 @@
 #	@publisherTitleSet	publisher=BioMed Central
 #	@fixedValues	P=BioMed Central				
 #	@fixedValues	p=org.lockss.plugin.bmc.BioMedCentralPlugin				
-#	@fixedValues	j=Acta Veterinaria Scandinavica
+#	@fixedValues	i=1751-0147	j=Acta Veterinaria Scandinavica
 	exists	Acta Veterinaria Scandinavica Volume 42	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=42
 	exists	Acta Veterinaria Scandinavica Volume 43	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=43
 	exists	Acta Veterinaria Scandinavica Volume 44	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=44
@@ -13,17 +13,17 @@
 	exists	Acta Veterinaria Scandinavica Volume 48	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=48
 	exists	Acta Veterinaria Scandinavica Volume 49	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=49
 	exists	Acta Veterinaria Scandinavica Volume 50	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=50
-#	@fixedValues	j=AIDS Research and Therapy
+#	@fixedValues	i=1742-6405	j=AIDS Research and Therapy
 	exists	AIDS Research and Therapy Volume 1	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=1
 	exists	AIDS Research and Therapy Volume 2	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=2
 	exists	AIDS Research and Therapy Volume 3	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=3
 	exists	AIDS Research and Therapy Volume 4	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=4
 	exists	AIDS Research and Therapy Volume 5	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=5
-#	@fixedValues	j=Algorithms for Molecular Biology
+#	@fixedValues	i=1748-7188	j=Algorithms for Molecular Biology
 	exists	Algorithms for Molecular Biology Volume 1	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=1
 	exists	Algorithms for Molecular Biology Volume 2	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=2
 	exists	Algorithms for Molecular Biology Volume 3	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=3
-#	@fixedValues	j=Annals of Clinical Microbiology and Antimicrobials
+#	@fixedValues	i=1476-0711	j=Annals of Clinical Microbiology and Antimicrobials
 	exists	Annals of Clinical Microbiology and Antimicrobials Volume 1	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=1
 	exists	Annals of Clinical Microbiology and Antimicrobials Volume 2	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=2
 	exists	Annals of Clinical Microbiology and Antimicrobials Volume 3	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=3
@@ -31,7 +31,7 @@
 	exists	Annals of Clinical Microbiology and Antimicrobials Volume 5	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=5
 	exists	Annals of Clinical Microbiology and Antimicrobials Volume 6	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=6
 	exists	Annals of Clinical Microbiology and Antimicrobials Volume 7	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=7
-#	@fixedValues	j=Annals of General Psychiatry
+#	@fixedValues	i=1744-859X	j=Annals of General Psychiatry
 	exists	Annals of General Psychiatry Volume 1	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=1
 	exists	Annals of General Psychiatry Volume 2	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=2
 	exists	Annals of General Psychiatry Volume 3	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=3
@@ -39,40 +39,40 @@
 	exists	Annals of General Psychiatry Volume 5	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=5
 	exists	Annals of General Psychiatry Volume 6	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=6
 	exists	Annals of General Psychiatry Volume 7	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=7
-#	@fixedValues	j=Annals of Surgical Innovation and Research
+#	@fixedValues	i=1750-1164	j=Annals of Surgical Innovation and Research
 	exists	Annals of Surgical Innovation and Research Volume 1	base_url=http://www.asir-journal.com/	journal_issn=1750-1164	volume_name=1
-#	@fixedValues	j=Australia and New Zealand Health Policy
+#	@fixedValues	i=1743-8462	j=Australia and New Zealand Health Policy
 	exists	Australia and New Zealand Health Policy Volume 1	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=1
 	exists	Australia and New Zealand Health Policy Volume 2	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=2
 	exists	Australia and New Zealand Health Policy Volume 3	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=3
 	exists	Australia and New Zealand Health Policy Volume 4	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=4
-#	@fixedValues	j=Behavioral and Brain Functions
+#	@fixedValues	i=1744-9081	j=Behavioral and Brain Functions
 	exists	Behavioral and Brain Functions Volume 1	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=1
 	exists	Behavioral and Brain Functions Volume 2	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=2
 	exists	Behavioral and Brain Functions Volume 3	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=3
 	exists	Behavioral and Brain Functions Volume 4	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=4
-#	@fixedValues	j=Beilstein Journal of Organic Chemistry
+#	@fixedValues	i=1860-5397	j=Beilstein Journal of Organic Chemistry
 	exists	Beilstein Journal of Organic Chemistry Volume 1	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=1
 	exists	Beilstein Journal of Organic Chemistry Volume 2	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=2
 	exists	Beilstein Journal of Organic Chemistry Volume 3	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=3
 	exists	Beilstein Journal of Organic Chemistry Volume 4	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=4
-#	@fixedValues	j=Biology Direct
+#	@fixedValues	i=1745-6150	j=Biology Direct
 	exists	Biology Direct Volume 1	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=1
 	exists	Biology Direct Volume 2	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=2
 	exists	Biology Direct Volume 3	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=3
-#	@fixedValues	j=BioMagnetic Research and Technology
+#	@fixedValues	i=1477-044X	j=BioMagnetic Research and Technology
 	exists	BioMagnetic Research and Technology Volume 1	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=1
 	exists	BioMagnetic Research and Technology Volume 2	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=2
 	exists	BioMagnetic Research and Technology Volume 3	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=3
 	exists	BioMagnetic Research and Technology Volume 4	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=4
 	exists	BioMagnetic Research and Technology Volume 5	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=5
 	exists	BioMagnetic Research and Technology Volume 6	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=6
-#	@fixedValues	j=Biomedical Digital Libraries
+#	@fixedValues	i=1742-5581	j=Biomedical Digital Libraries
 	exists	Biomedical Digital Libraries Volume 1	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=1
 	exists	Biomedical Digital Libraries Volume 2	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=2
 	exists	Biomedical Digital Libraries Volume 3	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=3
 	exists	Biomedical Digital Libraries Volume 4	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=4
-#	@fixedValues	j=BioMedical Engineering OnLine
+#	@fixedValues	i=1475-925X	j=BioMedical Engineering OnLine
 	exists	BioMedical Engineering OnLine Volume 1	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=1
 	exists	BioMedical Engineering OnLine Volume 2	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=2
 	exists	BioMedical Engineering OnLine Volume 3	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=3
@@ -80,18 +80,18 @@
 	exists	BioMedical Engineering OnLine Volume 5	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=5
 	exists	BioMedical Engineering OnLine Volume 6	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=6
 	exists	BioMedical Engineering OnLine Volume 7	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=7
-#	@fixedValues	j=BioPsychoSocial Medicine
+#	@fixedValues	i=1751-0759	j=BioPsychoSocial Medicine
 	exists	BioPsychoSocial Medicine Volume 1	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=1
 	exists	BioPsychoSocial Medicine Volume 2	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=2
 #	@fixedValues	p=org.lockss.plugin.bmc.BMCPlugin				
-#	@fixedValues	j=BMC Anesthesiology
+#	@fixedValues	i=1471-2253	j=BMC Anesthesiology
 	released	BMC Anesthesiology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=1
 	released	BMC Anesthesiology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=2
 	released	BMC Anesthesiology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=3
 	released	BMC Anesthesiology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=4
 	released	BMC Anesthesiology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=5
 	released	BMC Anesthesiology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=6
-#	@fixedValues	j=BMC Biochemistry
+#	@fixedValues	i=1471-2091	j=BMC Biochemistry
 	released	BMC Biochemistry Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=1
 	released	BMC Biochemistry Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=2
 	released	BMC Biochemistry Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=3
@@ -99,7 +99,7 @@
 	released	BMC Biochemistry Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=5
 	released	BMC Biochemistry Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=6
 	released	BMC Biochemistry Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2091	volume_name=7
-#	@fixedValues	j=BMC Bioinformatics
+#	@fixedValues	i=1471-2105	j=BMC Bioinformatics
 	released	BMC Bioinformatics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=1
 	released	BMC Bioinformatics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=2
 	released	BMC Bioinformatics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=3
@@ -107,40 +107,40 @@
 	released	BMC Bioinformatics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=5
 	released	BMC Bioinformatics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=6
 	released	BMC Bioinformatics Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2105	volume_name=7
-#	@fixedValues	j=BMC Biology
+#	@fixedValues	i=1741-7007	j=BMC Biology
 	released	BMC Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=1
 	released	BMC Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=2
 	released	BMC Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=3
 	released	BMC Biology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1741-7007	volume_name=4
-#	@fixedValues	j=BMC Biotechnology
+#	@fixedValues	i=1472-6750	j=BMC Biotechnology
 	released	BMC Biotechnology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=1
 	released	BMC Biotechnology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=2
 	released	BMC Biotechnology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=3
 	released	BMC Biotechnology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=4
 	released	BMC Biotechnology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=5
 	released	BMC Biotechnology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6750	volume_name=6
-#	@fixedValues	j=BMC Blood Disorders
+#	@fixedValues	i=1471-2326	j=BMC Blood Disorders
 	released	BMC Blood Disorders Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=1
 	released	BMC Blood Disorders Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=2
 	released	BMC Blood Disorders Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=3
 	released	BMC Blood Disorders Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=4
 	released	BMC Blood Disorders Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=5
 	released	BMC Blood Disorders Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2326	volume_name=6
-#	@fixedValues	j=BMC Cancer
+#	@fixedValues	i=1471-2407	j=BMC Cancer
 	released	BMC Cancer Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=1
 	released	BMC Cancer Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=2
 	released	BMC Cancer Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=3
 	released	BMC Cancer Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=4
 	released	BMC Cancer Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=5
 	released	BMC Cancer Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2407	volume_name=6
-#	@fixedValues	j=BMC Cardiovascular Disorders
+#	@fixedValues	i=1471-2261	j=BMC Cardiovascular Disorders
 	released	BMC Cardiovascular Disorders Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=1
 	released	BMC Cardiovascular Disorders Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=2
 	released	BMC Cardiovascular Disorders Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=3
 	released	BMC Cardiovascular Disorders Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=4
 	released	BMC Cardiovascular Disorders Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=5
 	released	BMC Cardiovascular Disorders Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2261	volume_name=6
-#	@fixedValues	j=BMC Cell Biology
+#	@fixedValues	i=1471-2121	j=BMC Cell Biology
 	released	BMC Cell Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=1
 	released	BMC Cell Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=2
 	released	BMC Cell Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=3
@@ -148,77 +148,77 @@
 	released	BMC Cell Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=5
 	released	BMC Cell Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=6
 	released	BMC Cell Biology Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2121	volume_name=7
-#	@fixedValues	j=BMC Chemical Biology
+#	@fixedValues	i=1472-6769	j=BMC Chemical Biology
 	released	BMC Chemical Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=1
 	released	BMC Chemical Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=2
 	released	BMC Chemical Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=3
 	released	BMC Chemical Biology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=4
 	released	BMC Chemical Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=5
 	released	BMC Chemical Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6769	volume_name=6
-#	@fixedValues	j=BMC Clinical Pathology
+#	@fixedValues	i=1472-6890	j=BMC Clinical Pathology
 	released	BMC Clinical Pathology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=1
 	released	BMC Clinical Pathology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=2
 	released	BMC Clinical Pathology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=3
 	released	BMC Clinical Pathology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=4
 	released	BMC Clinical Pathology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=5
 	released	BMC Clinical Pathology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6890	volume_name=6
-#	@fixedValues	j=BMC Clinical Pharmacology
+#	@fixedValues	i=1472-6904	j=BMC Clinical Pharmacology
 	released	BMC Clinical Pharmacology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=1
 	released	BMC Clinical Pharmacology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=2
 	released	BMC Clinical Pharmacology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=3
 	released	BMC Clinical Pharmacology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=4
 	released	BMC Clinical Pharmacology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=5
 	released	BMC Clinical Pharmacology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6904	volume_name=6
-#	@fixedValues	j=BMC Complementary and Alternative Medicine
+#	@fixedValues	i=1472-6882	j=BMC Complementary and Alternative Medicine
 	released	BMC Complementary and Alternative Medicine Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=1
 	released	BMC Complementary and Alternative Medicine Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=2
 	released	BMC Complementary and Alternative Medicine Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=3
 	released	BMC Complementary and Alternative Medicine Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=4
 	released	BMC Complementary and Alternative Medicine Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=5
 	released	BMC Complementary and Alternative Medicine Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6882	volume_name=6
-#	@fixedValues	j=BMC Dermatology
+#	@fixedValues	i=1471-5945	j=BMC Dermatology
 	released	BMC Dermatology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=1
 	released	BMC Dermatology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=2
 	released	BMC Dermatology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=3
 	released	BMC Dermatology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=4
 	released	BMC Dermatology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=5
 	released	BMC Dermatology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-5945	volume_name=6
-#	@fixedValues	j=BMC Developmental Biology
+#	@fixedValues	i=1471-213X	j=BMC Developmental Biology
 	released	BMC Developmental Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=1
 	released	BMC Developmental Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=2
 	released	BMC Developmental Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=3
 	released	BMC Developmental Biology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=4
 	released	BMC Developmental Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=5
 	released	BMC Developmental Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-213X	volume_name=6
-#	@fixedValues	j=BMC Ear, Nose and Throat Disorders
+#	@fixedValues	i=1472-6815	j=BMC Ear, Nose and Throat Disorders
 	released	BMC Ear, Nose and Throat Disorders Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=1
 	released	BMC Ear, Nose and Throat Disorders Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=2
 	released	BMC Ear, Nose and Throat Disorders Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=3
 	released	BMC Ear, Nose and Throat Disorders Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=4
 	released	BMC Ear, Nose and Throat Disorders Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=5
 	released	BMC Ear, Nose and Throat Disorders Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6815	volume_name=6
-#	@fixedValues	j=BMC Ecology
+#	@fixedValues	i=1472-6785	j=BMC Ecology
 	released	BMC Ecology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=1
 	released	BMC Ecology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=2
 	released	BMC Ecology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=3
 	released	BMC Ecology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=4
 	released	BMC Ecology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=5
 	released	BMC Ecology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6785	volume_name=6
-#	@fixedValues	j=BMC Emergency Medicine
+#	@fixedValues	i=1471-227X	j=BMC Emergency Medicine
 	released	BMC Emergency Medicine Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=1
 	released	BMC Emergency Medicine Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=2
 	released	BMC Emergency Medicine Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=3
 	released	BMC Emergency Medicine Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=4
 	released	BMC Emergency Medicine Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=5
 	released	BMC Emergency Medicine Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-227X	volume_name=6
-#	@fixedValues	j=BMC Endocrine Disorders
+#	@fixedValues	i=1472-6823	j=BMC Endocrine Disorders
 	released	BMC Endocrine Disorders Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=1
 	released	BMC Endocrine Disorders Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=2
 	released	BMC Endocrine Disorders Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=3
 	released	BMC Endocrine Disorders Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=4
 	released	BMC Endocrine Disorders Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=5
 	released	BMC Endocrine Disorders Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6823	volume_name=6
-#	@fixedValues	j=BMC Evolutionary Biology
+#	@fixedValues	i=1471-2148	j=BMC Evolutionary Biology
 	released	BMC Evolutionary Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=1
 	released	BMC Evolutionary Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=2
 	released	BMC Evolutionary Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=3
@@ -226,7 +226,7 @@
 	released	BMC Evolutionary Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=5
 	released	BMC Evolutionary Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=6
 	released	BMC Evolutionary Biology Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2148	volume_name=7
-#	@fixedValues	j=BMC Family Practice
+#	@fixedValues	i=1471-2296	j=BMC Family Practice
 	released	BMC Family Practice Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=1
 	released	BMC Family Practice Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=2
 	released	BMC Family Practice Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=3
@@ -234,14 +234,14 @@
 	released	BMC Family Practice Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=5
 	released	BMC Family Practice Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=6
 	released	BMC Family Practice Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2296	volume_name=7
-#	@fixedValues	j=BMC Gastroenterology
+#	@fixedValues	i=1471-230X	j=BMC Gastroenterology
 	released	BMC Gastroenterology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=1
 	released	BMC Gastroenterology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=2
 	released	BMC Gastroenterology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=3
 	released	BMC Gastroenterology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=4
 	released	BMC Gastroenterology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=5
 	released	BMC Gastroenterology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-230X	volume_name=6
-#	@fixedValues	j=BMC Genetics
+#	@fixedValues	i=1471-2156	j=BMC Genetics
 	released	BMC Genetics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=1
 	released	BMC Genetics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=2
 	released	BMC Genetics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=3
@@ -249,28 +249,28 @@
 	released	BMC Genetics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=5
 	released	BMC Genetics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=6
 	released	BMC Genetics Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2156	volume_name=7
-#	@fixedValues	j=BMC Genomics
+#	@fixedValues	i=1471-2164	j=BMC Genomics
 	released	BMC Genomics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=1
 	released	BMC Genomics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=2
 	released	BMC Genomics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=3
 	released	BMC Genomics Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=4
 	released	BMC Genomics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=5
 	released	BMC Genomics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2164	volume_name=6
-#	@fixedValues	j=BMC Geriatrics
+#	@fixedValues	i=1471-2318	j=BMC Geriatrics
 	released	BMC Geriatrics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=1
 	released	BMC Geriatrics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=2
 	released	BMC Geriatrics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=3
 	released	BMC Geriatrics Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=4
 	released	BMC Geriatrics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=5
 	released	BMC Geriatrics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2318	volume_name=6
-#	@fixedValues	j=BMC Health Services Research
+#	@fixedValues	i=1472-6963	j=BMC Health Services Research
 	released	BMC Health Services Research Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=1
 	released	BMC Health Services Research Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=2
 	released	BMC Health Services Research Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=3
 	released	BMC Health Services Research Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=4
 	released	BMC Health Services Research Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=5
 	released	BMC Health Services Research Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6963	volume_name=6
-#	@fixedValues	j=BMC Immunology
+#	@fixedValues	i=1471-2172	j=BMC Immunology
 	released	BMC Immunology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=1
 	released	BMC Immunology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=2
 	released	BMC Immunology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=3
@@ -278,28 +278,28 @@
 	released	BMC Immunology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=5
 	released	BMC Immunology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=6
 	released	BMC Immunology Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2172	volume_name=7
-#	@fixedValues	j=BMC Infectious Diseases
+#	@fixedValues	i=1471-2334	j=BMC Infectious Diseases
 	released	BMC Infectious Diseases Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=1
 	released	BMC Infectious Diseases Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=2
 	released	BMC Infectious Diseases Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=3
 	released	BMC Infectious Diseases Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=4
 	released	BMC Infectious Diseases Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=5
 	released	BMC Infectious Diseases Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2334	volume_name=6
-#	@fixedValues	j=BMC International Health and Human Rights
+#	@fixedValues	i=1472-698X	j=BMC International Health and Human Rights
 	released	BMC International Health and Human Rights Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=1
 	released	BMC International Health and Human Rights Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=2
 	released	BMC International Health and Human Rights Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=3
 	released	BMC International Health and Human Rights Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=4
 	released	BMC International Health and Human Rights Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=5
 	released	BMC International Health and Human Rights Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-698X	volume_name=6
-#	@fixedValues	j=BMC Medical Education
+#	@fixedValues	i=1472-6920	j=BMC Medical Education
 	released	BMC Medical Education Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=1
 	released	BMC Medical Education Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=2
 	released	BMC Medical Education Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=3
 	released	BMC Medical Education Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=4
 	released	BMC Medical Education Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=5
 	released	BMC Medical Education Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6920	volume_name=6
-#	@fixedValues	j=BMC Medical Ethics
+#	@fixedValues	i=1472-6939	j=BMC Medical Ethics
 	released	BMC Medical Ethics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=1
 	released	BMC Medical Ethics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=2
 	released	BMC Medical Ethics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=3
@@ -307,7 +307,7 @@
 	released	BMC Medical Ethics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=5
 	released	BMC Medical Ethics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=6
 	released	BMC Medical Ethics Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1472-6939	volume_name=7
-#	@fixedValues	j=BMC Medical Genetics
+#	@fixedValues	i=1471-2350	j=BMC Medical Genetics
 	released	BMC Medical Genetics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=1
 	released	BMC Medical Genetics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=2
 	released	BMC Medical Genetics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=3
@@ -315,40 +315,40 @@
 	released	BMC Medical Genetics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=5
 	released	BMC Medical Genetics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=6
 	released	BMC Medical Genetics Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2350	volume_name=7
-#	@fixedValues	j=BMC Medical Imaging
+#	@fixedValues	i=1471-2342	j=BMC Medical Imaging
 	released	BMC Medical Imaging Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=1
 	released	BMC Medical Imaging Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=2
 	released	BMC Medical Imaging Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=3
 	released	BMC Medical Imaging Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=4
 	released	BMC Medical Imaging Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=5
 	released	BMC Medical Imaging Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2342	volume_name=6
-#	@fixedValues	j=BMC Medical Informatics and Decision Making
+#	@fixedValues	i=1472-6947	j=BMC Medical Informatics and Decision Making
 	released	BMC Medical Informatics and Decision Making Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=1
 	released	BMC Medical Informatics and Decision Making Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=2
 	released	BMC Medical Informatics and Decision Making Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=3
 	released	BMC Medical Informatics and Decision Making Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=4
 	released	BMC Medical Informatics and Decision Making Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=5
 	released	BMC Medical Informatics and Decision Making Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6947	volume_name=6
-#	@fixedValues	j=BMC Medical Research Methodology
+#	@fixedValues	i=1471-2288	j=BMC Medical Research Methodology
 	released	BMC Medical Research Methodology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=1
 	released	BMC Medical Research Methodology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=2
 	released	BMC Medical Research Methodology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=3
 	released	BMC Medical Research Methodology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=4
 	released	BMC Medical Research Methodology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=5
 	released	BMC Medical Research Methodology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2288	volume_name=6
-#	@fixedValues	j=BMC Medicine
+#	@fixedValues	i=1741-7015	j=BMC Medicine
 	released	BMC Medicine Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=1
 	released	BMC Medicine Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=2
 	released	BMC Medicine Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=3
 	released	BMC Medicine Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1741-7015	volume_name=4
-#	@fixedValues	j=BMC Microbiology
+#	@fixedValues	i=1471-2180	j=BMC Microbiology
 	released	BMC Microbiology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=1
 	released	BMC Microbiology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=2
 	released	BMC Microbiology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=3
 	released	BMC Microbiology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=4
 	released	BMC Microbiology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=5
 	released	BMC Microbiology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2180	volume_name=6
-#	@fixedValues	j=BMC Molecular Biology
+#	@fixedValues	i=1471-2199	j=BMC Molecular Biology
 	released	BMC Molecular Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=1
 	released	BMC Molecular Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=2
 	released	BMC Molecular Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=3
@@ -356,7 +356,7 @@
 	released	BMC Molecular Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=5
 	released	BMC Molecular Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=6
 	released	BMC Molecular Biology Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2199	volume_name=7
-#	@fixedValues	j=BMC Musculoskeletal Disorders
+#	@fixedValues	i=1471-2474	j=BMC Musculoskeletal Disorders
 	released	BMC Musculoskeletal Disorders Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=1
 	released	BMC Musculoskeletal Disorders Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=2
 	released	BMC Musculoskeletal Disorders Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=3
@@ -364,7 +364,7 @@
 	released	BMC Musculoskeletal Disorders Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=5
 	released	BMC Musculoskeletal Disorders Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=6
 	released	BMC Musculoskeletal Disorders Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2474	volume_name=7
-#	@fixedValues	j=BMC Nephrology
+#	@fixedValues	i=1471-2369	j=BMC Nephrology
 	released	BMC Nephrology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=1
 	released	BMC Nephrology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=2
 	released	BMC Nephrology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=3
@@ -372,7 +372,7 @@
 	released	BMC Nephrology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=5
 	released	BMC Nephrology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=6
 	released	BMC Nephrology Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2369	volume_name=7
-#	@fixedValues	j=BMC Neurology
+#	@fixedValues	i=1471-2377	j=BMC Neurology
 	released	BMC Neurology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=1
 	released	BMC Neurology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=2
 	released	BMC Neurology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=3
@@ -380,7 +380,7 @@
 	released	BMC Neurology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=5
 	released	BMC Neurology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=6
 	released	BMC Neurology Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2377	volume_name=7
-#	@fixedValues	j=BMC Neuroscience
+#	@fixedValues	i=1471-2202	j=BMC Neuroscience
 	released	BMC Neuroscience Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=1
 	released	BMC Neuroscience Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=2
 	released	BMC Neuroscience Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=3
@@ -388,122 +388,122 @@
 	released	BMC Neuroscience Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=5
 	released	BMC Neuroscience Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=6
 	released	BMC Neuroscience Volume 7	base_url=http://www.biomedcentral.com/	journal_issn=1471-2202	volume_name=7
-#	@fixedValues	j=BMC Nuclear Medicine
+#	@fixedValues	i=1471-2385	j=BMC Nuclear Medicine
 	released	BMC Nuclear Medicine Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=1
 	released	BMC Nuclear Medicine Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=2
 	released	BMC Nuclear Medicine Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=3
 	released	BMC Nuclear Medicine Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=4
 	released	BMC Nuclear Medicine Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=5
 	released	BMC Nuclear Medicine Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2385	volume_name=6
-#	@fixedValues	j=BMC Nursing
+#	@fixedValues	i=1472-6955	j=BMC Nursing
 	released	BMC Nursing Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=1
 	released	BMC Nursing Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=2
 	released	BMC Nursing Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=3
 	released	BMC Nursing Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=4
 	released	BMC Nursing Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6955	volume_name=5
-#	@fixedValues	j=BMC Ophthalmology
+#	@fixedValues	i=1471-2415	j=BMC Ophthalmology
 	released	BMC Ophthalmology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=1
 	released	BMC Ophthalmology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=2
 	released	BMC Ophthalmology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=3
 	released	BMC Ophthalmology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=4
 	released	BMC Ophthalmology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=5
 	released	BMC Ophthalmology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2415	volume_name=6
-#	@fixedValues	j=BMC Oral Health
+#	@fixedValues	i=1472-6831	j=BMC Oral Health
 	released	BMC Oral Health Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=1
 	released	BMC Oral Health Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=2
 	released	BMC Oral Health Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=3
 	released	BMC Oral Health Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=4
 	released	BMC Oral Health Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=5
 	released	BMC Oral Health Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6831	volume_name=6
-#	@fixedValues	j=BMC Palliative Care
+#	@fixedValues	i=1472-684X	j=BMC Palliative Care
 	released	BMC Palliative Care Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=1
 	released	BMC Palliative Care Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=2
 	released	BMC Palliative Care Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=3
 	released	BMC Palliative Care Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=4
 	released	BMC Palliative Care Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-684X	volume_name=5
-#	@fixedValues	j=BMC Pediatrics
+#	@fixedValues	i=1471-2431	j=BMC Pediatrics
 	released	BMC Pediatrics Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=1
 	released	BMC Pediatrics Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=2
 	released	BMC Pediatrics Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=3
 	released	BMC Pediatrics Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=4
 	released	BMC Pediatrics Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=5
 	released	BMC Pediatrics Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2431	volume_name=6
-#	@fixedValues	j=BMC Pharmacology
+#	@fixedValues	i=1471-2210	j=BMC Pharmacology
 	released	BMC Pharmacology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=1
 	released	BMC Pharmacology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=2
 	released	BMC Pharmacology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=3
 	released	BMC Pharmacology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=4
 	released	BMC Pharmacology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=5
 	released	BMC Pharmacology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2210	volume_name=6
-#	@fixedValues	j=BMC Physiology
+#	@fixedValues	i=1472-6793	j=BMC Physiology
 	released	BMC Physiology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=1
 	released	BMC Physiology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=2
 	released	BMC Physiology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=3
 	released	BMC Physiology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=4
 	released	BMC Physiology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=5
 	released	BMC Physiology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6793	volume_name=6
-#	@fixedValues	j=BMC Plant Biology
+#	@fixedValues	i=1471-2229	j=BMC Plant Biology
 	released	BMC Plant Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=1
 	released	BMC Plant Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=2
 	released	BMC Plant Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=3
 	released	BMC Plant Biology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=4
 	released	BMC Plant Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=5
 	released	BMC Plant Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2229	volume_name=6
-#	@fixedValues	j=BMC Pregnancy and Childbirth
+#	@fixedValues	i=1471-2393	j=BMC Pregnancy and Childbirth
 	released	BMC Pregnancy and Childbirth Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=1
 	released	BMC Pregnancy and Childbirth Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=2
 	released	BMC Pregnancy and Childbirth Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=3
 	released	BMC Pregnancy and Childbirth Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=4
 	released	BMC Pregnancy and Childbirth Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=5
 	released	BMC Pregnancy and Childbirth Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2393	volume_name=6
-#	@fixedValues	j=BMC Psychiatry
+#	@fixedValues	i=1471-244X	j=BMC Psychiatry
 	released	BMC Psychiatry Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=1
 	released	BMC Psychiatry Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=2
 	released	BMC Psychiatry Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=3
 	released	BMC Psychiatry Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=4
 	released	BMC Psychiatry Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=5
 	released	BMC Psychiatry Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-244X	volume_name=6
-#	@fixedValues	j=BMC Public Health
+#	@fixedValues	i=1471-2458	j=BMC Public Health
 	released	BMC Public Health Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=1
 	released	BMC Public Health Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=2
 	released	BMC Public Health Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=3
 	released	BMC Public Health Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=4
 	released	BMC Public Health Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=5
 	released	BMC Public Health Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2458	volume_name=6
-#	@fixedValues	j=BMC Pulmonary Medicine
+#	@fixedValues	i=1471-2466	j=BMC Pulmonary Medicine
 	released	BMC Pulmonary Medicine Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=1
 	released	BMC Pulmonary Medicine Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=2
 	released	BMC Pulmonary Medicine Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=3
 	released	BMC Pulmonary Medicine Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=4
 	released	BMC Pulmonary Medicine Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=5
 	released	BMC Pulmonary Medicine Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2466	volume_name=6
-#	@fixedValues	j=BMC Structural Biology
+#	@fixedValues	i=1472-6807	j=BMC Structural Biology
 	released	BMC Structural Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=1
 	released	BMC Structural Biology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=2
 	released	BMC Structural Biology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=3
 	released	BMC Structural Biology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=4
 	released	BMC Structural Biology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=5
 	released	BMC Structural Biology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6807	volume_name=6
-#	@fixedValues	j=BMC Surgery
+#	@fixedValues	i=1471-2482	j=BMC Surgery
 	released	BMC Surgery Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=1
 	released	BMC Surgery Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=2
 	released	BMC Surgery Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=3
 	released	BMC Surgery Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=4
 	released	BMC Surgery Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=5
 	released	BMC Surgery Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2482	volume_name=6
-#	@fixedValues	j=BMC Systems Biology
+#	@fixedValues	i=1752-0509	j=BMC Systems Biology
 	released	BMC Systems Biology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1752-0509	volume_name=1
-#	@fixedValues	j=BMC Urology
+#	@fixedValues	i=1471-2490	j=BMC Urology
 	released	BMC Urology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=1
 	released	BMC Urology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=2
 	released	BMC Urology Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=3
 	released	BMC Urology Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=4
 	released	BMC Urology Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=5
 	released	BMC Urology Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1471-2490	volume_name=6
-#	@fixedValues	j=BMC Veterinary Research
+#	@fixedValues	i=1746-6148	j=BMC Veterinary Research
 	released	BMC Veterinary Research Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1746-6148	volume_name=1
 	released	BMC Veterinary Research Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1746-6148	volume_name=2
-#	@fixedValues	j=BMC Women's Health
+#	@fixedValues	i=1472-6874	j=BMC Women's Health
 	released	BMC Women's Health Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=1
 	released	BMC Women's Health Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=2
 	released	BMC Women's Health Volume 3	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=3
