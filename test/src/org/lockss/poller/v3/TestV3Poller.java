@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.26 2007-10-09 00:49:57 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.27 2008-04-01 08:02:57 tlipkis Exp $
  */
 
 /*
@@ -334,7 +334,85 @@ public class TestV3Poller extends LockssTestCase {
                 unselectedPeers.contains(allPeers[3]));
       
   }
-  
+
+  public Collection findMorePeersToInvite(int quorum,
+					  int extraParticipants,
+					  int extraInvitations)
+      throws Exception {
+    Properties p = new Properties();
+    p.setProperty(V3Poller.PARAM_QUORUM, ""+quorum);
+    p.setProperty(V3Poller.PARAM_INVITATION_SIZE, "1");
+    p.setProperty(V3Poller.PARAM_EXCEED_QUORUM_BY_INVITATIONS,
+		  ""+extraInvitations);
+    p.setProperty(V3Poller.PARAM_EXCEED_QUORUM_BY_PARTICIPANTS,
+		  ""+extraParticipants);
+    ConfigurationUtil.addFromProps(p);
+
+    MyV3Poller poller = makeV3Poller("testkey");
+    
+//     List<PeerIdentity> allPeers =
+//       ListUtil.fromArray(new PeerIdentity[] {
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5000"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5001"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5002"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5003"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5004"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5005"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5006"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5007"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5008"),
+// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5009"),
+//       });
+    
+    List<String> somePeers =
+      ListUtil.list(initialPeers.get(0),
+		    initialPeers.get(1),
+		    initialPeers.get(2));
+
+    List<PeerIdentity> allPeers = pidsFromPeerNames(initialPeers);
+    List<PeerIdentity> participatingPeers = pidsFromPeerNames(somePeers);
+
+    for (PeerIdentity pid : participatingPeers) {
+      ParticipantUserData participant = poller.addInnerCircleVoter(pid);
+      // make it look like it's participating
+      participant.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
+    }
+
+    Collection more = poller.findMorePeersToInvite();
+    assertTrue(more + " isn't disjoint with " + participatingPeers,
+	       CollectionUtil.isDisjoint(more, participatingPeers));
+    assertTrue(allPeers + " doesn't contain all of " + more,
+	       allPeers.containsAll(more));
+    return more;
+  }
+
+  public void testFindMore1() throws Exception {
+    assertEquals(0, findMorePeersToInvite(2, 1, 2).size());
+  }
+  public void testFindMore2() throws Exception {
+    assertEquals(1, findMorePeersToInvite(3, 1, 1).size());
+  }
+  public void testFindMore3() throws Exception {
+    assertEquals(2, findMorePeersToInvite(3, 1, 2).size());
+  }
+  public void testFindMore4() throws Exception {
+    assertEquals(2, findMorePeersToInvite(4, 2, 1).size());
+  }
+  public void testFindMore5() throws Exception {
+    assertEquals(3, findMorePeersToInvite(4, 2, 2).size());
+  }
+  public void testFindMore6() throws Exception {
+    assertEquals(3, findMorePeersToInvite(5, 2, 3).size());
+  }
+
+  List<PeerIdentity> pidsFromPeerNames(Collection<String> names) {
+    List<PeerIdentity> res = new ArrayList();
+    for (String name : names) {
+      res.add(idmgr.findPeerIdentity(name));
+    }
+    return res;
+  }
+
   private HashBlock makeHashBlock(String url) {
     MockCachedUrl cu = new MockCachedUrl(url);
     return new HashBlock(cu);
@@ -665,45 +743,40 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*1600, 0));
   }
   
-  private V3Poller makeV3Poller(String key) throws Exception {
+  private MyV3Poller makeV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
-    return new V3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1");
+    return new MyV3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1");
   }
   
-  private MyMockV3Poller makeInittedV3Poller(String key) throws Exception {
+  private MyV3Poller makeInittedV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
-    MyMockV3Poller p = new MyMockV3Poller(ps, theDaemon, pollerId, key, 20000,
-                                          "SHA-1", voters);
+    MyV3Poller p = new MyV3Poller(ps, theDaemon, pollerId, key, 20000,
+                                          "SHA-1");
     p.constructInnerCircle(voters.length);
     Map innerCircle = (Map)PrivilegedAccessor.getValue(p, "theParticipants");
     for (int ix = 0; ix < voters.length; ix++) {
       PeerIdentity pid = voters[ix];
       ParticipantUserData ud = (ParticipantUserData) innerCircle.get(pid);
-      ud.setVoterNonce(voterNonces[ix]);
+      if (ud != null) {
+	ud.setVoterNonce(voterNonces[ix]);
+      }
     }
     return p;
   }
 
-  private class MyMockV3Poller extends V3Poller {
+  private class MyV3Poller extends V3Poller {
     // For testing:  Hashmap of voter IDs to V3LcapMessages.
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
-    private PeerIdentity[] mockVoters;
 
-    MyMockV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-                   String pollkey, long duration, String hashAlg,
-                   PeerIdentity[] voters)
+    MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
+                   String pollkey, long duration, String hashAlg)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
-      this.mockVoters = voters;
     }
     
-    Collection XXXgetReferenceList() {
-      return ListUtil.fromArray(mockVoters);
-    }
-
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
       sentMsgs.put(to, msg);
       SimpleBinarySemaphore sem = (SimpleBinarySemaphore)semaphores.get(to);
@@ -743,6 +816,7 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                   StringUtil.separatedString(initialPeers, ";"));
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
+    p.setProperty(V3Poller.PARAM_INVITATION_SIZE, "6");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);

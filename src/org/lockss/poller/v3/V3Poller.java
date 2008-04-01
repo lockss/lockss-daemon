@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.74 2008-03-15 04:54:14 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.75 2008-04-01 08:02:57 tlipkis Exp $
  */
 
 /*
@@ -157,6 +157,20 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_INVITATION_SIZE = PREFIX + "invitationSize";
   public static final int DEFAULT_INVITATION_SIZE = 10;
   
+  /** The number of participants in excess of the quorum we try to get
+   * participating
+   */
+  public static final String PARAM_EXCEED_QUORUM_BY_PARTICIPANTS =
+    PREFIX + "exceedQuorumByParticipants";
+  public static final int DEFAULT_EXCEED_QUORUM_BY_PARTICIPANTS = 1;
+  
+  /** The number of participants in excess of the quorum we try to get
+   * participating
+   */
+  public static final String PARAM_EXCEED_QUORUM_BY_INVITATIONS =
+    PREFIX + "exceedQuorumByInvitations";
+  public static final int DEFAULT_EXCEED_QUORUM_BY_INVITATIONS = 4;
+
   /** If true, enable the discovery mechanism that attempts to invite peers
    * from outside our Initial Peer List into polls. */
   public static final String PARAM_ENABLE_DISCOVERY =
@@ -339,6 +353,10 @@ public class V3Poller extends BasePoll {
   private boolean enableInvitations = DEFAULT_ENABLE_INVITATIONS;
   private long timeBetweenInvitations = DEFAULT_TIME_BETWEEN_INVITATIONS;
   private int invitationSize = DEFAULT_INVITATION_SIZE;
+  private int exceedQuorumByParticipants =
+    DEFAULT_EXCEED_QUORUM_BY_PARTICIPANTS;
+  private int exceedQuorumByInvitations =
+    DEFAULT_EXCEED_QUORUM_BY_INVITATIONS;
 
   private SchedulableTask task;
   private TimerQueue.Request invitationRequest;
@@ -462,7 +480,7 @@ public class V3Poller extends BasePoll {
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
 
-  private void setConfig() {
+  void setConfig() {
     Configuration c = ConfigManager.getCurrentConfig();
     outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
                                  DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
@@ -479,6 +497,12 @@ public class V3Poller extends BasePoll {
       c.getTimeInterval(PARAM_TIME_BETWEEN_INVITATIONS,
                         DEFAULT_TIME_BETWEEN_INVITATIONS);
     invitationSize = c.getInt(PARAM_INVITATION_SIZE, DEFAULT_INVITATION_SIZE);
+    exceedQuorumByParticipants =
+      c.getInt(PARAM_EXCEED_QUORUM_BY_PARTICIPANTS,
+	       DEFAULT_EXCEED_QUORUM_BY_PARTICIPANTS);
+    exceedQuorumByInvitations =
+      c.getInt(PARAM_EXCEED_QUORUM_BY_INVITATIONS,
+	       DEFAULT_EXCEED_QUORUM_BY_INVITATIONS);
     extraPollTime = c.getTimeInterval(PARAM_V3_EXTRA_POLL_TIME,
 				      DEFAULT_V3_EXTRA_POLL_TIME);
     enableDiscovery = c.getBoolean(PARAM_ENABLE_DISCOVERY,
@@ -579,7 +603,8 @@ public class V3Poller extends BasePoll {
     Collection refList = getReferenceList();
     log.debug3("constructInnerCircle: refList.size()=" + refList.size());
     log.debug3("constructInnerCircle: quorum=" + quorum);
-    int targetSize = 2 * quorum;
+    int targetSize = Math.max(invitationSize, exceedQuorumByInvitations);
+//     int targetSize = 2*quorum;
     int innerCount = targetSize > refList.size() ? refList.size() : targetSize;
     Collection innerCircleVoters =
       CollectionUtil.randomSelection(refList, innerCount);
@@ -943,7 +968,7 @@ public class V3Poller extends BasePoll {
    * @param id
    * @return PsmInterp
    */
-  private ParticipantUserData addInnerCircleVoter(PeerIdentity id) {
+  ParticipantUserData addInnerCircleVoter(PeerIdentity id) {
     ParticipantUserData participant = makeParticipant(id);
     synchronized(theParticipants) {
       theParticipants.put(id, participant);
@@ -2038,6 +2063,31 @@ public class V3Poller extends BasePoll {
     return PollerActions.class;
   }
   
+  Collection<PeerIdentity> findMorePeersToInvite() {
+    synchronized (theParticipants) {
+      // Count the peers who have agreed to participate.
+      int participatingPeers = 0;
+      for (ParticipantUserData peer : theParticipants.values()) {
+	if (peer.isParticipating()) {
+	  participatingPeers++;
+	}
+      }
+
+      int excess = participatingPeers - getQuorum();
+      log.debug("quorum: " + getQuorum() + ", participatingPeers: " +
+		participatingPeers);
+      if (excess >= exceedQuorumByParticipants) {
+	log.debug("[InvitationCallback] Enough peers are participating (" +
+		  getQuorum() + "+" + excess + ")");
+	return Collections.EMPTY_LIST;
+      } else {
+	return choosePeers(getReferenceList(), theParticipants.keySet(),
+			   Math.max(invitationSize,
+				    exceedQuorumByInvitations - excess));
+      }
+    }
+  }
+
   /**
    * Check to see whether enough pollers have agreed to participate
    * with us.  If not, invite more, and schedule another check.
@@ -2047,46 +2097,26 @@ public class V3Poller extends BasePoll {
       // Check to see if the poll has ended.  If so, immediately return.
       if (!activePoll) return;
 
-      // Get a list of peers who have decided to participate.
-      int participatingPeers = 0;
-      synchronized(theParticipants) {
-	for (ParticipantUserData peer : theParticipants.values()) {
-          if (peer.isParticipating()) {
-            participatingPeers++;
-          }
-        }
+      Collection<PeerIdentity> newPeers = findMorePeersToInvite();
+      if (newPeers.isEmpty()) {
+	log.debug("[InvitationCallback] No more peers to invite");
+      } else {
+	log.debug("[InvitationCallback] Inviting " + newPeers.size()
+		  + " new peers to participate.");
 
-	if (participatingPeers >= getQuorum()) {
-	  log.debug("[InvitationCallback] Enough peers are participating for " +
-		    "quorum.  Count=" + participatingPeers);
-	} else {
-	  // Invite  invitationSize more peers to participate.
-	  Collection newPeers =
-	    choosePeers(getReferenceList(), theParticipants.keySet(),
-			invitationSize);
+	// CR: refactor
+	for (PeerIdentity id : newPeers) {
+	  ParticipantUserData participant = addInnerCircleVoter(id);
+	  // Start the participant running to send in the invitation.
+	  startParticipant(participant, false);
+	}
 
-	  if (newPeers.isEmpty()) {
-	    log.debug("[InvitationCallback] No more peers to invite");
-	  } else {
-	    log.debug("[InvitationCallback] Inviting " + newPeers.size()
-		      + " new peers to participate.");
-
-	    // CR: refactor
-	    for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
-	      PeerIdentity id = (PeerIdentity)it.next();
-	      ParticipantUserData participant = addInnerCircleVoter(id);
-	      // Start the participant running to send in the invitation.
-	      startParticipant(participant, false);
-	    }
-
-	    if (isPollActive()) {
-	      // Schedule another check
-	      invitationRequest =
-		TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
-				    new InvitationCallback(),
-				    cookie);
-	    }
-	  }
+	if (isPollActive()) {
+	  // Schedule another check
+	  invitationRequest =
+	    TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+				new InvitationCallback(),
+				cookie);
 	}
       }
     }
