@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.5 2008-03-26 04:51:07 tlipkis Exp $
+ * $Id: ArcExploder.java,v 1.6 2008-04-01 08:00:55 tlipkis Exp $
  */
 
 /*
@@ -101,13 +101,13 @@ public class ArcExploder extends Exploder {
 	explode(urlCacher.getUrl(), urlCacher.getArchivalUnit(), arcReader);
       }
     } catch (IOException ex) {
-      throw new CacheException.HostException(ex);
+      throw new CacheException.ExploderException(ex);
     } finally {
       if (arcReader != null) try {
 	arcReader.close();
 	arcReader = null;
       } catch (IOException ex) {
-	throw new CacheException.HostException(ex);
+	throw new CacheException.ExploderException(ex);
       }
       if (cachedUrl != null) {
 	cachedUrl.release();
@@ -128,7 +128,7 @@ public class ArcExploder extends Exploder {
 	ret.put(key, value);
       } catch (ClassCastException ex) {
 	logger.error("makeCIProperties: " + key + " threw ", ex);
-	throw new CacheException.HostException(ex);
+	throw new CacheException.ExploderException(ex);
       }
     }
     return (ret);

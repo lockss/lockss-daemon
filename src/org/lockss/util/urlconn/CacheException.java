@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.12 2008-03-26 04:53:37 tlipkis Exp $
+ * $Id: CacheException.java,v 1.13 2008-04-01 08:00:55 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -172,6 +172,11 @@ public class CacheException extends IOException {
 
     public UnknownExceptionException(String message) {
       super(message);
+    }
+
+    public UnknownExceptionException(Exception e) {
+      super(e.toString());
+      initCause(e);
     }
 
     protected void setAttributes() {
@@ -478,22 +483,21 @@ public class CacheException extends IOException {
     }
   }
 
-  /** An error connecting to the host serving the URL.  (<i>Eg</i>, host
-   * not found, down, connection refused) */
-  public static class HostException
+  /** An error esploding a archive file during a crawl */
+  public static class ExploderException
       extends UnretryableException {
-    public HostException() {
+    public ExploderException() {
       super();
       suppressStackTrace = false;
     }
 
-    public HostException(String message) {
+    public ExploderException(String message) {
       super(message);
       suppressStackTrace = false;
     }
 
     /** Create this if details of causal exception are more relevant. */
-    public HostException(Exception e) {
+    public ExploderException(Exception e) {
       super(e.toString());
       initCause(e);
     }
