@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.78 2008-02-19 23:33:30 edwardsb1 Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.79 2008-04-01 21:08:14 edwardsb1 Exp $
  */
 
 /*
@@ -974,11 +974,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
       try {
         agreeingPeers.add(key);
       } catch (IOException e) {
-        logger.debug("signalAgreement: IO Exception: " + e.getMessage());
+        logger.debug("signalAgreement: IO Exception at location 1: " + e.getMessage());
         return;   /* TODO: Should this pass up an exception? */
       }
     }
-    storeAgreementHistory(agreeingPeers);
+    try {
+      agreeingPeers.store();
+    } catch (IOException e) {
+      logger.debug("signalAgreement: IO Exception at location 2: " + e.getMessage());
+    }
   }
 
   public void setNewProperties(Properties newProps) {
@@ -1151,56 +1155,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
   
-  /**
-   * Store a list of agreement histories.
-   * @param peers A list of peer keys for which agreement has been found.
-   */
-  synchronized void storeAgreementHistory(PersistentPeerIdSet peers) {
-    DataOutputStream dos = null;
-    if (tempAgreementFile == null) {
-      initTempAgreementFile();
-    }
-    if (agreementFile == null) {
-      initAgreementFile();
-    }
-    try {
-      // Loop until there are no IdentityParseExceptions
-      boolean errors = false;
-      outer:
-      do {
-        peers.load();
-        dos = new DataOutputStream(new FileOutputStream(tempAgreementFile));
-        for (Iterator<PeerIdentity> it = peers.iterator(); it.hasNext(); ) {
-          PeerIdentity key = it.next();
-          try {
-            dos.write(IDUtil.encodeTCPKey(key.getIdString()));
-          } catch (IdentityParseException ex) {
-            logger.error("Unable to store identity key: " + key);
-            // Close the errored file.
-            IOUtil.safeClose(dos);
-            // Set the error flag
-            errors = true;
-            // Delete the offending, un-storable key
-            peers.remove(key);
-            break outer;
-          }
-        }
-        peers.store();
-
-        errors = false;
-        if (!PlatformUtil.updateAtomically(tempAgreementFile, agreementFile)) {
-          logger.error("Unable to rename temporary agreement history file " +
-                       tempAgreementFile);
-        }
-      } while (errors);
-    } catch (IOException ex) {
-      logger.error("Exception while trying to store agreement history file "
-                   + agreementFile, ex);
-      backupAgreementHistoryFile();
-    } finally {
-      IOUtil.safeClose(dos);
-    }
-  }
 
   /**
    * Load the current input file and properties, if needed.  Extract current
