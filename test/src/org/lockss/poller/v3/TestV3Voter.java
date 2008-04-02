@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.6 2007-10-09 00:49:57 smorabito Exp $
+ * $Id: TestV3Voter.java,v 1.7 2008-04-02 00:44:24 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
+import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -49,9 +50,10 @@ import java.util.Properties;
 public class TestV3Voter extends LockssTestCase {
   
   V3Voter voter;
-  LockssDaemon lockssDaemon;
+  MockLockssDaemon lockssDaemon;
   PeerIdentity repairRequestor;
   ArchivalUnit au;
+  MockAuState aus;
   RepositoryNode repoNode;
   V3LcapMessage startMsg;
   
@@ -104,7 +106,12 @@ public class TestV3Voter extends LockssTestCase {
     MockLockssRepository repo = new MockLockssRepository("/foo", au);
     repoNode = repo.createNewNode(repairUrl);
 
-    ((MockLockssDaemon)lockssDaemon).setLockssRepository(repo, au);
+    lockssDaemon.setLockssRepository(repo, au);
+
+    aus = new MockAuState();
+    MockNodeManager nodeManager = new MockNodeManager();
+    getMockLockssDaemon().setNodeManager(nodeManager, au);
+    nodeManager.setAuState(aus);
   }
   
   public void tearDown() throws Exception {
@@ -143,5 +150,16 @@ public class TestV3Voter extends LockssTestCase {
     ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(repairRequestor));
     assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
+  }
+
+  public void testServeOpenAccessRepairs() {
+    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
+    aus.setAccessType(AuState.AccessType.OpenAccess);
+    assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
+				  "true");
+    assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.55 2008-04-01 08:03:09 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.56 2008-04-02 00:44:24 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.repository.RepositoryNode;
+import org.lockss.state.*;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
 import org.lockss.util.*;
@@ -124,6 +125,15 @@ public class V3Voter extends BasePoll {
   public static final String PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS =
     PREFIX + "minPercentAgreementForRepairs";
   public static final double DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS = 0.5f; 
+
+  /**
+   * If true, previous agreement will be required to serve repairs even for
+   * open access AUs
+   */
+  public static final String PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT =
+    PREFIX + "openAccessRepairNeedsAgreement";
+  public static final boolean
+    DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT = false;
 
   /**
    * Directory in which to store message data.
@@ -1002,6 +1012,14 @@ public class V3Voter extends BasePoll {
     // Short circuit.
     if (!allowRepairs) return false;
     
+    if (!CurrentConfig.getBooleanParam(PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
+				       DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT)) {
+      AuState aus = AuUtil.getAuState(au);
+      if (aus.isOpenAccess()) {
+	return true;
+      }
+    }
+
     boolean perUrlAgreement =
       CurrentConfig.getBooleanParam(PARAM_ENABLE_PER_URL_AGREEMENT,
                                     DEFAULT_ENABLE_PER_URL_AGREEMENT);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.12 2008-02-15 09:16:15 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.13 2008-04-02 00:44:24 tlipkis Exp $
  */
 
 /*
@@ -282,6 +282,16 @@ public class TestAuState extends LockssTestCase {
     assertEquals("Inaccessible", aus.getClockssSubscriptionStatusString());
   }    
 
+  public void testAccessType() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertFalse(aus.isOpenAccess());
+    aus.setAccessType(AuState.AccessType.Subscription);
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
+    assertFalse(aus.isOpenAccess());
+    aus.setAccessType(AuState.AccessType.OpenAccess);
+    assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
+    assertTrue(aus.isOpenAccess());
+  }
 
   public static void main(String[] argv) {
     String[] testCaseList = { TestAuState.class.getName()};

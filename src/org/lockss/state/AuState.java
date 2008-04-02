@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.34 2008-04-01 08:03:49 tlipkis Exp $
+ * $Id: AuState.java,v 1.35 2008-04-02 00:44:24 tlipkis Exp $
  */
 
 /*
@@ -428,6 +428,10 @@ public class AuState implements LockssSerializable {
 
   public AccessType getAccessType() {
     return accessType;
+  }
+
+  public boolean isOpenAccess() {
+    return accessType == AccessType.OpenAccess;
   }
 
   // CLOCKSS status
