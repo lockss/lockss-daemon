@@ -197,6 +197,30 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   
   
   /**
+   * Additional test method for {@link org.lockss.protocol.PersistentPeerIdSet#load()}
+   * 
+   * If we store a file at one location, then store an empty set, the empty set
+   * should have precedence.
+   */
+  public void testEmptySetErasesFile() throws IOException
+  {
+    PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
+    
+    PersistentPeerIdSet ppisTest = new PersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisTest.add(piOne);
+    ppisTest.store();
+    
+    PersistentPeerIdSet ppisTest2 = new PersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisTest2.clear();
+    ppisTest2.store();
+    
+    // Verify that loading will give the empty file.
+    PersistentPeerIdSet ppisTest3 = new PersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisTest3.load();
+    assertEquals(0, ppisTest3.size());
+  }
+  
+  /**
    * Test method for {@link org.lockss.protocol.PersistentPeerIdSet#checkpoint()}
    * 
    * This method should act like a no-op to the flow of the program.  The only thing

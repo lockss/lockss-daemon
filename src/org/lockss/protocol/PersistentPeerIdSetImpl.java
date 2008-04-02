@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.1 2008-02-26 01:44:06 edwardsb1 Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.2 2008-04-02 20:26:36 edwardsb1 Exp $
  */
 
 /*
@@ -67,14 +67,14 @@ import org.lockss.util.PlatformUtil;
 
 public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   // Static constants 
-  private static final String TEMP_EXTENSION = ".temp";
+  protected static final String TEMP_EXTENSION = ".temp";
 
   // Internal variables
-  private File m_filePeerId;
+  protected File m_filePeerId;
   private IdentityManager m_identityManager;
   private boolean m_isInMemory;
   private static Logger m_logger = Logger.getLogger("PersistentPeerIdSet");
-  private Set<PeerIdentity> m_setPeerId;
+  protected Set<PeerIdentity> m_setPeerId;
 
 
   public PersistentPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
@@ -126,7 +126,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.add(pi);
-    saveIfNecessary();
+    storeIfNecessary();
       
     return result;
   }
@@ -136,7 +136,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.addAll(cpi);
-    saveIfNecessary();
+    storeIfNecessary();
 
     return result;
   }
@@ -145,7 +145,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   public void clear() throws IOException {
     loadIfNecessary();
     m_setPeerId.clear();
-    saveIfNecessary();
+    storeIfNecessary();
   }
 
 
@@ -229,7 +229,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.remove(o);
-    saveIfNecessary();
+    storeIfNecessary();
 
     return result;
   }
@@ -240,7 +240,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.removeAll(c);
-    saveIfNecessary();
+    storeIfNecessary();
 
     return result;
   }
@@ -251,7 +251,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.retainAll(c);
-    saveIfNecessary();
+    storeIfNecessary();
 
     return result;
   }
@@ -301,7 +301,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    *
    */
 
-  private void internalLoad() throws IOException {
+  protected void internalLoad() throws IOException {
     DataInputStream is = null;
     try {
       if (m_filePeerId.exists()) {
@@ -323,7 +323,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   /**
    * @throws IOException
    */
-  private void loadIfNecessary() throws IOException {
+  protected void loadIfNecessary() throws IOException {
     if (! m_isInMemory) {
       internalLoad();
     }
@@ -336,59 +336,69 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    * Store the list of agreement histories.
    */
 
-  private void internalStore() throws IOException {
+  protected void internalStore() throws IOException {
     DataOutputStream dos = null;
     File filePeerIdTemp = new File(m_filePeerId.getAbsolutePath() + TEMP_EXTENSION);
-    byte [] TCPKey;
 
     try {
       // Loop until there are no IdentityParseExceptions
-      boolean errors = false;
-      
-      outer:
-      do {
-        dos = new DataOutputStream(new FileOutputStream(filePeerIdTemp));
+      dos = new DataOutputStream(new FileOutputStream(filePeerIdTemp));    
+      encode(dos, filePeerIdTemp);
+      dos.close();
 
-        if (m_setPeerId != null) {
-          for (PeerIdentity key : m_setPeerId) {
-            if (key == null) {
-              m_logger.error("Null key among the peer set.");
-              continue;
-            }
-            
-            try {
-              TCPKey = IDUtil.encodeTCPKey(key.getIdString());
-            } catch (IdentityParseException ex) {
-              m_logger.error("Unable to store identity key: " + key + ".  Identity Parse Exception: " + ex.getMessage());
-              // Delete the offending, un-storable key
-              m_setPeerId.remove(key);
-              break outer;
-            }
-            
-            if (key != null) {
-              dos.write(TCPKey);
-            } else {  // key is null
-              m_logger.error("An identity key is null.  Ignoring.");
-              m_setPeerId.remove(key);
-            }
-          }      
-          errors = false;
-          if (!PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
-            m_logger.error("Unable to rename temporary agreement history file " +
-                filePeerIdTemp);
-          }
-        } 
-     } while (errors);
-     
+      if (!PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
+        m_logger.error("Unable to rename temporary agreement history file " +
+            filePeerIdTemp);
+      }
+
     } finally {
       IOUtil.safeClose(dos);
     }
   }
 
   /**
+   * @param dos
+   * @param filePeerIdTemp
    * @throws IOException
    */
-  private void saveIfNecessary() throws IOException {
+  protected void encode(DataOutputStream dos, File filePeerIdTemp) throws IOException {
+    byte [] TCPKey = null;
+    boolean errors = false;
+    
+    outer:
+    do {
+      if (m_setPeerId != null) {
+        for (PeerIdentity key : m_setPeerId) {
+          if (key == null) {
+            m_logger.error("Null key among the peer set.");
+            continue;
+          }
+          
+          try {
+            TCPKey = IDUtil.encodeTCPKey(key.getIdString());
+          } catch (IdentityParseException ex) {
+            m_logger.error("Unable to store identity key: " + key + ".  Identity Parse Exception: " + ex.getMessage());
+            // Delete the offending, un-storable key
+            m_setPeerId.remove(key);
+            break outer;
+          }
+          
+          if (key != null) {
+            dos.write(TCPKey);
+          } else {  // key is null
+            m_logger.error("An identity key is null.  Ignoring.");
+            m_setPeerId.remove(key);
+          }
+        }      
+        errors = false;
+      } 
+   } while (errors);
+  }
+
+  /**
+   * @throws IOException
+   */
+  protected void storeIfNecessary() throws IOException {
     if (! m_isInMemory) {
       internalStore();
       m_setPeerId = null;
@@ -398,7 +408,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   
   /** Consume the input stream, decoding peer identity keys  */
   /* Corresponds to RepositoryNodeImpl.decodeAgreementHistory(). */
-  private Set<PeerIdentity> decode(DataInputStream is)
+  protected Set<PeerIdentity> decode(DataInputStream is)
   {
     Set<PeerIdentity> history = new HashSet<PeerIdentity>();
     String id;

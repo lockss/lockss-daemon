@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.14 2008-04-01 08:03:49 tlipkis Exp $
+ * $Id: HistoryRepository.java,v 1.15 2008-04-02 20:26:36 edwardsb1 Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.state;
 import java.io.*;
 import java.util.List;
 import org.lockss.plugin.*;
+import org.lockss.protocol.DatedPeerIdSet;
 import org.lockss.app.LockssAuManager;
 
 /**
@@ -96,6 +97,11 @@ public interface HistoryRepository extends LockssAuManager {
    */
   public long getAuCreationTime();
 
+  /**
+   * Return the associated DatedPeerIdSet
+   */
+  public DatedPeerIdSet getDatedPeerIdSet();
+  
   /**
    * Stores the AuState for this ArchivalUnit
    * @param auState the state to store

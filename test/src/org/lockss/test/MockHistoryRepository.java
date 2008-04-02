@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.17 2008-04-01 08:03:49 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.18 2008-04-02 20:26:36 edwardsb1 Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.DatedPeerIdSet;
 import org.lockss.config.Configuration;
 
 /**
@@ -144,6 +145,23 @@ public class MockHistoryRepository implements HistoryRepository {
 
   public List getStoredIdentityAgreement() {
     return storedIdentityAgreement;
+  }
+
+  /*
+   * (non-Javadoc)
+   * 
+   * Note from BEE:
+   * Creating a DatedPeerIdSet requires an IdentityManager.
+   * I'm not sure how to get the IdentityManager from here:
+   *    - MockHistoryRepository is NOT an extension of BaseLockssDaemonManager, so I cannot call "getDaemon".
+   *    - MockHistoryRepository does NOT have an associated app (see getApp).
+   *    - MockHistoryRepository does not have an IdentityManager associated with it, that I see.
+   *    
+   *    Therefore, it's an unsupported operation for now.
+   * @see org.lockss.state.HistoryRepository#getDatedPeerIdSet()
+   */
+  public DatedPeerIdSet getDatedPeerIdSet() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
 }

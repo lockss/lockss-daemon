@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.69 2008-02-15 09:16:15 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.70 2008-04-02 20:26:36 edwardsb1 Exp $
  */
 
 /*
@@ -107,6 +107,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     configHistoryParams(tempDirPath);
     repository = (HistoryRepositoryImpl)
         HistoryRepositoryImpl.createNewHistoryRepository(mau);
+    repository.initService(theDaemon);
     repository.startService();
     if (idmgr == null) {
       idmgr = theDaemon.getIdentityManager();
@@ -564,6 +565,24 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
                    cxSerializer.getCompatibilityMode());
     }
   }
+  
+  /**
+   *  Make sure that we have one (and only one) dated peer id set 
+   */
+  public void testGetDatedPeerIdSet() {
+    DatedPeerIdSet dpis1;
+    DatedPeerIdSet dpis2;
+    
+    dpis1 = repository.getDatedPeerIdSet();
+    assertNotNull(dpis1);
+    
+    dpis2 = repository.getDatedPeerIdSet();
+    assertNotNull(dpis2);
+    
+    assertSame(dpis1, dpis2);
+  }
+  
+  
 
   private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {
     PollState state = new PollState(1, "lwr", "upr", 2, 5, null, false);

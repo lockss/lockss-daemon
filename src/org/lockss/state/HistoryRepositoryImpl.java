@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.82 2008-04-01 08:03:49 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.83 2008-04-02 20:26:36 edwardsb1 Exp $
  */
 
 /*
@@ -39,10 +39,13 @@ import java.util.List;
 
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.LockssAuManager;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUrl;
 import org.lockss.plugin.CachedUrlSet;
+import org.lockss.protocol.DatedPeerIdSet;
+import org.lockss.protocol.DatedPeerIdSetImpl;
 import org.lockss.protocol.IdentityAgreementList;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -56,6 +59,68 @@ import org.lockss.util.*;
 public class HistoryRepositoryImpl
   extends BaseLockssDaemonManager
   implements HistoryRepository {
+  
+  /**
+   * <p>Name of top directory in which the histories are stored.</p>
+   */
+  public static final String HISTORY_ROOT_NAME = "cache";
+
+  /**
+   * <p>Configuration parameter name for Lockss history location.</p>
+   */
+  public static final String PARAM_HISTORY_LOCATION = Configuration.PREFIX + "history.location";
+
+  /**
+   * <p>The AU state file name.</p>
+   */
+  public static final String AU_FILE_NAME = "#au_state.xml";
+
+  /**
+   * <p>The damaged nodes file name.</p>
+   */
+  static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
+
+  /**
+   * <p>The dated peer id set file name</p>
+   */
+  static final String DATED_PEER_ID_SET_FILE_NAME = "#dated_peer_id_set";
+  
+  /**
+   * <p>The history file name.</p>
+   */
+  static final String HISTORY_FILE_NAME = "#history.xml";
+
+  /**
+   * <p>The identity agreement list file name.</p>
+   */
+  static final String IDENTITY_AGREEMENT_FILE_NAME = "#id_agreement.xml";
+
+  /**
+   * <p>Mapping file for polls.</p>
+   */
+  static final String MAPPING_FILE_NAME = "/org/lockss/state/pollmapping.xml";
+
+  /**
+   * <p>All relevant mapping files used by this class.</p>
+   */
+  static final String[] MAPPING_FILES = {
+      MAPPING_FILE_NAME,
+      ExternalizableMap.MAPPING_FILE_NAME,
+      IdentityManager.MAPPING_FILE_NAME
+  };
+
+  /**
+   * <p>The node state file name.</p>
+   */
+  static final String NODE_FILE_NAME = "#nodestate.xml";
+
+  
+  /**
+   * <p>A logger for use by this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("HistoryRepository");
+
+
 
   // CASTOR: Top-level Castor documentation; read below
   /*
@@ -138,6 +203,32 @@ public class HistoryRepositoryImpl
     File auidfile = new File(rootLocation, LockssRepositoryImpl.AU_ID_FILE);
     return auidfile.lastModified();
   }
+  
+  private DatedPeerIdSet m_dpis = null;
+  
+  /**
+   * Return the associated DatedPeerIdSet
+   */
+  public DatedPeerIdSet getDatedPeerIdSet()
+  {
+    IdentityManager idman;
+    
+    if (m_dpis == null) {
+      File fileDpis = new File(rootLocation, DATED_PEER_ID_SET_FILE_NAME);
+      LockssDaemon ld = getDaemon();
+      if (ld != null) {
+        idman = ld.getIdentityManager();
+      } else {
+        logger.error("When attempting to get a dated Peer ID set, I could not find the daemon.  Aborting.");
+        throw new NullPointerException();
+      }
+      
+      m_dpis = new DatedPeerIdSetImpl(fileDpis, idman);
+    }
+    
+    return m_dpis;
+  }
+
 
   /**
    * <p>Loads the state of an AU.</p>
@@ -723,60 +814,6 @@ public class HistoryRepositoryImpl
     }
   }
 
-  /**
-   * <p>Name of top directory in which the histories are stored.</p>
-   */
-  public static final String HISTORY_ROOT_NAME = "cache";
-
-  /**
-   * <p>Configuration parameter name for Lockss history location.</p>
-   */
-  public static final String PARAM_HISTORY_LOCATION = Configuration.PREFIX + "history.location";
-
-  /**
-   * <p>The AU state file name.</p>
-   */
-  public static final String AU_FILE_NAME = "#au_state.xml";
-
-  /**
-   * <p>The damaged nodes file name.</p>
-   */
-  static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
-
-  /**
-   * <p>The history file name.</p>
-   */
-  static final String HISTORY_FILE_NAME = "#history.xml";
-
-  /**
-   * <p>The identity agreement list file name.</p>
-   */
-  static final String IDENTITY_AGREEMENT_FILE_NAME = "#id_agreement.xml";
-
-  /**
-   * <p>Mapping file for polls.</p>
-   */
-  static final String MAPPING_FILE_NAME = "/org/lockss/state/pollmapping.xml";
-
-  /**
-   * <p>All relevant mapping files used by this class.</p>
-   */
-  static final String[] MAPPING_FILES = {
-      MAPPING_FILE_NAME,
-      ExternalizableMap.MAPPING_FILE_NAME,
-      IdentityManager.MAPPING_FILE_NAME
-  };
-
-
-  /**
-   * <p>The node state file name.</p>
-   */
-  static final String NODE_FILE_NAME = "#nodestate.xml";
-
-  /**
-   * <p>A logger for use by this class.</p>
-   */
-  private static Logger logger = Logger.getLogger("HistoryRepository");
 
   /**
    * <p>Factory method to create new HistoryRepository instances.</p>
