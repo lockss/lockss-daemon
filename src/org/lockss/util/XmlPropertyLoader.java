@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.33 2008-02-28 23:07:39 edwardsb1 Exp $
+ * $Id: XmlPropertyLoader.java,v 1.34 2008-04-04 09:20:18 tlipkis Exp $
  */
 
 /*
@@ -216,6 +216,20 @@ public class XmlPropertyLoader {
       return andEvalStack(false);
     }
 
+    String attrsToString(Attributes attrs) {
+      int len = attrs.getLength();
+      StringBuilder sb = new StringBuilder();
+      sb.append("{");
+      for (int i = 0; i < len; i++) {
+	sb.append(attrs.getQName(i));
+	sb.append(" --> ");
+	sb.append(attrs.getValue(i));
+	if (i < (len - 1)) sb.append(", ");
+      }
+      sb.append("}");
+      return sb.toString();
+    }
+
     /**
      * Handle the starting tags of elements.  Based on the name of the
      * tag, call the appropriate handler method.
@@ -223,15 +237,13 @@ public class XmlPropertyLoader {
     public void startElement(String namespaceURI, String localName,
 			     String qName, Attributes attrs)
 	throws SAXException {
-      int i;
       
-      log.debug3("START TAG: namespaceURI = " + namespaceURI + "\nlocalName = " + localName +
-          "\nqName = " + qName + "\nattrs = {");
-      for (i=0; i < attrs.getLength(); i++) {
-        log.debug3("  " + attrs.getQName(i) + "--> " + attrs.getValue(i));
-      }
-      log.debug3("}");
-      
+      if (log.isDebug3()) {
+	log.debug3("START TAG: namespaceURI = " + namespaceURI +
+		   ", localName = " + localName +
+		   ", qName = " + qName +
+		   ", attrs = " + attrsToString(attrs));
+      }      
       if (TAG_IF.equals(qName)) {
 	startIfTag(attrs);
       } else if (TAG_ELSE.equals(qName)) {
@@ -265,9 +277,10 @@ public class XmlPropertyLoader {
     public void endElement(String namespaceURI, String localName,
 			   String qName)
 	throws SAXException {
-      log.debug2("END TAG: namespaceURI = " + namespaceURI + "\nlocalName = " + localName +
-          "\nqName = " + qName + "\n");
-
+      if (log.isDebug3()) {
+	log.debug3("END TAG: namespaceURI = " + namespaceURI +
+		   ", localName = " + localName + ", qName = " + qName);
+      }
       if (TAG_IF.equals(qName)) {
 	endIfTag();
       } else if (TAG_ELSE.equals(qName)) {
