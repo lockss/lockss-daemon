@@ -25,7 +25,7 @@ persistent fetch error	manifest	Chemical Communications 1997	base_url=http://www
 persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1999
 	manifest	Chemical Communications 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2000
 	manifest	Chemical Communications 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2001
-	manifest	Chemical Communications 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2002
+	ready	Chemical Communications 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2002
 	manifest	Chemical Communications 2003	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2003
 	manifest	Chemical Communications 2004	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2004
 	manifest	Chemical Communications 2005	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2005
@@ -155,7 +155,7 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	testing	Lab on a Chip Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=4	year=2004
 	manifest	Lab on a Chip Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=5	year=2005
 	manifest	Lab on a Chip Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=6	year=2006
-	manifest	Lab on a Chip Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=7	year=2007
+	ready	Lab on a Chip Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=7	year=2007
 	manifest	Lab on a Chip Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=8	year=2008
 #	@fixedValues	j=Mendeleev Communications					
 	manifest	Mendeleev Communications Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=7	year=1997
