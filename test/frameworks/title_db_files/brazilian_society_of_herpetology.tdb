@@ -3,5 +3,5 @@
 #	@publisherTitleSet	publisher=Brazilian Society of Herpetology
 #	@fixedValues	P=Brazilian Society of Herpetology	p=org.lockss.plugin.bioone.BioOnePlugin
 #	@fixedValues	i=1808-9798	j=South American Journal of Herpetology
-	manifest	South American Journal of Herpetology Volume 1	base_url=http://www.bioone.org/	journal_id=1808-9798	volume=1
-	manifest	South American Journal of Herpetology Volume 2	base_url=http://www.bioone.org/	journal_id=1808-9798	volume=2
+	ready	South American Journal of Herpetology Volume 1	base_url=http://www.bioone.org/	journal_id=1808-9798	volume=1
+	ready	South American Journal of Herpetology Volume 2	base_url=http://www.bioone.org/	journal_id=1808-9798	volume=2
