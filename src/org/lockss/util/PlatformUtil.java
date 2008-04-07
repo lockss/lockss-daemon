@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.10 2008-03-26 04:53:02 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.11 2008-04-07 21:41:14 edwardsb1 Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class PlatformUtil {
     return Runtime.getRuntime();
   }
 
-  /** Return disk usage below path, in K (du -sk) */
+  /** Return disk usage below path, in bytes */
   public long getDiskUsage(String path) {
     String cmd = "du -k -s " + path;
     if (log.isDebug2()) log.debug2("cmd: " + cmd);
