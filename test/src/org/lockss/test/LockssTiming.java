@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.5 2008-03-20 17:28:41 edwardsb1 Exp $
+ * $Id: LockssTiming.java,v 1.6 2008-04-09 01:03:56 edwardsb1 Exp $
  */
 
 /*
@@ -84,24 +84,19 @@ public class LockssTiming extends LockssTestCase {
 
   public void time(TimingReporter reporter, Computation c) throws Exception {
     long start = System.currentTimeMillis();
-    int cnt = 0;
-    long delta;
     while (true) {
+      reporter.startTimer();
       c.execute();
-      cnt++;
+      reporter.stopTimer();
       long now = System.currentTimeMillis();
-      if ((delta = (now - start)) > duration) {
+      if ((now - start) > duration) {
 	break;
       }
     }
-    reporter.report(delta, cnt);
+    reporter.report();
   }
 
-  protected interface TimingReporter {
-    void report(long totalTime, int rpt);
-  }
-
-  static class FileTimingReporter implements TimingReporter {
+  static class FileTimingReporter extends TimingReporterImpl {
     private File file;
     private String msg;
     private String outLabel;
@@ -112,23 +107,31 @@ public class LockssTiming extends LockssTestCase {
       this.msg = msg;
       this.outLabel = outLabel;
     }
-    public void report(long totalTime, int rpt) {
+    
+    public void report() {
+      NumberFormat nf;
+      
+      nf = NumberFormat.getInstance();
+      
       StringBuffer sb = new StringBuffer();
       sb.append(msg);
       sb.append(":  ");
-      sb.append(Long.toString(totalTime/rpt));
+      sb.append(Long.toString(m_sumTime/m_count));
       sb.append(" ms");
+      sb.append(" ( std. dev. ");
+      sb.append(nf.format(stddevTime()));
+      sb.append(" )");
       if (file != null) {
 	sb.append(",  ");
-	sb.append(rateString(file.length() * rpt, totalTime));
+	sb.append(rateString(file.length() * m_count, m_sumTime));
 	sb.append(" b/ms(in)");
       }
       if (bytesProcessed > 0) {
-	sb.append(",  ");
-	sb.append(rateString(bytesProcessed, totalTime));
-	sb.append(" ");
-	sb.append(outLabel);
-	sb.append("/ms(out)");
+        sb.append(",  ");
+        sb.append(rateString(bytesProcessed, m_sumTime));
+        sb.append(" ");
+        sb.append(outLabel);
+        sb.append("/ms(out)");
       }
       System.out.println(sb.toString());
     }

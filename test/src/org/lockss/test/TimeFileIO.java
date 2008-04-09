@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFileIO.java,v 1.3 2006-03-27 08:50:49 tlipkis Exp $
+ * $Id: TimeFileIO.java,v 1.4 2008-04-09 01:03:56 edwardsb1 Exp $
  */
 
 /*
@@ -302,27 +302,28 @@ public class TimeFileIO extends LockssTiming {
     }
   }
 
-  static class TreeTimingReporter implements TimingReporter {
+  static class TreeTimingReporter extends TimingReporterImpl {
     private String msg;
-    private String outLabel;
+ //   private String outLabel;
     private long bytesProcessed = 0;
     private int filesProcessed = 0;
 
     TreeTimingReporter(String msg) {
       this.msg = msg;
     }
-    public void report(long totalTime, int rpt) {
+    
+    public void report() {
       StringBuffer sb = new StringBuffer();
       StringBuffer sb2 = new StringBuffer();
       sb.append(msg);
       sb.append(":  ");
-      sb.append(Long.toString(totalTime/rpt));
+      sb.append(Long.toString(m_sumTime/m_count));
       sb.append(" ms");
-      sb2.append(totalTime);
+      sb2.append(m_sumTime);
       sb2.append(" ms");
       if (bytesProcessed > 0) {
 	sb.append(",  ");
-	sb.append(rateString(bytesProcessed, totalTime));
+	sb.append(rateString(bytesProcessed, m_sumTime));
 	sb.append(" B/ms");
 	sb2.append(", ");
 	sb2.append(bytesProcessed);
@@ -330,16 +331,16 @@ public class TimeFileIO extends LockssTiming {
       }
       if (filesProcessed > 0) {
 	sb.append(",  ");
-	sb.append(rateString(filesProcessed, totalTime));
+	sb.append(rateString(filesProcessed, m_sumTime));
 	sb.append(" ");
 	sb.append("files/ms");
 	sb2.append(", ");
 	sb2.append(filesProcessed);
 	sb2.append(" files");
       }
-      if (rpt != 1) {
+      if (m_count != 1) {
 	sb.append("\n  (");
-	sb.append(rpt);
+	sb.append(m_count);
 	sb.append(" iterations, ");
 	sb.append(sb2.toString());
 	sb.append(")");
