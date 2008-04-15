@@ -18,14 +18,14 @@
 #	@fixedValues	j=Analytical Communications					
 	manifest	Analytical Communications Volume 34	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=34	year=1997
 persistent fetch error	manifest	Analytical Communications Volume 35	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=35	year=1998
-	ready	Analytical Communications Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=36	year=1999
+	released	Analytical Communications Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ac	volume_name=36	year=1999
 #	@fixedValues	j=Chemical Communications					
 persistent fetch error	manifest	Chemical Communications 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1997
 	manifest	Chemical Communications 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1998
 persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=1999
 	manifest	Chemical Communications 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2000
 	manifest	Chemical Communications 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2001
-	ready	Chemical Communications 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2002
+	released	Chemical Communications 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2002
 	manifest	Chemical Communications 2003	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2003
 	manifest	Chemical Communications 2004	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2004
 	manifest	Chemical Communications 2005	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cc	volume_name=0	year=2005
@@ -43,7 +43,7 @@ persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www
 	manifest	Chemical Society Reviews Volume 33	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=33	year=2004
 	manifest	Chemical Society Reviews Volume 34	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=34	year=2005
 	manifest	Chemical Society Reviews Volume 35	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=35	year=2006
-	ready	Chemical Society Reviews Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=36	year=2007
+	released	Chemical Society Reviews Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=36	year=2007
 	manifest	Chemical Society Reviews Volume 37	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=37	year=2008
 #	@fixedValues	j=Chemistry Education Research and Practice					
 	manifest	Chemistry Education Research and Practice Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rp	volume_name=9	year=2008
@@ -66,7 +66,7 @@ persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www
 	manifest	Dalton Transactions 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1999
 	manifest	Dalton Transactions 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2000
 	manifest	Dalton Transactions 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2001
-	ready	Dalton Transactions 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2002
+	released	Dalton Transactions 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2002
 	manifest	Dalton Transactions 2003	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2003
 	manifest	Dalton Transactions 2004	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2004
 	manifest	Dalton Transactions 2005	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2005
@@ -106,9 +106,9 @@ persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www
 #	@fixedValues	j=Journal of Chemical Research, Synopses					
 persistent fetch error	manifest	Journal of Chemical Research, Synopses 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1997
 persistent fetch error	manifest	Journal of Chemical Research, Synopses 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1998
-	ready	Journal of Chemical Research, Synopses 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1999
+	released	Journal of Chemical Research, Synopses 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jc	volume_name=0	year=1999
 #	@fixedValues	j=Journal of the Chemical Society, Faraday Transactions					
-	ready	Journal of the Chemical Society, Faraday Transactions Volume 93	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ft	volume_name=93	year=1997
+	released	Journal of the Chemical Society, Faraday Transactions Volume 93	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ft	volume_name=93	year=1997
 persistent fetch error	manifest	Journal of the Chemical Society, Faraday Transactions Volume 94	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ft	volume_name=94	year=1998
 #	@fixedValues	j=Journal of the Chemical Society, Perkin Transactions 1					
 persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transactions 1 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=1997
@@ -116,13 +116,13 @@ persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transact
 persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transactions 1 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=1999
 	testing	Journal of the Chemical Society, Perkin Transactions 1 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2000
 	testing	Journal of the Chemical Society, Perkin Transactions 1 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2001
-	ready	Journal of the Chemical Society, Perkin Transactions 1 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2002
+	released	Journal of the Chemical Society, Perkin Transactions 1 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p1	volume_name=0	year=2002
 #	@fixedValues	j=Journal of the Chemical Society, Perkin Transactions 2					
 persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transactions 2 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=1997
 persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transactions 2 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=1998
 persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transactions 2 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=1999
 	ready	Journal of the Chemical Society, Perkin Transactions 2 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2000
-	ready	Journal of the Chemical Society, Perkin Transactions 2 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2001
+	released	Journal of the Chemical Society, Perkin Transactions 2 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2001
 	ready	Journal of the Chemical Society, Perkin Transactions 2 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=p2	volume_name=0	year=2002
 #	@fixedValues	j=Journal of Environmental Monitoring					
 	ready	Journal of Environmental Monitoring Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=1	year=1999
@@ -134,7 +134,7 @@ persistent fetch error	manifest	Journal of the Chemical Society, Perkin Transact
 	testing	Journal of Environmental Monitoring Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=7	year=2005
 	manifest	Journal of Environmental Monitoring Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=8	year=2006
 	ready	Journal of Environmental Monitoring Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=9	year=2007
-	ready	Journal of Environmental Monitoring Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=10	year=2008
+	released	Journal of Environmental Monitoring Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=em	volume_name=10	year=2008
 #	@fixedValues	j=Journal of Materials Chemistry					
 	ready	Journal of Materials Chemistry Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=7	year=1997
 	ready	Journal of Materials Chemistry Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=8	year=1998
@@ -147,7 +147,7 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 9	base_url
 	ready	Journal of Materials Chemistry Volume 15	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=15	year=2005
 	ready	Journal of Materials Chemistry Volume 16	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=16	year=2006
 persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=17	year=2007
-	ready	Journal of Materials Chemistry Volume 18	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=18	year=2008
+	released	Journal of Materials Chemistry Volume 18	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=jm	volume_name=18	year=2008
 #	@fixedValues	j=Lab on a Chip					
 	ready	Lab on a Chip Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=1	year=2001
 	manifest	Lab on a Chip Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=2	year=2002
@@ -155,7 +155,7 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	testing	Lab on a Chip Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=4	year=2004
 	manifest	Lab on a Chip Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=5	year=2005
 	manifest	Lab on a Chip Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=6	year=2006
-	ready	Lab on a Chip Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=7	year=2007
+	released	Lab on a Chip Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=7	year=2007
 	manifest	Lab on a Chip Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=lc	volume_name=8	year=2008
 #	@fixedValues	j=Mendeleev Communications					
 	manifest	Mendeleev Communications Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mv	volume_name=7	year=1997
@@ -169,7 +169,7 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 #	@fixedValues	j=Molecular BioSystems					
 	manifest	Molecular BioSystems Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=1	year=2005
 	manifest	Molecular BioSystems Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=2	year=2006
-	ready	Molecular BioSystems Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=3	year=2007
+	released	Molecular BioSystems Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=3	year=2007
 	manifest	Molecular BioSystems Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=mb	volume_name=4	year=2008
 #	@fixedValues	j=Natural Product Reports					
 	manifest	Natural Product Reports Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=14	year=1997
@@ -233,7 +233,7 @@ persistent fetch error	manifest	Physical Chemistry Chemical Physics Volume 1	bas
 	ready	Physical Chemistry Chemical Physics Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=7	year=2005
 	ready	Physical Chemistry Chemical Physics Volume 8	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=8	year=2006
 persistent fetch error	manifest	Physical Chemistry Chemical Physics Volume 9	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=9	year=2007
-	ready	Physical Chemistry Chemical Physics Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=10	year=2008
+	released	Physical Chemistry Chemical Physics Volume 10	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cp	volume_name=10	year=2008
 #	@fixedValues	j=Russian Chemical Reviews					
 	testing	Russian Chemical Reviews Volume 67	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=67	year=1998
 	released	Russian Chemical Reviews Volume 68	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=rc	volume_name=68	year=1999
