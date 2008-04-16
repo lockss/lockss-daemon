@@ -5622,37 +5622,37 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2007" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="22-22" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="022" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="disputatio2006">
         <property name="title" value="Disputatio 2006" />
-        <property name="estSize" value="500KB" />
+        <property name="estSize" value="5:00KB" />
         <property name="journalTitle" value="Disputatio" />
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2006" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="20-21" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="020,021" />
         </property>
-        <property name="attributes.rights" vnum_issue_rangealue="openaccess" />
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="disputatio2005">
@@ -5662,15 +5662,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2005" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="18-19" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="018,019" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5682,15 +5682,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2004" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="16-17" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="016,017" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5702,15 +5702,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2003" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_rangenum_issue_range" />
-          <property name="value" value="14-15" />
+          <property name="key" value="issue_setnum_issue_range" />
+          <property name="value" value="014,015" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5722,15 +5722,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2002" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="12-13" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="012,013" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5742,15 +5742,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2001" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="10-11" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="010,011" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5762,15 +5762,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="2000" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="08-09" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="008,009" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5782,15 +5782,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="1999" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="06-07" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="006,007" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5802,19 +5802,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="1998" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="04-05" />
-        </property>
-        <property name="param.4">
           <property name="key" value="issue_set" />
-          <property name="value" value="S01" />
+          <property name="value" value="S01,004,005" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5826,15 +5822,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="1997" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="02-03" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="002,003" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -5846,15 +5842,15 @@
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
+          <property name="value" value="http://www.disputatio.com/" />
         </property>
         <property name="param.2">
           <property name="key" value="year" />
           <property name="value" value="1996" />
         </property>
         <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="01-01" />
+          <property name="key" value="issue_set" />
+          <property name="value" value="001" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
