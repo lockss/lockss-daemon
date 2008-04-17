@@ -3,6 +3,6 @@
 #	@publisherTitleSet	publisher=Centre d'études nordiques
 #	@fixedValues	P=Centre d'études nordiques	p=org.lockss.plugin.bioone.BioOnePlugin
 #	@fixedValues	i=1195-6860	j=Ecoscience
-	manifest	Ecoscience Volume 12	base_url=http://www.bioone.org/	journal_id=1195-6860	volume=12
-	manifest	Ecoscience Volume 13	base_url=http://www.bioone.org/	journal_id=1195-6860	volume=13
-	manifest	Ecoscience Volume 14	base_url=http://www.bioone.org/	journal_id=1195-6860	volume=14
+	ready	Ecoscience Volume 12	base_url=http://www.bioone.org/	journal_id=1195-6860	volume=12
+	ready	Ecoscience Volume 13	base_url=http://www.bioone.org/	journal_id=1195-6860	volume=13
+	ready	Ecoscience Volume 14	base_url=http://www.bioone.org/	journal_id=1195-6860	volume=14
