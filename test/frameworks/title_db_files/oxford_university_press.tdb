@@ -1,502 +1,698 @@
-#	@formatString	x,S,P,j,t,p,%,%					
+#	@formatString	x,S,t,p,%,%					
 #	@namePrefix	HighWire					
-old	released	Oxford University Press	African Affairs	African Affairs Volume 105	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afraf.oxfordjournals.org/	volume_name=105
-	released	Oxford University Press	African Affairs	African Affairs Volume 106	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afraf.oxfordjournals.org/	volume_name=106
-	released	Oxford University Press	Age and Ageing	Age and Ageing Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ageing.oxfordjournals.org/	volume_name=34
-old	released	Oxford University Press	Age and Ageing	Age and Ageing Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ageing.oxfordjournals.org/	volume_name=35
-	released	Oxford University Press	Age and Ageing	Age and Ageing Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ageing.oxfordjournals.org/	volume_name=36
-	released	Oxford University Press	Alcohol and Alcoholism	Alcohol and Alcoholism Volume 40	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alcalc.oxfordjournals.org/	volume_name=40
-	released	Oxford University Press	Alcohol and Alcoholism	Alcohol and Alcoholism Volume 41	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alcalc.oxfordjournals.org/	volume_name=41
-	released	Oxford University Press	Alcohol and Alcoholism	Alcohol and Alcoholism Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alcalc.oxfordjournals.org/	volume_name=42
-	released	Oxford University Press	American Journal of Epidemiology	American Journal of Epidemiology Volume 161	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=161
-	released	Oxford University Press	American Journal of Epidemiology	American Journal of Epidemiology Volume 162	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=162
-	released	Oxford University Press	American Journal of Epidemiology	American Journal of Epidemiology Volume 163	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=163
-	released	Oxford University Press	American Journal of Epidemiology	American Journal of Epidemiology Volume 164	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=164
-	released	Oxford University Press	American Journal of Epidemiology	American Journal of Epidemiology Volume 165	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=165
-	released	Oxford University Press	American Law and Economics Review	American Law and Economics Review Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aler.oxfordjournals.org/	volume_name=7
-old	released	Oxford University Press	American Law and Economics Review	American Law and Economics Review Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aler.oxfordjournals.org/	volume_name=8
-	released	Oxford University Press	American Literary History	American Literary History Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alh.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	American Literary History	American Literary History Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alh.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	American Literary History	American Literary History Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alh.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	Annals of Botany	Annals of Botany Volume 95	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=95
-	released	Oxford University Press	Annals of Botany	Annals of Botany Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=96
-old	released	Oxford University Press	Annals of Botany	Annals of Botany Volume 97	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=97
-	released	Oxford University Press	Annals of Botany	Annals of Botany Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=98
-	released	Oxford University Press	Annals of Botany	Annals of Botany Volume 99	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=99
-	released	Oxford University Press	Annals of Occupational Hygiene	Annals of Occupational Hygiene Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annhyg.oxfordjournals.org/	volume_name=49
-old	released	Oxford University Press	Annals of Occupational Hygiene	Annals of Occupational Hygiene Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annhyg.oxfordjournals.org/	volume_name=50
-	released	Oxford University Press	Annals of Occupational Hygiene	Annals of Occupational Hygiene Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annhyg.oxfordjournals.org/	volume_name=51
-	released	Oxford University Press	Annals of Oncology	Annals of Oncology Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annonc.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Annals of Oncology	Annals of Oncology Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annonc.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	Annals of Oncology	Annals of Oncology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annonc.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	Applied Linguistics	Applied Linguistics Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://applij.oxfordjournals.org/	volume_name=26
-old	released	Oxford University Press	Applied Linguistics	Applied Linguistics Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://applij.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Behavioral Ecology	Behavioral Ecology Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://beheco.oxfordjournals.org/	volume_name=16
-old	released	Oxford University Press	Behavioral Ecology	Behavioral Ecology Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://beheco.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	Behavioral Ecology	Behavioral Ecology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://beheco.oxfordjournals.org/	volume_name=18
-old	released	Oxford University Press	Bioinformatics	Bioinformatics Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bioinformatics.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	Bioinformatics	Bioinformatics Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bioinformatics.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Bioinformatics	Bioinformatics Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bioinformatics.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	Biometrika	Biometrika Volume 92	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biomet.oxfordjournals.org/	volume_name=92
-old	released	Oxford University Press	Biometrika	Biometrika Volume 93	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biomet.oxfordjournals.org/	volume_name=93
-	released	Oxford University Press	Biostatistics	Biostatistics Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biostatistics.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	Biostatistics	Biostatistics Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biostatistics.oxfordjournals.org/	volume_name=7
-	released	Oxford University Press	Biostatistics	Biostatistics Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biostatistics.oxfordjournals.org/	volume_name=8
-	released	Oxford University Press	BJA: Continuing Education in Anaesthesia, Critical Care & Pain	BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ceaccp.oxfordjournals.org/	volume_name=5
-old	released	Oxford University Press	BJA: Continuing Education in Anaesthesia, Critical Care & Pain	BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ceaccp.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	BJA: Continuing Education in Anaesthesia, Critical Care & Pain	BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ceaccp.oxfordjournals.org/	volume_name=7
-old	released	Oxford University Press	Brain	Brain Volume 128	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brain.oxfordjournals.org/	volume_name=128
-	released	Oxford University Press	Brain	Brain Volume 129	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brain.oxfordjournals.org/	volume_name=129
-	released	Oxford University Press	Brain	Brain Volume 130	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brain.oxfordjournals.org/	volume_name=130
-old	released	Oxford University Press	Brief Treatment and Crisis Intervention	Brief Treatment and Crisis Intervention Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brief-treatment.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	Brief Treatment and Crisis Intervention	Brief Treatment and Crisis Intervention Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brief-treatment.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	Brief Treatment and Crisis Intervention	Brief Treatment and Crisis Intervention Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brief-treatment.oxfordjournals.org/	volume_name=7
-old	released	Oxford University Press	Briefings in Bioinformatics	Briefings in Bioinformatics Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bib.oxfordjournals.org/	volume_name=7
-	released	Oxford University Press	Briefings in Bioinformatics	Briefings in Bioinformatics Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bib.oxfordjournals.org/	volume_name=8
-old	released	Oxford University Press	Briefings in Functional Genomics and Proteomics	Briefings in Functional Genomics and Proteomics Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bfgp.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	British Journal of Anaesthesia	British Journal of Anaesthesia Volume 94	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=94
-	released	Oxford University Press	British Journal of Anaesthesia	British Journal of Anaesthesia Volume 95	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=95
-old	released	Oxford University Press	British Journal of Anaesthesia	British Journal of Anaesthesia Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=96
-	released	Oxford University Press	British Journal of Anaesthesia	British Journal of Anaesthesia Volume 97	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=97
-	released	Oxford University Press	British Journal of Anaesthesia	British Journal of Anaesthesia Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=98
-	released	Oxford University Press	British Journal of Social Work	British Journal of Social Work Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjsw.oxfordjournals.org/	volume_name=35
-old	released	Oxford University Press	British Journal of Social Work	British Journal of Social Work Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjsw.oxfordjournals.org/	volume_name=36
-	released	Oxford University Press	British Journal of Social Work	British Journal of Social Work Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjsw.oxfordjournals.org/	volume_name=37
-	manifest	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 72	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=72
-	released	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 73-74	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=73-74
-	released	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 75-76	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=75-76
-	released	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 77-78	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=77-78
-	manifest	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 79-80	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=79-80
-	manifest	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 81-82	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=81-82
-	manifest	Oxford University Press	British Medical Bulletin	British Medical Bulletin Volume 83	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=83
-	released	Oxford University Press	Bulletin of the London Mathematical Society	Bulletin of the London Mathematical Society Volume 39	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://blms.oxfordjournals.org/	volume_name=39
-	released	Oxford University Press	Cambridge Journal of Economics	Cambridge Journal of Economics Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cje.oxfordjournals.org/	volume_name=29
-old	released	Oxford University Press	Cambridge Journal of Economics	Cambridge Journal of Economics Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cje.oxfordjournals.org/	volume_name=30
-	released	Oxford University Press	Cambridge Journal of Economics	Cambridge Journal of Economics Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cje.oxfordjournals.org/	volume_name=31
-	manifest	Oxford University Press	Capital Markets Law Journal	Capital Markets Law Journal Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cmlj.oxfordjournals.org/	volume_name=1
-old	released	Oxford University Press	Carcinogenesis	Carcinogenesis Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://carcin.oxfordjournals.org/	volume_name=26
-	released	Oxford University Press	Carcinogenesis	Carcinogenesis Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://carcin.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Carcinogenesis	Carcinogenesis Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://carcin.oxfordjournals.org/	volume_name=28
-old	released	Oxford University Press	Cerebral Cortex	Cerebral Cortex Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cercor.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Cerebral Cortex	Cerebral Cortex Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cercor.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Cerebral Cortex	Cerebral Cortex Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cercor.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	CESifo Economic Studies	CESifo Economic Studies Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cesifo.oxfordjournals.org/	volume_name=51
-old	released	Oxford University Press	CESifo Economic Studies	CESifo Economic Studies Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cesifo.oxfordjournals.org/	volume_name=52
-	released	Oxford University Press	Chemical Senses	Chemical Senses Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chemse.oxfordjournals.org/	volume_name=30
-old	released	Oxford University Press	Chemical Senses	Chemical Senses Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chemse.oxfordjournals.org/	volume_name=31
-	released	Oxford University Press	Chemical Senses	Chemical Senses Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chemse.oxfordjournals.org/	volume_name=32
-old	released	Oxford University Press	Chinese Journal of International Law	Chinese Journal of International Law Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chinesejil.oxfordjournals.org/	volume_name=4
-	released	Oxford University Press	Chinese Journal of International Law	Chinese Journal of International Law Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chinesejil.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	Chinese Journal of International Politics	Chinese Journal of International Politics Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjip.oxfordjournals.org/	volume_name=1
-	released	Oxford University Press	Community Development Journal	Community Development Journal Volume 40	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdj.oxfordjournals.org/	volume_name=40
-old	released	Oxford University Press	Community Development Journal	Community Development Journal Volume 41	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdj.oxfordjournals.org/	volume_name=41
-	released	Oxford University Press	Community Development Journal	Community Development Journal Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdj.oxfordjournals.org/	volume_name=42
-old	released	Oxford University Press	Computer Journal	Computer Journal Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://comjnl.oxfordjournals.org/	volume_name=49
-	released	Oxford University Press	Computer Journal	Computer Journal Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://comjnl.oxfordjournals.org/	volume_name=50
-old	released	Oxford University Press	Contributions to Political Economy	Contributions to Political Economy Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cpe.oxfordjournals.org/	volume_name=24
-	released	Oxford University Press	Contributions to Political Economy	Contributions to Political Economy Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cpe.oxfordjournals.org/	volume_name=25
-old	released	Oxford University Press	DNA Research	DNA Research Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://dnaresearch.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Early Music	Early Music Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://em.oxfordjournals.org/	volume_name=33
-	released	Oxford University Press	Early Music	Early Music Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://em.oxfordjournals.org/	volume_name=34
-	released	Oxford University Press	ELT Journal	ELT Journal Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eltj.oxfordjournals.org/	volume_name=59
-old	released	Oxford University Press	ELT Journal	ELT Journal Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eltj.oxfordjournals.org/	volume_name=60
-	released	Oxford University Press	ELT Journal	ELT Journal Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eltj.oxfordjournals.org/	volume_name=61
-	released	Oxford University Press	English Historical Review	English Historical Review Volume 120	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ehr.oxfordjournals.org/	volume_name=120
-	released	Oxford University Press	English Historical Review	English Historical Review Volume CXXI	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ehr.oxfordjournals.org/	volume_name=CXXI
-	released	Oxford University Press	English Historical Review	English Historical Review Volume CXXII	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ehr.oxfordjournals.org/	volume_name=CXXII
-	released	Oxford University Press	Enterprise & Society	Enterprise & Society Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://es.oxfordjournals.org/	volume_name=6
-old	released	Oxford University Press	Enterprise & Society	Enterprise & Society Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://es.oxfordjournals.org/	volume_name=7
-old	released	Oxford University Press	Epidemiologic Reviews	Epidemiologic Reviews Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://epirev.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Epidemiologic Reviews	Epidemiologic Reviews Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://epirev.oxfordjournals.org/	volume_name=28
-old	released	Oxford University Press	ESHRE Monographs	ESHRE Monographs 2005	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eshremonographs.oxfordjournals.org/	volume_name=2005
-	released	Oxford University Press	ESHRE Monographs	ESHRE Monographs 2006	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eshremonographs.oxfordjournals.org/	volume_name=2006
-	released	Oxford University Press	ESHRE Monographs	ESHRE Monographs 2007	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eshremonographs.oxfordjournals.org/	volume_name=2007
-old	released	Oxford University Press	Essays in Criticism	Essays in Criticism Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eic.oxfordjournals.org/	volume_name=55
-	released	Oxford University Press	Essays in Criticism	Essays in Criticism Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eic.oxfordjournals.org/	volume_name=56
-	released	Oxford University Press	Essays in Criticism	Essays in Criticism Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eic.oxfordjournals.org/	volume_name=57
-old	released	Oxford University Press	Europace	Europace Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://europace.oxfordjournals.org/	volume_name=8
-	released	Oxford University Press	Europace	Europace Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://europace.oxfordjournals.org/	volume_name=9
-	released	Oxford University Press	European Heart Journal	European Heart Journal Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartj.oxfordjournals.org/	volume_name=26
-	released	Oxford University Press	European Heart Journal	European Heart Journal Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartj.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	European Heart Journal	European Heart Journal Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartj.oxfordjournals.org/	volume_name=28
-	released	Oxford University Press	European Heart Journal Supplements	European Heart Journal Supplements Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartjsupp.oxfordjournals.org/	volume_name=7
-old	released	Oxford University Press	European Heart Journal Supplements	European Heart Journal Supplements Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartjsupp.oxfordjournals.org/	volume_name=8
-	released	Oxford University Press	European Heart Journal Supplements	European Heart Journal Supplements Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartjsupp.oxfordjournals.org/	volume_name=9
-	released	Oxford University Press	European Journal of International Law	European Journal of International Law Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejil.oxfordjournals.org/	volume_name=16
-old	released	Oxford University Press	European Journal of International Law	European Journal of International Law Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejil.oxfordjournals.org/	volume_name=17
-old	released	Oxford University Press	European Journal of Orthodontics	European Journal of Orthodontics Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejo.oxfordjournals.org/	volume_name=28
-	released	Oxford University Press	European Journal of Orthodontics	European Journal of Orthodontics Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejo.oxfordjournals.org/	volume_name=29
-	released	Oxford University Press	European Journal of Public Health	European Journal of Public Health Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurpub.oxfordjournals.org/	volume_name=15
-old	released	Oxford University Press	European Journal of Public Health	European Journal of Public Health Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurpub.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	European Journal of Public Health	European Journal of Public Health Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurpub.oxfordjournals.org/	volume_name=17
-	manifest	Oxford University Press	European Review of Agricultural Economics	European Review of Agricultural Economics Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://erae.oxfordjournals.org/	volume_name=32
-	manifest	Oxford University Press	European Review of Agricultural Economics	European Review of Agricultural Economics Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://erae.oxfordjournals.org/	volume_name=33
-	released	Oxford University Press	European Sociological Review	European Sociological Review Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://esr.oxfordjournals.org/	volume_name=21
-old	released	Oxford University Press	European Sociological Review	European Sociological Review Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://esr.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	European Sociological Review	European Sociological Review Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://esr.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	Evidence-based Complementary and Alternative Medicine	Evidence-based Complementary and Alternative Medicine Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecam.oxfordjournals.org/	volume_name=2
-old	released	Oxford University Press	Evidence-based Complementary and Alternative Medicine	Evidence-based Complementary and Alternative Medicine Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecam.oxfordjournals.org/	volume_name=3
-	released	Oxford University Press	Family Practice	Family Practice Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fampra.oxfordjournals.org/	volume_name=22
-old	released	Oxford University Press	Family Practice	Family Practice Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fampra.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	Forestry	Forestry Volume 78	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://forestry.oxfordjournals.org/	volume_name=78
-old	released	Oxford University Press	Forestry	Forestry Volume 79	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://forestry.oxfordjournals.org/	volume_name=79
-	released	Oxford University Press	Forestry	Forestry Volume 80	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://forestry.oxfordjournals.org/	volume_name=80
-	released	Oxford University Press	Forum for Modern Language Studies	Forum for Modern Language Studies Volume 41	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fmls.oxfordjournals.org/	volume_name=41
-old	released	Oxford University Press	Forum for Modern Language Studies	Forum for Modern Language Studies Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fmls.oxfordjournals.org/	volume_name=42
-	released	Oxford University Press	French History	French History Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fh.oxfordjournals.org/	volume_name=19
-old	released	Oxford University Press	French History	French History Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fh.oxfordjournals.org/	volume_name=20
-	released	Oxford University Press	French Studies	French Studies Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fs.oxfordjournals.org/	volume_name=59
-old	released	Oxford University Press	French Studies	French Studies Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fs.oxfordjournals.org/	volume_name=60
-	released	Oxford University Press	French Studies	French Studies Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fs.oxfordjournals.org/	volume_name=61
-	released	Oxford University Press	French Studies Bulletin	French Studies Bulletin Volume LX	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fsb.oxfordjournals.org/	volume_name=LX
-old	released	Oxford University Press	Glycobiology	Glycobiology Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://glycob.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Glycobiology	Glycobiology Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://glycob.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Glycobiology	Glycobiology Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://glycob.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	Health Education Research	Health Education Research Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://her.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Health Education Research	Health Education Research Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://her.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	Health Education Research	Health Education Research Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://her.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Health Policy and Planning	Health Policy and Planning Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapol.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Health Policy and Planning	Health Policy and Planning Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapol.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	Health Policy and Planning	Health Policy and Planning Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapol.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Health Promotion International	Health Promotion International Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapro.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Health Promotion International	Health Promotion International Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapro.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	History Workshop Journal	History Workshop Journal Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=59
-	released	Oxford University Press	History Workshop Journal	History Workshop Journal Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=60
-old	released	Oxford University Press	History Workshop Journal	History Workshop Journal Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=61
-	released	Oxford University Press	History Workshop Journal	History Workshop Journal Volume 62	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=62
-	released	Oxford University Press	Holocaust and Genocide Studies	Holocaust and Genocide Studies Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hgs.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	Holocaust and Genocide Studies	Holocaust and Genocide Studies Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hgs.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Human Molecular Genetics	Human Molecular Genetics Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hmg.oxfordjournals.org/	volume_name=14
-	released	Oxford University Press	Human Molecular Genetics	Human Molecular Genetics Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hmg.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Human Molecular Genetics	Human Molecular Genetics Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hmg.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Human Reproduction	Human Reproduction Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humrep.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Human Reproduction	Human Reproduction Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humrep.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	Human Reproduction	Human Reproduction Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humrep.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Human Reproduction Update	Human Reproduction Update Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humupd.oxfordjournals.org/	volume_name=11
-old	released	Oxford University Press	Human Reproduction Update	Human Reproduction Update Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humupd.oxfordjournals.org/	volume_name=12
-	released	Oxford University Press	Human Reproduction Update	Human Reproduction Update Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humupd.oxfordjournals.org/	volume_name=13
-	released	Oxford University Press	Human Rights Law Review	Human Rights Law Review Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hrlr.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	Human Rights Law Review	Human Rights Law Review Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hrlr.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	ICES Journal of Marine Science	ICES Journal of Marine Science Volume 64	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icesjms.oxfordjournals.org/	volume_name=64
-	released	Oxford University Press	IEICE-Transactions on Communications	IEICE-Transactions on Communications Volume E89-B	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietcom.oxfordjournals.org/	volume_name=E89-B
-	released	Oxford University Press	IEICE-Transactions on Communications	IEICE-Transactions on Communications Volume E90-B	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietcom.oxfordjournals.org/	volume_name=E90-B
-	released	Oxford University Press	IEICE-Transactions on Electronics	IEICE-Transactions on Electronics Volume E89-C	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietele.oxfordjournals.org/	volume_name=E89-C
-	released	Oxford University Press	IEICE-Transactions on Electronics	IEICE-Transactions on Electronics Volume E90-C	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietele.oxfordjournals.org/	volume_name=E90-C
-	released	Oxford University Press	IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science	IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E89-A	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietfec.oxfordjournals.org/	volume_name=E89-A
-	released	Oxford University Press	IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science	IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietfec.oxfordjournals.org/	volume_name=E90-A
-	released	Oxford University Press	IEICE-Transactions on Information and Systems	IEICE-Transactions on Information and Systems Volume E89-D	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietisy.oxfordjournals.org/	volume_name=E89-D
-	released	Oxford University Press	IEICE-Transactions on Information and Systems	IEICE-Transactions on Information and Systems Volume E90-D	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietisy.oxfordjournals.org/	volume_name=E90-D
-	released	Oxford University Press	IMA Journal of Applied Mathematics	IMA Journal of Applied Mathematics Volume 70	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamat.oxfordjournals.org/	volume_name=70
-old	released	Oxford University Press	IMA Journal of Applied Mathematics	IMA Journal of Applied Mathematics Volume 71	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamat.oxfordjournals.org/	volume_name=71
-	released	Oxford University Press	IMA Journal of Applied Mathematics	IMA Journal of Applied Mathematics Volume 72	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamat.oxfordjournals.org/	volume_name=72
-	released	Oxford University Press	IMA Journal of Management Mathematics	IMA Journal of Management Mathematics Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imaman.oxfordjournals.org/	volume_name=16
-old	released	Oxford University Press	IMA Journal of Management Mathematics	IMA Journal of Management Mathematics Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imaman.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	IMA Journal of Management Mathematics	IMA Journal of Management Mathematics Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imaman.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	IMA Journal of Mathematical Control and Information	IMA Journal of Mathematical Control and Information Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamci.oxfordjournals.org/	volume_name=22
-old	released	Oxford University Press	IMA Journal of Mathematical Control and Information	IMA Journal of Mathematical Control and Information Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamci.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	IMA Journal of Numerical Analysis	IMA Journal of Numerical Analysis Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imajna.oxfordjournals.org/	volume_name=25
-old	released	Oxford University Press	IMA Journal of Numerical Analysis	IMA Journal of Numerical Analysis Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imajna.oxfordjournals.org/	volume_name=26
-	released	Oxford University Press	IMA Journal of Numerical Analysis	IMA Journal of Numerical Analysis Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imajna.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Industrial and Corporate Change	Industrial and Corporate Change Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icc.oxfordjournals.org/	volume_name=14
-old	released	Oxford University Press	Industrial and Corporate Change	Industrial and Corporate Change Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icc.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Industrial Law Journal	Industrial Law Journal Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ilj.oxfordjournals.org/	volume_name=34
-old	released	Oxford University Press	Industrial Law Journal	Industrial Law Journal Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ilj.oxfordjournals.org/	volume_name=35
-	released	Oxford University Press	Integrative and Comparative Biology	Integrative and Comparative Biology Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icb.oxfordjournals.org/	volume_name=45
-old	released	Oxford University Press	Integrative and Comparative Biology	Integrative and Comparative Biology Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icb.oxfordjournals.org/	volume_name=46
-	released	Oxford University Press	International and Comparative Law Quarterly	International and Comparative Law Quarterly Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iclq.oxfordjournals.org/	volume_name=54
-old	released	Oxford University Press	International and Comparative Law Quarterly	International and Comparative Law Quarterly Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iclq.oxfordjournals.org/	volume_name=55
-	released	Oxford University Press	International and Comparative Law Quarterly	International and Comparative Law Quarterly Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iclq.oxfordjournals.org/	volume_name=56
-old	released	Oxford University Press	International Immunology	International Immunology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intimm.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	International Immunology	International Immunology Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intimm.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	International Journal for Quality in Health Care	International Journal for Quality in Health Care Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intqhc.oxfordjournals.org/	volume_name=17
-old	released	Oxford University Press	International Journal for Quality in Health Care	International Journal for Quality in Health Care Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intqhc.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	International Journal for Quality in Health Care	International Journal for Quality in Health Care Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intqhc.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	International Journal of Constitutional Law	International Journal of Constitutional Law Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icon.oxfordjournals.org/	volume_name=3
-old	released	Oxford University Press	International Journal of Constitutional Law	International Journal of Constitutional Law Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icon.oxfordjournals.org/	volume_name=4
-	released	Oxford University Press	International Journal of Constitutional Law	International Journal of Constitutional Law Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icon.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	International Journal of Epidemiology	International Journal of Epidemiology Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ije.oxfordjournals.org/	volume_name=34
-old	released	Oxford University Press	International Journal of Epidemiology	International Journal of Epidemiology Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ije.oxfordjournals.org/	volume_name=35
-old	released	Oxford University Press	International Journal of Law and Information Technology	International Journal of Law and Information Technology Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijlit.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	International Journal of Law and Information Technology	International Journal of Law and Information Technology Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijlit.oxfordjournals.org/	volume_name=14
-	released	Oxford University Press	International Journal of Law and Information Technology	International Journal of Law and Information Technology Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijlit.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	International Journal of Law, Policy and the Family	International Journal of Law, Policy and the Family Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lawfam.oxfordjournals.org/	volume_name=19
-old	released	Oxford University Press	International Journal of Law, Policy and the Family	International Journal of Law, Policy and the Family Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lawfam.oxfordjournals.org/	volume_name=20
-	released	Oxford University Press	International Journal of Lexicography	International Journal of Lexicography Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijl.oxfordjournals.org/	volume_name=18
-old	released	Oxford University Press	International Journal of Lexicography	International Journal of Lexicography Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijl.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	International Journal of Public Opinion Research	International Journal of Public Opinion Research Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijpor.oxfordjournals.org/	volume_name=17
-old	released	Oxford University Press	International Journal of Public Opinion Research	International Journal of Public Opinion Research Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijpor.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	International Journal of Refugee Law	International Journal of Refugee Law Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijrl.oxfordjournals.org/	volume_name=17
-old	released	Oxford University Press	International Journal of Refugee Law	International Journal of Refugee Law Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijrl.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	International Journal of Transitional Justice	International Journal of Transitional Justice Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijtj.oxfordjournals.org/	volume_name=1
-	released	Oxford University Press	International Relations of the Asia-Pacific	International Relations of the Asia-Pacific Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://irap.oxfordjournals.org/	volume_name=5
-old	released	Oxford University Press	International Relations of the Asia-Pacific	International Relations of the Asia-Pacific Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://irap.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	International Relations of the Asia-Pacific	International Relations of the Asia-Pacific Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://irap.oxfordjournals.org/	volume_name=7
-	released	Oxford University Press	ITNOW	ITNOW Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://itnow.oxfordjournals.org/	volume_name=47
-old	released	Oxford University Press	ITNOW	ITNOW Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://itnow.oxfordjournals.org/	volume_name=48
-	released	Oxford University Press	ITNOW	ITNOW Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://itnow.oxfordjournals.org/	volume_name=49
-	released	Oxford University Press	Japanese Journal of Clinical Oncology	Japanese Journal of Clinical Oncology Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jjco.oxfordjournals.org/	volume_name=35
-old	released	Oxford University Press	Japanese Journal of Clinical Oncology	Japanese Journal of Clinical Oncology Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jjco.oxfordjournals.org/	volume_name=36
-	released	Oxford University Press	Japanese Journal of Clinical Oncology	Japanese Journal of Clinical Oncology Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jjco.oxfordjournals.org/	volume_name=37
-	released	Oxford University Press	JNCI Journal of the National Cancer Institute	JNCI Journal of the National Cancer Institute Volume 99	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jnci.oxfordjournals.org/	volume_name=99
-	released	Oxford University Press	Journal of African Economies	Journal of African Economies Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jae.oxfordjournals.org/	volume_name=14
-old	released	Oxford University Press	Journal of African Economies	Journal of African Economies Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jae.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Journal of African Economies	Journal of African Economies Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jae.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Journal of Antimicrobial Chemotherapy	Journal of Antimicrobial Chemotherapy Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=55
-	released	Oxford University Press	Journal of Antimicrobial Chemotherapy	Journal of Antimicrobial Chemotherapy Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=56
-old	released	Oxford University Press	Journal of Antimicrobial Chemotherapy	Journal of Antimicrobial Chemotherapy Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=57
-	released	Oxford University Press	Journal of Antimicrobial Chemotherapy	Journal of Antimicrobial Chemotherapy Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=58
-	released	Oxford University Press	Journal of Antimicrobial Chemotherapy	Journal of Antimicrobial Chemotherapy Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=59
-	released	Oxford University Press	Journal of Competition Law and Economics	Journal of Competition Law and Economics Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcle.oxfordjournals.org/	volume_name=1
-old	released	Oxford University Press	Journal of Competition Law and Economics	Journal of Competition Law and Economics Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcle.oxfordjournals.org/	volume_name=2
-	released	Oxford University Press	Journal of Conflict and Security Law	Journal of Conflict and Security Law Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcsl.oxfordjournals.org/	volume_name=10
-old	released	Oxford University Press	Journal of Conflict and Security Law	Journal of Conflict and Security Law Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcsl.oxfordjournals.org/	volume_name=11
-	released	Oxford University Press	Journal of Deaf Studies and Deaf Education	Journal of Deaf Studies and Deaf Education Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdsde.oxfordjournals.org/	volume_name=10
-	released	Oxford University Press	Journal of Deaf Studies and Deaf Education	Journal of Deaf Studies and Deaf Education Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdsde.oxfordjournals.org/	volume_name=11
-	released	Oxford University Press	Journal of Deaf Studies and Deaf Education	Journal of Deaf Studies and Deaf Education Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdsde.oxfordjournals.org/	volume_name=12
-	released	Oxford University Press	Journal of Design History	Journal of Design History Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdh.oxfordjournals.org/	volume_name=18
-old	released	Oxford University Press	Journal of Design History	Journal of Design History Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdh.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	Journal of Economic Geography	Journal of Economic Geography Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://joeg.oxfordjournals.org/	volume_name=5
-old	released	Oxford University Press	Journal of Economic Geography	Journal of Economic Geography Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://joeg.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	Journal of Economic Geography	Journal of Economic Geography Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://joeg.oxfordjournals.org/	volume_name=7
-	released	Oxford University Press	Journal of Electron Microscopy	Journal of Electron Microscopy Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jmicro.oxfordjournals.org/	volume_name=54
-old	released	Oxford University Press	Journal of Electron Microscopy	Journal of Electron Microscopy Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jmicro.oxfordjournals.org/	volume_name=55
-	released	Oxford University Press	Journal of Environmental Law	Journal of Environmental Law Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jel.oxfordjournals.org/	volume_name=17
-old	released	Oxford University Press	Journal of Environmental Law	Journal of Environmental Law Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jel.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	Journal of Experimental Botany	Journal of Experimental Botany Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jxb.oxfordjournals.org/	volume_name=56
-old	released	Oxford University Press	Journal of Experimental Botany	Journal of Experimental Botany Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jxb.oxfordjournals.org/	volume_name=57
-	released	Oxford University Press	Journal of Experimental Botany	Journal of Experimental Botany Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jxb.oxfordjournals.org/	volume_name=58
-	released	Oxford University Press	Journal of Financial Econometrics	Journal of Financial Econometrics Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jfec.oxfordjournals.org/	volume_name=3
-old	released	Oxford University Press	Journal of Financial Econometrics	Journal of Financial Econometrics Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jfec.oxfordjournals.org/	volume_name=4
-	released	Oxford University Press	Journal of Financial Econometrics	Journal of Financial Econometrics Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jfec.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	Journal of Heredity	Journal of Heredity Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhered.oxfordjournals.org/	volume_name=96
-old	released	Oxford University Press	Journal of Heredity	Journal of Heredity Volume 97	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhered.oxfordjournals.org/	volume_name=97
-	released	Oxford University Press	Journal of Heredity	Journal of Heredity Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhered.oxfordjournals.org/	volume_name=98
-	released	Oxford University Press	Journal of Intellectual Property Law & Practice	Journal of Intellectual Property Law & Practice Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiplp.oxfordjournals.org/	volume_name=1
-	released	Oxford University Press	Journal of Intellectual Property Law & Practice	Journal of Intellectual Property Law & Practice Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiplp.oxfordjournals.org/	volume_name=2
-	manifest	Oxford University Press	Journal of International Criminal Justice	Journal of International Criminal Justice Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicj.oxfordjournals.org/	volume_name=3
-old	released	Oxford University Press	Journal of International Criminal Justice	Journal of International Criminal Justice Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicj.oxfordjournals.org/	volume_name=4
-	released	Oxford University Press	Journal of International Economic Law	Journal of International Economic Law Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiel.oxfordjournals.org/	volume_name=8
-old	released	Oxford University Press	Journal of International Economic Law	Journal of International Economic Law Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiel.oxfordjournals.org/	volume_name=9
-	released	Oxford University Press	Journal of Islamic Studies	Journal of Islamic Studies Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jis.oxfordjournals.org/	volume_name=16
-old	released	Oxford University Press	Journal of Islamic Studies	Journal of Islamic Studies Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jis.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	Journal of Islamic Studies	Journal of Islamic Studies Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jis.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	Journal of Law, Economics, and Organization	Journal of Law, Economics, and Organization Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jleo.oxfordjournals.org/	volume_name=21
-old	released	Oxford University Press	Journal of Law, Economics, and Organization	Journal of Law, Economics, and Organization Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jleo.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Journal of Law, Economics, and Organization	Journal of Law, Economics, and Organization Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jleo.oxfordjournals.org/	volume_name=23
-old	released	Oxford University Press	Journal of Logic and Computation	Journal of Logic and Computation Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://logcom.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Journal of Logic and Computation	Journal of Logic and Computation Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://logcom.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Journal of Logic and Computation	Journal of Logic and Computation Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://logcom.oxfordjournals.org/	volume_name=17
-	manifest	Oxford University Press	Journal of Molluscan Studies	Journal of Molluscan Studies Volume 71	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mollus.oxfordjournals.org/	volume_name=71
-old	released	Oxford University Press	Journal of Molluscan Studies	Journal of Molluscan Studies Volume 72	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mollus.oxfordjournals.org/	volume_name=72
-	released	Oxford University Press	Journal of Pediatric Psychology	Journal of Pediatric Psychology Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpepsy.oxfordjournals.org/	volume_name=30
-old	released	Oxford University Press	Journal of Pediatric Psychology	Journal of Pediatric Psychology Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpepsy.oxfordjournals.org/	volume_name=31
-	released	Oxford University Press	Journal of Pediatric Psychology	Journal of Pediatric Psychology Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpepsy.oxfordjournals.org/	volume_name=32
-old	released	Oxford University Press	Journal of Petrology	Journal of Petrology Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://petrology.oxfordjournals.org/	volume_name=46
-	released	Oxford University Press	Journal of Petrology	Journal of Petrology Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://petrology.oxfordjournals.org/	volume_name=47
-	released	Oxford University Press	Journal of Petrology	Journal of Petrology Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://petrology.oxfordjournals.org/	volume_name=48
-old	released	Oxford University Press	Journal of Plankton Research	Journal of Plankton Research Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://plankt.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Journal of Plankton Research	Journal of Plankton Research Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://plankt.oxfordjournals.org/	volume_name=28
-	released	Oxford University Press	Journal of Public Administration Research and Theory	Journal of Public Administration Research and Theory Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpart.oxfordjournals.org/	volume_name=15
-old	released	Oxford University Press	Journal of Public Administration Research and Theory	Journal of Public Administration Research and Theory Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpart.oxfordjournals.org/	volume_name=16
-	released	Oxford University Press	Journal of Public Administration Research and Theory	Journal of Public Administration Research and Theory Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpart.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	Journal of Public Health	Journal of Public Health Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpubhealth.oxfordjournals.org/	volume_name=27
-old	released	Oxford University Press	Journal of Public Health	Journal of Public Health Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpubhealth.oxfordjournals.org/	volume_name=28
-old	released	Oxford University Press	Journal of Refugee Studies	Journal of Refugee Studies Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrs.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	Journal of Refugee Studies	Journal of Refugee Studies Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrs.oxfordjournals.org/	volume_name=19
-old	released	Oxford University Press	Journal of Semantics	Journal of Semantics Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jos.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Journal of Semantics	Journal of Semantics Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jos.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	Journal of Semantics	Journal of Semantics Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jos.oxfordjournals.org/	volume_name=24
-	released	Oxford University Press	Journal of Semitic Studies	Journal of Semitic Studies Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jss.oxfordjournals.org/	volume_name=50
-old	released	Oxford University Press	Journal of Semitic Studies	Journal of Semitic Studies Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jss.oxfordjournals.org/	volume_name=51
-	released	Oxford University Press	Journal of the American Academy of Religion	Journal of the American Academy of Religion Volume 73	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jaar.oxfordjournals.org/	volume_name=73
-	released	Oxford University Press	Journal of the American Academy of Religion	Journal of the American Academy of Religion Volume 74	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jaar.oxfordjournals.org/	volume_name=74
-	ready	Oxford University Press	Journal of the American Academy of Religion	Journal of the American Academy of Religion Volume 75	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jaar.oxfordjournals.org/	volume_name=75
-old	released	Oxford University Press	Journal of the History of Collections	Journal of the History of Collections Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhc.oxfordjournals.org/	volume_name=17
-	released	Oxford University Press	Journal of the History of Collections	Journal of the History of Collections Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhc.oxfordjournals.org/	volume_name=18
-old	released	Oxford University Press	Journal of the History of Medicine and Allied Sciences	Journal of the History of Medicine and Allied Sciences Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhmas.oxfordjournals.org/	volume_name=60
-	released	Oxford University Press	Journal of the History of Medicine and Allied Sciences	Journal of the History of Medicine and Allied Sciences Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhmas.oxfordjournals.org/	volume_name=61
-	released	Oxford University Press	Journal of the History of Medicine and Allied Sciences	Journal of the History of Medicine and Allied Sciences Volume 62	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhmas.oxfordjournals.org/	volume_name=62
-	released	Oxford University Press	Journal of the ICRU	Journal of the ICRU Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicru.oxfordjournals.org/	volume_name=5
-old	released	Oxford University Press	Journal of the ICRU	Journal of the ICRU Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicru.oxfordjournals.org/	volume_name=6
-	released	Oxford University Press	Journal of the London Mathematical Society	Journal of the London Mathematical Society Volume 75	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jlms.oxfordjournals.org/	volume_name=75
-old	released	Oxford University Press	Journal of the Royal Musical Association	Journal of the Royal Musical Association Volume 130	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrma.oxfordjournals.org/	volume_name=130
-	released	Oxford University Press	Journal of the Royal Musical Association	Journal of the Royal Musical Association Volume 131	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrma.oxfordjournals.org/	volume_name=131
-	manifest	Oxford University Press	Journal of Topology	Journal of Topology Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jtopol.oxfordjournals.org/	volume_name=1
-	ready	Oxford University Press	Journal of Tropical Pediatrics	Journal of Tropical Pediatrics Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tropej.oxfordjournals.org/	volume_name=51
-old	released	Oxford University Press	Journal of Tropical Pediatrics	Journal of Tropical Pediatrics Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tropej.oxfordjournals.org/	volume_name=52
-	ready	Oxford University Press	Journal of Tropical Pediatrics	Journal of Tropical Pediatrics Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tropej.oxfordjournals.org/	volume_name=53
-old	released	Oxford University Press	Law, Probability and Risk	Law, Probability and Risk Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lpr.oxfordjournals.org/	volume_name=4
-	released	Oxford University Press	Literary and Linguistic Computing	Literary and Linguistic Computing Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://llc.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Literary and Linguistic Computing	Literary and Linguistic Computing Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://llc.oxfordjournals.org/	volume_name=21
-	ready	Oxford University Press	Literary Imagination	Literary Imagination Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://litimag.oxfordjournals.org/	volume_name=8
-	released	Oxford University Press	Literature and Theology	Literature and Theology Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://litthe.oxfordjournals.org/	volume_name=19
-old	released	Oxford University Press	Literature and Theology	Literature and Theology Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://litthe.oxfordjournals.org/	volume_name=20
-	released	Oxford University Press	Logic Journal of the IGPL	Logic Journal of the IGPL Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jigpal.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Logic Journal of the IGPL	Logic Journal of the IGPL Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jigpal.oxfordjournals.org/	volume_name=14
-	released	Oxford University Press	Logic Journal of the IGPL	Logic Journal of the IGPL Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jigpal.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Mathematical Medicine and Biology	Mathematical Medicine and Biology Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imammb.oxfordjournals.org/	volume_name=22
-old	released	Oxford University Press	Mathematical Medicine and Biology	Mathematical Medicine and Biology Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imammb.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	Medical Law Review	Medical Law Review Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://medlaw.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Medical Law Review	Medical Law Review Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://medlaw.oxfordjournals.org/	volume_name=14
-	ready	Oxford University Press	Mind	Mind Volume 114	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mind.oxfordjournals.org/	volume_name=114
-old	released	Oxford University Press	Mind	Mind Volume 115	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mind.oxfordjournals.org/	volume_name=115
-	ready	Oxford University Press	Mind	Mind Volume 116	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mind.oxfordjournals.org/	volume_name=116
-	manifest	Oxford University Press	Modern Judaism	Modern Judaism Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mj.oxfordjournals.org/	volume_name=25
-old	released	Oxford University Press	Modern Judaism	Modern Judaism Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mj.oxfordjournals.org/	volume_name=26
-	manifest	Oxford University Press	Modern Judaism	Modern Judaism Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mj.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Molecular Biology and Evolution	Molecular Biology and Evolution Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mbe.oxfordjournals.org/	volume_name=22
-old	released	Oxford University Press	Molecular Biology and Evolution	Molecular Biology and Evolution Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mbe.oxfordjournals.org/	volume_name=23
-	released	Oxford University Press	Molecular Biology and Evolution	Molecular Biology and Evolution Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mbe.oxfordjournals.org/	volume_name=24
-	released	Oxford University Press	Molecular Human Reproduction	Molecular Human Reproduction Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://molehr.oxfordjournals.org/	volume_name=11
-	released	Oxford University Press	Molecular Human Reproduction	Molecular Human Reproduction Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://molehr.oxfordjournals.org/	volume_name=12
-	released	Oxford University Press	Molecular Human Reproduction	Molecular Human Reproduction Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://molehr.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Music and Letters	Music and Letters Volume 86	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ml.oxfordjournals.org/	volume_name=86
-	released	Oxford University Press	Music and Letters	Music and Letters Volume 87	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ml.oxfordjournals.org/	volume_name=87
-	released	Oxford University Press	Music and Letters	Music and Letters Volume 88	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ml.oxfordjournals.org/	volume_name=88
-	released	Oxford University Press	Mutagenesis	Mutagenesis Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mutage.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Mutagenesis	Mutagenesis Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mutage.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	Mutagenesis	Mutagenesis Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mutage.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Nephrology Dialysis Transplantation	Nephrology Dialysis Transplantation Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ndt.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	Nephrology Dialysis Transplantation	Nephrology Dialysis Transplantation Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ndt.oxfordjournals.org/	volume_name=21
-	released	Oxford University Press	Nephrology Dialysis Transplantation	Nephrology Dialysis Transplantation Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ndt.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Notes and Queries	Notes and Queries Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nq.oxfordjournals.org/	volume_name=52
-	released	Oxford University Press	Notes and Queries	Notes and Queries Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nq.oxfordjournals.org/	volume_name=53
-old	released	Oxford University Press	Nucleic Acids Research	Nucleic Acids Research Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nar.oxfordjournals.org/	volume_name=33
-	manifest	Oxford University Press	Nucleic Acids Research	Nucleic Acids Research Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nar.oxfordjournals.org/	volume_name=34
-	ready	Oxford University Press	Nucleic Acids Research	Nucleic Acids Research Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nar.oxfordjournals.org/	volume_name=35
-old	released	Oxford University Press	Nucleic Acids Symposium Series	Nucleic Acids Symposium Series Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nass.oxfordjournals.org/	volume_name=49
-	released	Oxford University Press	Nucleic Acids Symposium Series	Nucleic Acids Symposium Series Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nass.oxfordjournals.org/	volume_name=50
-	released	Oxford University Press	Occupational Medicine	Occupational Medicine Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://occmed.oxfordjournals.org/	volume_name=55
-old	released	Oxford University Press	Occupational Medicine	Occupational Medicine Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://occmed.oxfordjournals.org/	volume_name=56
-	released	Oxford University Press	Occupational Medicine	Occupational Medicine Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://occmed.oxfordjournals.org/	volume_name=57
-old	released	Oxford University Press	Oxford Art Journal	Oxford Art Journal Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oaj.oxfordjournals.org/	volume_name=28
-old	released	Oxford University Press	Oxford Art Journal	Oxford Art Journal Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oaj.oxfordjournals.org/	volume_name=29
-	released	Oxford University Press	Oxford Economic Papers	Oxford Economic Papers Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oep.oxfordjournals.org/	volume_name=57
-old	released	Oxford University Press	Oxford Economic Papers	Oxford Economic Papers Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oep.oxfordjournals.org/	volume_name=58
-	released	Oxford University Press	Oxford Economic Papers	Oxford Economic Papers Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oep.oxfordjournals.org/	volume_name=59
-	released	Oxford University Press	Oxford Journal of Legal Studies	Oxford Journal of Legal Studies Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ojls.oxfordjournals.org/	volume_name=25
-old	released	Oxford University Press	Oxford Journal of Legal Studies	Oxford Journal of Legal Studies Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ojls.oxfordjournals.org/	volume_name=26
-	released	Oxford University Press	Oxford Review of Economic Policy	Oxford Review of Economic Policy Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oxrep.oxfordjournals.org/	volume_name=21
-old	released	Oxford University Press	Oxford Review of Economic Policy	Oxford Review of Economic Policy Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oxrep.oxfordjournals.org/	volume_name=22
-	released	Oxford University Press	Parliamentary Affairs	Parliamentary Affairs Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pa.oxfordjournals.org/	volume_name=58
-old	released	Oxford University Press	Parliamentary Affairs	Parliamentary Affairs Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pa.oxfordjournals.org/	volume_name=59
-	released	Oxford University Press	Parliamentary Affairs	Parliamentary Affairs Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pa.oxfordjournals.org/	volume_name=60
-	released	Oxford University Press	Past & Present	Past & Present Volume 186	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=186
-	released	Oxford University Press	Past & Present	Past & Present Volume 187	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=187
-	manifest	Oxford University Press	Past & Present	Past & Present Volume 188	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=188
-	manifest	Oxford University Press	Past & Present	Past & Present Volume 189	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=189
-old	manifest	Oxford University Press	Past & Present	Past & Present Volume 190	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=190
-	manifest	Oxford University Press	Past & Present	Past & Present Volume 191	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=191
-	manifest	Oxford University Press	Past & Present	Past & Present Volume 192	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=192
-	manifest	Oxford University Press	Past & Present	Past & Present Volume 193	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=193
-	released	Oxford University Press	Philosophia Mathematica	Philosophia Mathematica Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://philmat.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Philosophia Mathematica	Philosophia Mathematica Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://philmat.oxfordjournals.org/	volume_name=14
-	released	Oxford University Press	Philosophia Mathematica	Philosophia Mathematica Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://philmat.oxfordjournals.org/	volume_name=15
-old	released	Oxford University Press	Plant and Cell Physiology	Plant and Cell Physiology Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pcp.oxfordjournals.org/	volume_name=47
-	released	Oxford University Press	Plant and Cell Physiology	Plant and Cell Physiology Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pcp.oxfordjournals.org/	volume_name=48
-	released	Oxford University Press	Political Analysis	Political Analysis Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pan.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Political Analysis	Political Analysis Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pan.oxfordjournals.org/	volume_name=14
-	released	Oxford University Press	Political Analysis	Political Analysis Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pan.oxfordjournals.org/	volume_name=15
-	released	Oxford University Press	Proceedings of the London Mathematical Society	Proceedings of the London Mathematical Society Volume 94	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://plms.oxfordjournals.org/	volume_name=94
-old	released	Oxford University Press	Protein Engineering Design and Selection	Protein Engineering Design and Selection Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://peds.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	Protein Engineering Design and Selection	Protein Engineering Design and Selection Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://peds.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	Protein Engineering Design and Selection	Protein Engineering Design and Selection Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://peds.oxfordjournals.org/	volume_name=20
-	released	Oxford University Press	Public Opinion Quarterly	Public Opinion Quarterly Volume 69	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://poq.oxfordjournals.org/	volume_name=69
-old	released	Oxford University Press	Public Opinion Quarterly	Public Opinion Quarterly Volume 70	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://poq.oxfordjournals.org/	volume_name=70
-old	released	Oxford University Press	Publius: The Journal of Federalism	Publius: The Journal of Federalism Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://publius.oxfordjournals.org/	volume_name=36
-	released	Oxford University Press	Publius: The Journal of Federalism	Publius: The Journal of Federalism Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://publius.oxfordjournals.org/	volume_name=37
-	released	Oxford University Press	QJM: An International Journal of Medicine	QJM: An International Journal of Medicine Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmed.oxfordjournals.org/	volume_name=98
-old	released	Oxford University Press	QJM: An International Journal of Medicine	QJM: An International Journal of Medicine Volume 99	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmed.oxfordjournals.org/	volume_name=99
-	manifest	Oxford University Press	QJM: An International Journal of Medicine	QJM: An International Journal of Medicine Volume 100	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmed.oxfordjournals.org/	volume_name=100
-	released	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 113	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=113
-	released	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 114	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=114
-	ready	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 115	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=115
-	ready	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 116	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=116
-	released	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 117	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=117
-old	released	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 118	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=118
-	released	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 119	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=119
-	released	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 120	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=120
-	ready	Oxford University Press	Radiation Protection Dosimetry	Radiation Protection Dosimetry Volume 121	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=121
-	released	Oxford University Press	Refugee Survey Quarterly	Refugee Survey Quarterly Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsq.oxfordjournals.org/	volume_name=24
-old	released	Oxford University Press	Refugee Survey Quarterly	Refugee Survey Quarterly Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsq.oxfordjournals.org/	volume_name=25
-	manifest	Oxford University Press	Review of Environmental Economics and Policy	Review of Environmental Economics and Policy Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://reep.oxfordjournals.org/	volume_name=1
-	ready	Oxford University Press	Review of Finance	Review of Finance Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rof.oxfordjournals.org/	volume_name=10
-	manifest	Oxford University Press	Review of Finance	Review of Finance Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rof.oxfordjournals.org/	volume_name=11
-	released	Oxford University Press	Review of Financial Studies	Review of Financial Studies Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rfs.oxfordjournals.org/	volume_name=18
-old	released	Oxford University Press	Review of Financial Studies	Review of Financial Studies Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rfs.oxfordjournals.org/	volume_name=19
-	released	Oxford University Press	Review of Financial Studies	Review of Financial Studies Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rfs.oxfordjournals.org/	volume_name=20
-	released	Oxford University Press	Rheumatology	Rheumatology Volume 44	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rheumatology.oxfordjournals.org/	volume_name=44
-	manifest	Oxford University Press	Rheumatology	Rheumatology Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rheumatology.oxfordjournals.org/	volume_name=45
-	manifest	Oxford University Press	Rheumatology	Rheumatology Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rheumatology.oxfordjournals.org/	volume_name=46
-	manifest	Oxford University Press	Schizophrenia Bulletin	Schizophrenia Bulletin Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://schizophreniabulletin.oxfordjournals.org/	volume_name=31
-old	released	Oxford University Press	Schizophrenia Bulletin	Schizophrenia Bulletin Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://schizophreniabulletin.oxfordjournals.org/	volume_name=32
-	ready	Oxford University Press	Schizophrenia Bulletin	Schizophrenia Bulletin Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://schizophreniabulletin.oxfordjournals.org/	volume_name=33
-old	released	Oxford University Press	Screen	Screen Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://screen.oxfordjournals.org/	volume_name=46
-	released	Oxford University Press	Screen	Screen Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://screen.oxfordjournals.org/	volume_name=47
-	manifest	Oxford University Press	Social Cognitive and Affective Neuroscience	Social Cognitive and Affective Neuroscience Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://scan.oxfordjournals.org/	volume_name=1
-old	released	Oxford University Press	Social History of Medicine	Social History of Medicine Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://shm.oxfordjournals.org/	volume_name=18
-	released	Oxford University Press	Social History of Medicine	Social History of Medicine Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://shm.oxfordjournals.org/	volume_name=19
-old	released	Oxford University Press	Social Politics: International Studies in Gender, State & Society	Social Politics: International Studies in Gender, State & Society Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sp.oxfordjournals.org/	volume_name=12
-	released	Oxford University Press	Social Politics: International Studies in Gender, State & Society	Social Politics: International Studies in Gender, State & Society Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sp.oxfordjournals.org/	volume_name=13
-old	released	Oxford University Press	Social Science Japan Journal	Social Science Japan Journal Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ssjj.oxfordjournals.org/	volume_name=8
-	ready	Oxford University Press	Social Science Japan Journal	Social Science Japan Journal Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ssjj.oxfordjournals.org/	volume_name=9
-	ready	Oxford University Press	Socio-Economic Review	Socio-Economic Review Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ser.oxfordjournals.org/	volume_name=3
-old	released	Oxford University Press	Socio-Economic Review	Socio-Economic Review Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ser.oxfordjournals.org/	volume_name=4
-	manifest	Oxford University Press	Socio-Economic Review	Socio-Economic Review Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ser.oxfordjournals.org/	volume_name=5
-	released	Oxford University Press	Statute Law Review	Statute Law Review Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://slr.oxfordjournals.org/	volume_name=26
-old	released	Oxford University Press	Statute Law Review	Statute Law Review Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://slr.oxfordjournals.org/	volume_name=27
-	released	Oxford University Press	Statute Law Review	Statute Law Review Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://slr.oxfordjournals.org/	volume_name=28
-	released	Oxford University Press	Teaching Mathematics and its Applications	Teaching Mathematics and its Applications Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://teamat.oxfordjournals.org/	volume_name=24
-old	released	Oxford University Press	Teaching Mathematics and its Applications	Teaching Mathematics and its Applications Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://teamat.oxfordjournals.org/	volume_name=25
-	released	Oxford University Press	The British Journal for the Philosophy of Science	The British Journal for the Philosophy of Science Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjps.oxfordjournals.org/	volume_name=56
-old	released	Oxford University Press	The British Journal for the Philosophy of Science	The British Journal for the Philosophy of Science Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjps.oxfordjournals.org/	volume_name=57
-	released	Oxford University Press	The British Journal of Aesthetic	The British Journal of Aesthetic Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjaesthetics.oxfordjournals.org/	volume_name=45
-old	released	Oxford University Press	The British Journal of Aesthetic	The British Journal of Aesthetic Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjaesthetics.oxfordjournals.org/	volume_name=46
-	released	Oxford University Press	The British Journal of Aesthetic	The British Journal of Aesthetic Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjaesthetics.oxfordjournals.org/	volume_name=47
-	released	Oxford University Press	The British Journal of Criminology: An International Review of Crime and Society	The British Journal of Criminology: An International Review of Crime and Society Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjc.oxfordjournals.org/	volume_name=45
-old	released	Oxford University Press	The British Journal of Criminology: An International Review of Crime and Society	The British Journal of Criminology: An International Review of Crime and Society Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjc.oxfordjournals.org/	volume_name=46
-	released	Oxford University Press	The British Journal of Criminology: An International Review of Crime and Society	The British Journal of Criminology: An International Review of Crime and Society Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjc.oxfordjournals.org/	volume_name=47
-	manifest	Oxford University Press	The Cambridge Quarterly	The Cambridge Quarterly Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://camqtly.oxfordjournals.org/	volume_name=34
-old	released	Oxford University Press	The Cambridge Quarterly	The Cambridge Quarterly Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://camqtly.oxfordjournals.org/	volume_name=35
-old	released	Oxford University Press	The Journal of Biochemistry	The Journal of Biochemistry Volume 139	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jb.oxfordjournals.org/	volume_name=139
-	ready	Oxford University Press	The Journal of Biochemistry	The Journal of Biochemistry Volume 140	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jb.oxfordjournals.org/	volume_name=140
-	released	Oxford University Press	The Journal of Theological Studies	The Journal of Theological Studies Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jts.oxfordjournals.org/	volume_name=56
-old	released	Oxford University Press	The Journal of Theological Studies	The Journal of Theological Studies Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jts.oxfordjournals.org/	volume_name=57
-	released	Oxford University Press	The Library	The Library Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://library.oxfordjournals.org/	volume_name=6
-old	released	Oxford University Press	The Library	The Library Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://library.oxfordjournals.org/	volume_name=7
-old	released	Oxford University Press	The Musical Quarterly	The Musical Quarterly Volume 87	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mq.oxfordjournals.org/	volume_name=87
-	released	Oxford University Press	The Musical Quarterly	The Musical Quarterly Volume 88	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mq.oxfordjournals.org/	volume_name=88
-old	released	Oxford University Press	The Opera Quarterly	The Opera Quarterly Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oq.oxfordjournals.org/	volume_name=21
-	manifest	Oxford University Press	The Opera Quarterly	The Opera Quarterly Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oq.oxfordjournals.org/	volume_name=22
-old	released	Oxford University Press	The Quarterly Journal of Mathematics	The Quarterly Journal of Mathematics Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmath.oxfordjournals.org/	volume_name=56
-	released	Oxford University Press	The Quarterly Journal of Mathematics	The Quarterly Journal of Mathematics Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmath.oxfordjournals.org/	volume_name=57
-	released	Oxford University Press	The Quarterly Journal of Mechanics and Applied Mathematics	The Quarterly Journal of Mechanics and Applied Mathematics Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmam.oxfordjournals.org/	volume_name=58
-	released	Oxford University Press	The Quarterly Journal of Mechanics and Applied Mathematics	The Quarterly Journal of Mechanics and Applied Mathematics Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmam.oxfordjournals.org/	volume_name=59
-	manifest	Oxford University Press	The Quarterly Journal of Mechanics and Applied Mathematics	The Quarterly Journal of Mechanics and Applied Mathematics Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmam.oxfordjournals.org/	volume_name=60
-	released	Oxford University Press	The Review of English Studies	The Review of English Studies Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://res.oxfordjournals.org/	volume_name=56
-old	released	Oxford University Press	The Review of English Studies	The Review of English Studies Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://res.oxfordjournals.org/	volume_name=57
-	released	Oxford University Press	The World Bank Economic Review	The World Bank Economic Review Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wber.oxfordjournals.org/	volume_name=19
-old	released	Oxford University Press	The World Bank Economic Review	The World Bank Economic Review Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wber.oxfordjournals.org/	volume_name=20
-	released	Oxford University Press	The World Bank Research Observer	The World Bank Research Observer Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wbro.oxfordjournals.org/	volume_name=20
-old	released	Oxford University Press	The World Bank Research Observer	The World Bank Research Observer Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wbro.oxfordjournals.org/	volume_name=21
-old	released	Oxford University Press	The Year's Work in Critical and Cultural Theory	The Year's Work in Critical and Cultural Theory Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywcct.oxfordjournals.org/	volume_name=13
-	released	Oxford University Press	The Year's Work in Critical and Cultural Theory	The Year's Work in Critical and Cultural Theory Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywcct.oxfordjournals.org/	volume_name=14
-old	released	Oxford University Press	The Year's Work in English Studies	The Year's Work in English Studies Volume 84	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywes.oxfordjournals.org/	volume_name=84
-	released	Oxford University Press	The Year's Work in English Studies	The Year's Work in English Studies Volume 85	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywes.oxfordjournals.org/	volume_name=85
-	released	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 83	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=83
-	released	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 84	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=84
-	released	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 85	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=85
-	released	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 86	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=86
-	released	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 87	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=87
-	released	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 88	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=88
-	manifest	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 89	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=89
-	manifest	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 90	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=90
-old	ready	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 91	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=91
-	ready	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 92	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=92
-	ready	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 93	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=93
-	ready	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 94	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=94
-	ready	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 95	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=95
-	ready	Oxford University Press	Toxicological Sciences	Toxicological Sciences Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=96
-	manifest	Oxford University Press	Trusts & Trustees	Trusts & Trustees Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tandt.oxfordjournals.org/	volume_name=12
-	released	Oxford University Press	Twentieth Century British History	Twentieth Century British History Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tcbh.oxfordjournals.org/	volume_name=16
-old	released	Oxford University Press	Twentieth Century British History	Twentieth Century British History Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tcbh.oxfordjournals.org/	volume_name=17
+#	@fixedValues	P=Oxford University Press
+#	@fixedValues	j=African Affairs
+old	released	African Affairs Volume 105	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afraf.oxfordjournals.org/	volume_name=105
+	released	African Affairs Volume 106	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afraf.oxfordjournals.org/	volume_name=106
+#	@fixedValues	j=Age and Ageing
+	released	Age and Ageing Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ageing.oxfordjournals.org/	volume_name=34
+old	released	Age and Ageing Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ageing.oxfordjournals.org/	volume_name=35
+	released	Age and Ageing Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ageing.oxfordjournals.org/	volume_name=36
+#	@fixedValues	j=Alcohol and Alcoholism
+	released	Alcohol and Alcoholism Volume 40	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alcalc.oxfordjournals.org/	volume_name=40
+	released	Alcohol and Alcoholism Volume 41	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alcalc.oxfordjournals.org/	volume_name=41
+	released	Alcohol and Alcoholism Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alcalc.oxfordjournals.org/	volume_name=42
+#	@fixedValues	j=American Journal of Epidemiology
+	released	American Journal of Epidemiology Volume 161	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=161
+	released	American Journal of Epidemiology Volume 162	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=162
+	released	American Journal of Epidemiology Volume 163	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=163
+	released	American Journal of Epidemiology Volume 164	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=164
+	released	American Journal of Epidemiology Volume 165	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.oxfordjournals.org/	volume_name=165
+#	@fixedValues	j=American Law and Economics Review
+	released	American Law and Economics Review Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aler.oxfordjournals.org/	volume_name=7
+old	released	American Law and Economics Review Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aler.oxfordjournals.org/	volume_name=8
+#	@fixedValues	j=American Literary History
+	released	American Literary History Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alh.oxfordjournals.org/	volume_name=17
+	released	American Literary History Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alh.oxfordjournals.org/	volume_name=18
+	released	American Literary History Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://alh.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=Annals of Botany
+	released	Annals of Botany Volume 95	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=95
+	released	Annals of Botany Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=96
+old	released	Annals of Botany Volume 97	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=97
+	released	Annals of Botany Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=98
+	released	Annals of Botany Volume 99	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aob.oxfordjournals.org/	volume_name=99
+#	@fixedValues	j=Annals of Occupational Hygiene
+	released	Annals of Occupational Hygiene Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annhyg.oxfordjournals.org/	volume_name=49
+old	released	Annals of Occupational Hygiene Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annhyg.oxfordjournals.org/	volume_name=50
+	released	Annals of Occupational Hygiene Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annhyg.oxfordjournals.org/	volume_name=51
+#	@fixedValues	j=Annals of Oncology
+	released	Annals of Oncology Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annonc.oxfordjournals.org/	volume_name=16
+	released	Annals of Oncology Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annonc.oxfordjournals.org/	volume_name=17
+	released	Annals of Oncology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://annonc.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=Applied Linguistics
+	released	Applied Linguistics Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://applij.oxfordjournals.org/	volume_name=26
+old	released	Applied Linguistics Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://applij.oxfordjournals.org/	volume_name=27
+#	@fixedValues	j=Behavioral Ecology
+	released	Behavioral Ecology Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://beheco.oxfordjournals.org/	volume_name=16
+old	released	Behavioral Ecology Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://beheco.oxfordjournals.org/	volume_name=17
+	released	Behavioral Ecology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://beheco.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=Bioinformatics
+old	released	Bioinformatics Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bioinformatics.oxfordjournals.org/	volume_name=21
+	released	Bioinformatics Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bioinformatics.oxfordjournals.org/	volume_name=22
+	released	Bioinformatics Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bioinformatics.oxfordjournals.org/	volume_name=23
+#	@fixedValues	j=Biometrika
+	released	Biometrika Volume 92	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biomet.oxfordjournals.org/	volume_name=92
+old	released	Biometrika Volume 93	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biomet.oxfordjournals.org/	volume_name=93
+#	@fixedValues	j=Biostatistics
+	released	Biostatistics Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biostatistics.oxfordjournals.org/	volume_name=6
+	released	Biostatistics Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biostatistics.oxfordjournals.org/	volume_name=7
+	released	Biostatistics Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://biostatistics.oxfordjournals.org/	volume_name=8
+#	@fixedValues	j=BJA: Continuing Education in Anaesthesia, Critical Care & Pain
+	released	BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ceaccp.oxfordjournals.org/	volume_name=5
+old	released	BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ceaccp.oxfordjournals.org/	volume_name=6
+	released	BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ceaccp.oxfordjournals.org/	volume_name=7
+#	@fixedValues	j=Brain
+old	released	Brain Volume 128	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brain.oxfordjournals.org/	volume_name=128
+	released	Brain Volume 129	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brain.oxfordjournals.org/	volume_name=129
+	released	Brain Volume 130	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brain.oxfordjournals.org/	volume_name=130
+#	@fixedValues	j=Brief Treatment and Crisis Intervention
+old	released	Brief Treatment and Crisis Intervention Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brief-treatment.oxfordjournals.org/	volume_name=5
+	released	Brief Treatment and Crisis Intervention Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brief-treatment.oxfordjournals.org/	volume_name=6
+	released	Brief Treatment and Crisis Intervention Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brief-treatment.oxfordjournals.org/	volume_name=7
+#	@fixedValues	j=Briefings in Bioinformatics
+old	released	Briefings in Bioinformatics Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bib.oxfordjournals.org/	volume_name=7
+	released	Briefings in Bioinformatics Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bib.oxfordjournals.org/	volume_name=8
+#	@fixedValues	j=Briefings in Functional Genomics and Proteomics
+old	released	Briefings in Functional Genomics and Proteomics Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bfgp.oxfordjournals.org/	volume_name=5
+#	@fixedValues	j=British Journal of Anaesthesia
+	released	British Journal of Anaesthesia Volume 94	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=94
+	released	British Journal of Anaesthesia Volume 95	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=95
+old	released	British Journal of Anaesthesia Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=96
+	released	British Journal of Anaesthesia Volume 97	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=97
+	released	British Journal of Anaesthesia Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bja.oxfordjournals.org/	volume_name=98
+#	@fixedValues	j=British Journal of Social Work
+	released	British Journal of Social Work Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjsw.oxfordjournals.org/	volume_name=35
+old	released	British Journal of Social Work Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjsw.oxfordjournals.org/	volume_name=36
+	released	British Journal of Social Work Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjsw.oxfordjournals.org/	volume_name=37
+#	@fixedValues	j=British Medical Bulletin
+	manifest	British Medical Bulletin Volume 72	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=72
+	released	British Medical Bulletin Volume 73-74	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=73-74
+	released	British Medical Bulletin Volume 75-76	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=75-76
+	released	British Medical Bulletin Volume 77-78	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=77-78
+	manifest	British Medical Bulletin Volume 79-80	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=79-80
+	manifest	British Medical Bulletin Volume 81-82	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=81-82
+	manifest	British Medical Bulletin Volume 83	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bmb.oxfordjournals.org/	volume_name=83
+#	@fixedValues	j=Bulletin of the London Mathematical Society
+	released	Bulletin of the London Mathematical Society Volume 39	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://blms.oxfordjournals.org/	volume_name=39
+#	@fixedValues	j=Cambridge Journal of Economics
+	released	Cambridge Journal of Economics Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cje.oxfordjournals.org/	volume_name=29
+old	released	Cambridge Journal of Economics Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cje.oxfordjournals.org/	volume_name=30
+	released	Cambridge Journal of Economics Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cje.oxfordjournals.org/	volume_name=31
+#	@fixedValues	j=Capital Markets Law Journal
+	manifest	Capital Markets Law Journal Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cmlj.oxfordjournals.org/	volume_name=1
+#	@fixedValues	j=Carcinogenesis
+old	released	Carcinogenesis Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://carcin.oxfordjournals.org/	volume_name=26
+	released	Carcinogenesis Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://carcin.oxfordjournals.org/	volume_name=27
+	released	Carcinogenesis Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://carcin.oxfordjournals.org/	volume_name=28
+#	@fixedValues	j=Cerebral Cortex
+old	released	Cerebral Cortex Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cercor.oxfordjournals.org/	volume_name=15
+	released	Cerebral Cortex Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cercor.oxfordjournals.org/	volume_name=16
+	released	Cerebral Cortex Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cercor.oxfordjournals.org/	volume_name=17
+#	@fixedValues	j=CESifo Economic Studies
+	released	CESifo Economic Studies Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cesifo.oxfordjournals.org/	volume_name=51
+old	released	CESifo Economic Studies Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cesifo.oxfordjournals.org/	volume_name=52
+#	@fixedValues	j=Chemical Senses
+	released	Chemical Senses Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chemse.oxfordjournals.org/	volume_name=30
+old	released	Chemical Senses Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chemse.oxfordjournals.org/	volume_name=31
+	released	Chemical Senses Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chemse.oxfordjournals.org/	volume_name=32
+#	@fixedValues	j=Chinese Journal of International Law
+old	released	Chinese Journal of International Law Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chinesejil.oxfordjournals.org/	volume_name=4
+	released	Chinese Journal of International Law Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chinesejil.oxfordjournals.org/	volume_name=5
+#	@fixedValues	j=Chinese Journal of International Politics
+	released	Chinese Journal of International Politics Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjip.oxfordjournals.org/	volume_name=1
+#	@fixedValues	j=Community Development Journal
+	released	Community Development Journal Volume 40	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdj.oxfordjournals.org/	volume_name=40
+old	released	Community Development Journal Volume 41	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdj.oxfordjournals.org/	volume_name=41
+	released	Community Development Journal Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdj.oxfordjournals.org/	volume_name=42
+#	@fixedValues	j=Computer Journal
+old	released	Computer Journal Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://comjnl.oxfordjournals.org/	volume_name=49
+	released	Computer Journal Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://comjnl.oxfordjournals.org/	volume_name=50
+#	@fixedValues	j=Contributions to Political Economy
+old	released	Contributions to Political Economy Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cpe.oxfordjournals.org/	volume_name=24
+	released	Contributions to Political Economy Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cpe.oxfordjournals.org/	volume_name=25
+#	@fixedValues	j=DNA Research
+old	released	DNA Research Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://dnaresearch.oxfordjournals.org/	volume_name=13
+#	@fixedValues	j=Early Music
+old	released	Early Music Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://em.oxfordjournals.org/	volume_name=33
+	released	Early Music Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://em.oxfordjournals.org/	volume_name=34
+#	@fixedValues	j=ELT Journal
+	released	ELT Journal Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eltj.oxfordjournals.org/	volume_name=59
+old	released	ELT Journal Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eltj.oxfordjournals.org/	volume_name=60
+	released	ELT Journal Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eltj.oxfordjournals.org/	volume_name=61
+#	@fixedValues	j=English Historical Review
+	released	English Historical Review Volume 120	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ehr.oxfordjournals.org/	volume_name=120
+	released	English Historical Review Volume CXXI	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ehr.oxfordjournals.org/	volume_name=CXXI
+	released	English Historical Review Volume CXXII	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ehr.oxfordjournals.org/	volume_name=CXXII
+#	@fixedValues	j=Enterprise & Society
+	released	Enterprise & Society Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://es.oxfordjournals.org/	volume_name=6
+old	released	Enterprise & Society Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://es.oxfordjournals.org/	volume_name=7
+#	@fixedValues	j=Epidemiologic Reviews
+old	released	Epidemiologic Reviews Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://epirev.oxfordjournals.org/	volume_name=27
+	released	Epidemiologic Reviews Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://epirev.oxfordjournals.org/	volume_name=28
+#	@fixedValues	j=ESHRE Monographs
+old	released	ESHRE Monographs 2005	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eshremonographs.oxfordjournals.org/	volume_name=2005
+	released	ESHRE Monographs 2006	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eshremonographs.oxfordjournals.org/	volume_name=2006
+	released	ESHRE Monographs 2007	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eshremonographs.oxfordjournals.org/	volume_name=2007
+#	@fixedValues	j=Essays in Criticism
+old	released	Essays in Criticism Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eic.oxfordjournals.org/	volume_name=55
+	released	Essays in Criticism Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eic.oxfordjournals.org/	volume_name=56
+	released	Essays in Criticism Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eic.oxfordjournals.org/	volume_name=57
+#	@fixedValues	j=Europace
+old	released	Europace Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://europace.oxfordjournals.org/	volume_name=8
+	released	Europace Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://europace.oxfordjournals.org/	volume_name=9
+#	@fixedValues	j=European Heart Journal
+	released	European Heart Journal Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartj.oxfordjournals.org/	volume_name=26
+	released	European Heart Journal Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartj.oxfordjournals.org/	volume_name=27
+	released	European Heart Journal Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartj.oxfordjournals.org/	volume_name=28
+#	@fixedValues	j=European Heart Journal Supplements
+	released	European Heart Journal Supplements Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartjsupp.oxfordjournals.org/	volume_name=7
+old	released	European Heart Journal Supplements Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartjsupp.oxfordjournals.org/	volume_name=8
+	released	European Heart Journal Supplements Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurheartjsupp.oxfordjournals.org/	volume_name=9
+#	@fixedValues	j=European Journal of International Law
+	released	European Journal of International Law Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejil.oxfordjournals.org/	volume_name=16
+old	released	European Journal of International Law Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejil.oxfordjournals.org/	volume_name=17
+#	@fixedValues	j=European Journal of Orthodontics
+old	released	European Journal of Orthodontics Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejo.oxfordjournals.org/	volume_name=28
+	released	European Journal of Orthodontics Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejo.oxfordjournals.org/	volume_name=29
+#	@fixedValues	j=European Journal of Public Health
+	released	European Journal of Public Health Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurpub.oxfordjournals.org/	volume_name=15
+old	released	European Journal of Public Health Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurpub.oxfordjournals.org/	volume_name=16
+	released	European Journal of Public Health Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eurpub.oxfordjournals.org/	volume_name=17
+#	@fixedValues	j=European Review of Agricultural Economics
+	manifest	European Review of Agricultural Economics Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://erae.oxfordjournals.org/	volume_name=32
+	manifest	European Review of Agricultural Economics Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://erae.oxfordjournals.org/	volume_name=33
+#	@fixedValues	j=European Sociological Review
+	released	European Sociological Review Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://esr.oxfordjournals.org/	volume_name=21
+old	released	European Sociological Review Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://esr.oxfordjournals.org/	volume_name=22
+	released	European Sociological Review Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://esr.oxfordjournals.org/	volume_name=23
+#	@fixedValues	j=Evidence-based Complementary and Alternative Medicine
+	released	Evidence-based Complementary and Alternative Medicine Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecam.oxfordjournals.org/	volume_name=2
+old	released	Evidence-based Complementary and Alternative Medicine Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecam.oxfordjournals.org/	volume_name=3
+#	@fixedValues	j=Family Practice
+	released	Family Practice Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fampra.oxfordjournals.org/	volume_name=22
+old	released	Family Practice Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fampra.oxfordjournals.org/	volume_name=23
+#	@fixedValues	j=Forestry
+	released	Forestry Volume 78	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://forestry.oxfordjournals.org/	volume_name=78
+old	released	Forestry Volume 79	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://forestry.oxfordjournals.org/	volume_name=79
+	released	Forestry Volume 80	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://forestry.oxfordjournals.org/	volume_name=80
+#	@fixedValues	j=Forum for Modern Language Studies
+	released	Forum for Modern Language Studies Volume 41	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fmls.oxfordjournals.org/	volume_name=41
+old	released	Forum for Modern Language Studies Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fmls.oxfordjournals.org/	volume_name=42
+#	@fixedValues	j=French History
+	released	French History Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fh.oxfordjournals.org/	volume_name=19
+old	released	French History Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fh.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=French Studies
+	released	French Studies Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fs.oxfordjournals.org/	volume_name=59
+old	released	French Studies Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fs.oxfordjournals.org/	volume_name=60
+	released	French Studies Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fs.oxfordjournals.org/	volume_name=61
+#	@fixedValues	j=French Studies Bulletin
+	released	French Studies Bulletin Volume LX	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://fsb.oxfordjournals.org/	volume_name=LX
+#	@fixedValues	j=Glycobiology
+old	released	Glycobiology Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://glycob.oxfordjournals.org/	volume_name=15
+	released	Glycobiology Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://glycob.oxfordjournals.org/	volume_name=16
+	released	Glycobiology Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://glycob.oxfordjournals.org/	volume_name=17
+#	@fixedValues	j=Health Education Research
+	released	Health Education Research Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://her.oxfordjournals.org/	volume_name=20
+old	released	Health Education Research Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://her.oxfordjournals.org/	volume_name=21
+	released	Health Education Research Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://her.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=Health Policy and Planning
+	released	Health Policy and Planning Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapol.oxfordjournals.org/	volume_name=20
+old	released	Health Policy and Planning Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapol.oxfordjournals.org/	volume_name=21
+	released	Health Policy and Planning Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapol.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=Health Promotion International
+	released	Health Promotion International Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapro.oxfordjournals.org/	volume_name=20
+old	released	Health Promotion International Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heapro.oxfordjournals.org/	volume_name=21
+#	@fixedValues	j=History Workshop Journal
+	released	History Workshop Journal Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=59
+	released	History Workshop Journal Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=60
+old	released	History Workshop Journal Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=61
+	released	History Workshop Journal Volume 62	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hwj.oxfordjournals.org/	volume_name=62
+#	@fixedValues	j=Holocaust and Genocide Studies
+	released	Holocaust and Genocide Studies Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hgs.oxfordjournals.org/	volume_name=19
+	released	Holocaust and Genocide Studies Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hgs.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=Human Molecular Genetics
+old	released	Human Molecular Genetics Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hmg.oxfordjournals.org/	volume_name=14
+	released	Human Molecular Genetics Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hmg.oxfordjournals.org/	volume_name=15
+	released	Human Molecular Genetics Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hmg.oxfordjournals.org/	volume_name=16
+#	@fixedValues	j=Human Reproduction
+	released	Human Reproduction Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humrep.oxfordjournals.org/	volume_name=20
+old	released	Human Reproduction Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humrep.oxfordjournals.org/	volume_name=21
+	released	Human Reproduction Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humrep.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=Human Reproduction Update
+	released	Human Reproduction Update Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humupd.oxfordjournals.org/	volume_name=11
+old	released	Human Reproduction Update Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humupd.oxfordjournals.org/	volume_name=12
+	released	Human Reproduction Update Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://humupd.oxfordjournals.org/	volume_name=13
+#	@fixedValues	j=Human Rights Law Review
+	released	Human Rights Law Review Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hrlr.oxfordjournals.org/	volume_name=5
+	released	Human Rights Law Review Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hrlr.oxfordjournals.org/	volume_name=6
+#	@fixedValues	j=ICES Journal of Marine Science
+	released	ICES Journal of Marine Science Volume 64	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icesjms.oxfordjournals.org/	volume_name=64
+#	@fixedValues	j=IEICE-Transactions on Communications
+	released	IEICE-Transactions on Communications Volume E89-B	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietcom.oxfordjournals.org/	volume_name=E89-B
+	released	IEICE-Transactions on Communications Volume E90-B	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietcom.oxfordjournals.org/	volume_name=E90-B
+#	@fixedValues	j=IEICE-Transactions on Electronics
+	released	IEICE-Transactions on Electronics Volume E89-C	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietele.oxfordjournals.org/	volume_name=E89-C
+	released	IEICE-Transactions on Electronics Volume E90-C	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietele.oxfordjournals.org/	volume_name=E90-C
+#	@fixedValues	j=IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science
+	released	IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E89-A	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietfec.oxfordjournals.org/	volume_name=E89-A
+	released	IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietfec.oxfordjournals.org/	volume_name=E90-A
+#	@fixedValues	j=IEICE-Transactions on Information and Systems
+	released	IEICE-Transactions on Information and Systems Volume E89-D	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietisy.oxfordjournals.org/	volume_name=E89-D
+	released	IEICE-Transactions on Information and Systems Volume E90-D	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ietisy.oxfordjournals.org/	volume_name=E90-D
+#	@fixedValues	j=IMA Journal of Applied Mathematics
+	released	IMA Journal of Applied Mathematics Volume 70	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamat.oxfordjournals.org/	volume_name=70
+old	released	IMA Journal of Applied Mathematics Volume 71	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamat.oxfordjournals.org/	volume_name=71
+	released	IMA Journal of Applied Mathematics Volume 72	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamat.oxfordjournals.org/	volume_name=72
+#	@fixedValues	j=IMA Journal of Management Mathematics
+	released	IMA Journal of Management Mathematics Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imaman.oxfordjournals.org/	volume_name=16
+old	released	IMA Journal of Management Mathematics Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imaman.oxfordjournals.org/	volume_name=17
+	released	IMA Journal of Management Mathematics Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imaman.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=IMA Journal of Mathematical Control and Information
+	released	IMA Journal of Mathematical Control and Information Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamci.oxfordjournals.org/	volume_name=22
+old	released	IMA Journal of Mathematical Control and Information Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imamci.oxfordjournals.org/	volume_name=23
+#	@fixedValues	j=IMA Journal of Numerical Analysis
+	released	IMA Journal of Numerical Analysis Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imajna.oxfordjournals.org/	volume_name=25
+old	released	IMA Journal of Numerical Analysis Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imajna.oxfordjournals.org/	volume_name=26
+	released	IMA Journal of Numerical Analysis Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imajna.oxfordjournals.org/	volume_name=27
+#	@fixedValues	j=Industrial and Corporate Change
+	released	Industrial and Corporate Change Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icc.oxfordjournals.org/	volume_name=14
+old	released	Industrial and Corporate Change Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icc.oxfordjournals.org/	volume_name=15
+#	@fixedValues	j=Industrial Law Journal
+	released	Industrial Law Journal Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ilj.oxfordjournals.org/	volume_name=34
+old	released	Industrial Law Journal Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ilj.oxfordjournals.org/	volume_name=35
+#	@fixedValues	j=Integrative and Comparative Biology
+	released	Integrative and Comparative Biology Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icb.oxfordjournals.org/	volume_name=45
+old	released	Integrative and Comparative Biology Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icb.oxfordjournals.org/	volume_name=46
+#	@fixedValues	j=International and Comparative Law Quarterly
+	released	International and Comparative Law Quarterly Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iclq.oxfordjournals.org/	volume_name=54
+old	released	International and Comparative Law Quarterly Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iclq.oxfordjournals.org/	volume_name=55
+	released	International and Comparative Law Quarterly Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iclq.oxfordjournals.org/	volume_name=56
+#	@fixedValues	j=International Immunology
+old	released	International Immunology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intimm.oxfordjournals.org/	volume_name=18
+	released	International Immunology Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intimm.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=International Journal for Quality in Health Care
+	released	International Journal for Quality in Health Care Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intqhc.oxfordjournals.org/	volume_name=17
+old	released	International Journal for Quality in Health Care Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intqhc.oxfordjournals.org/	volume_name=18
+	released	International Journal for Quality in Health Care Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://intqhc.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=International Journal of Constitutional Law
+	released	International Journal of Constitutional Law Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icon.oxfordjournals.org/	volume_name=3
+old	released	International Journal of Constitutional Law Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icon.oxfordjournals.org/	volume_name=4
+	released	International Journal of Constitutional Law Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icon.oxfordjournals.org/	volume_name=5
+#	@fixedValues	j=International Journal of Epidemiology
+	released	International Journal of Epidemiology Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ije.oxfordjournals.org/	volume_name=34
+old	released	International Journal of Epidemiology Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ije.oxfordjournals.org/	volume_name=35
+#	@fixedValues	j=International Journal of Law and Information Technology
+old	released	International Journal of Law and Information Technology Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijlit.oxfordjournals.org/	volume_name=13
+old	released	International Journal of Law and Information Technology Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijlit.oxfordjournals.org/	volume_name=14
+	released	International Journal of Law and Information Technology Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijlit.oxfordjournals.org/	volume_name=15
+#	@fixedValues	j=International Journal of Law, Policy and the Family
+	released	International Journal of Law, Policy and the Family Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lawfam.oxfordjournals.org/	volume_name=19
+old	released	International Journal of Law, Policy and the Family Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lawfam.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=International Journal of Lexicography
+	released	International Journal of Lexicography Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijl.oxfordjournals.org/	volume_name=18
+old	released	International Journal of Lexicography Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijl.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=International Journal of Public Opinion Research
+	released	International Journal of Public Opinion Research Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijpor.oxfordjournals.org/	volume_name=17
+old	released	International Journal of Public Opinion Research Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijpor.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=International Journal of Refugee Law
+	released	International Journal of Refugee Law Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijrl.oxfordjournals.org/	volume_name=17
+old	released	International Journal of Refugee Law Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijrl.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=International Journal of Transitional Justice
+	released	International Journal of Transitional Justice Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijtj.oxfordjournals.org/	volume_name=1
+#	@fixedValues	j=International Relations of the Asia-Pacific
+	released	International Relations of the Asia-Pacific Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://irap.oxfordjournals.org/	volume_name=5
+old	released	International Relations of the Asia-Pacific Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://irap.oxfordjournals.org/	volume_name=6
+	released	International Relations of the Asia-Pacific Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://irap.oxfordjournals.org/	volume_name=7
+#	@fixedValues	j=ITNOW
+	released	ITNOW Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://itnow.oxfordjournals.org/	volume_name=47
+old	released	ITNOW Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://itnow.oxfordjournals.org/	volume_name=48
+	released	ITNOW Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://itnow.oxfordjournals.org/	volume_name=49
+#	@fixedValues	j=Japanese Journal of Clinical Oncology
+	released	Japanese Journal of Clinical Oncology Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jjco.oxfordjournals.org/	volume_name=35
+old	released	Japanese Journal of Clinical Oncology Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jjco.oxfordjournals.org/	volume_name=36
+	released	Japanese Journal of Clinical Oncology Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jjco.oxfordjournals.org/	volume_name=37
+#	@fixedValues	j=JNCI Journal of the National Cancer Institute
+	released	JNCI Journal of the National Cancer Institute Volume 99	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jnci.oxfordjournals.org/	volume_name=99
+#	@fixedValues	j=Journal of African Economies
+	released	Journal of African Economies Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jae.oxfordjournals.org/	volume_name=14
+old	released	Journal of African Economies Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jae.oxfordjournals.org/	volume_name=15
+	released	Journal of African Economies Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jae.oxfordjournals.org/	volume_name=16
+#	@fixedValues	j=Journal of Antimicrobial Chemotherapy
+	released	Journal of Antimicrobial Chemotherapy Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=55
+	released	Journal of Antimicrobial Chemotherapy Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=56
+old	released	Journal of Antimicrobial Chemotherapy Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=57
+	released	Journal of Antimicrobial Chemotherapy Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=58
+	released	Journal of Antimicrobial Chemotherapy Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jac.oxfordjournals.org/	volume_name=59
+#	@fixedValues	j=Journal of Competition Law and Economics
+	released	Journal of Competition Law and Economics Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcle.oxfordjournals.org/	volume_name=1
+old	released	Journal of Competition Law and Economics Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcle.oxfordjournals.org/	volume_name=2
+#	@fixedValues	j=Journal of Conflict and Security Law
+	released	Journal of Conflict and Security Law Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcsl.oxfordjournals.org/	volume_name=10
+old	released	Journal of Conflict and Security Law Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jcsl.oxfordjournals.org/	volume_name=11
+#	@fixedValues	j=Journal of Deaf Studies and Deaf Education
+	released	Journal of Deaf Studies and Deaf Education Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdsde.oxfordjournals.org/	volume_name=10
+	released	Journal of Deaf Studies and Deaf Education Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdsde.oxfordjournals.org/	volume_name=11
+	released	Journal of Deaf Studies and Deaf Education Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdsde.oxfordjournals.org/	volume_name=12
+#	@fixedValues	j=Journal of Design History
+	released	Journal of Design History Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdh.oxfordjournals.org/	volume_name=18
+old	released	Journal of Design History Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jdh.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=Journal of Economic Geography
+	released	Journal of Economic Geography Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://joeg.oxfordjournals.org/	volume_name=5
+old	released	Journal of Economic Geography Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://joeg.oxfordjournals.org/	volume_name=6
+	released	Journal of Economic Geography Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://joeg.oxfordjournals.org/	volume_name=7
+#	@fixedValues	j=Journal of Electron Microscopy
+	released	Journal of Electron Microscopy Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jmicro.oxfordjournals.org/	volume_name=54
+old	released	Journal of Electron Microscopy Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jmicro.oxfordjournals.org/	volume_name=55
+#	@fixedValues	j=Journal of Environmental Law
+	released	Journal of Environmental Law Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jel.oxfordjournals.org/	volume_name=17
+old	released	Journal of Environmental Law Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jel.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=Journal of Experimental Botany
+	released	Journal of Experimental Botany Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jxb.oxfordjournals.org/	volume_name=56
+old	released	Journal of Experimental Botany Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jxb.oxfordjournals.org/	volume_name=57
+	released	Journal of Experimental Botany Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jxb.oxfordjournals.org/	volume_name=58
+#	@fixedValues	j=Journal of Financial Econometrics
+	released	Journal of Financial Econometrics Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jfec.oxfordjournals.org/	volume_name=3
+old	released	Journal of Financial Econometrics Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jfec.oxfordjournals.org/	volume_name=4
+	released	Journal of Financial Econometrics Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jfec.oxfordjournals.org/	volume_name=5
+#	@fixedValues	j=Journal of Heredity
+	released	Journal of Heredity Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhered.oxfordjournals.org/	volume_name=96
+old	released	Journal of Heredity Volume 97	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhered.oxfordjournals.org/	volume_name=97
+	released	Journal of Heredity Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhered.oxfordjournals.org/	volume_name=98
+#	@fixedValues	j=Journal of Intellectual Property Law & Practice
+	released	Journal of Intellectual Property Law & Practice Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiplp.oxfordjournals.org/	volume_name=1
+	released	Journal of Intellectual Property Law & Practice Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiplp.oxfordjournals.org/	volume_name=2
+#	@fixedValues	j=Journal of International Criminal Justice
+	manifest	Journal of International Criminal Justice Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicj.oxfordjournals.org/	volume_name=3
+old	released	Journal of International Criminal Justice Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicj.oxfordjournals.org/	volume_name=4
+#	@fixedValues	j=Journal of International Economic Law
+	released	Journal of International Economic Law Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiel.oxfordjournals.org/	volume_name=8
+old	released	Journal of International Economic Law Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jiel.oxfordjournals.org/	volume_name=9
+#	@fixedValues	j=Journal of Islamic Studies
+	released	Journal of Islamic Studies Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jis.oxfordjournals.org/	volume_name=16
+old	released	Journal of Islamic Studies Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jis.oxfordjournals.org/	volume_name=17
+	released	Journal of Islamic Studies Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jis.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=Journal of Law, Economics, and Organization
+	released	Journal of Law, Economics, and Organization Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jleo.oxfordjournals.org/	volume_name=21
+old	released	Journal of Law, Economics, and Organization Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jleo.oxfordjournals.org/	volume_name=22
+	released	Journal of Law, Economics, and Organization Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jleo.oxfordjournals.org/	volume_name=23
+#	@fixedValues	j=Journal of Logic and Computation
+old	released	Journal of Logic and Computation Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://logcom.oxfordjournals.org/	volume_name=15
+	released	Journal of Logic and Computation Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://logcom.oxfordjournals.org/	volume_name=16
+	released	Journal of Logic and Computation Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://logcom.oxfordjournals.org/	volume_name=17
+#	@fixedValues	j=Journal of Molluscan Studies
+	manifest	Journal of Molluscan Studies Volume 71	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mollus.oxfordjournals.org/	volume_name=71
+old	released	Journal of Molluscan Studies Volume 72	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mollus.oxfordjournals.org/	volume_name=72
+#	@fixedValues	j=Journal of Pediatric Psychology
+	released	Journal of Pediatric Psychology Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpepsy.oxfordjournals.org/	volume_name=30
+old	released	Journal of Pediatric Psychology Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpepsy.oxfordjournals.org/	volume_name=31
+	released	Journal of Pediatric Psychology Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpepsy.oxfordjournals.org/	volume_name=32
+#	@fixedValues	j=Journal of Petrology
+old	released	Journal of Petrology Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://petrology.oxfordjournals.org/	volume_name=46
+	released	Journal of Petrology Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://petrology.oxfordjournals.org/	volume_name=47
+	released	Journal of Petrology Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://petrology.oxfordjournals.org/	volume_name=48
+#	@fixedValues	j=Journal of Plankton Research
+old	released	Journal of Plankton Research Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://plankt.oxfordjournals.org/	volume_name=27
+	released	Journal of Plankton Research Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://plankt.oxfordjournals.org/	volume_name=28
+#	@fixedValues	j=Journal of Public Administration Research and Theory
+	released	Journal of Public Administration Research and Theory Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpart.oxfordjournals.org/	volume_name=15
+old	released	Journal of Public Administration Research and Theory Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpart.oxfordjournals.org/	volume_name=16
+	released	Journal of Public Administration Research and Theory Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpart.oxfordjournals.org/	volume_name=17
+#	@fixedValues	j=Journal of Public Health
+	released	Journal of Public Health Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpubhealth.oxfordjournals.org/	volume_name=27
+old	released	Journal of Public Health Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jpubhealth.oxfordjournals.org/	volume_name=28
+#	@fixedValues	j=Journal of Refugee Studies
+old	released	Journal of Refugee Studies Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrs.oxfordjournals.org/	volume_name=18
+	released	Journal of Refugee Studies Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrs.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=Journal of Semantics
+old	released	Journal of Semantics Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jos.oxfordjournals.org/	volume_name=22
+	released	Journal of Semantics Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jos.oxfordjournals.org/	volume_name=23
+	released	Journal of Semantics Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jos.oxfordjournals.org/	volume_name=24
+#	@fixedValues	j=Journal of Semitic Studies
+	released	Journal of Semitic Studies Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jss.oxfordjournals.org/	volume_name=50
+old	released	Journal of Semitic Studies Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jss.oxfordjournals.org/	volume_name=51
+#	@fixedValues	j=Journal of the American Academy of Religion
+	released	Journal of the American Academy of Religion Volume 73	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jaar.oxfordjournals.org/	volume_name=73
+	released	Journal of the American Academy of Religion Volume 74	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jaar.oxfordjournals.org/	volume_name=74
+	ready	Journal of the American Academy of Religion Volume 75	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jaar.oxfordjournals.org/	volume_name=75
+#	@fixedValues	j=Journal of the History of Collections
+old	released	Journal of the History of Collections Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhc.oxfordjournals.org/	volume_name=17
+	released	Journal of the History of Collections Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhc.oxfordjournals.org/	volume_name=18
+#	@fixedValues	j=Journal of the History of Medicine and Allied Sciences
+old	released	Journal of the History of Medicine and Allied Sciences Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhmas.oxfordjournals.org/	volume_name=60
+	released	Journal of the History of Medicine and Allied Sciences Volume 61	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhmas.oxfordjournals.org/	volume_name=61
+	released	Journal of the History of Medicine and Allied Sciences Volume 62	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhmas.oxfordjournals.org/	volume_name=62
+#	@fixedValues	j=Journal of the ICRU
+	released	Journal of the ICRU Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicru.oxfordjournals.org/	volume_name=5
+old	released	Journal of the ICRU Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jicru.oxfordjournals.org/	volume_name=6
+#	@fixedValues	j=Journal of the London Mathematical Society
+	released	Journal of the London Mathematical Society Volume 75	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jlms.oxfordjournals.org/	volume_name=75
+#	@fixedValues	j=Journal of the Royal Musical Association
+old	released	Journal of the Royal Musical Association Volume 130	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrma.oxfordjournals.org/	volume_name=130
+	released	Journal of the Royal Musical Association Volume 131	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jrma.oxfordjournals.org/	volume_name=131
+#	@fixedValues	j=Journal of Topology
+	manifest	Journal of Topology Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jtopol.oxfordjournals.org/	volume_name=1
+#	@fixedValues	j=Journal of Tropical Pediatrics
+	ready	Journal of Tropical Pediatrics Volume 51	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tropej.oxfordjournals.org/	volume_name=51
+old	released	Journal of Tropical Pediatrics Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tropej.oxfordjournals.org/	volume_name=52
+	ready	Journal of Tropical Pediatrics Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tropej.oxfordjournals.org/	volume_name=53
+#	@fixedValues	j=Law, Probability and Risk
+old	released	Law, Probability and Risk Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lpr.oxfordjournals.org/	volume_name=4
+#	@fixedValues	j=Literary and Linguistic Computing
+	released	Literary and Linguistic Computing Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://llc.oxfordjournals.org/	volume_name=20
+old	released	Literary and Linguistic Computing Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://llc.oxfordjournals.org/	volume_name=21
+#	@fixedValues	j=Literary Imagination
+	ready	Literary Imagination Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://litimag.oxfordjournals.org/	volume_name=8
+#	@fixedValues	j=Literature and Theology
+	released	Literature and Theology Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://litthe.oxfordjournals.org/	volume_name=19
+old	released	Literature and Theology Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://litthe.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=Logic Journal of the IGPL
+	released	Logic Journal of the IGPL Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jigpal.oxfordjournals.org/	volume_name=13
+old	released	Logic Journal of the IGPL Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jigpal.oxfordjournals.org/	volume_name=14
+	released	Logic Journal of the IGPL Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jigpal.oxfordjournals.org/	volume_name=15
+#	@fixedValues	j=Mathematical Medicine and Biology
+	released	Mathematical Medicine and Biology Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imammb.oxfordjournals.org/	volume_name=22
+old	released	Mathematical Medicine and Biology Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://imammb.oxfordjournals.org/	volume_name=23
+#	@fixedValues	j=Medical Law Review
+	released	Medical Law Review Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://medlaw.oxfordjournals.org/	volume_name=13
+old	released	Medical Law Review Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://medlaw.oxfordjournals.org/	volume_name=14
+#	@fixedValues	j=Mind
+	ready	Mind Volume 114	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mind.oxfordjournals.org/	volume_name=114
+old	released	Mind Volume 115	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mind.oxfordjournals.org/	volume_name=115
+	ready	Mind Volume 116	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mind.oxfordjournals.org/	volume_name=116
+#	@fixedValues	j=Modern Judaism
+	manifest	Modern Judaism Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mj.oxfordjournals.org/	volume_name=25
+old	released	Modern Judaism Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mj.oxfordjournals.org/	volume_name=26
+	manifest	Modern Judaism Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mj.oxfordjournals.org/	volume_name=27
+#	@fixedValues	j=Molecular Biology and Evolution
+	released	Molecular Biology and Evolution Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mbe.oxfordjournals.org/	volume_name=22
+old	released	Molecular Biology and Evolution Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mbe.oxfordjournals.org/	volume_name=23
+	released	Molecular Biology and Evolution Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mbe.oxfordjournals.org/	volume_name=24
+#	@fixedValues	j=Molecular Human Reproduction
+	released	Molecular Human Reproduction Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://molehr.oxfordjournals.org/	volume_name=11
+	released	Molecular Human Reproduction Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://molehr.oxfordjournals.org/	volume_name=12
+	released	Molecular Human Reproduction Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://molehr.oxfordjournals.org/	volume_name=13
+#	@fixedValues	j=Music and Letters
+old	released	Music and Letters Volume 86	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ml.oxfordjournals.org/	volume_name=86
+	released	Music and Letters Volume 87	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ml.oxfordjournals.org/	volume_name=87
+	released	Music and Letters Volume 88	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ml.oxfordjournals.org/	volume_name=88
+#	@fixedValues	j=Mutagenesis
+	released	Mutagenesis Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mutage.oxfordjournals.org/	volume_name=20
+old	released	Mutagenesis Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mutage.oxfordjournals.org/	volume_name=21
+	released	Mutagenesis Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mutage.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=Nephrology Dialysis Transplantation
+	released	Nephrology Dialysis Transplantation Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ndt.oxfordjournals.org/	volume_name=20
+old	released	Nephrology Dialysis Transplantation Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ndt.oxfordjournals.org/	volume_name=21
+	released	Nephrology Dialysis Transplantation Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ndt.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=Notes and Queries
+	released	Notes and Queries Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nq.oxfordjournals.org/	volume_name=52
+	released	Notes and Queries Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nq.oxfordjournals.org/	volume_name=53
+#	@fixedValues	j=Nucleic Acids Research
+old	released	Nucleic Acids Research Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nar.oxfordjournals.org/	volume_name=33
+	manifest	Nucleic Acids Research Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nar.oxfordjournals.org/	volume_name=34
+	ready	Nucleic Acids Research Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nar.oxfordjournals.org/	volume_name=35
+#	@fixedValues	j=Nucleic Acids Symposium Series
+old	released	Nucleic Acids Symposium Series Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nass.oxfordjournals.org/	volume_name=49
+	released	Nucleic Acids Symposium Series Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nass.oxfordjournals.org/	volume_name=50
+#	@fixedValues	j=Occupational Medicine
+	released	Occupational Medicine Volume 55	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://occmed.oxfordjournals.org/	volume_name=55
+old	released	Occupational Medicine Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://occmed.oxfordjournals.org/	volume_name=56
+	released	Occupational Medicine Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://occmed.oxfordjournals.org/	volume_name=57
+#	@fixedValues	j=Oxford Art Journal
+old	released	Oxford Art Journal Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oaj.oxfordjournals.org/	volume_name=28
+old	released	Oxford Art Journal Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oaj.oxfordjournals.org/	volume_name=29
+#	@fixedValues	j=Oxford Economic Papers
+	released	Oxford Economic Papers Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oep.oxfordjournals.org/	volume_name=57
+old	released	Oxford Economic Papers Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oep.oxfordjournals.org/	volume_name=58
+	released	Oxford Economic Papers Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oep.oxfordjournals.org/	volume_name=59
+#	@fixedValues	j=Oxford Journal of Legal Studies
+	released	Oxford Journal of Legal Studies Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ojls.oxfordjournals.org/	volume_name=25
+old	released	Oxford Journal of Legal Studies Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ojls.oxfordjournals.org/	volume_name=26
+#	@fixedValues	j=Oxford Review of Economic Policy
+	released	Oxford Review of Economic Policy Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oxrep.oxfordjournals.org/	volume_name=21
+old	released	Oxford Review of Economic Policy Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oxrep.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=Parliamentary Affairs
+	released	Parliamentary Affairs Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pa.oxfordjournals.org/	volume_name=58
+old	released	Parliamentary Affairs Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pa.oxfordjournals.org/	volume_name=59
+	released	Parliamentary Affairs Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pa.oxfordjournals.org/	volume_name=60
+#	@fixedValues	j=Past & Present
+	released	Past & Present Volume 186	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=186
+	released	Past & Present Volume 187	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=187
+	manifest	Past & Present Volume 188	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=188
+	manifest	Past & Present Volume 189	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=189
+old	manifest	Past & Present Volume 190	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=190
+	manifest	Past & Present Volume 191	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=191
+	manifest	Past & Present Volume 192	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=192
+	manifest	Past & Present Volume 193	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://past.oxfordjournals.org/	volume_name=193
+#	@fixedValues	j=Philosophia Mathematica
+	released	Philosophia Mathematica Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://philmat.oxfordjournals.org/	volume_name=13
+old	released	Philosophia Mathematica Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://philmat.oxfordjournals.org/	volume_name=14
+	released	Philosophia Mathematica Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://philmat.oxfordjournals.org/	volume_name=15
+#	@fixedValues	j=Plant and Cell Physiology
+old	released	Plant and Cell Physiology Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pcp.oxfordjournals.org/	volume_name=47
+	released	Plant and Cell Physiology Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pcp.oxfordjournals.org/	volume_name=48
+#	@fixedValues	j=Political Analysis
+	released	Political Analysis Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pan.oxfordjournals.org/	volume_name=13
+old	released	Political Analysis Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pan.oxfordjournals.org/	volume_name=14
+	released	Political Analysis Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pan.oxfordjournals.org/	volume_name=15
+#	@fixedValues	j=Proceedings of the London Mathematical Society
+	released	Proceedings of the London Mathematical Society Volume 94	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://plms.oxfordjournals.org/	volume_name=94
+#	@fixedValues	j=Protein Engineering Design and Selection
+old	released	Protein Engineering Design and Selection Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://peds.oxfordjournals.org/	volume_name=18
+	released	Protein Engineering Design and Selection Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://peds.oxfordjournals.org/	volume_name=19
+	released	Protein Engineering Design and Selection Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://peds.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=Public Opinion Quarterly
+	released	Public Opinion Quarterly Volume 69	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://poq.oxfordjournals.org/	volume_name=69
+old	released	Public Opinion Quarterly Volume 70	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://poq.oxfordjournals.org/	volume_name=70
+#	@fixedValues	j=Publius: The Journal of Federalism
+old	released	Publius: The Journal of Federalism Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://publius.oxfordjournals.org/	volume_name=36
+	released	Publius: The Journal of Federalism Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://publius.oxfordjournals.org/	volume_name=37
+#	@fixedValues	j=QJM: An International Journal of Medicine
+	released	QJM: An International Journal of Medicine Volume 98	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmed.oxfordjournals.org/	volume_name=98
+old	released	QJM: An International Journal of Medicine Volume 99	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmed.oxfordjournals.org/	volume_name=99
+	manifest	QJM: An International Journal of Medicine Volume 100	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmed.oxfordjournals.org/	volume_name=100
+#	@fixedValues	j=Radiation Protection Dosimetry
+	released	Radiation Protection Dosimetry Volume 113	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=113
+	released	Radiation Protection Dosimetry Volume 114	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=114
+	ready	Radiation Protection Dosimetry Volume 115	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=115
+	ready	Radiation Protection Dosimetry Volume 116	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=116
+	released	Radiation Protection Dosimetry Volume 117	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=117
+old	released	Radiation Protection Dosimetry Volume 118	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=118
+	released	Radiation Protection Dosimetry Volume 119	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=119
+	released	Radiation Protection Dosimetry Volume 120	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=120
+	ready	Radiation Protection Dosimetry Volume 121	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rpd.oxfordjournals.org/	volume_name=121
+#	@fixedValues	j=Refugee Survey Quarterly
+	released	Refugee Survey Quarterly Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsq.oxfordjournals.org/	volume_name=24
+old	released	Refugee Survey Quarterly Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsq.oxfordjournals.org/	volume_name=25
+#	@fixedValues	j=Review of Environmental Economics and Policy
+	manifest	Review of Environmental Economics and Policy Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://reep.oxfordjournals.org/	volume_name=1
+#	@fixedValues	j=Review of Finance
+	ready	Review of Finance Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rof.oxfordjournals.org/	volume_name=10
+	manifest	Review of Finance Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rof.oxfordjournals.org/	volume_name=11
+#	@fixedValues	j=Review of Financial Studies
+	released	Review of Financial Studies Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rfs.oxfordjournals.org/	volume_name=18
+old	released	Review of Financial Studies Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rfs.oxfordjournals.org/	volume_name=19
+	released	Review of Financial Studies Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rfs.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=Rheumatology
+	released	Rheumatology Volume 44	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rheumatology.oxfordjournals.org/	volume_name=44
+	manifest	Rheumatology Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rheumatology.oxfordjournals.org/	volume_name=45
+	manifest	Rheumatology Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rheumatology.oxfordjournals.org/	volume_name=46
+#	@fixedValues	j=Schizophrenia Bulletin
+	manifest	Schizophrenia Bulletin Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://schizophreniabulletin.oxfordjournals.org/	volume_name=31
+old	released	Schizophrenia Bulletin Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://schizophreniabulletin.oxfordjournals.org/	volume_name=32
+	ready	Schizophrenia Bulletin Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://schizophreniabulletin.oxfordjournals.org/	volume_name=33
+#	@fixedValues	j=Screen
+old	released	Screen Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://screen.oxfordjournals.org/	volume_name=46
+	released	Screen Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://screen.oxfordjournals.org/	volume_name=47
+#	@fixedValues	j=Social Cognitive and Affective Neuroscience
+	manifest	Social Cognitive and Affective Neuroscience Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://scan.oxfordjournals.org/	volume_name=1
+#	@fixedValues	j=Social History of Medicine
+old	released	Social History of Medicine Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://shm.oxfordjournals.org/	volume_name=18
+	released	Social History of Medicine Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://shm.oxfordjournals.org/	volume_name=19
+#	@fixedValues	j=Social Politics: International Studies in Gender, State & Society
+old	released	Social Politics: International Studies in Gender, State & Society Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sp.oxfordjournals.org/	volume_name=12
+	released	Social Politics: International Studies in Gender, State & Society Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sp.oxfordjournals.org/	volume_name=13
+#	@fixedValues	j=Social Science Japan Journal
+old	released	Social Science Japan Journal Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ssjj.oxfordjournals.org/	volume_name=8
+	ready	Social Science Japan Journal Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ssjj.oxfordjournals.org/	volume_name=9
+#	@fixedValues	j=Socio-Economic Review
+	ready	Socio-Economic Review Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ser.oxfordjournals.org/	volume_name=3
+old	released	Socio-Economic Review Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ser.oxfordjournals.org/	volume_name=4
+	manifest	Socio-Economic Review Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ser.oxfordjournals.org/	volume_name=5
+#	@fixedValues	j=Statute Law Review
+	released	Statute Law Review Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://slr.oxfordjournals.org/	volume_name=26
+old	released	Statute Law Review Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://slr.oxfordjournals.org/	volume_name=27
+	released	Statute Law Review Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://slr.oxfordjournals.org/	volume_name=28
+#	@fixedValues	j=Teaching Mathematics and its Applications
+	released	Teaching Mathematics and its Applications Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://teamat.oxfordjournals.org/	volume_name=24
+old	released	Teaching Mathematics and its Applications Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://teamat.oxfordjournals.org/	volume_name=25
+#	@fixedValues	j=The British Journal for the Philosophy of Science
+	released	The British Journal for the Philosophy of Science Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjps.oxfordjournals.org/	volume_name=56
+old	released	The British Journal for the Philosophy of Science Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjps.oxfordjournals.org/	volume_name=57
+#	@fixedValues	j=The British Journal of Aesthetic
+	released	The British Journal of Aesthetic Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjaesthetics.oxfordjournals.org/	volume_name=45
+old	released	The British Journal of Aesthetic Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjaesthetics.oxfordjournals.org/	volume_name=46
+	released	The British Journal of Aesthetic Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjaesthetics.oxfordjournals.org/	volume_name=47
+#	@fixedValues	j=The British Journal of Criminology: An International Review of Crime and Society
+	released	The British Journal of Criminology: An International Review of Crime and Society Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjc.oxfordjournals.org/	volume_name=45
+old	released	The British Journal of Criminology: An International Review of Crime and Society Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjc.oxfordjournals.org/	volume_name=46
+	released	The British Journal of Criminology: An International Review of Crime and Society Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bjc.oxfordjournals.org/	volume_name=47
+#	@fixedValues	j=The Cambridge Quarterly
+	manifest	The Cambridge Quarterly Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://camqtly.oxfordjournals.org/	volume_name=34
+old	released	The Cambridge Quarterly Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://camqtly.oxfordjournals.org/	volume_name=35
+#	@fixedValues	j=The Journal of Biochemistry
+old	released	The Journal of Biochemistry Volume 139	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jb.oxfordjournals.org/	volume_name=139
+	ready	The Journal of Biochemistry Volume 140	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jb.oxfordjournals.org/	volume_name=140
+#	@fixedValues	j=The Journal of Theological Studies
+	released	The Journal of Theological Studies Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jts.oxfordjournals.org/	volume_name=56
+old	released	The Journal of Theological Studies Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jts.oxfordjournals.org/	volume_name=57
+#	@fixedValues	j=The Library
+	released	The Library Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://library.oxfordjournals.org/	volume_name=6
+old	released	The Library Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://library.oxfordjournals.org/	volume_name=7
+#	@fixedValues	j=The Musical Quarterly
+old	released	The Musical Quarterly Volume 87	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mq.oxfordjournals.org/	volume_name=87
+	released	The Musical Quarterly Volume 88	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mq.oxfordjournals.org/	volume_name=88
+#	@fixedValues	j=The Opera Quarterly
+old	released	The Opera Quarterly Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oq.oxfordjournals.org/	volume_name=21
+	manifest	The Opera Quarterly Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://oq.oxfordjournals.org/	volume_name=22
+#	@fixedValues	j=The Quarterly Journal of Mathematics
+old	released	The Quarterly Journal of Mathematics Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmath.oxfordjournals.org/	volume_name=56
+	released	The Quarterly Journal of Mathematics Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmath.oxfordjournals.org/	volume_name=57
+#	@fixedValues	j=The Quarterly Journal of Mechanics and Applied Mathematics
+	released	The Quarterly Journal of Mechanics and Applied Mathematics Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmam.oxfordjournals.org/	volume_name=58
+	released	The Quarterly Journal of Mechanics and Applied Mathematics Volume 59	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmam.oxfordjournals.org/	volume_name=59
+	manifest	The Quarterly Journal of Mechanics and Applied Mathematics Volume 60	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://qjmam.oxfordjournals.org/	volume_name=60
+#	@fixedValues	j=The Review of English Studies
+	released	The Review of English Studies Volume 56	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://res.oxfordjournals.org/	volume_name=56
+old	released	The Review of English Studies Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://res.oxfordjournals.org/	volume_name=57
+#	@fixedValues	j=The World Bank Economic Review
+	released	The World Bank Economic Review Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wber.oxfordjournals.org/	volume_name=19
+old	released	The World Bank Economic Review Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wber.oxfordjournals.org/	volume_name=20
+#	@fixedValues	j=The World Bank Research Observer
+	released	The World Bank Research Observer Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wbro.oxfordjournals.org/	volume_name=20
+old	released	The World Bank Research Observer Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wbro.oxfordjournals.org/	volume_name=21
+#	@fixedValues	j=The Year's Work in Critical and Cultural Theory
+old	released	The Year's Work in Critical and Cultural Theory Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywcct.oxfordjournals.org/	volume_name=13
+	released	The Year's Work in Critical and Cultural Theory Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywcct.oxfordjournals.org/	volume_name=14
+#	@fixedValues	j=The Year's Work in English Studies
+old	released	The Year's Work in English Studies Volume 84	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywes.oxfordjournals.org/	volume_name=84
+	released	The Year's Work in English Studies Volume 85	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ywes.oxfordjournals.org/	volume_name=85
+#	@fixedValues	j=Toxicological Sciences
+	released	Toxicological Sciences Volume 83	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=83
+	released	Toxicological Sciences Volume 84	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=84
+	released	Toxicological Sciences Volume 85	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=85
+	released	Toxicological Sciences Volume 86	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=86
+	released	Toxicological Sciences Volume 87	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=87
+	released	Toxicological Sciences Volume 88	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=88
+	manifest	Toxicological Sciences Volume 89	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=89
+	manifest	Toxicological Sciences Volume 90	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=90
+old	ready	Toxicological Sciences Volume 91	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=91
+	ready	Toxicological Sciences Volume 92	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=92
+	ready	Toxicological Sciences Volume 93	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=93
+	ready	Toxicological Sciences Volume 94	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=94
+	ready	Toxicological Sciences Volume 95	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=95
+	ready	Toxicological Sciences Volume 96	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://toxsci.oxfordjournals.org/	volume_name=96
+#	@fixedValues	j=Trusts & Trustees
+	manifest	Trusts & Trustees Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tandt.oxfordjournals.org/	volume_name=12
+#	@fixedValues	j=Twentieth Century British History
+	released	Twentieth Century British History Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tcbh.oxfordjournals.org/	volume_name=16
+old	released	Twentieth Century British History Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tcbh.oxfordjournals.org/	volume_name=17
