@@ -13,7 +13,7 @@ usage() {
  exit 1
 }
 
-if [ "$#" == "0" ]; then
+if [ "$#" = "0" ]; then
   usage;
 fi
 
@@ -80,18 +80,18 @@ msg="Starting $rpt iterations at `date`"
 echo "$msg" >> $stderr
 echo "$msg" >> $stdout
 
-let ix=1
+ix=1
 while [ $ix -le $rpt ]; do
   echo "** iter $ix" >> $stderr
   echo "** iter $ix" >> $stdout
 
   if ! java $jvmargs junit.textui.TestRunner $class >>$stdout 2>>$stderr; then
-    let failcnt++
+    failcnt=$((failcnt + 1))
     [ $showdots = 1 ] && echo -n F
   else
     [ $showdots = 1 ] && echo -n .
   fi
-  let ix++
+  ix=$(($ix + 1))
 done
 echo
 echo $failcnt failures
