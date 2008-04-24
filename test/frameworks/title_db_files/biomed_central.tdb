@@ -2,87 +2,6 @@
 #	@namePrefix	BMC				
 #	@publisherTitleSet	publisher=BioMed Central
 #	@fixedValues	P=BioMed Central				
-#	@fixedValues	p=org.lockss.plugin.bmc.BioMedCentralPlugin				
-#	@fixedValues	i=1751-0147	j=Acta Veterinaria Scandinavica
-	exists	Acta Veterinaria Scandinavica Volume 42	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=42
-	exists	Acta Veterinaria Scandinavica Volume 43	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=43
-	exists	Acta Veterinaria Scandinavica Volume 44	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=44
-	exists	Acta Veterinaria Scandinavica Volume 45	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=45
-	exists	Acta Veterinaria Scandinavica Volume 46	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=46
-	exists	Acta Veterinaria Scandinavica Volume 47	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=47
-	exists	Acta Veterinaria Scandinavica Volume 48	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=48
-	exists	Acta Veterinaria Scandinavica Volume 49	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=49
-	exists	Acta Veterinaria Scandinavica Volume 50	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=50
-#	@fixedValues	i=1742-6405	j=AIDS Research and Therapy
-	exists	AIDS Research and Therapy Volume 1	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=1
-	exists	AIDS Research and Therapy Volume 2	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=2
-	exists	AIDS Research and Therapy Volume 3	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=3
-	exists	AIDS Research and Therapy Volume 4	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=4
-	exists	AIDS Research and Therapy Volume 5	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=5
-#	@fixedValues	i=1748-7188	j=Algorithms for Molecular Biology
-	exists	Algorithms for Molecular Biology Volume 1	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=1
-	exists	Algorithms for Molecular Biology Volume 2	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=2
-	exists	Algorithms for Molecular Biology Volume 3	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=3
-#	@fixedValues	i=1476-0711	j=Annals of Clinical Microbiology and Antimicrobials
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 1	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=1
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 2	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=2
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 3	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=3
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 4	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=4
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 5	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=5
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 6	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=6
-	exists	Annals of Clinical Microbiology and Antimicrobials Volume 7	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=7
-#	@fixedValues	i=1744-859X	j=Annals of General Psychiatry
-	exists	Annals of General Psychiatry Volume 1	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=1
-	exists	Annals of General Psychiatry Volume 2	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=2
-	exists	Annals of General Psychiatry Volume 3	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=3
-	exists	Annals of General Psychiatry Volume 4	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=4
-	exists	Annals of General Psychiatry Volume 5	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=5
-	exists	Annals of General Psychiatry Volume 6	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=6
-	exists	Annals of General Psychiatry Volume 7	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=7
-#	@fixedValues	i=1750-1164	j=Annals of Surgical Innovation and Research
-	exists	Annals of Surgical Innovation and Research Volume 1	base_url=http://www.asir-journal.com/	journal_issn=1750-1164	volume_name=1
-#	@fixedValues	i=1743-8462	j=Australia and New Zealand Health Policy
-	exists	Australia and New Zealand Health Policy Volume 1	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=1
-	exists	Australia and New Zealand Health Policy Volume 2	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=2
-	exists	Australia and New Zealand Health Policy Volume 3	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=3
-	exists	Australia and New Zealand Health Policy Volume 4	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=4
-#	@fixedValues	i=1744-9081	j=Behavioral and Brain Functions
-	exists	Behavioral and Brain Functions Volume 1	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=1
-	exists	Behavioral and Brain Functions Volume 2	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=2
-	exists	Behavioral and Brain Functions Volume 3	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=3
-	exists	Behavioral and Brain Functions Volume 4	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=4
-#	@fixedValues	i=1860-5397	j=Beilstein Journal of Organic Chemistry
-	exists	Beilstein Journal of Organic Chemistry Volume 1	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=1
-	exists	Beilstein Journal of Organic Chemistry Volume 2	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=2
-	exists	Beilstein Journal of Organic Chemistry Volume 3	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=3
-	exists	Beilstein Journal of Organic Chemistry Volume 4	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=4
-#	@fixedValues	i=1745-6150	j=Biology Direct
-	exists	Biology Direct Volume 1	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=1
-	exists	Biology Direct Volume 2	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=2
-	exists	Biology Direct Volume 3	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=3
-#	@fixedValues	i=1477-044X	j=BioMagnetic Research and Technology
-	exists	BioMagnetic Research and Technology Volume 1	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=1
-	exists	BioMagnetic Research and Technology Volume 2	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=2
-	exists	BioMagnetic Research and Technology Volume 3	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=3
-	exists	BioMagnetic Research and Technology Volume 4	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=4
-	exists	BioMagnetic Research and Technology Volume 5	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=5
-	exists	BioMagnetic Research and Technology Volume 6	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=6
-#	@fixedValues	i=1742-5581	j=Biomedical Digital Libraries
-	exists	Biomedical Digital Libraries Volume 1	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=1
-	exists	Biomedical Digital Libraries Volume 2	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=2
-	exists	Biomedical Digital Libraries Volume 3	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=3
-	exists	Biomedical Digital Libraries Volume 4	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=4
-#	@fixedValues	i=1475-925X	j=BioMedical Engineering OnLine
-	exists	BioMedical Engineering OnLine Volume 1	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=1
-	exists	BioMedical Engineering OnLine Volume 2	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=2
-	exists	BioMedical Engineering OnLine Volume 3	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=3
-	exists	BioMedical Engineering OnLine Volume 4	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=4
-	exists	BioMedical Engineering OnLine Volume 5	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=5
-	exists	BioMedical Engineering OnLine Volume 6	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=6
-	exists	BioMedical Engineering OnLine Volume 7	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=7
-#	@fixedValues	i=1751-0759	j=BioPsychoSocial Medicine
-	exists	BioPsychoSocial Medicine Volume 1	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=1
-	exists	BioPsychoSocial Medicine Volume 2	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=2
 #	@fixedValues	p=org.lockss.plugin.bmc.BMCPlugin				
 #	@fixedValues	i=1471-2253	j=BMC Anesthesiology
 	released	BMC Anesthesiology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=1
@@ -510,3 +429,84 @@
 	released	BMC Women's Health Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=4
 	released	BMC Women's Health Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=5
 	released	BMC Women's Health Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=6
+#	@fixedValues	p=org.lockss.plugin.bmc.BioMedCentralPlugin				
+#	@fixedValues	i=1751-0147	j=Acta Veterinaria Scandinavica
+	exists	Acta Veterinaria Scandinavica Volume 42	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=42
+	exists	Acta Veterinaria Scandinavica Volume 43	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=43
+	exists	Acta Veterinaria Scandinavica Volume 44	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=44
+	exists	Acta Veterinaria Scandinavica Volume 45	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=45
+	exists	Acta Veterinaria Scandinavica Volume 46	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=46
+	exists	Acta Veterinaria Scandinavica Volume 47	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=47
+	exists	Acta Veterinaria Scandinavica Volume 48	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=48
+	exists	Acta Veterinaria Scandinavica Volume 49	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=49
+	exists	Acta Veterinaria Scandinavica Volume 50	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=50
+#	@fixedValues	i=1742-6405	j=AIDS Research and Therapy
+	exists	AIDS Research and Therapy Volume 1	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=1
+	exists	AIDS Research and Therapy Volume 2	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=2
+	exists	AIDS Research and Therapy Volume 3	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=3
+	exists	AIDS Research and Therapy Volume 4	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=4
+	exists	AIDS Research and Therapy Volume 5	base_url=http://www.aidsrestherapy.com/	journal_issn=1742-6405	volume_name=5
+#	@fixedValues	i=1748-7188	j=Algorithms for Molecular Biology
+	exists	Algorithms for Molecular Biology Volume 1	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=1
+	exists	Algorithms for Molecular Biology Volume 2	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=2
+	exists	Algorithms for Molecular Biology Volume 3	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=3
+#	@fixedValues	i=1476-0711	j=Annals of Clinical Microbiology and Antimicrobials
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 1	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=1
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 2	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=2
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 3	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=3
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 4	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=4
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 5	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=5
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 6	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=6
+	exists	Annals of Clinical Microbiology and Antimicrobials Volume 7	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=7
+#	@fixedValues	i=1744-859X	j=Annals of General Psychiatry
+	exists	Annals of General Psychiatry Volume 1	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=1
+	exists	Annals of General Psychiatry Volume 2	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=2
+	exists	Annals of General Psychiatry Volume 3	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=3
+	exists	Annals of General Psychiatry Volume 4	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=4
+	exists	Annals of General Psychiatry Volume 5	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=5
+	exists	Annals of General Psychiatry Volume 6	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=6
+	exists	Annals of General Psychiatry Volume 7	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=7
+#	@fixedValues	i=1750-1164	j=Annals of Surgical Innovation and Research
+	exists	Annals of Surgical Innovation and Research Volume 1	base_url=http://www.asir-journal.com/	journal_issn=1750-1164	volume_name=1
+#	@fixedValues	i=1743-8462	j=Australia and New Zealand Health Policy
+	exists	Australia and New Zealand Health Policy Volume 1	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=1
+	exists	Australia and New Zealand Health Policy Volume 2	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=2
+	exists	Australia and New Zealand Health Policy Volume 3	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=3
+	exists	Australia and New Zealand Health Policy Volume 4	base_url=http://www.anzhealthpolicy.com/	journal_issn=1743-8462	volume_name=4
+#	@fixedValues	i=1744-9081	j=Behavioral and Brain Functions
+	exists	Behavioral and Brain Functions Volume 1	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=1
+	exists	Behavioral and Brain Functions Volume 2	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=2
+	exists	Behavioral and Brain Functions Volume 3	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=3
+	exists	Behavioral and Brain Functions Volume 4	base_url=http://www.behavioralandbrainfunctions.com/	journal_issn=1744-9081	volume_name=4
+#	@fixedValues	i=1860-5397	j=Beilstein Journal of Organic Chemistry
+	exists	Beilstein Journal of Organic Chemistry Volume 1	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=1
+	exists	Beilstein Journal of Organic Chemistry Volume 2	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=2
+	exists	Beilstein Journal of Organic Chemistry Volume 3	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=3
+	exists	Beilstein Journal of Organic Chemistry Volume 4	base_url=http://bjoc.beilstein-journals.org/	journal_issn=1860-5397	volume_name=4
+#	@fixedValues	i=1745-6150	j=Biology Direct
+	exists	Biology Direct Volume 1	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=1
+	exists	Biology Direct Volume 2	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=2
+	exists	Biology Direct Volume 3	base_url=http://www.biology-direct.com/	journal_issn=1745-6150	volume_name=3
+#	@fixedValues	i=1477-044X	j=BioMagnetic Research and Technology
+	exists	BioMagnetic Research and Technology Volume 1	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=1
+	exists	BioMagnetic Research and Technology Volume 2	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=2
+	exists	BioMagnetic Research and Technology Volume 3	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=3
+	exists	BioMagnetic Research and Technology Volume 4	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=4
+	exists	BioMagnetic Research and Technology Volume 5	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=5
+	exists	BioMagnetic Research and Technology Volume 6	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=6
+#	@fixedValues	i=1742-5581	j=Biomedical Digital Libraries
+	exists	Biomedical Digital Libraries Volume 1	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=1
+	exists	Biomedical Digital Libraries Volume 2	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=2
+	exists	Biomedical Digital Libraries Volume 3	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=3
+	exists	Biomedical Digital Libraries Volume 4	base_url=http://www.bio-diglib.com/	journal_issn=1742-5581	volume_name=4
+#	@fixedValues	i=1475-925X	j=BioMedical Engineering OnLine
+	exists	BioMedical Engineering OnLine Volume 1	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=1
+	exists	BioMedical Engineering OnLine Volume 2	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=2
+	exists	BioMedical Engineering OnLine Volume 3	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=3
+	exists	BioMedical Engineering OnLine Volume 4	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=4
+	exists	BioMedical Engineering OnLine Volume 5	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=5
+	exists	BioMedical Engineering OnLine Volume 6	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=6
+	exists	BioMedical Engineering OnLine Volume 7	base_url=http://www.biomedical-engineering-online.com/	journal_issn=1475-925X	volume_name=7
+#	@fixedValues	i=1751-0759	j=BioPsychoSocial Medicine
+	exists	BioPsychoSocial Medicine Volume 1	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=1
+	exists	BioPsychoSocial Medicine Volume 2	base_url=http://www.bpsmedicine.com/	journal_issn=1751-0759	volume_name=2
