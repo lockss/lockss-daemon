@@ -203,7 +203,25 @@ SunOS)
 	PATH=/usr/ucb:/sbin:$PATH
 	LOCAL_HOSTNAME=`uname -n`
 	LOCAL_IPADDR=`ifconfig -a | grep inet | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
-	SHA1SUM="digest -a sha1"
+	export SHA1SUM
+	for A in sha1sum digest
+	do
+		WHICH=`which $A | sed "s/.*\///"`
+		if [ "X${A}" = "X${WHICH}" ]
+		then
+			SHA1SUM=$A
+			break
+		fi
+	done
+	case "X${SHA1SUM}" in
+	Xdigest)
+		SHA1SUM="digest -a sha1"
+		;;
+	X)
+		echo "Can't find a SHA1 command"
+		exit
+		;;
+	esac
         ;;
 Linux)
         LOCKSS_USER=lockss
