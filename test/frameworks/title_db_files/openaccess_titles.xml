@@ -5669,7 +5669,7 @@
 
       <property name="disputatio2006">
         <property name="title" value="Disputatio 2006" />
-        <property name="estSize" value="5:00KB" />
+        <property name="estSize" value="500KB" />
         <property name="journalTitle" value="Disputatio" />
         <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
         <property name="param.1">
@@ -5842,7 +5842,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="issues" />
-          <property name="value" value="S01,004,005" />
+          <property name="value" value="004,005,S01" />
         </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
