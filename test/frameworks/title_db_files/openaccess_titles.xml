@@ -2853,6 +2853,38 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="Bonefolder3">
+        <property name="title" value="The Bonefolder Volume 3" />
+        <property name="journalTitle" value="The Bonefolder" />
+        <property name="estSize" value="5MB" />
+        <property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.philobiblon.com/bonefolder/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="3" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="Bonefolder4">
+        <property name="title" value="The Bonefolder Volume 4" />
+        <property name="journalTitle" value="The Bonefolder" />
+        <property name="estSize" value="5MB" />
+        <property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.philobiblon.com/bonefolder/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="4" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="ElectronicJournalofContemporaryJapaneseStudies2006">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2006" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
@@ -5629,7 +5661,7 @@
           <property name="value" value="2007" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="022" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5649,7 +5681,7 @@
           <property name="value" value="2006" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="020,021" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5669,7 +5701,7 @@
           <property name="value" value="2005" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="018,019" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5689,7 +5721,7 @@
           <property name="value" value="2004" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="016,017" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5709,7 +5741,7 @@
           <property name="value" value="2003" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_setnum_issue_range" />
+          <property name="key" value="issues" />
           <property name="value" value="014,015" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5729,7 +5761,7 @@
           <property name="value" value="2002" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="012,013" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5749,7 +5781,7 @@
           <property name="value" value="2001" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="010,011" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5769,7 +5801,7 @@
           <property name="value" value="2000" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="008,009" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5789,7 +5821,7 @@
           <property name="value" value="1999" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="006,007" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5809,7 +5841,7 @@
           <property name="value" value="1998" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="S01,004,005" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5829,7 +5861,7 @@
           <property name="value" value="1997" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="002,003" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -5849,7 +5881,7 @@
           <property name="value" value="1996" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="001" />
         </property>
         <property name="attributes.rights" value="openaccess" />
