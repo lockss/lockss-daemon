@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Disputatio %d&quot;, year</string>
+    <string>&quot;Disputatio Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,16 +21,15 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Disputatio</string>
+    <string>Disputatio Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sarticls.html&quot;, base_url</string>
-      <string>1,&quot;%sarticles/%s-[0-9]*\.pdf&quot;, base_url, issues</string>
-      <string>1,&quot;%s.*\.[js|css]&quot;, base_url</string>
-      <string>1,&quot;%simages/.*&quot;, base_url</string>
+      <string>1,&quot;^%sarticls\.html&quot;, base_url</string>
+      <string>1,&quot;^%sarticles/%s-[0-9]*\.pdf&quot;, base_url, issues</string>
+      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
