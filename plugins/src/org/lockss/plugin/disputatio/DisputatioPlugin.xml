@@ -28,7 +28,7 @@
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%sarticls.html&quot;, base_url</string>
-      <string>1,&quot;%sarticles/%s-[0-9]*\.pdf&quot;, base_url, issue_set</string>
+      <string>1,&quot;%sarticles/%s-[0-9]*\.pdf&quot;, base_url, issues</string>
       <string>1,&quot;%s.*\.[js|css]&quot;, base_url</string>
       <string>1,&quot;%simages/.*&quot;, base_url</string>
     </list>
@@ -59,9 +59,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>issue_set</key>
-        <displayName>Issue Set</displayName>
-        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <key>issues</key>
+        <displayName>Issues</displayName>
+        <description>Non-definitional issue_set. A comma delimited list of issues. (eg issue1, issue2)</description>
         <type>9</type>
         <size>20</size>
         <definitional>false</definitional>
