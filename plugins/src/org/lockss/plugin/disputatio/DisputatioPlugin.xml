@@ -12,6 +12,10 @@
     <string>2</string>
   </entry>
   <entry>
+    <string>plugin_notes</string>
+    <string>The issues parameter is now required, but is non-definitional for compatibility with existing AUs.</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Disputatio Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
