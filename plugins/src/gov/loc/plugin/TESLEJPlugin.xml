@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>gov.loc.lockss.plugin.teslej.TeslejPlugin</string>
+    <string>gov.loc.plugin.TESLEJPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;TESL-EJ %d&quot;, volume</string>
+    <string>&quot;TESL-EJ Plugin, Base URL %s, Volume %d, Issues %s&quot;, base_url, volume, num_issue_range</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -27,14 +27,18 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sTESLEJ-volume%d.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%s(about|archives)\.html$&quot;, base_url</string>
       <string>1,&quot;^%sej%s/.*$&quot;, base_url, num_issue_range</string>
-      <string>1,&quot;^%s.*\.gif$&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sTESLEJ-volume%d.html&quot;, base_url, volume</string>
+    <string>&quot;%sarchives.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%sabout.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
