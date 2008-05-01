@@ -31,9 +31,10 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%slockss/&quot;, base_url</string>
       <string>1,&quot;^%sarticles/browse.asp\?volume=%s&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract$|citation$|comments|figure/|table/))?&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml)/%s-%s-&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary)/%s-%s-&quot;, base_url, journal_issn, volume_name</string>
       <string>1,&quot;^%ssupplements/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
