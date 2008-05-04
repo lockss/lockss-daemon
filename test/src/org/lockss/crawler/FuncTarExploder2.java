@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.5 2008-01-14 14:45:14 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.6 2008-05-04 02:18:07 dshr Exp $
  */
 
 /*
@@ -216,8 +216,7 @@ public class FuncTarExploder2 extends LockssTestCase {
     }
 
     // Test PluginManager.getAuContentSize(), just because this is a
-    // convenient place to do it.  (And ArcCrawler calls it at the
-    // end.)  If the simulated AU params are changed, or
+    // convenient place to do it.  If the simulated AU params are changed, or
     // SimulatedContentGenerator is changed, this number may have to
     // change.  NB - because the TAR files are compressed,  their
     // size varies randomly by a small amount.

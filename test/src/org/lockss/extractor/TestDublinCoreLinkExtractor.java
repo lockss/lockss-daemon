@@ -1,5 +1,5 @@
 /*
- * $Id: TestDublinCoreLinkExtractor.java,v 1.2 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id: TestDublinCoreLinkExtractor.java,v 1.3 2008-05-04 02:18:07 dshr Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class TestDublinCoreLinkExtractor extends LinkExtractorTestCase {
    * Test that a single links is found.
    */
   public void testOneUrl() throws Exception {
+    if (isSkipNetworkTests()) return;
     Set urls = SetUtil.set("http://www.foo.com/blah.jpg");
     assertEquals(urls, extractUrls(constructValidRDF(urls)));
   }
@@ -70,6 +71,7 @@ public class TestDublinCoreLinkExtractor extends LinkExtractorTestCase {
    * Test that multiple links are found.
    */
   public void testMultipleUrls() throws Exception {
+    if (isSkipNetworkTests()) return;
     Set urls = SetUtil.set("http://www.foo.com/blah.jpg",
 			   "http://www.foo.com/blatch.jpg",
 			   "http://www.foo.com/burble.jpg");
@@ -83,6 +85,7 @@ public class TestDublinCoreLinkExtractor extends LinkExtractorTestCase {
    * @throws Exception
    */
   public void testNoUrls() throws Exception {
+    if (isSkipNetworkTests()) return;
     assertEmpty(extractUrls(constructValidRDF(Collections.EMPTY_SET)));
   }
   
@@ -91,6 +94,7 @@ public class TestDublinCoreLinkExtractor extends LinkExtractorTestCase {
    * source RDF.  If these aren't there, it shouldn't find any links.
    */
   public void testNoIdentifiersMeansNoLinks() throws Exception {
+    if (isSkipNetworkTests()) return;
     Set urls = SetUtil.set("http://www.foo.com/blah.jpg",
 			   "http://www.foo.com/blatch.jpg",
 			   "http://www.foo.com/burble.jpg");
