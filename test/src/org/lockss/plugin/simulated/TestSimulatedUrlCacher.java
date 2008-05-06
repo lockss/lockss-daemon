@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.25 2007-08-12 01:48:05 tlipkis Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.26 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -62,8 +62,8 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     MockPlugin plugin = new MockPlugin();
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
-    mau.setCrawlSpec(new SpiderCrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START,
-					 null));
+    SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
+    mau.setCrawlSpec(new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null));
 
     theDaemon.setLockssRepository(new MockLockssRepository(), mau);
   }

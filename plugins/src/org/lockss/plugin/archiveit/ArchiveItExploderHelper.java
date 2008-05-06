@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveItExploderHelper.java,v 1.1 2008-05-04 02:39:11 dshr Exp $
+ * $Id: ArchiveItExploderHelper.java,v 1.2 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class ArchiveItExploderHelper implements ExploderHelper {
       url = new URL(name);
       if (!"http".equals(url.getProtocol())) {
 	logger.debug2("ignoring: " + url.toString());
+	return;
       }
     } catch (MalformedURLException ex) {
       logger.debug2("Bad URL: " + (name == null ? "null" : name));

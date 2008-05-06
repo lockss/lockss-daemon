@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.1 2008-05-04 02:18:07 dshr Exp $
+ * $Id: FuncArcExploder2.java,v 1.2 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -304,7 +304,7 @@ public class FuncArcExploder2 extends LockssTestCase {
 
   private boolean crawlContent(String bad) {
     log.debug("Crawling tree..." + (bad == null ? "" : " fail at " + bad));
-    List urls = ListUtil.list(SimulatedArchivalUnit.SIMULATED_URL_START);
+    List urls = sau.getNewContentCrawlUrls();
     CrawlSpec spec =
       new SpiderCrawlSpec(urls,
 			  urls, // permissionUrls

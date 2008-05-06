@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedArcContent.java,v 1.3 2007-03-17 21:31:31 dshr Exp $
+ * $Id: FuncSimulatedArcContent.java,v 1.4 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class FuncSimulatedArcContent extends LockssTestCase {
   protected void crawlContent() {
     log.debug("crawlContent()");
     CrawlSpec spec =
-      new SpiderCrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
+      new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
   }
@@ -184,8 +184,8 @@ public class FuncSimulatedArcContent extends LockssTestCase {
       childL.add(cus.getUrl());
     }
 
-    String[] expectedA = new String[] {
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT};
+    String[] expectedA = new String[1];
+    expectedA[0] = sau.getUrlRoot();
     assertIsomorphic(expectedA, childL);
 
     setIt = cus.flatSetIterator();
@@ -194,11 +194,9 @@ public class FuncSimulatedArcContent extends LockssTestCase {
       childL.add( ( (CachedUrlSetNode) setIt.next()).getUrl());
     }
 
-    expectedA = new String[] {
-      null,
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/index.html",
-    };
-    expectedA[0] = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/" + arcFileName;
+    expectedA = new String[2];
+    expectedA[0] = sau.getUrlRoot() + "/" + arcFileName;
+    expectedA[1] = sau.getUrlRoot() + "/index.html";
     assertIsomorphic(expectedA, childL);
   }
 

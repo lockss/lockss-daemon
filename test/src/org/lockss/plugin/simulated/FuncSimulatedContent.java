@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.76 2007-02-25 23:06:38 dshr Exp $
+ * $Id: FuncSimulatedContent.java,v 1.77 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private String auId;
   private String auId2;
+  private String urlRoot;
 
   private static String DAMAGED_CACHED_URL = "/branch2/branch2/002file.txt";
 
@@ -102,6 +103,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     sau =
       (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId);
+    urlRoot = sau.getUrlRoot();
 
     theDaemon.getPluginManager().startService();
 
@@ -186,7 +188,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   protected void crawlContent() {
     log.debug("crawlContent()");
     CrawlSpec spec =
-      new SpiderCrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
+      new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
   }
@@ -201,8 +203,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   protected void checkFilter() throws Exception {
     log.debug("checkFilter()");
-    CachedUrl cu = sau.makeCachedUrl(SimulatedArchivalUnit.SIMULATED_URL_ROOT
-				     + "/001file.html");
+    CachedUrl cu = sau.makeCachedUrl(sau.getUrlRoot() + "/001file.html");
 
     enableFilter(true);
     InputStream is = cu.openForHashing();
@@ -211,8 +212,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertEquals(expected, StringUtil.fromInputStream(is));
     is.close();
     enableFilter(false);
-    cu = sau.makeCachedUrl(SimulatedArchivalUnit.SIMULATED_URL_ROOT
-			   + "/001file.html");
+    cu = sau.makeCachedUrl(sau.getUrlRoot() + "/001file.html");
     is = cu.openForHashing();
     expected =
       "<HTML><HEAD><TITLE>001file.html</TITLE></HEAD><BODY>\n" +
@@ -246,7 +246,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   protected void checkDepth() {
     log.debug("checkDepth()");
-    String URL_ROOT = SimulatedArchivalUnit.SIMULATED_URL_ROOT;
+    String URL_ROOT = sau.getUrlRoot();
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/index.html"));
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/"));
     assertEquals(1, sau.getLinkDepth(URL_ROOT + "/001file.html"));
@@ -266,8 +266,8 @@ public class FuncSimulatedContent extends LockssTestCase {
       childL.add(cus.getUrl());
     }
 
-    String[] expectedA = new String[] {
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT};
+    String[] expectedA = new String[1];
+    expectedA[0] = sau.getUrlRoot();
     assertIsomorphic(expectedA, childL);
 
     setIt = cus.flatSetIterator();
@@ -277,20 +277,20 @@ public class FuncSimulatedContent extends LockssTestCase {
     }
 
     expectedA = new String[] {
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/001file.html",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/001file.txt",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/002file.html",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/002file.txt",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch2",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/index.html"
+      urlRoot + "/001file.html",
+      urlRoot + "/001file.txt",
+      urlRoot + "/002file.html",
+      urlRoot + "/002file.txt",
+      urlRoot + "/branch1",
+      urlRoot + "/branch2",
+      urlRoot + "/index.html"
     };
     assertIsomorphic(expectedA, childL);
   }
 
   protected void checkLeaf() {
     log.debug("checkLeaf()");
-    String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
+    String parent = sau.getUrlRoot() + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     CachedUrlSet set = sau.makeCachedUrlSet(spec);
     Iterator setIt = set.contentHashIterator();
@@ -324,7 +324,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   protected void checkUrlContent(String path, int fileNum, int depth,
 				 int branchNum, boolean isAbnormal,
 				 boolean isDamaged) throws IOException {
-    String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + path;
+    String file = sau.getUrlRoot() + path;
     CachedUrl url = sau.makeCachedUrl(file);
     String content = getUrlContent(url);
     String expectedContent;
@@ -353,7 +353,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   protected void doDamageRemoveTest() throws Exception {
     /* Cache the file again; this time the damage should be gone */
-    String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
+    String file = sau.getUrlRoot() + DAMAGED_CACHED_URL;
     UrlCacher uc = sau.makeUrlCacher(file);
     BitSet fetchFlags = new BitSet();
     fetchFlags.set(UrlCacher.REFETCH_FLAG);
@@ -395,7 +395,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     byte[] hash = getHash(set, namesOnly);
     assertEquals(expected,hash);
 
-    String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
+    String parent = sau.getUrlRoot() + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     set = sau.makeCachedUrlSet(spec);
     byte[] hash2 = getHash(set, namesOnly);

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.6 2008-05-04 02:18:07 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.7 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -307,7 +307,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 
   private void crawlContent() {
     log.debug("Crawling tree...");
-    List urls = ListUtil.list(SimulatedArchivalUnit.SIMULATED_URL_START);
+    List urls = sau.getNewContentCrawlUrls();
     CrawlSpec spec =
       new SpiderCrawlSpec(urls,
 			  urls, // permissionUrls

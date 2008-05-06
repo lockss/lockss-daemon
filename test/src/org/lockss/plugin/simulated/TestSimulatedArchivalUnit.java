@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedArchivalUnit.java,v 1.7 2004-07-04 05:12:55 eaalto Exp $
+ * $Id: TestSimulatedArchivalUnit.java,v 1.8 2008-05-06 21:35:36 dshr Exp $
  */
 
 /*
@@ -60,7 +60,8 @@ public class TestSimulatedArchivalUnit extends LockssTestCase {
   }
 
   public void testMapUrlToContentFileName() {
-    String testStr = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1/branch2";
+    SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
+    String testStr = sau.getUrlRoot() + "/branch1/branch2";
     String expectedStr = SimulatedContentGenerator.ROOT_NAME + "/branch1/branch2";
     assertEquals(FileUtil.sysDepPath(expectedStr),
         SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
@@ -77,7 +78,7 @@ public class TestSimulatedArchivalUnit extends LockssTestCase {
     SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
     sau.simRoot = FileUtil.sysDepPath(MY_ROOT);
     String testStr = MY_ROOT + "/branch1/branch2";
-    String expectedStr = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1/branch2";
+    String expectedStr = sau.getUrlRoot() + "/branch1/branch2";
     assertEquals(expectedStr, sau.mapContentFileNameToUrl(FileUtil.sysDepPath(testStr)));
   }
 
