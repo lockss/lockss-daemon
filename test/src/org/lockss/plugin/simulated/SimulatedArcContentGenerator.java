@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArcContentGenerator.java,v 1.3 2007-03-17 21:31:31 dshr Exp $
+ * $Id: SimulatedArcContentGenerator.java,v 1.4 2008-05-09 19:08:11 dshr Exp $
  */
 
 /*
@@ -72,7 +72,11 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
     "image/jpg",
     "application/octet-stream",
   };
-  String stem = "http://www.content.org/";
+  String[] stem = {
+    "http://www.content.org/",
+    "http://www.website.org/",
+    "http://www.library.org/",
+  };
   boolean compressArc = true;
 
   public SimulatedArcContentGenerator(String rootPath) {
@@ -89,26 +93,34 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
     //  There should now be a suitable hierarchy at contentRoot,
     //  except that there needs to be a link to the eventual ARC file(s).
     try {
-      aw.checkSize();
-      startPosition = aw.getPosition();
-      logger.debug2("About to pack content in ARC at " + contentRoot +
-		    " offset " + startPosition);
-      packIntoArcFile(new File(contentRoot), new URL(stem), aw, 0);
-      logger.debug2("Packed content in ARC at " + contentRoot + " to " +
-		    aw.getPosition());
+      for (int i = 0; i < stem.length; i++) {
+	boolean kill = ((i + 1) >= stem.length);
+	aw.checkSize();
+	startPosition = aw.getPosition();
+	logger.debug2("About to pack content for " + stem[i] + " in ARC at " +
+		      contentRoot + " offset " + startPosition);
+	packIntoArcFile(new File(contentRoot), new URL(stem[i]), aw, 0, kill);
+	logger.debug2("Packed content for " + stem[i] + " in ARC at " +
+		      contentRoot + " to " + aw.getPosition());
+      }
       aw.close();
       linkToArcFiles();
     } catch (IOException ex) {
       logger.error("pack() threw " + ex);
       return null;
-    }
-    printArcFiles(startPosition);
+    } finally {
+    }      
+    printArcFiles();
     return ret;
   }
 
-  private void packIntoArcFile(File f, URL url, ARCWriter aw, int lev) throws IOException {
+  private void packIntoArcFile(File f,
+			       URL url,
+			       ARCWriter aw,
+			       int lev,
+			       boolean kill) throws IOException {
     String fPath = f.getCanonicalPath();
-    logger.debug3("packIntoArcFile(" + fPath + ") lev " + lev);
+    logger.debug3("packIntoArcFile(" + fPath + ") lev " + lev + " kill " + kill);
     if (f.isDirectory()) {
       // Iterate through the directory
       File[] names = f.listFiles();
@@ -120,7 +132,7 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
 	}
 	newUrl += names[i].getName();
 	File newFile = new File(newPath);
-	packIntoArcFile(newFile, new URL(newUrl), aw, lev + 1);
+	packIntoArcFile(newFile, new URL(newUrl), aw, lev + 1, kill);
       }
       {
 	String[] namesLeft = f.list();
@@ -130,7 +142,7 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
 	  logger.debug3(fPath + " contains " + namesLeft[j]);
 	}
       }
-      if (lev > 1) {
+      if (lev > 1 && kill) {
 	logger.debug3("rmdir(" + fPath + ")");
 	f.delete();
       }
@@ -158,7 +170,9 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
 	logger.debug3("Packing " + fPath + " type " + contentType);
 	aw.write(uri, contentType, hostIP, timeStamp, recordLength, is);
 	logger.debug3("Wrote to " + aw.getPosition() + ": Deleting " + fPath);
-	f.delete();
+	if (kill) {
+	  f.delete();
+	}
       } else {
 	logger.debug3("Ignoring " + fPath);
       }
@@ -201,7 +215,7 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
     }
   }
 
-  private void printArcFiles(long startPosition) {
+  private void printArcFiles() {
     File dir = new File(contentRoot);
     if (dir.isDirectory()) try {
       String[] fileNames = dir.list();
@@ -209,7 +223,7 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
       for (int i = 0; i < fileNames.length; i++) {
 	if (fileNames[i].endsWith(".arc.gz") ||
 	    fileNames[i].endsWith("arc")) {
-	  logger.debug3(fileNames[i] + " headers offset" + startPosition);
+	  logger.debug3("File: " + fileNames[i]);
 		    
 	  File aFile = new File(dir, fileNames[i]);
 	  ArchiveReader aRead = ArchiveReaderFactory.get(aFile);
