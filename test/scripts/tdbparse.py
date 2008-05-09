@@ -149,7 +149,7 @@ class TdbScanner(object):
             self.__token = TOKEN_KEYWORD_AU
             self.__options['_expect_string'] = TOKEN_KEYWORD_AU
         elif keyword == 'columns': self.__token = TOKEN_KEYWORD_COLUMNS
-        else: raise RuntimeError, 'internal error: %s', (keyword,)
+        else: raise RuntimeError, 'internal error: %s' % (keyword,)
         return self.__token
 
     def __single(self, token):
