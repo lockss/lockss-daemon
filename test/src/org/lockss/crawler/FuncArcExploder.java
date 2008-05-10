@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.4 2008-05-10 03:17:05 dshr Exp $
+ * $Id: FuncArcExploder.java,v 1.5 2008-05-10 17:47:11 dshr Exp $
  */
 
 /*
@@ -71,6 +71,7 @@ public class FuncArcExploder extends LockssTestCase {
   PluginManager pluginMgr;
   int lastCrawlResult = Crawler.STATUS_UNKNOWN;
   String lastCrawlMessage = null;
+  boolean multipleStemsPerAu = false;
 
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
@@ -202,22 +203,26 @@ public class FuncArcExploder extends LockssTestCase {
   }
 
   public void testBadContentMultipleAU() throws Exception {
+    multipleStemsPerAu = false;
     runTest(false);
   }
 
   public void testGoodContentMultipleAU() throws Exception {
+    multipleStemsPerAu = false;
     runTest(true);
   }
 
   public void testBadContentSingleAU() throws Exception {
     ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
 				  "http://www.stage.org/");
+    multipleStemsPerAu = true;
     runTest(false);
   }
 
   public void testGoodContentSingleAU() throws Exception {
     ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
 				  "http://www.stage.org/");
+    multipleStemsPerAu = true;
     runTest(true);
   }
 
@@ -288,6 +293,13 @@ public class FuncArcExploder extends LockssTestCase {
     // ArcExploder() to find the AU to store the URL in.
     //assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
 
+    // Test getUrlStems
+    checkGetUrlStems();
+    // Test crawl rules
+    checkCrawlRules();
+    // Test getPermissionPage
+    //checkGetPermissionPages();
+
   }
 
   //recursive caller to check through the whole file tree
@@ -345,6 +357,84 @@ public class FuncArcExploder extends LockssTestCase {
     log.debug2("Checking UnExploded URLs done.");
   }
 
+    static String[] expectedStems = {
+      "http://www.stage.org/",
+      "http://www.content.org/",
+      "http://www.website.org/",
+      "http://www.library.org/",
+    };
+
+  private void checkGetUrlStems() {
+    if (multipleStemsPerAu) {
+      String testUrl = expectedStems[1] + "branch1/index.html";
+      CachedUrl cu = pluginMgr.findCachedUrl(testUrl);
+      assertNotNull("No CU for " + testUrl, cu);
+      ArchivalUnit au = cu.getArchivalUnit();
+      assertNotNull(au);
+      Collection stems = au.getUrlStems();
+      assertNotNull("stems is null", stems);
+      assertSameElements(expectedStems, stems);
+    } else {
+      for (int i = 1; i < expectedStems.length; i++) {
+	String testUrl = expectedStems[i] + "branch1/index.html";
+	CachedUrl cu = pluginMgr.findCachedUrl(testUrl);
+	assertNotNull("No CU for " + testUrl, cu);
+	ArchivalUnit au = cu.getArchivalUnit();
+	assertNotNull(au);
+	Collection stems = au.getUrlStems();
+	assertNotNull("stems is null", stems);
+	String[] expect = { expectedStems[i], };
+	assertSameElements(expect, stems);
+      }
+    }
+  }
+
+  static String[] yes = {
+    "http://www.content.org/index.html",
+    "http://www.content.org/branch1/001file.html",
+    "http://www.content.org/foo/bar/index.html",
+    "http://www.website.org/index.html",
+    "http://www.website.org/branch2/002file.html",
+    "http://www.website.org/foo/bar/bletch/index.html",
+    "http://www.library.org/index.html",
+    "http://www.library.org/branch2/002file.html",
+    "http://www.library.org/foo/bar/bletch/index.html",
+  };
+  static String[] no = {
+    "http://www.example.com/",
+    "http://www.example.com/index.html",
+    "http://www.example.com/branch1/001file.html",
+  };
+  private void checkCrawlRules() {
+    if (multipleStemsPerAu) {
+      String testUrl = expectedStems[1] + "branch1/index.html";
+      CachedUrl cu = pluginMgr.findCachedUrl(testUrl);
+      assertNotNull("No CU for " + testUrl, cu);
+      ArchivalUnit au = cu.getArchivalUnit();
+      assertNotNull(au);
+      for (int i = 0; i < yes.length; i++) {
+	assertTrue(yes[i] + " should be cached", au.shouldBeCached(yes[i]));
+      }
+      for (int i = 0; i < no.length; i++) {
+	assertFalse(no[i] + " should not be cached", au.shouldBeCached(no[i]));
+      }
+    } else {
+      for (int i = 0; i < yes.length; i++) {
+	CachedUrl cu = null;
+	String testUrl = null;
+	try {
+	  testUrl = UrlUtil.getUrlPrefix(yes[i]) + "branch1/index.html";
+	  cu = pluginMgr.findCachedUrl(testUrl);
+	} catch (MalformedURLException ex) {
+	  fail(ex.toString() + " " + testUrl);
+	}
+	assertNotNull("No CU for " + testUrl, cu);
+	ArchivalUnit au = cu.getArchivalUnit();
+	assertNotNull(au);
+	assertTrue(yes[i] + " should be cached", au.shouldBeCached(yes[i]));
+      }	
+    }
+  }
 
   private void createContent() {
     log.debug("Generating tree of size 3x1x2 with "+fileSize

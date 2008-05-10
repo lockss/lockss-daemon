@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.5 2008-05-10 03:17:05 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.6 2008-05-10 17:47:11 dshr Exp $
  */
 
 /*
@@ -178,7 +178,9 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     try {
       String stem = UrlUtil.getUrlPrefix(url);
       permissionPageUrls.add(url);
-      urlStems.add(stem);
+      if (urlStems.indexOf(stem) < 0) {
+	urlStems.add(stem);
+      }
     } catch (MalformedURLException ex) {
       logger.debug3("addUrlStemToAU(" + url + ") threw " + ex);
     }
