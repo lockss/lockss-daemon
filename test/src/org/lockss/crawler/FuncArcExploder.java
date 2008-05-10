@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.3 2008-05-09 19:08:11 dshr Exp $
+ * $Id: FuncArcExploder.java,v 1.4 2008-05-10 03:17:05 dshr Exp $
  */
 
 /*
@@ -132,7 +132,10 @@ public class FuncArcExploder extends LockssTestCase {
     log.info("Setting up for depth " + maxDepth);
     test.setUp(maxDepth);
     log.info("Running up for depth " + maxDepth);
-    test.testRunSelf1();
+    test.testBadContentMultipleAU();
+    test.testGoodContentMultipleAU();
+    test.testBadContentSingleAU();
+    test.testGoodContentSingleAU();
     test.tearDown();
   }
 
@@ -198,11 +201,23 @@ public class FuncArcExploder extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testRunSelf1() throws Exception {
+  public void testBadContentMultipleAU() throws Exception {
     runTest(false);
   }
 
-  public void testRunSelf2() throws Exception {
+  public void testGoodContentMultipleAU() throws Exception {
+    runTest(true);
+  }
+
+  public void testBadContentSingleAU() throws Exception {
+    ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
+				  "http://www.stage.org/");
+    runTest(false);
+  }
+
+  public void testGoodContentSingleAU() throws Exception {
+    ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
+				  "http://www.stage.org/");
     runTest(true);
   }
 

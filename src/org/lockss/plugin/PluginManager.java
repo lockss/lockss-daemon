@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.188 2008-04-18 18:00:34 edwardsb1 Exp $
+ * $Id: PluginManager.java,v 1.189 2008-05-10 03:17:05 dshr Exp $
  */
 
 /*
@@ -825,7 +825,7 @@ public class PluginManager
     return au;
   }
 
-  private void addHostAus(ArchivalUnit au) {
+  public void addHostAus(ArchivalUnit au) {
     try {
       Collection stems = au.getUrlStems();
       if (stems != null) {

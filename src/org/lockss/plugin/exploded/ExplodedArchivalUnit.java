@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.4 2007-11-15 23:15:38 tlipkis Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.5 2008-05-10 03:17:05 dshr Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.exploded;
 
 import java.util.*;
+import java.net.*;
 
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
@@ -49,6 +50,8 @@ import org.lockss.state.AuState;
 public class ExplodedArchivalUnit extends BaseArchivalUnit {
   private String m_explodedBaseUrl = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
+  private ArrayList permissionPageUrls = new ArrayList();
+  private ArrayList urlStems = new ArrayList();
 
   public ExplodedArchivalUnit(ExplodedPlugin plugin) {
     super(plugin);
@@ -73,6 +76,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
 	auName += " " + journalId;
       }
     }
+    addUrlStemToAU(m_explodedBaseUrl);
   }
 
 
@@ -108,8 +112,22 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    * @return true if it is included
    */
   public boolean shouldBeCached(String url) {
-    logger.debug3(url + " vs. " + m_explodedBaseUrl);
-    return url.startsWith(m_explodedBaseUrl);
+    for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
+      String stem = (String)it.next();
+      logger.debug3("shouldBeCached(" + url + ") stem " + stem);
+      if (url.startsWith(stem)) {
+	return true;
+      }
+    }
+    return false;
+  }
+
+  public Collection getUrlStems() {
+    return new ArrayList(urlStems);
+  }
+
+  protected List getPermissionPages() {
+    return new ArrayList(permissionPageUrls);
   }
 
   protected CrawlRule makeRules() {
@@ -121,8 +139,12 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     }
 
     public int match(String url) {
-      if (url.startsWith(m_explodedBaseUrl)) {
-	return INCLUDE;
+      for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
+	String stem = (String)it.next();
+	logger.debug3("match(" + url + ") stem " + stem);
+	if (url.startsWith(stem)) {
+	  return INCLUDE;
+	}
       }
       return EXCLUDE;
     }
@@ -146,6 +168,20 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    */
   public boolean shouldCrawlForNewContent(AuState aus) {
     return false;
+  }
+
+  /**
+   * Add the url to the list of "permission pages" for the AU
+   * @param url
+   */
+  public void addUrlStemToAU(String url) {
+    try {
+      String stem = UrlUtil.getUrlPrefix(url);
+      permissionPageUrls.add(url);
+      urlStems.add(stem);
+    } catch (MalformedURLException ex) {
+      logger.debug3("addUrlStemToAU(" + url + ") threw " + ex);
+    }
   }
 
   // Exploded AU crawl spec implementation

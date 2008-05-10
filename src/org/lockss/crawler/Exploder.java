@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.8 2008-02-11 05:06:42 dshr Exp $
+ * $Id: Exploder.java,v 1.9 2008-05-10 03:17:04 dshr Exp $
  */
 
 /*
@@ -68,6 +68,9 @@ public abstract class Exploder {
   public static final String PARAM_RETRY_PAUSE =
     Configuration.PREFIX + "crawler.exploder.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 3*Constants.SECOND;
+  public static final String PARAM_EXPLODED_AU_BASE_URL =
+    Configuration.PREFIX + "crawler.exploder.PARAM_EXPLODED_AU_BASE_URL";
+  public static final String DEFAULT_EXPLODED_AU_BASE_URL = "none";
 
 
   protected UrlCacher urlCacher;
@@ -82,6 +85,9 @@ public abstract class Exploder {
   protected PluginManager pluginMgr = null;
   protected Set touchedAus = new HashSet();
   protected long sleepAfter = 0;
+  protected boolean multipleStemsPerAu = false;
+  protected ExplodedArchivalUnit singleAU = null;
+  protected String explodedAUBaseUrl = null;
 
   protected static final String indexTag = "<!-- Next Entry Goes Here -->\n";
   protected static final String manifestPageTag = "</body>\n";
@@ -111,6 +117,11 @@ public abstract class Exploder {
     sleepAfter =
       CurrentConfig.getLongParam(PARAM_EXPLODER_ENTRIES_PER_PAUSE,
 				 DEFAULT_EXPLODER_ENTRIES_PER_PAUSE);
+    explodedAUBaseUrl = 
+      CurrentConfig.getParam(PARAM_EXPLODED_AU_BASE_URL,
+			     DEFAULT_EXPLODED_AU_BASE_URL);
+    multipleStemsPerAu =
+      ! DEFAULT_EXPLODED_AU_BASE_URL.equals(explodedAUBaseUrl);
   }
 
   /**
@@ -133,8 +144,26 @@ public abstract class Exploder {
       cu.release();
     }
     if (au == null) {
-      // There's no AU for this baseUrl,  so create one
-      au = createAu(ae, baseUrl);
+      if (multipleStemsPerAu) {
+	logger.debug3("New single AU for base url " + baseUrl + " exploded " +
+		      explodedAUBaseUrl);
+	if (singleAU == null) {
+	  singleAU = createAu(ae, explodedAUBaseUrl);
+	}
+	// Add this baseUrl to the stem set for the AU we're making
+	singleAU.addUrlStemToAU(baseUrl);
+	pluginMgr.addHostAus(singleAU);
+	au = singleAU;
+      } else {
+	logger.debug3("New AU for " + baseUrl);
+	// There's no AU for this baseUrl,  so create one
+	au = createAu(ae, baseUrl);
+      }
+    }
+    if (au == null) {
+      IOException ex = new IOException("No new AU for " + baseUrl);
+      logger.error(ex.toString() + new Throwable());
+      throw ex;
     }
     if (!(au instanceof ExplodedArchivalUnit)) {
       IOException ex = new IOException(au.toString() + " wrong type");
@@ -158,7 +187,7 @@ public abstract class Exploder {
     // XXX other stats to update?
   }
 
-  protected ArchivalUnit createAu(ArchiveEntry ae, String baseUrl)
+  protected ExplodedArchivalUnit createAu(ArchiveEntry ae, String baseUrl)
       throws IOException {
     CIProperties props = ae.getAuProps();
     if (props == null) {
@@ -187,7 +216,7 @@ public abstract class Exploder {
 	logger.error("Failed to create new AU", new Throwable());
 	throw new IOException("Can't create au for " + baseUrl);
       }
-      return au;
+      return (ExplodedArchivalUnit)au;
     } catch (ArchivalUnit.ConfigurationException ex) {
       logger.error("createAndSaveAuConfiguration() threw " + ex.toString());
       throw new IOException(pluginName + " not initialized for " + baseUrl);
