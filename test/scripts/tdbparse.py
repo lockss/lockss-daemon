@@ -246,6 +246,10 @@ class TdbParser(object):
         self.__initialize()
 
     def parse(self):
+        '''title_database :
+            publisher_container_or_publisher_block*
+            TOKEN_EOF
+        ;'''
         if self.__token[0] == TOKEN_EOF:
             raise RuntimeError, 'already done parsing'
         self.__advance()
@@ -254,12 +258,23 @@ class TdbParser(object):
         self.__expect(TOKEN_EOF)
 
     def __publisher_container_or_publisher_block(self):
+        '''publisher_container_or_publisher_block :
+            publisher_container
+        |
+            publisher_block
+        ;'''
         if self.__token[1] == TOKEN_KEYWORD_PUBLISHER:
             self.__publisher_block()
         else:
             self.__publisher_container()
 
     def __publisher_container(self):
+        '''publisher_container :
+            TOKEN_CURLY_OPEN
+            assignment*
+            publisher_container_or_publisher_block*
+            TOKEN_CURLY_CLOSE
+        ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
             self.__assignment()
@@ -268,20 +283,39 @@ class TdbParser(object):
         self.__expect(TOKEN_CURLY_CLOSE)
 
     def __publisher_block(self):
+        '''publisher_block :
+            TOKEN_CURLY_OPEN
+            publisher
+            assignment*
+            title_container_or_title_block*
+            TOKEN_CURLY_CLOSE
+        ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         self.__publisher()
         while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
             self.__assignment()
         while self.__token[0] == TOKEN_CURLY_OPEN:
             self.__title_container_or_title_block()
+        self.__expect(TOKEN_CURLY_CLOSE)
 
     def __title_container_or_title_block(self):
+        '''title_container_or_title_block :
+            title_container
+        |
+            title_block
+        ;'''
         if self.__token[1] == TOKEN_KEYWORD_TITLE:
             self.__title_block()
         else:
             self.__title_container()
 
     def __title_container(self):
+        '''title_container :
+            TOKEN_CURLY_OPEN
+            assignment*
+            title_container_or_title_block*
+            TOKEN_CURLY_CLOSE
+        ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
             self.__assignment()
@@ -290,14 +324,27 @@ class TdbParser(object):
         self.__expect(TOKEN_CURLY_CLOSE)
 
     def __title_block(self):
+        '''title_block :
+            TOKEN_CURLY_OPEN
+            title
+            assignment*
+            au_container_or_au*
+            TOKEN_CURLY_CLOSE
+        ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         self.__title()
         while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
             self.__assignment()
         while self.__token[0] in [TOKEN_KEYWORD_AU, TOKEN_CURLY_OPEN]:
             self.__au_container_or_au()
+        self.__expect(TOKEN_CURLY_CLOSE)
 
     def __au_container_or_au(self):
+        '''au_container_or_au :
+            au_container
+        |
+            au
+        ;'''
         if self.__token[0] == TOKEN_KEYWORD_AU:
             self.__au()
         elif self.__token[0] == TOKEN_CURLY_OPEN:
@@ -306,6 +353,12 @@ class TdbParser(object):
             raise RuntimeError, 'expected opening curly brace or au, got %s' % (self.__token[0],)
 
     def __au_container(self):
+        '''au_container :
+            TOKEN_CURLY_OPEN
+            assignment*
+            au_container_or_au*
+            TOKEN_CURLY_CLOSE
+        ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
             self.__assignment()
@@ -314,6 +367,11 @@ class TdbParser(object):
         self.__expect(TOKEN_CURLY_CLOSE)
 
     def __assignment(self):
+        '''assignment :
+            simple_assignment
+        |
+            columns
+        ;'''
         if self.__token[0] == TOKEN_IDENTIFIER:
             self.__simple_assignment()
         elif self.__token[0] == TOKEN_KEYWORD_COLUMNS:
@@ -322,50 +380,95 @@ class TdbParser(object):
             raise RuntimeError, 'expected identifier or columns, got %s' % (self.__token[0],)
 
     def __identifier(self):
+        '''identifier :
+            TOKEN_IDENTIFIER
+            ( TOKEN_SQUARE_OPEN TOKEN_INTEGER TOKEN_SQUARE_CLOSE )?
+        ;'''
         self.__expect(TOKEN_IDENTIFIER)
         if self.__accept(TOKEN_SQUARE_OPEN):
             self.__expect(TOKEN_INTEGER)
             self.__expect(TOKEN_SQUARE_CLOSE)
 
     def __list_of_identifiers(self):
+        '''list_of_identifiers :
+            TOKEN_IDENTIFIER
+            ( TOKEN_SEMICOLON TOKEN_IDENTIFIER )*
+        ;'''
         self.__expect(TOKEN_IDENTIFIER)
         while self.__accept(TOKEN_SEMICOLON):
             self.__expect(TOKEN_IDENTIFIER)
 
     def __simple_assignment(self):
+        '''simple_assignment :
+            identifier
+            TOKEN_EQUAL
+            TOKEN_STRING
+        ;'''
         self.__identifier()
         self.__expect(TOKEN_EQUAL)
         self.__expect(TOKEN_STRING)
 
     def __list_of_simple_assignments(self):
+        '''list_of_simple_assignments :
+            simple_assignment
+            ( TOKEN_SEMICOLON simple_assignment )*
+        ;'''
         self.__simple_assignment()
         while self.__accept(TOKEN_SEMICOLON):
             self.__simple_assignment()
 
     def __list_of_strings(self):
+        '''list_of_strings :
+            TOKEN_STRING
+            ( TOKEN_SEMICOLON TOKEN_STRING )*
+        ;'''
         self.__expect(TOKEN_STRING)
         while self.__accept(TOKEN_SEMICOLON):
             self.__expect(TOKEN_STRING)
 
     def __columns(self):
+        '''columns :
+            TOKEN_KEYWORD_COLUMNS
+            TOKEN_ANGLE_OPEN
+            list_of_identifiers
+            TOKEN_ANGLE_CLOSE
+        ;'''
         self.__expect(TOKEN_KEYWORD_COLUMNS)
         self.__expect(TOKEN_ANGLE_OPEN)
         self.__list_of_identifiers()
         self.__expect(TOKEN_ANGLE_CLOSE)
 
     def __au(self):
+        '''au :
+            TOKEN_KEYWORD_AU
+            TOKEN_ANGLE_OPEN
+            list_of_strings
+            TOKEN_ANGLE_CLOSE
+        ;'''
         self.__expect(TOKEN_KEYWORD_AU)
         self.__expect(TOKEN_ANGLE_OPEN)
         self.__list_of_strings()
         self.__expect(TOKEN_ANGLE_CLOSE)
 
     def __title(self):
+        '''title :
+            TOKEN_KEYWORD_TITLE
+            TOKEN_ANGLE_OPEN
+            list_of_simple_assignments
+            TOKEN_ANGLE_CLOSE
+        ;'''
         self.__expect(TOKEN_KEYWORD_TITLE)
         self.__expect(TOKEN_ANGLE_OPEN)
         self.__list_of_simple_assignments()
         self.__expect(TOKEN_ANGLE_CLOSE)
 
     def __publisher(self):
+        '''title :
+            TOKEN_KEYWORD_PUBLISHER
+            TOKEN_ANGLE_OPEN
+            list_of_simple_assignments
+            TOKEN_ANGLE_CLOSE
+        ;'''
         self.__expect(TOKEN_KEYWORD_PUBLISHER)
         self.__expect(TOKEN_ANGLE_OPEN)
         self.__list_of_simple_assignments()
@@ -396,14 +499,18 @@ class TdbParser(object):
         self.__token.append(tok)
 
     def __accept(self, token):
+        '''If the given token is next, consumes it and returns True,
+        otherwise does not consume a token and returns False.'''
         if self.__token[0] == token:
             self.__advance()
             return True
         return False
 
     def __expect(self, token):
-        if (self.__accept(token)): return True
-        raise RuntimeError, 'expected <%s>, got <%s>' % (token, self.__token[0])
+        '''If the given token is next, consumes it, otherwise raises
+        a runtime error.'''
+        if not self.__accept(token):
+            raise RuntimeError, 'expected <%s>, got <%s>' % (token, self.__token[0])
 
 if __name__ == '__main__':
     from sys import stdin
