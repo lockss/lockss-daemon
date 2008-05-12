@@ -463,7 +463,7 @@ class TdbParser(object):
         self.__expect(TOKEN_ANGLE_CLOSE)
 
     def __publisher(self):
-        '''title :
+        '''publisher :
             TOKEN_KEYWORD_PUBLISHER
             TOKEN_ANGLE_OPEN
             list_of_simple_assignments
