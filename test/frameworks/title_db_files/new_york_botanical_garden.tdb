@@ -3,23 +3,26 @@
 #	@publisherTitleSet	publisher=New York Botanical Garden
 #	@fixedValues	P=New York Botanical Garden	p=org.lockss.plugin.bioone.BioOnePlugin
 #	@fixedValues	i=0007-196X	j=Brittonia
-	ready	Brittonia Volume 54	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=54
-	ready	Brittonia Volume 55	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=55
-	released	Brittonia Volume 56	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=56
-	ready	Brittonia Volume 57	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=57
-	ready	Brittonia Volume 58	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=58
-	ready	Brittonia Volume 59	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=59
+	releasing	Brittonia Volume 54	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=54
+	releasing	Brittonia Volume 55	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=55
+	do_not_process	Brittonia Volume 56	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=56
+	released	Brittonia Volume 56	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=056
+	releasing	Brittonia Volume 57	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=57
+	releasing	Brittonia Volume 58	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=58
+	releasing	Brittonia Volume 59	base_url=http://www.bioone.org/	journal_id=0007-196X	volume=59
 #	@fixedValues	i=0013-0001	j=Economic Botany
-	ready	Economic Botany Volume 56	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=56
-	ready	Economic Botany Volume 57	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=57
-	released	Economic Botany Volume 58	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=58
-	ready	Economic Botany Volume 59	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=59
-	ready	Economic Botany Volume 60	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=60
-	ready	Economic Botany Volume 61	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=61
+	releasing	Economic Botany Volume 56	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=56
+	releasing	Economic Botany Volume 57	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=57
+	do_not_process	Economic Botany Volume 58	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=58
+	released	Economic Botany Volume 58	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=058
+	releasing	Economic Botany Volume 59	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=59
+	releasing	Economic Botany Volume 60	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=60
+	releasing	Economic Botany Volume 61	base_url=http://www.bioone.org/	journal_id=0013-0001	volume=61
 #	@fixedValues	i=0006-8101	j=The Botanical Review
-	ready	The Botanical Review Volume 68	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=68
-	ready	The Botanical Review Volume 69	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=69
-	released	The Botanical Review Volume 70	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=70
-	ready	The Botanical Review Volume 71	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=71
-	ready	The Botanical Review Volume 72	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=72
-	ready	The Botanical Review Volume 73	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=73
+	releasing	The Botanical Review Volume 68	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=68
+	releasing	The Botanical Review Volume 69	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=69
+	do_not_process	The Botanical Review Volume 70	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=70
+	released	The Botanical Review Volume 70	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=070
+	releasing	The Botanical Review Volume 71	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=71
+	releasing	The Botanical Review Volume 72	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=72
+	releasing	The Botanical Review Volume 73	base_url=http://www.bioone.org/	journal_id=0006-8101	volume=73
