@@ -1,0 +1,64 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.dictynna.DictynnaPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Dictynna Plugin, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Dictynna Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sDictynnaNumero%s&quot;, base_url, volume_name</string>
+      <string>1,&quot;%sDictynnaSommaires.html&quot;, base_url</string>
+      <string>1,&quot;%slockss.html&quot;, base_url</string>
+      <string>1,&quot;%s1Articles/%sArticlespdf&quot;, base_url, volume_name</string>
+      <string>1,&quot;%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)&quot;, base_url</string>
+      <string>1,&quot;%sResumes/ResumesN%s&quot;, base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sDictynnaSommaires.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%slockss.html&quot;, base_url</string>
+  </entry>
+</map>
