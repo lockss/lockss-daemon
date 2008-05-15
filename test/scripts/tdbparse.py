@@ -16,9 +16,8 @@ TOKEN_SQUARE_CLOSE      = 11
 TOKEN_SEMICOLON         = 12
 TOKEN_EQUAL             = 13
 TOKEN_STRING            = 14
-TOKEN_INTEGER           = 15
-TOKEN_IDENTIFIER        = 16
-TOKEN_EOF               = 17
+TOKEN_IDENTIFIER        = 15
+TOKEN_EOF               = 16
 
 class TdbScanner(object):
     '''Implements a lexical analyzer for the TDB language.
@@ -107,13 +106,6 @@ class TdbScanner(object):
         if self.__line.startswith('='):
             self.__options['_expect_string'] = TOKEN_EQUAL
             return self.__single(TOKEN_EQUAL)
-        # Integers
-        match = re.match(r'\d+', self.__line)
-        if match:
-            self.__value = int(match.group())
-            self.__advance(match.end())
-            self.__token = TOKEN_INTEGER
-            return self.__token
         # Identifiers
         match = re.match(r'\w+', self.__line)
         if match:
@@ -382,11 +374,11 @@ class TdbParser(object):
     def __identifier(self):
         '''identifier :
             TOKEN_IDENTIFIER
-            ( TOKEN_SQUARE_OPEN TOKEN_INTEGER TOKEN_SQUARE_CLOSE )?
+            ( TOKEN_SQUARE_OPEN TOKEN_IDENTIFIER TOKEN_SQUARE_CLOSE )?
         ;'''
         self.__expect(TOKEN_IDENTIFIER)
         if self.__accept(TOKEN_SQUARE_OPEN):
-            self.__expect(TOKEN_INTEGER)
+            self.__expect(TOKEN_IDENTIFIER)
             self.__expect(TOKEN_SQUARE_CLOSE)
 
     def __list_of_identifiers(self):
