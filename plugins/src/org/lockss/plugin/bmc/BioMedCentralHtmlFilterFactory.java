@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.1 2008-02-23 00:37:21 thib_gc Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.2 2008-05-15 00:18:18 estro Exp $
  */
 
 /*
@@ -35,10 +35,11 @@ package org.lockss.plugin.bmc;
 import java.io.InputStream;
 
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.filters.AndFilter;
+import org.htmlparser.filters.HasAttributeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.anthrosource.AnthroSourceHtmlFilterFactory.HtmlCompoundTransform;
 
 public class BioMedCentralHtmlFilterFactory implements FilterFactory {
 
@@ -56,8 +57,21 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
                                                                          "topnav")),
         // Filter out <noscript>...</noscript>
         HtmlNodeFilterTransform.exclude(new TagNameFilter("noscript")),
+	
+        // Filter out <script>...</script>
+        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
+
         // Filter out <iframe>...</iframe>
         HtmlNodeFilterTransform.exclude(new TagNameFilter("iframe")),
+
+        // Filter out <a href="...">...</a> where the href value matches a regular exception
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
+                                                                              "href",
+                                                                              "^#")),
+
+       // Filter out <a name="...">...</a>
+       HtmlNodeFilterTransform.exclude(new AndFilter(new TagNameFilter("a"),
+                                                      new HasAttributeFilter("name"))),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
