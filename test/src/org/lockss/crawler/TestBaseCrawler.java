@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.15 2008-03-26 04:51:06 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.16 2008-05-19 07:38:58 tlipkis Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertTrue(BaseCrawler.isSupportedUrlProtocol("HTTP://www.example.com"));
     assertFalse(BaseCrawler.isSupportedUrlProtocol("ftp://www.example.com"));
     assertFalse(BaseCrawler.isSupportedUrlProtocol("gopher://www.example.com"));
-    assertFalse(BaseCrawler.isSupportedUrlProtocol("https://www.example.com"));
+    assertTrue(BaseCrawler.isSupportedUrlProtocol("https://www.example.com"));
   }
 
   public void testGetAu() {

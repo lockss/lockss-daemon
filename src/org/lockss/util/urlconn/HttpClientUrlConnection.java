@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.25 2007-07-31 06:30:55 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.26 2008-05-19 07:38:58 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -38,6 +38,7 @@ import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.*;
 import org.apache.commons.httpclient.util.*;
+import org.apache.commons.httpclient.protocol.Protocol;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
@@ -53,6 +54,14 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    * be wrapped in an EofMonitoringInputStream */
   static final String PARAM_USE_WRAPPER_STREAM = PREFIX + "useWrapperStream";
   static final boolean DEFAULT_USE_WRAPPER_STREAM = true;
+
+  // Set up an SSL protocol factory that accepts self-signed certificates
+  static {
+    Protocol easyhttps = new Protocol("https",
+				      new EasySSLProtocolSocketFactory(),
+				      443);
+    Protocol.registerProtocol("https", easyhttps);
+  }
 
 
   /** Called by org.lockss.config.MiscConfig

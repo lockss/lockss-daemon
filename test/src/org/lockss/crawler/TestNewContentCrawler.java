@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.67 2008-03-26 04:51:06 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.68 2008-05-19 07:38:58 tlipkis Exp $
  */
 
 /*
@@ -940,55 +940,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(startUrl, true, true);
     mau.addUrl(url1);
     assertFalse(crawler.doCrawl());
-  }
-
-  public void testDoesCollectHttpsOnStartingUrls() {
-    //we will collect ftp, gopher https eventually,
-    //it is not yet implemented though and this test
-    //is to make sure urls in this protocols will not
-    //break the whole system
-
-    String startUrl = "https://www.example.com/index.html";
-    String url1 = "https://www.example.com/link1.html";
-    List startUrls = ListUtil.list(startUrl);
-
-    //See if we're running in a version of java that throws on trying
-    //to construct a https URL
-    boolean httpsUrlThrows = false;
-    try {
-      URL url = new URL(startUrl);
-    } catch (Exception e) {
-      httpsUrlThrows = true;
-    }
-
-
-    spec = new SpiderCrawlSpec(startUrls,
-			       ListUtil.list(permissionPage), crawlRule, 1);
-    crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MockPermissionChecker(100));
-
-    mau.addUrl(startUrl, false, true);
-    crawlRule.addUrlToCrawl(startUrl);
-    extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
-    mau.addUrl(url1, false, true);
-    crawlRule.addUrlToCrawl(url1);
-
-    mau.setLinkExtractor("text/html", extractor);
-    if (httpsUrlThrows) {
-      assertFalse("Crawler shouldn't succeed when trying system can't construct a https URL", crawler.doCrawl());
-    } else {
-      assertTrue("Crawler should succeed when system can construct a https URL",
-		 crawler.doCrawl());
-    }
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    Set expectedSet = SetUtil.set(permissionPage);
-
-    if (!httpsUrlThrows) {
-      expectedSet.add(startUrl);
-    }
-    assertEquals(expectedSet, cus.getCachedUrls());
   }
 
   private static void setProperty(String prop, String value) {

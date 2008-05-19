@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.29 2008-03-26 04:51:07 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.30 2008-05-19 07:38:59 tlipkis Exp $
  */
 
 /*
@@ -398,25 +398,11 @@ public abstract class BaseCrawler
     return;
   }
   
-  // For now only follow http: links
+  // Follow http: and https: links
   public static boolean isSupportedUrlProtocol(String url) {
-    return StringUtil.startsWithIgnoreCase(url, "http://");
+    return StringUtil.startsWithIgnoreCase(url, "http://")
+      || StringUtil.startsWithIgnoreCase(url, "https://");
   }
-
-  // Was this.  If it's going to explicitly check for http://, there's
-  // no point in creating the URL.
-//   protected static boolean isSupportedUrlProtocol(String url) {
-//     try {
-//       URL ur = new URL(url);
-//       // some 1.4 machines will allow this, so we explictly exclude it for now.
-//       if (StringUtil.startsWithIgnoreCase(ur.toString(), "http://")) {
-//         return true;
-//       }
-//     }
-//     catch (Exception ex) {
-//     }
-//     return false;
-//   }
 
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;

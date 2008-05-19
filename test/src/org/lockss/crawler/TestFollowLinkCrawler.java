@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.28 2008-03-26 04:51:06 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.29 2008-05-19 07:38:58 tlipkis Exp $
  */
 
 /*
@@ -718,16 +718,13 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testDoesCollectHttps() {
-    //we will collect https eventually, it is not yet implemented though and
-    //this test is to make sure an https url will not break the whole system
-
     String url1= "http://www.example.com/link1.html";
     String url2= "https://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
-    assertEquals(SetUtil.set(startUrl, url1, url3),
+    assertEquals(SetUtil.set(startUrl, url1, url2, url3),
 		 crawlUrls(ListUtil.list(url1, url2, url3)));
   }
 
