@@ -7887,8 +7887,7 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
-    <property name="DSHRBlog">
-      <property name="title" value="DSHR Blog" />
+    <property name="title" value="DSHR Blog" >
       <property name="journalTitle" value="DSHRBlog" />
       <property name="plugin" value="org.lockss.plugin.blogger.BasicBloggerPlugin" />
       <property name="estSize" value="15MB" />
@@ -7899,13 +7898,107 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
-    <property name="JournaloftheIndianInstituteofScience">
-      <property name="title" value="Journal of the Indian Institute of Science" />
+    <property name="JournaloftheIndianInstituteofScience87">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 87" />
       <property name="journalTitle" value="Journal of the Indian Institute of Science" />
       <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
       <property name="param.1">
 	   <property name="key" value="base_url" />
 	   <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2007" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+   <property name="JournaloftheIndianInstituteofScience86">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 86" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+           <property name="key" value="base_url" />
+           <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2006" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+   <property name="JournaloftheIndianInstituteofScience85">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 85" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+           <property name="key" value="base_url" />
+           <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2005" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+   <property name="JournaloftheIndianInstituteofScience84">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 84" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+           <property name="key" value="base_url" />
+           <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2004" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+   <property name="JournaloftheIndianInstituteofScience83">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 83" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+           <property name="key" value="base_url" />
+           <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2003" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+   <property name="JournaloftheIndianInstituteofScience82">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 82" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+           <property name="key" value="base_url" />
+           <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2002" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+   <property name="JournaloftheIndianInstituteofScience81">
+      <property name="title" value="Journal of the Indian Institute of Science Volume 81" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+           <property name="key" value="base_url" />
+           <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2001" />
       </property>
       <property name="attributes.rights" value="openaccess" />
     </property>
