@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.5 2008-02-24 02:32:57 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.6 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -73,9 +73,7 @@ public class PollUtil {
     double voteFract =
       (double)tgtVoteDuration / (double)(tgtVoteDuration + tgtTallyDuration);
 
-    double mult =
-      CurrentConfig.getDoubleParam(V3Poller.PARAM_POLL_EXTEND_MULTIPLIER,
-				   V3Poller.DEFAULT_POLL_EXTEND_MULTIPLIER);
+    double mult = getExtendPollMultiplier();
 
     // amount to increment total duration each time through loop
     long durationIncr = (long)(tgtVoteDuration * mult);
@@ -136,45 +134,50 @@ public class PollUtil {
     return pm.getDaemon().getSchedService().isTaskSchedulable(task);
   }
   
-  static long getV3MinPollDuration() {
+  public static long getV3MinPollDuration() {
     return
       CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_MIN_POLL_DURATION,
 					 V3Poller.DEFAULT_MIN_POLL_DURATION);
   }
 
-  static long getV3MaxPollDuration() {
+  public static long getV3MaxPollDuration() {
     return
       CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_MAX_POLL_DURATION,
 					 V3Poller.DEFAULT_MAX_POLL_DURATION);
   }
 
-  static int getVoteDurationMultiplier() {
+  public static int getVoteDurationMultiplier() {
     return
       CurrentConfig.getIntParam(V3Poller.PARAM_VOTE_DURATION_MULTIPLIER,
 				V3Poller.DEFAULT_VOTE_DURATION_MULTIPLIER);
   }
 
-  static long getVoteDurationPadding() {
+  public static long getVoteDurationPadding() {
     return
       CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_VOTE_DURATION_PADDING,
 					 V3Poller.DEFAULT_VOTE_DURATION_PADDING);
   }
 
-  static int getTallyDurationMultiplier() {
+  public static int getTallyDurationMultiplier() {
     return
       CurrentConfig.getIntParam(V3Poller.PARAM_TALLY_DURATION_MULTIPLIER,
 				V3Poller.DEFAULT_TALLY_DURATION_MULTIPLIER);
   }
 
-  static long getTallyDurationPadding() {
+  public static long getTallyDurationPadding() {
     return
       CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_TALLY_DURATION_PADDING,
 					 V3Poller.DEFAULT_TALLY_DURATION_PADDING);
   }
 
-  static long getReceiptPadding() {
+  public static long getReceiptPadding() {
     return CurrentConfig.getLongParam(V3Poller.PARAM_RECEIPT_PADDING,
 				      V3Poller.DEFAULT_RECEIPT_PADDING);
+  }
+
+  public static double getExtendPollMultiplier() {
+    return CurrentConfig.getDoubleParam(V3Poller.PARAM_POLL_EXTEND_MULTIPLIER,
+					V3Poller.DEFAULT_POLL_EXTEND_MULTIPLIER);
   }
 
   public static long calcV3Duration(PollSpec ps, PollManager pm) {

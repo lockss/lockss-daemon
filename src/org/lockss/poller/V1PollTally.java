@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.25 2005-12-01 23:28:00 troberts Exp $
+ * $Id: V1PollTally.java,v 1.26 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -448,6 +448,7 @@ class ReplayVoteCallback implements HashService.Callback {
      * @param e       the exception that caused the hash to fail.
      */
   public void hashingFinished(CachedUrlSet urlset,
+			      long timeUsed,
 			      Object cookie,
 			      CachedUrlSetHasher hasher,
 			      Exception e) {

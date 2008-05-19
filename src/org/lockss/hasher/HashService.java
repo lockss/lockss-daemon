@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.26 2005-10-19 20:13:05 troberts Exp $
+ * $Id: HashService.java,v 1.27 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public interface HashService extends LockssManager {
    * @param hasher   an instance of a <code>CachedUrlSetHasher</code>
    *                 representing a specific <code>CachedUrlSet</code>
    *                 and hash type
-   * @param deadline the time by which the callbeack must have been
+   * @param deadline the time by which the callback must have been
    *                 called.
    * @param callback the object whose <code>hashComplete()</code>
    *                 method will be called when hashing succeds
@@ -136,12 +136,14 @@ public interface HashService extends LockssManager {
      * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
+     * @param timeUsed amount of time hash actually took, in ms.
      * @param cookie  used to disambiguate callbacks.
      * @param hasher  the <code>CachedUrlSetHasher</code> object that
      *                contains the hash.
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
+				long timeUsed,
 				Object cookie,
 				CachedUrlSetHasher hasher,
 				Exception e);
@@ -152,6 +154,11 @@ public interface HashService extends LockssManager {
     public Timeout(String msg) {
       super(msg);
     }
+  }
+
+  /** Marker Exception used to tell CachedUrlSet to set hash estimate to an
+   * exact value rather than its normal averaging algorithm. */
+  public static class SetEstimate extends Exception {
   }
 
 }

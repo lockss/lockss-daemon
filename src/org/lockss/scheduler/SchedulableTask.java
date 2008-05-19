@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.14 2008-02-15 09:14:41 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.15 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class SchedulableTask {
     unaccountedTime = time;
   }
 
-  public Exception getExcption() {
+  public Exception getException() {
     return e;
   }
 

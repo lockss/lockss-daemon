@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.56 2008-04-02 00:44:24 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.57 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,26 @@ public class V3Voter extends BasePoll {
     PREFIX + "voteRequestDelay";
   public static final long DEFAULT_VOTE_REQUEST_DELAY =
     30 * Constants.SECOND;
+
+  /**
+   * If true, previous agreement will be required to serve repairs even for
+   * open access AUs
+   */
+  public static final String PARAM_RECALC_EXCESSIVE_HASH_ESTIMATE =
+    PREFIX + "recalcExcessiveHashEstimate";
+  public static final boolean DEFAULT_RECALC_EXCESSIVE_HASH_ESTIMATE = true;
+
+  /** 
+   * Factor of vote duration used as guess for duration of hash to recalc
+   * hash estimate.
+   */
+  public static final String
+    PARAM_RECALC_HASH_ESTIMATE_VOTE_DURATION_MULTIPLIER
+    = PREFIX + "recalcHashEstimateVoteDurationMultiplier";
+  /** Just used to document default */
+  public static final String
+    DEFAULT_RECALC_HASH_ESTIMATE_VOTE_DURATION_MULTIPLIER
+    = "Twice reciprocal of " + V3Poller.PARAM_VOTE_DURATION_MULTIPLIER;
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -373,7 +393,8 @@ public class V3Voter extends BasePoll {
     Deadline earliestStart = Deadline.at(now + voteReqDelay);
     // CR: eliminate reservation task; schedule hash here
 
-    long messageSendPadding = calculateMessageSendPadding(estimatedHashDuration);
+    long messageSendPadding =
+      calculateMessageSendPadding(estimatedHashDuration);
 
     Deadline latestFinish =
       Deadline.at(voterUserData.getVoteDeadline() - messageSendPadding);
@@ -386,6 +407,7 @@ public class V3Voter extends BasePoll {
         + StringUtil.timeIntervalToString(voteDuration) + ")";
       voterUserData.setErrorDetail(msg);
       log.warning(msg);
+      recalcHashEstimate(voterUserData.getVoteDeadline() - now);
       return false;
     }
 
@@ -444,6 +466,110 @@ public class V3Voter extends BasePoll {
       sendMessageTo(msg, getPollerId());
     } catch (IOException ex) {
       log.error("Unable to send POLL NAK message in poll " + getKey(), ex);
+    }
+  }
+
+  void recalcHashEstimate(long voteDuration) {
+    if (!CurrentConfig.getBooleanParam(PARAM_RECALC_EXCESSIVE_HASH_ESTIMATE,
+				       DEFAULT_RECALC_EXCESSIVE_HASH_ESTIMATE)) {
+      return;
+    }
+    if (pollManager.isRecalcAu(getAu())) {
+      log.debug2("Already have recalc scheduled for " + getAu());
+      return;
+    }
+
+    CachedUrlSetHasher hasher;
+    try {
+      hasher = new RecalcHashEstimateHasher(voterUserData.getCachedUrlSet(),
+					    initHasherDigests(),
+					    initHasherByteArrays(),
+					    new NullBlockEventHandler(),
+					    getRecalcDuration(voteDuration));
+    } catch (NoSuchAlgorithmException e) {
+      log.warning("Can't schedule hash duration recalc", e);
+      return;
+    }
+
+    Deadline deadline = Deadline.in(voteDuration);
+    long durationIncr = voteDuration * 2;
+    Deadline latestFinish = Deadline.in(voteDuration * 11);
+    HashService hashService = theDaemon.getHashService();
+    while (deadline.before(latestFinish)) {
+      try {
+	if (hashService.scheduleHash(hasher,
+				     deadline,
+				     new RecalcHashEstimateCallback(),
+				     null)) {
+	  if (log.isDebug()) {
+	    log.debug("Hash estimate recalc scheduled by " + deadline +
+		      " for " + getAu());
+	  }
+	  pollManager.addRecalcAu(getAu());
+	  return;
+	}
+      } catch (IllegalArgumentException e) {
+	log.error("Error scheduling duration recalc", e);
+      }
+      deadline.later(durationIncr);
+    }
+    log.debug("Couldn't schedule estimate recalc by " + latestFinish +
+	      " for " + getAu());
+  }
+  
+  long getRecalcDuration(long voteDuration) {
+    double voteDurationRecip = 2.0 / PollUtil.getVoteDurationMultiplier();
+    return (long)(voteDuration *
+		  CurrentConfig.getDoubleParam(PARAM_RECALC_HASH_ESTIMATE_VOTE_DURATION_MULTIPLIER,
+					       voteDurationRecip));
+  }
+
+  private class RecalcHashEstimateHasher extends BlockHasher {
+    private long estDuration;
+
+    public RecalcHashEstimateHasher(CachedUrlSet cus,
+				    MessageDigest[] digests,
+				    byte[][] initByteArrays,
+				    EventHandler cb,
+				    long estDuration) {
+      super(cus, digests, initByteArrays, new NullBlockEventHandler());
+      this.estDuration = estDuration;
+    }
+
+    private String ts = null;
+    public String typeString() {
+      if (ts == null) {
+	ts = "E(" + initialDigests.length + ")";
+      }
+      return ts;
+    }
+
+    public void storeActualHashDuration(long elapsed, Exception err) {
+      if (err instanceof HashService.SetEstimate) {
+	super.storeActualHashDuration(elapsed, err);
+      }
+    }
+    public long getEstimatedHashDuration() {
+      return estDuration;
+    }
+  }
+
+
+
+  private class RecalcHashEstimateCallback implements HashService.Callback {
+    public void hashingFinished(CachedUrlSet cus, long timeUsed, Object cookie,
+                                CachedUrlSetHasher hasher, Exception e) {
+      if (e == null) {
+	log.debug("Recalc finished, setting hash estimate to " +
+		  StringUtil.timeIntervalToString(timeUsed) +
+		  " for " + getAu());
+	hasher.storeActualHashDuration(timeUsed,
+				       new HashService.SetEstimate());
+      } else {
+	log.warning("Recalc hash duration didn't finish in " +
+		    timeUsed + " for " + getAu() + ": " + e.toString());
+      }
+      pollManager.removeRecalcAu(getAu());
     }
   }
 
@@ -742,10 +868,11 @@ public class V3Voter extends BasePoll {
    */
   boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
-    CachedUrlSetHasher hasher = new BlockHasher(voterUserData.getCachedUrlSet(),
-                                                initHasherDigests(),
-                                                initHasherByteArrays(),
-                                                new BlockEventHandler());
+    CachedUrlSetHasher hasher =
+      new BlockHasher(voterUserData.getCachedUrlSet(),
+		      initHasherDigests(),
+		      initHasherByteArrays(),
+		      new BlockEventHandler());
     HashService hashService = theDaemon.getHashService();
     Deadline hashDeadline = task.getLatestFinish();
 
@@ -918,7 +1045,7 @@ public class V3Voter extends BasePoll {
      *
      * @param cookie data supplied by caller to schedule()
      */
-    public void hashingFinished(CachedUrlSet cus, Object cookie,
+    public void hashingFinished(CachedUrlSet cus, long timeUsed, Object cookie,
                                 CachedUrlSetHasher hasher, Exception e) {
       if (!isPollActive()) {
 	log.warning("Hash finished after poll closed: " + getKey());
@@ -952,6 +1079,13 @@ public class V3Voter extends BasePoll {
       log.debug2("Poll " + getKey() + ": Ending hash for block " 
                  + block.getUrl());
       blockHashComplete(block);
+    }
+  }
+
+  private class NullBlockEventHandler implements BlockHasher.EventHandler {
+    public void blockStart(HashBlock block) { 
+    }
+    public void blockDone(HashBlock block) {
     }
   }
 
@@ -1088,16 +1222,16 @@ public class V3Voter extends BasePoll {
   /**
    * Release unneeded resources.
    */
+  // Do not set pollManager or theDaemon to null; it doesn't accomplish
+  // anything (they're not GCable) and they may get referenced
   public void release() {
     if (task != null) task.cancel();
     voterUserData.release();
     stateDir = null;
     task = null;
-    pollManager = null;
     idManager = null;
     pollSerializer = null;
     stateMachine = null;
-    theDaemon = null;
   }
 
   private PsmMachine makeMachine() {

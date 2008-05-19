@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.193 2008-03-26 00:51:55 tlipkis Exp $
+ * $Id: PollManager.java,v 1.194 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -238,7 +238,6 @@ public class PollManager
   Object queueLock = new Object();	// lock for sharedRateReqs and
 					// pollQueue
   BoundedTreeSet pollQueue = new BoundedTreeSet(paramPollQueueMax, PPC);
-
 
   public class PollReq {
     ArchivalUnit au;
@@ -959,12 +958,10 @@ public class PollManager
       }
 
       enablePollers =
-        CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_POLLER,
-                                      DEFAULT_ENABLE_V3_POLLER);
+        newConfig.getBoolean(PARAM_ENABLE_V3_POLLER, DEFAULT_ENABLE_V3_POLLER);
       
       enableVoters =
-        CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_VOTER,
-                                      DEFAULT_ENABLE_V3_VOTER);
+        newConfig.getBoolean(PARAM_ENABLE_V3_VOTER, DEFAULT_ENABLE_V3_VOTER);
       
       deleteInvalidPollStateDirs =
         newConfig.getBoolean(PARAM_DELETE_INVALID_POLL_STATE_DIRS,
@@ -1645,8 +1642,6 @@ public class PollManager
       super("PollStarter");
       this.lockssDaemon = lockssDaemon;
       this.pollManager = pollManager;
-
-      Configuration config = CurrentConfig.getCurrentConfig();
     }
 
     public void lockssRun() {
@@ -1891,5 +1886,24 @@ public class PollManager
       }
       return 1;
     }
+  }
+
+  private Set recalcingAus = Collections.synchronizedSet(new HashSet());
+
+  /** Remember that we have scheduled a hash to recalculate the hash time
+   * for this AU */
+  public void addRecalcAu(ArchivalUnit au) {
+    recalcingAus.add(au);
+  }
+
+  /** Done with hash to recalculate the hash time for this AU */
+  public void removeRecalcAu(ArchivalUnit au) {
+    recalcingAus.remove(au);
+  }
+
+  /** Return true if already have scheduled a hash to recalculate the hash
+   * time for this AU */
+  public boolean isRecalcAu(ArchivalUnit au) {
+    return recalcingAus.contains(au);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.18 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: TestHashQueue.java,v 1.19 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -189,6 +189,7 @@ public class TestHashQueue extends LockssTestCase {
     final List eList = new LinkedList();
     HashService.Callback cb = new HashService.Callback() {
 	public void hashingFinished(CachedUrlSet urlset,
+				    long timeUsed,
 				    Object cookie,
 				    CachedUrlSetHasher hasher,
 				    Exception e) {
@@ -238,6 +239,7 @@ public class TestHashQueue extends LockssTestCase {
     final List cookieList = new LinkedList();
     HashService.Callback cb = new HashService.Callback() {
 	public void hashingFinished(CachedUrlSet urlset,
+				    long timeUsed,
 				    Object cookie,
 				    CachedUrlSetHasher hasher,
 				    Exception e) {

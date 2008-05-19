@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.14 2008-02-15 09:14:41 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.15 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -120,17 +120,21 @@ public class FuncHashService extends LockssTestCase {
   }
 
 
-  HashService.Callback hashCB() {
-    return new HashService.Callback() {
-	public void hashingFinished(CachedUrlSet urlset,
-				    Object cookie,
-				    CachedUrlSetHasher hasher,
-				    Exception e) {
-	  log.debug("Hashing finished: " + cookie);
-	  //	  cookieList.add(cookie);
+  MyCallback hashCB() {
+    return new MyCallback();
+  }
 
-	}
-      };
+  class MyCallback implements HashService.Callback {
+    long timeUsed = 0;
+    public void hashingFinished(CachedUrlSet urlset,
+				long timeUsed,
+				Object cookie,
+				CachedUrlSetHasher hasher,
+				Exception e) {
+      log.debug("Hashing finished: " + cookie);
+      this.timeUsed = timeUsed;
+      //	  cookieList.add(cookie);
+    }
   }
 
   public void testCanHashBeScheduled() throws Exception {
@@ -151,7 +155,8 @@ public class FuncHashService extends LockssTestCase {
 
   public void testSimulatedTimeStep() throws Exception {
     TimeBase.setSimulated();
-    MyMockCUSH hasher = hashContent("1", 300, -100, 500, hashCB());
+    MyCallback cb = hashCB();
+    MyMockCUSH hasher = hashContent("1", 300, -100, 500, cb);
     waitUntilDone();
     assertEquals(ListUtil.list(new Work(0, "1", stepBytes(), 1000),
 			       new Work(100, "1", stepBytes(), 1000),
@@ -160,6 +165,7 @@ public class FuncHashService extends LockssTestCase {
     assertEquals(300, cus.actualHashDuration);
     assertNull(cus.actualHashException);
     assertFalse(hasher.isAborted);
+    assertEquals(300, cb.timeUsed);
   }
 
   int stepBytes() {

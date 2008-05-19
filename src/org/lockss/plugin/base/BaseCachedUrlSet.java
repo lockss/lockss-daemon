@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.23 2008-03-23 08:08:02 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.24 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -196,6 +196,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     return nameHasherFactory(this, digest);
   }
 
+  // Hack: the err param is
   public void storeActualHashDuration(long elapsed, Exception err) {
     //only store estimate if it was a full hash (not ranged or single node)
     if (spec.isSingleNode() || spec.isRangeRestricted()) {
@@ -222,6 +223,12 @@ public class BaseCachedUrlSet implements CachedUrlSet {
           return;
         }
         newEst = (long)(elapsed * TIMEOUT_INCREASE);
+      }
+      else if (err instanceof HashService.SetEstimate) {
+
+	currentEstimate = -1;	 // force newEst to be set to elapsed below
+	newEst = elapsed;	 // keep compiler from complaining that
+				 // newEst might not have been set
       } else {
         // other error - don't update estimate
         return;
@@ -236,8 +243,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       }
     }
     logger.debug("newEst = " + StringUtil.timeIntervalToString(newEst));
-    if (newEst > Constants.DAY) {
-      logger.error("Unreasonably long has estimate", new Throwable());
+    if (newEst > 10 * Constants.HOUR) {
+      logger.error("Unreasonably long hash estimate", new Throwable());
     }
     nodeManager.hashFinished(this, newEst);
   }

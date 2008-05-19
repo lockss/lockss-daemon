@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.13 2008-03-23 08:08:02 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.14 2008-05-19 07:42:11 tlipkis Exp $
  */
 
 /*
@@ -401,20 +401,25 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     long estimate = fileSet.estimatedHashDuration();
     assertTrue(estimate > 0);
 
-    assertEquals(estimate, hashService.padHashEstimate(
-        node.getAverageHashDuration()));
+    assertEquals(hashService.padHashEstimate(node.getAverageHashDuration()),
+		 estimate);
 
     // test return of stored duration
     long estimate2 = fileSet.estimatedHashDuration();
     assertEquals(estimate, estimate2);
-    assertEquals(estimate, hashService.padHashEstimate(
-        node.getAverageHashDuration()));
 
     // test averaging of durations
     long lastActual = node.getAverageHashDuration();
     fileSet.storeActualHashDuration(lastActual + 200, null);
-    long estimate3 = fileSet.estimatedHashDuration();
-    assertEquals(estimate3, hashService.padHashEstimate(lastActual + 100));
+    assertEquals(hashService.padHashEstimate(lastActual + 100),
+		 fileSet.estimatedHashDuration());
+
+    // test special SetEstimate marker exception
+    lastActual = node.getAverageHashDuration();
+    fileSet.storeActualHashDuration(lastActual + 12345,
+				    new HashService.SetEstimate());
+    assertEquals(hashService.padHashEstimate(lastActual + 12345),
+		 fileSet.estimatedHashDuration());
   }
 
   public void testSingleNodeHashEstimation() throws Exception {

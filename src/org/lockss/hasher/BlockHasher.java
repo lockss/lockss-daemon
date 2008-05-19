@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.11 2007-10-01 08:11:25 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.12 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ public class BlockHasher extends GenericHasher {
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
   private boolean includeUrl = false;
 
-  MessageDigest[] initialDigests;
-  byte[][] initByteArrays;
+  protected MessageDigest[] initialDigests;
+  protected byte[][] initByteArrays;
   EventHandler cb;
 
   private HashBlock hblock;

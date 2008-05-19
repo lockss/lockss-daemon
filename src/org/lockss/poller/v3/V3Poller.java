@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.75 2008-04-01 08:02:57 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.76 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -1617,8 +1617,11 @@ public class V3Poller extends BasePoll {
 
     final HashService.Callback hashDone =
       new HashService.Callback() {
-        public void hashingFinished(CachedUrlSet urlset, Object cookie,
-                                    CachedUrlSetHasher hasher, Exception e) {
+        public void hashingFinished(CachedUrlSet urlset,
+				    long timeUsed,
+				    Object cookie,
+				    CachedUrlSetHasher hasher,
+				    Exception e) {
               // If there are no more repairs outstanding, go ahead and
           // stop the poll at this point.
           PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
@@ -2274,7 +2277,7 @@ public class V3Poller extends BasePoll {
      *
      * @param cookie data supplied by caller to schedule()
      */
-    public void hashingFinished(CachedUrlSet cus, Object cookie,
+    public void hashingFinished(CachedUrlSet cus, long timeUsed, Object cookie,
                                 CachedUrlSetHasher hasher, Exception e) {
       if (e != null) {
         log.warning("Poll hash failed", e);

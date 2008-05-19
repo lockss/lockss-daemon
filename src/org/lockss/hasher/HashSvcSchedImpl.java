@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.25 2007-08-22 06:45:15 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.26 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class HashSvcSchedImpl
    * @param hasher   an instance of a <code>CachedUrlSetHasher</code>
    *                 representing a specific <code>CachedUrlSet</code>
    *                 and hash type
-   * @param deadline the time by which the callbeack must have been
+   * @param deadline the time by which the callback must have been
    *                 called.
    * @param callback the object whose <code>hashComplete()</code>
    *                 method will be called when hashing succeds
@@ -137,7 +137,6 @@ public class HashSvcSchedImpl
     HashTask task = new HashTask(hasher, deadline, callback, cookie);
     return scheduleTask(task);
   }
-
 
   /** Cancel all hashes on the specified AU.  Temporary until a better
    * cancel mechanism is implemented.
@@ -234,30 +233,6 @@ public class HashSvcSchedImpl
     long unaccountedBytesHashed = 0;
     String typeString;
 
-    HashTask(CachedUrlSet urlset,
-	     Deadline deadline,
-	     HashService.Callback hashCallback,
-	     Object cookie,
-	     CachedUrlSetHasher urlsetHasher,
-	     long estimatedDuration) {
-
-      super(Deadline.in(0), deadline, estimatedDuration,
-	    new TaskCallback() {
-	      public void taskEvent(SchedulableTask task,
-				    Schedule.EventType event) {
-		if (log.isDebug2()) log.debug2("taskEvent: " + event);
-		if (event == Schedule.EventType.FINISH) {
-		  ((HashTask)task).doFinished();
-		}
-	      }
-	    },
-	    cookie);
-      this.urlset = urlset;
-      this.hashCallback = hashCallback;
-      this.urlsetHasher = urlsetHasher;
-      typeString = urlsetHasher.typeString();
-    }
-
     HashTask(CachedUrlSetHasher urlsetHasher,
 	     Deadline deadline,
 	     HashService.Callback hashCallback,
@@ -315,17 +290,19 @@ public class HashSvcSchedImpl
 
     private void doFinished() {
       finished = true;
+      long timeUsed = getTimeUsed();
       try {
 	if (!urlsetHasher.finished()) {
 	  urlsetHasher.abortHash();
 	}
-	urlsetHasher.storeActualHashDuration(getTimeUsed(), getExcption());
+	urlsetHasher.storeActualHashDuration(timeUsed, getException());
       } catch (Exception e) {
 	log.error("Hasher threw", e);
       }
       if (hashCallback != null) {
 	try {
-	  hashCallback.hashingFinished(urlset, cookie, urlsetHasher, e);
+	  hashCallback.hashingFinished(urlset, timeUsed, cookie,
+				       urlsetHasher, e);
 	} catch (Exception e) {
 	  log.error("Hash callback threw", e);
 	}
@@ -484,9 +461,9 @@ public class HashSvcSchedImpl
       if (!done) {
 	return (task.isStepping()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
       }
-      if (task.getExcption() == null) {
+      if (task.getException() == null) {
 	return TASK_STATE_DONE;
-      } else if (task.getExcption() instanceof SchedService.Timeout) {
+      } else if (task.getException() instanceof SchedService.Timeout) {
 	return TASK_STATE_TIMEOUT;
       } else {
 	return TASK_STATE_ERROR;

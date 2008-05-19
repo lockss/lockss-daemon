@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.51 2006-06-04 06:26:32 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.52 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ class HashQueue {
       Request req = (Request)iter.next();
       try {
 	if (req.callback != null) {
-	  req.callback.hashingFinished(req.urlset, req.cookie,
+	  req.callback.hashingFinished(req.urlset, req.timeUsed, req.cookie,
 				       req.urlsetHasher, req.e);
 	}
       } catch (Exception e) {

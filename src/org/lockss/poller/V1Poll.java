@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.31 2005-12-01 23:28:00 troberts Exp $
+ * $Id: V1Poll.java,v 1.32 2008-05-19 07:42:12 tlipkis Exp $
  */
 
 /*
@@ -618,6 +618,7 @@ public abstract class V1Poll extends BasePoll {
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
+				long timeUsed,
 				Object cookie,
 				CachedUrlSetHasher hasher,
 				Exception e) {
@@ -656,6 +657,7 @@ public abstract class V1Poll extends BasePoll {
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
+				long timeUsed,
 				Object cookie,
 				CachedUrlSetHasher hasher,
 				Exception e) {
