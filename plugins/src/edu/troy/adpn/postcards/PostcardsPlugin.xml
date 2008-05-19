@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s/adpntroymanifest.html&quot;, base_url</string>
+    <string>&quot;%sadpntroymanifest.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -40,7 +40,7 @@
   <entry>
     <string>plugin_notes</string>
     <string>Postcards are saved in disk1, disk2... directories. There are 2 params:
-base_url = The base URL http://spectrum.troy.edu/~troyadpnet, and
+base_url = The base URL http://spectrum.troy.edu/~troyadpnet/, and
 volume_name = Same as directory name (disk1, disk2...)</string>
   </entry>
   <entry>
@@ -52,10 +52,14 @@ volume_name = Same as directory name (disk1, disk2...)</string>
     <string>edu.troy.adpn.postcards.PostcardsPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s/adpntroymanifest.html$&quot;, base_url</string>
+      <string>1,&quot;^%sadpntroymanifest.html$&quot;, base_url</string>
       <string>1,&quot;^%s%s/&quot;, base_url, volume_name</string>
     </list>
   </entry>

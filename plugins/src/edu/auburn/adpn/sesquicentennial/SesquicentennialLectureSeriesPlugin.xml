@@ -1,7 +1,11 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.auburn.plugin.adpn.sesquicentennial.SesquicentennialLectureSeriesPlugin</string>
+    <string>edu.auburn.adpn.sesquicentennial.SesquicentennialLectureSeriesPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
