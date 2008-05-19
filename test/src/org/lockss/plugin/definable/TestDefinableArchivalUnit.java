@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.34 2007-12-19 05:13:26 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.35 2008-05-19 07:39:30 tlipkis Exp $
  */
 
 /*
@@ -208,6 +208,16 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     // shouldn't match if dot properly quoted
     assertEquals(CrawlRule.IGNORE,
                  rule.match("http://www1example.com/"));
+  }
+
+  public void testConvertRuleMissingOptionalParam()
+      throws LockssRegexpException {
+    configMap.putString("URL", "http://www.example.com/");
+    String rule1 = "1,\"%s\",URL";
+    String rule2 = "1,\"%s%d\",URL,FOO";
+
+    assertNotNull(cau.convertRule(rule1, false));
+    assertNull(cau.convertRule(rule2, false));
   }
 
   public void testConvertRangeRule() throws LockssRegexpException {

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.62 2007-12-19 05:13:26 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.63 2008-05-19 07:39:30 tlipkis Exp $
  */
 
 /*
@@ -385,12 +385,20 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 				 CONVERT_QUOTE_REGEXP_META_CHARS);
   }
 
+  String convertVariableRegexpString(PrintfUtil.PrintfData p_data) {
+    return convertVariableString(p_data, CONVERT_QUOTE_REGEXP_META_CHARS);
+  }
+
   String convertVariableString(String printfString) {
     return convertVariableString(printfString, 0);
   }    
 
   String convertVariableString(String printfString, int options) {
-    PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
+    return convertVariableString(PrintfUtil.stringToPrintf(printfString),
+				 options);
+  }
+
+  String convertVariableString(PrintfUtil.PrintfData p_data, int options) {
     String format = p_data.getFormat();
     Collection p_args = p_data.getArguments();
     ArrayList substitute_args = new ArrayList(p_args.size());
@@ -424,14 +432,25 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       PrintfFormat pf = new PrintfFormat(format);
       return pf.sprintf(substitute_args.toArray());
     } else {
-      log.warning("Missing variable arguments: " + printfString);
+      log.warning("Missing variable arguments: " + p_data);
       return null;
     }
   }
 
   CrawlRule convertRule(String printfString, boolean ignoreCase)
       throws LockssRegexpException {
-    String rule = convertVariableRegexpString(printfString);
+    PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
+    // if printf string references unassigned optional param, ignore rule
+    // (missing required param would have caused error earlier)
+    for (String key : p_data.getArguments()) {
+      if (!paramMap.containsKey(key)) {
+	if (log.isDebug3()) {
+	  log.debug3("Ignoring " + printfString + ": " + key + " unassigned");
+	}
+	return null;
+      }
+    }
+    String rule = convertVariableRegexpString(p_data);
     String action_str = printfString.substring(0, printfString.indexOf(","));
     int action = Integer.valueOf(action_str).intValue();
     Vector vec;

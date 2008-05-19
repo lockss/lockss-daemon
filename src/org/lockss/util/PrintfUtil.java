@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfUtil.java,v 1.6 2006-09-07 18:30:55 thib_gc Exp $
+ * $Id: PrintfUtil.java,v 1.7 2008-05-19 07:39:30 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class PrintfUtil {
 
   public static class PrintfData {
     String m_format;
-    ArrayList m_arguments;
+    List<String> m_arguments;
 
     public PrintfData() {
       m_format = "";
@@ -128,7 +128,7 @@ public class PrintfUtil {
       return m_format;
     }
 
-    public Collection getArguments() {
+    public Collection<String> getArguments() {
       return m_arguments;
     }
 
