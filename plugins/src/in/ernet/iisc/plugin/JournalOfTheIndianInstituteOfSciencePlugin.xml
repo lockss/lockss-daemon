@@ -1,5 +1,38 @@
 <map>
   <entry>
+    <string>plugin_identifier</string>
+    <string>in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Journal of the Indian Institute of Science Plugin, Base URL %s&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Journal of the Indian Institute of Science Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%slockss/manifest\.html&quot;, base_url</string>
+      <string>1,&quot;^%svol%d[0-9]+/&quot;, base_url, year</string>
+      <string>1,&quot;^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/manifest.html&quot;, base_url</string>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -11,39 +44,15 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Journal of the Indian Institute of Science Plugin, Base URL %s&quot;, base_url</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss/manifest.html&quot;, base_url</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Journal of the Indian Institute of Science Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss/manifest\.html&quot;, base_url</string>
-      <string>1,&quot;^%svol[0-9]+/&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
 </map>
