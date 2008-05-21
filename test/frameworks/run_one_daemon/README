@@ -1,12 +1,21 @@
 run_one_daemon runs a standalone development daemon.  Useful for testing
 basic daemon behavior through the UI, and crawling behavior of plugins
-(crawl fules, URL normalizers, etc.).
+(crawl rules, URL normalizers, etc.).
 
 To run:
   cd test/frameworks/run_one_daemon
   ./start
-  ...   (connect to daemon on port 8081)
+  ...   (connect to daemon UI at http://localhost:8081/
+         user=test, passwd=test)
   ./stop
+
+See test.out for errors and other messages.
+
+UI access is initially allowed from localhost (127.0.0.1).  For access
+from other hosts either use a browser on localhost or add the line
+  org.lockss.ui.access.ip.include=<ip-address-or-subnet>
+to ./lockss.txt .  E.g.,
+  org.lockss.ui.access.ip.include=192.168.10.0/24
 
 To test a new plugin, put it in the appropriate package dir in the
 toplevel plugins/ tree, add its name to org.lockss.plugin.registry (in
