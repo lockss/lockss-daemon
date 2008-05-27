@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.10 2008-05-10 17:47:11 dshr Exp $
+ * $Id: Exploder.java,v 1.10.2.1 2008-05-27 04:29:46 dshr Exp $
  */
 
 /*
@@ -128,6 +128,10 @@ public abstract class Exploder {
    * Explode the archive into its constituent elements
    */
   protected abstract void explodeUrl() throws CacheException;
+
+  public String getArchiveUrl() {
+    return archiveUrl;
+  }
 
   protected void storeEntry(ArchiveEntry ae) throws IOException {
     // We assume that all exploded content is organized into
