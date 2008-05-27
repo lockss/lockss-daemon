@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.3 2008-02-05 17:37:55 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.4 2008-05-27 04:30:37 dshr Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.util.CIProperties;
 import org.lockss.daemon.CrawlSpec;
+import org.lockss.crawler.Exploder;
 
 /**
  * A data structure representing an entry in a generic archive
@@ -53,6 +54,7 @@ public class ArchiveEntry {
   private long date;
   private InputStream is;
   private CrawlSpec crawlSpec;
+  private Exploder exploder;
   // Output fields
   private String baseUrl;
   private String restOfUrl;
@@ -62,6 +64,16 @@ public class ArchiveEntry {
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec) {
+    setup(name, bytes, date, is, crawlSpec, (Exploder) null);
+  }
+
+  public ArchiveEntry(String name, long bytes, long date, InputStream is,
+		      CrawlSpec crawlSpec, Exploder exploder) {
+    setup(name, bytes, date, is, crawlSpec, exploder);
+  }
+
+  private void setup(String name, long bytes, long date, InputStream is,
+		     CrawlSpec crawlSpec, Exploder exploder) {
     if (name.startsWith("./")) {
       this.name = name.substring(2);
     } else {
@@ -71,6 +83,7 @@ public class ArchiveEntry {
     this.date = date;
     this.is = is;
     this.crawlSpec = crawlSpec;
+    this.exploder = exploder;
     baseUrl = null;
     restOfUrl = null;
     header = null;
@@ -98,6 +111,10 @@ public class ArchiveEntry {
 
   public CrawlSpec getCrawlSpec() {
     return crawlSpec;
+  }
+
+  public Exploder getExploder() {
+    return exploder;
   }
 
   // Output field accessors
