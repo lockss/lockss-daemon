@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.6 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.7 2008-05-27 00:51:08 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
+import java.security.*;
 import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.*;
 import org.lockss.plugin.CachedUrlSet;
@@ -342,6 +343,20 @@ public class PollUtil {
     }
     Deadline when = Deadline.in(scheduleWindow);
     return pm.getHashService().canHashBeScheduledBefore(hashTime, when);
+  }
+
+  public static MessageDigest[] createMessageDigestArray(int len,
+							 String hashAlg)
+      throws NoSuchAlgorithmException {
+    MessageDigest[] digests = new MessageDigest[len];
+    for (int ix = 0; ix < len; ix++) {
+      digests[ix] = MessageDigest.getInstance(hashAlg);
+    }
+    return digests;
+  }
+
+  public static byte[] makeHashNonce(int len) {
+    return ByteArray.makeRandomBytes(len);
   }
 
 }
