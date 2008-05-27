@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.7 2008-04-02 00:44:24 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.7.4.1 2008-05-27 00:37:43 tlipkis Exp $
  */
 
 /*
@@ -162,4 +162,15 @@ public class TestV3Voter extends LockssTestCase {
 				  "true");
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
+
+
+  static String PARAM_OVERHEAD_LOAD =
+    org.lockss.scheduler.SortScheduler.PARAM_OVERHEAD_LOAD;
+
+  public void testGetSchedDuration() {
+    assertEquals(125, voter.getSchedDuration(100));
+    ConfigurationUtil.addFromArgs(PARAM_OVERHEAD_LOAD, "40");
+    assertEquals(500, voter.getSchedDuration(300));
+  }
+
 }

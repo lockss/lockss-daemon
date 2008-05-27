@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.76 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.76.2.1 2008-05-27 00:37:43 tlipkis Exp $
  */
 
 /*
@@ -984,7 +984,7 @@ public class V3Poller extends BasePoll {
   private ParticipantUserData makeParticipant(final PeerIdentity id) {
     final ParticipantUserData participant =
       new ParticipantUserData(id, this, stateDir);
-    participant.setPollerNonce(makePollerNonce());
+    participant.setPollerNonce(PollUtil.makeHashNonce(20));
     PsmMachine machine = makeMachine();
     PsmInterp interp = newPsmInterp(machine, participant);
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
@@ -1398,19 +1398,17 @@ public class V3Poller extends BasePoll {
    */
   private MessageDigest[] initHasherDigests() {
     int len = getPollSize() + 1; // One for plain hash.
-    MessageDigest[] digests = new MessageDigest[len];
-    for (int ix = 0; ix < len; ix++) {
-      try {
-        digests[ix] = MessageDigest.getInstance(pollerState.getHashAlgorithm());
-      } catch (NoSuchAlgorithmException ex) {
-        // This will have been caught at construction time, and so should
-        // never happen here.
-        log.critical("Unexpected NoSuchAlgorithmException in " +
-                     "initHasherDigests");
-        stopPoll(POLLER_STATUS_ERROR);
-      }
+    try {
+      return PollUtil.createMessageDigestArray(len,
+					       pollerState.getHashAlgorithm());
+    } catch (NoSuchAlgorithmException ex) {
+      // This will have been caught at construction time, and so should
+      // never happen here.
+      log.critical("Unexpected NoSuchAlgorithmException in " +
+		   "initHasherDigests");
+      stopPoll(POLLER_STATUS_ERROR);
+      return new MessageDigest[0];
     }
-    return digests;
   }
 
   /**
@@ -2542,15 +2540,6 @@ public class V3Poller extends BasePoll {
     serializer = null;
     pollManager = null;
     idManager = null;
-  }
-
-  /**
-   * Generate a random nonce for the poller.
-   *
-   * @return A random array of 20 bytes.
-   */
-  private byte[] makePollerNonce() {
-    return ByteArray.makeRandomBytes(20);
   }
 
   private PsmMachine makeMachine() {
