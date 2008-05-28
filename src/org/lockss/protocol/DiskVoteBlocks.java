@@ -91,6 +91,8 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
       if (i == nextVoteBlockIndex) {
         raf.skipBytes((int) nextVoteBlockAddress);
       } else {
+        nextVoteBlockIndex = 0;
+        nextVoteBlockAddress = 0;
         for (int idx = 0; idx < i; idx++) {
           short len = raf.readShort();
           raf.skipBytes(len);

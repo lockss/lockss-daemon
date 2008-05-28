@@ -6,12 +6,12 @@ import java.util.*;
 import org.lockss.util.*;
 
 public class V3TestUtils {
-  public static List makeVoteBlockList(int count) {
-    ArrayList vbList = new ArrayList();
+  public static List<VoteBlock> makeVoteBlockList(int count) {
+    ArrayList<VoteBlock> vbList = new ArrayList<VoteBlock>();
     for (int ix = 0; ix < count; ix++) {
       String fileName = "/test-" + ix + ".html";
-      byte[] hash = V3TestUtils.computeHash(fileName);
-      VoteBlock vb = V3TestUtils.makeVoteBlock("/test-" + ix + ".html");
+      V3TestUtils.computeHash(fileName);
+      VoteBlock vb = V3TestUtils.makeVoteBlock(fileName);
       vbList.add(vb);
     }
     return vbList;
@@ -32,12 +32,14 @@ public class V3TestUtils {
     return V3TestUtils.makeVoteBlock(url, 1);
   }
 
+  private static final int k_randomBytesSize = 40;
+  
   public static VoteBlock makeVoteBlock(String url, int versions) {
     VoteBlock vb = new VoteBlock(url, VoteBlock.CONTENT_VOTE);
     for (int ix = 0; ix < versions; ix++) {
       vb.addVersion(0L, 1000L, 0L, 1000L,
-                    ByteArray.makeRandomBytes(20),
-                    ByteArray.makeRandomBytes(20), false);
+                    ByteArray.makeRandomBytes((int) (Math.random() * k_randomBytesSize)),
+                    ByteArray.makeRandomBytes((int) (Math.random() * k_randomBytesSize)), false);
     }
     return vb;
   }

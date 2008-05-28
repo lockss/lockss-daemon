@@ -3,8 +3,7 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.*;
 
-import org.lockss.test.*;
-import org.lockss.util.*;
+import org.lockss.test.LockssTestCase;
 
 
 public class TestDiskVoteBlocks extends LockssTestCase {
@@ -73,7 +72,7 @@ public class TestDiskVoteBlocks extends LockssTestCase {
    */
   public void testIterator() throws Exception {
     
-    List voteBlockList = V3TestUtils.makeVoteBlockList(3);
+    List<VoteBlock> voteBlockList = V3TestUtils.makeVoteBlockList(3);
     
     DiskVoteBlocks dvb = makeDiskVoteBlocks(voteBlockList);
     
@@ -111,7 +110,52 @@ public class TestDiskVoteBlocks extends LockssTestCase {
     assertNull(iter.next());
     assertNull(iter.next());
     assertNull(iter.next());
+  }
+  
+  /*
+   * This test verifies how many times the iterator reads each item,
+   * even when the iterator has to restart several times.
+   * 
+   * Unlike the previous test, this test sets b0, b1, and b2 from the
+   * vote block list directly.
+   */
+  private static final int k_num_vote_blocks = 5;
+  private static final int k_num_random_blocks = 100;
+  
+  public void testGetVoteBlock2() throws Exception {
+    VoteBlock[] arvb = new VoteBlock[k_num_vote_blocks];
+    DiskVoteBlocks dvb;
+    int i;
+    VoteBlocksIterator iter;
+    int randomBlock;
+    List<VoteBlock> voteBlockList;
+    
+    // Create the list of vote blocks and the blocks themselves.
+    voteBlockList = V3TestUtils.makeVoteBlockList(k_num_vote_blocks);
+    for (i = 0; i < k_num_vote_blocks; i++) {
+      arvb[i] = voteBlockList.get(i);
+    }
+    
+    // Put them on the disk.
+    dvb = makeDiskVoteBlocks(voteBlockList);
 
+    // Test: The old version of the software does NOT reset the list of 
+    // votes.  Therefore, the old version would probably fail on this test...
+    assertEquals(arvb[1], dvb.getVoteBlock(1));
+    assertEquals(arvb[0], dvb.getVoteBlock(0));
+    assertEquals(arvb[3], dvb.getVoteBlock(3));  
+
+    // Test: Run the list of vote blocks BACKWARDS, and make sure that we have the right
+    // ones...
+    for (i = k_num_vote_blocks - 1; i >= 0; i--) {
+      assertEquals(arvb[i], dvb.getVoteBlock(i));
+    }
+    
+    // Since I don't know certainly what to test, why not throw a bunch of random tests?
+    for (i= 0; i < k_num_random_blocks; i++) {
+      randomBlock = (int) (Math.random() * k_num_vote_blocks);
+      assertEquals(arvb[randomBlock], dvb.getVoteBlock(randomBlock));
+    }
   }
 
   /*
