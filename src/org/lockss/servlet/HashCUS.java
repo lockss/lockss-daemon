@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.38 2007-07-04 06:48:08 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.39 2008-05-28 08:00:00 tlipkis Exp $
  */
 
 /*
@@ -70,14 +70,17 @@ public class HashCUS extends LockssServlet {
 
   static final String HASH_STRING_CONTENT = "Content";
   static final String HASH_STRING_NAME = "Name";
-  static final String HASH_STRING_SNCUSS = "Sncuss";
-  static final String HASH_STRING_V3 = "V3";
+  static final String HASH_STRING_SNCUSS = "One file";
+  static final String HASH_STRING_V3_TREE = "Tree";
+  static final String HASH_STRING_V3_SNCUSS = "One file";
 
   static final int HASH_TYPE_CONTENT = 1;
   static final int HASH_TYPE_NAME = 2;
   static final int HASH_TYPE_SNCUSS = 3;
-  static final int HASH_TYPE_V3 = 4;
-  static final int HASH_TYPE_MAX = 4;
+  static final int HASH_TYPE_V3_TREE = 4;
+  static final int HASH_TYPE_V3_SNCUSS = 5;
+  static final int HASH_TYPE_MAX = 5;
+  static final int DEFAULT_HASH_TYPE = HASH_TYPE_V3_TREE;
 
   static final String ACTION_HASH = "Hash";
   static final String ACTION_STREAM = "Stream";
@@ -114,7 +117,7 @@ public class HashCUS extends LockssServlet {
   OutputStream recordStream;
   File blockFile;
   String hashName;
-  int hashType;
+  int hashType = DEFAULT_HASH_TYPE;
   ArchivalUnit au;
   CachedUrlSet cus;
   int nbytes = 1000;
@@ -123,6 +126,7 @@ public class HashCUS extends LockssServlet {
   MessageDigest digest;
   byte[] hashResult;
   int bytesHashed;
+  int filesHashed;
   boolean showResult;
   protected void resetLocals() {
     resetVars();
@@ -148,6 +152,7 @@ public class HashCUS extends LockssServlet {
     nbytes = 1000;
 
     bytesHashed = 0;
+    filesHashed = 0;
     digest = null;
     hashResult = null;
     showResult = false;
@@ -216,7 +221,7 @@ public class HashCUS extends LockssServlet {
     String hashIntStr = getParameter(KEY_HASH_TYPE);
     try {
       hashType = Integer.parseInt(hashIntStr);
-    } catch (UnsupportedOperationException e) {
+    } catch (RuntimeException e) {
       errMsg = "Unknown hash type: " + hashIntStr;
       return false;
     }
@@ -265,8 +270,14 @@ public class HashCUS extends LockssServlet {
 			  null,
 			  Poll.V1_CONTENT_POLL);
 	break;
-      case HASH_TYPE_V3:
+      case HASH_TYPE_V3_TREE:
+
 	ps = new PollSpec(auid, url, lower, upper, Poll.V3_POLL);
+	break;
+      case HASH_TYPE_V3_SNCUSS:
+
+	ps = new PollSpec(auid, url, PollSpec.SINGLE_NODE_LWRBOUND, null,
+			  Poll.V3_POLL);
 	break;
       default:
 	ps = new PollSpec(auid, url, lower, upper, Poll.V1_CONTENT_POLL);
@@ -308,7 +319,8 @@ public class HashCUS extends LockssServlet {
       case HASH_TYPE_NAME:
 	page.add(makeV1Result());
 	break;
-      case HASH_TYPE_V3:
+      case HASH_TYPE_V3_TREE:
+      case HASH_TYPE_V3_SNCUSS:
 	page.add(makeV3Result());
 	break;
       }
@@ -370,6 +382,7 @@ public class HashCUS extends LockssServlet {
     tbl.addHeading("Hash Result", COL2);
 
     addResultRow(tbl, "CUSS", cus.getSpec().toString());
+    addResultRow(tbl, "Files", Integer.toString(filesHashed));
     addResultRow(tbl, "Size", Integer.toString(bytesHashed));
     addResultRow(tbl, "Time", getElapsedString());
     if (blockFile != null && blockFile.exists()) {
@@ -437,11 +450,8 @@ public class HashCUS extends LockssServlet {
 		getParameter(KEY_CHALLENGE));
     addInputRow(tbl, "Verifier", KEY_VERIFIER, 50, getParameter(KEY_VERIFIER));
     tbl.newRow();
-    tbl.newCell(COL2CENTER);
-    tbl.add(radioButton(HASH_STRING_V3,
-			Integer.toString(HASH_TYPE_V3),
-			KEY_HASH_TYPE,
-			(hashType == 0 || hashType == HASH_TYPE_V3)));
+    tbl.addHeading("V1:", "align=right");
+    tbl.newCell();
     tbl.add("&nbsp;&nbsp;");
     tbl.add(radioButton(HASH_STRING_CONTENT,
 			Integer.toString(HASH_TYPE_CONTENT),
@@ -457,6 +467,20 @@ public class HashCUS extends LockssServlet {
 			Integer.toString(HASH_TYPE_SNCUSS),
 			KEY_HASH_TYPE,
 			hashType == HASH_TYPE_SNCUSS));
+    tbl.newRow();
+    tbl.addHeading("V3:", "align=right");
+    tbl.newCell();
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(radioButton(HASH_STRING_V3_TREE,
+			Integer.toString(HASH_TYPE_V3_TREE),
+			KEY_HASH_TYPE,
+			hashType == HASH_TYPE_V3_TREE));
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(radioButton(HASH_STRING_V3_SNCUSS,
+			Integer.toString(HASH_TYPE_V3_SNCUSS),
+			KEY_HASH_TYPE,
+			hashType == HASH_TYPE_V3_SNCUSS));
+
     tbl.newRow();
     tbl.newCell(COL2CENTER);
     tbl.add(checkBox("Record filtered stream", "true", KEY_RECORD, isRecord));
@@ -509,7 +533,8 @@ public class HashCUS extends LockssServlet {
 	  initDigest(digest);
 	  doV1(cus.getNameHasher(digest));
 	  break;
-	case HASH_TYPE_V3:
+	case HASH_TYPE_V3_TREE:
+	case HASH_TYPE_V3_SNCUSS:
 	  doV3();
 	  break;
 	}
@@ -538,6 +563,7 @@ public class HashCUS extends LockssServlet {
     }
       
     public void blockDone(HashBlock block) {
+      filesHashed++;
       HashBlock.Version ver = block.currentVersion();
       if (ver.getHashError() != null) {
 	outs.println("Hash error (see log)        " + block.getUrl());
@@ -592,6 +618,7 @@ public class HashCUS extends LockssServlet {
 
   private void doHash(CachedUrlSetHasher cush) {
     bytesHashed = 0;
+    filesHashed = 0;
     long startTime = TimeBase.nowMs();
     try {
       while (!cush.finished()) {
