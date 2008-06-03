@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.36 2008-05-28 08:00:01 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.37 2008-06-03 22:25:28 tlipkis Exp $
  */
 
 /*
@@ -126,6 +126,7 @@ public class PollSpec {
 	 null,
 	 Poll.V3_POLL);
     protocolVersion = msg.getProtocolVersion();
+    pluginVersion = msg.getPluginVersion();
   }
 
   /**
@@ -251,8 +252,13 @@ public class PollSpec {
   }
 
   public String toString() {
-    return "[PS: " + Poll.POLL_NAME[pollType] + " auid=" + auId + ", url=" + url
-      + ", l=" + lwrBound + ", u=" + uprBound
-      + ", type=" + pollType + ", protocol=" + protocolVersion + "]";
+    return "[PS: " + Poll.POLL_NAME[pollType]
+      + " auid=" + auId
+      + ", url=" + url
+      + ", l=" + lwrBound
+      + ", u=" + uprBound
+      + ", type=" + pollType
+      + ", plugVer=" + getPluginVersion()
+      + ", protocol=" + protocolVersion + "]";
   }
 }

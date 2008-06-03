@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.19 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestPollSpec.java,v 1.20 2008-06-03 22:25:27 tlipkis Exp $
  */
 
 /*
@@ -49,11 +49,13 @@ import java.io.*;
 public class TestPollSpec extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
+  File tempDir;
+
   public void setUp() throws Exception {
     super.setUp();
 
-
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDir = getTempDir();
+    String tempDirPath = tempDir.getAbsolutePath() + File.separator;
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
@@ -90,7 +92,7 @@ public class TestPollSpec extends LockssTestCase {
     assertEquals(plugVer, ps.getPluginVersion());
   }
 
-  public void testFromLcapMessage() throws Exception {
+  public void testFromV1LcapMessage() throws Exception {
     byte[] testbytes = {0,1,2,3,4,5,6,8,10};
     String auid = "aaai1";
     String url = "http://foo.bar/";
@@ -98,7 +100,8 @@ public class TestPollSpec extends LockssTestCase {
     String upper = "xyx";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
-    Plugin plug = new MockPlugin();
+    MockPlugin plug = new MockPlugin();
+    plug.setVersion("oddVer");
     au.setPlugin(plug);
     CachedUrlSet cus =
       new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
@@ -124,6 +127,39 @@ public class TestPollSpec extends LockssTestCase {
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
+    assertEquals(plug.getVersion(), ps.getPluginVersion());
+  }
+
+  public void testFromV3LcapMessage() throws Exception {
+    byte[] testbytes = {0,1,2,3,4,5,6,8,10};
+    String auid = "aaai1";
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId(auid);
+    MockPlugin plug = new MockPlugin();
+    plug.setVersion("oddVer");
+    assertEquals("oddVer", plug.getVersion());
+    au.setPlugin(plug);
+    PeerIdentity id = null;
+    try {
+      id = theDaemon.getIdentityManager().stringToPeerIdentity("127.0.0.1");
+    }
+    catch (IdentityManager.MalformedIdentityKeyException ex) {
+      fail("can't open test host");
+    }
+    V3LcapMessage msg = new V3LcapMessage(au.getAuId(),
+					  "pollkey",
+					  plug.getVersion(),
+                                          PollUtil.makeHashNonce(20),
+                                          PollUtil.makeHashNonce(20),
+                                          V3LcapMessage.MSG_POLL,
+                                          TimeBase.nowMs() + Constants.WEEK,
+					  id, tempDir, theDaemon);
+    PollSpec ps = new PollSpec(msg);
+    log.info("ps2: " + ps);
+
+    assertEquals(Poll.V3_PROTOCOL, ps.getProtocolVersion());
+    assertEquals(auid, ps.getAuId());
+    assertEquals("lockssau:", ps.getUrl());
     assertEquals(plug.getVersion(), ps.getPluginVersion());
   }
 
