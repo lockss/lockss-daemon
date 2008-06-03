@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.20 2008-06-03 22:25:27 tlipkis Exp $
+ * $Id: TestPollSpec.java,v 1.21 2008-06-03 22:30:17 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,6 @@ public class TestPollSpec extends LockssTestCase {
                                           TimeBase.nowMs() + Constants.WEEK,
 					  id, tempDir, theDaemon);
     PollSpec ps = new PollSpec(msg);
-    log.info("ps2: " + ps);
 
     assertEquals(Poll.V3_PROTOCOL, ps.getProtocolVersion());
     assertEquals(auid, ps.getAuId());
