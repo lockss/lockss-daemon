@@ -11,7 +11,7 @@ import org.lockss.util.*;
  */
 public abstract class BaseVoteBlocks implements VoteBlocks {
 
-  public VoteBlocksIterator iterator() {
+  public VoteBlocksIterator iterator() throws FileNotFoundException {
     return new BaseVoteBlocks.Iterator();
   }
   
@@ -24,12 +24,12 @@ public abstract class BaseVoteBlocks implements VoteBlocks {
    */
   abstract protected VoteBlock getVoteBlock(int i) throws IOException;
   
-  private class Iterator implements VoteBlocksIterator {
+  protected class Iterator implements VoteBlocksIterator {
     private int cursor = 0;
     /* For efficiency purposes, store the most recently peeked voteblock. */
     private VoteBlock cachedVoteBlock;
     
-    public boolean hasNext() {
+    public boolean hasNext() throws IOException {
       return cursor < size();
     }
 

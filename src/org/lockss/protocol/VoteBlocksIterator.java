@@ -24,7 +24,7 @@ public interface VoteBlocksIterator extends LockssSerializable {
    *  
    * @return true if the iteration has more elements.
    */
-  public boolean hasNext();
+  public boolean hasNext() throws IOException;
   
   /**
    * Returns the next element in the iteration.

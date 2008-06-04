@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.40 2008-03-26 04:52:38 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.41 2008-06-04 19:09:05 edwardsb1 Exp $
  */
 
 /*
@@ -662,7 +662,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voteBlocks.addVoteBlock(vb);
   }
 
-  public VoteBlocksIterator getVoteBlockIterator() {
+  public VoteBlocksIterator getVoteBlockIterator() throws FileNotFoundException {
     if (m_voteBlocks == null) {
       return VoteBlocksIterator.EMPTY_ITERATOR;
     } else {

@@ -32,14 +32,15 @@ public class V3TestUtils {
     return V3TestUtils.makeVoteBlock(url, 1);
   }
 
-  private static final int k_randomBytesSize = 40;
+  private static final int k_randomBytesSize = 100;
   
   public static VoteBlock makeVoteBlock(String url, int versions) {
     VoteBlock vb = new VoteBlock(url, VoteBlock.CONTENT_VOTE);
     for (int ix = 0; ix < versions; ix++) {
       vb.addVersion(0L, 1000L, 0L, 1000L,
-                    ByteArray.makeRandomBytes((int) (Math.random() * k_randomBytesSize)),
-                    ByteArray.makeRandomBytes((int) (Math.random() * k_randomBytesSize)), false);
+                    ByteArray.makeRandomBytes((int) (Math.random() * k_randomBytesSize)), // URL
+                    ByteArray.makeRandomBytes(20), // Hash 
+                    false);
     }
     return vb;
   }

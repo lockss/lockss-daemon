@@ -48,23 +48,27 @@ public class TestDiskVoteBlocks extends LockssTestCase {
    * Test method for 'org.lockss.protocol.DiskVoteBlocks.addVoteBlock(VoteBlock)'
    */
   public void testAddVoteBlock() throws Exception {
+    VoteBlocksIterator iter;
+
     DiskVoteBlocks dvb = new DiskVoteBlocks(tempDir);
     assertEquals(0, dvb.size());
 
     List voteBlockList = V3TestUtils.makeVoteBlockList(3);
     
-    // Add first block.
     dvb.addVoteBlock((VoteBlock)voteBlockList.get(0));
     assertEquals(1, dvb.size());
-    assertEquals((VoteBlock)voteBlockList.get(0), dvb.getVoteBlock(0));
     
     dvb.addVoteBlock((VoteBlock)voteBlockList.get(1));
     assertEquals(2, dvb.size());
-    assertEquals((VoteBlock)voteBlockList.get(1), dvb.getVoteBlock(1));
     
     dvb.addVoteBlock((VoteBlock)voteBlockList.get(2));
     assertEquals(3, dvb.size());
-    assertEquals((VoteBlock)voteBlockList.get(2), dvb.getVoteBlock(2));
+    
+    // Compare the iterator against the vote block.
+    iter = dvb.iterator();
+    assertEquals((VoteBlock) voteBlockList.get(0), iter.next());
+    assertEquals((VoteBlock) voteBlockList.get(1), iter.next());
+    assertEquals((VoteBlock) voteBlockList.get(2), iter.next());
   }
 
   /*
@@ -112,65 +116,49 @@ public class TestDiskVoteBlocks extends LockssTestCase {
     assertNull(iter.next());
   }
   
-  /*
-   * This test verifies how many times the iterator reads each item,
-   * even when the iterator has to restart several times.
-   * 
-   * Unlike the previous test, this test sets b0, b1, and b2 from the
-   * vote block list directly.
-   */
-  private static final int k_num_vote_blocks = 5;
-  private static final int k_num_random_blocks = 100;
+  private static final int k_maxLength = 20;
   
-  public void testGetVoteBlock2() throws Exception {
-    VoteBlock[] arvb = new VoteBlock[k_num_vote_blocks];
+  /*
+   * Second, more intensive test method for DiskVoteBlocks.Iterator 
+   */
+  public void testIterator2() throws Exception {
     DiskVoteBlocks dvb;
-    int i;
+    int iCountLength;
+    int iLength;
     VoteBlocksIterator iter;
-    int randomBlock;
+    VoteBlock vbNext;
+    VoteBlock vbPeek;
     List<VoteBlock> voteBlockList;
     
-    // Create the list of vote blocks and the blocks themselves.
-    voteBlockList = V3TestUtils.makeVoteBlockList(k_num_vote_blocks);
-    for (i = 0; i < k_num_vote_blocks; i++) {
-      arvb[i] = voteBlockList.get(i);
-    }
+    // TEST: For a vote block list that's 1, 2, ..., 20 long,
+    // test hasNext, next, and peek.
+    for (iLength = 0; iLength < k_maxLength; iLength++) {
+      voteBlockList = V3TestUtils.makeVoteBlockList(iLength);
+      dvb = makeDiskVoteBlocks(voteBlockList);
     
-    // Put them on the disk.
-    dvb = makeDiskVoteBlocks(voteBlockList);
-
-    // Test: The old version of the software does NOT reset the list of 
-    // votes.  Therefore, the old version would probably fail on this test...
-    assertEquals(arvb[1], dvb.getVoteBlock(1));
-    assertEquals(arvb[0], dvb.getVoteBlock(0));
-    assertEquals(arvb[3], dvb.getVoteBlock(3));  
-
-    // Test: Run the list of vote blocks BACKWARDS, and make sure that we have the right
-    // ones...
-    for (i = k_num_vote_blocks - 1; i >= 0; i--) {
-      assertEquals(arvb[i], dvb.getVoteBlock(i));
-    }
-    
-    // Since I don't know certainly what to test, why not throw a bunch of random tests?
-    for (i= 0; i < k_num_random_blocks; i++) {
-      randomBlock = (int) (Math.random() * k_num_vote_blocks);
-      assertEquals(arvb[randomBlock], dvb.getVoteBlock(randomBlock));
+      iter = dvb.iterator();
+      
+      iCountLength = 0;
+      while (iter.hasNext()) {
+        
+        vbPeek = iter.peek();
+        vbNext = iter.next();
+        
+        assertEquals(vbPeek, voteBlockList.get(iCountLength));
+        assertEquals(vbPeek, vbNext);
+        
+        iCountLength++;
+        
+        // Verify that we're not reading more than iCountLength + 1 records.
+        // (The +1 is because we actually read one ahead...)
+        assertEquals(iCountLength + 1, ((DiskVoteBlocks.Iterator) iter).getReadCount());
+      }
+      
+      assertEquals(iLength, iCountLength);
     }
   }
-
-  /*
-   * Test method for 'org.lockss.protocol.DiskVoteBlocks.getVoteBlock(int)'
-   */
-  public void testGetVoteBlock() throws Exception {
-    List voteBlockList = V3TestUtils.makeVoteBlockList(10);
-    DiskVoteBlocks dvb = makeDiskVoteBlocks(voteBlockList);
-
-    for (int i = 0; i <  voteBlockList.size(); i++) {
-      assertEquals((VoteBlock)voteBlockList.get(i), dvb.getVoteBlock(i));
-    }
-    
-  }
-
+  
+  
   /*
    * Test method for 'org.lockss.protocol.DiskVoteBlocks.size()'
    */
@@ -210,3 +198,4 @@ public class TestDiskVoteBlocks extends LockssTestCase {
   }
 
 }
+

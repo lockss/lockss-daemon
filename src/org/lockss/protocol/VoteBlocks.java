@@ -54,7 +54,7 @@ public interface VoteBlocks extends LockssSerializable {
    * 
    * @return An iterator representing the VoteBlocks.
    */
-  public VoteBlocksIterator iterator();
+  public VoteBlocksIterator iterator() throws FileNotFoundException;
 
   /**
    * Return the number of VoteBlock objects contained in this collection.

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.77 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.78 2008-06-04 19:09:05 edwardsb1 Exp $
  */
 
 /*
@@ -1073,94 +1073,101 @@ public class V3Poller extends BasePoll {
       // CR: s.b. boolean (foundURLLowerThanOurs)
       String lowestUrl = null;
       synchronized(theParticipants) {
-	for (ParticipantUserData voter : theParticipants.values()) {
-          VoteBlocksIterator iter = voter.getVoteBlockIterator();
-          
-          if (iter == null) {
-            log.warning("Voter " + voter + " gave us a null vote block iterator " 
-                        + " while tallying block " + hb.getUrl()
-                        + " in poll " + getKey() + ".  It is possible that the " 
-                        + " poller had no votes to cast, but it could also be "
-                        + " a problem.");
-            // Next voter.
-            continue;
-          }
-          
-          VoteBlock vb = null;
-          try {
-            vb = iter.peek();		// CR: call hasNext() first?
-            if (vb == null) {
+        try
+        {
+  	for (ParticipantUserData voter : theParticipants.values()) {
+            VoteBlocksIterator iter = voter.getVoteBlockIterator();
+            
+            if (iter == null) {
+              log.warning("Voter " + voter + " gave us a null vote block iterator " 
+                          + " while tallying block " + hb.getUrl()
+                          + " in poll " + getKey() + ".  It is possible that the " 
+                          + " poller had no votes to cast, but it could also be "
+                          + " a problem.");
+              // Next voter.
               continue;
-            } else {
-	      // CR: seems like final clause s.b.
-	      // vb.getUrl().compareTo(lowestUrl) < 0
-              if (hb.getUrl().compareTo(vb.getUrl()) > 0 &&
-                  (lowestUrl == null || hb.getUrl().compareTo(lowestUrl) > 0)) { 
-                lowestUrl = vb.getUrl();
-              }
             }
-          } catch (IOException ex) {
-            continue;
-          }
-        }
-        
-	for (ParticipantUserData voter : theParticipants.values()) {
-          VoteBlocksIterator iter = voter.getVoteBlockIterator();
-          
-          digestIndex++;
-          
-          if (iter == null) {
-            log.warning("Voter " + voter + " gave us a null vote block iterator " 
-                        + " while tallying block " + hb.getUrl()
-                        + " in poll " + getKey() + ".  It is possible that the " 
-                        + " poller had no votes to cast, but it could also be "
-                        + " a problem.");
-            continue;
-          }
-          
-          VoteBlock vb = null;
-          try {
-            vb = iter.peek();
-            if (vb == null) {
-              // No block was returned.  This means this voter is out of
-              // blocks.
-              tally.addExtraBlockVoter(voter.getVoterId());
-            } else {
-              int sortOrder = hb.getUrl().compareTo(vb.getUrl());
-              if (sortOrder > 0) {
-                log.debug3("Participant " + voter.getVoterId() + 
-                           " seems to have an extra block that I don't: " +
-                           vb.getUrl());
-                tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
-                missingBlockVoters++;
-                iter.next();
-              } else if (sortOrder < 0) {
-                log.debug3("Participant " + voter.getVoterId() +
-                           " doesn't seem to have block " + hb.getUrl());
-                tally.addExtraBlockVoter(voter.getVoterId());
-              } else { // equal
-                if (lowestUrl == null) {
-                  log.debug3("Our blocks are the same, now we'll compare them.");
-                  iter.next();
-                  compareBlocks(voter.getVoterId(), digestIndex, vb, hb, tally);
-                } else {
-                  log.debug3("Not incrementing peer's vote block iterator");
+            
+            VoteBlock vb = null;
+            try {
+              vb = iter.peek();		// CR: call hasNext() first?
+              if (vb == null) {
+                continue;
+              } else {
+  	      // CR: seems like final clause s.b.
+  	      // vb.getUrl().compareTo(lowestUrl) < 0
+                if (hb.getUrl().compareTo(vb.getUrl()) > 0 &&
+                    (lowestUrl == null || hb.getUrl().compareTo(lowestUrl) > 0)) { 
+                  lowestUrl = vb.getUrl();
                 }
               }
+            } catch (IOException ex) {
+              continue;
             }
-          } catch (IOException ex) {
-            // On IOExceptions, attempt to move the poll forward. Just skip
-            // this block, but be sure to log the error.
-            log.warning("IOException while iterating over vote blocks.", ex);
-            if (++blockErrorCount > maxBlockErrorCount) {
-	      log.error("Stopping poll after " + blockErrorCount +
-			" IOExceptions while iterating over vote blocks.");
-	      pollerState.setErrorDetail("Too many errors during tally");
-              stopPoll(V3Poller.POLLER_STATUS_ERROR);
-            }
-          } finally {
-            voter.incrementTalliedBlocks();
           }
+          
+  	for (ParticipantUserData voter : theParticipants.values()) {
+            VoteBlocksIterator iter = voter.getVoteBlockIterator();
+            
+            digestIndex++;
+            
+            if (iter == null) {
+              log.warning("Voter " + voter + " gave us a null vote block iterator " 
+                          + " while tallying block " + hb.getUrl()
+                          + " in poll " + getKey() + ".  It is possible that the " 
+                          + " poller had no votes to cast, but it could also be "
+                          + " a problem.");
+              continue;
+            }
+            
+            VoteBlock vb = null;
+            try {
+              vb = iter.peek();
+              if (vb == null) {
+                // No block was returned.  This means this voter is out of
+                // blocks.
+                tally.addExtraBlockVoter(voter.getVoterId());
+              } else {
+                int sortOrder = hb.getUrl().compareTo(vb.getUrl());
+                if (sortOrder > 0) {
+                  log.debug3("Participant " + voter.getVoterId() + 
+                             " seems to have an extra block that I don't: " +
+                             vb.getUrl());
+                  tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
+                  missingBlockVoters++;
+                  iter.next();
+                } else if (sortOrder < 0) {
+                  log.debug3("Participant " + voter.getVoterId() +
+                             " doesn't seem to have block " + hb.getUrl());
+                  tally.addExtraBlockVoter(voter.getVoterId());
+                } else { // equal
+                  if (lowestUrl == null) {
+                    log.debug3("Our blocks are the same, now we'll compare them.");
+                    iter.next();
+                    compareBlocks(voter.getVoterId(), digestIndex, vb, hb, tally);
+                  } else {
+                    log.debug3("Not incrementing peer's vote block iterator");
+                  }
+                }
+              }
+            } catch (IOException ex) {
+              // On IOExceptions, attempt to move the poll forward. Just skip
+              // this block, but be sure to log the error.
+              log.warning("IOException while iterating over vote blocks.", ex);
+              if (++blockErrorCount > maxBlockErrorCount) {
+  	      log.error("Stopping poll after " + blockErrorCount +
+  			" IOExceptions while iterating over vote blocks.");
+  	      pollerState.setErrorDetail("Too many errors during tally");
+                stopPoll(V3Poller.POLLER_STATUS_ERROR);
+              }
+            } finally {
+              voter.incrementTalliedBlocks();
+            }
+          }
+        // Caused by the iterator not corresponding to a real value.
+        } catch (FileNotFoundException e)
+        {
+          log.error("DiskVoteBlocks.iterator() didn't correspond to a real file.", e);
         }
       }
 
@@ -1191,33 +1198,38 @@ public class V3Poller extends BasePoll {
       missingBlockVoters = 0;
       BlockTally tally = new BlockTally(pollerState.getQuorum());
       synchronized(theParticipants) {
-	for (ParticipantUserData voter : theParticipants.values()) {
-          VoteBlocksIterator iter = voter.getVoteBlockIterator();
-          
-          if (iter == null) {
-            log.warning("Voter " + voter + " gave us a null vote block iterator " 
-                        + " while finishing the tally "
-                        + " in poll " + getKey() + ".  It is possible that the " 
-                        + " poller had no votes to cast, but it could also be "
-                        + " a problem.");
-            // Next voter.
-            continue;
-          }
+        try {
+          for (ParticipantUserData voter : theParticipants.values()) {
+            VoteBlocksIterator iter = voter.getVoteBlockIterator();
 
-	  // CR: iterate through all peer's remaining votes
-          try {
-            if (iter.peek() != null) {
-              VoteBlock vb = iter.next();
-              tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
-              missingBlockVoters++;
+            if (iter == null) {
+              log.warning("Voter " + voter + " gave us a null vote block iterator " 
+                  + " while finishing the tally "
+                  + " in poll " + getKey() + ".  It is possible that the " 
+                  + " poller had no votes to cast, but it could also be "
+                  + " a problem.");
+              // Next voter.
+              continue;
             }
-          } catch (IOException ex) {
-            // This would be bad enough to stop the poll and raise an alert.
-            log.error("IOException while iterating over vote blocks.", ex);
-            stopPoll(V3Poller.POLLER_STATUS_ERROR);
-            return;
+
+            // CR: iterate through all peer's remaining votes
+            try {
+              if (iter.peek() != null) {
+                VoteBlock vb = iter.next();
+                tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
+                missingBlockVoters++;
+              }
+            } catch (IOException ex) {
+              // This would be bad enough to stop the poll and raise an alert.
+              log.error("IOException while iterating over vote blocks.", ex);
+              stopPoll(V3Poller.POLLER_STATUS_ERROR);
+              return;
+            }
           }
+        } catch (FileNotFoundException e) {
+          log.error("File Not Found Exception, probably caused by the DiskVoteBlocks.iterator not corresponding to an existing file.", e);
         }
+
       }
 
       // Do not tally if this is the last time through the loop.

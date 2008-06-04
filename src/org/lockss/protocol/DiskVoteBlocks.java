@@ -15,13 +15,9 @@ import org.lockss.util.*;
  */
 public class DiskVoteBlocks extends BaseVoteBlocks {
 
-  private String filePath;
-  private transient File file;
-  private int size = 0;
-
-  // Hint to allow seeking to the correct point in the InputStream
-  private transient long nextVoteBlockAddress = 0;
-  private transient int nextVoteBlockIndex = 0;
+  private String m_filePath;
+  private transient File m_file;
+  private int m_size = 0;
 
   private static final Logger log = Logger.getLogger("DiskVoteBlocks");
 
@@ -43,12 +39,12 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
   public DiskVoteBlocks(int blocksToRead, InputStream from, File toDir)
       throws IOException {
     this(toDir);
-    FileOutputStream fos = new FileOutputStream(file);
+    FileOutputStream fos = new FileOutputStream(m_file);
     // Just copy to the output stream.
     StreamUtil.copy(from, fos);
     // Close
     fos.close();
-    this.size = blocksToRead;
+    this.m_size = blocksToRead;
   }
 
   /**
@@ -59,65 +55,37 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
    * @throws IOException
    */
   public DiskVoteBlocks(File toDir) throws IOException {
-    file = FileUtil.createTempFile("voteblocks-", ".bin", toDir);
-    filePath = file.getAbsolutePath();
+    m_file = FileUtil.createTempFile("voteblocks-", ".bin", toDir);
+    m_filePath = m_file.getAbsolutePath();
   }
 
   /**
    * Automagically restore File object following deserialization.
    */
   protected void postUnmarshal(LockssApp lockssContext) {
-    file = new File(filePath);
+    m_file = new File(m_filePath);
   }
 
   public synchronized void addVoteBlock(VoteBlock b) throws IOException {
     // Append to the end of the file.
     FileOutputStream fos = null;
-    fos = new FileOutputStream(file, true);
+    fos = new FileOutputStream(m_file, true);
     DataOutputStream dos = new DataOutputStream(fos);
     byte[] encodedBlock = b.getEncoded();
     dos.writeShort(encodedBlock.length);
     dos.write(encodedBlock);
-    this.size++;
+    this.m_size++;
     dos.close();
   }
-
+  
   protected synchronized VoteBlock getVoteBlock(int i) throws IOException {
-    // Read from the file until we reach VoteBlock i, or run out of blocks.
-    RandomAccessFile raf = new RandomAccessFile(file, "r");
-
-    try {
-      // Shortcut for quickly finding the next iterable block
-      if (i == nextVoteBlockIndex) {
-        raf.skipBytes((int) nextVoteBlockAddress);
-      } else {
-        nextVoteBlockIndex = 0;
-        nextVoteBlockAddress = 0;
-        for (int idx = 0; idx < i; idx++) {
-          short len = raf.readShort();
-          raf.skipBytes(len);
-          nextVoteBlockIndex++;
-          nextVoteBlockAddress += len + 2;
-        }
-      }
-
-      // Should be there!
-      short len = raf.readShort();
-      byte[] encodedBlock = new byte[len];
-      raf.readFully(encodedBlock);
-      nextVoteBlockIndex++;
-      nextVoteBlockAddress += len + 2;
-      return new VoteBlock(encodedBlock);
-    } catch (IOException ex) {
-      // This probably means that we've run out of blocks, so we should
-      // return null.
-      log.warning("Unable to find block " + i + " while seeking "
-                  + "DiskVoteBlocks file " + filePath);
-      return null;
-    } finally {
-      IOUtil.safeClose(raf);
-    }
+    throw new IOException("DiskVateBlocks.getVoteBlock(int) is no longer available.  Please use getIterator().");
   }
+  
+  public VoteBlocksIterator iterator() throws FileNotFoundException {
+    return new DiskVoteBlocks.Iterator();
+  }
+
   
   /** Search the collection for the requested VoteBlock.
    * 
@@ -143,21 +111,109 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
   }
 
   public int size() {
-    return size;
+    return m_size;
   }
 
   public synchronized void release() {
     // The poller should have already cleaned up our directory by now,
     // but just in case, we'll run some cleanup code.
-    if (file != null && !file.delete() && log.isDebug2()) {
-      log.debug2("Unable to delete file: " + file);
+    if (m_file != null && !m_file.delete() && log.isDebug2()) {
+      log.debug2("Unable to delete file: " + m_file);
     }
 
-    file = null;
+    m_file = null;
   }
 
   public synchronized InputStream getInputStream() throws IOException {
-    return new BufferedInputStream(new FileInputStream(file));
+    return new BufferedInputStream(new FileInputStream(m_file));
+  }
+  
+  class Iterator extends BaseVoteBlocks.Iterator implements VoteBlocksIterator {
+    // Note: I wanted to use the (simpler) DataInputStream instead of the RandomAccessFile,
+    // but I could not find an easy way to code "hasNext" unless the FileInputStream
+    // had implemented the mark() method or some peek() method.
+    private int m_countDiskReads;
+    private RandomAccessFile m_raf;
+    private VoteBlock m_nextVB;  // Read ahead, so we can close the stream correctly.
+    
+    public Iterator() throws FileNotFoundException {
+      resetReadCount(); 
+      
+      m_raf = new RandomAccessFile(m_file, "r"); 
+      readVB();
+    }
+    
+    /**
+     * Return true if the iteration has more VoteBlock objects.
+     * 
+     * @return true if the iteration has more elements.
+     */
+    public boolean hasNext() throws IOException {
+      return m_raf.getFD().valid();
+    }
+    
+    /**
+     * Returns the next element in the iteration.
+     * 
+     * @return The next element in the iteration.
+     * @throws IOException
+     */
+    public VoteBlock next() throws IOException {
+      VoteBlock current = m_nextVB;
+      readVB();
+      return current;
+    }
+    
+    /**
+     * Returns the next element in the iteration, but does not move the iterator
+     * cursor forward. This method is idempotent.
+     * 
+     * @return The next element in the iteration.
+     */
+    public VoteBlock peek() throws IOException {
+      return m_nextVB;
+    }
+    
+    /**
+     * These methods count the number of times that the disk has been read.  
+     * Note: We cannot easily subclass this class, because it depends on
+     * being part of DiskVoteBlocks.  
+     */
+    protected void resetReadCount() {
+      m_countDiskReads = 0;
+    }
+    
+    protected void incrementReadCount() {
+      m_countDiskReads++;
+    }
+    
+    public int getReadCount() {
+      return m_countDiskReads;
+    }
+
+    /* This method automatically closes m_fis when it reaches the end of a file. */
+    
+    private void readVB() {
+      byte[] encodedBlock;
+      short nextLen;
+      
+      incrementReadCount();
+      
+      try {
+        nextLen = m_raf.readShort();
+        encodedBlock = new byte[nextLen];
+        m_raf.readFully(encodedBlock);
+        m_nextVB = new VoteBlock(encodedBlock);
+      } catch (IOException e) {
+        m_nextVB = null;
+        
+        try {
+          m_raf.close();
+        } catch (IOException e2) {
+          // Do nothing.
+        }
+      }
+    }
   }
 
 }
