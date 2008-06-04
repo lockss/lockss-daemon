@@ -159,9 +159,14 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
      * @throws IOException
      */
     public VoteBlock next() throws IOException {
-      VoteBlock current = m_nextVB;
-      readVB();
-      return current;
+        VoteBlock current = m_nextVB;
+        readVB();
+        
+        if (current != null) {
+          return current;
+        } else {
+          throw new NoSuchElementException();
+        }
     }
     
     /**
@@ -170,8 +175,12 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
      * 
      * @return The next element in the iteration.
      */
-    public VoteBlock peek() throws IOException {
-      return m_nextVB;
+    public VoteBlock peek() {
+      if (m_nextVB != null) {
+        return m_nextVB;
+      } else {
+        throw new NoSuchElementException();
+      }
     }
     
     /**

@@ -111,9 +111,11 @@ public class TestDiskVoteBlocks extends LockssTestCase {
     assertFalse(iter.hasNext());
 
     // Shouldn't increment
-    assertNull(iter.next());
-    assertNull(iter.next());
-    assertNull(iter.next());
+    // IMPORTANT: This was the previous way to indicate that iter was empty.
+    // It now throws a "NoSuchElementException".
+//    assertNull(iter.next());
+//    assertNull(iter.next());
+//    assertNull(iter.next());
   }
   
   private static final int k_maxLength = 20;
@@ -155,6 +157,42 @@ public class TestDiskVoteBlocks extends LockssTestCase {
       }
       
       assertEquals(iLength, iCountLength);
+    }
+  }
+  
+  /*
+   * Third test: Verify that peek() and next() will throw "NoSuchElementException"
+   * when no elements are left.
+   */
+  public void testIterator3() throws Exception {
+    DiskVoteBlocks dvb;
+    int iLength;
+    VoteBlocksIterator iter;
+    List<VoteBlock> voteBlockList;
+    
+    for (iLength = 0; iLength < k_maxLength; iLength++) {
+      voteBlockList = V3TestUtils.makeVoteBlockList(iLength);
+      dvb = makeDiskVoteBlocks(voteBlockList);
+    
+      iter = dvb.iterator();
+      
+      while (iter.hasNext()) {
+        iter.next();
+      }
+      
+      try {
+        iter.peek();
+        fail("testIterator3: peek after end of 'hasNext' should have thrown a NoSuchElementException.");
+      } catch (NoSuchElementException e) {
+        /* Pass */
+      }
+      
+      try {
+        iter.next();
+        fail("testIterator3: next after end of 'hasNext' should have thrown a NoSuchElementException.");
+      } catch (NoSuchElementException e) {
+        /* This, too, shall pass */
+      }
     }
   }
   
