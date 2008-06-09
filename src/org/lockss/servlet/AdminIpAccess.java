@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.7 2007-05-01 23:34:54 tlipkis Exp $
+ * $Id: AdminIpAccess.java,v 1.8 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class AdminIpAccess extends IpAccessControl {
   }
 
   protected String getParamPrefix() {
-    return ServletManager.IP_ACCESS_PREFIX;
+    return AdminServletManager.IP_ACCESS_PREFIX;
   }
 
   protected String getConfigFileName() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.10 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestXmlStatusTable.java,v 1.11 2008-06-09 05:42:02 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.w3c.dom.*;
 public class TestXmlStatusTable extends LockssTestCase {
 
   static ServletDescr srvDescr =
-    new ServletDescr(LockssServlet.class, "name");
+    new ServletDescr("test", LockssServlet.class, "name");
 
 
   // The expected value for this test is in statustest1.xml in this dir.

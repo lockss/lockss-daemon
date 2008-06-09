@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.68 2008-04-01 08:03:49 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.69 2008-06-09 05:42:02 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
-import org.lockss.servlet.LockssServlet;
+import org.lockss.servlet.AdminServletManager;
 
 /**
  * Collect and report the status of the ArchivalUnits
@@ -626,9 +626,10 @@ public class ArchivalUnitStatus
 	Properties args = new Properties();
 	args.setProperty("auid", au.getAuId());
 	args.setProperty("url", url);
-	val = new StatusTable.SrvLink(val,
-				      LockssServlet.SERVLET_DISPLAY_CONTENT,
-				      args);
+	val =
+	  new StatusTable.SrvLink(val,
+				  AdminServletManager.SERVLET_DISPLAY_CONTENT,
+				  args);
       } else {
 	val = url;
       }
@@ -712,7 +713,7 @@ public class ArchivalUnitStatus
 
       StatusTable.SrvLink urlListLink =
 	new StatusTable.SrvLink("URL list",
-				LockssServlet.SERVLET_LIST_OBJECTS,
+				AdminServletManager.SERVLET_LIST_OBJECTS,
 				PropUtil.fromArgs("type", "urls",
 						  "auid", au.getAuId()));
 

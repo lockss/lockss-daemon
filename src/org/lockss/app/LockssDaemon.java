@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.97 2008-04-01 08:00:13 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.98 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String LOCKSS_REPOSITORY = "LockssRepository";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
   public static final String NODE_MANAGER = "NodeManager";
+  public static final String CONTENT_SERVLET_MANAGER = "ContentManager";
   public static final String PROXY_MANAGER = "ProxyManager";
   public static final String AUDIT_PROXY_MANAGER = "AuditProxyManager";
   public static final String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
@@ -147,7 +148,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
     // start proxy and servlets after plugin manager
     new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
-    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.LocalServletManager"),
+    new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
+    new ManagerDesc(CONTENT_SERVLET_MANAGER,
+		    "org.lockss.servlet.ContentServletManager"),
     new ManagerDesc(PROXY_MANAGER, "org.lockss.proxy.ProxyManager"),
     new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
     new ManagerDesc(FAIL_OVER_PROXY_MANAGER ,

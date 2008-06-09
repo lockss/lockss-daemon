@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.36 2006-01-12 01:12:50 thib_gc Exp $
+ * $Id: ServletManager.java,v 1.37 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -49,34 +49,15 @@ import org.mortbay.jetty.servlet.*;
  */
 public interface ServletManager extends LockssManager {
 
-  public static final String UI_REALM = "LOCKSS Admin";
-  public static final String PASSWORD_PROPERTY_FILE = "admin.props";
-
-  public static final String PREFIX = Configuration.PREFIX + "ui.";
-  public static final String PARAM_START = PREFIX + "start";
-  public static final String PARAM_PORT = PREFIX + "port";
-
-  public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
-  public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
-  public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
-  public static final String PARAM_IP_PLATFORM_SUBNET =
-    IP_ACCESS_PREFIX + IpAccessControl.SUFFIX_PLATFORM_ACCESS;
-
-  public static final String PARAM_LOG_FORBIDDEN =
-    IP_ACCESS_PREFIX + "logForbidden";
-  public static final boolean DEFAULT_LOG_FORBIDDEN = true;
-
-  public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
-  public static final boolean DEFAULT_USER_AUTH = true;
-  public static final String PARAM_LOGDIR =
-    Configuration.PREFIX +  "platform.logdirectory";
-
-  public static final boolean DEFAULT_START = true;
-  public static final int DEFAULT_PORT = 8081;
+  public static final String SUFFIX_IP_PLATFORM_SUBNET =
+    IpAccessControl.SUFFIX_PLATFORM_ACCESS;
 
   public static final String PARAM_PLATFORM_USERNAME =
     Configuration.PLATFORM + "ui.username";
   public static final String PARAM_PLATFORM_PASSWORD =
     Configuration.PLATFORM + "ui.password";
+
+  public ServletDescr[] getServletDescrs();
+  public ServletDescr findServletDescr(Object o);
 
 }

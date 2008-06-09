@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.39 2008-01-27 06:48:05 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.40 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -237,7 +237,7 @@ public class BatchAuConfig extends LockssServlet {
                                "Restore cache config from a file on your workstation"));
 
     // Manual edit
-    list.add(getMenuDescriptor(SERVLET_AU_CONFIG,
+    list.add(getMenuDescriptor(AdminServletManager.SERVLET_AU_CONFIG,
                                "Manual Add/Edit",
                                null,
                                "Add, Edit or Delete an individual AU"));

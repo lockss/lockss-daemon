@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.55 2008-03-15 04:53:35 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.56 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -832,6 +832,7 @@ public class ConfigManager implements LockssManager {
     }
     copyPlatformParams(newConfig);
     inferMiscParams(newConfig);
+    setCompatibilityParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
@@ -940,6 +941,30 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  // Backward compatibility for param settings
+
+  /** Obsolete, use org.lockss.ui.contactEmail (daemon 1.32) */
+  static final String PARAM_OBS_ADMIN_CONTACT_EMAIL =
+    "org.lockss.admin.contactEmail";
+  /** Obsolete, use org.lockss.ui.helpUrl (daemon 1.32) */
+  static final String PARAM_OBS_ADMIN_HELP_URL = "org.lockss.admin.helpUrl";
+
+  private void setIfNotSet(Configuration config,
+			   String fromKey, String toKey) {
+    if (config.containsKey(fromKey) && !config.containsKey(toKey)) {
+      config.put(toKey, config.get(fromKey));
+    }
+  }
+
+  private void setCompatibilityParams(Configuration config) {
+    setIfNotSet(config,
+		PARAM_OBS_ADMIN_CONTACT_EMAIL,
+		AdminServletManager.PARAM_CONTACT_ADDR);
+    setIfNotSet(config,
+		PARAM_OBS_ADMIN_HELP_URL,
+		AdminServletManager.PARAM_HELP_URL);
+  }
+
   private void copyPlatformParams(Configuration config) {
     copyPlatformVersionParams(config);
 
@@ -970,8 +995,8 @@ public class ConfigManager implements LockssManager {
     // accounted for
     String platformSubnet = config.get(PARAM_PLATFORM_ACCESS_SUBNET);
     appendPlatformAccess(config,
-			 ServletManager.PARAM_IP_INCLUDE,
-			 ServletManager.PARAM_IP_PLATFORM_SUBNET,
+			 AdminServletManager.PARAM_IP_INCLUDE,
+			 AdminServletManager.PARAM_IP_PLATFORM_SUBNET,
 			 platformSubnet);
     appendPlatformAccess(config,
 			 ProxyManager.PARAM_IP_INCLUDE,

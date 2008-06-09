@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.13 2006-06-01 23:48:21 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.14 2008-06-09 05:42:02 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class ViewContent extends LockssServlet {
   private String encapsulate;
 
   private PluginManager pluginMgr;
-  private LocalServletManager srvltMgr;
+  private AdminServletManager srvltMgr;
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
@@ -84,8 +84,7 @@ public class ViewContent extends LockssServlet {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
     try {
-      srvltMgr =
-	(LocalServletManager) getLockssDaemon().getServletManager();
+      srvltMgr = (AdminServletManager)getServletManager();
     } catch (RuntimeException e) {
       log.warning("Can't find LocalServletManager", e);
     }

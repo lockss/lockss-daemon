@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.17 2007-11-06 07:09:17 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.18 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -54,60 +54,91 @@ import org.mortbay.jetty.servlet.*;
  */
 public abstract class BaseServletManager
   extends JettyManager implements ServletManager {
-
-  public static final String UI_REALM = "LOCKSS Admin";
-  public static final String PASSWORD_PROPERTY_FILE = "admin.props";
-
-  public static final String PREFIX = Configuration.PREFIX + "ui.";
-  public static final String PARAM_START = PREFIX + "start";
-  public static final String PARAM_PORT = PREFIX + "port";
-
-  public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
-  public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
-  public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
-  public static final String PARAM_LOG_FORBIDDEN =
-    IP_ACCESS_PREFIX + "logForbidden";
-  public static final boolean DEFAULT_LOG_FORBIDDEN = true;
-
-  public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
-  public static final boolean DEFAULT_USER_AUTH = true;
-
-  public static final String PARAM_403_MSG = PREFIX + "403Msg";
-  public static final String DEFAULT_403_MSG =
-    "Access to the admin UI is not allowed from this IP address (%IP%)";
-
-  public static final String PARAM_LOGDIR =
-    Configuration.PREFIX +  "platform.logdirectory";
-
-  /** Set false to disable the debug user.  Daemon restart required. */
-  public static final String PARAM_ENABLE_DEBUG_USER = PREFIX +
-    "debugUser.enable";
-  public static final boolean DEFAULT_ENABLE_DEBUG_USER = true;
-
-  public static final String PARAM_USERS = PREFIX + "users";
-  public static final String USER_PARAM_USER = "user";
-  public static final String USER_PARAM_PWD = "password";
-  public static final String USER_PARAM_ROLES = "roles";
-
-  public static final boolean DEFAULT_START = true;
-  public static final int DEFAULT_PORT = 8081;
-
   private static Logger log = Logger.getLogger("ServletMgr");
+
+  // Suffixes of config keys below org.lockss.<servlet>.  Config is
+  // accessed through a generic mechanism in setConfig().  The PARAM_XXX
+  // symbols following some of the suffixes are present only to generate
+  // appropriate parameter documentation; they aren't used by the daemon.
+
+  /** Prefix of doc-only parameters */
+  public static final String DOC_PREFIX = Configuration.PREFIX + "<server>.";
+
+  public static final String SUFFIX_START = "start";
+  /** Start the named server */
+  public static final String PARAM_START = DOC_PREFIX + SUFFIX_START;
+
+  public static final String SUFFIX_PORT = "port";
+  /** Listen port for named server */
+  public static final String PARAM_PORT = DOC_PREFIX + SUFFIX_PORT;
+
+  // IP access list tree below org.lockss.<server>.access.ip
+  public static final String SUFFIX_IP_ACCESS_PREFIX = "access.ip.";
+  public static final String DOC_ACCESS_PREFIX =
+    DOC_PREFIX + SUFFIX_IP_ACCESS_PREFIX;
+
+  public static final String SUFFIX_IP_INCLUDE = "include";
+  /** List of IPs or subnets to allow */
+  public static final String PARAM_IP_INCLUDE =
+    DOC_ACCESS_PREFIX + SUFFIX_IP_INCLUDE;
+
+  public static final String SUFFIX_IP_EXCLUDE = "exclude";
+  /** List of IPs or subnets to reject */
+  public static final String PARAM_IP_EXCLUDE =
+    DOC_ACCESS_PREFIX + SUFFIX_IP_EXCLUDE;
+
+  public static final String SUFFIX_LOG_FORBIDDEN = "logForbidden";
+  /** Log accesses from forbidden IP addresses */
+  public static final String PARAM_LOG_FORBIDDEN =
+    DOC_ACCESS_PREFIX + SUFFIX_LOG_FORBIDDEN;
+
+//   public static final String SUFFIX_USER_AUTH = "access.auth";
+//   /** Require user authentication for named server */
+//   public static final String PARAM_USER_AUTH = DOC_PREFIX + SUFFIX_USER_AUTH;
+
+  public static final String SUFFIX_403_MSG = "403Msg";
+  /** Message to include in 403 response */
+  public static final String PARAM_403MSG = DOC_PREFIX + SUFFIX_403_MSG;
+
+  public static final String SUFFIX_ENABLE_DEBUG_USER = "debugUser.enable";
+  /** Enable the debug user on named server.  Daemon restart required. */
+  public static final String PARAM_ENABLE_DEBUG_USER =
+    DOC_PREFIX + SUFFIX_ENABLE_DEBUG_USER;
+
+  // User login tree below org.lockss.<server>.users
+  public static final String SUFFIX_USERS = "users";
+  public static final String DOC_USERS_PREFIX =
+    DOC_PREFIX + SUFFIX_USERS + ".";
+
+  public static final String USER_PARAM_USER = "user";
+  /** Username */
+  public static final String PARAM_USER_PARAM_USER =
+    DOC_USERS_PREFIX + USER_PARAM_USER;
+  public static final String USER_PARAM_PWD = "password";
+  /** Encrypted password */
+  public static final String PARAM_USER_PARAM_PWD =
+    DOC_USERS_PREFIX + USER_PARAM_PWD;
+  public static final String USER_PARAM_ROLES = "roles";
+  /** List of roles (Debug, Admin) */
+  public static final String PARAM_USER_PARAM_ROLES =
+    DOC_USERS_PREFIX + USER_PARAM_ROLES;
+
 
   private static String textMimes[] = {
     "out", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
   };
 
+  ManagerInfo mi;
   protected int port;
   protected MDHashUserRealm realm;
   private boolean start;
   private String includeIps;
   private String excludeIps;
   private boolean logForbidden;
-  protected boolean doAuth;
-  protected String logdir;
-  List accessHandlers = new ArrayList();
+  protected boolean enableDebugUser;
   private String _403Msg;
+
+  List accessHandlers = new ArrayList();
 
   public BaseServletManager(String serverName) {
     super(serverName);
@@ -115,6 +146,7 @@ public abstract class BaseServletManager
 
   /** Start servlets  */
   public void startService() {
+    initDescrs();
     if (start) {
       super.startService();
       startServlets();
@@ -131,26 +163,112 @@ public abstract class BaseServletManager
     return (LockssDaemon)getApp();
   }
 
+  /** Return the ManagerInfo object with config info and defaults for servlet
+   * manager */
+  protected abstract ManagerInfo getManagerInfo();
+
+  /** Return array of ServletDescr for all servlets managed by the servlet
+   * manager */
+  public abstract ServletDescr[] getServletDescrs();
+
+  /** Install appropriate users for these servlets */
+  protected abstract void installUsers(MDHashUserRealm realm);
+
+  /** Create and configure contexts for this server */
+  protected abstract void configureContexts(HttpServer server);
+
+
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
-    port = config.getInt(PARAM_PORT, DEFAULT_PORT);
-    start = config.getBoolean(PARAM_START, DEFAULT_START);
-    logdir = config.get(PARAM_LOGDIR);
-    doAuth = config.getBoolean(PARAM_USER_AUTH, DEFAULT_USER_AUTH);
-    _403Msg = config.get(PARAM_403_MSG, DEFAULT_403_MSG);
+    mi = getManagerInfo();
+    String prefix = mi.prefix;
+    if (changedKeys.contains(prefix)) {
+      port = config.getInt(prefix + SUFFIX_PORT, mi.defaultPort);
+      start = config.getBoolean(prefix + SUFFIX_START, mi.defaultStart);
+      _403Msg = config.get(prefix + SUFFIX_403_MSG, mi.default403Msg);
+      enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
+					  mi.defaultEnableDebugUser);
 
-    if (changedKeys.contains(PARAM_IP_INCLUDE) ||
-	changedKeys.contains(PARAM_IP_EXCLUDE) ||
-	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
-      includeIps = config.get(PARAM_IP_INCLUDE, "");
-      excludeIps = config.get(PARAM_IP_EXCLUDE, "");
-      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
-				       DEFAULT_LOG_FORBIDDEN);
-      log.debug("Installing new ip filter: incl: " + includeIps +
-		", excl: " + excludeIps);
-      setIpFilters();
+      String accessPrefix = mi.accessPrefix;
+      if (mi.accessPrefix == null) {
+	accessPrefix = prefix + SUFFIX_IP_ACCESS_PREFIX;
+      }
+      if (changedKeys.contains(accessPrefix)) {
+	includeIps = config.get(accessPrefix + SUFFIX_IP_INCLUDE, "");
+	excludeIps = config.get(accessPrefix + SUFFIX_IP_EXCLUDE, "");
+	logForbidden = config.getBoolean(accessPrefix + SUFFIX_LOG_FORBIDDEN,
+					 mi.defaultLogForbidden);
+	log.debug("Installing new ip filter: incl: " + includeIps +
+		  ", excl: " + excludeIps);
+	setIpFilters();
+      }
     }
+  }
+
+  // Create mapping from servlet class to ServletDescr
+  protected Hashtable servletToDescr = new Hashtable();
+
+  protected void initDescrs() {
+    for (ServletDescr d : getServletDescrs()) {
+      if (d.cls != null && d.cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER) {
+	servletToDescr.put(d.cls, d);
+      }
+    }
+  }
+
+  public ServletDescr findServletDescr(Object o) {
+    ServletDescr res = (ServletDescr)servletToDescr.get(o.getClass());
+    if (res != null) return res;
+    // if not in map, o might be an instance of a subclass of a servlet class
+    // that's in the map.
+    for (ServletDescr d : getServletDescrs()) {
+      if (d.cls != null && d.cls.isInstance(o)) {
+	// found a descr that describes a superclass.  Add actual class to map
+	servletToDescr.put(o.getClass(), d);
+	return d;
+      }
+    }
+    return null;		// shouldn't happen
+				// XXX do something better here
+  }
+
+  public void startServlets() {
+    try {
+      // Create the server
+      HttpServer server = new HttpServer();
+
+      // Create a port listener
+      server.addListener(new org.mortbay.util.InetAddrPort(port));
+
+      setupAuthRealm();
+
+      configureContexts(server);
+
+      // Start the http server
+      startServer(server, port);
+    } catch (Exception e) {
+      log.warning("Couldn't start servlets", e);
+    }
+  }
+
+  // common context setup
+  // adds IpAccessHandler as all contexts want it
+  // doesn't add AuthHandler as not all contexts want it
+  HttpContext makeContext(HttpServer server, String path) {
+    HttpContext context = server.getContext(path);
+    context.setAttribute(HttpContext.__ErrorHandler,
+			 new LockssErrorHandler("daemon")); 
+    context.setAttribute("LockssApp", theApp);
+    // In this environment there is no point in consuming memory with
+    // cached resources
+    context.setMaxCachedFileSize(0);
+
+    // IpAccessHandler is always first handler
+    if (mi.doFilterIpAccess) {
+      addAccessHandler(context);
+    }
+    return context;
   }
 
   void setIpFilters() {
@@ -173,33 +291,26 @@ public abstract class BaseServletManager
   }
 
   void setupAuthRealm() {
-    if (doAuth) {
-      realm = new MDHashUserRealm(UI_REALM);
+    if (mi.doAuth) {
+      realm = new MDHashUserRealm(mi.authRealm);
       installUsers(realm);
       if (realm.isEmpty()) {
-	log.warning("No users created, UI is effectively disabled.");
+	log.warning("No users created, " + mi.authRealm +
+		    " is effectively disabled.");
       }
     }
   }
 
-  protected void installUsers(MDHashUserRealm realm) {
-    installDebugUser(realm);
-    installPlatformUser(realm);
-    installGlobalUsers(realm);
-    installLocalUsers(realm);
-  }
-
   protected void installDebugUser(MDHashUserRealm realm) {
-    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_DEBUG_USER,
-				      DEFAULT_ENABLE_DEBUG_USER)) {
+    if (enableDebugUser) {
       try {
-	URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
+	URL propsUrl = this.getClass().getResource(mi.debugUserFile);
 	if (propsUrl != null) {
 	  log.debug("passwd props file: " + propsUrl);
 	  realm.load(propsUrl.toString());
 	}
       } catch (IOException e) {
-	log.warning("Error loading " + PASSWORD_PROPERTY_FILE, e);
+	log.warning("Error loading " + mi.debugUserFile, e);
       }
     }
   }
@@ -224,7 +335,7 @@ public abstract class BaseServletManager
     // Install globally configured users
     // XXX disallow this on the platform
     installUsers(realm,
-		 ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS));
+		 ConfigManager.getCurrentConfig().getConfigTree(mi.prefix + SUFFIX_USERS));
   }
 
   protected void installLocalUsers(MDHashUserRealm realm) {
@@ -252,8 +363,6 @@ public abstract class BaseServletManager
     }
   }
 
-  protected abstract void startServlets();
-
   protected void addAccessHandler(HttpContext context) {
     IpAccessHandler ah = new IpAccessHandler(serverName);
     setIpFilter(ah);
@@ -267,10 +376,10 @@ public abstract class BaseServletManager
       context.setAuthenticator(new BasicAuthenticator());
       context.addHandler(new SecurityHandler());
       context.addSecurityConstraint("/",
-				    new SecurityConstraint("Admin", "*"));
+				    new SecurityConstraint(mi.serverName,
+							   "*"));
     }
   }
-
 
   protected void setupDirContext(HttpServer server, UserRealm realm,
 				 String contextPath, String dir,
@@ -323,10 +432,18 @@ public abstract class BaseServletManager
     context.addHandler(new NotFoundHandler());
   }
 
-  protected void setupLogContext(HttpServer server, UserRealm realm,
-				 String contextPath, String logdir)
-      throws MalformedURLException {
-    setupDirContext(server, realm, contextPath, logdir, null);
+  protected void addServlets(ServletDescr[] descrs, ServletHandler handler) {
+    for (ServletDescr d : descrs) {
+      Class cls = d.getServletClass();
+      if (cls != null
+	  && cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER
+	  && !d.isPathIsUrl()) {
+	String path = "/" + d.getPath();
+	log.debug2("addServlet("+d.getServletName()+", "+path+
+		   ", "+cls.getName()+")");
+	handler.addServlet(d.getServletName(), path, cls.getName());
+      }
+    }
   }
 
   // Add a servlet if its class can be loaded.
@@ -339,5 +456,23 @@ public abstract class BaseServletManager
       log.warning("Not starting servlet \"" + name +
 		  "\", class not found: " + servletClass);
     }
+  }
+
+  /** Struct to hold particulars of concrete servlet managers needed for
+   * generic processing.  Mostly config param defaults. */
+
+  protected class ManagerInfo {
+    String prefix;
+    String accessPrefix;		// if from different server
+    String serverName;
+    boolean defaultStart;
+    int defaultPort;
+    String default403Msg = "Access forbidden";
+    boolean doAuth;
+    boolean doFilterIpAccess = true;
+    String authRealm;
+    boolean defaultEnableDebugUser;
+    boolean defaultLogForbidden;
+    String debugUserFile;
   }
 }

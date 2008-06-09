@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.96 2008-02-19 01:44:23 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.97 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -64,8 +64,6 @@ public abstract class LockssServlet extends HttpServlet
 
   static final String PARAM_PLATFORM_VERSION =
     Configuration.PREFIX + "platform.version";
-  static final String PARAM_ADMIN_ADDRESS =
-    Configuration.PREFIX + "admin.IPAddress";
 
   /** Inactive HTTP session (cookie) timeout */
   static final String PARAM_UI_SESSION_TIMEOUT =
@@ -81,11 +79,6 @@ public abstract class LockssServlet extends HttpServlet
   static final String PARAM_UI_WARNING =
     Configuration.PREFIX + "ui.warning";
 
-  /** PluginConfig servlet is visible if true.  Set for PLNs, etc. */
-  static final String PARAM_ALLOW_PLUGIN_CONFIG =
-    Configuration.PREFIX + "ui.allowPluginConfig";
-  static final boolean DEFAULT_ALLOW_PLUGIN_CONFIG = false;
-
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
@@ -93,9 +86,6 @@ public abstract class LockssServlet extends HttpServlet
   public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
-
-  protected static final String footAccessDenied =
-    "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS box, or your workstation is allowed access by the publisher.";
 
   protected static Logger log = Logger.getLogger("LockssServlet");
 
@@ -124,191 +114,9 @@ public abstract class LockssServlet extends HttpServlet
   private int tabindex;
   ServletDescr _myServletDescr = null;
   private String myName = null;
-  private boolean allowPluginConfig = DEFAULT_ALLOW_PLUGIN_CONFIG;
 
   // number submit buttons sequentially so unit tests can find them
   protected int submitButtonNumber = 0;
-
-  // Descriptors for all servlets.
-  protected static final ServletDescr SERVLET_HOME =
-    new ServletDescr(UiHome.class,
-                     "Cache Administration",
-		     ServletDescr.NOT_IN_NAV | ServletDescr.LARGE_LOGO);
-  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
-    new ServletDescr(BatchAuConfig.class,
-                     "Journal Configuration",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME |
-		     ServletDescr.DISALLOW_IF_UI_WARNING,
-                     "Add or remove titles from this cache");
-  protected static final ServletDescr SERVLET_AU_CONFIG =
-    new ServletDescr(AuConfig.class,
-                     "Manual Journal Configuration",
-		     ServletDescr.NOT_IN_NAV | ServletDescr.IN_UIHOME |
-		     ServletDescr.DISALLOW_IF_UI_WARNING,
-                     "Manually edit single AU configuration");
-  protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
-    new ServletDescr(AdminIpAccess.class,
-                     "Admin Access Control",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Control access to the administrative UI");
-  protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
-    new ServletDescr(ProxyIpAccess.class,
-                     "Proxy Access Control",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Control access to the preserved content");
-  protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
-    new ServletDescr(ProxyAndContent.class,
-                     "Proxy Options",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Configure the audit proxy and the ICP server.");
-  protected static final ServletDescr SERVLET_PROXY_INFO =
-    new ServletDescr(ProxyConfig.class,
-                     "Proxy Info",
-                     "info/ProxyInfo",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Info for configuring browsers and proxies"
-                     + "<br>"
-                     + "to access preserved content on this cache");
-  protected static final ServletDescr SERVLET_PLUGIN_CONFIG =
-    new ServletDescr(PluginConfig.class,
-                     "Plugin Configuration",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Manage plugin repositories, title databases") {
-      public boolean isInNav(LockssServlet servlet) {
-	return servlet.allowPluginConfig;
-      }
-      public boolean isInUiHome(LockssServlet servlet) {
-	return isInNav(servlet);
-      }};
-  protected static final ServletDescr SERVLET_DAEMON_STATUS =
-    new ServletDescr(DaemonStatus.class,
-                     "Daemon Status",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Status of cache contents and operation");
-  public static final ServletDescr SERVLET_DISPLAY_CONTENT =
-    new ServletDescr(ViewContent.class,
-                     "View Content",
-                     ServletDescr.DEBUG_ONLY | ServletDescr.NOT_IN_NAV);
-  public static final ServletDescr SERVLET_SERVE_CONTENT =
-    new ServletDescr(ServeContent.class,
-                     "Serve Content",
-                     ServletDescr.NOT_IN_NAV);
-  public static final ServletDescr SERVLET_LIST_OBJECTS =
-    new ServletDescr(ListObjects.class,
-                     "List Objests",
-                     ServletDescr.NOT_IN_NAV);
-  protected static final ServletDescr SERVLET_HASH_CUS =
-    new ServletDescr(HashCUS.class,
-                     "Hash CUS",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
-  protected static final ServletDescr LINK_LOGS =
-    new ServletDescr(null,
-                     "Logs",
-                     "log",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
-  // Link to ISOs only appears if there are actually any ISOs
-  protected static final ServletDescr LINK_ISOS =
-    new ServletDescr(null,
-                     "ISOs",
-                     "iso",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-		     "Download configured platform CD image") {
-      public boolean isInNav(LockssServlet servlet) {
-	ServletManager mgr = servlet.getServletManager();
-	return (mgr instanceof LocalServletManager) &&
-	  ((LocalServletManager)mgr).hasIsoFiles();
-      }
-      public boolean isInUiHome(LockssServlet servlet) {
-	return isInNav(servlet);
-      }};
-  protected static final ServletDescr SERVLET_THREAD_DUMP =
-    new ServletDescr("org.lockss.servlet.ThreadDump",
-                     "Thread Dump",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
-  protected static final ServletDescr SERVLET_RAISE_ALERT =
-    new ServletDescr(RaiseAlert.class,
-                     "Raise Alert",
-		     ServletDescr.NOT_IN_NAV);
-  protected static final ServletDescr SERVLET_DEBUG_PANEL =
-    new ServletDescr(DebugPanel.class,
-                     "Debug Panel",
-		     ServletDescr.NOT_IN_NAV);
-  protected static final ServletDescr LINK_CONTACT =
-    new ServletDescr(null,
-                     "Contact Us",
-		     mailtoUrl(LocalServletManager.DEFAULT_CONTACT_ADDR),
-                     ServletDescr.IN_NAV | ServletDescr.NAME_IS_URL);
-  protected static final ServletDescr LINK_HELP =
-    new ServletDescr(null,
-                     "Help", LocalServletManager.DEFAULT_HELP_URL,
-                     ServletDescr.NAME_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Online help, FAQs, credits");
-
-  static void setHelpUrl(String url) {
-    LINK_HELP.name = url;
-  }
-
-  static void setContactAddr(String addr) {
-    LINK_CONTACT.name = mailtoUrl(addr);
-  }
-
-  static String mailtoUrl(String addr) {
-    return "mailto:" + addr;
-  }
-
-  // All servlets must be listed here (even if not in nav table).
-  // Order of descrs determines order in nav table.
-  static ServletDescr servletDescrs[] = {
-     SERVLET_HOME,
-     SERVLET_BATCH_AU_CONFIG,
-     SERVLET_AU_CONFIG,
-     SERVLET_PLUGIN_CONFIG,
-     SERVLET_ADMIN_ACCESS_CONTROL,
-     SERVLET_PROXY_ACCESS_CONTROL,
-     SERVLET_PROXY_AND_CONTENT,
-     SERVLET_PROXY_INFO,
-     SERVLET_DAEMON_STATUS,
-     SERVLET_DISPLAY_CONTENT,
-     SERVLET_SERVE_CONTENT,
-     SERVLET_LIST_OBJECTS,
-     SERVLET_HASH_CUS,
-     LINK_LOGS,
-     LINK_ISOS,
-     SERVLET_THREAD_DUMP,
-     SERVLET_RAISE_ALERT,
-     SERVLET_DEBUG_PANEL,
-     LINK_CONTACT,
-     LINK_HELP,
-  };
-
-  // Create mapping from servlet class to ServletDescr
-  private static final Hashtable servletToDescr = new Hashtable();
-  static {
-    for (int i = 0; i < servletDescrs.length; i++) {
-      ServletDescr d = servletDescrs[i];
-      if (d.cls != null && d.cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER) {
-	servletToDescr.put(d.cls, d);
-      }
-    }
-  }
-
-  private ServletDescr findServletDescr(Object o) {
-    ServletDescr d = (ServletDescr)servletToDescr.get(o.getClass());
-    if (d != null) return d;
-    // if not in map, o might be an instance of a subclass of a servlet class
-    // that's in the map.
-    for (int i = 0; i < servletDescrs.length; i++) {
-      d = servletDescrs[i];
-      if (d.cls != null && d.cls.isInstance(o)) {
-	// found a descr that describes a superclass.  Add actual class to map
-	servletToDescr.put(o.getClass(), d);
-	return d;
-      }
-    }
-    return null;		// shouldn't happen
-				// XXX do something better here
-  }
-
 
   /** Run once when servlet loaded. */
   public void init(ServletConfig config) throws ServletException {
@@ -316,13 +124,14 @@ public abstract class LockssServlet extends HttpServlet
     context = config.getServletContext();
     theApp = (LockssApp)context.getAttribute("LockssApp");
     servletMgr = theApp.getServletManager();
-    allowPluginConfig =
-      CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
-				    DEFAULT_ALLOW_PLUGIN_CONFIG);
   }
 
   public ServletManager getServletManager() {
     return servletMgr;
+  }
+
+  protected ServletDescr[] getServletDescrs() {
+    return servletMgr.getServletDescrs();
   }
 
   /** Servlets must implement this method. */
@@ -348,9 +157,6 @@ public abstract class LockssServlet extends HttpServlet
       tabindex = 1;
       reqURL = new URL(UrlUtil.getRequestURL(req));
       adminAddr = req.getParameter("admin");
-      if (adminAddr == null) {
-	adminAddr = CurrentConfig.getParam(PARAM_ADMIN_ADDRESS);
-      }
       adminHost = reqURL.getHost();
       client = req.getParameter("client");
       clientAddr = client;
@@ -488,7 +294,7 @@ public abstract class LockssServlet extends HttpServlet
   // Return descriptor of running servlet
   protected ServletDescr myServletDescr() {
     if (_myServletDescr == null) {
-      _myServletDescr = findServletDescr(this);
+      _myServletDescr = servletMgr.findServletDescr(this);
     }
     return _myServletDescr;
   }
@@ -616,7 +422,7 @@ public abstract class LockssServlet extends HttpServlet
   // return true iff error
   protected boolean checkParam(boolean ok, String msg) throws IOException {
     if (ok) return false;
-    log.error(myServletDescr().name + ": " + msg);
+    log.error(myServletDescr().getPath() + ": " + msg);
     paramError();
     return true;
   }
@@ -650,8 +456,8 @@ public abstract class LockssServlet extends HttpServlet
    *  browsers will prompt again for login
    */
   String srvURL(String host, ServletDescr d, String params) {
-    if (d.isNameIsUrl()) {
-      return d.name;
+    if (d.isPathIsUrl()) {
+      return d.getPath();
     }
     StringBuffer sb = new StringBuffer();
     StringBuffer paramsb = new StringBuffer();
@@ -683,7 +489,7 @@ public abstract class LockssServlet extends HttpServlet
       sb.append(reqURL.getPort());
     }
     sb.append('/');
-    sb.append(d.name);
+    sb.append(d.getPath());
     if (paramsb.length() != 0) {
       paramsb.setCharAt(0, '?');
       sb.append(paramsb.toString());
@@ -801,7 +607,7 @@ public abstract class LockssServlet extends HttpServlet
     // Create page and layout header
     Page page = ServletUtil.doNewPage(getPageTitle(), isFramed());
     FilterIterator inNavIterator = new FilterIterator(
-        new ObjectArrayIterator(servletDescrs),
+        new ObjectArrayIterator(getServletDescrs()),
         new Predicate() {
           public boolean evaluate(Object obj) {
             return isServletInNav((ServletDescr)obj);

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.51 2008-02-19 01:42:07 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.52 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -504,7 +504,7 @@ public class StatusTable {
       sb.append("[StatusTable.SrvLink:");
       sb.append(value);
       sb.append(", ");
-      sb.append(srvDescr.getName());
+      sb.append(srvDescr.getPath());
       sb.append(args);
       sb.append("]");
       return sb.toString();

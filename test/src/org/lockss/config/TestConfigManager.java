@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.28 2007-08-18 16:10:45 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.29 2008-06-09 05:42:02 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.protocol.*;
 import org.lockss.clockss.*;
+import org.lockss.servlet.*;
 
 /**
  * Test class for <code>org.lockss.config.ConfigManager</code>
@@ -442,6 +443,23 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("org.lockss.config.fileVersion.foo",
 		 ConfigManager.configVersionProp("foo"));
   }
+
+  public void testCompatibilityParams() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertEquals(null, config.get(AdminServletManager.PARAM_CONTACT_ADDR));
+    assertEquals(null, config.get(AdminServletManager.PARAM_HELP_URL));
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_OBS_ADMIN_CONTACT_EMAIL,
+				  "Nicola@teslasociety.org",
+				  ConfigManager.PARAM_OBS_ADMIN_HELP_URL,
+				  "help://cause.I.need.somebody/");
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("Nicola@teslasociety.org",
+		 config.get(AdminServletManager.PARAM_CONTACT_ADDR));
+    assertEquals("help://cause.I.need.somebody/",
+		 config.get(AdminServletManager.PARAM_HELP_URL));
+  }
+
+
 
   public void testWriteAndReadCacheConfigFile() throws Exception {
     String fname = "test-config";

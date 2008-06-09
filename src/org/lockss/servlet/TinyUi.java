@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.16 2007-11-06 07:09:51 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.17 2008-06-09 05:42:02 tlipkis Exp $
  */
 
 /*
@@ -51,8 +51,14 @@ import org.mortbay.html.*;
  * the application is running, so must not rely on any services.
  */
 public class TinyUi extends BaseServletManager {
-  public static final String SERVER_NAME = "TinyUi";
   private static Logger log = Logger.getLogger("TinyUi");
+
+  public static final String PREFIX = Configuration.PREFIX + "tinyUi.";
+  public static final String SERVER_NAME = "TinyUI";
+
+  public static final boolean DEFAULT_START = true;
+  public static final int DEFAULT_PORT = 8081;
+  public static final boolean DO_USER_AUTH = true;
 
   private String[] tinyData;
 
@@ -79,31 +85,40 @@ public class TinyUi extends BaseServletManager {
     stopServer();
   }
 
+  protected ManagerInfo getManagerInfo() {
+    ManagerInfo mi = new ManagerInfo();
+    mi.prefix = PREFIX;
+    mi.serverName = SERVER_NAME;
+    mi.defaultStart = DEFAULT_START;
+    mi.defaultPort = DEFAULT_PORT;
+    mi.doAuth = DO_USER_AUTH;
+    mi.doFilterIpAccess = false;
+    mi.authRealm = AdminServletManager.UI_REALM;
+    mi.defaultLogForbidden = AdminServletManager.DEFAULT_ENABLE_DEBUG_USER;
+    mi.debugUserFile = AdminServletManager.PASSWORD_PROPERTY_FILE;
+    return mi;
+  }
+
   void setIpFilter(IpAccessHandler ah) {
     super.setIpFilter(ah);
     ah.setLogForbidden(true);
   }
 
-  public void startServlets() {
-    try {
-      // Create the server
-      HttpServer server = new HttpServer();
-
-      // Create a port listener
-      server.addListener(new org.mortbay.util.InetAddrPort(port));
-
-      setupAuthRealm();
-
-      configureTinyContexts(server);
-
-      // Start the http server
-      startServer(server, port);
-    } catch (Exception e) {
-      log.warning("Couldn't start servlets", e);
-    }
+  public ServletDescr[] getServletDescrs() {
+    return new ServletDescr[0];
   }
 
-  public void configureTinyContexts(HttpServer server) {
+  public ServletDescr findServletDescr(Object o) {
+    return null;
+  }
+
+  protected void installUsers(MDHashUserRealm realm) {
+    installDebugUser(realm);
+    installPlatformUser(realm);
+//     installLocalUsers(realm);
+  }
+
+  protected void configureContexts(HttpServer server) {
     try {
       setupTinyContext(server);
       setupImageContext(server);
@@ -155,16 +170,8 @@ public class TinyUi extends BaseServletManager {
   // adds IpAccessHandler as all contexts want it
   // doesn't add AuthHandler as not all contexts want it
   HttpContext makeContext(HttpServer server, String path) {
-    HttpContext context = server.getContext(path);
+    HttpContext context = super.makeContext(server, path);
     context.setAttribute("TinyData", tinyData);
-    context.setAttribute(HttpContext.__ErrorHandler,
-			 new LockssErrorHandler("daemon")); 
-    // In this environment there is no point in consuming memory with
-    // cached resources
-    context.setMaxCachedFileSize(0);
-
-    // IpAccessHandler is always first handler
-//     addAccessHandler(context);
     return context;
   }
 

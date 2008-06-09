@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.18 2007-11-06 07:09:51 tlipkis Exp $
+ * $Id: UiHome.java,v 1.19 2008-06-09 05:42:02 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class UiHome extends LockssServlet {
 
   protected Iterator getDescriptors() {
     // Iterate over the servlet descriptors...
-    Iterator iterateOverDescr = new ObjectArrayIterator(servletDescrs);
+    Iterator iterateOverDescr = new ObjectArrayIterator(getServletDescrs());
 
     // ...select those that appear in UiHome...
     Predicate selectUiHome = new Predicate() {

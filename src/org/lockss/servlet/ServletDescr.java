@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.9 2006-11-10 07:26:09 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.10 2008-06-09 05:42:03 tlipkis Exp $
  */
 
 /*
@@ -37,11 +37,13 @@ public class ServletDescr {
   /** Marker for servlets whose class can't be found */
   static class UnavailableServletMarker {}
 
+  public String servletName;
+
   public Class cls;
 
   public String heading;	// display name
 
-  public String name;		// url path component to invoke servlet
+  public String path;		// url path component to invoke servlet
 
   public String expl;
 
@@ -55,7 +57,7 @@ public class ServletDescr {
   public static final int NOT_IN_NAV = 0x04; // no link in nav table
   public static final int LARGE_LOGO = 0x08; // use large LOCKSS logo
   public static final int DEBUG_ONLY = 0x10; // debug user only
-  public static final int NAME_IS_URL = 0x20; // debug user only
+  public static final int PATH_IS_URL = 0x20; // debug user only
   public static final int DISALLOW_IF_UI_WARNING = 0x40;
 
   public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
@@ -65,77 +67,93 @@ public class ServletDescr {
   public static final int IN_PROXYANDCONTENT = 0x4000; // Will probably go away now
 
 
-  public ServletDescr(Class cls,
+  public ServletDescr(String servletName,
+		      Class cls,
                       String heading,
-                      String name,
+                      String path,
                       int flags) {
+    this.servletName = servletName;
     this.cls = cls;
     this.heading = heading;
-    this.name = name;
+    this.path = path;
     this.flags = flags;
   }
 
-  public ServletDescr(Class cls,
+  public ServletDescr(String servletName,
+		      Class cls,
                       String heading,
-                      String name,
+                      String path,
                       int flags,
                       String expl) {
-    this(cls,
+    this(servletName,
+	 cls,
          heading,
-         name,
+         path,
          flags);
     setExplanation(expl);
   }
 
-  public ServletDescr(Class cls,
+  public ServletDescr(String servletName,
+		      Class cls,
                       String heading,
                       int flags) {
-    this(cls,
+    this(servletName,
+	 cls,
          heading,
          cls.getName().substring(cls.getName().lastIndexOf('.') + 1),
          flags);
   }
 
-  public ServletDescr(Class cls,
+  public ServletDescr(String servletName,
+		      Class cls,
                       String heading,
                       int flags,
                       String expl) {
-    this(cls,
+    this(servletName,
+	 cls,
          heading,
          flags);
     setExplanation(expl);
   }
 
 
-  public ServletDescr(String className,
+  public ServletDescr(String servletName,
+		      String className,
                       String heading,
                       int flags) {
-    this(classForName(className),
+    this(servletName,
+	 classForName(className),
          heading,
          flags);
   }
 
-  public ServletDescr(String className,
+  public ServletDescr(String servletName,
+		      String className,
                       String heading,
                       int flags,
                       String expl) {
-    this(className,
+    this(servletName,
+	 className,
          heading,
          flags);
     setExplanation(expl);
   }
 
-  public ServletDescr(Class cls,
+  public ServletDescr(String servletName,
+		      Class cls,
                       String heading) {
-    this(cls,
+    this(servletName,
+	 cls,
          heading,
          0);
   }
 
-  public ServletDescr(Class cls,
+  public ServletDescr(String servletName,
+		      Class cls,
                       String heading,
                       String expl) {
-    this(cls,
+    this(servletName,
+	 cls,
          heading);
     setExplanation(expl);
   }
@@ -149,8 +167,16 @@ public class ServletDescr {
     }
   }
 
-  public String getName() {
-    return name;
+  public String getServletName() {
+    return servletName;
+  }
+
+  public Class getServletClass() {
+    return cls;
+  }
+
+  public String getPath() {
+    return path;
   }
 
   String getExplanation() {
@@ -177,8 +203,8 @@ public class ServletDescr {
     return (flags & LARGE_LOGO) != 0;
   }
 
-  boolean isNameIsUrl() {
-    return (flags & NAME_IS_URL) != 0;
+  boolean isPathIsUrl() {
+    return (flags & PATH_IS_URL) != 0;
   }
 
   /** return true if servlet should be in the nav table of ofServlet */
