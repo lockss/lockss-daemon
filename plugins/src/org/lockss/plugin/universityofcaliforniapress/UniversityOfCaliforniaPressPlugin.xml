@@ -26,6 +26,7 @@
       <string>1,&quot;^%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%stoc/%s(\.[0-9]+)?/%s(/[^/]+)?$&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%sdoi/[^/]+/[.0-9]+/[-.9]+$&quot;, base_url</string>
+      <string>2,&quot;^%sdoi/(citedby)/[.0-9]+/[-.9]+$&quot;, base_url</string>
       <string>1,&quot;^%sdoi/[^/]+/[.0-9]+/%s\.[0-9]+\.%s\.&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
