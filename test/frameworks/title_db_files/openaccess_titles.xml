@@ -3029,10 +3029,10 @@
 
       <!-- Title: EMLS (Early Modern Literary Studies) Old-->
 
- <property name="emls12">
-        <property name="title" value="EMLS Volume 12 (Superseded)" />
+     <property name="EarlyModernLiteraryStudies12old">
+        <property name="title" value="Early Modern Literary Studies Volume 12 [superseded]" />
         <property name="estSize" value="2MB" />
-        <property name="journalTitle" value="EMLS" />
+        <property name="journalTitle" value="Early Modern Literary Studies" />
         <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -3045,10 +3045,10 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="emls11">
-        <property name="title" value="EMLS Volume 11 (Superseded)" />
+      <property name="EarlyModernLiteraryStudies11old">
+        <property name="title" value="Early Modern Literary Studies Volume 11 [superseded]" />
         <property name="estSize" value="2MB" />
-        <property name="journalTitle" value="EMLS" />
+        <property name="journalTitle" value="Early Modern Literary Studies" />
         <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -3061,10 +3061,10 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="emls10">
-        <property name="title" value="EMLS Volume 10 (Superseded)" />
+      <property name="EarlyModernLiteraryStudies10old">
+        <property name="title" value="Early Modern Literary Studies Volume 10 [superseded]" />
         <property name="estSize" value="2MB" />
-        <property name="journalTitle" value="EMLS" />
+        <property name="journalTitle" value="Early Modern Literary Studies" />
         <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -3077,10 +3077,10 @@
        <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="emls9">
-        <property name="title" value="EMLS Volume 9 (Superseded)" />
+      <property name="EarlyModernLiteraryStudies9old">
+        <property name="title" value="Early Modern Literary Studies Volume 9 [superseded]" />
         <property name="estSize" value="2MB" />
-        <property name="journalTitle" value="EMLS" />
+        <property name="journalTitle" value="Early Modern Literary Studies" />
         <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -3096,10 +3096,10 @@
 
       <!-- Title: EMLS (Early Modern Literary Studies) NEW -->
 
-      <property name="EMLSEARLYMODERNLITERARYSTUDIES12">
-	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 12" />
+      <property name="EarlyModernLiteraryStudies12">
+	<property name="title" value="Early Modern Literary Studies Volume 12" />
 	<property name="estSize" value="2MB" />
-	<property name="journalTitle" value="EMLS" />
+	<property name="journalTitle" value="Early Modern Literary Studies" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -3112,10 +3112,10 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="EMLSEARLYMODERNLITERARYSTUDIES11">
-	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 11" />
+      <property name="EarlyModernLiteraryStudies11">
+	<property name="title" value="Early Modern Literary Studies Volume 11" />
 	<property name="estSize" value="2MB" />
-	<property name="journalTitle" value="EMLS" />
+	<property name="journalTitle" value="Early Modern Literary Studies" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -3128,10 +3128,10 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="EMLSEARLYMODERNLITERARYSTUDIES10">
-	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 10" />
+      <property name="EarlyModernLiteraryStudies10">
+	<property name="title" value="Early Modern Literary Studies Volume 10" />
 	<property name="estSize" value="2MB" />
-	<property name="journalTitle" value="EMLS" />
+	<property name="journalTitle" value="Early Modern Literary Studies" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -3144,10 +3144,10 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="EMLSEARLYMODERNLITERARYSTUDIES9">
-	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 9" />
+      <property name="EarlyModernLiteraryStudies9">
+	<property name="title" value="Early Modern Literary Studies Volume 9" />
 	<property name="estSize" value="2MB" />
-	<property name="journalTitle" value="EMLS" />
+	<property name="journalTitle" value="Early Modern Literary Studies" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -5668,7 +5668,7 @@
       </property>
 
     <property name="dictynna1">
-        <property name="title" value="Dictynna 1" />
+        <property name="title" value="Dictynna Num&#x00e9;ro 1" />
         <property name="journalTitle" value="Dictynna" />
         <property name="plugin" value="org.lockss.plugin.dictynna.DictynnaPlugin" />
         <property name="param.1">
@@ -5683,7 +5683,7 @@
       </property>
 
      <property name="dictynna2">
-        <property name="title" value="Dictynna 2" />
+        <property name="title" value="Dictynna Num&#x00e9;ro 2" />
         <property name="journalTitle" value="Dictynna" />
         <property name="plugin" value="org.lockss.plugin.dictynna.DictynnaPlugin" />
         <property name="param.1">
@@ -5698,7 +5698,7 @@
       </property>
 
     <property name="dictynna3">
-        <property name="title" value="Dictynna 3" />
+        <property name="title" value="Dictynna Num&#x00e9;ro 3" />
         <property name="journalTitle" value="Dictynna" />
         <property name="plugin" value="org.lockss.plugin.dictynna.DictynnaPlugin" />
         <property name="param.1">
@@ -5713,7 +5713,7 @@
       </property>
 
      <property name="dictynna4">
-        <property name="title" value="Dictynna 4" />
+        <property name="title" value="Dictynna Num&#x00e9;ro 4" />
         <property name="journalTitle" value="Dictynna" />
         <property name="plugin" value="org.lockss.plugin.dictynna.DictynnaPlugin" />
         <property name="param.1">
