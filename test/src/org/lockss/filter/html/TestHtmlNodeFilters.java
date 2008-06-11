@@ -1,10 +1,10 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.1 2006-09-18 22:29:00 thib_gc Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.2 2008-06-11 05:35:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,15 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.html;
 
-import java.io.*;
-import java.util.*;
 import org.lockss.util.*;
-import org.lockss.filter.html.*;
 import org.lockss.test.*;
 import org.htmlparser.*;
 import org.htmlparser.tags.*;
 import org.htmlparser.util.*;
-import org.htmlparser.filters.*;
 
 public class TestHtmlNodeFilters extends LockssTestCase {
   static Logger log = Logger.getLogger("TestHtmlNodeFilters");
@@ -71,12 +67,21 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     }
   }
 
-  public void testTagWithAttribute() throws Exception {
+  public void testTagWithAttributeWithValue() throws Exception {
     NodeFilter filt = HtmlNodeFilters.tagWithAttribute("div", "attr", "aval");
     assertFalse(filt.accept(divWithAttr("foo", "bar")));
     assertFalse(filt.accept(divWithAttr("attr", "bar")));
     assertFalse(filt.accept(divWithAttr("btag", "aval")));
     assertTrue(filt.accept(divWithAttr("attr", "aval")));
+  }
+
+  public void testTagWithAttributeWithoutValue() throws Exception {
+    NodeFilter filt = HtmlNodeFilters.tagWithAttribute("div", "attr");
+    assertFalse(filt.accept(divWithAttr("foo", "bar")));
+    assertFalse(filt.accept(divWithAttr("btag", "aval")));
+    assertTrue(filt.accept(divWithAttr("attr", "aval")));
+    assertTrue(filt.accept(divWithAttr("attr", "bar")));
+    assertTrue(filt.accept(divWithAttr("attr", "qux")));
   }
 
   public void testDivWithAttribute() throws Exception {

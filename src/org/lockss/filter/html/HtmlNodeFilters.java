@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.2 2007-06-29 18:26:59 troberts Exp $
+ * $Id: HtmlNodeFilters.java,v 1.3 2008-06-11 05:35:02 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,9 +35,7 @@ package org.lockss.filter.html;
 import org.apache.oro.text.regex.*;
 import org.htmlparser.*;
 import org.htmlparser.tags.*;
-import org.htmlparser.nodes.*;
 import org.htmlparser.filters.*;
-import org.htmlparser.filters.StringFilter;
 import org.lockss.util.*;
 
 /** Factory methods for making various useful combinations of NodeFilters,
@@ -59,6 +57,18 @@ public class HtmlNodeFilters {
 					    String attr, String val) {
     return new AndFilter(new TagNameFilter(tag),
 			 new HasAttributeFilter(attr, val));
+  }
+
+  /** Create a NodeFilter that matches tags with a specified tagname and
+   * that define a given attribute.  Equivalant to
+   * <pre>new AndFilter(new TagNameFilter(tag),
+   new HasAttributeFilter(attr))</pre>
+   * @since 1.32.0
+   */
+  public static NodeFilter tagWithAttribute(String tag,
+                                            String attr) {
+    return new AndFilter(new TagNameFilter(tag),
+                         new HasAttributeFilter(attr));
   }
 
   /** Create a NodeFilter that matches div tags with a specified
@@ -176,7 +186,7 @@ public class HtmlNodeFilters {
   }
 
   /** Create a NodeFilter that matches html comments containing a match for
-   * a specified regex. 
+   * a specified regex.
    * @param regex The pattern to match.
    * @param ignoreCase If true, match is case insensitive
    */
@@ -185,7 +195,7 @@ public class HtmlNodeFilters {
   }
 
   /** Create a NodeFilter that matches the lowest level node that matches the
-   * specified filter.  This is useful for searching for text within a tag, 
+   * specified filter.  This is useful for searching for text within a tag,
    * because the default is to match parent nodes as well.
    */
   public static NodeFilter lowestLevelMatchFilter(NodeFilter filter) {
