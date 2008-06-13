@@ -55,6 +55,7 @@
     <property name="plugin.registry">
       <list>
 	<value>org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin</value>
+	<value>org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin</value>
 	<value>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin</value>
 	<value>in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin</value>
 	<value>org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin</value>
@@ -65,6 +66,7 @@
 	<value>uk.org.lockss.plugin.museumandsociety.MuseumAndSocietyPlugin</value>
 	<value>uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin</value>
 	<value>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</value>
+	<value>org.lockss.plugin.dictynna.DictynnaPlugin</value>
 	<value>org.lockss.plugin.emls.EmlsPlugin</value>
 	<value>org.lockss.plugin.emc.EarlyModernCulturePlugin</value>
 	<value>org.lockss.plugin.histcoop.HistoryCooperativePlugin</value>
@@ -110,6 +112,8 @@
 	<value>gov.loc.plugin.TESLEJPlugin</value>
 	<value>gov.loc.plugin.CJPentecostalCharismaticResearchPlugin</value>
 	<value>org.molvis.plugin.MolVisPlugin</value>
+	<value>org.lockss.plugin.igsberkeley.PublicAffairsReportPlugin</value>
+	<value>org.lockss.plugin.igsberkeley.PublicAffairsReport1999Plugin</value>
 	<value>org.lockss.plugin.ojs.OJSPlugin</value>
 	<value>edu.upenn.library.plugin.clcweb.CLCWebPlugin</value>
 	<value>edu.wisc.library.plugin.CortlandReviewPlugin</value>
