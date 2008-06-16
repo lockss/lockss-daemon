@@ -1,5 +1,5 @@
 /*
- * $Id: SageIngentaExploderHelper.java,v 1.3 2008-06-16 22:49:31 thib_gc Exp $
+ * $Id: SageIngentaExploderHelper.java,v 1.4 2008-06-16 23:07:11 thib_gc Exp $
  */
 
 /*
@@ -69,9 +69,7 @@ public class SageIngentaExploderHelper implements ExploderHelper {
   protected static final int INDEX_VOLUME = 2;
   protected static final int INDEX_YEAR = 1;
   private static final String BASE_URL_STEM = "http://sage.clockss.org/";
-  static final String[] tags = { "PUB=", "JOU=", "VOL=", "ISU=", "ART=" };
-  static final int endOfBase = 1;
-  static final int minimumPathLength = 5;
+
   static Logger logger = Logger.getLogger("SageIngentaExploderHelper");
 
   public SageIngentaExploderHelper() {
@@ -108,10 +106,10 @@ public class SageIngentaExploderHelper implements ExploderHelper {
      */
     String entryName = ae.getName();
     String[] entryElements = entryName.split("_");
-    String issn = entryElements[1].substring(0,7);
+    String issn = entryElements[1].substring(0,8);
     // String doi = entryName.substring(0,entryName.lastIndexOf(".")-1);
     // Set baseUrl
-    String baseUrl = BASE_URL_STEM + "/" + issn + "/";
+    String baseUrl = BASE_URL_STEM + issn + "/";
     // Set restOfUrl
     String restOfUrl = year + "/" + entryName;
     // Synthesize header fields
