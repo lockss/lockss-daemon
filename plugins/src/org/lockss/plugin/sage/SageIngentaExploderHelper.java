@@ -1,10 +1,10 @@
 /*
- * $Id: SageIngentaExploderHelper.java,v 1.2 2008-05-27 04:30:37 dshr Exp $
+ * $Id: SageIngentaExploderHelper.java,v 1.3 2008-06-16 22:49:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,10 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.sage;
 
-import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.crawler.Exploder;
 
 /**
@@ -56,8 +54,8 @@ import org.lockss.crawler.Exploder;
  * <code>10.1191_0967550705ab021oa.pdf</code> which are articles.
  *
  * This class maps this into base URLs that look like:
- *
- * <code>http://sage.clockss.org/${ISSN}/${VOL}/${ISSUE}/${FILE_NAME}
+ * <!-- FIXME -->
+ * <code>http://sage.clockss.org/${ISSN}/${VOL}/${ISSUE}/${FILE_NAME}</code>
  *
  * It synthesizes suitable header fields for the files based on their
  * extensions.
@@ -67,13 +65,11 @@ import org.lockss.crawler.Exploder;
  * they are left null.
  */
 public class SageIngentaExploderHelper implements ExploderHelper {
+  protected static final int ISSUE_AND_EXTENSION_INDEX = 3;
+  protected static final int INDEX_VOLUME = 2;
+  protected static final int INDEX_YEAR = 1;
   private static final String BASE_URL_STEM = "http://sage.clockss.org/";
   static final String[] tags = { "PUB=", "JOU=", "VOL=", "ISU=", "ART=" };
-  private static final int PUB_INDEX = 0;
-  private static final int JOU_INDEX = 1;
-  private static final int VOL_INDEX = 2;
-  private static final int ISU_INDEX = 3;
-  private static final int ART_INDEX = 4;
   static final int endOfBase = 1;
   static final int minimumPathLength = 5;
   static Logger logger = Logger.getLogger("SageIngentaExploderHelper");
@@ -88,7 +84,7 @@ public class SageIngentaExploderHelper implements ExploderHelper {
    * getTime() - time of the file
    * getExploder() - the Exploder in use
    */
-   
+
   public void process(ArchiveEntry ae) {
     /*
      * First parse the archiveUrl to get the year/volume/issue
@@ -96,18 +92,16 @@ public class SageIngentaExploderHelper implements ExploderHelper {
      */
     String[] urlElements = ae.getExploder().getArchiveUrl().split("_");
     if (urlElements.length < 4) {
-      logger.warning("Url: " + ae.getExploder().getArchiveUrl() + " short");
+      logger.warning("Short URL: " + ae.getExploder().getArchiveUrl());
       return;
     }
-    String year = urlElements[1];
-    String volume = urlElements[2];
-    String issue = urlElements[3].split("\\.")[0];
-    if (year == null || year.length() < 4 ||
-	volume == null || volume.length() < 1 ||
-	issue == null || volume.length() < 1) {
-      logger.warning("Url parse bad: " + (year == null ? "null" : year) + ":" +
-		     (volume == null ? "null" : volume) + ":" +
-		     (issue == null ? "null" : issue));
+    String year = urlElements[INDEX_YEAR];
+    String volume = urlElements[INDEX_VOLUME];
+    String issue = urlElements[ISSUE_AND_EXTENSION_INDEX].split("\\.")[0];
+    if (year == null || year.length() != 4 ||
+	volume == null || volume.length() == 0 ||
+	issue == null || issue.length() == 0) {
+      logger.warning("Bad URL parse: " + year + ":" + volume + ":" + issue);
     }
     /*
      * Next parse the file name to get the DOI and ISSN
