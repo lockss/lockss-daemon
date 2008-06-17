@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -28,7 +28,7 @@
       <string>2,&quot;^%sdoi/[^/]+/[.0-9]+/[-.9]+$&quot;, base_url</string>
       <string>2,&quot;^%sdoi/(citedby)/[.0-9]+/[-.9]+$&quot;, base_url</string>
       <string>1,&quot;^%sdoi/[^/]+/[.0-9]+/[0-9]+$&quot;, base_url</string>
-      <string>1,&quot;^%sshowFullPopup\?doi=[.0-9]+/[0-9]+$&quot;, base_url</string>
+      <string>1,&quot;^%saction/showFullPopup\?doi=[.0-9]+/[0-9]+$&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
