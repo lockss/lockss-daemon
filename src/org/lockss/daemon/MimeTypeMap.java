@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.4 2008-06-18 22:21:28 dshr Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.rewriter.*;
 
 /** Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
  * LinkExtractorFactory), and static global defaults
@@ -44,8 +45,12 @@ public class MimeTypeMap {
   private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
   static {
     HTML.setLinkExtractorFactory(new GoslingHtmlLinkExtractor.Factory());
+    // XXX
+    // HTML.setLinkRewriterFactory(new JavascriptHtmlLinkRewriter.Factory());
     DEFAULT.putMimeTypeInfo("text/html", HTML);
     CSS.setLinkExtractorFactory(new CssLinkExtractor.Factory());
+    // XXX
+    // CSS.setLinkExtractorFactory(new CssLinkRewriter.Factory());
     DEFAULT.putMimeTypeInfo("text/css", CSS);
   }
 

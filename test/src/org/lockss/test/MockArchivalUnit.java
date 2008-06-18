@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.78 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.79 2008-06-18 22:21:31 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
 /**
@@ -69,6 +70,7 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   private FilterRule filterRule = null;
   private FilterFactory filterFactory = null;
+  private LinkRewriterFactory rewriterFactory = null;
   private Map extractors = new HashMap();
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private List urlStems = Collections.EMPTY_LIST;
@@ -445,6 +447,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setFilterFactory(FilterFactory filterFactory) {
     this.filterFactory = filterFactory;
+  }
+
+  public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
+    return rewriterFactory;
+  }
+
+  public void setLinkRewriterFactory(LinkRewriterFactory filterFactory) {
+    this.rewriterFactory = filterFactory;
   }
 
   public LinkExtractor getLinkExtractor(String contentType) {

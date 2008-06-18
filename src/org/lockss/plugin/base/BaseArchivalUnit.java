@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.125 2008-01-30 00:49:47 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.126 2008-06-18 22:21:29 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.rewriter.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
 
@@ -725,6 +726,20 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public FilterFactory getFilterFactory(String contentType) {
     return plugin.getFilterFactory(contentType);
   }
+
+  /**
+   * Returns a link rewriter factory from the cache if found, otherwise calls
+   * 'constructLinkFactory()' and caches the result if non-null.
+   * Content-type is converted to lowercase.  If contenttype is null,
+   * returns null.
+   * @param contentType the content type
+   * @return the LinkFactory
+   */
+  public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
+    return plugin.getLinkRewriterFactory(contentType);
+  }
+
+  
 
   public List getNewContentCrawlUrls() {
     return ListUtil.list(startUrlString);

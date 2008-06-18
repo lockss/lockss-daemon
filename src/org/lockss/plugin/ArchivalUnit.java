@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.42 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.43 2008-06-18 22:21:29 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.plugin.base.*;
+import org.lockss.rewriter.*;
 
 
 /**
@@ -229,6 +230,15 @@ public interface ArchivalUnit {
    * there is none
    */
   public FilterFactory getFilterFactory(String contentType);
+
+  /**
+   * Return the {@link LinkRewriterFactory} for the given contentType or
+   *  null if there is none
+   * @param contentType content type of the content we are going to filter
+   * @return {@link LinkRewriterFactory} for the given contentType or null if
+   * there is none
+   */
+  public LinkRewriterFactory getLinkRewriterFactory(String contentType);
 
   /**
    * Create a {@link CachedUrlSet}representing the content

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.19 2007-10-31 04:02:56 dshr Exp $
+ * $Id: CachedUrl.java,v 1.20 2008-06-18 22:21:29 dshr Exp $
  */
 
 /*
@@ -149,7 +149,7 @@ public interface CachedUrl extends CachedUrlSetNode {
    * perhaps by inserting Javascript to do it.
    * @return {@link Reader}
    */
-  public Reader openWithUrlRewriting();
+  public InputStream openWithUrlRewriting();
 
   /**
    * Get the properties attached to the url in the cache, if any.

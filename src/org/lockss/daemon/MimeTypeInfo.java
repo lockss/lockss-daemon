@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
+ * $Id: MimeTypeInfo.java,v 1.4 2008-06-18 22:21:28 dshr Exp $
  */
 
 /*
@@ -30,6 +30,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.rewriter.*;
 import org.lockss.plugin.*;
 
 /** Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
@@ -45,12 +46,15 @@ public interface MimeTypeInfo {
   public LinkExtractorFactory getLinkExtractorFactory();
   /** Returns the RateLimiter, or null */
   public RateLimiter getFetchRateLimiter();
+  /** Returns the UrlRewriterFactory, or null */
+  public LinkRewriterFactory getLinkRewriterFactory();
 
   /** Sub interface adds setters */
   public interface Mutable extends MimeTypeInfo {
     public Impl setFilterFactory(FilterFactory fact);
     public Impl setLinkExtractorFactory(LinkExtractorFactory fact);
     public Impl setFetchRateLimiter(RateLimiter limiter);
+    public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
   }
 
   class Impl implements Mutable {
@@ -59,6 +63,7 @@ public interface MimeTypeInfo {
     private FilterFactory filterFactory;
     private LinkExtractorFactory extractorFactory;
     private RateLimiter fetchRateLimiter;
+    private LinkRewriterFactory linkFactory;
 
     public Impl() {
     }
@@ -68,6 +73,7 @@ public interface MimeTypeInfo {
 	filterFactory = toClone.getFilterFactory();
 	extractorFactory = toClone.getLinkExtractorFactory();
 	fetchRateLimiter = toClone.getFetchRateLimiter();
+	linkFactory = toClone.getLinkRewriterFactory();
       }
     }
 
@@ -97,5 +103,15 @@ public interface MimeTypeInfo {
       fetchRateLimiter = limiter;
       return this;
     }
+
+    public LinkRewriterFactory getLinkRewriterFactory() {
+      return linkFactory;
+    }
+
+    public Impl setLinkRewriterFactory(LinkRewriterFactory fact) {
+      linkFactory = fact;
+      return this;
+    }
+
   }
 }

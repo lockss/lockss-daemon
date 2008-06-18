@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.24 2007-10-31 04:02:57 dshr Exp $
+ * $Id: PTestPlugin.java,v 1.25 2008-06-18 22:21:31 dshr Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public Reader openWithUrlRewriting() {
+    public InputStream openWithUrlRewriting() {
       return null;
     }
 

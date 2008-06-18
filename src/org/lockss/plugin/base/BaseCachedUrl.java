@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.30 2007-10-31 04:02:57 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.31 2008-06-18 22:21:30 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
+import org.lockss.rewriter.*;
 
 /** Base class for CachedUrls.  Expects the LockssRepository for storage.
  * Plugins may extend this to get some common CachedUrl functionality.
@@ -192,9 +193,22 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
-  public Reader openWithUrlRewriting() {
-    // Default is no URL re-writing
-    return null;
+  public InputStream openWithUrlRewriting() {
+    InputStream originalStream = getUnfilteredInputStream();
+    InputStream rewrittenStream = null;
+    String ctype = getContentType();
+    LinkRewriterFactory lrf = au.getLinkRewriterFactory(ctype);
+    if (lrf != null && ctype != null) {
+      try {
+	// XXX how do I find the encoding?
+	String encoding = null; // XXX
+	rewrittenStream =
+	  lrf.createLinkRewriter(ctype, au, originalStream, encoding);
+      } catch (PluginException e) {
+	logger.error("Can't create link rewriter " + e.toString());
+      }
+    }
+    return rewrittenStream;
   }
 
  public CIProperties getProperties() {

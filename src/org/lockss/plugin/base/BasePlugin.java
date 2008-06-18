@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.51 2007-11-07 08:14:51 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.52 2008-06-18 22:21:30 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.rewriter.*;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.extractor.*;
 
@@ -462,6 +463,21 @@ public abstract class BasePlugin
     if (log.isDebug3())
       log.debug3(contentType + " filter: " + mti.getFilterFactory());
     return mti.getFilterFactory();
+  }
+
+  /**
+   * Returns the link rewriter factory for the mime type, if any
+   * @param contentType the content type
+   * @return the LinkRewriterFactory
+   */
+  public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    if (mti == null) {
+      return null;
+    }
+    if (log.isDebug3())
+      log.debug3(contentType + " filter: " + mti.getLinkRewriterFactory());
+    return mti.getLinkRewriterFactory();
   }
 
   /**
