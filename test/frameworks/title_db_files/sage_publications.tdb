@@ -4,7 +4,7 @@
 #	@fixedValues	P=SAGE Publications				
 #	@fixedValues	j=Accounting History				
 old	released	Accounting History Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Accounting History Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Accounting History Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Accounting History Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Accounting History Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ach.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Acta Sociologica				
@@ -49,7 +49,7 @@ old	released	Affilia Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	b
 	released	American Educational Research Journal Volume 44	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aer.sagepub.com/	volume_name=44	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=American Journal of Alzheimer's Disease and Other Dementias				
 	released	American Journal of Alzheimer's Disease and Other Dementias Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aja.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	American Journal of Alzheimer's Disease and Other Dementias Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aja.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	American Journal of Alzheimer's Disease and Other Dementias Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aja.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	American Journal of Alzheimer's Disease and Other Dementias Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aja.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=American Journal of Evaluation				
 old	manifest	American Journal of Evaluation Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://aje.sagepub.com/	volume_name=26	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -64,7 +64,7 @@ old	manifest	American Journal of Evaluation Volume 26	org.lockss.plugin.highwire
 #	@fixedValues	j=American Journal of Medical Quality				
 old	released	American Journal of Medical Quality Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ajm.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	American Journal of Medical Quality Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ajm.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	released	American Journal of Medical Quality Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ajm.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	rieleased	American Journal of Medical Quality Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ajm.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=American Journal of Men's Health				
 	released	American Journal of Men's Health Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jmh.sagepub.com/	volume_name=1	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=The American Journal of Sports Medicine				
@@ -114,7 +114,7 @@ old	released	The Annals of the American Academy of Political and Social Science 
 	released	Applied Psychological Measurement Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://apm.sagepub.com/	volume_name=30	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Applied Psychological Measurement Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://apm.sagepub.com/	volume_name=31	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Armed Forces & Society				
-	manifest	Armed Forces & Society Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afs.sagepub.com/	volume_name=29	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Armed Forces & Society Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afs.sagepub.com/	volume_name=29	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	exists	Armed Forces & Society Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afs.sagepub.com/	volume_name=30	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Armed Forces & Society Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afs.sagepub.com/	volume_name=31	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Armed Forces & Society Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://afs.sagepub.com/	volume_name=32	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -152,7 +152,7 @@ old	released	Behavior Modification Volume 30	org.lockss.plugin.highwire.HighWire
 #	@fixedValues	j=Biological Research For Nursing				
 	released	Biological Research For Nursing Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brn.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 old	released	Biological Research For Nursing Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brn.sagepub.com/	volume_name=7	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Biological Research For Nursing Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brn.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Biological Research For Nursing Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brn.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Biological Research For Nursing Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://brn.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Body & Society				
 	released	Body & Society Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bod.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -188,7 +188,7 @@ old	released	Business & Society Volume 45	org.lockss.plugin.highwire.HighWireStr
 	released	Business Information Review Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bir.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Business Information Review Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bir.sagepub.com/	volume_name=24	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Canadian Journal of School Psychology				
-	manifest	Canadian Journal of School Psychology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjs.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Canadian Journal of School Psychology Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjs.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Canadian Journal of School Psychology Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjs.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Canadian Journal of School Psychology Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjs.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Canadian Journal of School Psychology Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cjs.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -215,7 +215,7 @@ old	released	China Information Volume 19	org.lockss.plugin.highwire.HighWireStrV
 	manifest	Chronic Illness Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chi.sagepub.com/	volume_name=2	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Chronic Illness Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://chi.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Chronic Respiratory Disease				
-	manifest	Chronic Respiratory Disease Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crd.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Chronic Respiratory Disease Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crd.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Chronic Respiratory Disease Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crd.sagepub.com/	volume_name=4	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Clin-Alert				
 	released	Clin-Alert Volume 42	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cla.sagepub.com/	volume_name=42	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -243,13 +243,13 @@ old	released	Clinical Nursing Research Volume 15	org.lockss.plugin.highwire.High
 	released	Clinical Pediatrics Volume 45	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cpj.sagepub.com/	volume_name=45	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Clinical Pediatrics Volume 46	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cpj.sagepub.com/	volume_name=46	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Clinical Rehabilitation				
-	manifest	Clinical Rehabilitation Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cre.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Clinical Rehabilitation Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cre.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Clinical Rehabilitation Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cre.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Clinical Trials				
-	manifest	Clinical Trials Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ctj.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Clinical Trials Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ctj.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Clinical Trials Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ctj.sagepub.com/	volume_name=4	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Clothing and Textiles Research Journal				
-	manifest	Clothing and Textiles Research Journal Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ctr.sagepub.com/	volume_name=24	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Clothing and Textiles Research Journal Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ctr.sagepub.com/	volume_name=24	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Clothing and Textiles Research Journal Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ctr.sagepub.com/	volume_name=25	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Communication Research				
 	released	Communication Research Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crx.sagepub.com/	volume_name=32	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -257,7 +257,7 @@ old	released	Clinical Nursing Research Volume 15	org.lockss.plugin.highwire.High
 	released	Communication Research Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crx.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Communication Research Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crx.sagepub.com/	volume_name=35	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Community College Review				
-	manifest	Community College Review Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crw.sagepub.com/	volume_name=33	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Community College Review Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crw.sagepub.com/	volume_name=33	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Community College Review Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crw.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Community College Review Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://crw.sagepub.com/	volume_name=35	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Comparative Political Studies				
@@ -338,7 +338,7 @@ old	released	Cross-Cultural Research Volume 40	org.lockss.plugin.highwire.HighWi
 	released	Cultural Dynamics Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdy.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Cultural Dynamics Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cdy.sagepub.com/	volume_name=19	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Cultural Geographies				
-	manifest	Cultural Geographies Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cgj.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Cultural Geographies Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cgj.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Cultural Geographies Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cgj.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Cultural Sociology				
 	released	Cultural Sociology Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://cus.sagepub.com/	volume_name=1	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -394,7 +394,7 @@ old	released	The Diabetes Educator Volume 32	org.lockss.plugin.highwire.HighWire
 	manifest	Economic and Industrial Democracy Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eid.sagepub.com/	volume_name=26	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	Economic and Industrial Democracy Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eid.sagepub.com/	volume_name=27	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	Economic and Industrial Democracy Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://eid.sagepub.com/	volume_name=28	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-#	@fixedValues	j=Economic Development Quarterly				
+#	@fixedValues	j=Economics 
 	ready	Economic Development Quarterly Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://edq.sagepub.com/	volume_name=19	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Economic Development Quarterly Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://edq.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Economic Development Quarterly Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://edq.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -462,8 +462,8 @@ old	released	European Journal of Archaeology Volume 8	org.lockss.plugin.highwire
 	ready	European Journal of Criminology Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://euc.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=European Journal of Cultural Studies				
 	ready	European Journal of Cultural Studies Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecs.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	European Journal of Cultural Studies Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecs.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	European Journal of Cultural Studies Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecs.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	European Journal of Cultural Studies Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecs.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	European Journal of Cultural Studies Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ecs.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=European Journal of Industrial Relations				
 	ready	European Journal of Industrial Relations Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejd.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 old	released	European Journal of Industrial Relations Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ejd.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -566,8 +566,8 @@ old	released	Games and Culture Volume 1	org.lockss.plugin.highwire.HighWireStrVo
 	manifest	Gender, Technology and Development Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://gtd.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Gender, Technology and Development Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://gtd.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=German History				
-	manifest	German History Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ghj.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	German History Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ghj.sagepub.com/	volume_name=24	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	German History Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ghj.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	German History Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ghj.sagepub.com/	volume_name=24	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	German History Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ghj.sagepub.com/	volume_name=25	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Gifted Child Quarterly				
 	ready	Gifted Child Quarterly Volume 50	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://gcq.sagepub.com/	volume_name=50	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -605,7 +605,7 @@ old	released	The Harvard International Journal of Press/Politics Volume 11	org.l
 old	ready	Health Education & Behavior Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heb.sagepub.com/	volume_name=33	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Health Education & Behavior Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://heb.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Health Education Journal				
-	manifest	Health Education Journal Volume 65	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hej.sagepub.com/	volume_name=65	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Health Education Journal Volume 65	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hej.sagepub.com/	volume_name=65	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Health Education Journal Volume 66	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hej.sagepub.com/	volume_name=66	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Health Informatics Journal				
 	ready	Health Informatics Journal Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhi.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -636,7 +636,7 @@ old	released	History of Psychiatry Volume 17	org.lockss.plugin.highwire.HighWire
 old	released	History of the Human Sciences Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hhs.sagepub.com/	volume_name=19	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	History of the Human Sciences Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hhs.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=The Holocene				
-	manifest	The Holocene Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hol.sagepub.com/	volume_name=16	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	The Holocene Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hol.sagepub.com/	volume_name=16	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	The Holocene Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hol.sagepub.com/	volume_name=17	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Home Health Care Management & Practice				
 	ready	Home Health Care Management & Practice Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hhc.sagepub.com/	volume_name=17	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -649,7 +649,7 @@ old	released	Homicide Studies Volume 10	org.lockss.plugin.highwire.HighWireStrVo
 	ready	Homicide Studies Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hsx.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Human & Experimental Toxicology				
 	ready	Human & Experimental Toxicology Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://het.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Human & Experimental Toxicology Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://het.sagepub.com/	volume_name=25	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Human & Experimental Toxicology Volume 25	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://het.sagepub.com/	volume_name=25	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Human & Experimental Toxicology Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://het.sagepub.com/	volume_name=26	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Human Relations				
 	ready	Human Relations Volume 58	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://hum.sagepub.com/	volume_name=58	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -696,7 +696,7 @@ old	released	International Criminal Justice Review Volume 15	org.lockss.plugin.h
 	ready	International Criminal Justice Review Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icj.sagepub.com/	volume_name=16	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	International Criminal Justice Review Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://icj.sagepub.com/	volume_name=17	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=International Journal of Behavioral Development				
-	manifest	International Journal of Behavioral Development Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jbd.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	International Journal of Behavioral Development Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jbd.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	International Journal of Behavioral Development Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jbd.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	International Journal of Behavioral Development Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jbd.sagepub.com/	volume_name=27	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	International Journal of Behavioral Development Volume 29	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jbd.sagepub.com/	volume_name=29	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -746,11 +746,11 @@ old	released	The International Journal of Robotics Research Volume 25	org.lockss
 	released	International Journal of Social Psychiatry Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://isp.sagepub.com/	volume_name=52	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	International Journal of Social Psychiatry Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://isp.sagepub.com/	volume_name=53	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=International Journal of Surgical Pathology				
-	manifest	International Journal of Surgical Pathology Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijs.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	International Journal of Surgical Pathology Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijs.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	International Journal of Surgical Pathology Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijs.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	International Journal of Surgical Pathology Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijs.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	International Journal of Surgical Pathology Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ijs.sagepub.com/	volume_name=15	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=International Political Science Abstracts				
-	manifest	International Political Science Abstracts Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iab.sagepub.com/	volume_name=57	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	International Political Science Abstracts Volume 57	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://iab.sagepub.com/	volume_name=57	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=International Political Science Review				
 	ready	International Political Science Review Volume 26	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ips.sagepub.com/	volume_name=26	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	International Political Science Review Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ips.sagepub.com/	volume_name=27	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -985,7 +985,7 @@ old	released	The Journal of Early Adolescence Volume 26	org.lockss.plugin.highwi
 	ready	Journal of Elastomers and Plastics Volume 38	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jep.sagepub.com/	volume_name=38	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Elastomers and Plastics Volume 39	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jep.sagepub.com/	volume_name=39	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Emerging Market Finance				
-	manifest	Journal of Emerging Market Finance Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://emf.sagepub.com/	volume_name=4	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Journal of Emerging Market Finance Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://emf.sagepub.com/	volume_name=4	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Emerging Market Finance Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://emf.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Emerging Market Finance Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://emf.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Endotoxin Research				
@@ -1069,7 +1069,7 @@ old	released	Journal of Humanistic Psychology Volume 46	org.lockss.plugin.highwi
 	ready	Journal of Humanistic Psychology Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jhp.sagepub.com/	volume_name=47	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Industrial Relations				
 	ready	Journal of Industrial Relations Volume 47	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jir.sagepub.com/	volume_name=47	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Journal of Industrial Relations Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jir.sagepub.com/	volume_name=48	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Journal of Industrial Relations Volume 48	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jir.sagepub.com/	volume_name=48	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Industrial Relations Volume 49	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jir.sagepub.com/	volume_name=49	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Industrial Textiles				
 	ready	Journal of Industrial Textiles Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jit.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1141,7 +1141,7 @@ old	released	Journal of Humanistic Psychology Volume 46	org.lockss.plugin.highwi
 	released	Journal of Moral Philosophy Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mpj.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Journal of Moral Philosophy Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mpj.sagepub.com/	volume_name=4	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Oncology Pharmacy Practice				
-	manifest	Journal of Oncology Pharmacy Practice Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://opp.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Journal of Oncology Pharmacy Practice Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://opp.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Oncology Pharmacy Practice Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://opp.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Oncology Pharmacy Practice Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://opp.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Peace Research				
@@ -1287,7 +1287,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	Journal of Urban History Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://juh.sagepub.com/	volume_name=33	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Urban History Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://juh.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Journal of Vacation Marketing				
-	manifest	Journal of Vacation Marketing Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jvm.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Journal of Vacation Marketing Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jvm.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Vacation Marketing Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jvm.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Vacation Marketing Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jvm.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Journal of Vacation Marketing Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://jvm.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1333,7 +1333,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	manifest	Lighting Research and Technology Volume 38	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lrt.sagepub.com/	volume_name=38	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Lighting Research and Technology Volume 39	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lrt.sagepub.com/	volume_name=39	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Lupus				
-	manifest	Lupus Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lup.sagepub.com/	volume_name=15	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Lupus Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lup.sagepub.com/	volume_name=15	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Lupus Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://lup.sagepub.com/	volume_name=16	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Management & Organizational History				
 	ready	Management & Organizational History Volume 1	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://moh.sagepub.com/	volume_name=1	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1386,7 +1386,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	Modern China Volume 32	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mcx.sagepub.com/	volume_name=32	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Modern China Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://mcx.sagepub.com/	volume_name=33	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Multiple Sclerosis				
-	manifest	Multiple Sclerosis Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://msj.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Multiple Sclerosis Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://msj.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Multiple Sclerosis Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://msj.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=NASSP Bulletin				
 	manifest	NASSP Bulletin Volume 89	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://bul.sagepub.com/	volume_name=89	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1398,12 +1398,12 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	National Institute Economic Review Volume 194	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=194	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	National Institute Economic Review Volume 195	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=195	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	National Institute Economic Review Volume 196	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=196	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	National Institute Economic Review Volume 197	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=197	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	National Institute Economic Review Volume 197	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=197	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	National Institute Economic Review Volume 198	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=198	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	National Institute Economic Review Volume 199	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=199	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	National Institute Economic Review Volume 200	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=200	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	National Institute Economic Review Volume 201	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=201	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	National Institute Economic Review Volume 202	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=202	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	National Institute Economic Review Volume 199	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=199	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	National Institute Economic Review Volume 200	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=200	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	National Institute Economic Review Volume 201	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=201	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	National Institute Economic Review Volume 202	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ner.sagepub.com/	volume_name=202	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Neurorehabilitation and Neural Repair				
 	ready	Neurorehabilitation and Neural Repair Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nnr.sagepub.com/	volume_name=19	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Neurorehabilitation and Neural Repair Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nnr.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1421,7 +1421,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	manifest	Nonprofit and Voluntary Sector Quarterly Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nvs.sagepub.com/	volume_name=35	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Nonprofit and Voluntary Sector Quarterly Volume 36	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nvs.sagepub.com/	volume_name=36	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Nursing Ethics				
-	manifest	Nursing Ethics Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nej.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Nursing Ethics Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nej.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Nursing Ethics Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nej.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Nursing Science Quarterly				
 	ready	Nursing Science Quarterly Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://nsq.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1445,16 +1445,16 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	Organizational Research Methods Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://orm.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Organizational Research Methods Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://orm.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Palliative Medicine				
-	manifest	Palliative Medicine Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pmj.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Palliative Medicine Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pmj.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	Palliative Medicine Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pmj.sagepub.com/	volume_name=19	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Palliative Medicine Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pmj.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Palliative Medicine Volume 20	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pmj.sagepub.com/	volume_name=20	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Palliative Medicine Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pmj.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Party Politics				
 	ready	Party Politics Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppq.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Party Politics Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppq.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Party Politics Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppq.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Perfusion				
-	manifest	Perfusion Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://prf.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Perfusion Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://prf.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Perfusion Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://prf.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Personality and Social Psychology Bulletin				
 	ready	Personality and Social Psychology Bulletin Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://psp.sagepub.com/	volume_name=31	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1463,8 +1463,8 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 #	@fixedValues	j=Personality and Social Psychology Review				
 	ready	Personality and Social Psychology Review Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://psr.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Perspectives in Vascular Surgery and Endovascular Therapy				
-	manifest	Perspectives in Vascular Surgery and Endovascular Therapy Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pvs.sagepub.com/	volume_name=17	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Perspectives in Vascular Surgery and Endovascular Therapy Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pvs.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Perspectives in Vascular Surgery and Endovascular Therapy Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pvs.sagepub.com/	volume_name=17	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Perspectives in Vascular Surgery and Endovascular Therapy Volume 18	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pvs.sagepub.com/	volume_name=18	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Perspectives in Vascular Surgery and Endovascular Therapy Volume 19	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pvs.sagepub.com/	volume_name=19	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Philosophy & Social Criticism				
 	manifest	Philosophy & Social Criticism Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://psc.sagepub.com/	volume_name=31	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1496,7 +1496,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 #	@fixedValues	j=Politics & Society				
 	ready	Politics & Society Volume 33	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pas.sagepub.com/	volume_name=33	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Politics & Society Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pas.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Politics & Society Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pas.sagepub.com/	volume_name=35	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Politics & Society Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pas.sagepub.com/	volume_name=35	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Politics, Philosophy & Economics				
 	ready	Politics, Philosophy & Economics Volume 4	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppe.sagepub.com/	volume_name=4	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	Politics, Philosophy & Economics Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppe.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1510,14 +1510,14 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	Probation Journal Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://prb.sagepub.com/	volume_name=53	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Probation Journal Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://prb.sagepub.com/	volume_name=54	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Progress in Development Studies				
-	manifest	Progress in Development Studies Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pdj.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Progress in Development Studies Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pdj.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Progress in Development Studies Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pdj.sagepub.com/	volume_name=7	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Progress in Human Geography				
-	manifest	Progress in Human Geography Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://phg.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Progress in Human Geography Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://phg.sagepub.com/	volume_name=30	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Progress in Human Geography Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://phg.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Progress in Human Geography Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://phg.sagepub.com/	volume_name=30	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Progress in Human Geography Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://phg.sagepub.com/	volume_name=31	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Progress in Physical Geography				
-	manifest	Progress in Physical Geography Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppg.sagepub.com/	volume_name=30	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Progress in Physical Geography Volume 30	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppg.sagepub.com/	volume_name=30	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Progress in Physical Geography Volume 31	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppg.sagepub.com/	volume_name=31	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Psychology & Developing Societies				
 	ready	Psychology & Developing Societies Volume 17	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pds.sagepub.com/	volume_name=17	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1532,7 +1532,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	Public Finance Review Volume 34	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pfr.sagepub.com/	volume_name=34	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Public Finance Review Volume 35	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pfr.sagepub.com/	volume_name=35	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Public Policy and Administration				
-	manifest	Public Policy and Administration Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppa.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Public Policy and Administration Volume 21	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppa.sagepub.com/	volume_name=21	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Public Policy and Administration Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ppa.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Public Understanding of Science				
 	ready	Public Understanding of Science Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://pus.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1579,7 +1579,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	RELC Journal Volume 37	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rel.sagepub.com/	volume_name=37	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	RELC Journal Volume 38	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rel.sagepub.com/	volume_name=38	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Reproductive Sciences				
-	manifest	Reproductive Sciences Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsx.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Reproductive Sciences Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsx.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	Reproductive Sciences Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://rsx.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Research on Aging				
 	ready	Research on Aging Volume 27	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://roa.sagepub.com/	volume_name=27	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1664,7 +1664,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 #	@fixedValues	j=Social Compass				
 	ready	Social Compass Volume 52	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://scp.sagepub.com/	volume_name=52	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Social Compass Volume 53	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://scp.sagepub.com/	volume_name=53	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Social Compass Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://scp.sagepub.com/	volume_name=54	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Social Compass Volume 54	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://scp.sagepub.com/	volume_name=54	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Social Science Computer Review				
 	manifest	Social Science Computer Review Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ssc.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Social Science Computer Review Volume 24	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://ssc.sagepub.com/	volume_name=24	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1702,7 +1702,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	ready	Space and Culture Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sac.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Space and Culture Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sac.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Statistical Methods in Medical Research				
-	manifest	Statistical Methods in Medical Research Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://smm.sagepub.com/	volume_name=15	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Statistical Methods in Medical Research Volume 15	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://smm.sagepub.com/	volume_name=15	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Statistical Methods in Medical Research Volume 16	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://smm.sagepub.com/	volume_name=16	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Strategic Organization				
 	released	Strategic Organization Volume 3	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://soq.sagepub.com/	volume_name=3	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1721,7 +1721,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	released	Studies in History Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sih.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Studies in History Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sih.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Surgical Innovation				
-	manifest	Surgical Innovation Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sri.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Surgical Innovation Volume 12	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sri.sagepub.com/	volume_name=12	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Surgical Innovation Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sri.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	ready	Surgical Innovation Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://sri.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Television & New Media				
@@ -1781,7 +1781,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	released	Tourist Studies Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tou.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Tourist Studies Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tou.sagepub.com/	volume_name=7	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Toxicology and Industrial Health				
-	manifest	Toxicology and Industrial Health Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tih.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Toxicology and Industrial Health Volume 22	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tih.sagepub.com/	volume_name=22	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Toxicology and Industrial Health Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tih.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Transactions of the Institute of Measurement and Control				
 	manifest	Transactions of the Institute of Measurement and Control Volume 28	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tim.sagepub.com/	volume_name=28	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1791,8 +1791,8 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	manifest	Transcultural Psychiatry Volume 43	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tps.sagepub.com/	volume_name=43	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Transcultural Psychiatry Volume 44	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tps.sagepub.com/	volume_name=44	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Trauma				
-	manifest	Trauma Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tra.sagepub.com/	volume_name=2	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Trauma Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tra.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Trauma Volume 2	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tra.sagepub.com/	volume_name=2	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Trauma Volume 8	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tra.sagepub.com/	volume_name=8	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Trauma Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tra.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Trauma, Violence, & Abuse				
 	released	Trauma, Violence, & Abuse Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tva.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1803,7 +1803,7 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	released	Traumatology Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tmt.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Trends in Amplification				
 	released	Trends in Amplification Volume 9	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tia.sagepub.com/	volume_name=9	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	Trends in Amplification Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tia.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	Trends in Amplification Volume 10	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tia.sagepub.com/	volume_name=10	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	manifest	Trends in Amplification Volume 11	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://tia.sagepub.com/	volume_name=11	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Urban Affairs Review				
 	released	Urban Affairs Review Volume 40	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://uar.sagepub.com/	volume_name=40	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -1830,8 +1830,8 @@ old	released	Journal of Psychoeducational Assessment Volume 23	org.lockss.plugin
 	released	Visual Communication Volume 5	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://vcj.sagepub.com/	volume_name=5	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	Visual Communication Volume 6	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://vcj.sagepub.com/	volume_name=6	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=War in History				
-	manifest	War in History Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wih.sagepub.com/	volume_name=7	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-	manifest	War in History Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wih.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	War in History Volume 7	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wih.sagepub.com/	volume_name=7	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	ready	War in History Volume 13	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wih.sagepub.com/	volume_name=13	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 	released	War in History Volume 14	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wih.sagepub.com/	volume_name=14	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 #	@fixedValues	j=Waste Management & Research				
 	manifest	Waste Management & Research Volume 23	org.lockss.plugin.highwire.HighWireStrVolPlugin	base_url=http://wmr.sagepub.com/	volume_name=23	hint_application/pdf_filter_factory=org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
