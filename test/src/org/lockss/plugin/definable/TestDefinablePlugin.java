@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.19 2008-03-26 04:52:12 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.20 2008-06-19 20:20:46 dshr Exp $
  */
 
 /*
@@ -79,12 +79,15 @@ public class TestDefinablePlugin extends LockssTestCase {
     mti = definablePlugin.getMimeTypeInfo("text/html");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof GoslingHtmlLinkExtractor.Factory);
+    assertNull(mti.getLinkRewriterFactory()); // XXX 
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof CssLinkExtractor.Factory);
+    assertNull(mti.getLinkRewriterFactory()); // XXX 
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertNull(mti.getFilterFactory());
     assertNull(mti.getFetchRateLimiter());
+    assertNull(mti.getLinkRewriterFactory()); // XXX 
 
     defMap.putString(  ("application/pdf"
 			+ DefinableArchivalUnit.SUFFIX_FILTER_FACTORY),
@@ -92,6 +95,9 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(  ("text/html"
 			+ DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY),
 		     "org.lockss.test.MockLinkExtractorFactory");
+    defMap.putString(  ("text/html"
+			+ DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY),
+		     "org.lockss.test.MockLinkRewriterFactory");
     defMap.putString(  ("application/pdf"
 			+ DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER),
 		     "1/30s");
@@ -103,6 +109,11 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof LinkExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getLinkExtractorFactory())
 	       instanceof MockLinkExtractorFactory);
+    System.err.println("fact: " + mti.getLinkRewriterFactory());
+    assertTrue(mti.getLinkRewriterFactory()
+	       instanceof LinkRewriterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(mti.getLinkRewriterFactory())
+	       instanceof MockLinkRewriterFactory);
     assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
@@ -119,9 +130,11 @@ public class TestDefinablePlugin extends LockssTestCase {
     mti = p2.getMimeTypeInfo("text/html");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof GoslingHtmlLinkExtractor.Factory);
+    assertNull(mti.getLinkRewriterFactory()); // XXX
     mti = p2.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof CssLinkExtractor.Factory);
+
     mti = p2.getMimeTypeInfo("application/pdf");
     assertNull(mti.getFilterFactory());
     assertNull(mti.getFetchRateLimiter());

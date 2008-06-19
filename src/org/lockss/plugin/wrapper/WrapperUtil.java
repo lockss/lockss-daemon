@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperUtil.java,v 1.4 2008-01-27 06:44:14 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.5 2008-06-19 20:20:45 dshr Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ public class WrapperUtil {
 			   new LinkExtractorWrapper.Factory());
     registerWrapperFactory(org.lockss.extractor.LinkExtractorFactory.class,
 			   new LinkExtractorFactoryWrapper.Factory());
+    registerWrapperFactory(org.lockss.rewriter.LinkRewriterFactory.class,
+			   new LinkRewriterFactoryWrapper.Factory());
     registerWrapperFactory(LoginPageChecker.class,
 			   new LoginPageCheckerWrapper.Factory());
     registerWrapperFactory(PermissionCheckerFactory.class,
