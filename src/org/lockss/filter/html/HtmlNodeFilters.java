@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.3 2008-06-11 05:35:02 thib_gc Exp $
+ * $Id: HtmlNodeFilters.java,v 1.4 2008-06-20 18:53:51 dshr Exp $
  */
 
 /*
@@ -203,6 +203,25 @@ public class HtmlNodeFilters {
 			 new NotFilter(new HasChildFilter(filter, true)));
   }
 
+  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+   */
+  public static NodeFilter linkRegexXforms(String[] regex,
+					   boolean[] ignoreCase,
+					   String[] target,
+					   String[] replace) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      filters[i] = new LinkRegexXform(regex[i], ignoreCase[i],
+				      target[i], replace[i]);
+    }
+    // XXX htmlparser 2.0 return new OrFilter(filters);
+    NodeFilter ret = filters[0];
+    for (int i = 1; i < filters.length; i++) {
+      ret = new OrFilter(ret, filters[i]);
+    }
+    return ret;
+  }
+
   /**
    * This class accepts all comment nodes containing the given string.
    */
@@ -345,6 +364,38 @@ public class HtmlNodeFilters {
       if (node instanceof Remark) {
 	String nodestr = ((Remark)node).getText();
 	return matcher.contains(nodestr, pat);
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class accepts everything but applies a transform to
+   * links that match the regex.
+   */
+  public static class LinkRegexXform extends BaseRegexFilter {
+    /**
+     * Creates a LinkRegexXform that rejects everything but applies
+     * a transform to nodes whose text
+     * contains a match for the regex.  The match is case sensitive.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     */
+    private String target;
+    private String replace;
+    public LinkRegexXform(String regex, boolean ignoreCase,
+			  String target, String replace) {
+      super(regex, ignoreCase);
+      this.target = target;
+      this.replace = replace;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof LinkTag && ((LinkTag)node).isHTTPLikeLink()) {
+	String url = ((LinkTag)node).getLink();
+	((LinkTag)node).setLink(url.replaceFirst(target, replace));
       }
       return false;
     }

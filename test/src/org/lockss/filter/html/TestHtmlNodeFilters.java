@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.2 2008-06-11 05:35:04 thib_gc Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.3 2008-06-20 18:53:51 dshr Exp $
  */
 
 /*
@@ -210,6 +210,65 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertTrue(""+node.getClass(),
 	       node instanceof org.htmlparser.nodes.RemarkNode);
     assertEquals(" Begin ad 3 foo ", node.getText());
+  }
+
+  private static final String page =
+    "foo<a href=\"http://www.example.com/index.html\">bar</a>baz";
+  private static final String origUrl = "http://www.example.com/index.html";
+  private static final String finalUrl = "http://foo.lockss.org/index.html";
+
+  public void testLinkRegexXformsNoMatch() throws Exception {
+    NodeList nl = parse(page);
+    String[] linkRegex = {
+      "http://www.content.org/",
+    };
+    boolean[] ignoreCase = {
+      true,
+    };
+    String[] rewriteRegex = {
+      "http://www.content.org/",
+    };
+    String[] rewriteTarget = {
+      "http://foo.lockss.org/",
+    };
+    NodeFilter filt = HtmlNodeFilters.linkRegexXforms(linkRegex,
+						      ignoreCase,
+						      rewriteRegex,
+						      rewriteTarget);
+    assertEquals("Should be empty: " + nl,
+		 0, nl.extractAllNodesThatMatch(filt).size());
+    Node node = nl.elementAt(1);
+    assertNotNull(node);
+    assertTrue(""+node.getClass(),
+	       node instanceof org.htmlparser.tags.LinkTag);
+    assertEquals(origUrl, ((LinkTag)node).getLink());
+  }
+
+  public void testLinkRegexXformsMatch() throws Exception {
+    NodeList nl = parse(page);
+    String[] linkRegex = {
+      "http://www.example.com/",
+    };
+    boolean[] ignoreCase = {
+      true,
+    };
+    String[] rewriteRegex = {
+      "http://www.example.com/",
+    };
+    String[] rewriteTarget = {
+      "http://foo.lockss.org/",
+    };
+    NodeFilter filt = HtmlNodeFilters.linkRegexXforms(linkRegex,
+						      ignoreCase,
+						      rewriteRegex,
+						      rewriteTarget);
+    assertEquals("Should be empty: " + nl,
+		 0, nl.extractAllNodesThatMatch(filt).size());
+    Node node = nl.elementAt(1);
+    assertNotNull(node);
+    assertTrue(""+node.getClass(),
+	       node instanceof org.htmlparser.tags.LinkTag);
+    assertEquals(finalUrl, ((LinkTag)node).getLink());
   }
 
   NodeList parse(String in) throws Exception {
