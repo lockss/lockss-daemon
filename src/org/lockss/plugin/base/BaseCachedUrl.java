@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.31 2008-06-18 22:21:30 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.32 2008-06-20 15:10:12 dshr Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class BaseCachedUrl implements CachedUrl {
 	// XXX how do I find the encoding?
 	String encoding = null; // XXX
 	rewrittenStream =
-	  lrf.createLinkRewriter(ctype, au, originalStream, encoding);
+	  lrf.createLinkRewriter(ctype, au, originalStream, encoding, url);
       } catch (PluginException e) {
 	logger.error("Can't create link rewriter " + e.toString());
       }

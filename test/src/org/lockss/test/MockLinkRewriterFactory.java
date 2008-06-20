@@ -1,5 +1,5 @@
 /*
-* $Id: MockLinkRewriterFactory.java,v 1.1 2008-06-19 20:20:46 dshr Exp $
+* $Id: MockLinkRewriterFactory.java,v 1.2 2008-06-20 15:10:12 dshr Exp $
 */
 
 /*
@@ -50,7 +50,8 @@ public class MockLinkRewriterFactory implements LinkRewriterFactory {
   public InputStream createLinkRewriter(String mimeType,
 					ArchivalUnit au,
 					InputStream in,
-					String encoding)
+					String encoding,
+					String url)
     throws PluginException {
     if (ex != null)
       throw ex;

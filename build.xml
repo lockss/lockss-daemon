@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.232 2008-05-19 07:36:16 tlipkis Exp $
+ $Id: build.xml,v 1.233 2008-06-20 15:10:12 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -681,6 +681,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
           <include name="**/*.keystore"/>
           <include name="commons-logging.properties"/>
           <include name="org/lockss/htdocs/**/*"/>
+	  <include name="**/urlrewriter.js"/> <!-- IA/WERA javascript -->
        </fileset>
     </copy>
   </target>

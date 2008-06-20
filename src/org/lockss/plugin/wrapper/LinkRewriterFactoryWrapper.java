@@ -1,5 +1,5 @@
 /*
- * $Id: LinkRewriterFactoryWrapper.java,v 1.1 2008-06-19 20:20:45 dshr Exp $
+ * $Id: LinkRewriterFactoryWrapper.java,v 1.2 2008-06-20 15:10:12 dshr Exp $
  */
 
 /*
@@ -53,10 +53,11 @@ public class LinkRewriterFactoryWrapper
     public InputStream createLinkRewriter(String mimeType,
 					  ArchivalUnit au,
 					  InputStream is,
-					  String encoding)
+					  String encoding,
+					  String url)
       throws PluginException {
     try {
-	return inst.createLinkRewriter(mimeType, au, is, encoding);
+	return inst.createLinkRewriter(mimeType, au, is, encoding, url);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
