@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.3 2008-06-20 18:53:51 dshr Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.4 2008-06-20 23:20:24 dshr Exp $
  */
 
 /*
@@ -217,7 +217,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
   private static final String origUrl = "http://www.example.com/index.html";
   private static final String finalUrl = "http://foo.lockss.org/index.html";
 
-  public void testLinkRegexXformsNoMatch() throws Exception {
+  public void testLinkRegexYesXformsNoMatch() throws Exception {
     NodeList nl = parse(page);
     String[] linkRegex = {
       "http://www.content.org/",
@@ -231,10 +231,10 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     String[] rewriteTarget = {
       "http://foo.lockss.org/",
     };
-    NodeFilter filt = HtmlNodeFilters.linkRegexXforms(linkRegex,
-						      ignoreCase,
-						      rewriteRegex,
-						      rewriteTarget);
+    NodeFilter filt = HtmlNodeFilters.linkRegexYesXforms(linkRegex,
+							 ignoreCase,
+							 rewriteRegex,
+							 rewriteTarget);
     assertEquals("Should be empty: " + nl,
 		 0, nl.extractAllNodesThatMatch(filt).size());
     Node node = nl.elementAt(1);
@@ -244,7 +244,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertEquals(origUrl, ((LinkTag)node).getLink());
   }
 
-  public void testLinkRegexXformsMatch() throws Exception {
+  public void testLinkRegexYesXformsMatch() throws Exception {
     NodeList nl = parse(page);
     String[] linkRegex = {
       "http://www.example.com/",
@@ -258,10 +258,64 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     String[] rewriteTarget = {
       "http://foo.lockss.org/",
     };
-    NodeFilter filt = HtmlNodeFilters.linkRegexXforms(linkRegex,
-						      ignoreCase,
-						      rewriteRegex,
-						      rewriteTarget);
+    NodeFilter filt = HtmlNodeFilters.linkRegexYesXforms(linkRegex,
+							 ignoreCase,
+							 rewriteRegex,
+							 rewriteTarget);
+    assertEquals("Should be empty: " + nl,
+		 0, nl.extractAllNodesThatMatch(filt).size());
+    Node node = nl.elementAt(1);
+    assertNotNull(node);
+    assertTrue(""+node.getClass(),
+	       node instanceof org.htmlparser.tags.LinkTag);
+    assertEquals(finalUrl, ((LinkTag)node).getLink());
+  }
+
+  public void testLinkRegexNoXformsMatch() throws Exception {
+    NodeList nl = parse(page);
+    String[] linkRegex = {
+      "http://www.example.com/",
+    };
+    boolean[] ignoreCase = {
+      true,
+    };
+    String[] rewriteRegex = {
+      "http://www.example.com/",
+    };
+    String[] rewriteTarget = {
+      "http://foo.lockss.org/",
+    };
+    NodeFilter filt = HtmlNodeFilters.linkRegexNoXforms(linkRegex,
+							ignoreCase,
+							rewriteRegex,
+							rewriteTarget);
+    assertEquals("Should be empty: " + nl,
+		 0, nl.extractAllNodesThatMatch(filt).size());
+    Node node = nl.elementAt(1);
+    assertNotNull(node);
+    assertTrue(""+node.getClass(),
+	       node instanceof org.htmlparser.tags.LinkTag);
+    assertEquals(origUrl, ((LinkTag)node).getLink());
+  }
+
+  public void testLinkRegexNoXformsNoMatch() throws Exception {
+    NodeList nl = parse(page);
+    String[] linkRegex = {
+      "http://www.content.org/",
+    };
+    boolean[] ignoreCase = {
+      true,
+    };
+    String[] rewriteRegex = {
+      "http://www.example.com/",
+    };
+    String[] rewriteTarget = {
+      "http://foo.lockss.org/",
+    };
+    NodeFilter filt = HtmlNodeFilters.linkRegexNoXforms(linkRegex,
+							ignoreCase,
+							rewriteRegex,
+							rewriteTarget);
     assertEquals("Should be empty: " + nl,
 		 0, nl.extractAllNodesThatMatch(filt).size());
     Node node = nl.elementAt(1);

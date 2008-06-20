@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.1 2008-06-20 18:53:51 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.2 2008-06-20 23:20:24 dshr Exp $
  */
 
 /*
@@ -51,8 +51,6 @@ import org.htmlparser.filters.*;
  * - relative links
  * to absolute links to the ServeContent servlet.
  *
- * NB - this link rewriter is only suitable for AUs that contain
- * the whole content of a site.
  */
 public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   static final Logger logger =
@@ -69,22 +67,70 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       throws PluginException {
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
-      int l = 1; // XXX
-      String[] linkRegex = new String[l];
-      boolean[] ignoreCase = new boolean[l];
-      String[] rewriteRegex = new String[l];
-      String[] rewriteTarget = new String[l];
-      for (int i = 0; i < linkRegex.length; i++) {
-	linkRegex[i] = "XXX";
-	ignoreCase[i] = true;
-	rewriteRegex[i] = "XXX";
-	rewriteTarget[i] = "XXX";
+      int port = 8080; // XXX get from configuration
+      String targetStem = "http://" + PlatformUtil.getLocalHostname() + ":" +
+	port + "/ServeContent?url=";
+      Collection urlStems = au.getUrlStems();
+      int nUrlStem = urlStems.size();
+      String defUrlStem = null;
+      int l = nUrlStem;
+      String[] linkRegex1 = new String[l];
+      boolean[] ignCase1 = new boolean[l];
+      String[] rwRegex1 = new String[l];
+      String[] rwTarget1 = new String[l];
+      // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
+      int i = 0;
+      for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
+	String urlStem = (String)it.next();
+	if (defUrlStem == null) {
+	  defUrlStem = urlStem;
+	}
+	linkRegex1[i] = urlStem;
+	ignCase1[i] = true;
+	rwRegex1[i] = urlStem;
+	rwTarget1[i] = targetStem + urlStem;
+	logger.debug3("if match " + linkRegex1[i] + " replace " + rwRegex1[i] +
+		      " by " + rwTarget1[i]);
+	i++;
+      }
+      if (defUrlStem == null) {
+	throw new PluginException("No default URL stem for " + url);
       }
       // Create a LinkRegexXform pipeline
-      NodeFilter linkXform = HtmlNodeFilters.linkRegexXforms(linkRegex,
-								ignoreCase,
-								rewriteRegex,
-								rewriteTarget);
+      NodeFilter absLinkXform = HtmlNodeFilters.linkRegexYesXforms(linkRegex1,
+								   ignCase1,
+								   rwRegex1,
+								   rwTarget1);
+      int p = url.lastIndexOf("/");
+      if (p < 0) {
+	throw new PluginException(url + " has no \"/\"");
+      }
+      String urlPrefix = url.substring(0, p);
+      logger.debug3("urlPrefix: " + urlPrefix);
+      String [] linkRegex2 = {
+	"^http://",
+	"^http://",
+      };
+      boolean[] ignCase2 = {
+	true,
+	true,
+      };
+      String[] rwRegex2 = {
+	"^/",
+	"^([a-z])",
+      };
+      String[] rwTarget2 = {
+	targetStem + defUrlStem,
+	targetStem + urlPrefix + "/$1",
+      };
+
+      // Rewrite relative links
+      NodeFilter relLinkXform = HtmlNodeFilters.linkRegexNoXforms(linkRegex2,
+								  ignCase2,
+								  rwRegex2,
+								  rwTarget2);
+      // Combine the pipes
+      NodeFilter linkXform = new OrFilter(absLinkXform, relLinkXform);
       // Create a transform to apply them
       HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
       return (new HtmlFilterInputStream(in, htmlXform));

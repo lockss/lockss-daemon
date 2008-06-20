@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.4 2008-06-20 18:53:51 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.5 2008-06-20 23:20:24 dshr Exp $
  */
 
 /*
@@ -205,14 +205,33 @@ public class HtmlNodeFilters {
 
   /** Create a NodeFilter that applies all of an array of LinkRegexXforms
    */
-  public static NodeFilter linkRegexXforms(String[] regex,
-					   boolean[] ignoreCase,
-					   String[] target,
-					   String[] replace) {
+  public static NodeFilter linkRegexYesXforms(String[] regex,
+					      boolean[] ignoreCase,
+					      String[] target,
+					      String[] replace) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      filters[i] = new LinkRegexXform(regex[i], ignoreCase[i],
-				      target[i], replace[i]);
+      filters[i] = new LinkRegexYesXform(regex[i], ignoreCase[i],
+					 target[i], replace[i]);
+    }
+    // XXX htmlparser 2.0 return new OrFilter(filters);
+    NodeFilter ret = filters[0];
+    for (int i = 1; i < filters.length; i++) {
+      ret = new OrFilter(ret, filters[i]);
+    }
+    return ret;
+  }
+
+  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+   */
+  public static NodeFilter linkRegexNoXforms(String[] regex,
+					     boolean[] ignoreCase,
+					     String[] target,
+					     String[] replace) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      filters[i] = new LinkRegexNoXform(regex[i], ignoreCase[i],
+					target[i], replace[i]);
     }
     // XXX htmlparser 2.0 return new OrFilter(filters);
     NodeFilter ret = filters[0];
@@ -373,11 +392,11 @@ public class HtmlNodeFilters {
    * This class accepts everything but applies a transform to
    * links that match the regex.
    */
-  public static class LinkRegexXform extends BaseRegexFilter {
+  public static class LinkRegexYesXform extends BaseRegexFilter {
     /**
-     * Creates a LinkRegexXform that rejects everything but applies
+     * Creates a LinkRegexYesXform that rejects everything but applies
      * a transform to nodes whose text
-     * contains a match for the regex.  The match is case sensitive.
+     * contains a match for the regex.
      * @param regex The pattern to match.
      * @param ignoreCase If true, match is case insensitive
      * @param target Regex to replace
@@ -385,7 +404,7 @@ public class HtmlNodeFilters {
      */
     private String target;
     private String replace;
-    public LinkRegexXform(String regex, boolean ignoreCase,
+    public LinkRegexYesXform(String regex, boolean ignoreCase,
 			  String target, String replace) {
       super(regex, ignoreCase);
       this.target = target;
@@ -393,9 +412,45 @@ public class HtmlNodeFilters {
     }
 
     public boolean accept(Node node) {
-      if (node instanceof LinkTag && ((LinkTag)node).isHTTPLikeLink()) {
+      if (node instanceof LinkTag) {
 	String url = ((LinkTag)node).getLink();
-	((LinkTag)node).setLink(url.replaceFirst(target, replace));
+	if (matcher.contains(url, pat)) {
+	  ((LinkTag)node).setLink(url.replaceFirst(target, replace));
+	}
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class accepts everything but applies a transform to
+   * links that don't match the regex.
+   */
+  public static class LinkRegexNoXform extends BaseRegexFilter {
+    /**
+     * Creates a LinkRegexNoXform that rejects everything but applies
+     * a transform to nodes whose text
+     * contains a match for the regex.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     */
+    private String target;
+    private String replace;
+    public LinkRegexNoXform(String regex, boolean ignoreCase,
+			    String target, String replace) {
+      super(regex, ignoreCase);
+      this.target = target;
+      this.replace = replace;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof LinkTag) {
+	String url = ((LinkTag)node).getLink();
+	if (!matcher.contains(url, pat)) {
+	  ((LinkTag)node).setLink(url.replaceFirst(target, replace));
+	}
       }
       return false;
     }

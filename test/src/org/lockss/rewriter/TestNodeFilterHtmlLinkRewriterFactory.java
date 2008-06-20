@@ -1,5 +1,5 @@
 /*
- * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.2 2008-06-20 23:20:24 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.1 2008-06-20 23:20:24 dshr Exp $
  */
 
 /*
@@ -38,15 +38,16 @@ import org.lockss.plugin.*;
 import java.util.*;
 import java.io.*;
 
-public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
+public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("FuncArcExploder");
 
   private MockArchivalUnit au;
-  private JavascriptHtmlLinkRewriterFactory jhlrf;
+  private NodeFilterHtmlLinkRewriterFactory nfhlrf;
   private String encoding = null;
   private static final String urlStem = "http://www.example.com/";
-  private static final String url = urlStem + "index.html";
-  private static final String withHtmlTag =
+  private static final String urlSuffix = "content/index.html";
+  private static final String url = urlStem + urlSuffix;
+  private static final String page =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -57,27 +58,18 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     "<body>" +
     "<h1 align=\"center\">example.com website</h1>" +
     "<br>" +
-    "<a href=\"" + url + "\">a link</a>" +
+    "<a href=\"" + url + "\">an absolute link to rewrite</a>" +
+    "<br>" +
+    "<a href=\"" + urlSuffix + "\">a relative link to rewrite</a>" +
+    "<br>" +
+    "<a href=\"" + "/more/" + urlSuffix + "\">a relative link to rewrite</a>" +
+    "<br>" +
+    "<a href=\"http://www.content.org/index.html\">an absolute link not to rewrite</a>" +
     "<br>" +
     "</body>" +
     "</HTML>";
-  private static final String withoutHtmlTag =
-    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
-    "<html>\n" +
-    "<head>\n" +
-    "<title>example.com website</title>\n" +
-    "<meta http-equiv=\"content-type\"" +
-    "content=\"text/html; charset=ISO-8859-1\">" +
-    "</head>" +
-    "<body>" +
-    "<h1 align=\"center\">example.com website</h1>" +
-    "<br>" +
-    "<a href=\"" + url + "\">a link</a>" +
-    "<br>" +
-    "</body>" +
-    "</foo>";
+  private static final int linkCount = 3;
   private InputStream in;
-  private static final String jsTag = "<SCRIPT language=\"Javascript\">";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -85,14 +77,14 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     List l = new ArrayList();
     l.add(urlStem);
     au.setUrlStems(l);
-    jhlrf = new JavascriptHtmlLinkRewriterFactory();
+    nfhlrf = new NodeFilterHtmlLinkRewriterFactory();
   }
 
   public void testThrowsIfNotHtml() {
-    in = new ReaderInputStream(new StringReader(withHtmlTag));
+    in = new ReaderInputStream(new StringReader(page));
     try {
-      InputStream ret = jhlrf.createLinkRewriter("application/pdf", au, in,
-						 encoding, url);
+      InputStream ret = nfhlrf.createLinkRewriter("application/pdf", au, in,
+						  encoding, url);
       fail("createLinkRewriter should have thrown on non-html mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -103,13 +95,13 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  public void testInsertsJavascriptIfHtmlTag() {
-    in = new ReaderInputStream(new StringReader(withHtmlTag));
+  public void testRewriting() {
+    in = new ReaderInputStream(new StringReader(page));
     try {
-      InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
+      InputStream ret = nfhlrf.createLinkRewriter("text/html", au, in,
 						 encoding, url);
       assertNotNull(ret);
-      // Read from ret, look for javascript
+      // Read from ret, make String
       Reader r = new InputStreamReader(ret);
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
@@ -120,33 +112,18 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
       String out = sb.toString();
       assertNotNull(out);
       log.debug3(out);
-      assertTrue(out.length() > withHtmlTag.length());
-      assertTrue(out.indexOf(jsTag) > 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on html mime type");
-    }
-  }
-
-  public void testCopiesUnchangedIfNoHtmlTag() {
-    in = new ReaderInputStream(new StringReader(withoutHtmlTag));
-    try {
-      InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, look for javascript
-      Reader r = new InputStreamReader(ret);
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
+      // Now check the rewriting
+      int ix = 0;
+      for (i = 0; i < linkCount; i++) {
+	int nix = out.indexOf("ServeContent?url=" + urlStem, ix);
+	assertTrue(nix > ix);
+	int endix = out.indexOf("\"", nix);
+	assertTrue(endix > nix);
+	log.debug3(out.substring(nix, endix));
+	ix = endix;
       }
-      String out = sb.toString();
-      assertNotNull(out);
-      assertTrue(out.length() == withoutHtmlTag.length());
-      assertTrue(out.indexOf(jsTag) < 0);
-      assertTrue(out.equals(withoutHtmlTag));
+      ix = out.indexOf("ServeContent?url=" + urlStem, ix);
+      assertTrue("wrong url rewritten", ix < 0);
     } catch (Exception ex) {
       fail("createLinkRewriter should not have thrown " + ex +
 	   " on html mime type");
@@ -155,7 +132,7 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
 
   public static void main(String[] argv) {
     String[] testCaseList = {
-      TestJavascriptHtmlLinkRewriterFactory.class.getName()
+      TestNodeFilterHtmlLinkRewriterFactory.class.getName()
     };
     junit.textui.TestRunner.main(testCaseList);
   }
