@@ -1,0 +1,6 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	UCal			
+#	@publisherTitleSet	publisher=University of California Press
+#	@fixedValues	P=University of California Press	p=org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
+#	@fixedValues	j=Journal of Foo
+JSTOR	do_not_process	Journal of Foo Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jof	volume_name=1

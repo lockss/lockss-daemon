@@ -1,0 +1,6 @@
+#	@formatString	x,S,t,%,%,%
+#	@namePrefix	UCal			
+#	@publisherTitleSet	publisher=University of Chicago Press
+#	@fixedValues	P=University of California Press	p=org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin
+#	@fixedValues	j=Journal of Bar
+JSTOR	do_not_process	Journal of Bar Volume 1	base_url=http://www.journals.uchicago.edu/	journal_id=job	volume_name=1
