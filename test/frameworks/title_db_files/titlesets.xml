@@ -61,7 +61,7 @@
       <property name="bmc">
 	<property name="name" value="All BioMed Central Titles" />
 	<property name="class" value="xpath" />
-	<property name="xpath" value="[pluginName='org.lockss.plugin.bmc.BMCPlugin']" />
+	<property name="xpath" value="[attributes/publisher='BioMed Central']" />
       </property>
       <property name="bioone">
 	<property name="name" value="All BioOne Titles" />
@@ -88,12 +88,6 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
       </property>
-      <property name="universityofcaliforniapress">
-        <property name="name" value="All University of California Press titles" />
-        <property name="class" value="xpath" />
-        <property name="xpath" value="[pluginName='org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin']" />
-      </property>      
-
       <property name="iop">
         <property name="name" value="All IOP Titles" />
         <property name="class" value="xpath" />
@@ -110,6 +104,20 @@
         <property name="class" value="xpath" />
 	<property name="xpath" value="[attributes/publisher='Oxford University Press']" />
       </property>
+
+      <property name="ucpress">
+        <property name="name" value="All University Of California Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='University of California Press']" />
+      </property>
+
+      <property name="uchicgopress">
+        <property name="name" value="All University of Chicago Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='University of Chicago Press']" />
+      </property>
+
+
 
       <property name="AlphaMed Press">
         <property name="name" value="All AlphaMed Press Titles" />
