@@ -88,6 +88,17 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
       </property>
+      <property name="universityofcaliforniapress">
+        <property name="name" value="All University of California Press titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[pluginName='org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin']" />
+      </property>      
+
+      <property name="iop">
+        <property name="name" value="All IOP Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
+      </property>
       <property name="sage">
         <property name="name" value="All SAGE Publications Titles" />
         <property name="class" value="xpath" />
