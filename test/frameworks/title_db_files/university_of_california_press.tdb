@@ -1,8 +1,8 @@
-#       @formatString   x,S,t,%,%,% 
-#       @namePrefix     UCal
-#       @publisherTitleSet      publisher=University of California Press
-#       @fixedValues    P=University of California Press        p=org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
-#       @fixedValues    j=Asian Survey
+#	@formatString	x,S,t,%,%,% 
+#	@namePrefix	UCal
+#	@publisherTitleSet	publisher=University of California Press
+#	@fixedValues	P=University of California Press	p=org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
+#	@fixedValues	j=Asian Survey
 	manifest	Asian Survey Volume 48	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=48
 	manifest	Asian Survey Volume 47	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=47
 	manifest	Asian Survey Volume 46	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=46
@@ -11,47 +11,47 @@
 	manifest	Asian Survey Volume 43	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=43
 	manifest	Asian Survey Volume 42	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=42
 	manifest	Asian Survey Volume 41	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=41
-JSTOR	do_not_process	Asian Survey Volume 40     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=40
-JSTOR	do_not_process	Asian Survey Volume 39     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=39
-JSTOR	do_not_process	Asian Survey Volume 38     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=38
-JSTOR	do_not_process	Asian Survey Volume 37     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=37
-JSTOR	do_not_process	Asian Survey Volume 36     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=36
-JSTOR	do_not_process	Asian Survey Volume 35     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=35
-JSTOR	do_not_process	Asian Survey Volume 34     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=34
-JSTOR	do_not_process	Asian Survey Volume 33     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=33
-JSTOR	do_not_process	Asian Survey Volume 32     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=32
-JSTOR	do_not_process	Asian Survey Volume 31     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=31
-JSTOR	do_not_process	Asian Survey Volume 30     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=30
-JSTOR	do_not_process	Asian Survey Volume 29     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=29
-JSTOR	do_not_process	Asian Survey Volume 28     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=28
-JSTOR	do_not_process	Asian Survey Volume 27     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=27
-JSTOR	do_not_process	Asian Survey Volume 26     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=26
-JSTOR	do_not_process	Asian Survey Volume 25     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=25
-JSTOR	do_not_process	Asian Survey Volume 24     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=24
-JSTOR	do_not_process	Asian Survey Volume 23     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=23
-JSTOR	do_not_process	Asian Survey Volume 22     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=22
-JSTOR	do_not_process	Asian Survey Volume 21     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=21
-JSTOR	do_not_process	Asian Survey Volume 20     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=20
-JSTOR	do_not_process	Asian Survey Volume 19     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=19
-JSTOR	do_not_process	Asian Survey Volume 18     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=18
-JSTOR	do_not_process	Asian Survey Volume 17     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=17
-JSTOR	do_not_process	Asian Survey Volume 16     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=16
-JSTOR	do_not_process	Asian Survey Volume 15     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=15
-JSTOR	do_not_process	Asian Survey Volume 14     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=14
-JSTOR	do_not_process	Asian Survey Volume 13     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=13
-JSTOR	do_not_process	Asian Survey Volume 12     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=12
-JSTOR	do_not_process	Asian Survey Volume 11     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=11
-JSTOR	do_not_process	Asian Survey Volume 10     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=10
-JSTOR	do_not_process	Asian Survey Volume 9     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=9
-JSTOR	do_not_process	Asian Survey Volume 8     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=8
-JSTOR	do_not_process	Asian Survey Volume 7     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=7
-JSTOR	do_not_process	Asian Survey Volume 6     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=6
-JSTOR	do_not_process	Asian Survey Volume 5     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=5
-JSTOR	do_not_process	Asian Survey Volume 4     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=4
-JSTOR	do_not_process	Asian Survey Volume 3     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=3
-JSTOR	do_not_process	Asian Survey Volume 2     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=2
-JSTOR	do_not_process	Asian Survey Volume 1     base_url=http://caliber.ucpress.net/    journal_id=as   volume_name=1
-#       @fixedValues    j=Journal of Palestine Studies
+JSTOR	do_not_process	Asian Survey Volume 40	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=40
+JSTOR	do_not_process	Asian Survey Volume 39	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=39
+JSTOR	do_not_process	Asian Survey Volume 38	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=38
+JSTOR	do_not_process	Asian Survey Volume 37	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=37
+JSTOR	do_not_process	Asian Survey Volume 36	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=36
+JSTOR	do_not_process	Asian Survey Volume 35	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=35
+JSTOR	do_not_process	Asian Survey Volume 34	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=34
+JSTOR	do_not_process	Asian Survey Volume 33	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=33
+JSTOR	do_not_process	Asian Survey Volume 32	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=32
+JSTOR	do_not_process	Asian Survey Volume 31	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=31
+JSTOR	do_not_process	Asian Survey Volume 30	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=30
+JSTOR	do_not_process	Asian Survey Volume 29	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=29
+JSTOR	do_not_process	Asian Survey Volume 28	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=28
+JSTOR	do_not_process	Asian Survey Volume 27	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=27
+JSTOR	do_not_process	Asian Survey Volume 26	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=26
+JSTOR	do_not_process	Asian Survey Volume 25	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=25
+JSTOR	do_not_process	Asian Survey Volume 24	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=24
+JSTOR	do_not_process	Asian Survey Volume 23	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=23
+JSTOR	do_not_process	Asian Survey Volume 22	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=22
+JSTOR	do_not_process	Asian Survey Volume 21	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=21
+JSTOR	do_not_process	Asian Survey Volume 20	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=20
+JSTOR	do_not_process	Asian Survey Volume 19	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=19
+JSTOR	do_not_process	Asian Survey Volume 18	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=18
+JSTOR	do_not_process	Asian Survey Volume 17	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=17
+JSTOR	do_not_process	Asian Survey Volume 16	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=16
+JSTOR	do_not_process	Asian Survey Volume 15	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=15
+JSTOR	do_not_process	Asian Survey Volume 14	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=14
+JSTOR	do_not_process	Asian Survey Volume 13	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=13
+JSTOR	do_not_process	Asian Survey Volume 12	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=12
+JSTOR	do_not_process	Asian Survey Volume 11	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=11
+JSTOR	do_not_process	Asian Survey Volume 10	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=10
+JSTOR	do_not_process	Asian Survey Volume 9	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=9
+JSTOR	do_not_process	Asian Survey Volume 8	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=8
+JSTOR	do_not_process	Asian Survey Volume 7	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=7
+JSTOR	do_not_process	Asian Survey Volume 6	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=6
+JSTOR	do_not_process	Asian Survey Volume 5	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=5
+JSTOR	do_not_process	Asian Survey Volume 4	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=4
+JSTOR	do_not_process	Asian Survey Volume 3	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=3
+JSTOR	do_not_process	Asian Survey Volume 2	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=2
+JSTOR	do_not_process	Asian Survey Volume 1	base_url=http://caliber.ucpress.net/	journal_id=as	volume_name=1
+#	@fixedValues	j=Journal of Palestine Studies
 	manifest	Journal of Palestine Studies Volume 37	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=37
 	manifest	Journal of Palestine Studies Volume 36	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=36
 	manifest	Journal of Palestine Studies Volume 35	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=35
@@ -59,41 +59,41 @@ JSTOR	do_not_process	Asian Survey Volume 1     base_url=http://caliber.ucpress.n
 	manifest	Journal of Palestine Studies Volume 33	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=33
 	manifest	Journal of Palestine Studies Volume 32	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=32
 	manifest	Journal of Palestine Studies Volume 31	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=31
-JSTOR	do_not_process	Journal of Palestine Studies Volume 30     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=30
-JSTOR	do_not_process	Journal of Palestine Studies Volume 29     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=29
-JSTOR	do_not_process	Journal of Palestine Studies Volume 28     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=28
-JSTOR	do_not_process	Journal of Palestine Studies Volume 27     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=27
-JSTOR	do_not_process	Journal of Palestine Studies Volume 26     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=26
-JSTOR	do_not_process	Journal of Palestine Studies Volume 25     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=25
-JSTOR	do_not_process	Journal of Palestine Studies Volume 24     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=24
-JSTOR	do_not_process	Journal of Palestine Studies Volume 23     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=23
-JSTOR	do_not_process	Journal of Palestine Studies Volume 22     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=22
-JSTOR	do_not_process	Journal of Palestine Studies Volume 21     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=21
-JSTOR	do_not_process	Journal of Palestine Studies Volume 20     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=20
-JSTOR	do_not_process	Journal of Palestine Studies Volume 19     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=19
-JSTOR	do_not_process	Journal of Palestine Studies Volume 18     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=18
-JSTOR	do_not_process	Journal of Palestine Studies Volume 17     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=17
-JSTOR	do_not_process	Journal of Palestine Studies Volume 16     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=16
-JSTOR	do_not_process	Journal of Palestine Studies Volume 15     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=15
-JSTOR	do_not_process	Journal of Palestine Studies Volume 14     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=14
-JSTOR	do_not_process	Journal of Palestine Studies Volume 13     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=13
-JSTOR	do_not_process	Journal of Palestine Studies Volume 12     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=12
-JSTOR	do_not_process	Journal of Palestine Studies Volume 11     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=11
-JSTOR	do_not_process	Journal of Palestine Studies Volume 10     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=10
-JSTOR	do_not_process	Journal of Palestine Studies Volume 9     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=9
-JSTOR	do_not_process	Journal of Palestine Studies Volume 8     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=8
-JSTOR	do_not_process	Journal of Palestine Studies Volume 7     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=7
-JSTOR	do_not_process	Journal of Palestine Studies Volume 6     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=6
-JSTOR	do_not_process	Journal of Palestine Studies Volume 5     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=5
-JSTOR	do_not_process	Journal of Palestine Studies Volume 4     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=4
-JSTOR	do_not_process	Journal of Palestine Studies Volume 3     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=3
-JSTOR	do_not_process	Journal of Palestine Studies Volume 2     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=2
-JSTOR	do_not_process	Journal of Palestine Studies Volume 1     base_url=http://caliber.ucpress.net/    journal_id=jps   volume_name=1
-#       @fixedValues    j=Journal of Vietnamese Studies
+JSTOR	do_not_process	Journal of Palestine Studies Volume 30	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=30
+JSTOR	do_not_process	Journal of Palestine Studies Volume 29	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=29
+JSTOR	do_not_process	Journal of Palestine Studies Volume 28	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=28
+JSTOR	do_not_process	Journal of Palestine Studies Volume 27	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=27
+JSTOR	do_not_process	Journal of Palestine Studies Volume 26	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=26
+JSTOR	do_not_process	Journal of Palestine Studies Volume 25	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=25
+JSTOR	do_not_process	Journal of Palestine Studies Volume 24	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=24
+JSTOR	do_not_process	Journal of Palestine Studies Volume 23	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=23
+JSTOR	do_not_process	Journal of Palestine Studies Volume 22	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=22
+JSTOR	do_not_process	Journal of Palestine Studies Volume 21	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=21
+JSTOR	do_not_process	Journal of Palestine Studies Volume 20	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=20
+JSTOR	do_not_process	Journal of Palestine Studies Volume 19	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=19
+JSTOR	do_not_process	Journal of Palestine Studies Volume 18	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=18
+JSTOR	do_not_process	Journal of Palestine Studies Volume 17	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=17
+JSTOR	do_not_process	Journal of Palestine Studies Volume 16	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=16
+JSTOR	do_not_process	Journal of Palestine Studies Volume 15	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=15
+JSTOR	do_not_process	Journal of Palestine Studies Volume 14	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=14
+JSTOR	do_not_process	Journal of Palestine Studies Volume 13	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=13
+JSTOR	do_not_process	Journal of Palestine Studies Volume 12	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=12
+JSTOR	do_not_process	Journal of Palestine Studies Volume 11	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=11
+JSTOR	do_not_process	Journal of Palestine Studies Volume 10	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=10
+JSTOR	do_not_process	Journal of Palestine Studies Volume 9	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=9
+JSTOR	do_not_process	Journal of Palestine Studies Volume 8	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=8
+JSTOR	do_not_process	Journal of Palestine Studies Volume 7	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=7
+JSTOR	do_not_process	Journal of Palestine Studies Volume 6	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=6
+JSTOR	do_not_process	Journal of Palestine Studies Volume 5	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=5
+JSTOR	do_not_process	Journal of Palestine Studies Volume 4	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=4
+JSTOR	do_not_process	Journal of Palestine Studies Volume 3	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=3
+JSTOR	do_not_process	Journal of Palestine Studies Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=2
+JSTOR	do_not_process	Journal of Palestine Studies Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jps	volume_name=1
+#	@fixedValues	j=Journal of Vietnamese Studies
 	manifest	Journal of Vietnamese Studies Volume 3	base_url=http://caliber.ucpress.net/	journal_id=vs	volume_name=3
 	manifest	Journal of Vietnamese Studies Volume 2	base_url=http://caliber.ucpress.net/	journal_id=vs	volume_name=2
 	manifest	Journal of Vietnamese Studies Volume 1	base_url=http://caliber.ucpress.net/	journal_id=vs	volume_name=1
-#       @fixedValues    j=Mexican Studies/Estudios Mexicanos
+#	@fixedValues	j=Mexican Studies/Estudios Mexicanos
 	manifest	Mexican Studies/Estudios Mexicanos Volume 24	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=24
 	manifest	Mexican Studies/Estudios Mexicanos Volume 23	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=23
 	manifest	Mexican Studies/Estudios Mexicanos Volume 22	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=22
@@ -102,23 +102,23 @@ JSTOR	do_not_process	Journal of Palestine Studies Volume 1     base_url=http://c
 	manifest	Mexican Studies/Estudios Mexicanos Volume 19	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=19
 	manifest	Mexican Studies/Estudios Mexicanos Volume 18	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=18
 	manifest	Mexican Studies/Estudios Mexicanos Volume 17	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=17
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 16     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=16
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 15     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=15
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 14     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=14
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 13     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=13
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 12     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=12
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 11     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=11
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 10     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=10
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 9     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=9
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 8     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=8
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 7     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=7
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 6     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=6
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 5     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=5
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 4     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=4
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 3     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=3
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 2     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=2
-JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 1     base_url=http://caliber.ucpress.net/    journal_id=msem   volume_name=1
-#       @fixedValues    j=Classical Antiquity
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 16	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=16
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 15	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=15
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 14	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=14
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 13	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=13
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 12	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=12
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 11	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=11
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 10	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=10
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 9	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=9
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 8	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=8
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 7	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=7
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 6	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=6
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 5	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=5
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 4	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=4
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 3	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=3
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 2	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=2
+JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 1	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=1
+#	@fixedValues	j=Classical Antiquity
 	manifest	Classical Antiquity Volume 27	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=27
 	manifest	Classical Antiquity Volume 26	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=26
 	manifest	Classical Antiquity Volume 25	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=25
@@ -127,11 +127,11 @@ JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 1     base_url=ht
 	manifest	Classical Antiquity Volume 22	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=22
 	manifest	Classical Antiquity Volume 21	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=21
 	manifest	Classical Antiquity Volume 20	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=20
-#       @fixedValues    j=Journal of Empirical Research on Human Research Ethics
+#	@fixedValues	j=Journal of Empirical Research on Human Research Ethics
 	manifest	Journal of Empirical Research on Human Research Ethics Volume 3	base_url=http://caliber.ucpress.net/	journal_id=jer	volume_name=3
 	manifest	Journal of Empirical Research on Human Research Ethics Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jer	volume_name=2
 	manifest	Journal of Empirical Research on Human Research Ethics Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jer	volume_name=1
-#       @fixedValues    j=Film Quarterly
+#	@fixedValues	j=Film Quarterly
 	manifest	Film Quarterly Volume 61	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=61
 	manifest	Film Quarterly Volume 60	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=60
 	manifest	Film Quarterly Volume 59	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=59
@@ -139,61 +139,61 @@ JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 1     base_url=ht
 	manifest	Film Quarterly Volume 57	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=57
 	manifest	Film Quarterly Volume 56	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=56
 	manifest	Film Quarterly Volume 55	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=55
-JSTOR	do_not_process	Film Quarterly Volume 54     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=54
-JSTOR	do_not_process	Film Quarterly Volume 53     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=53
-JSTOR	do_not_process	Film Quarterly Volume 52     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=52
-JSTOR	do_not_process	Film Quarterly Volume 51     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=51
-JSTOR	do_not_process	Film Quarterly Volume 50     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=50
-JSTOR	do_not_process	Film Quarterly Volume 49     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=49
-JSTOR	do_not_process	Film Quarterly Volume 48     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=48
-JSTOR	do_not_process	Film Quarterly Volume 47     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=47
-JSTOR	do_not_process	Film Quarterly Volume 46     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=46
-JSTOR	do_not_process	Film Quarterly Volume 45     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=45
-JSTOR	do_not_process	Film Quarterly Volume 44     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=44
-JSTOR	do_not_process	Film Quarterly Volume 43     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=43
-JSTOR	do_not_process	Film Quarterly Volume 42     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=42
-JSTOR	do_not_process	Film Quarterly Volume 41     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=41
-JSTOR	do_not_process	Film Quarterly Volume 40     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=40
-JSTOR	do_not_process	Film Quarterly Volume 39     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=39
-JSTOR	do_not_process	Film Quarterly Volume 38     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=38
-JSTOR	do_not_process	Film Quarterly Volume 37     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=37
-JSTOR	do_not_process	Film Quarterly Volume 36     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=36
-JSTOR	do_not_process	Film Quarterly Volume 35     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=35
-JSTOR	do_not_process	Film Quarterly Volume 34     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=34
-JSTOR	do_not_process	Film Quarterly Volume 33     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=33
-JSTOR	do_not_process	Film Quarterly Volume 32     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=32
-JSTOR	do_not_process	Film Quarterly Volume 31     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=31
-JSTOR	do_not_process	Film Quarterly Volume 30     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=30
-JSTOR	do_not_process	Film Quarterly Volume 29     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=29
-JSTOR	do_not_process	Film Quarterly Volume 28     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=28
-JSTOR	do_not_process	Film Quarterly Volume 27     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=27
-JSTOR	do_not_process	Film Quarterly Volume 26     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=26
-JSTOR	do_not_process	Film Quarterly Volume 25     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=25
-JSTOR	do_not_process	Film Quarterly Volume 24     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=24
-JSTOR	do_not_process	Film Quarterly Volume 23     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=23
-JSTOR	do_not_process	Film Quarterly Volume 22     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=22
-JSTOR	do_not_process	Film Quarterly Volume 21     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=21
-JSTOR	do_not_process	Film Quarterly Volume 20     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=20
-JSTOR	do_not_process	Film Quarterly Volume 19     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=19
-JSTOR	do_not_process	Film Quarterly Volume 18     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=18
-JSTOR	do_not_process	Film Quarterly Volume 17     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=17
-JSTOR	do_not_process	Film Quarterly Volume 16     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=16
-JSTOR	do_not_process	Film Quarterly Volume 15     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=15
-JSTOR	do_not_process	Film Quarterly Volume 14     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=14
-JSTOR	do_not_process	Film Quarterly Volume 13     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=13
-JSTOR	do_not_process	Film Quarterly Volume 12     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=12
-JSTOR	do_not_process	Film Quarterly Volume 11     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=11
-JSTOR	do_not_process	Film Quarterly Volume 10     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=10
-JSTOR	do_not_process	Film Quarterly Volume 9     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=9
-JSTOR	do_not_process	Film Quarterly Volume 8     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=8
-JSTOR	do_not_process	Film Quarterly Volume 7     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=7
-JSTOR	do_not_process	Film Quarterly Volume 6     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=6
-JSTOR	do_not_process	Film Quarterly Volume 5     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=5
-JSTOR	do_not_process	Film Quarterly Volume 4     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=4
-JSTOR	do_not_process	Film Quarterly Volume 3     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=3
-JSTOR	do_not_process	Film Quarterly Volume 2     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=2
-JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress.net/    journal_id=fq   volume_name=1
-#       @fixedValues    j=Gastronomica
+JSTOR	do_not_process	Film Quarterly Volume 54	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=54
+JSTOR	do_not_process	Film Quarterly Volume 53	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=53
+JSTOR	do_not_process	Film Quarterly Volume 52	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=52
+JSTOR	do_not_process	Film Quarterly Volume 51	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=51
+JSTOR	do_not_process	Film Quarterly Volume 50	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=50
+JSTOR	do_not_process	Film Quarterly Volume 49	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=49
+JSTOR	do_not_process	Film Quarterly Volume 48	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=48
+JSTOR	do_not_process	Film Quarterly Volume 47	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=47
+JSTOR	do_not_process	Film Quarterly Volume 46	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=46
+JSTOR	do_not_process	Film Quarterly Volume 45	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=45
+JSTOR	do_not_process	Film Quarterly Volume 44	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=44
+JSTOR	do_not_process	Film Quarterly Volume 43	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=43
+JSTOR	do_not_process	Film Quarterly Volume 42	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=42
+JSTOR	do_not_process	Film Quarterly Volume 41	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=41
+JSTOR	do_not_process	Film Quarterly Volume 40	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=40
+JSTOR	do_not_process	Film Quarterly Volume 39	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=39
+JSTOR	do_not_process	Film Quarterly Volume 38	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=38
+JSTOR	do_not_process	Film Quarterly Volume 37	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=37
+JSTOR	do_not_process	Film Quarterly Volume 36	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=36
+JSTOR	do_not_process	Film Quarterly Volume 35	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=35
+JSTOR	do_not_process	Film Quarterly Volume 34	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=34
+JSTOR	do_not_process	Film Quarterly Volume 33	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=33
+JSTOR	do_not_process	Film Quarterly Volume 32	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=32
+JSTOR	do_not_process	Film Quarterly Volume 31	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=31
+JSTOR	do_not_process	Film Quarterly Volume 30	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=30
+JSTOR	do_not_process	Film Quarterly Volume 29	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=29
+JSTOR	do_not_process	Film Quarterly Volume 28	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=28
+JSTOR	do_not_process	Film Quarterly Volume 27	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=27
+JSTOR	do_not_process	Film Quarterly Volume 26	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=26
+JSTOR	do_not_process	Film Quarterly Volume 25	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=25
+JSTOR	do_not_process	Film Quarterly Volume 24	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=24
+JSTOR	do_not_process	Film Quarterly Volume 23	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=23
+JSTOR	do_not_process	Film Quarterly Volume 22	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=22
+JSTOR	do_not_process	Film Quarterly Volume 21	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=21
+JSTOR	do_not_process	Film Quarterly Volume 20	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=20
+JSTOR	do_not_process	Film Quarterly Volume 19	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=19
+JSTOR	do_not_process	Film Quarterly Volume 18	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=18
+JSTOR	do_not_process	Film Quarterly Volume 17	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=17
+JSTOR	do_not_process	Film Quarterly Volume 16	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=16
+JSTOR	do_not_process	Film Quarterly Volume 15	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=15
+JSTOR	do_not_process	Film Quarterly Volume 14	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=14
+JSTOR	do_not_process	Film Quarterly Volume 13	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=13
+JSTOR	do_not_process	Film Quarterly Volume 12	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=12
+JSTOR	do_not_process	Film Quarterly Volume 11	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=11
+JSTOR	do_not_process	Film Quarterly Volume 10	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=10
+JSTOR	do_not_process	Film Quarterly Volume 9	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=9
+JSTOR	do_not_process	Film Quarterly Volume 8	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=8
+JSTOR	do_not_process	Film Quarterly Volume 7	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=7
+JSTOR	do_not_process	Film Quarterly Volume 6	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=6
+JSTOR	do_not_process	Film Quarterly Volume 5	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=5
+JSTOR	do_not_process	Film Quarterly Volume 4	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=4
+JSTOR	do_not_process	Film Quarterly Volume 3	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=3
+JSTOR	do_not_process	Film Quarterly Volume 2	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=2
+JSTOR	do_not_process	Film Quarterly Volume 1	base_url=http://caliber.ucpress.net/	journal_id=fq	volume_name=1
+#	@fixedValues	j=Gastronomica
 	manifest	Gastronomica Volume 8	base_url=http://caliber.ucpress.net/	journal_id=gfc	volume_name=8
 	manifest	Gastronomica Volume 7	base_url=http://caliber.ucpress.net/	journal_id=gfc	volume_name=7
 	manifest	Gastronomica Volume 6	base_url=http://caliber.ucpress.net/	journal_id=gfc	volume_name=6
@@ -202,7 +202,7 @@ JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress
 	manifest	Gastronomica Volume 3	base_url=http://caliber.ucpress.net/	journal_id=gfc	volume_name=3
 	manifest	Gastronomica Volume 2	base_url=http://caliber.ucpress.net/	journal_id=gfc	volume_name=2
 	manifest	Gastronomica Volume 1	base_url=http://caliber.ucpress.net/	journal_id=gfc	volume_name=1
-#       @fixedValues    j=Historical Studies in the Natural Sciences
+#	@fixedValues	j=Historical Studies in the Natural Sciences
 	manifest	Historical Studies in the Natural Sciences Volume 38	base_url=http://caliber.ucpress.net/	journal_id=hsns	volume_name=38
 	manifest	Historical Studies in the Natural Sciences Volume 37	base_url=http://caliber.ucpress.net/	journal_id=hsns	volume_name=37
 	manifest	Historical Studies in the Natural Sciences Volume 36	base_url=http://caliber.ucpress.net/	journal_id=hsns	volume_name=36
@@ -211,12 +211,12 @@ JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress
 	manifest	Historical Studies in the Natural Sciences Volume 33	base_url=http://caliber.ucpress.net/	journal_id=hsns	volume_name=33
 	manifest	Historical Studies in the Natural Sciences Volume 32	base_url=http://caliber.ucpress.net/	journal_id=hsns	volume_name=32
 	manifest	Historical Studies in the Natural Sciences Volume 31	base_url=http://caliber.ucpress.net/	journal_id=hsns	volume_name=31
-#       @fixedValues    j=Huntington Library Quarterly
+#	@fixedValues	j=Huntington Library Quarterly
 	manifest	Huntington Library Quarterly Volume 70	base_url=http://caliber.ucpress.net/	journal_id=hlq	volume_name=70
 	manifest	Huntington Library Quarterly Volume 69	base_url=http://caliber.ucpress.net/	journal_id=hlq	volume_name=69
 	manifest	Huntington Library Quarterly Volume 68	base_url=http://caliber.ucpress.net/	journal_id=hlq	volume_name=68
 	manifest	Huntington Library Quarterly Volume 67	base_url=http://caliber.ucpress.net/	journal_id=hlq	volume_name=67
-#       @fixedValues    j=Oral History Review
+#	@fixedValues	j=Oral History Review
 	manifest	Oral History Review Volume 34	base_url=http://caliber.ucpress.net/	journal_id=ohr	volume_name=34
 	manifest	Oral History Review Volume 33	base_url=http://caliber.ucpress.net/	journal_id=ohr	volume_name=33
 	manifest	Oral History Review Volume 32	base_url=http://caliber.ucpress.net/	journal_id=ohr	volume_name=32
@@ -224,7 +224,7 @@ JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress
 	manifest	Oral History Review Volume 30	base_url=http://caliber.ucpress.net/	journal_id=ohr	volume_name=30
 	manifest	Oral History Review Volume 29	base_url=http://caliber.ucpress.net/	journal_id=ohr	volume_name=29
 	manifest	Oral History Review Volume 28	base_url=http://caliber.ucpress.net/	journal_id=ohr	volume_name=28
-#       @fixedValues    j=Pacific Historical Review
+#	@fixedValues	j=Pacific Historical Review
 	manifest	Pacific Historical Review Volume 77	base_url=http://caliber.ucpress.net/	journal_id=phr	volume_name=77
 	manifest	Pacific Historical Review Volume 76	base_url=http://caliber.ucpress.net/	journal_id=phr	volume_name=76
 	manifest	Pacific Historical Review Volume 75	base_url=http://caliber.ucpress.net/	journal_id=phr	volume_name=75
@@ -233,7 +233,7 @@ JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress
 	manifest	Pacific Historical Review Volume 72	base_url=http://caliber.ucpress.net/	journal_id=phr	volume_name=72
 	manifest	Pacific Historical Review Volume 71	base_url=http://caliber.ucpress.net/	journal_id=phr	volume_name=71
 	manifest	Pacific Historical Review Volume 70	base_url=http://caliber.ucpress.net/	journal_id=phr	volume_name=70
-#       @fixedValues    j=The Public Historian
+#	@fixedValues	j=The Public Historian
 	manifest	The Public Historian Volume 30	base_url=http://caliber.ucpress.net/	journal_id=tph	volume_name=30
 	manifest	The Public Historian Volume 29	base_url=http://caliber.ucpress.net/	journal_id=tph	volume_name=29
 	manifest	The Public Historian Volume 28	base_url=http://caliber.ucpress.net/	journal_id=tph	volume_name=28
@@ -264,10 +264,10 @@ JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress
 	manifest	The Public Historian Volume 3	base_url=http://caliber.ucpress.net/	journal_id=tph	volume_name=3
 	manifest	The Public Historian Volume 2	base_url=http://caliber.ucpress.net/	journal_id=tph	volume_name=2
 	manifest	The Public Historian Volume 1	base_url=http://caliber.ucpress.net/	journal_id=tph	volume_name=1
-#       @fixedValues    j=Jung Journal: Culture and Psyche
+#	@fixedValues	j=Jung Journal: Culture and Psyche
 	manifest	Jung Journal: Culture and Psyche Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jung	volume_name=2
 	manifest	Jung Journal: Culture and Psyche Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jung	volume_name=1
-#       @fixedValues    j=Law and Literature
+#	@fixedValues	j=Law and Literature
 	manifest	Law and Literature Volume 20	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=20
 	manifest	Law and Literature Volume 19	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=19
 	manifest	Law and Literature Volume 18	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=18
@@ -276,19 +276,19 @@ JSTOR	do_not_process	Film Quarterly Volume 1     base_url=http://caliber.ucpress
 	manifest	Law and Literature Volume 15	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=15
 	manifest	Law and Literature Volume 14	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=14
 	manifest	Law and Literature Volume 13	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=13
-JSTOR	do_not_process	Law and Literature Volume 12     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=12
-JSTOR	do_not_process	Law and Literature Volume 11     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=11
-JSTOR	do_not_process	Law and Literature Volume 10     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=10
-JSTOR	do_not_process	Law and Literature Volume 9     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=9
-JSTOR	do_not_process	Law and Literature Volume 8     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=8
-JSTOR	do_not_process	Law and Literature Volume 7     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=7
-JSTOR	do_not_process	Law and Literature Volume 6     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=6
-JSTOR	do_not_process	Law and Literature Volume 5     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=5
-JSTOR	do_not_process	Law and Literature Volume 4     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=4
-JSTOR	do_not_process	Law and Literature Volume 3     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=3
-JSTOR	do_not_process	Law and Literature Volume 2     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=2
-JSTOR	do_not_process	Law and Literature Volume 1     base_url=http://caliber.ucpress.net/    journal_id=lal   volume_name=1
-#       @fixedValues    j=Music Perception
+JSTOR	do_not_process	Law and Literature Volume 12	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=12
+JSTOR	do_not_process	Law and Literature Volume 11	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=11
+JSTOR	do_not_process	Law and Literature Volume 10	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=10
+JSTOR	do_not_process	Law and Literature Volume 9	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=9
+JSTOR	do_not_process	Law and Literature Volume 8	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=8
+JSTOR	do_not_process	Law and Literature Volume 7	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=7
+JSTOR	do_not_process	Law and Literature Volume 6	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=6
+JSTOR	do_not_process	Law and Literature Volume 5	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=5
+JSTOR	do_not_process	Law and Literature Volume 4	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=4
+JSTOR	do_not_process	Law and Literature Volume 3	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=3
+JSTOR	do_not_process	Law and Literature Volume 2	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=2
+JSTOR	do_not_process	Law and Literature Volume 1	base_url=http://caliber.ucpress.net/	journal_id=lal	volume_name=1
+#	@fixedValues	j=Music Perception
 	manifest	Music Perception Volume 25	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=25
 	manifest	Music Perception Volume 24	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=24
 	manifest	Music Perception Volume 23	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=23
@@ -314,80 +314,80 @@ JSTOR	do_not_process	Law and Literature Volume 1     base_url=http://caliber.ucp
 	manifest	Music Perception Volume 3	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=3
 	manifest	Music Perception Volume 2	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=2
 	manifest	Music Perception Volume 1	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=1
-#       @fixedValues    j=Representations
-JSTOR	do_not_process	Representations Volume 72     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=72
-JSTOR	do_not_process	Representations Volume 71     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=71
-JSTOR	do_not_process	Representations Volume 70     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=70
-JSTOR	do_not_process	Representations Volume 69     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=69
-JSTOR	do_not_process	Representations Volume 68     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=68
-JSTOR	do_not_process	Representations Volume 67     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=67
-JSTOR	do_not_process	Representations Volume 66     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=66
-JSTOR	do_not_process	Representations Volume 65     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=65
-JSTOR	do_not_process	Representations Volume 64     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=64
-JSTOR	do_not_process	Representations Volume 63     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=63
-JSTOR	do_not_process	Representations Volume 62     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=62
-JSTOR	do_not_process	Representations Volume 61     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=61
-JSTOR	do_not_process	Representations Volume 60     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=60
-JSTOR	do_not_process	Representations Volume 59     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=59
-JSTOR	do_not_process	Representations Volume 58     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=58
-JSTOR	do_not_process	Representations Volume 57     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=57
-JSTOR	do_not_process	Representations Volume 56     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=56
-JSTOR	do_not_process	Representations Volume 55     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=55
-JSTOR	do_not_process	Representations Volume 54     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=54
-JSTOR	do_not_process	Representations Volume 53     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=53
-JSTOR	do_not_process	Representations Volume 52     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=52
-JSTOR	do_not_process	Representations Volume 51     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=51
-JSTOR	do_not_process	Representations Volume 50     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=50
-JSTOR	do_not_process	Representations Volume 49     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=49
-JSTOR	do_not_process	Representations Volume 48     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=48
-JSTOR	do_not_process	Representations Volume 47     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=47
-JSTOR	do_not_process	Representations Volume 46     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=46
-JSTOR	do_not_process	Representations Volume 45     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=45
-JSTOR	do_not_process	Representations Volume 44     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=44
-JSTOR	do_not_process	Representations Volume 43     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=43
-JSTOR	do_not_process	Representations Volume 42     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=42
-JSTOR	do_not_process	Representations Volume 41     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=41
-JSTOR	do_not_process	Representations Volume 40     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=40
-JSTOR	do_not_process	Representations Volume 39     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=39
-JSTOR	do_not_process	Representations Volume 38     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=38
-JSTOR	do_not_process	Representations Volume 37     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=37
-JSTOR	do_not_process	Representations Volume 36     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=36
-JSTOR	do_not_process	Representations Volume 35     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=35
-JSTOR	do_not_process	Representations Volume 34     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=34
-JSTOR	do_not_process	Representations Volume 33     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=33
-JSTOR	do_not_process	Representations Volume 32     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=32
-JSTOR	do_not_process	Representations Volume 31     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=31
-JSTOR	do_not_process	Representations Volume 30     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=30
-JSTOR	do_not_process	Representations Volume 29     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=29
-JSTOR	do_not_process	Representations Volume 28     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=28
-JSTOR	do_not_process	Representations Volume 27     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=27
-JSTOR	do_not_process	Representations Volume 26     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=26
-JSTOR	do_not_process	Representations Volume 25     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=25
-JSTOR	do_not_process	Representations Volume 24     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=24
-JSTOR	do_not_process	Representations Volume 23     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=23
-JSTOR	do_not_process	Representations Volume 22     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=22
-JSTOR	do_not_process	Representations Volume 21     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=21
-JSTOR	do_not_process	Representations Volume 20     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=20
-JSTOR	do_not_process	Representations Volume 19     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=19
-JSTOR	do_not_process	Representations Volume 18     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=18
-JSTOR	do_not_process	Representations Volume 17     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=17
-JSTOR	do_not_process	Representations Volume 16     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=16
-JSTOR	do_not_process	Representations Volume 15     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=15
-JSTOR	do_not_process	Representations Volume 14     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=14
-JSTOR	do_not_process	Representations Volume 13     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=13
-JSTOR	do_not_process	Representations Volume 12     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=12
-JSTOR	do_not_process	Representations Volume 11     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=11
-JSTOR	do_not_process	Representations Volume 10     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=10
-JSTOR	do_not_process	Representations Volume 9     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=9
-JSTOR	do_not_process	Representations Volume 8     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=8
-JSTOR	do_not_process	Representations Volume 7     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=7
-JSTOR	do_not_process	Representations Volume 6     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=6
-JSTOR	do_not_process	Representations Volume 5     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=5
-JSTOR	do_not_process	Representations Volume 4     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=4
-JSTOR	do_not_process	Representations Volume 3     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=3
-JSTOR	do_not_process	Representations Volume 2     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=2
-JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=1
-#       @fixedValues    j=Federal Sentencing Reporter
+#	@fixedValues	j=Representations
+JSTOR	do_not_process	Representations Volume 72	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=72
+JSTOR	do_not_process	Representations Volume 71	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=71
+JSTOR	do_not_process	Representations Volume 70	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=70
+JSTOR	do_not_process	Representations Volume 69	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=69
+JSTOR	do_not_process	Representations Volume 68	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=68
+JSTOR	do_not_process	Representations Volume 67	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=67
+JSTOR	do_not_process	Representations Volume 66	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=66
+JSTOR	do_not_process	Representations Volume 65	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=65
+JSTOR	do_not_process	Representations Volume 64	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=64
+JSTOR	do_not_process	Representations Volume 63	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=63
+JSTOR	do_not_process	Representations Volume 62	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=62
+JSTOR	do_not_process	Representations Volume 61	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=61
+JSTOR	do_not_process	Representations Volume 60	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=60
+JSTOR	do_not_process	Representations Volume 59	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=59
+JSTOR	do_not_process	Representations Volume 58	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=58
+JSTOR	do_not_process	Representations Volume 57	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=57
+JSTOR	do_not_process	Representations Volume 56	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=56
+JSTOR	do_not_process	Representations Volume 55	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=55
+JSTOR	do_not_process	Representations Volume 54	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=54
+JSTOR	do_not_process	Representations Volume 53	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=53
+JSTOR	do_not_process	Representations Volume 52	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=52
+JSTOR	do_not_process	Representations Volume 51	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=51
+JSTOR	do_not_process	Representations Volume 50	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=50
+JSTOR	do_not_process	Representations Volume 49	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=49
+JSTOR	do_not_process	Representations Volume 48	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=48
+JSTOR	do_not_process	Representations Volume 47	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=47
+JSTOR	do_not_process	Representations Volume 46	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=46
+JSTOR	do_not_process	Representations Volume 45	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=45
+JSTOR	do_not_process	Representations Volume 44	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=44
+JSTOR	do_not_process	Representations Volume 43	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=43
+JSTOR	do_not_process	Representations Volume 42	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=42
+JSTOR	do_not_process	Representations Volume 41	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=41
+JSTOR	do_not_process	Representations Volume 40	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=40
+JSTOR	do_not_process	Representations Volume 39	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=39
+JSTOR	do_not_process	Representations Volume 38	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=38
+JSTOR	do_not_process	Representations Volume 37	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=37
+JSTOR	do_not_process	Representations Volume 36	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=36
+JSTOR	do_not_process	Representations Volume 35	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=35
+JSTOR	do_not_process	Representations Volume 34	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=34
+JSTOR	do_not_process	Representations Volume 33	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=33
+JSTOR	do_not_process	Representations Volume 32	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=32
+JSTOR	do_not_process	Representations Volume 31	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=31
+JSTOR	do_not_process	Representations Volume 30	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=30
+JSTOR	do_not_process	Representations Volume 29	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=29
+JSTOR	do_not_process	Representations Volume 28	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=28
+JSTOR	do_not_process	Representations Volume 27	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=27
+JSTOR	do_not_process	Representations Volume 26	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=26
+JSTOR	do_not_process	Representations Volume 25	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=25
+JSTOR	do_not_process	Representations Volume 24	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=24
+JSTOR	do_not_process	Representations Volume 23	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=23
+JSTOR	do_not_process	Representations Volume 22	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=22
+JSTOR	do_not_process	Representations Volume 21	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=21
+JSTOR	do_not_process	Representations Volume 20	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=20
+JSTOR	do_not_process	Representations Volume 19	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=19
+JSTOR	do_not_process	Representations Volume 18	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=18
+JSTOR	do_not_process	Representations Volume 17	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=17
+JSTOR	do_not_process	Representations Volume 16	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=16
+JSTOR	do_not_process	Representations Volume 15	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=15
+JSTOR	do_not_process	Representations Volume 14	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=14
+JSTOR	do_not_process	Representations Volume 13	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=13
+JSTOR	do_not_process	Representations Volume 12	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=12
+JSTOR	do_not_process	Representations Volume 11	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=11
+JSTOR	do_not_process	Representations Volume 10	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=10
+JSTOR	do_not_process	Representations Volume 9	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=9
+JSTOR	do_not_process	Representations Volume 8	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=8
+JSTOR	do_not_process	Representations Volume 7	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=7
+JSTOR	do_not_process	Representations Volume 6	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=6
+JSTOR	do_not_process	Representations Volume 5	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=5
+JSTOR	do_not_process	Representations Volume 4	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=4
+JSTOR	do_not_process	Representations Volume 3	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=3
+JSTOR	do_not_process	Representations Volume 2	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=2
+JSTOR	do_not_process	Representations Volume 1	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=1
+#	@fixedValues	j=Federal Sentencing Reporter
 	manifest	Federal Sentencing Reporter Volume 20	base_url=http://caliber.ucpress.net/	journal_id=fsr	volume_name=20
 	manifest	Federal Sentencing Reporter Volume 19	base_url=http://caliber.ucpress.net/	journal_id=fsr	volume_name=19
 	manifest	Federal Sentencing Reporter Volume 18	base_url=http://caliber.ucpress.net/	journal_id=fsr	volume_name=18
@@ -408,7 +408,7 @@ JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpres
 	manifest	Federal Sentencing Reporter Volume 3	base_url=http://caliber.ucpress.net/	journal_id=fsr	volume_name=3
 	manifest	Federal Sentencing Reporter Volume 2	base_url=http://caliber.ucpress.net/	journal_id=fsr	volume_name=2
 	manifest	Federal Sentencing Reporter Volume 1	base_url=http://caliber.ucpress.net/	journal_id=fsr	volume_name=1
-#       @fixedValues    j=New Criminal Law Review
+#	@fixedValues	j=New Criminal Law Review
 	manifest	New Criminal Law Review Volume 11	base_url=http://caliber.ucpress.net/	journal_id=nclr	volume_name=11
 	manifest	New Criminal Law Review Volume 10	base_url=http://caliber.ucpress.net/	journal_id=nclr	volume_name=10
 	manifest	New Criminal Law Review Volume 9	base_url=http://caliber.ucpress.net/	journal_id=nclr	volume_name=9
@@ -420,7 +420,7 @@ JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpres
 	manifest	New Criminal Law Review Volume 3	base_url=http://caliber.ucpress.net/	journal_id=nclr	volume_name=3
 	manifest	New Criminal Law Review Volume 2	base_url=http://caliber.ucpress.net/	journal_id=nclr	volume_name=2
 	manifest	New Criminal Law Review Volume 1	base_url=http://caliber.ucpress.net/	journal_id=nclr	volume_name=1
-#       @fixedValues    j=Nineteenth-Century Literature
+#	@fixedValues	j=Nineteenth-Century Literature
 	manifest	Nineteenth-Century Literature Volume 62	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=62
 	manifest	Nineteenth-Century Literature Volume 61	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=61
 	manifest	Nineteenth-Century Literature Volume 60	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=60
@@ -428,62 +428,62 @@ JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpres
 	manifest	Nineteenth-Century Literature Volume 58	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=58
 	manifest	Nineteenth-Century Literature Volume 57	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=57
 	manifest	Nineteenth-Century Literature Volume 56	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=56
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 55     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=55
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 54     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=54
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 53     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=53
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 52     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=52
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 51     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=51
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 50     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=50
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 49     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=49
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 48     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=48
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 47     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=47
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 46     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=46
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 45     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=45
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 44     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=44
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 43     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=43
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 42     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=42
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 41     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=41
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 40     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=40
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 39     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=39
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 38     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=38
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 37     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=37
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 36     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=36
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 35     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=35
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 34     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=34
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 33     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=33
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 32     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=32
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 31     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=31
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 30     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=30
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 29     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=29
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 28     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=28
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 27     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=27
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 26     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=26
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 25     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=25
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 24     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=24
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 23     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=23
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 22     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=22
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 21     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=21
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 20     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=20
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 19     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=19
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 18     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=18
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 17     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=17
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 16     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=16
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 15     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=15
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 14     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=14
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 13     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=13
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 12     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=12
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 11     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=11
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 10     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=10
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 9     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=9
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 8     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=8
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 7     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=7
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 6     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=6
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 5     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=5
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 4     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=4
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 3     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=3
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 2     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=2
-JSTOR	do_not_process	Nineteenth-Century Literature Volume 1     base_url=http://caliber.ucpress.net/    journal_id=ncl   volume_name=1
-#       @fixedValues    j=Representations
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 55	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=55
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 54	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=54
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 53	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=53
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 52	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=52
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 51	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=51
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 50	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=50
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 49	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=49
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 48	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=48
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 47	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=47
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 46	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=46
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 45	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=45
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 44	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=44
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 43	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=43
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 42	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=42
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 41	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=41
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 40	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=40
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 39	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=39
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 38	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=38
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 37	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=37
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 36	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=36
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 35	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=35
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 34	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=34
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 33	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=33
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 32	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=32
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 31	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=31
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 30	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=30
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 29	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=29
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 28	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=28
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 27	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=27
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 26	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=26
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 25	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=25
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 24	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=24
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 23	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=23
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 22	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=22
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 21	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=21
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 20	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=20
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 19	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=19
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 18	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=18
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 17	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=17
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 16	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=16
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 15	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=15
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 14	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=14
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 13	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=13
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 12	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=12
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 11	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=11
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 10	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=10
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 9	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=9
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 8	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=8
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 7	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=7
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 6	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=6
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 5	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=5
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 4	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=4
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 3	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=3
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 2	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=2
+JSTOR	do_not_process	Nineteenth-Century Literature Volume 1	base_url=http://caliber.ucpress.net/	journal_id=ncl	volume_name=1
+#	@fixedValues	j=Representations
 	manifest	Representations Volume 102	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=102
 	manifest	Representations Volume 101	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=101
 	manifest	Representations Volume 100	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=100
@@ -514,79 +514,79 @@ JSTOR	do_not_process	Nineteenth-Century Literature Volume 1     base_url=http://
 	manifest	Representations Volume 75	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=75
 	manifest	Representations Volume 74	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=74
 	manifest	Representations Volume 73	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=73
-JSTOR	do_not_process	Representations Volume 72     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=72
-JSTOR	do_not_process	Representations Volume 71     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=71
-JSTOR	do_not_process	Representations Volume 70     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=70
-JSTOR	do_not_process	Representations Volume 69     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=69
-JSTOR	do_not_process	Representations Volume 68     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=68
-JSTOR	do_not_process	Representations Volume 67     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=67
-JSTOR	do_not_process	Representations Volume 66     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=66
-JSTOR	do_not_process	Representations Volume 65     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=65
-JSTOR	do_not_process	Representations Volume 64     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=64
-JSTOR	do_not_process	Representations Volume 63     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=63
-JSTOR	do_not_process	Representations Volume 62     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=62
-JSTOR	do_not_process	Representations Volume 61     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=61
-JSTOR	do_not_process	Representations Volume 60     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=60
-JSTOR	do_not_process	Representations Volume 59     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=59
-JSTOR	do_not_process	Representations Volume 58     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=58
-JSTOR	do_not_process	Representations Volume 57     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=57
-JSTOR	do_not_process	Representations Volume 56     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=56
-JSTOR	do_not_process	Representations Volume 55     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=55
-JSTOR	do_not_process	Representations Volume 54     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=54
-JSTOR	do_not_process	Representations Volume 53     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=53
-JSTOR	do_not_process	Representations Volume 52     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=52
-JSTOR	do_not_process	Representations Volume 51     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=51
-JSTOR	do_not_process	Representations Volume 50     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=50
-JSTOR	do_not_process	Representations Volume 49     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=49
-JSTOR	do_not_process	Representations Volume 48     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=48
-JSTOR	do_not_process	Representations Volume 47     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=47
-JSTOR	do_not_process	Representations Volume 46     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=46
-JSTOR	do_not_process	Representations Volume 45     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=45
-JSTOR	do_not_process	Representations Volume 44     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=44
-JSTOR	do_not_process	Representations Volume 43     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=43
-JSTOR	do_not_process	Representations Volume 42     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=42
-JSTOR	do_not_process	Representations Volume 41     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=41
-JSTOR	do_not_process	Representations Volume 40     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=40
-JSTOR	do_not_process	Representations Volume 39     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=39
-JSTOR	do_not_process	Representations Volume 38     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=38
-JSTOR	do_not_process	Representations Volume 37     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=37
-JSTOR	do_not_process	Representations Volume 36     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=36
-JSTOR	do_not_process	Representations Volume 35     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=35
-JSTOR	do_not_process	Representations Volume 34     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=34
-JSTOR	do_not_process	Representations Volume 33     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=33
-JSTOR	do_not_process	Representations Volume 32     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=32
-JSTOR	do_not_process	Representations Volume 31     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=31
-JSTOR	do_not_process	Representations Volume 30     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=30
-JSTOR	do_not_process	Representations Volume 29     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=29
-JSTOR	do_not_process	Representations Volume 28     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=28
-JSTOR	do_not_process	Representations Volume 27     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=27
-JSTOR	do_not_process	Representations Volume 26     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=26
-JSTOR	do_not_process	Representations Volume 25     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=25
-JSTOR	do_not_process	Representations Volume 24     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=24
-JSTOR	do_not_process	Representations Volume 23     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=23
-JSTOR	do_not_process	Representations Volume 22     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=22
-JSTOR	do_not_process	Representations Volume 21     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=21
-JSTOR	do_not_process	Representations Volume 20     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=20
-JSTOR	do_not_process	Representations Volume 19     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=19
-JSTOR	do_not_process	Representations Volume 18     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=18
-JSTOR	do_not_process	Representations Volume 17     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=17
-JSTOR	do_not_process	Representations Volume 16     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=16
-JSTOR	do_not_process	Representations Volume 15     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=15
-JSTOR	do_not_process	Representations Volume 14     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=14
-JSTOR	do_not_process	Representations Volume 13     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=13
-JSTOR	do_not_process	Representations Volume 12     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=12
-JSTOR	do_not_process	Representations Volume 11     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=11
-JSTOR	do_not_process	Representations Volume 10     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=10
-JSTOR	do_not_process	Representations Volume 9     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=9
-JSTOR	do_not_process	Representations Volume 8     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=8
-JSTOR	do_not_process	Representations Volume 7     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=7
-JSTOR	do_not_process	Representations Volume 6     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=6
-JSTOR	do_not_process	Representations Volume 5     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=5
-JSTOR	do_not_process	Representations Volume 4     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=4
-JSTOR	do_not_process	Representations Volume 3     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=3
-JSTOR	do_not_process	Representations Volume 2     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=2
-JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpress.net/    journal_id=rep   volume_name=1
-#       @fixedValues    j=Rhetorica
+JSTOR	do_not_process	Representations Volume 72	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=72
+JSTOR	do_not_process	Representations Volume 71	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=71
+JSTOR	do_not_process	Representations Volume 70	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=70
+JSTOR	do_not_process	Representations Volume 69	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=69
+JSTOR	do_not_process	Representations Volume 68	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=68
+JSTOR	do_not_process	Representations Volume 67	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=67
+JSTOR	do_not_process	Representations Volume 66	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=66
+JSTOR	do_not_process	Representations Volume 65	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=65
+JSTOR	do_not_process	Representations Volume 64	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=64
+JSTOR	do_not_process	Representations Volume 63	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=63
+JSTOR	do_not_process	Representations Volume 62	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=62
+JSTOR	do_not_process	Representations Volume 61	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=61
+JSTOR	do_not_process	Representations Volume 60	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=60
+JSTOR	do_not_process	Representations Volume 59	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=59
+JSTOR	do_not_process	Representations Volume 58	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=58
+JSTOR	do_not_process	Representations Volume 57	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=57
+JSTOR	do_not_process	Representations Volume 56	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=56
+JSTOR	do_not_process	Representations Volume 55	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=55
+JSTOR	do_not_process	Representations Volume 54	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=54
+JSTOR	do_not_process	Representations Volume 53	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=53
+JSTOR	do_not_process	Representations Volume 52	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=52
+JSTOR	do_not_process	Representations Volume 51	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=51
+JSTOR	do_not_process	Representations Volume 50	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=50
+JSTOR	do_not_process	Representations Volume 49	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=49
+JSTOR	do_not_process	Representations Volume 48	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=48
+JSTOR	do_not_process	Representations Volume 47	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=47
+JSTOR	do_not_process	Representations Volume 46	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=46
+JSTOR	do_not_process	Representations Volume 45	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=45
+JSTOR	do_not_process	Representations Volume 44	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=44
+JSTOR	do_not_process	Representations Volume 43	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=43
+JSTOR	do_not_process	Representations Volume 42	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=42
+JSTOR	do_not_process	Representations Volume 41	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=41
+JSTOR	do_not_process	Representations Volume 40	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=40
+JSTOR	do_not_process	Representations Volume 39	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=39
+JSTOR	do_not_process	Representations Volume 38	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=38
+JSTOR	do_not_process	Representations Volume 37	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=37
+JSTOR	do_not_process	Representations Volume 36	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=36
+JSTOR	do_not_process	Representations Volume 35	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=35
+JSTOR	do_not_process	Representations Volume 34	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=34
+JSTOR	do_not_process	Representations Volume 33	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=33
+JSTOR	do_not_process	Representations Volume 32	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=32
+JSTOR	do_not_process	Representations Volume 31	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=31
+JSTOR	do_not_process	Representations Volume 30	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=30
+JSTOR	do_not_process	Representations Volume 29	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=29
+JSTOR	do_not_process	Representations Volume 28	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=28
+JSTOR	do_not_process	Representations Volume 27	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=27
+JSTOR	do_not_process	Representations Volume 26	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=26
+JSTOR	do_not_process	Representations Volume 25	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=25
+JSTOR	do_not_process	Representations Volume 24	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=24
+JSTOR	do_not_process	Representations Volume 23	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=23
+JSTOR	do_not_process	Representations Volume 22	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=22
+JSTOR	do_not_process	Representations Volume 21	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=21
+JSTOR	do_not_process	Representations Volume 20	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=20
+JSTOR	do_not_process	Representations Volume 19	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=19
+JSTOR	do_not_process	Representations Volume 18	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=18
+JSTOR	do_not_process	Representations Volume 17	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=17
+JSTOR	do_not_process	Representations Volume 16	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=16
+JSTOR	do_not_process	Representations Volume 15	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=15
+JSTOR	do_not_process	Representations Volume 14	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=14
+JSTOR	do_not_process	Representations Volume 13	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=13
+JSTOR	do_not_process	Representations Volume 12	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=12
+JSTOR	do_not_process	Representations Volume 11	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=11
+JSTOR	do_not_process	Representations Volume 10	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=10
+JSTOR	do_not_process	Representations Volume 9	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=9
+JSTOR	do_not_process	Representations Volume 8	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=8
+JSTOR	do_not_process	Representations Volume 7	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=7
+JSTOR	do_not_process	Representations Volume 6	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=6
+JSTOR	do_not_process	Representations Volume 5	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=5
+JSTOR	do_not_process	Representations Volume 4	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=4
+JSTOR	do_not_process	Representations Volume 3	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=3
+JSTOR	do_not_process	Representations Volume 2	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=2
+JSTOR	do_not_process	Representations Volume 1	base_url=http://caliber.ucpress.net/	journal_id=rep	volume_name=1
+#	@fixedValues	j=Rhetorica
 	manifest	Rhetorica Volume 26	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=26
 	manifest	Rhetorica Volume 25	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=25
 	manifest	Rhetorica Volume 24	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=24
@@ -613,7 +613,7 @@ JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpres
 	manifest	Rhetorica Volume 3	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=3
 	manifest	Rhetorica Volume 2	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=2
 	manifest	Rhetorica Volume 1	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=1
-#       @fixedValues    j=19th-Century Music
+#	@fixedValues	j=19th-Century Music
 	manifest	19th-Century Music Volume 31	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=31
 	manifest	19th-Century Music Volume 30	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=30
 	manifest	19th-Century Music Volume 29	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=29
@@ -621,31 +621,31 @@ JSTOR	do_not_process	Representations Volume 1     base_url=http://caliber.ucpres
 	manifest	19th-Century Music Volume 27	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=27
 	manifest	19th-Century Music Volume 26	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=26
 	manifest	19th-Century Music Volume 25	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=25
-JSTOR	do_not_process	19th-Century Music Volume 24     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=24
-JSTOR	do_not_process	19th-Century Music Volume 23     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=23
-JSTOR	do_not_process	19th-Century Music Volume 22     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=22
-JSTOR	do_not_process	19th-Century Music Volume 21     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=21
-JSTOR	do_not_process	19th-Century Music Volume 20     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=20
-JSTOR	do_not_process	19th-Century Music Volume 19     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=19
-JSTOR	do_not_process	19th-Century Music Volume 18     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=18
-JSTOR	do_not_process	19th-Century Music Volume 17     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=17
-JSTOR	do_not_process	19th-Century Music Volume 16     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=16
-JSTOR	do_not_process	19th-Century Music Volume 15     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=15
-JSTOR	do_not_process	19th-Century Music Volume 14     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=14
-JSTOR	do_not_process	19th-Century Music Volume 13     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=13
-JSTOR	do_not_process	19th-Century Music Volume 12     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=12
-JSTOR	do_not_process	19th-Century Music Volume 11     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=11
-JSTOR	do_not_process	19th-Century Music Volume 10     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=10
-JSTOR	do_not_process	19th-Century Music Volume 9     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=9
-JSTOR	do_not_process	19th-Century Music Volume 8     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=8
-JSTOR	do_not_process	19th-Century Music Volume 7     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=7
-JSTOR	do_not_process	19th-Century Music Volume 6     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=6
-JSTOR	do_not_process	19th-Century Music Volume 5     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=5
-JSTOR	do_not_process	19th-Century Music Volume 4     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=4
-JSTOR	do_not_process	19th-Century Music Volume 3     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=3
-JSTOR	do_not_process	19th-Century Music Volume 2     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=2
-JSTOR	do_not_process	19th-Century Music Volume 1     base_url=http://caliber.ucpress.net/    journal_id=ncm   volume_name=1
-#       @fixedValues    j=Journal of Musicology
+JSTOR	do_not_process	19th-Century Music Volume 24	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=24
+JSTOR	do_not_process	19th-Century Music Volume 23	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=23
+JSTOR	do_not_process	19th-Century Music Volume 22	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=22
+JSTOR	do_not_process	19th-Century Music Volume 21	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=21
+JSTOR	do_not_process	19th-Century Music Volume 20	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=20
+JSTOR	do_not_process	19th-Century Music Volume 19	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=19
+JSTOR	do_not_process	19th-Century Music Volume 18	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=18
+JSTOR	do_not_process	19th-Century Music Volume 17	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=17
+JSTOR	do_not_process	19th-Century Music Volume 16	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=16
+JSTOR	do_not_process	19th-Century Music Volume 15	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=15
+JSTOR	do_not_process	19th-Century Music Volume 14	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=14
+JSTOR	do_not_process	19th-Century Music Volume 13	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=13
+JSTOR	do_not_process	19th-Century Music Volume 12	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=12
+JSTOR	do_not_process	19th-Century Music Volume 11	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=11
+JSTOR	do_not_process	19th-Century Music Volume 10	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=10
+JSTOR	do_not_process	19th-Century Music Volume 9	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=9
+JSTOR	do_not_process	19th-Century Music Volume 8	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=8
+JSTOR	do_not_process	19th-Century Music Volume 7	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=7
+JSTOR	do_not_process	19th-Century Music Volume 6	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=6
+JSTOR	do_not_process	19th-Century Music Volume 5	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=5
+JSTOR	do_not_process	19th-Century Music Volume 4	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=4
+JSTOR	do_not_process	19th-Century Music Volume 3	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=3
+JSTOR	do_not_process	19th-Century Music Volume 2	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=2
+JSTOR	do_not_process	19th-Century Music Volume 1	base_url=http://caliber.ucpress.net/	journal_id=ncm	volume_name=1
+#	@fixedValues	j=Journal of Musicology
 	manifest	Journal of Musicology Volume 25	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=25
 	manifest	Journal of Musicology Volume 24	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=24
 	manifest	Journal of Musicology Volume 23	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=23
@@ -653,25 +653,25 @@ JSTOR	do_not_process	19th-Century Music Volume 1     base_url=http://caliber.ucp
 	manifest	Journal of Musicology Volume 21	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=21
 	manifest	Journal of Musicology Volume 20	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=20
 	manifest	Journal of Musicology Volume 19	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=19
-JSTOR	do_not_process	Journal of Musicology Volume 18     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=18
-JSTOR	do_not_process	Journal of Musicology Volume 17     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=17
-JSTOR	do_not_process	Journal of Musicology Volume 16     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=16
-JSTOR	do_not_process	Journal of Musicology Volume 15     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=15
-JSTOR	do_not_process	Journal of Musicology Volume 14     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=14
-JSTOR	do_not_process	Journal of Musicology Volume 13     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=13
-JSTOR	do_not_process	Journal of Musicology Volume 12     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=12
-JSTOR	do_not_process	Journal of Musicology Volume 11     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=11
-JSTOR	do_not_process	Journal of Musicology Volume 10     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=10
-JSTOR	do_not_process	Journal of Musicology Volume 9     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=9
-JSTOR	do_not_process	Journal of Musicology Volume 8     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=8
-JSTOR	do_not_process	Journal of Musicology Volume 7     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=7
-JSTOR	do_not_process	Journal of Musicology Volume 6     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=6
-JSTOR	do_not_process	Journal of Musicology Volume 5     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=5
-JSTOR	do_not_process	Journal of Musicology Volume 4     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=4
-JSTOR	do_not_process	Journal of Musicology Volume 3     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=3
-JSTOR	do_not_process	Journal of Musicology Volume 2     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=2
-JSTOR	do_not_process	Journal of Musicology Volume 1     base_url=http://caliber.ucpress.net/    journal_id=jm   volume_name=1
-#       @fixedValues    j=Journal of the American Musicological Society
+JSTOR	do_not_process	Journal of Musicology Volume 18	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=18
+JSTOR	do_not_process	Journal of Musicology Volume 17	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=17
+JSTOR	do_not_process	Journal of Musicology Volume 16	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=16
+JSTOR	do_not_process	Journal of Musicology Volume 15	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=15
+JSTOR	do_not_process	Journal of Musicology Volume 14	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=14
+JSTOR	do_not_process	Journal of Musicology Volume 13	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=13
+JSTOR	do_not_process	Journal of Musicology Volume 12	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=12
+JSTOR	do_not_process	Journal of Musicology Volume 11	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=11
+JSTOR	do_not_process	Journal of Musicology Volume 10	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=10
+JSTOR	do_not_process	Journal of Musicology Volume 9	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=9
+JSTOR	do_not_process	Journal of Musicology Volume 8	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=8
+JSTOR	do_not_process	Journal of Musicology Volume 7	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=7
+JSTOR	do_not_process	Journal of Musicology Volume 6	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=6
+JSTOR	do_not_process	Journal of Musicology Volume 5	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=5
+JSTOR	do_not_process	Journal of Musicology Volume 4	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=4
+JSTOR	do_not_process	Journal of Musicology Volume 3	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=3
+JSTOR	do_not_process	Journal of Musicology Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=2
+JSTOR	do_not_process	Journal of Musicology Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jm	volume_name=1
+#	@fixedValues	j=Journal of the American Musicological Society
 	manifest	Journal of the American Musicological Society Volume 61	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=61
 	manifest	Journal of the American Musicological Society Volume 60	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=60
 	manifest	Journal of the American Musicological Society Volume 59	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=59
@@ -680,60 +680,60 @@ JSTOR	do_not_process	Journal of Musicology Volume 1     base_url=http://caliber.
 	manifest	Journal of the American Musicological Society Volume 56	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=56
 	manifest	Journal of the American Musicological Society Volume 55	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=55
 	manifest	Journal of the American Musicological Society Volume 54	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=54
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 53     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=53
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 52     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=52
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 51     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=51
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 50     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=50
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 49     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=49
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 48     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=48
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 47     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=47
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 46     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=46
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 45     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=45
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 44     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=44
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 43     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=43
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 42     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=42
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 41     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=41
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 40     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=40
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 39     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=39
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 38     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=38
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 37     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=37
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 36     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=36
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 35     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=35
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 34     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=34
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 33     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=33
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 32     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=32
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 31     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=31
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 30     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=30
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 29     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=29
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 28     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=28
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 27     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=27
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 26     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=26
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 25     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=25
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 24     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=24
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 23     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=23
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 22     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=22
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 21     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=21
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 20     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=20
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 19     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=19
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 18     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=18
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 17     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=17
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 16     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=16
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 15     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=15
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 14     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=14
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 13     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=13
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 12     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=12
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 11     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=11
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 10     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=10
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 9     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=9
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 8     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=8
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 7     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=7
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 6     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=6
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 5     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=5
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 4     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=4
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 3     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=3
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 2     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=2
-JSTOR	do_not_process	Journal of the American Musicological Society Volume 1     base_url=http://caliber.ucpress.net/    journal_id=jams   volume_name=1
-#       @fixedValues    j=Music Perception
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 53	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=53
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 52	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=52
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 51	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=51
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 50	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=50
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 49	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=49
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 48	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=48
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 47	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=47
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 46	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=46
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 45	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=45
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 44	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=44
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 43	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=43
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 42	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=42
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 41	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=41
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 40	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=40
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 39	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=39
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 38	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=38
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 37	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=37
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 36	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=36
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 35	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=35
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 34	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=34
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 33	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=33
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 32	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=32
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 31	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=31
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 30	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=30
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 29	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=29
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 28	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=28
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 27	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=27
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 26	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=26
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 25	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=25
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 24	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=24
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 23	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=23
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 22	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=22
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 21	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=21
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 20	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=20
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 19	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=19
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 18	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=18
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 17	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=17
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 16	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=16
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 15	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=15
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 14	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=14
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 13	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=13
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 12	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=12
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 11	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=11
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 10	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=10
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 9	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=9
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 8	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=8
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 7	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=7
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 6	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=6
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 5	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=5
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 4	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=4
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 3	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=3
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=2
+JSTOR	do_not_process	Journal of the American Musicological Society Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jams	volume_name=1
+#	@fixedValues	j=Music Perception
 	manifest	Music Perception Volume 25	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=25
 	manifest	Music Perception Volume 24	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=24
 	manifest	Music Perception Volume 23	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=23
@@ -742,7 +742,7 @@ JSTOR	do_not_process	Journal of the American Musicological Society Volume 1     
 	manifest	Music Perception Volume 20	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=20
 	manifest	Music Perception Volume 19	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=19
 	manifest	Music Perception Volume 18	base_url=http://caliber.ucpress.net/	journal_id=mp	volume_name=18
-#       @fixedValues    j=Music Theory Spectrum
+#	@fixedValues	j=Music Theory Spectrum
 	manifest	Music Theory Spectrum Volume 30	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=30
 	manifest	Music Theory Spectrum Volume 29	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=29
 	manifest	Music Theory Spectrum Volume 28	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=28
@@ -751,38 +751,38 @@ JSTOR	do_not_process	Journal of the American Musicological Society Volume 1     
 	manifest	Music Theory Spectrum Volume 25	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=25
 	manifest	Music Theory Spectrum Volume 24	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=24
 	manifest	Music Theory Spectrum Volume 23	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=23
-JSTOR	do_not_process	Music Theory Spectrum Volume 22     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=22
-JSTOR	do_not_process	Music Theory Spectrum Volume 21     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=21
-JSTOR	do_not_process	Music Theory Spectrum Volume 20     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=20
-JSTOR	do_not_process	Music Theory Spectrum Volume 19     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=19
-JSTOR	do_not_process	Music Theory Spectrum Volume 18     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=18
-JSTOR	do_not_process	Music Theory Spectrum Volume 17     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=17
-JSTOR	do_not_process	Music Theory Spectrum Volume 16     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=16
-JSTOR	do_not_process	Music Theory Spectrum Volume 15     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=15
-JSTOR	do_not_process	Music Theory Spectrum Volume 14     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=14
-JSTOR	do_not_process	Music Theory Spectrum Volume 13     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=13
-JSTOR	do_not_process	Music Theory Spectrum Volume 12     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=12
-JSTOR	do_not_process	Music Theory Spectrum Volume 11     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=11
-JSTOR	do_not_process	Music Theory Spectrum Volume 10     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=10
-JSTOR	do_not_process	Music Theory Spectrum Volume 9     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=9
-JSTOR	do_not_process	Music Theory Spectrum Volume 8     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=8
-JSTOR	do_not_process	Music Theory Spectrum Volume 7     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=7
-JSTOR	do_not_process	Music Theory Spectrum Volume 6     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=6
-JSTOR	do_not_process	Music Theory Spectrum Volume 5     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=5
-JSTOR	do_not_process	Music Theory Spectrum Volume 4     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=4
-JSTOR	do_not_process	Music Theory Spectrum Volume 3     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=3
-JSTOR	do_not_process	Music Theory Spectrum Volume 2     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=2
-JSTOR	do_not_process	Music Theory Spectrum Volume 1     base_url=http://caliber.ucpress.net/    journal_id=mts   volume_name=1
-#       @fixedValues    j=The Auk: A Quarterly Journal of Ornithology
+JSTOR	do_not_process	Music Theory Spectrum Volume 22	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=22
+JSTOR	do_not_process	Music Theory Spectrum Volume 21	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=21
+JSTOR	do_not_process	Music Theory Spectrum Volume 20	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=20
+JSTOR	do_not_process	Music Theory Spectrum Volume 19	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=19
+JSTOR	do_not_process	Music Theory Spectrum Volume 18	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=18
+JSTOR	do_not_process	Music Theory Spectrum Volume 17	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=17
+JSTOR	do_not_process	Music Theory Spectrum Volume 16	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=16
+JSTOR	do_not_process	Music Theory Spectrum Volume 15	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=15
+JSTOR	do_not_process	Music Theory Spectrum Volume 14	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=14
+JSTOR	do_not_process	Music Theory Spectrum Volume 13	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=13
+JSTOR	do_not_process	Music Theory Spectrum Volume 12	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=12
+JSTOR	do_not_process	Music Theory Spectrum Volume 11	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=11
+JSTOR	do_not_process	Music Theory Spectrum Volume 10	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=10
+JSTOR	do_not_process	Music Theory Spectrum Volume 9	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=9
+JSTOR	do_not_process	Music Theory Spectrum Volume 8	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=8
+JSTOR	do_not_process	Music Theory Spectrum Volume 7	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=7
+JSTOR	do_not_process	Music Theory Spectrum Volume 6	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=6
+JSTOR	do_not_process	Music Theory Spectrum Volume 5	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=5
+JSTOR	do_not_process	Music Theory Spectrum Volume 4	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=4
+JSTOR	do_not_process	Music Theory Spectrum Volume 3	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=3
+JSTOR	do_not_process	Music Theory Spectrum Volume 2	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=2
+JSTOR	do_not_process	Music Theory Spectrum Volume 1	base_url=http://caliber.ucpress.net/	journal_id=mts	volume_name=1
+#	@fixedValues	j=The Auk: A Quarterly Journal of Ornithology
 	manifest	The Auk: A Quarterly Journal of Ornithology Volume 125	base_url=http://caliber.ucpress.net/	journal_id=auk	volume_name=125
-#       @fixedValues    j=The Condor: An International Journal of Avian Biology
+#	@fixedValues	j=The Condor: An International Journal of Avian Biology
 	manifest	The Condor: An International Journal of Avian Biology Volume 110	base_url=http://caliber.ucpress.net/	journal_id=cond	volume_name=110
-#       @fixedValues    j=Ornithological Monographs
+#	@fixedValues	j=Ornithological Monographs
 	manifest	Ornithological Monographs Volume 65	base_url=http://caliber.ucpress.net/	journal_id=om	volume_name=65
-#       @fixedValues    j=Jung Journal: Culture and Psyche
+#	@fixedValues	j=Jung Journal: Culture and Psyche
 	manifest	Jung Journal: Culture and Psyche Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jung	volume_name=2
 	manifest	Jung Journal: Culture and Psyche Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jung	volume_name=1
-#       @fixedValues    j=Nova Religioi
+#	@fixedValues	j=Nova Religioi
 	manifest	Nova Religioi Volume 12	base_url=http://caliber.ucpress.net/	journal_id=nr	volume_name=12
 	manifest	Nova Religioi Volume 11	base_url=http://caliber.ucpress.net/	journal_id=nr	volume_name=11
 	manifest	Nova Religioi Volume 10	base_url=http://caliber.ucpress.net/	journal_id=nr	volume_name=10
@@ -795,7 +795,7 @@ JSTOR	do_not_process	Music Theory Spectrum Volume 1     base_url=http://caliber.
 	manifest	Nova Religioi Volume 3	base_url=http://caliber.ucpress.net/	journal_id=nr	volume_name=3
 	manifest	Nova Religioi Volume 2	base_url=http://caliber.ucpress.net/	journal_id=nr	volume_name=2
 	manifest	Nova Religioi Volume 1	base_url=http://caliber.ucpress.net/	journal_id=nr	volume_name=1
-#       @fixedValues    j=Religion and American Culture
+#	@fixedValues	j=Religion and American Culture
 	manifest	Religion and American Culture Volume 18	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=18
 	manifest	Religion and American Culture Volume 17	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=17
 	manifest	Religion and American Culture Volume 16	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=16
@@ -804,23 +804,23 @@ JSTOR	do_not_process	Music Theory Spectrum Volume 1     base_url=http://caliber.
 	manifest	Religion and American Culture Volume 13	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=13
 	manifest	Religion and American Culture Volume 12	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=12
 	manifest	Religion and American Culture Volume 11	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=11
-JSTOR	do_not_process	Religion and American Culture Volume 10     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=10
-JSTOR	do_not_process	Religion and American Culture Volume 9     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=9
-JSTOR	do_not_process	Religion and American Culture Volume 8     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=8
-JSTOR	do_not_process	Religion and American Culture Volume 7     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=7
-JSTOR	do_not_process	Religion and American Culture Volume 6     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=6
-JSTOR	do_not_process	Religion and American Culture Volume 5     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=5
-JSTOR	do_not_process	Religion and American Culture Volume 4     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=4
-JSTOR	do_not_process	Religion and American Culture Volume 3     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=3
-JSTOR	do_not_process	Religion and American Culture Volume 2     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=2
-JSTOR	do_not_process	Religion and American Culture Volume 1     base_url=http://caliber.ucpress.net/    journal_id=rac   volume_name=1
-#       @fixedValues    j=Sexuality Research &amp; Social Policy
+JSTOR	do_not_process	Religion and American Culture Volume 10	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=10
+JSTOR	do_not_process	Religion and American Culture Volume 9	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=9
+JSTOR	do_not_process	Religion and American Culture Volume 8	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=8
+JSTOR	do_not_process	Religion and American Culture Volume 7	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=7
+JSTOR	do_not_process	Religion and American Culture Volume 6	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=6
+JSTOR	do_not_process	Religion and American Culture Volume 5	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=5
+JSTOR	do_not_process	Religion and American Culture Volume 4	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=4
+JSTOR	do_not_process	Religion and American Culture Volume 3	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=3
+JSTOR	do_not_process	Religion and American Culture Volume 2	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=2
+JSTOR	do_not_process	Religion and American Culture Volume 1	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=1
+#	@fixedValues	j=Sexuality Research &amp; Social Policy
 	manifest	Sexuality Research &amp; Social Policy Volume 5	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=5
 	manifest	Sexuality Research &amp; Social Policy Volume 4	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=4
 	manifest	Sexuality Research &amp; Social Policy Volume 3	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=3
 	manifest	Sexuality Research &amp; Social Policy Volume 2	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=2
 	manifest	Sexuality Research &amp; Social Policy Volume 1	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=1
-#       @fixedValues    j=Contexts
+#	@fixedValues	j=Contexts
 	manifest	Contexts Volume 7	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=7
 	manifest	Contexts Volume 6	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=6
 	manifest	Contexts Volume 5	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=5
@@ -828,7 +828,7 @@ JSTOR	do_not_process	Religion and American Culture Volume 1     base_url=http://
 	manifest	Contexts Volume 3	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=3
 	manifest	Contexts Volume 2	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=2
 	manifest	Contexts Volume 1	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=1
-#       @fixedValues    j=Social Problems
+#	@fixedValues	j=Social Problems
 	manifest	Social Problems Volume 55	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=55
 	manifest	Social Problems Volume 54	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=54
 	manifest	Social Problems Volume 53	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=53
@@ -837,54 +837,54 @@ JSTOR	do_not_process	Religion and American Culture Volume 1     base_url=http://
 	manifest	Social Problems Volume 50	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=50
 	manifest	Social Problems Volume 49	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=49
 	manifest	Social Problems Volume 48	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=48
-JSTOR	do_not_process	Social Problems Volume 47     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=47
-JSTOR	do_not_process	Social Problems Volume 46     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=46
-JSTOR	do_not_process	Social Problems Volume 45     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=45
-JSTOR	do_not_process	Social Problems Volume 44     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=44
-JSTOR	do_not_process	Social Problems Volume 43     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=43
-JSTOR	do_not_process	Social Problems Volume 42     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=42
-JSTOR	do_not_process	Social Problems Volume 41     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=41
-JSTOR	do_not_process	Social Problems Volume 40     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=40
-JSTOR	do_not_process	Social Problems Volume 39     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=39
-JSTOR	do_not_process	Social Problems Volume 38     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=38
-JSTOR	do_not_process	Social Problems Volume 37     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=37
-JSTOR	do_not_process	Social Problems Volume 36     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=36
-JSTOR	do_not_process	Social Problems Volume 35     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=35
-JSTOR	do_not_process	Social Problems Volume 34     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=34
-JSTOR	do_not_process	Social Problems Volume 33     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=33
-JSTOR	do_not_process	Social Problems Volume 32     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=32
-JSTOR	do_not_process	Social Problems Volume 31     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=31
-JSTOR	do_not_process	Social Problems Volume 30     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=30
-JSTOR	do_not_process	Social Problems Volume 29     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=29
-JSTOR	do_not_process	Social Problems Volume 28     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=28
-JSTOR	do_not_process	Social Problems Volume 27     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=27
-JSTOR	do_not_process	Social Problems Volume 26     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=26
-JSTOR	do_not_process	Social Problems Volume 25     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=25
-JSTOR	do_not_process	Social Problems Volume 24     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=24
-JSTOR	do_not_process	Social Problems Volume 23     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=23
-JSTOR	do_not_process	Social Problems Volume 22     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=22
-JSTOR	do_not_process	Social Problems Volume 21     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=21
-JSTOR	do_not_process	Social Problems Volume 20     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=20
-JSTOR	do_not_process	Social Problems Volume 19     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=19
-JSTOR	do_not_process	Social Problems Volume 18     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=18
-JSTOR	do_not_process	Social Problems Volume 17     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=17
-JSTOR	do_not_process	Social Problems Volume 16     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=16
-JSTOR	do_not_process	Social Problems Volume 15     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=15
-JSTOR	do_not_process	Social Problems Volume 14     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=14
-JSTOR	do_not_process	Social Problems Volume 13     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=13
-JSTOR	do_not_process	Social Problems Volume 12     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=12
-JSTOR	do_not_process	Social Problems Volume 11     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=11
-JSTOR	do_not_process	Social Problems Volume 10     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=10
-JSTOR	do_not_process	Social Problems Volume 9     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=9
-JSTOR	do_not_process	Social Problems Volume 8     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=8
-JSTOR	do_not_process	Social Problems Volume 7     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=7
-JSTOR	do_not_process	Social Problems Volume 6     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=6
-JSTOR	do_not_process	Social Problems Volume 5     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=5
-JSTOR	do_not_process	Social Problems Volume 4     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=4
-JSTOR	do_not_process	Social Problems Volume 3     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=3
-JSTOR	do_not_process	Social Problems Volume 2     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=2
-JSTOR	do_not_process	Social Problems Volume 1     base_url=http://caliber.ucpress.net/    journal_id=sp   volume_name=1
-#       @fixedValues    j=Sociological Perspectives
+JSTOR	do_not_process	Social Problems Volume 47	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=47
+JSTOR	do_not_process	Social Problems Volume 46	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=46
+JSTOR	do_not_process	Social Problems Volume 45	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=45
+JSTOR	do_not_process	Social Problems Volume 44	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=44
+JSTOR	do_not_process	Social Problems Volume 43	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=43
+JSTOR	do_not_process	Social Problems Volume 42	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=42
+JSTOR	do_not_process	Social Problems Volume 41	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=41
+JSTOR	do_not_process	Social Problems Volume 40	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=40
+JSTOR	do_not_process	Social Problems Volume 39	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=39
+JSTOR	do_not_process	Social Problems Volume 38	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=38
+JSTOR	do_not_process	Social Problems Volume 37	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=37
+JSTOR	do_not_process	Social Problems Volume 36	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=36
+JSTOR	do_not_process	Social Problems Volume 35	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=35
+JSTOR	do_not_process	Social Problems Volume 34	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=34
+JSTOR	do_not_process	Social Problems Volume 33	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=33
+JSTOR	do_not_process	Social Problems Volume 32	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=32
+JSTOR	do_not_process	Social Problems Volume 31	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=31
+JSTOR	do_not_process	Social Problems Volume 30	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=30
+JSTOR	do_not_process	Social Problems Volume 29	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=29
+JSTOR	do_not_process	Social Problems Volume 28	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=28
+JSTOR	do_not_process	Social Problems Volume 27	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=27
+JSTOR	do_not_process	Social Problems Volume 26	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=26
+JSTOR	do_not_process	Social Problems Volume 25	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=25
+JSTOR	do_not_process	Social Problems Volume 24	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=24
+JSTOR	do_not_process	Social Problems Volume 23	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=23
+JSTOR	do_not_process	Social Problems Volume 22	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=22
+JSTOR	do_not_process	Social Problems Volume 21	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=21
+JSTOR	do_not_process	Social Problems Volume 20	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=20
+JSTOR	do_not_process	Social Problems Volume 19	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=19
+JSTOR	do_not_process	Social Problems Volume 18	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=18
+JSTOR	do_not_process	Social Problems Volume 17	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=17
+JSTOR	do_not_process	Social Problems Volume 16	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=16
+JSTOR	do_not_process	Social Problems Volume 15	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=15
+JSTOR	do_not_process	Social Problems Volume 14	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=14
+JSTOR	do_not_process	Social Problems Volume 13	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=13
+JSTOR	do_not_process	Social Problems Volume 12	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=12
+JSTOR	do_not_process	Social Problems Volume 11	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=11
+JSTOR	do_not_process	Social Problems Volume 10	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=10
+JSTOR	do_not_process	Social Problems Volume 9	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=9
+JSTOR	do_not_process	Social Problems Volume 8	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=8
+JSTOR	do_not_process	Social Problems Volume 7	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=7
+JSTOR	do_not_process	Social Problems Volume 6	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=6
+JSTOR	do_not_process	Social Problems Volume 5	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=5
+JSTOR	do_not_process	Social Problems Volume 4	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=4
+JSTOR	do_not_process	Social Problems Volume 3	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=3
+JSTOR	do_not_process	Social Problems Volume 2	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=2
+JSTOR	do_not_process	Social Problems Volume 1	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=1
+#	@fixedValues	j=Sociological Perspectives
 	manifest	Sociological Perspectives Volume 51	base_url=http://caliber.ucpress.net/	journal_id=sop	volume_name=51
 	manifest	Sociological Perspectives Volume 50	base_url=http://caliber.ucpress.net/	journal_id=sop	volume_name=50
 	manifest	Sociological Perspectives Volume 49	base_url=http://caliber.ucpress.net/	journal_id=sop	volume_name=49
@@ -893,7 +893,7 @@ JSTOR	do_not_process	Social Problems Volume 1     base_url=http://caliber.ucpres
 	manifest	Sociological Perspectives Volume 46	base_url=http://caliber.ucpress.net/	journal_id=sop	volume_name=46
 	manifest	Sociological Perspectives Volume 45	base_url=http://caliber.ucpress.net/	journal_id=sop	volume_name=45
 	manifest	Sociological Perspectives Volume 44	base_url=http://caliber.ucpress.net/	journal_id=sop	volume_name=44
-#       @fixedValues    j=Symbolic Interaction
+#	@fixedValues	j=Symbolic Interaction
 	manifest	Symbolic Interaction Volume 31	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=31
 	manifest	Symbolic Interaction Volume 30	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=30
 	manifest	Symbolic Interaction Volume 29	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=29
