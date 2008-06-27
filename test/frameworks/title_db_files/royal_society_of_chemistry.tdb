@@ -41,7 +41,7 @@ persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www
 	manifest	Chemical Society Reviews Volume 31	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=31	year=2002
 	manifest	Chemical Society Reviews Volume 32	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=32	year=2003
 	manifest	Chemical Society Reviews Volume 33	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=33	year=2004
-	manifest	Chemical Society Reviews Volume 34	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=34	year=2005
+	ready	Chemical Society Reviews Volume 34	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=34	year=2005
 	manifest	Chemical Society Reviews Volume 35	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=35	year=2006
 	released	Chemical Society Reviews Volume 36	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=36	year=2007
 	manifest	Chemical Society Reviews Volume 37	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=cs	volume_name=37	year=2008
@@ -65,7 +65,7 @@ persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www
 	manifest	Dalton Transactions 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1998
 	manifest	Dalton Transactions 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1999
 	manifest	Dalton Transactions 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2000
-	manifest	Dalton Transactions 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2001
+	ready	Dalton Transactions 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2001
 	released	Dalton Transactions 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2002
 	manifest	Dalton Transactions 2003	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2003
 	manifest	Dalton Transactions 2004	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2004
@@ -187,7 +187,7 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 #	@fixedValues	j=New Journal of Chemistry					
 	manifest	New Journal of Chemistry Volume 22	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=22	year=1998
 	ready	New Journal of Chemistry Volume 23	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=23	year=1999
-	manifest	New Journal of Chemistry Volume 24	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=24	year=2000
+	ready	New Journal of Chemistry Volume 24	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=24	year=2000
 	released	New Journal of Chemistry Volume 25	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=25	year=2001
 	manifest	New Journal of Chemistry Volume 26	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=26	year=2002
 	released	New Journal of Chemistry Volume 27	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=27	year=2003
@@ -197,11 +197,11 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	released	New Journal of Chemistry Volume 31	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=31	year=2007
 	released	New Journal of Chemistry Volume 32	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=32	year=2008
 #	@fixedValues	j=Organic & Biomolecular Chemistry					
-	manifest	Organic & Biomolecular Chemistry Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=1	year=2003
+	ready	Organic & Biomolecular Chemistry Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=1	year=2003
 	manifest	Organic & Biomolecular Chemistry Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=2	year=2004
-	manifest	Organic & Biomolecular Chemistry Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=3	year=2005
-	manifest	Organic & Biomolecular Chemistry Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=4	year=2006
-	manifest	Organic & Biomolecular Chemistry Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=5	year=2007
+	ready	Organic & Biomolecular Chemistry Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=3	year=2005
+	ready	Organic & Biomolecular Chemistry Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=4	year=2006
+	ready	Organic & Biomolecular Chemistry Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=5	year=2007
 	manifest	Organic & Biomolecular Chemistry Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=6	year=2008
 #	@fixedValues	j=Pesticide Outlook					
 	manifest	Pesticide Outlook Volume 11	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=11	year=2000
@@ -209,11 +209,11 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	manifest	Pesticide Outlook Volume 13	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=13	year=2002
 	manifest	Pesticide Outlook Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=14	year=2003
 #	@fixedValues	j=Photochemical & Photobiological Sciences					
-	manifest	Photochemical & Photobiological Sciences Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=1	year=2002
+	ready	Photochemical & Photobiological Sciences Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=1	year=2002
 	manifest	Photochemical & Photobiological Sciences Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=2	year=2003
-	manifest	Photochemical & Photobiological Sciences Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=3	year=2004
+	ready	Photochemical & Photobiological Sciences Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=3	year=2004
 	ready	Photochemical & Photobiological Sciences Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=4	year=2005
-	manifest	Photochemical & Photobiological Sciences Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=5	year=2006
+	ready	Photochemical & Photobiological Sciences Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=5	year=2006
 	manifest	Photochemical & Photobiological Sciences Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=6	year=2007
 	released	Photochemical & Photobiological Sciences Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=7	year=2008
 #	@fixedValues	j=PhysChemComm					
