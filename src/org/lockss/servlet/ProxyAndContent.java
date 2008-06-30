@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.25 2007-12-19 05:15:31 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.26 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,10 @@ package org.lockss.servlet;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.List;
 
 import javax.servlet.*;
+import javax.servlet.http.*;
 import org.mortbay.html.*;
 
 import org.apache.commons.collections.iterators.ObjectArrayIterator;
@@ -43,17 +45,252 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.app.LockssApp;
 import org.lockss.config.*;
 import org.lockss.daemon.ResourceManager;
-import org.lockss.proxy.AuditProxyManager;
+import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.crawler.*;
 import org.lockss.util.*;
 
 /*
- * This file used to be called AccessControl.java
+ * UI to configure content and audit proxies, and content server
  */
-
 public class ProxyAndContent extends LockssServlet {
+  private static Logger log = Logger.getLogger("ProxyAndContent");
+
+  private static final String SUFFIX_KEY_ENABLE = "_ena";
+  private static final String SUFFIX_KEY_PORT = "_port";
+  private static final String SUFFIX_KEY_HOST = "_host";
+
+  private static final String ACTION_MAIN = "Main";
+  private static final String ACTION_CONTENT = "Content";
+  private static final String ACTION_CONTENT_SERVER = "ContentServer";
+  private static final String ACTION_PROXY_CLIENT = "ProxyClient";
+  private static final String ACTION_UPDATE_CONTENT_SERVER =
+    "Update Content Servers";
+  private static final String ACTION_UPDATE_PROXY_CLIENT =
+    "Update Proxy Client";
+
+  private static final String BAD_ACTION = "Unknown_Action";
+
+  private static final String CONFIG_FILE_COMMENT = "Content Access Options";
+
+  private static final String CONTENT_EXPLANATION =
+    "Define access groups and manage access control rules for the content preserved on this box.";
+
+  private static final String CONTENT_PROXY_FOOT =
+    "The content proxy attempts to satisfy all requests by forwarding them to the publisher (origin server).  If content cannot be obtained from the publisher and that content is preserved on the LOCKSS box, the preserved content will be transparently served to the user.";
+
+  private static final String SERVE_CONTENT_FOOT =
+    "The content server provides a direct browsable interface to the preserved content.";
+
+  private static final String AUDIT_PROXY_FOOT =
+    "The audit proxy serves <b>only</b> preserved content, and never forwards requests to the publisher or any other site. By configuring a browser to proxy to this port, you can view the content stored on the LOCKSS box.  All requests for content not on the box will return a \"404 Not Found\" error.";
+
+  private static final String ICP_FOOT =
+    "The ICP server responds to queries sent by other proxies and caches to let them know if this LOCKSS box has the content they are looking for. This is useful if you are integrating this box into an existing network structure with other proxies and caches that support ICP.";
+
+  private static final String FILTER_FOOT =
+    "Other ports can be configured but may not be reachable due to packet filters.";
+
+  private static final String CRAWL_PROXY_ENABLE_NAME = "proxy_client_ena";
+  private static final String CRAWL_PROXY_HOST_NAME = "proxy_client_host";
+  private static final String CRAWL_PROXY_PORT_NAME = "proxy_client_port";
+
+  private static final String MAIN_EXPLANATION =
+// FIXME: change back after 1.15 branch
+//    "Configure proxy options, such as the audit proxy and the ICP server. Manage access groups and configure access rules for the content preserved on this cache.";
+    "Configure how content is collected from publishers and served to users.";
+
+  private static final String CONTENT_SERVER_EXPLANATION =
+    "Manage this box's content servers and proxies.";
+
+  private static final String PROXY_CLIENT_EXPLANATION =
+    "Configure the LOCKSS crawler to access the net through a proxy server.";
+
+  private static final String BACK_LINK_TXT = "Back to Content Access Options";
+
+  ServerInfo contentServerInfo =
+    new ServerInfo("Content server",
+		   "content_server_",
+		   ContentServletManager.PARAM_START,
+		   ContentServletManager.PARAM_PORT,
+		   ContentServletManager.DEFAULT_START) {
+      List getUsablePorts() {
+	return
+	  resourceMgr.getUsableTcpPorts(ContentServletManager.SERVER_NAME);
+      }
+      boolean isLegalPort(int port) {
+	return
+	  resourceMgr.isTcpPortAvailable(port,
+					 ContentServletManager.SERVER_NAME);
+      }
+    };
+
+  ServerInfo contentProxyInfo =
+    new ServerInfo("Content proxy",
+		   "content_proxy_",
+		   ProxyManager.PARAM_START,
+		   ProxyManager.PARAM_PORT,
+		   ProxyManager.DEFAULT_START) {
+      List getUsablePorts() {
+	return resourceMgr.getUsableTcpPorts(ProxyManager.SERVER_NAME);
+      }
+      boolean isLegalPort(int port) {
+	return resourceMgr.isTcpPortAvailable(port, ProxyManager.SERVER_NAME);
+      }
+    };
+
+  ServerInfo auditProxyInfo =
+    new ServerInfo("Audit proxy",
+		   "audit_proxy_",
+		   AuditProxyManager.PARAM_START,
+		   AuditProxyManager.PARAM_PORT,
+		   AuditProxyManager.DEFAULT_START) {
+      List getUsablePorts() {
+	return resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME);
+      }
+      boolean isLegalPort(int port) {
+	return resourceMgr.isTcpPortAvailable(port,
+					      AuditProxyManager.SERVER_NAME);
+      }
+    };
+
+  ServerInfo icpServerInfo =
+    new ServerInfo("ICP server",
+		   "icp_",
+		   IcpManager.PARAM_ICP_ENABLED,
+		   IcpManager.PARAM_ICP_PORT,
+		   false) {
+      List getUsablePorts() {
+	return resourceMgr.getUsableUdpPorts(IcpManager.SERVER_NAME);
+      }
+      boolean isLegalPort(int port) {
+	return resourceMgr.isUdpPortAvailable(port, IcpManager.SERVER_NAME);
+      }
+    };
+
+  ServerInfo[] serverInfos = {
+    contentServerInfo,
+    contentProxyInfo,
+    auditProxyInfo,
+    icpServerInfo};
+
+  abstract class ServerInfo {
+    // constants
+    String name;
+    String formKeyPrefix;
+    String enableParam;
+    String portParam;
+    String hostParam;
+    boolean enableParamDefault;
+
+    // state
+    boolean enable;
+    boolean formEnable;
+    int port;
+    String formPort;
+    String host;
+    String formHost;
+
+    ServerInfo(String name,
+	       String formKeyPrefix,
+	       String enableParam,
+	       String portParam,
+	       boolean enableParamDefault) {
+      this(name, formKeyPrefix, enableParam, portParam,
+	   null, enableParamDefault);
+    }
+
+    ServerInfo(String name,
+	       String formKeyPrefix,
+	       String enableParam,
+	       String portParam,
+	       String hostParam,
+	       boolean enableParamDefault) {
+      this.name = name;
+      this.formKeyPrefix = formKeyPrefix;
+      this.enableParam = enableParam;
+      this.portParam = portParam;
+      this.hostParam = hostParam;
+      this.enableParamDefault = enableParamDefault;
+    }
+
+    String getName() { return name; }
+    String getEnableKey() { return formKeyPrefix + SUFFIX_KEY_ENABLE; }
+    String getPortKey() { return formKeyPrefix + SUFFIX_KEY_PORT; }
+    String getHostKey() { return formKeyPrefix + SUFFIX_KEY_HOST; }
+    String getEnableParam() { return enableParam; }
+    String getPortParam() { return portParam; }
+    String getHostParam() { return hostParam; }
+    boolean getEnableParamDefault() { return enableParamDefault; }
+
+    String getDefaultHost() { return null; }
+
+    boolean getDefaultEnable() {
+      if (isForm) {
+	return formEnable;
+      }
+      return CurrentConfig.getBooleanParam(getEnableParam(),
+					   getEnableParamDefault());
+    }
+
+    String getDefaultPort() {
+      String port = null;
+      if (isForm) {
+	port = formPort;
+      }
+      if (StringUtil.isNullString(port)) {
+	port = CurrentConfig.getParam(getPortParam());
+      }
+      if (!StringUtil.isNullString(port)) {
+	try {
+	  int portNumber = Integer.parseInt(port);
+	  if (portNumber <= 0) {
+	    port = "";
+	  }
+	} catch (NumberFormatException nfeIgnore) {}
+      }
+      return port;
+    }
+
+    void readForm(HttpServletRequest req) {
+      formEnable =
+	!StringUtil.isNullString(req.getParameter(getEnableKey()));
+      formPort = req.getParameter(getPortKey());
+    }
+
+    void processForm(ArrayList errList) {
+      enable = formEnable;
+      port = -1;
+      try {
+	port = Integer.parseInt(formPort);
+      } catch (NumberFormatException nfe) {
+	if (formEnable) {
+        // bad number is an error only if enabling
+	  errList.add(getName() + " port must be a number: " + formPort);
+	}
+      }
+      if (formEnable && !isLegalPort(port)) {
+	errList.add("Illegal " + getName() + " port number: " + formPort
+          + ", must be >=1024 and not in use");
+      }
+    }
+
+    void updateConfig(Configuration config) {
+      config.put(getEnableParam(), Boolean.toString(enable));
+      String p = (enable ? Integer.toString(port)
+		  : CurrentConfig.getParam(getPortParam()));
+      if (StringUtils.isNotEmpty(p)) {
+	config.put(getPortParam(), p);
+      }
+    }
+
+    abstract List getUsablePorts();
+    abstract boolean isLegalPort(int port);
+  }
+
+  private ConfigManager configMgr;
+  private ResourceManager resourceMgr;
 
   protected boolean isForm;
 
@@ -61,7 +298,6 @@ public class ProxyAndContent extends LockssServlet {
 
   private int auditPort;
 
-  private ConfigManager configMgr;
 
   private boolean formAuditEnable;
 
@@ -77,7 +313,6 @@ public class ProxyAndContent extends LockssServlet {
   private String formCrawlProxyHost;
   private String formCrawlProxyPort;
 
-  private ResourceManager resourceMgr;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -94,11 +329,11 @@ public class ProxyAndContent extends LockssServlet {
 
     if (StringUtil.isNullString(action)) displayMenu_Main();
     else if (action.equals(ACTION_MAIN)) displayMenu_Main();
-    else if (action.equals(ACTION_PROXY_SERVER)) displayProxyServer();
+    else if (action.equals(ACTION_CONTENT_SERVER)) displayContentServer();
     else if (action.equals(ACTION_PROXY_CLIENT)) displayProxyClient();
 // FIXME: disabled until after the 1.15 branch
 //    else if (action.equals(ACTION_CONTENT)) displayMenu_Content();
-    else if (action.equals(ACTION_UPDATE_PROXY_SERVER)) processUpdateProxyServer();
+    else if (action.equals(ACTION_UPDATE_CONTENT_SERVER)) processUpdateContentServer();
     else if (action.equals(ACTION_UPDATE_PROXY_CLIENT)) processUpdateProxyClient();
     else if (action.equals(BAD_ACTION)) {
       // FIXME: This error condition is artificially singled out for testing
@@ -132,50 +367,52 @@ public class ProxyAndContent extends LockssServlet {
 
   private void displayMenu_Content() throws IOException {
     displayMenu(CONTENT_EXPLANATION, getDescriptors_Content(),
-        srvLink(myServletDescr(), "Back to Proxy Options and Content Access Control"));
+		srvLink(myServletDescr(), BACK_LINK_TXT));
   }
 
   private void displayMenu_Main() throws IOException {
     displayMenu(MAIN_EXPLANATION, getDescriptors_Main(), null);
   }
 
-  private void displayProxyServer() throws IOException {
+  void layoutEnablePortRow(Table tbl,
+			   ServerInfo si,
+			   String enableDescription,
+			   String enableFootnote) {
+    ServletUtil.layoutEnablePortRow(this,
+                                    tbl,
+                                    si.getEnableKey(),
+                                    si.getDefaultEnable(),
+                                    enableDescription,
+                                    enableFootnote,
+                                    FILTER_FOOT,
+				    si.getPortKey(),
+				    si.getDefaultPort(),
+				    si.getUsablePorts());
+  }
+
+  private void displayContentServer() throws IOException {
     // Start page
     Page page = newPage();
     addJavaScript(page);
-    ServletUtil.layoutExplanationBlock(page, PROXY_SERVER_EXPLANATION);
+    ServletUtil.layoutExplanationBlock(page, CONTENT_SERVER_EXPLANATION);
     layoutErrorBlock(page);
 
     // Start form
     Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
     Table tbl = ServletUtil.newEnablePortTable();
 
+    // ServeContent
+    layoutEnablePortRow(tbl, contentServerInfo, "content server",
+			SERVE_CONTENT_FOOT);
+    // Content proxy
+    layoutEnablePortRow(tbl, contentProxyInfo, "content proxy",
+			CONTENT_PROXY_FOOT);
     // Audit proxy
-    ServletUtil.layoutEnablePortRow(this,
-                                    tbl,
-                                    AUDIT_ENABLE_NAME,
-                                    getDefaultAuditEnable(),
-                                    "audit proxy",
-                                    AUDIT_FOOT,
-                                    FILTER_FOOT,
-                                    AUDIT_PORT_NAME,
-                                    getDefaultAuditPort(),
-                                    resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-
+    layoutEnablePortRow(tbl, auditProxyInfo, "audit proxy", AUDIT_PROXY_FOOT);
     // ICP server
     if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
-      ServletUtil.layoutEnablePortRow(this,
-                                      tbl,
-                                      ICP_ENABLE_NAME,
-                                      getDefaultIcpEnable(),
-                                      "ICP server",
-                                      ICP_FOOT,
-                                      FILTER_FOOT,
-                                      ICP_PORT_NAME,
-                                      getDefaultIcpPort(),
-                                      resourceMgr.getUsableUdpPorts(IcpManager.SERVER_NAME));
-    }
-    else {
+      layoutEnablePortRow(tbl, icpServerInfo, "ICP server", ICP_FOOT);
+    } else {
       final String ICP_DISABLED_FOOT =
         "To enable ICP you must perform a platform reconfiguration reboot.";
       tbl.newRow();
@@ -190,60 +427,13 @@ public class ProxyAndContent extends LockssServlet {
     frm.add(new Input(Input.Hidden, "isForm", "true"));
 
     ServletUtil.layoutSubmitButton(this, frm, ACTION_TAG,
-				   ACTION_UPDATE_PROXY_SERVER);
+				   ACTION_UPDATE_CONTENT_SERVER);
     page.add(frm);
 
     // Finish up
-    ServletUtil.layoutBackLink(page,
-        srvLink(myServletDescr(), "Back to Proxy Options and Content Access Control"));
+    ServletUtil.layoutBackLink(page, srvLink(myServletDescr(), BACK_LINK_TXT));
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
-  }
-
-  private boolean getDefaultAuditEnable() {
-    if (isForm) {
-      return formAuditEnable;
-    }
-    return CurrentConfig.getBooleanParam(PARAM_AUDIT_ENABLE,
-                                         DEFAULT_AUDIT_ENABLE);
-  }
-
-  private String getDefaultAuditPort() {
-    String port = null;
-    if (isForm) {
-      port = formAuditPort;
-    }
-    if (StringUtil.isNullString(port)) {
-      port = CurrentConfig.getParam(PARAM_AUDIT_PORT);
-    }
-    if (!StringUtil.isNullString(port)) {
-      try {
-        int portNumber = Integer.parseInt(port);
-        if (!(portNumber > 0)) {
-          port = "";
-        }
-      }
-      catch (NumberFormatException nfeIgnore) {}
-    }
-    return port;
-  }
-
-  private boolean getDefaultIcpEnable() {
-    return isForm
-      ? formIcpEnable
-      : getLockssDaemon().getIcpManager().isIcpServerRunning();
-  }
-
-  private String getDefaultIcpPort() {
-    String port = null;
-    if (isForm) {
-      port = formIcpPort;
-    }
-    if (StringUtil.isNullString(port)) {
-      int portNumber = getLockssDaemon().getIcpManager().getCurrentPort();
-      port = portNumber > 0 ? Integer.toString(portNumber) : "";
-    }
-    return port;
   }
 
   private void displayProxyClient() throws IOException {
@@ -302,8 +492,7 @@ public class ProxyAndContent extends LockssServlet {
     page.add(frm);
 
     // Finish up
-    ServletUtil.layoutBackLink(page,
-        srvLink(myServletDescr(), "Back to Proxy Options and Content Access Control"));
+    ServletUtil.layoutBackLink(page, srvLink(myServletDescr(), BACK_LINK_TXT));
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
   }
@@ -350,9 +539,9 @@ public class ProxyAndContent extends LockssServlet {
 
   private Iterator getDescriptors_Main() {
     return new ObjectArrayIterator(new LinkWithExplanation[] {
-        makeDescriptor("Proxy Server Options",
-                       ACTION_PROXY_SERVER,
-		       "Configure the audit proxy and the ICP server."),
+        makeDescriptor("Content Server Options",
+                       ACTION_CONTENT_SERVER,
+		       "Configure content servers and proxies and ICP."),
 
         makeDescriptor("Proxy Client Options",
                        ACTION_PROXY_CLIENT,
@@ -364,16 +553,6 @@ public class ProxyAndContent extends LockssServlet {
     });
   }
 
-  private boolean isLegalAuditPort(int port) {
-    return port >= 1024 &&
-        resourceMgr.isTcpPortAvailable(port, AuditProxyManager.SERVER_NAME);
-  }
-
-  private boolean isLegalIcpPort(int port) {
-    return port >= 1024 &&
-        resourceMgr.isUdpPortAvailable(port, IcpManager.SERVER_NAME);
-  }
-
   private LinkWithExplanation makeDescriptor(String linkText,
                                              String linkAction,
                                              String linkExpl) {
@@ -382,15 +561,18 @@ public class ProxyAndContent extends LockssServlet {
         linkExpl);
   }
 
-  private void processUpdateProxyServer() throws IOException {
+  private void processUpdateContentServer() throws IOException {
     ArrayList errList = new ArrayList();
 
     // Read form
-    processUpdateProxyServer_ReadForm();
+    for (ServerInfo si : serverInfos) {
+      si.readForm(req);
+    }
 
-    // Process form
-    processUpdateProxyServer_Audit(errList);
-    processUpdateProxyServer_Icp(errList);
+    // Process form values
+    for (ServerInfo si : serverInfos) {
+      si.processForm(errList);
+    }
 
     // Prepare error message
     if (errList.size() > 0) {
@@ -398,104 +580,42 @@ public class ProxyAndContent extends LockssServlet {
       StringBuilder buffer = new StringBuilder();
       StringUtil.separatedString(errList, "<br>", buffer);
       errMsg = buffer.toString();
-    }
-    else {
+    } else {
       // There were no errors
       try {
-        processUpdateProxyServer_SaveChanges();
+        processUpdateContentServer_SaveChanges();
 	statusMsg = "Update successful";
       }
       catch (IOException ioe) {
-        logger.error("Could not save changes", ioe);
+        log.error("Could not save changes", ioe);
         errMsg = "Error: Could not save changes.\n" + ioe.toString();
       }
     }
 
-    displayProxyServer();
+    displayContentServer();
   }
 
-  private void processUpdateProxyServer_Audit(ArrayList errList) {
-    auditPort = -1;
-    try {
-      auditPort = Integer.parseInt(formAuditPort);
-    } catch (NumberFormatException nfe) {
-      if (formAuditEnable) {
-        // bad number is an error only if enabling
-        errList.add("Audit proxy port must be a number: " + formAuditPort);
-      }
-    }
-    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
-      errList.add("Illegal audit proxy port number: " + formAuditPort
-          + ", must be >=1024 and not in use");
-    }
-  }
-
-  private void processUpdateProxyServer_Icp(ArrayList errList) {
-    icpPort = -1;
-    try {
-      icpPort = Integer.parseInt(formIcpPort);
-    }
-    catch (NumberFormatException nfe) {
-      if (formIcpEnable) {
-        // bad number is an error only if enabling
-        errList.add("ICP port must be a number: " + formIcpPort);
-      }
-    }
-    if (formIcpEnable && !isLegalIcpPort(icpPort)) {
-      errList.add("Illegal ICP port number: " + formIcpPort
-          + ", must be >=1024 and not in use");
-    }
-  }
-
-  private void processUpdateProxyServer_ReadForm() {
-    formAuditEnable = !StringUtil.isNullString(req.getParameter(AUDIT_ENABLE_NAME));
-    formAuditPort = req.getParameter(AUDIT_PORT_NAME);
-    formIcpEnable = !StringUtil.isNullString(req.getParameter(ICP_ENABLE_NAME));
-    formIcpPort = req.getParameter(ICP_PORT_NAME);
-  }
-
-  /* package */ static void saveAuditAndIcp(ConfigManager configMgr,
-                                            boolean auditEnable,
-                                            String auditPort,
-                                            boolean icpEnable,
-                                            String icpPort)
-        throws IOException {
-    final String TRUE = "true";
-    final String FALSE = "false";
+  private void processUpdateContentServer_SaveChanges() throws IOException {
     Configuration config;
 
-    // Save audit proxy config
     config = ConfigManager.newConfiguration();
-    config.put(PARAM_AUDIT_ENABLE, auditEnable ? TRUE : FALSE);
-    if (StringUtils.isNotEmpty(auditPort)) {
-      config.put(PARAM_AUDIT_PORT, auditPort);
+
+    for (ServerInfo si : serverInfos) {
+      si.updateConfig(config);
     }
+
     configMgr.modifyCacheConfigFile(config,
-                                    ConfigManager.CONFIG_FILE_AUDIT_PROXY,
+                                    ConfigManager.CONFIG_FILE_CONTENT_SERVERS,
                                     CONFIG_FILE_COMMENT);
 
-    // Save ICP server config
-    config = ConfigManager.newConfiguration();
-    config.put(IcpManager.PARAM_ICP_ENABLED, icpEnable ? TRUE : FALSE);
-    if (StringUtils.isNotEmpty(icpPort)) {
-      config.put(IcpManager.PARAM_ICP_PORT, icpPort);
+    // If successfully wrote combined server config file, delete old
+    // individual files
+    try {
+      configMgr.deleteCacheConfigFile(ConfigManager.CONFIG_FILE_ICP_SERVER);
+      configMgr.deleteCacheConfigFile(ConfigManager.CONFIG_FILE_AUDIT_PROXY);
+    } catch (Exception e) {
+      log.warning("Error deleting obsolete config file", e);
     }
-    configMgr.modifyCacheConfigFile(config,
-                                    ConfigManager.CONFIG_FILE_ICP_SERVER,
-                                    CONFIG_FILE_COMMENT);
-  }
-
-  private void processUpdateProxyServer_SaveChanges() throws IOException {
-    // temporary measure
-    String auditp =
-      formAuditEnable ? Integer.toString(auditPort) :
-      CurrentConfig.getParam(PARAM_AUDIT_PORT);
-
-    String icpp =
-      formIcpEnable ? Integer.toString(icpPort) :
-      CurrentConfig.getParam(IcpManager.PARAM_ICP_PORT);
-
-    saveAuditAndIcp(configMgr, formAuditEnable, auditp, formIcpEnable, icpp);
   }
 
   private void processUpdateProxyClient() throws IOException {
@@ -526,8 +646,7 @@ public class ProxyAndContent extends LockssServlet {
       StringBuilder buffer = new StringBuilder();
       StringUtil.separatedString(errList, "<br>", buffer);
       errMsg = buffer.toString();
-    }
-    else {
+    } else {
       // There were no errors
       try {
 	if (formCrawlProxyEnable) {
@@ -545,7 +664,7 @@ public class ProxyAndContent extends LockssServlet {
 	statusMsg = "Update successful";
       }
       catch (IOException ioe) {
-        logger.error("Could not save changes", ioe);
+        log.error("Could not save changes", ioe);
         errMsg = "Error: Could not save changes.\n" + ioe.toString();
       }
     }
@@ -571,72 +690,5 @@ public class ProxyAndContent extends LockssServlet {
                                     ConfigManager.CONFIG_FILE_CRAWL_PROXY,
                                     "Crawl proxy options");
   }
-
-  public static final String PARAM_AUDIT_ENABLE =
-    AuditProxyManager.PARAM_START;
-
-  public static final String PARAM_AUDIT_PORT =
-    AuditProxyManager.PARAM_PORT;
-
-  static final boolean DEFAULT_AUDIT_ENABLE =
-    AuditProxyManager.DEFAULT_START;
-
-  private static final String ACTION_CONTENT = "Content";
-
-  private static final String ACTION_MAIN = "Main";
-
-  private static final String ACTION_PROXY_SERVER = "ProxyServer";
-
-  private static final String ACTION_PROXY_CLIENT = "ProxyClient";
-
-  private static final String ACTION_UPDATE_PROXY_SERVER = "Update ProxyServer";
-  private static final String ACTION_UPDATE_PROXY_CLIENT = "Update ProxyClient";
-
-  private static final String AUDIT_ENABLE_NAME = "audit_ena";
-
-  private static final String AUDIT_FOOT =
-    "The audit proxy serves <b>only</b> cached content, and never forwards requests to the publisher or any other site. By configuring a browser to proxy to this port, you can view the content stored on the cache.  All requests for content not on the cache will return a \"404 Not Found\" error.";
-
-  private static final String AUDIT_PORT_NAME = "audit_port";
-
-  private static final String BAD_ACTION = "Unknown_Action";
-
-  private static final String CONFIG_FILE_COMMENT = "Proxy Options and Content Access Control";
-
-  private static final String CONTENT_EXPLANATION =
-    "Define access groups and manage access control rules for the content preserved on this cache.";
-
-  private static final String FILTER_FOOT =
-    "Other ports can be configured but may not be reachable due to packet filters.";
-
-  private static final String ICP_ENABLE_NAME =
-    "icp_ena";
-
-  /**
-   * <p>A footnote explaining the role of the ICP server.</p>
-   */
-  private static final String ICP_FOOT =
-    "The ICP server responds to queries sent by other proxies and caches to let them know if this cache has the content they are looking for. This is useful if you are integrating this cache into an existing network structure with other proxies and caches that support ICP.";
-
-  private static final String ICP_PORT_NAME =
-    "icp_port";
-
-  private static final String CRAWL_PROXY_ENABLE_NAME = "proxy_client_ena";
-  private static final String CRAWL_PROXY_HOST_NAME = "proxy_client_host";
-  private static final String CRAWL_PROXY_PORT_NAME = "proxy_client_port";
-
-  private static Logger logger = Logger.getLogger("ProxyAndContent");
-
-  private static final String MAIN_EXPLANATION =
-// FIXME: change back after 1.15 branch
-//    "Configure proxy options, such as the audit proxy and the ICP server. Manage access groups and configure access rules for the content preserved on this cache.";
-//     "Configure proxy options, such as the audit proxy and the ICP server.";
-    "Configure proxies running on this machine, or the use of other proxies.";
-
-  private static final String PROXY_SERVER_EXPLANATION =
-    "Manage this cache's audit proxy and ICP server.";
-
-  private static final String PROXY_CLIENT_EXPLANATION =
-    "Configure the LOCKSS crawler to access the net through a proxy server.";
 
 }

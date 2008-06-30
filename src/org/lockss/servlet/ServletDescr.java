@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.10 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.11 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -52,19 +52,34 @@ public class ServletDescr {
   static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
 
   // flags
-  public static final int ON_CLIENT = 0x01; // runs on client (else on admin)
-  public static final int PER_CLIENT = 0x02; // per client (takes client arg)
-  public static final int NOT_IN_NAV = 0x04; // no link in nav table
-  public static final int LARGE_LOGO = 0x08; // use large LOCKSS logo
-  public static final int DEBUG_ONLY = 0x10; // debug user only
-  public static final int PATH_IS_URL = 0x20; // debug user only
-  public static final int DISALLOW_IF_UI_WARNING = 0x40;
+  /** Runs on client (else on admin) */
+  public static final int ON_CLIENT = 0x01;
+
+  /** Per client (takes client arg) */
+  public static final int PER_CLIENT = 0x02;
+
+  /** Include link in nav table */
+  public static final int IN_NAV = 0x04;
+
+  /** Include link in UI home page */
+  public static final int IN_UIHOME = 0x08;
+
+  /** Use large LOCKSS logo */
+  public static final int LARGE_LOGO = 0x10;
+
+  /** Debug user only */
+  public static final int DEBUG_ONLY = 0x20;
+
+  /** The servlet path is actually the entire URL that should appear in
+   * links */
+  public static final int PATH_IS_URL = 0x40;
+
+  /** Refuse to run this servlet if o.l.ui.warning has a value */
+  public static final int DISALLOW_IF_UI_WARNING = 0x80;
 
   public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
-  public static final int IN_NAV = 0x1000;
-  public static final int IN_UIHOME = 0x2000;
-  public static final int IN_PROXYANDCONTENT = 0x4000; // Will probably go away now
+//   public static final int IN_PROXYANDCONTENT = 0x4000; // Will probably go away now
 
 
   public ServletDescr(String servletName,
@@ -199,6 +214,10 @@ public class ServletDescr {
     return (flags & DEBUG_ONLY) != 0;
   }
 
+//   boolean isAdminOnly() {
+//     return (flags & DEBUG_ONLY) != 0;
+//   }
+
   boolean isLargeLogo() {
     return (flags & LARGE_LOGO) != 0;
   }
@@ -215,11 +234,6 @@ public class ServletDescr {
   /** return true if servlet should be in UI home page */
   public boolean isInUiHome(LockssServlet uiHomeServlet) {
     return isFlagSet(IN_UIHOME);
-  }
-
-  public boolean isInProxyAndContent() {
-    // Will probably go away now
-    return isFlagSet(IN_PROXYANDCONTENT);
   }
 
   boolean isFlagSet(int flag) {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletTestCase.java,v 1.5 2005-10-05 23:12:41 troberts Exp $
+ * $Id: LockssServletTestCase.java,v 1.6 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,10 @@ public class LockssServletTestCase extends LockssTestCase {
   /** Establish a servlet runner and client. */
   protected void initServletRunner() {
     sRunner = new LockssServletRunner();
-    sRunner.setServletContextAttribute("LockssApp", theDaemon);
+    sRunner.setServletContextAttribute(ServletManager.CONTEXT_ATTR_LOCKSS_APP,
+				       theDaemon);
+    sRunner.setServletContextAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR,
+				       theDaemon.getServletManager());
     // Tell LockssServlet to include javascript directly in the page rather
     // than linking to it, because this little servlet runner can't acess
     // other server files

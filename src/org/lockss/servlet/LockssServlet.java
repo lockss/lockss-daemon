@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.97 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.98 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -122,8 +122,10 @@ public abstract class LockssServlet extends HttpServlet
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     context = config.getServletContext();
-    theApp = (LockssApp)context.getAttribute("LockssApp");
-    servletMgr = theApp.getServletManager();
+    theApp =
+      (LockssApp)context.getAttribute(ServletManager.CONTEXT_ATTR_LOCKSS_APP);
+    servletMgr =
+      (ServletManager)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR);
   }
 
   public ServletManager getServletManager() {
@@ -407,6 +409,11 @@ public abstract class LockssServlet extends HttpServlet
     return req.isUserInRole("debugRole") &&
       StringUtil.isNullString(req.getParameter("nodebug"));
   }
+
+//   protected boolean isAdminUser() {
+//     return (req.isUserInRole("adminRole") || isDebugUser()) &&
+//       StringUtil.isNullString(req.getParameter("noadmin"));
+//   }
 
   // Called when a servlet doesn't get the parameters it expects/needs
   protected void paramError() throws IOException {

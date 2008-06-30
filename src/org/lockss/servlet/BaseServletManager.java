@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.18 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.19 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -147,10 +147,7 @@ public abstract class BaseServletManager
   /** Start servlets  */
   public void startService() {
     initDescrs();
-    if (start) {
-      super.startService();
-      startServlets();
-    }
+    super.startService();
   }
 
   /** Stop servlets  */
@@ -203,6 +200,16 @@ public abstract class BaseServletManager
 		  ", excl: " + excludeIps);
 	setIpFilters();
       }
+    }
+  }
+
+  void startOrStop() {
+    if (start) {
+      if (getDaemon().isDaemonInited()) {
+	startServlets();
+      }
+    } else if (isServerRunning()) {
+      stopServer();
     }
   }
 
@@ -259,7 +266,8 @@ public abstract class BaseServletManager
     HttpContext context = server.getContext(path);
     context.setAttribute(HttpContext.__ErrorHandler,
 			 new LockssErrorHandler("daemon")); 
-    context.setAttribute("LockssApp", theApp);
+    context.setAttribute(CONTEXT_ATTR_LOCKSS_APP, theApp);
+    context.setAttribute(CONTEXT_ATTR_SERVLET_MGR, this);
     // In this environment there is no point in consuming memory with
     // cached resources
     context.setMaxCachedFileSize(0);
@@ -461,7 +469,7 @@ public abstract class BaseServletManager
   /** Struct to hold particulars of concrete servlet managers needed for
    * generic processing.  Mostly config param defaults. */
 
-  protected class ManagerInfo {
+  protected static class ManagerInfo {
     String prefix;
     String accessPrefix;		// if from different server
     String serverName;

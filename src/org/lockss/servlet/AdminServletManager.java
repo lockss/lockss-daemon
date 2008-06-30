@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.1 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.2 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class AdminServletManager extends BaseServletManager {
 		     UiHome.class,
                      "Cache Administration",
 		     "Home",
-		     ServletDescr.NOT_IN_NAV | ServletDescr.LARGE_LOGO);
+		     ServletDescr.LARGE_LOGO);
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr("BatchAuConfig",
 		     BatchAuConfig.class,
@@ -175,8 +175,8 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("AuConfig",
 		     AuConfig.class,
                      "Manual Journal Configuration",
-		     ServletDescr.NOT_IN_NAV | ServletDescr.IN_UIHOME |
-		     ServletDescr.DISALLOW_IF_UI_WARNING,
+		     (ServletDescr.IN_UIHOME |
+		      ServletDescr.DISALLOW_IF_UI_WARNING),
                      "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr("AdminIpAccess",
@@ -187,13 +187,13 @@ public class AdminServletManager extends BaseServletManager {
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr("ProxyIpAccess",
 		     ProxyIpAccess.class,
-                     "Proxy Access Control",
+                     "Content Access Control",
                      ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Control access to the preserved content");
   protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
     new ServletDescr("ProxyAndContent",
 		     ProxyAndContent.class,
-                     "Proxy Options",
+                     "Content Access Options",
                      ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Configure the audit proxy and the ICP server.");
   protected static final ServletDescr SERVLET_PROXY_INFO =
@@ -228,17 +228,15 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("ViewContent",
 		     ViewContent.class,
                      "View Content",
-                     ServletDescr.DEBUG_ONLY | ServletDescr.NOT_IN_NAV);
+                     ServletDescr.DEBUG_ONLY);
   public static final ServletDescr SERVLET_SERVE_CONTENT =
     new ServletDescr("ServeContent",
 		     ServeContent.class,
-                     "Serve Content",
-                     ServletDescr.NOT_IN_NAV);
+                     "Serve Content");
   public static final ServletDescr SERVLET_LIST_OBJECTS =
     new ServletDescr("ListObjects",
 		     ListObjects.class,
-                     "List Objests",
-                     ServletDescr.NOT_IN_NAV);
+                     "List Objests");
   protected static final ServletDescr SERVLET_HASH_CUS =
     new ServletDescr("HashCUS",
 		     HashCUS.class,
@@ -274,13 +272,11 @@ public class AdminServletManager extends BaseServletManager {
   protected static final ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr("RaiseAlert",
 		     RaiseAlert.class,
-                     "Raise Alert",
-		     ServletDescr.NOT_IN_NAV);
+                     "Raise Alert");
   protected static final ServletDescr SERVLET_DEBUG_PANEL =
     new ServletDescr("DebugPanel",
 		     DebugPanel.class,
-                     "Debug Panel",
-		     ServletDescr.NOT_IN_NAV);
+                     "Debug Panel");
   protected static final ServletDescr LINK_CONTACT =
     new ServletDescr(null,
 		     null,
@@ -375,6 +371,7 @@ public class AdminServletManager extends BaseServletManager {
 	    StringUtil.breakAt(DEFAULT_INFRAME_CONTENT_TYPES, ';', 0, true);
 	}
       }
+      startOrStop();
     }
   }
 

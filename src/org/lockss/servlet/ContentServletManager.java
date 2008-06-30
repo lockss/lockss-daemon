@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.1 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.2 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -125,12 +125,11 @@ public class ContentServletManager
     new ServletDescr("ServeContent",
 		     ServeContent.class,
                      "Serve Content",
-                     ServletDescr.NOT_IN_NAV);
+                     ServletDescr.IN_NAV);
   public static final ServletDescr SERVLET_LIST_OBJECTS =
     new ServletDescr("ListObjects",
 		     ListObjects.class,
-                     "List Objests",
-                     ServletDescr.NOT_IN_NAV);
+                     "List Objests");
   protected static final ServletDescr LINK_HELP =
     new ServletDescr(null,
 		     null,
@@ -182,6 +181,7 @@ public class ContentServletManager
       setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
       compressorEnabled = config.getBoolean(PARAM_COMPRESSOR_ENABLED,
 					    DEFAULT_COMPRESSOR_ENABLED);
+      startOrStop();
     }
   }
 
@@ -220,23 +220,23 @@ public class ContentServletManager
 
     context.addHandler(handler);
 
-//     // ResourceHandler should come after servlets
-//     // find the htdocs directory, set as resource base
-//     ClassLoader loader = Thread.currentThread().getContextClassLoader();
-//     URL resourceUrl=loader.getResource("org/lockss/htdocs/");
-//     log.debug("Resource URL: " + resourceUrl);
+    // ResourceHandler should come after servlets
+    // find the htdocs directory, set as resource base
+    ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    URL resourceUrl=loader.getResource("org/lockss/htdocs/");
+    log.debug("Resource URL: " + resourceUrl);
 
-//     context.setResourceBase(resourceUrl.toString());
-//     rootResourceHandler = new LockssResourceHandler(getDaemon());
-//     rootResourceHandler.setDirAllowed(false);
-//     setRedirectRootTo(rootResourceHandler, redirectRootTo);
-//     //       rHandler.setAcceptRanges(true);
-//     context.addHandler(rootResourceHandler);
+    context.setResourceBase(resourceUrl.toString());
+    rootResourceHandler = new LockssResourceHandler(getDaemon());
+    rootResourceHandler.setDirAllowed(false);
+    setRedirectRootTo(rootResourceHandler, redirectRootTo);
+    //       rHandler.setAcceptRanges(true);
+    context.addHandler(rootResourceHandler);
 
     // NotFoundHandler
     context.addHandler(new NotFoundHandler());
 
-    //       context.addHandler(new DumpHandler());
+//     context.addHandler(new DumpHandler());
   }
 
   void addCompressionFilter(WebApplicationHandler handler) {

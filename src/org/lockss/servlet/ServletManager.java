@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.37 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.38 2008-06-30 08:43:59 tlipkis Exp $
  */
 
 /*
@@ -52,10 +52,18 @@ public interface ServletManager extends LockssManager {
   public static final String SUFFIX_IP_PLATFORM_SUBNET =
     IpAccessControl.SUFFIX_PLATFORM_ACCESS;
 
+  /** Username established during platform config */
   public static final String PARAM_PLATFORM_USERNAME =
     Configuration.PLATFORM + "ui.username";
+  /** Password established during platform config */
   public static final String PARAM_PLATFORM_PASSWORD =
     Configuration.PLATFORM + "ui.password";
+
+  /** HttpContext attribute holding LockssApp (daemon) instance */
+  public static final String CONTEXT_ATTR_LOCKSS_APP = "LockssApp";
+  /** HttpContext attribute holding ServletManager instance that started
+   * context */
+  public static final String CONTEXT_ATTR_SERVLET_MGR = "ServletMgr";
 
   public ServletDescr[] getServletDescrs();
   public ServletDescr findServletDescr(Object o);
