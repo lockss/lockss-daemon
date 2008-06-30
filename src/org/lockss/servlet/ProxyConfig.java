@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyConfig.java,v 1.26 2008-03-30 01:16:18 edwardsb1 Exp $
+ * $Id: ProxyConfig.java,v 1.27 2008-06-30 21:49:21 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,7 +51,7 @@ import org.mortbay.html.*;
  * proxy for (at least) those URLs contained on the cache.
  */
 public class ProxyConfig extends LockssServlet {
-  
+
   // Used for serialization
   private static final long serialVersionUID = 1L;  // To stop an Eclipse complaint.  See "http://www.eaze.org/patrick/java/objectserialization.jsp"
 
@@ -91,7 +91,7 @@ public class ProxyConfig extends LockssServlet {
   public void lockssHandleRequest() throws IOException {
     boolean isDirectFirst;
     String strDirectFirst;
-    
+
  //   auth = req.getHeader(HttpFields.__Authorization);
     action = getParameter("action");
     if (StringUtil.isNullString(action)) {
@@ -119,10 +119,10 @@ public class ProxyConfig extends LockssServlet {
 
     // assume will send text.  Error & form display will override.
     resp.setContentType("text/plain");
-    
+
     // Retrieve whether the user specified that s/he wants "direct" first or last.
     strDirectFirst = getParameter("DirectFirst");
-    
+
     if (strDirectFirst == null) {
       isDirectFirst = false;
     } else if (strDirectFirst.equalsIgnoreCase("True")) {
@@ -130,7 +130,7 @@ public class ProxyConfig extends LockssServlet {
     } else {
       isDirectFirst = false;
     }
-    
+
     // Generate the proxy file!
     try {
       generateProxyFile(action, isDirectFirst);
@@ -290,8 +290,8 @@ public class ProxyConfig extends LockssServlet {
         "Prefer using the proxy rather than connecting directly to the web server.");
     addInputElement(frm, "Direct first", "DirectFirst", "false",
         "Prefer connecting directly to the web server rather than using the proxy.");
-    
-    frm.add("<p>Choose a supported format:<BR \\> \n");
+
+    frm.add("<p>Choose a supported format:<br /> \n");
     addInputElement(frm, "EZproxy config fragment", "action", TAG_EZPROXY,
 	"Generate text to insert into an EZproxy config file");
     addInputElement(frm, "Generate a dstdomain file for Squid", "action", TAG_SQUID,
@@ -311,9 +311,9 @@ public class ProxyConfig extends LockssServlet {
 			    (url != null ? url : ""));
     urlin.setSize(40);
     frm.add(urlin);
-    
+
     frm.add("<BR //>");
-    
+
     Input submit = new Input("submit", "submit", "submit");
     frm.add(submit);
 
@@ -322,19 +322,19 @@ public class ProxyConfig extends LockssServlet {
     ServletUtil.writePage(resp, page);
   }
 
-  
-  void addInputElement(Composite comp, String title, String fieldName, 
+
+  void addInputElement(Composite comp, String title, String fieldName,
                      String value, String text) {
     comp.add("<input type=\"radio\" name=\"");
     comp.add(fieldName);
     comp.add("\" value=\"");
     comp.add(value);
-    comp.add("\" \\> ");
-    comp.add("<b>" + title + "</b>:");
+    comp.add("\" /> ");
+    comp.add("<b>" + title + "</b>: ");
     comp.add(text);
-    comp.add("<br \\>");
+    comp.add("<br />");
     comp.add("\n");
-    
+
    }
 
   void addFmtElement(Composite comp, String title, String format,
@@ -347,8 +347,8 @@ public class ProxyConfig extends LockssServlet {
     comp.add("</li>");
   }
 
-  
-  
+
+
   void generateEncapForm(String error) throws IOException {
     Page page = newPage();
     Form frm = new Form(srvURL(myServletDescr()));
