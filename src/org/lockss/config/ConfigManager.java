@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.56 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.57 2008-06-30 08:43:12 tlipkis Exp $
  */
 
 /*
@@ -147,14 +147,22 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
-  public static final String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
+  public static final String CONFIG_FILE_PROXY_IP_ACCESS =
+    "proxy_ip_access.txt";
   public static final String CONFIG_FILE_PLUGIN_CONFIG = "plugin.txt";
   public static final String CONFIG_FILE_AU_CONFIG = "au.txt";
   public static final String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
-  public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt"; // in use
-  public static final String CONFIG_FILE_AUDIT_PROXY = "audit_proxy_config.txt"; // in use
-  public static final String CONFIG_FILE_ACCESS_GROUPS = "access_groups_config.txt"; // not yet in use
+  public static final String CONFIG_FILE_CONTENT_SERVERS =
+    "content_servers_config.txt";
+  public static final String CONFIG_FILE_ACCESS_GROUPS =
+    "access_groups_config.txt"; // not yet in use
   public static final String CONFIG_FILE_CRAWL_PROXY = "crawl_proxy.txt";
+
+  /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
+  public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt";
+  /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
+  public static final String CONFIG_FILE_AUDIT_PROXY =
+    "audit_proxy_config.txt";
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
@@ -162,9 +170,11 @@ public class ConfigManager implements LockssManager {
     CONFIG_FILE_PROXY_IP_ACCESS,
     CONFIG_FILE_PLUGIN_CONFIG,
     CONFIG_FILE_AU_CONFIG,
-    CONFIG_FILE_ICP_SERVER, // in use
-    CONFIG_FILE_AUDIT_PROXY, // in use
-    CONFIG_FILE_ACCESS_GROUPS, // not yet in use
+    CONFIG_FILE_ICP_SERVER,		// obsolescent
+    CONFIG_FILE_AUDIT_PROXY,		// obsolescent
+    CONFIG_FILE_CONTENT_SERVERS,	// must be after obsolescent icp
+					// server and audit proxy files
+    CONFIG_FILE_ACCESS_GROUPS,		// not yet in use
     CONFIG_FILE_CRAWL_PROXY,
   };
 
@@ -1377,6 +1387,19 @@ public class ConfigManager implements LockssManager {
     if (!suppressReload) {
       requestReload();
     }
+  }
+
+  /** Delete the named local cache config file from the cache config
+   * directory */
+  public synchronized boolean deleteCacheConfigFile(String cacheConfigFileName)
+      throws IOException {
+    if (cacheConfigDir == null) {
+      log.warning("Attempting to write delete config file: " +
+		  cacheConfigFileName + ", but no cache config dir exists");
+      throw new RuntimeException("No cache config dir");
+    }
+    File cfile = new File(cacheConfigDir, cacheConfigFileName);
+    return cfile.delete();
   }
 
   /** Return the config version prop key for the named config file */

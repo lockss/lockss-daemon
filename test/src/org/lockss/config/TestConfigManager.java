@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.29 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.30 2008-06-30 08:43:12 tlipkis Exp $
  */
 
 /*
@@ -578,8 +578,8 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testModifyCacheConfigFile() throws Exception {
-    // Use some config file; for instance the ICP server config file
-    final String FILE = ConfigManager.CONFIG_FILE_ICP_SERVER;
+    // Arbitrary config file
+    final String FILE = ConfigManager.CONFIG_FILE_AU_CONFIG;
 
     String tmpdir = getTempDir().toString();
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
