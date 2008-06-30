@@ -64,7 +64,7 @@ persistent fetch error	manifest	Chemical Communications 1999	base_url=http://www
 	manifest	Dalton Transactions 1997	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1997
 	manifest	Dalton Transactions 1998	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1998
 	manifest	Dalton Transactions 1999	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=1999
-	manifest	Dalton Transactions 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2000
+	ready	Dalton Transactions 2000	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2000
 	ready	Dalton Transactions 2001	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2001
 	released	Dalton Transactions 2002	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2002
 	manifest	Dalton Transactions 2003	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=dt	volume_name=0	year=2003
@@ -210,11 +210,11 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	manifest	Pesticide Outlook Volume 14	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=14	year=2003
 #	@fixedValues	j=Photochemical & Photobiological Sciences					
 	ready	Photochemical & Photobiological Sciences Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=1	year=2002
-	manifest	Photochemical & Photobiological Sciences Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=2	year=2003
+	ready	Photochemical & Photobiological Sciences Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=2	year=2003
 	ready	Photochemical & Photobiological Sciences Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=3	year=2004
 	ready	Photochemical & Photobiological Sciences Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=4	year=2005
 	ready	Photochemical & Photobiological Sciences Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=5	year=2006
-	manifest	Photochemical & Photobiological Sciences Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=6	year=2007
+	ready	Photochemical & Photobiological Sciences Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=6	year=2007
 	released	Photochemical & Photobiological Sciences Volume 7	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=pp	volume_name=7	year=2008
 #	@fixedValues	j=PhysChemComm					
 	released	PhysChemComm Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=qu	volume_name=1	year=1998
