@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.26 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.27 2008-07-01 07:47:23 tlipkis Exp $
  */
 
 /*
@@ -104,70 +104,45 @@ public class ProxyAndContent extends LockssServlet {
   private static final String CONTENT_SERVER_EXPLANATION =
     "Manage this box's content servers and proxies.";
 
+  private static final String CONTENT_SERVER_EXPLANATION_FOOT =
+    "To replace the server on an active port, first disable the active server, then enable the new server.";
+
   private static final String PROXY_CLIENT_EXPLANATION =
     "Configure the LOCKSS crawler to access the net through a proxy server.";
 
   private static final String BACK_LINK_TXT = "Back to Content Access Options";
 
   ServerInfo contentServerInfo =
-    new ServerInfo("Content server",
-		   "content_server_",
-		   ContentServletManager.PARAM_START,
-		   ContentServletManager.PARAM_PORT,
-		   ContentServletManager.DEFAULT_START) {
-      List getUsablePorts() {
-	return
-	  resourceMgr.getUsableTcpPorts(ContentServletManager.SERVER_NAME);
-      }
-      boolean isLegalPort(int port) {
-	return
-	  resourceMgr.isTcpPortAvailable(port,
-					 ContentServletManager.SERVER_NAME);
-      }
-    };
+    new TcpServerInfo("content server",
+		      ContentServletManager.SERVER_NAME,
+		      "content_server",
+		      ContentServletManager.PARAM_START,
+		      ContentServletManager.PARAM_PORT,
+		      ContentServletManager.DEFAULT_START);
 
   ServerInfo contentProxyInfo =
-    new ServerInfo("Content proxy",
-		   "content_proxy_",
-		   ProxyManager.PARAM_START,
-		   ProxyManager.PARAM_PORT,
-		   ProxyManager.DEFAULT_START) {
-      List getUsablePorts() {
-	return resourceMgr.getUsableTcpPorts(ProxyManager.SERVER_NAME);
-      }
-      boolean isLegalPort(int port) {
-	return resourceMgr.isTcpPortAvailable(port, ProxyManager.SERVER_NAME);
-      }
-    };
+    new TcpServerInfo("content proxy",
+		      ProxyManager.SERVER_NAME,
+		      "content_proxy",
+		      ProxyManager.PARAM_START,
+		      ProxyManager.PARAM_PORT,
+		      ProxyManager.DEFAULT_START);
 
   ServerInfo auditProxyInfo =
-    new ServerInfo("Audit proxy",
-		   "audit_proxy_",
-		   AuditProxyManager.PARAM_START,
-		   AuditProxyManager.PARAM_PORT,
-		   AuditProxyManager.DEFAULT_START) {
-      List getUsablePorts() {
-	return resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME);
-      }
-      boolean isLegalPort(int port) {
-	return resourceMgr.isTcpPortAvailable(port,
-					      AuditProxyManager.SERVER_NAME);
-      }
-    };
+    new TcpServerInfo("audit proxy",
+		      AuditProxyManager.SERVER_NAME,
+		      "audit_proxy",
+		      AuditProxyManager.PARAM_START,
+		      AuditProxyManager.PARAM_PORT,
+		      AuditProxyManager.DEFAULT_START);
 
   ServerInfo icpServerInfo =
-    new ServerInfo("ICP server",
-		   "icp_",
-		   IcpManager.PARAM_ICP_ENABLED,
-		   IcpManager.PARAM_ICP_PORT,
-		   false) {
-      List getUsablePorts() {
-	return resourceMgr.getUsableUdpPorts(IcpManager.SERVER_NAME);
-      }
-      boolean isLegalPort(int port) {
-	return resourceMgr.isUdpPortAvailable(port, IcpManager.SERVER_NAME);
-      }
-    };
+    new UdpServerInfo("ICP server",
+		      IcpManager.SERVER_NAME,
+		      "icp",
+		      IcpManager.PARAM_ICP_ENABLED,
+		      IcpManager.PARAM_ICP_PORT,
+		      false);
 
   ServerInfo[] serverInfos = {
     contentServerInfo,
@@ -178,6 +153,7 @@ public class ProxyAndContent extends LockssServlet {
   abstract class ServerInfo {
     // constants
     String name;
+    String resourceName;
     String formKeyPrefix;
     String enableParam;
     String portParam;
@@ -193,21 +169,24 @@ public class ProxyAndContent extends LockssServlet {
     String formHost;
 
     ServerInfo(String name,
+	       String resourceName,
 	       String formKeyPrefix,
 	       String enableParam,
 	       String portParam,
 	       boolean enableParamDefault) {
-      this(name, formKeyPrefix, enableParam, portParam,
+      this(name, resourceName, formKeyPrefix, enableParam, portParam,
 	   null, enableParamDefault);
     }
 
     ServerInfo(String name,
+	       String resourceName,
 	       String formKeyPrefix,
 	       String enableParam,
 	       String portParam,
 	       String hostParam,
 	       boolean enableParamDefault) {
       this.name = name;
+      this.resourceName = resourceName;
       this.formKeyPrefix = formKeyPrefix;
       this.enableParam = enableParam;
       this.portParam = portParam;
@@ -216,6 +195,7 @@ public class ProxyAndContent extends LockssServlet {
     }
 
     String getName() { return name; }
+    String getResourceName() { return resourceName; }
     String getEnableKey() { return formKeyPrefix + SUFFIX_KEY_ENABLE; }
     String getPortKey() { return formKeyPrefix + SUFFIX_KEY_PORT; }
     String getHostKey() { return formKeyPrefix + SUFFIX_KEY_HOST; }
@@ -270,7 +250,7 @@ public class ProxyAndContent extends LockssServlet {
 	  errList.add(getName() + " port must be a number: " + formPort);
 	}
       }
-      if (formEnable && !isLegalPort(port)) {
+      if (formEnable && !isLegalPort(port) && !isDuplicatePort(port)) {
 	errList.add("Illegal " + getName() + " port number: " + formPort
           + ", must be >=1024 and not in use");
       }
@@ -287,6 +267,49 @@ public class ProxyAndContent extends LockssServlet {
 
     abstract List getUsablePorts();
     abstract boolean isLegalPort(int port);
+    abstract boolean isDuplicatePort(int port);
+  }
+
+  class TcpServerInfo extends ServerInfo {
+    TcpServerInfo(String name,
+		  String resourceName,
+		  String formKeyPrefix,
+		  String enableParam,
+		  String portParam,
+		  boolean enableParamDefault) {
+      super(name, resourceName, formKeyPrefix, enableParam, portParam,
+	    enableParamDefault);
+    }
+    List getUsablePorts() {
+      return resourceMgr.getUsableTcpPorts(getResourceName());
+    }
+    boolean isLegalPort(int port) {
+      return resourceMgr.isTcpPortAvailable(port, getResourceName());
+    }
+    boolean isDuplicatePort(int port) {
+      return !tcpPorts.add(port);
+    }
+  }
+
+  class UdpServerInfo extends ServerInfo {
+    UdpServerInfo(String name,
+		  String resourceName,
+		  String formKeyPrefix,
+		  String enableParam,
+		  String portParam,
+		  boolean enableParamDefault) {
+      super(name, resourceName, formKeyPrefix, enableParam, portParam,
+	    enableParamDefault);
+    }
+    List getUsablePorts() {
+      return resourceMgr.getUsableUdpPorts(getResourceName());
+    }
+    boolean isLegalPort(int port) {
+      return resourceMgr.isUdpPortAvailable(port, getResourceName());
+    }
+    boolean isDuplicatePort(int port) {
+      return !udpPorts.add(port);
+    }
   }
 
   private ConfigManager configMgr;
@@ -296,23 +319,12 @@ public class ProxyAndContent extends LockssServlet {
 
   private String action;
 
-  private int auditPort;
-
-
-  private boolean formAuditEnable;
-
-  private String formAuditPort;
-
-  private boolean formIcpEnable;
-
-  private String formIcpPort;
-
-  private int icpPort;
-
   private boolean formCrawlProxyEnable;
   private String formCrawlProxyHost;
   private String formCrawlProxyPort;
 
+  private Set tcpPorts;
+  private Set udpPorts;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -394,7 +406,9 @@ public class ProxyAndContent extends LockssServlet {
     // Start page
     Page page = newPage();
     addJavaScript(page);
-    ServletUtil.layoutExplanationBlock(page, CONTENT_SERVER_EXPLANATION);
+    String exp = CONTENT_SERVER_EXPLANATION
+      + addFootnote(CONTENT_SERVER_EXPLANATION_FOOT);
+    ServletUtil.layoutExplanationBlock(page, exp);
     layoutErrorBlock(page);
 
     // Start form
@@ -570,6 +584,9 @@ public class ProxyAndContent extends LockssServlet {
     }
 
     // Process form values
+    tcpPorts = new HashSet();
+    udpPorts = new HashSet();
+
     for (ServerInfo si : serverInfos) {
       si.processForm(errList);
     }
