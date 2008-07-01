@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.26 2008-05-19 07:38:58 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.27 2008-07-01 07:47:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -191,7 +191,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // Thrown by HttpClient if the connect timeout elapses before
       // socket.connect() returns.
       // Turn this into a non HttpClient-specific exception
-      throw new ConnectionTimeoutException(e);
+      throw new ConnectionTimeoutException("Host did not respond", e);
       // XXX If socket.connect() returns an error because the underlying
       // socket connect times out, the behavior is platform dependent.  On
       // Linux, java.net.ConnectException is thrown (same as for connection

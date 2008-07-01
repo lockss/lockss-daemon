@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.8 2008-04-01 08:02:11 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.9 2008-07-01 07:47:49 tlipkis Exp $
  */
 
 /*
@@ -94,6 +94,8 @@ public class HttpResultMap implements CacheResultMap {
     // SocketException subsumes ConnectException, NoRouteToHostException
     // and PortUnreachableException
     storeMapEntry(SocketException.class,
+ 		  CacheException.RetryableNetworkException_3_30S.class);
+    storeMapEntry(LockssUrlConnection.ConnectionTimeoutException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
     // I don't think these can happen
     storeMapEntry(ProtocolException.class,
