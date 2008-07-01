@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.5 2008-05-10 17:47:11 dshr Exp $
+ * $Id: FuncArcExploder.java,v 1.6 2008-07-01 19:54:05 dshr Exp $
  */
 
 /*
@@ -273,9 +273,10 @@ public class FuncArcExploder extends LockssTestCase {
     // SimulatedContentGenerator is changed, this number may have to
     // change.  NB - because the ARC files are compressed,  their
     // size varies randomly by a small amount.
-    long expected = 5613;
+    long expected = 5579;
     long actual = AuUtil.getAuContentSize(sau, true);
     long error = expected - actual;
+    log.debug("Expected " + expected + " actual " + actual);
     long absError = (error < 0 ? -error : error);
     assertTrue("size mismatch " + expected + " vs. " + actual, absError < 60);
 
