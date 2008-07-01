@@ -1,7 +1,7 @@
 #	@formatString	x,S,t,%,%,%
 #	@namePrefix	UChic
 #	@publisherTitleSet	publisher=University of Chicago Press
-#	@fixedValues	P=University of California Press	p=org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin
+#	@fixedValues	P=University of Chicago Press	p=org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin
 #	@fixedValues	j=The American Historical Review
 JSTOR	do_not_process	The American Historical Review Volume 1	base_url=http://caliber.ucpress.net/	journal_id=ahr	volume_name=1
 JSTOR	do_not_process	The American Historical Review Volume 2	base_url=http://caliber.ucpress.net/	journal_id=ahr	volume_name=2
