@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.11 2007-03-19 21:31:49 thib_gc Exp $
+ * $Id: ResourceManager.java,v 1.12 2008-07-01 07:47:11 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -88,12 +88,11 @@ public class ResourceManager extends BaseLockssManager  {
     boolean ret = false;
     if (curTok == null) {
       inUse.put(resource, token);
+      logger.info("Resource " + resource + " now held by token " + token);
       ret = true;
     } else if (curTok.equals(token)) {
+      logger.info("Resource " + resource + " still held by token " + token);
       ret = true;
-    }
-    if (ret) {
-      logger.info("Resource " + resource + " held by token " + token);
     }
     return ret;
   }
@@ -112,13 +111,12 @@ public class ResourceManager extends BaseLockssManager  {
     Object curTok = inUse.get(resource);
     boolean ret = false;
     if (curTok == null) {
+      logger.info("Resource " + resource + " still not held by " + token);
       ret = true;
     } else if (curTok.equals(token)) {
       inUse.remove(resource);
-      ret = true;
-    }
-    if (ret) {
       logger.info("Resource " + resource + " no longer held by " + token);
+      ret = true;
     }
     return ret;
   }

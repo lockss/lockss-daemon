@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.25 2007-06-28 06:06:32 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.26 2008-07-01 07:47:11 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,7 @@ public abstract class JettyManager
     try {
       if (resourceMgr != null &&
 	  !resourceMgr.reserveTcpPort(port, serverName)) {
+	log.warning(serverName + " not started; port " + port + " is in use");
 	return false;
       }
       ownedPort = port;
