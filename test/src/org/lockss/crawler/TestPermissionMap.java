@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.11 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.12 2008-07-01 07:46:56 tlipkis Exp $
  */
 
 /*
@@ -186,8 +186,7 @@ public class TestPermissionMap extends LockssTestCase {
 
   String getPermissionUrl(PermissionMap map, String url)
       throws java.net.MalformedURLException {
-    PermissionRecord rec = map.get(url);
-    return rec.getUrl();
+    return map.getPermissionUrl(url);
   }
 
   public void testGetPermissionUrl() throws Exception {

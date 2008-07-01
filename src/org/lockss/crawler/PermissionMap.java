@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.23 2007-10-09 02:06:17 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.24 2008-07-01 07:46:56 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class PermissionMap {
    * @param url URL that specifies host of desired PermissionRecord
    * @return PermissionRecord for the host
    */
-  public PermissionRecord get(String url) throws MalformedURLException{
+  private PermissionRecord get(String url) throws MalformedURLException{
     String key = UrlUtil.getHost(url).toLowerCase();
     return (PermissionRecord)permissionAtUrl.get(key);
   }
@@ -223,8 +223,15 @@ public class PermissionMap {
 				 "Malformed permission page url: " + url);
       return false;
     }
-    String pUrl = rec.getUrl();
-    switch (rec.getStatus()) {
+    int stat;
+    String pUrl = null;
+    if (rec != null) {
+      stat = rec.getStatus();
+      pUrl = rec.getUrl();
+    } else {
+      stat = PermissionRecord.PERMISSION_MISSING;
+    }
+    switch (stat) {
       case PermissionRecord.PERMISSION_OK:
         return true;
       case PermissionRecord.PERMISSION_NOT_OK:
