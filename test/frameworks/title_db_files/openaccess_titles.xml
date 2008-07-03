@@ -5219,45 +5219,6 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-     <property name="ncaw6">
-        <property name="title" value="19th Century Art Worldwide Volume 6" />
-        <property name="journalTitle" value="19th Century Art Worldwide" />
-        <property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.19thc-artworldwide.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2007" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="volume" />
-          <property name="value" value="6" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-     <property name="ncaw7">
-        <property name="title" value="19th Century Art Worldwide Volume 7" />
-        <property name="journalTitle" value="19th Century Art Worldwide" />
-        <property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.19thc-artworldwide.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2008" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="volume" />
-          <property name="value" value="7" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-
       <property name="shampoo2006">
 	<property name="title" value="Shampoo 2006" />
 	<property name="journalTitle" value="Shampoo" />
@@ -5705,227 +5666,7 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
-<property name="disputatio2007">
-        <property name="title" value="Disputatio 2007" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2007" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="22-22" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
 
-<property name="disputatio2006">
-        <property name="title" value="Disputatio 2006" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2006" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="20-21" />
-        </property>
-        <property name="attributes.rights" vnum_issue_rangealue="openaccess" />
-      </property>
-
-<property name="disputatio2005">
-        <property name="title" value="Disputatio 2005" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2005" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="18-19" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<property name="disputatio2004">
-        <property name="title" value="Disputatio 2004" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2004" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="16-17" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<property name="disputatio2003">
-        <property name="title" value="Disputatio 2003" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2003" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_rangenum_issue_range" />
-          <property name="value" value="14-15" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<property name="disputatio2002">
-        <property name="title" value="Disputatio 2002" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2002" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="12-13" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<<<<<<< openaccess_titles.xml
-<property name="disputatio2001">
-        <property name="title" value="Disputatio 2001" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2001" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="10-11" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<property name="disputatio2000">
-        <property name="title" value="Disputatio 2000" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="2000" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="08-09" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<property name="disputatio1999">
-        <property name="title" value="Disputatio 1999" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="1999" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="06-07" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<<<<<<< openaccess_titles.xml
-<property name="disputatio1998">
-        <property name="title" value="Disputatio 1998" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="1998" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="04-05" />
-        </property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-<property name="disputatio1997">
-        <property name="title" value="Disputatio 1997" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="1997" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="02-03" />
-        </property>
-=======
-=======
     <property name="dictynna1">
         <property name="title" value="Dictynna Num&#x00e9;ro 1" />
         <property name="journalTitle" value="Dictynna" />
@@ -5987,7 +5728,6 @@
       </property>
 
 
->>>>>>> 1.58
       <property name="disputatio2007">
         <property name="title" value="Disputatio 2007" />
         <property name="estSize" value="500KB" />
@@ -6065,29 +5805,9 @@
           <property name="key" value="issues" />
           <property name="value" value="016,017" />
         </property>
->>>>>>> 1.52
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-<<<<<<< openaccess_titles.xml
-      <property name="disputatio1996">
-        <property name="title" value="Disputatio 1996" />
-        <property name="estSize" value="500KB" />
-        <property name="journalTitle" value="Disputatio" />
-        <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://disputatio.com/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="year" />
-          <property name="value" value="1996" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="num_issue_range" />
-          <property name="value" value="01-01" />
-        </property>
-=======
       <property name="disputatio2003">
         <property name="title" value="Disputatio 2003" />
         <property name="estSize" value="500KB" />
@@ -6245,16 +5965,10 @@
           <property name="key" value="issues" />
           <property name="value" value="001" />
         </property>
->>>>>>> 1.52
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-<<<<<<< openaccess_titles.xml
 
-
-=======
-
->>>>>>> 1.52
       <property name="molvis12">
 	<property name="title" value="Molecular Vision Volume 12" />
 	<property name="estSize" value="40MB" />
