@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.26 2008-07-01 07:47:11 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.27 2008-07-03 18:51:39 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public abstract class JettyManager
   public static final String PARAM_MAX_FORM_SIZE =
     PREFIX + "MaxFormSize";
 
-  public static final String DEFAULT_MAX_FORM_SIZE = "400000";
+  public static final String DEFAULT_MAX_FORM_SIZE = "2000000";
 
   private String prioParam;
 
