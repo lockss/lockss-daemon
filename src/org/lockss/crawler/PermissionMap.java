@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.24 2008-07-01 07:46:56 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.25 2008-07-03 18:51:31 tlipkis Exp $
  */
 
 /*
@@ -240,9 +240,12 @@ public class PermissionMap {
 				   "No permission statement on manifest page.");
         return false;
       case PermissionRecord.PERMISSION_MISSING:
-	String err0 = "No permission page specified for host of: "+ url;
-        logger.error(err0);
-        crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION, err0);
+        logger.error("Plugin error: no permission page specified for host of: "
+		     + url);
+	crawlStatus.signalErrorForUrl(url,
+				      "No permission URL for this host");
+        crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION,
+				   "Plugin error (missing permission URL)");
         return false;
       case PermissionRecord.PERMISSION_NOT_IN_CRAWL_SPEC:
 	String err1 = "Permission page not in crawl spec: "+ url;
