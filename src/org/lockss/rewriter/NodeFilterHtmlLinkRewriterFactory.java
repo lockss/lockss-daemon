@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.2 2008-06-20 23:20:24 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.3 2008-07-04 13:12:40 dshr Exp $
  */
 
 /*
@@ -59,6 +59,11 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   public NodeFilterHtmlLinkRewriterFactory() {
   }
 
+  private static final String[] attrs = {
+    "href",
+    "src",
+  };
+
   public InputStream createLinkRewriter(String mimeType,
 					ArchivalUnit au,
 					InputStream in,
@@ -97,10 +102,9 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	throw new PluginException("No default URL stem for " + url);
       }
       // Create a LinkRegexXform pipeline
-      NodeFilter absLinkXform = HtmlNodeFilters.linkRegexYesXforms(linkRegex1,
-								   ignCase1,
-								   rwRegex1,
-								   rwTarget1);
+      NodeFilter absLinkXform =
+	HtmlNodeFilters.linkRegexYesXforms(linkRegex1, ignCase1, rwRegex1,
+					   rwTarget1, attrs);
       int p = url.lastIndexOf("/");
       if (p < 0) {
 	throw new PluginException(url + " has no \"/\"");
@@ -125,12 +129,64 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       };
 
       // Rewrite relative links
-      NodeFilter relLinkXform = HtmlNodeFilters.linkRegexNoXforms(linkRegex2,
-								  ignCase2,
-								  rwRegex2,
-								  rwTarget2);
+      NodeFilter relLinkXform =
+	HtmlNodeFilters.linkRegexNoXforms(linkRegex2, ignCase2, rwRegex2,
+					  rwTarget2, attrs);
+
+      String[] linkRegex3 = new String[l];
+      boolean[] ignCase3 = new boolean[l];
+      String[] rwRegex3 = new String[l];
+      String[] rwTarget3 = new String[l];
+      // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
+      i = 0;
+      for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
+	String urlStem = (String)it.next();
+	if (defUrlStem == null) {
+	  defUrlStem = urlStem;
+	}
+	linkRegex3[i] = "url\\(" + urlStem;
+	ignCase3[i] = true;
+	rwRegex3[i] = "url\\(" + urlStem;
+	rwTarget3[i] = "url(" + targetStem + urlStem;
+	logger.debug3("if match " + linkRegex1[i] + " replace " + rwRegex1[i] +
+		      " by " + rwTarget1[i]);
+	i++;
+      }
+      NodeFilter absImportXform =
+	HtmlNodeFilters.styleRegexYesXforms(linkRegex3, ignCase3,
+					    rwRegex3, rwTarget3);
+      String [] linkRegex4 = {
+	"url\\(http://",
+	"url\\(http://",
+      };
+      boolean[] ignCase4 = {
+	true,
+	true,
+      };
+      String[] rwRegex4 = {
+	"url\\(/",
+	"url\\(([a-z])",
+      };
+      String[] rwTarget4 = {
+	"url(" + targetStem + defUrlStem,
+	"url(" + targetStem + urlPrefix + "/$1",
+      };
+
+      NodeFilter relImportXform =
+	HtmlNodeFilters.styleRegexNoXforms(linkRegex4, ignCase4,
+					    rwRegex4, rwTarget4);
+      NodeFilter[] filters = {
+	absLinkXform,
+	relLinkXform,
+	absImportXform,
+	relImportXform,
+      };
       // Combine the pipes
-      NodeFilter linkXform = new OrFilter(absLinkXform, relLinkXform);
+      NodeFilter linkXform = filters[0];
+      for (int j = 0; j < filters.length; j++) {
+	logger.debug3("index " + i + " filter " + filters[j]);
+	linkXform = new OrFilter(linkXform, filters[j]);
+      }
       // Create a transform to apply them
       HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
       return (new HtmlFilterInputStream(in, htmlXform));

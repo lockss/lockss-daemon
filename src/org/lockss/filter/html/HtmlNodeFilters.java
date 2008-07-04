@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.5 2008-06-20 23:20:24 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.6 2008-07-04 13:12:40 dshr Exp $
  */
 
 /*
@@ -34,8 +34,10 @@ package org.lockss.filter.html;
 
 import org.apache.oro.text.regex.*;
 import org.htmlparser.*;
+import org.htmlparser.nodes.*;
 import org.htmlparser.tags.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.*;
 import org.lockss.util.*;
 
 /** Factory methods for making various useful combinations of NodeFilters,
@@ -208,11 +210,12 @@ public class HtmlNodeFilters {
   public static NodeFilter linkRegexYesXforms(String[] regex,
 					      boolean[] ignoreCase,
 					      String[] target,
-					      String[] replace) {
+					      String[] replace,
+					      String[] attrs) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
       filters[i] = new LinkRegexYesXform(regex[i], ignoreCase[i],
-					 target[i], replace[i]);
+					 target[i], replace[i], attrs);
     }
     // XXX htmlparser 2.0 return new OrFilter(filters);
     NodeFilter ret = filters[0];
@@ -227,11 +230,50 @@ public class HtmlNodeFilters {
   public static NodeFilter linkRegexNoXforms(String[] regex,
 					     boolean[] ignoreCase,
 					     String[] target,
-					     String[] replace) {
+					     String[] replace,
+					     String[] attrs) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
       filters[i] = new LinkRegexNoXform(regex[i], ignoreCase[i],
-					target[i], replace[i]);
+					target[i], replace[i], attrs);
+    }
+    // XXX htmlparser 2.0 return new OrFilter(filters);
+    NodeFilter ret = filters[0];
+    for (int i = 1; i < filters.length; i++) {
+      ret = new OrFilter(ret, filters[i]);
+    }
+    return ret;
+  }
+
+  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+   */
+  public static NodeFilter styleRegexYesXforms(String[] regex,
+					       boolean[] ignoreCase,
+					       String[] target,
+					       String[] replace) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      filters[i] = new StyleRegexYesXform(regex[i], ignoreCase[i],
+					  target[i], replace[i]);
+    }
+    // XXX htmlparser 2.0 return new OrFilter(filters);
+    NodeFilter ret = filters[0];
+    for (int i = 1; i < filters.length; i++) {
+      ret = new OrFilter(ret, filters[i]);
+    }
+    return ret;
+  }
+
+  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+   */
+  public static NodeFilter styleRegexNoXforms(String[] regex,
+					      boolean[] ignoreCase,
+					      String[] target,
+					      String[] replace) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      filters[i] = new StyleRegexNoXform(regex[i], ignoreCase[i],
+					 target[i], replace[i]);
     }
     // XXX htmlparser 2.0 return new OrFilter(filters);
     NodeFilter ret = filters[0];
@@ -404,18 +446,33 @@ public class HtmlNodeFilters {
      */
     private String target;
     private String replace;
+    private String[] attrs;
     public LinkRegexYesXform(String regex, boolean ignoreCase,
-			  String target, String replace) {
+			  String target, String replace, String[] attrs) {
       super(regex, ignoreCase);
       this.target = target;
       this.replace = replace;
+      this.attrs = attrs;
     }
 
     public boolean accept(Node node) {
-      if (node instanceof LinkTag) {
-	String url = ((LinkTag)node).getLink();
-	if (matcher.contains(url, pat)) {
-	  ((LinkTag)node).setLink(url.replaceFirst(target, replace));
+      if (node instanceof TagNode) {
+	Attribute attribute = null;
+	for (int i = 0; i < attrs.length; i++) {
+	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
+	  if (attribute != null) {
+	    // Rewrite this attribute
+	    String url = attribute.getValue();
+	    if (matcher.contains(url, pat)) {
+	      log.debug3("Attribute " + attribute.getName() + " old " + url +
+			 " target " + target + " replace " + replace);
+	      String newUrl = url.replaceFirst(target, replace);
+	      attribute.setValue(newUrl);
+	      ((TagNode)node).setAttributeEx(attribute);
+	      log.debug3("new " + newUrl);
+	    }
+	    return false;
+	  }
 	}
       }
       return false;
@@ -423,13 +480,61 @@ public class HtmlNodeFilters {
   }
 
   /**
-   * This class accepts everything but applies a transform to
+   * This class rejects everything but applies a transform to
    * links that don't match the regex.
    */
   public static class LinkRegexNoXform extends BaseRegexFilter {
     /**
      * Creates a LinkRegexNoXform that rejects everything but applies
-     * a transform to nodes whose text
+     * a transform to attributes whose text does not
+     * contain a match for the regex.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     * @param attrs Attributes to process
+     */
+    private String target;
+    private String replace;
+    private String[] attrs;
+    public LinkRegexNoXform(String regex, boolean ignoreCase,
+			    String target, String replace, String[] attrs) {
+      super(regex, ignoreCase);
+      this.target = target;
+      this.replace = replace;
+      this.attrs = attrs;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof TagNode) {
+	Attribute attribute = null;
+	for (int i = 0; i < attrs.length; i++) {
+	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
+	  if (attribute != null) {
+	    // Rewrite this attribute
+	    String url = attribute.getValue();
+	    if (!matcher.contains(url, pat)) {
+	      log.debug3("Attribute " + attribute.getName() + " old " + url);
+	      attribute.setValue(url.replaceFirst(target, replace));
+	      ((TagNode)node).setAttributeEx(attribute);
+	      log.debug3("new " + url);
+	    }
+	    return false;
+	  }
+	}
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class rejects everything but applies a transform to
+   * links is Style tags that match the regex.
+   */
+  public static class StyleRegexYesXform extends BaseRegexFilter {
+    /**
+     * Creates a StyleRegexYesXform that rejects everything but applies
+     * a transform to style nodes whose child text
      * contains a match for the regex.
      * @param regex The pattern to match.
      * @param ignoreCase If true, match is case insensitive
@@ -438,7 +543,7 @@ public class HtmlNodeFilters {
      */
     private String target;
     private String replace;
-    public LinkRegexNoXform(String regex, boolean ignoreCase,
+    public StyleRegexYesXform(String regex, boolean ignoreCase,
 			    String target, String replace) {
       super(regex, ignoreCase);
       this.target = target;
@@ -446,10 +551,72 @@ public class HtmlNodeFilters {
     }
 
     public boolean accept(Node node) {
-      if (node instanceof LinkTag) {
-	String url = ((LinkTag)node).getLink();
-	if (!matcher.contains(url, pat)) {
-	  ((LinkTag)node).setLink(url.replaceFirst(target, replace));
+      if (node instanceof StyleTag) {
+	try {
+	  NodeIterator it;
+	  for (it = ((StyleTag)node).children(); it.hasMoreNodes(); ) {
+	    Node child = it.nextNode();
+	    if (child instanceof TextNode) {
+	      // Rewrite all url(foo) instances
+	      String text = ((TextNode)child).getText();
+	      if (matcher.contains(text, pat)) {
+		log.debug3("Style yes text " + text);
+		String newText = text.replaceAll(target, replace);
+		((TextNode)child).setText(newText);
+		log.debug3("new yes " + newText);
+	      }
+	    }
+	  }
+	} catch (ParserException ex) {
+	  log.error("Node " + node.toString() + " threw " + ex);
+	}
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class rejects everything but applies a transform to
+   * links is Style tags that don't match the regex.
+   */
+  public static class StyleRegexNoXform extends BaseRegexFilter {
+    /**
+     * Creates a StyleRegexNoXform that rejects everything but applies
+     * a transform to style nodes whose child text does not
+     * contain a match for the regex.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     */
+    private String target;
+    private String replace;
+    public StyleRegexNoXform(String regex, boolean ignoreCase,
+			    String target, String replace) {
+      super(regex, ignoreCase);
+      this.target = target;
+      this.replace = replace;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof StyleTag) {
+	try {
+	  NodeIterator it;
+	  for (it = ((StyleTag)node).children(); it.hasMoreNodes(); ) {
+	    Node child = it.nextNode();
+	    if (child instanceof TextNode) {
+	      // Rewrite all url(foo) instances
+	      String text = ((TextNode)child).getText();
+	      if (!matcher.contains(text, pat)) {
+		log.debug3("Style no text " + text);
+		String newText = text.replaceAll(target, replace);
+		((TextNode)child).setText(newText);
+		log.debug3("new no " + newText);
+	      }
+	    }
+	  }
+	} catch (ParserException ex) {
+	  log.error("Node " + node.toString() + " threw " + ex);
 	}
       }
       return false;

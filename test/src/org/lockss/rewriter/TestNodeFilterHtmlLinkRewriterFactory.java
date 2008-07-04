@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.1 2008-06-20 23:20:24 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.2 2008-07-04 13:12:40 dshr Exp $
  */
 
 /*
@@ -66,9 +66,34 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>" +
     "<a href=\"http://www.content.org/index.html\">an absolute link not to rewrite</a>" +
     "<br>" +
+    "A relative script" +
+    "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>" +
+    "<br>" +
+    "An absolute script" +
+    "<script type=\"text/javascript\" src=\"" + urlStem + "javascript/utility.js\"></script>" +
+    "<br>" +
+    "A relative stylesheet" +
+    "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">" +
+    "<br>" +
+    "An absolute stylesheet" +
+    "<link rel=\"stylesheet\" href=\"" + urlStem + "css/extra.css\" type=\"text/css\" media=\"all\">" +
+    "<br>" +
+    "A relative img" +
+    "<img src=\"/icons/logo.gif\" alt=\"BMJ\" title=\"BMJ\" />" +
+    "<br>" +
+    "An absolute img" +
+    "<img src=\"" + urlStem + "icons/logo2.gif\" alt=\"BMJ\" title=\"BMJ\" />" +
+    "<br>" +
+    "A relative CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>" +
+    "<br>" +
+    "An absolute CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra.css) @import url(" + urlStem + "css/extra2.css);</style>" +
+    "<br>" +
     "</body>" +
     "</HTML>";
-  private static final int linkCount = 3;
+  private static final int linkCount = 9;
+  private static final int importCount = 4;
   private InputStream in;
 
   public void setUp() throws Exception {
@@ -116,13 +141,24 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       int ix = 0;
       for (i = 0; i < linkCount; i++) {
 	int nix = out.indexOf("ServeContent?url=" + urlStem, ix);
-	assertTrue(nix > ix);
+	assertTrue("Start of rewritten url not found", nix > ix);
 	int endix = out.indexOf("\"", nix);
-	assertTrue(endix > nix);
-	log.debug3(out.substring(nix, endix));
+	assertTrue("End of rewritten url not found", endix > nix);
+	log.debug3("Link rewritten: " + out.substring(nix, endix));
+	ix = endix;
+      }
+      for (i = 0; i < importCount; i++) {
+	int nix = out.indexOf("ServeContent?url=" + urlStem, ix);
+	assertTrue("Start of rewritten import not found", nix > ix);
+	int endix = out.indexOf(")", nix);
+	assertTrue("End of rewritten import not found", endix > nix);
+	log.debug3("Import rewritten " + out.substring(nix, endix));
 	ix = endix;
       }
       ix = out.indexOf("ServeContent?url=" + urlStem, ix);
+      if (ix >= 0) {
+	log.error(out.substring(ix));
+      }
       assertTrue("wrong url rewritten", ix < 0);
     } catch (Exception ex) {
       fail("createLinkRewriter should not have thrown " + ex +
