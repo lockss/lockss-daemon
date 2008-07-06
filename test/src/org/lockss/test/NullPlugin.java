@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.90 2008-06-18 22:21:32 dshr Exp $
+ * $Id: NullPlugin.java,v 1.91 2008-07-06 04:25:58 dshr Exp $
  */
 
 /*
@@ -189,7 +189,11 @@ public class NullPlugin {
     }
 
     public InputStream openWithUrlRewriting() {
-      return null;
+      return getUnfilteredInputStream();
+    }
+
+    public Reader openForReadingWithRewriting() {
+      return openForReading();
     }
 
     public long getContentSize() {

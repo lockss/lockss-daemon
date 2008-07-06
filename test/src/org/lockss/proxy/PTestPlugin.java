@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.25 2008-06-18 22:21:31 dshr Exp $
+ * $Id: PTestPlugin.java,v 1.26 2008-07-06 04:25:58 dshr Exp $
  */
 
 /*
@@ -116,7 +116,11 @@ public class PTestPlugin {
     }
 
     public InputStream openWithUrlRewriting() {
-      return null;
+      return getUnfilteredInputStream();
+    }
+
+    public Reader openForReadingWithRewriting() {
+      return openForReading();
     }
 
     public long getContentSize() {

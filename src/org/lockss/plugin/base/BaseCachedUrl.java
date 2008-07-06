@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.32 2008-06-20 15:10:12 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.33 2008-07-06 04:25:57 dshr Exp $
  */
 
 /*
@@ -200,15 +200,22 @@ public class BaseCachedUrl implements CachedUrl {
     LinkRewriterFactory lrf = au.getLinkRewriterFactory(ctype);
     if (lrf != null && ctype != null) {
       try {
-	// XXX how do I find the encoding?
-	String encoding = null; // XXX
 	rewrittenStream =
-	  lrf.createLinkRewriter(ctype, au, originalStream, encoding, url);
+	  lrf.createLinkRewriter(ctype, au, originalStream, getEncoding(), url);
       } catch (PluginException e) {
 	logger.error("Can't create link rewriter " + e.toString());
       }
+    } else {
+      rewrittenStream = originalStream;
     }
     return rewrittenStream;
+  }
+
+  /**
+   * This should be the implementation eventualy
+   */
+  public Reader openForReadingWithRewriting() {
+    return new InputStreamReader(openWithUrlRewriting());
   }
 
  public CIProperties getProperties() {

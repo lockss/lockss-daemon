@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.5 2008-06-18 22:21:30 dshr Exp $
+ * $Id: ServeContent.java,v 1.6 2008-07-06 04:25:57 dshr Exp $
  */
 
 /*
@@ -133,8 +133,7 @@ public class ServeContent extends LockssServlet {
       handleOpenUrlRequest();
       return;
     }
-    log.warning("url, doi, openUrl all null");
-    displayError("ServeContent needs a non-null URL, DOI or OpenURL to display");
+    displayIndexPage();
   }
 
   protected void handleUrlRequest() throws IOException {
@@ -228,6 +227,39 @@ public class ServeContent extends LockssServlet {
     comp.add("</font></center><br>");
     page.add(comp);
     layoutFooter(page);
+    ServletUtil.writePage(resp, page);
+  }
+
+  void displayIndexPage() throws IOException {
+    Page page = newPage();
+
+    for (Iterator iter = pluginMgr.getAllAus().iterator();
+	 iter.hasNext(); ) {
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      if (pluginMgr.isInternalAu(au) || !(au instanceof BaseArchivalUnit)) {
+	continue;
+      }
+      java.util.List permissions = au.getCrawlSpec().getPermissionPages();
+      if (!permissions.isEmpty()) {
+	page.add("<br>");
+	boolean first = true;
+	for (Iterator it = permissions.iterator(); it.hasNext(); ) {
+	  String url = (String)it.next();
+	  if (first) {
+	    page.add("<a href=\"");
+	    page.add("/ServeContent?url=" + url);
+	    page.add("\">" + au.getName() + "</a>");
+	    first = false;
+	  } else {
+	    page.add(" <a href=\"");
+	    page.add("/ServeContent?url=" + url);
+	    page.add("\">and</a>");
+	  }
+	}
+	page.add(".\n");
+      }
+    }
+    page.add("<br>");
     ServletUtil.writePage(resp, page);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.4 2008-06-18 22:21:28 dshr Exp $
+ * $Id: MimeTypeMap.java,v 1.5 2008-07-06 04:25:57 dshr Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ public class MimeTypeMap {
   static {
     HTML.setLinkExtractorFactory(new GoslingHtmlLinkExtractor.Factory());
     // XXX
-    // HTML.setLinkRewriterFactory(new JavascriptHtmlLinkRewriter.Factory());
+    // HTML.setLinkRewriterFactory(new JavascriptHtmlLinkRewriterFactory());
+    HTML.setLinkRewriterFactory(new NodeFilterHtmlLinkRewriterFactory());
     DEFAULT.putMimeTypeInfo("text/html", HTML);
     CSS.setLinkExtractorFactory(new CssLinkExtractor.Factory());
     // XXX

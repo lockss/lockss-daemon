@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.3 2008-07-04 13:12:40 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.4 2008-07-06 04:25:57 dshr Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   private static final String[] attrs = {
     "href",
     "src",
+    "action",
   };
 
   public InputStream createLinkRewriter(String mimeType,
@@ -114,17 +115,21 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       String [] linkRegex2 = {
 	"^http://",
 	"^http://",
+	"^http://",
       };
       boolean[] ignCase2 = {
+	true,
 	true,
 	true,
       };
       String[] rwRegex2 = {
 	"^/",
-	"^([a-z])",
+	"^([a-z_])",
+	"^(\\.\\./)",
       };
       String[] rwTarget2 = {
 	targetStem + defUrlStem,
+	targetStem + urlPrefix + "/$1",
 	targetStem + urlPrefix + "/$1",
       };
 

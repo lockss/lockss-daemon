@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.24 2008-06-18 22:21:32 dshr Exp $
+ * $Id: CrawlRuleTester.java,v 1.25 2008-07-06 04:25:58 dshr Exp $
  */
 
 /*
@@ -502,6 +502,10 @@ public class CrawlRuleTester extends Thread {
 
     public InputStream openWithUrlRewriting() {
       return null;
+    }
+
+    public Reader openForReadingWithRewriting() {
+      return reader;
     }
 
     /**

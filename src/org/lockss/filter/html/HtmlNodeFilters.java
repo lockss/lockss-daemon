@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.6 2008-07-04 13:12:40 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.7 2008-07-06 04:25:57 dshr Exp $
  */
 
 /*
@@ -558,6 +558,8 @@ public class HtmlNodeFilters {
 	    Node child = it.nextNode();
 	    if (child instanceof TextNode) {
 	      // Rewrite all url(foo) instances
+	      // XXX bug - does not handle case of mixture of
+	      // XXX @import url(/foo/bar) and @import url(http://www...)
 	      String text = ((TextNode)child).getText();
 	      if (matcher.contains(text, pat)) {
 		log.debug3("Style yes text " + text);
@@ -606,6 +608,8 @@ public class HtmlNodeFilters {
 	    Node child = it.nextNode();
 	    if (child instanceof TextNode) {
 	      // Rewrite all url(foo) instances
+	      // XXX bug - does not handle case of mixture of
+	      // XXX @import url(/foo/bar) and @import url(http://www...)
 	      String text = ((TextNode)child).getText();
 	      if (!matcher.contains(text, pat)) {
 		log.debug3("Style no text " + text);
