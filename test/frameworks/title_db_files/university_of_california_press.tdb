@@ -119,14 +119,14 @@ JSTOR	do_not_process	Mexican Studies/Estudios Mexicanos Volume 16	base_url=http:
 	manifest	Mexican Studies/Estudios Mexicanos Volume 23	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=23
 	manifest	Mexican Studies/Estudios Mexicanos Volume 24	base_url=http://caliber.ucpress.net/	journal_id=msem	volume_name=24
 #	@fixedValues	j=Classical Antiquity
-	manifest	Classical Antiquity Volume 20	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=20
-	manifest	Classical Antiquity Volume 21	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=21
-	manifest	Classical Antiquity Volume 22	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=22
-	manifest	Classical Antiquity Volume 23	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=23
-	manifest	Classical Antiquity Volume 24	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=24
-	manifest	Classical Antiquity Volume 25	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=25
-	manifest	Classical Antiquity Volume 26	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=26
-	manifest	Classical Antiquity Volume 27	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=27
+	ready	Classical Antiquity Volume 20	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=20
+	ready	Classical Antiquity Volume 21	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=21
+	ready	Classical Antiquity Volume 22	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=22
+	ready	Classical Antiquity Volume 23	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=23
+	ready	Classical Antiquity Volume 24	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=24
+	ready	Classical Antiquity Volume 25	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=25
+	ready	Classical Antiquity Volume 26	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=26
+	ready	Classical Antiquity Volume 27	base_url=http://caliber.ucpress.net/	journal_id=ca	volume_name=27
 #	@fixedValues	j=Journal of Empirical Research on Human Research Ethics
 	manifest	Journal of Empirical Research on Human Research Ethics Volume 1	base_url=http://caliber.ucpress.net/	journal_id=jer	volume_name=1
 	manifest	Journal of Empirical Research on Human Research Ethics Volume 2	base_url=http://caliber.ucpress.net/	journal_id=jer	volume_name=2
@@ -529,10 +529,10 @@ JSTOR	do_not_process	Representations Volume 72	base_url=http://caliber.ucpress.n
 	manifest	Rhetorica Volume 13	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=13
 	manifest	Rhetorica Volume 14	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=14
 	ready	Rhetorica Volume 15	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=15
-	manifest	Rhetorica Volume 16	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=16
+	ready	Rhetorica Volume 16	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=16
 	ready	Rhetorica Volume 17	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=17
 	ready	Rhetorica Volume 18	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=18
-	manifest	Rhetorica Volume 19	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=19
+	ready	Rhetorica Volume 19	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=19
 	ready	Rhetorica Volume 20	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=20
 	ready	Rhetorica Volume 21	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=21
 	ready	Rhetorica Volume 22	base_url=http://caliber.ucpress.net/	journal_id=rh	volume_name=22
@@ -742,11 +742,11 @@ JSTOR	do_not_process	Religion and American Culture Volume 10	base_url=http://cal
 	manifest	Religion and American Culture Volume 17	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=17
 	manifest	Religion and American Culture Volume 18	base_url=http://caliber.ucpress.net/	journal_id=rac	volume_name=18
 #	@fixedValues	j=Sexuality Research &amp; Social Policy
-	manifest	Sexuality Research &amp; Social Policy Volume 1	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=1
-	manifest	Sexuality Research &amp; Social Policy Volume 2	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=2
-	manifest	Sexuality Research &amp; Social Policy Volume 3	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=3
-	manifest	Sexuality Research &amp; Social Policy Volume 4	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=4
-	manifest	Sexuality Research &amp; Social Policy Volume 5	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=5
+	ready	Sexuality Research &amp; Social Policy Volume 1	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=1
+	ready	Sexuality Research &amp; Social Policy Volume 2	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=2
+	ready	Sexuality Research &amp; Social Policy Volume 3	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=3
+	ready	Sexuality Research &amp; Social Policy Volume 4	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=4
+	ready	Sexuality Research &amp; Social Policy Volume 5	base_url=http://caliber.ucpress.net/	journal_id=srsp	volume_name=5
 #	@fixedValues	j=Contexts
 	manifest	Contexts Volume 1	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=1
 	manifest	Contexts Volume 2	base_url=http://caliber.ucpress.net/	journal_id=ctx	volume_name=2
@@ -804,10 +804,10 @@ JSTOR	do_not_process	Social Problems Volume 45	base_url=http://caliber.ucpress.n
 JSTOR	do_not_process	Social Problems Volume 46	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=46
 JSTOR	do_not_process	Social Problems Volume 47	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=47
 	ready	Social Problems Volume 48	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=48
-	manifest	Social Problems Volume 49	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=49
+	ready	Social Problems Volume 49	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=49
 	ready	Social Problems Volume 50	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=50
 	ready	Social Problems Volume 51	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=51
-	manifest	Social Problems Volume 52	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=52
+	ready	Social Problems Volume 52	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=52
 	ready	Social Problems Volume 53	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=53
 	ready	Social Problems Volume 54	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=54
 	ready	Social Problems Volume 55	base_url=http://caliber.ucpress.net/	journal_id=sp	volume_name=55
@@ -834,7 +834,7 @@ JSTOR	do_not_process	Social Problems Volume 47	base_url=http://caliber.ucpress.n
 	ready	Symbolic Interaction Volume 11	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=11
 	ready	Symbolic Interaction Volume 12	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=12
 	ready	Symbolic Interaction Volume 13	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=13
-	manifest	Symbolic Interaction Volume 14	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=14
+	ready	Symbolic Interaction Volume 14	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=14
 	ready	Symbolic Interaction Volume 15	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=15
 	ready	Symbolic Interaction Volume 16	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=16
 	ready	Symbolic Interaction Volume 17	base_url=http://caliber.ucpress.net/	journal_id=si	volume_name=17
