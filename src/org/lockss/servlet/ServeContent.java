@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.6 2008-07-06 04:25:57 dshr Exp $
+ * $Id: ServeContent.java,v 1.7 2008-07-09 22:00:39 dshr Exp $
  */
 
 /*
@@ -232,9 +232,11 @@ public class ServeContent extends LockssServlet {
 
   void displayIndexPage() throws IOException {
     Page page = newPage();
+    // Sort list of AUs by au.getName()
+    java.util.List auList = pluginMgr.getAllAus();
+    Collections.sort(pluginMgr.getAllAus(), new AUNameComparator());
 
-    for (Iterator iter = pluginMgr.getAllAus().iterator();
-	 iter.hasNext(); ) {
+    for (Iterator iter = auList.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       if (pluginMgr.isInternalAu(au) || !(au instanceof BaseArchivalUnit)) {
 	continue;
@@ -263,4 +265,15 @@ public class ServeContent extends LockssServlet {
     ServletUtil.writePage(resp, page);
   }
 
+    private class AUNameComparator implements java.util.Comparator {
+
+	AUNameComparator() {
+	}
+
+	public int compare(Object o1, Object o2) {
+	    ArchivalUnit au1 = (ArchivalUnit) o1;
+	    ArchivalUnit au2 = (ArchivalUnit) o2;
+	    return (au1.getName().compareTo(au2.getName()));
+	}
+    }
 }
