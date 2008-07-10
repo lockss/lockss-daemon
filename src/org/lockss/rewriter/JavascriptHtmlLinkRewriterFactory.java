@@ -1,5 +1,5 @@
 /*
- * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.2 2008-06-20 18:53:51 dshr Exp $
+ * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
  */
 
 /*
@@ -39,6 +39,8 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.filter.*;
+import org.lockss.config.*;
+import org.lockss.servlet.*;
 
 /**
  * JavascriptHtmlLinkRewriterFactory creates link rewriters that
@@ -57,11 +59,11 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
   // Javascript to insert
   private static final String jsTextName = "urlrewriter.js";
 
-  public InputStream createLinkRewriter(String mimeType,
-					ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					String url)
+  public Reader createLinkRewriterReader(String mimeType,
+					 ArchivalUnit au,
+					 Reader in,
+					 String encoding,
+					 String url)
       throws PluginException {
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
@@ -69,14 +71,25 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
       StringBuffer jsInit = initializeJs(au, url);
       StringBuffer jsText = getJs();
       String replace = jsInit.toString() + jsText + "\n" + jsTag;
-      StringFilter sf = new StringFilter(FilterUtil.getReader(in, encoding),
-					 jsTag, replace);
+      StringFilter sf = new StringFilter(in, jsTag, replace);
       sf.setIgnoreCase(true);
-      return new ReaderInputStream(sf);
+      return sf;
     } else {
       throw new PluginException("JavascriptHtmlLinkRewriterFactory vs. " +
 				mimeType);
     }
+  }
+
+  public InputStream createLinkRewriter(String mimeType,
+					ArchivalUnit au,
+					InputStream in,
+					String encoding,
+					String url)
+      throws PluginException {
+      Reader ret = createLinkRewriterReader(mimeType, au,
+					    new InputStreamReader(in),
+					    encoding, url);
+      return new ReaderInputStream(ret);
   }
 
   private StringBuffer getJs() throws PluginException {
@@ -99,15 +112,21 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
     }
   }
     
-  private StringBuffer initializeJs(ArchivalUnit au, String url) {
+  private StringBuffer initializeJs(ArchivalUnit au, String url) throws
+    PluginException {
     Collection urlStems = au.getUrlStems();
     StringBuffer ret = new StringBuffer();
-    String myAdminPort = "8081"; // XXX get from config
+    int port = 0;
+    try {
+      port = CurrentConfig.getIntParam(ContentServletManager.PARAM_PORT);
+    } catch (org.lockss.config.Configuration.InvalidParam ex) {
+      throw new PluginException("No port available: " + ex);
+    }
     // XXX add LOCKSS prefix to all Javascript variables
     ret.append("<SCRIPT language=\"Javascript\">\n");
     ret.append("urlLocalPrefix = \"http://" +
 	       PlatformUtil.getLocalHostname() + ":" +
-	       myAdminPort + "\"\n");
+	       port + "\"\n");
     ret.append("urlPrefix = urlLocalPrefix + \"/ServeContent?url=\"\n");
     ret.append("urlSuffix = \"" + url + "\"\n");
     // XXX bug if more than 1 URL stem for the AU

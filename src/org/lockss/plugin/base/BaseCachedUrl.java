@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.33 2008-07-06 04:25:57 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.34 2008-07-10 03:50:30 dshr Exp $
  */
 
 /*
@@ -194,31 +194,29 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public InputStream openWithUrlRewriting() {
-    InputStream originalStream = getUnfilteredInputStream();
-    InputStream rewrittenStream = null;
+    return new ReaderInputStream(openForReadingWithRewriting());
+  }
+
+  public Reader openForReadingWithRewriting() {
+    Reader original = openForReading();
+    Reader rewritten = null;
     String ctype = getContentType();
     LinkRewriterFactory lrf = au.getLinkRewriterFactory(ctype);
     if (lrf != null && ctype != null) {
       try {
-	rewrittenStream =
-	  lrf.createLinkRewriter(ctype, au, originalStream, getEncoding(), url);
+	rewritten =
+	    lrf.createLinkRewriterReader(ctype, au, original, getEncoding(),
+					 url);
       } catch (PluginException e) {
 	logger.error("Can't create link rewriter " + e.toString());
       }
     } else {
-      rewrittenStream = originalStream;
+      rewritten = original;
     }
-    return rewrittenStream;
+    return rewritten;
   }
 
-  /**
-   * This should be the implementation eventualy
-   */
-  public Reader openForReadingWithRewriting() {
-    return new InputStreamReader(openWithUrlRewriting());
-  }
-
- public CIProperties getProperties() {
+  public CIProperties getProperties() {
     ensureRnc();
     return CIProperties.fromProperties(rnc.getProperties());
   }

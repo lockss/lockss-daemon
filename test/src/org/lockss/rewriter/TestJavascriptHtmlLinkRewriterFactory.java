@@ -1,5 +1,5 @@
 /*
- * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.2 2008-06-20 23:20:24 dshr Exp $
+ * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.servlet.*;
 import java.util.*;
 import java.io.*;
 
@@ -90,6 +91,7 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
 
   public void testThrowsIfNotHtml() {
     in = new ReaderInputStream(new StringReader(withHtmlTag));
+    setupConfig(true);
     try {
       InputStream ret = jhlrf.createLinkRewriter("application/pdf", au, in,
 						 encoding, url);
@@ -103,8 +105,25 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     }
   }
 
+  public void testThrowsIfNoPort() {
+    in = new ReaderInputStream(new StringReader(withHtmlTag));
+    setupConfig(false);
+    try {
+      InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
+						 encoding, url);
+      fail("createLinkRewriter should have thrown without port");
+    } catch (Exception ex) {
+      if (ex instanceof PluginException) {
+	return;
+      }
+      fail("createLinkRewriter should have thrown PluginException but threw " +
+	   ex.toString());
+    }
+  }
+
   public void testInsertsJavascriptIfHtmlTag() {
     in = new ReaderInputStream(new StringReader(withHtmlTag));
+    setupConfig(true);
     try {
       InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
 						 encoding, url);
@@ -130,6 +149,7 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
 
   public void testCopiesUnchangedIfNoHtmlTag() {
     in = new ReaderInputStream(new StringReader(withoutHtmlTag));
+    setupConfig(true);
     try {
       InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
 						 encoding, url);
@@ -150,6 +170,14 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     } catch (Exception ex) {
       fail("createLinkRewriter should not have thrown " + ex +
 	   " on html mime type");
+    }
+  }
+
+  private void setupConfig(boolean good) {
+    Properties props = new Properties();
+    if (good) {
+      props.setProperty(ContentServletManager.PARAM_PORT, "9524");
+      ConfigurationUtil.setCurrentConfigFromProps(props);
     }
   }
 

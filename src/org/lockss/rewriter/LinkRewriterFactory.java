@@ -1,5 +1,5 @@
 /*
- * $Id: LinkRewriterFactory.java,v 1.2 2008-06-20 15:10:12 dshr Exp $
+ * $Id: LinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
  */
 
 /*
@@ -52,5 +52,19 @@ public interface LinkRewriterFactory {
 					InputStream in,
 					String encoding,
 					String url)
+      throws PluginException;
+  /**
+   * Create an InputStream that rewrites links for the MimeType in question.
+   * @param mimeType the MIME type in which to rewrite URLs
+   * @param au the ArchivalUnit the stream comes from
+   * @param in the InputStream to be rewritten
+   * @param encoding the character encoding to use when reading, or null
+   * @param url the url to which in is attached
+   */
+  public Reader createLinkRewriterReader(String mimeType,
+					 ArchivalUnit au,
+					 Reader in,
+					 String encoding,
+					 String url)
       throws PluginException;
 }

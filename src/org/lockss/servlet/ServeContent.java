@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.7 2008-07-09 22:00:39 dshr Exp $
+ * $Id: ServeContent.java,v 1.8 2008-07-10 03:50:32 dshr Exp $
  */
 
 /*
@@ -199,21 +199,20 @@ public class ServeContent extends LockssServlet {
       log.debug3("clen: " + clen);
     }
     resp.setContentType(ctype);
-    //  XXX need length after rewriting XXX
-    if (clen <= Integer.MAX_VALUE) {
-      resp.setContentLength((int)clen);
-    }
-    OutputStream outStream = null;
-    InputStream rewrittenStream = null;
+    Writer outWriter = null;
+    Reader rewritten = null;
     try {
-      outStream = resp.getOutputStream();
-      rewrittenStream = cu.openWithUrlRewriting();
-      StreamUtil.copy(rewrittenStream, outStream);
+      outWriter = resp.getWriter();
+      rewritten = cu.openForReadingWithRewriting();
+      long bytes = StreamUtil.copy(rewritten, outWriter);
+      if (bytes <= Integer.MAX_VALUE) {
+	  resp.setContentLength((int)bytes);
+      }
     } catch (IOException e) {
       log.warning("Copying CU to HTTP stream", e);
     } finally {
-      IOUtil.safeClose(outStream);
-      IOUtil.safeClose(rewrittenStream);
+      IOUtil.safeClose(outWriter);
+      IOUtil.safeClose(rewritten);
     }
     cu.release();
   }
@@ -234,7 +233,7 @@ public class ServeContent extends LockssServlet {
     Page page = newPage();
     // Sort list of AUs by au.getName()
     java.util.List auList = pluginMgr.getAllAus();
-    Collections.sort(pluginMgr.getAllAus(), new AUNameComparator());
+    Collections.sort(auList, new AuOrderComparator());
 
     for (Iterator iter = auList.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
@@ -265,15 +264,4 @@ public class ServeContent extends LockssServlet {
     ServletUtil.writePage(resp, page);
   }
 
-    private class AUNameComparator implements java.util.Comparator {
-
-	AUNameComparator() {
-	}
-
-	public int compare(Object o1, Object o2) {
-	    ArchivalUnit au1 = (ArchivalUnit) o1;
-	    ArchivalUnit au2 = (ArchivalUnit) o2;
-	    return (au1.getName().compareTo(au2.getName()));
-	}
-    }
 }

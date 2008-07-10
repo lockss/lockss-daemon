@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.2 2008-07-04 13:12:40 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.servlet.*;
 import java.util.*;
 import java.io.*;
 
@@ -107,6 +108,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 
   public void testThrowsIfNotHtml() {
     in = new ReaderInputStream(new StringReader(page));
+    setupConfig(true);
     try {
       InputStream ret = nfhlrf.createLinkRewriter("application/pdf", au, in,
 						  encoding, url);
@@ -120,8 +122,25 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   }
 
+  public void testThrowsIfNoPort() {
+    in = new ReaderInputStream(new StringReader(page));
+    setupConfig(false);
+    try {
+      InputStream ret = nfhlrf.createLinkRewriter("text/html", au, in,
+						  encoding, url);
+      fail("createLinkRewriter should have thrown if no port");
+    } catch (Exception ex) {
+      if (ex instanceof PluginException) {
+	return;
+      }
+      fail("createLinkRewriter should have thrown PluginException but threw " +
+	   ex.toString());
+    }
+  }
+
   public void testRewriting() {
     in = new ReaderInputStream(new StringReader(page));
+    setupConfig(true);
     try {
       InputStream ret = nfhlrf.createLinkRewriter("text/html", au, in,
 						 encoding, url);
@@ -163,6 +182,14 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     } catch (Exception ex) {
       fail("createLinkRewriter should not have thrown " + ex +
 	   " on html mime type");
+    }
+  }
+
+  private void setupConfig(boolean good) {
+    Properties props = new Properties();
+    if (good) {
+      props.setProperty(ContentServletManager.PARAM_PORT, "9524");
+      ConfigurationUtil.setCurrentConfigFromProps(props);
     }
   }
 
