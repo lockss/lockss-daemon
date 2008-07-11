@@ -185,7 +185,7 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	manifest	Natural Product Reports Volume 24	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=24	year=2007
 	manifest	Natural Product Reports Volume 25	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=np	volume_name=25	year=2008
 #	@fixedValues	j=New Journal of Chemistry					
-	manifest	New Journal of Chemistry Volume 22	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=22	year=1998
+	ready	New Journal of Chemistry Volume 22	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=22	year=1998
 	ready	New Journal of Chemistry Volume 23	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=23	year=1999
 	ready	New Journal of Chemistry Volume 24	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=24	year=2000
 	released	New Journal of Chemistry Volume 25	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=25	year=2001
@@ -198,11 +198,11 @@ persistent fetch error	manifest	Journal of Materials Chemistry Volume 17	base_ur
 	released	New Journal of Chemistry Volume 32	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=nj	volume_name=32	year=2008
 #	@fixedValues	j=Organic & Biomolecular Chemistry					
 	ready	Organic & Biomolecular Chemistry Volume 1	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=1	year=2003
-	manifest	Organic & Biomolecular Chemistry Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=2	year=2004
+	ready	Organic & Biomolecular Chemistry Volume 2	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=2	year=2004
 	ready	Organic & Biomolecular Chemistry Volume 3	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=3	year=2005
 	ready	Organic & Biomolecular Chemistry Volume 4	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=4	year=2006
 	ready	Organic & Biomolecular Chemistry Volume 5	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=5	year=2007
-	manifest	Organic & Biomolecular Chemistry Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=6	year=2008
+	ready	Organic & Biomolecular Chemistry Volume 6	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=ob	volume_name=6	year=2008
 #	@fixedValues	j=Pesticide Outlook					
 	manifest	Pesticide Outlook Volume 11	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=11	year=2000
 	manifest	Pesticide Outlook Volume 12	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=po	volume_name=12	year=2001
