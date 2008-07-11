@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.6 2008-03-26 04:53:02 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.7 2008-07-11 08:22:00 tlipkis Exp $
  */
 
 /*
@@ -116,6 +116,18 @@ public class TestPlatformUtil extends LockssTestCase {
     assertEquals(.39, df.getPercent(), .0000001);
   }
 
+  public void testMakeDFLong() throws Exception {
+    String str = "/dev/md0     2826607136 411558468 2269149176      16% /";
+    PlatformUtil.DF df = info.makeDFFromLine("/cache.wd3", str);
+    assertNotNull(df);
+    assertEquals("/cache.wd3", df.getPath());
+    assertEquals(2826607136L, df.getSize());
+    assertEquals(411558468, df.getUsed());
+    assertEquals(2269149176L, df.getAvail());
+    assertEquals("16%", df.getPercentString());
+    assertEquals(.16, df.getPercent(), .0000001);
+  }
+
   public void testMakeDFIll1() throws Exception {
     String str = "/dev/hda2  26667896   9849640  -1546    39% /";
     PlatformUtil.DF df = info.makeDFFromLine("/mnt", str);
@@ -136,7 +148,7 @@ public class TestPlatformUtil extends LockssTestCase {
     assertEquals("/mnt", df.getPath());
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());
-    assertEquals(0, df.getAvail());
+    assertEquals(4294426204L, df.getAvail());
     assertEquals("101%", df.getPercentString());
     assertEquals(1.01, df.getPercent(), .0000001);
   }

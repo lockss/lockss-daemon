@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.11 2008-04-07 21:41:14 edwardsb1 Exp $
+ * $Id: PlatformUtil.java,v 1.12 2008-07-11 08:22:00 tlipkis Exp $
  */
 
 /*
@@ -268,9 +268,9 @@ public class PlatformUtil {
     DF df = new DF();
     df.path = path;
     df.fs = tokens[0];
-    df.size = getInt(tokens[1]);
-    df.used = getInt(tokens[2]);
-    df.avail = getInt(tokens[3]);
+    df.size = getLong(tokens[1]);
+    df.used = getLong(tokens[2]);
+    df.avail = getLong(tokens[3]);
     df.percentString = tokens[4];
     df.mnt = tokens[5];
     try {
@@ -284,6 +284,15 @@ public class PlatformUtil {
   int getInt(String s) throws NumberFormatException{
     try {
       return Integer.parseInt(s);
+    } catch (NumberFormatException e) {
+      log.warning("Illegal number in DF output: " + s);
+      return 0;
+    }
+  }
+
+  long getLong(String s) throws NumberFormatException{
+    try {
+      return Long.parseLong(s);
     } catch (NumberFormatException e) {
       log.warning("Illegal number in DF output: " + s);
       return 0;
@@ -607,14 +616,14 @@ public class PlatformUtil {
   public static class DF {
     protected String path;
     protected String fs;
-    protected int size;
-    protected int used;
-    protected int avail;
+    protected long size;
+    protected long used;
+    protected long avail;
     protected String percentString;
     protected double percent = -1.0;
     protected String mnt;
 
-    public static DF makeThreshold(int minFreeMB, double minFreePercent) {
+    public static DF makeThreshold(long minFreeMB, double minFreePercent) {
       DF df = new DF();
       df.avail = minFreeMB * 1024;
       df.percent = minFreePercent == 0.0 ? -1.0 : 1.0 - minFreePercent;
@@ -627,13 +636,13 @@ public class PlatformUtil {
     public String getPath() {
       return path;
     }
-    public int getSize() {
+    public long getSize() {
       return size;
     }
-    public int getUsed() {
+    public long getUsed() {
       return used;
     }
-    public int getAvail() {
+    public long getAvail() {
       return avail;
     }
     public String getPercentString() {
