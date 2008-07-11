@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.40 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.41 2008-07-11 08:21:23 tlipkis Exp $
  */
 
 /*
@@ -398,7 +398,7 @@ public class BatchAuConfig extends LockssServlet {
     // Explanation block
     String expl;
     if (repoFlg) {
-      String s = "There are multiple disks on this cache. First, select the disk on which you want to place most AUs, then select the AUs you wish to "
+      String s = "There are multiple disks on this box. First, select the disk on which you want to place most AUs, then select the AUs you wish to "
         + verb.word + " (or use \"Select All\"). Then click \""
         + buttonText + "\".";
       Composite c = new Font(1, true); // how to avoid HTML here?
@@ -637,6 +637,7 @@ public class BatchAuConfig extends LockssServlet {
     sb.append(okCnt == 1 ? " AU " : " AUs ");
     sb.append(verb.past);
     if (errCnt != 0) {
+      sb.append(" ");
       sb.append(errCnt);
       sb.append(" skipped");
     }
