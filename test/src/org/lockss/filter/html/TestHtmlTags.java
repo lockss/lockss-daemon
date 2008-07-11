@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTags.java,v 1.1 2006-09-18 22:29:00 thib_gc Exp $
+ * $Id: TestHtmlTags.java,v 1.2 2008-07-11 23:43:41 thib_gc Exp $
  */
 
 /*
@@ -59,4 +59,20 @@ public class TestHtmlTags extends LockssTestCase {
     assertTrue(node instanceof HtmlTags.Iframe);
     assertEquals(1, nl.size());
   }
+
+  // Ensure <noscript>...</noscript> gets parse as an HtmlTags.Noscript composite
+  // tag, not as the default sequence of TagNodes
+  public void testNoscriptTag() throws IOException {
+    String in = "<noscript><i>iii</i></noscript>";
+    MockHtmlTransform xform =
+      new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+      new HtmlFilterInputStream(new StringInputStream(in), xform);
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Noscript);
+    assertEquals(1, nl.size());
+  }
+
 }

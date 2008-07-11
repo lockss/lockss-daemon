@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlTags.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
+ * $Id: HtmlTags.java,v 1.2 2008-07-11 23:43:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,24 +35,23 @@ package org.lockss.filter.html;
 import java.util.*;
 import org.htmlparser.tags.*;
 
-/** Collection of additional simple HtmlParser tags */
+/**
+ * Collection of additional simple HtmlParser tags.
+ * @see HtmlFilterInputStream#makeParser()
+ */
 public class HtmlTags {
 
   /**
    * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
    * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @see HtmlFilterInputStream#makeParser()
    */
   public static class Iframe extends CompositeTag {
+
     /**
      * The set of names handled by this tag.
      */
     private static final String[] mIds = new String[] {"IFRAME"};
-
-    /**
-     * Create a new iframe tag.
-     */
-    public Iframe() {
-    }
 
     /**
      * Return the set of names handled by this tag.
@@ -61,14 +60,17 @@ public class HtmlTags {
     public String[] getIds() {
       return mIds;
     }
-    /** Avoid deprecation warning
+
+    /**
+     * Avoid deprecation warning
      * @deprecated Use getAttributesEx() instead.
      */
     public Hashtable getAttributes () {
       return super.getAttributes();
     }
 
-    /** Avoid deprecation warning
+    /**
+     * Avoid deprecation warning
      * @deprecated Use getAttributesEx() instead.
      */
     public void setAttributes (Hashtable attributes) {
@@ -76,4 +78,43 @@ public class HtmlTags {
     }
 
   }
+
+  /**
+   * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @see HtmlFilterInputStream#makeParser()
+   */
+  public static class Noscript extends CompositeTag {
+
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"NOSCRIPT"};
+
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+
+    /**
+     * Avoid deprecation warning
+     * @deprecated Use getAttributesEx() instead.
+     */
+    public Hashtable getAttributes () {
+      return super.getAttributes();
+    }
+
+    /**
+     * Avoid deprecation warning
+     * @deprecated Use getAttributesEx() instead.
+     */
+    public void setAttributes (Hashtable attributes) {
+      super.setAttributes(attributes);
+    }
+
+  }
+
 }

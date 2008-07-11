@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.32.0</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bmc.BioMedCentralPlugin</string>
   </entry>
@@ -9,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
