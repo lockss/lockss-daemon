@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.9 2007-10-01 08:16:27 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.10 2008-07-11 08:21:38 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class TestAuConfig extends LockssServletTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                       tempDirPath);
+    props.setProperty(AdminServletManager.PARAM_START, "false");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     mau = new MockArchivalUnit();
   }
