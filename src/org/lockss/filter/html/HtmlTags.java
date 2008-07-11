@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.2 2008-07-11 23:43:41 thib_gc Exp $
+ * $Id: HtmlTags.java,v 1.3 2008-07-11 23:46:13 thib_gc Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class HtmlTags {
   }
 
   /**
-   * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
+   * A NOSCRIPT tag.  Registered with PrototypicalNodeFactory to cause iframe
    * to be a CompositeTag.  See code samples in org.htmlparser.tags.
    * @see HtmlFilterInputStream#makeParser()
    */
