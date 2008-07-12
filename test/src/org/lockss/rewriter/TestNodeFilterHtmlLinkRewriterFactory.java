@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.4 2008-07-12 08:36:02 dshr Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.util.*;
 import java.io.*;
 
 public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("FuncArcExploder");
+  static Logger log = Logger.getLogger("TestNodeFilterHtmlLinkRewriterFactory");
 
   private MockArchivalUnit au;
   private NodeFilterHtmlLinkRewriterFactory nfhlrf;
