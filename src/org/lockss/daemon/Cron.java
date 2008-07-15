@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.8 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id: Cron.java,v 1.8.42.1 2008-07-15 08:28:00 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class Cron
   private Cron.State state;
   private Collection tasks = new ArrayList();
   private boolean enabled = false;
-  private long interval;
+  private long interval = DEFAULT_SLEEP;
   private TimerQueue.Request req;
 
   public void startService() {
