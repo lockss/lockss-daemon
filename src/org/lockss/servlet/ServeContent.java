@@ -1,10 +1,10 @@
 /*
- * $Id: ServeContent.java,v 1.8 2008-07-10 03:50:32 dshr Exp $
+ * $Id: ServeContent.java,v 1.8.2.1 2008-07-15 23:17:35 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
 import org.lockss.plugin.*;
@@ -55,6 +56,24 @@ import org.lockss.state.*;
  */
 public class ServeContent extends LockssServlet {
   static final Logger log = Logger.getLogger("ServeContent");
+
+  /** Prefix for this server's config tree */
+  public static final String PREFIX = Configuration.PREFIX + "serveContent.";
+
+  /** Return 404 for missing files */
+  public static final int MISSING_FILE_ACTION_404 = 1;
+  /** Display error page (200 response) for missing files */
+  public static final int MISSING_FILE_ACTION_DISPLAY_ERROR = 2;
+  /** Forward requests for missing file to origin server.  (Not
+   * implemented) */
+  public static final int MISSING_FILE_ACTION_FORWARD_REQUEST = 3;
+
+  /** Jetty server name */
+  public static final String PARAM_MISSING_FILE_ACTION =
+    PREFIX + "missingFileAction";
+
+  public static final int DEFAULT_MISSING_FILE_ACTION =
+    MISSING_FILE_ACTION_404;
 
   private String action;
   private String verbose;
@@ -187,9 +206,23 @@ public class ServeContent extends LockssServlet {
 
   protected void handleMissingUrlRequest(String missingUrl)
       throws IOException {
-    // XXX the right thing to do here is to forward the request
-    // XXX to the original URL,  at least if configured to do so
-    displayError("URL " + missingUrl + " not found");
+    String err = "URL " + missingUrl + " not found";
+    int noUrlAction = CurrentConfig.getIntParam(PARAM_MISSING_FILE_ACTION,
+						DEFAULT_MISSING_FILE_ACTION);
+    switch (noUrlAction) {
+    case MISSING_FILE_ACTION_404:
+      resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+		     missingUrl + "  not found on this LOCKSS box");
+      break;
+    case MISSING_FILE_ACTION_DISPLAY_ERROR:
+      displayError("URL " + missingUrl + " not found");
+      break;
+    case MISSING_FILE_ACTION_FORWARD_REQUEST:
+      // Easiest way to do this is probably to return without handling the
+      // request and add a proxy handler to the context.
+      resp.sendError(HttpServletResponse.SC_NOT_FOUND, err); // placeholder
+      break;
+    }
   }
 
   void displayContent() {
@@ -218,7 +251,6 @@ public class ServeContent extends LockssServlet {
   }
 
   void displayError(String error) throws IOException {
-    // XXX this should be a 404
     Page page = newPage();
     Composite comp = new Composite();
     comp.add("<center><font color=red size=+1>");
