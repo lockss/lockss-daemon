@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.98 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.98.2.1 2008-07-15 23:16:48 tlipkis Exp $
  */
 
 /*
@@ -331,7 +331,7 @@ public abstract class LockssServlet extends HttpServlet
   // behind NAT).
   String getLcapIPAddr() {
     String ip = CurrentConfig.getParam(PARAM_LOCAL_IP);
-    if (ip.length() <= 0)  {
+    if (ip == null || ip.length() <= 0)  {
       return getLocalIPAddr();
     }
     return ip;
