@@ -7,7 +7,7 @@ org.lockss.proxy.access.ip.logForbidden=true
 
 org.lockss.platform.diskSpacePaths=./cache
 
-org.lockss.config.reloadInterval = 30m
+org.lockss.config.reloadInterval = 5m
 
 org.lockss.ui.start=yes
 org.lockss.proxy.start=no
