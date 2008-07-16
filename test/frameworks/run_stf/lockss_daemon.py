@@ -1928,6 +1928,7 @@ org.lockss.platform.ui.password=%(password)s
 org.lockss.platform.diskSpacePaths=%(dir)s
 org.lockss.cache.location=%(dir)s
 org.lockss.proxy.start=%(proxyStart)s
+org.lockss.proxy.port=7999
 org.lockss.ui.port=%(uiPort)s
 org.lockss.localIPAddress=%(ipAddr)s
 org.lockss.comm.unicast.port=%(unicastPort)s
