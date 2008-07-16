@@ -6,11 +6,8 @@ Obtaining Source
 
 The latest version of this code can be obtained via CVS with
 
- export CVSROOT=:pserver:anonymous@cvs.sourceforge.net:/cvsroot/lockss
+ export CVSROOT=:pserver:anonymous@lockss.cvs.sourceforge.net:/cvsroot/lockss
  cvs checkout lockss-daemon
-
-A tar of the sources for the latest release can be found at 
- http://sourceforge.net/projects/lockss/
 
 Prerequisites
 -------------
