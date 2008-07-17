@@ -5,15 +5,15 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>10000</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, vol. %d&quot;, base_url_host, volume</string>
+    <string>&quot;Early Modern Literary Studies Plugin, Base URL %s, Volume %d&quot;, base_url_host, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,15 +21,15 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Early Modern Literary Studies</string>
+    <string>Early Modern Literary Studies Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%slockss-volume%d.html&quot;, base_url, volume</string>
-      <string>1,&quot;%s%s&quot;, base_url, issue_set</string>
-      <string>1,&quot;%s%02d-[0-9]+/.*&quot;, base_url, volume</string>
+      <string>1,&quot;^%slockss-volume%d.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%s%s&quot;, base_url, issue_set</string>
+      <string>1,&quot;^%s%02d-[0-9]+/.*&quot;, base_url, volume</string>
       <string>1,&quot;^%s.*\.(css|mov|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
@@ -58,12 +58,12 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>issue_set</key>
-        <displayName>Issue Set</displayName>
-        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <key>issues</key>
+        <displayName>Issues</displayName>
+        <description>Non-definitional issue_set. A comma delimited list of issues. (eg issue1, issue2)</description>
         <type>9</type>
         <size>20</size>
-        <definitional>faslse</definitional>
+        <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
