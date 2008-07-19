@@ -3109,10 +3109,6 @@
 	  <property name="key" value="volume" />
           <property name="value" value="12" />
 	</property>
-        <property name="param.3">
-          <property name="key" value="issue_set" />
-          <property name="value" value="andbingowashisnamo" />
-        </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
 
@@ -3129,10 +3125,6 @@
 	  <property name="key" value="volume" />
           <property name="value" value="11" />
 	</property>
-        <property name="param.3">
-          <property name="key" value="issue_set" />
-          <property name="value" value="andbingowashisnamo" />
-        </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
 
@@ -3149,10 +3141,6 @@
 	  <property name="key" value="volume" />
           <property name="value" value="10" />
 	</property>
-        <property name="param.3">
-          <property name="key" value="issue_set" />
-          <property name="value" value="andbingowashisnamo" />
-        </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
 
@@ -3169,10 +3157,6 @@
 	  <property name="key" value="volume" />
           <property name="value" value="9" />
 	</property>
-        <property name="param.3">
-          <property name="key" value="issue_set" />
-          <property name="value" value="andbingowashisnamo" />
-        </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
 
@@ -3190,7 +3174,7 @@
           <property name="value" value="8" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="08-3/, 08-2/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -3211,7 +3195,7 @@
           <property name="value" value="7" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="si-07/, 07-1/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -3231,7 +3215,7 @@
           <property name="value" value="6" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="06-1/, 06-3/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -3251,7 +3235,7 @@
           <property name="value" value="5" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="05-3/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -3271,7 +3255,7 @@
           <property name="value" value="4" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="04-2/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -3290,10 +3274,6 @@
           <property name="key" value="volume" />
           <property name="value" value="3" />
         </property>
-        <property name="param.3">
-          <property name="key" value="issue_set" />
-          <property name="value" value="andbingowashisnamo" />
-        </property>
         <property name="attributes.rights" value="openaccess" />
       </property>
 
@@ -3311,7 +3291,7 @@
           <property name="value" value="2" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="si-02/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
@@ -3331,7 +3311,7 @@
           <property name="value" value="1" />
         </property>
         <property name="param.3">
-          <property name="key" value="issue_set" />
+          <property name="key" value="issues" />
           <property name="value" value="si-01/" />
         </property>
         <property name="attributes.rights" value="openaccess" />
