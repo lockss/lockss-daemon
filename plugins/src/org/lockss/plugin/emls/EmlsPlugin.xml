@@ -1,9 +1,5 @@
 <map>
   <entry>
-    <string>au_expected_base_path</string>
-    <string>/emls/</string>
-  </entry>
-  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -13,7 +9,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Early Modern Literary Studies Plugin, Base URL %s, Volume %d&quot;, base_url_host, volume</string>
+    <string>&quot;Early Modern Literary Studies Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

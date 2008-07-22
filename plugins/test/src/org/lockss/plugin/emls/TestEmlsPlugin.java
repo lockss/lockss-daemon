@@ -1,10 +1,10 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.3 2007-01-14 08:06:13 tlipkis Exp $
+ * $Id: TestEmlsPlugin.java,v 1.4 2008-07-22 06:43:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.emls;
 
 import java.net.*;
-import java.util.Properties;
+import java.util.*;
 import org.lockss.test.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -86,11 +86,11 @@ public class TestEmlsPlugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY,
-                      "http://www.example.com/emls/");
+                      "http://extra.shu.ac.uk/emls/");
     props.setProperty(VOL_KEY, "3");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("www.example.com, vol. 3", au.getName());
+    assertEquals("Early Modern Literary Studies Plugin, Base URL http://extra.shu.ac.uk/emls/, Volume 3", au.getName());
   }
 
   public void testGetPluginId() {
@@ -99,8 +99,16 @@ public class TestEmlsPlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               ConfigParamDescr.VOLUME_NUMBER),
-                 plugin.getLocalAuConfigDescrs());
+    for (Iterator iter = plugin.getLocalAuConfigDescrs().iterator() ; iter.hasNext() ; ) {
+      ConfigParamDescr desc = (ConfigParamDescr)iter.next();
+      if (desc.equals(ConfigParamDescr.BASE_URL)) { continue; }
+      if (desc.equals(ConfigParamDescr.VOLUME_NUMBER)) { continue; }
+      if ("issues".equals(desc.getKey())) {
+        assertEquals(ConfigParamDescr.TYPE_SET, desc.getType());
+        assertFalse(desc.isDefinitional());
+        continue;
+      }
+      fail("Unexpected config param: " + desc.getKey());
+    }
   }
 }
