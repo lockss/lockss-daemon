@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.78 2008-06-04 19:09:05 edwardsb1 Exp $
+ * $Id: V3Poller.java,v 1.78.2.1 2008-07-22 06:47:03 tlipkis Exp $
  */
 
 /*
@@ -1841,10 +1841,7 @@ public class V3Poller extends BasePoll {
 	  ud.setStatus(peerStatus);
 	}
         // Release used resources.
-        VoteBlocks vb = ud.getVoteBlocks();
-        if (vb != null) {
-          vb.release();
-        }
+	ud.release();
         serializer.removePollerUserData(id);
         theParticipants.remove(id);
 	synchronized (exParticipants) {

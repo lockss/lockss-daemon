@@ -1,5 +1,5 @@
 /*
- * $Id: TestDiskVoteBlocks.java,v 1.5.2.1 2008-07-15 08:28:46 tlipkis Exp $
+ * $Id: TestDiskVoteBlocks.java,v 1.5.2.2 2008-07-22 06:47:03 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class TestDiskVoteBlocks extends LockssTestCase {
     byte[] encodedBlocks = bos.toByteArray();
     ByteArrayInputStream bis = new ByteArrayInputStream(encodedBlocks);
 
-    DiskVoteBlocks dvb = new DiskVoteBlocks(blockCount, bis, tempDir);
+    DiskVoteBlocks dvb = new MyDiskVoteBlocks(blockCount, bis, tempDir);
     
     assertEquals(dvb.size(), blockCount);
   }
@@ -82,7 +82,7 @@ public class TestDiskVoteBlocks extends LockssTestCase {
   public void testAddVoteBlock() throws Exception {
     VoteBlocksIterator iter;
 
-    DiskVoteBlocks dvb = new DiskVoteBlocks(tempDir);
+    DiskVoteBlocks dvb = new MyDiskVoteBlocks(tempDir);
     assertEquals(0, dvb.size());
 
     List voteBlockList = V3TestUtils.makeVoteBlockList(3);
@@ -183,9 +183,9 @@ public class TestDiskVoteBlocks extends LockssTestCase {
         
         iCountLength++;
         
-        // Verify that we're not reading more than iCountLength + 1 records.
-        // (The +1 is because we actually read one ahead...)
-        assertEquals(iCountLength + 1, ((DiskVoteBlocks.Iterator) iter).getReadCount());
+        // Verify that we're not reading more than iCountLength records.
+        assertEquals(iCountLength,
+		     ((MyDiskVoteBlocks.MyIterator) iter).getReadCount());
       }
       
       assertEquals(iLength, iCountLength);
@@ -259,7 +259,7 @@ public class TestDiskVoteBlocks extends LockssTestCase {
   
   private DiskVoteBlocks makeDiskVoteBlocks(List voteBlockList)
       throws Exception {
-    DiskVoteBlocks dvb = new DiskVoteBlocks(tempDir);
+    DiskVoteBlocks dvb = new MyDiskVoteBlocks(tempDir);
     for (Iterator iter = voteBlockList.iterator(); iter.hasNext(); ) {
       VoteBlock vb = (VoteBlock)iter.next();
       dvb.addVoteBlock(vb);
@@ -267,5 +267,35 @@ public class TestDiskVoteBlocks extends LockssTestCase {
     return dvb;
   }
 
-}
+  class MyDiskVoteBlocks extends DiskVoteBlocks {
+    public MyDiskVoteBlocks(int blocksToRead, InputStream from, File toDir)
+	throws IOException {
+      super(blocksToRead, from, toDir);
+    }
 
+    public MyDiskVoteBlocks(File toDir) throws IOException {
+      super(toDir);
+    }
+
+    public VoteBlocksIterator iterator() throws FileNotFoundException {
+      return new MyIterator();
+    }
+
+    class MyIterator extends DiskVoteBlocks.Iterator {
+      private int m_countDiskReads = 0;
+
+      public MyIterator() throws FileNotFoundException {
+	super();
+      }
+
+      protected void readVB() throws IOException {
+	super.readVB();
+	m_countDiskReads++;
+      }
+    
+      public int getReadCount() {
+	return m_countDiskReads;
+      }
+    }
+  }
+}

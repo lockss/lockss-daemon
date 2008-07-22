@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.19 2008-06-04 19:09:05 edwardsb1 Exp $
+ * $Id: ParticipantUserData.java,v 1.19.2.1 2008-07-22 06:47:03 tlipkis Exp $
  */
 
 /*
@@ -257,7 +257,8 @@ public class ParticipantUserData implements LockssSerializable {
    * Return the vote block iterator for this peer.
    * @return the vote block iterator for this peer.
    */
-  public VoteBlocksIterator getVoteBlockIterator() throws FileNotFoundException {
+  public synchronized VoteBlocksIterator getVoteBlockIterator()
+      throws FileNotFoundException {
     if (voteBlockIterator == null && voteBlocks != null) {
       voteBlockIterator = voteBlocks.iterator();
     }
@@ -436,6 +437,10 @@ public class ParticipantUserData implements LockssSerializable {
     messageDir = null;
     nominees = null;
     voteBlocks = null;
+    VoteBlocksIterator iter = voteBlockIterator;
+    if (iter != null) {
+      iter.release();
+    }
     voteBlockIterator = null;
 
     psmInterp = null;
