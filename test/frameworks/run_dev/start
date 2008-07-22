@@ -47,7 +47,7 @@ then
 org.lockss.platform.localIPAddress=${LOCAL_IP}
 org.lockss.platform.localIPs=${LOCAL_IP}
 org.lockss.platform.diskSpacePaths=./cache
-org.lockss.platform.version=243
+org.lockss.platform.version=261
 org.lockss.platform.operatingSystem=${OS}
 org.lockss.platform.sysadminemail=lockssdiag@lockss.org
 org.lockss.platform.accesssubnet=171.66.236.*
