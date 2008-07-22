@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.8 2007-11-07 08:15:39 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.8.10.1 2008-07-22 06:47:30 tlipkis Exp $
  */
 
 /*
@@ -223,8 +223,12 @@ public class ThreadDump extends LockssServlet {
       long tId = threadIds[ix];
       ThreadInfo tInfo = tmxb.getThreadInfo(tId, 500);
       Thread th = idMap.get(tId);
-      String tName = tInfo.getThreadName();
-
+      String tName;
+      if (tInfo != null) {
+	tName = tInfo.getThreadName();
+      } else {
+	tName = "??? (no thread info)";
+      }
       tbl.newRow(deadIds.contains(new Long(ix))
 		 ? " style='color: #ff0000'" : "");
       tbl.newCell();
@@ -234,6 +238,9 @@ public class ThreadDump extends LockssServlet {
       tbl.newCell("align = \"center\"");
       if (th != null) {
 	tbl.add(th.getPriority());
+      }
+      if (tInfo == null) {
+	continue;
       }
       tbl.newCell();
       String status =
