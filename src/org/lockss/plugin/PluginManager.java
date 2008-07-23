@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.189 2008-05-10 03:17:05 dshr Exp $
+ * $Id: PluginManager.java,v 1.190 2008-07-23 08:15:14 tlipkis Exp $
  */
 
 /*
@@ -2095,6 +2095,7 @@ public class PluginManager
       try {
 	// Validate and bless the JAR file from the CU.
 	blessedJar = jarValidator.getBlessedJar(cu);
+	log.debug2("Plugin jar: " + cu.getUrl() + " -> " + blessedJar);
       } catch (IOException ex) {
 	log.error("Error processing jar file: " + url, ex);
 	return;
@@ -2118,6 +2119,7 @@ public class PluginManager
 	return; // skip this CU.
 
       }
+      log.debug2("Blessed jar: " + blessedJar + ", plugins: " + loadPlugins);
 
       // Although this -should- never happen, it's possible.
       if (loadPlugins.size() == 0) {
