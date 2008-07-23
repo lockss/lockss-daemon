@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.79 2008-04-01 08:03:49 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.79.6.1 2008-07-23 08:03:44 tlipkis Exp $
  */
 
 /*
@@ -713,8 +713,13 @@ public class LockssRepositoryImpl
 	logger.debug3("Loading name map for '" + repoCacheFile + "'.");
 	auMap = new HashMap();
 	if (!repoCacheFile.exists()) {
-	  repoCacheFile.mkdirs();
 	  logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
+	  if (!repoCacheFile.mkdirs()) {
+	    logger.critical("Couldn't create directory, check owner/permissions: "
+			    + repoCacheFile);
+	    // return empty map
+	    return auMap;
+	  }
 	} else {
 	  // read each dir's property file and store mapping auid -> dir
 	  File[] auDirs = repoCacheFile.listFiles();
