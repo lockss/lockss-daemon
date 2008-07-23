@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.52 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.52.2.1 2008-07-23 08:03:21 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
@@ -331,6 +331,16 @@ public class ServletUtil {
 
   private static final String SUBMIT_BEFORE =
     "<br><center>";
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(ServeContent.PREFIX)) {
+      ServeContent.setConfig(config, oldConfig, diffs);
+    }
+  }
 
   /** Return the URL of this machine's config backup file to download */
   // This is a crock.  It's called from RemoteAPI, which has no servlet
@@ -1628,9 +1638,27 @@ public class ServletUtil {
     return manifestIndex(daemon.getPluginManager(), aus, header);
   }
 
+  public interface ManifestUrlTransform {
+    public Object transformUrl(String url);
+  }
+
   /** Return an index of manifest pages for the given AUs. */
   public static Element manifestIndex(PluginManager pluginMgr,
 				      Collection aus, String header) {
+    return manifestIndex(pluginMgr,
+			 aus,
+			 header,
+			 new ManifestUrlTransform(){
+			   public Object transformUrl(String url) {
+			     return new Link(url, url);
+			   }},
+			 true);
+  }
+
+  public static Element manifestIndex(PluginManager pluginMgr,
+				      Collection aus, String header,
+				      ManifestUrlTransform xform,
+				      boolean checkCollected) {
     Table tbl = new Table(AUSUMMARY_TABLE_BORDER,
 			  "cellspacing=\"4\" cellpadding=\"0\"");
     if (header != null) {
@@ -1661,10 +1689,12 @@ public class ServletUtil {
 	List urls = ((SpiderCrawlSpec)spec).getStartingUrls();
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
-	  tbl.add(new Link(url, url));
-	  CachedUrl cu = au.makeCachedUrl(url);
-	  if (cu == null || !cu.hasContent()) {
-	    tbl.add(" (not yet collected)");
+	  tbl.add(xform.transformUrl(url));
+	  if (checkCollected) {
+	    CachedUrl cu = au.makeCachedUrl(url);
+	    if (cu == null || !cu.hasContent()) {
+	      tbl.add(" (not yet collected)");
+	    }
 	  }
 	  if (uiter.hasNext()) {
 	    tbl.add("<br>");

@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.8.2.1 2008-07-15 23:17:35 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.8.2.2 2008-07-23 08:03:21 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
+import java.util.List;
 import java.net.*;
 import java.text.*;
 import org.mortbay.http.*;
@@ -75,6 +76,24 @@ public class ServeContent extends LockssServlet {
   public static final int DEFAULT_MISSING_FILE_ACTION =
     MISSING_FILE_ACTION_404;
 
+  /** Include in index AUs in listed plugins.  Set only one of
+   * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
+  public static final String PARAM_INCLUDE_PLUGINS =
+    PREFIX + "includePlugins";
+
+  public static final List DEFAULT_INCLUDE_PLUGINS = Collections.EMPTY_LIST;
+
+  /** Exclude from index AUs in listed plugins.  Set only one of
+   * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
+  public static final String PARAM_EXCLUDE_PLUGINS =
+    PREFIX + "excludePlugins";
+
+  public static final List DEFAULT_EXCLUDE_PLUGINS = Collections.EMPTY_LIST;
+
+  private static int missingFileAction = DEFAULT_MISSING_FILE_ACTION;
+  private static List excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
+  private static List includePlugins = DEFAULT_INCLUDE_PLUGINS;
+
   private String action;
   private String verbose;
   private String url;
@@ -88,7 +107,6 @@ public class ServeContent extends LockssServlet {
   private long clen;
 
   private PluginManager pluginMgr;
-  private AdminServletManager srvltMgr;
 
   // If we can't resolve a DOI, here is where to send it
   private static final String DOI_LOOKUP_URL = "http://dx.doi.org/";
@@ -112,13 +130,35 @@ public class ServeContent extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
-    try {
-      srvltMgr =
-	(AdminServletManager) getLockssDaemon().getServletManager();
-    } catch (RuntimeException e) {
-      log.warning("Can't find AdminServletManager", e);
+  }
+
+  /** Called by ServletUtil.setConfig() */
+  static void setConfig(Configuration config,
+			Configuration oldConfig,
+			Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      missingFileAction = config.getInt(PARAM_MISSING_FILE_ACTION,
+					DEFAULT_MISSING_FILE_ACTION);
+      excludePlugins = config.getList(PARAM_EXCLUDE_PLUGINS,
+				      DEFAULT_EXCLUDE_PLUGINS);
+      includePlugins = config.getList(PARAM_INCLUDE_PLUGINS,
+				      DEFAULT_INCLUDE_PLUGINS);
     }
   }
+
+  private boolean isIncludedAu(ArchivalUnit au) {
+    if (pluginMgr.isInternalAu(au) || !(au instanceof BaseArchivalUnit)) {
+      return false;
+    }
+    String pluginId = au.getPlugin().getPluginId();
+    if (!includePlugins.isEmpty()) {
+      return includePlugins.contains(pluginId);
+    }
+    if (!excludePlugins.isEmpty()) {
+      return !excludePlugins.contains(pluginId);
+    }
+    return true;
+  } 
 
   /**
    * Handle a request
@@ -207,9 +247,7 @@ public class ServeContent extends LockssServlet {
   protected void handleMissingUrlRequest(String missingUrl)
       throws IOException {
     String err = "URL " + missingUrl + " not found";
-    int noUrlAction = CurrentConfig.getIntParam(PARAM_MISSING_FILE_ACTION,
-						DEFAULT_MISSING_FILE_ACTION);
-    switch (noUrlAction) {
+    switch (missingFileAction) {
     case MISSING_FILE_ACTION_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
 		     missingUrl + "  not found on this LOCKSS box");
@@ -262,37 +300,31 @@ public class ServeContent extends LockssServlet {
   }
 
   void displayIndexPage() throws IOException {
-    Page page = newPage();
-    // Sort list of AUs by au.getName()
-    java.util.List auList = pluginMgr.getAllAus();
-    Collections.sort(auList, new AuOrderComparator());
-
-    for (Iterator iter = auList.iterator(); iter.hasNext(); ) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
-      if (pluginMgr.isInternalAu(au) || !(au instanceof BaseArchivalUnit)) {
-	continue;
-      }
-      java.util.List permissions = au.getCrawlSpec().getPermissionPages();
-      if (!permissions.isEmpty()) {
-	page.add("<br>");
-	boolean first = true;
-	for (Iterator it = permissions.iterator(); it.hasNext(); ) {
-	  String url = (String)it.next();
-	  if (first) {
-	    page.add("<a href=\"");
-	    page.add("/ServeContent?url=" + url);
-	    page.add("\">" + au.getName() + "</a>");
-	    first = false;
-	  } else {
-	    page.add(" <a href=\"");
-	    page.add("/ServeContent?url=" + url);
-	    page.add("\">and</a>");
-	  }
-	}
-	page.add(".\n");
+    // Filter AUs by included or excluded plugin list
+    List<ArchivalUnit> auList = new ArrayList();
+    for (ArchivalUnit au : pluginMgr.getAllAus()) {
+      if (isIncludedAu(au)) {
+	auList.add(au);
       }
     }
-    page.add("<br>");
+    Collections.sort(auList, new AuOrderComparator());
+
+    Page page = newPage();
+
+    // Layout manifest index w/ URLs pointing to this servlet
+    Element ele =
+      ServletUtil.manifestIndex(pluginMgr,
+				auList,
+				null,
+				new ServletUtil.ManifestUrlTransform() {
+				  public Object transformUrl(String url) {
+				    return srvLink(myServletDescr(),
+						   url,
+						   "url=" + url);
+				  }},
+				false);
+    page.add(ele);
+    layoutFooter(page);
     ServletUtil.writePage(resp, page);
   }
 
