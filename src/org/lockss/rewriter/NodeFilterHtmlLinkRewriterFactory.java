@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5.2.1 2008-07-24 02:52:51 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5.2.2 2008-07-24 08:24:37 tlipkis Exp $
  */
 
 /*
@@ -78,12 +78,13 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 						    inStream, encoding, url));
   }
 
-  public InputStream createLinkRewriter(String mimeType,
+  public InputStream createLinkRewriter(String contentType,
 					ArchivalUnit au,
 					InputStream in,
 					String encoding,
 					String url)
       throws PluginException {
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
       int port = 0;
@@ -215,7 +216,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       return (new HtmlFilterInputStream(in, htmlXform));
     } else {
       throw new PluginException("NodeFilterHtmlLinkRewriterFactory vs. " +
-				mimeType);
+				contentType);
     }
   }
 }
