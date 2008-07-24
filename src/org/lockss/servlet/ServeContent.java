@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.8.2.2 2008-07-23 08:03:21 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.8.2.3 2008-07-24 08:24:47 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.text.*;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
+import org.mortbay.util.UrlEncoded;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -97,6 +98,7 @@ public class ServeContent extends LockssServlet {
   private String action;
   private String verbose;
   private String url;
+  private boolean norewrite;
   private String doi;
   private String issn;
   private String volume;
@@ -170,6 +172,7 @@ public class ServeContent extends LockssServlet {
       return;
     }
     verbose = getParameter("verbose");
+    norewrite = !StringUtil.isNullString(getParameter("norewrite"));
     url = getParameter("url");
     if (!StringUtil.isNullString(url)) {
       handleUrlRequest();
@@ -274,7 +277,16 @@ public class ServeContent extends LockssServlet {
     Reader rewritten = null;
     try {
       outWriter = resp.getWriter();
-      rewritten = cu.openForReadingWithRewriting();
+      if (!norewrite) {
+	rewritten = cu.openForReadingWithRewriting();
+      }
+      if (rewritten == null) {
+	// XXX openForReadingWithRewriting returns null if rewriter factory
+	// throws.  It should probably throw, to be handled here.
+	// If can't rewrite, serve original (rather than serving nothing).
+	rewritten = cu.openForReading();
+      }
+
       long bytes = StreamUtil.copy(rewritten, outWriter);
       if (bytes <= Integer.MAX_VALUE) {
 	  resp.setContentLength((int)bytes);
@@ -320,7 +332,7 @@ public class ServeContent extends LockssServlet {
 				  public Object transformUrl(String url) {
 				    return srvLink(myServletDescr(),
 						   url,
-						   "url=" + url);
+						   "url=" + UrlEncoded.encodeString(url));
 				  }},
 				false);
     page.add(ele);
