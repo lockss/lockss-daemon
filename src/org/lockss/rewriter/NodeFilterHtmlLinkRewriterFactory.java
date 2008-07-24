@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5 2008-07-10 03:50:32 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.6 2008-07-24 02:01:04 dshr Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	if (defUrlStem == null) {
 	  defUrlStem = urlStem;
 	}
-	linkRegex1[i] = urlStem;
+	linkRegex1[i] = "^" + urlStem;
 	ignCase1[i] = true;
 	rwRegex1[i] = urlStem;
 	rwTarget1[i] = targetStem + urlStem;
