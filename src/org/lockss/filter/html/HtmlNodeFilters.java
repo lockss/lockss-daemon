@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.7 2008-07-06 04:25:57 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.7.2.1 2008-07-24 18:31:12 dshr Exp $
  */
 
 /*
@@ -205,7 +205,7 @@ public class HtmlNodeFilters {
 			 new NotFilter(new HasChildFilter(filter, true)));
   }
 
-  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+  /** Create a NodeFilter that applies all of an array of LinkRegexNoXforms
    */
   public static NodeFilter linkRegexYesXforms(String[] regex,
 					      boolean[] ignoreCase,
@@ -225,7 +225,7 @@ public class HtmlNodeFilters {
     return ret;
   }
 
-  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+  /** Create a NodeFilter that applies all of an array of LinkRegexNoXforms
    */
   public static NodeFilter linkRegexNoXforms(String[] regex,
 					     boolean[] ignoreCase,
@@ -245,7 +245,7 @@ public class HtmlNodeFilters {
     return ret;
   }
 
-  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+  /** Create a NodeFilter that applies all of an array of StyleRegexYesXforms
    */
   public static NodeFilter styleRegexYesXforms(String[] regex,
 					       boolean[] ignoreCase,
@@ -264,7 +264,7 @@ public class HtmlNodeFilters {
     return ret;
   }
 
-  /** Create a NodeFilter that applies all of an array of LinkRegexXforms
+  /** Create a NodeFilter that applies all of an array of StyleRegexNoXforms
    */
   public static NodeFilter styleRegexNoXforms(String[] regex,
 					      boolean[] ignoreCase,
@@ -457,6 +457,13 @@ public class HtmlNodeFilters {
 
     public boolean accept(Node node) {
       if (node instanceof TagNode) {
+	if (node instanceof MetaTag) {
+	  // Hack: eliminate all but "refresh" meta tags
+	  String equiv = ((TagNode)node).getAttribute("http-equiv");
+	  if (! "refresh".equalsIgnoreCase(equiv)) {
+	    return false;
+	  }
+	}
 	Attribute attribute = null;
 	for (int i = 0; i < attrs.length; i++) {
 	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
@@ -507,6 +514,13 @@ public class HtmlNodeFilters {
 
     public boolean accept(Node node) {
       if (node instanceof TagNode) {
+	if (node instanceof MetaTag) {
+	  // Hack: eliminate all but "refresh" meta tags
+	  String equiv = ((TagNode)node).getAttribute("http-equiv");
+	  if (! "refresh".equalsIgnoreCase(equiv)) {
+	    return false;
+	  }
+	}
 	Attribute attribute = null;
 	for (int i = 0; i < attrs.length; i++) {
 	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
