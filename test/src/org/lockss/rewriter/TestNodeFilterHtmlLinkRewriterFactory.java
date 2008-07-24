@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.4 2008-07-12 08:36:02 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.4.2.1 2008-07-24 02:52:51 dshr Exp $
  */
 
 /*
@@ -54,45 +54,46 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<head>\n" +
     "<title>example.com website</title>\n" +
     "<meta http-equiv=\"content-type\"" +
-    "content=\"text/html; charset=ISO-8859-1\">" +
-    "</head>" +
-    "<body>" +
-    "<h1 align=\"center\">example.com website</h1>" +
-    "<br>" +
-    "<a href=\"" + url + "\">an absolute link to rewrite</a>" +
-    "<br>" +
-    "<a href=\"" + urlSuffix + "\">a relative link to rewrite</a>" +
-    "<br>" +
-    "<a href=\"" + "/more/" + urlSuffix + "\">a relative link to rewrite</a>" +
-    "<br>" +
-    "<a href=\"http://www.content.org/index.html\">an absolute link not to rewrite</a>" +
-    "<br>" +
+    "content=\"text/html; charset=ISO-8859-1\">\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<h1 align=\"center\">example.com website</h1>\n" +
+    "<br>\n" +
+    "<a href=\"" + url + "\">an absolute link to rewrite</a>\n" +
+    "<br>\n" +
+    "<a href=\"" + urlSuffix + "\">a relative link to rewrite</a>\n" +
+    "<br>\n" +
+    "<a href=\"" + "/more/" + urlSuffix + "\">a relative link to rewrite</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://www.content.org/index.html\">an absolute link not to rewrite</a>\n" +
+    "<br>\n" +
     "A relative script" +
-    "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>" +
-    "<br>" +
+    "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>\n" +
+    "<br>\n" +
     "An absolute script" +
-    "<script type=\"text/javascript\" src=\"" + urlStem + "javascript/utility.js\"></script>" +
-    "<br>" +
+    "<script type=\"text/javascript\" src=\"" + urlStem + "javascript/utility.js\"></script>\n" +
+    "<br>\n" +
     "A relative stylesheet" +
-    "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">" +
-    "<br>" +
+    "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
     "An absolute stylesheet" +
-    "<link rel=\"stylesheet\" href=\"" + urlStem + "css/extra.css\" type=\"text/css\" media=\"all\">" +
-    "<br>" +
+    "<link rel=\"stylesheet\" href=\"" + urlStem + "css/extra.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
     "A relative img" +
-    "<img src=\"/icons/logo.gif\" alt=\"BMJ\" title=\"BMJ\" />" +
-    "<br>" +
+    "<img src=\"/icons/logo.gif\" alt=\"BMJ\" title=\"BMJ\" />\n" +
+    "<br>\n" +
     "An absolute img" +
-    "<img src=\"" + urlStem + "icons/logo2.gif\" alt=\"BMJ\" title=\"BMJ\" />" +
-    "<br>" +
+    "<img src=\"" + urlStem + "icons/logo2.gif\" alt=\"BMJ\" title=\"BMJ\" />\n" +
+    "<br>\n" +
     "A relative CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>" +
-    "<br>" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
+    "<br>\n" +
     "An absolute CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra.css) @import url(" + urlStem + "css/extra2.css);</style>" +
-    "<br>" +
-    "</body>" +
-    "</HTML>";
+    "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra.css) @import url(" + urlStem + "css/extra2.css);</style>\n" +
+    "<br>\n" +
+    "</body>\n" +
+    "</HTML>\n";
+
   private static final int linkCount = 9;
   private static final int importCount = 4;
   private InputStream in;
@@ -156,25 +157,36 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       String out = sb.toString();
       assertNotNull(out);
       log.debug3(out);
+      String rewriteTag = "ServeContent?url=";
       // Now check the rewriting
       int ix = 0;
       for (i = 0; i < linkCount; i++) {
-	int nix = out.indexOf("ServeContent?url=" + urlStem, ix);
+	int nix = out.indexOf(rewriteTag, ix);
 	assertTrue("Start of rewritten url not found", nix > ix);
 	int endix = out.indexOf("\"", nix);
 	assertTrue("End of rewritten url not found", endix > nix);
-	log.debug3("Link rewritten: " + out.substring(nix, endix));
+	String rewritten = out.substring(nix, endix);
+	log.debug3("Link rewritten: " + rewritten);
+	// Make sure no double rewrites
+	assertEquals("Multiple rewrite " + rewritten,
+		     rewritten.indexOf(rewriteTag),
+		     rewritten.lastIndexOf(rewriteTag));
 	ix = endix;
       }
       for (i = 0; i < importCount; i++) {
-	int nix = out.indexOf("ServeContent?url=" + urlStem, ix);
+	int nix = out.indexOf(rewriteTag, ix);
 	assertTrue("Start of rewritten import not found", nix > ix);
 	int endix = out.indexOf(")", nix);
 	assertTrue("End of rewritten import not found", endix > nix);
-	log.debug3("Import rewritten " + out.substring(nix, endix));
+	String rewritten = out.substring(nix, endix);
+	log.debug3("Import rewritten: " + rewritten);
+	// Make sure no double rewrites
+	assertEquals("Multiple rewrite " + rewritten,
+		     rewritten.indexOf(rewriteTag),
+		     rewritten.lastIndexOf(rewriteTag));
 	ix = endix;
       }
-      ix = out.indexOf("ServeContent?url=" + urlStem, ix);
+      ix = out.indexOf(rewriteTag + urlStem, ix);
       if (ix >= 0) {
 	log.error(out.substring(ix));
       }
