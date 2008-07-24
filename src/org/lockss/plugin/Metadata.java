@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.2 2007-11-20 23:18:45 dshr Exp $
+ * $Id: Metadata.java,v 1.2.8.1 2008-07-24 08:24:14 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class Metadata {
     if (doiMap != null) {
       ret = doiMap.getProperty(doi);
     }
-    log.debug("doiToUrl(" + doi + ") = " + (ret == null ? "null" : ret));
+    log.debug3("doiToUrl(" + doi + ") = " + (ret == null ? "null" : ret));
     return ret;
   }
 
@@ -153,7 +153,7 @@ public class Metadata {
     if (StringUtil.isNullString(url)) {
       return ret;
     }
-    log.debug("proxyResolver(" + url + ")");
+    log.debug2("proxyResolver(" + url + ")");
     boolean found = false;
     // Is it a DOI resolver URL?
     // XXX should use host part to find plugin, then ask plugin if
@@ -162,7 +162,7 @@ public class Metadata {
     for (int i = 0; i < doiResolvers.length; i++) {
       if (url.startsWith(doiResolvers[i])) {
 	String param = url.substring(doiResolvers[i].length());
-	log.debug("doiResolver: " + url + " doi " + param);
+	log.debug3("doiResolver: " + url + " doi " + param);
 	String newUrl =
 	  Metadata.doiToUrl(param);
 	if (newUrl != null) {
@@ -176,7 +176,7 @@ public class Metadata {
 	if (url.startsWith(openUrlResolvers[i])) {
 	  // issn/volume/issue/spage
 	  String query = url.substring(openUrlResolvers[i].length());
-	  log.debug("openUrlResolver: " + url + " openUrl " + query);
+	  log.debug3("openUrlResolver: " + url + " openUrl " + query);
 	  if (!StringUtil.isNullString(query)) {
 	    String[] params = query.split("&");
 	    String issn = null;
@@ -203,7 +203,7 @@ public class Metadata {
 		spage != null) {
 	      String openUrl = issn + "/" + volume + "/" +
 		issue + "/" + spage;
-	      log.debug("openUrl: " + openUrl);
+	      log.debug3("openUrl: " + openUrl);
 	      String newUrl =
 		Metadata.openUrlToUrl(openUrl);
 	      if (newUrl != null) {
@@ -215,7 +215,7 @@ public class Metadata {
 	}
       }
     }
-    log.debug("proxyResolver returns " + ret);
+    log.debug2("proxyResolver returns " + ret);
     return ret;
   }
   
