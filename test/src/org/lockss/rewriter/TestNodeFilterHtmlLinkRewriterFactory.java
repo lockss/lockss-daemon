@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.5 2008-07-24 02:01:04 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.6 2008-07-24 18:11:51 dshr Exp $
  */
 
 /*
@@ -53,8 +53,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<html>\n" +
     "<head>\n" +
     "<title>example.com website</title>\n" +
-    "<meta http-equiv=\"content-type\"" +
+    "<meta http-equiv=\"content-type\" " +
     "content=\"text/html; charset=ISO-8859-1\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1;url=" + urlStem + "page2.html" + "\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
@@ -64,6 +66,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<a href=\"" + urlSuffix + "\">a relative link to rewrite</a>\n" +
     "<br>\n" +
     "<a href=\"" + "/more/" + urlSuffix + "\">a relative link to rewrite</a>\n" +
+    "<br>\n" +
+    "<a href=\"" + "../more/" + urlSuffix + "\">a relative link to rewrite</a>\n" +
     "<br>\n" +
     "<a href=\"http://www.content.org/index.html\">an absolute link not to rewrite</a>\n" +
     "<br>\n" +
@@ -80,10 +84,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<link rel=\"stylesheet\" href=\"" + urlStem + "css/extra.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
     "A relative img" +
-    "<img src=\"/icons/logo.gif\" alt=\"BMJ\" title=\"BMJ\" />\n" +
+    "<img src=\"/icons/logo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
     "<br>\n" +
     "An absolute img" +
-    "<img src=\"" + urlStem + "icons/logo2.gif\" alt=\"BMJ\" title=\"BMJ\" />\n" +
+    "<img src=\"" + urlStem + "icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
     "A relative CSS import" +
     "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
@@ -94,7 +98,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</body>\n" +
     "</HTML>\n";
 
-  private static final int linkCount = 9;
+  private static final int linkCount = 11;
   private static final int importCount = 4;
   private InputStream in;
 
@@ -166,13 +170,14 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 	int endix = out.indexOf("\"", nix);
 	assertTrue("End of rewritten url not found", endix > nix);
 	String rewritten = out.substring(nix, endix);
-	log.debug3("Link rewritten: " + rewritten);
+	log.debug3("Link " + i + " rewritten: " + rewritten);
 	// Make sure no double rewrites
 	assertEquals("Multiple rewrite " + rewritten,
 		     rewritten.indexOf(rewriteTag),
 		     rewritten.lastIndexOf(rewriteTag));
 	ix = endix;
       }
+      log.debug3("End of links at " + out.substring(ix, ix+32));
       for (i = 0; i < importCount; i++) {
 	int nix = out.indexOf(rewriteTag, ix);
 	assertTrue("Start of rewritten import not found", nix > ix);

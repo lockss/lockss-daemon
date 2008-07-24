@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.6 2008-07-24 02:01:04 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.7 2008-07-24 18:11:51 dshr Exp $
  */
 
 /*
@@ -65,6 +65,10 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     "href",
     "src",
     "action",
+    // XXX Can we rewrite all content tags?  Or only those
+    // XXX matching content="[0-9]+;url=http://... ? Or relative?
+    // XXX NB string after url= may or may not be single quoted
+    "content", // <meta http-equiv="refresh" content="1;url=...
   };
 
   public Reader createLinkRewriterReader(String mimeType,
@@ -109,7 +113,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	if (defUrlStem == null) {
 	  defUrlStem = urlStem;
 	}
-	linkRegex1[i] = "^" + urlStem;
+	linkRegex1[i] = "(^|;url=)" + urlStem;
 	ignCase1[i] = true;
 	rwRegex1[i] = urlStem;
 	rwTarget1[i] = targetStem + urlStem;
@@ -131,11 +135,12 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       String urlPrefix = url.substring(0, p);
       logger.debug3("urlPrefix: " + urlPrefix);
       String [] linkRegex2 = {
-	"^http://",
-	"^http://",
-	"^http://",
+	"(^|;url=)http://",
+	"(^|;url=)http://",
+	"(^|;url=)http://",
       };
       boolean[] ignCase2 = {
+	true,
 	true,
 	true,
 	true,
