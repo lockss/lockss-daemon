@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.4.2.4 2008-07-25 16:00:19 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.4.2.5 2008-07-25 18:11:03 dshr Exp $
  */
 
 /*
@@ -103,18 +103,16 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "An absolute CSS import" +
     "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra.css) @import url(" + urlStem + "css/extra2.css);</style>\n" +
     "<br>\n" +
-    /*
     "A mixed CSS import" +
     "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra3.css) @import url(/css/extra4.css);</style>\n" +
     "<br>\n" +
-    */
     "</body>\n" +
     "</HTML>\n";
 
   // XXX need a better way to determine that the rewrite is correct than
   // XXX counting tag instances
   private static final int linkCount = 15;
-  private static final int importCount = 4;
+  private static final int importCount = 6;
   private InputStream in;
 
   public void setUp() throws Exception {

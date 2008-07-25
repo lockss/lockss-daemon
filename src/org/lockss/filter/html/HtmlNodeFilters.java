@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.7.2.3 2008-07-25 16:00:19 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.7.2.4 2008-07-25 18:11:03 dshr Exp $
  */
 
 /*
@@ -601,6 +601,8 @@ public class HtmlNodeFilters {
     }
   }
 
+  private static final String importTag = "@import";
+
   /**
    * This class rejects everything but applies a transform to
    * links is Style tags that match the regex.
@@ -631,16 +633,28 @@ public class HtmlNodeFilters {
 	  for (it = ((StyleTag)node).children(); it.hasMoreNodes(); ) {
 	    Node child = it.nextNode();
 	    if (child instanceof TextNode) {
-	      // Rewrite all url(foo) instances
-	      // XXX bug - does not handle case of mixture of
-	      // XXX @import url(/foo/bar) and @import url(http://www...)
+	      // Find each instance of @import.*)
 	      String text = ((TextNode)child).getText();
-	      if (matcher.contains(text, pat)) {
-		log.debug3("Style yes text " + text);
-		// XXX - urlEncode vs. multiple @import
-		String newText = text.replaceAll(target, replace);
-		((TextNode)child).setText(newText);
-		log.debug3("new yes " + newText);
+	      int startIx = 0;
+	      while ((startIx = text.indexOf(importTag, startIx)) >= 0) {
+		int endIx = text.indexOf(')', startIx);
+		int delta = 0;
+		if (endIx < 0) {
+		  log.error("Can't find close paren in " + text);
+		  return false;
+		}
+		String oldImport = text.substring(startIx, endIx + 1);
+		if (matcher.contains(oldImport, pat)) {
+		  String newImport =
+		    urlEncode(oldImport.replaceFirst(target, replace));
+		  delta = newImport.length() - oldImport.length();
+		  String newText = text.substring(0, startIx) + 
+		    newImport + text.substring(endIx + 1);
+		  log.debug3("Import rewritten " + newText);
+		  text = newText;
+		  ((TextNode)child).setText(text);
+		}
+		startIx = endIx + 1 + delta;
 	      }
 	    }
 	  }
@@ -682,16 +696,28 @@ public class HtmlNodeFilters {
 	  for (it = ((StyleTag)node).children(); it.hasMoreNodes(); ) {
 	    Node child = it.nextNode();
 	    if (child instanceof TextNode) {
-	      // Rewrite all url(foo) instances
-	      // XXX bug - does not handle case of mixture of
-	      // XXX @import url(/foo/bar) and @import url(http://www...)
+	      // Find each instance of @import.*)
 	      String text = ((TextNode)child).getText();
-	      if (!matcher.contains(text, pat)) {
-		log.debug3("Style no text " + text);
-		// XXX - urlEncode vs. multiple @import
-		String newText = text.replaceAll(target, replace);
-		((TextNode)child).setText(newText);
-		log.debug3("new no " + newText);
+	      int startIx = 0;
+	      while ((startIx = text.indexOf(importTag, startIx)) >= 0) {
+		int endIx = text.indexOf(')', startIx);
+		int delta = 0;
+		if (endIx < 0) {
+		  log.error("Can't find close paren in " + text);
+		  return false;
+		}
+		String oldImport = text.substring(startIx, endIx + 1);
+		if (!matcher.contains(oldImport, pat)) {
+		  String newImport =
+		    urlEncode(oldImport.replaceFirst(target, replace));
+		  delta = newImport.length() - oldImport.length();
+		  String newText = text.substring(0, startIx) + 
+		    newImport + text.substring(endIx + 1);
+		  log.debug3("Import rewritten " + newText);
+		  text = newText;
+		  ((TextNode)child).setText(text);
+		}
+		startIx = endIx + 1 + delta;
 	      }
 	    }
 	  }
