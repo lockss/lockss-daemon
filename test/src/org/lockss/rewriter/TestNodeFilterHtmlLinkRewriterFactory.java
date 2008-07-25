@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.6 2008-07-24 18:11:51 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.7 2008-07-25 01:54:03 dshr Exp $
  */
 
 /*
@@ -57,6 +57,14 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "content=\"text/html; charset=ISO-8859-1\">\n" +
     "<meta http-equiv=\"refresh\" " +
     "content=\"1;url=" + urlStem + "page2.html" + "\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1; url=" + urlStem + "page3.html" + "\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1; \turl=" + urlStem + "page4.html" + "\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1;url=" + "page5.html" + "\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1;url=" + "../page6.html" + "\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
@@ -98,7 +106,9 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</body>\n" +
     "</HTML>\n";
 
-  private static final int linkCount = 11;
+  // XXX need a better way to determine that the rewrite is correct than
+  // XXX counting tag instances
+  private static final int linkCount = 15;
   private static final int importCount = 4;
   private InputStream in;
 
@@ -184,7 +194,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 	int endix = out.indexOf(")", nix);
 	assertTrue("End of rewritten import not found", endix > nix);
 	String rewritten = out.substring(nix, endix);
-	log.debug3("Import rewritten: " + rewritten);
+	log.debug3("Import rewritten " + i + " : " + rewritten);
 	// Make sure no double rewrites
 	assertEquals("Multiple rewrite " + rewritten,
 		     rewritten.indexOf(rewriteTag),
