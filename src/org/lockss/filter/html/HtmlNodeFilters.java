@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.7.2.2 2008-07-25 02:40:30 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.7.2.3 2008-07-25 16:00:19 dshr Exp $
  */
 
 /*
@@ -437,6 +437,36 @@ public class HtmlNodeFilters {
     }
 
     public abstract boolean accept(Node node);
+
+    /**
+     * URL encode the part of url that represents the original URL
+     * @param url the string including the rewritten URL
+     * @return the content of url with the original url encoded
+     */
+    private static final String tag = "?url=";
+    protected String urlEncode(String url) {
+      int startIx = url.indexOf(tag);
+      if (startIx < 0) {
+	log.error("urlEncode: no tag in " + url);
+	return url;
+      }
+      startIx += tag.length();
+      String oldUrl = url.substring(startIx);
+      int endIx = url.indexOf('"', startIx);
+      if (endIx > startIx) {
+	// meta tag content attribute
+	oldUrl = url.substring(startIx, endIx);
+      } else if ((endIx = url.indexOf(')', startIx)) > startIx) {
+	// CSS @import
+	oldUrl = url.substring(startIx, endIx);
+      } else {
+	// Normal tag attribute
+	endIx = -1;
+      }
+      String newUrl = UrlUtil.encodeUrl(oldUrl);
+      return url.substring(0, startIx) + newUrl +
+	(endIx < 0 ? "" : url.substring(endIx));
+    }
   }
 
   /**
@@ -509,7 +539,7 @@ public class HtmlNodeFilters {
 	    if (matcher.contains(url, pat)) {
 	      log.debug3("Attribute " + attribute.getName() + " old " + url +
 			 " target " + target + " replace " + replace);
-	      String newUrl = url.replaceFirst(target, replace);
+	      String newUrl = urlEncode(url.replaceFirst(target, replace));
 	      attribute.setValue(newUrl);
 	      ((TagNode)node).setAttributeEx(attribute);
 	      log.debug3("new " + newUrl);
@@ -559,7 +589,7 @@ public class HtmlNodeFilters {
 	    String url = attribute.getValue();
 	    if (!matcher.contains(url, pat)) {
 	      log.debug3("Attribute " + attribute.getName() + " old " + url);
-	      attribute.setValue(url.replaceFirst(target, replace));
+	      attribute.setValue(urlEncode(url.replaceFirst(target, replace)));
 	      ((TagNode)node).setAttributeEx(attribute);
 	      log.debug3("new " + url);
 	    }
@@ -607,6 +637,7 @@ public class HtmlNodeFilters {
 	      String text = ((TextNode)child).getText();
 	      if (matcher.contains(text, pat)) {
 		log.debug3("Style yes text " + text);
+		// XXX - urlEncode vs. multiple @import
 		String newText = text.replaceAll(target, replace);
 		((TextNode)child).setText(newText);
 		log.debug3("new yes " + newText);
@@ -657,6 +688,7 @@ public class HtmlNodeFilters {
 	      String text = ((TextNode)child).getText();
 	      if (!matcher.contains(text, pat)) {
 		log.debug3("Style no text " + text);
+		// XXX - urlEncode vs. multiple @import
 		String newText = text.replaceAll(target, replace);
 		((TextNode)child).setText(newText);
 		log.debug3("new no " + newText);
@@ -704,7 +736,7 @@ public class HtmlNodeFilters {
 	    // Rewrite the attribute
 	    log.debug3("Refresh old " + contentVal +
 		       " target " + target + " replace " + replace);
-	    String newVal = contentVal.replaceFirst(target, replace);
+	    String newVal = urlEncode(contentVal.replaceFirst(target, replace));
 	    ((MetaTag)node).setAttribute("content", newVal);
 	  }
 	}
@@ -747,7 +779,7 @@ public class HtmlNodeFilters {
 	    // Rewrite the attribute
 	    log.debug3("Refresh old " + contentVal +
 		       " target " + target + " replace " + replace);
-	    String newVal = contentVal.replaceFirst(target, replace);
+	    String newVal = urlEncode(contentVal.replaceFirst(target, replace));
 	    ((MetaTag)node).setAttribute("content", newVal);
 	  }
 	}
