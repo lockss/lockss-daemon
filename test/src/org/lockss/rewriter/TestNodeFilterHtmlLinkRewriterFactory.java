@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.7 2008-07-25 01:54:03 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.8 2008-07-25 15:59:13 dshr Exp $
  */
 
 /*
@@ -103,6 +103,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "An absolute CSS import" +
     "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra.css) @import url(" + urlStem + "css/extra2.css);</style>\n" +
     "<br>\n" +
+    /*
+    "A mixed CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra3.css) @import url(/css/extra4.css);</style>\n" +
+    "<br>\n" +
+    */
     "</body>\n" +
     "</HTML>\n";
 
