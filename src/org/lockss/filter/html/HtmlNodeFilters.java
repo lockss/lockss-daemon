@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.7.2.1 2008-07-24 18:31:12 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.7.2.2 2008-07-25 02:40:30 dshr Exp $
  */
 
 /*
@@ -205,7 +205,7 @@ public class HtmlNodeFilters {
 			 new NotFilter(new HasChildFilter(filter, true)));
   }
 
-  /** Create a NodeFilter that applies all of an array of LinkRegexNoXforms
+  /** Create a NodeFilter that applies all of an array of LinkRegexYesXforms
    */
   public static NodeFilter linkRegexYesXforms(String[] regex,
 					      boolean[] ignoreCase,
@@ -274,6 +274,48 @@ public class HtmlNodeFilters {
     for (int i = 0; i < regex.length; i++) {
       filters[i] = new StyleRegexNoXform(regex[i], ignoreCase[i],
 					 target[i], replace[i]);
+    }
+    // XXX htmlparser 2.0 return new OrFilter(filters);
+    NodeFilter ret = filters[0];
+    for (int i = 1; i < filters.length; i++) {
+      ret = new OrFilter(ret, filters[i]);
+    }
+    return ret;
+  }
+
+  /** Create a NodeFilter that applies all of an array of RefreshRegexYesXforms
+   */
+  public static NodeFilter refreshRegexYesXforms(String[] regex,
+						 boolean[] ignoreCase,
+						 String[] target,
+						 String[] replace) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      log.debug3("Build meta yes" + regex[i] + " targ " + target[i] + " repl " +
+		 replace[i]);
+      filters[i] = new RefreshRegexYesXform(regex[i], ignoreCase[i],
+					 target[i], replace[i]);
+    }
+    // XXX htmlparser 2.0 return new OrFilter(filters);
+    NodeFilter ret = filters[0];
+    for (int i = 1; i < filters.length; i++) {
+      ret = new OrFilter(ret, filters[i]);
+    }
+    return ret;
+  }
+
+  /** Create a NodeFilter that applies all of an array of RefreshRegexNoXforms
+   */
+  public static NodeFilter refreshRegexNoXforms(String[] regex,
+						boolean[] ignoreCase,
+						String[] target,
+						String[] replace) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      log.debug3("Build meta no" + regex[i] + " targ " + target[i] + " repl " +
+		 replace[i]);
+      filters[i] = new RefreshRegexNoXform(regex[i], ignoreCase[i],
+					target[i], replace[i]);
     }
     // XXX htmlparser 2.0 return new OrFilter(filters);
     NodeFilter ret = filters[0];
@@ -456,14 +498,8 @@ public class HtmlNodeFilters {
     }
 
     public boolean accept(Node node) {
-      if (node instanceof TagNode) {
-	if (node instanceof MetaTag) {
-	  // Hack: eliminate all but "refresh" meta tags
-	  String equiv = ((TagNode)node).getAttribute("http-equiv");
-	  if (! "refresh".equalsIgnoreCase(equiv)) {
-	    return false;
-	  }
-	}
+      if (node instanceof TagNode &&
+	  !(node instanceof MetaTag || node instanceof StyleTag)) {
 	Attribute attribute = null;
 	for (int i = 0; i < attrs.length; i++) {
 	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
@@ -513,14 +549,8 @@ public class HtmlNodeFilters {
     }
 
     public boolean accept(Node node) {
-      if (node instanceof TagNode) {
-	if (node instanceof MetaTag) {
-	  // Hack: eliminate all but "refresh" meta tags
-	  String equiv = ((TagNode)node).getAttribute("http-equiv");
-	  if (! "refresh".equalsIgnoreCase(equiv)) {
-	    return false;
-	  }
-	}
+      if (node instanceof TagNode &&
+	  !(node instanceof MetaTag || node instanceof StyleTag)) {
 	Attribute attribute = null;
 	for (int i = 0; i < attrs.length; i++) {
 	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
@@ -635,6 +665,91 @@ public class HtmlNodeFilters {
 	  }
 	} catch (ParserException ex) {
 	  log.error("Node " + node.toString() + " threw " + ex);
+	}
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class rejects everything but applies a transform to
+   * meta refresh tags that match the regex.
+   */
+  public static class RefreshRegexYesXform extends BaseRegexFilter {
+    /**
+     * Creates a RefreshRegexYesXform that rejects everything but applies
+     * a transform to nodes whose text
+     * contains a match for the regex.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     */
+    private String target;
+    private String replace;
+    public RefreshRegexYesXform(String regex, boolean ignoreCase,
+			  String target, String replace) {
+      super(regex, ignoreCase);
+      this.target = target;
+      this.replace = replace;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof MetaTag) {
+	String equiv = ((MetaTag)node).getAttribute("http-equiv");
+	if ("refresh".equalsIgnoreCase(equiv)) {
+	  String contentVal = ((MetaTag)node).getAttribute("content");
+	  log.debug3("RefreshRegexYesXform: " + contentVal);
+	  if (contentVal != null && matcher.contains(contentVal, pat)) {
+	    // Rewrite the attribute
+	    log.debug3("Refresh old " + contentVal +
+		       " target " + target + " replace " + replace);
+	    String newVal = contentVal.replaceFirst(target, replace);
+	    ((MetaTag)node).setAttribute("content", newVal);
+	  }
+	}
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class rejects everything but applies a transform to
+   * meta refresh tags that don't match the regex.
+   */
+  public static class RefreshRegexNoXform extends BaseRegexFilter {
+    /**
+     * Creates a RefreshRegexNoXform that rejects everything but applies
+     * a transform to attributes whose text does not
+     * contain a match for the regex.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     * @param attrs Attributes to process
+     */
+    private String target;
+    private String replace;
+    public RefreshRegexNoXform(String regex, boolean ignoreCase,
+			    String target, String replace) {
+      super(regex, ignoreCase);
+      this.target = target;
+      this.replace = replace;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof MetaTag) {
+	String equiv = ((MetaTag)node).getAttribute("http-equiv");
+	if ("refresh".equalsIgnoreCase(equiv)) {
+	  String contentVal = ((MetaTag)node).getAttribute("content");
+	  log.debug3("RefreshRegexNoXform: " + contentVal);
+	  if (contentVal != null && !matcher.contains(contentVal, pat)) {
+	    // Rewrite the attribute
+	    log.debug3("Refresh old " + contentVal +
+		       " target " + target + " replace " + replace);
+	    String newVal = contentVal.replaceFirst(target, replace);
+	    ((MetaTag)node).setAttribute("content", newVal);
+	  }
 	}
       }
       return false;

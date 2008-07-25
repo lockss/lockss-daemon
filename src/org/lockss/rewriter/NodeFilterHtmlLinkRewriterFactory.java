@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5.2.3 2008-07-24 18:31:12 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5.2.4 2008-07-25 02:40:30 dshr Exp $
  */
 
 /*
@@ -65,10 +65,6 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     "href",
     "src",
     "action",
-    // XXX Can we rewrite all content tags?  Or only those
-    // XXX matching content="[0-9]+;url=http://... ? Or relative?
-    // XXX NB string after url= may or may not be single quoted
-    "content", // <meta http-equiv="refresh" content="1;url=...
   };
 
   public Reader createLinkRewriterReader(String mimeType,
@@ -114,12 +110,12 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	if (defUrlStem == null) {
 	  defUrlStem = urlStem;
 	}
-	linkRegex1[i] = "(^|;url=)" + urlStem;
+	linkRegex1[i] = "^" + urlStem;
 	ignCase1[i] = true;
 	rwRegex1[i] = urlStem;
 	rwTarget1[i] = targetStem + urlStem;
-	logger.debug3("if match " + linkRegex1[i] + " replace " + rwRegex1[i] +
-		      " by " + rwTarget1[i]);
+	logger.debug3("if link match " + linkRegex1[i] + " replace " +
+		      rwRegex1[i] + " by " + rwTarget1[i]);
 	i++;
       }
       if (defUrlStem == null) {
@@ -136,12 +132,11 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       String urlPrefix = url.substring(0, p);
       logger.debug3("urlPrefix: " + urlPrefix);
       String [] linkRegex2 = {
-	"(^|;url=)http://",
-	"(^|;url=)http://",
-	"(^|;url=)http://",
+	"^http://",
+	"^http://",
+	"^http://",
       };
       boolean[] ignCase2 = {
-	true,
 	true,
 	true,
 	true,
@@ -162,6 +157,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	HtmlNodeFilters.linkRegexNoXforms(linkRegex2, ignCase2, rwRegex2,
 					  rwTarget2, attrs);
 
+      // Rewrite CSS style imports
       String[] linkRegex3 = new String[l];
       boolean[] ignCase3 = new boolean[l];
       String[] rwRegex3 = new String[l];
@@ -177,8 +173,8 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	ignCase3[i] = true;
 	rwRegex3[i] = "url\\(" + urlStem;
 	rwTarget3[i] = "url(" + targetStem + urlStem;
-	logger.debug3("if match " + linkRegex1[i] + " replace " + rwRegex1[i] +
-		      " by " + rwTarget1[i]);
+	logger.debug3("if css match " + linkRegex1[i] + " replace " +
+		      rwRegex1[i] + " by " + rwTarget1[i]);
 	i++;
       }
       NodeFilter absImportXform =
@@ -187,33 +183,86 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       String [] linkRegex4 = {
 	"url\\(http://",
 	"url\\(http://",
+	// "url\\(http://",
       };
       boolean[] ignCase4 = {
 	true,
 	true,
+	// true,
       };
       String[] rwRegex4 = {
 	"url\\(/",
 	"url\\(([a-z])",
+	// "url\\((\\.\\./)",
       };
       String[] rwTarget4 = {
 	"url(" + targetStem + defUrlStem,
 	"url(" + targetStem + urlPrefix + "/$1",
+	// "url(" + targetStem + urlPrefix + "/$1",
       };
-
       NodeFilter relImportXform =
 	HtmlNodeFilters.styleRegexNoXforms(linkRegex4, ignCase4,
 					    rwRegex4, rwTarget4);
+
+      // Rewrite <meta http-equiv="refresh" content="url=1; url=...">
+      String[] linkRegex5 = new String[l];
+      boolean[] ignCase5 = new boolean[l];
+      String[] rwRegex5 = new String[l];
+      String[] rwTarget5 = new String[l];
+      // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
+      i = 0;
+      for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
+	String urlStem = (String)it.next();
+	if (defUrlStem == null) {
+	  defUrlStem = urlStem;
+	}
+	linkRegex5[i] = ";[ \\t\\n\\f\\r\\x0b]*url=" + urlStem;
+	ignCase5[i] = true;
+	rwRegex5[i] = "url=" + urlStem;
+	rwTarget5[i] = "url=" + targetStem + urlStem;
+	logger.debug3("if meta match " + linkRegex1[i] + " replace " +
+		      rwRegex1[i] + " by " + rwTarget1[i]);
+	i++;
+      }
+      NodeFilter absRefreshXform =
+	HtmlNodeFilters.refreshRegexYesXforms(linkRegex5, ignCase5,
+					    rwRegex5, rwTarget5);
+      String [] linkRegex6 = {
+	";[ \\t\\n\\f\\r\\x0b]*url=http://",
+	";[ \\t\\n\\f\\r\\x0b]*url=http://",
+	";[ \\t\\n\\f\\r\\x0b]*url=http://",
+      };
+      boolean[] ignCase6 = {
+	true,
+	true,
+	true,
+      };
+      String[] rwRegex6 = {
+	"url=/",
+	"url=([a-z])",
+	"url=(\\.\\./)",
+      };
+      String[] rwTarget6 = {
+	"url=" + targetStem + defUrlStem,
+	"url=" + targetStem + urlPrefix + "/$1",
+	"url=" + targetStem + urlPrefix + "/$1",
+      };
+
+      NodeFilter relRefreshXform =
+	HtmlNodeFilters.refreshRegexNoXforms(linkRegex6, ignCase6,
+					    rwRegex6, rwTarget6);
+      // Combine the pipes
       NodeFilter[] filters = {
 	absLinkXform,
 	relLinkXform,
 	absImportXform,
 	relImportXform,
+	absRefreshXform,
+	relRefreshXform,
       };
-      // Combine the pipes
       NodeFilter linkXform = filters[0];
-      for (int j = 0; j < filters.length; j++) {
-	logger.debug3("index " + i + " filter " + filters[j]);
+      for (int j = 1; j < filters.length; j++) {
+	logger.debug3("index " + j + " filter " + filters[j]);
 	linkXform = new OrFilter(linkXform, filters[j]);
       }
       // Create a transform to apply them
