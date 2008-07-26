@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5.2.4 2008-07-25 02:40:30 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.5.2.5 2008-07-26 05:06:59 dshr Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       };
       String[] rwRegex2 = {
 	"^/",
-	"^([a-z_])",
+	"^([a-zA-Z_?])",
 	"^(\\.\\./)",
       };
       String[] rwTarget2 = {
@@ -183,22 +183,22 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       String [] linkRegex4 = {
 	"url\\(http://",
 	"url\\(http://",
-	// "url\\(http://",
+	"url\\(http://",
       };
       boolean[] ignCase4 = {
 	true,
 	true,
-	// true,
+	true,
       };
       String[] rwRegex4 = {
 	"url\\(/",
-	"url\\(([a-z])",
-	// "url\\((\\.\\./)",
+	"url\\(([a-zA-Z])",
+	"url\\((\\.\\./)",
       };
       String[] rwTarget4 = {
 	"url(" + targetStem + defUrlStem,
 	"url(" + targetStem + urlPrefix + "/$1",
-	// "url(" + targetStem + urlPrefix + "/$1",
+	"url(" + targetStem + urlPrefix + "/$1",
       };
       NodeFilter relImportXform =
 	HtmlNodeFilters.styleRegexNoXforms(linkRegex4, ignCase4,
@@ -239,7 +239,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       };
       String[] rwRegex6 = {
 	"url=/",
-	"url=([a-z])",
+	"url=([a-zA-Z_?])",
 	"url=(\\.\\./)",
       };
       String[] rwTarget6 = {
