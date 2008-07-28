@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.10 2008-07-26 05:06:10 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.11 2008-07-28 01:22:04 dshr Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "<a href=\"" + "/more/" + urlSuffix + "\">a relative link to rewrite</a>\n" +
     "<br>\n" +
-    "<a href=\"" + "../more/" + urlSuffix + "\">a relative link to rewrite</a>\n" +
+    "<A HREF=\"" + "../more/" + urlSuffix + "\">a relative link to rewrite</A>\n" +
     "<br>\n" +
     "<a href=\"" + "?issn=123456789X" + "\">a relative query to rewrite</a>\n" +
     "<br>\n" +
