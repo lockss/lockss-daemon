@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.233 2008-06-20 15:10:12 dshr Exp $
+ $Id: build.xml,v 1.234 2008-07-31 05:23:23 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -880,6 +880,12 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
               failifexecutionfails="false"/>
       </else>
     </if>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="jar-all"
+     depends="jar-tests,jar-plugins-tests,jar-tools-tests"
+   description="Build all jars" >
   </target>
 
   <!-- ==================================================================== -->
