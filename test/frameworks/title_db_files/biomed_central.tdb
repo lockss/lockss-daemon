@@ -498,7 +498,7 @@
 #	@fixedValues	i=1477-044X	j=BioMagnetic Research and Technology
 	manifest	BioMagnetic Research and Technology Volume 1	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=1
 	manifest	BioMagnetic Research and Technology Volume 2	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=2
-	manifest	BioMagnetic Research and Technology Volume 3	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=3
+	ready	BioMagnetic Research and Technology Volume 3	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=3
 	manifest	BioMagnetic Research and Technology Volume 4	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=4
 	manifest	BioMagnetic Research and Technology Volume 5	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=5
 	manifest	BioMagnetic Research and Technology Volume 6	base_url=http://www.biomagres.com/	journal_issn=1477-044X	volume_name=6
@@ -527,10 +527,10 @@
 	manifest	Breast Cancer Research Volume 9	base_url=http://breast-cancer-research.com/	journal_issn=1465-5411	volume_name=9
 	manifest	Breast Cancer Research Volume 10	base_url=http://breast-cancer-research.com/	journal_issn=1465-5411	volume_name=10
 #	@fixedValues	i=1475-2867	j=Cancer Cell International
-	manifest	Cancer Cell International Volume 1	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=1
+	ready	Cancer Cell International Volume 1	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=1
 	manifest	Cancer Cell International Volume 2	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=2
 	manifest	Cancer Cell International Volume 3	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=3
-	manifest	Cancer Cell International Volume 4	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=4
+	ready	Cancer Cell International Volume 4	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=4
 	manifest	Cancer Cell International Volume 5	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=5
 	manifest	Cancer Cell International Volume 6	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=6
 	manifest	Cancer Cell International Volume 7	base_url=http://www.cancerci.com/	journal_issn=1475-2867	volume_name=7
@@ -613,22 +613,22 @@
 	manifest	Critical Care Volume 11	base_url=http://ccforum.com/	journal_issn=1364-8535	volume_name=11
 	manifest	Critical Care Volume 12	base_url=http://ccforum.com/	journal_issn=1364-8535	volume_name=12
 #	@fixedValues	i=1746-1596	j=Diagnostic Pathology
-	manifest	Diagnostic Pathology Volume 1	base_url=http://www.diagnosticpathology.org/	journal_issn=1746-1596	volume_name=1
-	manifest	Diagnostic Pathology Volume 2	base_url=http://www.diagnosticpathology.org/	journal_issn=1746-1596	volume_name=2
-	manifest	Diagnostic Pathology Volume 3	base_url=http://www.diagnosticpathology.org/	journal_issn=1746-1596	volume_name=3
+	ready	Diagnostic Pathology Volume 1	base_url=http://www.diagnosticpathology.org/	journal_issn=1746-1596	volume_name=1
+	ready	Diagnostic Pathology Volume 2	base_url=http://www.diagnosticpathology.org/	journal_issn=1746-1596	volume_name=2
+	ready	Diagnostic Pathology Volume 3	base_url=http://www.diagnosticpathology.org/	journal_issn=1746-1596	volume_name=3
 #	@fixedValues	i=1476-5918	j=Dynamic Medicine
-	manifest	Dynamic Medicine Volume 1	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=1
-	manifest	Dynamic Medicine Volume 2	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=2
-	manifest	Dynamic Medicine Volume 3	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=3
-	manifest	Dynamic Medicine Volume 4	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=4
-	manifest	Dynamic Medicine Volume 5	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=5
-	manifest	Dynamic Medicine Volume 6	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=6
-	manifest	Dynamic Medicine Volume 7	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=7
+	ready	Dynamic Medicine Volume 1	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=1
+	ready	Dynamic Medicine Volume 2	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=2
+	ready	Dynamic Medicine Volume 3	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=3
+	ready	Dynamic Medicine Volume 4	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=4
+	ready	Dynamic Medicine Volume 5	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=5
+	ready	Dynamic Medicine Volume 6	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=6
+	ready	Dynamic Medicine Volume 7	base_url=http://www.dynamic-med.com/	journal_issn=1476-5918	volume_name=7
 #	@fixedValues	i=1742-7622	j=Emerging Themes in Epidemiology
-	manifest	Emerging Themes in Epidemiology Volume 1	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=1
+	ready	Emerging Themes in Epidemiology Volume 1	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=1
 	manifest	Emerging Themes in Epidemiology Volume 2	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=2
-	manifest	Emerging Themes in Epidemiology Volume 3	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=3
-	manifest	Emerging Themes in Epidemiology Volume 4	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=4
+	ready	Emerging Themes in Epidemiology Volume 3	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=3
+	ready	Emerging Themes in Epidemiology Volume 4	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=4
 	manifest	Emerging Themes in Epidemiology Volume 5	base_url=http://www.ete-online.com/	journal_issn=1742-7622	volume_name=5
 #	@fixedValues	i=1476-069X	j=Environmental Health
 	manifest	Environmental Health Volume 1	base_url=http://www.ehjournal.net/	journal_issn=1476-069X	volume_name=1
