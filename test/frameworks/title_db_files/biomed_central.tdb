@@ -1,8 +1,8 @@
-#	@formatString	x,S,t,%,%,%				
-#	@namePrefix	BMC				
-#	@publisherTitleSet	publisher=BioMed Central
-#	@fixedValues	P=BioMed Central				
-#	@fixedValues	p=org.lockss.plugin.bmc.BMCPlugin				
+#	@formatString	x,S,t,%,%,%	
+#	@namePrefix	BMC	
+#	@publisherTitleSet	publisher=BioMed Central	
+#	@fixedValues	P=BioMed Central	
+#	@fixedValues	p=org.lockss.plugin.bmc.BMCPlugin	
 #	@fixedValues	i=1471-2253	j=BMC Anesthesiology
 	released	BMC Anesthesiology Volume 1	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=1
 	released	BMC Anesthesiology Volume 2	base_url=http://www.biomedcentral.com/	journal_issn=1471-2253	volume_name=2
@@ -429,7 +429,7 @@
 	released	BMC Women's Health Volume 4	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=4
 	released	BMC Women's Health Volume 5	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=5
 	released	BMC Women's Health Volume 6	base_url=http://www.biomedcentral.com/	journal_issn=1472-6874	volume_name=6
-#	@fixedValues	p=org.lockss.plugin.bmc.BioMedCentralPlugin
+#	@fixedValues	p=org.lockss.plugin.bmc.BioMedCentralPlugin	
 #	@fixedValues	i=1751-0147	j=Acta Veterinaria Scandinavica
 	ready	Acta Veterinaria Scandinavica Volume 42	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=42
 	ready	Acta Veterinaria Scandinavica Volume 43	base_url=http://www.actavetscand.com/	journal_issn=1751-0147	volume_name=43
@@ -451,21 +451,21 @@
 	ready	Algorithms for Molecular Biology Volume 2	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=2
 	manifest	Algorithms for Molecular Biology Volume 3	base_url=http://www.almob.org/	journal_issn=1748-7188	volume_name=3
 #	@fixedValues	i=1476-0711	j=Annals of Clinical Microbiology and Antimicrobials
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 1	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=1
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 2	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=2
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 3	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=3
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 4	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=4
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 5	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=5
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 6	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=6
-	ready	Annals of Clinical Microbiology and Antimicrobials Volume 7	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=7
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 1	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=1
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 2	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=2
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 3	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=3
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 4	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=4
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 5	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=5
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 6	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=6
+	released	Annals of Clinical Microbiology and Antimicrobials Volume 7	base_url=http://www.ann-clinmicrob.com/	journal_issn=1476-0711	volume_name=7
 #	@fixedValues	i=1744-859X	j=Annals of General Psychiatry
-	ready	Annals of General Psychiatry Volume 1	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=1
-	ready	Annals of General Psychiatry Volume 2	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=2
-	ready	Annals of General Psychiatry Volume 3	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=3
-	ready	Annals of General Psychiatry Volume 4	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=4
-	ready	Annals of General Psychiatry Volume 5	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=5
-	ready	Annals of General Psychiatry Volume 6	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=6
-	ready	Annals of General Psychiatry Volume 7	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=7
+	released	Annals of General Psychiatry Volume 1	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=1
+	released	Annals of General Psychiatry Volume 2	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=2
+	released	Annals of General Psychiatry Volume 3	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=3
+	released	Annals of General Psychiatry Volume 4	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=4
+	released	Annals of General Psychiatry Volume 5	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=5
+	released	Annals of General Psychiatry Volume 6	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=6
+	released	Annals of General Psychiatry Volume 7	base_url=http://www.annals-general-psychiatry.com/	journal_issn=1744-859X	volume_name=7
 #	@fixedValues	i=1750-1164	j=Annals of Surgical Innovation and Research
 	manifest	Annals of Surgical Innovation and Research Volume 1	base_url=http://www.asir-journal.com/	journal_issn=1750-1164	volume_name=1
 	manifest	Annals of Surgical Innovation and Research Volume 2	base_url=http://www.asir-journal.com/	journal_issn=1750-1164	volume_name=2
