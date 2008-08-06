@@ -21,6 +21,10 @@ Prerequisites
   classpath.  The easiest way to do that is to copy lib/junit.jar into
   Ant's lib directory (<ant-install-dir>/ant/lib).
 
+- For some of the tools the JAVA_HOME env var must be set to the directory
+  in which the JDK is installed.
+  
+
 To Build
 --------
 
