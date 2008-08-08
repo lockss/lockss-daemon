@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.2 2008-06-03 23:25:43 thib_gc Exp $
+# $Id: tdb.py,v 1.3 2008-08-08 22:11:48 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,6 +26,8 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
+import re
+
 class TdbObject(object):
 
     def __init__(self):
@@ -50,15 +52,16 @@ class TdbObject(object):
         key, index = self._key(indexed_key)
         if index:
             if key not in self._dictionary: self._dictionary[key] = {}
-            self._dictionary[key][index] = value
+            self._dictionary[key][index] = value.copy()
         else:
             self._dictionary[key] = value.copy()
 
     def _key(self, str):
-        import re
         match = re.match(r'([^\[]+)(?:\[(\w+)\])?$', str)
         if match: return (match.group(1), match.group(2))
         else: raise KeyError, 'invalid key: %s' % (str,)
+
+    def __repr__(self): return repr(self._dictionary)
 
 class ChainedTdbObject(TdbObject):
 
@@ -85,7 +88,7 @@ class Publisher(TdbObject):
     NAME = 'name'
 
     def name(self): return self.get(Title.NAME)
-    def set_name(self, name): self.set(Title.NAME, name)
+#    def set_name(self, name): self.set(Title.NAME, name)
 
 class Title(TdbObject):
 
@@ -93,7 +96,7 @@ class Title(TdbObject):
     PUBLISHER = 'publisher'
 
     def name(self): return self.get(Title.NAME)
-    def set_name(self, name): self.set(Title.NAME, name)
+#    def set_name(self, name): self.set(Title.NAME, name)
     def publisher(self): return self.get(Title.PUBLISHER)
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
 
@@ -106,35 +109,35 @@ class AU(ChainedTdbObject):
         ChainedTdbObject.__init__(self, next)
 
     def name(self): return self.get(AU.NAME)
-    def set_name(self, name): self.set(AU.NAME, name)
+#    def set_name(self, name): self.set(AU.NAME, name)
     def title(self): return self.get(AU.TITLE)
     def set_title(self, title): self.set(AU.TITLE, title)
 
 class Tdb(object):
 
     def __init__(self):
-        self.__publishers = {}
-        self.__titles = {}
-        self.__aus = {}
+        self.__publishers = []
+        self.__titles = []
+        self.__aus = []
 
-    def add_publisher(self, publisher):
-        key = publisher.name()
-        if key in self.__publishers:
-            raise KeyError, 'publisher already exists: %s' % (key,)
-        self.__publishers[key] = publisher
+    def add_publisher(self, publisher): self.__publishers.append(publisher)
+    def add_title(self, title): self.__titles.append(title)
+    def add_au(self, au): self.__aus.append(au)
 
-    def add_title(self, title):
-        key = (title.publisher().name(), title.name())
-        if key in self.__titles:
-            raise KeyError, 'title already exists: %s' % (key,)
-        self.__titles[key] = title
-
-    def add_au(self, au):
-        print au._dictionary
-        key = (au.title().publisher().name(), au.title().name(), au.name())
-        if key in self.__aus:
-            raise KeyError, 'AU already exists: %s' % (key,)
-        self.__aus[key] = au
+    def publishers(self): return self.__publishers[:]
+    def titles(self): return self.__titles[:]
+    def aus(self): return self.__aus[:]
 
     def internal_print(self):
-        print (self.__publishers, self.__titles, self.__aus)
+        print repr(self.publishers())
+        print self.titles()
+        print self.aus()
+
+#if __name__ == '__main__':
+#    from tdbparse import TdbScanner, TdbParser
+#    from sys import stdin
+#    tdb = Tdb()
+#    scanner = TdbScanner(stdin)
+#    parser = TdbParser(scanner)
+#    tdb = parser.parse()
+#    tdb.internal_print()
