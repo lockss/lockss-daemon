@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.10 2008-07-23 08:15:01 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.11 2008-08-11 23:36:23 tlipkis Exp $
  */
 
 /*
@@ -322,7 +322,7 @@ public class ServeContent extends LockssServlet {
 						   url,
 						   "url=" + url);
 				  }},
-				false);
+				true);
     page.add(ele);
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
