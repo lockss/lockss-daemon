@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.2 2008-04-02 20:26:36 edwardsb1 Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.3 2008-08-11 23:34:44 tlipkis Exp $
  */
 
 /*
@@ -59,11 +59,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import org.lockss.util.IdentityParseException;
-import org.lockss.util.IDUtil;
-import org.lockss.util.IOUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.PlatformUtil;
+
+import org.lockss.util.*;
 
 public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   // Static constants 
@@ -338,8 +335,9 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
   protected void internalStore() throws IOException {
     DataOutputStream dos = null;
-    File filePeerIdTemp = new File(m_filePeerId.getAbsolutePath() + TEMP_EXTENSION);
-
+    File filePeerIdTemp =
+      FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
+			      m_filePeerId.getParentFile());
     try {
       // Loop until there are no IdentityParseExceptions
       dos = new DataOutputStream(new FileOutputStream(filePeerIdTemp));    
