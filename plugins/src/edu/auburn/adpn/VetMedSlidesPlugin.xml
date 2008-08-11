@@ -1,5 +1,13 @@
 <map>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>edu.auburn.adpn.VetMedSlidesPlugin</string>
   </entry>
