@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.68 2008-05-19 07:38:58 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.69 2008-08-11 23:31:24 tlipkis Exp $
  */
 
 /*
@@ -446,6 +446,23 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testPluginThrowsRuntimeException() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, new ExpectedRuntimeException("Test exception"), 1);
+
+    assertFalse(crawler.doCrawl());
+  }
+
+  public void testPluginThrowsOnPermissionFetch() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(permissionPage,
+	       new ExpectedRuntimeException("Test exception (perm)"), 1);
+    mau.addUrl(startUrl);
+
+    assertFalse(crawler.doCrawl());
+  }
+
+  public void testPluginThrowsInGetLinkExtractor() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl);
+    mau.getLinkExtractorThrows = new ExpectedRuntimeException("getLE()");
 
     assertFalse(crawler.doCrawl());
   }
@@ -1008,10 +1025,18 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   protected class MyMockArchivalUnit extends MockArchivalUnit {
     MyMockUrlCacher lastMmuc;
+    RuntimeException getLinkExtractorThrows = null;
 
     protected MockUrlCacher makeMockUrlCacher(String url) {
       lastMmuc = new MyMockUrlCacher(url, this);
       return lastMmuc;
+    }
+
+    public LinkExtractor getLinkExtractor(String mimeType) {
+      if (getLinkExtractorThrows != null) {
+	throw getLinkExtractorThrows;
+      }
+      return super.getLinkExtractor(mimeType);
     }
   }
 
