@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.11 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.12 2008-08-11 23:35:59 tlipkis Exp $
  */
 
 /*
@@ -73,9 +73,6 @@ public class ServletDescr {
   /** The servlet path is actually the entire URL that should appear in
    * links */
   public static final int PATH_IS_URL = 0x40;
-
-  /** Refuse to run this servlet if o.l.ui.warning has a value */
-  public static final int DISALLOW_IF_UI_WARNING = 0x80;
 
   public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
