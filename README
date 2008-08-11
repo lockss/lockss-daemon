@@ -12,9 +12,21 @@ The latest version of this code can be obtained via CVS with
 Prerequisites
 -------------
 
-- Ant (at least version 1.6.2), is used to build the system and run unit
-  tests.  Download the latest version from http://ant.apache.org/ .
-  Installation instructions are at http://ant.apache.org/manual/
+Installed Packages:
+
+- Sun JDK 1.5 or greater.
+
+- Ant 1.6.2 or greater.  (http://ant.apache.org/)
+
+- Python is required in order to generate plugin jars and plugin signing
+  keys, and to run some of the testing frameworks.
+
+(On Debian or Ubuntu,
+  apt-get install python sun-java6-jdk ant ant-optional
+)
+
+
+Other Prerequisites:
 
 - Junit is included in the LOCKSS source distribution, but the Ant targets
   that invoke JUnit (test-xxx) require the JUnit jar to be on Ant's
@@ -28,7 +40,7 @@ Prerequisites
 To Build
 --------
 
-ant test-all		Builds the system and runs all tests
+ant test-all		Builds the system and runs all unit tests
 ant test-one -Dclass=org.lockss.foo.TestBar
 			Builds the system and runs the tests for one class
 ant -projecthelp	Lists other build options
