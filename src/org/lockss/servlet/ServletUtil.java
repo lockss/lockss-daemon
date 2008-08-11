@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.53 2008-07-23 08:15:01 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.54 2008-08-11 23:37:05 tlipkis Exp $
  */
 
 /*
@@ -114,6 +114,11 @@ public class ServletUtil {
     Configuration.PREFIX + "ui.dontDisplayGroups";
   static final List DEFAULT_DONT_DISPLAY_GROUPS =
     ConfigManager.DEFAULT_DAEMON_GROUP_LIST;
+
+  /** Disabled servlets; list of servlet name or name:explanation */
+  static final String PARAM_DISABLED_SERVLETS =
+    Configuration.PREFIX + "ui.disabledServlets";
+  static final List DEFAULT_DISABLED_SERVLETS = Collections.EMPTY_LIST;
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -332,6 +337,8 @@ public class ServletUtil {
   private static final String SUBMIT_BEFORE =
     "<br><center>";
 
+  private static Map<String,String> disabledServlets = new HashMap();
+
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
@@ -340,6 +347,24 @@ public class ServletUtil {
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);
     }
+    if (diffs.contains(PARAM_DISABLED_SERVLETS)) {
+      List<String> dis = config.getList(PARAM_DISABLED_SERVLETS,
+				DEFAULT_DISABLED_SERVLETS);
+      disabledServlets.clear();
+      for (String s : dis) {
+	String exp = "";
+	int pos = s.indexOf(':');
+	if (pos > 0) {
+	  exp = s.substring(pos + 1);
+	  s = s.substring(0, pos);
+	}
+	disabledServlets.put(s, exp);
+      }
+    }
+  }
+
+  public static String servletDisabledReason(String servlet) {
+    return disabledServlets.get(servlet);
   }
 
   /** Return the URL of this machine's config backup file to download */
@@ -1690,11 +1715,8 @@ public class ServletUtil {
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
 	  tbl.add(xform.transformUrl(url));
-	  if (checkCollected) {
-	    CachedUrl cu = au.makeCachedUrl(url);
-	    if (cu == null || !cu.hasContent()) {
-	      tbl.add(" (not yet collected)");
-	    }
+	  if (checkCollected && AuUtil.getAuState(au).getLastCrawlTime() < 0) {
+	    tbl.add(" (not fully collected)");
 	  }
 	  if (uiter.hasNext()) {
 	    tbl.add("<br>");

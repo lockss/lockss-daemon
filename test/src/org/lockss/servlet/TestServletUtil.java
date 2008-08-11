@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.6 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.7 2008-08-11 23:37:05 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,23 @@ public class TestServletUtil extends LockssTestCase {
 
   }
 
+  private MockArchivalUnit setUpAu(String name, String manifest,
+				   long lastCrawlTime) {
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    Plugin pl = new MockPlugin(daemon);
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setName(name);
+    mau.setPlugin(pl);
+    mau.setCrawlSpec(new SpiderCrawlSpec(manifest, new MockCrawlRule()));
+    PluginTestUtil.registerArchivalUnit(pl, mau);
+    MockNodeManager nm = new MockNodeManager();
+    daemon.setNodeManager(nm, mau);
+    MockAuState aus = new MockAuState();
+    nm.setAuState(aus);
+    aus.setLastCrawlTime(lastCrawlTime);
+    return mau;
+  }
+
   public void testManifestIndexNotStarted() throws Exception {
     testManifestIndex(false);
   }
@@ -70,24 +87,13 @@ public class TestServletUtil extends LockssTestCase {
     daemon.setAusStarted(started);
     daemon.getPluginManager().setLoadablePluginsReady(started);
 
-    Plugin pl = new MockPlugin();
     String m1 = "http://foo.bar/manifest1.html";
     String m2 = "http://foo.bax/manifest2.html";
     String au1 = "Journal of Journalistics 1776";
     String au2 = "xyz";
-    MockArchivalUnit mau;
-    mau = new MockArchivalUnit();
-    mau.setName(au1);
-    mau.setPlugin(pl);
-    mau.setCrawlSpec(new SpiderCrawlSpec(m1, new MockCrawlRule()));
-    PluginTestUtil.registerArchivalUnit(pl, mau);
-    mau.addUrl(m1, true, true);
+    MockArchivalUnit mau = setUpAu(au1, m1, 1000);
 
-    mau = new MockArchivalUnit();
-    mau.setName(au2);
-    mau.setPlugin(pl);
-    mau.setCrawlSpec(new SpiderCrawlSpec(m2, new MockCrawlRule()));
-    PluginTestUtil.registerArchivalUnit(pl, mau);
+    mau = setUpAu(au2, m2, -1);
 
     Element ele = ServletUtil.manifestIndex(daemon, "host.edu");
     StringWriter sw = new StringWriter();
@@ -112,7 +118,7 @@ public class TestServletUtil extends LockssTestCase {
       "<a href=\"" + m1 + "\">" + m1 + "</a></td></tr>" +
       "<tr><td align=\"left\">" + au2 + "</td>" + spacer +
       "<td align=\"left\">" +
-      "<a href=\"" + m2 + "\">" + m2 + "</a> \\(not yet collected\\)" +
+      "<a href=\"" + m2 + "\">" + m2 + "</a> \\(not fully collected\\)" +
       "</td></tr></table>";
     Pattern pat =
       RegexpUtil.uncheckedCompile(pats, Perl5Compiler.MULTILINE_MASK);
