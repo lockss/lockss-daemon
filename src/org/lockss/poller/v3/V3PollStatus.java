@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.22 2008-02-15 09:07:37 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.23 2008-08-11 23:33:15 tlipkis Exp $
  */
 
 /*
@@ -450,7 +450,7 @@ public class V3PollStatus {
       if (poll == null) return;
       table.setColumnDescriptors(getColDescs(table));
       table.setDefaultSortRules(sortRules);
-      table.setSummaryInfo(getSummary(poll));
+      table.setSummaryInfo(getSummary(poll, table));
       table.setTitle("Status for V3 Poll " + key);
       table.setRows(getRows(poll));
     }
@@ -498,7 +498,8 @@ public class V3PollStatus {
       return row;
     }
 
-    private List getSummary(V3Poller poll) {
+    private List getSummary(V3Poller poll, StatusTable table) {
+      boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List summary = new ArrayList();
       summary.add(new SummaryInfo("Volume",
                                   ColumnDescriptor.TYPE_STRING,
@@ -526,6 +527,11 @@ public class V3PollStatus {
                                     new StatusTable.Reference(new Integer(poll.getErrorUrls().size()),
                                                               "V3ErrorURLsTable",
                                                               poll.getKey())));
+      }
+      if (isDebug) {
+	summary.add(new SummaryInfo("",
+				    ColumnDescriptor.TYPE_STRING,
+				    poll.getStateDir()));
       }
 
       int activeRepairs = poll.getActiveRepairs().size();
@@ -982,7 +988,11 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   voter.getStatusString()));
+
       if (isDebug) {
+	summary.add(new SummaryInfo("",
+				    ColumnDescriptor.TYPE_STRING,
+				    voter.getStateDir()));
 	PsmInterp interp = voter.getPsmInterp();
 	if (interp != null) {
 	  PsmState state = interp.getCurrentState();
