@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.4 2008-02-21 01:08:21 tlipkis Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.5 2008-08-11 23:32:18 tlipkis Exp $
  */
 
 /*
@@ -126,7 +126,6 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String REFRESH = "refresh";
   protected static final String HTTP_EQUIV = "http-equiv";
   protected static final String HTTP_EQUIV_CONTENT = "content";
-  protected static final String HTTP_EQUIV_URL = "url";
 
   protected static final char NEWLINE_CHAR = '\n';
   protected static final char CARRIAGE_RETURN_CHAR = '\r';
@@ -491,7 +490,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
 	  String httpEquiv = getAttributeValue(HTTP_EQUIV, link);
 	  if (REFRESH.equalsIgnoreCase(httpEquiv)) {
 	    String content = getAttributeValue(HTTP_EQUIV_CONTENT, link);
- 	    return (  getAttributeValue(HTTP_EQUIV_URL, content) );
+ 	    return HtmlUtil.extractMetaRefreshUrl(content);
 	  }
         }
         break;

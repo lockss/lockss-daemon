@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlUtil.java,v 1.2 2005-05-27 08:35:04 tlipkis Exp $
+ * $Id: TestHtmlUtil.java,v 1.3 2008-08-11 23:32:18 tlipkis Exp $
  */
 
 /*
@@ -86,5 +86,16 @@ public class TestHtmlUtil extends LockssTestCase {
 
   public void testEncodeJsString() {
     assertEquals("foo\\n", HtmlUtil.encode("foo\r\n", ENCODE_JS_STRING));
+  }
+
+  public void testExtractMetaRefreshUrl() {
+    assertEquals("http://foo.com/xxx",
+		 HtmlUtil.extractMetaRefreshUrl("0; url=http://foo.com/xxx"));
+    assertEquals("http://bar.com/xxy",
+		 HtmlUtil.extractMetaRefreshUrl("0;url=http://bar.com/xxy"));
+    assertEquals("http://bar.com/xxz",
+		 HtmlUtil.extractMetaRefreshUrl("5;url=http://bar.com/xxz"));
+    assertEquals("http://bar.com/xxz",
+		 HtmlUtil.extractMetaRefreshUrl("5 ; url = http://bar.com/xxz"));
   }
 }
