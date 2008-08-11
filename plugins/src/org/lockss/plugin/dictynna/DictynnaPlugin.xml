@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.dictynna.DictynnaPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -23,17 +27,18 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sDictynnaNumero%s&quot;, base_url, volume_name</string>
-      <string>1,&quot;%sDictynnaSommaires.html&quot;, base_url</string>
-      <string>1,&quot;%slockss.html&quot;, base_url</string>
-      <string>1,&quot;%s1Articles/%sArticlespdf&quot;, base_url, volume_name</string>
-      <string>1,&quot;%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)&quot;, base_url</string>
-      <string>1,&quot;%sResumes/ResumesN%s&quot;, base_url, volume_name</string>
+      <string>1,&quot;%sdictynnasommaires\.html$&quot;, base_url</string>
+      <string>1,&quot;%slockss\.html$&quot;, base_url</string>
+      <string>1,&quot;%sdictynnanumero%s\.html$&quot;, base_url, volume_name</string>
+      <string>1,&quot;%s1articles/[^/]+articlespdf/.*\.pdf&quot;, base_url, volume_name</string>
+      <string>1,&quot;%s1articles/%sarticlespdf/&quot;, base_url, volume_name</string>
+      <string>1,&quot;%sresumes/resumesN?%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sDictynnaSommaires.html&quot;, base_url</string>
+    <string>&quot;%sdictynnasommaires.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
