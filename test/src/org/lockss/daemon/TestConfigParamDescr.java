@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.8 2007-01-17 17:53:36 thib_gc Exp $
+ * $Id: TestConfigParamDescr.java,v 1.9 2008-08-11 23:31:52 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,8 @@ public class TestConfigParamDescr extends LockssTestCase {
     ConfigParamDescr d1 = new ConfigParamDescr("k1");
     ConfigParamDescr d2 = new ConfigParamDescr(new String("k1"));
     ConfigParamDescr d3 = new ConfigParamDescr("k2");
+    ConfigParamDescr d4 = new ConfigParamDescr("k2");
+
     assertEquals(d1, d1);
     assertEquals(d1, d2);
     assertNotEquals(d1, d3);
@@ -126,6 +128,10 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertEquals(d1, d2);
     d2.setSize(10);
     assertNotEquals(d1, d2);
+
+    assertEquals(d3, d4);
+    d4.setDefinitional(false);
+    assertNotEquals(d3, d4);
   }
 
   public void testIsReserved() {

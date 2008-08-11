@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.37 2007-08-12 01:47:15 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.38 2008-08-11 23:31:52 tlipkis Exp $
  */
 
 /*
@@ -547,8 +547,10 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       return false;
     }
     ConfigParamDescr opd = (ConfigParamDescr)o;
-    return type == opd.getType() && getSize() == opd.getSize() &&
-      key.equals(opd.getKey());
+    return type == opd.getType()
+      && getSize() == opd.getSize()
+      && definitional == opd.isDefinitional()
+      && key.equals(opd.getKey());
   }
 
   public int hashCode() {
