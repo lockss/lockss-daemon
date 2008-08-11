@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.58 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.59 2008-08-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -135,14 +135,6 @@ public class V3Voter extends BasePoll {
   public static final boolean
     DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT = false;
 
-  /**
-   * Directory in which to store message data.
-   */
-  public static final String PARAM_V3_MESSAGE_REL_DIR =
-    V3Poller.PARAM_V3_MESSAGE_REL_DIR;
-  public static final String DEFAULT_V3_MESSAGE_REL_DIR = 
-    V3Poller.DEFAULT_V3_MESSAGE_REL_DIR;
-  
   /** 
    * Allowance for vote message send time: hash time multiplier
    */
@@ -233,32 +225,11 @@ public class V3Voter extends BasePoll {
 
     pollSerializer = new V3VoterSerializer(theDaemon);
     
-    // Determine the proper location for the V3 message dir.
-    List dSpaceList =
-      CurrentConfig.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-    String relStatePath =
-      CurrentConfig.getParam(PARAM_V3_MESSAGE_REL_DIR,
-                             DEFAULT_V3_MESSAGE_REL_DIR);
-    
+    stateDir = PollUtil.ensurePollStateRoot();
+
     maxBlockErrorCount =
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
                                 V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
-
-    if (dSpaceList == null || dSpaceList.size() == 0) {
-      log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
-                " not specified, not configuring V3 message dir.");
-    } else {
-      stateDir = new File((String)dSpaceList.get(0), relStatePath);
-    }
-
-    if (stateDir == null ||
-        (!stateDir.exists() && !stateDir.mkdir()) ||
-        !stateDir.canWrite()) {
-      throw new IllegalArgumentException("Configured V3 data directory " +
-                                         stateDir +
-                                         " does not exist or cannot be " +
-                                         "written to.");
-    }
 
     try {
       this.voterUserData = new VoterUserData(new PollSpec(msg), this,

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.79 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.80 2008-08-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -186,14 +186,20 @@ public class V3Poller extends BasePoll {
     true;
   
   /**
-   * Directory in which to store message data.
+   * Relative path to v3 state dir (from 1st element of diskSpacePaths)
    */
-  public static final String PARAM_V3_MESSAGE_REL_DIR =
-    PREFIX + "messageRelDir";
-  // Default is for production.  Override this for
-  // testing.
-  public static final String DEFAULT_V3_MESSAGE_REL_DIR =
+  public static final String PARAM_REL_STATE_PATH =
+    PREFIX + "relStatePath";
+  public static final String DEFAULT_REL_STATE_PATH =
     "v3state";
+
+  /**
+   * Absolute path to v3 state dir (takes precedence over
+   * PARAM_REL_STATE_PATH)
+   */
+  public static final String PARAM_STATE_PATH =
+    PREFIX + "statePath";
+  public static final String DEFAULT_STATE_PATH = null;
 
   /** The maximum allowable duration for a V3 poll */
   public static final String PARAM_MAX_POLL_DURATION =
@@ -514,28 +520,8 @@ public class V3Poller extends BasePoll {
       c.getPercentage(PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
                       DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT);
     maxRepairs = c.getInt(PARAM_MAX_REPAIRS, DEFAULT_MAX_REPAIRS);
-    // Determine the proper location for the V3 message dir.
-    List dSpaceList =
-      CurrentConfig.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-    String relPluginPath =
-      CurrentConfig.getParam(PARAM_V3_MESSAGE_REL_DIR,
-                             DEFAULT_V3_MESSAGE_REL_DIR);
 
-    if (dSpaceList == null || dSpaceList.size() == 0) {
-      log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
-                " not specified, not configuring V3 message dir.");
-    } else {
-      stateDir = new File((String)dSpaceList.get(0), relPluginPath);
-    }
-
-    if (stateDir == null ||
-        (!stateDir.exists() && !stateDir.mkdir()) ||
-        !stateDir.canWrite()) {
-      throw new IllegalArgumentException("Configured V3 data directory " +
-                                         stateDir +
-                                         " does not exist or cannot be " +
-                                         "written to.");
-    }
+    stateDir = PollUtil.ensurePollStateRoot();
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {

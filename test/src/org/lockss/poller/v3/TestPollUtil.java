@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollUtil.java,v 1.1 2008-02-15 09:10:27 tlipkis Exp $
+ * $Id: TestPollUtil.java,v 1.2 2008-08-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,18 @@ public class TestPollUtil extends LockssTestCase {
     assertEquals(-1, PollUtil.calcV3Duration(100, pm));
     assertEquals(22, schedSvc.events.size());
   }
+
+  public void testGetPollStateRoot() {
+    ConfigurationUtil.setFromArgs(V3Poller.PARAM_STATE_PATH, "/tmp/path");
+    assertEquals("/tmp/path",
+		 PollUtil.getPollStateRoot().toString());
+    ConfigurationUtil.setFromArgs(V3Poller.PARAM_REL_STATE_PATH, "path/2",
+				  ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  "/mount/point");
+    assertEquals("/mount/point/path/2",
+		 PollUtil.getPollStateRoot().toString());
+  }
+
 
   public class MyMockSchedService extends MockSchedService {
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.7 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.8 2008-08-11 23:32:59 tlipkis Exp $
  */
 
 /*
@@ -32,8 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
+import java.io.*;
+import java.util.*;
 import java.security.*;
-import org.lockss.config.CurrentConfig;
+
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.poller.v3.V3Poller;
@@ -359,4 +362,42 @@ public class PollUtil {
     return ByteArray.makeRandomBytes(len);
   }
 
+  public static File getPollStateRoot() {
+    File stateDir = null;
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    String path = config.get(V3Poller.PARAM_STATE_PATH,
+			     V3Poller.DEFAULT_STATE_PATH);
+    if (!StringUtil.isNullString(path)) {
+      
+      stateDir = new File(path);
+    } else {
+      List<String> dSpaceList =
+	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+
+      String relPath = config.get(V3Poller.PARAM_REL_STATE_PATH,
+				  V3Poller.DEFAULT_REL_STATE_PATH);
+
+      if (dSpaceList == null || dSpaceList.isEmpty()) {
+	log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
+		  " not specified, not configuring V3 message dir.");
+      } else {
+	stateDir = new File(dSpaceList.get(0), relPath);
+      }
+    }
+    return stateDir;
+  }
+
+  public static File ensurePollStateRoot() {
+    File stateDir = getPollStateRoot();
+    if (stateDir == null ||
+	(!stateDir.exists() && !stateDir.mkdir()) ||
+	!stateDir.canWrite()) {
+      throw new IllegalArgumentException("Configured V3 data directory " +
+					 stateDir +
+					 " does not exist or cannot be " +
+					 "written to.");
+    }
+    return stateDir;
+  }
 }
