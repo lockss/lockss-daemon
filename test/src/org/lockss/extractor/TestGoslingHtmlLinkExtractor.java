@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.4 2007-11-06 07:11:29 tlipkis Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.5 2008-08-11 23:39:01 tlipkis Exp $
  */
 
 /*
@@ -938,6 +938,14 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
       "<html><head>"
       +"<meta http-equiv=\"refresh\" "
       +"content=\"0; url=http://example.com/blah.html\">"
+      +"</head></html>";
+
+    assertEquals(SetUtil.set(url1), parseSingleSource(source));
+
+    source =
+      "<html><head>"
+      +"<meta http-equiv=\"refresh\" "
+      +"content=\"0;url=http://example.com/blah.html\">"
       +"</head></html>";
 
     assertEquals(SetUtil.set(url1), parseSingleSource(source));
