@@ -1889,6 +1889,7 @@ org.lockss.protocol.hashAlgorithm=SHA-1
 # crawl settings
 org.lockss.crawler.startCrawlsInitialDelay=2m
 org.lockss.crawler.startCrawlsInterval=2m
+org.lockss.crawler.odc.queueRecalcAfterNewAu=5s
 
 # poll settings
 org.lockss.comm.enabled=false
