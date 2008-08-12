@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.69 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.70 2008-08-12 18:34:27 dshr Exp $
  */
 
 /*
@@ -883,6 +883,8 @@ public class ArchivalUnitStatus
       long lastDisagreeTime = 0;
       float highestAgreement = 0.0f;
       float lastAgreement = 0.0f;
+      float highestAgreementHint = 0.0f;
+      float lastAgreementHint = 0.0f;
 
       CacheStats(PeerIdentity peer) {
 	this.peer = peer;
@@ -1024,6 +1026,10 @@ public class ArchivalUnitStatus
                            ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("LastPercentAgreement", "Last Agreement",
                            ColumnDescriptor.TYPE_PERCENT),                           
+      new ColumnDescriptor("HighestPercentAgreementHint", "Highest Agreement Hint",
+                           ColumnDescriptor.TYPE_PERCENT),
+      new ColumnDescriptor("LastPercentAgreementHint", "Last Agreement Hint",
+                           ColumnDescriptor.TYPE_PERCENT),                           
       new ColumnDescriptor("LastAgree",
 			   "Last Complete Consensus",
                            ColumnDescriptor.TYPE_DATE),
@@ -1078,13 +1084,15 @@ public class ArchivalUnitStatus
 	  (IdentityManager.IdentityAgreement)iter.next();
 	try {
 	  PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
-	  if (ida.getLastAgree() > 0) {	// only add those that have agreed
+	  if (ida.getHighestPercentAgreement() > 0.0 || ida.getHighestPercentAgreementHint() > 0) {
 	    CacheStats stats = new CacheStats(pid);
 	    statsMap.put(pid, stats);
 	    stats.lastAgreeTime = ida.getLastAgree();
 	    stats.lastDisagreeTime = ida.getLastDisagree();
 	    stats.highestAgreement = ida.getHighestPercentAgreement();
 	    stats.lastAgreement = ida.getPercentAgreement();
+	    stats.highestAgreementHint = ida.getHighestPercentAgreementHint();
+	    stats.lastAgreementHint = ida.getPercentAgreementHint();
 	  }
 	} catch (IdentityManager.MalformedIdentityKeyException e) {
 	  logger.warning("Malformed id key in IdentityAgreement", e);
@@ -1099,6 +1107,10 @@ public class ArchivalUnitStatus
       rowMap.put("Last", stats.isLastAgree() ? "Yes" : "No");
       rowMap.put("LastPercentAgreement", new Float(stats.lastAgreement));
       rowMap.put("HighestPercentAgreement", new Float(stats.highestAgreement));
+      rowMap.put("LastPercentAgreementHint",
+		 new Float(stats.lastAgreementHint));
+      rowMap.put("HighestPercentAgreementHint",
+		 new Float(stats.highestAgreementHint));
       rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
       rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
       return rowMap;

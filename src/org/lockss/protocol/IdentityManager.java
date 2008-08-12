@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.81 2008-01-30 00:52:41 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.82 2008-08-12 18:34:27 dshr Exp $
  */
 
 /*
@@ -376,7 +376,7 @@ public interface IdentityManager extends LockssManager {
 
   /**
    * Signal partial agreement with a peer on a given archival unit following
-   * a V3 poll.
+   * a V3 poll at the poller.
    * 
    * @param pid  The PeerIdentity of the agreeing peer.
    * @param au  The {@link ArchivalUnit}.
@@ -385,6 +385,18 @@ public interface IdentityManager extends LockssManager {
    */
   public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
                                      float agreement);
+  
+  /**
+   * Signal partial agreement with a peer on a given archival unit following
+   * a V3 poll at the voter based ont eh hint in the receipt.
+   * 
+   * @param pid  The PeerIdentity of the agreeing peer.
+   * @param au  The {@link ArchivalUnit}.
+   * @param agreement  A number between 0.0 and 1.0 representing the percentage
+   *                   of agreement on the total AU.
+   */
+  public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
+                                         float agreement);
   
   /**
    * Return the percent agreement for a given peer on a given
@@ -484,10 +496,17 @@ public interface IdentityManager extends LockssManager {
   public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;
     private long lastDisagree = 0;
-    // The percent agreement that this peer MOST RECENTLY reported.
+    // The MOST RECENT percent agreement we tallied for a vote from this
+    // peer in a poll we called.
     private float percentAgreement = 0.0f;
-    // The highest agreement that this peer has EVER had.
+    // The highest agreement we have EVER tallied in a vote from this peer.
     private float highestPercentAgreement = 0.0f;
+    // The MOST RECENT percent agreement this peer reported in the receipt
+    // for one of our votes in a poll this peer called.
+    private float percentAgreementHint = 0.0f;
+    // The highest percent agreement we have ever seen in a receipt from
+    // one of any of our votes in polls this peer called.
+    private float highestPercentAgreementHint = 0.0f;
     private String id = null;
 
     public IdentityAgreement(PeerIdentity pid) {
@@ -529,6 +548,25 @@ public interface IdentityManager extends LockssManager {
       this.percentAgreement = percentAgreement;
       if (percentAgreement > highestPercentAgreement) {
         setHighestPercentAgreement(percentAgreement);
+      }
+    }
+
+    public float getHighestPercentAgreementHint() {
+      return highestPercentAgreementHint;
+    }
+    
+    public void setHighestPercentAgreementHint(float agreement) {
+      this.highestPercentAgreementHint = agreement;
+    }
+    
+    public float getPercentAgreementHint() {
+      return percentAgreementHint;
+    }
+    
+    public void setPercentAgreementHint(float percentAgreementHint) {
+      this.percentAgreementHint = percentAgreementHint;
+      if (percentAgreementHint > highestPercentAgreementHint) {
+        setHighestPercentAgreementHint(percentAgreementHint);
       }
     }
 

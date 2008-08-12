@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.23 2008-08-11 23:33:15 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.24 2008-08-12 18:34:26 dshr Exp $
  */
 
 /*
@@ -75,6 +75,17 @@ public class V3PollStatus {
     this.pollManager = pollManager;
   }
 
+  private static final DecimalFormat agreementFormat =
+    new DecimalFormat("0.00");
+    
+  /* DecimalFormat automatically applies half-even rounding to
+   * values being formatted under Java < 1.6.  This is a workaround. */ 
+  private static String doubleToPercent(double d) {
+    int i = (int)(d * 10000);
+    double pc = i / 100.0;
+    return agreementFormat.format(pc);
+  }
+
   /**
    * <p>Overview status table for all V3 polls in which we are acting as
    * the caller of the poll.</p>
@@ -83,17 +94,6 @@ public class V3PollStatus {
       extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "Polls";
-
-    private static final DecimalFormat agreementFormat =
-      new DecimalFormat("0.00");
-    
-    /* DecimalFormat automatically applies half-even rounding to
-     * values being formatted under Java < 1.6.  This is a workaround. */ 
-    private static String doubleToPercent(double d) {
-      int i = (int)(d * 10000);
-      double pc = i / 100.0;
-      return agreementFormat.format(pc);
-    }
 
     // Sort by deadline, descending
     private final List sortRules =
@@ -1025,6 +1025,14 @@ public class V3PollStatus {
         summary.add(new SummaryInfo("Remaining",
                                     ColumnDescriptor.TYPE_TIME_INTERVAL,
                                     new Long(remain)));
+      } else {
+        theLog.debug3("voter " + voter + " user data " + voter.getVoterUserData() +
+                       " hint " + voter.getVoterUserData().getAgreementHint());
+	String agreePercent =
+	  doubleToPercent(voter.getVoterUserData().getAgreementHint());
+	summary.add(new SummaryInfo("Agreement",
+				    ColumnDescriptor.TYPE_STRING,
+				    agreePercent));
       }
       summary.add(new SummaryInfo("Poller Nonce",
                                   ColumnDescriptor.TYPE_STRING,

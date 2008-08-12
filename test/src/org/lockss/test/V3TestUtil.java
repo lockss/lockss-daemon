@@ -2,7 +2,7 @@ package org.lockss.test;
 
 import org.lockss.poller.v3.*;
 /*
- * $Id: V3TestUtil.java,v 1.4 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: V3TestUtil.java,v 1.5 2008-08-12 18:34:27 dshr Exp $
  */
 
 /*
@@ -121,6 +121,7 @@ public class V3TestUtil extends LockssTestCase {
                  d2.getPollerId().getIdString());
     assertEquals(d1.getPollVersion(), d2.getPollVersion());
     assertEquals(d1.getVoteBlocks().size(), d2.getVoteBlocks().size());
+    assertEquals(d1.getAgreementHint(), d2.getAgreementHint());
   }
 }
 

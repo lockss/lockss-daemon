@@ -232,6 +232,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setRemainingEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairTarget("http://www.example.com/file1.html");
+    ud.setAgreementHint((double) 0.63);
     VoteBlocks blocks = new DiskVoteBlocks(tempDir);
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));

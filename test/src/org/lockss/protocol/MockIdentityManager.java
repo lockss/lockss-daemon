@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.16 2008-01-30 00:52:41 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.17 2008-08-12 18:34:27 dshr Exp $
  */
 
 /*
@@ -182,6 +182,11 @@ public class MockIdentityManager implements IdentityManager {
   }
   
   public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
+                                     float percentAgreement) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+  
+  public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
                                      float percentAgreement) {
     throw new UnsupportedOperationException("not implemented");
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.25 2008-02-15 09:12:11 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.26 2008-08-12 18:34:27 dshr Exp $
  */
 
 /*
@@ -1032,6 +1032,62 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
         return 0.0f;
       } else {
         return ida.getHighestPercentAgreement();
+      }
+    }
+  }
+
+  /**
+   * Record the agreement hint we received from one of our votes in a
+   * V3 poll on au.
+   *
+   * @param pid
+   * @param au
+   * @param percent
+   */
+  public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
+					 float percent) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    } else if (pid == null) {
+      throw new IllegalArgumentException("Called with null pid");
+    }
+    log.debug3("signalPartialAgreementHint(" + pid + "," + au + "," + percent + ")");
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
+      ida.setPercentAgreementHint(percent);
+      storeIdentityAgreement(au);
+    }
+  }
+
+  /**
+   * Get the percent agreement hint for a V3 poll on a given AU.
+   *
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   *
+   * @return The percent agreement hint for this AU and peer.
+   */
+  public float getPercentAgreementHint(PeerIdentity pid, ArchivalUnit au) {
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
+      if (ida == null) {
+        return 0.0f;
+      } else {
+        return ida.getPercentAgreementHint();
+      }
+    }
+  }
+  
+  public float getHighestPercentAgreementHint(PeerIdentity pid, ArchivalUnit au) {
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
+      if (ida == null) {
+        return 0.0f;
+      } else {
+        return ida.getHighestPercentAgreementHint();
       }
     }
   }

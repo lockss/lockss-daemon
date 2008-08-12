@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.22 2008-04-01 08:03:09 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.23 2008-08-12 18:34:26 dshr Exp $
  */
 
 /*
@@ -212,13 +212,11 @@ public class VoterActions {
     VoterUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtNoSuchRepair;
     V3Voter voter = ud.getVoter();
-    IdentityManager idmgr = voter.getIdentityManager();
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
-    PeerIdentity voterId = msg.getOriginatorId();
     String targetUrl = msg.getTargetUrl();
     CachedUrlSet cus = ud.getCachedUrlSet();
     if (cus.containsUrl(targetUrl) &&
-        voter.serveRepairs(msg.getOriginatorId(), ud.getVoter().getAu(), targetUrl)) {
+        voter.serveRepairs(msg.getOriginatorId(), voter.getAu(), targetUrl)) {
       // I have this repair and I'm willing to serve it.
       log.debug2("Accepting repair request from " + ud.getPollerId() +
                  " for URL: " + targetUrl);
@@ -256,7 +254,16 @@ public class VoterActions {
 
   @ReturnEvents("evtReceiptOk")
   public static PsmEvent handleReceiveReceipt(PsmMsgEvent evt, PsmInterp interp) {
-    // XXX: Implement.
+    VoterUserData ud = getUserData(interp);
+    V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
+    double agreementHint = msg.getAgreementHint();
+    log.debug3("Receipt agreement " + agreementHint);
+    ud.setAgreementHint(agreementHint);
+    // Remember the agreement hint in the agreement history for the AU
+    PeerIdentity poller = ud.getPollerId();
+    IdentityManager idmgr = ud.getVoter().getIdentityManager();
+    idmgr.signalPartialAgreementHint(poller, ud.getVoter().getAu(),
+				     (float) agreementHint);
     return V3Events.evtReceiptOk;
   }
 
