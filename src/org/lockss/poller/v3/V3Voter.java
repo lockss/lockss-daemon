@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.59 2008-08-11 23:32:59 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.60 2008-08-13 03:19:05 dshr Exp $
  */
 
 /*
@@ -858,7 +858,11 @@ public class V3Voter extends BasePoll {
   }
   
   public File getStateDir() {
-    return pollSerializer.pollDir;
+    File ret = null;
+    if (pollSerializer != null) {
+      ret = pollSerializer.pollDir;
+    }
+    return ret;
   }
 
   // Not used by V3.
