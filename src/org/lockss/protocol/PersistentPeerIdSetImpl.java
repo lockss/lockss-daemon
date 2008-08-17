@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.3 2008-08-11 23:34:44 tlipkis Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.4 2008-08-17 08:46:35 tlipkis Exp $
  */
 
 /*
@@ -49,16 +49,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
 import org.lockss.util.*;
 
@@ -340,8 +332,9 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 			      m_filePeerId.getParentFile());
     try {
       // Loop until there are no IdentityParseExceptions
-      dos = new DataOutputStream(new FileOutputStream(filePeerIdTemp));    
-      encode(dos, filePeerIdTemp);
+      OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
+      dos = new DataOutputStream(new BufferedOutputStream(fileOs));
+      encode(dos);
       dos.close();
 
       if (!PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
@@ -351,15 +344,15 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     } finally {
       IOUtil.safeClose(dos);
+      filePeerIdTemp.delete();
     }
   }
 
   /**
    * @param dos
-   * @param filePeerIdTemp
    * @throws IOException
    */
-  protected void encode(DataOutputStream dos, File filePeerIdTemp) throws IOException {
+  protected void encode(DataOutputStream dos) throws IOException {
     byte [] TCPKey = null;
     boolean errors = false;
     

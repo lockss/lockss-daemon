@@ -72,9 +72,9 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
   }
 
 
-  protected void encode(DataOutputStream dos, File filePeerIdTemp) throws IOException {
+  protected void encode(DataOutputStream dos) throws IOException {
     dos.writeLong(m_date);
-    super.encode(dos, filePeerIdTemp);
+    super.encode(dos);
   }
   
 }
