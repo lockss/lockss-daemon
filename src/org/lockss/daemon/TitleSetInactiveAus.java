@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetInactiveAus.java,v 1.4 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: TitleSetInactiveAus.java,v 1.5 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class TitleSetInactiveAus extends BaseTitleSet {
       String key = (String)iter.next();
       if (!ConfigParamDescr.isReservedParam(key)) {
 	String val = auConfig.get(key);
-	ConfigParamDescr descr = findParamDescr(plugin, key);
+	ConfigParamDescr descr = plugin.findAuConfigDescr(key);
 	if (descr != null) {
 	  ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
 	  params.add(cpa);
@@ -83,18 +83,6 @@ public class TitleSetInactiveAus extends BaseTitleSet {
     }
     tc.setParams(params);
     return tc;
-  }
-
-  // Copy of code in BasePlugin
-  private ConfigParamDescr findParamDescr(PluginProxy plugin, String key) {
-    List descrs = plugin.getAuConfigDescrs();
-    for (Iterator iter = descrs.iterator(); iter.hasNext(); ) {
-      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-      if (descr.getKey().equals(key)) {
-	return descr;
-      }
-    }
-    return null;
   }
 
   Collection filterTitles(Collection allTitles) {

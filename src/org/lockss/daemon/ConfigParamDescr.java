@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.38 2008-08-11 23:31:52 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.39 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -18,7 +18,7 @@ The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+DERIVED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
 STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
@@ -246,6 +246,12 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   // not explicitly set in the AU config
   private boolean defaultOnly = false;
 
+  // Describes a derived value, such as xxx_host and xxx_path for TYPE_URL
+  // These are created on the fly when needed and should never appear in
+  // plugins.  No need to save the flag as it would always be false.
+  private transient boolean derived = false;
+
+
   public ConfigParamDescr() {
   }
 
@@ -391,6 +397,35 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public boolean isDefaultOnly() {
     return defaultOnly;
   }
+
+  /**
+   * Set the "derived" flag.
+   * @param isDerived the new value
+   * @return this
+   */
+  public ConfigParamDescr setDerived(boolean isDerived) {
+    derived = isDerived;
+    return this;
+  }
+
+  /** Derived values are computed from explicitly set values, such as
+   * base_url_host and base_url_path.  They should never be set directly.
+   * @return true if the parameter is derived
+   */
+  public boolean isDerived() {
+    return derived;
+  }
+
+  public ConfigParamDescr getDerivedDescr(String derivedKey) {
+    ConfigParamDescr res = new ConfigParamDescr(derivedKey)
+      .setDerived(true)
+      .setDefinitional(false)
+      .setDefaultOnly(false)
+      .setDisplayName("Derived from " + getDisplayName())
+      .setType(getType());
+    return uniqueInstance(res);
+  }
+
 
   public boolean isValidValueOfType(String val) {
     try {
@@ -547,10 +582,11 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       return false;
     }
     ConfigParamDescr opd = (ConfigParamDescr)o;
-    return type == opd.getType()
+    return key.equals(opd.getKey())
+      && type == opd.getType()
       && getSize() == opd.getSize()
-      && definitional == opd.isDefinitional()
-      && key.equals(opd.getKey());
+      && derived == opd.isDerived()
+      && definitional == opd.isDefinitional();
   }
 
   public int hashCode() {
@@ -575,7 +611,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
    * {@link #postUnmarshalResolve}).</p>
    * @see #postUnmarshalResolve
    */
-  protected static Map uniqueInstances;
+  protected static Map<ConfigParamDescr,ConfigParamDescr> uniqueInstances;
 
   /**
    * <p>A post-deserialization resolution method for serializers that
@@ -604,7 +640,9 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
    * {@link #postUnmarshalResolve})
    * @see #postUnmarshalResolve
    */
-  protected static synchronized Object uniqueInstance(ConfigParamDescr descr) {
+  protected static synchronized
+    ConfigParamDescr uniqueInstance(ConfigParamDescr descr) {
+
     /* Access to the map is protected by the synchronization */
     // Lazy instantiation
     if (uniqueInstances == null) {
@@ -614,7 +652,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       }
     }
 
-    Object ret = uniqueInstances.get(descr);
+    ConfigParamDescr ret = uniqueInstances.get(descr);
     if (ret == null) {
       uniqueInstances.put(descr, descr);
       return descr;

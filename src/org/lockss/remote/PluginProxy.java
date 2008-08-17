@@ -1,5 +1,5 @@
 /*
- * $Id: PluginProxy.java,v 1.5 2007-08-12 04:53:30 tlipkis Exp $
+ * $Id: PluginProxy.java,v 1.6 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -125,6 +125,14 @@ public class PluginProxy {
    */
   public List getAuConfigDescrs() {
     return plugin.getAuConfigDescrs();
+  }
+
+  /**
+   * Find the ConfigParamDescr for a param
+   * @return a ConfigParamDescr or null
+   */
+  public ConfigParamDescr findAuConfigDescr(String key) {
+    return plugin.findAuConfigDescr(key);
   }
 
   /**

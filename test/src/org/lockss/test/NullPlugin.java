@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.91 2008-07-06 04:25:58 dshr Exp $
+ * $Id: NullPlugin.java,v 1.92 2008-08-17 08:40:29 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,10 @@ public class NullPlugin {
     }
 
     public List getAuConfigDescrs() {
+      return null;
+    }
+
+    public ConfigParamDescr findAuConfigDescr(String key) {
       return null;
     }
 

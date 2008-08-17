@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.52 2008-06-18 22:21:30 dshr Exp $
+ * $Id: BasePlugin.java,v 1.53 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,9 @@ public abstract class BasePlugin
   protected HashMap filterMap = new HashMap(4);
   // ClassLoader used to load plugin.  null if not loadable plugin
   protected ClassLoader classLoader;
+  protected List<ConfigParamDescr> allParamDescrs;
+  protected Map<String,ConfigParamDescr> paramDescrMap;
+
 
   Configuration.Callback configCb = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
@@ -221,7 +224,7 @@ public abstract class BasePlugin
       Configuration oneParam = allParams.getConfigTree((String)iter.next());
       String key = oneParam.get(TITLE_PARAM_PARAM_KEY);
       String val = oneParam.get(TITLE_PARAM_PARAM_VALUE);
-      ConfigParamDescr descr = findParamDescr(key);
+      ConfigParamDescr descr = findAuConfigDescr(key);
       if (descr != null) {
 	ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
 	if (oneParam.containsKey(TITLE_PARAM_PARAM_EDITABLE)) {
@@ -259,35 +262,58 @@ public abstract class BasePlugin
     }
   }
 
-  public List getAuConfigDescrs() {
-    List res = new ArrayList(getLocalAuConfigDescrs());
-    if (res.isEmpty()) {
-      // Don't add internal params if plugin has no params.  (testing)
-      return res;
+  public List<ConfigParamDescr> getAuConfigDescrs() {
+    if (allParamDescrs == null) {
+      List<ConfigParamDescr> local = getLocalAuConfigDescrs();
+      ArrayList<ConfigParamDescr> res = new ArrayList(local);
+      for (ConfigParamDescr descr : local) {
+	switch (descr.getType()) {
+	case ConfigParamDescr.TYPE_YEAR:
+	  res.add(descr.getDerivedDescr(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR
+					+ descr.getKey()));
+	  break;
+	case ConfigParamDescr.TYPE_URL:
+	  ConfigParamDescr derived;
+	  derived = descr.getDerivedDescr(descr.getKey()
+					  + BaseArchivalUnit.SUFFIX_AU_HOST);
+	  derived.setType(ConfigParamDescr.TYPE_STRING);
+	  res.add(derived);
+	  derived = descr.getDerivedDescr(descr.getKey()
+					  + BaseArchivalUnit.SUFFIX_AU_PATH);
+	  derived.setType(ConfigParamDescr.TYPE_STRING);
+	  res.add(derived);
+	  break;
+	}
+      }
+
+      if (!res.isEmpty()) {
+	// Don't add internal params if plugin has no params.  (testing)
+	res.add(ConfigParamDescr.AU_CLOSED);
+	res.add(ConfigParamDescr.PUB_DOWN);
+	res.add(ConfigParamDescr.PUB_NEVER);
+	res.add(ConfigParamDescr.PROTOCOL_VERSION);
+      }
+      res.trimToSize();
+      Map<String,ConfigParamDescr> map = new HashMap();
+      for (ConfigParamDescr descr : res) {
+	map.put(descr.getKey(), descr);
+      }
+      paramDescrMap = map;
+      allParamDescrs = res;
     }
-    res.add(ConfigParamDescr.AU_CLOSED);
-    res.add(ConfigParamDescr.PUB_DOWN);
-    res.add(ConfigParamDescr.PUB_NEVER);
-    res.add(ConfigParamDescr.PROTOCOL_VERSION);
-    return res;
+    return allParamDescrs;
   }
 
-  abstract protected List getLocalAuConfigDescrs();
+  abstract protected List<ConfigParamDescr> getLocalAuConfigDescrs();
 
   /**
    * Find the ConfigParamDescr that this plugin uses for the specified key.
    * @return the element of {@link #getAuConfigDescrs()} whose key
    * matches <code>key</code>, or null if none.
    */
-  protected ConfigParamDescr findParamDescr(String key) {
-    List descrs = getAuConfigDescrs();
-    for (Iterator iter = descrs.iterator(); iter.hasNext(); ) {
-      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-      if (descr.getKey().equals(key)) {
-	return descr;
-      }
-    }
-    return null;
+  public ConfigParamDescr findAuConfigDescr(String key) {
+    getAuConfigDescrs();
+    return paramDescrMap.get(key);
   }
 
 

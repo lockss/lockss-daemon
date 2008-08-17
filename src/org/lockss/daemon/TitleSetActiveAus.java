@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.9 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: TitleSetActiveAus.java,v 1.10 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class TitleSetActiveAus extends BaseTitleSet {
 	String key = (String)iter.next();
  	if (!ConfigParamDescr.isReservedParam(key)) {
 	  String val = auConfig.get(key);
-	  ConfigParamDescr descr = findParamDescr(plugin, key);
+	  ConfigParamDescr descr = plugin.findAuConfigDescr(key);
 	  if (descr != null) {
 	    ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
 	    params.add(cpa);
@@ -92,18 +92,6 @@ public class TitleSetActiveAus extends BaseTitleSet {
       tc.setParams(params);
     }
     return tc;
-  }
-
-  // Copy of code in BasePlugin
-  private ConfigParamDescr findParamDescr(Plugin plugin, String key) {
-    List descrs = plugin.getAuConfigDescrs();
-    for (Iterator iter = descrs.iterator(); iter.hasNext(); ) {
-      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-      if (descr.getKey().equals(key)) {
-	return descr;
-      }
-    }
-    return null;
   }
 
   /** This method needs to be defined to satisfy the abstract base class,

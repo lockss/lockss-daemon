@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.9 2008-08-11 23:31:52 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.10 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -146,6 +146,24 @@ public class TestConfigParamDescr extends LockssTestCase {
     ConfigParamDescr d2 = new ConfigParamDescr("foo");
     assertEquals(d1.hashCode(), d2.hashCode());
   }
+
+  public void testDerived() {
+    ConfigParamDescr d = ConfigParamDescr.BASE_URL;
+    ConfigParamDescr d1 = d.getDerivedDescr("base_url_host");
+    assertFalse(d.isDerived());
+    assertTrue(d1.isDerived());
+    assertNotEquals(d1, d);
+    assertEquals(d.getType(), d1.getType());
+    assertFalse(d1.isDefinitional());
+    // Should always get same one back
+    ConfigParamDescr d2 = d.getDerivedDescr("base_url_host");
+    assertSame(d2, d1);
+    // this one is different
+    ConfigParamDescr d3 = d.getDerivedDescr("base_url2_host");
+    assertNotSame(d2, d3);
+    assertNotEquals(d2, d3);
+  }
+    
 
   /**
    * <p>Tests that {@link ConfigParamDescr#postUnmarshalResolve(LockssApp)}

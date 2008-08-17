@@ -1,5 +1,5 @@
 /*
- * $Id: OaiPlugin.java,v 1.5 2006-07-18 19:14:10 tlipkis Exp $
+ * $Id: OaiPlugin.java,v 1.6 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class OaiPlugin extends BasePlugin {
   private static String CURRENT_VERSION = "1";
 
   // List of defining properties (only base_url for Oai plugins)
-  private static final List m_auConfigDescrs =
+  private static final List<ConfigParamDescr> m_auConfigDescrs =
     ListUtil.list(ConfigParamDescr.BASE_URL);
 
   public OaiPlugin() {
@@ -98,7 +98,7 @@ public class OaiPlugin extends BasePlugin {
   /**
    * We only have one defining attribute, a base URL.
    */
-  public List getLocalAuConfigDescrs() {
+  public List<ConfigParamDescr> getLocalAuConfigDescrs() {
     return m_auConfigDescrs;
   }
 }

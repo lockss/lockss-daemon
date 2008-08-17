@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.63 2007-08-12 04:53:29 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.64 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -865,7 +865,8 @@ public class AuConfig extends LockssServlet {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       if (descr.isDefinitional()) {
 	defKeys.add(descr.getKey());
-      } else if (allowEditDefaultOnly || !descr.isDefaultOnly()) {
+      } else if (allowEditDefaultOnly || !descr.isDefaultOnly()
+		 && !descr.isDerived()) {
 	editKeys.add(descr.getKey());
       }
     }

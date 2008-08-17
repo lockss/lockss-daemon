@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.27 2007-08-12 04:53:30 tlipkis Exp $
+ * $Id: Plugin.java,v 1.28 2008-08-17 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -116,6 +116,11 @@ public interface Plugin {
    * would like them presented to the user.
    */
   public List getAuConfigDescrs();
+
+  /**
+   * Return the ConfigParamDescr for the named param, or null if none.
+   */
+  public ConfigParamDescr findAuConfigDescr(String key);
 
   /**
    * Create or (re)configure an {@link ArchivalUnit} from the specified

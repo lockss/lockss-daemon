@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.27 2007-08-12 04:53:29 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.28 2008-08-17 08:40:29 tlipkis Exp $
  */
 
 /*
@@ -145,6 +145,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   public void setAuConfigDescrs(List descrs) {
     auConfigDescrs = descrs;
+    allParamDescrs = null;		// clear cache
   }
 
   /**

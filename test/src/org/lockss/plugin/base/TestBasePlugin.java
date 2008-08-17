@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.16 2007-08-12 01:47:15 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.17 2008-08-17 08:40:29 tlipkis Exp $
  */
 
 /*
@@ -80,11 +80,21 @@ public class TestBasePlugin extends LockssTestCase {
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
     List descrs = mbp.getAuConfigDescrs();
     assertEquals(SetUtil.set(PD_VOL, PD_YEAR,
+			     PD_YEAR.getDerivedDescr("au_short_year"),
 			     ConfigParamDescr.AU_CLOSED,
 			     ConfigParamDescr.PUB_DOWN,
 			     ConfigParamDescr.PUB_NEVER,
 			     ConfigParamDescr.PROTOCOL_VERSION),
 		 SetUtil.theSet(descrs));
+  }
+
+  public void testFindAuConfigDescr() {
+    mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
+    assertEquals(PD_VOL, mbp.findAuConfigDescr(PD_VOL.getKey()));
+    assertEquals(PD_YEAR, mbp.findAuConfigDescr(PD_YEAR.getKey()));
+    assertEquals(ConfigParamDescr.AU_CLOSED,
+		 mbp.findAuConfigDescr(ConfigParamDescr.AU_CLOSED.getKey()));
+    assertNull(mbp.findAuConfigDescr("noparam"));
   }
 
   public void testInitTitleDB() {
