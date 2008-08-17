@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.79 2008-04-01 21:08:14 edwardsb1 Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.80 2008-08-17 08:46:49 tlipkis Exp $
  */
 
 /*
@@ -548,7 +548,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ensureCurrentInfoLoaded();
     if (!nodeRootFile.exists()) {
       logger.debug3("Creating root directory for CUS '"+url+"'");
-      nodeRootFile.mkdirs();
+      if (!nodeRootFile.mkdirs()) {
+	throw new LockssRepository.RepositoryStateException("mkdirs(" +
+							    nodeRootFile +
+							    ") failed for "
+							    + nodeRootFile);
+      }
     }
   }
 
