@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.70 2008-08-12 18:34:27 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.71 2008-08-17 08:48:15 tlipkis Exp $
  */
 
 /*
@@ -1046,9 +1046,12 @@ public class ArchivalUnitStatus
       return "Repair candidates for AU: " + au.getName();
     }
     private static final String FOOT_TITLE =
-      "These caches have proven to us that they have (or had) a correct \n" +
-      "copy of this AU.  We will fetch repairs from them if necessary, \n" +
-      "and they may fetch repairs from us.";
+      "Peers whose Highest Agreement is above a threshold have proven\n" +
+      "in the past that their content for this AU is the same, and will\n" +
+      "be served repairs on request. Peers whose Highest Agreement Hint\n" +
+      "is above the threshold have reported that this peer has proven to\n" +
+      "them that the content for the AU is the same, and are likely to\n" +
+      "supply repairs on request.";
 
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
