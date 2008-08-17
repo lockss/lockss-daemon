@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.20 2008-07-16 00:11:43 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.21 2008-08-17 08:48:00 tlipkis Exp $
  */
 
 /*
@@ -338,6 +338,7 @@ public abstract class BaseServletManager
     if (!StringUtil.isNullString(platUser) &&
 	!StringUtil.isNullString(platPass)) {
       realm.put(platUser, platPass);
+      realm.addUserToRole(platUser, LockssServlet.ROLE_ADMIN);
     }
   }
 

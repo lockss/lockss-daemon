@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.100 2008-08-11 23:36:00 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.101 2008-08-17 08:48:00 tlipkis Exp $
  */
 
 /*
@@ -83,9 +83,14 @@ public abstract class LockssServlet extends HttpServlet
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
 
-  public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
+
+  public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
+  public static final String ATTR_ALLOW_ROLES = "AllowRoles";
+
+  public static final String ROLE_ADMIN = "adminRole";
+  public static final String ROLE_DEBUG = "debugRole";
 
   protected static Logger log = Logger.getLogger("LockssServlet");
 
@@ -102,10 +107,7 @@ public abstract class LockssServlet extends HttpServlet
   protected URL reqURL;
   protected HttpSession session;
   private String adminDir = null;
-  protected String client;	// client param
   protected String clientAddr;	// client addr, even if no param
-  protected String adminAddr;
-  protected String adminHost;
   protected String localAddr;
   protected MultiPartRequest multiReq;
 
@@ -158,15 +160,17 @@ public abstract class LockssServlet extends HttpServlet
       footNumber = 0;
       tabindex = 1;
       reqURL = new URL(UrlUtil.getRequestURL(req));
-      adminAddr = req.getParameter("admin");
-      adminHost = reqURL.getHost();
-      client = req.getParameter("client");
-      clientAddr = client;
-      if (clientAddr == null) {
-	clientAddr = getLocalIPAddr();
-      }
+      clientAddr = getLocalIPAddr();
       submitButtonNumber = 0;
 
+      // check whether servlet requires admin user
+      if (myServletDescr().isAdminOnly() && !isAdminUser()) {
+	displayWarningInLieuOfPage("You are not authorized to use " +
+				   myServletDescr().heading);
+	return;
+      }
+
+      // check whether servlet is disabled
       String reason =
 	ServletUtil.servletDisabledReason(myServletDescr().getServletName());
       if (reason != null) {
@@ -375,16 +379,6 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
-  // Servlet predicates
-  boolean isPerClient() {
-    return myServletDescr().isPerClient();
-  }
-
-  boolean runsOnClient() {
-    return myServletDescr().runsOnClient();
-  }
-
-
   boolean isServletLinkInNav(ServletDescr d) {
     return !isThisServlet(d) || linkMeInNav();
   }
@@ -405,14 +399,21 @@ public abstract class LockssServlet extends HttpServlet
 
   // user predicates
   protected boolean isDebugUser() {
-    return req.isUserInRole("debugRole") &&
+    return req.isUserInRole(ROLE_DEBUG) &&
       StringUtil.isNullString(req.getParameter("nodebug"));
   }
 
-//   protected boolean isAdminUser() {
-//     return (req.isUserInRole("adminRole") || isDebugUser()) &&
-//       StringUtil.isNullString(req.getParameter("noadmin"));
-//   }
+  protected boolean isAdminUser() {
+    if (req.isUserInRole(ROLE_ADMIN) &&
+	StringUtil.isNullString(req.getParameter("noadmin"))) {
+      return true;
+    }
+    List roles = (List)context.getAttribute(ATTR_ALLOW_ROLES);
+    if (roles != null) {
+      return roles.contains(ROLE_ADMIN);
+    }
+    return false;
+  }
 
   // Called when a servlet doesn't get the parameters it expects/needs
   protected void paramError() throws IOException {
@@ -468,24 +469,9 @@ public abstract class LockssServlet extends HttpServlet
     StringBuffer sb = new StringBuffer();
     StringBuffer paramsb = new StringBuffer();
 
-    if (!clientAddr.equals(adminAddr)) {
-      if (!d.runsOnClient()) {
-	if (runsOnClient()) {	// invoking admin servlet from client
-	  host = adminAddr;
-	}
-      } else if (!runsOnClient()) { // invoking client servlet from admin
-	host = clientAddr;
-	paramsb.append("&admin=");
-	paramsb.append(adminHost);
-      }
-    }
     if (params != null) {
       paramsb.append('&');
       paramsb.append(params);
-    }
-    if (d.isPerClient()) {
-      paramsb.append("&client=");
-      paramsb.append(clientAddr);
     }
     if (host != null) {
       sb.append(reqURL.getProtocol());
@@ -590,8 +576,9 @@ public abstract class LockssServlet extends HttpServlet
 
   protected boolean isServletInNav(ServletDescr d) {
     if (!isDebugUser() && d.isDebugOnly()) return false;
+    if (!isAdminUser() && d.isAdminOnly()) return false;
     if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
-    return d.isInNav(this) && (!d.isPerClient() || isPerClient());
+    return d.isInNav(this);
   }
 
   protected String getRequestKey() {

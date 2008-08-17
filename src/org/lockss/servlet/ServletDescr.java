@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.12 2008-08-11 23:35:59 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.13 2008-08-17 08:48:00 tlipkis Exp $
  */
 
 /*
@@ -52,12 +52,6 @@ public class ServletDescr {
   static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
 
   // flags
-  /** Runs on client (else on admin) */
-  public static final int ON_CLIENT = 0x01;
-
-  /** Per client (takes client arg) */
-  public static final int PER_CLIENT = 0x02;
-
   /** Include link in nav table */
   public static final int IN_NAV = 0x04;
 
@@ -67,16 +61,16 @@ public class ServletDescr {
   /** Use large LOCKSS logo */
   public static final int LARGE_LOGO = 0x10;
 
-  /** Debug user only */
-  public static final int DEBUG_ONLY = 0x20;
-
   /** The servlet path is actually the entire URL that should appear in
    * links */
-  public static final int PATH_IS_URL = 0x40;
+  public static final int PATH_IS_URL = 0x20;
 
-  public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
+  /** User role: Debug user only */
+  public static final int DEBUG_ONLY = 0x1000;
 
-//   public static final int IN_PROXYANDCONTENT = 0x4000; // Will probably go away now
+  /** User role: Admin (read/write) user only */
+  public static final int ADMIN_ONLY = 0x2000;
+
 
 
   public ServletDescr(String servletName,
@@ -199,21 +193,13 @@ public class ServletDescr {
     expl = s;
   }
 
-  boolean isPerClient() {
-    return (flags & PER_CLIENT) != 0;
-  }
-
-  boolean runsOnClient() {
-    return (flags & ON_CLIENT) != 0;
-  }
-
   boolean isDebugOnly() {
     return (flags & DEBUG_ONLY) != 0;
   }
 
-//   boolean isAdminOnly() {
-//     return (flags & DEBUG_ONLY) != 0;
-//   }
+  boolean isAdminOnly() {
+    return (flags & ADMIN_ONLY) != 0;
+  }
 
   boolean isLargeLogo() {
     return (flags & LARGE_LOGO) != 0;
@@ -241,4 +227,8 @@ public class ServletDescr {
     return (flags & flag) == 0;
   }
 
+  public String toString() {
+    String name = getServletName();
+    return "[ServletDescr: " + (name != null ? name : getPath()) + "]";
+  }
 }

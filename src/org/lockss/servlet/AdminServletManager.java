@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.3 2008-08-11 23:36:00 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.4 2008-08-17 08:48:00 tlipkis Exp $
  */
 
 /*
@@ -168,31 +168,35 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("BatchAuConfig",
 		     BatchAuConfig.class,
                      "Journal Configuration",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.ADMIN_ONLY),
                      "Add or remove titles from this cache");
   protected static final ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr("AuConfig",
 		     AuConfig.class,
                      "Manual Journal Configuration",
-		     (ServletDescr.IN_UIHOME),
+		     (ServletDescr.IN_UIHOME | ServletDescr.ADMIN_ONLY),
                      "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr("AdminIpAccess",
 		     AdminIpAccess.class,
                      "Admin Access Control",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.ADMIN_ONLY),
                      "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr("ProxyIpAccess",
 		     ProxyIpAccess.class,
                      "Content Access Control",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.ADMIN_ONLY),
                      "Control access to the preserved content");
   protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
     new ServletDescr("ProxyAndContent",
 		     ProxyAndContent.class,
                      "Content Access Options",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.ADMIN_ONLY),
                      "Configure the audit proxy and the ICP server.");
   protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr("ProxyConfig",
@@ -207,7 +211,8 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("PluginConfig",
 		     PluginConfig.class,
                      "Plugin Configuration",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.ADMIN_ONLY),
                      "Manage plugin repositories, title databases") {
       public boolean isInNav(LockssServlet servlet) {
 	return CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
@@ -225,8 +230,7 @@ public class AdminServletManager extends BaseServletManager {
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
     new ServletDescr("ViewContent",
 		     ViewContent.class,
-                     "View Content",
-                     ServletDescr.DEBUG_ONLY);
+                     "View Content");
   public static final ServletDescr SERVLET_SERVE_CONTENT =
     new ServletDescr("ServeContent",
 		     ServeContent.class,
@@ -252,7 +256,8 @@ public class AdminServletManager extends BaseServletManager {
 		     null,
                      "ISOs",
                      "iso",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.ADMIN_ONLY),
 		     "Download configured platform CD image") {
       public boolean isInNav(LockssServlet servlet) {
 	ServletManager mgr = servlet.getServletManager();
@@ -270,11 +275,13 @@ public class AdminServletManager extends BaseServletManager {
   protected static final ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr("RaiseAlert",
 		     RaiseAlert.class,
-                     "Raise Alert");
+                     "Raise Alert",
+                     ServletDescr.DEBUG_ONLY | ServletDescr.ADMIN_ONLY);
   protected static final ServletDescr SERVLET_DEBUG_PANEL =
     new ServletDescr("DebugPanel",
 		     DebugPanel.class,
-                     "Debug Panel");
+                     "Debug Panel",
+		     ServletDescr.ADMIN_ONLY);
   protected static final ServletDescr LINK_CONTACT =
     new ServletDescr(null,
 		     null,

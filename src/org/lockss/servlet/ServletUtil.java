@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.54 2008-08-11 23:37:05 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.55 2008-08-17 08:48:00 tlipkis Exp $
  */
 
 /*
@@ -1507,26 +1507,11 @@ public class ServletUtil {
     final String NAVTABLE_CELL_WIDTH = "width=\"15\"";
 
     Table navTable = new Table(NAVTABLE_TABLE_BORDER, NAVTABLE_ATTRIBUTES);
-    boolean clientTitle = false;
 
     while (descrIterator.hasNext()) {
       ServletDescr d = (ServletDescr)descrIterator.next();
       navTable.newRow();
-      if (d.isPerClient()) {
-        if (!clientTitle) {
-          // Insert client name before first per-client servlet
-          navTable.newCell(NAVTABLE_CELL_WIDTH);
-          navTable.newCell("colspan=\"2\"");
-          navTable.add("<b>" + machineNameClientAddr + "</b>");
-          navTable.newRow();
-          clientTitle = true;
-        }
-        navTable.newCell(NAVTABLE_CELL_WIDTH);
-        navTable.newCell(NAVTABLE_CELL_WIDTH);
-        navTable.newCell();
-      } else {
-        navTable.newCell("colspan=\"3\"");
-      }
+      navTable.newCell("colspan=\"3\"");
       if (false /*isThisServlet(d)*/) {
         navTable.add("<font size=\"-1\" color=\"green\">");
       } else {
