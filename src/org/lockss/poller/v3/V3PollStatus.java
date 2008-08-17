@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.25 2008-08-13 03:19:05 dshr Exp $
+* $Id: V3PollStatus.java,v 1.26 2008-08-17 08:46:12 tlipkis Exp $
  */
 
 /*
@@ -530,9 +530,12 @@ public class V3PollStatus {
                                                               poll.getKey())));
       }
       if (isDebug) {
-	summary.add(new SummaryInfo("",
-				    ColumnDescriptor.TYPE_STRING,
-				    poll.getStateDir()));
+	File stateDir = poll.getStateDir();
+        if (stateDir != null) {
+	  summary.add(new SummaryInfo("State Dir",
+				      ColumnDescriptor.TYPE_STRING,
+				      stateDir));
+	}
       }
 
       int activeRepairs = poll.getActiveRepairs().size();
@@ -993,7 +996,7 @@ public class V3PollStatus {
       if (isDebug) {
 	File stateDir = voter.getStateDir();
         if (stateDir != null) {
-	  summary.add(new SummaryInfo("",
+	  summary.add(new SummaryInfo("State Dir",
 				      ColumnDescriptor.TYPE_STRING,
 				      stateDir));
         }

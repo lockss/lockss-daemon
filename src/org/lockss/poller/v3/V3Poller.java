@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.80 2008-08-11 23:32:59 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.81 2008-08-17 08:46:12 tlipkis Exp $
  */
 
 /*
@@ -2321,7 +2321,10 @@ public class V3Poller extends BasePoll {
    * Return the serialization state directory used by this poll.
    */
   public File getStateDir() {
-    return serializer.pollDir;
+    if (serializer != null) {
+      return serializer.pollDir;
+    }
+    return null;
   }
 
   /**
