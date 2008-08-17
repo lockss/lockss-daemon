@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.10 2007-11-08 10:07:47 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.11 2008-08-17 08:38:33 tlipkis Exp $
  */
 
 /*
@@ -160,8 +160,20 @@ public class CrawlRules {
       return IGNORE;
     }
 
+    public boolean equals(Object o) {
+      if (o instanceof RE) {
+	RE ore = (RE)o;
+ 	return
+	  action == ore.action &&
+	  this.getClass() == ore.getClass() &&
+	  regexp.getPattern().equals(ore.regexp.getPattern());
+      }
+      return false;
+    }
+
     public String toString() {
-      return "[CrawlRule.RE: '" + regexp.getPattern() + "', " + action + "]";
+      return "[" + StringUtil.shortName(getClass()) + ": '"
+	+ regexp.getPattern() + "', " + action + "]";
     }
   }
 
@@ -309,6 +321,22 @@ public class CrawlRules {
       }
       return false;
     }
+
+    public boolean equals(Object o) {
+      if (o instanceof REMatchRange && super.equals(o)) {
+	REMatchRange ore = (REMatchRange)o;
+	if (mode == ore.mode) {
+	  switch (mode) {
+	  case LONG:
+	    return minLong == ore.minLong && maxLong == ore.maxLong;
+	  case COMP:
+	  case COMP_IGN_CASE:
+	    return minComp.equals(maxComp);
+	  }
+	}
+      }
+      return false;
+    }
   }
 
   /**
@@ -384,6 +412,14 @@ public class CrawlRules {
       }
       return set.contains(sub);
     }
+
+    public boolean equals(Object o) {
+      if (o instanceof REMatchSet && super.equals(o)) {
+	REMatchSet ore = (REMatchSet)o;
+	return mode.equals(ore.mode) && set.equals(ore.set);
+      }
+      return false;
+    }
   }
 
   /**
@@ -420,6 +456,14 @@ public class CrawlRules {
 	}
       }
       return IGNORE;
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof FirstMatch) {
+	FirstMatch ore = (FirstMatch)o;
+	return rules.equals(ore.rules);
+      }
+      return false;
     }
 
     public String toString() {

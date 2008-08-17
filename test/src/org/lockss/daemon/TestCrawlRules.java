@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRules.java,v 1.4 2007-11-08 10:07:47 tlipkis Exp $
+ * $Id: TestCrawlRules.java,v 1.5 2008-08-17 08:38:32 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,115 @@ public class TestCrawlRules extends LockssTestCase {
       fail("CrawlRules.RE with illegal RE should throw");
     } catch (LockssRegexpException e) {
     }
+  }
+
+  public void testEquals() throws LockssRegexpException {
+    CrawlRule cr1 = new CrawlRules.RE("blahblah.*",
+				      CrawlRules.RE.MATCH_INCLUDE);
+    CrawlRule cr1a = new CrawlRules.RE("blahblah.*",
+				       CrawlRules.RE.MATCH_INCLUDE);
+    CrawlRule cr2 = new CrawlRules.RE("baz.*",
+				      CrawlRules.RE.MATCH_INCLUDE);
+    CrawlRule cr3 = new CrawlRules.RE("blahblah.*",
+				      CrawlRules.RE.MATCH_EXCLUDE);
+    assertTrue(cr1.equals(cr1));
+    assertTrue(cr1.equals(cr1a));
+    assertTrue(cr1a.equals(cr1));
+
+    assertFalse(cr1.equals(cr2));
+    assertFalse(cr2.equals(cr1));
+    assertFalse(cr1.equals(cr3));
+    assertFalse(cr3.equals(cr1));
+
+    CrawlRule crr1 = new CrawlRules.REMatchRange("blahblah.*",
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 2, 7);
+    CrawlRule crr1a = new CrawlRules.REMatchRange("blahblah.*",
+						  CrawlRules.RE.MATCH_INCLUDE,
+						  2, 7);
+    CrawlRule crr2 = new CrawlRules.REMatchRange("foo.*",
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 2, 7);
+    CrawlRule crr3 = new CrawlRules.REMatchRange("blahblah.*",
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 2, 8);
+    CrawlRule crr4 = new CrawlRules.REMatchRange("blahblah.*",
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 4, 7);
+
+    assertTrue(crr1.equals(crr1));
+    assertTrue(crr1.equals(crr1a));
+    assertTrue(crr1a.equals(crr1));
+
+    assertFalse(crr1.equals(crr2));
+    assertFalse(crr1.equals(crr3));
+    assertFalse(crr1.equals(crr4));
+    assertFalse(crr2.equals(crr1));
+    assertFalse(crr3.equals(crr1));
+    assertFalse(crr4.equals(crr1));
+
+    assertFalse(cr1.equals(crr1));
+    assertFalse(crr1.equals(cr1));
+
+    CrawlRule crs1 = new CrawlRules.REMatchSet("blahblah.*",
+					       CrawlRules.RE.MATCH_INCLUDE,
+					       SetUtil.set(2, 4, 7));
+    CrawlRule crs1a = new CrawlRules.REMatchSet("blahblah.*",
+						CrawlRules.RE.MATCH_INCLUDE,
+						SetUtil.set(2, 4, 7));
+    CrawlRule crs2 = new CrawlRules.REMatchSet("foo.*",
+					       CrawlRules.RE.MATCH_INCLUDE,
+					       SetUtil.set(2, 4, 7));
+    CrawlRule crs3 = new CrawlRules.REMatchSet("blahblah.*",
+					       CrawlRules.RE.MATCH_INCLUDE,
+					       SetUtil.set(2, 4));
+    CrawlRule crs4 = new CrawlRules.REMatchSet("blahblah.*",
+					       CrawlRules.RE.MATCH_INCLUDE,
+					       SetUtil.set(4, 4, 8));
+
+    assertTrue(crs1.equals(crs1));
+    assertTrue(crs1.equals(crs1a));
+    assertTrue(crs1a.equals(crs1));
+
+    assertFalse(crs1.equals(crs2));
+    assertFalse(crs1.equals(crs3));
+    assertFalse(crs1.equals(crs4));
+    assertFalse(crs2.equals(crs1));
+    assertFalse(crs3.equals(crs1));
+    assertFalse(crs4.equals(crs1));
+
+    assertFalse(cr1.equals(crs1));
+    assertFalse(crs1.equals(cr1));
+    assertFalse(crr1.equals(crs1));
+    assertFalse(crs1.equals(crr1));
+
+    List l1 = ListUtil.list(new CrawlRules.RE("^foo.*",
+					      CrawlRules.RE.MATCH_INCLUDE),
+			    new CrawlRules.RE("^bar.*",
+					      CrawlRules.RE.MATCH_EXCLUDE));
+    List l2 = ListUtil.list(new CrawlRules.RE("^foo.*",
+					      CrawlRules.RE.MATCH_INCLUDE),
+			    new CrawlRules.RE("^bar.*",
+					      CrawlRules.RE.MATCH_EXCLUDE));
+
+    CrawlRule crf1 = new CrawlRules.FirstMatch(l1);
+    CrawlRule crf1a = new CrawlRules.FirstMatch(l2);
+    CrawlRule crf2 = new CrawlRules.FirstMatch(ListUtil.list(l1.get(1),
+							     l1.get(0)));
+
+    assertTrue(crf1.equals(crf1));
+    assertTrue(crf1.equals(crf1a));
+    assertTrue(crf1a.equals(crf1));
+
+    assertFalse(crf1.equals(crf2));
+    assertFalse(crf2.equals(crf1));
+
+    assertFalse(cr1.equals(crf1));
+    assertFalse(crf1.equals(cr1));
+    assertFalse(crs1.equals(crf1));
+    assertFalse(crf1.equals(crs1));
+    assertFalse(crr1.equals(crf1));
+    assertFalse(crf1.equals(crr1));
   }
 
   public void testMatchIncl() throws LockssRegexpException {
