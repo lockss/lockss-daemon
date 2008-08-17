@@ -1,5 +1,5 @@
 /*
- * $Id: OaiArchivalUnit.java,v 1.4 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: OaiArchivalUnit.java,v 1.5 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -98,8 +98,7 @@ public class OaiArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules();
     //XXXOAI return OaiCrawlSpec
     logger.debug("making OaiCrawlSpec");
-    //    return new OaiCrawlSpec(startUrls,rule);
-    return new OaiCrawlSpec(startUrlString, rule);
+    return new OaiCrawlSpec(getNewContentCrawlUrls().get(0), rule);
   }
 
   /**

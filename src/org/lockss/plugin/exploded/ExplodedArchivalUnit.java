@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.6 2008-05-10 17:47:11 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.7 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -156,9 +156,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    * @return CrawlSpec
    */
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
-    ArrayList startUrls = new ArrayList();
-    startUrls.add(startUrlString);
-    return new ExplodedCrawlSpec(startUrls);
+    return new ExplodedCrawlSpec(getNewContentCrawlUrls());
   }
 
   /**

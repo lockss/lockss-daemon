@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.24 2008-01-30 00:49:12 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.25 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
    */
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlRule rule = makeRules();
-    List startUrls = ListUtil.list(startUrlString);
+    List startUrls = getNewContentCrawlUrls();
     return new SpiderCrawlSpec(startUrls, startUrls, rule,
 			       m_maxRefetchDepth, null, null);
   }

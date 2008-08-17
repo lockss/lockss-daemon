@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.126 2008-06-18 22:21:29 dshr Exp $
+ * $Id: BaseArchivalUnit.java,v 1.127 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected CrawlSpec crawlSpec;
 
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
-  protected String startUrlString;
+  protected List<String> startUrls;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
 
@@ -291,10 +291,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 		  StringUtil.timeIntervalToString(newContentCrawlIntv));
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
 
-    // make the start url
-    startUrlString = makeStartUrl();
-    paramMap.putString(KEY_AU_START_URL, startUrlString);
-
+    // make the start urls
+    startUrls = makeStartUrls();
 
 
     // get crawl window setting
@@ -437,12 +435,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public Collection getUrlStems() {
     try {
       List perms = getPermissionPages();
-      List res = new ArrayList(perms.size());
+      ArrayList res = new ArrayList(perms.size());
       for (Iterator it = perms.iterator(); it.hasNext();) {
 	String url = (String)it.next();
 	String stem = UrlUtil.getUrlPrefix(url);
 	res.add(stem);
       }
+      res.trimToSize();
       return res;
     } catch (Exception e) {
       // TODO: This should throw an exception. ProxyInfo assumes that a
@@ -584,7 +583,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   protected List getPermissionPages() {
-    return ListUtil.list(startUrlString);
+    return startUrls;
   }
 
   public String getName() {
@@ -613,7 +612,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlRule rule = makeRules();
-    return new SpiderCrawlSpec(startUrlString, rule);
+    return new SpiderCrawlSpec(startUrls, rule);
   }
 
   protected CrawlWindow makeCrawlWindow() {
@@ -630,11 +629,25 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   abstract protected CrawlRule makeRules() throws LockssRegexpException;
 
   /**
-   * subclasses must implement to make and return the url from which a crawl of
-   * this au will start.
-   * @return the starting url as a String
+   * Compute the AU's single start URL.  (Subclasses must implement either
+   * makeStartUrl() or makeStartUrls().)
+   * @return the URL from which a crawl of this au should start
    */
-  abstract protected String makeStartUrl() throws ConfigurationException;
+  protected String makeStartUrl() throws ConfigurationException {
+    throw new UnsupportedOperationException("Plugin must implement makeStartUrl() or makeStartUrls()");
+  }
+
+  /**
+   * Compute the AU's starting URL list.  (Subclasses must implement either
+   * makeStartUrl() or makeStartUrls().)
+   * @return the list of URLs from which a crawl of this au should start
+   */
+  protected List<String> makeStartUrls() throws ConfigurationException {
+    ArrayList res = new ArrayList(1);
+    res.add(makeStartUrl());
+    res.trimToSize();
+    return res;
+  }
 
   /**
    * subclasses must implement to make and return the name for this au
@@ -741,8 +754,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   
 
-  public List getNewContentCrawlUrls() {
-    return ListUtil.list(startUrlString);
+  public List<String> getNewContentCrawlUrls() {
+    return startUrls;
   }
 
   // utility methods for configuration management

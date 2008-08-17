@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.64 2008-06-18 22:21:30 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.65 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,21 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected ExternalizableMap definitionMap;
 
+  /** Array of  DefinablePlugin keys that hold parameterized printf
+   * strings, excluding regexps */ 
+  public static String[] printfPatternKeys = {
+    KEY_AU_NAME,
+    KEY_AU_START_URL,
+    KEY_AU_MANIFEST,
+    KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
+  };
+
+  /** Array of all DefinablePlugin keys that hold parameterized printf
+   * regexp strings */ 
+  public static String[] printfRegexpKeys = {
+    KEY_AU_CRAWL_RULES,
+  };
+
   protected DefinableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
     throw new UnsupportedOperationException(
@@ -120,38 +135,52 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return (DefinablePlugin)plugin;
   }
 
-  protected List getPermissionPages() {
-    List templateList;
-    Object permission_el = definitionMap.getMapElement(KEY_AU_MANIFEST);
-
-    if (permission_el instanceof String) {
-      templateList = ListUtil.list((String)permission_el);
-    } else if (permission_el instanceof List) {
-       templateList = (List) permission_el;
-    } else {
-      return super.getPermissionPages();
-    }
-    List permission_list = new ArrayList(templateList.size());
-    for(Iterator it = templateList.iterator(); it.hasNext();) {
-      String permissionPage = convertVariableString((String)it.next());
-      if (permissionPage != null) {
-	log.debug3("Adding permission page: "+permissionPage);
-	permission_list.add(permissionPage);
-      }
-    }
-    return permission_list;
+  protected List<String> getElementList(String key) {
+    return getDefinablePlugin().getElementList(key);
   }
 
-  protected String makeStartUrl() throws ConfigurationException {
-    String startstr = definitionMap.getString(KEY_AU_START_URL, "");
-    String convstr = convertVariableString(startstr);
-    if (convstr == null) {
-      String msg = "Missing params in start url: " + startstr;
+  protected List convertPatternList(String key) {
+    List<String> patternList = getElementList(key);
+
+    if (patternList == null) {
+      return null;
+    }
+    ArrayList<String> res = new ArrayList(patternList.size());
+    for (String pattern : patternList) {
+      if (StringUtil.isNullString(pattern)) {
+	log.warning("Null pattern string in " + key);
+	continue;
+      }
+      List<String> lst = convertVariableString(pattern);
+      if (lst == null) {
+	log.warning("Null converted string in " + key + ", from " + pattern);
+	continue;
+      }
+      res.addAll(lst);
+    }
+    res.trimToSize();
+    return res;
+  }
+
+  protected List getPermissionPages() {
+    List res = convertPatternList(KEY_AU_MANIFEST);
+    if (res == null) {
+      return super.getPermissionPages();
+    }
+    return res;
+  }
+
+  @Override
+  protected List<String> makeStartUrls() throws ConfigurationException {
+    List res = convertPatternList(KEY_AU_START_URL);
+    if (res == null) {
+      String msg = "Bad start url pattern: "
+	+ getElementList(KEY_AU_START_URL);
       log.error(msg);
       throw new ConfigurationException(msg);
     }
-    log.debug2("setting start url " + convstr);
-    return convstr;
+    log.debug2("Setting start urls " + res);
+    return res;
   }
 
   protected void loadAuConfigDescrs(Configuration config) throws
@@ -196,7 +225,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   protected Pattern makeLoginUrlPattern(String val)
       throws ArchivalUnit.ConfigurationException {
 
-    String patStr = convertVariableRegexpString(val);
+    String patStr = convertVariableRegexpString(val).regexp;
     if (patStr == null) {
       String msg = "Missing regexp args: " + val;
       log.error(msg);
@@ -224,13 +253,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected String makeName() {
     String namestr = definitionMap.getString(KEY_AU_NAME, "");
-    String convstr = convertVariableString(namestr);
-    if (convstr == null) {
-      log.error("missing args in name: " + namestr);
-      return namestr;
+    List<String> lst = convertVariableString(namestr);
+    if (lst.size() != 1) {
+      throw new PluginException.InvalidDefinition("Illegal AU name pattern:"
+						  + namestr);
     }
-    log.debug2("setting name string: " + convstr);
-    return convstr;
+    String name = lst.get(0);
+    log.debug2("setting name string: " + name);
+    return name;
   }
 
   protected CrawlRule makeRules() throws LockssRegexpException {
@@ -309,11 +339,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
 						  DEFAULT_AU_EXPLODER_PATTERN);
       ExploderHelper eh = getDefinablePlugin().getExploderHelper();
-      //XXX change to a list
-//       String startUrl = paramMap.getString(AU_START_URL);
 
-//       return new SpiderCrawlSpec(ListUtil.list(startUrl),
-      return new SpiderCrawlSpec(ListUtil.list(startUrlString),
+      return new SpiderCrawlSpec(getNewContentCrawlUrls(),
 				 getPermissionPages(), rule, depth,
 				 makePermissionChecker(),
 				 makeLoginPageChecker(), exploderPattern, eh);
@@ -380,124 +407,189 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
-  static final int CONVERT_QUOTE_REGEXP_META_CHARS = 1;
 
-  String convertVariableRegexpString(String printfString) {
-    return convertVariableString(printfString,
-				 CONVERT_QUOTE_REGEXP_META_CHARS);
+  MatchPattern convertVariableRegexpString(String printfString) {
+    return convertVariableRegexpString(PrintfUtil.stringToPrintf(printfString));
   }
 
-  String convertVariableRegexpString(PrintfUtil.PrintfData p_data) {
-    return convertVariableString(p_data, CONVERT_QUOTE_REGEXP_META_CHARS);
+  List<String> convertVariableString(String printfString) {
+    return convertVariableString(PrintfUtil.stringToPrintf(printfString));
   }
 
-  String convertVariableString(String printfString) {
-    return convertVariableString(printfString, 0);
-  }    
-
-  String convertVariableString(String printfString, int options) {
-    return convertVariableString(PrintfUtil.stringToPrintf(printfString),
-				 options);
-  }
-
-  String convertVariableString(PrintfUtil.PrintfData p_data, int options) {
+  MatchPattern convertVariableRegexpString(PrintfUtil.PrintfData p_data) {
     String format = p_data.getFormat();
     Collection p_args = p_data.getArguments();
     ArrayList substitute_args = new ArrayList(p_args.size());
+    ArrayList matchArgs = new ArrayList();
+    ArrayList matchArgDescrs = new ArrayList();
 
     boolean has_all_args = true;
     for (Iterator it = p_args.iterator(); it.hasNext(); ) {
       String key = (String) it.next();
       Object val = paramMap.getMapElement(key);
       if (val != null) {
-        if (val instanceof Vector) {
-          Vector vec = (Vector) val;
-          if(vec.elementAt(0) instanceof Long) {
-            substitute_args.add(NUM_SUBSTITUTION_STRING);
-          } else {
-            substitute_args.add(RANGE_SUBSTITUTION_STRING);
-          }
-        } else {
-	  if ((options & CONVERT_QUOTE_REGEXP_META_CHARS) != 0 &&
-	      val instanceof String) {
+	Object substVal = null;
+	ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+	switch (descr != null ? descr.getType()
+		: ConfigParamDescr.TYPE_STRING) {
+	case ConfigParamDescr.TYPE_SET:
+	  // val must be a list; ok to throw if not
+	  List<String> vec = (List<String>)val;
+	  List tmplst = new ArrayList(vec.size());
+	  for (String ele : vec) {
+	    tmplst.add(Perl5Compiler.quotemeta(ele));
+	  }
+	  substVal = StringUtil.separatedString(tmplst, "(?:", "|", ")");
+	  break;
+	case ConfigParamDescr.TYPE_RANGE:
+	  substVal = RANGE_SUBSTITUTION_STRING;
+	  matchArgs.add(val);
+	  matchArgDescrs.add(descr);
+	  break;
+	case ConfigParamDescr.TYPE_NUM_RANGE:
+	  substVal = NUM_SUBSTITUTION_STRING;
+	  matchArgs.add(val);
+	  matchArgDescrs.add(descr);
+	  break;
+	default:
+	  if (val instanceof String) {
 	    val = Perl5Compiler.quotemeta((String)val);
 	  }
-          substitute_args.add(val);
-        }
+	  substVal = val;
+	}
+	substitute_args.add(substVal);
       } else {
         log.warning("misssing argument for : " + key);
         has_all_args = false;
       }
     }
 
-    if (has_all_args) {
-      PrintfFormat pf = new PrintfFormat(format);
-      return pf.sprintf(substitute_args.toArray());
-    } else {
+    if (!has_all_args) {
+      log.warning("Missing variable arguments: " + p_data);
+      return new MatchPattern();
+    }
+    PrintfFormat pf = new PrintfFormat(format);
+    if (log.isDebug3()) {
+      log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
+    }
+
+    return new MatchPattern(pf.sprintf(substitute_args.toArray()),
+			    matchArgs, matchArgDescrs);
+  }
+
+  List<String> convertVariableString(PrintfUtil.PrintfData p_data) {
+    String format = p_data.getFormat();
+    Collection<String> p_args = p_data.getArguments();
+    ArrayList substitute_args = new ArrayList(p_args.size());
+    ArrayList res = new ArrayList();
+    boolean has_all_args = true;
+    boolean haveSets = false;
+
+    for (String key : p_args) {
+      Object val = paramMap.getMapElement(key);
+      if (val != null) {
+	ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+	switch (descr != null ? descr.getType()
+		: ConfigParamDescr.TYPE_STRING) {
+	case ConfigParamDescr.TYPE_SET:
+	  // val must be a list; ok to throw if not
+	  List<String> vec = (List<String>)val;
+	  substitute_args.add(vec);
+	  haveSets = true;
+	  break;
+	case ConfigParamDescr.TYPE_RANGE:
+	case ConfigParamDescr.TYPE_NUM_RANGE:
+	  throw new PluginException.InvalidDefinition("Range params legal only in regexps:" + key);
+	default:
+	  substitute_args.add(Collections.singletonList(val));
+	  break;
+	}
+      } else {
+        log.warning("misssing argument for : " + key);
+        has_all_args = false;
+      }
+    }
+
+    if (!has_all_args) {
       log.warning("Missing variable arguments: " + p_data);
       return null;
     }
+    PrintfFormat pf = new PrintfFormat(format);
+    if (!substitute_args.isEmpty() && (haveSets || true)) {
+      for (CartesianProductIterator iter =
+	     new CartesianProductIterator(substitute_args);
+	   iter.hasNext(); ) {
+	Object[] oneCombo = (Object[])iter.next();
+	if (log.isDebug3()) {
+	  log.debug3("sprintf(\""+format+"\", "+oneCombo+")");
+	}
+	res.add(pf.sprintf(oneCombo));
+      }
+    } else {
+      if (log.isDebug3()) {
+	log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
+      }
+      res.add(pf.sprintf(substitute_args.toArray()));
+    }
+    res.trimToSize();
+    return res;
   }
 
-  CrawlRule convertRule(String printfString, boolean ignoreCase)
+  CrawlRule convertRule(String ruleString, boolean ignoreCase)
       throws LockssRegexpException {
-    PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
-    // if printf string references unassigned optional param, ignore rule
-    // (missing required param would have caused error earlier)
-    for (String key : p_data.getArguments()) {
-      if (!paramMap.containsKey(key)) {
-	if (log.isDebug3()) {
-	  log.debug3("Ignoring " + printfString + ": " + key + " unassigned");
-	}
-	return null;
-      }
-    }
-    String rule = convertVariableRegexpString(p_data);
-    String action_str = printfString.substring(0, printfString.indexOf(","));
-    int action = Integer.valueOf(action_str).intValue();
-    Vector vec;
-    if (rule.indexOf(RANGE_SUBSTITUTION_STRING) != -1
-        || rule.indexOf(NUM_SUBSTITUTION_STRING) != -1) {
-      // Check for range or set
 
-      for (Iterator iter = plugin.getAuConfigDescrs().iterator() ; iter.hasNext() ; ) {
-        ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-        switch (descr.getType()) {
-          case ConfigParamDescr.TYPE_RANGE:
-            vec = (Vector)paramMap.getMapElement(descr.getKey());
-            if (vec != null) {
-              return new CrawlRules.REMatchRange(rule,
-						 ignoreCase,
-                                                 action,
-                                                 (String)vec.elementAt(0),
-                                                 (String)vec.elementAt(1));
-            }
-            break;
-          case ConfigParamDescr.TYPE_NUM_RANGE:
-            vec = (Vector)paramMap.getMapElement(descr.getKey());
-            if (vec != null) {
-              return new CrawlRules.REMatchRange(rule,
-						 ignoreCase,
-                                                 action,
-                                                 ((Long)vec.elementAt(0)).longValue(),
-                                                 ((Long)vec.elementAt(1)).longValue());
-            }
-            break;
-          case ConfigParamDescr.TYPE_SET:
-            vec = (Vector)paramMap.getMapElement(descr.getKey());
-            if (vec != null) {
-              return new CrawlRules.REMatchSet(rule,
-					       ignoreCase,
-                                               action,
-                                               new HashSet(vec));
-            }
-            break;
-        }
+    int pos = ruleString.indexOf(",");
+    int action = Integer.parseInt(ruleString.substring(0, pos));
+    String printfString = ruleString.substring(pos + 1);
+
+    MatchPattern mp = convertVariableRegexpString(printfString);
+    if (mp.regexp == null) {
+      return null;
+    }
+    List<List> matchArgs = mp.matchArgs;
+    switch (matchArgs.size()) {
+    case 0:
+      return new CrawlRules.RE(mp.regexp, ignoreCase, action);
+    case 1:
+      List argPair = matchArgs.get(0);
+      ConfigParamDescr descr = mp.matchArgDescrs.get(0);
+      switch (descr.getType()) {
+      case ConfigParamDescr.TYPE_RANGE:
+	return new CrawlRules.REMatchRange(mp.regexp,
+					   ignoreCase,
+					   action,
+					   (String)argPair.get(0),
+					   (String)argPair.get(1));
+      case ConfigParamDescr.TYPE_NUM_RANGE:
+	return new CrawlRules.REMatchRange(mp.regexp,
+					   ignoreCase,
+					   action,
+					   ((Long)argPair.get(0)).longValue(),
+					   ((Long)argPair.get(1)).longValue());
+      default:
+	throw new RuntimeException("Shouldn't happen.  Unknown REMatchRange arg type: " + descr);
       }
 
+    default:
+      throw new LockssRegexpException("Multiple range args not yet supported");
+    }
+  }
+
+  class MatchPattern {
+    String regexp;
+    List<List> matchArgs;
+    List<ConfigParamDescr> matchArgDescrs;
+
+    MatchPattern() {
     }
 
-    return new CrawlRules.RE(rule, ignoreCase, action);
+    MatchPattern(String regexp,
+		 List<List> matchArgs,
+		 List<ConfigParamDescr> matchArgDescrs) {
+      this.regexp = regexp;
+      this.matchArgs = matchArgs;
+      this.matchArgDescrs = matchArgDescrs;
+    }
   }
 
   public interface ConfigurableCrawlWindow {

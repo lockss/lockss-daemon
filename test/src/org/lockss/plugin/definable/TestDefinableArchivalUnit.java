@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.35 2008-05-19 07:39:30 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.36 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.extractor.*;
 public class TestDefinableArchivalUnit extends LockssTestCase {
   private DefinableArchivalUnit cau = null;
   private TypedEntryMap configMap;
+  private TypedEntryMap additionalAuConfig = new TypedEntryMap();
   private ExternalizableMap defMap;
   private List configProps;
   private List crawlRules = ListUtil.list("1,\"%s\", base_url",
@@ -62,21 +63,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   DefinablePlugin cp;
 
-
   protected void setUp() throws Exception {
     super.setUp();
 
     configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
                                 ConfigParamDescr.VOLUME_NUMBER);
-
-    cp = new DefinablePlugin();
     defMap = new ExternalizableMap();
-    cp.initPlugin(getMockLockssDaemon(), defMap);
-    cau = new DefinableArchivalUnit(cp, defMap);
-    configMap = cau.getProperties();
-    configMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, PLUGIN_NAME);
-    configMap.putString(DefinablePlugin.KEY_PLUGIN_VERSION, CURRENT_VERSION);
-    configMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
+
   }
 
   protected void tearDown() throws Exception {
@@ -84,108 +77,167 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testConverVariableStringWithNumRange() {
-    Vector vec = new Vector(2);
-    String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
-    vec.add(0, new Long(10));
-    vec.add(1, new Long(20));
-    configMap.setMapElement(key, vec);
-    String substr = "\"My Test Range = %s\", " + key;
-    String expectedReturn = "My Test Range = (\\d+)";
-    String actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+  public DefinableArchivalUnit setupAu() {
+    return setupAu(null);
   }
 
-  public void testConverVariableStringWithRange() {
-    Vector vec = new Vector(2);
-    String key = ConfigParamDescr.ISSUE_RANGE.getKey();
-    vec.add(0, "aaa");
-    vec.add(1, "zzz");
-    configMap.setMapElement(key, vec);
-    String substr = "\"My Test Range = %s\", " + key;
-    String expectedReturn = "My Test Range = (.*)";
-    String actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+  public DefinableArchivalUnit setupAu(TypedEntryMap addMap) {
+    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
+    cp = new DefinablePlugin();
+    cp.initPlugin(getMockLockssDaemon(), defMap);
+    cau = new DefinableArchivalUnit(cp, defMap);
+    configMap = cau.getProperties();
+    configMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, PLUGIN_NAME);
+    configMap.putString(DefinablePlugin.KEY_PLUGIN_VERSION, CURRENT_VERSION);
+    configMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
+    if (addMap != null) {
+      for (Iterator iter = addMap.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry ent = (Map.Entry)iter.next();
+	configMap.setMapElement((String)ent.getKey(), ent.getValue());
+      }
+    }
+    return cau;
   }
 
-  public void testConvertVariableStringWithSet() {
-    Vector vec = new Vector();
-    String key = ConfigParamDescr.ISSUE_SET.getKey();
-    vec.add("apple");
-    vec.add("bananna");
-    vec.add("grape");
-    configMap.setMapElement(key, vec);
-    String substr = "\"My Test Range = %s\", " + key;
-    String expectedReturn = "My Test Range = (.*)";
-    String actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
-  }
+  public static final ConfigParamDescr CPD_BOOLE =
+    new ConfigParamDescr()
+    .setKey("boole")
+    .setDisplayName("BBBool")
+    .setType(ConfigParamDescr.TYPE_BOOLEAN)
+    .setDescription("BBBool");
 
   public void testConvertVariableString() {
-    configMap.putInt("INTEGER", 10);
-    configMap.putBoolean("BOOLEAN", true);
+    configProps.add(ConfigParamDescr.VOLUME_NAME);
+    configProps.add(ConfigParamDescr.YEAR);
+    configProps.add(CPD_BOOLE);
+    additionalAuConfig.putInt("volume", 10);
+    additionalAuConfig.putBoolean("boole", true);
     //  ensure dot in substitution string doesn't get regexp quoted
-    configMap.putString("STRING", "Yo.Mama!");
-    configMap.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
-    configMap.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
+    additionalAuConfig.putString("base_url", "Yo.Mama!");
+    additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
+    additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
                ConfigParamDescr.YEAR.getKey(),3);
+    setupAu(additionalAuConfig);
 
-    String substr = "\"My Test Integer = %d\", INTEGER";
+    String substr = "\"My Test Integer = %d\", volume";
     String expectedReturn = "My Test Integer = 10";
-    String actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals(ListUtil.list(expectedReturn),
+		 cau.convertVariableString(substr));
 
-    substr = "\"My Test Boolean = %s\", BOOLEAN";
+    substr = "\"My Test Boolean = %s\", boole";
     expectedReturn = "My Test Boolean = true";
-    actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals(ListUtil.list(expectedReturn),
+		 cau.convertVariableString(substr));
 
-    substr = "\"My Test String = %s\", STRING";
+    substr = "\"My Test String = %s\", base_url";
     expectedReturn = "My Test String = Yo.Mama!";
-    actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals(ListUtil.list(expectedReturn),
+		 cau.convertVariableString(substr));
 
     substr = "\"My Test Short Year = %02d\", au_short_year";
     expectedReturn = "My Test Short Year = 03";
-    actualReturn = cau.convertVariableString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals(ListUtil.list(expectedReturn),
+		 cau.convertVariableString(substr));
 
     substr = "\"My Test no param = %s\", no_param";
     assertNull(cau.convertVariableString(substr));
   }
 
+  public void testConvertVariableRegexStringWithNumRange() {
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    vec.add(0, new Long(10));
+    vec.add(1, new Long(20));
+    additionalAuConfig.setMapElement(key, vec);
+    configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    setupAu(additionalAuConfig);
+    String substr = "\"My Test Range = %s\", " + key;
+    DefinableArchivalUnit.MatchPattern mp =
+      cau.convertVariableRegexpString(substr);
+    assertEquals("My Test Range = (\\d+)", mp.regexp);
+  }
+
+  public void testConvertVariableStringWithNumRange() {
+    configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    vec.add(0, new Long(10));
+    vec.add(1, new Long(20));
+    additionalAuConfig.setMapElement(key, vec);
+    setupAu(additionalAuConfig);
+    try {
+      cau.convertVariableString("\"My Test Range = %s\", " + key);
+      fail("Range param in non-regexp should throw");
+    } catch (PluginException.InvalidDefinition e) {
+    }
+  }
+
+  public void testConverVariableStringWithRange() {
+    configProps.add(ConfigParamDescr.ISSUE_RANGE);
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.ISSUE_RANGE.getKey();
+    vec.add(0, "aaa");
+    vec.add(1, "zzz");
+    additionalAuConfig.setMapElement(key, vec);
+    setupAu(additionalAuConfig);
+    String expectedReturn = "My Test Range = (.*)";
+    try {
+      cau.convertVariableString("\"My Test Range = %s\", " + key);
+      fail("Range param in non-regexp should throw");
+    } catch (PluginException.InvalidDefinition e) {
+    }
+  }
+
+  public void testConvertVariableStringWithSet() {
+    configProps.add(ConfigParamDescr.ISSUE_SET);
+    Vector vec = new Vector();
+    String key = ConfigParamDescr.ISSUE_SET.getKey();
+    vec.add("apple");
+    vec.add("bananna");
+    vec.add("grape");
+    additionalAuConfig.setMapElement(key, vec);
+    setupAu(additionalAuConfig);
+    assertEquals(ListUtil.list("Test Set = apple", "Test Set = bananna", "Test Set = grape"),
+		 cau.convertVariableString("\"Test Set = %s\", " + key));
+  }
+
+  //XXX
+
   public void testConvertRegexpString() {
-    configMap.putInt("INTEGER", 10);
-    configMap.putBoolean("BOOLEAN", true);
+    additionalAuConfig.putInt("INTEGER", 10);
+    additionalAuConfig.putBoolean("BOOLEAN", true);
     //  ensure meta chars in substitution string't get regexp quoted
-    configMap.putString("STRING", "Yo.M[am]a?foo=bar!");
-    configMap.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
-    configMap.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
+    additionalAuConfig.putString("STRING", "Yo.M[am]a?foo=bar!");
+    additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
+    additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
                ConfigParamDescr.YEAR.getKey(),3);
 
+    setupAu(additionalAuConfig);
     String substr = "\"My Test Integer = %d\", INTEGER";
     String expectedReturn = "My Test Integer = 10";
-    String actualReturn = cau.convertVariableRegexpString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    DefinableArchivalUnit.MatchPattern mp =
+      cau.convertVariableRegexpString(substr);
+    assertEquals(expectedReturn, mp.regexp);
 
     substr = "\"My Test Boolean = %s\", BOOLEAN";
     expectedReturn = "My Test Boolean = true";
-    actualReturn = cau.convertVariableRegexpString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    mp = cau.convertVariableRegexpString(substr);
+    assertEquals(expectedReturn, mp.regexp);
 
     substr = "\"My Test String = %s\", STRING";
     expectedReturn = "My Test String = Yo\\.M\\[am\\]a\\?foo\\=bar\\!";
-    actualReturn = cau.convertVariableRegexpString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    mp = cau.convertVariableRegexpString(substr);
+    assertEquals(expectedReturn, mp.regexp);
 
     substr = "\"My Test Short Year = %02d\", au_short_year";
     expectedReturn = "My Test Short Year = 03";
-    actualReturn = cau.convertVariableRegexpString(substr);
-    assertEquals("return value", expectedReturn, actualReturn);
+    mp = cau.convertVariableRegexpString(substr);
+    assertEquals(expectedReturn, mp.regexp);
   }
 
   public void testConvertRule() throws LockssRegexpException {
-    configMap.putString("URL", "http://www.example.com/");
+    additionalAuConfig.putString("URL", "http://www.example.com/");
+    setupAu(additionalAuConfig);
     String rule1 = "1,\".*\\.gif\"";
     String rule2 = "1,\"%s\",URL";
 
@@ -210,9 +262,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  rule.match("http://www1example.com/"));
   }
 
+  public void testConvertRuleMissingRequiredParam()
+      throws LockssRegexpException {
+    additionalAuConfig.putString("URL", "http://www.example.com/");
+    setupAu(additionalAuConfig);
+    String rule1 = "1,\"%s\",URL,UNknown";
+
+    assertNull(cau.convertRule(rule1, false));
+  }
+
   public void testConvertRuleMissingOptionalParam()
       throws LockssRegexpException {
-    configMap.putString("URL", "http://www.example.com/");
+    additionalAuConfig.putString("URL", "http://www.example.com/");
+    setupAu(additionalAuConfig);
     String rule1 = "1,\"%s\",URL";
     String rule2 = "1,\"%s%d\",URL,FOO";
 
@@ -225,10 +287,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String key = ConfigParamDescr.ISSUE_RANGE.getKey();
     vec.add(0, "aaa");
     vec.add(1, "hhh");
-    configMap.setMapElement(key, vec);
+    additionalAuConfig.setMapElement(key, vec);
 
     configProps.add(ConfigParamDescr.ISSUE_RANGE);
-    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
+    setupAu(additionalAuConfig);
 
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
     CrawlRule crule = cau.convertRule(rule, false);
@@ -253,10 +315,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
     vec.add(0, new Long(10));
     vec.add(1, new Long(20));
-    configMap.setMapElement(key, vec);
+    additionalAuConfig.setMapElement(key, vec);
 
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
-    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
+    setupAu(additionalAuConfig);
 
     String rule = "1,\"http://www.example.com/issue%s.html\", " + key;
     CrawlRule crule = cau.convertRule(rule, false);
@@ -283,15 +345,21 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     vec.add("banana");
     vec.add("grape");
     vec.add("fig");
-    configMap.setMapElement(key, vec);
+    additionalAuConfig.setMapElement(key, vec);
 
     configProps.add(ConfigParamDescr.ISSUE_SET);
-    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
+    setupAu(additionalAuConfig);
 
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
     CrawlRule crule = cau.convertRule(rule, false);
     assertEquals(CrawlRule.INCLUDE,
                  crule.match("http://www.example.com/appleissue.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/bananaissue.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/grapeissue.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/figissue.html"));
     assertEquals(CrawlRule.IGNORE,
                  crule.match("http://www.example.com/appleIssue.html"));
     assertEquals(CrawlRule.IGNORE,
@@ -311,18 +379,21 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testMakeName() {
-    configMap.putString("JOURNAL_NAME", "MyJournal");
-    configMap.putInt("VOLUME", 43);
+    additionalAuConfig.putString("journal_id", "MyJournal");
+    additionalAuConfig.putInt("volume", 43);
+    configProps.add(ConfigParamDescr.JOURNAL_ID);
     defMap.putString(DefinableArchivalUnit.KEY_AU_NAME,
-                  "\"%s Vol %d\",JOURNAL_NAME,VOLUME");
+                  "\"%s Vol %d\",journal_id,volume");
+    setupAu(additionalAuConfig);
     String expectedReturn = "MyJournal Vol 43";
     String actualReturn = cau.makeName();
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
   public void testMakeRules() throws LockssRegexpException {
-    configMap.putString("base_url", "http://www.example.com/");
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
+    setupAu(additionalAuConfig);
 
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
@@ -332,10 +403,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testMakeRulesIgnCase() throws LockssRegexpException {
-    configMap.putString("base_url", "http://www.example.com/");
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
     defMap.putBoolean(DefinableArchivalUnit.KEY_AU_CRAWL_RULES_IGNORE_CASE,
 		      true);
+    setupAu(additionalAuConfig);
 
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
@@ -349,10 +421,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testMakeRulesDontIgnCase() throws LockssRegexpException {
-    configMap.putString("base_url", "http://www.example.com/");
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
     defMap.putBoolean(DefinableArchivalUnit.KEY_AU_CRAWL_RULES_IGNORE_CASE,
 		      false);
+    setupAu(additionalAuConfig);
 
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
@@ -366,14 +439,52 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testMakeStartUrl() throws Exception {
-    configMap.putInt("VOLUME", 43);
-    configMap.putString("URL", "http://www.example.com/");
+    additionalAuConfig.putInt("volume", 43);
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
-                  "\"%slockss-volume/%d.html\", URL, VOLUME");
+		     "\"%slockss-volume/%d.html\", base_url, volume");
+    setupAu(additionalAuConfig);
 
-    String expectedReturn = "http://www.example.com/lockss-volume/43.html";
-    String actualReturn = cau.makeStartUrl();
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals(ListUtil.list("http://www.example.com/lockss-volume/43.html"),
+		 cau.makeStartUrls());
+  }
+
+  public void testMakeStartUrlList() throws Exception {
+    additionalAuConfig.putInt("volume", 43);
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
+    defMap.putCollection(ArchivalUnit.KEY_AU_START_URL,
+			 ListUtil.list("\"%sl-volume/%d.html\", base_url, volume",
+				       "\"%sunl-vol/%d.html\", base_url, volume"));
+    setupAu(additionalAuConfig);
+
+    assertEquals(ListUtil.list("http://www.example.com/l-volume/43.html",
+			       "http://www.example.com/unl-vol/43.html"),
+		 cau.makeStartUrls());
+  }
+
+  public void xxxxtestMakeStartUrlListWithSet() throws Exception {
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
+    additionalAuConfig.putString("issue_set", "1, 2, 3, 3a");
+    defMap.putCollection(ArchivalUnit.KEY_AU_START_URL,
+			 ListUtil.list("\"%sfoo/\", base_url",
+				       "\"%sbar/issue-%s\", base_url, issue_set"));
+
+    assertEquals(ListUtil.list("http://www.example.com/l-volume/43.html",
+			       "http://www.example.com/unl-vol/43.html"),
+		 cau.makeStartUrls());
+  }
+
+  public void testMakeStartUrlListNoVal() throws Exception {
+    configProps.add(ConfigParamDescr.JOURNAL_ID);
+    additionalAuConfig.putInt("volume", 43);
+    additionalAuConfig.putString("base_url", "http://www.example.com/");
+    defMap.putCollection(ArchivalUnit.KEY_AU_START_URL,
+			 ListUtil.list("\"%svolume/%d.html\", base_url, volume",
+				       "\"%snoval-vol/%d.html\", base_url, journal_id"));
+    setupAu(additionalAuConfig);
+
+    assertEquals(ListUtil.list("http://www.example.com/volume/43.html"),
+		 cau.makeStartUrls());
   }
 
   void setStdConfigProps() {
@@ -387,11 +498,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String str = "test user msg";
     setStdConfigProps();
     defMap.putString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG, str);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume/%d.html\", base_url, volume");
+    setupAu();
     Properties props = new Properties();
     props.put(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
     props.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
     cau.setConfiguration(ConfigurationUtil.fromProps(props));
-    cau.addImpliedConfigParams();
     assertEquals(str, cau.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
@@ -402,6 +515,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
 		     "\"%scontents-by-date.%d.shtml\", " +
 		     baseKey + ", " + volKey);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume/%d.html\", base_url, volume");
+    setupAu();
     Properties props = new Properties();
     props.put(baseKey, "http://www.example.com/");
     props.put(volKey, "2003");
@@ -414,16 +530,17 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testGetMultiplePermissionPages() throws Exception {
     String baseKey = ConfigParamDescr.BASE_URL.getKey();
     String b2Key = ConfigParamDescr.BASE_URL2.getKey();
-    Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
-					   ConfigParamDescr.BASE_URL2);
-    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
-			 configProps);
+    configProps.add(ConfigParamDescr.BASE_URL2);
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_MANIFEST,
 			 ListUtil.list("\"%sfoo/\", " + baseKey,
 				       "\"%sbar/\", " + b2Key));
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume\", base_url");
+    setupAu();
     Properties props = new Properties();
     props.put(baseKey, "http://www.example.com/");
     props.put(b2Key, "http://mmm.example.org/");
+    props.put("volume", "32");
     cau.setConfiguration(ConfigurationUtil.fromProps(props));
     String exp1 = "http://www.example.com/foo/";
     String exp2 = "http://mmm.example.org/bar/";
@@ -434,6 +551,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetLinkExtractor() {
+    setupAu();
     // test we find the default
     LinkExtractor extractor;
     extractor = cau.getLinkExtractor("text/html");
@@ -447,6 +565,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putString("text/ram_link_extractor_factory",
 		     "org.lockss.test.MockLinkExtractorFactory");
     cp.initMimeMap();
+    setupAu();
     // hard to test wrapper here because getLinkExtractorFactory isn't exposed
 
     extractor = cau.getLinkExtractor("text/ram");
@@ -458,6 +577,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetCrawlRule() throws LockssRegexpException {
+    setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$NegativeCrawlRuleFactory");
 
@@ -487,6 +607,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
+    setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
 		  "org.lockss.bogus.FakeClass");
 
@@ -499,6 +620,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
 
   public void testMakePermissionCheckersNone() {
+    setupAu();
     PermissionChecker permissionChecker = cau.makePermissionChecker();
     assertNull(permissionChecker);
   }
@@ -508,6 +630,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
    * is the same class that the factory would make
    */
   public void testMakePermissionCheckers() {
+    setupAu();
     defMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_CHECKER_FACTORY,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyPermissionCheckerFactory");
     PermissionChecker permissionChecker = cau.makePermissionChecker();
@@ -530,11 +653,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
-  public void testMakeLoginPageCheckers() {
-    assertNull(cau.makeLoginPageChecker());
-  }
-
   public void testMakeLoginPageChecker() {
+    setupAu();
+    assertNull(cau.makeLoginPageChecker());
     defMap.putString(DefinableArchivalUnit.KEY_AU_LOGIN_PAGE_CHECKER,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyLoginPageChecker");
     LoginPageChecker lpc = cau.makeLoginPageChecker();
@@ -549,9 +670,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testIsLoginPageUrl() throws ArchivalUnit.ConfigurationException {
+    setupAu();
     String pat = "\"%s.*\\?.*\\blogin=yes\\b.*\", base_url";
-    setStdConfigProps();
     defMap.putString(DefinableArchivalUnit.KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN, pat);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume/%d.html\", base_url, volume");
     Configuration config =
       ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
 				 "http://example.com/",
@@ -569,8 +692,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public void testIsLoginPageUrlBadPat()
       throws ArchivalUnit.ConfigurationException {
+    setupAu();
     String pat = "\"%s.*\\?.*\\blo[gin=yes\\b.*\", base_url";
-    setStdConfigProps();
     defMap.putString(DefinableArchivalUnit.KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN, pat);
     Configuration config =
       ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
@@ -587,6 +710,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   /*
   public void testMakeCrawlSpec() throws Exception {
+    setupAu();
     Properties props = new Properties();
 //      props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
 //      props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
@@ -609,10 +733,12 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
   */
   public void testGetFilterRule() {
+    setupAu();
     assertNull(cau.getFilterRule(null));
   }
 
   public void testGetFilterRuleMimeType() {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
     FilterRule rule = cau.getFilterRule("text/html");
@@ -621,6 +747,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterRuleMimeTypeSpace() {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
     FilterRule rule = cau.getFilterRule(" text/html ");
@@ -629,6 +756,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterRuleContentType() {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
     FilterRule rule = cau.getFilterRule("text/html ; random-char-set");
@@ -637,6 +765,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterRuleContentTypeSpace() {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
     FilterRule rule = cau.getFilterRule(" text/html ; random-char-set");
@@ -645,6 +774,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterFactoryMimeType() throws Exception {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
@@ -655,6 +785,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterFactoryMimeTypeSpace() throws Exception {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
@@ -664,6 +795,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterFactoryContentType() throws Exception {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
@@ -673,6 +805,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterFactoryContentTypeSpace() throws Exception {
+    setupAu();
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
@@ -681,6 +814,79 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
+
+  CrawlRule makeExpRule() {
+    try {
+      CrawlRules.RE expRules[] = {
+	new CrawlRules.RE("^(http\\:\\/\\/base\\.foo\\/base_path\\/|http\\:\\/\\/resolv\\.er\\/path\\/)", 4),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/publishing/journals/lockss/\\?journalcode=J47&year=1984", 1),
+	new CrawlRules.RE("^http\\:\\/\\/resolv\\.er\\/path\\/\\?DOI=", 1),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/errorpage\\.asp", 2),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/host/base\\.foo", 2),
+
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/publishing/journals/J47/article\\.asp\\?Type=Issue&VolumeYear=1984&JournalCode=J47", 1),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/.*\\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$", 1),
+	new CrawlRules.RE("http\\:\\/\\/base\\.foo\\/base_path\\/issueset/issue-(?:1|2|3|3a)/.*",
+				  DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+				  1),
+	new CrawlRules.REMatchRange("http\\:\\/\\/base\\.foo\\/base_path\\/issuerange/issue-(\\d+)/.*",
+				    1, 3, 7),
+      };
+      return new CrawlRules.FirstMatch(ListUtil.fromArray(expRules));
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  public void testLargePlugin() throws Exception {
+
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.LargeTestPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug.toString() + " not a DefinablePlugin",
+	       plug instanceof DefinablePlugin);
+
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+    p.put("issue_set", "1,2,3,3a");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    // Test that the AU does everything correctly
+
+    assertEquals(auConfig, au.getConfiguration());
+    // normalize
+    SpiderCrawlSpec cspec = (SpiderCrawlSpec)au.getCrawlSpec();
+    assertEquals(3, cspec.getRefetchDepth());
+    assertEquals(null, cspec.getCrawlWindow());
+    assertEquals(null, cspec.getPermissionChecker());
+    assertEquals(null, cspec.getExploderPattern());
+    assertEquals(null, cspec.getExploderHelper());
+    assertEquals(makeExpRule(), cspec.getCrawlRule());
+    
+    assertEquals(ListUtil.list("http://base.foo/base_path/publishing/journals/lockss/?journalcode=J47&year=1984",
+			       "http://resolv.er/path/lockss.htm"),
+		 cspec.getPermissionPages());
+
+    List expStartUrls =
+      ListUtil.list("http://base.foo/base_path/publishing/journals/lockss/?journalcode=J47&year=1984",
+		    "http://base.foo/base_path/issuestart/issue-1/",
+		    "http://base.foo/base_path/issuestart/issue-2/",
+		    "http://base.foo/base_path/issuestart/issue-3/",
+		    "http://base.foo/base_path/issuestart/issue-3a/");
+    assertEquals(expStartUrls, cspec.getStartingUrls());
+    assertEquals(expStartUrls, au.getNewContentCrawlUrls());
+  }
 
   public static class PositiveCrawlRuleFactory
     implements CrawlRuleFromAuFactory {

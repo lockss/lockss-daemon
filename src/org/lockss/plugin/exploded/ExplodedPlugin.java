@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedPlugin.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
+ * $Id: ExplodedPlugin.java,v 1.4 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class ExplodedPlugin extends BasePlugin {
 
   // List of defining properties (only base_url for Exploded plugins)
   private static final List m_auConfigDescrs =
-    ListUtil.list(ConfigParamDescr.BASE_URL);
+    Collections.singletonList(ConfigParamDescr.BASE_URL);
 
   public ExplodedPlugin() {
   }

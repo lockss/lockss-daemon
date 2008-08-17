@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.32 2008-06-18 22:21:30 dshr Exp $
+ * $Id: DefinablePlugin.java,v 1.33 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -102,8 +102,7 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   // Used by tests
-  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap)
-      throws FileNotFoundException {
+  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap) {
     initPlugin(daemon, defMap, this.getClass().getClassLoader());
   }
 
@@ -125,21 +124,65 @@ public class DefinablePlugin extends BasePlugin {
   // Used by tests
   void initPlugin(LockssDaemon daemon,
 			 ExternalizableMap defMap,
-			 ClassLoader loader)
-      throws FileNotFoundException {
+			 ClassLoader loader) {
     initPlugin(daemon, "Internal", defMap, loader);
   }
 
   public void initPlugin(LockssDaemon daemon, String extMapName,
 			 ExternalizableMap defMap,
-			 ClassLoader loader)
-      throws FileNotFoundException {
+			 ClassLoader loader) {
     mapName = extMapName;
     this.classLoader = loader;
     this.definitionMap = defMap;
     // then call the overridden initializaton.
     super.initPlugin(daemon);
     initMimeMap();
+    checkParamAgreement();
+  }
+
+  void checkParamAgreement() {
+    for (String key : DefinableArchivalUnit.printfPatternKeys) {
+      checkParamAgreement(key, false);
+    }
+    for (String key : DefinableArchivalUnit.printfRegexpKeys) {
+      checkParamAgreement(key, true);
+    }
+  }
+
+  void checkParamAgreement(String key, boolean isRE) {
+    List<String> printfList = getElementList(key);
+    if (printfList == null) {
+      return;
+    }
+    for (String printf : printfList) {
+      if (StringUtil.isNullString(printf)) {
+	log.warning("Null printf string in " + key);
+	continue;
+      }
+      PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
+      Collection<String> p_args = p_data.getArguments();
+      for (String arg : p_args) {
+	ConfigParamDescr descr = findAuConfigDescr(arg);
+	if (descr == null) {
+	  throw new
+	    PluginException.InvalidDefinition("Not a declared parameter: " +
+					      arg + " in " + printf + " in " +
+					      getPluginName());
+	}
+	// ensure range params used only is REs
+	if (!isRE) {
+	  switch (descr.getType()) {
+	  case ConfigParamDescr.TYPE_RANGE:
+	  case ConfigParamDescr.TYPE_NUM_RANGE:
+	  throw new
+	    PluginException.InvalidDefinition("Range parameter (" + arg +
+					      " used in non-regexp: " +
+					      printf + " in " +
+					      getPluginName());
+	  }
+	}
+      }
+    }
   }
 
   public String getLoadedFrom() {
@@ -173,6 +216,19 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getPluginNotes() {
     return definitionMap.getString(KEY_PLUGIN_NOTES, null);
+  }
+
+  public List<String> getElementList(String key) {
+    Object element = definitionMap.getMapElement(key);
+    List<String> lst;
+
+    if (element instanceof String) {
+      return Collections.singletonList((String)element);
+    } else if (element instanceof List) {
+      return (List)element;
+    } else {
+      return null;
+    }
   }
 
   public List getLocalAuConfigDescrs()

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.190 2008-07-23 08:15:14 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.191 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -1162,6 +1162,8 @@ public class PluginManager
       }
     } catch (FileNotFoundException ex) {
       log.debug2("No XML plugin: " + pluginName + ": " + ex);
+    } catch (PluginException.InvalidDefinition ex) {
+      log.warning("Bad plugin: " + pluginName, ex);
     } catch (Exception ex) {
       log.debug2("No XML plugin: " + pluginName, ex);
     }

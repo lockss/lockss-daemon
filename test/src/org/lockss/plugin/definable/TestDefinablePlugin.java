@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.21 2008-07-06 04:25:58 dshr Exp $
+ * $Id: TestDefinablePlugin.java,v 1.22 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -338,6 +338,37 @@ public class TestDefinablePlugin extends LockssTestCase {
     }
   }
 
+  String[] badPlugins = {
+    "BadPluginIllArg1",
+    "BadPluginIllArg2",
+    "BadPluginIllArg3",
+    "BadPluginIllArg4",
+    "BadPluginIllArg5",
+    "BadPluginIllArg6",
+  };
+
+  public void testLoadBadPlugin() throws Exception {
+    String prefix = "org.lockss.plugin.definable.";
+    // first ensure that the canonical good plugin does load
+    assertTrue("Control (good) plugin didn't load",
+	       attemptToLoadPlugin(prefix + "GoodPlugin"));
+    // then try various perturbations of it, which should all fail
+    for (String bad : badPlugins) {
+      testLoadBadPlugin(prefix + bad);
+    }
+  }
+
+  public void testLoadBadPlugin(String pname) throws Exception {
+    assertFalse("Bad plugin " + pname + " should not have loaded successfully",
+		attemptToLoadPlugin(pname));
+  }
+
+  private boolean attemptToLoadPlugin(String pname)  {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    String key = PluginManager.pluginKeyFromId(pname);
+    return pmgr.ensurePluginLoaded(key);
+  }
+
 
   public static class MyDefinablePlugin extends DefinablePlugin {
     public MimeTypeInfo getMimeTypeInfo(String contentType) {
@@ -351,18 +382,4 @@ public class TestDefinablePlugin extends LockssTestCase {
     }
   }
 
-//   static public class MyMockHttpResultHandler implements CacheResultHandler {
-//    public MyMockHttpResultHandler() {
-//    }
-
-//    public void init(CacheResultMap crmap) {
-//      ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
-//    }
-
-//    public CacheException handleResult(int code,
-//                                       LockssUrlConnection connection) {
-//      return null;
-//    }
-
-//  }
 }

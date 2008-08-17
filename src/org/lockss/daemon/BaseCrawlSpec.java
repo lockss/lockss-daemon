@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.9 2007-09-24 18:37:11 dshr Exp $
+ * $Id: BaseCrawlSpec.java,v 1.10 2008-08-17 08:45:41 tlipkis Exp $
  */
 
 /*
@@ -98,6 +98,11 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 
   public List getPermissionPages() {
     return permissionList;
+  }
+
+  /** Not part of CrawlSpec interface - for testing */
+  public CrawlRule getCrawlRule() {
+    return rule;
   }
 
   /**
