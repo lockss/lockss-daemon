@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.80 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.81 2008-08-17 08:49:25 tlipkis Exp $
  */
 
 /*
@@ -228,6 +228,25 @@ public class StringUtil {
    * @param separatorInner - String with which to separate elements
    * @param separatorLast - String to place after last element
    * @return Concatenated string
+   */
+  public static String separatedString(Collection c,
+					     String separatorFirst,
+                                             String separatorInner,
+                                             String separatorLast) {
+
+    return separatedString(c, separatorFirst, separatorInner, separatorLast,
+			   new StringBuilder()).toString();
+  }
+
+  /**
+   * Concatenate elements of collection into string, adding separators,
+   * delimitig each element
+   * @param c - Collection of object (on which toString() will be called)
+   * @param separatorFirst - String to place before first element
+   * @param separatorInner - String with which to separate elements
+   * @param separatorLast - String to place after last element
+   * @param sb - StringBuilder to write result into
+   * @return sb
    */
   public static StringBuilder separatedString(Collection c,
 					     String separatorFirst,
