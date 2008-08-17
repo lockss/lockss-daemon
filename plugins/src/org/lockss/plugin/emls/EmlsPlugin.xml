@@ -24,7 +24,7 @@
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%slockss-volume%d.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%s%s&quot;, base_url, issue_set</string>
+      <string>1,&quot;^%s%s&quot;, base_url, issues</string>
       <string>1,&quot;^%s%02d-[0-9]+/.*&quot;, base_url, volume</string>
       <string>1,&quot;^%s.*\.(css|mov|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
@@ -56,7 +56,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>issues</key>
         <displayName>Issues</displayName>
-        <description>Non-definitional issue_set. A comma delimited list of issues. (eg issue1, issue2)</description>
+        <description>Non-definitional issues. A comma delimited list of issues. (eg issue1, issue2)</description>
         <type>9</type>
         <size>20</size>
         <definitional>false</definitional>
