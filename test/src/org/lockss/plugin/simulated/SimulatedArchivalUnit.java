@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.64 2008-05-06 21:35:36 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.65 2008-08-17 08:43:20 tlipkis Exp $
  */
 
 /*
@@ -350,8 +350,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       throw new ConfigurationException(e.toString());
     }
     paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
-    startUrlString = makeStartUrl();
-    paramMap.putString(KEY_AU_START_URL, startUrlString);
     auName = makeName();
     paramMap.putString(KEY_AU_TITLE, auName);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.43 2008-06-18 22:21:29 dshr Exp $
+ * $Id: ArchivalUnit.java,v 1.44 2008-08-17 08:43:20 tlipkis Exp $
  */
 
 /*
@@ -56,17 +56,25 @@ import org.lockss.rewriter.*;
  */
 public interface ArchivalUnit {
   
+  // Some of these keys are used in the plugin definition map
+
   static final String KEY_AU_BASE_URL  = "au_base_url";
   static final String KEY_AU_FETCH_DELAY = "au_fetch_delay";
   static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE = "au_fetch_rate_limiter_source";
   static final String KEY_AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
   static final String KEY_AU_NEW_CONTENT_CRAWL_INTERVAL = "au_new_crawl_interval";
-  static final String KEY_AU_START_URL = "au_start_url";
   static final String KEY_AU_CRAWL_SPEC = "au_crawl_spec";
   static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   static final String KEY_AU_MAX_SIZE = "au_maxsize";
   static final String KEY_AU_MAX_FILE_SIZE = "au_max_file_size";
   static final String KEY_AU_TITLE = "au_title";
+
+  // Known to be used only in plugin definition map, not in AU.  Should be
+  // moved (and renamed).
+
+  static final String KEY_AU_START_URL = "au_start_url";
+
+
 
   /**
    * Return the Aus properties
@@ -187,7 +195,7 @@ public interface ArchivalUnit {
    * crawl.
    * @return the {@link List} of urls to crawl
    */
-  public List getNewContentCrawlUrls();
+  public List<String> getNewContentCrawlUrls();
 
   /**
    * Query the {@link AuState} object to determine if this is the proper
