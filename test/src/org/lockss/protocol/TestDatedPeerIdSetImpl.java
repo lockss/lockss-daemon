@@ -3,8 +3,7 @@ package org.lockss.protocol;
 import java.io.File;
 import java.io.IOException;
 
-import org.lockss.test.LockssTestCase;
-import org.lockss.util.FileUtil;
+import org.lockss.test.*;
 
 public class TestDatedPeerIdSetImpl extends LockssTestCase {
   // Constants 
@@ -26,17 +25,10 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     m_idman.addPeerIdentity(k_strPeerIdentityOne, new MockPeerIdentity(k_strPeerIdentityOne));
     m_idman.addPeerIdentity(k_strPeerIdentityTwo, new MockPeerIdentity(k_strPeerIdentityTwo));
 
-    m_fileOne = FileUtil.createTempFile("ppis", null);
-    m_fileOne.deleteOnExit();
-    
-    m_fileTest = FileUtil.createTempFile("ppis", null);
-    m_fileTest.deleteOnExit();
-
-    m_fileTest2 = FileUtil.createTempFile("ppis", null);
-    m_fileTest2.deleteOnExit();
-
-    m_fileTest3 = FileUtil.createTempFile("ppis", null);
-    m_fileTest3.deleteOnExit();
+    m_fileOne = FileTestUtil.tempFile("ppis");
+    m_fileTest = FileTestUtil.tempFile("ppis");
+    m_fileTest2 = FileTestUtil.tempFile("ppis");
+    m_fileTest3 = FileTestUtil.tempFile("ppis");
   }
 
   protected void tearDown() throws Exception {

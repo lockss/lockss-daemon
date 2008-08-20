@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.8 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.9 2008-08-20 05:50:49 tlipkis Exp $
  */
 
 /*
@@ -115,6 +115,7 @@ public class TestV3Voter extends LockssTestCase {
   }
   
   public void tearDown() throws Exception {
+    super.tearDown();
   }
   
   /* 

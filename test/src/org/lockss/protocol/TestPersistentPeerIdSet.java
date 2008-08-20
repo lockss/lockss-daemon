@@ -36,8 +36,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.lockss.test.LockssTestCase;
-import org.lockss.util.FileUtil;
+import org.lockss.test.*;
 
 /**
  * @author edwardsb
@@ -70,26 +69,11 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     m_idman.addPeerIdentity(k_strPeerIdentityOne, new MockPeerIdentity(k_strPeerIdentityOne));
     m_idman.addPeerIdentity(k_strPeerIdentityTwo, new MockPeerIdentity(k_strPeerIdentityTwo));
 
-    m_fileEmpty = FileUtil.createTempFile("ppis", null);
-    m_fileEmpty.deleteOnExit();
-    
-    m_fileMany = FileUtil.createTempFile("ppis", null);
-    m_fileMany.deleteOnExit();
-    
+    m_fileEmpty = FileTestUtil.tempFile("ppis");
+    m_fileMany = FileTestUtil.tempFile("ppis");
     m_fileCantBeCreated = new File(k_filenameCantBeCreated);
-    m_fileCantBeCreated.deleteOnExit();
-    
-    m_fileOne = FileUtil.createTempFile("ppis", null);
-    m_fileOne.deleteOnExit();
-    
-    m_fileTest = FileUtil.createTempFile("ppis", null);
-    m_fileTest.deleteOnExit();
-    
-    // Delete files from any previous runs.
-    m_fileEmpty.delete();
-    m_fileMany.delete();
-    m_fileOne.delete();
-    m_fileTest.delete();
+    m_fileOne = FileTestUtil.tempFile("ppis");
+    m_fileTest = FileTestUtil.tempFile("ppis");
   }
 
   /* (non-Javadoc)
@@ -229,7 +213,6 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
    * @throws IOException
    */
   public void testCheckpoint() throws IOException {
-    m_fileTest.delete();  // Just in case...
 
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     PersistentPeerIdSet ppisTest = new PersistentPeerIdSetImpl(m_fileTest, m_idman);
@@ -464,9 +447,9 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   public void testEquals() throws IOException {
     // Note: equals doesn't examine the disk, so I'm not writing both 'load'/'store' and no-
     // 'load'/'store' values.
-    File fileTest1 = FileUtil.createTempFile("ppis", null);
+    File fileTest1 = FileTestUtil.tempFile("ppis");
     File fileTest2 = fileTest1;
-    File fileTest3 = FileUtil.createTempFile("ppis", null);
+    File fileTest3 = FileTestUtil.tempFile("ppis");
     PersistentPeerIdSet ppisEquals1;
     PersistentPeerIdSet ppisEquals1b;
     PersistentPeerIdSet ppisEquals2;
@@ -511,7 +494,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
    * @throws IOException
    */
   public void testHashCode() throws IOException {
-    File fileTest1 = FileUtil.createTempFile("ppis", null);
+    File fileTest1 = FileTestUtil.tempFile("ppis");
     File fileTest2 = fileTest1;
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.22 2008-01-27 06:47:53 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.23 2008-08-20 05:50:49 tlipkis Exp $
  */
 
 /*
@@ -513,14 +513,14 @@ public class TestRemoteApi extends LockssTestCase {
     File file = writeZipBackup(config, auagreemap);
     InputStream in = new FileInputStream(file);
     RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
-    List statlist = bas.getStatusList();
-    assertEquals(2, statlist.size());
-
-    assertEntry(p1, bas, auid1);
-    assertEntry(p2, bas, auid2, "A name");
-
     RemoteApi.BackupInfo bi = bas.getBackupInfo();
     try {
+      List statlist = bas.getStatusList();
+      assertEquals(2, statlist.size());
+
+      assertEntry(p1, bas, auid1);
+      assertEntry(p2, bas, auid2, "A name");
+
       assertNotNull(bi);
       assertNotNull(bi.getAuDir(auid1));
       assertNotNull(bi.getAuDir(auid2));
@@ -546,7 +546,7 @@ public class TestRemoteApi extends LockssTestCase {
       assertNotNull(au2);
       assertEquals("doodah agree map 2", idMgr.getAgreeMap(au2));
     } finally {
-      bi.delete();
+      if (bi != null) bi.delete();
     }
   }
 
@@ -590,15 +590,20 @@ public class TestRemoteApi extends LockssTestCase {
     File file = writeZipBackup(config, auagreemap);
     InputStream in = new FileInputStream(file);
     RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
-    List statlist = bas.getStatusList();
-    assertEquals(2, statlist.size());
+    RemoteApi.BackupInfo bi = bas.getBackupInfo();
+    try {
+      List statlist = bas.getStatusList();
+      assertEquals(2, statlist.size());
 
-    assertEntry(p2, bas, auid2);
+      assertEntry(p2, bas, auid2);
 
-    RemoteApi.BatchAuStatus.Entry ent1 = findEntry(bas, auid1);
-    assertNotNull("No entry for auid " + auid1, ent1);
-    assertEquals("A name", ent1.getName());
-    assertNull(ent1.getConfig());
+      RemoteApi.BatchAuStatus.Entry ent1 = findEntry(bas, auid1);
+      assertNotNull("No entry for auid " + auid1, ent1);
+      assertEquals("A name", ent1.getName());
+      assertNull(ent1.getConfig());
+    } finally {
+      if (bi != null) bi.delete();
+    }
   }
 
 
