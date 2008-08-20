@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.73 2007-11-07 08:14:32 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.74 2008-08-20 05:49:31 tlipkis Exp $
  */
 
 /*
@@ -71,9 +71,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     plugin = new MockPlugin(getMockLockssDaemon());
     crawlSpec = new SpiderCrawlSpec("blah", new MockCrawlRule());
 
-    crawlManager = new TestableCrawlManagerImpl();
-    statusSource = (CrawlManager.StatusSource)crawlManager;
     theDaemon = getMockLockssDaemon();
+    crawlManager = new TestableCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlManager);
+    statusSource = (CrawlManager.StatusSource)crawlManager;
     nodeManager = new MockNodeManager();
 
     pluginMgr = new MyPluginManager();
@@ -1130,6 +1131,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE, (tot*2)+"/1h");
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INITIAL_DELAY, "10");
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "10");
+      p.put(CrawlManagerImpl.PARAM_QUEUE_RECALC_AFTER_NEW_AU, "200");
+      p.put(CrawlManagerImpl.PARAM_QUEUE_EMPTY_SLEEP, "500"); 
 
       p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "10");
       p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "10");
@@ -1372,6 +1375,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       super.execute(run);
     }    
 
+    @Override
     void waitUntilAusStarted() throws InterruptedException {
       if (ausStartedSem != null) {
 	ausStartedSem.take();
