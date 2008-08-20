@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.94 2008-05-10 17:47:11 dshr Exp $
+ * $Id: LockssTestCase.java,v 1.95 2008-08-20 05:51:07 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,17 @@ public class LockssTestCase extends TestCase {
    * @throws IOException
    */
   public File getTempDir() throws IOException {
-    return getTempDir("locksstest");
+    File res =  getTempDir("locksstest");
+    // To aid in finding the cause of temp dirs that don't get deleted,
+    // setting -Dorg.lockss.test.idTempDirs=true will record the name of
+    // the test creating the dir in <dir>/.locksstestcase .  This may cause
+    // tests to fail (expecting empty dir).
+    if (!isKeepTempFiles()
+	&& Boolean.getBoolean("org.lockss.test.idTempDirs")) {
+      FileTestUtil.writeFile(new File(res, ".locksstestcase"),
+			     StringUtil.shortName(this.getClass()));
+    }
+    return res;
   }
 
   /**
