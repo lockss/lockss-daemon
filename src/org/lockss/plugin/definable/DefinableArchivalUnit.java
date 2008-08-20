@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.65 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.66 2008-08-20 05:49:52 tlipkis Exp $
  */
 
 /*
@@ -480,6 +480,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   List<String> convertVariableString(PrintfUtil.PrintfData p_data) {
     String format = p_data.getFormat();
     Collection<String> p_args = p_data.getArguments();
+
+    // If any set-valued args are present, substitute_args holds sets
+    // (lists) of arg values.  If not, it holds individual arg values.
     ArrayList substitute_args = new ArrayList(p_args.size());
     ArrayList res = new ArrayList();
     boolean has_all_args = true;
@@ -492,16 +495,28 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 	switch (descr != null ? descr.getType()
 		: ConfigParamDescr.TYPE_STRING) {
 	case ConfigParamDescr.TYPE_SET:
+	  if (!haveSets) {
+	    // if this is first set seen, replace all values so far with
+	    // singleton list of value
+	    for (int ix = 0; ix < substitute_args.size(); ix++) {
+	      substitute_args.set(ix,
+				  Collections.singletonList(substitute_args.get(ix)));
+	    }
+	    haveSets = true;
+	  }
 	  // val must be a list; ok to throw if not
 	  List<String> vec = (List<String>)val;
 	  substitute_args.add(vec);
-	  haveSets = true;
 	  break;
 	case ConfigParamDescr.TYPE_RANGE:
 	case ConfigParamDescr.TYPE_NUM_RANGE:
 	  throw new PluginException.InvalidDefinition("Range params legal only in regexps:" + key);
 	default:
-	  substitute_args.add(Collections.singletonList(val));
+	  if (haveSets) {
+	    substitute_args.add(Collections.singletonList(val));
+	  } else {
+	    substitute_args.add(val);
+	  }
 	  break;
 	}
       } else {
@@ -515,7 +530,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return null;
     }
     PrintfFormat pf = new PrintfFormat(format);
-    if (!substitute_args.isEmpty() && (haveSets || true)) {
+    if (!substitute_args.isEmpty() && (haveSets)) {
       for (CartesianProductIterator iter =
 	     new CartesianProductIterator(substitute_args);
 	   iter.hasNext(); ) {
