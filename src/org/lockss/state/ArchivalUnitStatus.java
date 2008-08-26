@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.71 2008-08-17 08:48:15 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.71.2.1 2008-08-26 02:51:13 dshr Exp $
  */
 
 /*
@@ -851,7 +851,7 @@ public class ArchivalUnitStatus
 
   abstract static class PeersAgreement extends PerAuTable {
     protected static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("Cache", true));
+      ListUtil.list(new StatusTable.SortRule("Box", true));
 
     PeersAgreement(LockssDaemon theDaemon) {
       super(theDaemon);
@@ -868,7 +868,7 @@ public class ArchivalUnitStatus
 	val.setBold(true);
 	id = val;
       }
-      rowMap.put("Cache", id);
+      rowMap.put("Box", id);
       return rowMap;
     }
 
@@ -883,8 +883,8 @@ public class ArchivalUnitStatus
       long lastDisagreeTime = 0;
       float highestAgreement = 0.0f;
       float lastAgreement = 0.0f;
-      float highestAgreementHint = 0.0f;
-      float lastAgreementHint = 0.0f;
+      float highestAgreementHint = -1.0f;
+      float lastAgreementHint = -1.0f;
 
       CacheStats(PeerIdentity peer) {
 	this.peer = peer;
@@ -898,7 +898,7 @@ public class ArchivalUnitStatus
 
   static class PeerVoteSummary extends PeersAgreement {
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor("Cache", "Cache",
+      new ColumnDescriptor("Box", "Box",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("Last", "Last",
                            ColumnDescriptor.TYPE_STRING),
@@ -1018,7 +1018,7 @@ public class ArchivalUnitStatus
 
   static class PeerRepair extends PeersAgreement {
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor("Cache", "Cache",
+      new ColumnDescriptor("Box", "Box",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("Last", "Complete Consensus",
                            ColumnDescriptor.TYPE_STRING),
@@ -1087,7 +1087,8 @@ public class ArchivalUnitStatus
 	  (IdentityManager.IdentityAgreement)iter.next();
 	try {
 	  PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
-	  if (ida.getHighestPercentAgreement() > 0.0 || ida.getHighestPercentAgreementHint() > 0) {
+	  if (ida.getHighestPercentAgreement() >= 0.0 ||
+	      ida.getHighestPercentAgreementHint() >= 0.0) {
 	    CacheStats stats = new CacheStats(pid);
 	    statsMap.put(pid, stats);
 	    stats.lastAgreeTime = ida.getLastAgree();
@@ -1108,12 +1109,18 @@ public class ArchivalUnitStatus
     protected Map makeRow(CacheStats stats) {
       Map rowMap = super.makeRow(stats);
       rowMap.put("Last", stats.isLastAgree() ? "Yes" : "No");
-      rowMap.put("LastPercentAgreement", new Float(stats.lastAgreement));
-      rowMap.put("HighestPercentAgreement", new Float(stats.highestAgreement));
-      rowMap.put("LastPercentAgreementHint",
-		 new Float(stats.lastAgreementHint));
-      rowMap.put("HighestPercentAgreementHint",
-		 new Float(stats.highestAgreementHint));
+      if (stats.highestAgreement >= 0.0f) {
+	rowMap.put("LastPercentAgreement",
+		   new Float(stats.lastAgreement));
+	rowMap.put("HighestPercentAgreement",
+		   new Float(stats.highestAgreement));
+      }
+      if (stats.highestAgreementHint >= 0.0f) {
+	rowMap.put("LastPercentAgreementHint",
+		   new Float(stats.lastAgreementHint));
+	rowMap.put("HighestPercentAgreementHint",
+		   new Float(stats.highestAgreementHint));
+      }
       rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
       rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
       return rowMap;

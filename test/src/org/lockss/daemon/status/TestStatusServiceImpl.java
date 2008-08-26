@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.20 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.20.18.1 2008-08-26 02:51:13 dshr Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
     ListUtil.list(new StatusTable.SortRule("name", true));
 
   private static final Object[][] colArray2 = {
-    {"cache", "Cache", new Integer(ColumnDescriptor.TYPE_STRING)},
+    {"cache", "Box", new Integer(ColumnDescriptor.TYPE_STRING)},
   };
 
   private static final Object[][] rowArray2 = {

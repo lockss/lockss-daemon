@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.31 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.31.18.1 2008-08-26 02:51:12 dshr Exp $
  */
 
 /*
@@ -263,7 +263,7 @@ public class StatusServiceImpl
     private List sortRules;
     private static final String COL_NAME = "table_name";
     private static final String COL_TITLE = "Available Tables";
-    private static final String ALL_TABLE_TITLE = "Cache Overview";
+    private static final String ALL_TABLE_TITLE = "Box Overview";
 
     public AllTableStatusAccessor() {
       ColumnDescriptor col =

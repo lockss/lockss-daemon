@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.101 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.101.2.1 2008-08-26 02:51:12 dshr Exp $
  */
 
 /*
@@ -594,7 +594,7 @@ public abstract class LockssServlet extends HttpServlet
     // Compute heading
     String heading = getHeading();
     if (heading == null) {
-      heading = "Cache Administration";
+      heading = "Box Administration";
     }
 
     // Create page and layout header
