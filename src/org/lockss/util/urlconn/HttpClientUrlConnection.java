@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.27 2008-07-01 07:47:49 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.28 2008-08-26 06:50:50 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -202,6 +202,14 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // ConnectionTimeoutException, the solution for now is to use
       // java-level connect timeouts that are shorter than the underlying
       // socket connect timeout.
+    } catch (NoHttpResponseException e) {
+      // Thrown by HttpClient if the server closes the connection before
+      // sending a response.
+      // Turn this into a non HttpClient-specific exception
+      java.net.SocketException se =
+	new java.net.SocketException("Connection reset by peer");
+      se.initCause(e);
+      throw se;
     }
   }
 

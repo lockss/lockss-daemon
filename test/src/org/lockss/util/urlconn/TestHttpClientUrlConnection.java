@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.17 2007-07-31 06:30:55 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.18 2008-08-26 06:50:50 tlipkis Exp $
  */
 
 /*
@@ -287,12 +287,38 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(InetAddress.getByName(local), hc.getLocalAddress());
   }
 
+  public void testNoHttpResponseException() throws Exception {
+    client.setExecuteException(new org.apache.commons.httpclient.NoHttpResponseException("Test"));
+    try {
+      conn.execute();
+      fail("execute should have thrown SocketException");
+    } catch (java.net.SocketException e) {
+      // expected
+      assertMatchesRE("Connection reset by peer", e.getMessage());
+    }
+  }
+
+  public void testConnectTimeoutException() throws Exception {
+    client.setExecuteException(new org.apache.commons.httpclient.ConnectTimeoutException("Test"));
+    try {
+      conn.execute();
+      fail("execute should have thrown HttpClientUrlConnection.ConnectionTimeoutException");
+    } catch (HttpClientUrlConnection.ConnectionTimeoutException e) {
+      // expected
+      assertMatchesRE("Host did not respond", e.getMessage());
+    }
+  }
+
   class MyMockHttpClient extends HttpClient {
     int res1 = -1;
+    IOException executeException;
     HostConfiguration hc = new HostConfiguration();
 
     public int executeMethod(HttpMethod method)
 	throws IOException, HttpException  {
+      if (executeException != null) {
+	throw executeException;
+      }
       int mres = -1;
       if (method instanceof MyMockGetMethod) {
 	mres = ((MyMockGetMethod)method).getRes();
@@ -308,6 +334,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
     void setRes(int res1) {
       this.res1 = res1;
+    }
+
+    void setExecuteException(IOException ex) {
+      this.executeException = ex;
     }
 
     public HostConfiguration getHostConfiguration() {
