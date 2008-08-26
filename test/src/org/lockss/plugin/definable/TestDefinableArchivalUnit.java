@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.36 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.36.2.1 2008-08-26 06:11:56 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     .setType(ConfigParamDescr.TYPE_BOOLEAN)
     .setDescription("BBBool");
 
-  public void testConvertVariableString() {
+  public void testConvertUrlList() {
     configProps.add(ConfigParamDescr.VOLUME_NAME);
     configProps.add(ConfigParamDescr.YEAR);
     configProps.add(CPD_BOOLE);
@@ -122,25 +122,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String substr = "\"My Test Integer = %d\", volume";
     String expectedReturn = "My Test Integer = 10";
     assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertVariableString(substr));
+		 cau.convertUrlList(substr));
 
     substr = "\"My Test Boolean = %s\", boole";
     expectedReturn = "My Test Boolean = true";
     assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertVariableString(substr));
+		 cau.convertUrlList(substr));
 
     substr = "\"My Test String = %s\", base_url";
     expectedReturn = "My Test String = Yo.Mama!";
     assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertVariableString(substr));
+		 cau.convertUrlList(substr));
 
     substr = "\"My Test Short Year = %02d\", au_short_year";
     expectedReturn = "My Test Short Year = 03";
     assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertVariableString(substr));
+		 cau.convertUrlList(substr));
 
     substr = "\"My Test no param = %s\", no_param";
-    assertNull(cau.convertVariableString(substr));
+    assertNull(cau.convertUrlList(substr));
   }
 
   public void testConvertVariableRegexStringWithNumRange() {
@@ -157,7 +157,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("My Test Range = (\\d+)", mp.regexp);
   }
 
-  public void testConvertVariableStringWithNumRange() {
+  public void testConvertUrlListWithNumRange() {
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
     Vector vec = new Vector(2);
     String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
@@ -165,14 +165,24 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     vec.add(1, new Long(20));
     additionalAuConfig.setMapElement(key, vec);
     setupAu(additionalAuConfig);
-    try {
-      cau.convertVariableString("\"My Test Range = %s\", " + key);
-      fail("Range param in non-regexp should throw");
-    } catch (PluginException.InvalidDefinition e) {
-    }
+    String[] exp = {
+      "My Test Range = 10",
+      "My Test Range = 11",
+      "My Test Range = 12",
+      "My Test Range = 13",
+      "My Test Range = 14",
+      "My Test Range = 15",
+      "My Test Range = 16",
+      "My Test Range = 17",
+      "My Test Range = 18",
+      "My Test Range = 19",
+      "My Test Range = 20"
+    };
+    List res = cau.convertUrlList("\"My Test Range = %d\", " + key);
+    assertIsomorphic(exp, res);
   }
 
-  public void testConverVariableStringWithRange() {
+  public void testConverUrlListWithRange() {
     configProps.add(ConfigParamDescr.ISSUE_RANGE);
     Vector vec = new Vector(2);
     String key = ConfigParamDescr.ISSUE_RANGE.getKey();
@@ -182,13 +192,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu(additionalAuConfig);
     String expectedReturn = "My Test Range = (.*)";
     try {
-      cau.convertVariableString("\"My Test Range = %s\", " + key);
+      cau.convertUrlList("\"My Test Range = %s\", " + key);
       fail("Range param in non-regexp should throw");
     } catch (PluginException.InvalidDefinition e) {
     }
   }
 
-  public void testConvertVariableStringWithSet() {
+  public void testConvertUrlListWithSet() {
     configProps.add(ConfigParamDescr.ISSUE_SET);
     Vector vec = new Vector();
     String key = ConfigParamDescr.ISSUE_SET.getKey();
@@ -198,7 +208,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.setMapElement(key, vec);
     setupAu(additionalAuConfig);
     assertEquals(ListUtil.list("Test Set = apple", "Test Set = bananna", "Test Set = grape"),
-		 cau.convertVariableString("\"Test Set = %s\", " + key));
+		 cau.convertUrlList("\"Test Set = %s\", " + key));
   }
 
   //XXX
@@ -268,7 +278,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu(additionalAuConfig);
     String rule1 = "1,\"%s\",URL,UNknown";
 
-    assertNull(cau.convertRule(rule1, false));
+    assertEquals(null, cau.convertRule(rule1, false));
   }
 
   public void testConvertRuleMissingOptionalParam()
@@ -875,7 +885,12 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(makeExpRule(), cspec.getCrawlRule());
     
     assertEquals(ListUtil.list("http://base.foo/base_path/publishing/journals/lockss/?journalcode=J47&year=1984",
-			       "http://resolv.er/path/lockss.htm"),
+			       "http://resolv.er/path/lockss.htm",
+			       "http://resolv.er/path//issue-3/issue.htm",
+			       "http://resolv.er/path//issue-4/issue.htm",
+			       "http://resolv.er/path//issue-5/issue.htm",
+			       "http://resolv.er/path//issue-6/issue.htm",
+			       "http://resolv.er/path//issue-7/issue.htm"),
 		 cspec.getPermissionPages());
 
     List expStartUrls =
@@ -886,6 +901,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		    "http://base.foo/base_path/issuestart/issue-3a/");
     assertEquals(expStartUrls, cspec.getStartingUrls());
     assertEquals(expStartUrls, au.getNewContentCrawlUrls());
+    assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
+		 au.makeName());
   }
 
   public static class PositiveCrawlRuleFactory
