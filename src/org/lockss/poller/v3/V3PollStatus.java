@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.26 2008-08-17 08:46:12 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.26.2.1 2008-08-26 06:12:17 tlipkis Exp $
  */
 
 /*
@@ -452,7 +452,7 @@ public class V3PollStatus {
       table.setColumnDescriptors(getColDescs(table));
       table.setDefaultSortRules(sortRules);
       table.setSummaryInfo(getSummary(poll, table));
-      table.setTitle("Status for V3 Poll " + key);
+      table.setTitle("Status of Poll " + key);
       table.setRows(getRows(poll));
     }
 
@@ -744,7 +744,7 @@ public class V3PollStatus {
         return;
       }
       if (poller == null) return;
-      table.setTitle("V3 Poll Details - No Quorum URLs in poll " + poller.getKey());
+      table.setTitle("V3 Poll Details - No Quorum URLs in Poll " + poller.getKey());
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(poller));
@@ -789,7 +789,7 @@ public class V3PollStatus {
         return;
       }
       if (poller == null) return;
-      table.setTitle("V3 Poll Details - Too Close URLs in poll " + poller.getKey());
+      table.setTitle("V3 Poll Details - Too Close URLs in Poll " + poller.getKey());
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(poller));
@@ -835,7 +835,7 @@ public class V3PollStatus {
         return;
       }
       if (poller == null) return;
-      table.setTitle("V3 Poll Details - Agreeing URLs in poll " + poller.getKey());
+      table.setTitle("V3 Poll Details - Agreeing URLs in Poll " + poller.getKey());
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(poller));
@@ -880,7 +880,7 @@ public class V3PollStatus {
         return;
       }
       if (poller == null) return;
-      table.setTitle("V3 Poll Details - Disagreeing URLs in poll " + poller.getKey());
+      table.setTitle("V3 Poll Details - Disagreeing URLs in Poll " + poller.getKey());
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(poller));
@@ -927,7 +927,7 @@ public class V3PollStatus {
         return;
       }
       if (poller == null) return;
-      table.setTitle("V3 Poll Details - URLs with Hash Errors in poll " + poller.getKey());
+      table.setTitle("V3 Poll Details - URLs with Hash Errors in Poll " + poller.getKey());
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(poller));
@@ -980,7 +980,7 @@ public class V3PollStatus {
       }
       if (voter == null) return;
       table.setSummaryInfo(getSummary(voter, table));
-      table.setTitle("Status for V3 Poll " + key);
+      table.setTitle("Status of Vote in Poll " + key);
     }
 
     private List getSummary(V3Voter voter, StatusTable table) {
