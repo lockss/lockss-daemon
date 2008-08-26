@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Large Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d&quot;, base_url, resolver_url, journal_code, year</string>
+    <string>&quot;Large Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d, Issues %s, Range %s&quot;, base_url, resolver_url, journal_code, year, issue_set, num_issue_range</string>
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
@@ -124,6 +124,7 @@
     <list>
       <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
       <string>&quot;%slockss.htm&quot;, resolver_url</string>
+      <string>&quot;%s/issue-%d/issue.htm&quot;, resolver_url, num_issue_range</string>
     </list>
   </entry>
 </map>

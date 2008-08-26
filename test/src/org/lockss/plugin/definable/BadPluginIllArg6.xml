@@ -22,7 +22,7 @@
     <string>au_start_url</string>
     <list>
      <string>&quot;%s&quot;, base_url</string>
-     <string>&quot;%s/issue-%s&quot;, base_url, num_issue_range</string>
+     <string>&quot;%s/issue-%s&quot;, base_url, issue_range</string>
     </list>
   </entry>
   <entry>
@@ -52,6 +52,15 @@
         <displayName>Numeric Issue Range</displayName>
         <description>A Range of issues in the form: min-max</description>
         <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_range</key>
+        <displayName>Issue Range</displayName>
+        <description>A Range of issues in the form: aaa-zzz</description>
+        <type>7</type>
         <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
