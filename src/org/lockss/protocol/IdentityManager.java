@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.82 2008-08-12 18:34:27 dshr Exp $
+ * $Id: IdentityManager.java,v 1.83 2008-08-26 03:04:55 dshr Exp $
  */
 
 /*
@@ -503,10 +503,10 @@ public interface IdentityManager extends LockssManager {
     private float highestPercentAgreement = 0.0f;
     // The MOST RECENT percent agreement this peer reported in the receipt
     // for one of our votes in a poll this peer called.
-    private float percentAgreementHint = 0.0f;
+    private float percentAgreementHint = -1.0f;
     // The highest percent agreement we have ever seen in a receipt from
     // one of any of our votes in polls this peer called.
-    private float highestPercentAgreementHint = 0.0f;
+    private float highestPercentAgreementHint = -1.0f;
     private String id = null;
 
     public IdentityAgreement(PeerIdentity pid) {

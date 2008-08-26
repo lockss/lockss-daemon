@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.26 2008-08-12 18:34:27 dshr Exp $
+ * $Id: IdentityManagerImpl.java,v 1.27 2008-08-26 03:04:55 dshr Exp $
  */
 
 /*
@@ -1017,7 +1017,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (map) {
       IdentityAgreement ida = (IdentityAgreement)map.get(pid);
       if (ida == null) {
-        return 0.0f;
+        return -1.0f;
       } else {
         return ida.getPercentAgreement();
       }
@@ -1029,7 +1029,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (map) {
       IdentityAgreement ida = (IdentityAgreement)map.get(pid);
       if (ida == null) {
-        return 0.0f;
+        return -1.0f;
       } else {
         return ida.getHighestPercentAgreement();
       }
@@ -1073,7 +1073,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (map) {
       IdentityAgreement ida = (IdentityAgreement)map.get(pid);
       if (ida == null) {
-        return 0.0f;
+        return -1.0f;
       } else {
         return ida.getPercentAgreementHint();
       }
@@ -1085,7 +1085,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (map) {
       IdentityAgreement ida = (IdentityAgreement)map.get(pid);
       if (ida == null) {
-        return 0.0f;
+        return -1.0f;
       } else {
         return ida.getHighestPercentAgreementHint();
       }
