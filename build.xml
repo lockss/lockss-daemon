@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.235 2008-08-13 00:04:06 dshr Exp $
+ $Id: build.xml,v 1.235.2.1 2008-08-26 06:10:31 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1637,7 +1637,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 
   <!-- ==================================================================== -->
   <target name="test-plugins"
-   depends="prepare.run.test,jar-plugins-tests"
+   depends="prepare.run.test,jar-plugins-tests,load-plugins"
    description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
     <property name="include" value="**/Test*.java" />
     <dojunit cpid="plugins.test.run.classpath">
@@ -1799,6 +1799,38 @@ Test results in ${test.results}
      </then>
      <else>
       <echo message="No xml config files found"/>
+     </else>
+    </if>
+  </target>
+
+  <target name="load-plugins" depends="jar-tests,jar-plugins"
+   description="Ensure plugins are well-formed by attempting to load them" >
+    <fileset id="plugin.files.filesetid" dir="${plugins.classes}">
+      <include name="**/*Plugin.xml"/>
+    </fileset>
+    <!-- convert the list of files to a string of plugin names -->
+    <pathconvert refid="plugin.files.filesetid"
+      property="plugin.names"
+      pathsep=" "
+      targetos="${detected.os}">
+       <mapper>
+        <packagemapper from="${plugins.classes}/*.xml" to="*"
+           casesensitive="no"/>
+       </mapper>
+    </pathconvert>
+
+    <if>
+     <not> <equals arg1="${plugin.names}" arg2="" /> </not>
+     <then>
+      <echo message="Validating plugin xml files"/>
+      <java classname="PluginUtil" fork="true" failonerror="true" >
+	<classpath refid="test.run.classpath" />
+        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+	<arg line="-q ${plugin.names}" />
+      </java>
+     </then>
+     <else>
+      <echo message="No plugin xml files found"/>
      </else>
     </if>
   </target>
