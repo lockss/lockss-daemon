@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.191 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.191.2.1 2008-08-26 06:11:19 tlipkis Exp $
  */
 
 /*
@@ -1118,42 +1118,43 @@ public class PluginManager
       loader = this.getClass().getClassLoader();
     }
 
-
-    Plugin classPlugin = null;
-    DefinablePlugin xmlPlugin = null;
-
-    boolean foundClassPlugin = false;
-    boolean foundXmlPlugin = false;
-
-    // 1. Look for an ordinary Plugin object.
     try {
-      // See if we can load the class by name.
-      log.debug3(pluginName + ": Loading class.");
-      Class c = Class.forName(pluginName, true, loader);
-      classPlugin = (Plugin)c.newInstance();
-      classPlugin.initPlugin(getDaemon());
-      if (isCompatible(classPlugin)) {
-	foundClassPlugin = true;
-      } else {
-	classPlugin.stopPlugin();
-	log.warning("Plugin " + pluginName +
-		    " not started because it requires daemon version " +
-		    classPlugin.getRequiredDaemonVersion());
-      }
-    } catch (ClassNotFoundException ex) {
-      log.debug3(pluginName + ": Class not found on classpath.");
-    } catch (LinkageError e) {
-      log.warning("Can't load plugin", e);
+      return loadPlugin(pluginKey, loader);
+    } catch (PluginException.PluginNotFound e) {
+      log.error("Plugin not found: " + pluginName);
+    } catch (PluginException.LinkageError e) {
+      log.error("Can't load plugin: " + pluginName, e);
+    } catch (PluginException.IncompatibleDaemonVersion e) {
+      log.error("Incompatible Plugin: " + e.getMessage());
+    } catch (Exception e) {
+      log.error("Can't load plugin: " + pluginName, e);
+    }
+    return null;
+  }
+
+  /**
+   * Load a plugin from the specified classloader.  If the
+   * clasloader is 'null', this method will use the default
+   * classloader.
+   */
+  public PluginInfo loadPlugin(String pluginKey, ClassLoader loader)
+      throws Exception {
+    String pluginName = pluginNameFromKey(pluginKey);
+    if (loader == null) {
+      loader = this.getClass().getClassLoader();
     }
 
-    // 2. Look for a loadable plugin definition.
+    // First look for a loadable plugin definition.
     try {
-      log.debug3(pluginName + ": Loading XML definition.");
+      log.debug3(pluginName + ": Looking for XML definition.");
       Class c = Class.forName(getConfigurablePluginName(), true, loader);
-      xmlPlugin = (DefinablePlugin)c.newInstance();
+      DefinablePlugin xmlPlugin = (DefinablePlugin)c.newInstance();
       xmlPlugin.initPlugin(getDaemon(), pluginName, loader);
       if (isCompatible(xmlPlugin)) {
-	foundXmlPlugin = true;
+	// found a compatible plugin, return it
+	String url = xmlPlugin.getLoadedFrom();
+	PluginInfo info = new PluginInfo(xmlPlugin, loader, url);
+	return info;
       } else {
 	xmlPlugin.stopPlugin();
 	log.warning("Plugin " + pluginName +
@@ -1162,48 +1163,33 @@ public class PluginManager
       }
     } catch (FileNotFoundException ex) {
       log.debug2("No XML plugin: " + pluginName + ": " + ex);
-    } catch (PluginException.InvalidDefinition ex) {
-      log.warning("Bad plugin: " + pluginName, ex);
-    } catch (Exception ex) {
-      log.debug2("No XML plugin: " + pluginName, ex);
     }
+    // throw any other exception
 
-    // If both are found, decide which one to favor.
-    if (foundClassPlugin && foundXmlPlugin) {
-      // Shouldn't have both.  Log a warning, and use
-      // the default (which is configurable)
-      log.warning(pluginName +  ": Both a definable plugin definition " +
-		  "and a plugin class file were found.");
-
-      switch(getPreferredPluginType()) {
-      case PREFER_XML_PLUGIN:
-	log.debug(pluginName + ": Creating definable plugin.");
-	foundClassPlugin = false;
-	break;
-      case PREFER_CLASS_PLUGIN:
-	log.debug(pluginName + ": Instantiating plugin class.");
-	foundXmlPlugin = false;
-	break;
-      default:
-	log.warning(pluginName + ": Unable to determine which " +
-		    "to load!  Plugin not loaded.");
-	return null;
+    // If didn't find an XML plugin look for a Plugin class.
+    try {
+      log.debug3(pluginName + ": Looking for class.");
+      Class c = Class.forName(pluginName, true, loader);
+      Plugin classPlugin = (Plugin)c.newInstance();
+      classPlugin.initPlugin(getDaemon());
+      if (isCompatible(classPlugin)) {
+	String path = pluginName.replace('.', '/').concat(".class");
+	URL url = loader.getResource(path);
+	PluginInfo info = new PluginInfo(classPlugin, loader, url.toString());
+	return info;
+      } else {
+	classPlugin.stopPlugin();
+	String req = " requires daemon version "
+	  + classPlugin.getRequiredDaemonVersion();
+	throw new PluginException.IncompatibleDaemonVersion("Plugin " +
+							    pluginName + req);
       }
-    }
-    // Now at most one version is true
-    if (foundClassPlugin) {
-      String path = pluginName.replace('.', '/').concat(".class");
-      URL url = loader.getResource(path);
-      PluginInfo info = new PluginInfo(classPlugin, loader, url.toString());
-      return info;
-    } else if (foundXmlPlugin) {
-      String url = xmlPlugin.getLoadedFrom();
-      PluginInfo info = new PluginInfo(xmlPlugin, loader, url);
-      return info;
-    } else {
-      // Error -- this plugin was not found.
-      log.error(pluginName + " could not be loaded.");
-      return null;
+    } catch (ClassNotFoundException ex) {
+      throw new PluginException.PluginNotFound("Plugin " + pluginName
+					       + " could not be found");
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError("Plugin " + pluginName
+					       + " could not be loaded", e);
     }
   }
 

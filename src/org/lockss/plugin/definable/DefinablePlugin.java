@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.33 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.33.2.1 2008-08-26 06:11:19 tlipkis Exp $
  */
 
 /*
@@ -141,7 +141,10 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   void checkParamAgreement() {
-    for (String key : DefinableArchivalUnit.printfPatternKeys) {
+    for (String key : DefinableArchivalUnit.printfUrlListKeys) {
+      checkParamAgreement(key, false);
+    }
+    for (String key : DefinableArchivalUnit.printfStringKeys) {
       checkParamAgreement(key, false);
     }
     for (String key : DefinableArchivalUnit.printfRegexpKeys) {
@@ -169,16 +172,14 @@ public class DefinablePlugin extends BasePlugin {
 					      arg + " in " + printf + " in " +
 					      getPluginName());
 	}
-	// ensure range params used only is REs
+	// ensure range params used only in REs
 	if (!isRE) {
 	  switch (descr.getType()) {
 	  case ConfigParamDescr.TYPE_RANGE:
-	  case ConfigParamDescr.TYPE_NUM_RANGE:
 	  throw new
 	    PluginException.InvalidDefinition("Range parameter (" + arg +
-					      " used in non-regexp: " +
-					      printf + " in " +
-					      getPluginName());
+					      ") used in non-regexp in " +
+					      getPluginName() + ": " + printf);
 	  }
 	}
       }

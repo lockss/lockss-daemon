@@ -1,5 +1,5 @@
 /*
- * $Id: PluginException.java,v 1.1 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: PluginException.java,v 1.1.26.1 2008-08-26 06:11:20 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,27 @@ public class PluginException extends Exception {
     }
   }
 
+  /** Thrown internally by PluginMAnager if plugin requires a more recent
+   * daemon */
+  public static class IncompatibleDaemonVersion extends PluginException {
+
+    public IncompatibleDaemonVersion() {
+      super();
+    }
+
+    public IncompatibleDaemonVersion(String msg) {
+      super(msg);
+    }
+
+    public IncompatibleDaemonVersion(Throwable cause) {
+      super(cause);
+    }
+
+    public IncompatibleDaemonVersion(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
   /** Thrown by definable plugin code if there's something illegal about a
    * plugin's definition.  Should be changed to a checked exception */
   public static class InvalidDefinition extends RuntimeException {
@@ -89,6 +110,26 @@ public class PluginException extends Exception {
     }
 
     public InvalidDefinition(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
+  /** Thrown internall by PluginManager if it can't find a plugin */
+  public static class PluginNotFound extends PluginException {
+
+    public PluginNotFound() {
+      super();
+    }
+
+    public PluginNotFound(String msg) {
+      super(msg);
+    }
+
+    public PluginNotFound(Throwable cause) {
+      super(cause);
+    }
+
+    public PluginNotFound(String msg, Throwable cause) {
       super(msg, cause);
     }
   }
