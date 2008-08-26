@@ -1,5 +1,5 @@
 /*
- * $Id: EditKeyStores.java,v 1.1 2008-08-26 20:20:21 dshr Exp $
+ * $Id: EditKeyStores.java,v 1.2 2008-08-26 20:28:03 dshr Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class EditKeyStores {
       }
     }
     if (numHosts <= 0) {
-      OUTerror("No hosts on command line");
+      System.out.println("Usage: [-i inputDir] [-o outputDir] host1 host2 ...");
       return;
     }
     OUTdebug("switches " + numSwitches + " hosts " + numHosts);
@@ -113,6 +113,9 @@ public class EditKeyStores {
 	} else if (switches[i].startsWith("-o")) {
 	  outDir = switchArgs[i];
 	  OUTdebug("Output directory " + outDir);
+	} else {
+	  OUTerror("Unknown switch " + switches[i]);
+	  return;
 	}
       }
     }
