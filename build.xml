@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.236 2008-08-26 06:42:32 tlipkis Exp $
+ $Id: build.xml,v 1.237 2008-08-28 01:04:30 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -784,6 +784,10 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
     <!-- Load the build-info file, so can use timestamp prop
          in javadoc targets -->
     <property file="${build.info.file}" />
+    
+    <condition property="is.release.zero"  value="true">
+     <equals arg1="${build.releasename}" arg2="0.0.0" />
+    </condition>
   </target>
 
   <!-- ==================================================================== -->
@@ -1803,8 +1807,11 @@ Test results in ${test.results}
     </if>
   </target>
 
-  <target name="load-plugins" depends="jar-tests,jar-plugins"
-   description="Ensure plugins are well-formed by attempting to load them" >
+  <target name="load-plugins" depends="jar-tests,jar-plugins,-load-build-info"
+   description="Ensure plugins are well-formed by attempting to load them"
+   unless="is.release.zero" >
+<!--  Some plugins specify a minimum required daemon release version, so
+      this test can't be run in daemon version 0.0.0 -->
     <fileset id="plugin.files.filesetid" dir="${plugins.classes}">
       <include name="**/*Plugin.xml"/>
     </fileset>
