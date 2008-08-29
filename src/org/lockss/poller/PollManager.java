@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.194 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: PollManager.java,v 1.194.6.1 2008-08-29 09:19:41 tlipkis Exp $
  */
 
 /*
@@ -167,6 +167,10 @@ public class PollManager
     PREFIX + "wrongGroupRetryTime";
   public static final long DEFAULT_WRONG_GROUP_RETRY_TIME = 4 * WEEK;
 
+  /** Subnet(s) not to invite into polls */
+  public static final String PARAM_NO_INVITATION_SUBNETS =
+    PREFIX + "noInvitationSubnets";
+
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
 
@@ -213,7 +217,7 @@ public class PollManager
 
   private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
-
+  private IpFilter noInvitationSubnetFilter = null;
 
 
   // If true, restore V3 Voters
@@ -1005,6 +1009,21 @@ public class PollManager
 	newConfig.getTimeInterval(PARAM_INCREASE_POLL_PRIORITY_AFTER,
 				  DEFAULT_INCREASE_POLL_PRIORITY_AFTER); 
 
+      List<String> noInvitationIps =
+	newConfig.getList(PARAM_NO_INVITATION_SUBNETS, null); 
+      if (noInvitationIps == null || noInvitationIps.isEmpty()) {
+	noInvitationSubnetFilter = null;
+      } else {
+	try {
+	  IpFilter filter = new IpFilter();
+	  filter.setFilters(noInvitationIps, Collections.EMPTY_LIST);
+	  noInvitationSubnetFilter = filter;
+	} catch (IpFilter.MalformedException e) {
+	  theLog.warning("Malformed noInvitationIps, not installed: "
+			 + noInvitationIps,
+			 e);
+	}
+      }
     }
     long scommTimeout =
       newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
@@ -1031,6 +1050,10 @@ public class PollManager
 
   public long getWrongGroupRetryTime() {
     return wrongGroupRetryTime;
+  }
+
+  public IpFilter getNoInvitationSubnetFilter() {
+    return noInvitationSubnetFilter;
   }
 
   public PollFactory getPollFactory(PollSpec spec) {
