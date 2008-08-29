@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.12 2007-05-01 23:34:54 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.13 2008-08-29 09:23:13 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class IpFilter {
    * exclude entry could be dangerous.
    * @throws MalformedException
    */
-  public void setFilters(Vector inclVec, Vector exclVec)
+  public void setFilters(List inclVec, List exclVec)
       throws MalformedException {
     inclFilters = new Mask[inclVec.size()];
     exclFilters = new Mask[exclVec.size()];

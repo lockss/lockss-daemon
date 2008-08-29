@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.27 2008-04-01 08:02:57 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.28 2008-08-29 09:23:13 tlipkis Exp $
  */
 
 /*
@@ -253,7 +253,7 @@ public class TestV3Poller extends LockssTestCase {
     try {
       v3Poller.nominatePeers(voters[2], null);
     } catch (NullPointerException ex) {
-      fail("Should not have caused NullPointerException");
+      fail("Should not have caused NullPointerException", ex);
     }
   }
 
@@ -486,6 +486,31 @@ public class TestV3Poller extends LockssTestCase {
     return ud;
   }
   
+  public void testShouldIncludePeer() throws Exception {
+    V3Poller v3Poller = makeV3Poller("key");
+    assertFalse(v3Poller.shouldIncludePeer(pollerId));
+    PeerIdentity p1 = idmgr.findPeerIdentity("TCP:[127.0.0.1]:5009");
+    PeerIdentity p2 = idmgr.findPeerIdentity("TCP:[1.2.3.4]:5009");
+    PeerIdentity p3 = idmgr.findPeerIdentity("TCP:[1.2.3.7]:1111");
+    PeerIdentity p4 = idmgr.findPeerIdentity("TCP:[1.2.3.8]:1111");
+    PeerIdentity p5 = idmgr.findPeerIdentity("TCP:[4.5.6.2]:1111");
+
+    assertTrue(v3Poller.shouldIncludePeer(p1));
+    assertTrue(v3Poller.shouldIncludePeer(p2));
+    assertTrue(v3Poller.shouldIncludePeer(p3));
+    assertTrue(v3Poller.shouldIncludePeer(p4));
+    assertTrue(v3Poller.shouldIncludePeer(p5));
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_NO_INVITATION_SUBNETS,
+				  "1.2.3.4/30;4.5.6.2");
+
+    assertTrue(v3Poller.shouldIncludePeer(p1));
+    assertFalse(v3Poller.shouldIncludePeer(p2));
+    assertFalse(v3Poller.shouldIncludePeer(p3));
+    assertTrue(v3Poller.shouldIncludePeer(p4));
+    assertFalse(v3Poller.shouldIncludePeer(p5));
+  }
+
+
   public void testGetReferenceList() throws Exception {
     V3Poller v3Poller = makeV3Poller("key");
     assertNotNull(v3Poller.getReferenceList());

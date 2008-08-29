@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.4 2006-01-12 00:48:39 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.5 2008-08-29 09:23:13 tlipkis Exp $
  */
 
 /*
@@ -98,6 +98,10 @@ public abstract class PeerAddress {
     }
   }
 
+  public boolean isAllowed(IpFilter filter) {
+    return false;
+  }    
+
   abstract boolean isStream();
 
   /** Check for legal numeric IP address, throw
@@ -123,6 +127,14 @@ public abstract class PeerAddress {
 
     protected IPAddr getIPAddr() {
       return addr;
+    }
+
+    public boolean isAllowed(IpFilter filter) {
+      try {
+	return filter != null && filter.isIpAllowed(addr.getHostAddress());
+      } catch (IpFilter.MalformedException e) {
+	return false;
+      }
     }
   }
 

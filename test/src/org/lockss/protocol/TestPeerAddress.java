@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.4 2006-01-12 00:48:38 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.5 2008-08-29 09:23:13 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,12 @@ public class TestPeerAddress extends LockssTestCase {
     assertSame(ipaddr, pa1.getIPAddr());
   }
 
+  boolean isMatch(PeerAddress pa, String ip) throws Exception {
+    IpFilter filter = new IpFilter();
+    filter.setFilters(ip, "");
+    return pa.isAllowed(filter);
+  }
+
   // test make from key
   public void testMakeUDPAddr() throws Exception {
     PeerAddress pa = PeerAddress.makePeerAddress(ipstr);
@@ -79,6 +85,9 @@ public class TestPeerAddress extends LockssTestCase {
     assertEquals(ipaddr, paUdp.getIPAddr());
     PeerIdentity pid = newPI(ipstr);
     assertEquals(pa, pid.getPeerAddress());
+
+    assertTrue(isMatch(pa, ipstr));
+    assertFalse(isMatch(pa, "111.211.33.44"));
   }
 
   // test constructor, accessors, equals
@@ -107,6 +116,8 @@ public class TestPeerAddress extends LockssTestCase {
     PeerAddress pa2 = PeerAddress.makePeerAddress(key2);
     assertEquals(pa2, pa);
 
+    assertTrue(isMatch(pa, ipstr));
+    assertFalse(isMatch(pa, "111.211.33.44"));
   }
 
   public void assertIllegal(String key) {
