@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.27 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.27.14.1 2008-09-03 08:23:25 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   public void setUp() throws Exception {
   }
 
-  public void testHist() {
+  public void testHistInact() {
     CrawlerStatus c1 = newCStat("one");
     CrawlerStatus c2 = newCStat("two");
     CrawlerStatus c3 = newCStat("three");
@@ -84,6 +84,44 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     cmStatus.addCrawlStatus(c6);
     assertEquals(ListUtil.list(c4, c1, c2, c5, c6),
 		 cmStatus.getCrawlerStatusList());
+  }
+
+  public void testHistAct() {
+    CrawlerStatus c1 = newCStat("one");
+    CrawlerStatus c2 = newCStat("two");
+    CrawlerStatus c3 = newCStat("three");
+    CrawlerStatus c4 = newCStat("four");
+    CrawlerStatus c5 = newCStat("five");
+    CrawlerStatus c6 = newCStat("six");
+    c1.signalCrawlStarted();
+    cmStatus = new CrawlManagerStatus(3);
+    assertEmpty(cmStatus.getCrawlerStatusList());
+    cmStatus.addCrawlStatus(c1);
+    cmStatus.addCrawlStatus(c2);
+    cmStatus.addCrawlStatus(c3);
+    assertEquals(ListUtil.list(c1, c2, c3), cmStatus.getCrawlerStatusList());
+    cmStatus.addCrawlStatus(c4);
+    assertEquals(ListUtil.list(c1, c3, c4), cmStatus.getCrawlerStatusList());
+
+    assertSame(c1, cmStatus.getCrawlerStatus(c1.getKey()));
+    assertNull(cmStatus.getCrawlerStatus(c2.getKey()));
+    assertSame(c3, cmStatus.getCrawlerStatus(c3.getKey()));
+    assertSame(c4, cmStatus.getCrawlerStatus(c4.getKey()));
+
+    cmStatus.addCrawlStatus(c5);
+    assertEquals(ListUtil.list(c1, c4, c5), cmStatus.getCrawlerStatusList());
+
+    cmStatus.setHistSize(2);
+    assertEquals(ListUtil.list(c1, c5), cmStatus.getCrawlerStatusList());
+    assertNull(cmStatus.getCrawlerStatus(c2.getKey()));
+    assertNull(cmStatus.getCrawlerStatus(c3.getKey()));
+    assertSame(c5, cmStatus.getCrawlerStatus(c5.getKey()));
+
+    c1.signalCrawlEnded();
+    assertEquals(ListUtil.list(c1, c5), cmStatus.getCrawlerStatusList());
+
+    cmStatus.addCrawlStatus(c6);
+    assertEquals(ListUtil.list(c5, c6), cmStatus.getCrawlerStatusList());
   }
 
   public void testCounts() {
