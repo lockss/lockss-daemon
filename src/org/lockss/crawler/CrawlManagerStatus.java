@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.36 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.37 2008-09-03 08:15:45 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
-import org.apache.commons.collections.map.LRUMap;
+import org.apache.commons.collections.map.*;
 import org.apache.commons.collections.OrderedMapIterator;
 
 import org.lockss.app.*;
@@ -54,13 +54,25 @@ public class CrawlManagerStatus {
   private boolean isOdc = false;
   private Collection runningNCCrawls = Collections.EMPTY_LIST;
 
+
+  /** Return an LRUMap that prevents deletion of active crawls */
+  static LRUMap makeLRUMap(int histSize) {
+    // scanUntilRemovable must be true to prevent map from slowly growing
+    // without bound
+    return new LRUMap(histSize, true) {
+      protected boolean removeLRU(AbstractLinkedMap.LinkEntry entry) {
+	return !((CrawlerStatus)entry.getValue()).isCrawlActive();
+      }};
+  }
+
+
   /** Create CrawlManagerStatus with specified fixed size history */
   public CrawlManagerStatus(int histSize) {
-    this.statusMap = new LRUMap(histSize);
+    this.statusMap = makeLRUMap(histSize);
   }
 
   public synchronized void setHistSize(int histMax) {
-    LRUMap newmap = new LRUMap(histMax);
+    LRUMap newmap = makeLRUMap(histMax);
     for (OrderedMapIterator iter = statusMap.orderedMapIterator();
 	 iter.hasNext(); ) {
       newmap.put(iter.next(), iter.getValue());
