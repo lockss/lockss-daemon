@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -30,12 +30,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%slockss/&quot;, base_url</string>
-      <string>2,&quot;postcomment$&quot;</string>
-      <string>1,&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;</string>
-      <string>1,&quot;%scontent/.*/%s-%s[^/]+\.[^/]+&quot;, base_url, journal_issn, volume_name</string>
+      <string>4,&quot;^%s.{0,150}&quot;, base_url</string>
+      <string>1,&quot;^%slockss/&quot;, base_url</string>
+      <string>2,&quot;^%s.*/(email|postcomment)$&quot;, base_url</string>
+      <string>1,&quot;^%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+      <string>1,&quot;^%scontent/.*/%s-%s[^/]+\.[^/]+&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>

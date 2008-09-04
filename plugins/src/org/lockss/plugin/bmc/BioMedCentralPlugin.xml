@@ -1,9 +1,5 @@
 <map>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.32.0</string>
-  </entry>
-  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bmc.BioMedCentralPlugin</string>
   </entry>
@@ -13,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -34,7 +30,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>4,&quot;^%s.{0,150}&quot;, base_url</string>
       <string>1,&quot;%slockss/&quot;, base_url</string>
       <string>1,&quot;^%sarticles/browse.asp\?volume=%s&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract$|citation$|comments|figure/|table/))?&quot;, base_url, volume_name</string>
