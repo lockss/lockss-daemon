@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.36.14.1 2008-09-03 08:23:25 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.36.14.2 2008-09-09 08:01:20 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,16 @@ public class CrawlManagerStatus {
   /** Retrieve the CrawlerStatus object with the given key */
   public synchronized CrawlerStatus getCrawlerStatus(String key) {
     return (CrawlerStatus)statusMap.get(key);
+  }
+
+  /** Move the CrawlerStatus to the least-recently-used position */
+  public synchronized void touchCrawlStatus(String key) {
+    statusMap.get(key);
+  }
+
+  /** Move the CrawlerStatus to the least-recently-used position */
+  public synchronized void touchCrawlStatus(CrawlerStatus status) {
+    statusMap.get(status.getKey());
   }
 
   public void setRunningNCCrawls(Collection coll) {
