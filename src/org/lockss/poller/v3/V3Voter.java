@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.61 2008-08-17 08:46:12 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.61.2.1 2008-09-09 08:02:08 tlipkis Exp $
  */
 
 /*
@@ -184,6 +184,15 @@ public class V3Voter extends BasePoll {
   public static final String
     DEFAULT_RECALC_HASH_ESTIMATE_VOTE_DURATION_MULTIPLIER
     = "Twice reciprocal of " + V3Poller.PARAM_VOTE_DURATION_MULTIPLIER;
+
+  /** Curve expressing decreasing probability of nominating peer who has
+   * last voted in one of our polls X time ago.
+   * @see org.lockss.util.CompoundLinearSlope */
+  public static final String PARAM_NOMINATION_PROBABILITY_AGE_CURVE =
+    PREFIX + "nominationProbabilityAgeCurve";
+  public static final String DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE =
+    "[10d,100],[30d,10],[40d,1]";
+
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -700,10 +709,33 @@ public class V3Voter extends BasePoll {
 	    return false;
 	  }
 	  List myGroups = ConfigManager.getPlatformGroupList();
-	  return CollectionUtils.containsAny(hisGroups, myGroups);
+	  if (!CollectionUtils.containsAny(hisGroups, myGroups)) {
+	    return false;
+	  }
+	  // Finally, make a probabilistic choice weighted by the last time that
+	  // we heard from this peer.
+	  return ProbabilisticChoice.choose(nominateProb(status));
 	}
 	return false;
       }};
+
+  /**
+   * Compute the probability that a peer should be considered for
+   * invitation into the poll.
+   *  
+   * @param status
+   * @return A double between 0.0 and 1.0 representing the probability
+   *      that we want to try to invite this peer into a poll.
+   */
+  double nominateProb(PeerIdentityStatus status) {
+    CompoundLinearSlope nominationProbabilityCurve =
+      pollManager.getNominationProbabilityAgeCurve();
+    long lastVoteTime = status.getLastVoterTime();
+    long noVoteFor = TimeBase.nowMs() - lastVoteTime;
+    long prob = nominationProbabilityCurve.getY(noVoteFor);
+    return ((double)prob) / 100.0d;
+  }
+
 
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
@@ -1055,9 +1087,7 @@ public class V3Voter extends BasePoll {
       float percentAgreement = idManager.getHighestPercentAgreement(pid, au);
       log.debug2("Checking highest percent agreement for au and peer " + pid + ": " 
                  + percentAgreement);
-      float minPercentForRepair =
-        CurrentConfig.getCurrentConfig().getPercentage(PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
-                                                       DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS);
+      double minPercentForRepair = pollManager.getMinPercentForRepair();
       log.debug2("Minimum percent agreement required for repair: "
                  + minPercentForRepair);
       return (percentAgreement >= minPercentForRepair);

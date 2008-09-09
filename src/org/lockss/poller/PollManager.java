@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.194.6.1 2008-08-29 09:19:41 tlipkis Exp $
+ * $Id: PollManager.java,v 1.194.6.2 2008-09-09 08:02:08 tlipkis Exp $
  */
 
 /*
@@ -167,10 +167,6 @@ public class PollManager
     PREFIX + "wrongGroupRetryTime";
   public static final long DEFAULT_WRONG_GROUP_RETRY_TIME = 4 * WEEK;
 
-  /** Subnet(s) not to invite into polls */
-  public static final String PARAM_NO_INVITATION_SUBNETS =
-    PREFIX + "noInvitationSubnets";
-
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
 
@@ -214,11 +210,15 @@ public class PollManager
   private long paramMinPollAttemptInterval = DEFAULT_MIN_POLL_ATTEMPT_INTERVAL;
   private long increasePollPriorityAfter =
     DEFAULT_INCREASE_POLL_PRIORITY_AFTER;
+  private double paramMinPercentForRepair =
+    V3Voter.DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS;
+
 
   private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
   private IpFilter noInvitationSubnetFilter = null;
-
+  private CompoundLinearSlope v3InvitationProbabilityAgeCurve = null;
+  private CompoundLinearSlope v3NominationProbabilityAgeCurve = null;
 
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -1009,8 +1009,12 @@ public class PollManager
 	newConfig.getTimeInterval(PARAM_INCREASE_POLL_PRIORITY_AFTER,
 				  DEFAULT_INCREASE_POLL_PRIORITY_AFTER); 
 
+      paramMinPercentForRepair =
+        newConfig.getPercentage(V3Voter.PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
+				V3Voter.DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS);
+
       List<String> noInvitationIps =
-	newConfig.getList(PARAM_NO_INVITATION_SUBNETS, null); 
+	newConfig.getList(V3Poller.PARAM_NO_INVITATION_SUBNETS, null); 
       if (noInvitationIps == null || noInvitationIps.isEmpty()) {
 	noInvitationSubnetFilter = null;
       } else {
@@ -1022,6 +1026,46 @@ public class PollManager
 	  theLog.warning("Malformed noInvitationIps, not installed: "
 			 + noInvitationIps,
 			 e);
+	}
+      }
+      if (changedKeys.contains(PARAM_INVITATION_PROBABILITY_AGE_CURVE)) {
+	String probCurve =
+	  newConfig.get(PARAM_INVITATION_PROBABILITY_AGE_CURVE,
+			DEFAULT_INVITATION_PROBABILITY_AGE_CURVE); 
+	if (StringUtil.isNullString(probCurve)) {
+	  v3InvitationProbabilityAgeCurve = null;
+	} else {
+	  try {
+	    v3InvitationProbabilityAgeCurve =
+	      new CompoundLinearSlope(probCurve);
+	    theLog.info("Installed invitation probability age curve: " +
+			v3InvitationProbabilityAgeCurve);
+	  } catch (Exception e) {
+	    theLog.warning("Malformed V3 invitation probability curve: "
+			   + probCurve,
+			   e);
+	    v3InvitationProbabilityAgeCurve = null;
+	  }
+	}
+      }
+      if (changedKeys.contains(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE)) {
+	String probCurve =
+	  newConfig.get(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
+			V3Voter.DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE); 
+	if (StringUtil.isNullString(probCurve)) {
+	  v3NominationProbabilityAgeCurve = null;
+	} else {
+	  try {
+	    v3NominationProbabilityAgeCurve =
+	      new CompoundLinearSlope(probCurve);
+	    theLog.info("Installed nomination probability age curve: " +
+			v3NominationProbabilityAgeCurve);
+	  } catch (Exception e) {
+	    theLog.warning("Malformed V3 nomination probability curve: "
+			   + probCurve,
+			   e);
+	    v3NominationProbabilityAgeCurve = null;
+	  }
 	}
       }
     }
@@ -1054,6 +1098,18 @@ public class PollManager
 
   public IpFilter getNoInvitationSubnetFilter() {
     return noInvitationSubnetFilter;
+  }
+
+  public CompoundLinearSlope getInvitationProbabilityAgeCurve() {
+    return v3InvitationProbabilityAgeCurve;
+  }
+
+  public CompoundLinearSlope getNominationProbabilityAgeCurve() {
+    return v3NominationProbabilityAgeCurve;
+  }
+
+  public double getMinPercentForRepair() {
+    return paramMinPercentForRepair;
   }
 
   public PollFactory getPollFactory(PollSpec spec) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.8 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.8.4.1 2008-09-09 08:02:08 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,8 @@
 
 package org.lockss.poller.v3;
 
+import java.io.*;
+import java.util.Properties;
 import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.plugin.*;
@@ -44,8 +46,7 @@ import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
-import java.io.*;
-import java.util.Properties;
+import static org.lockss.util.Constants.*;
 
 public class TestV3Voter extends LockssTestCase {
   
@@ -163,6 +164,36 @@ public class TestV3Voter extends LockssTestCase {
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
 
+  double nominateProb(long now, long lastVoteTime)
+      throws Exception {
+    String id = "tcp:[1.2.3.4]:4321";
+    IdentityManager idMgr = lockssDaemon.getIdentityManager();
+    PeerIdentity pid = idMgr.findPeerIdentity(id);
+    idMgr.findLcapIdentity(pid, id);
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+    status.setLastVoterTime(lastVoteTime);
+    TimeBase.setSimulated(now);
+    return voter.nominateProb(status);
+  }
+
+  public void testNominateProb() throws Exception {
+    // default is [10d,100],[30d,10],[40d,1]
+
+    assertEquals(1.0, nominateProb(-1, 0));
+    assertEquals(1.0, nominateProb(0, 0));
+    assertEquals(1.0, nominateProb(10, 1));
+    assertEquals(1.0, nominateProb(1, 10));
+    
+    assertEquals(1.0, nominateProb(10*DAY, 0));
+    assertEquals(.55, nominateProb(20*DAY, 0));
+    assertEquals(.1, nominateProb(30*DAY, 0));
+    assertEquals(.01, nominateProb(40*DAY,0));
+
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
+				  "[1w,100],[20w,10]");
+    assertEquals(1.0, nominateProb(1*WEEK, 0));
+    assertEquals(0.1, nominateProb(20*WEEK, 0));
+  }
 
   static String PARAM_OVERHEAD_LOAD =
     org.lockss.scheduler.SortScheduler.PARAM_OVERHEAD_LOAD;
