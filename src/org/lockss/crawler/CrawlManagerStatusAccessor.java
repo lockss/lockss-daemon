@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.19 2008-02-15 09:07:38 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.19.10.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -266,6 +266,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	  case Crawler.STATUS_ERROR:
 	  case Crawler.STATUS_ABORTED:
 	  case Crawler.STATUS_FETCH_ERROR:
+	  case Crawler.STATUS_EXTRACTOR_ERROR:
 	  case Crawler.STATUS_NO_PUB_PERMISSION:
 	  case Crawler.STATUS_PLUGIN_ERROR:
 	  case Crawler.STATUS_REPO_ERR:

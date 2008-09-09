@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.30 2008-05-19 07:38:59 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.30.6.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,8 @@ public abstract class BaseCrawler
 
   protected AuState aus = null;
 
+  protected CrawlManager crawlMgr = null;
+
   protected boolean crawlAborted = false;
 
   protected LockssWatchdog wdog = null;
@@ -191,6 +193,10 @@ public abstract class BaseCrawler
 
   protected LockssDaemon getDaemon() {
     return AuUtil.getDaemon(au);
+  }
+
+  protected void setCrawlManager(CrawlManager crawlMgr) {
+    this.crawlMgr = crawlMgr;
   }
 
   protected void setCrawlConfig(Configuration config) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.73 2007-11-07 08:14:32 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.73.12.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -654,6 +654,33 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       waitForCrawlToFinish(sem2);
     }
 
+    public void testIsGloballyExcludedUrl() {
+      assertFalse(crawlManager.isGloballyExcludedUrl(null, null));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "http://random.string/"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "http://http://http://"));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+				    "(http:.*){3,}");
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://http://http://"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "http://http://https://"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "www.x.www.y.www.z"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "www.x.www.y.www.z.www."));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+				    "((http:.*){3,})|((\\bwww\\..*){4,})");
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://http://http://"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "http://http://https://"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "www.x.www.y.www.z"));
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "www.x.www.y.www.z.www."));
+    }
   }
 
   public static class TestsWithoutAutoStart extends TestCrawlManagerImpl {
@@ -1135,7 +1162,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "10");
       p.put(CrawlManagerImpl.PARAM_FAVOR_SHARED_RATE_THREADS,
 	    ""+(nthreads-1)); 
-      theDaemon.setAusStarted(true);
+
       ConfigurationUtil.addFromProps(p);
       crawlManager.ausStartedSem = new SimpleBinarySemaphore();
       crawlManager.startService();
@@ -1196,6 +1223,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	semToGive(endSem[ix]);
       }
       
+      theDaemon.setAusStarted(true);
       // now let the crawl starter proceed
       crawlManager.ausStartedSem.give();
       // Ensure they all got queued
@@ -1220,7 +1248,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       for (int ix = 0; ix < tot; ix++) {
 	int poke = pokeOrder[ix];
 	if (poke >= 0) {
-	  log.info("poke(" + poke + ")");
 	  endSem[poke].give();
 	}
 	int wait = expStartOrder[ix];
@@ -1372,14 +1399,15 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       super.execute(run);
     }    
 
-    void waitUntilAusStarted() throws InterruptedException {
-      if (ausStartedSem != null) {
-	ausStartedSem.take();
-      }
-      else {
-	super.waitUntilAusStarted();
-      }
-    }
+//     @Override
+//     void waitUntilAusStarted() throws InterruptedException {
+//       if (ausStartedSem != null) {
+// 	ausStartedSem.take();
+//       }
+//       else {
+// 	super.waitUntilAusStarted();
+//       }
+//     }
 
     void addToRunningRateKeys(ArchivalUnit au) {
       if (au.getFetchRateLimiterKey() != null) {

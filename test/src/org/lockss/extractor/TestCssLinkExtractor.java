@@ -1,5 +1,5 @@
 /*
- * $Id: TestCssLinkExtractor.java,v 1.3 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id: TestCssLinkExtractor.java,v 1.3.8.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -36,20 +36,29 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import junit.framework.Assert;
+import org.w3c.css.sac.*;
+import org.w3c.flute.parser.Parser;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 
 public class TestCssLinkExtractor extends LinkExtractorTestCase {
+
+  protected MyCssLinkExtractor cssExtractor;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    cssExtractor = (MyCssLinkExtractor)cssExtractor;
+  }
 
   public String getMimeType() {
     return "text/css";
   }
 
   public LinkExtractorFactory getFactory() {
-    return new CssLinkExtractor.Factory();
+    return new MyCssLinkExtractor.Factory();
   }
 
   public void testAbsoluteUrl() throws Exception {
@@ -96,6 +105,16 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
       fail("Parser did not throw a MalformedURLException on an empty URL");
     }
     catch (MalformedURLException expected) {
+      // all is well
+    }
+  }
+
+  public void testMapParserException() throws Exception {
+    try {
+      extractUrls("@charset \"unlikely\";");
+      fail("Parser did not throw a MalformedURLException on an empty URL");
+    } catch (CacheException.ExtractionError expected) {
+      assertFalse(expected.isAttributeSet(CacheException.ATTRIBUTE_FAIL));
       // all is well
     }
   }
@@ -176,4 +195,41 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
   protected static final String SOURCE_URL =
     "http://www.example.com/source.css";
   
+
+  static class MyParser extends Parser {
+    private RuntimeException toThrow;
+
+    public void parseStyleSheet(InputSource inputSource) throws IOException {
+      if (toThrow != null) {
+	throw toThrow;
+      }
+      super.parseStyleSheet(inputSource);
+    }
+
+
+    void setException(RuntimeException e) {
+      toThrow = e;
+    }
+  }
+
+  static class MyCssLinkExtractor extends CssLinkExtractor {
+    private RuntimeException toThrow;
+
+    protected Parser makeParser() {
+      MyParser p = new MyParser();
+      p.setException(toThrow);
+      return p;
+    }
+
+    public static class Factory implements LinkExtractorFactory {
+      public LinkExtractor createLinkExtractor(String mimeType) {
+	return new MyCssLinkExtractor();
+      }
+    }
+
+    void setException(RuntimeException e) {
+      toThrow = e;
+    }
+  }
+
 }

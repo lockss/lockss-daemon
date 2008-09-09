@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.68 2008-08-11 23:31:24 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.68.2.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -471,7 +471,19 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  cu.release();
 	}
       }
-    } catch (IOException ioe) {
+    } catch (CacheException ex) {
+      crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
+      if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+	logger.error("Fatal error parsing "+uc, ex);
+	crawlAborted = true;
+	return false;
+      } else if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+	logger.siteError("Couldn't parse "+uc+". continuing", ex);
+	crawlStatus.setCrawlStatus(Crawler.STATUS_EXTRACTOR_ERROR);
+      } else {
+	logger.siteWarning("Couldn't parse "+uc+". ignoring error", ex);
+      }
+        } catch (IOException ioe) {
       //XXX handle this better.  Requeue?
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
       crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
@@ -594,6 +606,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
+  protected boolean isGloballyExcludedUrl(String url) {
+    if (crawlMgr != null) {
+      if (crawlMgr.isGloballyExcludedUrl(au, url)) {
+	crawlStatus.signalErrorForUrl(url, "Excluded (probable recursion)");
+	return true;
+      }
+    }
+    return false;
+  }
+
   private LinkExtractor getLinkExtractor(CachedUrl cu) {
     ArchivalUnit au = cu.getArchivalUnit();
     return au.getLinkExtractor(cu.getContentType());
@@ -633,11 +655,17 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    && !excludedUrlCache.containsKey(normUrl)
 	    && !failedUrls.contains(normUrl)) {
 	  if (au.shouldBeCached(normUrl)) {
-	    if (logger.isDebug2()) {
-	      logger.debug2("Included url: "+normUrl);
+ 	    if (isGloballyExcludedUrl(normUrl)) {
+	      if (logger.isDebug2()) {
+		logger.debug2("Globally excluded url: "+normUrl);
+	      }
+	    } else {
+	      if (logger.isDebug2()) {
+		logger.debug2("Included url: "+normUrl);
+	      }
+	      extractedUrls.add(normUrl);
+	      crawlStatus.addPendingUrl(normUrl);
 	    }
-	    extractedUrls.add(normUrl);
-            crawlStatus.addPendingUrl(normUrl);
 	  } else {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);

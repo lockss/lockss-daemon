@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.21 2008-05-06 21:35:36 dshr Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.21.6.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
+  private CrawlManager crawlMgr;
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
@@ -97,12 +98,16 @@ public class FuncNewContentCrawler extends LockssTestCase {
                       ""+SimulatedContentGenerator.FILE_TYPE_BIN);
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
+    //test that we don't cache a file that is globally excluded
+    props.setProperty(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+		      ".*(branch1/.*){3,}");
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
+    crawlMgr = theDaemon.getCrawlManager();
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -146,7 +151,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     // end.)  If the simulated AU params are changed, or
     // SimulatedContentGenerator is changed, this number may have to
     // change.
-    assertEquals(25598, AuUtil.getAuContentSize(sau, true));
+    assertEquals(19262, AuUtil.getAuContentSize(sau, true));
 
     List sbc = ((MySimulatedArchivalUnit)sau).sbc;
     Bag b = new HashBag(sbc);
@@ -160,13 +165,15 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, th, tp, tp, null, th, tp, th, tp, tp, tp, th, tp};
+    String[] ct = {null, th, tp, tp, null, th, tp, th, tp, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
     assertEquals(ctb, new HashBag(sau.getPauseContentTypes()));
   }
 
   //recursive caller to check through the whole file tree
   private void checkThruFileTree(File f[], CachedUrlSet myCUS){
+    String exclUrlStem = "http://www.example.com/branch1/branch1/branch1/";
+
     for (int ix=0; ix<f.length; ix++) {
 	 if (f[ix].isDirectory()) {
 	   // get all the files and links there and iterate
@@ -179,7 +186,8 @@ public class FuncNewContentCrawler extends LockssTestCase {
 	   log.debug2("File: " + fileUrl + " in Level " + fileLevel);
 
 	   CachedUrl cu = sau.makeCachedUrl(fileUrl);
-	   if (fileLevel <= maxDepth) {
+	   if (fileLevel <= maxDepth
+	       && !StringUtil.startsWithIgnoreCase(fileUrl, exclUrlStem)) {
 	     assertTrue(cu + " has no content", cu.hasContent());
 	   } else {
 	     assertFalse(cu + " has content when it shouldn't",
@@ -199,7 +207,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
   private void crawlContent() {
     log.debug("Crawling tree...");
     CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
+    NewContentCrawler crawler =
+      new NewContentCrawler(sau, spec, new MockAuState());
+    crawler.setCrawlManager(crawlMgr);
     crawler.doCrawl();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CssLinkExtractor.java,v 1.4 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id: CssLinkExtractor.java,v 1.4.8.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 import org.w3c.css.sac.*;
 import org.w3c.flute.parser.Parser;
 
@@ -157,6 +158,10 @@ public class CssLinkExtractor implements LinkExtractor {
 
   }
   
+  protected Parser makeParser() {
+    return new Parser();
+  }
+
   /* Inherit documentation */
   public void extractUrls(ArchivalUnit au,
                           InputStream in,
@@ -164,7 +169,7 @@ public class CssLinkExtractor implements LinkExtractor {
                           String srcUrl,
 			  LinkExtractor.Callback cb)
       throws MalformedURLException, IOException {
-    logger.debug2("Parsing " + srcUrl);
+    logger.debug2("Parsing " + srcUrl + ", enc " + encoding);
     if (in == null) {
       throw new IllegalArgumentException("Called with null InputStream");
     }
@@ -173,7 +178,7 @@ public class CssLinkExtractor implements LinkExtractor {
     }
     URL baseUrl = new URL(srcUrl);
     DocumentHandler documentHandler = new LockssDocumentHandler(baseUrl, cb);
-    Parser parser = new Parser();
+    Parser parser = makeParser();
     parser.setDocumentHandler(documentHandler);
     
     try {
@@ -181,13 +186,15 @@ public class CssLinkExtractor implements LinkExtractor {
       inputSource.setEncoding(encoding);
       inputSource.setByteStream(in);
       parser.parseStyleSheet(inputSource);
-    }
-    catch (MalformedUrlException lockssMalformedUrlException) {
+    } catch (MalformedUrlException lockssMalformedUrlException) {
       MalformedURLException javaMalformedUrlException =
         lockssMalformedUrlException.getJavaMalformedUrlException();
       logger.siteError("Malformed URL while parsing " + srcUrl,
                    javaMalformedUrlException);
       throw javaMalformedUrlException;
+    } catch (org.w3c.css.sac.CSSException e) {
+      logger.error("Can't parse CSS: " + srcUrl, e);
+      throw new CacheException.ExtractionError(e.toString(), e);
     }
   }
   

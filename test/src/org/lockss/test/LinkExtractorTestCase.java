@@ -1,5 +1,5 @@
 /*
- * $Id: LinkExtractorTestCase.java,v 1.1 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id: LinkExtractorTestCase.java,v 1.1.8.1 2008-09-09 08:00:57 tlipkis Exp $
  */
 
 /*
@@ -72,19 +72,36 @@ public abstract class LinkExtractorTestCase extends LockssTestCase {
     return URL;
   }
 
-  protected Set extractUrls(String source)
+  protected Collection extractUrls(String source)
+      throws IOException, PluginException {
+    return extractUrls(source, cb);
+  }
+
+  protected Collection extractUrls(String source,
+				   MyLinkExtractorCallback callback)
+      throws IOException, PluginException {
+    extractUrls(source, (LinkExtractor.Callback)cb);
+    return callback.getFoundUrls();
+  }
+
+  protected void extractUrls(String source,
+			     LinkExtractor.Callback callback)
       throws IOException, PluginException {
     MockCachedUrl mcu = new MockCachedUrl(getUrl());
     mcu.setContent(source);
 
     String enc = Constants.DEFAULT_ENCODING;
 
-      extractor.extractUrls(new MockArchivalUnit(),
-			    mcu.getUnfilteredInputStream(),
-			    enc, mcu.getUrl(), cb);
+    extractor.extractUrls(new MockArchivalUnit(),
+			  mcu.getUnfilteredInputStream(),
+			  enc, mcu.getUrl(), callback);
       
-    return cb.getFoundUrls();
   }
+
+  protected void extractUrls(String source, List foundUrls)
+      throws IOException, PluginException {
+    extractUrls(source, new MyLinkExtractorCallback(foundUrls));
+  }      
 
   public void testEmptyFileReturnsNoLinks() throws Exception {
     assertEquals(SetUtil.set(), extractUrls(""));
@@ -106,13 +123,21 @@ public abstract class LinkExtractorTestCase extends LockssTestCase {
   }
 
   protected class MyLinkExtractorCallback implements LinkExtractor.Callback {
-    Set foundUrls = new HashSet();
+    Collection foundUrls;
+
+    MyLinkExtractorCallback() {
+      foundUrls = new HashSet();
+    }
+
+    MyLinkExtractorCallback(Collection foundUrls) {
+      this.foundUrls = foundUrls;
+    }
 
     public void foundLink(String url) {
       foundUrls.add(url);
     }
 
-    public Set getFoundUrls() {
+    public Collection getFoundUrls() {
       return foundUrls;
     }
   }
