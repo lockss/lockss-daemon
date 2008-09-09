@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.82 2008-08-29 09:23:13 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.83 2008-09-09 07:54:53 tlipkis Exp $
  */
 
 /*
@@ -138,6 +138,14 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableFollowupInvitations";
   public static final boolean DEFAULT_ENABLE_INVITATIONS = true;
   
+  /** Curve expressing decreasing probability of inviting peer who has
+   * been unresponsive for X time.
+   * @see org.lockss.util.CompoundLinearSlope */
+  public static final String PARAM_INVITATION_PROBABILITY_AGE_CURVE =
+    PREFIX + "invitationProbabilityAgeCurve";
+  public static final String DEFAULT_INVITATION_PROBABILITY_AGE_CURVE =
+    "[4d,100],[20d,10],[40d,1]";
+
   /** The time to wait between inviting more peers, until at least
    * MIN_POLL_SIZE have agreed to participate.
    */
@@ -157,6 +165,10 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_INVITATION_SIZE = PREFIX + "invitationSize";
   public static final int DEFAULT_INVITATION_SIZE = 10;
   
+  /** Subnet(s) not to invite into polls */
+  public static final String PARAM_NO_INVITATION_SUBNETS =
+    PREFIX + "noInvitationSubnets";
+
   /** The number of participants in excess of the quorum we try to get
    * participating
    */
@@ -1987,23 +1999,21 @@ public class V3Poller extends BasePoll {
     }
 
     PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
-    if (status != null) {
-      
-      // Never include a peer whose groups are known to be disjoint with ours
-      if (!isGroupMatch(status)) {
-        return false;
-      }
-
-      // Finally, make a probabilistic choice weighted by the last time that
-      // we heard from this peer.
-      return ProbabilisticChoice.choose(inviteProb(status.getLastPollInvitationTime(),
-                                                   status.getLastMessageTime()));
+    if (status == null) {
+      log.warning("No status for peer: " + pid);
+      return true;
     }
- 
-    // If we get this far, return true.
-    return true;
+
+    // Never include a peer whose groups are known to be disjoint with ours
+    if (!isGroupMatch(status)) {
+      return false;
+    }
+
+    // Finally, make a probabilistic choice weighted by the last time that
+    // we heard from this peer.
+    return ProbabilisticChoice.choose(inviteProb(status));
   }
-  
+
   boolean isGroupMatch(PeerIdentityStatus status) {
     List groups = status.getGroups();
     // if we haven't recorded a group, allow it
@@ -2034,39 +2044,21 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * Given a peer identity, compute a probability (a float between 0.0 and
-   * 1.0) that the peer should be considered for invitation into the
-   * poll.
+   * Compute the probability that a peer should be considered for
+   * invitation into the poll.
    *  
-   * @param lastPollInvitationTime  The last time we attempted to invite
-   *      the target peer into a poll.
-   * @param lastMessageTime  The last time that we received any kind of
-   *      message from the target peer.
-   * @return A number between 0.0 and 1.0 representing the probability
+   * @param status
+   * @return A double between 0.0 and 1.0 representing the probability
    *      that we want to try to invite this peer into a poll.
    */
-  // CR: poll policy
-  double inviteProb(long lastPollInvitationTime,
-                    long lastMessageTime) {
-    // If we have never tried to contact this peer, we definitely want to try
-    // them out.
-    if (lastPollInvitationTime <= 0) return 1.0;
-
-    long delta = lastPollInvitationTime - lastMessageTime;
-    
-    if (delta <= 5 * Constants.DAY) {           // < 5 days, or negative
-      return 1.0;
-    } else if (delta <= 15 * Constants.DAY) {   // < 15 days
-      return 5.0/6.0;
-    } else if (delta <= 30 * Constants.DAY) {   // < 30 days
-      return 4.0/6.0;
-    } else if (delta <= 60 * Constants.DAY) {   // < 60 days
-      return 3.0/6.0;
-    } else if (delta <= 90 * Constants.DAY) {   // < 90 days
-      return 2.0/6.0;
-    } else {                                      // > 90 days
-      return 1.0/6.0;
-    }
+  double inviteProb(PeerIdentityStatus status) {
+    CompoundLinearSlope invitationProbabilityCurve =
+      pollManager.getInvitationProbabilityAgeCurve();
+    long lastPollInvitationTime = status.getLastPollInvitationTime();
+    long lastMessageTime = status.getLastMessageTime();
+    long noResponseFor = lastPollInvitationTime - lastMessageTime;
+    long prob = invitationProbabilityCurve.getY(noResponseFor);
+    return ((double)prob) / 100.0d;
   }
 
   Class getPollerActionsClass() {

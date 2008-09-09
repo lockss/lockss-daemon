@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.28 2008-08-29 09:23:13 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.29 2008-09-09 07:54:53 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,9 @@ import org.lockss.test.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.mortbay.util.B64Code;
+
+import static org.lockss.util.Constants.*;
+
 
 public class TestV3Poller extends LockssTestCase {
 
@@ -500,7 +503,7 @@ public class TestV3Poller extends LockssTestCase {
     assertTrue(v3Poller.shouldIncludePeer(p3));
     assertTrue(v3Poller.shouldIncludePeer(p4));
     assertTrue(v3Poller.shouldIncludePeer(p5));
-    ConfigurationUtil.addFromArgs(PollManager.PARAM_NO_INVITATION_SUBNETS,
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_NO_INVITATION_SUBNETS,
 				  "1.2.3.4/30;4.5.6.2");
 
     assertTrue(v3Poller.shouldIncludePeer(p1));
@@ -736,36 +739,46 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(BlockTally.RESULT_LOST, blockTally.getTallyResult());
   }
   
-  public void testInviteProb() throws Exception {
+  double inviteProb(long lastInvite, long lastMsg)
+      throws Exception {
+    String id = "tcp:[1.2.3.4]:4321";
     V3Poller poller = makeV3Poller("key");
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+    PeerIdentity pid = idMgr.findPeerIdentity(id);
+    idMgr.findLcapIdentity(pid, id);
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+    status.setLastMessageTime(lastMsg);
+    status.setLastPollInvitationTime(lastInvite);
+    return poller.inviteProb(status);
+  }
+
+  public void testInviteProb() throws Exception {
+    // default is [4d,100],[20d,10],[40d,1]
+    double r1 = .01*90.0/16.0;
+    double r2 = .01*9.0/20.0;
+
+    assertEquals(1.0, inviteProb(-1, -1));
+    assertEquals(1.0, inviteProb(-1, 0));
+    assertEquals(1.0, inviteProb(0, -1));
+    assertEquals(1.0, inviteProb(0, 0));
+    assertEquals(1.0, inviteProb(1, 1));
+    assertEquals(1.0, inviteProb(10, 1));
+    assertEquals(1.0, inviteProb(1, 10));
     
-    assertEquals(1.0, poller.inviteProb(-1, 0));
-    assertEquals(1.0, poller.inviteProb(0, -1));
-    assertEquals(1.0, poller.inviteProb(0, 0));
-    assertEquals(1.0, poller.inviteProb(1, 1));
-    assertEquals(1.0, poller.inviteProb(10, 1));
-    assertEquals(1.0, poller.inviteProb(1, 10));
-    
-    assertEquals(1.0, poller.inviteProb(1000L*60L*60L*24L*1, 0));
-    assertEquals(1.0, poller.inviteProb(1000L*60L*60L*24L*4, 0));
-    assertEquals(1.0, poller.inviteProb(1000L*60L*60L*24L*5, 0));
-    assertEquals(5.0/6.0, poller.inviteProb(1000L*60L*60L*24L*6, 0));
-    assertEquals(5.0/6.0, poller.inviteProb(1000L*60L*60L*24L*14, 0));
-    assertEquals(5.0/6.0, poller.inviteProb(1000L*60L*60L*24L*15, 0));
-    assertEquals(4.0/6.0, poller.inviteProb(1000L*60L*60L*24L*16, 0));
-    assertEquals(4.0/6.0, poller.inviteProb(1000L*60L*60L*24L*29, 0));
-    assertEquals(4.0/6.0, poller.inviteProb(1000L*60L*60L*24L*30, 0));
-    assertEquals(3.0/6.0, poller.inviteProb(1000L*60L*60L*24L*31, 0));
-    assertEquals(3.0/6.0, poller.inviteProb(1000L*60L*60L*24L*59, 0));
-    assertEquals(3.0/6.0, poller.inviteProb(1000L*60L*60L*24L*60, 0));
-    assertEquals(2.0/6.0, poller.inviteProb(1000L*60L*60L*24L*61, 0));
-    assertEquals(2.0/6.0, poller.inviteProb(1000L*60L*60L*24L*89, 0));
-    assertEquals(2.0/6.0, poller.inviteProb(1000L*60L*60L*24L*90, 0));
-    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*91, 0));
-    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*200, 0));
-    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*400, 0));
-    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*800, 0));
-    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*1600, 0));
+    assertEquals(1.0, inviteProb(1*DAY, 0));
+    assertEquals(1.0, inviteProb(4*DAY, 0));
+    assertEquals(1.0, inviteProb(44*DAY, 40*DAY));
+    assertEquals(.94, inviteProb(5*DAY, 0));
+    assertEquals(1.0-r1, inviteProb(5*DAY, 0), .02);
+    assertEquals(.94, inviteProb(105*DAY, 100*DAY));
+    assertEquals(.55, inviteProb(112*DAY, 100*DAY));
+    assertEquals(.10, inviteProb(120*DAY, 100*DAY));
+    assertEquals(.01, inviteProb(140*DAY, 100*DAY));
+
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_INVITATION_PROBABILITY_AGE_CURVE,
+				  "[1w,100],[20w,10]");
+    assertEquals(1.0, inviteProb(1*WEEK, 0));
+    assertEquals(0.1, inviteProb(20*WEEK, 0));
   }
   
   private MyV3Poller makeV3Poller(String key) throws Exception {
