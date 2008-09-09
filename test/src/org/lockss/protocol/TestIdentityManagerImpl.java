@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.18 2008-01-30 00:52:41 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.19 2008-09-09 07:55:23 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   PeerIdentity peer1;
   PeerIdentity peer2;
   PeerIdentity peer3;
+  PeerIdentity peer4;
   MockArchivalUnit mau;
 
   private static final String LOCAL_IP = "127.1.2.3";
@@ -136,6 +137,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
     peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
     peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
+    peer4 = idmgr.stringToPeerIdentity("tcp:[127.0.0.4]:4444");
   }
 
   public void testSetupLocalIdentitiesV1Only()
@@ -554,13 +556,27 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     TimeBase.step();
     idmgr.signalAgreed(peer2, mau);
     idmgr.signalDisagreed(peer2, mau);
+    idmgr.signalPartialAgreement(peer4, mau, 0.8f);
+
+    // now create IdentityAgreement objects that should be equal to what
+    // idmgr created.
     IdentityManager.IdentityAgreement ida1 =
       new IdentityManager.IdentityAgreement(peer1);
     ida1.setLastAgree(10);
+    ida1.setPercentAgreement(1.0f);
+    ida1.setHighestPercentAgreement(1.0f);
     IdentityManager.IdentityAgreement ida2 =
       new IdentityManager.IdentityAgreement(peer2);
     ida2.setLastAgree(11);
     ida2.setLastDisagree(11);
+    ida2.setHighestPercentAgreement(1.0f);
+
+    IdentityManager.IdentityAgreement ida4 =
+      new IdentityManager.IdentityAgreement(peer4);
+    idmgr.signalPartialAgreement(peer4, mau, 0.8f);
+    ida4.setPercentAgreement(0.8f);
+    ida4.setLastAgree(11);
+
 //     Set set1 = SetUtil.set(ida1, ida2);
 //     Set set2 = SetUtil.theSet(idmgr.getIdentityAgreements(mau));
 //     Iterator it1 = set1.iterator();
@@ -577,8 +593,12 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 //     assertTrue(set1.containsAll(set2));
 //     assertTrue(set1.equals(set2));
 //     assertTrue(SetUtil.set(ida1, ida2).equals(SetUtil.theSet(idmgr.getIdentityAgreements(mau))));
-    assertEquals(SetUtil.set(ida1, ida2),
+    assertEquals(SetUtil.set(ida1, ida2, ida4),
   		 SetUtil.theSet(idmgr.getIdentityAgreements(mau)));
+    idmgr.setIdentity(Poll.V1_PROTOCOL, null);
+    assertEquals(SetUtil.set(ida4),
+  		 SetUtil.theSet(idmgr.getIdentityAgreements(mau)));
+
   }
 
   public void testHasAgreeMap() throws Exception {
@@ -747,16 +767,22 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
         new IdentityManager.IdentityAgreement(peer1);
     ida.setLastAgree(10);
     ida.setLastDisagree(10);
+    ida.setPercentAgreement(0.0f);
+    ida.setHighestPercentAgreement(1.0f);
     expected.add(ida);
-    assertContains(hRep.getStoredIdentityAgreement(), ida);
+    assertContains(SetUtil.theSet(hRep.getStoredIdentityAgreement()), ida);
 
     ida = new IdentityManager.IdentityAgreement(peer2);
     ida.setLastAgree(10);
+    ida.setPercentAgreement(1.0f);
+    ida.setHighestPercentAgreement(1.0f);
     expected.add(ida);
     assertContains(hRep.getStoredIdentityAgreement(), ida);
 
     ida = new IdentityManager.IdentityAgreement(peer3);
     ida.setLastDisagree(10);
+    ida.setPercentAgreement(0.0f);
+    ida.setHighestPercentAgreement(0.0f);
     expected.add(ida);
     assertContains(hRep.getStoredIdentityAgreement(), ida);
 
@@ -989,6 +1015,10 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       synchronized (map) {
 	map.put(AGREE_MAP_INIT_KEY, "true");	// ensure map is reread
       }
+    }
+
+    void setIdentity(int proto, PeerIdentity pid) {
+      localPeerIdentities[proto] = pid;
     }
   }
 

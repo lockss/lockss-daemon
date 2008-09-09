@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.83 2008-08-26 03:04:55 dshr Exp $
+ * $Id: IdentityManager.java,v 1.84 2008-09-09 07:55:23 tlipkis Exp $
  */
 
 /*
@@ -507,6 +507,11 @@ public interface IdentityManager extends LockssManager {
     // The highest percent agreement we have ever seen in a receipt from
     // one of any of our votes in polls this peer called.
     private float highestPercentAgreementHint = -1.0f;
+    // Hists were added later; deserializing stored state with no hints
+    // sets them to zero (constructor doesn't run) so can't tell if they
+    // were ever really set.  This flag serves that function.
+    private boolean haveHints = false;
+
     private String id = null;
 
     public IdentityAgreement(PeerIdentity pid) {
@@ -533,7 +538,7 @@ public interface IdentityManager extends LockssManager {
     }
     
     public float getHighestPercentAgreement() {
-      return highestPercentAgreement;
+      return agreePercentValue(highestPercentAgreement);
     }
     
     public void setHighestPercentAgreement(float agreement) {
@@ -541,7 +546,7 @@ public interface IdentityManager extends LockssManager {
     }
     
     public float getPercentAgreement() {
-      return percentAgreement;
+      return agreePercentValue(percentAgreement);
     }
     
     public void setPercentAgreement(float percentAgreement) {
@@ -551,16 +556,20 @@ public interface IdentityManager extends LockssManager {
       }
     }
 
+    /** Return highest agreement peer has seen from us.
+     * @return highest agreement, -1.0 if not known */
     public float getHighestPercentAgreementHint() {
-      return highestPercentAgreementHint;
+      return hintValue(highestPercentAgreementHint);
     }
     
-    public void setHighestPercentAgreementHint(float agreement) {
+    void setHighestPercentAgreementHint(float agreement) {
       this.highestPercentAgreementHint = agreement;
     }
     
+    /** Return agreement peer has most recently seen from us.
+     * @return agreement, -1.0 if not known */
     public float getPercentAgreementHint() {
-      return percentAgreementHint;
+      return hintValue(percentAgreementHint);
     }
     
     public void setPercentAgreementHint(float percentAgreementHint) {
@@ -568,7 +577,30 @@ public interface IdentityManager extends LockssManager {
       if (percentAgreementHint > highestPercentAgreementHint) {
         setHighestPercentAgreementHint(percentAgreementHint);
       }
+      haveHints = true;
     }
+
+
+    // Assume that if agreee percent is zero and we have no evidence we've
+    // set it (), then it isn't really known.
+    private float agreePercentValue(float agree) {
+      if (lastAgree > 0 || lastDisagree > 0 || agree != 0.0) {
+	return agree;
+      } else {
+	return -1.0f;
+      }
+    }
+
+    // Assume that if hint is zero and we have no evidence we've set it
+    // (haveHints), then it isn't really known.
+    private float hintValue(float hint) {
+      if (haveHints || hint != 0.0) {
+	return hint;
+      } else {
+	return -1.0f;
+      }
+    }
+
 
     public String getId() {
       return id;
@@ -605,16 +637,24 @@ public interface IdentityManager extends LockssManager {
     }
 
     public String toString() {
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       sb.append("[IdentityAgreement: ");
       sb.append("id=");
       sb.append(id);
-      sb.append(", ");
-      sb.append("lastAgree=");
+      sb.append(", lastAgree=");
       sb.append(lastAgree);
-      sb.append(", ");
-      sb.append("lastDisagree=");
+      sb.append(", lastDisagree=");
       sb.append(lastDisagree);
+      sb.append(", (agree,max)=(");
+      sb.append(percentAgreement);
+      sb.append(",");
+      sb.append(highestPercentAgreement);
+      sb.append(", hints=");
+      sb.append(haveHints);
+      sb.append(", (hint,max)=(");
+      sb.append(percentAgreementHint);
+      sb.append(",");
+      sb.append(highestPercentAgreementHint);
       sb.append("]");
       return sb.toString();
     }
@@ -623,8 +663,12 @@ public interface IdentityManager extends LockssManager {
       if (obj instanceof IdentityAgreement) {
         IdentityAgreement ida = (IdentityAgreement)obj;
         return (id.equals(ida.getId())
-            && ida.getLastDisagree() == lastDisagree
-            && ida.getLastAgree() == lastAgree);
+            && ida.getLastDisagree() == getLastDisagree()
+            && ida.getLastAgree() == getLastAgree()
+            && ida.getPercentAgreement() == getPercentAgreement()
+            && ida.getHighestPercentAgreement() == getHighestPercentAgreement()
+            && ida.getPercentAgreementHint() == getPercentAgreementHint()
+            && ida.getHighestPercentAgreementHint() == getHighestPercentAgreementHint());
       }
       return false;
     }

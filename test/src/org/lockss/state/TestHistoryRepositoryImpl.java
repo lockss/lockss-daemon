@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.70 2008-04-02 20:26:36 edwardsb1 Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.71 2008-09-09 07:55:22 tlipkis Exp $
  */
 
 /*
@@ -487,10 +487,12 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
       new IdentityManager.IdentityAgreement(testID1);
     id1.setLastAgree(123);
     id1.setLastDisagree(321);
+    id1.setPercentAgreement(0.5f);
     IdentityManager.IdentityAgreement id2 =
       new IdentityManager.IdentityAgreement(testID2);
     id2.setLastAgree(456);
     id2.setLastDisagree(654);
+    id2.setPercentAgreementHint(0.8f);
 
     repository.storeIdentityAgreements(ListUtil.list(id1, id2));
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
@@ -506,11 +508,19 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertSame(testID1, idmgr.stringToPeerIdentity(id1.getId()));
     assertEquals(123, id1.getLastAgree());
     assertEquals(321, id1.getLastDisagree());
+    assertEquals(.5f, id1.getPercentAgreement());
+    assertEquals(.5f, id1.getHighestPercentAgreement());
+    assertEquals(-1.0f, id1.getPercentAgreementHint());
+    assertEquals(-1.0f, id1.getHighestPercentAgreementHint());
 
     id2 = (IdentityManager.IdentityAgreement)idList.get(1);
     assertSame(testID2, idmgr.stringToPeerIdentity(id2.getId()));
     assertEquals(456, id2.getLastAgree());
     assertEquals(654, id2.getLastDisagree());
+    assertEquals(0.0f, id2.getPercentAgreement());
+    assertEquals(0.0f, id2.getHighestPercentAgreement());
+    assertEquals(0.8f, id2.getPercentAgreementHint());
+    assertEquals(0.8f, id2.getHighestPercentAgreementHint());
   }
 
   /**
