@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdRamLinkExtractorFactory.java,v 1.1 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id: TestBlackbirdRamLinkExtractorFactory.java,v 1.2 2008-09-09 07:53:07 tlipkis Exp $
  */
 
 /*
@@ -58,10 +58,10 @@ public class TestBlackbirdRamLinkExtractorFactory
     Set expected = SetUtil.set(TO_URL + "blah.rm",
 			       TO_URL + "blah2.rm",
 			       TO_URL + "blah3.rm");
-    Set actual = extractUrls(FROM_URL + "blah.rm\n"+
-			     TO_URL + "blah2.rm\n"+
-			     FROM_URL + "blah3.rm\n");
-    assertEquals(expected, actual);
+    Collection actual = extractUrls(FROM_URL + "blah.rm\n"+
+				    TO_URL + "blah2.rm\n"+
+				    FROM_URL + "blah3.rm\n");
+    assertEquals(expected, SetUtil.theSet(actual));
   }
 
   public void testTranslateUrlsHandlesCase() throws Exception {
@@ -69,9 +69,9 @@ public class TestBlackbirdRamLinkExtractorFactory
       SetUtil.set("http://www.blackbird.vcu.edu/lockss_media/blah.rm",
 		  "http://www.blackbird.vcu.edu/lockss_media/blah2.rm",
 		  "http://www.blackbird.vcu.edu/lockss_media/blah3.rm");
-    Set actual = extractUrls("rtsp://video.vcu.edu/blackbird/blah.rm\n"+
-			     "rtsp://VIDEO.VCU.EDU/blackbird/blah2.rm\n"+
-			     "RTSP://video.vcu.edu/blackbird/blah3.rm\n");
-    assertEquals(expected, actual);
+    Collection actual = extractUrls("rtsp://video.vcu.edu/blackbird/blah.rm\n"+
+				    "rtsp://VIDEO.VCU.EDU/blackbird/blah2.rm\n"+
+				    "RTSP://video.vcu.edu/blackbird/blah3.rm\n");
+    assertEquals(expected, SetUtil.theSet(actual));
   }
 }
