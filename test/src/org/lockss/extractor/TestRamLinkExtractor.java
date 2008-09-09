@@ -1,5 +1,5 @@
 /*
- * $Id: TestRamLinkExtractor.java,v 1.3 2008-02-20 19:11:55 tlipkis Exp $
+ * $Id: TestRamLinkExtractor.java,v 1.3.8.1 2008-09-09 07:58:04 tlipkis Exp $
  */
 
 /*
@@ -89,29 +89,29 @@ public abstract class TestRamLinkExtractor extends LinkExtractorTestCase {
     public void testIgnoresComments() throws Exception {
       Set expected = SetUtil.set("http://www.example.com/blah.rm",
 				 "http://www.example.com/blah3.rm");
-      Set actual = extractUrls("http://www.example.com/blah.rm\n"+
-			       "#http://www.example.com/blah2.rm\n\n"+
-			       "http://www.example.com/blah3.rm\n");
-      assertEquals(expected, actual);
+      Collection actual = extractUrls("http://www.example.com/blah.rm\n"+
+				      "#http://www.example.com/blah2.rm\n\n"+
+				      "http://www.example.com/blah3.rm\n");
+      assertEquals(expected, SetUtil.theSet(actual));
     }
 
     public void testStripsParams() throws Exception {
       Set expected = SetUtil.set("http://www.example.com/blah.rm",
 				 "http://www.example.com/blah3.rm");
-      Set actual =
+      Collection actual =
 	extractUrls("http://www.example.com/blah.rm?blah=blah\n"+
 		    "http://www.example.com/blah3.rm?blah2=blah2&blah3=asdf\n");
-      assertEquals(expected, actual);
+      assertEquals(expected, SetUtil.theSet(actual));
     }
 
     public void testMultipleLinks() throws Exception {
       Set expected = SetUtil.set("http://www.example.com/blah.rm",
 				 "http://www.example.com/blah2.rm",
 				 "http://www.example.com/blah3.rm");
-      Set actual = extractUrls("http://www.example.com/blah.rm\n"+
-			       "http://www.example.com/blah2.rm\n\n"+
-			       "http://www.example.com/blah3.rm\n");
-      assertEquals(expected, actual);
+      Collection actual = extractUrls("http://www.example.com/blah.rm\n"+
+				      "http://www.example.com/blah2.rm\n\n"+
+				      "http://www.example.com/blah3.rm\n");
+      assertEquals(expected, SetUtil.theSet(actual));
     }
   }
 
@@ -133,20 +133,20 @@ public abstract class TestRamLinkExtractor extends LinkExtractorTestCase {
       Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
 				 "http://www.example.com/blah2.rm",
 				 "http://www.example.com/media/blah3.rm");
-      Set actual = extractUrls("rtsp://www.example.com/blah.rm\n"+
-			       "http://www.example.com/blah2.rm\n\n"+
-			       "rtsp://www.example.com/blah3.rm\n");
-      assertEquals(expected, actual);
+      Collection actual = extractUrls("rtsp://www.example.com/blah.rm\n"+
+				      "http://www.example.com/blah2.rm\n\n"+
+				      "rtsp://www.example.com/blah3.rm\n");
+      assertEquals(expected, SetUtil.theSet(actual));
     }
 
     public void testTranslateUrlsHandlesCase() throws Exception {
       Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
 				 "http://www.example.com/media/blah2.rm",
 				 "http://www.example.com/media/blah3.rm");
-      Set actual = extractUrls("rtsp://www.example.com/blah.rm\n"+
-			       "rtsp://www.EXAMPLE.com/blah2.rm\n\n"+
-			       "RTSP://www.example.com/blah3.rm\n");
-      assertEquals(expected, actual);
+      Collection actual = extractUrls("rtsp://www.example.com/blah.rm\n"+
+				      "rtsp://www.EXAMPLE.com/blah2.rm\n\n"+
+				      "RTSP://www.example.com/blah3.rm\n");
+      assertEquals(expected, SetUtil.theSet(actual));
     }
   }
 
