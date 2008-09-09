@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.27 2008-04-01 08:02:11 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.28 2008-09-09 07:52:06 tlipkis Exp $
  */
 
 /*
@@ -183,6 +183,7 @@ public class TestEditableDefinablePlugin
     "NoRetryRepositoryException",
     "UnimplementedCodeException",
     "MalformedURLException",
+    "ExtractionError",
     "RetryableNetworkException_2",
     "RetryableNetworkException_3",
     "RetryableNetworkException_2_10S",

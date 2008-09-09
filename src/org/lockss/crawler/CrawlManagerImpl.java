@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.121 2008-08-20 05:49:31 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.122 2008-09-09 07:52:07 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
 import org.apache.commons.collections.set.ListOrderedSet;
+import org.apache.oro.text.regex.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -45,6 +46,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.state.NodeState;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.alert.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.exploded.*;
@@ -209,6 +211,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 500;
 
+  /** Regexp matching URLs we never want to collect.  Intended to stop
+   * runaway crawls by catching recursive URLS */
+  static final String PARAM_EXCLUDE_URL_PATTERN =
+    PREFIX + "globallyExcludedUrlPattern";
+  static final String DEFAULT_EXCLUDE_URL_PATTERN = null;
+
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
 
@@ -222,6 +230,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
                                     "single_crawl_status_table";
 
   private PluginManager pluginMgr;
+  private AlertManager alertMgr;
 
   //Tracking crawls for the status info
   private CrawlManagerStatus cmStatus;
@@ -247,6 +256,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     DEFAULT_START_CRAWLS_INITIAL_DELAY;
   private long paramMinWindowOpenFor = DEFAULT_MIN_WINDOW_OPEN_FOR;
   private boolean paramRestartAfterCrash = DEFAULT_RESTART_AFTER_CRASH;
+  private Pattern globallyExcludedUrlPattern;
 
   private int histSize = DEFAULT_HISTORY_MAX;
 
@@ -272,6 +282,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     cmStatus.setOdc(paramOdc);
 
     pluginMgr = getDaemon().getPluginManager();
+    alertMgr = getDaemon().getAlertManager();
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
 				      new CrawlManagerStatusAccessor(this));
@@ -426,6 +437,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	}
       }
 
+      if (changedKeys.contains(PARAM_EXCLUDE_URL_PATTERN)) {
+	setExcludedUrlPattern(config.get(PARAM_EXCLUDE_URL_PATTERN,
+					 DEFAULT_EXCLUDE_URL_PATTERN),
+			      DEFAULT_EXCLUDE_URL_PATTERN);
+      }
+
       if (changedKeys.contains(PARAM_MAX_REPAIR_RATE)) {
 	resetRateLimiters(config, repairRateLimiters,
 			  PARAM_MAX_REPAIR_RATE,
@@ -455,6 +472,52 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public boolean isCrawlerEnabled() {
     return crawlerEnabled;
   }
+
+  public boolean isGloballyExcludedUrl(ArchivalUnit au, String url) {
+    if (globallyExcludedUrlPattern == null) {
+      return false;
+    }
+    boolean isExcluded =
+      RegexpUtil.getMatcher().contains(url, globallyExcludedUrlPattern);
+    if (isExcluded) {
+      String msg = "URL excluded (possible recursion): " + url;
+      logger.siteWarning(msg);
+      if (alertMgr != null) {
+	alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_EXCLUDED_URL, au), msg);
+      }
+    }
+    return isExcluded;
+  }
+
+  void setExcludedUrlPattern(String pat, String defaultPat) {
+    if (pat != null) {
+      int flags =
+	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
+      try {
+	globallyExcludedUrlPattern = RegexpUtil.getCompiler().compile(pat,
+								      flags);
+	logger.info("Global exclude pattern: " + pat);
+	return;
+      } catch (MalformedPatternException e) {
+	logger.error("Illegal global exclude pattern: " + pat, e);
+	if (defaultPat != null && !defaultPat.equals(pat)) {
+	  try {
+	    globallyExcludedUrlPattern =
+	      RegexpUtil.getCompiler().compile(defaultPat, flags);
+	    logger.info("Using default global exclude pattern: " + defaultPat);
+	    return;
+	  } catch (MalformedPatternException e2) {
+	    logger.error("Illegal default global exclude pattern: "
+			 + defaultPat,
+			 e2);
+	  }
+	}
+      }
+    }
+    globallyExcludedUrlPattern = null;
+    logger.debug("No global exclude pattern");
+  }
+
 
   static final Runnable NULL_RUNNER = new Runnable() {
       public void run() {}
@@ -822,10 +885,15 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     //check CrawlSpec if it is Oai Type then create OaiCrawler Instead of NewContentCrawler
     if (spec instanceof OaiCrawlSpec) {
       logger.debug("Creating OaiCrawler for " + au);
-      return new OaiCrawler(au, spec, AuUtil.getAuState(au));
+      OaiCrawler oc = new OaiCrawler(au, spec, AuUtil.getAuState(au));
+      oc.setCrawlManager(this);
+      return oc;
     } else {
       logger.debug("Creating NewContentCrawler for " + au);
-      return new NewContentCrawler(au, spec, AuUtil.getAuState(au));
+      NewContentCrawler nc =
+	new NewContentCrawler(au, spec, AuUtil.getAuState(au));
+      nc.setCrawlManager(this);
+      return nc;
     }
   }
 
@@ -833,8 +901,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 				      CrawlSpec spec,
 				      Collection  repairUrls,
 				      float percentRepairFromCache) {
-    return new RepairCrawler(au, spec, AuUtil.getAuState(au),
-			     repairUrls, percentRepairFromCache);
+    RepairCrawler rc = new RepairCrawler(au, spec, AuUtil.getAuState(au),
+					 repairUrls, percentRepairFromCache);
+    rc.setCrawlManager(this);
+    return rc;
   }
 
   private static int createIndex = 0;
@@ -953,6 +1023,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	removeFromRunningCrawls(crawler);
 	cmStatus.incrFinished(crawlSuccessful);
 	CrawlerStatus cs = crawler.getStatus();
+	cmStatus.touchCrawlStatus(cs);
 	callCallback(cb, cookie, crawlSuccessful, cs);
 	if (cs != null) cs.sealCounters();
       }
@@ -1024,12 +1095,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (goOn) {
 	try {
 	  logger.debug("Waiting until AUs started");
-	  waitUntilAusStarted();
 	  if (paramOdc) {
 	    startOneWait.expireIn(paramStartCrawlsInitialDelay);
 	    cmStatus.setNextCrawlStarter(startOneWait);
 	    startOneWait.sleep();
 	  } else {
+	    waitUntilAusStarted();
 	    logger.debug3("AUs started");
 	    Deadline initial = Deadline.in(paramStartCrawlsInitialDelay);
 	    cmStatus.setNextCrawlStarter(initial);

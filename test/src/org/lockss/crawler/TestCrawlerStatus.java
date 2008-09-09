@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.4 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.5 2008-09-09 07:52:07 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,8 @@ public class TestCrawlerStatus extends LockssTestCase {
 		 c1.getDefaultMessage(Crawler.STATUS_REPO_ERR));
     assertEquals("Interrupted by daemon exit",
 		 c1.getDefaultMessage(Crawler.STATUS_RUNNING_AT_CRASH));
+    assertEquals("Link extractor error",
+		 c1.getDefaultMessage(Crawler.STATUS_EXTRACTOR_ERROR));
   }
 
   public void testGetCrawlStatus() {

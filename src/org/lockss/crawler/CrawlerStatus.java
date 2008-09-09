@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.6 2007-10-09 00:57:41 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.7 2008-09-09 07:52:07 tlipkis Exp $
  */
 
 /*
@@ -96,6 +96,8 @@ public class CrawlerStatus {
     DEFAULT_MESSAGES.put(Crawler.STATUS_REPO_ERR, "Repository error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_RUNNING_AT_CRASH,
 			 "Interrupted by daemon exit");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_EXTRACTOR_ERROR,
+			 "Link extractor error");
   }
 
   private static int ctr = 0;		// Instance counter (for getKey())

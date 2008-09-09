@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.13 2008-04-01 08:00:55 tlipkis Exp $
+ * $Id: CacheException.java,v 1.14 2008-09-09 07:52:07 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -508,17 +508,40 @@ public class CacheException extends IOException {
       extends UnretryableException {
     public MalformedURLException() {
       super();
-      suppressStackTrace = false;
     }
 
     public MalformedURLException(String message) {
       super(message);
-      suppressStackTrace = false;
     }
 
     /** Create this if details of causal exception are more relevant. */
     public MalformedURLException(Exception e) {
       super(e.toString());
+      initCause(e);
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+  }
+
+  /** An error extracting URLs from a collected file.  No failure. */
+  public static class ExtractionError extends UnretryableException {
+    public ExtractionError() {
+      super();
+    }
+
+    public ExtractionError(String message) {
+      super(message);
+    }
+
+    public ExtractionError(Exception e) {
+      super(e.toString());
+      initCause(e);
+    }
+
+    public ExtractionError(String message, Exception e) {
+      super(message);
       initCause(e);
     }
 
