@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.26.2.1 2008-08-26 02:51:12 dshr Exp $
+ * $Id: IdentityManagerImpl.java,v 1.26.2.2 2008-09-09 08:02:36 tlipkis Exp $
  */
 
 /*
@@ -1196,9 +1196,21 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
-    Map map = findAuAgreeMap(au);
+    Map<String,IdentityAgreement> map = findAuAgreeMap(au);
     synchronized (map) {
-      return new ArrayList(map.values());
+      boolean includeV1 = localPeerIdentities[Poll.V1_PROTOCOL] != null;
+      ArrayList res = new ArrayList();
+      for (IdentityAgreement ida : map.values()) {
+	try {
+	  PeerIdentity pid = stringToPeerIdentity(ida.getId());
+	  if (includeV1 || pid.getPeerAddress().isStream()) {
+	    res.add(ida);
+	  }
+	} catch (MalformedIdentityKeyException e) {
+	  // just don't add to result
+	}
+      }
+      return res;
     }
   }
 
