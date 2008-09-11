@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.57 2008-02-19 23:34:27 edwardsb1 Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.58 2008-09-11 23:25:13 tlipkis Exp $
  */
 
 /*
@@ -730,6 +730,122 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("test stream 2", resultStr);
     props = leaf.getNodeContents().getProperties();
     assertEquals("value 2", props.getProperty("test 1"));
+  }
+
+  static final int DEL_NODE_DIR = 1;
+  static final int DEL_CONTENT_DIR = 2;
+  static final int DEL_CONTENT_FILE = 3;
+  static final int DEL_PROPS_FILE = 4;
+
+
+  public void testDisappearingFile(int whichFile, boolean tryRead)
+      throws Exception {
+    String url = "http://www.example.com/foo.html";
+    RepositoryNodeImpl leaf = (RepositoryNodeImpl)repo.createNewNode(url);
+    String nodeLoc = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							      mau);
+    nodeLoc = LockssRepositoryImpl.mapUrlToFileLocation(nodeLoc, url);
+    File testFile;
+    switch (whichFile) {
+    case DEL_NODE_DIR:
+      testFile = new File(nodeLoc);
+      break;
+    case DEL_CONTENT_DIR:
+      testFile = new File(nodeLoc, "#content");
+      break;
+    case DEL_CONTENT_FILE:
+      testFile = new File(nodeLoc, "#content/current");
+      break;
+    case DEL_PROPS_FILE:
+      testFile = new File(nodeLoc, "#content/current.props");
+      break;
+    default:
+      throw new UnsupportedOperationException();
+    }
+    assertFalse(testFile.exists());
+
+    Properties props1 = PropUtil.fromArgs("key1", "value 1");
+
+    createContentVersion(leaf, "test content 11111", props1);
+    assertEquals(1, leaf.getCurrentVersion());
+
+    assertTrue(testFile.exists());
+    switch (whichFile) {
+    case DEL_NODE_DIR:
+    case DEL_CONTENT_DIR:
+      assertTrue(FileUtil.delTree(testFile));
+      break;
+    case DEL_CONTENT_FILE:
+    case DEL_PROPS_FILE:
+      assertTrue(testFile.delete());
+      break;
+    }
+    assertFalse(testFile.exists());
+
+    Properties props2 = PropUtil.fromArgs("key2", "value 2");
+    RepositoryNode leaf2 = repo.createNewNode(url);
+    assertSame(leaf, leaf2);
+    assertTrue(leaf.hasContent());
+    if (tryRead) {
+      try {
+	getLeafContent(leaf);
+      } catch (LockssRepository.RepositoryStateException e) {
+	// expected
+      }
+    }
+    leaf2.makeNewVersion();
+
+    writeToLeaf(leaf, "test content 22222");
+    leaf.setNewProperties(props2);
+    leaf.sealNewVersion();
+
+    assertTrue(testFile.exists());
+    int expver = 2;
+    // if we tried to read while node or content dir was missing, version
+    // number will have been reset.
+    if (tryRead) {
+      switch (whichFile) {
+      case DEL_NODE_DIR:
+      case DEL_CONTENT_DIR:
+	expver = 1;
+      }
+    }
+    assertEquals(expver, leaf.getCurrentVersion());
+
+    assertEquals("test content 22222", getLeafContent(leaf));
+    assertEquals("value 2", leaf.getNodeContents().getProperties().get("key2"));
+  }
+
+  public void testDisappearingNodeDir() throws Exception {
+    testDisappearingFile(DEL_NODE_DIR, false);
+  }
+
+  public void testDisappearingContentDir() throws Exception {
+    testDisappearingFile(DEL_CONTENT_DIR, false);
+  }
+
+  public void testDisappearingContentFile() throws Exception {
+    testDisappearingFile(DEL_CONTENT_FILE, false);
+  }
+
+  public void testDisappearingPropsFile() throws Exception {
+    testDisappearingFile(DEL_PROPS_FILE, false);
+  }
+
+  public void testDisappearingNodeDirWithRead() throws Exception {
+    testDisappearingFile(DEL_NODE_DIR, true);
+  }
+
+  public void testDisappearingContentDirWithRead() throws Exception {
+    testDisappearingFile(DEL_CONTENT_DIR, true);
+  }
+
+  public void testDisappearingContentFileWithRead() throws Exception {
+    testDisappearingFile(DEL_CONTENT_FILE, true);
+  }
+
+  public void testDisappearingPropsFileWithRead() throws Exception {
+    testDisappearingFile(DEL_PROPS_FILE, true);
   }
 
   public void testMakeNewVersionWithoutClosingStream() throws Exception {

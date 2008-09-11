@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.80 2008-08-17 08:46:49 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.81 2008-09-11 23:25:13 tlipkis Exp $
  */
 
 /*
@@ -569,13 +569,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
     ensureCurrentInfoLoaded();
-    if (currentVersion == 0) {
-      if (!FileUtil.ensureDirExists(contentDir)) {
-	logger.error("Couldn't create cache directory: " +contentDir);
-	throw new LockssRepository.RepositoryStateException("mkdirs(" +
-							    contentDir +
-							    ") failed.");
-      }
+
+    // Needs to be done unconditionally in case node or content dir has
+    // disappeared.  (Was:   if ( currentVersion == 0) {  )
+    if (!FileUtil.ensureDirExists(contentDir)) {
+      logger.error("Couldn't create cache directory: " +contentDir);
+      throw new LockssRepository.RepositoryStateException("mkdirs(" +
+							  contentDir +
+							  ") failed.");
     }
 
     // if restoring from deletion or inactivation
@@ -1595,7 +1596,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
   
   public String toString() {
-    return "[reponode: " + url + "]";
+    StringBuilder sb = new StringBuilder();
+    sb.append("[reponode: (");
+    List flags = new ArrayList();
+    if (newVersionOpen) flags.add("newver");
+    if (newPropsSet) flags.add("np");
+    if (wasInactive) flags.add("wasinact");
+    if (nodePropsLoaded) flags.add("p");
+    if (curOutputStream != null) flags.add("hasout");
+    sb.append(StringUtil.separatedString(flags, ","));
+    sb.append(") ver: ");
+    sb.append(currentVersion);
+    sb.append(", ");
+    sb.append(url);
+    sb.append("]");
+    return sb.toString();
   }
 
   public class RepositoryNodeVersionImpl implements RepositoryNodeVersion {
