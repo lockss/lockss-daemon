@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.58 2008-04-01 08:02:11 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.59 2008-09-14 22:10:28 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
 import org.lockss.crawler.*;
+import org.lockss.config.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -88,6 +89,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     mau = new MyMockArchivalUnit();
     mau.setCrawlSpec(new SpiderCrawlSpec(tempDirPath, null));
+    mau.setConfiguration(ConfigManager.newConfiguration());
+
     plugin = new MockPlugin();
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
@@ -466,6 +469,18 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     assertEquals(TEST_URL, mconn.getURL());
     assertEquals(null, mconn.localAddr);
+  }
+
+  public void testCredentials() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    Configuration auConfig = mau.getConfiguration();
+    auConfig.put(ConfigParamDescr.USER_CREDENTIALS.getKey(), "uuu:ppp");
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.cache();
+    assertEquals("uuu", mconn.username);
+    assertEquals("ppp", mconn.password);
   }
 
   public void testSetReqProp() throws Exception {
@@ -1222,6 +1237,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String proxyHost = null;
     int proxyPort = -1;
     IPAddr localAddr = null;
+    String username;
+    String password;
 
     public void setProxy(String host, int port) {
       proxyHost = host;
@@ -1230,6 +1247,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     public void setLocalAddress(IPAddr addr) {
       localAddr = addr;
+    }
+
+    public void setCredentials(String username, String password) {
+      this.username = username;
+      this.password = password;
     }
   }
 

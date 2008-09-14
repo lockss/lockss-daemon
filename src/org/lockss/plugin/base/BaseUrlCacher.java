@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.77 2008-04-01 08:02:11 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.78 2008-09-14 22:10:28 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.text.*;
 
 import org.lockss.app.*;
 import org.lockss.state.*;
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -604,6 +605,13 @@ public class BaseUrlCacher implements UrlCacher {
       if (localAddr != null) {
 	conn.setLocalAddress(localAddr);
       }
+      String userPass = getUserPass();
+      if (userPass != null) {
+	List<String> lst = StringUtil.breakAt(userPass, ':');
+	if (lst.size() == 2) {
+	  conn.setCredentials(lst.get(0), lst.get(1));
+	}
+      }
       if (reqProps != null) {
 	for (Iterator iter = reqProps.keySet().iterator(); iter.hasNext(); ) {
 	  String key = (String)iter.next();
@@ -636,6 +644,14 @@ public class BaseUrlCacher implements UrlCacher {
       conn.release();
       conn = null;
     }
+  }
+
+  String getUserPass() {
+    Configuration auConfig = au.getConfiguration();
+    if (auConfig != null) {
+      return auConfig.get(ConfigParamDescr.USER_CREDENTIALS.getKey());
+    }
+    return null;
   }
 
   /** Handle a single redirect response: determine whether it should be

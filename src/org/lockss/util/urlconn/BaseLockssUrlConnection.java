@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.8 2007-07-31 06:30:56 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.9 2008-09-14 22:10:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -103,6 +103,10 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   public void setIfModifiedSince(String time) {
     log.debug3("setIfModifiedSince(" + time + ")");
     setRequestProperty("If-Modified-Since", time);
+  }
+
+  public void setCredentials(String username, String password) {
+    throw new UnsupportedOperationException();
   }
 
   // Preferred date format according to RFC 2068(HTTP1.1),

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.39 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.40 2008-09-14 22:10:28 tlipkis Exp $
  */
 
 /*
@@ -185,6 +185,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setType(TYPE_STRING)
     .setSize(40)
     .setDescription("Spec for journal in the OAI crawl");
+
+  public static final ConfigParamDescr USER_CREDENTIALS =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setKey("user_pass")
+    .setDisplayName("Username:Password")
+    .setType(TYPE_STRING)
+    .setSize(30);
 
   // Internal use
   public static final ConfigParamDescr AU_CLOSED =

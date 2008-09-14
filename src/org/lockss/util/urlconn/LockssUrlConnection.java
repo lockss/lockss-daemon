@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.11 2007-07-31 06:30:55 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.12 2008-09-14 22:10:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -115,6 +115,9 @@ public interface LockssUrlConnection {
 
   /** Set the cookie policy to "rfc2109", "netscape" or "compatibility". */
   public void setCookiePolicy(String policy);
+
+  /** Set the username/password for the connection. */
+  public void setCredentials(String username, String password);
 
   /** Return numeric response code */
   public int getResponseCode();

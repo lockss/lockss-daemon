@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.10 2007-07-31 06:30:55 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.11 2008-09-14 22:10:28 tlipkis Exp $
  */
 
 /*
@@ -166,6 +166,15 @@ public class FuncLockssHttpClient extends LockssTestCase {
     "Connection: Keep-Alive\r\n" +
     "Keep-Alive: timeout=15, max=98\r\n";
 
+  static String RESP_401 =
+    "HTTP/1.1 401 Authorization Required\r\n" +
+    "Date: Sun, 14 Sep 2008 20:46:12 GMT\r\n" +
+    "WWW-Authenticate: Basic realm=\"Middle Earth\"\r\n" +
+    "Content-Length: 0\r\n" +
+    "Keep-Alive: timeout=15, max=100\r\n" +
+    "Connection: Keep-Alive\r\n" +
+    "Content-Type: text/html; charset=iso-8859-1\r\n";
+
   // turn the string into a complete http header by appending crlf to it
   String resp(String hdr) {
     return resp(hdr, null);
@@ -238,6 +247,33 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
     assertEquals(200, conn.getResponseCode());
     conn.release();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  public void testAuth() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_401), resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "foo",
+				  connectionPool);
+    conn.setCredentials("userfoo", "passbar");
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req1 = th.getRequest(0);
+    assertMatchesRE("^GET /foo HTTP/", req1);
+    assertNotMatchesRE("Authorization:", req1);
+    // second request only should have Authorization: header
+    String req2 = th.getRequest(1);
+    assertMatchesRE("Authorization: Basic dXNlcmZvbzpwYXNzYmFy", req2);
+    assertEquals(200, conn.getResponseCode());
+    conn.release();
+
     th.stopServer();
     assertEquals(1, th.getNumConnects());
   }

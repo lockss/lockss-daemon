@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.28 2008-08-26 06:50:50 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.29 2008-09-14 22:10:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -34,11 +34,12 @@ import java.io.*;
 import java.util.Properties;
 
 import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.auth.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.*;
-import org.apache.commons.httpclient.util.*;
 import org.apache.commons.httpclient.protocol.Protocol;
+import org.apache.commons.httpclient.util.*;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
@@ -237,6 +238,14 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     HttpParams params = method.getParams();
     params.setParameter(HttpMethodParams.COOKIE_POLICY,
 			getCookiePolicy(policy));
+  }
+
+  public void setCredentials(String username, String password) {
+    assertNotExecuted();
+    Credentials credentials = new UsernamePasswordCredentials(username,
+							      password);
+    HttpState state = client.getState();
+    state.setCredentials(AuthScope.ANY, credentials);
   }
 
   public String getResponseHeaderFieldVal(int n) {
