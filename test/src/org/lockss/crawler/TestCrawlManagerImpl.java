@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.75 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.76 2008-09-14 06:04:17 tlipkis Exp $
  */
 
 /*
@@ -860,7 +860,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "1s");
       theDaemon.setAusStarted(true);
       ConfigurationUtil.addFromProps(p);
-      crawlManager.ausStartedSem = new SimpleBinarySemaphore();
+      crawlManager.ausStartedSem = new OneShotSemaphore();
       crawlManager.startService();
       HangingCrawler[] crawler = new HangingCrawler[tot];
       SimpleBinarySemaphore endSem = new SimpleBinarySemaphore();
@@ -888,7 +888,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       pluginMgr.addRegistryAu(rau);
       
       // now let the crawl starter proceed
-      crawlManager.ausStartedSem.give();
+      crawlManager.ausStartedSem.fill();
       // Ensure they all got queued
       List exe = Collections.EMPTY_LIST;
       Interrupter intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
@@ -1167,7 +1167,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	    ""+(nthreads-1)); 
 
       ConfigurationUtil.addFromProps(p);
-      crawlManager.ausStartedSem = new SimpleBinarySemaphore();
+      crawlManager.ausStartedSem = new OneShotSemaphore();
       crawlManager.startService();
 
       MockArchivalUnit[] aus = makeMockAus(num);
@@ -1228,7 +1228,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       
       theDaemon.setAusStarted(true);
       // now let the crawl starter proceed
-      crawlManager.ausStartedSem.give();
+      crawlManager.ausStartedSem.fill();
       // Ensure they all got queued
       List exe = Collections.EMPTY_LIST;
       Interrupter intr = interruptMeIn(TIMEOUT_SHOULDNT * 2, true);
@@ -1369,7 +1369,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private boolean recordExecute = false;
     private List executed = new ArrayList();
     private SimpleBinarySemaphore executedSem = new SimpleBinarySemaphore();
-    private SimpleBinarySemaphore ausStartedSem;
+    private OneShotSemaphore ausStartedSem;
 
     protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
       MockCrawler crawler = getCrawler(au);
@@ -1402,15 +1402,23 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       super.execute(run);
     }    
 
-//     @Override
-//     void waitUntilAusStarted() throws InterruptedException {
-//       if (ausStartedSem != null) {
-// 	ausStartedSem.take();
-//       }
-//       else {
-// 	super.waitUntilAusStarted();
-//       }
-//     }
+    @Override
+    void waitUntilAusStarted() throws InterruptedException {
+      if (ausStartedSem != null) {
+	ausStartedSem.waitFull(Deadline.MAX);
+      } else {
+	super.waitUntilAusStarted();
+      }
+    }
+
+    @Override
+    boolean areAusStarted() {
+      if (ausStartedSem != null) {
+	return ausStartedSem.isFull();
+      } else {
+	return super.areAusStarted();
+      }
+    }
 
     void addToRunningRateKeys(ArchivalUnit au) {
       if (au.getFetchRateLimiterKey() != null) {
