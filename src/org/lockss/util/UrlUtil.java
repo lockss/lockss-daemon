@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.48 2007-12-19 05:14:19 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.49 2008-09-15 02:46:10 dshr Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -856,6 +856,23 @@ public class UrlUtil {
     int pos = url.indexOf(PROTOCOL_SUBSTRING);
     if (pos >= 0) {
       return url.substring(pos + PROTOCOL_SUBSTRING.length());
+    }
+    return url;
+  }
+
+  /**
+   * <p>Returns a URL for a resource in a .jar on the classpath</p>
+   * @param resourceName name of the resource
+   * @return A new URL for the resource
+   */
+  public static URL getResourceUrl(String resourceName) {
+    URL url = null;
+    if (resourceName != null) {
+      ClassLoader loader = Thread.currentThread().getContextClassLoader();
+      url = loader.getResource(resourceName);
+      log.debug3(resourceName + " maps to " + url.toString());
+    } else {
+      log.error("null resourceName");
     }
     return url;
   }
