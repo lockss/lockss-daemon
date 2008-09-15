@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.44 2008-08-17 08:43:20 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.45 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -196,6 +196,13 @@ public interface ArchivalUnit {
    * @return the {@link List} of urls to crawl
    */
   public List<String> getNewContentCrawlUrls();
+
+  /**
+   * Return the host-independent path to look for permission pages on hosts
+   * not covered by getPermissionPages().  String must start with a slash
+   * @return path, or null if no such rule
+   */
+  public String getPerHostPermissionPath();
 
   /**
    * Query the {@link AuState} object to determine if this is the proper

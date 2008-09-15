@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.25 2008-07-03 18:51:31 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.26 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class PermissionMap {
   public static final int DEFAULT_PERMISSION_BUF_MAX = 50 * 1024;
 
   private ArchivalUnit au;
-  private HashMap permissionAtUrl;
+  private HashMap<String,PermissionRecord> permissionAtUrl;
   private List daemonPermissionCheckers;
   private PermissionChecker pluginPermissionChecker;
 
@@ -65,6 +65,7 @@ public class PermissionMap {
   private Crawler.PermissionHelper pHelper;
   private AlertManager alertMgr;
   private int streamResetMax = DEFAULT_PERMISSION_BUF_MAX;
+  private String perHostPermissionPath;
 
   public PermissionMap(ArchivalUnit au, Crawler.PermissionHelper pHelper,
                        List daemonPermissionCheckers,
@@ -74,7 +75,7 @@ public class PermissionMap {
     } else if (pHelper == null) {
       throw new IllegalArgumentException("Called with null crawler");
     }
-    permissionAtUrl = new HashMap();
+    permissionAtUrl = new HashMap<String,PermissionRecord>();
     crawlStatus = pHelper.getCrawlerStatus();
     this.pHelper = pHelper;
     this.au = au;
@@ -98,7 +99,18 @@ public class PermissionMap {
    */
   private PermissionRecord get(String url) throws MalformedURLException{
     String key = UrlUtil.getHost(url).toLowerCase();
-    return (PermissionRecord)permissionAtUrl.get(key);
+    
+    PermissionRecord res = permissionAtUrl.get(key);
+    String perHostPath;
+    if (res == null && (perHostPath = getPerHostPermissionPath()) != null) {
+      // if no PermissionRecord for this host, but we have a permission
+      // path to use on "unknown" hosts, create a record for it
+      String permUrl = UrlUtil.resolveUri(UrlUtil.getUrlPrefix(url),
+					  perHostPath);
+      logger.debug2("Creating PermissionRecord: " + permUrl);
+      res = createRecord(permUrl);
+    }
+    return res;
   }
 
   /**
@@ -253,14 +265,11 @@ public class PermissionMap {
         crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR, err1);
         return false;
       case PermissionRecord.PERMISSION_UNCHECKED:
-        // shouldn't happen
-        logger.error("Permission unchecked for host: " + pUrl);
-        // fall through, re-fetch permission like PERMISSION_FETCH_FAILED
-      case PermissionRecord.PERMISSION_CRAWL_WINDOW_CLOSED:
-	logger.debug("Couldn't fetch permission page, " +
-			"because crawl window was closed");
-	crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
-	return false;
+        // per-host permission record creted on the fly
+        logger.debug3("Permission unchecked for host: " + pUrl);
+          // refetch page then recurse once
+	  probe(rec);
+          return hasPermission(url, false);
       case PermissionRecord.PERMISSION_FETCH_FAILED:
         if (retryIfFailed) {
 	  logger.siteWarning("Failed to fetch permission page, retrying: " +
@@ -280,6 +289,11 @@ public class PermissionMap {
 	  }
           return false;
         }
+      case PermissionRecord.PERMISSION_CRAWL_WINDOW_CLOSED:
+	logger.debug("Couldn't fetch permission page, " +
+			"because crawl window was closed");
+	crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
+	return false;
       case PermissionRecord.PERMISSION_REPOSITORY_ERROR:
         logger.error("Error trying to store: " + pUrl);
         crawlStatus.setCrawlStatus(Crawler.STATUS_REPO_ERR);
@@ -482,6 +496,18 @@ public class PermissionMap {
       IOUtil.safeClose(is);
     }
     return true;
+  }
+
+  public void setPerHostPermissionPath(String absolutePath)
+      throws MalformedURLException {
+    if (!absolutePath.startsWith("/")) {
+      throw new MalformedURLException("Per-host permission path must begin with slash: " + absolutePath);
+    }
+    perHostPermissionPath = absolutePath;
+  }
+
+  public String getPerHostPermissionPath() {
+    return perHostPermissionPath;
   }
 
   static class IgnoreCloseInputStream extends FilterInputStream {

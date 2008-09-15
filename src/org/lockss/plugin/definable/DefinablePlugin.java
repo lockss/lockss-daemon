@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.34 2008-08-26 06:49:41 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.35 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,8 @@ public class DefinablePlugin extends BasePlugin {
   /** Message to be displayed when user configures an AU with this plugin */
   public static final String KEY_PLUGIN_AU_CONFIG_USER_MSG =
     "plugin_au_config_user_msg";
+  public static final String KEY_PER_HOST_PERMISSION_PATH =
+    "plugin_per_host_permission_path";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";

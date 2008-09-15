@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.92 2008-08-17 08:40:29 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.93 2008-09-15 08:10:43 tlipkis Exp $
  */
 
 /*
@@ -412,6 +412,10 @@ public class NullPlugin {
     }
 
     public CrawlSpec getCrawlSpec() {
+      return null;
+    }
+
+    public String getPerHostPermissionPath() {
       return null;
     }
 

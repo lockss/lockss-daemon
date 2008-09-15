@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.31 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.32 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -315,6 +315,14 @@ public abstract class BaseCrawler
       // get the permission list from crawl spec
     permissionMap = new PermissionMap(au, this, getDaemonPermissionCheckers(),
 				      pluginPermissionChecker);
+    String perHost = au.getPerHostPermissionPath();
+    if (perHost != null) {
+      try {
+	permissionMap.setPerHostPermissionPath(perHost);
+      } catch (MalformedURLException e) {
+	logger.error("Plugin error", e);
+      }
+    }
     return permissionMap.init();
   }
 

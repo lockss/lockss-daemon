@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.79 2008-06-18 22:21:31 dshr Exp $
+ * $Id: MockArchivalUnit.java,v 1.80 2008-09-15 08:10:43 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
   private String fetchRateLimiterKey;
+  private String perHostPermissionPath;
 
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
 
@@ -157,6 +158,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public TypedEntryMap getProperties() {
     return propertyMap;
+  }
+
+  public String getPerHostPermissionPath() {
+    return perHostPermissionPath;
+  }
+
+  public void setPerHostPermissionPath(String path) {
+    perHostPermissionPath = path;
   }
 
   public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec spec) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.69 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.70 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -330,7 +330,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   public UrlCacher makeUrlCacher(String url) {
     UrlCacher uc = super.makeUrlCacher(url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
-    uc.setPermissionMapSource(this);
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }

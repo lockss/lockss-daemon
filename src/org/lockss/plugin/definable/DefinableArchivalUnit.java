@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.67 2008-08-26 06:50:18 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.68 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -175,6 +175,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return super.getPermissionPages();
     }
     return res;
+  }
+
+  public String getPerHostPermissionPath() {
+    return (String)definitionMap.getMapElement(DefinablePlugin.KEY_PER_HOST_PERMISSION_PATH);
   }
 
   @Override

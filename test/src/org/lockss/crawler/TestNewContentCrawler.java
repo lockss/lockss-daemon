@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.69 2008-08-11 23:31:24 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.70 2008-09-15 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -909,6 +909,109 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set expected = SetUtil.set(permissionPage, permissionPage2, startUrl,
 			       startUrl2, url1, url2, url3, url4, url5);
     assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testPerHostPermissionOk() {
+    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
+			       crawlRule, 1);
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
+    MyPermissionChecker perm = new MyPermissionChecker();
+    crawler.daemonPermissionCheckers = ListUtil.list(perm);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://ggg.example.com/link2.html";
+    String url3= "http://www.example.com/dir/link3.html";
+    String url4= "http://www.example.org/dir/link9.html";
+
+    String perm1 = "http://ggg.example.com/perm.txt";
+    String perm2 = "http://www.example.org/perm.txt";
+
+    extractor.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url4));
+
+    mau.addUrl(startUrl);
+    mau.addUrl(url1);
+    mau.addUrl(url2);
+    mau.addUrl(url3);
+    mau.addUrl(url4);
+
+    mau.setPerHostPermissionPath("/perm.txt");
+
+    mau.addUrl(perm1);
+    mau.addUrl(perm2);
+
+    perm.setResult(permissionPage, true);
+    perm.setResult(perm1, true);
+    perm.setResult(perm2, true);
+
+    assertTrue(crawler.doCrawl());
+
+    Set expected = SetUtil.set(startUrl, permissionPage, url1, url2,
+			       url3, url4, perm1, perm2);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testPerHostPermissionMissing() {
+    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
+			       crawlRule, 1);
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
+    MyPermissionChecker perm = new MyPermissionChecker();
+    crawler.daemonPermissionCheckers = ListUtil.list(perm);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://ggg.example.com/link2.html";
+    String url3= "http://www.example.com/dir/link3.html";
+    String url4= "http://www.example.org/dir/link9.html";
+
+    String perm1 = "http://ggg.example.com/perm.txt";
+    String perm2 = "http://www.example.org/perm.txt";
+
+    extractor.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url4));
+
+    mau.addUrl(startUrl);
+    mau.addUrl(url1);
+    mau.addUrl(url2);
+    mau.addUrl(url3);
+    mau.addUrl(url4);
+
+    mau.setPerHostPermissionPath("/perm.txt");
+
+    mau.addUrl(perm1);
+    mau.addUrl(perm2);
+
+    perm.setResult(permissionPage, true);
+    perm.setResult(perm2, true);
+
+    assertFalse(crawler.doCrawl());
+
+    Set expected = SetUtil.set(startUrl, permissionPage, url1,
+			       url3, url4, perm2);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+
+
+  static class MyPermissionChecker implements PermissionChecker {
+    Map<String,Boolean> permResult = new HashMap<String,Boolean>();
+
+    void setResult(String url, boolean result) {
+      permResult.put(url, result);
+    }
+
+    MyPermissionChecker() {
+    }
+
+    public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				   Reader reader, String permissionUrl) {
+      Boolean result = permResult.get(permissionUrl);
+      if (result == null) {
+	return false;
+      }
+      return result;
+    }
   }
 
   public void testCrawlWindow() {
