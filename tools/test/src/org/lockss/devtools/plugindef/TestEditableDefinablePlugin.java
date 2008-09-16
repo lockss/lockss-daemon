@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.28 2008-09-09 07:52:06 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.29 2008-09-16 03:57:22 tlipkis Exp $
  */
 
 /*
@@ -221,6 +221,7 @@ public class TestEditableDefinablePlugin
     set.add(ConfigParamDescr.ISSUE_SET);
     set.add(ConfigParamDescr.OAI_REQUEST_URL);
     set.add(ConfigParamDescr.OAI_SPEC);
+    set.add(ConfigParamDescr.USER_CREDENTIALS);
     Collection actualReturn = edPlugin.getKnownConfigParamDescrs();
     assertIsomorphic("default descrs", set, actualReturn);
 

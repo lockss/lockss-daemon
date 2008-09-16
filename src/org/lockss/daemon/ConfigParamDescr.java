@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.40 2008-09-14 22:10:28 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.41 2008-09-16 03:57:22 tlipkis Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
-      OAI_SPEC, BASE_URL2
+      OAI_SPEC, BASE_URL2, USER_CREDENTIALS,
   };
 
   private String key;			// param (prop) key
