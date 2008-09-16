@@ -184,6 +184,7 @@
 	<value>org.lockss.plugin.usenix.UsenixPlugin</value>
 	<value>org.lockss.plugin.emerald.EmeraldPlugin</value>
         <value>edu.auburn.contentdm.ContentDmPlugin</value>
+	<value>org.lockss.plugin.archiveit.ArchiveItPlugin</value>
       </list>
     </property>
 
