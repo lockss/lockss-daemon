@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.84 2008-09-09 07:55:23 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.85 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -417,6 +417,18 @@ public interface IdentityManager extends LockssManager {
    */
   public float getHighestPercentAgreement(PeerIdentity pid, ArchivalUnit au);
   
+  /** Return agreement peer has most recently seen from us.
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   * @return agreement, -1.0 if not known */
+  public float getPercentAgreementHint(PeerIdentity pid, ArchivalUnit au);
+  
+  /** Return highest agreement peer has seen from us.
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   * @return agreement, -1.0 if not known */
+  public float getHighestPercentAgreementHint(PeerIdentity pid,
+					      ArchivalUnit au);
   /**
    * <p>Peers with whom we have had any disagreement since the last
    * toplevel agreement are placed at the end of the list.</p>
@@ -436,7 +448,7 @@ public interface IdentityManager extends LockssManager {
    * each peer that we have a record of agreeing or disagreeing with
    * us.
    */
-  public Collection getIdentityAgreements(ArchivalUnit au);
+  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au);
 
   /**
    * <p>Return map peer -> last agree time. Used for logging and

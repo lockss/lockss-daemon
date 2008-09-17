@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.93 2007-10-09 04:20:55 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.94 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,7 @@ public class TestPollManager extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
+    p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     TimeBase.setSimulated();
@@ -479,6 +480,7 @@ public class TestPollManager extends LockssTestCase {
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
   }
 
   private void initTestAddr() {

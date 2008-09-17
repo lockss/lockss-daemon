@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.42 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.43 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     },
     NAK_INSUFFICIENT_VOTE_DURATION {
       public String toString() { return "Insufficient Vote Duration"; }
+    },
+    NAK_HAVE_SUFFICIENT_REPAIRERS {
+      public String toString() { return "AU is safe"; }
     }
    };
 

@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.17 2008-08-12 18:34:27 dshr Exp $
+* $Id: MockIdentityManager.java,v 1.18 2008-09-17 07:28:52 tlipkis Exp $
  */
 
 /*
@@ -287,7 +287,7 @@ public class MockIdentityManager implements IdentityManager {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public Collection getIdentityAgreements(ArchivalUnit au) {
+  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 
@@ -350,6 +350,15 @@ public class MockIdentityManager implements IdentityManager {
     return 0.0f;
   }
 
+  public float getPercentAgreementHint(PeerIdentity pid, ArchivalUnit au) {
+    return 0.0f;
+  }
+
+  public float getHighestPercentAgreementHint(PeerIdentity pid,
+					      ArchivalUnit au) {
+    return 0.0f;
+  }
+  
 //   protected String getLocalIpParam(Configuration config) {
 //     throw new UnsupportedOperationException("not implemented");
 //   }

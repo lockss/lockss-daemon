@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.24 2008-04-01 08:02:41 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.25 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,8 @@ import java.util.*;
 
 import org.mortbay.util.*;
 
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.*;
+
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.config.Configuration.*;
@@ -51,9 +52,9 @@ import org.lockss.util.*;
 import org.lockss.util.StringUtil;
 
 public class V3PollFactory extends BasePollFactory {
+  public static Logger log = Logger.getLogger("V3PollFactory");
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
-
   
   /** If set to 'false', do not start V3 Voters when vote requests are
    * received.  This parameter is used by V3PollFactory and PollManager.
@@ -69,7 +70,37 @@ public class V3PollFactory extends BasePollFactory {
     PREFIX + "enableV3Poller";
   public static final boolean DEFAULT_ENABLE_V3_POLLER = true;
 
-  public static Logger log = Logger.getLogger("V3PollFactory");
+  /** Curve expressing probability of accepting invitation based on number
+   * of safe replicas known.  E.g., <code>[10,100],[10,10] sets probability
+   * to 100% if 10 of fewer repairers, else 10%.  If not set, number of
+   * repairers is not considered.
+   * @see org.lockss.util.CompoundLinearSlope */
+  public static final String PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE =
+    PREFIX + "acceptProbabilitySafetyCurve";
+  public static final String DEFAULT_ACCEPT_PROBABILITY_SAFETY_CURVE = null;
+
+  /** When counting willing repairers to determine probability of accepting
+   * poll, only count those from whom we have heard this recently */
+  public static final String PARAM_WILLING_REPAIRER_LIVENESS =
+    PREFIX + "willingRepairerLiveness";
+  public static final long DEFAULT_WILLING_REPAIRER_LIVENESS =
+    2 * Constants.WEEK;
+
+  /** Percentage of time we will participate in a poll called by a peer
+   * whom we believe is already a willing repairer.  Applied after
+   * acceptProbabilitySafetyCurve. */
+  public static final String PARAM_ACCEPT_REPAIRERS_POLL_PERCENT =
+    PREFIX + "acceptRepairersPollPercent";
+  public static final float DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT = 0.9f;
+    
+
+  private LockssDaemon daemon;
+  private PollManager pollMgr;
+  protected IdentityManager idMgr;
+
+  public V3PollFactory(PollManager pollMgr) {
+    this.pollMgr = pollMgr;
+  }
 
   public boolean callPoll(Poll poll, LockssDaemon daemon) {
     poll.startPoll();
@@ -78,7 +109,6 @@ public class V3PollFactory extends BasePollFactory {
 
   protected void sendNak(LockssDaemon daemon, PollNak nak,
 			 String auid, V3LcapMessage msg) {
-    IdentityManager idMgr = daemon.getIdentityManager();
     V3LcapMessage response =
       new V3LcapMessage(auid, msg.getKey(),
 			msg.getPluginVersion(), null, null,
@@ -103,6 +133,11 @@ public class V3PollFactory extends BasePollFactory {
                              PeerIdentity orig, long duration,
                              String hashAlg, LcapMessage msg)
       throws ProtocolException {
+    if (daemon == null) {
+      daemon = pollMgr.getDaemon();
+      idMgr = daemon.getIdentityManager();
+    }
+
     BasePoll retPoll = null;
 
     CachedUrlSet cus = pollspec.getCachedUrlSet();
@@ -258,16 +293,97 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
 
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
+
+    // Make a probabilistic choice based on the number of willing repairers
+    // we have for this AU
+    if (!ProbabilisticChoice.choose(acceptProb(orig, au))) {
+      log.info("Not participating in poll; AU is safe: " + au.getName());
+      sendNak(daemon, PollNak.NAK_HAVE_SUFFICIENT_REPAIRERS,
+	      pollspec.getAuId(),
+	      m);
+      return null;
+    }
+
     log.debug("Creating V3Voter to participate in poll " + m.getKey());
     voter = new V3Voter(daemon, m);
 //        voter.startPoll(); // Voters need to be started immediately.
     
     // Update the status of the peer that called this poll.
-    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
     if (status != null) {
       status.calledPoll();
     }
     return voter;
+  }
+
+  /**
+   * Compute the probability that we should participate in caller's poll on
+   * the AU, based on the need we perceive for it to have more willing
+   * repairers.
+   *  
+   * @param caller the caller of the poll
+   * @param au
+   * @return A double between 0.0 and 1.0 representing the probability
+   *      that we should participate in caller's poll on this AU
+   */
+  double acceptProb(PeerIdentity caller, ArchivalUnit au) {
+    double repairThreshold = pollMgr.getMinPercentForRepair();
+    CompoundLinearSlope acceptProbabilityCurve =
+      pollMgr.getAcceptProbabilitySafetyCurve();
+    if (acceptProbabilityCurve == null) {
+      return 1.0;
+    }
+    int willing = countWillingRepairers(au);
+    long percent = acceptProbabilityCurve.getY(willing);
+    log.debug2("Accept probability " + percent + "% based on " + willing +
+	       " willing repairers");
+    double prob = ((double)percent) / 100.0d;
+
+    // further reduce probability by acceptRepairersPollPercent if the
+    // poll's caller is already a willing repairer
+    if (idMgr.getHighestPercentAgreementHint(caller, au) >= repairThreshold) {
+      double callerProb = pollMgr.getAcceptRepairersPollPercent();
+      if (callerProb != 1.0) {
+	prob *= callerProb;
+	log.debug2("Reducing probability to " + prob +
+		   " because caller is a willing repairer");
+      }
+    }
+    return prob;
+  }
+
+  int countWillingRepairers(ArchivalUnit au) {
+    double repairThreshold = pollMgr.getMinPercentForRepair();
+    int willing = 0;
+
+    log.info("idMgr.getIdentityAgreements(au): "
+	     + idMgr.getIdentityAgreements(au));
+    for (IdentityManager.IdentityAgreement ida
+	   : idMgr.getIdentityAgreements(au)) {
+      try {
+	if (ida.getHighestPercentAgreementHint() <= repairThreshold) {
+	  log.info("Not willing: " + repairThreshold + " >= " + ida);
+	  continue;
+	}
+	PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
+	if (pollMgr.isNoInvitationSubnet(pid)) {
+	  log.info("No invitation subnet: " + ida);
+	  continue;
+	}
+	PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+	long lastMessageTime = status.getLastMessageTime();
+	long noMessageFor = TimeBase.nowMs() - lastMessageTime;
+	if (noMessageFor > pollMgr.getWillingRepairerLiveness()) {
+	  log.info("No message for " + noMessageFor + ": " + ida);
+	  continue;
+	}
+	willing++;
+      } catch (IdentityManager.MalformedIdentityKeyException e) {
+	log.warning("Malformed id key in IdentityAgreement", e);
+	continue;
+      }
+    }
+    return willing;
   }
 
   // Not used.

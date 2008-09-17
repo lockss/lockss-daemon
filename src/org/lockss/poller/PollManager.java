@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.196 2008-09-09 07:54:54 tlipkis Exp $
+ * $Id: PollManager.java,v 1.197 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ import org.lockss.state.*;
 import org.lockss.util.*;
 
 import static org.lockss.poller.v3.V3Poller.*;
+import static org.lockss.poller.v3.V3Voter.*;
+import static org.lockss.poller.v3.V3PollFactory.*;
 
 
 /**
@@ -219,6 +221,10 @@ public class PollManager
   private IpFilter noInvitationSubnetFilter = null;
   private CompoundLinearSlope v3InvitationProbabilityAgeCurve = null;
   private CompoundLinearSlope v3NominationProbabilityAgeCurve = null;
+  private CompoundLinearSlope v3AcceptProbabilitySafetyCurve = null;
+  private long paramWillingRepairerLiveness = DEFAULT_WILLING_REPAIRER_LIVENESS;
+  private double paramAcceptRepairersPollPercent =
+    DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT;
 
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -287,7 +293,7 @@ public class PollManager
     null,
     new V1PollFactory(),
     null, // new V2PollFactory(),
-    new V3PollFactory(),
+    new V3PollFactory(this),
   };
 
   public PollManager() {
@@ -1012,6 +1018,13 @@ public class PollManager
       paramMinPercentForRepair =
         newConfig.getPercentage(V3Voter.PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
 				V3Voter.DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS);
+      paramWillingRepairerLiveness =
+        newConfig.getTimeInterval(PARAM_WILLING_REPAIRER_LIVENESS,
+				  DEFAULT_WILLING_REPAIRER_LIVENESS);
+
+      paramAcceptRepairersPollPercent =
+        newConfig.getPercentage(PARAM_ACCEPT_REPAIRERS_POLL_PERCENT,
+				DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT);
 
       List<String> noInvitationIps =
 	newConfig.getList(V3Poller.PARAM_NO_INVITATION_SUBNETS, null); 
@@ -1029,44 +1042,25 @@ public class PollManager
 	}
       }
       if (changedKeys.contains(PARAM_INVITATION_PROBABILITY_AGE_CURVE)) {
-	String probCurve =
-	  newConfig.get(PARAM_INVITATION_PROBABILITY_AGE_CURVE,
-			DEFAULT_INVITATION_PROBABILITY_AGE_CURVE); 
-	if (StringUtil.isNullString(probCurve)) {
-	  v3InvitationProbabilityAgeCurve = null;
-	} else {
-	  try {
-	    v3InvitationProbabilityAgeCurve =
-	      new CompoundLinearSlope(probCurve);
-	    theLog.info("Installed invitation probability age curve: " +
-			v3InvitationProbabilityAgeCurve);
-	  } catch (Exception e) {
-	    theLog.warning("Malformed V3 invitation probability curve: "
-			   + probCurve,
-			   e);
-	    v3InvitationProbabilityAgeCurve = null;
-	  }
-	}
+	v3InvitationProbabilityAgeCurve =
+	  processProbabilityCurve("V3 invitation probability curve",
+				  newConfig,
+				  PARAM_INVITATION_PROBABILITY_AGE_CURVE,
+				  DEFAULT_INVITATION_PROBABILITY_AGE_CURVE);
       }
-      if (changedKeys.contains(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE)) {
-	String probCurve =
-	  newConfig.get(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
-			V3Voter.DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE); 
-	if (StringUtil.isNullString(probCurve)) {
-	  v3NominationProbabilityAgeCurve = null;
-	} else {
-	  try {
-	    v3NominationProbabilityAgeCurve =
-	      new CompoundLinearSlope(probCurve);
-	    theLog.info("Installed nomination probability age curve: " +
-			v3NominationProbabilityAgeCurve);
-	  } catch (Exception e) {
-	    theLog.warning("Malformed V3 nomination probability curve: "
-			   + probCurve,
-			   e);
-	    v3NominationProbabilityAgeCurve = null;
-	  }
-	}
+      if (changedKeys.contains(PARAM_NOMINATION_PROBABILITY_AGE_CURVE)) {
+	v3NominationProbabilityAgeCurve =
+	  processProbabilityCurve("V3 nomination probability curve",
+				  newConfig,
+				  PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
+				  DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE);
+      }
+      if (changedKeys.contains(PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE)) {
+	v3AcceptProbabilitySafetyCurve =
+	  processProbabilityCurve("V3 accept probability curve",
+				  newConfig,
+				  PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
+				  DEFAULT_ACCEPT_PROBABILITY_SAFETY_CURVE);
       }
     }
     long scommTimeout =
@@ -1084,6 +1078,25 @@ public class PollManager
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
 	pf[i].setConfig(newConfig, oldConfig, changedKeys);
+      }
+    }
+  }
+
+  CompoundLinearSlope processProbabilityCurve(String name,
+					      Configuration config,
+					      String param,
+					      String dfault) {
+    String probCurve = config.get(param, dfault); 
+    if (StringUtil.isNullString(probCurve)) {
+      return null;
+    } else {
+      try {
+	CompoundLinearSlope curve = new CompoundLinearSlope(probCurve);
+	theLog.info("Installed " + name + ": " + curve);
+	return curve;
+      } catch (Exception e) {
+	theLog.warning("Malformed " + name + ": " + probCurve, e);
+	return null;
       }
     }
   }
@@ -1108,8 +1121,30 @@ public class PollManager
     return v3NominationProbabilityAgeCurve;
   }
 
+  public CompoundLinearSlope getAcceptProbabilitySafetyCurve() {
+    return v3AcceptProbabilitySafetyCurve;
+  }
+
+  public long getWillingRepairerLiveness() {
+    return paramWillingRepairerLiveness;
+  }
+
+  public double getAcceptRepairersPollPercent() {
+    return paramAcceptRepairersPollPercent;
+  }
+
   public double getMinPercentForRepair() {
     return paramMinPercentForRepair;
+  }
+
+  public boolean isNoInvitationSubnet(PeerIdentity pid) {
+    try {
+      IpFilter filter = getNoInvitationSubnetFilter();
+      return filter != null && pid.getPeerAddress().isAllowed(filter);
+    } catch (IdentityManagerImpl.MalformedIdentityKeyException e) {
+      log.error("isNoInvitationSubnet: Malformed pid: " + pid);
+      return false;
+    }
   }
 
   public PollFactory getPollFactory(PollSpec spec) {

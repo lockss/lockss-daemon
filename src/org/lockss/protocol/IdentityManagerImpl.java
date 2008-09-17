@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.28 2008-09-09 07:55:23 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.29 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -1192,14 +1192,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * each peer that we have a record of agreeing or disagreeing with
    * us.
    */
-  public Collection getIdentityAgreements(ArchivalUnit au) {
+  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
     Map<String,IdentityAgreement> map = findAuAgreeMap(au);
     synchronized (map) {
       boolean includeV1 = localPeerIdentities[Poll.V1_PROTOCOL] != null;
-      ArrayList res = new ArrayList();
+      ArrayList<IdentityAgreement> res = new ArrayList<IdentityAgreement>();
       for (IdentityAgreement ida : map.values()) {
 	try {
 	  PeerIdentity pid = stringToPeerIdentity(ida.getId());
@@ -1258,8 +1258,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     return res;
   }
 
-  private IdentityAgreement findPeerIdentityAgreement(Map map,
-                                                      PeerIdentity pid) {
+  protected IdentityAgreement findPeerIdentityAgreement(Map map,
+							PeerIdentity pid) {
     // called in synchronized block
 
     IdentityAgreement ida = (IdentityAgreement)map.get(pid);
@@ -1272,7 +1272,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   static String AGREE_MAP_INIT_KEY = "needs_init";
 
-  Map findAuAgreeMap(ArchivalUnit au) {
+  protected Map findAuAgreeMap(ArchivalUnit au) {
     Map map;
     synchronized (agreeMaps) {
       map = (Map)agreeMaps.get(au.getAuId());

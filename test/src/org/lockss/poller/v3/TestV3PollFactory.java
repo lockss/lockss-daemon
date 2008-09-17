@@ -11,6 +11,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
+import org.lockss.protocol.IdentityManager.IdentityAgreement;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -23,7 +24,7 @@ public class TestV3PollFactory extends LockssTestCase {
   private ArchivalUnit testAu;
   private PollManager pollManager;
   private HashService hashService;
-  private IdentityManager idmgr;
+  private MyIdentityManager idmgr;
   private MockAuState aus;
   private File tempDir;
   private String tempDirPath;
@@ -40,6 +41,8 @@ public class TestV3PollFactory extends LockssTestCase {
     pluginVer = "2";
     
     theDaemon = getMockLockssDaemon();
+    idmgr = new MyIdentityManager();
+    theDaemon.setIdentityManager(idmgr);
     pollManager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
 
@@ -59,7 +62,7 @@ public class TestV3PollFactory extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, "TCP:[127.0.0.1]:9729");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    idmgr = theDaemon.getIdentityManager();
+    idmgr.initService(theDaemon);
     idmgr.startService();
     theDaemon.getSchedService().startService();
     hashService.startService();
@@ -77,7 +80,7 @@ public class TestV3PollFactory extends LockssTestCase {
     ps = new MockPollSpec(testAu.getAuCachedUrlSet(), null, null,
                           Poll.V3_POLL);
     testMsg = makePollMsg();
-    thePollFactory = new MyV3PollFactory();
+    thePollFactory = new MyV3PollFactory(pollManager);
   }
   
   private String[] urls =
@@ -169,12 +172,164 @@ public class TestV3PollFactory extends LockssTestCase {
 		 thePollFactory.naks);
   }
    
+  private String[] peerNames = {
+    "TCP:[10.1.0.0]:3141", "TCP:[10.1.0.1]:3141",
+    "TCP:[10.1.0.2]:3141", "TCP:[10.1.0.3]:3141",
+    "TCP:[10.1.0.4]:3141", "TCP:[10.1.0.5]:3141",
+    "TCP:[10.1.0.6]:3141", "TCP:[10.1.0.7]:3141",
+    "TCP:[10.1.0.8]:3141", "TCP:[10.1.0.9]:3141",
+  };
+
+
+  private IdentityAgreement getIda(PeerIdentity pid) {
+    return idmgr.findTestIdentityAgreement(pid, testAu);
+  }
+
+  private PeerIdentityStatus getStatus(PeerIdentity pid) {
+    return idmgr.getPeerIdentityStatus(pid);
+  }
+
+  private PeerIdentity[] makePeers(String[] keys) throws Exception {
+    PeerIdentity[] peerIds = new PeerIdentity[keys.length];
+    int idIndex = 0;
+    float hint = 0.0f;
+    for (String key : keys) {
+      PeerIdentity pid = idmgr.findPeerIdentity(key);
+      peerIds[idIndex++] = pid;
+      idmgr.findLcapIdentity(pid, key);
+      PeerIdentityStatus status = getStatus(pid);
+      status.setLastMessageTime(900);
+      IdentityAgreement ida = getIda(pid);
+      ida.setPercentAgreementHint(hint);
+      assertEquals(hint, ida.getHighestPercentAgreementHint());
+      hint += 0.1f;
+    }
+    return peerIds;
+  }
+
+  PeerIdentity[] peerIds;
+
+  public void testCountWillingRepairers() throws Exception {
+    TimeBase.setSimulated(1000);
+    IdentityAgreement ida;
+    PeerIdentityStatus status;
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
+				  "25",
+				  V3PollFactory.PARAM_WILLING_REPAIRER_LIVENESS,
+				  "200");
+    peerIds = makePeers(peerNames);
+    assertEquals(7, thePollFactory.countWillingRepairers(testAu));
+    ida = getIda(peerIds[9]);
+    ida.setPercentAgreementHint(0.1f);
+    // lower last hint shouldn't change count
+    assertEquals(0.1f, ida.getPercentAgreementHint());
+    assertEquals(0.9f, ida.getHighestPercentAgreementHint(), 0.01f);
+    assertEquals(7, thePollFactory.countWillingRepairers(testAu));
+
+    ida = getIda(peerIds[1]);
+    ida.setPercentAgreementHint(0.4f);
+    assertEquals(8, thePollFactory.countWillingRepairers(testAu));
+
+    status = getStatus(peerIds[8]);
+    status.setLastMessageTime(600);
+    assertEquals(7, thePollFactory.countWillingRepairers(testAu));
+
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_NO_INVITATION_SUBNETS,
+				  "10.1.0.7/32");
+    assertEquals(6, thePollFactory.countWillingRepairers(testAu));
+
+    Poll p = thePollFactory.createPoll(ps, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNotNull(p);
+    assertTrue(p instanceof V3Voter);
+  }
+
+  double acceptProb(PeerIdentity pid) {
+    return thePollFactory.acceptProb(pid, testAu);
+  }
+
+  double acceptProb() {
+    return thePollFactory.acceptProb(testId, testAu);
+  }
+
+  public void testAcceptProb() throws Exception {
+    peerIds = makePeers(peerNames);
+
+    thePollFactory.setWillingRepairers(0);
+    assertEquals(1.0, acceptProb());
+    thePollFactory.setWillingRepairers(10);
+    assertEquals(1.0, acceptProb());
+    thePollFactory.setWillingRepairers(1000);
+    assertEquals(1.0, acceptProb());
+
+    ConfigurationUtil.addFromArgs(V3PollFactory.PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
+				  "[10,100],[10,50],[20,50],[20,10]");
+
+    thePollFactory.setWillingRepairers(0);
+    assertEquals(1.0, acceptProb());
+    thePollFactory.setWillingRepairers(10);
+    assertEquals(1.0, acceptProb());
+    thePollFactory.setWillingRepairers(11);
+    assertEquals(0.5, acceptProb());
+    thePollFactory.setWillingRepairers(20);
+    assertEquals(0.5, acceptProb());
+    thePollFactory.setWillingRepairers(21);
+    assertEquals(0.1, acceptProb(), .01);
+    thePollFactory.setWillingRepairers(21);
+    assertEquals(0.1, acceptProb(), .01);
+    ConfigurationUtil.addFromArgs(V3PollFactory.PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
+				  "[5,100],[5,50],[20,10]");
+    thePollFactory.setWillingRepairers(0);
+    assertEquals(1.0, acceptProb());
+    thePollFactory.setWillingRepairers(5);
+    assertEquals(1.0, acceptProb());
+    thePollFactory.setWillingRepairers(6);
+    assertEquals(0.47, acceptProb(), .01);
+    thePollFactory.setWillingRepairers(10);
+    assertEquals(0.37, acceptProb(), .01);
+    thePollFactory.setWillingRepairers(20);
+    assertEquals(0.1, acceptProb(), .01);
+    thePollFactory.setWillingRepairers(21);
+    assertEquals(0.1, acceptProb(), .01);
+
+    thePollFactory.setWillingRepairers(0);
+    log.info("getAcceptRepairersPollPercent: " +
+	     pollManager.getAcceptRepairersPollPercent());
+
+    assertEquals(0.9, acceptProb(peerIds[8]), .01);
+    assertEquals(1.0, acceptProb(peerIds[0]), .01);
+    ConfigurationUtil.addFromArgs(V3PollFactory.PARAM_ACCEPT_REPAIRERS_POLL_PERCENT,
+				  "75");
+    assertEquals(0.75, acceptProb(peerIds[8]), .01);
+    assertEquals(1.0, acceptProb(peerIds[0]), .01);
+  }
+
+
   class MyV3PollFactory extends V3PollFactory {
     List naks = new ArrayList();
+    int numWillingRepairers = -1;
 
+    public MyV3PollFactory(PollManager pollMgr) {
+      super(pollMgr);
+      this.idMgr = idmgr;
+    }
+
+    @Override
     protected void sendNak(LockssDaemon daemon, PollNak nak,
 			   String auid, V3LcapMessage msg) {
       naks.add(ListUtil.list(nak, auid));
+    }
+
+    @Override
+    int countWillingRepairers(ArchivalUnit au) {
+      if (numWillingRepairers < 0) {
+	return super.countWillingRepairers(au);
+      }
+      return numWillingRepairers;
+    }
+
+    void setWillingRepairers(int n) {
+      numWillingRepairers = n;
     }
   }
 
@@ -184,4 +339,16 @@ public class TestV3PollFactory extends LockssTestCase {
     }
   }
 
+  static class MyIdentityManager extends IdentityManagerImpl {
+    IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
+						ArchivalUnit au) {
+      Map map = findAuAgreeMap(au);
+      synchronized (map) {
+	return findPeerIdentityAgreement(map, pid);
+      }
+    }
+
+    public void storeIdentities() throws ProtocolException {
+    }
+  }
 }

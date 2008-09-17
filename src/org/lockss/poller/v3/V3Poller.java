@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.84 2008-09-11 23:25:32 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.85 2008-09-17 07:28:53 tlipkis Exp $
  */
 
 /*
@@ -1994,7 +1994,7 @@ public class V3Poller extends BasePoll {
 	}
       }
     }
-    if (isNoInvitationSubnet(pid)) {
+    if (pollManager.isNoInvitationSubnet(pid)) {
       return false;
     }
 
@@ -2035,16 +2035,6 @@ public class V3Poller extends BasePoll {
       return true;
     }
     return false;      
-  }
-
-  boolean isNoInvitationSubnet(PeerIdentity pid) {
-    try {
-      IpFilter filter = pollManager.getNoInvitationSubnetFilter();
-      return filter != null && pid.getPeerAddress().isAllowed(filter);
-    } catch (IdentityManagerImpl.MalformedIdentityKeyException e) {
-      log.error("Malformed pid: " + pid);
-      return false;
-    }
   }
 
   /**
