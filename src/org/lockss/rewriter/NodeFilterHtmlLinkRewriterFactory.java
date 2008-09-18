@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.9 2008-07-26 05:06:09 dshr Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.10 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -61,28 +61,33 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   public NodeFilterHtmlLinkRewriterFactory() {
   }
 
+  /*
+   * These are the attributes of HTML tags that can contain URLs to rewrite.
+   */
   private static final String[] attrs = {
     "href",
     "src",
     "action",
+    "background",
+    // "archive",  // applet
+    // "codebase", // applet, object
+    // "cite",     // blockquote, del, ins
+    // "pluginspage", // embed
+    // "longdesc", // frame
+    // "longdesc", // iframe, img
+    // "dynsrc",   // img
+    // "lowsrc",   // img
+    // "usemap",   // img, object
+    // "classid",  // object
+    // "data",     // object
   };
 
   public Reader createLinkRewriterReader(String mimeType,
 					 ArchivalUnit au,
 					 Reader in,
 					 String encoding,
-					 String url)
-      throws PluginException {
-    InputStream inStream = new ReaderInputStream(in);
-    return new InputStreamReader(createLinkRewriter(mimeType, au,
-						    inStream, encoding, url));
-  }
-
-  public InputStream createLinkRewriter(String mimeType,
-					ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					String url)
+					 String url,
+					 ServletUtil.LinkTransform xform)
       throws PluginException {
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
@@ -92,8 +97,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       } catch (org.lockss.config.Configuration.InvalidParam ex) {
 	  throw new PluginException("No port available: " + ex);
       }
-      String targetStem = "http://" + PlatformUtil.getLocalHostname() + ":" +
-	port + "/ServeContent?url=";
+      String targetStem = xform.rewrite("");  // XXX - should have better xform
       Collection urlStems = au.getUrlStems();
       int nUrlStem = urlStems.size();
       String defUrlStem = null;
@@ -124,11 +128,13 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       NodeFilter absLinkXform =
 	HtmlNodeFilters.linkRegexYesXforms(linkRegex1, ignCase1, rwRegex1,
 					   rwTarget1, attrs);
-      int p = url.lastIndexOf("/");
+      String urlSub = url.substring(7);
+      int p = urlSub.lastIndexOf("/");
       if (p < 0) {
-	throw new PluginException(url + " has no \"/\"");
+	logger.debug(url + " has no last /");
+	p = urlSub.length() - 1;
       }
-      String urlPrefix = url.substring(0, p);
+      String urlPrefix = "http://" + urlSub.substring(0, p);
       logger.debug3("urlPrefix: " + urlPrefix);
       String [] linkRegex2 = {
 	"^http://",
@@ -266,7 +272,14 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       }
       // Create a transform to apply them
       HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
-      return (new HtmlFilterInputStream(in, htmlXform));
+      InputStream result = new HtmlFilterInputStream(new ReaderInputStream(in),
+						     htmlXform);
+      try {
+        return new InputStreamReader(result, encoding);
+      } catch (UnsupportedEncodingException ex) {
+	logger.error(encoding + " threw " + ex);
+	return in;
+      }
     } else {
       throw new PluginException("NodeFilterHtmlLinkRewriterFactory vs. " +
 				mimeType);

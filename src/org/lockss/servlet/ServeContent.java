@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.11 2008-08-11 23:36:23 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.12 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -51,9 +51,10 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.filter.*;
 import org.lockss.state.*;
+import org.lockss.rewriter.*;
 
-/** ServeContent servlet displays cached content using Javascript
- *  link re-writing courtesy of WERA.
+/** ServeContent servlet displays cached content with links
+ *  rewritten.
  */
 public class ServeContent extends LockssServlet {
   static final Logger log = Logger.getLogger("ServeContent");
@@ -63,8 +64,6 @@ public class ServeContent extends LockssServlet {
 
   /** Return 404 for missing files */
   public static final int MISSING_FILE_ACTION_404 = 1;
-  /** Display error page (200 response) for missing files */
-  public static final int MISSING_FILE_ACTION_DISPLAY_ERROR = 2;
   /** Forward requests for missing file to origin server.  (Not
    * implemented) */
   public static final int MISSING_FILE_ACTION_FORWARD_REQUEST = 3;
@@ -197,25 +196,61 @@ public class ServeContent extends LockssServlet {
 
   protected void handleUrlRequest() throws IOException {
     log.debug("url " + url);
-    // Get the CachedUrl for the URL, only if it has content.
-    cu = pluginMgr.findCachedUrl(url, true);
-    if (cu == null || !cu.hasContent()) {
-      log.debug(url + " not found");
-      handleMissingUrlRequest(url);
-      return;
+    try {
+      // Get the CachedUrl for the URL, only if it has content.
+      cu = pluginMgr.findCachedUrl(url, true);
+      if (cu != null || cu.hasContent()) {
+	handleCuRequest();
+      } else {
+	log.debug(url + " not found");
+	handleMissingUrlRequest(url);
+      }
+    } catch (IOException e) {
+      log.warning("Handling " + url + " throws ", e);
+    } finally {
+      if (cu != null) {
+	cu.release();
+      }
     }
-    handleCuRequest();
   }
 
-  protected void handleCuRequest() {
+  protected void handleCuRequest() throws IOException {
     clen = cu.getContentSize();
+    CIProperties props = cu.getProperties();
+    ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+    log.debug2(url + " type " + ctype + " size " + clen);
+    resp.setContentType(ctype);
+    Writer outWriter = null;
+    Reader original = cu.openForReading();
+    Reader rewritten = original;
     try {
-      CIProperties props = cu.getProperties();
-      ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
-      log.debug(url + " type " + ctype + " size " + clen);
-      displayContent();
+      outWriter = resp.getWriter();
+      LinkRewriterFactory lrf = cu.getLinkRewriterFactory();
+      if (lrf != null) {
+	try {
+	  rewritten =
+	    lrf.createLinkRewriterReader(ctype,
+					 cu.getArchivalUnit(),
+					 original,
+					 cu.getEncoding(),
+					 url,
+					 new ServletUtil.LinkTransform() {
+					   public String rewrite(String url) {
+					     return srvURL(myServletDescr(),
+							   "url=" + url);
+					     }});
+	} catch (PluginException e) {
+	  log.error("Can't create link rewriter " + e.toString());
+	}
+      }
+      long bytes = StreamUtil.copy(rewritten, outWriter);
+      if (bytes <= Integer.MAX_VALUE) {
+	  resp.setContentLength((int)bytes);
+      }
     } finally {
-      cu.release();
+      IOUtil.safeClose(outWriter);
+      IOUtil.safeClose(original);
+      IOUtil.safeClose(rewritten);
     }
   }
 
@@ -252,40 +287,12 @@ public class ServeContent extends LockssServlet {
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
 		     missingUrl + "  not found on this LOCKSS box");
       break;
-    case MISSING_FILE_ACTION_DISPLAY_ERROR:
-      displayError("URL " + missingUrl + " not found");
-      break;
     case MISSING_FILE_ACTION_FORWARD_REQUEST:
       // Easiest way to do this is probably to return without handling the
       // request and add a proxy handler to the context.
       resp.sendError(HttpServletResponse.SC_NOT_FOUND, err); // placeholder
       break;
     }
-  }
-
-  void displayContent() {
-    if (log.isDebug3()) {
-      log.debug3("url: " + url);
-      log.debug3("ctype: " + ctype);
-      log.debug3("clen: " + clen);
-    }
-    resp.setContentType(ctype);
-    Writer outWriter = null;
-    Reader rewritten = null;
-    try {
-      outWriter = resp.getWriter();
-      rewritten = cu.openForReadingWithRewriting();
-      long bytes = StreamUtil.copy(rewritten, outWriter);
-      if (bytes <= Integer.MAX_VALUE) {
-	  resp.setContentLength((int)bytes);
-      }
-    } catch (IOException e) {
-      log.warning("Copying CU to HTTP stream", e);
-    } finally {
-      IOUtil.safeClose(outWriter);
-      IOUtil.safeClose(rewritten);
-    }
-    cu.release();
   }
 
   void displayError(String error) throws IOException {

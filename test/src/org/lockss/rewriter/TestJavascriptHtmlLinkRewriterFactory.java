@@ -1,5 +1,5 @@
 /*
- * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
+ * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.4 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -77,11 +77,19 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>" +
     "</body>" +
     "</foo>";
-  private InputStream in;
+  private Reader in;
   private static final String jsTag = "<SCRIPT language=\"Javascript\">";
+  private ServletUtil.LinkTransform xform = null;
+  private String testPort = "9524";
 
   public void setUp() throws Exception {
     super.setUp();
+    xform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "http://" + PlatformUtil.getLocalHostname() +
+	    ":" + testPort + "/ServeContent?url=" + url;
+	}
+      };
     au = new MockArchivalUnit();
     List l = new ArrayList();
     l.add(urlStem);
@@ -90,46 +98,48 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotHtml() {
-    in = new ReaderInputStream(new StringReader(withHtmlTag));
+    in = new StringReader(withHtmlTag);
     setupConfig(true);
     try {
-      InputStream ret = jhlrf.createLinkRewriter("application/pdf", au, in,
-						 encoding, url);
+      Reader ret =
+	jhlrf.createLinkRewriterReader("application/pdf", au, in, encoding,
+				       url, xform);
       fail("createLinkRewriter should have thrown on non-html mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
 	return;
       }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
+      fail("createLinkRewriterReader should have thrown PluginException but threw " +
 	   ex.toString());
     }
   }
 
   public void testThrowsIfNoPort() {
-    in = new ReaderInputStream(new StringReader(withHtmlTag));
+    in = new StringReader(withHtmlTag);
     setupConfig(false);
     try {
-      InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
-						 encoding, url);
+      Reader ret =
+	jhlrf.createLinkRewriterReader("text/html", au, in,
+				       encoding, url, xform);
       fail("createLinkRewriter should have thrown without port");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
 	return;
       }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
+      fail("createLinkRewriterReader should have thrown PluginException but threw " +
 	   ex.toString());
     }
   }
 
   public void testInsertsJavascriptIfHtmlTag() {
-    in = new ReaderInputStream(new StringReader(withHtmlTag));
+    in = new StringReader(withHtmlTag);
     setupConfig(true);
     try {
-      InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, look for javascript
-      Reader r = new InputStreamReader(ret);
+      Reader r =
+	jhlrf.createLinkRewriterReader("text/html", au, in,
+				       encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, look for javascript
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;
@@ -148,14 +158,14 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testCopiesUnchangedIfNoHtmlTag() {
-    in = new ReaderInputStream(new StringReader(withoutHtmlTag));
+    in = new StringReader(withoutHtmlTag);
     setupConfig(true);
     try {
-      InputStream ret = jhlrf.createLinkRewriter("text/html", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, look for javascript
-      Reader r = new InputStreamReader(ret);
+      Reader r =
+	jhlrf.createLinkRewriterReader("text/html", au, in, encoding,
+				       url, xform);
+      assertNotNull(r);
+      // Read from r, look for javascript
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;
@@ -176,7 +186,7 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
   private void setupConfig(boolean good) {
     Properties props = new Properties();
     if (good) {
-      props.setProperty(ContentServletManager.PARAM_PORT, "9524");
+      props.setProperty(ContentServletManager.PARAM_PORT, testPort);
       ConfigurationUtil.setCurrentConfigFromProps(props);
     }
   }

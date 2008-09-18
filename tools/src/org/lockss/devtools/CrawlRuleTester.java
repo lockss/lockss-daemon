@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.25 2008-07-06 04:25:58 dshr Exp $
+ * $Id: CrawlRuleTester.java,v 1.26 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.extractor.*;
+import org.lockss.rewriter.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
@@ -500,12 +501,12 @@ public class CrawlRuleTester extends Thread {
       return reader;
     }
 
-    public InputStream openWithUrlRewriting() {
-      return null;
+    public LinkRewriterFactory getLinkRewriterFactory() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
-    public Reader openForReadingWithRewriting() {
-      return reader;
+    public String getEncoding(){
+      return Constants.DEFAULT_ENCODING;
     }
 
     /**

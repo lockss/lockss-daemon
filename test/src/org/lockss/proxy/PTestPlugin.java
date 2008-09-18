@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.26 2008-07-06 04:25:58 dshr Exp $
+ * $Id: PTestPlugin.java,v 1.27 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -36,11 +36,13 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import java.security.MessageDigest;
+import java.math.BigInteger;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import java.math.BigInteger;
+import org.lockss.servlet.*;
+import org.lockss.rewriter.*;
 
 /**
  * Stub plugin for testing proxy.
@@ -115,12 +117,8 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public InputStream openWithUrlRewriting() {
-      return getUnfilteredInputStream();
-    }
-
-    public Reader openForReadingWithRewriting() {
-      return openForReading();
+    public LinkRewriterFactory getLinkRewriterFactory() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public long getContentSize() {
@@ -129,6 +127,10 @@ public class PTestPlugin {
 
     public String getContentType(){
       return props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+    }
+
+    public String getEncoding(){
+      return Constants.DEFAULT_ENCODING; // XXX
     }
 
     public CIProperties getProperties() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.11 2008-07-28 01:22:04 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.12 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 
   private MockArchivalUnit au;
   private NodeFilterHtmlLinkRewriterFactory nfhlrf;
-  private String encoding = null;
+  private String encoding = Constants.DEFAULT_ENCODING;
   private static final String urlStem = "http://www.example.com/";
   private static final String urlSuffix = "content/index.html";
   private static final String url = urlStem + urlSuffix;
@@ -118,11 +118,19 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   // XXX counting tag instances
   private static final int linkCount = 17;
   private static final int importCount = 7;
-  private InputStream in;
+  private Reader in;
+  private ServletUtil.LinkTransform xform = null;
+  private String testPort = "9524";
 
   public void setUp() throws Exception {
     super.setUp();
     au = new MockArchivalUnit();
+    xform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "http://" + PlatformUtil.getLocalHostname() +
+	    ":" + testPort + "/ServeContent?url=" + url;
+	}
+      };
     List l = new ArrayList();
     l.add(urlStem);
     au.setUrlStems(l);
@@ -130,11 +138,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotHtml() {
-    in = new ReaderInputStream(new StringReader(page));
+    in = new StringReader(page);
     setupConfig(true);
     try {
-      InputStream ret = nfhlrf.createLinkRewriter("application/pdf", au, in,
-						  encoding, url);
+      Reader r = nfhlrf.createLinkRewriterReader("application/pdf", au, in,
+						  encoding, url, xform);
       fail("createLinkRewriter should have thrown on non-html mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -146,11 +154,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNoPort() {
-    in = new ReaderInputStream(new StringReader(page));
+    in = new StringReader(page);
     setupConfig(false);
     try {
-      InputStream ret = nfhlrf.createLinkRewriter("text/html", au, in,
-						  encoding, url);
+      Reader r = nfhlrf.createLinkRewriterReader("text/html", au, in,
+						  encoding, url, xform);
       fail("createLinkRewriter should have thrown if no port");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -162,14 +170,13 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testRewriting() {
-    in = new ReaderInputStream(new StringReader(page));
+    in = new StringReader(page);
     setupConfig(true);
     try {
-      InputStream ret = nfhlrf.createLinkRewriter("text/html", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, make String
-      Reader r = new InputStreamReader(ret);
+      Reader r = nfhlrf.createLinkRewriterReader("text/html", au, in,
+						 encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, make String
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;

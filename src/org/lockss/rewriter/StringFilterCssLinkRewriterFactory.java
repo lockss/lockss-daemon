@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilterCssLinkRewriterFactory.java,v 1.1 2008-07-12 08:36:02 dshr Exp $
+ * $Id: StringFilterCssLinkRewriterFactory.java,v 1.2 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -44,8 +44,7 @@ import org.lockss.servlet.*;
 
 /**
  * StringFilterCssLinkRewriterFactory creates link rewriters that
- * work by injecting the Internet Archive (via WERA) Javascript
- * into the HTML page.
+ * rewrite links in CSS using string filters.
  */
 public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
   static final Logger logger =
@@ -58,13 +57,20 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
 					 ArchivalUnit au,
 					 Reader in,
 					 String encoding,
-					 String url)
+					 String url,
+					 ServletUtil.LinkTransform xform)
       throws PluginException {
     if ("text/css".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
 
+      int port = 0;
+      try {
+	  port = CurrentConfig.getIntParam(ContentServletManager.PARAM_PORT);
+      } catch (org.lockss.config.Configuration.InvalidParam ex) {
+	  throw new PluginException("No port available: " + ex);
+      }
       // urlPrefix is http://host:port/ServeContent?url=
-      String urlPrefix = makePrefix();
+      String urlPrefix = xform.rewrite("");
       // urlBase is url made absolute up to but excluding the last /
       String urlBase = makeBase(au, url);
       // urlHost is urlBase with enough ../ to get back to site root.
@@ -72,21 +78,21 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
       Collection urlStems = au.getUrlStems();
       int nUrlStem = urlStems.size();
       String[][] replace1 = {
-	  // Rewrite absolute CSS links out of the way
-	  {"@import url(", "^http://", "@@@http://"},
-	  // Rewrite relative to absolute (prefix added later)
-	  {"@import url(", "^([a-z])", urlBase + "/$1"},
-	  // Rewrite relative to absolute (prefix added later)
-	  {"@import url(", "^(\\.\\./)", urlBase + "/$1"},
-	  // Rewrite relative to absolute with prefix
-	  {"@import url(", "^/", urlHost + "/"},
-	  // Rewrite absolute CSS links back in to the way
-	  {"@import url(", "^@@@http://", "http://"},
+	// Rewrite absolute CSS links out of the way
+	{"@import url(", "^http://", "@@@http://"},
+	// Rewrite relative to absolute (prefix added later)
+	{"@import url(", "^([a-z])", urlBase + "/$1"},
+	// Rewrite relative to absolute (prefix added later)
+	{"@import url(", "^(\\.\\./)", urlBase + "/$1"},
+	// Rewrite relative to absolute with prefix
+	{"@import url(", "^/", urlHost + "/"},
+	// Rewrite absolute CSS links back in to the way
+	{"@import url(", "^@@@http://", "http://"},
       };
       String[][] replace = new String[replace1.length + nUrlStem][3];
       int i = 0;
       for ( ; i < replace1.length; i++) {
-	  replace[i] = replace1[i];
+	replace[i] = replace1[i];
       }
       for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
 	String urlStem = (String)it.next();
@@ -101,64 +107,41 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
     }
   }
 
-  public InputStream createLinkRewriter(String mimeType,
-					ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					String url)
+  private String makeBase(ArchivalUnit au, String url) 
       throws PluginException {
-      Reader ret = createLinkRewriterReader(mimeType, au,
-					    new InputStreamReader(in),
-					    encoding, url);
-      return new ReaderInputStream(ret);
+    if (url.startsWith("http://")) {
+      int idx = url.lastIndexOf('/');
+      return url.substring(0, idx);
+    } else {
+      throw new PluginException("CSS base url not absolute");
+    }
   }
-
-    private String makePrefix() throws PluginException {
-      int port = 0;
-      try {
-	  port = CurrentConfig.getIntParam(ContentServletManager.PARAM_PORT);
-      } catch (org.lockss.config.Configuration.InvalidParam ex) {
-	  throw new PluginException("No port available: " + ex);
+  private String makeHost(ArchivalUnit au, String url) 
+      throws PluginException {
+    if (url.startsWith("http://")) {
+      int lastSlash = url.lastIndexOf('/');
+      if (lastSlash <= 7) {
+	throw new PluginException("CSS base url malformed");
       }
-      return("http://" + PlatformUtil.getLocalHostname() + ":" +
-	     port + "/ServeContent?url=");
-    }
-
-    private String makeBase(ArchivalUnit au, String url) 
-	throws PluginException {
-	if (url.startsWith("http://")) {
-	    int idx = url.lastIndexOf('/');
-	    return url.substring(0, idx);
-	} else {
-	    throw new PluginException("CSS base url not absolute");
+      String ret = url.substring(0, lastSlash);
+      int idx = url.indexOf('/', 7);
+      if (idx < url.length()) {
+	String fromRoot = url.substring(idx + 1);
+	int numSlash = 0;
+	for (int i = 0; i < fromRoot.length(); i++) {
+	  if (fromRoot.charAt(i) == '/') {
+	    numSlash++;
+	  }
 	}
-    }
-    private String makeHost(ArchivalUnit au, String url) 
-	throws PluginException {
-	if (url.startsWith("http://")) {
-	    int lastSlash = url.lastIndexOf('/');
-	    if (lastSlash <= 7) {
-		throw new PluginException("CSS base url malformed");
-	    }
-	    String ret = url.substring(0, lastSlash);
-	    int idx = url.indexOf('/', 7);
-	    if (idx < url.length()) {
-		String fromRoot = url.substring(idx + 1);
-		int numSlash = 0;
-		for (int i = 0; i < fromRoot.length(); i++) {
-		    if (fromRoot.charAt(i) == '/') {
-			numSlash++;
-		    }
-		}
-		for (int i = 0; i < numSlash; i++) {
-		    ret += "/..";
-		}
-	    }
-	    return ret;
-	} else {
-	    throw new PluginException("CSS base url not absolute");
+	for (int i = 0; i < numSlash; i++) {
+	  ret += "/..";
 	}
+      }
+      return ret;
+    } else {
+      throw new PluginException("CSS base url not absolute");
     }
+  }
 }
 
 

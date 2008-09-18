@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.41 2008-07-06 04:25:58 dshr Exp $
+ * $Id: MockCachedUrl.java,v 1.42 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.rewriter.*;
 
 /**
  * This is a mock version of <code>CachedUrl</code> used for testing
@@ -63,6 +64,7 @@ public class MockCachedUrl implements CachedUrl {
   private String cachedFile = null;
   private boolean isResource;
   private int version = 0;
+  private LinkRewriterFactory lrf = null;
 
   public MockCachedUrl(String url) {
     this.versions = new ArrayList();
@@ -155,13 +157,14 @@ public class MockCachedUrl implements CachedUrl {
     return new StringReader("");
   }
 
-  public InputStream openWithUrlRewriting() {
-    return getUnfilteredInputStream();
+  public LinkRewriterFactory getLinkRewriterFactory() {
+    return lrf;
   }
 
-  public Reader openForReadingWithRewriting() {
-    return openForReading();
+  public void setLinkRewriterFactory(LinkRewriterFactory lrf) {
+    this.lrf = lrf;
   }
+
 
   public boolean hasContent() {
     return doesExist || content != null;
@@ -238,6 +241,10 @@ public class MockCachedUrl implements CachedUrl {
   public String getContentType(){
     if (cachedProp == null) return null;
     return cachedProp.getProperty(PROPERTY_CONTENT_TYPE);
+  }
+
+  public String getEncoding(){
+    return Constants.DEFAULT_ENCODING;
   }
 
     // Write interface - used by the crawler.

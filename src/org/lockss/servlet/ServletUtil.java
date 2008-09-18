@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.55 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.56 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -1714,5 +1714,10 @@ public class ServletUtil {
       }
     }
     return tbl;
+  }
+
+  /** Interface to link rewriting */
+  public interface LinkTransform {
+    public String rewrite(String url);
   }
 }

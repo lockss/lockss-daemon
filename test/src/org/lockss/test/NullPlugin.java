@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.93 2008-09-15 08:10:43 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.94 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -192,19 +192,19 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public InputStream openWithUrlRewriting() {
-      return getUnfilteredInputStream();
-    }
-
-    public Reader openForReadingWithRewriting() {
-      return openForReading();
-    }
-
     public long getContentSize() {
       return 0;
     }
 
     public String getContentType(){
+      return null;
+    }
+
+    public String getEncoding(){
+      return null;
+    }
+
+    public LinkRewriterFactory getLinkRewriterFactory() {
       return null;
     }
 

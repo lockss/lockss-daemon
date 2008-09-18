@@ -1,5 +1,5 @@
 /*
- * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
+ * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.4 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -63,12 +63,13 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
 					 ArchivalUnit au,
 					 Reader in,
 					 String encoding,
-					 String url)
+					 String url,
+					 ServletUtil.LinkTransform xform)
       throws PluginException {
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
       // HTML gets default URL rewriting
-      StringBuffer jsInit = initializeJs(au, url);
+      StringBuffer jsInit = initializeJs(au, url, xform);
       StringBuffer jsText = getJs();
       String replace = jsInit.toString() + jsText + "\n" + jsTag;
       StringFilter sf = new StringFilter(in, jsTag, replace);
@@ -78,18 +79,6 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
       throw new PluginException("JavascriptHtmlLinkRewriterFactory vs. " +
 				mimeType);
     }
-  }
-
-  public InputStream createLinkRewriter(String mimeType,
-					ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					String url)
-      throws PluginException {
-      Reader ret = createLinkRewriterReader(mimeType, au,
-					    new InputStreamReader(in),
-					    encoding, url);
-      return new ReaderInputStream(ret);
   }
 
   private StringBuffer getJs() throws PluginException {
@@ -112,8 +101,10 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
     }
   }
     
-  private StringBuffer initializeJs(ArchivalUnit au, String url) throws
-    PluginException {
+  private StringBuffer initializeJs(ArchivalUnit au,
+				    String url,
+				    ServletUtil.LinkTransform xform)
+      throws PluginException {
     Collection urlStems = au.getUrlStems();
     StringBuffer ret = new StringBuffer();
     int port = 0;
@@ -124,10 +115,7 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
     }
     // XXX add LOCKSS prefix to all Javascript variables
     ret.append("<SCRIPT language=\"Javascript\">\n");
-    ret.append("urlLocalPrefix = \"http://" +
-	       PlatformUtil.getLocalHostname() + ":" +
-	       port + "\"\n");
-    ret.append("urlPrefix = urlLocalPrefix + \"/ServeContent?url=\"\n");
+    ret.append("urlPrefix = \"" + xform.rewrite("") + "\"\n");
     ret.append("urlSuffix = \"" + url + "\"\n");
     // XXX bug if more than 1 URL stem for the AU
     ret.append("urlTarget = \"" + (String)(urlStems.toArray()[0]) + "\"\n");

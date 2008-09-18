@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.103 2008-09-09 07:55:42 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.104 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -297,7 +297,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // Return descriptor of running servlet
-  protected ServletDescr myServletDescr() {
+  public ServletDescr myServletDescr() {
     if (_myServletDescr == null) {
       _myServletDescr = servletMgr.findServletDescr(this);
     }

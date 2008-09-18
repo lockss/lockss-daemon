@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.1 2008-07-12 08:36:02 dshr Exp $
+ * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.2 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -83,11 +83,19 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
       "@import url(/" + urlSuffix + testFile + ")";
   private static final String siteRelImportAfter =
       servlet + urlStem + "test/../../" + urlSuffix + testFile;
-  private InputStream in;
+  private Reader in;
+  private ServletUtil.LinkTransform xform = null;
+  private String testPort = "9524";
 
   public void setUp() throws Exception {
     super.setUp();
     au = new MockArchivalUnit();
+    xform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "http://" + PlatformUtil.getLocalHostname() +
+	    ":" + testPort + "/ServeContent?url=" + url;
+	}
+      };
     List l = new ArrayList();
     l.add(urlStem);
     au.setUrlStems(l);
@@ -95,11 +103,11 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotCss() {
-    in = new ReaderInputStream(new StringReader(page));
+    in = new StringReader(page);
     setupConfig(true);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/html", au, in,
-						  encoding, url);
+      Reader r = sfclrf.createLinkRewriterReader("text/html", au, in,
+						  encoding, url, xform);
       fail("createLinkRewriter should have thrown on non-css mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -111,11 +119,11 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNoPort() {
-    in = new ReaderInputStream(new StringReader(page));
+    in = new StringReader(page);
     setupConfig(false);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/css", au, in,
-						  encoding, url);
+      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
+						  encoding, url, xform);
       fail("createLinkRewriter should have thrown if no port");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -127,15 +135,14 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testAbsRewriting() {
-    in = new ReaderInputStream(new StringReader(absImportBefore));
+    in = new StringReader(absImportBefore);
     log.debug3("page is " + absImportBefore);
     setupConfig(true);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/css", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, make String
-      Reader r = new InputStreamReader(ret);
+      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
+						 encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, make String
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;
@@ -154,15 +161,14 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testPageRelRewriting() {
-    in = new ReaderInputStream(new StringReader(pageRelImportBefore));
+    in = new StringReader(pageRelImportBefore);
     log.debug3("page is " + pageRelImportBefore + " url is " + url);
     setupConfig(true);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/css", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, make String
-      Reader r = new InputStreamReader(ret);
+      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
+						 encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, make String
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;
@@ -183,15 +189,14 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testDotDotRelRewriting() {
-    in = new ReaderInputStream(new StringReader(dotDotRelImportBefore));
+    in = new StringReader(dotDotRelImportBefore);
     log.debug3("page is " + dotDotRelImportBefore + " url is " + url);
     setupConfig(true);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/css", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, make String
-      Reader r = new InputStreamReader(ret);
+      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
+						 encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, make String
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;
@@ -212,15 +217,14 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testSiteRelRewriting() {
-    in = new ReaderInputStream(new StringReader(siteRelImportBefore));
+    in = new StringReader(siteRelImportBefore);
     log.debug3("page is " + siteRelImportBefore + " url is " + url);
     setupConfig(true);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/css", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, make String
-      Reader r = new InputStreamReader(ret);
+      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
+						 encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, make String
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;
@@ -241,15 +245,14 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testRewriting() {
-    in = new ReaderInputStream(new StringReader(page));
+    in = new StringReader(page);
     setupConfig(true);
     log.debug3("page is \n" + page);
     try {
-      InputStream ret = sfclrf.createLinkRewriter("text/css", au, in,
-						 encoding, url);
-      assertNotNull(ret);
-      // Read from ret, make String
-      Reader r = new InputStreamReader(ret);
+      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
+						 encoding, url, xform);
+      assertNotNull(r);
+      // Read from r, make String
       StringBuffer sb = new StringBuffer();
       char[] buf = new char[4096];
       int i;

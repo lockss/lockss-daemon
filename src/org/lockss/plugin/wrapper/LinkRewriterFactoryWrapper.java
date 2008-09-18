@@ -1,5 +1,5 @@
 /*
- * $Id: LinkRewriterFactoryWrapper.java,v 1.3 2008-07-10 03:50:32 dshr Exp $
+ * $Id: LinkRewriterFactoryWrapper.java,v 1.4 2008-09-18 02:10:23 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.rewriter.*;
+import org.lockss.servlet.*;
 
 /** Error catching wrapper for LinkRewriterFactory */
 public class LinkRewriterFactoryWrapper
@@ -50,27 +51,16 @@ public class LinkRewriterFactoryWrapper
     return inst;
   }
 
-  public InputStream createLinkRewriter(String mimeType,
-					ArchivalUnit au,
-					InputStream is,
-					String encoding,
-					String url)
-      throws PluginException {
-    try {
-      return inst.createLinkRewriter(mimeType, au, is, encoding, url);
-    } catch (LinkageError e) {
-      throw new PluginException.LinkageError(e);
-    }
-  }
-
   public Reader createLinkRewriterReader(String mimeType,
 					 ArchivalUnit au,
 					 Reader is,
 					 String encoding,
-					 String url)
+					 String url,
+					 ServletUtil.LinkTransform xform)
       throws PluginException {
     try {
-      return inst.createLinkRewriterReader(mimeType, au, is, encoding, url);
+      return inst.createLinkRewriterReader(mimeType, au, is, encoding,
+					   url, xform);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
