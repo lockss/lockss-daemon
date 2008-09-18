@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.12 2008-09-18 02:10:23 dshr Exp $
+ * $Id: ServeContent.java,v 1.13 2008-09-18 06:41:50 tlipkis Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class ServeContent extends LockssServlet {
     try {
       // Get the CachedUrl for the URL, only if it has content.
       cu = pluginMgr.findCachedUrl(url, true);
-      if (cu != null || cu.hasContent()) {
+      if (cu != null && cu.hasContent()) {
 	handleCuRequest();
       } else {
 	log.debug(url + " not found");
