@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigStatus.java,v 1.3 2008-03-26 04:50:07 tlipkis Exp $
+ * $Id: PlatformConfigStatus.java,v 1.4 2008-09-19 14:14:35 dshr Exp $
  */
 
 /*
@@ -123,7 +123,18 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
 	     seplist(config.getList(PARAM_PLATFORM_DISK_SPACE_LIST)));
       addSum(res, "Cwd",
 	     PlatformUtil.getInstance().getCwd());
-
+      StringBuffer sb = new StringBuffer();
+      List propsUrls = ConfigManager.getConfigManager().getConfigUrlList();
+      if (propsUrls != null) {
+	for (ListIterator it = propsUrls.listIterator(); it.hasNext(); ) {
+	  String url = (String)it.next();
+	  sb.append(url);
+	  if (it.hasNext()) {
+	    sb.append(", ");
+	  }
+	}
+	addSum(res, "Props", sb.toString());
+      }
       return res;
     }
     

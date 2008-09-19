@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.57 2008-06-30 08:43:12 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.58 2008-09-19 14:14:35 dshr Exp $
  */
 
 /*
@@ -519,6 +519,13 @@ public class ConfigManager implements LockssManager {
 
   void setGeneration(String url, int gen) {
     generationMap.put(url, new Integer(gen));
+  }
+
+  /**
+   * @return a List of the urls from which the config is loaded.
+   */
+  public List getConfigUrlList() {
+    return configUrlList;
   }
 
   ConfigFile.Generation getConfigGeneration(String url, boolean required,
