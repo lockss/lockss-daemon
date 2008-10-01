@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.25 2008-03-15 04:54:39 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.25.8.1 2008-10-01 23:35:21 tlipkis Exp $
  */
 
 /*
@@ -279,12 +279,13 @@ public class PollerActions {
       }
       uc.storeContent(msg.getRepairDataInputStream(),
                       props);
+      ud.getPoller().receivedRepair(msg.getTargetUrl());
     } catch (IOException ex) {
       log.error("Error attempting to store repair", ex);
       return V3Events.evtError;
+    } finally {
+      msg.delete();
     }
-
-    ud.getPoller().receivedRepair(msg.getTargetUrl());
     return V3Events.evtOk;
   }
 

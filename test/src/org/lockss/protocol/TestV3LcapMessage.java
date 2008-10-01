@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.24 2008-02-27 06:06:49 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.24.8.1 2008-10-01 23:35:21 tlipkis Exp $
  */
 
 /*
@@ -177,27 +177,43 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   public void testMemoryRepairMessage() throws Exception {
-    V3LcapMessage src = makeRepairMessage(10 * 1024);
+    int len = 1024;
+    byte[] repairData = ByteArray.makeRandomBytes(len);
+    V3LcapMessage src = makeRepairMessage(repairData);
+    assertEquals(len, src.getRepairDataLength());
     InputStream srcStream = src.getInputStream();
     V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
     assertEqualMessages(src, copy);
+    assertEquals(len, copy.getRepairDataLength());
     InputStream in = copy.getRepairDataInputStream();
+    assertTrue(in+"", in instanceof ByteArrayInputStream);
     ByteArrayOutputStream out = new ByteArrayOutputStream();
     StreamUtil.copy(in, out);
     byte[] repairCopy = out.toByteArray();
-    assertEquals(m_repairData, repairCopy);
+    assertEquals(repairData, repairCopy);
+    // ensure that repeated delete doesn't cause error
+    copy.delete();
+    copy.delete();
   }
 
   public void testDiskRepairMessage() throws Exception {
-    V3LcapMessage src = makeRepairMessage(100 * 1024);
+    int len = 100 * 1024;
+    byte[] repairData = ByteArray.makeRandomBytes(len);
+    V3LcapMessage src = makeRepairMessage(repairData);
+    assertEquals(len, src.getRepairDataLength());
     InputStream srcStream = src.getInputStream();
     V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
     assertEqualMessages(src, copy);
+    assertEquals(len, copy.getRepairDataLength());
     InputStream in = copy.getRepairDataInputStream();
+    assertTrue(in+"", in instanceof FileInputStream);
     ByteArrayOutputStream out = new ByteArrayOutputStream();
     StreamUtil.copy(in, out);
     byte[] repairCopy = out.toByteArray();
-    assertEquals(m_repairData, repairCopy);
+    assertEquals(repairData, repairCopy);
+    // ensure that repeated delete doesn't cause error
+    copy.delete();
+    copy.delete();
   }
   
   public void testPollDuration() throws Exception {
@@ -355,7 +371,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     return msg;
   }
   
-  private V3LcapMessage makeRepairMessage(int size) {
+  private V3LcapMessage makeRepairMessage(byte[] repairData) {
     V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                                           m_testBytes,
                                           m_testBytes,
@@ -366,9 +382,9 @@ public class TestV3LcapMessage extends LockssTestCase {
     msg.setTargetUrl(m_url);
     msg.setArchivalId(m_archivalID);
     msg.setPluginVersion("PlugVer42");
-    msg.setRepairDataLength(m_repairData.length);
+    msg.setRepairDataLength(repairData.length);
     msg.setRepairProps(m_repairProps);
-    msg.setInputStream(new ByteArrayInputStream(m_repairData));
+    msg.setInputStream(new ByteArrayInputStream(repairData));
     return msg;
   }
 

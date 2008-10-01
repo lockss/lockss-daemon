@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.42 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.42.2.1 2008-10-01 23:35:21 tlipkis Exp $
  */
 
 /*
@@ -751,6 +751,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
         log.debug2("Deleting V3LcapMessage Data File: " + repairDataFile);
         repairDataFile.delete();
       }
+      m_repairDataFilePath = null;
     }
   }
 
@@ -809,6 +810,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       if (m_voteBlocks != null) {
         sb.append(" B:");
         sb.append(String.valueOf(m_voteBlocks.size()));
+      }
+      if (m_repairDataLen > 0) {
+        sb.append(" R:");
+        sb.append(m_repairDataLen);
       }
       sb.append(" ver " + m_pollProtocol + " rev " + getProtocolRev());
     }
