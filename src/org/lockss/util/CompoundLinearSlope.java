@@ -1,5 +1,5 @@
 /*
- * $Id: CompoundLinearSlope.java,v 1.1.2.1 2008-09-09 08:10:09 tlipkis Exp $
+ * $Id: CompoundLinearSlope.java,v 1.1.2.2 2008-10-01 23:36:14 tlipkis Exp $
  */
 
 /*
@@ -41,9 +41,9 @@ public class CompoundLinearSlope {
 
   static class Point {
     final long x;
-    final long y;
+    final double y;
 
-    Point(long x, long y) {
+    Point(long x, double y) {
       this.x = x;
       this.y = y;
     }
@@ -80,7 +80,7 @@ public class CompoundLinearSlope {
   }
 
   /** Return the Y value on the slope at a point on the X axis */
-  public long getY(long x) {
+  public double getY(long x) {
     Point p2 = points[0];
 
     for (int ix = 0; ix < points.length - 1; ix++) {
@@ -94,18 +94,18 @@ public class CompoundLinearSlope {
   }
 
   /** Interpolate Y value within single slope */
-  private long interp(long x, Point p1, Point p2) {
+  private double interp(long x, Point p1, Point p2) {
     long deltax = p2.x - p1.x;
-    long deltay = p2.y - p1.y;
+    double deltay = p2.y - p1.y;
     double fract = ((double)(x - p1.x)) / deltax;
 
-    return Math.round(deltay * fract) + p1.y;
+    return deltay * fract + p1.y;
   }
 
   //* Pattern picks off first x,y pair into group(1) and group(2) and rest
   //* of string into group(3) */
   static Pattern ONE_POINT_PAT =
-    RegexpUtil.uncheckedCompile("^\\s*,?\\s*\\[(\\w+)\\s*,\\s*(\\d+)\\](.*)$",
+    RegexpUtil.uncheckedCompile("^\\s*,?\\s*\\[(\\w+)\\s*,\\s*([0-9.]+)\\](.*)$",
 				Perl5Compiler.READ_ONLY_MASK);
 
 
@@ -126,7 +126,7 @@ public class CompoundLinearSlope {
       String ystr = matchResult.group(2);
       str = matchResult.group(3);
       res.add(new Point(StringUtil.parseTimeInterval(xstr),
-			Long.valueOf(ystr)));
+			Double.valueOf(ystr)));
     }
     res.trimToSize();
     return res;
