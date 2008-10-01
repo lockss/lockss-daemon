@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.71.2.1 2008-08-26 02:51:13 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.71.2.2 2008-10-01 23:35:56 tlipkis Exp $
  */
 
 /*
@@ -232,9 +232,7 @@ public class ArchivalUnitStatus
 	}
 	try {
 	  NodeManager nodeMan = theDaemon.getNodeManager(au);
-	  CachedUrlSet auCus = au.getAuCachedUrlSet();
-	  NodeState topNodeState = nodeMan.getNodeState(auCus);
-	  rowL.add(makeRow(au, nodeMan.getAuState(), topNodeState));
+	  rowL.add(makeRow(au, nodeMan));
 	  stats.aus++;
 	} catch (Exception e) {
 	  logger.warning("Unexpected expection building row", e);
@@ -243,8 +241,8 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
-    private Map makeRow(ArchivalUnit au, AuState auState,
-			NodeState topNodeState) {
+    private Map makeRow(ArchivalUnit au, NodeManager nodeMan) {
+      AuState auState = nodeMan.getAuState();
       HashMap rowMap = new HashMap();
       PollManager.V3PollStatusAccessor v3status =
         theDaemon.getPollManager().getV3Status();
@@ -319,6 +317,8 @@ public class ArchivalUnitStatus
                    theDaemon.getStatusService().
                    getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                 au));
+	CachedUrlSet auCus = au.getAuCachedUrlSet();
+	NodeState topNodeState = nodeMan.getNodeState(auCus);
 	stat = topNodeState.hasDamage()
 	  ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
       }
