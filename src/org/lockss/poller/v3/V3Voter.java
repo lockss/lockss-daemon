@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.61.2.1 2008-09-09 08:02:08 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.61.2.2 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -185,13 +185,14 @@ public class V3Voter extends BasePoll {
     DEFAULT_RECALC_HASH_ESTIMATE_VOTE_DURATION_MULTIPLIER
     = "Twice reciprocal of " + V3Poller.PARAM_VOTE_DURATION_MULTIPLIER;
 
-  /** Curve expressing decreasing probability of nominating peer who has
-   * last voted in one of our polls X time ago.
+  /** Curve expressing decreasing weight of nominating peer who has last
+   * voted in one of our polls X time ago.  X coord is time (ms) since last
+   * vote, Y is float nomination weight.
    * @see org.lockss.util.CompoundLinearSlope */
-  public static final String PARAM_NOMINATION_PROBABILITY_AGE_CURVE =
-    PREFIX + "nominationProbabilityAgeCurve";
-  public static final String DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE =
-    "[10d,100],[30d,10],[40d,1]";
+  public static final String PARAM_NOMINATION_WEIGHT_AGE_CURVE =
+    PREFIX + "nominationWeightAgeCurve";
+  public static final String DEFAULT_NOMINATION_WEIGHT_AGE_CURVE =
+    "[10d,1.0],[30d,0.1],[40d,0.01]";
 
 
   private PsmInterp stateMachine;
@@ -728,12 +729,14 @@ public class V3Voter extends BasePoll {
    *      that we want to try to invite this peer into a poll.
    */
   double nominateProb(PeerIdentityStatus status) {
-    CompoundLinearSlope nominationProbabilityCurve =
-      pollManager.getNominationProbabilityAgeCurve();
+    CompoundLinearSlope nominationWeightCurve =
+      pollManager.getNominationWeightAgeCurve();
+    if (nominationWeightCurve == null) {
+      return 1.0;
+    }
     long lastVoteTime = status.getLastVoterTime();
     long noVoteFor = TimeBase.nowMs() - lastVoteTime;
-    long prob = nominationProbabilityCurve.getY(noVoteFor);
-    return ((double)prob) / 100.0d;
+    return nominationWeightCurve.getY(noVoteFor);
   }
 
 

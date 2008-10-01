@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.8.4.1 2008-09-09 08:02:08 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.8.4.2 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -177,7 +177,7 @@ public class TestV3Voter extends LockssTestCase {
   }
 
   public void testNominateProb() throws Exception {
-    // default is [10d,100],[30d,10],[40d,1]
+    // default is [10d,1.0],[30d,.1],[40d,.01]
 
     assertEquals(1.0, nominateProb(-1, 0));
     assertEquals(1.0, nominateProb(0, 0));
@@ -185,14 +185,14 @@ public class TestV3Voter extends LockssTestCase {
     assertEquals(1.0, nominateProb(1, 10));
     
     assertEquals(1.0, nominateProb(10*DAY, 0));
-    assertEquals(.55, nominateProb(20*DAY, 0));
-    assertEquals(.1, nominateProb(30*DAY, 0));
-    assertEquals(.01, nominateProb(40*DAY,0));
+    assertEquals(.55, nominateProb(20*DAY, 0), .001);
+    assertEquals(.1, nominateProb(30*DAY, 0), .001);
+    assertEquals(.01, nominateProb(40*DAY,0), .001);
 
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
-				  "[1w,100],[20w,10]");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_NOMINATION_WEIGHT_AGE_CURVE,
+				  "[1w,1.0],[20w,.1]");
     assertEquals(1.0, nominateProb(1*WEEK, 0));
-    assertEquals(0.1, nominateProb(20*WEEK, 0));
+    assertEquals(0.1, nominateProb(20*WEEK, 0), .001);
   }
 
   static String PARAM_OVERHEAD_LOAD =

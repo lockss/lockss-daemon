@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.9 2008-08-17 08:43:20 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.9.2.1 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
 				  "false");
     ArchivalUnit au = regPlugin.createAu(auConfig);
-    AuState aus = new AuState(au, 123, 321, 0, 0,
+    AuState aus = new AuState(au, 123, 321, -1, -1,
 			  -1, null, 1, 1.0, (HistoryRepository)null);
     assertFalse(au.shouldCallTopLevelPoll(aus));
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,

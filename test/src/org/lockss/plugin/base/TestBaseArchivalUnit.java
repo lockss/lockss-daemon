@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.43 2008-01-30 00:49:47 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.43.10.1 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.poller.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit.*;
@@ -48,6 +49,7 @@ import org.lockss.plugin.base.BaseArchivalUnit.*;
 import org.lockss.extractor.*;
 
 public class TestBaseArchivalUnit extends LockssTestCase {
+  private PollManager pollMgr;
   private MyBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
   private String baseUrl = "http://www.example.com/foo/";
@@ -57,6 +59,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+
+    pollMgr = getMockLockssDaemon().getPollManager();
+
     Properties props = new Properties();
     props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "5s");
     props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "10s");
@@ -619,66 +624,66 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals(67890, mbau.newContentCrawlIntv);
     assertTrue(mbau.getCrawlSpec().getCrawlWindow()
 	       instanceof MyMockCrawlWindow);
-//     assertNull(mbau.getCrawlSpec().getCrawlWindow());
-  }
-
-  public void testCheckNextPollInterval() {
-    TimeBase.setSimulated();
-    for (int ii=0; ii<10; ii++) {
-      mbau.nextPollInterval = -1;
-      mbau.checkNextPollInterval();
-      assertTrue(mbau.nextPollInterval >= 5000);
-      assertTrue(mbau.nextPollInterval <= 10000);
-    }
-
-    Properties props = new Properties();
-    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "1s");
-    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "2s");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    mbau.checkNextPollInterval();
-    assertTrue(mbau.nextPollInterval >= 1000);
-    assertTrue(mbau.nextPollInterval <= 2000);
-  }
-
-  public void testIncrementPollProb() {
-    assertEquals(0.15, mbau.incrementPollProb(0.10), 0.001);
-    assertEquals(0.50, mbau.incrementPollProb(0.45), 0.001);
-    // shouldn't increment past max
-    assertEquals(0.85, mbau.incrementPollProb(0.83), 0.001);
-    assertEquals(0.85, mbau.incrementPollProb(0.85), 0.001);
-  }
-
-  public void testCheckPollProb() {
-    mbau.curTopLevelPollProb = -1.0;
-    mbau.checkPollProb();
-    assertEquals(0.50, mbau.curTopLevelPollProb, 0.001);
-
-    mbau.curTopLevelPollProb = .35;
-    mbau.checkPollProb();
-    assertEquals(0.50, mbau.curTopLevelPollProb, 0.001);
-
-    mbau.curTopLevelPollProb = .90;
-    mbau.checkPollProb();
-    assertEquals(0.85, mbau.curTopLevelPollProb, 0.001);
   }
 
   public void testShouldCallTopLevelPoll() throws IOException {
     TimeBase.setSimulated(100);
     MockAuState state = new MockAuState(mbau, -1, TimeBase.nowMs(), -1, null);
 
-    // no interval yet
-    assertEquals(-1, mbau.nextPollInterval);
+    // no time yet
+    assertEquals(0, mbau.nextPollTime);
     assertFalse(mbau.shouldCallTopLevelPoll(state));
     // should determine random interval
-    assertTrue(mbau.nextPollInterval >= 5000);
-    assertTrue(mbau.nextPollInterval <= 10000);
+    assertTrue(mbau.nextPollTime >= 5100);
+    assertTrue(mbau.nextPollTime <= 10100);
 
     // move to proper time
-    TimeBase.step(mbau.nextPollInterval);
+    TimeBase.step(10000);
     assertTrue(mbau.shouldCallTopLevelPoll(state));
-    // should have reset interval
-    assertEquals(-1, mbau.nextPollInterval);
+    // should still be true
+    assertTrue(mbau.shouldCallTopLevelPoll(state));
+
+    MockAuState state2 =
+      new MockAuState(mbau, -1, TimeBase.nowMs(), 10000, null);
+    assertFalse(mbau.shouldCallTopLevelPoll(state2));
+
+    // ensure title "nopoll" attr suppresses poll
+    TimeBase.step(10000);
+    assertTrue(mbau.shouldCallTopLevelPoll(state));
+    setTCAttrs(mbau, "flags", "nocrawl,nopoll");
+    assertFalse(mbau.shouldCallTopLevelPoll(state));
+  }
+
+  public void testCheckNextPollTimeAgreementCurve() throws IOException {
+    mbau.auName = "an au";
+    Properties props = new Properties();
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "99");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "100");
+    props.setProperty(PollManager.PARAM_POLL_INTERVAL_AGREEMENT_CURVE,
+		      "[20,86400],[50,172800],[50,1209600]");
+    props.setProperty(PollManager.PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT,
+		      "1;6");
+    ConfigurationUtil.addFromProps(props);
+
+
+    TimeBase.setSimulated(1000);
+    MockAuState state = new MockAuState(mbau, -1, TimeBase.nowMs(), -1, null);
+    state.setV3Agreement(0.0);
+    state.setLastPollResult(0);
+    state.setLastTopLevelPollTime(10000);
+    // no time yet
+    assertEquals(0, mbau.nextPollTime);
+    assertEquals(10000, state.getLastTopLevelPollTime());
+    mbau.checkNextPollTime(state);
+    assertTrue(mbau.nextPollTime+"", mbau.nextPollTime <= 1200);
+    state.setLastPollResult(6);
+    mbau.nextPollTime = 0;
+    mbau.checkNextPollTime(state);
+    assertEquals(96400, mbau.nextPollTime);
+    state.setV3Agreement(0.5);
+    mbau.nextPollTime = 0;
+    mbau.checkNextPollTime(state);
+    assertEquals(182800, mbau.nextPollTime);
   }
 
   public void testShouldCrawlForNewContent()

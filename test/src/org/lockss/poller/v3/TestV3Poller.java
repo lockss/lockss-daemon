@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.27.8.2 2008-09-09 08:02:08 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.27.8.3 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -768,17 +768,17 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(1.0, inviteProb(1*DAY, 0));
     assertEquals(1.0, inviteProb(4*DAY, 0));
     assertEquals(1.0, inviteProb(44*DAY, 40*DAY));
-    assertEquals(.94, inviteProb(5*DAY, 0));
-    assertEquals(1.0-r1, inviteProb(5*DAY, 0), .02);
-    assertEquals(.94, inviteProb(105*DAY, 100*DAY));
-    assertEquals(.55, inviteProb(112*DAY, 100*DAY));
-    assertEquals(.10, inviteProb(120*DAY, 100*DAY));
-    assertEquals(.01, inviteProb(140*DAY, 100*DAY));
+    assertEquals(.94375, inviteProb(5*DAY, 0), .00001);
+    assertEquals(1.0-r1, inviteProb(5*DAY, 0), .00001);
+    assertEquals(.94375, inviteProb(105*DAY, 100*DAY), .00001);
+    assertEquals(.55, inviteProb(112*DAY, 100*DAY), .001);
+    assertEquals(.10, inviteProb(120*DAY, 100*DAY), .001);
+    assertEquals(.01, inviteProb(140*DAY, 100*DAY), .001);
 
-    ConfigurationUtil.addFromArgs(V3Poller.PARAM_INVITATION_PROBABILITY_AGE_CURVE,
-				  "[1w,100],[20w,10]");
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_INVITATION_WEIGHT_AGE_CURVE,
+				  "[1w,1.0],[20w,.1]");
     assertEquals(1.0, inviteProb(1*WEEK, 0));
-    assertEquals(0.1, inviteProb(20*WEEK, 0));
+    assertEquals(0.1, inviteProb(20*WEEK, 0), .001);
   }
   
   private MyV3Poller makeV3Poller(String key) throws Exception {

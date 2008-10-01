@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.194.6.2 2008-09-09 08:02:08 tlipkis Exp $
+ * $Id: PollManager.java,v 1.194.6.3 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public class PollManager
    */
   public static final String PARAM_INCREASE_POLL_PRIORITY_AFTER =
     PREFIX + "increasePollPriorityAfter";
-  public static final long DEFAULT_INCREASE_POLL_PRIORITY_AFTER = 6 * WEEK;;
+  public static final long DEFAULT_INCREASE_POLL_PRIORITY_AFTER = 6 * WEEK;
 
   /**
    * If set, poll starting will be throttled.  This is the default.
@@ -166,6 +166,21 @@ public class PollManager
   public static final String PARAM_WRONG_GROUP_RETRY_TIME =
     PREFIX + "wrongGroupRetryTime";
   public static final long DEFAULT_WRONG_GROUP_RETRY_TIME = 4 * WEEK;
+
+  static final String V3PREFIX = PREFIX + ".v3";
+
+  /** Curve expressing desired inter-poll interval based on last agreement
+   * value */
+  public static final String PARAM_POLL_INTERVAL_AGREEMENT_CURVE =
+    V3PREFIX + "pollIntervalAgreementCurve";
+  public static final String DEFAULT_POLL_INTERVAL_AGREEMENT_CURVE = null;
+
+  /** Previous poll results for which we want to apply {@link
+   * #PARAM_POLL_INTERVAL_AGREEMENT_CURVE} */
+  public static final String PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT =
+    V3PREFIX + "pollIntervalAgreementLastResult";
+  public static final List DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT =
+    Collections.EMPTY_LIST;
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
@@ -217,8 +232,11 @@ public class PollManager
   private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
   private IpFilter noInvitationSubnetFilter = null;
-  private CompoundLinearSlope v3InvitationProbabilityAgeCurve = null;
-  private CompoundLinearSlope v3NominationProbabilityAgeCurve = null;
+  private CompoundLinearSlope v3InvitationWeightAgeCurve = null;
+  private CompoundLinearSlope v3NominationWeightAgeCurve = null;
+  private CompoundLinearSlope v3PollIntervalAgreementCurve = null;
+  private Set v3PollIntervalAgreementLastResult =
+    SetUtil.theSet(DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT);
 
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -1028,45 +1046,37 @@ public class PollManager
 			 e);
 	}
       }
-      if (changedKeys.contains(PARAM_INVITATION_PROBABILITY_AGE_CURVE)) {
-	String probCurve =
-	  newConfig.get(PARAM_INVITATION_PROBABILITY_AGE_CURVE,
-			DEFAULT_INVITATION_PROBABILITY_AGE_CURVE); 
-	if (StringUtil.isNullString(probCurve)) {
-	  v3InvitationProbabilityAgeCurve = null;
-	} else {
-	  try {
-	    v3InvitationProbabilityAgeCurve =
-	      new CompoundLinearSlope(probCurve);
-	    theLog.info("Installed invitation probability age curve: " +
-			v3InvitationProbabilityAgeCurve);
-	  } catch (Exception e) {
-	    theLog.warning("Malformed V3 invitation probability curve: "
-			   + probCurve,
-			   e);
-	    v3InvitationProbabilityAgeCurve = null;
-	  }
-	}
+      if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
+	v3InvitationWeightAgeCurve =
+	  processWeightCurve("V3 invitation weight age curve",
+			     newConfig,
+			     PARAM_INVITATION_WEIGHT_AGE_CURVE,
+			     DEFAULT_INVITATION_WEIGHT_AGE_CURVE);
+
       }
-      if (changedKeys.contains(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE)) {
-	String probCurve =
-	  newConfig.get(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
-			V3Voter.DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE); 
-	if (StringUtil.isNullString(probCurve)) {
-	  v3NominationProbabilityAgeCurve = null;
-	} else {
-	  try {
-	    v3NominationProbabilityAgeCurve =
-	      new CompoundLinearSlope(probCurve);
-	    theLog.info("Installed nomination probability age curve: " +
-			v3NominationProbabilityAgeCurve);
-	  } catch (Exception e) {
-	    theLog.warning("Malformed V3 nomination probability curve: "
-			   + probCurve,
-			   e);
-	    v3NominationProbabilityAgeCurve = null;
-	  }
+      if (changedKeys.contains(V3Voter.PARAM_NOMINATION_WEIGHT_AGE_CURVE)) {
+	v3NominationWeightAgeCurve =
+	  processWeightCurve("V3 nomination weight age curve",
+			     newConfig,
+			     V3Voter.PARAM_NOMINATION_WEIGHT_AGE_CURVE,
+			     V3Voter.DEFAULT_NOMINATION_WEIGHT_AGE_CURVE);
+      }
+      if (changedKeys.contains(PARAM_POLL_INTERVAL_AGREEMENT_CURVE)) {
+	v3PollIntervalAgreementCurve =
+	  processWeightCurve("V3 poll interval agreement curve",
+			     newConfig,
+			     PARAM_POLL_INTERVAL_AGREEMENT_CURVE,
+			     DEFAULT_POLL_INTERVAL_AGREEMENT_CURVE);
+      }
+      if (changedKeys.contains(PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT)) {
+	List<String> lst =
+	  newConfig.getList(PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT,
+			    DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT);
+	Set res = new HashSet();
+	for (String str : lst) {
+	  res.add(Integer.valueOf(str));
 	}
+	v3PollIntervalAgreementLastResult = res;
       }
     }
     long scommTimeout =
@@ -1100,12 +1110,20 @@ public class PollManager
     return noInvitationSubnetFilter;
   }
 
-  public CompoundLinearSlope getInvitationProbabilityAgeCurve() {
-    return v3InvitationProbabilityAgeCurve;
+  public CompoundLinearSlope getInvitationWeightAgeCurve() {
+    return v3InvitationWeightAgeCurve;
   }
 
-  public CompoundLinearSlope getNominationProbabilityAgeCurve() {
-    return v3NominationProbabilityAgeCurve;
+  public CompoundLinearSlope getNominationWeightAgeCurve() {
+    return v3NominationWeightAgeCurve;
+  }
+
+  public CompoundLinearSlope getPollIntervalAgreementCurve() {
+    return v3PollIntervalAgreementCurve;
+  }
+
+  public Set getPollIntervalAgreementLastResult() {
+    return v3PollIntervalAgreementLastResult;
   }
 
   public double getMinPercentForRepair() {
@@ -1126,6 +1144,25 @@ public class PollManager
     }
     theLog.error("Unknown poll version: " + version, new Throwable());
     return null;
+  }
+
+  CompoundLinearSlope processWeightCurve(String name,
+					 Configuration config,
+					 String param,
+					 String dfault) {
+    String probCurve = config.get(param, dfault); 
+    if (StringUtil.isNullString(probCurve)) {
+      return null;
+    } else {
+      try {
+	CompoundLinearSlope curve = new CompoundLinearSlope(probCurve);
+	theLog.info("Installed " + name + ": " + curve);
+	return curve;
+      } catch (Exception e) {
+	theLog.warning("Malformed " + name + ": " + probCurve, e);
+	return null;
+      }
+    }
   }
 
 

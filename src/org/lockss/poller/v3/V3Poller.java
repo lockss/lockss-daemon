@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.81.2.2 2008-09-09 08:02:08 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.81.2.3 2008-10-01 23:34:45 tlipkis Exp $
  */
 
 /*
@@ -138,13 +138,14 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableFollowupInvitations";
   public static final boolean DEFAULT_ENABLE_INVITATIONS = true;
   
-  /** Curve expressing decreasing probability of inviting peer who has
-   * been unresponsive for X time.
+  /** Curve expressing decreasing weight of inviting peer who has been
+   * unresponsive for X time.  X coord is time (ms) since last response, Y
+   * is float invitation weight.
    * @see org.lockss.util.CompoundLinearSlope */
-  public static final String PARAM_INVITATION_PROBABILITY_AGE_CURVE =
-    PREFIX + "invitationProbabilityAgeCurve";
-  public static final String DEFAULT_INVITATION_PROBABILITY_AGE_CURVE =
-    "[4d,100],[20d,10],[40d,1]";
+  public static final String PARAM_INVITATION_WEIGHT_AGE_CURVE =
+    PREFIX + "invitationWeightAgeCurve";
+  public static final String DEFAULT_INVITATION_WEIGHT_AGE_CURVE =
+    "[4d,1.0],[20d,0.1],[40d,0.01]";
 
   /** The time to wait between inviting more peers, until at least
    * MIN_POLL_SIZE have agreed to participate.
@@ -1526,6 +1527,15 @@ public class V3Poller extends BasePoll {
       }
     } else {
       // It's OK to shortcut and end the poll here, there's nothing left to do!
+
+      // XXX hack to allow voter state machine to send receipt.
+      // should wait until all voter state machines have finished
+      try {
+	Deadline.in(1 * Constants.SECOND).sleep();
+      } catch (InterruptedException e) {
+	// ignore
+      }
+
       voteComplete();
       return;
     }
@@ -1930,8 +1940,6 @@ public class V3Poller extends BasePoll {
       log.error("No voter user data for peer.  May have " +
                 "been removed from poll: " + msg.getOriginatorId());
     }
-    // Finally, clean up after the V3LcapMessage
-    msg.delete();
   }
 
   public PollerStateBean getPollerStateBean() {
@@ -2052,13 +2060,12 @@ public class V3Poller extends BasePoll {
    *      that we want to try to invite this peer into a poll.
    */
   double inviteProb(PeerIdentityStatus status) {
-    CompoundLinearSlope invitationProbabilityCurve =
-      pollManager.getInvitationProbabilityAgeCurve();
+    CompoundLinearSlope invitationWeightCurve =
+      pollManager.getInvitationWeightAgeCurve();
     long lastPollInvitationTime = status.getLastPollInvitationTime();
     long lastMessageTime = status.getLastMessageTime();
     long noResponseFor = lastPollInvitationTime - lastMessageTime;
-    long prob = invitationProbabilityCurve.getY(noResponseFor);
-    return ((double)prob) / 100.0d;
+    return invitationWeightCurve.getY(noResponseFor);
   }
 
   Class getPollerActionsClass() {
