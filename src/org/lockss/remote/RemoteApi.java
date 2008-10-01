@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.67 2008-02-19 01:43:55 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.67.10.1 2008-10-01 23:35:44 tlipkis Exp $
  */
 
 /*
@@ -1610,8 +1610,9 @@ public class RemoteApi
       bfile = createConfigBackupFile(machineName);
       MimeMessage msg = new MimeMessage();
 
-      PeerIdentity pid = idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL);
-      String id = pid == null ? "unknown" : pid.getIdString();
+      String id =
+	CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_IP_ADDRESS,
+			       "unknown");
       String text =
 	sprintf(BACK_MAIL_TEXT,
 		new Object[] {machineName,
