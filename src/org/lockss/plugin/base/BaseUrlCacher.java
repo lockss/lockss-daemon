@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.78 2008-09-14 22:10:28 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.79 2008-10-02 06:45:59 tlipkis Exp $
  */
 
 /*
@@ -648,7 +648,7 @@ public class BaseUrlCacher implements UrlCacher {
 
   String getUserPass() {
     Configuration auConfig = au.getConfiguration();
-    if (auConfig != null) {
+    if (auConfig != null) {		// can be null in unit tests
       return auConfig.get(ConfigParamDescr.USER_CREDENTIALS.getKey());
     }
     return null;
