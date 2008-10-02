@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.12 2008-09-16 03:57:36 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.13 2008-10-02 06:51:29 tlipkis Exp $
  */
 
 /*
@@ -278,8 +278,47 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertEquals(1, th.getNumConnects());
   }
 
+  public void xtestRepeatAuth() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_401), resp(RESP_200), resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "foo",
+				  connectionPool);
+    conn.setCredentials("userfoo", "passbar");
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req1 = th.getRequest(0);
+    assertMatchesRE("^GET /foo HTTP/", req1);
+    assertNotMatchesRE("Authorization:", req1);
+    // second request should have Authorization: header
+    String req2 = th.getRequest(1);
+    assertMatchesRE("Authorization: Basic dXNlcmZvbzpwYXNzYmFy", req2);
+    assertEquals(200, conn.getResponseCode());
+
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "bar",
+				  connectionPool);
+    conn.setCredentials("userfoo", "passbar");
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    // thirs request should also have Authorization: header
+    String req3 = th.getRequest(2);
+    assertMatchesRE("Authorization: Basic dXNlcmZvbzpwYXNzYmFy", req3);
+
+    conn.release();
+
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
   // Ensure that execute ends with 401 error if incorrect credentials are
-  // supplies.
+  // supplied.
   public void testAuthFail() throws Exception {
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
@@ -471,17 +510,20 @@ public class FuncLockssHttpClient extends LockssTestCase {
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
     String c = setCookies(ListUtil.list(cookie1, cookie2, cookie3));
-    th.setResponses(resp(RESP_200 + c), resp(RESP_200));
+    th.setResponses(resp(RESP_200 + c), resp(RESP_200), resp(RESP_200));
     th.setMaxReads(10);
     th.start();
+
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port), connectionPool);
     aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
     aborter.cancel();
     assertMatchesRE("^GET / HTTP/", th.getRequest(0));
+    assertNoHeaderLine("^Cookie:", th.getRequest(0));
     assertEquals(200, conn.getResponseCode());
     conn.release();
+
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
@@ -489,6 +531,24 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn.execute();
     aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(1));
+    assertHasCookie(th.getRequest(1), policy, singleHeader);
+    conn.release();
+
+    // Ensure next request still has cookies, even though last response
+    // didn't set them
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "xxx",
+				  connectionPool);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    assertMatchesRE("^GET /xxx HTTP/", th.getRequest(2));
+    assertHasCookie(th.getRequest(2), policy, singleHeader);
+    conn.release();
+    th.stopServer();
+  }
+
+  void assertHasCookie(String req, String policy, boolean singleHeader) {
     String c1 = null, c2 = null, ver = "";
     if (policy.equalsIgnoreCase("rfc2109")) {
       c1 = "monster=42; \\$Path=/";
@@ -499,15 +559,13 @@ public class FuncLockssHttpClient extends LockssTestCase {
       c2 = "cutter=leaf";
     }
     if (policy.equalsIgnoreCase("ignore")) {
-      assertNoHeaderLine("^Cookie:", th.getRequest(1));
+      assertNoHeaderLine("^Cookie:", req);
     } else if (singleHeader) {
-      assertHeaderLine("^Cookie: " + ver + c1 + "; " + c2, th.getRequest(1));
+      assertHeaderLine("^Cookie: " + ver + c1 + "; " + c2, req);
     } else {
-      assertHeaderLine("^Cookie: " + ver + c1, th.getRequest(1));
-      assertHeaderLine("^Cookie: " + ver + c2, th.getRequest(1));
+      assertHeaderLine("^Cookie: " + ver + c1, req);
+      assertHeaderLine("^Cookie: " + ver + c2, req);
     }
-    th.stopServer();
-    conn.release();
   }
 
   public void testRetryAfterClose() throws Exception {
