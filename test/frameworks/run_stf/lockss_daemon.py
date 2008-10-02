@@ -7,7 +7,7 @@ from lockss_util import *
 # Constants
 
 DEF_TIMEOUT = 60 * 30  # 30 minute default timeout for waits.
-DEF_SLEEP = 10         # 10 second default sleep between loops.
+DEF_SLEEP = 5         # 5 second default sleep between loops.
 FILE_TYPE_TEXT = 1
 FILE_TYPE_HTML = 2
 FILE_TYPE_PDF = 4
@@ -289,6 +289,11 @@ class Client:
         the daemon's status table. """
         post = self.__makeAuPost(au, 'Create')
         post.execute()
+#         if not self.waitForCreateAu(au):
+#             raise LockssError("Timed out while waiting for AU %s to appear." % au)
+
+    def waitAu(self, au):
+        """ will block until the AU appears in the daemon's status table. """
         if not self.waitForCreateAu(au):
             raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
@@ -805,6 +810,12 @@ class Client:
             return True
         return False
 
+    def valueOfRef(self, possibleref):
+        if isinstance(possibleref, types.DictType):
+            return possibleref['value']
+        else:
+            return possibleref
+
     def getAdminUi(self):
         """ Fetch the contents of the top-level admin UI.  Useful for
         testing the Tiny UI.  May throw urllib2.URLError or
@@ -1073,7 +1084,7 @@ class Client:
             tbl = self.getCrawlStatus(au)
             status = tbl[0]['crawl_status']['value'] 
             if status == 'Successful':
-                numCrawled = int(tbl[0]['num_urls_fetched'])
+                numCrawled = int(self.valueOfRef(tbl[0]['num_urls_fetched']))
                 numExpected = au.expectedUrlCount()
                 if numCrawled == numExpected:
                     return True
@@ -1905,7 +1916,11 @@ org.lockss.poll.v3.deleteExtraFiles=true
 org.lockss.poll.v3.quorum=4
 arg.lockss.poll.v3.minNominationSize=0
 org.lockss.poll.v3.maxNominationSize=0
-org.lockss.poll.v3.voteDeadlinePadding=30s
+org.lockss.poll.v3.voteDurationPadding=30s
+org.lockss.poll.v3.tallyDurationPadding=30s
+org.lockss.poll.v3.voteDurationMultiplier=3
+org.lockss.poll.v3.tallyDurationMultiplier=3
+org.lockss.poll.v3.receiptPadding=30s
 
 # Set the v3 poll state dir to /tmp
 org.lockss.poll.v3.messageDir=/tmp

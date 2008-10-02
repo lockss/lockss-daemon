@@ -291,6 +291,14 @@ class V3TestCase(LockssTestCase):
     def getBaseV3Port(self):
         return 8801
 
+    def createAus(self, au):
+        log.info("Creating simulated AUs.")
+        for c in self.clients:
+            c.createAu(au)
+        for c in self.clients:
+            c.waitAu(au)
+
+
 class SimpleDamageV3TestCase(V3TestCase):
     """ Test a basic V3 Poll. """
     def runTest(self):
@@ -303,9 +311,7 @@ class SimpleDamageV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -351,9 +357,7 @@ class RandomDamageV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -405,9 +409,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -468,9 +470,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -540,9 +540,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -587,9 +585,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -635,9 +631,7 @@ class RandomDeleteV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -682,9 +676,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -729,9 +721,7 @@ class LastFileExtraV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating V3 simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -777,9 +767,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -837,9 +825,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -896,9 +882,7 @@ class NoQuorumV3TestCase(V3TestCase):
         ##
         ## Create simulated AUs
         ##
-        log.info("Creating simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
@@ -941,14 +925,13 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
     def runTest(self):
         
         ## Define a simulated AU
-        simAu = SimulatedAu('simContent', 0, 0, 30, protocolVersion=3)
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
+                            numFiles=30, protocolVersion=3)
 
         victim = self.victim
         
         ## Create simulated AUs
-        log.info("Creating simulated AUs.")
-        for c in self.clients:
-            c.createAu(simAu)
+        self.createAus(simAu)
 
         ## Assert that the AUs have been crawled.
         log.info("Waiting for simulated AUs to crawl.")
