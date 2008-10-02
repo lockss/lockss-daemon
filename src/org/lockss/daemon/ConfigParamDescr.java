@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.41 2008-09-16 03:57:22 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.42 2008-10-02 06:45:13 tlipkis Exp $
  */
 
 /*
@@ -63,10 +63,12 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final int TYPE_NUM_RANGE = 8;
   /** Value is a set string */
   public static final int TYPE_SET = 9;
+  /** Value is a user:passwd pair (colon separated) */
+  public static final int TYPE_USER_PASSWD = 10;
 
   public static final String[] TYPE_STRINGS = {
       "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
-      "Range", "Numeric Range", "Set"};
+      "Range", "Numeric Range", "Set", "User:Passwd String"};
 
   public static final ConfigParamDescr VOLUME_NUMBER =
     new ConfigParamDescr()
@@ -191,7 +193,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setDefinitional(false)
     .setKey("user_pass")
     .setDisplayName("Username:Password")
-    .setType(TYPE_STRING)
+    .setType(TYPE_USER_PASSWD)
     .setSize(30);
 
   // Internal use
@@ -511,6 +513,20 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         }
         else
           throw new InvalidFormatException("Invalid Boolean: " + val);
+        break;
+      case TYPE_USER_PASSWD:
+        if (!StringUtil.isNullString(val)) {
+	  List<String> lst = StringUtil.breakAt(val, ':', -1, true, false);
+	  if (lst.size() != 2) {
+	    throw new InvalidFormatException("User:Passwd must consist of two" +
+					     "strings separated by a colon: " +
+					     val);
+	  }
+	  ret_val = val;
+	}
+        else {
+          throw new InvalidFormatException("Invalid String: " + val);
+        }
         break;
       case TYPE_RANGE:
       { // case block

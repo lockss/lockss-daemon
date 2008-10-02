@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.10 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.11 2008-10-02 06:45:13 tlipkis Exp $
  */
 
 /*
@@ -255,5 +255,29 @@ public class TestConfigParamDescr extends LockssTestCase {
       // all is well
     }
   }
+
+  /**
+   * <p>Tests {@link ConfigParamDescr#getValueOfType(String)} for
+   * the {@link ConfigParamDescr} instance
+   * {@link ConfigParamDescr#ISSUE_RANGE}.</p>
+   * @throws Exception if any unexpected error occurs.
+   */
+  public void testGetValueOfTypeUserPass() throws Exception {
+    ConfigParamDescr pass = ConfigParamDescr.USER_CREDENTIALS;
+    assertEquals("foo:bar", pass.getValueOfType("foo:bar"));
+    // Invalid pass
+    try {
+      pass.getValueOfType("foobar");
+      fail("Should have thrown InvalidFormatException");
+    } catch (InvalidFormatException expected) {
+    }
+    try {
+      pass.getValueOfType("foo:");
+      fail("Should have thrown InvalidFormatException");
+    } catch (InvalidFormatException expected) {
+    }
+  }
+
+
 
 }
