@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.86 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.87 2008-10-02 07:42:46 tlipkis Exp $
  */
 
 /*
@@ -1511,6 +1511,15 @@ public class V3Poller extends BasePoll {
       }
     } else {
       // It's OK to shortcut and end the poll here, there's nothing left to do!
+
+      // XXX hack to allow voter state machine to send receipt.
+      // should wait until all voter state machines have finished
+      try {
+	Deadline.in(1 * Constants.SECOND).sleep();
+      } catch (InterruptedException e) {
+	// ignore
+      }
+
       voteComplete();
       return;
     }
@@ -1921,8 +1930,6 @@ public class V3Poller extends BasePoll {
       log.error("No voter user data for peer.  May have " +
                 "been removed from poll: " + msg.getOriginatorId());
     }
-    // Finally, clean up after the V3LcapMessage
-    msg.delete();
   }
 
   public PollerStateBean getPollerStateBean() {
