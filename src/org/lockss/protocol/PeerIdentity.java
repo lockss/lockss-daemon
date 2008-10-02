@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.7 2005-11-05 02:10:56 thib_gc Exp $
+ * $Id: PeerIdentity.java,v 1.8 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,14 @@ public class PeerIdentity implements LockssSerializable {
   private String key;
   private transient PeerAddress pAddr;
 
-  PeerIdentity(String newKey) {
+  PeerIdentity(String newKey)
+      throws IdentityManager.MalformedIdentityKeyException {
     key = newKey;
+    pAddr = PeerAddress.makePeerAddress(key);
+  }
+
+  // Here only for Mock subclass
+  PeerIdentity() {
   }
 
   /**
@@ -77,11 +83,7 @@ public class PeerIdentity implements LockssSerializable {
     return key;
   }
 
-  public PeerAddress getPeerAddress()
-      throws IdentityManager.MalformedIdentityKeyException {
-    if (pAddr == null) {
-      pAddr = PeerAddress.makePeerAddress(key);
-    }
+  public PeerAddress getPeerAddress() {
     return pAddr;
   }
 
@@ -99,11 +101,17 @@ public class PeerIdentity implements LockssSerializable {
   protected Object postUnmarshalResolve(LockssApp lockssContext) {
     IdentityManager idm =
       (IdentityManager)lockssContext.getManagerByKey(LockssDaemon.IDENTITY_MANAGER);
-    return idm.findPeerIdentity(key);
+    try {
+      return idm.findPeerIdentity(key);
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+      theLog.error("Bad serialized peer id: " + key, e);
+      return null;
+    }
   }
   
   static class LocalIdentity extends PeerIdentity {
-    LocalIdentity(String key) {
+    LocalIdentity(String key)
+	throws IdentityManager.MalformedIdentityKeyException {
       super(key);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.18 2006-06-04 06:25:53 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.19 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -252,24 +252,28 @@ public class LcapDatagramRouter
   void processIncomingMessage(LockssReceivedDatagram dg) {
     V1LcapMessage msg;
     log.debug2("rcvd message: " + dg);
+    PeerIdentity senderID;
+    try {
+      senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+      log.warning("Bad PeerId in incoming message: " + dg.getSender(), e);
+      return;
+    }
     try {
       byte[] msgBytes = dg.getData();
       msg = V1LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
     } catch (IOException e) {
       // XXX move the constants to IdentityManager
-      PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
-      idEvent(pid, LcapIdentity.EVENT_ERRPKT, null);
+      idEvent(senderID, LcapIdentity.EVENT_ERRPKT, null);
       log.error("Couldn't decode incoming message", e);
       return;
     }
-    PeerIdentity senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
-
     if (!didIOriginateOrSend(dg, msg) && !partnerList.isPartner(senderID)) {
       refreshPartnersAt.expireIn(partnerRefreshInterval);
     }
 
     if (!isDuplicate(dg, msg)) {
-      routeIncomingMessage(dg, msg);
+      routeIncomingMessage(dg, msg, senderID);
       // if not a no-op, give to incoming message handlers
       if (!msg.isNoOp()) {
 	runHandlers(msg);
@@ -296,8 +300,7 @@ public class LcapDatagramRouter
       String verifier = String.valueOf(B64Code.encode(((V1LcapMessage)msg).getVerifier()));
       if (recentVerifiers.put(verifier, verObj) != null) {
 	log.debug2("Discarding dup from " + dg.getSender() + ": " + msg);
-	PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
-	idEvent(pid, LcapIdentity.EVENT_DUPLICATE, msg);
+	idEvent(dg.getSender(), LcapIdentity.EVENT_DUPLICATE, msg);
 	return true;
       }
       return false;
@@ -321,8 +324,8 @@ public class LcapDatagramRouter
   }
 
   // decide where to forward incoming message
-  void routeIncomingMessage(LockssReceivedDatagram dg, V1LcapMessage msg) {
-    PeerIdentity senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
+  void routeIncomingMessage(LockssReceivedDatagram dg, V1LcapMessage msg,
+			    PeerIdentity senderID) {
     PeerIdentity originatorID = msg.getOriginatorId();
     idEvent(originatorID, LcapIdentity.EVENT_ORIG, msg);
     if (!msg.isNoOp()) {
@@ -362,6 +365,14 @@ public class LcapDatagramRouter
       } else {
 	log.debug("Fwd Msg rate limited");
       }
+    }
+  }
+
+  void idEvent(IPAddr ip, int event, LcapMessage msg) {
+    try {
+      idEvent(idMgr.ipAddrToPeerIdentity(ip), event, msg);
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+      log.warning("Bad PeerId " + ip + ", not recording event " + event);
     }
   }
 

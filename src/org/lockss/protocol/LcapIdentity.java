@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.33 2006-01-12 00:48:59 tlipkis Exp $
+ * $Id: LcapIdentity.java,v 1.34 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -95,13 +95,11 @@ public class LcapIdentity implements LockssSerializable {
     m_pid = pid;
   }
 
-  protected LcapIdentity(PeerIdentity pid, String idKey)
-      throws IdentityManager.MalformedIdentityKeyException {
+  protected LcapIdentity(PeerIdentity pid, String idKey) {
     this(pid, idKey, IdentityManager.INITIAL_REPUTATION);
   }
 
-  protected LcapIdentity(PeerIdentity pid, String idKey, int reputation)
-      throws IdentityManager.MalformedIdentityKeyException {
+  protected LcapIdentity(PeerIdentity pid, String idKey, int reputation) {
     this(pid);
     m_idKey = idKey;
     PeerAddress.Ip pa = (PeerAddress.Ip)pid.getPeerAddress();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerMessage.java,v 1.5 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id: TestPeerMessage.java,v 1.6 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -210,8 +210,9 @@ public class TestPeerMessage extends LockssTestCase {
 
 
   class MyPeerIdentity extends PeerIdentity {
-    MyPeerIdentity() {
-      super("foo");
+    MyPeerIdentity()
+	throws IdentityManager.MalformedIdentityKeyException {
+      super("tcp:[1.2.3.4]:42");
     }
   }
 

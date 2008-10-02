@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.5 2006-03-01 02:50:12 smorabito Exp $
+ * $Id: TestPeerIdentity.java,v 1.6 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,9 @@ import org.lockss.util.*;
 /** Test case for class: org.lockss.protocol.PeerIdentity */
 public class TestPeerIdentity extends LockssTestCase {
 
+  static String KEY1 = "tcp:[1.1.1.1]:111";
+  static String KEY2 = "tcp:[1.1.1.1]:112";
+
   private IdentityManager idmgr;
 
   protected void setUp() throws Exception {
@@ -54,9 +57,9 @@ public class TestPeerIdentity extends LockssTestCase {
   // ensure that equals() and hashCode() have not been overridden to behave
   // differently from Object default (identity)
   public void testEqualsHash() throws Exception {
-    PeerIdentity id1 = newPI("key1");
-    PeerIdentity id2 = newPI("key1");
-    PeerIdentity id3 = newPI("key2");
+    PeerIdentity id1 = newPI(KEY1);
+    PeerIdentity id2 = newPI(KEY1);
+    PeerIdentity id3 = newPI(KEY2);
     assertNotEquals(id1, id2);
     assertNotEquals(id1, id3);
     assertNotEquals(id2, id3);
@@ -66,8 +69,8 @@ public class TestPeerIdentity extends LockssTestCase {
   }
 
   public void testIsLocal() throws Exception {
-    PeerIdentity id1 = new PeerIdentity("key1");
-    PeerIdentity id2 = new PeerIdentity.LocalIdentity("key2");
+    PeerIdentity id1 = new PeerIdentity(KEY1);
+    PeerIdentity id2 = new PeerIdentity.LocalIdentity(KEY2);
     assertFalse(id1.isLocalIdentity());
     assertTrue(id2.isLocalIdentity());
   }

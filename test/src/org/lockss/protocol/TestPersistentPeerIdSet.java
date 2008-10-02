@@ -803,7 +803,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   
   
   // ------ Private methods --------
-  private Set<PeerIdentity> createSetPeerIdentities() {
+  private Set<PeerIdentity> createSetPeerIdentities()
+      throws IdentityManager.MalformedIdentityKeyException {
     int numIpElement;
     int numPeerIdentity;
     PeerIdentity peeridentityMany;

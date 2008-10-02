@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.21 2007-11-06 07:10:26 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.22 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
-  PeerIdentity findPeerId(String addr, int port) {
+  PeerIdentity findPeerId(String addr, int port)
+      throws IdentityManager.MalformedIdentityKeyException {
     String id = IDUtil.ipAddrToKey(addr, port);
     return idmgr.findPeerIdentity(id);
   }
@@ -581,9 +582,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testIncomingRcvBadPeerId1() throws IOException {
     // illegal tcp port
-    int bogusport = 0x10005;
-    String bogus1 = findPeerId("127.0.0.1", bogusport).getIdString();
-    testIncomingRcvPeerId(bogus1, false);
+    testIncomingRcvPeerId("tcp:[127.0.0.1]:65541", false);
   }
 
   public void testIncomingRcvBadPeerId2() throws IOException {
@@ -614,15 +613,16 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
-  public void testOriginateToBadPeerId() throws IOException {
-    setupComm1();
-    PeerIdentity bad1 = findPeerId("127.0.0.1", 100000);
-    try {
-      comm1.sendTo(msg1, bad1, null);
-      fail("sendTo(..., " + bad1 + ") should throw");
-    } catch (IdentityManager.MalformedIdentityKeyException e) {
-    }
-  }
+  // No longer possible as can't create bad PeerId
+//   public void testOriginateToBadPeerId() throws IOException {
+//     setupComm1();
+//     PeerIdentity bad1 = findPeerId("127.0.0.1", 100000);
+//     try {
+//       comm1.sendTo(msg1, bad1, null);
+//       fail("sendTo(..., " + bad1 + ") should throw");
+//     } catch (IdentityManager.MalformedIdentityKeyException e) {
+//     }
+//   }
 
   public void testOriginateRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
@@ -671,9 +671,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testOriginateRcvBadPeerId1() throws IOException {
     // illegal tcp port
-    int bogusport = 0x10005;
-    String bogus1 = findPeerId("127.0.0.1", bogusport).getIdString();
-    testOriginateRcvPeerId(bogus1, false);
+    testOriginateRcvPeerId("tcp:[127.0.0.1]:65542", false);
   }
 
   // any illegal pid sent to originator causes conflict (can't be equal to

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.85 2008-09-17 07:28:53 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.86 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -211,7 +211,8 @@ public interface IdentityManager extends LockssManager {
   /**
    * <p>Finds or creates unique instances of PeerIdentity.</p>
    */
-  public PeerIdentity findPeerIdentity(String key);
+  public PeerIdentity findPeerIdentity(String key)
+      throws MalformedIdentityKeyException;
 
   /**
    * <p>Finds or creates unique instances of LcapIdentity.</p>
@@ -228,9 +229,11 @@ public interface IdentityManager extends LockssManager {
    * @param port The port of the peer.
    * @return The PeerIdentity representing the peer.
    */
-  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port);
+  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port)
+      throws MalformedIdentityKeyException;
 
-  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr);
+  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr)
+      throws MalformedIdentityKeyException;
 
 
   /**

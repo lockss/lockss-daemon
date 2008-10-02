@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.34 2008-03-23 00:53:33 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.35 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -265,16 +265,11 @@ public class BlockingStreamComm
       return;
     }
     log.debug("Local V3 peer: " + myPeerId);
-    try {
-      PeerAddress pad = myPeerId.getPeerAddress();
-      if (pad instanceof PeerAddress.Tcp) {
-	myPeerAddr = (PeerAddress.Tcp)pad;
-      } else {
-	log.error("Disabling stream comm; no local TCP peer address: " + pad);
-	enabled = false;
-      }
-    } catch (IdentityManager.MalformedIdentityKeyException e) {
-      log.error("Disabling stream comm; local address malformed", e);
+    PeerAddress pad = myPeerId.getPeerAddress();
+    if (pad instanceof PeerAddress.Tcp) {
+      myPeerAddr = (PeerAddress.Tcp)pad;
+    } else {
+      log.error("Disabling stream comm; no local TCP peer address: " + pad);
       enabled = false;
     }
     if (enabled) {
@@ -572,7 +567,8 @@ public class BlockingStreamComm
     return idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
   }
 
-  PeerIdentity findPeerIdentity(String idkey) {
+  PeerIdentity findPeerIdentity(String idkey)
+      throws IdentityManager.MalformedIdentityKeyException {
     return idMgr.findPeerIdentity(idkey);
   }
 

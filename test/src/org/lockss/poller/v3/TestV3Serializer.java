@@ -123,7 +123,7 @@ public class TestV3Serializer extends LockssTestCase {
     pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
     ParticipantUserData ud3 = pollerSerializer.loadPollerUserData(id);
     V3TestUtil.assertEqualParticipantUserData(ud1, ud3);
-    PeerIdentity id2 = new MockPeerIdentity("192.168.1.1:9999");
+    PeerIdentity id2 = new MockPeerIdentity("tcp:[192.168.1.1]:9999");
     try {
       pollerSerializer.loadPollerUserData(id2);
       fail("Should have thrown");
@@ -151,15 +151,15 @@ public class TestV3Serializer extends LockssTestCase {
                                                      "pollDir");
 
     ArrayList uds1 =
-      (ArrayList)ListUtil.list(makePollerUserData("10.1.1.1:8000",
+      (ArrayList)ListUtil.list(makePollerUserData("tcp:[10.1.1.1]:8000",
                                                   pollerSerializer),
-                               makePollerUserData("10.1.1.2:8000",
+                               makePollerUserData("tcp:[10.1.1.2]:8000",
                                                   pollerSerializer),
-                               makePollerUserData("10.1.1.3:8000",
+                               makePollerUserData("tcp:[10.1.1.3]:8000",
                                                   pollerSerializer),
-                               makePollerUserData("10.1.1.4:8000",
+                               makePollerUserData("tcp:[10.1.1.4]:8000",
                                                   pollerSerializer),
-                               makePollerUserData("10.1.1.5:8000",
+                               makePollerUserData("tcp:[10.1.1.5]:8000",
                                                   pollerSerializer));
 
     for (Iterator iter = uds1.iterator(); iter.hasNext(); ) {
@@ -173,7 +173,8 @@ public class TestV3Serializer extends LockssTestCase {
   }
 
 
-  private PollerStateBean makePollerStateBean(V3PollerSerializer serializer) {
+  private PollerStateBean makePollerStateBean(V3PollerSerializer serializer)
+      throws IdentityManager.MalformedIdentityKeyException {
     PollerStateBean vsb = new PollerStateBean();
     vsb.setAuId("testAu");
     vsb.setCachedUrlSet(new MockCachedUrlSet());
@@ -181,7 +182,7 @@ public class TestV3Serializer extends LockssTestCase {
     vsb.setHashAlgorithm("SHA1");
     vsb.setLastHashedBlock("http://www.example.com/file1.html");
     vsb.setPluginVersion("mock");
-    vsb.setPollerId(new MockPeerIdentity("127.0.0.1:8080"));
+    vsb.setPollerId(new MockPeerIdentity("tcp:[127.0.0.1]:8080"));
     vsb.setPollKey("mock-poll-1");
     vsb.setProtocolVersion(1);
     return vsb;
@@ -189,7 +190,7 @@ public class TestV3Serializer extends LockssTestCase {
 
   private ParticipantUserData makePollerUserData(V3PollerSerializer serializer)
       throws IOException {
-    return makePollerUserData("127.0.0.1:8080", serializer);
+    return makePollerUserData("tcp:[127.0.0.1]:8080", serializer);
   }
 
   private ParticipantUserData makePollerUserData(String voterId,
@@ -200,7 +201,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setVoterId(id);
     ud.setHashAlgorithm("SHA1");
     ud.setIntroEffortProof(ByteArray.makeRandomBytes(20));
-    ud.setNominees(ListUtil.list("10.0.0.1:8999", "10.0.0.2:8999"));
+    ud.setNominees(ListUtil.list("tcp:[10.0.0.1]:8999", "tcp:[10.0.0.2]:8999"));
     ud.setPollAckEffortProof(ByteArray.makeRandomBytes(20));
     ud.setPollerNonce(ByteArray.makeRandomBytes(20));
     ud.setReceiptEffortProof(ByteArray.makeRandomBytes(20));
@@ -221,10 +222,10 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setDeadline(10000);
     ud.setHashAlgorithm("SHA1");
     ud.setIntroEffortProof(ByteArray.makeRandomBytes(20));
-    ud.setNominees(ListUtil.list("10.1.0.1:8000", "10.1.0.2:8000"));
+    ud.setNominees(ListUtil.list("tcp:[10.1.0.1]:8000", "tcp:[10.1.0.2]:8000"));
     ud.setPluginVersion("1.0");
     ud.setPollAckEffortProof(ByteArray.makeRandomBytes(20));
-    ud.setPollerId(new MockPeerIdentity("10.2.0.1:9000"));
+    ud.setPollerId(new MockPeerIdentity("tcp:[10.2.0.1]:9000"));
     ud.setPollerNonce(ByteArray.makeRandomBytes(20));
     ud.setPollKey("pollkey");
     ud.setPollVersion(1);

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.29 2008-09-17 07:28:53 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.30 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -426,15 +426,13 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return
    * @throws MalformedIdentityKeyException 
    */
-  private PeerIdentityStatus findPeerIdentityStatus(PeerIdentity id)
-      throws MalformedIdentityKeyException {
+  private PeerIdentityStatus findPeerIdentityStatus(PeerIdentity id) {
     PeerIdentityStatus status = null;
     synchronized (theLcapIdentities) {
       status = theLcapIdentities.get(id);
       if (status == null) {
-        log.debug("Looking up Lcap Id by id: " + id + " and string " +
-                  id.getIdString());
         LcapIdentity lcapId = findLcapIdentity(id, id.getIdString());
+        log.debug2("Making new PeerIdentityStatus for: " + id);
         status = new PeerIdentityStatus(lcapId);
       }
     }
@@ -447,9 +445,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return The PeerIdentityStatus associated with the given PeerIdentity.
    */
   public PeerIdentityStatus getPeerIdentityStatus(PeerIdentity pid) {
-    synchronized (theLcapIdentities) {
-      return theLcapIdentities.get(pid);
-    }
+    return findPeerIdentityStatus(pid);
   }
   
   /**
@@ -490,7 +486,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>Finds or creates unique instances of PeerIdentity.</p>
    */
-  public PeerIdentity findPeerIdentity(String key) {
+  public PeerIdentity findPeerIdentity(String key)
+      throws MalformedIdentityKeyException {
     synchronized (thePeerIdentities) {
       PeerIdentity pid = thePeerIdentities.get(key);
       if (pid == null) {
@@ -519,7 +516,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * LcapIdentity.</p>
    * <p>Eventually, LcapIdentity won't always be created here.</p>
    */
-  private PeerIdentity findPeerIdentityAndData(IPAddr addr, int port) {
+  private PeerIdentity findPeerIdentityAndData(IPAddr addr, int port)
+      throws MalformedIdentityKeyException {
     String key = IDUtil.ipAddrToKey(addr, port);
     PeerIdentity pid = findPeerIdentity(key);
     // for now always make sure LcapIdentity instance exists
@@ -530,11 +528,11 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>Finds or creates unique instances of LcapIdentity.</p>
    */
-  public LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
-      throws IdentityManager.MalformedIdentityKeyException {
+  public LcapIdentity findLcapIdentity(PeerIdentity pid, String key) {
     synchronized (theLcapIdentities) {
       PeerIdentityStatus status = theLcapIdentities.get(pid);
       if (status == null) {
+        log.debug2("Making new PeerIdentityStatus for: " + pid);
         status = new PeerIdentityStatus(new LcapIdentity(pid, key));
         theLcapIdentities.put(pid, status);
       }
@@ -551,6 +549,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (theLcapIdentities) {
       PeerIdentityStatus status = theLcapIdentities.get(pid);
       if (status == null) {
+        log.debug2("Making new PeerIdentityStatus for: " + pid);
         status = new PeerIdentityStatus(new LcapIdentity(pid, addr, port));
         theLcapIdentities.put(pid, status);
       }
@@ -567,7 +566,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param port The port of the peer.
    * @return The PeerIdentity representing the peer.
    */
-  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port) {
+  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port)
+      throws MalformedIdentityKeyException {
     if (addr == null) {
       log.warning("ipAddrToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
@@ -579,7 +579,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr) {
+  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr)
+      throws MalformedIdentityKeyException {
     return ipAddrToPeerIdentity(addr, 0);
   }
 
@@ -916,12 +917,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public Collection getUdpPeerIdentities() {
     Collection retVal = new ArrayList();
     for (PeerIdentity id : thePeerIdentities.values()) {
-      try {
-        if (id.getPeerAddress() instanceof PeerAddress.Udp && !id.isLocalIdentity())
-          retVal.add(id);
-      } catch (MalformedIdentityKeyException e) {
-        log.warning("Malformed identity key: " + id);
-      }
+      if (id.getPeerAddress() instanceof PeerAddress.Udp &&
+	  !id.isLocalIdentity())
+	retVal.add(id);
     }
     return retVal;
   }
@@ -939,14 +937,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public Collection getTcpPeerIdentities(Predicate peerPredicate) {
     Collection retVal = new ArrayList();
     for (PeerIdentity id : thePeerIdentities.values()) {
-      try {
-        if (id.getPeerAddress() instanceof PeerAddress.Tcp
-	    && !id.isLocalIdentity()
-	    && peerPredicate.evaluate(id)) {
-          retVal.add(id);
-	}
-      } catch (MalformedIdentityKeyException e) {
-        log.warning("Malformed identity key: " + id);
+      if (id.getPeerAddress() instanceof PeerAddress.Tcp
+	  && !id.isLocalIdentity()
+	  && peerPredicate.evaluate(id)) {
+	retVal.add(id);
       }
     }
     return retVal;
@@ -1457,8 +1451,12 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     List ids = CurrentConfig.getList(PARAM_INITIAL_PEERS,
                                      DEFAULT_INITIAL_PEERS);
     for (Iterator iter = ids.iterator(); iter.hasNext(); ) {
-      // Just ensure the peer is in the ID map.
-      findPeerIdentity((String)iter.next());
+      try {
+	// Just ensure the peer is in the ID map.
+	findPeerIdentity((String)iter.next());
+      } catch (MalformedIdentityKeyException e) {
+	log.error("Malformed initial peer", e);
+      }
     }
   }
 

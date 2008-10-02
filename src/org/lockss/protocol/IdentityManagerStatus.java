@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.10 2008-02-05 02:28:54 tlipkis Exp $
+ * $Id: IdentityManagerStatus.java,v 1.11 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -156,12 +156,8 @@ public class IdentityManagerStatus
       PeerIdentity pid = status.getPeerIdentity();
       if (!pid.isLocalIdentity() &&
 	  (includeWrongGroup || isGroupMatch(status, myGroups))) {
-	try {
-	  if (includeV1 || pid.getPeerAddress().isStream()) {
-	    table.add(makeRow(pid, status));
-	  }
-	} catch (IdentityManager.MalformedIdentityKeyException e) {
-	  log.error("Can't get peer status: " + pid, e);
+	if (includeV1 || pid.getPeerAddress().isStream()) {
+	  table.add(makeRow(pid, status));
 	}
       }
     }

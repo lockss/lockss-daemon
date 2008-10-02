@@ -1,5 +1,5 @@
 /*
- * $Id: MockPeerIdentity.java,v 1.1 2005-07-13 17:47:33 troberts Exp $
+ * $Id: MockPeerIdentity.java,v 1.2 2008-10-02 06:49:22 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ public class MockPeerIdentity extends PeerIdentity {
   private transient PeerAddress pAddr;
 
   public MockPeerIdentity(String newKey) {
-    super(newKey);
     key = newKey;
   }
 
@@ -67,8 +66,7 @@ public class MockPeerIdentity extends PeerIdentity {
     return key;
   }
 
-  public PeerAddress getPeerAddress()
-      throws IdentityManager.MalformedIdentityKeyException {
+  public PeerAddress getPeerAddress() {
     throw new UnsupportedOperationException("not implemented");
   }
 
