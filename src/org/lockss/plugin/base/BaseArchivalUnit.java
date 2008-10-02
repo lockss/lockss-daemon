@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.129 2008-10-02 06:45:40 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.130 2008-10-02 07:42:05 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.*;
 import org.lockss.rewriter.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -704,22 +705,32 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return false;
   }
 
-  // reset nextPollTime iff have run a poll since then.
   void checkNextPollTime(AuState aus) {
     if (aus.getLastTopLevelPollTime() >= nextPollTime) {
-      Configuration config = CurrentConfig.getCurrentConfig();
-      long minPollInterval =
-        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
-                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
-      long maxPollInterval =
-        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MAX,
-                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX);
-      if (maxPollInterval <= minPollInterval) {
-	maxPollInterval = 2 * minPollInterval;
+      PollManager pollMgr = plugin.getDaemon().getPollManager();
+      CompoundLinearSlope pollIntervalAgreementCurve =
+	pollMgr.getPollIntervalAgreementCurve();
+      if (pollIntervalAgreementCurve != null &&
+	  pollMgr.getPollIntervalAgreementLastResult().contains(aus.getLastPollResult())) {
+	logger.debug2("Determining poll interval from agreement: " + this);
+	int agreePercent = (int)Math.round(aus.getV3Agreement() * 100.0);
+	int pollInterval = (int)pollIntervalAgreementCurve.getY(agreePercent);
+	nextPollTime = aus.getLastTopLevelPollTime() + pollInterval;
+      } else {
+	Configuration config = CurrentConfig.getCurrentConfig();
+	long minPollInterval =
+	  config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
+				 DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
+	long maxPollInterval =
+	  config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MAX,
+				 DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX);
+	if (maxPollInterval <= minPollInterval) {
+	  maxPollInterval = 2 * minPollInterval;
+	}
+	Deadline nextPoll =
+	  Deadline.inRandomRange(minPollInterval, maxPollInterval);
+	nextPollTime = nextPoll.getExpirationTime();
       }
-      Deadline nextPoll =
-	Deadline.inRandomRange(minPollInterval, maxPollInterval);
-      nextPollTime = nextPoll.getExpirationTime();
     }
   }
 

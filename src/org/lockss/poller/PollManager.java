@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.198 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: PollManager.java,v 1.199 2008-10-02 07:42:05 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class PollManager
    */
   public static final String PARAM_INCREASE_POLL_PRIORITY_AFTER =
     PREFIX + "increasePollPriorityAfter";
-  public static final long DEFAULT_INCREASE_POLL_PRIORITY_AFTER = 6 * WEEK;;
+  public static final long DEFAULT_INCREASE_POLL_PRIORITY_AFTER = 6 * WEEK;
 
   /**
    * If set, poll starting will be throttled.  This is the default.
@@ -168,6 +168,21 @@ public class PollManager
   public static final String PARAM_WRONG_GROUP_RETRY_TIME =
     PREFIX + "wrongGroupRetryTime";
   public static final long DEFAULT_WRONG_GROUP_RETRY_TIME = 4 * WEEK;
+
+  static final String V3PREFIX = PREFIX + "v3.";
+
+  /** Curve expressing desired inter-poll interval based on last agreement
+   * value */
+  public static final String PARAM_POLL_INTERVAL_AGREEMENT_CURVE =
+    V3PREFIX + "pollIntervalAgreementCurve";
+  public static final String DEFAULT_POLL_INTERVAL_AGREEMENT_CURVE = null;
+
+  /** Previous poll results for which we want to apply {@link
+   * #PARAM_POLL_INTERVAL_AGREEMENT_CURVE} */
+  public static final String PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT =
+    V3PREFIX + "pollIntervalAgreementLastResult";
+  public static final List DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT =
+    Collections.EMPTY_LIST;
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
@@ -223,6 +238,9 @@ public class PollManager
 //   private CompoundLinearSlope v3InvitationWeightSafetyCurve = null;
   private CompoundLinearSlope v3AcceptProbabilitySafetyCurve = null;
   private CompoundLinearSlope v3NominationWeightAgeCurve = null;
+  private CompoundLinearSlope v3PollIntervalAgreementCurve = null;
+  private Set v3PollIntervalAgreementLastResult =
+    SetUtil.theSet(DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT);
   private long paramWillingRepairerLiveness = DEFAULT_WILLING_REPAIRER_LIVENESS;
   private double paramAcceptRepairersPollPercent =
     DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT;
@@ -1076,6 +1094,23 @@ public class PollManager
 // 			     PARAM_INVITATION_WEIGHT_SAFETY_CURVE,
 // 			     DEFAULT_INVITATION_WEIGHT_SAFETY_CURVE);
 //       }
+      if (changedKeys.contains(PARAM_POLL_INTERVAL_AGREEMENT_CURVE)) {
+	v3PollIntervalAgreementCurve =
+	  processWeightCurve("V3 poll interval agreement curve",
+			     newConfig,
+			     PARAM_POLL_INTERVAL_AGREEMENT_CURVE,
+			     DEFAULT_POLL_INTERVAL_AGREEMENT_CURVE);
+      }
+      if (changedKeys.contains(PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT)) {
+	List<String> lst =
+	  newConfig.getList(PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT,
+			    DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT);
+	Set res = new HashSet();
+	for (String str : lst) {
+	  res.add(Integer.valueOf(str));
+	}
+	v3PollIntervalAgreementLastResult = res;
+      }
       if (changedKeys.contains(PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE)) {
 	v3AcceptProbabilitySafetyCurve =
 	  processWeightCurve("V3 accept probability safety curve",
@@ -1197,6 +1232,14 @@ public class PollManager
     return paramInvitationWeightAlreadyRepairable;
   }
 
+  public CompoundLinearSlope getPollIntervalAgreementCurve() {
+    return v3PollIntervalAgreementCurve;
+  }
+
+  public Set getPollIntervalAgreementLastResult() {
+    return v3PollIntervalAgreementLastResult;
+  }
+
   public long getWillingRepairerLiveness() {
     return paramWillingRepairerLiveness;
   }
@@ -1229,7 +1272,6 @@ public class PollManager
     theLog.error("Unknown poll version: " + version, new Throwable());
     return null;
   }
-
 
   /**
    * Load and start V3 polls that are found in a serialized state
