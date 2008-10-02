@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.62 2008-09-09 07:54:53 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.63 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -185,13 +185,13 @@ public class V3Voter extends BasePoll {
     DEFAULT_RECALC_HASH_ESTIMATE_VOTE_DURATION_MULTIPLIER
     = "Twice reciprocal of " + V3Poller.PARAM_VOTE_DURATION_MULTIPLIER;
 
-  /** Curve expressing decreasing probability of nominating peer who has
+  /** Curve expressing decreasing weight of nominating peer who has
    * last voted in one of our polls X time ago.
    * @see org.lockss.util.CompoundLinearSlope */
-  public static final String PARAM_NOMINATION_PROBABILITY_AGE_CURVE =
-    PREFIX + "nominationProbabilityAgeCurve";
-  public static final String DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE =
-    "[10d,100],[30d,10],[40d,1]";
+  public static final String PARAM_NOMINATION_WEIGHT_AGE_CURVE =
+    PREFIX + "nominationWeightAgeCurve";
+  public static final String DEFAULT_NOMINATION_WEIGHT_AGE_CURVE =
+    "[10d,1.0],[30d,0.1],[40d,0.01]";
 
 
   private PsmInterp stateMachine;
@@ -670,11 +670,16 @@ public class V3Voter extends BasePoll {
                   + getKey());
       return;
     }
-    // CR: getTcpPeerIdentities() -> getV3PeerIdentities()
+
     Collection<PeerIdentity> nominees =
       idManager.getTcpPeerIdentities(nominationPred);
     if (nomineeCount <= nominees.size()) {
-      nominees = CollectionUtil.randomSelection(nominees, nomineeCount);
+      Map availablePeers = new HashMap();
+      for (PeerIdentity id : nominees) {
+	availablePeers.put(id, nominateWeight(id));
+      }
+      nominees = CollectionUtil.weightedRandomSelection(availablePeers,
+							nomineeCount);
     }
     if (!nominees.isEmpty()) {
       // VoterUserData expects the collection to be KEYS, not PeerIdentities.
@@ -712,28 +717,29 @@ public class V3Voter extends BasePoll {
 	  if (!CollectionUtils.containsAny(hisGroups, myGroups)) {
 	    return false;
 	  }
-	  // Finally, make a probabilistic choice weighted by the last time that
-	  // we heard from this peer.
-	  return ProbabilisticChoice.choose(nominateProb(status));
+	  return true;
 	}
 	return false;
       }};
 
   /**
-   * Compute the probability that a peer should be considered for
-   * invitation into the poll.
+   * Compute the weight that a peer should be given for consideration for
+   * nomination into the poll.
    *  
    * @param status
-   * @return A double between 0.0 and 1.0 representing the probability
-   *      that we want to try to invite this peer into a poll.
+   * @return A double between 0.0 and 1.0 representing the invitation
+   * weight that we want to give this peer.
    */
-  double nominateProb(PeerIdentityStatus status) {
-    CompoundLinearSlope nominationProbabilityCurve =
-      pollManager.getNominationProbabilityAgeCurve();
+  double nominateWeight(PeerIdentity pid) {
+    PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
+    CompoundLinearSlope nominationWeightCurve =
+      pollManager.getNominationWeightAgeCurve();
+    if (nominationWeightCurve  == null) {
+      return 1.0;
+    }
     long lastVoteTime = status.getLastVoterTime();
     long noVoteFor = TimeBase.nowMs() - lastVoteTime;
-    long prob = nominationProbabilityCurve.getY(noVoteFor);
-    return ((double)prob) / 100.0d;
+    return nominationWeightCurve.getY(noVoteFor);
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.94 2008-09-17 07:28:53 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.95 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -352,6 +352,36 @@ public class TestPollManager extends LockssTestCase {
     return new V3Voter(theDaemon, pollMsg);
   }
   
+  public void testAtRiskMap() throws Exception {
+    String p1 = "TCP:[127.0.0.1]:12";
+    String p2 = "TCP:[127.0.0.2]:12";
+    String p3 = "TCP:[127.0.0.3]:12";
+    String p4 = "TCP:[127.0.0.4]:12";
+    String p5 = "TCP:[127.0.0.5]:12";
+  
+    PeerIdentity peer1 = idmanager.stringToPeerIdentity(p1);
+    PeerIdentity peer2 = idmanager.stringToPeerIdentity(p2);
+    PeerIdentity peer3 = idmanager.stringToPeerIdentity(p3);
+    PeerIdentity peer4 = idmanager.stringToPeerIdentity(p4);
+    PeerIdentity peer5 = idmanager.stringToPeerIdentity(p5);
+
+    String auid1 = "org|lockss|plugin|absinthe|AbsinthePlugin&base_url~http%3A%2F%2Fabsinthe-literary-review%2Ecom%2F&year~2003";
+    String auid2 = "org|lockss|plugin|absinthe|AbsinthePlugin&base_url~http%3A%2F%2Fabsinthe-literary-review%2Ecom%2F&year~2004";
+    MockArchivalUnit mau1 = new MockArchivalUnit(auid1);
+    MockArchivalUnit mau2 = new MockArchivalUnit(auid2);
+
+    String atRiskString =
+      auid1 + "," + p1 + "," + p2 + "," + p5 + ";" +
+      auid2 + "," + p3 + "," + p2 + "," + p4;
+
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_AT_RISK_AU_INSTANCES,
+				  atRiskString);
+    assertEquals(SetUtil.set(peer1, peer2, peer5),
+		 pollmanager.getPeersWithAuAtRisk(mau1));
+    assertEquals(SetUtil.set(peer2, peer3, peer4),
+		 pollmanager.getPeersWithAuAtRisk(mau2));
+  }
+
   // XXX:  Move these tests to TestV1PollFactory
   /** test for method getMessageDigest(..) */
   public void testGetMessageDigest() {

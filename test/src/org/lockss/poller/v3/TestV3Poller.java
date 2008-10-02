@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.29 2008-09-09 07:54:53 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.30 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
+import org.lockss.protocol.IdentityManager.IdentityAgreement;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
@@ -55,7 +56,7 @@ import static org.lockss.util.Constants.*;
 
 public class TestV3Poller extends LockssTestCase {
 
-  private IdentityManager idmgr;
+  private MyIdentityManager idMgr;
   private MockLockssDaemon theDaemon;
 
   private PeerIdentity pollerId;
@@ -118,7 +119,7 @@ public class TestV3Poller extends LockssTestCase {
     this.testau = setupAu();
     initRequiredServices();
     setupRepo(testau);
-    this.pollerId = idmgr.stringToPeerIdentity(localPeerKey);
+    this.pollerId = findPeerIdentity(localPeerKey);
     this.voters = makeVoters(initialPeers);
     this.pollerNonces = makeNonces();
     this.voterNonces = makeNonces();
@@ -155,11 +156,20 @@ public class TestV3Poller extends LockssTestCase {
     ((MockLockssDaemon)theDaemon).setLockssRepository(repo, au);
   }
 
+  PeerIdentity findPeerIdentity(String key) throws Exception {
+    PeerIdentity pid = idMgr.findPeerIdentity(key);
+    // hack to ensure it's created
+    idMgr.findLcapIdentity(pid, pid.getIdString());
+    return pid;
+  }
+
   private PeerIdentity[] makeVoters(List keys) throws Exception {
     PeerIdentity[] ids = new PeerIdentity[keys.size()];
     int idIndex = 0;
     for (Iterator it = keys.iterator(); it.hasNext(); ) {
-      ids[idIndex++] = idmgr.findPeerIdentity((String)it.next());
+      PeerIdentity pid = findPeerIdentity((String)it.next());
+      PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+      ids[idIndex++] = pid;
     }
     return ids;
   }
@@ -250,6 +260,109 @@ public class TestV3Poller extends LockssTestCase {
     super.tearDown();
   }
 
+  double invitationWeight(long lastInvite, long lastMsg)
+      throws Exception {
+    String id = "tcp:[1.2.3.4]:4321";
+    V3Poller poller = makeV3Poller("key");
+    PeerIdentity pid = findPeerIdentity(id);
+    idMgr.findLcapIdentity(pid, id);
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+    status.setLastMessageTime(lastMsg);
+    status.setLastPollInvitationTime(lastInvite);
+    return poller.weightResponsiveness(status);
+  }
+
+  String w1 = "tcp:[1.2.3.4]:4321";
+  String w2 = "tcp:[1.2.3.4]:4322";
+
+  String atRiskEntry(ArchivalUnit au, String pidkey) throws Exception {
+    return atRiskEntry(au, findPeerIdentity(pidkey));
+  }
+
+  String atRiskEntry(ArchivalUnit au, PeerIdentity pid) {
+    return testau.getAuId() + "," + pid.getIdString();
+  }
+
+  private IdentityAgreement getIda(PeerIdentity pid) {
+    return idMgr.findTestIdentityAgreement(pid, testau);
+  }
+
+  double invitationWeight(String pidkey, long lastInvite, long lastMsg)
+      throws Exception {
+    return invitationWeight(findPeerIdentity(pidkey), lastInvite, lastMsg);
+  }
+
+  double invitationWeight(String pidkey, long lastInvite,
+			  long lastMsg, float highestAgreement)
+      throws Exception {
+    return invitationWeight(findPeerIdentity(pidkey), lastInvite, lastMsg,
+			    highestAgreement);
+  }
+
+  double invitationWeight(PeerIdentity pid,
+			  long lastInvite, long lastMsg)
+      throws Exception {
+    return invitationWeight(pid, lastInvite, lastMsg, 0.1f);
+  }
+
+  double invitationWeight(PeerIdentity pid, long lastInvite,
+			  long lastMsg, float highestAgreement)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_AT_RISK_AU_INSTANCES,
+				  atRiskEntry(testau, w2),
+				  V3Poller.PARAM_INVITATION_WEIGHT_AT_RISK,
+				  "3.0");
+
+    V3Poller poller = makeV3Poller("key");
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+    status.setLastMessageTime(lastMsg);
+    status.setLastPollInvitationTime(lastInvite);
+    if (highestAgreement >= 0) {
+      IdentityAgreement ida = getIda(pid);
+      ida.setPercentAgreement(highestAgreement);
+    }
+    return poller.invitationWeight(status);
+  }
+
+  public void testInvitationWeight() throws Exception {
+    // default age curve: [10d,1.0],[30d,0.1],[40d,0.01]
+    assertEquals(1.0, invitationWeight(w1, -1, -1));
+    // w2 is listed as having this AU at risk
+    assertEquals(3.0, invitationWeight(w2, -1, -1));
+    // With high agreement, invitationWeightAlreadyRepairable kicks in (.5)
+    assertEquals(0.5, invitationWeight(w1, -1, -1, .9f));
+    assertEquals(1.5, invitationWeight(w2, -1, -1, .9f));
+  }
+
+  public void testInvitationWeightAgeCurve() throws Exception {
+    // default is [10d,1.0],[30d,0.1],[40d,0.01]
+    double r1 = .01*90.0/16.0;
+    double r2 = .01*9.0/20.0;
+
+    assertEquals(1.0, invitationWeight(-1, -1));
+    assertEquals(1.0, invitationWeight(-1, 0));
+    assertEquals(1.0, invitationWeight(0, -1));
+    assertEquals(1.0, invitationWeight(0, 0));
+    assertEquals(1.0, invitationWeight(1, 1));
+    assertEquals(1.0, invitationWeight(10, 1));
+    assertEquals(1.0, invitationWeight(1, 10));
+    
+    assertEquals(1.0, invitationWeight(1*DAY, 0), .01);
+    assertEquals(1.0, invitationWeight(4*DAY, 0), .01);
+    assertEquals(1.0, invitationWeight(44*DAY, 40*DAY), .01);
+    assertEquals(.94, invitationWeight(5*DAY, 0), .01);
+    assertEquals(1.0-r1, invitationWeight(5*DAY, 0), .02);
+    assertEquals(.94, invitationWeight(105*DAY, 100*DAY), .01);
+    assertEquals(.55, invitationWeight(112*DAY, 100*DAY), .01);
+    assertEquals(.10, invitationWeight(120*DAY, 100*DAY), .01);
+    assertEquals(.01, invitationWeight(140*DAY, 100*DAY), .01);
+
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_INVITATION_WEIGHT_AGE_CURVE,
+				  "[1w,1.0],[20w,.1]");
+    assertEquals(1.0, invitationWeight(1*WEEK, 0), .01);
+    assertEquals(0.1, invitationWeight(20*WEEK, 0), .01);
+  }
+  
   /* Test for a specific bug fix. */
   public void testNullNomineesShouldntThrow() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
@@ -295,127 +408,6 @@ public class TestV3Poller extends LockssTestCase {
     }
   }
   
-  public void testChoosePeers() throws Exception {
-    V3Poller p = makeV3Poller("testkey");
-    
-    PeerIdentity[] allPeers =
-    {
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5000"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5001"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5002"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5003"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5004"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5005"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5006"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5007"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5008"),
-     idmgr.findPeerIdentity("TCP:[127.0.0.1]:5009"),
-    };
-    
-    PeerIdentity[] alreadySelected =
-    {    
-     allPeers[0],
-     allPeers[1],
-     allPeers[2],
-     allPeers[3]
-    };
-    
-    Collection unselectedPeers =
-      p.choosePeers(ListUtil.fromArray(allPeers),
-                    ListUtil.fromArray(alreadySelected),
-                    allPeers.length);
-    
-    assertEquals(6, unselectedPeers.size());
-    
-    assertFalse("List should not contain peer " + allPeers[0],
-                unselectedPeers.contains(allPeers[0]));
-    assertFalse("List should not contain peer " + allPeers[1],
-                unselectedPeers.contains(allPeers[1]));
-    assertFalse("List should not contain peer " + allPeers[2],
-                unselectedPeers.contains(allPeers[2]));
-    assertFalse("List should not contain peer " + allPeers[3],
-                unselectedPeers.contains(allPeers[3]));
-      
-  }
-
-  public Collection findMorePeersToInvite(int quorum,
-					  int extraParticipants,
-					  int extraInvitations)
-      throws Exception {
-    Properties p = new Properties();
-    p.setProperty(V3Poller.PARAM_QUORUM, ""+quorum);
-    p.setProperty(V3Poller.PARAM_INVITATION_SIZE, "1");
-    p.setProperty(V3Poller.PARAM_EXCEED_QUORUM_BY_INVITATIONS,
-		  ""+extraInvitations);
-    p.setProperty(V3Poller.PARAM_EXCEED_QUORUM_BY_PARTICIPANTS,
-		  ""+extraParticipants);
-    ConfigurationUtil.addFromProps(p);
-
-    MyV3Poller poller = makeV3Poller("testkey");
-    
-//     List<PeerIdentity> allPeers =
-//       ListUtil.fromArray(new PeerIdentity[] {
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5000"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5001"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5002"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5003"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5004"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5005"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5006"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5007"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5008"),
-// 	idmgr.findPeerIdentity("TCP:[127.0.0.1]:5009"),
-//       });
-    
-    List<String> somePeers =
-      ListUtil.list(initialPeers.get(0),
-		    initialPeers.get(1),
-		    initialPeers.get(2));
-
-    List<PeerIdentity> allPeers = pidsFromPeerNames(initialPeers);
-    List<PeerIdentity> participatingPeers = pidsFromPeerNames(somePeers);
-
-    for (PeerIdentity pid : participatingPeers) {
-      ParticipantUserData participant = poller.addInnerCircleVoter(pid);
-      // make it look like it's participating
-      participant.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
-    }
-
-    Collection more = poller.findMorePeersToInvite();
-    assertTrue(more + " isn't disjoint with " + participatingPeers,
-	       CollectionUtil.isDisjoint(more, participatingPeers));
-    assertTrue(allPeers + " doesn't contain all of " + more,
-	       allPeers.containsAll(more));
-    return more;
-  }
-
-  public void testFindMore1() throws Exception {
-    assertEquals(0, findMorePeersToInvite(2, 1, 2).size());
-  }
-  public void testFindMore2() throws Exception {
-    assertEquals(1, findMorePeersToInvite(3, 1, 1).size());
-  }
-  public void testFindMore3() throws Exception {
-    assertEquals(2, findMorePeersToInvite(3, 1, 2).size());
-  }
-  public void testFindMore4() throws Exception {
-    assertEquals(2, findMorePeersToInvite(4, 2, 1).size());
-  }
-  public void testFindMore5() throws Exception {
-    assertEquals(3, findMorePeersToInvite(4, 2, 2).size());
-  }
-  public void testFindMore6() throws Exception {
-    assertEquals(3, findMorePeersToInvite(5, 2, 3).size());
-  }
-
-  List<PeerIdentity> pidsFromPeerNames(Collection<String> names) {
-    List<PeerIdentity> res = new ArrayList();
-    for (String name : names) {
-      res.add(idmgr.findPeerIdentity(name));
-    }
-    return res;
-  }
-
   private HashBlock makeHashBlock(String url) {
     MockCachedUrl cu = new MockCachedUrl(url);
     return new HashBlock(cu);
@@ -489,55 +481,53 @@ public class TestV3Poller extends LockssTestCase {
     return ud;
   }
   
-  public void testShouldIncludePeer() throws Exception {
+  public void testIsPeerEligible() throws Exception {
     V3Poller v3Poller = makeV3Poller("key");
-    assertFalse(v3Poller.shouldIncludePeer(pollerId));
-    PeerIdentity p1 = idmgr.findPeerIdentity("TCP:[127.0.0.1]:5009");
-    PeerIdentity p2 = idmgr.findPeerIdentity("TCP:[1.2.3.4]:5009");
-    PeerIdentity p3 = idmgr.findPeerIdentity("TCP:[1.2.3.7]:1111");
-    PeerIdentity p4 = idmgr.findPeerIdentity("TCP:[1.2.3.8]:1111");
-    PeerIdentity p5 = idmgr.findPeerIdentity("TCP:[4.5.6.2]:1111");
+    assertFalse(v3Poller.isPeerEligible(pollerId));
+    PeerIdentity p1 = findPeerIdentity("TCP:[127.0.0.1]:5009");
+    PeerIdentity p2 = findPeerIdentity("TCP:[1.2.3.4]:5009");
+    PeerIdentity p3 = findPeerIdentity("TCP:[1.2.3.7]:1111");
+    PeerIdentity p4 = findPeerIdentity("TCP:[1.2.3.8]:1111");
+    PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
 
-    assertTrue(v3Poller.shouldIncludePeer(p1));
-    assertTrue(v3Poller.shouldIncludePeer(p2));
-    assertTrue(v3Poller.shouldIncludePeer(p3));
-    assertTrue(v3Poller.shouldIncludePeer(p4));
-    assertTrue(v3Poller.shouldIncludePeer(p5));
+    assertTrue(v3Poller.isPeerEligible(p1));
+    assertTrue(v3Poller.isPeerEligible(p2));
+    assertTrue(v3Poller.isPeerEligible(p3));
+    assertTrue(v3Poller.isPeerEligible(p4));
+    assertTrue(v3Poller.isPeerEligible(p5));
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_NO_INVITATION_SUBNETS,
 				  "1.2.3.4/30;4.5.6.2");
 
-    assertTrue(v3Poller.shouldIncludePeer(p1));
-    assertFalse(v3Poller.shouldIncludePeer(p2));
-    assertFalse(v3Poller.shouldIncludePeer(p3));
-    assertTrue(v3Poller.shouldIncludePeer(p4));
-    assertFalse(v3Poller.shouldIncludePeer(p5));
+    assertTrue(v3Poller.isPeerEligible(p1));
+    assertFalse(v3Poller.isPeerEligible(p2));
+    assertFalse(v3Poller.isPeerEligible(p3));
+    assertTrue(v3Poller.isPeerEligible(p4));
+    assertFalse(v3Poller.isPeerEligible(p5));
   }
 
 
-  public void testGetReferenceList() throws Exception {
+  Collection getAvailablePeers(V3Poller v3Poller) {
+    return v3Poller.getAvailablePeers().keySet();
+  }
+
+  public void testgetAvailablePeers() throws Exception {
+    findPeerIdentity("TCP:[10.1.0.100]:9729");
+    findPeerIdentity("TCP:[10.1.0.101]:9729");
     V3Poller v3Poller = makeV3Poller("key");
-    assertNotNull(v3Poller.getReferenceList());
-    assertEquals(6, v3Poller.getReferenceList().size());
-    IdentityManager idMgr = theDaemon.getIdentityManager();
-    idMgr.findPeerIdentity("TCP:[10.1.0.100]:9729");
-    assertEquals(7, v3Poller.getReferenceList().size());
-    idMgr.findPeerIdentity("TCP:[10.1.0.101]:9729");
-    assertEquals(8, v3Poller.getReferenceList().size());
+    assertNotNull(getAvailablePeers(v3Poller));
+    assertEquals(8, getAvailablePeers(v3Poller).size());
   }
   
-  public void testGetReferenceListInitialPeersOnly() throws Exception {
+  public void testgetAvailablePeersInitialPeersOnly() throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
+    findPeerIdentity("TCP:[10.1.0.100]:9729");
+    findPeerIdentity("TCP:[10.1.0.101]:9729");
     V3Poller v3Poller = makeV3Poller("key");
-    assertNotNull(v3Poller.getReferenceList());
-    assertEquals(6, v3Poller.getReferenceList().size());
-    IdentityManager idMgr = theDaemon.getIdentityManager();
-    idMgr.findPeerIdentity("TCP:[10.1.0.100]:9729");
-    assertEquals(6, v3Poller.getReferenceList().size());
-    idMgr.findPeerIdentity("TCP:[10.1.0.101]:9729");
-    assertEquals(6, v3Poller.getReferenceList().size());
+    assertNotNull(getAvailablePeers(v3Poller));
+    assertEquals(6, getAvailablePeers(v3Poller).size());
   }
   
-  public void testGetReferenceListDoesNotIncludeLocalIdentity() throws Exception {
+  public void testgetAvailablePeersDoesNotIncludeLocalIdentity() throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
     // append our local config to the initial Peer List
     List initialPeersCopy = new ArrayList(initialPeers);
@@ -547,23 +537,113 @@ public class TestV3Poller extends LockssTestCase {
                                   StringUtil.separatedString(initialPeersCopy, ";"));
     
     V3Poller v3Poller = makeV3Poller("key");
-    assertNotNull(v3Poller.getReferenceList());
-    IdentityManager idMgr = theDaemon.getIdentityManager();
+    assertNotNull(getAvailablePeers(v3Poller));
     // Sanity check
-    assertTrue(idMgr.findPeerIdentity(localPeerKey).isLocalIdentity());
+    assertTrue(findPeerIdentity(localPeerKey).isLocalIdentity());
     // Should NOT be included in reference list
-    assertEquals(6, v3Poller.getReferenceList().size());
-    assertFalse(v3Poller.getReferenceList().contains(idMgr.findPeerIdentity(localPeerKey)));
+    assertEquals(6, getAvailablePeers(v3Poller).size());
+    assertFalse(getAvailablePeers(v3Poller).contains(findPeerIdentity(localPeerKey)));
   }
-  
+
+  public List<PeerIdentity> makeAdditionalPeers() throws Exception {
+    PeerIdentity[] morePeers = {
+     findPeerIdentity("TCP:[127.0.0.1]:5000"),
+     findPeerIdentity("TCP:[127.0.0.1]:5001"),
+     findPeerIdentity("TCP:[127.0.0.1]:5002"),
+     findPeerIdentity("TCP:[127.0.0.1]:5003"),
+     findPeerIdentity("TCP:[127.0.0.1]:5004"),
+     findPeerIdentity("TCP:[127.0.0.1]:5005"),
+     findPeerIdentity("TCP:[127.0.0.1]:5006"),
+     findPeerIdentity("TCP:[127.0.0.1]:5007"),
+     findPeerIdentity("TCP:[127.0.0.1]:5008"),
+     findPeerIdentity("TCP:[127.0.0.1]:5009"),
+    };
+    return ListUtil.fromArray(morePeers);
+  }
+
+  public void testCountParticipatingPeers() throws Exception {
+    MyV3Poller poller = makeV3Poller("testkey");
+    List<String> somePeers =
+      ListUtil.list(initialPeers.get(0),
+		    initialPeers.get(1),
+		    initialPeers.get(2));
+
+    List<PeerIdentity> participatingPeers = pidsFromPeerNames(somePeers);
+
+    for (PeerIdentity pid : participatingPeers) {
+      ParticipantUserData participant = poller.addInnerCircleVoter(pid);
+      // make it look like it's participating
+      participant.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
+    }
+    assertEquals(3, poller.countParticipatingPeers());
+  }
+
+  public Collection findMorePeersToInvite(int quorum,
+					  double invitationMult)
+      throws Exception {
+    Properties p = new Properties();
+    p.setProperty(V3Poller.PARAM_QUORUM, ""+quorum);
+    p.setProperty(V3Poller.PARAM_INVITATION_SIZE_TARGET_MULTIPLIER,
+		  ""+invitationMult);
+    ConfigurationUtil.addFromProps(p);
+
+    MyV3Poller poller = makeV3Poller("testkey");
+    
+    List<String> somePeers =
+      ListUtil.list(initialPeers.get(0),
+		    initialPeers.get(1),
+		    initialPeers.get(2));
+
+    List<PeerIdentity> allPeers = pidsFromPeerNames(initialPeers);
+    allPeers.addAll(makeAdditionalPeers());
+    List<PeerIdentity> participatingPeers = pidsFromPeerNames(somePeers);
+
+    for (PeerIdentity pid : participatingPeers) {
+      ParticipantUserData participant = poller.addInnerCircleVoter(pid);
+      // make it look like it's participating
+      participant.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
+    }
+
+    Collection more = poller.findNPeersToInvite(quorum);
+    assertTrue(more + " isn't disjoint with " + participatingPeers,
+	       CollectionUtil.isDisjoint(more, participatingPeers));
+    assertTrue(allPeers + " doesn't contain all of " + more,
+	       allPeers.containsAll(more));
+    return more;
+  }
+
+  public void testFindMore1() throws Exception {
+    assertEquals(2, findMorePeersToInvite(2, 1).size());
+  }
+  public void testFindMore2() throws Exception {
+    assertEquals(4, findMorePeersToInvite(2, 2).size());
+  }
+  public void testFindMore3() throws Exception {
+    assertEquals(6, findMorePeersToInvite(3, 2).size());
+  }
+  public void testFindMore4() throws Exception {
+    assertEquals(10, findMorePeersToInvite(10, 1).size());
+  }
+  public void testFindMore5() throws Exception {
+    assertEquals(13, findMorePeersToInvite(10, 2).size());
+  }
+
+  List<PeerIdentity> pidsFromPeerNames(Collection<String> names)
+      throws Exception {
+    List<PeerIdentity> res = new ArrayList();
+    for (String name : names) {
+      res.add(findPeerIdentity(name));
+    }
+    return res;
+  }
+
   public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
-    IdentityManager idMgr = theDaemon.getIdentityManager();
 
     V3Poller v3Poller = makeV3Poller("key");
     
-    PeerIdentity id1 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
         
     String [] urls_poller =
     { 
@@ -624,14 +704,13 @@ public class TestV3Poller extends LockssTestCase {
   }
   
   public void testCheckBlockWin() throws Exception {
-    IdentityManager idMgr = theDaemon.getIdentityManager();
 
     V3Poller v3Poller = makeV3Poller("key");
     
-    PeerIdentity id1 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8992");
-    PeerIdentity id4 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8993");
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
     
     
     String url = "http://www.test.com/example.txt";
@@ -683,14 +762,12 @@ public class TestV3Poller extends LockssTestCase {
   }
   
   public void testCheckBlockLose() throws Exception {
-    IdentityManager idMgr = theDaemon.getIdentityManager();
-
     V3Poller v3Poller = makeV3Poller("key");
     
-    PeerIdentity id1 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8992");
-    PeerIdentity id4 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8993");
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
     
     
     String url = "http://www.test.com/example.txt";
@@ -737,48 +814,6 @@ public class TestV3Poller extends LockssTestCase {
     blockTally.tallyVotes();
     
     assertEquals(BlockTally.RESULT_LOST, blockTally.getTallyResult());
-  }
-  
-  double inviteProb(long lastInvite, long lastMsg)
-      throws Exception {
-    String id = "tcp:[1.2.3.4]:4321";
-    V3Poller poller = makeV3Poller("key");
-    IdentityManager idMgr = theDaemon.getIdentityManager();
-    PeerIdentity pid = idMgr.findPeerIdentity(id);
-    idMgr.findLcapIdentity(pid, id);
-    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
-    status.setLastMessageTime(lastMsg);
-    status.setLastPollInvitationTime(lastInvite);
-    return poller.inviteProb(status);
-  }
-
-  public void testInviteProb() throws Exception {
-    // default is [4d,100],[20d,10],[40d,1]
-    double r1 = .01*90.0/16.0;
-    double r2 = .01*9.0/20.0;
-
-    assertEquals(1.0, inviteProb(-1, -1));
-    assertEquals(1.0, inviteProb(-1, 0));
-    assertEquals(1.0, inviteProb(0, -1));
-    assertEquals(1.0, inviteProb(0, 0));
-    assertEquals(1.0, inviteProb(1, 1));
-    assertEquals(1.0, inviteProb(10, 1));
-    assertEquals(1.0, inviteProb(1, 10));
-    
-    assertEquals(1.0, inviteProb(1*DAY, 0));
-    assertEquals(1.0, inviteProb(4*DAY, 0));
-    assertEquals(1.0, inviteProb(44*DAY, 40*DAY));
-    assertEquals(.94, inviteProb(5*DAY, 0));
-    assertEquals(1.0-r1, inviteProb(5*DAY, 0), .02);
-    assertEquals(.94, inviteProb(105*DAY, 100*DAY));
-    assertEquals(.55, inviteProb(112*DAY, 100*DAY));
-    assertEquals(.10, inviteProb(120*DAY, 100*DAY));
-    assertEquals(.01, inviteProb(140*DAY, 100*DAY));
-
-    ConfigurationUtil.addFromArgs(V3Poller.PARAM_INVITATION_PROBABILITY_AGE_CURVE,
-				  "[1w,100],[20w,10]");
-    assertEquals(1.0, inviteProb(1*WEEK, 0));
-    assertEquals(0.1, inviteProb(20*WEEK, 0));
   }
   
   private MyV3Poller makeV3Poller(String key) throws Exception {
@@ -846,6 +881,9 @@ public class TestV3Poller extends LockssTestCase {
     System.setProperty("java.io.tmpdir", tempDirPath);
 
     Properties p = new Properties();
+    p.setProperty(IdentityManagerImpl.PARAM_ENABLE_V1, "false");
+    p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
+
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
@@ -854,12 +892,13 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                   StringUtil.separatedString(initialPeers, ";"));
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
-    p.setProperty(V3Poller.PARAM_INVITATION_SIZE, "6");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    idmgr = theDaemon.getIdentityManager();
-    idmgr.startService();
+    idMgr = new MyIdentityManager();
+    theDaemon.setIdentityManager(idMgr);
+    idMgr.initService(theDaemon);
+    idMgr.startService();
     theDaemon.getSchedService().startService();
     hashService.startService();
     theDaemon.getDatagramRouterManager().startService();
@@ -869,4 +908,18 @@ public class TestV3Poller extends LockssTestCase {
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
   }
+
+  static class MyIdentityManager extends IdentityManagerImpl {
+    IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
+						ArchivalUnit au) {
+      Map map = findAuAgreeMap(au);
+      synchronized (map) {
+	return findPeerIdentityAgreement(map, pid);
+      }
+    }
+
+    public void storeIdentities() throws ProtocolException {
+    }
+  }
+
 }

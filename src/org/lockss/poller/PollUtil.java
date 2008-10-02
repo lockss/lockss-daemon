@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.8 2008-08-11 23:32:59 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.9 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -38,8 +38,9 @@ import java.security.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.*;
 import org.lockss.poller.v3.V3Poller;
+import org.lockss.protocol.*;
 import org.lockss.scheduler.*;
 import org.lockss.util.*;
 import static org.lockss.util.StringUtil.timeIntervalToString;
@@ -399,5 +400,39 @@ public class PollUtil {
 					 "written to.");
     }
     return stateDir;
+  }
+
+  public static int countWillingRepairers(ArchivalUnit au,
+					  PollManager pollMgr,
+					  IdentityManager idMgr) {
+    double repairThreshold = pollMgr.getMinPercentForRepair();
+    int willing = 0;
+
+    for (IdentityManager.IdentityAgreement ida
+	   : idMgr.getIdentityAgreements(au)) {
+      try {
+	if (ida.getHighestPercentAgreementHint() <= repairThreshold) {
+	  log.info("Not willing: " + repairThreshold + " >= " + ida);
+	  continue;
+	}
+	PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
+	if (pollMgr.isNoInvitationSubnet(pid)) {
+	  log.info("No invitation subnet: " + ida);
+	  continue;
+	}
+	PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+	long lastMessageTime = status.getLastMessageTime();
+	long noMessageFor = TimeBase.nowMs() - lastMessageTime;
+	if (noMessageFor > pollMgr.getWillingRepairerLiveness()) {
+	  log.info("No message for " + noMessageFor + ": " + ida);
+	  continue;
+	}
+	willing++;
+      } catch (IdentityManager.MalformedIdentityKeyException e) {
+	log.warning("Malformed id key in IdentityAgreement", e);
+	continue;
+      }
+    }
+    return willing;
   }
 }

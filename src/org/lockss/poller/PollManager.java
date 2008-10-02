@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.197 2008-09-17 07:28:53 tlipkis Exp $
+ * $Id: PollManager.java,v 1.198 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -219,12 +219,21 @@ public class PollManager
   private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
   private IpFilter noInvitationSubnetFilter = null;
-  private CompoundLinearSlope v3InvitationProbabilityAgeCurve = null;
-  private CompoundLinearSlope v3NominationProbabilityAgeCurve = null;
+  private CompoundLinearSlope v3InvitationWeightAgeCurve = null;
+//   private CompoundLinearSlope v3InvitationWeightSafetyCurve = null;
   private CompoundLinearSlope v3AcceptProbabilitySafetyCurve = null;
+  private CompoundLinearSlope v3NominationWeightAgeCurve = null;
   private long paramWillingRepairerLiveness = DEFAULT_WILLING_REPAIRER_LIVENESS;
   private double paramAcceptRepairersPollPercent =
     DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT;
+  private double paramInvitationWeightAtRisk =
+    DEFAULT_INVITATION_WEIGHT_AT_RISK;
+  private double paramInvitationWeightAlreadyRepairable =
+    DEFAULT_INVITATION_WEIGHT_ALREADY_REPAIRABLE;
+
+  public class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
+
+  private AuPeersMap atRiskAuInstances = null;
 
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -1026,6 +1035,14 @@ public class PollManager
         newConfig.getPercentage(PARAM_ACCEPT_REPAIRERS_POLL_PERCENT,
 				DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT);
 
+      paramInvitationWeightAtRisk =
+        newConfig.getDouble(PARAM_INVITATION_WEIGHT_AT_RISK,
+			    DEFAULT_INVITATION_WEIGHT_AT_RISK);
+
+      paramInvitationWeightAlreadyRepairable =
+        newConfig.getDouble(PARAM_INVITATION_WEIGHT_ALREADY_REPAIRABLE,
+			    DEFAULT_INVITATION_WEIGHT_ALREADY_REPAIRABLE);
+
       List<String> noInvitationIps =
 	newConfig.getList(V3Poller.PARAM_NO_INVITATION_SUBNETS, null); 
       if (noInvitationIps == null || noInvitationIps.isEmpty()) {
@@ -1041,26 +1058,37 @@ public class PollManager
 			 e);
 	}
       }
-      if (changedKeys.contains(PARAM_INVITATION_PROBABILITY_AGE_CURVE)) {
-	v3InvitationProbabilityAgeCurve =
-	  processProbabilityCurve("V3 invitation probability curve",
-				  newConfig,
-				  PARAM_INVITATION_PROBABILITY_AGE_CURVE,
-				  DEFAULT_INVITATION_PROBABILITY_AGE_CURVE);
+      if (changedKeys.contains(PARAM_AT_RISK_AU_INSTANCES)) {
+	atRiskAuInstances =
+	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES));
       }
-      if (changedKeys.contains(PARAM_NOMINATION_PROBABILITY_AGE_CURVE)) {
-	v3NominationProbabilityAgeCurve =
-	  processProbabilityCurve("V3 nomination probability curve",
-				  newConfig,
-				  PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
-				  DEFAULT_NOMINATION_PROBABILITY_AGE_CURVE);
+      if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
+	v3InvitationWeightAgeCurve =
+	  processWeightCurve("V3 invitation weight age curve",
+			     newConfig,
+			     PARAM_INVITATION_WEIGHT_AGE_CURVE,
+			     DEFAULT_INVITATION_WEIGHT_AGE_CURVE);
       }
+//       if (changedKeys.contains(PARAM_INVITATION_WEIGHT_SAFETY_CURVE)) {
+// 	v3InvitationWeightSafetyCurve =
+// 	  processWeightCurve("V3 invitation weight safety curve",
+// 			     newConfig,
+// 			     PARAM_INVITATION_WEIGHT_SAFETY_CURVE,
+// 			     DEFAULT_INVITATION_WEIGHT_SAFETY_CURVE);
+//       }
       if (changedKeys.contains(PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE)) {
 	v3AcceptProbabilitySafetyCurve =
-	  processProbabilityCurve("V3 accept probability curve",
-				  newConfig,
-				  PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
-				  DEFAULT_ACCEPT_PROBABILITY_SAFETY_CURVE);
+	  processWeightCurve("V3 accept probability safety curve",
+			     newConfig,
+			     PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
+			     DEFAULT_ACCEPT_PROBABILITY_SAFETY_CURVE);
+      }
+      if (changedKeys.contains(PARAM_NOMINATION_WEIGHT_AGE_CURVE)) {
+	v3NominationWeightAgeCurve =
+	  processWeightCurve("V3 nomination weight age curve",
+			     newConfig,
+			     PARAM_NOMINATION_WEIGHT_AGE_CURVE,
+			     DEFAULT_NOMINATION_WEIGHT_AGE_CURVE);
       }
     }
     long scommTimeout =
@@ -1082,10 +1110,42 @@ public class PollManager
     }
   }
 
-  CompoundLinearSlope processProbabilityCurve(String name,
-					      Configuration config,
-					      String param,
-					      String dfault) {
+  AuPeersMap makeAuPeersMap(Collection<String> auPeersList) {
+    AuPeersMap res = new AuPeersMap();
+    for (String oneAu : auPeersList) {
+      List<String> lst = StringUtil.breakAt(oneAu, ',', -1, true, true);
+      if (lst.size() >= 2) {
+	String auid = null;
+	Set peers = new HashSet();
+	for (String s : lst) {
+	  if (auid == null) {
+	    auid = s;
+	  } else {
+	    try {
+	      PeerIdentity pid = theIDManager.stringToPeerIdentity(s);
+	      peers.add(pid);
+	    } catch (IdentityManager.MalformedIdentityKeyException e) {
+	      theLog.warning("Bad peer on at risk list for " + auid, e);
+	    }
+	  }
+	}
+	res.put(auid, peers);
+      }
+    }
+    return res;
+  }
+
+  public Set<PeerIdentity> getPeersWithAuAtRisk(ArchivalUnit au) {
+    if (atRiskAuInstances == null) {
+      return null;
+    }
+    return atRiskAuInstances.get(au.getAuId());
+  }
+
+  CompoundLinearSlope processWeightCurve(String name,
+					 Configuration config,
+					 String param,
+					 String dfault) {
     String probCurve = config.get(param, dfault); 
     if (StringUtil.isNullString(probCurve)) {
       return null;
@@ -1113,16 +1173,28 @@ public class PollManager
     return noInvitationSubnetFilter;
   }
 
-  public CompoundLinearSlope getInvitationProbabilityAgeCurve() {
-    return v3InvitationProbabilityAgeCurve;
+  public CompoundLinearSlope getInvitationWeightAgeCurve() {
+    return v3InvitationWeightAgeCurve;
   }
 
-  public CompoundLinearSlope getNominationProbabilityAgeCurve() {
-    return v3NominationProbabilityAgeCurve;
-  }
+//   public CompoundLinearSlope getInvitationWeightSafetyCurve() {
+//     return v3InvitationWeightSafetyCurve;
+//   }
 
   public CompoundLinearSlope getAcceptProbabilitySafetyCurve() {
     return v3AcceptProbabilitySafetyCurve;
+  }
+
+  public CompoundLinearSlope getNominationWeightAgeCurve() {
+    return v3NominationWeightAgeCurve;
+  }
+
+  public double getInvitationWeightAtRisk() {
+    return paramInvitationWeightAtRisk;
+  }
+
+  public double getInvitationWeightAlreadyRepairable() {
+    return paramInvitationWeightAlreadyRepairable;
   }
 
   public long getWillingRepairerLiveness() {
@@ -1138,13 +1210,8 @@ public class PollManager
   }
 
   public boolean isNoInvitationSubnet(PeerIdentity pid) {
-    try {
-      IpFilter filter = getNoInvitationSubnetFilter();
-      return filter != null && pid.getPeerAddress().isAllowed(filter);
-    } catch (IdentityManagerImpl.MalformedIdentityKeyException e) {
-      log.error("isNoInvitationSubnet: Malformed pid: " + pid);
-      return false;
-    }
+    IpFilter filter = getNoInvitationSubnetFilter();
+    return filter != null && pid.getPeerAddress().isAllowed(filter);
   }
 
   public PollFactory getPollFactory(PollSpec spec) {

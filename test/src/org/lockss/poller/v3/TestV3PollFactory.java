@@ -263,7 +263,7 @@ public class TestV3PollFactory extends LockssTestCase {
     assertEquals(1.0, acceptProb());
 
     ConfigurationUtil.addFromArgs(V3PollFactory.PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
-				  "[10,100],[10,50],[20,50],[20,10]");
+				  "[10,1.0],[10,.5],[20,.5],[20,.1]");
 
     thePollFactory.setWillingRepairers(0);
     assertEquals(1.0, acceptProb());
@@ -278,7 +278,7 @@ public class TestV3PollFactory extends LockssTestCase {
     thePollFactory.setWillingRepairers(21);
     assertEquals(0.1, acceptProb(), .01);
     ConfigurationUtil.addFromArgs(V3PollFactory.PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE,
-				  "[5,100],[5,50],[20,10]");
+				  "[5,1.0],[5,.5],[20,.1]");
     thePollFactory.setWillingRepairers(0);
     assertEquals(1.0, acceptProb());
     thePollFactory.setWillingRepairers(5);

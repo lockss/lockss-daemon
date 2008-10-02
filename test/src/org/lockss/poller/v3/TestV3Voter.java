@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.10 2008-09-09 07:54:53 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.11 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class TestV3Voter extends LockssTestCase {
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
 
-  double nominateProb(long now, long lastVoteTime)
+  double nominateWeight(long now, long lastVoteTime)
       throws Exception {
     String id = "tcp:[1.2.3.4]:4321";
     IdentityManager idMgr = lockssDaemon.getIdentityManager();
@@ -174,26 +174,26 @@ public class TestV3Voter extends LockssTestCase {
     PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
     status.setLastVoterTime(lastVoteTime);
     TimeBase.setSimulated(now);
-    return voter.nominateProb(status);
+    return voter.nominateWeight(pid);
   }
 
-  public void testNominateProb() throws Exception {
+  public void testNominateWeight() throws Exception {
     // default is [10d,100],[30d,10],[40d,1]
 
-    assertEquals(1.0, nominateProb(-1, 0));
-    assertEquals(1.0, nominateProb(0, 0));
-    assertEquals(1.0, nominateProb(10, 1));
-    assertEquals(1.0, nominateProb(1, 10));
+    assertEquals(1.0, nominateWeight(-1, 0));
+    assertEquals(1.0, nominateWeight(0, 0));
+    assertEquals(1.0, nominateWeight(10, 1));
+    assertEquals(1.0, nominateWeight(1, 10));
     
-    assertEquals(1.0, nominateProb(10*DAY, 0));
-    assertEquals(.55, nominateProb(20*DAY, 0));
-    assertEquals(.1, nominateProb(30*DAY, 0));
-    assertEquals(.01, nominateProb(40*DAY,0));
+    assertEquals(1.0, nominateWeight(10*DAY, 0));
+    assertEquals(.55, nominateWeight(20*DAY, 0), .01);
+    assertEquals(.1, nominateWeight(30*DAY, 0), .01);
+    assertEquals(.01, nominateWeight(40*DAY,0), .01);
 
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_NOMINATION_PROBABILITY_AGE_CURVE,
-				  "[1w,100],[20w,10]");
-    assertEquals(1.0, nominateProb(1*WEEK, 0));
-    assertEquals(0.1, nominateProb(20*WEEK, 0));
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_NOMINATION_WEIGHT_AGE_CURVE,
+				  "[1w,1.0],[20w,.1]");
+    assertEquals(1.0, nominateWeight(1*WEEK, 0), .01);
+    assertEquals(0.1, nominateWeight(20*WEEK, 0), .01);
   }
 
   static String PARAM_OVERHEAD_LOAD =

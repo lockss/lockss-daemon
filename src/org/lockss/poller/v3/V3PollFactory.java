@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.25 2008-09-17 07:28:53 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.26 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -334,10 +334,9 @@ public class V3PollFactory extends BasePollFactory {
       return 1.0;
     }
     int willing = countWillingRepairers(au);
-    long percent = acceptProbabilityCurve.getY(willing);
-    log.debug2("Accept probability " + percent + "% based on " + willing +
+    double prob = acceptProbabilityCurve.getY(willing);
+    log.debug2("Accept probability " + prob + "ybased on " + willing +
 	       " willing repairers");
-    double prob = ((double)percent) / 100.0d;
 
     // further reduce probability by acceptRepairersPollPercent if the
     // poll's caller is already a willing repairer
@@ -353,37 +352,7 @@ public class V3PollFactory extends BasePollFactory {
   }
 
   int countWillingRepairers(ArchivalUnit au) {
-    double repairThreshold = pollMgr.getMinPercentForRepair();
-    int willing = 0;
-
-    log.info("idMgr.getIdentityAgreements(au): "
-	     + idMgr.getIdentityAgreements(au));
-    for (IdentityManager.IdentityAgreement ida
-	   : idMgr.getIdentityAgreements(au)) {
-      try {
-	if (ida.getHighestPercentAgreementHint() <= repairThreshold) {
-	  log.info("Not willing: " + repairThreshold + " >= " + ida);
-	  continue;
-	}
-	PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
-	if (pollMgr.isNoInvitationSubnet(pid)) {
-	  log.info("No invitation subnet: " + ida);
-	  continue;
-	}
-	PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
-	long lastMessageTime = status.getLastMessageTime();
-	long noMessageFor = TimeBase.nowMs() - lastMessageTime;
-	if (noMessageFor > pollMgr.getWillingRepairerLiveness()) {
-	  log.info("No message for " + noMessageFor + ": " + ida);
-	  continue;
-	}
-	willing++;
-      } catch (IdentityManager.MalformedIdentityKeyException e) {
-	log.warning("Malformed id key in IdentityAgreement", e);
-	continue;
-      }
-    }
-    return willing;
+    return PollUtil.countWillingRepairers(au, pollMgr, idMgr);
   }
 
   // Not used.

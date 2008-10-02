@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.30 2008-02-15 09:10:28 tlipkis Exp $
+ * $Id: PollerStateBean.java,v 1.31 2008-10-02 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -62,24 +62,12 @@ public class PollerStateBean implements LockssSerializable {
   private PeerIdentity pollerId;
   private String hashAlgorithm;
   private long createTime;
-  /** @deprecated
-   * Left here only for deserialization compatibility.
-   */
-  private transient int pollSize;
   private int quorum;
   private boolean activePoll;
-  /** @deprecated
-   * Left here only for deserialization compatibility.
-   */
-  private transient int hashBlockIndex;
   private int outerCircleTarget;
   private String statusString;
   private int status;
   private RepairQueue repairQueue;
-  /** @deprecated
-   * Left here only for deserialization compatibility.
-   */
-  private transient ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
   private boolean hashStarted;
   private Collection votedPeers;
   private TallyStatus tallyStatus;
@@ -89,6 +77,19 @@ public class PollerStateBean implements LockssSerializable {
   /* Non-serializable transient fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
+
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
+  private transient int pollSize;
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
+  private transient int hashBlockIndex;
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
+  private transient ArrayList hashedBlocks;
 
   /**
    * Counter of participants who have not yet nominated any peers.
