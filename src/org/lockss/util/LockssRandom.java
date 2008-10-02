@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRandom.java,v 1.4 2005-06-04 21:09:17 tlipkis Exp $
+ * $Id: LockssRandom.java,v 1.5 2008-10-02 07:43:24 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class LockssRandom extends java.util.Random {
    */
   public long nextLong(long n) {
     if (n<=0) {
-      throw new IllegalArgumentException("n must be >= 0");
+      throw new IllegalArgumentException("n must be > 0");
     }
     long bits, val;
     do {
