@@ -1,5 +1,5 @@
 /*
- * $Id: TestCompoundLinearSlope.java,v 1.2 2008-09-17 07:29:07 tlipkis Exp $
+ * $Id: TestCompoundLinearSlope.java,v 1.3 2008-10-02 06:50:26 tlipkis Exp $
  */
 
 /*
@@ -84,16 +84,16 @@ public class TestCompoundLinearSlope extends LockssTestCase {
   }
 
   public void testAscending(CompoundLinearSlope c) {
-    assertEquals(10, c.getY(-10));
-    assertEquals(10, c.getY(0));
-    assertEquals(10, c.getY(100));
-    assertEquals(10, c.getY(110));
-    assertEquals(11, c.getY(200));
-    assertEquals(20, c.getY(1110));
-    assertEquals(30, c.getY(1110 + 1428));
-    assertEquals(40, c.getY(1110 + 1428 + 1428));
-    assertEquals(90, c.getY(111000));
-    assertEquals(90, c.getY(1110000));
+    assertEquals(10.0, c.getY(-10), .001);
+    assertEquals(10.0, c.getY(0), .001);
+    assertEquals(10.0, c.getY(100), .001);
+    assertEquals(10.1, c.getY(110), .001);
+    assertEquals(11.0, c.getY(200), .001);
+    assertEquals(20.07, c.getY(1110), .001);
+    assertEquals(30.0, c.getY(1110 + 1428), .1);
+    assertEquals(40.0, c.getY(1110 + 1428 + 1428), .1);
+    assertEquals(90.0, c.getY(111000), .001);
+    assertEquals(90.0, c.getY(1110000), .001);
   }
 
   public void testDescending() {
@@ -101,33 +101,33 @@ public class TestCompoundLinearSlope extends LockssTestCase {
       new CompoundLinearSlope(ListUtil.list(new Point(10, 100),
 					    new Point(110, 20),
 					    new Point(1110, 10)));
-    assertEquals(100, c1.getY(-10));
-    assertEquals(100, c1.getY(0));
-    assertEquals(100, c1.getY(10));
-    assertEquals(60, c1.getY(60));
-    assertEquals(10, c1.getY(1110));
-    assertEquals(10, c1.getY(111000));
+    assertEquals(100.0, c1.getY(-10), .001);
+    assertEquals(100.0, c1.getY(0), .001);
+    assertEquals(100.0, c1.getY(10), .001);
+    assertEquals(60.0, c1.getY(60), .001);
+    assertEquals(10.0, c1.getY(1110), .001);
+    assertEquals(10.0, c1.getY(111000), .001);
   }
 
   public void testTimeInterval() {
     CompoundLinearSlope c =
-      new CompoundLinearSlope("[1h,10],[2d,50],[4w,100]");
-    assertEquals(10, c.getY(-10));
-    assertEquals(10, c.getY(0));
-    assertEquals(10, c.getY(1 * HOUR));
-    assertEquals(50, c.getY(2 * DAY));
-    assertEquals(100, c.getY(4 * WEEK));
+      new CompoundLinearSlope("[1h,.1],[2d,0.5],[4w,1]");
+    assertEquals(.1, c.getY(-10), .001);
+    assertEquals(.1, c.getY(0), .001);
+    assertEquals(.1, c.getY(1 * HOUR), .001);
+    assertEquals(.5, c.getY(2 * DAY), .001);
+    assertEquals(1.0, c.getY(4 * WEEK), .001);
   }
 
   public void testStairStep() {
     CompoundLinearSlope c =
       new CompoundLinearSlope("[10,100],[10,50],[20,50],[20,10]");
-    assertEquals(100, c.getY(0));
-    assertEquals(100, c.getY(10));
-    assertEquals(50, c.getY(11));
-    assertEquals(50, c.getY(12));
-    assertEquals(50, c.getY(20));
-    assertEquals(10, c.getY(21));
+    assertEquals(100.0, c.getY(0), .001);
+    assertEquals(100.0, c.getY(10), .001);
+    assertEquals(50.0, c.getY(11), .001);
+    assertEquals(50.0, c.getY(12), .001);
+    assertEquals(50.0, c.getY(20), .001);
+    assertEquals(10.0, c.getY(21), .001);
   }
 
 }
