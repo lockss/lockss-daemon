@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.128 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.129 2008-10-02 06:45:40 tlipkis Exp $
  */
 
 /*
@@ -148,8 +148,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected String auName;   // the name of the AU (constructed by plugin)
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
   protected String auTitle;   // the title of the AU (from titledb, if any)
-  protected long nextPollInterval = -1;
-  protected double curTopLevelPollProb = -1;
+  protected long nextPollTime = 0;
   protected Configuration auConfig;
   private String auId = null;
 
@@ -692,25 +691,36 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff a top level poll should be called
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
-    checkNextPollInterval();
-
-    logger.debug3("Deciding whether to call a top level poll");
-    long lastPoll = aus.getLastTopLevelPollTime();
-    if (logger.isDebug3()) {
-      if (lastPoll==-1) {
-	logger.debug3("No previous top level poll.");
-      } else {
-	logger.debug3("Last poll at " + sdf.format(new Date(lastPoll)));
-      }
-      logger.debug3("Poll interval: " +
-		    StringUtil.timeIntervalToString(nextPollInterval));
-    }
-    if (TimeBase.msSince(lastPoll) < nextPollInterval) {
-      logger.debug3("Not time for poll.");
+    String flags = AuUtil.getTitleAttribute(this, "flags");
+    if (flags != null && StringUtil.indexOfIgnoreCase(flags, "nopoll") >= 0) {
       return false;
     }
-    nextPollInterval = -1;
-    return true;
+    checkNextPollTime(aus);
+    if (TimeBase.nowMs() >= nextPollTime) {
+      logger.debug3("Time for poll.");
+      return true;
+    }
+    logger.debug3("Not time for poll.");
+    return false;
+  }
+
+  // reset nextPollTime iff have run a poll since then.
+  void checkNextPollTime(AuState aus) {
+    if (aus.getLastTopLevelPollTime() >= nextPollTime) {
+      Configuration config = CurrentConfig.getCurrentConfig();
+      long minPollInterval =
+        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
+                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
+      long maxPollInterval =
+        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MAX,
+                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX);
+      if (maxPollInterval <= minPollInterval) {
+	maxPollInterval = 2 * minPollInterval;
+      }
+      Deadline nextPoll =
+	Deadline.inRandomRange(minPollInterval, maxPollInterval);
+      nextPollTime = nextPoll.getExpirationTime();
+    }
   }
 
   /**
@@ -840,57 +850,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   String paramString(ConfigParamDescr descr) {
     return "\"" + descr.getDisplayName() + "\"";
-  }
-
-
-  void checkNextPollInterval() {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    long minPollInterval =
-        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
-                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
-    long maxPollInterval =
-        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MAX,
-                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX);
-    if (maxPollInterval <= minPollInterval) {
-      maxPollInterval = 2 * minPollInterval;
-    }
-    if ((nextPollInterval < minPollInterval) ||
-        (nextPollInterval > maxPollInterval)) {
-      nextPollInterval =
-          Deadline.inRandomRange(minPollInterval,
-                                 maxPollInterval).getRemainingTime();
-    }
-  }
-
-  void checkPollProb() {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    double initialProb = config.getPercentage(
-        PARAM_TOPLEVEL_POLL_PROB_INITIAL, DEFAULT_TOPLEVEL_POLL_PROB_INITIAL);
-    double maxProb = config.getPercentage(
-        PARAM_TOPLEVEL_POLL_PROB_MAX, DEFAULT_TOPLEVEL_POLL_PROB_MAX);
-    if (curTopLevelPollProb < initialProb) {
-      // reset to initial prob
-      curTopLevelPollProb = initialProb;
-    } else if (curTopLevelPollProb > maxProb) {
-      curTopLevelPollProb = maxProb;
-    }
-  }
-
-  double incrementPollProb(double curProb) {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    double topLevelPollProbMax =
-        config.getPercentage(PARAM_TOPLEVEL_POLL_PROB_MAX,
-                             DEFAULT_TOPLEVEL_POLL_PROB_MAX);
-    if (curProb < topLevelPollProbMax) {
-      // if less than max prob, increment
-      curProb += config.getPercentage(
-          PARAM_TOPLEVEL_POLL_PROB_INCREMENT,
-          DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT);
-    }
-    if (curProb > topLevelPollProbMax) {
-      curProb = topLevelPollProbMax;
-    }
-    return curProb;
   }
 
   protected static class ParamHandlerMap extends TypedEntryMap {
