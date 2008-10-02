@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.15 2007-01-18 02:28:46 tlipkis Exp $
+ * $Id: TestCollectionUtil.java,v 1.16 2008-10-02 06:50:01 tlipkis Exp $
  */
 
 /*
@@ -269,6 +269,57 @@ public class TestCollectionUtil extends LockssTestCase {
     }
     fail("Created only " + set.size() + " permutations out of 120, in " +
 	 rpt + " tries");
+  }
+
+  public void testweightedRandomSelectionSimple() throws Exception {
+    Map all = MapUtil.map("a", 1.0, "b", 2.0, "c", 3.0);
+    Collection items = ListUtil.list("a", "b", "c");
+    Collection c0 = CollectionUtil.weightedRandomSelection(all, 0);
+    assertEmpty(c0);
+    Collection c1 = CollectionUtil.weightedRandomSelection(all, 1);
+    assertEquals(1, c1.size());
+    assertTrue(items.containsAll(c1));
+    Collection c2 = CollectionUtil.weightedRandomSelection(all, 2);
+    assertEquals(2, c2.size());
+    assertTrue(items.containsAll(c2));
+    assertNoDuplicates(c2);
+    Collection c3 = CollectionUtil.weightedRandomSelection(all, 3);
+    assertEquals(3, c3.size());
+    assertTrue(items.containsAll(c3));
+    assertNoDuplicates(c3);
+    // Illegal calls.
+    try {
+      // Too many!
+      Collection c4 = CollectionUtil.weightedRandomSelection(all, 4);
+      fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      // expected
+    }
+    try {
+      // Too few!
+      Collection c6 = CollectionUtil.weightedRandomSelection(all, -1);
+      fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      // expected
+    }
+  }
+
+  public void assertInRange(long min, long max, long val) {
+    assertTrue(val >= min);
+    assertTrue(val <= max);
+  }
+
+  public void testweightedRandomSelection() throws Exception {
+    assertSuccessRate(.8, 100);
+    Map all = MapUtil.map(0, 1.0, 1, 2.0, 2, 3.0);
+    int[] counts = new int[3];
+    for (int ix = 0; ix < 1000; ix++) {
+      List l = CollectionUtil.weightedRandomSelection(all, 1);
+      counts[(Integer)l.get(0)]++;
+    }
+    assertInRange(116, 216, counts[0]);
+    assertInRange(232, 432, counts[1]);
+    assertInRange(450, 550, counts[2]);
   }
 
 

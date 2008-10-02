@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.15 2007-01-18 02:28:46 tlipkis Exp $
+ * $Id: CollectionUtil.java,v 1.16 2008-10-02 06:50:01 tlipkis Exp $
  */
 
 /*
@@ -206,4 +206,63 @@ public class CollectionUtil {
     }
     return iter.next();
   }
+
+  /**
+   * Randomly select <i>count</i> entries from the keys in the map, using
+   * the values as weights to influence the selection.  E.g., in the map
+   * {[A, 1.0], [B, 2.0]}, B would be chosen approximately twice as often
+   * as A.
+   * @param itemMap maps items to their weight (a double)
+   * @param count The number of items to return.
+   * @return A collection of items selected randomly from the list.
+   * @throws IllegalArgumentException if count is non-positive or
+   *         greater than the size of the collection.
+   */
+  // XXX Can be inefficient - used items are marked and random numbers are
+  // tried repeatedly if necessary to find the next unused item.  Probably
+  // should shuffle down instead.  (But that requires two array shuffles,
+  // one recomputing weight indices.  Maybe do it every N iterations.)
+
+  public static List weightedRandomSelection(Map itemMap, int count) {
+    int mapSize = itemMap.size();
+    if (count < 0 || count > mapSize) {
+      throw new IllegalArgumentException("'count' negative "+
+                                         "or greater than collection size.");
+    }
+    if (count == 0) {
+      return Collections.EMPTY_LIST;
+    }
+    double[] weightIndices = new double[mapSize];
+    Object[] items = new Object[mapSize];
+    boolean[] used = new boolean[mapSize];
+    double totalWeight = 0.0;
+    {
+      int ix = 0;
+      for (Map.Entry ent : (Set<Map.Entry>)itemMap.entrySet()) {
+	items[ix] = ent.getKey();
+	double weight = (Double)ent.getValue();
+	weightIndices[ix] = totalWeight;
+	totalWeight += weight;
+	ix++;
+      }
+    }
+    ArrayList result = new ArrayList(count);
+    while (--count >= 0) {
+      while (true) {
+	double weightIx = random.nextDouble() * totalWeight;
+	int ix = Arrays.binarySearch(weightIndices, weightIx);
+	if (ix < 0) {
+	  ix = -2 - ix;
+	}
+	if (used[ix]) {
+	  continue;
+	}
+	result.add(items[ix]);
+	used[ix] = true;
+	break;
+      }
+    }
+    return result;
+  }
+
 }
