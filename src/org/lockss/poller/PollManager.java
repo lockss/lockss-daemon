@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.194.6.3 2008-10-01 23:34:45 tlipkis Exp $
+ * $Id: PollManager.java,v 1.194.6.4 2008-10-02 00:20:33 tlipkis Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class PollManager
     PREFIX + "wrongGroupRetryTime";
   public static final long DEFAULT_WRONG_GROUP_RETRY_TIME = 4 * WEEK;
 
-  static final String V3PREFIX = PREFIX + ".v3";
+  static final String V3PREFIX = PREFIX + "v3.";
 
   /** Curve expressing desired inter-poll interval based on last agreement
    * value */
