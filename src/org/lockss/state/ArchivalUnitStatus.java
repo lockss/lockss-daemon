@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.73 2008-10-02 07:43:14 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.74 2008-10-05 05:54:49 tlipkis Exp $
  */
 
 /*
@@ -241,6 +241,16 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
+    static final double STATUS_ORDER_AGREE_BASE = 100.0;
+    static final double STATUS_ORDER_WAIT_POLL = 200.0;
+    static final double STATUS_ORDER_CRAWLING = 300.0;
+    static final double STATUS_ORDER_WAIT_CRAWL = 400.0;
+
+    OrderedObject agreeStatus(double agreement) {
+      return new OrderedObject(doubleToPercent(agreement) + "% Agreement",
+			       STATUS_ORDER_AGREE_BASE - agreement);
+    }
+
     private Map makeRow(ArchivalUnit au, NodeManager nodeMan) {
       AuState auState = nodeMan.getAuState();
       HashMap rowMap = new HashMap();
@@ -290,27 +300,19 @@ public class ArchivalUnitStatus
         //
         if (auState.getV3Agreement() < 0 ||
 	    auState.getLastTopLevelPollTime() <= 0) {
-          if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
-	    if (cmStatus.isRunningNCCrawl(au)) {
-	      stat = "Crawling";
+	  if (cmStatus.isRunningNCCrawl(au)) {
+	    stat = new OrderedObject("Crawling", STATUS_ORDER_CRAWLING);
+	  } else {
+	    if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
+	      stat = new OrderedObject("Waiting for Poll",
+				       STATUS_ORDER_WAIT_POLL);
 	    } else {
-	      stat = "Waiting for Poll";
-	    }
-// 	    if (numPolls > 0) {
-// 	      stat = pollsRef(stat, au);
-// 	    }
-          } else {
-	    if (cmStatus.isRunningNCCrawl(au)) {
-	      stat = "Crawling";
-	    } else {
-	      stat = "Waiting for Crawl";
+	      stat = new OrderedObject("Waiting for Crawl",
+				       STATUS_ORDER_WAIT_CRAWL);
 	    }
           }
         } else {
-          stat = doubleToPercent(auState.getV3Agreement()) + "% Agreement";
-// 	  if (numPolls > 0) {
-// 	    stat = pollsRef(stat, au);
-// 	  }
+          stat = agreeStatus(auState.getV3Agreement());
         }
       } else {
         rowMap.put("AuPolls",
