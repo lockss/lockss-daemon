@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.5 2008-08-29 09:23:13 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.6 2008-10-05 05:54:58 tlipkis Exp $
  */
 
 /*
@@ -166,17 +166,17 @@ public abstract class PeerAddress {
   }
 
   protected static class Tcp extends Ip {
-    private short port;
+    private int port;
 
     Tcp(String key, IPAddr addr, int port) {
       super(key, addr);
       if (port < 0 || port > 65535) {
 	throw new IllegalArgumentException("Illegal TCP port: " + port);
       }
-      this.port = (short)port;
+      this.port = (int)port;
     }
 
-    protected short getPort() {
+    protected int getPort() {
       return port;
     }
 

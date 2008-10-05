@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.5 2008-08-29 09:23:13 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.6 2008-10-05 05:54:58 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,12 @@ public class TestPeerAddress extends LockssTestCase {
     assertEquals(port, pa1.getPort());
   }
 
+  void assertIpAddrPort(String expAddr, int expPort, PeerAddress pa) {
+    PeerAddress.Tcp tpa = (PeerAddress.Tcp)pa;
+    assertEquals(expAddr, tpa.getIPAddr().getHostAddress());
+    assertEquals(expPort, tpa.getPort());
+  }
+
   // test make from key
   public void testMakeTCPAddr() throws Exception {
     String key = IDUtil.ipAddrToKey(ipstr, port);
@@ -118,6 +124,11 @@ public class TestPeerAddress extends LockssTestCase {
 
     assertTrue(isMatch(pa, ipstr));
     assertFalse(isMatch(pa, "111.211.33.44"));
+
+    assertIpAddrPort("33.44.55.66", 1234,
+		     PeerAddress.makePeerAddress("tcp:[33.44.55.66]:1234"));
+    assertIpAddrPort("33.44.55.66", 65530,
+		     PeerAddress.makePeerAddress("tcp:[33.44.55.66]:65530"));
   }
 
   public void assertIllegal(String key) {
