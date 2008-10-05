@@ -1,6 +1,6 @@
 ## Polling test suite properties file.
 ##
-## $Id: testsuite.props,v 1.6 2007-08-30 09:55:43 smorabito Exp $
+## $Id: testsuite.props,v 1.7 2008-10-05 05:55:42 tlipkis Exp $
 ##
 
 ## For the most part, you don't need to change anything in this file.
@@ -24,7 +24,10 @@
 # workDir = ./
 
 ## First port at which to start the daemons.
-# startPort = 8041
+# startUiPort = 8041
+
+## First V3 port
+# startV3Port = 8081
 
 ## Timeout, in seconds.  Maximum time to wait for any event.
 # timeout = 28800 # eight hours

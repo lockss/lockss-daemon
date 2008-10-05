@@ -4,13 +4,15 @@ This test suite requires at minimum a top-level work directory to
 build frameworks in.  Optional parameters may also be set, if desired,
 to change the default behavior.  See the file for details.
 """
-import sys, time, unittest, os, urllib2, re
+import sys, time, unittest, os, urllib2, re, filecmp
 from lockss_util import *
 
 ##
 ## Load configuration.
 ##
 loadConfig('./testsuite.props')
+if os.path.isfile('./testsuite.opt'):
+    loadConfig('./testsuite.opt')
 
 from lockss_daemon import *
 
@@ -48,7 +50,7 @@ class LockssTestCase(unittest.TestCase):
     def getDaemonCount(self):
         return None
 
-    def getStartPort(self):
+    def getStartUiPort(self):
         return None
 
     def setUp(self):
@@ -62,7 +64,7 @@ class LockssTestCase(unittest.TestCase):
         ##
         self.framework = Framework(self.getDaemonCount(),
                                    self.getConfigUrls(),
-                                   self.getStartPort())
+                                   self.getStartUiPort())
 
         ## global ('static') reference to the current framework, so we
         ## can clean up after a user interruption
@@ -174,7 +176,7 @@ class TinyUiTests(LockssTestCase):
     def getConfigUrls(self):
         return (self.getTestUrl(),)
 
-    def getStartPort(self):
+    def getStartUiPort(self):
         return 8081
 
     def runTest(self):
@@ -251,11 +253,14 @@ class V3TestCase(LockssTestCase):
         # V3 has a much shorter default timeout, 8 minutes.
         self.timeout = int(config.get('timeout', 60 * 8))
         self.victim = self.clients[0]
+        if len(self.clients) > 1:
+            self.nonVictim = self.clients[1]
 
         for i in range(0, len(self.clients)):
+            c = self.clients[i]
             isVictim = i == 0
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
-                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
+                         "org.lockss.localV3Identity": c.getPeerId(),
                          "org.lockss.id.initialV3PeerList": self.getInitialPeerList(),
                          "org.lockss.poll.v3.enableV3Poller": isVictim,
                          "org.lockss.poll.v3.enableV3Voter": "true"
@@ -280,17 +285,14 @@ class V3TestCase(LockssTestCase):
 
     def getInitialPeerList(self):
         peerIds = []
-        for port in range(0, len(self.clients)):
-            peerIds.append("TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + port))
+        for c in self.clients:
+            peerIds.append(c.getPeerId())
         return ";".join(peerIds)
         
     def getTestLocalConf(self):
         "Override this method to append local per-test configuration"
         return {}
     
-    def getBaseV3Port(self):
-        return 8801
-
     def createAus(self, au):
         log.info("Creating simulated AUs.")
         for c in self.clients:
@@ -298,6 +300,25 @@ class V3TestCase(LockssTestCase):
         for c in self.clients:
             c.waitAu(au)
 
+    def crawlAus(self, au):
+        log.info("Waiting for simulated AUs to crawl.")
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(au)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+    def compareNode(self, node, au, victim, nonVictim):
+        url = node.url
+        n1 = victim.getAuNode(au, url)
+        n2 = nonVictim.getAuNode(au, url)
+        f1 = victim.nodeContentFile(n1)
+        f2 = nonVictim.nodeContentFile(n2)
+        isSame = filecmp.cmp(f1, f2, False)
+        return isSame
+
+    def nodeHasContent(self, node, victim):
+        file = victim.nodeContentFile(node)
+        return path.isfile(file)
 
 class SimpleDamageV3TestCase(V3TestCase):
     """ Test a basic V3 Poll. """
@@ -316,11 +337,7 @@ class SimpleDamageV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -328,7 +345,8 @@ class SimpleDamageV3TestCase(V3TestCase):
         ## Damage the AU.
         ##
         node = victim.randomDamageSingleNode(simAu)
-        assert not victim.isV3Repaired(simAu, [node]), "Failed to damage AU."
+
+        assert not self.compareNode(node, simAu, victim, self.nonVictim), "Failed to damage AU."
         log.info("Damaged node %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
@@ -340,6 +358,7 @@ class SimpleDamageV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
 def simpleDamageV3TestCase():
@@ -362,11 +381,7 @@ class RandomDamageV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -386,6 +401,8 @@ class RandomDamageV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        for node in nodeList:
+            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
 
         log.info("AU successfully repaired.")
 
@@ -414,11 +431,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -443,6 +456,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         for node in nodeList:
             if not (victim.isNodeRepairedFromPublisherByV3(simAu, node)):
                 self.fail("Node %s was not repaired from the publisher!" % node)
+            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
 
         log.info("AU successfully repaired.")
 
@@ -475,11 +489,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -522,6 +532,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
         for node in nodeList:
             if not (victim.isNodeRepairedFromPeerByV3(simAu, node)):
                 self.fail("Node %s was not repaired from a peer!" % node)
+            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
 
         log.info("AU successfully repaired.")
 
@@ -545,11 +556,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -568,6 +575,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
 def simpleDeleteV3TestCase():
@@ -590,11 +598,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -614,6 +618,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
 def lastFileDeleteV3TestCase():
@@ -636,11 +641,7 @@ class RandomDeleteV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -648,6 +649,8 @@ class RandomDeleteV3TestCase(V3TestCase):
         ## Damage the AU.
         ##
         nodeList = victim.randomDeleteRandomNodes(simAu, 5, 15)
+        for node in nodeList:
+            assert not self.nodeHasContent(node, victim), "Failed to delete: %s % node.url"
         log.info("Damaged the following nodes on client %s:\n        %s" %
             (victim, '\n        '.join([str(n) for n in nodeList])))
 
@@ -656,10 +659,11 @@ class RandomDeleteV3TestCase(V3TestCase):
 
         log.info("Successfully called a V3 poll.")
 
-        ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        for node in nodeList:
+            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
 def randomDeleteV3TestCase():
@@ -681,11 +685,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -704,6 +704,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
 
 def simpleExtraFileV3TestCase():
@@ -726,11 +727,7 @@ class LastFileExtraV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -750,6 +747,7 @@ class LastFileExtraV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
 
 def lastFileExtraV3TestCase():
@@ -772,11 +770,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         ## To use a specific client, uncomment this line.
         victim = self.victim
@@ -797,6 +791,8 @@ class RandomExtraFileV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        for node in nodeList:
+            assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
 
 def randomExtraFileV3TestCase():
@@ -830,11 +826,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         ## To use a specific client, uncomment this line.
         victim = self.victim
@@ -855,6 +847,8 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
         victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        for node in nodeList:
+            assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
     
 def votersDontParticipateV3TestCase():
@@ -887,11 +881,7 @@ class NoQuorumV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
 
         ## To use a specific client, uncomment this line.
         victim = self.victim
@@ -899,7 +889,7 @@ class NoQuorumV3TestCase(V3TestCase):
         ##
         ## Damage the AU by creating an extra node.
         ##
-        nodeList = victim.randomCreateRandomNodes(simAu, 5, 15)
+        nodeList = victim.randomCreateRandomNodes(simAu, 3, 7)
         log.info("Created the following nodes on client %s:\n        %s" %
                  (victim, '\n        '.join([str(n) for n in nodeList])))
 
@@ -912,6 +902,12 @@ class NoQuorumV3TestCase(V3TestCase):
         log.info("Waiting for V3 poll to report no quorum...")
         victim.waitForV3NoQuorum(simAu)
         log.info("AU successfully reported No Quorum.")
+        peerDict = victim.getAuRepairerInfo(simAu)
+        log.debug2("peerDict: " + str(peerDict))
+        for c in self.clients:
+            if c != victim:
+                agree = peerDict[c.getPeerId()]
+                assert agree['highestAgree'] > 60, "No agreement recorded for %s % c"
     
 def noQuorumV3TestCase():
     return NoQuorumV3TestCase()
@@ -934,11 +930,9 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         self.createAus(simAu)
 
         ## Assert that the AUs have been crawled.
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
-                self.fail("AUs never completed initial crawl.")
-        log.info("AUs completed initial crawl.")
+	self.crawlAus(simAu)
+
+        nodeList = victim.getAuNodesWithContent(simAu)
 
         # expect to see a top level content poll called by all peers.
         log.info("Waiting for a V3 poll by all simulated caches")
@@ -1017,6 +1011,8 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         log.info("Waiting for successful V3 repair of AU.")
         assert victim.waitForCompleteV3Repair(simAu, timeout=self.timeout),\
                "AU never repaired by V3."
+        for node in nodeList:
+            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired by V3.")
 
         # End of test.

@@ -71,11 +71,17 @@
                                    to build daemon directories and run
                                    the tests.
 
-  startPort            8081        The start of the range of ports to
-                                   use when running the daemons.  Ports
-                                   numbered 'startPort' to
-                                   'startPort + (numDaemons - 1)' will
-                                   be used by the daemons.
+  startUiPort          8041        The start of the range of ports to
+                                   use for the daemon UI.  Ports
+                                   numbered 'startUiPort' to
+                                   'startUiPort + (numDaemons - 1)' will
+                                   be used.
+
+  startV3Port          8081        The start of the range of ports to
+                                   use for V3 LCAP.  Ports
+                                   numbered 'startV3Port' to
+                                   'startV3Port + (numDaemons - 1)' will
+                                   be used.
 
   timeout              28000       The maximum time to wait for an
                                    event before timing out.  Default

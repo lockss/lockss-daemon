@@ -39,7 +39,8 @@ class Framework:
     clients, one per daemon.  These clients are used to perform
     functional test interactions with the daemons.
     """
-    def __init__(self, daemonCount = None, urlList = None, startPort = None):
+    def __init__(self, daemonCount = None, urlList = None,
+                 startUiPort = None, startV3Port = None):
         self.workDir = path.abspath(config.get('workDir', './'))
         self.frameworkDir = self.__makeTestDir()
         self.projectDir = config.get('projectDir')
@@ -52,10 +53,14 @@ class Framework:
             self.daemonCount = int(config.get('daemonCount', 4))
         else:
             self.daemonCount = daemonCount
-        if not startPort:
-            self.startPort = int(config.get('startPort', 8041))
+        if not startUiPort:
+            self.startUiPort = int(config.get('startUiPort', 8041))
         else:
-            self.startPort = startPort
+            self.startUiPort = startUiPort
+        if not startV3Port:
+            self.startV3Port = int(config.get('startV3Port', 8801))
+        else:
+            self.startV3Port = startV3Port
         self.username = config.get('username', 'testuser')
         self.password = config.get('password', 'testpass')
         self.logLevel = config.get('daemonLogLevel', 'debug')
@@ -85,7 +90,10 @@ class Framework:
         self.__setUpLibDir()
 
         # Set up a each daemon and create a work directory for it.
-        for port in range(self.startPort, self.startPort + self.daemonCount):
+        for ix in range(0, self.daemonCount):
+            port = self.startUiPort + ix
+            v3Port = self.startV3Port + ix
+
             daemonDir = path.abspath(path.join(self.frameworkDir,
                                                'daemon-' + str(port)))
             # local config
@@ -103,7 +111,8 @@ class Framework:
                                   daemonConfUrls)
 
             # create client for this daemon
-            client = Client(daemon, self.hostname, port, self.username, self.password)
+            client = Client(daemon, self.hostname, port, v3Port,
+                            self.username, self.password)
 
             self.clientList.append(client)
             self.daemonList.append(daemon)
@@ -275,14 +284,18 @@ class Framework:
 
 class Client:
     " Client interface to a test framework. "
-    def __init__(self, daemon, hostname, port, username, password):
+    def __init__(self, daemon, hostname, port, v3Port, username, password):
         self.hostname = hostname
         self.port = port
+        self.v3Port = v3Port
         self.url = 'http://' + self.hostname + ':' + str(port) + '/'
         self.daemon = daemon
         self.daemonDir = daemon.daemonDir
         self.username = username
         self.password = password
+
+    def getPeerId(self):
+        return ("TCP:[127.0.0.1]:%d" % self.v3Port)
 
     def createAu(self, au):
         """ Create a simulated AU.  This will block until the AU appears in
@@ -787,12 +800,35 @@ class Client:
                 nodes.append(self.getAuNode(au, url))
         return nodes
 
+    def getAuRepairerInfo(self, au):
+        """ Return a dict: peer -> dict w/ highestAgree and highestHint. """
+        (summary, table) = self.__getStatusTable('PeerRepair', au.auId)
+        peerDict = {}
+        p = re.compile('(\d+)%')
+        for row in table:
+            peer = row['Box']
+            if row.has_key('HighestPercentAgreement'):
+                highestAgree = int(p.match(row['HighestPercentAgreement']).group(1))
+            else:
+                highestAgree = 0
+            if row.has_key('HighestPercentAgreementHint'):
+                highestHint = int(p.match(row['HighestPercentAgreementHint']).group(1))
+            else:
+                highestHint = 0
+
+            peerDict[peer] = {'highestAgree': highestAgree,
+                              'highestHint': highestHint}
+        return peerDict
+
     def isDaemonReady(self):
-        """ Simply try to get the AU status.  If it responds, return
-        true.  If it raises any kind of error, return False.  Not the
-        best implementation in the world, but such is life."""
+        """ Ask DaemonStatus whether the daemon is fully started.
+            When given arg idDaemonReady it returns either "true" or "false" """
         try:
-            self.__getStatusTable('ArchivalUnitStatusTable')
+            post = self.__makePost('DaemonStatus')
+            post.add('isDaemonReady', "1")
+            res = post.execute().read()
+            return res.find("true") >= 0
+
             return True
         except LockssError, e:
             ## If a Lockss error is raised, pass it on.
@@ -1290,12 +1326,7 @@ class Client:
         """ Block until the framework is ready for client communication """
         def waitFunc():
             return self.isDaemonReady()
-        res = self.wait(waitFunc, timeout, sleep)
-        # Kludge.  Wait an additional 4 seconds after the daemon is ready.
-        # This seems to be enough time to wait for it to accept new AU
-        # creations.
-        time.sleep(4)
-        return res
+        return self.wait(waitFunc, timeout, sleep)
 
     def wait(self, condFunc, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Given a function to evaluate, loop until the function evals to
@@ -1345,11 +1376,29 @@ class Client:
         nodeList.sort()
         return nodeList
 
+    def nodeContentFile(self, node):
+        """ Return the file with the content of a node. """
+        return path.join(node.file, '#content', 'current')
+
+    def readNode(self, node):
+        """ Return the content of a specific node. """
+        fullPath = path.join(node.file, '#content', 'current')
+        if path.isfile(fullPath):
+            f = open(fullPath, 'a')
+            try:
+                content = f.read( )
+            finally:
+                f.close( )
+            return content
+        else:
+            raise LockssError("File does not exist: %s" % f)
+
     def damageNode(self, node):
         """ Damage a specific node. """
         # Only want to damage the file contents
         fullPath = path.join(node.file, '#content', 'current')
         if path.isfile(fullPath):
+            log.debug2("Damaging: " + fullPath)
             f = open(fullPath, 'a')
             f.write('*** DAMAGE ***')
             f.close()
@@ -1497,7 +1546,7 @@ class Client:
         post.add('output', 'xml')
 
         xml = post.execute().read()
-        log.debug2("Received XML response: \n" + xml)
+        log.debug3("Received XML response: \n" + xml)
         doc = minidom.parseString(xml)
         doc.normalize() # required for python 2.2
 
