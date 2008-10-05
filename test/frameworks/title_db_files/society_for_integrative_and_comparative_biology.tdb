@@ -1,0 +1,12 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Society for Integrative and Comparative Biology
+#	@fixedValues	P=Society for Integrative and Comparative Biology	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0003-1569	j=American Zoologist
+	ready	American Zoologist Volume 40	base_url=http://www.bioone.org/	journal_id=0003-1569	volume=40
+	released	American Zoologist Volume 41	base_url=http://www.bioone.org/	journal_id=0003-1569	volume=41
+#	@fixedValues	i=1540-7063	j=Integrative and Comparative Biology
+	ready	Integrative and Comparative Biology Volume 42	base_url=http://www.bioone.org/	journal_id=1540-7063	volume=42
+	ready	Integrative and Comparative Biology Volume 43	base_url=http://www.bioone.org/	journal_id=1540-7063	volume=43
+	released	Integrative and Comparative Biology Volume 44	base_url=http://www.bioone.org/	journal_id=1540-7063	volume=44
+	ready	Integrative and Comparative Biology Volume 45	base_url=http://www.bioone.org/	journal_id=1540-7063	volume=45

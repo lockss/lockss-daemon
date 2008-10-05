@@ -1,0 +1,13 @@
+#! /bin/sh
+TESTFILE=test1/cache/a/www.example.com/http/branch1/003file.txt/#content/current
+./start
+sleep 3600
+echo "BADNESS" >>"${TESTFILE}"
+sleep 7200
+./stop
+if grep -s BADNESS "${TESTFILE}"
+then
+	exit 1
+else
+	exit 0
+fi

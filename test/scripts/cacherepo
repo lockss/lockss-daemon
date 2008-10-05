@@ -1,0 +1,160 @@
+#!/bin/sh
+
+#
+# $Id: cacherepo,v 1.2 2007-03-06 00:58:51 thib_gc Exp $
+#
+
+# Display help if needed
+HELP="X"
+case "$1" in
+ -h|-help|--help|-H )
+  ;;
+ * )
+  HELP="";; 
+esac
+if [ -z "$1" -o -n "$HELP" ]; then
+ if [ "$1" != "-H" ]; then
+  ( cat <<EOF
+cacherepo [-h|-help|--help|-H]
+cacherepo [-root CROOT] [-rod|[-rmd|-rmdc] [-1|-2|-3|-4|-instance INST]] REPO
+ Assembles the path of a LOCKSS repository, possibly in a directory from a
+ LOCKSS development framework.
+-h
+-help
+--help
+ Displays this message and exits.
+-H
+ Displays only the lines of this message after this one and exits.
+EOF
+  )
+ fi
+ ( cat <<EOF
+-root
+ If specified, CROOT is used as the root of the cache, otherwise the root
+ of the tree is the current directory.
+-rod
+ Descends into the LOCKSS cache in the run_one_daemon framework.
+-rmd
+ Descends into the LOCKSS cache in the run_multiple_daemons framework.
+-rmdc
+ Descends into the LOCKSS cache in the run_multiple_daemons_clockss framework.
+-1
+ Further descends into daemon instance test1 in the selected framework.
+-2
+ Further descends into daemon instance test2 in the selected framework.
+-3
+ Further descends into daemon instance test3 in the selected framework.
+-4
+ Further descends into daemon instance test4 in the selected framework.
+-instance
+ Further descends into daemon instance INST in the selected framework.
+EOF
+ )
+ exit
+fi
+
+CACHEROOT=""
+MORECACHEROOT=""
+LOCKSSFRAMEWORKS="test/frameworks"
+
+# Parse the root
+case "$1" in
+
+ -root )
+  CACHEROOT="$2"
+  CACHEROOT="${CACHEROOT%/}" # Remove last slash if present
+  shift; shift;; # Consume two arguments
+
+ * )
+  CACHEROOT=".";; # Do not consume an argument
+
+esac
+
+# Possibly descend into a development directory
+case "$1" in
+
+ # LOCKSS run_one_daemon
+ -rod )
+  CACHEROOT="$CACHEROOT/$LOCKSSFRAMEWORKS/run_one_daemon/cache"
+  shift;; # consume one argument
+
+ # LOCKSS run_multiple_daemons
+ -rmd )
+  CACHEROOT="$CACHEROOT/$LOCKSSFRAMEWORKS/run_multiple_daemons"
+  MORECACHEROOT="X"
+  shift;; # Consume one argument
+
+ # LOCKSS run_multiple_daemons_clockss
+ -rmdc )
+  CACHEROOT="$CACHEROOT/$LOCKSSFRAMEWORKS/run_multiple_daemons_clockss"
+  MORECACHEROOT="X"
+  shift;; # Consume one argument
+
+ # None
+ * )
+  ;; # Do not consume an argument
+
+esac
+
+# Descend into a daemon instance
+if [ -n "$MORECACHEROOT" ]; then
+ case "$1" in
+
+  # Daemon instance test1
+  -1 )
+   CACHEROOT="$CACHEROOT/test1/cache"
+   shift;; # Consume one argument
+
+  # Daemon instance test2
+  -2 )
+   CACHEROOT="$CACHEROOT/test2/cache"
+   shift;; # Consume one argument
+
+  # Daemon instance test3
+  -3 )
+   CACHEROOT="$CACHEROOT/test3/cache"
+   shift;; # Consume one argument
+
+  # Daemon instance test4
+  -4 )
+   CACHEROOT="$CACHEROOT/test4/cache"
+   shift;; # Consume one argument
+
+  # Custom daemon instance
+  -instance )
+   CACHEROOT="$CACHEROOT/$2"
+   shift; shift;; # Consume two arguments
+
+  # Error
+  * )
+   ( cat <<EOF
+Error: The selected framework requires that you specify a daemon instance
+to descend into.
+Hint: use -1, -2, -3, -4 or -instance.
+Help: use -h, -help or --help for more details.
+EOF
+   )
+   exit 1;;
+
+ esac
+fi
+
+# Parse the repository and check that it exists
+REPOSITORY=$CACHEROOT/$1
+if [ ! -d "$REPOSITORY" ]; then
+ ( echo "Error: $REPOSITORY does not exist" )
+ exit 1
+fi
+
+# Check that there are no extraneous arguments, and conclude
+shift # Consume one argument
+if [ -z "$@" ]; then
+ echo "$REPOSITORY"
+else
+ ( cat <<EOF
+Error: There were extraneous arguments on the command line.
+Help: use -h, -help or --help for more details.
+EOF
+ )
+ exit 1
+fi

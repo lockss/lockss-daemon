@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+  <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sjournals/%s/lockss-volume%d.html", base_url, journal_dir, volume</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">History Cooperative</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%sjournals/%s/lockss-volume%d.html", base_url, journal_dir, volume</string>
+      <string xsi:type="java:java.lang.String">1,"%sjournals/%s/%d\.[0-9]*/", base_url, journal_dir, volume</string>
+      <string xsi:type="java:java.lang.String">1, "%sgifs/.*", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%sjournals/images/.*", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%sjournals/%s/images/.*", base_url, journal_dir</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, %s, vol. %d", base_url_host, journal_dir, volume</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>journal_dir</Key>
+        <DisplayName>Journal Directory</DisplayName>
+        <Description>Directory name for journal content (i.e. 'american_imago').</Description>
+        <Type>1</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>volume</Key>
+        <DisplayName>Volume No.</DisplayName>
+        <Type>6</Type>
+        <Size>8</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_version</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
+  </MapElement>
+</Elements>

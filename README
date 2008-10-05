@@ -1,0 +1,46 @@
+This is the source tree for LOCKSS.  See http://www.lockss.org for
+information about the project.
+
+Obtaining Source
+----------------
+
+The latest version of this code can be obtained via CVS with
+
+ export CVSROOT=:pserver:anonymous@lockss.cvs.sourceforge.net:/cvsroot/lockss
+ cvs checkout lockss-daemon
+
+Prerequisites
+-------------
+
+Installed Packages:
+
+- Sun JDK 1.5 or greater.
+
+- Ant 1.7.1 or greater.  (http://ant.apache.org/)
+
+- Python is required in order to generate plugin jars and plugin signing
+  keys, and to run some of the testing frameworks.
+
+(On Debian or Ubuntu,
+  apt-get install python sun-java6-jdk ant ant-optional
+)
+
+
+Other Prerequisites:
+
+- Junit is included in the LOCKSS source distribution, but the Ant targets
+  that invoke JUnit (test-xxx) require the JUnit jar to be on Ant's
+  classpath.  The easiest way to do that is to copy lib/junit.jar into
+  Ant's lib directory (<ant-install-dir>/ant/lib).
+
+- For some of the tools the JAVA_HOME env var must be set to the directory
+  in which the JDK is installed.
+  
+
+To Build
+--------
+
+ant test-all		Builds the system and runs all unit tests
+ant test-one -Dclass=org.lockss.foo.TestBar
+			Builds the system and runs the tests for one class
+ant -projecthelp	Lists other build options

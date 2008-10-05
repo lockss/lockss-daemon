@@ -1,0 +1,309 @@
+#!/usr/bin/python
+#
+# Wrapper script for ANT plugin packaging and signing tasks that will
+# prompt for all the required input (unless otherwise supplied on the
+# command line)
+
+from sys import argv, exit
+from getpass import getpass
+from getopt import getopt, GetoptError
+from os import path, environ, popen, getcwd, sep
+from os import pathsep
+from os.path import exists, join, expanduser, realpath
+from string import split
+
+# Constants
+BUILD_ONLY = 0
+BUILD_AND_SIGN = 1
+
+validArgs = ["help", "nosign", "titledb=", "jar=", "plugin=",
+             "alias=", "keystore=", "password="]
+args = {}
+
+
+#
+# Search up the tree until build.xml is found.  If it cannot be found, exit.
+#
+def find_project_dir():
+    path_elements =  getcwd().split("/")
+
+    while len(path_elements) > 1:
+        dir = "/".join(path_elements)
+        f = dir + "/" + "build.xml";
+        if path.exists(f) and path.isfile(f):
+            print "Using build xml file " + f
+            return dir
+        else:
+            path_elements = path_elements[:len(path_elements) - 1]
+
+    # File wasn't found.
+    return None
+
+
+# Find ant binary and lockss project dir
+antBin=''
+if environ.has_key('ANT_HOME'):
+    antBin = path.join(environ.get('ANT_HOME'), 'bin', 'ant')
+else:
+    pathdirs = split(environ.get('PATH'), pathsep)
+    for dir in pathdirs:
+        tmp = path.join(dir, 'ant')
+        if exists(tmp):
+            antBin = tmp
+            break
+
+if antBin == '':
+    print "ant must be on your path or ANT_HOME must be defined."
+    exit(1)
+
+
+
+if  environ.has_key('PLUGIN_HOME'):
+    projectDir = environ.get('PLUGIN_HOME')
+else:
+    projectDir = find_project_dir()
+
+if not projectDir:
+    print "Unable to find build.xml file."
+    exit(1)
+
+# By default, the mode is to build and sign plugins.
+mode = BUILD_AND_SIGN
+
+# Default: no build.xml
+buildXml = None
+
+################################################################################
+# Function definitions
+#
+def usage(help):
+    """ Print usage information """
+    print "Usage: genplugin [--help] [--nosign] [--jar <jarname>] [--titledb <file>]\\\n \
+		 [--plugin <plugin>] [--alias <alias>] [--keystore <keystore>] \\\n \
+		 [--password <password>]"
+    if (help):
+	print """
+ nosign       Build a plugin jar without signing it.
+
+Used in all cases:
+ jar          The name of the JAR file to create.
+ plugin       The full path of the plugin class or XML file,
+              complete with extension, in the form
+	      "./plugins/classes/foo/FooPlugin.class"  (relative) or
+	      "/path/to/plugins/classes/foo/FooPlugin.xml"  (absolute).
+              This path must be under the 'plugins/classes' subdirectory
+              of the project directory.
+ titledb      (Optional) Full or relative path to the title
+              DB XML file to bundle.
+
+Only used if --nosign is not set:
+ alias        The alias to use when signing the jar.
+ keystore     The keystore holding your signing key.
+ password     Your signing password.
+"""
+
+def get_classes_dir():
+    return path.join(projectDir, 'plugins/classes') + sep
+
+def common_path(a, b):
+    # path.commonprefix is very broken in python.  It works on
+    # strings and not path elements, so it thinks that the common
+    # prefix of '/foo/bar' and '/foo/baz' is '/foo/ba' (!)  This
+    # is a workaround.
+    prefix = path.commonprefix([a, b])
+    if len(prefix) == len(a):
+        return prefix
+    else:
+        lastsep = (prefix.rfind(sep)) + 1
+        return prefix[0:lastsep]    
+    
+def get_plugin_info(plugin):
+    """ Given an absolute or relative path, return a tuple consisting
+    of the plugin path from the source directory on, and the name of
+    the plugin file, i.e. given '/path/to/src/foo/bar/BazPlugin.xml',
+    return ('foo/bar', 'BazPlugin.xml') """
+
+    pClasses = get_classes_dir()
+    pPath = path.abspath(plugin)
+    commonPath = common_path(pClasses, pPath)
+
+    pluginFile = pPath[len(commonPath):]
+
+    return path.split(pluginFile)
+
+#
+# If any arguments have not been supplied on the command-line,
+# prompt for them.
+#
+def prompt_for_missing_args():
+    """ Prompt the user for missing arguments """
+    global mode
+    
+    while not args.has_key("jar") or len(args["jar"]) == 0:
+        args["jar"] = raw_input("JAR file: ").strip()
+
+    while not args.has_key("plugin") or len(args["plugin"]) == 0:
+        args["plugin"] = realpath(expanduser(raw_input("Plugin file (.class or .xml): ").strip()))
+
+        if not path.isfile(args["plugin"]):
+            print("Plugin file %s does not exist!" % args["plugin"])
+            del args["plugin"]
+            continue
+        if not (common_path(args["plugin"], get_classes_dir()) == get_classes_dir()):
+            print("Plugin file %s is not under %s!" % (args["plugin"], get_classes_dir()))
+            del args["plugin"]
+            continue
+
+        
+    while not args.has_key("titledb"):
+        args["titledb"] = raw_input("Title database file to bundle (if any): ").strip()
+        if not args.has_key("titledb") or len(args["titledb"]) == 0:
+            try:
+                del args["titledb"]
+            except KeyError:
+                pass
+            break
+        if not path.isfile(args["titledb"]):
+            print("Warning: %s is not a file!" % args["titledb"])
+            try:
+                del args["titledb"]
+            except KeyError:
+                pass
+            continue
+
+    if mode == BUILD_AND_SIGN:
+        while not args.has_key("alias") or len(args["alias"]) == 0:
+            args["alias"] = raw_input("Signing alias: ").strip()
+
+        while not args.has_key("keystore") or len(args["keystore"]) == 0:
+            args["keystore"] = realpath(expanduser(raw_input("Signing keystore: ").strip()))
+
+            if not path.isfile(args["keystore"]):
+                print("Keystore '%s' does not exist!" % args["keystore"])
+                del args["keystore"]
+                continue
+
+        while not args.has_key("password") or len(args["password"]) == 0:
+            args["password"] = getpass("Signing Password: ")
+
+#
+# Parse passed-in command-line arguments.
+#
+def parse_options(options):
+    """ Parse command-line options """
+    global mode
+    
+    if len(options) == 0:
+        print "For help, use the --help option."
+
+    (opts, vals) = getopt(options, None, validArgs)
+
+    if len(vals) > 0:
+        usage(0)
+        exit(1)
+
+    for (opt, val) in opts:
+        if opt == "--help":
+            usage(1)
+            exit()
+        elif opt == "--nosign":
+            mode = BUILD_ONLY
+        elif opt == "--jar":
+            args["jar"] = val
+        elif opt == "--plugin":
+            args["plugin"] = realpath(expanduser(val))
+        elif opt == "--titledb":
+            args["titledb"] = realpath(expanduser(val))
+        elif opt == "--alias":
+            args["alias"] = val
+        elif opt == "--password":
+            args["password"] = val
+        elif opt == "--keystore":
+            args["keystore"] = realpath(expanduser(val))
+
+#
+# Search up the tree until the 'build.xml' file is found, and call
+# the ANT command.
+#
+def run_ant(command):
+    """ Run ANT, print the output if there is error. """
+    child = popen(antBin + " -f " + buildXml + " " + command)
+    output = child.read()
+    err = child.close()
+    if err:
+        print "Ant failed.  Output:"
+        print output
+
+    return err
+
+#
+# Build jar and optionally sign
+#
+def gen_plugin():
+    """ Generate and sign an plugin JAR """
+    global mode
+    
+    try:
+        (plugin_path, plugin) = get_plugin_info(args["plugin"])
+    except AttributeError:
+        print "Error while trying to parse input."
+        exit(1)
+        
+    print ("Building plugin %s..." % args["jar"])
+
+    command = "build-plugin" + \
+              " -Dplugin-jarfile=" + args["jar"] + \
+              " -Dplugin-path=" + plugin_path + \
+              " -Dplugin-file=" + plugin
+
+    if args.has_key("titledb"):
+        command = command + " -Dtitledb=" + args["titledb"]
+        
+    if mode == BUILD_AND_SIGN:
+        command = command + \
+                  " -Dsign-alias=" + args["alias"] + \
+                  " -Dsign-keystore=" + args["keystore"] + \
+                  " -Dsign-keypass=\'" + args["password"] + "\'" \
+                  " -Dsign-storepass=\'" + args["password"] + "\'"
+    err = run_ant(command)
+    if not err:
+        if mode == BUILD_ONLY:
+            print "Plugin %s created successfully." % args["jar"]
+        else:
+            print "Plugin %s created and signed successfully." % args["jar"]
+
+def main():
+    """ Main entry point """
+    # Find the build.xml file
+    global buildXml
+    buildXml = projectDir + "/build.xml"
+
+    if not exists(buildXml):
+        print "Unable to find build.xml file."
+        exit(1)
+
+    # Parse command line options
+    try:
+        parse_options(argv[1:])
+    except GetoptError:
+        usage(0)
+        exit(1)
+
+    # Get missing input
+    try:
+        prompt_for_missing_args()
+    except SyntaxError:
+        print "Problem while parsing input"
+        exit(1)
+        
+    gen_plugin()
+
+#
+# Main
+#
+if __name__ == "__main__":
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        print
+        exit(0)

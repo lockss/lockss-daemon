@@ -1,0 +1,140 @@
+#!/usr/bin/python
+
+from sys import exit
+from getpass import getpass
+from os import path, environ, popen
+
+# DN constants
+dn_ou = "LOCKSS"
+dn_o = "Stanford University"
+dn_l = "Palo Alto"
+dn_s = "California"
+dn_c = "US"
+
+# Other constants
+validDays = 3650 # ~ 10 years
+defStorepass = "password"
+keyTool = path.join(environ.get('JAVA_HOME'), 'bin', 'keytool')
+
+args = {}
+
+def prompt_password():
+    passphrase = ''
+    confirmation = ''
+
+    while not passphrase or len(passphrase) == 0:
+        passphrase = getpass("Passphrase: ")
+
+    # Ensure the password meets the JKS keystore minimum length (6 characters)
+    while len(passphrase) < 6:
+        print("Passphrase must be at least six characters.")
+        passphrase = getpass("Passphrase: ")
+
+    while not confirmation or len(confirmation) == 0:
+        confirmation = getpass("   Confirm: ")
+
+    return (passphrase, confirmation)
+
+## Gather user input
+def gather_input():
+
+    while not args.has_key("full_name") or len(args["full_name"]) == 0:
+        args["full_name"] = raw_input("Full Name (i.e., First Last-lockss): ")
+        
+    while not args.has_key("alias") or len(args["alias"]) == 0:
+        args["alias"] = raw_input("Alias (i.e., flast-lockss): ")
+
+    ## Get the passphrase safely
+    (passphrase, confirmation) = prompt_password()
+
+    while not passphrase == confirmation:
+        print("Passwords do not match!")
+        (passphrase, confirmation) = prompt_password()
+
+    args["passphrase"] = passphrase
+
+    # setup DN
+    global dn
+    dn = "CN=%s, OU=%s, O=%s, L=%s, S=%s, C=%s" % \
+         (args["full_name"], dn_ou, dn_o, dn_l, dn_s, dn_c)
+
+def main():
+    try:
+        gather_input()
+    except SyntaxError:
+        print("Didn't understand your input.")
+        exit(1)
+        
+    genkey()
+    export_cert()
+    display_cert()
+    import_cert()
+
+def run_command(cmd, displayOut):
+    """ Run the given command, return error if any """
+
+    child = popen(cmd)
+    output = child.read()
+    if displayOut:
+        print output
+    err = child.close()
+    if err:
+        return err
+
+def genkey():
+    command = keyTool + \
+              " -genkey -alias " + args["alias"] + \
+              " -validity %d" % validDays + \
+              " -keystore " + args["alias"] + ".keystore " + \
+              " -storepass \'" + args["passphrase"] + "\' " + \
+              " -keypass \'" + args["passphrase"] + "\' " + \
+              " -dname \'" + dn + "\'"
+    run_command(command, False)
+
+def export_cert():
+    """Export the user's certificate"""
+
+    command = keyTool + \
+              " -export -file " + args["alias"] + ".cer" + \
+              " -keystore " + args["alias"] + ".keystore" + \
+              " -alias " + args["alias"] + \
+              " -storepass \'" + args["passphrase"] + "\'"
+    run_command(command, False)
+    
+def display_cert():
+    print "Displaying cert..."
+    command = keyTool + " -printcert -file %s.cer" % args["alias"]
+    run_command(command, True)
+
+def import_cert():
+    doImport = raw_input("Import certificate into LOCKSS public keystore? (Y/N) [N]: ")
+
+    if not doImport == "Y" and not doImport == "y":
+        return
+
+    lockssKeystore = raw_input("LOCKSS Keystore location ['./lockss.keystore']: ")
+    lockssPassword = raw_input("LOCKSS Keystore password ['password']: ")
+
+    if not lockssKeystore:
+        lockssKeystore = './lockss.keystore'
+
+    if not lockssPassword:
+        lockssPassword = 'password'
+
+    command = keyTool + \
+              " -import -keystore \"" + lockssKeystore + "\" -alias " + args["alias"] + \
+              " -file " + args["alias"] + ".cer " + \
+              " -storepass \"" + lockssPassword + "\""
+
+    run_command(command, False)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print
+        exit(0)
+    except EOFError:
+        print
+        exit(0)

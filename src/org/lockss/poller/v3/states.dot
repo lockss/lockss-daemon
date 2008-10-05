@@ -1,0 +1,105 @@
+/* -*- Mode: C -*- */
+/*
+ * $Id: states.dot,v 1.6 2007-03-19 19:57:19 smorabito Exp $
+ */
+/*
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+*/
+
+/*
+ * State diagrams of V3 polling protocol.
+ *
+ * To generate postscript, run    dot -Tps -o <outfile>.ps states.dot
+ */
+
+digraph StateMachine {
+  edge [fontname="Times-Italic"];
+  node [fontname="Times-Roman"];
+
+  subgraph cluster0 {
+    color=grey;
+    fontname="Times-Bold";
+    fontsize="14";
+    label="Poller State Table";
+
+    ProveIntroEffort [shape=box];
+    PollerFinalize [shape=box];
+
+    ProveIntroEffort -> SendPoll [label="evtOk",fontsize="10"];
+    SendPoll -> WaitPollAck [label="evtOk",fontsize="10"];
+    WaitPollAck -> VerifyPollAckEffort [label="msgPollAck",fontsize="10"];
+    VerifyPollAckEffort -> ProveRemainingEffort [label="evtOk",fontsize="10"];
+    ProveRemainingEffort -> SendPollProof [label="evtOk",fontsize="10"];
+    SendPollProof -> WaitNominate [label="evtOk",fontsize="10"];
+    WaitNominate -> SendVoteRequest [label="msgNominate",fontsize="10"];
+    SendVoteRequest -> WaitVote [label="evtOk",fontsize="10"];
+    WaitVote -> TallyVote [label="msgVote",fontsize="10"];
+    TallyVote -> TallyVote [label="evtWaitBlockComplete",fontsize="10"];
+    TallyVote -> SendVoteRequest [label="evtVoteIncomplete",fontsize="10"];
+    TallyVote -> SendReceipt [label="evtVoteComplete",fontsize="10"];
+    SendReceipt -> PollerFinalize [label="evtOk",fontsize="10"];
+  }
+
+  subgraph cluster1 {
+    color=grey;
+    fontname="Times-Bold";
+    fontsize="14";
+    label="Voter State Table";
+
+    Initialize [shape=box];
+    VoterFinalize [shape=box];
+
+    Initialize -> VerifyPollEffort [label="msgPoll",fontsize="10"];
+    VerifyPollEffort -> ProvePollAck [label="evtOk",fontsize="10"];
+    ProvePollAck -> SendPollAck [label="evtOk",fontsize="10"];
+    SendPollAck -> WaitPollProof [label="evtOk",fontsize="10"];
+    WaitPollProof -> VerifyPollProof [label="msgPollProof",fontsize="10"];
+    VerifyPollProof -> SendNominate [label="evtOk",fontsize="10"];
+    SendNominate -> GenerateVote [label="evtOk",fontsize="10"];   
+    GenerateVote -> WaitVoteRequest [label="evtOk",fontsize="10"];
+    WaitVoteRequest -> SendVote [label="msgVoteRequest",fontsize="10"];
+    SendVote -> WaitReceipt [label="evtOk",fontsize="10"];
+    WaitReceipt -> SendVote [label="msgVoteRequest",fontsize="10"];
+    WaitReceipt -> SendRepair [label="msgRepairRequest",fontsize="10"];
+    WaitReceipt -> ProcessReceipt [label="msgReceipt",fontsize="10"];
+    WaitReceipt -> WaitReceipt [label="evtNoSuchRepair",fontsize="10"];
+    SendRepair -> WaitReceipt [label="evtOk",fontsize="10"];
+    ProcessReceipt -> VoterFinalize [label="evtOk",fontsize="10"];
+  }
+
+  center=true;
+
+  page="8.5,11";
+  size="7.5,10";
+
+  SendPoll -> VerifyPollEffort [style=dotted];
+  SendPollAck -> WaitPollAck [style=dotted];
+  SendNominate -> WaitNominate [style=dotted];
+  SendVote -> WaitVote [style=dotted];
+  SendVoteRequest -> WaitVoteRequest [style=dotted];
+  SendVoteRequest -> WaitReceipt [style=dotted];
+  SendPollProof -> WaitPollProof [style=dotted];
+  SendReceipt -> WaitReceipt [style=dotted];
+}

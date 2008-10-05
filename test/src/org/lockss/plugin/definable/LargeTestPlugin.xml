@@ -1,0 +1,130 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.definable.LargeTestPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>30000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Large Plugin AU, Base URL %s, Resolver URL %s, Journal Code %s, Year %d, Issues %s, Range %s&quot;, base_url, resolver_url, journal_code, year, issue_set, num_issue_range</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%sdenial/denial\.cfm&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Large Test Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Make it a C-note, miss, and I'll take the case.</string>
+  </entry>
+<!--   <entry> -->
+<!--     <string>text/html_filter_factory</string> -->
+<!--     <string>org.lockss.plugin.definable.MissingHtmlFilterFactory</string> -->
+<!--   </entry> -->
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>3</int>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, resolver_url</string>
+      <string>1,&quot;^%spublishing/journals/lockss/\?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
+      <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
+      <string>2,&quot;^%serrorpage\.asp&quot;, base_url</string>
+      <string>2,&quot;^%shost/%s&quot;, base_url,base_url_host</string>
+      <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Type=Issue&amp;VolumeYear=%d&amp;JournalCode=%s&quot;, base_url, journal_code, year, journal_code</string>
+      <string>1,&quot;^%s.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url</string>
+      <string>1,&quot;%sissueset/issue-%s/.*&quot;, base_url, issue_set</string>
+      <string>1,&quot;%sissuerange/issue-%s/.*&quot;, base_url, num_issue_range</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+     <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
+     <string>&quot;%sissuestart/issue-%s/&quot;, base_url, issue_set</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resolver_url</key>
+        <displayName>Resolver Url</displayName>
+        <description>Resolver for xlink.rsc.org</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <description>The journal&apos;s short journal code</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_set</key>
+        <displayName>Issue Set</displayName>
+        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <type>9</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
+      <string>&quot;%slockss.htm&quot;, resolver_url</string>
+      <string>&quot;%s/issue-%d/issue.htm&quot;, resolver_url, num_issue_range</string>
+    </list>
+  </entry>
+</map>

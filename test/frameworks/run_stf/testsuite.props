@@ -1,0 +1,60 @@
+## Polling test suite properties file.
+##
+## $Id: testsuite.props,v 1.7 2008-10-05 05:55:42 tlipkis Exp $
+##
+
+## For the most part, you don't need to change anything in this file.
+## Edit only if you want to change the default behavior.
+
+## Number of daemons to start
+# daemonCount = 4
+
+## Log level for the daemon
+# daemonLogLevel = debug2
+
+## Log level for the script
+# scriptLogLevel = info
+
+## projectDir is a top-level lockss-daemon project (if
+## none is provided, walk up the path from current directory
+## trying to find build.xml)
+# projectDir = ../../..
+
+## Top level work directory
+# workDir = ./
+
+## First port at which to start the daemons.
+# startUiPort = 8041
+
+## First V3 port
+# startV3Port = 8081
+
+## Timeout, in seconds.  Maximum time to wait for any event.
+# timeout = 28800 # eight hours
+
+## Clean up the work directories after a successful run?
+# deleteAfterSuccess = True
+
+## Delay shutdown until you hit the 'Enter' key to continue
+# delayShutdown = False
+
+## Hostname
+# hostname = localhost
+
+## Username
+# username = testuser
+
+## Password
+# password = testpass
+
+##
+## Extra properties.  Anything starting with 'org.lockss.' will
+## be passed to the daemon config.
+##
+##
+## Example: Enable repair-from-cache as default.
+##
+
+# org.lockss.poll.v3.enablePerUrlAgreement=false
+# org.lockss.poll.v3.repairFromCachePercent=90
+# org.lockss.poll.v3.minPercentAgreementForRepairs=0

@@ -1,0 +1,64 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.auburn.adpn.sesquicentennial.SesquicentennialLectureSeriesPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Auburn University Sesquicentennial Lecture Series Plugin, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Auburn University Sesquicentennial Lecture Series Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Each Lecture is an AU containing 3 or more movie files. The Metadata for each movie is included in the manifest page. The manifest pages are named the same as the directories for the lectures: 01draughon.html, etc; parameters: 1) base_url (http://fortissimo.lib.auburn.edu/sesq/) 2) volume_name - this is the same as the directory name, like 01draughon</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%s%s\.html&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s%s/&quot;, base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s.html&quot;, base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

@@ -1,0 +1,73 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s Issue %s&quot;, base_url, issue_no.</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>7862400000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sASSA-%s/index-n%s.html&quot;, base_url, issue_dir, issue_no.</string>
+      <string>1,&quot;^%sASSA-%s/.*&quot;, base_url, issue_dir</string>
+      <string>2,&quot;^%sASSA-.*/.*&quot;, base_url</string>
+      <string>2,&quot;^%s$&quot;, base_url</string>
+      <string>2,&quot;^%s.*.html&quot;, base_url</string>
+      <string>1,&quot;^%s.*.jpg&quot;, base_url</string>
+      <string>1,&quot;^%s.*.gif&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sASSA-%s/index-n%s.html&quot;, base_url, issue_dir, issue_no.</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_no.</key>
+        <displayName>Issue No. (e.g. 1, 6-7)</displayName>
+        <description>
+</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_dir</key>
+        <displayName>Issue Directory (e.g. No1 or 6-7)</displayName>
+        <description>
+</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

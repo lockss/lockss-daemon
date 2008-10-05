@@ -1,0 +1,17 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Herpetologists' League
+#	@fixedValues	P=Herpetologists' League	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0018-0831	j=Herpetological
+	ready	Herpetological Volume 58	base_url=http://www.bioone.org/	journal_id=0018-0831	volume=58
+	ready	Herpetological Volume 59	base_url=http://www.bioone.org/	journal_id=0018-0831	volume=59
+	manifest	Herpetological Volume 60	base_url=http://www.bioone.org/	journal_id=0018-0831	volume=60
+	released	Herpetological Volume 61	base_url=http://www.bioone.org/	journal_id=0018-0831	volume=61
+	ready	Herpetological Volume 62	base_url=http://www.bioone.org/	journal_id=0018-0831	volume=62
+	ready	Herpetological Volume 63	base_url=http://www.bioone.org/	journal_id=0018-0831	volume=63
+#	@fixedValues	i=0733-1347	j=Herpetological Monographs
+	ready	Herpetological Monographs Volume 16	base_url=http://www.bioone.org/	journal_id=0733-1347	volume=16
+	ready	Herpetological Monographs Volume 17	base_url=http://www.bioone.org/	journal_id=0733-1347	volume=17
+	released	Herpetological Monographs Volume 18	base_url=http://www.bioone.org/	journal_id=0733-1347	volume=18
+	ready	Herpetological Monographs Volume 19	base_url=http://www.bioone.org/	journal_id=0733-1347	volume=19
+	ready	Herpetological Monographs Volume 20	base_url=http://www.bioone.org/	journal_id=0733-1347	volume=20

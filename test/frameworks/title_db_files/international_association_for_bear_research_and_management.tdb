@@ -1,0 +1,9 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=International Association for Bear Research and Management
+#	@fixedValues	P=International Association for Bear Research and Management	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1537-6176	j=Ursus
+	ready	Ursus Volume 15	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=15
+	ready	Ursus Volume 16	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=16
+	ready	Ursus Volume 17	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=17
+	ready	Ursus Volume 18	base_url=http://www.bioone.org/	journal_id=1537-6176	volume=18

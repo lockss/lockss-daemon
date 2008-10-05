@@ -1,0 +1,113 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <title>
+      LOCKSS Release Notes
+    </title>
+  </head>
+  <body>
+    <table width="100%">
+      <tr valign=top>
+	<td>
+	  <a href="http://lockss.stanford.edu/index.html">
+	    <img SRC="images/LOCKSS_logo_1.gif" height=108 width=108>
+	  </a>
+	</td>
+	<td align=center>
+	  <br>
+	  <b>
+	  <font size=+3>
+	    <i>
+	      LOCKSS Software Releases
+	    </i>
+	  </font>
+	</b>
+	</td>
+	<td width=108></td>
+      </tr>
+    </table>
+
+    <center>
+      <h2>
+      LOCKSS Release Notes
+      </h2>
+    </center>
+ <h3>Overview</h3>
+<span style="font-weight: bold;">Platform Releases:</span> OpenBSD has
+a well-developed release process that produces a release every 6
+months.&nbsp; We aim to do a platform release ( a "new CD") about 6
+weeks after each new OpenBSD release.&nbsp; The changes to the LOCKSS
+platform appliance that are included with each such release are
+determined about a month before the OpenBSD release,&nbsp; when the
+exact set of OpenBSD changes are clear.&nbsp; We expect that the next
+such list will be generated in October 2004,&nbsp; ready for a probable
+3.6 OpenBSD release in November.&nbsp; This allows 10 weeks for
+development and internal pre-release testing.&nbsp; At present the only
+significant user-visible candidate for the next list is supporting
+machines with no floppy. There are many candidate cleanup and
+performance fixes.
+
+<br>
+<br>
+<span style="font-weight: bold;">Daemon Releases:</span> The LOCKSS
+team has a release and test process that produces a new daemon every 6
+weeks for release to and automatic download by the deployed LOCKSS
+peers.&nbsp; The exact set of changes to be included in each 6-weekly
+release is pretty firm 4 weeks before the release and is frozen 2 weeks
+before to allow for testing.<br>
+   
+    <h3>Released Daemons</h3>
+
+    <h4>Daemon 1.4.8 (released 10/26/04)</h4>
+    <ul>
+      <li>Crawling can now be disabled by a property value</li>
+      <li>The number of crawls on an AU is now rate limited</li>
+      <li>
+	Fixed a bug where repairs could result in a loop (if the node had
+	many children or children with long names).
+      </li>
+    </ul>
+    <h4>Daemon 1.4.6 (released 10/7/04)</h4>
+    <ul>
+      <li>further support for downloadable plug-ins</li>
+      <li>URL canonicalization (for IOP and HighWire)</li>
+      <li>define AU by issue ranges</li>
+      <li>refactoring of plug-in code</li>
+      <li>LockssApp pulled out of LockssDaemon</li>
+      <li>Crawler will not follow cross-host redirects without checking for permission statement on new host</li>
+      <li>Crawl permission check moved out of plug-in framework, into crawler</li>
+      <li>Improvements to handling of polls in which all caches have damage</li>
+      <li>removed need for org.lockss.plugin.xmlPlugins configuration setting</li>
+      <li>list of agreeing caches exported to UI</li>
+    </ul>
+
+    <h4>Daemon 1.3.6 (released 8/11/2004)</h4>
+        <ul>
+	    <li>addition of the audit proxy port</li>
+	    <li>plug-ins are now downloadable separately</li>
+	    <li>new xml prop files are supported</li>
+	    <li>UI comes up with warning until all AUs are started</li>
+	    <li>tiny UI comes up when daemon is unable to reach prop server</li>
+	    <li>initial cut of alerts framework</li>
+	</ul>
+    <h3> Future Releases</h3>
+    <h4>Daemon 1.5 (freeze late October, release mid November)</h4>
+    Meant to be a stability release, we're trying to keep new features to a minimum (except perhaps for UI fixes)
+    <ul>
+      <li> refinement of the Alerts framework</li>
+      <li> UI for configuration of Alerts</li>
+      <li> further UI improvements for adding many AUs</li>
+      <li> improving code test coverage</li>
+      <li> general bug fixes</li>
+      <li> ground work for the new protocol</li>
+    </ul>
+		
+    <h4>Deamon 1.6 (freeze early December release mid January 2005)</h4>
+    Feature release, hopefully with some portion of the new protocol.
+    <ul>
+      <li> OAI crawling</li>
+      <li> initial version of the new protocol (may not be complete)</li>
+      <li> "Cache everything I have access to" feature in UI</li>
+    </ul>
+  </body>
+</html>

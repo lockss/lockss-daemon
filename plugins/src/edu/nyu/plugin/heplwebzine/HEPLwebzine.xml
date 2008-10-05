@@ -1,0 +1,61 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.nyu.plugin.heplwebzine.HEPLwebzine</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s %d&quot;, base_url, issue_no</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HEPL webzine</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sHEPLW/lockss/issue%d-manifest.html&quot;, base_url, issue_no</string>
+      <string>1,&quot;^%sHEPLW/%d/.*&quot;, base_url, issue_no</string>
+      <string>1,&quot;%sHEPLW/[^/]+\.html&quot;, base_url</string>
+      <string>1,&quot;%sHEPLW/template/&quot;, base_url</string>
+      <string>1,&quot;%sOATaskForce_public.pdf&quot;, base_url</string>
+      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sHEPLW/lockss/issue%d-manifest.html&quot;, base_url, issue_no</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_no</key>
+        <displayName>Issue number</displayName>
+        <description>Issue number</description>
+        <type>2</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

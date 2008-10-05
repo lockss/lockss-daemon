@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+  <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slockss-volume%d.html", base_url, volume</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Other Voices</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%slockss-volume%d.html", base_url, volume</string>
+      <string xsi:type="java:java.lang.String">1,"%s%d\.[0-9]/.*", base_url, volume</string>
+      <string xsi:type="java:java.lang.String">1,"%simages/.*", base_url</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, vol. %d", base_url_host, volume</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>volume</Key>
+        <DisplayName>Volume No.</DisplayName>
+        <Type>6</Type>
+        <Size>8</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_version</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
+  </MapElement>
+</Elements>

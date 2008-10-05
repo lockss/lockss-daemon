@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+<MapElement>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s vol %d %d", base_url, volume, year</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Journal of Buddhist Ethics</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_new_content_crawl</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1209600000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%sLOCKSS-manifest-jbe-v%d.html", base_url, volume</string>
+<string xsi:type="java:java.lang.String">1,"%s%d/.*", base_url, volume</string>
+<string xsi:type="java:java.lang.String">2,"%s[0-9]+/.*", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*\.css", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*\.js", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*/.*", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%scoprite\.html", base_url</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sLOCKSS-manifest-jbe-v%d.html", base_url, volume</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_identifier</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.cornell.library.jbe.JBEPlugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_pause_time</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">6000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_config_props</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>volume</Key>
+<DisplayName>Volume No.</DisplayName>
+<Type>6</Type>
+<Size>8</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>year</Key>
+<DisplayName>Year</DisplayName>
+<Description>Four digit year (e.g., 2004)</Description>
+<Type>4</Type>
+<Size>4</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>base_url</Key>
+<DisplayName>Base URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+</ElementValue>
+</MapElement>
+</Elements>

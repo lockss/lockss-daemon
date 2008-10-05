@@ -1,0 +1,91 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.hindawi.HindawiPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Hindawi Publishing Corporation Plugin, Base URL %s, Journal ID %s, Year %d, Volume %s&quot;, base_url, journal_id, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Hindawi Publishing Corporation Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sjournals/%s/volume-%s/&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%slockss.html&quot;, base_url</string>
+      <string>2,&quot;^%sGetArticle\.aspx\?doi=.*&amp;e=cit$&quot;, base_url</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%s\.%s\.&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%s/%d/&quot;, base_url, journal_id, year</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%s\.[0-9]+(&amp;.*)?$&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%d\.[0-9]+(&amp;.*)?$&quot;, base_url, year</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%d/[0-9]+(&amp;.*)?$&quot;, base_url, year</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=.*[-0-9]+\(%d[0-9]*\)&quot;, base_url, year</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/[0-9SX]+(&amp;.*)?&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sjournals/%s/volume-%s/&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%slockss.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

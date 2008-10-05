@@ -1,0 +1,93 @@
+#!/bin/bash
+
+if [ "X$1" = Xwait ]; then
+    WAIT=Y
+fi
+
+OS_TYPE=`uname -s`
+case ${OS_TYPE} in
+SunOS)  
+        if [ "X${LOCKSS_USER}" = X ]
+	then
+		LOCKSS_USER=lockss
+	fi
+	if [ "X${LOCKSS_HOME}" = X ]
+	then
+		# Next line wierd because of evaluation order of
+		# ~ and shell parameters
+        	LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
+	fi
+	DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
+	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+	CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
+	LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
+	LOCAL_TXT=${LOCKSS_HOME}/var/run/local.txt
+        ;;      
+Linux)          
+        LOCKSS_USER=lockss
+	DAEMON_PID_FILE="/var/run/lockss.pid"
+	CFG_FILE=/etc/lockss/config.dat
+	CFG_SCRIPT=/etc/lockss/hostconfig
+	LOGFILE=/var/log/lockss/stdout
+	LOCAL_TXT=~/local.txt
+        ;;
+esac
+
+
+if [ -f ${CFG_FILE} ]; then
+  . ${CFG_FILE}
+else
+  echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
+  exit 1
+fi
+
+CLASSPATH=@CLASSPATH@
+DAEMON_CLASS=org.lockss.app.LockssDaemon
+if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
+    LOCKSS_JAVA_SWITCHES="-server -Xmx350m -Dsun.net.inetaddr.ttl=3600 -showversion"
+fi
+
+# if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
+#    -p <url1> [-p <url2> ...]
+if [ "X${LOCKSS_PROPS_URL}" = "X-*" ]; then
+    DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
+else
+    DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
+fi
+if [ "X${LOCKSS_TEST_GROUP}" != "X" ]; then
+    DAEMON_ARGS="-g ${LOCKSS_TEST_GROUP} ${DAEMON_ARGS}"
+else
+    DAEMON_ARGS="-g prod ${DAEMON_ARGS}"
+fi
+
+LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_IPADDR}]:${LOCKSS_V3_PORT}"
+
+#LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
+
+cat >${LOCAL_TXT} <<EOF
+org.lockss.platform.localIPAddress=${LOCKSS_IPADDR}
+org.lockss.platform.v3.identity=${LOCKSS_V3_IDENTITY}
+org.lockss.platform.diskSpacePaths=${LOCKSS_DISK_PATHS}
+org.lockss.platform.version=@PLATFORM_VERSION@
+org.lockss.platform.sysadminemail=${LOCKSS_EMAIL}
+org.lockss.platform.accesssubnet=${LOCKSS_ACCESS_SUBNET}
+org.lockss.platform.smtphost=${LOCKSS_MAILHUB}
+org.lockss.platform.smtpport=25
+org.lockss.platform.logdirectory=${LOCKSS_HOME}/var/log/lockss
+org.lockss.platform.logfile=daemon
+org.lockss.log.targets=org.lockss.util.FileTarget
+org.lockss.platform.fqdn=${LOCKSS_HOSTNAME}
+org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
+org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
+org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
+org.lockss.ui.port=${LOCKSS_UI_PORT}
+EOF
+cd ${LOCKSS_HOME}
+echo "Starting daemon at `date`" >> ${LOGFILE}
+${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &
+echo $! >${DAEMON_PID_FILE}
+if [ X${WAIT} != X ]; then
+    wait `cat ${DAEMON_PID_FILE}`
+fi
+
+

@@ -1,0 +1,10 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Chelonian Research Foundation
+#	@fixedValues	P=Chelonian Research Foundation	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1071-8443	j=Chelonian Conservation and Biology
+	released	Chelonian Conservation and Biology Volume 5	base_url=http://www.bioone.org/	journal_id=1071-8443	volume=5
+	released	Chelonian Conservation and Biology Volume 6	base_url=http://www.bioone.org/	journal_id=1071-8443	volume=6
+#	@fixedValues	i=1526-3096	j=Turtle and Tortoise Newsletter
+	released	Turtle and Tortoise Newsletter Volume 9	base_url=http://www.bioone.org/	journal_id=1526-3096	volume=9
+	released	Turtle and Tortoise Newsletter Volume 10	base_url=http://www.bioone.org/	journal_id=1526-3096	volume=10

@@ -1,0 +1,58 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Santa Fe Poetry Broadside %d&quot;, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Santa Fe Poetry Broadside Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sLOCKSS/manifest%d.html&quot;, base_url, year</string>
+      <string>1,&quot;%s.*(%d|%02d).html&quot;, base_url, year, au_short_year</string>
+      <string>1,&quot;%sbio[0-9]+.html&quot;, base_url</string>
+      <string>2,&quot;%s.*[12][09][0-9][0-9].html&quot;, base_url</string>
+      <string>2,&quot;%s.*[09][0-9].html&quot;, base_url</string>
+      <string>2,&quot;%s(about.html|broadside.html|index.html)$&quot;, base_url</string>
+      <string>1,&quot;%s.*.(html|jpg|gif|css)&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sLOCKSS/manifest%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

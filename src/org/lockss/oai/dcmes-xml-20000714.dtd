@@ -1,0 +1,96 @@
+<!--
+
+  DRAFT XML DTD 20000619 for Dublin Core Element Set version 1.1
+  http://purl.org/dc/schemas/dcmes-xml-20000714.dtd
+
+  See 
+    Using Dublin Core in XML
+    http://purl.org/dc/documents/wd/dcmes-xml-20000714.htm
+
+  Authors:
+    Dave Beckett <dave.beckett@bristol.ac.uk>
+    Eric Miller <emiller@oclc.org>
+    Dan Brickley <daniel.brickley@bristol.ac.uk>
+
+  Based on
+    Dublin Core Metadata Element Set, Version 1.1: Reference Description
+    http://purl.org/DC/documents/rec-dces-19990702.htm 
+
+-->
+
+<!-- The namespaces for RDF and DCES 1.1 respectively -->
+<!ENTITY rdfns 'resource:org/lockss/oai/22-rdf-syntax-ns#' >
+<!ENTITY dcns 'resource:org/lockss/oai/dcelements.rdf' >
+
+<!-- Magic - do not look behind the curtain -->
+<!ENTITY % rdfnsdecl 'xmlns:rdf CDATA #FIXED "&rdfns;"' >
+<!ENTITY % dcnsdecl 'xmlns:dc CDATA #FIXED "&dcns;"' >
+
+
+<!-- The wrapper element -->
+<!ELEMENT rdf:RDF (rdf:Description)* >
+
+<!ATTLIST rdf:RDF %rdfnsdecl; %dcnsdecl; >
+
+
+<!ENTITY % dces "dc:title | dc:creator | dc:subject | dc:description |
+dc:publisher | dc:contributor | dc:date | dc:type | dc:format |
+dc:identifier | dc:source | dc:language | dc:relation | dc:coverage |
+dc:rights" >
+
+
+<!-- The resource description container element -->
+<!ELEMENT rdf:Description (%dces;)* >
+
+<!ATTLIST rdf:Description about CDATA #REQUIRED>
+
+
+<!-- The elements from DCES 1.1 -->
+
+<!-- The name given to the resource. -->
+<!ELEMENT dc:title (#PCDATA)>
+
+<!-- An entity primarily responsible for making the content of the
+resource. -->
+<!ELEMENT dc:creator (#PCDATA)>
+
+<!-- The topic of the content of the resource. -->
+<!ELEMENT dc:subject (#PCDATA)>
+
+<!-- An account of the content of the resource. -->
+<!ELEMENT dc:description (#PCDATA)>
+
+<!-- The entity responsible for making the resource available. -->
+<!ELEMENT dc:publisher (#PCDATA)>
+
+<!-- An entity responsible for making contributions to the content of
+the resource. -->
+<!ELEMENT dc:contributor (#PCDATA)>
+
+<!-- A date associated with an event in the life cycle of the resource. -->
+<!ELEMENT dc:date (#PCDATA)>
+
+<!-- The nature or genre of the content of the resource. -->
+<!ELEMENT dc:type (#PCDATA)>
+
+<!-- The physical or digital manifestation of the resource. -->
+<!ELEMENT dc:format (#PCDATA)>
+
+<!-- An unambiguous reference to the resource within a given context. -->
+<!ELEMENT dc:identifier (#PCDATA)>
+
+<!-- A Reference to a resource from which the present resource is derived. -->
+<!ELEMENT dc:source (#PCDATA)>
+
+<!-- A language of the intellectual content of the resource. -->
+<!ELEMENT dc:language (#PCDATA)>
+
+<!-- A reference to a related resource. -->
+<!ELEMENT dc:relation (#PCDATA)>
+
+<!-- The extent or scope of the content of the resource. -->
+<!ELEMENT dc:coverage (#PCDATA)>
+
+<!-- Information about rights held in and over the resource. -->
+<!ELEMENT dc:rights (#PCDATA)>
+

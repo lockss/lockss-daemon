@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test plugin used by test/src/org/lockss/plugin/TestPluginManager.java -->
+<!-- Should live under: test/src/org/lockss/test/TestXmlPlugin.xml -->
+<Elements>
+  <MapElement>
+    <ElementKey>plugin_identifier</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">org.lockss.test.TestXmlPlugin</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">TestXmlPlugin</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>required_daemon_version</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">1.10.0</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+</Elements>

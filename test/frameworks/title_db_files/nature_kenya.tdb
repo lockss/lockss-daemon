@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Nature Kenya
+#	@fixedValues	P=Nature Kenya	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0012-8317	j=Journal of East African Natural History
+	ready	Journal of East African Natural History Volume 94	base_url=http://www.bioone.org/	journal_id=0012-8317	volume=94
+	ready	Journal of East African Natural History Volume 95	base_url=http://www.bioone.org/	journal_id=0012-8317	volume=95
+	ready	Journal of East African Natural History Volume 96	base_url=http://www.bioone.org/	journal_id=0012-8317	volume=96

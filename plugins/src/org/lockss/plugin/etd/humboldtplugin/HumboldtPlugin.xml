@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+  <MapElement>
+    <ElementKey>plugin_crawl_type</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">OAI</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_manifest</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <string xsi:type="java:java.lang.String">"%slockss/", base_url</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_identifier</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_version</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">1</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_name</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"Humboldt-Universität zu Berlin ETD Collection %d", year</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">Humboldt-Universität zu Berlin ETD Collection</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%slockss", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%shabilitationen/.*-%d-.*", base_url, year</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"%slockss", base_url</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <ConfigParamDescr>
+        <Key>year</Key>
+        <DisplayName>Year</DisplayName>
+        <Description>Four digit year (e.g., 2004)</Description>
+        <Type>4</Type>
+        <Size>4</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>oai_request_url</Key>
+        <DisplayName>OAI Request URL</DisplayName>
+        <Description>Usually of the form http://&lt;ETD-name&gt;.com/</Description>
+        <Type>1</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+</Elements>

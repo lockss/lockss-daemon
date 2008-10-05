@@ -1,0 +1,32 @@
+#! /bin/bash
+
+# PROJECT_DIR
+PROJECT_DIR=`( cd ../../..; pwd )`
+export PROJECT_DIR
+
+if [ "$1" = "start" ] ; then
+    shift
+    if [ -f dpid ] ; then
+        echo daemon already running
+    else
+        ( ./rundaemon "$@" ; rm -f dpid ) &
+        echo daemon started
+    fi
+elif [ "$1" = "clean" ] ; then
+    if [ -f dpid ] ; then
+        echo cannot clean while daemon is running
+    else
+        rm -rf cache
+        rm -rf history
+        rm -rf localA
+        rm -rf lib
+        rm -f test.out
+    fi
+else
+    if [ -f dpid ] ; then
+        kill -9 `cat dpid` && rm -f dpid
+        echo daemon stopped
+    else
+        echo daemon not running
+    fi
+fi

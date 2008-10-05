@@ -1,0 +1,65 @@
+#!/bin/sh
+
+#
+# $Id: cachefind,v 1.3 2007-03-06 00:58:51 thib_gc Exp $
+#
+
+BASEDIR=`dirname $0`
+
+# Display help if needed
+HELP="X"
+case "$1" in
+ -h|-help|--help|-H )
+  ;;
+ * )
+  HELP="";; 
+esac
+if [ -z "$1" -o -n "$HELP" ]; then
+ if [ "$1" != "-H" ]; then
+  ( cat <<EOF
+cachefind [-h|-help|--help|-H]
+cachefind [-root CROOT] [-rod|[-rmd|-rmdc] [-1|-2|-3|-4|-instance INST]]
+    REPO -- .EXT COMMAND...
+ Runs a find(1) job over a given LOCKSS repository (as found by cacherepo),
+ looking for files with the chosen extension EXT, executing COMMAND on the
+ most current version of the matching files in the repository using xargs(1).
+ The name of each file in COMMAND is the string {}. Note the double dash.
+-h
+-help
+--help
+ Displays this message and exits.
+-H
+ Displays only the lines of this message after this one and exits.
+EOF
+  )
+ fi
+ ( $BASEDIR/cacherepo -H )
+ exit
+fi
+
+# Consume cacherepo arguments
+CACHEREPOARGS=""
+while [ "$1" != "--" ]; do
+  CACHEREPOARGS="$CACHEREPOARGS $1"
+  shift # Consume one argument
+done
+shift # Consume "--"
+
+# Invoke cacherepo
+REPOSITORY=`$BASEDIR/cacherepo $CACHEREPOARGS`
+if [ -z "$REPOSITORY" ]; then
+ ( cat <<EOF
+Error: error while computing the repository path.
+EOF
+ )
+ exit 1
+fi
+
+# Parse the extension
+EXTENSION="*.${1#.}"
+shift # Consume one argument
+
+# Execute find job
+find $REPOSITORY -type d -name "$EXTENSION" \
+  | xargs -I {} echo {}/#content/current \
+  | xargs -I {} $@

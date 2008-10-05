@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+  <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sxpl/RecentIssue.jsp?puNumber=%d&amp;year=%d", base_url, Pu_Number, year</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">IEEE</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <string xsi:type="java:java.lang.String">4,"^http://%s", base_url_host</string>
+      <string xsi:type="java:java.lang.String">1,"%sxpl/RecentIssue.jsp?puNumber=%d&amp;year=%d", base_url, Pu_Number, year</string>
+      <string xsi:type="java:java.lang.String">1,".*.gif"</string>
+      <string xsi:type="java:java.lang.String">1,".*.jpg"</string>
+      <string xsi:type="java:java.lang.String">1,"%sxpl/RecentIssue.jsp.*puNumber=%d.*year=%d", base_url, Pu_Number, year</string>
+      <string xsi:type="java:java.lang.String">1,"%sxpl/tocresult.jsp.*isNumber=.*", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%sxpl/tocprint.jsp.*isNumber=.*", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%siel5/%d/.*.pdf", base_url, Pu_Number</string>
+      <string xsi:type="java:java.lang.String">1,"http://%s:80/xpls/abs_all.jsp.*", base_url_host</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, puNumber %d, %d", base_url_host, Pu_Number, year</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>Pu_Number</Key>
+        <DisplayName>Publication Number</DisplayName>
+        <Description>IEEE publication Number(e.g. '2').</Description>
+        <Type>6</Type>
+        <Size>10</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>year</Key>
+        <DisplayName>Year</DisplayName>
+        <Description>Four digit year (e.g., 2004)</Description>
+        <Type>4</Type>
+        <Size>4</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_version</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
+  </MapElement>
+</Elements>

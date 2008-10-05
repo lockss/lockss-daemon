@@ -1,0 +1,56 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Journal of Religion and Film Volume %d&quot;, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Journal of Religion and Film Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>7862400000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm&quot;, base_url, volume</string>
+      <string>1,&quot;^%s[Vv]ol%d[Nn]o[0-9]+/&quot;, base_url, volume</string>
+      <string>2,&quot;^%simages/[Aa]dvertising/&quot;, base_url</string>
+      <string>1,&quot;^%simages/&quot;, base_url</string>
+      <string>1,&quot;^%sCREDITS/&quot;, base_url</string>
+      <string>1,&quot;^%sAuthorBiosPhotos/&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

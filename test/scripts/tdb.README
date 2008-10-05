@@ -1,0 +1,251 @@
+#############################################
+About title databases, .tdb files and tdb.awk
+#############################################
+
+====================
+The .tdb file format
+====================
+
+Title database files conventionally have a .tdb extension. They are
+made of comment lines and archival unit lines. A comment line has a
+pound sign (#) in the first position. Other lines are archival unit
+lines. All lines consist of tab-separated fields. Blank lines or lines
+made entirely of tabs are ignored.
+
+If in a comment line the first field is only the pound sign and the
+second field starts with an at sign (@), that comment line is a
+directive. Directives tell automatic processing tools how to interpret
+the title database file. The string after the at sign in the second
+field is the name of the directive. If the directive requires values,
+the values are read one each from the third and later fields (and can
+be referred to as a list of values). It is recommended that directive
+names be keyword strings without whitespace. Usually, directives are
+referred to by name including the at sign, for instance, "the
+@formatString directive".
+
+If a comment line is not a directive, it is ignored by automatic
+processing tools.
+
+The format of an archival unit line is dictated by the closest
+preceding @formatString directive.
+
+=============
+Character set
+=============
+
+All title database files are in UTF-8.
+
+==========
+Directives
+==========
+
+-------------------------
+@formatString <formatstr>
+-------------------------
+
+The @formatString directive sets the format of all following archival
+unit lines, until the end of the title database file or a new
+@formatString directive overrides it. Its value, <formatstr>, is a
+comma-separated list of column codes, one for each successive column
+of archival unit lines. Valid column codes are:
+
+			Is required /	LOCKSS daemon
+Code	Meaning		Can repeat	equivalent
+-------+---------------+---------------+---------------------
+@	Attribute	no / yes	attributes.<...>
+%	Parameter	no / yes	param.<...>
+c	CODEN		no / no		coden
+e	Estimated size	no / no		estSize
+i	ISSN		no / no		issn
+j	Journal title	yes / no	journalTitle
+o	OCLC code	no / no		oclc
+p	Plugin		yes / no	plugin
+P	Publisher	no / no		attributes.publisher
+R	Rights		no / no		attributes.rights
+S	Status		yes / no	attributes.releaseStatus
+t	Title		yes / no	title
+x	Ignored		no / yes
+X	Ignored		no / yes
+-------+---------------+---------------+---------------------
+
+See the "Columns" section for more details.
+
+----------------------
+@namePrefix <namepref>
+----------------------
+
+The @namePrefix directive is a hint to automatic processing tools that
+the string <namepref> should be used as a prefix to disambiguate
+between potentially similarly-named archival units across different
+title databases. This is useful if archival units that are "the same"
+exist in more than one context, for example more than one LOCKSS
+network with plugins named differently.
+
+The directive applies until the end of the file or until overridden by
+another @namePrefix directive or until mutually excluded by a
+@publishingPlatform directive.
+
+-----------------------------
+@publishingPlatform <pubplat>
+-----------------------------
+
+This directive tags the following archival unit lines as being under
+the umbrella of a publishing platform. The name of the publishing
+platform may in turn be used to prefix entries in the way the
+@namePrefix works. Currently, the @namePrefix and @publishingPlatform
+directives are mutually exclusive.
+
+The directive applies until the end of the file or until overridden by
+another @publishingPlatform directive or until mutually excluded by a
+@namePrefix directive.
+
+-----------------------------------
+@publisherTitleSet publisher=<publ>
+-----------------------------------
+
+This directive declares that there is a title set for a whole
+publisher, identified by <publ>.
+
+-----------------------------
+@fixedValues <key>=<value>...
+-----------------------------
+
+The @fixedValues directive accepts a list of key-value pairs. Keys are
+column codes for CODEN, ISSN, journal title, plugin, publisher or
+rights. Values are then used for all subsequent archival unit lines,
+overriding the column with the same name if it also exists (or simply
+providing an implicit value if it does not), until another
+@fixedValues directive sets the value for the key to another value or
+a @formatString directive is encountered (which always resets fixed
+values).
+
+=======
+Columns
+=======
+
+-----------------
+The status column
+-----------------
+
+The status column can only contain one of the following statuses:
+
+	does_not_exist
+	do_not_process
+	exists
+	manifest
+	testing
+	ready
+	pre_released
+	released
+	down
+	superseded
+	retracted
+
+-------------------------------
+Attribute and parameter columns
+-------------------------------
+
+Attribute and parameter columns (other than those for which there is a
+designated format code, i.e. columns with the @ and % format codes
+respectively) contain a key/value pair separated by an equal (=) sign.
+
+-------------------------------
+Journal title and title columns
+-------------------------------
+
+Journal title and title columns contain human-readable data. Automatic
+processing tools are responsible for encoding the strings properly for
+the output medium.
+
+==================
+The tdb.awk script
+==================
+
+The tdb.awk script is a basic Awk script that can produce XML suitable
+for consumption by LOCKSS daemons and other statistics about title
+database files. The basic invocation is:
+
+	tdb.awk [-v <option>=<value>]... <file>.tdb...
+
+It can be invoked in a pipeline. If <file>.tdb is -, input is read
+from stdin.
+
+----------------------
+outputLevel=<statuses>
+----------------------
+
+The outputLevel option controls which archival unit statuses get
+included in the output. The string <statuses> is a comma-separated
+list of statuses (see the "Status column" section). In addition, the
+script understands the following multi-status synonyms:
+
+		production
+		| prePrelease
+		| | contentTesting
+		| | | conservativeTesting
+		| | | | dangerous
+		| | | | | veryDangerous
+	        | | | | | |
+does_not_exist            o
+do_not_process          o o
+exists              o   o o
+manifest            o o o o
+testing             o o o o
+ready               o o o o
+pre-released      o o o o o
+released        o   o o o o
+down            o   o   o o
+superseded      o   o   o o
+retracted       o   o   o o
+
+----------------------
+outputStyle=<outstyle>
+----------------------
+
+The outputStyle option controls the style of output. The value
+<outstyle> can be one of:
+
+	mediawikiPublisher
+	mediawikiPublisherList
+	mediawikiPublisherList2
+	xmlEntries
+	xmlLegacy
+	xml
+
+By default, the value is xmlEntries.
+
+The output of the mediawikiPublisherList style is MediaWiki wikitext
+suitable for the alphabetical list of publishers at [[Publishers and
+Titles]].
+
+Likewise, the mediawikiPublisherList2 style produces output suitable
+for [[Publishers and Titles List]].
+
+In xmlEntries mode, successive title database entries are generated in
+XML, for later inclusion with other entries, i.e. with no top-level
+XML element to encapsulate them.
+
+In xmlLegacy mode, the output is an XML document rooted at
+<lockss-config>, with a DTD, containing only title database entries
+(no title sets).
+
+In xml mode, the output is an XML document rooted at <lockss-config>,
+with a DTD, containing both title sets and title database entries.
+
+----------------------
+Unimplemented features
+----------------------
+
+The mediawikiPublisher output style is currently unimplemented.
+
+The script should understand various commands that cull statistics
+from title databases, such as number and list of archival units,
+number and list of archival units by status, number and list of
+titles, number and list of publishers.
+
+The script should understand various commands that can produce output
+suitable for transfer into MediaWiki pages.
+
+The script should understand various commands that can produce output
+suitable for content release annoucements.
+

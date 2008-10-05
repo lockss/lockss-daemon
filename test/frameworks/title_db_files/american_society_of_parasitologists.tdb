@@ -1,0 +1,13 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=American Society of Parasitologists
+#	@fixedValues	P=American Society of Parasitologists	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0022-3395	j=Journal of Parasitology
+	released	Journal of Parasitology Volume 86	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=86
+	released	Journal of Parasitology Volume 87	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=87
+	released	Journal of Parasitology Volume 88	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=88
+	released	Journal of Parasitology Volume 89	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=89
+	released	Journal of Parasitology Volume 90	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=090
+	do_not_process	Journal of Parasitology Volume 90	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=90
+	released	Journal of Parasitology Volume 91	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=91
+	released	Journal of Parasitology Volume 92	base_url=http://www.bioone.org/	journal_id=0022-3395	volume=92

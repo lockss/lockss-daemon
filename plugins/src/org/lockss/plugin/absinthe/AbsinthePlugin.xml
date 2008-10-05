@@ -1,0 +1,59 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.absinthe.AbsinthePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s, %d&quot;, base_url_host, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Absinthe Literary Review</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sarchives%02d.htm&quot;, base_url, au_short_year</string>
+      <string>1,&quot;%sstories/.*&quot;, base_url</string>
+      <string>1,&quot;%spoetics/.*&quot;, base_url</string>
+      <string>1,&quot;%sarchives/.*&quot;, base_url</string>
+      <string>2,&quot;%sbook_reviews/book_reviews.htm&quot;, base_url</string>
+      <string>1,&quot;%sbook_reviews/.*&quot;, base_url</string>
+      <string>1,&quot;%simages/.*&quot;, base_url</string>
+      <string>1,&quot;\.(jpg|gif|jpeg|css|js)$&quot;</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sarchives%02d.htm&quot;, base_url, au_short_year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

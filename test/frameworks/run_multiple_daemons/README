@@ -1,0 +1,9 @@
+run_multiple_daemons runs four daemon instances on one machine.  Useful to
+test polling.  By default, the first instance calls polls on whatever it
+has collected, inviting the other three instances to vote.
+
+To run:
+  cd test/frameworks/run_multiple_daemons
+  ./start
+  ...   (connect to daemon on port 8081, 8082, 8083, 8084)
+  ./stop

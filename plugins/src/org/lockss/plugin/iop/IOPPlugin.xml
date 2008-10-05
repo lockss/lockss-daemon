@@ -1,0 +1,93 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.iop.IOPPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>90000</long>
+  </entry>
+  <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.iop.IOPFilterRule</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;IOP %s %d&quot;, journal_id, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>IOP</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>259200000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, base_url2</string>
+      <string>1,&quot;^(%s|%s).*\.(gif|css|jpeg|jpg)$&quot;, base_url, base_url2</string>
+      <string>1,&quot;^(%s|%s)EJ/volume/-lockss=1/%s/%d$&quot;, base_url, base_url2, journal_id, volume</string>
+      <string>1,&quot;^%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;^%sEJ/(contact|referees)/%s/&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%slinks/&quot;, base_url2</string>
+      <string>1,&quot;^%scopyrt.html$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sEJ/volume/-lockss=1/%s/%d&quot;, base_url, journal_id, volume</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%sEJ/volume/-lockss=1/%s/%d&quot;, base_url, journal_id, volume</string>
+      <string>&quot;%sEJ/volume/-lockss=1/%s/%d&quot;, base_url2, journal_id, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Base URL 2</displayName>
+        <description>Secondary Base URL</description>
+        <type>3</type>
+        <size>100</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

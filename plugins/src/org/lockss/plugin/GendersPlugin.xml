@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>year</Key>
+        <DisplayName>Year</DisplayName>
+        <Description>Four digit year (e.g., 2004)</Description>
+        <Type>4</Type>
+        <Size>4</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>num_issue_range</Key>
+        <DisplayName>Numeric Issue Range</DisplayName>
+        <Description>A Range of issues in the form: min-max</Description>
+        <Type>8</Type>
+        <Size>20</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%slockss/Genders%d.html", base_url, year</string>
+      <string xsi:type="java:java.lang.String">1,"%sg%s/.*", base_url, num_issue_range</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"%slockss/Genders%d.html", base_url, year</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">Genders</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_name</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"Genders %d", year</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_identifier</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">org.lockss.plugin.GendersPlugin</ElementValue>
+  </MapElement>
+</Elements>

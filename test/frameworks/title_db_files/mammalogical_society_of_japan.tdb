@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Mammalogical Society of Japan
+#	@fixedValues	P=Mammalogical Society of Japan	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=1348-6160	j=Mammal Study
+	manifest	Mammal Study Volume 30	base_url=http://www.bioone.org/	journal_id=1348-6160	volume=30
+	ready	Mammal Study Volume 31	base_url=http://www.bioone.org/	journal_id=1348-6160	volume=31
+	ready	Mammal Study Volume 32	base_url=http://www.bioone.org/	journal_id=1348-6160	volume=32

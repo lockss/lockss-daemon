@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ant -e run-tool -Dclass=org.lockss.devtools.PdfTools -Dargs=\"$@\"

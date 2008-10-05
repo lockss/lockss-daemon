@@ -1,0 +1,80 @@
+#! /bin/bash
+
+TITLE_DBS="../title_db_files/*.xml"
+
+while true ; do
+  case "$1" in
+    "-classpath" )
+      if [ -z "$CLASSPATH" ] ; then
+	CLASSPATH="$2"
+      else
+	CLASSPATH="$CLASSPATH":"$2"
+      fi
+      echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-debug" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
+      shift; continue;;
+    "-jdb" )
+      jdb=1
+      shift; continue;;
+    "-notitle" )
+      TITLE_DBS=""
+      shift; continue;;
+    "-1.4" )
+      if [ -z "$JAVA_14_HOME" ] ; then
+	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_14_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    "-1.5" )
+      if [ -z "$JAVA_15_HOME" ] ; then
+	echo "-1.5 option requires JAVA_15_HOME to point to 1.5 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_15_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    -* )
+      args="$args $1"
+      shift; continue;;
+  esac
+  break;
+done
+
+if [ -z "$args" ]; then
+  args=-Dorg.lockss.defaultLogLevel=DEBUG
+fi
+
+# NB leading space meaningful here
+PROP_URL_LIST=" ../common.xml ${TITLE_DBS} lockss.txt lockss.opt"
+PROP_ARGS=`echo $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
+
+# local copy of lockss jars allows recompile while we're running
+mkdir -p lib
+cp "${PROJECT_DIR}/lib/lockss.jar" lib
+cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
+cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
+CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
+export CLASSPATH
+
+echo running at `date`
+#echo CLASSPATH=$CLASSPATH
+# for large caches, need to pass "-ms4m -mx64m" to java
+#java org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+if [ -z "$jdb" ]; then
+ java -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+ echo $! >dpid
+ wait `cat dpid`
+ echo stopped with status $? at `date`
+else
+ jdb -mx256m $args org.lockss.app.LockssDaemon ${PROP_ARGS}
+fi

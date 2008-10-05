@@ -1,0 +1,8 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Society of Ethnobiology
+#	@fixedValues	P=Society of Ethnobiology	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0278-0771	j=Journal of Ethnobiology
+	ready	Journal of Ethnobiology Volume 25	base_url=http://www.bioone.org/	journal_id=0278-0771	volume=25
+	ready	Journal of Ethnobiology Volume 26	base_url=http://www.bioone.org/	journal_id=0278-0771	volume=26
+	ready	Journal of Ethnobiology Volume 27	base_url=http://www.bioone.org/	journal_id=0278-0771	volume=27

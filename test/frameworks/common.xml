@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<!-- LOCKSS & LCAP tuning parameters -->
+<!-- Common config for all test frameworks -->
+<!-- This is included in the list of prop files by all the run_xxx_daemon -->
+<!-- scripts -->
+
+<lockss-config>
+
+  <!-- enclosing "org.lockss" so we don't have to repeat it -->
+  <property name="org.lockss">
+
+    <!-- Try to get a thread dump if a thread hangs -->
+    <property name="thread.hungThreadDump" value="true"/>
+
+    <!-- Allow backup files up to 1MB to be uploaded -->
+    <property name="ui.maxUploadFileSize" value="1048576" />
+
+    <!-- Plugin Registry:
+    List the plugins that should be included in UI menus. -->
+    <property name="plugin.registry">
+      <list>
+	<value>org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin</value>
+	<value>org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin</value>
+	<value>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin</value>
+	<value>in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin</value>
+	<value>org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin</value>
+	<value>org.lockss.plugin.hindawi.HindawiPlugin</value>
+	<value>org.lockss.plugin.anthrosource.AnthroSourcePlugin</value>
+	<value>uk.org.lockss.plugin.jelit.JeLitPlugin</value>
+	<value>uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin</value>
+	<value>uk.org.lockss.plugin.museumandsociety.MuseumAndSocietyPlugin</value>
+	<value>uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin</value>
+	<value>org.lockss.plugin.emc.EarlyModernCulturePlugin</value>
+	<value>org.lockss.plugin.histcoop.HistoryCooperativePlugin</value>
+	<value>org.lockss.plugin.highwire.HighWirePlugin</value>
+	<value>org.lockss.plugin.highwire.HighWireStrVolPlugin</value>
+	<value>org.lockss.plugin.projmuse.ProjectMusePlugin</value>
+	<value>org.lockss.plugin.blackbird.BlackbirdPlugin</value>
+	<value>org.lockss.plugin.blackwell.BlackwellPlugin</value>
+	<value>org.lockss.plugin.absinthe.AbsinthePlugin</value>
+	<value>org.lockss.plugin.clogic.CulturalLogicPlugin</value>
+	<value>org.lockss.plugin.simulated.SimulatedPlugin</value>
+	<value>org.lockss.plugin.othervoices.OtherVoicesPlugin</value>
+	<value>org.lockss.plugin.bepress.BePressPlugin</value>
+	<value>org.lockss.plugin.bioone.BioOnePlugin</value>
+	<value>org.lockss.plugin.GendersPlugin</value>
+	<value>org.lockss.plugin.dictynna.DictynnaPlugin</value>
+	<value>org.lockss.plugin.disputatio.DisputatioPlugin</value>
+	<value>org.lockss.plugin.janushead.JanusHeadPlugin</value>
+	<value>org.lockss.plugin.janushead.JanusHeadPluginLegacy</value>
+	<value>org.lockss.plugin.livestockresearch.LivestockResearchPlugin</value>
+	<value>org.lockss.plugin.ShadowPlugin</value>
+	<value>org.lockss.plugin.iop.IOPPlugin</value>
+	<value>org.lockss.plugin.locksscard.LockssCardPlugin</value>
+	<value>org.lockss.plugin.bmc.BioMedCentralPlugin</value>
+	<value>org.lockss.plugin.bmc.BMCPlugin</value>
+	<value>org.lockss.plugin.jmir.JMIRPlugin</value>
+	<value>org.lockss.plugin.rlg.RLGDigiNewsPlugin</value>
+	<value>edu.harvard.plugin.jrs.JRSPlugin</value>
+	<value>edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin</value>
+	<value>edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</value>
+	<value>edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin</value>
+	<value>edu.upenn.library.plugin.hnet.HNetPlugin</value>
+	<value>edu.indiana.lib.plugin.jcjpc.JcjpcPlugin</value>
+	<value>edu.indiana.lib.plugin.mto.MTOPlugin</value>
+	<value>edu.princeton.plugin.bmcr.BMCRPlugin</value>
+	<value>edu.fcla.plugin.arkivoc.ArkivocPlugin</value>
+	<value>edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin</value>
+	<value>edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin</value>
+	<value>org.nypl.plugin.failbetter.FailbetterPlugin</value>
+	<value>org.nypl.plugin.WordsWithoutBordersPlugin</value>
+	<value>org.nypl.plugin.PoetryBayPlugin</value>
+	<value>org.nypl.plugin.shampoo.ShampooPlugin</value>
+	<value>gov.loc.plugin.TESLEJPlugin</value>
+	<value>gov.loc.plugin.CJPentecostalCharismaticResearchPlugin</value>
+	<value>org.molvis.plugin.MolVisPlugin</value>
+	<value>org.lockss.plugin.ojs.OJSPlugin</value>
+	<value>edu.upenn.library.plugin.clcweb.CLCWebPlugin</value>
+	<value>edu.wisc.library.plugin.CortlandReviewPlugin</value>
+	<value>edu.wisc.library.plugin.CortlandReview00Plugin</value>
+	<value>edu.wisc.library.plugin.CortlandReview99Plugin</value>
+	<value>edu.wisc.library.plugin.CortlandReview98Plugin</value>
+	<value>edu.wisc.library.plugin.BigBridgePlugin</value>
+	<value>edu.wisc.library.plugin.BigBridgeVol1Plugin</value>
+	<value>edu.columbia.plugin.JiwsPlugin</value>
+	<value>edu.nyu.plugin.LeedsICSPlugin</value>
+	<value>edu.nyu.plugin.bonefolder.BonefolderPlugin</value>
+	<value>edu.nyu.plugin.ejcjs.EJCJSPlugin</value>
+	<value>edu.nyu.plugin.ejce.EJCEPlugin</value>
+	<value>edu.nyu.plugin.entelequia.EntelequiaPlugin</value>
+	<value>edu.jhu.library.plugin.MedievalForumPlugin</value>
+	<value>edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin</value>
+	<value>org.lockss.plugin.msr.MSRPlugin</value>
+	<value>edu.cornell.library.jbe.JBEPlugin</value>
+	<value>edu.cornell.library.epr.EPRPlugin2001</value>
+	<value>edu.cornell.library.epr.EPRPlugin2002On</value>
+	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin</value>
+	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
+	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
+	<value>org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin</value>
+	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
+	<value>org.lockss.plugin.etd.fsuplugin.FSUETDPlugin</value>
+	<value>org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin</value>
+	<value>org.lockss.plugin.etd.gatechplugin.GATechETDPlugin</value>
+	<value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
+	<value>edu.cornell.library.rmc.LolitaPlugin</value>
+	<value>edu.cornell.library.rmc.joyce.JoycePlugin</value>
+	<value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value>
+ 	<value>edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin</value>
+	<value>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</value>
+	<value>org.lockss.plugin.jscm.JSCMPlugin</value>
+	<value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
+	<value>org.lockss.plugin.huffpoblog.HuffPoBlogPlugin</value>
+	<value>org.lockss.plugin.blogger.BasicBloggerPlugin</value>
+	<value>de.huberlin.edoc.plugin.cmsjournal.CMSJournalPlugin</value>
+	<value>org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</value>
+	<value>org.lockss.plugin.etd.uctetdplugin.UCTETDPlugin</value>
+	<value>org.lockss.plugin.etd.pucrio.PUCRioPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
+	<value>org.lockss.plugin.ams.AMSPlugin</value>
+	<value>edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin</value>
+	<value>org.lockss.plugin.madhattersreview.MadHattersReviewPlugin</value>
+	<value>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</value>
+	<value>org.lockss.plugin.sage.ClockssSageIngentaPlugin</value>
+	<value>org.lockss.plugin.nature.ClockssNaturePlugin</value>
+	<value>org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin</value>
+	<value>org.lockss.plugin.highwire.ClockssHighWirePlugin</value>
+	<value>nz.ac.otago.plugin.scholia.ScholiaPlugin</value>
+	<value>za.ac.nlsa.lockss.plugin.WaterSAPlugin</value>
+	<value>edu.nyu.plugin.heplwebzine.HEPLwebzine</value>
+	<value>org.lockss.plugin.jackmagazine.JackMagazinePlugin</value>
+	<value>org.lockss.plugin.prok.ProkPlugin</value>
+	<value>org.lockss.plugin.minerva.MinervaPlugin</value>
+	<value>org.lockss.plugin.lapetitezine.LaPetiteZinePlugin</value>
+	<value>org.lockss.plugin.invisibleculture.InvisibleCulturePlugin</value>
+	<value>org.lockss.plugin.invisibleculture.InvisibleCultureReviewPlugin</value>
+	<value>org.lockss.plugin.evergreenreview.EvergreenReviewPlugin</value>
+	<value>org.lockss.plugin.marsinformatics.MarsPlugin</value>
+	<value>org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin</value>
+	<value>org.lockss.plugin.secrecynews.SecrecyNewsSpecialCollectionsPlugin</value>
+	<value>org.lockss.plugin.usenix.UsenixPlugin</value>
+	<value>org.lockss.plugin.emerald.EmeraldPlugin</value>
+        <value>edu.auburn.contentdm.ContentDmPlugin</value>
+	<value>org.lockss.plugin.archiveit.ArchiveItPlugin</value>
+      </list>
+    </property>
+
+  </property>
+
+  <!-- End org.lockss -->
+</lockss-config>

@@ -1,0 +1,11 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Cactus and Succulent Society of America
+#	@fixedValues	P=Cactus and Succulent Society of America	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0007-9367	j=Cactus and Succulent Journal
+	released	Cactus and Succulent Journal Volume 77	base_url=http://www.bioone.org/	journal_id=0007-9367	volume=77
+	released	Cactus and Succulent Journal Volume 78	base_url=http://www.bioone.org/	journal_id=0007-9367	volume=78
+	released	Cactus and Succulent Journal Volume 79	base_url=http://www.bioone.org/	journal_id=0007-9367	volume=79
+#	@fixedValues	i=1070-0048	j=Haseltonia
+	released	Haseltonia Volume 11	base_url=http://www.bioone.org/	journal_id=1070-0048	volume=11
+	released	Haseltonia Volume 12	base_url=http://www.bioone.org/	journal_id=1070-0048	volume=12

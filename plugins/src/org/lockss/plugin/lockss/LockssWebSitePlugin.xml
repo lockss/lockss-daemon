@@ -1,0 +1,58 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.lockss.LockssWebSitePlugin</string>
+  </entry>
+  <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.lockss.LockssWebSiteFilterRule</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s%s&quot;, base_url, au_subdirectory</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>LOCKSS Web Site</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%s%s/Home&quot;, base_url, au_subdirectory</string>
+      <string>2,&quot;^%s%swiki/.*action=edit&quot;, base_url, au_subdirectory</string>
+      <string>2,&quot;^%s.*(Image|Special):&quot;, base_url, au_subdirectory</string>
+      <string>1,&quot;^%s%s/&quot;, base_url, au_subdirectory</string>
+      <string>1,&quot;^%s%swiki/&quot;, base_url, au_subdirectory</string>
+      <string>1,&quot;^%sfavicon\.ico&quot;, base_url</string>
+      <string>1,&quot;^%simages/&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s/Home&quot;, base_url, au_subdirectory</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_subdirectory</key>
+        <displayName>AU Subdirectory</displayName>
+        <description></description>
+        <type>1</type>
+        <size>30</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

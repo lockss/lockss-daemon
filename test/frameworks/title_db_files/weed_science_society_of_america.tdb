@@ -1,0 +1,24 @@
+#	@formatString	x,S,t,%,%,%
+#	@publishingPlatform	BioOne
+#	@publisherTitleSet	publisher=Weed Science Society of America
+#	@fixedValues	P=Weed Science Society of America	p=org.lockss.plugin.bioone.BioOnePlugin
+#	@fixedValues	i=0043-1745	j=Weed Science
+	released	Weed Science Volume 48	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=48
+	released	Weed Science Volume 49	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=49
+	released	Weed Science Volume 50	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=50
+	released	Weed Science Volume 51	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=51
+	released	Weed Science Volume 52	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=52
+	do_not_process	Weed Science Volume 53	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=53
+	released	Weed Science Volume 53	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=053
+	released	Weed Science Volume 54	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=54
+	released	Weed Science Volume 55	base_url=http://www.bioone.org/	journal_id=0043-1745	volume=55
+#	@fixedValues	i=0890-037X	j=Weed Technology
+	released	Weed Technology Volume 14	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=14
+	released	Weed Technology Volume 15	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=15
+	released	Weed Technology Volume 16	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=16
+	released	Weed Technology Volume 17	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=17
+	do_not_process	Weed Technology Volume 18	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=18
+	released	Weed Technology Volume 18	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=018
+	released	Weed Technology Volume 19	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=19
+	released	Weed Technology Volume 20	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=20
+	released	Weed Technology Volume 21	base_url=http://www.bioone.org/	journal_id=0890-037X	volume=21

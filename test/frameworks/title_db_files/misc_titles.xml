@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+  <property name="org.lockss.title">
+
+    <!-- Miscellaneous Title Database -->
+
+      <property name="APPITextbookofClinicalPsychiatry4thEdition">
+        <property name="title" value="The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition)" />
+        <property name="journalTitle" value="The American Psychiatric Publishing Textbook of Clinical Psychiatry" />
+        <property name="plugin" value="org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.psychiatryonline.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="resource_id" />
+          <property name="value" value="5" />
+        </property>
+        <property name="attributes.publisher" value="American Psychiatric Publishing" />
+      </property>
+
+      <property name="AlaskaStateDocuments2006">
+        <property name="title" value="Alaska State Documents 2006" />
+        <property name="journalTitle" value="Alaska State Documents" />
+        <property name="plugin" value="us.ak.state.library.plugin.AlaskaStateDocsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://library.state.ak.us/asp/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="year" />
+          <property name="value" value="2006" />
+        </property>
+      </property>
+
+      <property name="AlaskaStateDocuments2007">
+        <property name="title" value="Alaska State Documents 2007" />
+        <property name="journalTitle" value="Alaska State Documents" />
+        <property name="plugin" value="us.ak.state.library.plugin.AlaskaStateDocsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://library.state.ak.us/asp/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="year" />
+          <property name="value" value="2007" />
+        </property>
+      </property>
+
+      <property name="AlaskaStateDocuments2008">
+        <property name="title" value="Alaska State Documents 2008" />
+        <property name="journalTitle" value="Alaska State Documents" />
+        <property name="plugin" value="us.ak.state.library.plugin.AlaskaStateDocsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://library.state.ak.us/asp/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="year" />
+          <property name="value" value="2008" />
+        </property>
+      </property>
+
+      <property name="Environmental_Health_Perspectives2005">
+	<property name="title" value="Environmental Health Perspectives 2005" />
+	<property name="journalTitle" value="Environmental Health Perspectives" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Environmental_Health_Perspectives/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.temp" value="cool" />
+      </property>
+
+      <property name="Treasury_Bulletin2005">
+	<property name="title" value="Treasury Bulletin 2005" />
+	<property name="journalTitle" value="Treasury Bulletin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Treasury_Bulletin/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.temp" value="cool" />
+      </property>
+
+      <property name="SocialSecurity_Bulletin65">
+	<property name="title" value="Social Security Bulletin Volume 65" />
+	<property name="journalTitle" value="Social Security Bulletin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Social_Security_Bulletin/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="volume65" />
+	</property>
+        <property name="attributes.temp" value="cool" />
+      </property>
+
+      <property name="nist110">
+	<property name="title" value="NIST Journal of Research Volume 110" />
+	<property name="journalTitle" value="NIST Journal of Research" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/NIST_Journal_of_Research/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="volume110" />
+	</property>
+        <property name="attributes.temp" value="warm" />
+      </property>
+
+      <property name="humanities2005">
+	<property name="title" value="Humanities 2005" />
+	<property name="journalTitle" value="Humanities" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Humanities/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="MonthlyEnergyReview2005">
+	<property name="title" value="Monthly Energy Review 2005" />
+	<property name="journalTitle" value="Monthly Energy Review" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Monthly_Energy_Review/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="MonthlyLaborReview2005">
+	<property name="title" value="Monthly Labor Review 2005" />
+	<property name="journalTitle" value="Monthly Labor Review" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Monthly_Labor_Review/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="FBILawEnforcementBulletin2005">
+	<property name="title" value="FBI Law Enforcement Bulletin 2005" />
+	<property name="journalTitle" value="FBI Law Enforcement Bulletin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/FBI_Law_Enforcement_Bulletin" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="AmberWaves2005">
+	<property name="title" value="Amber Waves 2005" />
+	<property name="journalTitle" value="Amber Waves" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Amber_Waves" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+
+      <property name="surveyofcurrentbusiness2005">
+	<property name="title" value="Survey of Current Business 2005" />
+	<property name="journalTitle" value="Survey of Current Business" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Survey_of_Current_Business/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="snde8">
+	<property name="title" value="Studies in Nonlinear Dynamics and Econometrics Volume 8" />
+	<property name="estSize" value="22MB" />
+	<property name="journalTitle" value="Studies in Nonlinear Dynamics and Econometrics" />
+	<property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bepress.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_abbr" />
+	  <property name="value" value="snde" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+      </property>
+
+      <property name="shadowsmall">
+	<property name="title" value="Shadow Small" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="small" />
+	</property>
+      </property>
+
+      <property name="shadowbranched">
+	<property name="title" value="Shadow Branched" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="branched" />
+	</property>
+      </property>
+
+      <property name="shadowflat">
+	<property name="title" value="Shadow Flat" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="flat" />
+	</property>
+      </property>
+
+      <property name="shadowlong_names">
+	<property name="title" value="Shadow Long Names" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="long_names" />
+	</property>
+      </property>
+
+      <property name="lolita">
+	<property name="title" value="Lolita Exhibition Site" />
+	<property name="journalTitle" value="Lolita Exhibition Site" />
+	<property name="plugin" value="edu.cornell.library.rmc.LolitaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rmc.library.cornell.edu/" />
+	</property>
+      </property>
+
+      <property name="joyce">
+	<property name="title" value="James Joyce Collection" />
+	<property name="journalTitle" value="James Joyce Collection" />
+	<property name="plugin" value="edu.cornell.library.rmc.joyce.JoycePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rmc.library.cornell.edu/joyce/" />
+	</property>
+      </property>
+
+      <property name="humboldt2002">
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2002" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <property name="humboldt2003">
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2003" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <property name="humboldt2004">
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2004" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <property name="humboldt2005">
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2005" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <!-- University of Cape Town ETD Collection -->
+      <property name="uctetd1">
+	<property name="title" value="University of Cape Town ETD Collection" />
+	<property name="journalTitle" value="University of Cape Town ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.uctetdplugin.UCTETDPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://pubs.cs.uct.ac.za/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="oai_spec" />
+	  <property name="value" value="747970653D746865736973" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://pubs.cs.uct.ac.za/perl/oai2" />
+	</property>
+      </property>
+
+
+      <!-- PUC Rio ETD Collection -->
+      <property name="pucrio_etd1">
+	<property name="title" value="LAMBDA - DEE - PUC-Rio ETD Collection" />
+	<property name="journalTitle" value="LAMBDA - DEE - PUC-Rio ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.pucrio.PUCRioPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.maxwell.lambda.ele.puc-rio.br/" />
+	</property>
+      </property>
+
+      <!-- End title database -->
+  </property>
+</lockss-config>
