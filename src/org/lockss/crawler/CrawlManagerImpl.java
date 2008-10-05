@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.124 2008-10-02 06:44:51 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.125 2008-10-05 07:38:23 tlipkis Exp $
  */
 
 /*
@@ -169,10 +169,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   static final int DEFAULT_SHARED_QUEUE_MAX = 5;
 
   /** Min number of threads available to AUs with unshared rate limiters */
-  public static final String PARAM_FAVOR_SHARED_RATE_THREADS =
-    ODC_PREFIX + "favorSharedRateThreads";
-  static final int DEFAULT_FAVOR_SHARED_RATE_THREADS =
-    DEFAULT_CRAWLER_THREAD_POOL_MAX - 1;
+  public static final String PARAM_FAVOR_UNSHARED_RATE_THREADS =
+    ODC_PREFIX + "favorUnsharedRateThreads";
+  static final int DEFAULT_FAVOR_UNSHARED_RATE_THREADS = 1;
 
   /** Maximum rate at which we will start repair crawls for any particular
    * AU */
@@ -408,9 +407,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       unsharedRateReqs.setMaxSize(paramUnsharedQueueMax);
       sharedRateReqs.setTreeSetSize(paramSharedQueueMax);
 
-      paramFavorSharedRateThreads =
-	config.getInt(PARAM_FAVOR_SHARED_RATE_THREADS,
-		      DEFAULT_FAVOR_SHARED_RATE_THREADS);
+      paramFavorUnsharedRateThreads =
+	config.getInt(PARAM_FAVOR_UNSHARED_RATE_THREADS,
+		      DEFAULT_FAVOR_UNSHARED_RATE_THREADS);
 
       paramRebuildCrawlQueueInterval =
 	config.getTimeInterval(PARAM_REBUILD_CRAWL_QUEUE_INTERVAL,
@@ -1160,7 +1159,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   long paramQueueEmptySleep = DEFAULT_QUEUE_EMPTY_SLEEP;
   int paramUnsharedQueueMax = DEFAULT_UNSHARED_QUEUE_MAX;
   int paramSharedQueueMax = DEFAULT_SHARED_QUEUE_MAX;
-  int paramFavorSharedRateThreads = DEFAULT_FAVOR_SHARED_RATE_THREADS;
+  int paramFavorUnsharedRateThreads = DEFAULT_FAVOR_UNSHARED_RATE_THREADS;
 
   Deadline timeToRebuildCrawlQueue = Deadline.in(0);
   Deadline startOneWait = Deadline.in(0);
@@ -1251,7 +1250,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
       if (!unsharedRateReqs.isEmpty() &&
 	  (  finalSort.isEmpty() ||
-	     runKeys.size() >= paramFavorSharedRateThreads ||
+	     runKeys.size() >= (paramMaxPoolSize -
+				paramFavorUnsharedRateThreads) ||
 	     ((CrawlReq)unsharedRateReqs.first()).isHiPri())) {
 	CrawlReq req = (CrawlReq)unsharedRateReqs.first();
 	finalSort.add(req);

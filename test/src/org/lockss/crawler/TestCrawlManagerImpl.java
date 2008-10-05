@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.76 2008-09-14 06:04:17 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.77 2008-10-05 07:38:23 tlipkis Exp $
  */
 
 /*
@@ -1058,7 +1058,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "4");
       p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "3");
       p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX, "3"); 
-      p.put(CrawlManagerImpl.PARAM_FAVOR_SHARED_RATE_THREADS, "2"); 
+      p.put(CrawlManagerImpl.PARAM_FAVOR_UNSHARED_RATE_THREADS, "1"); 
       theDaemon.setAusStarted(true);
       ConfigurationUtil.addFromProps(p);
       crawlManager.startService();
@@ -1163,8 +1163,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
       p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "10");
       p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "10");
-      p.put(CrawlManagerImpl.PARAM_FAVOR_SHARED_RATE_THREADS,
-	    ""+(nthreads-1)); 
+      p.put(CrawlManagerImpl.PARAM_FAVOR_UNSHARED_RATE_THREADS, "1");
 
       ConfigurationUtil.addFromProps(p);
       crawlManager.ausStartedSem = new OneShotSemaphore();
