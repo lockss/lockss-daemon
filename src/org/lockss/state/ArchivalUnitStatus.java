@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.74 2008-10-05 05:54:49 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.75 2008-10-05 07:38:52 tlipkis Exp $
  */
 
 /*
@@ -273,7 +273,7 @@ public class ArchivalUnitStatus
       }
       long lastCrawl = auState.getLastCrawlTime();
       long lastAttempt = auState.getLastCrawlAttempt();
-      long lastResultCode = auState.getLastCrawlResult();
+      int lastResultCode = auState.getLastCrawlResult();
       String lastResult = auState.getLastCrawlResultMsg();
       rowMap.put("AuLastCrawl", new Long(lastCrawl));
       // AuState files that show a successful crawl but no lastAttempt just
@@ -285,9 +285,12 @@ public class ArchivalUnitStatus
 	lastResult = "Successful";
       }
       rowMap.put("AuLastCrawlAttempt", new Long(lastAttempt));
-      if (lastResultCode > 0) {
-	rowMap.put("AuLastCrawlResultMsg", lastResult);
+      String lastCrawlStatus =
+	lastCrawlStatus(au, lastCrawl, lastResultCode, lastResult);
+      if (lastCrawlStatus != null) {
+	rowMap.put("AuLastCrawlResultMsg", lastCrawlStatus);
       }
+
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
       
@@ -348,6 +351,22 @@ public class ArchivalUnitStatus
       }
 
       return rowMap;
+    }
+
+    String lastCrawlStatus(ArchivalUnit au, long lastCrawl,
+			   int lastResultCode, String lastResult) {
+      if (AuUtil.isPubDown(au)) {
+	if (lastCrawl > 0) {
+	  return "No longer crawled";
+	} else {
+	  return "Never crawled";
+	}
+      } else {
+	if (lastResultCode > 0) {
+	  return lastResult;
+	}
+      }
+      return null;
     }
 
     Object pollsRef(Object val, ArchivalUnit au) {
@@ -1171,10 +1190,13 @@ public class ArchivalUnitStatus
 	}
 	total++;
 	AuState aus = AuUtil.getAuState(au);
-	if (aus.getLastCrawlTime() <= 0) {
-	  neverCrawled++;
-	} else if (au.shouldCrawlForNewContent(aus)) {
-	  needsRecrawl++;
+	if (AuUtil.isPubDown(au)) {
+	} else {
+	  if (aus.getLastCrawlTime() <= 0) {
+	    neverCrawled++;
+	  } else if (au.shouldCrawlForNewContent(aus)) {
+	    needsRecrawl++;
+	  }
 	}
       }
       StringBuilder sb = new StringBuilder();
