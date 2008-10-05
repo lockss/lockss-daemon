@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.73 2008-04-01 08:04:04 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.74 2008-10-05 05:55:14 tlipkis Exp $
  */
 
 /*
@@ -94,6 +94,21 @@ public class DaemonStatus extends LockssServlet {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
+    if (!StringUtil.isNullString(req.getParameter("isDaemonReady"))) {
+      if (pluginMgr.areAusStarted()) {
+	resp.setStatus(200);
+	PrintWriter wrtr = resp.getWriter();
+	resp.setContentType("text/plain");
+	wrtr.println("true");
+      } else {
+	PrintWriter wrtr = resp.getWriter();
+	resp.setContentType("text/plain");
+	wrtr.println("false");
+	resp.sendError(202, "Not ready");
+      }
+      return;
+    }
+
     outputFmt = OUTPUT_HTML;	// default output is html
 
     String outputParam = req.getParameter("output");
