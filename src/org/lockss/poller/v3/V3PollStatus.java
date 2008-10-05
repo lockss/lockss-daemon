@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.27 2008-08-26 06:50:30 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.28 2008-10-05 05:54:30 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,13 @@ public class V3PollStatus {
     int i = (int)(d * 10000);
     double pc = i / 100.0;
     return agreementFormat.format(pc);
+  }
+
+  private static StatusTable.Reference makeAuRef(ArchivalUnit au,
+						 String table) {
+    return new StatusTable.Reference(au.getName(),
+				     ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+				     au.getAuId());
   }
 
   /**
@@ -192,10 +199,7 @@ public class V3PollStatus {
     private Map makeRow(V3Poller poller) {
       Map row = new HashMap();
       ArchivalUnit au = poller.getAu();
-      row.put("auId", 
-	      new StatusTable.Reference(au.getName(),
-					ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-					au.getAuId()));
+      row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
@@ -278,10 +282,7 @@ public class V3PollStatus {
     private Map makeRow(V3Voter voter) {
       Map row = new HashMap();
       ArchivalUnit au = voter.getAu();
-      row.put("auId",
-	      new StatusTable.Reference(au.getName(),
-					ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-					au.getAuId()));
+      row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
       row.put("caller", voter.getPollerId().getIdString());
       row.put("status", voter.getStatusString());
       row.put("start", new Long(voter.getCreateTime()));
@@ -501,17 +502,24 @@ public class V3PollStatus {
 
     private List getSummary(V3Poller poll, StatusTable table) {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+      PollerStateBean pollerState = poll.getPollerStateBean();
       List summary = new ArrayList();
       summary.add(new SummaryInfo("Volume",
                                   ColumnDescriptor.TYPE_STRING,
-                                  poll.getAu().getName()));
+				  makeAuRef(poll.getAu(),
+					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   poll.getStatusString()));
-      if (poll.getPollerStateBean().getErrorDetail() != null) {
+      if (pollerState.getErrorDetail() != null) {
         summary.add(new SummaryInfo("Error",
                                     ColumnDescriptor.TYPE_STRING,
-                                    poll.getPollerStateBean().getErrorDetail()));
+                                    pollerState.getErrorDetail()));
+      }
+      if (isDebug && pollerState.getAdditionalInfo() != null) {
+        summary.add(new SummaryInfo("Info",
+                                    ColumnDescriptor.TYPE_STRING,
+                                    pollerState.getAdditionalInfo()));
       }
       summary.add(new SummaryInfo("Start Time",
                                   ColumnDescriptor.TYPE_DATE,
@@ -988,7 +996,8 @@ public class V3PollStatus {
       List summary = new ArrayList();
       summary.add(new SummaryInfo("Volume",
                                   ColumnDescriptor.TYPE_STRING,
-                                  voter.getAu().getName()));
+				  makeAuRef(voter.getAu(),
+					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   voter.getStatusString()));

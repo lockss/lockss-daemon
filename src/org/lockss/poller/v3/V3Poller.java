@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.87 2008-10-02 07:42:46 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.88 2008-10-05 05:54:30 tlipkis Exp $
  */
 
 /*
@@ -1168,6 +1168,10 @@ public class V3Poller extends BasePoll {
   // CR: this has caused TaskNotifier watchdog to trip.  Move into state
   // machine
   private void finishTally() {
+    if (!hasQuorum()) {
+      log.error("finishTally() called in inquorate poll");
+      return;
+    }
     int digestIndex = 0;
     int missingBlockVoters = 0;
     do {
@@ -1263,56 +1267,63 @@ public class V3Poller extends BasePoll {
       }
     }
 
-    // Linked hash map - order is significant
-    String pollKey = pollerState.getPollKey();
-    String vMsg = "";
-    if (log.isDebug2()) {
-      vMsg = "(" + tally.getAgreeVoters().size()
-	+ "-" + tally.getDisagreeVoters().size()
-	+ "-" + tally.getExtraBlockVoters().size() + ") ";
-    }
-    switch (result) {
-    case BlockTally.RESULT_WON:
-      tallyStatus.addAgreedUrl(url);
-      // Great, we won!  Do nothing.
-      log.debug3("Won tally" + vMsg + ": " + url + " in poll " + pollKey);
-      break;
-    case BlockTally.RESULT_LOST:
-      tallyStatus.addDisagreedUrl(url);
-      log.debug("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
-      requestRepair(url, tally.getDisagreeVoters());
-      break;
-    case BlockTally.RESULT_LOST_EXTRA_BLOCK:
-      log.debug("Lost tally" + vMsg + ": Removing " + url +
-		" in poll " + getKey());
-      deleteBlock(url);
-      break;
-    case BlockTally.RESULT_LOST_MISSING_BLOCK:
-      log.info("Lost tally. Requesting repair for missing block: " +
-               url + " in poll " + getKey());
-      tallyStatus.addDisagreedUrl(url);
-      String missingURL = tally.getMissingBlockUrl();
-      requestRepair(missingURL,
-                    tally.getMissingBlockVoters(missingURL));
-      break;
-    case BlockTally.RESULT_NOQUORUM:
-      tallyStatus.addNoQuorumUrl(url);
-      log.warning("No Quorum for block " + url + " in poll " + getKey());
-      break;
-    case BlockTally.RESULT_TOO_CLOSE:
-    case BlockTally.RESULT_TOO_CLOSE_MISSING_BLOCK:
-    case BlockTally.RESULT_TOO_CLOSE_EXTRA_BLOCK:
-      tallyStatus.addTooCloseUrl(url);
-      log.warning("Tally was inconclusive for block " + url + " in poll " +
-                  getKey());
-      break;
-    default:
-      log.warning("Unexpected results from tallying block " + url + ": "
-                  + tally.getStatusString());
-    }
+    // Have now counted agreement in tally and recorded per-file agreement.
+    // Check tally only for quorate polls
+    if (hasQuorum()) {
 
-    // Mark this repair complete if this is a re-check after a repair
-    if (markComplete) pollerState.getRepairQueue().markComplete(url);
+      // Linked hash map - order is significant
+      String pollKey = pollerState.getPollKey();
+      String vMsg = "";
+      if (log.isDebug2()) {
+	vMsg = "(" + tally.getAgreeVoters().size()
+	  + "-" + tally.getDisagreeVoters().size()
+	  + "-" + tally.getExtraBlockVoters().size() + ") ";
+      }
+      switch (result) {
+      case BlockTally.RESULT_WON:
+	tallyStatus.addAgreedUrl(url);
+	// Great, we won!  Do nothing.
+	log.debug3("Won tally" + vMsg + ": " + url + " in poll " + pollKey);
+	break;
+      case BlockTally.RESULT_LOST:
+	tallyStatus.addDisagreedUrl(url);
+	log.debug("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
+	requestRepair(url, tally.getDisagreeVoters());
+	break;
+      case BlockTally.RESULT_LOST_EXTRA_BLOCK:
+	log.debug("Lost tally" + vMsg + ": Removing " + url +
+		  " in poll " + getKey());
+	deleteBlock(url);
+	break;
+      case BlockTally.RESULT_LOST_MISSING_BLOCK:
+	log.info("Lost tally. Requesting repair for missing block: " +
+		 url + " in poll " + getKey());
+	tallyStatus.addDisagreedUrl(url);
+	String missingURL = tally.getMissingBlockUrl();
+	requestRepair(missingURL,
+		      tally.getMissingBlockVoters(missingURL));
+	break;
+      case BlockTally.RESULT_NOQUORUM:
+	tallyStatus.addNoQuorumUrl(url);
+	log.warning("No Quorum for block " + url + " in poll " + getKey());
+	break;
+      case BlockTally.RESULT_TOO_CLOSE:
+      case BlockTally.RESULT_TOO_CLOSE_MISSING_BLOCK:
+      case BlockTally.RESULT_TOO_CLOSE_EXTRA_BLOCK:
+	tallyStatus.addTooCloseUrl(url);
+	log.warning("Tally was inconclusive for block " + url + " in poll " +
+		    getKey());
+	break;
+      default:
+	log.warning("Unexpected results from tallying block " + url + ": "
+		    + tally.getStatusString());
+      }
+
+      // Mark this repair complete if this is a re-check after a repair
+      if (markComplete) {
+	pollerState.getRepairQueue().markComplete(url);
+      }
+    }
   }
 
   /**
@@ -1368,8 +1379,8 @@ public class V3Poller extends BasePoll {
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
-    int len = getPollSize();
-    byte[][] initBytes = new byte[len + 1][]; // One for plain hash
+    int len = getPollSize() + 1; // One for plain hash.
+    byte[][] initBytes = new byte[len][];
     initBytes[0] = new byte[0];
     int ix = 1;
     synchronized(theParticipants) {
@@ -1493,6 +1504,10 @@ public class V3Poller extends BasePoll {
    * Called at the end of tallying if there are any pending repairs.
    */
   private void doRepairs() {
+    if (!hasQuorum()) {
+      log.error("doRepairs() called in inquorate poll");
+      return;
+    }
     PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
 
     List pendingPeerRepairs = queue.getPendingPeerRepairs();
@@ -1594,10 +1609,8 @@ public class V3Poller extends BasePoll {
         int digestIndex = 0;
         BlockTally tally = new BlockTally(pollerState.getQuorum());
         synchronized(theParticipants) {
-          for (Iterator iter = theParticipants.keySet().iterator();
-	       iter.hasNext(); ) {
+          for (PeerIdentity id : theParticipants.keySet()) {
             digestIndex++;
-            PeerIdentity id = (PeerIdentity)iter.next();
             VoteBlock vb = 
               (getParticipant(id)).getVoteBlocks().getVoteBlock(url);
             if (vb == null) {
@@ -1739,6 +1752,7 @@ public class V3Poller extends BasePoll {
                   + getKey());
       return;
     }
+    int newRepairees = 0;
     // CR: repair thread holds this lock for a long time?
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
@@ -1762,12 +1776,21 @@ public class V3Poller extends BasePoll {
         }
         
         // Update the participant's agreement history.
+	if (!isWillingRepairer(ud.getVoterId()) &&
+	    ud.getPercentAgreement() >= pollManager.getMinPercentForRepair()) {
+	  newRepairees++;
+	}
         this.idManager.signalPartialAgreement(ud.getVoterId(), getAu(), 
                                               ud.getPercentAgreement());
         
       }
     }
-    if (isQuorate()) {
+    if (newRepairees > 0) {
+      String info = newRepairees + " new agreeing peers";
+      log.info(info + " for " + getAu().getName());
+      pollerState.setAdditionalInfo(info);
+    }
+    if (hasQuorum()) {
       // If the poll is quorate, update 
 
       // Tell the PollManager to hang on to our statistics for this poll.
@@ -2137,9 +2160,13 @@ public class V3Poller extends BasePoll {
     return pollManager.getInvitationWeightAtRisk();
   }
 
+  boolean isWillingRepairer(PeerIdentity id) {
+    double highest = idManager.getHighestPercentAgreement(id, getAu());
+    return highest >= pollManager.getMinPercentForRepair();
+  }
+
   double weightPotentialGain(PeerIdentityStatus status) {
-    if (idManager.getHighestPercentAgreement(status.getPeerIdentity(), getAu())
-	>= pollManager.getMinPercentForRepair()) {
+    if (isWillingRepairer(status.getPeerIdentity())) {
       return pollManager.getInvitationWeightAlreadyRepairable();
     }
     return 1.0;
@@ -2230,6 +2257,7 @@ public class V3Poller extends BasePoll {
         TimerQueue.cancel(invitationRequest);
         invitationRequest = null;
       }
+      log.debug2("Vote Tally deadline reached: " + pollerState.getPollKey());
 
       // Prune "theParticipants", and remove any who have not cast a vote.
       // Iterate over a COPY of the participants, to avoid concurrent
@@ -2259,18 +2287,35 @@ public class V3Poller extends BasePoll {
       }
 
       // Determine whether enough peers have voted to reach a quorum.
-      // If not, kill this poll.
-      if (!isQuorate()) {
-        log.warning("Fewer participant votes ( " + getPollSize() +
+      if (!hasQuorum()) {
+        log.warning("Fewer participant votes (" + getPollSize() +
 		    ") than quorum (" + getQuorum() + ") in poll " + getKey());
 	// continue with tally even if no quorum so that we may become a
 	// willing repaier for any peers that voted and agree with ut.
 
-	// XXX do this only for peers that we don't already know agree with
-	// us
-
+	// Remove any voting participants for which we are already a
+	// willing repairer
+	synchronized(theParticipants) {
+	  List<PeerIdentity> toRemove = new ArrayList();
+          for (PeerIdentity id : theParticipants.keySet()) {
+	    if (isWillingRepairer(id)) {
+	      toRemove.add(id);
+	    }
+	  }
+	  log.debug2("Removing existing repairers " + toRemove);
+          for (PeerIdentity id : toRemove) {
+	    removeParticipant(id, PEER_STATUS_COMPLETE);
+	  }
+	}
+	int nleft = getPollSize();
+	if (nleft == 0) {
+	  // nobody left, stop poll and don't tally
+	  stopPoll(V3Poller.POLLER_STATUS_NO_QUORUM);
+	  return;
+	}
+	log.debug("Contining to tally " + nleft + " potential repairers");
       }
-      log.debug2("Vote Tally deadline reached.  Scheduling hash.");
+      log.debug2("Scheduling hash: " + pollerState.getPollKey());
       // XXX: Refactor when our hash can be associated with an
       //      existing step task.
       if (task != null) task.cancel();
@@ -2360,8 +2405,10 @@ public class V3Poller extends BasePoll {
         log.warning("Poll hash failed", e);
 	// CR: too extreme.  what if pending repairs?
         stopPoll(POLLER_STATUS_ERROR);
-      } else {
+      } else if (hasQuorum()) {
         finishTally();
+      } else {
+	voteComplete();
       }
     }
   }
@@ -2511,7 +2558,7 @@ public class V3Poller extends BasePoll {
     return pollerState.getQuorum();
   }
 
-  private boolean isQuorate() {
+  private boolean hasQuorum() {
     return getPollSize() >= getQuorum();
   }
 
