@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.18 2008-09-17 07:28:52 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.19 2008-10-07 18:14:29 tlipkis Exp $
  */
 
 /*
@@ -363,5 +363,7 @@ public class MockIdentityManager implements IdentityManager {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
 
-
+  public String getUiUrlStem(PeerIdentity pid) {
+    return null;
+  }
 }

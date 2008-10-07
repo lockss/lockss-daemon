@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.86 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.87 2008-10-07 18:14:29 tlipkis Exp $
  */
 
 /*
@@ -507,6 +507,8 @@ public interface IdentityManager extends LockssManager {
    * @return The PeerIdentityStatus associated with the given PeerIdentity.
    */
   public PeerIdentityStatus getPeerIdentityStatus(String key);
+
+  public String getUiUrlStem(PeerIdentity pid);
 
   public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;

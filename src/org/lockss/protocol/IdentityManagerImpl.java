@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.30 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.31 2008-10-07 18:14:29 tlipkis Exp $
  */
 
 /*
@@ -189,6 +189,11 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_ENABLE_V1 = PREFIX + "v1Enabled";
   public static final boolean DEFAULT_ENABLE_V1 = true;
 
+  /** Maps PeerId to UI URL stem.  Useful for testing frameworks to point
+   * nonstandard ports.  List of [PeerId,URL-stem];,...*/
+  public static final String PARAM_UI_STEM_MAP =
+    PREFIX + "pidUiStemMap";
+
   /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
    */
@@ -257,6 +262,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private long updates = 0;
 
   private IdentityManagerStatus status;
+
+  private Map<PeerIdentity,String> pidUiStemMap;
 
   /**
    * <p>Builds a new IdentityManager instance.</p>
@@ -1440,6 +1447,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       minPercentPartialAgreement =
         config.getPercentage(PARAM_MIN_PERCENT_AGREEMENT,
                              DEFAULT_MIN_PERCENT_AGREEMENT);
+      if (changedKeys.contains(PARAM_UI_STEM_MAP)) {
+	pidUiStemMap = makePidUiStemMap(config.getList(PARAM_UI_STEM_MAP));
+      }
       configV3Identities();
     }
   }
@@ -1460,9 +1470,37 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  Map<PeerIdentity,String> makePidUiStemMap(List<String> pidStemList) {
+    if (pidStemList == null) {
+      return null;
+    }
+    Map<PeerIdentity,String> res = new HashMap<PeerIdentity,String>();
+    for (String one : pidStemList) {
+      List<String> lst = StringUtil.breakAt(one, ',', -1, true, true);
+      if (lst.size() == 2) {
+	try {
+	  PeerIdentity pid = stringToPeerIdentity(lst.get(0));
+	  res.put(pid, lst.get(1));
+	  log.info("pidUiStemMap.put(" + pid + ", " + lst.get(1) + ")");
+	} catch (IdentityManager.MalformedIdentityKeyException e) {
+	  log.warning("Bad peer in pidUiStemMap: " +lst.get(0), e);
+	}
+      }
+    }
+    return res;
+  }
+
   protected String getLocalIpParam(Configuration config) {
     // overridable for testing
     return config.get(PARAM_LOCAL_IP);
+  }
+
+  public String getUiUrlStem(PeerIdentity pid) {
+    if (pidUiStemMap != null) {
+      log.info("getUiUrlStem(" + pid + "): " + pidUiStemMap.get(pid));
+      return pidUiStemMap.get(pid);
+    }
+    return null;
   }
 
   boolean areMapsEqualSize() {
