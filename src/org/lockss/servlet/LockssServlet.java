@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.105 2008-10-02 06:49:44 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.106 2008-10-07 18:13:10 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.remote.RemoteApi;
 import org.lockss.servlet.BatchAuConfig.Verb;
+import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 /** Abstract base class for LOCKSS servlets
@@ -437,19 +438,19 @@ public abstract class LockssServlet extends HttpServlet
   /** Construct servlet URL
    */
   String srvURL(ServletDescr d) {
-    return srvURL(null, d, null);
+    return srvURL((String)null, d, null);
   }
 
   /** Construct servlet URL with params
    */
   String srvURL(ServletDescr d, String params) {
-    return srvURL(null, d, params);
+    return srvURL((String)null, d, params);
   }
 
   /** Construct servlet URL with params
    */
   String srvURL(ServletDescr d, Properties params) {
-    return srvURL(null, d, concatParams(params));
+    return srvURL(d, concatParams(params));
   }
 
   /** Construct servlet absolute URL, with params as necessary.
@@ -463,29 +464,49 @@ public abstract class LockssServlet extends HttpServlet
    *  browsers will prompt again for login
    */
   String srvURL(String host, ServletDescr d, String params) {
+    return srvURLFromStem(srvUrlStem(host), d, params);
+  }
+
+  String srvURL(PeerIdentity peer, ServletDescr d, String params) {
+    return srvURLFromStem(peer.getUiUrlStem(reqURL.getPort()), d, params);
+  }
+
+  /** Construct servlet URL, with params as necessary.  Avoid generating a
+   *  hostname different from that used in the original request, or
+   *  browsers will prompt again for login
+   */
+  String srvURLFromStem(String stem, ServletDescr d, String params) {
     if (d.isPathIsUrl()) {
       return d.getPath();
     }
-    StringBuffer sb = new StringBuffer();
-    StringBuffer paramsb = new StringBuffer();
-
-    if (params != null) {
-      paramsb.append('&');
-      paramsb.append(params);
+    StringBuilder sb = new StringBuilder(80);
+    if (stem != null) {
+      sb.append(stem);
+      if (stem.charAt(stem.length() - 1) != '/') {
+	sb.append('/');
+      }
+    } else {
+      // ensure absolute path even if no scheme/host/port
+      sb.append('/');
     }
-    if (host != null) {
-      sb.append(reqURL.getProtocol());
-      sb.append("://");
-      sb.append(host);
-      sb.append(':');
-      sb.append(reqURL.getPort());
-    }
-    sb.append('/');
     sb.append(d.getPath());
-    if (paramsb.length() != 0) {
-      paramsb.setCharAt(0, '?');
-      sb.append(paramsb.toString());
+    if (params != null) {
+      sb.append('?');
+      sb.append(params);
     }
+    return sb.toString();
+  }
+
+  String srvUrlStem(String host) {
+    if (host == null) {
+      return null;
+    }
+    StringBuilder sb = new StringBuilder();
+    sb.append(reqURL.getProtocol());
+    sb.append("://");
+    sb.append(host);
+    sb.append(':');
+    sb.append(reqURL.getPort());
     return sb.toString();
   }
 
@@ -509,6 +530,19 @@ public abstract class LockssServlet extends HttpServlet
   /** Return an absolute link to a servlet with params */
   String srvAbsLink(ServletDescr d, String text, String params) {
     return new Link(srvAbsURL(d, params),
+		    (text != null ? text : d.heading)).toString();
+  }
+
+  /** Return an absolute link to a servlet with params */
+  String srvAbsLink(String host, ServletDescr d, String text, String params) {
+    return new Link(srvURL(host, d, params),
+		    (text != null ? text : d.heading)).toString();
+  }
+
+  /** Return an absolute link to a servlet with params */
+  String srvAbsLink(PeerIdentity peer, ServletDescr d, String text,
+		    String params) {
+    return new Link(srvURL(peer, d, params),
 		    (text != null ? text : d.heading)).toString();
   }
 
@@ -683,7 +717,7 @@ public abstract class LockssServlet extends HttpServlet
    * prop. */
   protected Element submitButton(String label, String action,
 				 String prop, String value) {
-    StringBuffer sb = new StringBuffer(40);
+    StringBuilder sb = new StringBuilder(40);
     sb.append("lockssButton(this, '");
     sb.append(action);
     sb.append("'");

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.74 2008-10-05 05:55:14 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.75 2008-10-07 18:13:10 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.w3c.dom.Document;
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
+import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 
@@ -264,7 +265,7 @@ public class DaemonStatus extends LockssServlet {
         XmlDomBuilder.addText(rootElem, "No such table: " + e.toString());
       } else {
         String emsg = e.toString();
-        StringBuffer buffer = new StringBuffer("Error getting table: ");
+        StringBuilder buffer = new StringBuilder("Error getting table: ");
         buffer.append(emsg);
         buffer.append("\n");
         buffer.append(StringUtil.trimStackTrace(emsg,
@@ -645,10 +646,10 @@ public class DaemonStatus extends LockssServlet {
 	StatusTable.SummaryInfo sInfo =
 	  (StatusTable.SummaryInfo)iter.next();
 	table.newRow();
-	StringBuffer sb = null;
+	StringBuilder sb = null;
 	String stitle = sInfo.getTitle();
 	if (!StringUtil.isNullString(stitle)) {
-	  sb = new StringBuffer();
+	  sb = new StringBuilder();
 	  sb.append("<b>");
 	  sb.append(stitle);
 	  if (sInfo.getFootnote() != null) {
@@ -710,7 +711,7 @@ public class DaemonStatus extends LockssServlet {
   // Handle lists
   private String getTextDisplayString(Object val) {
     if (val instanceof java.util.List) {
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
 	sb.append(StatusTable.getActualValue(iter.next()));
       }
@@ -725,7 +726,7 @@ public class DaemonStatus extends LockssServlet {
   // Handle lists
   private String getDisplayString(Object val, int type) {
     if (val instanceof java.util.List) {
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
 	sb.append(getDisplayString0(iter.next(), type));
       }
@@ -752,7 +753,7 @@ public class DaemonStatus extends LockssServlet {
 
   // turn References into html links
   private String getRefString(StatusTable.Reference ref, int type) {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("table=");
     sb.append(ref.getTableName());
     String key = ref.getKey();
@@ -770,8 +771,16 @@ public class DaemonStatus extends LockssServlet {
 	sb.append(urlEncode((String)ent.getValue()));
       }
     }
-    return srvLink(myServletDescr(), getDisplayString(ref.getValue(), type),
-		   sb.toString());
+    if (ref.getPeerId() != null) {
+      return srvAbsLink(ref.getPeerId(),
+			myServletDescr(),
+			getDisplayString(ref.getValue(), type),
+			sb.toString());
+    } else {
+      return srvLink(myServletDescr(),
+		     getDisplayString(ref.getValue(), type),
+		     sb.toString());
+    }
   }
 
   // turn UrlLink into html link

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.13 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.14 2008-10-07 18:13:09 tlipkis Exp $
  */
 
 /*
@@ -28,6 +28,7 @@ package org.lockss.daemon.status;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.protocol.*;
 import org.lockss.servlet.*;
 
 
@@ -42,7 +43,8 @@ public class TestStatusTable extends LockssTestCase {
   }
 
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     table = new StatusTable("table1", "key1");
   }
 
@@ -309,6 +311,24 @@ public class TestStatusTable extends LockssTestCase {
     ref = new StatusTable.Reference("C", "blah", "key1");
     assertTrue(ref.equals(new StatusTable.Reference("C", "blah", "key1")));
     assertFalse(ref.equals(new StatusTable.Reference("C", "blah", "key")));
+  }
+
+  public void testReferencePeer() throws Exception {
+    PeerIdentity pid1 =
+      new MockPeerIdentity("TCP:[1.2.3.4]:1111");
+    PeerIdentity pid2 =
+      new MockPeerIdentity("TCP:[1.2.3.4]:2222");
+
+    StatusTable.Reference ref1 = new StatusTable.Reference("C", pid1,
+							  "blah", null);
+    StatusTable.Reference ref2 = new StatusTable.Reference("C", pid2,
+							  "blah", null);
+    StatusTable.Reference ref3 = new StatusTable.Reference("C", pid1,
+							  "blah", null);
+    assertTrue(ref1.equals(ref1));
+    assertTrue(ref1.equals(ref3));
+    assertFalse(ref1.equals(ref2));
+    assertFalse(ref1.equals(new StatusTable.Reference("C", "blah", null)));
   }
 
   public void testSrvLinkGetActualValue() {
