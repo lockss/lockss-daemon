@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.28 2008-10-05 05:54:30 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.29 2008-10-07 18:13:47 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,24 @@ public class V3PollStatus {
     return new StatusTable.Reference(au.getName(),
 				     ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
 				     au.getAuId());
+  }
+
+  private static StatusTable.Reference makePollRef(Object value,
+						   PeerIdentity pid,
+						   String pollKey) {
+    return new StatusTable.Reference(value,
+				     pid,
+				     POLLER_DETAIL_TABLE_NAME,
+				     pollKey);
+  }
+
+  private static StatusTable.Reference makeVoteRef(Object value,
+						   PeerIdentity pid,
+						   String pollKey) {
+    return new StatusTable.Reference(value,
+				     pid,
+				     VOTER_DETAIL_TABLE_NAME,
+				     pollKey);
   }
 
   /**
@@ -454,7 +472,7 @@ public class V3PollStatus {
       table.setDefaultSortRules(sortRules);
       table.setSummaryInfo(getSummary(poll, table));
       table.setTitle("Status of Poll " + key);
-      table.setRows(getRows(poll));
+      table.setRows(getRows(table, poll));
     }
 
     private List getColDescs(StatusTable table) {
@@ -470,20 +488,25 @@ public class V3PollStatus {
       return res;
     }
 
-    private List getRows(V3Poller poll) {
+    private List getRows(StatusTable table, V3Poller poll) {
+      boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rows = new ArrayList();
       for (ParticipantUserData voter : poll.getParticipants()) {
-        rows.add(makeRow(voter, "0"));
+        rows.add(makeRow(poll, voter, "0", isDebug));
       }
       for (ParticipantUserData voter : poll.getExParticipants()) {
-        rows.add(makeRow(voter, "1"));
+        rows.add(makeRow(poll, voter, "1", isDebug));
       }
       return rows;
     }
 
-    private Map makeRow(ParticipantUserData voter, Object sort) {
+    private Map makeRow(V3Poller poll, ParticipantUserData voter,
+			Object sort, boolean isDebug) {
       Map row = new HashMap();
-      row.put("identity", voter.getVoterId().getIdString());
+      PeerIdentity peer = voter.getVoterId();
+      row.put("identity",
+	      isDebug ? makeVoteRef(peer.getIdString(), peer, poll.getKey())
+	      : peer.getIdString());
       row.put("peerStatus", voter.getStatusString());
       row.put("sort", sort);
       PsmInterp interp = voter.getPsmInterp();
@@ -1024,9 +1047,13 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_STRING,
                                     voter.getVoterUserData().getErrorDetail()));
       }
+      PeerIdentity peer = voter.getPollerId();
+      Object caller = isDebug
+	? makePollRef(peer.getIdString(), peer, table.getKey())
+	: peer.getIdString();
       summary.add(new SummaryInfo("Caller",
                                   ColumnDescriptor.TYPE_STRING,
-                                  voter.getPollerId().getIdString()));
+				  caller));
       summary.add(new SummaryInfo("Start Time",
                                   ColumnDescriptor.TYPE_DATE,
                                   new Long(voter.getCreateTime())));
