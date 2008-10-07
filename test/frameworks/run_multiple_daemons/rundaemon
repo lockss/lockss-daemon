@@ -15,7 +15,7 @@ export CLASSPATH
 echo running in `pwd` at `date`
 #echo CLASSPATH=$CLASSPATH
 if [ -z "$*" ]; then
-  JAVA_ARGS="-server -Xmx128m -Dorg.lockss.defaultLogLevel=DEBUG"
+  JAVA_ARGS="-server -Xmx256m -Dorg.lockss.defaultLogLevel=DEBUG"
  else
   JAVA_ARGS="$@"
 fi
