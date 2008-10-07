@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.6 2008-10-05 05:54:58 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.7 2008-10-07 18:14:44 tlipkis Exp $
  */
 
 /*
@@ -38,8 +38,8 @@ import org.apache.oro.text.regex.*;
 
 /**
  * Abstraction of protocol-specific peer addresses, currently UDP (V1) or
- * TCP (V3).  Should be used only be comm code when necessary to establish
- * a connection to the peer.  For perr identification purposes, always use
+ * TCP (V3).  Should be used only by comm code when necessary to establish
+ * a connection to the peer.  For peer identification purposes, always use
  * {@link PeerIdentity}
  */
 
