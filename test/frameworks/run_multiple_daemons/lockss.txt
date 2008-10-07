@@ -25,6 +25,12 @@ org.lockss.id.initialV3PeerList=\
     TCP:[127.0.0.1]:9723;\
     TCP:[127.0.0.1]:9724
 
+org.lockss.id.pidUiStemMap=\
+    TCP:[127.0.0.1]:9721,http://127.0.0.1:8081;\
+    TCP:[127.0.0.1]:9722,http://127.0.0.1:8082;\
+    TCP:[127.0.0.1]:9723,http://127.0.0.1:8083;\
+    TCP:[127.0.0.1]:9724,http://127.0.0.1:8084
+
 org.lockss.metrics.slowest.hashrate = 250
 org.lockss.state.recall.delay=5m
 
