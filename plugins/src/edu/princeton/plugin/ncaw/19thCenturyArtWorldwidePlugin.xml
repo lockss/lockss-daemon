@@ -28,9 +28,9 @@
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sNCAW-Vol%d\.html$&quot;, base_url, volume</string>
-      <string>1,&quot;^%s(autumn|spring|winter|summer)_%02d&quot;, base_url, au_short_year</string>
+      <string>1,&quot;^%s(autumn|spring|winter|summer)_%02d/&quot;, base_url, au_short_year</string>
       <string>2,&quot;^%sads/&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
@@ -67,5 +67,13 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>edu.princeton.plugin.ncaw.NcawHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>edu.princeton.plugin.ncaw.NcawHtmlFilterFactory</string>
   </entry>
 </map>

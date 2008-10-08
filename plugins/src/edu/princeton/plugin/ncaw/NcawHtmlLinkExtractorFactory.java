@@ -1,5 +1,5 @@
 /*
- * $Id: NcawHtmlLinkExtractorFactory.java,v 1.1 2008-10-08 08:05:05 thib_gc Exp $
+ * $Id: NcawHtmlLinkExtractorFactory.java,v 1.2 2008-10-08 22:15:04 thib_gc Exp $
  */
 
 /*
@@ -33,8 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package edu.princeton.plugin.ncaw;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.LinkExtractor;
-import org.lockss.extractor.LinkExtractorFactory;
+import org.lockss.extractor.*;
 
 public class NcawHtmlLinkExtractorFactory implements LinkExtractorFactory {
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NcawHtmlFilterFactory.java,v 1.1 2008-10-08 08:05:05 thib_gc Exp $
+ * $Id: NcawHtmlFilterFactory.java,v 1.2 2008-10-08 22:15:04 thib_gc Exp $
  */
 
 /*
@@ -35,13 +35,8 @@ package edu.princeton.plugin.ncaw;
 import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.HtmlCompoundTransform;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
-import org.lockss.filter.html.HtmlTransform;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
+import org.lockss.filter.html.*;
+import org.lockss.plugin.*;
 
 public class NcawHtmlFilterFactory implements FilterFactory {
 
