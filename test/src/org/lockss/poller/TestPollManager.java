@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.95.2.1 2008-10-11 06:34:57 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.95.2.2 2008-10-11 07:57:54 tlipkis Exp $
  */
 
 /*
@@ -94,13 +94,13 @@ public class TestPollManager extends LockssTestCase {
 
 
   public void tearDown() throws Exception {
+    TimeBase.setReal();
     pollmanager.stopService();
     idmanager.stopService();
     theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
     theDaemon.getDatagramRouterManager().stopService();
     theDaemon.getRouterManager().stopService();
-    TimeBase.setReal();
     super.tearDown();
   }
 
