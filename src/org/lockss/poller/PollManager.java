@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.199.2.1 2008-10-11 06:34:57 tlipkis Exp $
+ * $Id: PollManager.java,v 1.199.2.2 2008-10-11 07:56:48 tlipkis Exp $
  */
 
 /*
@@ -2010,6 +2010,9 @@ public class PollManager
 	pollQueue.addAll(weightedRandomSelection(weightMap,
 						 Math.min(weightMap.size(),
 							  n)));
+      }
+      if (log.isDebug()) {
+	log.debug("Poll queue: " + pollQueue);
       }
     }
   }
