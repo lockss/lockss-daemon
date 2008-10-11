@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.21 2008-10-02 07:42:46 tlipkis Exp $
+ * $Id: MockAuState.java,v 1.21.2.1 2008-10-11 06:36:05 tlipkis Exp $
  */
 
 /*
@@ -86,12 +86,21 @@ public class MockAuState extends AuState {
     lastTopLevelPoll = newPollTime;
   }
 
+  @Override
   public void setV3Agreement(double d) {
     v3Agreement = d;
   }
 
   public void setLastPollResult(int result) {
     lastPollResult = result;
+  }
+
+  public void setLastPollStart(long time) {
+    lastPollStart = time;
+  }
+
+  public void setLastToplevalPoll(long time) {
+    lastTopLevelPoll = time;
   }
 
   public void setLastTreeWalkTime(long newTreeWalkTime) {

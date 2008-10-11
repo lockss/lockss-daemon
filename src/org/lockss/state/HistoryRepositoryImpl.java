@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.83 2008-04-02 20:26:36 edwardsb1 Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.83.8.1 2008-10-11 06:36:05 tlipkis Exp $
  */
 
 /*
@@ -266,6 +266,7 @@ public class HistoryRepositoryImpl
                          auState.getLastPollStart(),
                          auState.getLastPollResult(),
                          auState.getLastPollResultMsg(),
+                         auState.getPollDuration(),
                          -1,
                          auState.getCrawlUrls(),
                          auState.getAccessType(),
