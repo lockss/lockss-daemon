@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.26 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.26.4.1 2008-10-11 06:35:19 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,6 @@ public class V3PollFactory extends BasePollFactory {
   public static final float DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT = 0.9f;
     
 
-  private LockssDaemon daemon;
   private PollManager pollMgr;
   protected IdentityManager idMgr;
 
@@ -109,6 +108,8 @@ public class V3PollFactory extends BasePollFactory {
 
   protected void sendNak(LockssDaemon daemon, PollNak nak,
 			 String auid, V3LcapMessage msg) {
+    IdentityManager idMgr = daemon.getIdentityManager();
+
     V3LcapMessage response =
       new V3LcapMessage(auid, msg.getKey(),
 			msg.getPluginVersion(), null, null,
@@ -133,8 +134,7 @@ public class V3PollFactory extends BasePollFactory {
                              PeerIdentity orig, long duration,
                              String hashAlg, LcapMessage msg)
       throws ProtocolException {
-    if (daemon == null) {
-      daemon = pollMgr.getDaemon();
+    if (idMgr == null) {
       idMgr = daemon.getIdentityManager();
     }
 
