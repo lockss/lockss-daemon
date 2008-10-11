@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.95 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.95.2.1 2008-10-11 06:34:57 tlipkis Exp $
  */
 
 /*
@@ -63,13 +63,15 @@ public class TestPollManager extends LockssTestCase {
 			     new PollTally.NameListEntry(true,"test2.doc"),
 			     new PollTally.NameListEntry(true,"test3.doc"));
 
-  protected static ArchivalUnit testau;
+  protected static MockArchivalUnit testau;
   private MockLockssDaemon theDaemon;
+  private Plugin plugin;
+
 
   protected PeerIdentity testID;
   protected V1LcapMessage[] v1Testmsg;
   protected V3LcapMessage[] v3Testmsg;
-  protected LocalMockPollManager pollmanager;
+  protected MyPollManager pollmanager;
   protected IdentityManager idmanager;
   private File tempDir;
 
@@ -83,7 +85,7 @@ public class TestPollManager extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
     p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-
+    plugin = new MockPlugin(getMockLockssDaemon());
     TimeBase.setSimulated();
     initRequiredServices();
     initTestAddr();
@@ -114,7 +116,6 @@ public class TestPollManager extends LockssTestCase {
   }
 
   public void testGetPollFactoryByPollSpec() throws Exception {
-    Plugin plugin = new MockPlugin();
     CachedUrlSet cus =
       new MockCachedUrlSet(new MockArchivalUnit(plugin),
                            new SingleNodeCachedUrlSetSpec("foo"));
@@ -138,10 +139,10 @@ public class TestPollManager extends LockssTestCase {
 
   // Start by testing the local mock poll factory
 
-  public void testLocalMockV1PollFactory() {
-    // This ensures that LocalMockV1PollFactory.canHashBeScheduledBefore() does
+  public void testMyV1PollFactory() {
+    // This ensures that MyV1PollFactory.canHashBeScheduledBefore() does
     // what I intended
-    LocalMockV1PollFactory mpf = new LocalMockV1PollFactory();
+    MyV1PollFactory mpf = new MyV1PollFactory();
 
     mpf.setMinPollDeadline(Deadline.in(1000));
     assertFalse(mpf.canHashBeScheduledBefore(100, Deadline.in(0),
@@ -352,6 +353,115 @@ public class TestPollManager extends LockssTestCase {
     return new V3Voter(theDaemon, pollMsg);
   }
   
+  MockArchivalUnit[] makeMockAus(int n) {
+    MockArchivalUnit[] res = new MockArchivalUnit[n];
+    for (int ix = 0; ix < n; ix++) {
+      res[ix] = newMockArchivalUnit("mau" + ix);
+    }
+    return res;
+  }
+
+  MockArchivalUnit newMockArchivalUnit(String auid) {
+    MockArchivalUnit mau = new MockArchivalUnit(plugin, auid);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
+    return mau;
+  }
+
+  void setAu(MockArchivalUnit mau,
+	     long lastPollStart, long lastTopLevelPoll, int lastPollResult,
+	     long pollDuration, double agreement) {
+    MockAuState aus = (MockAuState)AuUtil.getAuState(mau);
+    aus.setLastCrawlTime(100);
+    aus.setLastPollStart(lastPollStart);
+    aus.setLastToplevalPoll(lastTopLevelPoll);
+    aus.setLastPollResult(lastPollResult);
+    aus.setPollDuration(pollDuration);
+    aus.setV3Agreement(agreement);
+  }	   
+
+  void registerAus(MockArchivalUnit[] aus) {
+    List lst = ListUtil.fromArray(aus);
+    List<MockArchivalUnit> rand = CollectionUtil.randomPermutation(lst);
+    for (MockArchivalUnit mau : rand) {
+      PluginTestUtil.registerArchivalUnit(plugin, mau);
+    }
+  }    
+
+  static final int C = V3Poller.POLLER_STATUS_COMPLETE;
+  static final int NC = V3Poller.POLLER_STATUS_NO_QUORUM;
+
+  public void testPollQueue() throws Exception {
+    testau.setShouldCallTopLevelPoll(false);
+
+    Properties p = new Properties();
+    p.put(PollManager.PARAM_REBUILD_POLL_QUEUE_INTERVAL, "");
+    p.put(PollManager.PARAM_POLL_QUEUE_MAX, "8");
+    p.put(PollManager.PARAM_POLL_INTERVAL_AGREEMENT_CURVE,
+	  "[50,75],[50,500]");
+    p.put(PollManager.PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT, "1;6");
+    p.put(PollManager.PARAM_TOPLEVEL_POLL_INTERVAL, "300");
+    p.put(PollManager.PARAM_MIN_POLL_ATTEMPT_INTERVAL, "1");
+
+    ConfigurationUtil.addFromProps(p);
+    theDaemon.setAusStarted(true);
+    TimeBase.setSimulated(1000);
+
+    MockArchivalUnit[] aus = makeMockAus(16);
+    registerAus(aus);
+
+    //    setAu(mau, lastStart, lastComplete, lastResult, duration, agmnt);
+    setAu(aus[0], 900, 950,  C, 5, .9);
+    setAu(aus[1], 900, 500, NC, 5, .9);
+    setAu(aus[2], 900, 950,  C, 5, .2);
+    setAu(aus[3], 900, 500, NC, 5, .2);
+
+    setAu(aus[4], 850, 950,  C, 10, .9);
+    setAu(aus[5], 850, 500, NC, 10, .9);
+    setAu(aus[6], 850, 950,  C, 10, .2);
+    setAu(aus[7], 850, 500, NC, 10, .2);
+
+    setAu(aus[ 8], 650, 750,  C, 10, .9);
+    setAu(aus[ 9], 650, 400, NC, 10, .9);
+    setAu(aus[10], 650, 750,  C, 10, .2);
+    setAu(aus[11], 650, 400, NC, 10, .2);
+
+    setAu(aus[12], 350, 450,  C, 10, .9);
+    setAu(aus[13], 350, 100, NC, 10, .9);
+    setAu(aus[14], 350, 450,  C, 10, .2);
+    setAu(aus[15], 350, 100, NC, 10, .2);
+
+    pollmanager.rebuildPollQueue();
+
+    final Map<PollManager.PollReq,Double> weightMap =
+      pollmanager.getWeightMap();
+    ArrayList<PollManager.PollReq> queued = new ArrayList(weightMap.keySet());
+    Collections.sort(queued, new Comparator<PollManager.PollReq>() {
+	public int compare(PollManager.PollReq req1,
+			   PollManager.PollReq req2) {
+	  int res = - weightMap.get(req1).compareTo(weightMap.get(req2)); 
+	  if (res == 0) {
+	    res = req1.getAu().getAuId().compareTo(req2.getAu().getAuId());
+	  }
+	  return res;
+	}});
+    List exp = ListUtil.list(aus[14], aus[10], aus[13], aus[15],
+			     aus[11], aus[9] , aus[1], aus[3],
+			     aus[5], aus[7], aus[12]);
+    assertEquals(exp, ausOfReqs(queued));
+    List queue = pollmanager.pollQueue;
+    assertEquals(8, queue.size());
+    assertTrue(queue+"", exp.containsAll(ausOfReqs(queue)));
+  }
+
+  List<ArchivalUnit> ausOfReqs(List<PollManager.PollReq> reqs) {
+    List<ArchivalUnit> res = new ArrayList();
+    for (PollManager.PollReq req : reqs) {
+      res.add(req.getAu());
+    }
+    return res;
+  }
+
   public void testAtRiskMap() throws Exception {
     String p1 = "TCP:[127.0.0.1]:12";
     String p2 = "TCP:[127.0.0.2]:12";
@@ -427,11 +537,13 @@ public class TestPollManager extends LockssTestCase {
 
   //  Local mock classes
 
-  // LocalMockPollManager allows us to override the PollFactory
+  // MyPollManager allows us to override the PollFactory
   // used for a particular protocol,  and to override the
   // sendMessage() method.
-  static class LocalMockPollManager extends PollManager {
+  static class MyPollManager extends PollManager {
     LcapMessage msgSent = null;
+    Map weightMap;
+
     public void setPollFactory(int i, PollFactory fact) {
       pf[i] = fact;
     }
@@ -439,12 +551,24 @@ public class TestPollManager extends LockssTestCase {
         throws IOException {
       msgSent = msg;
     }
+
+    @Override
+    protected List weightedRandomSelection(Map weightMap, int n) {
+      log.debug("weightMap: " + weightMap);
+      this.weightMap = weightMap;
+      return super.weightedRandomSelection(weightMap, n);
+    }
+
+    Map getWeightMap() {
+      return weightMap;
+    }
   }
 
-  // LocalMockV1PollFactory allows us to override the
+
+  // MyV1PollFactory allows us to override the
   // canHashBeScheduledBefore() method and avoid the
   // complexity of mocking the hasher and scheduler.
-  static class LocalMockV1PollFactory extends V1PollFactory {
+  static class MyV1PollFactory extends V1PollFactory {
     long bytesPerMsHashEstimate = 0;
     long slowestHashSpeed = 0;
     Deadline minPollDeadline = Deadline.EXPIRED;
@@ -473,14 +597,15 @@ public class TestPollManager extends LockssTestCase {
 
   private void initRequiredServices() {
     theDaemon = getMockLockssDaemon();
-    pollmanager = new LocalMockPollManager();
+    pollmanager = new MyPollManager();
     pollmanager.initService(theDaemon);
     theDaemon.setPollManager(pollmanager);
     idmanager = theDaemon.getIdentityManager();
 
     theDaemon.getPluginManager();
-    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    ((MockArchivalUnit)testau).setPlugin(new MockPlugin());
+    testau =
+      (MockArchivalUnit)PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    testau.setPlugin(new MockPlugin(theDaemon));
     PluginTestUtil.registerArchivalUnit(testau);
 
     Properties p = new Properties();
