@@ -469,8 +469,9 @@ class RepairFromPeerV3TestCase(V3TestCase):
     def getTestLocalConf(self):
         # ALWAYS repair from a cache
         ## Enable polling on all peers.
-        return {"org.lockss.poll.v3.repairFromCachePercent": "100",
+        return {"org.lockss.poll.v3.repairFromCachePercent":"100",
                 "org.lockss.poll.v3.enableV3Poller":"true",
+                "org.lockss.poll.v3.toplevelPollInterval":"10",
                 "org.lockss.poll.minPollAttemptInterval":"10"
                 }
 
