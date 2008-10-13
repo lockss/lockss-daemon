@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_notes</string>
@@ -31,7 +31,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sarchive\.php&quot;, base_url</string>
+      <string>1,&quot;^%sarchive\.php$&quot;, base_url</string>
       <string>1,&quot;^%sarticles/%s-&quot;, base_url, issues</string>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
