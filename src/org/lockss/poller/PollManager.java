@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.199.2.2 2008-10-11 07:56:48 tlipkis Exp $
+ * $Id: PollManager.java,v 1.199.2.3 2008-10-15 06:51:03 tlipkis Exp $
  */
 
 /*
@@ -338,6 +338,13 @@ public class PollManager
     theHashService = theDaemon.getHashService();
     theAlertManager = theDaemon.getAlertManager();
     pluginMgr = theDaemon.getPluginManager();
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (config.containsKey(PARAM_AT_RISK_AU_INSTANCES)) {
+      atRiskAuInstances =
+	makeAuPeersMap(config.getList(PARAM_AT_RISK_AU_INSTANCES),
+		       theIDManager);
+    }
 
     // register a message handler with the router
     theRouter = theDaemon.getRouterManager();
@@ -1073,9 +1080,11 @@ public class PollManager
 			 e);
 	}
       }
-      if (changedKeys.contains(PARAM_AT_RISK_AU_INSTANCES)) {
+      if (changedKeys.contains(PARAM_AT_RISK_AU_INSTANCES) &&
+	  theIDManager != null) {
 	atRiskAuInstances =
-	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES));
+	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES),
+			 theIDManager);
       }
       if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
 	v3InvitationWeightAgeCurve =
@@ -1142,7 +1151,8 @@ public class PollManager
     }
   }
 
-  AuPeersMap makeAuPeersMap(Collection<String> auPeersList) {
+  AuPeersMap makeAuPeersMap(Collection<String> auPeersList,
+			    IdentityManager idMgr) {
     AuPeersMap res = new AuPeersMap();
     for (String oneAu : auPeersList) {
       List<String> lst = StringUtil.breakAt(oneAu, ',', -1, true, true);
@@ -1154,7 +1164,7 @@ public class PollManager
 	    auid = s;
 	  } else {
 	    try {
-	      PeerIdentity pid = theIDManager.stringToPeerIdentity(s);
+	      PeerIdentity pid = idMgr.stringToPeerIdentity(s);
 	      peers.add(pid);
 	    } catch (IdentityManager.MalformedIdentityKeyException e) {
 	      theLog.warning("Bad peer on at risk list for " + auid, e);
