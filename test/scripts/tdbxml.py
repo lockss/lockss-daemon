@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.1 2008-10-15 00:59:53 thib_gc Exp $
+# $Id: tdbxml.py,v 1.2 2008-10-15 02:03:49 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,6 +27,10 @@
 # in this Software without prior written authorization from Stanford University.
 
 from tdbconst import *
+
+def __escape(str):
+    from xml.sax import saxutils
+    return saxutils.escape(str)
 
 def __preamble(tdb, options):
     if options.style == STYLE_XML_ENTRIES: return
@@ -67,17 +71,44 @@ def __preamble(tdb, options):
 ]>
 '''
 
-def __escape(str):
-    from xml.sax import saxutils
-    return saxutils.escape(str)
-
 def __introduction(tdb, options):
     if options.style == STYLE_XML_ENTRIES: return
     print '''<lockss-config>
 '''
 
-def __process(tdb, options):
+def __process_au(au, options):
     pass
+
+def __process(tdb, options):
+    current_pub = None
+    if options.style == STYLE_XML_LEGACY:
+        print ''' <property name="org.lockss.title">
+'''
+    for au in tdb.aus():
+        if options.style == STYLE_XML and current_pub is not au.title().publisher():
+            if current_pub is not None:
+                print ''' </property>
+'''
+            current_pub = au.title().publisher()
+            print ''' <property name="org.lockss.titleSet">
+
+  <property name="%(pubname)s">
+   <property name="name" value="All %(pubname)s Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='%(pubname)s']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+''' % { 'pubname' : __escape(current_pub.name()) }
+        __process_au(au, options)
+    else:
+        if options.style == STYLE_XML: print ''' </property>
+'''             
+    if options.style == STYLE_XML_LEGACY:
+        print ''' </property>
+'''
 
 def __conclusion(tdb, options):
     if options.style == STYLE_XML_ENTRIES: return
