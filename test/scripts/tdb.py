@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.3 2008-08-08 22:11:48 thib_gc Exp $
+# $Id: tdb.py,v 1.4 2008-10-15 00:59:53 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -132,12 +132,3 @@ class Tdb(object):
         print repr(self.publishers())
         print self.titles()
         print self.aus()
-
-#if __name__ == '__main__':
-#    from tdbparse import TdbScanner, TdbParser
-#    from sys import stdin
-#    tdb = Tdb()
-#    scanner = TdbScanner(stdin)
-#    parser = TdbParser(scanner)
-#    tdb = parser.parse()
-#    tdb.internal_print()
