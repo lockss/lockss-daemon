@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.58 2008-09-19 14:14:35 dshr Exp $
+ * $Id: ConfigManager.java,v 1.58.4.1 2008-10-15 06:50:51 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.URL;
 
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.PredicateUtils;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.app.*;
 import org.lockss.clockss.*;
 import org.lockss.daemon.*;
@@ -73,6 +74,11 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
   public static final String DEFAULT_CONFIG_PATH = "config";
 
+  /** When logging new or changed config, truncate val at this length */
+  static final String PARAM_MAX_LOG_VAL_LEN =
+    MYPREFIX + "maxLogValLen";
+  static final int DEFAULT_MAX_LOG_VAL_LEN = 2000;
+
   /** Config param written to local config files to indicate file version */
   static final String PARAM_CONFIG_FILE_VERSION =
     MYPREFIX + "fileVersion.<filename>";
@@ -92,6 +98,10 @@ public class ConfigManager implements LockssManager {
   /** List of URLs of title DBs */
   public static final String PARAM_TITLE_DB_URLS =
     Configuration.PREFIX + "titleDbs";
+
+  /** List of URLs of auxilliary config files */
+  public static final String PARAM_AUX_PROP_URLS =
+    Configuration.PREFIX + "auxPropUrls";
 
   /** Common prefix of platform config params */
   public static final String PLATFORM = Configuration.PLATFORM;
@@ -198,6 +208,7 @@ public class ConfigManager implements LockssManager {
   private List configUrlList;		// list of config file urls
   // XXX needs synchronization
   private List titledbUrlList;		// global titledb urls
+  private List auxPropUrlList;		// auxilliary prop files
   private List pluginTitledbUrlList;	// list of titledb urls (usually
 					// jar:) specified by plugins
   private List userTitledbUrlList;	// titledb urls added from UI
@@ -669,6 +680,8 @@ public class ConfigManager implements LockssManager {
     List configGens = getConfigGenerations(urls, true, reload, "props");
     res.addAll(configGens);
 
+    res.addAll(getConfigGenerations(auxPropUrlList, false, reload,
+				    "auxilliary props"));
     res.addAll(getConfigGenerations(titledbUrlList, false, reload,
 				    "global titledb", titleDbOnlyPred));
     res.addAll(getConfigGenerations(pluginTitledbUrlList, false, reload,
@@ -904,13 +917,17 @@ public class ConfigManager implements LockssManager {
     // always reloading the first time.
     if (oldConfig.isEmpty()
 	? (config.containsKey(PARAM_USER_TITLE_DB_URLS)
-	   || config.containsKey(PARAM_TITLE_DB_URLS))
+	   || config.containsKey(PARAM_TITLE_DB_URLS)
+	   || config.containsKey(PARAM_AUX_PROP_URLS))
 	: (changedKeys.contains(PARAM_USER_TITLE_DB_URLS)
-	   || changedKeys.contains(PARAM_TITLE_DB_URLS))) {
+	   || changedKeys.contains(PARAM_TITLE_DB_URLS)
+	   || changedKeys.contains(PARAM_AUX_PROP_URLS))) {
       userTitledbUrlList = config.getList(PARAM_USER_TITLE_DB_URLS);
       titledbUrlList = config.getList(PARAM_TITLE_DB_URLS);
+      auxPropUrlList = config.getList(PARAM_AUX_PROP_URLS);
       log.debug("titledbUrlList: " + titledbUrlList +
-		", userTitledbUrlList: " + userTitledbUrlList);
+		", userTitledbUrlList: " + userTitledbUrlList +
+		", auxPropUrlList: " + auxPropUrlList);
       // Currently this requires a(nother immediate) reload.
       needImmediateReload = true;
     }
@@ -1083,6 +1100,8 @@ public class ConfigManager implements LockssManager {
   private void logConfig(Configuration config,
 			 Configuration oldConfig,
 			 Configuration.Differences diffs) {
+    int maxLogValLen = config.getInt(PARAM_MAX_LOG_VAL_LEN,
+				     DEFAULT_MAX_LOG_VAL_LEN);
     Set diffSet = diffs.getDifferenceSet();
     SortedSet keys = new TreeSet(diffSet != null ? diffSet : config.keySet());
     int numDiffs = keys.size();
@@ -1092,7 +1111,8 @@ public class ConfigManager implements LockssManager {
 	  (!key.startsWith(PARAM_TITLE_DB) &&
 	   !key.startsWith(PluginManager.PARAM_AU_TREE))) {
 	if (config.containsKey(key)) {
-	  log.debug(key + " = " + config.get(key));
+	  String val = config.get(key);
+	  log.debug(key + " = " + StringUtils.abbreviate(val, maxLogValLen));
 	} else if (oldConfig.containsKey(key)) {
 	  log.debug(key + " (removed)");
 	}
