@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.9 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: MockPollSpec.java,v 1.10 2008-10-24 07:11:44 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class MockPollSpec extends PollSpec {
   private static Logger log = Logger.getLogger("MockPollSpec");
 
   private String overridePluginVersion = null;
+  private boolean nullCUS = false;
 
   /**
    * Constructor for a "mock" poll spec, for debugging
@@ -101,6 +102,17 @@ public class MockPollSpec extends PollSpec {
 
   public void setPluginVersion(String version) {
     overridePluginVersion = version;
+  }
+
+  public void setNullCUS(boolean val) {
+    nullCUS = val;
+  }
+
+  public CachedUrlSet getCachedUrlSet() {
+    if (nullCUS) {
+      return null;
+    }
+    return super.getCachedUrlSet();
   }
 
   private static CachedUrlSet makeCus(String auId, String url,

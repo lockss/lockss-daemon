@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.26 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.27 2008-10-24 07:11:44 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,6 @@ public class V3PollFactory extends BasePollFactory {
   public static final float DEFAULT_ACCEPT_REPAIRERS_POLL_PERCENT = 0.9f;
     
 
-  private LockssDaemon daemon;
   private PollManager pollMgr;
   protected IdentityManager idMgr;
 
@@ -109,6 +108,8 @@ public class V3PollFactory extends BasePollFactory {
 
   protected void sendNak(LockssDaemon daemon, PollNak nak,
 			 String auid, V3LcapMessage msg) {
+    IdentityManager idMgr = daemon.getIdentityManager();
+
     V3LcapMessage response =
       new V3LcapMessage(auid, msg.getKey(),
 			msg.getPluginVersion(), null, null,
@@ -133,8 +134,7 @@ public class V3PollFactory extends BasePollFactory {
                              PeerIdentity orig, long duration,
                              String hashAlg, LcapMessage msg)
       throws ProtocolException {
-    if (daemon == null) {
-      daemon = pollMgr.getDaemon();
+    if (idMgr == null) {
       idMgr = daemon.getIdentityManager();
     }
 
@@ -144,8 +144,10 @@ public class V3PollFactory extends BasePollFactory {
     // check for presence of item in the cache
     if (cus == null) {
       log.debug("Ignoring poll request, don't have AU: " + pollspec.getAuId());
-      sendNak(daemon, PollNak.NAK_NO_AU,
-	      pollspec.getAuId(), (V3LcapMessage)msg);
+      
+      PollNak reason =
+	daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
+      sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
       return null;
     }
     ArchivalUnit au = cus.getArchivalUnit();
