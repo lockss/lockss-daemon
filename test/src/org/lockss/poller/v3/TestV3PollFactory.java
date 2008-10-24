@@ -172,6 +172,30 @@ public class TestV3PollFactory extends LockssTestCase {
 		 thePollFactory.naks);
   }
    
+  public void testNoVoteIfNoAu() throws Exception {
+    aus.setLastCrawlTime(-1);
+    theDaemon.setAusStarted(true);
+    ps.setNullCUS(true);
+    Poll p = thePollFactory.createPoll(ps, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNull(p);
+    assertEquals(ListUtil.list(ListUtil.list(PollNak.NAK_NO_AU,
+					     testAu.getAuId())),
+		 thePollFactory.naks);
+  }
+   
+  public void testNoVoteIfNoAuAndNotStarted() throws Exception {
+    aus.setLastCrawlTime(-1);
+    theDaemon.setAusStarted(false);
+    ps.setNullCUS(true);
+    Poll p = thePollFactory.createPoll(ps, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNull(p);
+    assertEquals(ListUtil.list(ListUtil.list(PollNak.NAK_NOT_READY,
+					     testAu.getAuId())),
+		 thePollFactory.naks);
+  }
+   
   private String[] peerNames = {
     "TCP:[10.1.0.0]:3141", "TCP:[10.1.0.1]:3141",
     "TCP:[10.1.0.2]:3141", "TCP:[10.1.0.3]:3141",

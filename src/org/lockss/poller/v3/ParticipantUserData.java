@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.20 2008-07-22 07:17:59 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.21 2008-10-24 07:11:19 tlipkis Exp $
  */
 
 /*
@@ -400,6 +400,10 @@ public class ParticipantUserData implements LockssSerializable {
 
   void removeParticipant() {
     poller.removeParticipant(voterId);
+  }
+
+  void removeParticipant(PollNak nak) {
+    poller.removeParticipant(voterId, nak);
   }
 
   /*

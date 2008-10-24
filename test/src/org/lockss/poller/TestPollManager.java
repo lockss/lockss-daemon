@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.95 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.96 2008-10-24 07:11:18 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.repository.*;
 
@@ -380,6 +381,64 @@ public class TestPollManager extends LockssTestCase {
 		 pollmanager.getPeersWithAuAtRisk(mau1));
     assertEquals(SetUtil.set(peer2, peer3, peer4),
 		 pollmanager.getPeersWithAuAtRisk(mau2));
+  }
+
+  public void testUpdateNoAuSet() throws Exception {
+    String p1 = "TCP:[127.0.0.1]:12";
+    String p2 = "TCP:[127.0.0.2]:12";
+    PeerIdentity peer1 = idmanager.stringToPeerIdentity(p1);
+    PeerIdentity peer2 = idmanager.stringToPeerIdentity(p2);
+    List<PeerIdentity> both = ListUtil.list(peer1, peer2);
+
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_NO_AU_RESET_INTERVAL_CURVE,
+ 				  "[2000,500],[10000,500],[10000,5000]");
+
+    TimeBase.setSimulated(1000);
+    String auid = "auid111";
+    MockPlugin plugin = new MockPlugin(theDaemon);
+    MockArchivalUnit mau = new MockArchivalUnit(plugin, auid);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
+    MockAuState maus = new MockAuState();
+    nodeMgr.setAuState(maus);
+    File file = FileTestUtil.tempFile("noau");
+    DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(file, idmanager);
+    assertTrue(noAuSet.isEmpty());
+    assertTrue(noAuSet.getDate() < 0);
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.isEmpty());
+    assertTrue(noAuSet.getDate() < 0);
+    maus.setAuCreationTime(1000);
+    noAuSet.addAll(both);
+    noAuSet.setDate(TimeBase.nowMs());
+    assertTrue(noAuSet.containsAll(both));
+
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.containsAll(both));
+
+    TimeBase.step(1000);
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.isEmpty());
+    noAuSet.addAll(both);
+    noAuSet.setDate(TimeBase.nowMs());
+    assertTrue(noAuSet.containsAll(both));
+    TimeBase.step(499);
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.containsAll(both));
+    TimeBase.step(1);
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.isEmpty());
+    TimeBase.step(12000);
+    noAuSet.addAll(both);
+    noAuSet.setDate(TimeBase.nowMs());
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.containsAll(both));
+    TimeBase.step(4999);
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.containsAll(both));
+    TimeBase.step(1);
+    pollmanager.updateNoAuSet(mau, noAuSet);
+    assertTrue(noAuSet.isEmpty());
   }
 
   // XXX:  Move these tests to TestV1PollFactory

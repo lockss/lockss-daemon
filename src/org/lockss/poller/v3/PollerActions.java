@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.26 2008-10-02 07:42:46 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.27 2008-10-24 07:11:19 tlipkis Exp $
  */
 
 /*
@@ -139,12 +139,12 @@ public class PollerActions {
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtFinalize;
     IdentityManager idMgr = ud.getPoller().getIdentityManager();
-    ud.setStatus(V3Poller.PEER_STATUS_DECLINED_POLL,
-		 ud.getPollNak().toString());
-    ud.removeParticipant();
-    log.info("Removed peer " + ud.getVoterId() + " from peer list becase "
-             + "it declined the poll.");
-    idMgr.getPeerIdentityStatus(ud.getVoterId()).rejectedPoll(ud.getPollNak());
+    PeerIdentity peer = ud.getVoterId();
+    PollNak nak = ud.getPollNak();
+    ud.setStatus(V3Poller.PEER_STATUS_DECLINED_POLL, nak.toString());
+    ud.removeParticipant(nak);
+    log.debug("Peer declined poll: " + peer + ", " + nak.toString());
+    idMgr.getPeerIdentityStatus(peer).rejectedPoll(ud.getPollNak());
     return V3Events.evtFinalize;
   }
 

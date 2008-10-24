@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.32 2008-10-05 05:54:30 tlipkis Exp $
+ * $Id: PollerStateBean.java,v 1.33 2008-10-24 07:11:19 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,8 @@ public class PollerStateBean implements LockssSerializable {
   private RepairQueue repairQueue;
   private boolean hashStarted;
   private Collection votedPeers;
+  /** List of peers who have said they don't have the AU */
+  private Collection<PeerIdentity> noAuPeers;
   private TallyStatus tallyStatus;
   private String errorDetail; // If non-null, detailed error information to
 			      // be displayed in the status table
@@ -281,6 +283,17 @@ public class PollerStateBean implements LockssSerializable {
     synchronized(votedPeers) {
       return votedPeers.size();
     }
+  }
+
+  public void addNoAuPeer(PeerIdentity id) {
+    if (noAuPeers == null) {
+      noAuPeers = new ArrayList();
+    }
+    noAuPeers.add(id);
+  }
+
+  public Collection<PeerIdentity> getNoAuPeers() {
+    return noAuPeers;
   }
 
   public int getOuterCircleTarget() {

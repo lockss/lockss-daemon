@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.89 2008-10-05 07:38:37 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.90 2008-10-24 07:11:19 tlipkis Exp $
  */
 
 /*
@@ -1837,12 +1837,19 @@ public class V3Poller extends BasePoll {
    * @param id
    */
 
-
   void removeParticipant(PeerIdentity id) {
     removeParticipant(id, -1);
   }
 
+  void removeParticipant(PeerIdentity id, PollNak nak) {
+    removeParticipant(id, -1, nak);
+  }
+
   void removeParticipant(PeerIdentity id, int peerStatus) {
+    removeParticipant(id, peerStatus, null);
+  }
+
+  void removeParticipant(PeerIdentity id, int peerStatus, PollNak nak) {
     log.debug("Removing voter " + id + " from poll " +
               pollerState.getPollKey());
     try {
@@ -1861,6 +1868,9 @@ public class V3Poller extends BasePoll {
         theParticipants.remove(id);
 	synchronized (exParticipants) {
 	  exParticipants.put(id, ud);
+	}
+	if (nak == PollNak.NAK_NO_AU) {
+	  pollerState.addNoAuPeer(id);
 	}
         checkpointPoll();
       }
@@ -2000,6 +2010,26 @@ public class V3Poller extends BasePoll {
     return res;
   }
 
+  DatedPeerIdSet getNoAuPeers() {
+    HistoryRepository historyRepo = theDaemon.getHistoryRepository(getAu());
+    DatedPeerIdSet noAuSet = historyRepo.getNoAuPeers();
+    if (true || noAuSet != null) {
+      try {
+	noAuSet.load();
+	if (!noAuSet.isEmpty()) {
+	  pollManager.updateNoAuSet(getAu(), noAuSet);
+	}
+      } catch (IOException e) {
+	log.error("Failed to load no AU set", e);
+      } finally {
+	noAuSet.release();
+	noAuSet = null;
+      }
+    }	
+    return noAuSet;
+  }
+
+
   private Map availablePeers = null;	// maps peerid to invitation weight
 
   /** Build availablePeers map, or trim it if it already exists.  Map will
@@ -2007,24 +2037,34 @@ public class V3Poller extends BasePoll {
    * poll.  */
   synchronized Map getAvailablePeers() {
     if (availablePeers == null) {
+      // load list of peers who have recently said they don't have the AU
+      DatedPeerIdSet noAuSet = getNoAuPeers();
+
       // first build list of eligible peers
       Collection<PeerIdentity> allPeers;
-      if (enableDiscovery) {
-	allPeers = idManager.getTcpPeerIdentities(eligiblePred);
-      } else {
-	Collection<String> keys =
-	  CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
-				IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
-	allPeers = new ArrayList();
-	for (String key : keys) {
-	  try {
-	    PeerIdentity id = idManager.findPeerIdentity(key);
-	    if (isPeerEligible(id)) {
-	      allPeers.add(id);
+      try {
+	if (enableDiscovery) {
+	  allPeers =
+	    idManager.getTcpPeerIdentities(new EligiblePredicate(noAuSet));
+	} else {
+	  Collection<String> keys =
+	    CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+				  IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
+	  allPeers = new ArrayList();
+	  for (String key : keys) {
+	    try {
+	      PeerIdentity id = idManager.findPeerIdentity(key);
+	      if (isPeerEligible(id, noAuSet)) {
+		allPeers.add(id);
+	      }
+	    } catch (IdentityManager.MalformedIdentityKeyException e) {
+	      log.warning("Can't add to inner circle: " + key, e);
 	    }
-	  } catch (IdentityManager.MalformedIdentityKeyException e) {
-	    log.warning("Can't add to inner circle: " + key, e);
 	  }
+	}
+      } finally {
+	if (noAuSet != null) {
+	  noAuSet.release();
 	}
       }
       // then build map including invitation weight for each peer.
@@ -2049,10 +2089,16 @@ public class V3Poller extends BasePoll {
     return availablePeers;
   }
 
-  Predicate eligiblePred = new Predicate() {
-      public boolean evaluate(Object obj) {
+  class EligiblePredicate implements Predicate {
+    private DatedPeerIdSet noAuSet;
+
+    EligiblePredicate(DatedPeerIdSet noAuSet) {
+      this.noAuSet = noAuSet;
+    }
+
+    public boolean evaluate(Object obj) {
 	if (obj instanceof PeerIdentity) {
-	  return isPeerEligible((PeerIdentity)obj);
+	  return isPeerEligible((PeerIdentity)obj, noAuSet);
 	}
 	return false;
       }};
@@ -2063,6 +2109,10 @@ public class V3Poller extends BasePoll {
   }
   
   boolean isPeerEligible(PeerIdentity pid) {
+    return isPeerEligible(pid, null);
+  }
+
+  boolean isPeerEligible(PeerIdentity pid, DatedPeerIdSet noAuSet) {
     // never include a local id.
     if (pid.isLocalIdentity()) {
       return false;
@@ -2082,6 +2132,14 @@ public class V3Poller extends BasePoll {
     // don't include peers on our subnet if told not to
     if (pollManager.isNoInvitationSubnet(pid)) {
       return false;
+    }
+
+    try {
+      if (noAuSet != null && noAuSet.contains(pid)) {
+	return false;
+      }
+    } catch (IOException e) {
+      // impossible with loaded PersistentPeerIdSet
     }
 
     PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
@@ -2252,6 +2310,25 @@ public class V3Poller extends BasePoll {
         invitationRequest = null;
       }
       log.debug2("Vote Tally deadline reached: " + pollerState.getPollKey());
+
+      Collection<PeerIdentity> noAuPeers = pollerState.getNoAuPeers();
+      if (noAuPeers != null && !noAuPeers.isEmpty()) {
+	HistoryRepository historyRepo = theDaemon.getHistoryRepository(getAu());
+	DatedPeerIdSet noAuSet = historyRepo.getNoAuPeers();
+	if (true || noAuSet != null) {
+	  try {
+	    log.debug("Adding to no AU peers: " + noAuPeers);
+	    noAuSet.load();
+	    noAuSet.addAll(noAuPeers);
+	    if (noAuSet.getDate() < 0) {
+	      noAuSet.setDate(TimeBase.nowMs());
+	    }
+	    noAuSet.store(true);
+	  } catch (IOException e) {
+	    log.error("Failed to update no AU set", e);
+	  }
+	}	
+      }
 
       // Prune "theParticipants", and remove any who have not cast a vote.
       // Iterate over a COPY of the participants, to avoid concurrent

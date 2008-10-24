@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.199 2008-10-02 07:42:05 tlipkis Exp $
+ * $Id: PollManager.java,v 1.200 2008-10-24 07:11:19 tlipkis Exp $
  */
 
 /*
@@ -184,6 +184,13 @@ public class PollManager
   public static final List DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT =
     Collections.EMPTY_LIST;
 
+  /** Curve giving reset interval of NoAuPeerIdSet as a function of AU
+   * age */
+  public static final String PARAM_NO_AU_RESET_INTERVAL_CURVE =
+    V3PREFIX + "noAuResetIntervalCurve";
+  public static final String DEFAULT_NO_AU_RESET_INTERVAL_CURVE =
+    "[1w,2d],[1w,7d],[30d,7d],[30d,30d],[100d,30d],[100d,50d]";
+
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
 
@@ -248,6 +255,7 @@ public class PollManager
     DEFAULT_INVITATION_WEIGHT_AT_RISK;
   private double paramInvitationWeightAlreadyRepairable =
     DEFAULT_INVITATION_WEIGHT_ALREADY_REPAIRABLE;
+  private CompoundLinearSlope v3NoAuResetIntervalCurve = null;
 
   public class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
 
@@ -1125,6 +1133,13 @@ public class PollManager
 			     PARAM_NOMINATION_WEIGHT_AGE_CURVE,
 			     DEFAULT_NOMINATION_WEIGHT_AGE_CURVE);
       }
+      if (changedKeys.contains(PARAM_NO_AU_RESET_INTERVAL_CURVE)) {
+	v3NoAuResetIntervalCurve =
+	  processWeightCurve("V3 no-AU reset interval curve",
+			     newConfig,
+			     PARAM_NO_AU_RESET_INTERVAL_CURVE,
+			     DEFAULT_NO_AU_RESET_INTERVAL_CURVE);
+      }
     }
     long scommTimeout =
       newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
@@ -1255,6 +1270,27 @@ public class PollManager
   public boolean isNoInvitationSubnet(PeerIdentity pid) {
     IpFilter filter = getNoInvitationSubnetFilter();
     return filter != null && pid.getPeerAddress().isAllowed(filter);
+  }
+
+  /** Clear the noAuSet if it's older than the interval specified as a
+   * function of the AU's age by v3NoAuResetIntervalCurve */
+  public void updateNoAuSet(ArchivalUnit au, DatedPeerIdSet noAuSet) {
+    try {
+      long lastTimestamp = noAuSet.getDate();
+      if (lastTimestamp < 0) {
+	return;
+      }
+      AuState state = AuUtil.getAuState(au);
+      long auAge = TimeBase.msSince(state.getAuCreationTime());
+      long threshold = (long)Math.round(v3NoAuResetIntervalCurve.getY(auAge));
+      if (TimeBase.msSince(lastTimestamp) >= threshold) {
+	noAuSet.clear();
+	noAuSet.store(false);
+      }
+    } catch (IOException e) {
+      // impossible with loaded PersistentPeerIdSet
+      theLog.warning("Impossible error in loaded PersistentPeerIdSet", e);
+    }
   }
 
   public PollFactory getPollFactory(PollSpec spec) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.21 2008-10-02 07:42:46 tlipkis Exp $
+ * $Id: MockAuState.java,v 1.22 2008-10-24 07:11:18 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class MockAuState extends AuState {
 
   HashSet crawlUrls = new HashSet();
   int updatedCrawlUrlsCalled = 0;
+  private long auCreate = -1;
 
   public MockAuState(ArchivalUnit au) {
     this(au, -1, -1, -1, new MockHistoryRepository());
@@ -76,6 +77,17 @@ public class MockAuState extends AuState {
                      HistoryRepository historyRepo) {
     super(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollStart,
 	  lastTreeWalk, crawlUrls, 0, 1.0, historyRepo);
+  }
+
+  public long getAuCreationTime() {
+    if (auCreate >= 0) {
+      return auCreate;
+    }
+    return super.getAuCreationTime();
+  }
+
+  public void setAuCreationTime(long time) {
+    auCreate = time;
   }
 
   public void setLastCrawlTime(long newCrawlTime) {

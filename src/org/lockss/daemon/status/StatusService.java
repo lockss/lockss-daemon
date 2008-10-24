@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.14 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: StatusService.java,v 1.15 2008-10-24 07:11:19 tlipkis Exp $
  */
 
 /*
@@ -181,6 +181,9 @@ public interface StatusService {
   public class NoSuchTableException extends Exception {
     public NoSuchTableException(String msg) {
       super(msg);
+    }
+    public NoSuchTableException(String msg, Exception cause) {
+      super(msg, cause);
     }
   }
 

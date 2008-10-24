@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.75 2008-10-05 07:38:52 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.76 2008-10-24 07:11:18 tlipkis Exp $
  */
 
 /*
@@ -26,6 +26,7 @@
 
 package org.lockss.state;
 
+import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.net.MalformedURLException;
@@ -75,6 +76,7 @@ public class ArchivalUnitStatus
       "ArchivalUnitStatusTable";
   public static final String AUIDS_TABLE_NAME = "AuIds";
   public static final String AU_STATUS_TABLE_NAME = "ArchivalUnitTable";
+  public static final String NO_AU_PEERS_TABLE_NAME = "NoAuPeers";
   public static final String PEERS_VOTE_TABLE_NAME = "PeerVoteSummary";
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
 
@@ -109,6 +111,8 @@ public class ArchivalUnitStatus
                                       new AuIds(theDaemon));
     statusServ.registerStatusAccessor(AU_STATUS_TABLE_NAME,
                                       new AuStatus(theDaemon));
+    statusServ.registerStatusAccessor(NO_AU_PEERS_TABLE_NAME,
+                                      new NoAuPeers(theDaemon));
     statusServ.registerStatusAccessor(PEERS_VOTE_TABLE_NAME,
                                       new PeerVoteSummary(theDaemon));
     statusServ.registerStatusAccessor(PEERS_REPAIR_TABLE_NAME,
@@ -121,6 +125,7 @@ public class ArchivalUnitStatus
     LockssDaemon theDaemon = getDaemon();
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(NO_AU_PEERS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(AU_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PEERS_VOTE_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PEERS_REPAIR_TABLE_NAME);
@@ -867,6 +872,67 @@ public class ArchivalUnitStatus
 	new StatusTable.Reference(value, AU_STATUS_TABLE_NAME, key);
 //       ref.setProperty("numrows", Integer.toString(defaultNumRows));
       return ref;
+    }
+  }
+
+  /** list of peers that have said they don't have the AU.  Primarily for
+   * stf */
+  static class NoAuPeers extends PerAuTable {
+
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("Peer", "Peer", ColumnDescriptor.TYPE_STRING)
+      );
+
+    NoAuPeers(LockssDaemon theDaemon) {
+      super(theDaemon);
+    }
+
+    protected void populateTable(StatusTable table, ArchivalUnit au)
+        throws StatusService.NoSuchTableException {
+      HistoryRepository historyRepo = theDaemon.getHistoryRepository(au);
+      table.setTitle("Peers not holding " + au.getName());
+      DatedPeerIdSet noAuSet = historyRepo.getNoAuPeers();
+      try {
+	noAuSet.load();
+	table.setSummaryInfo(getSummaryInfo(au, noAuSet));
+	table.setColumnDescriptors(columnDescriptors);
+	table.setRows(getRows(table, au, noAuSet));
+      } catch (IOException e) {
+	String msg = "Couldn't load NoAuSet";
+	logger.warning(msg, e);
+	throw new StatusService.NoSuchTableException(msg, e);
+      } finally {
+	noAuSet.release();
+      }
+    }
+
+
+    private List getRows(StatusTable table, ArchivalUnit au,
+			 DatedPeerIdSet noAuSet) {
+      List rows = new ArrayList();
+      try {
+	logger.info("noAuSet.size(): " + noAuSet.size());
+      } catch (IOException e) {
+	logger.error("noAuSet.size()", e);
+      }
+      for (PeerIdentity pid : noAuSet) {
+	logger.info("pid: " + pid);
+	Map row = new HashMap();
+	row.put("Peer", pid.getIdString());
+        rows.add(row);
+      }
+      return rows;
+    }
+    private List getSummaryInfo(ArchivalUnit au, DatedPeerIdSet noAuSet) {
+      List res = new ArrayList();
+      try {
+	res.add(new StatusTable.SummaryInfo("Last cleared",
+					    ColumnDescriptor.TYPE_DATE,
+					    noAuSet.getDate()));
+      } catch (IOException e) {
+	logger.warning("Couldn't get date", e);
+      }
+      return res;
     }
   }
 
