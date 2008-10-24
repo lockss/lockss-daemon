@@ -918,6 +918,9 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         ## Enable polling on all peers.
         return {"org.lockss.poll.v3.enableV3Poller":"true"}
 
+    def getDaemonCount(self):
+        return V3TestCase.getDaemonCount(self) + 1
+
     def runTest(self):
         
         ## Define a simulated AU
@@ -925,12 +928,17 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
                             numFiles=30, protocolVersion=3)
 
         victim = self.victim
+        noAuClient = self.clients[len(self.clients) - 1]
+        self.clients.remove(noAuClient)
         
         ## Create simulated AUs
         self.createAus(simAu)
 
         ## Assert that the AUs have been crawled.
 	self.crawlAus(simAu)
+
+        ## Deactivate AU on one client
+#        noAuClient.deactivateAu(simAu)
 
         nodeList = victim.getAuNodesWithContent(simAu)
 
@@ -946,6 +954,8 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
             assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
                    ("Client on port %s never won V3 poll" % c.port)
             log.info("Client on port %s won V3 poll..." % c.port)
+
+        assert victim.getNoAuPeers(simAu) == [ noAuClient.getPeerId() ], "NoAUPeer not recorded."
 
         log.info("Backing up cache configuration on victim cache...")
         victim.backupConfiguration()
@@ -1000,6 +1010,7 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
 
         # These should be equal AU IDs, so both should return true
         assert victim.hasAu(simAu)
+        assert victim.isPublisherDown(simAu)
         
         # expect to see a V3 poll called
         log.info("Waiting for a V3 poll.")

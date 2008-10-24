@@ -550,7 +550,7 @@ class Client:
             Used in testing complete loss recovery via V3 """
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row['auId'], au) and row['status'] == "Complete":
+            if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
                 # Found the right entry
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
@@ -576,12 +576,20 @@ class Client:
     def hasWonV3Poll(self, au):
         """ Return true if a poll has been called, and no repairs have been made. """
         return self.isV3Repaired(au, [])
-    
+
+# XXX look for poll w/ high agreement?
+#         tab = self.getAuV3Pollers(au)
+#         for row in tab:
+#             if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete" and row['agreement'] > nnn:
+#                 # Found the right entry
+#                 pollKey = row['pollId']['key']
+#                 (summary, table) = self.getV3PollerDetail(pollKey)
+
     def isV3Repaired(self, au, nodeList=[]):
         """ Return true if the given content node has been repaired via V3 """
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row['auId'], au) and row['status'] == "Complete":
+            if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
                 # Found the right entry
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
@@ -610,7 +618,7 @@ class Client:
     def isV3RepairedExtraFiles(self, au):
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row['auId'], au) and row['status'] == "Complete":
+            if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
                 # Found the right entry
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
@@ -625,7 +633,7 @@ class Client:
         from a V3 peer """
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row['auId'], au) and row['status'] == "Complete":
+            if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
                 # Found the right entry.
                 pollKey = row['pollId']['key']
                 (summary,repairTable) = self.getV3CompletedRepairsTable(pollKey)
@@ -640,7 +648,7 @@ class Client:
         from the publisher """
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row['auId'], au) and row['status'] == "Complete":
+            if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
                 # Found the right entry.
                 pollKey = row['pollId']['key']
                 log.debug("Found the right row in the V3 Pollers table.  Key: %s" % pollKey)
@@ -656,7 +664,7 @@ class Client:
     def isV3NoQuorum(self, au):
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row['auId'], au):
+            if self.isAuIdOrRef(row['auId'], au):
                 return row['status'] == "No Quorum"
         return False
 
@@ -820,6 +828,15 @@ class Client:
                               'highestHint': highestHint}
         return peerDict
 
+    def getNoAuPeers(self, au):
+        """ Return list of peers who have said they don't have the AU. """
+        (summary, table) = self.__getStatusTable('NoAuPeers', au.auId)
+        peers = []
+        for row in table:
+            peer = row['Peer']
+            peers.append(peer)
+        return peers
+
     def isDaemonReady(self):
         """ Ask DaemonStatus whether the daemon is fully started.
             When given arg idDaemonReady it returns either "true" or "false" """
@@ -838,7 +855,7 @@ class Client:
             log.debug("Got exception: %s" % e)
             return False
 
-    def isAuNameOrRef(self, auRef, au):
+    def isAuIdOrRef(self, auRef, au):
         if isinstance(auRef, types.DictType):
             if auRef['key'] == au.auId:
                 return True
@@ -863,7 +880,7 @@ class Client:
         """ Return true if the client has an active V3 Poller """
         tab = self.getAuV3Pollers(au)
         for row in tab:
-            if self.isAuNameOrRef(row["auId"], au):
+            if self.isAuIdOrRef(row["auId"], au):
                 return True
         # Poll wasn't found.
         return False
@@ -872,7 +889,7 @@ class Client:
         """ Return true if the client has an active V3 Poller """
         tab = self.getAuV3Voters(au)
         for row in tab:
-            if self.isAuNameOrRef(row["auId"], au):
+            if self.isAuIdOrRef(row["auId"], au):
                 return True
         # Poll wasn't found.
         return False
@@ -1797,7 +1814,7 @@ class LockssDaemon:
             oldcwd = os.getcwd()
             os.chdir(self.daemonDir)
             cmd = '%s -server -cp %s -Dorg.lockss.defaultLogLevel=debug '\
-                  'org.lockss.app.LockssDaemon %s > %s 2>&1 & '\
+                  'org.lockss.app.LockssDaemon %s >> %s 2>&1 & '\
                   'echo $! > %s/dpid'\
                   % (self.javaBin, self.cp, ' '.join(self.configList),
                      self.logfile, self.daemonDir)
