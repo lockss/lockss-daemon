@@ -1,5 +1,5 @@
 /*
- * $Id: TestCssLinkExtractor.java,v 1.4 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: TestCssLinkExtractor.java,v 1.5 2008-10-24 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -104,7 +104,8 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
       extractUrls("@import url(\'\');");
       fail("Parser did not throw a MalformedURLException on an empty URL");
     }
-    catch (MalformedURLException expected) {
+    catch (CacheException expected) {
+      assertTrue(expected.getCause() instanceof MalformedURLException);
       // all is well
     }
   }
@@ -165,7 +166,8 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
       extractUrls("@import url(\'" + badUrl + "\');");
       fail("Parser did not throw a MalformedURLException on " + badUrl);
     }
-    catch (MalformedURLException expected) {
+    catch (CacheException expected) {
+      assertTrue(expected.getCause() instanceof MalformedURLException);
       // all is well
     }
   }  

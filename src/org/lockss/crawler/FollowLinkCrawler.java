@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.70 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.71 2008-10-24 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -482,8 +482,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       } else {
 	logger.siteWarning("Couldn't parse "+uc+". ignoring error", ex);
       }
-        } catch (IOException ioe) {
-      //XXX handle this better.  Requeue?
+    } catch (IOException ioe) {
+      crawlStatus.signalErrorForUrl(uc.getUrl(), ioe.getMessage());
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
       crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
     }
