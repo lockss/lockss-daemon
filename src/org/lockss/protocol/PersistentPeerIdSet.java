@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSet.java,v 1.1 2008-02-26 01:44:06 edwardsb1 Exp $
+ * $Id: PersistentPeerIdSet.java,v 1.2 2008-10-24 07:13:18 tlipkis Exp $
  */
 
 /*
@@ -44,11 +44,12 @@ import java.util.Iterator;
  */
 
 
-public interface PersistentPeerIdSet  {
+public interface PersistentPeerIdSet extends Iterable<PeerIdentity>  {
   /* To handle direct loading and saving. */
   public void load() throws IOException;
-  public void checkpoint() throws IOException;
   public void store() throws IOException;
+  public void store(boolean release) throws IOException;
+  public void release();
 
   /* These methods are equivalents to the functions of java.util.Set. */
   public boolean add(PeerIdentity pi) throws IOException;

@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.18 2008-04-02 20:26:36 edwardsb1 Exp $
+ * $Id: MockHistoryRepository.java,v 1.19 2008-10-24 07:13:18 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,6 @@ public class MockHistoryRepository implements HistoryRepository {
     return theDamagedNodeSet;
   }
 
-
   public void storeNodeState(NodeState nodeState) {
     storedNodes.put(nodeState.getCachedUrlSet(), nodeState);
   }
@@ -160,7 +159,7 @@ public class MockHistoryRepository implements HistoryRepository {
    *    Therefore, it's an unsupported operation for now.
    * @see org.lockss.state.HistoryRepository#getDatedPeerIdSet()
    */
-  public DatedPeerIdSet getDatedPeerIdSet() {
+  public DatedPeerIdSet getNoAuPeers() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

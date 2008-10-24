@@ -3,11 +3,7 @@
  */
 package org.lockss.protocol;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashSet;
 
 import org.lockss.util.IOUtil;
@@ -46,35 +42,28 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
    */
   public void setDate(long l) throws IOException {
     loadIfNecessary();
-    m_date = l;
-    storeIfNecessary();
-  }
-  
-  
-  protected void internalLoad() throws IOException {
-    DataInputStream is = null;
-    try {
-      if (m_filePeerId.exists()) {
-        is = new DataInputStream(new FileInputStream(m_filePeerId));
-        m_date = is.readLong();
-        m_setPeerId = decode(is);
-      } else {
-        /* In the future, I recommend that this routine be allowed to
-           throw a FileNotFound exception.  */
-        m_date = k_dateDefault;
-        m_setPeerId = new HashSet<PeerIdentity>();
-      } 
-    } catch (IOException e) {
-      m_setPeerId = new HashSet<PeerIdentity>();
-    } finally { 
-      IOUtil.safeClose(is); 
+    if (m_date != l) {
+      m_date = l;
+      changed = true;
+      storeIfNecessary();
     }
   }
-
-
-  protected void encode(DataOutputStream dos) throws IOException {
-    dos.writeLong(m_date);
-    super.encode(dos);
-  }
   
+  @Override
+  protected void readData(DataInputStream is) throws IOException {
+    m_date = is.readLong();
+    super.readData(is);
+  }
+
+  @Override
+  protected void newData() throws IOException {
+    m_date = k_dateDefault;
+    super.newData();
+  }
+
+  @Override
+  protected void writeData(DataOutputStream dos) throws IOException {
+    dos.writeLong(m_date);
+    super.writeData(dos);
+  }
 }

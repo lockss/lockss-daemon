@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.5 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.6 2008-10-24 07:13:18 tlipkis Exp $
  */
 
 /*
@@ -61,9 +61,10 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   // Internal variables
   protected File m_filePeerId;
   private IdentityManager m_identityManager;
-  private boolean m_isInMemory;
+  protected boolean m_isInMemory;
   private static Logger m_logger = Logger.getLogger("PersistentPeerIdSet");
   protected Set<PeerIdentity> m_setPeerId;
+  protected boolean changed = true;
 
 
   public PersistentPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
@@ -82,22 +83,27 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   }
   
   
-  // checkpoint() just stores the set.  It does not remove the set from memory.
-  public void checkpoint() throws IOException {
+  /** Store the set and retain in memory
+   */
+  public void store() throws IOException {
+    store(false);
+  }
+
+  /** Store the set and optionally remove from memory
+   * @param release if true the set will be released
+   */
+  public void store(boolean release) throws IOException {
     if (m_isInMemory) {
-      internalStore();
+      internalStore();   // This writes to m_filePeerId.
+    }
+    if (release) {
+      release();
     }
   }
 
-  // store() does two things:
-  //   1. Store the set
-  //   2. Removes the set from memory.
-  public void store() throws IOException {
-    if (m_isInMemory) {
-      internalStore();   // This writes to m_filePeerId.
-      m_isInMemory = false;
-    }
-    
+  /** Release resources without saving */
+  public void release() {
+    m_isInMemory = false;
     m_setPeerId = null;
   }
 
@@ -115,6 +121,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.add(pi);
+    changed |= result;
     storeIfNecessary();
       
     return result;
@@ -125,6 +132,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.addAll(cpi);
+    changed |= result;
     storeIfNecessary();
 
     return result;
@@ -133,7 +141,10 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
   public void clear() throws IOException {
     loadIfNecessary();
-    m_setPeerId.clear();
+    if (!m_setPeerId.isEmpty()) {
+      m_setPeerId.clear();
+      changed = true;
+    }
     storeIfNecessary();
   }
 
@@ -218,6 +229,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.remove(o);
+    changed |= result;
     storeIfNecessary();
 
     return result;
@@ -229,6 +241,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.removeAll(c);
+    changed |= result;
     storeIfNecessary();
 
     return result;
@@ -240,6 +253,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.retainAll(c);
+    changed |= result;
     storeIfNecessary();
 
     return result;
@@ -282,30 +296,33 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
   // ---- Internal methods
 
-  /* 
-   * This method is based on RepositoryNodeImpl.loadAgreementHistory() 
-   *
-   * 
-   * Return a set of PeerIdentity keys that have agreed with this node.
-   *
+  /**
+   * Load the set from the file if it exists, else create an empty set
    */
-
   protected void internalLoad() throws IOException {
     DataInputStream is = null;
     try {
       if (m_filePeerId.exists()) {
         is = new DataInputStream(new FileInputStream(m_filePeerId));
-        m_setPeerId = decode(is);
+	readData(is);
+	changed = false;
       } else {
-	/* In the future, I recommend that this routine be allowed to
-	   throw a FileNotFound exception.  */
-	m_setPeerId = new HashSet<PeerIdentity>();
+	newData();
       } 
     } catch (IOException e) {
+      m_logger.error("Load faild", e);
       m_setPeerId = new HashSet<PeerIdentity>();
     } finally { 
       IOUtil.safeClose(is); 
     }
+  }
+
+  protected void readData(DataInputStream is) throws IOException {
+    m_setPeerId = decode(is);
+  }
+
+  protected void newData() throws IOException {
+    m_setPeerId = new HashSet<PeerIdentity>();
   }
 
   
@@ -326,6 +343,9 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    */
 
   protected void internalStore() throws IOException {
+    if (!changed) {
+      return;
+    }
     DataOutputStream dos = null;
     File filePeerIdTemp =
       FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
@@ -334,18 +354,23 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       // Loop until there are no IdentityParseExceptions
       OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
       dos = new DataOutputStream(new BufferedOutputStream(fileOs));
-      encode(dos);
+      writeData(dos);
       dos.close();
 
-      if (!PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
+      if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
+	changed = false;
+      } else {
         m_logger.error("Unable to rename temporary agreement history file " +
-            filePeerIdTemp);
+		       filePeerIdTemp);
       }
-
     } finally {
       IOUtil.safeClose(dos);
       filePeerIdTemp.delete();
     }
+  }
+
+  protected void writeData(DataOutputStream dos) throws IOException {
+    encode(dos);
   }
 
   /**

@@ -17,6 +17,7 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
   private File m_fileTest;
   private File m_fileTest2;
   private File m_fileTest3;
+  private File m_fileNotExist;
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -29,6 +30,8 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     m_fileTest = FileTestUtil.tempFile("ppis");
     m_fileTest2 = FileTestUtil.tempFile("ppis");
     m_fileTest3 = FileTestUtil.tempFile("ppis");
+    m_fileNotExist = FileTestUtil.tempFile("ppis");
+    m_fileNotExist.delete();
   }
 
   protected void tearDown() throws Exception {
@@ -45,11 +48,13 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     // and that the dpis2 has the right number of elements.
     dateRandom = (long) (Math.random() * Long.MAX_VALUE);
     
-    dpisStore = new DatedPeerIdSetImpl(m_fileTest, m_idman);
+    assertFalse(m_fileNotExist.exists());
+    dpisStore = new DatedPeerIdSetImpl(m_fileNotExist, m_idman);
+    assertFalse(m_fileNotExist.exists());
     dpisStore.setDate(dateRandom);
     dpisStore.store();
     
-    dpisLoad = new DatedPeerIdSetImpl(m_fileTest, m_idman);
+    dpisLoad = new DatedPeerIdSetImpl(m_fileNotExist, m_idman);
     dpisLoad.load();
     assertEquals(dateRandom, dpisLoad.getDate());
     assertEquals(0, dpisLoad.size());

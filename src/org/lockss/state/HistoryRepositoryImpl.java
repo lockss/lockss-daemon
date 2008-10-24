@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.83 2008-04-02 20:26:36 edwardsb1 Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.84 2008-10-24 07:13:18 tlipkis Exp $
  */
 
 /*
@@ -81,9 +81,10 @@ public class HistoryRepositoryImpl
   static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
 
   /**
-   * <p>The dated peer id set file name</p>
+   * <p>File name of the dated peer id set of peers who have said they
+   * don't have the AU</p>
    */
-  static final String DATED_PEER_ID_SET_FILE_NAME = "#dated_peer_id_set";
+  static final String NO_AU_PEER_ID_SET_FILE_NAME = "#no_au_peers";
   
   /**
    * <p>The history file name.</p>
@@ -204,17 +205,17 @@ public class HistoryRepositoryImpl
     return auidfile.lastModified();
   }
   
-  private DatedPeerIdSet m_dpis = null;
+  private DatedPeerIdSet m_noAuDpis = null;
   
   /**
-   * Return the associated DatedPeerIdSet
+   * Return the associated NoAuPeerIdSet
    */
-  public DatedPeerIdSet getDatedPeerIdSet()
+  public DatedPeerIdSet getNoAuPeers()
   {
     IdentityManager idman;
     
-    if (m_dpis == null) {
-      File fileDpis = new File(rootLocation, DATED_PEER_ID_SET_FILE_NAME);
+    if (m_noAuDpis == null) {
+      File fileDpis = new File(rootLocation, NO_AU_PEER_ID_SET_FILE_NAME);
       LockssDaemon ld = getDaemon();
       if (ld != null) {
         idman = ld.getIdentityManager();
@@ -223,10 +224,10 @@ public class HistoryRepositoryImpl
         throw new NullPointerException();
       }
       
-      m_dpis = new DatedPeerIdSetImpl(fileDpis, idman);
+      m_noAuDpis = new DatedPeerIdSetImpl(fileDpis, idman);
     }
     
-    return m_dpis;
+    return m_noAuDpis;
   }
 
 
