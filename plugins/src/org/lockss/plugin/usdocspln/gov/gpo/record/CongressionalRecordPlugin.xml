@@ -31,7 +31,9 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sgpo.gov/record/%d.html&quot;, base_url, year</string>
+    <list>
+      <string>&quot;%sgpo.gov/record/%d.html&quot;, base_url, year</string>
+    </list>
   </entry>
   <entry>
     <string>au_manifest</string>

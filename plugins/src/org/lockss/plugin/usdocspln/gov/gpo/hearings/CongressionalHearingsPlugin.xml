@@ -34,6 +34,8 @@
     <list>
       <string>&quot;%sgpo.gov/hearings/%dh.html&quot;, base_url, congress</string>
       <string>&quot;%sgpo.gov/hearings/%ds.html&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/hearings/%dh/&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/hearings/%ds/&quot;, base_url, congress</string>
     </list>
   </entry>
   <entry>
