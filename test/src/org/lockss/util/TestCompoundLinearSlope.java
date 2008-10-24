@@ -1,5 +1,5 @@
 /*
- * $Id: TestCompoundLinearSlope.java,v 1.3 2008-10-02 06:50:26 tlipkis Exp $
+ * $Id: TestCompoundLinearSlope.java,v 1.4 2008-10-24 07:14:17 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestCompoundLinearSlope extends LockssTestCase {
     assertEquals(10.0, c1.getY(111000), .001);
   }
 
-  public void testTimeInterval() {
+  public void testTimeInterval1() {
     CompoundLinearSlope c =
       new CompoundLinearSlope("[1h,.1],[2d,0.5],[4w,1]");
     assertEquals(.1, c.getY(-10), .001);
@@ -117,6 +117,16 @@ public class TestCompoundLinearSlope extends LockssTestCase {
     assertEquals(.1, c.getY(1 * HOUR), .001);
     assertEquals(.5, c.getY(2 * DAY), .001);
     assertEquals(1.0, c.getY(4 * WEEK), .001);
+  }
+
+  public void testTimeInterval2() {
+    CompoundLinearSlope c =
+      new CompoundLinearSlope("[1h,10d],[2d,5m],[4w,32.5]");
+    assertEquals(10 * DAY, c.getY(-10), .001);
+    assertEquals(10 * DAY, c.getY(0), .001);
+    assertEquals(10 * DAY, c.getY(1 * HOUR), .001);
+    assertEquals(5 * MINUTE, c.getY(2 * DAY), .001);
+    assertEquals(32.5, c.getY(4 * WEEK), .001);
   }
 
   public void testStairStep() {
