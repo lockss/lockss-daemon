@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.60 2007-11-20 23:18:45 dshr Exp $
+ * $Id: ProxyHandler.java,v 1.61 2008-10-24 07:13:56 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.60 2007-11-20 23:18:45 dshr Exp $
+// $Id: ProxyHandler.java,v 1.61 2008-10-24 07:13:56 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -1005,10 +1005,10 @@ public class ProxyHandler extends AbstractHttpHandler {
       return;
     }
     if (e instanceof java.net.ConnectException) {
+      int port = uri.getPort() == 0 ? 80 : uri.getPort();
       sendErrorPage(request, response, 502,
 		    hostMsg("Can't connect to",
-			    uri.getHost() +
-			    (uri.getPort() != 80 ? (":" + uri.getPort()) : ""),
+			    uri.getHost() + ":" + port,
 			    "Connection refused"),
 		    candidateAus);
       return;
