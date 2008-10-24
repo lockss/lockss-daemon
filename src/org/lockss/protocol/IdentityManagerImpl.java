@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.31 2008-10-07 18:14:29 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.32 2008-10-24 07:12:07 tlipkis Exp $
  */
 
 /*
@@ -1481,7 +1481,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 	try {
 	  PeerIdentity pid = stringToPeerIdentity(lst.get(0));
 	  res.put(pid, lst.get(1));
-	  log.info("pidUiStemMap.put(" + pid + ", " + lst.get(1) + ")");
+	  if (log.isDebug3()) {
+	    log.debug3("pidUiStemMap.put(" + pid + ", " + lst.get(1) + ")");
+	  }
 	} catch (IdentityManager.MalformedIdentityKeyException e) {
 	  log.warning("Bad peer in pidUiStemMap: " +lst.get(0), e);
 	}
@@ -1497,7 +1499,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   public String getUiUrlStem(PeerIdentity pid) {
     if (pidUiStemMap != null) {
-      log.info("getUiUrlStem(" + pid + "): " + pidUiStemMap.get(pid));
+      if (log.isDebug3()) {
+	log.debug3("getUiUrlStem(" + pid + "): " + pidUiStemMap.get(pid));
+      }
       return pidUiStemMap.get(pid);
     }
     return null;
