@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigStatus.java,v 1.1 2008-04-01 08:00:13 tlipkis Exp $
+ * $Id: ConfigStatus.java,v 1.2 2008-10-24 07:08:38 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ public class ConfigStatus extends BaseLockssDaemonManager {
   static Logger log = Logger.getLogger("ConfigStatus");
 
   final static String CONFIG_STATUS_TABLE = "ConfigStatus";
+
+  final static String PARAM_AU_TREE_DOT = PluginManager.PARAM_AU_TREE + ".";
 
   public ConfigStatus() {
   }
@@ -99,7 +101,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 
     boolean excludeKey(String key) {
       return key.startsWith(ConfigManager.PARAM_TITLE_DB)
-	|| key.startsWith(PluginManager.PARAM_AU_TREE)
+	|| key.startsWith(PARAM_AU_TREE_DOT)
 	|| key.indexOf(".password") >= 0;
     }
   }
