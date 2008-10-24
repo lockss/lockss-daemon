@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.44 2008-10-02 07:42:46 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.45 2008-10-24 07:13:31 tlipkis Exp $
  */
 
 /*
@@ -108,6 +108,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     },
     NAK_HAVE_SUFFICIENT_REPAIRERS {
       public String toString() { return "AU is safe"; }
+    },
+    NAK_NOT_READY {
+      public String toString() { return "Not ready"; }
     }
    };
 
