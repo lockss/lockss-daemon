@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.13 2008-10-02 06:51:29 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.14 2008-10-24 07:14:58 tlipkis Exp $
  */
 
 /*
@@ -175,6 +175,18 @@ public class FuncLockssHttpClient extends LockssTestCase {
     "Connection: Keep-Alive\r\n" +
     "Content-Type: text/html; charset=iso-8859-1\r\n";
 
+  static String RESP_401_DIGEST =
+    "HTTP/1.1 401 Authorization Required\r\n" +
+    "Date: Sun, 14 Sep 2008 20:46:12 GMT\r\n" +
+    "WWW-Authenticate: Digest realm=\"Middle Earth\",\r\n" +
+    "    qop=\"auth,auth-int\",\r\n" +
+    "    nonce=\"dcd98b7102dd2f0e8b11d0f600bfb0c093\",\r\n" +
+    "    opaque=\"5ccc069c403ebaf9f0171e9517f40e41\"\r\n" +
+    "Content-Length: 0\r\n" +
+    "Keep-Alive: timeout=15, max=100\r\n" +
+    "Connection: Keep-Alive\r\n" +
+    "Content-Type: text/html; charset=iso-8859-1\r\n";
+
   // turn the string into a complete http header by appending crlf to it
   String resp(String hdr) {
     return resp(hdr, null);
@@ -251,7 +263,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertEquals(1, th.getNumConnects());
   }
 
-  public void testAuth() throws Exception {
+  public void testBasicAuth() throws Exception {
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
@@ -277,6 +289,48 @@ public class FuncLockssHttpClient extends LockssTestCase {
     th.stopServer();
     assertEquals(1, th.getNumConnects());
   }
+
+  public void testDigestAuth() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_401_DIGEST), resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "foo",
+				  connectionPool);
+    conn.setCredentials("userfoo", "passbar");
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req1 = th.getRequest(0);
+    assertMatchesRE("^GET /foo HTTP/", req1);
+    assertNotMatchesRE("Authorization:", req1);
+    // second request only should have Authorization: header
+    String req2 = th.getRequest(1);
+    assertMatchesRE("Authorization: Digest", req2);
+    assertMatchesRE("username=\"userfoo\"", req2);
+    assertMatchesRE("realm=\"Middle Earth\"", req2);
+    assertMatchesRE("nonce=\"dcd98b7102dd2f0e8b11d0f600bfb0c093\"", req2);
+    assertMatchesRE("uri=\"/foo\"", req2);
+    assertMatchesRE("response=\"[0-9a-fA-F]+\"", req2);
+    assertMatchesRE("qop=auth", req2);
+    assertMatchesRE("nc=00000001", req2);
+    assertMatchesRE("cnonce=\"[0-9a-fA-F]+\"", req2);
+    assertMatchesRE("opaque=\"5ccc069c403ebaf9f0171e9517f40e41\"", req2);
+    assertEquals(200, conn.getResponseCode());
+    conn.release();
+
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  //Authorization: Digest username="userfoo", realm="Middle Earth", nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093", uri="/foo", response="d6e5a4474a129bfee9dd1bc8faec6d5f", qop=auth, nc=00000001, cnonce="b64c91d1c6426a8d95144416f191e98c", opaque="5ccc069c403ebaf9f0171e9517f40e41"
+
+// Authorization: Digest username="userfoo", realm="Middle Earth\" qop=\"auth,auth-int", nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093\" opaque=\"5ccc069c403ebaf9f0171e9517f40e41", uri="/foo", response="23e1a5f7fd6d4cad5fdb0d4f75f3ce5a"
+
+
 
   public void xtestRepeatAuth() throws Exception {
     int port = TcpTestUtil.findUnboundTcpPort();
