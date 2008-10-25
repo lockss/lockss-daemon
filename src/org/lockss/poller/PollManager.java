@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.200 2008-10-24 07:11:19 tlipkis Exp $
+ * $Id: PollManager.java,v 1.201 2008-10-25 01:20:58 tlipkis Exp $
  */
 
 /*
@@ -143,14 +143,7 @@ public class PollManager
   /** Size of poll queue. */
   public static final String PARAM_POLL_QUEUE_MAX =
     PREFIX + "pollQueueMax";
-  static final int DEFAULT_POLL_QUEUE_MAX = 50;
-
-  /** The interval after which AUs that have not completed a poll will be
-   * given the same priority as AUs that have never completed a poll
-   */
-  public static final String PARAM_INCREASE_POLL_PRIORITY_AFTER =
-    PREFIX + "increasePollPriorityAfter";
-  public static final long DEFAULT_INCREASE_POLL_PRIORITY_AFTER = 6 * WEEK;
+  static final int DEFAULT_POLL_QUEUE_MAX = 20;
 
   /**
    * If set, poll starting will be throttled.  This is the default.
@@ -191,6 +184,11 @@ public class PollManager
   public static final String DEFAULT_NO_AU_RESET_INTERVAL_CURVE =
     "[1w,2d],[1w,7d],[30d,7d],[30d,30d],[100d,30d],[100d,50d]";
 
+  /** Target poll interval if no other mechanism is used */
+  public static final String PARAM_TOPLEVEL_POLL_INTERVAL =
+    V3PREFIX + "toplevelPollInterval";
+  public static final long DEFAULT_TOPLEVEL_POLL_INTERVAL = 10 * WEEK;
+
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
 
@@ -217,6 +215,8 @@ public class PollManager
   private V3PollStatusAccessor v3Status;
   private boolean deleteInvalidPollStateDirs =
     DEFAULT_DELETE_INVALID_POLL_STATE_DIRS;
+  private long paramToplevelPollInterval = DEFAULT_TOPLEVEL_POLL_INTERVAL;
+
   private long pollStartInterval = DEFAULT_START_POLLS_INTERVAL;
   private long pollStartInitialDelay = DEFAULT_START_POLLS_INITIAL_DELAY;
   private boolean enableV3Poller = DEFAULT_ENABLE_V3_POLLER;
@@ -232,8 +232,6 @@ public class PollManager
   private int paramPollQueueMax = DEFAULT_POLL_QUEUE_MAX;
   private long interPollStartDelay = DEFAULT_ADDED_POLL_DELAY;
   private long paramMinPollAttemptInterval = DEFAULT_MIN_POLL_ATTEMPT_INTERVAL;
-  private long increasePollPriorityAfter =
-    DEFAULT_INCREASE_POLL_PRIORITY_AFTER;
   private double paramMinPercentForRepair =
     V3Voter.DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS;
 
@@ -245,8 +243,8 @@ public class PollManager
 //   private CompoundLinearSlope v3InvitationWeightSafetyCurve = null;
   private CompoundLinearSlope v3AcceptProbabilitySafetyCurve = null;
   private CompoundLinearSlope v3NominationWeightAgeCurve = null;
-  private CompoundLinearSlope v3PollIntervalAgreementCurve = null;
-  private Set v3PollIntervalAgreementLastResult =
+  private CompoundLinearSlope pollIntervalAgreementCurve = null;
+  private Set pollIntervalAgreementLastResult =
     SetUtil.theSet(DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT);
   private long paramWillingRepairerLiveness = DEFAULT_WILLING_REPAIRER_LIVENESS;
   private double paramAcceptRepairersPollPercent =
@@ -278,11 +276,10 @@ public class PollManager
   Deadline startOneWait = Deadline.in(0);
   Map<ArchivalUnit,PollReq> highPriorityPollRequests =
     Collections.synchronizedMap(new ListOrderedMap());
-  Comparator PPC = new PollPriorityComparator();
 
   Object queueLock = new Object();	// lock for sharedRateReqs and
 					// pollQueue
-  BoundedTreeSet pollQueue = new BoundedTreeSet(paramPollQueueMax, PPC);
+  protected List pollQueue = new ArrayList();
 
   public class PollReq {
     ArchivalUnit au;
@@ -319,7 +316,7 @@ public class PollManager
     }
 
     public String toString() {
-      return "[PollReq: " + au + ", pri: " + priority;
+      return "[PollReq: " + au + ", pri: " + priority + "]";
     }
   }
 
@@ -349,6 +346,13 @@ public class PollManager
     theHashService = theDaemon.getHashService();
     theAlertManager = theDaemon.getAlertManager();
     pluginMgr = theDaemon.getPluginManager();
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (config.containsKey(PARAM_AT_RISK_AU_INSTANCES)) {
+      atRiskAuInstances =
+	makeAuPeersMap(config.getList(PARAM_AT_RISK_AU_INSTANCES),
+		       theIDManager);
+    }
 
     // register a message handler with the router
     theRouter = theDaemon.getRouterManager();
@@ -1011,6 +1015,11 @@ public class PollManager
       deleteInvalidPollStateDirs =
         newConfig.getBoolean(PARAM_DELETE_INVALID_POLL_STATE_DIRS,
                              DEFAULT_DELETE_INVALID_POLL_STATE_DIRS);
+
+      paramToplevelPollInterval =
+	newConfig.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL,
+				  DEFAULT_TOPLEVEL_POLL_INTERVAL);
+
       pollStartInterval =
         newConfig.getTimeInterval(PARAM_START_POLLS_INTERVAL,
                                   DEFAULT_START_POLLS_INTERVAL);
@@ -1024,7 +1033,6 @@ public class PollManager
 				  DEFAULT_MAX_POLLERS_SLEEP);
       paramPollQueueMax = newConfig.getInt(PARAM_POLL_QUEUE_MAX,
 					  DEFAULT_POLL_QUEUE_MAX);
-      pollQueue.setMaxSize(paramPollQueueMax);
 
       paramRebuildPollQueueInterval =
 	newConfig.getTimeInterval(PARAM_REBUILD_POLL_QUEUE_INTERVAL,
@@ -1046,10 +1054,6 @@ public class PollManager
       wrongGroupRetryTime =
 	newConfig.getTimeInterval(PARAM_WRONG_GROUP_RETRY_TIME,
 				  DEFAULT_WRONG_GROUP_RETRY_TIME); 
-      increasePollPriorityAfter =
-	newConfig.getTimeInterval(PARAM_INCREASE_POLL_PRIORITY_AFTER,
-				  DEFAULT_INCREASE_POLL_PRIORITY_AFTER); 
-
       paramMinPercentForRepair =
         newConfig.getPercentage(V3Voter.PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
 				V3Voter.DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS);
@@ -1084,9 +1088,11 @@ public class PollManager
 			 e);
 	}
       }
-      if (changedKeys.contains(PARAM_AT_RISK_AU_INSTANCES)) {
+      if (changedKeys.contains(PARAM_AT_RISK_AU_INSTANCES) &&
+	  theIDManager != null) {
 	atRiskAuInstances =
-	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES));
+	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES),
+			 theIDManager);
       }
       if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
 	v3InvitationWeightAgeCurve =
@@ -1103,7 +1109,7 @@ public class PollManager
 // 			     DEFAULT_INVITATION_WEIGHT_SAFETY_CURVE);
 //       }
       if (changedKeys.contains(PARAM_POLL_INTERVAL_AGREEMENT_CURVE)) {
-	v3PollIntervalAgreementCurve =
+	pollIntervalAgreementCurve =
 	  processWeightCurve("V3 poll interval agreement curve",
 			     newConfig,
 			     PARAM_POLL_INTERVAL_AGREEMENT_CURVE,
@@ -1117,7 +1123,7 @@ public class PollManager
 	for (String str : lst) {
 	  res.add(Integer.valueOf(str));
 	}
-	v3PollIntervalAgreementLastResult = res;
+	pollIntervalAgreementLastResult = res;
       }
       if (changedKeys.contains(PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE)) {
 	v3AcceptProbabilitySafetyCurve =
@@ -1160,7 +1166,8 @@ public class PollManager
     }
   }
 
-  AuPeersMap makeAuPeersMap(Collection<String> auPeersList) {
+  AuPeersMap makeAuPeersMap(Collection<String> auPeersList,
+			    IdentityManager idMgr) {
     AuPeersMap res = new AuPeersMap();
     for (String oneAu : auPeersList) {
       List<String> lst = StringUtil.breakAt(oneAu, ',', -1, true, true);
@@ -1172,7 +1179,7 @@ public class PollManager
 	    auid = s;
 	  } else {
 	    try {
-	      PeerIdentity pid = theIDManager.stringToPeerIdentity(s);
+	      PeerIdentity pid = idMgr.stringToPeerIdentity(s);
 	      peers.add(pid);
 	    } catch (IdentityManager.MalformedIdentityKeyException e) {
 	      theLog.warning("Bad peer on at risk list for " + auid, e);
@@ -1248,11 +1255,11 @@ public class PollManager
   }
 
   public CompoundLinearSlope getPollIntervalAgreementCurve() {
-    return v3PollIntervalAgreementCurve;
+    return pollIntervalAgreementCurve;
   }
 
   public Set getPollIntervalAgreementLastResult() {
-    return v3PollIntervalAgreementLastResult;
+    return pollIntervalAgreementLastResult;
   }
 
   public long getWillingRepairerLiveness() {
@@ -1995,8 +2002,7 @@ public class PollManager
 	}
 	return null;
       }
-      PollReq bestReq = (PollReq)pollQueue.first();
-      pollQueue.remove(bestReq);
+      PollReq bestReq = (PollReq)pollQueue.remove(0);
       return bestReq;
     }
   }
@@ -2022,22 +2028,22 @@ public class PollManager
   }
 
   void rebuildPollQueue0() {
-    int ausWantPoll = 0;
-    int ausEligiblePoll = 0;
+    Map weightMap = new HashMap();
     synchronized (queueLock) {
       pollQueue.clear();
       for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	AuState auState = AuUtil.getAuState(au);
 	try {
-	  PollReq req = highPriorityPollRequests.get(au);
-	  if ((req != null || wantsPoll(au, auState))) {
-	    ausWantPoll++;
-	    if (isEligibleForPoll(au, auState)) {
-	      ausEligiblePoll++;
-	      if (req == null) {
-		req = new PollReq(au, auState);
-	      }
+	  if (isEligibleForPoll(au, auState)) {
+	    PollReq req = highPriorityPollRequests.get(au);
+	    if (req != null) {
 	      pollQueue.add(req);
+	    } else {
+	      double weight = pollWeight(au, auState);
+	      if (weight > 0.0) {
+		req = new PollReq(au, auState);
+		weightMap.put(req, weight);
+	      }
 	    }
 	  }
 	} catch (RuntimeException e) {
@@ -2045,14 +2051,26 @@ public class PollManager
 	  // ignore AU if it caused an error
 	}
       }
+      int n = paramPollQueueMax - pollQueue.size();
+      if (n > 0 && !weightMap.isEmpty()) {
+	pollQueue.addAll(weightedRandomSelection(weightMap,
+						 Math.min(weightMap.size(),
+							  n)));
+      }
+      if (log.isDebug()) {
+	log.debug("Poll queue: " + pollQueue);
+      }
     }
   }
 
-  boolean wantsPoll(ArchivalUnit au, AuState auState) {
-    return au.shouldCallTopLevelPoll(auState);
+  protected List weightedRandomSelection(Map weightMap, int n) {
+    return CollectionUtil.weightedRandomSelection(weightMap, n);
   }
-  
+
   boolean isEligibleForPoll(ArchivalUnit au, AuState auState) {
+    if (!au.shouldCallTopLevelPoll(auState)) {
+      return false;
+    }
     // Do not call polls on AUs that have not crawled, UNLESS that AU
     // is marked pubdown.
     if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
@@ -2075,6 +2093,27 @@ public class PollManager
     }
     return true;
   }
+
+  double pollWeight(ArchivalUnit au, AuState auState) {
+    long lastEnd = auState.getLastTopLevelPollTime();
+    long pollInterval;
+    if (pollIntervalAgreementCurve != null &&
+	pollIntervalAgreementLastResult.contains(auState.getLastPollResult())) {
+      int agreePercent = (int)Math.round(auState.getV3Agreement() * 100.0);
+      pollInterval = (int)pollIntervalAgreementCurve.getY(agreePercent);
+    } else {
+      pollInterval = paramToplevelPollInterval;
+    }
+    if (lastEnd + pollInterval > TimeBase.nowMs()) {
+      return 0.0;
+    }
+    long num = TimeBase.msSince(lastEnd);
+    long denom = pollInterval + auState.getPollDuration();
+    double weight = (double)num / (double)denom;
+    return weight;
+  }
+
+
 
   boolean startPoll(PollReq req) {
     ArchivalUnit au = req.getAu();
@@ -2108,45 +2147,6 @@ public class PollManager
     return true;
   }
   
-  /** Orders AUs (wrapped in PollReq) by poll priority:<ol>
-   * <li>Explicit request priority
-   * <li>no successful poll or last attempt > NNN ago
-   * <li>Least recent poll attempt
-   * <li>Least recent poll success
-   * </ol>
-   */
-  class PollPriorityComparator implements Comparator {
-    // Comparator should not reference NodeManager, etc., else all sorted
-    // collection insertions, etc. must be protected against
-    // NoSuchAuException
-    public int compare(Object o1, Object o2) {
-      PollReq r1 = (PollReq)o1;
-      PollReq r2 = (PollReq)o2;
-      ArchivalUnit au1 = r1.au;
-      ArchivalUnit au2 = r2.au;
-      AuState aus1 = r1.aus;
-      AuState aus2 = r2.aus;
-      return new CompareToBuilder()
-	.append(-r1.priority, -r2.priority)
-	.append(recentAttemptOrder(aus1),recentAttemptOrder(aus2))
-	.append(aus1.getLastPollAttempt(), aus2.getLastPollAttempt())
-	.append(aus1.getLastTopLevelPollTime(), aus2.getLastTopLevelPollTime())
-	.append(System.identityHashCode(r1), System.identityHashCode(r2))
-	.toComparison();
-    }
-
-    int recentAttemptOrder(AuState aus) {
-      if (aus.getLastTopLevelPollTime() <= 0) {
-	return 0;
-      }
-      long lastAttempt = aus.getLastPollAttempt();
-      if (TimeBase.msSince(lastAttempt) > increasePollPriorityAfter) {
-	return 0;
-      }
-      return 1;
-    }
-  }
-
   private Set recalcingAus = Collections.synchronizedSet(new HashSet());
 
   /** Remember that we have scheduled a hash to recalculate the hash time

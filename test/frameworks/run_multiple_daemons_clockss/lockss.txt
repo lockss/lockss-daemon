@@ -55,8 +55,7 @@ org.lockss.treewalk.interval.min=1h
 org.lockss.treewalk.interval.max=3h
 org.lockss.treewalk.start.delay=10s
 org.lockss.comm.router.beacon.interval=1m
-org.lockss.baseau.toplevel.poll.interval.min=5m
-org.lockss.baseau.toplevel.poll.interval.max=15m
+org.lockss.poll.v3.toplevelPollInterval=5m
 
 # V3
 org.lockss.poll.defaultPollProtocol=3

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.130 2008-10-02 07:42:05 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.131 2008-10-25 01:20:58 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.*;
 import org.lockss.rewriter.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -54,50 +53,6 @@ import org.lockss.util.*;
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
-
-  static final String TOPLEVEL_POLL_PREFIX = Configuration.PREFIX +
-      "baseau.toplevel.poll.";
-
-  /**
-   * Configuration parameter name for minimum interval, in ms, after which
-   * a new top level poll should be called.  Actual interval is randomly
-   * distributed between min and max.
-   */
-  public static final String PARAM_TOPLEVEL_POLL_INTERVAL_MIN =
-      TOPLEVEL_POLL_PREFIX + "interval.min";
-  static final long DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN = 2 * Constants.WEEK;
-
-  /**
-   * Configuration parameter name for maximum interval, in ms, by which
-   * a new top level poll should have been called.  Actual interval is randomly
-   * distributed between min and max.
-   */
-  public static final String PARAM_TOPLEVEL_POLL_INTERVAL_MAX =
-      TOPLEVEL_POLL_PREFIX + "interval.max";
-  public static final long DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX =
-      3 * Constants.WEEK;
-
-  /**
-   * Configuration parameter name for top level poll initial probability.
-   */
-  public static final String PARAM_TOPLEVEL_POLL_PROB_INITIAL =
-      TOPLEVEL_POLL_PREFIX + "prob.initial";
-  public static final double DEFAULT_TOPLEVEL_POLL_PROB_INITIAL = .5;
-
-  /**
-   * Configuration parameter name for top level poll increment
-   */
-  public static final String PARAM_TOPLEVEL_POLL_PROB_INCREMENT =
-      TOPLEVEL_POLL_PREFIX + "prob.increment";
-  public static final double DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT = .05;
-
-  /**
-   * Configuration parameter name for top level poll max probability.
-   */
-  public static final String PARAM_TOPLEVEL_POLL_PROB_MAX =
-      TOPLEVEL_POLL_PREFIX + "prob.max";
-  public static final double DEFAULT_TOPLEVEL_POLL_PROB_MAX = 1.0;
-
 
   public static final long
     DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
@@ -149,7 +104,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected String auName;   // the name of the AU (constructed by plugin)
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
   protected String auTitle;   // the title of the AU (from titledb, if any)
-  protected long nextPollTime = 0;
   protected Configuration auConfig;
   private String auId = null;
 
@@ -696,42 +650,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (flags != null && StringUtil.indexOfIgnoreCase(flags, "nopoll") >= 0) {
       return false;
     }
-    checkNextPollTime(aus);
-    if (TimeBase.nowMs() >= nextPollTime) {
-      logger.debug3("Time for poll.");
-      return true;
-    }
-    logger.debug3("Not time for poll.");
-    return false;
-  }
-
-  void checkNextPollTime(AuState aus) {
-    if (aus.getLastTopLevelPollTime() >= nextPollTime) {
-      PollManager pollMgr = plugin.getDaemon().getPollManager();
-      CompoundLinearSlope pollIntervalAgreementCurve =
-	pollMgr.getPollIntervalAgreementCurve();
-      if (pollIntervalAgreementCurve != null &&
-	  pollMgr.getPollIntervalAgreementLastResult().contains(aus.getLastPollResult())) {
-	logger.debug2("Determining poll interval from agreement: " + this);
-	int agreePercent = (int)Math.round(aus.getV3Agreement() * 100.0);
-	int pollInterval = (int)pollIntervalAgreementCurve.getY(agreePercent);
-	nextPollTime = aus.getLastTopLevelPollTime() + pollInterval;
-      } else {
-	Configuration config = CurrentConfig.getCurrentConfig();
-	long minPollInterval =
-	  config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
-				 DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
-	long maxPollInterval =
-	  config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MAX,
-				 DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX);
-	if (maxPollInterval <= minPollInterval) {
-	  maxPollInterval = 2 * minPollInterval;
-	}
-	Deadline nextPoll =
-	  Deadline.inRandomRange(minPollInterval, maxPollInterval);
-	nextPollTime = nextPoll.getExpirationTime();
-      }
-    }
+    return true;
   }
 
   /**
