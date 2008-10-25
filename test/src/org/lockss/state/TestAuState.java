@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.13 2008-04-02 00:44:24 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.14 2008-10-25 01:22:56 tlipkis Exp $
  */
 
 /*
@@ -150,11 +150,21 @@ public class TestAuState extends LockssTestCase {
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
   }
 
+  public void testPollDuration() throws Exception {
+    MyAuState aus = new MyAuState(mau, historyRepo);
+    assertEquals(0, aus.getPollDuration());
+    aus.setPollDuration(1000);
+    assertEquals(1000, aus.getPollDuration());
+    aus.setPollDuration(2000);
+    assertEquals(1500, aus.getPollDuration());
+  }
+
   public void testPollStarted() throws Exception {
     MyAuState aus = new MyAuState(mau, historyRepo);
     assertEquals(-1, aus.getLastTopLevelPollTime());
     assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
+    assertEquals(0, aus.getPollDuration());
     assertFalse(aus.isPollActive());
     assertNull(historyRepo.theAuState);
 
@@ -164,6 +174,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(-1, aus.getLastTopLevelPollTime());
     assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
+    assertEquals(0, aus.getPollDuration());
     assertTrue(aus.isPollActive());
     assertNotNull(historyRepo.theAuState);
 
@@ -173,6 +184,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_ERROR, aus.getLastPollResult());
     assertEquals("Plorg", aus.getLastPollResultMsg());
+    assertEquals(t2, aus.getPollDuration());
     assertFalse(aus.isPollActive());
 
     TimeBase.setSimulated(t3);
@@ -181,6 +193,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
     assertEquals("Syrah", aus.getLastPollResultMsg());
+    assertEquals((t3 + t2) / 2, aus.getPollDuration());
     assertFalse(aus.isPollActive());
 
     aus = aus.simulateStoreLoad();

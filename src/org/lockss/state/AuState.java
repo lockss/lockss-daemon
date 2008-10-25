@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.35 2008-04-02 00:44:24 tlipkis Exp $
+ * $Id: AuState.java,v 1.36 2008-10-25 01:22:56 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class AuState implements LockssSerializable {
   protected long lastPollStart;		// last time a poll started
   protected String lastPollResultMsg;
   protected int lastPollResult;
+  protected long pollDuration;		// average of last two poll durations
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
   protected AccessType accessType;
@@ -103,7 +104,7 @@ public class AuState implements LockssSerializable {
 		 HistoryRepository historyRepo) {
     this(au,
 	 lastCrawlTime, lastCrawlAttempt, -1, null,
-	 lastTopLevelPoll, lastPollStart, -1, null,
+	 lastTopLevelPoll, lastPollStart, -1, null, 0,
 	 lastTreeWalk,
 	 crawlUrls, null, clockssSubscriptionStatus,
 	 v3Agreement, historyRepo);
@@ -114,6 +115,7 @@ public class AuState implements LockssSerializable {
 		    int lastCrawlResult, String lastCrawlResultMsg,
 		    long lastTopLevelPoll, long lastPollStart,
 		    int lastPollResult, String lastPollResultMsg,
+		    long pollDuration,
 		    long lastTreeWalk, HashSet crawlUrls,
 		    AccessType accessType,
 		    int clockssSubscriptionStatus, double v3Agreement,
@@ -127,6 +129,7 @@ public class AuState implements LockssSerializable {
     this.lastPollStart = lastPollStart;
     this.lastPollResult = lastPollResult;
     this.lastPollResultMsg = lastPollResultMsg;
+    this.pollDuration = pollDuration;
     this.lastTreeWalk = lastTreeWalk;
     this.crawlUrls = crawlUrls;
     this.accessType = accessType;
@@ -257,6 +260,26 @@ public class AuState implements LockssSerializable {
   }
 
   /**
+   * Returns the running average poll duration, or 0 if unknown
+   */
+  public long getPollDuration() {
+    return pollDuration;
+  }
+
+  /**
+   * Update the poll duration to the average of current and previous
+   * average.  Return the new average.
+   */
+  public long setPollDuration(long duration) {
+    if (pollDuration == 0) {
+      pollDuration = duration;
+    } else {
+      pollDuration = (pollDuration + duration + 1) / 2;
+    }
+    return pollDuration;
+  }
+
+  /**
    * Returns the last treewalk time for the au.
    * @return the last treewalk time in ms
    */
@@ -273,7 +296,7 @@ public class AuState implements LockssSerializable {
 		  lastCrawlTime, lastCrawlAttempt,
 		  lastCrawlResult, lastCrawlResultMsg,
 		  lastTopLevelPoll, lastPollStart,
-		  lastPollResult, lastPollResultMsg,
+		  lastPollResult, lastPollResultMsg, pollDuration,
 		  lastTreeWalk, crawlUrls,
 		  accessType,
 		  clockssSubscriptionStatus, v3Agreement,
@@ -321,7 +344,7 @@ public class AuState implements LockssSerializable {
 		  lastCrawlTime, lastCrawlAttempt,
 		  lastCrawlResult, lastCrawlResultMsg,
 		  lastTopLevelPoll, lastPollStart,
-		  lastPollResult, lastPollResultMsg,
+		  lastPollResult, lastPollResultMsg, pollDuration,
 		  lastTreeWalk, crawlUrls,
 		  accessType,
 		  clockssSubscriptionStatus, v3Agreement,
@@ -360,6 +383,7 @@ public class AuState implements LockssSerializable {
       lastPollResultMsg = resultMsg;
       break;
     }
+    setPollDuration(TimeBase.msSince(lastPollAttempt));
     previousPollState = null;
     historyRepo.storeAuState(this);
   }

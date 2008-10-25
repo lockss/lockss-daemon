@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.72 2008-10-24 07:13:18 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.73 2008-10-25 01:22:56 tlipkis Exp $
  */
 
 /*
@@ -298,7 +298,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     strCol.add("test");
     AuState origState = new AuState(mau,
 				    123000, 123123, 41, "woop woop",
-				    321000, 222000, 3, "pollres",
+				    321000, 222000, 3, "pollres", 12345,
 				    456000, strCol,
 				    AuState.AccessType.OpenAccess,
 				    2, 1.0, repository);
@@ -320,6 +320,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(222000, loadedState.getLastPollStart());
     assertEquals(3, loadedState.getLastPollResult());
     assertEquals("pollres", loadedState.getLastPollResultMsg());
+    assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
     assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
     assertEquals(mau.getAuId(), loadedState.getArchivalUnit().getAuId());
