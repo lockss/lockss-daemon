@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.30 2008-06-30 08:43:12 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.31 2008-10-25 01:19:19 tlipkis Exp $
  */
 
 /*
@@ -652,8 +652,6 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testLoadTitleDb() throws IOException {
-    List gens;
-
     String u2 = FileTestUtil.urlOfString("org.lockss.title.foo=bar");
     String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
     assertFalse(mgr.waitConfig(Deadline.EXPIRED));
@@ -661,6 +659,23 @@ public class TestConfigManager extends LockssTestCase {
     assertTrue(mgr.waitConfig(Deadline.EXPIRED));
     Configuration config = mgr.getCurrentConfig();
     assertEquals("bar", config.get("org.lockss.title.foo"));
+    assertEquals("1", config.get("a"));
+  }
+
+  public void testLoadAuxProps() throws IOException {
+    String xml = "<lockss-config>\n" +
+      "<property name=\"org.lockss\">\n" +
+      " <property name=\"foo.bar\" value=\"42\"/>" +
+      "</property>" +
+      "</lockss-config>";
+
+    String u2 = FileTestUtil.urlOfString(xml, ".xml");
+    String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.auxPropUrls="+u2);
+    assertFalse(mgr.waitConfig(Deadline.EXPIRED));
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    assertTrue(mgr.waitConfig(Deadline.EXPIRED));
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("42", config.get("org.lockss.foo.bar"));
     assertEquals("1", config.get("a"));
   }
 
