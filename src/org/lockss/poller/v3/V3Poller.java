@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.90 2008-10-24 07:11:19 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.91 2008-10-25 01:22:21 tlipkis Exp $
  */
 
 /*
@@ -2208,6 +2208,10 @@ public class V3Poller extends BasePoll {
     Set<PeerIdentity> peers = pollManager.getPeersWithAuAtRisk(getAu());
     if (peers == null || !peers.contains(status.getPeerIdentity())) {
       return 1.0;
+    }
+    if (log.isDebug2()) {
+      log.debug2("At risk AU instance: " + status.getPeerIdentity() +
+		 ", " + getAu().getName());
     }
     return pollManager.getInvitationWeightAtRisk();
   }
