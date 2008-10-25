@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.16 2008-10-02 06:50:01 tlipkis Exp $
+ * $Id: TestCollectionUtil.java,v 1.17 2008-10-25 01:23:22 tlipkis Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class TestCollectionUtil extends LockssTestCase {
 	 rpt + " tries");
   }
 
-  public void testweightedRandomSelectionSimple() throws Exception {
+  public void testWeightedRandomSelectionSimple() throws Exception {
     Map all = MapUtil.map("a", 1.0, "b", 2.0, "c", 3.0);
     Collection items = ListUtil.list("a", "b", "c");
     Collection c0 = CollectionUtil.weightedRandomSelection(all, 0);
@@ -309,7 +309,7 @@ public class TestCollectionUtil extends LockssTestCase {
     assertTrue(val <= max);
   }
 
-  public void testweightedRandomSelection() throws Exception {
+  public void testWeightedRandomSelection() throws Exception {
     assertSuccessRate(.8, 100);
     Map all = MapUtil.map(0, 1.0, 1, 2.0, 2, 3.0);
     int[] counts = new int[3];
@@ -322,5 +322,12 @@ public class TestCollectionUtil extends LockssTestCase {
     assertInRange(450, 550, counts[2]);
   }
 
-
+  public void testIllWeightedRandomSelectionSimple() throws Exception {
+    Map all = MapUtil.map("a", 1.0, "b", 0.0, "c", 3.0);
+    try {
+      CollectionUtil.weightedRandomSelection(all, 1);
+      fail("Weight <= 0 should throw");
+    } catch (IllegalArgumentException e) {
+    }
+  }
 }

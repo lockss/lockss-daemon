@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.16 2008-10-02 06:50:01 tlipkis Exp $
+ * $Id: CollectionUtil.java,v 1.17 2008-10-25 01:23:22 tlipkis Exp $
  */
 
 /*
@@ -241,6 +241,9 @@ public class CollectionUtil {
       for (Map.Entry ent : (Set<Map.Entry>)itemMap.entrySet()) {
 	items[ix] = ent.getKey();
 	double weight = (Double)ent.getValue();
+	if (weight <= 0.0) {
+	  throw new IllegalArgumentException("Weight <= 0: " + weight);
+	}
 	weightIndices[ix] = totalWeight;
 	totalWeight += weight;
 	ix++;
