@@ -1,0 +1,72 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Open Journals System Plugin (OJS 2.x), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Open Journals System Plugin (OJS 2.x)</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sindex\.php/%s/gateway/lockss\?year=%d$&quot;, base_url, journal_id, year</string>
+      <string>1,&quot;^%sindex\.php/%s/(article|issue)/(download|downloadSuppFile|view|viewArticle|viewFile|viewRST)/&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%sindex\.php/%s/rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/&quot;, base_url, journal_id</string>
+      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2HtmlLinkExtractorFactory</string>
+  </entry>
+</map>
