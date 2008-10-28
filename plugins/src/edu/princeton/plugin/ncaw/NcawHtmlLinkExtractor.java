@@ -1,5 +1,5 @@
 /*
- * $Id: NcawHtmlLinkExtractor.java,v 1.1 2008-10-08 08:05:05 thib_gc Exp $
+ * $Id: NcawHtmlLinkExtractor.java,v 1.2 2008-10-28 09:19:36 thib_gc Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class NcawHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
     return super.extractLinkFromTag(link, au, cb);
   }
   
-  protected static Logger logger = Logger.getLogger("NcawHtmlFilterFactory");
+  protected static Logger logger = Logger.getLogger("NcawHtmlLinkExtractor");
 
   protected static final Pattern OPEN_WINDOW_PATTERN = RegexpUtil.uncheckedCompile("javascript:openWindow\\([^']*'([^']*)'[^,]*,[^']*'(?:[^']*)'[^,]*,[^']*'(?:[^']*)'\\);",
                                                                                    Perl5Compiler.READ_ONLY_MASK);
