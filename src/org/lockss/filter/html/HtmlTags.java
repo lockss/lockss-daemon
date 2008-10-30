@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.3 2008-07-11 23:46:13 thib_gc Exp $
+ * $Id: HtmlTags.java,v 1.4 2008-10-30 08:29:30 tlipkis Exp $
  */
 
 /*
@@ -61,22 +61,6 @@ public class HtmlTags {
       return mIds;
     }
 
-    /**
-     * Avoid deprecation warning
-     * @deprecated Use getAttributesEx() instead.
-     */
-    public Hashtable getAttributes () {
-      return super.getAttributes();
-    }
-
-    /**
-     * Avoid deprecation warning
-     * @deprecated Use getAttributesEx() instead.
-     */
-    public void setAttributes (Hashtable attributes) {
-      super.setAttributes(attributes);
-    }
-
   }
 
   /**
@@ -97,22 +81,6 @@ public class HtmlTags {
      */
     public String[] getIds() {
       return mIds;
-    }
-
-    /**
-     * Avoid deprecation warning
-     * @deprecated Use getAttributesEx() instead.
-     */
-    public Hashtable getAttributes () {
-      return super.getAttributes();
-    }
-
-    /**
-     * Avoid deprecation warning
-     * @deprecated Use getAttributesEx() instead.
-     */
-    public void setAttributes (Hashtable attributes) {
-      super.setAttributes(attributes);
     }
 
   }
