@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.238 2008-10-02 06:44:16 tlipkis Exp $
+ $Id: build.xml,v 1.239 2008-10-30 08:28:54 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -204,7 +204,7 @@ Args:
 				  value="${lib}/commons-jxpath-1.2.jar"/>
   <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
-  <property name="htmlparser.jar" value="${lib}/htmlparser-1.6.jar"/>
+  <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
   <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
