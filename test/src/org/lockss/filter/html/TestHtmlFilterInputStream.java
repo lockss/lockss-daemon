@@ -59,6 +59,11 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     } catch (IOException e) {}
   }
 
+  private void assertIdentityXform(String expected, String input)
+      throws IOException {
+    assertFilterString(expected, input, new IdentityXform());
+  }
+
   public void testIll() {
     try {
       new HtmlFilterInputStream(null, new IdentityXform ());
@@ -102,6 +107,34 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     assertEquals("<b>", nl.elementAt(0).toHtml());
     assertEquals("bold", nl.elementAt(1).toHtml());
     assertEquals("</b>", nl.elementAt(2).toHtml());
+  }
+
+  public void testUnclosed1() throws IOException {
+    String in = "<HTML><BODY>" +
+      "<ul><li>l1<li>l2<div>text1</ul>tween" +
+      "<ul><li>l3<li>l4<div><script>text2</ul>" +
+      "</body></html>";
+    String exp = "<HTML><BODY>" +
+      "<ul><li>l1</li><li>l2<div>text1</div></li></ul>tween" +
+      "<ul><li>l3</li><li>l4<div><script>text2</script></div></li></ul>" +
+      "</body></html>";
+    assertIdentityXform(exp, in);
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM, "true");
+    assertIdentityXform(in, in);
+  }
+
+  public void testUnclosed2() throws IOException {
+    String in = "<HTML><BODY>" +
+      "<dl><dt>t1<dd>d1<div>text1</dl>" +
+      "<dl><dt>t2<dd>d2<div><script>text2</dl>" +
+      "</body></html>";
+    String exp = "<HTML><BODY>" +
+      "<dl><dt>t1</dt><dd>d1<div>text1</div></dd></dl>" +
+      "<dl><dt>t2</dt><dd>d2<div><script>text2</script></div></dd></dl>" +
+      "</body></html>";
+    assertIdentityXform(exp, in);
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM, "true");
+    assertIdentityXform(in, in);
   }
 
   public void testCharsetFailsIfNoMark() throws Exception {

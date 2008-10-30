@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.5 2008-07-11 23:43:41 thib_gc Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.6 2008-10-30 08:29:14 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,12 @@ public class HtmlFilterInputStream extends InputStream {
     Configuration.PREFIX + "filter.html.mark";
   public static final int DEFAULT_MARK_SIZE = 16 * 1024;
 
+  /** If true, html output will be as close as possible to the input.  If
+   * false, missing end tags will be inserted.  */
+  public static final String PARAM_VERBATIM =
+    Configuration.PREFIX + "filter.html.verbatim";
+  public static final boolean DEFAULT_VERBATIM = false;
+
   private FeedbackLogger fl = new FeedbackLogger();
 
   private InputStream in;
@@ -116,7 +122,11 @@ public class HtmlFilterInputStream extends InputStream {
    * InputStream */
   void parse() throws IOException {
     try {
-      Parser parser = makeParser();
+      Configuration config = ConfigManager.getCurrentConfig();
+      int mark = config.getInt(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
+      boolean verbatim = config.getBoolean(PARAM_VERBATIM, DEFAULT_VERBATIM);
+
+      Parser parser = makeParser(mark);
       NodeList nl = parser.parse(null);
       if (nl.size() <= 0) {
 	log.warning("nl.size(): " + nl.size());
@@ -127,7 +137,7 @@ public class HtmlFilterInputStream extends InputStream {
       nl = xform.transform(nl);
       if (log.isDebug3()) log.debug3("xformed (" + nl.size() + "):\n" +
 				     nodeString(nl));
-      String h = nl.toHtml();
+      String h = nl.toHtml(verbatim);
       out = new ReaderInputStream(new StringReader(h));
     } catch (ParserException e) {
       log.warning("read()", e);
@@ -138,10 +148,9 @@ public class HtmlFilterInputStream extends InputStream {
   }
 
   /** Make a parser, register our extra nodes */
-  Parser makeParser() throws UnsupportedEncodingException {
+  Parser makeParser(int mark) throws UnsupportedEncodingException {
     // InputStreamSource may reset() the stream if it encounters a charset
     // change.  It expects the stream already to have been mark()ed.
-    int mark = CurrentConfig.getIntParam(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
     if (mark > 0) {
       in.mark(mark);
     }
