@@ -54,7 +54,7 @@
   ---------            -------     ----------------------------------
   daemonCount          4           The number of daemons to start.
   
-  daemonLogLevel       debug3      The logging level at which to run
+  daemonLogLevel       debug       The logging level at which to run
                                    the LOCKSS daemons.
 
   scriptLogLevel       info        The logging level at which to run
@@ -130,27 +130,23 @@
 
   Where <testsuite> is one of the following:
 
-      all         -  Run all of the included tests.
+      all           - Run all of the included tests.
 
-      simpleTests - Run only the simple damage, simple delete, and
-                    simple extra file tests.
+      tinyUiTests   - Run the tiny UI tests.
 
-      rangedTests - Run only the ranged name poll tests
+      simpleV3Tests - Run only the simple damage, simple delete, and
+                      simple extra file tests.
 
-      randomTests - Run the randomized stress tests.
+      randomV3Tests - Run the randomized stress tests.
+
+      v3Tests       - Run both simpleV3Tests and randomV3Tests
 
 
-  'simpleTests' currently runs three tests on very small simulated
+  'simpleV3Tests' currently runs three tests on very small simulated
   AUs.  They damage, delete, or create a node on one of the daemons,
   respectively, and then wait for repair.
 
-  'rangedTests' will run two tests on larger AUs that require
-  ranged name polls to run in order to repair.  The first test
-  deletes the last file in a wide, flat directory.  The second
-  test creates an extra node at the last position in a wide,
-  flat directory.
-
-  'randomTests' is a set of three tests that creates a randomly sized
+  'randomV3Tests' is a set of three tests that creates a randomly sized
   au of depth between 0 and 2, branch factor between 0 and 2, and
   number of files per branch of between 3 and 20.  The first test
   damages a random number of files (between 1 and 5).  The second

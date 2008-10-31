@@ -1,28 +1,122 @@
-import base64, glob, os, httplib, random, re, sha, shutil, signal, socket
-import mimetools, mimetypes, sys, time, types, urllib, urllib2, urlparse
+import base64
+import glob
+import httplib
+import mimetools
+import mimetypes
+import os
+import random
+import re
+import sha
+import shutil
+import signal
+import socket
+import sys
+import time
+import types
+import urllib
+import urllib2
+import urlparse
+
 from os import path
 from xml.dom import minidom
+
 from lockss_util import *
+
 
 # Constants
 
 DEF_TIMEOUT = 60 * 30  # 30 minute default timeout for waits.
 DEF_SLEEP = 5         # 5 second default sleep between loops.
+#DEF_SLEEP = 1          # Save 2 seconds per sleep at minimal cost
 FILE_TYPE_TEXT = 1
 FILE_TYPE_HTML = 2
 FILE_TYPE_PDF = 4
 FILE_TYPE_JPEG = 8
 FILE_TYPE_BIN = 16
 
-# Statics
-frameworkCount = 0
+###########################################################################
+##
+## Config file strings, used when creating default config files.
+##
+###########################################################################
 
-log = Logger()
+globalConfigTemplate = """\
+# LOCKSS & LCAP tuning parameters
+org.lockss.log.default.level=%(logLevel)s
+
+org.lockss.config.reloadInterval=60m
+
+#comm settings
+org.lockss.comm.enabled=false
+org.lockss.scomm.enabled=true
+
+# lcap protocol settings
+org.lockss.protocol.ttl=2
+org.lockss.protocol.hashAlgorithm=SHA-1
+
+# crawl settings
+org.lockss.crawler.startCrawlsInitialDelay=2m
+org.lockss.crawler.startCrawlsInterval=2m
+org.lockss.crawler.odc.queueRecalcAfterNewAu=5s
+
+# poll settings
+org.lockss.comm.enabled=false
+org.lockss.scomm.enabled=true
+org.lockss.scomm.maxMessageSize=33554432
+org.lockss.poll.pollStarterInitialDelay=1m
+org.lockss.poll.pollStarterInterval=30s
+org.lockss.poll.queueRecalcInterval=30s
+org.lockss.poll.defaultPollProbability=100
+org.lockss.poll.v3.maxSimultaneousV3Pollers=1
+org.lockss.poll.v3.maxSimultaneousV3Voters=100
+org.lockss.poll.v3.deleteExtraFiles=true
+org.lockss.poll.v3.quorum=4
+arg.lockss.poll.v3.minNominationSize=0
+org.lockss.poll.v3.maxNominationSize=0
+org.lockss.poll.v3.voteDeadlinePadding=30s
+org.lockss.poll.v3.voteDurationPadding=30s
+org.lockss.poll.v3.tallyDurationPadding=30s
+org.lockss.poll.v3.voteDurationMultiplier=3
+org.lockss.poll.v3.tallyDurationMultiplier=3
+org.lockss.poll.v3.receiptPadding=30s
+
+# Set the v3 poll state dir to /tmp
+org.lockss.poll.v3.messageDir=/tmp
+
+org.lockss.metrics.slowest.hashrate=250
+org.lockss.state.recall.delay=5m
+
+# Turn down logging on areas that we normally
+# don't care much about during polling tests.
+org.lockss.log.LockssServlet.level=info
+org.lockss.log.GenericHasher.level=info
+org.lockss.log.GoslingHtmlParser.level=info
+org.lockss.log.StringFilter.level=info
+org.lockss.log.PluginMgr.level=info
+org.lockss.log.DaemonStatus.level=info
+"""
+
+localConfigTemplate = """\
+org.lockss.platform.ui.username=%(username)s
+org.lockss.platform.ui.password=%(password)s
+org.lockss.platform.diskSpacePaths=%(dir)s
+org.lockss.cache.location=%(dir)s
+org.lockss.proxy.start=%(proxyStart)s
+org.lockss.proxy.port=7999
+org.lockss.ui.port=%(uiPort)s
+org.lockss.localIPAddress=%(ipAddr)s
+org.lockss.comm.unicast.port=%(unicastPort)s
+org.lockss.comm.unicast.sendToPort=%(unicastSendToPort)s
+org.lockss.comm.unicast.sendToAddr=127.0.0.1
+org.lockss.proxy.icp.port=%(icpPort)s
+"""
+
 
 # Classes
+
+
 class Framework:
-    """
-    A framework is a set of LOCKSS daemons and associated test
+    """A framework is a set of LOCKSS daemons and associated test
     clients.  The framework daemons can be started or stopped as a
     group, and their status can be accessed by the clients the
     framework creates and returns at initialization time.
@@ -37,8 +131,8 @@ class Framework:
 
     When the framework is created, it returns a tuple of associated
     clients, one per daemon.  These clients are used to perform
-    functional test interactions with the daemons.
-    """
+    functional test interactions with the daemons."""
+
     def __init__(self, daemonCount = None, urlList = None,
                  startUiPort = None, startV3Port = None):
         self.workDir = path.abspath(config.get('workDir', './'))
@@ -111,14 +205,14 @@ class Framework:
                                   daemonConfUrls)
 
             # create client for this daemon
-            client = Client(daemon, self.hostname, port, v3Port,
-                            self.username, self.password)
+            client = Daemon_Client(daemon, self.hostname, port, v3Port,
+                                   self.username, self.password)
 
             self.clientList.append(client)
             self.daemonList.append(daemon)
 
     def start(self):
-        " Start each daemon in the framework. "
+        """Start each daemon in the framework."""
         # if 'client' is none, start all daemons.
         for daemon in self.daemonList:
             daemon.start()
@@ -126,20 +220,27 @@ class Framework:
         self.isRunning = True
 
     def stop(self):
-        " Stop each daemon in the framework."
+        """Stop each daemon in the framework."""
         for daemon in self.daemonList:
             daemon.stop()
 
         self.isRunning = False
 
+    def waitForFrameworkReady(self):
+        """Convenience function to ensure all daemons are ready"""
+        for client in self.clientList:
+            client.waitForDaemonReady()
+
     def clean(self):
-        " Delete the current framework working directory. "
+        """Delete the current framework working directory and local library directory."""
         shutil.rmtree(self.frameworkDir)
+        if self.localLibDirCreated:
+            shutil.rmtree(self.localLibDir)
 
     def appendLocalConfig(self, conf, client):
-        """ Append the supplied configuration in the dictionary 'conf'
-        (name / value pairs) to the local config file for the specified
-        client daemon 'client' """
+        """Append the supplied configuration in the dictionary 'conf'
+        (name / value pairs) to the local config file of the specified
+        client daemon 'client'"""
         localConf = path.join(client.daemonDir, 'local.txt')
         f = open(localConf, "a")
         for (key, value) in conf.items():
@@ -147,7 +248,7 @@ class Framework:
         f.close()
 
     def checkForDeadlock(self):
-        """ Request that all the daemons in the framework dump their
+        """Request that all the daemons in the framework dump their
         threads, and then look for deadlock messages.  Returns a list of
         log files to check, or an empty list if no deadlocks are found."""
         deadlockList = []
@@ -159,14 +260,15 @@ class Framework:
         return deadlockList
 
     def __grepDeadlock(self, f):
-        """ Very naive implementation. """
+        """Very naive implementation."""
         return (open(f, 'r').read()).find('FOUND A JAVA LEVEL DEADLOCK') > -1
 
     def __setUpLibDir(self):
-        """ Create the directory 'lib' if it does not already exist, then copy
+        """Create the directory 'lib' if it does not already exist, then copy
         lockss.jar, lockss-test.jar, and lockss-plugin.jar from self.projectDir/lib
-        to 'lib'. """
-        if not path.isdir(self.localLibDir):
+        to 'lib'."""
+        self.localLibDirCreated = not path.isdir(self.localLibDir)
+        if self.localLibDirCreated:
             os.mkdir(self.localLibDir)
 
         lockssJar = path.join(self.projectLibDir, 'lockss.jar')
@@ -180,11 +282,11 @@ class Framework:
         shutil.copy(lockssPluginJar, self.localLibDir)
 
     def __makeClasspath(self):
-        """ Return a list of all *.jar and *.zip files under self.projectDir/lib,
-        plus all *.jar and *.zip files under self.localLibDir. """
+        """Return a list of all *.jar and *.zip files under self.projectDir/lib,
+        plus all *.jar and *.zip files under self.localLibDir."""
 
         fd = open(path.join(self.projectDir, 'test', 'test-classpath'), 'r')
-        line = fd.readline()
+        line = fd.readline().strip()
         fd.close()
 
         return (":".join(glob.glob(path.join(self.localLibDir, "*.jar"))) +
@@ -194,14 +296,14 @@ class Framework:
         return self.__makeClasspath()
 
     def __encPasswd(self, passwd):
-        """ Return a SHA1 encoded version of the specified password """
+        """Return a SHA1 encoded version of the specified password."""
         digest = sha.new()
         digest.update(passwd)
         return digest.hexdigest()
 
     def __findProjectDir(self):
-        """ Walk up the tree until 'build.xml' is found.  Assume this
-        is the root of the project. """
+        """Walk up the tree until 'build.xml' is found.  Assume this
+        is the root of the project."""
         ## Shortcut for cwd.
         cwd = os.getcwd()
         if (path.isfile(path.join(cwd, 'build.xml'))):
@@ -229,15 +331,15 @@ class Framework:
         return True
 
     def __makeTestDir(self):
-        """ Construct the name of a directory under the top-level work
+        """Construct the name of a directory under the top-level work
         directory in which to create the framework.  This allows each
         functional test to work in its own directory, and for all the test
-        results to be left for examination if deleteAfter is false. """
+        results to be left for examination if deleteAfter is false."""
         global frameworkCount
         frameworkCount += 1
         fwDir = path.join(self.workDir, 'testcase-' + str(frameworkCount))
         if path.isdir(fwDir):
-            log.info("Caution:  Old directory exists.  Renaming to %s " % (fwDir + "-" + time.time().__str__()))
+            log.info("Old directory exists.  Renaming to %s " % (fwDir + "-" + time.time().__str__()))
             os.rename(fwDir, (fwDir + "-" + time.time().__str__()))
         os.mkdir(fwDir)
         return fwDir
@@ -249,8 +351,8 @@ class Framework:
         f.close()
 
     def __writeLocalConfig(self, file, dir, uiPort):
-        """ Write local config file for a daemon.  Daemon num is
-        assumed to start at 0 and go up to n, for n-1 daemons """
+        """Write local config file for a daemon.  Daemon num is
+        assumed to start at 0 and go up to n, for n-1 daemons."""
         baseUnicastPort = 9000
         baseIcpPort = 3031
         f = open(file, 'w')
@@ -273,46 +375,47 @@ class Framework:
                                        "unicastSendToPort": unicastSendToPort,
                                        "icpPort": icpPort})
         f.close()
-        self.configCount += 1 # no ++ in python, oops.
+        self.configCount += 1
 
     def __writeExtraConfig(self, file, conf):
-        """ Write out any LOCKSS daemon properties. """
+        """Write out any LOCKSS daemon properties."""
         f = open(file, 'w')
         for (key, val) in conf.daemonItems():
             f.write('%s=%s\n' % (key, val))
         f.close()
 
+
 class Client:
-    " Client interface to a test framework. "
-    def __init__(self, daemon, hostname, port, v3Port, username, password):
+    """LOCKSS server client interface"""
+
+    def __init__(self, hostname, port, v3Port, username, password):
         self.hostname = hostname
         self.port = port
         self.v3Port = v3Port
         self.url = 'http://' + self.hostname + ':' + str(port) + '/'
-        self.daemon = daemon
-        self.daemonDir = daemon.daemonDir
         self.username = username
         self.password = password
 
     def getPeerId(self):
-        return ("TCP:[127.0.0.1]:%d" % self.v3Port)
+        #return ("TCP:[127.0.0.1]:%d" % self.v3Port)
+        return "TCP:[%s]:%d" % ( socket.gethostbyname( self.hostname ), self.v3Port )
 
     def createAu(self, au):
-        """ Create a simulated AU.  This will block until the AU appears in
-        the daemon's status table. """
+        """Create a simulated AU.  This will block until the AU appears in
+        the server's status table."""
         post = self.__makeAuPost(au, 'Create')
         post.execute()
 #         if not self.waitForCreateAu(au):
 #             raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
     def waitAu(self, au):
-        """ will block until the AU appears in the daemon's status table. """
+        """ will block until the AU appears in the server's status table. """
         if not self.waitForCreateAu(au):
             raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
     def deleteAu(self, au):
-        """ Delete a simulated AU.  This will block until the AU no longer
-        appears in the daemon's status table. """
+        """Delete a simulated AU.  This will block until the AU no longer
+        appears in the server's status table."""
         post = self.__makeAuPost(au, 'Confirm Delete')
         post.execute()
         if not self.waitForDeleteAu(au):
@@ -320,8 +423,8 @@ class Client:
                               "AU %s to be deleted." % au)
 
     def setPublisherDown(self, au):
-        """ Modify the configuration of the specified AU to set it's 'pub_down'
-        parameter """
+        """Modify the configuration of the specified AU to set it's 'pub_down'
+        parameter."""
         post = self.__makeAuPost(au, 'Update')
         post.add('lfp.pub_down', 'true') # Override setting in AU
         post.execute()
@@ -330,10 +433,8 @@ class Client:
                               "'Publisher Down'." % au)
 
     def reactivateAu(self, au, doWait=True):
-        """
-        Re-activate a simulated AU.  If doWait is set, wait for the AU
-        to disappear from the daemon status table before returning.
-        """
+        """Re-activate a simulated AU.  If doWait is set, wait for the AU
+        to disappear from the server status table before returning."""
 
         if self.isActiveAu(au):
             return
@@ -346,10 +447,8 @@ class Client:
                                   "AU %s to be reactivated." % au)
 
     def deactivateAu(self, au, doWait=True):
-        """
-        Deactivate a simulated AU.  If doWait is set, wait for the AU
-        to disappear from the daemon status table before returning.
-        """
+        """Deactivate a simulated AU.  If doWait is set, wait for the AU
+        to disappear from the server status table before returning."""
         if not self.isActiveAu(au):
             return
 
@@ -366,7 +465,7 @@ class Client:
     ##
 
     def backupConfiguration(self):
-        """ Very quick and dirty way to download the config backup. """
+        """Very quick and dirty way to download the config backup."""
 
         request = Get(self.url + "BatchAuConfig?lockssAction=Backup",
                       self.username, self.password)
@@ -418,48 +517,32 @@ class Client:
     ##
 
     def getCrawlStatus(self, au=None):
-        """
-        Return the current crawl status of this cache.
-        """
+        """Return the current crawl status of this cache."""
         key = None
         if not au == None:
             key = au.auId
 
-        (summary, table) = self.__getStatusTable('crawl_status_table', key)
+        (summary, table) = self._getStatusTable('crawl_status_table', key)
         return table
-    
+
     def getSingleCrawlStatus(self, au, key):
-        """
-        Return the detailed crawl status table for the specified AU and key.
-        """
-        return self.__getStatusTable('single_crawl_status_table', key)
+        """Return the detailed crawl status table for the specified AU and key."""
+        return self._getStatusTable('single_crawl_status_table', key)
 
-    def getAuRepository(self, au):
-        """ RepositoryStatus table does not accept key, so loop through it until
-        the corresponding au is found. """
-        auid = au.auId
-        (summary, table) = self.__getStatusTable('RepositoryTable')
-        for row in table:
-            auRef = row['au']
-            if auRef['key'] == auid:
-                d = row['dir']
-                repo = path.abspath(path.join(self.daemonDir, d))
-                return repo
-
-        ## Wasn't found.
-        return None
-
-    def getAuRoot(self, au):
-        """ Return the full path to the AU's root.  This is used by methods
-        that damage, create, or delete repository files behind the daemon's
-        back.  """
-        repository = self.getAuRepository(au)
-        return path.join(repository, au.dirStruct)
+    def getAuHashFile(self, au):
+        """Return the hash file contents for the whole AU."""
+        post = self.__makeHashPost(au)
+        response = post.execute()
+        match = re.search( '<td>Hash file:</td.*?><td><a href="/(.+?)">HashFile</a.*?>', response.read(), re.DOTALL )
+        if match is None:
+            raise LockssError( 'Hash file URL not found' )
+        post = self.__makePost( match.group( 1 ), cookie = response.info()[ 'Set-Cookie' ].split( ';' )[ 0 ] )
+        return post.execute().read()
 
     def hasAu(self, au):
-        """ Return true iff the status table lists the given au. """
+        """Return true iff the status table lists the given au."""
         auid = au.auId
-        (summary, tab) = self.__getStatusTable('AuIds')
+        (summary, tab) = self._getStatusTable('AuIds')
         for row in tab:
             if row["AuId"] == auid:
                 return True
@@ -467,8 +550,8 @@ class Client:
         return False
 
     def isActiveAu(self, au):
-        """ Return true iff the au is activated."""
-        (summary, tab) = self.__getStatusTable('RepositoryTable')
+        """Return true iff the au is activated."""
+        (summary, tab) = self._getStatusTable('RepositoryTable')
         for row in tab:
             status = row["status"]
             auRef = row["au"]
@@ -485,7 +568,7 @@ class Client:
         return False
 
     def isAuDamaged(self, au, node=None):
-        (summary, table) = self.__getStatusTable('ArchivalUnitTable', au.auId)
+        (summary, table) = self._getStatusTable('ArchivalUnitTable', au.auId)
         if node:
             url = node.url
         else:
@@ -498,7 +581,7 @@ class Client:
                 return row['NodeStatus'] == "Damaged"
         # au wasn't found.
         return False
-    
+
     def hasCompletedFullAuCrawl(self, au):
         tbl = self.getCrawlStatus(au)
         return tbl and \
@@ -513,16 +596,16 @@ class Client:
             return -1
 
     def isPublisherDown(self, au):
-        """ Return true if the AU is marked 'publisher down' (i.e., if
+        """Return true if the AU is marked 'publisher down' (i.e., if
         the ArchivalUnitTable lists 'Available From Publisher' as 'No'
-        for this AU """
-        (summary, table) = self.__getStatusTable('ArchivalUnitTable', au.auId)
+        for this AU."""
+        (summary, table) = self._getStatusTable('ArchivalUnitTable', au.auId)
         return (summary.has_key('Available From Publisher') and
                 summary['Available From Publisher'] == "No")
 
 
     def isAuOK(self, au):
-        """ Return true if the top level of the AU has been repaired. """
+        """Return true if the top level of the AU has been repaired."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if (row.has_key('Range') or not row['PollType'] == 'C'):
@@ -533,7 +616,7 @@ class Client:
         return False
 
     def isContentRepaired(self, au, node):
-        """ Return true if the AU has been repaired by a SNCUSS poll """
+        """Return true if the AU has been repaired by a SNCUSS poll."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row.has_key('Range'):
@@ -546,8 +629,8 @@ class Client:
         return False
 
     def isCompleteV3Repaired(self, au):
-        """ Return true if the given AU has had all its nodes repaired by V3.
-            Used in testing complete loss recovery via V3 """
+        """Return true if the given AU has had all its nodes repaired by V3.
+            Used in testing complete loss recovery via V3."""
         tab = self.getAuV3Pollers(au)
         for row in tab:
             if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
@@ -569,12 +652,13 @@ class Client:
                     repairs = int(summary['Completed Repairs']['value'])
                 except KeyError, e: # Not available
                     repairs = 0
+                print allUrls, agreeUrls, repairs
 
                 return ((repairs == allUrls) and (agreeUrls == allUrls))
         return False
-                
+
     def hasWonV3Poll(self, au):
-        """ Return true if a poll has been called, and no repairs have been made. """
+        """Return true if a poll has been called, and no repairs have been made."""
         return self.isV3Repaired(au, [])
 
 # XXX look for poll w/ high agreement?
@@ -586,7 +670,7 @@ class Client:
 #                 (summary, table) = self.getV3PollerDetail(pollKey)
 
     def isV3Repaired(self, au, nodeList=[]):
-        """ Return true if the given content node has been repaired via V3 """
+        """Return true if the given content node has been repaired via V3."""
         tab = self.getAuV3Pollers(au)
         for row in tab:
             if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
@@ -627,10 +711,9 @@ class Client:
                 return (agreeUrls == allUrls)
         return False
 
-    
     def isNodeRepairedFromPeerByV3(self, au, node):
-        """ Return true if the given content node has been repaired 
-        from a V3 peer """
+        """Return true if the given content node has been repaired
+        from a V3 peer."""
         tab = self.getAuV3Pollers(au)
         for row in tab:
             if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
@@ -638,14 +721,14 @@ class Client:
                 pollKey = row['pollId']['key']
                 (summary,repairTable) = self.getV3CompletedRepairsTable(pollKey)
                 for repairRow in repairTable:
-                    if repairRow['url'] == node.url: 
+                    if repairRow['url'] == node.url:
                         return re.match('^TCP:\[.*\]:.*', repairRow['repairFrom'])
         # Didn't find it.
         return False
 
     def isNodeRepairedFromPublisherByV3(self, au, node):
-        """ Return true if the given content node has been repaired
-        from the publisher """
+        """Return true if the given content node has been repaired
+        from the publisher."""
         tab = self.getAuV3Pollers(au)
         for row in tab:
             if self.isAuIdOrRef(row['auId'], au) and row['status'] == "Complete":
@@ -656,7 +739,7 @@ class Client:
                 log.debug("Got a repairTable with %d rows." % len(repairTable))
                 for repairRow in repairTable:
                     log.debug("repairRow['url'] == %s ; repairRow['repairFrom'] == %s" % (repairRow['url'], repairRow['repairFrom']))
-                    if repairRow['url'] == node.url: 
+                    if repairRow['url'] == node.url:
                         return repairRow['repairFrom'] == 'Publisher'
         # Didn't find it.
         return False
@@ -669,8 +752,8 @@ class Client:
         return False
 
     def isContentRepairedFromCache(self, au, node=None):
-        """ Return true if the given content node has been repaired from
-        another cache via the proxy. """
+        """Return true if the given content node has been repaired from
+        another cache via the proxy."""
         if node:
             url = node.url
         else:
@@ -685,16 +768,16 @@ class Client:
             # into the detail status table.
             crawlkey = row['crawl_status']['key']
             (summary, repairTab) = self.getSingleCrawlStatus(au, crawlkey)
-            
+
             return (summary['Starting Url(s)'] == ("[%s]" % node.url) and \
                     not summary['Source'] == 'Publisher')
-        
+
         #otherwise
         return False
 
     def isContentRepairedFromPublisher(self, au, node):
-        """ Return true iff the given content node has been repaired by
-        crawling the publisher. """
+        """Return true iff the given content node has been repaired by
+        crawling the publisher."""
         tab = self.getCrawlStatus(au)
         # Look for each 'Repair' crawl.
         for row in tab:
@@ -705,15 +788,15 @@ class Client:
             # into the detail status table.
             crawlkey = row['crawl_status']['key']
             (summary, repairTab) = self.getSingleCrawlStatus(au, crawlkey)
-            
+
             return (summary['Starting Url(s)'] == ("[%s]" % node.url) and \
                     summary['Source'] == 'Publisher')
-        
+
         #otherwise
         return False
-            
+
     def isNameRepaired(self, au, node=None):
-        """ Return true if the AU has been repaired by non-ranged name poll """
+        """Return true if the AU has been repaired by non-ranged name poll."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if row.has_key('Range') or not row['PollType'] == 'N':
@@ -731,7 +814,7 @@ class Client:
         return False
 
     def isRangedNameRepaired(self, au, node=None):
-        """ Return true if the AU has been repaired by a ranged name poll """
+        """Return true if the AU has been repaired by a ranged name poll."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             rowPollType = row['PollType']
@@ -751,11 +834,11 @@ class Client:
         return False
 
     def getAuV1Polls(self, au, activeOnly=False):
-        """ Return the full poll status of an AU """
+        """Return the full poll status of an AU."""
         key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
         if activeOnly:
             key = key + '&Status~Active'
-        (summary, table) = self.__getStatusTable('PollManagerTable', key)
+        (summary, table) = self._getStatusTable('PollManagerTable', key)
         return table
 
     def getAuV3Pollers(self, au):
@@ -763,28 +846,28 @@ class Client:
 # status references from the AU table to the V3 Poller table.  It should
 # be OK just to comment this out permanently. [sethm]
 #        key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
-#        (summary, table) = self.__getStatusTable('V3PollerTable', key)
-        (summary, table) = self.__getStatusTable('V3PollerTable')
+#        (summary, table) = self._getStatusTable('V3PollerTable', key)
+        (summary, table) = self._getStatusTable('V3PollerTable')
         return table
 
     def getAuV3Voters(self, au):
         key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
-        (summary, table) = self.__getStatusTable('V3VoterTable', key)
+        (summary, table) = self._getStatusTable('V3VoterTable', key)
         return table
 
     def getV3PollerDetail(self, key):
-        """ Returns both the summary and table """
-        return self.__getStatusTable('V3PollerDetailTable', key)
-    
+        """Returns both the summary and table."""
+        return self._getStatusTable('V3PollerDetailTable', key)
+
     def getV3CompletedRepairsTable(self, key):
-        """ Returns the V3 completed repairs status table """
-        return self.__getStatusTable('V3CompletedRepairsTable', key)
+        """Returns the V3 completed repairs status table."""
+        return self._getStatusTable('V3CompletedRepairsTable', key)
 
     def getAuNodesWithContent(self, au):
-        """ Return a list of all nodes that have content. """
+        """Return a list of all nodes that have content."""
         # Hack!  Pass the table a very large number for numrows, and
         # pray we don't have more than that.
-        (summary, tab) = self.__getStatusTable('ArchivalUnitTable',
+        (summary, tab) = self._getStatusTable('ArchivalUnitTable',
                                                key=au.auId,
                                                numrows=100000)
         nodes = []
@@ -796,8 +879,8 @@ class Client:
         return nodes
 
     def getAuNodesWithChildren(self, au):
-        """ Return a list of all nodes that have children. """
-        (summary, tab) = self.__getStatusTable('ArchivalUnitTable',
+        """Return a list of all nodes that have children."""
+        (summary, tab) = self._getStatusTable('ArchivalUnitTable',
                                                key=au.auId,
                                                numrows=100000)
         nodes = []
@@ -810,7 +893,7 @@ class Client:
 
     def getAuRepairerInfo(self, au):
         """ Return a dict: peer -> dict w/ highestAgree and highestHint. """
-        (summary, table) = self.__getStatusTable('PeerRepair', au.auId)
+        (summary, table) = self._getStatusTable('PeerRepair', au.auId)
         peerDict = {}
         p = re.compile('(\d+)%')
         for row in table:
@@ -838,15 +921,13 @@ class Client:
         return peers
 
     def isDaemonReady(self):
-        """ Ask DaemonStatus whether the daemon is fully started.
-            When given arg idDaemonReady it returns either "true" or "false" """
+        """Ask DaemonStatus whether the server is fully started.
+           When given arg idDaemonReady it returns either True or False"""
         try:
             post = self.__makePost('DaemonStatus')
             post.add('isDaemonReady', "1")
             res = post.execute().read()
             return res.find("true") >= 0
-
-            return True
         except LockssError, e:
             ## If a Lockss error is raised, pass it on.
             raise e
@@ -870,14 +951,14 @@ class Client:
             return possibleref
 
     def getAdminUi(self):
-        """ Fetch the contents of the top-level admin UI.  Useful for
+        """Fetch the contents of the top-level admin UI.  Useful for
         testing the Tiny UI.  May throw urllib2.URLError or
-        urllib2.HTTPError """
+        urllib2.HTTPError."""
         get = Get(self.url, self.username, self.password)
         return get.execute()
 
     def hasV3Poller(self, au):
-        """ Return true if the client has an active V3 Poller """
+        """Return true if the client has an active V3 Poller."""
         tab = self.getAuV3Pollers(au)
         for row in tab:
             if self.isAuIdOrRef(row["auId"], au):
@@ -886,7 +967,7 @@ class Client:
         return False
 
     def hasV3Voter(self, au):
-        """ Return true if the client has an active V3 Poller """
+        """Return true if the client has an active V3 Poller."""
         tab = self.getAuV3Voters(au)
         for row in tab:
             if self.isAuIdOrRef(row["auId"], au):
@@ -895,8 +976,8 @@ class Client:
         return False
 
     def hasTopLevelContentPoll(self, au):
-        """ Return true if the client has an active or won top level
-        content poll """
+        """Return true if the client has an active or won top level
+        content poll."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'C':
@@ -908,7 +989,7 @@ class Client:
         return False
 
     def hasTopLevelNamePoll(self, au):
-        """ Wait for a top level name poll to be called. """
+        """Wait for a top level name poll to be called."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
@@ -920,7 +1001,7 @@ class Client:
         return False
 
     def hasSNCUSSPoll(self, au, node):
-        """ Wait for a Single-Node CUSS poll for the given AU and node. """
+        """Wait for a Single-Node CUSS poll for the given AU and node."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
@@ -932,7 +1013,7 @@ class Client:
         return False
 
     def hasLostTopLevelContentPoll(self, au):
-        """ Return true if a top level content poll has been lost. """
+        """Return true if a top level content poll has been lost."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'C':
@@ -943,7 +1024,7 @@ class Client:
         return False
 
     def hasWonTopLevelContentPoll(self, au):
-        """ Return true if a top level content poll has been won. """
+        """Return true if a top level content poll has been won."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'C':
@@ -954,7 +1035,7 @@ class Client:
         return False
 
     def hasLostTopLevelNamePoll(self, au):
-        """ Wait for a top level name poll to be lost. """
+        """Wait for a top level name poll to be lost."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
@@ -965,7 +1046,7 @@ class Client:
         return False
 
     def hasWonTopLevelNamePoll(self, au):
-        """ Wait for a top level name poll to be won. """
+        """Wait for a top level name poll to be won."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
@@ -976,7 +1057,7 @@ class Client:
         return False
 
     def hasNamePoll(self, au, node):
-        """ Wait for a name poll to run on a given node (won or active) """
+        """Wait for a name poll to run on a given node (won or active)."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
@@ -988,7 +1069,7 @@ class Client:
 
 
     def hasLostNamePoll(self, au, node):
-        """ Wait for a name poll to be won on the given node """
+        """Wait for a name poll to be won on the given node."""
         if not node:
             url = au.baseUrl
         else:
@@ -1003,7 +1084,7 @@ class Client:
         return False
 
     def hasWonNamePoll(self, au, node):
-        """ Wait for a name poll to be won on the given node """
+        """Wait for a name poll to be won on the given node."""
         if not node:
             url = au.baseUrl
         else:
@@ -1018,7 +1099,7 @@ class Client:
         return False
 
     def hasRangedNamePoll(self, au, node):
-        """ Wait for a ranged name poll on the given node. """
+        """Wait for a ranged name poll on the given node."""
         if not node:
             url = au.baseUrl
         else:
@@ -1033,7 +1114,7 @@ class Client:
         return False
 
     def hasLostRangedNamePoll(self, au, node):
-        """ Wait for a ranged name poll to be lost on the given node """
+        """Wait for a ranged name poll to be lost on the given node."""
         if not node:
             url = au.baseUrl
         else:
@@ -1048,7 +1129,7 @@ class Client:
         return False
 
     def hasWonRangedNamePoll(self, au, node):
-        """ Wait for a ranged name poll to be won on the given node """
+        """Wait for a ranged name poll to be won on the given node."""
         if not node:
             url = au.baseUrl
         else:
@@ -1063,8 +1144,8 @@ class Client:
         return False
 
     def hasLostSNCUSSPoll(self, au, node):
-        """ Wait for a Single-Node CUSS poll for the given AU and node
-        to be lost """
+        """Wait for a Single-Node CUSS poll for the given AU and node
+        to be lost."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
@@ -1076,8 +1157,8 @@ class Client:
         return False
 
     def hasWonSNCUSSContentPoll(self, au, node):
-        """ Wait for a Single-Node CUSS poll for the given AU and node
-        to be won """
+        """Wait for a Single-Node CUSS poll for the given AU and node
+        to be won."""
         tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
@@ -1098,48 +1179,51 @@ class Client:
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForCreateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Wait for the au to appear, or for the timeout to expire."""
+        """Wait for the au to appear, or for the timeout to expire."""
         def waitFunc():
             return self.hasAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForDeleteAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Wait for the au to be deleted, or for the timeout to
-        expire. """
+        """Wait for the au to be deleted, or for the timeout to
+        expire."""
         def waitFunc():
             return not self.hasAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForPublisherDown(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Wait for the specified AU to be marked 'publisher down' """
+        """Wait for the specified AU to be marked 'publisher down'."""
         def waitFunc():
             return self.isPublisherDown(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForReactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Wait for the au to be activated, or for the timeout to
-        expire. """
+        """Wait for the au to be activated, or for the timeout to
+        expire."""
         def waitFunc():
             return self.isActiveAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForDeactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Wait for the au to be deactivated, or for the timeout to
+        """Wait for the au to be deactivated, or for the timeout to
         expire."""
         def waitFunc():
             return not self.isActiveAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForSuccessfulCrawl(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Block until the specified au has had at least one
+        """Block until the specified au has had at least one
         successful new content crawl."""
         def waitFunc():
             tbl = self.getCrawlStatus(au)
-            status = tbl[0]['crawl_status']['value'] 
+            if not tbl:
+                log.debug( 'AU not found; continuing to wait' )
+                return False
+            status = tbl[0]['crawl_status']['value']
             if status == 'Successful':
                 numCrawled = int(self.valueOfRef(tbl[0]['num_urls_fetched']))
                 numExpected = au.expectedUrlCount()
-                if numCrawled == numExpected:
+                if numExpected is None or numCrawled == numExpected:
                     return True
                 else:
                     raise LockssError("Crawl on client " +
@@ -1154,19 +1238,19 @@ class Client:
                                   " did not receive permission!")
             else:
                 return False
-        
+
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForV3Poller(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasV3Poller(au)
         return self.wait(waitFunc, timeout, sleep)
-        
+
     def waitForWonV3Poll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasWonV3Poll(au)
         return self.wait(waitFunc, timeout, sleep)
-        
+
     def waitForCompleteV3Repair(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.isCompleteV3Repaired(au)
@@ -1195,21 +1279,21 @@ class Client:
 
     def waitForLostTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT,
                                        sleep=DEF_SLEEP):
-        """ Block until a top level content poll is lost. """
+        """Block until a top level content poll is lost."""
         def waitFunc():
             return self.hasLostTopLevelContentPoll(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForLostTopLevelNamePoll(self, au, timeout=DEF_TIMEOUT,
                                     sleep=DEF_SLEEP):
-        """ Block until a top level name poll is lost. """
+        """Block until a top level name poll is lost."""
         def waitFunc():
             return self.hasLostTopLevelNamePoll(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForLostNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                                     sleep=DEF_SLEEP):
-        """ Block until a node name poll is lost. """
+        """Block until a node name poll is lost."""
         def waitFunc():
             return self.hasLostNamePoll(au, node)
         return self.wait(waitFunc, timeout, sleep)
@@ -1217,49 +1301,49 @@ class Client:
 
     def waitForLostSNCUSSContentPoll(self, au, node, timeout=DEF_TIMEOUT,
                                      sleep=DEF_SLEEP):
-        """ Block until a top level name poll is lost. """
+        """Block until a top level name poll is lost."""
         def waitFunc():
             return self.hasLostSNCUSSPoll(au, node)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT,
                                        sleep=DEF_SLEEP):
-        """ Block until a top level content poll is won. """
+        """Block until a top level content poll is won."""
         def waitFunc():
             return self.hasWonTopLevelContentPoll(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonTopLevelNamePoll(self, au, timeout=DEF_TIMEOUT,
                                     sleep=DEF_SLEEP):
-        """ Block until a top level name poll is won. """
+        """Block until a top level name poll is won."""
         def waitFunc():
             return self.hasWonTopLevelNamePoll(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                         sleep=DEF_SLEEP):
-        """ Block until a node level name poll is run (active or won) """
+        """Block until a node level name poll is run (active or won)."""
         def waitFunc():
             return self.hasNamePoll(au, node)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                            sleep=DEF_SLEEP):
-        """ Block until a node level name poll is won. """
+        """Block until a node level name poll is won."""
         def waitFunc():
             return self.hasWonNamePoll(au, node)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonSNCUSSContentPoll(self, au, node, timeout=DEF_TIMEOUT,
                                      sleep=DEF_SLEEP):
-        """ Block until a SNCUSS content poll is won. """
+        """Block until a SNCUSS content poll is won."""
         def waitFunc():
             return self.hasWonSNCUSSContentPoll(au,  node)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                               sleep=DEF_SLEEP):
-        """ Block until a ranged name poll has occured (active or won)"""
+        """Block until a ranged name poll has occured (active or won)"""
         def waitFunc():
             return self.hasRangedNamePoll(au, node)
         return self.wait(waitFunc, timeout, sleep)
@@ -1277,29 +1361,29 @@ class Client:
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForTopLevelDamage(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Block until an au is marked 'Damaged' at the top level
-        (lockssau:). """
+        """Block until an au is marked 'Damaged' at the top level
+        (lockssau:)."""
         def waitFunc():
             return self.isAuDamaged(au, None)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForDamage(self, au, node, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Block until a node is marked 'repairing', or until the
-        timeout expires. """
+        """Block until a node is marked 'repairing', or until the
+        timeout expires."""
         def waitFunc():
             return self.isAuDamaged(au, node)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForTopLevelRepair(self, au, timeout=DEF_TIMEOUT,
                               sleep=DEF_SLEEP):
-        """ Block until the top-level of the AU is marked repaired. """
+        """Block until the top-level of the AU is marked repaired."""
         def waitFunc():
             return self.isAuOK(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForContentRepair(self, au, node, timeout=DEF_TIMEOUT,
                              sleep=DEF_SLEEP):
-        """ Block until a node has been successfully repaired ,or until
+        """Block until a node has been successfully repaired, or until
         the timeout expires."""
         def waitFunc():
             return self.isContentRepaired(au, node)
@@ -1307,7 +1391,7 @@ class Client:
 
     def waitForV3Repair(self, au, nodeList=[], timeout=DEF_TIMEOUT,
                         sleep=DEF_SLEEP):
-        """ Wait for a successful repair of the specified node by a V3 Poll """
+        """Wait for a successful repair of the specified node by a V3 Poll."""
         def waitFunc():
             return self.isV3Repaired(au, nodeList)
         return self.wait(waitFunc, timeout, sleep)
@@ -1317,16 +1401,16 @@ class Client:
         def waitFunc():
             return self.isV3RepairedExtraFiles(au)
         return self.wait(waitFunc, timeout, sleep)
-        
+
     def waitForV3NoQuorum(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Wait for a V3 poll to be marked No Quorum """
+        """Wait for a V3 poll to be marked No Quorum."""
         def waitFunc():
             return self.isV3NoQuorum(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,
                           sleep=DEF_SLEEP):
-        """ Block until a node has been successfully repaired, or until
+        """Block until a node has been successfully repaired, or until
         the timeout expires.  If 'node' is None, this will just wait until
         the base URL has been marked repaired."""
         def waitFunc():
@@ -1340,7 +1424,7 @@ class Client:
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForDaemonReady(self, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Block until the framework is ready for client communication """
+        """Block until the framework is ready for client communication."""
         def waitFunc():
             return self.isDaemonReady()
         return self.wait(waitFunc, timeout, sleep)
@@ -1362,15 +1446,15 @@ class Client:
     ###
 
     def randomDamageSingleNode(self, au):
-        """ Randomly select a node with content, and cause damage in it. """
+        """Randomly select a node with content, and cause damage in it."""
         node = self.__getRandomContentNode(au)
         self.damageNode(node)
         return node
 
     def randomDamageRandomNodes(self, au, minCount=1, maxCount=5):
-        """ Damage a random selection of between minCount and maxCount
+        """Damage a random selection of between minCount and maxCount
         nodes with content for the given au.  Returns the list of
-        damaged nodes. """
+        damaged nodes."""
         nodeList = self.__getRandomContentNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.damageNode(node)
@@ -1378,15 +1462,15 @@ class Client:
         return nodeList
 
     def randomDelete(self, au):
-        """ Randomly select a node with content, and delete it. """
+        """Randomly select a node with content, and delete it."""
         node = self.__getRandomContentNode(au)
         self.deleteNode(node)
         return node
 
     def randomDeleteRandomNodes(self, au, minCount=1, maxCount=5):
-        """ Delete a random selection of between minCount and maxCount
+        """Delete a random selection of between minCount and maxCount
         nodes with content for the given au.  Returns the list of
-        damaged nodes as a tuple. """
+        damaged nodes as a tuple."""
         nodeList = self.__getRandomContentNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.deleteNode(node)
@@ -1411,7 +1495,7 @@ class Client:
             raise LockssError("File does not exist: %s" % f)
 
     def damageNode(self, node):
-        """ Damage a specific node. """
+        """Damage a specific node."""
         # Only want to damage the file contents
         fullPath = path.join(node.file, '#content', 'current')
         if path.isfile(fullPath):
@@ -1423,7 +1507,7 @@ class Client:
             raise LockssError("File does not exist: %s" % f)
 
     def deleteNode(self, node):
-        """ Delete a specific node. """
+        """Delete a specific node."""
         f = node.file
         if path.isfile(f):
             os.unlink(f)
@@ -1432,26 +1516,12 @@ class Client:
         else:
             raise LockssError("File does not exist: %s" % f)
 
-    def simulateDiskFailure(self):
-        """ Delete the entire contents of this client's cache.  Obviously,
-        very destructive. """
-        cacheDir = path.join(self.daemonDir, "cache")
-        configDir = path.join(self.daemonDir, "config")
-        pluginsDir = path.join(self.daemonDir, "plugins")
-        if path.isdir(cacheDir) and path.isdir(configDir)\
-               and path.isdir(pluginsDir):
-            shutil.rmtree(cacheDir)
-            shutil.rmtree(configDir)
-            shutil.rmtree(pluginsDir)
-        else:
-            raise LockssError("Cache not in an expected state!")
-
     def createFile(self, au, filespec):
-        """ Create an extra file in the repository under the given AU and
+        """Create an extra file in the repository under the given AU and
         filespec.  The filespec should be relative to the AU's root, for example
         'foo/bar' would attempt to create the file
         /path/to/au/repository/www.example.com/http/foo/bar.  Returns
-        the new file. """
+        the new file."""
         root = self.getAuRoot(au)
         output = path.join(root, filespec)
         if path.isfile(output):
@@ -1465,8 +1535,8 @@ class Client:
     # current implementation of the repository.  If that changes,
     # thesee must change.
     def createNode(self, au, filespec, node=None):
-        """ Given a branch node, create a new child under it. """
-        
+        """Given a branch node, create a new child under it."""
+
         if not node:
             root = self.getAuRoot(au)
         else:
@@ -1474,19 +1544,19 @@ class Client:
 
         now = time.strftime("%s000") # No ms precision
         nowComment = time.strftime("#%a %b %d %H:%M:%S %Z %Y")
-        
+
         auRoot = self.getAuRoot(au)
         nodeRoot = path.join(root, filespec)
         url = au.baseUrl + nodeRoot[len(auRoot):]
-        
+
         os.mkdir(nodeRoot)
         os.mkdir(path.join(nodeRoot, '#content'))
-        
+
         contentFile = path.join(nodeRoot, '#content', 'current')
         f = open(contentFile, 'w')
         f.write('Garbage File')
         f.close()
-        
+
         propsFile = path.join(nodeRoot, '#content', 'current.props')
         f = open(propsFile, 'w')
         f.write("#HTTP headers for %s\n" % url)
@@ -1498,7 +1568,7 @@ class Client:
         f.write("x-lockss-orig-url=%s\n" % url)
         f.write("x_lockss-server-date=%s\n" % now)
         f.close()
-        
+
         nodeProps = path.join(nodeRoot, '#node_props')
         f = open(nodeProps, 'w')
         f.write("#Node properties\n")
@@ -1510,8 +1580,8 @@ class Client:
         return Node(url, nodeRoot)
 
     def randomCreateRandomNodes(self, au, minCount=1, maxCount=5):
-        """ Create a random number of between minCount and maxCount
-        nodes on the given au.  Return the list of new nodes. """
+        """Create a random number of between minCount and maxCount
+        nodes on the given au.  Return the list of new nodes."""
         nodeList = []
         random.seed(time.time())
         numNodes = random.randint(minCount, maxCount)
@@ -1523,9 +1593,9 @@ class Client:
 
 
     def getAuNode(self, au, url, checkForContent=False):
-        """ Construct a node from a url on an AU """
+        """Construct a node from a url on an AU."""
         root = self.getAuRoot(au)
-        ### Kludge for getting "lockssau" node.
+        # Kludge for getting "lockssau" node.
         if url == 'lockssau':
             f = root
         else:
@@ -1549,11 +1619,11 @@ class Client:
     ### Internal methods
     ###
 
-    def __getStatusTable(self, statusTable, key=None, numrows=None):
-        """ Given an XML string, parse it as a status table and return
+    def _getStatusTable(self, statusTable, key=None, numrows=None):
+        """Given an XML string, parse it as a status table and return
         a list of dictionaries representing the data.  Each item in
         the list is a dictionary of column names to values, stored as
-        Unicode strings. """
+        Unicode strings."""
         post = self.__makePost('DaemonStatus')
         post.add('table', statusTable)
         if not key == None:
@@ -1627,52 +1697,66 @@ class Client:
             log.debug2("Connect error: %s" % (e))
             return False
 
-    def __makePost(self, page, lockssAction=None):
+    def __makePost(self, page, form_data=None, cookie=None):
         postUrl = self.url + page
-        post = Post(postUrl, self.username, self.password)
-        if lockssAction:
-            post.add('lockssAction', lockssAction)
+        post = Post(postUrl, self.username, self.password, cookie)
+        if form_data:
+            for key, value in form_data.iteritems():
+                post.add(key, value)
         return post
 
     def __makeAuPost(self, au, lockssAction):
-        post = self.__makePost('AuConfig', lockssAction)
+        post = self.__makePost('AuConfig', {'lockssAction': lockssAction})
         post.add('PluginId', au.pluginId)
-        post.add('lfp.root', au.root)
+        simulated_AU = hasattr( au, 'title' ) and au.title.startswith( 'Simulated Content: ' )
+        if simulated_AU:
+        #    excluded_attributes.update( ( 'auid', 'baseUrl', 'dirStruct', 'fileTypeArray', 'pluginId', 'startUrl', 'title' ) )
+            post.add('lfp.root', au.root)
+            if au.depth != -1:
+                post.add('lfp.depth', au.depth)
+            if au.branch != -1:
+                post.add('lfp.branch', au.branch)
+            if au.numFiles != -1:
+                post.add('lfp.numFiles', au.numFiles)
+            if au.binFileSize != -1:
+                post.add('lfp.binFileSize', au.binFileSize)
+            if au.maxFileName != -1:
+                post.add('lfp.maxFileName', au.maxFileName)
+            if au.fileTypes != -1:
+                post.add('lfp.fileTypes', au.fileTypes)
+            if au.oddBranchContent != -1:
+                post.add('lfp.odd_branch_content', au.oddBranchContent)
+            if au.badFileLoc is not None:
+                post.add('lfp.badFileLoc', au.badFileLoc)
+            if au.badFileNum != -1:
+                post.add('lfp.badFileNum', au.badFileNum)
+            if au.publisherDown:
+                post.add('lfp.pub_down', 'true')
+            if au.protocolVersion > 0:
+                post.add('lfp.protocol_version', au.protocolVersion)
+            #post.add('auid', au.auId) # Unnecessary? Also excluded below.
+        else:
+            excluded_attributes = set( ( 'auId', 'pluginId', ) )
+            for key in set( vars( au ) ) - excluded_attributes:
+                value = getattr( au, key )
+                #if not simulated_AU or value is not None and value is not False and Value != -1:
+                post.add( 'lfp.' + key, value )
+        return post
 
-        if (not au.depth == -1):
-            post.add('lfp.depth', au.depth)
-        if (not au.branch == -1):
-            post.add('lfp.branch', au.branch)
-        if (not au.numFiles == -1):
-            post.add('lfp.numFiles', au.numFiles)
-        if (not au.binFileSize == -1):
-            post.add('lfp.binFileSize', au.binFileSize)
-        if (not au.maxFileName == -1):
-            post.add('lfp.maxFileName', au.maxFileName)
-        if (not au.fileTypes == -1):
-            post.add('lfp.fileTypes', au.fileTypes)
-        if (not au.oddBranchContent == -1):
-            post.add('lfp.odd_branch_content', au.oddBranchContent)
-        if (not au.badFileLoc == None):
-            post.add('lfp.badFileLoc', au.badFileLoc)
-        if (not au.badFileNum == -1):
-            post.add('lfp.badFileNum', au.badFileNum)
-        if (au.publisherDown):
-            post.add('lfp.pub_down', 'true')
-        if (au.protocolVersion > 0):
-            post.add('lfp.protocol_version', au.protocolVersion)
-        post.add('auid', au.auId)
-
+    def __makeHashPost( self, au ):
+        """Requests the hash of an AU."""
+        post = self.__makePost( 'HashCUS', {'action': 'Hash'} )
+        post.add ('auid', au.auId )
+        post.add( 'hashtype', 4 ) # (sic)
         return post
 
     def __getRandomContentNode(self, au):
-        ### Raise an error if the AU hasn't been created or
-        ### crawled.
+        """Raise an error if the AU hasn't been created or crawled."""
         repository = self.getAuRepository(au)
         if repository == None:
             raise LockssError("No repository for au: %s" % au)
 
-        ### Randomly select a node to damage
+        # Randomly select a node to damage
         random.seed(time.time())
         nodeList = self.getAuNodesWithContent(au)
         randomNode = nodeList[random.randint(0, len(nodeList) - 1)]
@@ -1680,10 +1764,10 @@ class Client:
         return randomNode
 
     def __getRandomContentNodeList(self, au, minCount, maxCount):
-        """ Return a randomly sized list of nodes with content,
+        """Return a randomly sized list of nodes with content,
         between min and max in length. If there are fewer than 'max'
         nodes, this will return a list between 'min' and
-        'len(allnodes)' """
+        'len(allnodes)'."""
         nodes = self.getAuNodesWithContent(au)
         maxCount = min(maxCount, len(nodes))
 
@@ -1704,10 +1788,10 @@ class Client:
         return returnList
 
     def __getRandomBranchNodeList(self, au, minCount, maxCount):
-        """ Return a randomly sized list of nodes with children,
+        """Return a randomly sized list of nodes with children,
         between min and max in length. If there are fewer than 'max'
         nodes, this will return a list between 'min' and
-        'len(allnodes)' """
+        'len(allnodes)'."""
         nodes = self.getAuNodesWithChildren(au)
         maxCount = min(maxCount, len(nodes))
         if (maxCount == 0):
@@ -1734,9 +1818,79 @@ class Client:
     def __str__(self):
         return "%s" % self.url
 
-class SimulatedAu:
-    """ A Python abstraction of a SimulatedPlugin ArchivalUnit for use
-    in the functional test framework. """
+
+class Daemon_Client( Client ):
+    """Test framework daemon client interface"""
+
+    def __init__(self, daemon, hostname, port, v3Port, username, password):
+        Client.__init__( self, hostname, port, v3Port, username, password )
+        self.daemon = daemon
+        self.daemonDir = daemon.daemonDir
+
+    def getAuRepository(self, au):
+        """RepositoryStatus table does not accept key, so loop through it until
+        the corresponding au is found."""
+        auid = au.auId
+        (summary, table) = self._getStatusTable('RepositoryTable')
+        for row in table:
+            auRef = row['au']
+            if auRef['key'] == auid:
+                d = row['dir']
+                repo = path.abspath(path.join(self.daemonDir, d))
+                return repo
+        ## Wasn't found.
+        return None
+
+    def getAuRoot(self, au):
+        """Return the full path to the AU's root.  This is used by methods
+        that damage, create, or delete repository files behind the server's
+        back."""
+        repository = self.getAuRepository(au)
+        return path.join(repository, au.dirStruct)
+
+    def simulateDiskFailure(self):
+        """Delete the entire contents of this client's cache.  Obviously,
+        very destructive."""
+        cacheDir = path.join(self.daemonDir, "cache")
+        configDir = path.join(self.daemonDir, "config")
+        pluginsDir = path.join(self.daemonDir, "plugins")
+        if path.isdir(cacheDir) and path.isdir(configDir)\
+               and path.isdir(pluginsDir):
+            shutil.rmtree(cacheDir)
+            shutil.rmtree(configDir)
+            shutil.rmtree(pluginsDir)
+        else:
+            raise LockssError("Cache not in an expected state!")
+
+
+class AU:
+    """General-purpose Archival Unit"""
+
+    def __init__( self, auId ):
+        self.auId = auId.strip()
+        self.pluginId, auKey = self.auId.split( '&', 1 )
+        self.pluginId = self.pluginId.replace( '|', '.' )
+        self.title = urllib.unquote_plus( auKey )
+        for property in auKey.split( '&' ):
+            key, value = ( urllib.unquote_plus( encoded ) for encoded in property.split( '~' ) )
+            assert not hasattr( self, key )
+            setattr( self, urllib.unquote_plus( key ), urllib.unquote_plus( value ) )
+
+    def __str__(self):
+        return self.title
+
+    def expectedUrlCount(self):
+        return None
+
+# Redundant?
+#   def getAuId(self):
+#       auIdKey = self.pluginId.replace('.', '|')
+#       return "%s&root~%s" % (auIdKey, self.root)
+
+
+class SimulatedAu( AU ):
+    """A Python abstraction of a SimulatedPlugin Archival Unit for use
+    in the functional test framework."""
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
                  binFileSize=-1, maxFileName=-1, fileTypes=[],
                  oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
@@ -1761,9 +1915,6 @@ class SimulatedAu:
         self.title = "Simulated Content: " + root
         self.startUrl = self.baseUrl + '/index.html'
 
-    def __str__(self):
-        return self.title
-    
     def expectedUrlCount(self):
         if self.depth == 0:
             dp = 1
@@ -1775,16 +1926,13 @@ class SimulatedAu:
         # the top-level starting URL counts too.
         return (numFileTypes * self.numFiles * self.branch) + \
                (numFileTypes * self.numFiles * dp) + \
-               (self.branch + 2) 
+               (self.branch + 2)
 
-    def getAuId(self):
-        auIdKey = self.pluginId.replace('.', '|')
-        return "%s&root~%s" % (auIdKey, self.root)
 
 class Node:
-    """ In keeping with python written in a Java accent, here's a
+    """In keeping with Python written in a Java accent, here's a
     simple object that could just as easily have been a tuple or a
-    dict. """
+    dict."""
     def __init__(self, url, file):
         self.url = url
         self.file = file
@@ -1795,9 +1943,10 @@ class Node:
     def __str__(self):
         return "%s" % self.url
 
+
 class LockssDaemon:
-    """ Wrapper around a daemon instance.  Controls starting and stopping
-    a LOCKSS Java daemon. """
+    """Wrapper around a daemon instance.  Controls starting and stopping
+    a LOCKSS Java daemon."""
     def __init__(self, dir, cp, configList):
         self.daemonDir = dir
         self.cp = cp
@@ -1825,8 +1974,14 @@ class LockssDaemon:
 
     def stop(self):
         if self.isRunning:
-            os.kill(self.pid, signal.SIGKILL)
-            self.isRunning = False
+            try:
+                os.kill(self.pid, signal.SIGKILL)
+            except OSError:
+                log.debug( 'Daemon already dead?' )
+            else:
+                log.debug( 'Daemon stopped' )
+            finally:
+                self.isRunning = False
 
     def requestThreadDump(self):
         if self.isRunning:
@@ -1835,13 +1990,14 @@ class LockssDaemon:
             # time to comply and flush the daemon log file.
             time.sleep(1)
 
+
 class Post:
-    """ A simple wrapper for HTTP post management. """
+    """A simple wrapper for HTTP post management."""
     def __init__(self, url='', username=None, password=None, cookie=None):
         self.request = urllib2.Request(url)
         if cookie:
             self.request.add_header('Cookie', cookie)
-        if not username == None and not password == None:
+        if username is not None and password is not None:
             # Attempt to set authentication
             encoded = base64.encodestring('%s:%s' % (username, password))[:-1]
             authheader = "Basic %s" % encoded
@@ -1852,13 +2008,14 @@ class Post:
         self.postData.append((key, val))
 
     def execute(self):
-        """ Send a POST with the previously constructed form data,
-        and return the contents of the file. """
+        """Send a POST with the previously constructed form data,
+        and return the contents of the file."""
         args = urllib.urlencode(self.postData)
         opener = urllib2.build_opener()
         log.debug2("Sending POST: %s?%s" % (self.request.get_full_url(), args))
         return opener.open(self.request, args)
- 
+
+
 class MultipartPost:
     def __init__(self, url='', username=None, password=None, cookie=None):
         urlparts = urlparse.urlsplit(url)
@@ -1877,8 +2034,8 @@ class MultipartPost:
         self.fileData.append((key, filename, f.read()))
 
     def execute(self):
-        """ Returns a tuple of (response body, cookie).  cookie is 'None' if no
-        SetCookie header was received. """
+        """Returns a tuple of (response body, cookie).  cookie is 'None' if no
+        SetCookie header was received."""
 
         (contentType, body) = self.encodeMultipartFormdata(self.postData, self.fileData)
         length = str(len(body))
@@ -1899,10 +2056,10 @@ class MultipartPost:
 
 
     def encodeMultipartFormdata(self, fields, files):
-        """ fields is a sequence of (name, value) elements for regular
+        """fields is a sequence of (name, value) elements for regular
         form fields.  files is a sequence of (name, filename, value)
         elements for data to be uploaded as files Return (content_type,
-        body) ready for httplib.HTTP instance """
+        body) ready for httplib.HTTP instance."""
 
         boundary = mimetools.choose_boundary()
 
@@ -1929,6 +2086,7 @@ class MultipartPost:
     def getContentType(self, filename):
         return mimetypes.guess_type(filename)[0] or 'application/octet-stream'
 
+
 class Get:
     def __init__(self, url='', username=None, password=None):
         self.request = urllib2.Request(url)
@@ -1943,78 +2101,8 @@ class Get:
         log.debug2("Sending GET: %s" % self.request.get_full_url())
         return opener.open(self.request)
 
-###########################################################################
-##
-## Config file strings, used when creating default config files.
-##
-###########################################################################
 
-globalConfigTemplate = """\
-# LOCKSS & LCAP tuning parameters
-org.lockss.log.default.level=%(logLevel)s
+assert sys.version_info >= ( 2, 5 )
 
-org.lockss.config.reloadInterval=60m
-
-#comm settings
-org.lockss.comm.enabled=false
-org.lockss.scomm.enabled=true
-
-# lcap protocol settings
-org.lockss.protocol.ttl=2
-org.lockss.protocol.hashAlgorithm=SHA-1
-
-# crawl settings
-org.lockss.crawler.startCrawlsInitialDelay=2m
-org.lockss.crawler.startCrawlsInterval=2m
-org.lockss.crawler.odc.queueRecalcAfterNewAu=5s
-
-# poll settings
-org.lockss.comm.enabled=false
-org.lockss.scomm.enabled=true
-org.lockss.scomm.maxMessageSize=33554432
-org.lockss.poll.pollStarterInitialDelay=1m
-org.lockss.poll.pollStarterInterval=30s
-org.lockss.poll.queueRecalcInterval=30s
-org.lockss.poll.defaultPollProbability=100
-org.lockss.poll.v3.maxSimultaneousV3Pollers=1
-org.lockss.poll.v3.maxSimultaneousV3Voters=100
-org.lockss.poll.v3.deleteExtraFiles=true
-org.lockss.poll.v3.quorum=4
-arg.lockss.poll.v3.minNominationSize=0
-org.lockss.poll.v3.maxNominationSize=0
-org.lockss.poll.v3.voteDurationPadding=30s
-org.lockss.poll.v3.tallyDurationPadding=30s
-org.lockss.poll.v3.voteDurationMultiplier=3
-org.lockss.poll.v3.tallyDurationMultiplier=3
-org.lockss.poll.v3.receiptPadding=30s
-
-# Set the v3 poll state dir to /tmp
-org.lockss.poll.v3.messageDir=/tmp
-
-org.lockss.metrics.slowest.hashrate=250
-org.lockss.state.recall.delay=5m
-
-# Turn down logging on areas that we normally
-# don't care much about during polling tests.
-org.lockss.log.LockssServlet.level=info
-org.lockss.log.GenericHasher.level=info
-org.lockss.log.GoslingHtmlParser.level=info
-org.lockss.log.StringFilter.level=info
-org.lockss.log.PluginMgr.level=info
-org.lockss.log.DaemonStatus.level=info
-"""
-
-localConfigTemplate = """\
-org.lockss.platform.ui.username=%(username)s
-org.lockss.platform.ui.password=%(password)s
-org.lockss.platform.diskSpacePaths=%(dir)s
-org.lockss.cache.location=%(dir)s
-org.lockss.proxy.start=%(proxyStart)s
-org.lockss.proxy.port=7999
-org.lockss.ui.port=%(uiPort)s
-org.lockss.localIPAddress=%(ipAddr)s
-org.lockss.comm.unicast.port=%(unicastPort)s
-org.lockss.comm.unicast.sendToPort=%(unicastSendToPort)s
-org.lockss.comm.unicast.sendToAddr=127.0.0.1
-org.lockss.proxy.icp.port=%(icpPort)s
-"""
+frameworkCount = 0
+log = Logger()

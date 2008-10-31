@@ -1,18 +1,25 @@
-#!/usr/bin/python
-"""
-This test suite requires at minimum a top-level work directory to
-build frameworks in.  Optional parameters may also be set, if desired,
-to change the default behavior.  See the file for details.
-"""
-import sys, time, unittest, os, urllib2, re, filecmp
+#!/usr/bin/env python
+"""This test suite requires at minimum a top-level work directory in which to
+build frameworks.  If desired, optional parameters may also be set to change
+the default behavior.  See testsuite.props for details."""
+
+import filecmp
+import os
+import re
+import sys
+import time
+import unittest
+import urllib2
+
+sys.path.append( os.path.normpath( os.path.join( os.path.dirname( sys.argv[ 0 ] ), '../lib' ) ) )
 from lockss_util import *
 
 ##
 ## Load configuration.
 ##
-loadConfig('./testsuite.props')
-if os.path.isfile('./testsuite.opt'):
-    loadConfig('./testsuite.opt')
+loadConfig('testsuite.props')
+if os.path.isfile('testsuite.opt'):
+    loadConfig('testsuite.opt')
 
 from lockss_daemon import *
 
@@ -28,9 +35,9 @@ deleteAfterSuccess = config.getBoolean('deleteAfterSuccess', True)
 ##
 
 class LockssTestCase(unittest.TestCase):
-    """ Superclass for all STF test cases. """
-    def __init__(self):
-        unittest.TestCase.__init__(self)
+    """Superclass for all STF test cases."""
+    def __init__(self, methodName='runTest'):
+        unittest.TestCase.__init__(self, methodName)
 
         self.delayShutdown = config.get('delayShutdown', False)
         self.timeout = int(config.get('timeout', 60 * 60 * 8))
@@ -54,6 +61,8 @@ class LockssTestCase(unittest.TestCase):
         return None
 
     def setUp(self):
+        unittest.TestCase.setUp(self)
+
         ## Log start of test.
         log.info("==========================================================")
         log.info(self.__doc__)
@@ -76,14 +85,12 @@ class LockssTestCase(unittest.TestCase):
         ##
         self.clients = self.framework.clientList
 
-        unittest.TestCase.setUp(self)
-
     def tearDown(self):
         # dump threads and look for deadlocks.  This will happen
         # whether or not there was a failure.
         deadlockLogs = self.framework.checkForDeadlock()
         if deadlockLogs:
-            log.warn("Deadlocks detected!")
+            log.error("Deadlocks detected!")
             self.fail("Failing due to deadlock detection.  Check the "
                       "following log file(s): %s" % ", ".join(deadlockLogs))
         else:
@@ -99,10 +106,10 @@ class LockssTestCase(unittest.TestCase):
         unittest.TestCase.tearDown(self)
 
 class LockssAutoStartTestCase(LockssTestCase):
-    """ Extension of LockssTestCase that automatically starts the
+    """Extension of LockssTestCase that automatically starts the
     framework in the setUp method.  Typically, you should extend this
     class to create a new method unless you want to have more control
-    over when the framework starts up. """
+    over when the framework starts up."""
 
     def setUp(self):
         LockssTestCase.setUp(self)
@@ -115,9 +122,8 @@ class LockssAutoStartTestCase(LockssTestCase):
         assert self.framework.isRunning, 'Framework failed to start.'
 
         # Block return until all clients are ready to go.
-        log.info("Waiting for framework to come ready.")
-        for c in self.clients:
-            c.waitForDaemonReady()
+        log.info("Waiting for framework to become ready.")
+        self.framework.waitForFrameworkReady()
 
 
 ##
@@ -202,7 +208,7 @@ class TinyUiTests(LockssTestCase):
 
 
 class TinyUiUnknownHostTestCase(TinyUiTests):
-    """ Test that config URL with unknown host name gets Tiny UI """
+    """Test that config URL with unknown host name gets Tiny UI"""
     def getTestUrl(self):
         return "http://unknownhost.lockss.org/"
 
@@ -210,7 +216,7 @@ class TinyUiUnknownHostTestCase(TinyUiTests):
         return 'UnknownHostException.*unknownhost\.lockss\.org'
 
 class TinyUiMalformedUrlTestCase(TinyUiTests):
-    """ Test that malformed config URL gets Tiny UI """
+    """Test that malformed config URL gets Tiny UI"""
     def getTestUrl(self):
         return "http://x.y:12:13/"
 
@@ -222,7 +228,7 @@ class TinyUiMalformedUrlTestCase(TinyUiTests):
 # http://props.lockss.org:8001/daemon/README
 
 class TinyUiForbiddenTestCase(TinyUiTests):
-    """ Test that a forbidden config fetch gets Tiny UI with the proper hint """
+    """Test that a forbidden config fetch gets Tiny UI with the proper hint"""
     def getTestUrl(self):
         return "http://props.lockss.org:8001/daemon/forbidden.xml"
 
@@ -231,7 +237,7 @@ class TinyUiForbiddenTestCase(TinyUiTests):
 
 # XXX should find a guaranteed non-listening port (by binding?)
 class TinyUiRefusedTestCase(TinyUiTests):
-    """ Test that a refused config connect gets Tiny UI """
+    """Test that a refused config connect gets Tiny UI"""
     def getTestUrl(self):
         return "http://127.0.0.1:65027/"
 
@@ -239,7 +245,7 @@ class TinyUiRefusedTestCase(TinyUiTests):
         return 'ConnectException:.*Connection refused'
 
 class TinyUiFileNotFoundTestCase(TinyUiTests):
-    """ Test a config file not found gets Tiny UI """
+    """Test a config file not found gets Tiny UI"""
     def getTestUrl(self):
         return "/no/such/file/or/directory"
 
@@ -277,8 +283,7 @@ class V3TestCase(LockssTestCase):
 
         # Block return until all clients are ready to go.
         log.info("Waiting for framework to come ready.")
-        for c in self.clients:
-            c.waitForDaemonReady()
+        self.framework.waitForFrameworkReady()
 
     def getDaemonCount(self):
         return 5
@@ -321,7 +326,7 @@ class V3TestCase(LockssTestCase):
         return path.isfile(file)
 
 class SimpleDamageV3TestCase(V3TestCase):
-    """ Test a basic V3 Poll. """
+    """Test a basic V3 Poll."""
     def runTest(self):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=0, branch=0,
@@ -337,7 +342,7 @@ class SimpleDamageV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -361,11 +366,9 @@ class SimpleDamageV3TestCase(V3TestCase):
         assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
-def simpleDamageV3TestCase():
-    return SimpleDamageV3TestCase()
 
 class RandomDamageV3TestCase(V3TestCase):
-    """ Test a V3 Poll with a random size and number of damaged AUs """
+    """Test a V3 Poll with a random size and number of damaged AUs"""
     def runTest(self):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=1, branch=1,
@@ -381,7 +384,7 @@ class RandomDamageV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -406,12 +409,9 @@ class RandomDamageV3TestCase(V3TestCase):
 
         log.info("AU successfully repaired.")
 
-def randomDamageV3TestCase():
-    return RandomDamageV3TestCase()
-
 
 class RepairFromPublisherV3TestCase(V3TestCase):
-    """ Ensure that repair from pubilsher works correctly in V3. """
+    """Ensure that repair from pubilsher works correctly in V3."""
     def getTestLocalConf(self):
         # NEVER repair from a cache
         return {"org.lockss.poll.v3.repairFromCachePercent": "0"}
@@ -431,7 +431,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -460,12 +460,9 @@ class RepairFromPublisherV3TestCase(V3TestCase):
 
         log.info("AU successfully repaired.")
 
-def repairFromPublisherV3TestCase():
-    return RepairFromPublisherV3TestCase()
-
 
 class RepairFromPeerV3TestCase(V3TestCase):
-    """ Ensure that repairing from a V3 peer works correctly. """
+    """Ensure that repairing from a V3 peer works correctly."""
     def getTestLocalConf(self):
         # ALWAYS repair from a cache
         ## Enable polling on all peers.
@@ -490,7 +487,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -537,12 +534,9 @@ class RepairFromPeerV3TestCase(V3TestCase):
 
         log.info("AU successfully repaired.")
 
-def repairFromPeerV3TestCase():
-    return RepairFromPeerV3TestCase()
-
 
 class SimpleDeleteV3TestCase(V3TestCase):
-    """ Test repair of a missing file. """
+    """Test repair of a missing file."""
     def runTest(self):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=0, branch=0,
@@ -557,7 +551,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -579,9 +573,6 @@ class SimpleDeleteV3TestCase(V3TestCase):
         assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
-def simpleDeleteV3TestCase():
-    return SimpleDeleteV3TestCase()
-
 
 class LastFileDeleteV3TestCase(V3TestCase):
     " Ensure that the deletion of the last (alphabetically) file in the AU can be repaired. "
@@ -599,7 +590,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -622,9 +613,6 @@ class LastFileDeleteV3TestCase(V3TestCase):
         assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
-def lastFileDeleteV3TestCase():
-    return LastFileDeleteV3TestCase()
-
 
 class RandomDeleteV3TestCase(V3TestCase):
     "Test recovery by V3 from randomly deleted nodes in our cache."
@@ -642,7 +630,7 @@ class RandomDeleteV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -667,8 +655,6 @@ class RandomDeleteV3TestCase(V3TestCase):
             assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
         log.info("AU successfully repaired.")
 
-def randomDeleteV3TestCase():
-    return RandomDeleteV3TestCase()
 
 class SimpleExtraFileV3TestCase(V3TestCase):
     "Test recovery by V3 from an extra node in our cache"
@@ -686,7 +672,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -708,9 +694,6 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
 
-def simpleExtraFileV3TestCase():
-    return SimpleExtraFileV3TestCase()
-
 
 class LastFileExtraV3TestCase(V3TestCase):
     "Test recovery by V3 from an extra last-file node in our cache"
@@ -728,7 +711,7 @@ class LastFileExtraV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         victim = self.victim
 
@@ -751,8 +734,6 @@ class LastFileExtraV3TestCase(V3TestCase):
         assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
 
-def lastFileExtraV3TestCase():
-    return LastFileExtraV3TestCase()
 
 class RandomExtraFileV3TestCase(V3TestCase):
     "Test recovery by V3 from a random number of extra nodes in our cache"
@@ -771,7 +752,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         ## To use a specific client, uncomment this line.
         victim = self.victim
@@ -796,15 +777,12 @@ class RandomExtraFileV3TestCase(V3TestCase):
             assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
 
-def randomExtraFileV3TestCase():
-    return RandomExtraFileV3TestCase()
-
 
 class VotersDontParticipateV3TestCase(V3TestCase):
-    """ Test a V3 poll where some peers do not participate. """
+    """Test a V3 poll where some peers do not participate."""
     def getInitialPeerList(self):
-        """ Return the real participant list, plus some that do not really
-        exist """
+        """Return the real participant list, plus some that do not really
+        exist"""
         return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
     
     def getTestLocalConf(self):
@@ -827,7 +805,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         ## To use a specific client, uncomment this line.
         victim = self.victim
@@ -852,14 +830,12 @@ class VotersDontParticipateV3TestCase(V3TestCase):
             assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
         log.info("AU successfully repaired.")
     
-def votersDontParticipateV3TestCase():
-    return VotersDontParticipateV3TestCase()
 
 class NoQuorumV3TestCase(V3TestCase):
-    """ Be sure a V3 poll with too few participants ends in No Quorum """
+    """Be sure a V3 poll with too few participants ends in No Quorum"""
     def getInitialPeerList(self):
-        """ Return the real participant list, plus some that do not really
-        exist """
+        """Return the real participant list, plus some that do not really
+        exist"""
         return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
     
     def getTestLocalConf(self):
@@ -882,7 +858,7 @@ class NoQuorumV3TestCase(V3TestCase):
         ##
         ## Assert that the AUs have been crawled.
         ##
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         ## To use a specific client, uncomment this line.
         victim = self.victim
@@ -910,11 +886,9 @@ class NoQuorumV3TestCase(V3TestCase):
                 agree = peerDict[c.getPeerId()]
                 assert agree['highestAgree'] > 60, "No agreement recorded for %s % c"
     
-def noQuorumV3TestCase():
-    return NoQuorumV3TestCase()
 
 class TotalLossRecoveryV3TestCase(V3TestCase):
-    """ Test repairing a cache under V3 that has lost all its contents """
+    """Test repairing a cache under V3 that has lost all its contents"""
     def getTestLocalConf(self):
         ## Enable polling on all peers.
         return {"org.lockss.poll.v3.enableV3Poller":"true"}
@@ -936,7 +910,7 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         self.createAus(simAu)
 
         ## Assert that the AUs have been crawled.
-	self.crawlAus(simAu)
+        self.crawlAus(simAu)
 
         ## Deactivate AU on one client
 #        noAuClient.deactivateAu(simAu)
@@ -1029,8 +1003,6 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
 
         # End of test.
 
-def totalLossRecoveryV3TestCase():
-    return TotalLossRecoveryV3TestCase()
 
 ###########################################################################
 ### Functions that build and return test suites.  These can be
@@ -1122,7 +1094,8 @@ if __name__ == "__main__":
         # an error occured while running the tests, or False if the
         # tests ran successfully.
         for fw in frameworkList:
-            if fw.isRunning: fw.stop()
+            if fw.isRunning:
+                fw.stop()
 
         if e.code:
             sys.exit(1)
@@ -1130,10 +1103,13 @@ if __name__ == "__main__":
             if deleteAfterSuccess:
                 for fw in frameworkList:
                     fw.clean()
+
     except KeyboardInterrupt:
         for fw in frameworkList:
-            if fw.isRunning: fw.stop()
+            if fw.isRunning:
+                fw.stop()
+        raise
     except Exception, e:
         # Unhandled exception occured.
         log.error("%s" % e)
-        sys.exit(1)
+        raise
