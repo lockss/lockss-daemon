@@ -185,6 +185,17 @@
 	<value>org.lockss.plugin.emerald.EmeraldPlugin</value>
         <value>edu.auburn.contentdm.ContentDmPlugin</value>
 	<value>org.lockss.plugin.archiveit.ArchiveItPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin</value>
       </list>
     </property>
 
