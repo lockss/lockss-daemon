@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.35 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.36 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public class BlockingStreamComm
   /** Maximum allowable received message size */
   public static final String PARAM_MAX_MESSAGE_SIZE =
     PREFIX + "maxMessageSize";
-  public static final int DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024;
+  public static final long DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024 * 1024;
 
   /** Dir for PeerMessage data storage */
   public static final String PARAM_DATA_DIR = PREFIX + "messageDataDir";
@@ -195,7 +195,7 @@ public class BlockingStreamComm
     DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE;
   private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
-  private int paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
+  private long paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
   private File dataDir = null;
   private int paramBacklog = DEFAULT_LISTEN_BACKLOG;
   private int paramMaxChannels = DEFAULT_MAX_CHANNELS;
@@ -314,8 +314,8 @@ public class BlockingStreamComm
       // these params can be changed on the fly
       paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
 					      DEFAULT_MIN_FILE_MESSAGE_SIZE);
-      paramMaxMessageSize = config.getInt(PARAM_MAX_MESSAGE_SIZE,
-					  DEFAULT_MAX_MESSAGE_SIZE);
+      paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
+					   DEFAULT_MAX_MESSAGE_SIZE);
       paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
 					      DEFAULT_IS_BUFFERED_SEND);
       paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
@@ -614,7 +614,7 @@ public class BlockingStreamComm
     return paramChannelIdleTime + 1000;
   }
 
-  int getMaxMessageSize() {
+  long getMaxMessageSize() {
     return paramMaxMessageSize;
   }
 
@@ -1006,7 +1006,7 @@ public class BlockingStreamComm
     return new MemoryPeerMessage();
   }
 
-  public PeerMessage newPeerMessage(int estSize) {
+  public PeerMessage newPeerMessage(long estSize) {
     if (estSize < 0) {
       return newPeerMessage();
     } else if (estSize > 0 &&

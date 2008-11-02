@@ -1,10 +1,10 @@
 /*
- * $Id: FilePeerMessage.java,v 1.3 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: FilePeerMessage.java,v 1.4 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,7 +44,7 @@ class FilePeerMessage extends PeerMessage {
   private File dataFile = null;
   private File dir;
   private OutputStream outStream;
-  private int fileSize;
+  private long fileSize;
 
   /** Create a FilePeerMessage, with data to be stored in a file in dir.
    * @param dir directory in which to store data file..
@@ -100,7 +100,7 @@ class FilePeerMessage extends PeerMessage {
   /** Return the size of the data
    * @throw IllegalStateException if message data not stored yet
    */
-  public int getDataSize() {
+  public long getDataSize() {
     checkHasData();
     return fileSize;
   }
@@ -120,7 +120,7 @@ class FilePeerMessage extends PeerMessage {
     public synchronized void close() throws IOException {
       if (file != null) {
 	super.close();
-	fileSize = (int)file.length();
+	fileSize = file.length();
 	dataFile = file;
 	file = null;
 	isOutputOpen = false;

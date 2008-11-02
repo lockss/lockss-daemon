@@ -1,10 +1,10 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.21 2008-08-11 23:33:33 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.22 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -596,18 +596,19 @@ class BlockingPeerChannel implements PeerChannel {
    * with id if not already.
    */
   void readPeerId() throws IOException {
-    int len = getRcvdMessageLength();
+    long len = getRcvdMessageLength();
     if (len > MAX_PEERID_LEN) {
       String msg = "Peerid too long: " + len;
       log.warning(msg);
       throw new ProtocolException(msg);
     }
-    if (!readBuf(peerbuf, len)) {
+    int plen = (int)len;
+    if (!readBuf(peerbuf, plen)) {
       String msg = "No data in Peerid message";
       log.warning(msg);
       throw new ProtocolException(msg);
     }
-    String peerkey = new String(peerbuf, 0, len);
+    String peerkey = new String(peerbuf, 0, plen);
     PeerIdentity pid = scomm.findPeerIdentity(peerkey);
     if (peer == null) {
       peer = pid;
@@ -637,7 +638,7 @@ class BlockingPeerChannel implements PeerChannel {
   /** Read a data message into a new PeerMessage and enqueue it
    */
   void readDataMsg() throws IOException {
-    int len = getRcvdMessageLength();
+    long len = getRcvdMessageLength();
     int proto = ByteArray.decodeInt(rcvHeader, HEADER_OFF_PROTO);
     if (log.isDebug3()) log.debug3("Got data hdr: " + proto + ", len: " + len);
     if (len > scomm.getMaxMessageSize()) {
@@ -713,8 +714,8 @@ class BlockingPeerChannel implements PeerChannel {
     return true;
   }
 
-  int getRcvdMessageLength() {
-    return ByteArray.decodeInt(rcvHeader, HEADER_OFF_LEN);
+  long getRcvdMessageLength() {
+    return ByteArray.decodeLong(rcvHeader, HEADER_OFF_LEN);
   }
 
   int getRcvdMessageOp() {
@@ -835,10 +836,10 @@ class BlockingPeerChannel implements PeerChannel {
 
   /** send msg header
    */
-  void writeHeader(int op, int len, int proto) throws IOException {
+  void writeHeader(int op, long len, int proto) throws IOException {
     sndHeader[HEADER_OFF_CHECK] = HEADER_CHECK;
     sndHeader[HEADER_OFF_OP] = (byte)op;
-    ByteArray.encodeInt(len, sndHeader, HEADER_OFF_LEN);
+    ByteArray.encodeLong(len, sndHeader, HEADER_OFF_LEN);
     ByteArray.encodeInt(proto, sndHeader, HEADER_OFF_PROTO);
     outs.write(sndHeader);
     stats.sentBytes(HEADER_LEN);
@@ -849,14 +850,14 @@ class BlockingPeerChannel implements PeerChannel {
    * @throws ProtocolException if eof reached before len bytes
    * @throws IOException
    */
-  boolean copyBytes(InputStream is, OutputStream os, int len,
+  boolean copyBytes(InputStream is, OutputStream os, long len,
 		    ChannelStats.Count count)
       throws IOException {
     byte[] copybuf = new byte[COPY_BUFFER_SIZE];
-    int rem = len;
+    long rem = len;
     int bufsize = copybuf.length;
     while (rem > 0) {
-      int nread = is.read(copybuf, 0, rem > bufsize ? bufsize : rem);
+      int nread = is.read(copybuf, 0, rem > bufsize ? bufsize : (int)rem);
       if (nread < 0) {
 	throw new ProtocolException("Connection closed in middle of message");
       }

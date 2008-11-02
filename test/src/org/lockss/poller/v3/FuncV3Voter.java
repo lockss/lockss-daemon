@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.24 2008-01-30 02:43:05 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.25 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
@@ -378,7 +378,7 @@ public class FuncV3Voter extends LockssTestCase {
     public PeerMessage newPeerMessage() {
       throw new UnsupportedOperationException("Not implemented");
     }
-    public PeerMessage newPeerMessage(int estSize) {
+    public PeerMessage newPeerMessage(long estSize) {
       throw new UnsupportedOperationException("Not implemented");
     }
     public void registerMessageHandler(int protocol, MessageHandler handler) {

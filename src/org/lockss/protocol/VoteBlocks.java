@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocks.java,v 1.11 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id: VoteBlocks.java,v 1.12 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
@@ -91,10 +91,17 @@ public interface VoteBlocks extends LockssSerializable {
   /**
    * Return the number of VoteBlock objects contained in this collection.
    *
-   * @return The size of the VoteBlocks.
+   * @return The number of VoteBlocks.
    */
   public int size();
   
+  /**
+   * Return a quick estimate of the size of the encoded vote blocks
+   *
+   * @return Estimate of the encoded length of the VoteBlocks.
+   */
+  public long getEstimatedEncodedLength();
+
   /**
    * Ask the object to release resources it is holding.
    */

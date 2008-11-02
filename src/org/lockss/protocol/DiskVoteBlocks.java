@@ -1,5 +1,5 @@
 /*
- * $Id: DiskVoteBlocks.java,v 1.19 2008-07-22 07:17:58 tlipkis Exp $
+ * $Id: DiskVoteBlocks.java,v 1.20 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,10 @@ public class DiskVoteBlocks implements VoteBlocks {
 
   public int size() {
     return m_size;
+  }
+
+  public long getEstimatedEncodedLength() {
+    return m_file.length();
   }
 
   public synchronized void release() {

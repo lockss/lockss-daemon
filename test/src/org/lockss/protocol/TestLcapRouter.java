@@ -1,10 +1,10 @@
 /*
- * $Id: TestLcapRouter.java,v 1.25 2007-02-22 05:35:49 smorabito Exp $
+ * $Id: TestLcapRouter.java,v 1.26 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,7 +117,8 @@ public class TestLcapRouter extends LockssTestCase {
   }
 
   static class MyLcapRouter extends LcapRouter {
-    PeerMessage newPeerMessage() {
+    @Override
+    PeerMessage newPeerMessage(long estSize) {
       return new MemoryPeerMessage();
     }
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.25 2008-10-02 07:42:46 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.26 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,6 +111,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(m_testBytes, noopMsg.getPollerNonce());
     assertEquals(m_testBytes, noopMsg.getVoterNonce());
     assertEquals(null, noopMsg.getVoteBlocks());
+    assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH,
+		 noopMsg.getEstimatedEncodedLength());
   }
 
   public void testRandomNoOpMessageCreation() throws Exception {
@@ -143,7 +145,7 @@ public class TestV3LcapMessage extends LockssTestCase {
       ", Vote Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 3]";
+      "B:10 ver 3 rev 4]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
   
@@ -181,10 +183,14 @@ public class TestV3LcapMessage extends LockssTestCase {
     byte[] repairData = ByteArray.makeRandomBytes(len);
     V3LcapMessage src = makeRepairMessage(repairData);
     assertEquals(len, src.getRepairDataLength());
+    assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH + len,
+		 src.getEstimatedEncodedLength());
     InputStream srcStream = src.getInputStream();
     V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
     assertEqualMessages(src, copy);
     assertEquals(len, copy.getRepairDataLength());
+    assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH + len,
+		 src.getEstimatedEncodedLength());
     InputStream in = copy.getRepairDataInputStream();
     assertTrue(in+"", in instanceof ByteArrayInputStream);
     ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -201,10 +207,14 @@ public class TestV3LcapMessage extends LockssTestCase {
     byte[] repairData = ByteArray.makeRandomBytes(len);
     V3LcapMessage src = makeRepairMessage(repairData);
     assertEquals(len, src.getRepairDataLength());
+    assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH + len,
+		 src.getEstimatedEncodedLength());
     InputStream srcStream = src.getInputStream();
     V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
     assertEqualMessages(src, copy);
     assertEquals(len, copy.getRepairDataLength());
+    assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH + len,
+		 src.getEstimatedEncodedLength());
     InputStream in = copy.getRepairDataInputStream();
     assertTrue(in+"", in instanceof FileInputStream);
     ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -301,6 +311,10 @@ public class TestV3LcapMessage extends LockssTestCase {
       bBlocks.add(iter.next());
     }
     assertEquals(aBlocks, bBlocks);
+
+    // Actual size of test vote blocks is unpredictable
+    assertTrue(reqMsg.getEstimatedEncodedLength() >
+	       V3LcapMessage.EST_ENCODED_HEADER_LENGTH);
   }
   
   public void testDiskBasedStreamEncodingTest() throws Exception {

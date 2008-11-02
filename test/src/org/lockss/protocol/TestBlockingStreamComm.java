@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.22 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.23 2008-11-02 21:13:48 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -329,7 +329,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     byte[] sndHeader = new byte[HEADER_LEN];
     sndHeader[HEADER_OFF_CHECK] = HEADER_CHECK;
     sndHeader[HEADER_OFF_OP] = (byte)op;
-    ByteArray.encodeInt(len, sndHeader, HEADER_OFF_LEN);
+    ByteArray.encodeLong(len, sndHeader, HEADER_OFF_LEN);
     ByteArray.encodeInt(proto, sndHeader, HEADER_OFF_PROTO);
     outs.write(sndHeader);
   }
@@ -342,9 +342,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   /** Read message data from input stream, return as String */
   String rcvMsgData(InputStream ins) throws IOException {
-    int len = ByteArray.decodeInt(rcvHeader, 2);
-    StreamUtil.readBytes(ins, peerbuf, len);
-    return new String(peerbuf, 0, len);
+    long len = ByteArray.decodeLong(rcvHeader, 2);
+    assertTrue("len: " + len, len <= Integer.MAX_VALUE);
+    StreamUtil.readBytes(ins, peerbuf, (int)len);
+    return new String(peerbuf, 0, (int)len);
   }
 
   /** Assert that buf contains a valid header */
@@ -439,7 +440,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testReadHeader() throws IOException {
     setupComm1();
-    byte[] hdr = {(byte)0xff, 1, 1, 2, 3, 4, 2, 3, 4, 5};
+    byte[] hdr = {(byte)0xff, 1, 1, 2, 3, 4, 5, 6, 7, 8, 2, 3, 4, 5};
     assertEquals(HEADER_LEN, hdr.length);
     byte[] buf = new byte[HEADER_LEN];
     InputStream ins = new ByteArrayInputStream(hdr);
@@ -481,8 +482,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEquals(HEADER_LEN, hdr.length);
     assertEquals(0xff, ByteArray.decodeByte(hdr, 0));
     assertEquals(5, hdr[1]);
-    assertEquals(16, ByteArray.decodeInt(hdr, 2));
-    assertEquals(34, ByteArray.decodeInt(hdr, 6));
+    assertEquals(16, ByteArray.decodeLong(hdr, 2));
+    assertEquals(34, ByteArray.decodeInt(hdr, 10));
 
   }
 
@@ -711,10 +712,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
   		 "assoc", event.get(0));
       assertEquals(1, comm1.channels.size());
       msg1 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
-      int msgsize = msg1.getDataSize();
+      long msgsize = msg1.getDataSize();
       int tobuffer = 20 * (sock.getReceiveBufferSize() +
   			sock.getSendBufferSize());
-      for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
+      for (long bytes = 0; bytes < tobuffer; bytes += msgsize) {
 //       comm1.sendTo(msg1, pid2, null);
       }
       assertEquals(1, comm1.channels.size());
@@ -765,12 +766,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
       assertEquals(1, comm1.channels.size());
       // a 30KB message
       msg1 = makePeerMessage(1, "123456789012345678901234567890", 1000);
-      int msgsize = msg1.getDataSize();
+      long msgsize = msg1.getDataSize();
       int tobuffer = 200 * (sock.getReceiveBufferSize() +
   			sock.getSendBufferSize());
       // Send lots of data to ensure send thread blocks waiting for socket to
       // have buffer space
-      for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
+      for (long bytes = 0; bytes < tobuffer; bytes += msgsize) {
         comm1.sendTo(msg1, pid2, null);
       }
       assertEquals(1, comm1.channels.size());
