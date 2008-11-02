@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.24 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.25 2008-11-02 21:11:52 tlipkis Exp $
  */
 
 /*
@@ -291,20 +291,13 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   long estimateFromSize(long size) {
     SystemMetrics metrics = theDaemon.getSystemMetrics();
     long bytesPerMs = 0;
-    try {
-      bytesPerMs = metrics.getBytesPerMsHashEstimate();
-      if (bytesPerMs > 0) {
-	logger.debug("Estimate from size: " + size + "/" + bytesPerMs + " = " +
-		     StringUtil.timeIntervalToString(size / bytesPerMs));
-	return (size / bytesPerMs);
-      } else {
-	logger.warning("Hash speed estimate was 0, using default: " +
-		       StringUtil.timeIntervalToString(size /
-						       BYTES_PER_MS_DEFAULT));
-	return size / BYTES_PER_MS_DEFAULT;
-      }
-    } catch (SystemMetrics.NoHashEstimateAvailableException ie) {
-      logger.warning("No hash estimate available, using default: " +
+    bytesPerMs = metrics.getBytesPerMsHashEstimate();
+    if (bytesPerMs > 0) {
+      logger.debug("Estimate from size: " + size + "/" + bytesPerMs + " = " +
+		   StringUtil.timeIntervalToString(size / bytesPerMs));
+      return (size / bytesPerMs);
+    } else {
+      logger.warning("Hash speed estimate was 0, using default: " +
 		     StringUtil.timeIntervalToString(size /
 						     BYTES_PER_MS_DEFAULT));
       return size / BYTES_PER_MS_DEFAULT;

@@ -1,10 +1,10 @@
 /*
- * $Id: SystemMetrics.java,v 1.31 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.32 2008-11-02 21:11:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -93,7 +93,7 @@ public class SystemMetrics
   MessageDigest defaultDigest = LcapMessage.getDefaultMessageDigest();
   HashService hashService;
   private PluginManager pluginMgr;
-  int defaultSpeed;
+  int defaultSpeed = DEFAULT_DEFAULT_HASH_SPEED;
   private TimerQueue.Request req;
   private long memLogInterval = DEFAULT_MEM_LOG_INTERVAL;
 
@@ -107,8 +107,11 @@ public class SystemMetrics
   public void setConfig(Configuration newConfig,
 			Configuration prevConfig,
 			Configuration.Differences changedKeys) {
-    defaultSpeed = newConfig.getInt(PARAM_DEFAULT_HASH_SPEED,
-				    DEFAULT_DEFAULT_HASH_SPEED);
+    if (changedKeys.contains(PARAM_DEFAULT_HASH_SPEED)) {
+      defaultSpeed = newConfig.getInt(PARAM_DEFAULT_HASH_SPEED,
+				      DEFAULT_DEFAULT_HASH_SPEED);
+      estimateTable.clear();
+    }
     if (changedKeys.contains(PARAM_MEM_LOG_INTERVAL)) {
       memLogInterval = newConfig.getTimeInterval(PARAM_MEM_LOG_INTERVAL,
 						 DEFAULT_MEM_LOG_INTERVAL);
@@ -121,6 +124,20 @@ public class SystemMetrics
       TimerQueue.cancel(req);
     }
     super.stopService();
+  }
+
+  /**
+   * Returns a hash estimate based on the default algorithm.  If no
+   * estimate is available, returns the slowest hash speed.
+   * @return the hash speed estimate in bytes/ms
+   * @throws NoHashEstimateAvailableException if no estimate is available
+   */
+  public int getBytesPerMsHashEstimate() {
+    try {
+      return getBytesPerMsHashEstimate(null, defaultDigest);
+    } catch (IOException e) {
+      return defaultSpeed;
+    }
   }
 
   /**
@@ -200,31 +217,6 @@ public class SystemMetrics
     int res = (int)(bytesHashed / timeTaken);
     logger.debug("Measured hash speed: " + res);
     return res;
-  }
-
-  /**
-   * Returns a hash estimate based on the default algorithm.  If no
-   * estimate is available, returns the slowest hash speed.
-   * @return the hash speed estimate in bytes/ms
-   * @throws NoHashEstimateAvailableException if no estimate is available
-   */
-  public int getBytesPerMsHashEstimate()
-      throws NoHashEstimateAvailableException {
-    int speed = -1;
-    if (hashService != null) {
-      speed = hashService.getHashSpeed(defaultDigest);
-    }
-    if (speed <= 0) {
-      Integer estimate =
-	(Integer)estimateTable.get(defaultDigest.getAlgorithm());
-      if (estimate != null) {
-	speed = estimate.intValue();
-      }
-    }
-    if (speed <= 0) {
-      throw new NoHashEstimateAvailableException();
-    }
-    return speed;
   }
 
   /**

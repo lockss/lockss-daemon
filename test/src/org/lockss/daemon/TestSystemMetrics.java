@@ -1,10 +1,10 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.17 2004-09-29 18:58:17 tlipkis Exp $
+ * $Id: TestSystemMetrics.java,v 1.18 2008-11-02 21:11:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -92,6 +92,14 @@ public class TestSystemMetrics extends LockssTestCase {
     assertTrue(estimate < byteCount);
     // minimum amount of time would be delay * number of hash steps
     assertTrue(duration > expectedMin);
+  }
+
+  public void testBytesPerMsHashEstimate() throws IOException {
+    assertEquals(250, metrics.getBytesPerMsHashEstimate());
+    ConfigurationUtil.setFromArgs(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
+				  "4437");
+    // wipe out cached estimate
+    assertEquals(4437, metrics.getBytesPerMsHashEstimate());
   }
 
   public void testEstimationCaching() throws IOException {

@@ -1,5 +1,5 @@
 /*
-* $Id: MockSystemMetrics.java,v 1.2 2004-01-09 19:56:58 eaalto Exp $
+* $Id: MockSystemMetrics.java,v 1.3 2008-11-02 21:11:52 tlipkis Exp $
  */
 
 /*
@@ -65,8 +65,7 @@ public class MockSystemMetrics extends SystemMetrics {
     }
   }
 
-  public int getBytesPerMsHashEstimate()
-      throws NoHashEstimateAvailableException {
+  public int getBytesPerMsHashEstimate() {
     if (hashSpeed >= 0) {
       return hashSpeed;
     } else {
