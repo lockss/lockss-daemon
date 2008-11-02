@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.201 2008-10-25 01:20:58 tlipkis Exp $
+ * $Id: PollManager.java,v 1.202 2008-11-02 21:12:22 tlipkis Exp $
  */
 
 /*
@@ -107,10 +107,6 @@ public class PollManager
   public static final long DEFAULT_START_POLLS_INITIAL_DELAY = 
     MINUTE * 10;
   
-  public static final String PARAM_START_POLLS_INTERVAL =
-    PREFIX + "pollStarterInterval";
-  public static final long DEFAULT_START_POLLS_INTERVAL = HOUR;
-  
   /** Minimum interval between poll attempts on an AU.  This takes effect
    * even if the poll failed to start. */
   public static final String PARAM_MIN_POLL_ATTEMPT_INTERVAL =
@@ -217,7 +213,6 @@ public class PollManager
     DEFAULT_DELETE_INVALID_POLL_STATE_DIRS;
   private long paramToplevelPollInterval = DEFAULT_TOPLEVEL_POLL_INTERVAL;
 
-  private long pollStartInterval = DEFAULT_START_POLLS_INTERVAL;
   private long pollStartInitialDelay = DEFAULT_START_POLLS_INITIAL_DELAY;
   private boolean enableV3Poller = DEFAULT_ENABLE_V3_POLLER;
   private int maxSimultaneousPollers = DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS;
@@ -1020,9 +1015,6 @@ public class PollManager
 	newConfig.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL,
 				  DEFAULT_TOPLEVEL_POLL_INTERVAL);
 
-      pollStartInterval =
-        newConfig.getTimeInterval(PARAM_START_POLLS_INTERVAL,
-                                  DEFAULT_START_POLLS_INTERVAL);
       pollStartInitialDelay =
         newConfig.getTimeInterval(PARAM_START_POLLS_INITIAL_DELAY,
                                   DEFAULT_START_POLLS_INITIAL_DELAY);
@@ -1040,6 +1032,7 @@ public class PollManager
       paramMinPollAttemptInterval =
 	newConfig.getTimeInterval(PARAM_MIN_POLL_ATTEMPT_INTERVAL,
 				  DEFAULT_MIN_POLL_ATTEMPT_INTERVAL);
+      boolean oldEnable = enableV3Poller;
       enableV3Poller =
         newConfig.getBoolean(PARAM_ENABLE_V3_POLLER,
                              DEFAULT_ENABLE_V3_POLLER);
@@ -1146,6 +1139,10 @@ public class PollManager
 			     PARAM_NO_AU_RESET_INTERVAL_CURVE,
 			     DEFAULT_NO_AU_RESET_INTERVAL_CURVE);
       }
+
+      if (enableV3Poller && !oldEnable) {
+	startOneWait.expireIn(10 * SECOND);
+      }      
     }
     long scommTimeout =
       newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
