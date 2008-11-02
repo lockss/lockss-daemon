@@ -1,10 +1,10 @@
 /*
- * $Id: ByteArray.java,v 1.11 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: ByteArray.java,v 1.12 2008-11-02 21:15:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,16 +48,12 @@ public class ByteArray {
   };
 
   /**
-   * Decode 4 byte at pos into an int
+   * Decode 1 byte at pos into an int (treating byte as unsigned)
    * @param b byte array
-   * @param pos starting position in array
+   * @param pos position in array
    */
-  public static int decodeInt(byte[] b, int pos) {
-    return
-      ((((int)b[pos    ]) & 0xFF) << 24) +
-      ((((int)b[pos + 1]) & 0xFF) << 16) +
-      ((((int)b[pos + 2]) & 0xFF) << 8) +
-      (((int)b[pos + 3]) & 0xFF);
+  public static int decodeByte(byte[] b, int pos) {
+    return (((int)b[pos]) & 0xFF);
   }
 
   /**
@@ -78,12 +74,55 @@ public class ByteArray {
   }
 
   /**
-   * Decode 1 byte at pos into an int (treating byte as unsigned)
+   * Decode 4 byte at pos into an int
    * @param b byte array
-   * @param pos position in array
+   * @param pos starting position in array
    */
-  public static int decodeByte(byte[] b, int pos) {
-    return (((int)b[pos]) & 0xFF);
+  public static int decodeInt(byte[] b, int pos) {
+    return
+      ((((int)b[pos    ]) & 0xFF) << 24) +
+      ((((int)b[pos + 1]) & 0xFF) << 16) +
+      ((((int)b[pos + 2]) & 0xFF) << 8) +
+      (((int)b[pos + 3]) & 0xFF);
+  }
+
+  /**
+   * Insert the 8 byte big-endian encoding of a long at the specified
+   * position in a byte array
+   * @param n  long to encode
+   * @param b byte array
+   * @param pos starting position in array
+   */
+  public static void encodeLong(long n, byte[] b, int pos) {
+    for (int ix = 7; ix >= 0; ix--) {
+      b[pos + ix] = (byte)(n & 0xFF);
+      n >>>= 8;
+    }
+  }
+
+  /**
+   * Decode 8 bytes at pos into a long
+   * @param b byte array
+   * @param pos starting position in array
+   */
+  public static long decodeLong(byte[] b, int pos) {
+    long res = 0;
+    for (int ix = 0, shift = 56; ix < 8; ix++, shift -= 8) {
+      res += (((long)b[pos + ix]) & 0xFF) << shift;
+    }
+    return res;
+  }
+
+  public static byte[] encodeLong(long n) {
+    BigInteger bigI = new BigInteger(Long.toString(n));
+    // note that this byte array has a sign bit, which should be removed
+    // for optimization
+    return bigI.toByteArray();
+  }
+
+  public static long decodeLong(byte[] b) {
+    BigInteger bigI = new BigInteger(b);
+    return bigI.longValue();
   }
 
   /** Return the concatenation of two byte arrays. */
@@ -122,19 +161,8 @@ public class ByteArray {
     return res;
   }
 
-  public static byte[] encodeLong(long n) {
-    BigInteger bigI = new BigInteger(Long.toString(n));
-    // note that this byte array has a sign bit, which should be removed
-    // for optimization
-    return bigI.toByteArray();
-  }
+  private static LockssRandom THE_RAND = new LockssRandom();
 
-  public static long decodeLong(byte[] b) {
-    BigInteger bigI = new BigInteger(b);
-    return bigI.longValue();
-  }
-
-  private static LockssRandom rand = new LockssRandom();
   /**
    * Return a pseudo-random array of bytes of length len.
    *
@@ -142,10 +170,22 @@ public class ByteArray {
    * @return A pseudo-random array of bytes.
    */
   public static byte[] makeRandomBytes(int len) {
+    return makeRandomBytes(len, THE_RAND);
+  }
+
+  /**
+   * Return a pseudo-random array of bytes of length len.
+   *
+   * @param len The size of the array to return.
+   * @param rand the LockssRandom to use
+   * @return A pseudo-random array of bytes.
+   */
+  // Generate one byte per call to Random.nextInt() so this method will
+  // generated the same sequence of random bytes as RandomInputStream.
+  public static byte[] makeRandomBytes(int len, LockssRandom rand) {
     byte[] retVal = new byte[len];
-    int top = 0xFF;
     for (int i = 0; i < len; i++) {
-      retVal[i] = (byte)rand.nextInt(top);
+      retVal[i] = (byte)rand.nextInt(0x100);
     }
     return retVal;
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: TestByteArray.java,v 1.6 2005-11-16 07:44:08 smorabito Exp $
+ * $Id: TestByteArray.java,v 1.7 2008-11-02 21:15:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,7 +79,7 @@ public class TestByteArray extends LockssTestCase {
     assertEquals(t4, ByteArray.fromHexString("7FFFFFFF"));
   }
 
-  public void testEncode() {
+  public void testEncodeInt() {
     byte exp1[] = {0, 0, 1, 5};
     byte exp2[] = {42, 75, 1, (byte)255};
     byte tst[] = {(byte)255, (byte)255, (byte)255, (byte)255};
@@ -89,7 +89,7 @@ public class TestByteArray extends LockssTestCase {
     assertEquals(exp2, tst);
   }
 
-  public void testDecode() {
+  public void testDecodeInt() {
     byte tst[] = {0, 0, 1, 5,
 		  42, 75, 1, (byte)255,
 		  (byte)255, (byte)255, (byte)255, (byte)255};
@@ -100,12 +100,36 @@ public class TestByteArray extends LockssTestCase {
     assertEquals(-1, ByteArray.decodeInt(tst, 8));
   }
 
+  public void testEncodeLong() {
+    byte exp1[] = {1, 2, 3, 4, 5, 6, 7, 8, 0, 0};
+    byte exp2[] = {1, 2, (byte)255, 0, 0, 1, 2, 3, 4, 5};
+    byte tst[] = new byte[10];
+    ByteArray.encodeLong(72623859790382856L, tst, 0);
+    assertEquals(exp1, tst);
+    ByteArray.encodeLong(-72057589709208571L, tst, 2);
+    assertEquals(exp2, tst);
+  }
+
+  public void testDecodeLong() {
+    byte tst[] = {(byte)255, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8,
+		  0, 0, 0, 0, 0, 0, 0, 0, 1, (byte)255};
+    assertEquals(-72057589709208571L, ByteArray.decodeLong(tst, 0));
+    assertEquals(1108152157446L, ByteArray.decodeLong(tst, 1));
+    assertEquals(283686952306183L, ByteArray.decodeLong(tst, 2));
+    assertEquals(72623859790382856L, ByteArray.decodeLong(tst, 3));
+    assertEquals(0, ByteArray.decodeLong(tst, 11));
+    assertEquals(511, ByteArray.decodeLong(tst, 13));
+  }
+
   public void testEncodeDecode() {
     byte tst[] = new byte[8];
     ByteArray.encodeInt(12345679, tst, 0);
     ByteArray.encodeInt(-1, tst, 4);
     assertEquals(12345679, ByteArray.decodeInt(tst, 0));
     assertEquals(-1, ByteArray.decodeInt(tst, 4));
+    long exp = 72623859790382857L;
+    ByteArray.encodeLong(exp, tst, 0);
+    assertEquals(exp, ByteArray.decodeLong(tst, 0));
   }
 
   public void testDecodeByte() {
@@ -118,24 +142,13 @@ public class TestByteArray extends LockssTestCase {
 
   public void testEncodeLongSimple() {
     byte[] expectedBytes = {5};
-    byte[] actualBytes = ByteArray.encodeLong(5);
-    assertEquals(expectedBytes, actualBytes);
-  }
-
-  public void testEncodeLongMultiBytes() {
-    byte[] expectedBytes = {1, 1};
-    byte[] actualBytes = ByteArray.encodeLong(257);
-    assertEquals(expectedBytes, actualBytes);
+    assertEquals(new byte[] {5}, ByteArray.encodeLong(5));
+    assertEquals(new byte[] {1, 1}, ByteArray.encodeLong(257));
   }
 
   public void testDecodeLongSimple() {
-    byte[] bytes = {7};
-    assertEquals(7, ByteArray.decodeLong(bytes));
-  }
-
-  public void testDecodeLongMultiBytes() {
-    byte[] bytes = {1, 5};
-    assertEquals(261, ByteArray.decodeLong(bytes));
+    assertEquals(7, ByteArray.decodeLong(new byte[] {7}));
+    assertEquals(261, ByteArray.decodeLong(new byte[] {1, 5}));
   }
 
   public void testDecodeEncodeLong() {
@@ -146,5 +159,18 @@ public class TestByteArray extends LockssTestCase {
   public void testEncodeDecodeLong() {
     byte[] bytes = {5, 99, 87};
     assertEquals(bytes, ByteArray.encodeLong(ByteArray.decodeLong(bytes)));
+  }
+
+  public void testMakeRandomBytes() {
+    assertSuccessRate(.5, 10);
+    boolean[] flgs = new boolean[256];
+    for (int ix = 100; ix > 0; ix--) {
+      for (int val : ByteArray.makeRandomBytes(10000)) {
+	flgs[(val & 0xff)] = true;
+      }
+    }
+    for (int ix = 0; ix < 256; ix++) {
+      assertTrue("Missing " + ix, flgs[ix]);
+    }
   }
 }
