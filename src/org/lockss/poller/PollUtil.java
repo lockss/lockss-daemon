@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.10 2008-10-24 07:12:08 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.11 2008-11-02 21:12:38 tlipkis Exp $
  */
 
 /*
@@ -176,8 +176,8 @@ public class PollUtil {
   }
 
   public static long getReceiptPadding() {
-    return CurrentConfig.getLongParam(V3Poller.PARAM_RECEIPT_PADDING,
-				      V3Poller.DEFAULT_RECEIPT_PADDING);
+    return CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_RECEIPT_PADDING,
+					      V3Poller.DEFAULT_RECEIPT_PADDING);
   }
 
   public static double getExtendPollMultiplier() {
