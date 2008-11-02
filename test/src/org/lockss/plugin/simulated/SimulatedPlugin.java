@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.24 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.25 2008-11-02 21:16:43 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -108,12 +108,26 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   static {
     PD_BIN_FILE_SIZE.setKey("binFileSize");
     PD_BIN_FILE_SIZE.setDisplayName("Binary file size");
-    PD_BIN_FILE_SIZE.setType(ConfigParamDescr.TYPE_INT);
+    PD_BIN_FILE_SIZE.setType(ConfigParamDescr.TYPE_LONG);
     PD_BIN_FILE_SIZE.setSize(8);
     PD_BIN_FILE_SIZE.setDefinitional(false);
   }
   public static final String AU_PARAM_BIN_FILE_SIZE =
     PD_BIN_FILE_SIZE.getKey();
+
+  /**
+   * The size to make binary files, if chosen as a type.
+   */
+  static final ConfigParamDescr PD_BIN_RANDOM_SEED = new ConfigParamDescr();
+  static {
+    PD_BIN_RANDOM_SEED.setKey("binRandomSeed");
+    PD_BIN_RANDOM_SEED.setDisplayName("Binary file size");
+    PD_BIN_RANDOM_SEED.setType(ConfigParamDescr.TYPE_LONG);
+    PD_BIN_RANDOM_SEED.setSize(8);
+    PD_BIN_RANDOM_SEED.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BIN_RANDOM_SEED =
+    PD_BIN_RANDOM_SEED.getKey();
 
   /**
    * The maximum length for file names.  Currently unused.
@@ -272,7 +286,8 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   public List getLocalAuConfigDescrs() {
     return ListUtil.list(PD_ROOT, PD_DEPTH,
 			 PD_BRANCH, PD_NUM_FILES,
-			 PD_BIN_FILE_SIZE, PD_MAXFILE_NAME,
+			 PD_BIN_FILE_SIZE, PD_BIN_RANDOM_SEED,
+			 PD_MAXFILE_NAME,
 			 PD_FILE_TYPES, PD_ODD_BRANCH_CONTENT,
                          PD_BAD_FILE_LOC, PD_BAD_FILE_NUM);
   }

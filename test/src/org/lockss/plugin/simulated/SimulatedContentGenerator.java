@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.27 2007-12-19 05:16:24 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.28 2008-11-02 21:16:43 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -153,7 +153,9 @@ public class SimulatedContentGenerator {
   // number of files per node
   private int numFilesPerBranch = 10;
   private int maxFilenameLength = -1; // vals <= 0 are ignored.
-  private int binaryFileSize = 256;
+  private long binaryFileSize = 256;
+  private long randomSeed = 0;
+  private InputStream randomIn;
   private boolean fillOutFilenames = false;
   private boolean oddBranchesHaveContent = false;
   private int fileTypes = FILE_TYPE_TXT;
@@ -248,12 +250,22 @@ public class SimulatedContentGenerator {
   /**
    * @return the size binary files will be created as
    */
-  public int getBinaryFileSize() { return binaryFileSize; }
+  public long getBinaryFileSize() { return binaryFileSize; }
   /**
    * @param newBinarySize new binary file size
    */
-  public void setBinaryFileSize(int newBinarySize) {
+  public void setBinaryFileSize(long newBinarySize) {
     binaryFileSize = newBinarySize;
+  }
+  /**
+   * @return the random seed for binary file content
+   */
+  public long getRandomSeed() { return randomSeed; }
+  /**
+   * @param seed  the random seed for binary file content
+   */
+  public void setRandomSeed(long seed) {
+    randomSeed = seed;
   }
   /**
    * @return maximum length for a file name
@@ -374,6 +386,10 @@ public class SimulatedContentGenerator {
    * @return the filename of the tree root
    */
   public String generateContentTree() {
+    if (randomSeed != 0) {
+      randomIn = new RandomInputStream(randomSeed);
+    }
+
     // make an appropriate file tree
     File treeRoot = new File(contentRoot);
     if (!treeRoot.exists()) {
@@ -559,16 +575,20 @@ public class SimulatedContentGenerator {
   }
 
 
-  private void createBinaryFile(File parentDir, int fileNum, int size) {
+  private void createBinaryFile(File parentDir, int fileNum, long size) {
     try {
       String fileName = getFileName(fileNum, FILE_TYPE_BIN);
       File file = new File(parentDir, fileName);
-      FileOutputStream fos = new FileOutputStream(file);
       logger.debug3("Creating BIN file at " + file.getAbsolutePath());
-      byte[] bytes = new byte[size];
-      Arrays.fill(bytes, (byte)1);
-      fos.write(bytes);
-      fos.close();
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
+      InputStream is;
+      if (randomIn != null) {
+	is = randomIn;
+      } else {
+	is = new ZeroInputStream((byte)1, Long.MAX_VALUE);
+      }
+      StreamUtil.copy(is, os, size);
+      os.close();
     } catch (Exception e) { System.err.println(e); }
   }
 
@@ -803,5 +823,20 @@ public class SimulatedContentGenerator {
       } else depthCount++;
       if (branchStr.equals("")) return 0;
     }
+  }
+
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("[simgen: ");
+    sb.append("depth=");
+    sb.append(getTreeDepth());
+    sb.append(", branch=");
+    sb.append(getNumBranches());
+    sb.append(", num=");
+    sb.append(getNumFilesPerBranch());
+    sb.append(", types=");
+    sb.append(getFileTypes());
+    sb.append("]");
+    return sb.toString();
   }
 }
