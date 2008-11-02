@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.9 2008-02-15 09:16:29 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.10 2008-11-02 21:15:24 tlipkis Exp $
  *
 
 Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
@@ -37,6 +37,8 @@ import org.apache.oro.text.regex.*;
 /** Utilities for Files
  */
 public class FileUtil {
+  static final Logger log = Logger.getLogger("FileUtil");
+
   static final int FILE_CHUNK_SIZE = 1024;
 
   /**
@@ -271,7 +273,8 @@ public class FileUtil {
   }
 
   /** Ensure the directory exists, creating it and any parents if
-   * necessary.
+   * necessary.  mkdirs() has been observed to fail intermittently on some
+   * platforms, so try a few times if it fails.
    * @param dir the directory
    * @return true if the directory already exists, if it was successfully
    * created, or if it came into being while we were trying to create it.
@@ -280,8 +283,18 @@ public class FileUtil {
     if (dir.exists()) {
       return true;
     }
-    if (dir.mkdirs()) {
-      return true;
+    for (int cnt = 3; cnt > 0; cnt--) {
+      if (dir.mkdirs()) {
+	return true;
+      }
+      if (dir.exists()) {
+	return true;
+      }
+      log.error("Failed to mkdirs(" + dir + "), retrying");
+      try {
+	Deadline.in(100).sleep();
+      } catch (InterruptedException e) {
+      }
     }
     // If another thread is trying to create the same dir, it might have
     // suceeded, causing our call to mkdirs to return false, so check again
