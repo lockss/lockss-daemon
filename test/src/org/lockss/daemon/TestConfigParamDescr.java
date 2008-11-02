@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.11 2008-10-02 06:45:13 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.12 2008-11-02 21:11:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -101,6 +101,13 @@ public class TestConfigParamDescr extends LockssTestCase {
     d4.setSize(12);
     d4.setType(ConfigParamDescr.TYPE_INT);
     assertEquals(12, d4.getSize());
+
+    ConfigParamDescr d5 = new ConfigParamDescr("k1");
+    d5.setType(ConfigParamDescr.TYPE_LONG);
+    assertEquals(10, d5.getSize());
+    d5.setSize(18);
+    assertEquals(18, d5.getSize());
+
   }
 
   public void testCompareTo() {

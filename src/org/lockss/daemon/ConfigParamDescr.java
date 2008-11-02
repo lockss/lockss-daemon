@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.42 2008-10-02 06:45:13 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.43 2008-11-02 21:11:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -65,10 +65,12 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final int TYPE_SET = 9;
   /** Value is a user:passwd pair (colon separated) */
   public static final int TYPE_USER_PASSWD = 10;
+  /** Value is a long */
+  public static final int TYPE_LONG = 11;
 
   public static final String[] TYPE_STRINGS = {
       "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
-      "Range", "Numeric Range", "Set", "User:Passwd String"};
+      "Range", "Numeric Range", "Set", "User:Passwd String", "Long"};
 
   public static final ConfigParamDescr VOLUME_NUMBER =
     new ConfigParamDescr()
@@ -346,6 +348,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       case TYPE_YEAR: size = 4; break;
       case TYPE_BOOLEAN: size = 4; break;
       case TYPE_INT:
+      case TYPE_LONG:
       case TYPE_POS_INT: size = 10; break;
       default:
       }
@@ -467,6 +470,13 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
           }
           break;
 
+      case TYPE_LONG:
+        try {
+          ret_val = new Long(val);
+        } catch (NumberFormatException nfe) {
+          throw new InvalidFormatException("Invalid Long: " + val);
+        }
+        break;
       case TYPE_STRING:
         if (!StringUtil.isNullString(val)) {
           ret_val = val;
