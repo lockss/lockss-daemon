@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigManager.java,v 1.59 2008-10-25 01:19:19 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.60 2008-11-02 21:11:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1066,7 +1066,7 @@ public class ConfigManager implements LockssManager {
   }
 
   private void platformOverride(Configuration config, String key, String val) {
-    if (config.get(key) != null) {
+    if (!StringUtil.equalStrings(config.get(key), val)) {
       log.warning("Overriding param: " + key + "= " + config.get(key));
       log.warning("with platform-derived value: " + val);
     }
