@@ -462,22 +462,36 @@ class RepairFromPublisherV3TestCase(V3TestCase):
 
 
 class RepairFromPeerV3TestCase(V3TestCase):
+    def setUp(self):
+        V3TestCase.setUp(self)
+        self.timeout = 60 * 60 * 2
+
     """Ensure that repairing from a V3 peer works correctly."""
     def getTestLocalConf(self):
         # ALWAYS repair from a cache
         ## Enable polling on all peers.
         return {"org.lockss.poll.v3.repairFromCachePercent":"100",
-                "org.lockss.poll.v3.enableV3Poller":"true",
-                "org.lockss.poll.v3.toplevelPollInterval":"10",
+                "org.lockss.poll.v3.enableV3Poller":"false",
+                "org.lockss.poll.v3.toplevelPollInterval":"1d",
                 "org.lockss.poll.minPollAttemptInterval":"10"
                 }
 
-    def runTest(self):
+    def getSimAu(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            numFiles=10,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, protocolVersion=3)
+        return SimulatedAu('simContent', depth=1, branch=1,
+                           numFiles=10,
+                           fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
+                           binFileSize=1024, protocolVersion=3)
+
+    def doDamage(self, simAu):
+        nodeList = self.victim.randomDamageRandomNodes(simAu, 15, 20)
+        log.info("Damaged the following nodes on client %s:\n        %s" %
+            (self.victim, '\n        '.join([str(n) for n in nodeList])))
+        return nodeList
+
+    def runTest(self):
+        simAu = self.getSimAu()
+        victim = self.victim
         
         ##
         ## Create simulated AUs
@@ -489,7 +503,8 @@ class RepairFromPeerV3TestCase(V3TestCase):
         ##
         self.crawlAus(simAu)
 
-        victim = self.victim
+        self.framework.appendExtraConfig({"org.lockss.poll.v3.enableV3Poller":"true"})
+        self.framework.reloadAllConfiguration()
 
         #
         # We need agreement from all the peers before we can continue.
@@ -505,15 +520,17 @@ class RepairFromPeerV3TestCase(V3TestCase):
         log.info("Waiting for all peers to win their polls")
         for c in self.clients:
             assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
-                   ("Client on port %s never won V3 poll" % c.port)
+                ("Client on port %s never won V3 poll" % c.port)
             log.info("Client on port %s won V3 poll..." % c.port)
 
         ##
         ## Damage the AU.
         ##
-        nodeList = victim.randomDamageRandomNodes(simAu, 15, 20)
-        log.info("Damaged the following nodes on client %s:\n        %s" %
-            (victim, '\n        '.join([str(n) for n in nodeList])))
+        nodeList = self.doDamage(simAu)
+
+        self.framework.appendLocalConfig({"org.lockss.poll.v3.toplevelPollInterval":"10"},
+                                         victim)
+        victim.reloadConfiguration()
 
         ## XXX - this sees first poll, doesn't wait for second
         log.info("Waiting for a V3 poll to be called...")
@@ -533,6 +550,34 @@ class RepairFromPeerV3TestCase(V3TestCase):
             assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
 
         log.info("AU successfully repaired.")
+
+
+class RepairHugeFromPeerV3TestCase(RepairFromPeerV3TestCase):
+    """Ensure that repairing a huge file from a V3 peer works correctly."""
+
+    ## This test requires approx. 35GB of disk space and a fast machine.
+    ## It is not part of any suite.
+
+    def getTestLocalConf(self):
+            extraConf = {"org.lockss.metrics.default.hash.speed": "8000",
+                         "org.lockss.scomm.maxMessageSize": "10000000000",
+                         "org.lockss.poll.v3.voteDurationMultiplier": "6",
+                         "org.lockss.poll.v3.tallyDurationMultiplier": "5"}
+            extraConf.update(RepairFromPeerV3TestCase.getTestLocalConf(self))
+            return extraConf
+
+    def getSimAu(self):
+        # Reasonably complex AU for testing.
+        return SimulatedAu('simContent', depth=0, branch=0,
+                           numFiles=1,
+                           fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
+                           binFileSize=3*1024*1024*1024-1, protocolVersion=3)
+
+    def doDamage(self, simAu):
+        node = self.victim.getAuNode(simAu, "http://www.example.com/001file.bin")
+        self.victim.damageNode(node)
+        log.info("Damaged node %s on client %s" % (node.url, self.victim))
+        return [ node ]
 
 
 class SimpleDeleteV3TestCase(V3TestCase):
@@ -899,7 +944,9 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
     def runTest(self):
         
         ## Define a simulated AU
-        simAu = SimulatedAu('simContent', depth=0, branch=0,
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
+                            binFileSize=1024,
                             numFiles=30, protocolVersion=3)
 
         victim = self.victim

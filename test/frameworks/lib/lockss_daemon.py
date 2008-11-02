@@ -63,10 +63,11 @@ org.lockss.crawler.odc.queueRecalcAfterNewAu=5s
 org.lockss.comm.enabled=false
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=33554432
+org.lockss.scomm.timeout.connect=15s
+
 org.lockss.poll.pollStarterInitialDelay=1m
-org.lockss.poll.pollStarterInterval=30s
+org.lockss.poll.queueEmptySleep=30s
 org.lockss.poll.queueRecalcInterval=30s
-org.lockss.poll.defaultPollProbability=100
 org.lockss.poll.v3.maxSimultaneousV3Pollers=1
 org.lockss.poll.v3.maxSimultaneousV3Voters=100
 org.lockss.poll.v3.deleteExtraFiles=true
@@ -247,6 +248,20 @@ class Framework:
             f.write("%s=%s\n" % (key, value))
         f.close()
 
+    def appendExtraConfig(self, conf):
+        """Append the supplied configuration in the dictionary 'conf'
+        (name / value pairs) to the extra config file for all
+        client daemons"""
+        extraConfigFile = path.join(self.frameworkDir, 'lockss.opt')
+        f = open(extraConfigFile, "a")
+        for (key, value) in conf.items():
+            f.write("%s=%s\n" % (key, value))
+        f.close()
+
+    def reloadAllConfiguration(self):
+        for client in self.clientList:
+            client.reloadConfiguration()
+
     def checkForDeadlock(self):
         """Request that all the daemons in the framework dump their
         threads, and then look for deadlock messages.  Returns a list of
@@ -346,7 +361,6 @@ class Framework:
 
     def __writeLockssConfig(self, file, logLevel):
         f = open(file, 'w')
-        # defined at the end of this file
         f.write(globalConfigTemplate % {"logLevel": logLevel})
         f.close()
 
@@ -380,6 +394,13 @@ class Framework:
     def __writeExtraConfig(self, file, conf):
         """Write out any LOCKSS daemon properties."""
         f = open(file, 'w')
+        for (key, val) in conf.daemonItems():
+            f.write('%s=%s\n' % (key, val))
+        f.close()
+
+    def __appendExtraConfig(self, file, conf):
+        """Append extra LOCKSS daemon properties."""
+        f = open(file, 'a')
         for (key, val) in conf.daemonItems():
             f.write('%s=%s\n' % (key, val))
         f.close()
@@ -461,8 +482,15 @@ class Client:
                                   "AU %s to be deactivated." % au)
 
     ##
-    ## Back up the configuration
+    ## Reload, Backup, Restore the configuration
     ##
+
+    def reloadConfiguration(self):
+        """Cause the daemon to reload its config."""
+
+        post = self.__makePost('DebugPanel', {'action': 'Reload Config'})
+        post.execute()
+
 
     def backupConfiguration(self):
         """Very quick and dirty way to download the config backup."""
@@ -652,7 +680,8 @@ class Client:
                     repairs = int(summary['Completed Repairs']['value'])
                 except KeyError, e: # Not available
                     repairs = 0
-                print allUrls, agreeUrls, repairs
+                log.debug("%d urls, %d agree, %d urls" %
+                          (allUrls, agreeUrls, repairs))
 
                 return ((repairs == allUrls) and (agreeUrls == allUrls))
         return False
@@ -912,8 +941,8 @@ class Client:
         return peerDict
 
     def getNoAuPeers(self, au):
-        """ Return list of peers who have said they don't have the AU. """
-        (summary, table) = self.__getStatusTable('NoAuPeers', au.auId)
+        """Return list of peers who have said they don't have the AU."""
+        (summary, table) = self._getStatusTable('NoAuPeers', au.auId)
         peers = []
         for row in table:
             peer = row['Peer']
@@ -1657,7 +1686,7 @@ class Client:
                 summaryDict[summaryTitle] = {'name': name,
                                              'key': key,
                                              'value': value}
-            elif summaryTitle and summaryValue:
+            elif summaryTitle and summaryValue and summaryValue.firstChild is not None:
                 summaryDict[summaryTitle] = summaryValue.firstChild.data
 
         rowList = doc.getElementsByTagName('st:row')
@@ -1720,6 +1749,8 @@ class Client:
                 post.add('lfp.numFiles', au.numFiles)
             if au.binFileSize != -1:
                 post.add('lfp.binFileSize', au.binFileSize)
+            if au.binRandomSeed != -1:
+                post.add('lfp.binRandomSeed', au.binRandomSeed)
             if au.maxFileName != -1:
                 post.add('lfp.maxFileName', au.maxFileName)
             if au.fileTypes != -1:
@@ -1892,7 +1923,8 @@ class SimulatedAu( AU ):
     """A Python abstraction of a SimulatedPlugin Archival Unit for use
     in the functional test framework."""
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
-                 binFileSize=-1, maxFileName=-1, fileTypes=[],
+                 binFileSize=-1, binRandomSeed=long(time.time()),
+                 maxFileName=-1, fileTypes=[],
                  oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
                  publisherDown=False, protocolVersion=-1):
         self.root = root
@@ -1900,6 +1932,7 @@ class SimulatedAu( AU ):
         self.branch = branch
         self.numFiles = numFiles
         self.binFileSize = binFileSize
+        self.binRandomSeed = binRandomSeed
         self.maxFileName = maxFileName
         self.fileTypeArray = fileTypes
         self.fileTypes = sum(self.fileTypeArray)
