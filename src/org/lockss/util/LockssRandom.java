@@ -1,10 +1,10 @@
 /*
- * $Id: LockssRandom.java,v 1.5 2008-10-02 07:43:24 tlipkis Exp $
+ * $Id: LockssRandom.java,v 1.6 2008-11-02 21:15:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,15 @@ package org.lockss.util;
 
 /** Extension of java.util.Random that adds some missing methods. */
 public class LockssRandom extends java.util.Random {
+
+  public LockssRandom() {
+    super();
+  }
+
+  public LockssRandom(long seed) {
+    super(seed);
+  }
+
   /** Return the next pseudorandom number with <code>bits</code> random
    * bits. */
   public long nextBits(int bits) {
