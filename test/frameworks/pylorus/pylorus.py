@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-'''$Id: pylorus.py,v 1.1 2008-10-31 15:21:44 mrbax Exp $
+'''$Id: pylorus.py,v 1.2 2008-11-04 04:48:15 mrbax Exp $
 Compares AU content hashes between servers, two local and one remote.
 Servers are randomly selected from available pools for each AU.
 The process is divided into stages to improve parallel efficiency.
@@ -25,8 +25,9 @@ import lockss_daemon
 PYLORUS = 'Pylorus'
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
-AU_RETRY_TOTAL = 3
-MINIMUM_AGREEMENT = 95
+CRAWL_CHECK_TIMEOUT = 10
+REMOTE_CRAWL_RETRY_TOTAL = 3
+DEFAULT_AGREEMENT_THRESHOLD = 95
 
 
 class Leaving_Pipeline( Exception ):
@@ -83,12 +84,10 @@ def self_test_startup():
     framework.start()
     assert framework.isRunning, 'Framework failed to start'
     
-    logging.info( 'Waiting for framework to become ready' )
-    framework.waitForFrameworkReady()
-    
-    #AUs = [ lockss_daemon.SimulatedAu( 'simContent%i' % i, depth = 0, branch = 0, numFiles = 10, binFileSize = 1024, fileTypes = [ lockss_daemon.FILE_TYPE_TEXT, lockss_daemon.FILE_TYPE_BIN ], protocolVersion = 3 ) for i in range( 2 ) ]
+    AUs = [ lockss_daemon.SimulatedAu( 'simContent%i' % i, depth = 0, branch = 0, numFiles = 10, binFileSize = 1024, fileTypes = [ lockss_daemon.FILE_TYPE_TEXT, lockss_daemon.FILE_TYPE_BIN ], protocolVersion = 3 ) for i in range( 2 ) ]
     #AUs = [ lockss_daemon.AU( 'edu|una|plugin|McDonaldPhotosPlugin&base_url~http%3A%2F%2Fwww2%2Euna%2Eedu%2Fagordon%2Fpermission01%2Ehtml&volume~1' ) ]
-    AUs = [ lockss_daemon.AU( 'org|lockss|plugin|bioone|BioOnePlugin&base_url~http%3A%2F%2Fwww%2Ebioone%2Eorg%2F&journal_id~0071-4739&volume~40' ) ]
+    #AUs = [ lockss_daemon.AU( 'org|lockss|plugin|bioone|BioOnePlugin&base_url~http%3A%2F%2Fwww%2Ebioone%2Eorg%2F&journal_id~0071-4739&volume~40' ),
+    #        lockss_daemon.AU( 'org|lockss|plugin|bioone|BioOnePlugin&base_url~http%3A%2F%2Fwww%2Ebioone%2Eorg%2F&journal_id~0097-3157&volume~155' ) ]
 
     #node = framework.clientList[ 0 ].randomDamageSingleNode( AUs[ 0 ] )
 
@@ -100,11 +99,12 @@ def self_test_startup():
 
 def self_test_shutdown():
     '''Housekeeping'''
-    if framework.isRunning:
-        logging.info( 'Stopping framework' )
-        framework.stop()
-    logging.info( 'Cleaning up framework' )
-    framework.clean()
+    if 'framework' in globals():
+        if framework.isRunning:
+            logging.info( 'Stopping framework' )
+            framework.stop()
+        logging.info( 'Cleaning up framework' )
+        framework.clean()
 
 
 class Content():
@@ -116,7 +116,8 @@ class Content():
         self.local_clients = local_clients[ : ]
         self.remote_clients = remote_clients[ : ]
         self.clients = self.local_clients
-        self.retries = AU_RETRY_TOTAL
+        self.crawl_failures = []
+        self.remote_crawl_retries = REMOTE_CRAWL_RETRY_TOTAL
         self.hashes = []
 
     def check( self ):
@@ -124,12 +125,12 @@ class Content():
         self.client = self.clients.pop( random.randrange( len( self.clients ) ) )
         self.server_name = client_ID( self.client )
         logging.info( 'Checking for AU "%s" on server %s' % ( self.AU, self.server_name ) )
-        self.preexisting = self.client.hasAu( self.AU )
-        if self.preexisting:
-            logging.info( 'Found AU "%s" on server %s' % ( self.AU, self.server_name ) )
+        self.pre_existent = self.client.hasAu( self.AU )
+        if self.pre_existent:
+            logging.debug( 'Found AU "%s" on server %s' % ( self.AU, self.server_name ) )
             self.stage = self.crawl
         else:
-            logging.info( 'Did not find AU "%s" on server %s' % ( self.AU, self.server_name ) )
+            logging.debug( 'Did not find AU "%s" on server %s' % ( self.AU, self.server_name ) )
             self.stage = self.add
         
     def add( self ):
@@ -137,46 +138,48 @@ class Content():
         logging.info( 'Adding AU "%s" to server %s' % ( self.AU, self.server_name ) )
         self.client.createAu( self.AU )
         # Handle failure?
-        logging.info( 'Added AU "%s" to server %s' % ( self.AU, self.server_name ) )
+        logging.debug( 'Added AU "%s" to server %s' % ( self.AU, self.server_name ) )
         self.stage = self.crawl
         
     def remove( self ):
         '''Remove this AU from the server'''
-        logging.info( 'Removing AU "%s" from server %s' % ( self.AU, self.server_name ) )
-        #if not self.preexisting:
-            #self.client.deleteAu( self.AU )
+        if not self.pre_existent:
+            logging.info( 'Removing AU "%s" from server %s' % ( self.AU, self.server_name ) )
+            self.client.deleteAu( self.AU )
+            logging.debug( 'Removed AU "%s" from server %s' % ( self.AU, self.server_name ) )
     
     def crawl( self ):
         '''Crawl this AU on the server'''
         logging.info( 'Waiting for crawl of AU "%s" on server %s' % ( self.AU, self.server_name ) )
         try:
-            crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU )
+            crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, CRAWL_CHECK_TIMEOUT )
         except lockss_daemon.LockssError, exception:
             logging.error( exception )
-        else:
-            if crawl_succeeded:
-                self.retries = 0
-                self.stage = self.hash
-                return
-        self.retries -= 1
-        if not self.retries:
-            logging.info( 'Crawl failure for AU "%s"' % self.AU )
-            crawl_failures.append( ( self.AU, client ) )
-            self.retries = AU_RETRY_TOTAL
+            logging.info( 'Failed to crawl AU "%s" on server %s' % ( self.AU, self.server_name ) )
+            self.crawl_failures.append( self.client )
+            if self.clients == self.remote_clients:
+                self.remote_crawl_retries -= 1
+                if self.remote_clients and self.remote_crawl_retries:
+                    self.stage = self.check
+                    return
+            # Local or repeated remote crawl failures are fatal
+            crawl_failures.append( ( self.AU, self.crawl_failures ) )
             self.remove()
-            if self.clients == self.local_clients or not self.remote_clients:
-                raise Leaving_Pipeline
+            raise Leaving_Pipeline
+        if crawl_succeeded:
+            logging.debug( 'Completed crawl of AU "%s" on server %s' % ( self.AU, self.server_name ) )
+            self.stage = self.hash
     
     def hash( self ):
         '''Hash this AU on the server'''
         logging.info( 'Waiting for hash of AU "%s"' % self.AU )
         hash_file = self.client.getAuHashFile( self.AU )
-        #print hash_file
         self.remove()
         if not hash_file:
-            logging.info( 'Hash failure for AU "%s"' % self.AU )
+            logging.warn( 'Hash failure for AU "%s"' % self.AU )
             hash_failures.append( ( self.AU, client ) )
             raise Leaving_Pipeline # Only if no remote clients left?
+        logging.debug( 'Received hash of AU "%s"' % self.AU )
         self.hashes.append( ( self.client, strip_comments( hash_file ) ) )
         if len( self.hashes ) == 1:
             self.stage = self.check
@@ -190,9 +193,9 @@ class Content():
         clients, hashes = zip( *self.hashes )
         differences = diff( hashes[ 0 ], hashes[ -1 ] )
         agreement = 100 - 100*differences.count( '\n' )/( hashes[ 0 ].count( '\n' ) + hashes[ -1 ].count( '\n' ) )
-        if agreement > MINIMUM_AGREEMENT:
+        if agreement > options.agreement:
             logging.info( location + ' hash file match for AU "%s"' % self.AU )
-            if local_comparison:
+            if local_comparison and self.remote_clients:
                 self.clients = self.remote_clients
                 self.stage = self.check
                 return
@@ -204,15 +207,16 @@ class Content():
         raise Leaving_Pipeline
     
         
-option_defaults = { 'configuration': os.path.normpath( os.path.join( program_directory, os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ] + '.conf' ) ), 'username': '', 'password': '', 'local_servers': [], 'remote_servers': [], 'AU_IDs': [], 'test': False }
+option_defaults = { 'configuration': os.path.normpath( os.path.join( program_directory, os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ] + '.conf' ) ), 'username': '', 'password': '', 'local_servers': [], 'remote_servers': [], 'agreement': DEFAULT_AGREEMENT_THRESHOLD, 'AU_IDs': [], 'test': False }
 
-option_parser = optparse.OptionParser( usage = "usage: %prog [options] [AU's]", version = '%prog $Revision: 1.1 $', description = 'LOCKSS content gateway tester' )
+option_parser = optparse.OptionParser( usage = "usage: %prog [options] [AU's]", version = '%prog $Revision: 1.2 $', description = 'LOCKSS content gateway tester' )
 option_parser.set_defaults( **option_defaults )
 option_parser.add_option( '-c', '--configuration', help = 'read configuration from CONFIGURATION [%default]' )
 option_parser.add_option( '-u', '--username', help = 'LOCKSS server username [%default]' )
 option_parser.add_option( '-p', '--password', help = 'LOCKSS server password [%default]' )
 option_parser.add_option( '-l', '--local', action = 'append', dest = 'local_servers', help = 'use local server LOCAL_SERVER (host:port)', metavar = 'LOCAL_SERVER' )
 option_parser.add_option( '-r', '--remote', action = 'append', dest = 'remote_servers', help = 'use remote server REMOTE_SERVER (host:port)', metavar = 'REMOTE_SERVER' )
+option_parser.add_option( '-a', '--agreement', help = 'threshold agreement percentage [%default]' )
 option_parser.add_option( '-A', '--AU_ID', action = 'append', dest = 'AU_IDs', help = 'test content of AU_ID', metavar = 'AU_ID' )
 option_parser.add_option( '-t', '--test', action = 'store_true', help = 'run self test' )
 ( options, AUs ) = option_parser.parse_args()
@@ -252,16 +256,28 @@ try:
         for server in options.local_servers:
             hostname, UI_port = server.split( ':' ) if ':' in server else ( server, DEFAULT_UI_PORT )
             local_clients.append( lockss_daemon.Client( hostname, UI_port, DEFAULT_V3_PORT, options.username, options.password ) )
+        assert len( local_clients ) >= 2, 'Requires at least two local servers'
         remote_clients = []
         for server in options.remote_servers:
             hostname, UI_port = server.split( ':' ) if ':' in server else ( server, DEFAULT_UI_PORT )
             remote_clients.append( lockss_daemon.Client( hostname, UI_port, DEFAULT_V3_PORT, options.username, options.password ) )
         AUs = [ lockss_daemon.AU( AU_ID ) for AU_ID in options.AU_IDs ]
 
+    logging.info( 'Waiting for local servers' )
+    for client in local_clients:
+        client.waitForDaemonReady()
+
+    logging.info( 'Waiting for remote servers' )
+    for client in remote_clients:
+        client.waitForDaemonReady()
+
     pipeline = [ Content( AU, local_clients, remote_clients ) for AU in AUs ]
+    initial_length = len( pipeline )
+    cycle = 0
 
     # The main loop
     while pipeline:
+        logging.info( 'Cycle %i: pipeline contains %i%% of initial content' % ( cycle, 100*len( pipeline )/initial_length ) )
         next_pipeline = []
         for content in pipeline:
             try:
@@ -274,6 +290,7 @@ try:
                 logging.critical( exception )
                 raise
         pipeline = next_pipeline
+        cycle += 1
 
 finally:
     if options.test:
@@ -283,20 +300,23 @@ logging.info( 'Finished' )
 
 if crawl_failures:
     print '\nCRAWL FAILURES\n'
-    for AU, client in sorted( crawl_failures ):
-        print AU.auId, 'on', client_ID( client )
+    for AU, clients in sorted( crawl_failures ):
+        print AU.auId
+        for client in clients:
+            print '\t', client_ID( client )
 
 if hash_failures:
     print '\nHASH FAILURES\n'
     for AU, client in sorted( hash_failures ):
-        print AU.auId, 'on',  client_ID( client )
+        print AU.auId
+        print '\t', client_ID( client )
 
 if hash_mismatches:
     print "\nMISMATCHED AU'S\n"
     for AU, hash_records, differences, agreement in sorted( hash_mismatches ):
         print AU.auId
         clients, hashes = zip( *hash_records )
-        print '%i%% agreement between %s and %s' % ( agreement, clients[ 0 ], clients[ -1 ] )
+        print '%i%% agreement between %s and %s' % ( agreement, client_ID( clients[ 0 ] ), client_ID( clients[ -1 ] ) )
         print differences
 
 if hash_matches:
@@ -304,5 +324,5 @@ if hash_matches:
     for AU, hash_records, differences, agreement in sorted( hash_matches ):
         print AU.auId
         clients, hashes = zip( *hash_records )
-        print '%i%% agreement between %s and %s' % ( agreement, clients[ 0 ], clients[ -1 ] )
+        print '%i%% agreement between %s and %s' % ( agreement, client_ID( clients[ 0 ] ), client_ID( clients[ -1 ] ) )
         print differences

@@ -112,6 +112,14 @@ org.lockss.comm.unicast.sendToAddr=127.0.0.1
 org.lockss.proxy.icp.port=%(icpPort)s
 """
 
+V3ConfigTemplate = """\
+org.lockss.auconfig.allowEditDefaultOnlyParams=true,
+org.lockss.id.initialV3PeerList=%(peer_list)s,
+org.lockss.localV3Identity=%(peer_ID)s
+org.lockss.poll.v3.enableV3Poller=true
+org.lockss.poll.v3.enableV3Voter=true
+"""
+
 
 # Classes
 
@@ -139,7 +147,7 @@ class Framework:
         self.workDir = path.abspath(config.get('workDir', './'))
         self.frameworkDir = self.__makeTestDir()
         self.projectDir = config.get('projectDir')
-        if self.projectDir == None:
+        if self.projectDir is None:
             # will raise LockssError if not found.
             self.projectDir = self.__findProjectDir()
         self.localLibDir = path.join(self.workDir, 'lib')
@@ -174,12 +182,12 @@ class Framework:
 
         # write the framework global config file.
         globalConfigFile = path.join(self.frameworkDir, 'lockss.txt')
-        self.__writeLockssConfig(globalConfigFile, self.logLevel)
+        self.__writeConfig( globalConfigFile, globalConfigTemplate % {"logLevel": self.logLevel} )
 
         # write the 'extra' config file.  This may be empty if there
         # are no LOCKSS daemon properties defined, but that's OK.
         extraConfigFile = path.join(self.frameworkDir, 'lockss.opt')
-        self.__writeExtraConfig(extraConfigFile, config)
+        self.__writeConfig( extraConfigFile, config.daemonItems() )
 
         # Copy the LOCKSS libs to a local working dir
         self.__setUpLibDir()
@@ -239,24 +247,16 @@ class Framework:
             shutil.rmtree(self.localLibDir)
 
     def appendLocalConfig(self, conf, client):
-        """Append the supplied configuration in the dictionary 'conf'
-        (name / value pairs) to the local config file of the specified
+        """Append the supplied configuration in the string or dictionary
+        'conf' (name/value pairs) to the local config file of the specified
         client daemon 'client'"""
-        localConf = path.join(client.daemonDir, 'local.txt')
-        f = open(localConf, "a")
-        for (key, value) in conf.items():
-            f.write("%s=%s\n" % (key, value))
-        f.close()
+        self.__writeConfig(path.join(client.daemonDir, 'local.txt'), conf, True)
 
     def appendExtraConfig(self, conf):
-        """Append the supplied configuration in the dictionary 'conf'
-        (name / value pairs) to the extra config file for all
+        """Append the supplied configuration in the string or dictionary
+        'conf' (name/value pairs) to the extra config file for all
         client daemons"""
-        extraConfigFile = path.join(self.frameworkDir, 'lockss.opt')
-        f = open(extraConfigFile, "a")
-        for (key, value) in conf.items():
-            f.write("%s=%s\n" % (key, value))
-        f.close()
+        self.__writeConfig(path.join(self.frameworkDir, 'lockss.opt'), conf, True)
 
     def reloadAllConfiguration(self):
         for client in self.clientList:
@@ -359,17 +359,11 @@ class Framework:
         os.mkdir(fwDir)
         return fwDir
 
-    def __writeLockssConfig(self, file, logLevel):
-        f = open(file, 'w')
-        f.write(globalConfigTemplate % {"logLevel": logLevel})
-        f.close()
-
     def __writeLocalConfig(self, file, dir, uiPort):
         """Write local config file for a daemon.  Daemon num is
         assumed to start at 0 and go up to n, for n-1 daemons."""
         baseUnicastPort = 9000
         baseIcpPort = 3031
-        f = open(file, 'w')
         tr = str(self.configCount + 1)
         # Kluge for proper handling of multiple daemons.  If this is
         # the first dameon, enable the proxy.
@@ -381,28 +375,23 @@ class Framework:
         unicastPort = str(baseUnicastPort + self.configCount)
         icpPort = str(baseIcpPort + self.configCount)
         unicastSendToPort = str(baseUnicastPort)
-        f.write(localConfigTemplate % {"username": self.username,
-                                       "password": "SHA1:%s" % self.__encPasswd(self.password),
-                                       "dir": dir, "proxyStart": proxyStart,
-                                       "uiPort": uiPort, "ipAddr": ipAddr,
-                                       "unicastPort": unicastPort,
-                                       "unicastSendToPort": unicastSendToPort,
-                                       "icpPort": icpPort})
-        f.close()
+        self.__writeConfig( file, localConfigTemplate % {"username": self.username,
+                                                         "password": "SHA1:%s" % self.__encPasswd(self.password),
+                                                         "dir": dir, "proxyStart": proxyStart,
+                                                         "uiPort": uiPort, "ipAddr": ipAddr,
+                                                         "unicastPort": unicastPort,
+                                                         "unicastSendToPort": unicastSendToPort,
+                                                         "icpPort": icpPort} )
         self.configCount += 1
 
-    def __writeExtraConfig(self, file, conf):
-        """Write out any LOCKSS daemon properties."""
-        f = open(file, 'w')
-        for (key, val) in conf.daemonItems():
-            f.write('%s=%s\n' % (key, val))
-        f.close()
-
-    def __appendExtraConfig(self, file, conf):
-        """Append extra LOCKSS daemon properties."""
-        f = open(file, 'a')
-        for (key, val) in conf.daemonItems():
-            f.write('%s=%s\n' % (key, val))
+    def __writeConfig(self, filename, config, append=False ):
+        """Write a properties string or dictionary to a configuration file"""
+        f = open( filename, 'a' if append else 'w' )
+        if type( config ) is str:
+            f.write( config )
+        else:
+            for key, value in config.iteritems():
+                f.write( '%s=%s\n' % ( key, value ) )
         f.close()
 
 
@@ -1245,13 +1234,17 @@ class Client:
         successful new content crawl."""
         def waitFunc():
             tbl = self.getCrawlStatus(au)
-            if not tbl:
+            try:
+                status = tbl[0]['crawl_status']['value']
+            except ( TypeError, IndexError ):
                 log.debug( 'AU not found; continuing to wait' )
                 return False
-            status = tbl[0]['crawl_status']['value']
             if status == 'Successful':
                 numCrawled = int(self.valueOfRef(tbl[0]['num_urls_fetched']))
-                numExpected = au.expectedUrlCount()
+                if hasattr( au, 'expectedUrlCount' ):
+                    numExpected = au.expectedUrlCount()
+                else:
+                    numExpected = None
                 if numExpected is None or numCrawled == numExpected:
                     return True
                 else:
@@ -1737,6 +1730,7 @@ class Client:
     def __makeAuPost(self, au, lockssAction):
         post = self.__makePost('AuConfig', {'lockssAction': lockssAction})
         post.add('PluginId', au.pluginId)
+        post.add('auid', au.auId)
         simulated_AU = hasattr( au, 'title' ) and au.title.startswith( 'Simulated Content: ' )
         if simulated_AU:
         #    excluded_attributes.update( ( 'auid', 'baseUrl', 'dirStruct', 'fileTypeArray', 'pluginId', 'startUrl', 'title' ) )
@@ -1765,9 +1759,8 @@ class Client:
                 post.add('lfp.pub_down', 'true')
             if au.protocolVersion > 0:
                 post.add('lfp.protocol_version', au.protocolVersion)
-            #post.add('auid', au.auId) # Unnecessary? Also excluded below.
         else:
-            excluded_attributes = set( ( 'auId', 'pluginId', ) )
+            excluded_attributes = set( ( 'auId', 'pluginId' ) )
             for key in set( vars( au ) ) - excluded_attributes:
                 value = getattr( au, key )
                 #if not simulated_AU or value is not None and value is not False and Value != -1:
@@ -1909,9 +1902,6 @@ class AU:
 
     def __str__(self):
         return self.title
-
-    def expectedUrlCount(self):
-        return None
 
 # Redundant?
 #   def getAuId(self):
