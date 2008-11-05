@@ -1,9 +1,10 @@
 """Utility functions and classes used by testsuite and lockss_daemon."""
 
+from __future__ import with_statement
+
 import logging
 import sys
 import time
-
 
 DEBUG2 = logging.DEBUG - 1
 DEBUG3 = logging.DEBUG - 2
@@ -26,58 +27,19 @@ class LOCKSS_Logger( logging.getLoggerClass() ):
             apply(self._log, (DEBUG3, msg, args), kwargs)
 
 
-class Config:
-    """ A safe wrapper around a dictionary.  Handles KeyErrors by
-    returning None values. """
-    def __init__(self):
-        self.dict = {}
-    
-    def put(self, prop, val):
-        self.dict[prop] = val
-
-    def get(self, prop, default=None):
-        try:
-            return self.dict[prop]
-        except KeyError:
-            return default
+class Config( dict ):
+    """A special-purpose dictionary."""
 
     def getBoolean(self, prop, default=False):
-        try:
-            val = self.dict[prop]
-            return val.lower() == 'true' or \
-                   val.lower() == 't' or \
-                   val.lower() == 'yes' or \
-                   val.lower() == 'y' or \
-                   val.lower() == '1'
-        except KeyError:
-            return default
+        val = self.get( prop, default )
+        if type( val ) is str:
+            return val.lower() in ( 'true', 't', 'yes', 'y', '1' )
+        return bool( val )
         
-    ##
-    ## Set views
-    ##
-    def items(self):
-        """ Return the entire set of properties. """
-        return dict.items()
-
-    def testItems(self):
-        """
-        Return only the testsuite properties. (anything
-        with a key not starting with 'org.lockss')
-        """
-        retDict = {}
-        for (key, val) in self.dict.items():
-            if not key.startswith('org.lockss'):
-                retDict[key] = val
-        return retDict.items()
-
     def daemonItems(self):
         """Return only the daemon config properties. (anything
         with a key starting with 'org.lockss')"""
-        retDict = {}
-        for (key, val) in self.dict.items():
-            if key.startswith('org.lockss'):
-                retDict[key] = val
-        return retDict.items()
+        return Config( ( key, value ) for key, value in self.iteritems() if key.startswith('org.lockss') )
 
 
 def Logger():
@@ -86,51 +48,41 @@ def Logger():
 
 def loadConfig(f):
     """ Load a Config object from a file. """
-    fd = open(f)
+
     inMultiline = False
 
-    global config
-    while True:
-        line = fd.readline()
-        if not line:
-            break
-        
-        line = line.replace('\r', '').replace('\n', '')
-        line = line.strip()
-        
-        # Ignore comments and blank lines.
-        if line.startswith('#') or line == '':
-            continue
-    
-        if line.endswith('\\'):
-            inMultiline = True
-            
-        if line.find('=') > -1:
-            (key, val) = line.split('=')
-            # Allow comments on the same line, then strip and
-            # clean the value.
-            val = val.split('#')[0].replace('\\', '').strip()
-            if inMultiline:
+    with open( f ) as fd:
+        for line in fd.readlines():
+
+            # Ignore blank lines and comments.
+            line = line.split( '#', 1 )[ 0 ].strip()
+            if not line:
                 continue
-        elif inMultiline:
-            # Last line of the multi-line?
-            if not line.endswith('\\'):
-                inMultiline = False
         
-            line = line.replace('\\', '').strip()
-            val = val + line
-        else:
-            # Not a comment or a multiline or a proper key=val pair,
-            # ignore
-            continue
+            if line.endswith('\\'):
+                inMultiline = True
+                
+            if '=' in line:
+                (key, val) = line.split('=',1)
+                val = val.replace('\\', '').strip()
+                if inMultiline:
+                    continue
 
-        key = key.strip()
-    
-        if key and val:
-            config.put(key, val)
+            elif inMultiline:
+                # Last line of the multi-line?
+                inMultiline = line.endswith('\\')
+                val = val + line.replace('\\', '').strip()
+
+            else:
+                # Not a comment or a multiline or a proper key=val pair,
+                # ignore
+                continue
+
+            key = key.strip()
+        
+            if key and val:
+                config[ key ] = val
             
-    fd.close()
-
     logging.basicConfig( level = logging._levelNames.get( config.get( 'scriptLogLevel', '' ).upper(), logging.INFO ), format = '%(asctime)s.%(msecs)03d: %(levelname)s: %(message)s', datefmt = '%T' )
 
 
