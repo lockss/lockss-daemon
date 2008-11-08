@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.4 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.5 2008-11-08 08:16:32 tlipkis Exp $
  */
 
 /*
@@ -243,7 +243,7 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("HashCUS",
 		     HashCUS.class,
                      "Hash CUS",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
+                     ServletDescr.DEBUG_ONLY);
   protected static final ServletDescr LINK_LOGS =
     new ServletDescr(null,
 		     null,
@@ -281,7 +281,8 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("DebugPanel",
 		     DebugPanel.class,
                      "Debug Panel",
-		     ServletDescr.ADMIN_ONLY);
+		     (ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY
+		      | ServletDescr.ADMIN_ONLY));
   protected static final ServletDescr LINK_CONTACT =
     new ServletDescr(null,
 		     null,
@@ -322,12 +323,12 @@ public class AdminServletManager extends BaseServletManager {
      SERVLET_DISPLAY_CONTENT,
      SERVLET_SERVE_CONTENT,
      SERVLET_LIST_OBJECTS,
-     SERVLET_HASH_CUS,
+     SERVLET_DEBUG_PANEL,
      LINK_LOGS,
      LINK_ISOS,
      SERVLET_THREAD_DUMP,
      SERVLET_RAISE_ALERT,
-     SERVLET_DEBUG_PANEL,
+     SERVLET_HASH_CUS,
      LINK_CONTACT,
      LINK_HELP,
   };
