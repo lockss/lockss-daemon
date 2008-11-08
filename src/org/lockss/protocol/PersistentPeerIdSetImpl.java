@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.6 2008-10-24 07:13:18 tlipkis Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.7 2008-11-08 08:16:04 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   protected boolean m_isInMemory;
   private static Logger m_logger = Logger.getLogger("PersistentPeerIdSet");
   protected Set<PeerIdentity> m_setPeerId;
-  protected boolean changed = true;
+  protected boolean changed = false;
 
 
   public PersistentPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {

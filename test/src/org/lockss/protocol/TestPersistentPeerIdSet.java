@@ -92,7 +92,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
    * @throws IOException
    */
   public void testLoad() throws IOException {
-    PeerIdentity peeridentityOne;
+    PeerIdentity peeridentityOne =
+      m_idman.findPeerIdentity(k_strPeerIdentityOne);
     MyPersistentPeerIdSetImpl ppisLoad;
     MyPersistentPeerIdSetImpl ppisStore;
     Set<PeerIdentity> setStore;
@@ -102,6 +103,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
 
     ppisLoad.load();
     assertTrue(ppisLoad.isEmpty());
+    // Not changed, so store() shouldn't try to save, so no error
+    ppisLoad.store();
+    ppisLoad.add(peeridentityOne);
+    // now should cause an error
     try {
       ppisLoad.store();
       fail("store() should have caused an IO Exception when the directory cannot exist. ");
@@ -126,7 +131,6 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     // TEST: Save a set with one element.
     ppisStore = new MyPersistentPeerIdSetImpl(m_fileOne, m_idman);
-    peeridentityOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     ppisStore.add(peeridentityOne);
     ppisStore.store();
