@@ -645,6 +645,24 @@ class Client:
         # Poll wasn't found
         return False
 
+    def getV3PollKey(self, au, excludePolls=[]):
+        """Return the key of a poll on the au, excluding any poll
+        keys in excludePolls."""
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            pollKey = row['pollId']['key']
+            if not pollKey in excludePolls and self.isAuIdOrRef(row['auId'], au):
+                return pollKey
+        return None
+
+    def getV3PollInvitedPeers(self, pollKey, au):
+        (summary, table) = self.getV3PollerDetail(pollKey)
+        res = []
+        for row in table:
+            peer = row['identity']
+            res.append(peer)
+        return res
+
     def isCompleteV3Repaired(self, au):
         """Return true if the given AU has had all its nodes repaired by V3.
             Used in testing complete loss recovery via V3."""
@@ -975,14 +993,10 @@ class Client:
         get = Get(self.url, self.username, self.password)
         return get.execute()
 
-    def hasV3Poller(self, au):
-        """Return true if the client has an active V3 Poller."""
-        tab = self.getAuV3Pollers(au)
-        for row in tab:
-            if self.isAuIdOrRef(row["auId"], au):
-                return True
-        # Poll wasn't found.
-        return False
+    def hasV3Poller(self, au, excludePolls=[]):
+        """Return true if the client has an active or completed V3 Poller
+           not matching one of the keys in excludePolls."""
+        return self.getV3PollKey(au, excludePolls) is not None
 
     def hasV3Voter(self, au):
         """Return true if the client has an active V3 Poller."""
@@ -1263,9 +1277,9 @@ class Client:
 
         return self.wait(waitFunc, timeout, sleep)
 
-    def waitForV3Poller(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+    def waitForV3Poller(self, au, excludePolls=[], timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
-            return self.hasV3Poller(au)
+            return self.hasV3Poller(au, excludePolls)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonV3Poll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):

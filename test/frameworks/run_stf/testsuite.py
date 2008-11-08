@@ -462,11 +462,12 @@ class RepairFromPublisherV3TestCase(V3TestCase):
 
 
 class RepairFromPeerV3TestCase(V3TestCase):
+    """Ensure that repairing from a V3 peer works correctly."""
+
     def setUp(self):
         V3TestCase.setUp(self)
         self.timeout = 60 * 60 * 2
 
-    """Ensure that repairing from a V3 peer works correctly."""
     def getTestLocalConf(self):
         # ALWAYS repair from a cache
         ## Enable polling on all peers.
@@ -475,6 +476,9 @@ class RepairFromPeerV3TestCase(V3TestCase):
                 "org.lockss.poll.v3.toplevelPollInterval":"1d",
                 "org.lockss.poll.minPollAttemptInterval":"10"
                 }
+
+    def getDaemonCount(self):
+        return V3TestCase.getDaemonCount(self) + 1
 
     def getSimAu(self):
         # Reasonably complex AU for testing.
@@ -489,9 +493,16 @@ class RepairFromPeerV3TestCase(V3TestCase):
             (self.victim, '\n        '.join([str(n) for n in nodeList])))
         return nodeList
 
+    def maybeDeactivateReactivateAu(self, victim, simAu):
+        ## This version does nothing
+        return True
+
     def runTest(self):
         simAu = self.getSimAu()
         victim = self.victim
+        noAuClient = self.clients[len(self.clients) - 1]
+        self.clients.remove(noAuClient)
+        log.debug("noAuClient: %s" % noAuClient)
         
         ##
         ## Create simulated AUs
@@ -523,6 +534,16 @@ class RepairFromPeerV3TestCase(V3TestCase):
                 ("Client on port %s never won V3 poll" % c.port)
             log.info("Client on port %s won V3 poll..." % c.port)
 
+        firstVictimPoll = victim.getV3PollKey(simAu)
+        log.debug("firstVictimPoll: %s" % firstVictimPoll)
+        invitees = victim.getV3PollInvitedPeers(firstVictimPoll, simAu)
+        log.debug("invitedPeers: %s" % invitees)
+        assert not victim.getPeerId() in invitees, "Victim invited itself"
+        assert noAuClient.getPeerId() in invitees, "NoAUPeer not invited in 1st poll"
+
+        log.debug("victim.getNoAuPeers(simAu): %s" % victim.getNoAuPeers(simAu))
+        assert victim.getNoAuPeers(simAu) == [ noAuClient.getPeerId() ], "NoAUPeer not recorded."
+
         ##
         ## Damage the AU.
         ##
@@ -532,11 +553,22 @@ class RepairFromPeerV3TestCase(V3TestCase):
                                          victim)
         victim.reloadConfiguration()
 
+        self.maybeDeactivateReactivateAu(victim, simAu)
+
+        log.debug("victim.getNoAuPeers(simAu): %s" % victim.getNoAuPeers(simAu))
+        assert victim.getNoAuPeers(simAu) == [ noAuClient.getPeerId() ], "NoAUPeer disappeared!."
+
         ## XXX - this sees first poll, doesn't wait for second
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu, [ firstVictimPoll ])
 
         log.info("Successfully called a V3 poll.")
+
+        pollKey2 = victim.getV3PollKey(simAu, firstVictimPoll)
+        log.debug("pollKey2: %s" % pollKey2)
+        invitees = victim.getV3PollInvitedPeers(pollKey2, simAu)
+        log.debug("invitedPeers: %s" % invitees)
+        assert not noAuClient.getPeerId() in invitees, "NoAUPeer invited in 2nd poll"
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
@@ -550,6 +582,16 @@ class RepairFromPeerV3TestCase(V3TestCase):
             assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
 
         log.info("AU successfully repaired.")
+
+
+class RepairFromPeerWithDeactivateV3TestCase(RepairFromPeerV3TestCase):
+    """Ensure that repairing from a V3 peer after AU deactivate/reactivate
+    works correctly."""
+    def maybeDeactivateReactivateAu(self, victim, simAu):
+        log.info("Deactivating AU")
+        victim.deactivateAu(simAu)
+        log.info("Reactivating AU")
+        victim.reactivateAu(simAu)
 
 
 class RepairHugeFromPeerV3TestCase(RepairFromPeerV3TestCase):
@@ -938,9 +980,6 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         ## Enable polling on all peers.
         return {"org.lockss.poll.v3.enableV3Poller":"true"}
 
-    def getDaemonCount(self):
-        return V3TestCase.getDaemonCount(self) + 1
-
     def runTest(self):
         
         ## Define a simulated AU
@@ -950,17 +989,12 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
                             numFiles=30, protocolVersion=3)
 
         victim = self.victim
-        noAuClient = self.clients[len(self.clients) - 1]
-        self.clients.remove(noAuClient)
         
         ## Create simulated AUs
         self.createAus(simAu)
 
         ## Assert that the AUs have been crawled.
         self.crawlAus(simAu)
-
-        ## Deactivate AU on one client
-#        noAuClient.deactivateAu(simAu)
 
         nodeList = victim.getAuNodesWithContent(simAu)
 
@@ -976,8 +1010,6 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
             assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
                    ("Client on port %s never won V3 poll" % c.port)
             log.info("Client on port %s won V3 poll..." % c.port)
-
-        assert victim.getNoAuPeers(simAu) == [ noAuClient.getPeerId() ], "NoAUPeer not recorded."
 
         log.info("Backing up cache configuration on victim cache...")
         victim.backupConfiguration()
