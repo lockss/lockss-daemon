@@ -1,10 +1,10 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.29 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.30 2008-11-08 08:17:57 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -147,9 +147,18 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     definitionMap.putString(DefinableArchivalUnit.KEY_AU_START_URL, startUrl);
   }
 
+  public List getAuStartUrls() {
+    List ret = getElementList(DefinableArchivalUnit.KEY_AU_START_URL);
+    logger.debug("AU start URLs: " + ret);
+    return ret;
+  }
+
   public String getAuStartUrl() {
-    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_START_URL, null);
-    logger.debug("The AU start URL is: " + ret);
+    List urls = getAuStartUrls();
+    String ret = (String)urls.get(0);
+    if (urls.size() > 1) {
+      logger.warning("Using only the first start URL: " + ret);
+    }
     return ret;
   }
 
@@ -200,7 +209,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
         logger.debug("Retrieving the AU crawl rules in detail: none");
       }
     }
-    return definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, defaultCrawlRules);
+    return definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES);
   }
 
   public void removeAuCrawlRules() {
