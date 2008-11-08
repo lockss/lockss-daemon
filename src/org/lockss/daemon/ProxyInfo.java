@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyInfo.java,v 1.29 2008-03-29 00:22:07 edwardsb1 Exp $
+ * $Id: ProxyInfo.java,v 1.30 2008-11-08 08:13:58 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -615,7 +615,7 @@ public class ProxyInfo {
       buffer.append("# Go look for further instructions after all the following \"dstdomain\" lines.\n\n");
       
       if (m_isDirectFirst) {
-        buffer.append("# You asked that the proxy prefer direct connections over using the cache.\n");
+        buffer.append("# You asked that the proxy prefer direct connections over using the LOCKSS box.\n");
         buffer.append("# Squid's setting for this request is global (rather than per connection).\n");
         buffer.append("# If you wish to turn on direct connection for all connections, then uncomment\n");
         buffer.append("# (ie: remove the '#' from) the next line.\n");
