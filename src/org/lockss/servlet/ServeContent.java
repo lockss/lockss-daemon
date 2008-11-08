@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.14 2008-09-23 00:51:02 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.15 2008-11-08 08:17:16 tlipkis Exp $
  */
 
 /*
@@ -227,6 +227,10 @@ public class ServeContent extends LockssServlet {
     try {
       outWriter = resp.getWriter();
       LinkRewriterFactory lrf = cu.getLinkRewriterFactory();
+      if (!StringUtil.isNullString(getParameter("norewrite"))) {
+	log.info("Not rewriting " + url);
+	lrf = null;
+      }
       if (lrf != null) {
 	try {
 	  rewritten =
