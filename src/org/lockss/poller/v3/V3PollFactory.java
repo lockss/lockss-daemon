@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.27 2008-10-24 07:11:44 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.28 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -183,6 +183,8 @@ public class V3PollFactory extends BasePollFactory {
 	  log.warning("Received msg for nonexistent poll: " + msg);
 	  return null;
 	}
+	// Remove any record that this peer doesn't have the AU
+	deleteFromNoAuPeers(au, orig);
         retPoll = makeV3Voter(daemon, msg, pollspec, orig);
       }
     } catch (V3Serializer.PollSerializerException ex) {
@@ -192,6 +194,17 @@ public class V3PollFactory extends BasePollFactory {
     return retPoll;
   }
   
+  void deleteFromNoAuPeers(ArchivalUnit au, PeerIdentity peer) {
+    DatedPeerIdSet noAuSet = pollMgr.getNoAuPeerSet(au);
+    log.debug2("Deleting from NoAuPeer: " + au);
+    synchronized (noAuSet) {
+      try {
+	noAuSet.remove(peer);
+      } catch (IOException e) {
+	log.error("Failed to remove peer from AU set", e);
+      }
+    }	
+  }
 
   /**
    * Construct a new V3 Poller to call a poll.

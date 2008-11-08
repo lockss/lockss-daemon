@@ -141,6 +141,27 @@ public class TestV3PollFactory extends LockssTestCase {
     assertTrue(p instanceof V3Voter);
   }
    
+  public void testInvitationClearsNoAu() throws Exception {
+    PeerIdentity id2 = idmgr.findPeerIdentity("TCP:[127.0.0.2]:9000");
+    PeerIdentity id3 = idmgr.findPeerIdentity("TCP:[127.0.0.3]:9000");
+    Collection ids = ListUtil.list(testId, id2, id3);
+
+    DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(testAu);
+    synchronized (noAuSet) {
+      noAuSet.addAll(ids);
+    }	
+    assertTrue(noAuSet.containsAll(ids));
+    assertTrue(noAuSet.contains(testId));
+
+    Poll p = thePollFactory.createPoll(ps, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNotNull(p);
+    assertTrue(p instanceof V3Voter);
+    assertFalse(noAuSet.contains(testId));
+  }
+   
+
+
   public void testNoVoteIfNotPollMsg() throws Exception {
     testMsg = makePollMsg(V3LcapMessage.MSG_POLL_ACK);
     Poll p = thePollFactory.createPoll(ps, theDaemon, testId, 1000,

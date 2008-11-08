@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.91 2008-10-25 01:22:21 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.92 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -2010,26 +2010,6 @@ public class V3Poller extends BasePoll {
     return res;
   }
 
-  DatedPeerIdSet getNoAuPeers() {
-    HistoryRepository historyRepo = theDaemon.getHistoryRepository(getAu());
-    DatedPeerIdSet noAuSet = historyRepo.getNoAuPeers();
-    if (true || noAuSet != null) {
-      try {
-	noAuSet.load();
-	if (!noAuSet.isEmpty()) {
-	  pollManager.updateNoAuSet(getAu(), noAuSet);
-	}
-      } catch (IOException e) {
-	log.error("Failed to load no AU set", e);
-      } finally {
-	noAuSet.release();
-	noAuSet = null;
-      }
-    }	
-    return noAuSet;
-  }
-
-
   private Map availablePeers = null;	// maps peerid to invitation weight
 
   /** Build availablePeers map, or trim it if it already exists.  Map will
@@ -2037,34 +2017,43 @@ public class V3Poller extends BasePoll {
    * poll.  */
   synchronized Map getAvailablePeers() {
     if (availablePeers == null) {
-      // load list of peers who have recently said they don't have the AU
-      DatedPeerIdSet noAuSet = getNoAuPeers();
-
-      // first build list of eligible peers
       Collection<PeerIdentity> allPeers;
-      try {
-	if (enableDiscovery) {
-	  allPeers =
-	    idManager.getTcpPeerIdentities(new EligiblePredicate(noAuSet));
-	} else {
-	  Collection<String> keys =
-	    CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
-				  IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
-	  allPeers = new ArrayList();
-	  for (String key : keys) {
-	    try {
-	      PeerIdentity id = idManager.findPeerIdentity(key);
-	      if (isPeerEligible(id, noAuSet)) {
-		allPeers.add(id);
+      // load list of peers who have recently said they don't have the AU
+      DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(getAu());
+      synchronized (noAuSet) {
+	try {
+	  try {
+	    noAuSet.load();
+	    pollManager.ageNoAuSet(getAu(), noAuSet);
+	  } catch (IOException e) {
+	    log.error("Failed to load no AU set", e);
+	    noAuSet.release();
+	    noAuSet = null;
+	  }
+	  // first build list of eligible peers
+	  if (enableDiscovery) {
+	    allPeers =
+	      idManager.getTcpPeerIdentities(new EligiblePredicate(noAuSet));
+	  } else {
+	    Collection<String> keys =
+	      CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+				    IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
+	    allPeers = new ArrayList();
+	    for (String key : keys) {
+	      try {
+		PeerIdentity id = idManager.findPeerIdentity(key);
+		if (isPeerEligible(id, noAuSet)) {
+		  allPeers.add(id);
+		}
+	      } catch (IdentityManager.MalformedIdentityKeyException e) {
+		log.warning("Can't add to inner circle: " + key, e);
 	      }
-	    } catch (IdentityManager.MalformedIdentityKeyException e) {
-	      log.warning("Can't add to inner circle: " + key, e);
 	    }
 	  }
-	}
-      } finally {
-	if (noAuSet != null) {
-	  noAuSet.release();
+	} finally {
+	  if (noAuSet != null) {
+	    noAuSet.release();
+	  }
 	}
       }
       // then build map including invitation weight for each peer.
@@ -2318,8 +2307,8 @@ public class V3Poller extends BasePoll {
       Collection<PeerIdentity> noAuPeers = pollerState.getNoAuPeers();
       if (noAuPeers != null && !noAuPeers.isEmpty()) {
 	HistoryRepository historyRepo = theDaemon.getHistoryRepository(getAu());
-	DatedPeerIdSet noAuSet = historyRepo.getNoAuPeers();
-	if (true || noAuSet != null) {
+	DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(getAu());
+	synchronized (noAuSet) {
 	  try {
 	    log.debug("Adding to no AU peers: " + noAuPeers);
 	    noAuSet.load();
@@ -2330,6 +2319,8 @@ public class V3Poller extends BasePoll {
 	    noAuSet.store(true);
 	  } catch (IOException e) {
 	    log.error("Failed to update no AU set", e);
+	  } finally {
+	    noAuSet.release();
 	  }
 	}	
       }

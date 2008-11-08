@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.85 2008-10-25 01:22:56 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.86 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class HistoryRepositoryImpl
   /**
    * Return the associated NoAuPeerIdSet
    */
-  public DatedPeerIdSet getNoAuPeers()
+  public DatedPeerIdSet getNoAuPeerSet()
   {
     IdentityManager idman;
     

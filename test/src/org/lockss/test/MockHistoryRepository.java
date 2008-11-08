@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.19 2008-10-24 07:13:18 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.20 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public class MockHistoryRepository implements HistoryRepository {
    *    Therefore, it's an unsupported operation for now.
    * @see org.lockss.state.HistoryRepository#getDatedPeerIdSet()
    */
-  public DatedPeerIdSet getNoAuPeers() {
+  public DatedPeerIdSet getNoAuPeerSet() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

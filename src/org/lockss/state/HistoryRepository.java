@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.16 2008-10-24 07:13:18 tlipkis Exp $
+ * $Id: HistoryRepository.java,v 1.17 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public interface HistoryRepository extends LockssAuManager {
   /**
    * Return the associated DatedPeerIdSet
    */
-  public DatedPeerIdSet getNoAuPeers();
+  public DatedPeerIdSet getNoAuPeerSet();
   
   /**
    * Stores the AuState for this ArchivalUnit

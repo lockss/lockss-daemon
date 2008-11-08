@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.202 2008-11-02 21:12:22 tlipkis Exp $
+ * $Id: PollManager.java,v 1.203 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -1276,10 +1276,33 @@ public class PollManager
     return filter != null && pid.getPeerAddress().isAllowed(filter);
   }
 
+  // Ensure only a single instance of a noAuSet exists for each AU, so can
+  // synchronize on them and use in multiple threads.
+  Map<ArchivalUnit,DatedPeerIdSet> noAuPeerSets =
+    new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
+
+  /** Return the noAuSet for the AU.  If an instance of the noAuSet for
+   * this AU already exists in memory it will be returned.  The caller must
+   * synchronize on that object before operating on it */
+  public DatedPeerIdSet getNoAuPeerSet(ArchivalUnit au) {
+    synchronized (noAuPeerSets) {
+      DatedPeerIdSet noAuSet = noAuPeerSets.get(au);
+      if (noAuSet == null) {
+	HistoryRepository historyRepo = getDaemon().getHistoryRepository(au);
+	noAuSet = historyRepo.getNoAuPeerSet();
+	noAuPeerSets.put(au, noAuSet);
+      }
+      return noAuSet;
+    }
+  }
+
   /** Clear the noAuSet if it's older than the interval specified as a
    * function of the AU's age by v3NoAuResetIntervalCurve */
-  public void updateNoAuSet(ArchivalUnit au, DatedPeerIdSet noAuSet) {
+  public void ageNoAuSet(ArchivalUnit au, DatedPeerIdSet noAuSet) {
     try {
+      if (noAuSet.isEmpty()) {
+	return;
+      }
       long lastTimestamp = noAuSet.getDate();
       if (lastTimestamp < 0) {
 	return;

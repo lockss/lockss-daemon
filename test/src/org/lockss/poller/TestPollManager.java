@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.97 2008-10-25 01:20:58 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.98 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -493,7 +493,31 @@ public class TestPollManager extends LockssTestCase {
 		 pollmanager.getPeersWithAuAtRisk(mau2));
   }
 
-  public void testUpdateNoAuSet() throws Exception {
+  public void testGetNoAuSet() throws Exception {
+    MockPlugin plugin = new MockPlugin(theDaemon);
+    String auid1 = "auid111";
+    MockArchivalUnit mau1 = new MockArchivalUnit(plugin, auid1);
+    MockHistoryRepository historyRepo1 = new MyMockHistoryRepository();
+    theDaemon.setHistoryRepository(historyRepo1, mau1);
+    String auid2 = "auid222";
+    MockArchivalUnit mau2 = new MockArchivalUnit(plugin, auid2);
+    MockHistoryRepository historyRepo2 = new MyMockHistoryRepository();
+    theDaemon.setHistoryRepository(historyRepo2, mau2);
+
+    DatedPeerIdSet s1 = pollmanager.getNoAuPeerSet(mau1);
+    DatedPeerIdSet s2 = pollmanager.getNoAuPeerSet(mau2);
+    DatedPeerIdSet s3 = pollmanager.getNoAuPeerSet(mau1);
+    assertNotSame(s1, s2);
+    assertSame(s1, s3);
+  }
+
+  class MyMockHistoryRepository extends MockHistoryRepository {
+    public DatedPeerIdSet getNoAuPeerSet() {
+      return new DatedPeerIdSetImpl(new File("foo.bar"), idmanager);
+    }
+  }
+
+  public void testAgeNoAuSet() throws Exception {
     String p1 = "TCP:[127.0.0.1]:12";
     String p2 = "TCP:[127.0.0.2]:12";
     PeerIdentity peer1 = idmanager.stringToPeerIdentity(p1);
@@ -515,7 +539,7 @@ public class TestPollManager extends LockssTestCase {
     DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(file, idmanager);
     assertTrue(noAuSet.isEmpty());
     assertTrue(noAuSet.getDate() < 0);
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.isEmpty());
     assertTrue(noAuSet.getDate() < 0);
     maus.setAuCreationTime(1000);
@@ -523,31 +547,31 @@ public class TestPollManager extends LockssTestCase {
     noAuSet.setDate(TimeBase.nowMs());
     assertTrue(noAuSet.containsAll(both));
 
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.containsAll(both));
 
     TimeBase.step(1000);
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.isEmpty());
     noAuSet.addAll(both);
     noAuSet.setDate(TimeBase.nowMs());
     assertTrue(noAuSet.containsAll(both));
     TimeBase.step(499);
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.containsAll(both));
     TimeBase.step(1);
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.isEmpty());
     TimeBase.step(12000);
     noAuSet.addAll(both);
     noAuSet.setDate(TimeBase.nowMs());
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.containsAll(both));
     TimeBase.step(4999);
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.containsAll(both));
     TimeBase.step(1);
-    pollmanager.updateNoAuSet(mau, noAuSet);
+    pollmanager.ageNoAuSet(mau, noAuSet);
     assertTrue(noAuSet.isEmpty());
   }
 

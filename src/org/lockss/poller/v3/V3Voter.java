@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.64 2008-10-02 07:42:17 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.65 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -672,8 +672,25 @@ public class V3Voter extends BasePoll {
       return;
     }
 
-    Collection<PeerIdentity> nominees =
-      idManager.getTcpPeerIdentities(nominationPred);
+    Collection<PeerIdentity> nominees;
+    DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(getAu());
+    synchronized (noAuSet) {
+      try {
+	try {
+	  noAuSet.load();
+	  pollManager.ageNoAuSet(getAu(), noAuSet);
+	} catch (IOException e) {
+	  log.error("Failed to load no AU set", e);
+	  noAuSet.release();
+	  noAuSet = null;
+	}
+	nominees = idManager.getTcpPeerIdentities(new NominationPred(noAuSet));
+      } finally {
+	if (noAuSet != null) {
+	  noAuSet.release();
+	}
+      }
+    }
     if (nomineeCount <= nominees.size()) {
       Map availablePeers = new HashMap();
       for (PeerIdentity id : nominees) {
@@ -698,30 +715,44 @@ public class V3Voter extends BasePoll {
 
   // Don't nominate peers unless have positive evidence of correct group.
   // Also, no aging as with poll invites
-  Predicate nominationPred = new Predicate() {
-      public boolean evaluate(Object obj) {
-	if (obj instanceof PeerIdentity) {
-	  PeerIdentity pid = (PeerIdentity)obj;
-	  // Never nominate the poller
-	  if (pid == voterUserData.getPollerId()) {
-	    return false;
-	  }
-	  PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
-	  if (status == null) {
-	    return false;
-	  }
-	  List hisGroups = status.getGroups();
-	  if (hisGroups == null || hisGroups.isEmpty()) {
-	    return false;
-	  }
-	  List myGroups = ConfigManager.getPlatformGroupList();
-	  if (!CollectionUtils.containsAny(hisGroups, myGroups)) {
-	    return false;
-	  }
-	  return true;
+  class NominationPred implements Predicate {
+    DatedPeerIdSet noAuSet;
+
+    NominationPred(DatedPeerIdSet noAuSet) {
+      this.noAuSet = noAuSet;
+    }
+
+    public boolean evaluate(Object obj) {
+      if (obj instanceof PeerIdentity) {
+	PeerIdentity pid = (PeerIdentity)obj;
+	// Never nominate the poller
+	if (pid == voterUserData.getPollerId()) {
+	  return false;
 	}
-	return false;
-      }};
+	try {
+	  if (noAuSet != null && noAuSet.contains(pid)) {
+	    return false;
+	  }
+	} catch (IOException e) {
+	  log.warning("Couldn't chech NoAUSet", e);
+	}
+	PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
+	if (status == null) {
+	  return false;
+	}
+	List hisGroups = status.getGroups();
+	if (hisGroups == null || hisGroups.isEmpty()) {
+	  return false;
+	}
+	List myGroups = ConfigManager.getPlatformGroupList();
+	if (!CollectionUtils.containsAny(hisGroups, myGroups)) {
+	  return false;
+	}
+	return true;
+      }
+      return false;
+    }
+  }
 
   /**
    * Compute the weight that a peer should be given for consideration for

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.30 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.31 2008-11-08 08:15:46 tlipkis Exp $
  */
 
 /*
@@ -511,11 +511,28 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   public void testgetAvailablePeers() throws Exception {
-    findPeerIdentity("TCP:[10.1.0.100]:9729");
-    findPeerIdentity("TCP:[10.1.0.101]:9729");
+    PeerIdentity p1 = findPeerIdentity("TCP:[10.1.0.100]:9729");
+    PeerIdentity p2 = findPeerIdentity("TCP:[10.1.0.101]:9729");
+
+    DatedPeerIdSet noAuSet = pollmanager.getNoAuPeerSet(testau);
+    synchronized (noAuSet) {
+      noAuSet.add(p2);
+    }	
+    assertTrue(noAuSet.contains(p2));
+
     V3Poller v3Poller = makeV3Poller("key");
-    assertNotNull(getAvailablePeers(v3Poller));
-    assertEquals(8, getAvailablePeers(v3Poller).size());
+    Collection avail = getAvailablePeers(v3Poller);
+    log.info("avail: " + avail);
+	     
+    assertTrue(avail.contains(p1));
+    assertFalse(avail.contains(p2));
+
+    Set exp = new HashSet();
+    exp.add(p1);
+    for (PeerIdentity pid : voters) {
+      exp.add(pid);
+    }
+    assertEquals(exp, avail);
   }
   
   public void testgetAvailablePeersInitialPeersOnly() throws Exception {
