@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.56 2008-09-18 02:10:23 dshr Exp $
+ * $Id: ServletUtil.java,v 1.57 2008-11-08 08:17:03 tlipkis Exp $
  */
 
 /*
@@ -1563,18 +1563,18 @@ public class ServletUtil {
     return str.replaceAll("\n", "<br>");
   }
 
-  private static Element radioButton(LockssServlet servlet,
-                                     String key,
-                                     String value,
-                                     boolean checked) {
+  public static Element radioButton(LockssServlet servlet,
+				    String key,
+				    String value,
+				    boolean checked) {
     return radioButton(servlet, key, value, value, checked);
   }
 
-  private static Element radioButton(LockssServlet servlet,
-                                     String key,
-                                     String value,
-                                     String text,
-                                     boolean checked) {
+  public static Element radioButton(LockssServlet servlet,
+				    String key,
+				    String value,
+				    String text,
+				    boolean checked) {
     Composite c = new Composite();
     Input in = new Input(Input.Radio, key, value);
     if (checked) { in.check(); }

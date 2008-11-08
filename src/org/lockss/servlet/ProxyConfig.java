@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.27 2008-06-30 21:49:21 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.28 2008-11-08 08:17:03 tlipkis Exp $
  */
 
 /*
@@ -38,13 +38,12 @@ import java.util.*;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
+import org.mortbay.html.*;
 
 import org.lockss.daemon.ProxyInfo;
 import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.PluginManager;
-import org.lockss.util.StringUtil;
-import org.mortbay.html.*;
-// import org.mortbay.http.HttpFields;
+import org.lockss.util.*;
 
 /** ProxyConfig servlet supplies configuration files or fragments for
  * configuring browsers or external proxies to use the lockss cache as a
@@ -62,8 +61,15 @@ public class ProxyConfig extends LockssServlet {
   private static final String TAG_EZPROXY = "ezproxy";
   private static final String TAG_COMBINED_PAC = "Combined PAC";
   private static final String TAG_PAC = "pac";
-  private String action;
-  // private String auth;
+  private static final String TAG_DIRECT_FIRST = "Direct First";
+  private static final String TAG_FORMAT = "Action";
+  private static final String TAG_DIRECT = "Direct";
+  private static final String TAG_PROXY = "Proxy";
+
+  private static Map<String,String> formDefaults =
+    MapUtil.map(TAG_DIRECT_FIRST, TAG_PROXY);
+
+  private String format;
   private PrintWriter wrtr = null;
   // private String encapsulate;
   private ProxyInfo pi;
@@ -75,7 +81,6 @@ public class ProxyConfig extends LockssServlet {
   // don't hold onto objects after request finished
   protected void resetLocals() {
     wrtr = null;
-  //  auth = null;
     super.resetLocals();
   }
 
@@ -89,30 +94,26 @@ public class ProxyConfig extends LockssServlet {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
-    boolean isDirectFirst;
-    String strDirectFirst;
-
- //   auth = req.getHeader(HttpFields.__Authorization);
-    action = getParameter("action");
-    if (StringUtil.isNullString(action)) {
+    format = getParameter(TAG_FORMAT);
+    if (StringUtil.isNullString(format)) {
       // remain compatible with previous PAC URL, which people may have
       // configured into browsers or stored elsewhere
-      action = getParameter("format");
+      format = getParameter("format");
     }
-    if (StringUtil.isNullString(action)) {
+    if (StringUtil.isNullString(format)) {
       try {
 	getMultiPartRequest();
-	action = getParameter("action");
+	format = getParameter(TAG_FORMAT);
       } catch (FormDataTooLongException e) {
 	displayForm("Uploaded file too large: " + e.getMessage());
 	return;
       }
     }
     pacform = !StringUtil.isNullString(getParameter("pacform"));
-    if (StringUtil.isNullString(action)) {
+    if (StringUtil.isNullString(format)) {
       displayForm();
       return;
-    } else if (action.equals("pacform")) {
+    } else if (format.equals("pacform")) {
       generateEncapForm(null);
       return;
     }
@@ -121,19 +122,12 @@ public class ProxyConfig extends LockssServlet {
     resp.setContentType("text/plain");
 
     // Retrieve whether the user specified that s/he wants "direct" first or last.
-    strDirectFirst = getParameter("DirectFirst");
-
-    if (strDirectFirst == null) {
-      isDirectFirst = false;
-    } else if (strDirectFirst.equalsIgnoreCase("True")) {
-      isDirectFirst = true;
-    } else {
-      isDirectFirst = false;
-    }
+    String strDirectFirst = getParameter(TAG_DIRECT_FIRST);
+    boolean isDirectFirst = TAG_DIRECT.equalsIgnoreCase(strDirectFirst);
 
     // Generate the proxy file!
     try {
-      generateProxyFile(action, isDirectFirst);
+      generateProxyFile(format, isDirectFirst);
     } catch (IOException e) {
       if (wrtr != null) {
 	// Error occurred after we created writer, default error page won't
@@ -233,7 +227,6 @@ public class ProxyConfig extends LockssServlet {
 	pac = pi.generateEncapsulatedPacFile(urlStems, encap, null, req.getRequestURI(), isDirectFirst);
       } else {
 	try {
-// 	  pac = pi.encapsulatePacFileFromURL(urlStems, url, auth);
 	  pac = pi.generateEncapsulatedPacFileFromURL(urlStems, url, isDirectFirst);
 	} catch (UnknownHostException e) {
 	  displayForm("Error reading PAC file from URL: " + url +
@@ -277,7 +270,7 @@ public class ProxyConfig extends LockssServlet {
     frm.add("<p>This page is used to obtain proxy configuration " +
 	     "information for browsers and other proxies, " +
 	     "to inform them which URLs " +
-	     "should be proxied through this cache.");
+	     "should be proxied through this LOCKSS box.");
 
     if (error != null) {
       frm.add("<p><font color=red>");
@@ -285,36 +278,41 @@ public class ProxyConfig extends LockssServlet {
       frm.add("</font>");
     }
 
-    frm.add("<p>Choose your options:</p>");
-    addInputElement(frm, "Proxy first", "DirectFirst", "false",
-        "Prefer using the proxy rather than connecting directly to the web server.");
-    addInputElement(frm, "Direct first", "DirectFirst", "false",
-        "Prefer connecting directly to the web server rather than using the proxy.");
-
     frm.add("<p>Choose a supported format:<br /> \n");
-    addInputElement(frm, "EZproxy config fragment", "action", TAG_EZPROXY,
+    addChoice(frm, TAG_FORMAT, TAG_EZPROXY, "EZproxy config fragment",
 	"Generate text to insert into an EZproxy config file");
-    addInputElement(frm, "Generate a dstdomain file for Squid", "action", TAG_SQUID,
+    addChoice(frm, TAG_FORMAT, TAG_SQUID, "Generate a dstdomain file for Squid",
         "Generate a text file that can be used for a Squid \"dstdomain\" rule");
-    addInputElement(frm, "Generate a configuration fragment for Squid", "action", TAG_SQUID_CONFIG,
+    addChoice(frm, TAG_FORMAT, TAG_SQUID_CONFIG, "Generate a configuration fragment for Squid",
         "Generate text to insert into a Squid configuration file");
-    addInputElement(frm, "PAC file", "action", TAG_PAC,
+    addChoice(frm, TAG_FORMAT, TAG_PAC, "PAC file",
 	"Automatic proxy configuration for browsers. " +
 	"Place the contents of this file on a server for your users " +
 	"to configure their browsers" +
-	srvAbsLink(myServletDescr(), ".", "action=pac&mime=pac"));
-    addInputElement(frm, "Combined PAC file", "action", TAG_COMBINED_PAC,
-        "PAC file that combines rules in an existing PAC file with the rules for this cache.<br>PAC file URL: ");
+	      srvAbsLink(myServletDescr(), ".",
+			 PropUtil.fromArgs(TAG_FORMAT, "pac",
+					   "mime", "pac")));
 
     String url = getParameter("encapsulated_url");
     Input urlin = new Input(Input.Text, "encapsulated_url",
 			    (url != null ? url : ""));
     urlin.setSize(40);
-    frm.add(urlin);
 
-    frm.add("<BR //>");
+    Composite comp = new Composite();
+    comp.add("PAC file that combines rules in an existing PAC file with the rules for this LOCKSS box.<br>PAC file URL: ");
+    comp.add(urlin);
+    addChoice(frm, TAG_FORMAT, TAG_COMBINED_PAC, "Combined PAC file", comp);
 
-    Input submit = new Input("submit", "submit", "submit");
+    frm.add("<p>Select preferred source (PAC files only):<br />\n");
+    addChoice(frm, TAG_DIRECT_FIRST, TAG_PROXY, "Proxy first",
+	      "Connect to the LOCKSS proxy first; if no response try the origin server.");
+    addChoice(frm, TAG_DIRECT_FIRST, TAG_DIRECT, "Direct first",
+	      "Connect to the origin server first; if no response try the LOCKSS proxy.");
+
+
+    frm.add("<BR />");
+
+    Input submit = new Input(Input.Submit, "submit", "Submit");
     frm.add(submit);
 
     page.add(frm);
@@ -323,31 +321,25 @@ public class ProxyConfig extends LockssServlet {
   }
 
 
-  void addInputElement(Composite comp, String title, String fieldName,
-                     String value, String text) {
-    comp.add("<input type=\"radio\" name=\"");
-    comp.add(fieldName);
-    comp.add("\" value=\"");
-    comp.add(value);
-    comp.add("\" /> ");
-    comp.add("<b>" + title + "</b>: ");
-    comp.add(text);
-    comp.add("<br />");
-    comp.add("\n");
-
-   }
-
-  void addFmtElement(Composite comp, String title, String format,
-      Element elem) {
-    ServletDescr desc = myServletDescr();
-    comp.add("<li>");
-    comp.add(srvLink(desc, title, format));
-    comp.add(". ");
-    comp.add(elem);
-    comp.add("</li>");
+  void addChoice(Composite comp, String fieldName, String value,
+		 String title, Object text) {
+    // Preselect radio buttons that were selected in the subbmitted form,
+    // or in the defaults if not in form
+    boolean select = StringUtil.equalStrings(getParamOrDefault(fieldName),
+					     value);
+    comp.add(ServletUtil.radioButton(this, fieldName, value,
+				     "<b>" + title + "</b>: " + text,
+				     select));
+    comp.add("<br />\n");
   }
 
-
+  String getParamOrDefault(String key) {
+    String val = getParameter(key);
+    if (val == null) {
+      val = formDefaults.get(key);
+    }
+    return val;
+  }
 
   void generateEncapForm(String error) throws IOException {
     Page page = newPage();
@@ -355,12 +347,11 @@ public class ProxyConfig extends LockssServlet {
     frm.method("POST");
     frm.attribute("enctype", "multipart/form-data");
     frm.add(new Input(Input.Hidden, "pacform", "1"));
-    frm.add(new Input(Input.Hidden, "action", TAG_COMBINED_PAC));
-//     frm.add(new Input(Input.Hidden, ACTION_TAG));
+    frm.add(new Input(Input.Hidden, TAG_FORMAT, TAG_COMBINED_PAC));
     Table tbl = new Table(0, "align=center cellspacing=16 cellpadding=0");
     tbl.newRow();
     tbl.newCell("align=center");
-    tbl.add("Generate a PAC file that combines the rules from an existing PAC file with the rules for this cache.");
+    tbl.add("Generate a PAC file that combines the rules from an existing PAC file with the rules for this LOCKSS box.");
     if (error != null) {
       tbl.newRow();
       tbl.newCell("align=center");
