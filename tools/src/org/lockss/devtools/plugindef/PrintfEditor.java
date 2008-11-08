@@ -1,10 +1,10 @@
 /*
- * $Id: PrintfEditor.java,v 1.29 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.30 2008-11-08 08:18:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -291,13 +291,14 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
           format = "%s";
           break;
         case ConfigParamDescr.TYPE_INT:
+        case ConfigParamDescr.TYPE_LONG:
         case ConfigParamDescr.TYPE_POS_INT:
           NumericPaddingDialog dialog = new NumericPaddingDialog();
           Point pos = this.getLocationOnScreen();
           dialog.setLocation(pos.x, pos.y);
           dialog.pack();
           dialog.setVisible(true);
-          StringBuffer fbuf = new StringBuffer("%");
+          StringBuilder fbuf = new StringBuilder("%");
           int width = dialog.getPaddingSize();
           boolean is_zero = dialog.useZero();
           if (width > 0) {
@@ -307,7 +308,11 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
             }
             fbuf.append(width);
           }
-          fbuf.append("d");
+	  if (type == ConfigParamDescr.TYPE_LONG) {
+	    fbuf.append("ld");
+	  } else {
+	    fbuf.append("d");
+	  }
           format = fbuf.toString();
           break;
         case ConfigParamDescr.TYPE_YEAR:
@@ -591,7 +596,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
    */
   private String escapeReservedChars(String str) {
   if(str == null) return "";
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     for(int ci = 0; ci < str.length(); ci++) {
       char ch = str.charAt(ci);
       if(RESERVED_STRING.indexOf(ch) >=0) {
@@ -604,7 +609,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
 
   private String escapePrintfChars(String str) {
     if(str == null) return "";
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     for(int ci = 0; ci < str.length(); ci++) {
       char ch = str.charAt(ci);
       if(ch == '%') {
