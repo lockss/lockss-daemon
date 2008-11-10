@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.59 2008-09-14 22:10:28 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.60 2008-11-10 07:11:23 tlipkis Exp $
  */
 
 /*
@@ -622,11 +622,59 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     try {
       InputStream is = muc.getUncachedInputStream();
-      fail("Should have thrown RetryNewUrlException");
+      fail("Should have thrown RedirectOutsideCrawlSpecException");
     } catch (CacheException.RedirectOutsideCrawlSpecException e) {
       assertEquals(redTo, e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redTo, p.getProperty("location"));
+    }
+  }
+
+  public void testRedirectNormalize() throws Exception {
+    String redToUnNorm = "http://Somewhere.ELSE/foo#removeme";
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockPermissionMap map = new MockPermissionMap();
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
+    muc.addConnection(makeConn(301, "Moved to Spain", redToUnNorm));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo);
+    InputStream is = muc.getUncachedInputStream();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlCacher still has the original URL
+    assertEquals(TEST_URL, muc.getUrl());
+  }
+
+  public void testRedirectDontNormalize() throws Exception {
+    ConfigurationUtil.setFromArgs(BaseUrlCacher.PARAM_NORMALIZE_REDIRECT_URL,
+				  "false");
+    String redToUnNorm = "http://Somewhere.ELSE/foo#removeme";
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockPermissionMap map = new MockPermissionMap();
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
+    muc.addConnection(makeConn(301, "Moved to Spain", redToUnNorm));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown RedirectOutsideCrawlSpecException");
+    } catch (CacheException.RedirectOutsideCrawlSpecException e) {
+      assertEquals(redToUnNorm, e.getMessage());
+      CIProperties p = muc.getUncachedProperties();
+      assertEquals(redToUnNorm, p.getProperty("location"));
     }
   }
 

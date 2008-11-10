@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.79 2008-10-02 06:45:59 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.80 2008-11-10 07:11:23 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,11 @@ import org.lockss.crawler.*;
  */
 public class BaseUrlCacher implements UrlCacher {
   protected static Logger logger = Logger.getLogger("UrlCacher");
+
+  /** If true, normalize redirect targets (location header). */
+  public static final String PARAM_NORMALIZE_REDIRECT_URL =
+    Configuration.PREFIX + "baseuc.normalizeRedirectUrl";
+  public static final boolean DEFAULT_NORMALIZE_REDIRECT_URL = true;
 
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
@@ -673,6 +678,15 @@ public class BaseUrlCacher implements UrlCacher {
     // update the current location with the redirect location.
     try {
       String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
+      if (CurrentConfig.getBooleanParam(PARAM_NORMALIZE_REDIRECT_URL,
+					DEFAULT_NORMALIZE_REDIRECT_URL)) {
+	try {
+	  newUrlString = UrlUtil.normalizeUrl(newUrlString, au);
+	  logger.debug3("Normalized to '" + newUrlString + "'");
+	} catch (PluginBehaviorException e) {
+	  logger.warning("Couldn't normalize redirect URL: " + newUrlString, e);
+	}
+      }
       // Check redirect to login page *before* crawl spec, else plugins
       // would have to include login page URLs in crawl spec
       if (au.isLoginPageUrl(newUrlString)) {
