@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.32 2008-10-24 07:12:07 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.33 2008-11-10 07:11:53 tlipkis Exp $
  */
 
 /*
@@ -190,9 +190,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public static final boolean DEFAULT_ENABLE_V1 = true;
 
   /** Maps PeerId to UI URL stem.  Useful for testing frameworks to point
-   * nonstandard ports.  List of [PeerId,URL-stem];,...*/
+   * nonstandard ports.  List of PeerId,URL-stem;,...*/
   public static final String PARAM_UI_STEM_MAP =
     PREFIX + "pidUiStemMap";
+
+  /** Maps PeerId to PeerAddress.  Useful to allow a node behind NAT to
+   * reach others nodes behind the same NAT using the internal address.
+   * List of PeerId,Peer;,...*/
+  public static final String PARAM_PEER_ADDRESS_MAP = PREFIX + "peerAddressMap";
 
   /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
@@ -274,9 +279,11 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
-    super.initService(daemon);
-    // initializing these here makes testing more predictable
+    // Set up local identities *before* processing rest of config.  (Else
+    // any reference to to our ID string will create a non-local identity,
+    // which will later be replaced by the local identity
     setupLocalIdentities();
+    super.initService(daemon);
   }
 
   /**
@@ -290,7 +297,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     localPeerIdentities = new PeerIdentity[Poll.MAX_PROTOCOL + 1];
     boolean hasLocalIdentity = false;
 
-    // Create local PeerIdentity and LcapIdentity instances
+    // setConfig() has not yet run.  All references to the config must be
+    // explicit.
     Configuration config = ConfigManager.getCurrentConfig();
 
     String localV1IdentityStr = getLocalIpParam(config);
@@ -331,7 +339,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
         localPeerIdentities[Poll.V3_PROTOCOL] = findLocalPeerIdentity(v3idstr);
       } catch (MalformedIdentityKeyException e) {
         String msg = "Cannot start: Cannot create local V3 identity: " +
-        v3idstr;
+	  v3idstr;
         log.critical(msg, e);
         throw new LockssAppException("IdentityManager: " + msg);
       }
@@ -1450,6 +1458,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       if (changedKeys.contains(PARAM_UI_STEM_MAP)) {
 	pidUiStemMap = makePidUiStemMap(config.getList(PARAM_UI_STEM_MAP));
       }
+      setPeerAddresses(config.getList(PARAM_PEER_ADDRESS_MAP));
       configV3Identities();
     }
   }
@@ -1466,6 +1475,30 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 	findPeerIdentity((String)iter.next());
       } catch (MalformedIdentityKeyException e) {
 	log.error("Malformed initial peer", e);
+      }
+    }
+  }
+
+  /** Set up any explicit mappings from PeerIdentity to PeerAddress.
+   * Allows different peers to address the same peer differently, e,g, when
+   * multiple peers are behind the same NAT. */
+  void setPeerAddresses(Collection<String> peerAddressPairs) {
+    if (peerAddressPairs != null) {
+      for (String pair : peerAddressPairs) {
+	List<String> lst = StringUtil.breakAt(pair, ',', -1, true, true);
+	if (lst.size() == 2) {
+	  String peer = lst.get(0);
+	  String addr = lst.get(1);
+	  log.debug("Setting address of " + peer + " to " + addr);
+	  try {
+	    PeerIdentity pid = stringToPeerIdentity(peer);
+	    pid.setPeerAddress(PeerAddress.makePeerAddress(addr));
+	  } catch (IdentityManager.MalformedIdentityKeyException e) {
+	    log.error("Couldn't set address of " + peer + " to " + addr, e);
+	  }
+	} else {
+	  log.error("Malformed peer,address pair: " + pair);
+	}
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.9 2008-10-07 18:14:29 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.10 2008-11-10 07:11:53 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,10 @@ public class PeerIdentity implements LockssSerializable {
 
   public PeerAddress getPeerAddress() {
     return pAddr;
+  }
+
+  void setPeerAddress(PeerAddress addr) {
+    this.pAddr = addr;
   }
 
   /** If this PeerIdentity has an associated IP address, return it.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.21 2008-10-07 18:14:29 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.22 2008-11-10 07:11:53 tlipkis Exp $
  */
 
 /*
@@ -995,6 +995,24 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       ListUtil.list(id1, id2, id3, id4);
     assertTrue(tcpPeers.containsAll(expectedPeers));
     assertTrue(expectedPeers.containsAll(tcpPeers));
+  }
+
+  void assertIsTcpAddr(String expIp, int expPort, PeerAddress pad) {
+    PeerAddress.Tcp tpad = (PeerAddress.Tcp)pad;
+    assertEquals(expIp, tpad.getIPAddr().toString());
+    assertEquals(expPort, tpad.getPort());
+  }
+
+  public void testPeerAddressMap() throws Exception {
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_PEER_ADDRESS_MAP,
+                                  "tcp:[127.0.0.1]:8001,tcp:[127.0.3.4]:6602;"+
+                                  "tcp:[127.0.0.2]:8003,tcp:[127.0.5.4]:7702;");
+    PeerIdentity id1 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8001");
+    PeerIdentity id2 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8002");
+    PeerIdentity id3 = idmgr.findPeerIdentity("tcp:[127.0.0.2]:8003");
+    assertIsTcpAddr("127.0.3.4", 6602, id1.getPeerAddress());
+    assertIsTcpAddr("127.0.0.1", 8002, id2.getPeerAddress());
+    assertIsTcpAddr("127.0.5.4", 7702, id3.getPeerAddress());
   }
 
   public void testGetUiUrlStem() throws Exception {
