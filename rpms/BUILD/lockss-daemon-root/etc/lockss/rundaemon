@@ -5,6 +5,8 @@ if [ "X$1" = Xwait ]; then
 fi
 
 OS_TYPE=`uname -s`
+# set LOCKSS_JAVA_HEAP to override using 2/3  memory
+#LOCKSS_JAVA_HEAP=500m
 case ${OS_TYPE} in
 SunOS)  
         if [ "X${LOCKSS_USER}" = X ]
@@ -30,6 +32,13 @@ Linux)
 	CFG_SCRIPT=/etc/lockss/hostconfig
 	LOGFILE=/var/log/lockss/stdout
 	LOCAL_TXT=~/local.txt
+	# look in /proc/meminfo for "MemTotal:      1002108 kB"
+	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
+	then
+		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p'` </proc/meminfo
+		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' 2 \) / 3`
+		LOCKSS_JAVA_HEAP=${MEM_IN_KB}k
+	fi
         ;;
 esac
 
@@ -44,7 +53,7 @@ fi
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
 if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
-    LOCKSS_JAVA_SWITCHES="-server -Xmx350m -Dsun.net.inetaddr.ttl=3600 -showversion"
+    LOCKSS_JAVA_SWITCHES="-server -Xmx${LOCKSS_JAVA_HEAP:-500m} -Dsun.net.inetaddr.ttl=3600 -showversion"
 fi
 
 # if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
