@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.82 2008-10-24 07:13:18 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.83 2008-11-12 07:16:35 tlipkis Exp $
  */
 
 /*
@@ -1175,11 +1175,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	try {
 	  curProps = loadProps(currentPropsFile);
 	} catch (FileNotFoundException e) {
-	  // No error if file not found, just don't load props
-	} catch (Exception e) {
-	  logger.error("Error loading version from "+
-		       currentPropsFile.getPath()+".");
-	  throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
+	  // No error if file not found, just treat as deleted
+	  currentVersion = DELETED_VERSION;
+	  return;
+	} catch (IOException e) {
+	  logger.error("Error loading props from " + currentPropsFile, e);
+	  throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.", e);
+	} catch (RuntimeException e) {
+	  // Error loading props, treat as deleted
+	  currentVersion = DELETED_VERSION;
+	  return;
 	}
       }
     }
@@ -1196,7 +1201,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
   void maybeDeactivateInconsistentNode() {
     if (CurrentConfig.getBooleanParam(PARAM_DEACTIVATE_NODE_ON_ERROR,
                                       DEFAULT_DEACTIVATE_NODE_ON_ERROR)) {
-	    logger.debug3("Running consistency check on node '"+url+"'");
       repository.deactivateInconsistentNode(this);
     } else {
       logger.debug("Not deactivating inconsistent node.");
