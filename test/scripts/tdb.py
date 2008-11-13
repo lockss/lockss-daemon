@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.4 2008-10-15 00:59:53 thib_gc Exp $
+# $Id: tdb.py,v 1.5 2008-11-13 00:28:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -52,7 +52,7 @@ class TdbObject(object):
         key, index = self._key(indexed_key)
         if index:
             if key not in self._dictionary: self._dictionary[key] = {}
-            self._dictionary[key][index] = value.copy()
+            self._dictionary[key][index] = value
         else:
             self._dictionary[key] = value.copy()
 
@@ -88,30 +88,43 @@ class Publisher(TdbObject):
     NAME = 'name'
 
     def name(self): return self.get(Title.NAME)
-#    def set_name(self, name): self.set(Title.NAME, name)
 
 class Title(TdbObject):
 
     NAME = 'name'
     PUBLISHER = 'publisher'
 
-    def name(self): return self.get(Title.NAME)
-#    def set_name(self, name): self.set(Title.NAME, name)
-    def publisher(self): return self.get(Title.PUBLISHER)
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
+
+    def name(self): return self.get(Title.NAME)
+    def publisher(self): return self.get(Title.PUBLISHER)
 
 class AU(ChainedTdbObject):
 
+    ATTR = 'attr'
+    ISSN = 'issn'
     NAME = 'name'
+    PARAM = 'param'
+    PLUGIN = 'plugin'
+    STATUS = 'status'
     TITLE = 'title'
+    
+    STATUS_DOWN = 'down'
 
     def __init__(self, next=None):
         ChainedTdbObject.__init__(self, next)
 
-    def name(self): return self.get(AU.NAME)
-#    def set_name(self, name): self.set(AU.NAME, name)
-    def title(self): return self.get(AU.TITLE)
     def set_title(self, title): self.set(AU.TITLE, title)
+
+    def attr(self, attr): return self.geti('%s[%s]' % ( AU.ATTR, attr ))
+    def attrs(self): return self.geti(AU.ATTR)
+    def issn(self): return self.get(AU.ISSN)
+    def name(self): return self.get(AU.NAME)
+    def param(self, param): return self.geti('%s[%s]' % ( AU.PARAM, param ))
+    def params(self): return self.geti(AU.PARAM)
+    def plugin(self): return self.get(AU.PLUGIN)
+    def status(self): return self.get(AU.STATUS)
+    def title(self): return self.get(AU.TITLE)
 
 class Tdb(object):
 

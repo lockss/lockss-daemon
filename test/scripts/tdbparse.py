@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.9 2008-08-08 22:11:48 thib_gc Exp $
+# $Id: tdbparse.py,v 1.10 2008-11-13 00:28:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -48,7 +48,7 @@ TOKEN_EOF               = 16
 
 TOKENS_WITH_VALUES = [ TOKEN_STRING, TOKEN_IDENTIFIER ]
 
-def __token_translate(tok):
+def _translate_token(tok):
     return {
         TOKEN_NONE: 'NONE',
         TOKEN_KEYWORD_PUBLISHER: 'KEYWORD_PUBLISHER',
@@ -402,9 +402,9 @@ class TdbParser(object):
             self.__current_au.append(AU(self.__current_au[-1]))
             self.__au_container()
         else:
-            raise RuntimeError, 'expected %s or %s, got %s' % (__translate_token(TOKEN_KEYWORD_AU),
-                                                               __translate_token(TOKEN_CURLY_OPEN),
-                                                               __translate_token(self.__token[0]))
+            raise RuntimeError, 'expected %s or %s, got %s' % (_translate_token(TOKEN_KEYWORD_AU),
+                                                               _translate_token(TOKEN_CURLY_OPEN),
+                                                               _translate_token(self.__token[0]))
 
     def __au_container(self):
         '''au_container :
@@ -436,9 +436,9 @@ class TdbParser(object):
         elif self.__token[0] == TOKEN_KEYWORD_COLUMNS:
             self.__columns()
         else:
-            raise RuntimeError, 'expected %s or %s, got %s' % (__translate_token(TOKEN_IDENTIFIER),
-                                                               __translate_token(TOKEN_KEYWORD_COLUMNS),
-                                                               __translate_token(self.__token[0]))
+            raise RuntimeError, 'expected %s or %s, got %s' % (_translate_token(TOKEN_IDENTIFIER),
+                                                               _translate_token(TOKEN_KEYWORD_COLUMNS),
+                                                               _translate_token(self.__token[0]))
 
     def __identifier(self):
         '''identifier :
@@ -609,8 +609,8 @@ class TdbParser(object):
         '''If the given token is next, consumes it, otherwise raises
         a runtime error.'''
         if not self.__accept(token):
-            raise RuntimeError, 'expected %s, got %s' % (__translate_token(token),
-                                                         __translate_token(self.__token[0]))
+            raise RuntimeError, 'expected %s, got %s' % (_translate_token(token),
+                                                         _translate_token(self.__token[0]))
 
     def __initialize_data(self):
         self.__tdb = Tdb()

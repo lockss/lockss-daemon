@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.1 2008-10-15 00:59:53 thib_gc Exp $
+# $Id: tdbproc.py,v 1.2 2008-11-13 00:28:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -33,7 +33,7 @@ from tdbconst import *
 OPTION_LONG        = '--'
 OPTION_SHORT       = '-'
 
-OPTION_STYLE_SHORT = 's'
+TDB_OPTION_STYLE_SHORT = 's'
 
 def __make_command_line_parser():
     '''Builds a new command line option parser'''
@@ -56,17 +56,17 @@ def __make_command_line_parser():
 #                      action='store_true',
 #                      help='be quiet')
 #    parser.set_default(OPTION_QUIET, False)
-    parser.add_option(OPTION_SHORT + OPTION_STYLE_SHORT,
-                      OPTION_LONG + OPTION_STYLE,
-                      dest=OPTION_STYLE,
+    parser.add_option(OPTION_SHORT + TDB_OPTION_STYLE_SHORT,
+                      OPTION_LONG + TDB_OPTION_STYLE,
+                      dest=TDB_OPTION_STYLE,
                       action='store',
-                      choices=STYLES,
+                      choices=TDB_STYLES,
                       help='output style (default: %default)')
-    parser.set_default(OPTION_STYLE, STYLE_DEFAULT)
+    parser.set_default(TDB_OPTION_STYLE, TDB_STYLE_DEFAULT)
     return parser
 
 def __dispatch(tdb, options):
-    if options.style in [ STYLE_XML, STYLE_XML_ENTRIES, STYLE_XML_LEGACY ]:
+    if options.style in [ TDB_STYLE_XML, TDB_STYLE_XML_ENTRIES, TDB_STYLE_XML_LEGACY ]:
         from tdbxml import tdb_to_xml
         tdb_to_xml(tdb, options)
     else:

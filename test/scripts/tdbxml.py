@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.2 2008-10-15 02:03:49 thib_gc Exp $
+# $Id: tdbxml.py,v 1.3 2008-11-13 00:28:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,15 +26,35 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
+import re
+from tdb import *
 from tdbconst import *
 
-def __escape(str):
+_IMPLICIT_PARAM_ORDER = [
+    'base_url', 'base_url2', 'base_url3', 'base_url4', 'base_url5',
+    'oai_request_url',
+    'publisher_id', 'publisher_code', 'publisher_name',
+    'journal_id', 'journal_code', 'journal_issn',
+    'year',
+    'issues', 'issue_set', 'issue_range', 'num_issue_range',
+    'volume_name', 'volume'
+]
+
+def _escape(str):
     from xml.sax import saxutils
     return saxutils.escape(str)
 
-def __preamble(tdb, options):
-    if options.style == STYLE_XML_ENTRIES: return
-    print '''<?xml version="1.0" encoding="UTF-8"?>
+def _short_au_name(au):
+    str = au.name()
+    str = re.sub(r'Volume\s+(\S+)$', '\1', str)
+    str = re.sub(r'\s+', '', str)
+    str = re.sub(r'\W+', '', str)
+    return _escape(str)
+
+def _preamble(tdb, options):
+    if options.style == TDB_STYLE_XML_ENTRIES: return
+    print '''\
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE lockss-config [
 <!ELEMENT lockss-config (if|property)+>
 <!ELEMENT property (property|list|value|if)*>
@@ -71,55 +91,104 @@ def __preamble(tdb, options):
 ]>
 '''
 
-def __introduction(tdb, options):
-    if options.style == STYLE_XML_ENTRIES: return
-    print '''<lockss-config>
+def _introduction(tdb, options):
+    if options.style == TDB_STYLE_XML_ENTRIES: return
+    print '''\
+<lockss-config>
 '''
 
-def __process_au(au, options):
-    pass
+def _do_param(au, param, i, value=None):
+    if value is None:
+        value = au.param(param)
+    print '''\
+   <property name="param.%d">
+    <property name="key" value="%s" />
+    <property name="value" value="%s" />
+   </property>''' % ( i, param, value )
 
-def __process(tdb, options):
+def _do_attr(au, attr):
+    print '''\
+   <property name="attribute.%s" value="%s" />''' % ( attr, au.attr(attr) )
+
+def _process_au(au, options):
+    print '''\
+  <property name="%s">
+   <property name="attributes.publisher" value="%s" />
+   <property name="journalTitle" value="%s" />''' % (
+        _short_au_name(au),
+        _escape(au.title().publisher().name()),
+        _escape(au.title().name()) )
+    if au.issn() is not None:
+        print '''\
+   <property name="issn" value="%s" />''' % ( au.issn(), )
+    print '''\
+   <property name="title" value="%s" />
+   <property name="plugin" value="%s" />''' % (
+        _escape(au.name()),
+        au.plugin() )
+    i = 1
+    for param in _IMPLICIT_PARAM_ORDER:
+        if param in au.params():
+            _do_param(au, param, i)
+            i = i + 1
+    for param in au.params():
+        if param not in _IMPLICIT_PARAM_ORDER:
+            _do_param(au, param, i)
+            i = i + 1
+    if au.status() == AU.STATUS_DOWN:
+        _do_param(au, 'pub_down', 99, value='true')
+    for attr in au.attrs():
+        _do_attr(au, attr)
+    print '''\
+  </property>
+'''
+
+def _process(tdb, options):
     current_pub = None
-    if options.style == STYLE_XML_LEGACY:
-        print ''' <property name="org.lockss.title">
+    if options.style == TDB_STYLE_XML_LEGACY:
+        print '''\
+ <property name="org.lockss.title">
 '''
     for au in tdb.aus():
-        if options.style == STYLE_XML and current_pub is not au.title().publisher():
+        if options.style == TDB_STYLE_XML and current_pub is not au.title().publisher():
             if current_pub is not None:
-                print ''' </property>
+                print '''\
+ </property>
 '''
             current_pub = au.title().publisher()
-            print ''' <property name="org.lockss.titleSet">
+            print '''\
+ <property name="org.lockss.titleSet">
 
-  <property name="%(pubname)s">
-   <property name="name" value="All %(pubname)s Titles" />
+  <property name="%(publisher)s">
+   <property name="name" value="All %(publisher)s Titles" />
    <property name="class" value="xpath" />
-   <property name="xpath" value="[attributes/publisher='%(pubname)s']" />
+   <property name="xpath" value="[attributes/publisher='%(publisher)s']" />
   </property>
   
  </property>
  
  <property name="org.lockss.title">
-''' % { 'pubname' : __escape(current_pub.name()) }
-        __process_au(au, options)
+''' % { 'publisher': _escape(current_pub.name()) }
+        _process_au(au, options)
     else:
-        if options.style == STYLE_XML: print ''' </property>
+        if options.style == TDB_STYLE_XML: print '''\
+ </property>
 '''             
-    if options.style == STYLE_XML_LEGACY:
-        print ''' </property>
+    if options.style == TDB_STYLE_XML_LEGACY:
+        print '''\
+ </property>
 '''
 
-def __conclusion(tdb, options):
-    if options.style == STYLE_XML_ENTRIES: return
+def _conclusion(tdb, options):
+    if options.style == TDB_STYLE_XML_ENTRIES: return
     print '</lockss-config>'
 
-def __postamble(tdb, options):
+def _postamble(tdb, options):
     pass
 
 def tdb_to_xml(tdb, options):
-    __preamble(tdb, options)
-    __introduction(tdb, options)
-    __process(tdb, options)
-    __conclusion(tdb, options)
-    __postamble(tdb, options)
+    _preamble(tdb, options)
+    _introduction(tdb, options)
+    _process(tdb, options)
+    _conclusion(tdb, options)
+    _postamble(tdb, options)

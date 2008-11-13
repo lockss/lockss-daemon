@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.1 2008-10-15 00:59:53 thib_gc Exp $
+# $Id: tdbconst.py,v 1.2 2008-11-13 00:28:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,12 +26,12 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-OPTION_STYLE       = 'style'
+TDB_OPTION_STYLE       = 'style'
 
-STYLE_XML         = 'xml'
-STYLE_XML_ENTRIES = 'xml_entries'
-STYLE_XML_LEGACY  = 'xml_legacy'
-STYLES            = [STYLE_XML,
-                     STYLE_XML_ENTRIES,
-                     STYLE_XML_LEGACY]
-STYLE_DEFAULT     = STYLE_XML_ENTRIES
+TDB_STYLE_XML         = 'xml'
+TDB_STYLE_XML_ENTRIES = 'xml_entries'
+TDB_STYLE_XML_LEGACY  = 'xml_legacy'
+TDB_STYLES            = [TDB_STYLE_XML,
+                         TDB_STYLE_XML_ENTRIES,
+                         TDB_STYLE_XML_LEGACY]
+TDB_STYLE_DEFAULT     = TDB_STYLE_XML_ENTRIES
