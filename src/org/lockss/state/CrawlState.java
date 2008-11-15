@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.10 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: CrawlState.java,v 1.11 2008-11-15 02:30:53 edwardsb1 Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class CrawlState implements LockssSerializable {
    * @param status the status
    * @param startTime the start time
    */
-  CrawlState(int type, int status, long startTime) {
+  public CrawlState(int type, int status, long startTime) {
     this.type = type;
     this.status = status;
     this.startTime = startTime;

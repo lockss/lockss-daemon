@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.38 2007-08-30 09:55:44 smorabito Exp $
+ * $Id: NodeStateImpl.java,v 1.39 2008-11-15 02:30:53 edwardsb1 Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class NodeStateImpl
    * @param polls List of PollState objects
    * @param repository HistoryRepository
    */
-  NodeStateImpl(CachedUrlSet cus, long hashDuration, CrawlState crawlState,
+  public NodeStateImpl(CachedUrlSet cus, long hashDuration, CrawlState crawlState,
                 List polls, HistoryRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
