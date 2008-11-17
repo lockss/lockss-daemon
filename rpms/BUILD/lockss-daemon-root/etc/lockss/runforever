@@ -1,37 +1,13 @@
 #!/bin/sh
 
-OS_TYPE=`uname -s`
-case ${OS_TYPE} in
-SunOS)
-        if [ "X${LOCKSS_USER}" = X ]
-        then
-                LOCKSS_USER=lockss
-        fi
-        if [ "X${LOCKSS_HOME}" = X ]
-        then
-                # Next line wierd because of evaluation order of
-                # ~ and shell parameters
-                LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
-        fi
-        DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
-        CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-        CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
-        LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
-	RUNSCRIPT=${LOCKSS_HOME}/etc/lockss/rundaemon
-	KEEP_GOING=${LOCKSS_HOME}/KeepGoing
-        ;;
-Linux)
-        LOCKSS_USER=lockss
-        DAEMON_PID_FILE="/var/run/lockss.pid"
-        CFG_FILE=/etc/lockss/config.dat
-        CFG_SCRIPT=/etc/lockss/hostconfig
-        LOGFILE=/var/log/lockss/stdout
-	RUNSCRIPT=/etc/lockss/rundaemon
-	KEEP_GOING=~/KeepGoing
-	LOCKSS_HOME=""
-        ;;
-esac
+. /etc/lockss/functions
 
+if [ "${USER}X" = "X" -o "${USER}X" = "rootX" ]
+then
+    echo "Must run as LOCKSS user."
+    exit 1
+fi
+set_variables ${USER}
 if [ -f ${CFG_FILE} ]; then
   . ${CFG_FILE}
 else
@@ -44,7 +20,7 @@ touch ${KEEP_GOING}
 while [ -f ${KEEP_GOING} ]; do
     ${LOCKSS_HOME}/etc/lockss/rundaemon wait
     EXIT_CODE=$?
-    echo stopped with status ${EXIT_CODE} at `date` >>${LOGFILE}
+    echo stopped with status ${EXIT_CODE} at `date` >>${LOG_FILE}
     if [ -f ${KEEP_GOING} ]; then
 	sleep 30
     fi

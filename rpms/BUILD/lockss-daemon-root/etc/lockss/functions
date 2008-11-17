@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# Common functions for lockss startup scripts
+
+set_lockss_user () {
+export CFG_FILE=/etc/lockss/config.dat
+if [ ! -f ${CFG_FILE} ]
+then
+CFG_FILE=`echo "cd ~$1 ; pwd" | bash`/${CFG_FILE}
+fi
+if [ "${LOCKSS_USER}X" = "X" ]
+then
+	export LOCKSS_USER=`sed -n '/^LOCKSS_USER="\(.*\)"/s//\1/p' ${CFG_FILE}`
+fi
+if [ "X${LOCKSS_USER}" = X ]
+then
+        LOCKSS_USER=lockss
+fi
+}
+
+set_variables () {
+OS_TYPE=`uname -s`
+if [ "X${LOCKSS_HOME}" = X ]
+then
+        case ${OS_TYPE} in
+        SunOS)
+                # Next line weird because of evaluation order of
+                # ~ and shell parameters
+                export LOCKSS_HOME=`echo "cd ~$1 ; pwd" | bash`
+		export KEEP_GOING=${LOCKSS_HOME}/KeepGoing
+		if [ "${LOCAL_TXT}X" = "X" ]
+		then
+		        export LOCAL_TXT=${LOCKSS_HOME}/local.txt
+		fi
+	        ;;
+        Linux)
+		local HOME_DIR=`echo "cd ~$1 ; pwd" | bash`
+                export LOCKSS_HOME=
+		export KEEP_GOING=${HOME_DIR}/KeepGoing
+		if [ "${LOCAL_TXT}X" = "X" ]
+		then
+		        export LOCAL_TXT=${HOME_DIR}/local.txt
+		fi
+	        ;;
+        esac
+fi
+if [ "${LOG_DIR}X" = "X" ]
+then
+        export LOG_DIR="${LOCKSS_HOME}/var/log/$1"
+fi
+if [ "${LOG_FILE}X" = "X" ]
+then
+        export LOG_FILE="${LOG_DIR}/stdout"
+fi
+if [ "${PID_FILE}X" = "X" ]
+then
+        export PID_FILE="${LOCKSS_HOME}/var/run/$1.pid"
+fi
+if [ "${CFG_FILE}X" = "X" ]
+then
+        export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+fi
+}

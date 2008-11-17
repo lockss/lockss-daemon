@@ -1,44 +1,16 @@
 #!/bin/bash
 
+. /etc/lockss/functions
+
 if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
-
+set_variables ${USER}
 OS_TYPE=`uname -s`
 # set LOCKSS_JAVA_HEAP to override using 2/3  memory
 #LOCKSS_JAVA_HEAP=500m
 case ${OS_TYPE} in
-SunOS)  
-        if [ "X${LOCKSS_USER}" = X ]
-	then
-		LOCKSS_USER=lockss
-	fi
-	if [ "X${LOCKSS_HOME}" = X ]
-	then
-		# Next line wierd because of evaluation order of
-		# ~ and shell parameters
-        	LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
-	fi
-	DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
-	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-	CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
-	LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
-	LOCAL_TXT=${LOCKSS_HOME}/var/run/local.txt
-        ;;      
 Linux)          
-        LOCKSS_USER=`whoami`
-        DAEMON_PID_FILE="/var/run/${LOCKSS_USER}.pid"
-        CFG_FILE=/etc/lockss/config.dat
-	if [ -f /etc/lockss/config.${LOCKSS_USER}.dat ]
-	then
-	    CFG_FILE=/etc/lockss/config.${LOCKSS_USER}.dat
-	fi
-        CFG_SCRIPT=/etc/lockss/hostconfig
-        LOGFILE=/var/log/${LOCKSS_USER}/stdout
-	RUNSCRIPT=/etc/lockss/rundaemon
-	KEEP_GOING=~${LOCKSS_USER}/KeepGoing
-	LOCKSS_HOME=""
-	LOCAL_TXT=~/local.txt
 	# look in /proc/meminfo for "MemTotal:      1002108 kB"
 	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
 	then
@@ -99,11 +71,11 @@ org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
 EOF
 cd ${LOCKSS_HOME}
-echo "Starting daemon at `date`" >> ${LOGFILE}
-${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &
-echo $! >${DAEMON_PID_FILE}
+echo "Starting daemon at `date`" >> ${LOG_FILE}
+${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &
+echo $! >${PID_FILE}
 if [ X${WAIT} != X ]; then
-    wait `cat ${DAEMON_PID_FILE}`
+    wait `cat ${PID_FILE}`
 fi
 
 
