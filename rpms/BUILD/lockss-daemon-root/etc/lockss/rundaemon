@@ -35,7 +35,7 @@ Linux)
 	# look in /proc/meminfo for "MemTotal:      1002108 kB"
 	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
 	then
-		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p'` </proc/meminfo
+		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p' </proc/meminfo`
 		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' 2 \) / 3`
 		LOCKSS_JAVA_HEAP=${MEM_IN_KB}k
 	fi
