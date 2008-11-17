@@ -26,16 +26,23 @@ SunOS)
 	LOCAL_TXT=${LOCKSS_HOME}/var/run/local.txt
         ;;      
 Linux)          
-        LOCKSS_USER=lockss
-	DAEMON_PID_FILE="/var/run/lockss.pid"
-	CFG_FILE=/etc/lockss/config.dat
-	CFG_SCRIPT=/etc/lockss/hostconfig
-	LOGFILE=/var/log/lockss/stdout
+        LOCKSS_USER=`whoami`
+        DAEMON_PID_FILE="/var/run/${LOCKSS_USER}.pid"
+        CFG_FILE=/etc/lockss/config.dat
+	if [ -f /etc/lockss/config.${LOCKSS_USER}.dat ]
+	then
+	    CFG_FILE=/etc/lockss/config.${LOCKSS_USER}.dat
+	fi
+        CFG_SCRIPT=/etc/lockss/hostconfig
+        LOGFILE=/var/log/${LOCKSS_USER}/stdout
+	RUNSCRIPT=/etc/lockss/rundaemon
+	KEEP_GOING=~${LOCKSS_USER}/KeepGoing
+	LOCKSS_HOME=""
 	LOCAL_TXT=~/local.txt
 	# look in /proc/meminfo for "MemTotal:      1002108 kB"
 	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
 	then
-		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p'` </proc/meminfo
+		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p' </proc/meminfo`
 		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' 2 \) / 3`
 		LOCKSS_JAVA_HEAP=${MEM_IN_KB}k
 	fi
