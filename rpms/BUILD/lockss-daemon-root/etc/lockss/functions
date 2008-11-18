@@ -61,3 +61,12 @@ then
         export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 fi
 }
+
+unset_variables () {
+LOCAL_TXT=
+LOG_DIR=
+LOG_FILE=
+PID_FILE=
+CFG_FILE=
+}
+

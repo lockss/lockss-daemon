@@ -38,7 +38,7 @@ case "$1" in
 	echo "Starting LOCKSS at `date`" >> ${LOG_FILE}
 	if [ "X${CONFIG_USER}" != "X$2" ] ; then
 	    chown $2 ${LOG_FILE}
-	    daemon --user $2 --check lockss /etc/lockss/runforever
+	    daemon --user $2 --check $2 /etc/lockss/runforever
 	else
 	    sh /etc/lockss/rundaemon
 	fi
@@ -47,7 +47,7 @@ case "$1" in
     stop)
 	echo "Stopping LOCKSS"
 	rm -f "${KEEP_GOING}"
-	killproc lockss
+	killproc $2
 	echo "."
 	;;
     *)
@@ -62,6 +62,7 @@ for A in ${LOCKSS_USER}
 do
         set_variables ${A}
         do_command $1 $A
+	unset_variables
 done
 
 

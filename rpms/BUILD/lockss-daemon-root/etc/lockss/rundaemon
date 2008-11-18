@@ -5,22 +5,38 @@
 if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
+set_lockss_user ${USER}
 set_variables ${USER}
-OS_TYPE=`uname -s`
-# set LOCKSS_JAVA_HEAP to override using 2/3  memory
+DAEMON_COUNT=0
+for A in ${LOCKSS_USER}
+do
+	DAEMON_COUNT=`expr ${DAEMON_COUNT} + 1`
+done
+NUMERATOR=2
+if [ "${DAEMON_COUNT}X" = 2X ]
+then
+	NUMERATOR=1
+fi
+# set LOCKSS_JAVA_HEAP to override using 2/3  memory for
+# all daemons combined
 #LOCKSS_JAVA_HEAP=500m
+OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 Linux)          
 	# look in /proc/meminfo for "MemTotal:      1002108 kB"
 	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
 	then
 		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p' </proc/meminfo`
-		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' 2 \) / 3`
+		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' ${NUMERATOR} \) / 3`
 		LOCKSS_JAVA_HEAP=${MEM_IN_KB}k
 	fi
         ;;
 esac
 
+if [ -f ${LOCKSS_HOME}/etc/lockss/config.$USER.dat ]
+then
+	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$USER.dat
+fi
 
 if [ -f ${CFG_FILE} ]; then
   . ${CFG_FILE}
