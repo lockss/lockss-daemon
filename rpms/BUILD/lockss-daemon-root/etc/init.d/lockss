@@ -7,40 +7,13 @@
 
 . /etc/init.d/functions
 . /etc/profile
+. /etc/lockss/functions
 
-OS_TYPE=`uname -s`
-case ${OS_TYPE} in
-SunOS)
-        if [ "X${LOCKSS_USER}" = X ]
-        then
-                LOCKSS_USER=lockss
-        fi
-        if [ "X${LOCKSS_HOME}" = X ]
-        then
-                # Next line weird because of evaluation order of
-                # ~ and shell parameters
-                LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
-        fi
-	CONFIG_USER=`/usr/ucb/whoami`
-	LOG_DIR="${LOCKSS_HOME}/var/log/lockss"
-	LOG_FILE="${LOG_DIR}/stdout"
-	PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
-	CFG_FILE=${LOCKSS_HOME}/etc/lockss/hostconfig
-	KEEP_GOING=~lockss/KeepGoing
-	;;
-Linux)
-	LOCKSS_USER=lockss
-	CONFIG_USER=`whoami`
-	LOG_DIR="/var/log/lockss"
-	LOG_FILE="${LOG_DIR}/stdout"
-	PID_FILE="/var/run/lockss.pid"
-	CFG_FILE=/etc/lockss/hostconfig
-	KEEP_GOING=~lockss/KeepGoing
-	;;
-esac
-
-TIMESTAMP=`date`
-
+do_command () {
+if [ -f ${LOCKSS_HOME}/config.$2.dat ]
+then
+	${CFG_FILE}=${LOCKSS_HOME}/config.$2.dat
+fi
 case "$1" in
     start)
 	if [ ! -r ${CFG_FILE} ]; then
@@ -49,23 +22,23 @@ case "$1" in
 	fi
 	if [ ! -d ${LOG_DIR} ]; then
 	    mkdir -p ${LOG_DIR}
-	    if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
-		chown ${LOCKSS_USER} ${LOG_DIR}
+	    if [ "X${CONFIG_USER}" != "X$2" ] ; then
+		chown $2 ${LOG_DIR}
 		chmod 755 ${LOG_DIR}
 	    fi
 	fi
 	if [ ! -f ${PID_FILE} ]; then
 	    touch ${PID_FILE}
 	fi
-	if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
-	    chown ${LOCKSS_USER} ${PID_FILE}
+	if [ "X${CONFIG_USER}" != "X$2" ] ; then
+	    chown $2 ${PID_FILE}
 	    chmod 644 ${PID_FILE}
 	fi
 	echo "Starting LOCKSS"
-	echo "Starting LOCKSS at $TIMESTAMP" >> ${LOG_FILE}
-	if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
-	    chown ${LOCKSS_USER} ${LOG_FILE}
-	    daemon --user ${LOCKSS_USER} --check lockss /etc/lockss/runforever
+	echo "Starting LOCKSS at `date`" >> ${LOG_FILE}
+	if [ "X${CONFIG_USER}" != "X$2" ] ; then
+	    chown $2 ${LOG_FILE}
+	    daemon --user $2 --check $2 /etc/lockss/runforever
 	else
 	    sh /etc/lockss/rundaemon
 	fi
@@ -74,7 +47,7 @@ case "$1" in
     stop)
 	echo "Stopping LOCKSS"
 	rm -f "${KEEP_GOING}"
-	killproc lockss
+	killproc $2
 	echo "."
 	;;
     *)
@@ -82,5 +55,15 @@ case "$1" in
 	exit 1
 	;;
 esac
+}
+
+set_lockss_user
+for A in ${LOCKSS_USER}
+do
+        set_variables ${A}
+        do_command $1 $A
+	unset_variables
+done
+
 
 exit 0
