@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Hindawi Publishing Corporation Plugin, Base URL %s, Journal ID %s, Year %d, Volume %s&quot;, base_url, journal_id, year, volume_name</string>
+    <string>&quot;Hindawi Publishing Corporation Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,17 +27,12 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sjournals/%s/volume-%s/&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%slockss.html&quot;, base_url</string>
-      <string>2,&quot;^%sGetArticle\.aspx\?doi=.*&amp;e=cit$&quot;, base_url</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%s\.%s\.&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%s/%d/&quot;, base_url, journal_id, year</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%s\.[0-9]+(&amp;.*)?$&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%d\.[0-9]+(&amp;.*)?$&quot;, base_url, year</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/%d/[0-9]+(&amp;.*)?$&quot;, base_url, year</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=.*[-0-9]+\(%d[0-9]*\)&quot;, base_url, year</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=[0-9.]+/[0-9SX]+(&amp;.*)?&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+      <string>1,&quot;^%sjournals/%s/volume-%s/$&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%slockss.html$&quot;, base_url</string>
+      <string>1,&quot;^%sjournals/%s/volume-%s/(regular(\.\d+)?|si\.\d+)\.html$&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=&quot;, base_url</string>
+      <string>1,&quot;^%sfloats/.+/figures/.+\.xht$&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
@@ -74,15 +69,6 @@
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
