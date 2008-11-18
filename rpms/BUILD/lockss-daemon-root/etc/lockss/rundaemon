@@ -5,8 +5,8 @@
 if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
+set_lockss_user ${USER}
 set_variables ${USER}
-OS_TYPE=`uname -s`
 DAEMON_COUNT=0
 for A in ${LOCKSS_USER}
 do
@@ -17,8 +17,10 @@ if [ "${DAEMON_COUNT}X" = 2X ]
 then
 	NUMERATOR=1
 fi
-# set LOCKSS_JAVA_HEAP to override using 2/3  memory
+# set LOCKSS_JAVA_HEAP to override using 2/3  memory for
+# all daemons combined
 #LOCKSS_JAVA_HEAP=500m
+OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 Linux)          
 	# look in /proc/meminfo for "MemTotal:      1002108 kB"
