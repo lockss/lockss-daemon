@@ -5,6 +5,9 @@
 
   implicit < param[volume_name] ; name >
 
+  plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
+  param[base_url] = http://www.hindawi.com/
+
   {
     title <
       name = Abstract and Applied Analysis
