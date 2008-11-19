@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Government Printing Office
+  >
+
+  param[base_url] = http://bulk.resource.org/
+
+  {
+    title <
+      name = Congressional Documents
+    >
+
+    implicit < param[congress] ; name >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
+
+    au < 104 ; Congressional Documents, 104th Congress >
+    au < 105 ; Congressional Documents, 105th Congress >
+    au < 106 ; Congressional Documents, 106th Congress >
+    au < 107 ; Congressional Documents, 107th Congress >
+    au < 108 ; Congressional Documents, 108th Congress >
+    au < 109 ; Congressional Documents, 109th Congress >
+    au < 110 ; Congressional Documents, 110th Congress >
+
+  }
+
+}
