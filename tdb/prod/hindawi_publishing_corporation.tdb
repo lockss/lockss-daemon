@@ -3,7 +3,7 @@
     name = Hindawi Publishing Corporation
   >
 
-  implicit < param[volume_name] ; name >
+  implicit < status ; name ; param[volume_name] >
 
   plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
   param[base_url] = http://www.hindawi.com/
@@ -15,19 +15,19 @@
 
     param[journal_id] = aaa
 
-    au < 1 ; Abstract and Applied Analysis Volume 1 >
-    au < 2 ; Abstract and Applied Analysis Volume 2 >
-    au < 3 ; Abstract and Applied Analysis Volume 3 >
-    au < 4 ; Abstract and Applied Analysis Volume 4 >
-    au < 5 ; Abstract and Applied Analysis Volume 5 >
-    au < 6 ; Abstract and Applied Analysis Volume 6 >
-    au < 7 ; Abstract and Applied Analysis Volume 7 >
-    au < 2003 ; Abstract and Applied Analysis Volume 2003 >
-    au < 2004 ; Abstract and Applied Analysis Volume 2004 >
-    au < 2005 ; Abstract and Applied Analysis Volume 2005 >
-    au < 2006 ; Abstract and Applied Analysis Volume 2006 >
-    au < 2007 ; Abstract and Applied Analysis Volume 2007 >
-    au < 2008 ; Abstract and Applied Analysis Volume 2008 >
+    au < manifest ; Abstract and Applied Analysis Volume 1 ; 1 >
+    au < manifest ; Abstract and Applied Analysis Volume 2 ; 2 >
+    au < manifest ; Abstract and Applied Analysis Volume 3 ; 3 >
+    au < manifest ; Abstract and Applied Analysis Volume 4 ; 4 >
+    au < manifest ; Abstract and Applied Analysis Volume 5 ; 5 >
+    au < manifest ; Abstract and Applied Analysis Volume 6 ; 6 >
+    au < manifest ; Abstract and Applied Analysis Volume 7 ; 7 >
+    au < manifest ; Abstract and Applied Analysis Volume 2003 ; 2003 >
+    au < manifest ; Abstract and Applied Analysis Volume 2004 ; 2004 >
+    au < manifest ; Abstract and Applied Analysis Volume 2005 ; 2005 >
+    au < manifest ; Abstract and Applied Analysis Volume 2006 ; 2006 >
+    au < manifest ; Abstract and Applied Analysis Volume 2007 ; 2007 >
+    au < manifest ; Abstract and Applied Analysis Volume 2008 ; 2008 >
 
   }
 
@@ -38,33 +38,33 @@
 
     param[journal_id] = apec
 
-    au < 1 ; Active and Passive Electronic Components Volume 1 >
-    au < 2 ; Active and Passive Electronic Components Volume 2 >
-    au < 3 ; Active and Passive Electronic Components Volume 3 >
-    au < 4 ; Active and Passive Electronic Components Volume 4 >
-    au < 5 ; Active and Passive Electronic Components Volume 5 >
-    au < 6 ; Active and Passive Electronic Components Volume 6 >
-    au < 7 ; Active and Passive Electronic Components Volume 7 >
-    au < 8 ; Active and Passive Electronic Components Volume 8 >
-    au < 9 ; Active and Passive Electronic Components Volume 9 >
-    au < 10 ; Active and Passive Electronic Components Volume 10 >
-    au < 11 ; Active and Passive Electronic Components Volume 11 >
-    au < 12 ; Active and Passive Electronic Components Volume 12 >
-    au < 13 ; Active and Passive Electronic Components Volume 13 >
-    au < 14 ; Active and Passive Electronic Components Volume 14 >
-    au < 15 ; Active and Passive Electronic Components Volume 15 >
-    au < 16 ; Active and Passive Electronic Components Volume 16 >
-    au < 17 ; Active and Passive Electronic Components Volume 17 >
-    au < 18 ; Active and Passive Electronic Components Volume 18 >
-    au < 19 ; Active and Passive Electronic Components Volume 19 >
-    au < 20 ; Active and Passive Electronic Components Volume 20 >
-    au < 21 ; Active and Passive Electronic Components Volume 21 >
-    au < 22 ; Active and Passive Electronic Components Volume 22 >
-    au < 23 ; Active and Passive Electronic Components Volume 23 >
-    au < 24 ; Active and Passive Electronic Components Volume 24 >
-    au < 25 ; Active and Passive Electronic Components Volume 25 >
-    au < 2007 ; Active and Passive Electronic Components Volume 2007 >
-    au < 2008 ; Active and Passive Electronic Components Volume 2008 >
+    au < manifest ; Active and Passive Electronic Components Volume 1 ; 1 >
+    au < manifest ; Active and Passive Electronic Components Volume 2 ; 2 >
+    au < manifest ; Active and Passive Electronic Components Volume 3 ; 3 >
+    au < manifest ; Active and Passive Electronic Components Volume 4 ; 4 >
+    au < manifest ; Active and Passive Electronic Components Volume 5 ; 5 >
+    au < manifest ; Active and Passive Electronic Components Volume 6 ; 6 >
+    au < manifest ; Active and Passive Electronic Components Volume 7 ; 7 >
+    au < manifest ; Active and Passive Electronic Components Volume 8 ; 8 >
+    au < manifest ; Active and Passive Electronic Components Volume 9 ; 9 >
+    au < manifest ; Active and Passive Electronic Components Volume 10 ; 10 >
+    au < manifest ; Active and Passive Electronic Components Volume 11 ; 11 >
+    au < manifest ; Active and Passive Electronic Components Volume 12 ; 12 >
+    au < manifest ; Active and Passive Electronic Components Volume 13 ; 13 >
+    au < manifest ; Active and Passive Electronic Components Volume 14 ; 14 >
+    au < manifest ; Active and Passive Electronic Components Volume 15 ; 15 >
+    au < manifest ; Active and Passive Electronic Components Volume 16 ; 16 >
+    au < manifest ; Active and Passive Electronic Components Volume 17 ; 17 >
+    au < manifest ; Active and Passive Electronic Components Volume 18 ; 18 >
+    au < manifest ; Active and Passive Electronic Components Volume 19 ; 19 >
+    au < manifest ; Active and Passive Electronic Components Volume 20 ; 20 >
+    au < manifest ; Active and Passive Electronic Components Volume 21 ; 21 >
+    au < manifest ; Active and Passive Electronic Components Volume 22 ; 22 >
+    au < manifest ; Active and Passive Electronic Components Volume 23 ; 23 >
+    au < manifest ; Active and Passive Electronic Components Volume 24 ; 24 >
+    au < manifest ; Active and Passive Electronic Components Volume 25 ; 25 >
+    au < manifest ; Active and Passive Electronic Components Volume 2007 ; 2007 >
+    au < manifest ; Active and Passive Electronic Components Volume 2008 ; 2008 >
 
   }
 

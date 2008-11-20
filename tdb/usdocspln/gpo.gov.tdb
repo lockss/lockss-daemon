@@ -10,17 +10,17 @@
       name = Congressional Documents
     >
 
-    implicit < param[congress] ; name >
+    implicit < status ; name ; param[congress] >
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
 
-    au < 104 ; Congressional Documents, 104th Congress >
-    au < 105 ; Congressional Documents, 105th Congress >
-    au < 106 ; Congressional Documents, 106th Congress >
-    au < 107 ; Congressional Documents, 107th Congress >
-    au < 108 ; Congressional Documents, 108th Congress >
-    au < 109 ; Congressional Documents, 109th Congress >
-    au < 110 ; Congressional Documents, 110th Congress >
+    au < manifest ; Congressional Documents, 104th Congress ; 104 >
+    au < manifest ; Congressional Documents, 105th Congress ; 105 >
+    au < manifest ; Congressional Documents, 106th Congress ; 106 >
+    au < manifest ; Congressional Documents, 107th Congress ; 107 >
+    au < manifest ; Congressional Documents, 108th Congress ; 108 >
+    au < manifest ; Congressional Documents, 109th Congress ; 109 >
+    au < manifest ; Congressional Documents, 110th Congress ; 110 >
 
   }
 
