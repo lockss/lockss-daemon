@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.3 2008-11-13 00:28:34 thib_gc Exp $
+# $Id: tdbxml.py,v 1.4 2008-11-21 01:39:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -97,7 +97,7 @@ def _introduction(tdb, options):
 <lockss-config>
 '''
 
-def _do_param(au, param, i, value=None):
+def _do_param(au, i, param, value=None):
     if value is None:
         value = au.param(param)
     print '''\
@@ -106,9 +106,11 @@ def _do_param(au, param, i, value=None):
     <property name="value" value="%s" />
    </property>''' % ( i, param, value )
 
-def _do_attr(au, attr):
+def _do_attr(au, attr, value=None):
+    if value is None:
+        value = au.attr(attr)
     print '''\
-   <property name="attribute.%s" value="%s" />''' % ( attr, au.attr(attr) )
+   <property name="attribute.%s" value="%s" />''' % ( attr, value )
 
 def _process_au(au, options):
     print '''\
@@ -129,16 +131,20 @@ def _process_au(au, options):
     i = 1
     for param in _IMPLICIT_PARAM_ORDER:
         if param in au.params():
-            _do_param(au, param, i)
+            _do_param(au, i, param)
             i = i + 1
     for param in au.params():
         if param not in _IMPLICIT_PARAM_ORDER:
-            _do_param(au, param, i)
+            _do_param(au, i, param)
             i = i + 1
-    if au.status() == AU.STATUS_DOWN:
-        _do_param(au, 'pub_down', 99, value='true')
+    if au.status() == TDB_STATUS_DOWN:
+        _do_param(au, 99, 'pub_down', value='true')
     for attr in au.attrs():
         _do_attr(au, attr)
+    if au.status() == TDB_STATUS_PRE_RELEASED:
+        _do_attr(au, 'releaseStatus', 'pre-release')
+    if au.rights() == 'openaccess':
+        _do_attr(au, 'rights', 'openaccess')
     print '''\
   </property>
 '''

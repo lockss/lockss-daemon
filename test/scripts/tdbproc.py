@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.2 2008-11-13 00:28:34 thib_gc Exp $
+# $Id: tdbproc.py,v 1.3 2008-11-21 01:39:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,59 +26,90 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-from optparse import OptionParser
-
 from tdbconst import *
+
+TDBPROC_VERSION = '0.1.2'
 
 OPTION_LONG        = '--'
 OPTION_SHORT       = '-'
 
+TDB_OPTION_LEVEL_SHORT = 'l'
 TDB_OPTION_STYLE_SHORT = 's'
 
-def __make_command_line_parser():
+def _make_command_line_parser():
     '''Builds a new command line option parser'''
-    parser = OptionParser()
-#    parser.add_option(OPTION_SHORT + OPTION_DEBUG_SHORT,
-#                      OPTION_LONG + OPTION_DEBUG,
-#                      dest=OPTION_DEBUG,
-#                      action='store_true',
-#                      help='show debug output')
-#    parser.set_default(OPTION_DEBUG, False)
-#    parser.add_option(OPTION_SHORT + OPTION_LEVEL_SHORT,
-#                      OPTION_LONG + OPTION_LEVEL,
-#                      dest=OPTION_LEVEL,
-#                      action='store',
-#                      choices=LEVELS,
-#                      help='output level (default: %default)')
-#    parser.add_option(OPTION_SHORT + OPTION_QUIET_SHORT,
-#                      OPTION_LONG + OPTION_QUIET,
-#                      dest=OPTION_QUIET,
-#                      action='store_true',
-#                      help='be quiet')
-#    parser.set_default(OPTION_QUIET, False)
+
+    from optparse import OptionGroup, OptionParser
+    parser = OptionParser(version=TDBPROC_VERSION)
+
+    parser.add_option(OPTION_SHORT + TDB_OPTION_LEVEL_SHORT,
+                      OPTION_LONG + TDB_OPTION_LEVEL,
+                      dest=TDB_OPTION_LEVEL,
+                      action='append',
+                      help='output level, comma-separated (%default)')
     parser.add_option(OPTION_SHORT + TDB_OPTION_STYLE_SHORT,
                       OPTION_LONG + TDB_OPTION_STYLE,
                       dest=TDB_OPTION_STYLE,
                       action='store',
                       choices=TDB_STYLES,
+                      default=TDB_STYLE_DEFAULT,
                       help='output style (default: %default)')
-    parser.set_default(TDB_OPTION_STYLE, TDB_STYLE_DEFAULT)
+
+## @begin tdblint
+    lint_group = OptionGroup(parser, 'Lint module')
+    lint_group.add_option(OPTION_LONG + TDB_OPTION_LINT,
+                          dest=TDB_OPTION_LINT,
+                          action='store_true',
+                          default=TDB_LINT_DEFAULT,
+                          help='reject substandard input')
+    lint_group.add_option(OPTION_LONG + TDB_OPTION_LINT_FORGIVE,
+                          dest=TDB_OPTION_LINT_FORGIVE,
+                          action='store_true',
+                          default=TDB_LINT_FORGIVE_DEFAULT,
+                          help='report substandard input but proceed')
+    parser.add_option_group(lint_group)
+## @end tdblint
+
     return parser
 
-def __dispatch(tdb, options):
-    if options.style in [ TDB_STYLE_XML, TDB_STYLE_XML_ENTRIES, TDB_STYLE_XML_LEGACY ]:
+def _dispatch(tdb, options):
+## @begin tdblint
+    if options.lint:
+        from tdblint import tdb_lint
+        tdb_lint(tdb, options)
+## @end tdblint
+## @begin tdbxml
+    elif options.style in [ TDB_STYLE_XML, TDB_STYLE_XML_ENTRIES, TDB_STYLE_XML_LEGACY ]:
         from tdbxml import tdb_to_xml
         tdb_to_xml(tdb, options)
+## @end tdbxml
     else:
-        print 'no output'
-        
+        if options.style is not TDB_STYLE_NONE:
+            print '(no output)'
 
+def _reprocess_levels(options):
+    if options.level is None or len(options.level) == 0:
+        options.level = TDB_LEVEL_DEFAULT
+    levels = []
+    input = []
+    for str in options.level: input.extend(str.split(','))
+    for level in input:
+        add = []
+        if level == TDB_LEVEL_CONTENT_TESTING: add.extend(TDB_LEVEL_CONTENT_TESTING_STATUSES)
+        elif level == TDB_LEVEL_EVERYTHING: add.extend(TDB_LEVEL_EVERYTHING_STATUSES)
+        elif level == TDB_LEVEL_PRODUCTION: add.extend(TDB_LEVEL_PRODUCTION_STATUSES)
+        elif level != '': add.append(level)
+        for lev in add:
+            if lev not in levels: levels.append(lev)
+    options.level = levels
+        
 if __name__ == '__main__':
     from tdbparse import TdbScanner, TdbParser
     from sys import stdin, argv
-    parser = __make_command_line_parser()
+    parser = _make_command_line_parser()
     (options, argv[1:]) = parser.parse_args(values=parser.get_default_values())
+    _reprocess_levels(options)
     scanner = TdbScanner(stdin)
     parser = TdbParser(scanner)
     tdb = parser.parse()
-    __dispatch(tdb, options)
+    _dispatch(tdb, options)

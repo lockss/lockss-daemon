@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.10 2008-11-13 00:28:34 thib_gc Exp $
+# $Id: tdbparse.py,v 1.11 2008-11-21 01:39:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -33,7 +33,7 @@ TOKEN_NONE              =  1
 TOKEN_KEYWORD_PUBLISHER =  2
 TOKEN_KEYWORD_TITLE     =  3
 TOKEN_KEYWORD_AU        =  4
-TOKEN_KEYWORD_COLUMNS   =  5
+TOKEN_KEYWORD_IMPLICIT  =  5
 TOKEN_CURLY_OPEN        =  6
 TOKEN_CURLY_CLOSE       =  7
 TOKEN_ANGLE_OPEN        =  8
@@ -54,7 +54,7 @@ def _translate_token(tok):
         TOKEN_KEYWORD_PUBLISHER: 'KEYWORD_PUBLISHER',
         TOKEN_KEYWORD_TITLE: 'KEYWORD_TITLE',
         TOKEN_KEYWORD_AU: 'KEYWORD_AU',
-        TOKEN_KEYWORD_COLUMNS: 'KEYWORD_COLUMNS',
+        TOKEN_KEYWORD_IMPLICIT: 'KEYWORD_IMPLICIT',
         TOKEN_CURLY_OPEN: 'CURLY_OPEN',
         TOKEN_CURLY_CLOSE: 'CURLY_CLOSE',
         TOKEN_ANGLE_OPEN: 'ANGLE_OPEN',
@@ -134,7 +134,7 @@ class TdbScanner(object):
             # Bare string
             return self.__bstring()
         # Keywords
-        match = re.match(r'(publisher|title|au|columns)(\s|[<>])', self.__line)
+        match = re.match(r'(publisher|title|au|implicit)(\s|[<>])', self.__line)
         if match: return self.__keyword(match)
         # Single-character tokens
         if self.__line.startswith('{'): return self.__single(TOKEN_CURLY_OPEN)
@@ -164,7 +164,7 @@ class TdbScanner(object):
             return self.__token
         # Syntax error
         self.__token = TOKEN_NONE
-        raise RuntimeError, 'syntax error near: %s' % (self.__line,)
+        raise RuntimeError, 'syntax error near: %s' % ( self.__line, )
 
     def get_value(self):
         '''Retrieves the value associated with the last token returned
@@ -181,7 +181,7 @@ class TdbScanner(object):
         '''Consumes one reserved keyword (expected to be group 1 of
         the match).
 
-        The valid keywords are publisher, title, au and columns.'''
+        The valid keywords are publisher, title, au and implicit.'''
         keyword = match.group(1)
         self.__advance(len(keyword))
         if keyword == 'publisher': self.__token = TOKEN_KEYWORD_PUBLISHER
@@ -189,8 +189,8 @@ class TdbScanner(object):
         elif keyword == 'au':
             self.__token = TOKEN_KEYWORD_AU
             self.__options['_expect_string'] = TOKEN_KEYWORD_AU
-        elif keyword == 'columns': self.__token = TOKEN_KEYWORD_COLUMNS
-        else: raise RuntimeError, 'internal error: %s' % (keyword,)
+        elif keyword == 'implicit': self.__token = TOKEN_KEYWORD_IMPLICIT
+        else: raise RuntimeError, 'internal error: %s' % ( keyword, )
         return self.__token
 
     def __single(self, token):
@@ -219,7 +219,7 @@ class TdbScanner(object):
                     in_escape = False
                 else:
                     self.__token = TOKEN_NONE
-                    raise RuntimeError, 'invalid quoted string escape: \\%s' % (char,)
+                    raise RuntimeError, 'invalid quoted string escape: \\%s' % ( char, )
             else:
                 if char == '"': break
                 elif char == '\\': in_escape = True
@@ -255,7 +255,7 @@ class TdbScanner(object):
                     in_escape = False
                 else:
                     self.__token = TOKEN_NONE
-                    raise RuntimeError, 'invalid bare string escape: \\%s' % (char,)
+                    raise RuntimeError, 'invalid bare string escape: \\%s' % ( char, )
             else:
                 if char in ';>':
                     consumed = consumed - 1 # Don't consume terminator
@@ -320,7 +320,7 @@ class TdbParser(object):
         ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
-        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
+        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_IMPLICIT]:
             self.__assignment()
         while self.__token[0] == TOKEN_CURLY_OPEN:
             self.__publisher_container_or_publisher_block()
@@ -338,7 +338,7 @@ class TdbParser(object):
         self.__expect(TOKEN_CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
         self.__publisher()
-        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
+        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_IMPLICIT]:
             self.__assignment()
         while self.__token[0] == TOKEN_CURLY_OPEN:
             self.__title_container_or_title_block()
@@ -365,7 +365,7 @@ class TdbParser(object):
         ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
-        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
+        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_IMPLICIT]:
             self.__assignment()
         while self.__token[0] == TOKEN_CURLY_OPEN:
             self.__title_container_or_title_block()
@@ -383,7 +383,7 @@ class TdbParser(object):
         self.__expect(TOKEN_CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
         self.__title()
-        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
+        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_IMPLICIT]:
             self.__assignment()
         while self.__token[0] in [TOKEN_KEYWORD_AU, TOKEN_CURLY_OPEN]:
             self.__au_container_or_au()
@@ -415,7 +415,7 @@ class TdbParser(object):
         ;'''
         self.__expect(TOKEN_CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
-        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_COLUMNS]:
+        while self.__token[0] in [TOKEN_IDENTIFIER, TOKEN_KEYWORD_IMPLICIT]:
             self.__assignment()
         while self.__token[0] in [TOKEN_KEYWORD_AU, TOKEN_CURLY_OPEN]:
             self.__au_container_or_au()
@@ -433,11 +433,11 @@ class TdbParser(object):
             key, val = self.__stack.pop()
             if len(key) == 2: self.__current_au[-1].seti('%s[%s]' % key, val)
             else: self.__current_au[-1].set(key[0], val)
-        elif self.__token[0] == TOKEN_KEYWORD_COLUMNS:
+        elif self.__token[0] == TOKEN_KEYWORD_IMPLICIT:
             self.__columns()
         else:
             raise RuntimeError, 'expected %s or %s, got %s' % (_translate_token(TOKEN_IDENTIFIER),
-                                                               _translate_token(TOKEN_KEYWORD_COLUMNS),
+                                                               _translate_token(TOKEN_KEYWORD_IMPLICIT),
                                                                _translate_token(self.__token[0]))
 
     def __identifier(self):
@@ -450,8 +450,8 @@ class TdbParser(object):
         if self.__accept(TOKEN_SQUARE_OPEN):
             self.__expect(TOKEN_IDENTIFIER)
             self.__expect(TOKEN_SQUARE_CLOSE)
-            self.__stack.append( (base, self.__value.pop(0)) )
-        else: self.__stack.append( (base,) )
+            self.__stack.append(( base, self.__value.pop(0) ))
+        else: self.__stack.append( ( base, ))
 
     def __list_of_identifiers(self):
         '''list_of_identifiers :
@@ -510,7 +510,7 @@ class TdbParser(object):
             list_of_identifiers
             TOKEN_ANGLE_CLOSE
         ;'''
-        self.__expect(TOKEN_KEYWORD_COLUMNS)
+        self.__expect(TOKEN_KEYWORD_IMPLICIT)
         self.__expect(TOKEN_ANGLE_OPEN)
         self.__list_of_identifiers()
         self.__expect(TOKEN_ANGLE_CLOSE)

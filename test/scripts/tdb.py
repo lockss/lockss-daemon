@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.5 2008-11-13 00:28:34 thib_gc Exp $
+# $Id: tdb.py,v 1.6 2008-11-21 01:39:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -106,10 +106,9 @@ class AU(ChainedTdbObject):
     NAME = 'name'
     PARAM = 'param'
     PLUGIN = 'plugin'
+    RIGHTS='rights'
     STATUS = 'status'
     TITLE = 'title'
-    
-    STATUS_DOWN = 'down'
 
     def __init__(self, next=None):
         ChainedTdbObject.__init__(self, next)
@@ -123,6 +122,7 @@ class AU(ChainedTdbObject):
     def param(self, param): return self.geti('%s[%s]' % ( AU.PARAM, param ))
     def params(self): return self.geti(AU.PARAM)
     def plugin(self): return self.get(AU.PLUGIN)
+    def rights(self): return self.get(AU.RIGHTS)
     def status(self): return self.get(AU.STATUS)
     def title(self): return self.get(AU.TITLE)
 
