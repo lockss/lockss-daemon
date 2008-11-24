@@ -63,10 +63,2174 @@
     au < manifest ; Active and Passive Electronic Components Volume 23 ; 23 >
     au < manifest ; Active and Passive Electronic Components Volume 24 ; 24 >
     au < manifest ; Active and Passive Electronic Components Volume 25 ; 25 >
+    au < manifest ; Active and Passive Electronic Components Volume 26 ; 26 >
+    au < manifest ; Active and Passive Electronic Components Volume 27 ; 27 >
     au < manifest ; Active and Passive Electronic Components Volume 2007 ; 2007 >
     au < manifest ; Active and Passive Electronic Components Volume 2008 ; 2008 >
 
   }
 
-}
+  {
+    title <
+      name = Advances in Acoustics and Vibration
+    >
 
+    param[journal_id] = aav
+
+    au < manifest ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Artificial Intelligence
+    >
+
+    param[journal_id] = aai
+
+    au < manifest ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Artificial Neural Systems
+    >
+
+    param[journal_id] = aans
+
+    au < manifest ; Advances in Artificial Neural Systems Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Advances in Astronomy
+    >
+
+    param[journal_id] = aa
+
+    au < manifest ; Advances in Astronomy Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Bioinformatics
+    >
+
+    param[journal_id] = abi
+
+    au < manifest ; Advances in Bioinformatics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Civil Engineering
+    >
+
+    param[journal_id] = ace
+
+    au < manifest ; Advances in Civil Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Condensed Matter Physics
+    >
+
+    param[journal_id] = acmp
+
+    au < manifest ; Advances in Condensed Matter Physics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Difference Equations
+    >
+
+    param[journal_id] = ade
+
+    au < manifest ; Advances in Difference Equations Volume 2004 ; 2004 >
+    au < manifest ; Advances in Difference Equations Volume 2005 ; 2005 >
+    au < manifest ; Advances in Difference Equations Volume 2006 ; 2006 >
+    au < manifest ; Advances in Difference Equations Volume 2007 ; 2007 >
+    au < manifest ; Advances in Difference Equations Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Fuzzy Systems
+    >
+
+    param[journal_id] = afs
+
+    au < manifest ; Advances in Fuzzy Systems Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Hematology
+    >
+
+    param[journal_id] = ah
+
+
+  }
+
+  {
+    title <
+      name = Advances in High Energy Physics
+    >
+
+    param[journal_id] = ahep
+
+    au < manifest ; Advances in High Energy Physics Volume 2007 ; 2007 >
+    au < manifest ; Advances in High Energy Physics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Human-Computer Interaction
+    >
+
+    param[journal_id] = ahci
+
+    au < manifest ; Advances in Human-Computer Interaction Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Materials Science and Engineering
+    >
+
+    param[journal_id] = amse
+
+    au < manifest ; Advances in Materials Science and Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Mathematical Physics
+    >
+
+    param[journal_id] = amp
+
+    au < manifest ; Advances in Mathematical Physics Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Advances in Mechanical Engineering
+    >
+
+    param[journal_id] = ame
+
+    au < manifest ; Advances in Mechanical Engineering Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Advances in Meteorology
+    >
+
+    param[journal_id] = amet
+
+
+  }
+
+  {
+    title <
+      name = Advances in Multimedia
+    >
+
+    param[journal_id] = am
+
+    au < manifest ; Advances in Multimedia Volume 2007 ; 2007 >
+    au < manifest ; Advances in Multimedia Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Nonlinear Optics
+    >
+
+    param[journal_id] = ano
+
+    au < manifest ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Numerical Analysis
+    >
+
+    param[journal_id] = ana
+
+
+  }
+
+  {
+    title <
+      name = Advances in Operations Research
+    >
+
+    param[journal_id] = aor
+
+
+  }
+
+  {
+    title <
+      name = Advances in Optical Technologies
+    >
+
+    param[journal_id] = aot
+
+    au < manifest ; Advances in Optical Technologies Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in OptoElectronics
+    >
+
+    param[journal_id] = aoe
+
+    au < manifest ; Advances in OptoElectronics Volume 2007 ; 2007 >
+    au < manifest ; Advances in OptoElectronics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Pharmacological Sciences
+    >
+
+    param[journal_id] = aps
+
+    au < manifest ; Advances in Pharmacological Sciences Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Physical Chemistry
+    >
+
+    param[journal_id] = apc
+
+    au < manifest ; Advances in Physical Chemistry Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Advances in Software Engineering
+    >
+
+    param[journal_id] = ase
+
+
+  }
+
+  {
+    title <
+      name = Advances in Tribology
+    >
+
+    param[journal_id] = at
+
+    au < manifest ; Advances in Tribology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Advances in Urology
+    >
+
+    param[journal_id] = au
+
+    au < manifest ; Advances in Urology Volume 2008 ; 2008 >
+    au < manifest ; Advances in Urology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Advances in Virology
+    >
+
+    param[journal_id] = av
+
+    au < manifest ; Advances in Virology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Anesthesiology Research and Practice
+    >
+
+    param[journal_id] = arp
+
+    au < manifest ; Anesthesiology Research and Practice Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Applied and Environmental Soil Science
+    >
+
+    param[journal_id] = aess
+
+    au < manifest ; Applied and Environmental Soil Science Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Applied Computational Intelligence and Soft Computing
+    >
+
+    param[journal_id] = acisc
+
+
+  }
+
+  {
+    title <
+      name = Bioinorganic Chemistry and Applications
+    >
+
+    param[journal_id] = bca
+
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 1 ; 1 >
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 2 ; 2 >
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 3 ; 3 >
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 >
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 >
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Boundary Value Problems
+    >
+
+    param[journal_id] = bvp
+
+    au < manifest ; Boundary Value Problems Volume 2005 ; 2005 >
+    au < manifest ; Boundary Value Problems Volume 2006 ; 2006 >
+    au < manifest ; Boundary Value Problems Volume 2007 ; 2007 >
+    au < manifest ; Boundary Value Problems Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Medicine
+    >
+
+    param[journal_id] = crm
+
+
+  }
+
+  {
+    title <
+      name = Clinical and Developmental Immunology
+    >
+
+    param[journal_id] = cdi
+
+    au < manifest ; Clinical and Developmental Immunology Volume 1 ; 1 >
+    au < manifest ; Clinical and Developmental Immunology Volume 2 ; 2 >
+    au < manifest ; Clinical and Developmental Immunology Volume 3 ; 3 >
+    au < manifest ; Clinical and Developmental Immunology Volume 4 ; 4 >
+    au < manifest ; Clinical and Developmental Immunology Volume 5 ; 5 >
+    au < manifest ; Clinical and Developmental Immunology Volume 6 ; 6 >
+    au < manifest ; Clinical and Developmental Immunology Volume 7 ; 7 >
+    au < manifest ; Clinical and Developmental Immunology Volume 8 ; 8 >
+    au < manifest ; Clinical and Developmental Immunology Volume 9 ; 9 >
+    au < manifest ; Clinical and Developmental Immunology Volume 10 ; 10 >
+    au < manifest ; Clinical and Developmental Immunology Volume 11 ; 11 >
+    au < manifest ; Clinical and Developmental Immunology Volume 12 ; 12 >
+    au < manifest ; Clinical and Developmental Immunology Volume 13 ; 13 >
+    au < manifest ; Clinical and Developmental Immunology Volume 2007 ; 2007 >
+    au < manifest ; Clinical and Developmental Immunology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Comparative and Functional Genomics
+    >
+
+    param[journal_id] = cfg
+
+    au < manifest ; Comparative and Functional Genomics Volume 1 ; 1 >
+    au < manifest ; Comparative and Functional Genomics Volume 2 ; 2 >
+    au < manifest ; Comparative and Functional Genomics Volume 3 ; 3 >
+    au < manifest ; Comparative and Functional Genomics Volume 4 ; 4 >
+    au < manifest ; Comparative and Functional Genomics Volume 5 ; 5 >
+    au < manifest ; Comparative and Functional Genomics Volume 6 ; 6 >
+    au < manifest ; Comparative and Functional Genomics Volume 2007 ; 2007 >
+    au < manifest ; Comparative and Functional Genomics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Computational Intelligence and Neuroscience
+    >
+
+    param[journal_id] = cin
+
+    au < manifest ; Computational Intelligence and Neuroscience Volume 2007 ; 2007 >
+    au < manifest ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Current Gerontology and Geriatrics Research
+    >
+
+    param[journal_id] = cggr
+
+    au < manifest ; Current Gerontology and Geriatrics Research Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Diagnostic and Therapeutic Endoscopy
+    >
+
+    param[journal_id] = dte
+
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 1 ; 1 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 2 ; 2 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 3 ; 3 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 4 ; 4 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 5 ; 5 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 6 ; 6 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 7 ; 7 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Differential Equations and Nonlinear Mechanics
+    >
+
+    param[journal_id] = denm
+
+    au < manifest ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 >
+    au < manifest ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 >
+    au < manifest ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Discrete Dynamics in Nature and Society
+    >
+
+    param[journal_id] = ddns
+
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 1 ; 1 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2 ; 2 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 3 ; 3 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 4 ; 4 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 5 ; 5 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 6 ; 6 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 7 ; 7 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Advances in Signal Processing
+    >
+
+    param[journal_id] = asp
+
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 >
+    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Audio, Speech, and Music Processing
+    >
+
+    param[journal_id] = asmp
+
+    au < manifest ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Bioinformatics and Systems Biology
+    >
+
+    param[journal_id] = bsb
+
+    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
+    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
+    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Embedded Systems
+    >
+
+    param[journal_id] = es
+
+    au < manifest ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 >
+    au < manifest ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Image and Video Processing
+    >
+
+    param[journal_id] = ivp
+
+    au < manifest ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Information Security
+    >
+
+    param[journal_id] = is
+
+    au < manifest ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = EURASIP Journal on Wireless Communications and Networking
+    >
+
+    param[journal_id] = wcn
+
+    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 >
+    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 >
+    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 >
+    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 >
+    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Experimental Diabetes Research
+    >
+
+    param[journal_id] = edr
+
+    au < manifest ; Experimental Diabetes Research Volume 1 ; 1 >
+    au < manifest ; Experimental Diabetes Research Volume 2 ; 2 >
+    au < manifest ; Experimental Diabetes Research Volume 3 ; 3 >
+    au < manifest ; Experimental Diabetes Research Volume 4 ; 4 >
+    au < manifest ; Experimental Diabetes Research Volume 5 ; 5 >
+    au < manifest ; Experimental Diabetes Research Volume 2007 ; 2007 >
+    au < manifest ; Experimental Diabetes Research Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Fixed Point Theory and Applications
+    >
+
+    param[journal_id] = fpta
+
+    au < manifest ; Fixed Point Theory and Applications Volume 2004 ; 2004 >
+    au < manifest ; Fixed Point Theory and Applications Volume 2005 ; 2005 >
+    au < manifest ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
+    au < manifest ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
+    au < manifest ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Gastroenterology Research and Practice
+    >
+
+    param[journal_id] = grp
+
+    au < manifest ; Gastroenterology Research and Practice Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = HPB Surgery
+    >
+
+    param[journal_id] = hpb
+
+    au < manifest ; HPB Surgery Volume 1 ; 1 >
+    au < manifest ; HPB Surgery Volume 2 ; 2 >
+    au < manifest ; HPB Surgery Volume 3 ; 3 >
+    au < manifest ; HPB Surgery Volume 4 ; 4 >
+    au < manifest ; HPB Surgery Volume 5 ; 5 >
+    au < manifest ; HPB Surgery Volume 6 ; 6 >
+    au < manifest ; HPB Surgery Volume 7 ; 7 >
+    au < manifest ; HPB Surgery Volume 8 ; 8 >
+    au < manifest ; HPB Surgery Volume 9 ; 9 >
+    au < manifest ; HPB Surgery Volume 10 ; 10 >
+    au < manifest ; HPB Surgery Volume 11 ; 11 >
+    au < manifest ; HPB Surgery Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Infectious Diseases in Obstetrics and Gynecology
+    >
+
+    param[journal_id] = idog
+
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 1 ; 1 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2 ; 2 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 3 ; 3 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 4 ; 4 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 5 ; 5 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 6 ; 6 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 7 ; 7 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 8 ; 8 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 9 ; 9 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 10 ; 10 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 11 ; 11 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 12 ; 12 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 13 ; 13 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Interdisciplinary Perspectives on Infectious Diseases
+    >
+
+    param[journal_id] = ipid
+
+    au < manifest ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Aerospace Engineering
+    >
+
+    param[journal_id] = ijae
+
+    au < manifest ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Agronomy
+    >
+
+    param[journal_id] = ija
+
+    au < manifest ; International Journal of Agronomy Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Analytical Chemistry
+    >
+
+    param[journal_id] = ijac
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Antennas and Propagation
+    >
+
+    param[journal_id] = ijap
+
+    au < manifest ; International Journal of Antennas and Propagation Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Antennas and Propagation Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Biomaterials
+    >
+
+    param[journal_id] = ijbm
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Biomedical Imaging
+    >
+
+    param[journal_id] = ijbi
+
+    au < manifest ; International Journal of Biomedical Imaging Volume 2006 ; 2006 >
+    au < manifest ; International Journal of Biomedical Imaging Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Biomedical Imaging Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Carbohydrate Chemistry
+    >
+
+    param[journal_id] = ijcc
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Cell Biology
+    >
+
+    param[journal_id] = ijcb
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Chemical Engineering
+    >
+
+    param[journal_id] = ijce
+
+    au < manifest ; International Journal of Chemical Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Combinatorics
+    >
+
+    param[journal_id] = ijct
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Computer Games Technology
+    >
+
+    param[journal_id] = ijcgt
+
+    au < manifest ; International Journal of Computer Games Technology Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Computer Games Technology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Corrosion
+    >
+
+    param[journal_id] = ijc
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Dentistry
+    >
+
+    param[journal_id] = ijd
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Differential Equations
+    >
+
+    param[journal_id] = ijde
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Digital Multimedia Broadcasting
+    >
+
+    param[journal_id] = ijdmb
+
+    au < manifest ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Ecology
+    >
+
+    param[journal_id] = ijeco
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Endocrinology
+    >
+
+    param[journal_id] = ije
+
+    au < manifest ; International Journal of Endocrinology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Forestry Research
+    >
+
+    param[journal_id] = ijfr
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Geophysics
+    >
+
+    param[journal_id] = ijgp
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Mathematics and Mathematical Sciences
+    >
+
+    param[journal_id] = ijmms
+
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 1 ; 1 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2 ; 2 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 3 ; 3 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 4 ; 4 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 5 ; 5 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 6 ; 6 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 7 ; 7 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 8 ; 8 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 9 ; 9 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 10 ; 10 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 11 ; 11 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 12 ; 12 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 13 ; 13 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 14 ; 14 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 15 ; 15 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 16 ; 16 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 17 ; 17 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 18 ; 18 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 19 ; 19 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 20 ; 20 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 21 ; 21 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 22 ; 22 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 23 ; 23 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 24 ; 24 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 25 ; 25 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 26 ; 26 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 27 ; 27 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 28 ; 28 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 29 ; 29 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 30 ; 30 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 31 ; 31 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 32 ; 32 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2003 ; 2003 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2004 ; 2004 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2005 ; 2005 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2006 ; 2006 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Microbiology
+    >
+
+    param[journal_id] = ijmb
+
+    au < manifest ; International Journal of Microbiology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Microwave Science and Technology
+    >
+
+    param[journal_id] = ijmst
+
+    au < manifest ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Navigation and Observation
+    >
+
+    param[journal_id] = ijno
+
+    au < manifest ; International Journal of Navigation and Observation Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Oceanography
+    >
+
+    param[journal_id] = ijog
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Optics
+    >
+
+    param[journal_id] = ijo
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Otolaryngology
+    >
+
+    param[journal_id] = ijol
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Pediatric Endocrinology
+    >
+
+    param[journal_id] = ijpe
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Pediatrics
+    >
+
+    param[journal_id] = ijped
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Peptides
+    >
+
+    param[journal_id] = ijpep
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Photoenergy
+    >
+
+    param[journal_id] = ijp
+
+    au < manifest ; International Journal of Photoenergy Volume 1 ; 1 >
+    au < manifest ; International Journal of Photoenergy Volume 2 ; 2 >
+    au < manifest ; International Journal of Photoenergy Volume 3 ; 3 >
+    au < manifest ; International Journal of Photoenergy Volume 4 ; 4 >
+    au < manifest ; International Journal of Photoenergy Volume 5 ; 5 >
+    au < manifest ; International Journal of Photoenergy Volume 6 ; 6 >
+    au < manifest ; International Journal of Photoenergy Volume 7 ; 7 >
+    au < manifest ; International Journal of Photoenergy Volume 2006 ; 2006 >
+    au < manifest ; International Journal of Photoenergy Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Photoenergy Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Plant Genomics
+    >
+
+    param[journal_id] = ijpg
+
+    au < manifest ; International Journal of Plant Genomics Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Plant Genomics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Plasma Science and Engineering
+    >
+
+    param[journal_id] = ijpse
+
+    au < manifest ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Polymer Science
+    >
+
+    param[journal_id] = ijps
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Power Management Electronics
+    >
+
+    param[journal_id] = ijpme
+
+    au < manifest ; International Journal of Power Management Electronics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Quality, Statistics, and Reliability
+    >
+
+    param[journal_id] = ijqsr
+
+    au < manifest ; International Journal of Quality, Statistics, and Reliability Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Reacting Systems
+    >
+
+    param[journal_id] = ijrs
+
+    au < manifest ; International Journal of Reacting Systems Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Reconfigurable Computing
+    >
+
+    param[journal_id] = ijrc
+
+    au < manifest ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Rheumatology
+    >
+
+    param[journal_id] = ijr
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Rotating Machinery
+    >
+
+    param[journal_id] = ijrm
+
+    au < manifest ; International Journal of Rotating Machinery Volume 1 ; 1 >
+    au < manifest ; International Journal of Rotating Machinery Volume 2 ; 2 >
+    au < manifest ; International Journal of Rotating Machinery Volume 3 ; 3 >
+    au < manifest ; International Journal of Rotating Machinery Volume 4 ; 4 >
+    au < manifest ; International Journal of Rotating Machinery Volume 5 ; 5 >
+    au < manifest ; International Journal of Rotating Machinery Volume 6 ; 6 >
+    au < manifest ; International Journal of Rotating Machinery Volume 7 ; 7 >
+    au < manifest ; International Journal of Rotating Machinery Volume 8 ; 8 >
+    au < manifest ; International Journal of Rotating Machinery Volume 9 ; 9 >
+    au < manifest ; International Journal of Rotating Machinery Volume 10 ; 10 >
+    au < manifest ; International Journal of Rotating Machinery Volume 2005 ; 2005 >
+    au < manifest ; International Journal of Rotating Machinery Volume 2006 ; 2006 >
+    au < manifest ; International Journal of Rotating Machinery Volume 2007 ; 2007 >
+    au < manifest ; International Journal of Rotating Machinery Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Spectroscopy
+    >
+
+    param[journal_id] = ijs
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Telemedicine and Applications
+    >
+
+    param[journal_id] = ijta
+
+    au < manifest ; International Journal of Telemedicine and Applications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Vehicular Technology
+    >
+
+    param[journal_id] = ijvt
+
+    au < manifest ; International Journal of Vehicular Technology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Zoology
+    >
+
+    param[journal_id] = ijz
+
+    au < manifest ; International Journal of Zoology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Journal of Allergy
+    >
+
+    param[journal_id] = ja
+
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Mathematics
+    >
+
+    param[journal_id] = jam
+
+    au < manifest ; Journal of Applied Mathematics Volume 1 ; 1 >
+    au < manifest ; Journal of Applied Mathematics Volume 2 ; 2 >
+    au < manifest ; Journal of Applied Mathematics Volume 2003 ; 2003 >
+    au < manifest ; Journal of Applied Mathematics Volume 2004 ; 2004 >
+    au < manifest ; Journal of Applied Mathematics Volume 2005 ; 2005 >
+    au < manifest ; Journal of Applied Mathematics Volume 2006 ; 2006 >
+    au < manifest ; Journal of Applied Mathematics Volume 2007 ; 2007 >
+    au < manifest ; Journal of Applied Mathematics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Mathematics and Decision Sciences
+    >
+
+    param[journal_id] = jamds
+
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 1 ; 1 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2 ; 2 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 3 ; 3 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 4 ; 4 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 5 ; 5 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 6 ; 6 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 7 ; 7 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 8 ; 8 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 >
+    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Mathematics and Stochastic Analysis
+    >
+
+    param[journal_id] = jamsa
+
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 ; 1 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 ; 2 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 3 ; 3 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 4 ; 4 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 5 ; 5 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 6 ; 6 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 7 ; 7 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 8 ; 8 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 9 ; 9 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 10 ; 10 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 11 ; 11 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 12 ; 12 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 13 ; 13 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 14 ; 14 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 15 ; 15 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 16 ; 16 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2004 ; 2004 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2005 ; 2005 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2006 ; 2006 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2007 ; 2007 >
+    au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Artificial Evolution and Applications
+    >
+
+    param[journal_id] = jaea
+
+    au < manifest ; Journal of Artificial Evolution and Applications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Atomic, Molecular, and Optical Physics
+    >
+
+    param[journal_id] = jamop
+
+
+  }
+
+  {
+    title <
+      name = Journal of Automated Methods and Management in Chemistry
+    >
+
+    param[journal_id] = jammc
+
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 1 ; 1 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 2 ; 2 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 3 ; 3 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 4 ; 4 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 5 ; 5 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 6 ; 6 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 7 ; 7 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 8 ; 8 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 9 ; 9 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 10 ; 10 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 11 ; 11 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 12 ; 12 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 13 ; 13 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 14 ; 14 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 15 ; 15 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 16 ; 16 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 17 ; 17 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 18 ; 18 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 19 ; 19 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 20 ; 20 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 21 ; 21 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 22 ; 22 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 23 ; 23 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 24 ; 24 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 25 ; 25 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 2005 ; 2005 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 2006 ; 2006 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 2007 ; 2007 >
+    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Biomedicine and Biotechnology
+    >
+
+    param[journal_id] = jbb
+
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 1 ; 1 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2 ; 2 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2003 ; 2003 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2004 ; 2004 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2005 ; 2005 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2006 ; 2006 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2007 ; 2007 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2008 ; 2008 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Journal of Biophysics
+    >
+
+    param[journal_id] = jbp
+
+    au < manifest ; Journal of Biophysics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Cancer Epidemiology
+    >
+
+    param[journal_id] = jce
+
+    au < manifest ; Journal of Cancer Epidemiology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Computer Systems, Networks, and Communications
+    >
+
+    param[journal_id] = jcsnc
+
+    au < manifest ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Control Science and Engineering
+    >
+
+    param[journal_id] = jcse
+
+    au < manifest ; Journal of Control Science and Engineering Volume 2007 ; 2007 >
+    au < manifest ; Journal of Control Science and Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Environmental and Public Health
+    >
+
+    param[journal_id] = jeph
+
+
+  }
+
+  {
+    title <
+      name = Journal of Geological Research
+    >
+
+    param[journal_id] = jgr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Inequalities and Applications
+    >
+
+    param[journal_id] = jia
+
+    au < manifest ; Journal of Inequalities and Applications Volume 1 ; 1 >
+    au < manifest ; Journal of Inequalities and Applications Volume 2 ; 2 >
+    au < manifest ; Journal of Inequalities and Applications Volume 3 ; 3 >
+    au < manifest ; Journal of Inequalities and Applications Volume 4 ; 4 >
+    au < manifest ; Journal of Inequalities and Applications Volume 5 ; 5 >
+    au < manifest ; Journal of Inequalities and Applications Volume 6 ; 6 >
+    au < manifest ; Journal of Inequalities and Applications Volume 7 ; 7 >
+    au < manifest ; Journal of Inequalities and Applications Volume 2005 ; 2005 >
+    au < manifest ; Journal of Inequalities and Applications Volume 2006 ; 2006 >
+    au < manifest ; Journal of Inequalities and Applications Volume 2007 ; 2007 >
+    au < manifest ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Magnetism
+    >
+
+    param[journal_id] = jmag
+
+
+  }
+
+  {
+    title <
+      name = Journal of Marine Biology
+    >
+
+    param[journal_id] = jmb
+
+
+  }
+
+  {
+    title <
+      name = Journal of Metallurgy
+    >
+
+    param[journal_id] = jm
+
+
+  }
+
+  {
+    title <
+      name = Journal of Nanomaterials
+    >
+
+    param[journal_id] = jnm
+
+    au < manifest ; Journal of Nanomaterials Volume 2006 ; 2006 >
+    au < manifest ; Journal of Nanomaterials Volume 2007 ; 2007 >
+    au < manifest ; Journal of Nanomaterials Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Nanotechnology
+    >
+
+    param[journal_id] = jnt
+
+
+  }
+
+  {
+    title <
+      name = Journal of Oncology
+    >
+
+    param[journal_id] = jo
+
+    au < manifest ; Journal of Oncology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Parasitology Research
+    >
+
+    param[journal_id] = jpr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Probability and Statistics
+    >
+
+    param[journal_id] = jps
+
+
+  }
+
+  {
+    title <
+      name = Journal of Robotics
+    >
+
+    param[journal_id] = jr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Sensors
+    >
+
+    param[journal_id] = js
+
+    au < manifest ; Journal of Sensors Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Journal of Thermodynamics
+    >
+
+    param[journal_id] = jtd
+
+
+  }
+
+  {
+    title <
+      name = Journal of Toxicology
+    >
+
+    param[journal_id] = jt
+
+    au < manifest ; Journal of Toxicology Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Journal of Transplantation
+    >
+
+    param[journal_id] = jtran
+
+
+  }
+
+  {
+    title <
+      name = Journal of Tropical Medicine
+    >
+
+    param[journal_id] = jtm
+
+
+  }
+
+  {
+    title <
+      name = Laser Chemistry
+    >
+
+    param[journal_id] = lc
+
+    au < manifest ; Laser Chemistry Volume 1 ; 1 >
+    au < manifest ; Laser Chemistry Volume 2 ; 2 >
+    au < manifest ; Laser Chemistry Volume 3 ; 3 >
+    au < manifest ; Laser Chemistry Volume 4 ; 4 >
+    au < manifest ; Laser Chemistry Volume 5 ; 5 >
+    au < manifest ; Laser Chemistry Volume 6 ; 6 >
+    au < manifest ; Laser Chemistry Volume 7 ; 7 >
+    au < manifest ; Laser Chemistry Volume 8 ; 8 >
+    au < manifest ; Laser Chemistry Volume 9 ; 9 >
+    au < manifest ; Laser Chemistry Volume 10 ; 10 >
+    au < manifest ; Laser Chemistry Volume 11 ; 11 >
+    au < manifest ; Laser Chemistry Volume 12 ; 12 >
+    au < manifest ; Laser Chemistry Volume 13 ; 13 >
+    au < manifest ; Laser Chemistry Volume 14 ; 14 >
+    au < manifest ; Laser Chemistry Volume 15 ; 15 >
+    au < manifest ; Laser Chemistry Volume 16 ; 16 >
+    au < manifest ; Laser Chemistry Volume 17 ; 17 >
+    au < manifest ; Laser Chemistry Volume 18 ; 18 >
+    au < manifest ; Laser Chemistry Volume 19 ; 19 >
+    au < manifest ; Laser Chemistry Volume 20 ; 20 >
+    au < manifest ; Laser Chemistry Volume 2006 ; 2006 >
+    au < manifest ; Laser Chemistry Volume 2007 ; 2007 >
+    au < manifest ; Laser Chemistry Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Mathematical Problems in Engineering
+    >
+
+    param[journal_id] = mpe
+
+    au < manifest ; Mathematical Problems in Engineering Volume 1 ; 1 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2 ; 2 >
+    au < manifest ; Mathematical Problems in Engineering Volume 3 ; 3 >
+    au < manifest ; Mathematical Problems in Engineering Volume 4 ; 4 >
+    au < manifest ; Mathematical Problems in Engineering Volume 5 ; 5 >
+    au < manifest ; Mathematical Problems in Engineering Volume 6 ; 6 >
+    au < manifest ; Mathematical Problems in Engineering Volume 7 ; 7 >
+    au < manifest ; Mathematical Problems in Engineering Volume 8 ; 8 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2003 ; 2003 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2004 ; 2004 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2005 ; 2005 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2006 ; 2006 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2007 ; 2007 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Mediators of Inflammation
+    >
+
+    param[journal_id] = mi
+
+    au < manifest ; Mediators of Inflammation Volume 1 ; 1 >
+    au < manifest ; Mediators of Inflammation Volume 2 ; 2 >
+    au < manifest ; Mediators of Inflammation Volume 3 ; 3 >
+    au < manifest ; Mediators of Inflammation Volume 4 ; 4 >
+    au < manifest ; Mediators of Inflammation Volume 5 ; 5 >
+    au < manifest ; Mediators of Inflammation Volume 6 ; 6 >
+    au < manifest ; Mediators of Inflammation Volume 7 ; 7 >
+    au < manifest ; Mediators of Inflammation Volume 8 ; 8 >
+    au < manifest ; Mediators of Inflammation Volume 9 ; 9 >
+    au < manifest ; Mediators of Inflammation Volume 10 ; 10 >
+    au < manifest ; Mediators of Inflammation Volume 11 ; 11 >
+    au < manifest ; Mediators of Inflammation Volume 12 ; 12 >
+    au < manifest ; Mediators of Inflammation Volume 13 ; 13 >
+    au < manifest ; Mediators of Inflammation Volume 2005 ; 2005 >
+    au < manifest ; Mediators of Inflammation Volume 2006 ; 2006 >
+    au < manifest ; Mediators of Inflammation Volume 2007 ; 2007 >
+    au < manifest ; Mediators of Inflammation Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Metal-Based Drugs
+    >
+
+    param[journal_id] = mbd
+
+    au < manifest ; Metal-Based Drugs Volume 1 ; 1 >
+    au < manifest ; Metal-Based Drugs Volume 2 ; 2 >
+    au < manifest ; Metal-Based Drugs Volume 3 ; 3 >
+    au < manifest ; Metal-Based Drugs Volume 4 ; 4 >
+    au < manifest ; Metal-Based Drugs Volume 5 ; 5 >
+    au < manifest ; Metal-Based Drugs Volume 6 ; 6 >
+    au < manifest ; Metal-Based Drugs Volume 7 ; 7 >
+    au < manifest ; Metal-Based Drugs Volume 8 ; 8 >
+    au < manifest ; Metal-Based Drugs Volume 9 ; 9 >
+    au < manifest ; Metal-Based Drugs Volume 2007 ; 2007 >
+    au < manifest ; Metal-Based Drugs Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Modelling and Simulation in Engineering
+    >
+
+    param[journal_id] = mse
+
+    au < manifest ; Modelling and Simulation in Engineering Volume 2007 ; 2007 >
+    au < manifest ; Modelling and Simulation in Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Neural Plasticity
+    >
+
+    param[journal_id] = np
+
+    au < manifest ; Neural Plasticity Volume 1 ; 1 >
+    au < manifest ; Neural Plasticity Volume 2 ; 2 >
+    au < manifest ; Neural Plasticity Volume 3 ; 3 >
+    au < manifest ; Neural Plasticity Volume 4 ; 4 >
+    au < manifest ; Neural Plasticity Volume 5 ; 5 >
+    au < manifest ; Neural Plasticity Volume 6 ; 6 >
+    au < manifest ; Neural Plasticity Volume 7 ; 7 >
+    au < manifest ; Neural Plasticity Volume 8 ; 8 >
+    au < manifest ; Neural Plasticity Volume 9 ; 9 >
+    au < manifest ; Neural Plasticity Volume 10 ; 10 >
+    au < manifest ; Neural Plasticity Volume 11 ; 11 >
+    au < manifest ; Neural Plasticity Volume 12 ; 12 >
+    au < manifest ; Neural Plasticity Volume 2007 ; 2007 >
+    au < manifest ; Neural Plasticity Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Obstetrics and Gynecology International
+    >
+
+    param[journal_id] = ogi
+
+
+  }
+
+  {
+    title <
+      name = Physical Separation in Science and Engineering
+    >
+
+    param[journal_id] = psse
+
+    au < manifest ; Physical Separation in Science and Engineering Volume 1 ; 1 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 2 ; 2 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 3 ; 3 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 4 ; 4 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 5 ; 5 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 6 ; 6 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 7 ; 7 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 8 ; 8 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 9 ; 9 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 10 ; 10 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 11 ; 11 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 12 ; 12 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 13 ; 13 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 2007 ; 2007 >
+    au < manifest ; Physical Separation in Science and Engineering Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = PPAR Research
+    >
+
+    param[journal_id] = ppar
+
+    au < manifest ; PPAR Research Volume 2006 ; 2006 >
+    au < manifest ; PPAR Research Volume 2007 ; 2007 >
+    au < manifest ; PPAR Research Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Psyche
+    >
+
+    param[journal_id] = psyche
+
+    au < manifest ; Psyche Volume 1 ; 1 >
+    au < manifest ; Psyche Volume 2 ; 2 >
+    au < manifest ; Psyche Volume 3 ; 3 >
+    au < manifest ; Psyche Volume 4 ; 4 >
+    au < manifest ; Psyche Volume 5 ; 5 >
+    au < manifest ; Psyche Volume 6 ; 6 >
+    au < manifest ; Psyche Volume 7 ; 7 >
+    au < manifest ; Psyche Volume 8 ; 8 >
+    au < manifest ; Psyche Volume 9 ; 9 >
+    au < manifest ; Psyche Volume 10 ; 10 >
+    au < manifest ; Psyche Volume 11 ; 11 >
+    au < manifest ; Psyche Volume 12 ; 12 >
+    au < manifest ; Psyche Volume 13 ; 13 >
+    au < manifest ; Psyche Volume 14 ; 14 >
+    au < manifest ; Psyche Volume 15 ; 15 >
+    au < manifest ; Psyche Volume 16 ; 16 >
+    au < manifest ; Psyche Volume 17 ; 17 >
+    au < manifest ; Psyche Volume 19 ; 19 >
+    au < manifest ; Psyche Volume 20 ; 20 >
+    au < manifest ; Psyche Volume 21 ; 21 >
+    au < manifest ; Psyche Volume 22 ; 22 >
+    au < manifest ; Psyche Volume 23 ; 23 >
+    au < manifest ; Psyche Volume 24 ; 24 >
+    au < manifest ; Psyche Volume 25 ; 25 >
+    au < manifest ; Psyche Volume 26 ; 26 >
+    au < manifest ; Psyche Volume 27 ; 27 >
+    au < manifest ; Psyche Volume 28 ; 28 >
+    au < manifest ; Psyche Volume 29 ; 29 >
+    au < manifest ; Psyche Volume 30 ; 30 >
+    au < manifest ; Psyche Volume 31 ; 31 >
+    au < manifest ; Psyche Volume 32 ; 32 >
+    au < manifest ; Psyche Volume 33 ; 33 >
+    au < manifest ; Psyche Volume 34 ; 34 >
+    au < manifest ; Psyche Volume 35 ; 35 >
+    au < manifest ; Psyche Volume 36 ; 36 >
+    au < manifest ; Psyche Volume 37 ; 37 >
+    au < manifest ; Psyche Volume 38 ; 38 >
+    au < manifest ; Psyche Volume 39 ; 39 >
+    au < manifest ; Psyche Volume 40 ; 40 >
+    au < manifest ; Psyche Volume 41 ; 41 >
+    au < manifest ; Psyche Volume 42 ; 42 >
+    au < manifest ; Psyche Volume 43 ; 43 >
+    au < manifest ; Psyche Volume 44 ; 44 >
+    au < manifest ; Psyche Volume 45 ; 45 >
+    au < manifest ; Psyche Volume 46 ; 46 >
+    au < manifest ; Psyche Volume 47 ; 47 >
+    au < manifest ; Psyche Volume 48 ; 48 >
+    au < manifest ; Psyche Volume 49 ; 49 >
+    au < manifest ; Psyche Volume 50 ; 50 >
+    au < manifest ; Psyche Volume 51 ; 51 >
+    au < manifest ; Psyche Volume 52 ; 52 >
+    au < manifest ; Psyche Volume 53 ; 53 >
+    au < manifest ; Psyche Volume 54 ; 54 >
+    au < manifest ; Psyche Volume 55 ; 55 >
+    au < manifest ; Psyche Volume 56 ; 56 >
+    au < manifest ; Psyche Volume 57 ; 57 >
+    au < manifest ; Psyche Volume 58 ; 58 >
+    au < manifest ; Psyche Volume 59 ; 59 >
+    au < manifest ; Psyche Volume 60 ; 60 >
+    au < manifest ; Psyche Volume 61 ; 61 >
+    au < manifest ; Psyche Volume 62 ; 62 >
+    au < manifest ; Psyche Volume 63 ; 63 >
+    au < manifest ; Psyche Volume 64 ; 64 >
+    au < manifest ; Psyche Volume 65 ; 65 >
+    au < manifest ; Psyche Volume 66 ; 66 >
+    au < manifest ; Psyche Volume 67 ; 67 >
+    au < manifest ; Psyche Volume 68 ; 68 >
+    au < manifest ; Psyche Volume 69 ; 69 >
+    au < manifest ; Psyche Volume 70 ; 70 >
+    au < manifest ; Psyche Volume 71 ; 71 >
+    au < manifest ; Psyche Volume 72 ; 72 >
+    au < manifest ; Psyche Volume 73 ; 73 >
+    au < manifest ; Psyche Volume 74 ; 74 >
+    au < manifest ; Psyche Volume 75 ; 75 >
+    au < manifest ; Psyche Volume 76 ; 76 >
+    au < manifest ; Psyche Volume 77 ; 77 >
+    au < manifest ; Psyche Volume 78 ; 78 >
+    au < manifest ; Psyche Volume 79 ; 79 >
+    au < manifest ; Psyche Volume 80 ; 80 >
+    au < manifest ; Psyche Volume 81 ; 81 >
+    au < manifest ; Psyche Volume 82 ; 82 >
+    au < manifest ; Psyche Volume 83 ; 83 >
+    au < manifest ; Psyche Volume 84 ; 84 >
+    au < manifest ; Psyche Volume 85 ; 85 >
+    au < manifest ; Psyche Volume 86 ; 86 >
+    au < manifest ; Psyche Volume 87 ; 87 >
+    au < manifest ; Psyche Volume 88 ; 88 >
+    au < manifest ; Psyche Volume 89 ; 89 >
+    au < manifest ; Psyche Volume 90 ; 90 >
+    au < manifest ; Psyche Volume 91 ; 91 >
+    au < manifest ; Psyche Volume 92 ; 92 >
+    au < manifest ; Psyche Volume 93 ; 93 >
+    au < manifest ; Psyche Volume 94 ; 94 >
+    au < manifest ; Psyche Volume 95 ; 95 >
+    au < manifest ; Psyche Volume 96 ; 96 >
+    au < manifest ; Psyche Volume 97 ; 97 >
+    au < manifest ; Psyche Volume 98 ; 98 >
+    au < manifest ; Psyche Volume 99 ; 99 >
+    au < manifest ; Psyche Volume 100 ; 100 >
+    au < manifest ; Psyche Volume 101 ; 101 >
+    au < manifest ; Psyche Volume 102 ; 102 >
+    au < manifest ; Psyche Volume 103 ; 103 >
+    au < manifest ; Psyche Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Biochemistry
+    >
+
+    param[journal_id] = rlbc
+
+    au < manifest ; Research Letters in Biochemistry Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Communications
+    >
+
+    param[journal_id] = rlc
+
+    au < manifest ; Research Letters in Communications Volume 2007 ; 2007 >
+    au < manifest ; Research Letters in Communications Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Ecology
+    >
+
+    param[journal_id] = rleco
+
+    au < manifest ; Research Letters in Ecology Volume 2007 ; 2007 >
+    au < manifest ; Research Letters in Ecology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Electronics
+    >
+
+    param[journal_id] = rle
+
+    au < manifest ; Research Letters in Electronics Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Inorganic Chemistry
+    >
+
+    param[journal_id] = rlic
+
+    au < manifest ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Materials Science
+    >
+
+    param[journal_id] = rlms
+
+    au < manifest ; Research Letters in Materials Science Volume 2007 ; 2007 >
+    au < manifest ; Research Letters in Materials Science Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Nanotechnology
+    >
+
+    param[journal_id] = rlnt
+
+    au < manifest ; Research Letters in Nanotechnology Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Optics
+    >
+
+    param[journal_id] = rlo
+
+    au < manifest ; Research Letters in Optics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Organic Chemistry
+    >
+
+    param[journal_id] = rloc
+
+    au < manifest ; Research Letters in Organic Chemistry Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Physical Chemistry
+    >
+
+    param[journal_id] = rlpc
+
+    au < manifest ; Research Letters in Physical Chemistry Volume 2007 ; 2007 >
+    au < manifest ; Research Letters in Physical Chemistry Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Physics
+    >
+
+    param[journal_id] = rlp
+
+    au < manifest ; Research Letters in Physics Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Research Letters in Signal Processing
+    >
+
+    param[journal_id] = rlsp
+
+    au < manifest ; Research Letters in Signal Processing Volume 2007 ; 2007 >
+    au < manifest ; Research Letters in Signal Processing Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Sarcoma
+    >
+
+    param[journal_id] = srcm
+
+    au < manifest ; Sarcoma Volume 1 ; 1 >
+    au < manifest ; Sarcoma Volume 2 ; 2 >
+    au < manifest ; Sarcoma Volume 3 ; 3 >
+    au < manifest ; Sarcoma Volume 4 ; 4 >
+    au < manifest ; Sarcoma Volume 5 ; 5 >
+    au < manifest ; Sarcoma Volume 6 ; 6 >
+    au < manifest ; Sarcoma Volume 7 ; 7 >
+    au < manifest ; Sarcoma Volume 8 ; 8 >
+    au < manifest ; Sarcoma Volume 9 ; 9 >
+    au < manifest ; Sarcoma Volume 2006 ; 2006 >
+    au < manifest ; Sarcoma Volume 2007 ; 2007 >
+    au < manifest ; Sarcoma Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Science and Technology of Nuclear Installations
+    >
+
+    param[journal_id] = stni
+
+    au < manifest ; Science and Technology of Nuclear Installations Volume 2007 ; 2007 >
+    au < manifest ; Science and Technology of Nuclear Installations Volume 2008 ; 2008 >
+    au < manifest ; Science and Technology of Nuclear Installations Volume 2009 ; 2009 >
+
+  }
+
+  {
+    title <
+      name = Texture, Stress, and Microstructure
+    >
+
+    param[journal_id] = tsm
+
+    au < manifest ; Texture, Stress, and Microstructure Volume 1 ; 1 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 2 ; 2 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 3 ; 3 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 4 ; 4 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 5 ; 5 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 6 ; 6 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 7 ; 7 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 8-9 ; 8-9 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 10 ; 10 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 11 ; 11 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 12 ; 12 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 13 ; 13 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 14-18 ; 14-18 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 19 ; 19 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 20 ; 20 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 21 ; 21 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 22 ; 22 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 23 ; 23 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 24 ; 24 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 25 ; 25 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 26-27 ; 26-27 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 28 ; 28 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 29 ; 29 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 30 ; 30 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 31 ; 31 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 32 ; 32 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 33 ; 33 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 34 ; 34 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 35 ; 35 >
+    au < manifest ; Texture, Stress, and Microstructure Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = VLSI Design
+    >
+
+    param[journal_id] = vlsi
+
+    au < manifest ; VLSI Design Volume 1 ; 1 >
+    au < manifest ; VLSI Design Volume 2 ; 2 >
+    au < manifest ; VLSI Design Volume 3 ; 3 >
+    au < manifest ; VLSI Design Volume 4 ; 4 >
+    au < manifest ; VLSI Design Volume 5 ; 5 >
+    au < manifest ; VLSI Design Volume 6 ; 6 >
+    au < manifest ; VLSI Design Volume 7 ; 7 >
+    au < manifest ; VLSI Design Volume 8 ; 8 >
+    au < manifest ; VLSI Design Volume 9 ; 9 >
+    au < manifest ; VLSI Design Volume 10 ; 10 >
+    au < manifest ; VLSI Design Volume 11 ; 11 >
+    au < manifest ; VLSI Design Volume 12 ; 12 >
+    au < manifest ; VLSI Design Volume 13 ; 13 >
+    au < manifest ; VLSI Design Volume 14 ; 14 >
+    au < manifest ; VLSI Design Volume 15 ; 15 >
+    au < manifest ; VLSI Design Volume 2007 ; 2007 >
+    au < manifest ; VLSI Design Volume 2008 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = X-Ray Optics and Instrumentation
+    >
+
+    param[journal_id] = xroi
+
+    au < manifest ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 >
+
+  }
+
+}
