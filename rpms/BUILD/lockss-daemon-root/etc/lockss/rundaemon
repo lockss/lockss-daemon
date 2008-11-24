@@ -1,38 +1,42 @@
 #!/bin/bash
 
+. /etc/lockss/functions
+
 if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
-
+set_lockss_user ${USER}
+set_variables ${USER}
+DAEMON_COUNT=0
+for A in ${LOCKSS_USER}
+do
+	DAEMON_COUNT=`expr ${DAEMON_COUNT} + 1`
+done
+NUMERATOR=2
+if [ "${DAEMON_COUNT}X" = 2X ]
+then
+	NUMERATOR=1
+fi
+# set LOCKSS_JAVA_HEAP to override using 2/3  memory for
+# all daemons combined
+#LOCKSS_JAVA_HEAP=500m
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
-SunOS)  
-        if [ "X${LOCKSS_USER}" = X ]
-	then
-		LOCKSS_USER=lockss
-	fi
-	if [ "X${LOCKSS_HOME}" = X ]
-	then
-		# Next line wierd because of evaluation order of
-		# ~ and shell parameters
-        	LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
-	fi
-	DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
-	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-	CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
-	LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
-	LOCAL_TXT=${LOCKSS_HOME}/var/run/local.txt
-        ;;      
 Linux)          
-        LOCKSS_USER=lockss
-	DAEMON_PID_FILE="/var/run/lockss.pid"
-	CFG_FILE=/etc/lockss/config.dat
-	CFG_SCRIPT=/etc/lockss/hostconfig
-	LOGFILE=/var/log/lockss/stdout
-	LOCAL_TXT=~/local.txt
+	# look in /proc/meminfo for "MemTotal:      1002108 kB"
+	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
+	then
+		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p' </proc/meminfo`
+		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' ${NUMERATOR} \) / 3`
+		LOCKSS_JAVA_HEAP=${MEM_IN_KB}k
+	fi
         ;;
 esac
 
+if [ -f ${LOCKSS_HOME}/etc/lockss/config.$USER.dat ]
+then
+	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$USER.dat
+fi
 
 if [ -f ${CFG_FILE} ]; then
   . ${CFG_FILE}
@@ -44,7 +48,7 @@ fi
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
 if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
-    LOCKSS_JAVA_SWITCHES="-server -Xmx350m -Dsun.net.inetaddr.ttl=3600 -showversion"
+    LOCKSS_JAVA_SWITCHES="-server -Xmx${LOCKSS_JAVA_HEAP:-500m} -Dsun.net.inetaddr.ttl=3600 -showversion"
 fi
 
 # if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
@@ -83,11 +87,11 @@ org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
 EOF
 cd ${LOCKSS_HOME}
-echo "Starting daemon at `date`" >> ${LOGFILE}
-${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &
-echo $! >${DAEMON_PID_FILE}
+echo "Starting daemon at `date`" >> ${LOG_FILE}
+${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &
+echo $! >${PID_FILE}
 if [ X${WAIT} != X ]; then
-    wait `cat ${DAEMON_PID_FILE}`
+    wait `cat ${PID_FILE}`
 fi
 
 
