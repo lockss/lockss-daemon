@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.15 2008-11-08 08:17:16 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.16 2008-11-25 04:03:37 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,14 @@ public class ServeContent extends LockssServlet {
   public static final int DEFAULT_MISSING_FILE_ACTION =
     MISSING_FILE_ACTION_404;
 
+  /** If true, rewritten links will be absolute
+   * (http:/host:port/ServeContent?url=...).  If false, relative
+   * (/ServeContent?url=...).  NodeFilterHtmlLinkRewriterFactory may
+   * create bogus doubly-rewritten links if false. */
+  public static final String PARAM_ABSOLUTE_LINKS =
+    PREFIX + "absoluteLinks";
+  public static final boolean DEFAULT_ABSOLUTE_LINKS = true;
+
   /** Include in index AUs in listed plugins.  Set only one of
    * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
   public static final String PARAM_INCLUDE_PLUGINS =
@@ -90,6 +98,7 @@ public class ServeContent extends LockssServlet {
   public static final List DEFAULT_EXCLUDE_PLUGINS = Collections.EMPTY_LIST;
 
   private static int missingFileAction = DEFAULT_MISSING_FILE_ACTION;
+  private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
   private static List excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List includePlugins = DEFAULT_INCLUDE_PLUGINS;
 
@@ -142,6 +151,8 @@ public class ServeContent extends LockssServlet {
 				      DEFAULT_EXCLUDE_PLUGINS);
       includePlugins = config.getList(PARAM_INCLUDE_PLUGINS,
 				      DEFAULT_INCLUDE_PLUGINS);
+      absoluteLinks = config.getBoolean(PARAM_ABSOLUTE_LINKS,
+					DEFAULT_ABSOLUTE_LINKS);
     }
   }
 
@@ -157,7 +168,7 @@ public class ServeContent extends LockssServlet {
       return !excludePlugins.contains(pluginId);
     }
     return true;
-  } 
+  }
 
   /**
    * Handle a request
@@ -241,9 +252,14 @@ public class ServeContent extends LockssServlet {
 					 url,
 					 new ServletUtil.LinkTransform() {
 					   public String rewrite(String url) {
-					     return srvURL(myServletDescr(),
-							   "url=" + url);
-					     }});
+					     if (absoluteLinks) {
+					       return srvAbsURL(myServletDescr(),
+								"url=" + url);
+					     } else {
+					       return srvURL(myServletDescr(),
+							     "url=" + url);
+					     }
+					   }});
 	} catch (PluginException e) {
 	  log.error("Can't create link rewriter " + e.toString());
 	}
