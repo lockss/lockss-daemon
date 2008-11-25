@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.13 2008-09-23 00:24:41 dshr Exp $
+ * $Id: HtmlNodeFilters.java,v 1.13.6.1 2008-11-25 04:01:05 tlipkis Exp $
  */
 
 /*
@@ -217,12 +217,7 @@ public class HtmlNodeFilters {
       filters[i] = new LinkRegexYesXform(regex[i], ignoreCase[i],
 					 target[i], replace[i], attrs);
     }
-    // XXX htmlparser 2.0 return new OrFilter(filters);
-    NodeFilter ret = filters[0];
-    for (int i = 1; i < filters.length; i++) {
-      ret = new OrFilter(ret, filters[i]);
-    }
-    return ret;
+    return new OrFilter(filters);
   }
 
   /** Create a NodeFilter that applies all of an array of LinkRegexNoXforms
@@ -237,12 +232,7 @@ public class HtmlNodeFilters {
       filters[i] = new LinkRegexNoXform(regex[i], ignoreCase[i],
 					target[i], replace[i], attrs);
     }
-    // XXX htmlparser 2.0 return new OrFilter(filters);
-    NodeFilter ret = filters[0];
-    for (int i = 1; i < filters.length; i++) {
-      ret = new OrFilter(ret, filters[i]);
-    }
-    return ret;
+    return new OrFilter(filters);
   }
 
   /** Create a NodeFilter that applies all of an array of StyleRegexYesXforms
@@ -256,12 +246,7 @@ public class HtmlNodeFilters {
       filters[i] = new StyleRegexYesXform(regex[i], ignoreCase[i],
 					  target[i], replace[i]);
     }
-    // XXX htmlparser 2.0 return new OrFilter(filters);
-    NodeFilter ret = filters[0];
-    for (int i = 1; i < filters.length; i++) {
-      ret = new OrFilter(ret, filters[i]);
-    }
-    return ret;
+    return new OrFilter(filters);
   }
 
   /** Create a NodeFilter that applies all of an array of StyleRegexNoXforms
@@ -275,12 +260,7 @@ public class HtmlNodeFilters {
       filters[i] = new StyleRegexNoXform(regex[i], ignoreCase[i],
 					 target[i], replace[i]);
     }
-    // XXX htmlparser 2.0 return new OrFilter(filters);
-    NodeFilter ret = filters[0];
-    for (int i = 1; i < filters.length; i++) {
-      ret = new OrFilter(ret, filters[i]);
-    }
-    return ret;
+    return new OrFilter(filters);
   }
 
   /** Create a NodeFilter that applies all of an array of RefreshRegexYesXforms
@@ -291,17 +271,14 @@ public class HtmlNodeFilters {
 						 String[] replace) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      log.debug3("Build meta yes" + regex[i] + " targ " + target[i] + " repl " +
-		 replace[i]);
+      if (log.isDebug3()) {
+	log.debug3("Build meta yes" + regex[i] + " targ " + target[i] +
+		   " repl " + replace[i]);
+      }
       filters[i] = new RefreshRegexYesXform(regex[i], ignoreCase[i],
 					 target[i], replace[i]);
     }
-    // XXX htmlparser 2.0 return new OrFilter(filters);
-    NodeFilter ret = filters[0];
-    for (int i = 1; i < filters.length; i++) {
-      ret = new OrFilter(ret, filters[i]);
-    }
-    return ret;
+    return new OrFilter(filters);
   }
 
   /** Create a NodeFilter that applies all of an array of RefreshRegexNoXforms
@@ -312,17 +289,14 @@ public class HtmlNodeFilters {
 						String[] replace) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      log.debug3("Build meta no" + regex[i] + " targ " + target[i] + " repl " +
-		 replace[i]);
+      if (log.isDebug3()) {
+	log.debug3("Build meta no" + regex[i] + " targ " + target[i] +
+		   " repl " + replace[i]);
+      }
       filters[i] = new RefreshRegexNoXform(regex[i], ignoreCase[i],
 					target[i], replace[i]);
     }
-    // XXX htmlparser 2.0 return new OrFilter(filters);
-    NodeFilter ret = filters[0];
-    for (int i = 1; i < filters.length; i++) {
-      ret = new OrFilter(ret, filters[i]);
-    }
-    return ret;
+    return new OrFilter(filters);
   }
 
   /**
@@ -545,12 +519,14 @@ public class HtmlNodeFilters {
 	    // Rewrite this attribute
 	    String url = attribute.getValue();
 	    if (matcher.contains(url, pat)) {
-	      log.debug3("Attribute " + attribute.getName() + " old " + url +
-			 " target " + target + " replace " + replace);
+	      if (log.isDebug3()) {
+		log.debug3("Attribute " + attribute.getName() + " old " + url +
+			   " target " + target + " replace " + replace);
+	      }
 	      String newUrl = urlEncode(url.replaceFirst(target, replace));
 	      attribute.setValue(newUrl);
 	      ((TagNode)node).setAttributeEx(attribute);
-	      log.debug3("new " + newUrl);
+	      if (log.isDebug3()) log.debug3("new " + newUrl);
 	    }
 	    return false;
 	  }
@@ -596,9 +572,11 @@ public class HtmlNodeFilters {
 	    // Rewrite this attribute
 	    String url = attribute.getValue();
 	    if (!matcher.contains(url, pat)) {
-	      log.debug3("Attribute " + attribute.getName() + " old " + url);
+	      if (log.isDebug3()) {
+		log.debug3("Attribute " + attribute.getName() + " old " + url);
+	      }
 	      String newUrl = url.replaceFirst(target, replace);
-	      log.debug3("new " + newUrl);
+	      if (log.isDebug3()) log.debug3("new " + newUrl);
 	      attribute.setValue(urlEncode(newUrl));
 	      ((TagNode)node).setAttributeEx(attribute);
 	    }
@@ -659,7 +637,7 @@ public class HtmlNodeFilters {
 		  delta = newImport.length() - oldImport.length();
 		  String newText = text.substring(0, startIx) + 
 		    newImport + text.substring(endIx + 1);
-		  log.debug3("Import rewritten " + newText);
+		  if (log.isDebug3()) log.debug3("Import rewritten " + newText);
 		  text = newText;
 		  ((TextNode)child).setText(text);
 		}
@@ -722,7 +700,7 @@ public class HtmlNodeFilters {
 		  delta = newImport.length() - oldImport.length();
 		  String newText = text.substring(0, startIx) + 
 		    newImport + text.substring(endIx + 1);
-		  log.debug3("Import rewritten " + newText);
+		  if (log.isDebug3()) log.debug3("Import rewritten " + newText);
 		  text = newText;
 		  ((TextNode)child).setText(text);
 		}
@@ -766,11 +744,13 @@ public class HtmlNodeFilters {
 	String equiv = ((MetaTag)node).getAttribute("http-equiv");
 	if ("refresh".equalsIgnoreCase(equiv)) {
 	  String contentVal = ((MetaTag)node).getAttribute("content");
-	  log.debug3("RefreshRegexYesXform: " + contentVal);
+	  if (log.isDebug3()) log.debug3("RefreshRegexYesXform: " + contentVal);
 	  if (contentVal != null && matcher.contains(contentVal, pat)) {
 	    // Rewrite the attribute
-	    log.debug3("Refresh old " + contentVal +
-		       " target " + target + " replace " + replace);
+	    if (log.isDebug3()) {
+	      log.debug3("Refresh old " + contentVal +
+			 " target " + target + " replace " + replace);
+	    }
 	    String newVal = urlEncode(contentVal.replaceFirst(target, replace));
 	    ((MetaTag)node).setAttribute("content", newVal);
 	  }
@@ -809,11 +789,13 @@ public class HtmlNodeFilters {
 	String equiv = ((MetaTag)node).getAttribute("http-equiv");
 	if ("refresh".equalsIgnoreCase(equiv)) {
 	  String contentVal = ((MetaTag)node).getAttribute("content");
-	  log.debug3("RefreshRegexNoXform: " + contentVal);
+	  if (log.isDebug3()) log.debug3("RefreshRegexNoXform: " + contentVal);
 	  if (contentVal != null && !matcher.contains(contentVal, pat)) {
 	    // Rewrite the attribute
-	    log.debug3("Refresh old " + contentVal +
-		       " target " + target + " replace " + replace);
+	    if (log.isDebug3()) {
+	      log.debug3("Refresh old " + contentVal +
+			 " target " + target + " replace " + replace);
+	    }
 	    String newVal = urlEncode(contentVal.replaceFirst(target, replace));
 	    ((MetaTag)node).setAttribute("content", newVal);
 	  }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.12 2008-09-23 00:51:03 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.12.6.1 2008-11-25 04:01:05 tlipkis Exp $
  */
 
 /*
@@ -91,13 +91,8 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       throws PluginException {
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
-      int port = 0;
-      try {
-	  port = CurrentConfig.getIntParam(ContentServletManager.PARAM_PORT);
-      } catch (org.lockss.config.Configuration.InvalidParam ex) {
-	  throw new PluginException("No port available: " + ex);
-      }
       String targetStem = xform.rewrite("");  // XXX - should have better xform
+      logger.debug2("targetStem: " + targetStem);
       Collection urlStems = au.getUrlStems();
       int nUrlStem = urlStems.size();
       String defUrlStem = null;
@@ -265,11 +260,8 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 	absRefreshXform,
 	relRefreshXform,
       };
-      NodeFilter linkXform = filters[0];
-      for (int j = 1; j < filters.length; j++) {
-	logger.debug3("index " + j + " filter " + filters[j]);
-	linkXform = new OrFilter(linkXform, filters[j]);
-      }
+
+      NodeFilter linkXform = new OrFilter(filters);
       // Create a transform to apply them
       HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
       InputStream result = new HtmlFilterInputStream(new ReaderInputStream(in),
