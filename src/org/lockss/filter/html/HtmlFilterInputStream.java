@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.6 2008-10-30 08:29:14 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.6.2.1 2008-11-25 04:00:30 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class HtmlFilterInputStream extends InputStream {
    * false, missing end tags will be inserted.  */
   public static final String PARAM_VERBATIM =
     Configuration.PREFIX + "filter.html.verbatim";
-  public static final boolean DEFAULT_VERBATIM = false;
+  public static final boolean DEFAULT_VERBATIM = true;
 
   private FeedbackLogger fl = new FeedbackLogger();
 
@@ -155,6 +155,8 @@ public class HtmlFilterInputStream extends InputStream {
       in.mark(mark);
     }
     Page pg = new Page(new InputStreamSource(in, charset));
+    setupHtmlParser();
+
     Lexer lx = new Lexer(pg);
     Parser parser = new Parser(lx, fl);
 
@@ -163,6 +165,11 @@ public class HtmlFilterInputStream extends InputStream {
     factory.registerTag(new HtmlTags.Noscript());
     parser.setNodeFactory(factory);
     return parser;
+  }
+
+  void setupHtmlParser() {
+    // Tell HtmlParser to accept common html comment variants.
+    Lexer.STRICT_REMARKS = false;
   }
 
   public static String nodeString(NodeList nl) {
