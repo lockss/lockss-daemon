@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.98 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.99 2008-11-25 09:48:49 tlipkis Exp $
  */
 
 /*
@@ -432,8 +432,49 @@ public class TestPollManager extends LockssTestCase {
     setAu(aus[14], 350, 450,  C, 10, .2);
     setAu(aus[15], 350, 100, NC, 10, .2);
 
+    String p1 = "TCP:[127.0.0.1]:12";
+    String p2 = "TCP:[127.0.0.2]:12";
+    String p3 = "TCP:[127.0.0.3]:12";
+    String atRiskString =
+      aus[0].getAuId() + "," + p1 + "," + p2 + "," + p3 + ";" +
+      aus[7].getAuId() + "," + p1 + ";" +
+      aus[12].getAuId() + "," + p1 + "," + p2;
+
     pollmanager.rebuildPollQueue();
 
+    List exp = ListUtil.list(aus[14], aus[10], aus[13], aus[15],
+			     aus[11], aus[9], aus[1], aus[3],
+			     aus[5], aus[7], aus[12]);
+    assertEquals(exp, weightOrder());
+    List queue = pollmanager.pollQueue;
+    assertEquals(8, queue.size());
+    assertTrue(queue+"", exp.containsAll(ausOfReqs(queue)));
+
+    p.put(V3Poller.PARAM_AT_RISK_AU_INSTANCES, atRiskString);
+    p.put(PollManager.PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE,
+	  "[0,1],[1,2],[2,4]");
+    ConfigurationUtil.addFromProps(p);
+
+    pollmanager.rebuildPollQueue();
+
+    List exp2 = ListUtil.list(aus[14], aus[12], aus[7], aus[10],
+			      aus[13], aus[15], aus[11], aus[9],
+			      aus[1], aus[3], aus[5]);
+    assertEquals(exp2, weightOrder());
+
+    p.put(PollManager.PARAM_POLL_INTERVAL_AT_RISK_PEERS_CURVE,
+	  "[0,-1],[2,-1],[3,1]");
+    ConfigurationUtil.addFromProps(p);
+
+    pollmanager.rebuildPollQueue();
+
+    List exp3 = ListUtil.list(aus[0], aus[14], aus[12], aus[7], aus[10],
+			      aus[13], aus[15], aus[11], aus[9],
+			      aus[1], aus[3], aus[5]);
+    assertEquals(exp3, weightOrder());
+  }
+
+  List weightOrder() {
     final Map<PollManager.PollReq,Double> weightMap =
       pollmanager.getWeightMap();
     ArrayList<PollManager.PollReq> queued = new ArrayList(weightMap.keySet());
@@ -446,13 +487,7 @@ public class TestPollManager extends LockssTestCase {
 	  }
 	  return res;
 	}});
-    List exp = ListUtil.list(aus[14], aus[10], aus[13], aus[15],
-			     aus[11], aus[9] , aus[1], aus[3],
-			     aus[5], aus[7], aus[12]);
-    assertEquals(exp, ausOfReqs(queued));
-    List queue = pollmanager.pollQueue;
-    assertEquals(8, queue.size());
-    assertTrue(queue+"", exp.containsAll(ausOfReqs(queue)));
+    return ausOfReqs(queued);
   }
 
   List<ArchivalUnit> ausOfReqs(List<PollManager.PollReq> reqs) {
