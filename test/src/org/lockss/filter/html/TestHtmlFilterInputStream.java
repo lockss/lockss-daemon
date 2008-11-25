@@ -118,9 +118,10 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
       "<ul><li>l1</li><li>l2<div>text1</div></li></ul>tween" +
       "<ul><li>l3</li><li>l4<div><script>text2</script></div></li></ul>" +
       "</body></html>";
-    assertIdentityXform(exp, in);
-    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM, "true");
     assertIdentityXform(in, in);
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM,
+				  "false");
+    assertIdentityXform(exp, in);
   }
 
   public void testUnclosed2() throws IOException {
@@ -132,9 +133,10 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
       "<dl><dt>t1</dt><dd>d1<div>text1</div></dd></dl>" +
       "<dl><dt>t2</dt><dd>d2<div><script>text2</script></div></dd></dl>" +
       "</body></html>";
-    assertIdentityXform(exp, in);
-    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM, "true");
     assertIdentityXform(in, in);
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_VERBATIM,
+				  "false");
+    assertIdentityXform(exp, in);
   }
 
   public void testCharsetFailsIfNoMark() throws Exception {
