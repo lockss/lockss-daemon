@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.203 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: PollManager.java,v 1.203.2.1 2008-11-25 09:48:07 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,18 @@ public class PollManager
   public static final List DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT =
     Collections.EMPTY_LIST;
 
+  /** Curve expressing desired inter-poll interval based on number of
+   * at-risk instances of AU */
+  public static final String PARAM_POLL_INTERVAL_AT_RISK_PEERS_CURVE =
+    V3PREFIX + "pollIntervalAtRiskPeersCurve";
+  public static final String DEFAULT_POLL_INTERVAL_AT_RISK_PEERS_CURVE = null;
+
+  /** Curve expressing poll weight multiplier based on number of at-risk
+   * instances of AU */
+  public static final String PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE =
+    V3PREFIX + "pollWeightAtRiskPeersCurve";
+  public static final String DEFAULT_POLL_WEIGHT_AT_RISK_PEERS_CURVE = null;
+
   /** Curve giving reset interval of NoAuPeerIdSet as a function of AU
    * age */
   public static final String PARAM_NO_AU_RESET_INTERVAL_CURVE =
@@ -239,6 +251,8 @@ public class PollManager
   private CompoundLinearSlope v3AcceptProbabilitySafetyCurve = null;
   private CompoundLinearSlope v3NominationWeightAgeCurve = null;
   private CompoundLinearSlope pollIntervalAgreementCurve = null;
+  private CompoundLinearSlope pollIntervalAtRiskPeersCurve = null;
+  private CompoundLinearSlope pollWeightAtRiskPeersCurve = null;
   private Set pollIntervalAgreementLastResult =
     SetUtil.theSet(DEFAULT_POLL_INTERVAL_AGREEMENT_LAST_RESULT);
   private long paramWillingRepairerLiveness = DEFAULT_WILLING_REPAIRER_LIVENESS;
@@ -1108,6 +1122,13 @@ public class PollManager
 			     PARAM_POLL_INTERVAL_AGREEMENT_CURVE,
 			     DEFAULT_POLL_INTERVAL_AGREEMENT_CURVE);
       }
+      if (changedKeys.contains(PARAM_POLL_INTERVAL_AT_RISK_PEERS_CURVE)) {
+	pollIntervalAtRiskPeersCurve =
+	  processWeightCurve("V3 poll interval at risk peers curve",
+			     newConfig,
+			     PARAM_POLL_INTERVAL_AT_RISK_PEERS_CURVE,
+			     DEFAULT_POLL_INTERVAL_AT_RISK_PEERS_CURVE);
+      }
       if (changedKeys.contains(PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT)) {
 	List<String> lst =
 	  newConfig.getList(PARAM_POLL_INTERVAL_AGREEMENT_LAST_RESULT,
@@ -1117,6 +1138,13 @@ public class PollManager
 	  res.add(Integer.valueOf(str));
 	}
 	pollIntervalAgreementLastResult = res;
+      }
+      if (changedKeys.contains(PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE)) {
+	pollWeightAtRiskPeersCurve =
+	  processWeightCurve("V3 poll weight at risk peers curve",
+			     newConfig,
+			     PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE,
+			     DEFAULT_POLL_WEIGHT_AT_RISK_PEERS_CURVE);
       }
       if (changedKeys.contains(PARAM_ACCEPT_PROBABILITY_SAFETY_CURVE)) {
 	v3AcceptProbabilitySafetyCurve =
@@ -2114,6 +2142,8 @@ public class PollManager
     return true;
   }
 
+  /** Return a number proportional to the desirability of calling a poll on
+   * the AU. */
   double pollWeight(ArchivalUnit au, AuState auState) {
     long lastEnd = auState.getLastTopLevelPollTime();
     long pollInterval;
@@ -2124,16 +2154,32 @@ public class PollManager
     } else {
       pollInterval = paramToplevelPollInterval;
     }
+    int numrisk = numPeersWithAuAtRisk(au);
+    if (pollIntervalAtRiskPeersCurve != null) {
+      int atRiskInterval = (int)pollIntervalAtRiskPeersCurve.getY(numrisk);
+      if (atRiskInterval >= 0) {
+	pollInterval = Math.min(pollInterval, atRiskInterval);
+      }
+    }
     if (lastEnd + pollInterval > TimeBase.nowMs()) {
       return 0.0;
     }
     long num = TimeBase.msSince(lastEnd);
     long denom = pollInterval + auState.getPollDuration();
     double weight = (double)num / (double)denom;
+    if (pollWeightAtRiskPeersCurve != null) {
+      weight *= pollWeightAtRiskPeersCurve.getY(numrisk);
+    }
     return weight;
   }
 
-
+  int numPeersWithAuAtRisk(ArchivalUnit au) {
+    Set peers = getPeersWithAuAtRisk(au);
+    if (peers == null) {
+      return 0;
+    }
+    return peers.size();
+  }
 
   boolean startPoll(PollReq req) {
     ArchivalUnit au = req.getAu();
