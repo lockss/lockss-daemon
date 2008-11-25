@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.12 2008-09-18 02:10:23 dshr Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.13 2008-11-25 04:03:24 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 
   public void testThrowsIfNotHtml() {
     in = new StringReader(page);
-    setupConfig(true);
     try {
       Reader r = nfhlrf.createLinkRewriterReader("application/pdf", au, in,
 						  encoding, url, xform);
@@ -153,25 +152,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  public void testThrowsIfNoPort() {
-    in = new StringReader(page);
-    setupConfig(false);
-    try {
-      Reader r = nfhlrf.createLinkRewriterReader("text/html", au, in,
-						  encoding, url, xform);
-      fail("createLinkRewriter should have thrown if no port");
-    } catch (Exception ex) {
-      if (ex instanceof PluginException) {
-	return;
-      }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
-	   ex.toString());
-    }
-  }
-
   public void testRewriting() {
     in = new StringReader(page);
-    setupConfig(true);
     try {
       Reader r = nfhlrf.createLinkRewriterReader("text/html", au, in,
 						 encoding, url, xform);
@@ -224,14 +206,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     } catch (Exception ex) {
       fail("createLinkRewriter should not have thrown " + ex +
 	   " on html mime type");
-    }
-  }
-
-  private void setupConfig(boolean good) {
-    Properties props = new Properties();
-    if (good) {
-      props.setProperty(ContentServletManager.PARAM_PORT, "9524");
-      ConfigurationUtil.setCurrentConfigFromProps(props);
     }
   }
 
