@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.27 2008-07-03 18:51:39 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.27.8.1 2008-11-25 04:02:00 tlipkis Exp $
  */
 
 /*
@@ -112,6 +112,11 @@ public abstract class JettyManager
       } catch (NumberFormatException e) {
 	log.error("Can't set max form size: " + e.toString());
       }
+
+      // Override some default error status strings with messages that are
+      // more user-friendly
+      HttpResponse.__statusMsg.put(new Integer(HttpResponse.__401_Unauthorized),
+				   "Invalid Username or Password");
       HttpResponse.__statusMsg.put(new Integer(HttpResponse.__502_Bad_Gateway),
 				   "Upstream Error");
       isJettyInited = true;
