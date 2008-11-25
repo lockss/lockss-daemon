@@ -1,5 +1,5 @@
 /*
- * $Id: CompoundLinearSlope.java,v 1.3 2008-10-24 07:14:17 tlipkis Exp $
+ * $Id: CompoundLinearSlope.java,v 1.3.2.1 2008-11-25 09:48:20 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class CompoundLinearSlope {
   //* Pattern picks off first x,y pair into group(1) and group(2) and rest
   //* of string into group(3) */
   static Pattern ONE_POINT_PAT =
-    RegexpUtil.uncheckedCompile("^\\s*,?\\s*\\[(\\w+)\\s*,\\s*([0-9.]+(?:[smhdwySMHDWY]?))\\](.*)$",
+    RegexpUtil.uncheckedCompile("^\\s*,?\\s*\\[(\\w+)\\s*,\\s*(-?[0-9.]+(?:[smhdwySMHDWY]?))\\](.*)$",
 				Perl5Compiler.READ_ONLY_MASK);
 
 
