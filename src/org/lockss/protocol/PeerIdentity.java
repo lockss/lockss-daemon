@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.10 2008-11-10 07:11:53 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.11 2008-11-26 01:10:53 edwardsb1 Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ import org.lockss.util.*;
  */
 public class PeerIdentity implements LockssSerializable {
   static Logger theLog=Logger.getLogger("PeerIdentity");
-  private String key;
-  private transient PeerAddress pAddr;
+  protected String key;
+  protected transient PeerAddress pAddr;
 
   PeerIdentity(String newKey)
       throws IdentityManager.MalformedIdentityKeyException {
@@ -72,7 +72,7 @@ public class PeerIdentity implements LockssSerializable {
     sb.append("]");
     return sb.toString();
   }
-
+  
   /**
    * getIdString returns a string describing the peer that is
    * parseable and convertable into a PeerIdentity object.  At

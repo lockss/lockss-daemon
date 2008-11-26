@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.7 2008-11-08 08:16:04 tlipkis Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8 2008-11-26 01:10:53 edwardsb1 Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   protected boolean m_isInMemory;
   private static Logger m_logger = Logger.getLogger("PersistentPeerIdSet");
   protected Set<PeerIdentity> m_setPeerId;
-  protected boolean changed = false;
+  protected boolean m_changed = false;
 
 
   public PersistentPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
@@ -121,7 +121,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.add(pi);
-    changed |= result;
+    m_changed |= result;
     storeIfNecessary();
       
     return result;
@@ -132,7 +132,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.addAll(cpi);
-    changed |= result;
+    m_changed |= result;
     storeIfNecessary();
 
     return result;
@@ -143,7 +143,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     loadIfNecessary();
     if (!m_setPeerId.isEmpty()) {
       m_setPeerId.clear();
-      changed = true;
+      m_changed = true;
     }
     storeIfNecessary();
   }
@@ -229,7 +229,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.remove(o);
-    changed |= result;
+    m_changed |= result;
     storeIfNecessary();
 
     return result;
@@ -241,7 +241,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.removeAll(c);
-    changed |= result;
+    m_changed |= result;
     storeIfNecessary();
 
     return result;
@@ -253,7 +253,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     loadIfNecessary();
     result = m_setPeerId.retainAll(c);
-    changed |= result;
+    m_changed |= result;
     storeIfNecessary();
 
     return result;
@@ -292,7 +292,15 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 //    return result;
 //  }
 
+  
+  // The following method is used to sequence the persistent peer ID set.
+  
+  public File getFilePeerId() throws IOException {
+    storeIfNecessary();
     
+    return m_filePeerId;
+  }
+      
 
   // ---- Internal methods
 
@@ -305,7 +313,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       if (m_filePeerId.exists()) {
         is = new DataInputStream(new FileInputStream(m_filePeerId));
 	readData(is);
-	changed = false;
+	m_changed = false;
       } else {
 	newData();
       } 
@@ -343,7 +351,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    */
 
   protected void internalStore() throws IOException {
-    if (!changed) {
+    if (!m_changed) {
       return;
     }
     DataOutputStream dos = null;
@@ -358,7 +366,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       dos.close();
 
       if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
-	changed = false;
+	m_changed = false;
       } else {
         m_logger.error("Unable to rename temporary agreement history file " +
 		       filePeerIdTemp);

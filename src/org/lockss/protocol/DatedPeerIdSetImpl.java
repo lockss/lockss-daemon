@@ -44,7 +44,7 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
     loadIfNecessary();
     if (m_date != l) {
       m_date = l;
-      changed = true;
+      m_changed = true;
       storeIfNecessary();
     }
   }

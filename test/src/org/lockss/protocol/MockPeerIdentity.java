@@ -1,5 +1,5 @@
 /*
- * $Id: MockPeerIdentity.java,v 1.2 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: MockPeerIdentity.java,v 1.3 2008-11-26 01:10:53 edwardsb1 Exp $
  */
 
 /*
@@ -35,8 +35,6 @@ import java.util.*;
 import org.lockss.util.*;
 
 public class MockPeerIdentity extends PeerIdentity {
-  private String key;
-  private transient PeerAddress pAddr;
 
   public MockPeerIdentity(String newKey) {
     key = newKey;
