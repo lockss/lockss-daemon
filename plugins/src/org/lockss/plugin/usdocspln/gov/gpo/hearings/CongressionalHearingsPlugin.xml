@@ -65,4 +65,8 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsUrlNormalizer</string>
+  </entry>
 </map>
