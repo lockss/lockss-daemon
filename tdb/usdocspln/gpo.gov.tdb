@@ -21,7 +21,7 @@
     au < manifest ; Congressional Bills, 106th Congress ; 106 >
     au < manifest ; Congressional Bills, 107th Congress ; 107 >
     au < manifest ; Congressional Bills, 108th Congress ; 108 >
-    au < manifest ; Congressional Bills, 109th Congress ; 109 >
+    au < not_ready ; Congressional Bills, 109th Congress ; 109 >
     au < manifest ; Congressional Bills, 110th Congress ; 110 >
 
   }
@@ -35,13 +35,13 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
 
-    au < manifest ; Congressional Documents, 104th Congress ; 104 >
-    au < manifest ; Congressional Documents, 105th Congress ; 105 >
-    au < manifest ; Congressional Documents, 106th Congress ; 106 >
-    au < manifest ; Congressional Documents, 107th Congress ; 107 >
-    au < manifest ; Congressional Documents, 108th Congress ; 108 >
-    au < manifest ; Congressional Documents, 109th Congress ; 109 >
-    au < manifest ; Congressional Documents, 110th Congress ; 110 >
+    au < ready ; Congressional Documents, 104th Congress ; 104 >
+    au < ready ; Congressional Documents, 105th Congress ; 105 >
+    au < ready ; Congressional Documents, 106th Congress ; 106 >
+    au < ready ; Congressional Documents, 107th Congress ; 107 >
+    au < ready ; Congressional Documents, 108th Congress ; 108 >
+    au < ready ; Congressional Documents, 109th Congress ; 109 >
+    au < ready ; Congressional Documents, 110th Congress ; 110 >
 
   }
 
@@ -57,7 +57,7 @@
     au < exists ; Congressional Hearings, 104th Congress ; 104 >
     au < manifest ; Congressional Hearings, 105th Congress ; 105 >
     au < manifest ; Congressional Hearings, 106th Congress ; 106 >
-    au < manifest ; Congressional Hearings, 107th Congress ; 107 >
+    au < not_ready ; Congressional Hearings, 107th Congress ; 107 >
     au < manifest ; Congressional Hearings, 108th Congress ; 108 >
     au < manifest ; Congressional Hearings, 109th Congress ; 109 >
     au < manifest ; Congressional Hearings, 110th Congress ; 110 >
@@ -73,8 +73,8 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin
 
-    au < manifest ; Constitution of the United States, 1992 Edition ; 1992 >
-    au < manifest ; Constitution of the United States, 2002 Edition ; 2002 >
+    au < ready ; Constitution of the United States, 1992 Edition ; 1992 >
+    au < ready ; Constitution of the United States, 2002 Edition ; 2002 >
 
   }
 
