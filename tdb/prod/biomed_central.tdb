@@ -1,0 +1,57 @@
+{
+  publisher <
+    name = BioMed Central
+  >
+  
+  implicit < status ; name ; param[volume_name] >
+
+  rights = openaccess
+
+  {
+    plugin = org.lockss.plugin.bmc.BMCPlugin
+    param[base_url] = http://www.biomedcentral.com/    
+
+    {
+      title <
+        name = BMC Anesthesiology ;
+        issn = 1471-2253
+      >
+      
+      param[journal_issn] = 1471-2253
+      
+      au < released ; BMC Anesthesiology Volume 1 ; 1 >
+      au < released ; BMC Anesthesiology Volume 2 ; 2 >
+      au < released ; BMC Anesthesiology Volume 3 ; 3 >
+      au < released ; BMC Anesthesiology Volume 4 ; 4 >
+      au < released ; BMC Anesthesiology Volume 5 ; 5 >
+      au < released ; BMC Anesthesiology Volume 6 ; 6 >
+    }
+    
+  }
+  
+  {
+    plugin = org.lockss.plugin.bmc.BioMedCentralPlugin
+    
+    {
+      title <
+        name = Acta Veterinaria Scandinavica ;
+        issn = 1751-0147
+      >
+
+      param[base_url] = http://www.actavetscand.com/
+      param[journal_issn] = 1751-0147
+      
+      au < released ; Acta Veterinaria Scandinavica Volume 42 ; 42 >
+      au < released ; Acta Veterinaria Scandinavica Volume 43 ; 43 >
+      au < released ; Acta Veterinaria Scandinavica Volume 44 ; 44 >
+      au < released ; Acta Veterinaria Scandinavica Volume 45 ; 45 >
+      au < released ; Acta Veterinaria Scandinavica Volume 46 ; 46 >
+      au < released ; Acta Veterinaria Scandinavica Volume 47 ; 47 >
+      au < released ; Acta Veterinaria Scandinavica Volume 48 ; 48 >
+      au < released ; Acta Veterinaria Scandinavica Volume 49 ; 49 >
+      au < released ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
+    }
+        
+  }
+  
+}
