@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.4 2008-11-21 01:39:34 thib_gc Exp $
+# $Id: tdbxml.py,v 1.5 2008-12-04 23:01:02 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -46,7 +46,7 @@ def _escape(str):
 
 def _short_au_name(au):
     str = au.name()
-    str = re.sub(r'Volume\s+(\S+)$', '\1', str)
+    str = re.sub(r'Volume\s+(\S+)$', r'\1', str)
     str = re.sub(r'\s+', '', str)
     str = re.sub(r'\W+', '', str)
     return _escape(str)
