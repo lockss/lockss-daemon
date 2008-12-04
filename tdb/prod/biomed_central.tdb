@@ -1145,7 +1145,7 @@
 
       au < ready ; AIDS Research and Therapy Volume 1 ; 1 >
       au < ready ; AIDS Research and Therapy Volume 2 ; 2 >
-      au < manifest ; AIDS Research and Therapy Volume 3 ; 3 >
+      au < testing ; AIDS Research and Therapy Volume 3 ; 3 >
       au < ready ; AIDS Research and Therapy Volume 4 ; 4 >
       au < ready ; AIDS Research and Therapy Volume 5 ; 5 >
     }
@@ -1163,7 +1163,7 @@
 
       au < ready ; Algorithms for Molecular Biology Volume 1 ; 1 >
       au < ready ; Algorithms for Molecular Biology Volume 2 ; 2 >
-      au < manifest ; Algorithms for Molecular Biology Volume 3 ; 3 >
+      au < testing ; Algorithms for Molecular Biology Volume 3 ; 3 >
     }
 
 
@@ -1217,8 +1217,8 @@
       param[base_url] = http://www.asir-journal.com/
       param[journal_issn] = 1750-1164
 
-      au < manifest ; Annals of Surgical Innovation and Research Volume 1 ; 1 >
-      au < manifest ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
+      au < testing ; Annals of Surgical Innovation and Research Volume 1 ; 1 >
+      au < testing ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
     }
 
 
@@ -1232,16 +1232,16 @@
       param[base_url] = http://arthritis-research.com/
       param[journal_issn] = 1478-6354
 
-      au < manifest ; Arthritis Research & Therapy Volume 1 ; 1 >
-      au < manifest ; Arthritis Research & Therapy Volume 2 ; 2 >
-      au < manifest ; Arthritis Research & Therapy Volume 3 ; 3 >
-      au < manifest ; Arthritis Research & Therapy Volume 4 ; 4 >
-      au < manifest ; Arthritis Research & Therapy Volume 5 ; 5 >
-      au < manifest ; Arthritis Research & Therapy Volume 6 ; 6 >
-      au < manifest ; Arthritis Research & Therapy Volume 7 ; 7 >
-      au < manifest ; Arthritis Research & Therapy Volume 8 ; 8 >
-      au < manifest ; Arthritis Research & Therapy Volume 9 ; 9 >
-      au < manifest ; Arthritis Research & Therapy Volume 10 ; 10 >
+      au < testing ; Arthritis Research & Therapy Volume 1 ; 1 >
+      au < testing ; Arthritis Research & Therapy Volume 2 ; 2 >
+      au < testing ; Arthritis Research & Therapy Volume 3 ; 3 >
+      au < testing ; Arthritis Research & Therapy Volume 4 ; 4 >
+      au < testing ; Arthritis Research & Therapy Volume 5 ; 5 >
+      au < testing ; Arthritis Research & Therapy Volume 6 ; 6 >
+      au < testing ; Arthritis Research & Therapy Volume 7 ; 7 >
+      au < testing ; Arthritis Research & Therapy Volume 8 ; 8 >
+      au < testing ; Arthritis Research & Therapy Volume 9 ; 9 >
+      au < testing ; Arthritis Research & Therapy Volume 10 ; 10 >
     }
 
 

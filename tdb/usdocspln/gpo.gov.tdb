@@ -55,12 +55,12 @@
     plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin
 
     au < exists ; Congressional Hearings, 104th Congress ; 104 >
-    au < manifest ; Congressional Hearings, 105th Congress ; 105 >
-    au < manifest ; Congressional Hearings, 106th Congress ; 106 >
+    au < ready ; Congressional Hearings, 105th Congress ; 105 >
+    au < ready ; Congressional Hearings, 106th Congress ; 106 >
     au < not_ready ; Congressional Hearings, 107th Congress ; 107 >
-    au < manifest ; Congressional Hearings, 108th Congress ; 108 >
-    au < manifest ; Congressional Hearings, 109th Congress ; 109 >
-    au < manifest ; Congressional Hearings, 110th Congress ; 110 >
+    au < ready ; Congressional Hearings, 108th Congress ; 108 >
+    au < ready ; Congressional Hearings, 109th Congress ; 109 >
+    au < ready ; Congressional Hearings, 110th Congress ; 110 >
 
   }
 
