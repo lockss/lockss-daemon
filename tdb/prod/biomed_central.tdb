@@ -11,20 +11,1100 @@
     plugin = org.lockss.plugin.bmc.BMCPlugin
     param[base_url] = http://www.biomedcentral.com/    
 
+
     {
       title <
         name = BMC Anesthesiology ;
         issn = 1471-2253
       >
-      
+
       param[journal_issn] = 1471-2253
-      
+
       au < released ; BMC Anesthesiology Volume 1 ; 1 >
       au < released ; BMC Anesthesiology Volume 2 ; 2 >
       au < released ; BMC Anesthesiology Volume 3 ; 3 >
       au < released ; BMC Anesthesiology Volume 4 ; 4 >
       au < released ; BMC Anesthesiology Volume 5 ; 5 >
       au < released ; BMC Anesthesiology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Biochemistry ;
+        issn = 1471-2091
+      >
+
+      param[journal_issn] = 1471-2091
+
+      au < released ; BMC Biochemistry Volume 1 ; 1 >
+      au < released ; BMC Biochemistry Volume 2 ; 2 >
+      au < released ; BMC Biochemistry Volume 3 ; 3 >
+      au < released ; BMC Biochemistry Volume 4 ; 4 >
+      au < released ; BMC Biochemistry Volume 5 ; 5 >
+      au < released ; BMC Biochemistry Volume 6 ; 6 >
+      au < released ; BMC Biochemistry Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Bioinformatics ;
+        issn = 1471-2105
+      >
+
+      param[journal_issn] = 1471-2105
+
+      au < released ; BMC Bioinformatics Volume 1 ; 1 >
+      au < released ; BMC Bioinformatics Volume 2 ; 2 >
+      au < released ; BMC Bioinformatics Volume 3 ; 3 >
+      au < released ; BMC Bioinformatics Volume 4 ; 4 >
+      au < released ; BMC Bioinformatics Volume 5 ; 5 >
+      au < released ; BMC Bioinformatics Volume 6 ; 6 >
+      au < released ; BMC Bioinformatics Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Biology ;
+        issn = 1741-7007
+      >
+
+      param[journal_issn] = 1741-7007
+
+      au < released ; BMC Biology Volume 1 ; 1 >
+      au < released ; BMC Biology Volume 2 ; 2 >
+      au < released ; BMC Biology Volume 3 ; 3 >
+      au < released ; BMC Biology Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Biotechnology ;
+        issn = 1472-6750
+      >
+
+      param[journal_issn] = 1472-6750
+
+      au < released ; BMC Biotechnology Volume 1 ; 1 >
+      au < released ; BMC Biotechnology Volume 2 ; 2 >
+      au < released ; BMC Biotechnology Volume 3 ; 3 >
+      au < released ; BMC Biotechnology Volume 4 ; 4 >
+      au < released ; BMC Biotechnology Volume 5 ; 5 >
+      au < released ; BMC Biotechnology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Blood Disorders ;
+        issn = 1471-2326
+      >
+
+      param[journal_issn] = 1471-2326
+
+      au < released ; BMC Blood Disorders Volume 1 ; 1 >
+      au < released ; BMC Blood Disorders Volume 2 ; 2 >
+      au < released ; BMC Blood Disorders Volume 3 ; 3 >
+      au < released ; BMC Blood Disorders Volume 4 ; 4 >
+      au < released ; BMC Blood Disorders Volume 5 ; 5 >
+      au < released ; BMC Blood Disorders Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Cancer ;
+        issn = 1471-2407
+      >
+
+      param[journal_issn] = 1471-2407
+
+      au < released ; BMC Cancer Volume 1 ; 1 >
+      au < released ; BMC Cancer Volume 2 ; 2 >
+      au < released ; BMC Cancer Volume 3 ; 3 >
+      au < released ; BMC Cancer Volume 4 ; 4 >
+      au < released ; BMC Cancer Volume 5 ; 5 >
+      au < released ; BMC Cancer Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Cardiovascular Disorders ;
+        issn = 1471-2261
+      >
+
+      param[journal_issn] = 1471-2261
+
+      au < released ; BMC Cardiovascular Disorders Volume 1 ; 1 >
+      au < released ; BMC Cardiovascular Disorders Volume 2 ; 2 >
+      au < released ; BMC Cardiovascular Disorders Volume 3 ; 3 >
+      au < released ; BMC Cardiovascular Disorders Volume 4 ; 4 >
+      au < released ; BMC Cardiovascular Disorders Volume 5 ; 5 >
+      au < released ; BMC Cardiovascular Disorders Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Cell Biology ;
+        issn = 1471-2121
+      >
+
+      param[journal_issn] = 1471-2121
+
+      au < released ; BMC Cell Biology Volume 1 ; 1 >
+      au < released ; BMC Cell Biology Volume 2 ; 2 >
+      au < released ; BMC Cell Biology Volume 3 ; 3 >
+      au < released ; BMC Cell Biology Volume 4 ; 4 >
+      au < released ; BMC Cell Biology Volume 5 ; 5 >
+      au < released ; BMC Cell Biology Volume 6 ; 6 >
+      au < released ; BMC Cell Biology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Chemical Biology ;
+        issn = 1472-6769
+      >
+
+      param[journal_issn] = 1472-6769
+
+      au < released ; BMC Chemical Biology Volume 1 ; 1 >
+      au < released ; BMC Chemical Biology Volume 2 ; 2 >
+      au < released ; BMC Chemical Biology Volume 3 ; 3 >
+      au < released ; BMC Chemical Biology Volume 4 ; 4 >
+      au < released ; BMC Chemical Biology Volume 5 ; 5 >
+      au < released ; BMC Chemical Biology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Clinical Pathology ;
+        issn = 1472-6890
+      >
+
+      param[journal_issn] = 1472-6890
+
+      au < released ; BMC Clinical Pathology Volume 1 ; 1 >
+      au < released ; BMC Clinical Pathology Volume 2 ; 2 >
+      au < released ; BMC Clinical Pathology Volume 3 ; 3 >
+      au < released ; BMC Clinical Pathology Volume 4 ; 4 >
+      au < released ; BMC Clinical Pathology Volume 5 ; 5 >
+      au < released ; BMC Clinical Pathology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Clinical Pharmacology ;
+        issn = 1472-6904
+      >
+
+      param[journal_issn] = 1472-6904
+
+      au < released ; BMC Clinical Pharmacology Volume 1 ; 1 >
+      au < released ; BMC Clinical Pharmacology Volume 2 ; 2 >
+      au < released ; BMC Clinical Pharmacology Volume 3 ; 3 >
+      au < released ; BMC Clinical Pharmacology Volume 4 ; 4 >
+      au < released ; BMC Clinical Pharmacology Volume 5 ; 5 >
+      au < released ; BMC Clinical Pharmacology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Complementary and Alternative Medicine ;
+        issn = 1472-6882
+      >
+
+      param[journal_issn] = 1472-6882
+
+      au < released ; BMC Complementary and Alternative Medicine Volume 1 ; 1 >
+      au < released ; BMC Complementary and Alternative Medicine Volume 2 ; 2 >
+      au < released ; BMC Complementary and Alternative Medicine Volume 3 ; 3 >
+      au < released ; BMC Complementary and Alternative Medicine Volume 4 ; 4 >
+      au < released ; BMC Complementary and Alternative Medicine Volume 5 ; 5 >
+      au < released ; BMC Complementary and Alternative Medicine Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Dermatology ;
+        issn = 1471-5945
+      >
+
+      param[journal_issn] = 1471-5945
+
+      au < released ; BMC Dermatology Volume 1 ; 1 >
+      au < released ; BMC Dermatology Volume 2 ; 2 >
+      au < released ; BMC Dermatology Volume 3 ; 3 >
+      au < released ; BMC Dermatology Volume 4 ; 4 >
+      au < released ; BMC Dermatology Volume 5 ; 5 >
+      au < released ; BMC Dermatology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Developmental Biology ;
+        issn = 1471-213X
+      >
+
+      param[journal_issn] = 1471-213X
+
+      au < released ; BMC Developmental Biology Volume 1 ; 1 >
+      au < released ; BMC Developmental Biology Volume 2 ; 2 >
+      au < released ; BMC Developmental Biology Volume 3 ; 3 >
+      au < released ; BMC Developmental Biology Volume 4 ; 4 >
+      au < released ; BMC Developmental Biology Volume 5 ; 5 >
+      au < released ; BMC Developmental Biology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Ear, Nose and Throat Disorders ;
+        issn = 1472-6815
+      >
+
+      param[journal_issn] = 1472-6815
+
+      au < released ; BMC Ear, Nose and Throat Disorders Volume 1 ; 1 >
+      au < released ; BMC Ear, Nose and Throat Disorders Volume 2 ; 2 >
+      au < released ; BMC Ear, Nose and Throat Disorders Volume 3 ; 3 >
+      au < released ; BMC Ear, Nose and Throat Disorders Volume 4 ; 4 >
+      au < released ; BMC Ear, Nose and Throat Disorders Volume 5 ; 5 >
+      au < released ; BMC Ear, Nose and Throat Disorders Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Ecology ;
+        issn = 1472-6785
+      >
+
+      param[journal_issn] = 1472-6785
+
+      au < released ; BMC Ecology Volume 1 ; 1 >
+      au < released ; BMC Ecology Volume 2 ; 2 >
+      au < released ; BMC Ecology Volume 3 ; 3 >
+      au < released ; BMC Ecology Volume 4 ; 4 >
+      au < released ; BMC Ecology Volume 5 ; 5 >
+      au < released ; BMC Ecology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Emergency Medicine ;
+        issn = 1471-227X
+      >
+
+      param[journal_issn] = 1471-227X
+
+      au < released ; BMC Emergency Medicine Volume 1 ; 1 >
+      au < released ; BMC Emergency Medicine Volume 2 ; 2 >
+      au < released ; BMC Emergency Medicine Volume 3 ; 3 >
+      au < released ; BMC Emergency Medicine Volume 4 ; 4 >
+      au < released ; BMC Emergency Medicine Volume 5 ; 5 >
+      au < released ; BMC Emergency Medicine Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Endocrine Disorders ;
+        issn = 1472-6823
+      >
+
+      param[journal_issn] = 1472-6823
+
+      au < released ; BMC Endocrine Disorders Volume 1 ; 1 >
+      au < released ; BMC Endocrine Disorders Volume 2 ; 2 >
+      au < released ; BMC Endocrine Disorders Volume 3 ; 3 >
+      au < released ; BMC Endocrine Disorders Volume 4 ; 4 >
+      au < released ; BMC Endocrine Disorders Volume 5 ; 5 >
+      au < released ; BMC Endocrine Disorders Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Evolutionary Biology ;
+        issn = 1471-2148
+      >
+
+      param[journal_issn] = 1471-2148
+
+      au < released ; BMC Evolutionary Biology Volume 1 ; 1 >
+      au < released ; BMC Evolutionary Biology Volume 2 ; 2 >
+      au < released ; BMC Evolutionary Biology Volume 3 ; 3 >
+      au < released ; BMC Evolutionary Biology Volume 4 ; 4 >
+      au < released ; BMC Evolutionary Biology Volume 5 ; 5 >
+      au < released ; BMC Evolutionary Biology Volume 6 ; 6 >
+      au < released ; BMC Evolutionary Biology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Family Practice ;
+        issn = 1471-2296
+      >
+
+      param[journal_issn] = 1471-2296
+
+      au < released ; BMC Family Practice Volume 1 ; 1 >
+      au < released ; BMC Family Practice Volume 2 ; 2 >
+      au < released ; BMC Family Practice Volume 3 ; 3 >
+      au < released ; BMC Family Practice Volume 4 ; 4 >
+      au < released ; BMC Family Practice Volume 5 ; 5 >
+      au < released ; BMC Family Practice Volume 6 ; 6 >
+      au < released ; BMC Family Practice Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Gastroenterology ;
+        issn = 1471-230X
+      >
+
+      param[journal_issn] = 1471-230X
+
+      au < released ; BMC Gastroenterology Volume 1 ; 1 >
+      au < released ; BMC Gastroenterology Volume 2 ; 2 >
+      au < released ; BMC Gastroenterology Volume 3 ; 3 >
+      au < released ; BMC Gastroenterology Volume 4 ; 4 >
+      au < released ; BMC Gastroenterology Volume 5 ; 5 >
+      au < released ; BMC Gastroenterology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Genetics ;
+        issn = 1471-2156
+      >
+
+      param[journal_issn] = 1471-2156
+
+      au < released ; BMC Genetics Volume 1 ; 1 >
+      au < released ; BMC Genetics Volume 2 ; 2 >
+      au < released ; BMC Genetics Volume 3 ; 3 >
+      au < released ; BMC Genetics Volume 4 ; 4 >
+      au < released ; BMC Genetics Volume 5 ; 5 >
+      au < released ; BMC Genetics Volume 6 ; 6 >
+      au < released ; BMC Genetics Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Genomics ;
+        issn = 1471-2164
+      >
+
+      param[journal_issn] = 1471-2164
+
+      au < released ; BMC Genomics Volume 1 ; 1 >
+      au < released ; BMC Genomics Volume 2 ; 2 >
+      au < released ; BMC Genomics Volume 3 ; 3 >
+      au < released ; BMC Genomics Volume 4 ; 4 >
+      au < released ; BMC Genomics Volume 5 ; 5 >
+      au < released ; BMC Genomics Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Geriatrics ;
+        issn = 1471-2318
+      >
+
+      param[journal_issn] = 1471-2318
+
+      au < released ; BMC Geriatrics Volume 1 ; 1 >
+      au < released ; BMC Geriatrics Volume 2 ; 2 >
+      au < released ; BMC Geriatrics Volume 3 ; 3 >
+      au < released ; BMC Geriatrics Volume 4 ; 4 >
+      au < released ; BMC Geriatrics Volume 5 ; 5 >
+      au < released ; BMC Geriatrics Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Health Services Research ;
+        issn = 1472-6963
+      >
+
+      param[journal_issn] = 1472-6963
+
+      au < released ; BMC Health Services Research Volume 1 ; 1 >
+      au < released ; BMC Health Services Research Volume 2 ; 2 >
+      au < released ; BMC Health Services Research Volume 3 ; 3 >
+      au < released ; BMC Health Services Research Volume 4 ; 4 >
+      au < released ; BMC Health Services Research Volume 5 ; 5 >
+      au < released ; BMC Health Services Research Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Immunology ;
+        issn = 1471-2172
+      >
+
+      param[journal_issn] = 1471-2172
+
+      au < released ; BMC Immunology Volume 1 ; 1 >
+      au < released ; BMC Immunology Volume 2 ; 2 >
+      au < released ; BMC Immunology Volume 3 ; 3 >
+      au < released ; BMC Immunology Volume 4 ; 4 >
+      au < released ; BMC Immunology Volume 5 ; 5 >
+      au < released ; BMC Immunology Volume 6 ; 6 >
+      au < released ; BMC Immunology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Infectious Diseases ;
+        issn = 1471-2334
+      >
+
+      param[journal_issn] = 1471-2334
+
+      au < released ; BMC Infectious Diseases Volume 1 ; 1 >
+      au < released ; BMC Infectious Diseases Volume 2 ; 2 >
+      au < released ; BMC Infectious Diseases Volume 3 ; 3 >
+      au < released ; BMC Infectious Diseases Volume 4 ; 4 >
+      au < released ; BMC Infectious Diseases Volume 5 ; 5 >
+      au < released ; BMC Infectious Diseases Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC International Health and Human Rights ;
+        issn = 1472-698X
+      >
+
+      param[journal_issn] = 1472-698X
+
+      au < released ; BMC International Health and Human Rights Volume 1 ; 1 >
+      au < released ; BMC International Health and Human Rights Volume 2 ; 2 >
+      au < released ; BMC International Health and Human Rights Volume 3 ; 3 >
+      au < released ; BMC International Health and Human Rights Volume 4 ; 4 >
+      au < released ; BMC International Health and Human Rights Volume 5 ; 5 >
+      au < released ; BMC International Health and Human Rights Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medical Education ;
+        issn = 1472-6920
+      >
+
+      param[journal_issn] = 1472-6920
+
+      au < released ; BMC Medical Education Volume 1 ; 1 >
+      au < released ; BMC Medical Education Volume 2 ; 2 >
+      au < released ; BMC Medical Education Volume 3 ; 3 >
+      au < released ; BMC Medical Education Volume 4 ; 4 >
+      au < released ; BMC Medical Education Volume 5 ; 5 >
+      au < released ; BMC Medical Education Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medical Ethics ;
+        issn = 1472-6939
+      >
+
+      param[journal_issn] = 1472-6939
+
+      au < released ; BMC Medical Ethics Volume 1 ; 1 >
+      au < released ; BMC Medical Ethics Volume 2 ; 2 >
+      au < released ; BMC Medical Ethics Volume 3 ; 3 >
+      au < released ; BMC Medical Ethics Volume 4 ; 4 >
+      au < released ; BMC Medical Ethics Volume 5 ; 5 >
+      au < released ; BMC Medical Ethics Volume 6 ; 6 >
+      au < released ; BMC Medical Ethics Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medical Genetics ;
+        issn = 1471-2350
+      >
+
+      param[journal_issn] = 1471-2350
+
+      au < released ; BMC Medical Genetics Volume 1 ; 1 >
+      au < released ; BMC Medical Genetics Volume 2 ; 2 >
+      au < released ; BMC Medical Genetics Volume 3 ; 3 >
+      au < released ; BMC Medical Genetics Volume 4 ; 4 >
+      au < released ; BMC Medical Genetics Volume 5 ; 5 >
+      au < released ; BMC Medical Genetics Volume 6 ; 6 >
+      au < released ; BMC Medical Genetics Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medical Imaging ;
+        issn = 1471-2342
+      >
+
+      param[journal_issn] = 1471-2342
+
+      au < released ; BMC Medical Imaging Volume 1 ; 1 >
+      au < released ; BMC Medical Imaging Volume 2 ; 2 >
+      au < released ; BMC Medical Imaging Volume 3 ; 3 >
+      au < released ; BMC Medical Imaging Volume 4 ; 4 >
+      au < released ; BMC Medical Imaging Volume 5 ; 5 >
+      au < released ; BMC Medical Imaging Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medical Informatics and Decision Making ;
+        issn = 1472-6947
+      >
+
+      param[journal_issn] = 1472-6947
+
+      au < released ; BMC Medical Informatics and Decision Making Volume 1 ; 1 >
+      au < released ; BMC Medical Informatics and Decision Making Volume 2 ; 2 >
+      au < released ; BMC Medical Informatics and Decision Making Volume 3 ; 3 >
+      au < released ; BMC Medical Informatics and Decision Making Volume 4 ; 4 >
+      au < released ; BMC Medical Informatics and Decision Making Volume 5 ; 5 >
+      au < released ; BMC Medical Informatics and Decision Making Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medical Research Methodology ;
+        issn = 1471-2288
+      >
+
+      param[journal_issn] = 1471-2288
+
+      au < released ; BMC Medical Research Methodology Volume 1 ; 1 >
+      au < released ; BMC Medical Research Methodology Volume 2 ; 2 >
+      au < released ; BMC Medical Research Methodology Volume 3 ; 3 >
+      au < released ; BMC Medical Research Methodology Volume 4 ; 4 >
+      au < released ; BMC Medical Research Methodology Volume 5 ; 5 >
+      au < released ; BMC Medical Research Methodology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Medicine ;
+        issn = 1741-7015
+      >
+
+      param[journal_issn] = 1741-7015
+
+      au < released ; BMC Medicine Volume 1 ; 1 >
+      au < released ; BMC Medicine Volume 2 ; 2 >
+      au < released ; BMC Medicine Volume 3 ; 3 >
+      au < released ; BMC Medicine Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Microbiology ;
+        issn = 1471-2180
+      >
+
+      param[journal_issn] = 1471-2180
+
+      au < released ; BMC Microbiology Volume 1 ; 1 >
+      au < released ; BMC Microbiology Volume 2 ; 2 >
+      au < released ; BMC Microbiology Volume 3 ; 3 >
+      au < released ; BMC Microbiology Volume 4 ; 4 >
+      au < released ; BMC Microbiology Volume 5 ; 5 >
+      au < released ; BMC Microbiology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Molecular Biology ;
+        issn = 1471-2199
+      >
+
+      param[journal_issn] = 1471-2199
+
+      au < released ; BMC Molecular Biology Volume 1 ; 1 >
+      au < released ; BMC Molecular Biology Volume 2 ; 2 >
+      au < released ; BMC Molecular Biology Volume 3 ; 3 >
+      au < released ; BMC Molecular Biology Volume 4 ; 4 >
+      au < released ; BMC Molecular Biology Volume 5 ; 5 >
+      au < released ; BMC Molecular Biology Volume 6 ; 6 >
+      au < released ; BMC Molecular Biology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Musculoskeletal Disorders ;
+        issn = 1471-2474
+      >
+
+      param[journal_issn] = 1471-2474
+
+      au < released ; BMC Musculoskeletal Disorders Volume 1 ; 1 >
+      au < released ; BMC Musculoskeletal Disorders Volume 2 ; 2 >
+      au < released ; BMC Musculoskeletal Disorders Volume 3 ; 3 >
+      au < released ; BMC Musculoskeletal Disorders Volume 4 ; 4 >
+      au < released ; BMC Musculoskeletal Disorders Volume 5 ; 5 >
+      au < released ; BMC Musculoskeletal Disorders Volume 6 ; 6 >
+      au < released ; BMC Musculoskeletal Disorders Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Nephrology ;
+        issn = 1471-2369
+      >
+
+      param[journal_issn] = 1471-2369
+
+      au < released ; BMC Nephrology Volume 1 ; 1 >
+      au < released ; BMC Nephrology Volume 2 ; 2 >
+      au < released ; BMC Nephrology Volume 3 ; 3 >
+      au < released ; BMC Nephrology Volume 4 ; 4 >
+      au < released ; BMC Nephrology Volume 5 ; 5 >
+      au < released ; BMC Nephrology Volume 6 ; 6 >
+      au < released ; BMC Nephrology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Neurology ;
+        issn = 1471-2377
+      >
+
+      param[journal_issn] = 1471-2377
+
+      au < released ; BMC Neurology Volume 1 ; 1 >
+      au < released ; BMC Neurology Volume 2 ; 2 >
+      au < released ; BMC Neurology Volume 3 ; 3 >
+      au < released ; BMC Neurology Volume 4 ; 4 >
+      au < released ; BMC Neurology Volume 5 ; 5 >
+      au < released ; BMC Neurology Volume 6 ; 6 >
+      au < released ; BMC Neurology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Neuroscience ;
+        issn = 1471-2202
+      >
+
+      param[journal_issn] = 1471-2202
+
+      au < released ; BMC Neuroscience Volume 1 ; 1 >
+      au < released ; BMC Neuroscience Volume 2 ; 2 >
+      au < released ; BMC Neuroscience Volume 3 ; 3 >
+      au < released ; BMC Neuroscience Volume 4 ; 4 >
+      au < released ; BMC Neuroscience Volume 5 ; 5 >
+      au < released ; BMC Neuroscience Volume 6 ; 6 >
+      au < released ; BMC Neuroscience Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Nuclear Medicine ;
+        issn = 1471-2385
+      >
+
+      param[journal_issn] = 1471-2385
+
+      au < released ; BMC Nuclear Medicine Volume 1 ; 1 >
+      au < released ; BMC Nuclear Medicine Volume 2 ; 2 >
+      au < released ; BMC Nuclear Medicine Volume 3 ; 3 >
+      au < released ; BMC Nuclear Medicine Volume 4 ; 4 >
+      au < released ; BMC Nuclear Medicine Volume 5 ; 5 >
+      au < released ; BMC Nuclear Medicine Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Nursing ;
+        issn = 1472-6955
+      >
+
+      param[journal_issn] = 1472-6955
+
+      au < released ; BMC Nursing Volume 1 ; 1 >
+      au < released ; BMC Nursing Volume 2 ; 2 >
+      au < released ; BMC Nursing Volume 3 ; 3 >
+      au < released ; BMC Nursing Volume 4 ; 4 >
+      au < released ; BMC Nursing Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Ophthalmology ;
+        issn = 1471-2415
+      >
+
+      param[journal_issn] = 1471-2415
+
+      au < released ; BMC Ophthalmology Volume 1 ; 1 >
+      au < released ; BMC Ophthalmology Volume 2 ; 2 >
+      au < released ; BMC Ophthalmology Volume 3 ; 3 >
+      au < released ; BMC Ophthalmology Volume 4 ; 4 >
+      au < released ; BMC Ophthalmology Volume 5 ; 5 >
+      au < released ; BMC Ophthalmology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Oral Health ;
+        issn = 1472-6831
+      >
+
+      param[journal_issn] = 1472-6831
+
+      au < released ; BMC Oral Health Volume 1 ; 1 >
+      au < released ; BMC Oral Health Volume 2 ; 2 >
+      au < released ; BMC Oral Health Volume 3 ; 3 >
+      au < released ; BMC Oral Health Volume 4 ; 4 >
+      au < released ; BMC Oral Health Volume 5 ; 5 >
+      au < released ; BMC Oral Health Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Palliative Care ;
+        issn = 1472-684X
+      >
+
+      param[journal_issn] = 1472-684X
+
+      au < released ; BMC Palliative Care Volume 1 ; 1 >
+      au < released ; BMC Palliative Care Volume 2 ; 2 >
+      au < released ; BMC Palliative Care Volume 3 ; 3 >
+      au < released ; BMC Palliative Care Volume 4 ; 4 >
+      au < released ; BMC Palliative Care Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Pediatrics ;
+        issn = 1471-2431
+      >
+
+      param[journal_issn] = 1471-2431
+
+      au < released ; BMC Pediatrics Volume 1 ; 1 >
+      au < released ; BMC Pediatrics Volume 2 ; 2 >
+      au < released ; BMC Pediatrics Volume 3 ; 3 >
+      au < released ; BMC Pediatrics Volume 4 ; 4 >
+      au < released ; BMC Pediatrics Volume 5 ; 5 >
+      au < released ; BMC Pediatrics Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Pharmacology ;
+        issn = 1471-2210
+      >
+
+      param[journal_issn] = 1471-2210
+
+      au < released ; BMC Pharmacology Volume 1 ; 1 >
+      au < released ; BMC Pharmacology Volume 2 ; 2 >
+      au < released ; BMC Pharmacology Volume 3 ; 3 >
+      au < released ; BMC Pharmacology Volume 4 ; 4 >
+      au < released ; BMC Pharmacology Volume 5 ; 5 >
+      au < released ; BMC Pharmacology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Physiology ;
+        issn = 1472-6793
+      >
+
+      param[journal_issn] = 1472-6793
+
+      au < released ; BMC Physiology Volume 1 ; 1 >
+      au < released ; BMC Physiology Volume 2 ; 2 >
+      au < released ; BMC Physiology Volume 3 ; 3 >
+      au < released ; BMC Physiology Volume 4 ; 4 >
+      au < released ; BMC Physiology Volume 5 ; 5 >
+      au < released ; BMC Physiology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Plant Biology ;
+        issn = 1471-2229
+      >
+
+      param[journal_issn] = 1471-2229
+
+      au < released ; BMC Plant Biology Volume 1 ; 1 >
+      au < released ; BMC Plant Biology Volume 2 ; 2 >
+      au < released ; BMC Plant Biology Volume 3 ; 3 >
+      au < released ; BMC Plant Biology Volume 4 ; 4 >
+      au < released ; BMC Plant Biology Volume 5 ; 5 >
+      au < released ; BMC Plant Biology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Pregnancy and Childbirth ;
+        issn = 1471-2393
+      >
+
+      param[journal_issn] = 1471-2393
+
+      au < released ; BMC Pregnancy and Childbirth Volume 1 ; 1 >
+      au < released ; BMC Pregnancy and Childbirth Volume 2 ; 2 >
+      au < released ; BMC Pregnancy and Childbirth Volume 3 ; 3 >
+      au < released ; BMC Pregnancy and Childbirth Volume 4 ; 4 >
+      au < released ; BMC Pregnancy and Childbirth Volume 5 ; 5 >
+      au < released ; BMC Pregnancy and Childbirth Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Psychiatry ;
+        issn = 1471-244X
+      >
+
+      param[journal_issn] = 1471-244X
+
+      au < released ; BMC Psychiatry Volume 1 ; 1 >
+      au < released ; BMC Psychiatry Volume 2 ; 2 >
+      au < released ; BMC Psychiatry Volume 3 ; 3 >
+      au < released ; BMC Psychiatry Volume 4 ; 4 >
+      au < released ; BMC Psychiatry Volume 5 ; 5 >
+      au < released ; BMC Psychiatry Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Public Health ;
+        issn = 1471-2458
+      >
+
+      param[journal_issn] = 1471-2458
+
+      au < released ; BMC Public Health Volume 1 ; 1 >
+      au < released ; BMC Public Health Volume 2 ; 2 >
+      au < released ; BMC Public Health Volume 3 ; 3 >
+      au < released ; BMC Public Health Volume 4 ; 4 >
+      au < released ; BMC Public Health Volume 5 ; 5 >
+      au < released ; BMC Public Health Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Pulmonary Medicine ;
+        issn = 1471-2466
+      >
+
+      param[journal_issn] = 1471-2466
+
+      au < released ; BMC Pulmonary Medicine Volume 1 ; 1 >
+      au < released ; BMC Pulmonary Medicine Volume 2 ; 2 >
+      au < released ; BMC Pulmonary Medicine Volume 3 ; 3 >
+      au < released ; BMC Pulmonary Medicine Volume 4 ; 4 >
+      au < released ; BMC Pulmonary Medicine Volume 5 ; 5 >
+      au < released ; BMC Pulmonary Medicine Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Structural Biology ;
+        issn = 1472-6807
+      >
+
+      param[journal_issn] = 1472-6807
+
+      au < released ; BMC Structural Biology Volume 1 ; 1 >
+      au < released ; BMC Structural Biology Volume 2 ; 2 >
+      au < released ; BMC Structural Biology Volume 3 ; 3 >
+      au < released ; BMC Structural Biology Volume 4 ; 4 >
+      au < released ; BMC Structural Biology Volume 5 ; 5 >
+      au < released ; BMC Structural Biology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Surgery ;
+        issn = 1471-2482
+      >
+
+      param[journal_issn] = 1471-2482
+
+      au < released ; BMC Surgery Volume 1 ; 1 >
+      au < released ; BMC Surgery Volume 2 ; 2 >
+      au < released ; BMC Surgery Volume 3 ; 3 >
+      au < released ; BMC Surgery Volume 4 ; 4 >
+      au < released ; BMC Surgery Volume 5 ; 5 >
+      au < released ; BMC Surgery Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Systems Biology ;
+        issn = 1752-0509
+      >
+
+      param[journal_issn] = 1752-0509
+
+      au < released ; BMC Systems Biology Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Urology ;
+        issn = 1471-2490
+      >
+
+      param[journal_issn] = 1471-2490
+
+      au < released ; BMC Urology Volume 1 ; 1 >
+      au < released ; BMC Urology Volume 2 ; 2 >
+      au < released ; BMC Urology Volume 3 ; 3 >
+      au < released ; BMC Urology Volume 4 ; 4 >
+      au < released ; BMC Urology Volume 5 ; 5 >
+      au < released ; BMC Urology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Veterinary Research ;
+        issn = 1746-6148
+      >
+
+      param[journal_issn] = 1746-6148
+
+      au < released ; BMC Veterinary Research Volume 1 ; 1 >
+      au < released ; BMC Veterinary Research Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = BMC Women's Health ;
+        issn = 1472-6874
+      >
+
+      param[journal_issn] = 1472-6874
+
+      au < released ; BMC Women's Health Volume 1 ; 1 >
+      au < released ; BMC Women's Health Volume 2 ; 2 >
+      au < released ; BMC Women's Health Volume 3 ; 3 >
+      au < released ; BMC Women's Health Volume 4 ; 4 >
+      au < released ; BMC Women's Health Volume 5 ; 5 >
+      au < released ; BMC Women's Health Volume 6 ; 6 >
     }
     
   }
@@ -40,7 +1120,7 @@
 
       param[base_url] = http://www.actavetscand.com/
       param[journal_issn] = 1751-0147
-      
+
       au < released ; Acta Veterinaria Scandinavica Volume 42 ; 42 >
       au < released ; Acta Veterinaria Scandinavica Volume 43 ; 43 >
       au < released ; Acta Veterinaria Scandinavica Volume 44 ; 44 >
@@ -50,6 +1130,2078 @@
       au < released ; Acta Veterinaria Scandinavica Volume 48 ; 48 >
       au < released ; Acta Veterinaria Scandinavica Volume 49 ; 49 >
       au < released ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
+    }
+
+
+
+    {
+      title <
+        name = AIDS Research and Therapy ;
+        issn = 1742-6405
+      >
+
+      param[base_url] = http://www.aidsrestherapy.com/
+      param[journal_issn] = 1742-6405
+
+      au < ready ; AIDS Research and Therapy Volume 1 ; 1 >
+      au < ready ; AIDS Research and Therapy Volume 2 ; 2 >
+      au < manifest ; AIDS Research and Therapy Volume 3 ; 3 >
+      au < ready ; AIDS Research and Therapy Volume 4 ; 4 >
+      au < ready ; AIDS Research and Therapy Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Algorithms for Molecular Biology ;
+        issn = 1748-7188
+      >
+
+      param[base_url] = http://www.almob.org/
+      param[journal_issn] = 1748-7188
+
+      au < ready ; Algorithms for Molecular Biology Volume 1 ; 1 >
+      au < ready ; Algorithms for Molecular Biology Volume 2 ; 2 >
+      au < manifest ; Algorithms for Molecular Biology Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Annals of Clinical Microbiology and Antimicrobials ;
+        issn = 1476-0711
+      >
+
+      param[base_url] = http://www.ann-clinmicrob.com/
+      param[journal_issn] = 1476-0711
+
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 1 ; 1 >
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 2 ; 2 >
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 3 ; 3 >
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 4 ; 4 >
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
+      au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Annals of General Psychiatry ;
+        issn = 1744-859X
+      >
+
+      param[base_url] = http://www.annals-general-psychiatry.com/
+      param[journal_issn] = 1744-859X
+
+      au < released ; Annals of General Psychiatry Volume 1 ; 1 >
+      au < released ; Annals of General Psychiatry Volume 2 ; 2 >
+      au < released ; Annals of General Psychiatry Volume 3 ; 3 >
+      au < released ; Annals of General Psychiatry Volume 4 ; 4 >
+      au < released ; Annals of General Psychiatry Volume 5 ; 5 >
+      au < released ; Annals of General Psychiatry Volume 6 ; 6 >
+      au < released ; Annals of General Psychiatry Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Annals of Surgical Innovation and Research ;
+        issn = 1750-1164
+      >
+
+      param[base_url] = http://www.asir-journal.com/
+      param[journal_issn] = 1750-1164
+
+      au < manifest ; Annals of Surgical Innovation and Research Volume 1 ; 1 >
+      au < manifest ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Arthritis Research & Therapy ;
+        issn = 1478-6354
+      >
+
+      param[base_url] = http://arthritis-research.com/
+      param[journal_issn] = 1478-6354
+
+      au < manifest ; Arthritis Research & Therapy Volume 1 ; 1 >
+      au < manifest ; Arthritis Research & Therapy Volume 2 ; 2 >
+      au < manifest ; Arthritis Research & Therapy Volume 3 ; 3 >
+      au < manifest ; Arthritis Research & Therapy Volume 4 ; 4 >
+      au < manifest ; Arthritis Research & Therapy Volume 5 ; 5 >
+      au < manifest ; Arthritis Research & Therapy Volume 6 ; 6 >
+      au < manifest ; Arthritis Research & Therapy Volume 7 ; 7 >
+      au < manifest ; Arthritis Research & Therapy Volume 8 ; 8 >
+      au < manifest ; Arthritis Research & Therapy Volume 9 ; 9 >
+      au < manifest ; Arthritis Research & Therapy Volume 10 ; 10 >
+    }
+
+
+
+    {
+      title <
+        name = Australia and New Zealand Health Policy ;
+        issn = 1743-8462
+      >
+
+      param[base_url] = http://www.anzhealthpolicy.com/
+      param[journal_issn] = 1743-8462
+
+      au < manifest ; Australia and New Zealand Health Policy Volume 1 ; 1 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 2 ; 2 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 3 ; 3 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 4 ; 4 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Behavioral and Brain Functions ;
+        issn = 1744-9081
+      >
+
+      param[base_url] = http://www.behavioralandbrainfunctions.com/
+      param[journal_issn] = 1744-9081
+
+      au < manifest ; Behavioral and Brain Functions Volume 1 ; 1 >
+      au < ready ; Behavioral and Brain Functions Volume 2 ; 2 >
+      au < manifest ; Behavioral and Brain Functions Volume 3 ; 3 >
+      au < manifest ; Behavioral and Brain Functions Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Biology Direct ;
+        issn = 1745-6150
+      >
+
+      param[base_url] = http://www.biology-direct.com/
+      param[journal_issn] = 1745-6150
+
+      au < manifest ; Biology Direct Volume 1 ; 1 >
+      au < manifest ; Biology Direct Volume 2 ; 2 >
+      au < manifest ; Biology Direct Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = BioMagnetic Research and Technology ;
+        issn = 1477-044X
+      >
+
+      param[base_url] = http://www.biomagres.com/
+      param[journal_issn] = 1477-044X
+
+      au < manifest ; BioMagnetic Research and Technology Volume 1 ; 1 >
+      au < manifest ; BioMagnetic Research and Technology Volume 2 ; 2 >
+      au < ready ; BioMagnetic Research and Technology Volume 3 ; 3 >
+      au < manifest ; BioMagnetic Research and Technology Volume 4 ; 4 >
+      au < manifest ; BioMagnetic Research and Technology Volume 5 ; 5 >
+      au < manifest ; BioMagnetic Research and Technology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = BioMedical Engineering OnLine ;
+        issn = 1475-925X
+      >
+
+      param[base_url] = http://www.biomedical-engineering-online.com/
+      param[journal_issn] = 1475-925X
+
+      au < manifest ; BioMedical Engineering OnLine Volume 1 ; 1 >
+      au < manifest ; BioMedical Engineering OnLine Volume 2 ; 2 >
+      au < manifest ; BioMedical Engineering OnLine Volume 3 ; 3 >
+      au < manifest ; BioMedical Engineering OnLine Volume 4 ; 4 >
+      au < manifest ; BioMedical Engineering OnLine Volume 5 ; 5 >
+      au < manifest ; BioMedical Engineering OnLine Volume 6 ; 6 >
+      au < manifest ; BioMedical Engineering OnLine Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = BioPsychoSocial Medicine ;
+        issn = 1751-0759
+      >
+
+      param[base_url] = http://www.bpsmedicine.com/
+      param[journal_issn] = 1751-0759
+
+      au < manifest ; BioPsychoSocial Medicine Volume 1 ; 1 >
+      au < manifest ; BioPsychoSocial Medicine Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Biotechnology for Biofuels ;
+        issn = 1754-6834
+      >
+
+      param[base_url] = http://www.biotechnologyforbiofuels.com/
+      param[journal_issn] = 1754-6834
+
+      au < manifest ; Biotechnology for Biofuels Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Breast Cancer Research ;
+        issn = 1465-5411
+      >
+
+      param[base_url] = http://breast-cancer-research.com/
+      param[journal_issn] = 1465-5411
+
+      au < manifest ; Breast Cancer Research Volume 1 ; 1 >
+      au < manifest ; Breast Cancer Research Volume 2 ; 2 >
+      au < manifest ; Breast Cancer Research Volume 3 ; 3 >
+      au < manifest ; Breast Cancer Research Volume 4 ; 4 >
+      au < manifest ; Breast Cancer Research Volume 5 ; 5 >
+      au < manifest ; Breast Cancer Research Volume 6 ; 6 >
+      au < manifest ; Breast Cancer Research Volume 7 ; 7 >
+      au < manifest ; Breast Cancer Research Volume 8 ; 8 >
+      au < manifest ; Breast Cancer Research Volume 9 ; 9 >
+      au < manifest ; Breast Cancer Research Volume 10 ; 10 >
+    }
+
+
+
+    {
+      title <
+        name = Cancer Cell International ;
+        issn = 1475-2867
+      >
+
+      param[base_url] = http://www.cancerci.com/
+      param[journal_issn] = 1475-2867
+
+      au < ready ; Cancer Cell International Volume 1 ; 1 >
+      au < manifest ; Cancer Cell International Volume 2 ; 2 >
+      au < manifest ; Cancer Cell International Volume 3 ; 3 >
+      au < ready ; Cancer Cell International Volume 4 ; 4 >
+      au < manifest ; Cancer Cell International Volume 5 ; 5 >
+      au < manifest ; Cancer Cell International Volume 6 ; 6 >
+      au < manifest ; Cancer Cell International Volume 7 ; 7 >
+      au < manifest ; Cancer Cell International Volume 8 ; 8 >
+    }
+
+
+
+    {
+      title <
+        name = Carbon Balance and Management ;
+        issn = 1750-0680
+      >
+
+      param[base_url] = http://www.cbmjournal.com/
+      param[journal_issn] = 1750-0680
+
+      au < manifest ; Carbon Balance and Management Volume 1 ; 1 >
+      au < manifest ; Carbon Balance and Management Volume 2 ; 2 >
+      au < manifest ; Carbon Balance and Management Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Cardiovascular Diabetology ;
+        issn = 1475-2840
+      >
+
+      param[base_url] = http://www.cardiab.com/
+      param[journal_issn] = 1475-2840
+
+      au < manifest ; Cardiovascular Diabetology Volume 1 ; 1 >
+      au < manifest ; Cardiovascular Diabetology Volume 2 ; 2 >
+      au < manifest ; Cardiovascular Diabetology Volume 3 ; 3 >
+      au < manifest ; Cardiovascular Diabetology Volume 4 ; 4 >
+      au < manifest ; Cardiovascular Diabetology Volume 5 ; 5 >
+      au < manifest ; Cardiovascular Diabetology Volume 6 ; 6 >
+      au < manifest ; Cardiovascular Diabetology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Cardiovascular Ultrasound ;
+        issn = 1476-7120
+      >
+
+      param[base_url] = http://www.cardiovascularultrasound.com/
+      param[journal_issn] = 1476-7120
+
+      au < manifest ; Cardiovascular Ultrasound Volume 1 ; 1 >
+      au < manifest ; Cardiovascular Ultrasound Volume 2 ; 2 >
+      au < manifest ; Cardiovascular Ultrasound Volume 3 ; 3 >
+      au < manifest ; Cardiovascular Ultrasound Volume 4 ; 4 >
+      au < manifest ; Cardiovascular Ultrasound Volume 5 ; 5 >
+      au < manifest ; Cardiovascular Ultrasound Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Cases Journal ;
+        issn = 1757-1626
+      >
+
+      param[base_url] = http://www.casesjournal.com/
+      param[journal_issn] = 1757-1626
+
+      au < manifest ; Cases Journal Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Cell Communication and Signaling ;
+        issn = 1478-811X
+      >
+
+      param[base_url] = http://www.biosignaling.com/
+      param[journal_issn] = 1478-811X
+
+      au < manifest ; Cell Communication and Signaling Volume 1 ; 1 >
+      au < manifest ; Cell Communication and Signaling Volume 2 ; 2 >
+      au < manifest ; Cell Communication and Signaling Volume 3 ; 3 >
+      au < manifest ; Cell Communication and Signaling Volume 4 ; 4 >
+      au < manifest ; Cell Communication and Signaling Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Cell Division ;
+        issn = 1747-1028
+      >
+
+      param[base_url] = http://www.celldiv.com/
+      param[journal_issn] = 1747-1028
+
+      au < manifest ; Cell Division Volume 1 ; 1 >
+      au < manifest ; Cell Division Volume 2 ; 2 >
+      au < manifest ; Cell Division Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Cerebrospinal Fluid Research ;
+        issn = 1743-8454
+      >
+
+      param[base_url] = http://www.cerebrospinalfluidresearch.com/
+      param[journal_issn] = 1743-8454
+
+      au < manifest ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+      au < manifest ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+      au < manifest ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+      au < manifest ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+      au < manifest ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Chemistry Central Journal ;
+        issn = 1752-153X
+      >
+
+      param[base_url] = http://www.journal.chemistrycentral.com/
+      param[journal_issn] = 1752-153X
+
+      au < manifest ; Chemistry Central Journal Volume 1 ; 1 >
+      au < manifest ; Chemistry Central Journal Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Child and Adolescent Psychiatry and Mental Health ;
+        issn = 1753-2000
+      >
+
+      param[base_url] = http://www.capmh.com/
+      param[journal_issn] = 1753-2000
+
+      au < manifest ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
+      au < manifest ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Chinese Medicine ;
+        issn = 1749-8546
+      >
+
+      param[base_url] = http://www.cmjournal.org/
+      param[journal_issn] = 1749-8546
+
+      au < manifest ; Chinese Medicine Volume 1 ; 1 >
+      au < manifest ; Chinese Medicine Volume 2 ; 2 >
+      au < manifest ; Chinese Medicine Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Chiropractic & Osteopathy ;
+        issn = 1746-1340
+      >
+
+      param[base_url] = http://www.chiroandosteo.com/
+      param[journal_issn] = 1746-1340
+
+      au < manifest ; Chiropractic & Osteopathy Volume 13 ; 13 >
+      au < manifest ; Chiropractic & Osteopathy Volume 14 ; 14 >
+      au < manifest ; Chiropractic & Osteopathy Volume 15 ; 15 >
+      au < manifest ; Chiropractic & Osteopathy Volume 16 ; 16 >
+    }
+
+
+
+    {
+      title <
+        name = Clinical and Molecular Allergy ;
+        issn = 1476-7961
+      >
+
+      param[base_url] = http://www.clinicalmolecularallergy.com/
+      param[journal_issn] = 1476-7961
+
+      au < manifest ; Clinical and Molecular Allergy Volume 1 ; 1 >
+      au < manifest ; Clinical and Molecular Allergy Volume 2 ; 2 >
+      au < manifest ; Clinical and Molecular Allergy Volume 3 ; 3 >
+      au < manifest ; Clinical and Molecular Allergy Volume 4 ; 4 >
+      au < manifest ; Clinical and Molecular Allergy Volume 5 ; 5 >
+      au < manifest ; Clinical and Molecular Allergy Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Cough ;
+        issn = 1745-9974
+      >
+
+      param[base_url] = http://www.coughjournal.com/
+      param[journal_issn] = 1745-9974
+
+      au < manifest ; Cough Volume 1 ; 1 >
+      au < manifest ; Cough Volume 2 ; 2 >
+      au < manifest ; Cough Volume 3 ; 3 >
+      au < manifest ; Cough Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Critical Care ;
+        issn = 1364-8535
+      >
+
+      param[base_url] = http://ccforum.com/
+      param[journal_issn] = 1364-8535
+
+      au < manifest ; Critical Care Volume 1 ; 1 >
+      au < manifest ; Critical Care Volume 2 ; 2 >
+      au < manifest ; Critical Care Volume 3 ; 3 >
+      au < manifest ; Critical Care Volume 4 ; 4 >
+      au < manifest ; Critical Care Volume 5 ; 5 >
+      au < manifest ; Critical Care Volume 6 ; 6 >
+      au < manifest ; Critical Care Volume 7 ; 7 >
+      au < manifest ; Critical Care Volume 8 ; 8 >
+      au < manifest ; Critical Care Volume 9 ; 9 >
+      au < manifest ; Critical Care Volume 10 ; 10 >
+      au < manifest ; Critical Care Volume 11 ; 11 >
+      au < manifest ; Critical Care Volume 12 ; 12 >
+    }
+
+
+
+    {
+      title <
+        name = Diagnostic Pathology ;
+        issn = 1746-1596
+      >
+
+      param[base_url] = http://www.diagnosticpathology.org/
+      param[journal_issn] = 1746-1596
+
+      au < released ; Diagnostic Pathology Volume 1 ; 1 >
+      au < released ; Diagnostic Pathology Volume 2 ; 2 >
+      au < released ; Diagnostic Pathology Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Dynamic Medicine ;
+        issn = 1476-5918
+      >
+
+      param[base_url] = http://www.dynamic-med.com/
+      param[journal_issn] = 1476-5918
+
+      au < released ; Dynamic Medicine Volume 1 ; 1 >
+      au < released ; Dynamic Medicine Volume 2 ; 2 >
+      au < released ; Dynamic Medicine Volume 3 ; 3 >
+      au < released ; Dynamic Medicine Volume 4 ; 4 >
+      au < released ; Dynamic Medicine Volume 5 ; 5 >
+      au < released ; Dynamic Medicine Volume 6 ; 6 >
+      au < released ; Dynamic Medicine Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Emerging Themes in Epidemiology ;
+        issn = 1742-7622
+      >
+
+      param[base_url] = http://www.ete-online.com/
+      param[journal_issn] = 1742-7622
+
+      au < released ; Emerging Themes in Epidemiology Volume 1 ; 1 >
+      au < released ; Emerging Themes in Epidemiology Volume 2 ; 2 >
+      au < released ; Emerging Themes in Epidemiology Volume 3 ; 3 >
+      au < released ; Emerging Themes in Epidemiology Volume 4 ; 4 >
+      au < released ; Emerging Themes in Epidemiology Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Environmental Health ;
+        issn = 1476-069X
+      >
+
+      param[base_url] = http://www.ehjournal.net/
+      param[journal_issn] = 1476-069X
+
+      au < ready ; Environmental Health Volume 1 ; 1 >
+      au < ready ; Environmental Health Volume 2 ; 2 >
+      au < ready ; Environmental Health Volume 3 ; 3 >
+      au < ready ; Environmental Health Volume 4 ; 4 >
+      au < ready ; Environmental Health Volume 5 ; 5 >
+      au < ready ; Environmental Health Volume 6 ; 6 >
+      au < manifest ; Environmental Health Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Epidemiologic Perspectives & Innovations ;
+        issn = 1742-5573
+      >
+
+      param[base_url] = http://www.epi-perspectives.com/
+      param[journal_issn] = 1742-5573
+
+      au < ready ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
+      au < ready ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
+      au < ready ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
+      au < ready ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
+      au < ready ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Frontiers in Zoology ;
+        issn = 1742-9994
+      >
+
+      param[base_url] = http://www.frontiersinzoology.com/
+      param[journal_issn] = 1742-9994
+
+      au < ready ; Frontiers in Zoology Volume 1 ; 1 >
+      au < ready ; Frontiers in Zoology Volume 2 ; 2 >
+      au < ready ; Frontiers in Zoology Volume 3 ; 3 >
+      au < ready ; Frontiers in Zoology Volume 4 ; 4 >
+      au < ready ; Frontiers in Zoology Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Genetic Vaccines and Therapy ;
+        issn = 1479-0556
+      >
+
+      param[base_url] = http://www.gvt-journal.com/
+      param[journal_issn] = 1479-0556
+
+      au < ready ; Genetic Vaccines and Therapy Volume 1 ; 1 >
+      au < ready ; Genetic Vaccines and Therapy Volume 2 ; 2 >
+      au < ready ; Genetic Vaccines and Therapy Volume 3 ; 3 >
+      au < ready ; Genetic Vaccines and Therapy Volume 4 ; 4 >
+      au < ready ; Genetic Vaccines and Therapy Volume 5 ; 5 >
+      au < ready ; Genetic Vaccines and Therapy Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Genome Biology ;
+        issn = 1465-6906
+      >
+
+      param[base_url] = http://genomebiology.com/
+      param[journal_issn] = 1465-6906
+
+      au < manifest ; Genome Biology Volume 1 ; 1 >
+      au < manifest ; Genome Biology Volume 2 ; 2 >
+      au < manifest ; Genome Biology Volume 3 ; 3 >
+      au < manifest ; Genome Biology Volume 4 ; 4 >
+      au < manifest ; Genome Biology Volume 5 ; 5 >
+      au < manifest ; Genome Biology Volume 6 ; 6 >
+      au < manifest ; Genome Biology Volume 7 ; 7 >
+      au < manifest ; Genome Biology Volume 8 ; 8 >
+      au < manifest ; Genome Biology Volume 9 ; 9 >
+    }
+
+
+
+    {
+      title <
+        name = Geochemical Transactions ;
+        issn = 1467-4866
+      >
+
+      param[base_url] = http://www.geochemicaltransactions.com/
+      param[journal_issn] = 1467-4866
+
+      au < manifest ; Geochemical Transactions Volume 1 ; 1 >
+      au < manifest ; Geochemical Transactions Volume 2 ; 2 >
+      au < manifest ; Geochemical Transactions Volume 3 ; 3 >
+      au < manifest ; Geochemical Transactions Volume 4 ; 4 >
+      au < manifest ; Geochemical Transactions Volume 5 ; 5 >
+      au < manifest ; Geochemical Transactions Volume 6 ; 6 >
+      au < manifest ; Geochemical Transactions Volume 7 ; 7 >
+      au < manifest ; Geochemical Transactions Volume 8 ; 8 >
+      au < manifest ; Geochemical Transactions Volume 9 ; 9 >
+    }
+
+
+
+    {
+      title <
+        name = Globalization and Health ;
+        issn = 1744-8603
+      >
+
+      param[base_url] = http://www.globalizationandhealth.com/
+      param[journal_issn] = 1744-8603
+
+      au < manifest ; Globalization and Health Volume 1 ; 1 >
+      au < manifest ; Globalization and Health Volume 2 ; 2 >
+      au < manifest ; Globalization and Health Volume 3 ; 3 >
+      au < manifest ; Globalization and Health Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Harm Reduction Journal ;
+        issn = 1477-7517
+      >
+
+      param[base_url] = http://www.harmreductionjournal.com/
+      param[journal_issn] = 1477-7517
+
+      au < manifest ; Harm Reduction Journal Volume 1 ; 1 >
+      au < manifest ; Harm Reduction Journal Volume 2 ; 2 >
+      au < manifest ; Harm Reduction Journal Volume 3 ; 3 >
+      au < manifest ; Harm Reduction Journal Volume 4 ; 4 >
+      au < manifest ; Harm Reduction Journal Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Head & Face Medicine ;
+        issn = 1746-160X
+      >
+
+      param[base_url] = http://www.head-face-med.com/
+      param[journal_issn] = 1746-160X
+
+      au < manifest ; Head & Face Medicine Volume 1 ; 1 >
+      au < manifest ; Head & Face Medicine Volume 2 ; 2 >
+      au < manifest ; Head & Face Medicine Volume 3 ; 3 >
+      au < manifest ; Head & Face Medicine Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Health and Quality of Life Outcomes ;
+        issn = 1477-7525
+      >
+
+      param[base_url] = http://www.hqlo.com/
+      param[journal_issn] = 1477-7525
+
+      au < manifest ; Health and Quality of Life Outcomes Volume 1 ; 1 >
+      au < manifest ; Health and Quality of Life Outcomes Volume 2 ; 2 >
+      au < manifest ; Health and Quality of Life Outcomes Volume 3 ; 3 >
+      au < manifest ; Health and Quality of Life Outcomes Volume 4 ; 4 >
+      au < manifest ; Health and Quality of Life Outcomes Volume 5 ; 5 >
+      au < manifest ; Health and Quality of Life Outcomes Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Health Research Policy and Systems ;
+        issn = 1478-4505
+      >
+
+      param[base_url] = http://www.health-policy-systems.com/
+      param[journal_issn] = 1478-4505
+
+      au < manifest ; Health Research Policy and Systems Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Human Resources for Health ;
+        issn = 1478-4491
+      >
+
+      param[base_url] = http://www.human-resources-health.com/
+      param[journal_issn] = 1478-4491
+
+      au < manifest ; Human Resources for Health Volume 1 ; 1 >
+      au < manifest ; Human Resources for Health Volume 2 ; 2 >
+      au < manifest ; Human Resources for Health Volume 3 ; 3 >
+      au < manifest ; Human Resources for Health Volume 4 ; 4 >
+      au < manifest ; Human Resources for Health Volume 5 ; 5 >
+      au < manifest ; Human Resources for Health Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Immunity & Ageing ;
+        issn = 1742-4933
+      >
+
+      param[base_url] = http://www.immunityageing.com/
+      param[journal_issn] = 1742-4933
+
+      au < manifest ; Immunity & Ageing Volume 1 ; 1 >
+      au < manifest ; Immunity & Ageing Volume 2 ; 2 >
+      au < manifest ; Immunity & Ageing Volume 3 ; 3 >
+      au < manifest ; Immunity & Ageing Volume 4 ; 4 >
+      au < manifest ; Immunity & Ageing Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Immunome Research ;
+        issn = 1745-7580
+      >
+
+      param[base_url] = http://www.immunome-research.com/
+      param[journal_issn] = 1745-7580
+
+      au < manifest ; Immunome Research Volume 1 ; 1 >
+      au < manifest ; Immunome Research Volume 2 ; 2 >
+      au < manifest ; Immunome Research Volume 3 ; 3 >
+      au < manifest ; Immunome Research Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Implementation Science ;
+        issn = 1748-5908
+      >
+
+      param[base_url] = http://www.implementationscience.com/
+      param[journal_issn] = 1748-5908
+
+      au < manifest ; Implementation Science Volume 1 ; 1 >
+      au < manifest ; Implementation Science Volume 2 ; 2 >
+      au < manifest ; Implementation Science Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Infectious Agents and Cancer ;
+        issn = 1750-9378
+      >
+
+      param[base_url] = http://www.infectagentscancer.com/
+      param[journal_issn] = 1750-9378
+
+      au < manifest ; Infectious Agents and Cancer Volume 1 ; 1 >
+      au < manifest ; Infectious Agents and Cancer Volume 2 ; 2 >
+      au < manifest ; Infectious Agents and Cancer Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = International Archives of Medicine ;
+        issn = 1755-7682
+      >
+
+      param[base_url] = http://www.intarchmed.com/
+      param[journal_issn] = 1755-7682
+
+      au < manifest ; International Archives of Medicine Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = International Breastfeeding Journal ;
+        issn = 1746-4358
+      >
+
+      param[base_url] = http://www.internationalbreastfeedingjournal.com/
+      param[journal_issn] = 1746-4358
+
+      au < manifest ; International Breastfeeding Journal Volume 1 ; 1 >
+      au < manifest ; International Breastfeeding Journal Volume 2 ; 2 >
+      au < manifest ; International Breastfeeding Journal Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = International Journal for Equity in Health ;
+        issn = 1475-9276
+      >
+
+      param[base_url] = http://www.equityhealthj.com/
+      param[journal_issn] = 1475-9276
+
+      au < manifest ; International Journal for Equity in Health Volume 1 ; 1 >
+      au < manifest ; International Journal for Equity in Health Volume 2 ; 2 >
+      au < manifest ; International Journal for Equity in Health Volume 3 ; 3 >
+      au < manifest ; International Journal for Equity in Health Volume 4 ; 4 >
+      au < manifest ; International Journal for Equity in Health Volume 5 ; 5 >
+      au < manifest ; International Journal for Equity in Health Volume 6 ; 6 >
+      au < manifest ; International Journal for Equity in Health Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = International Journal of Behavioral Nutrition and Physical Activity ;
+        issn = 1479-5868
+      >
+
+      param[base_url] = http://www.ijbnpa.org/
+      param[journal_issn] = 1479-5868
+
+      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 1 ; 1 >
+      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 2 ; 2 >
+      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 3 ; 3 >
+      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 4 ; 4 >
+      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = International Journal of Health Geographics ;
+        issn = 1476-072X
+      >
+
+      param[base_url] = http://www.ij-healthgeographics.com/
+      param[journal_issn] = 1476-072X
+
+      au < manifest ; International Journal of Health Geographics Volume 1 ; 1 >
+      au < manifest ; International Journal of Health Geographics Volume 2 ; 2 >
+      au < manifest ; International Journal of Health Geographics Volume 3 ; 3 >
+      au < manifest ; International Journal of Health Geographics Volume 4 ; 4 >
+      au < manifest ; International Journal of Health Geographics Volume 5 ; 5 >
+      au < manifest ; International Journal of Health Geographics Volume 6 ; 6 >
+      au < manifest ; International Journal of Health Geographics Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = International Journal of Mental Health Systems ;
+        issn = 1752-4458
+      >
+
+      param[base_url] = http://www.ijmhs.com/
+      param[journal_issn] = 1752-4458
+
+      au < manifest ; International Journal of Mental Health Systems Volume 1 ; 1 >
+      au < manifest ; International Journal of Mental Health Systems Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = International Seminars in Surgical Oncology ;
+        issn = 1477-7800
+      >
+
+      param[base_url] = http://www.issoonline.com/
+      param[journal_issn] = 1477-7800
+
+      au < manifest ; International Seminars in Surgical Oncology Volume 1 ; 1 >
+      au < manifest ; International Seminars in Surgical Oncology Volume 2 ; 2 >
+      au < manifest ; International Seminars in Surgical Oncology Volume 3 ; 3 >
+      au < manifest ; International Seminars in Surgical Oncology Volume 4 ; 4 >
+      au < manifest ; International Seminars in Surgical Oncology Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Autoimmune Diseases ;
+        issn = 1740-2557
+      >
+
+      param[base_url] = http://www.jautoimdis.com/
+      param[journal_issn] = 1740-2557
+
+      au < manifest ; Journal of Autoimmune Diseases Volume 1 ; 1 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 2 ; 2 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 3 ; 3 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 4 ; 4 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Biological Engineering ;
+        issn = 1754-1611
+      >
+
+      param[base_url] = http://www.jbioleng.org/
+      param[journal_issn] = 1754-1611
+
+      au < manifest ; Journal of Biological Engineering Volume 1 ; 1 >
+      au < manifest ; Journal of Biological Engineering Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Biology ;
+        issn = 1475-4924
+      >
+
+      param[base_url] = http://jbiol.com/
+      param[journal_issn] = 1475-4924
+
+      au < manifest ; Journal of Biology Volume 1 ; 1 >
+      au < manifest ; Journal of Biology Volume 2 ; 2 >
+      au < manifest ; Journal of Biology Volume 3 ; 3 >
+      au < manifest ; Journal of Biology Volume 4 ; 4 >
+      au < manifest ; Journal of Biology Volume 5 ; 5 >
+      au < manifest ; Journal of Biology Volume 6 ; 6 >
+      au < manifest ; Journal of Biology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Biomedical Discovery and Collaboration ;
+        issn = 1747-5333
+      >
+
+      param[base_url] = http://www.j-biomed-discovery.com/
+      param[journal_issn] = 1747-5333
+
+      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 1 ; 1 >
+      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
+      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Brachial Plexus and Peripheral Nerve Injury ;
+        issn = 1749-7221
+      >
+
+      param[base_url] = http://www.jbppni.com/
+      param[journal_issn] = 1749-7221
+
+      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
+      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
+      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Carcinogenesis ;
+        issn = 1477-3163
+      >
+
+      param[base_url] = http://www.carcinogenesis.com/
+      param[journal_issn] = 1477-3163
+
+      au < manifest ; Journal of Carcinogenesis Volume 1 ; 1 >
+      au < manifest ; Journal of Carcinogenesis Volume 2 ; 2 >
+      au < manifest ; Journal of Carcinogenesis Volume 3 ; 3 >
+      au < manifest ; Journal of Carcinogenesis Volume 4 ; 4 >
+      au < manifest ; Journal of Carcinogenesis Volume 5 ; 5 >
+      au < manifest ; Journal of Carcinogenesis Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Cardiothoracic Surgery ;
+        issn = 1749-8090
+      >
+
+      param[base_url] = http://www.cardiothoracicsurgery.org/
+      param[journal_issn] = 1749-8090
+
+      au < manifest ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
+      au < manifest ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
+      au < manifest ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Cardiovascular Magnetic Resonance ;
+        issn = 1532-429X
+      >
+
+      param[base_url] = http://jcmr-online.com/
+      param[journal_issn] = 1532-429X
+
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Circadian Rhythms ;
+        issn = 1740-3391
+      >
+
+      param[base_url] = http://www.jcircadianrhythms.com/
+      param[journal_issn] = 1740-3391
+
+      au < manifest ; Journal of Circadian Rhythms Volume 1 ; 1 >
+      au < manifest ; Journal of Circadian Rhythms Volume 2 ; 2 >
+      au < manifest ; Journal of Circadian Rhythms Volume 3 ; 3 >
+      au < manifest ; Journal of Circadian Rhythms Volume 4 ; 4 >
+      au < manifest ; Journal of Circadian Rhythms Volume 5 ; 5 >
+      au < manifest ; Journal of Circadian Rhythms Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Ethnobiology and Ethnomedicine ;
+        issn = 1746-4269
+      >
+
+      param[base_url] = http://www.ethnobiomed.com/
+      param[journal_issn] = 1746-4269
+
+      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
+      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
+      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
+      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Experimental & Clinical Assisted Reproduction ;
+        issn = 1743-1050
+      >
+
+      param[base_url] = http://www.jexpclinassistreprod.com/
+      param[journal_issn] = 1743-1050
+
+      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 >
+      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 >
+      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 >
+      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 >
+      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Experimental & Clinical Cancer Research ;
+        issn = 1756-9966
+      >
+
+      param[base_url] = http://www.jeccr.com/
+      param[journal_issn] = 1756-9966
+
+      au < manifest ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Hematology & Oncology ;
+        issn = 1756-8722
+      >
+
+      param[base_url] = http://www.jhoonline.org/
+      param[journal_issn] = 1756-8722
+
+      au < manifest ; Journal of Hematology & Oncology Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Immune Based Therapies and Vaccines ;
+        issn = 1476-8518
+      >
+
+      param[base_url] = http://www.jibtherapies.com/
+      param[journal_issn] = 1476-8518
+
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 2 ; 2 >
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 3 ; 3 >
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Inflammation ;
+        issn = 1476-9255
+      >
+
+      param[base_url] = http://www.journal-inflammation.com/
+      param[journal_issn] = 1476-9255
+
+      au < manifest ; Journal of Inflammation Volume 1 ; 1 >
+      au < manifest ; Journal of Inflammation Volume 2 ; 2 >
+      au < manifest ; Journal of Inflammation Volume 3 ; 3 >
+      au < manifest ; Journal of Inflammation Volume 4 ; 4 >
+      au < manifest ; Journal of Inflammation Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Medical Case Reports ;
+        issn = 1752-1947
+      >
+
+      param[base_url] = http://www.jmedicalcasereports.com/
+      param[journal_issn] = 1752-1947
+
+      au < manifest ; Journal of Medical Case Reports Volume 1 ; 1 >
+      au < manifest ; Journal of Medical Case Reports Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Molecular Signaling ;
+        issn = 1750-2187
+      >
+
+      param[base_url] = http://www.jmolecularsignaling.com/
+      param[journal_issn] = 1750-2187
+
+      au < manifest ; Journal of Molecular Signaling Volume 1 ; 1 >
+      au < manifest ; Journal of Molecular Signaling Volume 2 ; 2 >
+      au < manifest ; Journal of Molecular Signaling Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Nanobiotechnology ;
+        issn = 1477-3155
+      >
+
+      param[base_url] = http://www.jnanobiotechnology.com/
+      param[journal_issn] = 1477-3155
+
+      au < manifest ; Journal of Nanobiotechnology Volume 1 ; 1 >
+      au < manifest ; Journal of Nanobiotechnology Volume 2 ; 2 >
+      au < manifest ; Journal of Nanobiotechnology Volume 3 ; 3 >
+      au < manifest ; Journal of Nanobiotechnology Volume 4 ; 4 >
+      au < manifest ; Journal of Nanobiotechnology Volume 5 ; 5 >
+      au < manifest ; Journal of Nanobiotechnology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Negative Results in Biomedicine ;
+        issn = 1477-5751
+      >
+
+      param[base_url] = http://www.jnrbm.com/
+      param[journal_issn] = 1477-5751
+
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 1 ; 1 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 2 ; 2 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 3 ; 3 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 4 ; 4 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 5 ; 5 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 6 ; 6 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of NeuroEngineering and Rehabilitation ;
+        issn = 1743-0003
+      >
+
+      param[base_url] = http://www.jneuroengrehab.com/
+      param[journal_issn] = 1743-0003
+
+      au < manifest ; Journal of NeuroEngineering and Rehabilitation Volume 1 ; 1 >
+      au < manifest ; Journal of NeuroEngineering and Rehabilitation Volume 2 ; 2 >
+      au < manifest ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 >
+      au < manifest ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 >
+      au < manifest ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Neuroinflammation ;
+        issn = 1742-2094
+      >
+
+      param[base_url] = http://www.jneuroinflammation.com/
+      param[journal_issn] = 1742-2094
+
+      au < manifest ; Journal of Neuroinflammation Volume 1 ; 1 >
+      au < manifest ; Journal of Neuroinflammation Volume 2 ; 2 >
+      au < manifest ; Journal of Neuroinflammation Volume 3 ; 3 >
+      au < manifest ; Journal of Neuroinflammation Volume 4 ; 4 >
+      au < manifest ; Journal of Neuroinflammation Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Occupational Medicine and Toxicology ;
+        issn = 1745-6673
+      >
+
+      param[base_url] = http://www.occup-med.com/
+      param[journal_issn] = 1745-6673
+
+      au < manifest ; Journal of Occupational Medicine and Toxicology Volume 1 ; 1 >
+      au < manifest ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 >
+      au < manifest ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Orthopaedic Surgery and Research ;
+        issn = 1749-799X
+      >
+
+      param[base_url] = http://www.josr-online.com/
+      param[journal_issn] = 1749-799X
+
+      au < manifest ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
+      au < manifest ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
+      au < manifest ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of the International Society of Sports Nutrition ;
+        issn = 1550-2783
+      >
+
+      param[base_url] = http://www.jissn.com/
+      param[journal_issn] = 1550-2783
+
+      au < manifest ; Journal of the International Society of Sports Nutrition Volume 1 ; 1 >
+      au < manifest ; Journal of the International Society of Sports Nutrition Volume 2 ; 2 >
+      au < manifest ; Journal of the International Society of Sports Nutrition Volume 3 ; 3 >
+      au < manifest ; Journal of the International Society of Sports Nutrition Volume 4 ; 4 >
+      au < manifest ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Translational Medicine ;
+        issn = 1479-5876
+      >
+
+      param[base_url] = http://www.translational-medicine.com/
+      param[journal_issn] = 1479-5876
+
+      au < manifest ; Journal of Translational Medicine Volume 1 ; 1 >
+      au < manifest ; Journal of Translational Medicine Volume 2 ; 2 >
+      au < manifest ; Journal of Translational Medicine Volume 3 ; 3 >
+      au < manifest ; Journal of Translational Medicine Volume 4 ; 4 >
+      au < manifest ; Journal of Translational Medicine Volume 5 ; 5 >
+      au < manifest ; Journal of Translational Medicine Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Journal of Trauma Management & Outcomes ;
+        issn = 1752-2897
+      >
+
+      param[base_url] = http://www.traumamanagement.org/
+      param[journal_issn] = 1752-2897
+
+      au < manifest ; Journal of Trauma Management & Outcomes Volume 1 ; 1 >
+      au < manifest ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Lipids in Health and Disease ;
+        issn = 1476-511X
+      >
+
+      param[base_url] = http://www.lipidworld.com/
+      param[journal_issn] = 1476-511X
+
+      au < manifest ; Lipids in Health and Disease Volume 1 ; 1 >
+      au < manifest ; Lipids in Health and Disease Volume 2 ; 2 >
+      au < manifest ; Lipids in Health and Disease Volume 3 ; 3 >
+      au < manifest ; Lipids in Health and Disease Volume 4 ; 4 >
+      au < manifest ; Lipids in Health and Disease Volume 5 ; 5 >
+      au < manifest ; Lipids in Health and Disease Volume 6 ; 6 >
+      au < manifest ; Lipids in Health and Disease Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Malaria Journal ;
+        issn = 1475-2875
+      >
+
+      param[base_url] = http://www.malariajournal.com/
+      param[journal_issn] = 1475-2875
+
+      au < manifest ; Malaria Journal Volume 1 ; 1 >
+      au < manifest ; Malaria Journal Volume 2 ; 2 >
+      au < manifest ; Malaria Journal Volume 3 ; 3 >
+      au < manifest ; Malaria Journal Volume 4 ; 4 >
+      au < manifest ; Malaria Journal Volume 5 ; 5 >
+      au < manifest ; Malaria Journal Volume 6 ; 6 >
+      au < manifest ; Malaria Journal Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Microbial Cell Factories ;
+        issn = 1475-2859
+      >
+
+      param[base_url] = http://www.microbialcellfactories.com/
+      param[journal_issn] = 1475-2859
+
+      au < manifest ; Microbial Cell Factories Volume 1 ; 1 >
+      au < manifest ; Microbial Cell Factories Volume 2 ; 2 >
+      au < manifest ; Microbial Cell Factories Volume 3 ; 3 >
+      au < manifest ; Microbial Cell Factories Volume 4 ; 4 >
+      au < manifest ; Microbial Cell Factories Volume 5 ; 5 >
+      au < manifest ; Microbial Cell Factories Volume 6 ; 6 >
+      au < manifest ; Microbial Cell Factories Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Molecular Brain ;
+        issn = 1756-6606
+      >
+
+      param[base_url] = http://www.molecularbrain.com/
+      param[journal_issn] = 1756-6606
+
+      au < manifest ; Molecular Brain Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Molecular Cancer ;
+        issn = 1476-4598
+      >
+
+      param[base_url] = http://www.molecular-cancer.com/
+      param[journal_issn] = 1476-4598
+
+      au < manifest ; Molecular Cancer Volume 1 ; 1 >
+      au < manifest ; Molecular Cancer Volume 2 ; 2 >
+      au < manifest ; Molecular Cancer Volume 3 ; 3 >
+      au < manifest ; Molecular Cancer Volume 4 ; 4 >
+      au < manifest ; Molecular Cancer Volume 5 ; 5 >
+      au < manifest ; Molecular Cancer Volume 6 ; 6 >
+      au < manifest ; Molecular Cancer Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Molecular Cytogenetics ;
+        issn = 1755-8166
+      >
+
+      param[base_url] = http://www.molecularcytogenetics.org/
+      param[journal_issn] = 1755-8166
+
+      au < manifest ; Molecular Cytogenetics Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Molecular Neurodegeneration ;
+        issn = 1750-1326
+      >
+
+      param[base_url] = http://www.molecularneurodegeneration.com/
+      param[journal_issn] = 1750-1326
+
+      au < manifest ; Molecular Neurodegeneration Volume 1 ; 1 >
+      au < manifest ; Molecular Neurodegeneration Volume 2 ; 2 >
+      au < manifest ; Molecular Neurodegeneration Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Molecular Pain ;
+        issn = 1744-8069
+      >
+
+      param[base_url] = http://www.molecularpain.com/
+      param[journal_issn] = 1744-8069
+
+      au < manifest ; Molecular Pain Volume 1 ; 1 >
+      au < manifest ; Molecular Pain Volume 2 ; 2 >
+      au < manifest ; Molecular Pain Volume 3 ; 3 >
+      au < manifest ; Molecular Pain Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Neural Development ;
+        issn = 1749-8104
+      >
+
+      param[base_url] = http://www.neuraldevelopment.com/
+      param[journal_issn] = 1749-8104
+
+      au < manifest ; Neural Development Volume 1 ; 1 >
+      au < manifest ; Neural Development Volume 2 ; 2 >
+      au < manifest ; Neural Development Volume 3 ; 3 >
+      au < manifest ; Neural Development Volume 4 ; 4 >
+      au < manifest ; Neural Development Volume 5 ; 5 >
+      au < manifest ; Neural Development Volume 6 ; 6 >
+      au < manifest ; Neural Development Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Nonlinear Biomedical Physics ;
+        issn = 1753-4631
+      >
+
+      param[base_url] = http://www.nonlinearbiomedphys.com/
+      param[journal_issn] = 1753-4631
+
+      au < manifest ; Nonlinear Biomedical Physics Volume 1 ; 1 >
+    }
+
+
+
+    {
+      title <
+        name = Nutrition & Metabolism ;
+        issn = 1743-7075
+      >
+
+      param[base_url] = http://www.nutritionandmetabolism.com/
+      param[journal_issn] = 1743-7075
+
+      au < manifest ; Nutrition & Metabolism Volume 1 ; 1 >
+      au < manifest ; Nutrition & Metabolism Volume 2 ; 2 >
+      au < manifest ; Nutrition & Metabolism Volume 3 ; 3 >
+      au < manifest ; Nutrition & Metabolism Volume 4 ; 4 >
+      au < manifest ; Nutrition & Metabolism Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Nutrition Journal ;
+        issn = 1475-2891
+      >
+
+      param[base_url] = http://www.nutritionj.com/
+      param[journal_issn] = 1475-2891
+
+      au < manifest ; Nutrition Journal Volume 1 ; 1 >
+      au < manifest ; Nutrition Journal Volume 2 ; 2 >
+      au < manifest ; Nutrition Journal Volume 3 ; 3 >
+      au < manifest ; Nutrition Journal Volume 4 ; 4 >
+      au < manifest ; Nutrition Journal Volume 5 ; 5 >
+      au < manifest ; Nutrition Journal Volume 6 ; 6 >
+      au < manifest ; Nutrition Journal Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Orphanet Journal of Rare Diseases ;
+        issn = 1750-1172
+      >
+
+      param[base_url] = http://www.ojrd.com/
+      param[journal_issn] = 1750-1172
+
+      au < manifest ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
+      au < manifest ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
+      au < manifest ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Osteopathic Medicine and Primary Care ;
+        issn = 1750-4732
+      >
+
+      param[base_url] = http://www.om-pc.com/
+      param[journal_issn] = 1750-4732
+
+      au < manifest ; Osteopathic Medicine and Primary Care Volume 1 ; 1 >
+      au < manifest ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Parasites & Vectors ;
+        issn = 1756-3305
+      >
+
+      param[base_url] = http://www.parasitesandvectors.com/
+      param[journal_issn] = 1756-3305
+
+      au < manifest ; Parasites & Vectors Volume 1 ; 1 >
+      au < manifest ; Parasites & Vectors Volume 2 ; 2 >
+      au < manifest ; Parasites & Vectors Volume 3 ; 3 >
+      au < manifest ; Parasites & Vectors Volume 4 ; 4 >
+      au < manifest ; Parasites & Vectors Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Particle and Fibre Toxicology ;
+        issn = 1743-8977
+      >
+
+      param[base_url] = http://www.particleandfibretoxicology.com/
+      param[journal_issn] = 1743-8977
+
+      au < manifest ; Particle and Fibre Toxicology Volume 1 ; 1 >
+      au < manifest ; Particle and Fibre Toxicology Volume 2 ; 2 >
+      au < manifest ; Particle and Fibre Toxicology Volume 3 ; 3 >
+      au < manifest ; Particle and Fibre Toxicology Volume 4 ; 4 >
+      au < manifest ; Particle and Fibre Toxicology Volume 5 ; 5 >
+      au < manifest ; Particle and Fibre Toxicology Volume 6 ; 6 >
+      au < manifest ; Particle and Fibre Toxicology Volume 7 ; 7 >
+    }
+
+
+
+    {
+      title <
+        name = Patient Safety in Surgery ;
+        issn = 1754-9493
+      >
+
+      param[base_url] = http://www.pssjournal.com/
+      param[journal_issn] = 1754-9493
+
+      au < manifest ; Patient Safety in Surgery Volume 1 ; 1 >
+      au < manifest ; Patient Safety in Surgery Volume 2 ; 2 >
+    }
+
+
+
+    {
+      title <
+        name = Pediatric Rheumatology ;
+        issn = 1546-0096
+      >
+
+      param[base_url] = http://www.ped-rheum.com/
+      param[journal_issn] = 1546-0096
+
+      au < manifest ; Pediatric Rheumatology Volume 1 ; 1 >
+      au < manifest ; Pediatric Rheumatology Volume 2 ; 2 >
+      au < manifest ; Pediatric Rheumatology Volume 3 ; 3 >
+      au < manifest ; Pediatric Rheumatology Volume 4 ; 4 >
+      au < manifest ; Pediatric Rheumatology Volume 5 ; 5 >
+      au < manifest ; Pediatric Rheumatology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Philosophy, Ethics, and Humanities in Medicine ;
+        issn = 1747-5341
+      >
+
+      param[base_url] = http://www.peh-med.com/
+      param[journal_issn] = 1747-5341
+
+      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 1 ; 1 >
+      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 >
+      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Plant Methods ;
+        issn = 1746-4811
+      >
+
+      param[base_url] = http://www.plantmethods.com/
+      param[journal_issn] = 1746-4811
+
+      au < manifest ; Plant Methods Volume 1 ; 1 >
+      au < manifest ; Plant Methods Volume 2 ; 2 >
+      au < manifest ; Plant Methods Volume 3 ; 3 >
+      au < manifest ; Plant Methods Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Population Health Metrics ;
+        issn = 1478-7954
+      >
+
+      param[base_url] = http://www.pophealthmetrics.com/
+      param[journal_issn] = 1478-7954
+
+      au < manifest ; Population Health Metrics Volume 1 ; 1 >
+      au < manifest ; Population Health Metrics Volume 2 ; 2 >
+      au < manifest ; Population Health Metrics Volume 3 ; 3 >
+      au < manifest ; Population Health Metrics Volume 4 ; 4 >
+      au < manifest ; Population Health Metrics Volume 5 ; 5 >
+      au < manifest ; Population Health Metrics Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Proteome Science ;
+        issn = 1477-5956
+      >
+
+      param[base_url] = http://www.proteomesci.com/
+      param[journal_issn] = 1477-5956
+
+      au < manifest ; Proteome Science Volume 1 ; 1 >
+      au < manifest ; Proteome Science Volume 2 ; 2 >
+      au < manifest ; Proteome Science Volume 3 ; 3 >
+      au < manifest ; Proteome Science Volume 4 ; 4 >
+      au < manifest ; Proteome Science Volume 5 ; 5 >
+      au < manifest ; Proteome Science Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Radiation Oncology ;
+        issn = 1748-717X
+      >
+
+      param[base_url] = http://www.ro-journal.com/
+      param[journal_issn] = 1748-717X
+
+      au < manifest ; Radiation Oncology Volume 1 ; 1 >
+      au < manifest ; Radiation Oncology Volume 2 ; 2 >
+      au < manifest ; Radiation Oncology Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Reproductive Biology and Endocrinology ;
+        issn = 1477-7827
+      >
+
+      param[base_url] = http://www.rbej.com/
+      param[journal_issn] = 1477-7827
+
+      au < manifest ; Reproductive Biology and Endocrinology Volume 1 ; 1 >
+      au < manifest ; Reproductive Biology and Endocrinology Volume 2 ; 2 >
+      au < manifest ; Reproductive Biology and Endocrinology Volume 3 ; 3 >
+      au < manifest ; Reproductive Biology and Endocrinology Volume 4 ; 4 >
+      au < manifest ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
+      au < manifest ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Reproductive Health ;
+        issn = 1742-4755
+      >
+
+      param[base_url] = http://www.reproductive-health-journal.com/
+      param[journal_issn] = 1742-4755
+
+      au < manifest ; Reproductive Health Volume 1 ; 1 >
+      au < manifest ; Reproductive Health Volume 2 ; 2 >
+      au < manifest ; Reproductive Health Volume 3 ; 3 >
+      au < manifest ; Reproductive Health Volume 4 ; 4 >
+      au < manifest ; Reproductive Health Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Retrovirology ;
+        issn = 1742-4690
+      >
+
+      param[base_url] = http://www.retrovirology.com/
+      param[journal_issn] = 1742-4690
+
+      au < manifest ; Retrovirology Volume 1 ; 1 >
+      au < manifest ; Retrovirology Volume 2 ; 2 >
+      au < manifest ; Retrovirology Volume 3 ; 3 >
+      au < manifest ; Retrovirology Volume 4 ; 4 >
+      au < manifest ; Retrovirology Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Saline Systems ;
+        issn = 1746-1448
+      >
+
+      param[base_url] = http://www.salinesystems.org/
+      param[journal_issn] = 1746-1448
+
+      au < manifest ; Saline Systems Volume 1 ; 1 >
+      au < manifest ; Saline Systems Volume 2 ; 2 >
+      au < manifest ; Saline Systems Volume 3 ; 3 >
+      au < manifest ; Saline Systems Volume 4 ; 4 >
+    }
+
+
+
+    {
+      title <
+        name = Scoliosis ;
+        issn = 1748-7161
+      >
+
+      param[base_url] = http://www.scoliosisjournal.com/
+      param[journal_issn] = 1748-7161
+
+      au < manifest ; Scoliosis Volume 1 ; 1 >
+      au < manifest ; Scoliosis Volume 2 ; 2 >
+      au < manifest ; Scoliosis Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Source Code for Biology and Medicine ;
+        issn = 1751-0473
+      >
+
+      param[base_url] = http://www.scfbm.org/
+      param[journal_issn] = 1751-0473
+
+      au < manifest ; Source Code for Biology and Medicine Volume 1 ; 1 >
+      au < manifest ; Source Code for Biology and Medicine Volume 2 ; 2 >
+      au < manifest ; Source Code for Biology and Medicine Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Substance Abuse Treatment, Prevention, and Policy ;
+        issn = 1747-597X
+      >
+
+      param[base_url] = http://www.substanceabusepolicy.com/
+      param[journal_issn] = 1747-597X
+
+      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
+      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
+      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = Theoretical Biology and Medical Modelling ;
+        issn = 1742-4682
+      >
+
+      param[base_url] = http://www.tbiomed.com/
+      param[journal_issn] = 1742-4682
+
+      au < manifest ; Theoretical Biology and Medical Modelling Volume 1 ; 1 >
+      au < manifest ; Theoretical Biology and Medical Modelling Volume 2 ; 2 >
+      au < manifest ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
+      au < manifest ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
+      au < manifest ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = Thrombosis Journal ;
+        issn = 1477-9560
+      >
+
+      param[base_url] = http://www.thrombosisjournal.com/
+      param[journal_issn] = 1477-9560
+
+      au < manifest ; Thrombosis Journal Volume 1 ; 1 >
+      au < manifest ; Thrombosis Journal Volume 2 ; 2 >
+      au < manifest ; Thrombosis Journal Volume 3 ; 3 >
+      au < manifest ; Thrombosis Journal Volume 4 ; 4 >
+      au < manifest ; Thrombosis Journal Volume 5 ; 5 >
+      au < manifest ; Thrombosis Journal Volume 6 ; 6 >
+    }
+
+
+
+    {
+      title <
+        name = Trials ;
+        issn = 1745-6215
+      >
+
+      param[base_url] = http://www.trialsjournal.com/
+      param[journal_issn] = 1745-6215
+
+      au < manifest ; Trials Volume 1 ; 1 >
+      au < manifest ; Trials Volume 2 ; 2 >
+      au < manifest ; Trials Volume 3 ; 3 >
+      au < manifest ; Trials Volume 4 ; 4 >
+      au < manifest ; Trials Volume 5 ; 5 >
+      au < manifest ; Trials Volume 6 ; 6 >
+      au < manifest ; Trials Volume 7 ; 7 >
+      au < manifest ; Trials Volume 8 ; 8 >
+      au < manifest ; Trials Volume 9 ; 9 >
+    }
+
+
+
+    {
+      title <
+        name = Virology Journal ;
+        issn = 1743-422X
+      >
+
+      param[base_url] = http://www.virologyj.com/
+      param[journal_issn] = 1743-422X
+
+      au < manifest ; Virology Journal Volume 1 ; 1 >
+      au < manifest ; Virology Journal Volume 2 ; 2 >
+      au < manifest ; Virology Journal Volume 3 ; 3 >
+      au < manifest ; Virology Journal Volume 4 ; 4 >
+      au < manifest ; Virology Journal Volume 5 ; 5 >
+    }
+
+
+
+    {
+      title <
+        name = World Journal of Emergency Surgery ;
+        issn = 1749-7922
+      >
+
+      param[base_url] = http://www.wjes.org/
+      param[journal_issn] = 1749-7922
+
+      au < manifest ; World Journal of Emergency Surgery Volume 1 ; 1 >
+      au < manifest ; World Journal of Emergency Surgery Volume 2 ; 2 >
+      au < manifest ; World Journal of Emergency Surgery Volume 3 ; 3 >
+    }
+
+
+
+    {
+      title <
+        name = World Journal of Surgical Oncology ;
+        issn = 1477-7819
+      >
+
+      param[base_url] = http://www.wjso.com/
+      param[journal_issn] = 1477-7819
+
+      au < manifest ; World Journal of Surgical Oncology Volume 1 ; 1 >
+      au < manifest ; World Journal of Surgical Oncology Volume 2 ; 2 >
+      au < manifest ; World Journal of Surgical Oncology Volume 3 ; 3 >
+      au < manifest ; World Journal of Surgical Oncology Volume 4 ; 4 >
+      au < manifest ; World Journal of Surgical Oncology Volume 5 ; 5 >
+      au < manifest ; World Journal of Surgical Oncology Volume 6 ; 6 >
     }
         
   }
