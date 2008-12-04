@@ -1,5 +1,5 @@
 /*
- * $Id: TestCssLinkExtractor.java,v 1.5 2008-10-24 07:09:00 tlipkis Exp $
+ * $Id: TestCssLinkExtractor.java,v 1.6 2008-12-04 22:19:06 thib_gc Exp $
  */
 
 /*
@@ -82,6 +82,14 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
       "  bar: baz;" +
       "}";
     assertEmpty(extractUrls(source));
+  }
+  
+  public void testHandlesInputWithBadHexConstant() throws Exception {
+    extractUrls("foo { background-color: #1; }");
+    extractUrls("foo { background-color: #12; }");
+    extractUrls("foo { background-color: #1234; }");
+    extractUrls("foo { background-color: #12345; }");
+    extractUrls("foo { background-color: #1234567; }");
   }
   
   public void testRelativeUrl() throws Exception {
@@ -191,7 +199,7 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
                               String expectedUrl)
       throws IOException, PluginException {
     assertEquals(SetUtil.set(expectedUrl),
-		 extractUrls(beginning + middle + end));
+                 extractUrls(beginning + middle + end));
   }  
 
   protected static final String SOURCE_URL =
@@ -203,7 +211,7 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
 
     public void parseStyleSheet(InputSource inputSource) throws IOException {
       if (toThrow != null) {
-	throw toThrow;
+        throw toThrow;
       }
       super.parseStyleSheet(inputSource);
     }
@@ -225,7 +233,7 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
 
     public static class Factory implements LinkExtractorFactory {
       public LinkExtractor createLinkExtractor(String mimeType) {
-	return new MyCssLinkExtractor();
+        return new MyCssLinkExtractor();
       }
     }
 
