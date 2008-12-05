@@ -11,53 +11,12 @@
 
     {
       title <
-        name = TranscUlturAl
-      >
-
-      param[journal_id] = tc
-
-      au < manifest ; TranscUlturAl Volume 1 ; 2008 >
-
-    }
-
-    {
-      title <
         name = Alternative Francophone
       >
 
       param[journal_id] = af
 
-      au < manifest ; Alternative Francophone Volume 1 ; 2008 >
-
-    }
-
-    {
-      title <
-        name = Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée
-      >
-
-      param[journal_id] = crcl
-
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 >
-      au < manifest ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 >
-
-    }
-
-    {
-      title <
-        name = Canadian Journal of Family and Youth
-      >
-
-      param[journal_id] = cjfy
-
-      au < manifest ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
+      au < testing ; Alternative Francophone Volume 1 ; 2008 >
 
     }
 
@@ -68,9 +27,20 @@
 
       param[journal_id] = cjai
 
-      au < manifest ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
+      au < ready ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
       au < manifest ; Canadian Journal of Arthropod Identification 2007 ; 2007 >
       au < manifest ; Canadian Journal of Arthropod Identification 2008 ; 2008 >
+
+    }
+
+    {
+      title <
+        name = Canadian Journal of Family and Youth
+      >
+
+      param[journal_id] = cjfy
+
+      au < exists ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
 
     }
 
@@ -90,7 +60,26 @@
 
       param[journal_id] = cjs
 
-      au < manifest ; Canadian Journal of Sociology Volume 33 ; 2008 >
+      au < testing ; Canadian Journal of Sociology Volume 33 ; 2008 >
+
+    }
+
+    {
+      title <
+        name = Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée
+      >
+
+      param[journal_id] = crcl
+
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 >
+      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 >
 
     }
 
@@ -101,10 +90,10 @@
 
       param[journal_id] = esc
 
-      au < manifest ; ESC: English Studies in Canada Volume 29 ; 2003 >
-      au < manifest ; ESC: English Studies in Canada Volume 30 ; 2004 >
-      au < manifest ; ESC: English Studies in Canada Volume 31 ; 2005 >
-      au < manifest ; ESC: English Studies in Canada Volume 32 ; 2006 >
+      au < exists ; ESC: English Studies in Canada Volume 29 ; 2003 >
+      au < exists ; ESC: English Studies in Canada Volume 30 ; 2004 >
+      au < exists ; ESC: English Studies in Canada Volume 31 ; 2005 >
+      au < exists ; ESC: English Studies in Canada Volume 32 ; 2006 >
 
     }
 
@@ -115,9 +104,24 @@
 
       param[journal_id] = eblip
 
-      au < manifest ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
-      au < manifest ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
-      au < manifest ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
+      au < ready ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
+      au < testing ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
+      au < testing ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
+
+    }
+
+    {
+      title <
+        name = International Journal of Qualitative Methods
+      >
+
+      param[journal_id] = ijqm
+
+      au < testing ; International Journal of Qualitative Methods Volume 3 ; 2004 >
+      au < testing ; International Journal of Qualitative Methods Volume 4 ; 2005 >
+      au < ready ; International Journal of Qualitative Methods Volume 5 ; 2006 >
+      au < testing ; International Journal of Qualitative Methods Volume 6 ; 2007 >
+      au < ready ; International Journal of Qualitative Methods Volume 7 ; 2008 >
 
     }
 
@@ -132,29 +136,14 @@
 
     {
       title <
-        name = International Journal of Qualitative Methods
-      >
-
-      param[journal_id] = ijqm
-
-      au < manifest ; International Journal of Qualitative Methods Volume 3 ; 2004 >
-      au < manifest ; International Journal of Qualitative Methods Volume 4 ; 2005 >
-      au < manifest ; International Journal of Qualitative Methods Volume 5 ; 2006 >
-      au < manifest ; International Journal of Qualitative Methods Volume 6 ; 2007 >
-      au < manifest ; International Journal of Qualitative Methods Volume 7 ; 2008 >
-
-    }
-
-    {
-      title <
         name = Journal of Contemporary Issues in Education
       >
 
       param[journal_id] = jcie
 
-      au < manifest ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
-      au < manifest ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
-      au < manifest ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
+      au < exists ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
+      au < exists ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
+      au < exists ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
 
     }
 
@@ -174,8 +163,8 @@
 
       param[journal_id] = jpps
 
-      au < manifest ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 >
-      au < manifest ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 >
+      au < exists ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 >
+      au < exists ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 >
 
     }
 
@@ -186,20 +175,20 @@
 
       param[journal_id] = pi
 
-      au < manifest ; Past Imperfect Volume 1 ; 1992 >
-      au < manifest ; Past Imperfect Volume 2 ; 1993 >
-      au < manifest ; Past Imperfect Volume 3 ; 1994 >
-      au < manifest ; Past Imperfect Volume 4 ; 1995 >
-      au < manifest ; Past Imperfect Volume 5 ; 1996 >
-      au < manifest ; Past Imperfect Volume 6 ; 1997 >
-      au < manifest ; Past Imperfect Volume 7 ; 1998 >
-      au < manifest ; Past Imperfect Volume 8 ; 1999 >
-      au < manifest ; Past Imperfect Volume 9 ; 2001 >
-      au < manifest ; Past Imperfect Volume 10 ; 2004 >
-      au < manifest ; Past Imperfect Volume 11 ; 2005 >
-      au < manifest ; Past Imperfect Volume 12 ; 2006 >
-      au < manifest ; Past Imperfect Volume 13 ; 2007 >
-      au < manifest ; Past Imperfect Volume 14 ; 2008 >
+      au < exists ; Past Imperfect Volume 1 ; 1992 >
+      au < exists ; Past Imperfect Volume 2 ; 1993 >
+      au < exists ; Past Imperfect Volume 3 ; 1994 >
+      au < exists ; Past Imperfect Volume 4 ; 1995 >
+      au < exists ; Past Imperfect Volume 5 ; 1996 >
+      au < exists ; Past Imperfect Volume 6 ; 1997 >
+      au < exists ; Past Imperfect Volume 7 ; 1998 >
+      au < exists ; Past Imperfect Volume 8 ; 1999 >
+      au < exists ; Past Imperfect Volume 9 ; 2001 >
+      au < exists ; Past Imperfect Volume 10 ; 2004 >
+      au < exists ; Past Imperfect Volume 11 ; 2005 >
+      au < exists ; Past Imperfect Volume 12 ; 2006 >
+      au < exists ; Past Imperfect Volume 13 ; 2007 >
+      au < exists ; Past Imperfect Volume 14 ; 2008 >
 
     }
 
@@ -209,6 +198,17 @@
       >
 
       param[journal_id] = pe
+
+    }
+
+    {
+      title <
+        name = TranscUlturAl
+      >
+
+      param[journal_id] = tc
+
+      au < testing ; TranscUlturAl Volume 1 ; 2008 >
 
     }
 
