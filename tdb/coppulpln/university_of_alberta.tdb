@@ -16,7 +16,7 @@
 
       param[journal_id] = af
 
-      au < testing ; Alternative Francophone Volume 1 ; 2008 >
+      au < released ; Alternative Francophone Volume 1 ; 2008 >
 
     }
 
@@ -27,9 +27,9 @@
 
       param[journal_id] = cjai
 
-      au < ready ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
-      au < manifest ; Canadian Journal of Arthropod Identification 2007 ; 2007 >
-      au < manifest ; Canadian Journal of Arthropod Identification 2008 ; 2008 >
+      au < released ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
+      au < released ; Canadian Journal of Arthropod Identification 2007 ; 2007 >
+      au < released ; Canadian Journal of Arthropod Identification 2008 ; 2008 >
 
     }
 
@@ -60,7 +60,7 @@
 
       param[journal_id] = cjs
 
-      au < testing ; Canadian Journal of Sociology Volume 33 ; 2008 >
+      au < released ; Canadian Journal of Sociology Volume 33 ; 2008 >
 
     }
 
@@ -104,9 +104,9 @@
 
       param[journal_id] = eblip
 
-      au < ready ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
-      au < testing ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
-      au < testing ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
+      au < released ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
+      au < released ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
+      au < released ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
 
     }
 
@@ -117,11 +117,11 @@
 
       param[journal_id] = ijqm
 
-      au < testing ; International Journal of Qualitative Methods Volume 3 ; 2004 >
-      au < testing ; International Journal of Qualitative Methods Volume 4 ; 2005 >
-      au < ready ; International Journal of Qualitative Methods Volume 5 ; 2006 >
-      au < testing ; International Journal of Qualitative Methods Volume 6 ; 2007 >
-      au < ready ; International Journal of Qualitative Methods Volume 7 ; 2008 >
+      au < released ; International Journal of Qualitative Methods Volume 3 ; 2004 >
+      au < released ; International Journal of Qualitative Methods Volume 4 ; 2005 >
+      au < released ; International Journal of Qualitative Methods Volume 5 ; 2006 >
+      au < released ; International Journal of Qualitative Methods Volume 6 ; 2007 >
+      au < released ; International Journal of Qualitative Methods Volume 7 ; 2008 >
 
     }
 
@@ -208,7 +208,7 @@
 
       param[journal_id] = tc
 
-      au < testing ; TranscUlturAl Volume 1 ; 2008 >
+      au < released ; TranscUlturAl Volume 1 ; 2008 >
 
     }
 
