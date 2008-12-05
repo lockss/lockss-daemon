@@ -26,11 +26,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sjournals/%s/volume-%s/$&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%slockss.html$&quot;, base_url</string>
       <string>1,&quot;^%sjournals/%s/volume-%s/(regular(\.[0-9]+)?|si\.[0-9]+)\.html$&quot;, base_url, journal_id, volume_name</string>
+      <string>2,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=.*&amp;e=cit$&quot;, base_url</string>
       <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=&quot;, base_url</string>
       <string>1,&quot;^%sfloats/[^/]+/figures/&quot;, base_url</string>
     </list>
