@@ -1,0 +1,80 @@
+{
+  publisher <
+    name = Simon Fraser University
+  >
+
+  {
+    implicit < status ; name ; param[year] >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    
+    {
+      title <
+        name = Archivaria
+      >
+      
+      param[base_url] = http://journals.sfu.ca/archivar/
+      param[journal_id] = archivaria
+
+      au < exists ; Archivaria 1975 ; 1975 >
+      au < exists ; Archivaria 1976 ; 1976 >
+      au < exists ; Archivaria 1977 ; 1977 >
+      au < exists ; Archivaria 1978 ; 1978 >
+      au < exists ; Archivaria 1979 ; 1979 >
+      au < exists ; Archivaria 1980 ; 1980 >
+      au < exists ; Archivaria 1981 ; 1981 >
+      au < exists ; Archivaria 1982 ; 1982 >
+      au < exists ; Archivaria 1983 ; 1983 >
+      au < exists ; Archivaria 1984 ; 1984 >
+      au < exists ; Archivaria 1985 ; 1985 >
+      au < exists ; Archivaria 1986 ; 1986 >
+      au < exists ; Archivaria 1987 ; 1987 >
+      au < exists ; Archivaria 1988 ; 1988 >
+      au < exists ; Archivaria 1989 ; 1989 >
+      au < exists ; Archivaria 1990 ; 1990 >
+      au < exists ; Archivaria 1991 ; 1991 >
+      au < exists ; Archivaria 1992 ; 1992 >
+      au < exists ; Archivaria 1993 ; 1993 >
+      au < exists ; Archivaria 1994 ; 1994 >
+      au < exists ; Archivaria 1995 ; 1995 >
+      au < exists ; Archivaria 1996 ; 1996 >
+      au < exists ; Archivaria 1997 ; 1997 >
+      au < exists ; Archivaria Volume 1998 ; 1998 >
+      au < exists ; Archivaria Volume 1999 ; 1999 >
+      au < exists ; Archivaria Volume 2000 ; 2000 >
+      au < exists ; Archivaria Volume 2001 ; 2001 >
+      au < exists ; Archivaria Volume 2002 ; 2002 >
+      au < exists ; Archivaria Volume 2003 ; 2003 >
+
+    }
+    
+    {
+      title <
+        name = International Journal of Education Policy and Leadership
+      >
+      
+      param[base_url] = http://journals.sfu.ca/ijepl/
+      param[journal_id] = ijepl
+
+      au < manifest ; International Journal of Education Policy and Leadership Volume 1 ; 2006 >
+      au < manifest ; International Journal of Education Policy and Leadership Volume 2 ; 2007 >
+      au < manifest ; International Journal of Education Policy and Leadership Volume 3 ; 2008 >      
+      
+      }
+      
+      {
+      title <
+        name = Paideusis
+      >
+      
+      param[base_url] = http://journals.sfu.ca/paideusis/
+      param[journal_id] = paideusis
+
+      au < exists ; Paideusis Volume 15 ; 2006 >
+      au < exists ; Paideusis Volume 16 ; 2007 >
+      au < exists ; Paideusis Volume 17 ; 2008 >      
+      
+      }
+  }
+}
+
