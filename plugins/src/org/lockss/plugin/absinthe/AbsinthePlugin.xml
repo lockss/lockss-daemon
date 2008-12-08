@@ -24,8 +24,9 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sarchives%02d\.htm$&quot;, base_url, au_short_year</string>
-      <string>1,&quot;%s(stories/|poetics/|archives/|book_reviews/|images/)&quot;, base_url</string>
+      <string>1,&quot;^%sarchives%02d\.htm$&quot;, base_url, au_short_year</string>
+      <string>2,&quot;^%sbook_reviews/book_reviews.htm$&quot;, base_url</string>
+      <string>1,&quot;^%s(stories|poetics|archives|book_reviews|images)/&quot;, base_url</string>
     </list>
   </entry>
   <entry>
