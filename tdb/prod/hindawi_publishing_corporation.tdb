@@ -6,6 +6,7 @@
   implicit < status ; name ; param[volume_name] >
 
   plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
+  rights = openaccess
   param[base_url] = http://www.hindawi.com/
 
   {
