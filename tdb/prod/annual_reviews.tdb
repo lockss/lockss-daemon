@@ -1,0 +1,1665 @@
+{
+  publisher <
+    name = Annual Reviews
+  >
+  
+  implicit < status ; name ; param[volume] >
+ 
+  plugin = uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin
+  param[base_url] = http://arjournals.annualreviews.org/
+
+  {
+    title <
+      name = Annual Review of Anthropology 
+    >
+
+    param[journal_id] = anthro
+    param[short_journal_id] = an
+
+    au < released ; Annual Review of Anthropology Volume 1 ; 1 >
+    au < released ; Annual Review of Anthropology Volume 2 ; 2 >
+    au < released ; Annual Review of Anthropology Volume 3 ; 3 >
+    au < released ; Annual Review of Anthropology Volume 4 ; 4 >
+    au < released ; Annual Review of Anthropology Volume 5 ; 5 >
+    au < released ; Annual Review of Anthropology Volume 6 ; 6 >
+    au < released ; Annual Review of Anthropology Volume 7 ; 7 >
+    au < released ; Annual Review of Anthropology Volume 8 ; 8 >
+    au < released ; Annual Review of Anthropology Volume 9 ; 9 >
+    au < released ; Annual Review of Anthropology Volume 10 ; 10 >
+    au < released ; Annual Review of Anthropology Volume 11 ; 11 >
+    au < released ; Annual Review of Anthropology Volume 12 ; 12 >
+    au < released ; Annual Review of Anthropology Volume 13 ; 13 >
+    au < released ; Annual Review of Anthropology Volume 14 ; 14 >
+    au < released ; Annual Review of Anthropology Volume 15 ; 15 >
+    au < released ; Annual Review of Anthropology Volume 16 ; 16 >
+    au < released ; Annual Review of Anthropology Volume 17 ; 17 >
+    au < released ; Annual Review of Anthropology Volume 18 ; 18 >
+    au < released ; Annual Review of Anthropology Volume 19 ; 19 >
+    au < released ; Annual Review of Anthropology Volume 20 ; 20 >
+    au < released ; Annual Review of Anthropology Volume 21 ; 21 >
+    au < released ; Annual Review of Anthropology Volume 22 ; 22 >
+    au < released ; Annual Review of Anthropology Volume 23 ; 23 >
+    au < released ; Annual Review of Anthropology Volume 24 ; 24 >
+    au < released ; Annual Review of Anthropology Volume 25 ; 25 >
+    au < released ; Annual Review of Anthropology Volume 26 ; 26 >
+    au < released ; Annual Review of Anthropology Volume 27 ; 27 >
+    au < released ; Annual Review of Anthropology Volume 28 ; 28 >
+    au < released ; Annual Review of Anthropology Volume 29 ; 29 >
+    au < released ; Annual Review of Anthropology Volume 30 ; 30 >
+    au < released ; Annual Review of Anthropology Volume 31 ; 31 >
+    au < released ; Annual Review of Anthropology Volume 32 ; 32 >
+    au < released ; Annual Review of Anthropology Volume 33 ; 33 >
+    au < released ; Annual Review of Anthropology Volume 34 ; 34 >
+    au < released ; Annual Review of Anthropology Volume 35 ; 35 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Astronomy and Astrophysics 
+    >
+
+    param[journal_id] = astro
+    param[short_journal_id] = aa
+
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 1 ; 1 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 2 ; 2 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 3 ; 3 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 4 ; 4 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 5 ; 5 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 6 ; 6 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 7 ; 7 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 8 ; 8 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 9 ; 9 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 10 ; 10 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 11 ; 11 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 12 ; 12 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 13 ; 13 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 14 ; 14 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 15 ; 15 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 16 ; 16 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 17 ; 17 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 18 ; 18 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 19 ; 19 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 20 ; 20 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 21 ; 21 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 22 ; 22 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 23 ; 23 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 24 ; 24 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 25 ; 25 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 26 ; 26 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 27 ; 27 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 28 ; 28 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 29 ; 29 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 30 ; 30 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 31 ; 31 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 32 ; 32 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 33 ; 33 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 34 ; 34 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 35 ; 35 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 36 ; 36 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 37 ; 37 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 38 ; 38 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 39 ; 39 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 40 ; 40 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 41 ; 41 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 42 ; 42 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 43 ; 43 >
+    au < released ; Annual Review of Astronomy and Astrophysics Volume 44 ; 44 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Biochemistry 
+    >
+
+    param[journal_id] = biochem
+    param[short_journal_id] = bi
+
+    au < released ; Annual Review of Biochemistry Volume 1 ; 1 >
+    au < released ; Annual Review of Biochemistry Volume 2 ; 2 >
+    au < ready ; Annual Review of Biochemistry Volume 3 ; 3 >
+    au < released ; Annual Review of Biochemistry Volume 4 ; 4 >
+    au < released ; Annual Review of Biochemistry Volume 5 ; 5 >
+    au < released ; Annual Review of Biochemistry Volume 6 ; 6 >
+    au < released ; Annual Review of Biochemistry Volume 7 ; 7 >
+    au < released ; Annual Review of Biochemistry Volume 8 ; 8 >
+    au < released ; Annual Review of Biochemistry Volume 9 ; 9 >
+    au < released ; Annual Review of Biochemistry Volume 10 ; 10 >
+    au < released ; Annual Review of Biochemistry Volume 11 ; 11 >
+    au < released ; Annual Review of Biochemistry Volume 12 ; 12 >
+    au < released ; Annual Review of Biochemistry Volume 13 ; 13 >
+    au < released ; Annual Review of Biochemistry Volume 14 ; 14 >
+    au < released ; Annual Review of Biochemistry Volume 15 ; 15 >
+    au < released ; Annual Review of Biochemistry Volume 16 ; 16 >
+    au < released ; Annual Review of Biochemistry Volume 17 ; 17 >
+    au < released ; Annual Review of Biochemistry Volume 18 ; 18 >
+    au < released ; Annual Review of Biochemistry Volume 19 ; 19 >
+    au < released ; Annual Review of Biochemistry Volume 20 ; 20 >
+    au < released ; Annual Review of Biochemistry Volume 21 ; 21 >
+    au < released ; Annual Review of Biochemistry Volume 22 ; 22 >
+    au < released ; Annual Review of Biochemistry Volume 23 ; 23 >
+    au < released ; Annual Review of Biochemistry Volume 24 ; 24 >
+    au < released ; Annual Review of Biochemistry Volume 25 ; 25 >
+    au < released ; Annual Review of Biochemistry Volume 26 ; 26 >
+    au < released ; Annual Review of Biochemistry Volume 27 ; 27 >
+    au < released ; Annual Review of Biochemistry Volume 28 ; 28 >
+    au < released ; Annual Review of Biochemistry Volume 29 ; 29 >
+    au < released ; Annual Review of Biochemistry Volume 30 ; 30 >
+    au < released ; Annual Review of Biochemistry Volume 31 ; 31 >
+    au < released ; Annual Review of Biochemistry Volume 32 ; 32 >
+    au < released ; Annual Review of Biochemistry Volume 33 ; 33 >
+    au < released ; Annual Review of Biochemistry Volume 34 ; 34 >
+    au < released ; Annual Review of Biochemistry Volume 35 ; 35 >
+    au < released ; Annual Review of Biochemistry Volume 36 ; 36 >
+    au < released ; Annual Review of Biochemistry Volume 37 ; 37 >
+    au < released ; Annual Review of Biochemistry Volume 38 ; 38 >
+    au < released ; Annual Review of Biochemistry Volume 39 ; 39 >
+    au < released ; Annual Review of Biochemistry Volume 40 ; 40 >
+    au < released ; Annual Review of Biochemistry Volume 41 ; 41 >
+    au < released ; Annual Review of Biochemistry Volume 42 ; 42 >
+    au < released ; Annual Review of Biochemistry Volume 43 ; 43 >
+    au < released ; Annual Review of Biochemistry Volume 44 ; 44 >
+    au < released ; Annual Review of Biochemistry Volume 45 ; 45 >
+    au < released ; Annual Review of Biochemistry Volume 46 ; 46 >
+    au < released ; Annual Review of Biochemistry Volume 47 ; 47 >
+    au < released ; Annual Review of Biochemistry Volume 48 ; 48 >
+    au < released ; Annual Review of Biochemistry Volume 49 ; 49 >
+    au < released ; Annual Review of Biochemistry Volume 50 ; 50 >
+    au < released ; Annual Review of Biochemistry Volume 51 ; 51 >
+    au < released ; Annual Review of Biochemistry Volume 52 ; 52 >
+    au < released ; Annual Review of Biochemistry Volume 53 ; 53 >
+    au < released ; Annual Review of Biochemistry Volume 54 ; 54 >
+    au < released ; Annual Review of Biochemistry Volume 55 ; 55 >
+    au < released ; Annual Review of Biochemistry Volume 56 ; 56 >
+    au < released ; Annual Review of Biochemistry Volume 57 ; 57 >
+    au < released ; Annual Review of Biochemistry Volume 58 ; 58 >
+    au < released ; Annual Review of Biochemistry Volume 59 ; 59 >
+    au < released ; Annual Review of Biochemistry Volume 60 ; 60 >
+    au < released ; Annual Review of Biochemistry Volume 61 ; 61 >
+    au < released ; Annual Review of Biochemistry Volume 62 ; 62 >
+    au < released ; Annual Review of Biochemistry Volume 63 ; 63 >
+    au < released ; Annual Review of Biochemistry Volume 64 ; 64 >
+    au < released ; Annual Review of Biochemistry Volume 65 ; 65 >
+    au < released ; Annual Review of Biochemistry Volume 66 ; 66 >
+    au < released ; Annual Review of Biochemistry Volume 67 ; 67 >
+    au < released ; Annual Review of Biochemistry Volume 68 ; 68 >
+    au < released ; Annual Review of Biochemistry Volume 69 ; 69 >
+    au < released ; Annual Review of Biochemistry Volume 70 ; 70 >
+    au < released ; Annual Review of Biochemistry Volume 71 ; 71 >
+    au < released ; Annual Review of Biochemistry Volume 72 ; 72 >
+    au < released ; Annual Review of Biochemistry Volume 73 ; 73 >
+    au < released ; Annual Review of Biochemistry Volume 74 ; 74 >
+    au < released ; Annual Review of Biochemistry Volume 75 ; 75 >
+    au < released ; Annual Review of Biochemistry Volume 76 ; 76 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Biomedical Engineering 
+    >
+
+    param[journal_id] = bioeng
+    param[short_journal_id] = be
+
+    au < released ; Annual Review of Biomedical Engineering Volume 1 ; 1 >
+    au < released ; Annual Review of Biomedical Engineering Volume 2 ; 2 >
+    au < released ; Annual Review of Biomedical Engineering Volume 3 ; 3 >
+    au < released ; Annual Review of Biomedical Engineering Volume 4 ; 4 >
+    au < released ; Annual Review of Biomedical Engineering Volume 5 ; 5 >
+    au < released ; Annual Review of Biomedical Engineering Volume 6 ; 6 >
+    au < released ; Annual Review of Biomedical Engineering Volume 7 ; 7 >
+    au < released ; Annual Review of Biomedical Engineering Volume 8 ; 8 >
+    au < released ; Annual Review of Biomedical Engineering Volume 9 ; 9 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Biophysics and Bioengineering 
+    >
+
+    param[journal_id] = biophys
+    param[short_journal_id] = bb
+
+    au < ready ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 2 ; 2 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 3 ; 3 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 4 ; 4 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 5 ; 5 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 6 ; 6 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 7 ; 7 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 8 ; 8 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 9 ; 9 >
+    au < ready ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 11 ; 11 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 12 ; 12 >
+    au < released ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Biophysics and Biomolecular Structure 
+    >
+
+    param[journal_id] = biophys
+    param[short_journal_id] = bb
+
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 21 ; 21 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 22 ; 22 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 23 ; 23 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 24 ; 24 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 25 ; 25 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 26 ; 26 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 27 ; 27 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 28 ; 28 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 29 ; 29 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 30 ; 30 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 31 ; 31 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 32 ; 32 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 33 ; 33 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 34 ; 34 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 35 ; 35 >
+    au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 36 ; 36 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Biophysics and Biophysical Chemistry 
+    >
+
+    param[journal_id] = biophys
+    param[short_journal_id] = bb
+
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
+    au < ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
+    au < ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Cell and Developmental Biology 
+    >
+
+    param[journal_id] = cellbio
+    param[short_journal_id] = cb
+
+    au < released ; Annual Review of Cell and Developmental Biology Volume 11 ; 11 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 12 ; 12 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 13 ; 13 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 14 ; 14 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 15 ; 15 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 16 ; 16 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 17 ; 17 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 18 ; 18 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 19 ; 19 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 20 ; 20 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 21 ; 21 >
+    au < released ; Annual Review of Cell and Developmental Biology Volume 22 ; 22 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Cell Biology 
+    >
+
+    param[journal_id] = cellbio
+    param[short_journal_id] = cb
+
+    au < released ; Annual Review of Cell Biology Volume 1 ; 1 >
+    au < released ; Annual Review of Cell Biology Volume 2 ; 2 >
+    au < released ; Annual Review of Cell Biology Volume 3 ; 3 >
+    au < released ; Annual Review of Cell Biology Volume 4 ; 4 >
+    au < released ; Annual Review of Cell Biology Volume 5 ; 5 >
+    au < released ; Annual Review of Cell Biology Volume 6 ; 6 >
+    au < released ; Annual Review of Cell Biology Volume 7 ; 7 >
+    au < released ; Annual Review of Cell Biology Volume 8 ; 8 >
+    au < released ; Annual Review of Cell Biology Volume 9 ; 9 >
+    au < released ; Annual Review of Cell Biology Volume 10 ; 10 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Clinical Psychology 
+    >
+
+    param[journal_id] = clinpsy
+    param[short_journal_id] = none
+
+    au < released ; Annual Review of Clinical Psychology Volume 1 ; 1 >
+    au < released ; Annual Review of Clinical Psychology Volume 2 ; 2 >
+    au < released ; Annual Review of Clinical Psychology Volume 3 ; 3 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Earth and Planetary Sciences 
+    >
+
+    param[journal_id] = earth
+    param[short_journal_id] = ea
+
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 1 ; 1 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 2 ; 2 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 3 ; 3 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 4 ; 4 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 5 ; 5 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 6 ; 6 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 7 ; 7 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 8 ; 8 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 9 ; 9 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 10 ; 10 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 11 ; 11 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 12 ; 12 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 13 ; 13 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 14 ; 14 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 15 ; 15 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 16 ; 16 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 17 ; 17 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 18 ; 18 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 19 ; 19 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 20 ; 20 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 21 ; 21 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 22 ; 22 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 23 ; 23 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 24 ; 24 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 25 ; 25 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 26 ; 26 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 27 ; 27 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 28 ; 28 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 29 ; 29 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 30 ; 30 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 31 ; 31 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 32 ; 32 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 33 ; 33 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 34 ; 34 >
+    au < released ; Annual Review of Earth and Planetary Sciences Volume 35 ; 35 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Ecology and Systematics 
+    >
+
+    param[journal_id] = ecolsys
+    param[short_journal_id] = es
+
+    au < released ; Annual Review of Ecology and Systematics Volume 1 ; 1 >
+    au < released ; Annual Review of Ecology and Systematics Volume 2 ; 2 >
+    au < released ; Annual Review of Ecology and Systematics Volume 3 ; 3 >
+    au < released ; Annual Review of Ecology and Systematics Volume 4 ; 4 >
+    au < released ; Annual Review of Ecology and Systematics Volume 5 ; 5 >
+    au < released ; Annual Review of Ecology and Systematics Volume 6 ; 6 >
+    au < released ; Annual Review of Ecology and Systematics Volume 7 ; 7 >
+    au < released ; Annual Review of Ecology and Systematics Volume 8 ; 8 >
+    au < released ; Annual Review of Ecology and Systematics Volume 9 ; 9 >
+    au < released ; Annual Review of Ecology and Systematics Volume 10 ; 10 >
+    au < released ; Annual Review of Ecology and Systematics Volume 11 ; 11 >
+    au < released ; Annual Review of Ecology and Systematics Volume 12 ; 12 >
+    au < released ; Annual Review of Ecology and Systematics Volume 13 ; 13 >
+    au < released ; Annual Review of Ecology and Systematics Volume 14 ; 14 >
+    au < released ; Annual Review of Ecology and Systematics Volume 15 ; 15 >
+    au < released ; Annual Review of Ecology and Systematics Volume 16 ; 16 >
+    au < released ; Annual Review of Ecology and Systematics Volume 17 ; 17 >
+    au < released ; Annual Review of Ecology and Systematics Volume 18 ; 18 >
+    au < released ; Annual Review of Ecology and Systematics Volume 19 ; 19 >
+    au < released ; Annual Review of Ecology and Systematics Volume 20 ; 20 >
+    au < released ; Annual Review of Ecology and Systematics Volume 21 ; 21 >
+    au < released ; Annual Review of Ecology and Systematics Volume 22 ; 22 >
+    au < released ; Annual Review of Ecology and Systematics Volume 23 ; 23 >
+    au < released ; Annual Review of Ecology and Systematics Volume 24 ; 24 >
+    au < released ; Annual Review of Ecology and Systematics Volume 25 ; 25 >
+    au < released ; Annual Review of Ecology and Systematics Volume 26 ; 26 >
+    au < released ; Annual Review of Ecology and Systematics Volume 27 ; 27 >
+    au < released ; Annual Review of Ecology and Systematics Volume 28 ; 28 >
+    au < released ; Annual Review of Ecology and Systematics Volume 29 ; 29 >
+    au < released ; Annual Review of Ecology and Systematics Volume 30 ; 30 >
+    au < released ; Annual Review of Ecology and Systematics Volume 31 ; 31 >
+    au < released ; Annual Review of Ecology and Systematics Volume 32 ; 32 >
+    au < released ; Annual Review of Ecology and Systematics Volume 33 ; 33 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Ecology, Evolution, and Systematics 
+    >
+
+    param[journal_id] = ecolsys
+    param[short_journal_id] = es
+
+    au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 34 ; 34 >
+    au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 35 ; 35 >
+    au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 36 ; 36 >
+    au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 37 ; 37 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Energy 
+    >
+
+    param[journal_id] = energy
+    param[short_journal_id] = eg
+
+    au < released ; Annual Review of Energy Volume 1 ; 1 >
+    au < released ; Annual Review of Energy Volume 2 ; 2 >
+    au < released ; Annual Review of Energy Volume 3 ; 3 >
+    au < released ; Annual Review of Energy Volume 4 ; 4 >
+    au < released ; Annual Review of Energy Volume 5 ; 5 >
+    au < released ; Annual Review of Energy Volume 6 ; 6 >
+    au < released ; Annual Review of Energy Volume 7 ; 7 >
+    au < released ; Annual Review of Energy Volume 8 ; 8 >
+    au < released ; Annual Review of Energy Volume 9 ; 9 >
+    au < released ; Annual Review of Energy Volume 10 ; 10 >
+    au < released ; Annual Review of Energy Volume 11 ; 11 >
+    au < released ; Annual Review of Energy Volume 12 ; 12 >
+    au < released ; Annual Review of Energy Volume 13 ; 13 >
+    au < released ; Annual Review of Energy Volume 14 ; 14 >
+    au < released ; Annual Review of Energy Volume 15 ; 15 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Energy and the Environment 
+    >
+
+    param[journal_id] = energy
+    param[short_journal_id] = eg
+
+    au < released ; Annual Review of Energy and the Environment Volume 16 ; 16 >
+    au < released ; Annual Review of Energy and the Environment Volume 17 ; 17 >
+    au < released ; Annual Review of Energy and the Environment Volume 18 ; 18 >
+    au < released ; Annual Review of Energy and the Environment Volume 19 ; 19 >
+    au < released ; Annual Review of Energy and the Environment Volume 20 ; 20 >
+    au < released ; Annual Review of Energy and the Environment Volume 21 ; 21 >
+    au < released ; Annual Review of Energy and the Environment Volume 22 ; 22 >
+    au < released ; Annual Review of Energy and the Environment Volume 23 ; 23 >
+    au < released ; Annual Review of Energy and the Environment Volume 24 ; 24 >
+    au < released ; Annual Review of Energy and the Environment Volume 25 ; 25 >
+    au < released ; Annual Review of Energy and the Environment Volume 26 ; 26 >
+    au < released ; Annual Review of Energy and the Environment Volume 27 ; 27 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Environment and Resources 
+    >
+
+    param[journal_id] = energy
+    param[short_journal_id] = eg
+
+    au < released ; Annual Review of Environment and Resources Volume 28 ; 28 >
+    au < released ; Annual Review of Environment and Resources Volume 29 ; 29 >
+    au < released ; Annual Review of Environment and Resources Volume 30 ; 30 >
+    au < released ; Annual Review of Environment and Resources Volume 31 ; 31 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Entomology 
+    >
+
+    param[journal_id] = ento
+    param[short_journal_id] = en
+
+    au < released ; Annual Review of Entomology Volume 1 ; 1 >
+    au < released ; Annual Review of Entomology Volume 2 ; 2 >
+    au < released ; Annual Review of Entomology Volume 3 ; 3 >
+    au < released ; Annual Review of Entomology Volume 4 ; 4 >
+    au < released ; Annual Review of Entomology Volume 5 ; 5 >
+    au < released ; Annual Review of Entomology Volume 6 ; 6 >
+    au < released ; Annual Review of Entomology Volume 7 ; 7 >
+    au < released ; Annual Review of Entomology Volume 8 ; 8 >
+    au < released ; Annual Review of Entomology Volume 9 ; 9 >
+    au < released ; Annual Review of Entomology Volume 10 ; 10 >
+    au < released ; Annual Review of Entomology Volume 11 ; 11 >
+    au < released ; Annual Review of Entomology Volume 12 ; 12 >
+    au < released ; Annual Review of Entomology Volume 13 ; 13 >
+    au < released ; Annual Review of Entomology Volume 14 ; 14 >
+    au < released ; Annual Review of Entomology Volume 15 ; 15 >
+    au < released ; Annual Review of Entomology Volume 16 ; 16 >
+    au < released ; Annual Review of Entomology Volume 17 ; 17 >
+    au < released ; Annual Review of Entomology Volume 18 ; 18 >
+    au < released ; Annual Review of Entomology Volume 19 ; 19 >
+    au < released ; Annual Review of Entomology Volume 20 ; 20 >
+    au < released ; Annual Review of Entomology Volume 21 ; 21 >
+    au < released ; Annual Review of Entomology Volume 22 ; 22 >
+    au < released ; Annual Review of Entomology Volume 23 ; 23 >
+    au < released ; Annual Review of Entomology Volume 24 ; 24 >
+    au < released ; Annual Review of Entomology Volume 25 ; 25 >
+    au < released ; Annual Review of Entomology Volume 26 ; 26 >
+    au < released ; Annual Review of Entomology Volume 27 ; 27 >
+    au < released ; Annual Review of Entomology Volume 28 ; 28 >
+    au < released ; Annual Review of Entomology Volume 29 ; 29 >
+    au < released ; Annual Review of Entomology Volume 30 ; 30 >
+    au < released ; Annual Review of Entomology Volume 31 ; 31 >
+    au < released ; Annual Review of Entomology Volume 32 ; 32 >
+    au < released ; Annual Review of Entomology Volume 33 ; 33 >
+    au < released ; Annual Review of Entomology Volume 34 ; 34 >
+    au < released ; Annual Review of Entomology Volume 35 ; 35 >
+    au < released ; Annual Review of Entomology Volume 36 ; 36 >
+    au < released ; Annual Review of Entomology Volume 37 ; 37 >
+    au < released ; Annual Review of Entomology Volume 38 ; 38 >
+    au < released ; Annual Review of Entomology Volume 39 ; 39 >
+    au < released ; Annual Review of Entomology Volume 40 ; 40 >
+    au < released ; Annual Review of Entomology Volume 41 ; 41 >
+    au < released ; Annual Review of Entomology Volume 42 ; 42 >
+    au < released ; Annual Review of Entomology Volume 43 ; 43 >
+    au < released ; Annual Review of Entomology Volume 44 ; 44 >
+    au < released ; Annual Review of Entomology Volume 45 ; 45 >
+    au < released ; Annual Review of Entomology Volume 46 ; 46 >
+    au < released ; Annual Review of Entomology Volume 47 ; 47 >
+    au < released ; Annual Review of Entomology Volume 48 ; 48 >
+    au < released ; Annual Review of Entomology Volume 49 ; 49 >
+    au < released ; Annual Review of Entomology Volume 50 ; 50 >
+    au < released ; Annual Review of Entomology Volume 51 ; 51 >
+    au < released ; Annual Review of Entomology Volume 52 ; 52 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Fluid Mechanics 
+    >
+
+    param[journal_id] = fluid
+    param[short_journal_id] = fl
+
+    au < released ; Annual Review of Fluid Mechanics Volume 1 ; 1 >
+    au < released ; Annual Review of Fluid Mechanics Volume 2 ; 2 >
+    au < released ; Annual Review of Fluid Mechanics Volume 3 ; 3 >
+    au < released ; Annual Review of Fluid Mechanics Volume 4 ; 4 >
+    au < released ; Annual Review of Fluid Mechanics Volume 5 ; 5 >
+    au < released ; Annual Review of Fluid Mechanics Volume 6 ; 6 >
+    au < released ; Annual Review of Fluid Mechanics Volume 7 ; 7 >
+    au < released ; Annual Review of Fluid Mechanics Volume 8 ; 8 >
+    au < released ; Annual Review of Fluid Mechanics Volume 9 ; 9 >
+    au < released ; Annual Review of Fluid Mechanics Volume 10 ; 10 >
+    au < released ; Annual Review of Fluid Mechanics Volume 11 ; 11 >
+    au < released ; Annual Review of Fluid Mechanics Volume 12 ; 12 >
+    au < released ; Annual Review of Fluid Mechanics Volume 13 ; 13 >
+    au < released ; Annual Review of Fluid Mechanics Volume 14 ; 14 >
+    au < released ; Annual Review of Fluid Mechanics Volume 15 ; 15 >
+    au < released ; Annual Review of Fluid Mechanics Volume 16 ; 16 >
+    au < released ; Annual Review of Fluid Mechanics Volume 17 ; 17 >
+    au < released ; Annual Review of Fluid Mechanics Volume 18 ; 18 >
+    au < released ; Annual Review of Fluid Mechanics Volume 19 ; 19 >
+    au < released ; Annual Review of Fluid Mechanics Volume 20 ; 20 >
+    au < released ; Annual Review of Fluid Mechanics Volume 21 ; 21 >
+    au < released ; Annual Review of Fluid Mechanics Volume 22 ; 22 >
+    au < released ; Annual Review of Fluid Mechanics Volume 23 ; 23 >
+    au < released ; Annual Review of Fluid Mechanics Volume 24 ; 24 >
+    au < released ; Annual Review of Fluid Mechanics Volume 25 ; 25 >
+    au < released ; Annual Review of Fluid Mechanics Volume 26 ; 26 >
+    au < released ; Annual Review of Fluid Mechanics Volume 27 ; 27 >
+    au < released ; Annual Review of Fluid Mechanics Volume 28 ; 28 >
+    au < released ; Annual Review of Fluid Mechanics Volume 29 ; 29 >
+    au < released ; Annual Review of Fluid Mechanics Volume 30 ; 30 >
+    au < released ; Annual Review of Fluid Mechanics Volume 31 ; 31 >
+    au < released ; Annual Review of Fluid Mechanics Volume 32 ; 32 >
+    au < released ; Annual Review of Fluid Mechanics Volume 33 ; 33 >
+    au < released ; Annual Review of Fluid Mechanics Volume 34 ; 34 >
+    au < released ; Annual Review of Fluid Mechanics Volume 35 ; 35 >
+    au < released ; Annual Review of Fluid Mechanics Volume 36 ; 36 >
+    au < released ; Annual Review of Fluid Mechanics Volume 37 ; 37 >
+    au < released ; Annual Review of Fluid Mechanics Volume 38 ; 38 >
+    au < released ; Annual Review of Fluid Mechanics Volume 39 ; 39 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Genetics 
+    >
+
+    param[journal_id] = genet
+    param[short_journal_id] = ge
+
+    au < released ; Annual Review of Genetics Volume 1 ; 1 >
+    au < released ; Annual Review of Genetics Volume 2 ; 2 >
+    au < released ; Annual Review of Genetics Volume 3 ; 3 >
+    au < released ; Annual Review of Genetics Volume 4 ; 4 >
+    au < released ; Annual Review of Genetics Volume 5 ; 5 >
+    au < released ; Annual Review of Genetics Volume 6 ; 6 >
+    au < released ; Annual Review of Genetics Volume 7 ; 7 >
+    au < released ; Annual Review of Genetics Volume 8 ; 8 >
+    au < released ; Annual Review of Genetics Volume 9 ; 9 >
+    au < released ; Annual Review of Genetics Volume 10 ; 10 >
+    au < released ; Annual Review of Genetics Volume 11 ; 11 >
+    au < released ; Annual Review of Genetics Volume 12 ; 12 >
+    au < released ; Annual Review of Genetics Volume 13 ; 13 >
+    au < released ; Annual Review of Genetics Volume 14 ; 14 >
+    au < released ; Annual Review of Genetics Volume 15 ; 15 >
+    au < released ; Annual Review of Genetics Volume 16 ; 16 >
+    au < released ; Annual Review of Genetics Volume 17 ; 17 >
+    au < released ; Annual Review of Genetics Volume 18 ; 18 >
+    au < released ; Annual Review of Genetics Volume 19 ; 19 >
+    au < released ; Annual Review of Genetics Volume 20 ; 20 >
+    au < released ; Annual Review of Genetics Volume 21 ; 21 >
+    au < released ; Annual Review of Genetics Volume 22 ; 22 >
+    au < released ; Annual Review of Genetics Volume 23 ; 23 >
+    au < released ; Annual Review of Genetics Volume 24 ; 24 >
+    au < released ; Annual Review of Genetics Volume 25 ; 25 >
+    au < released ; Annual Review of Genetics Volume 26 ; 26 >
+    au < released ; Annual Review of Genetics Volume 27 ; 27 >
+    au < released ; Annual Review of Genetics Volume 28 ; 28 >
+    au < released ; Annual Review of Genetics Volume 29 ; 29 >
+    au < released ; Annual Review of Genetics Volume 30 ; 30 >
+    au < released ; Annual Review of Genetics Volume 31 ; 31 >
+    au < released ; Annual Review of Genetics Volume 32 ; 32 >
+    au < released ; Annual Review of Genetics Volume 33 ; 33 >
+    au < released ; Annual Review of Genetics Volume 34 ; 34 >
+    au < released ; Annual Review of Genetics Volume 35 ; 35 >
+    au < released ; Annual Review of Genetics Volume 36 ; 36 >
+    au < released ; Annual Review of Genetics Volume 37 ; 37 >
+    au < released ; Annual Review of Genetics Volume 38 ; 38 >
+    au < released ; Annual Review of Genetics Volume 39 ; 39 >
+    au < released ; Annual Review of Genetics Volume 40 ; 40 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Genomics and Human Genetics 
+    >
+
+    param[journal_id] = genom
+    param[short_journal_id] = none
+
+    au < released ; Annual Review of Genomics and Human Genetics Volume 1 ; 1 >
+    au < released ; Annual Review of Genomics and Human Genetics Volume 2 ; 2 >
+    au < released ; Annual Review of Genomics and Human Genetics Volume 3 ; 3 >
+    au < released ; Annual Review of Genomics and Human Genetics Volume 4 ; 4 >
+    au < released ; Annual Review of Genomics and Human Genetics Volume 5 ; 5 >
+    au < released ; Annual Review of Genomics and Human Genetics Volume 6 ; 6 >
+    au < released ; Annual Review of Genomics and Human Genetics Volume 7 ; 7 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Immunology 
+    >
+
+    param[journal_id] = immunol
+    param[short_journal_id] = iy
+
+    au < released ; Annual Review of Immunology Volume 1 ; 1 >
+    au < released ; Annual Review of Immunology Volume 2 ; 2 >
+    au < released ; Annual Review of Immunology Volume 3 ; 3 >
+    au < released ; Annual Review of Immunology Volume 4 ; 4 >
+    au < released ; Annual Review of Immunology Volume 5 ; 5 >
+    au < released ; Annual Review of Immunology Volume 6 ; 6 >
+    au < released ; Annual Review of Immunology Volume 7 ; 7 >
+    au < released ; Annual Review of Immunology Volume 8 ; 8 >
+    au < released ; Annual Review of Immunology Volume 9 ; 9 >
+    au < released ; Annual Review of Immunology Volume 10 ; 10 >
+    au < released ; Annual Review of Immunology Volume 11 ; 11 >
+    au < released ; Annual Review of Immunology Volume 12 ; 12 >
+    au < released ; Annual Review of Immunology Volume 13 ; 13 >
+    au < released ; Annual Review of Immunology Volume 14 ; 14 >
+    au < released ; Annual Review of Immunology Volume 15 ; 15 >
+    au < released ; Annual Review of Immunology Volume 16 ; 16 >
+    au < released ; Annual Review of Immunology Volume 17 ; 17 >
+    au < released ; Annual Review of Immunology Volume 18 ; 18 >
+    au < released ; Annual Review of Immunology Volume 19 ; 19 >
+    au < released ; Annual Review of Immunology Volume 20 ; 20 >
+    au < released ; Annual Review of Immunology Volume 21 ; 21 >
+    au < released ; Annual Review of Immunology Volume 22 ; 22 >
+    au < released ; Annual Review of Immunology Volume 23 ; 23 >
+    au < released ; Annual Review of Immunology Volume 24 ; 24 >
+    au < released ; Annual Review of Immunology Volume 25 ; 25 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Law and Social Science 
+    >
+
+    param[journal_id] = lawsocsci
+    param[short_journal_id] = none
+
+    au < released ; Annual Review of Law and Social Science Volume 1 ; 1 >
+    au < released ; Annual Review of Law and Social Science Volume 2 ; 2 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Materials Research 
+    >
+
+    param[journal_id] = matsci
+    param[short_journal_id] = ms
+
+    au < released ; Annual Review of Materials Research Volume 31 ; 31 >
+    au < released ; Annual Review of Materials Research Volume 32 ; 32 >
+    au < released ; Annual Review of Materials Research Volume 33 ; 33 >
+    au < released ; Annual Review of Materials Research Volume 34 ; 34 >
+    au < released ; Annual Review of Materials Research Volume 35 ; 35 >
+    au < released ; Annual Review of Materials Research Volume 36 ; 36 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Materials Science 
+    >
+
+    param[journal_id] = matsci
+    param[short_journal_id] = ms
+
+    au < released ; Annual Review of Materials Science Volume 1 ; 1 >
+    au < released ; Annual Review of Materials Science Volume 2 ; 2 >
+    au < released ; Annual Review of Materials Science Volume 3 ; 3 >
+    au < released ; Annual Review of Materials Science Volume 4 ; 4 >
+    au < released ; Annual Review of Materials Science Volume 5 ; 5 >
+    au < released ; Annual Review of Materials Science Volume 6 ; 6 >
+    au < released ; Annual Review of Materials Science Volume 7 ; 7 >
+    au < released ; Annual Review of Materials Science Volume 8 ; 8 >
+    au < released ; Annual Review of Materials Science Volume 9 ; 9 >
+    au < released ; Annual Review of Materials Science Volume 10 ; 10 >
+    au < released ; Annual Review of Materials Science Volume 11 ; 11 >
+    au < released ; Annual Review of Materials Science Volume 12 ; 12 >
+    au < released ; Annual Review of Materials Science Volume 13 ; 13 >
+    au < released ; Annual Review of Materials Science Volume 14 ; 14 >
+    au < released ; Annual Review of Materials Science Volume 15 ; 15 >
+    au < released ; Annual Review of Materials Science Volume 16 ; 16 >
+    au < released ; Annual Review of Materials Science Volume 17 ; 17 >
+    au < released ; Annual Review of Materials Science Volume 18 ; 18 >
+    au < released ; Annual Review of Materials Science Volume 19 ; 19 >
+    au < released ; Annual Review of Materials Science Volume 20 ; 20 >
+    au < released ; Annual Review of Materials Science Volume 21 ; 21 >
+    au < released ; Annual Review of Materials Science Volume 22 ; 22 >
+    au < released ; Annual Review of Materials Science Volume 23 ; 23 >
+    au < ready ; Annual Review of Materials Science Volume 24 ; 24 >
+    au < released ; Annual Review of Materials Science Volume 25 ; 25 >
+    au < released ; Annual Review of Materials Science Volume 26 ; 26 >
+    au < released ; Annual Review of Materials Science Volume 27 ; 27 >
+    au < released ; Annual Review of Materials Science Volume 28 ; 28 >
+    au < released ; Annual Review of Materials Science Volume 29 ; 29 >
+    au < released ; Annual Review of Materials Science Volume 30 ; 30 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Medicine 
+    >
+
+    param[journal_id] = med
+    param[short_journal_id] = me
+
+    au < released ; Annual Review of Medicine Volume 1 ; 1 >
+    au < released ; Annual Review of Medicine Volume 2 ; 2 >
+    au < released ; Annual Review of Medicine Volume 3 ; 3 >
+    au < released ; Annual Review of Medicine Volume 4 ; 4 >
+    au < released ; Annual Review of Medicine Volume 5 ; 5 >
+    au < released ; Annual Review of Medicine Volume 6 ; 6 >
+    au < released ; Annual Review of Medicine Volume 7 ; 7 >
+    au < released ; Annual Review of Medicine Volume 8 ; 8 >
+    au < released ; Annual Review of Medicine Volume 9 ; 9 >
+    au < released ; Annual Review of Medicine Volume 10 ; 10 >
+    au < released ; Annual Review of Medicine Volume 11 ; 11 >
+    au < released ; Annual Review of Medicine Volume 12 ; 12 >
+    au < released ; Annual Review of Medicine Volume 13 ; 13 >
+    au < released ; Annual Review of Medicine Volume 14 ; 14 >
+    au < released ; Annual Review of Medicine Volume 15 ; 15 >
+    au < released ; Annual Review of Medicine Volume 16 ; 16 >
+    au < released ; Annual Review of Medicine Volume 17 ; 17 >
+    au < released ; Annual Review of Medicine Volume 18 ; 18 >
+    au < released ; Annual Review of Medicine Volume 19 ; 19 >
+    au < released ; Annual Review of Medicine Volume 20 ; 20 >
+    au < released ; Annual Review of Medicine Volume 21 ; 21 >
+    au < released ; Annual Review of Medicine Volume 22 ; 22 >
+    au < released ; Annual Review of Medicine Volume 23 ; 23 >
+    au < released ; Annual Review of Medicine Volume 24 ; 24 >
+    au < released ; Annual Review of Medicine Volume 25 ; 25 >
+    au < released ; Annual Review of Medicine Volume 26 ; 26 >
+    au < released ; Annual Review of Medicine Volume 27 ; 27 >
+    au < released ; Annual Review of Medicine Volume 28 ; 28 >
+    au < released ; Annual Review of Medicine Volume 29 ; 29 >
+    au < released ; Annual Review of Medicine Volume 30 ; 30 >
+    au < released ; Annual Review of Medicine Volume 31 ; 31 >
+    au < released ; Annual Review of Medicine Volume 32 ; 32 >
+    au < released ; Annual Review of Medicine Volume 33 ; 33 >
+    au < released ; Annual Review of Medicine Volume 34 ; 34 >
+    au < released ; Annual Review of Medicine Volume 35 ; 35 >
+    au < released ; Annual Review of Medicine Volume 36 ; 36 >
+    au < released ; Annual Review of Medicine Volume 37 ; 37 >
+    au < released ; Annual Review of Medicine Volume 38 ; 38 >
+    au < released ; Annual Review of Medicine Volume 39 ; 39 >
+    au < released ; Annual Review of Medicine Volume 40 ; 40 >
+    au < released ; Annual Review of Medicine Volume 41 ; 41 >
+    au < released ; Annual Review of Medicine Volume 42 ; 42 >
+    au < released ; Annual Review of Medicine Volume 43 ; 43 >
+    au < released ; Annual Review of Medicine Volume 44 ; 44 >
+    au < released ; Annual Review of Medicine Volume 45 ; 45 >
+    au < released ; Annual Review of Medicine Volume 46 ; 46 >
+    au < released ; Annual Review of Medicine Volume 47 ; 47 >
+    au < released ; Annual Review of Medicine Volume 48 ; 48 >
+    au < released ; Annual Review of Medicine Volume 49 ; 49 >
+    au < released ; Annual Review of Medicine Volume 50 ; 50 >
+    au < released ; Annual Review of Medicine Volume 51 ; 51 >
+    au < released ; Annual Review of Medicine Volume 52 ; 52 >
+    au < released ; Annual Review of Medicine Volume 53 ; 53 >
+    au < released ; Annual Review of Medicine Volume 54 ; 54 >
+    au < released ; Annual Review of Medicine Volume 55 ; 55 >
+    au < released ; Annual Review of Medicine Volume 56 ; 56 >
+    au < released ; Annual Review of Medicine Volume 57 ; 57 >
+    au < released ; Annual Review of Medicine Volume 58 ; 58 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Microbiology 
+    >
+
+    param[journal_id] = micro
+    param[short_journal_id] = mi
+
+    au < released ; Annual Review of Microbiology Volume 1 ; 1 >
+    au < released ; Annual Review of Microbiology Volume 2 ; 2 >
+    au < released ; Annual Review of Microbiology Volume 3 ; 3 >
+    au < released ; Annual Review of Microbiology Volume 4 ; 4 >
+    au < released ; Annual Review of Microbiology Volume 5 ; 5 >
+    au < released ; Annual Review of Microbiology Volume 6 ; 6 >
+    au < released ; Annual Review of Microbiology Volume 7 ; 7 >
+    au < released ; Annual Review of Microbiology Volume 8 ; 8 >
+    au < released ; Annual Review of Microbiology Volume 9 ; 9 >
+    au < released ; Annual Review of Microbiology Volume 10 ; 10 >
+    au < released ; Annual Review of Microbiology Volume 11 ; 11 >
+    au < released ; Annual Review of Microbiology Volume 12 ; 12 >
+    au < released ; Annual Review of Microbiology Volume 13 ; 13 >
+    au < released ; Annual Review of Microbiology Volume 14 ; 14 >
+    au < released ; Annual Review of Microbiology Volume 15 ; 15 >
+    au < released ; Annual Review of Microbiology Volume 16 ; 16 >
+    au < released ; Annual Review of Microbiology Volume 17 ; 17 >
+    au < released ; Annual Review of Microbiology Volume 18 ; 18 >
+    au < released ; Annual Review of Microbiology Volume 19 ; 19 >
+    au < released ; Annual Review of Microbiology Volume 20 ; 20 >
+    au < released ; Annual Review of Microbiology Volume 21 ; 21 >
+    au < released ; Annual Review of Microbiology Volume 22 ; 22 >
+    au < released ; Annual Review of Microbiology Volume 23 ; 23 >
+    au < released ; Annual Review of Microbiology Volume 24 ; 24 >
+    au < released ; Annual Review of Microbiology Volume 25 ; 25 >
+    au < released ; Annual Review of Microbiology Volume 26 ; 26 >
+    au < released ; Annual Review of Microbiology Volume 27 ; 27 >
+    au < released ; Annual Review of Microbiology Volume 28 ; 28 >
+    au < released ; Annual Review of Microbiology Volume 29 ; 29 >
+    au < released ; Annual Review of Microbiology Volume 30 ; 30 >
+    au < released ; Annual Review of Microbiology Volume 31 ; 31 >
+    au < released ; Annual Review of Microbiology Volume 32 ; 32 >
+    au < released ; Annual Review of Microbiology Volume 33 ; 33 >
+    au < released ; Annual Review of Microbiology Volume 34 ; 34 >
+    au < released ; Annual Review of Microbiology Volume 35 ; 35 >
+    au < released ; Annual Review of Microbiology Volume 36 ; 36 >
+    au < released ; Annual Review of Microbiology Volume 37 ; 37 >
+    au < released ; Annual Review of Microbiology Volume 38 ; 38 >
+    au < released ; Annual Review of Microbiology Volume 39 ; 39 >
+    au < released ; Annual Review of Microbiology Volume 40 ; 40 >
+    au < released ; Annual Review of Microbiology Volume 41 ; 41 >
+    au < released ; Annual Review of Microbiology Volume 42 ; 42 >
+    au < released ; Annual Review of Microbiology Volume 43 ; 43 >
+    au < released ; Annual Review of Microbiology Volume 44 ; 44 >
+    au < released ; Annual Review of Microbiology Volume 45 ; 45 >
+    au < released ; Annual Review of Microbiology Volume 46 ; 46 >
+    au < released ; Annual Review of Microbiology Volume 47 ; 47 >
+    au < released ; Annual Review of Microbiology Volume 48 ; 48 >
+    au < released ; Annual Review of Microbiology Volume 49 ; 49 >
+    au < released ; Annual Review of Microbiology Volume 50 ; 50 >
+    au < released ; Annual Review of Microbiology Volume 51 ; 51 >
+    au < released ; Annual Review of Microbiology Volume 52 ; 52 >
+    au < released ; Annual Review of Microbiology Volume 53 ; 53 >
+    au < released ; Annual Review of Microbiology Volume 54 ; 54 >
+    au < released ; Annual Review of Microbiology Volume 55 ; 55 >
+    au < released ; Annual Review of Microbiology Volume 56 ; 56 >
+    au < released ; Annual Review of Microbiology Volume 57 ; 57 >
+    au < released ; Annual Review of Microbiology Volume 58 ; 58 >
+    au < released ; Annual Review of Microbiology Volume 59 ; 59 >
+    au < released ; Annual Review of Microbiology Volume 60 ; 60 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Neuroscience 
+    >
+
+    param[journal_id] = neuro
+    param[short_journal_id] = ne
+
+    au < released ; Annual Review of Neuroscience Volume 1 ; 1 >
+    au < released ; Annual Review of Neuroscience Volume 2 ; 2 >
+    au < released ; Annual Review of Neuroscience Volume 3 ; 3 >
+    au < released ; Annual Review of Neuroscience Volume 4 ; 4 >
+    au < released ; Annual Review of Neuroscience Volume 5 ; 5 >
+    au < released ; Annual Review of Neuroscience Volume 6 ; 6 >
+    au < released ; Annual Review of Neuroscience Volume 7 ; 7 >
+    au < released ; Annual Review of Neuroscience Volume 8 ; 8 >
+    au < released ; Annual Review of Neuroscience Volume 9 ; 9 >
+    au < released ; Annual Review of Neuroscience Volume 10 ; 10 >
+    au < released ; Annual Review of Neuroscience Volume 11 ; 11 >
+    au < released ; Annual Review of Neuroscience Volume 12 ; 12 >
+    au < released ; Annual Review of Neuroscience Volume 13 ; 13 >
+    au < released ; Annual Review of Neuroscience Volume 14 ; 14 >
+    au < released ; Annual Review of Neuroscience Volume 15 ; 15 >
+    au < released ; Annual Review of Neuroscience Volume 16 ; 16 >
+    au < released ; Annual Review of Neuroscience Volume 17 ; 17 >
+    au < released ; Annual Review of Neuroscience Volume 18 ; 18 >
+    au < released ; Annual Review of Neuroscience Volume 19 ; 19 >
+    au < released ; Annual Review of Neuroscience Volume 20 ; 20 >
+    au < released ; Annual Review of Neuroscience Volume 21 ; 21 >
+    au < released ; Annual Review of Neuroscience Volume 22 ; 22 >
+    au < released ; Annual Review of Neuroscience Volume 23 ; 23 >
+    au < released ; Annual Review of Neuroscience Volume 24 ; 24 >
+    au < released ; Annual Review of Neuroscience Volume 25 ; 25 >
+    au < released ; Annual Review of Neuroscience Volume 26 ; 26 >
+    au < released ; Annual Review of Neuroscience Volume 27 ; 27 >
+    au < released ; Annual Review of Neuroscience Volume 28 ; 28 >
+    au < released ; Annual Review of Neuroscience Volume 29 ; 29 >
+    au < released ; Annual Review of Neuroscience Volume 30 ; 30 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Nuclear and Particle Science 
+    >
+
+    param[journal_id] = nucl
+    param[short_journal_id] = ns
+
+    au < released ; Annual Review of Nuclear and Particle Science Volume 28 ; 28 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 29 ; 29 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 30 ; 30 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 31 ; 31 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 32 ; 32 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 33 ; 33 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 34 ; 34 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 35 ; 35 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 36 ; 36 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 37 ; 37 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 38 ; 38 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 39 ; 39 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 40 ; 40 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 41 ; 41 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 42 ; 42 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 43 ; 43 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 44 ; 44 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 45 ; 45 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 46 ; 46 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 47 ; 47 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 48 ; 48 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 49 ; 49 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 50 ; 50 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 51 ; 51 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 52 ; 52 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 53 ; 53 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 54 ; 54 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 55 ; 55 >
+    au < released ; Annual Review of Nuclear and Particle Science Volume 56 ; 56 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Nuclear Science 
+    >
+
+    param[journal_id] = nucl
+    param[short_journal_id] = ns
+
+    au < released ; Annual Review of Nuclear Science Volume 1 ; 1 >
+    au < released ; Annual Review of Nuclear Science Volume 2 ; 2 >
+    au < released ; Annual Review of Nuclear Science Volume 3 ; 3 >
+    au < released ; Annual Review of Nuclear Science Volume 4 ; 4 >
+    au < released ; Annual Review of Nuclear Science Volume 5 ; 5 >
+    au < released ; Annual Review of Nuclear Science Volume 6 ; 6 >
+    au < released ; Annual Review of Nuclear Science Volume 7 ; 7 >
+    au < released ; Annual Review of Nuclear Science Volume 8 ; 8 >
+    au < released ; Annual Review of Nuclear Science Volume 9 ; 9 >
+    au < released ; Annual Review of Nuclear Science Volume 10 ; 10 >
+    au < released ; Annual Review of Nuclear Science Volume 11 ; 11 >
+    au < released ; Annual Review of Nuclear Science Volume 12 ; 12 >
+    au < released ; Annual Review of Nuclear Science Volume 13 ; 13 >
+    au < released ; Annual Review of Nuclear Science Volume 14 ; 14 >
+    au < released ; Annual Review of Nuclear Science Volume 15 ; 15 >
+    au < released ; Annual Review of Nuclear Science Volume 16 ; 16 >
+    au < released ; Annual Review of Nuclear Science Volume 17 ; 17 >
+    au < released ; Annual Review of Nuclear Science Volume 18 ; 18 >
+    au < released ; Annual Review of Nuclear Science Volume 19 ; 19 >
+    au < released ; Annual Review of Nuclear Science Volume 20 ; 20 >
+    au < released ; Annual Review of Nuclear Science Volume 21 ; 21 >
+    au < released ; Annual Review of Nuclear Science Volume 22 ; 22 >
+    au < released ; Annual Review of Nuclear Science Volume 23 ; 23 >
+    au < released ; Annual Review of Nuclear Science Volume 24 ; 24 >
+    au < released ; Annual Review of Nuclear Science Volume 25 ; 25 >
+    au < released ; Annual Review of Nuclear Science Volume 26 ; 26 >
+    au < released ; Annual Review of Nuclear Science Volume 27 ; 27 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Nutrition 
+    >
+
+    param[journal_id] = nutr
+    param[short_journal_id] = nu
+
+    au < released ; Annual Review of Nutrition Volume 1 ; 1 >
+    au < released ; Annual Review of Nutrition Volume 2 ; 2 >
+    au < released ; Annual Review of Nutrition Volume 3 ; 3 >
+    au < released ; Annual Review of Nutrition Volume 4 ; 4 >
+    au < released ; Annual Review of Nutrition Volume 5 ; 5 >
+    au < released ; Annual Review of Nutrition Volume 6 ; 6 >
+    au < released ; Annual Review of Nutrition Volume 7 ; 7 >
+    au < released ; Annual Review of Nutrition Volume 8 ; 8 >
+    au < released ; Annual Review of Nutrition Volume 9 ; 9 >
+    au < released ; Annual Review of Nutrition Volume 10 ; 10 >
+    au < released ; Annual Review of Nutrition Volume 11 ; 11 >
+    au < released ; Annual Review of Nutrition Volume 12 ; 12 >
+    au < released ; Annual Review of Nutrition Volume 13 ; 13 >
+    au < released ; Annual Review of Nutrition Volume 14 ; 14 >
+    au < released ; Annual Review of Nutrition Volume 15 ; 15 >
+    au < released ; Annual Review of Nutrition Volume 16 ; 16 >
+    au < released ; Annual Review of Nutrition Volume 17 ; 17 >
+    au < released ; Annual Review of Nutrition Volume 18 ; 18 >
+    au < released ; Annual Review of Nutrition Volume 19 ; 19 >
+    au < released ; Annual Review of Nutrition Volume 20 ; 20 >
+    au < released ; Annual Review of Nutrition Volume 21 ; 21 >
+    au < released ; Annual Review of Nutrition Volume 22 ; 22 >
+    au < released ; Annual Review of Nutrition Volume 23 ; 23 >
+    au < released ; Annual Review of Nutrition Volume 24 ; 24 >
+    au < released ; Annual Review of Nutrition Volume 25 ; 25 >
+    au < released ; Annual Review of Nutrition Volume 26 ; 26 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Pathology: Mechanisms of Disease 
+    >
+
+    param[journal_id] = pathmechdis
+    param[short_journal_id] = pathol
+
+    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 1 ; 1 >
+    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 2 ; 2 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Pharmacology 
+    >
+
+    param[journal_id] = pharmtox
+    param[short_journal_id] = pa
+
+    au < released ; Annual Review of Pharmacology Volume 1 ; 1 >
+    au < released ; Annual Review of Pharmacology Volume 2 ; 2 >
+    au < ready ; Annual Review of Pharmacology Volume 3 ; 3 >
+    au < released ; Annual Review of Pharmacology Volume 4 ; 4 >
+    au < released ; Annual Review of Pharmacology Volume 5 ; 5 >
+    au < released ; Annual Review of Pharmacology Volume 6 ; 6 >
+    au < released ; Annual Review of Pharmacology Volume 7 ; 7 >
+    au < released ; Annual Review of Pharmacology Volume 8 ; 8 >
+    au < released ; Annual Review of Pharmacology Volume 9 ; 9 >
+    au < released ; Annual Review of Pharmacology Volume 10 ; 10 >
+    au < released ; Annual Review of Pharmacology Volume 11 ; 11 >
+    au < released ; Annual Review of Pharmacology Volume 12 ; 12 >
+    au < released ; Annual Review of Pharmacology Volume 13 ; 13 >
+    au < released ; Annual Review of Pharmacology Volume 14 ; 14 >
+    au < released ; Annual Review of Pharmacology Volume 15 ; 15 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Pharmacology and Toxicology 
+    >
+
+    param[journal_id] = pharmtox
+    param[short_journal_id] = pa
+
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 16 ; 16 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 17 ; 17 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 18 ; 18 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 19 ; 19 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 20 ; 20 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 21 ; 21 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 22 ; 22 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 23 ; 23 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 24 ; 24 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 25 ; 25 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 26 ; 26 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 27 ; 27 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 28 ; 28 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 29 ; 29 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 30 ; 30 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 31 ; 31 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 32 ; 32 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 33 ; 33 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 34 ; 34 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 35 ; 35 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 36 ; 36 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 37 ; 37 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 38 ; 38 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 39 ; 39 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 40 ; 40 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 41 ; 41 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 42 ; 42 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 43 ; 43 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 44 ; 44 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 45 ; 45 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 46 ; 46 >
+    au < released ; Annual Review of Pharmacology and Toxicology Volume 47 ; 47 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Physical Chemistry 
+    >
+
+    param[journal_id] = physchem
+    param[short_journal_id] = pc
+
+    au < released ; Annual Review of Physical Chemistry Volume 1 ; 1 >
+    au < released ; Annual Review of Physical Chemistry Volume 2 ; 2 >
+    au < released ; Annual Review of Physical Chemistry Volume 3 ; 3 >
+    au < released ; Annual Review of Physical Chemistry Volume 4 ; 4 >
+    au < released ; Annual Review of Physical Chemistry Volume 5 ; 5 >
+    au < released ; Annual Review of Physical Chemistry Volume 6 ; 6 >
+    au < released ; Annual Review of Physical Chemistry Volume 7 ; 7 >
+    au < released ; Annual Review of Physical Chemistry Volume 8 ; 8 >
+    au < released ; Annual Review of Physical Chemistry Volume 9 ; 9 >
+    au < released ; Annual Review of Physical Chemistry Volume 10 ; 10 >
+    au < released ; Annual Review of Physical Chemistry Volume 11 ; 11 >
+    au < released ; Annual Review of Physical Chemistry Volume 12 ; 12 >
+    au < released ; Annual Review of Physical Chemistry Volume 13 ; 13 >
+    au < released ; Annual Review of Physical Chemistry Volume 14 ; 14 >
+    au < released ; Annual Review of Physical Chemistry Volume 15 ; 15 >
+    au < released ; Annual Review of Physical Chemistry Volume 16 ; 16 >
+    au < released ; Annual Review of Physical Chemistry Volume 17 ; 17 >
+    au < released ; Annual Review of Physical Chemistry Volume 18 ; 18 >
+    au < released ; Annual Review of Physical Chemistry Volume 19 ; 19 >
+    au < released ; Annual Review of Physical Chemistry Volume 20 ; 20 >
+    au < released ; Annual Review of Physical Chemistry Volume 21 ; 21 >
+    au < released ; Annual Review of Physical Chemistry Volume 22 ; 22 >
+    au < released ; Annual Review of Physical Chemistry Volume 23 ; 23 >
+    au < released ; Annual Review of Physical Chemistry Volume 24 ; 24 >
+    au < released ; Annual Review of Physical Chemistry Volume 25 ; 25 >
+    au < released ; Annual Review of Physical Chemistry Volume 26 ; 26 >
+    au < released ; Annual Review of Physical Chemistry Volume 27 ; 27 >
+    au < released ; Annual Review of Physical Chemistry Volume 28 ; 28 >
+    au < released ; Annual Review of Physical Chemistry Volume 29 ; 29 >
+    au < released ; Annual Review of Physical Chemistry Volume 30 ; 30 >
+    au < released ; Annual Review of Physical Chemistry Volume 31 ; 31 >
+    au < ready ; Annual Review of Physical Chemistry Volume 32 ; 32 >
+    au < ready ; Annual Review of Physical Chemistry Volume 33 ; 33 >
+    au < released ; Annual Review of Physical Chemistry Volume 34 ; 34 >
+    au < released ; Annual Review of Physical Chemistry Volume 35 ; 35 >
+    au < released ; Annual Review of Physical Chemistry Volume 36 ; 36 >
+    au < ready ; Annual Review of Physical Chemistry Volume 37 ; 37 >
+    au < ready ; Annual Review of Physical Chemistry Volume 38 ; 38 >
+    au < ready ; Annual Review of Physical Chemistry Volume 39 ; 39 >
+    au < ready ; Annual Review of Physical Chemistry Volume 40 ; 40 >
+    au < ready ; Annual Review of Physical Chemistry Volume 41 ; 41 >
+    au < ready ; Annual Review of Physical Chemistry Volume 42 ; 42 >
+    au < ready ; Annual Review of Physical Chemistry Volume 43 ; 43 >
+    au < ready ; Annual Review of Physical Chemistry Volume 44 ; 44 >
+    au < ready ; Annual Review of Physical Chemistry Volume 45 ; 45 >
+    au < ready ; Annual Review of Physical Chemistry Volume 46 ; 46 >
+    au < ready ; Annual Review of Physical Chemistry Volume 47 ; 47 >
+    au < released ; Annual Review of Physical Chemistry Volume 48 ; 48 >
+    au < released ; Annual Review of Physical Chemistry Volume 49 ; 49 >
+    au < released ; Annual Review of Physical Chemistry Volume 50 ; 50 >
+    au < released ; Annual Review of Physical Chemistry Volume 51 ; 51 >
+    au < released ; Annual Review of Physical Chemistry Volume 52 ; 52 >
+    au < released ; Annual Review of Physical Chemistry Volume 53 ; 53 >
+    au < released ; Annual Review of Physical Chemistry Volume 54 ; 54 >
+    au < released ; Annual Review of Physical Chemistry Volume 55 ; 55 >
+    au < released ; Annual Review of Physical Chemistry Volume 56 ; 56 >
+    au < released ; Annual Review of Physical Chemistry Volume 57 ; 57 >
+    au < ready ; Annual Review of Physical Chemistry Volume 58 ; 58 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Physiology 
+    >
+
+    param[journal_id] = physiol
+    param[short_journal_id] = ph
+
+    au < released ; Annual Review of Physiology Volume 1 ; 1 >
+    au < released ; Annual Review of Physiology Volume 2 ; 2 >
+    au < released ; Annual Review of Physiology Volume 3 ; 3 >
+    au < released ; Annual Review of Physiology Volume 4 ; 4 >
+    au < released ; Annual Review of Physiology Volume 5 ; 5 >
+    au < released ; Annual Review of Physiology Volume 6 ; 6 >
+    au < released ; Annual Review of Physiology Volume 7 ; 7 >
+    au < released ; Annual Review of Physiology Volume 8 ; 8 >
+    au < released ; Annual Review of Physiology Volume 9 ; 9 >
+    au < released ; Annual Review of Physiology Volume 10 ; 10 >
+    au < released ; Annual Review of Physiology Volume 11 ; 11 >
+    au < released ; Annual Review of Physiology Volume 12 ; 12 >
+    au < released ; Annual Review of Physiology Volume 13 ; 13 >
+    au < released ; Annual Review of Physiology Volume 14 ; 14 >
+    au < released ; Annual Review of Physiology Volume 15 ; 15 >
+    au < released ; Annual Review of Physiology Volume 16 ; 16 >
+    au < released ; Annual Review of Physiology Volume 17 ; 17 >
+    au < released ; Annual Review of Physiology Volume 18 ; 18 >
+    au < released ; Annual Review of Physiology Volume 19 ; 19 >
+    au < released ; Annual Review of Physiology Volume 20 ; 20 >
+    au < released ; Annual Review of Physiology Volume 21 ; 21 >
+    au < released ; Annual Review of Physiology Volume 22 ; 22 >
+    au < released ; Annual Review of Physiology Volume 23 ; 23 >
+    au < released ; Annual Review of Physiology Volume 24 ; 24 >
+    au < released ; Annual Review of Physiology Volume 25 ; 25 >
+    au < released ; Annual Review of Physiology Volume 26 ; 26 >
+    au < released ; Annual Review of Physiology Volume 27 ; 27 >
+    au < released ; Annual Review of Physiology Volume 28 ; 28 >
+    au < released ; Annual Review of Physiology Volume 29 ; 29 >
+    au < released ; Annual Review of Physiology Volume 30 ; 30 >
+    au < released ; Annual Review of Physiology Volume 31 ; 31 >
+    au < released ; Annual Review of Physiology Volume 32 ; 32 >
+    au < released ; Annual Review of Physiology Volume 33 ; 33 >
+    au < released ; Annual Review of Physiology Volume 34 ; 34 >
+    au < released ; Annual Review of Physiology Volume 35 ; 35 >
+    au < released ; Annual Review of Physiology Volume 36 ; 36 >
+    au < released ; Annual Review of Physiology Volume 37 ; 37 >
+    au < released ; Annual Review of Physiology Volume 38 ; 38 >
+    au < released ; Annual Review of Physiology Volume 39 ; 39 >
+    au < released ; Annual Review of Physiology Volume 40 ; 40 >
+    au < released ; Annual Review of Physiology Volume 41 ; 41 >
+    au < released ; Annual Review of Physiology Volume 42 ; 42 >
+    au < released ; Annual Review of Physiology Volume 43 ; 43 >
+    au < released ; Annual Review of Physiology Volume 44 ; 44 >
+    au < released ; Annual Review of Physiology Volume 45 ; 45 >
+    au < released ; Annual Review of Physiology Volume 46 ; 46 >
+    au < released ; Annual Review of Physiology Volume 47 ; 47 >
+    au < released ; Annual Review of Physiology Volume 48 ; 48 >
+    au < released ; Annual Review of Physiology Volume 49 ; 49 >
+    au < released ; Annual Review of Physiology Volume 50 ; 50 >
+    au < released ; Annual Review of Physiology Volume 51 ; 51 >
+    au < released ; Annual Review of Physiology Volume 52 ; 52 >
+    au < released ; Annual Review of Physiology Volume 53 ; 53 >
+    au < released ; Annual Review of Physiology Volume 54 ; 54 >
+    au < released ; Annual Review of Physiology Volume 55 ; 55 >
+    au < released ; Annual Review of Physiology Volume 56 ; 56 >
+    au < released ; Annual Review of Physiology Volume 57 ; 57 >
+    au < released ; Annual Review of Physiology Volume 58 ; 58 >
+    au < released ; Annual Review of Physiology Volume 59 ; 59 >
+    au < released ; Annual Review of Physiology Volume 60 ; 60 >
+    au < released ; Annual Review of Physiology Volume 61 ; 61 >
+    au < released ; Annual Review of Physiology Volume 62 ; 62 >
+    au < released ; Annual Review of Physiology Volume 63 ; 63 >
+    au < released ; Annual Review of Physiology Volume 64 ; 64 >
+    au < released ; Annual Review of Physiology Volume 65 ; 65 >
+    au < released ; Annual Review of Physiology Volume 66 ; 66 >
+    au < released ; Annual Review of Physiology Volume 67 ; 67 >
+    au < released ; Annual Review of Physiology Volume 68 ; 68 >
+    au < released ; Annual Review of Physiology Volume 69 ; 69 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Phytopathology 
+    >
+
+    param[journal_id] = phyto
+    param[short_journal_id] = py
+
+    au < released ; Annual Review of Phytopathology Volume 1 ; 1 >
+    au < released ; Annual Review of Phytopathology Volume 2 ; 2 >
+    au < released ; Annual Review of Phytopathology Volume 3 ; 3 >
+    au < released ; Annual Review of Phytopathology Volume 4 ; 4 >
+    au < released ; Annual Review of Phytopathology Volume 5 ; 5 >
+    au < released ; Annual Review of Phytopathology Volume 6 ; 6 >
+    au < released ; Annual Review of Phytopathology Volume 7 ; 7 >
+    au < released ; Annual Review of Phytopathology Volume 8 ; 8 >
+    au < released ; Annual Review of Phytopathology Volume 9 ; 9 >
+    au < released ; Annual Review of Phytopathology Volume 10 ; 10 >
+    au < released ; Annual Review of Phytopathology Volume 11 ; 11 >
+    au < released ; Annual Review of Phytopathology Volume 12 ; 12 >
+    au < released ; Annual Review of Phytopathology Volume 13 ; 13 >
+    au < released ; Annual Review of Phytopathology Volume 14 ; 14 >
+    au < released ; Annual Review of Phytopathology Volume 15 ; 15 >
+    au < released ; Annual Review of Phytopathology Volume 16 ; 16 >
+    au < released ; Annual Review of Phytopathology Volume 17 ; 17 >
+    au < released ; Annual Review of Phytopathology Volume 18 ; 18 >
+    au < released ; Annual Review of Phytopathology Volume 19 ; 19 >
+    au < released ; Annual Review of Phytopathology Volume 20 ; 20 >
+    au < released ; Annual Review of Phytopathology Volume 21 ; 21 >
+    au < released ; Annual Review of Phytopathology Volume 22 ; 22 >
+    au < released ; Annual Review of Phytopathology Volume 23 ; 23 >
+    au < released ; Annual Review of Phytopathology Volume 24 ; 24 >
+    au < released ; Annual Review of Phytopathology Volume 25 ; 25 >
+    au < released ; Annual Review of Phytopathology Volume 26 ; 26 >
+    au < released ; Annual Review of Phytopathology Volume 27 ; 27 >
+    au < released ; Annual Review of Phytopathology Volume 28 ; 28 >
+    au < released ; Annual Review of Phytopathology Volume 29 ; 29 >
+    au < released ; Annual Review of Phytopathology Volume 30 ; 30 >
+    au < released ; Annual Review of Phytopathology Volume 31 ; 31 >
+    au < released ; Annual Review of Phytopathology Volume 32 ; 32 >
+    au < released ; Annual Review of Phytopathology Volume 33 ; 33 >
+    au < released ; Annual Review of Phytopathology Volume 34 ; 34 >
+    au < released ; Annual Review of Phytopathology Volume 35 ; 35 >
+    au < released ; Annual Review of Phytopathology Volume 36 ; 36 >
+    au < released ; Annual Review of Phytopathology Volume 37 ; 37 >
+    au < released ; Annual Review of Phytopathology Volume 38 ; 38 >
+    au < released ; Annual Review of Phytopathology Volume 39 ; 39 >
+    au < released ; Annual Review of Phytopathology Volume 40 ; 40 >
+    au < released ; Annual Review of Phytopathology Volume 41 ; 41 >
+    au < released ; Annual Review of Phytopathology Volume 42 ; 42 >
+    au < released ; Annual Review of Phytopathology Volume 43 ; 43 >
+    au < released ; Annual Review of Phytopathology Volume 44 ; 44 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Plant Biology 
+    >
+
+    param[journal_id] = arplant
+    param[short_journal_id] = pp
+
+    au < released ; Annual Review of Plant Biology Volume 1 ; 1 >
+    au < released ; Annual Review of Plant Biology Volume 2 ; 2 >
+    au < released ; Annual Review of Plant Biology Volume 3 ; 3 >
+    au < released ; Annual Review of Plant Biology Volume 4 ; 4 >
+    au < released ; Annual Review of Plant Biology Volume 5 ; 5 >
+    au < released ; Annual Review of Plant Biology Volume 6 ; 6 >
+    au < released ; Annual Review of Plant Biology Volume 7 ; 7 >
+    au < released ; Annual Review of Plant Biology Volume 8 ; 8 >
+    au < released ; Annual Review of Plant Biology Volume 9 ; 9 >
+    au < released ; Annual Review of Plant Biology Volume 10 ; 10 >
+    au < released ; Annual Review of Plant Biology Volume 11 ; 11 >
+    au < released ; Annual Review of Plant Biology Volume 12 ; 12 >
+    au < released ; Annual Review of Plant Biology Volume 13 ; 13 >
+    au < released ; Annual Review of Plant Biology Volume 14 ; 14 >
+    au < released ; Annual Review of Plant Biology Volume 15 ; 15 >
+    au < released ; Annual Review of Plant Biology Volume 16 ; 16 >
+    au < released ; Annual Review of Plant Biology Volume 17 ; 17 >
+    au < released ; Annual Review of Plant Biology Volume 18 ; 18 >
+    au < released ; Annual Review of Plant Biology Volume 19 ; 19 >
+    au < released ; Annual Review of Plant Biology Volume 20 ; 20 >
+    au < released ; Annual Review of Plant Biology Volume 21 ; 21 >
+    au < released ; Annual Review of Plant Biology Volume 22 ; 22 >
+    au < released ; Annual Review of Plant Biology Volume 23 ; 23 >
+    au < released ; Annual Review of Plant Biology Volume 24 ; 24 >
+    au < released ; Annual Review of Plant Biology Volume 25 ; 25 >
+    au < released ; Annual Review of Plant Biology Volume 26 ; 26 >
+    au < released ; Annual Review of Plant Biology Volume 27 ; 27 >
+    au < released ; Annual Review of Plant Biology Volume 28 ; 28 >
+    au < released ; Annual Review of Plant Biology Volume 29 ; 29 >
+    au < released ; Annual Review of Plant Biology Volume 30 ; 30 >
+    au < released ; Annual Review of Plant Biology Volume 31 ; 31 >
+    au < released ; Annual Review of Plant Biology Volume 32 ; 32 >
+    au < released ; Annual Review of Plant Biology Volume 33 ; 33 >
+    au < released ; Annual Review of Plant Biology Volume 34 ; 34 >
+    au < released ; Annual Review of Plant Biology Volume 35 ; 35 >
+    au < released ; Annual Review of Plant Biology Volume 36 ; 36 >
+    au < released ; Annual Review of Plant Biology Volume 37 ; 37 >
+    au < released ; Annual Review of Plant Biology Volume 38 ; 38 >
+    au < released ; Annual Review of Plant Biology Volume 39 ; 39 >
+    au < released ; Annual Review of Plant Biology Volume 40 ; 40 >
+    au < released ; Annual Review of Plant Biology Volume 41 ; 41 >
+    au < released ; Annual Review of Plant Biology Volume 42 ; 42 >
+    au < released ; Annual Review of Plant Biology Volume 43 ; 43 >
+    au < released ; Annual Review of Plant Biology Volume 44 ; 44 >
+    au < released ; Annual Review of Plant Biology Volume 45 ; 45 >
+    au < released ; Annual Review of Plant Biology Volume 46 ; 46 >
+    au < released ; Annual Review of Plant Biology Volume 47 ; 47 >
+    au < released ; Annual Review of Plant Biology Volume 48 ; 48 >
+    au < released ; Annual Review of Plant Biology Volume 49 ; 49 >
+    au < released ; Annual Review of Plant Biology Volume 50 ; 50 >
+    au < released ; Annual Review of Plant Biology Volume 51 ; 51 >
+    au < released ; Annual Review of Plant Biology Volume 52 ; 52 >
+    au < released ; Annual Review of Plant Biology Volume 53 ; 53 >
+    au < released ; Annual Review of Plant Biology Volume 54 ; 54 >
+    au < released ; Annual Review of Plant Biology Volume 55 ; 55 >
+    au < released ; Annual Review of Plant Biology Volume 56 ; 56 >
+    au < released ; Annual Review of Plant Biology Volume 57 ; 57 >
+    au < released ; Annual Review of Plant Biology Volume 58 ; 58 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Political Science 
+    >
+
+    param[journal_id] = polisci
+    param[short_journal_id] = none
+
+    au < ready ; Annual Review of Political Science Volume 1 ; 1 >
+    au < ready ; Annual Review of Political Science Volume 2 ; 2 >
+    au < released ; Annual Review of Political Science Volume 3 ; 3 >
+    au < released ; Annual Review of Political Science Volume 4 ; 4 >
+    au < ready ; Annual Review of Political Science Volume 5 ; 5 >
+    au < released ; Annual Review of Political Science Volume 6 ; 6 >
+    au < released ; Annual Review of Political Science Volume 7 ; 7 >
+    au < released ; Annual Review of Political Science Volume 8 ; 8 >
+    au < released ; Annual Review of Political Science Volume 9 ; 9 >
+    au < ready ; Annual Review of Political Science Volume 10 ; 10 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Psychology 
+    >
+
+    param[journal_id] = psych
+    param[short_journal_id] = ps
+
+    au < released ; Annual Review of Psychology Volume 1 ; 1 >
+    au < released ; Annual Review of Psychology Volume 2 ; 2 >
+    au < released ; Annual Review of Psychology Volume 3 ; 3 >
+    au < released ; Annual Review of Psychology Volume 4 ; 4 >
+    au < released ; Annual Review of Psychology Volume 5 ; 5 >
+    au < released ; Annual Review of Psychology Volume 6 ; 6 >
+    au < released ; Annual Review of Psychology Volume 7 ; 7 >
+    au < released ; Annual Review of Psychology Volume 8 ; 8 >
+    au < released ; Annual Review of Psychology Volume 9 ; 9 >
+    au < released ; Annual Review of Psychology Volume 10 ; 10 >
+    au < released ; Annual Review of Psychology Volume 11 ; 11 >
+    au < released ; Annual Review of Psychology Volume 12 ; 12 >
+    au < released ; Annual Review of Psychology Volume 13 ; 13 >
+    au < released ; Annual Review of Psychology Volume 14 ; 14 >
+    au < released ; Annual Review of Psychology Volume 15 ; 15 >
+    au < released ; Annual Review of Psychology Volume 16 ; 16 >
+    au < released ; Annual Review of Psychology Volume 17 ; 17 >
+    au < released ; Annual Review of Psychology Volume 18 ; 18 >
+    au < released ; Annual Review of Psychology Volume 19 ; 19 >
+    au < released ; Annual Review of Psychology Volume 20 ; 20 >
+    au < released ; Annual Review of Psychology Volume 21 ; 21 >
+    au < released ; Annual Review of Psychology Volume 22 ; 22 >
+    au < released ; Annual Review of Psychology Volume 23 ; 23 >
+    au < released ; Annual Review of Psychology Volume 24 ; 24 >
+    au < released ; Annual Review of Psychology Volume 25 ; 25 >
+    au < released ; Annual Review of Psychology Volume 26 ; 26 >
+    au < released ; Annual Review of Psychology Volume 27 ; 27 >
+    au < released ; Annual Review of Psychology Volume 28 ; 28 >
+    au < released ; Annual Review of Psychology Volume 29 ; 29 >
+    au < released ; Annual Review of Psychology Volume 30 ; 30 >
+    au < released ; Annual Review of Psychology Volume 31 ; 31 >
+    au < released ; Annual Review of Psychology Volume 32 ; 32 >
+    au < released ; Annual Review of Psychology Volume 33 ; 33 >
+    au < released ; Annual Review of Psychology Volume 34 ; 34 >
+    au < released ; Annual Review of Psychology Volume 35 ; 35 >
+    au < released ; Annual Review of Psychology Volume 36 ; 36 >
+    au < released ; Annual Review of Psychology Volume 37 ; 37 >
+    au < released ; Annual Review of Psychology Volume 38 ; 38 >
+    au < released ; Annual Review of Psychology Volume 39 ; 39 >
+    au < released ; Annual Review of Psychology Volume 40 ; 40 >
+    au < released ; Annual Review of Psychology Volume 41 ; 41 >
+    au < released ; Annual Review of Psychology Volume 42 ; 42 >
+    au < released ; Annual Review of Psychology Volume 43 ; 43 >
+    au < released ; Annual Review of Psychology Volume 44 ; 44 >
+    au < released ; Annual Review of Psychology Volume 45 ; 45 >
+    au < released ; Annual Review of Psychology Volume 46 ; 46 >
+    au < released ; Annual Review of Psychology Volume 47 ; 47 >
+    au < released ; Annual Review of Psychology Volume 48 ; 48 >
+    au < released ; Annual Review of Psychology Volume 49 ; 49 >
+    au < released ; Annual Review of Psychology Volume 50 ; 50 >
+    au < released ; Annual Review of Psychology Volume 51 ; 51 >
+    au < released ; Annual Review of Psychology Volume 52 ; 52 >
+    au < released ; Annual Review of Psychology Volume 53 ; 53 >
+    au < released ; Annual Review of Psychology Volume 54 ; 54 >
+    au < released ; Annual Review of Psychology Volume 55 ; 55 >
+    au < released ; Annual Review of Psychology Volume 56 ; 56 >
+    au < released ; Annual Review of Psychology Volume 57 ; 57 >
+    au < released ; Annual Review of Psychology Volume 58 ; 58 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Public Health 
+    >
+
+    param[journal_id] = publhealth
+    param[short_journal_id] = pu
+
+    au < released ; Annual Review of Public Health Volume 1 ; 1 >
+    au < released ; Annual Review of Public Health Volume 2 ; 2 >
+    au < released ; Annual Review of Public Health Volume 3 ; 3 >
+    au < released ; Annual Review of Public Health Volume 4 ; 4 >
+    au < released ; Annual Review of Public Health Volume 5 ; 5 >
+    au < released ; Annual Review of Public Health Volume 6 ; 6 >
+    au < released ; Annual Review of Public Health Volume 7 ; 7 >
+    au < released ; Annual Review of Public Health Volume 8 ; 8 >
+    au < released ; Annual Review of Public Health Volume 9 ; 9 >
+    au < released ; Annual Review of Public Health Volume 10 ; 10 >
+    au < released ; Annual Review of Public Health Volume 11 ; 11 >
+    au < released ; Annual Review of Public Health Volume 12 ; 12 >
+    au < released ; Annual Review of Public Health Volume 13 ; 13 >
+    au < released ; Annual Review of Public Health Volume 14 ; 14 >
+    au < released ; Annual Review of Public Health Volume 15 ; 15 >
+    au < released ; Annual Review of Public Health Volume 16 ; 16 >
+    au < released ; Annual Review of Public Health Volume 17 ; 17 >
+    au < released ; Annual Review of Public Health Volume 18 ; 18 >
+    au < released ; Annual Review of Public Health Volume 19 ; 19 >
+    au < released ; Annual Review of Public Health Volume 20 ; 20 >
+    au < released ; Annual Review of Public Health Volume 21 ; 21 >
+    au < released ; Annual Review of Public Health Volume 22 ; 22 >
+    au < released ; Annual Review of Public Health Volume 23 ; 23 >
+    au < released ; Annual Review of Public Health Volume 24 ; 24 >
+    au < released ; Annual Review of Public Health Volume 25 ; 25 >
+    au < released ; Annual Review of Public Health Volume 26 ; 26 >
+    au < released ; Annual Review of Public Health Volume 27 ; 27 >
+    au < released ; Annual Review of Public Health Volume 28 ; 28 >
+  }
+
+
+
+  {
+    title <
+      name = Annual Review of Sociology 
+    >
+
+    param[journal_id] = soc
+    param[short_journal_id] = so
+
+    au < released ; Annual Review of Sociology Volume 1 ; 1 >
+    au < released ; Annual Review of Sociology Volume 2 ; 2 >
+    au < released ; Annual Review of Sociology Volume 3 ; 3 >
+    au < released ; Annual Review of Sociology Volume 4 ; 4 >
+    au < released ; Annual Review of Sociology Volume 5 ; 5 >
+    au < released ; Annual Review of Sociology Volume 6 ; 6 >
+    au < released ; Annual Review of Sociology Volume 7 ; 7 >
+    au < released ; Annual Review of Sociology Volume 8 ; 8 >
+    au < released ; Annual Review of Sociology Volume 9 ; 9 >
+    au < released ; Annual Review of Sociology Volume 10 ; 10 >
+    au < released ; Annual Review of Sociology Volume 11 ; 11 >
+    au < released ; Annual Review of Sociology Volume 12 ; 12 >
+    au < released ; Annual Review of Sociology Volume 13 ; 13 >
+    au < released ; Annual Review of Sociology Volume 14 ; 14 >
+    au < released ; Annual Review of Sociology Volume 15 ; 15 >
+    au < released ; Annual Review of Sociology Volume 16 ; 16 >
+    au < released ; Annual Review of Sociology Volume 17 ; 17 >
+    au < released ; Annual Review of Sociology Volume 18 ; 18 >
+    au < released ; Annual Review of Sociology Volume 19 ; 19 >
+    au < released ; Annual Review of Sociology Volume 20 ; 20 >
+    au < released ; Annual Review of Sociology Volume 21 ; 21 >
+    au < released ; Annual Review of Sociology Volume 22 ; 22 >
+    au < released ; Annual Review of Sociology Volume 23 ; 23 >
+    au < released ; Annual Review of Sociology Volume 24 ; 24 >
+    au < released ; Annual Review of Sociology Volume 25 ; 25 >
+    au < released ; Annual Review of Sociology Volume 26 ; 26 >
+    au < released ; Annual Review of Sociology Volume 27 ; 27 >
+    au < released ; Annual Review of Sociology Volume 28 ; 28 >
+    au < released ; Annual Review of Sociology Volume 29 ; 29 >
+    au < released ; Annual Review of Sociology Volume 30 ; 30 >
+    au < released ; Annual Review of Sociology Volume 31 ; 31 >
+    au < released ; Annual Review of Sociology Volume 32 ; 32 >
+  }  
+}
