@@ -35,8 +35,8 @@
       <string>2,&quot;^%sregistration&quot;, base_url</string>
       <string>1,&quot;^%sarticles/browse\.asp\?volume=%s&quot;, base_url, volume_name</string>
       <string>1,&quot;%slockss/&quot;, base_url</string>
-      <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract/?|citation|comments|figure/.*|table/.*))?$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary)/%s-%s-&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|figure/.*|suppl/.*|table/.*))?$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary)/&quot;, base_url</string>
       <string>1,&quot;^%ssupplements/%s/&quot;, base_url, volume_name</string>
     </list>
   </entry>
