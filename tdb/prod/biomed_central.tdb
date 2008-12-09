@@ -1306,12 +1306,12 @@
       param[base_url] = http://www.biomagres.com/
       param[journal_issn] = 1477-044X
 
-      au < manifest ; BioMagnetic Research and Technology Volume 1 ; 1 >
-      au < manifest ; BioMagnetic Research and Technology Volume 2 ; 2 >
+      au < testing ; BioMagnetic Research and Technology Volume 1 ; 1 >
+      au < testing ; BioMagnetic Research and Technology Volume 2 ; 2 >
       au < ready ; BioMagnetic Research and Technology Volume 3 ; 3 >
-      au < manifest ; BioMagnetic Research and Technology Volume 4 ; 4 >
-      au < manifest ; BioMagnetic Research and Technology Volume 5 ; 5 >
-      au < manifest ; BioMagnetic Research and Technology Volume 6 ; 6 >
+      au < testing ; BioMagnetic Research and Technology Volume 4 ; 4 >
+      au < testing ; BioMagnetic Research and Technology Volume 5 ; 5 >
+      au < testing ; BioMagnetic Research and Technology Volume 6 ; 6 >
     }
 
 
