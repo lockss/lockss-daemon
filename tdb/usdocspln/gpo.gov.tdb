@@ -35,13 +35,13 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
 
-    au < ready ; Congressional Documents, 104th Congress ; 104 >
-    au < ready ; Congressional Documents, 105th Congress ; 105 >
-    au < ready ; Congressional Documents, 106th Congress ; 106 >
-    au < ready ; Congressional Documents, 107th Congress ; 107 >
-    au < ready ; Congressional Documents, 108th Congress ; 108 >
-    au < ready ; Congressional Documents, 109th Congress ; 109 >
-    au < ready ; Congressional Documents, 110th Congress ; 110 >
+    au < released ; Congressional Documents, 104th Congress ; 104 >
+    au < released ; Congressional Documents, 105th Congress ; 105 >
+    au < released ; Congressional Documents, 106th Congress ; 106 >
+    au < released ; Congressional Documents, 107th Congress ; 107 >
+    au < released ; Congressional Documents, 108th Congress ; 108 >
+    au < released ; Congressional Documents, 109th Congress ; 109 >
+    au < released ; Congressional Documents, 110th Congress ; 110 >
 
   }
 
@@ -73,8 +73,8 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin
 
-    au < ready ; Constitution of the United States, 1992 Edition ; 1992 >
-    au < ready ; Constitution of the United States, 2002 Edition ; 2002 >
+    au < released ; Constitution of the United States, 1992 Edition ; 1992 >
+    au < released ; Constitution of the United States, 2002 Edition ; 2002 >
 
   }
 
