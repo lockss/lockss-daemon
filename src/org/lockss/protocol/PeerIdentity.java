@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.11 2008-11-26 01:10:53 edwardsb1 Exp $
+ * $Id: PeerIdentity.java,v 1.12 2008-12-10 02:05:47 edwardsb1 Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ import org.lockss.util.*;
  */
 public class PeerIdentity implements LockssSerializable {
   static Logger theLog=Logger.getLogger("PeerIdentity");
-  protected String key;
-  protected transient PeerAddress pAddr;
+  private String key;
+  private transient PeerAddress pAddr;
 
   PeerIdentity(String newKey)
       throws IdentityManager.MalformedIdentityKeyException {
@@ -57,6 +57,7 @@ public class PeerIdentity implements LockssSerializable {
   PeerIdentity() {
   }
 
+  
   /**
    * toString results in a string describing the peer that is
    * understandable to humans.
@@ -66,7 +67,7 @@ public class PeerIdentity implements LockssSerializable {
     sb.append("[");
     if (isLocalIdentity()) sb.append("L");
     sb.append("Peer: ");
-    sb.append(key);
+    sb.append(getKey());
 //     sb.append(", ");
 //     sb.append(System.identityHashCode(this));
     sb.append("]");
@@ -80,7 +81,7 @@ public class PeerIdentity implements LockssSerializable {
    * by a colon and a numeric port number
    */
   public String getIdString() {
-    return key;
+    return getKey();
   }
 
   public PeerAddress getPeerAddress() {
@@ -132,9 +133,9 @@ public class PeerIdentity implements LockssSerializable {
     IdentityManager idm =
       (IdentityManager)lockssContext.getManagerByKey(LockssDaemon.IDENTITY_MANAGER);
     try {
-      return idm.findPeerIdentity(key);
+      return idm.findPeerIdentity(getKey());
     } catch (IdentityManager.MalformedIdentityKeyException e) {
-      theLog.error("Bad serialized peer id: " + key, e);
+      theLog.error("Bad serialized peer id: " + getKey(), e);
       return null;
     }
   }
@@ -151,5 +152,10 @@ public class PeerIdentity implements LockssSerializable {
     public boolean isLocalIdentity() {
       return true;
     }
+  }
+  
+  // Accessor for our variables.  Here because of the MockPeerIdentity. 
+  private String getKey() {
+    return key;
   }
 }

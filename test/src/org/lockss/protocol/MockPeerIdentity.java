@@ -1,5 +1,5 @@
 /*
- * $Id: MockPeerIdentity.java,v 1.3 2008-11-26 01:10:53 edwardsb1 Exp $
+ * $Id: MockPeerIdentity.java,v 1.4 2008-12-10 02:05:47 edwardsb1 Exp $
  */
 
 /*
@@ -31,13 +31,13 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.protocol;
 
-import java.util.*;
-import org.lockss.util.*;
-
 public class MockPeerIdentity extends PeerIdentity {
+  // Previous versions had this variable occult the parent's key.
+  // This version keeps the two variables separate with different names.
+  private String keyMock;
 
   public MockPeerIdentity(String newKey) {
-    key = newKey;
+    keyMock = newKey;
   }
 
   /**
@@ -49,7 +49,7 @@ public class MockPeerIdentity extends PeerIdentity {
     sb.append("[");
     if (isLocalIdentity()) sb.append("L");
     sb.append("MockPeer: ");
-    sb.append(key);
+    sb.append(getKey());
     sb.append("]");
     return sb.toString();
   }
@@ -61,7 +61,7 @@ public class MockPeerIdentity extends PeerIdentity {
    * by a colon and a numeric port number
    */
   public String getIdString() {
-    return key;
+    return getKey();
   }
 
   public PeerAddress getPeerAddress() {
@@ -73,4 +73,10 @@ public class MockPeerIdentity extends PeerIdentity {
   public boolean isLocalIdentity() {
     return false;
   }
+  
+  // Accessor for our variables.  Here because of the MockPeerIdentity. 
+  private String getKey() {
+    return keyMock;
+  }
+
 }
