@@ -1325,13 +1325,13 @@
       param[base_url] = http://www.biomedical-engineering-online.com/
       param[journal_issn] = 1475-925X
 
-      au < manifest ; BioMedical Engineering OnLine Volume 1 ; 1 >
-      au < manifest ; BioMedical Engineering OnLine Volume 2 ; 2 >
-      au < manifest ; BioMedical Engineering OnLine Volume 3 ; 3 >
-      au < manifest ; BioMedical Engineering OnLine Volume 4 ; 4 >
-      au < manifest ; BioMedical Engineering OnLine Volume 5 ; 5 >
-      au < manifest ; BioMedical Engineering OnLine Volume 6 ; 6 >
-      au < manifest ; BioMedical Engineering OnLine Volume 7 ; 7 >
+      au < testing ; BioMedical Engineering OnLine Volume 1 ; 1 >
+      au < testing ; BioMedical Engineering OnLine Volume 2 ; 2 >
+      au < testing ; BioMedical Engineering OnLine Volume 3 ; 3 >
+      au < testing ; BioMedical Engineering OnLine Volume 4 ; 4 >
+      au < testing ; BioMedical Engineering OnLine Volume 5 ; 5 >
+      au < testing ; BioMedical Engineering OnLine Volume 6 ; 6 >
+      au < testing ; BioMedical Engineering OnLine Volume 7 ; 7 >
     }
 
 
