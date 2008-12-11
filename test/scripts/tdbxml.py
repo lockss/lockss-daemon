@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.5 2008-12-04 23:01:02 thib_gc Exp $
+# $Id: tdbxml.py,v 1.6 2008-12-11 22:07:30 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -113,6 +113,7 @@ def _do_attr(au, attr, value=None):
    <property name="attribute.%s" value="%s" />''' % ( attr, value )
 
 def _process_au(au, options):
+    if au.status() not in options.level: return
     print '''\
   <property name="%s">
    <property name="attributes.publisher" value="%s" />
