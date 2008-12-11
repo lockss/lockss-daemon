@@ -1273,10 +1273,10 @@
       param[base_url] = http://www.behavioralandbrainfunctions.com/
       param[journal_issn] = 1744-9081
 
-      au < testing ; Behavioral and Brain Functions Volume 1 ; 1 >
+      au < ready ; Behavioral and Brain Functions Volume 1 ; 1 >
       au < ready ; Behavioral and Brain Functions Volume 2 ; 2 >
-      au < testing ; Behavioral and Brain Functions Volume 3 ; 3 >
-      au < testing ; Behavioral and Brain Functions Volume 4 ; 4 >
+      au < ready ; Behavioral and Brain Functions Volume 3 ; 3 >
+      au < ready ; Behavioral and Brain Functions Volume 4 ; 4 >
     }
 
 
@@ -1290,9 +1290,9 @@
       param[base_url] = http://www.biology-direct.com/
       param[journal_issn] = 1745-6150
 
-      au < testing ; Biology Direct Volume 1 ; 1 >
-      au < testing ; Biology Direct Volume 2 ; 2 >
-      au < testing ; Biology Direct Volume 3 ; 3 >
+      au < ready ; Biology Direct Volume 1 ; 1 >
+      au < ready ; Biology Direct Volume 2 ; 2 >
+      au < ready ; Biology Direct Volume 3 ; 3 >
     }
 
 
