@@ -1,7 +1,7 @@
 #	@formatString	x,S,t,%,%,%,%,%					
 #	@namePrefix	RSC					
 #	@publisherTitleSet	publisher=Royal Society of Chemistry					
-#	@fixedValues	P=Royal Society of Chemistry	p=uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin				
+#	@fixedValues	P=Royal Society of Chemistry	p=org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin				
 #	@fixedValues	j=The Analyst					
 	released	The Analyst Volume 122	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=122	year=1997
 	testing	The Analyst Volume 123	base_url=http://www.rsc.org/	resolver_url=http://xlink.rsc.org/	journal_code=an	volume_name=123	year=1998
