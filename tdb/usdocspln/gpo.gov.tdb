@@ -77,5 +77,156 @@
     au < released ; Constitution of the United States, 2002 Edition ; 2002 >
 
   }
+  
+  {
+    title <
+      name = House Journal
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin
+
+    au < exists ; House Journal, 1991 Edition ; 1991 >
+    au < exists ; House Journal, 1992 Edition ; 1992 >
+    au < exists ; House Journal, 1993 Edition ; 1993 >
+    au < exists ; House Journal, 1994 Edition ; 1994 >
+    au < exists ; House Journal, 1995 Edition ; 1995 >
+    au < exists ; House Journal, 1996 Edition ; 1996 >
+    au < exists ; House Journal, 1997 Edition ; 1997 >
+    au < exists ; House Journal, 1998 Edition ; 1998 >
+    au < exists ; House Journal, 1999 Edition ; 1999 >    
+
+  }
+  
+  {
+    title <
+      name = Public and Private Laws 
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin
+
+    au < exists ; Public and Private Laws, 104 Congress ; 104 >
+    au < exists ; Public and Private Laws, 105 Congress ; 105 >
+    au < exists ; Public and Private Laws, 106 Congress ; 106 >
+    au < exists ; Public and Private Laws, 107 Congress ; 107 >
+    au < exists ; Public and Private Laws, 108 Congress ; 108 >
+    au < exists ; Public and Private Laws, 109 Congress ; 109 > 
+
+  }
+  
+  {
+    title <
+      name = U.S. Government Manual
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin
+
+    au < released ; U.S. Government Manual, 1997 Edition ; 1997 >
+    au < released ; U.S. Government Manual, 1998 Edition ; 1998 >
+    au < released ; U.S. Government Manual, 1999 Edition ; 1999 >
+    au < released ; U.S. Government Manual, 2000 Edition ; 2000 >
+    au < released ; U.S. Government Manual, 2001 Edition ; 2001 >
+    au < released ; U.S. Government Manual, 2002 Edition ; 2002 >
+    au < released ; U.S. Government Manual, 2003 Edition ; 2003 >
+    au < released ; U.S. Government Manual, 2004 Edition ; 2004 >
+    au < released ; U.S. Government Manual, 2005 Edition ; 2005 >
+    au < released ; U.S. Government Manual, 2006 Edition ; 2006 >
+    au < released ; U.S. Government Manual, 2007 Edition ; 2007 >
+    
+  }
+
+  {
+    title <
+      name = Congressional Prints 
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
+
+    au < exists ; Congressional Prints, 105 Congress ; 105 >
+    au < exists ; Congressional Prints, 106 Congress ; 106 >
+    au < exists ; Congressional Prints, 107 Congress ; 107 >
+    au < exists ; Congressional Prints, 108 Congress ; 108 >
+    au < exists ; Congressional Prints, 109 Congress ; 109 > 
+    au < exists ; Congressional Prints, 110 Congress ; 110 >
+
+  }
+  
+  {
+    title <
+      name = Congressional Record
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin
+
+    au < released ; Congressional Record, 1995 Edition ; 1995 >
+    au < released ; Congressional Record, 1996 Edition ; 1996 >
+    au < released ; Congressional Record, 1997 Edition ; 1997 >
+    au < released ; Congressional Record, 1998 Edition ; 1998 >
+    au < released ; Congressional Record, 1999 Edition ; 1999 >
+    au < released ; Congressional Record, 2000 Edition ; 2000 >
+    au < released ; Congressional Record, 2001 Edition ; 2001 >
+    au < released ; Congressional Record, 2002 Edition ; 2002 >
+    au < released ; Congressional Record, 2003 Edition ; 2003 >
+    au < released ; Congressional Record, 2004 Edition ; 2004 >
+    au < released ; Congressional Record, 2005 Edition ; 2005 >
+    au < released ; Congressional Record, 2006 Edition ; 2006 >
+    au < released ; Congressional Record, 2007 Edition ; 2007 >
+    au < released ; Congressional Record, 2008 Edition ; 2008 >
+    
+  }
+  
+  {
+    title <
+      name = Federal Register
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.record.FederalRegisterPlugin
+
+    au < released ; Federal Register, 1995 Edition ; 1995 >
+    au < released ; Federal Register, 1996 Edition ; 1996 >
+    au < released ; Federal Register, 1997 Edition ; 1997 >
+    au < released ; Federal Register, 1998 Edition ; 1998 >
+    au < released ; Federal Register, 1999 Edition ; 1999 >
+    au < released ; Federal Register, 2000 Edition ; 2000 >
+    au < released ; Federal Register, 2001 Edition ; 2001 >
+    au < released ; Federal Register, 2002 Edition ; 2002 >
+    au < released ; Federal Register, 2003 Edition ; 2003 >
+    au < released ; Federal Register, 2004 Edition ; 2004 >
+    au < released ; Federal Register, 2005 Edition ; 2005 >
+    au < released ; Federal Register, 2006 Edition ; 2006 >
+    au < released ; Federal Register, 2007 Edition ; 2007 >
+    au < released ; Federal Register, 2008 Edition ; 2008 >
+    
+  }  
+
+  {
+    title <
+      name = Congressional Reports 
+    >
+
+    implicit < status ; name ; param[year] >
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin
+
+    au < exists ; Congressional Reports, 104 Congress ; 104 >
+    au < exists ; Congressional Reports, 105 Congress ; 105 >
+    au < exists ; Congressional Reports, 106 Congress ; 106 >
+    au < exists ; Congressional Reports, 107 Congress ; 107 >
+    au < exists ; Congressional Reports, 108 Congress ; 108 >
+    au < exists ; Congressional Reports, 109 Congress ; 109 > 
+    au < exists ; Congressional Reports, 110 Congress ; 110 >
+
+  }
 
 }
