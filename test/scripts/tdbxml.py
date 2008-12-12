@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.6 2008-12-11 22:07:30 thib_gc Exp $
+# $Id: tdbxml.py,v 1.7 2008-12-12 23:17:01 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -34,7 +34,7 @@ _IMPLICIT_PARAM_ORDER = [
     'base_url', 'base_url2', 'base_url3', 'base_url4', 'base_url5',
     'oai_request_url',
     'publisher_id', 'publisher_code', 'publisher_name',
-    'journal_id', 'journal_code', 'journal_issn',
+    'journal_id', 'journal_code', 'journal_issn', 'journal_dir',
     'year',
     'issues', 'issue_set', 'issue_range', 'num_issue_range',
     'volume_name', 'volume'
