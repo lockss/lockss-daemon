@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.12 2008-12-10 02:05:47 edwardsb1 Exp $
+ * $Id: PeerIdentity.java,v 1.13 2008-12-13 07:24:54 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class PeerIdentity implements LockssSerializable {
   }
   
   // Accessor for our variables.  Here because of the MockPeerIdentity. 
-  private String getKey() {
+  protected String getKey() {
     return key;
   }
 }

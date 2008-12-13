@@ -1,5 +1,5 @@
 /*
- * $Id: MockPeerIdentity.java,v 1.4 2008-12-10 02:05:47 edwardsb1 Exp $
+ * $Id: MockPeerIdentity.java,v 1.5 2008-12-13 07:24:53 tlipkis Exp $
  */
 
 /*
@@ -74,8 +74,9 @@ public class MockPeerIdentity extends PeerIdentity {
     return false;
   }
   
-  // Accessor for our variables.  Here because of the MockPeerIdentity. 
-  private String getKey() {
+  // Accessor for our variables, so superclass uses mock vars
+  @Override
+  protected String getKey() {
     return keyMock;
   }
 
