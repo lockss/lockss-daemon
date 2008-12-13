@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.17 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.18 2008-12-13 07:25:10 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TinyUi extends BaseServletManager {
 
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
-  public static final boolean DO_USER_AUTH = true;
+  public static final boolean DO_USER_AUTH = false;
 
   private String[] tinyData;
 
