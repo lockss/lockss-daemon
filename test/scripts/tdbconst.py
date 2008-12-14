@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.3 2008-11-21 01:39:34 thib_gc Exp $
+# $Id: tdbconst.py,v 1.4 2008-12-14 06:46:46 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -73,7 +73,7 @@ TDB_LEVEL_CONTENT_TESTING_STATUSES = [TDB_STATUS_EXISTS,
                                       TDB_STATUS_RELEASED,
                                       TDB_STATUS_DOWN]
 TDB_LEVEL_EVERYTHING               = 'everything'
-TDB_LEVEL_EVERYTHING               = TDB_STATUSES[:]
+TDB_LEVEL_EVERYTHING_STATUSES      = TDB_STATUSES[:]
 TDB_LEVEL_PRODUCTION               = 'production'
 TDB_LEVEL_PRODUCTION_STATUSES      = [TDB_STATUS_RELEASED,
                                       TDB_STATUS_DOWN,
