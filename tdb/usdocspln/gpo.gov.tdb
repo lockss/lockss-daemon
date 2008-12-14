@@ -87,16 +87,16 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin
 
-    au < testing2a ; House Journal, 1991 ; 1991 >
-    au < testing2a ; House Journal, 1992 ; 1992 >
-    au < testing2a ; House Journal, 1993 ; 1993 >
-    au < testing2a ; House Journal, 1994 ; 1994 >
-    au < testing2a ; House Journal, 1995 ; 1995 >
-    au < testing2a ; House Journal, 1996 ; 1996 >
-    au < testing2a ; House Journal, 1997 ; 1997 >
-    au < testing2a ; House Journal, 1998 ; 1998 >
-    au < testing2a ; House Journal, 1999 ; 1999 >    
-
+    au < testing ; House Journal, 1991 ; 1991 >
+    au < testing ; House Journal, 1992 ; 1992 >
+    au < testing ; House Journal, 1993 ; 1993 >
+    au < testing ; House Journal, 1994 ; 1994 >
+    au < testing ; House Journal, 1995 ; 1995 >
+    au < testing ; House Journal, 1996 ; 1996 >
+    au < testing ; House Journal, 1997 ; 1997 >
+    au < testing ; House Journal, 1998 ; 1998 >
+    au < testing ; House Journal, 1999 ; 1999 >    
+ 
   }
   
   {
@@ -108,12 +108,12 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin
 
-    au < testing2b ; Public and Private Laws, 104th Congress ; 104 >
-    au < testing2b ; Public and Private Laws, 105th Congress ; 105 >
-    au < testing2b ; Public and Private Laws, 106th Congress ; 106 >
-    au < testing2b ; Public and Private Laws, 107th Congress ; 107 >
-    au < testing2b ; Public and Private Laws, 108th Congress ; 108 >
-    au < testing2b ; Public and Private Laws, 109th Congress ; 109 > 
+    au < testing ; Public and Private Laws, 104th Congress ; 104 >
+    au < testing ; Public and Private Laws, 105th Congress ; 105 >
+    au < testing ; Public and Private Laws, 106th Congress ; 106 >
+    au < testing ; Public and Private Laws, 107th Congress ; 107 >
+    au < testing ; Public and Private Laws, 108th Congress ; 108 >
+    au < testing ; Public and Private Laws, 109th Congress ; 109 > 
 
   }
   
