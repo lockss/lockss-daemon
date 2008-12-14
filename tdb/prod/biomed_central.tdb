@@ -1325,13 +1325,13 @@
       param[base_url] = http://www.biomedical-engineering-online.com/
       param[journal_issn] = 1475-925X
 
-      au < testing ; BioMedical Engineering OnLine Volume 1 ; 1 >
-      au < testing ; BioMedical Engineering OnLine Volume 2 ; 2 >
-      au < testing ; BioMedical Engineering OnLine Volume 3 ; 3 >
-      au < testing ; BioMedical Engineering OnLine Volume 4 ; 4 >
-      au < testing ; BioMedical Engineering OnLine Volume 5 ; 5 >
-      au < testing ; BioMedical Engineering OnLine Volume 6 ; 6 >
-      au < testing ; BioMedical Engineering OnLine Volume 7 ; 7 >
+      au < ready ; BioMedical Engineering OnLine Volume 1 ; 1 >
+      au < ready ; BioMedical Engineering OnLine Volume 2 ; 2 >
+      au < ready ; BioMedical Engineering OnLine Volume 3 ; 3 >
+      au < ready ; BioMedical Engineering OnLine Volume 4 ; 4 >
+      au < ready ; BioMedical Engineering OnLine Volume 5 ; 5 >
+      au < ready ; BioMedical Engineering OnLine Volume 6 ; 6 >
+      au < ready ; BioMedical Engineering OnLine Volume 7 ; 7 >
     }
 
 
@@ -1345,8 +1345,8 @@
       param[base_url] = http://www.bpsmedicine.com/
       param[journal_issn] = 1751-0759
 
-      au < manifest ; BioPsychoSocial Medicine Volume 1 ; 1 >
-      au < manifest ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < testing3b ; BioPsychoSocial Medicine Volume 1 ; 1 >
+      au < testing3b ; BioPsychoSocial Medicine Volume 2 ; 2 >
     }
 
 
@@ -1360,7 +1360,7 @@
       param[base_url] = http://www.biotechnologyforbiofuels.com/
       param[journal_issn] = 1754-6834
 
-      au < manifest ; Biotechnology for Biofuels Volume 1 ; 1 >
+      au < testing3b ; Biotechnology for Biofuels Volume 1 ; 1 >
     }
 
 
@@ -1374,16 +1374,16 @@
       param[base_url] = http://breast-cancer-research.com/
       param[journal_issn] = 1465-5411
 
-      au < manifest ; Breast Cancer Research Volume 1 ; 1 >
-      au < manifest ; Breast Cancer Research Volume 2 ; 2 >
-      au < manifest ; Breast Cancer Research Volume 3 ; 3 >
-      au < manifest ; Breast Cancer Research Volume 4 ; 4 >
-      au < manifest ; Breast Cancer Research Volume 5 ; 5 >
-      au < manifest ; Breast Cancer Research Volume 6 ; 6 >
-      au < manifest ; Breast Cancer Research Volume 7 ; 7 >
-      au < manifest ; Breast Cancer Research Volume 8 ; 8 >
-      au < manifest ; Breast Cancer Research Volume 9 ; 9 >
-      au < manifest ; Breast Cancer Research Volume 10 ; 10 >
+      au < testing4a ; Breast Cancer Research Volume 1 ; 1 >
+      au < testing4a ; Breast Cancer Research Volume 2 ; 2 >
+      au < testing4a ; Breast Cancer Research Volume 3 ; 3 >
+      au < testing4a ; Breast Cancer Research Volume 4 ; 4 >
+      au < testing4a ; Breast Cancer Research Volume 5 ; 5 >
+      au < testing4a ; Breast Cancer Research Volume 6 ; 6 >
+      au < testing4a ; Breast Cancer Research Volume 7 ; 7 >
+      au < testing4a ; Breast Cancer Research Volume 8 ; 8 >
+      au < testing4a ; Breast Cancer Research Volume 9 ; 9 >
+      au < testing4a ; Breast Cancer Research Volume 10 ; 10 >
     }
 
 
@@ -1398,13 +1398,13 @@
       param[journal_issn] = 1475-2867
 
       au < ready ; Cancer Cell International Volume 1 ; 1 >
-      au < manifest ; Cancer Cell International Volume 2 ; 2 >
-      au < manifest ; Cancer Cell International Volume 3 ; 3 >
+      au < testing4b ; Cancer Cell International Volume 2 ; 2 >
+      au < testing4b ; Cancer Cell International Volume 3 ; 3 >
       au < ready ; Cancer Cell International Volume 4 ; 4 >
-      au < manifest ; Cancer Cell International Volume 5 ; 5 >
-      au < manifest ; Cancer Cell International Volume 6 ; 6 >
-      au < manifest ; Cancer Cell International Volume 7 ; 7 >
-      au < manifest ; Cancer Cell International Volume 8 ; 8 >
+      au < testing4b ; Cancer Cell International Volume 5 ; 5 >
+      au < testing4b ; Cancer Cell International Volume 6 ; 6 >
+      au < testing4b ; Cancer Cell International Volume 7 ; 7 >
+      au < testing4b ; Cancer Cell International Volume 8 ; 8 >
     }
 
 
@@ -1418,9 +1418,9 @@
       param[base_url] = http://www.cbmjournal.com/
       param[journal_issn] = 1750-0680
 
-      au < manifest ; Carbon Balance and Management Volume 1 ; 1 >
-      au < manifest ; Carbon Balance and Management Volume 2 ; 2 >
-      au < manifest ; Carbon Balance and Management Volume 3 ; 3 >
+      au < testing3b ; Carbon Balance and Management Volume 1 ; 1 >
+      au < testing3b ; Carbon Balance and Management Volume 2 ; 2 >
+      au < testing3b ; Carbon Balance and Management Volume 3 ; 3 >
     }
 
 
