@@ -122,7 +122,9 @@ init_cache_dirs() {
     IFS=";"
     local DIR
     for DIR in ${DIRS}; do
+	IFS="${OLD_IFS}"
 	init_one_dir "${DIR}"
+	IFS=";"
     done
     IFS="${OLD_IFS}"
 }
@@ -233,7 +235,8 @@ Linux)
 esac
 CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 
-echo "LOCKSS host configuration for ${OS_TYPE}.  For more information see /etc/lockss/README"
+echo "LOCKSS host configuration for ${OS_TYPE}."
+echo "For more information see /etc/lockss/README"
 
 if [ -r "${CONFIG_FILE}" ]; then
     echo "Setting defaults from existing config: ${CONFIG_FILE}"
@@ -263,6 +266,26 @@ until is_yes ${CONFIG_OK}; do
 
     if [ "X${LOCKSS_ACCESS_SUBNET}" = X ]; then
 	LOCKSS_ACCESS_SUBNET=`echo ${LOCKSS_IPADDR} | sed 's/\.[0-9][0-9]*$/.0\/24/'`
+    fi
+
+    NAT=N
+    if [ "${LOCKSS_EXTERNAL_IPADDR}X" != X ]
+    then
+	NAT=Y
+    fi
+    ask_for_input "Is this machine behind NAT?" ${NAT}
+    if is_yes "${ANS}"
+    then
+	EXT_OK=N
+	until is_yes ${EXT_OK}; do
+	    ask_for_input "External IP address for NAT" ${LOCKSS_EXTERNAL_IPADDR}
+	    if valid_ip_address ${ANS}; then
+		LOCKSS_EXTERNAL_IPADDR=${ANS}
+		EXT_OK=Y
+	    fi
+	done
+    else
+	unset LOCKSS_EXTERNAL_IPADDR
     fi
 
     SUBNET_OK=N
@@ -308,7 +331,7 @@ until is_yes ${CONFIG_OK}; do
     if [ "X${LOCKSS_MAILHUB_USER}" != X ] ; then
 	NEED_USER=Y
     fi
-    ask_for_input "Does ${LOCKSS_MAILHUB} need user & password" ${NEED_USER}
+    ask_for_input "Does mail relay ${LOCKSS_MAILHUB} need user & password" ${NEED_USER}
     if is_yes "${ANS}"
     then
 	ask_for_input "User for ${LOCKSS_MAILHUB}" ${LOCKSS_MAILHUB_USER}
@@ -383,6 +406,7 @@ until is_yes ${CONFIG_OK}; do
 LOCKSS_USER="${LOCKSS_USER}"
 LOCKSS_HOSTNAME=${LOCKSS_HOSTNAME}
 LOCKSS_IPADDR=${LOCKSS_IPADDR}
+LOCKSS_EXTERNAL_IPADDR=${LOCKSS_EXTERNAL_IPADDR}
 LOCKSS_V3_PORT=${LOCKSS_V3_PORT}
 LOCKSS_ACCESS_SUBNET=${LOCKSS_ACCESS_SUBNET}
 LOCKSS_MAILHUB=${LOCKSS_MAILHUB}

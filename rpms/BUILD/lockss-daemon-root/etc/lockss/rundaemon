@@ -17,9 +17,11 @@ if [ "${DAEMON_COUNT}X" = 2X ]
 then
 	NUMERATOR=1
 fi
-# set LOCKSS_JAVA_HEAP to override using 2/3  memory for
-# all daemons combined
+# Default is to use  2/3 of physical memory for all daemons combined.
+# Set LOCKSS_JAVA_HEAP to override.
 #LOCKSS_JAVA_HEAP=500m
+MIN_JAVA_HEAP_IN_MB=200
+MAX_JAVA_HEAP_IN_MB=1024
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 Linux)          
@@ -28,7 +30,14 @@ Linux)
 	then
 		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p' </proc/meminfo`
 		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' ${NUMERATOR} \) / 3`
-		LOCKSS_JAVA_HEAP=${MEM_IN_KB}k
+		MEM_IN_MB=`expr ${MEM_IN_KB} '/' 1024`
+		if [ ${MEM_IN_MB} -lt ${MIN_JAVA_HEAP_IN_MB} ]; then
+		    MEM_IN_MB=${MIN_JAVA_HEAP_IN_MB}
+		fi
+		if [ ${MEM_IN_MB} -gt ${MAX_JAVA_HEAP_IN_MB} ]; then
+		    MEM_IN_MB=${MAX_JAVA_HEAP_IN_MB}
+		fi
+		LOCKSS_JAVA_HEAP=${MEM_IN_MB}m
 	fi
         ;;
 esac
@@ -64,7 +73,11 @@ else
     DAEMON_ARGS="-g prod ${DAEMON_ARGS}"
 fi
 
-LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_IPADDR}]:${LOCKSS_V3_PORT}"
+if [ "X${LOCKSS_EXTERNAL_IPADDR}" != X ]; then
+    LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_EXTERNAL_IPADDR}]:${LOCKSS_V3_PORT}"
+else
+    LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_IPADDR}]:${LOCKSS_V3_PORT}"
+fi
 
 #LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
 
