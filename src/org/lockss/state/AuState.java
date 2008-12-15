@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.36 2008-10-25 01:22:56 tlipkis Exp $
+ * $Id: AuState.java,v 1.37 2008-12-15 19:33:23 edwardsb1 Exp $
  */
 
 /*
@@ -39,13 +39,14 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
 import org.lockss.poller.v3.*;
+import org.lockss.repository.jcr.*;
 
 /**
  * AuState contains the state information for an au.
  */
 public class AuState implements LockssSerializable {
 
-  private static final Logger log = Logger.getLogger("AuState");
+  private static final Logger logger = Logger.getLogger("AuState");
 
   /** The number of updates between writing to file  (currently unused) */
   static final int URL_UPDATE_LIMIT = 1;
@@ -110,7 +111,7 @@ public class AuState implements LockssSerializable {
 	 v3Agreement, historyRepo);
   }
 
-  protected AuState(ArchivalUnit au,
+  public AuState(ArchivalUnit au,
 		    long lastCrawlTime, long lastCrawlAttempt,
 		    int lastCrawlResult, String lastCrawlResultMsg,
 		    long lastTopLevelPoll, long lastPollStart,
@@ -157,9 +158,15 @@ public class AuState implements LockssSerializable {
   /**
    * Returns the date/time the au was created.
    * @return au creation time
+   * If there is a Lockss repository exception, this method returns -1.
    */
   public long getAuCreationTime() {
-    return historyRepo.getAuCreationTime();
+    try {
+      return historyRepo.getAuCreationTime();
+    } catch (LockssRepositoryException e) {
+      logger.error("getAuCreationTime: LockssRepositoryException: " + e.getMessage());
+      return -1;
+    }
   }
 
   /**
@@ -289,7 +296,7 @@ public class AuState implements LockssSerializable {
 
   private void saveLastCrawl() {
     if (previousCrawlState != null) {
-      log.error("saveLastCrawl() called twice", new Throwable());
+      logger.error("saveLastCrawl() called twice", new Throwable());
     }
     previousCrawlState =
       new AuState(au,
@@ -328,7 +335,7 @@ public class AuState implements LockssSerializable {
       lastCrawlResultMsg = resultMsg;
       break;
     case Crawler.STATUS_ACTIVE:
-      log.warning("Storing Active state", new Throwable());
+      logger.warning("Storing Active state", new Throwable());
       break;
     }
     previousCrawlState = null;
@@ -337,7 +344,7 @@ public class AuState implements LockssSerializable {
 
   private void saveLastPoll() {
     if (previousPollState != null) {
-      log.error("saveLastPoll() called twice", new Throwable());
+      logger.error("saveLastPoll() called twice", new Throwable());
     }
     previousPollState =
       new AuState(au,

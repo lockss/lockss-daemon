@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.33 2008-11-10 07:11:53 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.34 2008-12-15 19:33:23 edwardsb1 Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.config.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.poller.*;
 import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
+import org.lockss.repository.jcr.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.util.*;
 import org.lockss.util.SerializationException.FileNotFound;
@@ -1370,7 +1371,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private Map loadIdentityAgreement(Map map, ArchivalUnit au) {
     //only called within a synchronized block, so we don't need to
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    List list = hRep.loadIdentityAgreements();
+    List list = null;
+    
+    try {
+      list = hRep.loadIdentityAgreements();
+    } catch (LockssRepositoryException e) {
+      log.error("loadIdentityAgreement", e);
+      // Should anything else be done in case of error?
+    }
     if (map == null) {
       map = new HashMap();
     }
@@ -1410,7 +1418,12 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
     Map map = findAuAgreeMap(au);
     synchronized (map) {
-      hRep.storeIdentityAgreements(new ArrayList(map.values()));
+      try {
+        hRep.storeIdentityAgreements(new ArrayList(map.values()));
+      } catch (LockssRepositoryException e) {
+        log.error("storeIdentityAgreement", e);
+        // Should anything else be done in case of error?
+      }
     }
   }
 
