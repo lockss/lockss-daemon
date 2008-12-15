@@ -26,6 +26,11 @@ daemon, in case any new configuration values are needed.
 
 - IP address of this machine.
 
+- If the machine is on a private network (behind NAT) you will need the
+    external IP address of the NAT router, and will need to forward at
+    least one port from the NAT router to the LOCKSS machine.  See
+    http://www.lockss.org/lockss/NAT
+
 - Initial subnet for admin UI access.
     The subnet (in CIDR or X.Y.Z.* notation) that will initially be
     granted access to the web-based administrative UI.  The local host is
