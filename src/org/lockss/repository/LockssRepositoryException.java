@@ -26,7 +26,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.repository.jcr;
+package org.lockss.repository;
 
 /**
  * The root exception for any problems in the version 2 of repository.

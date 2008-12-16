@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.37 2008-12-15 19:33:23 edwardsb1 Exp $
+ * $Id: AuState.java,v 1.38 2008-12-16 00:52:23 edwardsb1 Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
 import org.lockss.poller.v3.*;
+import org.lockss.repository.*;
 import org.lockss.repository.jcr.*;
 
 /**
