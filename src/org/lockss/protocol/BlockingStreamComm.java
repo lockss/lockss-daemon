@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.36 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.36.2.1 2008-12-17 05:44:34 tlipkis Exp $
  */
 
 /*
@@ -687,6 +687,21 @@ public class BlockingStreamComm
     drainingChannels.add(chan);
     if (drainingChannels.size() > maxDrainingChannels) {
       maxDrainingChannels = drainingChannels.size();
+    }
+  }
+
+  /**
+   * Remove and delete all the PeerMessages on the queue.  Needed to ensure
+   * backing files get deleted if channel is aborted with unsent messages.
+   */
+  void drainQueue(Queue queue) {
+    PeerMessage msg;
+    try {
+      while ((msg = (PeerMessage)queue.get(Deadline.EXPIRED)) != null) {
+	msg.delete();
+      }
+    } catch (InterruptedException e) {
+      // can't happen (get doesn't wait)
     }
   }
 
