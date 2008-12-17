@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.4 2008-12-14 06:46:46 thib_gc Exp $
+# $Id: tdbconst.py,v 1.5 2008-12-17 10:40:58 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,7 +27,7 @@
 # in this Software without prior written authorization from Stanford University.
 
 TDB_OPTION_LINT          = 'lint'
-TDB_OPTION_LINT_FORGIVE  = 'lintforgive'
+TDB_OPTION_LINT_FORGIVE  = 'lintForgive'
 TDB_LINT_DEFAULT         = False
 TDB_LINT_FORGIVE_DEFAULT = False
 
@@ -61,7 +61,7 @@ TDB_STATUSES              = [TDB_STATUS_DOES_NOT_EXIST,
                              TDB_STATUS_RETRACTED]
 
 TDB_OPTION_LEVEL                   = 'level'
-TDB_LEVEL_CONTENT_TESTING          = 'content_testing'
+TDB_LEVEL_CONTENT_TESTING          = 'contentTesting'
 TDB_LEVEL_CONTENT_TESTING_STATUSES = [TDB_STATUS_EXISTS,
                                       TDB_STATUS_MANIFEST,
                                       TDB_STATUS_TESTING,
@@ -86,8 +86,8 @@ TDB_LEVELS                         = TDB_STATUSES[:].extend([TDB_LEVEL_CONTENT_T
 TDB_OPTION_STYLE      = 'style'
 TDB_STYLE_NONE        = 'none'
 TDB_STYLE_XML         = 'xml'
-TDB_STYLE_XML_ENTRIES = 'xml_entries'
-TDB_STYLE_XML_LEGACY  = 'xml_legacy'
+TDB_STYLE_XML_ENTRIES = 'xmlEntries'
+TDB_STYLE_XML_LEGACY  = 'xmlLegacy'
 TDB_STYLES            = [TDB_STYLE_NONE,
                          TDB_STYLE_XML,
                          TDB_STYLE_XML_ENTRIES,
