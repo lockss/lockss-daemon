@@ -30,7 +30,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sarticle/browse\.action\?.*year=%d&quot;, base_url, year</string>
       <string>1,&quot;^%sjournals/%s/lockss\.txt$&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%sarticle/info:doi/&quot;, base_url</string>
+      <string>1,&quot;^%sarticle/info(:|%%3A)doi/&quot;, base_url</string>
       <string>1,&quot;^%sarticle/(citationList|fetchFirstRepresentation|fetchObject|fetchObjectAttachment|get[a-zA-Z0-9]*Citation|showImageLarge|slideshow)\.action\?&quot;, base_url</string>
       <string>1,&quot;^%sjournals/%s/article/fetchObjectAttachment\.action\?&quot;, base_url, journal_id</string>
     </list>
