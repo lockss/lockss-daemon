@@ -196,7 +196,8 @@
 	<value>org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin</value>
-      </list>
+	<value>org.lockss.plugin.topaz.TopazPlugin</value>
+	      </list>
     </property>
 
   </property>
