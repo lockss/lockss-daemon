@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Athabasca University">
+   <property name="name" value="All Athabasca University Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Athabasca University']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearningVolume12000">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 1 (2000)" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearningVolume122001">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 1-2 (2001)" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearningVolume232002">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 2-3 (2002)" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearning4">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearning5">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearning6">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearning7">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearning8">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="TheInternationalReviewofResearchinOpenandDistanceLearning9">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The International Review of Research in Open and Distance Learning" />
+   <property name="title" value="The International Review of Research in Open and Distance Learning Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.irrodl.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="irrodl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1972">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1972" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1972" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1973">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1973" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1973" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1974">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1974" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1974" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1975">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1975" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1975" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1976">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1976" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1976" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1977">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1977" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1977" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1979">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1979" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1979" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1980">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1980" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1980" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1981">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1981" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1981" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1982">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1982" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1982" />
+   </property>
+  </property>
+
+  <property name="CinemaCanada1983">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="Cinema Canada" />
+   <property name="title" value="Cinema Canada 1983" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://cinemacanada.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cinema" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1983" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeterVolume11983">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 1 (1983)" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1983" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeterVolume11984">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 1 (1984)" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1984" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter2">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1985" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter3">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1986" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter4">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1987" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter5">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1988" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter6">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1989" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter7">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1990" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter8">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1991" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter9">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1992" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter10">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1993" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter11">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1994" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter12">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter13">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter14">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter15">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter16">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter17">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter18">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter19">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter20">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter21">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter22">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter23">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="TheTrumpeter24">
+   <property name="attributes.publisher" value="Athabasca University" />
+   <property name="journalTitle" value="The Trumpeter" />
+   <property name="title" value="The Trumpeter Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://trumpeter.athabascau.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="trumpet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

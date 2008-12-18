@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Simon Fraser University">
+   <property name="name" value="All Simon Fraser University Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Simon Fraser University']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="Archivaria1975">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1975" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1975" />
+   </property>
+  </property>
+
+  <property name="Archivaria1976">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1976" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1976" />
+   </property>
+  </property>
+
+  <property name="Archivaria1977">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1977" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1977" />
+   </property>
+  </property>
+
+  <property name="Archivaria1978">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1978" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1978" />
+   </property>
+  </property>
+
+  <property name="Archivaria1979">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1979" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1979" />
+   </property>
+  </property>
+
+  <property name="Archivaria1980">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1980" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1980" />
+   </property>
+  </property>
+
+  <property name="Archivaria1981">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1981" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1981" />
+   </property>
+  </property>
+
+  <property name="Archivaria1982">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1982" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1982" />
+   </property>
+  </property>
+
+  <property name="Archivaria1983">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1983" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1983" />
+   </property>
+  </property>
+
+  <property name="Archivaria1984">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1984" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1984" />
+   </property>
+  </property>
+
+  <property name="Archivaria1985">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1985" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1985" />
+   </property>
+  </property>
+
+  <property name="Archivaria1986">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1986" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1986" />
+   </property>
+  </property>
+
+  <property name="Archivaria1987">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1987" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1987" />
+   </property>
+  </property>
+
+  <property name="Archivaria1988">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1988" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1988" />
+   </property>
+  </property>
+
+  <property name="Archivaria1989">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1989" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1989" />
+   </property>
+  </property>
+
+  <property name="Archivaria1990">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1990" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1990" />
+   </property>
+  </property>
+
+  <property name="Archivaria1991">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1991" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1991" />
+   </property>
+  </property>
+
+  <property name="Archivaria1992">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1992" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1992" />
+   </property>
+  </property>
+
+  <property name="Archivaria1993">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1993" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1993" />
+   </property>
+  </property>
+
+  <property name="Archivaria1994">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1994" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1994" />
+   </property>
+  </property>
+
+  <property name="Archivaria1995">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1995" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+  </property>
+
+  <property name="Archivaria1996">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1996" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+  </property>
+
+  <property name="Archivaria1997">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria 1997" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+  </property>
+
+  <property name="Archivaria1998">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria Volume 1998" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+  </property>
+
+  <property name="Archivaria1999">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria Volume 1999" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+  </property>
+
+  <property name="Archivaria2000">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="Archivaria2001">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="Archivaria2002">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="Archivaria2003">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Archivaria" />
+   <property name="title" value="Archivaria Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/archivar/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="archivaria" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofEducationPolicyandLeadership1">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="International Journal of Education Policy and Leadership" />
+   <property name="title" value="International Journal of Education Policy and Leadership Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/ijepl/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijepl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofEducationPolicyandLeadership2">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="International Journal of Education Policy and Leadership" />
+   <property name="title" value="International Journal of Education Policy and Leadership Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/ijepl/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijepl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofEducationPolicyandLeadership3">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="International Journal of Education Policy and Leadership" />
+   <property name="title" value="International Journal of Education Policy and Leadership Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/ijepl/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijepl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="Paideusis15">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Paideusis" />
+   <property name="title" value="Paideusis Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/paideusis/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="paideusis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="Paideusis16">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Paideusis" />
+   <property name="title" value="Paideusis Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/paideusis/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="paideusis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="Paideusis17">
+   <property name="attributes.publisher" value="Simon Fraser University" />
+   <property name="journalTitle" value="Paideusis" />
+   <property name="title" value="Paideusis Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.sfu.ca/paideusis/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="paideusis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

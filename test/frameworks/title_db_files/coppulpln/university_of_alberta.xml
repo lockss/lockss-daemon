@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="University of Alberta">
+   <property name="name" value="All University of Alberta Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of Alberta']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AlternativeFrancophone1">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Alternative Francophone" />
+   <property name="title" value="Alternative Francophone Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="af" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofArthropodIdentification2006">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Journal of Arthropod Identification" />
+   <property name="title" value="Canadian Journal of Arthropod Identification 2006" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cjai" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofArthropodIdentification2007">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Journal of Arthropod Identification" />
+   <property name="title" value="Canadian Journal of Arthropod Identification 2007" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cjai" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofArthropodIdentification2008">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Journal of Arthropod Identification" />
+   <property name="title" value="Canadian Journal of Arthropod Identification 2008" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cjai" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofFamilyandYouth1">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Journal of Family and Youth" />
+   <property name="title" value="Canadian Journal of Family and Youth Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cjfy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofSociology33">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Journal of Sociology" />
+   <property name="title" value="Canadian Journal of Sociology Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="cjs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare19">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1992" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare20">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1993" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare21">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1994" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare22">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare23">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare24">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare25">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare26">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofComparativeLiteratureRevueCanadiennedeLittratureCompare27">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée" />
+   <property name="title" value="Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="crcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="ESCEnglishStudiesinCanada29">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="ESC: English Studies in Canada" />
+   <property name="title" value="ESC: English Studies in Canada Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="esc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="ESCEnglishStudiesinCanada30">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="ESC: English Studies in Canada" />
+   <property name="title" value="ESC: English Studies in Canada Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="esc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="ESCEnglishStudiesinCanada31">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="ESC: English Studies in Canada" />
+   <property name="title" value="ESC: English Studies in Canada Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="esc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="ESCEnglishStudiesinCanada32">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="ESC: English Studies in Canada" />
+   <property name="title" value="ESC: English Studies in Canada Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="esc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="EvidenceBasedLibraryandInformationPractice1">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Evidence Based Library and Information Practice" />
+   <property name="title" value="Evidence Based Library and Information Practice Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="eblip" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="EvidenceBasedLibraryandInformationPractice2">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Evidence Based Library and Information Practice" />
+   <property name="title" value="Evidence Based Library and Information Practice Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="eblip" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="EvidenceBasedLibraryandInformationPractice3">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Evidence Based Library and Information Practice" />
+   <property name="title" value="Evidence Based Library and Information Practice Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="eblip" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofQualitativeMethods3">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="International Journal of Qualitative Methods" />
+   <property name="title" value="International Journal of Qualitative Methods Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijqm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofQualitativeMethods4">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="International Journal of Qualitative Methods" />
+   <property name="title" value="International Journal of Qualitative Methods Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijqm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofQualitativeMethods5">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="International Journal of Qualitative Methods" />
+   <property name="title" value="International Journal of Qualitative Methods Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijqm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofQualitativeMethods6">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="International Journal of Qualitative Methods" />
+   <property name="title" value="International Journal of Qualitative Methods Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijqm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofQualitativeMethods7">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="International Journal of Qualitative Methods" />
+   <property name="title" value="International Journal of Qualitative Methods Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijqm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="JournalofContemporaryIssuesinEducation1">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Journal of Contemporary Issues in Education" />
+   <property name="title" value="Journal of Contemporary Issues in Education Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jcie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="JournalofContemporaryIssuesinEducation2">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Journal of Contemporary Issues in Education" />
+   <property name="title" value="Journal of Contemporary Issues in Education Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jcie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="JournalofContemporaryIssuesinEducation3">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Journal of Contemporary Issues in Education" />
+   <property name="title" value="Journal of Contemporary Issues in Education Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jcie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="JournalofPharmacyPharmaceuticalSciences10">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Journal of Pharmacy &amp; Pharmaceutical Sciences" />
+   <property name="title" value="Journal of Pharmacy &amp; Pharmaceutical Sciences Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jpps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="JournalofPharmacyPharmaceuticalSciences11">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Journal of Pharmacy &amp; Pharmaceutical Sciences" />
+   <property name="title" value="Journal of Pharmacy &amp; Pharmaceutical Sciences Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jpps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="PastImperfect1">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1992" />
+   </property>
+  </property>
+
+  <property name="PastImperfect2">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1993" />
+   </property>
+  </property>
+
+  <property name="PastImperfect3">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1994" />
+   </property>
+  </property>
+
+  <property name="PastImperfect4">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+  </property>
+
+  <property name="PastImperfect5">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+  </property>
+
+  <property name="PastImperfect6">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+  </property>
+
+  <property name="PastImperfect7">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+  </property>
+
+  <property name="PastImperfect8">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+  </property>
+
+  <property name="PastImperfect9">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="PastImperfect10">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="PastImperfect11">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="PastImperfect12">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="PastImperfect13">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="PastImperfect14">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="Past Imperfect" />
+   <property name="title" value="Past Imperfect Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pi" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="TranscUlturAl1">
+   <property name="attributes.publisher" value="University of Alberta" />
+   <property name="journalTitle" value="TranscUlturAl" />
+   <property name="title" value="TranscUlturAl Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ejournals.library.ualberta.ca/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="tc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
