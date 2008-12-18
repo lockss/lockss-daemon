@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Government Printing Office">
+   <property name="name" value="All Government Printing Office Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Government Printing Office']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="CongressionalBills104thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 104th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="103" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills104thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 104th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="104" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills105thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 105th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills106thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 106th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills107thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 107th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills108thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 108th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills109thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 109th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalBills110thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Bills" />
+   <property name="title" value="Congressional Bills, 110th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="110" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments104thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 104th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="104" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments105thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 105th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments106thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 106th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments107thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 107th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments108thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 108th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments109thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 109th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalDocuments110thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Documents" />
+   <property name="title" value="Congressional Documents, 110th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="110" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings104thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 104th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="104" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings105thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 105th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings106thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 106th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings107thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 107th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings108thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 108th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings109thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 109th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalHearings110thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Hearings" />
+   <property name="title" value="Congressional Hearings, 110th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="110" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="ConstitutionoftheUnitedStates1992Edition">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Constitution of the United States" />
+   <property name="title" value="Constitution of the United States, 1992 Edition" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1992" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="ConstitutionoftheUnitedStates2002Edition">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Constitution of the United States" />
+   <property name="title" value="Constitution of the United States, 2002 Edition" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1991">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1991" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1991" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1992">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1992" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1992" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1993">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1993" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1993" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1994">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1994" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1994" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1995">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1995" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1996">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1996" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1997">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1997" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1998">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1998" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="HouseJournal1999">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="House Journal" />
+   <property name="title" value="House Journal, 1999" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PublicandPrivateLaws104thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Public and Private Laws" />
+   <property name="title" value="Public and Private Laws, 104th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="104" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PublicandPrivateLaws105thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Public and Private Laws" />
+   <property name="title" value="Public and Private Laws, 105th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PublicandPrivateLaws106thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Public and Private Laws" />
+   <property name="title" value="Public and Private Laws, 106th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PublicandPrivateLaws107thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Public and Private Laws" />
+   <property name="title" value="Public and Private Laws, 107th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PublicandPrivateLaws108thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Public and Private Laws" />
+   <property name="title" value="Public and Private Laws, 108th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PublicandPrivateLaws109thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Public and Private Laws" />
+   <property name="title" value="Public and Private Laws, 109th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual1997">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 1997" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual1998">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 1998" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual1999">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 1999" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2000">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2000" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2001">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2001" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2002">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2002" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2003">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2003" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2004">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2004" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2005">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2005" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2006">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2006" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="USGovernmentManual2007">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="U.S. Government Manual" />
+   <property name="title" value="U.S. Government Manual, 2007" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalPrints105thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Prints" />
+   <property name="title" value="Congressional Prints, 105th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalPrints106thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Prints" />
+   <property name="title" value="Congressional Prints, 106th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalPrints107thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Prints" />
+   <property name="title" value="Congressional Prints, 107th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalPrints108thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Prints" />
+   <property name="title" value="Congressional Prints, 108th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalPrints109thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Prints" />
+   <property name="title" value="Congressional Prints, 109th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalPrints110thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Prints" />
+   <property name="title" value="Congressional Prints, 110th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="110" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord1995">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 1995" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord1996">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 1996" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord1997">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 1997" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord1998">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 1998" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord1999">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 1999" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2000">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2000" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2001">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2001" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2002">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2002" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2003">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2003" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2004">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2004" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2005">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2005" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2006">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2006" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2007">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2007" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalRecord2008">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Record" />
+   <property name="title" value="Congressional Record, 2008" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister1995">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 1995" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister1996">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 1996" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister1997">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 1997" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister1998">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 1998" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister1999">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 1999" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2000">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2000" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2001">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2001" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2002">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2002" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2003">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2003" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2004">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2004" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2005">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2005" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2006">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2006" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2007">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2007" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="FederalRegister2008">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Federal Register" />
+   <property name="title" value="Federal Register, 2008" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports104thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 104th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="104" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports105thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 105th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports106thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 106th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports107thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 107th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports108thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 108th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports109thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 109th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="CongressionalReports110thCongress">
+   <property name="attributes.publisher" value="Government Printing Office" />
+   <property name="journalTitle" value="Congressional Reports" />
+   <property name="title" value="Congressional Reports, 110th Congress" />
+   <property name="plugin" value="org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalReportsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bulk.resource.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="congress" />
+    <property name="value" value="110" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>
