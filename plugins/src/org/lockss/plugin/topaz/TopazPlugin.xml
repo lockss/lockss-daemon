@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Topaz Plugin, Base URL %s, Journal ID %s, Year %s&quot;, base_url, journal_id, year</string>
+    <string>&quot;Topaz Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -28,7 +28,7 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sarticle/browse\.action\?.*year=%s&quot;, base_url, year</string>
+      <string>1,&quot;^%sarticle/browse\.action\?.*year=%d&quot;, base_url, year</string>
       <string>1,&quot;^%sjournals/%s/lockss\.txt$&quot;, base_url, journal_id</string>
       <string>1,&quot;^%sarticle/info:doi/&quot;, base_url</string>
       <string>1,&quot;^%sarticle/(citationList|fetchFirstRepresentation|fetchObject|fetchObjectAttachment|get[a-zA-Z0-9]*Citation|showImageLarge|slideshow)\.action\?&quot;, base_url</string>
@@ -38,18 +38,18 @@
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%sarticle/browse.action?month=1&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=2&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=3&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=4&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=5&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=6&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=7&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=8&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=9&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=10&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=11&amp;year=%s&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=12&amp;year=%s&amp;field=date&quot;, base_url, year</string>  
+      <string>&quot;%sarticle/browse.action?month=1&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=2&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=3&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=4&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=5&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=6&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=7&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=8&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=9&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=10&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=11&amp;year=%d&amp;field=date&quot;, base_url, year</string>
+      <string>&quot;%sarticle/browse.action?month=12&amp;year=%d&amp;field=date&quot;, base_url, year</string>  
     </list>
   </entry>
   <entry>
