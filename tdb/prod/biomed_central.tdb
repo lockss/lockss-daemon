@@ -1345,11 +1345,9 @@
       param[base_url] = http://www.bpsmedicine.com/
       param[journal_issn] = 1751-0759
 
-      au < testing ; BioPsychoSocial Medicine Volume 1 ; 1 >
-      au < testing ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < ready ; BioPsychoSocial Medicine Volume 1 ; 1 >
+      au < ready ; BioPsychoSocial Medicine Volume 2 ; 2 >
     }
-
-
 
     {
       title <
@@ -1360,10 +1358,8 @@
       param[base_url] = http://www.biotechnologyforbiofuels.com/
       param[journal_issn] = 1754-6834
 
-      au < testing ; Biotechnology for Biofuels Volume 1 ; 1 >
+      au < ready ; Biotechnology for Biofuels Volume 1 ; 1 >
     }
-
-
 
     {
       title <
@@ -1386,8 +1382,6 @@
       au < testing ; Breast Cancer Research Volume 10 ; 10 >
     }
 
-
-
     {
       title <
         name = Cancer Cell International ;
@@ -1398,13 +1392,13 @@
       param[journal_issn] = 1475-2867
 
       au < ready ; Cancer Cell International Volume 1 ; 1 >
-      au < testing ; Cancer Cell International Volume 2 ; 2 >
-      au < testing ; Cancer Cell International Volume 3 ; 3 >
+      au < ready ; Cancer Cell International Volume 2 ; 2 >
+      au < ready ; Cancer Cell International Volume 3 ; 3 >
       au < ready ; Cancer Cell International Volume 4 ; 4 >
-      au < testing ; Cancer Cell International Volume 5 ; 5 >
-      au < testing ; Cancer Cell International Volume 6 ; 6 >
-      au < testing ; Cancer Cell International Volume 7 ; 7 >
-      au < testing ; Cancer Cell International Volume 8 ; 8 >
+      au < ready ; Cancer Cell International Volume 5 ; 5 >
+      au < ready ; Cancer Cell International Volume 6 ; 6 >
+      au < ready ; Cancer Cell International Volume 7 ; 7 >
+      au < ready ; Cancer Cell International Volume 8 ; 8 >
     }
 
 
@@ -1418,9 +1412,9 @@
       param[base_url] = http://www.cbmjournal.com/
       param[journal_issn] = 1750-0680
 
-      au < testing ; Carbon Balance and Management Volume 1 ; 1 >
-      au < testing ; Carbon Balance and Management Volume 2 ; 2 >
-      au < testing ; Carbon Balance and Management Volume 3 ; 3 >
+      au < ready ; Carbon Balance and Management Volume 1 ; 1 >
+      au < ready ; Carbon Balance and Management Volume 2 ; 2 >
+      au < ready ; Carbon Balance and Management Volume 3 ; 3 >
     }
 
 
@@ -1434,13 +1428,13 @@
       param[base_url] = http://www.cardiab.com/
       param[journal_issn] = 1475-2840
 
-      au < manifest ; Cardiovascular Diabetology Volume 1 ; 1 >
-      au < manifest ; Cardiovascular Diabetology Volume 2 ; 2 >
-      au < manifest ; Cardiovascular Diabetology Volume 3 ; 3 >
-      au < manifest ; Cardiovascular Diabetology Volume 4 ; 4 >
-      au < manifest ; Cardiovascular Diabetology Volume 5 ; 5 >
-      au < manifest ; Cardiovascular Diabetology Volume 6 ; 6 >
-      au < manifest ; Cardiovascular Diabetology Volume 7 ; 7 >
+      au < testing ; Cardiovascular Diabetology Volume 1 ; 1 >
+      au < testing ; Cardiovascular Diabetology Volume 2 ; 2 >
+      au < testing ; Cardiovascular Diabetology Volume 3 ; 3 >
+      au < testing ; Cardiovascular Diabetology Volume 4 ; 4 >
+      au < testing ; Cardiovascular Diabetology Volume 5 ; 5 >
+      au < testing ; Cardiovascular Diabetology Volume 6 ; 6 >
+      au < testing ; Cardiovascular Diabetology Volume 7 ; 7 >
     }
 
 

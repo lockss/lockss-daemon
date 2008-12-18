@@ -1,0 +1,100 @@
+{
+  publisher <
+    name = Public Library of Science
+  >
+  
+  implicit < status ; name ; param[year] >
+
+  rights = openaccess
+  plugin = org.lockss.plugin.topaz.TopazPlugin
+
+  {
+    title <
+      name = PLoS Genetics
+    >
+    
+    param[base_url] = http://www.plosgenetics.org/    
+    param[journal_id] = genetics
+
+    au < exists ; PLOS Genetics Volume 1 ; 2005 >
+    au < exists ; PLOS Genetics Volume 2 ; 2006 >
+    au < exists ; PLOS Genetics Volume 3 ; 2007 >
+    au < exists ; PLOS Genetics Volume 4 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = PLoS Computational Biology
+    >
+    
+    param[base_url] = http://www.ploscompbiol.org/    
+    param[journal_id] = compbiol
+
+    au < exists ; PLOS Computational Biology Volume 1 ; 2005 >
+    au < exists ; PLOS Computational Biology Volume 2 ; 2006 >
+    au < exists ; PLOS Computational Biology Volume 3 ; 2007 >
+    au < exists ; PLOS Computational Biology Volume 4 ; 2008 >
+
+  }
+
+
+  {
+    title <
+      name = PLoS One
+    >
+    
+    param[base_url] = http://www.plosone.org/    
+    param[journal_id] = plosone
+
+    au < exists ; PLOS One Volume 1 ; 2006 >
+    au < exists ; PLOS One Volume 2 ; 2007 >
+    au < exists ; PLOS One Volume 3 ; 2008 >
+
+  }
+  
+  
+  {
+    title <
+      name = PLoS Neglected Tropical Deseases
+    >
+    
+    param[base_url] = http://www.plosntds.org/    
+    param[journal_id] = ntd
+
+    au < exists ; PLOS One Volume 1 ; 2007 >
+    au < exists ; PLOS One Volume 2 ; 2008 >
+
+  }
+  
+  
+  {
+    title <
+      name = PLoS Pathogens
+    >
+    
+    param[base_url] = http://www.plospathogens.org/    
+    param[journal_id] = pathogens
+
+    au < exists ; PLOS Pathogens Volume 1 ; 2006 >
+    au < exists ; PLOS Pathogens Volume 2 ; 2006 >
+    au < exists ; PLOS Pathogens Volume 3 ; 2007 >
+    au < exists ; PLOS Pathogens Volume 4 ; 2008 >
+
+  }
+  
+  
+  {
+    title <
+      name = PLoS Hub Clinical Trials
+    >
+    
+    param[base_url] = http://clinicaltrials.ploshubs.org/    
+    param[journal_id] = clinicalTrials
+
+    au < exists ; PLOS Clinical Trials Volume 1 ; 2006 >
+    au < exists ; PLOS Clinical Trials Volume 2 ; 2007 >
+    au < exists ; PLOS Clinical Trials Volume 3 ; 2008 >
+
+  }
+}

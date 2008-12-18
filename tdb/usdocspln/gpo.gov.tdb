@@ -126,18 +126,18 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin
 
-    au < testing ; U.S. Government Manual, 1997 ; 1997 >
-    au < testing ; U.S. Government Manual, 1998 ; 1998 >
-    au < testing ; U.S. Government Manual, 1999 ; 1999 >
-    au < testing ; U.S. Government Manual, 2000 ; 2000 >
-    au < testing ; U.S. Government Manual, 2001 ; 2001 >
-    au < testing ; U.S. Government Manual, 2002 ; 2002 >
-    au < testing ; U.S. Government Manual, 2003 ; 2003 >
-    au < testing ; U.S. Government Manual, 2004 ; 2004 >
-    au < testing ; U.S. Government Manual, 2005 ; 2005 >
-    au < testing ; U.S. Government Manual, 2006 ; 2006 >
-    au < testing ; U.S. Government Manual, 2007 ; 2007 >
-    
+    au < ready ; U.S. Government Manual, 1997 ; 1997 >
+    au < ready ; U.S. Government Manual, 1998 ; 1998 >
+    au < ready ; U.S. Government Manual, 1999 ; 1999 >
+    au < ready ; U.S. Government Manual, 2000 ; 2000 >
+    au < ready ; U.S. Government Manual, 2001 ; 2001 >
+    au < ready ; U.S. Government Manual, 2002 ; 2002 >
+    au < ready ; U.S. Government Manual, 2003 ; 2003 >
+    au < ready ; U.S. Government Manual, 2004 ; 2004 >
+    au < ready ; U.S. Government Manual, 2005 ; 2005 >
+    au < ready ; U.S. Government Manual, 2006 ; 2006 >
+    au < ready ; U.S. Government Manual, 2007 ; 2007 >
+   
   }
 
   {
@@ -149,12 +149,12 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
 
-    au < testing ; Congressional Prints, 105th Congress ; 105 >
-    au < testing ; Congressional Prints, 106th Congress ; 106 >
-    au < testing ; Congressional Prints, 107th Congress ; 107 >
-    au < testing ; Congressional Prints, 108th Congress ; 108 >
-    au < testing ; Congressional Prints, 109th Congress ; 109 > 
-    au < testing ; Congressional Prints, 110th Congress ; 110 >
+    au < ready ; Congressional Prints, 105th Congress ; 105 >
+    au < ready ; Congressional Prints, 106th Congress ; 106 >
+    au < ready ; Congressional Prints, 107th Congress ; 107 >
+    au < ready ; Congressional Prints, 108th Congress ; 108 >
+    au < ready ; Congressional Prints, 109th Congress ; 109 > 
+    au < ready ; Congressional Prints, 110th Congress ; 110 >
 
   }
   
@@ -191,22 +191,22 @@
 
     implicit < status ; name ; param[year] >
       
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.record.FederalRegisterPlugin
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin
 
-    au < exists ; Federal Register, 1995 ; 1995 >
-    au < exists ; Federal Register, 1996 ; 1996 >
-    au < exists ; Federal Register, 1997 ; 1997 >
-    au < exists ; Federal Register, 1998 ; 1998 >
-    au < exists ; Federal Register, 1999 ; 1999 >
-    au < exists ; Federal Register, 2000 ; 2000 >
-    au < exists ; Federal Register, 2001 ; 2001 >
-    au < exists ; Federal Register, 2002 ; 2002 >
-    au < exists ; Federal Register, 2003 ; 2003 >
-    au < exists ; Federal Register, 2004 ; 2004 >
-    au < exists ; Federal Register, 2005 ; 2005 >
-    au < exists ; Federal Register, 2006 ; 2006 >
-    au < exists ; Federal Register, 2007 ; 2007 >
-    au < exists ; Federal Register, 2008 ; 2008 >
+    au < testing ; Federal Register, 1995 ; 1995 >
+    au < testing ; Federal Register, 1996 ; 1996 >
+    au < testing ; Federal Register, 1997 ; 1997 >
+    au < testing ; Federal Register, 1998 ; 1998 >
+    au < testing ; Federal Register, 1999 ; 1999 >
+    au < testing ; Federal Register, 2000 ; 2000 >
+    au < testing ; Federal Register, 2001 ; 2001 >
+    au < testing ; Federal Register, 2002 ; 2002 >
+    au < testing ; Federal Register, 2003 ; 2003 >
+    au < testing ; Federal Register, 2004 ; 2004 >
+    au < testing ; Federal Register, 2005 ; 2005 >
+    au < testing ; Federal Register, 2006 ; 2006 >
+    au < testing ; Federal Register, 2007 ; 2007 >
+    au < testing ; Federal Register, 2008 ; 2008 >
     
   }  
 
