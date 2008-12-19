@@ -1,0 +1,1142 @@
+{
+  publisher <
+    name = University of California Press
+  >
+
+  implicit < status ; name ; param[volume_name] >
+
+  plugin = org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
+  param[base_url] = http://caliber.ucpress.net/
+  
+  {
+    title <
+      name = Asian Survey 
+    >
+
+    param[journal_id] = as
+
+    au < do_not_process ; Asian Survey Volume 1 ; 1 >
+    au < do_not_process ; Asian Survey Volume 2 ; 2 >
+    au < do_not_process ; Asian Survey Volume 3 ; 3 >
+    au < do_not_process ; Asian Survey Volume 4 ; 4 >
+    au < do_not_process ; Asian Survey Volume 5 ; 5 >
+    au < do_not_process ; Asian Survey Volume 6 ; 6 >
+    au < do_not_process ; Asian Survey Volume 7 ; 7 >
+    au < do_not_process ; Asian Survey Volume 8 ; 8 >
+    au < do_not_process ; Asian Survey Volume 9 ; 9 >
+    au < do_not_process ; Asian Survey Volume 10 ; 10 >
+    au < do_not_process ; Asian Survey Volume 11 ; 11 >
+    au < do_not_process ; Asian Survey Volume 12 ; 12 >
+    au < do_not_process ; Asian Survey Volume 13 ; 13 >
+    au < do_not_process ; Asian Survey Volume 14 ; 14 >
+    au < do_not_process ; Asian Survey Volume 15 ; 15 >
+    au < do_not_process ; Asian Survey Volume 16 ; 16 >
+    au < do_not_process ; Asian Survey Volume 17 ; 17 >
+    au < do_not_process ; Asian Survey Volume 18 ; 18 >
+    au < do_not_process ; Asian Survey Volume 19 ; 19 >
+    au < do_not_process ; Asian Survey Volume 20 ; 20 >
+    au < do_not_process ; Asian Survey Volume 21 ; 21 >
+    au < do_not_process ; Asian Survey Volume 22 ; 22 >
+    au < do_not_process ; Asian Survey Volume 23 ; 23 >
+    au < do_not_process ; Asian Survey Volume 24 ; 24 >
+    au < do_not_process ; Asian Survey Volume 25 ; 25 >
+    au < do_not_process ; Asian Survey Volume 26 ; 26 >
+    au < do_not_process ; Asian Survey Volume 27 ; 27 >
+    au < do_not_process ; Asian Survey Volume 28 ; 28 >
+    au < do_not_process ; Asian Survey Volume 29 ; 29 >
+    au < do_not_process ; Asian Survey Volume 30 ; 30 >
+    au < do_not_process ; Asian Survey Volume 31 ; 31 >
+    au < do_not_process ; Asian Survey Volume 32 ; 32 >
+    au < do_not_process ; Asian Survey Volume 33 ; 33 >
+    au < do_not_process ; Asian Survey Volume 34 ; 34 >
+    au < do_not_process ; Asian Survey Volume 35 ; 35 >
+    au < do_not_process ; Asian Survey Volume 36 ; 36 >
+    au < do_not_process ; Asian Survey Volume 37 ; 37 >
+    au < do_not_process ; Asian Survey Volume 38 ; 38 >
+    au < do_not_process ; Asian Survey Volume 39 ; 39 >
+    au < do_not_process ; Asian Survey Volume 40 ; 40 >
+    au < released ; Asian Survey Volume 41 ; 41 >
+    au < released ; Asian Survey Volume 42 ; 42 >
+    au < released ; Asian Survey Volume 43 ; 43 >
+    au < released ; Asian Survey Volume 44 ; 44 >
+    au < released ; Asian Survey Volume 45 ; 45 >
+    au < released ; Asian Survey Volume 46 ; 46 >
+    au < released ; Asian Survey Volume 47 ; 47 >
+    au < released ; Asian Survey Volume 48 ; 48 >
+  }
+
+
+  {
+    title <
+      name = Journal of Palestine Studies 
+    >
+
+    param[journal_id] = jps
+
+    au < do_not_process ; Journal of Palestine Studies Volume 1 ; 1 >
+    au < do_not_process ; Journal of Palestine Studies Volume 2 ; 2 >
+    au < do_not_process ; Journal of Palestine Studies Volume 3 ; 3 >
+    au < do_not_process ; Journal of Palestine Studies Volume 4 ; 4 >
+    au < do_not_process ; Journal of Palestine Studies Volume 5 ; 5 >
+    au < do_not_process ; Journal of Palestine Studies Volume 6 ; 6 >
+    au < do_not_process ; Journal of Palestine Studies Volume 7 ; 7 >
+    au < do_not_process ; Journal of Palestine Studies Volume 8 ; 8 >
+    au < do_not_process ; Journal of Palestine Studies Volume 9 ; 9 >
+    au < do_not_process ; Journal of Palestine Studies Volume 10 ; 10 >
+    au < do_not_process ; Journal of Palestine Studies Volume 11 ; 11 >
+    au < do_not_process ; Journal of Palestine Studies Volume 12 ; 12 >
+    au < do_not_process ; Journal of Palestine Studies Volume 13 ; 13 >
+    au < do_not_process ; Journal of Palestine Studies Volume 14 ; 14 >
+    au < do_not_process ; Journal of Palestine Studies Volume 15 ; 15 >
+    au < do_not_process ; Journal of Palestine Studies Volume 16 ; 16 >
+    au < do_not_process ; Journal of Palestine Studies Volume 17 ; 17 >
+    au < do_not_process ; Journal of Palestine Studies Volume 18 ; 18 >
+    au < do_not_process ; Journal of Palestine Studies Volume 19 ; 19 >
+    au < do_not_process ; Journal of Palestine Studies Volume 20 ; 20 >
+    au < do_not_process ; Journal of Palestine Studies Volume 21 ; 21 >
+    au < do_not_process ; Journal of Palestine Studies Volume 22 ; 22 >
+    au < do_not_process ; Journal of Palestine Studies Volume 23 ; 23 >
+    au < do_not_process ; Journal of Palestine Studies Volume 24 ; 24 >
+    au < do_not_process ; Journal of Palestine Studies Volume 25 ; 25 >
+    au < do_not_process ; Journal of Palestine Studies Volume 26 ; 26 >
+    au < do_not_process ; Journal of Palestine Studies Volume 27 ; 27 >
+    au < do_not_process ; Journal of Palestine Studies Volume 28 ; 28 >
+    au < do_not_process ; Journal of Palestine Studies Volume 29 ; 29 >
+    au < do_not_process ; Journal of Palestine Studies Volume 30 ; 30 >
+    au < manifest ; Journal of Palestine Studies Volume 31 ; 31 >
+    au < released ; Journal of Palestine Studies Volume 32 ; 32 >
+    au < released ; Journal of Palestine Studies Volume 33 ; 33 >
+    au < released ; Journal of Palestine Studies Volume 34 ; 34 >
+    au < released ; Journal of Palestine Studies Volume 35 ; 35 >
+    au < released ; Journal of Palestine Studies Volume 36 ; 36 >
+    au < released ; Journal of Palestine Studies Volume 37 ; 37 >
+  }
+
+
+  {
+    title <
+      name = Journal of Vietnamese Studies 
+    >
+
+    param[journal_id] = vs
+
+    au < released ; Journal of Vietnamese Studies Volume 1 ; 1 >
+    au < released ; Journal of Vietnamese Studies Volume 2 ; 2 >
+    au < released ; Journal of Vietnamese Studies Volume 3 ; 3 >
+  }
+
+
+  {
+    title <
+      name = Mexican Studies/Estudios Mexicanos 
+    >
+
+    param[journal_id] = msem
+
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 1 ; 1 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 2 ; 2 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 3 ; 3 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 4 ; 4 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 5 ; 5 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 6 ; 6 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 7 ; 7 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 8 ; 8 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 9 ; 9 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 10 ; 10 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 11 ; 11 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 12 ; 12 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 13 ; 13 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 14 ; 14 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 15 ; 15 >
+    au < do_not_process ; Mexican Studies/Estudios Mexicanos Volume 16 ; 16 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 17 ; 17 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 18 ; 18 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 19 ; 19 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 20 ; 20 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 21 ; 21 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 22 ; 22 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 23 ; 23 >
+    au < released ; Mexican Studies/Estudios Mexicanos Volume 24 ; 24 >
+  }
+
+
+  {
+    title <
+      name = Classical Antiquity 
+    >
+
+    param[journal_id] = ca
+
+    au < released ; Classical Antiquity Volume 20 ; 20 >
+    au < released ; Classical Antiquity Volume 21 ; 21 >
+    au < released ; Classical Antiquity Volume 22 ; 22 >
+    au < released ; Classical Antiquity Volume 23 ; 23 >
+    au < released ; Classical Antiquity Volume 24 ; 24 >
+    au < released ; Classical Antiquity Volume 25 ; 25 >
+    au < released ; Classical Antiquity Volume 26 ; 26 >
+    au < released ; Classical Antiquity Volume 27 ; 27 >
+  }
+
+
+  {
+    title <
+      name = Journal of Empirical Research on Human Research Ethics 
+    >
+
+    param[journal_id] = jer
+
+    au < released ; Journal of Empirical Research on Human Research Ethics Volume 1 ; 1 >
+    au < released ; Journal of Empirical Research on Human Research Ethics Volume 2 ; 2 >
+    au < released ; Journal of Empirical Research on Human Research Ethics Volume 3 ; 3 >
+  }
+
+
+  {
+    title <
+      name = Film Quarterly 
+    >
+
+    param[journal_id] = fq
+
+    au < do_not_process ; Film Quarterly Volume 1 ; 1 >
+    au < do_not_process ; Film Quarterly Volume 2 ; 2 >
+    au < do_not_process ; Film Quarterly Volume 3 ; 3 >
+    au < do_not_process ; Film Quarterly Volume 4 ; 4 >
+    au < do_not_process ; Film Quarterly Volume 5 ; 5 >
+    au < do_not_process ; Film Quarterly Volume 6 ; 6 >
+    au < do_not_process ; Film Quarterly Volume 7 ; 7 >
+    au < do_not_process ; Film Quarterly Volume 8 ; 8 >
+    au < do_not_process ; Film Quarterly Volume 9 ; 9 >
+    au < do_not_process ; Film Quarterly Volume 10 ; 10 >
+    au < do_not_process ; Film Quarterly Volume 11 ; 11 >
+    au < do_not_process ; Film Quarterly Volume 12 ; 12 >
+    au < do_not_process ; Film Quarterly Volume 13 ; 13 >
+    au < do_not_process ; Film Quarterly Volume 14 ; 14 >
+    au < do_not_process ; Film Quarterly Volume 15 ; 15 >
+    au < do_not_process ; Film Quarterly Volume 16 ; 16 >
+    au < do_not_process ; Film Quarterly Volume 17 ; 17 >
+    au < do_not_process ; Film Quarterly Volume 18 ; 18 >
+    au < do_not_process ; Film Quarterly Volume 19 ; 19 >
+    au < do_not_process ; Film Quarterly Volume 20 ; 20 >
+    au < do_not_process ; Film Quarterly Volume 21 ; 21 >
+    au < do_not_process ; Film Quarterly Volume 22 ; 22 >
+    au < do_not_process ; Film Quarterly Volume 23 ; 23 >
+    au < do_not_process ; Film Quarterly Volume 24 ; 24 >
+    au < do_not_process ; Film Quarterly Volume 25 ; 25 >
+    au < do_not_process ; Film Quarterly Volume 26 ; 26 >
+    au < do_not_process ; Film Quarterly Volume 27 ; 27 >
+    au < do_not_process ; Film Quarterly Volume 28 ; 28 >
+    au < do_not_process ; Film Quarterly Volume 29 ; 29 >
+    au < do_not_process ; Film Quarterly Volume 30 ; 30 >
+    au < do_not_process ; Film Quarterly Volume 31 ; 31 >
+    au < do_not_process ; Film Quarterly Volume 32 ; 32 >
+    au < do_not_process ; Film Quarterly Volume 33 ; 33 >
+    au < do_not_process ; Film Quarterly Volume 34 ; 34 >
+    au < do_not_process ; Film Quarterly Volume 35 ; 35 >
+    au < do_not_process ; Film Quarterly Volume 36 ; 36 >
+    au < do_not_process ; Film Quarterly Volume 37 ; 37 >
+    au < do_not_process ; Film Quarterly Volume 38 ; 38 >
+    au < do_not_process ; Film Quarterly Volume 39 ; 39 >
+    au < do_not_process ; Film Quarterly Volume 40 ; 40 >
+    au < do_not_process ; Film Quarterly Volume 41 ; 41 >
+    au < do_not_process ; Film Quarterly Volume 42 ; 42 >
+    au < do_not_process ; Film Quarterly Volume 43 ; 43 >
+    au < do_not_process ; Film Quarterly Volume 44 ; 44 >
+    au < do_not_process ; Film Quarterly Volume 45 ; 45 >
+    au < do_not_process ; Film Quarterly Volume 46 ; 46 >
+    au < do_not_process ; Film Quarterly Volume 47 ; 47 >
+    au < do_not_process ; Film Quarterly Volume 48 ; 48 >
+    au < do_not_process ; Film Quarterly Volume 49 ; 49 >
+    au < do_not_process ; Film Quarterly Volume 50 ; 50 >
+    au < do_not_process ; Film Quarterly Volume 51 ; 51 >
+    au < do_not_process ; Film Quarterly Volume 52 ; 52 >
+    au < do_not_process ; Film Quarterly Volume 53 ; 53 >
+    au < do_not_process ; Film Quarterly Volume 54 ; 54 >
+    au < released ; Film Quarterly Volume 55 ; 55 >
+    au < released ; Film Quarterly Volume 56 ; 56 >
+    au < released ; Film Quarterly Volume 57 ; 57 >
+    au < released ; Film Quarterly Volume 58 ; 58 >
+    au < released ; Film Quarterly Volume 59 ; 59 >
+    au < released ; Film Quarterly Volume 60 ; 60 >
+    au < released ; Film Quarterly Volume 61 ; 61 >
+  }
+
+
+  {
+    title <
+      name = Gastronomica 
+    >
+
+    param[journal_id] = gfc
+
+    au < released ; Gastronomica Volume 1 ; 1 >
+    au < released ; Gastronomica Volume 2 ; 2 >
+    au < released ; Gastronomica Volume 3 ; 3 >
+    au < released ; Gastronomica Volume 4 ; 4 >
+    au < released ; Gastronomica Volume 5 ; 5 >
+    au < released ; Gastronomica Volume 6 ; 6 >
+    au < released ; Gastronomica Volume 7 ; 7 >
+    au < released ; Gastronomica Volume 8 ; 8 >
+  }
+
+
+  {
+    title <
+      name = Historical Studies in the Natural Sciences 
+    >
+
+    param[journal_id] = hsns
+
+    au < manifest ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
+    au < manifest ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
+    au < manifest ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
+    au < manifest ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
+    au < manifest ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
+    au < manifest ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
+  }
+
+
+  {
+    title <
+      name = Huntington Library Quarterly 
+    >
+
+    param[journal_id] = hlq
+
+    au < ready ; Huntington Library Quarterly Volume 67 ; 67 >
+    au < manifest ; Huntington Library Quarterly Volume 68 ; 68 >
+    au < ready ; Huntington Library Quarterly Volume 69 ; 69 >
+    au < ready ; Huntington Library Quarterly Volume 70 ; 70 >
+  }
+
+
+  {
+    title <
+      name = Oral History Review 
+    >
+
+    param[journal_id] = ohr
+
+    au < ready ; Oral History Review Volume 28 ; 28 >
+    au < ready ; Oral History Review Volume 29 ; 29 >
+    au < ready ; Oral History Review Volume 30 ; 30 >
+    au < ready ; Oral History Review Volume 31 ; 31 >
+    au < ready ; Oral History Review Volume 32 ; 32 >
+    au < ready ; Oral History Review Volume 33 ; 33 >
+    au < ready ; Oral History Review Volume 34 ; 34 >
+  }
+
+
+  {
+    title <
+      name = Pacific Historical Review 
+    >
+
+    param[journal_id] = phr
+
+    au < released ; Pacific Historical Review Volume 70 ; 70 >
+    au < released ; Pacific Historical Review Volume 71 ; 71 >
+    au < released ; Pacific Historical Review Volume 72 ; 72 >
+    au < released ; Pacific Historical Review Volume 73 ; 73 >
+    au < released ; Pacific Historical Review Volume 74 ; 74 >
+    au < released ; Pacific Historical Review Volume 75 ; 75 >
+    au < released ; Pacific Historical Review Volume 76 ; 76 >
+    au < released ; Pacific Historical Review Volume 77 ; 77 >
+  }
+
+
+  {
+    title <
+      name = The Public Historian 
+    >
+
+    param[journal_id] = tph
+
+    au < released ; The Public Historian Volume 23 ; 23 >
+    au < released ; The Public Historian Volume 24 ; 24 >
+    au < released ; The Public Historian Volume 25 ; 25 >
+    au < released ; The Public Historian Volume 26 ; 26 >
+    au < released ; The Public Historian Volume 27 ; 27 >
+    au < released ; The Public Historian Volume 28 ; 28 >
+    au < released ; The Public Historian Volume 29 ; 29 >
+    au < released ; The Public Historian Volume 30 ; 30 >
+  }
+
+
+  {
+    title <
+      name = Jung Journal: Culture and Psyche 
+    >
+
+    param[journal_id] = jung
+
+    au < manifest ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
+    au < ready ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
+  }
+
+
+  {
+    title <
+      name = Law and Literature 
+    >
+
+    param[journal_id] = lal
+
+    au < do_not_process ; Law and Literature Volume 1 ; 1 >
+    au < do_not_process ; Law and Literature Volume 2 ; 2 >
+    au < do_not_process ; Law and Literature Volume 3 ; 3 >
+    au < do_not_process ; Law and Literature Volume 4 ; 4 >
+    au < do_not_process ; Law and Literature Volume 5 ; 5 >
+    au < do_not_process ; Law and Literature Volume 6 ; 6 >
+    au < do_not_process ; Law and Literature Volume 7 ; 7 >
+    au < do_not_process ; Law and Literature Volume 8 ; 8 >
+    au < do_not_process ; Law and Literature Volume 9 ; 9 >
+    au < do_not_process ; Law and Literature Volume 10 ; 10 >
+    au < do_not_process ; Law and Literature Volume 11 ; 11 >
+    au < do_not_process ; Law and Literature Volume 12 ; 12 >
+    au < ready ; Law and Literature Volume 13 ; 13 >
+    au < ready ; Law and Literature Volume 14 ; 14 >
+    au < ready ; Law and Literature Volume 15 ; 15 >
+    au < ready ; Law and Literature Volume 16 ; 16 >
+    au < ready ; Law and Literature Volume 17 ; 17 >
+    au < ready ; Law and Literature Volume 18 ; 18 >
+    au < ready ; Law and Literature Volume 19 ; 19 >
+    au < ready ; Law and Literature Volume 20 ; 20 >
+  }
+
+
+  {
+    title <
+      name = Music Perception 
+    >
+
+    param[journal_id] = mp
+
+    au < released ; Music Perception Volume 18 ; 18 >
+    au < released ; Music Perception Volume 19 ; 19 >
+    au < released ; Music Perception Volume 20 ; 20 >
+    au < released ; Music Perception Volume 21 ; 21 >
+    au < released ; Music Perception Volume 22 ; 22 >
+    au < released ; Music Perception Volume 23 ; 23 >
+    au < released ; Music Perception Volume 24 ; 24 >
+    au < released ; Music Perception Volume 25 ; 25 >
+  }
+
+
+  {
+    title <
+      name = Federal Sentencing Reporter 
+    >
+
+    param[journal_id] = fsr
+
+    au < manifest ; Federal Sentencing Reporter Volume 13 ; 13 >
+    au < manifest ; Federal Sentencing Reporter Volume 14 ; 14 >
+    au < manifest ; Federal Sentencing Reporter Volume 15 ; 15 >
+    au < manifest ; Federal Sentencing Reporter Volume 16 ; 16 >
+    au < manifest ; Federal Sentencing Reporter Volume 17 ; 17 >
+    au < manifest ; Federal Sentencing Reporter Volume 18 ; 18 >
+    au < manifest ; Federal Sentencing Reporter Volume 19 ; 19 >
+    au < manifest ; Federal Sentencing Reporter Volume 20 ; 20 >
+  }
+
+
+  {
+    title <
+      name = New Criminal Law Review 
+    >
+
+    param[journal_id] = nclr
+
+    au < ready ; New Criminal Law Review Volume 1 ; 1 >
+    au < ready ; New Criminal Law Review Volume 2 ; 2 >
+    au < ready ; New Criminal Law Review Volume 3 ; 3 >
+    au < ready ; New Criminal Law Review Volume 4 ; 4 >
+    au < ready ; New Criminal Law Review Volume 5 ; 5 >
+    au < ready ; New Criminal Law Review Volume 6 ; 6 >
+    au < ready ; New Criminal Law Review Volume 7 ; 7 >
+    au < ready ; New Criminal Law Review Volume 8 ; 8 >
+    au < ready ; New Criminal Law Review Volume 9 ; 9 >
+    au < ready ; New Criminal Law Review Volume 10 ; 10 >
+    au < ready ; New Criminal Law Review Volume 11 ; 11 >
+  }
+
+
+  {
+    title <
+      name = Nineteenth-Century Literature 
+    >
+
+    param[journal_id] = ncl
+
+    au < do_not_process ; Nineteenth-Century Literature Volume 1 ; 1 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 2 ; 2 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 3 ; 3 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 4 ; 4 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 5 ; 5 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 6 ; 6 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 7 ; 7 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 8 ; 8 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 9 ; 9 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 10 ; 10 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 11 ; 11 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 12 ; 12 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 13 ; 13 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 14 ; 14 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 15 ; 15 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 16 ; 16 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 17 ; 17 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 18 ; 18 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 19 ; 19 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 20 ; 20 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 21 ; 21 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 22 ; 22 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 23 ; 23 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 24 ; 24 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 25 ; 25 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 26 ; 26 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 27 ; 27 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 28 ; 28 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 29 ; 29 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 30 ; 30 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 31 ; 31 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 32 ; 32 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 33 ; 33 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 34 ; 34 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 35 ; 35 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 36 ; 36 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 37 ; 37 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 38 ; 38 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 39 ; 39 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 40 ; 40 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 41 ; 41 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 42 ; 42 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 43 ; 43 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 44 ; 44 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 45 ; 45 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 46 ; 46 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 47 ; 47 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 48 ; 48 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 49 ; 49 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 50 ; 50 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 51 ; 51 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 52 ; 52 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 53 ; 53 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 54 ; 54 >
+    au < do_not_process ; Nineteenth-Century Literature Volume 55 ; 55 >
+    au < ready ; Nineteenth-Century Literature Volume 56 ; 56 >
+    au < ready ; Nineteenth-Century Literature Volume 57 ; 57 >
+    au < ready ; Nineteenth-Century Literature Volume 58 ; 58 >
+    au < ready ; Nineteenth-Century Literature Volume 59 ; 59 >
+    au < ready ; Nineteenth-Century Literature Volume 60 ; 60 >
+    au < ready ; Nineteenth-Century Literature Volume 61 ; 61 >
+    au < ready ; Nineteenth-Century Literature Volume 62 ; 62 >
+  }
+
+
+  {
+    title <
+      name = Representations 
+    >
+
+    param[journal_id] = rep
+
+    au < do_not_process ; Representations Volume 1 ; 1 >
+    au < do_not_process ; Representations Volume 2 ; 2 >
+    au < do_not_process ; Representations Volume 3 ; 3 >
+    au < do_not_process ; Representations Volume 4 ; 4 >
+    au < do_not_process ; Representations Volume 5 ; 5 >
+    au < do_not_process ; Representations Volume 6 ; 6 >
+    au < do_not_process ; Representations Volume 7 ; 7 >
+    au < do_not_process ; Representations Volume 8 ; 8 >
+    au < do_not_process ; Representations Volume 9 ; 9 >
+    au < do_not_process ; Representations Volume 10 ; 10 >
+    au < do_not_process ; Representations Volume 11 ; 11 >
+    au < do_not_process ; Representations Volume 12 ; 12 >
+    au < do_not_process ; Representations Volume 13 ; 13 >
+    au < do_not_process ; Representations Volume 14 ; 14 >
+    au < do_not_process ; Representations Volume 15 ; 15 >
+    au < do_not_process ; Representations Volume 16 ; 16 >
+    au < do_not_process ; Representations Volume 17 ; 17 >
+    au < do_not_process ; Representations Volume 18 ; 18 >
+    au < do_not_process ; Representations Volume 19 ; 19 >
+    au < do_not_process ; Representations Volume 20 ; 20 >
+    au < do_not_process ; Representations Volume 21 ; 21 >
+    au < do_not_process ; Representations Volume 22 ; 22 >
+    au < do_not_process ; Representations Volume 23 ; 23 >
+    au < do_not_process ; Representations Volume 24 ; 24 >
+    au < do_not_process ; Representations Volume 25 ; 25 >
+    au < do_not_process ; Representations Volume 26 ; 26 >
+    au < do_not_process ; Representations Volume 27 ; 27 >
+    au < do_not_process ; Representations Volume 28 ; 28 >
+    au < do_not_process ; Representations Volume 29 ; 29 >
+    au < do_not_process ; Representations Volume 30 ; 30 >
+    au < do_not_process ; Representations Volume 31 ; 31 >
+    au < do_not_process ; Representations Volume 32 ; 32 >
+    au < do_not_process ; Representations Volume 33 ; 33 >
+    au < do_not_process ; Representations Volume 34 ; 34 >
+    au < do_not_process ; Representations Volume 35 ; 35 >
+    au < do_not_process ; Representations Volume 36 ; 36 >
+    au < do_not_process ; Representations Volume 37 ; 37 >
+    au < do_not_process ; Representations Volume 38 ; 38 >
+    au < do_not_process ; Representations Volume 39 ; 39 >
+    au < do_not_process ; Representations Volume 40 ; 40 >
+    au < do_not_process ; Representations Volume 41 ; 41 >
+    au < do_not_process ; Representations Volume 42 ; 42 >
+    au < do_not_process ; Representations Volume 43 ; 43 >
+    au < do_not_process ; Representations Volume 44 ; 44 >
+    au < do_not_process ; Representations Volume 45 ; 45 >
+    au < do_not_process ; Representations Volume 46 ; 46 >
+    au < do_not_process ; Representations Volume 47 ; 47 >
+    au < do_not_process ; Representations Volume 48 ; 48 >
+    au < do_not_process ; Representations Volume 49 ; 49 >
+    au < do_not_process ; Representations Volume 50 ; 50 >
+    au < do_not_process ; Representations Volume 51 ; 51 >
+    au < do_not_process ; Representations Volume 52 ; 52 >
+    au < do_not_process ; Representations Volume 53 ; 53 >
+    au < do_not_process ; Representations Volume 54 ; 54 >
+    au < do_not_process ; Representations Volume 55 ; 55 >
+    au < do_not_process ; Representations Volume 56 ; 56 >
+    au < do_not_process ; Representations Volume 57 ; 57 >
+    au < do_not_process ; Representations Volume 58 ; 58 >
+    au < do_not_process ; Representations Volume 59 ; 59 >
+    au < do_not_process ; Representations Volume 60 ; 60 >
+    au < do_not_process ; Representations Volume 61 ; 61 >
+    au < do_not_process ; Representations Volume 62 ; 62 >
+    au < do_not_process ; Representations Volume 63 ; 63 >
+    au < do_not_process ; Representations Volume 64 ; 64 >
+    au < do_not_process ; Representations Volume 65 ; 65 >
+    au < do_not_process ; Representations Volume 66 ; 66 >
+    au < do_not_process ; Representations Volume 67 ; 67 >
+    au < do_not_process ; Representations Volume 68 ; 68 >
+    au < do_not_process ; Representations Volume 69 ; 69 >
+    au < do_not_process ; Representations Volume 70 ; 70 >
+    au < do_not_process ; Representations Volume 71 ; 71 >
+    au < do_not_process ; Representations Volume 72 ; 72 >
+    au < ready ; Representations Volume 73 ; 73 >
+    au < ready ; Representations Volume 74 ; 74 >
+    au < ready ; Representations Volume 75 ; 75 >
+    au < ready ; Representations Volume 76 ; 76 >
+    au < ready ; Representations Volume 77 ; 77 >
+    au < ready ; Representations Volume 78 ; 78 >
+    au < ready ; Representations Volume 79 ; 79 >
+    au < ready ; Representations Volume 80 ; 80 >
+    au < manifest ; Representations Volume 81 ; 81 >
+    au < manifest ; Representations Volume 82 ; 82 >
+    au < manifest ; Representations Volume 83 ; 83 >
+    au < manifest ; Representations Volume 84 ; 84 >
+    au < manifest ; Representations Volume 85 ; 85 >
+    au < manifest ; Representations Volume 86 ; 86 >
+    au < manifest ; Representations Volume 87 ; 87 >
+    au < manifest ; Representations Volume 88 ; 88 >
+    au < manifest ; Representations Volume 89 ; 89 >
+    au < manifest ; Representations Volume 90 ; 90 >
+    au < manifest ; Representations Volume 91 ; 91 >
+    au < manifest ; Representations Volume 92 ; 92 >
+    au < manifest ; Representations Volume 93 ; 93 >
+    au < manifest ; Representations Volume 94 ; 94 >
+    au < manifest ; Representations Volume 95 ; 95 >
+    au < manifest ; Representations Volume 96 ; 96 >
+    au < manifest ; Representations Volume 97 ; 97 >
+    au < manifest ; Representations Volume 98 ; 98 >
+    au < manifest ; Representations Volume 99 ; 99 >
+    au < manifest ; Representations Volume 100 ; 100 >
+    au < manifest ; Representations Volume 101 ; 101 >
+    au < manifest ; Representations Volume 102 ; 102 >
+  }
+
+
+  {
+    title <
+      name = Rhetorica 
+    >
+
+    param[journal_id] = rh
+
+    au < ready ; Rhetorica Volume 1 ; 1 >
+    au < ready ; Rhetorica Volume 2 ; 2 >
+    au < ready ; Rhetorica Volume 3 ; 3 >
+    au < ready ; Rhetorica Volume 4 ; 4 >
+    au < ready ; Rhetorica Volume 5 ; 5 >
+    au < ready ; Rhetorica Volume 6 ; 6 >
+    au < ready ; Rhetorica Volume 7 ; 7 >
+    au < ready ; Rhetorica Volume 8 ; 8 >
+    au < ready ; Rhetorica Volume 9 ; 9 >
+    au < ready ; Rhetorica Volume 10 ; 10 >
+    au < ready ; Rhetorica Volume 11 ; 11 >
+    au < ready ; Rhetorica Volume 12 ; 12 >
+    au < ready ; Rhetorica Volume 13 ; 13 >
+    au < ready ; Rhetorica Volume 14 ; 14 >
+    au < ready ; Rhetorica Volume 15 ; 15 >
+    au < ready ; Rhetorica Volume 16 ; 16 >
+    au < ready ; Rhetorica Volume 17 ; 17 >
+    au < ready ; Rhetorica Volume 18 ; 18 >
+    au < ready ; Rhetorica Volume 19 ; 19 >
+    au < ready ; Rhetorica Volume 20 ; 20 >
+    au < ready ; Rhetorica Volume 21 ; 21 >
+    au < ready ; Rhetorica Volume 22 ; 22 >
+    au < ready ; Rhetorica Volume 23 ; 23 >
+    au < ready ; Rhetorica Volume 24 ; 24 >
+    au < ready ; Rhetorica Volume 25 ; 25 >
+    au < ready ; Rhetorica Volume 26 ; 26 >
+  }
+
+
+  {
+    title <
+      name = 19th-Century Music 
+    >
+
+    param[journal_id] = ncm
+
+    au < do_not_process ; 19th-Century Music Volume 1 ; 1 >
+    au < do_not_process ; 19th-Century Music Volume 2 ; 2 >
+    au < do_not_process ; 19th-Century Music Volume 3 ; 3 >
+    au < do_not_process ; 19th-Century Music Volume 4 ; 4 >
+    au < do_not_process ; 19th-Century Music Volume 5 ; 5 >
+    au < do_not_process ; 19th-Century Music Volume 6 ; 6 >
+    au < do_not_process ; 19th-Century Music Volume 7 ; 7 >
+    au < do_not_process ; 19th-Century Music Volume 8 ; 8 >
+    au < do_not_process ; 19th-Century Music Volume 9 ; 9 >
+    au < do_not_process ; 19th-Century Music Volume 10 ; 10 >
+    au < do_not_process ; 19th-Century Music Volume 11 ; 11 >
+    au < do_not_process ; 19th-Century Music Volume 12 ; 12 >
+    au < do_not_process ; 19th-Century Music Volume 13 ; 13 >
+    au < do_not_process ; 19th-Century Music Volume 14 ; 14 >
+    au < do_not_process ; 19th-Century Music Volume 15 ; 15 >
+    au < do_not_process ; 19th-Century Music Volume 16 ; 16 >
+    au < do_not_process ; 19th-Century Music Volume 17 ; 17 >
+    au < do_not_process ; 19th-Century Music Volume 18 ; 18 >
+    au < do_not_process ; 19th-Century Music Volume 19 ; 19 >
+    au < do_not_process ; 19th-Century Music Volume 20 ; 20 >
+    au < do_not_process ; 19th-Century Music Volume 21 ; 21 >
+    au < do_not_process ; 19th-Century Music Volume 22 ; 22 >
+    au < do_not_process ; 19th-Century Music Volume 23 ; 23 >
+    au < do_not_process ; 19th-Century Music Volume 24 ; 24 >
+    au < ready ; 19th-Century Music Volume 25 ; 25 >
+    au < ready ; 19th-Century Music Volume 26 ; 26 >
+    au < ready ; 19th-Century Music Volume 27 ; 27 >
+    au < ready ; 19th-Century Music Volume 28 ; 28 >
+    au < ready ; 19th-Century Music Volume 29 ; 29 >
+    au < ready ; 19th-Century Music Volume 30 ; 30 >
+    au < ready ; 19th-Century Music Volume 31 ; 31 >
+  }
+
+
+  {
+    title <
+      name = Journal of Musicology 
+    >
+
+    param[journal_id] = jm
+
+    au < do_not_process ; Journal of Musicology Volume 1 ; 1 >
+    au < do_not_process ; Journal of Musicology Volume 2 ; 2 >
+    au < do_not_process ; Journal of Musicology Volume 3 ; 3 >
+    au < do_not_process ; Journal of Musicology Volume 4 ; 4 >
+    au < do_not_process ; Journal of Musicology Volume 5 ; 5 >
+    au < do_not_process ; Journal of Musicology Volume 6 ; 6 >
+    au < do_not_process ; Journal of Musicology Volume 7 ; 7 >
+    au < do_not_process ; Journal of Musicology Volume 8 ; 8 >
+    au < do_not_process ; Journal of Musicology Volume 9 ; 9 >
+    au < do_not_process ; Journal of Musicology Volume 10 ; 10 >
+    au < do_not_process ; Journal of Musicology Volume 11 ; 11 >
+    au < do_not_process ; Journal of Musicology Volume 12 ; 12 >
+    au < do_not_process ; Journal of Musicology Volume 13 ; 13 >
+    au < do_not_process ; Journal of Musicology Volume 14 ; 14 >
+    au < do_not_process ; Journal of Musicology Volume 15 ; 15 >
+    au < do_not_process ; Journal of Musicology Volume 16 ; 16 >
+    au < do_not_process ; Journal of Musicology Volume 17 ; 17 >
+    au < do_not_process ; Journal of Musicology Volume 18 ; 18 >
+    au < ready ; Journal of Musicology Volume 19 ; 19 >
+    au < ready ; Journal of Musicology Volume 20 ; 20 >
+    au < ready ; Journal of Musicology Volume 21 ; 21 >
+    au < ready ; Journal of Musicology Volume 22 ; 22 >
+    au < ready ; Journal of Musicology Volume 23 ; 23 >
+    au < ready ; Journal of Musicology Volume 24 ; 24 >
+    au < ready ; Journal of Musicology Volume 25 ; 25 >
+  }
+
+
+  {
+    title <
+      name = Journal of the American Musicological Society 
+    >
+
+    param[journal_id] = jams
+
+    au < do_not_process ; Journal of the American Musicological Society Volume 1 ; 1 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 2 ; 2 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 3 ; 3 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 4 ; 4 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 5 ; 5 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 6 ; 6 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 7 ; 7 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 8 ; 8 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 9 ; 9 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 10 ; 10 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 11 ; 11 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 12 ; 12 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 13 ; 13 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 14 ; 14 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 15 ; 15 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 16 ; 16 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 17 ; 17 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 18 ; 18 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 19 ; 19 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 20 ; 20 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 21 ; 21 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 22 ; 22 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 23 ; 23 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 24 ; 24 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 25 ; 25 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 26 ; 26 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 27 ; 27 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 28 ; 28 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 29 ; 29 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 30 ; 30 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 31 ; 31 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 32 ; 32 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 33 ; 33 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 34 ; 34 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 35 ; 35 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 36 ; 36 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 37 ; 37 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 38 ; 38 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 39 ; 39 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 40 ; 40 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 41 ; 41 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 42 ; 42 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 43 ; 43 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 44 ; 44 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 45 ; 45 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 46 ; 46 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 47 ; 47 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 48 ; 48 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 49 ; 49 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 50 ; 50 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 51 ; 51 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 52 ; 52 >
+    au < do_not_process ; Journal of the American Musicological Society Volume 53 ; 53 >
+    au < manifest ; Journal of the American Musicological Society Volume 54 ; 54 >
+    au < manifest ; Journal of the American Musicological Society Volume 55 ; 55 >
+    au < manifest ; Journal of the American Musicological Society Volume 56 ; 56 >
+    au < manifest ; Journal of the American Musicological Society Volume 57 ; 57 >
+    au < ready ; Journal of the American Musicological Society Volume 58 ; 58 >
+    au < ready ; Journal of the American Musicological Society Volume 59 ; 59 >
+    au < ready ; Journal of the American Musicological Society Volume 60 ; 60 >
+    au < ready ; Journal of the American Musicological Society Volume 61 ; 61 >
+  }
+
+
+  {
+    title <
+      name = Music Perception 
+    >
+
+    param[journal_id] = mp
+
+    au < manifest ; Music Perception Volume 18 ; 18 >
+    au < manifest ; Music Perception Volume 19 ; 19 >
+    au < manifest ; Music Perception Volume 20 ; 20 >
+    au < manifest ; Music Perception Volume 21 ; 21 >
+    au < manifest ; Music Perception Volume 22 ; 22 >
+    au < manifest ; Music Perception Volume 23 ; 23 >
+    au < manifest ; Music Perception Volume 24 ; 24 >
+    au < manifest ; Music Perception Volume 25 ; 25 >
+  }
+
+
+  {
+    title <
+      name = Music Theory Spectrum 
+    >
+
+    param[journal_id] = mts
+
+    au < do_not_process ; Music Theory Spectrum Volume 1 ; 1 >
+    au < do_not_process ; Music Theory Spectrum Volume 2 ; 2 >
+    au < do_not_process ; Music Theory Spectrum Volume 3 ; 3 >
+    au < do_not_process ; Music Theory Spectrum Volume 4 ; 4 >
+    au < do_not_process ; Music Theory Spectrum Volume 5 ; 5 >
+    au < do_not_process ; Music Theory Spectrum Volume 6 ; 6 >
+    au < do_not_process ; Music Theory Spectrum Volume 7 ; 7 >
+    au < do_not_process ; Music Theory Spectrum Volume 8 ; 8 >
+    au < do_not_process ; Music Theory Spectrum Volume 9 ; 9 >
+    au < do_not_process ; Music Theory Spectrum Volume 10 ; 10 >
+    au < do_not_process ; Music Theory Spectrum Volume 11 ; 11 >
+    au < do_not_process ; Music Theory Spectrum Volume 12 ; 12 >
+    au < do_not_process ; Music Theory Spectrum Volume 13 ; 13 >
+    au < do_not_process ; Music Theory Spectrum Volume 14 ; 14 >
+    au < do_not_process ; Music Theory Spectrum Volume 15 ; 15 >
+    au < do_not_process ; Music Theory Spectrum Volume 16 ; 16 >
+    au < do_not_process ; Music Theory Spectrum Volume 17 ; 17 >
+    au < do_not_process ; Music Theory Spectrum Volume 18 ; 18 >
+    au < do_not_process ; Music Theory Spectrum Volume 19 ; 19 >
+    au < do_not_process ; Music Theory Spectrum Volume 20 ; 20 >
+    au < do_not_process ; Music Theory Spectrum Volume 21 ; 21 >
+    au < do_not_process ; Music Theory Spectrum Volume 22 ; 22 >
+    au < manifest ; Music Theory Spectrum Volume 23 ; 23 >
+    au < manifest ; Music Theory Spectrum Volume 24 ; 24 >
+    au < manifest ; Music Theory Spectrum Volume 25 ; 25 >
+    au < manifest ; Music Theory Spectrum Volume 26 ; 26 >
+    au < manifest ; Music Theory Spectrum Volume 27 ; 27 >
+    au < manifest ; Music Theory Spectrum Volume 28 ; 28 >
+    au < manifest ; Music Theory Spectrum Volume 29 ; 29 >
+    au < manifest ; Music Theory Spectrum Volume 30 ; 30 >
+  }
+
+
+  {
+    title <
+      name = The Auk: A Quarterly Journal of Ornithology 
+    >
+
+    param[journal_id] = auk
+
+    au < ready ; The Auk: A Quarterly Journal of Ornithology Volume 125 ; 125 >
+  }
+
+
+  {
+    title <
+      name = The Condor: An International Journal of Avian Biology 
+    >
+
+    param[journal_id] = cond
+
+    au < manifest ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
+  }
+
+
+  {
+    title <
+      name = Ornithological Monographs 
+    >
+
+    param[journal_id] = om
+
+    au < manifest ; Ornithological Monographs Volume 65 ; 65 >
+  }
+
+
+  {
+    title <
+      name = Jung Journal: Culture and Psyche 
+    >
+
+    param[journal_id] = jung
+
+    au < manifest ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
+    au < manifest ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
+  }
+
+
+  {
+    title <
+      name = Nova Religioi 
+    >
+
+    param[journal_id] = nr
+
+    au < ready ; Nova Religioi Volume 1 ; 1 >
+    au < ready ; Nova Religioi Volume 2 ; 2 >
+    au < ready ; Nova Religioi Volume 3 ; 3 >
+    au < ready ; Nova Religioi Volume 4 ; 4 >
+    au < ready ; Nova Religioi Volume 5 ; 5 >
+    au < ready ; Nova Religioi Volume 6 ; 6 >
+    au < ready ; Nova Religioi Volume 7 ; 7 >
+    au < ready ; Nova Religioi Volume 8 ; 8 >
+    au < ready ; Nova Religioi Volume 9 ; 9 >
+    au < ready ; Nova Religioi Volume 10 ; 10 >
+    au < ready ; Nova Religioi Volume 11 ; 11 >
+    au < ready ; Nova Religioi Volume 12 ; 12 >
+  }
+
+
+  {
+    title <
+      name = Religion and American Culture 
+    >
+
+    param[journal_id] = rac
+
+    au < do_not_process ; Religion and American Culture Volume 1 ; 1 >
+    au < do_not_process ; Religion and American Culture Volume 2 ; 2 >
+    au < do_not_process ; Religion and American Culture Volume 3 ; 3 >
+    au < do_not_process ; Religion and American Culture Volume 4 ; 4 >
+    au < do_not_process ; Religion and American Culture Volume 5 ; 5 >
+    au < do_not_process ; Religion and American Culture Volume 6 ; 6 >
+    au < do_not_process ; Religion and American Culture Volume 7 ; 7 >
+    au < do_not_process ; Religion and American Culture Volume 8 ; 8 >
+    au < do_not_process ; Religion and American Culture Volume 9 ; 9 >
+    au < do_not_process ; Religion and American Culture Volume 10 ; 10 >
+    au < ready ; Religion and American Culture Volume 11 ; 11 >
+    au < ready ; Religion and American Culture Volume 12 ; 12 >
+    au < ready ; Religion and American Culture Volume 13 ; 13 >
+    au < ready ; Religion and American Culture Volume 14 ; 14 >
+    au < ready ; Religion and American Culture Volume 15 ; 15 >
+    au < ready ; Religion and American Culture Volume 16 ; 16 >
+    au < ready ; Religion and American Culture Volume 17 ; 17 >
+    au < ready ; Religion and American Culture Volume 18 ; 18 >
+  }
+
+
+  {
+    title <
+      name = Sexuality Research & Social Policy 
+    >
+
+    param[journal_id] = srsp
+
+    au < ready ; Sexuality Research & Social Policy Volume 1 ; 1 >
+    au < ready ; Sexuality Research & Social Policy Volume 2 ; 2 >
+    au < ready ; Sexuality Research & Social Policy Volume 3 ; 3 >
+    au < ready ; Sexuality Research & Social Policy Volume 4 ; 4 >
+    au < ready ; Sexuality Research & Social Policy Volume 5 ; 5 >
+  }
+
+
+  {
+    title <
+      name = Contexts 
+    >
+
+    param[journal_id] = ctx
+
+    au < manifest ; Contexts Volume 1 ; 1 >
+    au < manifest ; Contexts Volume 2 ; 2 >
+    au < manifest ; Contexts Volume 3 ; 3 >
+    au < manifest ; Contexts Volume 4 ; 4 >
+    au < manifest ; Contexts Volume 5 ; 5 >
+    au < manifest ; Contexts Volume 6 ; 6 >
+    au < manifest ; Contexts Volume 7 ; 7 >
+  }
+
+
+  {
+    title <
+      name = Social Problems 
+    >
+
+    param[journal_id] = sp
+
+    au < do_not_process ; Social Problems Volume 1 ; 1 >
+    au < do_not_process ; Social Problems Volume 2 ; 2 >
+    au < do_not_process ; Social Problems Volume 3 ; 3 >
+    au < do_not_process ; Social Problems Volume 4 ; 4 >
+    au < do_not_process ; Social Problems Volume 5 ; 5 >
+    au < do_not_process ; Social Problems Volume 6 ; 6 >
+    au < do_not_process ; Social Problems Volume 7 ; 7 >
+    au < do_not_process ; Social Problems Volume 8 ; 8 >
+    au < do_not_process ; Social Problems Volume 9 ; 9 >
+    au < do_not_process ; Social Problems Volume 10 ; 10 >
+    au < do_not_process ; Social Problems Volume 11 ; 11 >
+    au < do_not_process ; Social Problems Volume 12 ; 12 >
+    au < do_not_process ; Social Problems Volume 13 ; 13 >
+    au < do_not_process ; Social Problems Volume 14 ; 14 >
+    au < do_not_process ; Social Problems Volume 15 ; 15 >
+    au < do_not_process ; Social Problems Volume 16 ; 16 >
+    au < do_not_process ; Social Problems Volume 17 ; 17 >
+    au < do_not_process ; Social Problems Volume 18 ; 18 >
+    au < do_not_process ; Social Problems Volume 19 ; 19 >
+    au < do_not_process ; Social Problems Volume 20 ; 20 >
+    au < do_not_process ; Social Problems Volume 21 ; 21 >
+    au < do_not_process ; Social Problems Volume 22 ; 22 >
+    au < do_not_process ; Social Problems Volume 23 ; 23 >
+    au < do_not_process ; Social Problems Volume 24 ; 24 >
+    au < do_not_process ; Social Problems Volume 25 ; 25 >
+    au < do_not_process ; Social Problems Volume 26 ; 26 >
+    au < do_not_process ; Social Problems Volume 27 ; 27 >
+    au < do_not_process ; Social Problems Volume 28 ; 28 >
+    au < do_not_process ; Social Problems Volume 29 ; 29 >
+    au < do_not_process ; Social Problems Volume 30 ; 30 >
+    au < do_not_process ; Social Problems Volume 31 ; 31 >
+    au < do_not_process ; Social Problems Volume 32 ; 32 >
+    au < do_not_process ; Social Problems Volume 33 ; 33 >
+    au < do_not_process ; Social Problems Volume 34 ; 34 >
+    au < do_not_process ; Social Problems Volume 35 ; 35 >
+    au < do_not_process ; Social Problems Volume 36 ; 36 >
+    au < do_not_process ; Social Problems Volume 37 ; 37 >
+    au < do_not_process ; Social Problems Volume 38 ; 38 >
+    au < do_not_process ; Social Problems Volume 39 ; 39 >
+    au < do_not_process ; Social Problems Volume 40 ; 40 >
+    au < do_not_process ; Social Problems Volume 41 ; 41 >
+    au < do_not_process ; Social Problems Volume 42 ; 42 >
+    au < do_not_process ; Social Problems Volume 43 ; 43 >
+    au < do_not_process ; Social Problems Volume 44 ; 44 >
+    au < do_not_process ; Social Problems Volume 45 ; 45 >
+    au < do_not_process ; Social Problems Volume 46 ; 46 >
+    au < do_not_process ; Social Problems Volume 47 ; 47 >
+    au < ready ; Social Problems Volume 48 ; 48 >
+    au < ready ; Social Problems Volume 49 ; 49 >
+    au < ready ; Social Problems Volume 50 ; 50 >
+    au < ready ; Social Problems Volume 51 ; 51 >
+    au < ready ; Social Problems Volume 52 ; 52 >
+    au < ready ; Social Problems Volume 53 ; 53 >
+    au < ready ; Social Problems Volume 54 ; 54 >
+    au < ready ; Social Problems Volume 55 ; 55 >
+  }
+
+
+  {
+    title <
+      name = Sociological Perspectives 
+    >
+
+    param[journal_id] = sop
+
+    au < ready ; Sociological Perspectives Volume 44 ; 44 >
+    au < ready ; Sociological Perspectives Volume 45 ; 45 >
+    au < ready ; Sociological Perspectives Volume 46 ; 46 >
+    au < ready ; Sociological Perspectives Volume 47 ; 47 >
+    au < ready ; Sociological Perspectives Volume 48 ; 48 >
+    au < ready ; Sociological Perspectives Volume 49 ; 49 >
+    au < ready ; Sociological Perspectives Volume 50 ; 50 >
+    au < ready ; Sociological Perspectives Volume 51 ; 51 >
+  }
+
+
+  {
+    title <
+      name = Symbolic Interaction 
+    >
+
+    param[journal_id] = si
+
+    au < ready ; Symbolic Interaction Volume 1 ; 1 >
+    au < ready ; Symbolic Interaction Volume 2 ; 2 >
+    au < ready ; Symbolic Interaction Volume 3 ; 3 >
+    au < ready ; Symbolic Interaction Volume 4 ; 4 >
+    au < ready ; Symbolic Interaction Volume 5 ; 5 >
+    au < ready ; Symbolic Interaction Volume 6 ; 6 >
+    au < ready ; Symbolic Interaction Volume 7 ; 7 >
+    au < ready ; Symbolic Interaction Volume 8 ; 8 >
+    au < ready ; Symbolic Interaction Volume 9 ; 9 >
+    au < ready ; Symbolic Interaction Volume 10 ; 10 >
+    au < ready ; Symbolic Interaction Volume 11 ; 11 >
+    au < ready ; Symbolic Interaction Volume 12 ; 12 >
+    au < ready ; Symbolic Interaction Volume 13 ; 13 >
+    au < ready ; Symbolic Interaction Volume 14 ; 14 >
+    au < ready ; Symbolic Interaction Volume 15 ; 15 >
+    au < ready ; Symbolic Interaction Volume 16 ; 16 >
+    au < ready ; Symbolic Interaction Volume 17 ; 17 >
+    au < ready ; Symbolic Interaction Volume 18 ; 18 >
+    au < ready ; Symbolic Interaction Volume 19 ; 19 >
+    au < ready ; Symbolic Interaction Volume 20 ; 20 >
+    au < ready ; Symbolic Interaction Volume 21 ; 21 >
+    au < manifest ; Symbolic Interaction Volume 22 ; 22 >
+    au < ready ; Symbolic Interaction Volume 23 ; 23 >
+    au < ready ; Symbolic Interaction Volume 24 ; 24 >
+    au < ready ; Symbolic Interaction Volume 25 ; 25 >
+    au < ready ; Symbolic Interaction Volume 26 ; 26 >
+    au < ready ; Symbolic Interaction Volume 27 ; 27 >
+    au < ready ; Symbolic Interaction Volume 28 ; 28 >
+    au < ready ; Symbolic Interaction Volume 29 ; 29 >
+    au < ready ; Symbolic Interaction Volume 30 ; 30 >
+    au < ready ; Symbolic Interaction Volume 31 ; 31 >
+  }
+
+}
