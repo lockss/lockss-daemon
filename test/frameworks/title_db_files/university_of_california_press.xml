@@ -36,9 +36,19 @@
 
 <lockss-config>
 
+ <property name="org.lockss.titleSet">
+
+  <property name="University of California Press">
+   <property name="name" value="All University of California Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of California Press']" />
+  </property>
+  
+ </property>
+ 
  <property name="org.lockss.title">
 
-  <property name="UCalAsianSurvey41">
+  <property name="AsianSurvey41">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 41" />
@@ -57,7 +67,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey42">
+  <property name="AsianSurvey42">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 42" />
@@ -76,7 +86,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey43">
+  <property name="AsianSurvey43">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 43" />
@@ -95,7 +105,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey44">
+  <property name="AsianSurvey44">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 44" />
@@ -114,7 +124,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey45">
+  <property name="AsianSurvey45">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 45" />
@@ -133,7 +143,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey46">
+  <property name="AsianSurvey46">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 46" />
@@ -152,7 +162,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey47">
+  <property name="AsianSurvey47">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 47" />
@@ -171,7 +181,7 @@
    </property>
   </property>
 
-  <property name="UCalAsianSurvey48">
+  <property name="AsianSurvey48">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Asian Survey" />
    <property name="title" value="Asian Survey Volume 48" />
@@ -190,7 +200,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies31">
+  <property name="JournalofPalestineStudies31">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 31" />
@@ -209,7 +219,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies32">
+  <property name="JournalofPalestineStudies32">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 32" />
@@ -228,7 +238,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies33">
+  <property name="JournalofPalestineStudies33">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 33" />
@@ -247,7 +257,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies34">
+  <property name="JournalofPalestineStudies34">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 34" />
@@ -266,7 +276,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies35">
+  <property name="JournalofPalestineStudies35">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 35" />
@@ -285,7 +295,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies36">
+  <property name="JournalofPalestineStudies36">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 36" />
@@ -304,7 +314,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofPalestineStudies37">
+  <property name="JournalofPalestineStudies37">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Palestine Studies" />
    <property name="title" value="Journal of Palestine Studies Volume 37" />
@@ -323,7 +333,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofVietnameseStudies1">
+  <property name="JournalofVietnameseStudies1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Vietnamese Studies" />
    <property name="title" value="Journal of Vietnamese Studies Volume 1" />
@@ -342,7 +352,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofVietnameseStudies2">
+  <property name="JournalofVietnameseStudies2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Vietnamese Studies" />
    <property name="title" value="Journal of Vietnamese Studies Volume 2" />
@@ -361,7 +371,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofVietnameseStudies3">
+  <property name="JournalofVietnameseStudies3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Vietnamese Studies" />
    <property name="title" value="Journal of Vietnamese Studies Volume 3" />
@@ -380,7 +390,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos17">
+  <property name="MexicanStudiesEstudiosMexicanos17">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 17" />
@@ -399,7 +409,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos18">
+  <property name="MexicanStudiesEstudiosMexicanos18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 18" />
@@ -418,7 +428,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos19">
+  <property name="MexicanStudiesEstudiosMexicanos19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 19" />
@@ -437,7 +447,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos20">
+  <property name="MexicanStudiesEstudiosMexicanos20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 20" />
@@ -456,7 +466,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos21">
+  <property name="MexicanStudiesEstudiosMexicanos21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 21" />
@@ -475,7 +485,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos22">
+  <property name="MexicanStudiesEstudiosMexicanos22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 22" />
@@ -494,7 +504,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos23">
+  <property name="MexicanStudiesEstudiosMexicanos23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 23" />
@@ -513,7 +523,7 @@
    </property>
   </property>
 
-  <property name="UCalMexicanStudiesEstudiosMexicanos24">
+  <property name="MexicanStudiesEstudiosMexicanos24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Mexican Studies/Estudios Mexicanos" />
    <property name="title" value="Mexican Studies/Estudios Mexicanos Volume 24" />
@@ -532,7 +542,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity20">
+  <property name="ClassicalAntiquity20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 20" />
@@ -551,7 +561,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity21">
+  <property name="ClassicalAntiquity21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 21" />
@@ -570,7 +580,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity22">
+  <property name="ClassicalAntiquity22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 22" />
@@ -589,7 +599,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity23">
+  <property name="ClassicalAntiquity23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 23" />
@@ -608,7 +618,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity24">
+  <property name="ClassicalAntiquity24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 24" />
@@ -627,7 +637,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity25">
+  <property name="ClassicalAntiquity25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 25" />
@@ -646,7 +656,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity26">
+  <property name="ClassicalAntiquity26">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 26" />
@@ -665,7 +675,7 @@
    </property>
   </property>
 
-  <property name="UCalClassicalAntiquity27">
+  <property name="ClassicalAntiquity27">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Classical Antiquity" />
    <property name="title" value="Classical Antiquity Volume 27" />
@@ -684,7 +694,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofEmpiricalResearchonHumanResearchEthics1">
+  <property name="JournalofEmpiricalResearchonHumanResearchEthics1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Empirical Research on Human Research Ethics" />
    <property name="title" value="Journal of Empirical Research on Human Research Ethics Volume 1" />
@@ -703,7 +713,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofEmpiricalResearchonHumanResearchEthics2">
+  <property name="JournalofEmpiricalResearchonHumanResearchEthics2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Empirical Research on Human Research Ethics" />
    <property name="title" value="Journal of Empirical Research on Human Research Ethics Volume 2" />
@@ -722,7 +732,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofEmpiricalResearchonHumanResearchEthics3">
+  <property name="JournalofEmpiricalResearchonHumanResearchEthics3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Empirical Research on Human Research Ethics" />
    <property name="title" value="Journal of Empirical Research on Human Research Ethics Volume 3" />
@@ -741,7 +751,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly55">
+  <property name="FilmQuarterly55">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 55" />
@@ -760,7 +770,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly56">
+  <property name="FilmQuarterly56">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 56" />
@@ -779,7 +789,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly57">
+  <property name="FilmQuarterly57">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 57" />
@@ -798,7 +808,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly58">
+  <property name="FilmQuarterly58">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 58" />
@@ -817,7 +827,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly59">
+  <property name="FilmQuarterly59">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 59" />
@@ -836,7 +846,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly60">
+  <property name="FilmQuarterly60">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 60" />
@@ -855,7 +865,7 @@
    </property>
   </property>
 
-  <property name="UCalFilmQuarterly61">
+  <property name="FilmQuarterly61">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Film Quarterly" />
    <property name="title" value="Film Quarterly Volume 61" />
@@ -874,7 +884,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica1">
+  <property name="Gastronomica1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 1" />
@@ -893,7 +903,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica2">
+  <property name="Gastronomica2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 2" />
@@ -912,7 +922,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica3">
+  <property name="Gastronomica3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 3" />
@@ -931,7 +941,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica4">
+  <property name="Gastronomica4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 4" />
@@ -950,7 +960,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica5">
+  <property name="Gastronomica5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 5" />
@@ -969,7 +979,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica6">
+  <property name="Gastronomica6">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 6" />
@@ -988,7 +998,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica7">
+  <property name="Gastronomica7">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 7" />
@@ -1007,7 +1017,7 @@
    </property>
   </property>
 
-  <property name="UCalGastronomica8">
+  <property name="Gastronomica8">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Gastronomica" />
    <property name="title" value="Gastronomica Volume 8" />
@@ -1026,7 +1036,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences31">
+  <property name="HistoricalStudiesintheNaturalSciences31">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 31" />
@@ -1045,7 +1055,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences32">
+  <property name="HistoricalStudiesintheNaturalSciences32">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 32" />
@@ -1064,7 +1074,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences33">
+  <property name="HistoricalStudiesintheNaturalSciences33">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 33" />
@@ -1083,7 +1093,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences34">
+  <property name="HistoricalStudiesintheNaturalSciences34">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 34" />
@@ -1102,7 +1112,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences35">
+  <property name="HistoricalStudiesintheNaturalSciences35">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 35" />
@@ -1121,7 +1131,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences36">
+  <property name="HistoricalStudiesintheNaturalSciences36">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 36" />
@@ -1140,7 +1150,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences37">
+  <property name="HistoricalStudiesintheNaturalSciences37">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 37" />
@@ -1159,7 +1169,7 @@
    </property>
   </property>
 
-  <property name="UCalHistoricalStudiesintheNaturalSciences38">
+  <property name="HistoricalStudiesintheNaturalSciences38">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Historical Studies in the Natural Sciences" />
    <property name="title" value="Historical Studies in the Natural Sciences Volume 38" />
@@ -1178,7 +1188,7 @@
    </property>
   </property>
 
-  <property name="UCalHuntingtonLibraryQuarterly67">
+  <property name="HuntingtonLibraryQuarterly67">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Huntington Library Quarterly" />
    <property name="title" value="Huntington Library Quarterly Volume 67" />
@@ -1197,7 +1207,7 @@
    </property>
   </property>
 
-  <property name="UCalHuntingtonLibraryQuarterly68">
+  <property name="HuntingtonLibraryQuarterly68">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Huntington Library Quarterly" />
    <property name="title" value="Huntington Library Quarterly Volume 68" />
@@ -1216,7 +1226,7 @@
    </property>
   </property>
 
-  <property name="UCalHuntingtonLibraryQuarterly69">
+  <property name="HuntingtonLibraryQuarterly69">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Huntington Library Quarterly" />
    <property name="title" value="Huntington Library Quarterly Volume 69" />
@@ -1235,7 +1245,7 @@
    </property>
   </property>
 
-  <property name="UCalHuntingtonLibraryQuarterly70">
+  <property name="HuntingtonLibraryQuarterly70">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Huntington Library Quarterly" />
    <property name="title" value="Huntington Library Quarterly Volume 70" />
@@ -1254,7 +1264,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview28">
+  <property name="OralHistoryReview28">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 28" />
@@ -1273,7 +1283,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview29">
+  <property name="OralHistoryReview29">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 29" />
@@ -1292,7 +1302,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview30">
+  <property name="OralHistoryReview30">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 30" />
@@ -1311,7 +1321,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview31">
+  <property name="OralHistoryReview31">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 31" />
@@ -1330,7 +1340,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview32">
+  <property name="OralHistoryReview32">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 32" />
@@ -1349,7 +1359,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview33">
+  <property name="OralHistoryReview33">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 33" />
@@ -1368,7 +1378,7 @@
    </property>
   </property>
 
-  <property name="UCalOralHistoryReview34">
+  <property name="OralHistoryReview34">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Oral History Review" />
    <property name="title" value="Oral History Review Volume 34" />
@@ -1387,7 +1397,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview70">
+  <property name="PacificHistoricalReview70">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 70" />
@@ -1406,7 +1416,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview71">
+  <property name="PacificHistoricalReview71">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 71" />
@@ -1425,7 +1435,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview72">
+  <property name="PacificHistoricalReview72">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 72" />
@@ -1444,7 +1454,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview73">
+  <property name="PacificHistoricalReview73">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 73" />
@@ -1463,7 +1473,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview74">
+  <property name="PacificHistoricalReview74">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 74" />
@@ -1482,7 +1492,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview75">
+  <property name="PacificHistoricalReview75">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 75" />
@@ -1501,7 +1511,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview76">
+  <property name="PacificHistoricalReview76">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 76" />
@@ -1520,7 +1530,7 @@
    </property>
   </property>
 
-  <property name="UCalPacificHistoricalReview77">
+  <property name="PacificHistoricalReview77">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Pacific Historical Review" />
    <property name="title" value="Pacific Historical Review Volume 77" />
@@ -1539,425 +1549,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian1">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 1" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="1" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian2">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 2" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="2" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian3">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 3" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="3" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian4">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 4" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="4" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian5">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 5" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="5" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian6">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 6" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="6" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian7">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 7" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="7" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian8">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 8" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="8" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian9">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 9" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="9" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian10">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 10" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="10" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian11">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 11" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="11" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian12">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 12" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="12" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian13">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 13" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="13" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian14">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 14" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="14" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian15">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 15" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="15" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian16">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 16" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="16" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian17">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 17" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="17" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian18">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 18" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="18" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian19">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 19" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="19" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian20">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 20" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="20" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian21">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 21" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="21" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian22">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="The Public Historian" />
-   <property name="title" value="The Public Historian Volume 22" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="tph" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="22" />
-   </property>
-  </property>
-
-  <property name="UCalThePublicHistorian23">
+  <property name="ThePublicHistorian23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 23" />
@@ -1976,7 +1568,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian24">
+  <property name="ThePublicHistorian24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 24" />
@@ -1995,7 +1587,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian25">
+  <property name="ThePublicHistorian25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 25" />
@@ -2014,7 +1606,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian26">
+  <property name="ThePublicHistorian26">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 26" />
@@ -2033,7 +1625,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian27">
+  <property name="ThePublicHistorian27">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 27" />
@@ -2052,7 +1644,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian28">
+  <property name="ThePublicHistorian28">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 28" />
@@ -2071,7 +1663,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian29">
+  <property name="ThePublicHistorian29">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 29" />
@@ -2090,7 +1682,7 @@
    </property>
   </property>
 
-  <property name="UCalThePublicHistorian30">
+  <property name="ThePublicHistorian30">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Public Historian" />
    <property name="title" value="The Public Historian Volume 30" />
@@ -2109,7 +1701,7 @@
    </property>
   </property>
 
-  <property name="UCalJungJournalCultureandPsyche1">
+  <property name="JungJournalCultureandPsyche1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Jung Journal: Culture and Psyche" />
    <property name="title" value="Jung Journal: Culture and Psyche Volume 1" />
@@ -2128,7 +1720,7 @@
    </property>
   </property>
 
-  <property name="UCalJungJournalCultureandPsyche2">
+  <property name="JungJournalCultureandPsyche2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Jung Journal: Culture and Psyche" />
    <property name="title" value="Jung Journal: Culture and Psyche Volume 2" />
@@ -2147,7 +1739,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature13">
+  <property name="LawandLiterature13">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 13" />
@@ -2166,7 +1758,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature14">
+  <property name="LawandLiterature14">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 14" />
@@ -2185,7 +1777,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature15">
+  <property name="LawandLiterature15">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 15" />
@@ -2204,7 +1796,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature16">
+  <property name="LawandLiterature16">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 16" />
@@ -2223,7 +1815,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature17">
+  <property name="LawandLiterature17">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 17" />
@@ -2242,7 +1834,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature18">
+  <property name="LawandLiterature18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 18" />
@@ -2261,7 +1853,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature19">
+  <property name="LawandLiterature19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 19" />
@@ -2280,7 +1872,7 @@
    </property>
   </property>
 
-  <property name="UCalLawandLiterature20">
+  <property name="LawandLiterature20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Law and Literature" />
    <property name="title" value="Law and Literature Volume 20" />
@@ -2299,330 +1891,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception1">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 1" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="1" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception2">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 2" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="2" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception3">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 3" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="3" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception4">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 4" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="4" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception5">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 5" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="5" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception6">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 6" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="6" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception7">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 7" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="7" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception8">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 8" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="8" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception9">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 9" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="9" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception10">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 10" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="10" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception11">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 11" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="11" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception12">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 12" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="12" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception13">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 13" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="13" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception14">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 14" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="14" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception15">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 15" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="15" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception16">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 16" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="16" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception17">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Music Perception" />
-   <property name="title" value="Music Perception Volume 17" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="mp" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="17" />
-   </property>
-  </property>
-
-  <property name="UCalMusicPerception18">
+  <property name="MusicPerception18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 18" />
@@ -2641,7 +1910,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception19">
+  <property name="MusicPerception19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 19" />
@@ -2660,7 +1929,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception20">
+  <property name="MusicPerception20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 20" />
@@ -2679,7 +1948,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception21">
+  <property name="MusicPerception21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 21" />
@@ -2698,7 +1967,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception22">
+  <property name="MusicPerception22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 22" />
@@ -2717,7 +1986,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception23">
+  <property name="MusicPerception23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 23" />
@@ -2736,7 +2005,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception24">
+  <property name="MusicPerception24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 24" />
@@ -2755,7 +2024,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception25">
+  <property name="MusicPerception25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 25" />
@@ -2774,235 +2043,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter1">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 1" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="1" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter2">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 2" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="2" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter3">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 3" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="3" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter4">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 4" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="4" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter5">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 5" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="5" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter6">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 6" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="6" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter7">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 7" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="7" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter8">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 8" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="8" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter9">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 9" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="9" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter10">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 10" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="10" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter11">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 11" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="11" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter12">
-   <property name="attributes.publisher" value="University of California Press" />
-   <property name="journalTitle" value="Federal Sentencing Reporter" />
-   <property name="title" value="Federal Sentencing Reporter Volume 12" />
-   <property name="plugin" value="org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://caliber.ucpress.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="fsr" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="12" />
-   </property>
-  </property>
-
-  <property name="UCalFederalSentencingReporter13">
+  <property name="FederalSentencingReporter13">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 13" />
@@ -3021,7 +2062,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter14">
+  <property name="FederalSentencingReporter14">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 14" />
@@ -3040,7 +2081,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter15">
+  <property name="FederalSentencingReporter15">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 15" />
@@ -3059,7 +2100,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter16">
+  <property name="FederalSentencingReporter16">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 16" />
@@ -3078,7 +2119,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter17">
+  <property name="FederalSentencingReporter17">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 17" />
@@ -3097,7 +2138,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter18">
+  <property name="FederalSentencingReporter18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 18" />
@@ -3116,7 +2157,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter19">
+  <property name="FederalSentencingReporter19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 19" />
@@ -3135,7 +2176,7 @@
    </property>
   </property>
 
-  <property name="UCalFederalSentencingReporter20">
+  <property name="FederalSentencingReporter20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Federal Sentencing Reporter" />
    <property name="title" value="Federal Sentencing Reporter Volume 20" />
@@ -3154,7 +2195,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview1">
+  <property name="NewCriminalLawReview1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 1" />
@@ -3173,7 +2214,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview2">
+  <property name="NewCriminalLawReview2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 2" />
@@ -3192,7 +2233,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview3">
+  <property name="NewCriminalLawReview3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 3" />
@@ -3211,7 +2252,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview4">
+  <property name="NewCriminalLawReview4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 4" />
@@ -3230,7 +2271,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview5">
+  <property name="NewCriminalLawReview5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 5" />
@@ -3249,7 +2290,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview6">
+  <property name="NewCriminalLawReview6">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 6" />
@@ -3268,7 +2309,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview7">
+  <property name="NewCriminalLawReview7">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 7" />
@@ -3287,7 +2328,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview8">
+  <property name="NewCriminalLawReview8">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 8" />
@@ -3306,7 +2347,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview9">
+  <property name="NewCriminalLawReview9">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 9" />
@@ -3325,7 +2366,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview10">
+  <property name="NewCriminalLawReview10">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 10" />
@@ -3344,7 +2385,7 @@
    </property>
   </property>
 
-  <property name="UCalNewCriminalLawReview11">
+  <property name="NewCriminalLawReview11">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="New Criminal Law Review" />
    <property name="title" value="New Criminal Law Review Volume 11" />
@@ -3363,7 +2404,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature56">
+  <property name="NineteenthCenturyLiterature56">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 56" />
@@ -3382,7 +2423,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature57">
+  <property name="NineteenthCenturyLiterature57">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 57" />
@@ -3401,7 +2442,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature58">
+  <property name="NineteenthCenturyLiterature58">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 58" />
@@ -3420,7 +2461,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature59">
+  <property name="NineteenthCenturyLiterature59">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 59" />
@@ -3439,7 +2480,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature60">
+  <property name="NineteenthCenturyLiterature60">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 60" />
@@ -3458,7 +2499,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature61">
+  <property name="NineteenthCenturyLiterature61">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 61" />
@@ -3477,7 +2518,7 @@
    </property>
   </property>
 
-  <property name="UCalNineteenthCenturyLiterature62">
+  <property name="NineteenthCenturyLiterature62">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nineteenth-Century Literature" />
    <property name="title" value="Nineteenth-Century Literature Volume 62" />
@@ -3496,7 +2537,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations73">
+  <property name="Representations73">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 73" />
@@ -3515,7 +2556,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations74">
+  <property name="Representations74">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 74" />
@@ -3534,7 +2575,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations75">
+  <property name="Representations75">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 75" />
@@ -3553,7 +2594,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations76">
+  <property name="Representations76">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 76" />
@@ -3572,7 +2613,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations77">
+  <property name="Representations77">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 77" />
@@ -3591,7 +2632,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations78">
+  <property name="Representations78">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 78" />
@@ -3610,7 +2651,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations79">
+  <property name="Representations79">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 79" />
@@ -3629,7 +2670,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations80">
+  <property name="Representations80">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 80" />
@@ -3648,7 +2689,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations81">
+  <property name="Representations81">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 81" />
@@ -3667,7 +2708,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations82">
+  <property name="Representations82">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 82" />
@@ -3686,7 +2727,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations83">
+  <property name="Representations83">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 83" />
@@ -3705,7 +2746,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations84">
+  <property name="Representations84">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 84" />
@@ -3724,7 +2765,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations85">
+  <property name="Representations85">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 85" />
@@ -3743,7 +2784,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations86">
+  <property name="Representations86">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 86" />
@@ -3762,7 +2803,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations87">
+  <property name="Representations87">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 87" />
@@ -3781,7 +2822,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations88">
+  <property name="Representations88">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 88" />
@@ -3800,7 +2841,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations89">
+  <property name="Representations89">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 89" />
@@ -3819,7 +2860,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations90">
+  <property name="Representations90">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 90" />
@@ -3838,7 +2879,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations91">
+  <property name="Representations91">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 91" />
@@ -3857,7 +2898,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations92">
+  <property name="Representations92">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 92" />
@@ -3876,7 +2917,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations93">
+  <property name="Representations93">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 93" />
@@ -3895,7 +2936,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations94">
+  <property name="Representations94">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 94" />
@@ -3914,7 +2955,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations95">
+  <property name="Representations95">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 95" />
@@ -3933,7 +2974,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations96">
+  <property name="Representations96">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 96" />
@@ -3952,7 +2993,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations97">
+  <property name="Representations97">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 97" />
@@ -3971,7 +3012,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations98">
+  <property name="Representations98">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 98" />
@@ -3990,7 +3031,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations99">
+  <property name="Representations99">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 99" />
@@ -4009,7 +3050,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations100">
+  <property name="Representations100">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 100" />
@@ -4028,7 +3069,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations101">
+  <property name="Representations101">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 101" />
@@ -4047,7 +3088,7 @@
    </property>
   </property>
 
-  <property name="UCalRepresentations102">
+  <property name="Representations102">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Representations" />
    <property name="title" value="Representations Volume 102" />
@@ -4066,7 +3107,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica1">
+  <property name="Rhetorica1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 1" />
@@ -4085,7 +3126,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica2">
+  <property name="Rhetorica2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 2" />
@@ -4104,7 +3145,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica3">
+  <property name="Rhetorica3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 3" />
@@ -4123,7 +3164,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica4">
+  <property name="Rhetorica4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 4" />
@@ -4142,7 +3183,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica5">
+  <property name="Rhetorica5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 5" />
@@ -4161,7 +3202,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica6">
+  <property name="Rhetorica6">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 6" />
@@ -4180,7 +3221,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica7">
+  <property name="Rhetorica7">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 7" />
@@ -4199,7 +3240,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica8">
+  <property name="Rhetorica8">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 8" />
@@ -4218,7 +3259,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica9">
+  <property name="Rhetorica9">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 9" />
@@ -4237,7 +3278,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica10">
+  <property name="Rhetorica10">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 10" />
@@ -4256,7 +3297,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica11">
+  <property name="Rhetorica11">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 11" />
@@ -4275,7 +3316,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica12">
+  <property name="Rhetorica12">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 12" />
@@ -4294,7 +3335,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica13">
+  <property name="Rhetorica13">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 13" />
@@ -4313,7 +3354,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica14">
+  <property name="Rhetorica14">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 14" />
@@ -4332,7 +3373,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica15">
+  <property name="Rhetorica15">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 15" />
@@ -4351,7 +3392,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica16">
+  <property name="Rhetorica16">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 16" />
@@ -4370,7 +3411,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica17">
+  <property name="Rhetorica17">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 17" />
@@ -4389,7 +3430,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica18">
+  <property name="Rhetorica18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 18" />
@@ -4408,7 +3449,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica19">
+  <property name="Rhetorica19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 19" />
@@ -4427,7 +3468,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica20">
+  <property name="Rhetorica20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 20" />
@@ -4446,7 +3487,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica21">
+  <property name="Rhetorica21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 21" />
@@ -4465,7 +3506,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica22">
+  <property name="Rhetorica22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 22" />
@@ -4484,7 +3525,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica23">
+  <property name="Rhetorica23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 23" />
@@ -4503,7 +3544,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica24">
+  <property name="Rhetorica24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 24" />
@@ -4522,7 +3563,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica25">
+  <property name="Rhetorica25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 25" />
@@ -4541,7 +3582,7 @@
    </property>
   </property>
 
-  <property name="UCalRhetorica26">
+  <property name="Rhetorica26">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Rhetorica" />
    <property name="title" value="Rhetorica Volume 26" />
@@ -4560,7 +3601,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic25">
+  <property name="19thCenturyMusic25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 25" />
@@ -4579,7 +3620,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic26">
+  <property name="19thCenturyMusic26">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 26" />
@@ -4598,7 +3639,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic27">
+  <property name="19thCenturyMusic27">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 27" />
@@ -4617,7 +3658,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic28">
+  <property name="19thCenturyMusic28">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 28" />
@@ -4636,7 +3677,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic29">
+  <property name="19thCenturyMusic29">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 29" />
@@ -4655,7 +3696,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic30">
+  <property name="19thCenturyMusic30">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 30" />
@@ -4674,7 +3715,7 @@
    </property>
   </property>
 
-  <property name="UCal19thCenturyMusic31">
+  <property name="19thCenturyMusic31">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="19th-Century Music" />
    <property name="title" value="19th-Century Music Volume 31" />
@@ -4693,7 +3734,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology19">
+  <property name="JournalofMusicology19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 19" />
@@ -4712,7 +3753,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology20">
+  <property name="JournalofMusicology20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 20" />
@@ -4731,7 +3772,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology21">
+  <property name="JournalofMusicology21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 21" />
@@ -4750,7 +3791,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology22">
+  <property name="JournalofMusicology22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 22" />
@@ -4769,7 +3810,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology23">
+  <property name="JournalofMusicology23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 23" />
@@ -4788,7 +3829,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology24">
+  <property name="JournalofMusicology24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 24" />
@@ -4807,7 +3848,7 @@
    </property>
   </property>
 
-  <property name="UCalJournalofMusicology25">
+  <property name="JournalofMusicology25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of Musicology" />
    <property name="title" value="Journal of Musicology Volume 25" />
@@ -4826,7 +3867,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety54">
+  <property name="JournaloftheAmericanMusicologicalSociety54">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 54" />
@@ -4845,7 +3886,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety55">
+  <property name="JournaloftheAmericanMusicologicalSociety55">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 55" />
@@ -4864,7 +3905,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety56">
+  <property name="JournaloftheAmericanMusicologicalSociety56">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 56" />
@@ -4883,7 +3924,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety57">
+  <property name="JournaloftheAmericanMusicologicalSociety57">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 57" />
@@ -4902,7 +3943,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety58">
+  <property name="JournaloftheAmericanMusicologicalSociety58">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 58" />
@@ -4921,7 +3962,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety59">
+  <property name="JournaloftheAmericanMusicologicalSociety59">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 59" />
@@ -4940,7 +3981,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety60">
+  <property name="JournaloftheAmericanMusicologicalSociety60">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 60" />
@@ -4959,7 +4000,7 @@
    </property>
   </property>
 
-  <property name="UCalJournaloftheAmericanMusicologicalSociety61">
+  <property name="JournaloftheAmericanMusicologicalSociety61">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Journal of the American Musicological Society" />
    <property name="title" value="Journal of the American Musicological Society Volume 61" />
@@ -4978,7 +4019,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception18">
+  <property name="MusicPerception18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 18" />
@@ -4997,7 +4038,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception19">
+  <property name="MusicPerception19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 19" />
@@ -5016,7 +4057,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception20">
+  <property name="MusicPerception20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 20" />
@@ -5035,7 +4076,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception21">
+  <property name="MusicPerception21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 21" />
@@ -5054,7 +4095,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception22">
+  <property name="MusicPerception22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 22" />
@@ -5073,7 +4114,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception23">
+  <property name="MusicPerception23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 23" />
@@ -5092,7 +4133,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception24">
+  <property name="MusicPerception24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 24" />
@@ -5111,7 +4152,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicPerception25">
+  <property name="MusicPerception25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Perception" />
    <property name="title" value="Music Perception Volume 25" />
@@ -5130,7 +4171,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum23">
+  <property name="MusicTheorySpectrum23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 23" />
@@ -5149,7 +4190,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum24">
+  <property name="MusicTheorySpectrum24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 24" />
@@ -5168,7 +4209,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum25">
+  <property name="MusicTheorySpectrum25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 25" />
@@ -5187,7 +4228,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum26">
+  <property name="MusicTheorySpectrum26">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 26" />
@@ -5206,7 +4247,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum27">
+  <property name="MusicTheorySpectrum27">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 27" />
@@ -5225,7 +4266,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum28">
+  <property name="MusicTheorySpectrum28">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 28" />
@@ -5244,7 +4285,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum29">
+  <property name="MusicTheorySpectrum29">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 29" />
@@ -5263,7 +4304,7 @@
    </property>
   </property>
 
-  <property name="UCalMusicTheorySpectrum30">
+  <property name="MusicTheorySpectrum30">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Music Theory Spectrum" />
    <property name="title" value="Music Theory Spectrum Volume 30" />
@@ -5282,7 +4323,7 @@
    </property>
   </property>
 
-  <property name="UCalTheAukAQuarterlyJournalofOrnithology125">
+  <property name="TheAukAQuarterlyJournalofOrnithology125">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Auk: A Quarterly Journal of Ornithology" />
    <property name="title" value="The Auk: A Quarterly Journal of Ornithology Volume 125" />
@@ -5301,7 +4342,7 @@
    </property>
   </property>
 
-  <property name="UCalTheCondorAnInternationalJournalofAvianBiology110">
+  <property name="TheCondorAnInternationalJournalofAvianBiology110">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="The Condor: An International Journal of Avian Biology" />
    <property name="title" value="The Condor: An International Journal of Avian Biology Volume 110" />
@@ -5320,7 +4361,7 @@
    </property>
   </property>
 
-  <property name="UCalOrnithologicalMonographs65">
+  <property name="OrnithologicalMonographs65">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Ornithological Monographs" />
    <property name="title" value="Ornithological Monographs Volume 65" />
@@ -5339,7 +4380,7 @@
    </property>
   </property>
 
-  <property name="UCalJungJournalCultureandPsyche1">
+  <property name="JungJournalCultureandPsyche1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Jung Journal: Culture and Psyche" />
    <property name="title" value="Jung Journal: Culture and Psyche Volume 1" />
@@ -5358,7 +4399,7 @@
    </property>
   </property>
 
-  <property name="UCalJungJournalCultureandPsyche2">
+  <property name="JungJournalCultureandPsyche2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Jung Journal: Culture and Psyche" />
    <property name="title" value="Jung Journal: Culture and Psyche Volume 2" />
@@ -5377,7 +4418,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi1">
+  <property name="NovaReligioi1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 1" />
@@ -5396,7 +4437,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi2">
+  <property name="NovaReligioi2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 2" />
@@ -5415,7 +4456,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi3">
+  <property name="NovaReligioi3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 3" />
@@ -5434,7 +4475,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi4">
+  <property name="NovaReligioi4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 4" />
@@ -5453,7 +4494,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi5">
+  <property name="NovaReligioi5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 5" />
@@ -5472,7 +4513,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi6">
+  <property name="NovaReligioi6">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 6" />
@@ -5491,7 +4532,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi7">
+  <property name="NovaReligioi7">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 7" />
@@ -5510,7 +4551,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi8">
+  <property name="NovaReligioi8">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 8" />
@@ -5529,7 +4570,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi9">
+  <property name="NovaReligioi9">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 9" />
@@ -5548,7 +4589,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi10">
+  <property name="NovaReligioi10">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 10" />
@@ -5567,7 +4608,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi11">
+  <property name="NovaReligioi11">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 11" />
@@ -5586,7 +4627,7 @@
    </property>
   </property>
 
-  <property name="UCalNovaReligioi12">
+  <property name="NovaReligioi12">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Nova Religioi" />
    <property name="title" value="Nova Religioi Volume 12" />
@@ -5605,7 +4646,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture11">
+  <property name="ReligionandAmericanCulture11">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 11" />
@@ -5624,7 +4665,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture12">
+  <property name="ReligionandAmericanCulture12">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 12" />
@@ -5643,7 +4684,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture13">
+  <property name="ReligionandAmericanCulture13">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 13" />
@@ -5662,7 +4703,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture14">
+  <property name="ReligionandAmericanCulture14">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 14" />
@@ -5681,7 +4722,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture15">
+  <property name="ReligionandAmericanCulture15">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 15" />
@@ -5700,7 +4741,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture16">
+  <property name="ReligionandAmericanCulture16">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 16" />
@@ -5719,7 +4760,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture17">
+  <property name="ReligionandAmericanCulture17">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 17" />
@@ -5738,7 +4779,7 @@
    </property>
   </property>
 
-  <property name="UCalReligionandAmericanCulture18">
+  <property name="ReligionandAmericanCulture18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Religion and American Culture" />
    <property name="title" value="Religion and American Culture Volume 18" />
@@ -5757,7 +4798,7 @@
    </property>
   </property>
 
-  <property name="UCalSexualityResearchandampSocialPolicy1">
+  <property name="SexualityResearchSocialPolicy1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sexuality Research &amp; Social Policy" />
    <property name="title" value="Sexuality Research &amp; Social Policy Volume 1" />
@@ -5776,7 +4817,7 @@
    </property>
   </property>
 
-  <property name="UCalSexualityResearchandampSocialPolicy2">
+  <property name="SexualityResearchSocialPolicy2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sexuality Research &amp; Social Policy" />
    <property name="title" value="Sexuality Research &amp; Social Policy Volume 2" />
@@ -5795,7 +4836,7 @@
    </property>
   </property>
 
-  <property name="UCalSexualityResearchandampSocialPolicy3">
+  <property name="SexualityResearchSocialPolicy3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sexuality Research &amp; Social Policy" />
    <property name="title" value="Sexuality Research &amp; Social Policy Volume 3" />
@@ -5814,7 +4855,7 @@
    </property>
   </property>
 
-  <property name="UCalSexualityResearchandampSocialPolicy4">
+  <property name="SexualityResearchSocialPolicy4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sexuality Research &amp; Social Policy" />
    <property name="title" value="Sexuality Research &amp; Social Policy Volume 4" />
@@ -5833,7 +4874,7 @@
    </property>
   </property>
 
-  <property name="UCalSexualityResearchandampSocialPolicy5">
+  <property name="SexualityResearchSocialPolicy5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sexuality Research &amp; Social Policy" />
    <property name="title" value="Sexuality Research &amp; Social Policy Volume 5" />
@@ -5852,7 +4893,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts1">
+  <property name="Contexts1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 1" />
@@ -5871,7 +4912,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts2">
+  <property name="Contexts2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 2" />
@@ -5890,7 +4931,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts3">
+  <property name="Contexts3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 3" />
@@ -5909,7 +4950,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts4">
+  <property name="Contexts4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 4" />
@@ -5928,7 +4969,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts5">
+  <property name="Contexts5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 5" />
@@ -5947,7 +4988,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts6">
+  <property name="Contexts6">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 6" />
@@ -5966,7 +5007,7 @@
    </property>
   </property>
 
-  <property name="UCalContexts7">
+  <property name="Contexts7">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Contexts" />
    <property name="title" value="Contexts Volume 7" />
@@ -5985,7 +5026,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems48">
+  <property name="SocialProblems48">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 48" />
@@ -6004,7 +5045,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems49">
+  <property name="SocialProblems49">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 49" />
@@ -6023,7 +5064,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems50">
+  <property name="SocialProblems50">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 50" />
@@ -6042,7 +5083,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems51">
+  <property name="SocialProblems51">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 51" />
@@ -6061,7 +5102,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems52">
+  <property name="SocialProblems52">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 52" />
@@ -6080,7 +5121,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems53">
+  <property name="SocialProblems53">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 53" />
@@ -6099,7 +5140,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems54">
+  <property name="SocialProblems54">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 54" />
@@ -6118,7 +5159,7 @@
    </property>
   </property>
 
-  <property name="UCalSocialProblems55">
+  <property name="SocialProblems55">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Social Problems" />
    <property name="title" value="Social Problems Volume 55" />
@@ -6137,7 +5178,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives44">
+  <property name="SociologicalPerspectives44">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 44" />
@@ -6156,7 +5197,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives45">
+  <property name="SociologicalPerspectives45">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 45" />
@@ -6175,7 +5216,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives46">
+  <property name="SociologicalPerspectives46">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 46" />
@@ -6194,7 +5235,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives47">
+  <property name="SociologicalPerspectives47">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 47" />
@@ -6213,7 +5254,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives48">
+  <property name="SociologicalPerspectives48">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 48" />
@@ -6232,7 +5273,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives49">
+  <property name="SociologicalPerspectives49">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 49" />
@@ -6251,7 +5292,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives50">
+  <property name="SociologicalPerspectives50">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 50" />
@@ -6270,7 +5311,7 @@
    </property>
   </property>
 
-  <property name="UCalSociologicalPerspectives51">
+  <property name="SociologicalPerspectives51">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Sociological Perspectives" />
    <property name="title" value="Sociological Perspectives Volume 51" />
@@ -6289,7 +5330,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction1">
+  <property name="SymbolicInteraction1">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 1" />
@@ -6308,7 +5349,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction2">
+  <property name="SymbolicInteraction2">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 2" />
@@ -6327,7 +5368,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction3">
+  <property name="SymbolicInteraction3">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 3" />
@@ -6346,7 +5387,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction4">
+  <property name="SymbolicInteraction4">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 4" />
@@ -6365,7 +5406,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction5">
+  <property name="SymbolicInteraction5">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 5" />
@@ -6384,7 +5425,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction6">
+  <property name="SymbolicInteraction6">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 6" />
@@ -6403,7 +5444,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction7">
+  <property name="SymbolicInteraction7">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 7" />
@@ -6422,7 +5463,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction8">
+  <property name="SymbolicInteraction8">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 8" />
@@ -6441,7 +5482,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction9">
+  <property name="SymbolicInteraction9">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 9" />
@@ -6460,7 +5501,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction10">
+  <property name="SymbolicInteraction10">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 10" />
@@ -6479,7 +5520,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction11">
+  <property name="SymbolicInteraction11">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 11" />
@@ -6498,7 +5539,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction12">
+  <property name="SymbolicInteraction12">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 12" />
@@ -6517,7 +5558,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction13">
+  <property name="SymbolicInteraction13">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 13" />
@@ -6536,7 +5577,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction14">
+  <property name="SymbolicInteraction14">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 14" />
@@ -6555,7 +5596,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction15">
+  <property name="SymbolicInteraction15">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 15" />
@@ -6574,7 +5615,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction16">
+  <property name="SymbolicInteraction16">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 16" />
@@ -6593,7 +5634,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction17">
+  <property name="SymbolicInteraction17">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 17" />
@@ -6612,7 +5653,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction18">
+  <property name="SymbolicInteraction18">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 18" />
@@ -6631,7 +5672,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction19">
+  <property name="SymbolicInteraction19">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 19" />
@@ -6650,7 +5691,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction20">
+  <property name="SymbolicInteraction20">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 20" />
@@ -6669,7 +5710,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction21">
+  <property name="SymbolicInteraction21">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 21" />
@@ -6688,7 +5729,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction22">
+  <property name="SymbolicInteraction22">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 22" />
@@ -6707,7 +5748,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction23">
+  <property name="SymbolicInteraction23">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 23" />
@@ -6726,7 +5767,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction24">
+  <property name="SymbolicInteraction24">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 24" />
@@ -6745,7 +5786,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction25">
+  <property name="SymbolicInteraction25">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 25" />
@@ -6764,7 +5805,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction26">
+  <property name="SymbolicInteraction26">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 26" />
@@ -6783,7 +5824,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction27">
+  <property name="SymbolicInteraction27">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 27" />
@@ -6802,7 +5843,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction28">
+  <property name="SymbolicInteraction28">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 28" />
@@ -6821,7 +5862,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction29">
+  <property name="SymbolicInteraction29">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 29" />
@@ -6840,7 +5881,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction30">
+  <property name="SymbolicInteraction30">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 30" />
@@ -6859,7 +5900,7 @@
    </property>
   </property>
 
-  <property name="UCalSymbolicInteraction31">
+  <property name="SymbolicInteraction31">
    <property name="attributes.publisher" value="University of California Press" />
    <property name="journalTitle" value="Symbolic Interaction" />
    <property name="title" value="Symbolic Interaction Volume 31" />
