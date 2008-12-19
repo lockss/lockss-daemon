@@ -76,6 +76,16 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
+    <property name="LiberQuarterlyComplete">
+      <property name="title" value="LIBER Quarterly" />
+      <property name="journalTitle" value="LIBER Quarterly" />
+      <property name="plugin" value="uk.org.lockss.plugin.liberquarterly.LiberQuarterlyPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://liber.library.uu.nl/" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
 
   </property>
 </lockss-config>
