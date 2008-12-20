@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Ohio State University College of Education
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Theory Into Practice 
+    >
+
+    param[journal_dir] = theory_into_practice
+
+    au < manifest ; Theory Into Practice Volume 42 ; 42 >
+    au < manifest ; Theory Into Practice Volume 43 ; 43 >
+
+  }
+
+}

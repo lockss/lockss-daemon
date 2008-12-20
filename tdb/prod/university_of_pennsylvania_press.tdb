@@ -1,0 +1,84 @@
+{
+  publisher <
+    name = University of Pennsylvania Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Early American Studies: An Interdisciplinary Journal 
+    >
+
+    param[journal_dir] = early_american_studies_an_interdisciplinary_journal
+
+    au < released ; Early American Studies: An Interdisciplinary Journal Volume 4 ; 4 >
+    au < released ; Early American Studies: An Interdisciplinary Journal Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Hispanic Review 
+    >
+
+    param[journal_dir] = hispanic_review
+
+    au < released ; Hispanic Review Volume 73 ; 73 >
+    au < released ; Hispanic Review Volume 74 ; 74 >
+    au < released ; Hispanic Review Volume 75 ; 75 >
+
+  }
+
+  {
+    title <
+      name = Jewish Quarterly Review 
+    >
+
+    param[journal_dir] = jewish_quarterly_review
+
+    au < released ; Jewish Quarterly Review Volume 95 ; 95 >
+    au < released ; Jewish Quarterly Review Volume 96 ; 96 >
+    au < released ; Jewish Quarterly Review Volume 97 ; 97 >
+
+  }
+
+  {
+    title <
+      name = Journal of the Early Republic 
+    >
+
+    param[journal_dir] = journal_of_the_early_republic
+
+    au < released ; Journal of the Early Republic Volume 25 ; 25 >
+    au < released ; Journal of the Early Republic Volume 26 ; 26 >
+    au < released ; Journal of the Early Republic Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Journal of the History of Ideas 
+    >
+
+    param[journal_dir] = journal_of_the_history_of_ideas
+
+    au < released ; Journal of the History of Ideas Volume 57 ; 57 >
+    au < released ; Journal of the History of Ideas Volume 58 ; 58 >
+    au < released ; Journal of the History of Ideas Volume 59 ; 59 >
+    au < released ; Journal of the History of Ideas Volume 60 ; 60 >
+    au < released ; Journal of the History of Ideas Volume 61 ; 61 >
+    au < released ; Journal of the History of Ideas Volume 62 ; 62 >
+    au < released ; Journal of the History of Ideas Volume 63 ; 63 >
+    au < released ; Journal of the History of Ideas Volume 64 ; 64 >
+    au < released ; Journal of the History of Ideas Volume 65 ; 65 >
+    au < released ; Journal of the History of Ideas Volume 66 ; 66 >
+    au < released ; Journal of the History of Ideas Volume 67 ; 67 >
+    au < released ; Journal of the History of Ideas Volume 68 ; 68 >
+
+  }
+
+}

@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Advertising Educational Foundation
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Advertising & Society Review 
+    >
+
+    param[journal_dir] = advertising_and_society_review
+
+    au < released ; Advertising & Society Review Volume 1 ; 1 >
+    au < released ; Advertising & Society Review Volume 2 ; 2 >
+    au < released ; Advertising & Society Review Volume 3 ; 3 >
+    au < released ; Advertising & Society Review Volume 4 ; 4 >
+    au < released ; Advertising & Society Review Volume 5 ; 5 >
+    au < released ; Advertising & Society Review Volume 6 ; 6 >
+    au < released ; Advertising & Society Review Volume 7 ; 7 >
+
+  }
+
+}

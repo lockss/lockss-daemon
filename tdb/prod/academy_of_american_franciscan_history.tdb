@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Academy of American Franciscan History
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Americas 
+    >
+
+    param[journal_dir] = the_americas
+
+    au < released ; The Americas Volume 57 ; 57 >
+    au < released ; The Americas Volume 58 ; 58 >
+    au < released ; The Americas Volume 59 ; 59 >
+    au < released ; The Americas Volume 60 ; 60 >
+    au < released ; The Americas Volume 61 ; 61 >
+    au < released ; The Americas Volume 62 ; 62 >
+    au < released ; The Americas Volume 63 ; 63 >
+
+  }
+
+}

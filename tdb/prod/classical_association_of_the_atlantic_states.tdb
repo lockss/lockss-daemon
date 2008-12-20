@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Classical Association of the Atlantic States
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Classical World 
+    >
+
+    param[journal_dir] = classical_world
+
+    au < released ; Classical World Volume 99 ; 99 >
+    au < released ; Classical World Volume 100 ; 100 >
+
+  }
+
+}

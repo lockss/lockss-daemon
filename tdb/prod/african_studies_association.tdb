@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = African Studies Association
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = African Studies Review 
+    >
+
+    param[journal_dir] = african_studies_review
+
+    au < released ; African Studies Review Volume 48 ; 48 >
+    au < released ; African Studies Review Volume 49 ; 49 >
+    au < released ; African Studies Review Volume 50 ; 50 >
+
+  }
+
+  {
+    title <
+      name = History in Africa 
+    >
+
+    param[journal_dir] = history_in_africa
+
+    au < released ; History in Africa Volume 32 ; 32 >
+    au < released ; History in Africa Volume 33 ; 33 >
+
+  }
+
+}

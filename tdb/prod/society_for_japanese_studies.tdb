@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Society for Japanese Studies
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Journal of Japanese Studies 
+    >
+
+    param[journal_dir] = journal_of_japanese_studies
+
+    au < manifest ; The Journal of Japanese Studies Volume 30 ; 30 >
+    au < manifest ; The Journal of Japanese Studies Volume 31 ; 31 >
+    au < manifest ; The Journal of Japanese Studies Volume 32 ; 32 >
+    au < manifest ; The Journal of Japanese Studies Volume 33 ; 33 >
+
+  }
+
+}

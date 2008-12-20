@@ -1,0 +1,97 @@
+{
+  publisher <
+    name = Ohio State University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = American Periodicals: A Journal of History, Criticism, and Bibliography 
+    >
+
+    param[journal_dir] = american_periodicals
+
+    au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 13 ; 13 >
+    au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 14 ; 14 >
+    au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 15 ; 15 >
+    au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 16 ; 16 >
+    au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Geographical Analysis 
+    >
+
+    param[journal_dir] = geographical_analysis
+
+    au < manifest ; Geographical Analysis Volume 34 ; 34 >
+    au < released ; Geographical Analysis Volume 35 ; 35 >
+    au < released ; Geographical Analysis Volume 36 ; 36 >
+
+  }
+
+  {
+    title <
+      name = Journal for the Psychoanalysis of Culture and Society 
+    >
+
+    param[journal_dir] = journal_for_the_psychoanalysis_of_culture_and_society
+
+    au < released ; Journal for the Psychoanalysis of Culture and Society Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Journal of Money, Credit, and Banking 
+    >
+
+    param[journal_dir] = journal_of_money_credit_and_banking
+
+    au < released ; Journal of Money, Credit, and Banking Volume 34 ; 34 >
+    au < released ; Journal of Money, Credit, and Banking Volume 35 ; 35 >
+    au < released ; Journal of Money, Credit, and Banking Volume 36 ; 36 >
+    au < released ; Journal of Money, Credit, and Banking Volume 37 ; 37 >
+    au < released ; Journal of Money, Credit, and Banking Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = Narrative 
+    >
+
+    param[journal_dir] = narrative
+
+    au < released ; Narrative Volume 10 ; 10 >
+    au < released ; Narrative Volume 11 ; 11 >
+    au < released ; Narrative Volume 12 ; 12 >
+    au < released ; Narrative Volume 13 ; 13 >
+    au < released ; Narrative Volume 14 ; 14 >
+    au < released ; Narrative Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = The Journal of Higher Education 
+    >
+
+    param[journal_dir] = journal_of_higher_education
+
+    au < released ; The Journal of Higher Education Volume 73 ; 73 >
+    au < released ; The Journal of Higher Education Volume 74 ; 74 >
+    au < released ; The Journal of Higher Education Volume 75 ; 75 >
+    au < released ; The Journal of Higher Education Volume 76 ; 76 >
+    au < released ; The Journal of Higher Education Volume 77 ; 77 >
+    au < released ; The Journal of Higher Education Volume 78 ; 78 >
+
+  }
+
+}

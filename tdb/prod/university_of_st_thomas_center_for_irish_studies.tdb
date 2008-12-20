@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = University of St. Thomas Center for Irish Studies
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = New Hibernia Review 
+    >
+
+    param[journal_dir] = new_hibernia_review
+
+    au < released ; New Hibernia Review Volume 5 ; 5 >
+    au < released ; New Hibernia Review Volume 6 ; 6 >
+    au < released ; New Hibernia Review Volume 7 ; 7 >
+    au < released ; New Hibernia Review Volume 8 ; 8 >
+    au < released ; New Hibernia Review Volume 9 ; 9 >
+    au < released ; New Hibernia Review Volume 10 ; 10 >
+    au < released ; New Hibernia Review Volume 11 ; 11 >
+
+  }
+
+}

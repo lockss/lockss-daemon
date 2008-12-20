@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Western Michigan University
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Comparative Drama 
+    >
+
+    param[journal_dir] = comparative_drama
+
+    au < released ; Comparative Drama Volume 41 ; 41 >
+
+  }
+
+}

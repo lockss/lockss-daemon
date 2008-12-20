@@ -1,0 +1,45 @@
+{
+  publisher <
+    name = Institute of Southeast Asian Studies
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = ASEAN Economic Bulletin 
+    >
+
+    param[journal_dir] = asean_economic_bulletin
+
+    au < manifest ; ASEAN Economic Bulletin Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Contemporary Southeast Asia: A Journal of International and Strategic Affairs 
+    >
+
+    param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
+
+    au < manifest ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = Sojourn: Journal of Social Issues in Southeast Asia 
+    >
+
+    param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
+
+    au < manifest ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
+    au < manifest ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
+
+  }
+
+}

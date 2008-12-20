@@ -1,0 +1,140 @@
+{
+  publisher <
+    name = University of North Carolina Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Early American Literature 
+    >
+
+    param[journal_dir] = early_american_literature
+
+    au < released ; Early American Literature Volume 35 ; 35 >
+    au < released ; Early American Literature Volume 36 ; 36 >
+    au < released ; Early American Literature Volume 37 ; 37 >
+    au < released ; Early American Literature Volume 38 ; 38 >
+    au < released ; Early American Literature Volume 39 ; 39 >
+    au < released ; Early American Literature Volume 40 ; 40 >
+    au < released ; Early American Literature Volume 41 ; 41 >
+    au < released ; Early American Literature Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
+      name = Social Forces 
+    >
+
+    param[journal_dir] = social_forces
+
+    au < released ; Social Forces Volume 79 ; 79 >
+    au < released ; Social Forces Volume 80 ; 80 >
+    au < released ; Social Forces Volume 81 ; 81 >
+    au < released ; Social Forces Volume 82 ; 82 >
+    au < released ; Social Forces Volume 83 ; 83 >
+    au < released ; Social Forces Volume 84 ; 84 >
+    au < released ; Social Forces Volume 85 ; 85 >
+
+  }
+
+  {
+    title <
+      name = Southeastern Geographer 
+    >
+
+    param[journal_dir] = southeastern_geographer
+
+    au < released ; Southeastern Geographer Volume 44 ; 44 >
+    au < released ; Southeastern Geographer Volume 45 ; 45 >
+    au < released ; Southeastern Geographer Volume 46 ; 46 >
+    au < released ; Southeastern Geographer Volume 47 ; 47 >
+
+  }
+
+  {
+    title <
+      name = Southern Cultures 
+    >
+
+    param[journal_dir] = southern_cultures
+
+    au < released ; Southern Cultures Volume 6 ; 6 >
+    au < released ; Southern Cultures Volume 7 ; 7 >
+    au < released ; Southern Cultures Volume 8 ; 8 >
+    au < released ; Southern Cultures Volume 9 ; 9 >
+    au < released ; Southern Cultures Volume 10 ; 10 >
+    au < released ; Southern Cultures Volume 11 ; 11 >
+    au < released ; Southern Cultures Volume 12 ; 12 >
+    au < released ; Southern Cultures Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Studies in Philology 
+    >
+
+    param[journal_dir] = studies_in_philology
+
+    au < released ; Studies in Philology Volume 100 ; 100 >
+    au < released ; Studies in Philology Volume 101 ; 101 >
+    au < released ; Studies in Philology Volume 102 ; 102 >
+    au < released ; Studies in Philology Volume 103 ; 103 >
+    au < released ; Studies in Philology Volume 104 ; 104 >
+
+  }
+
+  {
+    title <
+      name = The Comparatist 
+    >
+
+    param[journal_dir] = the_comparatist
+
+    au < released ; The Comparatist Volume 29 ; 29 >
+    au < released ; The Comparatist Volume 30 ; 30 >
+    au < released ; The Comparatist Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = The High School Journal 
+    >
+
+    param[journal_dir] = high_school_journal
+
+    au < released ; The High School Journal Volume 84 ; 84 >
+    au < released ; The High School Journal Volume 85 ; 85 >
+    au < released ; The High School Journal Volume 86 ; 86 >
+    au < released ; The High School Journal Volume 87 ; 87 >
+    au < released ; The High School Journal Volume 88 ; 88 >
+    au < released ; The High School Journal Volume 89 ; 89 >
+    au < released ; The High School Journal Volume 90 ; 90 >
+
+  }
+
+  {
+    title <
+      name = The Southern Literary Journal 
+    >
+
+    param[journal_dir] = southern_literary_journal
+
+    au < released ; The Southern Literary Journal Volume 33 ; 33 >
+    au < released ; The Southern Literary Journal Volume 34 ; 34 >
+    au < released ; The Southern Literary Journal Volume 35 ; 35 >
+    au < released ; The Southern Literary Journal Volume 36 ; 36 >
+    au < released ; The Southern Literary Journal Volume 37 ; 37 >
+    au < released ; The Southern Literary Journal Volume 38 ; 38 >
+    au < released ; The Southern Literary Journal Volume 39 ; 39 >
+
+  }
+
+}

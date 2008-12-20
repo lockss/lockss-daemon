@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = University of Missouri
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Missouri Review 
+    >
+
+    param[journal_dir] = missouri_review
+
+    au < released ; The Missouri Review Volume 27 ; 27 >
+    au < released ; The Missouri Review Volume 28 ; 28 >
+    au < released ; The Missouri Review Volume 29 ; 29 >
+    au < released ; The Missouri Review Volume 30 ; 30 >
+
+  }
+
+}

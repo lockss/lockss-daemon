@@ -1,0 +1,255 @@
+{
+  publisher <
+    name = University of Toronto Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Canadian Journal of Criminology and Criminal Justice 
+    >
+
+    param[journal_dir] = canadian_journal_of_criminology_and_criminal_justice
+
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 48 ; 48 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 49 ; 49 >
+
+  }
+
+  {
+    title <
+      name = Canadian Journal of Law and Society 
+    >
+
+    param[journal_dir] = canadian_journal_of_law_and_society
+
+    au < released ; Canadian Journal of Law and Society Volume 20 ; 20 >
+    au < released ; Canadian Journal of Law and Society Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = Canadian Journal of Women and the Law 
+    >
+
+    param[journal_dir] = canadian_journal_of_women_and_the_law
+
+    au < released ; Canadian Journal of Women and the Law Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Canadian Journal on Aging / La Revue canadienne du vieillissement 
+    >
+
+    param[journal_dir] = canadian_journal_on_aging
+
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 23 ; 23 >
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24 ; 24 >
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 25 ; 25 >
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = Canadian Review of American Studies 
+    >
+
+    param[journal_dir] = canadian_review_of_american_studies
+
+    au < released ; Canadian Review of American Studies Volume 34 ; 34 >
+    au < released ; Canadian Review of American Studies Volume 35 ; 35 >
+    au < released ; Canadian Review of American Studies Volume 36 ; 36 >
+    au < released ; Canadian Review of American Studies Volume 37 ; 37 >
+
+  }
+
+  {
+    title <
+      name = Diaspora: A Journal of Transnational Studies 
+    >
+
+    param[journal_dir] = diaspora_a_journal_of_transnational_studies
+
+    au < released ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Eighteenth Century Fiction 
+    >
+
+    param[journal_dir] = eighteenth_century_fiction
+
+    au < released ; Eighteenth Century Fiction Volume 18 ; 18 >
+    au < released ; Eighteenth Century Fiction Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Francophonies d'Amérique 
+    >
+
+    param[journal_dir] = francophonies_damerique
+
+    au < released ; Francophonies d'Amérique Volume 17 ; 17 >
+    au < released ; Francophonies d'Amérique Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Journal of Canadian Studies 
+    >
+
+    param[journal_dir] = journal_of_canadian_studies
+
+    au < released ; Journal of Canadian Studies Volume 39 ; 39 >
+    au < released ; Journal of Canadian Studies Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Journal of Scholarly Publishing 
+    >
+
+    param[journal_dir] = journal_of_scholarly_publishing
+
+    au < released ; Journal of Scholarly Publishing Volume 35 ; 35 >
+    au < released ; Journal of Scholarly Publishing Volume 36 ; 36 >
+    au < released ; Journal of Scholarly Publishing Volume 37 ; 37 >
+    au < released ; Journal of Scholarly Publishing Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = Modern Drama 
+    >
+
+    param[journal_dir] = modern_drama
+
+    au < released ; Modern Drama Volume 48 ; 48 >
+    au < released ; Modern Drama Volume 49 ; 49 >
+    au < released ; Modern Drama Volume 50 ; 50 >
+
+  }
+
+  {
+    title <
+      name = Seminar: A Journal of Germanic Studies 
+    >
+
+    param[journal_dir] = seminar_a_journal_of_germanic_studies
+
+    au < released ; Seminar: A Journal of Germanic Studies Volume 42 ; 42 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = The Canadian Historical Review 
+    >
+
+    param[journal_dir] = canadian_historical_review
+
+    au < released ; The Canadian Historical Review Volume 85 ; 85 >
+    au < released ; The Canadian Historical Review Volume 86 ; 86 >
+    au < released ; The Canadian Historical Review Volume 87 ; 87 >
+    au < released ; The Canadian Historical Review Volume 88 ; 88 >
+
+  }
+
+  {
+    title <
+      name = The Canadian Journal of Linguistics / La revue canadienne de linguistique 
+    >
+
+    param[journal_dir] = canadian_journal_of_linguistics
+
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 48 ; 48 >
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 49 ; 49 >
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 50 ; 50 >
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 51 ; 51 >
+
+  }
+
+  {
+    title <
+      name = The Canadian Journal of Sociology 
+    >
+
+    param[journal_dir] = canadian_journal_of_sociology
+
+    au < released ; The Canadian Journal of Sociology Volume 29 ; 29 >
+    au < released ; The Canadian Journal of Sociology Volume 30 ; 30 >
+    au < released ; The Canadian Journal of Sociology Volume 31 ; 31 >
+    au < released ; The Canadian Journal of Sociology Volume 32 ; 32 >
+
+  }
+
+  {
+    title <
+      name = The Canadian Modern Language Review / La revue canadienne des langues vivantes 
+    >
+
+    param[journal_dir] = canadian_modern_language_review
+
+    au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 61 ; 61 >
+    au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 62 ; 62 >
+    au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 63 ; 63 >
+
+  }
+
+  {
+    title <
+      name = University of Toronto Law Journal 
+    >
+
+    param[journal_dir] = university_of_toronto_law_journal
+
+    au < manifest ; University of Toronto Law Journal Volume 54 ; 54 >
+    au < manifest ; University of Toronto Law Journal Volume 55 ; 55 >
+    au < manifest ; University of Toronto Law Journal Volume 56 ; 56 >
+    au < manifest ; University of Toronto Law Journal Volume 57 ; 57 >
+
+  }
+
+  {
+    title <
+      name = University of Toronto Quarterly 
+    >
+
+    param[journal_dir] = university_of_toronto_quarterly
+
+    au < released ; University of Toronto Quarterly Volume 74 ; 74 >
+    au < released ; University of Toronto Quarterly Volume 75 ; 75 >
+    au < released ; University of Toronto Quarterly Volume 76 ; 76 >
+
+  }
+
+  {
+    title <
+      name = Victorian Periodicals Review 
+    >
+
+    param[journal_dir] = victorian_periodicals_review
+
+    au < released ; Victorian Periodicals Review Volume 38 ; 38 >
+    au < released ; Victorian Periodicals Review Volume 39 ; 39 >
+    au < released ; Victorian Periodicals Review Volume 40 ; 40 >
+
+  }
+
+}

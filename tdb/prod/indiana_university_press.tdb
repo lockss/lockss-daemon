@@ -1,0 +1,422 @@
+{
+  publisher <
+    name = Indiana University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Africa Today 
+    >
+
+    param[journal_dir] = africa_today
+
+    au < released ; Africa Today Volume 46 ; 46 >
+    au < released ; Africa Today Volume 47 ; 47 >
+    au < released ; Africa Today Volume 48 ; 48 >
+    au < released ; Africa Today Volume 49 ; 49 >
+    au < released ; Africa Today Volume 50 ; 50 >
+    au < released ; Africa Today Volume 51 ; 51 >
+    au < released ; Africa Today Volume 52 ; 52 >
+    au < released ; Africa Today Volume 53 ; 53 >
+
+  }
+
+  {
+    title <
+      name = Aleph: Historical Studies in Science and Judaism 
+    >
+
+    param[journal_dir] = aleph_historical_studies_in_science_and_judaism
+
+    au < released ; Aleph: Historical Studies in Science and Judaism Volume 4 ; 4 >
+    au < released ; Aleph: Historical Studies in Science and Judaism Volume 5 ; 5 >
+    au < released ; Aleph: Historical Studies in Science and Judaism Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = Bridges: A Jewish Feminist Journal 
+    >
+
+    param[journal_dir] = bridges_a_jewish_feminists_journal
+
+    au < released ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
+    au < released ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
+
+  }
+
+  {
+    title <
+      name = e-Service Journal 
+    >
+
+    param[journal_dir] = eservice_journal
+
+    au < released ; e-Service Journal Volume 1 ; 1 >
+    au < released ; e-Service Journal Volume 2 ; 2 >
+    au < released ; e-Service Journal Volume 3 ; 3 >
+    au < released ; e-Service Journal Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Ethics & the Environment 
+    >
+
+    param[journal_dir] = ethics_and_the_environment
+
+    au < released ; Ethics & the Environment Volume 6 ; 6 >
+    au < released ; Ethics & the Environment Volume 7 ; 7 >
+    au < released ; Ethics & the Environment Volume 8 ; 8 >
+    au < released ; Ethics & the Environment Volume 9 ; 9 >
+    au < released ; Ethics & the Environment Volume 10 ; 10 >
+    au < released ; Ethics & the Environment Volume 11 ; 11 >
+    au < released ; Ethics & the Environment Volume 12 ; 12 >
+
+  }
+
+  {
+    title <
+      name = Film History: An International Journal 
+    >
+
+    param[journal_dir] = film_history
+
+    au < released ; Film History: An International Journal Volume 17 ; 17 >
+    au < released ; Film History: An International Journal Volume 18 ; 18 >
+    au < released ; Film History: An International Journal Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = History & Memory 
+    >
+
+    param[journal_dir] = history_and_memory
+
+    au < released ; History & Memory Volume 11 ; 11 >
+    au < released ; History & Memory Volume 12 ; 12 >
+    au < released ; History & Memory Volume 13 ; 13 >
+    au < released ; History & Memory Volume 14 ; 14 >
+    au < released ; History & Memory Volume 15 ; 15 >
+    au < released ; History & Memory Volume 16 ; 16 >
+    au < released ; History & Memory Volume 17 ; 17 >
+    au < released ; History & Memory Volume 18 ; 18 >
+    au < released ; History & Memory Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Hypatia 
+    >
+
+    param[journal_dir] = hypatia
+
+    au < released ; Hypatia Volume 14 ; 14 >
+    au < released ; Hypatia Volume 15 ; 15 >
+    au < released ; Hypatia Volume 16 ; 16 >
+    au < released ; Hypatia Volume 17 ; 17 >
+    au < released ; Hypatia Volume 18 ; 18 >
+    au < released ; Hypatia Volume 19 ; 19 >
+    au < released ; Hypatia Volume 20 ; 20 >
+    au < released ; Hypatia Volume 21 ; 21 >
+    au < released ; Hypatia Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = Indiana Journal of Global Legal Studies 
+    >
+
+    param[journal_dir] = indiana_journal_of_global_legal_studies
+
+    au < released ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
+    au < released ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
+    au < released ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
+    au < released ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Israel Studies 
+    >
+
+    param[journal_dir] = israel_studies
+
+    au < released ; Israel Studies Volume 1 ; 1 >
+    au < released ; Israel Studies Volume 2 ; 2 >
+    au < released ; Israel Studies Volume 3 ; 3 >
+    au < released ; Israel Studies Volume 4 ; 4 >
+    au < released ; Israel Studies Volume 5 ; 5 >
+    au < released ; Israel Studies Volume 6 ; 6 >
+    au < released ; Israel Studies Volume 7 ; 7 >
+    au < released ; Israel Studies Volume 8 ; 8 >
+    au < released ; Israel Studies Volume 9 ; 9 >
+    au < released ; Israel Studies Volume 10 ; 10 >
+    au < released ; Israel Studies Volume 11 ; 11 >
+    au < released ; Israel Studies Volume 12 ; 12 >
+
+  }
+
+  {
+    title <
+      name = Jewish Social Studies 
+    >
+
+    param[journal_dir] = jewish_social_studies
+
+    au < released ; Jewish Social Studies Volume 5 ; 5 >
+    au < released ; Jewish Social Studies Volume 6 ; 6 >
+    au < released ; Jewish Social Studies Volume 7 ; 7 >
+    au < released ; Jewish Social Studies Volume 8 ; 8 >
+    au < released ; Jewish Social Studies Volume 9 ; 9 >
+    au < released ; Jewish Social Studies Volume 10 ; 10 >
+    au < released ; Jewish Social Studies Volume 11 ; 11 >
+    au < released ; Jewish Social Studies Volume 12 ; 12 >
+    au < released ; Jewish Social Studies Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Journal for Early Modern Cultural Studies 
+    >
+
+    param[journal_dir] = journal_for_early_modern_cultural_studies
+
+    au < released ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+    au < released ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+    au < released ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Journal of Feminist Studies in Religion 
+    >
+
+    param[journal_dir] = journal_of_feminist_studies_in_religion
+
+    au < released ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
+    au < released ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = Journal of Folklore Research 
+    >
+
+    param[journal_dir] = journal_of_folklore_research
+
+    au < released ; Journal of Folklore Research Volume 40 ; 40 >
+    au < released ; Journal of Folklore Research Volume 41 ; 41 >
+    au < released ; Journal of Folklore Research Volume 42 ; 42 >
+    au < released ; Journal of Folklore Research Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Journal of Middle East Women's Studies 
+    >
+
+    param[journal_dir] = journal_of_middle_east_womens_studies
+
+    au < released ; Journal of Middle East Women's Studies Volume 2 ; 2 >
+    au < released ; Journal of Middle East Women's Studies Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = Journal of Modern Literature 
+    >
+
+    param[journal_dir] = journal_of_modern_literature
+
+    au < released ; Journal of Modern Literature Volume 22 ; 22 >
+    au < released ; Journal of Modern Literature Volume 23 ; 23 >
+    au < released ; Journal of Modern Literature Volume 24 ; 24 >
+    au < released ; Journal of Modern Literature Volume 25 ; 25 >
+    au < released ; Journal of Modern Literature Volume 26 ; 26 >
+    au < released ; Journal of Modern Literature Volume 27 ; 27 >
+    au < released ; Journal of Modern Literature Volume 28 ; 28 >
+    au < released ; Journal of Modern Literature Volume 29 ; 29 >
+    au < released ; Journal of Modern Literature Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = Meridians: feminism, race, transnationalism 
+    >
+
+    param[journal_dir] = meridians
+
+    au < released ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
+    au < released ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
+    au < released ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
+    au < released ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Nashim: A Journal of Jewish Women's Studies & Gender Issues 
+    >
+
+    param[journal_dir] = nashim
+
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 ; 8 >
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 ; 9 >
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 ; 10 >
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 ; 11 >
+    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 ; 12 >
+
+  }
+
+  {
+    title <
+      name = Native Plants Journal 
+    >
+
+    param[journal_dir] = native_plants_journal
+
+    au < released ; Native Plants Journal Volume 5 ; 5 >
+    au < released ; Native Plants Journal Volume 6 ; 6 >
+    au < released ; Native Plants Journal Volume 7 ; 7 >
+    au < released ; Native Plants Journal Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = NWSA Journal 
+    >
+
+    param[journal_dir] = nwsa_journal
+
+    au < released ; NWSA Journal Volume 11 ; 11 >
+    au < released ; NWSA Journal Volume 12 ; 12 >
+    au < released ; NWSA Journal Volume 13 ; 13 >
+    au < released ; NWSA Journal Volume 14 ; 14 >
+    au < released ; NWSA Journal Volume 15 ; 15 >
+    au < released ; NWSA Journal Volume 16 ; 16 >
+    au < released ; NWSA Journal Volume 17 ; 17 >
+    au < released ; NWSA Journal Volume 18 ; 18 >
+    au < released ; NWSA Journal Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Philosophy of Music Education Review 
+    >
+
+    param[journal_dir] = philosophy_of_music_education_review
+
+    au < released ; Philosophy of Music Education Review Volume 11 ; 11 >
+    au < released ; Philosophy of Music Education Review Volume 12 ; 12 >
+    au < released ; Philosophy of Music Education Review Volume 13 ; 13 >
+    au < released ; Philosophy of Music Education Review Volume 14 ; 14 >
+
+  }
+
+  {
+    title <
+      name = Prooftexts 
+    >
+
+    param[journal_dir] = prooftexts
+
+    au < released ; Prooftexts Volume 20 ; 20 >
+    au < released ; Prooftexts Volume 21 ; 21 >
+    au < released ; Prooftexts Volume 22 ; 22 >
+    au < released ; Prooftexts Volume 23 ; 23 >
+    au < released ; Prooftexts Volume 24 ; 24 >
+    au < released ; Prooftexts Volume 25 ; 25 >
+    au < released ; Prooftexts Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = Research in African Literatures 
+    >
+
+    param[journal_dir] = research_in_african_literatures
+
+    au < released ; Research in African Literatures Volume 30 ; 30 >
+    au < released ; Research in African Literatures Volume 31 ; 31 >
+    au < released ; Research in African Literatures Volume 32 ; 32 >
+    au < released ; Research in African Literatures Volume 33 ; 33 >
+    au < released ; Research in African Literatures Volume 34 ; 34 >
+    au < released ; Research in African Literatures Volume 35 ; 35 >
+    au < released ; Research in African Literatures Volume 36 ; 36 >
+    au < released ; Research in African Literatures Volume 37 ; 37 >
+    au < released ; Research in African Literatures Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = Small Axe 
+    >
+
+    param[journal_dir] = small_axe
+
+    au < released ; Small Axe Volume 5 ; 5 >
+    au < released ; Small Axe Volume 6 ; 6 >
+    au < released ; Small Axe Volume 7 ; 7 >
+    au < released ; Small Axe Volume 8 ; 8 >
+    au < released ; Small Axe Volume 9 ; 9 >
+    au < released ; Small Axe Volume 10 ; 10 >
+    au < released ; Small Axe Volume 11 ; 11 >
+
+  }
+
+  {
+    title <
+      name = Transactions of the Charles S. Peirce Society 
+    >
+
+    param[journal_dir] = transactions_of_the_charles_s_peirce_society
+
+    au < manifest ; Transactions of the Charles S. Peirce Society Volume 42 ; 42 >
+    au < manifest ; Transactions of the Charles S. Peirce Society Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Victorian Studies 
+    >
+
+    param[journal_dir] = victorian_studies
+
+    au < released ; Victorian Studies Volume 42 ; 42 >
+    au < released ; Victorian Studies Volume 43 ; 43 >
+    au < released ; Victorian Studies Volume 44 ; 44 >
+    au < released ; Victorian Studies Volume 45 ; 45 >
+    au < released ; Victorian Studies Volume 46 ; 46 >
+    au < released ; Victorian Studies Volume 47 ; 47 >
+    au < released ; Victorian Studies Volume 48 ; 48 >
+    au < released ; Victorian Studies Volume 49 ; 49 >
+
+  }
+
+}

@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Taylor and Francis
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The American Journal of Bioethics 
+    >
+
+    param[journal_dir] = american_journal_of_bioethics
+
+    au < manifest ; The American Journal of Bioethics Volume 1 ; 1 >
+    au < manifest ; The American Journal of Bioethics Volume 2 ; 2 >
+    au < manifest ; The American Journal of Bioethics Volume 3 ; 3 >
+    au < released ; The American Journal of Bioethics Volume 4 ; 4 >
+
+  }
+
+}

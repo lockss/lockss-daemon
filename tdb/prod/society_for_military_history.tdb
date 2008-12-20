@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Society for Military History
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Journal of Military History 
+    >
+
+    param[journal_dir] = journal_of_military_history
+
+    au < released ; The Journal of Military History Volume 67 ; 67 >
+    au < released ; The Journal of Military History Volume 68 ; 68 >
+    au < released ; The Journal of Military History Volume 69 ; 69 >
+    au < released ; The Journal of Military History Volume 70 ; 70 >
+    au < released ; The Journal of Military History Volume 71 ; 71 >
+
+  }
+
+}

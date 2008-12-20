@@ -1448,12 +1448,12 @@
       param[base_url] = http://www.cardiovascularultrasound.com/
       param[journal_issn] = 1476-7120
 
-      au < manifest ; Cardiovascular Ultrasound Volume 1 ; 1 >
-      au < manifest ; Cardiovascular Ultrasound Volume 2 ; 2 >
-      au < manifest ; Cardiovascular Ultrasound Volume 3 ; 3 >
-      au < manifest ; Cardiovascular Ultrasound Volume 4 ; 4 >
-      au < manifest ; Cardiovascular Ultrasound Volume 5 ; 5 >
-      au < manifest ; Cardiovascular Ultrasound Volume 6 ; 6 >
+      au < ready ; Cardiovascular Ultrasound Volume 1 ; 1 >
+      au < ready ; Cardiovascular Ultrasound Volume 2 ; 2 >
+      au < ready ; Cardiovascular Ultrasound Volume 3 ; 3 >
+      au < ready ; Cardiovascular Ultrasound Volume 4 ; 4 >
+      au < ready ; Cardiovascular Ultrasound Volume 5 ; 5 >
+      au < ready ; Cardiovascular Ultrasound Volume 6 ; 6 >
     }
 
 

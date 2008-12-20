@@ -1,0 +1,123 @@
+{
+  publisher <
+    name = Brookings Institution Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Brookings Papers on Economic Activity 
+    >
+
+    param[journal_dir] = brookings_papers_on_economic_activity
+
+    au < released ; Brookings Papers on Economic Activity Volume 2000 ; 2000 >
+    au < released ; Brookings Papers on Economic Activity Volume 2001 ; 2001 >
+    au < released ; Brookings Papers on Economic Activity Volume 2002 ; 2002 >
+    au < released ; Brookings Papers on Economic Activity Volume 2003 ; 2003 >
+    au < released ; Brookings Papers on Economic Activity Volume 2004 ; 2004 >
+    au < released ; Brookings Papers on Economic Activity Volume 2005 ; 2005 >
+    au < released ; Brookings Papers on Economic Activity Volume 2006 ; 2006 >
+
+  }
+
+  {
+    title <
+      name = Brookings Papers on Education Policy 
+    >
+
+    param[journal_dir] = brookings_papers_on_education_policy
+
+    au < released ; Brookings Papers on Education Policy Volume 2000 ; 2000 >
+    au < released ; Brookings Papers on Education Policy Volume 2001 ; 2001 >
+    au < released ; Brookings Papers on Education Policy Volume 2002 ; 2002 >
+    au < released ; Brookings Papers on Education Policy Volume 2003 ; 2003 >
+    au < released ; Brookings Papers on Education Policy Volume 2004 ; 2004 >
+    au < released ; Brookings Papers on Education Policy Volume 2005 ; 2005 >
+    au < released ; Brookings Papers on Education Policy Volume 2006 ; 2006 >
+
+  }
+
+  {
+    title <
+      name = Brookings Trade Forum 
+    >
+
+    param[journal_dir] = brookings_trade_forum
+
+    au < released ; Brookings Trade Forum Volume 2000 ; 2000 >
+    au < released ; Brookings Trade Forum Volume 2001 ; 2001 >
+    au < released ; Brookings Trade Forum Volume 2002 ; 2002 >
+    au < released ; Brookings Trade Forum Volume 2003 ; 2003 >
+    au < released ; Brookings Trade Forum Volume 2004 ; 2004 >
+    au < released ; Brookings Trade Forum Volume 2005 ; 2005 >
+    au < released ; Brookings Trade Forum Volume 2006 ; 2006 >
+
+  }
+
+  {
+    title <
+      name = Brookings-Wharton Papers on Financial Services 
+    >
+
+    param[journal_dir] = brookings-wharton_papers_on_financial_services
+
+    au < released ; Brookings-Wharton Papers on Financial Services Volume 2000 ; 2000 >
+    au < released ; Brookings-Wharton Papers on Financial Services Volume 2001 ; 2001 >
+    au < released ; Brookings-Wharton Papers on Financial Services Volume 2002 ; 2002 >
+    au < released ; Brookings-Wharton Papers on Financial Services Volume 2003 ; 2003 >
+    au < released ; Brookings-Wharton Papers on Financial Services Volume 2004 ; 2004 >
+
+  }
+
+  {
+    title <
+      name = Brookings-Wharton Papers on Urban Affairs 
+    >
+
+    param[journal_dir] = brookings-wharton_papers_on_urban_affairs
+
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2000 ; 2000 >
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2001 ; 2001 >
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2002 ; 2002 >
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2003 ; 2003 >
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2004 ; 2004 >
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2005 ; 2005 >
+    au < released ; Brookings-Wharton Papers on Urban Affairs Volume 2006 ; 2006 >
+
+  }
+
+  {
+    title <
+      name = Economía 
+    >
+
+    param[journal_dir] = economia
+
+    au < released ; Economía Volume 1 ; 1 >
+    au < released ; Economía Volume 2 ; 2 >
+    au < released ; Economía Volume 3 ; 3 >
+    au < released ; Economía Volume 4 ; 4 >
+    au < released ; Economía Volume 5 ; 5 >
+    au < released ; Economía Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = The Future of Children 
+    >
+
+    param[journal_dir] = future_of_children
+
+    au < released ; The Future of Children Volume 15 ; 15 >
+    au < released ; The Future of Children Volume 16 ; 16 >
+    au < released ; The Future of Children Volume 17 ; 17 >
+
+  }
+
+}

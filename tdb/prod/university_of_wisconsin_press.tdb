@@ -1,0 +1,68 @@
+{
+  publisher <
+    name = University of Wisconsin Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Contemporary Literature 
+    >
+
+    param[journal_dir] = contemporary_literature
+
+    au < released ; Contemporary Literature Volume 45 ; 45 >
+    au < released ; Contemporary Literature Volume 46 ; 46 >
+    au < released ; Contemporary Literature Volume 47 ; 47 >
+    au < released ; Contemporary Literature Volume 48 ; 48 >
+
+  }
+
+  {
+    title <
+      name = Luso-Brazilian Review 
+    >
+
+    param[journal_dir] = luso-brazilian_review
+
+    au < released ; Luso-Brazilian Review Volume 41 ; 41 >
+    au < released ; Luso-Brazilian Review Volume 42 ; 42 >
+    au < released ; Luso-Brazilian Review Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Monatshefte 
+    >
+
+    param[journal_dir] = monatshefte
+
+    au < released ; Monatshefte Volume 99 ; 99 >
+
+  }
+
+  {
+    title <
+      name = SubStance 
+    >
+
+    param[journal_dir] = substance
+
+    au < released ; SubStance Volume 28 ; 28 >
+    au < released ; SubStance Volume 29 ; 29 >
+    au < released ; SubStance Volume 30 ; 30 >
+    au < released ; SubStance Volume 31 ; 31 >
+    au < released ; SubStance Volume 32 ; 32 >
+    au < released ; SubStance Volume 33 ; 33 >
+    au < released ; SubStance Volume 34 ; 34 >
+    au < released ; SubStance Volume 35 ; 35 >
+    au < released ; SubStance Volume 36 ; 36 >
+
+  }
+
+}

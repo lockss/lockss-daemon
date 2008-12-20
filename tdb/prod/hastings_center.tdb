@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Hastings Center
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Hastings Center Report 
+    >
+
+    param[journal_dir] = hastings_center_report
+
+    au < released ; Hastings Center Report Volume 35 ; 35 >
+    au < released ; Hastings Center Report Volume 36 ; 36 >
+    au < released ; Hastings Center Report Volume 37 ; 37 >
+
+  }
+
+}

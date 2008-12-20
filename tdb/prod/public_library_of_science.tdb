@@ -16,10 +16,10 @@
     param[base_url] = http://www.plosgenetics.org/    
     param[journal_id] = genetics
 
-    au < exists ; PLOS Genetics Volume 1 ; 2005 >
-    au < exists ; PLOS Genetics Volume 2 ; 2006 >
-    au < exists ; PLOS Genetics Volume 3 ; 2007 >
-    au < exists ; PLOS Genetics Volume 4 ; 2008 >
+    au < testing ; PLOS Genetics Volume 1 ; 2005 >
+    au < testing ; PLOS Genetics Volume 2 ; 2006 >
+    au < testing ; PLOS Genetics Volume 3 ; 2007 >
+    au < testing ; PLOS Genetics Volume 4 ; 2008 >
 
   }
 

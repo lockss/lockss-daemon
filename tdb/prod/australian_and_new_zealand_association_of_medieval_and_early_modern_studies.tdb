@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Australian and New Zealand Association of Medieval and Early Modern Studies
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Parergon 
+    >
+
+    param[journal_dir] = parergon
+
+    au < released ; Parergon Volume 22 ; 22 >
+    au < released ; Parergon Volume 23 ; 23 >
+
+  }
+
+}

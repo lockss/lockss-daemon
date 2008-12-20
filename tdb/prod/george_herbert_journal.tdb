@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = George Herbert Journal
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = George Herbert Journal 
+    >
+
+    param[journal_dir] = george_herbert_journal
+
+    au < manifest ; George Herbert Journal Volume 27 ; 27 >
+
+  }
+
+}

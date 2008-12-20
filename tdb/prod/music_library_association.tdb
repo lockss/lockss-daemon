@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Music Library Association
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Notes 
+    >
+
+    param[journal_dir] = notes
+
+    au < manifest ; Notes Volume 57 ; 57 >
+    au < manifest ; Notes Volume 58 ; 58 >
+    au < manifest ; Notes Volume 59 ; 59 >
+    au < manifest ; Notes Volume 60 ; 60 >
+    au < manifest ; Notes Volume 61 ; 61 >
+    au < manifest ; Notes Volume 62 ; 62 >
+    au < manifest ; Notes Volume 63 ; 63 >
+
+  }
+
+}

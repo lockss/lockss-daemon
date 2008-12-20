@@ -1,0 +1,61 @@
+{
+  publisher <
+    name = University of Nebraska Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = French Forum 
+    >
+
+    param[journal_dir] = french_forum
+
+    au < released ; French Forum Volume 26 ; 26 >
+    au < released ; French Forum Volume 27 ; 27 >
+    au < released ; French Forum Volume 28 ; 28 >
+    au < released ; French Forum Volume 29 ; 29 >
+    au < released ; French Forum Volume 30 ; 30 >
+    au < released ; French Forum Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = The American Indian Quarterly 
+    >
+
+    param[journal_dir] = american_indian_quarterly
+
+    au < released ; The American Indian Quarterly Volume 24 ; 24 >
+    au < released ; The American Indian Quarterly Volume 25 ; 25 >
+    au < released ; The American Indian Quarterly Volume 26 ; 26 >
+    au < released ; The American Indian Quarterly Volume 27 ; 27 >
+    au < released ; The American Indian Quarterly Volume 28 ; 28 >
+    au < released ; The American Indian Quarterly Volume 29 ; 29 >
+    au < released ; The American Indian Quarterly Volume 30 ; 30 >
+    au < released ; The American Indian Quarterly Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Frontiers: A Journal of Women Studies 
+    >
+
+    param[journal_dir] = frontiers
+
+    au < released ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
+
+  }
+
+}

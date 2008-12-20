@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Irish-American Cultural Institute
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Éire-Ireland 
+    >
+
+    param[journal_dir] = eire-ireland
+
+    au < manifest ; Éire-Ireland Volume 39 ; 39 >
+    au < manifest ; Éire-Ireland Volume 40 ; 40 >
+    au < manifest ; Éire-Ireland Volume 41 ; 41 >
+
+  }
+
+}

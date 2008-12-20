@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = Gallaudet University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = American Annals of the Deaf 
+    >
+
+    param[journal_dir] = american_annals_of_the_deaf
+
+    au < released ; American Annals of the Deaf Volume 148 ; 148 >
+    au < released ; American Annals of the Deaf Volume 149 ; 149 >
+    au < released ; American Annals of the Deaf Volume 150 ; 150 >
+    au < released ; American Annals of the Deaf Volume 151 ; 151 >
+
+  }
+
+  {
+    title <
+      name = Sign Language Studies 
+    >
+
+    param[journal_dir] = sign_language_studies
+
+    au < released ; Sign Language Studies Volume 1 ; 1 >
+    au < released ; Sign Language Studies Volume 2 ; 2 >
+    au < released ; Sign Language Studies Volume 3 ; 3 >
+    au < released ; Sign Language Studies Volume 4 ; 4 >
+    au < released ; Sign Language Studies Volume 5 ; 5 >
+    au < released ; Sign Language Studies Volume 6 ; 6 >
+    au < released ; Sign Language Studies Volume 7 ; 7 >
+
+  }
+
+}

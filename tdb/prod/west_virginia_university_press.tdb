@@ -1,0 +1,85 @@
+{
+  publisher <
+    name = West Virginia University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Education and Treatment of Children 
+    >
+
+    param[journal_dir] = education_and_treatment_of_children
+
+    au < released ; Education and Treatment of Children Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = Essays in Medieval Studies 
+    >
+
+    param[journal_dir] = essays_in_medieval_studies
+
+    au < released ; Essays in Medieval Studies Volume 18 ; 18 >
+    au < released ; Essays in Medieval Studies Volume 19 ; 19 >
+    au < released ; Essays in Medieval Studies Volume 20 ; 20 >
+    au < released ; Essays in Medieval Studies Volume 21 ; 21 >
+    au < released ; Essays in Medieval Studies Volume 22 ; 22 >
+    au < released ; Essays in Medieval Studies Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Labor Studies Journal 
+    >
+
+    param[journal_dir] = labor_studies_journal
+
+    au < released ; Labor Studies Journal Volume 27 ; 27 >
+    au < released ; Labor Studies Journal Volume 28 ; 28 >
+    au < released ; Labor Studies Journal Volume 29 ; 29 >
+    au < released ; Labor Studies Journal Volume 30 ; 30 >
+    au < released ; Labor Studies Journal Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Tolkien Studies 
+    >
+
+    param[journal_dir] = tolkien_studies
+
+    au < released ; Tolkien Studies Volume 1 ; 1 >
+    au < released ; Tolkien Studies Volume 2 ; 2 >
+    au < released ; Tolkien Studies Volume 3 ; 3 >
+    au < released ; Tolkien Studies Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Victorian Poetry 
+    >
+
+    param[journal_dir] = victorian_poetry
+
+    au < released ; Victorian Poetry Volume 38 ; 38 >
+    au < released ; Victorian Poetry Volume 39 ; 39 >
+    au < released ; Victorian Poetry Volume 40 ; 40 >
+    au < released ; Victorian Poetry Volume 41 ; 41 >
+    au < released ; Victorian Poetry Volume 42 ; 42 >
+    au < released ; Victorian Poetry Volume 43 ; 43 >
+    au < released ; Victorian Poetry Volume 44 ; 44 >
+    au < released ; Victorian Poetry Volume 45 ; 45 >
+
+  }
+
+}

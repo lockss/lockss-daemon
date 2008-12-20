@@ -1,0 +1,205 @@
+{
+  publisher <
+    name = Pennsylvania State University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Book History 
+    >
+
+    param[journal_dir] = book_history
+
+    au < released ; Book History Volume 1 ; 1 >
+    au < released ; Book History Volume 2 ; 2 >
+    au < released ; Book History Volume 3 ; 3 >
+    au < released ; Book History Volume 4 ; 4 >
+    au < released ; Book History Volume 5 ; 5 >
+    au < released ; Book History Volume 6 ; 6 >
+    au < released ; Book History Volume 7 ; 7 >
+    au < released ; Book History Volume 8 ; 8 >
+    au < released ; Book History Volume 9 ; 9 >
+
+  }
+
+  {
+    title <
+      name = Comparative Literature Studies 
+    >
+
+    param[journal_dir] = comparative_literature_studies
+
+    au < released ; Comparative Literature Studies Volume 36 ; 36 >
+    au < released ; Comparative Literature Studies Volume 37 ; 37 >
+    au < released ; Comparative Literature Studies Volume 38 ; 38 >
+    au < released ; Comparative Literature Studies Volume 39 ; 39 >
+    au < released ; Comparative Literature Studies Volume 40 ; 40 >
+    au < released ; Comparative Literature Studies Volume 41 ; 41 >
+    au < released ; Comparative Literature Studies Volume 42 ; 42 >
+    au < released ; Comparative Literature Studies Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Journal of Policy History 
+    >
+
+    param[journal_dir] = journal_of_policy_history
+
+    au < released ; Journal of Policy History Volume 11 ; 11 >
+    au < released ; Journal of Policy History Volume 12 ; 12 >
+    au < released ; Journal of Policy History Volume 13 ; 13 >
+    au < released ; Journal of Policy History Volume 14 ; 14 >
+    au < released ; Journal of Policy History Volume 15 ; 15 >
+    au < released ; Journal of Policy History Volume 16 ; 16 >
+    au < released ; Journal of Policy History Volume 17 ; 17 >
+    au < released ; Journal of Policy History Volume 18 ; 18 >
+    au < released ; Journal of Policy History Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Philosophy and Rhetoric 
+    >
+
+    param[journal_dir] = philosophy_and_rhetoric
+
+    au < manifest ; Philosophy and Rhetoric Volume 32 ; 32 >
+    au < manifest ; Philosophy and Rhetoric Volume 33 ; 33 >
+    au < manifest ; Philosophy and Rhetoric Volume 34 ; 34 >
+    au < manifest ; Philosophy and Rhetoric Volume 35 ; 35 >
+    au < manifest ; Philosophy and Rhetoric Volume 36 ; 36 >
+    au < manifest ; Philosophy and Rhetoric Volume 37 ; 37 >
+    au < manifest ; Philosophy and Rhetoric Volume 38 ; 38 >
+    au < manifest ; Philosophy and Rhetoric Volume 39 ; 39 >
+    au < manifest ; Philosophy and Rhetoric Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Resources for American Literary Study 
+    >
+
+    param[journal_dir] = resources_for_american_literary_study
+
+    au < released ; Resources for American Literary Study Volume 25 ; 25 >
+    au < released ; Resources for American Literary Study Volume 26 ; 26 >
+    au < released ; Resources for American Literary Study Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = SHAW The Annual of Bernard Shaw Studies 
+    >
+
+    param[journal_dir] = annual_of_bernard_shaw_studies
+
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = The Chaucer Review 
+    >
+
+    param[journal_dir] = chaucer_review
+
+    au < released ; The Chaucer Review Volume 34 ; 34 >
+    au < released ; The Chaucer Review Volume 35 ; 35 >
+    au < released ; The Chaucer Review Volume 36 ; 36 >
+    au < released ; The Chaucer Review Volume 37 ; 37 >
+    au < released ; The Chaucer Review Volume 38 ; 38 >
+    au < released ; The Chaucer Review Volume 39 ; 39 >
+    au < released ; The Chaucer Review Volume 40 ; 40 >
+    au < released ; The Chaucer Review Volume 41 ; 41 >
+
+  }
+
+  {
+    title <
+      name = The Good Society 
+    >
+
+    param[journal_dir] = good_society
+
+    au < released ; The Good Society Volume 11 ; 11 >
+    au < released ; The Good Society Volume 12 ; 12 >
+    au < released ; The Good Society Volume 13 ; 13 >
+    au < released ; The Good Society Volume 14 ; 14 >
+    au < released ; The Good Society Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = The Journal of General Education 
+    >
+
+    param[journal_dir] = journal_of_general_education
+
+    au < released ; The Journal of General Education Volume 48 ; 48 >
+    au < released ; The Journal of General Education Volume 49 ; 49 >
+    au < released ; The Journal of General Education Volume 50 ; 50 >
+    au < released ; The Journal of General Education Volume 51 ; 51 >
+    au < released ; The Journal of General Education Volume 52 ; 52 >
+    au < released ; The Journal of General Education Volume 53 ; 53 >
+    au < released ; The Journal of General Education Volume 54 ; 54 >
+    au < released ; The Journal of General Education Volume 55 ; 55 >
+
+  }
+
+  {
+    title <
+      name = The Journal of Nietzsche Studies 
+    >
+
+    param[journal_dir] = journal_of_nietzsche_studies
+
+    au < released ; The Journal of Nietzsche Studies Volume 23 ; 23 >
+    au < released ; The Journal of Nietzsche Studies Volume 24 ; 24 >
+    au < released ; The Journal of Nietzsche Studies Volume 25 ; 25 >
+    au < released ; The Journal of Nietzsche Studies Volume 26 ; 26 >
+    au < released ; The Journal of Nietzsche Studies Volume 27 ; 27 >
+    au < released ; The Journal of Nietzsche Studies Volume 28 ; 28 >
+    au < released ; The Journal of Nietzsche Studies Volume 29 ; 29 >
+    au < released ; The Journal of Nietzsche Studies Volume 30 ; 30 >
+    au < released ; The Journal of Nietzsche Studies Volume 31 ; 31 >
+    au < released ; The Journal of Nietzsche Studies Volume 32 ; 32 >
+
+  }
+
+  {
+    title <
+      name = The Journal of Speculative Philosophy 
+    >
+
+    param[journal_dir] = journal_of_speculative_philosophy
+
+    au < released ; The Journal of Speculative Philosophy Volume 13 ; 13 >
+    au < released ; The Journal of Speculative Philosophy Volume 14 ; 14 >
+    au < released ; The Journal of Speculative Philosophy Volume 15 ; 15 >
+    au < released ; The Journal of Speculative Philosophy Volume 16 ; 16 >
+    au < released ; The Journal of Speculative Philosophy Volume 17 ; 17 >
+    au < released ; The Journal of Speculative Philosophy Volume 18 ; 18 >
+    au < released ; The Journal of Speculative Philosophy Volume 19 ; 19 >
+    au < released ; The Journal of Speculative Philosophy Volume 20 ; 20 >
+
+  }
+
+}

@@ -1,0 +1,1238 @@
+{
+  publisher <
+    name = Johns Hopkins University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = American Imago 
+    >
+
+    param[journal_dir] = american_imago
+
+    au < released ; American Imago Volume 52 ; 52 >
+    au < released ; American Imago Volume 53 ; 53 >
+    au < released ; American Imago Volume 54 ; 54 >
+    au < released ; American Imago Volume 55 ; 55 >
+    au < released ; American Imago Volume 56 ; 56 >
+    au < released ; American Imago Volume 57 ; 57 >
+    au < released ; American Imago Volume 58 ; 58 >
+    au < released ; American Imago Volume 59 ; 59 >
+    au < released ; American Imago Volume 60 ; 60 >
+    au < released ; American Imago Volume 61 ; 61 >
+    au < released ; American Imago Volume 62 ; 62 >
+    au < released ; American Imago Volume 63 ; 63 >
+    au < released ; American Imago Volume 64 ; 64 >
+
+  }
+
+  {
+    title <
+      name = American Jewish History 
+    >
+
+    param[journal_dir] = american_jewish_history
+
+    au < released ; American Jewish History Volume 84 ; 84 >
+    au < released ; American Jewish History Volume 85 ; 85 >
+    au < released ; American Jewish History Volume 86 ; 86 >
+    au < released ; American Jewish History Volume 87 ; 87 >
+    au < released ; American Jewish History Volume 88 ; 88 >
+    au < released ; American Jewish History Volume 89 ; 89 >
+    au < released ; American Jewish History Volume 90 ; 90 >
+    au < released ; American Jewish History Volume 91 ; 91 >
+    au < released ; American Jewish History Volume 92 ; 92 >
+
+  }
+
+  {
+    title <
+      name = American Journal of Mathematics 
+    >
+
+    param[journal_dir] = american_journal_of_mathematics
+
+    au < released ; American Journal of Mathematics Volume 118 ; 118 >
+    au < released ; American Journal of Mathematics Volume 119 ; 119 >
+    au < released ; American Journal of Mathematics Volume 120 ; 120 >
+    au < released ; American Journal of Mathematics Volume 121 ; 121 >
+    au < released ; American Journal of Mathematics Volume 122 ; 122 >
+    au < released ; American Journal of Mathematics Volume 123 ; 123 >
+    au < released ; American Journal of Mathematics Volume 124 ; 124 >
+    au < released ; American Journal of Mathematics Volume 125 ; 125 >
+    au < released ; American Journal of Mathematics Volume 126 ; 126 >
+    au < released ; American Journal of Mathematics Volume 127 ; 127 >
+    au < released ; American Journal of Mathematics Volume 128 ; 128 >
+    au < released ; American Journal of Mathematics Volume 129 ; 129 >
+
+  }
+
+  {
+    title <
+      name = American Journal of Philology 
+    >
+
+    param[journal_dir] = american_journal_of_philology
+
+    au < released ; American Journal of Philology Volume 117 ; 117 >
+    au < released ; American Journal of Philology Volume 118 ; 118 >
+    au < released ; American Journal of Philology Volume 119 ; 119 >
+    au < released ; American Journal of Philology Volume 120 ; 120 >
+    au < released ; American Journal of Philology Volume 121 ; 121 >
+    au < released ; American Journal of Philology Volume 122 ; 122 >
+    au < released ; American Journal of Philology Volume 123 ; 123 >
+    au < released ; American Journal of Philology Volume 124 ; 124 >
+    au < released ; American Journal of Philology Volume 125 ; 125 >
+    au < released ; American Journal of Philology Volume 126 ; 126 >
+    au < released ; American Journal of Philology Volume 127 ; 127 >
+    au < released ; American Journal of Philology Volume 128 ; 128 >
+
+  }
+
+  {
+    title <
+      name = American Quarterly 
+    >
+
+    param[journal_dir] = american_quarterly
+
+    au < released ; American Quarterly Volume 48 ; 48 >
+    au < released ; American Quarterly Volume 49 ; 49 >
+    au < released ; American Quarterly Volume 50 ; 50 >
+    au < released ; American Quarterly Volume 51 ; 51 >
+    au < released ; American Quarterly Volume 52 ; 52 >
+    au < released ; American Quarterly Volume 53 ; 53 >
+    au < released ; American Quarterly Volume 54 ; 54 >
+    au < released ; American Quarterly Volume 55 ; 55 >
+    au < released ; American Quarterly Volume 56 ; 56 >
+    au < released ; American Quarterly Volume 57 ; 57 >
+    au < released ; American Quarterly Volume 58 ; 58 >
+    au < released ; American Quarterly Volume 59 ; 59 >
+
+  }
+
+  {
+    title <
+      name = Arethusa 
+    >
+
+    param[journal_dir] = arethusa
+
+    au < released ; Arethusa Volume 29 ; 29 >
+    au < released ; Arethusa Volume 30 ; 30 >
+    au < released ; Arethusa Volume 31 ; 31 >
+    au < released ; Arethusa Volume 32 ; 32 >
+    au < released ; Arethusa Volume 33 ; 33 >
+    au < released ; Arethusa Volume 34 ; 34 >
+    au < released ; Arethusa Volume 35 ; 35 >
+    au < released ; Arethusa Volume 36 ; 36 >
+    au < released ; Arethusa Volume 37 ; 37 >
+    au < released ; Arethusa Volume 38 ; 38 >
+    au < released ; Arethusa Volume 39 ; 39 >
+    au < released ; Arethusa Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Bulletin of the Center for Children's Books 
+    >
+
+    param[journal_dir] = bulletin_of_the_center_for_childrens_books
+
+    au < released ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
+    au < released ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
+
+  }
+
+  {
+    title <
+      name = Bulletin of the History of Medicine 
+    >
+
+    param[journal_dir] = bulletin_of_the_history_of_medicine
+
+    au < released ; Bulletin of the History of Medicine Volume 70 ; 70 >
+    au < released ; Bulletin of the History of Medicine Volume 71 ; 71 >
+    au < released ; Bulletin of the History of Medicine Volume 72 ; 72 >
+    au < released ; Bulletin of the History of Medicine Volume 73 ; 73 >
+    au < released ; Bulletin of the History of Medicine Volume 74 ; 74 >
+    au < released ; Bulletin of the History of Medicine Volume 75 ; 75 >
+    au < released ; Bulletin of the History of Medicine Volume 76 ; 76 >
+    au < released ; Bulletin of the History of Medicine Volume 77 ; 77 >
+    au < released ; Bulletin of the History of Medicine Volume 78 ; 78 >
+    au < released ; Bulletin of the History of Medicine Volume 79 ; 79 >
+    au < released ; Bulletin of the History of Medicine Volume 80 ; 80 >
+    au < released ; Bulletin of the History of Medicine Volume 81 ; 81 >
+
+  }
+
+  {
+    title <
+      name = Callaloo 
+    >
+
+    param[journal_dir] = callaloo
+
+    au < released ; Callaloo Volume 18 ; 18 >
+    au < released ; Callaloo Volume 19 ; 19 >
+    au < released ; Callaloo Volume 20 ; 20 >
+    au < released ; Callaloo Volume 21 ; 21 >
+    au < released ; Callaloo Volume 22 ; 22 >
+    au < released ; Callaloo Volume 23 ; 23 >
+    au < released ; Callaloo Volume 24 ; 24 >
+    au < released ; Callaloo Volume 25 ; 25 >
+    au < released ; Callaloo Volume 26 ; 26 >
+    au < released ; Callaloo Volume 27 ; 27 >
+    au < released ; Callaloo Volume 28 ; 28 >
+    au < released ; Callaloo Volume 29 ; 29 >
+
+  }
+
+  {
+    title <
+      name = Children's Literature 
+    >
+
+    param[journal_dir] = childrens_literature
+
+    au < released ; Children's Literature Volume 31 ; 31 >
+    au < released ; Children's Literature Volume 32 ; 32 >
+    au < released ; Children's Literature Volume 33 ; 33 >
+    au < released ; Children's Literature Volume 34 ; 34 >
+    au < released ; Children's Literature Volume 35 ; 35 >
+
+  }
+
+  {
+    title <
+      name = Children's Literature Association Quarterly 
+    >
+
+    param[journal_dir] = childrens_literature_association_quarterly
+
+    au < released ; Children's Literature Association Quarterly Volume 30 ; 30 >
+    au < released ; Children's Literature Association Quarterly Volume 31 ; 31 >
+    au < released ; Children's Literature Association Quarterly Volume 32 ; 32 >
+
+  }
+
+  {
+    title <
+      name = Comparative Technology Transfer and Society 
+    >
+
+    param[journal_dir] = comparative_technology_transfer_and_society
+
+    au < released ; Comparative Technology Transfer and Society Volume 1 ; 1 >
+    au < released ; Comparative Technology Transfer and Society Volume 2 ; 2 >
+    au < released ; Comparative Technology Transfer and Society Volume 3 ; 3 >
+    au < released ; Comparative Technology Transfer and Society Volume 4 ; 4 >
+    au < released ; Comparative Technology Transfer and Society Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Configurations 
+    >
+
+    param[journal_dir] = configurations
+
+    au < released ; Configurations Volume 1 ; 1 >
+    au < released ; Configurations Volume 2 ; 2 >
+    au < released ; Configurations Volume 3 ; 3 >
+    au < released ; Configurations Volume 4 ; 4 >
+    au < released ; Configurations Volume 5 ; 5 >
+    au < released ; Configurations Volume 6 ; 6 >
+    au < released ; Configurations Volume 7 ; 7 >
+    au < released ; Configurations Volume 8 ; 8 >
+    au < released ; Configurations Volume 9 ; 9 >
+    au < released ; Configurations Volume 10 ; 10 >
+    au < released ; Configurations Volume 11 ; 11 >
+    au < released ; Configurations Volume 12 ; 12 >
+    au < released ; Configurations Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = diacritics 
+    >
+
+    param[journal_dir] = diacritics
+
+    au < released ; diacritics Volume 26 ; 26 >
+    au < released ; diacritics Volume 27 ; 27 >
+    au < released ; diacritics Volume 28 ; 28 >
+    au < released ; diacritics Volume 29 ; 29 >
+    au < released ; diacritics Volume 30 ; 30 >
+    au < released ; diacritics Volume 31 ; 31 >
+    au < released ; diacritics Volume 32 ; 32 >
+    au < released ; diacritics Volume 33 ; 33 >
+    au < released ; diacritics Volume 34 ; 34 >
+    au < released ; diacritics Volume 35 ; 35 >
+
+  }
+
+  {
+    title <
+      name = Eighteenth-Century Studies 
+    >
+
+    param[journal_dir] = eighteenth-century_studies
+
+    au < released ; Eighteenth-Century Studies Volume 29 ; 29 >
+    au < released ; Eighteenth-Century Studies Volume 30 ; 30 >
+    au < released ; Eighteenth-Century Studies Volume 31 ; 31 >
+    au < released ; Eighteenth-Century Studies Volume 32 ; 32 >
+    au < released ; Eighteenth-Century Studies Volume 33 ; 33 >
+    au < released ; Eighteenth-Century Studies Volume 34 ; 34 >
+    au < released ; Eighteenth-Century Studies Volume 35 ; 35 >
+    au < released ; Eighteenth-Century Studies Volume 36 ; 36 >
+    au < released ; Eighteenth-Century Studies Volume 37 ; 37 >
+    au < released ; Eighteenth-Century Studies Volume 38 ; 38 >
+    au < released ; Eighteenth-Century Studies Volume 39 ; 39 >
+    au < released ; Eighteenth-Century Studies Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = ELH 
+    >
+
+    param[journal_dir] = elh
+
+    au < released ; ELH Volume 60 ; 60 >
+    au < released ; ELH Volume 61 ; 61 >
+    au < released ; ELH Volume 62 ; 62 >
+    au < released ; ELH Volume 63 ; 63 >
+    au < released ; ELH Volume 64 ; 64 >
+    au < released ; ELH Volume 65 ; 65 >
+    au < released ; ELH Volume 66 ; 66 >
+    au < released ; ELH Volume 67 ; 67 >
+    au < released ; ELH Volume 68 ; 68 >
+    au < released ; ELH Volume 69 ; 69 >
+    au < released ; ELH Volume 70 ; 70 >
+    au < released ; ELH Volume 71 ; 71 >
+    au < released ; ELH Volume 72 ; 72 >
+    au < released ; ELH Volume 73 ; 73 >
+    au < released ; ELH Volume 74 ; 74 >
+
+  }
+
+  {
+    title <
+      name = Human Rights Quarterly 
+    >
+
+    param[journal_dir] = human_rights_quarterly
+
+    au < released ; Human Rights Quarterly Volume 17 ; 17 >
+    au < released ; Human Rights Quarterly Volume 18 ; 18 >
+    au < released ; Human Rights Quarterly Volume 19 ; 19 >
+    au < released ; Human Rights Quarterly Volume 20 ; 20 >
+    au < released ; Human Rights Quarterly Volume 21 ; 21 >
+    au < released ; Human Rights Quarterly Volume 22 ; 22 >
+    au < released ; Human Rights Quarterly Volume 23 ; 23 >
+    au < released ; Human Rights Quarterly Volume 24 ; 24 >
+    au < released ; Human Rights Quarterly Volume 25 ; 25 >
+    au < released ; Human Rights Quarterly Volume 26 ; 26 >
+    au < released ; Human Rights Quarterly Volume 27 ; 27 >
+    au < released ; Human Rights Quarterly Volume 28 ; 28 >
+    au < released ; Human Rights Quarterly Volume 29 ; 29 >
+
+  }
+
+  {
+    title <
+      name = Journal of Asian American Studies 
+    >
+
+    param[journal_dir] = journal_of_asian_american_studies
+
+    au < released ; Journal of Asian American Studies Volume 1 ; 1 >
+    au < released ; Journal of Asian American Studies Volume 2 ; 2 >
+    au < released ; Journal of Asian American Studies Volume 3 ; 3 >
+    au < released ; Journal of Asian American Studies Volume 4 ; 4 >
+    au < released ; Journal of Asian American Studies Volume 5 ; 5 >
+    au < released ; Journal of Asian American Studies Volume 6 ; 6 >
+    au < released ; Journal of Asian American Studies Volume 7 ; 7 >
+    au < released ; Journal of Asian American Studies Volume 8 ; 8 >
+    au < released ; Journal of Asian American Studies Volume 9 ; 9 >
+    au < released ; Journal of Asian American Studies Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
+      name = Journal of College Student Development 
+    >
+
+    param[journal_dir] = journal_of_college_student_development
+
+    au < released ; Journal of College Student Development Volume 44 ; 44 >
+    au < released ; Journal of College Student Development Volume 45 ; 45 >
+    au < released ; Journal of College Student Development Volume 46 ; 46 >
+    au < released ; Journal of College Student Development Volume 47 ; 47 >
+    au < released ; Journal of College Student Development Volume 48 ; 48 >
+
+  }
+
+  {
+    title <
+      name = Journal of Colonialism and Colonial History 
+    >
+
+    param[journal_dir] = journal_of_colonialism_and_colonial_history
+
+    au < released ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
+    au < released ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
+    au < released ; Journal of Colonialism and Colonial History Volume 3 ; 3 >
+    au < released ; Journal of Colonialism and Colonial History Volume 4 ; 4 >
+    au < released ; Journal of Colonialism and Colonial History Volume 5 ; 5 >
+    au < released ; Journal of Colonialism and Colonial History Volume 6 ; 6 >
+    au < released ; Journal of Colonialism and Colonial History Volume 7 ; 7 >
+    au < released ; Journal of Colonialism and Colonial History Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Journal of Democracy 
+    >
+
+    param[journal_dir] = journal_of_democracy
+
+    au < released ; Journal of Democracy Volume 6 ; 6 >
+    au < released ; Journal of Democracy Volume 7 ; 7 >
+    au < released ; Journal of Democracy Volume 8 ; 8 >
+    au < released ; Journal of Democracy Volume 9 ; 9 >
+    au < released ; Journal of Democracy Volume 10 ; 10 >
+    au < released ; Journal of Democracy Volume 11 ; 11 >
+    au < released ; Journal of Democracy Volume 12 ; 12 >
+    au < released ; Journal of Democracy Volume 13 ; 13 >
+    au < released ; Journal of Democracy Volume 14 ; 14 >
+    au < released ; Journal of Democracy Volume 15 ; 15 >
+    au < released ; Journal of Democracy Volume 16 ; 16 >
+    au < released ; Journal of Democracy Volume 17 ; 17 >
+    au < released ; Journal of Democracy Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Journal of Early Christian Studies 
+    >
+
+    param[journal_dir] = journal_of_early_christian_studies
+
+    au < released ; Journal of Early Christian Studies Volume 4 ; 4 >
+    au < released ; Journal of Early Christian Studies Volume 5 ; 5 >
+    au < released ; Journal of Early Christian Studies Volume 6 ; 6 >
+    au < released ; Journal of Early Christian Studies Volume 7 ; 7 >
+    au < released ; Journal of Early Christian Studies Volume 8 ; 8 >
+    au < released ; Journal of Early Christian Studies Volume 9 ; 9 >
+    au < released ; Journal of Early Christian Studies Volume 10 ; 10 >
+    au < released ; Journal of Early Christian Studies Volume 11 ; 11 >
+    au < released ; Journal of Early Christian Studies Volume 12 ; 12 >
+    au < released ; Journal of Early Christian Studies Volume 13 ; 13 >
+    au < released ; Journal of Early Christian Studies Volume 14 ; 14 >
+    au < released ; Journal of Early Christian Studies Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Journal of Health Care for the Poor and Underserved 
+    >
+
+    param[journal_dir] = journal_of_health_care_for_the_poor_and_underserved
+
+    au < released ; Journal of Health Care for the Poor and Underserved Volume 15 ; 15 >
+    au < released ; Journal of Health Care for the Poor and Underserved Volume 16 ; 16 >
+    au < released ; Journal of Health Care for the Poor and Underserved Volume 17 ; 17 >
+    au < released ; Journal of Health Care for the Poor and Underserved Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Journal of Modern Greek Studies 
+    >
+
+    param[journal_dir] = journal_of_modern_greek_studies
+
+    au < released ; Journal of Modern Greek Studies Volume 14 ; 14 >
+    au < released ; Journal of Modern Greek Studies Volume 15 ; 15 >
+    au < released ; Journal of Modern Greek Studies Volume 16 ; 16 >
+    au < released ; Journal of Modern Greek Studies Volume 17 ; 17 >
+    au < released ; Journal of Modern Greek Studies Volume 18 ; 18 >
+    au < released ; Journal of Modern Greek Studies Volume 19 ; 19 >
+    au < released ; Journal of Modern Greek Studies Volume 20 ; 20 >
+    au < released ; Journal of Modern Greek Studies Volume 21 ; 21 >
+    au < released ; Journal of Modern Greek Studies Volume 22 ; 22 >
+    au < released ; Journal of Modern Greek Studies Volume 23 ; 23 >
+    au < released ; Journal of Modern Greek Studies Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Journal of the History of Philosophy 
+    >
+
+    param[journal_dir] = journal_of_the_history_of_philosophy
+
+    au < released ; Journal of the History of Philosophy Volume 38 ; 38 >
+    au < released ; Journal of the History of Philosophy Volume 39 ; 39 >
+    au < released ; Journal of the History of Philosophy Volume 40 ; 40 >
+    au < released ; Journal of the History of Philosophy Volume 41 ; 41 >
+    au < released ; Journal of the History of Philosophy Volume 42 ; 42 >
+    au < released ; Journal of the History of Philosophy Volume 43 ; 43 >
+    au < released ; Journal of the History of Philosophy Volume 44 ; 44 >
+    au < released ; Journal of the History of Philosophy Volume 45 ; 45 >
+
+  }
+
+  {
+    title <
+      name = Journal of Women's History 
+    >
+
+    param[journal_dir] = journal_of_womens_history
+
+    au < released ; Journal of Women's History Volume 11 ; 11 >
+    au < released ; Journal of Women's History Volume 12 ; 12 >
+    au < released ; Journal of Women's History Volume 13 ; 13 >
+    au < released ; Journal of Women's History Volume 14 ; 14 >
+    au < released ; Journal of Women's History Volume 15 ; 15 >
+    au < released ; Journal of Women's History Volume 16 ; 16 >
+    au < released ; Journal of Women's History Volume 17 ; 17 >
+    au < released ; Journal of Women's History Volume 18 ; 18 >
+    au < released ; Journal of Women's History Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Kennedy Institute of Ethics Journal 
+    >
+
+    param[journal_dir] = kennedy_institute_of_ethics_journal
+
+    au < released ; Kennedy Institute of Ethics Journal Volume 6 ; 6 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 7 ; 7 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 8 ; 8 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 9 ; 9 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 10 ; 10 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 11 ; 11 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 12 ; 12 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 13 ; 13 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 14 ; 14 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 15 ; 15 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 16 ; 16 >
+    au < released ; Kennedy Institute of Ethics Journal Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = L'Esprit Créateur 
+    >
+
+    param[journal_dir] = lesprit_createur
+
+    au < released ; L'Esprit Créateur Volume 46 ; 46 >
+    au < released ; L'Esprit Créateur Volume 47 ; 47 >
+
+  }
+
+  {
+    title <
+      name = Late Imperial China 
+    >
+
+    param[journal_dir] = late_imperial_china
+
+    au < released ; Late Imperial China Volume 17 ; 17 >
+    au < released ; Late Imperial China Volume 18 ; 18 >
+    au < released ; Late Imperial China Volume 19 ; 19 >
+    au < released ; Late Imperial China Volume 20 ; 20 >
+    au < released ; Late Imperial China Volume 21 ; 21 >
+    au < released ; Late Imperial China Volume 22 ; 22 >
+    au < released ; Late Imperial China Volume 23 ; 23 >
+    au < released ; Late Imperial China Volume 24 ; 24 >
+    au < released ; Late Imperial China Volume 25 ; 25 >
+    au < released ; Late Imperial China Volume 26 ; 26 >
+    au < released ; Late Imperial China Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Library Trends 
+    >
+
+    param[journal_dir] = library_trends
+
+    au < manifest ; Library Trends Volume 54 ; 54 >
+    au < manifest ; Library Trends Volume 55 ; 55 >
+
+  }
+
+  {
+    title <
+      name = Literature and Medicine 
+    >
+
+    param[journal_dir] = literature_and_medicine
+
+    au < released ; Literature and Medicine Volume 14 ; 14 >
+    au < released ; Literature and Medicine Volume 15 ; 15 >
+    au < released ; Literature and Medicine Volume 16 ; 16 >
+    au < released ; Literature and Medicine Volume 17 ; 17 >
+    au < released ; Literature and Medicine Volume 18 ; 18 >
+    au < released ; Literature and Medicine Volume 19 ; 19 >
+    au < released ; Literature and Medicine Volume 20 ; 20 >
+    au < released ; Literature and Medicine Volume 21 ; 21 >
+    au < released ; Literature and Medicine Volume 22 ; 22 >
+    au < released ; Literature and Medicine Volume 23 ; 23 >
+    au < released ; Literature and Medicine Volume 24 ; 24 >
+    au < released ; Literature and Medicine Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = MFS Modern Fiction Studies 
+    >
+
+    param[journal_dir] = modern_fiction_studies
+
+    au < manifest ; MFS Modern Fiction Studies Volume 40 ; 40 >
+    au < released ; MFS Modern Fiction Studies Volume 41 ; 41 >
+    au < released ; MFS Modern Fiction Studies Volume 42 ; 42 >
+    au < released ; MFS Modern Fiction Studies Volume 43 ; 43 >
+    au < released ; MFS Modern Fiction Studies Volume 44 ; 44 >
+    au < released ; MFS Modern Fiction Studies Volume 45 ; 45 >
+    au < released ; MFS Modern Fiction Studies Volume 46 ; 46 >
+    au < released ; MFS Modern Fiction Studies Volume 47 ; 47 >
+    au < released ; MFS Modern Fiction Studies Volume 48 ; 48 >
+    au < released ; MFS Modern Fiction Studies Volume 49 ; 49 >
+    au < released ; MFS Modern Fiction Studies Volume 50 ; 50 >
+    au < released ; MFS Modern Fiction Studies Volume 51 ; 51 >
+    au < released ; MFS Modern Fiction Studies Volume 52 ; 52 >
+    au < released ; MFS Modern Fiction Studies Volume 53 ; 53 >
+
+  }
+
+  {
+    title <
+      name = Milton Quarterly 
+    >
+
+    param[journal_dir] = milton_quarterly
+
+    au < released ; Milton Quarterly Volume 31 ; 31 >
+    au < released ; Milton Quarterly Volume 32 ; 32 >
+    au < released ; Milton Quarterly Volume 33 ; 33 >
+    au < released ; Milton Quarterly Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = MLN 
+    >
+
+    param[journal_dir] = mln
+
+    au < released ; MLN Volume 110 ; 110 >
+    au < released ; MLN Volume 111 ; 111 >
+    au < released ; MLN Volume 112 ; 112 >
+    au < released ; MLN Volume 113 ; 113 >
+    au < released ; MLN Volume 114 ; 114 >
+    au < released ; MLN Volume 115 ; 115 >
+    au < released ; MLN Volume 116 ; 116 >
+    au < released ; MLN Volume 117 ; 117 >
+    au < released ; MLN Volume 118 ; 118 >
+    au < released ; MLN Volume 119 ; 119 >
+    au < released ; MLN Volume 120 ; 120 >
+    au < released ; MLN Volume 121 ; 121 >
+    au < released ; MLN Volume 122 ; 122 >
+
+  }
+
+  {
+    title <
+      name = Modernism/modernity 
+    >
+
+    param[journal_dir] = modernism-modernity
+
+    au < released ; Modernism/modernity Volume 1 ; 1 >
+    au < released ; Modernism/modernity Volume 2 ; 2 >
+    au < released ; Modernism/modernity Volume 3 ; 3 >
+    au < released ; Modernism/modernity Volume 4 ; 4 >
+    au < released ; Modernism/modernity Volume 5 ; 5 >
+    au < released ; Modernism/modernity Volume 6 ; 6 >
+    au < released ; Modernism/modernity Volume 7 ; 7 >
+    au < released ; Modernism/modernity Volume 8 ; 8 >
+    au < released ; Modernism/modernity Volume 9 ; 9 >
+    au < released ; Modernism/modernity Volume 10 ; 10 >
+    au < released ; Modernism/modernity Volume 11 ; 11 >
+    au < released ; Modernism/modernity Volume 12 ; 12 >
+    au < released ; Modernism/modernity Volume 13 ; 13 >
+    au < released ; Modernism/modernity Volume 14 ; 14 >
+
+  }
+
+  {
+    title <
+      name = New Literary History 
+    >
+
+    param[journal_dir] = new_literary_history
+
+    au < released ; New Literary History Volume 26 ; 26 >
+    au < released ; New Literary History Volume 27 ; 27 >
+    au < released ; New Literary History Volume 28 ; 28 >
+    au < released ; New Literary History Volume 29 ; 29 >
+    au < released ; New Literary History Volume 30 ; 30 >
+    au < released ; New Literary History Volume 31 ; 31 >
+    au < released ; New Literary History Volume 32 ; 32 >
+    au < released ; New Literary History Volume 33 ; 33 >
+    au < released ; New Literary History Volume 34 ; 34 >
+    au < released ; New Literary History Volume 35 ; 35 >
+    au < released ; New Literary History Volume 36 ; 36 >
+    au < released ; New Literary History Volume 37 ; 37 >
+
+  }
+
+  {
+    title <
+      name = Partial Answers: Journal of Literature and the History of Ideas 
+    >
+
+    param[journal_dir] = partial_answers
+
+    au < released ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Perspectives in Biology and Medicine 
+    >
+
+    param[journal_dir] = perspectives_in_biology_and_medicine
+
+    au < released ; Perspectives in Biology and Medicine Volume 43 ; 43 >
+    au < released ; Perspectives in Biology and Medicine Volume 44 ; 44 >
+    au < released ; Perspectives in Biology and Medicine Volume 45 ; 45 >
+    au < released ; Perspectives in Biology and Medicine Volume 46 ; 46 >
+    au < released ; Perspectives in Biology and Medicine Volume 47 ; 47 >
+    au < released ; Perspectives in Biology and Medicine Volume 48 ; 48 >
+    au < released ; Perspectives in Biology and Medicine Volume 49 ; 49 >
+    au < released ; Perspectives in Biology and Medicine Volume 50 ; 50 >
+
+  }
+
+  {
+    title <
+      name = Philosophy and Literature 
+    >
+
+    param[journal_dir] = philosophy_and_literature
+
+    au < released ; Philosophy and Literature Volume 19 ; 19 >
+    au < released ; Philosophy and Literature Volume 20 ; 20 >
+    au < released ; Philosophy and Literature Volume 21 ; 21 >
+    au < released ; Philosophy and Literature Volume 22 ; 22 >
+    au < released ; Philosophy and Literature Volume 23 ; 23 >
+    au < released ; Philosophy and Literature Volume 24 ; 24 >
+    au < released ; Philosophy and Literature Volume 25 ; 25 >
+    au < released ; Philosophy and Literature Volume 26 ; 26 >
+    au < released ; Philosophy and Literature Volume 27 ; 27 >
+    au < released ; Philosophy and Literature Volume 28 ; 28 >
+    au < released ; Philosophy and Literature Volume 29 ; 29 >
+    au < released ; Philosophy and Literature Volume 30 ; 30 >
+    au < released ; Philosophy and Literature Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Philosophy, Psychiatry & Psychology 
+    >
+
+    param[journal_dir] = philosophy_psychiatry_and_psychology
+
+    au < released ; Philosophy, Psychiatry & Psychology Volume 3 ; 3 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 4 ; 4 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 5 ; 5 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 6 ; 6 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 7 ; 7 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 8 ; 8 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 9 ; 9 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 10 ; 10 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 11 ; 11 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 12 ; 12 >
+    au < released ; Philosophy, Psychiatry & Psychology Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = portal: Libraries and the Academy 
+    >
+
+    param[journal_dir] = portal_libraries_and_the_academy
+
+    au < manifest ; portal: Libraries and the Academy Volume 1 ; 1 >
+    au < released ; portal: Libraries and the Academy Volume 2 ; 2 >
+    au < released ; portal: Libraries and the Academy Volume 3 ; 3 >
+    au < released ; portal: Libraries and the Academy Volume 4 ; 4 >
+    au < released ; portal: Libraries and the Academy Volume 5 ; 5 >
+    au < manifest ; portal: Libraries and the Academy Volume 6 ; 6 >
+    au < released ; portal: Libraries and the Academy Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Postmodern Culture 
+    >
+
+    param[journal_dir] = postmodern_culture
+
+    au < manifest ; Postmodern Culture Volume 1 ; 1 >
+    au < manifest ; Postmodern Culture Volume 2 ; 2 >
+    au < manifest ; Postmodern Culture Volume 3 ; 3 >
+    au < manifest ; Postmodern Culture Volume 4 ; 4 >
+    au < manifest ; Postmodern Culture Volume 5 ; 5 >
+    au < manifest ; Postmodern Culture Volume 6 ; 6 >
+    au < manifest ; Postmodern Culture Volume 7 ; 7 >
+    au < released ; Postmodern Culture Volume 8 ; 8 >
+    au < released ; Postmodern Culture Volume 9 ; 9 >
+    au < released ; Postmodern Culture Volume 10 ; 10 >
+    au < manifest ; Postmodern Culture Volume 11 ; 11 >
+    au < manifest ; Postmodern Culture Volume 12 ; 12 >
+    au < released ; Postmodern Culture Volume 13 ; 13 >
+    au < released ; Postmodern Culture Volume 14 ; 14 >
+    au < released ; Postmodern Culture Volume 15 ; 15 >
+    au < released ; Postmodern Culture Volume 16 ; 16 >
+    au < manifest ; Postmodern Culture Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Progress in Community Health Partnerships: Research, Education, and Action 
+    >
+
+    param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
+
+    au < released ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = Reviews in American History 
+    >
+
+    param[journal_dir] = reviews_in_american_history
+
+    au < released ; Reviews in American History Volume 23 ; 23 >
+    au < released ; Reviews in American History Volume 24 ; 24 >
+    au < released ; Reviews in American History Volume 25 ; 25 >
+    au < released ; Reviews in American History Volume 26 ; 26 >
+    au < released ; Reviews in American History Volume 27 ; 27 >
+    au < released ; Reviews in American History Volume 28 ; 28 >
+    au < released ; Reviews in American History Volume 29 ; 29 >
+    au < released ; Reviews in American History Volume 30 ; 30 >
+    au < released ; Reviews in American History Volume 31 ; 31 >
+    au < released ; Reviews in American History Volume 32 ; 32 >
+    au < released ; Reviews in American History Volume 33 ; 33 >
+    au < released ; Reviews in American History Volume 34 ; 34 >
+    au < released ; Reviews in American History Volume 35 ; 35 >
+
+  }
+
+  {
+    title <
+      name = SAIS Review 
+    >
+
+    param[journal_dir] = sais_review
+
+    au < released ; SAIS Review Volume 15 ; 15 >
+    au < released ; SAIS Review Volume 16 ; 16 >
+    au < released ; SAIS Review Volume 17 ; 17 >
+    au < released ; SAIS Review Volume 18 ; 18 >
+    au < released ; SAIS Review Volume 19 ; 19 >
+    au < released ; SAIS Review Volume 20 ; 20 >
+    au < released ; SAIS Review Volume 21 ; 21 >
+    au < released ; SAIS Review Volume 22 ; 22 >
+    au < released ; SAIS Review Volume 23 ; 23 >
+    au < released ; SAIS Review Volume 24 ; 24 >
+    au < released ; SAIS Review Volume 25 ; 25 >
+    au < released ; SAIS Review Volume 26 ; 26 >
+    au < released ; SAIS Review Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = SEL Studies in English Literature 1500-1900 
+    >
+
+    param[journal_dir] = studies_in_english_literature
+
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 39 ; 39 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 40 ; 40 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 41 ; 41 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 42 ; 42 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 43 ; 43 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 44 ; 44 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
+    au < released ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
+
+  }
+
+  {
+    title <
+      name = Sewanee Review 
+    >
+
+    param[journal_dir] = sewanee_review
+
+    au < released ; Sewanee Review Volume 115 ; 115 >
+
+  }
+
+  {
+    title <
+      name = Shakespeare Bulletin 
+    >
+
+    param[journal_dir] = shakespeare_bulletin
+
+    au < released ; Shakespeare Bulletin Volume 24 ; 24 >
+    au < released ; Shakespeare Bulletin Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = Shakespeare Quarterly 
+    >
+
+    param[journal_dir] = shakespeare_quarterly
+
+    au < manifest ; Shakespeare Quarterly Volume 52 ; 52 >
+    au < manifest ; Shakespeare Quarterly Volume 53 ; 53 >
+    au < manifest ; Shakespeare Quarterly Volume 54 ; 54 >
+    au < manifest ; Shakespeare Quarterly Volume 55 ; 55 >
+    au < manifest ; Shakespeare Quarterly Volume 56 ; 56 >
+    au < manifest ; Shakespeare Quarterly Volume 57 ; 57 >
+    au < manifest ; Shakespeare Quarterly Volume 58 ; 58 >
+
+  }
+
+  {
+    title <
+      name = Sirena: poesia, arte y critica 
+    >
+
+    param[journal_dir] = sirena_poesia_arte_y_critica
+
+    au < released ; Sirena: poesia, arte y critica Volume 2005 ; 2005 >
+    au < released ; Sirena: poesia, arte y critica Volume 2006 ; 2006 >
+    au < released ; Sirena: poesia, arte y critica Volume 2007 ; 2007 >
+
+  }
+
+  {
+    title <
+      name = South Central Review 
+    >
+
+    param[journal_dir] = south_central_review
+
+    au < released ; South Central Review Volume 21 ; 21 >
+    au < released ; South Central Review Volume 22 ; 22 >
+    au < released ; South Central Review Volume 23 ; 23 >
+    au < released ; South Central Review Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Spiritus: A Journal of Christian Spirituality 
+    >
+
+    param[journal_dir] = spiritus
+
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 3 ; 3 >
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 4 ; 4 >
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 5 ; 5 >
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
+    au < released ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Technology and Culture 
+    >
+
+    param[journal_dir] = technology_and_culture
+
+    au < released ; Technology and Culture Volume 39 ; 39 >
+    au < released ; Technology and Culture Volume 40 ; 40 >
+    au < released ; Technology and Culture Volume 41 ; 41 >
+    au < released ; Technology and Culture Volume 42 ; 42 >
+    au < released ; Technology and Culture Volume 43 ; 43 >
+    au < released ; Technology and Culture Volume 44 ; 44 >
+    au < released ; Technology and Culture Volume 45 ; 45 >
+    au < released ; Technology and Culture Volume 46 ; 46 >
+    au < released ; Technology and Culture Volume 47 ; 47 >
+    au < released ; Technology and Culture Volume 48 ; 48 >
+
+  }
+
+  {
+    title <
+      name = The Emily Dickinson Journal 
+    >
+
+    param[journal_dir] = emily_dickinson_journal
+
+    au < released ; The Emily Dickinson Journal Volume 7 ; 7 >
+    au < released ; The Emily Dickinson Journal Volume 8 ; 8 >
+    au < released ; The Emily Dickinson Journal Volume 9 ; 9 >
+    au < released ; The Emily Dickinson Journal Volume 10 ; 10 >
+    au < released ; The Emily Dickinson Journal Volume 11 ; 11 >
+    au < released ; The Emily Dickinson Journal Volume 12 ; 12 >
+    au < released ; The Emily Dickinson Journal Volume 13 ; 13 >
+    au < released ; The Emily Dickinson Journal Volume 14 ; 14 >
+    au < released ; The Emily Dickinson Journal Volume 15 ; 15 >
+    au < released ; The Emily Dickinson Journal Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = The Henry James Review 
+    >
+
+    param[journal_dir] = henry_james_review
+
+    au < released ; The Henry James Review Volume 16 ; 16 >
+    au < released ; The Henry James Review Volume 17 ; 17 >
+    au < released ; The Henry James Review Volume 18 ; 18 >
+    au < released ; The Henry James Review Volume 19 ; 19 >
+    au < released ; The Henry James Review Volume 20 ; 20 >
+    au < released ; The Henry James Review Volume 21 ; 21 >
+    au < released ; The Henry James Review Volume 22 ; 22 >
+    au < released ; The Henry James Review Volume 23 ; 23 >
+    au < released ; The Henry James Review Volume 24 ; 24 >
+    au < released ; The Henry James Review Volume 25 ; 25 >
+    au < released ; The Henry James Review Volume 26 ; 26 >
+    au < released ; The Henry James Review Volume 27 ; 27 >
+    au < released ; The Henry James Review Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = The Lion and the Unicorn 
+    >
+
+    param[journal_dir] = lion_and_the_unicorn
+
+    au < released ; The Lion and the Unicorn Volume 19 ; 19 >
+    au < released ; The Lion and the Unicorn Volume 20 ; 20 >
+    au < released ; The Lion and the Unicorn Volume 21 ; 21 >
+    au < released ; The Lion and the Unicorn Volume 22 ; 22 >
+    au < released ; The Lion and the Unicorn Volume 23 ; 23 >
+    au < released ; The Lion and the Unicorn Volume 24 ; 24 >
+    au < released ; The Lion and the Unicorn Volume 25 ; 25 >
+    au < released ; The Lion and the Unicorn Volume 26 ; 26 >
+    au < released ; The Lion and the Unicorn Volume 27 ; 27 >
+    au < released ; The Lion and the Unicorn Volume 28 ; 28 >
+    au < released ; The Lion and the Unicorn Volume 29 ; 29 >
+    au < released ; The Lion and the Unicorn Volume 30 ; 30 >
+    au < released ; The Lion and the Unicorn Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = The Review of Higher Education 
+    >
+
+    param[journal_dir] = review_of_higher_education
+
+    au < released ; The Review of Higher Education Volume 20 ; 20 >
+    au < released ; The Review of Higher Education Volume 21 ; 21 >
+    au < released ; The Review of Higher Education Volume 22 ; 22 >
+    au < released ; The Review of Higher Education Volume 23 ; 23 >
+    au < released ; The Review of Higher Education Volume 24 ; 24 >
+    au < released ; The Review of Higher Education Volume 25 ; 25 >
+    au < released ; The Review of Higher Education Volume 26 ; 26 >
+    au < released ; The Review of Higher Education Volume 27 ; 27 >
+    au < released ; The Review of Higher Education Volume 28 ; 28 >
+    au < released ; The Review of Higher Education Volume 29 ; 29 >
+    au < released ; The Review of Higher Education Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = The Yale Journal of Criticism 
+    >
+
+    param[journal_dir] = yale_journal_of_criticism
+
+    au < released ; The Yale Journal of Criticism Volume 9 ; 9 >
+    au < released ; The Yale Journal of Criticism Volume 10 ; 10 >
+    au < released ; The Yale Journal of Criticism Volume 11 ; 11 >
+    au < released ; The Yale Journal of Criticism Volume 12 ; 12 >
+    au < released ; The Yale Journal of Criticism Volume 13 ; 13 >
+    au < released ; The Yale Journal of Criticism Volume 14 ; 14 >
+    au < released ; The Yale Journal of Criticism Volume 15 ; 15 >
+    au < released ; The Yale Journal of Criticism Volume 16 ; 16 >
+    au < released ; The Yale Journal of Criticism Volume 17 ; 17 >
+    au < released ; The Yale Journal of Criticism Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Theatre Journal 
+    >
+
+    param[journal_dir] = theatre_journal
+
+    au < released ; Theatre Journal Volume 48 ; 48 >
+    au < released ; Theatre Journal Volume 49 ; 49 >
+    au < released ; Theatre Journal Volume 50 ; 50 >
+    au < released ; Theatre Journal Volume 51 ; 51 >
+    au < released ; Theatre Journal Volume 52 ; 52 >
+    au < released ; Theatre Journal Volume 53 ; 53 >
+    au < released ; Theatre Journal Volume 54 ; 54 >
+    au < released ; Theatre Journal Volume 55 ; 55 >
+    au < released ; Theatre Journal Volume 56 ; 56 >
+    au < released ; Theatre Journal Volume 57 ; 57 >
+    au < released ; Theatre Journal Volume 58 ; 58 >
+    au < released ; Theatre Journal Volume 59 ; 59 >
+
+  }
+
+  {
+    title <
+      name = Theatre Topics 
+    >
+
+    param[journal_dir] = theatre_topics
+
+    au < released ; Theatre Topics Volume 6 ; 6 >
+    au < released ; Theatre Topics Volume 7 ; 7 >
+    au < released ; Theatre Topics Volume 8 ; 8 >
+    au < released ; Theatre Topics Volume 9 ; 9 >
+    au < released ; Theatre Topics Volume 10 ; 10 >
+    au < released ; Theatre Topics Volume 11 ; 11 >
+    au < released ; Theatre Topics Volume 12 ; 12 >
+    au < released ; Theatre Topics Volume 13 ; 13 >
+    au < released ; Theatre Topics Volume 14 ; 14 >
+    au < released ; Theatre Topics Volume 15 ; 15 >
+    au < released ; Theatre Topics Volume 16 ; 16 >
+    au < released ; Theatre Topics Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Theory and Event 
+    >
+
+    param[journal_dir] = theory_and_event
+
+    au < released ; Theory and Event Volume 1 ; 1 >
+    au < released ; Theory and Event Volume 2 ; 2 >
+    au < released ; Theory and Event Volume 3 ; 3 >
+    au < released ; Theory and Event Volume 4 ; 4 >
+    au < released ; Theory and Event Volume 5 ; 5 >
+    au < released ; Theory and Event Volume 6 ; 6 >
+    au < released ; Theory and Event Volume 7 ; 7 >
+    au < released ; Theory and Event Volume 8 ; 8 >
+    au < released ; Theory and Event Volume 9 ; 9 >
+
+  }
+
+  {
+    title <
+      name = Transactions of the American Philological Association 
+    >
+
+    param[journal_dir] = transactions_of_the_american_philological_association
+
+    au < released ; Transactions of the American Philological Association Volume 130 ; 130 >
+    au < released ; Transactions of the American Philological Association Volume 131 ; 131 >
+    au < released ; Transactions of the American Philological Association Volume 132 ; 132 >
+    au < released ; Transactions of the American Philological Association Volume 133 ; 133 >
+    au < released ; Transactions of the American Philological Association Volume 134 ; 134 >
+    au < released ; Transactions of the American Philological Association Volume 135 ; 135 >
+    au < released ; Transactions of the American Philological Association Volume 136 ; 136 >
+
+  }
+
+  {
+    title <
+      name = Wide Angle 
+    >
+
+    param[journal_dir] = wide_angle
+
+    au < manifest ; Wide Angle Volume 18 ; 18 >
+    au < manifest ; Wide Angle Volume 19 ; 19 >
+    au < manifest ; Wide Angle Volume 20 ; 20 >
+    au < manifest ; Wide Angle Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = World Politics 
+    >
+
+    param[journal_dir] = world_politics
+
+    au < released ; World Politics Volume 48 ; 48 >
+    au < released ; World Politics Volume 49 ; 49 >
+    au < released ; World Politics Volume 50 ; 50 >
+    au < released ; World Politics Volume 51 ; 51 >
+    au < released ; World Politics Volume 52 ; 52 >
+    au < released ; World Politics Volume 53 ; 53 >
+    au < released ; World Politics Volume 54 ; 54 >
+    au < released ; World Politics Volume 55 ; 55 >
+    au < released ; World Politics Volume 56 ; 56 >
+    au < released ; World Politics Volume 57 ; 57 >
+    au < released ; World Politics Volume 58 ; 58 >
+
+  }
+
+}

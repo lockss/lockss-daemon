@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = George Mason University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Journal of Social History 
+    >
+
+    param[journal_dir] = journal_of_social_history
+
+    au < released ; Journal of Social History Volume 33 ; 33 >
+    au < released ; Journal of Social History Volume 34 ; 34 >
+    au < released ; Journal of Social History Volume 35 ; 35 >
+    au < released ; Journal of Social History Volume 36 ; 36 >
+    au < released ; Journal of Social History Volume 37 ; 37 >
+    au < released ; Journal of Social History Volume 38 ; 38 >
+    au < released ; Journal of Social History Volume 39 ; 39 >
+    au < released ; Journal of Social History Volume 40 ; 40 >
+
+  }
+
+}

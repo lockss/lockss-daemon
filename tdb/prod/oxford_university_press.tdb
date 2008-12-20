@@ -1,0 +1,262 @@
+{
+  publisher <
+    name = Oxford University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = American Literary History 
+    >
+
+    param[journal_dir] = american_literary_history
+
+    au < released ; American Literary History Volume 12 ; 12 >
+    au < released ; American Literary History Volume 13 ; 13 >
+    au < released ; American Literary History Volume 14 ; 14 >
+    au < released ; American Literary History Volume 15 ; 15 >
+    au < released ; American Literary History Volume 16 ; 16 >
+    au < released ; American Literary History Volume 17 ; 17 >
+    au < released ; American Literary History Volume 18 ; 18 >
+    au < released ; American Literary History Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Early Music 
+    >
+
+    param[journal_dir] = early_music
+
+    au < released ; Early Music Volume 32 ; 32 >
+    au < released ; Early Music Volume 33 ; 33 >
+    au < released ; Early Music Volume 34 ; 34 >
+    au < released ; Early Music Volume 35 ; 35 >
+
+  }
+
+  {
+    title <
+      name = Enterprise & Society 
+    >
+
+    param[journal_dir] = enterprise_and_society
+
+    au < released ; Enterprise & Society Volume 4 ; 4 >
+    au < released ; Enterprise & Society Volume 5 ; 5 >
+    au < released ; Enterprise & Society Volume 6 ; 6 >
+    au < released ; Enterprise & Society Volume 7 ; 7 >
+    au < released ; Enterprise & Society Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Essays in Criticism 
+    >
+
+    param[journal_dir] = essays_in_criticism
+
+    au < released ; Essays in Criticism Volume 56 ; 56 >
+    au < released ; Essays in Criticism Volume 57 ; 57 >
+
+  }
+
+  {
+    title <
+      name = French Studies: A Quarterly Review 
+    >
+
+    param[journal_dir] = french_studies_a_quarterly_review
+
+    au < released ; French Studies: A Quarterly Review Volume 60 ; 60 >
+    au < released ; French Studies: A Quarterly Review Volume 61 ; 61 >
+
+  }
+
+  {
+    title <
+      name = History Workshop Journal 
+    >
+
+    param[journal_dir] = history_workshop_journal
+
+    au < released ; History Workshop Journal Volume 57 ; 57 >
+    au < released ; History Workshop Journal Volume 58 ; 58 >
+    au < released ; History Workshop Journal Volume 59 ; 59 >
+    au < released ; History Workshop Journal Volume 60 ; 60 >
+    au < released ; History Workshop Journal Volume 61 ; 61 >
+    au < released ; History Workshop Journal Volume 62 ; 62 >
+    au < released ; History Workshop Journal Volume 63 ; 63 >
+
+  }
+
+  {
+    title <
+      name = Holocaust and Genocide Studies 
+    >
+
+    param[journal_dir] = holocaust_and_genocide_studies
+
+    au < released ; Holocaust and Genocide Studies Volume 17 ; 17 >
+    au < released ; Holocaust and Genocide Studies Volume 18 ; 18 >
+    au < released ; Holocaust and Genocide Studies Volume 19 ; 19 >
+    au < released ; Holocaust and Genocide Studies Volume 20 ; 20 >
+    au < released ; Holocaust and Genocide Studies Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = Journal of the American Academy of Religion 
+    >
+
+    param[journal_dir] = journal_of_the_american_academy_of_religion
+
+    au < released ; Journal of the American Academy of Religion Volume 74 ; 74 >
+    au < released ; Journal of the American Academy of Religion Volume 75 ; 75 >
+
+  }
+
+  {
+    title <
+      name = Journal of the History of Medicine and Allied Sciences 
+    >
+
+    param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
+
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 55 ; 55 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 56 ; 56 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 57 ; 57 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 58 ; 58 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 59 ; 59 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
+    au < released ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
+
+  }
+
+  {
+    title <
+      name = Journal of the Royal Musical Association 
+    >
+
+    param[journal_dir] = journal_of_the_royal_musical_association
+
+    au < released ; Journal of the Royal Musical Association Volume 130 ; 130 >
+    au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
+
+  }
+
+  {
+    title <
+      name = Modern Judaism 
+    >
+
+    param[journal_dir] = modern_judaism
+
+    au < released ; Modern Judaism Volume 16 ; 16 >
+    au < released ; Modern Judaism Volume 17 ; 17 >
+    au < released ; Modern Judaism Volume 18 ; 18 >
+    au < released ; Modern Judaism Volume 19 ; 19 >
+    au < released ; Modern Judaism Volume 20 ; 20 >
+    au < released ; Modern Judaism Volume 21 ; 21 >
+    au < released ; Modern Judaism Volume 22 ; 22 >
+    au < released ; Modern Judaism Volume 23 ; 23 >
+    au < released ; Modern Judaism Volume 24 ; 24 >
+    au < released ; Modern Judaism Volume 25 ; 25 >
+    au < released ; Modern Judaism Volume 26 ; 26 >
+    au < released ; Modern Judaism Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Music and Letters 
+    >
+
+    param[journal_dir] = music_and_letters
+
+    au < released ; Music and Letters Volume 85 ; 85 >
+    au < released ; Music and Letters Volume 86 ; 86 >
+    au < released ; Music and Letters Volume 87 ; 87 >
+    au < released ; Music and Letters Volume 88 ; 88 >
+
+  }
+
+  {
+    title <
+      name = Past & Present 
+    >
+
+    param[journal_dir] = past_and_present
+
+    au < released ; Past & Present Volume 188 ; 188 >
+    au < released ; Past & Present Volume 189 ; 189 >
+    au < released ; Past & Present Volume 190 ; 190 >
+    au < released ; Past & Present Volume 191 ; 191 >
+    au < released ; Past & Present Volume 192 ; 192 >
+    au < released ; Past & Present Volume 193 ; 193 >
+
+  }
+
+  {
+    title <
+      name = Social Politics: International Studies in Gender, State and Society 
+    >
+
+    param[journal_dir] = social_politics
+
+    au < released ; Social Politics: International Studies in Gender, State and Society Volume 10 ; 10 >
+    au < released ; Social Politics: International Studies in Gender, State and Society Volume 11 ; 11 >
+    au < released ; Social Politics: International Studies in Gender, State and Society Volume 12 ; 12 >
+    au < released ; Social Politics: International Studies in Gender, State and Society Volume 13 ; 13 >
+    au < released ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
+
+  }
+
+  {
+    title <
+      name = The Cambridge Quarterly 
+    >
+
+    param[journal_dir] = cambridge_quarterly
+
+    au < released ; The Cambridge Quarterly Volume 35 ; 35 >
+    au < released ; The Cambridge Quarterly Volume 36 ; 36 >
+
+  }
+
+  {
+    title <
+      name = The Library: The Transactions of the Bibliographical Society 
+    >
+
+    param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
+
+    au < released ; The Library: The Transactions of the Bibliographical Society Volume 7 ; 7 >
+    au < released ; The Library: The Transactions of the Bibliographical Society Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = The Opera Quarterly 
+    >
+
+    param[journal_dir] = opera_quarterly
+
+    au < released ; The Opera Quarterly Volume 18 ; 18 >
+    au < released ; The Opera Quarterly Volume 19 ; 19 >
+    au < released ; The Opera Quarterly Volume 20 ; 20 >
+    au < released ; The Opera Quarterly Volume 21 ; 21 >
+    au < released ; The Opera Quarterly Volume 22 ; 22 >
+
+  }
+
+}

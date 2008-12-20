@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Catholic University of America Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Catholic Historical Review 
+    >
+
+    param[journal_dir] = catholic_historical_review
+
+    au < released ; The Catholic Historical Review Volume 86 ; 86 >
+    au < released ; The Catholic Historical Review Volume 87 ; 87 >
+    au < released ; The Catholic Historical Review Volume 88 ; 88 >
+    au < released ; The Catholic Historical Review Volume 89 ; 89 >
+    au < released ; The Catholic Historical Review Volume 90 ; 90 >
+    au < released ; The Catholic Historical Review Volume 91 ; 91 >
+    au < released ; The Catholic Historical Review Volume 92 ; 92 >
+    au < released ; The Catholic Historical Review Volume 93 ; 93 >
+
+  }
+
+}

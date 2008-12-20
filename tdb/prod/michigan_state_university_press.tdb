@@ -1,0 +1,153 @@
+{
+  publisher <
+    name = Michigan State University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = CR: The New Centennial Review 
+    >
+
+    param[journal_dir] = new_centennial_review
+
+    au < released ; CR: The New Centennial Review Volume 1 ; 1 >
+    au < released ; CR: The New Centennial Review Volume 2 ; 2 >
+    au < released ; CR: The New Centennial Review Volume 3 ; 3 >
+    au < released ; CR: The New Centennial Review Volume 4 ; 4 >
+    au < released ; CR: The New Centennial Review Volume 5 ; 5 >
+    au < released ; CR: The New Centennial Review Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = Eastern Africa Social Science Research Review 
+    >
+
+    param[journal_dir] = eastern_africa_social_science_research_review
+
+    au < released ; Eastern Africa Social Science Research Review Volume 18 ; 18 >
+    au < released ; Eastern Africa Social Science Research Review Volume 19 ; 19 >
+    au < released ; Eastern Africa Social Science Research Review Volume 20 ; 20 >
+    au < released ; Eastern Africa Social Science Research Review Volume 21 ; 21 >
+    au < released ; Eastern Africa Social Science Research Review Volume 22 ; 22 >
+    au < released ; Eastern Africa Social Science Research Review Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Fourth Genre: Explorations in Nonfiction 
+    >
+
+    param[journal_dir] = fourth_genre_explorations_in_nonfiction
+
+    au < released ; Fourth Genre: Explorations in Nonfiction Volume 5 ; 5 >
+    au < released ; Fourth Genre: Explorations in Nonfiction Volume 6 ; 6 >
+    au < released ; Fourth Genre: Explorations in Nonfiction Volume 7 ; 7 >
+    au < released ; Fourth Genre: Explorations in Nonfiction Volume 8 ; 8 >
+    au < released ; Fourth Genre: Explorations in Nonfiction Volume 9 ; 9 >
+
+  }
+
+  {
+    title <
+      name = French Colonial History 
+    >
+
+    param[journal_dir] = french_colonial_history
+
+    au < released ; French Colonial History Volume 3 ; 3 >
+    au < released ; French Colonial History Volume 4 ; 4 >
+    au < released ; French Colonial History Volume 5 ; 5 >
+    au < released ; French Colonial History Volume 6 ; 6 >
+    au < released ; French Colonial History Volume 7 ; 7 >
+    au < released ; French Colonial History Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Italian Culture 
+    >
+
+    param[journal_dir] = italian_culture
+
+    au < released ; Italian Culture Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Northeast African Studies 
+    >
+
+    param[journal_dir] = northeast_african_studies
+
+    au < released ; Northeast African Studies Volume 6 ; 6 >
+    au < released ; Northeast African Studies Volume 7 ; 7 >
+    au < released ; Northeast African Studies Volume 8 ; 8 >
+    au < released ; Northeast African Studies Volume 9 ; 9 >
+
+  }
+
+  {
+    title <
+      name = Red Cedar Review 
+    >
+
+    param[journal_dir] = red_cedar_review
+
+    au < released ; Red Cedar Review Volume 40 ; 40 >
+    au < released ; Red Cedar Review Volume 41 ; 41 >
+
+  }
+
+  {
+    title <
+      name = Rhetoric & Public Affairs 
+    >
+
+    param[journal_dir] = rhetoric_and_public_affairs
+
+    au < released ; Rhetoric & Public Affairs Volume 3 ; 3 >
+    au < released ; Rhetoric & Public Affairs Volume 4 ; 4 >
+    au < released ; Rhetoric & Public Affairs Volume 5 ; 5 >
+    au < released ; Rhetoric & Public Affairs Volume 6 ; 6 >
+    au < released ; Rhetoric & Public Affairs Volume 7 ; 7 >
+    au < released ; Rhetoric & Public Affairs Volume 8 ; 8 >
+    au < released ; Rhetoric & Public Affairs Volume 9 ; 9 >
+    au < released ; Rhetoric & Public Affairs Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
+      name = Transformation: Critical Perspectives on Southern Africa 
+    >
+
+    param[journal_dir] = transformation
+
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 49 ; 49 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 50 ; 50 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 51 ; 51 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 52 ; 52 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 53 ; 53 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 54 ; 54 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 55 ; 55 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 56 ; 56 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 57 ; 57 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 58 ; 58 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 59 ; 59 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 60 ; 60 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 61 ; 61 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 62 ; 62 >
+
+  }
+
+}

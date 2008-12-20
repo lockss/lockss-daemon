@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = University of Pittsburgh Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Cuban Studies 
+    >
+
+    param[journal_dir] = cuban_studies
+
+    au < released ; Cuban Studies Volume 34 ; 34 >
+    au < released ; Cuban Studies Volume 35 ; 35 >
+    au < released ; Cuban Studies Volume 36 ; 36 >
+    au < released ; Cuban Studies Volume 37 ; 37 >
+
+  }
+
+}

@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Population Association of America
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Demography 
+    >
+
+    param[journal_dir] = demography
+
+    au < released ; Demography Volume 37 ; 37 >
+    au < released ; Demography Volume 38 ; 38 >
+    au < released ; Demography Volume 39 ; 39 >
+    au < released ; Demography Volume 40 ; 40 >
+    au < released ; Demography Volume 41 ; 41 >
+    au < released ; Demography Volume 42 ; 42 >
+    au < released ; Demography Volume 43 ; 43 >
+    au < released ; Demography Volume 44 ; 44 >
+
+  }
+
+}

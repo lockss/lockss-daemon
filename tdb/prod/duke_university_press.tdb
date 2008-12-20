@@ -1,0 +1,490 @@
+{
+  publisher <
+    name = Duke University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = American Literary Scholarship 
+    >
+
+    param[journal_dir] = american_literary_scholarship
+
+    au < manifest ; American Literary Scholarship Volume 1998 ; 1998 >
+    au < released ; American Literary Scholarship Volume 1999 ; 1999 >
+    au < released ; American Literary Scholarship Volume 2000 ; 2000 >
+    au < released ; American Literary Scholarship Volume 2001 ; 2001 >
+    au < released ; American Literary Scholarship Volume 2002 ; 2002 >
+    au < released ; American Literary Scholarship Volume 2003 ; 2003 >
+    au < manifest ; American Literary Scholarship Volume 2004 ; 2004 >
+
+  }
+
+  {
+    title <
+      name = American Literature 
+    >
+
+    param[journal_dir] = american_literature
+
+    au < released ; American Literature Volume 71 ; 71 >
+    au < released ; American Literature Volume 72 ; 72 >
+    au < released ; American Literature Volume 73 ; 73 >
+    au < released ; American Literature Volume 74 ; 74 >
+    au < released ; American Literature Volume 75 ; 75 >
+    au < released ; American Literature Volume 76 ; 76 >
+
+  }
+
+  {
+    title <
+      name = American Speech 
+    >
+
+    param[journal_dir] = american_speech
+
+    au < released ; American Speech Volume 74 ; 74 >
+    au < released ; American Speech Volume 75 ; 75 >
+    au < released ; American Speech Volume 76 ; 76 >
+    au < released ; American Speech Volume 77 ; 77 >
+    au < released ; American Speech Volume 78 ; 78 >
+    au < released ; American Speech Volume 79 ; 79 >
+
+  }
+
+  {
+    title <
+      name = Common Knowledge 
+    >
+
+    param[journal_dir] = common_knowledge
+
+    au < released ; Common Knowledge Volume 8 ; 8 >
+    au < released ; Common Knowledge Volume 9 ; 9 >
+    au < released ; Common Knowledge Volume 10 ; 10 >
+    au < released ; Common Knowledge Volume 11 ; 11 >
+    au < released ; Common Knowledge Volume 12 ; 12 >
+    au < released ; Common Knowledge Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Comparative Studies of South Asia, Africa and the Middle East 
+    >
+
+    param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
+
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 >
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = differences: A Journal of Feminist Cultural Studies 
+    >
+
+    param[journal_dir] = differences
+
+    au < released ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
+    au < released ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+    au < released ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+    au < released ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+    au < released ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+    au < released ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Eighteenth-Century Life 
+    >
+
+    param[journal_dir] = eighteenth-century_life
+
+    au < released ; Eighteenth-Century Life Volume 20 ; 20 >
+    au < released ; Eighteenth-Century Life Volume 21 ; 21 >
+    au < released ; Eighteenth-Century Life Volume 22 ; 22 >
+    au < released ; Eighteenth-Century Life Volume 23 ; 23 >
+    au < released ; Eighteenth-Century Life Volume 24 ; 24 >
+    au < released ; Eighteenth-Century Life Volume 25 ; 25 >
+    au < released ; Eighteenth-Century Life Volume 26 ; 26 >
+    au < released ; Eighteenth-Century Life Volume 27 ; 27 >
+    au < released ; Eighteenth-Century Life Volume 28 ; 28 >
+    au < released ; Eighteenth-Century Life Volume 29 ; 29 >
+    au < released ; Eighteenth-Century Life Volume 30 ; 30 >
+    au < released ; Eighteenth-Century Life Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Ethnohistory 
+    >
+
+    param[journal_dir] = ethnohistory
+
+    au < released ; Ethnohistory Volume 46 ; 46 >
+    au < released ; Ethnohistory Volume 47 ; 47 >
+    au < released ; Ethnohistory Volume 48 ; 48 >
+    au < released ; Ethnohistory Volume 49 ; 49 >
+    au < released ; Ethnohistory Volume 50 ; 50 >
+    au < released ; Ethnohistory Volume 51 ; 51 >
+
+  }
+
+  {
+    title <
+      name = French Historical Studies 
+    >
+
+    param[journal_dir] = french_historical_studies
+
+    au < released ; French Historical Studies Volume 22 ; 22 >
+    au < released ; French Historical Studies Volume 23 ; 23 >
+    au < released ; French Historical Studies Volume 24 ; 24 >
+    au < released ; French Historical Studies Volume 25 ; 25 >
+    au < released ; French Historical Studies Volume 26 ; 26 >
+    au < released ; French Historical Studies Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = GLQ: A Journal of Lesbian and Gay Studies 
+    >
+
+    param[journal_dir] = journal_of_lesbian_and_gay_studies
+
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
+    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Hispanic American Historical Review 
+    >
+
+    param[journal_dir] = hispanic_american_historical_review
+
+    au < released ; Hispanic American Historical Review Volume 79 ; 79 >
+    au < released ; Hispanic American Historical Review Volume 80 ; 80 >
+    au < released ; Hispanic American Historical Review Volume 81 ; 81 >
+    au < released ; Hispanic American Historical Review Volume 82 ; 82 >
+    au < released ; Hispanic American Historical Review Volume 83 ; 83 >
+    au < released ; Hispanic American Historical Review Volume 84 ; 84 >
+
+  }
+
+  {
+    title <
+      name = History of Political Economy 
+    >
+
+    param[journal_dir] = history_of_political_economy
+
+    au < released ; History of Political Economy Volume 31 ; 31 >
+    au < released ; History of Political Economy Volume 32 ; 32 >
+    au < released ; History of Political Economy Volume 33 ; 33 >
+    au < released ; History of Political Economy Volume 34 ; 34 >
+    au < released ; History of Political Economy Volume 35 ; 35 >
+    au < released ; History of Political Economy Volume 36 ; 36 >
+
+  }
+
+  {
+    title <
+      name = Hopscotch: A Cultural Review 
+    >
+
+    param[journal_dir] = hopscotch
+
+    au < released ; Hopscotch: A Cultural Review Volume 1 ; 1 >
+    au < released ; Hopscotch: A Cultural Review Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = Journal of Health Politics, Policy and Law 
+    >
+
+    param[journal_dir] = journal_of_health_politics_policy_and_law
+
+    au < released ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
+    au < released ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
+    au < released ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
+    au < released ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
+    au < released ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
+    au < released ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
+
+  }
+
+  {
+    title <
+      name = Journal of Medieval and Early Modern Studies 
+    >
+
+    param[journal_dir] = journal_of_medieval_and_early_modern_studies
+
+    au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
+    au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
+    au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
+    au < released ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
+    au < released ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = Mediterranean Quarterly 
+    >
+
+    param[journal_dir] = mediterranean_quarterly
+
+    au < released ; Mediterranean Quarterly Volume 10 ; 10 >
+    au < released ; Mediterranean Quarterly Volume 11 ; 11 >
+    au < released ; Mediterranean Quarterly Volume 12 ; 12 >
+    au < released ; Mediterranean Quarterly Volume 13 ; 13 >
+    au < released ; Mediterranean Quarterly Volume 14 ; 14 >
+    au < released ; Mediterranean Quarterly Volume 15 ; 15 >
+    au < released ; Mediterranean Quarterly Volume 16 ; 16 >
+    au < released ; Mediterranean Quarterly Volume 17 ; 17 >
+    au < released ; Mediterranean Quarterly Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = MLQ: Modern Language Quarterly 
+    >
+
+    param[journal_dir] = modern_language_quarterly
+
+    au < released ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
+    au < released ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
+    au < released ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
+    au < released ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
+    au < released ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
+    au < released ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
+
+  }
+
+  {
+    title <
+      name = Nepantla: Views from South 
+    >
+
+    param[journal_dir] = nepantla
+
+    au < released ; Nepantla: Views from South Volume 1 ; 1 >
+    au < released ; Nepantla: Views from South Volume 2 ; 2 >
+    au < released ; Nepantla: Views from South Volume 3 ; 3 >
+    au < released ; Nepantla: Views from South Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Pedagogy 
+    >
+
+    param[journal_dir] = pedagogy
+
+    au < released ; Pedagogy Volume 1 ; 1 >
+    au < released ; Pedagogy Volume 2 ; 2 >
+    au < released ; Pedagogy Volume 3 ; 3 >
+    au < released ; Pedagogy Volume 4 ; 4 >
+    au < released ; Pedagogy Volume 5 ; 5 >
+    au < released ; Pedagogy Volume 6 ; 6 >
+    au < released ; Pedagogy Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Poetics Today 
+    >
+
+    param[journal_dir] = poetics_today
+
+    au < released ; Poetics Today Volume 20 ; 20 >
+    au < released ; Poetics Today Volume 21 ; 21 >
+    au < released ; Poetics Today Volume 22 ; 22 >
+    au < released ; Poetics Today Volume 23 ; 23 >
+    au < released ; Poetics Today Volume 24 ; 24 >
+    au < released ; Poetics Today Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = positions: east asia cultures critique 
+    >
+
+    param[journal_dir] = positions
+
+    au < released ; positions: east asia cultures critique Volume 7 ; 7 >
+    au < released ; positions: east asia cultures critique Volume 8 ; 8 >
+    au < released ; positions: east asia cultures critique Volume 9 ; 9 >
+    au < released ; positions: east asia cultures critique Volume 10 ; 10 >
+    au < released ; positions: east asia cultures critique Volume 11 ; 11 >
+    au < released ; positions: east asia cultures critique Volume 12 ; 12 >
+    au < released ; positions: east asia cultures critique Volume 13 ; 13 >
+    au < released ; positions: east asia cultures critique Volume 14 ; 14 >
+    au < released ; positions: east asia cultures critique Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Public Culture 
+    >
+
+    param[journal_dir] = public_culture
+
+    au < released ; Public Culture Volume 11 ; 11 >
+    au < released ; Public Culture Volume 12 ; 12 >
+    au < released ; Public Culture Volume 13 ; 13 >
+    au < released ; Public Culture Volume 14 ; 14 >
+    au < released ; Public Culture Volume 15 ; 15 >
+    au < released ; Public Culture Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Radical History Review 
+    >
+
+    param[journal_dir] = radical_history_review
+
+    au < released ; Radical History Review Volume 79 ; 79 >
+    au < released ; Radical History Review Volume 80 ; 80 >
+    au < released ; Radical History Review Volume 81 ; 81 >
+    au < released ; Radical History Review Volume 82 ; 82 >
+    au < released ; Radical History Review Volume 83 ; 83 >
+    au < released ; Radical History Review Volume 84 ; 84 >
+    au < released ; Radical History Review Volume 85 ; 85 >
+    au < released ; Radical History Review Volume 86 ; 86 >
+    au < released ; Radical History Review Volume 87 ; 87 >
+    au < released ; Radical History Review Volume 88 ; 88 >
+    au < released ; Radical History Review Volume 89 ; 89 >
+    au < released ; Radical History Review Volume 90 ; 90 >
+
+  }
+
+  {
+    title <
+      name = Social Science History 
+    >
+
+    param[journal_dir] = social_science_history
+
+    au < released ; Social Science History Volume 23 ; 23 >
+    au < released ; Social Science History Volume 24 ; 24 >
+    au < released ; Social Science History Volume 25 ; 25 >
+    au < released ; Social Science History Volume 26 ; 26 >
+    au < released ; Social Science History Volume 27 ; 27 >
+    au < released ; Social Science History Volume 28 ; 28 >
+    au < released ; Social Science History Volume 29 ; 29 >
+    au < released ; Social Science History Volume 30 ; 30 >
+    au < released ; Social Science History Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Social Text 
+    >
+
+    param[journal_dir] = social_text
+
+    au < released ; Social Text Volume 17 ; 17 >
+    au < released ; Social Text Volume 18 ; 18 >
+    au < released ; Social Text Volume 19 ; 19 >
+    au < released ; Social Text Volume 20 ; 20 >
+    au < released ; Social Text Volume 21 ; 21 >
+    au < released ; Social Text Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = The South Atlantic Quarterly 
+    >
+
+    param[journal_dir] = south_atlantic_quarterly
+
+    au < released ; The South Atlantic Quarterly Volume 98 ; 98 >
+    au < released ; The South Atlantic Quarterly Volume 99 ; 99 >
+    au < released ; The South Atlantic Quarterly Volume 100 ; 100 >
+    au < released ; The South Atlantic Quarterly Volume 101 ; 101 >
+    au < released ; The South Atlantic Quarterly Volume 102 ; 102 >
+    au < released ; The South Atlantic Quarterly Volume 103 ; 103 >
+
+  }
+
+  {
+    title <
+      name = Theater 
+    >
+
+    param[journal_dir] = theater
+
+    au < released ; Theater Volume 29 ; 29 >
+    au < released ; Theater Volume 30 ; 30 >
+    au < released ; Theater Volume 31 ; 31 >
+    au < released ; Theater Volume 32 ; 32 >
+    au < released ; Theater Volume 33 ; 33 >
+    au < released ; Theater Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = Transition 
+    >
+
+    param[journal_dir] = transition
+
+    au < released ; Transition Volume 9 ; 9 >
+    au < released ; Transition Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
+      name = Camera Obscura 
+    >
+
+    param[journal_dir] = camera_obscura
+
+    au < released ; Camera Obscura Volume 15 ; 15 >
+    au < released ; Camera Obscura Volume 16 ; 16 >
+    au < released ; Camera Obscura Volume 17 ; 17 >
+    au < released ; Camera Obscura Volume 18 ; 18 >
+    au < released ; Camera Obscura Volume 19 ; 19 >
+
+  }
+
+}

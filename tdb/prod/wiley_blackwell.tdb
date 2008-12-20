@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Wiley-Blackwell
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Philosophy & Public Affairs 
+    >
+
+    param[journal_dir] = philosophy_and_public_affairs
+
+    au < released ; Philosophy & Public Affairs Volume 30 ; 30 >
+    au < released ; Philosophy & Public Affairs Volume 31 ; 31 >
+
+  }
+
+}

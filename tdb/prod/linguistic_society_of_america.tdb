@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Linguistic Society of America
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Language 
+    >
+
+    param[journal_dir] = language
+
+    au < released ; Language Volume 77 ; 77 >
+    au < released ; Language Volume 78 ; 78 >
+    au < released ; Language Volume 79 ; 79 >
+    au < released ; Language Volume 80 ; 80 >
+    au < released ; Language Volume 81 ; 81 >
+    au < released ; Language Volume 82 ; 82 >
+    au < released ; Language Volume 83 ; 83 >
+
+  }
+
+}

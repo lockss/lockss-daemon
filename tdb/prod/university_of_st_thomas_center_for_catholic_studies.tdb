@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = University of St. Thomas Center for Catholic Studies
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Logos: A Journal of Catholic Thought and Culture 
+    >
+
+    param[journal_dir] = logos
+
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 4 ; 4 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 5 ; 5 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 6 ; 6 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 7 ; 7 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 8 ; 8 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 9 ; 9 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 10 ; 10 >
+
+  }
+
+}

@@ -1,0 +1,150 @@
+{
+  publisher <
+    name = Edinburgh University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Africa: The Journal of the International African Institute 
+    >
+
+    param[journal_dir] = africa_the_journal_of_the_international_african_institute
+
+    au < released ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+    au < released ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
+
+  }
+
+  {
+    title <
+      name = Comparative Critical Studies 
+    >
+
+    param[journal_dir] = comparative_critical_studies
+
+    au < released ; Comparative Critical Studies Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = Dance Research 
+    >
+
+    param[journal_dir] = dance_research
+
+    au < released ; Dance Research Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Episteme: A Journal of Social Epistemology 
+    >
+
+    param[journal_dir] = episteme
+
+    au < released ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = Holy Land Studies: A Multidisciplinary Journal 
+    >
+
+    param[journal_dir] = holy_land_studies
+
+    au < released ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Journal of Victorian Culture 
+    >
+
+    param[journal_dir] = journal_of_victorian_culture
+
+    au < released ; Journal of Victorian Culture Volume 11 ; 11 >
+    au < released ; Journal of Victorian Culture Volume 12 ; 12 >
+
+  }
+
+  {
+    title <
+      name = Paragraph 
+    >
+
+    param[journal_dir] = paragraph
+
+    au < released ; Paragraph Volume 29 ; 29 >
+    au < released ; Paragraph Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = Parliamentary History 
+    >
+
+    param[journal_dir] = parliamentary_history
+
+    au < released ; Parliamentary History Volume 25 ; 25 >
+    au < released ; Parliamentary History Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = Romanticism 
+    >
+
+    param[journal_dir] = romanticism
+
+    au < released ; Romanticism Volume 12 ; 12 >
+    au < released ; Romanticism Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Studies in World Christianity 
+    >
+
+    param[journal_dir] = studies_in_world_christianity
+
+    au < released ; Studies in World Christianity Volume 12 ; 12 >
+    au < released ; Studies in World Christianity Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = The Scottish Historical Review 
+    >
+
+    param[journal_dir] = scottish_historical_review
+
+    au < released ; The Scottish Historical Review Volume 85 ; 85 >
+
+  }
+
+  {
+    title <
+      name = Translation and Literature 
+    >
+
+    param[journal_dir] = translation_and_literature
+
+    au < released ; Translation and Literature Volume 15 ; 15 >
+    au < released ; Translation and Literature Volume 16 ; 16 >
+
+  }
+
+}

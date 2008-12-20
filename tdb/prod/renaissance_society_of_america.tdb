@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Renaissance Society of America
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Renaissance Quarterly 
+    >
+
+    param[journal_dir] = renaissance_quarterly
+
+    au < manifest ; Renaissance Quarterly Volume 60 ; 60 >
+
+  }
+
+}

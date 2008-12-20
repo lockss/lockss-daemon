@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = University of Calgary Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Canadian Journal of Philosophy 
+    >
+
+    param[journal_dir] = canadian_journal_of_philosophy
+
+    au < released ; Canadian Journal of Philosophy Volume 36 ; 36 >
+    au < released ; Canadian Journal of Philosophy Volume 37 ; 37 >
+
+  }
+
+}

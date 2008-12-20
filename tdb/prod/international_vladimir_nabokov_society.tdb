@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = International Vladimir Nabokov Society
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Nabokov Studies 
+    >
+
+    param[journal_dir] = nabokov_studies
+
+    au < manifest ; Nabokov Studies Volume 8 ; 8 >
+    au < released ; Nabokov Studies Volume 9 ; 9 >
+
+  }
+
+}

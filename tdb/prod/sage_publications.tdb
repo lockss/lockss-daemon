@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = SAGE Publications
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Harvard International Journal of Press/Politics 
+    >
+
+    param[journal_dir] = harvard_international_journal_of_press_politics
+
+    au < manifest ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
+    au < manifest ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
+
+  }
+
+}

@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = University of Illinois Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Journal of Aesthetic Education 
+    >
+
+    param[journal_dir] = the_journal_of_aesthetic_education
+
+    au < released ; The Journal of Aesthetic Education Volume 37 ; 37 >
+    au < released ; The Journal of Aesthetic Education Volume 38 ; 38 >
+    au < released ; The Journal of Aesthetic Education Volume 39 ; 39 >
+    au < released ; The Journal of Aesthetic Education Volume 40 ; 40 >
+    au < released ; The Journal of Aesthetic Education Volume 41 ; 41 >
+
+  }
+
+}

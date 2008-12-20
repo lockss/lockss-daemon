@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = University of Arizona
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Arizona Journal of Hispanic Cultural Studies 
+    >
+
+    param[journal_dir] = arizona_journal_of_hispanic_cultural_studies
+
+    au < released ; Arizona Journal of Hispanic Cultural Studies Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
+      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory 
+    >
+
+    param[journal_dir] = arizona_quarterly_a_journal_of_american_literature_culture_and_theory
+
+    au < released ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 62 ; 62 >
+    au < released ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 63 ; 63 >
+
+  }
+
+}

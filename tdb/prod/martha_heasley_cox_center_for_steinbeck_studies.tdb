@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Martha Heasley Cox Center for Steinbeck Studies
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Steinbeck Studies 
+    >
+
+    param[journal_dir] = steinbeck_studies
+
+    au < manifest ; Steinbeck Studies Volume 15 ; 15 >
+    au < manifest ; Steinbeck Studies Volume 16 ; 16 >
+
+  }
+
+}

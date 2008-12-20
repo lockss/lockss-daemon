@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = University of Idaho Department of English
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Hemingway Review 
+    >
+
+    param[journal_dir] = hemingway_review
+
+    au < released ; The Hemingway Review Volume 23 ; 23 >
+    au < released ; The Hemingway Review Volume 24 ; 24 >
+    au < released ; The Hemingway Review Volume 25 ; 25 >
+    au < released ; The Hemingway Review Volume 26 ; 26 >
+
+  }
+
+}

@@ -1,0 +1,165 @@
+{
+  publisher <
+    name = University of Texas Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Asian Music 
+    >
+
+    param[journal_dir] = asian_music
+
+    au < released ; Asian Music Volume 36 ; 36 >
+    au < released ; Asian Music Volume 37 ; 37 >
+
+  }
+
+  {
+    title <
+      name = Cinema Journal 
+    >
+
+    param[journal_dir] = cinema_journal
+
+    au < released ; Cinema Journal Volume 39 ; 39 >
+    au < released ; Cinema Journal Volume 40 ; 40 >
+    au < released ; Cinema Journal Volume 41 ; 41 >
+    au < released ; Cinema Journal Volume 42 ; 42 >
+    au < released ; Cinema Journal Volume 43 ; 43 >
+    au < released ; Cinema Journal Volume 44 ; 44 >
+    au < released ; Cinema Journal Volume 45 ; 45 >
+    au < released ; Cinema Journal Volume 46 ; 46 >
+
+  }
+
+  {
+    title <
+      name = Journal of the History of Sexuality 
+    >
+
+    param[journal_dir] = journal_of_the_history_of_sexuality
+
+    au < released ; Journal of the History of Sexuality Volume 10 ; 10 >
+    au < released ; Journal of the History of Sexuality Volume 11 ; 11 >
+    au < released ; Journal of the History of Sexuality Volume 12 ; 12 >
+    au < released ; Journal of the History of Sexuality Volume 13 ; 13 >
+    au < released ; Journal of the History of Sexuality Volume 14 ; 14 >
+    au < released ; Journal of the History of Sexuality Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Joyce Studies Annual 
+    >
+
+    param[journal_dir] = joyce_studies_annual
+
+    au < released ; Joyce Studies Annual Volume 12 ; 12 >
+    au < released ; Joyce Studies Annual Volume 13 ; 13 >
+    au < released ; Joyce Studies Annual Volume 14 ; 14 >
+
+  }
+
+  {
+    title <
+      name = Latin American Music Review 
+    >
+
+    param[journal_dir] = latin_american_music_review
+
+    au < released ; Latin American Music Review Volume 22 ; 22 >
+    au < released ; Latin American Music Review Volume 23 ; 23 >
+    au < released ; Latin American Music Review Volume 24 ; 24 >
+    au < released ; Latin American Music Review Volume 25 ; 25 >
+    au < released ; Latin American Music Review Volume 26 ; 26 >
+    au < released ; Latin American Music Review Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Latin American Research Review 
+    >
+
+    param[journal_dir] = latin_american_research_review
+
+    au < released ; Latin American Research Review Volume 38 ; 38 >
+    au < released ; Latin American Research Review Volume 39 ; 39 >
+    au < released ; Latin American Research Review Volume 40 ; 40 >
+    au < released ; Latin American Research Review Volume 41 ; 41 >
+    au < released ; Latin American Research Review Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
+      name = Libraries & the Cultural Record 
+    >
+
+    param[journal_dir] = libraries_and_culture
+
+    au < released ; Libraries & the Cultural Record Volume 36 ; 36 >
+    au < released ; Libraries & the Cultural Record Volume 37 ; 37 >
+    au < released ; Libraries & the Cultural Record Volume 38 ; 38 >
+    au < released ; Libraries & the Cultural Record Volume 39 ; 39 >
+    au < released ; Libraries & the Cultural Record Volume 40 ; 40 >
+    au < released ; Libraries & the Cultural Record Volume 41 ; 41 >
+    au < released ; Libraries & the Cultural Record Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
+      name = Southwestern Historical Quarterly 
+    >
+
+    param[journal_dir] = southwestern_historical_quarterly
+
+    au < released ; Southwestern Historical Quarterly Volume 110 ; 110 >
+
+  }
+
+  {
+    title <
+      name = Texas Studies in Literature and Language 
+    >
+
+    param[journal_dir] = texas_studies_in_literature_and_language
+
+    au < released ; Texas Studies in Literature and Language Volume 43 ; 43 >
+    au < released ; Texas Studies in Literature and Language Volume 44 ; 44 >
+    au < released ; Texas Studies in Literature and Language Volume 45 ; 45 >
+    au < released ; Texas Studies in Literature and Language Volume 46 ; 46 >
+    au < released ; Texas Studies in Literature and Language Volume 47 ; 47 >
+    au < released ; Texas Studies in Literature and Language Volume 48 ; 48 >
+    au < released ; Texas Studies in Literature and Language Volume 49 ; 49 >
+
+  }
+
+  {
+    title <
+      name = The Velvet Light Trap 
+    >
+
+    param[journal_dir] = the_velvet_light_trap
+
+    au < released ; The Velvet Light Trap Volume 51 ; 51 >
+    au < released ; The Velvet Light Trap Volume 52 ; 52 >
+    au < released ; The Velvet Light Trap Volume 53 ; 53 >
+    au < released ; The Velvet Light Trap Volume 54 ; 54 >
+    au < released ; The Velvet Light Trap Volume 55 ; 55 >
+    au < released ; The Velvet Light Trap Volume 56 ; 56 >
+    au < released ; The Velvet Light Trap Volume 57 ; 57 >
+    au < released ; The Velvet Light Trap Volume 58 ; 58 >
+    au < released ; The Velvet Light Trap Volume 59 ; 59 >
+
+  }
+
+}
