@@ -3,90 +3,88 @@
     name = Athabasca University
   >
 
+  implicit < status ; name ; param[year] >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  
   {
-    implicit < status ; name ; param[year] >
-
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    title <
+      name = The International Review of Research in Open and Distance Learning
+    >
     
-    {
-      title <
-        name = The International Review of Research in Open and Distance Learning
-      >
-      
-      param[base_url] = http://www.irrodl.org/
-      param[journal_id] = irrodl
+    param[base_url] = http://www.irrodl.org/
+    param[journal_id] = irrodl
 
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 1 (2000); 2000 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 1-2 (2001); 2001 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 2-3 (2002); 2002 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 4; 2003 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 5; 2004 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 6; 2005 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 7; 2006 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 8; 2007 >
-      au < testing ; The International Review of Research in Open and Distance Learning Volume 9; 2008 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 1 (2000); 2000 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 1-2 (2001); 2001 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 2-3 (2002); 2002 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 4; 2003 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 5; 2004 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 6; 2005 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 7; 2006 >
+    au < ready ; The International Review of Research in Open and Distance Learning Volume 8; 2007 >
+    au < not_ready ; The International Review of Research in Open and Distance Learning Volume 9; 2008 >
 
-    }
-
-    {
-      title <
-        name = Cinema Canada
-      >
-
-      param[base_url] = http://cinemacanada.athabascau.ca/
-      param[journal_id] = cinema
-
-      au < manifest ; Cinema Canada 1972 ; 1972 >
-      au < manifest ; Cinema Canada 1973 ; 1973 >
-      au < manifest ; Cinema Canada 1974 ; 1974 >
-      au < manifest ; Cinema Canada 1975 ; 1975 >
-      au < manifest ; Cinema Canada 1976 ; 1976 >
-      au < manifest ; Cinema Canada 1977 ; 1977 >
-      au < does_not_exist ; Cinema Canada 1978 ; 1978 >
-      au < manifest ; Cinema Canada 1979 ; 1979 >
-      au < manifest ; Cinema Canada 1980 ; 1980 >
-      au < manifest ; Cinema Canada 1981 ; 1981 >
-      au < manifest ; Cinema Canada 1982 ; 1982 >
-      au < manifest ; Cinema Canada 1983 ; 1983 >
-
-    }
-    
-    
-    {
-      title <
-        name = The Trumpeter
-      >
-
-      param[base_url] = http://trumpeter.athabascau.ca/
-      param[journal_id] = trumpet
-
-      au < manifest ; The Trumpeter Volume 1 (1983) ; 1983 >
-      au < manifest ; The Trumpeter Volume 1 (1984) ; 1984 >
-      au < manifest ; The Trumpeter Volume 2 ; 1985 >
-      au < manifest ; The Trumpeter Volume 3 ; 1986 >
-      au < manifest ; The Trumpeter Volume 4 ; 1987 >
-      au < manifest ; The Trumpeter Volume 5 ; 1988 >
-      au < manifest ; The Trumpeter Volume 6 ; 1989 >
-      au < manifest ; The Trumpeter Volume 7 ; 1990 >
-      au < manifest ; The Trumpeter Volume 8 ; 1991 >
-      au < manifest ; The Trumpeter Volume 9 ; 1992 >
-      au < manifest ; The Trumpeter Volume 10 ; 1993 >
-      au < manifest ; The Trumpeter Volume 11 ; 1994 >
-      au < manifest ; The Trumpeter Volume 12 ; 1995 >
-      au < manifest ; The Trumpeter Volume 13 ; 1996 >
-      au < manifest ; The Trumpeter Volume 14 ; 1997 >
-      au < manifest ; The Trumpeter Volume 15 ; 1998 >
-      au < does_not_exist ; The Trumpeter 1999 ; 1999 >
-      au < manifest ; The Trumpeter Volume 16 ; 2000 >
-      au < manifest ; The Trumpeter Volume 17 ; 2001 >
-      au < manifest ; The Trumpeter Volume 18 ; 2002 >
-      au < manifest ; The Trumpeter Volume 19 ; 2003 >
-      au < manifest ; The Trumpeter Volume 20 ; 2004 >
-      au < manifest ; The Trumpeter Volume 21 ; 2005 >
-      au < manifest ; The Trumpeter Volume 22 ; 2006 >
-      au < manifest ; The Trumpeter Volume 23 ; 2007 >
-      au < manifest ; The Trumpeter Volume 24 ; 2008 >      
-      
-    }
   }
+
+  {
+    title <
+      name = Cinema Canada
+    >
+
+    param[base_url] = http://cinemacanada.athabascau.ca/
+    param[journal_id] = cinema
+
+    au < testing ; Cinema Canada 1972 ; 1972 >
+    au < testing ; Cinema Canada 1973 ; 1973 >
+    au < testing ; Cinema Canada 1974 ; 1974 >
+    au < testing ; Cinema Canada 1975 ; 1975 >
+    au < testing ; Cinema Canada 1976 ; 1976 >
+    au < testing ; Cinema Canada 1977 ; 1977 >
+    au < does_not_exist ; Cinema Canada 1978 ; 1978 >
+    au < testing ; Cinema Canada 1979 ; 1979 >
+    au < testing ; Cinema Canada 1980 ; 1980 >
+    au < testing ; Cinema Canada 1981 ; 1981 >
+    au < testing ; Cinema Canada 1982 ; 1982 >
+    au < testing ; Cinema Canada 1983 ; 1983 >
+
+  }
+  
+  
+  {
+    title <
+      name = The Trumpeter
+    >
+
+    param[base_url] = http://trumpeter.athabascau.ca/
+    param[journal_id] = trumpet
+
+    au < manifest ; The Trumpeter Volume 1 (1983) ; 1983 >
+    au < manifest ; The Trumpeter Volume 1 (1984) ; 1984 >
+    au < manifest ; The Trumpeter Volume 2 ; 1985 >
+    au < manifest ; The Trumpeter Volume 3 ; 1986 >
+    au < manifest ; The Trumpeter Volume 4 ; 1987 >
+    au < manifest ; The Trumpeter Volume 5 ; 1988 >
+    au < manifest ; The Trumpeter Volume 6 ; 1989 >
+    au < manifest ; The Trumpeter Volume 7 ; 1990 >
+    au < manifest ; The Trumpeter Volume 8 ; 1991 >
+    au < manifest ; The Trumpeter Volume 9 ; 1992 >
+    au < manifest ; The Trumpeter Volume 10 ; 1993 >
+    au < manifest ; The Trumpeter Volume 11 ; 1994 >
+    au < manifest ; The Trumpeter Volume 12 ; 1995 >
+    au < manifest ; The Trumpeter Volume 13 ; 1996 >
+    au < manifest ; The Trumpeter Volume 14 ; 1997 >
+    au < manifest ; The Trumpeter Volume 15 ; 1998 >
+    au < does_not_exist ; The Trumpeter 1999 ; 1999 >
+    au < manifest ; The Trumpeter Volume 16 ; 2000 >
+    au < manifest ; The Trumpeter Volume 17 ; 2001 >
+    au < manifest ; The Trumpeter Volume 18 ; 2002 >
+    au < manifest ; The Trumpeter Volume 19 ; 2003 >
+    au < manifest ; The Trumpeter Volume 20 ; 2004 >
+    au < manifest ; The Trumpeter Volume 21 ; 2005 >
+    au < manifest ; The Trumpeter Volume 22 ; 2006 >
+    au < manifest ; The Trumpeter Volume 23 ; 2007 >
+    au < manifest ; The Trumpeter Volume 24 ; 2008 >      
+    
+  } 
 }

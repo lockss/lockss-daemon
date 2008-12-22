@@ -1370,16 +1370,16 @@
       param[base_url] = http://breast-cancer-research.com/
       param[journal_issn] = 1465-5411
 
-      au < testing ; Breast Cancer Research Volume 1 ; 1 >
-      au < testing ; Breast Cancer Research Volume 2 ; 2 >
-      au < testing ; Breast Cancer Research Volume 3 ; 3 >
-      au < testing ; Breast Cancer Research Volume 4 ; 4 >
-      au < testing ; Breast Cancer Research Volume 5 ; 5 >
-      au < testing ; Breast Cancer Research Volume 6 ; 6 >
-      au < testing ; Breast Cancer Research Volume 7 ; 7 >
-      au < testing ; Breast Cancer Research Volume 8 ; 8 >
-      au < testing ; Breast Cancer Research Volume 9 ; 9 >
-      au < testing ; Breast Cancer Research Volume 10 ; 10 >
+      au < ready ; Breast Cancer Research Volume 1 ; 1 >
+      au < ready ; Breast Cancer Research Volume 2 ; 2 >
+      au < ready ; Breast Cancer Research Volume 3 ; 3 >
+      au < ready ; Breast Cancer Research Volume 4 ; 4 >
+      au < ready ; Breast Cancer Research Volume 5 ; 5 >
+      au < ready ; Breast Cancer Research Volume 6 ; 6 >
+      au < ready ; Breast Cancer Research Volume 7 ; 7 >
+      au < ready ; Breast Cancer Research Volume 8 ; 8 >
+      au < ready ; Breast Cancer Research Volume 9 ; 9 >
+      au < ready ; Breast Cancer Research Volume 10 ; 10 >
     }
 
     {
@@ -1428,13 +1428,13 @@
       param[base_url] = http://www.cardiab.com/
       param[journal_issn] = 1475-2840
 
-      au < testing ; Cardiovascular Diabetology Volume 1 ; 1 >
-      au < testing ; Cardiovascular Diabetology Volume 2 ; 2 >
-      au < testing ; Cardiovascular Diabetology Volume 3 ; 3 >
-      au < testing ; Cardiovascular Diabetology Volume 4 ; 4 >
-      au < testing ; Cardiovascular Diabetology Volume 5 ; 5 >
-      au < testing ; Cardiovascular Diabetology Volume 6 ; 6 >
-      au < testing ; Cardiovascular Diabetology Volume 7 ; 7 >
+      au < ready ; Cardiovascular Diabetology Volume 1 ; 1 >
+      au < ready ; Cardiovascular Diabetology Volume 2 ; 2 >
+      au < ready ; Cardiovascular Diabetology Volume 3 ; 3 >
+      au < ready ; Cardiovascular Diabetology Volume 4 ; 4 >
+      au < ready ; Cardiovascular Diabetology Volume 5 ; 5 >
+      au < ready ; Cardiovascular Diabetology Volume 6 ; 6 >
+      au < ready ; Cardiovascular Diabetology Volume 7 ; 7 >
     }
 
 
@@ -1467,7 +1467,7 @@
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
 
-      au < manifest ; Cases Journal Volume 1 ; 1 >
+      au < testing ; Cases Journal Volume 1 ; 1 >
     }
 
 
@@ -1481,11 +1481,11 @@
       param[base_url] = http://www.biosignaling.com/
       param[journal_issn] = 1478-811X
 
-      au < manifest ; Cell Communication and Signaling Volume 1 ; 1 >
-      au < manifest ; Cell Communication and Signaling Volume 2 ; 2 >
-      au < manifest ; Cell Communication and Signaling Volume 3 ; 3 >
-      au < manifest ; Cell Communication and Signaling Volume 4 ; 4 >
-      au < manifest ; Cell Communication and Signaling Volume 5 ; 5 >
+      au < testing ; Cell Communication and Signaling Volume 1 ; 1 >
+      au < testing ; Cell Communication and Signaling Volume 2 ; 2 >
+      au < testing ; Cell Communication and Signaling Volume 3 ; 3 >
+      au < testing ; Cell Communication and Signaling Volume 4 ; 4 >
+      au < testing ; Cell Communication and Signaling Volume 5 ; 5 >
     }
 
 
@@ -1499,9 +1499,9 @@
       param[base_url] = http://www.celldiv.com/
       param[journal_issn] = 1747-1028
 
-      au < manifest ; Cell Division Volume 1 ; 1 >
-      au < manifest ; Cell Division Volume 2 ; 2 >
-      au < manifest ; Cell Division Volume 3 ; 3 >
+      au < testing ; Cell Division Volume 1 ; 1 >
+      au < testing ; Cell Division Volume 2 ; 2 >
+      au < testing ; Cell Division Volume 3 ; 3 >
     }
 
 
@@ -1515,11 +1515,11 @@
       param[base_url] = http://www.cerebrospinalfluidresearch.com/
       param[journal_issn] = 1743-8454
 
-      au < manifest ; Cerebrospinal Fluid Research Volume 1 ; 1 >
-      au < manifest ; Cerebrospinal Fluid Research Volume 2 ; 2 >
-      au < manifest ; Cerebrospinal Fluid Research Volume 3 ; 3 >
-      au < manifest ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < manifest ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+      au < testing ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+      au < testing ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+      au < testing ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+      au < testing ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+      au < testing ; Cerebrospinal Fluid Research Volume 5 ; 5 >
     }
 
 
