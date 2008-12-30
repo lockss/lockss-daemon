@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.241 2008-12-30 17:42:28 tlipkis Exp $
+ $Id: build.xml,v 1.242 2008-12-30 17:47:41 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -346,8 +346,6 @@ Args:
     <pathelement path="${nekohtml.jar}" />
     <pathelement path="${js.jar}" />
     <pathelement path="${xmlunit.jar}" />
-    <pathelement path="/home/tal/java/opencsv-1.8/deploy/opencsv-1.8.jar" />
-
     <!-- plugin jar -->
     <pathelement path="${lockss.plugins.jar}" />
   </path>
