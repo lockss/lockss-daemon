@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
   </entry>
@@ -22,11 +26,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sindex\.php/%s/gateway/lockss\?year=%d$&quot;, base_url, journal_id, year</string>
       <string>1,&quot;^%sindex\.php/%s/(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/&quot;, base_url, journal_id</string>
       <string>1,&quot;^%sindex\.php/%s/rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/&quot;, base_url, journal_id</string>
-      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
     </list>
   </entry>
   <entry>
