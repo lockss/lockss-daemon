@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdblint.py,v 1.1 2008-11-21 01:39:34 thib_gc Exp $
+# $Id: tdblint.py,v 1.2 2008-12-31 12:15:13 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -33,6 +33,7 @@ def tdb_lint(tdb, options):
     # Check that each AU has a name and a recognized status
     for au in tdb.aus():
         if au.name() is None or au.name() == '':
+            valid = False
             print 'AU with no name'
         if au.status() is None or au.status() == '':
             valid = False
@@ -41,6 +42,6 @@ def tdb_lint(tdb, options):
             valid = False
             print 'AU with unrecognized status: %s [%s]' % ( au.name(), au.status() )
     if not valid:
-        if options.lintforgive: return
+        if options.lintForgive: return
         import sys
         sys.exit('The input is invalid')
