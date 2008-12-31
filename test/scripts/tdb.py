@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.6 2008-11-21 01:39:34 thib_gc Exp $
+# $Id: tdb.py,v 1.7 2008-12-31 12:15:02 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,80 +26,71 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-import re
+#import re
 
-class TdbObject(object):
-
-    def __init__(self):
-        self._dictionary = {}
+class Map(object):
+    
+    def __init__(self, dic={}):
+        '''Constructor.'''
+        object.__init__(self)
+        self._dictionary = dic.copy()
 
     def get(self, key):
-        return self._dictionary.get(key)
-
-    def geti(self, indexed_key):
-        key, index = self._key(indexed_key)
-        if index:
-            if key not in self._dictionary: return None
-            else: return self._dictionary[key].get(index)
-        else:
-            if key not in self._dictionary: return {}
-            else: return self._dictionary[key].copy()
-
+        if type(key) is not tuple: key = ( key, )
+        return self._recursive_get(self._dictionary, key)
+    
     def set(self, key, value):
-        self._dictionary[key] = value
+        if type(key) is not tuple: key = ( key, )
+        self._recursive_set(self._dictionary, key, value)
+    
+    def _recursive_get(self, map, key):
+        kfirst, krest = key[0], key[1:]
+        mrest = map.get(kfirst)
+        if len(krest) == 0 or kfirst not in map: return mrest
+        return self._recursive_get(mrest, krest) 
 
-    def seti(self, indexed_key, value):
-        key, index = self._key(indexed_key)
-        if index:
-            if key not in self._dictionary: self._dictionary[key] = {}
-            self._dictionary[key][index] = value
-        else:
-            self._dictionary[key] = value.copy()
+    def _recursive_set(self, map, key, value):
+        kfirst, krest = key[0], key[1:]
+        if kfirst not in map and len(krest) > 0: map[kfirst] = dict()
+        if len(krest) == 0: map[kfirst] = value
+        else: self._recursive_set(map[kfirst], krest, value) 
 
-    def _key(self, str):
-        match = re.match(r'([^\[]+)(?:\[(\w+)\])?$', str)
-        if match: return (match.group(1), match.group(2))
-        else: raise KeyError, 'invalid key: %s' % (str,)
-
-    def __repr__(self): return repr(self._dictionary)
-
-class ChainedTdbObject(TdbObject):
-
+class ChainedMap(Map):
+    
     def __init__(self, next=None):
-        TdbObject.__init__(self)
+        Map.__init__(self)
         self._next = next
 
     def get(self, key):
-        elem = super(ChainedTdbObject,self).get(key)
-        if elem or self._next is None: return elem
-        return self._next.get(key)
+        value = super(ChainedMap,self).get(key)
+        if value or self._next is None: return value
+        return self._next.get(key)    
 
-    def geti(self, indexed_key):
-        key, index = self._key(indexed_key)
-        elem = super(ChainedTdbObject,self).geti(key)
-        pelem = {}
-        if self._next: pelem = self._next.geti(key)
-        pelem.update(elem)
-        if index: return pelem.get(index)
-        else: return pelem
-
-class Publisher(TdbObject):
+class Publisher(Map):
 
     NAME = 'name'
 
-    def name(self): return self.get(Title.NAME)
+    def __init__(self):
+        '''Constructor.'''
+        Map.__init__(self)
 
-class Title(TdbObject):
+    def name(self): return self.get(Publisher.NAME)
+
+class Title(Map):
 
     NAME = 'name'
     PUBLISHER = 'publisher'
+
+    def __init__(self):
+        '''Constructor.'''
+        Map.__init__(self)
 
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
 
     def name(self): return self.get(Title.NAME)
     def publisher(self): return self.get(Title.PUBLISHER)
 
-class AU(ChainedTdbObject):
+class AU(ChainedMap):
 
     ATTR = 'attr'
     ISSN = 'issn'
@@ -111,16 +102,16 @@ class AU(ChainedTdbObject):
     TITLE = 'title'
 
     def __init__(self, next=None):
-        ChainedTdbObject.__init__(self, next)
+        ChainedMap.__init__(self, next)
 
     def set_title(self, title): self.set(AU.TITLE, title)
 
-    def attr(self, attr): return self.geti('%s[%s]' % ( AU.ATTR, attr ))
-    def attrs(self): return self.geti(AU.ATTR)
+    def attr(self, attr): return self.get(( AU.ATTR, attr ))
+    def attrs(self): return self.get(AU.ATTR) or dict()
     def issn(self): return self.get(AU.ISSN)
     def name(self): return self.get(AU.NAME)
-    def param(self, param): return self.geti('%s[%s]' % ( AU.PARAM, param ))
-    def params(self): return self.geti(AU.PARAM)
+    def param(self, param): return self.get(( AU.PARAM, param ))
+    def params(self): return self.get(AU.PARAM) or dict()
     def plugin(self): return self.get(AU.PLUGIN)
     def rights(self): return self.get(AU.RIGHTS)
     def status(self): return self.get(AU.STATUS)
@@ -142,6 +133,6 @@ class Tdb(object):
     def aus(self): return self.__aus[:]
 
     def internal_print(self):
-        print repr(self.publishers())
+        print self.publishers()
         print self.titles()
         print self.aus()

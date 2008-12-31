@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.11 2008-11-21 01:39:34 thib_gc Exp $
+# $Id: tdbparse.py,v 1.12 2008-12-31 12:15:02 thib_gc Exp $
 #
 # Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -431,8 +431,7 @@ class TdbParser(object):
         if self.__token[0] == TOKEN_IDENTIFIER:
             self.__simple_assignment()
             key, val = self.__stack.pop()
-            if len(key) == 2: self.__current_au[-1].seti('%s[%s]' % key, val)
-            else: self.__current_au[-1].set(key[0], val)
+            self.__current_au[-1].set(key, val)
         elif self.__token[0] == TOKEN_KEYWORD_IMPLICIT:
             self.__columns()
         else:
@@ -451,7 +450,7 @@ class TdbParser(object):
             self.__expect(TOKEN_IDENTIFIER)
             self.__expect(TOKEN_SQUARE_CLOSE)
             self.__stack.append(( base, self.__value.pop(0) ))
-        else: self.__stack.append( ( base, ))
+        else: self.__stack.append(( base, ))
 
     def __list_of_identifiers(self):
         '''list_of_identifiers :
@@ -531,8 +530,7 @@ class TdbParser(object):
         au = AU(self.__current_au[-1])
         au.set_title(self.__current_title)
         for key, val in zip(self.__current_au[-1].get('$columns'), self.__stack.pop()):
-            if len(key) == 2: au.seti('%s[%s]' % key, val)
-            else: au.set(key[0], val)
+            au.set(key, val)
         self.__tdb.add_au(au)
 
     def __title(self):
@@ -549,8 +547,7 @@ class TdbParser(object):
         self.__current_title = Title()
         self.__current_title.set_publisher(self.__current_publisher)
         for key, val in self.__stack.pop():
-            if len(key) == 2: self.__current_title.seti('%s[%s]' % key, val)
-            else: self.__current_title.set(key[0], val)
+            self.__current_title.set(key, val)
         self.__tdb.add_title(self.__current_title)
 
     def __publisher(self):
@@ -565,9 +562,8 @@ class TdbParser(object):
         self.__list_of_simple_assignments()
         self.__expect(TOKEN_ANGLE_CLOSE)
         self.__current_publisher = Publisher()
-        for key, val in self.__stack.pop():
-            if len(key) == 2: self.__current_publisher.seti('%s[%s]' % key, val)
-            else: self.__current_publisher.set(key[0], val)
+        for key, val in self.__stack.pop(): 
+            self.__current_publisher.set(key, val)
         self.__tdb.add_publisher(self.__current_publisher)
 
     def __initialize_parser(self):
