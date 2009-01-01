@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.7 2008-12-12 23:17:01 thib_gc Exp $
+# $Id: tdbxml.py,v 1.8 2009-01-01 12:26:40 thib_gc Exp $
 #
-# Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -131,18 +131,18 @@ def _process_au(au, options):
         au.plugin() )
     i = 1
     for param in _IMPLICIT_PARAM_ORDER:
-        if param in au.params():
+        if ( param, ) in au.params():
             _do_param(au, i, param)
             i = i + 1
-    for param in au.params():
-        if param not in _IMPLICIT_PARAM_ORDER:
-            _do_param(au, i, param)
+    for paramtup in au.params():
+        if paramtup[0] not in _IMPLICIT_PARAM_ORDER:
+            _do_param(au, i, paramtup[0])
             i = i + 1
-    if au.status() == TDB_STATUS_DOWN:
+    if au.status() == AU.STATUS_DOWN:
         _do_param(au, 99, 'pub_down', value='true')
     for attr in au.attrs():
         _do_attr(au, attr)
-    if au.status() == TDB_STATUS_PRE_RELEASED:
+    if au.status() == AU.STATUS_PRE_RELEASED:
         _do_attr(au, 'releaseStatus', 'pre-release')
     if au.rights() == 'openaccess':
         _do_attr(au, 'rights', 'openaccess')

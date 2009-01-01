@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.7 2008-12-31 12:15:02 thib_gc Exp $
+# $Id: tdb.py,v 1.8 2009-01-01 12:26:40 thib_gc Exp $
 #
-# Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,34 +37,34 @@ class Map(object):
 
     def get(self, key):
         if type(key) is not tuple: key = ( key, )
-        return self._recursive_get(self._dictionary, key)
+        return self._dictionary.get(key) or self._prefix_get(key)
     
     def set(self, key, value):
         if type(key) is not tuple: key = ( key, )
-        self._recursive_set(self._dictionary, key, value)
+        self._dictionary[key] = value
     
-    def _recursive_get(self, map, key):
-        kfirst, krest = key[0], key[1:]
-        mrest = map.get(kfirst)
-        if len(krest) == 0 or kfirst not in map: return mrest
-        return self._recursive_get(mrest, krest) 
-
-    def _recursive_set(self, map, key, value):
-        kfirst, krest = key[0], key[1:]
-        if kfirst not in map and len(krest) > 0: map[kfirst] = dict()
-        if len(krest) == 0: map[kfirst] = value
-        else: self._recursive_set(map[kfirst], krest, value) 
-
+    def _prefix_get(self, key):
+        result = dict()
+        for k in self._dictionary.keys():
+            if k[0:len(key)] == key:
+                result[k[len(key):]] = self._dictionary[k]
+        if len(result) == 0: return None
+        return result
+    
 class ChainedMap(Map):
     
     def __init__(self, next=None):
         Map.__init__(self)
         self._next = next
 
-    def get(self, key):
-        value = super(ChainedMap,self).get(key)
-        if value or self._next is None: return value
-        return self._next.get(key)    
+    def get(self, key):        
+        myval = super(ChainedMap,self).get(key)
+        if self._next is None: return myval
+        nextval = self._next.get(key)
+        if nextval and type(nextval) is dict:
+            if myval: nextval.update(myval)
+            return nextval
+        else: return myval or nextval
 
 class Publisher(Map):
 
@@ -97,8 +97,38 @@ class AU(ChainedMap):
     NAME = 'name'
     PARAM = 'param'
     PLUGIN = 'plugin'
-    RIGHTS='rights'
+    RIGHTS = 'rights'
+
     STATUS = 'status'
+    STATUS_DOES_NOT_EXIST = 'does_not_exist'
+    STATUS_DO_NOT_PROCESS = 'do_not_process'
+    STATUS_EXISTS         = 'exists'
+    STATUS_MANIFEST       = 'manifest'
+    STATUS_TESTING        = 'testing'
+    STATUS_NOT_READY      = 'not_ready'
+    STATUS_READY          = 'ready'
+    STATUS_PRE_RELEASING  = 'pre_releasing'
+    STATUS_PRE_RELEASED   = 'pre_released'
+    STATUS_RELEASING      = 'releasing'
+    STATUS_RELEASED       = 'released'
+    STATUS_DOWN           = 'down'
+    STATUS_SUPERSEDED     = 'superseded'
+    STATUS_RETRACTED      = 'retracted'
+    STATUSES = (STATUS_DOES_NOT_EXIST,
+                STATUS_DO_NOT_PROCESS,
+                STATUS_EXISTS,
+                STATUS_MANIFEST,
+                STATUS_TESTING,
+                STATUS_NOT_READY,
+                STATUS_READY,
+                STATUS_PRE_RELEASING,
+                STATUS_PRE_RELEASED,
+                STATUS_RELEASING,
+                STATUS_RELEASED,
+                STATUS_DOWN,
+                STATUS_SUPERSEDED,
+                STATUS_RETRACTED)
+    
     TITLE = 'title'
 
     def __init__(self, next=None):

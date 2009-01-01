@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.5 2008-12-17 10:40:58 thib_gc Exp $
+# $Id: tdbconst.py,v 1.6 2009-01-01 12:26:40 thib_gc Exp $
 #
-# Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,62 +26,35 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
+from tdb import *
+
 TDB_OPTION_LINT          = 'lint'
 TDB_OPTION_LINT_FORGIVE  = 'lintForgive'
 TDB_LINT_DEFAULT         = False
 TDB_LINT_FORGIVE_DEFAULT = False
 
-TDB_STATUS_DOES_NOT_EXIST = 'does_not_exist'
-TDB_STATUS_DO_NOT_PROCESS = 'do_not_process'
-TDB_STATUS_EXISTS         = 'exists'
-TDB_STATUS_MANIFEST       = 'manifest'
-TDB_STATUS_TESTING        = 'testing'
-TDB_STATUS_NOT_READY      = 'not_ready'
-TDB_STATUS_READY          = 'ready'
-TDB_STATUS_PRE_RELEASING  = 'pre_releasing'
-TDB_STATUS_PRE_RELEASED   = 'pre_released'
-TDB_STATUS_RELEASING      = 'releasing'
-TDB_STATUS_RELEASED       = 'released'
-TDB_STATUS_DOWN           = 'down'
-TDB_STATUS_SUPERSEDED     = 'superseded'
-TDB_STATUS_RETRACTED      = 'retracted'
-TDB_STATUSES              = [TDB_STATUS_DOES_NOT_EXIST,
-                             TDB_STATUS_DO_NOT_PROCESS,
-                             TDB_STATUS_EXISTS,
-                             TDB_STATUS_MANIFEST,
-                             TDB_STATUS_TESTING,
-                             TDB_STATUS_NOT_READY,
-                             TDB_STATUS_READY,
-                             TDB_STATUS_PRE_RELEASING,
-                             TDB_STATUS_PRE_RELEASED,
-                             TDB_STATUS_RELEASING,
-                             TDB_STATUS_RELEASED,
-                             TDB_STATUS_DOWN,
-                             TDB_STATUS_SUPERSEDED,
-                             TDB_STATUS_RETRACTED]
-
 TDB_OPTION_LEVEL                   = 'level'
 TDB_LEVEL_CONTENT_TESTING          = 'contentTesting'
-TDB_LEVEL_CONTENT_TESTING_STATUSES = [TDB_STATUS_EXISTS,
-                                      TDB_STATUS_MANIFEST,
-                                      TDB_STATUS_TESTING,
-                                      TDB_STATUS_NOT_READY,
-                                      TDB_STATUS_READY,
-                                      TDB_STATUS_PRE_RELEASING,
-                                      TDB_STATUS_PRE_RELEASED,
-                                      TDB_STATUS_RELEASING,
-                                      TDB_STATUS_RELEASED,
-                                      TDB_STATUS_DOWN]
+TDB_LEVEL_CONTENT_TESTING_STATUSES = (AU.STATUS_EXISTS,
+                                      AU.STATUS_MANIFEST,
+                                      AU.STATUS_TESTING,
+                                      AU.STATUS_NOT_READY,
+                                      AU.STATUS_READY,
+                                      AU.STATUS_PRE_RELEASING,
+                                      AU.STATUS_PRE_RELEASED,
+                                      AU.STATUS_RELEASING,
+                                      AU.STATUS_RELEASED,
+                                      AU.STATUS_DOWN)
 TDB_LEVEL_EVERYTHING               = 'everything'
-TDB_LEVEL_EVERYTHING_STATUSES      = TDB_STATUSES[:]
+TDB_LEVEL_EVERYTHING_STATUSES      = tuple(AU.STATUSES)
 TDB_LEVEL_PRODUCTION               = 'production'
-TDB_LEVEL_PRODUCTION_STATUSES      = [TDB_STATUS_RELEASED,
-                                      TDB_STATUS_DOWN,
-                                      TDB_STATUS_SUPERSEDED]
+TDB_LEVEL_PRODUCTION_STATUSES      = (AU.STATUS_RELEASED,
+                                      AU.STATUS_DOWN,
+                                      AU.STATUS_SUPERSEDED)
 TDB_LEVEL_DEFAULT                  = [TDB_LEVEL_PRODUCTION]
-TDB_LEVELS                         = TDB_STATUSES[:].extend([TDB_LEVEL_CONTENT_TESTING,
-                                                             TDB_LEVEL_EVERYTHING,
-                                                             TDB_LEVEL_PRODUCTION])
+TDB_LEVELS                         = AU.STATUSES + (TDB_LEVEL_CONTENT_TESTING,
+                                                    TDB_LEVEL_EVERYTHING,
+                                                    TDB_LEVEL_PRODUCTION)
 
 TDB_OPTION_STYLE      = 'style'
 TDB_STYLE_NONE        = 'none'

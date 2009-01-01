@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.12 2008-12-31 12:15:02 thib_gc Exp $
+# $Id: tdbparse.py,v 1.13 2009-01-01 12:26:40 thib_gc Exp $
 #
-# Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -426,14 +426,14 @@ class TdbParser(object):
         '''assignment :
             simple_assignment
         |
-            columns
+            implicit
         ;'''
         if self.__token[0] == TOKEN_IDENTIFIER:
             self.__simple_assignment()
             key, val = self.__stack.pop()
             self.__current_au[-1].set(key, val)
         elif self.__token[0] == TOKEN_KEYWORD_IMPLICIT:
-            self.__columns()
+            self.__implicit()
         else:
             raise RuntimeError, 'expected %s or %s, got %s' % (_translate_token(TOKEN_IDENTIFIER),
                                                                _translate_token(TOKEN_KEYWORD_IMPLICIT),
@@ -502,9 +502,9 @@ class TdbParser(object):
             lis.append(self.__value.pop(0))
         self.__stack.append(lis)
 
-    def __columns(self):
-        '''columns :
-            TOKEN_KEYWORD_COLUMNS
+    def __implicit(self):
+        '''implicit :
+            TOKEN_KEYWORD_IMPLICIT
             TOKEN_ANGLE_OPEN
             list_of_identifiers
             TOKEN_ANGLE_CLOSE
@@ -513,7 +513,7 @@ class TdbParser(object):
         self.__expect(TOKEN_ANGLE_OPEN)
         self.__list_of_identifiers()
         self.__expect(TOKEN_ANGLE_CLOSE)
-        self.__current_au[-1].set('$columns', self.__stack.pop())
+        self.__current_au[-1].set('$implicit', self.__stack.pop())
 
 
     def __au(self):
@@ -529,7 +529,7 @@ class TdbParser(object):
         self.__expect(TOKEN_ANGLE_CLOSE)
         au = AU(self.__current_au[-1])
         au.set_title(self.__current_title)
-        for key, val in zip(self.__current_au[-1].get('$columns'), self.__stack.pop()):
+        for key, val in zip(self.__current_au[-1].get('$implicit'), self.__stack.pop()):
             au.set(key, val)
         self.__tdb.add_au(au)
 
@@ -562,7 +562,7 @@ class TdbParser(object):
         self.__list_of_simple_assignments()
         self.__expect(TOKEN_ANGLE_CLOSE)
         self.__current_publisher = Publisher()
-        for key, val in self.__stack.pop(): 
+        for key, val in self.__stack.pop():
             self.__current_publisher.set(key, val)
         self.__tdb.add_publisher(self.__current_publisher)
 

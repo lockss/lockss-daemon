@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# $Id: tdblint.py,v 1.2 2008-12-31 12:15:13 thib_gc Exp $
+# $Id: tdblint.py,v 1.3 2009-01-01 12:26:40 thib_gc Exp $
 #
-# Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-from tdbconst import *
+from tdb import *
 
 def tdb_lint(tdb, options):
     valid = True
@@ -38,7 +38,7 @@ def tdb_lint(tdb, options):
         if au.status() is None or au.status() == '':
             valid = False
             print 'AU with no status: %s' % ( au.name(), )
-        elif au.status() not in TDB_STATUSES:
+        elif au.status() not in AU.STATUSES:
             valid = False
             print 'AU with unrecognized status: %s [%s]' % ( au.name(), au.status() )
     if not valid:
