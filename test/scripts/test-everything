@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# This script recompiles all code and runs all tests, exiting with zero
-# status iff everything worked.  It exists because the test-all Ant target
-# can't do the parts the rely on Java 1.4 until the OpenBSD platform
-# supports 1.4.
-
-rant clean && rant test-all && rant -1.4 test-tools && \
- echo "All tests succeeded"
