@@ -1467,7 +1467,7 @@
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
 
-      au < testing ; Cases Journal Volume 1 ; 1 >
+      au < ready ; Cases Journal Volume 1 ; 1 >
     }
 
 
@@ -1481,11 +1481,11 @@
       param[base_url] = http://www.biosignaling.com/
       param[journal_issn] = 1478-811X
 
-      au < testing ; Cell Communication and Signaling Volume 1 ; 1 >
-      au < testing ; Cell Communication and Signaling Volume 2 ; 2 >
-      au < testing ; Cell Communication and Signaling Volume 3 ; 3 >
-      au < testing ; Cell Communication and Signaling Volume 4 ; 4 >
-      au < testing ; Cell Communication and Signaling Volume 5 ; 5 >
+      au < ready ; Cell Communication and Signaling Volume 1 ; 1 >
+      au < ready ; Cell Communication and Signaling Volume 2 ; 2 >
+      au < ready ; Cell Communication and Signaling Volume 3 ; 3 >
+      au < ready ; Cell Communication and Signaling Volume 4 ; 4 >
+      au < ready ; Cell Communication and Signaling Volume 5 ; 5 >
     }
 
 
@@ -1499,9 +1499,9 @@
       param[base_url] = http://www.celldiv.com/
       param[journal_issn] = 1747-1028
 
-      au < testing ; Cell Division Volume 1 ; 1 >
-      au < testing ; Cell Division Volume 2 ; 2 >
-      au < testing ; Cell Division Volume 3 ; 3 >
+      au < ready ; Cell Division Volume 1 ; 1 >
+      au < ready ; Cell Division Volume 2 ; 2 >
+      au < ready ; Cell Division Volume 3 ; 3 >
     }
 
 
@@ -1515,11 +1515,11 @@
       param[base_url] = http://www.cerebrospinalfluidresearch.com/
       param[journal_issn] = 1743-8454
 
-      au < testing ; Cerebrospinal Fluid Research Volume 1 ; 1 >
-      au < testing ; Cerebrospinal Fluid Research Volume 2 ; 2 >
-      au < testing ; Cerebrospinal Fluid Research Volume 3 ; 3 >
-      au < testing ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < testing ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+      au < ready ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+      au < ready ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+      au < ready ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+      au < ready ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+      au < ready ; Cerebrospinal Fluid Research Volume 5 ; 5 >
     }
 
 
@@ -1533,8 +1533,8 @@
       param[base_url] = http://www.journal.chemistrycentral.com/
       param[journal_issn] = 1752-153X
 
-      au < manifest ; Chemistry Central Journal Volume 1 ; 1 >
-      au < manifest ; Chemistry Central Journal Volume 2 ; 2 >
+      au < ready ; Chemistry Central Journal Volume 1 ; 1 >
+      au < ready ; Chemistry Central Journal Volume 2 ; 2 >
     }
 
 
@@ -1548,8 +1548,8 @@
       param[base_url] = http://www.capmh.com/
       param[journal_issn] = 1753-2000
 
-      au < manifest ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
-      au < manifest ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
+      au < ready ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
+      au < ready ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
     }
 
 
@@ -1563,9 +1563,9 @@
       param[base_url] = http://www.cmjournal.org/
       param[journal_issn] = 1749-8546
 
-      au < manifest ; Chinese Medicine Volume 1 ; 1 >
-      au < manifest ; Chinese Medicine Volume 2 ; 2 >
-      au < manifest ; Chinese Medicine Volume 3 ; 3 >
+      au < ready ; Chinese Medicine Volume 1 ; 1 >
+      au < ready ; Chinese Medicine Volume 2 ; 2 >
+      au < ready ; Chinese Medicine Volume 3 ; 3 >
     }
 
 
@@ -1579,10 +1579,10 @@
       param[base_url] = http://www.chiroandosteo.com/
       param[journal_issn] = 1746-1340
 
-      au < manifest ; Chiropractic & Osteopathy Volume 13 ; 13 >
-      au < manifest ; Chiropractic & Osteopathy Volume 14 ; 14 >
-      au < manifest ; Chiropractic & Osteopathy Volume 15 ; 15 >
-      au < manifest ; Chiropractic & Osteopathy Volume 16 ; 16 >
+      au < ready ; Chiropractic & Osteopathy Volume 13 ; 13 >
+      au < ready ; Chiropractic & Osteopathy Volume 14 ; 14 >
+      au < ready ; Chiropractic & Osteopathy Volume 15 ; 15 >
+      au < ready ; Chiropractic & Osteopathy Volume 16 ; 16 >
     }
 
 
@@ -1596,12 +1596,12 @@
       param[base_url] = http://www.clinicalmolecularallergy.com/
       param[journal_issn] = 1476-7961
 
-      au < manifest ; Clinical and Molecular Allergy Volume 1 ; 1 >
-      au < manifest ; Clinical and Molecular Allergy Volume 2 ; 2 >
-      au < manifest ; Clinical and Molecular Allergy Volume 3 ; 3 >
-      au < manifest ; Clinical and Molecular Allergy Volume 4 ; 4 >
-      au < manifest ; Clinical and Molecular Allergy Volume 5 ; 5 >
-      au < manifest ; Clinical and Molecular Allergy Volume 6 ; 6 >
+      au < testing ; Clinical and Molecular Allergy Volume 1 ; 1 >
+      au < testing ; Clinical and Molecular Allergy Volume 2 ; 2 >
+      au < testing ; Clinical and Molecular Allergy Volume 3 ; 3 >
+      au < testing ; Clinical and Molecular Allergy Volume 4 ; 4 >
+      au < testing ; Clinical and Molecular Allergy Volume 5 ; 5 >
+      au < testing ; Clinical and Molecular Allergy Volume 6 ; 6 >
     }
 
 
@@ -1615,10 +1615,10 @@
       param[base_url] = http://www.coughjournal.com/
       param[journal_issn] = 1745-9974
 
-      au < manifest ; Cough Volume 1 ; 1 >
-      au < manifest ; Cough Volume 2 ; 2 >
-      au < manifest ; Cough Volume 3 ; 3 >
-      au < manifest ; Cough Volume 4 ; 4 >
+      au < ready ; Cough Volume 1 ; 1 >
+      au < ready ; Cough Volume 2 ; 2 >
+      au < ready ; Cough Volume 3 ; 3 >
+      au < ready ; Cough Volume 4 ; 4 >
     }
 
 
@@ -1632,18 +1632,18 @@
       param[base_url] = http://ccforum.com/
       param[journal_issn] = 1364-8535
 
-      au < manifest ; Critical Care Volume 1 ; 1 >
-      au < manifest ; Critical Care Volume 2 ; 2 >
-      au < manifest ; Critical Care Volume 3 ; 3 >
-      au < manifest ; Critical Care Volume 4 ; 4 >
-      au < manifest ; Critical Care Volume 5 ; 5 >
-      au < manifest ; Critical Care Volume 6 ; 6 >
-      au < manifest ; Critical Care Volume 7 ; 7 >
-      au < manifest ; Critical Care Volume 8 ; 8 >
-      au < manifest ; Critical Care Volume 9 ; 9 >
-      au < manifest ; Critical Care Volume 10 ; 10 >
-      au < manifest ; Critical Care Volume 11 ; 11 >
-      au < manifest ; Critical Care Volume 12 ; 12 >
+      au < testing ; Critical Care Volume 1 ; 1 >
+      au < testing ; Critical Care Volume 2 ; 2 >
+      au < testing ; Critical Care Volume 3 ; 3 >
+      au < testing ; Critical Care Volume 4 ; 4 >
+      au < testing ; Critical Care Volume 5 ; 5 >
+      au < testing ; Critical Care Volume 6 ; 6 >
+      au < testing ; Critical Care Volume 7 ; 7 >
+      au < testing ; Critical Care Volume 8 ; 8 >
+      au < testing ; Critical Care Volume 9 ; 9 >
+      au < testing ; Critical Care Volume 10 ; 10 >
+      au < testing ; Critical Care Volume 11 ; 11 >
+      au < testing ; Critical Care Volume 12 ; 12 >
     }
 
 
