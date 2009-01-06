@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="African Studies Association">
+   <property name="name" value="All African Studies Association Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='African Studies Association']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AfricanStudiesReview48">
+   <property name="attributes.publisher" value="African Studies Association" />
+   <property name="journalTitle" value="African Studies Review" />
+   <property name="title" value="African Studies Review Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="african_studies_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="AfricanStudiesReview49">
+   <property name="attributes.publisher" value="African Studies Association" />
+   <property name="journalTitle" value="African Studies Review" />
+   <property name="title" value="African Studies Review Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="african_studies_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="AfricanStudiesReview50">
+   <property name="attributes.publisher" value="African Studies Association" />
+   <property name="journalTitle" value="African Studies Review" />
+   <property name="title" value="African Studies Review Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="african_studies_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="HistoryinAfrica32">
+   <property name="attributes.publisher" value="African Studies Association" />
+   <property name="journalTitle" value="History in Africa" />
+   <property name="title" value="History in Africa Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_in_africa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="HistoryinAfrica33">
+   <property name="attributes.publisher" value="African Studies Association" />
+   <property name="journalTitle" value="History in Africa" />
+   <property name="title" value="History in Africa Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_in_africa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

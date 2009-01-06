@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Institute for Ethnographic Research">
+   <property name="name" value="All Institute for Ethnographic Research Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Institute for Ethnographic Research']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AnthropologicalQuarterly73">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly74">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly75">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly76">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly77">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly78">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly79">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="AnthropologicalQuarterly80">
+   <property name="attributes.publisher" value="Institute for Ethnographic Research" />
+   <property name="journalTitle" value="Anthropological Quarterly" />
+   <property name="title" value="Anthropological Quarterly Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="anthropological_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="80" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

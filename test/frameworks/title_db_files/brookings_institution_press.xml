@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Brookings Institution Press">
+   <property name="name" value="All Brookings Institution Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Brookings Institution Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="BrookingsPapersonEconomicActivity2000">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEconomicActivity2001">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEconomicActivity2002">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEconomicActivity2003">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEconomicActivity2004">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2004" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEconomicActivity2005">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2005" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEconomicActivity2006">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Economic Activity" />
+   <property name="title" value="Brookings Papers on Economic Activity Volume 2006" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_economic_activity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2000">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2001">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2002">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2003">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2004">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2004" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2005">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2005" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="BrookingsPapersonEducationPolicy2006">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Papers on Education Policy" />
+   <property name="title" value="Brookings Papers on Education Policy Volume 2006" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_papers_on_education_policy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2000">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2001">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2002">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2003">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2004">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2004" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2005">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2005" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="BrookingsTradeForum2006">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings Trade Forum" />
+   <property name="title" value="Brookings Trade Forum Volume 2006" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings_trade_forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonFinancialServices2000">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Financial Services" />
+   <property name="title" value="Brookings-Wharton Papers on Financial Services Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_financial_services" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonFinancialServices2001">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Financial Services" />
+   <property name="title" value="Brookings-Wharton Papers on Financial Services Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_financial_services" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonFinancialServices2002">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Financial Services" />
+   <property name="title" value="Brookings-Wharton Papers on Financial Services Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_financial_services" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonFinancialServices2003">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Financial Services" />
+   <property name="title" value="Brookings-Wharton Papers on Financial Services Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_financial_services" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonFinancialServices2004">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Financial Services" />
+   <property name="title" value="Brookings-Wharton Papers on Financial Services Volume 2004" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_financial_services" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2000">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2001">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2002">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2003">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2004">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2004" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2005">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2005" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="BrookingsWhartonPapersonUrbanAffairs2006">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Brookings-Wharton Papers on Urban Affairs" />
+   <property name="title" value="Brookings-Wharton Papers on Urban Affairs Volume 2006" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="brookings-wharton_papers_on_urban_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="Economa1">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Economía" />
+   <property name="title" value="Economía Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="economia" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="Economa2">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Economía" />
+   <property name="title" value="Economía Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="economia" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="Economa3">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Economía" />
+   <property name="title" value="Economía Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="economia" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="Economa4">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Economía" />
+   <property name="title" value="Economía Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="economia" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="Economa5">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Economía" />
+   <property name="title" value="Economía Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="economia" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="Economa6">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="Economía" />
+   <property name="title" value="Economía Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="economia" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="TheFutureofChildren15">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="The Future of Children" />
+   <property name="title" value="The Future of Children Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="future_of_children" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="TheFutureofChildren16">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="The Future of Children" />
+   <property name="title" value="The Future of Children Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="future_of_children" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="TheFutureofChildren17">
+   <property name="attributes.publisher" value="Brookings Institution Press" />
+   <property name="journalTitle" value="The Future of Children" />
+   <property name="title" value="The Future of Children Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="future_of_children" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

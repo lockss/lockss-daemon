@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Ohio State University Press">
+   <property name="name" value="All Ohio State University Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Ohio State University Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AmericanPeriodicalsAJournalofHistoryCriticismandBibliography13">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="American Periodicals: A Journal of History, Criticism, and Bibliography" />
+   <property name="title" value="American Periodicals: A Journal of History, Criticism, and Bibliography Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_periodicals" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="AmericanPeriodicalsAJournalofHistoryCriticismandBibliography14">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="American Periodicals: A Journal of History, Criticism, and Bibliography" />
+   <property name="title" value="American Periodicals: A Journal of History, Criticism, and Bibliography Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_periodicals" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="AmericanPeriodicalsAJournalofHistoryCriticismandBibliography15">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="American Periodicals: A Journal of History, Criticism, and Bibliography" />
+   <property name="title" value="American Periodicals: A Journal of History, Criticism, and Bibliography Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_periodicals" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="AmericanPeriodicalsAJournalofHistoryCriticismandBibliography16">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="American Periodicals: A Journal of History, Criticism, and Bibliography" />
+   <property name="title" value="American Periodicals: A Journal of History, Criticism, and Bibliography Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_periodicals" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="AmericanPeriodicalsAJournalofHistoryCriticismandBibliography17">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="American Periodicals: A Journal of History, Criticism, and Bibliography" />
+   <property name="title" value="American Periodicals: A Journal of History, Criticism, and Bibliography Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_periodicals" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="GeographicalAnalysis34">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Geographical Analysis" />
+   <property name="title" value="Geographical Analysis Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="geographical_analysis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="GeographicalAnalysis35">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Geographical Analysis" />
+   <property name="title" value="Geographical Analysis Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="geographical_analysis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="GeographicalAnalysis36">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Geographical Analysis" />
+   <property name="title" value="Geographical Analysis Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="geographical_analysis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="JournalforthePsychoanalysisofCultureandSociety8">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Journal for the Psychoanalysis of Culture and Society" />
+   <property name="title" value="Journal for the Psychoanalysis of Culture and Society Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_for_the_psychoanalysis_of_culture_and_society" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="JournalofMoneyCreditandBanking34">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Journal of Money, Credit, and Banking" />
+   <property name="title" value="Journal of Money, Credit, and Banking Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_money_credit_and_banking" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="JournalofMoneyCreditandBanking35">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Journal of Money, Credit, and Banking" />
+   <property name="title" value="Journal of Money, Credit, and Banking Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_money_credit_and_banking" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="JournalofMoneyCreditandBanking36">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Journal of Money, Credit, and Banking" />
+   <property name="title" value="Journal of Money, Credit, and Banking Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_money_credit_and_banking" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="JournalofMoneyCreditandBanking37">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Journal of Money, Credit, and Banking" />
+   <property name="title" value="Journal of Money, Credit, and Banking Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_money_credit_and_banking" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="JournalofMoneyCreditandBanking38">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Journal of Money, Credit, and Banking" />
+   <property name="title" value="Journal of Money, Credit, and Banking Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_money_credit_and_banking" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="Narrative10">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Narrative" />
+   <property name="title" value="Narrative Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="narrative" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="Narrative11">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Narrative" />
+   <property name="title" value="Narrative Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="narrative" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="Narrative12">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Narrative" />
+   <property name="title" value="Narrative Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="narrative" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="Narrative13">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Narrative" />
+   <property name="title" value="Narrative Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="narrative" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="Narrative14">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Narrative" />
+   <property name="title" value="Narrative Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="narrative" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="Narrative15">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="Narrative" />
+   <property name="title" value="Narrative Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="narrative" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="TheJournalofHigherEducation73">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="The Journal of Higher Education" />
+   <property name="title" value="The Journal of Higher Education Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_higher_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="TheJournalofHigherEducation74">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="The Journal of Higher Education" />
+   <property name="title" value="The Journal of Higher Education Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_higher_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="TheJournalofHigherEducation75">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="The Journal of Higher Education" />
+   <property name="title" value="The Journal of Higher Education Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_higher_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="TheJournalofHigherEducation76">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="The Journal of Higher Education" />
+   <property name="title" value="The Journal of Higher Education Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_higher_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="TheJournalofHigherEducation77">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="The Journal of Higher Education" />
+   <property name="title" value="The Journal of Higher Education Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_higher_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="TheJournalofHigherEducation78">
+   <property name="attributes.publisher" value="Ohio State University Press" />
+   <property name="journalTitle" value="The Journal of Higher Education" />
+   <property name="title" value="The Journal of Higher Education Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_higher_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

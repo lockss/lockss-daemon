@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="University of Hawai'i Press">
+   <property name="name" value="All University of Hawai'i Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of Hawai'i Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AsianPerspectives39">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives40">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives41">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="41" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives42">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives43">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives44">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="44" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives45">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="45" />
+   </property>
+  </property>
+
+  <property name="AsianPerspectives46">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Perspectives" />
+   <property name="title" value="Asian Perspectives Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_perspectives" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="46" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal16">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal17">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal18">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal19">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal20">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal21">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal22">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal23">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="AsianTheatreJournal24">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Asian Theatre Journal" />
+   <property name="title" value="Asian Theatre Journal Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="asian_theatre_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="Biography23">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="Biography24">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="Biography25">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="Biography26">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="Biography27">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="Biography28">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="Biography29">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="Biography30">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Biography" />
+   <property name="title" value="Biography Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="biography" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies19">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies20">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies21">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies22">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies23">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies24">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies25">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="BuddhistChristianStudies26">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Buddhist-Christian Studies" />
+   <property name="title" value="Buddhist-Christian Studies Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="buddhist-christian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational6">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational7">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational8">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational9">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational10">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational11">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational12">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="ChinaReviewInternational13">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="China Review International" />
+   <property name="title" value="China Review International Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="china_review_international" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory7">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory8">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory9">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory10">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory11">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory12">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory13">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory14">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory15">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory16">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory17">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="JournalofWorldHistory18">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Journal of World History" />
+   <property name="title" value="Journal of World History Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_world_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="KaHooilinaTheLegacy1">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Ka Ho'oilina/The Legacy" />
+   <property name="title" value="Ka Ho'oilina/The Legacy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ka_hooilina_the_legacy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="KaHooilinaTheLegacy2">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Ka Ho'oilina/The Legacy" />
+   <property name="title" value="Ka Ho'oilina/The Legacy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ka_hooilina_the_legacy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="KaHooilinaTheLegacy3">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Ka Ho'oilina/The Legacy" />
+   <property name="title" value="Ka Ho'oilina/The Legacy Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ka_hooilina_the_legacy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="KaHooilinaTheLegacy4">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Ka Ho'oilina/The Legacy" />
+   <property name="title" value="Ka Ho'oilina/The Legacy Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ka_hooilina_the_legacy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="KaHooilinaTheLegacy5">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Ka Ho'oilina/The Legacy" />
+   <property name="title" value="Ka Ho'oilina/The Legacy Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ka_hooilina_the_legacy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies24">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies25">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies26">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies27">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies28">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies29">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="KoreanStudies30">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Korean Studies" />
+   <property name="title" value="Korean Studies Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="korean_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="Manoa11">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="Manoa12">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="Manoa13">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="Manoa14">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="Manoa15">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="Manoa16">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="Manoa17">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="Manoa18">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Manoa" />
+   <property name="title" value="Manoa Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="manoa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics38">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics39">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics40">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics41">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="41" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics42">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics43">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics44">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="44" />
+   </property>
+  </property>
+
+  <property name="OceanicLinguistics45">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Oceanic Linguistics" />
+   <property name="title" value="Oceanic Linguistics Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="oceanic_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="45" />
+   </property>
+  </property>
+
+  <property name="PacificScience55">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="PacificScience56">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="PacificScience57">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="PacificScience58">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="58" />
+   </property>
+  </property>
+
+  <property name="PacificScience59">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
+  <property name="PacificScience60">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="PacificScience61">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Pacific Science" />
+   <property name="title" value="Pacific Science Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pacific_science" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest50">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest51">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest52">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest53">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest54">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest55">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest56">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="PhilosophyEastandWest57">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Philosophy East and West" />
+   <property name="title" value="Philosophy East and West Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="philosophy_east_and_west" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific12">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific13">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific14">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific15">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific16">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific17">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific18">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="TheContemporaryPacific19">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="The Contemporary Pacific" />
+   <property name="title" value="The Contemporary Pacific Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="contemporary_pacific" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="YearbookoftheAssociationofPacificCoastGeographers66">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Yearbook of the Association of Pacific Coast Geographers" />
+   <property name="title" value="Yearbook of the Association of Pacific Coast Geographers Volume 66" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="yearbook_of_the_association_of_pacific_coast_geographers" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="66" />
+   </property>
+  </property>
+
+  <property name="YearbookoftheAssociationofPacificCoastGeographers67">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Yearbook of the Association of Pacific Coast Geographers" />
+   <property name="title" value="Yearbook of the Association of Pacific Coast Geographers Volume 67" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="yearbook_of_the_association_of_pacific_coast_geographers" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="67" />
+   </property>
+  </property>
+
+  <property name="YearbookoftheAssociationofPacificCoastGeographers68">
+   <property name="attributes.publisher" value="University of Hawai'i Press" />
+   <property name="journalTitle" value="Yearbook of the Association of Pacific Coast Geographers" />
+   <property name="title" value="Yearbook of the Association of Pacific Coast Geographers Volume 68" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="yearbook_of_the_association_of_pacific_coast_geographers" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="68" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

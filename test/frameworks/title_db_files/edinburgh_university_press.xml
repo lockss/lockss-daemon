@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Edinburgh University Press">
+   <property name="name" value="All Edinburgh University Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Edinburgh University Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AfricaTheJournaloftheInternationalAfricanInstitute76">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Africa: The Journal of the International African Institute" />
+   <property name="title" value="Africa: The Journal of the International African Institute Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="africa_the_journal_of_the_international_african_institute" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="AfricaTheJournaloftheInternationalAfricanInstitute77">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Africa: The Journal of the International African Institute" />
+   <property name="title" value="Africa: The Journal of the International African Institute Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="africa_the_journal_of_the_international_african_institute" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="ComparativeCriticalStudies3">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Comparative Critical Studies" />
+   <property name="title" value="Comparative Critical Studies Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_critical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="DanceResearch24">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Dance Research" />
+   <property name="title" value="Dance Research Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="dance_research" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="EpistemeAJournalofSocialEpistemology3">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Episteme: A Journal of Social Epistemology" />
+   <property name="title" value="Episteme: A Journal of Social Epistemology Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="episteme" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="HolyLandStudiesAMultidisciplinaryJournal5">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Holy Land Studies: A Multidisciplinary Journal" />
+   <property name="title" value="Holy Land Studies: A Multidisciplinary Journal Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="holy_land_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="JournalofVictorianCulture11">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Journal of Victorian Culture" />
+   <property name="title" value="Journal of Victorian Culture Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_victorian_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="JournalofVictorianCulture12">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Journal of Victorian Culture" />
+   <property name="title" value="Journal of Victorian Culture Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_victorian_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="Paragraph29">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Paragraph" />
+   <property name="title" value="Paragraph Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="paragraph" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="Paragraph30">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Paragraph" />
+   <property name="title" value="Paragraph Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="paragraph" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="ParliamentaryHistory25">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Parliamentary History" />
+   <property name="title" value="Parliamentary History Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="parliamentary_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="ParliamentaryHistory26">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Parliamentary History" />
+   <property name="title" value="Parliamentary History Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="parliamentary_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="Romanticism12">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Romanticism" />
+   <property name="title" value="Romanticism Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="romanticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="Romanticism13">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Romanticism" />
+   <property name="title" value="Romanticism Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="romanticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="StudiesinWorldChristianity12">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Studies in World Christianity" />
+   <property name="title" value="Studies in World Christianity Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="studies_in_world_christianity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="StudiesinWorldChristianity13">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Studies in World Christianity" />
+   <property name="title" value="Studies in World Christianity Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="studies_in_world_christianity" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="TheScottishHistoricalReview85">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="The Scottish Historical Review" />
+   <property name="title" value="The Scottish Historical Review Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="scottish_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="85" />
+   </property>
+  </property>
+
+  <property name="TranslationandLiterature15">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Translation and Literature" />
+   <property name="title" value="Translation and Literature Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="translation_and_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="TranslationandLiterature16">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Translation and Literature" />
+   <property name="title" value="Translation and Literature Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="translation_and_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="University of Minnesota Press">
+   <property name="name" value="All University of Minnesota Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of Minnesota Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="CulturalCritique47">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique48">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique49">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique50">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique51">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique52">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique53">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique54">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique55">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique56">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique57">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique58">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="58" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique59">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique60">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique61">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique62">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique63">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="63" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique64">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="64" />
+   </property>
+  </property>
+
+  <property name="CulturalCritique65">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Cultural Critique" />
+   <property name="title" value="Cultural Critique Volume 65" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="cultural_critique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="65" />
+   </property>
+  </property>
+
+  <property name="TheMovingImage3">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="The Moving Image" />
+   <property name="title" value="The Moving Image Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="the_moving_image" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="TheMovingImage4">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="The Moving Image" />
+   <property name="title" value="The Moving Image Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="the_moving_image" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="TheMovingImage5">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="The Moving Image" />
+   <property name="title" value="The Moving Image Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="the_moving_image" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="TheMovingImage6">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="The Moving Image" />
+   <property name="title" value="The Moving Image Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="the_moving_image" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview15">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview16">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview17">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview18">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview19">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview20">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview21">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="WicazoSaReview22">
+   <property name="attributes.publisher" value="University of Minnesota Press" />
+   <property name="journalTitle" value="Wicazo Sa Review" />
+   <property name="title" value="Wicazo Sa Review Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="wicazo_sa_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

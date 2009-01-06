@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Michigan State University Press">
+   <property name="name" value="All Michigan State University Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Michigan State University Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="CRTheNewCentennialReview1">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="CR: The New Centennial Review" />
+   <property name="title" value="CR: The New Centennial Review Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="new_centennial_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="CRTheNewCentennialReview2">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="CR: The New Centennial Review" />
+   <property name="title" value="CR: The New Centennial Review Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="new_centennial_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="CRTheNewCentennialReview3">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="CR: The New Centennial Review" />
+   <property name="title" value="CR: The New Centennial Review Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="new_centennial_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="CRTheNewCentennialReview4">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="CR: The New Centennial Review" />
+   <property name="title" value="CR: The New Centennial Review Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="new_centennial_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="CRTheNewCentennialReview5">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="CR: The New Centennial Review" />
+   <property name="title" value="CR: The New Centennial Review Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="new_centennial_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="CRTheNewCentennialReview6">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="CR: The New Centennial Review" />
+   <property name="title" value="CR: The New Centennial Review Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="new_centennial_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="EasternAfricaSocialScienceResearchReview18">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Eastern Africa Social Science Research Review" />
+   <property name="title" value="Eastern Africa Social Science Research Review Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eastern_africa_social_science_research_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="EasternAfricaSocialScienceResearchReview19">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Eastern Africa Social Science Research Review" />
+   <property name="title" value="Eastern Africa Social Science Research Review Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eastern_africa_social_science_research_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="EasternAfricaSocialScienceResearchReview20">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Eastern Africa Social Science Research Review" />
+   <property name="title" value="Eastern Africa Social Science Research Review Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eastern_africa_social_science_research_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="EasternAfricaSocialScienceResearchReview21">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Eastern Africa Social Science Research Review" />
+   <property name="title" value="Eastern Africa Social Science Research Review Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eastern_africa_social_science_research_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="EasternAfricaSocialScienceResearchReview22">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Eastern Africa Social Science Research Review" />
+   <property name="title" value="Eastern Africa Social Science Research Review Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eastern_africa_social_science_research_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="EasternAfricaSocialScienceResearchReview23">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Eastern Africa Social Science Research Review" />
+   <property name="title" value="Eastern Africa Social Science Research Review Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eastern_africa_social_science_research_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="FourthGenreExplorationsinNonfiction5">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Fourth Genre: Explorations in Nonfiction" />
+   <property name="title" value="Fourth Genre: Explorations in Nonfiction Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="fourth_genre_explorations_in_nonfiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="FourthGenreExplorationsinNonfiction6">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Fourth Genre: Explorations in Nonfiction" />
+   <property name="title" value="Fourth Genre: Explorations in Nonfiction Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="fourth_genre_explorations_in_nonfiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="FourthGenreExplorationsinNonfiction7">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Fourth Genre: Explorations in Nonfiction" />
+   <property name="title" value="Fourth Genre: Explorations in Nonfiction Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="fourth_genre_explorations_in_nonfiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="FourthGenreExplorationsinNonfiction8">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Fourth Genre: Explorations in Nonfiction" />
+   <property name="title" value="Fourth Genre: Explorations in Nonfiction Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="fourth_genre_explorations_in_nonfiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="FourthGenreExplorationsinNonfiction9">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Fourth Genre: Explorations in Nonfiction" />
+   <property name="title" value="Fourth Genre: Explorations in Nonfiction Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="fourth_genre_explorations_in_nonfiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="FrenchColonialHistory3">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="French Colonial History" />
+   <property name="title" value="French Colonial History Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_colonial_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="FrenchColonialHistory4">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="French Colonial History" />
+   <property name="title" value="French Colonial History Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_colonial_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="FrenchColonialHistory5">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="French Colonial History" />
+   <property name="title" value="French Colonial History Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_colonial_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="FrenchColonialHistory6">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="French Colonial History" />
+   <property name="title" value="French Colonial History Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_colonial_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="FrenchColonialHistory7">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="French Colonial History" />
+   <property name="title" value="French Colonial History Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_colonial_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="FrenchColonialHistory8">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="French Colonial History" />
+   <property name="title" value="French Colonial History Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_colonial_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="ItalianCulture23">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Italian Culture" />
+   <property name="title" value="Italian Culture Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="italian_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="NortheastAfricanStudies6">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Northeast African Studies" />
+   <property name="title" value="Northeast African Studies Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="northeast_african_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="NortheastAfricanStudies7">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Northeast African Studies" />
+   <property name="title" value="Northeast African Studies Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="northeast_african_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="NortheastAfricanStudies8">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Northeast African Studies" />
+   <property name="title" value="Northeast African Studies Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="northeast_african_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="NortheastAfricanStudies9">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Northeast African Studies" />
+   <property name="title" value="Northeast African Studies Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="northeast_african_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="RedCedarReview40">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Red Cedar Review" />
+   <property name="title" value="Red Cedar Review Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="red_cedar_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="RedCedarReview41">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Red Cedar Review" />
+   <property name="title" value="Red Cedar Review Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="red_cedar_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="41" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs3">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs4">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs5">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs6">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs7">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs8">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs9">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="RhetoricPublicAffairs10">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Rhetoric &amp; Public Affairs" />
+   <property name="title" value="Rhetoric &amp; Public Affairs Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="rhetoric_and_public_affairs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica49">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica50">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica51">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica52">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica53">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica54">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica55">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica56">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica57">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica58">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="58" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica59">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica60">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica61">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="TransformationCriticalPerspectivesonSouthernAfrica62">
+   <property name="attributes.publisher" value="Michigan State University Press" />
+   <property name="journalTitle" value="Transformation: Critical Perspectives on Southern Africa" />
+   <property name="title" value="Transformation: Critical Perspectives on Southern Africa Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transformation" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="University of Toronto Press">
+   <property name="name" value="All University of Toronto Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of Toronto Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="CanadianJournalofCriminologyandCriminalJustice48">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal of Criminology and Criminal Justice" />
+   <property name="title" value="Canadian Journal of Criminology and Criminal Justice Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_criminology_and_criminal_justice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofCriminologyandCriminalJustice49">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal of Criminology and Criminal Justice" />
+   <property name="title" value="Canadian Journal of Criminology and Criminal Justice Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_criminology_and_criminal_justice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofLawandSociety20">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal of Law and Society" />
+   <property name="title" value="Canadian Journal of Law and Society Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_law_and_society" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofLawandSociety21">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal of Law and Society" />
+   <property name="title" value="Canadian Journal of Law and Society Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_law_and_society" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalofWomenandtheLaw17">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal of Women and the Law" />
+   <property name="title" value="Canadian Journal of Women and the Law Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_women_and_the_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalonAgingLaRevuecanadienneduvieillissement23">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal on Aging / La Revue canadienne du vieillissement" />
+   <property name="title" value="Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_on_aging" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalonAgingLaRevuecanadienneduvieillissement24">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal on Aging / La Revue canadienne du vieillissement" />
+   <property name="title" value="Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_on_aging" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalonAgingLaRevuecanadienneduvieillissement25">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal on Aging / La Revue canadienne du vieillissement" />
+   <property name="title" value="Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_on_aging" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="CanadianJournalonAgingLaRevuecanadienneduvieillissement26">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Journal on Aging / La Revue canadienne du vieillissement" />
+   <property name="title" value="Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_on_aging" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofAmericanStudies34">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Review of American Studies" />
+   <property name="title" value="Canadian Review of American Studies Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_review_of_american_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofAmericanStudies35">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Review of American Studies" />
+   <property name="title" value="Canadian Review of American Studies Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_review_of_american_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofAmericanStudies36">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Review of American Studies" />
+   <property name="title" value="Canadian Review of American Studies Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_review_of_american_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="CanadianReviewofAmericanStudies37">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Canadian Review of American Studies" />
+   <property name="title" value="Canadian Review of American Studies Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_review_of_american_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="DiasporaAJournalofTransnationalStudies13">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Diaspora: A Journal of Transnational Studies" />
+   <property name="title" value="Diaspora: A Journal of Transnational Studies Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="diaspora_a_journal_of_transnational_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyFiction18">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Eighteenth Century Fiction" />
+   <property name="title" value="Eighteenth Century Fiction Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth_century_fiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyFiction19">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Eighteenth Century Fiction" />
+   <property name="title" value="Eighteenth Century Fiction Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth_century_fiction" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="FrancophoniesdAmrique17">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Francophonies d'Amérique" />
+   <property name="title" value="Francophonies d'Amérique Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="francophonies_damerique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="FrancophoniesdAmrique18">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Francophonies d'Amérique" />
+   <property name="title" value="Francophonies d'Amérique Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="francophonies_damerique" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="JournalofCanadianStudies39">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Journal of Canadian Studies" />
+   <property name="title" value="Journal of Canadian Studies Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_canadian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="JournalofCanadianStudies40">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Journal of Canadian Studies" />
+   <property name="title" value="Journal of Canadian Studies Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_canadian_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="JournalofScholarlyPublishing35">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Journal of Scholarly Publishing" />
+   <property name="title" value="Journal of Scholarly Publishing Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_scholarly_publishing" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="JournalofScholarlyPublishing36">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Journal of Scholarly Publishing" />
+   <property name="title" value="Journal of Scholarly Publishing Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_scholarly_publishing" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="JournalofScholarlyPublishing37">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Journal of Scholarly Publishing" />
+   <property name="title" value="Journal of Scholarly Publishing Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_scholarly_publishing" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="JournalofScholarlyPublishing38">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Journal of Scholarly Publishing" />
+   <property name="title" value="Journal of Scholarly Publishing Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_scholarly_publishing" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="ModernDrama48">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Modern Drama" />
+   <property name="title" value="Modern Drama Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_drama" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="ModernDrama49">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Modern Drama" />
+   <property name="title" value="Modern Drama Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_drama" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="ModernDrama50">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Modern Drama" />
+   <property name="title" value="Modern Drama Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_drama" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="SeminarAJournalofGermanicStudies42">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Seminar: A Journal of Germanic Studies" />
+   <property name="title" value="Seminar: A Journal of Germanic Studies Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="seminar_a_journal_of_germanic_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="SeminarAJournalofGermanicStudies43">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Seminar: A Journal of Germanic Studies" />
+   <property name="title" value="Seminar: A Journal of Germanic Studies Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="seminar_a_journal_of_germanic_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="TheCanadianHistoricalReview85">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Historical Review" />
+   <property name="title" value="The Canadian Historical Review Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="85" />
+   </property>
+  </property>
+
+  <property name="TheCanadianHistoricalReview86">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Historical Review" />
+   <property name="title" value="The Canadian Historical Review Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="86" />
+   </property>
+  </property>
+
+  <property name="TheCanadianHistoricalReview87">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Historical Review" />
+   <property name="title" value="The Canadian Historical Review Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="87" />
+   </property>
+  </property>
+
+  <property name="TheCanadianHistoricalReview88">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Historical Review" />
+   <property name="title" value="The Canadian Historical Review Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="88" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofLinguisticsLarevuecanadiennedelinguistique48">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique" />
+   <property name="title" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofLinguisticsLarevuecanadiennedelinguistique49">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique" />
+   <property name="title" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofLinguisticsLarevuecanadiennedelinguistique50">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique" />
+   <property name="title" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofLinguisticsLarevuecanadiennedelinguistique51">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique" />
+   <property name="title" value="The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_linguistics" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofSociology29">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Sociology" />
+   <property name="title" value="The Canadian Journal of Sociology Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_sociology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofSociology30">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Sociology" />
+   <property name="title" value="The Canadian Journal of Sociology Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_sociology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofSociology31">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Sociology" />
+   <property name="title" value="The Canadian Journal of Sociology Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_sociology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="TheCanadianJournalofSociology32">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Journal of Sociology" />
+   <property name="title" value="The Canadian Journal of Sociology Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_journal_of_sociology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="TheCanadianModernLanguageReviewLarevuecanadiennedeslanguesvivantes61">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Modern Language Review / La revue canadienne des langues vivantes" />
+   <property name="title" value="The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_modern_language_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="TheCanadianModernLanguageReviewLarevuecanadiennedeslanguesvivantes62">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Modern Language Review / La revue canadienne des langues vivantes" />
+   <property name="title" value="The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_modern_language_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+  <property name="TheCanadianModernLanguageReviewLarevuecanadiennedeslanguesvivantes63">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="The Canadian Modern Language Review / La revue canadienne des langues vivantes" />
+   <property name="title" value="The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="canadian_modern_language_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="63" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoLawJournal54">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Law Journal" />
+   <property name="title" value="University of Toronto Law Journal Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_law_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoLawJournal55">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Law Journal" />
+   <property name="title" value="University of Toronto Law Journal Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_law_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoLawJournal56">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Law Journal" />
+   <property name="title" value="University of Toronto Law Journal Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_law_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoLawJournal57">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Law Journal" />
+   <property name="title" value="University of Toronto Law Journal Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_law_journal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoQuarterly74">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Quarterly" />
+   <property name="title" value="University of Toronto Quarterly Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoQuarterly75">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Quarterly" />
+   <property name="title" value="University of Toronto Quarterly Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="UniversityofTorontoQuarterly76">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="University of Toronto Quarterly" />
+   <property name="title" value="University of Toronto Quarterly Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="university_of_toronto_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="VictorianPeriodicalsReview38">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Victorian Periodicals Review" />
+   <property name="title" value="Victorian Periodicals Review Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="victorian_periodicals_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="VictorianPeriodicalsReview39">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Victorian Periodicals Review" />
+   <property name="title" value="Victorian Periodicals Review Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="victorian_periodicals_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="VictorianPeriodicalsReview40">
+   <property name="attributes.publisher" value="University of Toronto Press" />
+   <property name="journalTitle" value="Victorian Periodicals Review" />
+   <property name="title" value="Victorian Periodicals Review Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="victorian_periodicals_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

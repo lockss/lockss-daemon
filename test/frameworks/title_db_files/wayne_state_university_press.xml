@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Wayne State University Press">
+   <property name="name" value="All Wayne State University Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Wayne State University Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="Criticism43">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Criticism" />
+   <property name="title" value="Criticism Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="criticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="Criticism44">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Criticism" />
+   <property name="title" value="Criticism Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="criticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="44" />
+   </property>
+  </property>
+
+  <property name="Criticism45">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Criticism" />
+   <property name="title" value="Criticism Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="criticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="45" />
+   </property>
+  </property>
+
+  <property name="Criticism46">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Criticism" />
+   <property name="title" value="Criticism Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="criticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="46" />
+   </property>
+  </property>
+
+  <property name="Criticism47">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Criticism" />
+   <property name="title" value="Criticism Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="criticism" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="Discourse22">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Discourse" />
+   <property name="title" value="Discourse Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="discourse" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="Discourse23">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Discourse" />
+   <property name="title" value="Discourse Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="discourse" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="Discourse24">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Discourse" />
+   <property name="title" value="Discourse Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="discourse" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="Discourse25">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Discourse" />
+   <property name="title" value="Discourse Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="discourse" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="Discourse26">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Discourse" />
+   <property name="title" value="Discourse Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="discourse" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="Discourse27">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Discourse" />
+   <property name="title" value="Discourse Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="discourse" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="FrameworkTheJournalofCinemaandMedia47">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Framework: The Journal of Cinema and Media" />
+   <property name="title" value="Framework: The Journal of Cinema and Media Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="framework_the_journal_of_cinema_and_media" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="FrameworkTheJournalofCinemaandMedia48">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Framework: The Journal of Cinema and Media" />
+   <property name="title" value="Framework: The Journal of Cinema and Media Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="framework_the_journal_of_cinema_and_media" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="HumanBiology73">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Human Biology" />
+   <property name="title" value="Human Biology Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="human_biology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="HumanBiology74">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Human Biology" />
+   <property name="title" value="Human Biology Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="human_biology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="HumanBiology75">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Human Biology" />
+   <property name="title" value="Human Biology Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="human_biology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="HumanBiology76">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Human Biology" />
+   <property name="title" value="Human Biology Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="human_biology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="HumanBiology77">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Human Biology" />
+   <property name="title" value="Human Biology Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="human_biology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="HumanBiology78">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Human Biology" />
+   <property name="title" value="Human Biology Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="human_biology" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+  <property name="MarvelsTales15">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Marvels &amp; Tales" />
+   <property name="title" value="Marvels &amp; Tales Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="marvels_and_tales" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="MarvelsTales16">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Marvels &amp; Tales" />
+   <property name="title" value="Marvels &amp; Tales Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="marvels_and_tales" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="MarvelsTales17">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Marvels &amp; Tales" />
+   <property name="title" value="Marvels &amp; Tales Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="marvels_and_tales" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="MarvelsTales18">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Marvels &amp; Tales" />
+   <property name="title" value="Marvels &amp; Tales Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="marvels_and_tales" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="MarvelsTales19">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Marvels &amp; Tales" />
+   <property name="title" value="Marvels &amp; Tales Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="marvels_and_tales" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="MarvelsTales20">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Marvels &amp; Tales" />
+   <property name="title" value="Marvels &amp; Tales Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="marvels_and_tales" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly47">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly48">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly49">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly50">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly51">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly52">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="MerrillPalmerQuarterly53">
+   <property name="attributes.publisher" value="Wayne State University Press" />
+   <property name="journalTitle" value="Merrill-Palmer Quarterly" />
+   <property name="title" value="Merrill-Palmer Quarterly Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="merrill-palmer_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

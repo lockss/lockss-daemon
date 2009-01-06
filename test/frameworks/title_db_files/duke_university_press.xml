@@ -1,0 +1,3644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Duke University Press">
+   <property name="name" value="All Duke University Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Duke University Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AmericanLiteraryScholarship1998">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 1998" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1998" />
+   </property>
+  </property>
+
+  <property name="AmericanLiteraryScholarship1999">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 1999" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1999" />
+   </property>
+  </property>
+
+  <property name="AmericanLiteraryScholarship2000">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 2000" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="AmericanLiteraryScholarship2001">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 2001" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="AmericanLiteraryScholarship2002">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 2002" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="AmericanLiteraryScholarship2003">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 2003" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="AmericanLiteraryScholarship2004">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literary Scholarship" />
+   <property name="title" value="American Literary Scholarship Volume 2004" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literary_scholarship" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="AmericanLiterature71">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literature" />
+   <property name="title" value="American Literature Volume 71" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="71" />
+   </property>
+  </property>
+
+  <property name="AmericanLiterature72">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literature" />
+   <property name="title" value="American Literature Volume 72" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="72" />
+   </property>
+  </property>
+
+  <property name="AmericanLiterature73">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literature" />
+   <property name="title" value="American Literature Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="AmericanLiterature74">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literature" />
+   <property name="title" value="American Literature Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="AmericanLiterature75">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literature" />
+   <property name="title" value="American Literature Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="AmericanLiterature76">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Literature" />
+   <property name="title" value="American Literature Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="AmericanSpeech74">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Speech" />
+   <property name="title" value="American Speech Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_speech" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="AmericanSpeech75">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Speech" />
+   <property name="title" value="American Speech Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_speech" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="AmericanSpeech76">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Speech" />
+   <property name="title" value="American Speech Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_speech" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="AmericanSpeech77">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Speech" />
+   <property name="title" value="American Speech Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_speech" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="AmericanSpeech78">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Speech" />
+   <property name="title" value="American Speech Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_speech" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+  <property name="AmericanSpeech79">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="American Speech" />
+   <property name="title" value="American Speech Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="american_speech" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="CommonKnowledge8">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Common Knowledge" />
+   <property name="title" value="Common Knowledge Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="common_knowledge" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="CommonKnowledge9">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Common Knowledge" />
+   <property name="title" value="Common Knowledge Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="common_knowledge" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="CommonKnowledge10">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Common Knowledge" />
+   <property name="title" value="Common Knowledge Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="common_knowledge" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="CommonKnowledge11">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Common Knowledge" />
+   <property name="title" value="Common Knowledge Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="common_knowledge" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="CommonKnowledge12">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Common Knowledge" />
+   <property name="title" value="Common Knowledge Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="common_knowledge" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="CommonKnowledge13">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Common Knowledge" />
+   <property name="title" value="Common Knowledge Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="common_knowledge" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast20">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast21">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast22">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast23">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast24">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast25">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast26">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+   <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="comparative_studies_of_south_asia_africa_and_the_middle_east" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="differencesAJournalofFeministCulturalStudies10">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="differences: A Journal of Feminist Cultural Studies" />
+   <property name="title" value="differences: A Journal of Feminist Cultural Studies Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="differences" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="differencesAJournalofFeministCulturalStudies11">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="differences: A Journal of Feminist Cultural Studies" />
+   <property name="title" value="differences: A Journal of Feminist Cultural Studies Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="differences" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="differencesAJournalofFeministCulturalStudies12">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="differences: A Journal of Feminist Cultural Studies" />
+   <property name="title" value="differences: A Journal of Feminist Cultural Studies Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="differences" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="differencesAJournalofFeministCulturalStudies13">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="differences: A Journal of Feminist Cultural Studies" />
+   <property name="title" value="differences: A Journal of Feminist Cultural Studies Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="differences" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="differencesAJournalofFeministCulturalStudies14">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="differences: A Journal of Feminist Cultural Studies" />
+   <property name="title" value="differences: A Journal of Feminist Cultural Studies Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="differences" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="differencesAJournalofFeministCulturalStudies15">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="differences: A Journal of Feminist Cultural Studies" />
+   <property name="title" value="differences: A Journal of Feminist Cultural Studies Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="differences" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife20">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife21">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife22">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife23">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife24">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife25">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife26">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife27">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife28">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife29">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife30">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="EighteenthCenturyLife31">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Eighteenth-Century Life" />
+   <property name="title" value="Eighteenth-Century Life Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="eighteenth-century_life" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="Ethnohistory46">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Ethnohistory" />
+   <property name="title" value="Ethnohistory Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ethnohistory" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="46" />
+   </property>
+  </property>
+
+  <property name="Ethnohistory47">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Ethnohistory" />
+   <property name="title" value="Ethnohistory Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ethnohistory" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="Ethnohistory48">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Ethnohistory" />
+   <property name="title" value="Ethnohistory Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ethnohistory" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="Ethnohistory49">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Ethnohistory" />
+   <property name="title" value="Ethnohistory Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ethnohistory" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="Ethnohistory50">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Ethnohistory" />
+   <property name="title" value="Ethnohistory Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ethnohistory" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="Ethnohistory51">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Ethnohistory" />
+   <property name="title" value="Ethnohistory Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="ethnohistory" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="FrenchHistoricalStudies22">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="French Historical Studies" />
+   <property name="title" value="French Historical Studies Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_historical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="FrenchHistoricalStudies23">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="French Historical Studies" />
+   <property name="title" value="French Historical Studies Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_historical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="FrenchHistoricalStudies24">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="French Historical Studies" />
+   <property name="title" value="French Historical Studies Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_historical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="FrenchHistoricalStudies25">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="French Historical Studies" />
+   <property name="title" value="French Historical Studies Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_historical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="FrenchHistoricalStudies26">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="French Historical Studies" />
+   <property name="title" value="French Historical Studies Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_historical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="FrenchHistoricalStudies27">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="French Historical Studies" />
+   <property name="title" value="French Historical Studies Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="french_historical_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies5">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies6">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies7">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies8">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies9">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies10">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies11">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies12">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="GLQAJournalofLesbianandGayStudies13">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+   <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_lesbian_and_gay_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="HispanicAmericanHistoricalReview79">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hispanic American Historical Review" />
+   <property name="title" value="Hispanic American Historical Review Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hispanic_american_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="HispanicAmericanHistoricalReview80">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hispanic American Historical Review" />
+   <property name="title" value="Hispanic American Historical Review Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hispanic_american_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="80" />
+   </property>
+  </property>
+
+  <property name="HispanicAmericanHistoricalReview81">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hispanic American Historical Review" />
+   <property name="title" value="Hispanic American Historical Review Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hispanic_american_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="81" />
+   </property>
+  </property>
+
+  <property name="HispanicAmericanHistoricalReview82">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hispanic American Historical Review" />
+   <property name="title" value="Hispanic American Historical Review Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hispanic_american_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="82" />
+   </property>
+  </property>
+
+  <property name="HispanicAmericanHistoricalReview83">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hispanic American Historical Review" />
+   <property name="title" value="Hispanic American Historical Review Volume 83" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hispanic_american_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="83" />
+   </property>
+  </property>
+
+  <property name="HispanicAmericanHistoricalReview84">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hispanic American Historical Review" />
+   <property name="title" value="Hispanic American Historical Review Volume 84" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hispanic_american_historical_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="84" />
+   </property>
+  </property>
+
+  <property name="HistoryofPoliticalEconomy31">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="History of Political Economy" />
+   <property name="title" value="History of Political Economy Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_of_political_economy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="HistoryofPoliticalEconomy32">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="History of Political Economy" />
+   <property name="title" value="History of Political Economy Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_of_political_economy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="HistoryofPoliticalEconomy33">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="History of Political Economy" />
+   <property name="title" value="History of Political Economy Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_of_political_economy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="HistoryofPoliticalEconomy34">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="History of Political Economy" />
+   <property name="title" value="History of Political Economy Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_of_political_economy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="HistoryofPoliticalEconomy35">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="History of Political Economy" />
+   <property name="title" value="History of Political Economy Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_of_political_economy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="HistoryofPoliticalEconomy36">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="History of Political Economy" />
+   <property name="title" value="History of Political Economy Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="history_of_political_economy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="HopscotchACulturalReview1">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hopscotch: A Cultural Review" />
+   <property name="title" value="Hopscotch: A Cultural Review Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hopscotch" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="HopscotchACulturalReview2">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Hopscotch: A Cultural Review" />
+   <property name="title" value="Hopscotch: A Cultural Review Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="hopscotch" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="JournalofHealthPoliticsPolicyandLaw24">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+   <property name="title" value="Journal of Health Politics, Policy and Law Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_health_politics_policy_and_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="JournalofHealthPoliticsPolicyandLaw25">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+   <property name="title" value="Journal of Health Politics, Policy and Law Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_health_politics_policy_and_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="JournalofHealthPoliticsPolicyandLaw26">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+   <property name="title" value="Journal of Health Politics, Policy and Law Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_health_politics_policy_and_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="JournalofHealthPoliticsPolicyandLaw27">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+   <property name="title" value="Journal of Health Politics, Policy and Law Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_health_politics_policy_and_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="JournalofHealthPoliticsPolicyandLaw28">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+   <property name="title" value="Journal of Health Politics, Policy and Law Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_health_politics_policy_and_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="JournalofHealthPoliticsPolicyandLaw29">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+   <property name="title" value="Journal of Health Politics, Policy and Law Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_health_politics_policy_and_law" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="JournalofMedievalandEarlyModernStudies30">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+   <property name="title" value="Journal of Medieval and Early Modern Studies Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_medieval_and_early_modern_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="JournalofMedievalandEarlyModernStudies31">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+   <property name="title" value="Journal of Medieval and Early Modern Studies Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_medieval_and_early_modern_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="JournalofMedievalandEarlyModernStudies32">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+   <property name="title" value="Journal of Medieval and Early Modern Studies Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_medieval_and_early_modern_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="JournalofMedievalandEarlyModernStudies33">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+   <property name="title" value="Journal of Medieval and Early Modern Studies Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_medieval_and_early_modern_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="JournalofMedievalandEarlyModernStudies34">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+   <property name="title" value="Journal of Medieval and Early Modern Studies Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="journal_of_medieval_and_early_modern_studies" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly10">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly11">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly12">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly13">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly14">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly15">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly16">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly17">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="MediterraneanQuarterly18">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Mediterranean Quarterly" />
+   <property name="title" value="Mediterranean Quarterly Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="mediterranean_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="MLQModernLanguageQuarterly60">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="MLQ: Modern Language Quarterly" />
+   <property name="title" value="MLQ: Modern Language Quarterly Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_language_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="MLQModernLanguageQuarterly61">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="MLQ: Modern Language Quarterly" />
+   <property name="title" value="MLQ: Modern Language Quarterly Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_language_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="MLQModernLanguageQuarterly62">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="MLQ: Modern Language Quarterly" />
+   <property name="title" value="MLQ: Modern Language Quarterly Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_language_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+  <property name="MLQModernLanguageQuarterly63">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="MLQ: Modern Language Quarterly" />
+   <property name="title" value="MLQ: Modern Language Quarterly Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_language_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="63" />
+   </property>
+  </property>
+
+  <property name="MLQModernLanguageQuarterly64">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="MLQ: Modern Language Quarterly" />
+   <property name="title" value="MLQ: Modern Language Quarterly Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_language_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="64" />
+   </property>
+  </property>
+
+  <property name="MLQModernLanguageQuarterly65">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="MLQ: Modern Language Quarterly" />
+   <property name="title" value="MLQ: Modern Language Quarterly Volume 65" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="modern_language_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="65" />
+   </property>
+  </property>
+
+  <property name="NepantlaViewsfromSouth1">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Nepantla: Views from South" />
+   <property name="title" value="Nepantla: Views from South Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="nepantla" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="NepantlaViewsfromSouth2">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Nepantla: Views from South" />
+   <property name="title" value="Nepantla: Views from South Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="nepantla" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="NepantlaViewsfromSouth3">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Nepantla: Views from South" />
+   <property name="title" value="Nepantla: Views from South Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="nepantla" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="NepantlaViewsfromSouth4">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Nepantla: Views from South" />
+   <property name="title" value="Nepantla: Views from South Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="nepantla" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="Pedagogy1">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="Pedagogy2">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="Pedagogy3">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="Pedagogy4">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="Pedagogy5">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="Pedagogy6">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="Pedagogy7">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Pedagogy" />
+   <property name="title" value="Pedagogy Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="pedagogy" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="PoeticsToday20">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Poetics Today" />
+   <property name="title" value="Poetics Today Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="poetics_today" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="PoeticsToday21">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Poetics Today" />
+   <property name="title" value="Poetics Today Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="poetics_today" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="PoeticsToday22">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Poetics Today" />
+   <property name="title" value="Poetics Today Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="poetics_today" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="PoeticsToday23">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Poetics Today" />
+   <property name="title" value="Poetics Today Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="poetics_today" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="PoeticsToday24">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Poetics Today" />
+   <property name="title" value="Poetics Today Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="poetics_today" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="PoeticsToday25">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Poetics Today" />
+   <property name="title" value="Poetics Today Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="poetics_today" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique7">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique8">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique9">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique10">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique11">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique12">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique13">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique14">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="positionseastasiaculturescritique15">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="positions: east asia cultures critique" />
+   <property name="title" value="positions: east asia cultures critique Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="positions" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="PublicCulture11">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Public Culture" />
+   <property name="title" value="Public Culture Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="public_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="PublicCulture12">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Public Culture" />
+   <property name="title" value="Public Culture Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="public_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="PublicCulture13">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Public Culture" />
+   <property name="title" value="Public Culture Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="public_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="PublicCulture14">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Public Culture" />
+   <property name="title" value="Public Culture Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="public_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="PublicCulture15">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Public Culture" />
+   <property name="title" value="Public Culture Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="public_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="PublicCulture16">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Public Culture" />
+   <property name="title" value="Public Culture Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="public_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview79">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview80">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="80" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview81">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="81" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview82">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="82" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview83">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 83" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="83" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview84">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 84" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="84" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview85">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="85" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview86">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="86" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview87">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="87" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview88">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="88" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview89">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 89" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="89" />
+   </property>
+  </property>
+
+  <property name="RadicalHistoryReview90">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Radical History Review" />
+   <property name="title" value="Radical History Review Volume 90" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="radical_history_review" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="90" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory23">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory24">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory25">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory26">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory27">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory28">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory29">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory30">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="SocialScienceHistory31">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Science History" />
+   <property name="title" value="Social Science History Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_science_history" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="SocialText17">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Text" />
+   <property name="title" value="Social Text Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_text" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="SocialText18">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Text" />
+   <property name="title" value="Social Text Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_text" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="SocialText19">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Text" />
+   <property name="title" value="Social Text Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_text" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="SocialText20">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Text" />
+   <property name="title" value="Social Text Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_text" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="SocialText21">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Text" />
+   <property name="title" value="Social Text Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_text" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="SocialText22">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Social Text" />
+   <property name="title" value="Social Text Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="social_text" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="TheSouthAtlanticQuarterly98">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="The South Atlantic Quarterly" />
+   <property name="title" value="The South Atlantic Quarterly Volume 98" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="south_atlantic_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="98" />
+   </property>
+  </property>
+
+  <property name="TheSouthAtlanticQuarterly99">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="The South Atlantic Quarterly" />
+   <property name="title" value="The South Atlantic Quarterly Volume 99" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="south_atlantic_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="99" />
+   </property>
+  </property>
+
+  <property name="TheSouthAtlanticQuarterly100">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="The South Atlantic Quarterly" />
+   <property name="title" value="The South Atlantic Quarterly Volume 100" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="south_atlantic_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="100" />
+   </property>
+  </property>
+
+  <property name="TheSouthAtlanticQuarterly101">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="The South Atlantic Quarterly" />
+   <property name="title" value="The South Atlantic Quarterly Volume 101" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="south_atlantic_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="101" />
+   </property>
+  </property>
+
+  <property name="TheSouthAtlanticQuarterly102">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="The South Atlantic Quarterly" />
+   <property name="title" value="The South Atlantic Quarterly Volume 102" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="south_atlantic_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="102" />
+   </property>
+  </property>
+
+  <property name="TheSouthAtlanticQuarterly103">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="The South Atlantic Quarterly" />
+   <property name="title" value="The South Atlantic Quarterly Volume 103" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="south_atlantic_quarterly" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="103" />
+   </property>
+  </property>
+
+  <property name="Theater29">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Theater" />
+   <property name="title" value="Theater Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="theater" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="Theater30">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Theater" />
+   <property name="title" value="Theater Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="theater" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="Theater31">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Theater" />
+   <property name="title" value="Theater Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="theater" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="Theater32">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Theater" />
+   <property name="title" value="Theater Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="theater" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="Theater33">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Theater" />
+   <property name="title" value="Theater Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="theater" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="Theater34">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Theater" />
+   <property name="title" value="Theater Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="theater" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="Transition9">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Transition" />
+   <property name="title" value="Transition Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transition" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="Transition10">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Transition" />
+   <property name="title" value="Transition Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="transition" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="CameraObscura15">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Camera Obscura" />
+   <property name="title" value="Camera Obscura Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="camera_obscura" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="CameraObscura16">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Camera Obscura" />
+   <property name="title" value="Camera Obscura Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="camera_obscura" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="CameraObscura17">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Camera Obscura" />
+   <property name="title" value="Camera Obscura Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="camera_obscura" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="CameraObscura18">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Camera Obscura" />
+   <property name="title" value="Camera Obscura Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="camera_obscura" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="CameraObscura19">
+   <property name="attributes.publisher" value="Duke University Press" />
+   <property name="journalTitle" value="Camera Obscura" />
+   <property name="title" value="Camera Obscura Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="camera_obscura" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
