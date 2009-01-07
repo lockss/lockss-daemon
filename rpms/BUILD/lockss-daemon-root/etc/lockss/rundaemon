@@ -81,6 +81,18 @@ fi
 
 #LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
 
+if [ "X$LOCKSS_CLEAR_TMPDIR" = Xyes ]; then
+  case "X${LOCKSS_TMPDIR}" in
+    X | X/tmp | X/var/tmp )
+	# don't clear if unset, or /tmp or /var/tmp
+	;;
+    * )
+	echo "Clearing ${LOCKSS_TMPDIR}" >> ${LOG_FILE}
+	(cd ${LOCKSS_TMPDIR}; rm -rf *) >> ${LOG_FILE}
+      ;;
+  esac
+fi
+
 cat >${LOCAL_TXT} <<EOF
 org.lockss.platform.localIPAddress=${LOCKSS_IPADDR}
 org.lockss.platform.v3.identity=${LOCKSS_V3_IDENTITY}
@@ -90,7 +102,8 @@ org.lockss.platform.sysadminemail=${LOCKSS_EMAIL}
 org.lockss.platform.accesssubnet=${LOCKSS_ACCESS_SUBNET}
 org.lockss.platform.smtphost=${LOCKSS_MAILHUB}
 org.lockss.platform.smtpport=25
-org.lockss.platform.logdirectory=${LOCKSS_HOME}/var/log/lockss
+org.lockss.platform.tmpDir=${LOCKSS_TMPDIR:-/tmp}
+org.lockss.platform.logdirectory=${LOCKSS_HOME}/var/log/${LOCKSS_USER}
 org.lockss.platform.logfile=daemon
 org.lockss.log.targets=org.lockss.util.FileTarget
 org.lockss.platform.fqdn=${LOCKSS_HOSTNAME}
@@ -99,6 +112,7 @@ org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
 org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
 EOF
+
 cd ${LOCKSS_HOME}
 echo "Starting daemon at `date`" >> ${LOG_FILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &

@@ -1,14 +1,18 @@
 	      Instructions for Configuring and Running LOCKSS
 
-This is a Linux version of the LOCKSS preservation daemon, also distributed
-as part of the LOCKSS Appliance (see
-http://www.lockss.org/installing/installing.htm).  This installation of
-LOCKSS may be less trustworthy than the appliance, depending on the security
-of the underlying Linux platform.
+This is a Linux version of the LOCKSS preservation daemon.  The LOCKSS
+daemon is usually distributed and used in conjunction with the LOCKSS
+platform, a secure, easy-to-administer, appliance-like bootable CD (see
+http://www.lockss.org/lockss/Installing_LOCKSS).
+
+The Linux version is functionally the same, but installing and maintaining
+the underlying operating system, and periodically upgrading the daemon, is
+the responsibility of the user.  The security and trustworthiness of LOCKSS
+on Linux depends on the security of the underlying Linux platform.
 
 Prerequisites:
 - Public (routable) IP address
-- Java 1.5
+- Java 1.5 or 1.6.
 
 Java:
 At present the daemon will only work with the Sun JDK or JRE.  It has been
@@ -20,7 +24,7 @@ After installing the RPM, run /etc/locks/hostconfig as root.  You will be
 asked for the following information.  Most values will default to reasonable
 guesses, or to their previous value if hostconfig has previously been run.
 hostconfig should also be run after upgrading to a new version of the LOCKSS
-daemon, in case any new configuration values are needed.
+daemon, as new configuration variables are occsionally added.
 
 - Fully qualified hostname (FQDN) of this machine.
 
@@ -58,17 +62,17 @@ daemon, in case any new configuration values are needed.
 - Configuration URL
     The URL (or local file name) from which the LOCKSS daemon will load
     extended configuration and tuning parameters.  Use the default value to
-    participate in the global LOCKSS preservation community.  Use a private
+    participate in the public LOCKSS preservation community.  Use a private
     config file to create your own preservation community.  May also be a
     string of the form "-p <url1> -p <url2> ..."  to load multiple config
     files.
 
 - Preservation group(s)
     Used to select group-specific options in the config file.  Use the
-    default value to participate in the global LOCKSS preservation
+    default value to participate in the public LOCKSS preservation
     community.  Multiple groups may be entered, separated by semicolon.
 
-- Cache storage directories
+- Content storage directories
     The full path of the directory under which LOCKSS will store
     configuration and preserved content.  (Or a semicolon-separated list of
     paths, if you have multiple disks/mount points.)  The directory must be
@@ -76,11 +80,17 @@ daemon, in case any new configuration values are needed.
     directory if necessary, but it won't handle all cases.  (E.g., parent
     dirs that aren't searchable (execute permission) by lockss.)
 
+- Temporary storage directory
+    In production use, LOCKSS may require a substantial amount space for
+    temporary files, especially if the preserved files are large.  /tmp or
+    /var/tmp may not be large enough.  The default is to create a tmp
+    directory below the first content storage directory.
+
 - User name for web UI administration
 - Password for web UI administration user admin
 
 The script will then echo the values and ask for confirmation, store the
-configuration and create any necessary cache directories.
+configuration and create any necessary directories.
 
 The LOCKSS daemon can be started by running "/etc/init.d/lockss start".
 To have the daemon start automatically at boot time run

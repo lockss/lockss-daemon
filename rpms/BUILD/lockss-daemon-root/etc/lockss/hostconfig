@@ -115,8 +115,17 @@ read_config() {
     IFS="${OLD_IFS}"
 }
 
+assign_first_element() {
+    local WORDS="$1"
+    local IFS=";"
+    FIRST=""
+    for WORD in ${WORDS}; do
+	FIRST="${WORD}"
+	break
+    done
+}
+
 init_cache_dirs() {
-    echo "Checking cache storage dirs"
     local DIRS="$1"
     local OLD_IFS=${IFS}
     IFS=";"
@@ -306,7 +315,7 @@ until is_yes ${CONFIG_OK}; do
     fi
 
     if [ "X${LOCKSS_PROXY_PORT}" = X ]; then
-	LOCKSS_PROXY_PORT=9090
+	LOCKSS_PROXY_PORT=8080
     fi
     ask_for_input "PROXY port" ${LOCKSS_PROXY_PORT}
     if [ "X${ANS}" != "X" ]; then
@@ -348,8 +357,14 @@ until is_yes ${CONFIG_OK}; do
 	LOCKSS_MAILHUB_PASSWORD="\"${MAILHUB_PASSWORD}\""
     fi
 
-    ask_for_input "E-mail address for administrator" ${LOCKSS_EMAIL}
-    LOCKSS_EMAIL="${ANS}"
+    EMAIL_OK=N
+    until is_yes ${EMAIL_OK}; do
+	ask_for_input "E-mail address for administrator" ${LOCKSS_EMAIL}
+	if [ "X${ANS}" != X ]; then
+	    LOCKSS_EMAIL="${ANS}"
+	    EMAIL_OK=Y
+	fi
+    done
 
     if [ "X${LOCKSS_JAVA_CMD}" = X ]; then
 	LOCKSS_JAVA_CMD=`which java 2>/dev/null`
@@ -372,8 +387,22 @@ until is_yes ${CONFIG_OK}; do
     ask_for_input "Preservation group(s)" "${LOCKSS_TEST_GROUP}"
     LOCKSS_TEST_GROUP="${ANS}"
 
-    ask_for_input "Cache storage directories" ${LOCKSS_DISK_PATHS}
-    LOCKSS_DISK_PATHS="${ANS}"
+    DISK_PATHS_OK=N
+    until is_yes ${DISK_PATHS_OK}; do
+	ask_for_input "Content storage directories" ${LOCKSS_DISK_PATHS}
+	if [ "X${ANS}" != X ]; then
+	    LOCKSS_DISK_PATHS="${ANS}"
+	    DISK_PATHS_OK=Y
+	fi
+    done
+
+    if [ "X${LOCKSS_TMPDIR}" = X ]; then
+	assign_first_element ${LOCKSS_DISK_PATHS}
+	FIRST=`echo ${FIRST} | sed 's^/$^^'`
+	LOCKSS_TMPDIR=${FIRST}/tmp
+    fi
+    ask_for_input "Temporary storage directory" ${LOCKSS_TMPDIR}
+    LOCKSS_TMPDIR="${ANS}"
 
     USER_OK=N
     until is_yes ${USER_OK}; do
@@ -400,7 +429,7 @@ until is_yes ${CONFIG_OK}; do
     done
 
 
-    TMP_CONFIG=/tmp/lockss.dat
+    TMP_CONFIG=/tmp/lockss.dat$$
 
     cat >${TMP_CONFIG} <<EOF
 LOCKSS_USER="${LOCKSS_USER}"
@@ -422,6 +451,8 @@ LOCKSS_ADMIN_USER=${LOCKSS_ADMIN_USER}
 LOCKSS_ADMIN_PASSWD=${LOCKSS_ADMIN_PASSWD}
 LOCKSS_PROXY_PORT=${LOCKSS_PROXY_PORT}
 LOCKSS_UI_PORT=${LOCKSS_UI_PORT}
+LOCKSS_TMPDIR=${LOCKSS_TMPDIR}
+LOCKSS_CLEAR_TMPDIR=${LOCKSS_CLEAR_TMPDIR:-yes}
 EOF
 
     echo
@@ -433,10 +464,22 @@ EOF
 	    echo "Config not installed, left in ${TMP_CONFIG}"
 	    exit 1
 	fi
+	echo "Checking content storage dirs"
 	if ! init_cache_dirs ${LOCKSS_DISK_PATHS}; then
 	    exit 1
 	fi
+
+	if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
+	    init_one_dir ${LOCKSS_HOME}/var/run
+	fi
+	if [ ! -d ${LOCKSS_HOME}/var/log/lockss ] ; then
+	    init_one_dir ${LOCKSS_HOME}/var/log/lockss
+	fi
+	if [ ! -d ${LOCKSS_TMPDIR} ] ; then
+	    init_one_dir ${LOCKSS_TMPDIR}
+	fi
 	echo Done
+
 	case ${OS_TYPE} in
 	SunOS)
 		echo ${LOCKSS_HOME}/etc/lockss/runforever to run the daemon.
@@ -456,11 +499,5 @@ EOF
 		;;
 	esac
 	CONFIG_OK=Y
-    fi
-    if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
-	init_one_dir ${LOCKSS_HOME}/var/run
-    fi
-    if [ ! -d ${LOCKSS_HOME}/var/log/lockss ] ; then
-	init_one_dir ${LOCKSS_HOME}/var/log/lockss
     fi
 done
