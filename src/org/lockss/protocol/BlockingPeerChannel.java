@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.22 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.23 2009-01-07 22:59:36 tlipkis Exp $
  */
 
 /*
@@ -406,6 +406,7 @@ class BlockingPeerChannel implements PeerChannel {
       connecter = wtConnecter = stopThread(connecter);
       reader = (ChannelReader)stopThread(reader);
       writer = stopThread(writer);
+      scomm.drainQueue(sendQueue);
       stateTrans(ChannelState.CLOSING, ChannelState.CLOSED);
     }
   }
