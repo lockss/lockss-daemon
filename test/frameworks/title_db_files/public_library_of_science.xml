@@ -48,10 +48,10 @@
  
  <property name="org.lockss.title">
 
-  <property name="PLOSGenetics1">
+  <property name="PLoSGenetics1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
-   <property name="title" value="PLOS Genetics Volume 1" />
+   <property name="title" value="PLoS Genetics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -68,10 +68,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSGenetics2">
+  <property name="PLoSGenetics2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
-   <property name="title" value="PLOS Genetics Volume 2" />
+   <property name="title" value="PLoS Genetics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -88,10 +88,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSGenetics3">
+  <property name="PLoSGenetics3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
-   <property name="title" value="PLOS Genetics Volume 3" />
+   <property name="title" value="PLoS Genetics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -108,10 +108,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSGenetics4">
+  <property name="PLoSGenetics4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
-   <property name="title" value="PLOS Genetics Volume 4" />
+   <property name="title" value="PLoS Genetics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -128,10 +128,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSComputationalBiology1">
+  <property name="PLoSComputationalBiology1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
-   <property name="title" value="PLOS Computational Biology Volume 1" />
+   <property name="title" value="PLoS Computational Biology Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -148,10 +148,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSComputationalBiology2">
+  <property name="PLoSComputationalBiology2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
-   <property name="title" value="PLOS Computational Biology Volume 2" />
+   <property name="title" value="PLoS Computational Biology Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -168,10 +168,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSComputationalBiology3">
+  <property name="PLoSComputationalBiology3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
-   <property name="title" value="PLOS Computational Biology Volume 3" />
+   <property name="title" value="PLoS Computational Biology Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -188,10 +188,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSComputationalBiology4">
+  <property name="PLoSComputationalBiology4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
-   <property name="title" value="PLOS Computational Biology Volume 4" />
+   <property name="title" value="PLoS Computational Biology Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -208,10 +208,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSOne1">
+  <property name="PLoSOne1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS One" />
-   <property name="title" value="PLOS One Volume 1" />
+   <property name="title" value="PLoS One Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -228,10 +228,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSOne2">
+  <property name="PLoSOne2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS One" />
-   <property name="title" value="PLOS One Volume 2" />
+   <property name="title" value="PLoS One Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -248,10 +248,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSOne3">
+  <property name="PLoSOne3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS One" />
-   <property name="title" value="PLOS One Volume 3" />
+   <property name="title" value="PLoS One Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -268,10 +268,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSOne1">
+  <property name="PLoSOne1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Neglected Tropical Deseases" />
-   <property name="title" value="PLOS One Volume 1" />
+   <property name="title" value="PLoS One Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -288,10 +288,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSOne2">
+  <property name="PLoSOne2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Neglected Tropical Deseases" />
-   <property name="title" value="PLOS One Volume 2" />
+   <property name="title" value="PLoS One Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -308,10 +308,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSPathogens1">
+  <property name="PLoSPathogens1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
-   <property name="title" value="PLOS Pathogens Volume 1" />
+   <property name="title" value="PLoS Pathogens Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -328,10 +328,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSPathogens2">
+  <property name="PLoSPathogens2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
-   <property name="title" value="PLOS Pathogens Volume 2" />
+   <property name="title" value="PLoS Pathogens Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -348,10 +348,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSPathogens3">
+  <property name="PLoSPathogens3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
-   <property name="title" value="PLOS Pathogens Volume 3" />
+   <property name="title" value="PLoS Pathogens Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -368,10 +368,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSPathogens4">
+  <property name="PLoSPathogens4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
-   <property name="title" value="PLOS Pathogens Volume 4" />
+   <property name="title" value="PLoS Pathogens Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -388,10 +388,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSClinicalTrials1">
+  <property name="PLoSClinicalTrials1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Hub Clinical Trials" />
-   <property name="title" value="PLOS Clinical Trials Volume 1" />
+   <property name="title" value="PLoS Clinical Trials Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -408,10 +408,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSClinicalTrials2">
+  <property name="PLoSClinicalTrials2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Hub Clinical Trials" />
-   <property name="title" value="PLOS Clinical Trials Volume 2" />
+   <property name="title" value="PLoS Clinical Trials Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -428,10 +428,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLOSClinicalTrials3">
+  <property name="PLoSClinicalTrials3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Hub Clinical Trials" />
-   <property name="title" value="PLOS Clinical Trials Volume 3" />
+   <property name="title" value="PLoS Clinical Trials Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
