@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.204 2008-11-25 09:48:49 tlipkis Exp $
+ * $Id: PollManager.java,v 1.205 2009-01-07 22:59:19 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import java.util.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
 import org.apache.commons.collections.map.*;
 import org.apache.commons.lang.builder.CompareToBuilder;
+import org.apache.commons.lang.mutable.MutableInt;
 
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -1194,6 +1195,7 @@ public class PollManager
   AuPeersMap makeAuPeersMap(Collection<String> auPeersList,
 			    IdentityManager idMgr) {
     AuPeersMap res = new AuPeersMap();
+    Map<Integer,MutableInt> hist = new TreeMap<Integer,MutableInt>();
     for (String oneAu : auPeersList) {
       List<String> lst = StringUtil.breakAt(oneAu, ',', -1, true, true);
       if (lst.size() >= 2) {
@@ -1212,8 +1214,24 @@ public class PollManager
 	  }
 	}
 	res.put(auid, peers);
+	int size = peers.size();
+	MutableInt n = hist.get(size);
+	if (n == null) {
+	  n = new MutableInt();
+	  hist.put(size, n);
+	}
+	n.add(1);
       }
     }
+    StringBuilder sb = new StringBuilder();
+    sb.append("AU peers hist:\nAUs at risk on\n\tPeers");
+    for (Map.Entry<Integer,MutableInt> ent : hist.entrySet()) {
+      sb.append("\n");
+      sb.append(ent.getKey());
+      sb.append("\t");
+      sb.append(ent.getValue());
+    }
+    log.debug(sb.toString());
     return res;
   }
 
