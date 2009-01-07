@@ -24,7 +24,7 @@ After installing the RPM, run /etc/locks/hostconfig as root.  You will be
 asked for the following information.  Most values will default to reasonable
 guesses, or to their previous value if hostconfig has previously been run.
 hostconfig should also be run after upgrading to a new version of the LOCKSS
-daemon, as new configuration variables are occsionally added.
+daemon, as new configuration variables are occasionally added.
 
 - Fully qualified hostname (FQDN) of this machine.
 
