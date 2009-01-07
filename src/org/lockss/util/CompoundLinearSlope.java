@@ -1,5 +1,5 @@
 /*
- * $Id: CompoundLinearSlope.java,v 1.4 2008-11-25 09:49:01 tlipkis Exp $
+ * $Id: CompoundLinearSlope.java,v 1.5 2009-01-07 22:59:52 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,24 @@ public class CompoundLinearSlope {
     }
 
     public String toString() {
-      return "(" + x + "," + y + ")";
+      StringBuilder sb = new StringBuilder();
+      sb.append("(");
+      if (x == Long.MIN_VALUE) {
+	sb.append("-INF");
+      } else if (x == Long.MAX_VALUE) {
+	sb.append("+INF");
+      } else {
+	sb.append(Long.toString(x));
+	if (x >= Constants.HOUR) {
+	  sb.append("(");
+	  sb.append(StringUtil.timeIntervalToString(x));
+	  sb.append(")");
+	}
+      }
+      sb.append(",");
+      sb.append(Double.toString(y));
+      sb.append(")");
+      return sb.toString();
     }
   }
 
@@ -76,7 +93,7 @@ public class CompoundLinearSlope {
       }
       points[ix++] = p;
     }
-    points[ix] = new Point(Long.MAX_VALUE, points[ix - 2].y);
+    points[ix] = new Point(Long.MAX_VALUE, points[ix - 1].y);
   }
 
   /** Return the Y value on the slope at a point on the X axis */
