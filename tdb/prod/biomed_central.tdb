@@ -1596,12 +1596,12 @@
       param[base_url] = http://www.clinicalmolecularallergy.com/
       param[journal_issn] = 1476-7961
 
-      au < testing ; Clinical and Molecular Allergy Volume 1 ; 1 >
-      au < testing ; Clinical and Molecular Allergy Volume 2 ; 2 >
-      au < testing ; Clinical and Molecular Allergy Volume 3 ; 3 >
-      au < testing ; Clinical and Molecular Allergy Volume 4 ; 4 >
-      au < testing ; Clinical and Molecular Allergy Volume 5 ; 5 >
-      au < testing ; Clinical and Molecular Allergy Volume 6 ; 6 >
+      au < ready ; Clinical and Molecular Allergy Volume 1 ; 1 >
+      au < ready ; Clinical and Molecular Allergy Volume 2 ; 2 >
+      au < ready ; Clinical and Molecular Allergy Volume 3 ; 3 >
+      au < ready ; Clinical and Molecular Allergy Volume 4 ; 4 >
+      au < ready ; Clinical and Molecular Allergy Volume 5 ; 5 >
+      au < ready ; Clinical and Molecular Allergy Volume 6 ; 6 >
     }
 
 
@@ -1717,7 +1717,7 @@
       au < ready ; Environmental Health Volume 4 ; 4 >
       au < ready ; Environmental Health Volume 5 ; 5 >
       au < ready ; Environmental Health Volume 6 ; 6 >
-      au < manifest ; Environmental Health Volume 7 ; 7 >
+      au < testing ; Environmental Health Volume 7 ; 7 >
     }
 
 
@@ -1786,15 +1786,15 @@
       param[base_url] = http://genomebiology.com/
       param[journal_issn] = 1465-6906
 
-      au < manifest ; Genome Biology Volume 1 ; 1 >
-      au < manifest ; Genome Biology Volume 2 ; 2 >
-      au < manifest ; Genome Biology Volume 3 ; 3 >
-      au < manifest ; Genome Biology Volume 4 ; 4 >
-      au < manifest ; Genome Biology Volume 5 ; 5 >
-      au < manifest ; Genome Biology Volume 6 ; 6 >
-      au < manifest ; Genome Biology Volume 7 ; 7 >
-      au < manifest ; Genome Biology Volume 8 ; 8 >
-      au < manifest ; Genome Biology Volume 9 ; 9 >
+      au < testing ; Genome Biology Volume 1 ; 1 >
+      au < testing ; Genome Biology Volume 2 ; 2 >
+      au < testing ; Genome Biology Volume 3 ; 3 >
+      au < testing ; Genome Biology Volume 4 ; 4 >
+      au < testing ; Genome Biology Volume 5 ; 5 >
+      au < testing ; Genome Biology Volume 6 ; 6 >
+      au < testing ; Genome Biology Volume 7 ; 7 >
+      au < testing ; Genome Biology Volume 8 ; 8 >
+      au < testing ; Genome Biology Volume 9 ; 9 >
     }
 
 
