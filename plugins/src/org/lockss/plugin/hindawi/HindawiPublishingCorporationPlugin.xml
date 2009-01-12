@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Hindawi Publishing Corporation Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+    <string>&quot;Hindawi Publishing Corporation Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s&quot;, base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -26,13 +26,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, download_url_host</string>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, download_url</string>
       <string>1,&quot;^%sjournals/%s/volume-%s/$&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%slockss.html$&quot;, base_url</string>
+      <string>1,&quot;^(%s|%s)lockss.html$&quot;, base_url, download_url</string>
       <string>1,&quot;^%sjournals/%s/volume-%s/(regular(\.[0-9]+)?|si\.[0-9]+)\.html$&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=.*&amp;e=cit$&quot;, base_url</string>
-      <string>1,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=&quot;, base_url</string>
+      <string>1,&quot;^(%s|%s)(GetArticle|GetPDF)\.aspx\?doi=&quot;, base_url, download_url</string>
       <string>1,&quot;^%sfloats/[^/]+/figures/&quot;, base_url</string>
     </list>
   </entry>
@@ -42,7 +42,10 @@
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>&quot;%slockss.html&quot;, base_url</string>
+    <list>
+      <string>&quot;%slockss.html&quot;, base_url</string>
+      <string>&quot;%slockss.html&quot;, download_url</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -68,6 +71,15 @@
         <key>base_url</key>
         <displayName>Base URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>download_url</key>
+        <displayName>Download URL</displayName>
+        <description>The base URL for the secondary host (PDF downloads, etc.)</description>
         <type>3</type>
         <size>40</size>
         <definitional>true</definitional>

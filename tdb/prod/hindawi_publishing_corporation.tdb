@@ -8,6 +8,7 @@
   plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
   rights = openaccess
   param[base_url] = http://www.hindawi.com/
+  param[download_url] = http://download.hindawi.com/
 
   {
     title <
