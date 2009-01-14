@@ -1632,17 +1632,17 @@
       param[base_url] = http://ccforum.com/
       param[journal_issn] = 1364-8535
 
-      au < testing ; Critical Care Volume 1 ; 1 >
-      au < testing ; Critical Care Volume 2 ; 2 >
-      au < testing ; Critical Care Volume 3 ; 3 >
+      au < ready ; Critical Care Volume 1 ; 1 >
+      au < ready ; Critical Care Volume 2 ; 2 >
+      au < ready ; Critical Care Volume 3 ; 3 >
       au < testing ; Critical Care Volume 4 ; 4 >
-      au < testing ; Critical Care Volume 5 ; 5 >
+      au < ready ; Critical Care Volume 5 ; 5 >
       au < testing ; Critical Care Volume 6 ; 6 >
-      au < testing ; Critical Care Volume 7 ; 7 >
+      au < ready ; Critical Care Volume 7 ; 7 >
       au < testing ; Critical Care Volume 8 ; 8 >
-      au < testing ; Critical Care Volume 9 ; 9 >
-      au < testing ; Critical Care Volume 10 ; 10 >
-      au < testing ; Critical Care Volume 11 ; 11 >
+      au < ready ; Critical Care Volume 9 ; 9 >
+      au < ready ; Critical Care Volume 10 ; 10 >
+      au < ready ; Critical Care Volume 11 ; 11 >
       au < testing ; Critical Care Volume 12 ; 12 >
     }
 
@@ -1717,7 +1717,7 @@
       au < ready ; Environmental Health Volume 4 ; 4 >
       au < ready ; Environmental Health Volume 5 ; 5 >
       au < ready ; Environmental Health Volume 6 ; 6 >
-      au < testing ; Environmental Health Volume 7 ; 7 >
+      au < ready ; Environmental Health Volume 7 ; 7 >
     }
 
 
@@ -1786,15 +1786,15 @@
       param[base_url] = http://genomebiology.com/
       param[journal_issn] = 1465-6906
 
-      au < testing ; Genome Biology Volume 1 ; 1 >
-      au < testing ; Genome Biology Volume 2 ; 2 >
-      au < testing ; Genome Biology Volume 3 ; 3 >
-      au < testing ; Genome Biology Volume 4 ; 4 >
-      au < testing ; Genome Biology Volume 5 ; 5 >
-      au < testing ; Genome Biology Volume 6 ; 6 >
-      au < testing ; Genome Biology Volume 7 ; 7 >
-      au < testing ; Genome Biology Volume 8 ; 8 >
-      au < testing ; Genome Biology Volume 9 ; 9 >
+      au < ready ; Genome Biology Volume 1 ; 1 >
+      au < ready ; Genome Biology Volume 2 ; 2 >
+      au < ready ; Genome Biology Volume 3 ; 3 >
+      au < ready ; Genome Biology Volume 4 ; 4 >
+      au < ready ; Genome Biology Volume 5 ; 5 >
+      au < ready ; Genome Biology Volume 6 ; 6 >
+      au < ready ; Genome Biology Volume 7 ; 7 >
+      au < ready ; Genome Biology Volume 8 ; 8 >
+      au < ready ; Genome Biology Volume 9 ; 9 >
     }
 
 
@@ -1808,15 +1808,15 @@
       param[base_url] = http://www.geochemicaltransactions.com/
       param[journal_issn] = 1467-4866
 
-      au < manifest ; Geochemical Transactions Volume 1 ; 1 >
-      au < manifest ; Geochemical Transactions Volume 2 ; 2 >
-      au < manifest ; Geochemical Transactions Volume 3 ; 3 >
-      au < manifest ; Geochemical Transactions Volume 4 ; 4 >
-      au < manifest ; Geochemical Transactions Volume 5 ; 5 >
-      au < manifest ; Geochemical Transactions Volume 6 ; 6 >
-      au < manifest ; Geochemical Transactions Volume 7 ; 7 >
-      au < manifest ; Geochemical Transactions Volume 8 ; 8 >
-      au < manifest ; Geochemical Transactions Volume 9 ; 9 >
+      au < ready ; Geochemical Transactions Volume 1 ; 1 >
+      au < ready ; Geochemical Transactions Volume 2 ; 2 >
+      au < ready ; Geochemical Transactions Volume 3 ; 3 >
+      au < ready ; Geochemical Transactions Volume 4 ; 4 >
+      au < ready ; Geochemical Transactions Volume 5 ; 5 >
+      au < ready ; Geochemical Transactions Volume 6 ; 6 >
+      au < ready ; Geochemical Transactions Volume 7 ; 7 >
+      au < ready ; Geochemical Transactions Volume 8 ; 8 >
+      au < ready ; Geochemical Transactions Volume 9 ; 9 >
     }
 
 
