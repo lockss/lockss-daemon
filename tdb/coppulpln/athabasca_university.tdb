@@ -59,32 +59,32 @@
     param[base_url] = http://trumpeter.athabascau.ca/
     param[journal_id] = trumpet
 
-    au < testing ; The Trumpeter Volume 1 (1983) ; 1983 >
-    au < testing ; The Trumpeter Volume 1 (1984) ; 1984 >
-    au < testing ; The Trumpeter Volume 2 ; 1985 >
-    au < testing ; The Trumpeter Volume 3 ; 1986 >
-    au < testing ; The Trumpeter Volume 4 ; 1987 >
-    au < testing ; The Trumpeter Volume 5 ; 1988 >
-    au < testing ; The Trumpeter Volume 6 ; 1989 >
-    au < manifest ; The Trumpeter Volume 7 ; 1990 >
-    au < manifest ; The Trumpeter Volume 8 ; 1991 >
-    au < manifest ; The Trumpeter Volume 9 ; 1992 >
-    au < manifest ; The Trumpeter Volume 10 ; 1993 >
-    au < manifest ; The Trumpeter Volume 11 ; 1994 >
-    au < manifest ; The Trumpeter Volume 12 ; 1995 >
-    au < manifest ; The Trumpeter Volume 13 ; 1996 >
-    au < manifest ; The Trumpeter Volume 14 ; 1997 >
-    au < manifest ; The Trumpeter Volume 15 ; 1998 >
+    au < ready ; The Trumpeter Volume 1 (1983) ; 1983 >
+    au < ready ; The Trumpeter Volume 1 (1984) ; 1984 >
+    au < ready ; The Trumpeter Volume 2 ; 1985 >
+    au < ready ; The Trumpeter Volume 3 ; 1986 >
+    au < ready ; The Trumpeter Volume 4 ; 1987 >
+    au < ready ; The Trumpeter Volume 5 ; 1988 >
+    au < ready ; The Trumpeter Volume 6 ; 1989 >
+    au < ready ; The Trumpeter Volume 7 ; 1990 >
+    au < ready ; The Trumpeter Volume 8 ; 1991 >
+    au < ready ; The Trumpeter Volume 9 ; 1992 >
+    au < ready ; The Trumpeter Volume 10 ; 1993 >
+    au < ready ; The Trumpeter Volume 11 ; 1994 >
+    au < ready ; The Trumpeter Volume 12 ; 1995 >
+    au < ready ; The Trumpeter Volume 13 ; 1996 >
+    au < ready ; The Trumpeter Volume 14 ; 1997 >
+    au < ready ; The Trumpeter Volume 15 ; 1998 >
     au < does_not_exist ; The Trumpeter 1999 ; 1999 >
-    au < manifest ; The Trumpeter Volume 16 ; 2000 >
-    au < manifest ; The Trumpeter Volume 17 ; 2001 >
-    au < manifest ; The Trumpeter Volume 18 ; 2002 >
-    au < manifest ; The Trumpeter Volume 19 ; 2003 >
-    au < manifest ; The Trumpeter Volume 20 ; 2004 >
-    au < manifest ; The Trumpeter Volume 21 ; 2005 >
-    au < manifest ; The Trumpeter Volume 22 ; 2006 >
-    au < manifest ; The Trumpeter Volume 23 ; 2007 >
-    au < manifest ; The Trumpeter Volume 24 ; 2008 >      
+    au < testing ; The Trumpeter Volume 16 ; 2000 >
+    au < testing ; The Trumpeter Volume 17 ; 2001 >
+    au < testing ; The Trumpeter Volume 18 ; 2002 >
+    au < testing ; The Trumpeter Volume 19 ; 2003 >
+    au < testing ; The Trumpeter Volume 20 ; 2004 >
+    au < testing ; The Trumpeter Volume 21 ; 2005 >
+    au < testing ; The Trumpeter Volume 22 ; 2006 >
+    au < testing ; The Trumpeter Volume 23 ; 2007 >
+    au < testing ; The Trumpeter Volume 24 ; 2008 >      
     
   } 
 }

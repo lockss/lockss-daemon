@@ -16,10 +16,10 @@
     param[base_url] = http://www.plosgenetics.org/    
     param[journal_id] = genetics
 
-    au < testing ; PLoS Genetics Volume 1 ; 2005 >
-    au < testing ; PLoS Genetics Volume 2 ; 2006 >
-    au < testing ; PLoS Genetics Volume 3 ; 2007 >
-    au < testing ; PLoS Genetics Volume 4 ; 2008 >
+    au < ready ; PLOS Genetics Volume 1 ; 2005 >
+    au < ready ; PLOS Genetics Volume 2 ; 2006 >
+    au < ready ; PLOS Genetics Volume 3 ; 2007 >
+    au < ready ; PLOS Genetics Volume 4 ; 2008 >
 
   }
 
@@ -31,10 +31,10 @@
     param[base_url] = http://www.ploscompbiol.org/    
     param[journal_id] = compbiol
 
-    au < exists ; PLoS Computational Biology Volume 1 ; 2005 >
-    au < exists ; PLoS Computational Biology Volume 2 ; 2006 >
-    au < exists ; PLoS Computational Biology Volume 3 ; 2007 >
-    au < exists ; PLoS Computational Biology Volume 4 ; 2008 >
+    au < testing ; PLOS Computational Biology Volume 1 ; 2005 >
+    au < testing ; PLOS Computational Biology Volume 2 ; 2006 >
+    au < testing ; PLOS Computational Biology Volume 3 ; 2007 >
+    au < testing ; PLOS Computational Biology Volume 4 ; 2008 >
 
   }
 
@@ -47,9 +47,9 @@
     param[base_url] = http://www.plosone.org/    
     param[journal_id] = plosone
 
-    au < exists ; PLoS One Volume 1 ; 2006 >
-    au < exists ; PLoS One Volume 2 ; 2007 >
-    au < exists ; PLoS One Volume 3 ; 2008 >
+    au < testing ; PLOS One Volume 1 ; 2006 >
+    au < testing ; PLOS One Volume 2 ; 2007 >
+    au < testing ; PLOS One Volume 3 ; 2008 >
 
   }
   
@@ -62,8 +62,8 @@
     param[base_url] = http://www.plosntds.org/    
     param[journal_id] = ntd
 
-    au < exists ; PLoS One Volume 1 ; 2007 >
-    au < exists ; PLoS One Volume 2 ; 2008 >
+    au < exists ; PLOS One Volume 1 ; 2007 >
+    au < exists ; PLOS One Volume 2 ; 2008 >
 
   }
   
@@ -76,10 +76,10 @@
     param[base_url] = http://www.plospathogens.org/    
     param[journal_id] = pathogens
 
-    au < exists ; PLoS Pathogens Volume 1 ; 2006 >
-    au < exists ; PLoS Pathogens Volume 2 ; 2006 >
-    au < exists ; PLoS Pathogens Volume 3 ; 2007 >
-    au < exists ; PLoS Pathogens Volume 4 ; 2008 >
+    au < exists ; PLOS Pathogens Volume 1 ; 2006 >
+    au < exists ; PLOS Pathogens Volume 2 ; 2006 >
+    au < exists ; PLOS Pathogens Volume 3 ; 2007 >
+    au < exists ; PLOS Pathogens Volume 4 ; 2008 >
 
   }
   
@@ -92,9 +92,9 @@
     param[base_url] = http://clinicaltrials.ploshubs.org/    
     param[journal_id] = clinicalTrials
 
-    au < exists ; PLoS Clinical Trials Volume 1 ; 2006 >
-    au < exists ; PLoS Clinical Trials Volume 2 ; 2007 >
-    au < exists ; PLoS Clinical Trials Volume 3 ; 2008 >
+    au < exists ; PLOS Clinical Trials Volume 1 ; 2006 >
+    au < exists ; PLOS Clinical Trials Volume 2 ; 2007 >
+    au < exists ; PLOS Clinical Trials Volume 3 ; 2008 >
 
   }
 }
