@@ -55,12 +55,12 @@
     plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin
 
     au < exists ; Congressional Hearings, 104th Congress ; 104 >
-    au < releasing ; Congressional Hearings, 105th Congress ; 105 >
-    au < releasing ; Congressional Hearings, 106th Congress ; 106 >
+    au < released ; Congressional Hearings, 105th Congress ; 105 >
+    au < released ; Congressional Hearings, 106th Congress ; 106 >
     au < not_ready ; Congressional Hearings, 107th Congress ; 107 >
-    au < releasing ; Congressional Hearings, 108th Congress ; 108 >
-    au < releasing ; Congressional Hearings, 109th Congress ; 109 >
-    au < releasing ; Congressional Hearings, 110th Congress ; 110 >
+    au < released ; Congressional Hearings, 108th Congress ; 108 >
+    au < released ; Congressional Hearings, 109th Congress ; 109 >
+    au < released ; Congressional Hearings, 110th Congress ; 110 >
 
   }
 
@@ -87,15 +87,15 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin
 
-    au < releasing ; House Journal, 1991 ; 1991 >
-    au < releasing ; House Journal, 1992 ; 1992 >
-    au < releasing ; House Journal, 1993 ; 1993 >
-    au < releasing ; House Journal, 1994 ; 1994 >
-    au < releasing ; House Journal, 1995 ; 1995 >
-    au < releasing ; House Journal, 1996 ; 1996 >
-    au < releasing ; House Journal, 1997 ; 1997 >
-    au < releasing ; House Journal, 1998 ; 1998 >
-    au < releasing ; House Journal, 1999 ; 1999 >    
+    au < released ; House Journal, 1991 ; 1991 >
+    au < released ; House Journal, 1992 ; 1992 >
+    au < released ; House Journal, 1993 ; 1993 >
+    au < released ; House Journal, 1994 ; 1994 >
+    au < released ; House Journal, 1995 ; 1995 >
+    au < released ; House Journal, 1996 ; 1996 >
+    au < released ; House Journal, 1997 ; 1997 >
+    au < released ; House Journal, 1998 ; 1998 >
+    au < released ; House Journal, 1999 ; 1999 >    
  
   }
   
@@ -108,12 +108,12 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin
 
-    au < releasing ; Public and Private Laws, 104th Congress ; 104 >
-    au < releasing ; Public and Private Laws, 105th Congress ; 105 >
-    au < releasing ; Public and Private Laws, 106th Congress ; 106 >
-    au < releasing ; Public and Private Laws, 107th Congress ; 107 >
-    au < releasing ; Public and Private Laws, 108th Congress ; 108 >
-    au < releasing ; Public and Private Laws, 109th Congress ; 109 > 
+    au < released ; Public and Private Laws, 104th Congress ; 104 >
+    au < released ; Public and Private Laws, 105th Congress ; 105 >
+    au < released ; Public and Private Laws, 106th Congress ; 106 >
+    au < released ; Public and Private Laws, 107th Congress ; 107 >
+    au < released ; Public and Private Laws, 108th Congress ; 108 >
+    au < released ; Public and Private Laws, 109th Congress ; 109 > 
 
   }
   
@@ -126,17 +126,17 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin
 
-    au < releasing ; U.S. Government Manual, 1997 ; 1997 >
-    au < releasing ; U.S. Government Manual, 1998 ; 1998 >
-    au < releasing ; U.S. Government Manual, 1999 ; 1999 >
-    au < releasing ; U.S. Government Manual, 2000 ; 2000 >
-    au < releasing ; U.S. Government Manual, 2001 ; 2001 >
-    au < releasing ; U.S. Government Manual, 2002 ; 2002 >
-    au < releasing ; U.S. Government Manual, 2003 ; 2003 >
-    au < releasing ; U.S. Government Manual, 2004 ; 2004 >
-    au < releasing ; U.S. Government Manual, 2005 ; 2005 >
-    au < releasing ; U.S. Government Manual, 2006 ; 2006 >
-    au < releasing ; U.S. Government Manual, 2007 ; 2007 >
+    au < released ; U.S. Government Manual, 1997 ; 1997 >
+    au < released ; U.S. Government Manual, 1998 ; 1998 >
+    au < released ; U.S. Government Manual, 1999 ; 1999 >
+    au < released ; U.S. Government Manual, 2000 ; 2000 >
+    au < released ; U.S. Government Manual, 2001 ; 2001 >
+    au < released ; U.S. Government Manual, 2002 ; 2002 >
+    au < released ; U.S. Government Manual, 2003 ; 2003 >
+    au < released ; U.S. Government Manual, 2004 ; 2004 >
+    au < released ; U.S. Government Manual, 2005 ; 2005 >
+    au < released ; U.S. Government Manual, 2006 ; 2006 >
+    au < released ; U.S. Government Manual, 2007 ; 2007 >
    
   }
 
@@ -149,12 +149,12 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
 
-    au < releasing ; Congressional Prints, 105th Congress ; 105 >
-    au < releasing ; Congressional Prints, 106th Congress ; 106 >
-    au < releasing ; Congressional Prints, 107th Congress ; 107 >
-    au < releasing ; Congressional Prints, 108th Congress ; 108 >
-    au < releasing ; Congressional Prints, 109th Congress ; 109 > 
-    au < releasing ; Congressional Prints, 110th Congress ; 110 >
+    au < released ; Congressional Prints, 105th Congress ; 105 >
+    au < released ; Congressional Prints, 106th Congress ; 106 >
+    au < released ; Congressional Prints, 107th Congress ; 107 >
+    au < released ; Congressional Prints, 108th Congress ; 108 >
+    au < released ; Congressional Prints, 109th Congress ; 109 > 
+    au < released ; Congressional Prints, 110th Congress ; 110 >
 
   }
   
