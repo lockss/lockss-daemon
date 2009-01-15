@@ -15,14 +15,14 @@
     param[base_url] = http://www.irrodl.org/
     param[journal_id] = irrodl
 
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 1 (2000); 2000 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 1-2 (2001); 2001 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 2-3 (2002); 2002 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 4; 2003 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 5; 2004 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 6; 2005 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 7; 2006 >
-    au < ready ; The International Review of Research in Open and Distance Learning Volume 8; 2007 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 1 (2000); 2000 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 1-2 (2001); 2001 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 2-3 (2002); 2002 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 4; 2003 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 5; 2004 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 6; 2005 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 7; 2006 >
+    au < releasing ; The International Review of Research in Open and Distance Learning Volume 8; 2007 >
     au < not_ready ; The International Review of Research in Open and Distance Learning Volume 9; 2008 >
 
   }
@@ -59,22 +59,22 @@
     param[base_url] = http://trumpeter.athabascau.ca/
     param[journal_id] = trumpet
 
-    au < ready ; The Trumpeter Volume 1 (1983) ; 1983 >
-    au < ready ; The Trumpeter Volume 1 (1984) ; 1984 >
-    au < ready ; The Trumpeter Volume 2 ; 1985 >
-    au < ready ; The Trumpeter Volume 3 ; 1986 >
-    au < ready ; The Trumpeter Volume 4 ; 1987 >
-    au < ready ; The Trumpeter Volume 5 ; 1988 >
-    au < ready ; The Trumpeter Volume 6 ; 1989 >
-    au < ready ; The Trumpeter Volume 7 ; 1990 >
-    au < ready ; The Trumpeter Volume 8 ; 1991 >
-    au < ready ; The Trumpeter Volume 9 ; 1992 >
-    au < ready ; The Trumpeter Volume 10 ; 1993 >
-    au < ready ; The Trumpeter Volume 11 ; 1994 >
-    au < ready ; The Trumpeter Volume 12 ; 1995 >
-    au < ready ; The Trumpeter Volume 13 ; 1996 >
-    au < ready ; The Trumpeter Volume 14 ; 1997 >
-    au < ready ; The Trumpeter Volume 15 ; 1998 >
+    au < releasing ; The Trumpeter Volume 1 (1983) ; 1983 >
+    au < releasing ; The Trumpeter Volume 1 (1984) ; 1984 >
+    au < releasing ; The Trumpeter Volume 2 ; 1985 >
+    au < releasing ; The Trumpeter Volume 3 ; 1986 >
+    au < releasing ; The Trumpeter Volume 4 ; 1987 >
+    au < releasing ; The Trumpeter Volume 5 ; 1988 >
+    au < releasing ; The Trumpeter Volume 6 ; 1989 >
+    au < releasing ; The Trumpeter Volume 7 ; 1990 >
+    au < releasing ; The Trumpeter Volume 8 ; 1991 >
+    au < releasing ; The Trumpeter Volume 9 ; 1992 >
+    au < releasing ; The Trumpeter Volume 10 ; 1993 >
+    au < releasing ; The Trumpeter Volume 11 ; 1994 >
+    au < releasing ; The Trumpeter Volume 12 ; 1995 >
+    au < releasing ; The Trumpeter Volume 13 ; 1996 >
+    au < releasing ; The Trumpeter Volume 14 ; 1997 >
+    au < releasing ; The Trumpeter Volume 15 ; 1998 >
     au < does_not_exist ; The Trumpeter 1999 ; 1999 >
     au < testing ; The Trumpeter Volume 16 ; 2000 >
     au < testing ; The Trumpeter Volume 17 ; 2001 >
