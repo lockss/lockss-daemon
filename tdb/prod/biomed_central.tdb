@@ -1635,15 +1635,15 @@
       au < ready ; Critical Care Volume 1 ; 1 >
       au < ready ; Critical Care Volume 2 ; 2 >
       au < ready ; Critical Care Volume 3 ; 3 >
-      au < testing ; Critical Care Volume 4 ; 4 >
+      au < ready ; Critical Care Volume 4 ; 4 >
       au < ready ; Critical Care Volume 5 ; 5 >
-      au < testing ; Critical Care Volume 6 ; 6 >
+      au < ready ; Critical Care Volume 6 ; 6 >
       au < ready ; Critical Care Volume 7 ; 7 >
-      au < testing ; Critical Care Volume 8 ; 8 >
+      au < ready ; Critical Care Volume 8 ; 8 >
       au < ready ; Critical Care Volume 9 ; 9 >
       au < ready ; Critical Care Volume 10 ; 10 >
       au < ready ; Critical Care Volume 11 ; 11 >
-      au < testing ; Critical Care Volume 12 ; 12 >
+      au < ready ; Critical Care Volume 12 ; 12 >
     }
 
 
@@ -1830,10 +1830,10 @@
       param[base_url] = http://www.globalizationandhealth.com/
       param[journal_issn] = 1744-8603
 
-      au < manifest ; Globalization and Health Volume 1 ; 1 >
-      au < manifest ; Globalization and Health Volume 2 ; 2 >
-      au < manifest ; Globalization and Health Volume 3 ; 3 >
-      au < manifest ; Globalization and Health Volume 4 ; 4 >
+      au < ready ; Globalization and Health Volume 1 ; 1 >
+      au < ready ; Globalization and Health Volume 2 ; 2 >
+      au < ready ; Globalization and Health Volume 3 ; 3 >
+      au < ready ; Globalization and Health Volume 4 ; 4 >
     }
 
 
@@ -1847,11 +1847,11 @@
       param[base_url] = http://www.harmreductionjournal.com/
       param[journal_issn] = 1477-7517
 
-      au < manifest ; Harm Reduction Journal Volume 1 ; 1 >
-      au < manifest ; Harm Reduction Journal Volume 2 ; 2 >
-      au < manifest ; Harm Reduction Journal Volume 3 ; 3 >
-      au < manifest ; Harm Reduction Journal Volume 4 ; 4 >
-      au < manifest ; Harm Reduction Journal Volume 5 ; 5 >
+      au < ready ; Harm Reduction Journal Volume 1 ; 1 >
+      au < ready ; Harm Reduction Journal Volume 2 ; 2 >
+      au < ready ; Harm Reduction Journal Volume 3 ; 3 >
+      au < ready ; Harm Reduction Journal Volume 4 ; 4 >
+      au < ready ; Harm Reduction Journal Volume 5 ; 5 >
     }
 
 
@@ -1865,10 +1865,10 @@
       param[base_url] = http://www.head-face-med.com/
       param[journal_issn] = 1746-160X
 
-      au < manifest ; Head & Face Medicine Volume 1 ; 1 >
-      au < manifest ; Head & Face Medicine Volume 2 ; 2 >
-      au < manifest ; Head & Face Medicine Volume 3 ; 3 >
-      au < manifest ; Head & Face Medicine Volume 4 ; 4 >
+      au < testing ; Head & Face Medicine Volume 1 ; 1 >
+      au < testing ; Head & Face Medicine Volume 2 ; 2 >
+      au < testing ; Head & Face Medicine Volume 3 ; 3 >
+      au < testing ; Head & Face Medicine Volume 4 ; 4 >
     }
 
 
@@ -1882,12 +1882,12 @@
       param[base_url] = http://www.hqlo.com/
       param[journal_issn] = 1477-7525
 
-      au < manifest ; Health and Quality of Life Outcomes Volume 1 ; 1 >
-      au < manifest ; Health and Quality of Life Outcomes Volume 2 ; 2 >
-      au < manifest ; Health and Quality of Life Outcomes Volume 3 ; 3 >
-      au < manifest ; Health and Quality of Life Outcomes Volume 4 ; 4 >
-      au < manifest ; Health and Quality of Life Outcomes Volume 5 ; 5 >
-      au < manifest ; Health and Quality of Life Outcomes Volume 6 ; 6 >
+      au < testing ; Health and Quality of Life Outcomes Volume 1 ; 1 >
+      au < testing ; Health and Quality of Life Outcomes Volume 2 ; 2 >
+      au < testing ; Health and Quality of Life Outcomes Volume 3 ; 3 >
+      au < testing ; Health and Quality of Life Outcomes Volume 4 ; 4 >
+      au < testing ; Health and Quality of Life Outcomes Volume 5 ; 5 >
+      au < testing ; Health and Quality of Life Outcomes Volume 6 ; 6 >
     }
 
 
@@ -1901,7 +1901,7 @@
       param[base_url] = http://www.health-policy-systems.com/
       param[journal_issn] = 1478-4505
 
-      au < manifest ; Health Research Policy and Systems Volume 1 ; 1 >
+      au < ready ; Health Research Policy and Systems Volume 1 ; 1 >
     }
 
 
@@ -1915,12 +1915,12 @@
       param[base_url] = http://www.human-resources-health.com/
       param[journal_issn] = 1478-4491
 
-      au < manifest ; Human Resources for Health Volume 1 ; 1 >
-      au < manifest ; Human Resources for Health Volume 2 ; 2 >
-      au < manifest ; Human Resources for Health Volume 3 ; 3 >
-      au < manifest ; Human Resources for Health Volume 4 ; 4 >
-      au < manifest ; Human Resources for Health Volume 5 ; 5 >
-      au < manifest ; Human Resources for Health Volume 6 ; 6 >
+      au < ready ; Human Resources for Health Volume 1 ; 1 >
+      au < ready ; Human Resources for Health Volume 2 ; 2 >
+      au < ready ; Human Resources for Health Volume 3 ; 3 >
+      au < ready ; Human Resources for Health Volume 4 ; 4 >
+      au < ready ; Human Resources for Health Volume 5 ; 5 >
+      au < ready ; Human Resources for Health Volume 6 ; 6 >
     }
 
 
@@ -1934,11 +1934,11 @@
       param[base_url] = http://www.immunityageing.com/
       param[journal_issn] = 1742-4933
 
-      au < manifest ; Immunity & Ageing Volume 1 ; 1 >
-      au < manifest ; Immunity & Ageing Volume 2 ; 2 >
-      au < manifest ; Immunity & Ageing Volume 3 ; 3 >
-      au < manifest ; Immunity & Ageing Volume 4 ; 4 >
-      au < manifest ; Immunity & Ageing Volume 5 ; 5 >
+      au < testing ; Immunity & Ageing Volume 1 ; 1 >
+      au < testing ; Immunity & Ageing Volume 2 ; 2 >
+      au < testing ; Immunity & Ageing Volume 3 ; 3 >
+      au < testing ; Immunity & Ageing Volume 4 ; 4 >
+      au < testing ; Immunity & Ageing Volume 5 ; 5 >
     }
 
 
@@ -1952,10 +1952,10 @@
       param[base_url] = http://www.immunome-research.com/
       param[journal_issn] = 1745-7580
 
-      au < manifest ; Immunome Research Volume 1 ; 1 >
-      au < manifest ; Immunome Research Volume 2 ; 2 >
-      au < manifest ; Immunome Research Volume 3 ; 3 >
-      au < manifest ; Immunome Research Volume 4 ; 4 >
+      au < testing ; Immunome Research Volume 1 ; 1 >
+      au < testing ; Immunome Research Volume 2 ; 2 >
+      au < testing ; Immunome Research Volume 3 ; 3 >
+      au < testing ; Immunome Research Volume 4 ; 4 >
     }
 
 
