@@ -25,8 +25,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/register/%d/$&quot;, base_url, year</string>
       <string>1,&quot;^%s$&quot;, base_url</string>
-      <string>1,&quot;^%sgpo.gov/register/%d/&quot;, base_url, year</string>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url</string>
+      <string>1,&quot;^%sgpo.gov/register/%d.tgz$&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
