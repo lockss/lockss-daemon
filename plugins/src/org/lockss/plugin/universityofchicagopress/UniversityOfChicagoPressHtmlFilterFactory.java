@@ -1,5 +1,5 @@
 /*
- * $Id: UniversityOfChicagoPressHtmlFilterFactory.java,v 1.2 2008-08-06 00:08:04 thib_gc Exp $
+ * $Id: UniversityOfChicagoPressHtmlFilterFactory.java,v 1.3 2009-01-20 22:15:17 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class UniversityOfChicagoPressHtmlFilterFactory implements FilterFactory 
 
         // Filter out <div class="citedBySection">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
+                                                                         "class",
                                                                          "citedBySection")),
 //        // Filter out <table class="articleEntry">...</table>
 //        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("table",
