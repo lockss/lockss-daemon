@@ -1,10 +1,10 @@
 /*
- * $Id: RoyalSocietyOfChemistryHtmlFilterFactory.java,v 1.1 2008-06-03 00:41:42 estro Exp $
+ * $Id: RoyalSocietyOfChemistryHtmlFilterFactory.java,v 1.2 2009-01-20 23:13:11 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +34,6 @@ package org.lockss.plugin.royalsocietyofchemistry;
 
 import java.io.InputStream;
 
-import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.filters.AndFilter;
-import org.htmlparser.filters.HasAttributeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -48,7 +45,11 @@ public class RoyalSocietyOfChemistryHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
 
-        // Filter out <a href="...">...</a> where the href value matches a regular exception
+        // Filter out <div id="footer">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+                                                                              "id",
+                                                                              "footer")),
+        // Filter out <img alt="...">...</img> where the href value matches a regular exception
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("img",
                                                                               "alt",
                                                                               "Cover image")),
