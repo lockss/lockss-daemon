@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.23 2008-08-12 18:34:26 dshr Exp $
+ * $Id: VoterActions.java,v 1.24 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.security.*;
 import org.apache.commons.collections.CollectionUtils;
 
 import org.lockss.config.ConfigManager;
+import org.lockss.poller.PollManager;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -92,6 +93,8 @@ public class VoterActions {
     // Accept the poll and set status
     ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
     msg.setVoterNonce(ud.getVoterNonce());
+    msg.setExpiration(ud.getVoter().getHashStartTime());
+    msg.setRetryMax(1);
 
     try {
       // Send message
@@ -133,6 +136,8 @@ public class VoterActions {
     if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_NOMINATE);
     msg.setNominees(ud.getNominees());
+    msg.setExpiration(ud.getVoter().getHashStartTime());
+    msg.setRetryMax(1);
     try {
       ud.sendMessageTo(msg, ud.getPollerId());
     } catch (IOException ex) {
@@ -186,6 +191,10 @@ public class VoterActions {
     }
   }
 
+  static PollManager getPollManager(VoterUserData ud) {
+    return ud.getVoter().getPollManager();
+  }
+
   @ReturnEvents("evtOk,evtError")
   @SendMessages("msgVote")
   public static PsmEvent handleSendVote(PsmEvent evt, PsmInterp interp) {
@@ -195,6 +204,18 @@ public class VoterActions {
     // XXX: Fix when multiple-message voting is supported.
     msg.setVoteComplete(true);
     msg.setVoteBlocks(ud.getVoteBlocks());
+    long voteDeadline = ud.getVoteDeadline();
+    msg.setExpiration(voteDeadline);
+
+    CompoundLinearSlope voteRetryIntervalDurationCurve =
+      getPollManager(ud).getVoteRetryIntervalDurationCurve();
+    if (voteRetryIntervalDurationCurve  != null) {
+      long voteRemaining = voteDeadline - TimeBase.nowMs();
+      msg.setRetryInterval((long)voteRetryIntervalDurationCurve.getY(voteRemaining));
+      msg.setRetryMax(3);
+    } else {
+      msg.setRetryMax(1);
+    }
     // Actually cast our vote.
     try {
       ud.sendMessageTo(msg, ud.getPollerId());
@@ -244,6 +265,8 @@ public class VoterActions {
       msg.setRepairDataLength(cu.getContentSize());
       msg.setRepairProps(cu.getProperties());
       msg.setInputStream(cu.getUnfilteredInputStream());
+      msg.setExpiration(ud.getDeadline());
+      msg.setRetryMax(1);
       ud.sendMessageTo(msg, ud.getPollerId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);

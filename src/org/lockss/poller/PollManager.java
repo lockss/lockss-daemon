@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.205 2009-01-07 22:59:19 tlipkis Exp $
+ * $Id: PollManager.java,v 1.206 2009-01-21 04:07:02 tlipkis Exp $
  */
 
 /*
@@ -264,6 +264,7 @@ public class PollManager
   private double paramInvitationWeightAlreadyRepairable =
     DEFAULT_INVITATION_WEIGHT_ALREADY_REPAIRABLE;
   private CompoundLinearSlope v3NoAuResetIntervalCurve = null;
+  private CompoundLinearSlope v3VoteRetryIntervalDurationCurve = null;
 
   public class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
 
@@ -1168,6 +1169,13 @@ public class PollManager
 			     PARAM_NO_AU_RESET_INTERVAL_CURVE,
 			     DEFAULT_NO_AU_RESET_INTERVAL_CURVE);
       }
+      if (changedKeys.contains(PARAM_VOTE_RETRY_INTERVAL_DURATION_CURVE)) {
+	v3VoteRetryIntervalDurationCurve =
+	  processWeightCurve("V3 nomination weight age curve",
+			     newConfig,
+			     PARAM_VOTE_RETRY_INTERVAL_DURATION_CURVE,
+			     DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE);
+      }
 
       if (enableV3Poller && !oldEnable) {
 	startOneWait.expireIn(10 * SECOND);
@@ -1303,6 +1311,10 @@ public class PollManager
 
   public Set getPollIntervalAgreementLastResult() {
     return pollIntervalAgreementLastResult;
+  }
+
+  public CompoundLinearSlope getVoteRetryIntervalDurationCurve() {
+    return v3VoteRetryIntervalDurationCurve;
   }
 
   public long getWillingRepairerLiveness() {

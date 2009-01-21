@@ -1,5 +1,5 @@
 /*
- * $Id: PeerMessage.java,v 1.3 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: PeerMessage.java,v 1.4 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,16 @@ public abstract class PeerMessage {
   private PeerIdentity senderId;
 
   private int protocol;
+
+  private long expiration = 0;	  // Time after which to discard unsent msg
+  private long retryInterval;	  // Target interval to wait between retries
+  private long lastRetry;	  // For use by BlockingStreamComm.
+  private int retryMax = 1;       // Max times to requeue message after
+				  // connect fail or network error
+  private int retryCount = 0;
+
+
+
   protected boolean isOutputOpen = false;
 
   /** Create a PeerMessage
@@ -84,7 +94,7 @@ public abstract class PeerMessage {
    */
   abstract public void delete();
 
-  /** Set the message protocol *.
+  /** Set the message protocol
    */
   public void setProtocol(int protocol) {
     this.protocol = protocol;
@@ -94,6 +104,27 @@ public abstract class PeerMessage {
    */
   public int getProtocol() {
     return protocol;
+  }
+
+  /** Set the message expiration time
+   */
+  public void setExpiration(long expiration) {
+    this.expiration = expiration;
+  }
+
+  /** Return the message's expiration time
+   */
+  public long getExpiration() {
+    return expiration;
+  }
+
+  public boolean isRequeueable() {
+    return getExpiration() > 0;
+  }
+
+  public boolean isExpired() {
+    long exp = getExpiration();
+    return exp > 0 && TimeBase.nowMs() >= exp;
   }
 
   /** Return the PeerIdentity of the message sender, or null if not a
@@ -106,6 +137,48 @@ public abstract class PeerMessage {
   /** Set the message sender */
   public void setSender(PeerIdentity sender) {
     this.senderId = sender;
+  }
+
+  /** Set the max number of retries */
+  public void setRetryMax(int retryMax) {
+    this.retryMax = retryMax;
+  }
+
+  /** Get the max number of retries */
+  public int getRetryMax() {
+    return retryMax;
+  }
+
+  /** Set the interval number of retries */
+  public void setRetryInterval(long retryInterval) {
+    this.retryInterval = retryInterval;
+  }
+
+  /** Get the targer retry interval */
+  public long getRetryInterval() {
+    return retryInterval;
+  }
+
+  /** Set the last retry time */
+  public void setLastRetry(long lastRetry) {
+    this.lastRetry = lastRetry;
+  }
+
+  /** Get the last retry time */
+  public long getLastRetry() {
+    return lastRetry;
+  }
+
+  /** Increment the message's retryCount
+   */
+  public void incrRetryCount() {
+    this.retryCount++;
+  }
+
+  /** Return the message's retryCount
+   */
+  public int getRetryCount() {
+    return retryCount;
   }
 
   protected void checkHasData() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.27 2008-10-24 07:11:19 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.28 2009-01-21 04:07:02 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,8 @@ public class PollerActions {
       msg.setPollerNonce(ud.getPollerNonce());
       msg.setEffortProof(ud.getIntroEffortProof());
       msg.setVoteDuration(ud.getPoller().getVoteDuration());
+      msg.setExpiration(ud.getPoller().getPollMsgExpiration());
+      msg.setRetryMax(1);
       ud.sendMessageTo(msg, ud.getVoterId());
       ud.setStatus(V3Poller.PEER_STATUS_WAITING_POLL_ACK);
       // Signal that the peer has been invited.
@@ -183,6 +185,8 @@ public class PollerActions {
     try {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_PROOF);
       msg.setEffortProof(ud.getRemainingEffortProof());
+      msg.setExpiration(ud.getPoller().getPollMsgExpiration());
+      msg.setRetryMax(1);
       ud.sendMessageTo(msg, ud.getVoterId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
@@ -212,6 +216,8 @@ public class PollerActions {
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_VOTE_REQ);
+    msg.setExpiration(ud.getPoller().getPollMsgExpiration());
+    msg.setRetryMax(1);
     log.debug2("Sending vote request to voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
     // XXX: Implement multiple-vote-message functionality
@@ -303,6 +309,8 @@ public class PollerActions {
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT);
     msg.setEffortProof(ud.getReceiptEffortProof());
     msg.setAgreementHint(ud.getPercentAgreement());
+    msg.setExpiration(ud.getPoller().getPollExpiration());
+    msg.setRetryMax(1);
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
       ud.setStatus(V3Poller.PEER_STATUS_COMPLETE);

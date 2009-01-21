@@ -1,9 +1,9 @@
 /*
- * $Id: ParticipantUserData.java,v 1.21 2008-10-24 07:11:19 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.22 2009-01-21 04:07:02 tlipkis Exp $
  */
 
 /*
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -375,6 +375,7 @@ public class ParticipantUserData implements LockssSerializable {
    * @return The percent agreement for this peer (a number between 0.0 and 1.0)
    */
   private static Logger log = Logger.getLogger("V3Poller");
+
   public float getPercentAgreement() {
     log.debug2("[getPercentAgreement] agreeUrls = "
                + agreeUrls + "; talliedUrls = " + talliedUrls);

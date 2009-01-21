@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.65 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.66 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -193,6 +193,14 @@ public class V3Voter extends BasePoll {
     PREFIX + "nominationWeightAgeCurve";
   public static final String DEFAULT_NOMINATION_WEIGHT_AGE_CURVE =
     "[10d,1.0],[30d,0.1],[40d,0.01]";
+
+  /** Curve giving vote message retry interval as a function of remaining
+   * time before vote deadline.
+   * @see org.lockss.util.CompoundLinearSlope */
+  public static final String PARAM_VOTE_RETRY_INTERVAL_DURATION_CURVE =
+    PREFIX + "voteRetryIntervalDurationCurve";
+  public static final String DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE =
+    "[5m,2m],[20m,4m],[1d,5h]";
 
 
   private PsmInterp stateMachine;
@@ -497,7 +505,6 @@ public class V3Voter extends BasePoll {
     // First, see if we have time to participate.  If not, there's no
     // point in going on.
     if (reserveScheduleTime()) {
-      long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
       long voteDeadline = voterUserData.getVoteDeadline();
       if (voteDeadline >= pollDeadline.getExpirationTime()) {
         log.warning("Voting deadline (" + voteDeadline + ") is later than " +
@@ -625,6 +632,9 @@ public class V3Voter extends BasePoll {
    */
   void sendMessageTo(V3LcapMessage msg, PeerIdentity id)
       throws IOException {
+    if (log.isDebug2()) {
+      log.debug2("sendTo(" + msg + ", " + id + ")");
+    }
     pollManager.sendMessageTo(msg, id);
   }
 
@@ -923,6 +933,14 @@ public class V3Voter extends BasePoll {
     return voterUserData.getCreateTime();
   }
 
+  public long getHashStartTime() {
+    if (task != null) {
+      return task.getEarliestStart().getExpirationTime();
+    } else {
+      return 0;
+    }
+  }
+
   public PeerIdentity getCallerID() {
     return voterUserData.getPollerId();
   }
@@ -1046,6 +1064,10 @@ public class V3Voter extends BasePoll {
 
   public PeerIdentity getPollerId() {
     return voterUserData.getPollerId();
+  }
+
+  public PollManager getPollManager() {
+    return pollManager;
   }
 
   public boolean isPollActive() {

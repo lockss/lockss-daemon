@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.46 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.47 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -163,6 +163,20 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   /** The platform groups to which the sender of the message belongs. */
   private String m_groups;
+  
+  /** The time by which this message must be received in order to be
+   * processed.  (E.g., the vote deadline, for a vote message.)  This field
+   * is not part of the transmitted message; it's used by the sending
+   * daemon to determine when the message should be discarded if it hasn't
+   * yet been sent. */
+  private long m_msgExpiration = 0;
+  
+  /** The maximum number of times to requeue this message if can't
+   * establish a connection. */
+  private int m_msgRetryMax = -1;
+  
+  /** The target interval after which to retry. */
+  private long m_msgRetryInterval = 0;
   
   /**
    * In Nominate messages: The list of outer circle nominees, in the form of
@@ -636,6 +650,30 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     return m_agreementHint;
   }
 
+  public void setExpiration(long l) {
+    m_msgExpiration = l;
+  }
+  
+  public long getExpiration() {
+    return m_msgExpiration;
+  }
+  
+  public void setRetryMax(int l) {
+    m_msgRetryMax = l;
+  }
+  
+  public int getRetryMax() {
+    return m_msgRetryMax;
+  }
+  
+  public void setRetryInterval(long l) {
+    m_msgRetryInterval = l;
+  }
+  
+  public long getRetryInterval() {
+    return m_msgRetryInterval;
+  }
+  
   /**
    * In Vote messages, determine whether more vote blocks are available.
    *

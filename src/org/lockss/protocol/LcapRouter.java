@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.51 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.52 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -162,6 +162,15 @@ public class LcapRouter
     try {
       PeerMessage pmsg = newPeerMessage(lmsg.getEstimatedEncodedLength());
       pmsg.setProtocol(PeerMessage.PROTOCOL_LCAP_V3);
+      pmsg.setExpiration(lmsg.getExpiration());
+      int rmax = lmsg.getRetryMax();
+      if (rmax >= 0) {
+	pmsg.setRetryMax(rmax);
+      }
+      long rint = lmsg.getRetryInterval();
+      if (rint > 0) {
+	pmsg.setRetryInterval(rint);
+      }
       out = pmsg.getOutputStream();
       in = lmsg.getInputStream();
       StreamUtil.copy(in, out);

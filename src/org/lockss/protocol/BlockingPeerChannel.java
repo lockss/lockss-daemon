@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.23 2009-01-07 22:59:36 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.24 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ class BlockingPeerChannel implements PeerChannel {
     NONE,
     INIT,
     CONNECTING,
+    DISSOCIATING,
     CONNECT_FAIL,
     ACCEPTED,
     STARTING,
@@ -104,6 +105,8 @@ class BlockingPeerChannel implements PeerChannel {
     this.scomm = scomm;
     localPeer = scomm.getMyPeerId();
     rcvQueue = scomm.getReceiveQueue();
+    // This queue may be replaced if this channel becomes primary for a
+    // peer that has queued messages
     sendQueue = new FifoQueue();
   }
 
@@ -250,6 +253,12 @@ class BlockingPeerChannel implements PeerChannel {
     return false;
   }
 
+  /** True if current state is equal to state s
+   */
+  boolean isState(ChannelState s) {
+    return state == s;
+  }
+
   /** True if current state is CLOSING or CLOSED
    */
   boolean isClosed() {
@@ -316,11 +325,33 @@ class BlockingPeerChannel implements PeerChannel {
       case CLOSED:
       case CLOSING:
       case CONNECT_FAIL:
+      case DISSOCIATING:
       case DRAIN_INPUT:
 	return false;
       default:
 	sendQueue.put(msg);
 	return true;
+      }
+    }
+  }
+
+  /** Enqueue all messages on queue to be sent */
+  public synchronized void enqueueMsgs(Queue queue) {
+    if (writer == null) {
+      // if the write thread hasn't been started yet, just adopt the queue
+      // as our own
+      if (log.isDebug2()) log.debug2("Adopting queue len " + queue.size());
+      this.sendQueue = queue;
+    } else {
+      // otherwise a thread is already waiting on it, copy queue
+      PeerMessage msg;
+      try {
+	while ((msg = (PeerMessage)queue.get(Deadline.EXPIRED)) != null) {
+	  if (log.isDebug3() )log.debug3("Enqueued " + msg);
+	  sendQueue.put(msg);
+	}
+      } catch (InterruptedException e) {
+	log.critical("Impossible");
       }
     }
   }
@@ -389,7 +420,7 @@ class BlockingPeerChannel implements PeerChannel {
     ChannelState.CLOSING};
 
   void stopChannel(boolean abort, String msg, Throwable t) {
-    scomm.dissociateChannelFromPeer(this, peer);
+    scomm.dissociateChannelFromPeer(this, peer, sendQueue);
     if (notStateTrans(stopIgnStates, ChannelState.CLOSING)) {
       if (msg != null || t != null) {
 	if (msg == null) msg = "Aborting " + peer.getIdString();
@@ -406,7 +437,6 @@ class BlockingPeerChannel implements PeerChannel {
       connecter = wtConnecter = stopThread(connecter);
       reader = (ChannelReader)stopThread(reader);
       writer = stopThread(writer);
-      scomm.drainQueue(sendQueue);
       stateTrans(ChannelState.CLOSING, ChannelState.CLOSED);
     }
   }
@@ -459,8 +489,9 @@ class BlockingPeerChannel implements PeerChannel {
       } catch (IOException e) {
 	connector.cancelTimeout();
 	this.connecter = wtConnecter = null;
-	stateTrans(ChannelState.CONNECTING, ChannelState.CONNECT_FAIL);
+	stateTrans(ChannelState.CONNECTING, ChannelState.DISSOCIATING);
 	abortChannel("Connect failed to " + peer + ": " + e.toString());
+	stateTrans(ChannelState.DISSOCIATING, ChannelState.CONNECT_FAIL);
 	return;
       }
       try {
@@ -754,11 +785,13 @@ class BlockingPeerChannel implements PeerChannel {
 	// nothing to send
 	while (null != (msg = (PeerMessage)sendQueue.peekWait(calcSendWaitDeadline()))) {
 	  lastSendTime = lastActiveTime = TimeBase.nowMs();
+	  msg.setLastRetry(lastSendTime);
 	  writeDataMsg(msg);
 	  // remove the message just sent
 	  if (msg != sendQueue.get(Deadline.EXPIRED)) {
 	    throw new IllegalStateException("Send queue not behaving as FIFO");
 	  }
+	  scomm.countMessageRetries(msg);
 	  msg.delete();
 	  lastSendTime = lastActiveTime = TimeBase.nowMs();
 	  synchronized (stateLock) {
@@ -786,7 +819,7 @@ class BlockingPeerChannel implements PeerChannel {
 	    // time to close channel.  shutdown output only in case peer is
 	    // now sending message
 	    // No longer can send messages so must dissociate now
-	    scomm.dissociateChannelFromPeer(this, peer);
+	    scomm.dissociateChannelFromPeer(this, peer, null);
 	    scomm.addDrainingChannel(this);
 
 	    setState(ChannelState.DRAIN_INPUT);

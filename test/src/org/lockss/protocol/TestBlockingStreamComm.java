@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.23 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.24 2009-01-21 04:07:01 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,9 @@ import java.net.*;
 import javax.net.*;
 import javax.net.ssl.*;
 import junit.framework.*;
+
 import org.lockss.protocol.BlockingPeerChannel.ChannelState;
+import org.lockss.protocol.BlockingStreamComm.PeerData;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -146,7 +148,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    TimeBase.setReal();
     for (int comm = 0; comm < MAX_COMMS; comm++) {
       Interrupter intr = null;
       try {
@@ -165,6 +166,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       idmgr.stopService();
       idmgr = null;
     }
+    TimeBase.setReal();
     super.tearDown();
   }
 
@@ -175,16 +177,46 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
+  BlockingPeerChannel getChannel(BlockingStreamComm comm,
+				 PeerIdentity pid) {
+    PeerData pdata = comm.getPeerData(pid);
+    if (pdata == null) {
+      return null;
+    }
+    return pdata.getPrimaryChannel();
+  }
+
+  List<BlockingPeerChannel> getChannels(BlockingStreamComm comm) {
+    List<BlockingPeerChannel> res = new ArrayList<BlockingPeerChannel>();
+    for (PeerData pdata : comm.getAllPeerData()) {
+      BlockingPeerChannel chan = pdata.getPrimaryChannel();
+      if (chan != null) res.add(chan);
+    }
+    return res;
+  }
+
+  List<BlockingPeerChannel> getRcvChannels(BlockingStreamComm comm) {
+    List<BlockingPeerChannel> res = new ArrayList<BlockingPeerChannel>();
+    for (PeerData pdata : comm.getAllPeerData()) {
+      BlockingPeerChannel chan = pdata.getSecondaryChannel();
+      if (chan != null) res.add(chan);
+    }
+    return res;
+  }
+
+
+
   void useInternalSockets(boolean flg) {
     useInternalSockets = flg;
   }
 
-  void setupPid(int ix) throws IOException {
+  PeerIdentity setupPid(int ix) throws IOException {
     if (useInternalSockets) {
       setupInternalPid(ix);
     } else {
       setupRealPid(ix);
     }
+    return pids[ix];
   }
 
   /** Create a PeerIdentity for a port on localhost
@@ -513,8 +545,34 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
     assertEquals("Connecting channel didn't dissociate",
 		 "dissoc", event.get(0));
-    assertEmpty(comm1.channels);
-    assertEmpty(comm1.rcvChannels);
+    assertEmpty(getChannels(comm1));
+    assertEmpty(getRcvChannels(comm1));
+
+    PeerData pdata = comm1.getPeerData(pid2);
+    assertNotNull(pdata);
+    assertFalse(pdata.isRetryNeeded());
+  }
+
+  public void testRefusedRetry() throws IOException {
+    TimeBase.setSimulated(10000);
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    List event;
+    setupComm1();
+    setupPid(2);
+    comm1.setAssocQueue(assocQ);
+    msg1.setExpiration(11000);
+    comm1.sendTo(msg1, pid2, null);
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
+    assertEmpty(getChannels(comm1));
+    assertEmpty(getRcvChannels(comm1));
+
+    PeerData pdata = comm1.getPeerData(pid2);
+    assertNotNull(pdata);
+    assertTrue(pdata.isRetryNeeded());
   }
 
   public void testIncoming() throws IOException {
@@ -560,15 +618,15 @@ public class TestBlockingStreamComm extends LockssTestCase {
   		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
         assertEquals("Connecting channel didn't associate",
   		   "assoc", event.get(0));
-        assertEquals(1, comm1.channels.size());
-        assertEquals(0, comm1.rcvChannels.size());
+        assertEquals(1, getChannels(comm1).size());
+        assertEquals(0, getRcvChannels(comm1).size());
       } else {
         assertNotNull("Connecting channel didn't dissociate",
   		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
         assertEquals("Connecting channel didn't dissociate",
   		   "dissoc", event.get(0));
-        assertEquals(0, comm1.channels.size());
-        assertEquals(0, comm1.rcvChannels.size());
+        assertEquals(0, getChannels(comm1).size());
+        assertEquals(0, getRcvChannels(comm1).size());
       }
     } finally {
       if (intr1 != null) intr1.cancel();
@@ -648,15 +706,15 @@ public class TestBlockingStreamComm extends LockssTestCase {
       if (isGoodId) {
         assertNull("Connecting channel shouldn't call associate",
   		 assocQ.get(TIMEOUT_SHOULD));
-        assertEquals(1, comm1.channels.size());
-        assertEquals(0, comm1.rcvChannels.size());
+        assertEquals(1, getChannels(comm1).size());
+        assertEquals(0, getRcvChannels(comm1).size());
       } else {
         assertNotNull("Connecting channel didn't dissociate",
   		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
         assertEquals("Connecting channel didn't dissociate",
   		   "dissoc", event.get(0));
-        assertEquals(0, comm1.channels.size());
-        assertEquals(0, comm1.rcvChannels.size());
+        assertEquals(0, getChannels(comm1).size());
+        assertEquals(0, getRcvChannels(comm1).size());
       }
       IOUtil.safeClose(server);
       IOUtil.safeClose(sock);
@@ -710,7 +768,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
   		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
       assertEquals("Channel didn't assoc",
   		 "assoc", event.get(0));
-      assertEquals(1, comm1.channels.size());
+      assertEquals(1, getChannels(comm1).size());
       msg1 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
       long msgsize = msg1.getDataSize();
       int tobuffer = 20 * (sock.getReceiveBufferSize() +
@@ -718,11 +776,11 @@ public class TestBlockingStreamComm extends LockssTestCase {
       for (long bytes = 0; bytes < tobuffer; bytes += msgsize) {
 //       comm1.sendTo(msg1, pid2, null);
       }
-      assertEquals(1, comm1.channels.size());
-      BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
+      assertEquals(1, getChannels(comm1).size());
+      BlockingPeerChannel chan = (BlockingPeerChannel)getChannel(comm1, pid2);
       assertNotNull("Didn't find expected channel", chan);
 //     assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
-      assertEquals(0, comm1.rcvChannels.size());
+      assertEquals(0, getRcvChannels(comm1).size());
       TimeBase.step(6000);
       assertEquals(0, ins.available());
       assertNotNull("Channel didn't close automatically after timeout",
@@ -763,7 +821,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
   		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
       assertEquals("Channel didn't assoc",
   		 "assoc", event.get(0));
-      assertEquals(1, comm1.channels.size());
+      assertEquals(1, getChannels(comm1).size());
       // a 30KB message
       msg1 = makePeerMessage(1, "123456789012345678901234567890", 1000);
       long msgsize = msg1.getDataSize();
@@ -774,11 +832,11 @@ public class TestBlockingStreamComm extends LockssTestCase {
       for (long bytes = 0; bytes < tobuffer; bytes += msgsize) {
         comm1.sendTo(msg1, pid2, null);
       }
-      assertEquals(1, comm1.channels.size());
-      BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
+      assertEquals(1, getChannels(comm1).size());
+      BlockingPeerChannel chan = (BlockingPeerChannel)getChannel(comm1, pid2);
       assertNotNull("Didn't find expected channel", chan);
       assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
-      assertEquals(0, comm1.rcvChannels.size());
+      assertEquals(0, getRcvChannels(comm1).size());
   
       // give hung checker a chance to run.  If fails, interrupter will stop us
       while (null == (event = (List)assocQ.get(10))) {
@@ -793,57 +851,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
       if (intr1 != null) intr1.cancel();
       if (intr2 != null) intr2.cancel();
     }
-  }
-
-  public void testSingleConnect() throws IOException {
-    PeerMessage msgIn;
-    setupComm1();
-    setupComm2();
-    comm1.sendTo(msg1, pid2, null);
-    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg1, pid1, msgIn);
-    // redundant checks
-    assertEquals(1, msgIn.getProtocol());
-    assertEquals(testStr1.length(), msgIn.getDataSize());
-    assertEquals(testStr1.length(), msg1.getDataSize());
-
-    // each comm should have only one channel
-    assertEquals(1, comm1.channels.size());
-    assertEquals(1, comm2.channels.size());
-    assertEquals(0, comm1.rcvChannels.size());
-    assertEquals(0, comm2.rcvChannels.size());
-
-    assertTrue(rcvdMsgs1.isEmpty());
-    assertTrue(rcvdMsgs2.isEmpty());
-
-    comm1.sendTo(msg2, pid2, null);
-    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg2, pid1, msgIn);
-
-    comm2.sendTo(msg2, pid1, null);
-    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
-    assertNotNull(msgIn);
-    assertEqualsMessageFrom(msg2, pid2, msgIn);
-
-    comm2.sendTo(msg3, pid1, null);
-    comm2.sendTo(msg1, pid1, null);
-    comm1.sendTo(msg3, pid2, null);
-    comm1.sendTo(msg2, pid2, null);
-
-    // each comm should still have only one channel
-    assertEquals(1, comm1.channels.size());
-    assertEmpty(comm1.rcvChannels);
-    assertEquals(1, comm2.channels.size());
-    assertEmpty(comm2.rcvChannels);
-
-    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg3, pid2, msgIn);
-    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg1, pid2, msgIn);
-    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg3, pid1, msgIn);
-    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg2, pid1, msgIn);
   }
 
   public void testFileMessage() throws IOException {
@@ -868,7 +875,29 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
-  public void testMaxMsg() throws IOException {
+  public void testMemMessage() throws IOException {
+    cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+
+    PeerMessage msgIn;
+    setupComm1();
+    setupComm2();
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 10);
+    comm1.sendTo(msg1, pid2, null);
+    comm1.sendTo(msg2, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    try {
+      assertEqualsMessageFrom(msg1, pid1, msgIn);
+      assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+      msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+      assertEqualsMessageFrom(msg2, pid1, msgIn);
+      assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    } finally {
+      msgIn.delete();
+    }
+  }
+
+  public void testTooLargeMsg() throws IOException {
     cprops.setProperty(BlockingStreamComm.PARAM_MAX_MESSAGE_SIZE, "2000");
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
 
@@ -892,6 +921,275 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		 "dissoc", event.get(0));
   }
 
+  // Connect reqtry & msg queueing mechanism
+
+  public void testWaitingPeerTreeSet() throws IOException {
+    setupPid(1);
+    setupPid(2);
+    PeerIdentity pid3 = setupPid(3);
+    PeerIdentity pid4 = setupPid(4);
+    setupComm1();
+    PeerData pd1 = comm1.makePeerData(pid1);
+    PeerData pd2 = comm1.makePeerData(pid2);
+    PeerData pd3 = comm1.makePeerData(pid3);
+    PeerData pd4 = comm1.makePeerData(pid4);
+    pd1.nextRetry = 1000;
+    pd2.nextRetry = 100;
+    pd3.nextRetry = 500;
+    pd4.nextRetry = 500;    // time equal to pd3, TreeSet comparator should
+			    // treat as distinct
+    comm1.addPeerToRetry(pd1);
+    assertIsomorphic(ListUtil.list(pd1), comm1.peersToRetry);
+    comm1.addPeerToRetry(pd2);
+    assertIsomorphic(ListUtil.list(pd2, pd1), comm1.peersToRetry);
+    comm1.addPeerToRetry(pd2);
+    assertIsomorphic(ListUtil.list(pd2, pd1), comm1.peersToRetry);
+    comm1.addPeerToRetry(pd3);
+    assertIsomorphic(ListUtil.list(pd2, pd3, pd1), comm1.peersToRetry);
+    comm1.addPeerToRetry(pd4);
+    assertEquals(4, comm1.peersToRetry.size());
+    assertSame(pd2, comm1.peersToRetry.first());
+  }
+
+  // Simple retry test
+  public void testRetry1() throws IOException {
+    TimeBase.setSimulated(1000);
+    cprops.put(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MAX_PEER_RETRY_INTERVAL, "1000");
+    cprops.put(BlockingStreamComm.PARAM_MIN_PEER_RETRY_INTERVAL, "10");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "100");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+
+    List event;
+    PeerMessage msgIn;
+    setupComm1();
+    setupPid(2);
+    comm1.setAssocQueue(assocQ);
+    msg1.setExpiration(3000);
+    assertEquals(0, msg1.getRetryCount());
+    comm1.sendTo(msg1, pid2, null);
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
+
+    PeerData pdata = comm1.getPeerData(pid2);
+    assertNotNull(pdata);
+    assertNull(pdata.getPrimaryChannel());
+    assertNull(pdata.getSecondaryChannel());
+    assertTrue(pdata.isRetryNeeded());
+    assertEquals(1, msg1.getRetryCount());
+    setupComm2();
+    // Shouldn't retry until 1000
+    TimeBase.step(800);
+    assertTrue(pdata.isRetryNeeded());
+    TimeBase.step(300);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    assertEquals(1, msg1.getRetryCount());
+  }
+
+  // Ensure 2nd msg gets queued if already waiting for retry
+  public void testRetry2() throws IOException {
+    TimeBase.setSimulated(1000);
+    cprops.put(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MAX_PEER_RETRY_INTERVAL, "1000");
+    cprops.put(BlockingStreamComm.PARAM_MIN_PEER_RETRY_INTERVAL, "10");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "100");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 20);
+    msg1.setExpiration(3000);
+    msg2.setExpiration(4000);
+
+    List event;
+    PeerMessage msgIn;
+    setupComm1();
+    setupPid(2);
+    comm1.setAssocQueue(assocQ);
+    comm1.sendTo(msg1, pid2, null);
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
+
+    PeerData pdata = comm1.getPeerData(pid2);
+    assertNotNull(pdata);
+    assertNull(pdata.getPrimaryChannel());
+    assertNull(pdata.getSecondaryChannel());
+    assertEquals(1, pdata.getOrigCnt());
+    assertEquals(1, pdata.getFailCnt());
+    assertEquals(0, pdata.getAcceptCnt());
+    assertTrue(pdata.isRetryNeeded());
+    setupComm2();
+    TimeBase.step(800);
+    assertNull("Retried too early", (List)assocQ.get(TIMEOUT_SHOULD));
+    assertTrue(pdata.isRetryNeeded());
+    comm1.sendTo(msg2, pid2, null);
+    assertTrue(pdata.isRetryNeeded());
+    TimeBase.step(300);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    assertEquals(1, msg1.getRetryCount());
+    // msg2 went directly into queue, which doesn't count as a retry
+    assertEquals(0, msg2.getRetryCount());
+    assertEquals(2, pdata.getOrigCnt());
+    assertEquals(1, pdata.getFailCnt());
+    assertEquals(0, pdata.getAcceptCnt());
+  }
+
+  // Already awaiting retry, 2nd message has earlier expiration so triggers
+  // immediate retry.
+  public void testRetry3() throws IOException {
+    TimeBase.setSimulated(1000);
+    cprops.put(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MAX_PEER_RETRY_INTERVAL, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MIN_PEER_RETRY_INTERVAL, "10");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "1000");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_DELAY, "100");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 20);
+    msg1.setExpiration(4000);
+    msg2.setExpiration(3000);
+
+    List event;
+    PeerMessage msgIn;
+    setupComm1();
+    setupPid(2);
+    comm1.setAssocQueue(assocQ);
+    comm1.sendTo(msg1, pid2, null);
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
+
+    PeerData pdata = comm1.getPeerData(pid2);
+    assertNotNull(pdata);
+    assertNull(pdata.getPrimaryChannel());
+    assertNull(pdata.getSecondaryChannel());
+    assertTrue(pdata.isRetryNeeded());
+    setupComm2();
+    TimeBase.step(1000);
+    assertNull("Retried too early", (List)assocQ.get(TIMEOUT_SHOULD));
+    assertTrue(pdata.isRetryNeeded());
+    comm1.sendTo(msg2, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertFalse(pdata.isRetryNeeded());
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+  }
+
+  // If awaiting retry, incoming connection should cause queued msgs to be
+  // sent with no retry.
+  public void testRetryIncoming() throws IOException {
+    TimeBase.setSimulated(1000);
+    cprops.put(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MAX_PEER_RETRY_INTERVAL, "5000");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "0");
+
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 20);
+    msg1.setExpiration(4000);
+    msg2.setExpiration(3000);
+
+    List event;
+    PeerMessage msgIn;
+    setupComm1();
+    setupPid(2);
+    comm1.setAssocQueue(assocQ);
+    comm1.sendTo(msg1, pid2, null);
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
+
+    PeerData pdata1 = comm1.getPeerData(pid2);
+    assertNotNull(pdata1);
+    assertNull(pdata1.getPrimaryChannel());
+    assertNull(pdata1.getSecondaryChannel());
+    assertTrue(pdata1.isRetryNeeded());
+    assertEquals(1, pdata1.getOrigCnt());
+    assertEquals(1, pdata1.getFailCnt());
+    assertEquals(0, pdata1.getAcceptCnt());
+    setupComm2();
+    TimeBase.step(1000);
+    assertNull("Retried too early", (List)assocQ.get(TIMEOUT_SHOULD));
+    assertTrue(pdata1.isRetryNeeded());
+    comm2.sendTo(msg2, pid1, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertFalse(pdata1.isRetryNeeded());
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid2, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    assertEquals(1, pdata1.getOrigCnt());
+    assertEquals(1, pdata1.getFailCnt());
+    assertEquals(1, pdata1.getAcceptCnt());
+    PeerData pdata2 = comm2.getPeerData(pid1);
+    assertEquals(1, pdata2.getOrigCnt());
+    assertEquals(0, pdata2.getFailCnt());
+    assertEquals(0, pdata2.getAcceptCnt());
+  }
+
+  public void testSingleConnect() throws IOException {
+    PeerMessage msgIn;
+    setupComm1();
+    setupComm2();
+    comm1.sendTo(msg1, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    // redundant checks
+    assertEquals(1, msgIn.getProtocol());
+    assertEquals(testStr1.length(), msgIn.getDataSize());
+    assertEquals(testStr1.length(), msg1.getDataSize());
+
+    // each comm should have only one channel
+    assertEquals(1, getChannels(comm1).size());
+    assertEquals(1, getChannels(comm2).size());
+    assertEquals(0, getRcvChannels(comm1).size());
+    assertEquals(0, getRcvChannels(comm2).size());
+
+    assertTrue(rcvdMsgs1.isEmpty());
+    assertTrue(rcvdMsgs2.isEmpty());
+
+    comm1.sendTo(msg2, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid1, msgIn);
+
+    comm2.sendTo(msg2, pid1, null);
+    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
+    assertNotNull(msgIn);
+    assertEqualsMessageFrom(msg2, pid2, msgIn);
+
+    comm2.sendTo(msg3, pid1, null);
+    comm2.sendTo(msg1, pid1, null);
+    comm1.sendTo(msg3, pid2, null);
+    comm1.sendTo(msg2, pid2, null);
+
+    // each comm should still have only one channel
+    assertEquals(1, getChannels(comm1).size());
+    assertEmpty(getRcvChannels(comm1));
+    assertEquals(1, getChannels(comm2).size());
+    assertEmpty(getRcvChannels(comm2));
+
+    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg3, pid2, msgIn);
+    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid2, msgIn);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg3, pid1, msgIn);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid1, msgIn);
+  }
+
   // force delayed connect in one direction
   public void testSimultaneousConnect1() throws IOException {
     PeerMessage msgIn;
@@ -902,12 +1200,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
     comm1.sendTo(msg1, pid2, null);
     comm2.sendTo(msg2, pid1, null);
     // both should have one connecting channel
-    assertEquals(1, comm1.channels.size());
-    assertEquals(1, comm2.channels.size());
+    assertEquals(1, getChannels(comm1).size());
+    assertEquals(1, getChannels(comm2).size());
     // comm1 should receive message
     msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
     assertEqualsMessageFrom(msg2, pid2, msgIn);
-    assertEquals(1, comm1.rcvChannels.size());
+    assertEquals(1, getRcvChannels(comm1).size());
     // comm2 shouldn't
     assertTrue(rcvdMsgs2.isEmpty());
     sem2.give();
@@ -927,10 +1225,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
     comm1.sendTo(msg1, pid2, null);
     comm2.sendTo(msg2, pid1, null);
     // both should have one connecting channel
-    assertEquals(1, comm1.channels.size());
-    assertEquals(1, comm2.channels.size());
-    assertEquals(0, comm1.rcvChannels.size());
-    assertEquals(0, comm2.rcvChannels.size());
+    assertEquals(1, getChannels(comm1).size());
+    assertEquals(1, getChannels(comm2).size());
+    assertEquals(0, getRcvChannels(comm1).size());
+    assertEquals(0, getRcvChannels(comm2).size());
     assertTrue(rcvdMsgs1.isEmpty());
     assertTrue(rcvdMsgs2.isEmpty());
     // allow comm1 accept to proceed, it should receive message
@@ -938,18 +1236,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
     msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
     // comm1 only should have secondary channel
     assertEqualsMessageFrom(msg2, pid2, msgIn);
-    assertEquals(1, comm1.channels.size());
-    assertEquals(1, comm2.channels.size());
-    assertEquals(1, comm1.rcvChannels.size());
-    assertEquals(0, comm2.rcvChannels.size());
+    assertEquals(1, getChannels(comm1).size());
+    assertEquals(1, getChannels(comm2).size());
+    assertEquals(1, getRcvChannels(comm1).size());
+    assertEquals(0, getRcvChannels(comm2).size());
     // allow comm2 to proceed
     sem2.give();
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     assertEqualsMessageFrom(msg1, pid1, msgIn);
-    assertEquals(1, comm1.channels.size());
-    assertEquals(1, comm2.channels.size());
-    assertEquals(1, comm1.rcvChannels.size());
-    assertEquals(1, comm2.rcvChannels.size());
+    assertEquals(1, getChannels(comm1).size());
+    assertEquals(1, getChannels(comm2).size());
+    assertEquals(1, getRcvChannels(comm1).size());
+    assertEquals(1, getRcvChannels(comm2).size());
   }
 
   // allow channel to timeout and close after use
@@ -976,7 +1274,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     // 3 times (before each of 2 messages pulled from queue, plus final
     // wait for (nonexistent) 3rd message).
     MyBlockingPeerChannel chan =
-      (MyBlockingPeerChannel)comm1.channels.get(pid2);
+      (MyBlockingPeerChannel)getChannel(comm1, pid2);
     assertNotNull(chan);
 
     chan.setCalcSendWaitSem(sem1);
@@ -990,7 +1288,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEquals(3, chan.calcSendWaitCtr);
 
     TimeBase.step(4000);
-    assertEquals(1, comm1.channels.size());
+    assertEquals(1, getChannels(comm1).size());
 
     TimeBase.step(2000);
     List event;
@@ -998,8 +1296,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
     assertEquals("Channel wasn't dissociated after timeout",
 		 "dissoc", event.get(0));
-    assertEquals(0, comm1.channels.size());
-    assertEquals(0, comm1.rcvChannels.size());
+    assertEquals(0, getChannels(comm1).size());
+    assertEquals(0, getRcvChannels(comm1).size());
     assertTrue("Channel didn't stop", sem2.take(TIMEOUT_SHOULDNT));
   }
 
@@ -1028,9 +1326,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
     // 3 times (before each of 2 messages pulled from queue, plus final
     // wait for (nonexistent) 3rd message).
     MyBlockingPeerChannel chan1 =
-      (MyBlockingPeerChannel)comm1.channels.get(pid2);
+      (MyBlockingPeerChannel)getChannel(comm1, pid2);
     MyBlockingPeerChannel chan2 =
-      (MyBlockingPeerChannel)comm2.channels.get(pid1);
+      (MyBlockingPeerChannel)getChannel(comm2, pid1);
     assertNotNull(chan1);
     assertNotNull(chan2);
 
@@ -1046,7 +1344,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEquals(3, chan1.calcSendWaitCtr);
 
     TimeBase.step(4000);
-    assertEquals(1, comm1.channels.size());
+    assertEquals(1, getChannels(comm1).size());
 
     TimeBase.step(2000);
     List event;
@@ -1054,8 +1352,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
     assertEquals("Channel wasn't dissociated after timeout",
 		 "dissoc", event.get(0));
-    assertEquals(0, comm1.channels.size());
-    assertEquals(0, comm1.rcvChannels.size());
+    assertEquals(0, getChannels(comm1).size());
+    assertEquals(0, getRcvChannels(comm1).size());
     if (shutdownOutputSupported) {
       assertFalse("Channel stopped before drain input timer",
 		  sem2.take(TIMEOUT_SHOULD));
@@ -1088,8 +1386,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
     assertEquals("Channel didn't close automatically after timeout",
 		 "dissoc", event.get(0));
-    assertEquals(0, comm1.channels.size());
-    assertEquals(0, comm1.rcvChannels.size());
+    assertEquals(0, getChannels(comm1).size());
+    assertEquals(0, getRcvChannels(comm1).size());
   }
 
   // create MAX_COMMS comm instances, have each of them sent messages to
@@ -1154,6 +1452,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       return localId;
     }
 
+    @Override
     void associateChannelWithPeer(BlockingPeerChannel chan,
 				  PeerIdentity peer) {
       super.associateChannelWithPeer(chan, peer);
@@ -1161,9 +1460,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	assocEvents.put(ListUtil.list("assoc", this));
       }
     }
+
+    @Override
     void dissociateChannelFromPeer(BlockingPeerChannel chan,
-				   PeerIdentity peer) {
-      super.dissociateChannelFromPeer(chan, peer);
+				   PeerIdentity peer,
+				   Queue sendQueue) {
+      super.dissociateChannelFromPeer(chan, peer, sendQueue);
       if (assocEvents != null) {
 	assocEvents.put(ListUtil.list("dissoc", this));
       }
@@ -1185,6 +1487,14 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
     void setChannelIdleTime(long time) {
       paramChannelIdleTime = time;
+    }
+
+    PeerData makePeerData(PeerIdentity pid) {
+      return new PeerData(pid);
+    }
+
+    void addPeerToRetry(PeerData pdata) {
+      peersToRetry.add(pdata);
     }
   }
 
@@ -1385,3 +1695,4 @@ public class TestBlockingStreamComm extends LockssTestCase {
     });
   }
 }
+
