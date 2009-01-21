@@ -1,0 +1,132 @@
+{
+  publisher <
+    name = Cold Spring Harbor Laboratory Press
+  >
+
+  implicit < status ; name ; param[volume] >
+  plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+   
+ {
+   title <
+     name = Genome Research
+   >
+   
+   param[base_url] = http://genome.cshlp.org/
+
+   au < exists ; Genome Research Volume 1 ; 1 >    
+   au < exists ; Genome Research Volume 2 ; 2 >   
+   au < exists ; Genome Research Volume 3 ; 3 >   
+   au < exists ; Genome Research Volume 4 ; 4 >   
+   au < exists ; Genome Research Volume 5 ; 5 >   
+   au < exists ; Genome Research Volume 6 ; 6 >   
+   au < exists ; Genome Research Volume 7 ; 7 >   
+   au < exists ; Genome Research Volume 8 ; 8 >   
+   au < exists ; Genome Research Volume 9 ; 9 >   
+   au < exists ; Genome Research Volume 10 ; 10 >   
+   au < exists ; Genome Research Volume 11 ; 11 >   
+   au < exists ; Genome Research Volume 12 ; 12 >   
+   au < exists ; Genome Research Volume 13 ; 13 >   
+   au < exists ; Genome Research Volume 14 ; 14 >   
+   au < exists ; Genome Research Volume 15 ; 15 >   
+   au < exists ; Genome Research Volume 16 ; 16 >   
+   au < exists ; Genome Research Volume 17 ; 17 >   
+   au < exists ; Genome Research Volume 18 ; 18 >   
+   au < exists ; Genome Research Volume 19 ; 19 >   
+ 
+ }  
+   
+   
+ {
+   title <
+     name = Genes & Development
+   >
+   
+   param[base_url] = http://genesdev.cshlp.org/
+
+   au < manifest ; Genes & Development Volume 1 ; 1 >   
+   au < manifest ; Genes & Development Volume 2 ; 2 >   
+   au < manifest ; Genes & Development Volume 3 ; 3 >   
+   au < manifest ; Genes & Development Volume 4 ; 4 >   
+   au < manifest ; Genes & Development Volume 5 ; 5 >   
+   au < manifest ; Genes & Development Volume 6 ; 6 >   
+   au < manifest ; Genes & Development Volume 7 ; 7 >   
+   au < manifest ; Genes & Development Volume 8 ; 8 >   
+   au < manifest ; Genes & Development Volume 9 ; 9 >   
+   au < manifest ; Genes & Development Volume 10 ; 10 >   
+   au < manifest ; Genes & Development Volume 11 ; 11 >   
+   au < manifest ; Genes & Development Volume 12 ; 12 >   
+   au < manifest ; Genes & Development Volume 13 ; 13 >   
+   au < manifest ; Genes & Development Volume 14 ; 14 >   
+   au < manifest ; Genes & Development Volume 15 ; 15 >   
+   au < manifest ; Genes & Development Volume 16 ; 16 >   
+   au < manifest ; Genes & Development Volume 17 ; 17 >   
+   au < manifest ; Genes & Development Volume 18 ; 18 >   
+   au < manifest ; Genes & Development Volume 19 ; 19 >   
+   au < manifest ; Genes & Development Volume 20 ; 20 >   
+   au < manifest ; Genes & Development Volume 21 ; 21 >   
+   au < manifest ; Genes & Development Volume 22 ; 22 >   
+   au < manifest ; Genes & Development Volume 23 ; 23 >   
+   
+ }
+
+   
+  {
+   title <
+     name = RNA
+   >
+   
+   param[base_url] = http://rnajournal.cshlp.org/
+
+   au < manifest ; RNA Volume 1 ; 1 >   
+   au < manifest ; RNA Volume 2 ; 2 >   
+   au < manifest ; RNA Volume 3 ; 3 >   
+   au < manifest ; RNA Volume 4 ; 4 >   
+   au < manifest ; RNA Volume 5 ; 5 >   
+   au < manifest ; RNA Volume 6 ; 6 >   
+   au < manifest ; RNA Volume 7 ; 7 >   
+   au < manifest ; RNA Volume 8 ; 8 >   
+   au < manifest ; RNA Volume 9 ; 9 >   
+   au < manifest ; RNA Volume 10 ; 10 >   
+   au < manifest ; RNA Volume 11 ; 11 >   
+   au < manifest ; RNA Volume 12 ; 12 >   
+   au < manifest ; RNA Volume 13 ; 13 >   
+   au < manifest ; RNA Volume 14 ; 14 >   
+   au < manifest ; RNA Volume 15 ; 15 >     
+   
+ }  
+   
+  
+  {
+   title <
+     name = Learning & Memory 
+   >
+   
+   param[base_url] = http://learnmem.cshlp.org/
+
+   au < manifest ; Learning & Memory Volume 1 ; 1 >   
+   au < manifest ; Learning & Memory Volume 2 ; 2 >   
+   au < manifest ; Learning & Memory Volume 3 ; 3 >   
+   au < manifest ; Learning & Memory Volume 4 ; 4 >   
+   au < manifest ; Learning & Memory Volume 5 ; 5 >   
+   au < manifest ; Learning & Memory Volume 6 ; 6 >   
+   au < manifest ; Learning & Memory Volume 7 ; 7 >   
+   au < manifest ; Learning & Memory Volume 8 ; 8 >   
+   au < manifest ; Learning & Memory Volume 9 ; 9 >   
+   au < manifest ; Learning & Memory Volume 10 ; 10 >   
+   au < manifest ; Learning & Memory Volume 11 ; 11 >   
+   au < manifest ; Learning & Memory Volume 12 ; 12 >   
+   au < manifest ; Learning & Memory Volume 13 ; 13 >   
+   au < manifest ; Learning & Memory Volume 14 ; 14 >   
+   au < manifest ; Learning & Memory Volume 15 ; 15 >     
+   au < manifest ; Learning & Memory Volume 16 ; 16 >     
+   
+  }  
+   
+}
+   
+   
+   
+   
+   
+   
+   
