@@ -88,8 +88,7 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
-  </entry>
-    <entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.topaz.TopazHtmlFilterFactory</string>
   </entry>
