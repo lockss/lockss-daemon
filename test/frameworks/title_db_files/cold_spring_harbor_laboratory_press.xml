@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Cold Spring Harbor Laboratory Press">
+   <property name="name" value="All Cold Spring Harbor Laboratory Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Cold Spring Harbor Laboratory Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="GenomeResearch1">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch2">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch3">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch4">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch5">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch6">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch7">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch8">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch9">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch10">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch11">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch12">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch13">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch14">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch15">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch16">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch17">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch18">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="GenomeResearch19">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genome Research" />
+   <property name="title" value="Genome Research Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genome.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment1">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment2">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment3">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment4">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment5">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment6">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment7">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment8">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment9">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment10">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment11">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment12">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment13">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment14">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment15">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment16">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment17">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment18">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment19">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment20">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment21">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment22">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="GenesDevelopment23">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Genes &amp; Development" />
+   <property name="title" value="Genes &amp; Development Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://genesdev.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="RNA1">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="RNA2">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="RNA3">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="RNA4">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="RNA5">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="RNA6">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="RNA7">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="RNA8">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="RNA9">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="RNA10">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="RNA11">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="RNA12">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="RNA13">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="RNA14">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="RNA15">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="RNA" />
+   <property name="title" value="RNA Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rnajournal.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="LearningMemory1">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="LearningMemory2">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="LearningMemory3">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="LearningMemory4">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="LearningMemory5">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="LearningMemory6">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="LearningMemory7">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="LearningMemory8">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="LearningMemory9">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="LearningMemory10">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="LearningMemory11">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="LearningMemory12">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="LearningMemory13">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="LearningMemory14">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="LearningMemory15">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="LearningMemory16">
+   <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+   <property name="journalTitle" value="Learning &amp; Memory" />
+   <property name="title" value="Learning &amp; Memory Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://learnmem.cshlp.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
