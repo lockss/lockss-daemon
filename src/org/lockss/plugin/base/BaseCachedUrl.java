@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.35 2008-09-18 02:10:23 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.36 2009-01-21 23:15:06 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   public static final String PARAM_FILTER_USE_CHARSET =
     Configuration.PREFIX + "baseCachedUrl.filterUseCharset";
-  public static final boolean DEFAULT_FILTER_USE_CHARSET = false;
+  public static final boolean DEFAULT_FILTER_USE_CHARSET = true;
 
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.71 2008-10-24 07:09:00 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.72 2009-01-21 23:15:06 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
   public static final String PARAM_PARSE_USE_CHARSET =
     PREFIX + "parseUseCharset";
-  public static final boolean DEFAULT_PARSE_USE_CHARSET = false;
+  public static final boolean DEFAULT_PARSE_USE_CHARSET = true;
 
   public static final String PARAM_PERSIST_CRAWL_LIST =
     PREFIX + "persistCrawlList";
