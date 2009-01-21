@@ -1,5 +1,5 @@
 /*
- * $Id: UniversityOfChicagoPressHtmlFilterFactory.java,v 1.5 2009-01-21 01:42:06 greya Exp $
+ * $Id: UniversityOfChicagoPressHtmlFilterFactory.java,v 1.6 2009-01-21 04:57:33 thib_gc Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class UniversityOfChicagoPressHtmlFilterFactory implements FilterFactory 
         // Filter out <div id="module_adSpaceJournals">...</link>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
-                                                                         "module_adSpaceJournals")),                                                                 
+                                                                         "module_adspaceJournals")),                                                                 
                                                                          
         // Filter out <a href="...">...</a> where the href value matches a regular exception
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
