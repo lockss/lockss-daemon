@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.6 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdbconst.py,v 1.7 2009-01-25 01:34:35 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,11 +27,6 @@
 # in this Software without prior written authorization from Stanford University.
 
 from tdb import *
-
-TDB_OPTION_LINT          = 'lint'
-TDB_OPTION_LINT_FORGIVE  = 'lintForgive'
-TDB_LINT_DEFAULT         = False
-TDB_LINT_FORGIVE_DEFAULT = False
 
 TDB_OPTION_LEVEL                   = 'level'
 TDB_LEVEL_CONTENT_TESTING          = 'contentTesting'

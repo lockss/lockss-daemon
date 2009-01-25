@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.8 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdb.py,v 1.9 2009-01-25 01:34:35 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -25,8 +25,6 @@
 # Except as contained in this notice, the name of Stanford University shall not
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
-
-#import re
 
 class Map(object):
     
@@ -132,6 +130,7 @@ class AU(ChainedMap):
     TITLE = 'title'
 
     def __init__(self, next=None):
+        '''Constructor.'''
         ChainedMap.__init__(self, next)
 
     def set_title(self, title): self.set(AU.TITLE, title)
@@ -150,6 +149,7 @@ class AU(ChainedMap):
 class Tdb(object):
 
     def __init__(self):
+        '''Constructor.'''
         self.__publishers = []
         self.__titles = []
         self.__aus = []
@@ -161,8 +161,3 @@ class Tdb(object):
     def publishers(self): return self.__publishers[:]
     def titles(self): return self.__titles[:]
     def aus(self): return self.__aus[:]
-
-    def internal_print(self):
-        print self.publishers()
-        print self.titles()
-        print self.aus()

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.4 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdbproc.py,v 1.5 2009-01-25 01:34:35 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,6 +27,7 @@
 # in this Software without prior written authorization from Stanford University.
 
 from tdbconst import *
+import tdblint
 
 TDBPROC_VERSION = '0.1.2'
 
@@ -56,27 +57,14 @@ def _make_command_line_parser():
                       help='output style (default: %default)')
 
 ## @begin tdblint
-    lint_group = OptionGroup(parser, 'Lint module')
-    lint_group.add_option(OPTION_LONG + TDB_OPTION_LINT,
-                          dest=TDB_OPTION_LINT,
-                          action='store_true',
-                          default=TDB_LINT_DEFAULT,
-                          help='reject substandard input')
-    lint_group.add_option(OPTION_LONG + TDB_OPTION_LINT_FORGIVE,
-                          dest=TDB_OPTION_LINT_FORGIVE,
-                          action='store_true',
-                          default=TDB_LINT_FORGIVE_DEFAULT,
-                          help='report substandard input but proceed')
-    parser.add_option_group(lint_group)
+    tdblint.__option_parser__(parser)
 ## @end tdblint
 
     return parser
 
 def _dispatch(tdb, options):
 ## @begin tdblint
-    if options.lint:
-        from tdblint import tdb_lint
-        tdb_lint(tdb, options)
+    if tdblint.__dispatch__(options): tdblint.tdblint(tdb, options)
 ## @end tdblint
 ## @begin tdbxml
     elif options.style in [ TDB_STYLE_XML, TDB_STYLE_XML_ENTRIES, TDB_STYLE_XML_LEGACY ]:

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdblint.py,v 1.3 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdblint.py,v 1.4 2009-01-25 01:34:35 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -28,9 +28,39 @@
 
 from tdb import *
 
-def tdb_lint(tdb, options):
+TDBLINT_VERSION = '0.1.2'
+
+OPTION_LINT         = 'lint'
+OPTION_LINT_SHORT   = 'L'
+OPTION_LINT_DEFAULT = False
+
+OPTION_LINT_FORGIVE         = 'lintForgive'
+OPTION_LINT_FORGIVE_SHORT   = 'F'
+OPTION_LINT_FORGIVE_DEFAULT = False
+
+def __option_parser__(parser):
+    from optparse import OptionGroup
+    tdblint_group = OptionGroup(parser, 'tdblint module (%s)' % ( TDBLINT_VERSION, ))
+    tdblint_group.add_option('-' + OPTION_LINT_SHORT,
+                             '--' + OPTION_LINT,
+                             dest=OPTION_LINT,
+                             action='store_true',
+                             default=OPTION_LINT_DEFAULT,
+                             help='reject improper input')
+    tdblint_group.add_option('-' + OPTION_LINT_FORGIVE_SHORT,
+                             '--' + OPTION_LINT_FORGIVE,
+                             dest=OPTION_LINT_FORGIVE,
+                             action='store_true',
+                             default=OPTION_LINT_FORGIVE_DEFAULT,
+                             help='report improper input but proceed')
+    parser.add_option_group(tdblint_group)
+
+def __dispatch__(options):
+    return getattr(options, OPTION_LINT)
+
+def tdblint(tdb, options):
+    '''Check that each AU has a name and a recognized status'''
     valid = True
-    # Check that each AU has a name and a recognized status
     for au in tdb.aus():
         if au.name() is None or au.name() == '':
             valid = False
@@ -42,6 +72,6 @@ def tdb_lint(tdb, options):
             valid = False
             print 'AU with unrecognized status: %s [%s]' % ( au.name(), au.status() )
     if not valid:
-        if options.lintForgive: return
+        if getattr(options, OPTION_LINT): return
         import sys
         sys.exit('The input is invalid')
