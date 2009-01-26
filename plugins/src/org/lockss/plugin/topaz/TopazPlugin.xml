@@ -33,6 +33,8 @@
       <string>1,&quot;^%sarticle/info(:|%%3A)doi(/|%%2F)&quot;, base_url</string>
       <string>1,&quot;^%sarticle/(citationList|fetchFirstRepresentation|fetchObject|fetchObjectAttachment|get[a-zA-Z0-9]*Citation|showImageLarge|slideshow)\.action\?&quot;, base_url</string>
       <string>1,&quot;^%sjournals/%s/article/(fetchObject|fetchObjectAttachment)\.action\?&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%scontent/suppl/&quot;, base_url</string>
+
     </list>
   </entry>
   <entry>
