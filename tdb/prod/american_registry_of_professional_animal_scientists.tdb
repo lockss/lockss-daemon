@@ -3,7 +3,7 @@
     name = American Registry of Professional Animal Scientists
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; name ; param[volume_name] >
   plugin = org.lockss.plugin.highwire.HighWireH20Plugin
 
   {

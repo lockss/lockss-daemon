@@ -3,7 +3,7 @@
     name = National Academy of Sciences
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; name ; param[volume_name] >
   plugin = org.lockss.plugin.highwire.HighWireH20Plugin
   
  {

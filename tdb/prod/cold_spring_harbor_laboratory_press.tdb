@@ -3,7 +3,7 @@
     name = Cold Spring Harbor Laboratory Press
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; name ; param[volume_name] >
   plugin = org.lockss.plugin.highwire.HighWireH20Plugin
    
  {
@@ -43,24 +43,24 @@
    
    param[base_url] = http://genesdev.cshlp.org/
 
-   au < manifest ; Genes & Development Volume 1 ; 1 >   
-   au < manifest ; Genes & Development Volume 2 ; 2 >   
-   au < manifest ; Genes & Development Volume 3 ; 3 >   
-   au < manifest ; Genes & Development Volume 4 ; 4 >   
-   au < manifest ; Genes & Development Volume 5 ; 5 >   
-   au < manifest ; Genes & Development Volume 6 ; 6 >   
-   au < manifest ; Genes & Development Volume 7 ; 7 >   
-   au < manifest ; Genes & Development Volume 8 ; 8 >   
-   au < manifest ; Genes & Development Volume 9 ; 9 >   
-   au < manifest ; Genes & Development Volume 10 ; 10 >   
-   au < manifest ; Genes & Development Volume 11 ; 11 >   
-   au < manifest ; Genes & Development Volume 12 ; 12 >   
-   au < manifest ; Genes & Development Volume 13 ; 13 >   
-   au < manifest ; Genes & Development Volume 14 ; 14 >   
-   au < manifest ; Genes & Development Volume 15 ; 15 >   
-   au < manifest ; Genes & Development Volume 16 ; 16 >   
-   au < manifest ; Genes & Development Volume 17 ; 17 >   
-   au < manifest ; Genes & Development Volume 18 ; 18 >   
+   au < exists ; Genes & Development Volume 1 ; 1 >   
+   au < exists ; Genes & Development Volume 2 ; 2 >   
+   au < exists ; Genes & Development Volume 3 ; 3 >   
+   au < exists ; Genes & Development Volume 4 ; 4 >   
+   au < exists ; Genes & Development Volume 5 ; 5 >   
+   au < exists ; Genes & Development Volume 6 ; 6 >   
+   au < exists ; Genes & Development Volume 7 ; 7 >   
+   au < exists ; Genes & Development Volume 8 ; 8 >   
+   au < exists ; Genes & Development Volume 9 ; 9 >   
+   au < exists ; Genes & Development Volume 10 ; 10 >   
+   au < exists ; Genes & Development Volume 11 ; 11 >   
+   au < exists ; Genes & Development Volume 12 ; 12 >   
+   au < exists ; Genes & Development Volume 13 ; 13 >   
+   au < exists ; Genes & Development Volume 14 ; 14 >   
+   au < exists ; Genes & Development Volume 15 ; 15 >   
+   au < exists ; Genes & Development Volume 16 ; 16 >   
+   au < exists ; Genes & Development Volume 17 ; 17 >   
+   au < exists ; Genes & Development Volume 18 ; 18 >   
    au < manifest ; Genes & Development Volume 19 ; 19 >   
    au < manifest ; Genes & Development Volume 20 ; 20 >   
    au < manifest ; Genes & Development Volume 21 ; 21 >   
