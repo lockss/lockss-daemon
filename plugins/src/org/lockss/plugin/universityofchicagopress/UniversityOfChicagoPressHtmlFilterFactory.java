@@ -1,5 +1,5 @@
 /*
- * $Id: UniversityOfChicagoPressHtmlFilterFactory.java,v 1.6 2009-01-21 04:57:33 thib_gc Exp $
+ * $Id: UniversityOfChicagoPressHtmlFilterFactory.java,v 1.7 2009-01-27 00:26:58 greya Exp $
  */
 
 /*
@@ -32,15 +32,59 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.universityofchicagopress;
 
-import java.io.InputStream;
+import java.io.*;
 
+import org.htmlparser.Tag;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.Span;
+import org.htmlparser.util.*;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class UniversityOfChicagoPressHtmlFilterFactory implements FilterFactory {
 
+  public static class NormalizeIdOfSpanClassTitleTransform implements HtmlTransform {
+
+    public static class NormalizeIdOfSpanClassTitleVisitor extends NodeVisitor {
+      
+      private NormalizeIdOfSpanClassTitleVisitor() {
+        // Cannot instantiate externally
+        super();
+      }
+      
+      @Override
+      public void visitTag(Tag tag) {
+        if (   tag instanceof Span
+            && "title".equals(tag.getAttribute("class"))) {
+          tag.removeAttribute("id");
+        }
+      }
+      
+    }
+
+    private NormalizeIdOfSpanClassTitleTransform() {
+      // Cannot instantiate externally
+    }
+    
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(normalizeVisitor);
+      } catch (ParserException pe) {
+        IOException ioe = new IOException();
+        ioe.initCause(pe);
+        throw ioe;
+      }
+      return nodeList;
+    }
+    
+    public static final NodeVisitor normalizeVisitor = new NormalizeIdOfSpanClassTitleVisitor();
+    
+  }
+  
+  public static final HtmlTransform normalizeTransform = new NormalizeIdOfSpanClassTitleTransform();  
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -90,6 +134,8 @@ public class UniversityOfChicagoPressHtmlFilterFactory implements FilterFactory 
                                                                               "/action/showFeed\\?(.*&)?mi=")),
         // Filter out <script>...</script>
         HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
+        // <span class="title" id="...">...</span> -> <span class="title">...</span>
+        normalizeTransform,
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
