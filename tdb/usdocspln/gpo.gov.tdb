@@ -217,13 +217,13 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin
 
-    au < testing ; Congressional Reports, 104th Congress ; 104 >
-    au < testing ; Congressional Reports, 105th Congress ; 105 >
-    au < testing ; Congressional Reports, 106th Congress ; 106 >
-    au < testing ; Congressional Reports, 107th Congress ; 107 >
-    au < testing ; Congressional Reports, 108th Congress ; 108 >
-    au < testing ; Congressional Reports, 109th Congress ; 109 > 
-    au < testing ; Congressional Reports, 110th Congress ; 110 >
+    au < ready ; Congressional Reports, 104th Congress ; 104 >
+    au < ready ; Congressional Reports, 105th Congress ; 105 >
+    au < ready ; Congressional Reports, 106th Congress ; 106 >
+    au < ready ; Congressional Reports, 107th Congress ; 107 >
+    au < ready ; Congressional Reports, 108th Congress ; 108 >
+    au < ready ; Congressional Reports, 109th Congress ; 109 > 
+    au < ready ; Congressional Reports, 110th Congress ; 110 >
 
   }
 

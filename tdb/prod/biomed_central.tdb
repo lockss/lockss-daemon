@@ -1865,10 +1865,10 @@
       param[base_url] = http://www.head-face-med.com/
       param[journal_issn] = 1746-160X
 
-      au < testing ; Head & Face Medicine Volume 1 ; 1 >
-      au < testing ; Head & Face Medicine Volume 2 ; 2 >
-      au < testing ; Head & Face Medicine Volume 3 ; 3 >
-      au < testing ; Head & Face Medicine Volume 4 ; 4 >
+      au < ready ; Head & Face Medicine Volume 1 ; 1 >
+      au < ready ; Head & Face Medicine Volume 2 ; 2 >
+      au < ready ; Head & Face Medicine Volume 3 ; 3 >
+      au < ready ; Head & Face Medicine Volume 4 ; 4 >
     }
 
 
@@ -1882,12 +1882,12 @@
       param[base_url] = http://www.hqlo.com/
       param[journal_issn] = 1477-7525
 
-      au < testing ; Health and Quality of Life Outcomes Volume 1 ; 1 >
-      au < testing ; Health and Quality of Life Outcomes Volume 2 ; 2 >
-      au < testing ; Health and Quality of Life Outcomes Volume 3 ; 3 >
-      au < testing ; Health and Quality of Life Outcomes Volume 4 ; 4 >
-      au < testing ; Health and Quality of Life Outcomes Volume 5 ; 5 >
-      au < testing ; Health and Quality of Life Outcomes Volume 6 ; 6 >
+      au < ready ; Health and Quality of Life Outcomes Volume 1 ; 1 >
+      au < ready ; Health and Quality of Life Outcomes Volume 2 ; 2 >
+      au < ready ; Health and Quality of Life Outcomes Volume 3 ; 3 >
+      au < ready ; Health and Quality of Life Outcomes Volume 4 ; 4 >
+      au < ready ; Health and Quality of Life Outcomes Volume 5 ; 5 >
+      au < ready ; Health and Quality of Life Outcomes Volume 6 ; 6 >
     }
 
 
@@ -1934,11 +1934,11 @@
       param[base_url] = http://www.immunityageing.com/
       param[journal_issn] = 1742-4933
 
-      au < testing ; Immunity & Ageing Volume 1 ; 1 >
-      au < testing ; Immunity & Ageing Volume 2 ; 2 >
-      au < testing ; Immunity & Ageing Volume 3 ; 3 >
-      au < testing ; Immunity & Ageing Volume 4 ; 4 >
-      au < testing ; Immunity & Ageing Volume 5 ; 5 >
+      au < ready ; Immunity & Ageing Volume 1 ; 1 >
+      au < ready ; Immunity & Ageing Volume 2 ; 2 >
+      au < ready ; Immunity & Ageing Volume 3 ; 3 >
+      au < ready ; Immunity & Ageing Volume 4 ; 4 >
+      au < ready ; Immunity & Ageing Volume 5 ; 5 >
     }
 
 
@@ -1952,10 +1952,10 @@
       param[base_url] = http://www.immunome-research.com/
       param[journal_issn] = 1745-7580
 
-      au < testing ; Immunome Research Volume 1 ; 1 >
-      au < testing ; Immunome Research Volume 2 ; 2 >
-      au < testing ; Immunome Research Volume 3 ; 3 >
-      au < testing ; Immunome Research Volume 4 ; 4 >
+      au < ready ; Immunome Research Volume 1 ; 1 >
+      au < ready ; Immunome Research Volume 2 ; 2 >
+      au < ready ; Immunome Research Volume 3 ; 3 >
+      au < ready ; Immunome Research Volume 4 ; 4 >
     }
 
 
@@ -1969,9 +1969,9 @@
       param[base_url] = http://www.implementationscience.com/
       param[journal_issn] = 1748-5908
 
-      au < manifest ; Implementation Science Volume 1 ; 1 >
-      au < manifest ; Implementation Science Volume 2 ; 2 >
-      au < manifest ; Implementation Science Volume 3 ; 3 >
+      au < testing ; Implementation Science Volume 1 ; 1 >
+      au < testing ; Implementation Science Volume 2 ; 2 >
+      au < testing ; Implementation Science Volume 3 ; 3 >
     }
 
 
@@ -1985,9 +1985,9 @@
       param[base_url] = http://www.infectagentscancer.com/
       param[journal_issn] = 1750-9378
 
-      au < manifest ; Infectious Agents and Cancer Volume 1 ; 1 >
-      au < manifest ; Infectious Agents and Cancer Volume 2 ; 2 >
-      au < manifest ; Infectious Agents and Cancer Volume 3 ; 3 >
+      au < testing ; Infectious Agents and Cancer Volume 1 ; 1 >
+      au < testing ; Infectious Agents and Cancer Volume 2 ; 2 >
+      au < testing ; Infectious Agents and Cancer Volume 3 ; 3 >
     }
 
 
@@ -2001,7 +2001,7 @@
       param[base_url] = http://www.intarchmed.com/
       param[journal_issn] = 1755-7682
 
-      au < manifest ; International Archives of Medicine Volume 1 ; 1 >
+      au < testing ; International Archives of Medicine Volume 1 ; 1 >
     }
 
 
@@ -2015,9 +2015,9 @@
       param[base_url] = http://www.internationalbreastfeedingjournal.com/
       param[journal_issn] = 1746-4358
 
-      au < manifest ; International Breastfeeding Journal Volume 1 ; 1 >
-      au < manifest ; International Breastfeeding Journal Volume 2 ; 2 >
-      au < manifest ; International Breastfeeding Journal Volume 3 ; 3 >
+      au < testing ; International Breastfeeding Journal Volume 1 ; 1 >
+      au < testing ; International Breastfeeding Journal Volume 2 ; 2 >
+      au < testing ; International Breastfeeding Journal Volume 3 ; 3 >
     }
 
 
@@ -2031,13 +2031,13 @@
       param[base_url] = http://www.equityhealthj.com/
       param[journal_issn] = 1475-9276
 
-      au < manifest ; International Journal for Equity in Health Volume 1 ; 1 >
-      au < manifest ; International Journal for Equity in Health Volume 2 ; 2 >
-      au < manifest ; International Journal for Equity in Health Volume 3 ; 3 >
-      au < manifest ; International Journal for Equity in Health Volume 4 ; 4 >
-      au < manifest ; International Journal for Equity in Health Volume 5 ; 5 >
-      au < manifest ; International Journal for Equity in Health Volume 6 ; 6 >
-      au < manifest ; International Journal for Equity in Health Volume 7 ; 7 >
+      au < testing ; International Journal for Equity in Health Volume 1 ; 1 >
+      au < testing ; International Journal for Equity in Health Volume 2 ; 2 >
+      au < testing ; International Journal for Equity in Health Volume 3 ; 3 >
+      au < testing ; International Journal for Equity in Health Volume 4 ; 4 >
+      au < testing ; International Journal for Equity in Health Volume 5 ; 5 >
+      au < testing ; International Journal for Equity in Health Volume 6 ; 6 >
+      au < testing ; International Journal for Equity in Health Volume 7 ; 7 >
     }
 
 
@@ -2051,11 +2051,11 @@
       param[base_url] = http://www.ijbnpa.org/
       param[journal_issn] = 1479-5868
 
-      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 1 ; 1 >
-      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 2 ; 2 >
-      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 3 ; 3 >
-      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 4 ; 4 >
-      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 5 ; 5 >
+      au < testing ; International Journal of Behavioral Nutrition and Physical Activity Volume 1 ; 1 >
+      au < testing ; International Journal of Behavioral Nutrition and Physical Activity Volume 2 ; 2 >
+      au < testing ; International Journal of Behavioral Nutrition and Physical Activity Volume 3 ; 3 >
+      au < testing ; International Journal of Behavioral Nutrition and Physical Activity Volume 4 ; 4 >
+      au < testing ; International Journal of Behavioral Nutrition and Physical Activity Volume 5 ; 5 >
     }
 
 

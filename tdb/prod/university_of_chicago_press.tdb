@@ -32,10 +32,10 @@
     au < do_not_process ; American Art Volume 15 ; 15 >
     au < do_not_process ; American Art Volume 16 ; 16 >
     au < do_not_process ; American Art Volume 17 ; 17 >
-    au < manifest ; American Art Volume 18 ; 18 >
-    au < manifest ; American Art Volume 19 ; 19 >
-    au < manifest ; American Art Volume 20 ; 20 >
-    au < manifest ; American Art Volume 21 ; 21 >
+    au < ready ; American Art Volume 18 ; 18 >
+    au < exists ; American Art Volume 19 ; 19 >
+    au < exists ; American Art Volume 20 ; 20 >
+    au < exists ; American Art Volume 21 ; 21 >
 
   }
 
@@ -46,9 +46,9 @@
 
     param[journal_id] = ahr
 
-    au < manifest ; The American Historical Review Volume 110 ; 110 >
-    au < manifest ; The American Historical Review Volume 111 ; 111 >
-    au < manifest ; The American Historical Review Volume 112 ; 112 >
+    au < exists ; The American Historical Review Volume 110 ; 110 >
+    au < exists ; The American Historical Review Volume 111 ; 111 >
+    au < ready ; The American Historical Review Volume 112 ; 112 >
 
   }
 
@@ -168,11 +168,11 @@
     au < do_not_process ; American Journal of Education Volume 107 ; 107 >
     au < do_not_process ; American Journal of Education Volume 108 ; 108 >
     au < do_not_process ; American Journal of Education Volume 109 ; 109 >
-    au < manifest ; American Journal of Education Volume 110 ; 110 >
-    au < manifest ; American Journal of Education Volume 111 ; 111 >
-    au < manifest ; American Journal of Education Volume 112 ; 112 >
-    au < manifest ; American Journal of Education Volume 113 ; 113 >
-    au < manifest ; American Journal of Education Volume 114 ; 114 >
+    au < exists ; American Journal of Education Volume 110 ; 110 >
+    au < exists ; American Journal of Education Volume 111 ; 111 >
+    au < exists ; American Journal of Education Volume 112 ; 112 >
+    au < ready ; American Journal of Education Volume 113 ; 113 >
+    au < exists ; American Journal of Education Volume 114 ; 114 >
 
   }
 
