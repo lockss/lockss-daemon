@@ -17,19 +17,19 @@
 
     param[journal_id] = aaa
 
-    au < ready ; Abstract and Applied Analysis Volume 1 ; 1 >
-    au < ready ; Abstract and Applied Analysis Volume 2 ; 2 >
-    au < ready ; Abstract and Applied Analysis Volume 3 ; 3 >
-    au < ready ; Abstract and Applied Analysis Volume 4 ; 4 >
-    au < ready ; Abstract and Applied Analysis Volume 5 ; 5 >
-    au < ready ; Abstract and Applied Analysis Volume 6 ; 6 >
-    au < ready ; Abstract and Applied Analysis Volume 7 ; 7 >
-    au < ready ; Abstract and Applied Analysis Volume 2003 ; 2003 >
-    au < ready ; Abstract and Applied Analysis Volume 2004 ; 2004 >
-    au < ready ; Abstract and Applied Analysis Volume 2005 ; 2005 >
-    au < ready ; Abstract and Applied Analysis Volume 2006 ; 2006 >
-    au < ready ; Abstract and Applied Analysis Volume 2007 ; 2007 >
-    au < testing ; Abstract and Applied Analysis Volume 2008 ; 2008 >
+    au < manifest ; Abstract and Applied Analysis Volume 1 ; 1 >
+    au < manifest ; Abstract and Applied Analysis Volume 2 ; 2 >
+    au < manifest ; Abstract and Applied Analysis Volume 3 ; 3 >
+    au < manifest ; Abstract and Applied Analysis Volume 4 ; 4 >
+    au < manifest ; Abstract and Applied Analysis Volume 5 ; 5 >
+    au < manifest ; Abstract and Applied Analysis Volume 6 ; 6 >
+    au < manifest ; Abstract and Applied Analysis Volume 7 ; 7 >
+    au < manifest ; Abstract and Applied Analysis Volume 2003 ; 2003 >
+    au < manifest ; Abstract and Applied Analysis Volume 2004 ; 2004 >
+    au < manifest ; Abstract and Applied Analysis Volume 2005 ; 2005 >
+    au < manifest ; Abstract and Applied Analysis Volume 2006 ; 2006 >
+    au < manifest ; Abstract and Applied Analysis Volume 2007 ; 2007 >
+    au < manifest ; Abstract and Applied Analysis Volume 2008 ; 2008 >
 
   }
 
@@ -40,15 +40,15 @@
 
     param[journal_id] = apec
 
-    au < testing ; Active and Passive Electronic Components Volume 1 ; 1 >
-    au < testing ; Active and Passive Electronic Components Volume 2 ; 2 >
-    au < testing ; Active and Passive Electronic Components Volume 3 ; 3 >
-    au < testing ; Active and Passive Electronic Components Volume 4 ; 4 >
-    au < testing ; Active and Passive Electronic Components Volume 5 ; 5 >
-    au < testing ; Active and Passive Electronic Components Volume 6 ; 6 >
-    au < testing ; Active and Passive Electronic Components Volume 7 ; 7 >
-    au < testing ; Active and Passive Electronic Components Volume 8 ; 8 >
-    au < testing ; Active and Passive Electronic Components Volume 9 ; 9 >
+    au < manifest ; Active and Passive Electronic Components Volume 1 ; 1 >
+    au < manifest ; Active and Passive Electronic Components Volume 2 ; 2 >
+    au < manifest ; Active and Passive Electronic Components Volume 3 ; 3 >
+    au < manifest ; Active and Passive Electronic Components Volume 4 ; 4 >
+    au < manifest ; Active and Passive Electronic Components Volume 5 ; 5 >
+    au < manifest ; Active and Passive Electronic Components Volume 6 ; 6 >
+    au < manifest ; Active and Passive Electronic Components Volume 7 ; 7 >
+    au < manifest ; Active and Passive Electronic Components Volume 8 ; 8 >
+    au < manifest ; Active and Passive Electronic Components Volume 9 ; 9 >
     au < manifest ; Active and Passive Electronic Components Volume 10 ; 10 >
     au < manifest ; Active and Passive Electronic Components Volume 11 ; 11 >
     au < manifest ; Active and Passive Electronic Components Volume 12 ; 12 >
