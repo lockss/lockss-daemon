@@ -13,6 +13,8 @@
    
    param[base_url] = http://genome.cshlp.org/
 
+comment[17] = vol 17, repository error caused by too-long urls
+
    au < exists ; Genome Research Volume 1 ; 1 >    
    au < exists ; Genome Research Volume 2 ; 2 >   
    au < exists ; Genome Research Volume 3 ; 3 >   
