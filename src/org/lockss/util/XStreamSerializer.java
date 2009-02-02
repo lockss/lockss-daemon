@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.25 2009-02-02 18:23:24 edwardsb1 Exp $
+ * $Id: XStreamSerializer.java,v 1.26 2009-02-02 23:25:48 edwardsb1 Exp $
  */
 
 /*
@@ -641,11 +641,7 @@ public class XStreamSerializer extends ObjectSerializer {
   }
 
   /* Inherit documentation */
-  /**
-   * BEE - We need a two-way street.  If we're going to deserialize, then we
-   * need to serialize.
-   */
-  public void serialize(Writer writer,
+  protected void serialize(Writer writer,
                            Object obj)
       throws SerializationException,
              InterruptedIOException {
