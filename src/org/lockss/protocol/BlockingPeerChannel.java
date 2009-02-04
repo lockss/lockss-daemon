@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.24 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.24.2.1 2009-02-04 08:32:42 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ class BlockingPeerChannel implements PeerChannel {
     OPEN,
     DRAIN_INPUT,
     DRAIN_OUTPUT,
+    NEED_CLOSE,
     CLOSING,
     CLOSED,
   }
@@ -79,6 +80,9 @@ class BlockingPeerChannel implements PeerChannel {
   private InputStream ins;
   private OutputStream outs;
   private OutputStream socket_outs;
+  private int sendCnt = 0;
+  private boolean didOpen = false;
+  private Throwable connectException;
 
   volatile private long lastSendTime = 0;
   volatile private long lastRcvTime = 0;
@@ -148,6 +152,17 @@ class BlockingPeerChannel implements PeerChannel {
 
   long getLastActiveTime() {
     return lastActiveTime;
+  }
+
+  /** Return true if it's worth queueing and retrying the messages this
+   * channel didn't send.  True if the connection was opened successfully
+   * (and presumably closed abruptly) or if it failed due to a
+   * SocketException (but not, e.g., mismatching SSL keys (SSLException) */
+  boolean shouldRetry() {
+    if (connectException != null) {
+      return connectException instanceof SocketException;
+    }
+    return didOpen;
   }
 
   private void setState(ChannelState newState) {
@@ -330,6 +345,7 @@ class BlockingPeerChannel implements PeerChannel {
 	return false;
       default:
 	sendQueue.put(msg);
+	sendCnt++;
 	return true;
       }
     }
@@ -484,11 +500,15 @@ class BlockingPeerChannel implements PeerChannel {
 	sock = scomm.getSocketFactory().newSocket(tpad.getIPAddr(),
 						  tpad.getPort());
 	connector.cancelTimeout();
+	didOpen = true;
 	this.connecter = wtConnecter = null;
 	log.debug2("Connected to " + peer);
       } catch (IOException e) {
 	connector.cancelTimeout();
 	this.connecter = wtConnecter = null;
+	if (e instanceof SocketException) {
+	  connectException = e;
+	}
 	stateTrans(ChannelState.CONNECTING, ChannelState.DISSOCIATING);
 	abortChannel("Connect failed to " + peer + ": " + e.toString());
 	stateTrans(ChannelState.DISSOCIATING, ChannelState.CONNECT_FAIL);
@@ -551,11 +571,14 @@ class BlockingPeerChannel implements PeerChannel {
 	  readMessages(runner);
 	  // input stream closed by peer, drain output if necessary
 	  synchronized (stateLock) {
-	    if (isSendIdle()) {
-	      stopChannel();
-	    } else {
+	    if (!isSendIdle() && isOpen()) {
 	      stateTrans(ChannelState.OPEN, ChannelState.DRAIN_OUTPUT);
+	    } else {
+	      notStateTrans(stopIgnStates, ChannelState.NEED_CLOSE);
 	    }
+	  }
+	  if (isState(ChannelState.NEED_CLOSE)) {
+	    stopChannel();
 	  }
 	  // and exit thread
 	  return;
@@ -618,8 +641,16 @@ class BlockingPeerChannel implements PeerChannel {
       case OP_DATA:
 	readDataMsg();
 	break;
+      case OP_CLOSE:
+	// Not implemented yet
+	break;
       default:
-	throw new ProtocolException("Received unknown opcode: " + op);
+	String msg = "Received unknown opcode: " + op;
+	if (scomm.getAbortOnUnknownOp()) {
+	  throw new ProtocolException(msg);
+	} else {
+	  log.debug(msg);
+	}
       }
     }
   }
@@ -655,8 +686,12 @@ class BlockingPeerChannel implements PeerChannel {
       // connection to peerid just received, send an echo nonce message
       // over that connection and ensure we receive the nonce on this
       // connection, then close outgoing conn
+
       synchronized (stateLock) {
 	if (isOpen() && !isOriginate()) {
+	  // This is an unassociated incoming channel, so scomm has no
+	  // pointer to it, thus it's ok to call associateChannelWithPeer
+	  // while holding stateLock.
 	  scomm.associateChannelWithPeer(this, peer);
 	}
       }
@@ -797,10 +832,13 @@ class BlockingPeerChannel implements PeerChannel {
 	  synchronized (stateLock) {
 	    // if draining output and nothing left to send, close.  Check
 	    // now rather than waiting for peekWait() to timeout.
-	    if (state == ChannelState.DRAIN_OUTPUT && isSendIdle()) {
-	      stopChannel();
-	      return;
+	    if (isSendIdle()) {
+	      stateTrans(ChannelState.DRAIN_OUTPUT, ChannelState.NEED_CLOSE);
 	    }
+	  }
+	  if (isState(ChannelState.NEED_CLOSE)) {
+	    stopChannel();
+	    return;
 	  }
 	}
 	synchronized (stateLock) {
@@ -810,20 +848,24 @@ class BlockingPeerChannel implements PeerChannel {
 	  }
 	  // if draining output, close.  Must check this again because it
 	  // might have become true during peekWait()
-	  if (state == ChannelState.DRAIN_OUTPUT) {
-	    stopChannel();
-	    return;
+	  if (isSendIdle()) {
+	    stateTrans(ChannelState.DRAIN_OUTPUT, ChannelState.NEED_CLOSE);
 	  }
-	  if (!isClosed() &&
-	      TimeBase.msSince(lastActiveTime) > scomm.getChannelIdleTime()) {
+	}
+	if (isState(ChannelState.NEED_CLOSE)) {
+	  stopChannel();
+	  return;
+	}
+
+	if (TimeBase.msSince(lastActiveTime) > scomm.getChannelIdleTime()) {
+	  if (notStateTrans(stopIgnStates, ChannelState.DRAIN_INPUT)) {
 	    // time to close channel.  shutdown output only in case peer is
 	    // now sending message
 	    // No longer can send messages so must dissociate now
 	    scomm.dissociateChannelFromPeer(this, peer, null);
-	    scomm.addDrainingChannel(this);
-
-	    setState(ChannelState.DRAIN_INPUT);
-
+	    if (peer != null) {
+	      scomm.addDrainingChannel(this);
+	    }
 	    reader.setTimeout(scomm.getDrainInputTime() / 2);
 	    try {
 	      log.debug2("Shutdown output");
@@ -903,14 +945,12 @@ class BlockingPeerChannel implements PeerChannel {
     return true;
   }
 
-  /** Return true if this channel has transmitted or received any data.  If
-   * a channel refuses an outgoing message and this is true then a new
-   * channel should be created.  If false then the channel failed on
-   * opening so a new channel should not be tried.
+  /** Return true if this channel was created as an originating channel and
+   * has not accepted any messages to be sent.  This is checked if we
+   * refuse an outgoing message.  If true, the channel failed to start.
    */
-  boolean wasOpen() {
-    return (stats.getInCount().getMsgs() != 0)
-      || (stats.getOutCount().getMsgs() != 0);
+  boolean isUnusedOriginatingChannel() {
+    return isOriginate() && sendCnt == 0;
   }
 
   public String toString() {

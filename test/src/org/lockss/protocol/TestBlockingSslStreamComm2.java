@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm2.java,v 1.4 2007-11-06 07:10:26 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm2.java,v 1.4.20.1 2009-02-04 08:32:42 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,10 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
     }
   }
 
+  protected boolean isSsl() {
+    return true;
+  }
+
   public void setUp() throws Exception {
     super.setUp();
     shutdownOutputSupported = false;
@@ -136,26 +140,26 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
       mySockFact = s;
     }
 
-    public ServerSocket newServerSocket(int port, int backlog)
-	throws IOException {
-      if (useInternalSockets) {
-	return new InternalServerSocket(port, backlog);
-      } else {
-        ServerSocket ss = mySockFact.newServerSocket(port, backlog);
-        assertTrue(ss instanceof SSLServerSocket);
-        return ss;
-      }
-    }
+//     public ServerSocket newServerSocket(int port, int backlog)
+// 	throws IOException {
+//       if (useInternalSockets) {
+// 	return new InternalServerSocket(port, backlog);
+//       } else {
+//         ServerSocket ss = mySockFact.newServerSocket(port, backlog);
+//         assertTrue(ss instanceof SSLServerSocket);
+//         return ss;
+//       }
+//     }
 
-    public Socket newSocket(IPAddr addr, int port) throws IOException {
-      if (useInternalSockets) {
-	return new InternalSocket(addr.getInetAddr(), port);
-      } else {
-        Socket s = mySockFact.newSocket(addr, port);
-        assertTrue(s instanceof SSLSocket);
-        return s;
-      }
-    }
+//     public Socket newSocket(IPAddr addr, int port) throws IOException {
+//       if (useInternalSockets) {
+// 	return new InternalSocket(addr.getInetAddr(), port);
+//       } else {
+//         Socket s = mySockFact.newSocket(addr, port);
+//         assertTrue(s instanceof SSLSocket);
+//         return s;
+//       }
+//     }
   }
 
   /** SSL with permanent keystore */
