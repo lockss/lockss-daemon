@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.72 2009-01-21 23:15:06 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.72.2.1 2009-02-04 08:30:36 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
+import org.lockss.hasher.*;
 import org.lockss.extractor.*;
 
 /**
@@ -95,6 +96,14 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     PREFIX + "storeArchives";
   public static final boolean DEFAULT_STORE_ARCHIVES = false;
 
+  public static final String PARAM_CRAWL_END_REPORT_EMAIL =
+    PREFIX + "crawlEndReportEmail";
+  public static final String DEFAULT_CRAWL_END_REPORT_EMAIL = null;
+
+  public static final String PARAM_CRAWL_END_REPORT_HASH_ALG =
+    PREFIX + "crawlEndReportHashAlg";
+  public static final String DEFAULT_CRAWL_END_REPORT_HASH_ALG = "SHA-1";
+
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
   private boolean parseUseCharset = DEFAULT_PARSE_USE_CHARSET;
@@ -118,6 +127,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected CrawlSpec crawlSpec = null;
   protected boolean explodeFiles = true;
   protected boolean storeArchive = false;  // XXX need to keep stub archive
+  protected String crawlEndReportEmail = DEFAULT_CRAWL_END_REPORT_EMAIL;
+  protected String crawlEndReportHashAlg = DEFAULT_CRAWL_END_REPORT_HASH_ALG;
 
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialzed, it's initialized here to a
@@ -185,6 +196,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 					DEFAULT_EXPLODE_ARCHIVES);
     storeArchive = config.getBoolean(PARAM_STORE_ARCHIVES,
 					DEFAULT_STORE_ARCHIVES);
+
+    crawlEndReportEmail = config.get(PARAM_CRAWL_END_REPORT_EMAIL,
+				     DEFAULT_CRAWL_END_REPORT_EMAIL);
+    crawlEndReportHashAlg = config.get(PARAM_CRAWL_END_REPORT_HASH_ALG,
+				       DEFAULT_CRAWL_END_REPORT_HASH_ALG);
 
   }
 
@@ -312,10 +328,20 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   /** Separate method for easy overridability in unit tests, where
    * necessary environment may not be set up */
   protected void doCrawlEndActions() {
+    sendCrawlEndReport();
     // Cause the content size and disk usage to be calculated in a
     // background thread
     AuUtil.getAuContentSize(au, false);
     AuUtil.getAuDiskUsage(au, false);
+  }
+
+  private void sendCrawlEndReport() {
+    if (!getDaemon().getPluginManager().isInternalAu(au)
+	&& crawlEndReportEmail != null) {
+      CrawlEndReport cer = new CrawlEndReport(getDaemon(), au);
+      cer.setHashAlgorithm(crawlEndReportHashAlg);
+      cer.sendCrawlEndReport(au, crawlEndReportEmail);
+    }
   }
 
   protected boolean withinCrawlWindow() {
