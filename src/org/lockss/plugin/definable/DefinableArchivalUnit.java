@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.68 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.68.6.1 2009-02-04 08:30:58 tlipkis Exp $
  */
 
 /*
@@ -694,7 +694,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
 
-  class MatchPattern {
+  static class MatchPattern {
     String regexp;
     List<List> matchArgs;
     List<ConfigParamDescr> matchArgDescrs;
