@@ -113,6 +113,12 @@ org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
 EOF
 
+# If optional SSL setup script exists and is executable, run it.
+RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
+if [ -x ${RUN_SSL} ]; then
+   ${RUN_SSL}
+fi
+
 cd ${LOCKSS_HOME}
 echo "Starting daemon at `date`" >> ${LOG_FILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &
