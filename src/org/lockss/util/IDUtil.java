@@ -1,5 +1,5 @@
 /*
- * $Id: IDUtil.java,v 1.5 2007-06-28 07:14:24 smorabito Exp $
+ * $Id: IDUtil.java,v 1.6 2009-02-05 05:10:03 tlipkis Exp $
  *
 
  Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -278,8 +278,6 @@ public class IDUtil {
     if (portBytes.length != TCP_PORT_LEN) {
       throw new IdentityParseException("Port must be exactly two bytes.");
     }
-    
-    StringBuffer port = new StringBuffer();
     
     int val = 0;
     
