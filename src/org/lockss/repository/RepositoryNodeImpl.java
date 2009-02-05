@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.83 2008-11-12 07:16:35 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.84 2009-02-05 05:09:46 tlipkis Exp $
  */
 
 /*
@@ -637,8 +637,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
               new BufferedOutputStream(new FileOutputStream(currentPropsFile));
           myProps.store(os, "HTTP headers for " + url);
           os.close();
-        } catch (IOException ignore) {
-          logger.error("Couldn't set 'was inactive' property for last version of: "+url);
+        } catch (IOException e) {
+          logger.error("Couldn't set 'was inactive' property for last version of: "+url,
+		       e);
+        } catch (LockssRepository.RepositoryStateException e) {
+          logger.error("Couldn't set 'was inactive' property for last version of: "+url,
+		       e);
         }
 
 
@@ -959,6 +963,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     InputStream is = new BufferedInputStream(new FileInputStream(propsFile));
     try {
       props.load(is);
+    } catch (IllegalArgumentException e) {
+      // Usually means a malformed encoding in the props file
+      throw new LockssRepository.RepositoryStateException("Can't read properties file.",
+							  e);
     } finally {
       is.close();
     }
