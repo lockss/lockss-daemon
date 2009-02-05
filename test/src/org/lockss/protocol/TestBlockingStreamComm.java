@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.24 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.25 2009-02-05 05:09:33 tlipkis Exp $
  */
 
 /*
@@ -109,12 +109,16 @@ public class TestBlockingStreamComm extends LockssTestCase {
 					// reconfigure
   SimpleBinarySemaphore sem1;
   SimpleBinarySemaphore sem2;
-  SimpleQueue assocQ;
+  SimpleQueue assocQ, assocQ2;
   boolean useInternalSockets = false;
   protected boolean shutdownOutputSupported = true;
 
   TestBlockingStreamComm(String name) {
     super(name);
+  }
+
+  protected boolean isSsl() {
+    return false;
   }
 
   void addSuiteProps(Properties p) {
@@ -268,7 +272,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
   /** Create and start BlockingStreamComm instance ix, register message
    * handlers for it
    */
-  void setupComm(int ix) throws IOException {
+   void setupComm(int ix) throws IOException {
     if (pids[ix] == null) setupPid(ix);
     setupCommArrayEntry(ix);
     comms[ix].initService(daemon);
@@ -573,6 +577,34 @@ public class TestBlockingStreamComm extends LockssTestCase {
     PeerData pdata = comm1.getPeerData(pid2);
     assertNotNull(pdata);
     assertTrue(pdata.isRetryNeeded());
+    assertEquals(1, pdata.sendQueue.size());
+  }
+
+  // Cause connect to fail with SSLException instead of Refused - shouldn't
+  // retry
+  public void testSSLFailNoRetry() throws IOException {
+    TimeBase.setSimulated(10000);
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    List event;
+    setupComm1();
+    MySocketFactory msf = (MySocketFactory)comm1.getSocketFactory();
+    msf.setNewSocketThrow(new SSLPeerUnverifiedException("Fake SSL exception"));
+    setupPid(2);
+    comm1.setAssocQueue(assocQ);
+    msg1.setExpiration(11000);
+    comm1.sendTo(msg1, pid2, null);
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
+    assertEmpty(getChannels(comm1));
+    assertEmpty(getRcvChannels(comm1));
+
+    PeerData pdata = comm1.getPeerData(pid2);
+    assertNotNull(pdata);
+    assertFalse(pdata.isRetryNeeded());
+    assertNull(pdata.sendQueue);
   }
 
   public void testIncoming() throws IOException {
@@ -1008,17 +1040,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupPid(2);
     comm1.setAssocQueue(assocQ);
     comm1.sendTo(msg1, pid2, null);
+    PeerData pdata = comm1.getPeerData(pid2);
+    int sendRpt = pdata.lastSendRpt;
     assertNotNull("Connecting channel didn't dissociate",
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
     assertEquals("Connecting channel didn't dissociate",
 		 "dissoc", event.get(0));
 
-    PeerData pdata = comm1.getPeerData(pid2);
     assertNotNull(pdata);
     assertNull(pdata.getPrimaryChannel());
     assertNull(pdata.getSecondaryChannel());
-    assertEquals(1, pdata.getOrigCnt());
-    assertEquals(1, pdata.getFailCnt());
+    assertEquals(sendRpt, pdata.getOrigCnt());
+    assertEquals(sendRpt, pdata.getFailCnt());
     assertEquals(0, pdata.getAcceptCnt());
     assertTrue(pdata.isRetryNeeded());
     setupComm2();
@@ -1037,8 +1070,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEquals(1, msg1.getRetryCount());
     // msg2 went directly into queue, which doesn't count as a retry
     assertEquals(0, msg2.getRetryCount());
-    assertEquals(2, pdata.getOrigCnt());
-    assertEquals(1, pdata.getFailCnt());
+    assertEquals(sendRpt + 1, pdata.getOrigCnt());
+    assertEquals(sendRpt, pdata.getFailCnt());
     assertEquals(0, pdata.getAcceptCnt());
   }
 
@@ -1086,6 +1119,46 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
   }
 
+  // Multiple peers with evolving nextRetry, ensure TreeSet stays an ordered set
+  public void testRetryOrder() throws IOException {
+    TimeBase.setSimulated(100);
+    cprops.put(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MAX_PEER_RETRY_INTERVAL, "5000");
+    cprops.put(BlockingStreamComm.PARAM_MIN_PEER_RETRY_INTERVAL, "10");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_BEFORE_EXPIRATION, "1000");
+    cprops.put(BlockingStreamComm.PARAM_RETRY_DELAY, "100");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    setupPid(2);
+    PeerIdentity pid3 = setupPid(3);
+    msg2 = makePeerMessage(1, "22222", 20);
+    msg3 = makePeerMessage(1, "33333", 20);
+    msg1.setExpiration(1000);
+    msg2.setExpiration(2000);
+    msg3.setExpiration(3000);
+
+    List event;
+    setupComm1();
+    comm1.setAssocQueue(assocQ);
+    comm1.sendTo(msg3, pid3, null);
+    assertNotNull("1st channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("1st channel didn't dissociate",
+		 "dissoc", event.get(0));
+    PeerData pd1 = comm1.getPeerData(pid3);
+    assertIsomorphic(SetUtil.set(pd1), comm1.peersToRetry);
+
+    comm1.sendTo(msg2, pid2, null);
+    assertNotNull("2nd channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("2nd channel didn't dissociate",
+		 "dissoc", event.get(0));
+    PeerData pd2 = comm1.getPeerData(pid2);
+    assertIsomorphic(SetUtil.set(pd2, pd1), comm1.peersToRetry);
+
+    comm1.sendTo(msg1, pid3, null);
+    assertIsomorphic(SetUtil.set(pd1, pd2), comm1.peersToRetry);
+  }
+
   // If awaiting retry, incoming connection should cause queued msgs to be
   // sent with no retry.
   public void testRetryIncoming() throws IOException {
@@ -1105,24 +1178,26 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupPid(2);
     comm1.setAssocQueue(assocQ);
     comm1.sendTo(msg1, pid2, null);
+    PeerData pdata1 = comm1.getPeerData(pid2);
+    int sendRpt = pdata1.lastSendRpt;
     assertNotNull("Connecting channel didn't dissociate",
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
     assertEquals("Connecting channel didn't dissociate",
 		 "dissoc", event.get(0));
 
-    PeerData pdata1 = comm1.getPeerData(pid2);
     assertNotNull(pdata1);
     assertNull(pdata1.getPrimaryChannel());
     assertNull(pdata1.getSecondaryChannel());
     assertTrue(pdata1.isRetryNeeded());
-    assertEquals(1, pdata1.getOrigCnt());
-    assertEquals(1, pdata1.getFailCnt());
+    assertEquals(sendRpt, pdata1.getOrigCnt());
+    assertEquals(sendRpt, pdata1.getFailCnt());
     assertEquals(0, pdata1.getAcceptCnt());
     setupComm2();
     TimeBase.step(1000);
     assertNull("Retried too early", (List)assocQ.get(TIMEOUT_SHOULD));
     assertTrue(pdata1.isRetryNeeded());
     comm2.sendTo(msg2, pid1, null);
+    PeerData pdata2 = comm2.getPeerData(pid1);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     assertFalse(pdata1.isRetryNeeded());
     assertEqualsMessageFrom(msg1, pid1, msgIn);
@@ -1130,10 +1205,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
     msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
     assertEqualsMessageFrom(msg2, pid2, msgIn);
     assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
-    assertEquals(1, pdata1.getOrigCnt());
-    assertEquals(1, pdata1.getFailCnt());
+    assertEquals(sendRpt, pdata1.getOrigCnt());
+    assertEquals(sendRpt, pdata1.getFailCnt());
     assertEquals(1, pdata1.getAcceptCnt());
-    PeerData pdata2 = comm2.getPeerData(pid1);
     assertEquals(1, pdata2.getOrigCnt());
     assertEquals(0, pdata2.getFailCnt());
     assertEquals(0, pdata2.getAcceptCnt());
@@ -1503,6 +1577,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
    */
   class MySocketFactory implements BlockingStreamComm.SocketFactory {
     protected BlockingStreamComm.SocketFactory sf;
+    IOException newSocketThrow = null;
+
     MySocketFactory(BlockingStreamComm.SocketFactory s) {
       sf = s;
     }
@@ -1513,17 +1589,28 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	return new InternalServerSocket(port, backlog);
       } else {
 	ServerSocket ss = sf.newServerSocket(port, backlog);
-	assertFalse(ss instanceof SSLServerSocket);
+	if (isSsl()) {
+	  assertTrue(ss instanceof SSLServerSocket);
+	} else {
+	  assertFalse(ss instanceof SSLServerSocket);
+	}
         return ss;
       }
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
+      if (newSocketThrow != null) {
+	throw newSocketThrow;
+      }
       if (useInternalSockets) {
 	return new InternalSocket(addr.getInetAddr(), port);
       } else {
 	Socket s = sf.newSocket(addr, port);
-	assertFalse(s instanceof SSLSocket);
+	if (isSsl()) {
+	  assertTrue(s instanceof SSLSocket);
+	} else {
+	  assertFalse(s instanceof SSLSocket);
+	}
         return s;
       }
     }
@@ -1538,6 +1625,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
 					      PeerIdentity peer)
 	throws IOException {
       return new MyBlockingPeerChannel(comm, peer);
+    }
+
+    void setNewSocketThrow(IOException e) {
+      newSocketThrow = e;
     }
 
   }

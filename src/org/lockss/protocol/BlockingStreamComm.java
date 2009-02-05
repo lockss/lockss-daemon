@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.38 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.39 2009-02-05 05:09:33 tlipkis Exp $
  */
 
 /*
@@ -198,6 +198,11 @@ public class BlockingStreamComm
     PREFIX + "dissociateOnNoSend";
   public static final boolean DEFAULT_DISSOCIATE_ON_NO_SEND = true;
 
+  /** If true, unknown peer messages opcodes cause the channel to abort */
+  public static final String PARAM_ABORT_ON_UNKNOWN_OP =
+    PREFIX + "abortOnUnknownOp";
+  public static final boolean DEFAULT_ABORT_ON_UNKNOWN_OP = true;
+
   static final String WDOG_PARAM_SCOMM = "SComm";
   static final long WDOG_DEFAULT_SCOMM = 1 * Constants.HOUR;
 
@@ -247,6 +252,7 @@ public class BlockingStreamComm
   private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
   private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
   private long paramWaitExit = DEFAULT_WAIT_EXIT;
+  private boolean paramAbortOnUnknownOp = DEFAULT_ABORT_ON_UNKNOWN_OP;
   private long lastHungCheckTime = 0;
   private PooledExecutor pool;
   protected SSLSocketFactory sslSocketFactory = null;
@@ -289,6 +295,8 @@ public class BlockingStreamComm
   int maxPrimary = 0;
   int maxSecondary = 0;
   int maxDrainingChannels = 0;
+  Object ctrLock = new Object();	// lock for above counters
+
   // Counts number of successful messages with N retries
   Bag retryHist = new TreeBag();
   // Counts number of discarded messages with N retries
@@ -310,15 +318,16 @@ public class BlockingStreamComm
     PeerMessage earliestMsg;	// Needed until we have separate channel
 				// for each poll
     long lastRetry = 0;
-    long nextRetry = -1;        // Time at which we should try again to
-				// connect and send held msgs.
-    int origCnt = 0;			// Number of connect attempts
-    int failCnt = 0;			// Number of connect failures
-    int acceptCnt = 0;			// Number of incoming connections
+    long nextRetry = TimeBase.MAX;  // Time at which we should try again to
+				    // connect and send held msgs.
+    private int origCnt = 0;		// Number of connect attempts
+    private int failCnt = 0;		// Number of connect failures
+    private int acceptCnt = 0;		// Number of incoming connections
     
     int msgsSent = 0;
     int msgsDiscarded = 0;
     int msgsRcvd = 0;
+    int lastSendRpt = 0;
 
     PeerData(PeerIdentity pid) {
       this.pid = pid;
@@ -384,21 +393,41 @@ public class BlockingStreamComm
       return msgsRcvd;
     }
     
+    void countPrimary(boolean incr) {
+      synchronized (ctrLock) {
+	if (incr) {
+	  nPrimary++;
+	  if (nPrimary > maxPrimary) maxPrimary = nPrimary;
+	} else {
+	  nPrimary--;
+	}
+      }
+    }
+
+    void countSecondary(boolean incr) {
+      synchronized (ctrLock) {
+	if (incr) {
+	  nSecondary++;
+	  if (nSecondary > maxSecondary) maxSecondary = nSecondary;
+	} else {
+	  nSecondary--;
+	}
+      }
+    }
+
     synchronized void associateChannel(BlockingPeerChannel chan) {
       acceptCnt++;
       if (primary == null) {
 	primary = chan;
-	nPrimary++;
+	countPrimary(true);
 	handOffQueuedMsgs(primary);
-	if (nPrimary > maxPrimary) maxPrimary = nPrimary;
 	if (log.isDebug2()) log.debug2("Associated " + chan);
       } else if (primary == chan) {
 	log.warning("Redundant peer-channel association (" + chan + ")");
       } else {
 	if (secondary == null) {
 	  secondary = chan;		// normal secondary association
-	  nSecondary++;
-	  if (nSecondary > maxSecondary) maxSecondary = nSecondary;
+	  countSecondary(true);
 	  if (log.isDebug2()) log.debug2("Associated secondary " + chan);
 	} else if (secondary == chan) {
 	  log.debug("Redundant secondary peer-channel association(" +
@@ -412,20 +441,33 @@ public class BlockingStreamComm
       }
     }
 
+    // This may be called more than once by the same channel, from its
+    // multiple worker threads.  Redundant calls must be harmless.
     synchronized void dissociateChannel(BlockingPeerChannel chan) {
       if (primary == chan) {
 	globalStats.add(primary.getStats());
 	primary = null;
-	nPrimary--;
+	countPrimary(false);
 	if (log.isDebug2()) log.debug2("Removed: " + chan);
       }
       if (secondary == chan) {
 	globalStats.add(secondary.getStats());
 	secondary = null;
-	nSecondary--;
+	countSecondary(false);
 	if (log.isDebug2()) log.debug2("Removed secondary: " + chan);
       }
-      drainingChannels.remove(chan);
+      synchronized (drainingChannels) {
+	if (chan.isState(BlockingPeerChannel.ChannelState.DRAIN_INPUT)
+	    && chan.getPeer() != null) {
+	  // If this channel is draining, remember it so can include in stats
+	  drainingChannels.add(chan);
+	  maxDrainingChannels = Math.max(maxDrainingChannels,
+					 drainingChannels.size());
+	} else {
+	  // else ensure it's gone
+	  drainingChannels.remove(chan);
+	}
+      }
     }
 
     synchronized void send(PeerMessage msg) throws IOException {
@@ -444,6 +486,7 @@ public class BlockingStreamComm
       BlockingPeerChannel last = null;
       int rpt = 0;
       while (rpt++ <= 3) {
+	lastSendRpt = rpt;
 	BlockingPeerChannel chan = findOrMakeChannel();
 	if (chan == null) {
 	  break;
@@ -454,7 +497,7 @@ public class BlockingStreamComm
 	if (chan.send(msg)) {
 	  return;
 	}
-	if (!chan.wasOpen()) {
+	if (chan.isUnusedOriginatingChannel()) {
 	  log.warning("Couldn't start channel " + chan);
 	  break;
 	}
@@ -469,7 +512,8 @@ public class BlockingStreamComm
 	// This counts as a connect failure, as the queue was empty when we
 	// entered
 	failCnt++;
-	enqueueHeld(msg, false);
+	// XXX Not counting this as a retry causes unpredictable test results
+	enqueueHeld(msg, true);
       }
     }
 
@@ -481,6 +525,8 @@ public class BlockingStreamComm
 	// found secondary, no primary.  promote secondary to primary
 	primary = secondary;
 	secondary = null;
+	countPrimary(true);
+	countSecondary(false);
 	log.debug2("Promoted " + primary);
 	handOffQueuedMsgs(primary);
 	return primary;
@@ -497,7 +543,7 @@ public class BlockingStreamComm
 	    chan.startOriginate();
 	    origCnt++;
 	    primary = chan;
-	    nPrimary++;
+	    countPrimary(true);
 	    return primary;
 	  } catch (IOException e) {
 	    log.warning("Can't start channel " + chan, e);
@@ -516,7 +562,6 @@ public class BlockingStreamComm
 	sendQueue = new FifoQueue();
       }
       if (log.isDebug3()) log.debug3("enqueuing held "+ msg);
-      boolean isEarlier = calcNextRetry(msg, isRetry);
       BlockingPeerChannel chan = primary;
       if (chan != null
 	  && !chan.isState(BlockingPeerChannel.ChannelState.DISSOCIATING)) {
@@ -528,7 +573,22 @@ public class BlockingStreamComm
       if (isRetry) {
 	msg.incrRetryCount();
       }
-      setRetryNeeded(isEarlier);
+      long retry = calcNextRetry(msg, isRetry);
+      if (retry < nextRetry) {
+	synchronized (peersToRetry) {
+	  peersToRetry.remove(this);
+	  earliestMsg = msg;
+	  nextRetry = retry;
+	  if (log.isDebug3()) {
+	    log.debug3("Retry " + pid + " at "
+		       + Deadline.at(nextRetry).shortString());
+	  }
+	  peersToRetry.add(this);
+	  if (this == peersToRetry.first()) {
+	    retryThread.recalcNext();
+	  }
+	}
+      }
     }
 
     synchronized void handOffQueuedMsgs(BlockingPeerChannel chan) {
@@ -538,17 +598,33 @@ public class BlockingStreamComm
 	}
 	chan.enqueueMsgs(sendQueue);
 	sendQueue = null;
-	nextRetry = -1;
+	synchronized (peersToRetry) {
+	  peersToRetry.remove(this);
+	}
+	nextRetry = TimeBase.MAX;
 	earliestMsg = null;
       }
     }
 
-    synchronized void reclaimUnsentMsgs(Queue queue) {
-      if (!running) {
-	// Can get triggered when shutting down tests
+    /**
+     * If channel aborts with unsent messages, queue them to try again later.
+     */
+    synchronized void drainQueue(PeerData pdata,
+				 Queue queue,
+				 boolean shouldRetry) {
+      // Don't cause trouble if shutting down (happens in unit tests).
+      if (!running || queue == null || queue.isEmpty()) {
 	return;
       }
       failCnt++;
+      if (shouldRetry) {
+	requeueUnsentMsgs(queue);
+      } else {
+	deleteMsgs(queue);
+      }
+    }
+
+    void requeueUnsentMsgs(Queue queue) {
       PeerMessage msg;
       try {
 	int requeued = 0;
@@ -572,10 +648,23 @@ public class BlockingStreamComm
       }
     }
 
+    void deleteMsgs(Queue queue) {
+      PeerMessage msg;
+      try {
+	while ((msg = (PeerMessage)queue.get(Deadline.EXPIRED)) != null) {
+	  msg.delete();
+	}
+      } catch (InterruptedException e) {
+	// can't happen (get doesn't wait)
+      }
+    }
+
     // Called by retry thread when we're the first item in peersToRetry
     synchronized boolean retryIfNeeded() {
       if (!isRetryNeeded()) {
-	peersToRetry.remove(this);
+	synchronized (peersToRetry) {
+	  peersToRetry.remove(this);
+	}
 	return false;
       }
       if (primary != null) {
@@ -586,7 +675,6 @@ public class BlockingStreamComm
       }
       BlockingPeerChannel chan = findOrMakeChannel();
       if (chan != null) {
-	peersToRetry.remove(this);
 	return true;
       } else {
 	log.error("retry: couldn't create channel " + pid);
@@ -605,19 +693,12 @@ public class BlockingStreamComm
       return true;
     }
 
-    synchronized void setRetryNeeded(boolean poke) {
-      if (log.isDebug3()) {
-	log.debug3("Retry " + pid + " at "
-		   + Deadline.at(nextRetry).shortString());
-      }
-      if (peersToRetry.add(this) || poke) {
-	retryThread.recalcNext();
-      }
-    }
-
-    boolean calcNextRetry(PeerMessage msg, boolean isRetry) {
+    long calcNextRetry(PeerMessage msg, boolean isRetry) {
       long last = msg.getLastRetry();
-      long target = msg.getExpiration() - paramRetryBeforeExpiration;
+      long target = TimeBase.MAX;
+      if (msg.getExpiration() > 0) {
+	target = msg.getExpiration() - paramRetryBeforeExpiration;
+      }
       long intr = msg.getRetryInterval();
       if (intr > 0) {
 	target = Math.min(target, last + intr);
@@ -631,12 +712,7 @@ public class BlockingStreamComm
 	Math.max(Math.min(target,
 			  lastRetry + paramMaxPeerRetryInterval),
 		 lastRetry + paramMinPeerRetryInterval);
-      if (nextRetry < 0 || retry < nextRetry) {
-	earliestMsg = msg;
-	nextRetry = retry;
-	return true;
-      }
-      return false;
+      return retry;
     }
 
     synchronized void abortChannels() {
@@ -663,6 +739,18 @@ public class BlockingStreamComm
       if (secondary != null) {
 	secondary.checkHung();
       }
+    }
+
+    public String toString() {
+      StringBuilder sb = new StringBuilder(50);
+      sb.append("[CP: ");
+      sb.append(pid);
+      if (nextRetry != TimeBase.MAX) {
+	sb.append(", ");
+	sb.append(Deadline.restoreDeadlineAt(nextRetry).shortString());
+      }
+      sb.append("]");
+      return sb.toString();
     }
   }
 
@@ -787,6 +875,9 @@ public class BlockingStreamComm
 				 DEFAULT_MIN_PEER_RETRY_INTERVAL);
 	paramRetryDelay =
 	  config.getTimeInterval(PARAM_RETRY_DELAY, DEFAULT_RETRY_DELAY);
+
+	paramAbortOnUnknownOp = config.getBoolean(PARAM_ABORT_ON_UNKNOWN_OP,
+						  DEFAULT_ABORT_ON_UNKNOWN_OP);
       }
     }
   }
@@ -1062,6 +1153,10 @@ public class BlockingStreamComm
     return paramIsTcpNodelay;
   }
 
+  boolean getAbortOnUnknownOp() {
+    return paramAbortOnUnknownOp;
+  }
+
   /**
    * Called by channel when it learns its peer's identity
    */
@@ -1075,42 +1170,31 @@ public class BlockingStreamComm
    */
   void dissociateChannelFromPeer(BlockingPeerChannel chan, PeerIdentity peer,
 				 Queue sendQueue) {
-    PeerData pdata = findPeerData(peer);
-    pdata.dissociateChannel(chan);
-    if (sendQueue != null) {
-      drainQueue(chan, sendQueue);
+    // Do nothing if channel has no peer.  E.g., incoming connection, on
+    // which no PeerId msg received.
+    if (peer != null) {
+      PeerData pdata = getPeerData(peer);
+      // No action if no PeerData
+      if (pdata != null) {
+	pdata.dissociateChannel(chan);
+	if (sendQueue != null) {
+	  pdata.drainQueue(pdata, sendQueue, chan.shouldRetry());
+	}
+      }
     }
-  }
-
-  /**
-   * Called by channel when draining channel is dissociated, so it can be
-   * included in stats
-   */
-  void addDrainingChannel(BlockingPeerChannel chan) {
-    drainingChannels.add(chan);
-    if (drainingChannels.size() > maxDrainingChannels) {
-      maxDrainingChannels = drainingChannels.size();
-    }
-  }
-
-  /**
-   * If channel aborts with unsent messages, queue them to try again later.
-   */
-  void drainQueue(BlockingPeerChannel chan, Queue queue) {
-    if (queue == null || queue.isEmpty()) {
-      return;
-    }
-    PeerData pdata = findPeerData(chan.getPeer());
-    pdata.reclaimUnsentMsgs(queue);
   }
 
   /**
    * Return an existing channel for the peer or create and start one
    */
   PeerData findPeerData(PeerIdentity pid) {
+    if (pid == null) {
+      log.error("findPeerData: null pid", new Throwable());
+    }
     synchronized (peers) {
       PeerData pdata = peers.get(pid);
       if (pdata == null) {
+	log.debug2("new PeerData("+pid+")");
 	pdata = new PeerData(pid);
 	peers.put(pid, pdata);
       }
@@ -1149,11 +1233,15 @@ public class BlockingStreamComm
   }
 
   void countMessageRetries(PeerMessage msg) {
-    retryHist.add(msg.getRetryCount());
+    synchronized (retryHist) {
+      retryHist.add(msg.getRetryCount());
+    }
   }
 
   void countMessageErrRetries(PeerMessage msg) {
-    retryErrHist.add(msg.getRetryCount());
+    synchronized (retryErrHist) {
+      retryErrHist.add(msg.getRetryCount());
+    }
   }
 
   void start() {
@@ -1547,8 +1635,9 @@ public class BlockingStreamComm
   }
 
   // Outside thread so stat table can find it
-  // Must initialize in case recalcNext called before thread runs
-  private volatile Deadline retryThreadNextRetry = Deadline.MAX;
+  // Must initialize (to mutable Deadline) in case recalcNext called before
+  // thread runs.
+  private volatile Deadline retryThreadNextRetry = Deadline.at(TimeBase.MAX);
 
   // Retry thread
   private class RetryThread extends CommThread {
@@ -1581,14 +1670,11 @@ public class BlockingStreamComm
 	    break outer;
 	  }
 	} while (TimeBase.nowMs() < soonest);
-	synchronized (peersToRetry) {
-	  PeerData pdata = firstPeerToRetry();
-	  if (pdata != null && pdata.retryIfNeeded()) {
-	    soonest = TimeBase.nowMs() + paramRetryDelay;
-	    log.debug3("soonest: " + soonest);
-	  } else {
-	    soonest = 0;
-	  }
+	PeerData pdata = firstPeerToRetry();
+	if (pdata != null && pdata.retryIfNeeded()) {
+	  soonest = TimeBase.nowMs() + paramRetryDelay;
+	} else {
+	  soonest = 0;
 	}
       }
       retryThread = null;
@@ -1597,7 +1683,7 @@ public class BlockingStreamComm
     Deadline getNextRetry() {
       synchronized (peersToRetry) {
 	PeerData pdata = firstPeerToRetry();
-	log.debug3("firstPeerToRetry: " + pdata);
+	if (log.isDebug3()) log.debug3("firstPeerToRetry: " + pdata);
 	if (pdata != null) {
 	  log.debug3("pdata.getNextRetry(): " + pdata.getNextRetry());
 	  return Deadline.at(Math.max(soonest, pdata.getNextRetry()));
@@ -1638,6 +1724,8 @@ public class BlockingStreamComm
       Deadline next = getNextRetry();
       if (next.expired()) {
 	super.threadHung();
+      } else {
+	pokeWDog();
       }
     }
   }
@@ -1790,6 +1878,19 @@ public class BlockingStreamComm
 
     private List getSummaryInfo(String key, ChannelStats stats) {
       List res = new ArrayList();
+
+      StringBuilder sb = new StringBuilder();
+      if (paramUseV3OverSsl) {
+	sb.append(paramSslProtocol);
+	if (paramSslClientAuth) {
+	  sb.append(", Client Auth");
+	}
+      } else {
+	sb.append("No");
+      }
+      res.add(new StatusTable.SummaryInfo("SSL",
+					  ColumnDescriptor.TYPE_STRING,
+					  sb.toString()));
       res.add(new StatusTable.SummaryInfo("Channels",
 					  ColumnDescriptor.TYPE_STRING,
 					  nPrimary + "/"
@@ -1831,6 +1932,8 @@ public class BlockingStreamComm
 	if (secondary != null) {
 	  table.add(makeRow(secondary, "", cumulative));
 	}
+      }
+      synchronized (drainingChannels) {
 	for (BlockingPeerChannel chan : drainingChannels) {
 	  table.add(makeRow(chan, "D", cumulative));
 	}
@@ -1885,6 +1988,8 @@ public class BlockingStreamComm
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("Accept", "Accept",
 				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("Chan", "Chan",
+				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("SendQ", "Send Q",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("LastRetry", "Last Attempt",
@@ -1931,6 +2036,16 @@ public class BlockingStreamComm
       row.put("Orig", pdata.getOrigCnt());
       row.put("Fail", pdata.getFailCnt());
       row.put("Accept", pdata.getAcceptCnt());
+      StringBuilder sb = new StringBuilder(2);
+      if (pdata.getPrimaryChannel() != null) {
+	sb.append("P");
+      }
+      if (pdata.getSecondaryChannel() != null) {
+	sb.append("S");
+      }
+      if (sb.length() != 0) {
+	row.put("Chan", sb.toString());
+      }
       int pq = pdata.getSendQueueSize();
       if (pq != 0) {
 	row.put("SendQ", pq);
@@ -1941,24 +2056,26 @@ public class BlockingStreamComm
 	}
       }
       row.put("LastRetry", pdata.getLastRetry());
-      if (pdata.getNextRetry() > 0) {
+      if (pdata.getNextRetry() != TimeBase.MAX) {
 	row.put("NextRetry", pdata.getNextRetry());
       }
       return row;
     }
 
     private String histString(Bag hist) {
-      List lst = new ArrayList();
-      for (Integer cnt : ((Set<Integer>)hist.uniqueSet())) {
-	StringBuilder sb = new StringBuilder();
-	sb.append("[");
-	sb.append(cnt);
-	sb.append(",");
-	sb.append(hist.getCount(cnt));
-	sb.append("]");
-	lst.add(sb.toString());
+      synchronized (hist) {
+	List lst = new ArrayList();
+	for (Integer cnt : ((Set<Integer>)hist.uniqueSet())) {
+	  StringBuilder sb = new StringBuilder();
+	  sb.append("[");
+	  sb.append(cnt);
+	  sb.append(",");
+	  sb.append(hist.getCount(cnt));
+	  sb.append("]");
+	  lst.add(sb.toString());
+	}
+	return StringUtil.separatedString(lst, ",");
       }
-      return StringUtil.separatedString(lst, ",");
     }
 
     private List getSummaryInfo(String key) {
@@ -1978,12 +2095,6 @@ public class BlockingStreamComm
 					    retryThreadNextRetry));
       }
       return res;
-    }
-
-
-    String lastTime(long time) {
-      if (time <= 0) return "";
-      return StringUtil.timeIntervalToString(TimeBase.msSince(time));
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PeerChannel.java,v 1.2 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: PeerChannel.java,v 1.3 2009-02-05 05:09:33 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ interface PeerChannel {
   static final byte HEADER_CHECK = (byte)0xff;
   static final byte OP_PEERID = 0x01;
   static final byte OP_DATA = 0x02;
+  static final byte OP_CLOSE = 0x03;
 
   static final int MAX_PEERID_LEN = 50;
 
