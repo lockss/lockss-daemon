@@ -1,10 +1,10 @@
 /*
- * $Id: HashCUS.java,v 1.39 2008-05-28 08:00:00 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.40 2009-02-05 05:08:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,6 +120,8 @@ public class HashCUS extends LockssServlet {
   int hashType = DEFAULT_HASH_TYPE;
   ArchivalUnit au;
   CachedUrlSet cus;
+  SimpleHasher hasher;
+
   int nbytes = 1000;
   long elapsedTime;
 
@@ -526,11 +528,9 @@ public class HashCUS extends LockssServlet {
 	switch (hashType) {
 	case HASH_TYPE_CONTENT:
 	case HASH_TYPE_SNCUSS:
-	  initDigest(digest);
 	  doV1(cus.getContentHasher(digest));
 	  break;
 	case HASH_TYPE_NAME:
-	  initDigest(digest);
 	  doV1(cus.getNameHasher(digest));
 	  break;
 	case HASH_TYPE_V3_TREE:
@@ -538,6 +538,9 @@ public class HashCUS extends LockssServlet {
 	  doV3();
 	  break;
 	}
+	bytesHashed = hasher.getBytesHashed();
+	filesHashed = hasher.getFilesHashed();
+	elapsedTime = hasher.getElapsedTime();
       } else {
       }
     } catch (Exception e) {
@@ -547,98 +550,30 @@ public class HashCUS extends LockssServlet {
     IOUtil.safeClose(recordStream);
   }
 
-  private void initDigest(MessageDigest digest) {
-    if (challenge != null) {
-      digest.update(challenge, 0, challenge.length);
-    }
-    if (verifier != null) {
-      digest.update(verifier, 0, verifier.length);
-    }
-  }
-
-  private class BlockEventHandler implements BlockHasher.EventHandler {
-    PrintStream outs;
-    BlockEventHandler(PrintStream outs) {
-      this.outs = outs;
-    }
-      
-    public void blockDone(HashBlock block) {
-      filesHashed++;
-      HashBlock.Version ver = block.currentVersion();
-      if (ver.getHashError() != null) {
-	outs.println("Hash error (see log)        " + block.getUrl());
-      } else {
-	outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
-      }
-    }
-  }
-
-  private byte[][] initHasherByteArrays() {
-    byte[][] initBytes = new byte[1][];
-    initBytes[0] = ((challenge != null)
-		    ? ( (verifier != null)
-			? ByteArray.concat(challenge, verifier)
-			: challenge)
-		    : (verifier != null) ? verifier : new byte[0]);
-    return initBytes;
-  }
-
-  private MessageDigest[] initHasherDigests() {
-    MessageDigest[] digests = new MessageDigest[1];
-    digests[0] = digest;
-    return digests;
-  }
-
-  private void doV1(CachedUrlSetHasher cush) {
-    doHash(cush);
-    hashResult = digest.digest();
+  private void doV1(CachedUrlSetHasher cush) throws IOException {
+    hasher = new SimpleHasher(digest, challenge, verifier);
+    hashResult = hasher.doV1Hash(cush);
+    showResult = true;
   }
 
   private void doV3() throws IOException {
-    blockFile = FileUtil.createTempFile("HashCUS", ".tmp");
-    PrintStream blockOuts =
-      new PrintStream(new BufferedOutputStream(new FileOutputStream(blockFile)));
-    blockOuts.println("# Block hashes from " + getMachineName() + ", " +
-		      ServletUtil.headerDf.format(new Date()));
-    blockOuts.println("# AU: " + au.getName());
-    BlockHasher hasher = new BlockHasher(cus, 1,
-					 initHasherDigests(),
-					 initHasherByteArrays(),
-					 new BlockEventHandler(blockOuts));
-
+    StringBuilder sb = new StringBuilder();
+    sb.append("# Block hashes from " + getMachineName() + ", " +
+		      ServletUtil.headerDf.format(new Date()) + "\n");
+    sb.append("# AU: " + au.getName() + "\n");
     if (challenge != null) {
-      blockOuts.println("# " + "Poller nonce: " + byteString(challenge));
+      sb.append("# " + "Poller nonce: " + byteString(challenge) + "\n");
     }
     if (verifier != null) {
-      blockOuts.println("# " + "Voter nonce: " + byteString(verifier));
+      sb.append("# " + "Voter nonce: " + byteString(verifier) + "\n");
     }
-    doHash(hasher);
-    blockOuts.close();
-  }
-
-  private void doHash(CachedUrlSetHasher cush) {
-    bytesHashed = 0;
-    filesHashed = 0;
-    long startTime = TimeBase.nowMs();
-    try {
-      while (!cush.finished()) {
-	bytesHashed += cush.hashStep(nbytes);
-      }
-    } catch (Exception e) {
-      log.warning("doHash()", e);
-      errMsg = "Error hashing: " + e.toString();
-    }
-    elapsedTime = TimeBase.msSince(startTime);
-
-    log.debug("Bytes hashed: " + bytesHashed);
+    hasher = new SimpleHasher(digest, challenge, verifier);
+    blockFile = FileUtil.createTempFile("HashCUS", ".tmp");
+    hasher.doV3Hash(cus, blockFile, sb.toString());
     showResult = true;
   }
 
   String byteString(byte[] a) {
     return String.valueOf(B64Code.encode(a));
-  }
-
-  String optByteString(byte[] a) {
-    return a ==null ? null : byteString(a);
   }
 }
