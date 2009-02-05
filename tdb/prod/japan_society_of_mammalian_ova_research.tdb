@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Japan Society of Mammalian Ova Research
+  >
+
+  {
+    title <
+      name = Journal of Mammalian Ova Research ;
+      issn = 1347-5878 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1347-5878
+  
+      au < do_not_process ; Journal of Mammalian Ova Research Volume 22 ; 22 >
+      au < do_not_process ; Journal of Mammalian Ova Research Volume 23 ; 23 >
+      au < do_not_process ; Journal of Mammalian Ova Research Volume 24 ; 24 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

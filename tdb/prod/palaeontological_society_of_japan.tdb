@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Palaeontological Society of Japan
+  >
+
+  {
+    title <
+      name = Paleontological Research ;
+      issn = 1342-8144 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1342-8144
+  
+      au < do_not_process ; Paleontological Research Volume 9 ; 9 >
+      au < do_not_process ; Paleontological Research Volume 10 ; 10 >
+      au < do_not_process ; Paleontological Research Volume 11 ; 11 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

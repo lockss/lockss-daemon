@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Society for the Study of Amphibians and Reptiles
+  >
+
+  {
+    title <
+      name = Journal of Herpetology ;
+      issn = 0022-1511 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0022-1511
+  
+      au < do_not_process ; Journal of Herpetology Volume 36 ; 36 >
+      au < do_not_process ; Journal of Herpetology Volume 37 ; 37 >
+      au < superceded ; Journal of Herpetology Volume 38 ; 38 >
+      au < do_not_process ; Journal of Herpetology Volume 39 ; 39 >
+      au < do_not_process ; Journal of Herpetology Volume 40 ; 40 >
+      au < do_not_process ; Journal of Herpetology Volume 41 ; 41 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

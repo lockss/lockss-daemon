@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Wilderness Medical Society
+  >
+
+  {
+    title <
+      name = Wilderness and Environmental Medicine ;
+      issn = 1080-6032 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1080-6032
+  
+      au < superceded ; Wilderness and Environmental Medicine Volume 16 ; 16 >
+      au < superceded ; Wilderness and Environmental Medicine Volume 17 ; 17 >
+      au < superceded ; Wilderness and Environmental Medicine Volume 18 ; 18 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

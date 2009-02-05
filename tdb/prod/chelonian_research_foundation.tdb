@@ -1,0 +1,49 @@
+{
+
+  publisher <
+    name = Chelonian Research Foundation
+  >
+
+  {
+    title <
+      name = Chelonian Conservation and Biology ;
+      issn = 1071-8443 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1071-8443
+  
+      au < superceded ; Chelonian Conservation and Biology Volume 5 ; 5 >
+      au < superceded ; Chelonian Conservation and Biology Volume 6 ; 6 >
+    }
+
+  }
+
+    title <
+      name = Turtle and Tortoise Newsletter ;
+      issn = 1526-3096 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1526-3096
+  
+      au < superceded ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
+      au < superceded ; Turtle and Tortoise Newsletter Volume 10 ; 10 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

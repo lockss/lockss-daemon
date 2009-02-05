@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Torrey Botanical Society
+  >
+
+  {
+    title <
+      name = The Journal of the Torrey Botanical Society ;
+      issn = 1095-5674 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1095-5674
+  
+      au < do_not_process ; The Journal of the Torrey Botanical Society Volume 132 ; 132 >
+      au < do_not_process ; The Journal of the Torrey Botanical Society Volume 133 ; 133 >
+      au < do_not_process ; The Journal of the Torrey Botanical Society Volume 134 ; 134 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

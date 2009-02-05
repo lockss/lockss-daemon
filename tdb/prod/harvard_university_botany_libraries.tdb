@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Harvard University Botany Libraries
+  >
+
+  {
+    title <
+      name = Harvard Papers in Botany ;
+      issn = 1043-4534 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1043-4534
+  
+      au < do_not_process ; Harvard Papers in Botany Volume 10 ; 10 >
+      au < do_not_process ; Harvard Papers in Botany Volume 11 ; 11 >
+      au < do_not_process ; Harvard Papers in Botany Volume 12 ; 12 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

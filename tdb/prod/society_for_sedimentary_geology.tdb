@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Society for Sedimentary Geology
+  >
+
+  {
+    title <
+      name = PALAIOS ;
+      issn = 0883-1351 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0883-1351
+  
+      au < do_not_process ; PALAIOS Volume 15 ; 15 >
+      au < do_not_process ; PALAIOS Volume 16 ; 16 >
+      au < do_not_process ; PALAIOS Volume 17 ; 17 >
+      au < do_not_process ; PALAIOS Volume 18 ; 18 >
+      au < do_not_process ; PALAIOS Volume 19 ; 19 >
+      au < superceded ; PALAIOS Volume 20 ; 20 >
+      au < do_not_process ; PALAIOS Volume 21 ; 21 >
+      au < do_not_process ; PALAIOS Volume 22 ; 22 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

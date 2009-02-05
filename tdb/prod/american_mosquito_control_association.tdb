@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = American Mosquito Control Association
+  >
+
+  {
+    title <
+      name = Journal of the American Mosquito Control Association ;
+      issn = 8756-971X 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 8756-971X
+  
+      au < superceded ; Journal of the American Mosquito Control Association Volume 21 ; 21 >
+      au < superceded ; Journal of the American Mosquito Control Association Volume 22 ; 22 >
+      au < superceded ; Journal of the American Mosquito Control Association Volume 23 ; 23 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

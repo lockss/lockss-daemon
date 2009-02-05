@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Brazilian Society of Herpetology
+  >
+
+  {
+    title <
+      name = South American Journal of Herpetology ;
+      issn = 1808-9798 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1808-9798
+  
+      au < superceded ; South American Journal of Herpetology Volume 1 ; 1 >
+      au < superceded ; South American Journal of Herpetology Volume 2 ; 2 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

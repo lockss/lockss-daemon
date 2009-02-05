@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Zoological Society of Japan
+  >
+
+  {
+    title <
+      name = Zoological Science ;
+      issn = 0289-0003 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0289-0003
+  
+      au < superceded ; Zoological Science Volume 22 ; 22 >
+      au < superceded ; Zoological Science Volume 23 ; 23 >
+      au < superceded ; Zoological Science Volume 24 ; 24 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

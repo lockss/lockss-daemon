@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Nordic Board for Wildlife Research
+  >
+
+  {
+    title <
+      name = Wildlife Biology ;
+      issn = 0909-6396 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0909-6396
+  
+      au < do_not_process ; Wildlife Biology Volume 11 ; 11 >
+      au < do_not_process ; Wildlife Biology Volume 12 ; 12 >
+      au < do_not_process ; Wildlife Biology Volume 13 ; 13 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Association for Tropical Biology
+  >
+
+  {
+    title <
+      name = BIOTROPICA ;
+      issn = 0006-3606 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0006-3606
+  
+      au < superceded ; BIOTROPICA Volume 32 ; 32 >
+      au < superceded ; BIOTROPICA Volume 33 ; 33 >
+      au < superceded ; BIOTROPICA Volume 34 ; 34 >
+      au < superceded ; BIOTROPICA Volume 35 ; 35 >
+      au < superceded ; BIOTROPICA Volume 36 ; 036 >
+      au < do_not_process ; BIOTROPICA Volume 36 ; 36 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

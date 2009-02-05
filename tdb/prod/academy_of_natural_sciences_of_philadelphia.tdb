@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Academy of Natural Sciences of Philadelphia
+  >
+
+  {
+    title <
+      name = Proceedings of the Academy of Natural Sciences of Philadelphia ;
+      issn = 0097-3157 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0097-3157
+  
+      au < superceded ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 151 ; 151 >
+      au < superceded ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 152 ; 152 >
+      au < superceded ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 153 ; 153 >
+      au < superceded ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 154 ; 154 >
+      au < superceded ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 155 ; 155 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

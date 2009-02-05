@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = American Society of Ichthyologists and Herpetologists
+  >
+
+  {
+    title <
+      name = Copeia ;
+      issn = 0045-8511 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0045-8511
+  
+      au < superceded ; Copeia Volume 2000 ; 2000 >
+      au < superceded ; Copeia Volume 2001 ; 2001 >
+      au < superceded ; Copeia Volume 2002 ; 2002 >
+      au < superceded ; Copeia Volume 2003 ; 2003 >
+      au < superceded ; Copeia Volume 2004 ; 2004 >
+      au < superceded ; Copeia Volume 2005 ; 2005 >
+      au < superceded ; Copeia Volume 2006 ; 2006 >
+      au < superceded ; Copeia Volume 2007 ; 2007 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

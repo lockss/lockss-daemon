@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Cell Stress Society International
+  >
+
+  {
+    title <
+      name = Cell Stress & Chaperones ;
+      issn = 1466-1268 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1466-1268
+  
+      au < superceded ; Cell Stress & Chaperones Volume 5 ; 5 >
+      au < superceded ; Cell Stress & Chaperones Volume 6 ; 6 >
+      au < superceded ; Cell Stress & Chaperones Volume 7 ; 7 >
+      au < superceded ; Cell Stress & Chaperones Volume 8 ; 8 >
+      au < superceded ; Cell Stress & Chaperones Volume 9 ; 009 >
+      au < do_not_process ; Cell Stress & Chaperones Volume 9 ; 9 >
+      au < superceded ; Cell Stress & Chaperones Volume 10 ; 10 >
+      au < superceded ; Cell Stress & Chaperones Volume 11 ; 11 >
+      au < superceded ; Cell Stress & Chaperones Volume 12 ; 12 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

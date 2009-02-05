@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Society of Vertebrate Paleontology
+  >
+
+  {
+    title <
+      name = Journal of Vertebrate Paleontology ;
+      issn = 0272-4634 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0272-4634
+  
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 20 ; 20 >
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 21 ; 21 >
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 22 ; 22 >
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 23 ; 23 >
+      au < superceded ; Journal of Vertebrate Paleontology Volume 24 ; 24 >
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 25 ; 25 >
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 26 ; 26 >
+      au < do_not_process ; Journal of Vertebrate Paleontology Volume 27 ; 27 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

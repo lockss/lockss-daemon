@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Society of Environmental Toxicology and Chemistry
+  >
+
+  {
+    title <
+      name = Integrated Environmental Assessment and Management ;
+      issn = 1551-3793 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1551-3793
+  
+      au < do_not_process ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
+      au < do_not_process ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
+      au < do_not_process ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

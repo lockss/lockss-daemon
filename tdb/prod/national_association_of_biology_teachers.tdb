@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = National Association of Biology Teachers
+  >
+
+  {
+    title <
+      name = The American Biology Teacher ;
+      issn = 0002-7685 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0002-7685
+  
+      au < do_not_process ; The American Biology Teacher Volume 62 ; 62 >
+      au < do_not_process ; The American Biology Teacher Volume 63 ; 63 >
+      au < do_not_process ; The American Biology Teacher Volume 64 ; 64 >
+      au < do_not_process ; The American Biology Teacher Volume 65 ; 65 >
+      au < superceded ; The American Biology Teacher Volume 66 ; 66 >
+      au < do_not_process ; The American Biology Teacher Volume 67 ; 67 >
+      au < do_not_process ; The American Biology Teacher Volume 68 ; 68 >
+      au < do_not_process ; The American Biology Teacher Volume 69 ; 69 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

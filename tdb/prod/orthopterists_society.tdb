@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = Orthopterists' Society
+  >
+
+  {
+    title <
+      name = Journal of Orthoptera Research ;
+      issn = 1082-6467 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1082-6467
+  
+      au < do_not_process ; Journal of Orthoptera Research Volume 10 ; 10 >
+      au < do_not_process ; Journal of Orthoptera Research Volume 11 ; 11 >
+      au < superceded ; Journal of Orthoptera Research Volume 12 ; 12 >
+      au < do_not_process ; Journal of Orthoptera Research Volume 13 ; 13 >
+      au < do_not_process ; Journal of Orthoptera Research Volume 14 ; 14 >
+      au < do_not_process ; Journal of Orthoptera Research Volume 15 ; 15 >
+      au < do_not_process ; Journal of Orthoptera Research Volume 16 ; 16 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

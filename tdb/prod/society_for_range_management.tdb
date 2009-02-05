@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = Society for Range Management
+  >
+
+  {
+    title <
+      name = Rangeland Ecology & Management ;
+      issn = 1551-5028 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1551-5028
+  
+      au < do_not_process ; Rangeland Ecology & Management Volume 57 ; 57 >
+      au < superceded ; Rangeland Ecology & Management Volume 58 ; 58 >
+      au < do_not_process ; Rangeland Ecology & Management Volume 59 ; 59 >
+      au < do_not_process ; Rangeland Ecology & Management Volume 60 ; 60 >
+    }
+
+  }
+
+    title <
+      name = Rangelands ;
+      issn = 1551-501X 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1551-501X
+  
+      au < do_not_process ; Rangelands Volume 26 ; 26 >
+      au < do_not_process ; Rangelands Volume 27 ; 27 >
+      au < do_not_process ; Rangelands Volume 28 ; 28 >
+      au < do_not_process ; Rangelands Volume 29 ; 29 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

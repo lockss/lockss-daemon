@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Association for Politics and the Life Sciences
+  >
+
+  {
+    title <
+      name = Politics and the Life Sciences ;
+      issn = 1471-5457 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1471-5457
+  
+      au < superceded ; Politics and the Life Sciences Volume 23 ; 23 >
+      au < superceded ; Politics and the Life Sciences Volume 24 ; 24 >
+      au < superceded ; Politics and the Life Sciences Volume 25 ; 25 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,51 @@
+{
+
+  publisher <
+    name = Society for Integrative and Comparative Biology
+  >
+
+  {
+    title <
+      name = American Zoologist ;
+      issn = 0003-1569 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0003-1569
+  
+      au < do_not_process ; American Zoologist Volume 40 ; 40 >
+      au < superceded ; American Zoologist Volume 41 ; 41 >
+    }
+
+  }
+
+    title <
+      name = Integrative and Comparative Biology ;
+      issn = 1540-7063 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1540-7063
+  
+      au < do_not_process ; Integrative and Comparative Biology Volume 42 ; 42 >
+      au < do_not_process ; Integrative and Comparative Biology Volume 43 ; 43 >
+      au < superceded ; Integrative and Comparative Biology Volume 44 ; 44 >
+      au < do_not_process ; Integrative and Comparative Biology Volume 45 ; 45 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

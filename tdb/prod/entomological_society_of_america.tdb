@@ -1,0 +1,110 @@
+{
+
+  publisher <
+    name = Entomological Society of America
+  >
+
+  {
+    title <
+      name = Annals of the Entomological Society of America ;
+      issn = 0013-8746 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0013-8746
+  
+      au < superceded ; Annals of the Entomological Society of America Volume 93 ; 93 >
+      au < superceded ; Annals of the Entomological Society of America Volume 94 ; 94 >
+      au < superceded ; Annals of the Entomological Society of America Volume 95 ; 95 >
+      au < superceded ; Annals of the Entomological Society of America Volume 96 ; 96 >
+      au < superceded ; Annals of the Entomological Society of America Volume 97 ; 97 >
+      au < superceded ; Annals of the Entomological Society of America Volume 98 ; 98 >
+      au < superceded ; Annals of the Entomological Society of America Volume 99 ; 99 >
+      au < superceded ; Annals of the Entomological Society of America Volume 100 ; 100 >
+    }
+
+  }
+
+    title <
+      name = Environmental Entomology ;
+      issn = 0046-225X 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0046-225X
+  
+      au < superceded ; Environmental Entomology Volume 29 ; 29 >
+      au < superceded ; Environmental Entomology Volume 30 ; 30 >
+      au < superceded ; Environmental Entomology Volume 31 ; 31 >
+      au < superceded ; Environmental Entomology Volume 32 ; 32 >
+      au < do_not_process ; Environmental Entomology Volume 33 ; 33 >
+      au < superceded ; Environmental Entomology Volume 33 ; 033 >
+      au < superceded ; Environmental Entomology Volume 34 ; 34 >
+      au < superceded ; Environmental Entomology Volume 35 ; 35 >
+      au < superceded ; Environmental Entomology Volume 36 ; 36 >
+    }
+
+  }
+
+    title <
+      name = Journal of Economic Entomology ;
+      issn = 0022-0493 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0022-0493
+  
+      au < superceded ; Journal of Economic Entomology Volume 93 ; 93 >
+      au < superceded ; Journal of Economic Entomology Volume 94 ; 94 >
+      au < superceded ; Journal of Economic Entomology Volume 95 ; 95 >
+      au < superceded ; Journal of Economic Entomology Volume 96 ; 96 >
+      au < do_not_process ; Journal of Economic Entomology Volume 97 ; 97 >
+      au < superceded ; Journal of Economic Entomology Volume 97 ; 097 >
+      au < superceded ; Journal of Economic Entomology Volume 98 ; 98 >
+      au < superceded ; Journal of Economic Entomology Volume 99 ; 99 >
+      au < superceded ; Journal of Economic Entomology Volume 100 ; 100 >
+    }
+
+  }
+
+    title <
+      name = Journal of Medical Entomology ;
+      issn = 0022-2585 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0022-2585
+  
+      au < superceded ; Journal of Medical Entomology Volume 37 ; 37 >
+      au < superceded ; Journal of Medical Entomology Volume 38 ; 38 >
+      au < superceded ; Journal of Medical Entomology Volume 39 ; 39 >
+      au < superceded ; Journal of Medical Entomology Volume 40 ; 40 >
+      au < superceded ; Journal of Medical Entomology Volume 41 ; 41 >
+      au < do_not_process ; Journal of Medical Entomology Volume 42 ; 42 >
+      au < superceded ; Journal of Medical Entomology Volume 42 ; 042 >
+      au < superceded ; Journal of Medical Entomology Volume 43 ; 43 >
+      au < superceded ; Journal of Medical Entomology Volume 44 ; 44 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

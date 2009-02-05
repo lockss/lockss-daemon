@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = New England Botanical Club
+  >
+
+  {
+    title <
+      name = Rhodora ;
+      issn = 0035-4902 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0035-4902
+  
+      au < do_not_process ; Rhodora Volume 107 ; 107 >
+      au < do_not_process ; Rhodora Volume 108 ; 108 >
+      au < do_not_process ; Rhodora Volume 109 ; 109 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

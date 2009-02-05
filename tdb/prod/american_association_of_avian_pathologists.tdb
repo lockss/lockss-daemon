@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = American Association of Avian Pathologists
+  >
+
+  {
+    title <
+      name = Avian Diseases ;
+      issn = 0005-2086 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0005-2086
+  
+      au < superceded ; Avian Diseases Volume 46 ; 46 >
+      au < superceded ; Avian Diseases Volume 47 ; 47 >
+      au < superceded ; Avian Diseases Volume 48 ; 48 >
+      au < superceded ; Avian Diseases Volume 49 ; 49 >
+      au < superceded ; Avian Diseases Volume 50 ; 50 >
+      au < superceded ; Avian Diseases Volume 51 ; 51 >
+    }
+
+  }
+
+    title <
+      name = Avian Diseases Digest ;
+      issn = 1933-5334 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1933-5334
+  
+      au < superceded ; Avian Diseases Digest Volume 1 ; 1 >
+      au < superceded ; Avian Diseases Digest Volume 2 ; 2 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

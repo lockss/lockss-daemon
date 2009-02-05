@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = American Fern Society
+  >
+
+  {
+    title <
+      name = American Fern Journal ;
+      issn = 0002-8444 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0002-8444
+  
+      au < superceded ; American Fern Journal Volume 91 ; 91 >
+      au < superceded ; American Fern Journal Volume 92 ; 92 >
+      au < superceded ; American Fern Journal Volume 93 ; 93 >
+      au < superceded ; American Fern Journal Volume 94 ; 94 >
+      au < superceded ; American Fern Journal Volume 95 ; 95 >
+      au < superceded ; American Fern Journal Volume 96 ; 96 >
+      au < superceded ; American Fern Journal Volume 97 ; 97 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

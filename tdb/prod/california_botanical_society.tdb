@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = California Botanical Society
+  >
+
+  {
+    title <
+      name = Madroño ;
+      issn = 0024-9637 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0024-9637
+  
+      au < do_not_process ; Madroño Volume 52 ; 52 >
+      au < do_not_process ; Madroño Volume 53 ; 53 >
+      au < do_not_process ; Madroño Volume 54 ; 54 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

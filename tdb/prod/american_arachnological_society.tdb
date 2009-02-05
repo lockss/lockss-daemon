@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = American Arachnological Society
+  >
+
+  {
+    title <
+      name = Journal of Arachnology ;
+      issn = 0161-8202 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0161-8202
+  
+      au < superceded ; Journal of Arachnology Volume 28 ; 28 >
+      au < superceded ; Journal of Arachnology Volume 29 ; 29 >
+      au < superceded ; Journal of Arachnology Volume 30 ; 30 >
+      au < superceded ; Journal of Arachnology Volume 31 ; 31 >
+      au < do_not_process ; Journal of Arachnology Volume 32 ; 32 >
+      au < superceded ; Journal of Arachnology Volume 32 ; 032 >
+      au < superceded ; Journal of Arachnology Volume 33 ; 33 >
+      au < superceded ; Journal of Arachnology Volume 34 ; 34 >
+      au < superceded ; Journal of Arachnology Volume 35 ; 35 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

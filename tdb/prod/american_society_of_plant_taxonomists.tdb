@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = American Society of Plant Taxonomists
+  >
+
+  {
+    title <
+      name = Systematic Botany ;
+      issn = 0363-6445 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0363-6445
+  
+      au < superceded ; Systematic Botany Volume 25 ; 25 >
+      au < superceded ; Systematic Botany Volume 26 ; 26 >
+      au < superceded ; Systematic Botany Volume 27 ; 27 >
+      au < superceded ; Systematic Botany Volume 28 ; 028 >
+      au < do_not_process ; Systematic Botany Volume 28 ; 28 >
+      au < superceded ; Systematic Botany Volume 29 ; 29 >
+      au < superceded ; Systematic Botany Volume 30 ; 30 >
+      au < superceded ; Systematic Botany Volume 31 ; 31 >
+      au < superceded ; Systematic Botany Volume 32 ; 32 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

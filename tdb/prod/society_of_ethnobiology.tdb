@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Society of Ethnobiology
+  >
+
+  {
+    title <
+      name = Journal of Ethnobiology ;
+      issn = 0278-0771 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0278-0771
+  
+      au < do_not_process ; Journal of Ethnobiology Volume 25 ; 25 >
+      au < do_not_process ; Journal of Ethnobiology Volume 26 ; 26 >
+      au < do_not_process ; Journal of Ethnobiology Volume 27 ; 27 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Institute of Arctic and Alpine Research
+  >
+
+  {
+    title <
+      name = Arctic, Antarctic, and Alpine Research ;
+      issn = 1523-0430 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1523-0430
+  
+      au < do_not_process ; Arctic, Antarctic, and Alpine Research Volume 35 ; 35 >
+      au < superceded ; Arctic, Antarctic, and Alpine Research Volume 36 ; 36 >
+      au < do_not_process ; Arctic, Antarctic, and Alpine Research Volume 37 ; 37 >
+      au < do_not_process ; Arctic, Antarctic, and Alpine Research Volume 38 ; 38 >
+      au < do_not_process ; Arctic, Antarctic, and Alpine Research Volume 39 ; 39 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

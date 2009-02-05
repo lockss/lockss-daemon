@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = National Shellfisheries Association
+  >
+
+  {
+    title <
+      name = Journal of Shellfish Research ;
+      issn = 0730-8000 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0730-8000
+  
+      au < do_not_process ; Journal of Shellfish Research Volume 24 ; 24 >
+      au < do_not_process ; Journal of Shellfish Research Volume 25 ; 25 >
+      au < do_not_process ; Journal of Shellfish Research Volume 26 ; 26 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

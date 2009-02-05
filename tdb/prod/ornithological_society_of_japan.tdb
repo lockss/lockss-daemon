@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Ornithological Society of Japan
+  >
+
+  {
+    title <
+      name = Ornithological Science ;
+      issn = 1347-0558 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1347-0558
+  
+      au < do_not_process ; Ornithological Science Volume 4 ; 4 >
+      au < do_not_process ; Ornithological Science Volume 5 ; 5 >
+      au < do_not_process ; Ornithological Science Volume 6 ; 6 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

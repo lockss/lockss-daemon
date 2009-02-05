@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = International Mountain Society
+  >
+
+  {
+    title <
+      name = Mountain Research and Development ;
+      issn = 0276-4741 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0276-4741
+  
+      au < do_not_process ; Mountain Research and Development Volume 20 ; 20 >
+      au < do_not_process ; Mountain Research and Development Volume 21 ; 21 >
+      au < do_not_process ; Mountain Research and Development Volume 22 ; 22 >
+      au < do_not_process ; Mountain Research and Development Volume 23 ; 23 >
+      au < superceded ; Mountain Research and Development Volume 24 ; 24 >
+      au < do_not_process ; Mountain Research and Development Volume 25 ; 25 >
+      au < do_not_process ; Mountain Research and Development Volume 26 ; 26 >
+      au < do_not_process ; Mountain Research and Development Volume 27 ; 27 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

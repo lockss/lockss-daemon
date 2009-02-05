@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = Association of Field Ornithologists
+  >
+
+  {
+    title <
+      name = Journal of Field Ornithology ;
+      issn = 0273-8570 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0273-8570
+  
+      au < superceded ; Journal of Field Ornithology Volume 71 ; 71 >
+      au < superceded ; Journal of Field Ornithology Volume 72 ; 72 >
+      au < superceded ; Journal of Field Ornithology Volume 73 ; 73 >
+      au < superceded ; Journal of Field Ornithology Volume 74 ; 74 >
+      au < superceded ; Journal of Field Ornithology Volume 75 ; 75 >
+      au < superceded ; Journal of Field Ornithology Volume 76 ; 076 >
+      au < do_not_process ; Journal of Field Ornithology Volume 76 ; 76 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

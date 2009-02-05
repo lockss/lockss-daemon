@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = American Association of Stratigraphic Palynologists
+  >
+
+  {
+    title <
+      name = Palynology ;
+      issn = 0191-6122 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0191-6122
+  
+      au < superceded ; Palynology Volume 28 ; 28 >
+      au < superceded ; Palynology Volume 29 ; 29 >
+      au < superceded ; Palynology Volume 30 ; 30 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Kentucky Academy of Science
+  >
+
+  {
+    title <
+      name = Journal of the Kentucky Academy of Science ;
+      issn = 1098-7096 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1098-7096
+  
+      au < do_not_process ; Journal of the Kentucky Academy of Science Volume 66 ; 66 >
+      au < do_not_process ; Journal of the Kentucky Academy of Science Volume 67 ; 67 >
+      au < do_not_process ; Journal of the Kentucky Academy of Science Volume 68 ; 68 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

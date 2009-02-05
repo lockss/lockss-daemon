@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Nature Kenya
+  >
+
+  {
+    title <
+      name = Journal of East African Natural History ;
+      issn = 0012-8317 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0012-8317
+  
+      au < do_not_process ; Journal of East African Natural History Volume 94 ; 94 >
+      au < do_not_process ; Journal of East African Natural History Volume 95 ; 95 >
+      au < do_not_process ; Journal of East African Natural History Volume 96 ; 96 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

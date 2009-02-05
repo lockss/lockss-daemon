@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Beta Beta Beta Biological Society
+  >
+
+  {
+    title <
+      name = BIOS ;
+      issn = 0005-3155 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0005-3155
+  
+      au < superceded ; BIOS Volume 75 ; 75 >
+      au < do_not_process ; BIOS Volume 76 ; 76 >
+      au < do_not_process ; BIOS Volume 77 ; 77 >
+      au < do_not_process ; BIOS Volume 78 ; 78 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

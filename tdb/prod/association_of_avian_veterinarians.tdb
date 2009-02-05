@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Association of Avian Veterinarians
+  >
+
+  {
+    title <
+      name = Journal of Avian Medicine and Surgery ;
+      issn = 1082-6742 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1082-6742
+  
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 14 ; 14 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 15 ; 15 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 16 ; 16 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 17 ; 17 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 18 ; 18 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 19 ; 019 >
+      au < do_not_process ; Journal of Avian Medicine and Surgery Volume 19 ; 19 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 20 ; 20 >
+      au < superceded ; Journal of Avian Medicine and Surgery Volume 21 ; 21 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

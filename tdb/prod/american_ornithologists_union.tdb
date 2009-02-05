@@ -1,0 +1,57 @@
+{
+
+  publisher <
+    name = American Ornithologists' Union
+  >
+
+  {
+    title <
+      name = Ornithological Monographs ;
+      issn = 0078-6594 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0078-6594
+  
+      au < superceded ; Ornithological Monographs Volume 60 ; 60 >
+      au < superceded ; Ornithological Monographs Volume 61 ; 61 >
+      au < superceded ; Ornithological Monographs Volume 62 ; 62 >
+      au < superceded ; Ornithological Monographs Volume 63 ; 63 >
+    }
+
+  }
+
+    title <
+      name = The Auk ;
+      issn = 0004-8038 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0004-8038
+  
+      au < superceded ; The Auk Volume 117 ; 117 >
+      au < superceded ; The Auk Volume 118 ; 118 >
+      au < superceded ; The Auk Volume 119 ; 119 >
+      au < superceded ; The Auk Volume 120 ; 120 >
+      au < superceded ; The Auk Volume 121 ; 121 >
+      au < superceded ; The Auk Volume 122 ; 122 >
+      au < superceded ; The Auk Volume 123 ; 123 >
+      au < superceded ; The Auk Volume 124 ; 124 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Southwestern Association of Naturalists
+  >
+
+  {
+    title <
+      name = The Southwestern Naturalist ;
+      issn = 0038-4909 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0038-4909
+  
+      au < do_not_process ; The Southwestern Naturalist Volume 48 ; 48 >
+      au < superceded ; The Southwestern Naturalist Volume 49 ; 49 >
+      au < do_not_process ; The Southwestern Naturalist Volume 50 ; 50 >
+      au < do_not_process ; The Southwestern Naturalist Volume 51 ; 51 >
+      au < do_not_process ; The Southwestern Naturalist Volume 52 ; 52 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

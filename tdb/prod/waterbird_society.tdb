@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Waterbird Society
+  >
+
+  {
+    title <
+      name = Waterbirds ;
+      issn = 1524-4695 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1524-4695
+  
+      au < do_not_process ; Waterbirds Volume 25 ; 25 >
+      au < do_not_process ; Waterbirds Volume 26 ; 26 >
+      au < superceded ; Waterbirds Volume 27 ; 27 >
+      au < do_not_process ; Waterbirds Volume 28 ; 28 >
+      au < do_not_process ; Waterbirds Volume 29 ; 29 >
+      au < do_not_process ; Waterbirds Volume 30 ; 30 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,258 +1,348 @@
 {
+
   publisher <
     name = University of Hawai'i Press
   >
 
-  implicit < status ; name ; param[volume] >
-
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
-
   {
     title <
-      name = Asian Perspectives 
+      name = Pacific Science ;
+      issn = 1534-6188 
     >
 
-    param[journal_dir] = asian_perspectives
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1534-6188
+  
+      au < do_not_process ; Pacific Science Volume 59 ; 59 >
+      au < do_not_process ; Pacific Science Volume 60 ; 60 >
+      au < do_not_process ; Pacific Science Volume 61 ; 61 >
+      au < do_not_process ; Pacific Science Volume 62 ; 62 >
+    }
 
-    au < released ; Asian Perspectives Volume 39 ; 39 >
-    au < released ; Asian Perspectives Volume 40 ; 40 >
-    au < released ; Asian Perspectives Volume 41 ; 41 >
-    au < released ; Asian Perspectives Volume 42 ; 42 >
-    au < released ; Asian Perspectives Volume 43 ; 43 >
-    au < released ; Asian Perspectives Volume 44 ; 44 >
-    au < released ; Asian Perspectives Volume 45 ; 45 >
-    au < released ; Asian Perspectives Volume 46 ; 46 >
+    {
+
+comment[0] = Atypon AUs
+
+    }
+    
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = pacific_science
+
+      au < manifest ; Pacific Science Volume 55 ; 55 >
+      au < manifest ; Pacific Science Volume 56 ; 56 >
+      au < manifest ; Pacific Science Volume 57 ; 57 >
+      au < manifest ; Pacific Science Volume 58 ; 58 >
+      au < manifest ; Pacific Science Volume 59 ; 59 >
+      au < manifest ; Pacific Science Volume 60 ; 60 >
+      au < manifest ; Pacific Science Volume 61 ; 61 >
+
+    }
 
   }
+  
+  {
+    title <
+      name = Asian Perspectives ;
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = asian_perspectives
+
+      au < released ; Asian Perspectives Volume 39 ; 39 >
+      au < released ; Asian Perspectives Volume 40 ; 40 >
+      au < released ; Asian Perspectives Volume 41 ; 41 >
+      au < released ; Asian Perspectives Volume 42 ; 42 >
+      au < released ; Asian Perspectives Volume 43 ; 43 >
+      au < released ; Asian Perspectives Volume 44 ; 44 >
+      au < released ; Asian Perspectives Volume 45 ; 45 >
+      au < released ; Asian Perspectives Volume 46 ; 46 >
+
+    }
+
+  }  
 
   {
     title <
-      name = Asian Theatre Journal 
+      name = Asian Theatre Journal ;
     >
 
-    param[journal_dir] = asian_theatre_journal
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = asian_theatre_journal
 
-    au < released ; Asian Theatre Journal Volume 16 ; 16 >
-    au < released ; Asian Theatre Journal Volume 17 ; 17 >
-    au < released ; Asian Theatre Journal Volume 18 ; 18 >
-    au < released ; Asian Theatre Journal Volume 19 ; 19 >
-    au < released ; Asian Theatre Journal Volume 20 ; 20 >
-    au < released ; Asian Theatre Journal Volume 21 ; 21 >
-    au < released ; Asian Theatre Journal Volume 22 ; 22 >
-    au < released ; Asian Theatre Journal Volume 23 ; 23 >
-    au < released ; Asian Theatre Journal Volume 24 ; 24 >
+      au < released ; Asian Theatre Journal Volume 16 ; 16 >
+      au < released ; Asian Theatre Journal Volume 17 ; 17 >
+      au < released ; Asian Theatre Journal Volume 18 ; 18 >
+      au < released ; Asian Theatre Journal Volume 19 ; 19 >
+      au < released ; Asian Theatre Journal Volume 20 ; 20 >
+      au < released ; Asian Theatre Journal Volume 21 ; 21 >
+      au < released ; Asian Theatre Journal Volume 22 ; 22 >
+      au < released ; Asian Theatre Journal Volume 23 ; 23 >
+      au < released ; Asian Theatre Journal Volume 24 ; 24 >
 
+    }
+
+  } 
+
+  {
+    title <
+      name = Biography ;
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = biography
+      
+      au < released ; Biography Volume 23 ; 23 >
+      au < released ; Biography Volume 24 ; 24 >
+      au < released ; Biography Volume 25 ; 25 >
+      au < released ; Biography Volume 26 ; 26 >
+      au < released ; Biography Volume 27 ; 27 >
+      au < released ; Biography Volume 28 ; 28 >
+      au < released ; Biography Volume 29 ; 29 >
+      au < released ; Biography Volume 30 ; 30 >
+
+    }
   }
-
+  
   {
     title <
-      name = Biography 
+      name = Buddhist-Christian Studies ;
     >
 
-    param[journal_dir] = biography
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = buddhist-christian_studies
 
-    au < released ; Biography Volume 23 ; 23 >
-    au < released ; Biography Volume 24 ; 24 >
-    au < released ; Biography Volume 25 ; 25 >
-    au < released ; Biography Volume 26 ; 26 >
-    au < released ; Biography Volume 27 ; 27 >
-    au < released ; Biography Volume 28 ; 28 >
-    au < released ; Biography Volume 29 ; 29 >
-    au < released ; Biography Volume 30 ; 30 >
+      au < released ; Buddhist-Christian Studies Volume 19 ; 19 >
+      au < released ; Buddhist-Christian Studies Volume 20 ; 20 >
+      au < released ; Buddhist-Christian Studies Volume 21 ; 21 >
+      au < released ; Buddhist-Christian Studies Volume 22 ; 22 >
+      au < released ; Buddhist-Christian Studies Volume 23 ; 23 >
+      au < released ; Buddhist-Christian Studies Volume 24 ; 24 >
+      au < released ; Buddhist-Christian Studies Volume 25 ; 25 >
+      au < released ; Buddhist-Christian Studies Volume 26 ; 26 >
 
+    }      
   }
-
+  
   {
     title <
-      name = Buddhist-Christian Studies 
+      name = China Review International ;
     >
 
-    param[journal_dir] = buddhist-christian_studies
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = china_review_international
 
-    au < released ; Buddhist-Christian Studies Volume 19 ; 19 >
-    au < released ; Buddhist-Christian Studies Volume 20 ; 20 >
-    au < released ; Buddhist-Christian Studies Volume 21 ; 21 >
-    au < released ; Buddhist-Christian Studies Volume 22 ; 22 >
-    au < released ; Buddhist-Christian Studies Volume 23 ; 23 >
-    au < released ; Buddhist-Christian Studies Volume 24 ; 24 >
-    au < released ; Buddhist-Christian Studies Volume 25 ; 25 >
-    au < released ; Buddhist-Christian Studies Volume 26 ; 26 >
+      au < released ; China Review International Volume 6 ; 6 >
+      au < released ; China Review International Volume 7 ; 7 >
+      au < released ; China Review International Volume 8 ; 8 >
+      au < released ; China Review International Volume 9 ; 9 >
+      au < released ; China Review International Volume 10 ; 10 >
+      au < released ; China Review International Volume 11 ; 11 >
+      au < released ; China Review International Volume 12 ; 12 >
+      au < released ; China Review International Volume 13 ; 13 >
 
+    }
   }
-
+  
   {
     title <
-      name = China Review International 
+      name = Journal of World History ;
     >
 
-    param[journal_dir] = china_review_international
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_world_history
 
-    au < released ; China Review International Volume 6 ; 6 >
-    au < released ; China Review International Volume 7 ; 7 >
-    au < released ; China Review International Volume 8 ; 8 >
-    au < released ; China Review International Volume 9 ; 9 >
-    au < released ; China Review International Volume 10 ; 10 >
-    au < released ; China Review International Volume 11 ; 11 >
-    au < released ; China Review International Volume 12 ; 12 >
-    au < released ; China Review International Volume 13 ; 13 >
+      au < released ; Journal of World History Volume 7 ; 7 >
+      au < released ; Journal of World History Volume 8 ; 8 >
+      au < released ; Journal of World History Volume 9 ; 9 >
+      au < released ; Journal of World History Volume 10 ; 10 >
+      au < released ; Journal of World History Volume 11 ; 11 >
+      au < released ; Journal of World History Volume 12 ; 12 >
+      au < released ; Journal of World History Volume 13 ; 13 >
+      au < released ; Journal of World History Volume 14 ; 14 >
+      au < released ; Journal of World History Volume 15 ; 15 >
+      au < released ; Journal of World History Volume 16 ; 16 >
+      au < released ; Journal of World History Volume 17 ; 17 >
+      au < released ; Journal of World History Volume 18 ; 18 >
 
+    }
   }
-
+  
   {
     title <
-      name = Journal of World History 
+      name = Ka Ho'oilina/The Legacy ;
     >
 
-    param[journal_dir] = journal_of_world_history
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = ka_hooilina_the_legacy
+      
+      au < released ; Ka Ho'oilina/The Legacy Volume 1 ; 1 >
+      au < released ; Ka Ho'oilina/The Legacy Volume 2 ; 2 >
+      au < released ; Ka Ho'oilina/The Legacy Volume 3 ; 3 >
+      au < released ; Ka Ho'oilina/The Legacy Volume 4 ; 4 >
+      au < released ; Ka Ho'oilina/The Legacy Volume 5 ; 5 >
 
-    au < released ; Journal of World History Volume 7 ; 7 >
-    au < released ; Journal of World History Volume 8 ; 8 >
-    au < released ; Journal of World History Volume 9 ; 9 >
-    au < released ; Journal of World History Volume 10 ; 10 >
-    au < released ; Journal of World History Volume 11 ; 11 >
-    au < released ; Journal of World History Volume 12 ; 12 >
-    au < released ; Journal of World History Volume 13 ; 13 >
-    au < released ; Journal of World History Volume 14 ; 14 >
-    au < released ; Journal of World History Volume 15 ; 15 >
-    au < released ; Journal of World History Volume 16 ; 16 >
-    au < released ; Journal of World History Volume 17 ; 17 >
-    au < released ; Journal of World History Volume 18 ; 18 >
-
+    }
   }
-
+  
   {
     title <
-      name = Ka Ho'oilina/The Legacy 
+      name = Korean Studies ;
     >
 
-    param[journal_dir] = ka_hooilina_the_legacy
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = korean_studies
+      
+      au < manifest ; Korean Studies Volume 24 ; 24 >
+      au < manifest ; Korean Studies Volume 25 ; 25 >
+      au < manifest ; Korean Studies Volume 26 ; 26 >
+      au < manifest ; Korean Studies Volume 27 ; 27 >
+      au < manifest ; Korean Studies Volume 28 ; 28 >
+      au < manifest ; Korean Studies Volume 29 ; 29 >
+      au < manifest ; Korean Studies Volume 30 ; 30 >
 
-    au < released ; Ka Ho'oilina/The Legacy Volume 1 ; 1 >
-    au < released ; Ka Ho'oilina/The Legacy Volume 2 ; 2 >
-    au < released ; Ka Ho'oilina/The Legacy Volume 3 ; 3 >
-    au < released ; Ka Ho'oilina/The Legacy Volume 4 ; 4 >
-    au < released ; Ka Ho'oilina/The Legacy Volume 5 ; 5 >
-
+    }
   }
-
+  
   {
     title <
-      name = Korean Studies 
+      name = Manoa ;
     >
 
-    param[journal_dir] = korean_studies
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = manoa
 
-    au < manifest ; Korean Studies Volume 24 ; 24 >
-    au < manifest ; Korean Studies Volume 25 ; 25 >
-    au < manifest ; Korean Studies Volume 26 ; 26 >
-    au < manifest ; Korean Studies Volume 27 ; 27 >
-    au < manifest ; Korean Studies Volume 28 ; 28 >
-    au < manifest ; Korean Studies Volume 29 ; 29 >
-    au < manifest ; Korean Studies Volume 30 ; 30 >
+      au < released ; Manoa Volume 11 ; 11 >
+      au < released ; Manoa Volume 12 ; 12 >
+      au < released ; Manoa Volume 13 ; 13 >
+      au < released ; Manoa Volume 14 ; 14 >
+      au < released ; Manoa Volume 15 ; 15 >
+      au < released ; Manoa Volume 16 ; 16 >
+      au < released ; Manoa Volume 17 ; 17 >
+      au < released ; Manoa Volume 18 ; 18 >
 
+    }
   }
-
+  
   {
     title <
-      name = Manoa 
+      name = Oceanic Linguistics ;
     >
 
-    param[journal_dir] = manoa
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = oceanic_linguistics
 
-    au < released ; Manoa Volume 11 ; 11 >
-    au < released ; Manoa Volume 12 ; 12 >
-    au < released ; Manoa Volume 13 ; 13 >
-    au < released ; Manoa Volume 14 ; 14 >
-    au < released ; Manoa Volume 15 ; 15 >
-    au < released ; Manoa Volume 16 ; 16 >
-    au < released ; Manoa Volume 17 ; 17 >
-    au < released ; Manoa Volume 18 ; 18 >
+      au < released ; Oceanic Linguistics Volume 38 ; 38 >
+      au < released ; Oceanic Linguistics Volume 39 ; 39 >
+      au < released ; Oceanic Linguistics Volume 40 ; 40 >
+      au < released ; Oceanic Linguistics Volume 41 ; 41 >
+      au < released ; Oceanic Linguistics Volume 42 ; 42 >
+      au < released ; Oceanic Linguistics Volume 43 ; 43 >
+      au < released ; Oceanic Linguistics Volume 44 ; 44 >
+      au < released ; Oceanic Linguistics Volume 45 ; 45 >
 
+    }
   }
-
+  
   {
     title <
-      name = Oceanic Linguistics 
+      name = Philosophy East and West  ;
     >
 
-    param[journal_dir] = oceanic_linguistics
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = philosophy_east_and_west
 
-    au < released ; Oceanic Linguistics Volume 38 ; 38 >
-    au < released ; Oceanic Linguistics Volume 39 ; 39 >
-    au < released ; Oceanic Linguistics Volume 40 ; 40 >
-    au < released ; Oceanic Linguistics Volume 41 ; 41 >
-    au < released ; Oceanic Linguistics Volume 42 ; 42 >
-    au < released ; Oceanic Linguistics Volume 43 ; 43 >
-    au < released ; Oceanic Linguistics Volume 44 ; 44 >
-    au < released ; Oceanic Linguistics Volume 45 ; 45 >
+      au < released ; Philosophy East and West Volume 50 ; 50 >
+      au < released ; Philosophy East and West Volume 51 ; 51 >
+      au < released ; Philosophy East and West Volume 52 ; 52 >
+      au < released ; Philosophy East and West Volume 53 ; 53 >
+      au < released ; Philosophy East and West Volume 54 ; 54 >
+      au < released ; Philosophy East and West Volume 55 ; 55 >
+      au < released ; Philosophy East and West Volume 56 ; 56 >
+      au < released ; Philosophy East and West Volume 57 ; 57 >
 
+    }
   }
-
+  
   {
     title <
-      name = Pacific Science 
+      name = The Contemporary Pacific ;
     >
 
-    param[journal_dir] = pacific_science
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = contemporary_pacific
 
-    au < manifest ; Pacific Science Volume 55 ; 55 >
-    au < manifest ; Pacific Science Volume 56 ; 56 >
-    au < manifest ; Pacific Science Volume 57 ; 57 >
-    au < manifest ; Pacific Science Volume 58 ; 58 >
-    au < manifest ; Pacific Science Volume 59 ; 59 >
-    au < manifest ; Pacific Science Volume 60 ; 60 >
-    au < manifest ; Pacific Science Volume 61 ; 61 >
+      au < released ; The Contemporary Pacific Volume 12 ; 12 >
+      au < released ; The Contemporary Pacific Volume 13 ; 13 >
+      au < released ; The Contemporary Pacific Volume 14 ; 14 >
+      au < released ; The Contemporary Pacific Volume 15 ; 15 >
+      au < released ; The Contemporary Pacific Volume 16 ; 16 >
+      au < released ; The Contemporary Pacific Volume 17 ; 17 >
+      au < released ; The Contemporary Pacific Volume 18 ; 18 >
+      au < released ; The Contemporary Pacific Volume 19 ; 19 >
 
+    }
   }
-
+  
   {
     title <
-      name = Philosophy East and West 
+      name = Yearbook of the Association of Pacific Coast Geographers ;
     >
 
-    param[journal_dir] = philosophy_east_and_west
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = yearbook_of_the_association_of_pacific_coast_geographers
 
-    au < released ; Philosophy East and West Volume 50 ; 50 >
-    au < released ; Philosophy East and West Volume 51 ; 51 >
-    au < released ; Philosophy East and West Volume 52 ; 52 >
-    au < released ; Philosophy East and West Volume 53 ; 53 >
-    au < released ; Philosophy East and West Volume 54 ; 54 >
-    au < released ; Philosophy East and West Volume 55 ; 55 >
-    au < released ; Philosophy East and West Volume 56 ; 56 >
-    au < released ; Philosophy East and West Volume 57 ; 57 >
+      au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 66 ; 66 >
+      au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 67 ; 67 >
+      au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 68 ; 68 >
 
-  }
-
-  {
-    title <
-      name = The Contemporary Pacific 
-    >
-
-    param[journal_dir] = contemporary_pacific
-
-    au < released ; The Contemporary Pacific Volume 12 ; 12 >
-    au < released ; The Contemporary Pacific Volume 13 ; 13 >
-    au < released ; The Contemporary Pacific Volume 14 ; 14 >
-    au < released ; The Contemporary Pacific Volume 15 ; 15 >
-    au < released ; The Contemporary Pacific Volume 16 ; 16 >
-    au < released ; The Contemporary Pacific Volume 17 ; 17 >
-    au < released ; The Contemporary Pacific Volume 18 ; 18 >
-    au < released ; The Contemporary Pacific Volume 19 ; 19 >
-
-  }
-
-  {
-    title <
-      name = Yearbook of the Association of Pacific Coast Geographers 
-    >
-
-    param[journal_dir] = yearbook_of_the_association_of_pacific_coast_geographers
-
-    au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 66 ; 66 >
-    au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 67 ; 67 >
-    au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 68 ; 68 >
+    }
 
   }
 
 }
+

@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Coastal Education and Research Foundation
+  >
+
+  {
+    title <
+      name = Journal of Coastal Research ;
+      issn = 1551-5036 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1551-5036
+  
+      au < superceded ; Journal of Coastal Research Volume 20 ; 20 >
+      au < superceded ; Journal of Coastal Research Volume 21 ; 21 >
+      au < superceded ; Journal of Coastal Research Volume 22 ; 22 >
+      au < superceded ; Journal of Coastal Research Volume 23 ; 23 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

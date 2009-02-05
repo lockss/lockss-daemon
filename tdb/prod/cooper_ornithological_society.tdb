@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Cooper Ornithological Society
+  >
+
+  {
+    title <
+      name = The Condor ;
+      issn = 0010-5422 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0010-5422
+  
+      au < do_not_process ; The Condor Volume 102 ; 102 >
+      au < do_not_process ; The Condor Volume 103 ; 103 >
+      au < do_not_process ; The Condor Volume 104 ; 104 >
+      au < do_not_process ; The Condor Volume 105 ; 105 >
+      au < do_not_process ; The Condor Volume 106 ; 106 >
+      au < superceded ; The Condor Volume 107 ; 107 >
+      au < do_not_process ; The Condor Volume 108 ; 108 >
+      au < do_not_process ; The Condor Volume 109 ; 109 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

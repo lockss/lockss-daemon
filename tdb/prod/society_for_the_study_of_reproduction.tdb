@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = Society for the Study of Reproduction
+  >
+
+  {
+    title <
+      name = Biology of Reproduction ;
+      issn = 0006-3363 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0006-3363
+  
+      au < do_not_process ; Biology of Reproduction Volume 62 ; 62 >
+      au < do_not_process ; Biology of Reproduction Volume 63 ; 63 >
+      au < do_not_process ; Biology of Reproduction Volume 64 ; 64 >
+      au < do_not_process ; Biology of Reproduction Volume 65 ; 65 >
+      au < do_not_process ; Biology of Reproduction Volume 66 ; 66 >
+      au < do_not_process ; Biology of Reproduction Volume 67 ; 67 >
+      au < do_not_process ; Biology of Reproduction Volume 68 ; 68 >
+      au < do_not_process ; Biology of Reproduction Volume 69 ; 69 >
+      au < do_not_process ; Biology of Reproduction Volume 70 ; 70 >
+      au < do_not_process ; Biology of Reproduction Volume 71 ; 71 >
+      au < superceded ; Biology of Reproduction Volume 72 ; 72 >
+      au < do_not_process ; Biology of Reproduction Volume 73 ; 73 >
+      au < do_not_process ; Biology of Reproduction Volume 74 ; 74 >
+      au < do_not_process ; Biology of Reproduction Volume 75 ; 75 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

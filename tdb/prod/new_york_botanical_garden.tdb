@@ -1,0 +1,81 @@
+{
+
+  publisher <
+    name = New York Botanical Garden
+  >
+
+  {
+    title <
+      name = Brittonia ;
+      issn = 0007-196X 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0007-196X
+  
+      au < releasing ; Brittonia Volume 54 ; 54 >
+      au < releasing ; Brittonia Volume 55 ; 55 >
+      au < do_not_process ; Brittonia Volume 56 ; 56 >
+      au < superceded ; Brittonia Volume 56 ; 056 >
+      au < releasing ; Brittonia Volume 57 ; 57 >
+      au < releasing ; Brittonia Volume 58 ; 58 >
+      au < releasing ; Brittonia Volume 59 ; 59 >
+    }
+
+  }
+
+    title <
+      name = Economic Botany ;
+      issn = 0013-0001 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0013-0001
+  
+      au < releasing ; Economic Botany Volume 56 ; 56 >
+      au < releasing ; Economic Botany Volume 57 ; 57 >
+      au < do_not_process ; Economic Botany Volume 58 ; 58 >
+      au < superceded ; Economic Botany Volume 58 ; 058 >
+      au < releasing ; Economic Botany Volume 59 ; 59 >
+      au < releasing ; Economic Botany Volume 60 ; 60 >
+      au < releasing ; Economic Botany Volume 61 ; 61 >
+    }
+
+  }
+
+    title <
+      name = The Botanical Review ;
+      issn = 0006-8101 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0006-8101
+  
+      au < releasing ; The Botanical Review Volume 68 ; 68 >
+      au < releasing ; The Botanical Review Volume 69 ; 69 >
+      au < do_not_process ; The Botanical Review Volume 70 ; 70 >
+      au < superceded ; The Botanical Review Volume 70 ; 070 >
+      au < releasing ; The Botanical Review Volume 71 ; 71 >
+      au < releasing ; The Botanical Review Volume 72 ; 72 >
+      au < releasing ; The Botanical Review Volume 73 ; 73 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = University of Wisconsin Library
+  >
+
+  {
+    title <
+      name = Journal of Insect Science ;
+      issn = 1536-2442 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1536-2442
+  
+      au < do_not_process ; Journal of Insect Science Volume 1 ; 1 >
+      au < do_not_process ; Journal of Insect Science Volume 2 ; 2 >
+      au < do_not_process ; Journal of Insect Science Volume 3 ; 3 >
+      au < superceded ; Journal of Insect Science Volume 4 ; 4 >
+      au < do_not_process ; Journal of Insect Science Volume 5 ; 5 >
+      au < do_not_process ; Journal of Insect Science Volume 6 ; 6 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

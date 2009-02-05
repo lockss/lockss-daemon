@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = American Institute of Biological Sciences
+  >
+
+  {
+    title <
+      name = BioScience ;
+      issn = 0006-3568 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0006-3568
+  
+      au < do_not_process ; BioScience Volume 50 ; 50 >
+      au < do_not_process ; BioScience Volume 51 ; 51 >
+      au < do_not_process ; BioScience Volume 52 ; 52 >
+      au < do_not_process ; BioScience Volume 53 ; 53 >
+      au < do_not_process ; BioScience Volume 54 ; 54 >
+      au < do_not_process ; BioScience Volume 55 ; 55 >
+      au < superceded ; BioScience Volume 55 ; 055 >
+      au < do_not_process ; BioScience Volume 56 ; 56 >
+      au < do_not_process ; BioScience Volume 57 ; 57 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

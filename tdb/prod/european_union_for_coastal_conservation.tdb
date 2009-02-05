@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = European Union for Coastal Conservation
+  >
+
+  {
+    title <
+      name = Journal of Coastal Conservation ;
+      issn = 1400-0350 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1400-0350
+  
+      au < do_not_process ; Journal of Coastal Conservation Volume 8 ; 8 >
+      au < superceded ; Journal of Coastal Conservation Volume 9 ; 9 >
+      au < do_not_process ; Journal of Coastal Conservation Volume 10 ; 10 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

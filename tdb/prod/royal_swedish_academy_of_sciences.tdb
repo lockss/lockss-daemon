@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Royal Swedish Academy of Sciences
+  >
+
+  {
+    title <
+      name = AMBIO: A Journal of the Human Environment ;
+      issn = 0044-7447 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0044-7447
+  
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
+      au < superceded ; AMBIO: A Journal of the Human Environment Volume 33 ; 33 >
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
+      au < do_not_process ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

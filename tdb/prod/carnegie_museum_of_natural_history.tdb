@@ -1,0 +1,51 @@
+{
+
+  publisher <
+    name = Carnegie Museum of Natural History
+  >
+
+  {
+    title <
+      name = Annals of Carnegie Museum ;
+      issn = 0097-4463 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0097-4463
+  
+      au < superceded ; Annals of Carnegie Museum Volume 74 ; 74 >
+      au < superceded ; Annals of Carnegie Museum Volume 75 ; 75 >
+      au < superceded ; Annals of Carnegie Museum Volume 76 ; 76 >
+    }
+
+  }
+
+    title <
+      name = Bulletin of Carnegie Museum of Natural History ;
+      issn = 0145-9058 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0145-9058
+  
+      au < superceded ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
+      au < superceded ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >
+      au < superceded ; Bulletin of Carnegie Museum of Natural History Volume 37 ; 37 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

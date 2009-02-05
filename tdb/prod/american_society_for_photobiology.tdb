@@ -1,0 +1,43 @@
+{
+
+  publisher <
+    name = American Society for Photobiology
+  >
+
+  {
+    title <
+      name = Photochemistry and Photobiology ;
+      issn = 0031-8655 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0031-8655
+  
+      au < superceded ; Photochemistry and Photobiology Volume 71 ; 71 >
+      au < superceded ; Photochemistry and Photobiology Volume 72 ; 72 >
+      au < superceded ; Photochemistry and Photobiology Volume 73 ; 73 >
+      au < superceded ; Photochemistry and Photobiology Volume 74 ; 74 >
+      au < superceded ; Photochemistry and Photobiology Volume 75 ; 75 >
+      au < superceded ; Photochemistry and Photobiology Volume 76 ; 76 >
+      au < superceded ; Photochemistry and Photobiology Volume 77 ; 77 >
+      au < superceded ; Photochemistry and Photobiology Volume 78 ; 78 >
+      au < superceded ; Photochemistry and Photobiology Volume 79 ; 79 >
+      au < superceded ; Photochemistry and Photobiology Volume 80 ; 080 >
+      au < do_not_process ; Photochemistry and Photobiology Volume 80 ; 80 >
+      au < superceded ; Photochemistry and Photobiology Volume 81 ; 81 >
+      au < superceded ; Photochemistry and Photobiology Volume 82 ; 82 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

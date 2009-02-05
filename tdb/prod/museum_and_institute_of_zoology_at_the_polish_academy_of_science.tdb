@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Museum and Institute of Zoology at the Polish Academy of Science
+  >
+
+  {
+    title <
+      name = Acta Chiropterologica ;
+      issn = 1733-5329 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1733-5329
+  
+      au < do_not_process ; Acta Chiropterologica Volume 7 ; 7 >
+      au < do_not_process ; Acta Chiropterologica Volume 8 ; 8 >
+      au < do_not_process ; Acta Chiropterologica Volume 9 ; 9 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

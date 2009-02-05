@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Arizona-Nevada Academy of Science
+  >
+
+  {
+    title <
+      name = Journal of the Arizona-Nevada Academy of Science ;
+      issn = 1533-6085 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1533-6085
+  
+      au < do_not_process ; Journal of the Arizona-Nevada Academy of Science Volume 37 ; 37 >
+      au < do_not_process ; Journal of the Arizona-Nevada Academy of Science Volume 38 ; 38 >
+      au < do_not_process ; Journal of the Arizona-Nevada Academy of Science Volume 39 ; 39 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

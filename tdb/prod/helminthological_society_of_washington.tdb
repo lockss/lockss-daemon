@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Helminthological Society of Washington
+  >
+
+  {
+    title <
+      name = Comparative Parasitology ;
+      issn = 1525-2647 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1525-2647
+  
+      au < do_not_process ; Comparative Parasitology Volume 69 ; 69 >
+      au < do_not_process ; Comparative Parasitology Volume 70 ; 70 >
+      au < do_not_process ; Comparative Parasitology Volume 71 ; 71 >
+      au < superceded ; Comparative Parasitology Volume 72 ; 72 >
+      au < do_not_process ; Comparative Parasitology Volume 73 ; 73 >
+      au < do_not_process ; Comparative Parasitology Volume 74 ; 74 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

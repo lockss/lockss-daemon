@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Society for the Study of Evolution
+  >
+
+  {
+    title <
+      name = Evolution ;
+      issn = 0014-3820 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0014-3820
+  
+      au < do_not_process ; Evolution Volume 54 ; 54 >
+      au < do_not_process ; Evolution Volume 55 ; 55 >
+      au < do_not_process ; Evolution Volume 56 ; 56 >
+      au < do_not_process ; Evolution Volume 57 ; 57 >
+      au < do_not_process ; Evolution Volume 58 ; 58 >
+      au < superceded ; Evolution Volume 59 ; 59 >
+      au < do_not_process ; Evolution Volume 60 ; 60 >
+      au < do_not_process ; Evolution Volume 61 ; 61 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

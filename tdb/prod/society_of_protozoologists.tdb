@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Society of Protozoologists
+  >
+
+  {
+    title <
+      name = The Journal of Eukaryotic Microbiology ;
+      issn = 1066-5234 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1066-5234
+  
+      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
+      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
+      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
+      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
+      au < superceded ; The Journal of Eukaryotic Microbiology Volume 51 ; 51 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

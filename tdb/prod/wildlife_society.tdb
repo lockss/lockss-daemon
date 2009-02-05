@@ -1,0 +1,75 @@
+{
+
+  publisher <
+    name = Wildlife Society
+  >
+
+  {
+    title <
+      name = Journal of Wildlife Management ;
+      issn = 0022-541X 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0022-541X
+  
+      au < do_not_process ; Journal of Wildlife Management Volume 68 ; 68 >
+      au < do_not_process ; Journal of Wildlife Management Volume 69 ; 69 >
+      au < do_not_process ; Journal of Wildlife Management Volume 70 ; 70 >
+      au < do_not_process ; Journal of Wildlife Management Volume 71 ; 71 >
+    }
+
+  }
+
+    title <
+      name = Wildlife Monographs ;
+      issn = 0084-0173 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0084-0173
+  
+      au < superceded ; Wildlife Monographs Volume 161 ; 161 >
+      au < superceded ; Wildlife Monographs Volume 162 ; 162 >
+      au < superceded ; Wildlife Monographs Volume 163 ; 163 >
+      au < superceded ; Wildlife Monographs Volume 164 ; 164 >
+      au < superceded ; Wildlife Monographs Volume 165 ; 165 >
+      au < superceded ; Wildlife Monographs Volume 166 ; 166 >
+      au < superceded ; Wildlife Monographs Volume 167 ; 167 >
+      au < superceded ; Wildlife Monographs Volume 168 ; 168 >
+    }
+
+  }
+
+    title <
+      name = Wildlife Society Bulletin ;
+      issn = 0091-7648 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0091-7648
+  
+      au < superceded ; Wildlife Society Bulletin Volume 32 ; 32 >
+      au < superceded ; Wildlife Society Bulletin Volume 33 ; 33 >
+      au < superceded ; Wildlife Society Bulletin Volume 34 ; 34 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

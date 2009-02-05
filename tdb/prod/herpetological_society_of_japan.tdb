@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Herpetological Society of Japan
+  >
+
+  {
+    title <
+      name = Current Herpetology ;
+      issn = 1881-1019 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1881-1019
+  
+      au < do_not_process ; Current Herpetology Volume 24 ; 24 >
+      au < do_not_process ; Current Herpetology Volume 25 ; 25 >
+      au < do_not_process ; Current Herpetology Volume 26 ; 26 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

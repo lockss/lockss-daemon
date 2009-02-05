@@ -1,0 +1,56 @@
+{
+
+  publisher <
+    name = Herpetologists' League
+  >
+
+  {
+    title <
+      name = Herpetological ;
+      issn = 0018-0831 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0018-0831
+  
+      au < do_not_process ; Herpetological Volume 58 ; 58 >
+      au < do_not_process ; Herpetological Volume 59 ; 59 >
+      au < do_not_process ; Herpetological Volume 60 ; 60 >
+      au < superceded ; Herpetological Volume 61 ; 61 >
+      au < do_not_process ; Herpetological Volume 62 ; 62 >
+      au < do_not_process ; Herpetological Volume 63 ; 63 >
+    }
+
+  }
+
+    title <
+      name = Herpetological Monographs ;
+      issn = 0733-1347 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0733-1347
+  
+      au < do_not_process ; Herpetological Monographs Volume 16 ; 16 >
+      au < do_not_process ; Herpetological Monographs Volume 17 ; 17 >
+      au < superceded ; Herpetological Monographs Volume 18 ; 18 >
+      au < do_not_process ; Herpetological Monographs Volume 19 ; 19 >
+      au < do_not_process ; Herpetological Monographs Volume 20 ; 20 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+

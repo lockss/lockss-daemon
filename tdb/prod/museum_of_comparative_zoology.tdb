@@ -1,0 +1,48 @@
+{
+
+  publisher <
+    name = Museum of Comparative Zoology
+  >
+
+  {
+    title <
+      name = Breviora ;
+      issn = 0006-9698 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0006-9698
+  
+      au < do_not_process ; Breviora Volume 512 ; 512 >
+    }
+
+  }
+
+    title <
+      name = Bulletin of the Museum of Comparative Zoology ;
+      issn = 0027-4100 
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0027-4100
+  
+      au < do_not_process ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
+      au < do_not_process ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+
+  }
+
+}
+
