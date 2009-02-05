@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.61 2009-01-07 22:59:02 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.62 2009-02-05 05:08:11 tlipkis Exp $
  */
 
 /*
@@ -1132,6 +1132,9 @@ public class ConfigManager implements LockssManager {
       ClassLoader cl = (ClassLoader)it.next();
       URL titleDbUrl = cl.getResource(CONFIG_FILE_BUNDLED_TITLE_DB);
       if (titleDbUrl != null) {
+	if (pluginTitledbUrlList == null) {
+	  pluginTitledbUrlList = new ArrayList();
+	}
 	pluginTitledbUrlList.add(titleDbUrl);
 	needReload = true;
       }
