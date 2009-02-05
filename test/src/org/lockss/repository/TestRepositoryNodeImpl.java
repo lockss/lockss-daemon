@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.59 2008-11-12 07:16:35 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.59.4.1 2009-02-05 03:44:33 tlipkis Exp $
  */
 
 /*
@@ -1065,12 +1065,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
-  public void testCorruptProperties() throws Exception {
+  RepositoryNode createNodeWithCorruptProps(String url) throws Exception {
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
-    RepositoryNode leaf =
-        createLeaf("http://www.example.com/testDir/test.cache",
-        "test stream", props);
+    RepositoryNode leaf = createLeaf(url, "test stream", props);
 
     RepositoryNodeImpl leafImpl = (RepositoryNodeImpl)leaf;
     File propsFile = new File(leafImpl.getContentDir(),
@@ -1081,8 +1079,32 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       new BufferedOutputStream(new FileOutputStream(propsFile, true));
     os.write("\\uxxxxfoo=bar".getBytes());
     os.close();
+    return leaf;
+  }
 
+  public void testCorruptProperties1() throws Exception {
+    RepositoryNode leaf =
+      createNodeWithCorruptProps("http://www.example.com/testDir/test.cache");
+
+    assertFalse(leaf.hasContent());
     assertTrue(leaf.isDeleted());
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, "test stream");
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    assertTrue(leaf.hasContent());
+    assertFalse(leaf.isDeleted());
+  }
+
+  public void testCorruptProperties2() throws Exception {
+    String stem = "http://www.example.com/testDir";
+    RepositoryNode leaf = createNodeWithCorruptProps(stem + "/test.cache");
+    RepositoryNode leaf2 = createLeaf(stem + "/foo", "test stream", props);
+
+    RepositoryNode dirEntry =
+        repo.getNode("http://www.example.com/testDir");
+    Iterator childIt = dirEntry.listChildren(null, false);
+    assertEquals(ListUtil.list(leaf2), ListUtil.fromIterator(childIt));
   }
 
   static String cntnt(int ix) {
