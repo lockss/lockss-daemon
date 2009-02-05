@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.38.2.1 2009-02-04 08:32:42 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.38.2.2 2009-02-05 03:44:05 tlipkis Exp $
  */
 
 /*
@@ -442,8 +442,7 @@ public class BlockingStreamComm
     }
 
     // This may be called more than once by the same channel, from its
-    // multiple worker threads.  The second and successive calls shouldn't
-    // do anything.
+    // multiple worker threads.  Redundant calls must be harmless.
     synchronized void dissociateChannel(BlockingPeerChannel chan) {
       if (primary == chan) {
 	globalStats.add(primary.getStats());
@@ -458,7 +457,16 @@ public class BlockingStreamComm
 	if (log.isDebug2()) log.debug2("Removed secondary: " + chan);
       }
       synchronized (drainingChannels) {
-	drainingChannels.remove(chan);
+	if (chan.isState(BlockingPeerChannel.ChannelState.DRAIN_INPUT)
+	    && chan.getPeer() != null) {
+	  // If this channel is draining, remember it so can include in stats
+	  drainingChannels.add(chan);
+	  maxDrainingChannels = Math.max(maxDrainingChannels,
+					 drainingChannels.size());
+	} else {
+	  // else ensure it's gone
+	  drainingChannels.remove(chan);
+	}
       }
     }
 
@@ -1172,19 +1180,6 @@ public class BlockingStreamComm
 	if (sendQueue != null) {
 	  pdata.drainQueue(pdata, sendQueue, chan.shouldRetry());
 	}
-      }
-    }
-  }
-
-  /**
-   * Called by channel when draining channel is dissociated, so it can be
-   * included in stats
-   */
-  void addDrainingChannel(BlockingPeerChannel chan) {
-    synchronized (drainingChannels) {
-      drainingChannels.add(chan);
-      if (drainingChannels.size() > maxDrainingChannels) {
-	maxDrainingChannels = drainingChannels.size();
       }
     }
   }

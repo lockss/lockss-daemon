@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.24.2.1 2009-02-04 08:32:42 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.24.2.2 2009-02-05 03:44:05 tlipkis Exp $
  */
 
 /*
@@ -863,9 +863,6 @@ class BlockingPeerChannel implements PeerChannel {
 	    // now sending message
 	    // No longer can send messages so must dissociate now
 	    scomm.dissociateChannelFromPeer(this, peer, null);
-	    if (peer != null) {
-	      scomm.addDrainingChannel(this);
-	    }
 	    reader.setTimeout(scomm.getDrainInputTime() / 2);
 	    try {
 	      log.debug2("Shutdown output");
