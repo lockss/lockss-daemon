@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.25 2009-02-05 05:09:33 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.26 2009-02-07 01:24:51 tlipkis Exp $
  */
 
 /*
@@ -436,8 +436,8 @@ class BlockingPeerChannel implements PeerChannel {
     ChannelState.CLOSING};
 
   void stopChannel(boolean abort, String msg, Throwable t) {
-    scomm.dissociateChannelFromPeer(this, peer, sendQueue);
     if (notStateTrans(stopIgnStates, ChannelState.CLOSING)) {
+      scomm.dissociateChannelFromPeer(this, peer, sendQueue);
       if (msg != null || t != null) {
 	if (msg == null) msg = "Aborting " + peer.getIdString();
 	log.warning(msg, t);
@@ -454,6 +454,12 @@ class BlockingPeerChannel implements PeerChannel {
       reader = (ChannelReader)stopThread(reader);
       writer = stopThread(writer);
       stateTrans(ChannelState.CLOSING, ChannelState.CLOSED);
+    } else {
+      // XXX This shouldn't be necessary.  stopChannel() previously called
+      // dissociateChannelFromPeer() unconditionally; retain capability for
+      // a while just in case
+      if (scomm.getDissociateOnEveryStop())
+	scomm.dissociateChannelFromPeer(this, peer, sendQueue);
     }
   }
 
@@ -633,8 +639,8 @@ class BlockingPeerChannel implements PeerChannel {
 	  if (state != ChannelState.CLOSING) {
 	    // reader, writer can get set to null while in ChannelState.CLOSING
 	    ChannelRunner tmp;
-	    if ((tmp = reader) != null) runner.setRunnerName();
-	    if ((tmp = writer) != null) runner.setRunnerName();
+	    if ((tmp = reader) != null) tmp.setRunnerName();
+	    if ((tmp = writer) != null) tmp.setRunnerName();
 	  }
 	}
 	break;
@@ -875,6 +881,7 @@ class BlockingPeerChannel implements PeerChannel {
 	      abortChannel("shutdownOutput() not implemented for SSL");
 	    }
 	  }
+ 	  return;
 	}
       }
     } catch (InterruptedException e) {

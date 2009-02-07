@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.39 2009-02-05 05:09:33 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.40 2009-02-07 01:24:51 tlipkis Exp $
  */
 
 /*
@@ -198,6 +198,13 @@ public class BlockingStreamComm
     PREFIX + "dissociateOnNoSend";
   public static final boolean DEFAULT_DISSOCIATE_ON_NO_SEND = true;
 
+  /** If true, stopChannel() will dissociate unconditionally, matching the
+   * previous behavior.  If false it will dissociate only if it changes the
+   * state to CLOSING. */
+  public static final String PARAM_DISSOCIATE_ON_EVERY_STOP =
+    PREFIX + "dissociateOnEveryStop";
+  public static final boolean DEFAULT_DISSOCIATE_ON_EVERY_STOP = false;
+
   /** If true, unknown peer messages opcodes cause the channel to abort */
   public static final String PARAM_ABORT_ON_UNKNOWN_OP =
     PREFIX + "abortOnUnknownOp";
@@ -259,6 +266,8 @@ public class BlockingStreamComm
   protected SSLServerSocketFactory sslServerSocketFactory = null;
   private String paramSslKeyStorePassword = null;
   private boolean paramDissociateOnNoSend = DEFAULT_DISSOCIATE_ON_NO_SEND;
+  private boolean paramDissociateOnEveryStop =
+    DEFAULT_DISSOCIATE_ON_EVERY_STOP;
 
   private boolean enabled = DEFAULT_ENABLED;
   private boolean running = false;
@@ -460,12 +469,15 @@ public class BlockingStreamComm
 	if (chan.isState(BlockingPeerChannel.ChannelState.DRAIN_INPUT)
 	    && chan.getPeer() != null) {
 	  // If this channel is draining, remember it so can include in stats
+	  if (log.isDebug2()) log.debug2("Add to draining: " + chan);
 	  drainingChannels.add(chan);
 	  maxDrainingChannels = Math.max(maxDrainingChannels,
 					 drainingChannels.size());
 	} else {
 	  // else ensure it's gone
-	  drainingChannels.remove(chan);
+	  if (drainingChannels.remove(chan)) {
+	    if (log.isDebug2()) log.debug2("Del from draining: " + chan);
+	  }
 	}
       }
     }
@@ -862,6 +874,9 @@ public class BlockingStreamComm
 	paramDissociateOnNoSend =
 	  config.getBoolean(PARAM_DISSOCIATE_ON_NO_SEND,
 			    DEFAULT_DISSOCIATE_ON_NO_SEND);
+	paramDissociateOnEveryStop =
+	  config.getBoolean(PARAM_DISSOCIATE_ON_EVERY_STOP,
+			    DEFAULT_DISSOCIATE_ON_EVERY_STOP);
 
 	paramRetryBeforeExpiration = 
 	  config.getTimeInterval(PARAM_RETRY_BEFORE_EXPIRATION,
@@ -1155,6 +1170,10 @@ public class BlockingStreamComm
 
   boolean getAbortOnUnknownOp() {
     return paramAbortOnUnknownOp;
+  }
+
+  boolean getDissociateOnEveryStop() {
+    return paramDissociateOnEveryStop;
   }
 
   /**
@@ -1847,13 +1866,13 @@ public class BlockingStreamComm
 		  new ColumnDescriptor("RcvdBytes", "Bytes Rcvd",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("LastSend", "LastSend",
-				       ColumnDescriptor.TYPE_STRING),
+				       ColumnDescriptor.TYPE_TIME_INTERVAL),
 		  new ColumnDescriptor("LastRcv", "LastRcv",
-				       ColumnDescriptor.TYPE_STRING),
+				       ColumnDescriptor.TYPE_TIME_INTERVAL),
 		  new ColumnDescriptor("PrevState", "PrevState",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("PrevStateChange", "Change",
-				       ColumnDescriptor.TYPE_STRING)
+				       ColumnDescriptor.TYPE_TIME_INTERVAL)
 		  );
 
   private class ChannelStatus implements StatusAccessor {
@@ -1972,9 +1991,9 @@ public class BlockingStreamComm
       return row;
     }
 
-    String lastTime(long time) {
-      if (time <= 0) return "";
-      return StringUtil.timeIntervalToString(TimeBase.msSince(time));
+    Long lastTime(long time) {
+      if (time <= 0) return null;
+      return TimeBase.msSince(time);
     }
   }
 

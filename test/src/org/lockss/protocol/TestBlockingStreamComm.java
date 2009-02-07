@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.25 2009-02-05 05:09:33 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.26 2009-02-07 01:24:51 tlipkis Exp $
  */
 
 /*
@@ -1428,6 +1428,11 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		 "dissoc", event.get(0));
     assertEquals(0, getChannels(comm1).size());
     assertEquals(0, getRcvChannels(comm1).size());
+    if (!isSsl()) {
+      // Since shutdownOutput() doesn't work with SSL, channel doesn't end
+      // up draining
+      assertContains(comm1.drainingChannels, chan1);
+    }
     if (shutdownOutputSupported) {
       assertFalse("Channel stopped before drain input timer",
 		  sem2.take(TIMEOUT_SHOULD));
@@ -1435,6 +1440,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     TimeBase.step(4000);
     assertTrue("Drain input timer didn't stop channel",
 	       sem2.take(TIMEOUT_SHOULDNT));
+    assertEmpty(comm1.drainingChannels);
   }
 
   // read (so) timeout should abort channel
