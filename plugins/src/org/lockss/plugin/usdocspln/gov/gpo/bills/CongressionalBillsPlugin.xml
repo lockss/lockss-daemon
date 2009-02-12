@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
