@@ -1725,6 +1725,8 @@
       name = Infection Control and Hospital Epidemiology 
     >
 
+comment[iche27] = 500 internal server errors
+
     param[journal_id] = iche
 
     au < manifest ; Infection Control and Hospital Epidemiology Volume 20 ; 20 >
@@ -1734,7 +1736,7 @@
     au < manifest ; Infection Control and Hospital Epidemiology Volume 24 ; 24 >
     au < manifest ; Infection Control and Hospital Epidemiology Volume 25 ; 25 >
     au < manifest ; Infection Control and Hospital Epidemiology Volume 26 ; 26 >
-    au < testing ; Infection Control and Hospital Epidemiology Volume 27 ; 27 >
+    au < not_ready ; Infection Control and Hospital Epidemiology Volume 27 ; 27 >
     au < manifest ; Infection Control and Hospital Epidemiology Volume 28 ; 28 >
     au < manifest ; Infection Control and Hospital Epidemiology Volume 29 ; 29 >
 
@@ -1831,6 +1833,8 @@
 
     param[journal_id] = ijps
 
+comment[ijps167] = 500 internal server errors
+
     au < do_not_process ; International Journal of Plant Sciences Volume 153 ; 153 >
     au < do_not_process ; International Journal of Plant Sciences Volume 154 ; 154 >
     au < do_not_process ; International Journal of Plant Sciences Volume 155 ; 155 >
@@ -1845,7 +1849,7 @@
     au < manifest ; International Journal of Plant Sciences Volume 164 ; 164 >
     au < manifest ; International Journal of Plant Sciences Volume 165 ; 165 >
     au < manifest ; International Journal of Plant Sciences Volume 166 ; 166 >
-    au < testing ; International Journal of Plant Sciences Volume 167 ; 167 >
+    au < not_ready ; International Journal of Plant Sciences Volume 167 ; 167 >
     au < manifest ; International Journal of Plant Sciences Volume 168 ; 168 >
     au < manifest ; International Journal of Plant Sciences Volume 169 ; 169 >
 
@@ -1857,6 +1861,8 @@
     >
 
     param[journal_id] = isis
+
+comment[isis97] = 500 internal server errors
 
     au < do_not_process ; Isis Volume 1 ; 1 >
     au < do_not_process ; Isis Volume 2 ; 2 >
@@ -1954,7 +1960,7 @@
     au < manifest ; Isis Volume 94 ; 94 >
     au < manifest ; Isis Volume 95 ; 95 >
     au < manifest ; Isis Volume 96 ; 96 >
-    au < testing ; Isis Volume 97 ; 97 >
+    au < not_ready ; Isis Volume 97 ; 97 >
     au < manifest ; Isis Volume 98 ; 98 >
 
   }
