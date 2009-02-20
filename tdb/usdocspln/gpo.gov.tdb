@@ -15,14 +15,14 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin
 
-    au < manifest ; Congressional Bills, 104th Congress ; 103 >
-    au < manifest ; Congressional Bills, 104th Congress ; 104 >
-    au < manifest ; Congressional Bills, 105th Congress ; 105 >
-    au < manifest ; Congressional Bills, 106th Congress ; 106 >
-    au < manifest ; Congressional Bills, 107th Congress ; 107 >
-    au < manifest ; Congressional Bills, 108th Congress ; 108 >
-    au < not_ready ; Congressional Bills, 109th Congress ; 109 >
-    au < manifest ; Congressional Bills, 110th Congress ; 110 >
+    au < ready ; Congressional Bills, 104th Congress ; 103 >
+    au < ready ; Congressional Bills, 104th Congress ; 104 >
+    au < ready ; Congressional Bills, 105th Congress ; 105 >
+    au < ready ; Congressional Bills, 106th Congress ; 106 >
+    au < ready ; Congressional Bills, 107th Congress ; 107 >
+    au < ready ; Congressional Bills, 108th Congress ; 108 >
+    au < ready ; Congressional Bills, 109th Congress ; 109 >
+    au < ready ; Congressional Bills, 110th Congress ; 110 >
 
   }
 
@@ -35,13 +35,13 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
 
-    au < released ; Congressional Documents, 104th Congress ; 104 >
-    au < released ; Congressional Documents, 105th Congress ; 105 >
-    au < released ; Congressional Documents, 106th Congress ; 106 >
-    au < released ; Congressional Documents, 107th Congress ; 107 >
-    au < released ; Congressional Documents, 108th Congress ; 108 >
-    au < released ; Congressional Documents, 109th Congress ; 109 >
-    au < released ; Congressional Documents, 110th Congress ; 110 >
+    au < testing ; Congressional Documents, 104th Congress ; 104 >
+    au < testing ; Congressional Documents, 105th Congress ; 105 >
+    au < testing ; Congressional Documents, 106th Congress ; 106 >
+    au < testing ; Congressional Documents, 107th Congress ; 107 >
+    au < testing ; Congressional Documents, 108th Congress ; 108 >
+    au < testing ; Congressional Documents, 109th Congress ; 109 >
+    au < testing ; Congressional Documents, 110th Congress ; 110 >
 
   }
 
