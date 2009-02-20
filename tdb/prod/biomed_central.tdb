@@ -2140,8 +2140,8 @@
       param[base_url] = http://www.jbioleng.org/
       param[journal_issn] = 1754-1611
 
-      au < testing ; Journal of Biological Engineering Volume 1 ; 1 >
-      au < testing ; Journal of Biological Engineering Volume 2 ; 2 >
+      au < ready ; Journal of Biological Engineering Volume 1 ; 1 >
+      au < ready ; Journal of Biological Engineering Volume 2 ; 2 >
     }
 
 
@@ -2155,13 +2155,13 @@
       param[base_url] = http://jbiol.com/
       param[journal_issn] = 1475-4924
 
-      au < testing ; Journal of Biology Volume 1 ; 1 >
-      au < testing ; Journal of Biology Volume 2 ; 2 >
-      au < testing ; Journal of Biology Volume 3 ; 3 >
-      au < testing ; Journal of Biology Volume 4 ; 4 >
-      au < testing ; Journal of Biology Volume 5 ; 5 >
-      au < testing ; Journal of Biology Volume 6 ; 6 >
-      au < testing ; Journal of Biology Volume 7 ; 7 >
+      au < ready ; Journal of Biology Volume 1 ; 1 >
+      au < ready ; Journal of Biology Volume 2 ; 2 >
+      au < ready ; Journal of Biology Volume 3 ; 3 >
+      au < ready ; Journal of Biology Volume 4 ; 4 >
+      au < ready ; Journal of Biology Volume 5 ; 5 >
+      au < ready ; Journal of Biology Volume 6 ; 6 >
+      au < ready ; Journal of Biology Volume 7 ; 7 >
     }
 
 
@@ -2175,9 +2175,9 @@
       param[base_url] = http://www.j-biomed-discovery.com/
       param[journal_issn] = 1747-5333
 
-      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 1 ; 1 >
-      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
-      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
+      au < ready ; Journal of Biomedical Discovery and Collaboration Volume 1 ; 1 >
+      au < ready ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
+      au < ready ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
     }
 
 
@@ -2191,9 +2191,9 @@
       param[base_url] = http://www.jbppni.com/
       param[journal_issn] = 1749-7221
 
-      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
-      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
-      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
+      au < ready ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
+      au < ready ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
+      au < ready ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
     }
 
 
@@ -2207,12 +2207,12 @@
       param[base_url] = http://www.carcinogenesis.com/
       param[journal_issn] = 1477-3163
 
-      au < manifest ; Journal of Carcinogenesis Volume 1 ; 1 >
-      au < manifest ; Journal of Carcinogenesis Volume 2 ; 2 >
-      au < manifest ; Journal of Carcinogenesis Volume 3 ; 3 >
-      au < manifest ; Journal of Carcinogenesis Volume 4 ; 4 >
-      au < manifest ; Journal of Carcinogenesis Volume 5 ; 5 >
-      au < manifest ; Journal of Carcinogenesis Volume 6 ; 6 >
+      au < testing ; Journal of Carcinogenesis Volume 1 ; 1 >
+      au < testing ; Journal of Carcinogenesis Volume 2 ; 2 >
+      au < testing ; Journal of Carcinogenesis Volume 3 ; 3 >
+      au < testing ; Journal of Carcinogenesis Volume 4 ; 4 >
+      au < testing ; Journal of Carcinogenesis Volume 5 ; 5 >
+      au < testing ; Journal of Carcinogenesis Volume 6 ; 6 >
     }
 
 
@@ -2226,9 +2226,9 @@
       param[base_url] = http://www.cardiothoracicsurgery.org/
       param[journal_issn] = 1749-8090
 
-      au < manifest ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
-      au < manifest ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
-      au < manifest ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
+      au < testing ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
+      au < testing ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
+      au < testing ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
     }
 
 
@@ -2242,16 +2242,16 @@
       param[base_url] = http://jcmr-online.com/
       param[journal_issn] = 1532-429X
 
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
-      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
+      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
     }
 
 
@@ -2265,12 +2265,12 @@
       param[base_url] = http://www.jcircadianrhythms.com/
       param[journal_issn] = 1740-3391
 
-      au < manifest ; Journal of Circadian Rhythms Volume 1 ; 1 >
-      au < manifest ; Journal of Circadian Rhythms Volume 2 ; 2 >
-      au < manifest ; Journal of Circadian Rhythms Volume 3 ; 3 >
-      au < manifest ; Journal of Circadian Rhythms Volume 4 ; 4 >
-      au < manifest ; Journal of Circadian Rhythms Volume 5 ; 5 >
-      au < manifest ; Journal of Circadian Rhythms Volume 6 ; 6 >
+      au < testing ; Journal of Circadian Rhythms Volume 1 ; 1 >
+      au < testing ; Journal of Circadian Rhythms Volume 2 ; 2 >
+      au < testing ; Journal of Circadian Rhythms Volume 3 ; 3 >
+      au < testing ; Journal of Circadian Rhythms Volume 4 ; 4 >
+      au < testing ; Journal of Circadian Rhythms Volume 5 ; 5 >
+      au < testing ; Journal of Circadian Rhythms Volume 6 ; 6 >
     }
 
 
