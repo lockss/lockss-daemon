@@ -28,18 +28,18 @@
     <list>
       <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sgpo.gov/register/%d/$&quot;, base_url, congress</string>
-      <string>1,&quot;^%sgpo.gov/register/%d\.tgz$&quot;, base_url, congress</string>
-      <string>1,&quot;^%sgpo.gov/register/%d\.html$&quot;, base_url, congress</string>
+      <string>1,&quot;^%sgpo.gov/bills/%d/$&quot;, base_url, congress</string>
+      <string>1,&quot;^%sgpo.gov/bills/%d\.tgz$&quot;, base_url, congress</string>
+      <string>1,&quot;^%sgpo.gov/bills/%d\.html$&quot;, base_url, congress</string>
       <string>1,&quot;^%s$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%sgpo.gov/register/%d/&quot;, base_url, year</string>
-      <string>&quot;%sgpo.gov/register/%d.tgz&quot;, base_url, year</string>
-      <string>&quot;%sgpo.gov/register/%d.html&quot;, base_url, year</string>
+      <string>&quot;%sgpo.gov/bills/%d/&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/bills/%d.tgz&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/bills/%d.html&quot;, base_url, congress</string>
     </list>    
   </entry>
   <entry>
