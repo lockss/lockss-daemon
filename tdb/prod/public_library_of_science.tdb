@@ -64,8 +64,8 @@
     param[base_url] = http://www.plosntds.org/    
     param[journal_id] = ntd
 
-    au < exists ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
-    au < exists ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
+    au < testing ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
+    au < testing ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
 
   }
   
@@ -78,10 +78,10 @@
     param[base_url] = http://www.plospathogens.org/    
     param[journal_id] = pathogens
 
-    au < exists ; PLoS Pathogens Volume 1 ; 2006 >
-    au < exists ; PLoS Pathogens Volume 2 ; 2006 >
-    au < exists ; PLoS Pathogens Volume 3 ; 2007 >
-    au < exists ; PLoS Pathogens Volume 4 ; 2008 >
+    au < testing ; PLoS Pathogens Volume 1 ; 2006 >
+    au < testing ; PLoS Pathogens Volume 2 ; 2006 >
+    au < testing ; PLoS Pathogens Volume 3 ; 2007 >
+    au < testing ; PLoS Pathogens Volume 4 ; 2008 >
 
   }
   
