@@ -268,10 +268,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLoSOne1">
+  <property name="PLoSNeglectedTropicalDiseases1">
    <property name="attributes.publisher" value="Public Library of Science" />
-   <property name="journalTitle" value="PLoS Neglected Tropical Deseases" />
-   <property name="title" value="PLoS One Volume 1" />
+   <property name="journalTitle" value="PLoS Neglected Tropical Diseases" />
+   <property name="title" value="PLoS Neglected Tropical Diseases Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -288,10 +288,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLoSOne2">
+  <property name="PLoSNeglectedTropicalDiseases2">
    <property name="attributes.publisher" value="Public Library of Science" />
-   <property name="journalTitle" value="PLoS Neglected Tropical Deseases" />
-   <property name="title" value="PLoS One Volume 2" />
+   <property name="journalTitle" value="PLoS Neglected Tropical Diseases" />
+   <property name="title" value="PLoS Neglected Tropical Diseases Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -384,6 +384,26 @@
    <property name="param.3">
     <property name="key" value="year" />
     <property name="value" value="2008" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSPathogens5">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Pathogens" />
+   <property name="title" value="PLoS Pathogens Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plospathogens.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pathogens" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
    </property>
    <property name="attribute.rights" value="openaccess" />
   </property>
