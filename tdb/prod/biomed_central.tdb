@@ -2197,26 +2197,6 @@
     }
 
 
-
-    {
-      title <
-        name = Journal of Carcinogenesis ;
-        issn = 1477-3163
-      >
-
-      param[base_url] = http://www.carcinogenesis.com/
-      param[journal_issn] = 1477-3163
-
-      au < testing ; Journal of Carcinogenesis Volume 1 ; 1 >
-      au < testing ; Journal of Carcinogenesis Volume 2 ; 2 >
-      au < testing ; Journal of Carcinogenesis Volume 3 ; 3 >
-      au < testing ; Journal of Carcinogenesis Volume 4 ; 4 >
-      au < testing ; Journal of Carcinogenesis Volume 5 ; 5 >
-      au < testing ; Journal of Carcinogenesis Volume 6 ; 6 >
-    }
-
-
-
     {
       title <
         name = Journal of Cardiothoracic Surgery ;
@@ -2242,16 +2222,16 @@
       param[base_url] = http://jcmr-online.com/
       param[journal_issn] = 1532-429X
 
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
+      au < ready ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
     }
 
 
@@ -2265,12 +2245,12 @@
       param[base_url] = http://www.jcircadianrhythms.com/
       param[journal_issn] = 1740-3391
 
-      au < testing ; Journal of Circadian Rhythms Volume 1 ; 1 >
-      au < testing ; Journal of Circadian Rhythms Volume 2 ; 2 >
-      au < testing ; Journal of Circadian Rhythms Volume 3 ; 3 >
-      au < testing ; Journal of Circadian Rhythms Volume 4 ; 4 >
-      au < testing ; Journal of Circadian Rhythms Volume 5 ; 5 >
-      au < testing ; Journal of Circadian Rhythms Volume 6 ; 6 >
+      au < ready ; Journal of Circadian Rhythms Volume 1 ; 1 >
+      au < ready ; Journal of Circadian Rhythms Volume 2 ; 2 >
+      au < ready ; Journal of Circadian Rhythms Volume 3 ; 3 >
+      au < ready ; Journal of Circadian Rhythms Volume 4 ; 4 >
+      au < ready ; Journal of Circadian Rhythms Volume 5 ; 5 >
+      au < ready ; Journal of Circadian Rhythms Volume 6 ; 6 >
     }
 
 
@@ -2284,10 +2264,10 @@
       param[base_url] = http://www.ethnobiomed.com/
       param[journal_issn] = 1746-4269
 
-      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
-      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
-      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
-      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
+      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
+      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
+      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
+      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
     }
 
 
@@ -2301,11 +2281,11 @@
       param[base_url] = http://www.jexpclinassistreprod.com/
       param[journal_issn] = 1743-1050
 
-      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 >
-      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 >
-      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 >
-      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 >
-      au < manifest ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 >
+      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 >
+      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 >
+      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 >
+      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 >
+      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 >
     }
 
 
