@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.21 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.22 2009-02-26 05:14:51 tlipkis Exp $
  */
 
 /*
@@ -243,6 +243,12 @@ public abstract class BaseServletManager
   }
 
   public void startServlets() {
+    if (isRunningOnPort(port)) {
+      return;
+    }
+    if (isServerRunning()) {
+      stopServer();
+    }
     try {
       // Create the server
       HttpServer server = new HttpServer();
