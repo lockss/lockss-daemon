@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.7 2008-07-01 07:47:49 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.8 2009-02-26 05:15:56 tlipkis Exp $
  */
 
 /*
@@ -129,7 +129,8 @@ public class TestHttpResultMap extends LockssTestCase {
     assertTrue(exception instanceof CacheException.UnknownExceptionException);
 
     exception = resultMap.mapException(null, new SocketException(), "foo");
-    assertTrue(exception instanceof
+    assertTrue(exception.toString(),
+	       exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
     exception = resultMap.mapException(null, new ConnectException(), "foo");
@@ -141,10 +142,11 @@ public class TestHttpResultMap extends LockssTestCase {
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
-    exception = resultMap.mapException(null, new UnknownHostException(),
+    exception = resultMap.mapException(null, new UnknownHostException("h.tld"),
 				       "foo");
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_2_30S);
+    assertEquals("Unknown host: h.tld", exception.getMessage());
 
     exception = resultMap.mapException(null,
 				       new LockssUrlConnection.ConnectionTimeoutException("msg"),
