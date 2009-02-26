@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.3 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: TestHeaderUtil.java,v 1.4 2009-02-26 05:14:16 tlipkis Exp $
  */
 
 /*
@@ -67,5 +67,14 @@ public class TestHeaderUtil extends LockssTestCase {
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=foo-1;other=stuff"));
     assertSame(HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""),
 	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+  }
+
+  public void testIsEarlier() throws Exception {
+    String t1 = "Wed, 17 Sep 2008 18:24:58 GMT";
+    String t2 = "Thu, 18 Sep 2008 18:24:58 GMT";
+    assertFalse(HeaderUtil.isEarlier(t1, t1));
+    assertFalse(HeaderUtil.isEarlier(t1, new String(t1)));
+    assertTrue(HeaderUtil.isEarlier(t1, t2));
+    assertFalse(HeaderUtil.isEarlier(t2, t1));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.5 2007-02-10 06:53:58 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.6 2009-02-26 05:14:17 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import org.apache.commons.collections.map.LRUMap;
+import org.apache.commons.httpclient.util.DateUtil;
 import org.mortbay.util.*;
 
 
@@ -95,6 +96,15 @@ public class HeaderUtil {
       charsetMap.put(contentType, charset);
     }
     return charset;
+  }
+
+  public static boolean isEarlier(String datestr1, String datestr2)
+      throws org.apache.commons.httpclient.util.DateParseException {
+    // common case, no conversion necessary
+    if (datestr1.equalsIgnoreCase(datestr2)) return false;
+    long d1 = DateUtil.parseDate(datestr1).getTime();
+    long d2 = DateUtil.parseDate(datestr2).getTime();
+    return d1 < d2;
   }
 
 }
