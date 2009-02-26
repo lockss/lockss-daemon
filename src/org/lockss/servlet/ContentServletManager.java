@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.2 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.3 2009-02-26 05:14:39 tlipkis Exp $
  */
 
 /*
@@ -241,8 +241,7 @@ public class ContentServletManager
 
   void addCompressionFilter(WebApplicationHandler handler) {
     Configuration config = ConfigManager.getCurrentConfig();
-    if (config.getBoolean(PARAM_COMPRESSOR_ENABLED,
-			  DEFAULT_COMPRESSOR_ENABLED)) {
+    if (compressorEnabled) {
       String filterName = "CompressingFilter";
       FilterHolder holder =
 	handler.defineFilter(filterName, CompressingFilter.class.getName());

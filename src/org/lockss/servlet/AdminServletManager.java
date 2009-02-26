@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.5 2008-11-08 08:16:32 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.6 2009-02-26 05:14:39 tlipkis Exp $
  */
 
 /*
@@ -477,8 +477,7 @@ public class AdminServletManager extends BaseServletManager {
 
   void addCompressionFilter(WebApplicationHandler handler) {
     Configuration config = ConfigManager.getCurrentConfig();
-    if (config.getBoolean(PARAM_COMPRESSOR_ENABLED,
-			  DEFAULT_COMPRESSOR_ENABLED)) {
+    if (compressorEnabled) {
       String filterName = "CompressingFilter";
       FilterHolder holder =
 	handler.defineFilter(filterName, CompressingFilter.class.getName());
