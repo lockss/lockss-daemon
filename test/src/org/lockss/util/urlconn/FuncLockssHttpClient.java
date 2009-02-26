@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.14 2008-10-24 07:14:58 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.15 2009-02-26 05:15:23 tlipkis Exp $
  */
 
 /*
@@ -264,6 +264,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
   }
 
   public void testBasicAuth() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.PARAM_USE_PREEMPTIVE_AUTH, "false");
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
@@ -290,7 +291,34 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertEquals(1, th.getNumConnects());
   }
 
+  public void testBasicAuthPreemptive() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.PARAM_USE_PREEMPTIVE_AUTH, "true");
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "foo",
+				  connectionPool);
+    conn.setCredentials("userfoo", "passbar");
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req1 = th.getRequest(0);
+    assertMatchesRE("^GET /foo HTTP/", req1);
+    // first request should have Authorization: header
+    assertMatchesRE("Authorization: Basic dXNlcmZvbzpwYXNzYmFy", req1);
+    assertEquals(200, conn.getResponseCode());
+    conn.release();
+
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
   public void testDigestAuth() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.PARAM_USE_PREEMPTIVE_AUTH, "false");
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
@@ -374,6 +402,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
   // Ensure that execute ends with 401 error if incorrect credentials are
   // supplied.
   public void testAuthFail() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.PARAM_USE_PREEMPTIVE_AUTH, "false");
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
@@ -393,6 +422,33 @@ public class FuncLockssHttpClient extends LockssTestCase {
     // second request only should have Authorization: header
     String req2 = th.getRequest(1);
     assertMatchesRE("Authorization: Basic dXNlcmZvbzpwYXNzYmFy", req2);
+    assertEquals(401, conn.getResponseCode());
+    conn.release();
+
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  // Ensure that execute ends with 401 error if incorrect credentials are
+  // supplied.
+  public void testAuthFailPreemptive() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.PARAM_USE_PREEMPTIVE_AUTH, "true");
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_401));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "foo",
+				  connectionPool);
+    conn.setCredentials("userfoo", "passbar");
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req1 = th.getRequest(0);
+    assertMatchesRE("^GET /foo HTTP/", req1);
+    assertMatchesRE("Authorization: Basic dXNlcmZvbzpwYXNzYmFy", req1);
     assertEquals(401, conn.getResponseCode());
     conn.release();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.29 2008-09-14 22:10:28 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.30 2009-02-26 05:15:23 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -55,6 +55,12 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    * be wrapped in an EofMonitoringInputStream */
   static final String PARAM_USE_WRAPPER_STREAM = PREFIX + "useWrapperStream";
   static final boolean DEFAULT_USE_WRAPPER_STREAM = true;
+
+  /* If true, any connection on which credentials are set will preemptively
+   * send the credentials.  If false they will be sent only after receiving
+   * 401, which currently happens on every request. */
+  static final String PARAM_USE_PREEMPTIVE_AUTH = PREFIX + "usePreemptiveAuth";
+  static final boolean DEFAULT_USE_PREEMPTIVE_AUTH = true;
 
   // Set up an SSL protocol factory that accepts self-signed certificates
   static {
@@ -246,6 +252,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 							      password);
     HttpState state = client.getState();
     state.setCredentials(AuthScope.ANY, credentials);
+    if (CurrentConfig.getBooleanParam(PARAM_USE_PREEMPTIVE_AUTH,
+                                      DEFAULT_USE_PREEMPTIVE_AUTH)) {
+      HttpClientParams params = client.getParams();
+      params.setAuthenticationPreemptive(true);
+    }
   }
 
   public String getResponseHeaderFieldVal(int n) {
