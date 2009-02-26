@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.243 2009-01-15 20:23:41 thib_gc Exp $
+ $Id: build.xml,v 1.244 2009-02-26 05:12:56 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1848,9 +1848,10 @@ Test results in ${test.results}
     <echo message="Checking .xml files"/>
     <apply executable="xmllint" dir="${basedir}"
            failonerror="true"
+           failifexecutionfails="false"
            resultproperty="xmllint.result"
            relative="true"
-           parallel="false">
+           parallel="true">
       <arg value="--noout"/>
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
       <fileset dir="${basedir}"
