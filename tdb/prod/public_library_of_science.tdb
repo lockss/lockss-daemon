@@ -78,10 +78,11 @@
     param[base_url] = http://www.plospathogens.org/    
     param[journal_id] = pathogens
 
-    au < testing ; PLoS Pathogens Volume 1 ; 2006 >
+    au < testing ; PLoS Pathogens Volume 1 ; 2005 >
     au < testing ; PLoS Pathogens Volume 2 ; 2006 >
     au < testing ; PLoS Pathogens Volume 3 ; 2007 >
     au < testing ; PLoS Pathogens Volume 4 ; 2008 >
+    au < testing ; PLoS Pathogens Volume 4 ; 2009 >
 
   }
   

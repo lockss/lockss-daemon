@@ -2206,9 +2206,9 @@
       param[base_url] = http://www.cardiothoracicsurgery.org/
       param[journal_issn] = 1749-8090
 
-      au < testing ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
-      au < testing ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
-      au < testing ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
+      au < ready ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
+      au < ready ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
+      au < ready ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
     }
 
 
@@ -2264,31 +2264,11 @@
       param[base_url] = http://www.ethnobiomed.com/
       param[journal_issn] = 1746-4269
 
-      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
-      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
-      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
-      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
+      au < ready ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
+      au < ready ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
+      au < ready ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
+      au < ready ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
     }
-
-
-
-    {
-      title <
-        name = Journal of Experimental & Clinical Assisted Reproduction ;
-        issn = 1743-1050
-      >
-
-      param[base_url] = http://www.jexpclinassistreprod.com/
-      param[journal_issn] = 1743-1050
-
-      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 >
-      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 >
-      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 >
-      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 >
-      au < exists ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 >
-    }
-
-
 
     {
       title <
@@ -2299,7 +2279,7 @@
       param[base_url] = http://www.jeccr.com/
       param[journal_issn] = 1756-9966
 
-      au < manifest ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
+      au < testing ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
     }
 
 
@@ -2313,7 +2293,7 @@
       param[base_url] = http://www.jhoonline.org/
       param[journal_issn] = 1756-8722
 
-      au < manifest ; Journal of Hematology & Oncology Volume 1 ; 1 >
+      au < testing ; Journal of Hematology & Oncology Volume 1 ; 1 >
     }
 
 
@@ -2327,12 +2307,12 @@
       param[base_url] = http://www.jibtherapies.com/
       param[journal_issn] = 1476-8518
 
-      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
-      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 2 ; 2 >
-      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 3 ; 3 >
-      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
-      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
-      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
+      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
+      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 2 ; 2 >
+      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 3 ; 3 >
+      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
+      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
+      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
     }
 
 
@@ -2346,11 +2326,11 @@
       param[base_url] = http://www.journal-inflammation.com/
       param[journal_issn] = 1476-9255
 
-      au < manifest ; Journal of Inflammation Volume 1 ; 1 >
-      au < manifest ; Journal of Inflammation Volume 2 ; 2 >
-      au < manifest ; Journal of Inflammation Volume 3 ; 3 >
-      au < manifest ; Journal of Inflammation Volume 4 ; 4 >
-      au < manifest ; Journal of Inflammation Volume 5 ; 5 >
+      au < testing ; Journal of Inflammation Volume 1 ; 1 >
+      au < testing ; Journal of Inflammation Volume 2 ; 2 >
+      au < testing ; Journal of Inflammation Volume 3 ; 3 >
+      au < testing ; Journal of Inflammation Volume 4 ; 4 >
+      au < testing ; Journal of Inflammation Volume 5 ; 5 >
     }
 
 
@@ -2364,8 +2344,8 @@
       param[base_url] = http://www.jmedicalcasereports.com/
       param[journal_issn] = 1752-1947
 
-      au < manifest ; Journal of Medical Case Reports Volume 1 ; 1 >
-      au < manifest ; Journal of Medical Case Reports Volume 2 ; 2 >
+      au < testing ; Journal of Medical Case Reports Volume 1 ; 1 >
+      au < testing ; Journal of Medical Case Reports Volume 2 ; 2 >
     }
 
 
@@ -2379,9 +2359,9 @@
       param[base_url] = http://www.jmolecularsignaling.com/
       param[journal_issn] = 1750-2187
 
-      au < manifest ; Journal of Molecular Signaling Volume 1 ; 1 >
-      au < manifest ; Journal of Molecular Signaling Volume 2 ; 2 >
-      au < manifest ; Journal of Molecular Signaling Volume 3 ; 3 >
+      au < testing ; Journal of Molecular Signaling Volume 1 ; 1 >
+      au < testing ; Journal of Molecular Signaling Volume 2 ; 2 >
+      au < testing ; Journal of Molecular Signaling Volume 3 ; 3 >
     }
 
 
@@ -2395,12 +2375,12 @@
       param[base_url] = http://www.jnanobiotechnology.com/
       param[journal_issn] = 1477-3155
 
-      au < manifest ; Journal of Nanobiotechnology Volume 1 ; 1 >
-      au < manifest ; Journal of Nanobiotechnology Volume 2 ; 2 >
-      au < manifest ; Journal of Nanobiotechnology Volume 3 ; 3 >
-      au < manifest ; Journal of Nanobiotechnology Volume 4 ; 4 >
-      au < manifest ; Journal of Nanobiotechnology Volume 5 ; 5 >
-      au < manifest ; Journal of Nanobiotechnology Volume 6 ; 6 >
+      au < testing ; Journal of Nanobiotechnology Volume 1 ; 1 >
+      au < testing ; Journal of Nanobiotechnology Volume 2 ; 2 >
+      au < testing ; Journal of Nanobiotechnology Volume 3 ; 3 >
+      au < testing ; Journal of Nanobiotechnology Volume 4 ; 4 >
+      au < testing ; Journal of Nanobiotechnology Volume 5 ; 5 >
+      au < testing ; Journal of Nanobiotechnology Volume 6 ; 6 >
     }
 
 
