@@ -1,0 +1,58 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.auburn.adpn.sledgepapers.SledgePapersPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Eugene B. Sledge Papers Plugin, Base URL %s&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Eugene B. Sledge Papers Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>This plugin is for harvesting input files for the Eugene B. Sledge Papers collection at Auburn University. There are no parameters. The baseURL is http://digdata1.lib.auburn.edu/numphotos/ and the manifest page is manifest.html in this directory.
+</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sSledge%%20papers/manifest\.html$&quot;, base_url</string>
+      <string>1,&quot;^%sSledge%%20papers($|/)&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sSledge%%20papers/manifest.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
