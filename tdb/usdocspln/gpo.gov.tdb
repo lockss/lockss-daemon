@@ -15,14 +15,14 @@
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin
 
-    au < ready ; Congressional Bills, 104th Congress ; 103 >
-    au < ready ; Congressional Bills, 104th Congress ; 104 >
-    au < ready ; Congressional Bills, 105th Congress ; 105 >
-    au < ready ; Congressional Bills, 106th Congress ; 106 >
-    au < ready ; Congressional Bills, 107th Congress ; 107 >
-    au < ready ; Congressional Bills, 108th Congress ; 108 >
-    au < ready ; Congressional Bills, 109th Congress ; 109 >
-    au < ready ; Congressional Bills, 110th Congress ; 110 >
+    au < releasing ; Congressional Bills, 104th Congress ; 103 >
+    au < releasing ; Congressional Bills, 104th Congress ; 104 >
+    au < releasing ; Congressional Bills, 105th Congress ; 105 >
+    au < releasing ; Congressional Bills, 106th Congress ; 106 >
+    au < releasing ; Congressional Bills, 107th Congress ; 107 >
+    au < releasing ; Congressional Bills, 108th Congress ; 108 >
+    au < releasing ; Congressional Bills, 109th Congress ; 109 >
+    au < releasing ; Congressional Bills, 110th Congress ; 110 >
 
   }
 
