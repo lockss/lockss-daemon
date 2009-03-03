@@ -15,13 +15,13 @@
     
     param[journal_id] = cjmrp
 
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1 (2002) ; 2002 >
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1-2 (2003) ; 2003 >
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 2-3 (2004) ; 2004 >
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 3-4 (2005) ; 2005 >
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 4-5 (2006) ; 2006 >
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 6-7 (2007) ; 2007 >
-    au < testing ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 7 (2008) ; 2008 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1 (2002) ; 2002 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1-2 (2003) ; 2003 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 2-3 (2004) ; 2004 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 3-4 (2005) ; 2005 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 4-5 (2006) ; 2006 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 6-7 (2007) ; 2007 >
+    au < ready ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 7 (2008) ; 2008 >
 
   }
 
@@ -32,11 +32,11 @@
     
     param[journal_id] = tci
 
-    au < testing ; Transnational Curriculum Inquiry Volume 1 ; 2004 >
-    au < testing ; Transnational Curriculum Inquiry Volume 2 ; 2005 >
-    au < testing ; Transnational Curriculum Inquiry Volume 3 ; 2006 >
-    au < testing ; Transnational Curriculum Inquiry Volume 4 ; 2007 >
-    au < testing ; Transnational Curriculum Inquiry Volume 5 ; 2008 >
+    au < ready ; Transnational Curriculum Inquiry Volume 1 ; 2004 >
+    au < ready ; Transnational Curriculum Inquiry Volume 2 ; 2005 >
+    au < ready ; Transnational Curriculum Inquiry Volume 3 ; 2006 >
+    au < ready ; Transnational Curriculum Inquiry Volume 4 ; 2007 >
+    au < ready ; Transnational Curriculum Inquiry Volume 5 ; 2008 >
 
   }
 
@@ -47,8 +47,8 @@
     
     param[journal_id] = newproposals
 
-    au < testing ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1 (2007) ; 2007 >
-    au < testing ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1-2 (2008) ; 2008 >
+    au < ready ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1 (2007) ; 2007 >
+    au < ready ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1-2 (2008) ; 2008 >
 
   }
 
