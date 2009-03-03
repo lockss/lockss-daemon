@@ -1,0 +1,55 @@
+{
+  publisher <
+    name = University of British Columbia
+  >
+
+  implicit < status ; name ; param[year] >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  param[base_url] = http://ojs.library.ubc.ca/
+  
+  {
+    title <
+      name = Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme
+    >
+    
+    param[journal_id] = cjmrp
+
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1 (2002) ; 2002 >
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1-2 (2003) ; 2003 >
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 2-3 (2004) ; 2004 >
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 3-4 (2005) ; 2005 >
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 4-5 (2006) ; 2006 >
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 6-7 (2007) ; 2007 >
+    au < manifest ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 7 (2008) ; 2008 >
+
+  }
+
+  {
+    title <
+      name = Transnational Curriculum Inquiry
+    >
+    
+    param[journal_id] = tci
+
+    au < manifest ; Transnational Curriculum Inquiry Volume 1 ; 2004 >
+    au < manifest ; Transnational Curriculum Inquiry Volume 2 ; 2005 >
+    au < manifest ; Transnational Curriculum Inquiry Volume 3 ; 2006 >
+    au < manifest ; Transnational Curriculum Inquiry Volume 4 ; 2007 >
+    au < manifest ; Transnational Curriculum Inquiry Volume 5 ; 2008 >
+
+  }
+
+  {
+    title <
+      name = New Proposals: Journal of Marxism and Interdisciplinary Inquiry
+    >
+    
+    param[journal_id] = newproposals
+
+    au < manifest ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1 (2007) ; 2007 >
+    au < manifest ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1-2 (2008) ; 2008 >
+
+  }
+
+}
