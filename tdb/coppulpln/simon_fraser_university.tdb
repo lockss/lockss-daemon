@@ -10,41 +10,97 @@
     
     {
       title <
+        name = Canadian Journal of Communication
+      >
+      
+      param[base_url] = http://www.cjc-online.ca/
+      param[journal_id] = journal
+
+      comment = IP-based authentication test
+      
+      au < testing ; Canadian Journal of Communication Volume 1 (1974) ; 1974 >
+      au < testing ; Canadian Journal of Communication Volume 1-2 (1975) ; 1975 >
+      au < testing ; Canadian Journal of Communication Volume 2-3 (1976) ; 1976 >
+      au < testing ; Canadian Journal of Communication Volume 3-4 (1977) ; 1977 >
+      au < testing ; Canadian Journal of Communication Volume 4-5 (1978) ; 1978 >
+      au < testing ; Canadian Journal of Communication Volume 5-6 (1979) ; 1979 >
+      au < testing ; Canadian Journal of Communication Volume 6-7 (1980) ; 1980 >
+      au < testing ; Canadian Journal of Communication Volume 7-8 (1981) ; 1981 >
+      au < testing ; Canadian Journal of Communication Volume 8-9 (1982) ; 1982 >
+      au < testing ; Canadian Journal of Communication Volume 9-10 (1983) ; 1983 >
+      au < testing ; Canadian Journal of Communication Volume 10 ; 1984 >
+      au < testing ; Canadian Journal of Communication Volume 11 ; 1985 >
+      au < testing ; Canadian Journal of Communication Volume 12 ; 1986 >
+      au < testing ; Canadian Journal of Communication Volume 13 (1987) ; 1987 >
+      au < testing ; Canadian Journal of Communication Volume 13 (1988) ; 1988 >
+      au < testing ; Canadian Journal of Communication Volume 14 ; 1989 >
+      au < testing ; Canadian Journal of Communication Volume 15 ; 1990 >
+      au < testing ; Canadian Journal of Communication Volume 16 ; 1991 >
+      au < testing ; Canadian Journal of Communication Volume 17 ; 1992 >
+      au < testing ; Canadian Journal of Communication Volume 18 ; 1993 >
+      au < testing ; Canadian Journal of Communication Volume 19 ; 1994 >
+      au < testing ; Canadian Journal of Communication Volume 20 ; 1995 >
+      au < testing ; Canadian Journal of Communication Volume 21 ; 1996 >
+      au < testing ; Canadian Journal of Communication Volume 22 ; 1997 >
+      au < testing ; Canadian Journal of Communication Volume 23 ; 1998 >
+      au < testing ; Canadian Journal of Communication Volume 24 ; 1999 >
+      au < testing ; Canadian Journal of Communication Volume 25 ; 2000 >
+      au < testing ; Canadian Journal of Communication Volume 26 ; 2001 >
+      au < testing ; Canadian Journal of Communication Volume 27 ; 2002 >
+      au < testing ; Canadian Journal of Communication Volume 28 ; 2003 >
+      au < testing ; Canadian Journal of Communication Volume 29 ; 2004 >
+      au < testing ; Canadian Journal of Communication Volume 30 ; 2005 >
+      au < testing ; Canadian Journal of Communication Volume 31 ; 2006 >
+      au < testing ; Canadian Journal of Communication Volume 32 ; 2007 >
+
+      au < not_ready ; Canadian Journal of Communication Volume 33 ; 2008 >
+
+    }
+
+
+    {
+      title <
         name = Archivaria
       >
       
       param[base_url] = http://journals.sfu.ca/archivar/
       param[journal_id] = archivaria
 
-      au < exists ; Archivaria 1975 ; 1975 >
-      au < exists ; Archivaria 1976 ; 1976 >
-      au < exists ; Archivaria 1977 ; 1977 >
-      au < exists ; Archivaria 1978 ; 1978 >
-      au < exists ; Archivaria 1979 ; 1979 >
-      au < exists ; Archivaria 1980 ; 1980 >
-      au < exists ; Archivaria 1981 ; 1981 >
-      au < exists ; Archivaria 1982 ; 1982 >
-      au < exists ; Archivaria 1983 ; 1983 >
-      au < exists ; Archivaria 1984 ; 1984 >
-      au < exists ; Archivaria 1985 ; 1985 >
-      au < exists ; Archivaria 1986 ; 1986 >
-      au < exists ; Archivaria 1987 ; 1987 >
-      au < exists ; Archivaria 1988 ; 1988 >
-      au < exists ; Archivaria 1989 ; 1989 >
-      au < exists ; Archivaria 1990 ; 1990 >
-      au < exists ; Archivaria 1991 ; 1991 >
-      au < exists ; Archivaria 1992 ; 1992 >
-      au < exists ; Archivaria 1993 ; 1993 >
-      au < exists ; Archivaria 1994 ; 1994 >
-      au < exists ; Archivaria 1995 ; 1995 >
-      au < exists ; Archivaria 1996 ; 1996 >
-      au < exists ; Archivaria 1997 ; 1997 >
-      au < exists ; Archivaria Volume 1998 ; 1998 >
-      au < exists ; Archivaria Volume 1999 ; 1999 >
-      au < exists ; Archivaria Volume 2000 ; 2000 >
-      au < exists ; Archivaria Volume 2001 ; 2001 >
-      au < exists ; Archivaria Volume 2002 ; 2002 >
-      au < exists ; Archivaria Volume 2003 ; 2003 >
+      au < exists ; Archivaria 1 (1975) ; 1975 >
+      au < exists ; Archivaria 2-3 (1976) ; 1976 >
+      au < exists ; Archivaria 4-5 (1977) ; 1977 >
+      au < exists ; Archivaria 6-7 (1978) ; 1978 >
+      au < exists ; Archivaria 8-9 (1979) ; 1979 >
+      au < exists ; Archivaria 10-11 (1980) ; 1980 >
+      au < exists ; Archivaria 12-13 (1981) ; 1981 >
+      au < exists ; Archivaria 14-15 (1982) ; 1982 >
+      au < exists ; Archivaria 16-17 (1983) ; 1983 >
+      au < exists ; Archivaria 18-19 (1984) ; 1984 >
+      au < exists ; Archivaria 20-21 (1985) ; 1985 >
+      au < exists ; Archivaria 22-23 (1986) ; 1986 >
+      au < exists ; Archivaria 24-25 (1987) ; 1987 >
+      au < exists ; Archivaria 26-27 (1988) ; 1988 >
+      au < exists ; Archivaria 28-29 (1989) ; 1989 >
+      au < exists ; Archivaria 30-31 (1990) ; 1990 >
+      au < exists ; Archivaria 32-33 (1991) ; 1991 >
+      au < exists ; Archivaria 34-35 (1992) ; 1992 >
+      au < exists ; Archivaria 36 (1993) ; 1993 >
+      au < exists ; Archivaria 37-38 (1994) ; 1994 >
+      au < exists ; Archivaria 39-40 (1995) ; 1995 >
+      au < exists ; Archivaria 41-42 (1996) ; 1996 >
+      au < exists ; Archivaria 43-44 (1997) ; 1997 >
+      au < exists ; Archivaria 45-46 (1998) ; 1998 >
+      au < exists ; Archivaria 47-48 (1999) ; 1999 >
+      au < exists ; Archivaria 49-50 (2000) ; 2000 >
+      au < exists ; Archivaria 51-52 (2001) ; 2001 >
+      au < exists ; Archivaria 53-54 (2002) ; 2002 >
+      au < exists ; Archivaria 55-56 (2003) ; 2003 >
+      au < exists ; Archivaria 57-58 (2004) ; 2004 >
+
+      au < not_ready ; Archivaria 59-60 (2005) ; 2005 >
+      au < not_ready ; Archivaria 61-62 (2006) ; 2006 >
+      au < not_ready ; Archivaria 63-64 (2007) ; 2007 >
+      au < not_ready ; Archivaria 65-66 (2008) ; 2008 >
 
     }
     
@@ -69,6 +125,8 @@
       
       param[base_url] = http://journals.sfu.ca/paideusis/
       param[journal_id] = paideusis
+
+      comment = requires subscription and has login pages
 
       au < exists ; Paideusis Volume 15 ; 2006 >
       au < exists ; Paideusis Volume 16 ; 2007 >
