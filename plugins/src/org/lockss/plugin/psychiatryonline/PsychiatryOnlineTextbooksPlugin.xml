@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -26,11 +26,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s(resourceToc|copyrightBooks)\.aspx\?resourceID=%d&quot;, base_url, resource_id</string>
       <string>1,&quot;^%s(content|popup)\.aspx\?aID=[0-9]+&quot;, base_url</string>
       <string>1,&quot;^%sbookInfo\.aspx\?file=.*%d\.html&quot;, base_url, resource_id</string>
-      <string>1,&quot;^%s.*\.(css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
