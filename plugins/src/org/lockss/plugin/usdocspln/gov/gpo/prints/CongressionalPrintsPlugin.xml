@@ -27,11 +27,13 @@
       <string>1,&quot;^%s$&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/prints/%d/&quot;, base_url, congress</string>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url</string>
+      <string>1,&quot;^%sgpo.gov/prints/%d\.tgz$&quot;, base_url, congress</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sgpo.gov/prints/%d/&quot;, base_url, congress</string>
+    <string>&quot;%sgpo.gov/prints/%d\.tgz&quot;, base_url, congress</string>
   </entry>
   <entry>
     <string>au_manifest</string>
