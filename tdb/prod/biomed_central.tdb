@@ -2334,22 +2334,6 @@
     }
 
 
-
-    {
-      title <
-        name = Journal of Medical Case Reports ;
-        issn = 1752-1947
-      >
-
-      param[base_url] = http://www.jmedicalcasereports.com/
-      param[journal_issn] = 1752-1947
-
-      au < testing ; Journal of Medical Case Reports Volume 1 ; 1 >
-      au < testing ; Journal of Medical Case Reports Volume 2 ; 2 >
-    }
-
-
-
     {
       title <
         name = Journal of Molecular Signaling ;
@@ -2747,9 +2731,9 @@
       param[base_url] = http://www.ojrd.com/
       param[journal_issn] = 1750-1172
 
-      au < manifest ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
-      au < manifest ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
-      au < manifest ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
+      au < testing ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
+      au < testing ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
+      au < testing ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
     }
 
 
@@ -2763,8 +2747,8 @@
       param[base_url] = http://www.om-pc.com/
       param[journal_issn] = 1750-4732
 
-      au < manifest ; Osteopathic Medicine and Primary Care Volume 1 ; 1 >
-      au < manifest ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
+      au < testing ; Osteopathic Medicine and Primary Care Volume 1 ; 1 >
+      au < testing ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
     }
 
 
@@ -2778,11 +2762,11 @@
       param[base_url] = http://www.parasitesandvectors.com/
       param[journal_issn] = 1756-3305
 
-      au < manifest ; Parasites & Vectors Volume 1 ; 1 >
-      au < manifest ; Parasites & Vectors Volume 2 ; 2 >
-      au < manifest ; Parasites & Vectors Volume 3 ; 3 >
-      au < manifest ; Parasites & Vectors Volume 4 ; 4 >
-      au < manifest ; Parasites & Vectors Volume 5 ; 5 >
+      au < testing ; Parasites & Vectors Volume 1 ; 1 >
+      au < testing ; Parasites & Vectors Volume 2 ; 2 >
+      au < testing ; Parasites & Vectors Volume 3 ; 3 >
+      au < testing ; Parasites & Vectors Volume 4 ; 4 >
+      au < testing ; Parasites & Vectors Volume 5 ; 5 >
     }
 
 
