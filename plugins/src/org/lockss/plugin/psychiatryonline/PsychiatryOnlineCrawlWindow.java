@@ -1,10 +1,10 @@
 /*
- * $Id: PsychiatryOnlineCrawlWindow.java,v 1.1 2008-02-11 21:16:50 thib_gc Exp $
+ * $Id: PsychiatryOnlineCrawlWindow.java,v 1.2 2009-03-04 21:29:40 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,23 @@ public class PsychiatryOnlineCrawlWindow implements ConfigurableCrawlWindow {
   public static final String CRAWL_WINDOW_TIME_ZONE = "US/Eastern";
 
   public CrawlWindow makeCrawlWindow() throws PluginException {
-    // Only allow crawls from midnight to 7am Eastern
+    /*
+     * Only allow crawls from midnight to 7am Eastern.
+     */
+    
+    /*
+     * There is no commitment anywhere in the Java 5 API for
+     * java.util.TimeZone that any particular well-known time zone
+     * will be supported by name. Using only
+     * java.util.TimeZone.getTimeZone(String) is insufficient because
+     * it always returns at least the GMT time zone.
+     */
+    TimeZone eastern = TimeZone.getTimeZone(CRAWL_WINDOW_TIME_ZONE);
+    if (   !"GMT".equals(CRAWL_WINDOW_TIME_ZONE)
+        && eastern.equals(TimeZone.getTimeZone("GMT"))) {
+      throw new PluginException("Unavailable time zone: " + CRAWL_WINDOW_TIME_ZONE);
+    }
+    
     Calendar start = Calendar.getInstance();
     start.set(Calendar.HOUR_OF_DAY, 0);
     start.set(Calendar.MINUTE, 0);
@@ -52,7 +68,7 @@ public class PsychiatryOnlineCrawlWindow implements ConfigurableCrawlWindow {
     return new CrawlWindows.Interval(start,
                                      end,
                                      CrawlWindows.TIME,
-                                     TimeZone.getTimeZone(CRAWL_WINDOW_TIME_ZONE));
+                                     eastern);
   }
 
 }
