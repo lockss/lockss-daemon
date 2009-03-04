@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -30,6 +30,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sindex\.php/%s/gateway/lockss\?year=%d$&quot;, base_url, journal_id, year</string>
       <string>1,&quot;^%sindex\.php/%s/(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/&quot;, base_url, journal_id</string>
+      <string>2,&quot;^%sindex\.php/%s/rt/(captureCite)/&quot;, base_url, journal_id</string>
       <string>1,&quot;^%sindex\.php/%s/rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/&quot;, base_url, journal_id</string>
     </list>
   </entry>
@@ -72,5 +73,9 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ojs2.OJS2HtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%sindex\.php/%s/login\?&quot;, base_url, journal_id</string>
   </entry>
 </map>
