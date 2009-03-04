@@ -1,10 +1,10 @@
 /*
- * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.1 2008-02-11 21:16:50 thib_gc Exp $
+ * $Id: TestPsychiatryOnlineUrlNormalizer.java,v 1.2 2009-03-04 21:29:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
