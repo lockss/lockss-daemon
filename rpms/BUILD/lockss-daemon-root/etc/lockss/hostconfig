@@ -1,5 +1,33 @@
-#!/bin/bash
-
+#!/bin/sh
+BASH_NAME=bash
+BASH=`which ${BASH_NAME} 2>/dev/null`
+if [ "X${BASH}" = "X" ]
+then
+	for A in /bin /usr/bin /usr/gnu/bin /usr/local/bin
+	do
+		if [ -x $A/${BASH_NAME} ]
+		then
+			BASH=$A
+			break
+		fi
+	done
+fi
+if [ "X${BASH}" = "X" ]
+then
+	while true
+	do
+		echo "This script needs the \"${BASH_NAME}\" shell - please enter its path."
+		read A
+		if [ -x ${A} ]
+		then
+			BASH=${A}
+			break
+		fi
+		echo "${A} not executable"
+	done
+fi
+SCRIPT=`mktemp /tmp/hostconfig.XXXXX`
+cat >${SCRIPT} <<'Funky-EOF'
 #
 # Query user and write local LOCKSS config values to /etc/lockss/config.dat
 # Must be run before LOCKSS daemon can be started
@@ -210,10 +238,9 @@ SunOS)
 		LOCKSS_HOME=~lockss
 	fi
         LOCKSS_USER=lockss
-        CONFIG_USER=`/usr/ucb/whoami`
 	PATH=/usr/ucb:/sbin:$PATH
 	LOCAL_HOSTNAME=`uname -n`
-	LOCAL_IPADDR=`ifconfig -a | grep inet | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
+	LOCAL_IPADDR=`ifconfig -a | grep 'inet ' | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
 	export SHA1SUM
 	for A in sha1sum digest
 	do
@@ -236,7 +263,6 @@ SunOS)
         ;;
 Linux)
         LOCKSS_USER=lockss
-        CONFIG_USER=`whoami`
 	LOCAL_HOSTNAME=`hostname -f`
 	LOCAL_IPADDR=`hostname -i`
 	SHA1SUM=sha1sum
@@ -501,3 +527,7 @@ EOF
 	CONFIG_OK=Y
     fi
 done
+Funky-EOF
+export CONFIG_USER=`ls -l ${SCRIPT} | while read BITS N U FOO; do echo $U; done`
+${BASH} ${SCRIPT}
+rm ${SCRIPT}
