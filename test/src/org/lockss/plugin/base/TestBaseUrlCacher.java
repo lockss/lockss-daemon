@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.60 2008-11-10 07:11:23 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.61 2009-03-05 05:42:43 tlipkis Exp $
  */
 
 /*
@@ -803,6 +803,27 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testRedirectToLoginURL() throws Exception {
     String redTo = "http://somewhere.else/foo";
+    mau.setLoginPageUrls(ListUtil.list(redTo));
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockPermissionMap map = new MockPermissionMap();
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    // Do NOT add redTo to crawl spec (mau.addUrlToBeCached(redTo)), to
+    // ensure that login URL pattern is checked before crawl spec
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown PermissionException");
+    } catch (CacheException.PermissionException e) {
+      assertEquals("Redirected to login page: " + redTo, e.getMessage());
+    }
+  }
+
+  public void testRedirectToLoginUrlUnsupportedProtocol() throws Exception {
+    String redTo = "ftp://somewhere.else/foo";
     mau.setLoginPageUrls(ListUtil.list(redTo));
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
