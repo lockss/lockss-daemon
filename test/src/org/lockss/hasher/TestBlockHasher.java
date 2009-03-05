@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlockHasher.java,v 1.10 2007-10-01 08:11:25 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.11 2009-03-05 05:40:05 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,6 +42,7 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.BlockHasher.EventHandler;
 import org.lockss.util.*;
+import org.lockss.filter.*;
 import org.lockss.plugin.*;
 
 public class TestBlockHasher extends LockssTestCase {
@@ -152,12 +153,19 @@ public class TestBlockHasher extends LockssTestCase {
 
   void assertEvent(String expectedUrl, long expectedLength,
 		   byte[][]expectedHashed, Object eventObj) {
+    assertEvent(expectedUrl, expectedLength, expectedLength,
+		expectedHashed, eventObj);
+  }
+
+  void assertEvent(String expectedUrl, long expectedUnfilteredLength,
+		   long expectedFilteredLength,
+		   byte[][]expectedHashed, Object eventObj) {
     Event event = (Event)eventObj;
     HashBlock hblock = event.hblock;
     assertEquals(expectedUrl, hblock.getUrl());
     HashBlock.Version curver = hblock.currentVersion();
-    assertEquals(expectedLength, curver.getUnfilteredLength());
-    assertEquals(expectedLength, curver.getFilteredLength());
+    assertEquals(expectedUnfilteredLength, curver.getUnfilteredLength());
+    assertEquals(expectedFilteredLength, curver.getFilteredLength());
     for (int ix = 0; ix < event.byteArrays.length; ix++) {
       assertEquals(""+ix, expectedHashed[ix], event.byteArrays[ix]);
     }
@@ -274,6 +282,31 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(12345, cus.getActualHashDuration());
   }
 
+  /**
+   * Ensure that MessageDigests implementations used on the test platform
+   * are Cloneable.  This is fairly fragile, since the underlying implementation
+   * of the MessageDigests may or may not be the same between VMs,
+   * but this seems to be the only way to test for it.
+   * 
+   * @throws Exception
+   */
+  public void testMessageDigestImplementationsAreCloneable() throws Exception {
+    MessageDigest md5 = MessageDigest.getInstance("MD5");
+    MessageDigest sha1 = MessageDigest.getInstance("SHA1");
+    MessageDigest sha = MessageDigest.getInstance("SHA");
+    
+    MessageDigest[] testDigs = {md5, sha1, sha};
+    byte[][] inits = {null, null, null};
+    
+    CaptureBlocksEventHandler blockHandler = 
+      new CaptureBlocksEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    // Should NOT throw IllegalArgumentException.
+    CachedUrlSetHasher hasher =
+      new BlockHasher(cus, testDigs, inits, blockHandler);
+  }
+  
   public void testNoContent() throws Exception {
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
@@ -296,40 +329,15 @@ public class TestBlockHasher extends LockssTestCase {
     byte[][] inits = {null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
     if (includeUrl) {
-      hasher.includeUrl(includeUrl);
+      hasher.setIncludeUrl(includeUrl);
       assertEquals(urls[4].length() + 3, hashToEnd(hasher, stepSize));
     } else {
       assertEquals(3, hashToEnd(hasher, stepSize));
     }
     assertTrue(hasher.finished());
-    List events = handRec.getEvents();
+    List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), includeUrl);
-  }
-  
-  /**
-   * Ensure that MessageDigests implementations used on the test platform
-   * are Cloneable.  This is fairly fragile, since the underlying implementation
-   * of the MessageDigests may or may not be the same between VMs,
-   * but this seems to be the only way to test for it.
-   * 
-   * @throws Exception
-   */
-  public void tesMessageDigestImplementationsAreCloneable() throws Exception {
-    MessageDigest md5 = MessageDigest.getInstance("MD5");
-    MessageDigest sha1 = MessageDigest.getInstance("SHA1");
-    MessageDigest sha = MessageDigest.getInstance("SHA");
-    
-    MessageDigest[] testDigs = {md5, sha1, sha};
-    byte[][] inits = {null, null, null};
-    
-    CaptureBlocksEventHandler blockHandler = 
-      new CaptureBlocksEventHandler();
-    MockArchivalUnit mau = setupContentTree();
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    // Should NOT throw IllegalArgumentException.
-    CachedUrlSetHasher hasher =
-      new BlockHasher(cus, testDigs, inits, blockHandler);
   }
   
   public void testOneContent() throws Exception {
@@ -359,7 +367,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
-    hasher.includeUrl(includeUrl);
+    hasher.setIncludeUrl(includeUrl);
     // 9 bytes total for all three versions.
     if (includeUrl) {
       assertEquals(urls[2].length() * 3 + 9, hashToEnd(hasher, stepSize));
@@ -395,6 +403,35 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContentThreeVersions(1, true);
     testOneContentThreeVersions(3, true);
     testOneContentThreeVersions(100, true);
+  }
+
+  public void testUnfiltered(String exp, boolean isFiltered)
+      throws Exception {
+    String str = "Wicked witch of the west";
+
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    mau.setFilterFactory(new SimpleFilterFactory());
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    addContent(mau, urls[4], str);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    if (!isFiltered) {
+      hasher.setFiltered(false);
+    }
+    log.info("testUnfiltered");
+    assertEquals(exp.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], str.length(), exp.length(),
+		new byte[][] {bytes(exp)}, events.get(0));
+  }
+  
+  public void testUnfiltered() throws Exception {
+    testUnfiltered("Wicked witch of the west", false);
+    testUnfiltered("icked itch of the est", true);
   }
 
   public void testInputStreamIsClosed() throws IOException {
@@ -461,7 +498,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    hasher.includeUrl(includeUrl);
+    hasher.setIncludeUrl(includeUrl);
     int len =
       s1.length() + s2.length() + s3.length() + s4.length() + s5.length();
     if (includeUrl) {
@@ -707,7 +744,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig };
     byte[][] inits = { bytes(chal) };
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    hasher.includeUrl(true);
+    hasher.setIncludeUrl(true);
     int len = s1.length() + s2.length() + s3.length() +
       urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len, hashToEnd(hasher, stepSize));
@@ -741,7 +778,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig, dig2 };
     byte[][] inits = {null, null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    hasher.includeUrl(true);
+    hasher.setIncludeUrl(true);
     int len = s1.length() + s2.length() + s3.length() +
       urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
@@ -777,7 +814,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig, dig2, dig3 };
     byte[][] inits = { null, bytes(chal2), bytes(chal3) };
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    hasher.includeUrl(true);
+    hasher.setIncludeUrl(true);
     int len = s1.length() + s2.length() + s3.length() +
       urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
@@ -828,7 +865,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   class RecordingEventHandler implements BlockHasher.EventHandler {
-    List events = new ArrayList();
+    List<Event> events = new ArrayList();
 
     public void blockDone(HashBlock hblock) {
       events.add(new Event(hblock, hblock.currentVersion().getHashes()));
@@ -838,7 +875,7 @@ public class TestBlockHasher extends LockssTestCase {
       events = new ArrayList();
     }
 
-    public List getEvents() {
+    public List<Event> getEvents() {
       return events;
     }
   }
@@ -875,13 +912,15 @@ public class TestBlockHasher extends LockssTestCase {
       throwOnRead.put(url, -1);
     }
 
+    @Override
     protected InputStream getInputStream(CachedUrl cu) {
       Integer over = (Integer)throwOnOpen.get(cu.getUrl());
       if (over != null && (over == -1 || over == cu.getVersion())) {
 	throw new ExpectedRuntimeException("Opening hash input stream");
       }
       Integer rver = (Integer)throwOnRead.get(cu.getUrl());
-      return new ThrowingInputStream(cu.openForHashing(),
+      log.info("MyMockBlockHasher.getInputStream()");
+      return new ThrowingInputStream(super.getInputStream(cu),
 				     (rver != null &&
 				      (rver == -1 || rver == cu.getVersion())),
 				     false);
@@ -925,6 +964,18 @@ public class TestBlockHasher extends LockssTestCase {
       } else {
 	return ret;
       }
+    }
+  }
+
+  public class SimpleFilterFactory implements FilterFactory {
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding) {
+      log.info("createFilteredInputStream");
+      Reader rdr = FilterUtil.getReader(in, encoding);
+      StringFilter filt = new StringFilter(rdr, "w");
+      filt.setIgnoreCase(true);
+      return new ReaderInputStream(filt);
     }
   }
 }

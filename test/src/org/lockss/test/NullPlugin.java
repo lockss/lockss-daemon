@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.94 2008-09-18 02:10:23 dshr Exp $
+ * $Id: NullPlugin.java,v 1.95 2009-03-05 05:40:02 tlipkis Exp $
  */
 
 /*
@@ -510,6 +510,9 @@ public class NullPlugin {
    */
   public static class CachedUrlSetHasher
     implements org.lockss.daemon.CachedUrlSetHasher {
+
+    public void setFiltered(boolean val) {
+    }
 
     public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
       return null;

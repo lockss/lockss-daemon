@@ -1,10 +1,10 @@
 /*
- * $Id: BlockHasher.java,v 1.12 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.13 2009-03-05 05:40:07 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -115,7 +115,7 @@ public class BlockHasher extends GenericHasher {
   }
 
   /** Tell the hasher whether to include the URL in the hash */
-  public void includeUrl(boolean val) {
+  public void setIncludeUrl(boolean val) {
     includeUrl = val;
   }
 
@@ -184,10 +184,6 @@ public class BlockHasher extends GenericHasher {
     cuVersions = curCu.getCuVersions(getMaxVersions());
   }
   
-  protected InputStream getInputStream(CachedUrl cu) {
-    return cu.openForHashing();
-  }
-
   protected void endOfNode() {
     super.endOfNode();
     if (hblock != null) {

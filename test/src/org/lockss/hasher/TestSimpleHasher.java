@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.2 2009-02-05 05:08:47 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.3 2009-03-05 05:40:05 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.security.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.filter.*;
 import org.lockss.plugin.*;
 
 public class TestSimpleHasher extends LockssTestCase {
@@ -92,7 +93,7 @@ public class TestSimpleHasher extends LockssTestCase {
     return MessageDigest.getInstance(alg);
   }
 
-  String exp1 =
+  String exp =
     "# comment 17\n" +
     "2jmj7l5rSw0yVb/vlWAYkK/YBwk=   http://www.test.com/blah/\n" +
     "ykSi7nDIcbc9qrGr0jzo7fbNujM=   http://www.test.com/blah/x.html\n" +
@@ -109,13 +110,53 @@ public class TestSimpleHasher extends LockssTestCase {
 
   public void testV3() throws Exception {
     MockArchivalUnit mau = setupContentTree();
+    mau.setFilterFactory(new SimpleFilterFactory());
     SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
 					   challenge, verifier);
     File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
     hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
     assertEquals(2282, hasher.getBytesHashed());
     assertEquals(12, hasher.getFilesHashed());
-    assertEquals(exp1, StringUtil.fromFile(blockFile));
+    assertEquals(exp, StringUtil.fromFile(blockFile));
   }
-  
+
+  String expFilt =
+    "# comment 17\n" +
+    "2jmj7l5rSw0yVb/vlWAYkK/YBwk=   http://www.test.com/blah/\n" +
+    "ykSi7nDIcbc9qrGr0jzo7fbNujM=   http://www.test.com/blah/x.html\n" +
+    "MlqS3rZNdk9MgLMLbryh3qaHc7s=   http://www.test.com/blah/foo/\n" +
+    "j2FwKpzbDPVMSVTBSkVesUfj00A=   http://www.test.com/blah/foo/1\n" +
+    "aesB8LnBptxYwFrcYsB3mFxaJ9c=   http://www.test.com/blah/foo/2\n" +
+    "E2sxdDMHDhNVt3u/jA1bxk4QDkM=   http://www.test.com/blah/foo/2/a.txt\n" +
+    "qJ6khSeGROs+EdPB85dNyV4aLw8=   http://www.test.com/blah/foo/2/b.txt\n" +
+    "9p2jv7K0nYs5HXaheTv8fBXyOMI=   http://www.test.com/blah/foo/2/c.txt\n" +
+    "+S2/n+EamrK8LdZwqoLsHnW0toI=   http://www.test.com/blah/foo/2/d.txt\n" +
+    "RCrMJM6tyeqdA4txq93/xQ88YBg=   http://www.test.com/blah/foo/3\n" +
+    "s5yk5D5MLZYkqD1tB4kaGPgEruA=   http://www.test.com/blah/foo/3/a.html\n" +
+    "Yua+/gyaN9ESTw1KXMZGFLA5bBw=   http://www.test.com/blah/foo/3/b.html\n";
+
+  public void testV3Filtered() throws Exception {
+    MockArchivalUnit mau = setupContentTree();
+    mau.setFilterFactory(new SimpleFilterFactory());
+    SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
+					   challenge, verifier);
+    hasher.setFiltered(true);
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    assertEquals(2282, hasher.getBytesHashed());
+    assertEquals(12, hasher.getFilesHashed());
+    assertEquals(expFilt, StringUtil.fromFile(blockFile));
+  }
+
+  public class SimpleFilterFactory implements FilterFactory {
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding) {
+      log.info("createFilteredInputStream");
+      Reader rdr = FilterUtil.getReader(in, encoding);
+      StringFilter filt = new StringFilter(rdr, "foo", "bar");
+      filt.setIgnoreCase(true);
+      return new ReaderInputStream(filt);
+    }
+  }
 }

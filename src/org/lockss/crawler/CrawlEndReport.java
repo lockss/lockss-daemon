@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlEndReport.java,v 1.2 2009-02-05 05:08:47 tlipkis Exp $
+ * $Id: CrawlEndReport.java,v 1.3 2009-03-05 05:40:07 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,6 @@ import org.lockss.util.*;
 import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
-import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.2 2009-02-05 05:08:47 tlipkis Exp $
+ * $Id: SimpleHasher.java,v 1.3 2009-03-05 05:40:05 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,8 @@ import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 
 /** Utilitiy class to hash a CUS as a single batch and record the results
- * in a file.
+ * in a file.  By default the content is *not* filtered; use setFiltered()
+ * to change.
  */
 public class SimpleHasher {
   static Logger log = Logger.getLogger("SimpleHasher");
@@ -48,6 +49,8 @@ public class SimpleHasher {
   private MessageDigest digest;
   private byte[] challenge;
   private byte[] verifier;
+  private boolean isFiltered = false;
+  private boolean isIncludeUrl = false;
 
   private int nbytes = 1000;
   private int bytesHashed = 0;
@@ -77,6 +80,24 @@ public class SimpleHasher {
     return elapsedTime;
   }
 
+  /**
+   * Determines whether to hash filtered or raw content.  Default is
+   * unfiltered (false)
+   * @param val if true hash filtered content, if false hash raw content
+   */
+  public void setFiltered(boolean val) {
+    isFiltered = val;
+  }
+
+  /**
+   * Determines whether to include the URL of each file in its hash.
+   * Default is false
+   * @param val if true include URL of each file in its hash
+   */
+  public void setIncludeUrl(boolean val) {
+    isIncludeUrl = val;
+  }
+
   /** Do a V1 hash of the CUSH */
   public byte[] doV1Hash(CachedUrlSetHasher cush) throws IOException {
     initDigest(digest);
@@ -103,6 +124,7 @@ public class SimpleHasher {
 					 initHasherByteArrays(),
 					 new BlockEventHandler(blockOuts));
 
+    hasher.setIncludeUrl(isIncludeUrl);
     doHash(hasher);
     blockOuts.close();
   }
@@ -127,6 +149,7 @@ public class SimpleHasher {
   }
 
   private void doHash(CachedUrlSetHasher cush) throws IOException {
+    cush.setFiltered(isFiltered);
     bytesHashed = 0;
     filesHashed = 0;
     long startTime = TimeBase.nowMs();

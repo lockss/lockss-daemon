@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetHasher.java,v 1.7 2005-10-19 00:23:55 tlipkis Exp $
+ * $Id: MockCachedUrlSetHasher.java,v 1.8 2009-03-05 05:40:04 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,9 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
   }
 
   public MockCachedUrlSetHasher() {
+  }
+
+  public void setFiltered(boolean val) {
   }
 
   public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {

@@ -1,10 +1,10 @@
 /*
- * $Id: MockCachedUrl.java,v 1.42 2008-09-18 02:10:23 dshr Exp $
+ * $Id: MockCachedUrl.java,v 1.43 2009-03-05 05:40:04 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.math.*;
 import java.util.*;
 
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
 
@@ -208,6 +209,25 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public InputStream openForHashing() {
+    String contentType = getContentType();
+    InputStream is = null;
+    // look for a FilterFactory
+    if (au != null) {
+      FilterFactory fact = au.getFilterFactory(contentType);
+      if (fact != null) {
+	InputStream unfis = getUnfilteredInputStream();
+	if (log.isDebug3()) {
+	  log.debug3("Filtering " + contentType +
+		     " with " + fact.getClass().getName());
+	}
+	try {
+	  return fact.createFilteredInputStream(au, unfis, getEncoding());
+	} catch (PluginException e) {
+	  IOUtil.safeClose(unfis);
+	  throw new RuntimeException(e);
+	}
+      }
+    }
     return getUnfilteredInputStream();
   }
 

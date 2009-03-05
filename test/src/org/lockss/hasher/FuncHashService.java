@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.15 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.16 2009-03-05 05:40:05 tlipkis Exp $
  */
 
 /*
@@ -266,6 +266,9 @@ public class FuncHashService extends LockssTestCase {
       this.finishedAt = Deadline.in(duration);
       this.eachStepTime = eachStepTime;
       this.cookie = cookie;
+    }
+
+    public void setFiltered(boolean val) {
     }
 
     public CachedUrlSet getCachedUrlSet() {
