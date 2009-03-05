@@ -31,6 +31,12 @@ function findNamedElems(form, name) {
  return res;
 }
 
+function removeElementId(id)	{
+ var node = document.getElementById(id);
+ var parent=node.parentNode
+ parent.removeChild(node)
+}
+
 function radioButtonValue(name) {
  var buttons = buttonMap[name];
  for (var ix = 0; ix < buttons.length; ix++) {

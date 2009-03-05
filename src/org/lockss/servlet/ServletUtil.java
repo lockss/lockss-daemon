@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.57 2008-11-08 08:17:03 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.58 2009-03-05 05:40:46 tlipkis Exp $
  */
 
 /*
@@ -1623,6 +1623,15 @@ public class ServletUtil {
     warning.add("This LOCKSS box is still starting.  Table contents may be incomplete.");
     warning.add("</font></center><br>");
     return warning;
+  }
+
+  public static Element removeElementWithId(String id) {
+    Composite ele = new Composite();
+    ele.add("<script type=\"text/javascript\">\n");
+    ele.add("<!--\nremoveElementId(\"");
+    ele.add(id);
+    ele.add("\")\n//-->\n</script>");
+    return ele;
   }
 
   /** Return an index of all the manifest pages.  Used by the ProxyHandler;

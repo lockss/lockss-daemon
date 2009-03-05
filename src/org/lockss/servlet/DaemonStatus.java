@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.75 2008-10-07 18:13:10 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.76 2009-03-05 05:40:46 tlipkis Exp $
  */
 
 /*
@@ -178,6 +178,7 @@ public class DaemonStatus extends LockssServlet {
 
   private Page newTablePage() throws IOException {
     Page page = newPage();
+    addJavaScript(page);
 
     if (!pluginMgr.areAusStarted()) {
       page.add(ServletUtil.notStartedWarning());
@@ -193,6 +194,7 @@ public class DaemonStatus extends LockssServlet {
       Block centeredBlock = new Block(Block.Center);
       centeredBlock.add(getSelectTableForm());
       page.add(centeredBlock);
+      page.add(ServletUtil.removeElementWithId("dsSelectBox"));
     }
 
     //       page.add("<center>");
@@ -925,6 +927,9 @@ public class DaemonStatus extends LockssServlet {
       // use GET so user can refresh in browser
       frm.method("GET");
       frm.add(sel);
+      Input submit = new Input(Input.Submit, "foo", "Go");
+      submit.attribute("id", "dsSelectBox");
+      frm.add(submit);
       return frm;
     } catch (Exception e) {
       // if this fails for any reason, just don't include this form
