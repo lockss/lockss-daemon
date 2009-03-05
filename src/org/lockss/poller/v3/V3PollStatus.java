@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.29 2008-10-07 18:13:47 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.30 2009-03-05 05:42:01 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.poller.v3.*;
 import org.lockss.state.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 
 import static org.lockss.poller.v3.V3Poller.*;
 import static org.lockss.poller.v3.V3Voter.*;
@@ -169,6 +170,17 @@ public class V3PollStatus {
     
     private List getSummary(PollManager pollManager) {
       List summary = new ArrayList();
+
+      StringBuilder sb = new StringBuilder();
+      sb.append(pollManager.getEventCount(EventCtr.Polls));
+      sb.append(" started");
+      addEndStatus(sb, V3Poller.POLLER_STATUS_COMPLETE);
+      addEndStatus(sb, V3Poller.POLLER_STATUS_NO_QUORUM);
+      addEndStatus(sb, V3Poller.POLLER_STATUS_ERROR);
+      summary.add(new StatusTable.SummaryInfo("Polls",
+					      ColumnDescriptor.TYPE_STRING,
+					      sb.toString()));
+
       V3PollStatusAccessor status = pollManager.getV3Status();
       if (!CurrentConfig.getBooleanParam(V3PollFactory.PARAM_ENABLE_V3_POLLER,
 					 V3PollFactory.DEFAULT_ENABLE_V3_POLLER)) { 
@@ -195,6 +207,16 @@ public class V3PollStatus {
 				    au.getName()));
       }
       return summary;
+    }
+
+    void addEndStatus(StringBuilder sb, int status) {
+      int cnt = pollManager.getPollEndEventCount(status);
+      if (cnt != 0) {
+	sb.append(", ");
+	sb.append(cnt);
+	sb.append(" ");
+	sb.append(V3Poller.POLLER_STATUS_STRINGS[status]);
+      }
     }
 
     public boolean requiresKey() {
@@ -320,9 +342,55 @@ public class V3PollStatus {
 						ColumnDescriptor.TYPE_STRING,
 						null));
       }
+      StringBuilder sb = new StringBuilder();
+      sb.append(pollManager.getEventCount(EventCtr.Accepted));
+      sb.append(" accepted, ");
+      int declined = pollManager.getEventCount(EventCtr.Declined);
+      sb.append(declined);
+      sb.append(" declined");
+      if (declined != 0) {
+	sb.append(" (");
+	addNak(sb, PollNak.NAK_NO_AU);
+	addNak(sb, PollNak.NAK_NOT_CRAWLED);
+	addNak(sb, PollNak.NAK_PLUGIN_VERSION_MISMATCH);
+	addNak(sb, PollNak.NAK_NO_TIME);
+	addNak(sb, PollNak.NAK_TOO_MANY_VOTERS);
+	addNak(sb, PollNak.NAK_HAVE_SUFFICIENT_REPAIRERS);
+	sb.append(")");
+      }
+      summary.add(new StatusTable.SummaryInfo("Invitations",
+					      ColumnDescriptor.TYPE_STRING,
+					      sb.toString()));
+
+      sb = new StringBuilder();
+      int votes = pollManager.getEventCount(EventCtr.Voted);
+      sb.append(votes);
+      int noReceipt =
+	votes - pollManager.getEventCount(EventCtr.ReceivedVoteReceipt);
+      if (noReceipt != 0) {
+	sb.append(" (");
+	sb.append(noReceipt);
+	sb.append(" no receipt)");
+      }
+      summary.add(new StatusTable.SummaryInfo("Votes",
+					      ColumnDescriptor.TYPE_STRING,
+					      sb.toString()));
+
       return summary;
     }
+
+    void addNak(StringBuilder sb, PollNak nak) {
+      int cnt = pollManager.getVoterNakEventCount(nak);
+      if (cnt != 0) {
+	if (sb.length() != 0) sb.append(", ");
+	sb.append(cnt);
+	sb.append(" ");
+	sb.append(nak);
+      }
+    }
   }
+
+
 
   public static class PollOverview
     extends V3PollerStatus implements OverviewAccessor {

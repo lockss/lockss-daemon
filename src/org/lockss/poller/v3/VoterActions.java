@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.24 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.25 2009-03-05 05:41:59 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.apache.commons.collections.CollectionUtils;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.poller.PollManager;
+import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -101,6 +102,7 @@ public class VoterActions {
       ud.sendMessageTo(msg, ud.getPollerId());
       log.debug2("Sent PollAck message to " + ud.getPollerId() + " in poll " 
                  + ud.getPollKey());
+      getPollManager(ud).countEvent(EventCtr.Accepted);
       return V3Events.evtOk;
     } catch (Throwable t) {
       log.error("Unable to send message: ", t);
@@ -220,6 +222,7 @@ public class VoterActions {
     try {
       ud.sendMessageTo(msg, ud.getPollerId());
       ud.setStatus(V3Voter.STATUS_VOTED);
+      getPollManager(ud).countEvent(EventCtr.Voted);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -278,6 +281,7 @@ public class VoterActions {
   @ReturnEvents("evtReceiptOk")
   public static PsmEvent handleReceiveReceipt(PsmMsgEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    getPollManager(ud).countEvent(EventCtr.ReceivedVoteReceipt);
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
     double agreementHint = msg.getAgreementHint();
     log.debug3("Receipt agreement " + agreementHint);

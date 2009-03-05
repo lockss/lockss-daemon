@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.66 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.67 2009-03-05 05:42:00 tlipkis Exp $
  */
 
 /*
@@ -134,6 +134,18 @@ public class V3Voter extends BasePoll {
     PREFIX + "openAccessRepairNeedsAgreement";
   public static final boolean
     DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT = false;
+
+  /**
+   * Extend reputation from old PID to new PID.  Reputation may be extended
+   * from and to only one peer.  (E.g., both {A->B, A->C} and {B->A, C->A}
+   * are illegal.) transitive mappings (E.g., {A->B, B->C}) are legal, up
+   * to a macimum path length of 10.  This is for use by PLN admins when
+   * changing IP of a node.  Should be replaced by secure, automatic
+   * mechanism (e.g., box proves it's the same one by returning a
+   * short-lived cookie from a recent poll).
+   */
+  public static final String PARAM_REPUTATION_TRANSFER_MAP =
+    PREFIX + "reputationTransferMap";
 
   /** 
    * Allowance for vote message send time: hash time multiplier
@@ -465,6 +477,7 @@ public class V3Voter extends BasePoll {
     msg.setNak(nak);
     try {
       sendMessageTo(msg, getPollerId());
+      pollManager.countVoterNakEvent(nak);      
     } catch (IOException ex) {
       log.error("Unable to send POLL NAK message in poll " + getKey(), ex);
     }
@@ -1118,7 +1131,29 @@ public class V3Voter extends BasePoll {
 	return true;
       }
     }
+    return serveRepairs(pid, au, url, 10);
+  }
 
+  /** Return true if pid is entitled to a repair of url.  If false, see if
+   * another peer's reputation has been extended to pid; if so check that
+   * one. */
+  private boolean serveRepairs(PeerIdentity pid, ArchivalUnit au,
+			       String url, int depth) {
+    if (serveRepairsTo(pid, au, url)) {
+      return true;
+    }
+    if (depth > 0) {
+      PeerIdentity reputationPid =
+	pollManager.getReputationTransferredFrom(pid);
+      if (reputationPid != null) {
+	return serveRepairs(reputationPid, au, url, depth - 1);
+      }
+    }
+    return false;
+  }
+
+  private boolean serveRepairsTo(PeerIdentity pid, ArchivalUnit au,
+				 String url) {
     boolean perUrlAgreement =
       CurrentConfig.getBooleanParam(PARAM_ENABLE_PER_URL_AGREEMENT,
                                     DEFAULT_ENABLE_PER_URL_AGREEMENT);

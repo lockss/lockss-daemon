@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.28 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.29 2009-03-05 05:42:01 tlipkis Exp $
  */
 
 /*
@@ -121,7 +121,9 @@ public class V3PollFactory extends BasePollFactory {
     response.setNak(nak);
 
     try {
-      daemon.getPollManager().sendMessageTo(response, msg.getOriginatorId());
+      PollManager mgr = daemon.getPollManager();
+      mgr.sendMessageTo(response, msg.getOriginatorId());
+      mgr.countVoterNakEvent(nak);      
     } catch (IOException ex) {
       log.error("IOException trying to send POLL_ACK message: " + ex);
     }

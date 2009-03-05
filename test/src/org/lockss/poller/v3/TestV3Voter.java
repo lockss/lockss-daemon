@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.11 2008-10-02 06:47:39 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.12 2009-03-05 05:41:57 tlipkis Exp $
  */
 
 /*
@@ -63,9 +63,6 @@ public class TestV3Voter extends LockssTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
-    repairRequestor = 
-      new MockPeerIdentity("TCP:[192.168.0.100]:9723");
-    lockssDaemon = getMockLockssDaemon();
     
     File tempDir = getTempDir();
     String tempDirPath = tempDir.getAbsolutePath();
@@ -81,6 +78,18 @@ public class TestV3Voter extends LockssTestCase {
     p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
     
+    lockssDaemon = getMockLockssDaemon();
+    IdentityManager idmgr = lockssDaemon.getIdentityManager();
+    idmgr.startService();
+    lockssDaemon.getSchedService().startService();
+    lockssDaemon.getDatagramRouterManager().startService();
+    lockssDaemon.getRouterManager().startService();
+    lockssDaemon.getSystemMetrics().startService();
+    lockssDaemon.getPluginManager().startService();
+    lockssDaemon.getPollManager().startService();
+
+    repairRequestor = findPid("TCP:[192.168.0.100]:9723");
+
     startMsg = new V3LcapMessage("auid", "key", "1",
                                  ByteArray.makeRandomBytes(20),
                                  ByteArray.makeRandomBytes(20),
@@ -89,14 +98,6 @@ public class TestV3Voter extends LockssTestCase {
                                  repairRequestor,
                                  tempDir, lockssDaemon);
     
-    IdentityManager idmgr = lockssDaemon.getIdentityManager();
-    idmgr.startService();
-    lockssDaemon.getSchedService().startService();
-    lockssDaemon.getDatagramRouterManager().startService();
-    lockssDaemon.getRouterManager().startService();
-    lockssDaemon.getSystemMetrics().startService();
-    lockssDaemon.getPluginManager().startService();
-
     voter = new V3Voter(lockssDaemon, startMsg);
 
     // Create an AU
@@ -119,6 +120,15 @@ public class TestV3Voter extends LockssTestCase {
     super.tearDown();
   }
   
+  PeerIdentity findPid(String idstr) {
+    IdentityManager idMgr = lockssDaemon.getIdentityManager();
+    try {
+    return idMgr.findPeerIdentity(idstr);
+    } catch (org.lockss.protocol.IdentityManager.MalformedIdentityKeyException e) {
+      return null;
+    }
+  }
+
   /* 
    * Tests for V3Voter.serveRepairs(), which returns true iff the given URL
    * may be served as a repair to the specified peer.
@@ -152,6 +162,48 @@ public class TestV3Voter extends LockssTestCase {
     ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(repairRequestor));
     assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
+  }
+
+  public void testServeRepairsMapReputation() {
+    PeerIdentity pid1 = findPid("TCP:[192.168.1.100]:9723");
+    PeerIdentity pid2 = findPid("TCP:[192.168.2.100]:9723");
+    PeerIdentity pid3 = findPid("TCP:[192.168.3.100]:9723");
+
+    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    repoNode.signalAgreement(ListUtil.list(pid1));
+    assertTrue(voter.serveRepairs(pid1, au, repairUrl));
+    assertFalse(voter.serveRepairs(pid2, au, repairUrl));
+    assertFalse(voter.serveRepairs(pid3, au, repairUrl));
+
+    // Transfer pid1's reputation to pid2
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_REPUTATION_TRANSFER_MAP,
+				  pid1.getIdString() + ","
+				  + pid2.getIdString());
+    assertTrue(voter.serveRepairs(pid1, au, repairUrl));
+    assertTrue(voter.serveRepairs(pid2, au, repairUrl));
+    assertFalse(voter.serveRepairs(pid3, au, repairUrl));
+
+    // Transfer pid1's reputation to pid2 and pid2's to
+    // pid3
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_REPUTATION_TRANSFER_MAP,
+				  pid1.getIdString() + ","
+				  + pid2.getIdString() + ";"
+				  + pid2.getIdString() + ","
+				  + pid3.getIdString());
+    assertTrue(voter.serveRepairs(pid1, au, repairUrl));
+    assertTrue(voter.serveRepairs(pid2, au, repairUrl));
+    assertTrue(voter.serveRepairs(pid3, au, repairUrl));
+
+    // Make a loop of reputation transfers, ensure doesn't cause infinite
+    // recursion
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_REPUTATION_TRANSFER_MAP,
+				  pid3.getIdString() + ","
+				  + pid2.getIdString() + ";"
+				  + pid2.getIdString() + ","
+				  + pid3.getIdString());
+    assertFalse(voter.serveRepairs(pid3, au, repairUrl));
+    assertFalse(voter.serveRepairs(pid2, au, repairUrl));
   }
 
   public void testServeOpenAccessRepairs() {

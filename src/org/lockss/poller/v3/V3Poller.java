@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.93 2009-01-21 04:07:02 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.94 2009-03-05 05:42:01 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
+import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -671,6 +672,7 @@ public class V3Poller extends BasePoll {
    * Start a poll.  Overrides BasePoll.startPoll().
    */
   public void startPoll() {
+    pollManager.countEvent(EventCtr.Polls);
     if (!resumedPoll) {
       // Construct the initial inner circle only once
       constructInnerCircle(pollerState.getQuorum());
@@ -801,6 +803,7 @@ public class V3Poller extends BasePoll {
    * Stop the poll, and set the supplied status.
    */
   public void stopPoll(final int status) {
+    pollManager.countPollEndEvent(status);
     synchronized (this) {
       if (activePoll) {
 	activePoll = false;
@@ -2129,6 +2132,9 @@ public class V3Poller extends BasePoll {
 
     try {
       if (noAuSet != null && noAuSet.contains(pid)) {
+	if (log.isDebug2()) {
+	  log.debug2("Not eligible, no AU: " + pid);
+	}
 	return false;
       }
     } catch (IOException e) {

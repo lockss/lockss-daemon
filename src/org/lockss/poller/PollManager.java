@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.206 2009-01-21 04:07:02 tlipkis Exp $
+ * $Id: PollManager.java,v 1.207 2009-03-05 05:42:01 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ import org.lockss.poller.v3.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
@@ -198,6 +199,9 @@ public class PollManager
     V3PREFIX + "toplevelPollInterval";
   public static final long DEFAULT_TOPLEVEL_POLL_INTERVAL = 10 * WEEK;
 
+  public class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
+  public class Peer2PeerMap extends HashMap<PeerIdentity,PeerIdentity> {}
+
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
 
@@ -265,8 +269,7 @@ public class PollManager
     DEFAULT_INVITATION_WEIGHT_ALREADY_REPAIRABLE;
   private CompoundLinearSlope v3NoAuResetIntervalCurve = null;
   private CompoundLinearSlope v3VoteRetryIntervalDurationCurve = null;
-
-  public class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
+  private Peer2PeerMap reputationTransferMap;
 
   private AuPeersMap atRiskAuInstances = null;
 
@@ -363,6 +366,12 @@ public class PollManager
       atRiskAuInstances =
 	makeAuPeersMap(config.getList(PARAM_AT_RISK_AU_INSTANCES),
 		       theIDManager);
+    }
+
+    if (config.containsKey(PARAM_REPUTATION_TRANSFER_MAP)) {
+      reputationTransferMap =
+	makeReputationPeerMap(config.getList(PARAM_REPUTATION_TRANSFER_MAP),
+			      theIDManager);
     }
 
     // register a message handler with the router
@@ -1103,6 +1112,13 @@ public class PollManager
 	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES),
 			 theIDManager);
       }
+      if (changedKeys.contains(PARAM_REPUTATION_TRANSFER_MAP) &&
+	  theIDManager != null) {
+	reputationTransferMap =
+	  makeReputationPeerMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP),
+				theIDManager);
+    }
+
       if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
 	v3InvitationWeightAgeCurve =
 	  processWeightCurve("V3 invitation weight age curve",
@@ -1200,6 +1216,34 @@ public class PollManager
     }
   }
 
+  /** Build reputation map backwards (toPid -> fromPid) because it's
+   * accessed to determine whether a repair should be served (as opposed to
+   * when reputation is established), so we need to look up toPid to see if
+   * another peer's reputation should be extended to it.  This implies that
+   * only one peer's reputation may be extended to any other peer */
+  Peer2PeerMap makeReputationPeerMap(Collection<String> peerPairs,
+				     IdentityManager idMgr) {
+    Peer2PeerMap res = new Peer2PeerMap();
+    for (String onePair : peerPairs) {
+      List<String> lst = StringUtil.breakAt(onePair, ',', -1, true, true);
+      if (lst.size() == 2) {
+	try {
+	  PeerIdentity pid1 = idMgr.stringToPeerIdentity(lst.get(0));
+	  PeerIdentity pid2 = idMgr.stringToPeerIdentity(lst.get(1));
+	  res.put(pid2, pid1);
+	  if (theLog.isDebug2()) {
+	    theLog.debug2("Extend reputation from " + pid1 + " to " + pid2);
+	  }
+	} catch (IdentityManager.MalformedIdentityKeyException e) {
+	  theLog.warning("Bad peer id in peer2peer map", e);
+	}
+      } else {
+	log.warning("Malformed reputation mapping: " + onePair);
+      }
+    }
+    return res;
+  }
+
   AuPeersMap makeAuPeersMap(Collection<String> auPeersList,
 			    IdentityManager idMgr) {
     AuPeersMap res = new AuPeersMap();
@@ -1241,6 +1285,13 @@ public class PollManager
     }
     log.debug(sb.toString());
     return res;
+  }
+
+  public PeerIdentity getReputationTransferredFrom(PeerIdentity pid) {
+    if (reputationTransferMap != null) {
+      return reputationTransferMap.get(pid);
+    }
+    return null;
   }
 
   public Set<PeerIdentity> getPeersWithAuAtRisk(ArchivalUnit au) {
@@ -2261,4 +2312,68 @@ public class PollManager
   public boolean isRecalcAu(ArchivalUnit au) {
     return recalcingAus.contains(au);
   }
+
+  public enum EventCtr {Polls,
+      Invitations,
+      Accepted,
+      Declined,
+      Voted,
+      ReceivedVoteReceipt,
+      };
+
+  Map<EventCtr,MutableInt> eventCounters =
+    new EnumMap<EventCtr,MutableInt>(EventCtr.class);
+  
+  Map<PollNak,MutableInt> voterNakEventCounters =
+    new EnumMap<PollNak,MutableInt>(PollNak.class);
+  
+  int[] pollEndEventCounters = new int[POLLER_STATUS_STRINGS.length];
+
+  public void countEvent(EventCtr c) {
+    synchronized (eventCounters) {
+      MutableInt n = eventCounters.get(c);
+      if (n == null) {
+	n = new MutableInt();
+	eventCounters.put(c, n);
+      }
+      n.add(1);
+    }
+  }
+
+  public void countVoterNakEvent(PollNak nak) {
+    synchronized (voterNakEventCounters) {
+      MutableInt n = voterNakEventCounters.get(nak);
+      if (n == null) {
+	n = new MutableInt();
+	voterNakEventCounters.put(nak, n);
+      }
+      n.add(1);
+    }
+    countEvent(EventCtr.Declined);
+  }
+
+  public void countPollEndEvent(int status) {
+    synchronized (pollEndEventCounters) {
+      pollEndEventCounters[status]++;
+    }
+  }
+
+  public int getEventCount(EventCtr c) {
+    synchronized (eventCounters) {
+      MutableInt n = eventCounters.get(c);
+      return n == null ? 0 : n.intValue();
+    }
+  }
+
+  public int getVoterNakEventCount(PollNak c) {
+    synchronized (voterNakEventCounters) {
+      MutableInt n = voterNakEventCounters.get(c);
+      return n == null ? 0 : n.intValue();
+    }
+  }
+
+  public int getPollEndEventCount(int status) {
+    return pollEndEventCounters[status];
+  }
+
 }
