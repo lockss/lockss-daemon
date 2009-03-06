@@ -1,6 +1,20 @@
-#!/bin/bash
+#!/bin/sh
+# Do not edit the line above. The script must work with
+# /bin/sh on Solaris.
 
-. /etc/lockss/functions
+if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/functions ]
+then
+        . ${LOCKSS_HOME}/etc/lockss/functions
+elif [ -f /etc/lockss/functions ]
+then
+        . /etc/lockss/functions
+elif [ -f ${HOME}/etc/lockss/functions ]
+then
+        . ${HOME}/etc/lockss/functions
+else
+        echo "Can't find LOCKSS functions" 
+        exit 1
+fi
 
 if [ "X$1" = Xwait ]; then
     WAIT=Y
