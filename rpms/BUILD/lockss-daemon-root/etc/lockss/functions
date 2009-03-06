@@ -5,12 +5,20 @@
 # Common functions for lockss startup scripts
 
 set_lockss_user () {
-export CFG_FILE=/etc/lockss/config.dat
-if [ ! -f ${CFG_FILE} ]
+HOME_DIR=`echo "cd ~$1 ; pwd" | sh`
+if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/config.dat ]
 then
-CFG_FILE=`echo "cd ~$1 ; pwd" | sh`/${CFG_FILE}
+	export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+elif [ -f ${HOME_DIR}/etc/lockss/config.dat ]
+then
+	export CFG_FILE=${HOME_DIR}/etc/lockss/config.dat
+elif [ -f /etc/lockss/config.dat ]
+then
+	export CFG_FILE=/etc/lockss/config.dat
+else
+	export CFG_FILE=
 fi
-if [ "${LOCKSS_USER}X" = "X" ]
+if [ "${LOCKSS_USER}X" = "X" -a "X${CFG_FILE}" != "X" ]
 then
 	export LOCKSS_USER=`sed -n '/^LOCKSS_USER="\(.*\)"/s//\1/p' ${CFG_FILE}`
 fi
@@ -22,30 +30,30 @@ fi
 
 set_variables () {
 OS_TYPE=`uname -s`
-if [ "X${LOCKSS_HOME}" = X ]
-then
-        case ${OS_TYPE} in
-        SunOS)
-                # Next line weird because of evaluation order of
-                # ~ and shell parameters
-                export LOCKSS_HOME=`echo "cd ~$1 ; pwd" | sh`
-		export KEEP_GOING=${LOCKSS_HOME}/KeepGoing
-		if [ "${LOCAL_TXT}X" = "X" ]
-		then
-		        export LOCAL_TXT=${LOCKSS_HOME}/local.txt
-		fi
-	        ;;
-        Linux)
-		local HOME_DIR=`echo "cd ~$1 ; pwd" | bash`
-                export LOCKSS_HOME=
-		export KEEP_GOING=${HOME_DIR}/KeepGoing
-		if [ "${LOCAL_TXT}X" = "X" ]
-		then
-		        export LOCAL_TXT=${HOME_DIR}/local.txt
-		fi
-	        ;;
-        esac
-fi
+case ${OS_TYPE} in
+SunOS)
+	if [ "X${LOCKSS_HOME}" = X ]
+	then
+		# Next line weird because of evaluation order of
+		# ~ and shell parameters
+               	export LOCKSS_HOME=`echo "cd ~$1 ; pwd" | sh`
+	fi
+	export KEEP_GOING=${LOCKSS_HOME}/KeepGoing
+	if [ "${LOCAL_TXT}X" = "X" ]
+	then
+	        export LOCAL_TXT=${LOCKSS_HOME}/local.txt
+	fi
+        ;;
+Linux)
+	local HOME_DIR=`echo "cd ~$1 ; pwd" | bash`
+	export LOCKSS_HOME=
+	export KEEP_GOING=${HOME_DIR}/KeepGoing
+	if [ "${LOCAL_TXT}X" = "X" ]
+	then
+	        export LOCAL_TXT=${HOME_DIR}/local.txt
+	fi
+        ;;
+esac
 if [ "${LOG_DIR}X" = "X" ]
 then
         export LOG_DIR="${LOCKSS_HOME}/var/log/$1"
@@ -62,6 +70,7 @@ if [ "${CFG_FILE}X" = "X" ]
 then
         export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 fi
+export CONFIG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
 }
 
 unset_variables () {
