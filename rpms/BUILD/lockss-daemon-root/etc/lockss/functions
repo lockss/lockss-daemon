@@ -1,4 +1,6 @@
 #!/bin/sh
+# Do not edit the line above. The functions must work with
+# /bin/sh on Solaris.
 
 # Common functions for lockss startup scripts
 
@@ -6,7 +8,7 @@ set_lockss_user () {
 export CFG_FILE=/etc/lockss/config.dat
 if [ ! -f ${CFG_FILE} ]
 then
-CFG_FILE=`echo "cd ~$1 ; pwd" | bash`/${CFG_FILE}
+CFG_FILE=`echo "cd ~$1 ; pwd" | sh`/${CFG_FILE}
 fi
 if [ "${LOCKSS_USER}X" = "X" ]
 then
@@ -26,7 +28,7 @@ then
         SunOS)
                 # Next line weird because of evaluation order of
                 # ~ and shell parameters
-                export LOCKSS_HOME=`echo "cd ~$1 ; pwd" | bash`
+                export LOCKSS_HOME=`echo "cd ~$1 ; pwd" | sh`
 		export KEEP_GOING=${LOCKSS_HOME}/KeepGoing
 		if [ "${LOCAL_TXT}X" = "X" ]
 		then

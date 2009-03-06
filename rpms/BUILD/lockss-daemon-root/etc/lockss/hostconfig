@@ -1,4 +1,6 @@
 #!/bin/sh
+# do not edit the line above, or edit the parts of this file outside
+# Funky-EOF without making sure that it works with /bin/sh on Solaris.
 BASH_NAME=bash
 BASH=`which ${BASH_NAME} 2>/dev/null`
 if [ "X${BASH}" = "X" ]
