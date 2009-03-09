@@ -27,11 +27,14 @@
       <string>1,&quot;^%s$&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/journal/%d/&quot;, base_url, year</string>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url</string>
+      <string>1,&quot;^%sgpo.gov/journal/journal/.(html|tgz)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sgpo.gov/journal/%d/&quot;, base_url, year</string>
+    <string>&quot;%sgpo.gov/journal/journal.html&quot;, base_url</string>
+    <string>&quot;%sgpo.gov/journal/journal.tgz&quot;, base_url</string>
   </entry>
   <entry>
     <string>au_manifest</string>

@@ -24,7 +24,7 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sgpo.gov/constitution/%d.html$&quot;, base_url, year</string>
+      <string>1,&quot;^%sgpo.gov/constitution/%d.(html|tgz)$&quot;, base_url, year</string>
       <string>1,&quot;^%s$&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/constitution/%d/&quot;, base_url, year</string>
     </list>
@@ -32,6 +32,7 @@
   <entry>
     <string>au_start_url</string>
     <list>
+      <string>&quot;%sgpo.gov/constitution/%d.tgz&quot;, base_url, year</string>
       <string>&quot;%sgpo.gov/constitution/%d.html&quot;, base_url, year</string>
       <string>&quot;%sgpo.gov/constitution/%d/&quot;, base_url, year</string>
     </list>
