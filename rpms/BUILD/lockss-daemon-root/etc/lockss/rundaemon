@@ -133,7 +133,7 @@ if [ -x ${RUN_SSL} ]; then
    ${RUN_SSL}
 fi
 
-cd ${LOCKSS_HOME}
+cd ${LOCKSS_HOME}/
 echo "Starting daemon at `date`" >> ${LOG_FILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &
 echo $! >${PID_FILE}
