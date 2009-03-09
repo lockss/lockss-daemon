@@ -36,12 +36,18 @@ SunOS)
 	then
 		# Next line weird because of evaluation order of
 		# ~ and shell parameters
-               	export LOCKSS_HOME=`echo "cd ~$1 ; pwd" | sh`
+               	HOME_DIR=`echo "cd ~$1 ; pwd" | sh`
+		if [ -d /etc/lockss ]
+		then
+			export LOCKSS_HOME=
+		else
+			export LOCKSS_HOME=${HOME_DIR}
+		fi
 	fi
-	export KEEP_GOING=${LOCKSS_HOME}/KeepGoing
+	export KEEP_GOING=${HOME_DIR}/KeepGoing
 	if [ "${LOCAL_TXT}X" = "X" ]
 	then
-	        export LOCAL_TXT=${LOCKSS_HOME}/local.txt
+	        export LOCAL_TXT=${HOME_DIR}/local.txt
 	fi
         ;;
 Linux)
