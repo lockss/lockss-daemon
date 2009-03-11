@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.77 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.78 2009-03-11 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -246,16 +246,6 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
-    static final double STATUS_ORDER_AGREE_BASE = 100.0;
-    static final double STATUS_ORDER_WAIT_POLL = 200.0;
-    static final double STATUS_ORDER_CRAWLING = 300.0;
-    static final double STATUS_ORDER_WAIT_CRAWL = 400.0;
-
-    OrderedObject agreeStatus(double agreement) {
-      return new OrderedObject(doubleToPercent(agreement) + "% Agreement",
-			       STATUS_ORDER_AGREE_BASE - agreement);
-    }
-
     private Map makeRow(ArchivalUnit au, NodeManager nodeMan) {
       AuState auState = nodeMan.getAuState();
       HashMap rowMap = new HashMap();
@@ -306,7 +296,7 @@ public class ArchivalUnitStatus
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
         //
-        if (auState.getV3Agreement() < 0 ||
+        if (auState.getHighestV3Agreement() < 0 ||
 	    auState.getLastTopLevelPollTime() <= 0) {
 	  if (cmStatus.isRunningNCCrawl(au)) {
 	    stat = new OrderedObject("Crawling", STATUS_ORDER_CRAWLING);
@@ -320,7 +310,7 @@ public class ArchivalUnitStatus
 	    }
           }
         } else {
-          stat = agreeStatus(auState.getV3Agreement());
+          stat = agreeStatus(auState.getHighestV3Agreement());
         }
       } else {
         rowMap.put("AuPolls",
@@ -720,6 +710,7 @@ public class ArchivalUnitStatus
       
       // Make the status string.
       Object stat = null;
+      Object recentPollStat = null;
       if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
         if (state.getV3Agreement() < 0) {
           if (state.lastCrawlTime < 0) {
@@ -728,7 +719,10 @@ public class ArchivalUnitStatus
             stat = "Waiting for Poll";
           }
         } else {
-          stat = doubleToPercent(state.getV3Agreement()) + "% Agreement";
+          stat = agreeStatus(state.getHighestV3Agreement());
+	  if (state.getHighestV3Agreement() != state.getV3Agreement()) {
+	    recentPollStat = agreeStatus(state.getV3Agreement());
+	  }
         }
       } else {
         stat = topNode.hasDamage() ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
@@ -781,6 +775,11 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Status",
 					  ColumnDescriptor.TYPE_STRING,
 					  stat));
+      if (recentPollStat != null) {
+	res.add(new StatusTable.SummaryInfo("Most recent poll",
+					    ColumnDescriptor.TYPE_STRING,
+					    recentPollStat));
+      }
       String plat = au.getPlugin().getPublishingPlatform();
       if (plat != null) {
 	res.add(new StatusTable.SummaryInfo("Publishing Platform",
@@ -962,7 +961,7 @@ public class ArchivalUnitStatus
     }
 
 
-    static class CacheStats {
+    class CacheStats {
       PeerIdentity peer;
       int totalPolls = 0;
       int agreePolls = 0;
@@ -981,6 +980,11 @@ public class ArchivalUnitStatus
       boolean isLastAgree() {
 	return (lastAgreeTime != 0  &&
 		(lastDisagreeTime == 0 || lastAgreeTime >= lastDisagreeTime));
+      }
+
+      boolean isV3Agree() {
+	PollManager pollmgr = theDaemon.getPollManager();
+	return highestAgreement >= pollmgr.getMinPercentForRepair();
       }
     }
   }
@@ -1109,21 +1113,19 @@ public class ArchivalUnitStatus
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("Box", "Box",
                            ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("Last", "Complete Consensus",
+      new ColumnDescriptor("Last", "Consensus",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("HighestPercentAgreement", "Highest Agreement",
                            ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("LastPercentAgreement", "Last Agreement",
-                           ColumnDescriptor.TYPE_PERCENT),                           
-      new ColumnDescriptor("HighestPercentAgreementHint", "Highest Agreement Hint",
+                           ColumnDescriptor.TYPE_PERCENT),
+      new ColumnDescriptor("HighestPercentAgreementHint",
+			   "Highest Agreement Hint",
                            ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("LastPercentAgreementHint", "Last Agreement Hint",
-                           ColumnDescriptor.TYPE_PERCENT),                           
+                           ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("LastAgree",
-			   "Last Complete Consensus",
-                           ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("LastDisagree",
-			   "Last Partial Disagreement",
+			   "Last Consensus",
                            ColumnDescriptor.TYPE_DATE)
       );
 
@@ -1289,6 +1291,17 @@ public class ArchivalUnitStatus
 				       SERVICE_STATUS_TABLE_NAME);
     }
   }
+
+  static final double STATUS_ORDER_AGREE_BASE = 100.0;
+  static final double STATUS_ORDER_WAIT_POLL = 200.0;
+  static final double STATUS_ORDER_CRAWLING = 300.0;
+  static final double STATUS_ORDER_WAIT_CRAWL = 400.0;
+
+  static OrderedObject agreeStatus(double agreement) {
+    return new OrderedObject(doubleToPercent(agreement) + "% Agreement",
+			     STATUS_ORDER_AGREE_BASE - agreement);
+  }
+
 
   public static StatusTable.Reference makeCrawlRef(Object value,
 						   ArchivalUnit au) {

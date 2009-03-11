@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.38 2008-12-16 00:52:23 edwardsb1 Exp $
+ * $Id: AuState.java,v 1.39 2009-03-11 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class AuState implements LockssSerializable {
   protected long pollDuration;		// average of last two poll durations
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
+  protected double highestV3Agreement = -1.0;
   protected AccessType accessType;
 
   protected transient long lastPollAttempt; // last time we attempted to
@@ -95,33 +96,36 @@ public class AuState implements LockssSerializable {
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
     this(au, -1, -1, -1, -1, -1, null,
-	 CLOCKSS_SUB_UNKNOWN, -1.0, historyRepo);
+	 CLOCKSS_SUB_UNKNOWN, -1.0, -1.0, historyRepo);
   }
 
   public AuState(ArchivalUnit au,
 		 long lastCrawlTime, long lastCrawlAttempt,
 		 long lastTopLevelPoll, long lastPollStart,
 		 long lastTreeWalk, HashSet crawlUrls,
-		 int clockssSubscriptionStatus, double v3Agreement,
+		 int clockssSubscriptionStatus,
+		 double v3Agreement, double highestV3Agreement,
 		 HistoryRepository historyRepo) {
     this(au,
 	 lastCrawlTime, lastCrawlAttempt, -1, null,
 	 lastTopLevelPoll, lastPollStart, -1, null, 0,
 	 lastTreeWalk,
 	 crawlUrls, null, clockssSubscriptionStatus,
-	 v3Agreement, historyRepo);
+	 v3Agreement, highestV3Agreement,  historyRepo);
   }
 
   public AuState(ArchivalUnit au,
-		    long lastCrawlTime, long lastCrawlAttempt,
-		    int lastCrawlResult, String lastCrawlResultMsg,
-		    long lastTopLevelPoll, long lastPollStart,
-		    int lastPollResult, String lastPollResultMsg,
-		    long pollDuration,
-		    long lastTreeWalk, HashSet crawlUrls,
-		    AccessType accessType,
-		    int clockssSubscriptionStatus, double v3Agreement,
-		    HistoryRepository historyRepo) {
+		 long lastCrawlTime, long lastCrawlAttempt,
+		 int lastCrawlResult, String lastCrawlResultMsg,
+		 long lastTopLevelPoll, long lastPollStart,
+		 int lastPollResult, String lastPollResultMsg,
+		 long pollDuration,
+		 long lastTreeWalk, HashSet crawlUrls,
+		 AccessType accessType,
+		 int clockssSubscriptionStatus,
+		 double v3Agreement,
+		 double highestV3Agreement,
+		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastCrawlAttempt = lastCrawlAttempt;
@@ -137,6 +141,7 @@ public class AuState implements LockssSerializable {
     this.accessType = accessType;
     this.clockssSubscriptionStatus = clockssSubscriptionStatus;
     this.v3Agreement = v3Agreement;
+    this.highestV3Agreement = highestV3Agreement;
     this.historyRepo = historyRepo;
   }
 
@@ -307,7 +312,7 @@ public class AuState implements LockssSerializable {
 		  lastPollResult, lastPollResultMsg, pollDuration,
 		  lastTreeWalk, crawlUrls,
 		  accessType,
-		  clockssSubscriptionStatus, v3Agreement,
+		  clockssSubscriptionStatus, v3Agreement, highestV3Agreement,
 		  null);
   }
 
@@ -355,7 +360,7 @@ public class AuState implements LockssSerializable {
 		  lastPollResult, lastPollResultMsg, pollDuration,
 		  lastTreeWalk, crawlUrls,
 		  accessType,
-		  clockssSubscriptionStatus, v3Agreement,
+		  clockssSubscriptionStatus, v3Agreement, highestV3Agreement,
 		  null);
   }
 
@@ -412,11 +417,19 @@ public class AuState implements LockssSerializable {
 
   public void setV3Agreement(double d) {
     v3Agreement = d;
+    if (v3Agreement > highestV3Agreement) {
+      highestV3Agreement = v3Agreement;
+    }
     historyRepo.storeAuState(this);
   }
 
   public double getV3Agreement() {
     return v3Agreement;
+  }
+  
+  public double getHighestV3Agreement() {
+    // We didn't used to track highest, so return last if no highest recorded
+    return v3Agreement > highestV3Agreement ? v3Agreement : highestV3Agreement;
   }
   
   /**

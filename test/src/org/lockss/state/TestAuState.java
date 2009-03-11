@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.14 2008-10-25 01:22:56 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.15 2009-03-11 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -211,9 +211,29 @@ public class TestAuState extends LockssTestCase {
     assertEquals("Syrah", aus.getLastPollResultMsg());
   }
 
+  public void testV3Agreement() throws Exception {
+    MyAuState aus = new MyAuState(mau, historyRepo);
+    assertEquals(-1.0, aus.getV3Agreement());
+    assertEquals(-1.0, aus.getHighestV3Agreement());
+    assertNull(historyRepo.theAuState);
+
+    aus.setV3Agreement(0.0);
+    assertEquals(0.0, aus.getV3Agreement());
+    assertEquals(0.0, aus.getHighestV3Agreement());
+    assertNotNull(historyRepo.theAuState);
+
+    aus.setV3Agreement(0.5);
+    assertEquals(0.5, aus.getV3Agreement());
+    assertEquals(0.5, aus.getHighestV3Agreement());
+
+    aus.setV3Agreement(0.3);
+    assertEquals(0.3, aus.getV3Agreement());
+    assertEquals(0.5, aus.getHighestV3Agreement());
+  }
+
   public void testTreeWalkFinished() {
     AuState auState = new AuState(mau, -1, -1, -1, -1, 123, null,
-				  1, -1.0, historyRepo);
+				  1, -1.0, 1.0, historyRepo);
     assertEquals(123, auState.getLastTreeWalkTime());
 
     TimeBase.setSimulated(456);
@@ -227,7 +247,7 @@ public class TestAuState extends LockssTestCase {
 
     AuState auState =
       new AuState(mau, -1, -1, -1, -1, 123,
-		  stringCollection, 1, -1.0, historyRepo);
+		  stringCollection, 1, -1.0, 1.0, historyRepo);
     Collection col = auState.getCrawlUrls();
     Iterator colIter = col.iterator();
     assertTrue(colIter.hasNext());
