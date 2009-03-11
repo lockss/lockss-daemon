@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.40 2009-02-07 01:24:51 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.41 2009-03-11 06:23:28 tlipkis Exp $
  */
 
 /*
@@ -1869,10 +1869,10 @@ public class BlockingStreamComm
 				       ColumnDescriptor.TYPE_TIME_INTERVAL),
 		  new ColumnDescriptor("LastRcv", "LastRcv",
 				       ColumnDescriptor.TYPE_TIME_INTERVAL),
-		  new ColumnDescriptor("PrevState", "PrevState",
-				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("PrevStateChange", "Change",
-				       ColumnDescriptor.TYPE_TIME_INTERVAL)
+				       ColumnDescriptor.TYPE_TIME_INTERVAL),
+		  new ColumnDescriptor("PrevState", "PrevState",
+				       ColumnDescriptor.TYPE_STRING)
 		  );
 
   private class ChannelStatus implements StatusAccessor {
