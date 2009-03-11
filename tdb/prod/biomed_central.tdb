@@ -2731,9 +2731,9 @@
       param[base_url] = http://www.ojrd.com/
       param[journal_issn] = 1750-1172
 
-      au < testing ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
-      au < testing ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
-      au < testing ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
+      au < ready ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
+      au < ready ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
+      au < ready ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
     }
 
 
@@ -2762,11 +2762,11 @@
       param[base_url] = http://www.parasitesandvectors.com/
       param[journal_issn] = 1756-3305
 
-      au < testing ; Parasites & Vectors Volume 1 ; 1 >
-      au < testing ; Parasites & Vectors Volume 2 ; 2 >
-      au < testing ; Parasites & Vectors Volume 3 ; 3 >
-      au < testing ; Parasites & Vectors Volume 4 ; 4 >
-      au < testing ; Parasites & Vectors Volume 5 ; 5 >
+      au < ready ; Parasites & Vectors Volume 1 ; 1 >
+      au < ready ; Parasites & Vectors Volume 2 ; 2 >
+      au < ready ; Parasites & Vectors Volume 3 ; 3 >
+      au < ready ; Parasites & Vectors Volume 4 ; 4 >
+      au < ready ; Parasites & Vectors Volume 5 ; 5 >
     }
 
 
