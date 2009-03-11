@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.7 2007-08-12 01:47:15 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.8 2009-03-11 06:24:43 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.test.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.exploded.*;
 
 /**
  * This is the test class for org.lockss.plugin.AuUtil
@@ -208,6 +209,10 @@ public class TestAuUtil extends LockssTestCase {
     assertFalse(AuUtil.isConfigCompatibleWithPlugin(auconf, mbp));
   }
 
+  public void testOkDeleteExtraFiles() {
+    assertTrue(AuUtil.okDeleteExtraFiles(new MockArchivalUnit()));
+    assertFalse(AuUtil.okDeleteExtraFiles(new ExplodedArchivalUnit(new ExplodedPlugin())));
+  }
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {
     TitleConfig tc = null;
