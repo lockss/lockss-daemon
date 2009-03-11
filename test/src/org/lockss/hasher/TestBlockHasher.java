@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.11 2009-03-05 05:40:05 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.12 2009-03-11 06:22:53 tlipkis Exp $
  */
 
 /*
@@ -265,6 +265,12 @@ public class TestBlockHasher extends LockssTestCase {
 
     BlockHasher hasher3 = new BlockHasher(cus, digs, inits, hand0);
     assertEquals(hasher3.getMaxVersions(), 18);
+
+    BlockHasher hasher4 = new BlockHasher(cus, -1, digs, inits, hand0);
+    assertEquals(hasher4.getMaxVersions(), 18);
+
+    BlockHasher hasher5 = new BlockHasher(cus, 4, digs, inits, hand0);
+    assertEquals(hasher5.getMaxVersions(), 4);
   }
 
   public void testAccessors() throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.13 2009-03-05 05:40:07 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.14 2009-03-11 06:22:53 tlipkis Exp $
  */
 
 /*
@@ -69,8 +69,19 @@ public class BlockHasher extends GenericHasher {
   InputStream is = null;
   MessageDigest[] peerDigests;
 
-  public BlockHasher(CachedUrlSet cus, MessageDigest[] digests,
-		     byte[][]initByteArrays, EventHandler cb) {
+  public BlockHasher(CachedUrlSet cus,
+		     MessageDigest[] digests,
+		     byte[][]initByteArrays,
+		     EventHandler cb) {
+    this(cus, -1, digests, initByteArrays, cb);
+  }
+  
+  /** Constuctor that allows specifying number of CU versions to hash */
+  public BlockHasher(CachedUrlSet cus,
+		     int maxVersions,
+		     MessageDigest[] digests,
+		     byte[][]initByteArrays,
+		     EventHandler cb) {
     super(cus);
     if (digests == null) throw new NullPointerException("null digests");
     if (initByteArrays == null)
@@ -98,15 +109,10 @@ public class BlockHasher extends GenericHasher {
     this.initByteArrays = initByteArrays;
     this.cb = cb;
     setConfig();
+    if (maxVersions > 0) {
+      this.maxVersions = maxVersions;
+    }
     initDigests();
-  }
-  
-  /** Constuctor that allows specifying number of CU versions to hash */
-  public BlockHasher(CachedUrlSet cus, int maxVersions,
-		     MessageDigest[] digests,
-		     byte[][]initByteArrays, EventHandler cb) {
-    this(cus, digests, initByteArrays, cb);
-    this.maxVersions = maxVersions;
   }
 
   private void setConfig() {

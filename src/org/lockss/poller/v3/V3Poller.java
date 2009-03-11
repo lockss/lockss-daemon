@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.94 2009-03-05 05:42:01 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.95 2009-03-11 06:22:53 tlipkis Exp $
  */
 
 /*
@@ -351,6 +351,12 @@ public class V3Poller extends BasePoll {
   public static final long DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT =
     100 * 1024 * 1024; // 100 MB
 
+  /**
+   * The number of bytes to hash before saving poll status during hashing.
+   */
+  public static final String PARAM_REPAIR_HASH_ALL_VERSIONS =
+    PREFIX + "repairHashAllVersions";
+  public static final boolean DEFAULT_REPAIR_HASH_ALL_VERSIONS = false;
 
   // Global state for the poll.
   private PollerStateBean pollerState;
@@ -399,6 +405,7 @@ public class V3Poller extends BasePoll {
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
   private VoteTallyCallback voteTallyCallback;
   private boolean isAsynch;
+  private boolean repairHashAllVersions = DEFAULT_REPAIR_HASH_ALL_VERSIONS;
 
   private long tallyEnd;
 
@@ -546,6 +553,9 @@ public class V3Poller extends BasePoll {
     maxRepairs = c.getInt(PARAM_MAX_REPAIRS, DEFAULT_MAX_REPAIRS);
 
     stateDir = PollUtil.ensurePollStateRoot();
+
+    repairHashAllVersions = c.getBoolean(PARAM_REPAIR_HASH_ALL_VERSIONS,
+					 DEFAULT_REPAIR_HASH_ALL_VERSIONS);
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
@@ -1352,11 +1362,22 @@ public class V3Poller extends BasePoll {
    *
    * @return true iff the hash is scheduled successfully.
    */
-  protected boolean scheduleHash(CachedUrlSet cu, Deadline deadline,
+  protected boolean scheduleHash(CachedUrlSet cu,
+				 Deadline deadline,
                                  HashService.Callback cb,
                                  BlockHasher.EventHandler eh) {
-    log.debug("Scheduling our hash for poll " + pollerState.getPollKey());
+    return scheduleHash(cu, -1, deadline, cb, eh);
+  }
+
+  protected boolean scheduleHash(CachedUrlSet cu,
+				 int maxVersions,
+				 Deadline deadline,
+                                 HashService.Callback cb,
+                                 BlockHasher.EventHandler eh) {
+    log.debug("Scheduling " + cu + "(" + maxVersions + ") hash for poll "
+	      + pollerState.getPollKey());
     BlockHasher hasher = new BlockHasher(cu,
+					 maxVersions,
                                          initHasherDigests(),
                                          initHasherByteArrays(),
                                          eh);
@@ -1659,7 +1680,8 @@ public class V3Poller extends BasePoll {
     CachedUrlSet blockCus =
       getAu().makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     boolean hashing = scheduleHash(blockCus,
-                                   Deadline.at(pollerState.getPollDeadline()),
+				   repairHashAllVersions ? -1 : 1,
+				   Deadline.at(pollerState.getPollDeadline()),
                                    hashDone,
                                    blockDone);
     if (!hashing) {
