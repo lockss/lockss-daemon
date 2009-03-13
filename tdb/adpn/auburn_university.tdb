@@ -1,0 +1,119 @@
+{
+  publisher <
+    name = Auburn University
+  >
+    
+  {
+    implicit < status ; name ; param[volume_name] >
+    plugin = edu.auburn.contentdm.ContentDmPlugin
+    param[base_url] = http://content.lib.auburn.edu/   
+  
+    {
+      title <
+        name = ADPN CONTENTdm Collections 
+      >
+
+      au < released ; Caroline Dean Wildflower Collection (Cdm) ; flora >
+      au < released ; Alabama Cooperative Extension Service Photographs (Cdm) ; autest >
+      au < released ; Auburn University Football Program (Cdm) ; football >
+  
+    }
+  
+  }
+      
+  {
+    title <
+      name = Auburn University Historical Maps 
+    >
+    
+    {    
+      implicit < status ; name >
+      plugin = edu.auburn.adpn.HistoricalMapsPlugin
+      param[base_url] = http://digdata4.lib.auburn.edu/alamaps/  
+     
+      au < released ; Auburn University Historical Maps, Drawers 1-3 >
+      
+    }
+    
+    {
+      implicit < status ; name >
+      plugin = edu.auburn.adpn.HistoricalMapsDrawerPlugin
+      param[base_url] = http://digdata4.lib.auburn.edu/alamaps/  
+    
+      au < released ; Auburn University Historical Maps, Drawers 6-10 >
+  
+    }
+  
+  }
+  
+  {
+    implicit < status ; name ; param[volume_name] >
+    plugin = edu.auburn.adpn.VetMedSlidesPlugin
+    param[base_url] = http://digdata4.lib.auburn.edu/VETMED/    
+  
+    {
+      title <
+        name = Auburn University Vet Med Slides 
+      >
+
+      au < released ; Auburn University Vet Med Slides Volumes 1-9 ; 1-9 >
+      au < exists ; Auburn University Vet Med Slides Volumes 10-19 ; 10-19 >
+      au < released ; Auburn University Vet Med Slides Volumes 20-29 ; 20-29 >
+      au < released ; Auburn University Vet Med Slides Volumes 30-39 ; 30-39 >
+      au < released ; Auburn University Vet Med Slides Volumes 40-49 ; 40-49 >
+      au < released ; Auburn University Vet Med Slides Volumes 50-59 ; 50-59 >
+      au < released ; Auburn University Vet Med Slides Volumes 60-69 ; 60-69 >
+      au < released ; Auburn University Vet Med Slides Volumes 70-79 ; 70-79 >
+      au < released ; Auburn University Vet Med Slides Volumes 80-89 ; 80-89 >
+      au < released ; Auburn University Vet Med Slides Volumes 90-99 ; 90-99 >
+      au < released ; Auburn University Vet Med Slides Volumes 100-109 ; 100-109 >
+      au < released ; Auburn University Vet Med Slides Volumes 110-119 ; 110-119 >
+  
+    }
+  
+  }
+  
+  {
+    implicit < status ; name ; param[volume_name] >
+    plugin = edu.auburn.adpn.sesquicentennial.SesquicentennialLectureSeriesPlugin
+    param[base_url] = http://fortissimo.lib.auburn.edu:82/sesq/    
+  
+    {
+      title <
+        name = Auburn University Sesquicentennial Lecture Series 
+      >
+
+      au < released ; Auburn University Sesquicentennial Lecture Series: 1. Ralph Brown Draughon, Jr. ; 01draughon >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 2. J. Wayne Flynt ; 02flynt >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 3. Leah Rawls Atkins ; 03atkins >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 4. Joe Yeager and Gene Stevenson ; 04yeager-stevenson >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 5. Dwayne Cox ; 05cox >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 6. Anthony Donaldson ; 06donaldson >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 7. David Alsobrook ; 07alsobrook >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 8. Martin T. Olliff and Harold A. Franklin ; 08oliff-franklin >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 9. David Housel ; 09housel >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 10. Jack Simms ; 10simms >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 11. J. Wayne Flynt ; 11flynt >
+      au < released ; Auburn University Sesquicentennial Lecture Series: 12. Nell Ruth Campbell Richardson ; 12richardson >
+  
+    }
+  
+  }
+  
+  {
+    implicit < status ; name >
+    plugin = edu.auburn.adpn.sledgepapers.SledgePapersPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/numphotos/    
+  
+    {
+      title <
+        name = Auburn University Eugene B. Sledge Papers 
+      >
+
+      au < released ; Auburn University Eugene B. Sledge Papers >
+ 
+    }
+  
+  }  
+  
+}

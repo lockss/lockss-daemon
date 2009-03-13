@@ -1,0 +1,43 @@
+{
+  publisher <
+    name = University of Alabama
+  >
+  
+  implicit < status ; name >  
+
+  {
+    title <
+      name = University of Alabama Cunningham Photo Collection 
+    >
+    
+    plugin = edu.ua.adpn.cunningham.CunninghamPlugin
+    param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
+
+    au < down ; University of Alabama Cunningham Photo Collection >
+
+  }
+  
+  {
+    title <
+      name = University of Alabama Emphasis68 Recordings 
+    >
+    
+    plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
+    param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
+
+    au < down ; University of Alabama Emphasis68 Recordings >
+
+  }
+  
+  {
+    title <
+      name = University of Alabama PBO Confederate Imprints 
+    >
+    
+    plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
+    param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
+
+    au < down ; University of Alabama PBO Confederate Imprints >
+
+  }
+}

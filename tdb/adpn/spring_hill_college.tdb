@@ -1,0 +1,19 @@
+{
+  publisher <
+    name = Spring Hill College
+  >
+
+  plugin = edu.shc.adpn.images.SpringHillCollegeImagesPlugin
+  param[base_url] = http://www.shc.edu/adpn/    
+  implicit < status ; name >  
+
+  {
+    title <
+      name = Spring Hill College Images 
+    >
+
+    au < released ; Spring Hill College Sample Images >
+
+  }
+  
+}

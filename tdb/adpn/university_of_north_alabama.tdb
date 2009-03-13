@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = University of North Alabama
+  >
+  
+  {
+    plugin = edu.auburn.contentdm.ContentDmPlugin
+    implicit < status ; name ; param[volume_name] >  
+    param[base_url] = http://contentdm.una.edu/   
+
+    {
+      title <
+        name = University of North Alabama CONTENTdm Collections 
+      >
+    
+      au < released ; University of North Alabama Postcards (Cdm) ; Postcards >
+
+    }
+  
+  }
+  
+  { 
+    plugin = edu.una.plugin.McDonaldPhotosPlugin
+    implicit < status ; name ; param[volume] >  
+    param[base_url] = http://www2.una.edu/agordon/permission01.html 
+
+    {
+      title <
+        name = University of North Alabama McDonald Photos
+      >
+    
+      au < released ; University of North Alabama McDonald Photos, Volume 1 ; 1 >
+
+    }
+  }
+}

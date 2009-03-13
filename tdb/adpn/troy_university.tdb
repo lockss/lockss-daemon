@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Troy University
+  >
+
+  plugin = edu.troy.adpn.postcards.PostcardsPlugin
+  param[base_url] = http://spectrum.troy.edu/~troyadpnet/    
+  implicit < status ; name ; param[volume_name] >  
+
+  {
+    title <
+      name = Postcard Collection 
+    >
+
+    au < down ; Troy University Postcard Collection Disk 1 ; disk1 >
+    au < down ; Troy University Postcard Collection Disk 2 ; disk2 >
+    au < exists ; Troy University Postcard Collection Disk 3 ; disk3 >
+    au < down ; Troy University Postcard Collection Disk 4 ; disk4 >
+
+  }
+  
+}
