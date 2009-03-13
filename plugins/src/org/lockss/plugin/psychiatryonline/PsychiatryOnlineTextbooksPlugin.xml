@@ -65,6 +65,10 @@
     <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineHtmlFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineUrlNormalizer</string>
   </entry>

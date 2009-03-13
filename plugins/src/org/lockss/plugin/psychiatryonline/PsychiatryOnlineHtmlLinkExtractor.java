@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.4 2009-03-04 21:29:56 thib_gc Exp $
+ * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.5 2009-03-13 22:45:21 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.psychiatryonline;
 
-import java.io.IOException;
+import java.io.*;
 
 import org.apache.oro.text.regex.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class PsychiatryOnlineHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
@@ -78,11 +79,34 @@ public class PsychiatryOnlineHtmlLinkExtractor extends GoslingHtmlLinkExtractor 
     return super.extractLinkFromTag(link, au, cb);
   }
 
+  @Override
+  public void extractUrls(ArchivalUnit au,
+                          InputStream in,
+                          String encoding,
+                          String srcUrl,
+                          Callback cb)
+      throws IOException {
+    try {
+      FilterFactory filter = new PsychiatryOnlineHtmlFilterFactory();
+      InputStream filtered = filter.createFilteredInputStream(au, in, encoding);
+      super.extractUrls(au, filtered, encoding, srcUrl, cb);
+    }
+    catch (PluginException pe) {
+      // Use new IOException constructor in Java 6
+      IOException ioe = new IOException();
+      ioe.initCause(pe);
+      throw ioe;
+    }
+  }
+
   protected static Logger logger = Logger.getLogger("PsychiatryOnlineHtmlLinkExtractor");
 
-  protected static final Pattern WINDOW_REFERENCE_PATTERN = RegexpUtil.uncheckedCompile("javascript.*:.*windowReference.*\\([^']*'(?:\\.|[^'\\\\])*'.*,[^']*'(\\.|[^'\\\\])*'.*\\).*;",
-                                                                                        Perl5Compiler.READ_ONLY_MASK);
+//  protected static final Pattern WINDOW_REFERENCE_PATTERN = RegexpUtil.uncheckedCompile("javascript.*:.*windowReference.*\\([^']*'(?:\\.|[^'\\\\])*'.*,[^']*'(\\.|[^'\\\\])*'.*\\).*;",
+//      Perl5Compiler.READ_ONLY_MASK);
 
+  protected static final Pattern WINDOW_REFERENCE_PATTERN = RegexpUtil.uncheckedCompile("javascript[^:]*:.*windowReference[^(]*\\([^']*'(?:[^']*)'[^,]*,[^']*'([^']*)'[^)]*\\)[^;]*;",
+                                                                                        Perl5Compiler.READ_ONLY_MASK);
+  
   public static Pattern getWindowReferencePattern() {
     return WINDOW_REFERENCE_PATTERN;
   }
