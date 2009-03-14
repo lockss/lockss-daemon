@@ -3,11 +3,10 @@
     name = Alabama Department of Archives and History
   >
 
-  param[base_url] = http://www.archives.alabama.gov/lockss/    
-
   {
     implicit < status ; name >
     plugin = gov.alabama.archives.adpn.executiveorders.ExecutiveOrdersPlugin
+    param[base_url] = http://www.archives.alabama.gov/lockss/    
   
     {
       title <
@@ -20,10 +19,10 @@
   
   }
   
-  
   {
     implicit < status ; name ; subdirectory >
     plugin = gov.alabama.archives.adpn.goldstar.GoldstarPlugin
+    param[base_url] = http://www.archives.alabama.gov/lockss/    
   
     {
       title <
@@ -31,6 +30,7 @@
       >
 
       au < down ; Alabama Department of Archives and History World War I Gold Star Database 1 ; goldstar1 >
+      au < manifest ; Alabama Department of Archives and History World War I Gold Star Database 2 ; goldstar2 >
   
     }
   

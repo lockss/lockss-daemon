@@ -13,7 +13,7 @@
     plugin = edu.ua.adpn.cunningham.CunninghamPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
 
-    au < down ; University of Alabama Cunningham Photo Collection >
+    au < released ; University of Alabama Cunningham Photo Collection >
 
   }
   
@@ -25,19 +25,19 @@
     plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
 
-    au < down ; University of Alabama Emphasis68 Recordings >
+    au < released ; University of Alabama Emphasis68 Recordings >
 
   }
   
   {
     title <
-      name = University of Alabama PBO Confederate Imprints 
+      name = University of Alabama Publisher Bindings Online: Confederate Imprints 
     >
     
     plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
 
-    au < down ; University of Alabama PBO Confederate Imprints >
+    au < released ; University of Alabama Publisher Bindings Online: Confederate Imprints >
 
   }
 }
