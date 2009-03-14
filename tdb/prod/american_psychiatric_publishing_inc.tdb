@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = American Psychiatric Publishing Inc.  
+  >
+  
+  implicit < status ; name >
+  plugin = org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin
+  param[base_url] = http://www.psychiatryonline.com/
+  
+  {
+    title <
+      name = The American Psychiatric Publishing Textbook of Psychiatry
+    >
+    
+    param[resource_id] = 5
+    
+    au < down ; The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition) >
+    
+  }
+  
+  {
+    title <
+      name = Essentials of Clinical Psychopharmacology
+    >
+    
+    param[resource_id] = 7
+    
+    au < testing ; Essentials of Clinical Psychopharmacology (2nd Edition) >
+    
+  }
+
+}
