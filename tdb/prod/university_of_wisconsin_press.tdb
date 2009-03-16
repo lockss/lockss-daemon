@@ -19,6 +19,7 @@
     au < released ; Contemporary Literature Volume 46 ; 46 >
     au < released ; Contemporary Literature Volume 47 ; 47 >
     au < released ; Contemporary Literature Volume 48 ; 48 >
+    au < manifest ; Contemporary Literature Volume 49 ; 49 >
 
   }
 
@@ -32,6 +33,8 @@
     au < released ; Luso-Brazilian Review Volume 41 ; 41 >
     au < released ; Luso-Brazilian Review Volume 42 ; 42 >
     au < released ; Luso-Brazilian Review Volume 43 ; 43 >
+    au < manifest ; Luso-Brazilian Review Volume 44 ; 44 >
+    au < manifest ; Luso-Brazilian Review Volume 45 ; 45 >
 
   }
 
@@ -43,6 +46,8 @@
     param[journal_dir] = monatshefte
 
     au < released ; Monatshefte Volume 99 ; 99 >
+    au < manifest ; Monatshefte Volume 100 ; 100 >
+    au < manifest ; Monatshefte Volume 101 ; 101 >
 
   }
 
@@ -62,6 +67,7 @@
     au < released ; SubStance Volume 34 ; 34 >
     au < released ; SubStance Volume 35 ; 35 >
     au < released ; SubStance Volume 36 ; 36 >
+    au < manifest ; SubStance Volume 37 ; 37 >
 
   }
 
