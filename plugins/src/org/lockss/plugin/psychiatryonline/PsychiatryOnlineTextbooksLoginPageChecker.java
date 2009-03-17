@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineTextbooksLoginPageChecker.java,v 1.2 2009-03-04 21:29:56 thib_gc Exp $
+ * $Id: PsychiatryOnlineTextbooksLoginPageChecker.java,v 1.3 2009-03-17 00:29:01 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.Properties;
 
 import org.lockss.daemon.*;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 public class PsychiatryOnlineTextbooksLoginPageChecker implements LoginPageChecker {
 
@@ -45,7 +45,10 @@ public class PsychiatryOnlineTextbooksLoginPageChecker implements LoginPageCheck
   public boolean isLoginPage(Properties props,
                              Reader reader)
       throws IOException, PluginException {
-    return StringUtil.containsString(reader, LOGIN_STRING);
+    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
+      return StringUtil.containsString(reader, LOGIN_STRING);
+    }
+    return false;
   }
 
 }
