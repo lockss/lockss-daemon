@@ -1,0 +1,607 @@
+{
+  publisher <
+    name = Berkeley Electronic Press
+  >
+  
+  implicit < status ; name ; param[volume] >
+  plugin = org.lockss.plugin.bepress.BePressPlugin
+  param[base_url] = http://www.bepress.com/    
+  
+  {
+    title <
+      name = Asian Journal of Comparative Law 
+    >
+
+    param[journal_abbr] = asjcl
+
+    au < released ; Asian Journal of Comparative Law Volume 1 ; 1 >
+    au < released ; Asian Journal of Comparative Law Volume 2 ; 2 >
+    au < manifest ; Asian Journal of Comparative Law Volume 3 ; 3 >
+    au < manifest ; Asian Journal of Comparative Law Volume 4 ; 4 >
+
+  }
+
+
+  {
+    title <
+      name = Basic Income Studies 
+    >
+
+    param[journal_abbr] = bis
+
+    au < released ; Basic Income Studies Volume 1 ; 1 >
+    au < released ; Basic Income Studies Volume 2 ; 2 >
+    au < manifest ; Basic Income Studies Volume 3 ; 3 >
+  }
+
+
+  {
+    title <
+      name = The B.E. Journal of Economic Analysis & Policy 
+    >
+
+    param[journal_abbr] = bejeap
+
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >
+    au < manifest ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
+    au < manifest ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
+  }
+
+
+  {
+    title <
+      name = The B.E. Journal of Macroeconomics 
+    >
+
+    param[journal_abbr] = bejm
+
+    au < released ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 3 ; 3 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 4 ; 4 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 5 ; 5 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 6 ; 6 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 7 ; 7 >
+    au < manifest ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
+    au < manifest ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
+  }
+
+
+  {
+    title <
+      name = The B.E. Journal of Theoretical Economics 
+    >
+
+    param[journal_abbr] = bejte
+
+    au < released ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
+    au < manifest ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
+    au < manifest ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
+  }
+
+
+  {
+    title <
+      name = Business and Politics 
+    >
+
+    param[journal_abbr] = bap
+
+    au < released ; Business and Politics Volume 2 ; 2 >
+    au < released ; Business and Politics Volume 3 ; 3 >
+    au < released ; Business and Politics Volume 4 ; 4 >
+    au < released ; Business and Politics Volume 5 ; 5 >
+    au < released ; Business and Politics Volume 6 ; 6 >
+    au < released ; Business and Politics Volume 7 ; 7 >
+    au < released ; Business and Politics Volume 8 ; 8 >
+    au < released ; Business and Politics Volume 9 ; 9 >
+    au < manifest ; Business and Politics Volume 10 ; 10 >
+    au < manifest ; Business and Politics Volume 11 ; 11 >
+  }
+
+
+  {
+    title <
+      name = Capitalism and Society 
+    >
+
+    param[journal_abbr] = cas
+
+    au < released ; Capitalism and Society Volume 1 ; 1 >
+    au < released ; Capitalism and Society Volume 2 ; 2 >
+    au < manifest ; Capitalism and Society Volume 3 ; 3 >
+  }
+
+
+  {
+    title <
+      name = Chemical Product and Process Modeling 
+    >
+
+    param[journal_abbr] = cppm
+
+    au < released ; Chemical Product and Process Modeling Volume 1 ; 1 >
+    au < released ; Chemical Product and Process Modeling Volume 2 ; 2 >
+    au < manifest ; Chemical Product and Process Modeling Volume 3 ; 3 >
+    au < manifest ; Chemical Product and Process Modeling Volume 4 ; 4 >
+  }
+
+
+  {
+    title <
+      name = The Economists' Voice 
+    >
+
+    param[journal_abbr] = ev
+
+    au < released ; The Economists' Voice Volume 1 ; 1 >
+    au < released ; The Economists' Voice Volume 2 ; 2 >
+    au < released ; The Economists' Voice Volume 3 ; 3 >
+    au < released ; The Economists' Voice Volume 4 ; 4 >
+    au < manifest ; The Economists' Voice Volume 5 ; 5 >
+    au < manifest ; The Economists' Voice Volume 6 ; 6 >
+  }
+
+
+  {
+    title <
+      name = The Forum 
+    >
+
+    param[journal_abbr] = forum
+
+    au < released ; The Forum Volume 1 ; 1 >
+    au < released ; The Forum Volume 2 ; 2 >
+    au < released ; The Forum Volume 3 ; 3 >
+    au < released ; The Forum Volume 4 ; 4 >
+    au < released ; The Forum Volume 5 ; 5 >
+    au < manifest ; The Forum Volume 6 ; 6 >
+  }
+
+
+  {
+    title <
+      name = Forum for Health Economics & Policy 
+    >
+
+    param[journal_abbr] = fhep
+
+    au < released ; Forum for Health Economics & Policy Volume 1 ; 1 >
+    au < released ; Forum for Health Economics & Policy Volume 2 ; 2 >
+    au < released ; Forum for Health Economics & Policy Volume 3 ; 3 >
+    au < released ; Forum for Health Economics & Policy Volume 4 ; 4 >
+    au < released ; Forum for Health Economics & Policy Volume 5 ; 5 >
+    au < released ; Forum for Health Economics & Policy Volume 6 ; 6 >
+    au < released ; Forum for Health Economics & Policy Volume 7 ; 7 >
+    au < released ; Forum for Health Economics & Policy Volume 8 ; 8 >
+    au < released ; Forum for Health Economics & Policy Volume 9 ; 9 >
+    au < released ; Forum for Health Economics & Policy Volume 10 ; 10 >
+    au < manifest ; Forum for Health Economics & Policy Volume 11 ; 11 >
+    au < manifest ; Forum for Health Economics & Policy Volume 12 ; 12 >
+  }
+
+
+  {
+    title <
+      name = Global Economy Journal 
+    >
+
+    param[journal_abbr] = gej
+
+    au < released ; Global Economy Journal Volume 1 ; 1 >
+    au < released ; Global Economy Journal Volume 2 ; 2 >
+    au < released ; Global Economy Journal Volume 3 ; 3 >
+    au < released ; Global Economy Journal Volume 4 ; 4 >
+    au < released ; Global Economy Journal Volume 5 ; 5 >
+    au < released ; Global Economy Journal Volume 6 ; 6 >
+    au < released ; Global Economy Journal Volume 7 ; 7 >
+    au < manifest ; Global Economy Journal Volume 8 ; 8 >
+    au < manifest ; Global Economy Journal Volume 9 ; 9 >
+  }
+
+
+  {
+    title <
+      name = Global Jurist 
+    >
+
+    param[journal_abbr] = gj
+
+    au < released ; Global Jurist Volume 1 ; 1 >
+    au < released ; Global Jurist Volume 2 ; 2 >
+    au < released ; Global Jurist Volume 3 ; 3 >
+    au < released ; Global Jurist Volume 4 ; 4 >
+    au < released ; Global Jurist Volume 5 ; 5 >
+    au < released ; Global Jurist Volume 6 ; 6 >
+    au < released ; Global Jurist Volume 7 ; 7 >
+    au < manifest ; Global Jurist Volume 8 ; 8 >
+    au < manifest ; Global Jurist Volume 9 ; 9 >
+  }
+
+
+  {
+    title <
+      name = International Commentary on Evidence 
+    >
+
+    param[journal_abbr] = ice
+
+    au < released ; International Commentary on Evidence Volume 1 ; 1 >
+    au < released ; International Commentary on Evidence Volume 2 ; 2 >
+    au < released ; International Commentary on Evidence Volume 3 ; 3 >
+    au < released ; International Commentary on Evidence Volume 4 ; 4 >
+    au < released ; International Commentary on Evidence Volume 5 ; 5 >
+    au < manifest ; International Commentary on Evidence Volume 6 ; 6 >
+  }
+
+
+  {
+    title <
+      name = The International Journal of Biostatistics 
+    >
+
+    param[journal_abbr] = ijb
+
+    au < released ; The International Journal of Biostatistics Volume 1 ; 1 >
+    au < released ; The International Journal of Biostatistics Volume 2 ; 2 >
+    au < released ; The International Journal of Biostatistics Volume 3 ; 3 >
+    au < manifest ; The International Journal of Biostatistics Volume 4 ; 4 >
+    au < manifest ; The International Journal of Biostatistics Volume 5 ; 5 >
+  }
+
+
+  {
+    title <
+      name = International Journal of Chemical Reactor Engineering 
+    >
+
+    param[journal_abbr] = ijcre
+
+    au < released ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
+    au < manifest ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
+    au < manifest ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
+  }
+
+
+  {
+    title <
+      name = International Journal of Emerging Electric Power Systems 
+    >
+
+    param[journal_abbr] = ijeeps
+
+    au < released ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
+    au < manifest ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
+    au < manifest ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
+  }
+
+
+  {
+    title <
+      name = International Journal of Food Engineering 
+    >
+
+    param[journal_abbr] = ijfe
+
+    au < released ; International Journal of Food Engineering Volume 1 ; 1 >
+    au < released ; International Journal of Food Engineering Volume 2 ; 2 >
+    au < released ; International Journal of Food Engineering Volume 3 ; 3 >
+    au < manifest ; International Journal of Food Engineering Volume 4 ; 4 >
+    au < manifest ; International Journal of Food Engineering Volume 5 ; 5 >
+  }
+
+
+  {
+    title <
+      name = International Journal of Nursing Education Scholarship 
+    >
+
+    param[journal_abbr] = ijnes
+
+    au < released ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
+    au < manifest ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
+    au < manifest ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
+  }
+
+
+  {
+    title <
+      name = Journal of Agricultural & Food Industrial Organization 
+    >
+
+    param[journal_abbr] = jafio
+
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
+    au < manifest ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
+    au < manifest ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
+  }
+
+
+  {
+    title <
+      name = Journal of Business Valuation and Economic Loss Analysis 
+    >
+
+    param[journal_abbr] = jbvela
+
+    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 >
+    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 >
+    au < manifest ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
+    au < manifest ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
+  }
+
+
+  {
+    title <
+      name = Journal of Complementary and Integrative Medicine 
+    >
+
+    param[journal_abbr] = jcim
+
+    au < released ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 >
+    au < manifest ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
+    au < manifest ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
+  }
+
+
+  {
+    title <
+      name = Journal of Homeland Security and Emergency Management 
+    >
+
+    param[journal_abbr] = jhsem
+
+    au < released ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
+    au < manifest ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
+    au < manifest ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
+  }
+
+
+  {
+    title <
+      name = Journal of Imagery Research in Sport and Physical Activity 
+    >
+
+    param[journal_abbr] = jirspa
+
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 >
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 >
+    au < manifest ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
+    au < manifest ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
+  }
+
+
+  {
+    title <
+      name = Journal of Industrial Organization Education 
+    >
+
+    param[journal_abbr] = jioe
+
+    au < released ; Journal of Industrial Organization Education Volume 1 ; 1 >
+  }
+
+
+  {
+    title <
+      name = Journal of Quantitative Analysis in Sports 
+    >
+
+    param[journal_abbr] = jqas
+
+    au < released ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
+    au < released ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 >
+    au < released ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
+    au < manifest ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
+    au < manifest ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
+  }
+
+
+  {
+    title <
+      name = Journal of Tort Law 
+    >
+
+    param[journal_abbr] = jtl
+
+    au < released ; Journal of Tort Law Volume 1 ; 1 >
+    au < manifest ; Journal of Tort Law Volume 2 ; 2 >
+  }
+
+
+  {
+    title <
+      name = Muslim World Journal of Human Rights 
+    >
+
+    param[journal_abbr] = mwjhr
+
+    au < released ; Muslim World Journal of Human Rights Volume 1 ; 1 >
+    au < released ; Muslim World Journal of Human Rights Volume 2 ; 2 >
+    au < released ; Muslim World Journal of Human Rights Volume 3 ; 3 >
+    au < manifest ; Muslim World Journal of Human Rights Volume 4 ; 4 >
+  }
+
+
+  {
+    title <
+      name = Peace Economics, Peace Science and Public Policy 
+    >
+
+    param[journal_abbr] = peps
+
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 >
+    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
+    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
+  }
+
+
+  {
+    title <
+      name = Review of Law & Economics 
+    >
+
+    param[journal_abbr] = rle
+
+    au < released ; Review of Law & Economics Volume 1 ; 1 >
+    au < released ; Review of Law & Economics Volume 2 ; 2 >
+    au < released ; Review of Law & Economics Volume 3 ; 3 >
+    au < manifest ; Review of Law & Economics Volume 4 ; 4 >
+
+  }
+
+
+  {
+    title <
+      name = Review of Marketing Science 
+    >
+
+    param[journal_abbr] = romsjournal
+
+    au < released ; Review of Marketing Science Volume 1 ; 1 >
+    au < released ; Review of Marketing Science Volume 2 ; 2 >
+    au < released ; Review of Marketing Science Volume 3 ; 3 >
+    au < released ; Review of Marketing Science Volume 4 ; 4 >
+    au < released ; Review of Marketing Science Volume 5 ; 5 >
+    au < manifest ; Review of Marketing Science Volume 6 ; 6 >
+    au < manifest ; Review of Marketing Science Volume 7 ; 7 >
+  }
+
+
+  {
+    title <
+      name = Review of Middle East Finance 
+    >
+
+    param[journal_abbr] = rmeef
+
+    au < released ; Review of Middle East Finance Volume 1 ; 1 >
+    au < released ; Review of Middle East Finance Volume 2 ; 2 >
+    au < released ; Review of Middle East Finance Volume 3 ; 3 >
+    au < manifest ; Review of Middle East Finance Volume 4 ; 4 >
+  }
+
+
+  {
+    title <
+      name = Statistical Applications in Genetics and Molecular Biology 
+    >
+
+    param[journal_abbr] = sagmb
+
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 >
+    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
+    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
+  }
+
+
+  {
+    title <
+      name = Studies in Nonlinear Dynamics & Econometrics 
+    >
+
+    param[journal_abbr] = snde
+
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 >
+    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
+    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
+  }
+
+
+  {
+    title <
+      name = Theoretical Inquiries in Law 
+    >
+
+    param[journal_abbr] = til
+
+    au < released ; Theoretical Inquiries in Law Volume 1 ; 1 >
+    au < released ; Theoretical Inquiries in Law Volume 2 ; 2 >
+    au < released ; Theoretical Inquiries in Law Volume 3 ; 3 >
+    au < released ; Theoretical Inquiries in Law Volume 4 ; 4 >
+    au < released ; Theoretical Inquiries in Law Volume 5 ; 5 >
+    au < released ; Theoretical Inquiries in Law Volume 6 ; 6 >
+    au < released ; Theoretical Inquiries in Law Volume 7 ; 7 >
+    au < released ; Theoretical Inquiries in Law Volume 8 ; 8 >
+    au < manifest ; Theoretical Inquiries in Law Volume 9 ; 9 >
+    au < manifest ; Theoretical Inquiries in Law Volume 10 ; 10 >
+  }
+
+
+  {
+    title <
+      name = World Political Science Review 
+    >
+
+    param[journal_abbr] = wpsr
+
+    au < released ; World Political Science Review Volume 1 ; 1 >
+    au < released ; World Political Science Review Volume 2 ; 2 >
+    au < released ; World Political Science Review Volume 3 ; 3 >
+    au < manifest ; World Political Science Review Volume 4 ; 4 >
+    au < manifest ; World Political Science Review Volume 5 ; 5 >
+  }
+
+}
