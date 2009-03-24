@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.11 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.12 2009-03-24 04:32:37 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,7 @@ public class TestAuConfig extends LockssServletTestCase {
 	       "until PluginManager has started all AUs", auForm);
     assertNull("Table named AuSummaryTable should not appear " +
 	       "until PluginManager has started all AUs", auTable);
+    assertNull(resp1.getHeaderField("X-Lockss-Result"));
   }
 
 
@@ -106,7 +107,39 @@ public class TestAuConfig extends LockssServletTestCase {
     initServletRunner();
     WebRequest request =
       new GetMethodWebRequest("http://null/AuConfig" );
+    request.setHeaderField("X-Lockss-Result", "please");
 //     request.setParameter( "color", "red" );
+    WebResponse resp1 = sClient.getResponse(request);
+    log.debug2("Response 1: " + resp1.getText());
+    assertResponseOk(resp1);
+    assertEquals("Ok", resp1.getHeaderField("X-Lockss-Result"));
+    assertEquals("Content type", "text/html", resp1.getContentType());
+
+    WebForm auForm = resp1.getFormWithID("AuSummaryForm");
+    WebTable auTable = resp1.getTableWithID("AuSummaryTable");
+    assertNotNull("No form named AuSummaryForm", auForm);
+    assertNotNull("No table named AuSummaryTable", auTable);
+    assertEquals(1, auTable.getRowCount());
+    assertEquals(2, auTable.getColumnCount());
+    assertEquals("", auTable.getCellAsText(0,0));
+    assertEquals("Add new Archival Unit", auTable.getCellAsText(0,1));
+    TableCell cell = auTable.getTableCell(0,0);
+    HTMLElement elem = cell.getElementWithID("lsb.1");
+    Button btn = (Button)elem;
+    assertEquals("Add", btn.getValue());
+    // This form must be submitted via the javascript invoked by this button,
+    btn.click();
+    WebResponse resp2 = sClient.getCurrentPage();
+    log.debug2("Response 2: " + resp2.getText());
+    assertResponseOk(resp2);
+  }
+
+  public void testIllegalPlugin() throws Exception {
+    // Force PluginManager to think all AUs have started.
+    theDaemon.setAusStarted(true);
+    initServletRunner();
+    WebRequest request =
+      new GetMethodWebRequest("http://null/AuConfig" );
     WebResponse resp1 = sClient.getResponse(request);
     log.debug2("Response 1: " + resp1.getText());
     assertResponseOk(resp1);
@@ -129,5 +162,58 @@ public class TestAuConfig extends LockssServletTestCase {
     WebResponse resp2 = sClient.getCurrentPage();
     log.debug2("Response 2: " + resp2.getText());
     assertResponseOk(resp2);
+    assertNull(resp2.getHeaderField("X-Lockss-Result"));
+
+    WebForm addForm = resp2.getFormWithID("AddAuForm");
+    addForm.setParameter("PluginClass", "org.lockss.nopackage.NoPlugin");
+    WebRequest contReq = addForm.getRequest("button", "Continue");
+    assertNotNull("No submit button", contReq);
+    contReq.setHeaderField("X-Lockss-Result", "please");
+    WebResponse resp3 = sClient.getResponse(contReq);
+    log.debug2("Response 2: " + resp3.getText());
+    assertResponseOk(resp3);
+    assertEquals("Fail", resp3.getHeaderField("X-Lockss-Result"));
+  }
+
+  public void testOkPlugin() throws Exception {
+    // Force PluginManager to think all AUs have started.
+    theDaemon.setAusStarted(true);
+    initServletRunner();
+    WebRequest request =
+      new GetMethodWebRequest("http://null/AuConfig" );
+    WebResponse resp1 = sClient.getResponse(request);
+    log.debug2("Response 1: " + resp1.getText());
+    assertResponseOk(resp1);
+    assertEquals("Content type", "text/html", resp1.getContentType());
+
+    WebForm auForm = resp1.getFormWithID("AuSummaryForm");
+    WebTable auTable = resp1.getTableWithID("AuSummaryTable");
+    assertNotNull("No form named AuSummaryForm", auForm);
+    assertNotNull("No table named AuSummaryTable", auTable);
+    assertEquals(1, auTable.getRowCount());
+    assertEquals(2, auTable.getColumnCount());
+    assertEquals("", auTable.getCellAsText(0,0));
+    assertEquals("Add new Archival Unit", auTable.getCellAsText(0,1));
+    TableCell cell = auTable.getTableCell(0,0);
+    HTMLElement elem = cell.getElementWithID("lsb.1");
+    Button btn = (Button)elem;
+    assertEquals("Add", btn.getValue());
+    // This form must be submitted via the javascript invoked by this button,
+    btn.click();
+    WebResponse resp2 = sClient.getCurrentPage();
+    log.debug2("Response 2: " + resp2.getText());
+    assertResponseOk(resp2);
+    assertNull(resp2.getHeaderField("X-Lockss-Result"));
+
+    WebForm addForm = resp2.getFormWithID("AddAuForm");
+    addForm.setParameter("PluginClass",
+			 "org.lockss.plugin.simulated.SimulatedPlugin");
+    WebRequest contReq = addForm.getRequest("button", "Continue");
+    assertNotNull("No submit button", contReq);
+    contReq.setHeaderField("X-Lockss-Result", "please");
+    WebResponse resp3 = sClient.getResponse(contReq);
+    log.debug2("Response 2: " + resp3.getText());
+    assertResponseOk(resp3);
+    assertEquals("Ok", resp3.getHeaderField("X-Lockss-Result"));
   }
 }

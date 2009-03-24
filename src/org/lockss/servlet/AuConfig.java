@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.64 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.65 2009-03-24 04:32:37 tlipkis Exp $
  */
 
 /*
@@ -375,6 +375,7 @@ public class AuConfig extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page, addExp);
 
     Form frm = new Form(srvURL(myServletDescr()));
+    frm.attribute("id", "AddAuForm");
     frm.method("POST");
 //     frm.add("<center>");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");

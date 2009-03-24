@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.108 2008-12-13 07:25:25 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.109 2009-03-24 04:32:37 tlipkis Exp $
  */
 
 /*
@@ -146,6 +146,7 @@ public abstract class LockssServlet extends HttpServlet
   public void service(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
     multiReq = null;
+    boolean success = false;
     try {
       this.req = req;
       this.resp = resp;
@@ -180,6 +181,7 @@ public abstract class LockssServlet extends HttpServlet
 	return;
       }
       lockssHandleRequest();
+      success = (errMsg == null);
     } catch (ServletException e) {
       log.error("Servlet threw", e);
       throw e;
@@ -190,6 +192,11 @@ public abstract class LockssServlet extends HttpServlet
       log.error("Servlet threw", e);
       throw e;
     } finally {
+      log.info("X-Lockss-Result: " + req.getHeader("X-Lockss-Result"));
+      if ("please".equalsIgnoreCase(req.getHeader("X-Lockss-Result"))) {
+	log.info("X-Lockss-Result: " + (success ? "Ok" : "Fail"));
+	resp.setHeader("X-Lockss-Result", success ? "Ok" : "Fail");
+      }
       resetMyLocals();
       resetLocals();
     }
