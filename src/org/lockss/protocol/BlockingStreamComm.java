@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.41 2009-03-11 06:23:28 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.42 2009-03-24 20:35:33 tlipkis Exp $
  */
 
 /*
@@ -497,6 +497,7 @@ public class BlockingStreamComm
       // channel.
       BlockingPeerChannel last = null;
       int rpt = 0;
+      boolean retry = true;
       while (rpt++ <= 3) {
 	lastSendRpt = rpt;
 	BlockingPeerChannel chan = findOrMakeChannel();
@@ -511,6 +512,7 @@ public class BlockingStreamComm
 	}
 	if (chan.isUnusedOriginatingChannel()) {
 	  log.warning("Couldn't start channel " + chan);
+	  retry = chan.shouldRetry();
 	  break;
 	}
 	last = chan;
@@ -520,7 +522,7 @@ public class BlockingStreamComm
       }
       log.error("Couldn't enqueue msg to channel after "
 		+ rpt + " tries: " + msg);
-      if (msg.isRequeueable()) {
+      if (retry && msg.isRequeueable()) {
 	// This counts as a connect failure, as the queue was empty when we
 	// entered
 	failCnt++;
@@ -575,10 +577,8 @@ public class BlockingStreamComm
       }
       if (log.isDebug3()) log.debug3("enqueuing held "+ msg);
       BlockingPeerChannel chan = primary;
-      if (chan != null
-	  && !chan.isState(BlockingPeerChannel.ChannelState.DISSOCIATING)) {
-	log.error("retry: sendQueue and primary channel both exist: " +
-		  primary);
+      if (chan != null && !chan.isState(enqueueHeldPrimaryOkStates)) {
+	log.error("enqueueHeld: primary channel exists: " + primary);
       }	
 
       sendQueue.put(msg);
@@ -765,6 +765,10 @@ public class BlockingStreamComm
       return sb.toString();
     }
   }
+
+  static BlockingPeerChannel.ChannelState[] enqueueHeldPrimaryOkStates = {
+    BlockingPeerChannel.ChannelState.DISSOCIATING,
+    BlockingPeerChannel.ChannelState.CLOSING};
 
   /**
    * start the stream comm manager.

@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.26 2009-02-07 01:24:51 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.27 2009-03-24 20:35:33 tlipkis Exp $
  */
 
 /*
@@ -272,6 +272,12 @@ class BlockingPeerChannel implements PeerChannel {
    */
   boolean isState(ChannelState s) {
     return state == s;
+  }
+
+  /** True if current state is equal to one of the states
+   */
+  boolean isState(ChannelState[] oneOf) {
+    return isState(state, oneOf);
   }
 
   /** True if current state is CLOSING or CLOSED
