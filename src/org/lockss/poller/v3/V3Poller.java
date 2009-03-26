@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.95 2009-03-11 06:22:53 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.96 2009-03-26 04:45:03 tlipkis Exp $
  */
 
 /*
@@ -2053,7 +2053,10 @@ public class V3Poller extends BasePoll {
 	try {
 	  try {
 	    noAuSet.load();
+	    int s = noAuSet.size();
 	    pollManager.ageNoAuSet(getAu(), noAuSet);
+	    log.debug2("NoAuSet: " + s + " aged-> " + noAuSet.size()
+		       + ", " + StringUtil.timeIntervalToString(TimeBase.msSince(noAuSet.getDate())));
 	  } catch (IOException e) {
 	    log.error("Failed to load no AU set", e);
 	    noAuSet.release();
@@ -2342,12 +2345,16 @@ public class V3Poller extends BasePoll {
 	DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(getAu());
 	synchronized (noAuSet) {
 	  try {
-	    log.debug("Adding to no AU peers: " + noAuPeers);
+	    log.debug2("Poll " + getKey() + " Adding no AU peers: "
+		       + noAuPeers);
 	    noAuSet.load();
+	    int s = noAuSet.size();
 	    noAuSet.addAll(noAuPeers);
 	    if (noAuSet.getDate() < 0) {
 	      noAuSet.setDate(TimeBase.nowMs());
 	    }
+	    log.debug2("NoAuSet: " + s + " -> " + noAuSet.size()
+		       + ", " + StringUtil.timeIntervalToString(TimeBase.msSince(noAuSet.getDate())));
 	    noAuSet.store(true);
 	  } catch (IOException e) {
 	    log.error("Failed to update no AU set", e);
