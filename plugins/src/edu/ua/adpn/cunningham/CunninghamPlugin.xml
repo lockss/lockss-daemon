@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -15,7 +19,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Cunningham (%s)&quot;, base_url</string>
+    <string>&quot;University of Alabama Cunningham Photos Plugin, Base URL %s&quot;, base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -31,7 +35,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Cunningham Plugin</string>
+    <string>University of Alabama Cunningham Photos Plugin</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -40,9 +44,9 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sCunningham.html&quot;, base_url</string>
-      <string>1,&quot;%sCunningham/.*\.tif&quot;, base_url</string>
+      <string>1,&quot;^%sCunningham\.html$&quot;, base_url</string>
     </list>
   </entry>
 </map>
