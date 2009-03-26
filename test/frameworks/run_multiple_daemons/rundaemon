@@ -1,7 +1,9 @@
 #! /bin/sh
 
+echo args="$@"
+
 # "." here is the test<n> dir
-PROP_URL_LIST="../../common.xml ../../title_db_files/*.xml ../lockss.txt ../lockss.opt local.txt local.opt"
+TITLE_DBS="../../title_db_files/*.xml"
 
 if [ "X${PROJECT_DIR}" = "X" ]
 then
@@ -9,8 +11,54 @@ then
 	exit
 fi
 
+while true ; do
+  case "$1" in
+    "-classpath" )
+      if [ -z "$CLASSPATH" ] ; then
+	CLASSPATH="$2"
+      else
+	CLASSPATH="$CLASSPATH":"$2"
+      fi
+      echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-debug" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
+      shift; continue;;
+    "-debug2" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG2"
+      shift; continue;;
+    "-debug3" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG3"
+      shift; continue;;
+    "-notitle" )
+      TITLE_DBS=""
+      shift; continue;;
+    "-g" )
+      group="$2"
+      echo "group=$group"
+      shift; shift; continue;;
+    "-1.5" )
+      if [ -z "$JAVA_15_HOME" ] ; then
+	echo "-1.5 option requires JAVA_15_HOME to point to 1.5 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_15_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    -Xmx* )
+      arg_mem="$1"
+      shift; continue;;
+  esac
+  break;
+done
+
 CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:../lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
 export CLASSPATH
+
+PROP_URL_LIST="../../common.xml ${TITLE_DBS} ../lockss.txt ../lockss.opt local.txt local.opt"
 
 echo running in `pwd` at `date`
 #echo CLASSPATH=$CLASSPATH
