@@ -7,25 +7,25 @@
 
   {
     title <
-      name = University of Alabama Cunningham Photo Collection 
+      name = University of Alabama Cunningham Photos
     >
     
     plugin = edu.ua.adpn.cunningham.CunninghamPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
 
-    au < released ; University of Alabama Cunningham Photo Collection >
+    au < released ; University of Alabama Cunningham Photos >
 
   }
   
   {
     title <
-      name = University of Alabama Emphasis68 Recordings 
+      name = University of Alabama Emphasis 1968 Recordings 
     >
     
     plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
 
-    au < released ; University of Alabama Emphasis68 Recordings >
+    au < released ; University of Alabama Emphasis 1968 Recordings >
 
   }
   
