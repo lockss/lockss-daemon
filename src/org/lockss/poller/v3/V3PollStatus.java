@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.30 2009-03-05 05:42:01 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.30.2.1 2009-03-26 04:43:50 tlipkis Exp $
  */
 
 /*
@@ -163,24 +163,26 @@ public class V3PollStatus {
         throws StatusService.NoSuchTableException {
       String key = table.getKey();
       table.setColumnDescriptors(colDescs);
-      table.setSummaryInfo(getSummary(pollManager));
+      table.setSummaryInfo(getSummary(pollManager, table));
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(key));
     }
     
-    private List getSummary(PollManager pollManager) {
+    private List getSummary(PollManager pollManager, StatusTable table) {
+      boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List summary = new ArrayList();
 
-      StringBuilder sb = new StringBuilder();
-      sb.append(pollManager.getEventCount(EventCtr.Polls));
-      sb.append(" started");
-      addEndStatus(sb, V3Poller.POLLER_STATUS_COMPLETE);
-      addEndStatus(sb, V3Poller.POLLER_STATUS_NO_QUORUM);
-      addEndStatus(sb, V3Poller.POLLER_STATUS_ERROR);
-      summary.add(new StatusTable.SummaryInfo("Polls",
-					      ColumnDescriptor.TYPE_STRING,
-					      sb.toString()));
-
+      if (isDebug) {
+	StringBuilder sb = new StringBuilder();
+	sb.append(pollManager.getEventCount(EventCtr.Polls));
+	sb.append(" started");
+	addEndStatus(sb, V3Poller.POLLER_STATUS_COMPLETE);
+	addEndStatus(sb, V3Poller.POLLER_STATUS_NO_QUORUM);
+	addEndStatus(sb, V3Poller.POLLER_STATUS_ERROR);
+	summary.add(new StatusTable.SummaryInfo("Polls",
+						ColumnDescriptor.TYPE_STRING,
+						sb.toString()));
+      }
       V3PollStatusAccessor status = pollManager.getV3Status();
       if (!CurrentConfig.getBooleanParam(V3PollFactory.PARAM_ENABLE_V3_POLLER,
 					 V3PollFactory.DEFAULT_ENABLE_V3_POLLER)) { 
@@ -300,8 +302,11 @@ public class V3PollStatus {
 
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
+      boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       table.setColumnDescriptors(colDescs);
-      table.setSummaryInfo(getSummary(pollManager));
+      if (isDebug) {
+	table.setSummaryInfo(getSummary(pollManager));
+      }
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows());
     }
@@ -350,7 +355,7 @@ public class V3PollStatus {
       sb.append(" declined");
       if (declined != 0) {
 	sb.append(" (");
-	addNak(sb, PollNak.NAK_NO_AU);
+	addNak(sb, PollNak.NAK_NO_AU, true);
 	addNak(sb, PollNak.NAK_NOT_CRAWLED);
 	addNak(sb, PollNak.NAK_PLUGIN_VERSION_MISMATCH);
 	addNak(sb, PollNak.NAK_NO_TIME);
@@ -380,9 +385,13 @@ public class V3PollStatus {
     }
 
     void addNak(StringBuilder sb, PollNak nak) {
+      addNak(sb, nak, false);
+    }
+
+    void addNak(StringBuilder sb, PollNak nak, boolean first) {
       int cnt = pollManager.getVoterNakEventCount(nak);
       if (cnt != 0) {
-	if (sb.length() != 0) sb.append(", ");
+	if (!first) sb.append(", ");
 	sb.append(cnt);
 	sb.append(" ");
 	sb.append(nak);
