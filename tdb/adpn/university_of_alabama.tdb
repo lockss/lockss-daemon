@@ -1,43 +1,49 @@
 {
+
   publisher <
     name = University of Alabama
   >
   
-  implicit < status ; name >  
-
   {
+  
     title <
       name = University of Alabama Cunningham Photos
     >
     
     plugin = edu.ua.adpn.cunningham.CunninghamPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
+    implicit < status ; name >
 
     au < released ; University of Alabama Cunningham Photos >
 
   }
   
   {
+
     title <
       name = University of Alabama Emphasis 1968 Recordings 
     >
     
     plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
-
+    implicit < status ; name >
+    
     au < released ; University of Alabama Emphasis 1968 Recordings >
 
   }
   
   {
+  
     title <
       name = University of Alabama Publisher Bindings Online: Confederate Imprints 
     >
     
     plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
+    implicit < status ; name >
 
     au < released ; University of Alabama Publisher Bindings Online: Confederate Imprints >
 
   }
+
 }

@@ -1,14 +1,17 @@
 {
+
   publisher <
     name = Alabama Department of Archives and History
   >
 
   {
-    implicit < status ; name >
+
     plugin = gov.alabama.archives.adpn.executiveorders.ExecutiveOrdersPlugin
     param[base_url] = http://www.archives.alabama.gov/lockss/    
+    implicit < status ; name >
   
     {
+
       title <
         name = Alabama Department of Archives and History Executive Orders 
       >
@@ -20,11 +23,13 @@
   }
   
   {
-    implicit < status ; name ; subdirectory >
+
     plugin = gov.alabama.archives.adpn.goldstar.GoldstarPlugin
     param[base_url] = http://www.archives.alabama.gov/lockss/    
+    implicit < status ; name ; subdirectory >
   
     {
+
       title <
         name = Alabama Department of Archives and History World War I Gold Star Database 
       >

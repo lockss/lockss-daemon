@@ -1,14 +1,17 @@
 {
+
   publisher <
     name = University of North Alabama
   >
   
   {
+
     plugin = edu.auburn.contentdm.ContentDmPlugin
-    implicit < status ; name ; param[volume_name] >  
     param[base_url] = http://contentdm.una.edu/   
+    implicit < status ; name ; param[volume_name] >  
 
     {
+
       title <
         name = University of North Alabama CONTENTdm Collections
       >
@@ -20,9 +23,10 @@
   }
   
   { 
+
     plugin = edu.una.plugin.McDonaldPhotosPlugin
-    implicit < status ; name ; param[volume] >  
     param[base_url] = http://www2.una.edu/agordon/permission01.html 
+    implicit < status ; name ; param[volume] >  
 
     {
       title <
@@ -32,5 +36,7 @@
       au < released ; University of North Alabama McDonald Photos Volume 1 ; 1 >
 
     }
+
   }
+
 }
