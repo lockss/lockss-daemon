@@ -44,9 +44,9 @@
     
       plugin = edu.auburn.adpn.HistoricalMapsDrawerPlugin
       param[base_url] = http://digdata4.lib.auburn.edu/alamaps/  
-      implicit < status ; name >
+      implicit < status ; name ; param[volume_name] >
     
-      au < released ; Auburn University Historical Maps Drawers 6-10 >
+      au < released ; Auburn University Historical Maps Drawers 6-10 ; 6-10>
   
     }
   
