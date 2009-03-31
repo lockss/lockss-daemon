@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -26,20 +26,19 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sgpo.gov/bills/%d\.(html|tgz)$&quot;, base_url, congress</string>
       <string>1,&quot;^%sgpo.gov/bills/%d/$&quot;, base_url, congress</string>
-      <string>1,&quot;^%sgpo.gov/bills/%d\.tgz$&quot;, base_url, congress</string>
-      <string>1,&quot;^%sgpo.gov/bills/%d\.html$&quot;, base_url, congress</string>
       <string>1,&quot;^%s$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%sgpo.gov/bills/%d/&quot;, base_url, congress</string>
       <string>&quot;%sgpo.gov/bills/%d.tgz&quot;, base_url, congress</string>
       <string>&quot;%sgpo.gov/bills/%d.html&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/bills/%d/&quot;, base_url, congress</string>
     </list>    
   </entry>
   <entry>

@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -22,19 +26,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sgpo.gov/journal/%d/$&quot;, base_url, year</string>
-      <string>1,&quot;^%s$&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/journal/%d/&quot;, base_url, year</string>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tiff?)$&quot;, base_url</string>
-      <string>1,&quot;^%sgpo.gov/journal/journal/.(html|tgz)$&quot;, base_url</string>
+      <string>1,&quot;^%s$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sgpo.gov/journal/%d/&quot;, base_url, year</string>
-    <string>&quot;%sgpo.gov/journal/journal.html&quot;, base_url</string>
-    <string>&quot;%sgpo.gov/journal/journal.tgz&quot;, base_url</string>
   </entry>
   <entry>
     <string>au_manifest</string>

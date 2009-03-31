@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -25,8 +29,8 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/documents/%d\.(html|tgz)$&quot;, base_url, congress</string>
-      <string>1,&quot;^%s$&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/documents/%d/&quot;, base_url, congress</string>
+      <string>1,&quot;^%s$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
