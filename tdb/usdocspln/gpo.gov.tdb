@@ -204,18 +204,18 @@
     param[base_url] = http://bulk.resource.org/      
     implicit < status ; name ; param[year] >
 
-    au < ready ; Federal Register 1995 ; 1995 >
-    au < ready ; Federal Register 1996 ; 1996 >
-    au < ready ; Federal Register 1997 ; 1997 >
-    au < ready ; Federal Register 1998 ; 1998 >
-    au < ready ; Federal Register 1999 ; 1999 >
-    au < ready ; Federal Register 2000 ; 2000 >
-    au < ready ; Federal Register 2003 ; 2003 >
-    au < ready ; Federal Register 2004 ; 2004 >
-    au < ready ; Federal Register 2005 ; 2005 >
-    au < ready ; Federal Register 2006 ; 2006 >
-    au < ready ; Federal Register 2007 ; 2007 >
-    au < ready ; Federal Register 2008 ; 2008 >
+    au < released ; Federal Register 1995 ; 1995 >
+    au < released ; Federal Register 1996 ; 1996 >
+    au < released ; Federal Register 1997 ; 1997 >
+    au < released ; Federal Register 1998 ; 1998 >
+    au < released ; Federal Register 1999 ; 1999 >
+    au < released ; Federal Register 2000 ; 2000 >
+    au < released ; Federal Register 2003 ; 2003 >
+    au < released ; Federal Register 2004 ; 2004 >
+    au < released ; Federal Register 2005 ; 2005 >
+    au < released ; Federal Register 2006 ; 2006 >
+    au < released ; Federal Register 2007 ; 2007 >
+    au < released ; Federal Register 2008 ; 2008 >
     
   }  
 
@@ -229,13 +229,13 @@
     param[base_url] = http://bulk.resource.org/      
     implicit < status ; name ; param[congress] >
 
-    au < ready ; Congressional Reports, 104th Congress ; 104 >
-    au < ready ; Congressional Reports, 105th Congress ; 105 >
-    au < ready ; Congressional Reports, 106th Congress ; 106 >
-    au < ready ; Congressional Reports, 107th Congress ; 107 >
-    au < ready ; Congressional Reports, 108th Congress ; 108 >
-    au < ready ; Congressional Reports, 109th Congress ; 109 > 
-    au < ready ; Congressional Reports, 110th Congress ; 110 >
+    au < released ; Congressional Reports, 104th Congress ; 104 >
+    au < released ; Congressional Reports, 105th Congress ; 105 >
+    au < released ; Congressional Reports, 106th Congress ; 106 >
+    au < released ; Congressional Reports, 107th Congress ; 107 >
+    au < released ; Congressional Reports, 108th Congress ; 108 >
+    au < released ; Congressional Reports, 109th Congress ; 109 > 
+    au < released ; Congressional Reports, 110th Congress ; 110 >
 
   }
 
