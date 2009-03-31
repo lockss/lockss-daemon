@@ -70,6 +70,73 @@
   {
 
     title <
+      name = Congressional Prints 
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[congress] >
+
+    au < released ; Congressional Prints, 105th Congress ; 105 >
+    au < released ; Congressional Prints, 106th Congress ; 106 >
+    au < released ; Congressional Prints, 107th Congress ; 107 >
+    au < released ; Congressional Prints, 108th Congress ; 108 >
+    au < released ; Congressional Prints, 109th Congress ; 109 > 
+    au < released ; Congressional Prints, 110th Congress ; 110 >
+
+  }
+  
+  {
+
+    title <
+      name = Congressional Record
+    >
+
+      
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
+
+    au < released ; Congressional Record 1995 ; 1995 >
+    au < released ; Congressional Record 1996 ; 1996 >
+    au < released ; Congressional Record 1997 ; 1997 >
+    au < released ; Congressional Record 1998 ; 1998 >
+    au < released ; Congressional Record 1999 ; 1999 >
+    au < released ; Congressional Record 2000 ; 2000 >
+    au < released ; Congressional Record 2001 ; 2001 >
+    au < released ; Congressional Record 2002 ; 2002 >
+    au < released ; Congressional Record 2003 ; 2003 >
+    au < released ; Congressional Record 2004 ; 2004 >
+    au < released ; Congressional Record 2005 ; 2005 >
+    au < released ; Congressional Record 2006 ; 2006 >
+    au < released ; Congressional Record 2007 ; 2007 >
+    au < released ; Congressional Record 2008 ; 2008 >
+    
+  }
+  
+  {
+  
+    title <
+      name = Congressional Reports 
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[congress] >
+
+    au < released ; Congressional Reports, 104th Congress ; 104 >
+    au < released ; Congressional Reports, 105th Congress ; 105 >
+    au < released ; Congressional Reports, 106th Congress ; 106 >
+    au < released ; Congressional Reports, 107th Congress ; 107 >
+    au < released ; Congressional Reports, 108th Congress ; 108 >
+    au < released ; Congressional Reports, 109th Congress ; 109 > 
+    au < released ; Congressional Reports, 110th Congress ; 110 >
+
+  }
+
+  {
+
+    title <
       name = Constitution of the United States
     >
 
@@ -82,6 +149,33 @@
 
   }
   
+  {
+
+    title <
+      name = Federal Register
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
+
+    au < released ; Federal Register 1995 ; 1995 >
+    au < released ; Federal Register 1996 ; 1996 >
+    au < released ; Federal Register 1997 ; 1997 >
+    au < released ; Federal Register 1998 ; 1998 >
+    au < released ; Federal Register 1999 ; 1999 >
+    au < released ; Federal Register 2000 ; 2000 >
+    au < does_not_exist ; Federal Register 2001 ; 2001 >
+    au < does_not_exist ; Federal Register 2002 ; 2002 >
+    au < released ; Federal Register 2003 ; 2003 >
+    au < released ; Federal Register 2004 ; 2004 >
+    au < released ; Federal Register 2005 ; 2005 >
+    au < released ; Federal Register 2006 ; 2006 >
+    au < released ; Federal Register 2007 ; 2007 >
+    au < released ; Federal Register 2008 ; 2008 >
+    
+  }  
+
   {
 
     title <
@@ -145,100 +239,6 @@
     au < released ; U.S. Government Manual 2006 ; 2006 >
     au < released ; U.S. Government Manual 2007 ; 2007 >
    
-  }
-
-  {
-
-    title <
-      name = Congressional Prints 
-    >
-
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[congress] >
-
-    au < released ; Congressional Prints, 105th Congress ; 105 >
-    au < released ; Congressional Prints, 106th Congress ; 106 >
-    au < released ; Congressional Prints, 107th Congress ; 107 >
-    au < released ; Congressional Prints, 108th Congress ; 108 >
-    au < released ; Congressional Prints, 109th Congress ; 109 > 
-    au < released ; Congressional Prints, 110th Congress ; 110 >
-
-  }
-  
-  {
-
-    title <
-      name = Congressional Record
-    >
-
-      
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[year] >
-
-    au < released ; Congressional Record 1995 ; 1995 >
-    au < released ; Congressional Record 1996 ; 1996 >
-    au < released ; Congressional Record 1997 ; 1997 >
-    au < released ; Congressional Record 1998 ; 1998 >
-    au < released ; Congressional Record 1999 ; 1999 >
-    au < released ; Congressional Record 2000 ; 2000 >
-    au < released ; Congressional Record 2001 ; 2001 >
-    au < released ; Congressional Record 2002 ; 2002 >
-    au < released ; Congressional Record 2003 ; 2003 >
-    au < released ; Congressional Record 2004 ; 2004 >
-    au < released ; Congressional Record 2005 ; 2005 >
-    au < released ; Congressional Record 2006 ; 2006 >
-    au < released ; Congressional Record 2007 ; 2007 >
-    au < released ; Congressional Record 2008 ; 2008 >
-    
-  }
-  
-  {
-
-    title <
-      name = Federal Register
-    >
-
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[year] >
-
-    au < released ; Federal Register 1995 ; 1995 >
-    au < released ; Federal Register 1996 ; 1996 >
-    au < released ; Federal Register 1997 ; 1997 >
-    au < released ; Federal Register 1998 ; 1998 >
-    au < released ; Federal Register 1999 ; 1999 >
-    au < released ; Federal Register 2000 ; 2000 >
-    au < does_not_exist ; Federal Register 2001 ; 2001 >
-    au < does_not_exist ; Federal Register 2002 ; 2002 >
-    au < released ; Federal Register 2003 ; 2003 >
-    au < released ; Federal Register 2004 ; 2004 >
-    au < released ; Federal Register 2005 ; 2005 >
-    au < released ; Federal Register 2006 ; 2006 >
-    au < released ; Federal Register 2007 ; 2007 >
-    au < released ; Federal Register 2008 ; 2008 >
-    
-  }  
-
-  {
-  
-    title <
-      name = Congressional Reports 
-    >
-
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[congress] >
-
-    au < released ; Congressional Reports, 104th Congress ; 104 >
-    au < released ; Congressional Reports, 105th Congress ; 105 >
-    au < released ; Congressional Reports, 106th Congress ; 106 >
-    au < released ; Congressional Reports, 107th Congress ; 107 >
-    au < released ; Congressional Reports, 108th Congress ; 108 >
-    au < released ; Congressional Reports, 109th Congress ; 109 > 
-    au < released ; Congressional Reports, 110th Congress ; 110 >
-
   }
 
 }
