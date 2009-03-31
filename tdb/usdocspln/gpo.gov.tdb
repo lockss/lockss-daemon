@@ -1,19 +1,20 @@
 {
+
   publisher <
     name = Government Printing Office
   >
 
   rights = openaccess
-  param[base_url] = http://bulk.resource.org/
 
   {
+  
     title <
       name = Congressional Bills
     >
 
-    implicit < status ; name ; param[congress] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin
+    param[base_url] = http://bulk.resource.org/
+    implicit < status ; name ; param[congress] >
 
     au < released ; Congressional Bills, 104th Congress ; 103 >
     au < released ; Congressional Bills, 104th Congress ; 104 >
@@ -27,13 +28,14 @@
   }
 
   {
+  
     title <
       name = Congressional Documents
     >
 
-    implicit < status ; name ; param[congress] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
+    param[base_url] = http://bulk.resource.org/
+    implicit < status ; name ; param[congress] >
 
     au < ready ; Congressional Documents, 104th Congress ; 104 >
     au < ready ; Congressional Documents, 105th Congress ; 105 >
@@ -46,13 +48,14 @@
   }
 
   {
+
     title <
       name = Congressional Hearings
     >
 
-    implicit < status ; name ; param[congress] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin
+    param[base_url] = http://bulk.resource.org/
+    implicit < status ; name ; param[congress] >
 
     au < ready ; Congressional Hearings, 104th Congress ; 104 >
     au < released ; Congressional Hearings, 105th Congress ; 105 >
@@ -65,13 +68,14 @@
   }
 
   {
+
     title <
       name = Constitution of the United States
     >
 
-    implicit < status ; name ; param[year] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
 
     au < released ; Constitution of the United States, 1992 Edition ; 1992 >
     au < released ; Constitution of the United States, 2002 Edition ; 2002 >
@@ -79,13 +83,14 @@
   }
   
   {
+
     title <
       name = House Journal
     >
 
-    implicit < status ; name ; param[year] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.journal.HouseJournalPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
 
     au < released ; House Journal 1991 ; 1991 >
     au < released ; House Journal 1992 ; 1992 >
@@ -100,13 +105,14 @@
   }
   
   {
+
     title <
       name = Public and Private Laws 
     >
-
-    implicit < status ; name ; param[congress] >
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[congress] >
 
     au < released ; Public and Private Laws, 104th Congress ; 104 >
     au < released ; Public and Private Laws, 105th Congress ; 105 >
@@ -118,13 +124,14 @@
   }
   
   {
+
     title <
       name = U.S. Government Manual
     >
 
-    implicit < status ; name ; param[year] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
 
     au < released ; U.S. Government Manual 1997 ; 1997 >
     au < released ; U.S. Government Manual 1998 ; 1998 >
@@ -141,13 +148,14 @@
   }
 
   {
+
     title <
       name = Congressional Prints 
     >
 
-    implicit < status ; name ; param[congress] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[congress] >
 
     au < released ; Congressional Prints, 105th Congress ; 105 >
     au < released ; Congressional Prints, 106th Congress ; 106 >
@@ -159,13 +167,15 @@
   }
   
   {
+
     title <
       name = Congressional Record
     >
 
-    implicit < status ; name ; param[year] >
       
     plugin = org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
 
     au < released ; Congressional Record 1995 ; 1995 >
     au < released ; Congressional Record 1996 ; 1996 >
@@ -185,13 +195,14 @@
   }
   
   {
+
     title <
       name = Federal Register
     >
 
-    implicit < status ; name ; param[year] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.register.FederalRegisterPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
 
     au < ready ; Federal Register 1995 ; 1995 >
     au < ready ; Federal Register 1996 ; 1996 >
@@ -209,13 +220,14 @@
   }  
 
   {
+  
     title <
       name = Congressional Reports 
     >
 
-    implicit < status ; name ; param[congress] >
-      
     plugin = org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[congress] >
 
     au < ready ; Congressional Reports, 104th Congress ; 104 >
     au < ready ; Congressional Reports, 105th Congress ; 105 >
