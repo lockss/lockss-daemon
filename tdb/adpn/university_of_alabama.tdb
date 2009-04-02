@@ -14,7 +14,7 @@
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
     implicit < status ; name >
 
-    au < released ; University of Alabama Cunningham Photos >
+    au < down ; University of Alabama Cunningham Photos >
 
   }
   
@@ -28,7 +28,7 @@
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
     implicit < status ; name >
     
-    au < released ; University of Alabama Emphasis 1968 Recordings >
+    au < down ; University of Alabama Emphasis 1968 Recordings >
 
   }
   
@@ -42,7 +42,7 @@
     param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
     implicit < status ; name >
 
-    au < released ; University of Alabama Publisher Bindings Online: Confederate Imprints >
+    au < down ; University of Alabama Publisher Bindings Online: Confederate Imprints >
 
   }
 
