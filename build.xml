@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.244 2009-02-26 05:12:56 tlipkis Exp $
+ $Id: build.xml,v 1.245 2009-04-02 22:53:15 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1147,7 +1147,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
       <filterset>
        <filter token="CLASSPATH" value="${tar.clspth}"/>
        <filter token="RELEASENAME" value="${releasename}"/>
-       <filter token="PLATFORM_VERSION" value="-${tarrelease}"/>
+       <filter token="PLATFORM_VERSION" value="TAR-${tarrelease}"/>
       </filterset>
     </copy>
 
