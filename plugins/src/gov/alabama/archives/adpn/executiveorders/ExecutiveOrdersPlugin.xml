@@ -5,23 +5,19 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
-    <int>3</int>
-  </entry>
-  <entry>
     <string>au_name</string>
-    <string>&quot;ADAH Executive Orders (%s)&quot;, base_url</string>
+    <string>&quot;Alabama Department of Archives and History Executive Orders Plugin, Base URL %s&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>ADAH Executive Orders Plugin</string>
+    <string>Alabama Department of Archives and History Executive Orders Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -30,18 +26,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%smanifestpage.html$&quot;, base_url</string>
-      <string>1,&quot;^%sexecutiveorders.*$&quot;, base_url</string>
+      <string>1,&quot;^%smanifestpage\.html$&quot;, base_url</string>
+      <string>1,&quot;^%sexecutiveorders/&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%smanifestpage.html&quot;, base_url</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_type</string>
-    <string>HTML Links</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
