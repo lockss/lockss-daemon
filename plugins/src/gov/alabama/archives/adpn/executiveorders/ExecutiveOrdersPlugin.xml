@@ -1,0 +1,60 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>gov.alabama.archives.adpn.executiveorders.ExecutiveOrdersPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>3</int>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;ADAH Executive Orders (%s)&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>ADAH Executive Orders Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%smanifestpage.html$&quot;, base_url</string>
+      <string>1,&quot;^%sexecutiveorders.*$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%smanifestpage.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_type</string>
+    <string>HTML Links</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
