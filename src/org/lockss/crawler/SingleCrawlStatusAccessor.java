@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.8 2007-10-09 00:57:41 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.9 2009-04-07 04:50:51 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.util.*;
 
 public class SingleCrawlStatusAccessor implements StatusAccessor {
 
-  private static final String IX = "ix";
   private static final String MIME_TYPE_NAME = "mime_type_name";
   private static final String MIME_TYPE_NUM_URLS = "mime_type_num_urls";
   private static final String MIMETYPES_URLS_KEY = "mime-type";
@@ -58,7 +57,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     });
 
   private static final List statusSortRules =
-    ListUtil.list(new StatusTable.SortRule(IX, true));
+    ListUtil.list(new StatusTable.SortRule(MIME_TYPE_NAME, true));
 
   private CrawlManager.StatusSource statusSource;
 
