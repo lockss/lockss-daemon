@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.35 2008-12-16 00:52:23 edwardsb1 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.36 2009-04-07 04:52:57 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   /** Maps PeerId to PeerAddress.  Useful to allow a node behind NAT to
    * reach others nodes behind the same NAT using the internal address.
-   * List of PeerId,Peer;,...*/
+   * List of PeerId,Peer;,...  Daemon restart required to remove mappings. */
   public static final String PARAM_PEER_ADDRESS_MAP = PREFIX + "peerAddressMap";
 
   /**
