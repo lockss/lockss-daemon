@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.36 2009-04-07 04:52:05 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.37 2009-04-07 19:09:01 thib_gc Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PER_HOST_PERMISSION_PATH =
     "plugin_per_host_permission_path";
   public static final String KEY_PLUGIN_PARENT = "plugin_parent";
+  public static final String KEY_PLUGIN_PARENT_VERSION = "plugin_parent_version";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
