@@ -1,0 +1,18 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.definable.ChildPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Child Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.nopackage.NoSuchPlugin</string>
+  </entry>
+  <entry>
+    <string>foo</string>
+    <string>bar</string>
+  </entry>
+</map>

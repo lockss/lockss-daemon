@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.192 2008-08-26 06:49:41 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.193 2009-04-07 04:52:05 tlipkis Exp $
  */
 
 /*
@@ -1152,8 +1152,8 @@ public class PluginManager
       xmlPlugin.initPlugin(getDaemon(), pluginName, loader);
       if (isCompatible(xmlPlugin)) {
 	// found a compatible plugin, return it
-	String url = xmlPlugin.getLoadedFrom();
-	PluginInfo info = new PluginInfo(xmlPlugin, loader, url);
+	List<String> urls = xmlPlugin.getLoadedFromUrls();
+	PluginInfo info = new PluginInfo(xmlPlugin, loader, urls.get(0));
 	return info;
       } else {
 	xmlPlugin.stopPlugin();

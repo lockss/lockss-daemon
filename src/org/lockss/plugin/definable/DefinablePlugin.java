@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.35 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.36 2009-04-07 04:52:05 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class DefinablePlugin extends BasePlugin {
     "plugin_au_config_user_msg";
   public static final String KEY_PER_HOST_PERMISSION_PATH =
     "plugin_per_host_permission_path";
+  public static final String KEY_PLUGIN_PARENT = "plugin_parent";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
@@ -95,7 +96,7 @@ public class DefinablePlugin extends BasePlugin {
 
   protected ExternalizableMap definitionMap = new ExternalizableMap();
   protected CacheResultHandler resultHandler = null;
-  protected String loadedFrom;
+  protected List<String> loadedFromUrls;
   protected CrawlWindow crawlWindow;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
@@ -112,15 +113,48 @@ public class DefinablePlugin extends BasePlugin {
 			 ClassLoader loader)
       throws FileNotFoundException {
     // convert the plugin class name to an xml file name
-    String mapFile = extMapName.replace('.', '/') + MAP_SUFFIX;
     // load the configuration map from jar file
-    ExternalizableMap defMap = new ExternalizableMap();
-    defMap.loadMapFromResource(mapFile, loader);
-    URL url = loader.getResource(mapFile);
-    if (url != null) {
-      loadedFrom = url.toString();
-    }
+    ExternalizableMap defMap = loadMap(extMapName, loader);
     this.initPlugin(daemon, extMapName, defMap, loader);
+  }
+
+  private ExternalizableMap loadMap(String extMapName, ClassLoader loader)
+      throws FileNotFoundException {
+    String first = null;
+    String next = extMapName;
+    List<String> urls = new ArrayList<String>();
+    ExternalizableMap res = null;
+    while (next != null) {
+      // convert the plugin class name to an xml file name
+      String mapFile = next.replace('.', '/') + MAP_SUFFIX;
+      URL url = loader.getResource(mapFile);
+      if (url != null && urls.contains(url.toString())) {
+	throw new PluginException.InvalidDefinition("Plugin inheritance loop: "
+						    + next);
+      }
+      // load into map
+      ExternalizableMap oneMap = new ExternalizableMap();
+      oneMap.loadMapFromResource(mapFile, loader);
+      urls.add(url.toString());
+      if (res == null) {
+	res = oneMap;
+      } else {
+	for (Map.Entry ent : oneMap.entrySet()) {
+	  String key = (String)ent.getKey();
+	  Object val = ent.getValue();
+	  if (!res.containsKey(key)) {
+	    res.setMapElement(key, val);
+	  }
+	}
+      }
+      if (oneMap.containsKey(KEY_PLUGIN_PARENT)) {
+	next = oneMap.getString(KEY_PLUGIN_PARENT);
+      } else {
+	next = null;
+      }
+    }
+    loadedFromUrls = urls;
+    return res;
   }
 
   // Used by tests
@@ -188,8 +222,8 @@ public class DefinablePlugin extends BasePlugin {
     }
   }
 
-  public String getLoadedFrom() {
-    return loadedFrom;
+  public List<String> getLoadedFromUrls() {
+    return loadedFromUrls;
   }
 
   public String getPluginName() {

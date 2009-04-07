@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.23 2008-09-18 02:10:23 dshr Exp $
+ * $Id: TestDefinablePlugin.java,v 1.24 2009-04-07 04:52:05 tlipkis Exp $
  */
 
 /*
@@ -219,6 +219,9 @@ public class TestDefinablePlugin extends LockssTestCase {
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("org.lockss.test.MockConfigurablePlugin",
                  definablePlugin.getPluginId());
+    List<String> urls = definablePlugin.getLoadedFromUrls();
+    assertMatchesRE("/org/lockss/test/MockConfigurablePlugin.xml$",
+		    urls.get(0));
   }
 
   public void testGetPublishingPlatform() throws Exception {
@@ -239,7 +242,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     }
     catch (NullPointerException npe) {
     }
-    assertEquals("DefinablePlugin", plug.getPluginName());
 
     String extMapName = "org.lockss.test.MockConfigurablePlugin";
     plug.initPlugin(daemon, extMapName);
@@ -256,6 +258,51 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals(sb.toString(),
                  map.getString(DefinableArchivalUnit.KEY_AU_START_URL, null));
 
+  }
+
+  public void testInherit() throws Exception {
+    String prefix = "org.lockss.plugin.definable.";
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = prefix + "ChildPlugin";
+    definablePlugin.initPlugin(daemon, extMapName);
+    assertEquals(prefix + "ChildPlugin", definablePlugin.getPluginId());
+    List<String> urls = definablePlugin.getLoadedFromUrls();
+    assertMatchesRE("/org/lockss/plugin/definable/ChildPlugin.xml$",
+		    urls.get(0));
+    assertMatchesRE("/org/lockss/plugin/definable/GoodPlugin.xml$",
+		    urls.get(1));
+    assertEquals(2, urls.size());
+
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
+    assertEquals(prefix + "ChildPlugin", map.getString("plugin_identifier"));
+    assertEquals(prefix + "GoodPlugin", map.getString("plugin_parent"));
+    assertEquals("Child Plugin", map.getString("plugin_name"));
+    assertEquals("\"Good Plugin AU %s\", base_url", map.getString("au_name"));
+    assertIsomorphic(ListUtil.list("\"%s\", base_url"),
+		     map.getCollection("au_start_url"));
+    assertEquals("bar", map.getString("foo"));
+  }
+
+  public void testIllInherit() throws Exception {
+    String prefix = "org.lockss.plugin.definable.";
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = prefix + "ChildPluginNoParent";
+    try {
+      definablePlugin.initPlugin(daemon, extMapName);
+      fail("initPlugin() of child with nonexistent parent should throw");
+    } catch (FileNotFoundException e) {
+    }
+  }
+
+  public void testInheritLoop() throws Exception {
+    String prefix = "org.lockss.plugin.definable.";
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = prefix + "ChildPluginParentLoop";
+    try {
+      definablePlugin.initPlugin(daemon, extMapName);
+      fail("initPlugin() with inheritance loop should throw");
+    } catch (PluginException.InvalidDefinition e) {
+    }
   }
 
   public void testInstallCacheExceptionHandler() {
