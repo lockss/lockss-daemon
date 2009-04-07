@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.19 2006-07-06 17:38:55 thib_gc Exp $
+ * $Id: ExternalizableMap.java,v 1.20 2009-04-07 04:53:20 tlipkis Exp $
  */
 
 /*
@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.net.URL;
 
 /**
  * <p>A {@link TypedEntryMap} that does not allow keys of type
@@ -120,6 +119,21 @@ public class ExternalizableMap extends TypedEntryMap {
   /**
    * <p>Loads the contents of a serialized map into this object,
    * replacing its contents if the deserialized map is non-null,
+   * by reading from a URL.</p>
+   * @param mapLocation The URL of the serialized map.
+   * @param loader      The class loader.
+   * @throws FileNotFoundException if the resource is not found by the
+   *                               class loader.
+   */
+  public void loadMapFromResource(URL mapLocation,
+                                  ClassLoader loader)
+      throws FileNotFoundException {
+    loadMapFromResource(makeHashMapSerializer(), mapLocation, loader);
+  }
+
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null,
    * by reading from a resource obtained from the class loader.</p>
    * @param mapLocation The location of the serialized map.
    * @param loader      The class loader.
@@ -163,6 +177,35 @@ public class ExternalizableMap extends TypedEntryMap {
       logger.warning("Could not load: " + mapLocation, e);
       errorString = "Exception loading XML file: " + e.toString();
       throw new FileNotFoundException(errorString);
+    }
+  }
+
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null,
+   * by reading from a resource obtained from the class loader
+   * using the given deserializer.</p>
+   * @param deserializer The object serializer to use.
+   * @param mapUrl       The location of the serialized map.
+   * @param loader       The class loader.
+   * @throws FileNotFoundException if the URL is not found.
+   */
+  public void loadMapFromResource(ObjectSerializer deserializer,
+                                  URL mapUrl,
+                                  ClassLoader loader)
+      throws FileNotFoundException {
+    errorString = null;
+    try {
+      InputStream mapStream = mapUrl.openStream();
+      // CASTOR: Remove unwrap() call
+      HashMap map = unwrap(deserializer.deserialize(mapStream));
+      m_map = map;
+    } catch (Exception e) {
+//       logger.warning("Could not load: " + mapLocation, e);
+      errorString = "Unable to load: " + e.toString();
+      FileNotFoundException fnf = new FileNotFoundException(errorString);
+      fnf.initCause(e);
+      throw fnf;
     }
   }
 
