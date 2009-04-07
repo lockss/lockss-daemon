@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.80 2008-11-10 07:11:23 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.81 2009-04-07 04:52:29 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,13 @@ public class BaseUrlCacher implements UrlCacher {
     Configuration.PREFIX + "baseuc.normalizeRedirectUrl";
   public static final boolean DEFAULT_NORMALIZE_REDIRECT_URL = true;
 
+  /** Limit on rewinding the network input stream after checking for a
+   * login page.  If LoginPageChecker returns false after reading father
+   * than this the page will be refetched. */
+  public static final String PARAM_LOGIN_CHECKER_MARK_LIMIT =
+    Configuration.PREFIX + "baseuc.loginPageCheckerMarkLimit";
+  public static final int DEFAULT_LOGIN_CHECKER_MARK_LIMIT = 24 * 1024;
+
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
 
@@ -96,10 +103,6 @@ public class BaseUrlCacher implements UrlCacher {
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
-
-  // Max amount we'll buffer up to avoid refetching a page when we check if
-  // it's a login page
-  static final int LOGIN_BUFFER_MAX = 16 * 1024;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
     this.origUrl = url;
@@ -319,7 +322,8 @@ public class BaseUrlCacher implements UrlCacher {
       if (!input.markSupported()) {
         input = new BufferedInputStream(input);
       }
-      input.mark(LOGIN_BUFFER_MAX);
+      input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
+					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
       Reader reader = new InputStreamReader(input, Constants.DEFAULT_ENCODING);
       try {
 	if (checker.isLoginPage(headers, reader)) {

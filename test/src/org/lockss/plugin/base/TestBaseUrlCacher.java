@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.61 2009-03-05 05:42:43 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.62 2009-04-07 04:52:29 tlipkis Exp $
  */
 
 /*
@@ -1058,16 +1058,39 @@ public class TestBaseUrlCacher extends LockssTestCase {
                                          null, 99, null,
                                          loginPageChecker));
 
-    cacher._input = new MyStringInputStream("test stream");
+    MyStringInputStream inStrm = new MyStringInputStream("test stream");;
+    cacher._input = inStrm;
     cacher._headers = new CIProperties();
     // should cache
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
 
     assertTrue(loginPageChecker.wasCalled());
-    assertTrue(((MyStringInputStream) cacher._input).markWasCalled());
-    assertEquals(16 * 1024, ((MyStringInputStream) cacher._input)
-        .getMarkBufferSize());
-    assertTrue(((MyStringInputStream) cacher._input).resetWasCalled());
+    assertTrue(inStrm.markWasCalled());
+    assertEquals(BaseUrlCacher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT,
+		 inStrm.getMarkBufferSize());
+    assertTrue(inStrm.resetWasCalled());
+    assertEquals(1, cacher.getUncachedInputStreamCount);
+  }
+
+  public void testCacheLPCResetAndMarkCalled2() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+				  "12345");
+    MyMockLoginPageChecker loginPageChecker = new MyMockLoginPageChecker(false);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, null,
+                                         loginPageChecker));
+
+    MyStringInputStream inStrm = new MyStringInputStream("test stream");;
+    cacher._input = inStrm;
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+
+    assertTrue(loginPageChecker.wasCalled());
+    assertTrue(inStrm.markWasCalled());
+    assertEquals(12345, inStrm.getMarkBufferSize());
+    assertTrue(inStrm.resetWasCalled());
     assertEquals(1, cacher.getUncachedInputStreamCount);
   }
 
@@ -1128,14 +1151,16 @@ public class TestBaseUrlCacher extends LockssTestCase {
                                          null, 99, null,
                                          loginPageChecker));
 
-    cacher._input = new MyStringInputStreamMarkNotSupported("test stream");
+    MyStringInputStream inStrm =
+      new MyStringInputStreamMarkNotSupported("test stream");
+    cacher._input = inStrm;
     cacher._headers = new CIProperties();
     // should cache
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
 
     assertTrue(loginPageChecker.wasCalled());
-    assertFalse(((MyStringInputStream) cacher._input).resetWasCalled());
-    assertFalse(((MyStringInputStream) cacher._input).markWasCalled());
+    assertFalse(inStrm.resetWasCalled());
+    assertFalse(inStrm.markWasCalled());
     assertEquals(1, cacher.getUncachedInputStreamCount);
   }
 
