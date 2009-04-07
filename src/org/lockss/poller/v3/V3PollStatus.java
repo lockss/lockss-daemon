@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.31 2009-03-26 04:44:52 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.32 2009-04-07 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -1145,9 +1145,8 @@ public class V3PollStatus {
         summary.add(new SummaryInfo("Remaining",
                                     ColumnDescriptor.TYPE_TIME_INTERVAL,
                                     new Long(remain)));
-      } else {
-        theLog.debug3("voter " + voter + " user data " + voter.getVoterUserData() +
-                       " hint " + voter.getVoterUserData().getAgreementHint());
+      }
+      if (voter.getStatus() == STATUS_COMPLETE) {
 	String agreePercent =
 	  doubleToPercent(voter.getVoterUserData().getAgreementHint());
 	summary.add(new SummaryInfo("Agreement",
