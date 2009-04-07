@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.20 2009-03-05 05:40:06 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.21 2009-04-07 04:51:24 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 
   /* Subclass should override this to hash the specified element
    */
-  protected abstract int hashNodeUpToNumBytes(int numBytes)
+  protected abstract long hashNodeUpToNumBytes(int numBytes)
       throws IOException;
 
   /** Subclass should override if it wants to exclude from the hash some
@@ -163,7 +163,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 	  return numBytes - bytesLeftToHash;
 	}
       }
-      int numBytesHashed =
+      long numBytesHashed =
 	hashNodeUpToNumBytes(bytesLeftToHash);
       bytesLeftToHash -= numBytesHashed;
       totalBytesHashed += numBytesHashed;

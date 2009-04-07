@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.25 2005-10-19 00:23:55 tlipkis Exp $
+ * $Id: GenericContentHasher.java,v 1.26 2009-04-07 04:51:24 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class GenericContentHasher extends GenericHasher {
     return cus.contentHashIterator();
   }
 
-  protected int hashNodeUpToNumBytes(int numBytes)
+  protected long hashNodeUpToNumBytes(int numBytes)
       throws IOException {
     getCurrentCu();
     int totalHashed = 0;

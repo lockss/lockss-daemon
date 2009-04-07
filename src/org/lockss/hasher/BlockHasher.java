@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.14 2009-03-11 06:22:53 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.15 2009-04-07 04:51:24 tlipkis Exp $
  */
 
 /*
@@ -198,10 +198,10 @@ public class BlockHasher extends GenericHasher {
     }
   }
   
-  protected int hashNodeUpToNumBytes(int numBytes) {
+  protected long hashNodeUpToNumBytes(int numBytes) {
     if (isTrace) log.debug3("hashing content");
     int remaining = numBytes; 
-    int bytesHashed = 0;
+    long bytesHashed = 0;
 
     if (is == null) {
       if (curCu == null) {

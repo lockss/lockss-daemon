@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.14 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: GenericNameHasher.java,v 1.15 2009-04-07 04:51:24 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class GenericNameHasher extends GenericHasher {
     return cus.flatSetIterator();
   }
 
-  protected int hashNodeUpToNumBytes(int numBytes) {
+  protected long hashNodeUpToNumBytes(int numBytes) {
     int totalHashed = 0;
     if (nameBytes == null) {
       String nameStr = curNode.getUrl();

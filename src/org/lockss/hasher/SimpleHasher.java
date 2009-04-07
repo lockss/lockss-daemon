@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.3 2009-03-05 05:40:05 tlipkis Exp $
+ * $Id: SimpleHasher.java,v 1.4 2009-04-07 04:51:24 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class SimpleHasher {
   private boolean isIncludeUrl = false;
 
   private int nbytes = 1000;
-  private int bytesHashed = 0;
+  private long bytesHashed = 0;
   private int filesHashed = 0;
   private long elapsedTime;
 
@@ -67,7 +67,7 @@ public class SimpleHasher {
     this(digest, null, null);
   }
 
-  public int getBytesHashed() {
+  public long getBytesHashed() {
     return bytesHashed;
   }
 
