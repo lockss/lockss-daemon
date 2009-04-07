@@ -35,7 +35,7 @@
       <string>2,&quot;^%sregistration&quot;, base_url</string>
       <string>1,&quot;^%sarticles/browse\.asp\?(date=&amp;)?volume=%s&quot;, base_url, volume_name</string>
       <string>1,&quot;%slockss/&quot;, base_url</string>
-      <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|figure/.*|suppl/.*|table/.*))?$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|ref|figure/.*|suppl/.*|table/.*))?$&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary)/&quot;, base_url</string>
       <string>1,&quot;^%ssupplements/(%s|notes)/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%srender/render.asp\?&quot;, base_url</string>

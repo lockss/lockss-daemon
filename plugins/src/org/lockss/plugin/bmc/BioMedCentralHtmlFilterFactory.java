@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.2 2008-05-15 00:18:18 estro Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.3 2009-04-07 20:29:41 thib_gc Exp $
  */
 
 /*
@@ -43,10 +43,20 @@ import org.lockss.plugin.*;
 
 public class BioMedCentralHtmlFilterFactory implements FilterFactory {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
                                                String encoding)
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
+        // Filter out <script>...</script>
+        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
+        // Filter out <noscript>...</noscript>
+        HtmlNodeFilterTransform.exclude(new TagNameFilter("noscript")),
+        // Filter out <iframe>...</iframe>
+        HtmlNodeFilterTransform.exclude(new TagNameFilter("iframe")),
+        // Filter out <a name="...">...</a>
+        HtmlNodeFilterTransform.exclude(new AndFilter(new TagNameFilter("a"),
+                                                      new HasAttributeFilter("name"))),
         // Filter out <td class="topad">...</td>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
                                                                          "class",
@@ -55,23 +65,10 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
                                                                          "class",
                                                                          "topnav")),
-        // Filter out <noscript>...</noscript>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("noscript")),
-	
-        // Filter out <script>...</script>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
-
-        // Filter out <iframe>...</iframe>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("iframe")),
-
-        // Filter out <a href="...">...</a> where the href value matches a regular exception
+        // Filter out <a href="...">...</a> where the href value matches '^#'
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
                                                                               "href",
                                                                               "^#")),
-
-       // Filter out <a name="...">...</a>
-       HtmlNodeFilterTransform.exclude(new AndFilter(new TagNameFilter("a"),
-                                                      new HasAttributeFilter("name"))),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
