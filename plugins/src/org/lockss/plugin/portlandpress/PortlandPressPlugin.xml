@@ -29,7 +29,6 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%s%s(/ev)?/%s/&quot;, base_url, journal_id, volume_name</string>
-      
     </list>
   </entry>
   <entry>
@@ -37,10 +36,6 @@
     <list>
     <string>&quot;%s%s/%s/lockss.htm&quot;, base_url, journal_id, volume_name</string>
     </list>
-  </entry>
-  <entry>
-    <string>au_manifest</string>
-    <string>&quot;%s%s/%s/lockss.htm&quot;, base_url, journal_id, volume_name</string>      
   </entry>
   <entry>
     <string>plugin_config_props</string>

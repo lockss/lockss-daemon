@@ -1,5 +1,6 @@
 /*
- * $Id: PortlandPressHtmlFilterFactory.java*/
+ * $Id: PortlandPressHtmlFilterFactory.java,v 1.2 2009-04-07 18:45:37 thib_gc Exp $
+ */
 
 /*
 
