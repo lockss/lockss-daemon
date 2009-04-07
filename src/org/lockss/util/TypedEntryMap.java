@@ -1,5 +1,5 @@
 /*
- * $Id: TypedEntryMap.java,v 1.6 2006-07-17 05:08:43 tlipkis Exp $
+ * $Id: TypedEntryMap.java,v 1.7 2009-04-07 04:53:35 tlipkis Exp $
  */
 
 /*
@@ -42,11 +42,15 @@ public class TypedEntryMap {
     m_map = new HashMap();
   }
 
+  public int size() {
+    return m_map.size();
+  }
+
   public Set keySet() {
     return m_map.keySet();
   }
 
-  public Set entrySet() {
+  public Set<Map.Entry> entrySet() {
     return m_map.entrySet();
   }
 
@@ -321,5 +325,9 @@ public class TypedEntryMap {
 
   public void putMap(String key, Map value) {
     setMapElement(key, value);
+  }
+
+  public void putAll(TypedEntryMap m) {
+    m_map.putAll(m.m_map);
   }
 }
