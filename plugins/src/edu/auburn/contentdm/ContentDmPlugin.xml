@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Auburn University CONTENTdm Collection: %s&quot;, volume_name</string>
+    <string>&quot;Auburn University CONTENTdm Plugin, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,21 +21,16 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Auburn CONTENTdm Plugin</string>
+    <string>Auburn University CONTENTdm Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/.*xml&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/image/.*jpg&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/image/.*JPG&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/image/.*tif&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/image/.*TIF&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/image/.*url&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/image/.*cpd&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/manifest\.html&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s%s/index/description/desc.all&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s%s/manifest\.html$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s%s/[^/]+\.xml$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s%s/image/&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>
