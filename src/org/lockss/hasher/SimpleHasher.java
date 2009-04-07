@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.4 2009-04-07 04:51:24 tlipkis Exp $
+ * $Id: SimpleHasher.java,v 1.5 2009-04-07 20:21:41 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,6 @@ public class SimpleHasher {
   }
 
   public int getFilesHashed() {
-    log.info("foo: " + filesHashed);
     return filesHashed;
   }
 
