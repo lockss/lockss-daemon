@@ -323,7 +323,7 @@
    </property>
    <property name="param.3">
     <property name="key" value="year" />
-    <property name="value" value="2006" />
+    <property name="value" value="2005" />
    </property>
    <property name="attribute.rights" value="openaccess" />
   </property>
@@ -388,10 +388,10 @@
    <property name="attribute.rights" value="openaccess" />
   </property>
 
-  <property name="PLoSPathogens5">
+  <property name="PLoSPathogens4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
-   <property name="title" value="PLoS Pathogens Volume 5" />
+   <property name="title" value="PLoS Pathogens Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -464,6 +464,126 @@
    <property name="param.3">
     <property name="key" value="year" />
     <property name="value" value="2008" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSMedicine1">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Medicine" />
+   <property name="title" value="PLoS Medicine Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plosmedicine.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="medicine" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSMedicine2">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Medicine" />
+   <property name="title" value="PLoS Medicine Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plosmedicine.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="medicine" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSMedicine3">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Medicine" />
+   <property name="title" value="PLoS Medicine Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plosmedicine.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="medicine" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSMedicine4">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Medicine" />
+   <property name="title" value="PLoS Medicine Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plosmedicine.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="medicine" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSMedicine5">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Medicine" />
+   <property name="title" value="PLoS Medicine Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plosmedicine.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="medicine" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="attribute.rights" value="openaccess" />
+  </property>
+
+  <property name="PLoSMedicine6">
+   <property name="attributes.publisher" value="Public Library of Science" />
+   <property name="journalTitle" value="PLoS Medicine" />
+   <property name="title" value="PLoS Medicine Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.plosmedicine.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="medicine" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
    </property>
    <property name="attribute.rights" value="openaccess" />
   </property>

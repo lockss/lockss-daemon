@@ -102,4 +102,22 @@ comment[plos0] = no manifest
     au < exists ; PLoS Clinical Trials Volume 3 ; 2008 >
 
   }
+
+  {
+    title <
+      name = PLoS Medicine
+    >
+
+    param[base_url] = http://www.plosmedicine.org/   
+    param[journal_id] = medicine
+
+    au < testing ; PLoS Medicine Volume 1 ; 2005 >
+    au < testing ; PLoS Medicine Volume 2 ; 2005 >
+    au < testing ; PLoS Medicine Volume 3 ; 2006 >
+    au < testing ; PLoS Medicine Volume 4 ; 2007 >
+    au < testing ; PLoS Medicine Volume 5 ; 2008 >
+    au < testing ; PLoS Medicine Volume 6 ; 2009 >
+
+  }
+
 }
