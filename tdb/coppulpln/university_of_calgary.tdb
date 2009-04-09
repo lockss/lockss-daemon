@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = University of Calgary
+  >
+    
+  plugin = edu.auburn.contentdm.ContentDmPlugin
+  param[base_url] = http://contentdm.ucalgary.ca/collections/
+  implicit < status ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = University of Calgary CONTENTdm Collections
+    >
+    
+    au < released ; University of Calgary Grande Prairie Historical Photos collection ; gpp >
+
+  }
+      
+}
