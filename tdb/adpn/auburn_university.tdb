@@ -6,21 +6,17 @@
     
   {
 
+    title <
+      name = Auburn University CONTENTdm Collections 
+    >
+
     plugin = edu.auburn.contentdm.ContentDmPlugin
     param[base_url] = http://content.lib.auburn.edu/   
     implicit < status ; name ; param[volume_name] >
   
-    {
-
-      title <
-        name = Auburn University CONTENTdm Collections 
-      >
-
-      au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
-      au < released ; Auburn University Alabama Cooperative Extension Service Photographs ; autest >
-      au < released ; Auburn University Football Program ; football >
-  
-    }
+    au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
+    au < released ; Auburn University Alabama Cooperative Extension Service Photographs ; autest >
+    au < released ; Auburn University Football Program ; football >
   
   }
       

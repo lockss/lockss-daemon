@@ -31,7 +31,7 @@
       au < released ; Canadian Journal of Communication Volume 7-8 (1981) ; 1981 >
       au < released ; Canadian Journal of Communication Volume 8-9 (1982) ; 1982 >
       au < released ; Canadian Journal of Communication Volume 9-10 (1983) ; 1983 >
-      au < released ; Canadian Journal of Communication Volume 10 ; 1984 >
+      au < released ; Canadian Journal of Communication Volume 10 (1984) ; 1984 >
       au < released ; Canadian Journal of Communication Volume 11 ; 1985 >
       au < released ; Canadian Journal of Communication Volume 12 ; 1986 >
       au < released ; Canadian Journal of Communication Volume 13 (1987) ; 1987 >
@@ -121,62 +121,57 @@
       au < released ; International Journal of Education Policy and Leadership Volume 2 ; 2007 >
       au < released ; International Journal of Education Policy and Leadership Volume 3 ; 2008 >      
       
-      }
+    }
       
-      {
+    {
 
-	      title <
-	        name = Paideusis
-	      >
-	      
-	      param[base_url] = http://journals.sfu.ca/paideusis/
-	      param[journal_id] = paideusis
-	
-	      comment = requires subscription and has login pages
-	
-	      au < exists ; Paideusis Volume 15 ; 2006 >
-	      au < exists ; Paideusis Volume 16 ; 2007 >
-	      au < exists ; Paideusis Volume 17 ; 2008 >
+      title <
+        name = Paideusis
+      >
+        
+      param[base_url] = http://journals.sfu.ca/paideusis/
+      param[journal_id] = paideusis
+  
+      comment = requires subscription and has login pages
+  
+      au < exists ; Paideusis Volume 15 ; 2006 >
+      au < exists ; Paideusis Volume 16 ; 2007 >
+      au < exists ; Paideusis Volume 17 ; 2008 >
       
-      }
+    }
 
   }
   
   {
 
-		plugin = ca.sfu.lib.plugin.cartoons.SFUCartoonsPlugin
-		param[base_url] = http://edocs.lib.sfu.ca/projects/Cartoons/lockss/
-		implicit < status ; name ; param[year] >
-		
-		{
-		  
-		  title <
-		    name = Simon Fraser University Library Editorial Cartoons Collection: Len Norris
-		  >
-		  
-		  param[cartoonist] = 1
-		  
-		  au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1952 ; 1952 >
-		  au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1953 ; 1953 >
-		  au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1983 ; 1983 >
-		  au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1984 ; 1984 >
-		  
-		}
-  
-		{
-		  
-		  title <
-		    name = Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson
-		  >
-		  
-		  param[cartoonist] = 1
-		  
-		  au < released ; Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson 2002 ; 2002 >
-		  au < released ; Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson 2003 ; 2003 >
-		  
-		}
-  
+    title <
+      name = Simon Fraser University Library Editorial Cartoons Collection
+    >
+      
+    plugin = ca.sfu.lib.plugin.cartoons.SFUCartoonsPlugin
+    param[base_url] = http://edocs.lib.sfu.ca/projects/Cartoons/lockss/
+    implicit < status ; name ; param[year] >
+
+    {
+      
+      param[cartoonist] = 1
+      
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1952 ; 1952 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1953 ; 1953 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1983 ; 1983 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1984 ; 1984 >
+        
+    }
+      
+    {
+      
+      param[cartoonist] = 4
+      
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson 2002 ; 2002 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson 2003 ; 2003 >
+        
+    }
+      
   }
 
 }
-
