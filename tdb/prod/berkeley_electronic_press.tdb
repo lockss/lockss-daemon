@@ -294,8 +294,8 @@
     au < released ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
     au < released ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
     au < released ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
-    au < testing ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
-    au < testing ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
+    au < ready ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
+    au < ready ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
   }
 
 
@@ -309,8 +309,8 @@
     au < released ; International Journal of Food Engineering Volume 1 ; 1 >
     au < released ; International Journal of Food Engineering Volume 2 ; 2 >
     au < released ; International Journal of Food Engineering Volume 3 ; 3 >
-    au < testing ; International Journal of Food Engineering Volume 4 ; 4 >
-    au < testing ; International Journal of Food Engineering Volume 5 ; 5 >
+    au < ready ; International Journal of Food Engineering Volume 4 ; 4 >
+    au < ready ; International Journal of Food Engineering Volume 5 ; 5 >
   }
 
 
@@ -325,8 +325,8 @@
     au < released ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
     au < released ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
     au < released ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
-    au < testing ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
-    au < testing ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
+    au < ready ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
+    au < ready ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
   }
 
 
@@ -342,8 +342,8 @@
     au < released ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
     au < released ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
     au < released ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
-    au < testing ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
-    au < testing ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
+    au < ready ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
+    au < ready ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
   }
 
 
@@ -356,8 +356,8 @@
 
     au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 >
     au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 >
-    au < manifest ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
-    au < manifest ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
+    au < ready ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
+    au < ready ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
   }
 
 
@@ -372,8 +372,8 @@
     au < released ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 >
     au < released ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
     au < released ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 >
-    au < manifest ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
-    au < manifest ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
+    au < ready ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
+    au < ready ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
   }
 
 
@@ -388,8 +388,8 @@
     au < released ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 >
     au < released ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 >
     au < released ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
-    au < manifest ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
-    au < manifest ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
+    au < ready ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
+    au < ready ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
   }
 
 
@@ -402,8 +402,8 @@
 
     au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 >
     au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 >
-    au < manifest ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
-    au < manifest ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
+    au < ready ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
+    au < ready ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
   }
 
 
@@ -414,7 +414,7 @@
 
     param[journal_abbr] = jioe
 
-    au < released ; Journal of Industrial Organization Education Volume 1 ; 1 >
+    au < ready ; Journal of Industrial Organization Education Volume 1 ; 1 >
   }
 
 
@@ -428,8 +428,8 @@
     au < released ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
     au < released ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 >
     au < released ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
-    au < manifest ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
-    au < manifest ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
+    au < testing ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
+    au < testing ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
   }
 
 
@@ -441,7 +441,7 @@
     param[journal_abbr] = jtl
 
     au < released ; Journal of Tort Law Volume 1 ; 1 >
-    au < manifest ; Journal of Tort Law Volume 2 ; 2 >
+    au < testing ; Journal of Tort Law Volume 2 ; 2 >
   }
 
 
@@ -455,7 +455,7 @@
     au < released ; Muslim World Journal of Human Rights Volume 1 ; 1 >
     au < released ; Muslim World Journal of Human Rights Volume 2 ; 2 >
     au < released ; Muslim World Journal of Human Rights Volume 3 ; 3 >
-    au < manifest ; Muslim World Journal of Human Rights Volume 4 ; 4 >
+    au < testing ; Muslim World Journal of Human Rights Volume 4 ; 4 >
   }
 
 
@@ -478,8 +478,8 @@
     au < released ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
     au < released ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 >
     au < released ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 >
-    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
-    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
+    au < testing ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
+    au < testing ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
   }
 
 
@@ -493,7 +493,7 @@
     au < released ; Review of Law & Economics Volume 1 ; 1 >
     au < released ; Review of Law & Economics Volume 2 ; 2 >
     au < released ; Review of Law & Economics Volume 3 ; 3 >
-    au < manifest ; Review of Law & Economics Volume 4 ; 4 >
+    au < testing ; Review of Law & Economics Volume 4 ; 4 >
 
   }
 
@@ -510,8 +510,8 @@
     au < released ; Review of Marketing Science Volume 3 ; 3 >
     au < released ; Review of Marketing Science Volume 4 ; 4 >
     au < released ; Review of Marketing Science Volume 5 ; 5 >
-    au < manifest ; Review of Marketing Science Volume 6 ; 6 >
-    au < manifest ; Review of Marketing Science Volume 7 ; 7 >
+    au < testing ; Review of Marketing Science Volume 6 ; 6 >
+    au < testing ; Review of Marketing Science Volume 7 ; 7 >
   }
 
 
@@ -525,7 +525,7 @@
     au < released ; Review of Middle East Finance Volume 1 ; 1 >
     au < released ; Review of Middle East Finance Volume 2 ; 2 >
     au < released ; Review of Middle East Finance Volume 3 ; 3 >
-    au < manifest ; Review of Middle East Finance Volume 4 ; 4 >
+    au < testing ; Review of Middle East Finance Volume 4 ; 4 >
   }
 
 
@@ -542,8 +542,8 @@
     au < released ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
     au < released ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 >
     au < released ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 >
-    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
-    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
+    au < testing ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
+    au < testing ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
   }
 
 
@@ -565,8 +565,8 @@
     au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
     au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 >
     au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 >
-    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
-    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
+    au < testing ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
+    au < testing ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
   }
 
 
@@ -585,8 +585,8 @@
     au < released ; Theoretical Inquiries in Law Volume 6 ; 6 >
     au < released ; Theoretical Inquiries in Law Volume 7 ; 7 >
     au < released ; Theoretical Inquiries in Law Volume 8 ; 8 >
-    au < manifest ; Theoretical Inquiries in Law Volume 9 ; 9 >
-    au < manifest ; Theoretical Inquiries in Law Volume 10 ; 10 >
+    au < testing ; Theoretical Inquiries in Law Volume 9 ; 9 >
+    au < testing ; Theoretical Inquiries in Law Volume 10 ; 10 >
   }
 
 
@@ -600,8 +600,8 @@
     au < released ; World Political Science Review Volume 1 ; 1 >
     au < released ; World Political Science Review Volume 2 ; 2 >
     au < released ; World Political Science Review Volume 3 ; 3 >
-    au < manifest ; World Political Science Review Volume 4 ; 4 >
-    au < manifest ; World Political Science Review Volume 5 ; 5 >
+    au < testing ; World Political Science Review Volume 4 ; 4 >
+    au < testing ; World Political Science Review Volume 5 ; 5 >
   }
 
 }
