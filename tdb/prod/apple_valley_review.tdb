@@ -1,0 +1,18 @@
+{
+  publisher <
+    name = Apple Valley Review
+  >
+  
+  title <
+    name = Apple Valley Review 
+  >  
+  
+  implicit < status ; name ; param[year] >
+  plugin = org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin
+  param[base_url] = http://www.leahbrowning.net/
+
+  au < testing ; Apple Valley Review Volume 1 ; 2006 >
+  au < testing ; Apple Valley Review Volume 2 ; 2007 >
+  au < ready ; Apple Valley Review Volume 3 ; 2008 >
+  
+}
