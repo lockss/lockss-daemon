@@ -36,7 +36,7 @@
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%sgpo.gov/reports/%d\.tgz&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/reports/%d.tgz&quot;, base_url, congress</string>
       <string>&quot;%sgpo.gov/reports/%d/&quot;, base_url, congress</string>
     </list>
   </entry>
