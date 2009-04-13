@@ -22,10 +22,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sApple/(Archive|Contact|Submit).html&quot;, base_url</string>
-      <string>1,&quot;%sApple/.*_%d&quot;, base_url, year</string>
-      <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;, base_url</string>
+      <string>1,&quot;%sApple/Archive\.html$&quot;, base_url</string>
+      <string>1,&quot;%sApple/[^/]+_%d/&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
