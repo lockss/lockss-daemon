@@ -1,288 +1,5844 @@
+ADD MISSING JOURNALS
+
+
 {
+
   publisher <
     name = Oxford University Press
   >
-
-  implicit < status ; name ; param[volume] >
-
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
-
+  
   {
-    title <
-      name = American Literary History 
-    >
 
-    param[journal_dir] = american_literary_history
+    {
 
-    au < released ; American Literary History Volume 12 ; 12 >
-    au < released ; American Literary History Volume 13 ; 13 >
-    au < released ; American Literary History Volume 14 ; 14 >
-    au < released ; American Literary History Volume 15 ; 15 >
-    au < released ; American Literary History Volume 16 ; 16 >
-    au < released ; American Literary History Volume 17 ; 17 >
-    au < released ; American Literary History Volume 18 ; 18 >
-    au < released ; American Literary History Volume 19 ; 19 >
-    au < manifest ; American Literary History Volume 20 ; 20 >
-    au < manifest ; American Literary History Volume 21 ; 21 >
+      title <
+        name = African Affairs 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://afraf.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; African Affairs Volume 105 ; 105 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://afraf.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; African Affairs Volume 105 ; 105 >
+        au < released ; African Affairs Volume 106 ; 106 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Age and Ageing 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ageing.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Age and Ageing Volume 35 ; 35 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ageing.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Age and Ageing Volume 34 ; 34 >
+        au < do_not_process ; Age and Ageing Volume 35 ; 35 >
+        au < released ; Age and Ageing Volume 36 ; 36 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Alcohol and Alcoholism 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://alcalc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Alcohol and Alcoholism Volume 40 ; 40 >
+        au < released ; Alcohol and Alcoholism Volume 41 ; 41 >
+        au < released ; Alcohol and Alcoholism Volume 42 ; 42 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = American Journal of Epidemiology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://aje.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; American Journal of Epidemiology Volume 163 ; 163 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://aje.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; American Journal of Epidemiology Volume 161 ; 161 >
+        au < released ; American Journal of Epidemiology Volume 162 ; 162 >
+        au < do_not_process ; American Journal of Epidemiology Volume 163 ; 163 >
+        au < released ; American Journal of Epidemiology Volume 164 ; 164 >
+        au < released ; American Journal of Epidemiology Volume 165 ; 165 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = American Law and Economics Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://aler.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; American Law and Economics Review Volume 8 ; 8 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://aler.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; American Law and Economics Review Volume 7 ; 7 >
+        au < do_not_process ; American Law and Economics Review Volume 8 ; 8 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = American Literary History 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://alh.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; American Literary History Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://alh.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; American Literary History Volume 17 ; 17 >
+        au < released ; American Literary History Volume 18 ; 18 >
+        au < released ; American Literary History Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Annals of Botany 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://aob.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Annals of Botany Volume 97 ; 97 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://aob.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Annals of Botany Volume 95 ; 95 >
+        au < released ; Annals of Botany Volume 96 ; 96 >
+        au < do_not_process ; Annals of Botany Volume 97 ; 97 >
+        au < released ; Annals of Botany Volume 98 ; 98 >
+        au < released ; Annals of Botany Volume 99 ; 99 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Annals of Occupational Hygiene 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://annhyg.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Annals of Occupational Hygiene Volume 50 ; 50 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://annhyg.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Annals of Occupational Hygiene Volume 49 ; 49 >
+        au < do_not_process ; Annals of Occupational Hygiene Volume 50 ; 50 >
+        au < released ; Annals of Occupational Hygiene Volume 51 ; 51 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Annals of Oncology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://annonc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Annals of Oncology Volume 16 ; 16 >
+        au < released ; Annals of Oncology Volume 17 ; 17 >
+        au < released ; Annals of Oncology Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Applied Linguistics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://applij.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Applied Linguistics Volume 27 ; 27 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://applij.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Applied Linguistics Volume 26 ; 26 >
+        au < do_not_process ; Applied Linguistics Volume 27 ; 27 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Behavioral Ecology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://beheco.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Behavioral Ecology Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://beheco.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Behavioral Ecology Volume 16 ; 16 >
+        au < do_not_process ; Behavioral Ecology Volume 17 ; 17 >
+        au < released ; Behavioral Ecology Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Bioinformatics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bioinformatics.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Bioinformatics Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bioinformatics.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Bioinformatics Volume 21 ; 21 >
+        au < released ; Bioinformatics Volume 22 ; 22 >
+        au < released ; Bioinformatics Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Biometrika 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://biomet.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Biometrika Volume 93 ; 93 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://biomet.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Biometrika Volume 92 ; 92 >
+        au < do_not_process ; Biometrika Volume 93 ; 93 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Biostatistics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://biostatistics.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Biostatistics Volume 6 ; 6 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://biostatistics.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Biostatistics Volume 6 ; 6 >
+        au < released ; Biostatistics Volume 7 ; 7 >
+        au < released ; Biostatistics Volume 8 ; 8 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = BJA: Continuing Education in Anaesthesia, Critical Care & Pain 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ceaccp.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ceaccp.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
+        au < do_not_process ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+        au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Brain 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://brain.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Brain Volume 128 ; 128 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://brain.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Brain Volume 128 ; 128 >
+        au < released ; Brain Volume 129 ; 129 >
+        au < released ; Brain Volume 130 ; 130 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Brief Treatment and Crisis Intervention 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://brief-treatment.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://brief-treatment.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+        au < released ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
+        au < released ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Briefings in Bioinformatics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bib.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Briefings in Bioinformatics Volume 7 ; 7 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bib.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Briefings in Bioinformatics Volume 7 ; 7 >
+        au < released ; Briefings in Bioinformatics Volume 8 ; 8 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Briefings in Functional Genomics and Proteomics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bfgp.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bfgp.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The British Journal for the Philosophy of Science 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bjps.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bjps.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
+        au < do_not_process ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The British Journal of Aesthetics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bjaesthetics.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The British Journal of Aesthetics Volume 46 ; 46 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bjaesthetics.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The British Journal of Aesthetics Volume 45 ; 45 >
+        au < do_not_process ; The British Journal of Aesthetics Volume 46 ; 46 >
+        au < released ; The British Journal of Aesthetics Volume 47 ; 47 >
+
+      }
+
+    }
+    
+    {
+
+      title <
+        name = British Journal of Anaesthesia 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bja.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; British Journal of Anaesthesia Volume 96 ; 96 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bja.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; British Journal of Anaesthesia Volume 94 ; 94 >
+        au < released ; British Journal of Anaesthesia Volume 95 ; 95 >
+        au < do_not_process ; British Journal of Anaesthesia Volume 96 ; 96 >
+        au < released ; British Journal of Anaesthesia Volume 97 ; 97 >
+        au < released ; British Journal of Anaesthesia Volume 98 ; 98 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The British Journal of Criminology: An International Review of Crime and Society 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bjc.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bjc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 45 ; 45 >
+        au < do_not_process ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
+        au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 47 ; 47 >
+
+      }
+
+    }
+    
+    {
+
+      title <
+        name = British Journal of Social Work 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://bjsw.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; British Journal of Social Work Volume 36 ; 36 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bjsw.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; British Journal of Social Work Volume 35 ; 35 >
+        au < do_not_process ; British Journal of Social Work Volume 36 ; 36 >
+        au < released ; British Journal of Social Work Volume 37 ; 37 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = British Medical Bulletin 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://bmb.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; British Medical Bulletin Volume 72 ; 72 >
+        au < released ; British Medical Bulletin Volume 73-74 ; 83 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Bulletin of the London Mathematical Society 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://blms.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Bulletin of the London Mathematical Society Volume 39 ; 39 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Cambridge Journal of Economics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://cje.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Cambridge Journal of Economics Volume 30 ; 30 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cje.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Cambridge Journal of Economics Volume 29 ; 29 >
+        au < do_not_process ; Cambridge Journal of Economics Volume 30 ; 30 >
+        au < released ; Cambridge Journal of Economics Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Cambridge Quarterly 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://camqtly.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Cambridge Quarterly Volume 35 ; 35 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://camqtly.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; The Cambridge Quarterly Volume 34 ; 34 >
+        au < do_not_process ; The Cambridge Quarterly Volume 35 ; 35 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Capital Markets Law Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cmlj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Capital Markets Law Journal Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Carcinogenesis 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://carcin.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Carcinogenesis Volume 26 ; 26 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://carcin.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Carcinogenesis Volume 26 ; 26 >
+        au < released ; Carcinogenesis Volume 27 ; 27 >
+        au < released ; Carcinogenesis Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Cerebral Cortex 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://cercor.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Cerebral Cortex Volume 15 ; 15 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cercor.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Cerebral Cortex Volume 15 ; 15 >
+        au < released ; Cerebral Cortex Volume 16 ; 16 >
+        au < released ; Cerebral Cortex Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = CESifo Economic Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://cesifo.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; CESifo Economic Studies Volume 52 ; 52 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cesifo.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; CESifo Economic Studies Volume 51 ; 51 >
+        au < do_not_process ; CESifo Economic Studies Volume 52 ; 52 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Chemical Senses 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://chemse.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Chemical Senses Volume 31 ; 31 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://chemse.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Chemical Senses Volume 30 ; 30 >
+        au < do_not_process ; Chemical Senses Volume 31 ; 31 >
+        au < released ; Chemical Senses Volume 32 ; 32 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Chinese Journal of International Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://chinesejil.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Chinese Journal of International Law Volume 4 ; 4 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://chinesejil.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Chinese Journal of International Law Volume 4 ; 4 >
+        au < released ; Chinese Journal of International Law Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Chinese Journal of International Politics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cjip.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Chinese Journal of International Politics Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Communication Theory 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ct.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Communication Theory Volume 15 ; 15 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ct.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Communication Theory Volume 15 ; 15 >
+
+      }
+
+    }
+    
+    {
+
+      title <
+        name = Community Development Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://cdj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Community Development Journal Volume 41 ; 41 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cdj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Community Development Journal Volume 40 ; 40 >
+        au < do_not_process ; Community Development Journal Volume 41 ; 41 >
+        au < released ; Community Development Journal Volume 42 ; 42 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Computer Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://comjnl.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Computer Journal Volume 49 ; 49 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://comjnl.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Computer Journal Volume 49 ; 49 >
+        au < released ; Computer Journal Volume 50 ; 50 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Contemporary Economic Policy 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://cep.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Contemporary Economic Policy Volume 24 ; 24 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cep.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Contemporary Economic Policy Volume 24 ; 24 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Contributions to Political Economy 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://cpe.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Contributions to Political Economy Volume 24 ; 24 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://cpe.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Contributions to Political Economy Volume 24 ; 24 >
+        au < released ; Contributions to Political Economy Volume 25 ; 25 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = DNA Research 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://dnaresearch.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; DNA Research Volume 13 ; 13 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://dnaresearch.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; DNA Research Volume 13 ; 13 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Early Music 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://em.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Early Music Volume 33 ; 33 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://em.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Early Music Volume 33 ; 33 >
+        au < released ; Early Music Volume 34 ; 34 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Economic Inquiry 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ei.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Economic Inquiry Volume 44 ; 44 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ei.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Economic Inquiry Volume 44 ; 44 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = ELT Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://eltj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; ELT Journal Volume 60 ; 60 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://eltj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; ELT Journal Volume 59 ; 59 >
+        au < do_not_process ; ELT Journal Volume 60 ; 60 >
+        au < released ; ELT Journal Volume 61 ; 61 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = English Historical Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ehr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; English Historical Review Volume 120 ; 120 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Enterprise & Society 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://es.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Enterprise & Society Volume 7 ; 7 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://es.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Enterprise & Society Volume 6 ; 6 >
+        au < do_not_process ; Enterprise & Society Volume 7 ; 7 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Epidemiologic Reviews 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://epirev.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Epidemiologic Reviews Volume 27 ; 27 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://epirev.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Epidemiologic Reviews Volume 27 ; 27 >
+        au < released ; Epidemiologic Reviews Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = ESHRE Monographs 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://eshremonographs.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; ESHRE Monographs 2005 ; 2005 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://eshremonographs.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; ESHRE Monographs 2005 ; 2005 >
+        au < released ; ESHRE Monographs 2006 ; 2006 >
+        au < released ; ESHRE Monographs 2007 ; 2007 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Essays in Criticism 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://eic.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Essays in Criticism Volume 55 ; 55 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://eic.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Essays in Criticism Volume 55 ; 55 >
+        au < released ; Essays in Criticism Volume 56 ; 56 >
+        au < released ; Essays in Criticism Volume 57 ; 57 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Europace 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://europace.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Europace Volume 8 ; 8 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://europace.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Europace Volume 8 ; 8 >
+        au < released ; Europace Volume 9 ; 9 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Heart Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://eurheartj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; European Heart Journal Volume 26 ; 26 >
+        au < released ; European Heart Journal Volume 27 ; 27 >
+        au < released ; European Heart Journal Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Heart Journal Supplements 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://eurheartjsupp.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; European Heart Journal Supplements Volume 8 ; 8 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://eurheartjsupp.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; European Heart Journal Supplements Volume 7 ; 7 >
+        au < do_not_process ; European Heart Journal Supplements Volume 8 ; 8 >
+        au < released ; European Heart Journal Supplements Volume 9 ; 9 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Journal of International Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ejil.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; European Journal of International Law Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ejil.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; European Journal of International Law Volume 16 ; 16 >
+        au < do_not_process ; European Journal of International Law Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Journal of Orthodontics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ejo.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; European Journal of Orthodontics Volume 28 ; 28 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ejo.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; European Journal of Orthodontics Volume 28 ; 28 >
+        au < released ; European Journal of Orthodontics Volume 29 ; 29 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Journal of Public Health 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://eurpub.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; European Journal of Public Health Volume 16 ; 16 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://eurpub.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; European Journal of Public Health Volume 15 ; 15 >
+        au < do_not_process ; European Journal of Public Health Volume 16 ; 16 >
+        au < released ; European Journal of Public Health Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Review of Agricultural Economics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://erae.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; European Review of Agricultural Economics Volume 32 ; 32 >
+        au < manifest ; European Review of Agricultural Economics Volume 33 ; 33 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = European Sociological Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://esr.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; European Sociological Review Volume 22 ; 22 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://esr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; European Sociological Review Volume 21 ; 21 >
+        au < do_not_process ; European Sociological Review Volume 22 ; 22 >
+        au < released ; European Sociological Review Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Evidence-based Complementary and Alternative Medicine 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ecam.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ecam.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
+        au < do_not_process ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Family Practice 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://fampra.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Family Practice Volume 23 ; 23 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://fampra.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Family Practice Volume 22 ; 22 >
+        au < do_not_process ; Family Practice Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Forestry 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://forestry.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Forestry Volume 79 ; 79 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://forestry.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Forestry Volume 78 ; 78 >
+        au < do_not_process ; Forestry Volume 79 ; 79 >
+        au < released ; Forestry Volume 80 ; 80 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Forum for Modern Language Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://fmls.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Forum for Modern Language Studies Volume 42 ; 42 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://fmls.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Forum for Modern Language Studies Volume 41 ; 41 >
+        au < do_not_process ; Forum for Modern Language Studies Volume 42 ; 42 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = French History 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://fh.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; French History Volume 20 ; 20 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://fh.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; French History Volume 19 ; 19 >
+        au < do_not_process ; French History Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = French Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://fs.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; French Studies Volume 60 ; 60 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://fs.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; French Studies Volume 59 ; 59 >
+        au < do_not_process ; French Studies Volume 60 ; 60 >
+        au < released ; French Studies Volume 61 ; 61 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = French Studies Bulletin 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://fsb.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Glycobiology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://glycob.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Glycobiology Volume 15 ; 15 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://glycob.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Glycobiology Volume 15 ; 15 >
+        au < released ; Glycobiology Volume 16 ; 16 >
+        au < released ; Glycobiology Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Health Education Research 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://her.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Health Education Research Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://her.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Health Education Research Volume 20 ; 20 >
+        au < do_not_process ; Health Education Research Volume 21 ; 21 >
+        au < released ; Health Education Research Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Health Policy and Planning 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://heapol.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Health Policy and Planning Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://heapol.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Health Policy and Planning Volume 20 ; 20 >
+        au < do_not_process ; Health Policy and Planning Volume 21 ; 21 >
+        au < released ; Health Policy and Planning Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Health Promotion International 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://heapro.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Health Promotion International Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://heapro.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Health Promotion International Volume 20 ; 20 >
+        au < do_not_process ; Health Promotion International Volume 21 ; 21 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = History Workshop Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://hwj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; History Workshop Journal Volume 61 ; 61 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://hwj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; History Workshop Journal Volume 59 ; 59 >
+        au < released ; History Workshop Journal Volume 60 ; 60 >
+        au < do_not_process ; History Workshop Journal Volume 61 ; 61 >
+        au < released ; History Workshop Journal Volume 62 ; 62 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Holocaust and Genocide Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://hgs.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Holocaust and Genocide Studies Volume 19 ; 19 >
+        au < released ; Holocaust and Genocide Studies Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Human Communication Research
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://hcr.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Human Communication Research Volume 31 ; 31 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://hcr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Human Communication Research Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Human Molecular Genetics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://hmg.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Human Molecular Genetics Volume 14 ; 14 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://hmg.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Human Molecular Genetics Volume 14 ; 14 >
+        au < released ; Human Molecular Genetics Volume 15 ; 15 >
+        au < released ; Human Molecular Genetics Volume 16 ; 16 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Human Reproduction 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://humrep.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Human Reproduction Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://humrep.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Human Reproduction Volume 20 ; 20 >
+        au < do_not_process ; Human Reproduction Volume 21 ; 21 >
+        au < released ; Human Reproduction Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Human Reproduction Update 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://humupd.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Human Reproduction Update Volume 12 ; 12 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://humupd.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Human Reproduction Update Volume 11 ; 11 >
+        au < do_not_process ; Human Reproduction Update Volume 12 ; 12 >
+        au < released ; Human Reproduction Update Volume 13 ; 13 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Human Rights Law Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://hrlr.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Human Rights Law Review Volume 5 ; 5 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://hrlr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Human Rights Law Review Volume 5 ; 5 >
+        au < released ; Human Rights Law Review Volume 6 ; 6 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = ICES Journal of Marine Science 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://icesjms.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; ICES Journal of Marine Science Volume 64 ; 64 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IEICE-Transactions on Communications 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ietcom.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IEICE-Transactions on Electronics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ietele.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ietfec.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IEICE-Transactions on Information and Systems 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ietisy.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IMA Journal of Applied Mathematics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://imamat.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://imamat.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; IMA Journal of Applied Mathematics Volume 70 ; 70 >
+        au < do_not_process ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
+        au < released ; IMA Journal of Applied Mathematics Volume 72 ; 72 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IMA Journal of Management Mathematics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://imaman.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; IMA Journal of Management Mathematics Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://imaman.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; IMA Journal of Management Mathematics Volume 16 ; 16 >
+        au < do_not_process ; IMA Journal of Management Mathematics Volume 17 ; 17 >
+        au < released ; IMA Journal of Management Mathematics Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IMA Journal of Mathematical Control and Information 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://imamci.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://imamci.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 >
+        au < do_not_process ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = IMA Journal of Numerical Analysis 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://imajna.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://imajna.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; IMA Journal of Numerical Analysis Volume 25 ; 25 >
+        au < do_not_process ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
+        au < released ; IMA Journal of Numerical Analysis Volume 27 ; 27 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Industrial and Corporate Change 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://icc.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Industrial and Corporate Change Volume 15 ; 15 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://icc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Industrial and Corporate Change Volume 14 ; 14 >
+        au < do_not_process ; Industrial and Corporate Change Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Industrial Law Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ilj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Industrial Law Journal Volume 35 ; 35 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ilj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Industrial Law Journal Volume 34 ; 34 >
+        au < do_not_process ; Industrial Law Journal Volume 35 ; 35 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Integrative and Comparative Biology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://icb.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Integrative and Comparative Biology Volume 46 ; 46 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://icb.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Integrative and Comparative Biology Volume 45 ; 45 >
+        au < do_not_process ; Integrative and Comparative Biology Volume 46 ; 46 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International and Comparative Law Quarterly 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://iclq.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International and Comparative Law Quarterly Volume 55 ; 55 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://iclq.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International and Comparative Law Quarterly Volume 54 ; 54 >
+        au < do_not_process ; International and Comparative Law Quarterly Volume 55 ; 55 >
+        au < released ; International and Comparative Law Quarterly Volume 56 ; 56 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Immunology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://intimm.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Immunology Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://intimm.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; International Immunology Volume 18 ; 18 >
+        au < released ; International Immunology Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal for Quality in Health Care 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://intqhc.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal for Quality in Health Care Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://intqhc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal for Quality in Health Care Volume 17 ; 17 >
+        au < do_not_process ; International Journal for Quality in Health Care Volume 18 ; 18 >
+        au < released ; International Journal for Quality in Health Care Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Constitutional Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://icon.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Constitutional Law Volume 4 ; 4 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://icon.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Constitutional Law Volume 3 ; 3 >
+        au < do_not_process ; International Journal of Constitutional Law Volume 4 ; 4 >
+        au < released ; International Journal of Constitutional Law Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Epidemiology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ije.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Epidemiology Volume 35 ; 35 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ije.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Epidemiology Volume 34 ; 34 >
+        au < do_not_process ; International Journal of Epidemiology Volume 35 ; 35 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Law and Information Technology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ijlit.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Law and Information Technology Volume 13 ; 13 >
+        au < released ; International Journal of Law and Information Technology Volume 14 ; 14 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ijlit.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; International Journal of Law and Information Technology Volume 13 ; 13 >
+        au < do_not_process ; International Journal of Law and Information Technology Volume 14 ; 14 >
+        au < released ; International Journal of Law and Information Technology Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Law, Policy and the Family 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://lawfam.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://lawfam.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Law, Policy and the Family Volume 19 ; 19 >
+        au < do_not_process ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Lexicography 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ijl.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Lexicography Volume 19 ; 19 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ijl.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Lexicography Volume 18 ; 18 >
+        au < do_not_process ; International Journal of Lexicography Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Public Opinion Research 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ijpor.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Public Opinion Research Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ijpor.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Public Opinion Research Volume 17 ; 17 >
+        au < do_not_process ; International Journal of Public Opinion Research Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Refugee Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ijrl.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Journal of Refugee Law Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ijrl.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Refugee Law Volume 17 ; 17 >
+        au < do_not_process ; International Journal of Refugee Law Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Transitional Justice 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ijtj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Journal of Transitional Justice Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = International Relations of the Asia-Pacific 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://irap.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; International Relations of the Asia-Pacific Volume 6 ; 6 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://irap.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; International Relations of the Asia-Pacific Volume 5 ; 5 >
+        au < do_not_process ; International Relations of the Asia-Pacific Volume 6 ; 6 >
+        au < released ; International Relations of the Asia-Pacific Volume 7 ; 7 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = ITNOW 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://itnow.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; ITNOW Volume 48 ; 48 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://itnow.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; ITNOW Volume 47 ; 47 >
+        au < do_not_process ; ITNOW Volume 48 ; 48 >
+        au < released ; ITNOW Volume 49 ; 49 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Japanese Journal of Clinical Oncology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jjco.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jjco.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Japanese Journal of Clinical Oncology Volume 35 ; 35 >
+        au < do_not_process ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
+        au < released ; Japanese Journal of Clinical Oncology Volume 37 ; 37 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = JNCI Journal of the National Cancer Institute 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jnci.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; JNCI Journal of the National Cancer Institute Volume 99 ; 99 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of African Economies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jae.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of African Economies Volume 15 ; 15 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jae.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of African Economies Volume 14 ; 14 >
+        au < do_not_process ; Journal of African Economies Volume 15 ; 15 >
+        au < released ; Journal of African Economies Volume 16 ; 16 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Antimicrobial Chemotherapy 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jac.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jac.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Antimicrobial Chemotherapy Volume 55 ; 55 >
+        au < released ; Journal of Antimicrobial Chemotherapy Volume 56 ; 56 >
+        au < do_not_process ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 >
+        au < released ; Journal of Antimicrobial Chemotherapy Volume 58 ; 58 >
+        au < released ; Journal of Antimicrobial Chemotherapy Volume 59 ; 59 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Journal of Biochemistry 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jb.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Journal of Biochemistry Volume 139 ; 139 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jb.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; The Journal of Biochemistry Volume 139 ; 139 >
+        au < ready ; The Journal of Biochemistry Volume 140 ; 140 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Communication 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://joc.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Communication Volume 55 ; 55 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://joc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of Communication Volume 55 ; 55 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Competition Law and Economics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jcle.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Competition Law and Economics Volume 2 ; 2 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jcle.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Competition Law and Economics Volume 1 ; 1 >
+        au < do_not_process ; Journal of Competition Law and Economics Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Conflict and Security Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jcsl.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Conflict and Security Law Volume 11 ; 11 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jcsl.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Conflict and Security Law Volume 10 ; 10 >
+        au < do_not_process ; Journal of Conflict and Security Law Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Deaf Studies and Deaf Education 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jdsde.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
+        au < released ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
+        au < released ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Design History 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jdh.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Design History Volume 19 ; 19 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jdh.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Design History Volume 18 ; 18 >
+        au < do_not_process ; Journal of Design History Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Economic Geography 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://joeg.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Economic Geography Volume 6 ; 6 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://joeg.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Economic Geography Volume 5 ; 5 >
+        au < do_not_process ; Journal of Economic Geography Volume 6 ; 6 >
+        au < released ; Journal of Economic Geography Volume 7 ; 7 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Electron Microscopy 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jmicro.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Electron Microscopy Volume 55 ; 55 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jmicro.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Electron Microscopy Volume 54 ; 54 >
+        au < do_not_process ; Journal of Electron Microscopy Volume 55 ; 55 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Environmental Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jel.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Environmental Law Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jel.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Environmental Law Volume 17 ; 17 >
+        au < do_not_process ; Journal of Environmental Law Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Experimental Botany 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jxb.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Experimental Botany Volume 57 ; 57 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jxb.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Experimental Botany Volume 56 ; 56 >
+        au < do_not_process ; Journal of Experimental Botany Volume 57 ; 57 >
+        au < released ; Journal of Experimental Botany Volume 58 ; 58 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Financial Econometrics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jfec.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Financial Econometrics Volume 4 ; 4 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jfec.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Financial Econometrics Volume 3 ; 3 >
+        au < do_not_process ; Journal of Financial Econometrics Volume 4 ; 4 >
+        au < released ; Journal of Financial Econometrics Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Heredity 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jhered.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Heredity Volume 97 ; 97 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jhered.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Heredity Volume 96 ; 96 >
+        au < do_not_process ; Journal of Heredity Volume 97 ; 97 >
+        au < released ; Journal of Heredity Volume 98 ; 98 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Intellectual Property Law & Practice 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jiplp.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Intellectual Property Law & Practice Volume 1 ; 1 >
+        au < released ; Journal of Intellectual Property Law & Practice Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of International Criminal Justice 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jicj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of International Criminal Justice Volume 4 ; 4 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jicj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Journal of International Criminal Justice Volume 3 ; 3 >
+        au < do_not_process ; Journal of International Criminal Justice Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of International Economic Law 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jiel.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of International Economic Law Volume 9 ; 9 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jiel.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of International Economic Law Volume 8 ; 8 >
+        au < do_not_process ; Journal of International Economic Law Volume 9 ; 9 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Islamic Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jis.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Islamic Studies Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jis.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Islamic Studies Volume 16 ; 16 >
+        au < do_not_process ; Journal of Islamic Studies Volume 17 ; 17 >
+        au < released ; Journal of Islamic Studies Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Law, Economics, and Organization 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jleo.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jleo.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Law, Economics, and Organization Volume 21 ; 21 >
+        au < do_not_process ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
+        au < released ; Journal of Law, Economics, and Organization Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Logic and Computation 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://logcom.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Logic and Computation Volume 15 ; 15 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://logcom.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of Logic and Computation Volume 15 ; 15 >
+        au < released ; Journal of Logic and Computation Volume 16 ; 16 >
+        au < released ; Journal of Logic and Computation Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Molluscan Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://mollus.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Molluscan Studies Volume 72 ; 72 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://mollus.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Journal of Molluscan Studies Volume 71 ; 71 >
+        au < do_not_process ; Journal of Molluscan Studies Volume 72 ; 72 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Pediatric Psychology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jpepsy.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Pediatric Psychology Volume 31 ; 31 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jpepsy.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Pediatric Psychology Volume 30 ; 30 >
+        au < do_not_process ; Journal of Pediatric Psychology Volume 31 ; 31 >
+        au < released ; Journal of Pediatric Psychology Volume 32 ; 32 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Petrology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://petrology.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Petrology Volume 46 ; 46 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://petrology.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of Petrology Volume 46 ; 46 >
+        au < released ; Journal of Petrology Volume 47 ; 47 >
+        au < released ; Journal of Petrology Volume 48 ; 48 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Plankton Research 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://plankt.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Plankton Research Volume 27 ; 27 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://plankt.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of Plankton Research Volume 27 ; 27 >
+        au < released ; Journal of Plankton Research Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Public Administration Research and Theory 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jpart.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jpart.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Public Administration Research and Theory Volume 15 ; 15 >
+        au < do_not_process ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
+        au < released ; Journal of Public Administration Research and Theory Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Public Health 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jpubhealth.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Public Health Volume 28 ; 28 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jpubhealth.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Public Health Volume 27 ; 27 >
+        au < do_not_process ; Journal of Public Health Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Refugee Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jrs.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Refugee Studies Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jrs.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of Refugee Studies Volume 18 ; 18 >
+        au < released ; Journal of Refugee Studies Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Semantics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jos.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Semantics Volume 22 ; 22 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jos.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of Semantics Volume 22 ; 22 >
+        au < released ; Journal of Semantics Volume 23 ; 23 >
+        au < released ; Journal of Semantics Volume 24 ; 24 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Semitic Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jss.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Semitic Studies Volume 51 ; 51 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jss.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of Semitic Studies Volume 50 ; 50 >
+        au < do_not_process ; Journal of Semitic Studies Volume 51 ; 51 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the American Academy of Religion 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jaar.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of the American Academy of Religion Volume 73 ; 73 >
+        au < released ; Journal of the American Academy of Religion Volume 74 ; 74 >
+        au < ready ; Journal of the American Academy of Religion Volume 75 ; 75 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the History of Collections 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jhc.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of the History of Collections Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jhc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of the History of Collections Volume 17 ; 17 >
+        au < released ; Journal of the History of Collections Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the History of Medicine and Allied Sciences 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jhmas.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jhmas.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
+        au < released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
+        au < released ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the ICRU 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jicru.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of the ICRU Volume 6 ; 6 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jicru.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of the ICRU Volume 5 ; 5 >
+        au < do_not_process ; Journal of the ICRU Volume 6 ; 6 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the London Mathematical Society 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jlms.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Journal of the London Mathematical Society Volume 75 ; 75 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Royal Musical Association 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jrma.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of the Royal Musical Association Volume 130 ; 130 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jrma.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Journal of the Royal Musical Association Volume 130 ; 130 >
+        au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Journal of Theological Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jts.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Journal of Theological Studies Volume 57 ; 57 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jts.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The Journal of Theological Studies Volume 56 ; 56 >
+        au < do_not_process ; The Journal of Theological Studies Volume 57 ; 57 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Topology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jtopol.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Journal of Topology Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Tropical Pediatrics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://tropej.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Journal of Tropical Pediatrics Volume 52 ; 52 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://tropej.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < ready ; Journal of Tropical Pediatrics Volume 51 ; 51 >
+        au < do_not_process ; Journal of Tropical Pediatrics Volume 52 ; 52 >
+        au < ready ; Journal of Tropical Pediatrics Volume 53 ; 53 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Law, Probability and Risk 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://lpr.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Law, Probability and Risk Volume 4 ; 4 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://lpr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Law, Probability and Risk Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Library 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://library.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Library Volume 7 ; 7 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://library.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The Library Volume 6 ; 6 >
+        au < do_not_process ; The Library Volume 7 ; 7 >
+
+      }
+
+    }
+    
+    {
+
+      title <
+        name = Literary and Linguistic Computing 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://llc.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Literary and Linguistic Computing Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://llc.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Literary and Linguistic Computing Volume 20 ; 20 >
+        au < do_not_process ; Literary and Linguistic Computing Volume 21 ; 21 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Literary Imagination 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://litimag.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < ready ; Literary Imagination Volume 8 ; 8 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Literature and Theology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://litthe.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Literature and Theology Volume 20 ; 20 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://litthe.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Literature and Theology Volume 19 ; 19 >
+        au < do_not_process ; Literature and Theology Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Logic Journal of the IGPL 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://jigpal.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Logic Journal of the IGPL Volume 14 ; 14 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://jigpal.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Logic Journal of the IGPL Volume 13 ; 13 >
+        au < do_not_process ; Logic Journal of the IGPL Volume 14 ; 14 >
+        au < released ; Logic Journal of the IGPL Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Mathematical Medicine and Biology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://imammb.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Mathematical Medicine and Biology Volume 23 ; 23 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://imammb.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Mathematical Medicine and Biology Volume 22 ; 22 >
+        au < do_not_process ; Mathematical Medicine and Biology Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Medical Law Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://medlaw.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Medical Law Review Volume 14 ; 14 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://medlaw.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Medical Law Review Volume 13 ; 13 >
+        au < do_not_process ; Medical Law Review Volume 14 ; 14 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Mind 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://mind.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Mind Volume 115 ; 115 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://mind.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < ready ; Mind Volume 114 ; 114 >
+        au < do_not_process ; Mind Volume 115 ; 115 >
+        au < ready ; Mind Volume 116 ; 116 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Modern Judaism 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://mj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Modern Judaism Volume 26 ; 26 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://mj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Modern Judaism Volume 25 ; 25 >
+        au < do_not_process ; Modern Judaism Volume 26 ; 26 >
+        au < manifest ; Modern Judaism Volume 27 ; 27 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Molecular Biology and Evolution 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://mbe.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Molecular Biology and Evolution Volume 23 ; 23 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://mbe.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Molecular Biology and Evolution Volume 22 ; 22 >
+        au < do_not_process ; Molecular Biology and Evolution Volume 23 ; 23 >
+        au < released ; Molecular Biology and Evolution Volume 24 ; 24 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Molecular Human Reproduction 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://molehr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Molecular Human Reproduction Volume 11 ; 11 >
+        au < released ; Molecular Human Reproduction Volume 12 ; 12 >
+        au < released ; Molecular Human Reproduction Volume 13 ; 13 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Music and Letters 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ml.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Music and Letters Volume 86 ; 86 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ml.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Music and Letters Volume 86 ; 86 >
+        au < released ; Music and Letters Volume 87 ; 87 >
+        au < released ; Music and Letters Volume 88 ; 88 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Musical Quarterly 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://mq.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Musical Quarterly Volume 87 ; 87 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://mq.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; The Musical Quarterly Volume 87 ; 87 >
+        au < released ; The Musical Quarterly Volume 88 ; 88 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Mutagenesis 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://mutage.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Mutagenesis Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://mutage.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Mutagenesis Volume 20 ; 20 >
+        au < do_not_process ; Mutagenesis Volume 21 ; 21 >
+        au < released ; Mutagenesis Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Nephrology Dialysis Transplantation 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ndt.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ndt.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Nephrology Dialysis Transplantation Volume 20 ; 20 >
+        au < do_not_process ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
+        au < released ; Nephrology Dialysis Transplantation Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Notes and Queries 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://nq.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Notes and Queries Volume 53 ; 53 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://nq.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Notes and Queries Volume 52 ; 52 >
+        au < do_not_process ; Notes and Queries Volume 53 ; 53 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Nucleic Acids Research 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://nar.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Nucleic Acids Research Volume 33 ; 33 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://nar.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Nucleic Acids Research Volume 33 ; 33 >
+        au < manifest ; Nucleic Acids Research Volume 34 ; 34 >
+        au < ready ; Nucleic Acids Research Volume 35 ; 35 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Nucleic Acids Symposium Series 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://nass.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Nucleic Acids Symposium Series Volume 49 ; 49 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://nass.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Nucleic Acids Symposium Series Volume 49 ; 49 >
+        au < released ; Nucleic Acids Symposium Series Volume 50 ; 50 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Occupational Medicine 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://occmed.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Occupational Medicine Volume 56 ; 56 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://occmed.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Occupational Medicine Volume 55 ; 55 >
+        au < do_not_process ; Occupational Medicine Volume 56 ; 56 >
+        au < released ; Occupational Medicine Volume 57 ; 57 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Opera Quarterly 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://oq.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Opera Quarterly Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://oq.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; The Opera Quarterly Volume 21 ; 21 >
+        au < manifest ; The Opera Quarterly Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Oxford Art Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://oaj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Oxford Art Journal Volume 28 ; 28 >
+        au < released ; Oxford Art Journal Volume 29 ; 29 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://oaj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Oxford Art Journal Volume 28 ; 28 >
+        au < do_not_process ; Oxford Art Journal Volume 29 ; 29 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Oxford Economic Papers 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://oep.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Oxford Economic Papers Volume 58 ; 58 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://oep.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Oxford Economic Papers Volume 57 ; 57 >
+        au < do_not_process ; Oxford Economic Papers Volume 58 ; 58 >
+        au < released ; Oxford Economic Papers Volume 59 ; 59 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Oxford Journal of Legal Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ojls.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Oxford Journal of Legal Studies Volume 26 ; 26 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ojls.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Oxford Journal of Legal Studies Volume 25 ; 25 >
+        au < do_not_process ; Oxford Journal of Legal Studies Volume 26 ; 26 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Oxford Review of Economic Policy 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://oxrep.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Oxford Review of Economic Policy Volume 22 ; 22 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://oxrep.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Oxford Review of Economic Policy Volume 21 ; 21 >
+        au < do_not_process ; Oxford Review of Economic Policy Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Parliamentary Affairs 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://pa.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Parliamentary Affairs Volume 59 ; 59 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://pa.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Parliamentary Affairs Volume 58 ; 58 >
+        au < do_not_process ; Parliamentary Affairs Volume 59 ; 59 >
+        au < released ; Parliamentary Affairs Volume 60 ; 60 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Past & Present 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://past.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < manifest ; Past & Present Volume 190 ; 190 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://past.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Past & Present Volume 186 ; 186 >
+        au < released ; Past & Present Volume 187 ; 187 >
+        au < manifest ; Past & Present Volume 188 ; 188 >
+        au < manifest ; Past & Present Volume 189 ; 189 >
+        au < do_not_process ; Past & Present Volume 190 ; 190 >
+        au < manifest ; Past & Present Volume 191 ; 191 >
+        au < manifest ; Past & Present Volume 192 ; 192 >
+        au < manifest ; Past & Present Volume 193 ; 193 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Philosophia Mathematica 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://philmat.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Philosophia Mathematica Volume 14 ; 14 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://philmat.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Philosophia Mathematica Volume 13 ; 13 >
+        au < do_not_process ; Philosophia Mathematica Volume 14 ; 14 >
+        au < released ; Philosophia Mathematica Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Plant and Cell Physiology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://pcp.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Plant and Cell Physiology Volume 47 ; 47 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://pcp.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Plant and Cell Physiology Volume 47 ; 47 >
+        au < released ; Plant and Cell Physiology Volume 48 ; 48 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Political Analysis 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://pan.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Political Analysis Volume 14 ; 14 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://pan.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Political Analysis Volume 13 ; 13 >
+        au < do_not_process ; Political Analysis Volume 14 ; 14 >
+        au < released ; Political Analysis Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Proceedings of the London Mathematical Society 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://plms.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Proceedings of the London Mathematical Society Volume 94 ; 94 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Protein Engineering Design and Selection 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://peds.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Protein Engineering Design and Selection Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://peds.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Protein Engineering Design and Selection Volume 18 ; 18 >
+        au < released ; Protein Engineering Design and Selection Volume 19 ; 19 >
+        au < released ; Protein Engineering Design and Selection Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Public Opinion Quarterly 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://poq.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Public Opinion Quarterly Volume 70 ; 70 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://poq.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Public Opinion Quarterly Volume 69 ; 69 >
+        au < do_not_process ; Public Opinion Quarterly Volume 70 ; 70 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Publius: The Journal of Federalism 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://publius.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Publius: The Journal of Federalism Volume 36 ; 36 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://publius.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Publius: The Journal of Federalism Volume 36 ; 36 >
+        au < released ; Publius: The Journal of Federalism Volume 37 ; 37 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = QJM: An International Journal of Medicine 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://qjmed.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; QJM: An International Journal of Medicine Volume 99 ; 99 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://qjmed.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
+        au < do_not_process ; QJM: An International Journal of Medicine Volume 99 ; 99 >
+        au < manifest ; QJM: An International Journal of Medicine Volume 100 ; 100 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Quarterly Journal of Mathematics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://qjmath.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://qjmath.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
+        au < released ; The Quarterly Journal of Mathematics Volume 57 ; 57 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Quarterly Journal of Mechanics and Applied Mathematics 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://qjmam.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 >
+        au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 >
+        au < manifest ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Radiation Protection Dosimetry 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://rpd.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Radiation Protection Dosimetry Volume 118 ; 118 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://rpd.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Radiation Protection Dosimetry Volume 113 ; 113 >
+        au < released ; Radiation Protection Dosimetry Volume 114 ; 114 >
+        au < ready ; Radiation Protection Dosimetry Volume 115 ; 115 >
+        au < ready ; Radiation Protection Dosimetry Volume 116 ; 116 >
+        au < released ; Radiation Protection Dosimetry Volume 117 ; 117 >
+        au < do_not_process ; Radiation Protection Dosimetry Volume 118 ; 118 >
+        au < released ; Radiation Protection Dosimetry Volume 119 ; 119 >
+        au < released ; Radiation Protection Dosimetry Volume 120 ; 120 >
+        au < ready ; Radiation Protection Dosimetry Volume 121 ; 121 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Refugee Survey Quarterly 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://rsq.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Refugee Survey Quarterly Volume 25 ; 25 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://rsq.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Refugee Survey Quarterly Volume 24 ; 24 >
+        au < do_not_process ; Refugee Survey Quarterly Volume 25 ; 25 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Review of English Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://res.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Review of English Studies Volume 57 ; 57 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://res.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The Review of English Studies Volume 56 ; 56 >
+        au < do_not_process ; The Review of English Studies Volume 57 ; 57 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Review of Environmental Economics and Policy 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://reep.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Review of Environmental Economics and Policy Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Review of Finance 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://rof.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < ready ; Review of Finance Volume 10 ; 10 >
+        au < manifest ; Review of Finance Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Review of Financial Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://rfs.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Review of Financial Studies Volume 19 ; 19 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://rfs.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Review of Financial Studies Volume 18 ; 18 >
+        au < do_not_process ; Review of Financial Studies Volume 19 ; 19 >
+        au < released ; Review of Financial Studies Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Rheumatology 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://rheumatology.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Rheumatology Volume 44 ; 44 >
+        au < manifest ; Rheumatology Volume 45 ; 45 >
+        au < manifest ; Rheumatology Volume 46 ; 46 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Schizophrenia Bulletin 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Schizophrenia Bulletin Volume 32 ; 32 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Schizophrenia Bulletin Volume 31 ; 31 >
+        au < do_not_process ; Schizophrenia Bulletin Volume 32 ; 32 >
+        au < ready ; Schizophrenia Bulletin Volume 33 ; 33 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Screen 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://screen.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Screen Volume 46 ; 46 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://screen.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Screen Volume 46 ; 46 >
+        au < released ; Screen Volume 47 ; 47 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Social Cognitive and Affective Neuroscience 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://scan.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Social History of Medicine 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://shm.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Social History of Medicine Volume 18 ; 18 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://shm.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Social History of Medicine Volume 18 ; 18 >
+        au < released ; Social History of Medicine Volume 19 ; 19 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Social Politics: International Studies in Gender, State & Society 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://sp.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://sp.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
+        au < released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Social Science Japan Journal 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ssjj.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Social Science Japan Journal Volume 8 ; 8 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ssjj.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; Social Science Japan Journal Volume 8 ; 8 >
+        au < ready ; Social Science Japan Journal Volume 9 ; 9 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Socio-Economic Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ser.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Socio-Economic Review Volume 4 ; 4 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ser.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < ready ; Socio-Economic Review Volume 3 ; 3 >
+        au < do_not_process ; Socio-Economic Review Volume 4 ; 4 >
+        au < manifest ; Socio-Economic Review Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Statute Law Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://slr.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Statute Law Review Volume 27 ; 27 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://slr.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Statute Law Review Volume 26 ; 26 >
+        au < do_not_process ; Statute Law Review Volume 27 ; 27 >
+        au < released ; Statute Law Review Volume 28 ; 28 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Teaching Mathematics and its Applications 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://teamat.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Teaching Mathematics and its Applications Volume 25 ; 25 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://teamat.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
+        au < do_not_process ; Teaching Mathematics and its Applications Volume 25 ; 25 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Toxicological Sciences 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://toxsci.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < ready ; Toxicological Sciences Volume 91 ; 91 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://toxsci.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Toxicological Sciences Volume 83 ; 83 >
+        au < released ; Toxicological Sciences Volume 84 ; 84 >
+        au < released ; Toxicological Sciences Volume 85 ; 85 >
+        au < released ; Toxicological Sciences Volume 86 ; 86 >
+        au < released ; Toxicological Sciences Volume 87 ; 87 >
+        au < released ; Toxicological Sciences Volume 88 ; 88 >
+        au < manifest ; Toxicological Sciences Volume 89 ; 89 >
+        au < manifest ; Toxicological Sciences Volume 90 ; 90 >
+        au < do_not_process ; Toxicological Sciences Volume 91 ; 91 >
+        au < ready ; Toxicological Sciences Volume 92 ; 92 >
+        au < ready ; Toxicological Sciences Volume 93 ; 93 >
+        au < ready ; Toxicological Sciences Volume 94 ; 94 >
+        au < ready ; Toxicological Sciences Volume 95 ; 95 >
+        au < ready ; Toxicological Sciences Volume 96 ; 96 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Trusts & Trustees 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://tandt.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < manifest ; Trusts & Trustees Volume 12 ; 12 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Twentieth Century British History 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://tcbh.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; Twentieth Century British History Volume 17 ; 17 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://tcbh.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; Twentieth Century British History Volume 16 ; 16 >
+        au < do_not_process ; Twentieth Century British History Volume 17 ; 17 >
+
+      }
+
+    }
+
+
+    {
+
+      title <
+        name = The World Bank Economic Review 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://wber.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The World Bank Economic Review Volume 20 ; 20 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://wber.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The World Bank Economic Review Volume 19 ; 19 >
+        au < do_not_process ; The World Bank Economic Review Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The World Bank Research Observer 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://wbro.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The World Bank Research Observer Volume 21 ; 21 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://wbro.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < released ; The World Bank Research Observer Volume 20 ; 20 >
+        au < do_not_process ; The World Bank Research Observer Volume 21 ; 21 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Year's Work in Critical and Cultural Theory 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ywcct.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ywcct.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
+        au < released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Year's Work in English Studies 
+      >
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ywes.oxfordjournals.org/
+        implicit < status ; name ; param[volume]
+
+        au < released ; The Year's Work in English Studies Volume 84 ; 84 >
+
+      }
+
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        param[base_url] = http://ywes.oxfordjournals.org/
+        implicit < status ; name ; param[volume_name]
+
+        au < do_not_process ; The Year's Work in English Studies Volume 84 ; 84 >
+        au < released ; The Year's Work in English Studies Volume 85 ; 85 >
+
+      }
+
+    }
 
   }
 
   {
-    title <
-      name = Early Music 
-    >
 
-    param[journal_dir] = early_music
+    implicit < status ; name ; param[volume] >
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
 
-    au < released ; Early Music Volume 32 ; 32 >
-    au < released ; Early Music Volume 33 ; 33 >
-    au < released ; Early Music Volume 34 ; 34 >
-    au < released ; Early Music Volume 35 ; 35 >
-
-  }
-
-  {
-    title <
-      name = Enterprise & Society 
-    >
-
-    param[journal_dir] = enterprise_and_society
-
-    au < released ; Enterprise & Society Volume 4 ; 4 >
-    au < released ; Enterprise & Society Volume 5 ; 5 >
-    au < released ; Enterprise & Society Volume 6 ; 6 >
-    au < released ; Enterprise & Society Volume 7 ; 7 >
-    au < released ; Enterprise & Society Volume 8 ; 8 >
-    au < manifest ; Enterprise & Society Volume 9 ; 9 >
-    au < manifest ; Enterprise & Society Volume 10 ; 10 >
-
-  }
-
-  {
-    title <
-      name = Essays in Criticism 
-    >
-
-    param[journal_dir] = essays_in_criticism
-
-    au < released ; Essays in Criticism Volume 56 ; 56 >
-    au < released ; Essays in Criticism Volume 57 ; 57 >
-
-  }
-
-  {
-    title <
-      name = French Studies: A Quarterly Review 
-    >
-
-    param[journal_dir] = french_studies_a_quarterly_review
-
-    au < released ; French Studies: A Quarterly Review Volume 60 ; 60 >
-    au < released ; French Studies: A Quarterly Review Volume 61 ; 61 >
-    au < manifest ; French Studies: A Quarterly Review Volume 62 ; 62 >
-    au < manifest ; French Studies: A Quarterly Review Volume 63 ; 63 >
-
-  }
-
-  {
-    title <
-      name = History Workshop Journal 
-    >
-
-    param[journal_dir] = history_workshop_journal
-
-    au < released ; History Workshop Journal Volume 57 ; 57 >
-    au < released ; History Workshop Journal Volume 58 ; 58 >
-    au < released ; History Workshop Journal Volume 59 ; 59 >
-    au < released ; History Workshop Journal Volume 60 ; 60 >
-    au < released ; History Workshop Journal Volume 61 ; 61 >
-    au < released ; History Workshop Journal Volume 62 ; 62 >
-    au < released ; History Workshop Journal Volume 63 ; 63 >
-    au < manifest ; History Workshop Journal Volume 64 ; 64 >
-    au < manifest ; History Workshop Journal Volume 65 ; 65 >
-    au < manifest ; History Workshop Journal Volume 66 ; 66 >
-
-  }
-
-  {
-    title <
-      name = Holocaust and Genocide Studies 
-    >
-
-    param[journal_dir] = holocaust_and_genocide_studies
-
-    au < released ; Holocaust and Genocide Studies Volume 17 ; 17 >
-    au < released ; Holocaust and Genocide Studies Volume 18 ; 18 >
-    au < released ; Holocaust and Genocide Studies Volume 19 ; 19 >
-    au < released ; Holocaust and Genocide Studies Volume 20 ; 20 >
-    au < released ; Holocaust and Genocide Studies Volume 21 ; 21 >
-    au < manifest ; Holocaust and Genocide Studies Volume 22 ; 22 >
-
-  }
-
-  {
-    title <
-      name = Journal of the American Academy of Religion 
-    >
-
-    param[journal_dir] = journal_of_the_american_academy_of_religion
-
-    au < released ; Journal of the American Academy of Religion Volume 74 ; 74 >
-    au < released ; Journal of the American Academy of Religion Volume 75 ; 75 >
-
-  }
-
-  {
-    title <
-      name = Journal of the History of Medicine and Allied Sciences 
-    >
-
-    param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
-
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 55 ; 55 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 56 ; 56 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 57 ; 57 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 58 ; 58 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 59 ; 59 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
-    au < released ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
-    au < manifest ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 >
-    au < manifest ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
-
-  }
-
-  {
-    title <
-      name = Journal of the Royal Musical Association 
-    >
-
-    param[journal_dir] = journal_of_the_royal_musical_association
-
-    au < released ; Journal of the Royal Musical Association Volume 130 ; 130 >
-    au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
-    au < manifest ; Journal of the Royal Musical Association Volume 132 ; 132 >
-    au < manifest ; Journal of the Royal Musical Association Volume 133 ; 133 >
-
-  }
-
-  {
-    title <
-      name = Modern Judaism 
-    >
-
-    param[journal_dir] = modern_judaism
-
-    au < released ; Modern Judaism Volume 16 ; 16 >
-    au < released ; Modern Judaism Volume 17 ; 17 >
-    au < released ; Modern Judaism Volume 18 ; 18 >
-    au < released ; Modern Judaism Volume 19 ; 19 >
-    au < released ; Modern Judaism Volume 20 ; 20 >
-    au < released ; Modern Judaism Volume 21 ; 21 >
-    au < released ; Modern Judaism Volume 22 ; 22 >
-    au < released ; Modern Judaism Volume 23 ; 23 >
-    au < released ; Modern Judaism Volume 24 ; 24 >
-    au < released ; Modern Judaism Volume 25 ; 25 >
-    au < released ; Modern Judaism Volume 26 ; 26 >
-    au < released ; Modern Judaism Volume 27 ; 27 >
-    au < manifest ; Modern Judaism Volume 28 ; 28 >
-
-  }
-
-  {
-    title <
-      name = Music and Letters 
-    >
-
-    param[journal_dir] = music_and_letters
-
-    au < released ; Music and Letters Volume 85 ; 85 >
-    au < released ; Music and Letters Volume 86 ; 86 >
-    au < released ; Music and Letters Volume 87 ; 87 >
-    au < released ; Music and Letters Volume 88 ; 88 >
-    au < manifest ; Music and Letters Volume 89 ; 89 >
-
-  }
-
-  {
-    title <
-      name = Past & Present 
-    >
-
-    param[journal_dir] = past_and_present
-
-    au < released ; Past & Present Volume 188 ; 188 >
-    au < released ; Past & Present Volume 189 ; 189 >
-    au < released ; Past & Present Volume 190 ; 190 >
-    au < released ; Past & Present Volume 191 ; 191 >
-    au < released ; Past & Present Volume 192 ; 192 >
-    au < released ; Past & Present Volume 193 ; 193 >
-    au < manifest ; Past & Present 2006 Supplement ; 2006 >
-    au < manifest ; Past & Present Volume 194 ; 194 >
-    au < manifest ; Past & Present Volume 195 ; 195 >
-    au < manifest ; Past & Present Volume 196 ; 196 >
-    au < manifest ; Past & Present Volume 197 ; 197 >
-    au < manifest ; Past & Present 2007 Supplement ; 2007 >
-
-  }
-
-  {
-    title <
-      name = Social Politics: International Studies in Gender, State and Society 
-    >
-
-    param[journal_dir] = social_politics
-
-    au < released ; Social Politics: International Studies in Gender, State and Society Volume 10 ; 10 >
-    au < released ; Social Politics: International Studies in Gender, State and Society Volume 11 ; 11 >
-    au < released ; Social Politics: International Studies in Gender, State and Society Volume 12 ; 12 >
-    au < released ; Social Politics: International Studies in Gender, State and Society Volume 13 ; 13 >
-    au < released ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
-    au < manifest ; Social Politics: International Studies in Gender, State and Society Volume 15 ; 15 >
-
-  }
-
-  {
-    title <
-      name = The Cambridge Quarterly 
-    >
-
-    param[journal_dir] = cambridge_quarterly
-
-    au < released ; The Cambridge Quarterly Volume 35 ; 35 >
-    au < released ; The Cambridge Quarterly Volume 36 ; 36 >
-    au < manifest ; The Cambridge Quarterly Volume 37 ; 37 >
-    au < manifest ; The Cambridge Quarterly Volume 38 ; 38 >
-
-  }
-
-  {
-    title <
-      name = The Library: The Transactions of the Bibliographical Society 
-    >
-
-    param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
-
-    au < released ; The Library: The Transactions of the Bibliographical Society Volume 7 ; 7 >
-    au < released ; The Library: The Transactions of the Bibliographical Society Volume 8 ; 8 >
-    au < manifest ; The Library: The Transactions of the Bibliographical Society Volume 9 ; 9 >
-
-  }
-
-  {
-    title <
-      name = The Opera Quarterly 
-    >
-
-    param[journal_dir] = opera_quarterly
-
-    au < released ; The Opera Quarterly Volume 18 ; 18 >
-    au < released ; The Opera Quarterly Volume 19 ; 19 >
-    au < released ; The Opera Quarterly Volume 20 ; 20 >
-    au < released ; The Opera Quarterly Volume 21 ; 21 >
-    au < released ; The Opera Quarterly Volume 22 ; 22 >
-    au < manifest ; The Opera Quarterly Volume 23 ; 23 >
+    {
+      title <
+        name = American Literary History 
+      >
+  
+      param[journal_dir] = american_literary_history
+  
+      au < released ; American Literary History Volume 12 ; 12 >
+      au < released ; American Literary History Volume 13 ; 13 >
+      au < released ; American Literary History Volume 14 ; 14 >
+      au < released ; American Literary History Volume 15 ; 15 >
+      au < released ; American Literary History Volume 16 ; 16 >
+      au < released ; American Literary History Volume 17 ; 17 >
+      au < released ; American Literary History Volume 18 ; 18 >
+      au < released ; American Literary History Volume 19 ; 19 >
+  
+    }
+  
+    {
+      title <
+        name = Early Music 
+      >
+  
+      param[journal_dir] = early_music
+  
+      au < released ; Early Music Volume 32 ; 32 >
+      au < released ; Early Music Volume 33 ; 33 >
+      au < released ; Early Music Volume 34 ; 34 >
+      au < released ; Early Music Volume 35 ; 35 >
+  
+    }
+  
+    {
+      title <
+        name = Enterprise & Society 
+      >
+  
+      param[journal_dir] = enterprise_and_society
+  
+      au < released ; Enterprise & Society Volume 4 ; 4 >
+      au < released ; Enterprise & Society Volume 5 ; 5 >
+      au < released ; Enterprise & Society Volume 6 ; 6 >
+      au < released ; Enterprise & Society Volume 7 ; 7 >
+      au < released ; Enterprise & Society Volume 8 ; 8 >
+  
+    }
+  
+    {
+      title <
+        name = Essays in Criticism 
+      >
+  
+      param[journal_dir] = essays_in_criticism
+  
+      au < released ; Essays in Criticism Volume 56 ; 56 >
+      au < released ; Essays in Criticism Volume 57 ; 57 >
+  
+    }
+  
+    {
+      title <
+        name = French Studies: A Quarterly Review 
+      >
+  
+      param[journal_dir] = french_studies_a_quarterly_review
+  
+      au < released ; French Studies: A Quarterly Review Volume 60 ; 60 >
+      au < released ; French Studies: A Quarterly Review Volume 61 ; 61 >
+  
+    }
+  
+    {
+      title <
+        name = History Workshop Journal 
+      >
+  
+      param[journal_dir] = history_workshop_journal
+  
+      au < released ; History Workshop Journal Volume 57 ; 57 >
+      au < released ; History Workshop Journal Volume 58 ; 58 >
+      au < released ; History Workshop Journal Volume 59 ; 59 >
+      au < released ; History Workshop Journal Volume 60 ; 60 >
+      au < released ; History Workshop Journal Volume 61 ; 61 >
+      au < released ; History Workshop Journal Volume 62 ; 62 >
+      au < released ; History Workshop Journal Volume 63 ; 63 >
+  
+    }
+  
+    {
+      title <
+        name = Holocaust and Genocide Studies 
+      >
+  
+      param[journal_dir] = holocaust_and_genocide_studies
+  
+      au < released ; Holocaust and Genocide Studies Volume 17 ; 17 >
+      au < released ; Holocaust and Genocide Studies Volume 18 ; 18 >
+      au < released ; Holocaust and Genocide Studies Volume 19 ; 19 >
+      au < released ; Holocaust and Genocide Studies Volume 20 ; 20 >
+      au < released ; Holocaust and Genocide Studies Volume 21 ; 21 >
+  
+    }
+  
+    {
+      title <
+        name = Journal of the American Academy of Religion 
+      >
+  
+      param[journal_dir] = journal_of_the_american_academy_of_religion
+  
+      au < released ; Journal of the American Academy of Religion Volume 74 ; 74 >
+      au < released ; Journal of the American Academy of Religion Volume 75 ; 75 >
+  
+    }
+  
+    {
+      title <
+        name = Journal of the History of Medicine and Allied Sciences 
+      >
+  
+      param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
+  
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 55 ; 55 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 56 ; 56 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 57 ; 57 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 58 ; 58 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 59 ; 59 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
+      au < released ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
+  
+    }
+  
+    {
+      title <
+        name = Journal of the Royal Musical Association 
+      >
+  
+      param[journal_dir] = journal_of_the_royal_musical_association
+  
+      au < released ; Journal of the Royal Musical Association Volume 130 ; 130 >
+      au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
+  
+    }
+  
+    {
+      title <
+        name = Modern Judaism 
+      >
+  
+      param[journal_dir] = modern_judaism
+  
+      au < released ; Modern Judaism Volume 16 ; 16 >
+      au < released ; Modern Judaism Volume 17 ; 17 >
+      au < released ; Modern Judaism Volume 18 ; 18 >
+      au < released ; Modern Judaism Volume 19 ; 19 >
+      au < released ; Modern Judaism Volume 20 ; 20 >
+      au < released ; Modern Judaism Volume 21 ; 21 >
+      au < released ; Modern Judaism Volume 22 ; 22 >
+      au < released ; Modern Judaism Volume 23 ; 23 >
+      au < released ; Modern Judaism Volume 24 ; 24 >
+      au < released ; Modern Judaism Volume 25 ; 25 >
+      au < released ; Modern Judaism Volume 26 ; 26 >
+      au < released ; Modern Judaism Volume 27 ; 27 >
+  
+    }
+  
+    {
+      title <
+        name = Music and Letters 
+      >
+  
+      param[journal_dir] = music_and_letters
+  
+      au < released ; Music and Letters Volume 85 ; 85 >
+      au < released ; Music and Letters Volume 86 ; 86 >
+      au < released ; Music and Letters Volume 87 ; 87 >
+      au < released ; Music and Letters Volume 88 ; 88 >
+  
+    }
+  
+    {
+      title <
+        name = Past & Present 
+      >
+  
+      param[journal_dir] = past_and_present
+  
+      au < released ; Past & Present Volume 188 ; 188 >
+      au < released ; Past & Present Volume 189 ; 189 >
+      au < released ; Past & Present Volume 190 ; 190 >
+      au < released ; Past & Present Volume 191 ; 191 >
+      au < released ; Past & Present Volume 192 ; 192 >
+      au < released ; Past & Present Volume 193 ; 193 >
+  
+    }
+  
+    {
+      title <
+        name = Social Politics: International Studies in Gender, State and Society 
+      >
+  
+      param[journal_dir] = social_politics
+  
+      au < released ; Social Politics: International Studies in Gender, State and Society Volume 10 ; 10 >
+      au < released ; Social Politics: International Studies in Gender, State and Society Volume 11 ; 11 >
+      au < released ; Social Politics: International Studies in Gender, State and Society Volume 12 ; 12 >
+      au < released ; Social Politics: International Studies in Gender, State and Society Volume 13 ; 13 >
+      au < released ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
+  
+    }
+  
+    {
+      title <
+        name = The Cambridge Quarterly 
+      >
+  
+      param[journal_dir] = cambridge_quarterly
+  
+      au < released ; The Cambridge Quarterly Volume 35 ; 35 >
+      au < released ; The Cambridge Quarterly Volume 36 ; 36 >
+  
+    }
+  
+    {
+      title <
+        name = The Library: The Transactions of the Bibliographical Society 
+      >
+  
+      param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
+  
+      au < released ; The Library: The Transactions of the Bibliographical Society Volume 7 ; 7 >
+      au < released ; The Library: The Transactions of the Bibliographical Society Volume 8 ; 8 >
+  
+    }
+  
+    {
+      title <
+        name = The Opera Quarterly 
+      >
+  
+      param[journal_dir] = opera_quarterly
+  
+      au < released ; The Opera Quarterly Volume 18 ; 18 >
+      au < released ; The Opera Quarterly Volume 19 ; 19 >
+      au < released ; The Opera Quarterly Volume 20 ; 20 >
+      au < released ; The Opera Quarterly Volume 21 ; 21 >
+      au < released ; The Opera Quarterly Volume 22 ; 22 >
+  
+    }
 
   }
 
