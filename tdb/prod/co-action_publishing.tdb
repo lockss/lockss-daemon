@@ -3,6 +3,8 @@
     name = Co-Action Publishing
   >
 
+comment[0] = needs a parent plugin to cut out banner on contents page
+
   {
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -16,7 +18,7 @@
       param[base_url] = http://www.journaloforalmicrobiology.net/
       param[journal_id] = jom
 
-      au < manifest ; Journal of Oral Microbiology Volume 1 ; 2009 >
+      au < ready ; Journal of Oral Microbiology Volume 1 ; 2009 >
 
     }
 
@@ -28,7 +30,7 @@
       param[base_url] = http://www.globalhealthaction.net/
       param[journal_id] = gha
 
-      au < manifest ; Global Health Action Volume 1 ; 2009 >
+      au < ready ; Global Health Action Volume 1 ; 2009 >
 
     }
 
@@ -40,7 +42,7 @@
       param[base_url] = http://www.foodandnutritionresearch.net/
       param[journal_id] = fnr
 
-      au < manifest ; Food & Nutrition Research Volume 1 ; 2009 >
+      au < ready ; Food & Nutrition Research Volume 53 ; 2009 >
 
     }
 
@@ -52,7 +54,7 @@
       param[base_url] = http://www.ethicsandglobalpolitics.net/
       param[journal_id] = egp
 
-      au < manifest ; Ethics & Global Politics Volume 1 ; 2009 >
+      au < ready ; Ethics & Global Politics Volume 1 ; 2009 >
 
     }
     
