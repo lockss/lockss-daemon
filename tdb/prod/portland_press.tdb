@@ -13,6 +13,9 @@
 
     param[base_url] = http://www.biochemj.org/
     param[journal_id] = bj
+    
+comment[bj23] = 500 errors
+comment[bj24] = 500 errors
 
     au < testing ; Biochemical Journal Volume 1 ; 001 >
     au < testing ; Biochemical Journal Volume 2 ; 002 >
@@ -36,8 +39,8 @@
     au < manifest ; Biochemical Journal Volume 20 ; 020 >
     au < manifest ; Biochemical Journal Volume 21 ; 021 >
     au < manifest ; Biochemical Journal Volume 22 ; 022 >
-    au < manifest ; Biochemical Journal Volume 23 ; 023 >
-    au < manifest ; Biochemical Journal Volume 24 ; 024 >    
+    au < not_ready ; Biochemical Journal Volume 23 ; 023 >
+    au < not_ready ; Biochemical Journal Volume 24 ; 024 >    
     au < manifest ; Biochemical Journal Volume 25 ; 025 >
     au < manifest ; Biochemical Journal Volume 26 ; 026 >
     au < manifest ; Biochemical Journal Volume 27 ; 027 >
@@ -431,8 +434,8 @@
     au < manifest ; Biochemical Journal Volume 415 ; 415 >
     au < manifest ; Biochemical Journal Volume 416 ; 416 >
     au < manifest ; Biochemical Journal Volume 417 ; 417 >
-    au < manifest ; Biochemical Journal Volume 418 ; 418 >
-    au < manifest ; Biochemical Journal Volume 419 ; 419 >
+    au < ready ; Biochemical Journal Volume 418 ; 418 >
+    au < ready ; Biochemical Journal Volume 419 ; 419 >
     
   }
   
@@ -491,12 +494,12 @@
     au < manifest ; Biology of the Cell Volume 92 ; 092 >
     au < manifest ; Biology of the Cell Volume 93 ; 093 >
     au < manifest ; Biology of the Cell Volume 94 ; 094 >
-    au < manifest ; Biology of the Cell Volume 95 ; 095 >
-    au < manifest ; Biology of the Cell Volume 96 ; 096 >
-    au < manifest ; Biology of the Cell Volume 97 ; 097 >
-    au < manifest ; Biology of the Cell Volume 98 ; 098 >
-    au < manifest ; Biology of the Cell Volume 99 ; 099 >
-    au < manifest ; Biology of the Cell Volume 100 ; 100 >
+    au < ready ; Biology of the Cell Volume 95 ; 095 >
+    au < ready ; Biology of the Cell Volume 96 ; 096 >
+    au < ready ; Biology of the Cell Volume 97 ; 097 >
+    au < ready ; Biology of the Cell Volume 98 ; 098 >
+    au < ready ; Biology of the Cell Volume 99 ; 099 >
+    au < ready ; Biology of the Cell Volume 100 ; 100 >
     
   } 
   
