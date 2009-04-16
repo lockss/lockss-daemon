@@ -16,6 +16,9 @@
     
 comment[bj23] = 500 errors
 comment[bj24] = 500 errors
+comment[bj410] = 500 errors
+comment[bj412] = 500 errors
+comment[bj414] = 500 errors
 
     au < testing ; Biochemical Journal Volume 1 ; 001 >
     au < testing ; Biochemical Journal Volume 2 ; 002 >
@@ -426,14 +429,14 @@ comment[bj24] = 500 errors
     au < manifest ; Biochemical Journal Volume 407 ; 407 >
     au < manifest ; Biochemical Journal Volume 408 ; 408 >
     au < manifest ; Biochemical Journal Volume 409 ; 409 >
-    au < manifest ; Biochemical Journal Volume 410 ; 410 >
-    au < manifest ; Biochemical Journal Volume 411 ; 411 >
-    au < manifest ; Biochemical Journal Volume 412 ; 412 >
-    au < manifest ; Biochemical Journal Volume 413 ; 413 >
-    au < manifest ; Biochemical Journal Volume 414 ; 414 >
-    au < manifest ; Biochemical Journal Volume 415 ; 415 >
-    au < manifest ; Biochemical Journal Volume 416 ; 416 >
-    au < manifest ; Biochemical Journal Volume 417 ; 417 >
+    au < not_ready ; Biochemical Journal Volume 410 ; 410 >
+    au < testing ; Biochemical Journal Volume 411 ; 411 >
+    au < not_ready ; Biochemical Journal Volume 412 ; 412 >
+    au < testing ; Biochemical Journal Volume 413 ; 413 >
+    au < not_ready ; Biochemical Journal Volume 414 ; 414 >
+    au < testing ; Biochemical Journal Volume 415 ; 415 >
+    au < testing ; Biochemical Journal Volume 416 ; 416 >
+    au < testing ; Biochemical Journal Volume 417 ; 417 >
     au < ready ; Biochemical Journal Volume 418 ; 418 >
     au < ready ; Biochemical Journal Volume 419 ; 419 >
     
@@ -479,21 +482,21 @@ comment[bj24] = 500 errors
     au < manifest ; Biology of the Cell Volume 77 ; 077 >
     au < manifest ; Biology of the Cell Volume 78 ; 078 >
     au < manifest ; Biology of the Cell Volume 79 ; 079 >
-    au < manifest ; Biology of the Cell Volume 80 ; 080 >
-    au < manifest ; Biology of the Cell Volume 81 ; 081 >
-    au < manifest ; Biology of the Cell Volume 82 ; 082 >
-    au < manifest ; Biology of the Cell Volume 83 ; 083 >
-    au < manifest ; Biology of the Cell Volume 84 ; 084 >
-    au < manifest ; Biology of the Cell Volume 85 ; 085 >
-    au < manifest ; Biology of the Cell Volume 86 ; 086 >
-    au < manifest ; Biology of the Cell Volume 87 ; 087 >
-    au < manifest ; Biology of the Cell Volume 88 ; 088 >
-    au < manifest ; Biology of the Cell Volume 89 ; 089 >
-    au < manifest ; Biology of the Cell Volume 90 ; 090 >
-    au < manifest ; Biology of the Cell Volume 91 ; 091 >
-    au < manifest ; Biology of the Cell Volume 92 ; 092 >
-    au < manifest ; Biology of the Cell Volume 93 ; 093 >
-    au < manifest ; Biology of the Cell Volume 94 ; 094 >
+    au < testing ; Biology of the Cell Volume 80 ; 080 >
+    au < testing ; Biology of the Cell Volume 81 ; 081 >
+    au < testing ; Biology of the Cell Volume 82 ; 082 >
+    au < testing ; Biology of the Cell Volume 83 ; 083 >
+    au < testing ; Biology of the Cell Volume 84 ; 084 >
+    au < testing ; Biology of the Cell Volume 85 ; 085 >
+    au < testing ; Biology of the Cell Volume 86 ; 086 >
+    au < testing ; Biology of the Cell Volume 87 ; 087 >
+    au < testing ; Biology of the Cell Volume 88 ; 088 >
+    au < testing ; Biology of the Cell Volume 89 ; 089 >
+    au < ready ; Biology of the Cell Volume 90 ; 090 >
+    au < ready ; Biology of the Cell Volume 91 ; 091 >
+    au < ready ; Biology of the Cell Volume 92 ; 092 >
+    au < ready ; Biology of the Cell Volume 93 ; 093 >
+    au < ready ; Biology of the Cell Volume 94 ; 094 >
     au < ready ; Biology of the Cell Volume 95 ; 095 >
     au < ready ; Biology of the Cell Volume 96 ; 096 >
     au < ready ; Biology of the Cell Volume 97 ; 097 >
