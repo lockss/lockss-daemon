@@ -1,0 +1,61 @@
+{
+  publisher <
+    name = Co-Action Publishing
+  >
+
+  {
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; name ; param[year] >
+
+    {
+      title <
+        name = Journal of Oral Microbiology
+      >
+
+      param[base_url] = http://www.journaloforalmicrobiology.net/
+      param[journal_id] = jom
+
+      au < manifest ; Journal of Oral Microbiology Volume 1 ; 2009 >
+
+    }
+
+    {
+      title <
+        name = Global Health Action
+      >
+
+      param[base_url] = http://www.globalhealthaction.net/
+      param[journal_id] = gha
+
+      au < manifest ; Global Health Action Volume 1 ; 2009 >
+
+    }
+
+    {
+      title <
+        name = Food & Nutrition Research
+      >
+
+      param[base_url] = http://www.foodandnutritionresearch.net/
+      param[journal_id] = fnr
+
+      au < manifest ; Food & Nutrition Research Volume 1 ; 2009 >
+
+    }
+
+    {
+      title <
+        name = Ethics & Global Politics
+      >
+
+      param[base_url] = http://www.ethicsandglobalpolitics.net/
+      param[journal_id] = egp
+
+      au < manifest ; Ethics & Global Politics Volume 1 ; 2009 >
+
+    }
+    
+  }
+  
+}
