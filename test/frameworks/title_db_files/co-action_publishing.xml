@@ -82,14 +82,166 @@
    </property>
    <property name="param.3">
     <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="GlobalHealthAction2">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Global Health Action" />
+   <property name="title" value="Global Health Action Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.globalhealthaction.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="gha" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
     <property name="value" value="2009" />
    </property>
   </property>
 
-  <property name="FoodNutritionResearch1">
+  <property name="FoodNutritionResearch46">
    <property name="attributes.publisher" value="Co-Action Publishing" />
    <property name="journalTitle" value="Food &amp; Nutrition Research" />
-   <property name="title" value="Food &amp; Nutrition Research Volume 1" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch47">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch48">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch49">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch50">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch51">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch52">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.foodandnutritionresearch.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="fnr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="FoodNutritionResearch53">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Food &amp; Nutrition Research" />
+   <property name="title" value="Food &amp; Nutrition Research Volume 53" />
    <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -109,6 +261,25 @@
    <property name="attributes.publisher" value="Co-Action Publishing" />
    <property name="journalTitle" value="Ethics &amp; Global Politics" />
    <property name="title" value="Ethics &amp; Global Politics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.ethicsandglobalpolitics.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="egp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="EthicsGlobalPolitics2">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Ethics &amp; Global Politics" />
+   <property name="title" value="Ethics &amp; Global Politics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
