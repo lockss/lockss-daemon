@@ -2780,13 +2780,13 @@
       param[base_url] = http://www.particleandfibretoxicology.com/
       param[journal_issn] = 1743-8977
 
-      au < testing ; Particle and Fibre Toxicology Volume 1 ; 1 >
-      au < testing ; Particle and Fibre Toxicology Volume 2 ; 2 >
-      au < testing ; Particle and Fibre Toxicology Volume 3 ; 3 >
-      au < testing ; Particle and Fibre Toxicology Volume 4 ; 4 >
-      au < testing ; Particle and Fibre Toxicology Volume 5 ; 5 >
-      au < testing ; Particle and Fibre Toxicology Volume 6 ; 6 >
-      au < testing ; Particle and Fibre Toxicology Volume 7 ; 7 >
+      au < ready ; Particle and Fibre Toxicology Volume 1 ; 1 >
+      au < ready ; Particle and Fibre Toxicology Volume 2 ; 2 >
+      au < ready ; Particle and Fibre Toxicology Volume 3 ; 3 >
+      au < ready ; Particle and Fibre Toxicology Volume 4 ; 4 >
+      au < ready ; Particle and Fibre Toxicology Volume 5 ; 5 >
+      au < ready ; Particle and Fibre Toxicology Volume 6 ; 6 >
+      au < ready ; Particle and Fibre Toxicology Volume 7 ; 7 >
     }
 
 
@@ -2800,8 +2800,8 @@
       param[base_url] = http://www.pssjournal.com/
       param[journal_issn] = 1754-9493
 
-      au < manifest ; Patient Safety in Surgery Volume 1 ; 1 >
-      au < manifest ; Patient Safety in Surgery Volume 2 ; 2 >
+      au < ready ; Patient Safety in Surgery Volume 1 ; 1 >
+      au < ready ; Patient Safety in Surgery Volume 2 ; 2 >
     }
 
 
@@ -2815,12 +2815,12 @@
       param[base_url] = http://www.ped-rheum.com/
       param[journal_issn] = 1546-0096
 
-      au < manifest ; Pediatric Rheumatology Volume 1 ; 1 >
-      au < manifest ; Pediatric Rheumatology Volume 2 ; 2 >
-      au < manifest ; Pediatric Rheumatology Volume 3 ; 3 >
-      au < manifest ; Pediatric Rheumatology Volume 4 ; 4 >
-      au < manifest ; Pediatric Rheumatology Volume 5 ; 5 >
-      au < manifest ; Pediatric Rheumatology Volume 6 ; 6 >
+      au < ready ; Pediatric Rheumatology Volume 1 ; 1 >
+      au < ready ; Pediatric Rheumatology Volume 2 ; 2 >
+      au < ready ; Pediatric Rheumatology Volume 3 ; 3 >
+      au < ready ; Pediatric Rheumatology Volume 4 ; 4 >
+      au < ready ; Pediatric Rheumatology Volume 5 ; 5 >
+      au < ready ; Pediatric Rheumatology Volume 6 ; 6 >
     }
 
 
@@ -2834,9 +2834,9 @@
       param[base_url] = http://www.peh-med.com/
       param[journal_issn] = 1747-5341
 
-      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 1 ; 1 >
-      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 >
-      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
+      au < ready ; Philosophy, Ethics, and Humanities in Medicine Volume 1 ; 1 >
+      au < ready ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 >
+      au < ready ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
     }
 
 
@@ -2850,10 +2850,10 @@
       param[base_url] = http://www.plantmethods.com/
       param[journal_issn] = 1746-4811
 
-      au < manifest ; Plant Methods Volume 1 ; 1 >
-      au < manifest ; Plant Methods Volume 2 ; 2 >
-      au < manifest ; Plant Methods Volume 3 ; 3 >
-      au < manifest ; Plant Methods Volume 4 ; 4 >
+      au < ready ; Plant Methods Volume 1 ; 1 >
+      au < ready ; Plant Methods Volume 2 ; 2 >
+      au < ready ; Plant Methods Volume 3 ; 3 >
+      au < ready ; Plant Methods Volume 4 ; 4 >
     }
 
 
@@ -2867,12 +2867,12 @@
       param[base_url] = http://www.pophealthmetrics.com/
       param[journal_issn] = 1478-7954
 
-      au < manifest ; Population Health Metrics Volume 1 ; 1 >
-      au < manifest ; Population Health Metrics Volume 2 ; 2 >
-      au < manifest ; Population Health Metrics Volume 3 ; 3 >
-      au < manifest ; Population Health Metrics Volume 4 ; 4 >
-      au < manifest ; Population Health Metrics Volume 5 ; 5 >
-      au < manifest ; Population Health Metrics Volume 6 ; 6 >
+      au < ready ; Population Health Metrics Volume 1 ; 1 >
+      au < ready ; Population Health Metrics Volume 2 ; 2 >
+      au < ready ; Population Health Metrics Volume 3 ; 3 >
+      au < ready ; Population Health Metrics Volume 4 ; 4 >
+      au < ready ; Population Health Metrics Volume 5 ; 5 >
+      au < ready ; Population Health Metrics Volume 6 ; 6 >
     }
 
 
@@ -2886,12 +2886,12 @@
       param[base_url] = http://www.proteomesci.com/
       param[journal_issn] = 1477-5956
 
-      au < manifest ; Proteome Science Volume 1 ; 1 >
-      au < manifest ; Proteome Science Volume 2 ; 2 >
-      au < manifest ; Proteome Science Volume 3 ; 3 >
-      au < manifest ; Proteome Science Volume 4 ; 4 >
-      au < manifest ; Proteome Science Volume 5 ; 5 >
-      au < manifest ; Proteome Science Volume 6 ; 6 >
+      au < ready ; Proteome Science Volume 1 ; 1 >
+      au < ready ; Proteome Science Volume 2 ; 2 >
+      au < ready ; Proteome Science Volume 3 ; 3 >
+      au < ready ; Proteome Science Volume 4 ; 4 >
+      au < ready ; Proteome Science Volume 5 ; 5 >
+      au < ready ; Proteome Science Volume 6 ; 6 >
     }
 
 
@@ -2905,9 +2905,9 @@
       param[base_url] = http://www.ro-journal.com/
       param[journal_issn] = 1748-717X
 
-      au < manifest ; Radiation Oncology Volume 1 ; 1 >
-      au < manifest ; Radiation Oncology Volume 2 ; 2 >
-      au < manifest ; Radiation Oncology Volume 3 ; 3 >
+      au < ready ; Radiation Oncology Volume 1 ; 1 >
+      au < ready ; Radiation Oncology Volume 2 ; 2 >
+      au < ready ; Radiation Oncology Volume 3 ; 3 >
     }
 
 
@@ -2921,12 +2921,12 @@
       param[base_url] = http://www.rbej.com/
       param[journal_issn] = 1477-7827
 
-      au < manifest ; Reproductive Biology and Endocrinology Volume 1 ; 1 >
-      au < manifest ; Reproductive Biology and Endocrinology Volume 2 ; 2 >
-      au < manifest ; Reproductive Biology and Endocrinology Volume 3 ; 3 >
-      au < manifest ; Reproductive Biology and Endocrinology Volume 4 ; 4 >
-      au < manifest ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
-      au < manifest ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
+      au < ready ; Reproductive Biology and Endocrinology Volume 1 ; 1 >
+      au < ready ; Reproductive Biology and Endocrinology Volume 2 ; 2 >
+      au < ready ; Reproductive Biology and Endocrinology Volume 3 ; 3 >
+      au < ready ; Reproductive Biology and Endocrinology Volume 4 ; 4 >
+      au < ready ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
+      au < ready ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
     }
 
 
@@ -2940,11 +2940,11 @@
       param[base_url] = http://www.reproductive-health-journal.com/
       param[journal_issn] = 1742-4755
 
-      au < manifest ; Reproductive Health Volume 1 ; 1 >
-      au < manifest ; Reproductive Health Volume 2 ; 2 >
-      au < manifest ; Reproductive Health Volume 3 ; 3 >
-      au < manifest ; Reproductive Health Volume 4 ; 4 >
-      au < manifest ; Reproductive Health Volume 5 ; 5 >
+      au < testing ; Reproductive Health Volume 1 ; 1 >
+      au < testing ; Reproductive Health Volume 2 ; 2 >
+      au < testing ; Reproductive Health Volume 3 ; 3 >
+      au < testing ; Reproductive Health Volume 4 ; 4 >
+      au < testing ; Reproductive Health Volume 5 ; 5 >
     }
 
 
@@ -2958,11 +2958,11 @@
       param[base_url] = http://www.retrovirology.com/
       param[journal_issn] = 1742-4690
 
-      au < manifest ; Retrovirology Volume 1 ; 1 >
-      au < manifest ; Retrovirology Volume 2 ; 2 >
-      au < manifest ; Retrovirology Volume 3 ; 3 >
-      au < manifest ; Retrovirology Volume 4 ; 4 >
-      au < manifest ; Retrovirology Volume 5 ; 5 >
+      au < testing ; Retrovirology Volume 1 ; 1 >
+      au < testing ; Retrovirology Volume 2 ; 2 >
+      au < testing ; Retrovirology Volume 3 ; 3 >
+      au < testing ; Retrovirology Volume 4 ; 4 >
+      au < testing ; Retrovirology Volume 5 ; 5 >
     }
 
 
@@ -2976,10 +2976,10 @@
       param[base_url] = http://www.salinesystems.org/
       param[journal_issn] = 1746-1448
 
-      au < manifest ; Saline Systems Volume 1 ; 1 >
-      au < manifest ; Saline Systems Volume 2 ; 2 >
-      au < manifest ; Saline Systems Volume 3 ; 3 >
-      au < manifest ; Saline Systems Volume 4 ; 4 >
+      au < testing ; Saline Systems Volume 1 ; 1 >
+      au < testing ; Saline Systems Volume 2 ; 2 >
+      au < testing ; Saline Systems Volume 3 ; 3 >
+      au < testing ; Saline Systems Volume 4 ; 4 >
     }
 
 
@@ -2993,9 +2993,9 @@
       param[base_url] = http://www.scoliosisjournal.com/
       param[journal_issn] = 1748-7161
 
-      au < manifest ; Scoliosis Volume 1 ; 1 >
-      au < manifest ; Scoliosis Volume 2 ; 2 >
-      au < manifest ; Scoliosis Volume 3 ; 3 >
+      au < testing ; Scoliosis Volume 1 ; 1 >
+      au < testing ; Scoliosis Volume 2 ; 2 >
+      au < testing ; Scoliosis Volume 3 ; 3 >
     }
 
 
@@ -3009,9 +3009,9 @@
       param[base_url] = http://www.scfbm.org/
       param[journal_issn] = 1751-0473
 
-      au < manifest ; Source Code for Biology and Medicine Volume 1 ; 1 >
-      au < manifest ; Source Code for Biology and Medicine Volume 2 ; 2 >
-      au < manifest ; Source Code for Biology and Medicine Volume 3 ; 3 >
+      au < testing ; Source Code for Biology and Medicine Volume 1 ; 1 >
+      au < testing ; Source Code for Biology and Medicine Volume 2 ; 2 >
+      au < testing ; Source Code for Biology and Medicine Volume 3 ; 3 >
     }
 
 
@@ -3025,9 +3025,9 @@
       param[base_url] = http://www.substanceabusepolicy.com/
       param[journal_issn] = 1747-597X
 
-      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
-      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
-      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
+      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
+      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
+      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
     }
 
 
@@ -3041,11 +3041,11 @@
       param[base_url] = http://www.tbiomed.com/
       param[journal_issn] = 1742-4682
 
-      au < manifest ; Theoretical Biology and Medical Modelling Volume 1 ; 1 >
-      au < manifest ; Theoretical Biology and Medical Modelling Volume 2 ; 2 >
-      au < manifest ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
-      au < manifest ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
-      au < manifest ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
+      au < testing ; Theoretical Biology and Medical Modelling Volume 1 ; 1 >
+      au < testing ; Theoretical Biology and Medical Modelling Volume 2 ; 2 >
+      au < testing ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
+      au < testing ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
+      au < testing ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
     }
 
 
