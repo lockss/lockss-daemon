@@ -411,12 +411,11 @@ class Client:
         return "TCP:[%s]:%d" % ( socket.gethostbyname( self.hostname ), self.v3Port )
 
     def createAu(self, au):
-        """Create a simulated AU.  This will block until the AU appears in
-        the server's status table."""
+        """Create an AU."""
         post = self.__makeAuPost(au, 'Create')
         post.execute()
-#         if not self.waitForCreateAu(au):
-#             raise LockssError("Timed out while waiting for AU %s to appear." % au)
+#       if not self.waitForCreateAu(au):
+#           raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
     def waitAu(self, au):
         """ will block until the AU appears in the server's status table. """
@@ -2030,8 +2029,8 @@ class LockssDaemon:
 
 class Post:
     """A simple wrapper for HTTP post management."""
-    def __init__(self, url='', username=None, password=None, cookie=None):
-        self.request = urllib2.Request(url)
+    def __init__( self, url = '', username = None, password = None, cookie = None ):
+        self.request = urllib2.Request( url )
         if cookie:
             self.request.add_header('Cookie', cookie)
         if username is not None and password is not None:
@@ -2045,12 +2044,15 @@ class Post:
         self.postData.append((key, val))
 
     def execute(self):
-        """Send a POST with the previously constructed form data,
-        and return the contents of the file."""
-        args = urllib.urlencode(self.postData)
-        opener = urllib2.build_opener()
-        log.debug2("Sending POST: %s?%s" % (self.request.get_full_url(), args))
-        return opener.open(self.request, args)
+        """Send a POST with the pre-initialized form data and return the contents of the resource."""
+        if ( 'output', 'xml' ) not in self.postData:
+            self.request.add_header( 'X-Lockss-Result', 'Please' )
+        args = urllib.urlencode( self.postData )
+        log.debug2( "Sending POST: %s?%s" % ( self.request.get_full_url(), args ) )
+        resource = urllib2.urlopen( self.request, args )
+        if resource.info().getheader( 'X-Lockss-Result' ) == 'Fail':
+            raise LockssError( 'HTML UI transaction failure' )
+        return resource
 
 
 class MultipartPost:
