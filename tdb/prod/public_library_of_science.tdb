@@ -111,12 +111,12 @@ comment[plos0] = no manifest
     param[base_url] = http://www.plosmedicine.org/   
     param[journal_id] = medicine
 
-    au < ready ; PLoS Medicine Volume 1 ; 2004 >
-    au < ready ; PLoS Medicine Volume 2 ; 2005 >
-    au < ready ; PLoS Medicine Volume 3 ; 2006 >
-    au < ready ; PLoS Medicine Volume 4 ; 2007 >
-    au < ready ; PLoS Medicine Volume 5 ; 2008 >
-    au < ready ; PLoS Medicine Volume 6 ; 2009 >
+    au < releasing ; PLoS Medicine Volume 1 ; 2004 >
+    au < releasing ; PLoS Medicine Volume 2 ; 2005 >
+    au < releasing ; PLoS Medicine Volume 3 ; 2006 >
+    au < releasing ; PLoS Medicine Volume 4 ; 2007 >
+    au < releasing ; PLoS Medicine Volume 5 ; 2008 >
+    au < releasing ; PLoS Medicine Volume 6 ; 2009 >
 
   }
 

@@ -1370,16 +1370,16 @@
       param[base_url] = http://breast-cancer-research.com/
       param[journal_issn] = 1465-5411
 
-      au < ready ; Breast Cancer Research Volume 1 ; 1 >
-      au < ready ; Breast Cancer Research Volume 2 ; 2 >
-      au < ready ; Breast Cancer Research Volume 3 ; 3 >
-      au < ready ; Breast Cancer Research Volume 4 ; 4 >
-      au < ready ; Breast Cancer Research Volume 5 ; 5 >
-      au < ready ; Breast Cancer Research Volume 6 ; 6 >
-      au < ready ; Breast Cancer Research Volume 7 ; 7 >
-      au < ready ; Breast Cancer Research Volume 8 ; 8 >
-      au < ready ; Breast Cancer Research Volume 9 ; 9 >
-      au < ready ; Breast Cancer Research Volume 10 ; 10 >
+      au < releasing ; Breast Cancer Research Volume 1 ; 1 >
+      au < releasing ; Breast Cancer Research Volume 2 ; 2 >
+      au < releasing ; Breast Cancer Research Volume 3 ; 3 >
+      au < releasing ; Breast Cancer Research Volume 4 ; 4 >
+      au < releasing ; Breast Cancer Research Volume 5 ; 5 >
+      au < releasing ; Breast Cancer Research Volume 6 ; 6 >
+      au < releasing ; Breast Cancer Research Volume 7 ; 7 >
+      au < releasing ; Breast Cancer Research Volume 8 ; 8 >
+      au < releasing ; Breast Cancer Research Volume 9 ; 9 >
+      au < releasing ; Breast Cancer Research Volume 10 ; 10 >
     }
 
     {
@@ -1391,14 +1391,14 @@
       param[base_url] = http://www.cancerci.com/
       param[journal_issn] = 1475-2867
 
-      au < ready ; Cancer Cell International Volume 1 ; 1 >
-      au < ready ; Cancer Cell International Volume 2 ; 2 >
-      au < ready ; Cancer Cell International Volume 3 ; 3 >
-      au < ready ; Cancer Cell International Volume 4 ; 4 >
-      au < ready ; Cancer Cell International Volume 5 ; 5 >
-      au < ready ; Cancer Cell International Volume 6 ; 6 >
-      au < ready ; Cancer Cell International Volume 7 ; 7 >
-      au < ready ; Cancer Cell International Volume 8 ; 8 >
+      au < releasing ; Cancer Cell International Volume 1 ; 1 >
+      au < releasing ; Cancer Cell International Volume 2 ; 2 >
+      au < releasing ; Cancer Cell International Volume 3 ; 3 >
+      au < releasing ; Cancer Cell International Volume 4 ; 4 >
+      au < releasing ; Cancer Cell International Volume 5 ; 5 >
+      au < releasing ; Cancer Cell International Volume 6 ; 6 >
+      au < releasing ; Cancer Cell International Volume 7 ; 7 >
+      au < releasing ; Cancer Cell International Volume 8 ; 8 >
     }
 
 
@@ -1412,9 +1412,9 @@
       param[base_url] = http://www.cbmjournal.com/
       param[journal_issn] = 1750-0680
 
-      au < ready ; Carbon Balance and Management Volume 1 ; 1 >
-      au < ready ; Carbon Balance and Management Volume 2 ; 2 >
-      au < ready ; Carbon Balance and Management Volume 3 ; 3 >
+      au < releasing ; Carbon Balance and Management Volume 1 ; 1 >
+      au < releasing ; Carbon Balance and Management Volume 2 ; 2 >
+      au < releasing ; Carbon Balance and Management Volume 3 ; 3 >
     }
 
 
@@ -1428,13 +1428,13 @@
       param[base_url] = http://www.cardiab.com/
       param[journal_issn] = 1475-2840
 
-      au < ready ; Cardiovascular Diabetology Volume 1 ; 1 >
-      au < ready ; Cardiovascular Diabetology Volume 2 ; 2 >
-      au < ready ; Cardiovascular Diabetology Volume 3 ; 3 >
-      au < ready ; Cardiovascular Diabetology Volume 4 ; 4 >
-      au < ready ; Cardiovascular Diabetology Volume 5 ; 5 >
-      au < ready ; Cardiovascular Diabetology Volume 6 ; 6 >
-      au < ready ; Cardiovascular Diabetology Volume 7 ; 7 >
+      au < releasing ; Cardiovascular Diabetology Volume 1 ; 1 >
+      au < releasing ; Cardiovascular Diabetology Volume 2 ; 2 >
+      au < releasing ; Cardiovascular Diabetology Volume 3 ; 3 >
+      au < releasing ; Cardiovascular Diabetology Volume 4 ; 4 >
+      au < releasing ; Cardiovascular Diabetology Volume 5 ; 5 >
+      au < releasing ; Cardiovascular Diabetology Volume 6 ; 6 >
+      au < releasing ; Cardiovascular Diabetology Volume 7 ; 7 >
     }
 
 
@@ -1448,12 +1448,12 @@
       param[base_url] = http://www.cardiovascularultrasound.com/
       param[journal_issn] = 1476-7120
 
-      au < ready ; Cardiovascular Ultrasound Volume 1 ; 1 >
-      au < ready ; Cardiovascular Ultrasound Volume 2 ; 2 >
-      au < ready ; Cardiovascular Ultrasound Volume 3 ; 3 >
-      au < ready ; Cardiovascular Ultrasound Volume 4 ; 4 >
-      au < ready ; Cardiovascular Ultrasound Volume 5 ; 5 >
-      au < ready ; Cardiovascular Ultrasound Volume 6 ; 6 >
+      au < releasing ; Cardiovascular Ultrasound Volume 1 ; 1 >
+      au < releasing ; Cardiovascular Ultrasound Volume 2 ; 2 >
+      au < releasing ; Cardiovascular Ultrasound Volume 3 ; 3 >
+      au < releasing ; Cardiovascular Ultrasound Volume 4 ; 4 >
+      au < releasing ; Cardiovascular Ultrasound Volume 5 ; 5 >
+      au < releasing ; Cardiovascular Ultrasound Volume 6 ; 6 >
     }
 
 
@@ -1467,7 +1467,7 @@
       param[base_url] = http://www.casesjournal.com/
       param[journal_issn] = 1757-1626
 
-      au < ready ; Cases Journal Volume 1 ; 1 >
+      au < releasing ; Cases Journal Volume 1 ; 1 >
     }
 
 
@@ -1481,11 +1481,11 @@
       param[base_url] = http://www.biosignaling.com/
       param[journal_issn] = 1478-811X
 
-      au < ready ; Cell Communication and Signaling Volume 1 ; 1 >
-      au < ready ; Cell Communication and Signaling Volume 2 ; 2 >
-      au < ready ; Cell Communication and Signaling Volume 3 ; 3 >
-      au < ready ; Cell Communication and Signaling Volume 4 ; 4 >
-      au < ready ; Cell Communication and Signaling Volume 5 ; 5 >
+      au < releasing ; Cell Communication and Signaling Volume 1 ; 1 >
+      au < releasing ; Cell Communication and Signaling Volume 2 ; 2 >
+      au < releasing ; Cell Communication and Signaling Volume 3 ; 3 >
+      au < releasing ; Cell Communication and Signaling Volume 4 ; 4 >
+      au < releasing ; Cell Communication and Signaling Volume 5 ; 5 >
     }
 
 
@@ -1499,9 +1499,9 @@
       param[base_url] = http://www.celldiv.com/
       param[journal_issn] = 1747-1028
 
-      au < ready ; Cell Division Volume 1 ; 1 >
-      au < ready ; Cell Division Volume 2 ; 2 >
-      au < ready ; Cell Division Volume 3 ; 3 >
+      au < releasing ; Cell Division Volume 1 ; 1 >
+      au < releasing ; Cell Division Volume 2 ; 2 >
+      au < releasing ; Cell Division Volume 3 ; 3 >
     }
 
 
@@ -1515,11 +1515,11 @@
       param[base_url] = http://www.cerebrospinalfluidresearch.com/
       param[journal_issn] = 1743-8454
 
-      au < ready ; Cerebrospinal Fluid Research Volume 1 ; 1 >
-      au < ready ; Cerebrospinal Fluid Research Volume 2 ; 2 >
-      au < ready ; Cerebrospinal Fluid Research Volume 3 ; 3 >
-      au < ready ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < ready ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+      au < releasing ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+      au < releasing ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+      au < releasing ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+      au < releasing ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+      au < releasing ; Cerebrospinal Fluid Research Volume 5 ; 5 >
     }
 
 
@@ -1533,8 +1533,8 @@
       param[base_url] = http://www.journal.chemistrycentral.com/
       param[journal_issn] = 1752-153X
 
-      au < ready ; Chemistry Central Journal Volume 1 ; 1 >
-      au < ready ; Chemistry Central Journal Volume 2 ; 2 >
+      au < releasing ; Chemistry Central Journal Volume 1 ; 1 >
+      au < releasing ; Chemistry Central Journal Volume 2 ; 2 >
     }
 
 
@@ -1548,8 +1548,8 @@
       param[base_url] = http://www.capmh.com/
       param[journal_issn] = 1753-2000
 
-      au < ready ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
-      au < ready ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
+      au < releasing ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
+      au < releasing ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
     }
 
 
@@ -1563,9 +1563,9 @@
       param[base_url] = http://www.cmjournal.org/
       param[journal_issn] = 1749-8546
 
-      au < ready ; Chinese Medicine Volume 1 ; 1 >
-      au < ready ; Chinese Medicine Volume 2 ; 2 >
-      au < ready ; Chinese Medicine Volume 3 ; 3 >
+      au < releasing ; Chinese Medicine Volume 1 ; 1 >
+      au < releasing ; Chinese Medicine Volume 2 ; 2 >
+      au < releasing ; Chinese Medicine Volume 3 ; 3 >
     }
 
 
@@ -1579,10 +1579,10 @@
       param[base_url] = http://www.chiroandosteo.com/
       param[journal_issn] = 1746-1340
 
-      au < ready ; Chiropractic & Osteopathy Volume 13 ; 13 >
-      au < ready ; Chiropractic & Osteopathy Volume 14 ; 14 >
-      au < ready ; Chiropractic & Osteopathy Volume 15 ; 15 >
-      au < ready ; Chiropractic & Osteopathy Volume 16 ; 16 >
+      au < releasing ; Chiropractic & Osteopathy Volume 13 ; 13 >
+      au < releasing ; Chiropractic & Osteopathy Volume 14 ; 14 >
+      au < releasing ; Chiropractic & Osteopathy Volume 15 ; 15 >
+      au < releasing ; Chiropractic & Osteopathy Volume 16 ; 16 >
     }
 
 
@@ -1596,12 +1596,12 @@
       param[base_url] = http://www.clinicalmolecularallergy.com/
       param[journal_issn] = 1476-7961
 
-      au < ready ; Clinical and Molecular Allergy Volume 1 ; 1 >
-      au < ready ; Clinical and Molecular Allergy Volume 2 ; 2 >
-      au < ready ; Clinical and Molecular Allergy Volume 3 ; 3 >
-      au < ready ; Clinical and Molecular Allergy Volume 4 ; 4 >
-      au < ready ; Clinical and Molecular Allergy Volume 5 ; 5 >
-      au < ready ; Clinical and Molecular Allergy Volume 6 ; 6 >
+      au < releasing ; Clinical and Molecular Allergy Volume 1 ; 1 >
+      au < releasing ; Clinical and Molecular Allergy Volume 2 ; 2 >
+      au < releasing ; Clinical and Molecular Allergy Volume 3 ; 3 >
+      au < releasing ; Clinical and Molecular Allergy Volume 4 ; 4 >
+      au < releasing ; Clinical and Molecular Allergy Volume 5 ; 5 >
+      au < releasing ; Clinical and Molecular Allergy Volume 6 ; 6 >
     }
 
 
@@ -1615,10 +1615,10 @@
       param[base_url] = http://www.coughjournal.com/
       param[journal_issn] = 1745-9974
 
-      au < ready ; Cough Volume 1 ; 1 >
-      au < ready ; Cough Volume 2 ; 2 >
-      au < ready ; Cough Volume 3 ; 3 >
-      au < ready ; Cough Volume 4 ; 4 >
+      au < releasing ; Cough Volume 1 ; 1 >
+      au < releasing ; Cough Volume 2 ; 2 >
+      au < releasing ; Cough Volume 3 ; 3 >
+      au < releasing ; Cough Volume 4 ; 4 >
     }
 
 
@@ -1632,18 +1632,18 @@
       param[base_url] = http://ccforum.com/
       param[journal_issn] = 1364-8535
 
-      au < ready ; Critical Care Volume 1 ; 1 >
-      au < ready ; Critical Care Volume 2 ; 2 >
-      au < ready ; Critical Care Volume 3 ; 3 >
-      au < ready ; Critical Care Volume 4 ; 4 >
-      au < ready ; Critical Care Volume 5 ; 5 >
-      au < ready ; Critical Care Volume 6 ; 6 >
-      au < ready ; Critical Care Volume 7 ; 7 >
-      au < ready ; Critical Care Volume 8 ; 8 >
-      au < ready ; Critical Care Volume 9 ; 9 >
-      au < ready ; Critical Care Volume 10 ; 10 >
-      au < ready ; Critical Care Volume 11 ; 11 >
-      au < ready ; Critical Care Volume 12 ; 12 >
+      au < releasing ; Critical Care Volume 1 ; 1 >
+      au < releasing ; Critical Care Volume 2 ; 2 >
+      au < releasing ; Critical Care Volume 3 ; 3 >
+      au < releasing ; Critical Care Volume 4 ; 4 >
+      au < releasing ; Critical Care Volume 5 ; 5 >
+      au < releasing ; Critical Care Volume 6 ; 6 >
+      au < releasing ; Critical Care Volume 7 ; 7 >
+      au < releasing ; Critical Care Volume 8 ; 8 >
+      au < releasing ; Critical Care Volume 9 ; 9 >
+      au < releasing ; Critical Care Volume 10 ; 10 >
+      au < releasing ; Critical Care Volume 11 ; 11 >
+      au < releasing ; Critical Care Volume 12 ; 12 >
     }
 
 
