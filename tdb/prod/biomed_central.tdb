@@ -2940,11 +2940,11 @@
       param[base_url] = http://www.reproductive-health-journal.com/
       param[journal_issn] = 1742-4755
 
-      au < testing ; Reproductive Health Volume 1 ; 1 >
-      au < testing ; Reproductive Health Volume 2 ; 2 >
-      au < testing ; Reproductive Health Volume 3 ; 3 >
-      au < testing ; Reproductive Health Volume 4 ; 4 >
-      au < testing ; Reproductive Health Volume 5 ; 5 >
+      au < ready ; Reproductive Health Volume 1 ; 1 >
+      au < ready ; Reproductive Health Volume 2 ; 2 >
+      au < ready ; Reproductive Health Volume 3 ; 3 >
+      au < ready ; Reproductive Health Volume 4 ; 4 >
+      au < ready ; Reproductive Health Volume 5 ; 5 >
     }
 
 
@@ -2958,11 +2958,11 @@
       param[base_url] = http://www.retrovirology.com/
       param[journal_issn] = 1742-4690
 
-      au < testing ; Retrovirology Volume 1 ; 1 >
-      au < testing ; Retrovirology Volume 2 ; 2 >
-      au < testing ; Retrovirology Volume 3 ; 3 >
-      au < testing ; Retrovirology Volume 4 ; 4 >
-      au < testing ; Retrovirology Volume 5 ; 5 >
+      au < ready ; Retrovirology Volume 1 ; 1 >
+      au < ready ; Retrovirology Volume 2 ; 2 >
+      au < ready ; Retrovirology Volume 3 ; 3 >
+      au < ready ; Retrovirology Volume 4 ; 4 >
+      au < ready ; Retrovirology Volume 5 ; 5 >
     }
 
 
@@ -2976,10 +2976,10 @@
       param[base_url] = http://www.salinesystems.org/
       param[journal_issn] = 1746-1448
 
-      au < testing ; Saline Systems Volume 1 ; 1 >
-      au < testing ; Saline Systems Volume 2 ; 2 >
-      au < testing ; Saline Systems Volume 3 ; 3 >
-      au < testing ; Saline Systems Volume 4 ; 4 >
+      au < ready ; Saline Systems Volume 1 ; 1 >
+      au < ready ; Saline Systems Volume 2 ; 2 >
+      au < ready ; Saline Systems Volume 3 ; 3 >
+      au < ready ; Saline Systems Volume 4 ; 4 >
     }
 
 
@@ -2993,9 +2993,9 @@
       param[base_url] = http://www.scoliosisjournal.com/
       param[journal_issn] = 1748-7161
 
-      au < testing ; Scoliosis Volume 1 ; 1 >
-      au < testing ; Scoliosis Volume 2 ; 2 >
-      au < testing ; Scoliosis Volume 3 ; 3 >
+      au < ready ; Scoliosis Volume 1 ; 1 >
+      au < ready ; Scoliosis Volume 2 ; 2 >
+      au < ready ; Scoliosis Volume 3 ; 3 >
     }
 
 
@@ -3009,9 +3009,9 @@
       param[base_url] = http://www.scfbm.org/
       param[journal_issn] = 1751-0473
 
-      au < testing ; Source Code for Biology and Medicine Volume 1 ; 1 >
-      au < testing ; Source Code for Biology and Medicine Volume 2 ; 2 >
-      au < testing ; Source Code for Biology and Medicine Volume 3 ; 3 >
+      au < ready ; Source Code for Biology and Medicine Volume 1 ; 1 >
+      au < ready ; Source Code for Biology and Medicine Volume 2 ; 2 >
+      au < ready ; Source Code for Biology and Medicine Volume 3 ; 3 >
     }
 
 
@@ -3025,9 +3025,9 @@
       param[base_url] = http://www.substanceabusepolicy.com/
       param[journal_issn] = 1747-597X
 
-      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
-      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
-      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
+      au < ready ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
+      au < ready ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
+      au < ready ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
     }
 
 
@@ -3041,11 +3041,11 @@
       param[base_url] = http://www.tbiomed.com/
       param[journal_issn] = 1742-4682
 
-      au < testing ; Theoretical Biology and Medical Modelling Volume 1 ; 1 >
-      au < testing ; Theoretical Biology and Medical Modelling Volume 2 ; 2 >
-      au < testing ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
-      au < testing ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
-      au < testing ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
+      au < ready ; Theoretical Biology and Medical Modelling Volume 1 ; 1 >
+      au < ready ; Theoretical Biology and Medical Modelling Volume 2 ; 2 >
+      au < ready ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
+      au < ready ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
+      au < ready ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
     }
 
 
@@ -3059,12 +3059,12 @@
       param[base_url] = http://www.thrombosisjournal.com/
       param[journal_issn] = 1477-9560
 
-      au < manifest ; Thrombosis Journal Volume 1 ; 1 >
-      au < manifest ; Thrombosis Journal Volume 2 ; 2 >
-      au < manifest ; Thrombosis Journal Volume 3 ; 3 >
-      au < manifest ; Thrombosis Journal Volume 4 ; 4 >
-      au < manifest ; Thrombosis Journal Volume 5 ; 5 >
-      au < manifest ; Thrombosis Journal Volume 6 ; 6 >
+      au < testing ; Thrombosis Journal Volume 1 ; 1 >
+      au < testing ; Thrombosis Journal Volume 2 ; 2 >
+      au < testing ; Thrombosis Journal Volume 3 ; 3 >
+      au < testing ; Thrombosis Journal Volume 4 ; 4 >
+      au < testing ; Thrombosis Journal Volume 5 ; 5 >
+      au < testing ; Thrombosis Journal Volume 6 ; 6 >
     }
 
 
@@ -3078,15 +3078,15 @@
       param[base_url] = http://www.trialsjournal.com/
       param[journal_issn] = 1745-6215
 
-      au < manifest ; Trials Volume 1 ; 1 >
-      au < manifest ; Trials Volume 2 ; 2 >
-      au < manifest ; Trials Volume 3 ; 3 >
-      au < manifest ; Trials Volume 4 ; 4 >
-      au < manifest ; Trials Volume 5 ; 5 >
-      au < manifest ; Trials Volume 6 ; 6 >
-      au < manifest ; Trials Volume 7 ; 7 >
-      au < manifest ; Trials Volume 8 ; 8 >
-      au < manifest ; Trials Volume 9 ; 9 >
+      au < testing ; Trials Volume 1 ; 1 >
+      au < testing ; Trials Volume 2 ; 2 >
+      au < testing ; Trials Volume 3 ; 3 >
+      au < testing ; Trials Volume 4 ; 4 >
+      au < testing ; Trials Volume 5 ; 5 >
+      au < testing ; Trials Volume 6 ; 6 >
+      au < testing ; Trials Volume 7 ; 7 >
+      au < testing ; Trials Volume 8 ; 8 >
+      au < testing ; Trials Volume 9 ; 9 >
     }
 
 
