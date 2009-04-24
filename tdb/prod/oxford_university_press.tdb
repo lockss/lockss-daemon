@@ -19,7 +19,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://afraf.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; African Affairs Volume 105 ; 105 >
 
@@ -29,7 +29,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://afraf.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; African Affairs Volume 105 ; 105 >
         au < released ; African Affairs Volume 106 ; 106 >
@@ -48,7 +48,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ageing.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Age and Ageing Volume 35 ; 35 >
 
@@ -58,7 +58,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ageing.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Age and Ageing Volume 34 ; 34 >
         au < do_not_process ; Age and Ageing Volume 35 ; 35 >
@@ -78,7 +78,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://alcalc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Alcohol and Alcoholism Volume 40 ; 40 >
         au < released ; Alcohol and Alcoholism Volume 41 ; 41 >
@@ -98,7 +98,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://aje.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; American Journal of Epidemiology Volume 163 ; 163 >
 
@@ -108,7 +108,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://aje.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Epidemiology Volume 161 ; 161 >
         au < released ; American Journal of Epidemiology Volume 162 ; 162 >
@@ -130,7 +130,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://aler.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; American Law and Economics Review Volume 8 ; 8 >
 
@@ -140,7 +140,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://aler.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; American Law and Economics Review Volume 7 ; 7 >
         au < do_not_process ; American Law and Economics Review Volume 8 ; 8 >
@@ -159,7 +159,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://alh.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; American Literary History Volume 17 ; 17 >
 
@@ -169,7 +169,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://alh.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; American Literary History Volume 17 ; 17 >
         au < released ; American Literary History Volume 18 ; 18 >
@@ -189,7 +189,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://aob.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Annals of Botany Volume 97 ; 97 >
 
@@ -199,7 +199,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://aob.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Annals of Botany Volume 95 ; 95 >
         au < released ; Annals of Botany Volume 96 ; 96 >
@@ -221,7 +221,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://annhyg.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Annals of Occupational Hygiene Volume 50 ; 50 >
 
@@ -231,7 +231,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://annhyg.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Annals of Occupational Hygiene Volume 49 ; 49 >
         au < do_not_process ; Annals of Occupational Hygiene Volume 50 ; 50 >
@@ -251,7 +251,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://annonc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Annals of Oncology Volume 16 ; 16 >
         au < released ; Annals of Oncology Volume 17 ; 17 >
@@ -271,7 +271,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://applij.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Applied Linguistics Volume 27 ; 27 >
 
@@ -281,7 +281,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://applij.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Applied Linguistics Volume 26 ; 26 >
         au < do_not_process ; Applied Linguistics Volume 27 ; 27 >
@@ -300,7 +300,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://beheco.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Behavioral Ecology Volume 17 ; 17 >
 
@@ -310,7 +310,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://beheco.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Behavioral Ecology Volume 16 ; 16 >
         au < do_not_process ; Behavioral Ecology Volume 17 ; 17 >
@@ -330,7 +330,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bioinformatics.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Bioinformatics Volume 21 ; 21 >
 
@@ -340,7 +340,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bioinformatics.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Bioinformatics Volume 21 ; 21 >
         au < released ; Bioinformatics Volume 22 ; 22 >
@@ -360,7 +360,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://biomet.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Biometrika Volume 93 ; 93 >
 
@@ -370,7 +370,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://biomet.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Biometrika Volume 92 ; 92 >
         au < do_not_process ; Biometrika Volume 93 ; 93 >
@@ -389,7 +389,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://biostatistics.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Biostatistics Volume 6 ; 6 >
 
@@ -399,7 +399,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://biostatistics.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Biostatistics Volume 6 ; 6 >
         au < released ; Biostatistics Volume 7 ; 7 >
@@ -419,7 +419,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ceaccp.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
 
@@ -429,7 +429,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ceaccp.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
         au < do_not_process ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
@@ -449,7 +449,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://brain.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Brain Volume 128 ; 128 >
 
@@ -459,7 +459,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://brain.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Brain Volume 128 ; 128 >
         au < released ; Brain Volume 129 ; 129 >
@@ -479,7 +479,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://brief-treatment.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
 
@@ -489,7 +489,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://brief-treatment.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
         au < released ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
@@ -509,7 +509,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bib.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Briefings in Bioinformatics Volume 7 ; 7 >
 
@@ -519,7 +519,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bib.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Briefings in Bioinformatics Volume 7 ; 7 >
         au < released ; Briefings in Bioinformatics Volume 8 ; 8 >
@@ -538,7 +538,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bfgp.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
 
@@ -548,7 +548,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bfgp.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
 
@@ -566,7 +566,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bjps.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
 
@@ -576,7 +576,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bjps.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
         au < do_not_process ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
@@ -595,7 +595,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bjaesthetics.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The British Journal of Aesthetics Volume 46 ; 46 >
 
@@ -605,7 +605,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bjaesthetics.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The British Journal of Aesthetics Volume 45 ; 45 >
         au < do_not_process ; The British Journal of Aesthetics Volume 46 ; 46 >
@@ -625,7 +625,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bja.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; British Journal of Anaesthesia Volume 96 ; 96 >
 
@@ -635,7 +635,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bja.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; British Journal of Anaesthesia Volume 94 ; 94 >
         au < released ; British Journal of Anaesthesia Volume 95 ; 95 >
@@ -657,7 +657,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bjc.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
 
@@ -667,7 +667,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bjc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 45 ; 45 >
         au < do_not_process ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
@@ -687,7 +687,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://bjsw.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; British Journal of Social Work Volume 36 ; 36 >
 
@@ -697,7 +697,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bjsw.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; British Journal of Social Work Volume 35 ; 35 >
         au < do_not_process ; British Journal of Social Work Volume 36 ; 36 >
@@ -717,7 +717,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://bmb.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; British Medical Bulletin Volume 72 ; 72 >
         au < released ; British Medical Bulletin Volume 73-74 ; 83 >
@@ -736,7 +736,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://blms.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Bulletin of the London Mathematical Society Volume 39 ; 39 >
 
@@ -754,7 +754,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://cje.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Cambridge Journal of Economics Volume 30 ; 30 >
 
@@ -764,7 +764,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cje.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Cambridge Journal of Economics Volume 29 ; 29 >
         au < do_not_process ; Cambridge Journal of Economics Volume 30 ; 30 >
@@ -784,7 +784,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://camqtly.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Cambridge Quarterly Volume 35 ; 35 >
 
@@ -794,7 +794,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://camqtly.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; The Cambridge Quarterly Volume 34 ; 34 >
         au < do_not_process ; The Cambridge Quarterly Volume 35 ; 35 >
@@ -813,7 +813,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cmlj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Capital Markets Law Journal Volume 1 ; 1 >
 
@@ -831,7 +831,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://carcin.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Carcinogenesis Volume 26 ; 26 >
 
@@ -841,7 +841,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://carcin.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Carcinogenesis Volume 26 ; 26 >
         au < released ; Carcinogenesis Volume 27 ; 27 >
@@ -861,7 +861,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://cercor.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Cerebral Cortex Volume 15 ; 15 >
 
@@ -871,7 +871,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cercor.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Cerebral Cortex Volume 15 ; 15 >
         au < released ; Cerebral Cortex Volume 16 ; 16 >
@@ -891,7 +891,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://cesifo.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; CESifo Economic Studies Volume 52 ; 52 >
 
@@ -901,7 +901,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cesifo.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; CESifo Economic Studies Volume 51 ; 51 >
         au < do_not_process ; CESifo Economic Studies Volume 52 ; 52 >
@@ -920,7 +920,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://chemse.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Chemical Senses Volume 31 ; 31 >
 
@@ -930,7 +930,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://chemse.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Chemical Senses Volume 30 ; 30 >
         au < do_not_process ; Chemical Senses Volume 31 ; 31 >
@@ -950,7 +950,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://chinesejil.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Chinese Journal of International Law Volume 4 ; 4 >
 
@@ -960,7 +960,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://chinesejil.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Chinese Journal of International Law Volume 4 ; 4 >
         au < released ; Chinese Journal of International Law Volume 5 ; 5 >
@@ -979,7 +979,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cjip.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Chinese Journal of International Politics Volume 1 ; 1 >
 
@@ -997,7 +997,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ct.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Communication Theory Volume 15 ; 15 >
 
@@ -1007,7 +1007,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ct.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Communication Theory Volume 15 ; 15 >
 
@@ -1025,7 +1025,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://cdj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Community Development Journal Volume 41 ; 41 >
 
@@ -1035,7 +1035,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cdj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Community Development Journal Volume 40 ; 40 >
         au < do_not_process ; Community Development Journal Volume 41 ; 41 >
@@ -1055,7 +1055,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://comjnl.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Computer Journal Volume 49 ; 49 >
 
@@ -1065,7 +1065,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://comjnl.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Computer Journal Volume 49 ; 49 >
         au < released ; Computer Journal Volume 50 ; 50 >
@@ -1084,7 +1084,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://cep.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Contemporary Economic Policy Volume 24 ; 24 >
 
@@ -1094,7 +1094,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cep.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Contemporary Economic Policy Volume 24 ; 24 >
 
@@ -1112,7 +1112,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://cpe.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Contributions to Political Economy Volume 24 ; 24 >
 
@@ -1122,7 +1122,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://cpe.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Contributions to Political Economy Volume 24 ; 24 >
         au < released ; Contributions to Political Economy Volume 25 ; 25 >
@@ -1141,7 +1141,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://dnaresearch.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; DNA Research Volume 13 ; 13 >
 
@@ -1151,7 +1151,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://dnaresearch.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; DNA Research Volume 13 ; 13 >
 
@@ -1169,7 +1169,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://em.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Early Music Volume 33 ; 33 >
 
@@ -1179,7 +1179,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://em.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Early Music Volume 33 ; 33 >
         au < released ; Early Music Volume 34 ; 34 >
@@ -1198,7 +1198,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ei.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Economic Inquiry Volume 44 ; 44 >
 
@@ -1208,7 +1208,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ei.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Economic Inquiry Volume 44 ; 44 >
 
@@ -1226,7 +1226,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://eltj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; ELT Journal Volume 60 ; 60 >
 
@@ -1236,7 +1236,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://eltj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; ELT Journal Volume 59 ; 59 >
         au < do_not_process ; ELT Journal Volume 60 ; 60 >
@@ -1256,7 +1256,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ehr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; English Historical Review Volume 120 ; 120 >
 
@@ -1274,7 +1274,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://es.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Enterprise & Society Volume 7 ; 7 >
 
@@ -1284,7 +1284,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://es.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Enterprise & Society Volume 6 ; 6 >
         au < do_not_process ; Enterprise & Society Volume 7 ; 7 >
@@ -1303,7 +1303,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://epirev.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Epidemiologic Reviews Volume 27 ; 27 >
 
@@ -1313,7 +1313,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://epirev.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Epidemiologic Reviews Volume 27 ; 27 >
         au < released ; Epidemiologic Reviews Volume 28 ; 28 >
@@ -1332,7 +1332,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://eshremonographs.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; ESHRE Monographs 2005 ; 2005 >
 
@@ -1342,7 +1342,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://eshremonographs.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; ESHRE Monographs 2005 ; 2005 >
         au < released ; ESHRE Monographs 2006 ; 2006 >
@@ -1362,7 +1362,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://eic.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Essays in Criticism Volume 55 ; 55 >
 
@@ -1372,7 +1372,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://eic.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Essays in Criticism Volume 55 ; 55 >
         au < released ; Essays in Criticism Volume 56 ; 56 >
@@ -1392,7 +1392,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://europace.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Europace Volume 8 ; 8 >
 
@@ -1402,7 +1402,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://europace.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Europace Volume 8 ; 8 >
         au < released ; Europace Volume 9 ; 9 >
@@ -1421,7 +1421,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://eurheartj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; European Heart Journal Volume 26 ; 26 >
         au < released ; European Heart Journal Volume 27 ; 27 >
@@ -1441,7 +1441,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://eurheartjsupp.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; European Heart Journal Supplements Volume 8 ; 8 >
 
@@ -1451,7 +1451,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://eurheartjsupp.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; European Heart Journal Supplements Volume 7 ; 7 >
         au < do_not_process ; European Heart Journal Supplements Volume 8 ; 8 >
@@ -1471,7 +1471,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ejil.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; European Journal of International Law Volume 17 ; 17 >
 
@@ -1481,7 +1481,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ejil.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of International Law Volume 16 ; 16 >
         au < do_not_process ; European Journal of International Law Volume 17 ; 17 >
@@ -1500,7 +1500,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ejo.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; European Journal of Orthodontics Volume 28 ; 28 >
 
@@ -1510,7 +1510,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ejo.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; European Journal of Orthodontics Volume 28 ; 28 >
         au < released ; European Journal of Orthodontics Volume 29 ; 29 >
@@ -1529,7 +1529,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://eurpub.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; European Journal of Public Health Volume 16 ; 16 >
 
@@ -1539,7 +1539,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://eurpub.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of Public Health Volume 15 ; 15 >
         au < do_not_process ; European Journal of Public Health Volume 16 ; 16 >
@@ -1559,7 +1559,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://erae.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; European Review of Agricultural Economics Volume 32 ; 32 >
         au < manifest ; European Review of Agricultural Economics Volume 33 ; 33 >
@@ -1578,7 +1578,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://esr.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; European Sociological Review Volume 22 ; 22 >
 
@@ -1588,7 +1588,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://esr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; European Sociological Review Volume 21 ; 21 >
         au < do_not_process ; European Sociological Review Volume 22 ; 22 >
@@ -1608,7 +1608,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ecam.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
 
@@ -1618,7 +1618,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ecam.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
         au < do_not_process ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
@@ -1637,7 +1637,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://fampra.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Family Practice Volume 23 ; 23 >
 
@@ -1647,7 +1647,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://fampra.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Family Practice Volume 22 ; 22 >
         au < do_not_process ; Family Practice Volume 23 ; 23 >
@@ -1666,7 +1666,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://forestry.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Forestry Volume 79 ; 79 >
 
@@ -1676,7 +1676,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://forestry.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Forestry Volume 78 ; 78 >
         au < do_not_process ; Forestry Volume 79 ; 79 >
@@ -1696,7 +1696,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://fmls.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Forum for Modern Language Studies Volume 42 ; 42 >
 
@@ -1706,7 +1706,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://fmls.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Forum for Modern Language Studies Volume 41 ; 41 >
         au < do_not_process ; Forum for Modern Language Studies Volume 42 ; 42 >
@@ -1725,7 +1725,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://fh.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; French History Volume 20 ; 20 >
 
@@ -1735,7 +1735,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://fh.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; French History Volume 19 ; 19 >
         au < do_not_process ; French History Volume 20 ; 20 >
@@ -1754,7 +1754,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://fs.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; French Studies Volume 60 ; 60 >
 
@@ -1764,7 +1764,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://fs.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; French Studies Volume 59 ; 59 >
         au < do_not_process ; French Studies Volume 60 ; 60 >
@@ -1784,7 +1784,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://fsb.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
 
       }
@@ -1801,7 +1801,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://glycob.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Glycobiology Volume 15 ; 15 >
 
@@ -1811,7 +1811,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://glycob.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Glycobiology Volume 15 ; 15 >
         au < released ; Glycobiology Volume 16 ; 16 >
@@ -1831,7 +1831,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://her.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Health Education Research Volume 21 ; 21 >
 
@@ -1841,7 +1841,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://her.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Education Research Volume 20 ; 20 >
         au < do_not_process ; Health Education Research Volume 21 ; 21 >
@@ -1861,7 +1861,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://heapol.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Health Policy and Planning Volume 21 ; 21 >
 
@@ -1871,7 +1871,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://heapol.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Policy and Planning Volume 20 ; 20 >
         au < do_not_process ; Health Policy and Planning Volume 21 ; 21 >
@@ -1891,7 +1891,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://heapro.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Health Promotion International Volume 21 ; 21 >
 
@@ -1901,7 +1901,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://heapro.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Promotion International Volume 20 ; 20 >
         au < do_not_process ; Health Promotion International Volume 21 ; 21 >
@@ -1920,7 +1920,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://hwj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; History Workshop Journal Volume 61 ; 61 >
 
@@ -1930,7 +1930,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://hwj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; History Workshop Journal Volume 59 ; 59 >
         au < released ; History Workshop Journal Volume 60 ; 60 >
@@ -1951,7 +1951,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://hgs.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Holocaust and Genocide Studies Volume 19 ; 19 >
         au < released ; Holocaust and Genocide Studies Volume 20 ; 20 >
@@ -1970,7 +1970,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://hcr.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Human Communication Research Volume 31 ; 31 >
 
@@ -1980,7 +1980,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://hcr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Human Communication Research Volume 31 ; 31 >
 
@@ -1998,7 +1998,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://hmg.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Human Molecular Genetics Volume 14 ; 14 >
 
@@ -2008,7 +2008,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://hmg.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Human Molecular Genetics Volume 14 ; 14 >
         au < released ; Human Molecular Genetics Volume 15 ; 15 >
@@ -2028,7 +2028,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://humrep.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Human Reproduction Volume 21 ; 21 >
 
@@ -2038,7 +2038,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://humrep.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Human Reproduction Volume 20 ; 20 >
         au < do_not_process ; Human Reproduction Volume 21 ; 21 >
@@ -2058,7 +2058,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://humupd.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Human Reproduction Update Volume 12 ; 12 >
 
@@ -2068,7 +2068,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://humupd.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Human Reproduction Update Volume 11 ; 11 >
         au < do_not_process ; Human Reproduction Update Volume 12 ; 12 >
@@ -2088,7 +2088,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://hrlr.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Human Rights Law Review Volume 5 ; 5 >
 
@@ -2098,7 +2098,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://hrlr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Human Rights Law Review Volume 5 ; 5 >
         au < released ; Human Rights Law Review Volume 6 ; 6 >
@@ -2117,7 +2117,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://icesjms.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; ICES Journal of Marine Science Volume 64 ; 64 >
 
@@ -2135,7 +2135,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ietcom.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
 
       }
@@ -2152,7 +2152,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ietele.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
 
       }
@@ -2169,7 +2169,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ietfec.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
 
       }
@@ -2186,7 +2186,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ietisy.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
 
       }
@@ -2203,7 +2203,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://imamat.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
 
@@ -2213,7 +2213,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://imamat.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Applied Mathematics Volume 70 ; 70 >
         au < do_not_process ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
@@ -2233,7 +2233,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://imaman.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; IMA Journal of Management Mathematics Volume 17 ; 17 >
 
@@ -2243,7 +2243,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://imaman.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Management Mathematics Volume 16 ; 16 >
         au < do_not_process ; IMA Journal of Management Mathematics Volume 17 ; 17 >
@@ -2263,7 +2263,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://imamci.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
 
@@ -2273,7 +2273,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://imamci.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 >
         au < do_not_process ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
@@ -2292,7 +2292,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://imajna.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
 
@@ -2302,7 +2302,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://imajna.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Numerical Analysis Volume 25 ; 25 >
         au < do_not_process ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
@@ -2322,7 +2322,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://icc.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Industrial and Corporate Change Volume 15 ; 15 >
 
@@ -2332,7 +2332,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://icc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Industrial and Corporate Change Volume 14 ; 14 >
         au < do_not_process ; Industrial and Corporate Change Volume 15 ; 15 >
@@ -2351,7 +2351,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ilj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Industrial Law Journal Volume 35 ; 35 >
 
@@ -2361,7 +2361,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ilj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Industrial Law Journal Volume 34 ; 34 >
         au < do_not_process ; Industrial Law Journal Volume 35 ; 35 >
@@ -2380,7 +2380,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://icb.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Integrative and Comparative Biology Volume 46 ; 46 >
 
@@ -2390,7 +2390,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://icb.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Integrative and Comparative Biology Volume 45 ; 45 >
         au < do_not_process ; Integrative and Comparative Biology Volume 46 ; 46 >
@@ -2409,7 +2409,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://iclq.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International and Comparative Law Quarterly Volume 55 ; 55 >
 
@@ -2419,7 +2419,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://iclq.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International and Comparative Law Quarterly Volume 54 ; 54 >
         au < do_not_process ; International and Comparative Law Quarterly Volume 55 ; 55 >
@@ -2439,7 +2439,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://intimm.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Immunology Volume 18 ; 18 >
 
@@ -2449,7 +2449,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://intimm.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; International Immunology Volume 18 ; 18 >
         au < released ; International Immunology Volume 19 ; 19 >
@@ -2468,7 +2468,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://intqhc.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal for Quality in Health Care Volume 18 ; 18 >
 
@@ -2478,7 +2478,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://intqhc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal for Quality in Health Care Volume 17 ; 17 >
         au < do_not_process ; International Journal for Quality in Health Care Volume 18 ; 18 >
@@ -2498,7 +2498,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://icon.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Constitutional Law Volume 4 ; 4 >
 
@@ -2508,7 +2508,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://icon.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Constitutional Law Volume 3 ; 3 >
         au < do_not_process ; International Journal of Constitutional Law Volume 4 ; 4 >
@@ -2528,7 +2528,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ije.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Epidemiology Volume 35 ; 35 >
 
@@ -2538,7 +2538,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ije.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Epidemiology Volume 34 ; 34 >
         au < do_not_process ; International Journal of Epidemiology Volume 35 ; 35 >
@@ -2557,7 +2557,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ijlit.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Law and Information Technology Volume 13 ; 13 >
         au < released ; International Journal of Law and Information Technology Volume 14 ; 14 >
@@ -2568,7 +2568,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ijlit.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; International Journal of Law and Information Technology Volume 13 ; 13 >
         au < do_not_process ; International Journal of Law and Information Technology Volume 14 ; 14 >
@@ -2588,7 +2588,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://lawfam.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
 
@@ -2598,7 +2598,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://lawfam.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Law, Policy and the Family Volume 19 ; 19 >
         au < do_not_process ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
@@ -2617,7 +2617,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ijl.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Lexicography Volume 19 ; 19 >
 
@@ -2627,7 +2627,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ijl.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Lexicography Volume 18 ; 18 >
         au < do_not_process ; International Journal of Lexicography Volume 19 ; 19 >
@@ -2646,7 +2646,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ijpor.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Public Opinion Research Volume 18 ; 18 >
 
@@ -2656,7 +2656,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ijpor.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Public Opinion Research Volume 17 ; 17 >
         au < do_not_process ; International Journal of Public Opinion Research Volume 18 ; 18 >
@@ -2675,7 +2675,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ijrl.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Refugee Law Volume 18 ; 18 >
 
@@ -2685,7 +2685,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ijrl.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Refugee Law Volume 17 ; 17 >
         au < do_not_process ; International Journal of Refugee Law Volume 18 ; 18 >
@@ -2704,7 +2704,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ijtj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Transitional Justice Volume 1 ; 1 >
 
@@ -2722,7 +2722,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://irap.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; International Relations of the Asia-Pacific Volume 6 ; 6 >
 
@@ -2732,7 +2732,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://irap.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; International Relations of the Asia-Pacific Volume 5 ; 5 >
         au < do_not_process ; International Relations of the Asia-Pacific Volume 6 ; 6 >
@@ -2752,7 +2752,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://itnow.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; ITNOW Volume 48 ; 48 >
 
@@ -2762,7 +2762,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://itnow.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; ITNOW Volume 47 ; 47 >
         au < do_not_process ; ITNOW Volume 48 ; 48 >
@@ -2782,7 +2782,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jjco.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
 
@@ -2792,7 +2792,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jjco.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Japanese Journal of Clinical Oncology Volume 35 ; 35 >
         au < do_not_process ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
@@ -2812,7 +2812,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jnci.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; JNCI Journal of the National Cancer Institute Volume 99 ; 99 >
 
@@ -2830,7 +2830,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jae.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of African Economies Volume 15 ; 15 >
 
@@ -2840,7 +2840,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jae.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of African Economies Volume 14 ; 14 >
         au < do_not_process ; Journal of African Economies Volume 15 ; 15 >
@@ -2860,7 +2860,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jac.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 >
 
@@ -2870,7 +2870,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jac.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Antimicrobial Chemotherapy Volume 55 ; 55 >
         au < released ; Journal of Antimicrobial Chemotherapy Volume 56 ; 56 >
@@ -2892,7 +2892,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jb.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Journal of Biochemistry Volume 139 ; 139 >
 
@@ -2902,7 +2902,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jb.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Journal of Biochemistry Volume 139 ; 139 >
         au < ready ; The Journal of Biochemistry Volume 140 ; 140 >
@@ -2921,7 +2921,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://joc.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Communication Volume 55 ; 55 >
 
@@ -2931,7 +2931,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://joc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Communication Volume 55 ; 55 >
 
@@ -2949,7 +2949,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jcle.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Competition Law and Economics Volume 2 ; 2 >
 
@@ -2959,7 +2959,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jcle.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Competition Law and Economics Volume 1 ; 1 >
         au < do_not_process ; Journal of Competition Law and Economics Volume 2 ; 2 >
@@ -2978,7 +2978,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jcsl.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Conflict and Security Law Volume 11 ; 11 >
 
@@ -2988,7 +2988,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jcsl.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Conflict and Security Law Volume 10 ; 10 >
         au < do_not_process ; Journal of Conflict and Security Law Volume 11 ; 11 >
@@ -3007,7 +3007,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jdsde.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
         au < released ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
@@ -3027,7 +3027,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jdh.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Design History Volume 19 ; 19 >
 
@@ -3037,7 +3037,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jdh.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Design History Volume 18 ; 18 >
         au < do_not_process ; Journal of Design History Volume 19 ; 19 >
@@ -3056,7 +3056,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://joeg.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Economic Geography Volume 6 ; 6 >
 
@@ -3066,7 +3066,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://joeg.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Economic Geography Volume 5 ; 5 >
         au < do_not_process ; Journal of Economic Geography Volume 6 ; 6 >
@@ -3086,7 +3086,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jmicro.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Electron Microscopy Volume 55 ; 55 >
 
@@ -3096,7 +3096,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jmicro.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Electron Microscopy Volume 54 ; 54 >
         au < do_not_process ; Journal of Electron Microscopy Volume 55 ; 55 >
@@ -3115,7 +3115,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jel.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Environmental Law Volume 18 ; 18 >
 
@@ -3125,7 +3125,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jel.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Environmental Law Volume 17 ; 17 >
         au < do_not_process ; Journal of Environmental Law Volume 18 ; 18 >
@@ -3144,7 +3144,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jxb.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Experimental Botany Volume 57 ; 57 >
 
@@ -3154,7 +3154,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jxb.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Experimental Botany Volume 56 ; 56 >
         au < do_not_process ; Journal of Experimental Botany Volume 57 ; 57 >
@@ -3174,7 +3174,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jfec.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Financial Econometrics Volume 4 ; 4 >
 
@@ -3184,7 +3184,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jfec.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Financial Econometrics Volume 3 ; 3 >
         au < do_not_process ; Journal of Financial Econometrics Volume 4 ; 4 >
@@ -3204,7 +3204,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jhered.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Heredity Volume 97 ; 97 >
 
@@ -3214,7 +3214,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jhered.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Heredity Volume 96 ; 96 >
         au < do_not_process ; Journal of Heredity Volume 97 ; 97 >
@@ -3234,7 +3234,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jiplp.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Intellectual Property Law & Practice Volume 1 ; 1 >
         au < released ; Journal of Intellectual Property Law & Practice Volume 2 ; 2 >
@@ -3253,7 +3253,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jicj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of International Criminal Justice Volume 4 ; 4 >
 
@@ -3263,7 +3263,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jicj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Journal of International Criminal Justice Volume 3 ; 3 >
         au < do_not_process ; Journal of International Criminal Justice Volume 4 ; 4 >
@@ -3282,7 +3282,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jiel.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of International Economic Law Volume 9 ; 9 >
 
@@ -3292,7 +3292,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jiel.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of International Economic Law Volume 8 ; 8 >
         au < do_not_process ; Journal of International Economic Law Volume 9 ; 9 >
@@ -3311,7 +3311,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jis.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Islamic Studies Volume 17 ; 17 >
 
@@ -3321,7 +3321,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jis.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Islamic Studies Volume 16 ; 16 >
         au < do_not_process ; Journal of Islamic Studies Volume 17 ; 17 >
@@ -3341,7 +3341,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jleo.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
 
@@ -3351,7 +3351,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jleo.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Law, Economics, and Organization Volume 21 ; 21 >
         au < do_not_process ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
@@ -3371,7 +3371,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://logcom.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Logic and Computation Volume 15 ; 15 >
 
@@ -3381,7 +3381,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://logcom.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Logic and Computation Volume 15 ; 15 >
         au < released ; Journal of Logic and Computation Volume 16 ; 16 >
@@ -3401,7 +3401,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://mollus.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Molluscan Studies Volume 72 ; 72 >
 
@@ -3411,7 +3411,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mollus.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Journal of Molluscan Studies Volume 71 ; 71 >
         au < do_not_process ; Journal of Molluscan Studies Volume 72 ; 72 >
@@ -3430,7 +3430,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jpepsy.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Pediatric Psychology Volume 31 ; 31 >
 
@@ -3440,7 +3440,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jpepsy.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Pediatric Psychology Volume 30 ; 30 >
         au < do_not_process ; Journal of Pediatric Psychology Volume 31 ; 31 >
@@ -3460,7 +3460,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://petrology.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Petrology Volume 46 ; 46 >
 
@@ -3470,7 +3470,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://petrology.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Petrology Volume 46 ; 46 >
         au < released ; Journal of Petrology Volume 47 ; 47 >
@@ -3490,7 +3490,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://plankt.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Plankton Research Volume 27 ; 27 >
 
@@ -3500,7 +3500,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://plankt.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Plankton Research Volume 27 ; 27 >
         au < released ; Journal of Plankton Research Volume 28 ; 28 >
@@ -3519,7 +3519,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jpart.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
 
@@ -3529,7 +3529,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jpart.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Public Administration Research and Theory Volume 15 ; 15 >
         au < do_not_process ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
@@ -3549,7 +3549,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jpubhealth.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Public Health Volume 28 ; 28 >
 
@@ -3559,7 +3559,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jpubhealth.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Public Health Volume 27 ; 27 >
         au < do_not_process ; Journal of Public Health Volume 28 ; 28 >
@@ -3578,7 +3578,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jrs.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Refugee Studies Volume 18 ; 18 >
 
@@ -3588,7 +3588,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jrs.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Refugee Studies Volume 18 ; 18 >
         au < released ; Journal of Refugee Studies Volume 19 ; 19 >
@@ -3607,7 +3607,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jos.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Semantics Volume 22 ; 22 >
 
@@ -3617,7 +3617,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jos.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Semantics Volume 22 ; 22 >
         au < released ; Journal of Semantics Volume 23 ; 23 >
@@ -3637,7 +3637,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jss.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Semitic Studies Volume 51 ; 51 >
 
@@ -3647,7 +3647,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jss.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Semitic Studies Volume 50 ; 50 >
         au < do_not_process ; Journal of Semitic Studies Volume 51 ; 51 >
@@ -3666,7 +3666,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jaar.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of the American Academy of Religion Volume 73 ; 73 >
         au < released ; Journal of the American Academy of Religion Volume 74 ; 74 >
@@ -3686,7 +3686,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jhc.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of the History of Collections Volume 17 ; 17 >
 
@@ -3696,7 +3696,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jhc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of the History of Collections Volume 17 ; 17 >
         au < released ; Journal of the History of Collections Volume 18 ; 18 >
@@ -3715,7 +3715,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jhmas.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
 
@@ -3725,7 +3725,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jhmas.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
         au < released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
@@ -3745,7 +3745,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jicru.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of the ICRU Volume 6 ; 6 >
 
@@ -3755,7 +3755,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jicru.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of the ICRU Volume 5 ; 5 >
         au < do_not_process ; Journal of the ICRU Volume 6 ; 6 >
@@ -3774,7 +3774,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jlms.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of the London Mathematical Society Volume 75 ; 75 >
 
@@ -3792,7 +3792,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jrma.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of the Royal Musical Association Volume 130 ; 130 >
 
@@ -3802,7 +3802,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jrma.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of the Royal Musical Association Volume 130 ; 130 >
         au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
@@ -3821,7 +3821,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jts.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Journal of Theological Studies Volume 57 ; 57 >
 
@@ -3831,7 +3831,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jts.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The Journal of Theological Studies Volume 56 ; 56 >
         au < do_not_process ; The Journal of Theological Studies Volume 57 ; 57 >
@@ -3850,7 +3850,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jtopol.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Journal of Topology Volume 1 ; 1 >
 
@@ -3868,7 +3868,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://tropej.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Journal of Tropical Pediatrics Volume 52 ; 52 >
 
@@ -3878,7 +3878,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://tropej.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Tropical Pediatrics Volume 51 ; 51 >
         au < do_not_process ; Journal of Tropical Pediatrics Volume 52 ; 52 >
@@ -3898,7 +3898,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://lpr.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Law, Probability and Risk Volume 4 ; 4 >
 
@@ -3908,7 +3908,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://lpr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Law, Probability and Risk Volume 4 ; 4 >
 
@@ -3926,7 +3926,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://library.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Library Volume 7 ; 7 >
 
@@ -3936,7 +3936,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://library.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The Library Volume 6 ; 6 >
         au < do_not_process ; The Library Volume 7 ; 7 >
@@ -3955,7 +3955,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://llc.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Literary and Linguistic Computing Volume 21 ; 21 >
 
@@ -3965,7 +3965,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://llc.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Literary and Linguistic Computing Volume 20 ; 20 >
         au < do_not_process ; Literary and Linguistic Computing Volume 21 ; 21 >
@@ -3984,7 +3984,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://litimag.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < ready ; Literary Imagination Volume 8 ; 8 >
 
@@ -4002,7 +4002,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://litthe.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Literature and Theology Volume 20 ; 20 >
 
@@ -4012,7 +4012,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://litthe.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Literature and Theology Volume 19 ; 19 >
         au < do_not_process ; Literature and Theology Volume 20 ; 20 >
@@ -4031,7 +4031,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://jigpal.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Logic Journal of the IGPL Volume 14 ; 14 >
 
@@ -4041,7 +4041,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jigpal.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Logic Journal of the IGPL Volume 13 ; 13 >
         au < do_not_process ; Logic Journal of the IGPL Volume 14 ; 14 >
@@ -4061,7 +4061,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://imammb.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Mathematical Medicine and Biology Volume 23 ; 23 >
 
@@ -4071,7 +4071,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://imammb.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Mathematical Medicine and Biology Volume 22 ; 22 >
         au < do_not_process ; Mathematical Medicine and Biology Volume 23 ; 23 >
@@ -4090,7 +4090,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://medlaw.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Medical Law Review Volume 14 ; 14 >
 
@@ -4100,7 +4100,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://medlaw.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Medical Law Review Volume 13 ; 13 >
         au < do_not_process ; Medical Law Review Volume 14 ; 14 >
@@ -4119,7 +4119,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://mind.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Mind Volume 115 ; 115 >
 
@@ -4129,7 +4129,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mind.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < ready ; Mind Volume 114 ; 114 >
         au < do_not_process ; Mind Volume 115 ; 115 >
@@ -4149,7 +4149,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://mj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Modern Judaism Volume 26 ; 26 >
 
@@ -4159,7 +4159,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Modern Judaism Volume 25 ; 25 >
         au < do_not_process ; Modern Judaism Volume 26 ; 26 >
@@ -4179,7 +4179,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://mbe.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Molecular Biology and Evolution Volume 23 ; 23 >
 
@@ -4189,7 +4189,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mbe.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Molecular Biology and Evolution Volume 22 ; 22 >
         au < do_not_process ; Molecular Biology and Evolution Volume 23 ; 23 >
@@ -4209,7 +4209,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://molehr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Molecular Human Reproduction Volume 11 ; 11 >
         au < released ; Molecular Human Reproduction Volume 12 ; 12 >
@@ -4229,7 +4229,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ml.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Music and Letters Volume 86 ; 86 >
 
@@ -4239,7 +4239,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ml.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Music and Letters Volume 86 ; 86 >
         au < released ; Music and Letters Volume 87 ; 87 >
@@ -4259,7 +4259,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://mq.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Musical Quarterly Volume 87 ; 87 >
 
@@ -4269,7 +4269,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mq.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Musical Quarterly Volume 87 ; 87 >
         au < released ; The Musical Quarterly Volume 88 ; 88 >
@@ -4288,7 +4288,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://mutage.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Mutagenesis Volume 21 ; 21 >
 
@@ -4298,7 +4298,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mutage.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Mutagenesis Volume 20 ; 20 >
         au < do_not_process ; Mutagenesis Volume 21 ; 21 >
@@ -4318,7 +4318,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ndt.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
 
@@ -4328,7 +4328,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ndt.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Nephrology Dialysis Transplantation Volume 20 ; 20 >
         au < do_not_process ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
@@ -4348,7 +4348,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://nq.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Notes and Queries Volume 53 ; 53 >
 
@@ -4358,7 +4358,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://nq.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Notes and Queries Volume 52 ; 52 >
         au < do_not_process ; Notes and Queries Volume 53 ; 53 >
@@ -4377,7 +4377,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://nar.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Nucleic Acids Research Volume 33 ; 33 >
 
@@ -4387,7 +4387,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://nar.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Nucleic Acids Research Volume 33 ; 33 >
         au < manifest ; Nucleic Acids Research Volume 34 ; 34 >
@@ -4407,7 +4407,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://nass.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Nucleic Acids Symposium Series Volume 49 ; 49 >
 
@@ -4417,7 +4417,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://nass.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Nucleic Acids Symposium Series Volume 49 ; 49 >
         au < released ; Nucleic Acids Symposium Series Volume 50 ; 50 >
@@ -4436,7 +4436,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://occmed.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Occupational Medicine Volume 56 ; 56 >
 
@@ -4446,7 +4446,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://occmed.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Occupational Medicine Volume 55 ; 55 >
         au < do_not_process ; Occupational Medicine Volume 56 ; 56 >
@@ -4466,7 +4466,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://oq.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Opera Quarterly Volume 21 ; 21 >
 
@@ -4476,7 +4476,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://oq.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Opera Quarterly Volume 21 ; 21 >
         au < manifest ; The Opera Quarterly Volume 22 ; 22 >
@@ -4495,7 +4495,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://oaj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Oxford Art Journal Volume 28 ; 28 >
         au < released ; Oxford Art Journal Volume 29 ; 29 >
@@ -4506,7 +4506,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://oaj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Oxford Art Journal Volume 28 ; 28 >
         au < do_not_process ; Oxford Art Journal Volume 29 ; 29 >
@@ -4525,7 +4525,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://oep.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Oxford Economic Papers Volume 58 ; 58 >
 
@@ -4535,7 +4535,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://oep.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Oxford Economic Papers Volume 57 ; 57 >
         au < do_not_process ; Oxford Economic Papers Volume 58 ; 58 >
@@ -4555,7 +4555,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ojls.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Oxford Journal of Legal Studies Volume 26 ; 26 >
 
@@ -4565,7 +4565,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ojls.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Oxford Journal of Legal Studies Volume 25 ; 25 >
         au < do_not_process ; Oxford Journal of Legal Studies Volume 26 ; 26 >
@@ -4584,7 +4584,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://oxrep.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Oxford Review of Economic Policy Volume 22 ; 22 >
 
@@ -4594,7 +4594,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://oxrep.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Oxford Review of Economic Policy Volume 21 ; 21 >
         au < do_not_process ; Oxford Review of Economic Policy Volume 22 ; 22 >
@@ -4613,7 +4613,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://pa.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Parliamentary Affairs Volume 59 ; 59 >
 
@@ -4623,7 +4623,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://pa.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Parliamentary Affairs Volume 58 ; 58 >
         au < do_not_process ; Parliamentary Affairs Volume 59 ; 59 >
@@ -4643,7 +4643,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://past.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < manifest ; Past & Present Volume 190 ; 190 >
 
@@ -4653,7 +4653,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://past.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Past & Present Volume 186 ; 186 >
         au < released ; Past & Present Volume 187 ; 187 >
@@ -4678,7 +4678,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://philmat.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Philosophia Mathematica Volume 14 ; 14 >
 
@@ -4688,7 +4688,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://philmat.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Philosophia Mathematica Volume 13 ; 13 >
         au < do_not_process ; Philosophia Mathematica Volume 14 ; 14 >
@@ -4708,7 +4708,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://pcp.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Plant and Cell Physiology Volume 47 ; 47 >
 
@@ -4718,7 +4718,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://pcp.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Plant and Cell Physiology Volume 47 ; 47 >
         au < released ; Plant and Cell Physiology Volume 48 ; 48 >
@@ -4737,7 +4737,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://pan.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Political Analysis Volume 14 ; 14 >
 
@@ -4747,7 +4747,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://pan.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Political Analysis Volume 13 ; 13 >
         au < do_not_process ; Political Analysis Volume 14 ; 14 >
@@ -4767,7 +4767,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://plms.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Proceedings of the London Mathematical Society Volume 94 ; 94 >
 
@@ -4785,7 +4785,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://peds.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Protein Engineering Design and Selection Volume 18 ; 18 >
 
@@ -4795,7 +4795,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://peds.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Protein Engineering Design and Selection Volume 18 ; 18 >
         au < released ; Protein Engineering Design and Selection Volume 19 ; 19 >
@@ -4815,7 +4815,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://poq.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Public Opinion Quarterly Volume 70 ; 70 >
 
@@ -4825,7 +4825,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://poq.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Public Opinion Quarterly Volume 69 ; 69 >
         au < do_not_process ; Public Opinion Quarterly Volume 70 ; 70 >
@@ -4844,7 +4844,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://publius.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Publius: The Journal of Federalism Volume 36 ; 36 >
 
@@ -4854,7 +4854,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://publius.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Publius: The Journal of Federalism Volume 36 ; 36 >
         au < released ; Publius: The Journal of Federalism Volume 37 ; 37 >
@@ -4873,7 +4873,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://qjmed.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; QJM: An International Journal of Medicine Volume 99 ; 99 >
 
@@ -4883,7 +4883,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://qjmed.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
         au < do_not_process ; QJM: An International Journal of Medicine Volume 99 ; 99 >
@@ -4903,7 +4903,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://qjmath.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
 
@@ -4913,7 +4913,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://qjmath.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
         au < released ; The Quarterly Journal of Mathematics Volume 57 ; 57 >
@@ -4932,7 +4932,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://qjmam.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 >
         au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 >
@@ -4952,7 +4952,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://rpd.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Radiation Protection Dosimetry Volume 118 ; 118 >
 
@@ -4962,7 +4962,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://rpd.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Radiation Protection Dosimetry Volume 113 ; 113 >
         au < released ; Radiation Protection Dosimetry Volume 114 ; 114 >
@@ -4988,7 +4988,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://rsq.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Refugee Survey Quarterly Volume 25 ; 25 >
 
@@ -4998,7 +4998,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://rsq.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Refugee Survey Quarterly Volume 24 ; 24 >
         au < do_not_process ; Refugee Survey Quarterly Volume 25 ; 25 >
@@ -5017,7 +5017,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://res.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Review of English Studies Volume 57 ; 57 >
 
@@ -5027,7 +5027,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://res.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The Review of English Studies Volume 56 ; 56 >
         au < do_not_process ; The Review of English Studies Volume 57 ; 57 >
@@ -5046,7 +5046,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://reep.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Review of Environmental Economics and Policy Volume 1 ; 1 >
 
@@ -5064,7 +5064,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://rof.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < ready ; Review of Finance Volume 10 ; 10 >
         au < manifest ; Review of Finance Volume 11 ; 11 >
@@ -5083,7 +5083,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://rfs.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Review of Financial Studies Volume 19 ; 19 >
 
@@ -5093,7 +5093,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://rfs.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Review of Financial Studies Volume 18 ; 18 >
         au < do_not_process ; Review of Financial Studies Volume 19 ; 19 >
@@ -5113,7 +5113,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://rheumatology.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Rheumatology Volume 44 ; 44 >
         au < manifest ; Rheumatology Volume 45 ; 45 >
@@ -5133,7 +5133,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Schizophrenia Bulletin Volume 32 ; 32 >
 
@@ -5143,7 +5143,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < do_not_process ; Schizophrenia Bulletin Volume 32 ; 32 >
@@ -5163,7 +5163,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://screen.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Screen Volume 46 ; 46 >
 
@@ -5173,7 +5173,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://screen.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Screen Volume 46 ; 46 >
         au < released ; Screen Volume 47 ; 47 >
@@ -5192,7 +5192,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://scan.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
 
@@ -5210,7 +5210,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://shm.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Social History of Medicine Volume 18 ; 18 >
 
@@ -5220,7 +5220,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://shm.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Social History of Medicine Volume 18 ; 18 >
         au < released ; Social History of Medicine Volume 19 ; 19 >
@@ -5239,7 +5239,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://sp.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
 
@@ -5249,7 +5249,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://sp.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
         au < released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
@@ -5268,7 +5268,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ssjj.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Social Science Japan Journal Volume 8 ; 8 >
 
@@ -5278,7 +5278,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ssjj.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Social Science Japan Journal Volume 8 ; 8 >
         au < ready ; Social Science Japan Journal Volume 9 ; 9 >
@@ -5297,7 +5297,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ser.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Socio-Economic Review Volume 4 ; 4 >
 
@@ -5307,7 +5307,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ser.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < ready ; Socio-Economic Review Volume 3 ; 3 >
         au < do_not_process ; Socio-Economic Review Volume 4 ; 4 >
@@ -5327,7 +5327,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://slr.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Statute Law Review Volume 27 ; 27 >
 
@@ -5337,7 +5337,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://slr.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Statute Law Review Volume 26 ; 26 >
         au < do_not_process ; Statute Law Review Volume 27 ; 27 >
@@ -5357,7 +5357,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://teamat.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Teaching Mathematics and its Applications Volume 25 ; 25 >
 
@@ -5367,7 +5367,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://teamat.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
         au < do_not_process ; Teaching Mathematics and its Applications Volume 25 ; 25 >
@@ -5386,7 +5386,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://toxsci.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < ready ; Toxicological Sciences Volume 91 ; 91 >
 
@@ -5396,7 +5396,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://toxsci.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Toxicological Sciences Volume 83 ; 83 >
         au < released ; Toxicological Sciences Volume 84 ; 84 >
@@ -5427,7 +5427,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://tandt.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Trusts & Trustees Volume 12 ; 12 >
 
@@ -5445,7 +5445,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://tcbh.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; Twentieth Century British History Volume 17 ; 17 >
 
@@ -5455,7 +5455,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://tcbh.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; Twentieth Century British History Volume 16 ; 16 >
         au < do_not_process ; Twentieth Century British History Volume 17 ; 17 >
@@ -5475,7 +5475,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://wber.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The World Bank Economic Review Volume 20 ; 20 >
 
@@ -5485,7 +5485,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://wber.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The World Bank Economic Review Volume 19 ; 19 >
         au < do_not_process ; The World Bank Economic Review Volume 20 ; 20 >
@@ -5504,7 +5504,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://wbro.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The World Bank Research Observer Volume 21 ; 21 >
 
@@ -5514,7 +5514,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://wbro.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < released ; The World Bank Research Observer Volume 20 ; 20 >
         au < do_not_process ; The World Bank Research Observer Volume 21 ; 21 >
@@ -5533,7 +5533,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ywcct.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
 
@@ -5543,7 +5543,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ywcct.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
         au < released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
@@ -5562,7 +5562,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ywes.oxfordjournals.org/
-        implicit < status ; name ; param[volume]
+        implicit < status ; name ; param[volume] >
 
         au < released ; The Year's Work in English Studies Volume 84 ; 84 >
 
@@ -5572,7 +5572,7 @@ ADD MISSING JOURNALS
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ywes.oxfordjournals.org/
-        implicit < status ; name ; param[volume_name]
+        implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Year's Work in English Studies Volume 84 ; 84 >
         au < released ; The Year's Work in English Studies Volume 85 ; 85 >
