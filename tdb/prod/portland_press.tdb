@@ -417,23 +417,23 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
     au < manifest ; Biochemical Journal Volume 398 ; 398 >
     au < manifest ; Biochemical Journal Volume 399 ; 399 >
     au < manifest ; Biochemical Journal Volume 400 ; 400 >
-    au < manifest ; Biochemical Journal Volume 401 ; 401 >
-    au < manifest ; Biochemical Journal Volume 402 ; 402 >
-    au < manifest ; Biochemical Journal Volume 403 ; 403 >
-    au < manifest ; Biochemical Journal Volume 404 ; 404 >
-    au < manifest ; Biochemical Journal Volume 405 ; 405 >
-    au < manifest ; Biochemical Journal Volume 406 ; 406 >
-    au < manifest ; Biochemical Journal Volume 407 ; 407 >
-    au < manifest ; Biochemical Journal Volume 408 ; 408 >
-    au < manifest ; Biochemical Journal Volume 409 ; 409 >
+    au < testing ; Biochemical Journal Volume 401 ; 401 >
+    au < testing ; Biochemical Journal Volume 402 ; 402 >
+    au < testing ; Biochemical Journal Volume 403 ; 403 >
+    au < testing ; Biochemical Journal Volume 404 ; 404 >
+    au < testing ; Biochemical Journal Volume 405 ; 405 >
+    au < testing ; Biochemical Journal Volume 406 ; 406 >
+    au < testing ; Biochemical Journal Volume 407 ; 407 >
+    au < testing ; Biochemical Journal Volume 408 ; 408 >
+    au < testing ; Biochemical Journal Volume 409 ; 409 >
     au < not_ready ; Biochemical Journal Volume 410 ; 410 >
-    au < testing ; Biochemical Journal Volume 411 ; 411 >
+    au < ready ; Biochemical Journal Volume 411 ; 411 >
     au < not_ready ; Biochemical Journal Volume 412 ; 412 >
-    au < testing ; Biochemical Journal Volume 413 ; 413 >
+    au < not_ready ; Biochemical Journal Volume 413 ; 413 >
     au < not_ready ; Biochemical Journal Volume 414 ; 414 >
     au < not_ready ; Biochemical Journal Volume 415 ; 415 >
-    au < testing ; Biochemical Journal Volume 416 ; 416 >
-    au < testing ; Biochemical Journal Volume 417 ; 417 >
+    au < ready ; Biochemical Journal Volume 416 ; 416 >
+    au < ready ; Biochemical Journal Volume 417 ; 417 >
     au < ready ; Biochemical Journal Volume 418 ; 418 >
     au < ready ; Biochemical Journal Volume 419 ; 419 >
     
@@ -450,18 +450,18 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
 comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
 
 
-    au < manifest ; Biology of the Cell Volume 48 ; 048 >
-    au < manifest ; Biology of the Cell Volume 49 ; 049 >
-    au < testing ; Biology of the Cell Volume 50 ; 050 >
-    au < testing ; Biology of the Cell Volume 51 ; 051 >
-    au < testing ; Biology of the Cell Volume 52 ; 052 >
-    au < testing ; Biology of the Cell Volume 53 ; 053 >
-    au < testing ; Biology of the Cell Volume 54 ; 054 >
-    au < testing ; Biology of the Cell Volume 55 ; 055 >
-    au < testing ; Biology of the Cell Volume 56 ; 056 >
-    au < testing ; Biology of the Cell Volume 57 ; 057 >
-    au < testing ; Biology of the Cell Volume 58 ; 058 >
-    au < testing ; Biology of the Cell Volume 59 ; 059 >
+    au < testing ; Biology of the Cell Volume 48 ; 048 >
+    au < testing ; Biology of the Cell Volume 49 ; 049 >
+    au < ready ; Biology of the Cell Volume 50 ; 050 >
+    au < ready ; Biology of the Cell Volume 51 ; 051 >
+    au < ready ; Biology of the Cell Volume 52 ; 052 >
+    au < ready ; Biology of the Cell Volume 53 ; 053 >
+    au < ready ; Biology of the Cell Volume 54 ; 054 >
+    au < ready ; Biology of the Cell Volume 55 ; 055 >
+    au < ready ; Biology of the Cell Volume 56 ; 056 >
+    au < not_ready ; Biology of the Cell Volume 57 ; 057 >
+    au < ready ; Biology of the Cell Volume 58 ; 058 >
+    au < ready ; Biology of the Cell Volume 59 ; 059 >
     au < ready ; Biology of the Cell Volume 60 ; 060 >
     au < ready ; Biology of the Cell Volume 61 ; 061 >
     au < ready ; Biology of the Cell Volume 62 ; 062 >

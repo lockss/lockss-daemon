@@ -3059,12 +3059,12 @@
       param[base_url] = http://www.thrombosisjournal.com/
       param[journal_issn] = 1477-9560
 
-      au < testing ; Thrombosis Journal Volume 1 ; 1 >
-      au < testing ; Thrombosis Journal Volume 2 ; 2 >
-      au < testing ; Thrombosis Journal Volume 3 ; 3 >
-      au < testing ; Thrombosis Journal Volume 4 ; 4 >
-      au < testing ; Thrombosis Journal Volume 5 ; 5 >
-      au < testing ; Thrombosis Journal Volume 6 ; 6 >
+      au < ready ; Thrombosis Journal Volume 1 ; 1 >
+      au < ready ; Thrombosis Journal Volume 2 ; 2 >
+      au < ready ; Thrombosis Journal Volume 3 ; 3 >
+      au < ready ; Thrombosis Journal Volume 4 ; 4 >
+      au < ready ; Thrombosis Journal Volume 5 ; 5 >
+      au < ready ; Thrombosis Journal Volume 6 ; 6 >
     }
 
 
@@ -3078,15 +3078,15 @@
       param[base_url] = http://www.trialsjournal.com/
       param[journal_issn] = 1745-6215
 
-      au < testing ; Trials Volume 1 ; 1 >
-      au < testing ; Trials Volume 2 ; 2 >
-      au < testing ; Trials Volume 3 ; 3 >
-      au < testing ; Trials Volume 4 ; 4 >
-      au < testing ; Trials Volume 5 ; 5 >
-      au < testing ; Trials Volume 6 ; 6 >
-      au < testing ; Trials Volume 7 ; 7 >
-      au < testing ; Trials Volume 8 ; 8 >
-      au < testing ; Trials Volume 9 ; 9 >
+      au < ready ; Trials Volume 1 ; 1 >
+      au < ready ; Trials Volume 2 ; 2 >
+      au < ready ; Trials Volume 3 ; 3 >
+      au < ready ; Trials Volume 4 ; 4 >
+      au < ready ; Trials Volume 5 ; 5 >
+      au < ready ; Trials Volume 6 ; 6 >
+      au < ready ; Trials Volume 7 ; 7 >
+      au < ready ; Trials Volume 8 ; 8 >
+      au < ready ; Trials Volume 9 ; 9 >
     }
 
 
@@ -3100,11 +3100,11 @@
       param[base_url] = http://www.virologyj.com/
       param[journal_issn] = 1743-422X
 
-      au < manifest ; Virology Journal Volume 1 ; 1 >
-      au < manifest ; Virology Journal Volume 2 ; 2 >
-      au < manifest ; Virology Journal Volume 3 ; 3 >
-      au < manifest ; Virology Journal Volume 4 ; 4 >
-      au < manifest ; Virology Journal Volume 5 ; 5 >
+      au < testing ; Virology Journal Volume 1 ; 1 >
+      au < testing ; Virology Journal Volume 2 ; 2 >
+      au < testing ; Virology Journal Volume 3 ; 3 >
+      au < testing ; Virology Journal Volume 4 ; 4 >
+      au < testing ; Virology Journal Volume 5 ; 5 >
     }
 
 
@@ -3118,9 +3118,9 @@
       param[base_url] = http://www.wjes.org/
       param[journal_issn] = 1749-7922
 
-      au < manifest ; World Journal of Emergency Surgery Volume 1 ; 1 >
-      au < manifest ; World Journal of Emergency Surgery Volume 2 ; 2 >
-      au < manifest ; World Journal of Emergency Surgery Volume 3 ; 3 >
+      au < testing ; World Journal of Emergency Surgery Volume 1 ; 1 >
+      au < testing ; World Journal of Emergency Surgery Volume 2 ; 2 >
+      au < testing ; World Journal of Emergency Surgery Volume 3 ; 3 >
     }
 
 
@@ -3134,12 +3134,12 @@
       param[base_url] = http://www.wjso.com/
       param[journal_issn] = 1477-7819
 
-      au < manifest ; World Journal of Surgical Oncology Volume 1 ; 1 >
-      au < manifest ; World Journal of Surgical Oncology Volume 2 ; 2 >
-      au < manifest ; World Journal of Surgical Oncology Volume 3 ; 3 >
-      au < manifest ; World Journal of Surgical Oncology Volume 4 ; 4 >
-      au < manifest ; World Journal of Surgical Oncology Volume 5 ; 5 >
-      au < manifest ; World Journal of Surgical Oncology Volume 6 ; 6 >
+      au < testing ; World Journal of Surgical Oncology Volume 1 ; 1 >
+      au < testing ; World Journal of Surgical Oncology Volume 2 ; 2 >
+      au < testing ; World Journal of Surgical Oncology Volume 3 ; 3 >
+      au < testing ; World Journal of Surgical Oncology Volume 4 ; 4 >
+      au < testing ; World Journal of Surgical Oncology Volume 5 ; 5 >
+      au < testing ; World Journal of Surgical Oncology Volume 6 ; 6 >
     }
         
   }
