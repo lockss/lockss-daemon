@@ -420,11 +420,11 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
     au < testing ; Biochemical Journal Volume 401 ; 401 >
     au < testing ; Biochemical Journal Volume 402 ; 402 >
     au < testing ; Biochemical Journal Volume 403 ; 403 >
-    au < testing ; Biochemical Journal Volume 404 ; 404 >
+    au < not_ready ; Biochemical Journal Volume 404 ; 404 >
     au < testing ; Biochemical Journal Volume 405 ; 405 >
-    au < testing ; Biochemical Journal Volume 406 ; 406 >
-    au < testing ; Biochemical Journal Volume 407 ; 407 >
-    au < testing ; Biochemical Journal Volume 408 ; 408 >
+    au < not_ready ; Biochemical Journal Volume 406 ; 406 >
+    au < not_ready ; Biochemical Journal Volume 407 ; 407 >
+    au < not_ready ; Biochemical Journal Volume 408 ; 408 >
     au < testing ; Biochemical Journal Volume 409 ; 409 >
     au < not_ready ; Biochemical Journal Volume 410 ; 410 >
     au < ready ; Biochemical Journal Volume 411 ; 411 >
@@ -450,8 +450,8 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
 comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
 
 
-    au < testing ; Biology of the Cell Volume 48 ; 048 >
-    au < testing ; Biology of the Cell Volume 49 ; 049 >
+    au < ready ; Biology of the Cell Volume 48 ; 048 >
+    au < not_ready ; Biology of the Cell Volume 49 ; 049 >
     au < ready ; Biology of the Cell Volume 50 ; 050 >
     au < ready ; Biology of the Cell Volume 51 ; 051 >
     au < ready ; Biology of the Cell Volume 52 ; 052 >
@@ -514,21 +514,21 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.biochemsoctrans.org/
     param[journal_id] = bst
 
-    au < manifest ; Biochemical Society Transactions Volume 23 ; 023 >
-    au < manifest ; Biochemical Society Transactions Volume 24 ; 024 >
-    au < manifest ; Biochemical Society Transactions Volume 25 ; 025 >
-    au < manifest ; Biochemical Society Transactions Volume 26 ; 026 >
-    au < manifest ; Biochemical Society Transactions Volume 27 ; 027 >
-    au < manifest ; Biochemical Society Transactions Volume 28 ; 028 >
-    au < manifest ; Biochemical Society Transactions Volume 29 ; 029 >
-    au < manifest ; Biochemical Society Transactions Volume 30 ; 030 >
-    au < manifest ; Biochemical Society Transactions Volume 31 ; 031 >
-    au < manifest ; Biochemical Society Transactions Volume 32 ; 032 >
-    au < manifest ; Biochemical Society Transactions Volume 33 ; 033 >
-    au < manifest ; Biochemical Society Transactions Volume 34 ; 034 >
-    au < manifest ; Biochemical Society Transactions Volume 35 ; 035 >
-    au < manifest ; Biochemical Society Transactions Volume 36 ; 036 >
-    au < manifest ; Biochemical Society Transactions Volume 37 ; 037 >
+    au < testing ; Biochemical Society Transactions Volume 23 ; 023 >
+    au < testing ; Biochemical Society Transactions Volume 24 ; 024 >
+    au < testing ; Biochemical Society Transactions Volume 25 ; 025 >
+    au < testing ; Biochemical Society Transactions Volume 26 ; 026 >
+    au < testing ; Biochemical Society Transactions Volume 27 ; 027 >
+    au < testing ; Biochemical Society Transactions Volume 28 ; 028 >
+    au < testing ; Biochemical Society Transactions Volume 29 ; 029 >
+    au < testing ; Biochemical Society Transactions Volume 30 ; 030 >
+    au < testing ; Biochemical Society Transactions Volume 31 ; 031 >
+    au < testing ; Biochemical Society Transactions Volume 32 ; 032 >
+    au < testing ; Biochemical Society Transactions Volume 33 ; 033 >
+    au < testing ; Biochemical Society Transactions Volume 34 ; 034 >
+    au < testing ; Biochemical Society Transactions Volume 35 ; 035 >
+    au < testing ; Biochemical Society Transactions Volume 36 ; 036 >
+    au < testing ; Biochemical Society Transactions Volume 37 ; 037 >
     
   }
   
