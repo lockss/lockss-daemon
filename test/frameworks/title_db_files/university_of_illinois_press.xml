@@ -143,6 +143,291 @@
    </property>
   </property>
 
+  <property name="TheJournalofAestheticEducation42">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="The Journal of Aesthetic Education" />
+   <property name="title" value="The Journal of Aesthetic Education Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="the_journal_of_aesthetic_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="TheJournalofAestheticEducation43">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="The Journal of Aesthetic Education" />
+   <property name="title" value="The Journal of Aesthetic Education Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="the_journal_of_aesthetic_education" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic1">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic2">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic3">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic4">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic5">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic6">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1,2" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic7">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic8">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic9">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic10">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic11">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic12">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="JournalofSeventeenthCenturyMusic13">
+   <property name="attributes.publisher" value="University of Illinois Press" />
+   <property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+   <property name="title" value="Journal of Seventeenth-Century Music  Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_set" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
  </property>
 
 </lockss-config>

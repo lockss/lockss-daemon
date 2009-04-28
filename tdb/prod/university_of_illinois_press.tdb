@@ -3,26 +3,59 @@
     name = University of Illinois Press
   >
 
-  implicit < status ; name ; param[volume] >
+  {
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
-  {
-    title <
-      name = The Journal of Aesthetic Education 
-    >
+    {
+      title <
+        name = The Journal of Aesthetic Education 
+      >
 
-    param[journal_dir] = the_journal_of_aesthetic_education
+      param[journal_dir] = the_journal_of_aesthetic_education
+   
+      au < released ; The Journal of Aesthetic Education Volume 37 ; 37 >
+      au < released ; The Journal of Aesthetic Education Volume 38 ; 38 >
+      au < released ; The Journal of Aesthetic Education Volume 39 ; 39 >
+      au < released ; The Journal of Aesthetic Education Volume 40 ; 40 >
+      au < released ; The Journal of Aesthetic Education Volume 41 ; 41 >
+      au < manifest ; The Journal of Aesthetic Education Volume 42 ; 42 >
+      au < manifest ; The Journal of Aesthetic Education Volume 43 ; 43 >
 
-    au < released ; The Journal of Aesthetic Education Volume 37 ; 37 >
-    au < released ; The Journal of Aesthetic Education Volume 38 ; 38 >
-    au < released ; The Journal of Aesthetic Education Volume 39 ; 39 >
-    au < released ; The Journal of Aesthetic Education Volume 40 ; 40 >
-    au < released ; The Journal of Aesthetic Education Volume 41 ; 41 >
-    au < manifest ; The Journal of Aesthetic Education Volume 42 ; 42 >
-    au < manifest ; The Journal of Aesthetic Education Volume 43 ; 43 >
-
+    }
+    
   }
+  
+  {
+  
+  plugin = org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic
+  implicit < status ; name ; param[volume_name] ; param[issue_set] >
+  
+    {
+      title <
+        name = Journal of Seventeenth-Century Music 
+      >
 
+      param[base_url] = http://sscm-jscm.press.uiuc.edu/
+
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 1 ; 1 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 2 ; 2 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 3 ; 3 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 4 ; 4 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 5 ; 5 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 6 ; 6 ; 1,2 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 7 ; 7 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 8 ; 8 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 9 ; 9 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 10 ; 10 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 11 ; 11 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 12 ; 12 ; 1 >
+      au < manifest ; Journal of Seventeenth-Century Music  Volume 13 ; 13 ; 1 >
+    
+    }
+    
+  }
+  
 }
