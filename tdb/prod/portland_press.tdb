@@ -417,15 +417,15 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
     au < manifest ; Biochemical Journal Volume 398 ; 398 >
     au < manifest ; Biochemical Journal Volume 399 ; 399 >
     au < manifest ; Biochemical Journal Volume 400 ; 400 >
-    au < testing ; Biochemical Journal Volume 401 ; 401 >
-    au < testing ; Biochemical Journal Volume 402 ; 402 >
-    au < testing ; Biochemical Journal Volume 403 ; 403 >
+    au < ready ; Biochemical Journal Volume 401 ; 401 >
+    au < ready ; Biochemical Journal Volume 402 ; 402 >
+    au < ready ; Biochemical Journal Volume 403 ; 403 >
     au < not_ready ; Biochemical Journal Volume 404 ; 404 >
-    au < testing ; Biochemical Journal Volume 405 ; 405 >
+    au < not_ready ; Biochemical Journal Volume 405 ; 405 >
     au < not_ready ; Biochemical Journal Volume 406 ; 406 >
     au < not_ready ; Biochemical Journal Volume 407 ; 407 >
     au < not_ready ; Biochemical Journal Volume 408 ; 408 >
-    au < testing ; Biochemical Journal Volume 409 ; 409 >
+    au < not_ready ; Biochemical Journal Volume 409 ; 409 >
     au < not_ready ; Biochemical Journal Volume 410 ; 410 >
     au < ready ; Biochemical Journal Volume 411 ; 411 >
     au < not_ready ; Biochemical Journal Volume 412 ; 412 >
@@ -540,15 +540,15 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.bioscirep.org/
     param[journal_id] = bsr
 
-    au < manifest ; Bioscience Reports Volume 1 ; 001 >
-    au < manifest ; Bioscience Reports Volume 2 ; 002 >
-    au < manifest ; Bioscience Reports Volume 3 ; 003 >
-    au < manifest ; Bioscience Reports Volume 4 ; 004 >
-    au < manifest ; Bioscience Reports Volume 5 ; 005 >
-    au < manifest ; Bioscience Reports Volume 6 ; 006 >
-    au < manifest ; Bioscience Reports Volume 7 ; 007 >
-    au < manifest ; Bioscience Reports Volume 8 ; 008 >
-    au < manifest ; Bioscience Reports Volume 9 ; 009 >
+    au < testing ; Bioscience Reports Volume 1 ; 001 >
+    au < testing ; Bioscience Reports Volume 2 ; 002 >
+    au < testing ; Bioscience Reports Volume 3 ; 003 >
+    au < testing ; Bioscience Reports Volume 4 ; 004 >
+    au < testing ; Bioscience Reports Volume 5 ; 005 >
+    au < testing ; Bioscience Reports Volume 6 ; 006 >
+    au < testing ; Bioscience Reports Volume 7 ; 007 >
+    au < testing ; Bioscience Reports Volume 8 ; 008 >
+    au < testing ; Bioscience Reports Volume 9 ; 009 >
     au < manifest ; Bioscience Reports Volume 10 ; 010 >
     au < manifest ; Bioscience Reports Volume 11 ; 011 >
     au < manifest ; Bioscience Reports Volume 12 ; 012 >
