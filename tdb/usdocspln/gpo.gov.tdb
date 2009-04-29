@@ -16,7 +16,7 @@
     param[base_url] = http://bulk.resource.org/
     implicit < status ; name ; param[congress] >
 
-    au < released ; Congressional Bills, 104th Congress ; 103 >
+    au < manifest ; Congressional Bills, 103rd Congress ; 103 >
     au < released ; Congressional Bills, 104th Congress ; 104 >
     au < released ; Congressional Bills, 105th Congress ; 105 >
     au < released ; Congressional Bills, 106th Congress ; 106 >
