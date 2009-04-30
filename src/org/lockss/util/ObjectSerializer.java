@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.29 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.29.40.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -808,7 +808,10 @@ public abstract class ObjectSerializer {
    *                                interrupted.
    * @see #serialize(OutputStream, Object)
    */
-  protected void serialize(OutputStream outputStream,
+  /* Temporarily making public, while waiting for Thib to make a permanent
+   * solution.
+   */
+  public void serialize(OutputStream outputStream,
                            LockssSerializable obj)
       throws SerializationException,
              InterruptedIOException {
@@ -873,7 +876,9 @@ public abstract class ObjectSerializer {
    *                                interrupted.
    * @see #serialize(OutputStream, Object)
    */
-  protected void serialize(OutputStream outputStream,
+  /* Temporarily making public, while Thib makes a permanent solution.
+   */
+  public void serialize(OutputStream outputStream,
                            Serializable obj)
       throws SerializationException,
              InterruptedIOException {

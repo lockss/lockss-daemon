@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.18 2006-04-05 21:09:13 thib_gc Exp $
+ * $Id: LockssRepository.java,v 1.18.56.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
+import java.io.*;
 import java.net.MalformedURLException;
 import org.lockss.app.*;
 
@@ -77,6 +78,19 @@ public interface LockssRepository extends LockssAuManager {
    * node.  Corrects and logs any correctable errors it encounters.
    */
   public void nodeConsistencyCheck();
+
+  /**
+   * Gets the AU State raw contents.
+   * 
+   * @return Input Stream
+   * @throws FileNotFoundException
+   * @throws IOException 
+   */
+  public InputStream getAuStateRawContents() 
+  throws IOException;
+
+  public void setAuStateRawContents(InputStream istrAuState)
+  throws IOException;
 
   /**
    * Thrown when an unexpected error is encountered while caching.

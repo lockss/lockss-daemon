@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSet.java,v 1.2 2008-10-24 07:13:18 tlipkis Exp $
+ * $Id: PersistentPeerIdSet.java,v 1.2.8.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.lockss.util.Streamable;
+
 /* Note: This interface comes very close to 'implement Set<PeerIdentity>'.
  * However, it isn't an implementation.
 
@@ -44,7 +46,7 @@ import java.util.Iterator;
  */
 
 
-public interface PersistentPeerIdSet extends Iterable<PeerIdentity>  {
+public interface PersistentPeerIdSet extends Iterable<PeerIdentity> , Streamable  {
   /* To handle direct loading and saving. */
   public void load() throws IOException;
   public void store() throws IOException;

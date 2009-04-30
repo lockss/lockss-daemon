@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.13 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: MockLockssRepository.java,v 1.13.34.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
@@ -39,11 +40,14 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
+import org.lockss.util.StreamUtil;
 
 /**
  * Mock version of LockssRepository.
  */
 public class MockLockssRepository implements LockssRepository {
+  public static final String AU_FILE_NAME = "#au_state.xml";
+  
   private String rootLocation;
   private ArchivalUnit repoAu;
   private HashMap nodeCache = new HashMap();
@@ -134,5 +138,27 @@ public class MockLockssRepository implements LockssRepository {
     // add to node cache and weak reference cache
     nodeCache.put(urlKey, node);
     return node;
+  }
+
+  // This method is taken from LockssRepositoryImpl.getAuStateRawContents().
+  public InputStream getAuStateRawContents() throws FileNotFoundException {
+    File fileAuState;
+    FileInputStream fisAuState;
+    
+    fileAuState = new File(rootLocation + File.separator + AU_FILE_NAME);
+    fisAuState = new FileInputStream(fileAuState);
+    
+    return fisAuState;
+  }
+
+  // THis method is taken from LockssRepositoryImpl.setAuStateRawContents().
+  public void setAuStateRawContents(InputStream istrAuState) throws IOException {
+    File fileAuState;
+    OutputStream osAuState;
+    
+    fileAuState = new File(rootLocation + File.separator + AU_FILE_NAME);
+    osAuState = new BufferedOutputStream(new FileOutputStream(fileAuState));
+    
+    StreamUtil.copy(istrAuState, osAuState);
   }
 }

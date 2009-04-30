@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.12 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.12.24.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.daemon.*;
 
 /**
  * RepositoryManager is the center of the per AU repositories.  It manages
- * the repository config parameters.
+ * the repository config parameters. 
  */
 public class RepositoryManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
@@ -93,13 +93,13 @@ public class RepositoryManager
   static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
 
   private PlatformUtil platInfo = PlatformUtil.getInstance();
-  private List repoList = Collections.EMPTY_LIST;
+  private List<String> repoList = (List<String>) Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
   boolean paramIsGlobalNodeCache = DEFAULT_GLOBAL_CACHE_ENABLED;
   int paramGlobalNodeCacheSize = DEFAULT_MAX_GLOBAL_CACHE_SIZE;
   UniqueRefLruCache globalNodeCache =
       new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
-  Map localRepos = new HashMap();
+  Map<String, LockssRepository> localRepos = new HashMap<String, LockssRepository>();
 
   PlatformUtil.DF paramDFWarn =
     PlatformUtil.DF.makeThreshold(DEFAULT_DISK_WARN_FRRE_MB,
@@ -112,7 +112,7 @@ public class RepositoryManager
 
   public void startService() {
     super.startService();
-    localRepos = new HashMap();
+    localRepos = new HashMap<String, LockssRepository>();
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
@@ -120,13 +120,13 @@ public class RepositoryManager
     //  Build list of repositories from list of disk (fs) paths).  Needs to
     //  be generalized if ever another repository implementation.
     if (changedKeys.contains(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST)) {
-      List lst = new ArrayList();
+      List<String> lst = new ArrayList<String>();
       String dspace =
 	config.get(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, "");
-      List paths = StringUtil.breakAt(dspace, ';');
+      List<String> paths = (List<String>) StringUtil.breakAt(dspace, ';');
       if (paths != null) {
-	for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
-	  lst.add("local:" + (String)iter.next());
+	for (Iterator<String> iter = paths.iterator(); iter.hasNext(); ) {
+	  lst.add("local:" + iter.next());
 	}
       }
       repoList = lst;
@@ -134,9 +134,9 @@ public class RepositoryManager
     if (changedKeys.contains(PARAM_MAX_PER_AU_CACHE_SIZE)) {
       paramNodeCacheSize = config.getInt(PARAM_MAX_PER_AU_CACHE_SIZE,
 					 DEFAULT_MAX_PER_AU_CACHE_SIZE);
-      for (Iterator iter = getDaemon().getAllLockssRepositories().iterator();
+      for (Iterator<LockssRepository> iter = getDaemon().getAllLockssRepositories().iterator();
 	   iter.hasNext(); ) {
-	LockssRepository repo = (LockssRepository)iter.next();
+	LockssRepository repo = iter.next();
 	if (repo instanceof LockssRepositoryImpl) {
 	  LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
 	  repoImpl.setNodeCacheSize(paramNodeCacheSize);
@@ -188,7 +188,7 @@ public class RepositoryManager
   }
 
   public Map<String,PlatformUtil.DF> getRepositoryMap() {
-    Map<String,PlatformUtil.DF> repoMap = new LinkedMap();
+    Map<String,PlatformUtil.DF> repoMap = new LinkedHashMap<String, PlatformUtil.DF>();
     for (String repo : getRepositoryList()) {
       repoMap.put(repo, getRepositoryDF(repo));
     }
@@ -221,14 +221,14 @@ public class RepositoryManager
     return paramDFFull;
   }
 
-  public List findExistingRepositoriesFor(String auid) {
-    List res = null;
-    for (Iterator iter = getRepositoryList().iterator(); iter.hasNext(); ) {
-      String repoName = (String)iter.next();
+  public List<String> findExistingRepositoriesFor(String auid) {
+    List<String> res = null;
+    for (Iterator<String> iter = getRepositoryList().iterator(); iter.hasNext(); ) {
+      String repoName = iter.next();
       String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
       if (LockssRepositoryImpl.doesAuDirExist(auid, path)) {
 	if (res == null) {
-	  res = new ArrayList();
+	  res = new ArrayList<String>();
 	}
 	res.add(repoName);
       }
@@ -237,8 +237,8 @@ public class RepositoryManager
   }
 
   // hack only local
-  public synchronized LockssRepositoryImpl getRepositoryFromPath(String path) {
-    LockssRepositoryImpl repo = (LockssRepositoryImpl)localRepos.get(path);
+  public synchronized LockssRepository getRepositoryFromPath(String path) {
+    LockssRepository repo = (LockssRepository) localRepos.get(path);
     if (repo == null) {
       repo =  new LockssRepositoryImpl(path);
       repo.initService(getDaemon());
@@ -285,7 +285,7 @@ public class RepositoryManager
 
   // Background thread to (re)calculate AU size and disk usage.
 
-  private Set sizeCalcQueue = new HashSet();
+  private Set<RepositoryNode> sizeCalcQueue = new HashSet<RepositoryNode>();
   private BinarySemaphore sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread sizeCalcThread;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.13 2008-12-13 07:24:54 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.13.6.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -158,4 +158,24 @@ public class PeerIdentity implements LockssSerializable {
   protected String getKey() {
     return key;
   }
+  
+//  REMOVED: Brent, you are not allowed to add 'equals' or 'hashCode'
+//  methods to this class.
+  
+//  public boolean equals(Object obj) {
+//    PeerIdentity mpi;
+//    
+//    if (obj instanceof PeerIdentity) {
+//      mpi = (PeerIdentity) obj;
+//      
+//      return getKey() == mpi.getKey();
+//    } else {
+//      return false;
+//    }
+//  }
+//  
+//  public int hashCode() {
+//    return getKey().hashCode();
+//  }
+
 }

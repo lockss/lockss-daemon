@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.23 2008-08-20 05:50:49 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.23.10.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.mail.MimeMessage;
 import org.lockss.plugin.*;
 import org.lockss.protocol.MockIdentityManager;
+import org.lockss.repository.LockssRepository;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -286,9 +287,14 @@ public class TestRemoteApi extends LockssTestCase {
     mpm.setAllAus(ListUtil.list(mau1, mau2, mau3));
     idMgr.setAgreeMap(mau1, "agree map 1");
     idMgr.setAgreeMap(mau3, "agree map 3");
-    MockHistoryRepository hr = new MockHistoryRepository();
-    daemon.setHistoryRepository(hr, mau1);
-    hr.setAuStateFile(FileTestUtil.writeTempFile("austate", "dummy austate"));
+//    MockHistoryRepository hr = new MockHistoryRepository();
+//    daemon.setHistoryRepository(hr, mau1);
+//    hr.setAuStateFile(FileTestUtil.writeTempFile("austate", "dummy austate"));
+    
+    File fileAuState = FileTestUtil.writeTempFile("austate", "dummy austate");
+    InputStream istrAuState = new FileInputStream(fileAuState);
+    LockssRepository lr = daemon.getLockssRepository(mau1);
+    lr.setAuStateRawContents(istrAuState);
 
     InputStream in = rapi.getAuConfigBackupStream("machine_foo");
     File zip = FileTestUtil.tempFile("foo", ".zip");

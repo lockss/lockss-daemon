@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.84 2009-02-05 05:09:46 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.84.4.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -1116,22 +1116,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   PersistentPeerIdSet loadAgreementHistory() {
     PersistentPeerIdSet ppisReturn;
- 
+    Streamer streamer;
+    
      if (agreementFile == null) {
       initAgreementFile();
     }
     
-    DataInputStream is = null;
     try {
-//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, repository.getDaemon().getIdentityManager());
-      ppisReturn = new PersistentPeerIdSetImpl(agreementFile, repository.getDaemon().getIdentityManager());
+      streamer = new StreamerFile(agreementFile);
+      ppisReturn = new PersistentPeerIdSetImpl(streamer, repository.getDaemon().getIdentityManager());
       ppisReturn.load();
       
     } catch (Exception e) {
       logger.error("Error loading agreement history" + e.getMessage());
       throw new LockssRepository.RepositoryStateException("Couldn't load agreement file.");
-    } finally {
-      IOUtil.safeClose(is);
     }
     
     return ppisReturn;

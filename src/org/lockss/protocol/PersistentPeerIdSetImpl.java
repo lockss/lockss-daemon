@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8 2008-11-26 01:10:53 edwardsb1 Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.6.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -57,23 +57,28 @@ import org.lockss.util.*;
 public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   // Static constants 
   protected static final String TEMP_EXTENSION = ".temp";
+  protected static final int LENGTH_DEFERREDOUTPUTSTREAM = 10000;
 
   // Internal variables
-  protected File m_filePeerId;
+  private static Logger logger = Logger.getLogger("PersistentPeerIdSet");
+
+  // Only one of m_filePeerId or m_lari should be set; the other should be null.
+  // The one that is set determines where the PPIS is stored and retrieved.
+  
+  protected boolean m_changed = false;
   private IdentityManager m_identityManager;
   protected boolean m_isInMemory;
-  private static Logger m_logger = Logger.getLogger("PersistentPeerIdSet");
+  protected Streamer m_streamer;
   protected Set<PeerIdentity> m_setPeerId;
-  protected boolean m_changed = false;
 
 
-  public PersistentPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
-    m_filePeerId = filePeerId;
+  public PersistentPeerIdSetImpl(Streamer jcrstr, IdentityManager identityManager) {
+    m_streamer = jcrstr;
     m_identityManager = identityManager;
     m_isInMemory = false;
     m_setPeerId = null;
   }
-
+  
   public void load() throws IOException {
     if (!m_isInMemory) {
       internalLoad();     // This sets m_setPeerId.
@@ -94,7 +99,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    */
   public void store(boolean release) throws IOException {
     if (m_isInMemory) {
-      internalStore();   // This writes to m_filePeerId.
+      internalStore(); 
     }
     if (release) {
       release();
@@ -176,7 +181,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     if (o instanceof PersistentPeerIdSetImpl) {
       PersistentPeerIdSetImpl ppis = (PersistentPeerIdSetImpl) o;
 
-      return m_filePeerId.equals(ppis.m_filePeerId);
+      return m_streamer.equals(ppis.m_streamer);
     } else {
       return false;
     }
@@ -192,7 +197,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       result = m_setPeerId.hashCode();
       // saveIfNecessary();  // Not needed.
     } catch (IOException e) {
-      m_logger.error("hashCode had an IOException: " + e.getMessage());
+      logger.error("hashCode had an IOException: " + e.getMessage());
       result = 0;
     }
 
@@ -258,6 +263,22 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 
     return result;
   }
+  
+  
+  public void setStreamer(Streamer streamer) {
+    try {
+      // When we set the streamer, we must write out the PPIS to its
+      // new location.
+      load();
+      m_streamer = streamer;
+      m_changed = true;
+      store();
+    } catch (IOException e) {
+      logger.error("setStreamer: ", e);
+      logger.error("Throwing exception into the bit bucket.");
+    }
+  }
+
 
 
   public int size() throws IOException {
@@ -292,14 +313,6 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 //    return result;
 //  }
 
-  
-  // The following method is used to sequence the persistent peer ID set.
-  
-  public File getFilePeerId() throws IOException {
-    storeIfNecessary();
-    
-    return m_filePeerId;
-  }
       
 
   // ---- Internal methods
@@ -308,20 +321,20 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    * Load the set from the file if it exists, else create an empty set
    */
   protected void internalLoad() throws IOException {
-    DataInputStream is = null;
+    DataInputStream dis = null;
     try {
-      if (m_filePeerId.exists()) {
-        is = new DataInputStream(new FileInputStream(m_filePeerId));
-	readData(is);
-	m_changed = false;
+      if (m_streamer.getInputStream() != null) {
+        dis = new DataInputStream(m_streamer.getInputStream());
+        readData(dis);      
       } else {
+        // It hasn't been stored.  Create a new Persistent Peer ID Set.
 	newData();
       } 
     } catch (IOException e) {
-      m_logger.error("Load faild", e);
+      logger.error("Load failed", e);
       m_setPeerId = new HashSet<PeerIdentity>();
     } finally { 
-      IOUtil.safeClose(is); 
+      IOUtil.safeClose(dis); 
     }
   }
 
@@ -351,29 +364,18 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    */
 
   protected void internalStore() throws IOException {
+    DataOutputStream dos = null;
+
     if (!m_changed) {
       return;
     }
-    DataOutputStream dos = null;
-    File filePeerIdTemp =
-      FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
-			      m_filePeerId.getParentFile());
-    try {
-      // Loop until there are no IdentityParseExceptions
-      OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
-      dos = new DataOutputStream(new BufferedOutputStream(fileOs));
-      writeData(dos);
-      dos.close();
 
-      if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
-	m_changed = false;
-      } else {
-        m_logger.error("Unable to rename temporary agreement history file " +
-		       filePeerIdTemp);
-      }
+    try {
+      dos = new DataOutputStream(m_streamer.getOutputStream());          
+      writeData(dos);
+      m_changed = false;  // It has not changed since its last save.  :->
     } finally {
       IOUtil.safeClose(dos);
-      filePeerIdTemp.delete();
     }
   }
 
@@ -389,19 +391,23 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     byte [] TCPKey = null;
     boolean errors = false;
     
+    if (dos == null) {
+      throw new IOException("PersistentPeerIdSetImpl.encode(): cannot write to empty DataOutputStream.");
+    }
+    
     outer:
     do {
       if (m_setPeerId != null) {
         for (PeerIdentity key : m_setPeerId) {
           if (key == null) {
-            m_logger.error("Null key among the peer set.");
+            logger.error("Null key among the peer set.");
             continue;
           }
           
           try {
             TCPKey = IDUtil.encodeTCPKey(key.getIdString());
           } catch (IdentityParseException ex) {
-            m_logger.error("Unable to store identity key: " + key + ".  Identity Parse Exception: " + ex.getMessage());
+            logger.error("Unable to store identity key: " + key + ".  Identity Parse Exception: " + ex.getMessage());
             // Delete the offending, un-storable key
             m_setPeerId.remove(key);
             break outer;
@@ -410,7 +416,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
           if (key != null) {
             dos.write(TCPKey);
           } else {  // key is null
-            m_logger.error("An identity key is null.  Ignoring.");
+            logger.error("An identity key is null.  Ignoring.");
             m_setPeerId.remove(key);
           }
         }      
@@ -444,11 +450,12 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 	} catch (IdentityManager.MalformedIdentityKeyException e) {
 	  throw new IdentityParseException("Bad PeerId: " + id, e);
 	}
+	
         if (pi != null) {
           history.add(pi);
         } else {
           // This error can only happen in tests.  It is not possible when using real identity managers.
-          m_logger.error("Finding error while trying to find argument " + id + " in the identity manager.  Did you include idmgr.addPeerIdentity(...) for this id?");
+          logger.error("Finding error while trying to find argument " + id + " in the identity manager.  Did you include idmgr.addPeerIdentity(...) for this id?");
         }
       }
     } catch (IdentityParseException ex) {
@@ -456,8 +463,9 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       // start of the next key, but there's no guarantee.  All we can
       // do here is log the fact that there was an error, and try
       // again.
-      m_logger.error("Parse error while trying to decode agreement " +
-                   "history file " + m_filePeerId + ": " + ex);
+      logger.error("Parse error while trying to decode agreement " +
+                   "history file" +
+                   ": " + ex);
     }
     return history;
   }

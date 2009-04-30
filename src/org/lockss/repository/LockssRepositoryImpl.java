@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.80 2008-07-23 08:15:23 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.80.12.1 2009-04-30 20:11:02 edwardsb1 Exp $
  */
 
 /*
@@ -70,9 +70,14 @@ public class LockssRepositoryImpl
   private static String staticCacheLocation = null;
 
   // Maps local repository name (disk path) to LocalRepository instance
-  static Map localRepositories = new HashMap();
+  static Map<String, LockssRepositoryManager> localRepositories = 
+    new HashMap<String, LockssRepositoryManager>();
 
   // starts with a '#' so no possibility of clashing with a URL
+  /**
+   * <p>The AU state file name.</p>
+   */
+  public static final String AU_FILE_NAME = "#au_state.xml";
   public static final String AU_ID_FILE = "#au_id_file";
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
@@ -495,7 +500,7 @@ public class LockssRepositoryImpl
    */
   static String getAuDir(String auid, String repoRoot, boolean create) {
     String repoCachePath = extendCacheLocation(repoRoot);
-    LocalRepository localRepo = getLocalRepository(repoRoot);
+    LockssRepositoryManager localRepo = getLocalRepository(repoRoot);
     synchronized (localRepo) {
       Map aumap = localRepo.getAuMap();
       String auPathSlash = (String)aumap.get(auid);
@@ -535,17 +540,18 @@ public class LockssRepositoryImpl
 			       "10000 tries in " + repoCachePath);
   }
 
-  static LocalRepository getLocalRepository(ArchivalUnit au) {
+  static LockssRepositoryManager getLocalRepository(ArchivalUnit au) {
     return getLocalRepository(getRepositoryRoot(au));
   }
 
-  static LocalRepository getLocalRepository(String repoRoot) {
+  static LockssRepositoryManager getLocalRepository(String repoRoot) {
     synchronized (localRepositories) {
-      LocalRepository localRepo =
-	(LocalRepository)localRepositories.get(repoRoot);
+      LockssRepositoryManager localRepo =
+	localRepositories.get(repoRoot);
       if (localRepo == null) {
 	logger.debug2("Creating LocalRepository(" + repoRoot + ")");
-	localRepo = new LocalRepository(repoRoot);
+	// TODO: Determine which type the local repository is.
+	localRepo = new UnixRepositoryManager(repoRoot);
 	localRepositories.put(repoRoot, localRepo);
       }
       return localRepo;
@@ -573,7 +579,41 @@ public class LockssRepositoryImpl
   public static File getAuIdFile(String location) {
     return new File(location + File.separator + AU_ID_FILE);
   }
+  
+  // NOTE: LockssAuRepositoryImpl does NOT pass in a location.
+  
+  public InputStream getAuStateRawContents() 
+      throws IOException {
+    File fileAuState;
+    FileInputStream fisAuState;
+    
+    fileAuState = new File(rootLocation + File.separator + AU_FILE_NAME);
+    
+    fisAuState = new FileInputStream(fileAuState);
+    
+    return fisAuState;
+  }
+  
+  
+  public void setAuStateRawContents(InputStream istrAuState)
+      throws IOException {
+    File fileAuState;
+    File fileTemp;
+    OutputStream osTemp;
+    
+    // We're given an input stream; we don't know whether it's from a 
+    // file or from something more exotic.  Therefore, I need to 
+    // copy the stream to a file.
+    fileTemp = FileUtil.createTempFile("AuStateRaw", null);
+    osTemp = new BufferedOutputStream(new FileOutputStream(fileTemp));
+    StreamUtil.copy(istrAuState, osTemp);
+    
+    // Atomically move the file to the correct location.
+    fileAuState = new File(rootLocation + File.separator + AU_FILE_NAME);
+    PlatformUtil.updateAtomically(fileTemp, fileAuState);
+  }
 
+  
   static Properties getAuIdProperties(String location) {
     File propFile = new File(location + File.separator + AU_ID_FILE);
     try {
@@ -689,66 +729,4 @@ public class LockssRepositoryImpl
       return createNewLockssRepository(au);
     }
   }
-
-  /** Maintains state for a local repository root dir (<i>eg</i>, auid of
-   * each au subdir).  */
-  static class LocalRepository {
-    String repoPath;
-    File repoCacheFile;
-    Map auMap;
-
-    LocalRepository(String repoPath) {
-      this.repoPath = repoPath;
-      repoCacheFile = new File(repoPath, CACHE_ROOT_NAME);
-    }
-
-    public String getRepositoryPath() {
-      return repoPath;
-    }
-
-    /** Return the auid -> au-subdir-path mapping.  Enumerating the
-     * directories if necessary to initialize the map */
-    Map getAuMap() {
-      if (auMap == null) {
-	logger.debug3("Loading name map for '" + repoCacheFile + "'.");
-	auMap = new HashMap();
-	if (!repoCacheFile.exists()) {
-	  logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
-	  if (!repoCacheFile.mkdirs()) {
-	    logger.critical("Couldn't create directory, check owner/permissions: "
-			    + repoCacheFile);
-	    // return empty map
-	    return auMap;
-	  }
-	} else {
-	  // read each dir's property file and store mapping auid -> dir
-	  File[] auDirs = repoCacheFile.listFiles();
-	  for (int ii = 0; ii < auDirs.length; ii++) {
-	    String dirName = auDirs[ii].getName();
-	    //       if (dirName.compareTo(lastPluginDir) == 1) {
-	    //         // adjust the 'lastPluginDir' upwards if necessary
-	    //         lastPluginDir = dirName;
-	    //       }
-
-	    String path = auDirs[ii].getAbsolutePath();
-	    Properties idProps = getAuIdProperties(path);
-	    if (idProps != null) {
-	      String auid = idProps.getProperty(AU_ID_PROP);
-	      StringBuffer sb = new StringBuffer(path.length() +
-						 File.separator.length());
-	      sb.append(path);
-	      sb.append(File.separator);
-	      auMap.put(auid, sb.toString());
-	      logger.debug3("Mapping to: " + auMap.get(auid) + ": " + auid);
-	    } else {
-	      logger.debug3("Not mapping " + path + ", no auid file.");
-	    }
-	  }
-
-	}
-      }
-      return auMap;
-    }
-  }
-
 }

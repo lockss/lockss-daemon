@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.68 2008-10-02 07:42:58 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.68.10.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -581,20 +581,25 @@ public class RemoteApi
 	} catch (FileNotFoundException e) {}
 	zip.closeEntry();
       }
-      File auStateFile = getAuStateFile(au);
+      InputStream auStateStream = getAuStateStream(au);
 
-      if (auStateFile.exists()) {
-	try {
-	  addCfgFileToZip(zip, auStateFile, dir + BACK_FILE_AUSTATE);
+      if (auStateStream != null) {
+        try {
+	  addCfgFileToZip(zip, auStateStream, dir + BACK_FILE_AUSTATE);
 	} catch (FileNotFoundException e) {}
       }
       dirn++;
     }
   }
 
-  File getAuStateFile(ArchivalUnit au) {
-    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    return hRep.getAuStateFile();
+  InputStream getAuStateStream(ArchivalUnit au) {
+    try {
+      LockssRepository lrep = getDaemon().getLockssRepository(au);
+      return lrep.getAuStateRawContents();
+    } catch (IOException e) {
+      log.error("getAuStateStream: ", e);
+      return null;
+    }
   }
 
   void addPropsToZip(ZipOutputStream zip, Properties props,

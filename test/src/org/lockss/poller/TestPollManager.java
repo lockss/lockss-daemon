@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.100 2009-03-05 05:41:58 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.100.4.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -573,7 +573,7 @@ public class TestPollManager extends LockssTestCase {
 
   class MyMockHistoryRepository extends MockHistoryRepository {
     public DatedPeerIdSet getNoAuPeerSet() {
-      return new DatedPeerIdSetImpl(new File("foo.bar"), idmanager);
+      return new DatedPeerIdSetImpl(new StreamerFile(new File("foo.bar")), idmanager);
     }
   }
 
@@ -596,7 +596,7 @@ public class TestPollManager extends LockssTestCase {
     MockAuState maus = new MockAuState();
     nodeMgr.setAuState(maus);
     File file = FileTestUtil.tempFile("noau");
-    DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(file, idmanager);
+    DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(new StreamerFile(file), idmanager);
     assertTrue(noAuSet.isEmpty());
     assertTrue(noAuSet.getDate() < 0);
     pollmanager.ageNoAuSet(mau, noAuSet);

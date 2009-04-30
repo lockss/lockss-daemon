@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.63 2007-08-22 06:47:00 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.63.24.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetLocalRepository() throws Exception {
-    LockssRepositoryImpl.LocalRepository localRepo =
+    LockssRepositoryManager localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
     assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
     assertEquals(tempDirPath, localRepo.getRepositoryPath());
@@ -88,7 +88,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     mau2.setConfiguration(ConfigurationUtil.fromArgs
 			  (PluginManager.AU_PARAM_REPOSITORY,
 			   repoSpec(tempDir2)));
-    LockssRepositoryImpl.LocalRepository localRepo2 =
+    LockssRepositoryManager localRepo2 =
       LockssRepositoryImpl.getLocalRepository(mau2);
     assertNotNull("Failed to create LocalRepository for: " + mau2, localRepo2);
     assertNotSame(localRepo2, localRepo);
@@ -116,9 +116,9 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     String location = getCacheLocation() + "ab";
     LockssRepositoryImpl.saveAuIdProperties(location, newProps);
 
-    LockssRepositoryImpl.LocalRepository localRepo =
+    LockssRepositoryManager localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
-    localRepo.auMap = null;
+    localRepo.resetMap();
     Map aumap = localRepo.getAuMap();
     assertEquals(addSlash(location), aumap.get(mau.getAuId()));
   }
@@ -127,6 +127,22 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     return (s.endsWith(File.separator)) ? s : s + File.separator;
   }
 
+  // Testing the new getAuStateRawContents and setAuStateRawContents
+  public void testAuStateRawContents() throws Exception {
+    File fileTest;
+    InputStream istrTest;
+    InputStream istrResult;
+    
+    fileTest = FileTestUtil.writeTempFile("AuState", "Foobar1");
+    istrTest = new FileInputStream(fileTest);
+    repo.setAuStateRawContents(istrTest);
+   
+    // Reset the file input stream.
+    istrTest = new FileInputStream(fileTest);
+    istrResult = repo.getAuStateRawContents();
+    assertTrue(StreamUtil.compare(istrTest, istrResult));
+  }
+  
   public void testGetRepositoryRoot() throws Exception {
     assertEquals(tempDirPath, LockssRepositoryImpl.getRepositoryRoot(mau));
 
@@ -403,7 +419,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetAuDirFromMap() {
-    LockssRepositoryImpl.LocalRepository localRepo =
+    LockssRepositoryManager localRepo =
       LockssRepositoryImpl.getLocalRepository("/foo");
     Map aumap = localRepo.getAuMap();
     aumap.put(mau.getAuId(), "/foo/bar/testDir");
@@ -412,7 +428,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetAuDirFromMapNoCacheWrongRepo() {
-    LockssRepositoryImpl.LocalRepository localRepo =
+    LockssRepositoryManager localRepo =
       LockssRepositoryImpl.getLocalRepository("/foo");
     Map aumap = localRepo.getAuMap();
     aumap.put(mau.getAuId(), "/foo/bar/testDir");

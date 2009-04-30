@@ -1,5 +1,5 @@
 /*
- * $Id: MockPeerIdentity.java,v 1.6 2008-12-16 00:52:23 edwardsb1 Exp $
+ * $Id: MockPeerIdentity.java,v 1.6.6.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -92,5 +92,6 @@ public class MockPeerIdentity extends PeerIdentity {
   protected String getKey() {
     return keyMock;
   }
+  
   
 }

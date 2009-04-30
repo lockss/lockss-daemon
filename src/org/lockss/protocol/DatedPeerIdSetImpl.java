@@ -6,7 +6,8 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.HashSet;
 
-import org.lockss.util.IOUtil;
+import org.lockss.repository.v2.*;
+import org.lockss.util.*;
 
 /**
  * @author edwardsb
@@ -23,11 +24,11 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
    * @param filePeerId
    * @param identityManager
    */
-  public DatedPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
-    super(filePeerId, identityManager);
-
+  public DatedPeerIdSetImpl(Streamer streamer, IdentityManager identityManager) {
+    super(streamer, identityManager);
     m_date = k_dateDefault;
   }
+  
 
   /** (non-Javadoc)
    * @see org.lockss.protocol.DatedPeerIdSet#getDate()

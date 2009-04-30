@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.87 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.87.4.1 2009-04-30 20:11:03 edwardsb1 Exp $
  */
 
 /*
@@ -216,6 +216,7 @@ public class HistoryRepositoryImpl
     
     if (m_noAuDpis == null) {
       File fileDpis = new File(rootLocation, NO_AU_PEER_ID_SET_FILE_NAME);
+      Streamer strfileDpis = new StreamerFile(fileDpis);
       LockssDaemon ld = getDaemon();
       if (ld != null) {
         idman = ld.getIdentityManager();
@@ -224,7 +225,7 @@ public class HistoryRepositoryImpl
         throw new NullPointerException();
       }
       
-      m_noAuDpis = new DatedPeerIdSetImpl(fileDpis, idman);
+      m_noAuDpis = new DatedPeerIdSetImpl(strfileDpis, idman);
     }
     
     return m_noAuDpis;

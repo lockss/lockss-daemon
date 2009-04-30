@@ -869,7 +869,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     boolean didStore = false;
     public MyPersistentPeerIdSetImpl(File filePeerId,
 				     IdentityManager identityManager) {
-      super(filePeerId, identityManager);
+      super(new StreamerFile(filePeerId), identityManager);
     }
 
     @Override
