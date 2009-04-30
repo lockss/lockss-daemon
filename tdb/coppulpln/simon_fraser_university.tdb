@@ -155,23 +155,74 @@
     {
       
       param[cartoonist] = 1
+      comment[name] = Norris, Len
       
-      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1952 ; 1952 >
-      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1953 ; 1953 >
-      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1983 ; 1983 >
-      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Len Norris 1984 ; 1984 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Norris, Len (1952) ; 1952 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Norris, Len (1953) ; 1953 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Norris, Len (1983) ; 1983 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Norris, Len (1984) ; 1984 >
         
     }
       
     {
       
-      param[cartoonist] = 4
+      param[cartoonist] = 2
+      comment[name] = Harrop, Graham
       
-      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson 2002 ; 2002 >
-      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Roy Peterson 2003 ; 2003 >
+    }
+    
+    {
+      
+      param[cartoonist] = 3
+      comment[name] = Krieger, Bob
+      
+    }
+    
+    {
+      
+      param[cartoonist] = 4
+      comment[name] = Roy Peterson
+      
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Peterson, Roy (2002) ; 2002 >
+      au < released ; Simon Fraser University Library Editorial Cartoons Collection: Peterson, Roy (2003) ; 2003 >
         
     }
       
+    {
+      
+      param[cartoonist] = 5
+      comment[name] = Murphy, Dan
+      
+    }
+    
+    {
+      
+      param[cartoonist] = 6
+      comment[name] = Rice, Ingrid
+      
+    }
+    
+    {
+      
+      param[cartoonist] = 7
+      comment[name] = Bierman, Bob
+      
+    }
+    
+    {
+      
+      param[cartoonist] = 8
+      comment[name] = Uluschak, Edd
+      
+    }
+    
+    {
+      
+      param[cartoonist] = 9
+      comment[name] = Larter, John
+      
+    }
+    
   }
 
 }
