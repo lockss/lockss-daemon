@@ -514,20 +514,20 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.biochemsoctrans.org/
     param[journal_id] = bst
 
-    au < testing ; Biochemical Society Transactions Volume 23 ; 023 >
-    au < testing ; Biochemical Society Transactions Volume 24 ; 024 >
-    au < testing ; Biochemical Society Transactions Volume 25 ; 025 >
-    au < testing ; Biochemical Society Transactions Volume 26 ; 026 >
-    au < testing ; Biochemical Society Transactions Volume 27 ; 027 >
-    au < testing ; Biochemical Society Transactions Volume 28 ; 028 >
-    au < testing ; Biochemical Society Transactions Volume 29 ; 029 >
-    au < testing ; Biochemical Society Transactions Volume 30 ; 030 >
-    au < testing ; Biochemical Society Transactions Volume 31 ; 031 >
-    au < testing ; Biochemical Society Transactions Volume 32 ; 032 >
-    au < testing ; Biochemical Society Transactions Volume 33 ; 033 >
+    au < ready ; Biochemical Society Transactions Volume 23 ; 023 >
+    au < ready ; Biochemical Society Transactions Volume 24 ; 024 >
+    au < ready ; Biochemical Society Transactions Volume 25 ; 025 >
+    au < ready ; Biochemical Society Transactions Volume 26 ; 026 >
+    au < ready ; Biochemical Society Transactions Volume 27 ; 027 >
+    au < ready ; Biochemical Society Transactions Volume 28 ; 028 >
+    au < ready ; Biochemical Society Transactions Volume 29 ; 029 >
+    au < not_ready ; Biochemical Society Transactions Volume 30 ; 030 >
+    au < not_ready ; Biochemical Society Transactions Volume 31 ; 031 >
+    au < ready ; Biochemical Society Transactions Volume 32 ; 032 >
+    au < ready ; Biochemical Society Transactions Volume 33 ; 033 >
     au < testing ; Biochemical Society Transactions Volume 34 ; 034 >
-    au < testing ; Biochemical Society Transactions Volume 35 ; 035 >
-    au < testing ; Biochemical Society Transactions Volume 36 ; 036 >
+    au < not_ready ; Biochemical Society Transactions Volume 35 ; 035 >
+    au < ready ; Biochemical Society Transactions Volume 36 ; 036 >
     au < testing ; Biochemical Society Transactions Volume 37 ; 037 >
     
   }
@@ -540,25 +540,25 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.bioscirep.org/
     param[journal_id] = bsr
 
-    au < testing ; Bioscience Reports Volume 1 ; 001 >
-    au < testing ; Bioscience Reports Volume 2 ; 002 >
-    au < testing ; Bioscience Reports Volume 3 ; 003 >
-    au < testing ; Bioscience Reports Volume 4 ; 004 >
-    au < testing ; Bioscience Reports Volume 5 ; 005 >
-    au < testing ; Bioscience Reports Volume 6 ; 006 >
-    au < testing ; Bioscience Reports Volume 7 ; 007 >
-    au < testing ; Bioscience Reports Volume 8 ; 008 >
-    au < testing ; Bioscience Reports Volume 9 ; 009 >
-    au < manifest ; Bioscience Reports Volume 10 ; 010 >
-    au < manifest ; Bioscience Reports Volume 11 ; 011 >
-    au < manifest ; Bioscience Reports Volume 12 ; 012 >
-    au < manifest ; Bioscience Reports Volume 13 ; 013 >
-    au < manifest ; Bioscience Reports Volume 14 ; 014 >
-    au < manifest ; Bioscience Reports Volume 15 ; 015 >
-    au < manifest ; Bioscience Reports Volume 16 ; 016 >
-    au < manifest ; Bioscience Reports Volume 17 ; 017 >
-    au < manifest ; Bioscience Reports Volume 18 ; 018 >
-    au < manifest ; Bioscience Reports Volume 19 ; 019 >
+    au < not_ready ; Bioscience Reports Volume 1 ; 001 >
+    au < ready ; Bioscience Reports Volume 2 ; 002 >
+    au < ready ; Bioscience Reports Volume 3 ; 003 >
+    au < ready ; Bioscience Reports Volume 4 ; 004 >
+    au < ready ; Bioscience Reports Volume 5 ; 005 >
+    au < not_ready ; Bioscience Reports Volume 6 ; 006 >
+    au < not_ready ; Bioscience Reports Volume 7 ; 007 >
+    au < ready ; Bioscience Reports Volume 8 ; 008 >
+    au < not_ready  ; Bioscience Reports Volume 9 ; 009 >
+    au < testing ; Bioscience Reports Volume 10 ; 010 >
+    au < testing ; Bioscience Reports Volume 11 ; 011 >
+    au < testing ; Bioscience Reports Volume 12 ; 012 >
+    au < testing ; Bioscience Reports Volume 13 ; 013 >
+    au < testing ; Bioscience Reports Volume 14 ; 014 >
+    au < testing ; Bioscience Reports Volume 15 ; 015 >
+    au < testing ; Bioscience Reports Volume 16 ; 016 >
+    au < testing ; Bioscience Reports Volume 17 ; 017 >
+    au < testing ; Bioscience Reports Volume 18 ; 018 >
+    au < testing ; Bioscience Reports Volume 19 ; 019 >
     au < manifest ; Bioscience Reports Volume 20 ; 020 >
     au < manifest ; Bioscience Reports Volume 21 ; 021 >
     au < manifest ; Bioscience Reports Volume 22 ; 022 >
