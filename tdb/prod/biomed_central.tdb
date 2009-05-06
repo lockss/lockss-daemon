@@ -1711,13 +1711,13 @@
       param[base_url] = http://www.ehjournal.net/
       param[journal_issn] = 1476-069X
 
-      au < ready ; Environmental Health Volume 1 ; 1 >
-      au < ready ; Environmental Health Volume 2 ; 2 >
-      au < ready ; Environmental Health Volume 3 ; 3 >
-      au < ready ; Environmental Health Volume 4 ; 4 >
-      au < ready ; Environmental Health Volume 5 ; 5 >
-      au < ready ; Environmental Health Volume 6 ; 6 >
-      au < ready ; Environmental Health Volume 7 ; 7 >
+      au < releasing ; Environmental Health Volume 1 ; 1 >
+      au < releasing ; Environmental Health Volume 2 ; 2 >
+      au < releasing ; Environmental Health Volume 3 ; 3 >
+      au < releasing ; Environmental Health Volume 4 ; 4 >
+      au < releasing ; Environmental Health Volume 5 ; 5 >
+      au < releasing ; Environmental Health Volume 6 ; 6 >
+      au < releasing ; Environmental Health Volume 7 ; 7 >
     }
 
 
@@ -1731,11 +1731,11 @@
       param[base_url] = http://www.epi-perspectives.com/
       param[journal_issn] = 1742-5573
 
-      au < ready ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
-      au < ready ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
-      au < ready ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
-      au < ready ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
-      au < ready ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
+      au < releasing ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
+      au < releasing ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
+      au < releasing ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
+      au < releasing ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
+      au < releasing ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
     }
 
 
@@ -1749,11 +1749,11 @@
       param[base_url] = http://www.frontiersinzoology.com/
       param[journal_issn] = 1742-9994
 
-      au < ready ; Frontiers in Zoology Volume 1 ; 1 >
-      au < ready ; Frontiers in Zoology Volume 2 ; 2 >
-      au < ready ; Frontiers in Zoology Volume 3 ; 3 >
-      au < ready ; Frontiers in Zoology Volume 4 ; 4 >
-      au < ready ; Frontiers in Zoology Volume 5 ; 5 >
+      au < releasing ; Frontiers in Zoology Volume 1 ; 1 >
+      au < releasing ; Frontiers in Zoology Volume 2 ; 2 >
+      au < releasing ; Frontiers in Zoology Volume 3 ; 3 >
+      au < releasing ; Frontiers in Zoology Volume 4 ; 4 >
+      au < releasing ; Frontiers in Zoology Volume 5 ; 5 >
     }
 
 
@@ -1767,12 +1767,12 @@
       param[base_url] = http://www.gvt-journal.com/
       param[journal_issn] = 1479-0556
 
-      au < ready ; Genetic Vaccines and Therapy Volume 1 ; 1 >
-      au < ready ; Genetic Vaccines and Therapy Volume 2 ; 2 >
-      au < ready ; Genetic Vaccines and Therapy Volume 3 ; 3 >
-      au < ready ; Genetic Vaccines and Therapy Volume 4 ; 4 >
-      au < ready ; Genetic Vaccines and Therapy Volume 5 ; 5 >
-      au < ready ; Genetic Vaccines and Therapy Volume 6 ; 6 >
+      au < releasing ; Genetic Vaccines and Therapy Volume 1 ; 1 >
+      au < releasing ; Genetic Vaccines and Therapy Volume 2 ; 2 >
+      au < releasing ; Genetic Vaccines and Therapy Volume 3 ; 3 >
+      au < releasing ; Genetic Vaccines and Therapy Volume 4 ; 4 >
+      au < releasing ; Genetic Vaccines and Therapy Volume 5 ; 5 >
+      au < releasing ; Genetic Vaccines and Therapy Volume 6 ; 6 >
     }
 
 
@@ -1786,15 +1786,15 @@
       param[base_url] = http://genomebiology.com/
       param[journal_issn] = 1465-6906
 
-      au < ready ; Genome Biology Volume 1 ; 1 >
-      au < ready ; Genome Biology Volume 2 ; 2 >
-      au < ready ; Genome Biology Volume 3 ; 3 >
-      au < ready ; Genome Biology Volume 4 ; 4 >
-      au < ready ; Genome Biology Volume 5 ; 5 >
-      au < ready ; Genome Biology Volume 6 ; 6 >
-      au < ready ; Genome Biology Volume 7 ; 7 >
-      au < ready ; Genome Biology Volume 8 ; 8 >
-      au < ready ; Genome Biology Volume 9 ; 9 >
+      au < releasing ; Genome Biology Volume 1 ; 1 >
+      au < releasing ; Genome Biology Volume 2 ; 2 >
+      au < releasing ; Genome Biology Volume 3 ; 3 >
+      au < releasing ; Genome Biology Volume 4 ; 4 >
+      au < releasing ; Genome Biology Volume 5 ; 5 >
+      au < releasing ; Genome Biology Volume 6 ; 6 >
+      au < releasing ; Genome Biology Volume 7 ; 7 >
+      au < releasing ; Genome Biology Volume 8 ; 8 >
+      au < releasing ; Genome Biology Volume 9 ; 9 >
     }
 
 
@@ -1808,15 +1808,15 @@
       param[base_url] = http://www.geochemicaltransactions.com/
       param[journal_issn] = 1467-4866
 
-      au < ready ; Geochemical Transactions Volume 1 ; 1 >
-      au < ready ; Geochemical Transactions Volume 2 ; 2 >
-      au < ready ; Geochemical Transactions Volume 3 ; 3 >
-      au < ready ; Geochemical Transactions Volume 4 ; 4 >
-      au < ready ; Geochemical Transactions Volume 5 ; 5 >
-      au < ready ; Geochemical Transactions Volume 6 ; 6 >
-      au < ready ; Geochemical Transactions Volume 7 ; 7 >
-      au < ready ; Geochemical Transactions Volume 8 ; 8 >
-      au < ready ; Geochemical Transactions Volume 9 ; 9 >
+      au < releasing ; Geochemical Transactions Volume 1 ; 1 >
+      au < releasing ; Geochemical Transactions Volume 2 ; 2 >
+      au < releasing ; Geochemical Transactions Volume 3 ; 3 >
+      au < releasing ; Geochemical Transactions Volume 4 ; 4 >
+      au < releasing ; Geochemical Transactions Volume 5 ; 5 >
+      au < releasing ; Geochemical Transactions Volume 6 ; 6 >
+      au < releasing ; Geochemical Transactions Volume 7 ; 7 >
+      au < releasing ; Geochemical Transactions Volume 8 ; 8 >
+      au < releasing ; Geochemical Transactions Volume 9 ; 9 >
     }
 
 
@@ -1830,10 +1830,10 @@
       param[base_url] = http://www.globalizationandhealth.com/
       param[journal_issn] = 1744-8603
 
-      au < ready ; Globalization and Health Volume 1 ; 1 >
-      au < ready ; Globalization and Health Volume 2 ; 2 >
-      au < ready ; Globalization and Health Volume 3 ; 3 >
-      au < ready ; Globalization and Health Volume 4 ; 4 >
+      au < releasing ; Globalization and Health Volume 1 ; 1 >
+      au < releasing ; Globalization and Health Volume 2 ; 2 >
+      au < releasing ; Globalization and Health Volume 3 ; 3 >
+      au < releasing ; Globalization and Health Volume 4 ; 4 >
     }
 
 
@@ -1847,11 +1847,11 @@
       param[base_url] = http://www.harmreductionjournal.com/
       param[journal_issn] = 1477-7517
 
-      au < ready ; Harm Reduction Journal Volume 1 ; 1 >
-      au < ready ; Harm Reduction Journal Volume 2 ; 2 >
-      au < ready ; Harm Reduction Journal Volume 3 ; 3 >
-      au < ready ; Harm Reduction Journal Volume 4 ; 4 >
-      au < ready ; Harm Reduction Journal Volume 5 ; 5 >
+      au < releasing ; Harm Reduction Journal Volume 1 ; 1 >
+      au < releasing ; Harm Reduction Journal Volume 2 ; 2 >
+      au < releasing ; Harm Reduction Journal Volume 3 ; 3 >
+      au < releasing ; Harm Reduction Journal Volume 4 ; 4 >
+      au < releasing ; Harm Reduction Journal Volume 5 ; 5 >
     }
 
 
