@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.39 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: AuState.java,v 1.40 2009-05-06 16:36:36 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
 import org.lockss.poller.v3.*;
 import org.lockss.repository.*;
-import org.lockss.repository.jcr.*;
 
 /**
  * AuState contains the state information for an au.

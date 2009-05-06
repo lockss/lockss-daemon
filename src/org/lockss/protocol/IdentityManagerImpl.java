@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.36 2009-04-07 04:52:57 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.37 2009-05-06 16:36:36 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.poller.*;
 import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 import org.lockss.repository.*;
-import org.lockss.repository.jcr.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.util.*;
 import org.lockss.util.SerializationException.FileNotFound;

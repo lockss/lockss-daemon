@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.19 2008-12-16 00:52:23 edwardsb1 Exp $
+ * $Id: HistoryRepository.java,v 1.20 2009-05-06 16:36:36 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.List;
 import org.lockss.plugin.*;
 import org.lockss.protocol.DatedPeerIdSet;
 import org.lockss.repository.*;
-import org.lockss.repository.jcr.*;
 import org.lockss.app.LockssAuManager;
 
 /**
