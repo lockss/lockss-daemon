@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm2.java,v 1.6 2009-05-11 22:48:42 dshr Exp $
+ * $Id: TestBlockingSslStreamComm2.java,v 1.7 2009-05-11 23:33:24 dshr Exp $
  */
 
 /*
@@ -287,6 +287,52 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
 	return false;
       }
       log.debug3("chain[0]: " + chain[0].toString());
+      log.debug("About to create a CertAndKeyGen: " + keyAlgName +
+		" " + sigAlgName);
+      CertAndKeyGen keypair2;
+      try {
+        keypair2 = new CertAndKeyGen(keyAlgName, sigAlgName);
+      } catch (NoSuchAlgorithmException e) {
+	log.error("new CertAndKeyGen(" + keyAlgName + "," +
+		  sigAlgName + ") threw " + e);
+	return false;
+      }
+      // Generate a key pair
+      log.debug("About to generate a key pair");
+      try {
+        keypair2.generate(1024);
+      } catch (InvalidKeyException e) {
+	log.error("keypair2.generate(1024) threw " + e);
+	return false;
+      }
+      log.debug("About to get a self-signed certificate");
+      X509Certificate[] chain2 = new X509Certificate[1];
+      try {
+	String certName =
+	    "CN=Test Key, OU=Other Team, O=Stanford, L=Stanford, " +
+	    "S=California, C=US";
+        X500Name x500Name = new X500Name(certName);
+        chain2[0] = keypair2.getSelfCertificate(x500Name, 365*24*60*60);
+      } catch (IOException e) {
+	log.error("new X500Name() threw " + e);
+	return false;
+      } catch (CertificateException e) {
+	log.error("keypair2.getSelfCertificate() threw " + e);
+	return false;
+      } catch (InvalidKeyException e) {
+	log.error("keypair2.getSelfCertificate() threw " + e);
+	return false;
+      } catch (SignatureException e) {
+	log.error("keypair2.getSelfCertificate() threw " + e);
+	return false;
+      } catch (NoSuchAlgorithmException e) {
+	log.error("keypair2.getSelfCertificate() threw " + e);
+	return false;
+      } catch (NoSuchProviderException e) {
+	log.error("keypair2.getSelfCertificate() threw " + e);
+	return false;
+      }
+      log.debug3("chain2[0]: " + chain2[0].toString());
       // Create the key store
       KeyStore keyStore = null;
       try {
@@ -318,6 +364,15 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
         keyStore.setCertificateEntry(certAlias, chain[0]);
       } catch (KeyStoreException e) {
 	log.error("keyStore.setCertificateEntry() threw " + e);
+	return false;
+      }
+      //  Store the other certificate
+      String certAlias2 = "otherhost.crt";
+      log.debug("About to store " + certAlias2 + " in key store");
+      try {
+        keyStore.setCertificateEntry(certAlias2, chain2[0]);
+      } catch (KeyStoreException e) {
+	log.error("keyStore.setCertificateEntry() other threw " + e);
 	return false;
       }
       //  Store the private key
