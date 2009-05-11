@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm2.java,v 1.5 2009-02-05 05:09:33 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm2.java,v 1.6 2009-05-11 22:48:42 dshr Exp $
  */
 
 /*
@@ -77,7 +77,8 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
   TestBlockingSslStreamComm2(String name) {
     super(name);
     try {
-      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+      File tempDirFile = getTempDir("TestBlockingSslStreamComm2");
+      tempDirPath = tempDirFile.getAbsolutePath() + File.separator;
     } catch (IOException e) {
       // do nothing
     }
@@ -217,7 +218,9 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
   	  fos.close();
   	  log.debug("Done storing private key password in " +
   		    privateKeyPassWordFileName);
-        }
+        } else {
+	  log.debug(privateKeyPassWordFileName + " exists");
+	}
       } catch (Exception e) {
 	log.error(privateKeyPassWordFileName + " threw " + e);
 	return false;
@@ -227,7 +230,8 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
       keyStoreFile = new File(keyStoreFileName);
       keyStoreFile.deleteOnExit();
       if (keyStoreFile.exists()) {
-        return true;
+	log.debug(keyStoreFileName + " exists");
+	return true;
       }
       // Create a CertAndKeyGen instance
       String keyAlgName = "RSA";
@@ -357,6 +361,8 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
   	  fos.close();
   	  log.debug("Done storing private key password in " +
   		    badPrivateKeyPassWordFileName);
+	} else {
+	  log.debug(badPrivateKeyPassWordFileName + " exists");
 	}
       } catch (IOException e) {
         log.error(badPrivateKeyPassWordFileName + " threw " + e);
@@ -367,6 +373,7 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
       badKeyStoreFile = new File(badKeyStoreFileName);
       badKeyStoreFile.deleteOnExit();
       if (badKeyStoreFile.exists()) {
+	log.debug(badKeyStoreFileName + " exists");
 	return true;
       }
       // Create a CertAndKeyGen instance

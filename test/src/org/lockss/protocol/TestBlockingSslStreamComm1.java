@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.5 2009-02-05 05:09:33 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.6 2009-05-11 22:48:42 dshr Exp $
  */
 
 /*
@@ -112,18 +112,17 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     //  to describe the KeyStore to be used for SSL,  creating
     //  the KeyStore if necessary.
     private void setupKeyStore(Properties p) {
-      String keyStoreFile = p.getProperty(PREFIX, null);
-      if (keyStoreFile != null) {
-        log.debug("Using KeyStore from p: " + keyStoreFile);
+      String keyStoreFileName = null;
+      try {
+	File keyStoreFile =
+	    getTempDir("TestBlockingSslStreamComm1");
+	keyStoreFileName = keyStoreFile.getAbsolutePath() + "keystore";
+      } catch (IOException e) {
+	log.error("Can't create temp dir " + e);
 	return;
       }
-      log.debug("No " + PREFIX + " in p");
-      keyStoreFile = System.getProperty(PREFIX, null);
-      if (keyStoreFile != null) {
-        log.debug("Using KeyStore from system: " + keyStoreFile);
-	return;
-      }
-      //  No KeyStore - make one.
+      log.debug("Using test KeyStore in: " + keyStoreFileName);
+      //  Make a KeyStore
       KeyStore ks = null;
       //  Will probably not work if JCEKS is not available
       String keyStoreType[] = { "JCEKS", "JKS" };
@@ -149,20 +148,18 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 	log.error("No key store available");
 	return;  // will fail subsequently
       }
-      //  XXX should not be in /tmp
-      keyStoreFile="/tmp/keystore";
       //  XXX generate random password
       String keyStorePassword = "A Very Bad Password";
-      p.setProperty(PREFIX, keyStoreFile);
+      p.setProperty(PREFIX, keyStoreFileName);
       p.setProperty(PREFIX + "Password", keyStorePassword);
       p.setProperty(PREFIX + "Type", ks.getType());
-      p.setProperty(PREFIX2, keyStoreFile);
+      p.setProperty(PREFIX2, keyStoreFileName);
       p.setProperty(PREFIX2 + "Password", keyStorePassword);
       p.setProperty(PREFIX2 + "Type", ks.getType());
-      System.setProperty(PREFIX, keyStoreFile);
+      System.setProperty(PREFIX, keyStoreFileName);
       System.setProperty(PREFIX + "Password", keyStorePassword);
       System.setProperty(PREFIX + "Type", ks.getType());
-      System.setProperty(PREFIX2, keyStoreFile);
+      System.setProperty(PREFIX2, keyStoreFileName);
       System.setProperty(PREFIX2 + "Password", keyStorePassword);
       System.setProperty(PREFIX2 + "Type", ks.getType());
       initializeKeyStore(ks, p);
