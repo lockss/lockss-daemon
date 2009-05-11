@@ -621,10 +621,10 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < not_ready ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 48 ; 048 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 49 ; 049 >
-    au < testing ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
-    au < testing ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
-    au < testing ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
-    au < testing ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
+    au < not_ready ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
+    au < not_ready ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
     
   }
 
@@ -636,40 +636,40 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.clinsci.org/
     param[journal_id] = cs
 
-    au < testing ; Clinical Science Volume 56 ; 056 >
-    au < testing ; Clinical Science Volume 57 ; 057 >
-    au < testing ; Clinical Science Volume 58 ; 058 >
-    au < testing ; Clinical Science Volume 59 ; 059 >
-    au < testing ; Clinical Science Volume 60 ; 060 >
-    au < testing ; Clinical Science Volume 61 ; 061 >
-    au < testing ; Clinical Science Volume 62 ; 062 >
-    au < testing ; Clinical Science Volume 63 ; 063 >
-    au < testing ; Clinical Science Volume 64 ; 064 >
-    au < testing ; Clinical Science Volume 65 ; 065 >
-    au < testing ; Clinical Science Volume 66 ; 066 >
-    au < testing ; Clinical Science Volume 67 ; 067 >
-    au < testing ; Clinical Science Volume 68 ; 068 >
-    au < testing ; Clinical Science Volume 69 ; 069 >
-    au < manifest ; Clinical Science Volume 70 ; 070 >
-    au < manifest ; Clinical Science Volume 71 ; 071 >
-    au < manifest ; Clinical Science Volume 72 ; 072 >
-    au < manifest ; Clinical Science Volume 73 ; 073 >
-    au < manifest ; Clinical Science Volume 74 ; 074 >
-    au < manifest ; Clinical Science Volume 75 ; 075 >
-    au < manifest ; Clinical Science Volume 76 ; 076 >
-    au < manifest ; Clinical Science Volume 77 ; 077 >
-    au < manifest ; Clinical Science Volume 78 ; 078 >
-    au < manifest ; Clinical Science Volume 79 ; 079 >
-    au < manifest ; Clinical Science Volume 80 ; 080 >
-    au < manifest ; Clinical Science Volume 81 ; 081 >
-    au < manifest ; Clinical Science Volume 82 ; 082 >
-    au < manifest ; Clinical Science Volume 83 ; 083 >
-    au < manifest ; Clinical Science Volume 84 ; 084 >
-    au < manifest ; Clinical Science Volume 85 ; 085 >
-    au < manifest ; Clinical Science Volume 86 ; 086 >
-    au < manifest ; Clinical Science Volume 87 ; 087 >
-    au < manifest ; Clinical Science Volume 88 ; 088 >
-    au < manifest ; Clinical Science Volume 89 ; 089 >
+    au < ready ; Clinical Science Volume 56 ; 056 >
+    au < ready ; Clinical Science Volume 57 ; 057 >
+    au < ready ; Clinical Science Volume 58 ; 058 >
+    au < ready ; Clinical Science Volume 59 ; 059 >
+    au < ready ; Clinical Science Volume 60 ; 060 >
+    au < ready ; Clinical Science Volume 61 ; 061 >
+    au < ready ; Clinical Science Volume 62 ; 062 >
+    au < ready ; Clinical Science Volume 63 ; 063 >
+    au < ready ; Clinical Science Volume 64 ; 064 >
+    au < ready ; Clinical Science Volume 65 ; 065 >
+    au < ready ; Clinical Science Volume 66 ; 066 >
+    au < ready ; Clinical Science Volume 67 ; 067 >
+    au < ready ; Clinical Science Volume 68 ; 068 >
+    au < ready ; Clinical Science Volume 69 ; 069 >
+    au < testing ; Clinical Science Volume 70 ; 070 >
+    au < testing ; Clinical Science Volume 71 ; 071 >
+    au < testing ; Clinical Science Volume 72 ; 072 >
+    au < testing ; Clinical Science Volume 73 ; 073 >
+    au < testing ; Clinical Science Volume 74 ; 074 >
+    au < testing ; Clinical Science Volume 75 ; 075 >
+    au < testing ; Clinical Science Volume 76 ; 076 >
+    au < testing ; Clinical Science Volume 77 ; 077 >
+    au < testing ; Clinical Science Volume 78 ; 078 >
+    au < testing ; Clinical Science Volume 79 ; 079 >
+    au < testing ; Clinical Science Volume 80 ; 080 >
+    au < testing ; Clinical Science Volume 81 ; 081 >
+    au < testing ; Clinical Science Volume 82 ; 082 >
+    au < testing ; Clinical Science Volume 83 ; 083 >
+    au < testing ; Clinical Science Volume 84 ; 084 >
+    au < testing ; Clinical Science Volume 85 ; 085 >
+    au < testing ; Clinical Science Volume 86 ; 086 >
+    au < testing ; Clinical Science Volume 87 ; 087 >
+    au < testing ; Clinical Science Volume 88 ; 088 >
+    au < testing ; Clinical Science Volume 89 ; 089 >
     au < manifest ; Clinical Science Volume 90 ; 090 >
     au < manifest ; Clinical Science Volume 91 ; 091 >
     au < manifest ; Clinical Science Volume 92 ; 092 >
