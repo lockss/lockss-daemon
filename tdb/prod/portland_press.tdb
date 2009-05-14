@@ -680,22 +680,22 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < ready ; Clinical Science Volume 97 ; 097 >
     au < ready ; Clinical Science Volume 98 ; 098 >
     au < ready ; Clinical Science Volume 99 ; 099 >
-    au < testing ; Clinical Science Volume 100 ; 100 >
-    au < testing ; Clinical Science Volume 101 ; 101 >
-    au < testing ; Clinical Science Volume 102 ; 102 >
+    au < ready ; Clinical Science Volume 100 ; 100 >
+    au < ready ; Clinical Science Volume 101 ; 101 >
+    au < ready ; Clinical Science Volume 102 ; 102 >
     au < not_ready ; Clinical Science Volume 103 ; 103 >
     au < not_ready ; Clinical Science Volume 104 ; 104 >
     au < not_ready ; Clinical Science Volume 105 ; 105 >
     au < not_ready ; Clinical Science Volume 106 ; 106 >
     au < not_ready ; Clinical Science Volume 107 ; 107 >
-    au < testing ; Clinical Science Volume 108 ; 108 >
-    au < testing ; Clinical Science Volume 109 ; 109 >
-    au < manifest ; Clinical Science Volume 110 ; 110 >
-    au < manifest ; Clinical Science Volume 111 ; 111 >
-    au < manifest ; Clinical Science Volume 112 ; 112 >
-    au < manifest ; Clinical Science Volume 113 ; 113 >
-    au < manifest ; Clinical Science Volume 114 ; 114 >
-    au < manifest ; Clinical Science Volume 115 ; 115 >
+    au < ready ; Clinical Science Volume 108 ; 108 >
+    au < ready ; Clinical Science Volume 109 ; 109 >
+    au < testing ; Clinical Science Volume 110 ; 110 >
+    au < testing ; Clinical Science Volume 111 ; 111 >
+    au < testing ; Clinical Science Volume 112 ; 112 >
+    au < testing ; Clinical Science Volume 113 ; 113 >
+    au < testing ; Clinical Science Volume 114 ; 114 >
+    au < testing ; Clinical Science Volume 115 ; 115 >
         
   }
   
@@ -707,18 +707,18 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://essays.biochemistry.org/
     param[journal_id] = bsessays
 
-    au < manifest ; Essays in Biochemistry Volume 33 ; 033 >  
-    au < manifest ; Essays in Biochemistry Volume 34 ; 034 >  
-    au < manifest ; Essays in Biochemistry Volume 35 ; 035 > 
-    au < manifest ; Essays in Biochemistry Volume 36 ; 036 >  
-    au < manifest ; Essays in Biochemistry Volume 37 ; 037 >  
-    au < manifest ; Essays in Biochemistry Volume 38 ; 038 >  
-    au < manifest ; Essays in Biochemistry Volume 39 ; 039 >  
-    au < manifest ; Essays in Biochemistry Volume 40 ; 040 >  
-    au < manifest ; Essays in Biochemistry Volume 41 ; 041 >  
-    au < manifest ; Essays in Biochemistry Volume 42 ; 042 >  
-    au < manifest ; Essays in Biochemistry Volume 43 ; 043 >  
-    au < manifest ; Essays in Biochemistry Volume 44 ; 044 >  
+    au < testing ; Essays in Biochemistry Volume 33 ; 033 >  
+    au < testing ; Essays in Biochemistry Volume 34 ; 034 >  
+    au < testing ; Essays in Biochemistry Volume 35 ; 035 > 
+    au < testing ; Essays in Biochemistry Volume 36 ; 036 >  
+    au < testing ; Essays in Biochemistry Volume 37 ; 037 >  
+    au < testing ; Essays in Biochemistry Volume 38 ; 038 >  
+    au < testing ; Essays in Biochemistry Volume 39 ; 039 >  
+    au < testing ; Essays in Biochemistry Volume 40 ; 040 >  
+    au < testing ; Essays in Biochemistry Volume 41 ; 041 >  
+    au < testing ; Essays in Biochemistry Volume 42 ; 042 >  
+    au < testing ; Essays in Biochemistry Volume 43 ; 043 >  
+    au < testing ; Essays in Biochemistry Volume 44 ; 044 >  
 
   }
   

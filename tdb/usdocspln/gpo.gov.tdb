@@ -280,11 +280,11 @@
 
     au < ready ; Congressional Rules Cannon's Precedents ; cannon >
     au < ready ; Congressional Rules Deschler's Precedents ; deschler >
-    au < testing ; Congressional Rules Hinds' Precedents ; hinds >
-    au < testing ; Congressional Rules House Manual ; manual >
-    au < testing ; Congressional Rules House Practice Guide ; practice >
-    au < testing ; Congressional Rules Riddick's Senate Procedure ; riddick >
-    au < testing ; Congressional Rules Senate Manual ; sen_manual >
+    au < ready ; Congressional Rules Hinds' Precedents ; hinds >
+    au < ready ; Congressional Rules House Manual ; manual >
+    au < ready ; Congressional Rules House Practice Guide ; practice >
+    au < ready ; Congressional Rules Riddick's Senate Procedure ; riddick >
+    au < ready ; Congressional Rules Senate Manual ; sen_manual >
   
   }
   
