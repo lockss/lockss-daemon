@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.8 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdbxml.py,v 1.9 2009-05-15 22:47:28 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -140,8 +140,8 @@ def _process_au(au, options):
             i = i + 1
     if au.status() == AU.STATUS_DOWN:
         _do_param(au, 99, 'pub_down', value='true')
-    for attr in au.attrs():
-        _do_attr(au, attr)
+    for attrtup in au.attrs():
+        _do_attr(au, attrtup[0])
     if au.status() == AU.STATUS_PRE_RELEASED:
         _do_attr(au, 'releaseStatus', 'pre-release')
     if au.rights() == 'openaccess':

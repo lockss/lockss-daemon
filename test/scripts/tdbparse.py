@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.13 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdbparse.py,v 1.14 2009-05-15 22:47:28 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -156,7 +156,7 @@ class TdbScanner(object):
             self.__options['_expect_string'] = TOKEN_EQUAL
             return self.__single(TOKEN_EQUAL)
         # Identifiers
-        match = re.match(r'\w+', self.__line)
+        match = re.match(r'[a-zA-Z0-9_./]+', self.__line)
         if match:
             self.__value = match.group()
             self.__advance(match.end())
