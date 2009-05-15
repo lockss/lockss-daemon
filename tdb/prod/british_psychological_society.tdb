@@ -8,7 +8,7 @@
   param[api_url] = http://api.ingentaconnect.com/    
   param[graphics_url] = http://graphics.ingentaconnect.com/    
   param[publisher_id] = bpsoc
-  implicit < status ; name ; param[volue_name] >
+  implicit < status ; name ; param[volume_name] >
 
   {
     title <
