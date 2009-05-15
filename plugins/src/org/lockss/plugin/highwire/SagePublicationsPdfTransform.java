@@ -1,5 +1,5 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.3 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.4 2009-05-15 23:46:17 thib_gc Exp $
  */
 
 /*
@@ -147,8 +147,10 @@ public class SagePublicationsPdfTransform
                                                 new TransformFirstPage(// ...is removed,
                                                                        new RemovePage()),
                                                 // ...and on all the pages now that the first is gone...
-                                                new TransformEachPage(// ...collapse "Downloaded from"
-                                                                      new CollapseDownloadedFrom(au))
+                                                new TransformEachPage(// ...collapse "Downloaded from",
+                                                                      new CollapseDownloadedFrom(au)),
+                                                // ...and the modification date is removed
+                                                new HighWirePdfFilterFactory.RemoveModificationDate(),
                                               });
     }
 
