@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = University of Saskatchewan
+  >
+
+    plugin = ca.usask.etd.UniversityOfSaskatchewanETDPlugin
+    param[base_url] = http://library2.usask.ca/
+    implicit < status ; name ; param[year] > 
+    
+  {
+  
+    title <
+      name = Electronic Theses & Dissertations
+    >
+
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2003 >
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2004 >
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2005 >
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2006 >
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2007 >
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2008 >
+    au < manifest ; Electronic Theses & Dissertations 2003 ; 2009 >
+    
+  }
+  
+}
