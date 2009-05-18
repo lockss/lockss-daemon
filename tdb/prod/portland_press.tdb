@@ -577,6 +577,8 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
       name = Biotechnology and Applied Biochemistry
     >
 
+comment[bab] = not_ready because of 500 errors
+
     param[base_url] = http://www.babonline.org/
     param[journal_id] = bab
 
@@ -632,6 +634,8 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     title <
       name = Clinical Science
     >
+
+comment[cs103-107] = 500 errors
 
     param[base_url] = http://www.clinsci.org/
     param[journal_id] = cs
@@ -690,12 +694,12 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < not_ready ; Clinical Science Volume 107 ; 107 >
     au < ready ; Clinical Science Volume 108 ; 108 >
     au < ready ; Clinical Science Volume 109 ; 109 >
-    au < testing ; Clinical Science Volume 110 ; 110 >
-    au < testing ; Clinical Science Volume 111 ; 111 >
-    au < testing ; Clinical Science Volume 112 ; 112 >
-    au < testing ; Clinical Science Volume 113 ; 113 >
-    au < testing ; Clinical Science Volume 114 ; 114 >
-    au < testing ; Clinical Science Volume 115 ; 115 >
+    au < ready ; Clinical Science Volume 110 ; 110 >
+    au < ready ; Clinical Science Volume 111 ; 111 >
+    au < ready ; Clinical Science Volume 112 ; 112 >
+    au < ready ; Clinical Science Volume 113 ; 113 >
+    au < ready ; Clinical Science Volume 114 ; 114 >
+    au < ready ; Clinical Science Volume 115 ; 115 >
         
   }
   
@@ -707,18 +711,18 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://essays.biochemistry.org/
     param[journal_id] = bsessays
 
-    au < testing ; Essays in Biochemistry Volume 33 ; 033 >  
-    au < testing ; Essays in Biochemistry Volume 34 ; 034 >  
-    au < testing ; Essays in Biochemistry Volume 35 ; 035 > 
-    au < testing ; Essays in Biochemistry Volume 36 ; 036 >  
-    au < testing ; Essays in Biochemistry Volume 37 ; 037 >  
-    au < testing ; Essays in Biochemistry Volume 38 ; 038 >  
-    au < testing ; Essays in Biochemistry Volume 39 ; 039 >  
-    au < testing ; Essays in Biochemistry Volume 40 ; 040 >  
-    au < testing ; Essays in Biochemistry Volume 41 ; 041 >  
-    au < testing ; Essays in Biochemistry Volume 42 ; 042 >  
-    au < testing ; Essays in Biochemistry Volume 43 ; 043 >  
-    au < testing ; Essays in Biochemistry Volume 44 ; 044 >  
+    au < ready ; Essays in Biochemistry Volume 33 ; 033 >  
+    au < ready ; Essays in Biochemistry Volume 34 ; 034 >  
+    au < ready ; Essays in Biochemistry Volume 35 ; 035 > 
+    au < ready ; Essays in Biochemistry Volume 36 ; 036 >  
+    au < ready ; Essays in Biochemistry Volume 37 ; 037 >  
+    au < ready ; Essays in Biochemistry Volume 38 ; 038 >  
+    au < ready ; Essays in Biochemistry Volume 39 ; 039 >  
+    au < ready ; Essays in Biochemistry Volume 40 ; 040 >  
+    au < ready ; Essays in Biochemistry Volume 41 ; 041 >  
+    au < ready ; Essays in Biochemistry Volume 42 ; 042 >  
+    au < ready ; Essays in Biochemistry Volume 43 ; 043 >  
+    au < ready ; Essays in Biochemistry Volume 44 ; 044 >  
 
   }
   
