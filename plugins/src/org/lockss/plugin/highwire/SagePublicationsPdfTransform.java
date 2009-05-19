@@ -1,5 +1,5 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.4 2009-05-15 23:46:17 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.5 2009-05-19 00:33:34 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,9 @@ import org.lockss.util.*;
 public class SagePublicationsPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
-
+  
+  protected static Logger logger = Logger.getLogger("SagePublicationsPdfTransform");
+  
   public static class RecognizeSyntheticPage implements PageTransform {
 
     public boolean transform(PdfPage pdfPage) throws IOException {

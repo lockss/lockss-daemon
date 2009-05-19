@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.9 2009-05-15 22:47:28 thib_gc Exp $
+# $Id: tdbxml.py,v 1.10 2009-05-19 00:33:34 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -110,7 +110,7 @@ def _do_attr(au, attr, value=None):
     if value is None:
         value = au.attr(attr)
     print '''\
-   <property name="attribute.%s" value="%s" />''' % ( attr, value )
+   <property name="attributes.%s" value="%s" />''' % ( attr, value )
 
 def _process_au(au, options):
     if au.status() not in options.level: return
