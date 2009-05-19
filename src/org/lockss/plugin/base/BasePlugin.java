@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.53 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.54 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public abstract class BasePlugin
   static Logger log = Logger.getLogger("BasePlugin");
 
   static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
+  static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
 
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
@@ -504,6 +505,29 @@ public abstract class BasePlugin
     if (log.isDebug3())
       log.debug3(contentType + " filter: " + mti.getLinkRewriterFactory());
     return mti.getLinkRewriterFactory();
+  }
+
+  /**
+   * Returns the article iterator factory for the mime type, if any
+   * @param contentType the content type
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    if (mti == null) {
+      return null;
+    }
+    if (log.isDebug3())
+      log.debug3(contentType + " filter: " + mti.getArticleIteratorFactory());
+    return mti.getArticleIteratorFactory();
+  }
+
+  /**
+   * Returns the article iterator factory for the default mime type, if any
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleIteratorFactory getArticleIteratorFactory() {
+    return getArticleIteratorFactory(DEFAULT_ARTICLE_MIME_TYPE);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
+ * $Id: TestMimeTypeInfo.java,v 1.4 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.filter.*;
 import org.lockss.extractor.*;
+import org.lockss.rewriter.*;
 
 /**
  * This is the test class for org.lockss.daemon.MimeTypeInfo
@@ -63,12 +64,21 @@ public class TestMimeTypeInfo extends LockssTestCase {
     RateLimiter rl = new RateLimiter("1/1");
     mti.setFetchRateLimiter(rl);
     assertSame(rl, mti.getFetchRateLimiter());
+    
+    LinkRewriterFactory lr = new MockLinkRewriterFactory();
+    mti.setLinkRewriterFactory(lr);
+    assertSame(lr, mti.getLinkRewriterFactory());
 
-    // test clone
+    ArticleIteratorFactory ai = new MockArticleIteratorFactory();
+    mti.setArticleIteratorFactory(ai);
+    assertSame(ai, mti.getArticleIteratorFactory());
+
     MimeTypeInfo m2 = new MimeTypeInfo.Impl(mti);
     assertSame(ff, mti.getFilterFactory());
     assertSame(uf, mti.getLinkExtractorFactory());
     assertSame(rl, mti.getFetchRateLimiter());
+    assertSame(lr, mti.getLinkRewriterFactory());
+    assertSame(ai, mti.getArticleIteratorFactory());
 
   }
 }

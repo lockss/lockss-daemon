@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.37 2009-04-07 19:09:01 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.38 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -353,6 +353,16 @@ public class DefinablePlugin extends BasePlugin {
 	  (LinkRewriterFactory)newAuxClass(factName,
 					   LinkRewriterFactory.class);
 	mti.setLinkRewriterFactory(fact);
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY)) {
+	String mime =
+	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY);
+	String factName = (String)val;
+	log.debug(mime + " link rewriter: " + factName);
+	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	ArticleIteratorFactory fact =
+	  (ArticleIteratorFactory)newAuxClass(factName,
+					      ArticleIteratorFactory.class);
+	mti.setArticleIteratorFactory(fact);
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.45 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.46 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -255,6 +255,12 @@ public interface ArchivalUnit {
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType);
 
+  /**
+   * Returns an ArticleIteratorFactory from the AU's plugin.
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleIteratorFactory getArticleIteratorFactory();
+  
   /**
    * Create a {@link CachedUrlSet}representing the content
    * with a specific {@link CachedUrlSetSpec}.

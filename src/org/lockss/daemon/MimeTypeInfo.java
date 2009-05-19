@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.4 2008-06-18 22:21:28 dshr Exp $
+ * $Id: MimeTypeInfo.java,v 1.5 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.rewriter.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.wrapper.*;
 
 /** Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
  * LinkExtractorFactory).  Primary interface is immutable.
@@ -48,6 +49,8 @@ public interface MimeTypeInfo {
   public RateLimiter getFetchRateLimiter();
   /** Returns the UrlRewriterFactory, or null */
   public LinkRewriterFactory getLinkRewriterFactory();
+  /** Returns the ArticleIteratorFactory, or null */
+  public ArticleIteratorFactory getArticleIteratorFactory();
 
   /** Sub interface adds setters */
   public interface Mutable extends MimeTypeInfo {
@@ -55,6 +58,7 @@ public interface MimeTypeInfo {
     public Impl setLinkExtractorFactory(LinkExtractorFactory fact);
     public Impl setFetchRateLimiter(RateLimiter limiter);
     public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
+    public Impl setArticleIteratorFactory(ArticleIteratorFactory fact);
   }
 
   class Impl implements Mutable {
@@ -64,6 +68,8 @@ public interface MimeTypeInfo {
     private LinkExtractorFactory extractorFactory;
     private RateLimiter fetchRateLimiter;
     private LinkRewriterFactory linkFactory;
+    private ArticleIteratorFactory articleIteratorFactory =
+	new ArticleIteratorFactoryWrapper(new NullArticleIteratorFactory());
 
     public Impl() {
     }
@@ -74,6 +80,7 @@ public interface MimeTypeInfo {
 	extractorFactory = toClone.getLinkExtractorFactory();
 	fetchRateLimiter = toClone.getFetchRateLimiter();
 	linkFactory = toClone.getLinkRewriterFactory();
+	articleIteratorFactory = toClone.getArticleIteratorFactory();
       }
     }
 
@@ -113,5 +120,23 @@ public interface MimeTypeInfo {
       return this;
     }
 
+    public ArticleIteratorFactory getArticleIteratorFactory() {
+      return articleIteratorFactory;
+    }
+
+    public Impl setArticleIteratorFactory(ArticleIteratorFactory fact) {
+      articleIteratorFactory = fact;
+      return this;
+    }
+
   }
+
+  public class NullArticleIteratorFactory implements ArticleIteratorFactory {
+    private NullArticleIteratorFactory() {}
+    public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+	throws PluginException {
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
+  }
+
 }

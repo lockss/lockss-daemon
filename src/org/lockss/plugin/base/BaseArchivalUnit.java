@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.131 2008-10-25 01:20:58 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.132 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -697,7 +697,31 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return plugin.getLinkRewriterFactory(contentType);
   }
 
+  /**
+   * Returns an ArticleIteratorFactory from the AU's plugin.
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleIteratorFactory getArticleIteratorFactory() {
+    return plugin.getArticleIteratorFactory();
+  }
   
+  public long getArticleCount() {
+    long ret = 0;
+    ArticleIteratorFactory aif = getArticleIteratorFactory();
+    if (aif != null) {
+      Iterator it = null;
+      try {
+	it = aif.createArticleIterator(null, this);
+      } catch (PluginException ex) {
+	logger.error("createArticleException() threw " + ex);
+      }
+      while (it != null && it.hasNext()) {
+        CachedUrl cu = (CachedUrl)it.next();
+	ret++;
+      }
+    }
+    return ret;
+  }
 
   public List<String> getNewContentCrawlUrls() {
     return startUrls;

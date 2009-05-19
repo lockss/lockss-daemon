@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.95 2009-03-05 05:40:02 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.96 2009-05-19 03:49:09 dshr Exp $
  */
 
 /*
@@ -205,6 +205,10 @@ public class NullPlugin {
     }
 
     public LinkRewriterFactory getLinkRewriterFactory() {
+      return null;
+    }
+
+    public ArticleIteratorFactory getArticleIteratorFactory() {
       return null;
     }
 
@@ -495,6 +499,10 @@ public class NullPlugin {
     }
 
     public LinkRewriterFactory getLinkRewriterFactory(String mimeType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public ArticleIteratorFactory getArticleIteratorFactory() {
       throw new UnsupportedOperationException("Not implemented");
     }
 
