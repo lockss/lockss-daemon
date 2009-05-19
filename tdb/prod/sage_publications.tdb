@@ -2408,7 +2408,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Educational Administration Quarterly Volume 41 ; 41 >
         au < do_not_process ; Educational Administration Quarterly Volume 42 ; 42 >
-        au < manifest ; Educational Administration Quarterly Volume 43 ; 43 >
+        au < testing ; Educational Administration Quarterly Volume 43 ; 43 >
 
       }
 
@@ -2427,8 +2427,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational and Psychological Measurement Volume 65 ; 65 >
-        au < manifest ; Educational and Psychological Measurement Volume 66 ; 66 >
-        au < manifest ; Educational and Psychological Measurement Volume 67 ; 67 >
+        au < testing ; Educational and Psychological Measurement Volume 66 ; 66 >
+        au < testing ; Educational and Psychological Measurement Volume 67 ; 67 >
 
       }
 
@@ -2495,7 +2495,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Policy Volume 19 ; 19 >
-        au < manifest ; Educational Policy Volume 20 ; 20 >
+        au < testing ; Educational Policy Volume 20 ; 20 >
         au < released ; Educational Policy Volume 21 ; 21 >
 
       }
@@ -3034,7 +3034,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Evaluation & the Health Professions Volume 28 ; 28 >
         au < do_not_process ; Evaluation & the Health Professions Volume 29 ; 29 >
-        au < manifest ; Evaluation & the Health Professions Volume 30 ; 30 >
+        au < testing ; Evaluation & the Health Professions Volume 30 ; 30 >
 
       }
 
@@ -3412,7 +3412,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Gender, Technology and Development Volume 9 ; 9 >
-        au < manifest ; Gender, Technology and Development Volume 10 ; 10 >
+        au < testing ; Gender, Technology and Development Volume 10 ; 10 >
         au < released ; Gender, Technology and Development Volume 11 ; 11 >
 
       }
@@ -3544,7 +3544,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Group & Organization Management Volume 30 ; 30 >
         au < do_not_process ; Group & Organization Management Volume 31 ; 31 >
-        au < manifest ; Group & Organization Management Volume 32 ; 32 >
+        au < testing ; Group & Organization Management Volume 32 ; 32 >
 
       }
 
@@ -3624,7 +3624,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; The Harvard International Journal of Press/Politics Volume 10 ; 10 >
         au < do_not_process ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
-        au < manifest ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
+        au < testing ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
 
       }
 
@@ -3703,7 +3703,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Health Informatics Journal Volume 11 ; 11 >
         au < do_not_process ; Health Informatics Journal Volume 12 ; 12 >
-        au < manifest ; Health Informatics Journal Volume 13 ; 13 >
+        au < testing ; Health Informatics Journal Volume 13 ; 13 >
 
       }
 
@@ -3813,7 +3813,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Hispanic Journal of Behavioral Sciences Volume 27 ; 27 >
         au < do_not_process ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
-        au < manifest ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
+        au < testing ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
 
       }
 
@@ -4112,7 +4112,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Indian Economic & Social History Review Volume 42 ; 42 >
-        au < manifest ; Indian Economic & Social History Review Volume 43 ; 43 >
+        au < testing ; Indian Economic & Social History Review Volume 43 ; 43 >
         au < manifest ; Indian Economic & Social History Review Volume 44 ; 44 >
 
       }
