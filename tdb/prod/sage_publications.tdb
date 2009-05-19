@@ -461,13 +461,15 @@
         name = The American Journal of Sports Medicine 
       >
 
+comment[ajsm] = this journal has been moved to H20 platform
+
       {
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; name ; param[volume] >
 
-        au < released ; The American Journal of Sports Medicine Volume 34 ; 34 >
+        au < down ; The American Journal of Sports Medicine Volume 34 ; 34 >
 
       }
 
@@ -477,10 +479,10 @@
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; The American Journal of Sports Medicine Volume 33 ; 33 >
+        au < do_not_process ; The American Journal of Sports Medicine Volume 33 ; 33 >
         au < do_not_process ; The American Journal of Sports Medicine Volume 34 ; 34 >
-        au < released ; The American Journal of Sports Medicine Volume 35 ; 35 >
-        au < manifest ; The American Journal of Sports Medicine Volume 36 ; 36 >
+        au < down ; The American Journal of Sports Medicine Volume 35 ; 35 >
+        au < do_not_process ; The American Journal of Sports Medicine Volume 36 ; 36 >
 
       }
 
@@ -599,7 +601,7 @@
 
         au < released ; The Annals of the American Academy of Political and Social Science Volume 598 ; 598 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 599 ; 599 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 600 ; 600 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 600 ; 600 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 601 ; 601 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 602 ; 602 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 603 ; 603 >
@@ -611,7 +613,7 @@
         au < released ; The Annals of the American Academy of Political and Social Science Volume 609 ; 609 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 610 ; 610 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 611 ; 611 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
 
@@ -1130,7 +1132,7 @@
         param[base_url] = http://clt.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Child Language Teaching and Therapy Volume 20 ; 20 >
+        au < testing ; Child Language Teaching and Therapy Volume 20 ; 20 >
         au < released ; Child Language Teaching and Therapy Volume 23 ; 23 >
 
       }
@@ -1239,7 +1241,7 @@
         param[base_url] = http://chi.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Chronic Illness Volume 2 ; 2 >
+        au < testing ; Chronic Illness Volume 2 ; 2 >
         au < released ; Chronic Illness Volume 3 ; 3 >
 
       }
@@ -1767,7 +1769,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Crime & Delinquency Volume 51 ; 51 >
-        au < manifest ; Crime & Delinquency Volume 52 ; 52 >
+        au < testing ; Crime & Delinquency Volume 52 ; 52 >
         au < released ; Crime & Delinquency Volume 53 ; 53 >
 
       }
@@ -1896,7 +1898,7 @@
         param[base_url] = http://csp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Critical Social Policy Volume 7 ; 7 >
+        au < testing ; Critical Social Policy Volume 7 ; 7 >
         au < released ; Critical Social Policy Volume 25 ; 25 >
         au < released ; Critical Social Policy Volume 26 ; 26 >
         au < released ; Critical Social Policy Volume 27 ; 27 >
@@ -2035,8 +2037,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
-        au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
-        au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
+        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
+        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
 
       }
 
@@ -2224,8 +2226,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Discourse & Society Volume 16 ; 16 >
-        au < manifest ; Discourse & Society Volume 17 ; 17 >
-        au < manifest ; Discourse & Society Volume 18 ; 18 >
+        au < testing ; Discourse & Society Volume 17 ; 17 >
+        au < testing ; Discourse & Society Volume 18 ; 18 >
 
       }
 
@@ -2304,9 +2306,9 @@
         param[base_url] = http://eid.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Economic and Industrial Democracy Volume 26 ; 26 >
-        au < manifest ; Economic and Industrial Democracy Volume 27 ; 27 >
-        au < manifest ; Economic and Industrial Democracy Volume 28 ; 28 >
+        au < testing ; Economic and Industrial Democracy Volume 26 ; 26 >
+        au < testing ; Economic and Industrial Democracy Volume 27 ; 27 >
+        au < testing ; Economic and Industrial Democracy Volume 28 ; 28 >
 
       }
 
