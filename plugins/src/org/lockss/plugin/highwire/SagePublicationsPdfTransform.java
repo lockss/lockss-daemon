@@ -1,5 +1,5 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.5 2009-05-19 00:33:34 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.6 2009-05-20 05:26:49 thib_gc Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class SagePublicationsPdfTransform
             break;
 
           case 1:
-          case 7:
+          case 6:
             // Text: http://<something>.sagepub.com
             if (PdfUtil.matchShowTextMatches(tokens, tok, "http://[-0-9A-Za-z]+\\.sagepub\\.com")) { ++progress; }
             break;
@@ -88,18 +88,13 @@ public class SagePublicationsPdfTransform
             break;
 
           case 5:
-            // Text: "can be found at:"
-            if (PdfUtil.matchShowText(tokens, tok, "can be found at:")) { ++progress; }
-            break;
-
-          case 6:
             // Text: "Additional services and information for "
             if (PdfUtil.matchShowText(tokens, tok, "Additional services and information for ")) { ++progress; }
             break;
 
-          // case 7: see case 2
+          // case 6: see case 1
 
-          case 8:
+          case 7:
             // Text: "Downloaded from "
             if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ret = true; break iteration; }
             break;
