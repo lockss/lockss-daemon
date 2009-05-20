@@ -1,10 +1,10 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.6 2009-05-20 05:26:49 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.7 2009-05-20 06:42:23 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,6 +51,7 @@ public class SagePublicationsPdfTransform
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Initially, assume the recognition fails
       boolean ret = false;
+      logger.debug3("RecognizeSyntheticPage invoked");
 
       // Get the tokens for the entire page
       List tokens = pdfPage.getStreamTokens();
@@ -108,6 +109,7 @@ public class SagePublicationsPdfTransform
       }
 
       // Return true if only if all the steps were visited successfully
+      if (logger.isDebug3()) { logger.debug3("RecognizeSyntheticPage returning " + ret); }
       return ret;
     }
 
