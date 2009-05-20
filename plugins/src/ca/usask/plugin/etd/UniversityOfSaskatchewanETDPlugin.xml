@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -28,7 +28,7 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%stheses/browse/lockss.php\?year=%s&quot;, base_url, year</string>
+      <string>1,&quot;^%stheses/browse/lockss.php\?year=%d&quot;, base_url, year</string>
       <string>2,&quot;^%stheses/(available|submitted)/[^/]+/restricted/&quot;, base_url</string> 
       <string>1,&quot;^%stheses/(available|submitted)/&quot;, base_url</string> 
       <string>1,&quot;^%stheses/manifest\.html&quot;, base_url</string> 
@@ -37,7 +37,7 @@
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%stheses/browse/lockss.php?year=%s&quot;, base_url, year</string>
+      <string>&quot;%stheses/browse/lockss.php?year=%d&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
