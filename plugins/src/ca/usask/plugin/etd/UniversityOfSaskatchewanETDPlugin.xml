@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>ca.usask.etd.UniversityOfSaskatchewanETDPlugin</string>
+    <string>ca.usask.plugin.etd.UniversityOfSaskatchewanETDPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;University Of Saskatchewan ETD Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>&quot;University of Saskatchewan ETD Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>University Of Saskatchewan ETD Plugin</string>
+    <string>University of Saskatchewan ETD Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -29,8 +29,8 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%stheses/browse/lockss.php\?year=%s&quot;, base_url, year</string>
-      <string>1,&quot;^%stheses/available/&quot;, base_url</string> 
-      <string>1,&quot;^%stheses/submitted/&quot;, base_url</string> 
+      <string>2,&quot;^%stheses/(available|submitted)/[^/]+/restricted/&quot;, base_url</string> 
+      <string>1,&quot;^%stheses/(available|submitted)/&quot;, base_url</string> 
       <string>1,&quot;^%stheses/manifest\.html&quot;, base_url</string> 
     </list>
   </entry>
