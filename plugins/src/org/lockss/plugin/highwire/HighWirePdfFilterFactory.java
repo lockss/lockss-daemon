@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.21 2008-02-27 23:17:57 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.22 2009-05-20 07:14:35 thib_gc Exp $
  */
 
 /*
@@ -122,8 +122,8 @@ public class HighWirePdfFilterFactory implements FilterFactory {
 
     /* Inherit documentation */
     public int getSubsequenceLength() {
-      // Examine the last 54 tokens in the output sequence
-      return 54;
+      // Examine the last 100 tokens in the output sequence
+      return 100;
     }
 
     /* Inherit documentation */
