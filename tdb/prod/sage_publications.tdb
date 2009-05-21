@@ -1132,7 +1132,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://clt.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Child Language Teaching and Therapy Volume 20 ; 20 >
+        au < ready ; Child Language Teaching and Therapy Volume 20 ; 20 >
         au < released ; Child Language Teaching and Therapy Volume 23 ; 23 >
 
       }
@@ -1241,7 +1241,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://chi.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Chronic Illness Volume 2 ; 2 >
+        au < ready ; Chronic Illness Volume 2 ; 2 >
         au < released ; Chronic Illness Volume 3 ; 3 >
 
       }
@@ -1769,7 +1769,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Crime & Delinquency Volume 51 ; 51 >
-        au < testing ; Crime & Delinquency Volume 52 ; 52 >
+        au < ready ; Crime & Delinquency Volume 52 ; 52 >
         au < released ; Crime & Delinquency Volume 53 ; 53 >
 
       }
@@ -1898,7 +1898,9 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://csp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Critical Social Policy Volume 7 ; 7 >
+comment[csp7] = manifest page is malformed
+
+        au < not_ready ; Critical Social Policy Volume 7 ; 7 >
         au < released ; Critical Social Policy Volume 25 ; 25 >
         au < released ; Critical Social Policy Volume 26 ; 26 >
         au < released ; Critical Social Policy Volume 27 ; 27 >
@@ -2037,8 +2039,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
-        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
-        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
+        au < ready ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
+        au < ready ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
 
       }
 
@@ -2226,8 +2228,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Discourse & Society Volume 16 ; 16 >
-        au < testing ; Discourse & Society Volume 17 ; 17 >
-        au < testing ; Discourse & Society Volume 18 ; 18 >
+        au < ready ; Discourse & Society Volume 17 ; 17 >
+        au < ready ; Discourse & Society Volume 18 ; 18 >
 
       }
 
@@ -2306,9 +2308,9 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://eid.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Economic and Industrial Democracy Volume 26 ; 26 >
-        au < testing ; Economic and Industrial Democracy Volume 27 ; 27 >
-        au < testing ; Economic and Industrial Democracy Volume 28 ; 28 >
+        au < ready ; Economic and Industrial Democracy Volume 26 ; 26 >
+        au < ready ; Economic and Industrial Democracy Volume 27 ; 27 >
+        au < ready ; Economic and Industrial Democracy Volume 28 ; 28 >
 
       }
 
@@ -2408,7 +2410,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Educational Administration Quarterly Volume 41 ; 41 >
         au < do_not_process ; Educational Administration Quarterly Volume 42 ; 42 >
-        au < testing ; Educational Administration Quarterly Volume 43 ; 43 >
+        au < ready ; Educational Administration Quarterly Volume 43 ; 43 >
 
       }
 
@@ -2427,8 +2429,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational and Psychological Measurement Volume 65 ; 65 >
-        au < testing ; Educational and Psychological Measurement Volume 66 ; 66 >
-        au < testing ; Educational and Psychological Measurement Volume 67 ; 67 >
+        au < ready ; Educational and Psychological Measurement Volume 66 ; 66 >
+        au < ready ; Educational and Psychological Measurement Volume 67 ; 67 >
 
       }
 
@@ -2495,7 +2497,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Policy Volume 19 ; 19 >
-        au < testing ; Educational Policy Volume 20 ; 20 >
+        au < ready ; Educational Policy Volume 20 ; 20 >
         au < released ; Educational Policy Volume 21 ; 21 >
 
       }
@@ -3034,7 +3036,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Evaluation & the Health Professions Volume 28 ; 28 >
         au < do_not_process ; Evaluation & the Health Professions Volume 29 ; 29 >
-        au < testing ; Evaluation & the Health Professions Volume 30 ; 30 >
+        au < ready ; Evaluation & the Health Professions Volume 30 ; 30 >
 
       }
 
@@ -3544,7 +3546,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Group & Organization Management Volume 30 ; 30 >
         au < do_not_process ; Group & Organization Management Volume 31 ; 31 >
-        au < testing ; Group & Organization Management Volume 32 ; 32 >
+        au < ready ; Group & Organization Management Volume 32 ; 32 >
 
       }
 
@@ -3624,7 +3626,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; The Harvard International Journal of Press/Politics Volume 10 ; 10 >
         au < do_not_process ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
-        au < testing ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
+        au < ready ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
 
       }
 
@@ -3703,7 +3705,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Health Informatics Journal Volume 11 ; 11 >
         au < do_not_process ; Health Informatics Journal Volume 12 ; 12 >
-        au < testing ; Health Informatics Journal Volume 13 ; 13 >
+        au < ready ; Health Informatics Journal Volume 13 ; 13 >
 
       }
 
@@ -4113,7 +4115,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < do_not_process ; Indian Economic & Social History Review Volume 42 ; 42 >
         au < testing ; Indian Economic & Social History Review Volume 43 ; 43 >
-        au < manifest ; Indian Economic & Social History Review Volume 44 ; 44 >
+        au < testing ; Indian Economic & Social History Review Volume 44 ; 44 >
 
       }
 
@@ -4142,7 +4144,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Indian Journal of Gender Studies Volume 12 ; 12 >
-        au < manifest ; Indian Journal of Gender Studies Volume 13 ; 13 >
+        au < testing ; Indian Journal of Gender Studies Volume 13 ; 13 >
         au < ready ; Indian Journal of Gender Studies Volume 14 ; 14 >
 
       }
@@ -4322,7 +4324,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of Behavioral Development Volume 5 ; 5 >
-        au < manifest ; International Journal of Behavioral Development Volume 12 ; 12 >
+        au < testing ; International Journal of Behavioral Development Volume 12 ; 12 >
         au < ready ; International Journal of Behavioral Development Volume 27 ; 27 >
         au < ready ; International Journal of Behavioral Development Volume 29 ; 29 >
         au < do_not_process ; International Journal of Behavioral Development Volume 30 ; 30 >
@@ -4384,7 +4386,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://ccm.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; International Journal of Cross Cultural Management Volume 5 ; 5 >
+        au < testing ; International Journal of Cross Cultural Management Volume 5 ; 5 >
         au < do_not_process ; International Journal of Cross Cultural Management Volume 6 ; 6 >
         au < ready ; International Journal of Cross Cultural Management Volume 7 ; 7 >
 
@@ -4444,9 +4446,9 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://ijd.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; International Journal of Damage Mechanics Volume 14 ; 14 >
+        au < testing ; International Journal of Damage Mechanics Volume 14 ; 14 >
         au < do_not_process ; International Journal of Damage Mechanics Volume 15 ; 15 >
-        au < manifest ; International Journal of Damage Mechanics Volume 16 ; 16 >
+        au < testing ; International Journal of Damage Mechanics Volume 16 ; 16 >
 
       }
 
@@ -4495,7 +4497,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; The International Journal of Lower Extremity Wounds Volume 4 ; 4 >
-        au < manifest ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
+        au < testing ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
 
       }
@@ -4741,9 +4743,9 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://irs.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; International Review for the Sociology of Sport Volume 40 ; 40 >
-        au < manifest ; International Review for the Sociology of Sport Volume 41 ; 41 >
-        au < manifest ; International Review for the Sociology of Sport Volume 42 ; 42 >
+        au < testing ; International Review for the Sociology of Sport Volume 40 ; 40 >
+        au < testing ; International Review for the Sociology of Sport Volume 41 ; 41 >
+        au < testing ; International Review for the Sociology of Sport Volume 42 ; 42 >
 
       }
 
@@ -4772,8 +4774,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; International Review of Administrative Sciences Volume 71 ; 71 >
-        au < manifest ; International Review of Administrative Sciences Volume 72 ; 72 >
-        au < manifest ; International Review of Administrative Sciences Volume 73 ; 73 >
+        au < testing ; International Review of Administrative Sciences Volume 72 ; 72 >
+        au < testing ; International Review of Administrative Sciences Volume 73 ; 73 >
 
       }
 
@@ -4890,7 +4892,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://jhj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
+        au < testing ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
         au < ready ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
         au < ready ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
         au < ready ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
@@ -4952,7 +4954,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://jot.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal for the Study of the Old Testament Volume 29 ; 29 >
+        au < testing ; Journal for the Study of the Old Testament Volume 29 ; 29 >
         au < do_not_process ; Journal for the Study of the Old Testament Volume 30 ; 30 >
         au < ready ; Journal for the Study of the Old Testament Volume 31 ; 31 >
         au < ready ; Journal for the Study of the Old Testament Volume 32 ; 32 >
@@ -4974,8 +4976,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 14 ; 14 >
-        au < manifest ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
-        au < manifest ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
+        au < testing ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
+        au < testing ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 >
 
       }
