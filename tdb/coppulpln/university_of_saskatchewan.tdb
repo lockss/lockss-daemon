@@ -14,13 +14,13 @@
     param[base_url] = http://library2.usask.ca/
     implicit < status ; name ; param[year] > 
     
-    au < testing ; Electronic Theses & Dissertations 2003 ; 2003 >
-    au < testing ; Electronic Theses & Dissertations 2004 ; 2004 >
-    au < testing ; Electronic Theses & Dissertations 2005 ; 2005 >
-    au < testing ; Electronic Theses & Dissertations 2006 ; 2006 >
-    au < testing ; Electronic Theses & Dissertations 2007 ; 2007 >
-    au < testing ; Electronic Theses & Dissertations 2008 ; 2008 >
-    au < testing ; Electronic Theses & Dissertations 2009 ; 2009 >
+    au < ready ; Electronic Theses & Dissertations 2003 ; 2003 >
+    au < ready ; Electronic Theses & Dissertations 2004 ; 2004 >
+    au < ready ; Electronic Theses & Dissertations 2005 ; 2005 >
+    au < ready ; Electronic Theses & Dissertations 2006 ; 2006 >
+    au < ready ; Electronic Theses & Dissertations 2007 ; 2007 >
+    au < ready ; Electronic Theses & Dissertations 2008 ; 2008 >
+    au < ready ; Electronic Theses & Dissertations 2009 ; 2009 >
     
   }
   
