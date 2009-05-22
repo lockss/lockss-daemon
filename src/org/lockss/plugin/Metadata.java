@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.2 2007-11-20 23:18:45 dshr Exp $
+ * $Id: Metadata.java,v 1.3 2009-05-22 19:14:55 dshr Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.definable.*;
 /**
  * Collect and search metadata, supporting metadata-based access to content.
  */
-public class Metadata {
+public class Metadata extends Properties {
   private static Logger log = Logger.getLogger("Metadata");
 
   public static final String PARAM_DOIMAP = Configuration.PREFIX + "metadata.doimap";
@@ -218,6 +218,16 @@ public class Metadata {
     log.debug("proxyResolver returns " + ret);
     return ret;
   }
-  
 
+  public Metadata() {
+  }
+
+  public Metadata(Properties props) {
+    super(props);
+  }
+
+  private static final String KEY_DOI = "dc.Identifier";
+  public String getDOI() {
+    return getProperty(KEY_DOI);
+  }
 }

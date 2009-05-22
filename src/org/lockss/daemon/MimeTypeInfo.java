@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.5 2009-05-19 03:49:09 dshr Exp $
+ * $Id: MimeTypeInfo.java,v 1.6 2009-05-22 19:14:54 dshr Exp $
  */
 
 /*
@@ -27,6 +27,7 @@
 package org.lockss.daemon;
 
 import java.util.*;
+import java.io.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -51,6 +52,8 @@ public interface MimeTypeInfo {
   public LinkRewriterFactory getLinkRewriterFactory();
   /** Returns the ArticleIteratorFactory, or null */
   public ArticleIteratorFactory getArticleIteratorFactory();
+  /** Returns the ArticleIteratorFactory, or null */
+  public MetadataExtractorFactory getMetadataExtractorFactory();
 
   /** Sub interface adds setters */
   public interface Mutable extends MimeTypeInfo {
@@ -59,6 +62,7 @@ public interface MimeTypeInfo {
     public Impl setFetchRateLimiter(RateLimiter limiter);
     public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
     public Impl setArticleIteratorFactory(ArticleIteratorFactory fact);
+    public Impl setMetadataExtractorFactory(MetadataExtractorFactory fact);
   }
 
   class Impl implements Mutable {
@@ -70,6 +74,8 @@ public interface MimeTypeInfo {
     private LinkRewriterFactory linkFactory;
     private ArticleIteratorFactory articleIteratorFactory =
 	new ArticleIteratorFactoryWrapper(new NullArticleIteratorFactory());
+    private MetadataExtractorFactory metadataExtractorFactory =
+	new MetadataExtractorFactoryWrapper(new NullMetadataExtractorFactory());
 
     public Impl() {
     }
@@ -81,6 +87,7 @@ public interface MimeTypeInfo {
 	fetchRateLimiter = toClone.getFetchRateLimiter();
 	linkFactory = toClone.getLinkRewriterFactory();
 	articleIteratorFactory = toClone.getArticleIteratorFactory();
+	metadataExtractorFactory = toClone.getMetadataExtractorFactory();
       }
     }
 
@@ -129,14 +136,56 @@ public interface MimeTypeInfo {
       return this;
     }
 
+    public MetadataExtractorFactory getMetadataExtractorFactory() {
+      return metadataExtractorFactory;
+    }
+
+    public Impl setMetadataExtractorFactory(MetadataExtractorFactory fact) {
+      metadataExtractorFactory = fact;
+      return this;
+    }
+
   }
 
   public class NullArticleIteratorFactory implements ArticleIteratorFactory {
-    private NullArticleIteratorFactory() {}
+    public NullArticleIteratorFactory() {}
     public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
 	throws PluginException {
       return CollectionUtil.EMPTY_ITERATOR;
     }
   }
 
+  public class NullMetadataExtractorFactory
+      implements MetadataExtractorFactory {
+    public NullMetadataExtractorFactory() {}
+    public MetadataExtractor createMetadataExtractor(String mimeType)
+	throws PluginException {
+	return new NullExtractor();
+    }
+  }
+
+  public class NullExtractor implements MetadataExtractor {
+    public NullExtractor() {
+    }
+    public Metadata extract(CachedUrl cu)
+        throws IOException, PluginException {
+	return new EmptyMetadata();
+    }
+  }
+  public class EmptyMetadata extends Metadata {
+    private EmptyMetadata() {
+    }
+    public Object setProperty(String key, String value) {
+        throw new UnsupportedOperationException();
+    }
+    public void load(InputStream is) throws IOException {
+        throw new UnsupportedOperationException();
+    }
+    public Object put(Object key, Object value) {
+        throw new UnsupportedOperationException();
+    }
+    public void putAll(Map m) {
+        throw new UnsupportedOperationException();
+    }
+  }
 }

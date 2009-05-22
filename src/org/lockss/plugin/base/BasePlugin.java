@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.54 2009-05-19 03:49:09 dshr Exp $
+ * $Id: BasePlugin.java,v 1.55 2009-05-22 19:14:55 dshr Exp $
  */
 
 /*
@@ -503,7 +503,7 @@ public abstract class BasePlugin
       return null;
     }
     if (log.isDebug3())
-      log.debug3(contentType + " filter: " + mti.getLinkRewriterFactory());
+      log.debug3(contentType + " rewriter: " + mti.getLinkRewriterFactory());
     return mti.getLinkRewriterFactory();
   }
 
@@ -515,10 +515,13 @@ public abstract class BasePlugin
   public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
     MimeTypeInfo mti = getMimeTypeInfo(contentType);
     if (mti == null) {
+      if (log.isDebug3())
+	  log.debug3("null return for " +
+		     (contentType== null ? "null" : contentType));
       return null;
     }
     if (log.isDebug3())
-      log.debug3(contentType + " filter: " + mti.getArticleIteratorFactory());
+      log.debug3(contentType + " iterator: " + mti.getArticleIteratorFactory());
     return mti.getArticleIteratorFactory();
   }
 
@@ -543,6 +546,28 @@ public abstract class BasePlugin
     if (log.isDebug3())
       log.debug3(contentType + " rate limiter: " + mti.getFetchRateLimiter());
     return mti.getFetchRateLimiter();
+  }
+
+  /**
+   * Return a {@link MetadataExtractor} that knows how to extract URLs from
+   * content of the given MIME type
+   * @param contentType content type to get a content parser for
+   * @return A MetadataExtractor or null
+   */
+  public MetadataExtractor getMetadataExtractor(String contentType) {
+    if (contentType == null) {
+      contentType = DEFAULT_ARTICLE_MIME_TYPE;
+    }
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    MetadataExtractorFactory fact = mti.getMetadataExtractorFactory();
+    if (fact != null) {
+      try {
+	return fact.createMetadataExtractor(contentType);
+      } catch (PluginException e) {
+	throw new RuntimeException(e);
+      }
+    }
+    return null;
   }
 
   // ---------------------------------------------------------------------

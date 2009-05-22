@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.4 2009-05-19 03:49:09 dshr Exp $
+ * $Id: TestMimeTypeInfo.java,v 1.5 2009-05-22 19:14:55 dshr Exp $
  */
 
 /*
@@ -73,12 +73,17 @@ public class TestMimeTypeInfo extends LockssTestCase {
     mti.setArticleIteratorFactory(ai);
     assertSame(ai, mti.getArticleIteratorFactory());
 
+    MetadataExtractorFactory me = new MockMetadataExtractorFactory();
+    mti.setMetadataExtractorFactory(me);
+    assertSame(me, mti.getMetadataExtractorFactory());
+
     MimeTypeInfo m2 = new MimeTypeInfo.Impl(mti);
-    assertSame(ff, mti.getFilterFactory());
-    assertSame(uf, mti.getLinkExtractorFactory());
-    assertSame(rl, mti.getFetchRateLimiter());
-    assertSame(lr, mti.getLinkRewriterFactory());
-    assertSame(ai, mti.getArticleIteratorFactory());
+    assertSame(ff, m2.getFilterFactory());
+    assertSame(uf, m2.getLinkExtractorFactory());
+    assertSame(rl, m2.getFetchRateLimiter());
+    assertSame(lr, m2.getLinkRewriterFactory());
+    assertSame(ai, m2.getArticleIteratorFactory());
+    assertSame(me, m2.getMetadataExtractorFactory());
 
   }
 }

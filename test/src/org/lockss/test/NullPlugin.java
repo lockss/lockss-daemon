@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.96 2009-05-19 03:49:09 dshr Exp $
+ * $Id: NullPlugin.java,v 1.97 2009-05-22 19:14:55 dshr Exp $
  */
 
 /*
@@ -487,6 +487,10 @@ public class NullPlugin {
     }
 
     public LinkExtractor getLinkExtractor(String mimeType) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public MetadataExtractor getMetadataExtractor(String mimeType) {
       throw new UnsupportedOperationException("not implemented");
     }
 

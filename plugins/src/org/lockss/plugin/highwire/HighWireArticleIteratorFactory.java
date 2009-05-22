@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.1 2009-05-19 03:49:09 dshr Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.2 2009-05-22 19:14:54 dshr Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
   static String defaultSubTreeRoot = "cgi/reprint";
   static Logger log = Logger.getLogger("HighWireArticleIterator");
 
-  HighWireArticleIteratorFactory() {
+  public HighWireArticleIteratorFactory() {
   }
   /**
    * Create an Iterator that iterates through the AU's articles, pointing

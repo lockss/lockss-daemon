@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.6 2007-10-31 19:04:49 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.7 2009-05-22 19:14:54 dshr Exp $
  */
 
 /*
@@ -40,8 +40,10 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.plugin.wrapper.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.util.urlconn.CacheException.RetryDeadLinkException;
 
@@ -138,5 +140,21 @@ public class TestHighWirePlugin extends LockssTestCase {
     Class found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
     assertEquals(expected, found);
 
+  }
+
+  public void dontTestGetMetadataExtractor() {
+    assertNotNull(plugin.getMetadataExtractor("text/html"));
+    assertTrue(plugin.getMetadataExtractor("text/html") instanceof
+	       org.lockss.extractor.SimpleMetaTagMetadataExtractor);
+  }
+  public void dontTestGetFilterFactory() {
+    assertNotNull(plugin.getFilterFactory("application/pdf"));
+    assertTrue(WrapperUtil.unwrap(plugin.getFilterFactory("application/pdf"))
+	       instanceof org.lockss.plugin.highwire.HighWirePdfFilterFactory);
+  }
+  public void dontTestGetArticleIteratorFactory() {
+    assertNotNull(plugin.getArticleIteratorFactory());
+    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
+	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
   }
 }

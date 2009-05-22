@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.132 2009-05-19 03:49:09 dshr Exp $
+ * $Id: BaseArchivalUnit.java,v 1.133 2009-05-22 19:14:55 dshr Exp $
  */
 
 /*
@@ -721,6 +721,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       }
     }
     return ret;
+  }
+
+  /**
+   * Return a MetadataExtractor for the MIME type, or null.
+   * @param contentType content type to get a content parser for
+   */
+  public MetadataExtractor getMetadataExtractor(String contentType) {
+    return plugin.getMetadataExtractor(contentType);
   }
 
   public List<String> getNewContentCrawlUrls() {

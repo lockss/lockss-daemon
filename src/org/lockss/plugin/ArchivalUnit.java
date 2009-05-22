@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.46 2009-05-19 03:49:09 dshr Exp $
+ * $Id: ArchivalUnit.java,v 1.47 2009-05-22 19:14:55 dshr Exp $
  */
 
 /*
@@ -261,6 +261,12 @@ public interface ArchivalUnit {
    */
   public ArticleIteratorFactory getArticleIteratorFactory();
   
+  /**
+   * Return a MetadataExtractor for the MIME type, or null.
+   * @param contentType content type to get a content parser for
+   */
+  public MetadataExtractor getMetadataExtractor(String contentType);
+
   /**
    * Create a {@link CachedUrlSet}representing the content
    * with a specific {@link CachedUrlSetSpec}.
