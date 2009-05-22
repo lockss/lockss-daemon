@@ -16,9 +16,9 @@ import types
 import urllib
 import urllib2
 import urlparse
+import xml.dom.minidom
 
 from os import path
-from xml.dom import minidom
 
 from lockss_util import *
 
@@ -74,7 +74,6 @@ org.lockss.poll.v3.deleteExtraFiles=true
 org.lockss.poll.v3.quorum=4
 arg.lockss.poll.v3.minNominationSize=0
 org.lockss.poll.v3.maxNominationSize=0
-org.lockss.poll.v3.voteDeadlinePadding=30s
 org.lockss.poll.v3.voteDurationPadding=30s
 org.lockss.poll.v3.tallyDurationPadding=30s
 org.lockss.poll.v3.voteDurationMultiplier=3
@@ -110,14 +109,6 @@ org.lockss.comm.unicast.port=%(unicastPort)s
 org.lockss.comm.unicast.sendToPort=%(unicastSendToPort)s
 org.lockss.comm.unicast.sendToAddr=127.0.0.1
 org.lockss.proxy.icp.port=%(icpPort)s
-"""
-
-V3ConfigTemplate = """\
-org.lockss.auconfig.allowEditDefaultOnlyParams=true,
-org.lockss.id.initialV3PeerList=%(peer_list)s,
-org.lockss.localV3Identity=%(peer_ID)s
-org.lockss.poll.v3.enableV3Poller=true
-org.lockss.poll.v3.enableV3Voter=true
 """
 
 
@@ -164,10 +155,10 @@ class Framework:
             self.startV3Port = int(config.get('startV3Port', 8801))
         else:
             self.startV3Port = startV3Port
-        self.username = config.get('username', 'testuser')
-        self.password = config.get('password', 'testpass')
-        self.logLevel = config.get('daemonLogLevel', 'debug')
-        self.hostname = config.get('hostname', 'localhost')
+        self.username = config.get( 'username', 'lockss-u' )
+        self.password = config.get( 'password', 'lockss-p' )
+        self.logLevel = config.get( 'daemonLogLevel', 'debug' )
+        self.hostname = config.get( 'hostname', 'localhost' )
 
         self.clientList = [] # ordered list of clients.
         self.daemonList = [] # ordered list of daemons.
@@ -406,6 +397,10 @@ class Client:
         self.username = username
         self.password = password
 
+    def ID( self ):
+       '''Standardized notation'''
+       return self.hostname + ':' + str( self.port )
+        
     def getPeerId(self):
         #return ("TCP:[127.0.0.1]:%d" % self.v3Port)
         return "TCP:[%s]:%d" % ( socket.gethostbyname( self.hostname ), self.v3Port )
@@ -418,7 +413,7 @@ class Client:
 #           raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
     def waitAu(self, au):
-        """ will block until the AU appears in the server's status table. """
+        """Block until the AU appears in the server's status table."""
         if not self.waitForCreateAu(au):
             raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
@@ -537,7 +532,6 @@ class Client:
         key = None
         if not au == None:
             key = au.auId
-
         (summary, table) = self._getStatusTable('crawl_status_table', key)
         return table
 
@@ -545,15 +539,24 @@ class Client:
         """Return the detailed crawl status table for the specified AU and key."""
         return self._getStatusTable('single_crawl_status_table', key)
 
-    def getAuHashFile(self, au):
+    def getAuHashFile( self, AU ):
         """Return the hash file contents for the whole AU."""
-        post = self.__makeHashPost(au)
+        post = self.__makePost( 'HashCUS', { 'action': 'Hash' } )
+        post.add( 'auid', AU.auId )
+        post.add( 'url', 'lockssau:' )
+        post.add( 'hashtype', 4 ) # (sic)
         response = post.execute()
         match = re.search( '<td>Hash file:</td.*?><td><a href="/(.+?)">HashFile</a.*?>', response.read(), re.DOTALL )
         if match is None:
             raise LockssError( 'Hash file URL not found' )
-        post = self.__makePost( match.group( 1 ), cookie = response.info()[ 'Set-Cookie' ].split( ';' )[ 0 ] )
-        return post.execute().read()
+        return self.__makePost( match.group( 1 ), cookie = response.info()[ 'Set-Cookie' ].split( ';' )[ 0 ] ).execute().read()
+
+    def getPollResults( self, AU ):
+        """Return the current poll results for the AU."""
+        table = self._getStatusTable( 'ArchivalUnitTable', AU.auId )[ 0 ]
+        if not table:
+            raise LockssError( 'AUID "%s" not found' % AU.auId )
+        return table.get( 'Last Poll Result' ), table[ 'Status' ]
 
     def hasAu(self, au):
         """Return true iff the status table lists the given au."""
@@ -644,6 +647,12 @@ class Client:
         # Poll wasn't found
         return False
 
+    def startV3Poll( self, AU ):
+        """Start a V3 poll of an AU."""
+        post = self.__makePost( 'DebugPanel', { 'action': 'Start V3 Poll' } )
+        post.add( 'auid', AU.auId )
+        post.execute()
+
     def getV3PollKey(self, au, excludePolls=[]):
         """Return the key of a poll on the au, excluding any poll
         keys in excludePolls."""
@@ -693,8 +702,8 @@ class Client:
         return False
 
     def hasWonV3Poll(self, au):
-        """Return true if a poll has been called, and no repairs have been made."""
-        return self.isV3Repaired(au, [])
+        """Return true if a poll has been called and no repairs have been made."""
+        return self.isV3Repaired( au )
 
 # XXX look for poll w/ high agreement?
 #         tab = self.getAuV3Pollers(au)
@@ -715,17 +724,17 @@ class Client:
 
                 try:
                     allUrls = int(summary['Total URLs In Vote'])
-                except KeyError, e: # Not available
+                except KeyError: # Not available
                     allUrls = 0
 
                 try:
                     agreeUrls = int(summary['Agreeing URLs']['value'])
-                except KeyError, e: # Not available
+                except KeyError: # Not available
                     agreeUrls = 0
 
                 try:
                     repairs = int(summary['Completed Repairs']['value'])
-                except KeyError, e: # Not available
+                except KeyError: # Not available
                     repairs = 0
 
                 return (len(nodeList) == repairs and (agreeUrls == allUrls))
@@ -963,9 +972,9 @@ class Client:
             post.add('isDaemonReady', "1")
             res = post.execute().read()
             return res.find("true") >= 0
-        except LockssError, e:
+        except LockssError:
             ## If a Lockss error is raised, pass it on.
-            raise e
+            raise
         except Exception, e:
             ## On any other error, just return false.
             log.debug("Got exception: %s" % e)
@@ -1229,22 +1238,25 @@ class Client:
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForReactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """Wait for the au to be activated, or for the timeout to
-        expire."""
+        """Wait for the au to be activated, or for the timeout to expire."""
         def waitFunc():
             return self.isActiveAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForDeactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """Wait for the au to be deactivated, or for the timeout to
-        expire."""
+        """Wait for the au to be deactivated, or for the timeout to expire."""
         def waitFunc():
             return not self.isActiveAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
-    def waitForSuccessfulCrawl(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """Block until the specified au has had at least one
-        successful new content crawl."""
+    def waitForSuccessfulCrawl( self, AU, timeout = DEF_TIMEOUT, sleep = DEF_SLEEP ):
+        """Wait until the AU has been crawled successfully."""
+        def waitFunc():
+            return self._getStatusTable( 'ArchivalUnitTable', AU.auId )[ 0 ].get( 'Last Crawl Result' ) == 'Successful'
+        return self.wait( waitFunc, timeout, sleep )
+
+    def waitForSuccessfulNewCrawl(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        """Block until the specified au has had at least one successful new content crawl."""
         def waitFunc():
             tbl = self.getCrawlStatus(au)
             try:
@@ -1275,6 +1287,12 @@ class Client:
                 return False
 
         return self.wait(waitFunc, timeout, sleep)
+
+    def waitForPollResults( self, AU, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP ):
+        """Wait until poll results are available for an AU."""
+        def waitFunc():
+            return self.getPollResults( AU )[ 0 ]
+        return self.wait( waitFunc, timeout, sleep )
 
     def waitForV3Poller(self, au, excludePolls=[], timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
@@ -1468,13 +1486,12 @@ class Client:
         """ Given a function to evaluate, loop until the function evals to
         true, or until the timeout has expired. """
         start = time.time()
-        while(time.time() - start) < timeout:
+        while True:
             if condFunc():
                 return True
-            else:
-                time.sleep(sleep)
-        # fall out, condition wasn't met.
-        return False
+            if time.time() - start >= timeout:
+                return False
+            time.sleep( sleep )
 
     ###
     ### Methods for causing damage
@@ -1618,7 +1635,6 @@ class Client:
         """Create a random number of between minCount and maxCount
         nodes on the given au.  Return the list of new nodes."""
         nodeList = []
-        random.seed(time.time())
         numNodes = random.randint(minCount, maxCount)
         for nodeNum in range(minCount, maxCount+1):
             newNode = self.createNode(au, '%sextrafile.txt' % nodeNum)
@@ -1667,16 +1683,16 @@ class Client:
             post.add('numrows', numrows)
         post.add('output', 'xml')
 
-        xml = post.execute().read()
-        log.debug3("Received XML response: \n" + xml)
-        doc = minidom.parseString(xml)
-        doc.normalize() # required for python 2.2
+        XML = post.execute().read()
+        log.debug3( 'Received XML response:\n' + XML )
+        doc = xml.dom.minidom.parseString( XML )
+        doc.normalize()
 
         summaryList = doc.getElementsByTagName('st:summaryinfo')
         summaryDict = {}
-        summaryTitle = None
-        summaryValue = None
         for summary in summaryList:
+            summaryTitle = None
+            summaryValue = None
             if summary.getElementsByTagName('st:title')[0] and \
                summary.getElementsByTagName('st:title')[0].firstChild:
                 summaryTitle = summary.getElementsByTagName('st:title')[0].firstChild.data
@@ -1746,7 +1762,7 @@ class Client:
         post.add('auid', au.auId)
         simulated_AU = hasattr( au, 'title' ) and au.title.startswith( 'Simulated Content: ' )
         if simulated_AU:
-        #    excluded_attributes.update( ( 'auid', 'baseUrl', 'dirStruct', 'fileTypeArray', 'pluginId', 'startUrl', 'title' ) )
+        #    excluded_attributes.update( ( 'auId', 'baseUrl', 'dirStruct', 'fileTypeArray', 'pluginId', 'startUrl', 'title' ) )
             post.add('lfp.root', au.root)
             if au.depth != -1:
                 post.add('lfp.depth', au.depth)
@@ -1780,13 +1796,6 @@ class Client:
                 post.add( 'lfp.' + key, value )
         return post
 
-    def __makeHashPost( self, au ):
-        """Requests the hash of an AU."""
-        post = self.__makePost( 'HashCUS', {'action': 'Hash'} )
-        post.add ('auid', au.auId )
-        post.add( 'hashtype', 4 ) # (sic)
-        return post
-
     def __getRandomContentNode(self, au):
         """Raise an error if the AU hasn't been created or crawled."""
         repository = self.getAuRepository(au)
@@ -1794,7 +1803,6 @@ class Client:
             raise LockssError("No repository for au: %s" % au)
 
         # Randomly select a node to damage
-        random.seed(time.time())
         nodeList = self.getAuNodesWithContent(au)
         randomNode = nodeList[random.randint(0, len(nodeList) - 1)]
 
@@ -1808,14 +1816,12 @@ class Client:
         nodes = self.getAuNodesWithContent(au)
         maxCount = min(maxCount, len(nodes))
 
-        random.seed(time.time())
         returnListLength = random.randint(minCount, maxCount)
 
         # Build a list of nodes.
         ix = 0
         returnList = []
         while ix < returnListLength:
-            random.seed(time.time())
             node = nodes[random.randint(0, len(nodes) - 1)]
             if node in returnList:
                 continue
@@ -1835,14 +1841,12 @@ class Client:
             log.warn("getAuNodesWithChildren returned no nodes!")
             return []
 
-        random.seed(time.time())
         returnListLength = random.randint(minCount, maxCount)
 
         # Build a list of nodes.
         ix = 0
         returnList = []
         while ix < returnListLength:
-            random.seed(time.time())
             node = nodes[random.randint(0, len(nodes) - 1)]
             if node in returnList:
                 continue
@@ -1905,7 +1909,12 @@ class AU:
 
     def __init__( self, auId ):
         self.auId = auId.strip()
-        self.pluginId, auKey = self.auId.split( '&', 1 )
+        try:
+            self.pluginId, auKey = self.auId.split( '&', 1 )
+            if '|' not in self.pluginId or '.' in self.pluginId:
+                raise ValueError
+        except ValueError:
+            raise LockssError( 'Invalid AU ID "%s"' % self.auId )
         self.pluginId = self.pluginId.replace( '|', '.' )
         self.title = urllib.unquote_plus( auKey )
         for property in auKey.split( '&' ):
@@ -1922,14 +1931,14 @@ class AU:
 #       return "%s&root~%s" % (auIdKey, self.root)
 
 
-class SimulatedAu( AU ):
+class SimulatedAU( AU ):
     """A Python abstraction of a SimulatedPlugin Archival Unit for use
     in the functional test framework."""
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
                  binFileSize=-1, binRandomSeed=long(time.time()),
                  maxFileName=-1, fileTypes=[],
                  oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
-                 publisherDown=False, protocolVersion=-1):
+                 publisherDown=False, protocolVersion=-1 ):
         self.root = root
         self.depth = depth
         self.branch = branch
@@ -1937,7 +1946,7 @@ class SimulatedAu( AU ):
         self.binFileSize = binFileSize
         self.binRandomSeed = binRandomSeed
         self.maxFileName = maxFileName
-        self.fileTypeArray = fileTypes
+        self.fileTypeArray = fileTypes # Redundant?
         self.fileTypes = sum(self.fileTypeArray)
         self.oddBranchContent = oddBranchContent
         self.badFileLoc = badFileLoc
@@ -1960,9 +1969,7 @@ class SimulatedAu( AU ):
         numFileTypes = len(self.fileTypeArray)
         # Each branch has an index, plus there's a top level index, and
         # the top-level starting URL counts too.
-        return (numFileTypes * self.numFiles * self.branch) + \
-               (numFileTypes * self.numFiles * dp) + \
-               (self.branch + 2)
+        return numFileTypes*self.numFiles*self.branch + numFileTypes*self.numFiles*dp + ( self.branch + 2 )
 
 
 class Node:
