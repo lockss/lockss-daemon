@@ -108,10 +108,10 @@
   hostname            'localhost'  The hostname to use when talking to
 		                   the servlet UI.
 
-  username            'testuser'   The username to use when talking to
+  username            'lockss-u'   The username to use when talking to
                                    the servlet UI.
 
-  password            'testpass'   The password to use when talking to
+  password            'lockss-u'   The password to use when talking to
                                    the servlet UI.
 
 

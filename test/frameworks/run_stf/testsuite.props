@@ -1,6 +1,6 @@
 ## Polling test suite properties file.
 ##
-## $Id: testsuite.props,v 1.7 2008-10-05 05:55:42 tlipkis Exp $
+## $Id: testsuite.props,v 1.8 2009-05-22 16:20:42 mrbax Exp $
 ##
 
 ## For the most part, you don't need to change anything in this file.
@@ -42,10 +42,10 @@
 # hostname = localhost
 
 ## Username
-# username = testuser
+# username = lockss-u
 
 ## Password
-# password = testpass
+# password = lockss-p
 
 ##
 ## Extra properties.  Anything starting with 'org.lockss.' will
