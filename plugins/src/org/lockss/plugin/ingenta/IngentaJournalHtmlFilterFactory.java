@@ -1,5 +1,6 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java*/
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.2 2009-05-22 18:23:49 thib_gc Exp $
+ */ 
 
 /*
 
