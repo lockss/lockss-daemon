@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.133 2009-05-22 19:14:55 dshr Exp $
+ * $Id: BaseArchivalUnit.java,v 1.134 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected List<String> startUrls;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
+  static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
 
   protected String auName;   // the name of the AU (constructed by plugin)
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
@@ -698,38 +699,42 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /**
-   * Returns an ArticleIteratorFactory from the AU's plugin.
-   * @return the ArticleIteratorFactory
+   * Returns an article iterator from the AU's plugin.  If there isn't
+   * one, an empty iterator will be returned.
+   * @return the Iterator for the AU's articles.
    */
-  public ArticleIteratorFactory getArticleIteratorFactory() {
-    return plugin.getArticleIteratorFactory();
+  public Iterator getArticleIterator(String contentType) {
+    Iterator ret = CollectionUtil.EMPTY_ITERATOR;
+    ArticleIteratorFactory aif = plugin.getArticleIteratorFactory(contentType);
+    if (aif != null) try {
+      Iterator it = aif.createArticleIterator(contentType, this);
+      if (it != null) {
+	ret = it;
+      }
+    } catch (PluginException ex) {
+      logger.warning("createArticleIterator(" + contentType + ") threw " + ex);
+    }
+    return ret;
   }
   
+  /**
+   * Returns the article iterator for the default content type.
+   * @return the Iterator for the AU's articles.
+   */
+  public Iterator getArticleIterator() {
+    return getArticleIterator(DEFAULT_ARTICLE_MIME_TYPE);
+  }
+
+
   public long getArticleCount() {
     long ret = 0;
-    ArticleIteratorFactory aif = getArticleIteratorFactory();
-    if (aif != null) {
-      Iterator it = null;
-      try {
-	it = aif.createArticleIterator(null, this);
-      } catch (PluginException ex) {
-	logger.error("createArticleException() threw " + ex);
-      }
-      while (it != null && it.hasNext()) {
-        CachedUrl cu = (CachedUrl)it.next();
-	ret++;
-      }
+    for (Iterator it = getArticleIterator(); it.hasNext(); ) {
+      CachedUrl cu = (CachedUrl)it.next();
+      ret++;
     }
     return ret;
   }
 
-  /**
-   * Return a MetadataExtractor for the MIME type, or null.
-   * @param contentType content type to get a content parser for
-   */
-  public MetadataExtractor getMetadataExtractor(String contentType) {
-    return plugin.getMetadataExtractor(contentType);
-  }
 
   public List<String> getNewContentCrawlUrls() {
     return startUrls;

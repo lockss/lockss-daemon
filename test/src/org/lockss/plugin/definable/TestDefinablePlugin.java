@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.25 2009-05-19 03:49:09 dshr Exp $
+ * $Id: TestDefinablePlugin.java,v 1.26 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -83,10 +83,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertTrue(""+mti.getLinkRewriterFactory().getClass(),
 	       mti.getLinkRewriterFactory() instanceof
 	       NodeFilterHtmlLinkRewriterFactory);
-    assertTrue(""+mti.getArticleIteratorFactory().getClass(),
-	       mti.getArticleIteratorFactory() instanceof
-	       ArticleIteratorFactory);
-    assertFalse(mti.getArticleIteratorFactory().createArticleIterator("text/html", new MockArchivalUnit()).hasNext());
+    assertNull(mti.getArticleIteratorFactory());
+    assertNull(mti.getMetadataExtractorFactory());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof CssLinkExtractor.Factory);
@@ -106,6 +104,12 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(  ("text/html"
 			+ DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY),
 		     "org.lockss.test.MockLinkRewriterFactory");
+    defMap.putString(  ("text/html"
+			+ DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY),
+		     "org.lockss.test.MockMetadataExtractorFactory");
+    defMap.putString(  ("text/html"
+			+ DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY),
+		     "org.lockss.test.MockArticleIteratorFactory");
     defMap.putString(  ("application/pdf"
 			+ DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER),
 		     "1/30s");
@@ -125,7 +129,11 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertTrue(mti.getArticleIteratorFactory()
 	       instanceof ArticleIteratorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getArticleIteratorFactory())
-	       instanceof MimeTypeInfo.NullArticleIteratorFactory);
+	       instanceof MockArticleIteratorFactory);
+    assertTrue(mti.getMetadataExtractorFactory()
+	       instanceof MetadataExtractorFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(mti.getMetadataExtractorFactory())
+	       instanceof MockMetadataExtractorFactory);
     assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
@@ -145,10 +153,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertTrue(""+mti.getLinkRewriterFactory().getClass(),
 	       mti.getLinkRewriterFactory() instanceof
 	       NodeFilterHtmlLinkRewriterFactory);
-    assertTrue(""+mti.getArticleIteratorFactory().getClass(),
-	       mti.getArticleIteratorFactory() instanceof
-	       ArticleIteratorFactory);
-    assertFalse(mti.getArticleIteratorFactory().createArticleIterator("text/html", new MockArchivalUnit()).hasNext());
+    assertNull(mti.getArticleIteratorFactory());
+    assertNull(mti.getMetadataExtractorFactory());
     mti = p2.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof CssLinkExtractor.Factory);

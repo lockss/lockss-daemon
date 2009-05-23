@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractorFactory.java,v 1.1 2009-05-22 19:14:54 dshr Exp $
+ * $Id: SimpleMetaTagMetadataExtractorFactory.java,v 1.2 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -48,6 +48,6 @@ public class SimpleMetaTagMetadataExtractorFactory
     if ("text/html".equalsIgnoreCase(mimeType)) {
       return new SimpleMetaTagMetadataExtractor();
     }
-    return new MimeTypeInfo.NullExtractor();
+    return null;
   }
 }

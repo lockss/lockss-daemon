@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.6 2009-05-22 19:14:54 dshr Exp $
+ * $Id: MimeTypeInfo.java,v 1.7 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -72,10 +72,8 @@ public interface MimeTypeInfo {
     private LinkExtractorFactory extractorFactory;
     private RateLimiter fetchRateLimiter;
     private LinkRewriterFactory linkFactory;
-    private ArticleIteratorFactory articleIteratorFactory =
-	new ArticleIteratorFactoryWrapper(new NullArticleIteratorFactory());
-    private MetadataExtractorFactory metadataExtractorFactory =
-	new MetadataExtractorFactoryWrapper(new NullMetadataExtractorFactory());
+    private ArticleIteratorFactory articleIteratorFactory;
+    private MetadataExtractorFactory metadataExtractorFactory;
 
     public Impl() {
     }
@@ -147,45 +145,4 @@ public interface MimeTypeInfo {
 
   }
 
-  public class NullArticleIteratorFactory implements ArticleIteratorFactory {
-    public NullArticleIteratorFactory() {}
-    public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
-	throws PluginException {
-      return CollectionUtil.EMPTY_ITERATOR;
-    }
-  }
-
-  public class NullMetadataExtractorFactory
-      implements MetadataExtractorFactory {
-    public NullMetadataExtractorFactory() {}
-    public MetadataExtractor createMetadataExtractor(String mimeType)
-	throws PluginException {
-	return new NullExtractor();
-    }
-  }
-
-  public class NullExtractor implements MetadataExtractor {
-    public NullExtractor() {
-    }
-    public Metadata extract(CachedUrl cu)
-        throws IOException, PluginException {
-	return new EmptyMetadata();
-    }
-  }
-  public class EmptyMetadata extends Metadata {
-    private EmptyMetadata() {
-    }
-    public Object setProperty(String key, String value) {
-        throw new UnsupportedOperationException();
-    }
-    public void load(InputStream is) throws IOException {
-        throw new UnsupportedOperationException();
-    }
-    public Object put(Object key, Object value) {
-        throw new UnsupportedOperationException();
-    }
-    public void putAll(Map m) {
-        throw new UnsupportedOperationException();
-    }
-  }
 }

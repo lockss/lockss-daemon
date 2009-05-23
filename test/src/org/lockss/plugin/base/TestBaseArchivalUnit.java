@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.47 2009-05-19 03:49:09 dshr Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.48 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -508,9 +508,12 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	       instanceof LinkRewriterFactory );
   }
 
-  public void testGetArticleIteratorFactory() {
-    assertNull(mbau.getArticleIteratorFactory());
-    assertTrue(mbau.getArticleCount() == 0);
+  public void testGetArticleIterator() {
+    Iterator articleIterator = mbau.getArticleIterator();
+    assertNotNull(articleIterator);
+    assertFalse(articleIterator.hasNext());
+    MockArticleIteratorFactory maif = new MockArticleIteratorFactory();
+    mplug.setArticleIteratorFactory(maif);
     String[] urls = {
 	"http://www.example.com/1",
 	"http://www.example.com/2",
@@ -523,27 +526,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     for (int i = 0; i < listSize; i++) {
       l.add(new MockCachedUrl(urls[i]));
     }
-    ArticleIteratorFactory aif = new MockArticleIteratorFactory(l.iterator());
-    mbau.setArticleIteratorFactory(aif);
-    assertTrue(mbau.getArticleCount() == listSize);
-    aif = new MockArticleIteratorFactory(l.iterator());
-    mbau.setArticleIteratorFactory(aif);
-    ArticleIteratorFactory aif2 = mbau.getArticleIteratorFactory();
-    assertNotNull(aif2);
-    assertEquals(aif, aif2);
-    Iterator it = null;
-    try {
-	it = aif2.createArticleIterator("text/html", mbau);
-    } catch (PluginException ex) {
-      fail("getArticleIterator() threw " + ex);
+    maif.setArticleIterator(l.iterator());
+    int count = 0;
+    for (Iterator it = mbau.getArticleIterator(); it.hasNext(); count++) {
+      MockCachedUrl cu = (MockCachedUrl)it.next();
+      assertEquals(urls[count], cu.getUrl());
     }
-    assertNotNull(it);
-    assertTrue(it.hasNext());
-    for (int i = 0; i < listSize; i++) {
-      Object n = it.next();
-      assertTrue(n instanceof CachedUrl);
-    }
-    assertFalse(it.hasNext());
+    assertEquals(count,listSize);
   }
 
   public void testGetCrawlSpec() throws ConfigurationException {
@@ -870,7 +859,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     private boolean setAuParams = false;
     private List permissionPages = null;
     TitleConfig tc = null;
-    private ArticleIteratorFactory articleIteratorFactory = null;
 
     private String mimeTypeCalledWith = null;
 
@@ -953,13 +941,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     public void setFetchRateLimiter(RateLimiter limit) {
       fetchRateLimiter = limit;      
-    }
-    public ArticleIteratorFactory getArticleIteratorFactory() {
-      return articleIteratorFactory;
-    }
-
-    public void setArticleIteratorFactory(ArticleIteratorFactory factory) {
-      this.articleIteratorFactory = factory;
     }
   }
 }

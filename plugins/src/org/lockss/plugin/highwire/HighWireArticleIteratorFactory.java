@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.2 2009-05-22 19:14:54 dshr Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.3 2009-05-23 18:06:25 dshr Exp $
  */
 
 /*
@@ -40,8 +40,9 @@ import org.lockss.plugin.base.*;
 import org.lockss.daemon.PluginException;
 
 public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
-  static String defaultSubTreeRoot = "cgi/reprint";
   static Logger log = Logger.getLogger("HighWireArticleIterator");
+
+  protected String subTreeRoot = "cgi/reprint";
 
   public HighWireArticleIteratorFactory() {
   }
@@ -56,16 +57,15 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
   public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
     throws PluginException {
       log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
-		") " + defaultSubTreeRoot);
-      return new ArticleIterator(mimeType, au, defaultSubTreeRoot);
-  }
-  public void setSubTreeRoot(String root) {
-    defaultSubTreeRoot = root;
-    log.debug("Set subTreeRoot: " + defaultSubTreeRoot);
+		") " + subTreeRoot);
+      return new ArticleIterator(mimeType, au, subTreeRoot);
   }
     /*
      * The HighWire URL structure means that the HTML for an article
      * is at a URL like http://apr.sagepub.com/cgi/reprint/34/2/135
+     * XXX This implementation builds an ArrayList of the CachedUrls.
+     * XXX Not a good idea - the iterator returned should invoke
+     * XXX internal iterators to avoid holding that much memory.
      */
     private static class ArticleIterator implements Iterator {
 	String mimeType;

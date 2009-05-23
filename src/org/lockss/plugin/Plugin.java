@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.28 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: Plugin.java,v 1.29 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.extractor.*;
 
 /**
  * Interface required by a plugin to be used by the lockss daemon.  All
@@ -162,4 +163,21 @@ public interface Plugin {
    * @param expectedType Type (class or interface) of expected rexult
    */
   public Object newAuxClass(String className, Class expectedType);
+
+  /**
+   * Return a {@link MetadataExtractor} that knows how to extract URLs from
+   * content of the given MIME type
+   * @param contentType content type to get a content parser for
+   * @param au the AU in question
+   * @return A MetadataExtractor or null
+   */
+    public MetadataExtractor getMetadataExtractor(String contentType,
+						  ArchivalUnit au);
+
+  /**
+   * Returns the article iterator factory for the mime type, if any
+   * @param contentType the content type
+   * @return the ArticleIteratorFactory
+   */
+    public ArticleIteratorFactory getArticleIteratorFactory(String contentType);
 }

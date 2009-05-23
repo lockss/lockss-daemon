@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.7 2009-05-22 19:14:54 dshr Exp $
+ * $Id: TestHighWirePlugin.java,v 1.8 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -143,8 +143,18 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void dontTestGetMetadataExtractor() {
-    assertNotNull(plugin.getMetadataExtractor("text/html"));
-    assertTrue(plugin.getMetadataExtractor("text/html") instanceof
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(VOL_KEY, "32");
+//     props.setProperty(YEAR_KEY, "2004");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    assertNotNull(plugin.getMetadataExtractor("text/html", au));
+    assertTrue(plugin.getMetadataExtractor("text/html", au) instanceof
 	       org.lockss.extractor.SimpleMetaTagMetadataExtractor);
   }
   public void dontTestGetFilterFactory() {
@@ -153,8 +163,8 @@ public class TestHighWirePlugin extends LockssTestCase {
 	       instanceof org.lockss.plugin.highwire.HighWirePdfFilterFactory);
   }
   public void dontTestGetArticleIteratorFactory() {
-    assertNotNull(plugin.getArticleIteratorFactory());
-    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
+    assertNotNull(plugin.getArticleIteratorFactory("test/html"));
+    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory("text/html"))
 	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
   }
 }

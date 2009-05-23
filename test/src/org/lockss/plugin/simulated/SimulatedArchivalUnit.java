@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.66 2008-11-02 21:16:43 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.67 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -79,6 +79,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private List pauseContentTypes = new ArrayList();
 
   Set toBeDamaged = new HashSet();
+
+  private Iterator articleIterator = null;
 
   public SimulatedArchivalUnit(Plugin owner) {
     super(owner);

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.36 2009-01-21 23:15:06 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.37 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
+import java.util.*;
 import java.net.MalformedURLException;
 
 import org.lockss.config.*;
@@ -41,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
+import org.lockss.extractor.*;
 
 /** Base class for CachedUrls.  Expects the LockssRepository for storage.
  * Plugins may extend this to get some common CachedUrl functionality.
@@ -61,7 +63,7 @@ public class BaseCachedUrl implements CachedUrl {
   public static final String PARAM_FILTER_USE_CHARSET =
     Configuration.PREFIX + "baseCachedUrl.filterUseCharset";
   public static final boolean DEFAULT_FILTER_USE_CHARSET = true;
-
+  public static final String DEFAULT_METADATA_CONTENT_TYPE = "text/html";
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {
     this.au = owner;
@@ -209,6 +211,44 @@ public class BaseCachedUrl implements CachedUrl {
 
   public long getContentSize() {
     return getNodeVersion().getContentSize();
+  }
+
+  /**
+   * Return a MetadataExtractor for the CachedUrl's content type.
+   * If there isn't one, a null extractor will be returned.
+   */
+  public MetadataExtractor getMetadataExtractor() {
+    String ct = getContentType();
+    MetadataExtractor ret = au.getPlugin().getMetadataExtractor(ct, au);
+    if (ret == null) {
+      ret = new NullMetadataExtractor();
+    }
+    return ret;
+  }
+
+  public class NullMetadataExtractor implements MetadataExtractor {
+    public NullMetadataExtractor() {
+    }
+    public Metadata extract(CachedUrl cu)
+        throws IOException, PluginException {
+	return new EmptyMetadata();
+    }
+  }
+  public class EmptyMetadata extends Metadata {
+    private EmptyMetadata() {
+    }
+    public Object setProperty(String key, String value) {
+        throw new UnsupportedOperationException();
+    }
+    public void load(InputStream is) throws IOException {
+        throw new UnsupportedOperationException();
+    }
+    public Object put(Object key, Object value) {
+        throw new UnsupportedOperationException();
+    }
+    public void putAll(Map m) {
+        throw new UnsupportedOperationException();
+    }
   }
 
   public void release() {

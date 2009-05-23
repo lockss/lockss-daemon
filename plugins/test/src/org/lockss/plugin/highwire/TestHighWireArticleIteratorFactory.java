@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.1 2009-05-19 03:49:09 dshr Exp $
+ * $Id: TestHighWireArticleIteratorFactory.java,v 1.2 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 public class TestHighWireArticleIteratorFactory extends LockssTestCase {
@@ -128,13 +129,16 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
 
     crawlContent();
 
-    ArticleIteratorFactory aif = sau.getArticleIteratorFactory();
-    assertNotNull(aif);
-    assertTrue(aif instanceof HighWireArticleIteratorFactory);
-    ((HighWireArticleIteratorFactory)aif).setSubTreeRoot("branch1/branch1");
-    long ret = sau.getArticleCount();
-    log.debug("Article count is " + ret);
-    assertEquals((long)32, ret);
+    int count = 0;
+    for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
+	BaseCachedUrl cu = (BaseCachedUrl)it.next();
+	assertNotNull(cu);
+	assert(cu instanceof CachedUrl);
+	log.debug("count " + count + " url " + cu.getUrl());
+	count++;
+    }
+    log.debug("Article count is " + count);
+    assertEquals(32, count);
   }
 
   private void createContent() {
@@ -165,9 +169,20 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
      * @return the ArticleIteratorFactory
      */
     public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
-      return new HighWireArticleIteratorFactory();
+      MyHighWireArticleIteratorFactory ret =
+	  new MyHighWireArticleIteratorFactory();
+      ret.setSubTreeRoot("branch1/branch1");
+      return ret;
     }
-
   }
 
+  public static class MyHighWireArticleIteratorFactory
+      extends HighWireArticleIteratorFactory {
+    MyHighWireArticleIteratorFactory() {
+    }
+    public void setSubTreeRoot(String root) {
+      subTreeRoot = root;
+      log.debug("Set subTreeRoot: " + subTreeRoot);
+    }
+  }
 }

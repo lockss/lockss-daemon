@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.27 2008-09-18 02:10:23 dshr Exp $
+ * $Id: PTestPlugin.java,v 1.28 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.servlet.*;
 import org.lockss.rewriter.*;
+import org.lockss.extractor.*;
 
 /**
  * Stub plugin for testing proxy.
@@ -139,6 +140,11 @@ public class PTestPlugin {
 
     public void release() {
     }
+
+    public MetadataExtractor getMetadataExtractor() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
   }
 
   static class AU extends NullPlugin.ArchivalUnit {

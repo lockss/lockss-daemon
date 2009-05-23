@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.26 2008-09-18 02:10:23 dshr Exp $
+ * $Id: CrawlRuleTester.java,v 1.27 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -470,7 +470,8 @@ public class CrawlRuleTester extends Thread {
 
     public MyMockCachedUrl(String url, Reader reader) {
       this.url = url;
-      this.reader = reader;
+  
+    this.reader = reader;
     }
 
     public ArchivalUnit getArchivalUnit() {
@@ -566,6 +567,8 @@ public class CrawlRuleTester extends Thread {
       sb.append("]");
       return sb.toString();
     }
+    public MetadataExtractor getMetadataExtractor() {
+      return null;
+    }
   }
-
 }

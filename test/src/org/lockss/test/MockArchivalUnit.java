@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.82 2009-05-22 19:14:55 dshr Exp $
+ * $Id: MockArchivalUnit.java,v 1.83 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -71,8 +71,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private FilterRule filterRule = null;
   private FilterFactory filterFactory = null;
   private LinkRewriterFactory rewriterFactory = null;
-  private ArticleIteratorFactory articleIteratorFactory = null;
-  private MetadataExtractor metadataExtractor = null;
+  private Iterator articleIterator = null;
   private Map extractors = new HashMap();
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private List urlStems = Collections.EMPTY_LIST;
@@ -468,12 +467,16 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.rewriterFactory = rewriterFactory;
   }
 
-  public ArticleIteratorFactory getArticleIteratorFactory() {
-    return articleIteratorFactory;
+  public Iterator getArticleIterator() {
+    return articleIterator;
   }
 
-  public void setArticleIteratorFactory(ArticleIteratorFactory factory) {
-    this.articleIteratorFactory = factory;
+  public Iterator getArticleIterator(String contentType) {
+    return articleIterator;
+  }
+
+  public void setArticleIterator(Iterator iter) {
+    this.articleIterator = iter;
   }
 
   public LinkExtractor getLinkExtractor(String contentType) {
@@ -487,20 +490,6 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setLinkExtractor(String mimeType, LinkExtractor extractor) {
     extractors.put(mimeType, extractor);
-  }
-
-  public MetadataExtractor getMetadataExtractor(String contentType) {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    MetadataExtractor res =
-	(MetadataExtractor)extractors.get("metadata:" + mimeType);
-    if (res == null) {
-      res = (MetadataExtractor)extractors.get("metadata:*");
-    }      
-    return res;
-  }
-
-  public void setMetadataExtractor(String mimeType, MetadataExtractor extractor) {
-    extractors.put("metadata:" + mimeType, extractor);
   }
 
   public String toString() {

@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.2 2009-05-22 19:14:55 dshr Exp $
+ * $Id: ListObjects.java,v 1.3 2009-05-23 18:06:26 dshr Exp $
  */
 
 /*
@@ -121,32 +121,25 @@ public class ListObjects extends LockssServlet {
   }
 
   void listDOIs() throws IOException {
-    MetadataExtractor me = au.getMetadataExtractor(null);
-    ArticleIteratorFactory aif = au.getArticleIteratorFactory();
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
     wrtr.println("# DOIs in " + au.getName());
     wrtr.println();
-    try {
-      for (Iterator iter = aif.createArticleIterator(null, au);
-	   iter.hasNext(); ) {
-        CachedUrl cu = (CachedUrl)iter.next();
-	if (cu.hasContent()) {
-          try {
-            Metadata md = me.extract(cu);
-	    String doi = md.getDOI();
-	    if (doi != null) {
-	      wrtr.println(doi);
-	    }
-	  } catch (IOException e) {
-	    // Ignore
-	  } catch (PluginException e) {
-	    // Ignore
+    for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
+      CachedUrl cu = (CachedUrl)iter.next();
+      if (cu.hasContent()) {
+        try {
+          Metadata md = cu.getMetadataExtractor().extract(cu);
+	  String doi = md.getDOI();
+	  if (doi != null) {
+	    wrtr.println(doi);
 	  }
+	} catch (IOException e) {
+	  log.warning("listDOIs() threw " + e);
+	} catch (PluginException e) {
+	  log.warning("listDOIs() threw " + e);
 	}
       }
-    } catch (PluginException e) {
-	// Ignore
     }
   }
 
