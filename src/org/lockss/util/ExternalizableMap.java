@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.20 2009-04-07 04:53:20 tlipkis Exp $
+ * $Id: ExternalizableMap.java,v 1.21 2009-05-24 17:14:59 tlipkis Exp $
  */
 
 /*
@@ -38,8 +38,7 @@ import java.util.Map;
 import java.net.URL;
 
 /**
- * <p>A {@link TypedEntryMap} that does not allow keys of type
- * {@link Map} and that can be serialized to an XML file.</p>
+ * <p>A {@link TypedEntryMap} that can be serialized to an XML file.</p>
  */
 public class ExternalizableMap extends TypedEntryMap {
 
@@ -51,6 +50,10 @@ public class ExternalizableMap extends TypedEntryMap {
    * maps and providing default constructors. Hopefully this class will
    * become deprecated when Castor is phased out and the supertype
    * TypedEntryMap can be used instead.
+   *
+   * 5/24/09 - removed prohibition against nested maps, as XStream can
+   * handle them.  The de/serialization functionality should still be moved
+   * up to TypedEntryMap and this class eliminated
    */
 
   // CASTOR: Phase out this class; use superclass TypedEntryMap
@@ -71,16 +74,6 @@ public class ExternalizableMap extends TypedEntryMap {
   }
 
   /**
-   * <p>Throws an {@link IllegalArgumentException}.</p>
-   * @param key {@inheritDoc}
-   * @param def {@inheritDoc}
-   * @return {@inheritDoc}
-   */
-  public Map getMap(String key, Map def) {
-    throw new IllegalArgumentException(MAP_WARNING);
-  }
-
-  /**
    * <p>Loads the contents of a serialized map into this object,
    * replacing its contents if the deserialized map is non-null.</p>
    * @param mapLocation The path of the file where the map is stored.
@@ -89,6 +82,16 @@ public class ExternalizableMap extends TypedEntryMap {
   public void loadMap(String mapLocation,
                       String mapName) {
     loadMap(makeHashMapSerializer(), mapLocation, mapName);
+  }
+
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null.</p>
+   * @param mapLocation The path of the file where the map is stored.
+   * @param mapName     The name of the file where the map is stored.
+   */
+  public void loadMap(File file) {
+    loadMap(makeHashMapSerializer(), file);
   }
 
   /**
@@ -102,9 +105,20 @@ public class ExternalizableMap extends TypedEntryMap {
   public void loadMap(ObjectSerializer deserializer,
                       String mapLocation,
                       String mapName) {
-    errorString = null;
-    File mapFile = new File(mapLocation, mapName);
+    loadMap(deserializer, new File(mapLocation, mapName));
+  }
 
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null,
+   * using the given deserializer.</p>
+   * @param deserializer The object serializer to use.
+   * @param mapLocation  The path of the file where the map is stored.
+   * @param mapName      The name of the file where the map is stored.
+   */
+  public void loadMap(ObjectSerializer deserializer,
+                      File mapFile) {
+    errorString = null;
     try {
       // CASTOR: remove unwrap() call
       HashMap map = unwrap(deserializer.deserialize(mapFile));
@@ -207,15 +221,6 @@ public class ExternalizableMap extends TypedEntryMap {
       fnf.initCause(e);
       throw fnf;
     }
-  }
-
-  /**
-   * <p>Throws an {@link IllegalArgumentException}.</p>
-   * @param key {@inheritDoc}
-   * @param value {@inheritDoc}
-   */
-  public void putMap(String key, Map value) {
-    throw new IllegalArgumentException(MAP_WARNING);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestExternalizableMap.java,v 1.8 2005-08-08 23:28:30 thib_gc Exp $
+ * $Id: TestExternalizableMap.java,v 1.9 2009-05-24 17:14:59 tlipkis Exp $
  */
 
 /*
@@ -50,32 +50,13 @@ public class TestExternalizableMap extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
   }
 
-  public void testMap() {
-    Map value = new HashMap();
-    value.put("ValueMap", "Entry");
-    Map defaultValue = new HashMap();
-    defaultValue.put("DefaultMap", "DefaultEntry");
-    try {
-      map.putMap(key, value);
-      assertTrue("Exception not thrown", false);
-    }
-    catch(IllegalArgumentException iae) {
-    }
-    try {
-      map.getMap(key, value);
-      assertTrue("Exception not thrown", false);
-    }
-    catch(IllegalArgumentException iae) {
-    }
-  }
-
   public void testMarshalling() throws MalformedURLException {
     Collection testCol = new ArrayList();
     testCol.add("string 1");
     testCol.add("string 2");
-//    Map testMap = new HashMap();
-  //  testMap.put("test 1", "value 1");
-    //testMap.put("test 2", "value 2");
+    Map mapVal = new HashMap();
+    mapVal.put("test 1", "value 1");
+    mapVal.put("test 2", "value 2");
     URL testUrl = new URL("http://www.example.com");
     Collection testCpd = ListUtil.list(ConfigParamDescr.VOLUME_NUMBER,
                                       ConfigParamDescr.BASE_URL);
@@ -85,11 +66,13 @@ public class TestExternalizableMap extends LockssTestCase {
     map.putFloat("test-f", (float)2.12);
     map.putInt("test-i", 123);
     map.putLong("test-l", 123321);
-//    map.putMap("test-m", testMap);
+    map.putMap("test-m", mapVal);
     map.putString("test-s", "test string");
     map.putUrl("test-u", testUrl);
     // test for collections of ConfigParamDescr
     map.putCollection("test-cpd", testCpd);
+
+
     // marshal
     String fileLoc = tempDirPath + "testMap";
     String fileName = "testMap";
@@ -133,7 +116,7 @@ public class TestExternalizableMap extends LockssTestCase {
     assertEquals(2.12, map.getFloat("test-f", (float)1.0), 0.01);
     assertEquals(123, map.getInt("test-i", 1));
     assertEquals(123321, map.getLong("test-l", 1));
-//    assertEquals(testMap, map.getMap("test-m", new HashMap()));
+    assertEquals(mapVal, map.getMap("test-m", new HashMap()));
     assertEquals("test string", map.getString("test-s", "foo"));
     assertEquals(testUrl, map.getUrl("test-u", new URL("http://foo.com")));
     assertIsomorphic(testCpd,
