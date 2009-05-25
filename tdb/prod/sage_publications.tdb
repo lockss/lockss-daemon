@@ -3414,7 +3414,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Gender, Technology and Development Volume 9 ; 9 >
-        au < testing ; Gender, Technology and Development Volume 10 ; 10 >
+        au < ready ; Gender, Technology and Development Volume 10 ; 10 >
         au < released ; Gender, Technology and Development Volume 11 ; 11 >
 
       }
@@ -3815,7 +3815,7 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Hispanic Journal of Behavioral Sciences Volume 27 ; 27 >
         au < do_not_process ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
-        au < testing ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
+        au < ready ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
 
       }
 
@@ -4114,8 +4114,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Indian Economic & Social History Review Volume 42 ; 42 >
-        au < testing ; Indian Economic & Social History Review Volume 43 ; 43 >
-        au < testing ; Indian Economic & Social History Review Volume 44 ; 44 >
+        au < ready ; Indian Economic & Social History Review Volume 43 ; 43 >
+        au < ready ; Indian Economic & Social History Review Volume 44 ; 44 >
 
       }
 
@@ -4446,9 +4446,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://ijd.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; International Journal of Damage Mechanics Volume 14 ; 14 >
+        au < ready ; International Journal of Damage Mechanics Volume 14 ; 14 >
         au < do_not_process ; International Journal of Damage Mechanics Volume 15 ; 15 >
-        au < testing ; International Journal of Damage Mechanics Volume 16 ; 16 >
+        au < ready ; International Journal of Damage Mechanics Volume 16 ; 16 >
 
       }
 
@@ -4497,7 +4497,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; The International Journal of Lower Extremity Wounds Volume 4 ; 4 >
-        au < testing ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
+        au < ready ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
 
       }
@@ -4743,9 +4743,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://irs.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; International Review for the Sociology of Sport Volume 40 ; 40 >
-        au < testing ; International Review for the Sociology of Sport Volume 41 ; 41 >
-        au < testing ; International Review for the Sociology of Sport Volume 42 ; 42 >
+        au < ready ; International Review for the Sociology of Sport Volume 40 ; 40 >
+        au < ready ; International Review for the Sociology of Sport Volume 41 ; 41 >
+        au < ready ; International Review for the Sociology of Sport Volume 42 ; 42 >
 
       }
 
@@ -4774,8 +4774,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; International Review of Administrative Sciences Volume 71 ; 71 >
-        au < testing ; International Review of Administrative Sciences Volume 72 ; 72 >
-        au < testing ; International Review of Administrative Sciences Volume 73 ; 73 >
+        au < ready ; International Review of Administrative Sciences Volume 72 ; 72 >
+        au < tesreadyting ; International Review of Administrative Sciences Volume 73 ; 73 >
 
       }
 
@@ -4892,7 +4892,7 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jhj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
+        au < not_ready ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
         au < ready ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
         au < ready ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
         au < ready ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
@@ -4954,7 +4954,7 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jot.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal for the Study of the Old Testament Volume 29 ; 29 >
+        au < ready ; Journal for the Study of the Old Testament Volume 29 ; 29 >
         au < do_not_process ; Journal for the Study of the Old Testament Volume 30 ; 30 >
         au < ready ; Journal for the Study of the Old Testament Volume 31 ; 31 >
         au < ready ; Journal for the Study of the Old Testament Volume 32 ; 32 >
@@ -4976,8 +4976,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 14 ; 14 >
-        au < testing ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
-        au < testing ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
+        au < ready ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
+        au < ready ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 >
 
       }
@@ -5197,9 +5197,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jbc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Bioactive and Compatible Polymers Volume 20 ; 20 >
-        au < manifest ; Journal of Bioactive and Compatible Polymers Volume 21 ; 21 >
-        au < manifest ; Journal of Bioactive and Compatible Polymers Volume 22 ; 22 >
+        au < testing ; Journal of Bioactive and Compatible Polymers Volume 20 ; 20 >
+        au < testing ; Journal of Bioactive and Compatible Polymers Volume 21 ; 21 >
+        au < testing ; Journal of Bioactive and Compatible Polymers Volume 22 ; 22 >
 
       }
 
@@ -5359,9 +5359,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jen.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Building Physics Volume 28 ; 28 >
+        au < testing ; Journal of Building Physics Volume 28 ; 28 >
         au < ready ; Journal of Building Physics Volume 29 ; 29 >
-        au < manifest ; Journal of Building Physics Volume 30 ; 30 >
+        au < testing ; Journal of Building Physics Volume 30 ; 30 >
         au < ready ; Journal of Building Physics Volume 31 ; 31 >
 
       }
@@ -5441,7 +5441,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 10 ; 10 >
-        au < manifest ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 11 ; 11 >
+        au < testing ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 11 ; 11 >
         au < ready ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 12 ; 12 >
 
       }
@@ -5521,8 +5521,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Cases in Educational Leadership Volume 8 ; 8 >
-        au < manifest ; Journal of Cases in Educational Leadership Volume 9 ; 9 >
-        au < manifest ; Journal of Cases in Educational Leadership Volume 10 ; 10 >
+        au < testing ; Journal of Cases in Educational Leadership Volume 9 ; 9 >
+        au < testing ; Journal of Cases in Educational Leadership Volume 10 ; 10 >
 
       }
 
@@ -5540,8 +5540,8 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://cel.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Cellular Plastics Volume 41 ; 41 >
-        au < manifest ; Journal of Cellular Plastics Volume 42 ; 42 >
+        au < testing ; Journal of Cellular Plastics Volume 41 ; 41 >
+        au < testing ; Journal of Cellular Plastics Volume 42 ; 42 >
         au < ready ; Journal of Cellular Plastics Volume 43 ; 43 >
 
       }
@@ -5571,7 +5571,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Child Health Care Volume 1 ; 1 >
-        au < manifest ; Journal of Child Health Care Volume 9 ; 9 >
+        au < testing ; Journal of Child Health Care Volume 9 ; 9 >
         au < do_not_process ; Journal of Child Health Care Volume 10 ; 10 >
         au < ready ; Journal of Child Health Care Volume 11 ; 11 >
 
@@ -5631,8 +5631,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; The Journal of Clinical Pharmacology Volume 45 ; 45 >
-        au < manifest ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
-        au < manifest ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
+        au < testing ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
+        au < testing ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
 
       }
 
@@ -5660,9 +5660,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jcl.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; The Journal of Commonwealth Literature Volume 40 ; 40 >
+        au < testing ; The Journal of Commonwealth Literature Volume 40 ; 40 >
         au < do_not_process ; The Journal of Commonwealth Literature Volume 41 ; 41 >
-        au < manifest ; The Journal of Commonwealth Literature Volume 42 ; 42 >
+        au < testing ; The Journal of Commonwealth Literature Volume 42 ; 42 >
 
       }
 
@@ -5751,7 +5751,7 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jcr.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Conflict Resolution Volume 49 ; 49 >
+        au < testing ; Journal of Conflict Resolution Volume 49 ; 49 >
         au < do_not_process ; Journal of Conflict Resolution Volume 50 ; 50 >
         au < ready ; Journal of Conflict Resolution Volume 51 ; 51 >
 
@@ -5803,7 +5803,7 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; Journal of Contemporary Criminal Justice Volume 21 ; 21 >
         au < do_not_process ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
-        au < manifest ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
+        au < testing ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
 
       }
 
@@ -5822,8 +5822,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Contemporary Ethnography Volume 34 ; 34 >
-        au < manifest ; Journal of Contemporary Ethnography Volume 35 ; 35 >
-        au < manifest ; Journal of Contemporary Ethnography Volume 36 ; 36 >
+        au < testing ; Journal of Contemporary Ethnography Volume 35 ; 35 >
+        au < testing ; Journal of Contemporary Ethnography Volume 36 ; 36 >
 
       }
 
