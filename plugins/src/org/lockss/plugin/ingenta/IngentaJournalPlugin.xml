@@ -21,14 +21,14 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ingenta Journal Plugin</string>
+    <string>Ingenta Volume Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://(%s|%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, api_url_host, graphics_url_host</string>
       <string>4,&quot;^(%s|%s|%s)&quot;, base_url, api_url, graphics_url</string>
-      <string>1,&quot;^%scontent/(%s|%s)\?format=lockss&amp;volume=%s$&quot;, base_url, api_url, journal_issn, volume_name</string>
+      <string>1,&quot;^(%s|%s)content/%s\?format=lockss&amp;volume=%s$&quot;, base_url, api_url, journal_issn, volume_name</string>
       <string>1,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
       <string>1,&quot;^%s&quot;, graphics_url</string>  
     </list>
@@ -113,9 +113,5 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaJournalHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.ingenta.IngentaLinkExtractorFactory</string>
   </entry>
 </map>
