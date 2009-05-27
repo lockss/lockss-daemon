@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.7 2009-05-23 18:06:26 dshr Exp $
+ * $Id: MimeTypeInfo.java,v 1.8 2009-05-27 16:39:04 dshr Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ public interface MimeTypeInfo {
   /** An empty MimeTypeInfo */
   public static MimeTypeInfo NULL_INFO = new MimeTypeInfo.Impl();
 
+  public static final String DEFAULT_METADATA_TYPE = "*";
+
   /** Returns the FilterFactory, or null */
   public FilterFactory getFilterFactory();
   /** Returns the LinkExtractorFactory, or null */
@@ -52,8 +54,12 @@ public interface MimeTypeInfo {
   public LinkRewriterFactory getLinkRewriterFactory();
   /** Returns the ArticleIteratorFactory, or null */
   public ArticleIteratorFactory getArticleIteratorFactory();
-  /** Returns the ArticleIteratorFactory, or null */
+  /** Returns the default MetadataExtractorFactory, or null */
   public MetadataExtractorFactory getMetadataExtractorFactory();
+  /** Returns the MetadataExtractorFactory for the metadata type, or null */
+  public MetadataExtractorFactory getMetadataExtractorFactory(String mdType);
+  /** Returns the MetadataExtractorFactoryMap, or null */
+  public Map getMetadataExtractorFactoryMap();
 
   /** Sub interface adds setters */
   public interface Mutable extends MimeTypeInfo {
@@ -62,7 +68,7 @@ public interface MimeTypeInfo {
     public Impl setFetchRateLimiter(RateLimiter limiter);
     public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
     public Impl setArticleIteratorFactory(ArticleIteratorFactory fact);
-    public Impl setMetadataExtractorFactory(MetadataExtractorFactory fact);
+    public Impl setMetadataExtractorFactoryMap(Map map);
   }
 
   class Impl implements Mutable {
@@ -73,7 +79,7 @@ public interface MimeTypeInfo {
     private RateLimiter fetchRateLimiter;
     private LinkRewriterFactory linkFactory;
     private ArticleIteratorFactory articleIteratorFactory;
-    private MetadataExtractorFactory metadataExtractorFactory;
+    private Map metadataExtractorFactoryMap;
 
     public Impl() {
     }
@@ -85,7 +91,7 @@ public interface MimeTypeInfo {
 	fetchRateLimiter = toClone.getFetchRateLimiter();
 	linkFactory = toClone.getLinkRewriterFactory();
 	articleIteratorFactory = toClone.getArticleIteratorFactory();
-	metadataExtractorFactory = toClone.getMetadataExtractorFactory();
+	metadataExtractorFactoryMap = toClone.getMetadataExtractorFactoryMap();
       }
     }
 
@@ -135,11 +141,23 @@ public interface MimeTypeInfo {
     }
 
     public MetadataExtractorFactory getMetadataExtractorFactory() {
-      return metadataExtractorFactory;
+      return getMetadataExtractorFactory(DEFAULT_METADATA_TYPE);
     }
 
-    public Impl setMetadataExtractorFactory(MetadataExtractorFactory fact) {
-      metadataExtractorFactory = fact;
+    public MetadataExtractorFactory getMetadataExtractorFactory(String mdType) {
+      MetadataExtractorFactory ret = null;
+      if (metadataExtractorFactoryMap != null) {
+        ret = (MetadataExtractorFactory)metadataExtractorFactoryMap.get(mdType);
+      }
+      return ret;
+    }
+
+    public Map getMetadataExtractorFactoryMap() {
+      return metadataExtractorFactoryMap;
+    }
+
+    public Impl setMetadataExtractorFactoryMap(Map map) {
+      metadataExtractorFactoryMap = map;
       return this;
     }
 

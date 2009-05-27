@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -73,6 +73,21 @@
   <entry>
     <string>text/html_filter</string>
     <string>org.lockss.plugin.highwire.HighWireFilterRule</string>
+  </entry>
+  <entry>
+    <string>text/html_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+        <string>DublinCore</string>
+        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_login_page_checker</string>

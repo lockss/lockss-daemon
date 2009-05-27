@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractor.java,v 1.1 2009-05-22 19:14:54 dshr Exp $
+ * $Id: SimpleMetaTagMetadataExtractor.java,v 1.2 2009-05-27 16:39:04 dshr Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class SimpleMetaTagMetadataExtractor implements MetadataExtractor {
 	 line = bReader.readLine()) {
       line = line.trim();
       if (StringUtil.startsWithIgnoreCase(line, "<meta ")) {
+	  log.debug2("Line: " + line);
 	  addTag(line, ret);
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.3 2009-05-23 18:06:25 dshr Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.4 2009-05-27 16:39:04 dshr Exp $
  */
 
 /*
@@ -84,7 +84,8 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
 	private void makeIterator() {
 	    Collection stems = au.getUrlStems();
 	    for (Iterator it = stems.iterator(); it.hasNext(); ) {
-		String stem = (String) it.next() + "/";
+		String stem = (String) it.next();
+		if (!stem.endsWith("/")) stem += "/";
 		log.debug("Subtree: " + stem + " + " + subTreeRoot);
 		CachedUrlSetSpec cuss =
 		    new RangeCachedUrlSetSpec(stem + subTreeRoot);
