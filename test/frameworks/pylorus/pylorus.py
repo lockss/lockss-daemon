@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.0 2009-05-22 16:27:28 mrbax Exp $'''
+$Id: pylorus.py,v 2.1 2009-05-27 08:00:12 mrbax Exp $'''
 
 
 import ConfigParser
@@ -21,7 +21,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.0 $'.split()[ 1 ]
+REVISION = '$Revision: 2.1 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
@@ -385,7 +385,7 @@ def self_test_startup():
                                        'org.lockss.localV3Identity': client.getPeerId(),
                                        'org.lockss.poll.v3.enableV3Poller': False,
                                        'org.lockss.poll.v3.quorum': 2,
-                                       'org.lockss.baseau.defaultFetchRateLimiterSource': 'au'
+                                       'org.lockss.baseau.defaultFetchRateLimiterSource': 'au' },
                                      client )
 
     logging.info( 'Starting framework in %s', framework.frameworkDir )
@@ -498,11 +498,13 @@ try:
         local_clients = dict( zip( Content.Action.values, ( [] for value in Content.Action.values ) ) )
         for server in configuration.get( PROGRAM, 'local_servers' ):
             url_components = urlparse.urlparse( server )
+            assert url_components.scheme in Content.Action.values, 'Unknown local server scheme: "%s"' % url_components.scheme
             local_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, DEFAULT_V3_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
 
         remote_clients = dict( zip( Content.Action.values, ( [] for value in Content.Action.values ) ) )
         for server in configuration.get( PROGRAM, 'remote_servers' ):
             url_components = urlparse.urlparse( server )
+            assert url_components.scheme in Content.Action.values, 'Unknown remote server scheme: "%s"' % url_components.scheme
             remote_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, DEFAULT_V3_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
 
         simulated_AU_cache = {}
