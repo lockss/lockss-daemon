@@ -85,4 +85,21 @@
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.bepress.BePressPermissionCheckerFactory</string>
   </entry>
+  <entry>
+    <string>text/html_article_iterator_factory</string>
+    <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.bepress.BePressMetadataExtractorFactory</string>
+      </entry>
+      <entry>
+        <string>DublinCore</string>
+        <string>org.lockss.plugin.bepress.BePressMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
 </map>

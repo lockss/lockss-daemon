@@ -84,6 +84,8 @@
       <entry>
         <string>*</string>
         <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+      </entry>
+      <entry>
         <string>DublinCore</string>
         <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
       </entry>

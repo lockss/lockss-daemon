@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.5 2009-05-28 22:52:57 dshr Exp $
+ * $Id: BePressArticleIteratorFactory.java,v 1.1 2009-05-28 22:52:57 dshr Exp $
  */
 
 /*
@@ -30,25 +30,29 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.plugin.bepress;
 
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
+import org.lockss.config.*;
 import org.lockss.daemon.PluginException;
 
-public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
-  static Logger log = Logger.getLogger("HighWireArticleIterator");
+public class BePressArticleIteratorFactory implements ArticleIteratorFactory {
+  static Logger log = Logger.getLogger("BePressArticleIteratorFactory");
 
   /*
-   * The HighWire URL structure means that the HTML for an article
-   * is at a URL like http://apr.sagepub.com/cgi/reprint/34/2/135
+   * The BePress URL structure means that the HTML for an article
+   * is normally at a URL like http://www.bepress.com/bis/vol3/iss3/art7
+   * but is sometimes at a URL like
+   * http://www.bepress.com/bejte/frontiers/vol1/iss1/art1 where "frontiers"
+   * is an apparently arbitrary word.  So for now we just use the journal
+   * abbreviation as the subTreeRoot.
    */
-  protected String subTreeRoot = "cgi/reprint";
+  protected String subTreeRoot;
 
-  public HighWireArticleIteratorFactory() {
+  public BePressArticleIteratorFactory() {
   }
   /**
    * Create an Iterator that iterates through the AU's articles, pointing
@@ -60,6 +64,15 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
    */
   public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
       throws PluginException {
+    String abbr;
+    abbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+    // int vol;
+    // try {
+    //   vol = au.getConfiguration().getInt(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    // } catch (Configuration.InvalidParam ex) {
+    //   throw new PluginException("BePressArticleIteratorFactory: " + ex);
+    // }
+    subTreeRoot = abbr;
     log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
               ") " + subTreeRoot);
     return new SubTreeArticleIterator(mimeType, au, subTreeRoot);
