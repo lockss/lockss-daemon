@@ -6008,9 +6008,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://ecl.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Early Childhood Literacy Volume 5 ; 5 >
+        au < ready ; Journal of Early Childhood Literacy Volume 5 ; 5 >
         au < ready ; Journal of Early Childhood Literacy Volume 6 ; 6 >
-        au < testing ; Journal of Early Childhood Literacy Volume 7 ; 7 >
+        au < ready ; Journal of Early Childhood Literacy Volume 7 ; 7 >
 
       }
 
@@ -6048,7 +6048,7 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jsd.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Education for Sustainable Development Volume 1 ; 1 >
+        au < ready ; Journal of Education for Sustainable Development Volume 1 ; 1 >
 
       }
 
@@ -6154,7 +6154,7 @@ comment[csp7] = manifest page is malformed
 
         au < do_not_process ; Journal of English Linguistics Volume 33 ; 33 >
         au < ready ; Journal of English Linguistics Volume 34 ; 34 >
-        au < testing ; Journal of English Linguistics Volume 35 ; 35 >
+        au < ready ; Journal of English Linguistics Volume 35 ; 35 >
 
       }
 
@@ -6183,7 +6183,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Journal of Entrepreneurship Volume 14 ; 14 >
-        au < testing ; Journal of Entrepreneurship Volume 15 ; 15 >
+        au < ready ; Journal of Entrepreneurship Volume 15 ; 15 >
         au < ready ; Journal of Entrepreneurship Volume 16 ; 16 >
 
       }
@@ -6214,7 +6214,7 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; The Journal of Environment & Development Volume 14 ; 14 >
         au < do_not_process ; The Journal of Environment & Development Volume 15 ; 15 >
-        au < testing ; The Journal of Environment & Development Volume 16 ; 16 >
+        au < ready ; The Journal of Environment & Development Volume 16 ; 16 >
 
       }
 
@@ -6443,7 +6443,7 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jhm.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Health Management Volume 7 ; 7 >
+        au < ready ; Journal of Health Management Volume 7 ; 7 >
         au < ready ; Journal of Health Management Volume 8 ; 8 >
         au < ready ; Journal of Health Management Volume 9 ; 9 >
 
@@ -6685,7 +6685,7 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; Journal of Industrial Textiles Volume 34 ; 34 >
         au < ready ; Journal of Industrial Textiles Volume 35 ; 35 >
-        au < testing ; Journal of Industrial Textiles Volume 36 ; 36 >
+        au < ready ; Journal of Industrial Textiles Volume 36 ; 36 >
         au < ready ; Journal of Industrial Textiles Volume 37 ; 37 >
 
       }
@@ -6705,7 +6705,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Information Science Volume 31 ; 31 >
-        au < testing ; Journal of Information Science Volume 32 ; 32 >
+        au < ready ; Journal of Information Science Volume 32 ; 32 >
         au < ready ; Journal of Information Science Volume 33 ; 33 >
 
       }
@@ -6725,7 +6725,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Intellectual Disabilities Volume 9 ; 9 >
-        au < manifest ; Journal of Intellectual Disabilities Volume 10 ; 10 >
+        au < testing ; Journal of Intellectual Disabilities Volume 10 ; 10 >
         au < ready ; Journal of Intellectual Disabilities Volume 11 ; 11 >
 
       }
@@ -6745,7 +6745,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 16 ; 16 >
-        au < manifest ; Journal of Intelligent Material Systems and Structures Volume 17 ; 17 >
+        au < testing ; Journal of Intelligent Material Systems and Structures Volume 17 ; 17 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 18 ; 18 >
 
       }
@@ -6805,8 +6805,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Language and Social Psychology Volume 24 ; 24 >
-        au < manifest ; Journal of Language and Social Psychology Volume 25 ; 25 >
-        au < manifest ; Journal of Language and Social Psychology Volume 26 ; 26 >
+        au < testing ; Journal of Language and Social Psychology Volume 25 ; 25 >
+        au < testing ; Journal of Language and Social Psychology Volume 26 ; 26 >
 
       }
 
@@ -6824,8 +6824,8 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jlo.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
-        au < manifest ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
+        au < testing ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
+        au < testing ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
 
       }
 
@@ -6844,7 +6844,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Librarianship and Information Science Volume 37 ; 37 >
-        au < manifest ; Journal of Librarianship and Information Science Volume 38 ; 38 >
+        au < testing ; Journal of Librarianship and Information Science Volume 38 ; 38 >
         au < ready ; Journal of Librarianship and Information Science Volume 39 ; 39 >
 
       }
@@ -7104,9 +7104,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jpp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < /anifest ; Journal of Pharmacy Practice Volume 18 ; 18 >
-        au < manifest ; Journal of Pharmacy Practice Volume 19 ; 19 >
-        au < manifest ; Journal of Pharmacy Practice Volume 20 ; 20 >
+        au < testing ; Journal of Pharmacy Practice Volume 18 ; 18 >
+        au < testing ; Journal of Pharmacy Practice Volume 19 ; 19 >
+        au < testing ; Journal of Pharmacy Practice Volume 20 ; 20 >
 
       }
 
@@ -7277,8 +7277,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Research in Crime and Delinquency Volume 42 ; 42 >
-        au < manifest ; Journal of Research in Crime and Delinquency Volume 43 ; 43 >
-        au < manifest ; Journal of Research in Crime and Delinquency Volume 44 ; 44 >
+        au < testing ; Journal of Research in Crime and Delinquency Volume 43 ; 43 >
+        au < testing ; Journal of Research in Crime and Delinquency Volume 44 ; 44 >
 
       }
 
@@ -7336,9 +7336,9 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://jsm.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Sandwich Structures and Materials Volume 7 ; 7 >
-        au < manifest ; Journal of Sandwich Structures and Materials Volume 8 ; 8 >
-        au < manifest ; Journal of Sandwich Structures and Materials Volume 9 ; 9 >
+        au < testing ; Journal of Sandwich Structures and Materials Volume 7 ; 7 >
+        au < testing ; Journal of Sandwich Structures and Materials Volume 8 ; 8 >
+        au < testing ; Journal of Sandwich Structures and Materials Volume 9 ; 9 >
 
       }
 
