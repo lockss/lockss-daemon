@@ -1,5 +1,5 @@
 /*
- * $Id: BePressMetadataExtractorFactory.java,v 1.1 2009-05-28 22:52:57 dshr Exp $
+ * $Id: BePressMetadataExtractorFactory.java,v 1.2 2009-05-29 01:37:08 dshr Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class BePressMetadataExtractorFactory
       for (int i = 0; i < bePressField.length; i++) {
 	String content = ret.getProperty(bePressField[i]);
 	if (content != null) {
-	  ret.put(dublinCoreField[i], content);
+	  ret.setProperty(dublinCoreField[i], content);
 	}
       }
       return ret;

@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.3 2009-05-22 19:14:55 dshr Exp $
+ * $Id: Metadata.java,v 1.4 2009-05-29 01:37:08 dshr Exp $
  */
 
 /*
@@ -226,8 +226,22 @@ public class Metadata extends Properties {
     super(props);
   }
 
-  private static final String KEY_DOI = "dc.Identifier";
+  private static final String KEY_DOI = "dc.identifier";
   public String getDOI() {
     return getProperty(KEY_DOI);
+  }
+
+  /*
+   * Ensure that metadata keys are case-insensitive strings
+   * and the values are strings.
+   */
+  public String getProperty(String key) {
+    return super.getProperty(key.toLowerCase());
+  }
+  public String getProperty(String key, String def) {
+    return super.getProperty(key.toLowerCase(), def);
+  }
+  public Object setProperty(String key, String value) {
+    return super.setProperty(key.toLowerCase(), value);
   }
 }

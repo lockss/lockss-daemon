@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleMetaTagMetadataExtractor.java,v 1.1 2009-05-22 19:14:55 dshr Exp $
+ * $Id: TestSimpleMetaTagMetadataExtractor.java,v 1.2 2009-05-29 01:37:09 dshr Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestSimpleMetaTagMetadataExtractor
 
   public void testSingleTag() throws Exception {
     String text = "<meta name=\"FirstName\" content=\"FirstContent\">";
-    assertEquals(SetUtil.set("FirstName"),
+    assertEquals(SetUtil.set("firstname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent"),
 		 SetUtil.theSet(extractFrom(text).values()));
@@ -64,7 +64,7 @@ public class TestSimpleMetaTagMetadataExtractor
 
   public void testSingleTagReversed() throws Exception {
     String text = "<meta content=\"FirstContent\" name=\"FirstName\">";
-    assertEquals(SetUtil.set("FirstName"),
+    assertEquals(SetUtil.set("firstname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent"),
 		 SetUtil.theSet(extractFrom(text).values()));
@@ -72,7 +72,7 @@ public class TestSimpleMetaTagMetadataExtractor
 
   public void testSingleTagWithSpaces() throws Exception {
     String text = " \t <meta name=\"FirstName\" content=\"FirstContent\" >  ";
-    assertEquals(SetUtil.set("FirstName"),
+    assertEquals(SetUtil.set("firstname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent"),
 		 SetUtil.theSet(extractFrom(text).values()));
@@ -122,12 +122,12 @@ public class TestSimpleMetaTagMetadataExtractor
 
   public void testSingleTagIgnoreCase() throws Exception {
     String text = "<META NAME=\"FirstName\" CONTENT=\"FirstContent\">";
-    assertEquals(SetUtil.set("FirstName"),
+    assertEquals(SetUtil.set("firstname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent"),
 		 SetUtil.theSet(extractFrom(text).values()));
     text = "<MeTa NaMe=\"FirstName\" CoNtEnT=\"FirstContent\">";
-    assertEquals(SetUtil.set("FirstName"),
+    assertEquals(SetUtil.set("firstname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent"),
 		 SetUtil.theSet(extractFrom(text).values()));
@@ -140,8 +140,8 @@ public class TestSimpleMetaTagMetadataExtractor
 	"<meta name=\"ThirdName\" content=\"ThirdContent\">\n" +
 	"<meta name=\"FourthName\" content=\"FourthContent\">\n" +
 	"<meta name=\"FifthName\" content=\"FifthContent\">\n";
-    assertEquals(SetUtil.set("FirstName", "SecondName", "ThirdName",
-			     "FourthName", "FifthName"),
+    assertEquals(SetUtil.set("firstname", "secondname", "thirdname",
+			     "fourthname", "fifthname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent", "SecondContent", "ThirdContent",
 			     "FourthContent", "FifthContent"),
@@ -166,8 +166,8 @@ public class TestSimpleMetaTagMetadataExtractor
 	"<meta name=\"FourthName\" content=\"FourthContent\">\n" +
 	"<meta name=\"FifthName\" content=\"FifthContent\">\n" +
 	"</body>\n";
-    assertEquals(SetUtil.set("FirstName", "SecondName", "ThirdName",
-			     "FourthName", "FifthName"),
+    assertEquals(SetUtil.set("firstname", "secondname", "thirdname",
+			     "fourthname", "fifthname"),
 		 extractFrom(text).keySet());
     assertEquals(SetUtil.set("FirstContent", "SecondContent", "ThirdContent",
 			     "FourthContent", "FifthContent"),
