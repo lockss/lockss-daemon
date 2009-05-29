@@ -20,11 +20,11 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.nature.NatureMetadataExtractorFactory</string>
       </entry>
       <entry>
         <string>DublinCore</string>
-        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.nature.NatureMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

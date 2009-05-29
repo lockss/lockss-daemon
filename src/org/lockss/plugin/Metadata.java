@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.4 2009-05-29 01:37:08 dshr Exp $
+ * $Id: Metadata.java,v 1.5 2009-05-29 22:27:49 dshr Exp $
  */
 
 /*
@@ -226,7 +226,7 @@ public class Metadata extends Properties {
     super(props);
   }
 
-  private static final String KEY_DOI = "dc.identifier";
+  public static final String KEY_DOI = "dc.identifier";
   public String getDOI() {
     return getProperty(KEY_DOI);
   }
