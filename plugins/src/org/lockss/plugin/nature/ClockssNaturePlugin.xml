@@ -12,6 +12,23 @@
     <string>org.lockss.plugin.nature.NatureFilterRule</string>
   </entry>
   <entry>
+    <string>text/html_article_iterator_factory</string>
+    <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+      </entry>
+      <entry>
+        <string>DublinCore</string>
+        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Nature %s Volume %d (%d)&quot;, journal_id, volume, year</string>
   </entry>
