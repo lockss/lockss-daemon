@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringUtil.java,v 1.68 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.69 2009-06-01 07:36:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -614,6 +614,21 @@ public class TestStringUtil extends LockssTestCase {
     assertFalse(StringUtil.startsWithIgnoreCase("1", "2"));
     assertFalse(StringUtil.startsWithIgnoreCase("12", "2"));
     assertFalse(StringUtil.startsWithIgnoreCase("foo.opt", "foox"));
+  }
+
+  public void testHasRepeatedChar() {
+    assertFalse(StringUtil.hasRepeatedChar(""));
+    assertFalse(StringUtil.hasRepeatedChar("a"));
+    assertFalse(StringUtil.hasRepeatedChar("ab"));
+    assertFalse(StringUtil.hasRepeatedChar("aba"));
+    assertFalse(StringUtil.hasRepeatedChar("abab"));
+    assertTrue(StringUtil.hasRepeatedChar("aa"));
+    assertTrue(StringUtil.hasRepeatedChar("aab"));
+    assertTrue(StringUtil.hasRepeatedChar("baa"));
+    assertTrue(StringUtil.hasRepeatedChar("baab"));
+    assertTrue(StringUtil.hasRepeatedChar("aaa"));
+    assertFalse(StringUtil.hasRepeatedChar("Fran\u00E7ais"));
+    assertTrue(StringUtil.hasRepeatedChar("Fran\u00E7\u00E7ais"));
   }
 
   public void testTitleCase() {

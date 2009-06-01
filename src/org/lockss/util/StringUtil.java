@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.81 2008-08-17 08:49:25 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.82 2009-06-01 07:36:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -507,6 +507,19 @@ public class StringUtil {
   /** Like startsWith except is case-independent */
   public static boolean startsWithIgnoreCase(String str, String start) {
     return str.regionMatches(true, 0, start, 0, start.length());
+  }
+
+  /** Return true if the string has any consecutive repeated characters */
+  public static boolean hasRepeatedChar(String str) {
+    if (str.length() < 2) {
+      return false;
+    }
+    for (int ix = str.length() - 2; ix >= 0; ix--) {
+      if (str.charAt(ix) == str.charAt(ix+1)) {
+	return true;
+      }
+    }
+    return false;
   }
 
   /** Remove the substring beginning with the final occurrence of the
