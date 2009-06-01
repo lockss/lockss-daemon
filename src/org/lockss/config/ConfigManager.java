@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.62 2009-02-05 05:08:11 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.63 2009-06-01 07:45:55 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.PredicateUtils;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.app.*;
+import org.lockss.account.*;
 import org.lockss.clockss.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
@@ -862,6 +863,7 @@ public class ConfigManager implements LockssManager {
     }
     copyPlatformParams(newConfig);
     inferMiscParams(newConfig);
+    setConfigMacros(newConfig);
     setCompatibilityParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
@@ -997,6 +999,30 @@ public class ConfigManager implements LockssManager {
     setIfNotSet(config,
 		PARAM_OBS_ADMIN_HELP_URL,
 		AdminServletManager.PARAM_HELP_URL);
+  }
+
+  private void setConfigMacros(Configuration config) {
+    String acctPolicy = config.get(AccountManager.PARAM_POLICY,
+				   AccountManager.DEFAULT_POLICY);
+    if ("lc".equalsIgnoreCase(acctPolicy)) {
+      setParamsFromPairs(config, AccountManager.POLICY_LC);
+    }
+    if ("ssl".equalsIgnoreCase(acctPolicy)) {
+      setParamsFromPairs(config, AccountManager.POLICY_SSL);
+    }
+    if ("form".equalsIgnoreCase(acctPolicy)) {
+      setParamsFromPairs(config, AccountManager.POLICY_FORM);
+    }
+    if ("basic".equalsIgnoreCase(acctPolicy)) {
+      setParamsFromPairs(config, AccountManager.POLICY_BASIC);
+    }
+  }
+
+  private void setParamsFromPairs(Configuration config, String[] pairs) {
+    for (int ix = 0; ix < pairs.length; ix += 2) {
+      log.info("put("+pairs[ix]+", "+pairs[ix + 1]);
+      config.put(pairs[ix], pairs[ix + 1]);
+    }
   }
 
   private void copyPlatformParams(Configuration config) {
@@ -1284,6 +1310,11 @@ public class ConfigManager implements LockssManager {
   /** Return a File for the named cache config file */
   public File getCacheConfigFile(String cacheConfigFileName) {
     return new File(cacheConfigDir, cacheConfigFileName);
+  }
+
+  /** Return the cache config dir */
+  public File getCacheConfigDir() {
+    return cacheConfigDir;
   }
 
   /** Return true if any daemon config has been done on this machine */
