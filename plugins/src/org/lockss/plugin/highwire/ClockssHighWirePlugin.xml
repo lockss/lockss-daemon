@@ -71,6 +71,23 @@
     <string>org.lockss.plugin.highwire.ClockssHighWireHtmlFilterFactory</string>
   </entry>
   <entry>
+    <string>text/html_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.highwire.HighWireMetadataExtractorFactory</string>
+      </entry>
+      <entry>
+        <string>DublinCore</string>
+        <string>org.lockss.plugin.highwire.HighWireMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.highwire.HighWireLoginPageChecker</string>
   </entry>

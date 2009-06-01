@@ -1,5 +1,5 @@
 /*
- * $Id: BePressMetadataExtractorFactory.java,v 1.3 2009-06-01 23:48:25 dshr Exp $
+ * $Id: HighWireMetadataExtractorFactory.java,v 1.1 2009-06-01 23:48:25 dshr Exp $
  */
 
 /*
@@ -30,16 +30,16 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.bepress;
+package org.lockss.plugin.highwire;
 import java.io.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-public class BePressMetadataExtractorFactory
+public class HighWireMetadataExtractorFactory
     implements MetadataExtractorFactory {
-  static Logger log = Logger.getLogger("SimpleMetaTagMetadataExtractor");
+  static Logger log = Logger.getLogger("HighWireMetadataExtractorFactory");
   /**
    * Create a MetadataExtractor
    * @param contentType the content type type from which to extract URLs
@@ -48,37 +48,21 @@ public class BePressMetadataExtractorFactory
       throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new BePressMetadataExtractor();
+      return new HighWireMetadataExtractor();
     }
     return null;
   }
-  public class BePressMetadataExtractor extends SimpleMetaTagMetadataExtractor {
+  public class HighWireMetadataExtractor extends SimpleMetaTagMetadataExtractor {
 
-    public BePressMetadataExtractor() {
+    public HighWireMetadataExtractor() {
     }
-      String[] bePressField = {
-      "bepress_citation_doi",
-      "bepress_citation_date",
-      "bepress_citation_authors",
-      "bepress_citation_title",
-    };
-    String[] dublinCoreField = {
-      "dc.Identifier",
-      "dc.Date",
-      "dc.Contributor",
-      "dc.Title",
-    };
 
     public Metadata extract(CachedUrl cu) throws IOException {
       Metadata ret = super.extract(cu);
-      for (int i = 0; i < bePressField.length; i++) {
-	String content = ret.getProperty(bePressField[i]);
-	if (content != null) {
-	    if (dublinCoreField[i].equalsIgnoreCase(Metadata.KEY_DOI)) {
-	    content = Metadata.PROTOCOL_DOI + content;
-	  }
-	  ret.setProperty(dublinCoreField[i], content);
-	}
+      // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+      String content = ret.getProperty(Metadata.KEY_DOI);
+      if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
+	ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI + content);
       }
       return ret;
     }

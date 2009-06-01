@@ -83,11 +83,11 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.highwire.HighWireMetadataExtractorFactory</string>
       </entry>
       <entry>
         <string>DublinCore</string>
-        <string>org.lockss.extractor.SimpleMetaTagMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.highwire.HighWireMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

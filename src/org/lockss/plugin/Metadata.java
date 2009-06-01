@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.5 2009-05-29 22:27:49 dshr Exp $
+ * $Id: Metadata.java,v 1.6 2009-06-01 23:48:25 dshr Exp $
  */
 
 /*
@@ -226,9 +226,19 @@ public class Metadata extends Properties {
     super(props);
   }
 
+  /*
+   * The canonical representation of a DOI has key "dc.identifier"
+   * and starts with doi:
+   */
   public static final String KEY_DOI = "dc.identifier";
+  public static final String PROTOCOL_DOI = "doi:";
   public String getDOI() {
-    return getProperty(KEY_DOI);
+    String ret = getProperty(KEY_DOI);
+    if (ret != null && ret.startsWith(PROTOCOL_DOI)) {
+      return ret.substring(PROTOCOL_DOI.length());
+    } else {
+      return null;
+    }
   }
 
   /*

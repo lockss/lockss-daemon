@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataExtractor.java,v 1.1 2009-05-22 19:14:54 dshr Exp $
+ * $Id: MetadataExtractor.java,v 1.2 2009-06-01 23:48:25 dshr Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-/** Content parser that extracts URLs from links */
+/** Content parser that extracts metadata from CachedUrl objects */
 public interface MetadataExtractor {
   /**
    * Parse content on CachedUrl,  Return a Metadata object describing it
