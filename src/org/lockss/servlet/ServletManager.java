@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.39 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.40 2009-06-01 19:15:30 tlipkis Exp $
  */
 
 /*
@@ -67,9 +67,6 @@ public interface ServletManager extends LockssManager {
   /** HttpContext attribute holding ServletManager instance that started
    * context */
   public static final String CONTEXT_ATTR_SERVLET_MGR = "ServletMgr";
-
-  /** HttpContext attribute holding AccountManager instance */
-  public static final String CONTEXT_ATTR_ACCOUNT_MGR = "AccountMgr";
 
   /** HttpContext attribute holding ServletHandler instance in context */
   public static final String CONTEXT_ATTR_SERVLET_HANDLER = "ServletHandler";

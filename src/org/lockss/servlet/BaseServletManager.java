@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.23 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.24 2009-06-01 19:15:30 tlipkis Exp $
  */
 
 /*
@@ -400,8 +400,6 @@ public abstract class BaseServletManager
 			 new LockssErrorHandler("daemon")); 
     context.setAttribute(CONTEXT_ATTR_LOCKSS_APP, theApp);
     context.setAttribute(CONTEXT_ATTR_SERVLET_MGR, this);
-    context.setAttribute(CONTEXT_ATTR_ACCOUNT_MGR,
-			 getDaemon().getAccountManager());
     // In this environment there is no point in consuming memory with
     // cached resources
     context.setMaxCachedFileSize(0);

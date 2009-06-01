@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.111 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.112 2009-06-01 19:15:30 tlipkis Exp $
  */
 
 /*
@@ -139,8 +139,9 @@ public abstract class LockssServlet extends HttpServlet
       (LockssApp)context.getAttribute(ServletManager.CONTEXT_ATTR_LOCKSS_APP);
     servletMgr =
       (ServletManager)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR);
-    acctMgr =
-      (AccountManager)context.getAttribute(ServletManager.CONTEXT_ATTR_ACCOUNT_MGR);
+    if (theApp instanceof LockssDaemon) {
+      acctMgr = getLockssDaemon().getAccountManager();
+    }
   }
 
   public ServletManager getServletManager() {
@@ -440,7 +441,6 @@ public abstract class LockssServlet extends HttpServlet
     if (acctMgr == null) {
       return null;
     }
-    log.info("getUserAccount() = " + acctMgr.getUser(getUsername()));
     return acctMgr.getUser(getUsername());
   }
 
