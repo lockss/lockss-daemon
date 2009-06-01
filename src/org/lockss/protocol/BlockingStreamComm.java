@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.42 2009-03-24 20:35:33 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.43 2009-06-01 07:56:02 tlipkis Exp $
  */
 
 /*
@@ -34,9 +34,7 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.net.*;
-import java.text.*;
 import java.security.*;
-import java.security.cert.*;
 import javax.net.ssl.*;
 import java.util.*;
 
@@ -69,23 +67,16 @@ public class BlockingStreamComm
   public static final boolean DEFAULT_USE_V3_OVER_SSL = false;
 
   /** Use client authentication for SSL **/
-  public static final String PARAM_USE_SSL_CLIENT_AUTH = PREFIX + "SslClientAuth";
+  public static final String PARAM_USE_SSL_CLIENT_AUTH =
+    PREFIX + "sslClientAuth";
   public static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
 
-  /** Use temporary SSL keystore**/
-  public static final String PARAM_SSL_TEMP_KEYSTORE = PREFIX + "SslTempKeystore";
-  public static final boolean DEFAULT_SSL_TEMP_KEYSTORE = true;
-
-  /** File name for SSL key store **/
-  public static final String PARAM_SSL_KEYSTORE = PREFIX + "SslKeyStore";
-  public static final String DEFAULT_SSL_KEYSTORE = ".keystore";
-
-  /** File name for SSL key store password **/
-  public static final String PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE = PREFIX + "SslPrivateKeyPasswordFile";
-  public static final String DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE = ".password";
+  /** Name of managed keystore to use (see {@link LockssKeystoreManager} */
+  public static final String PARAM_SSL_KEYSTORE_NAME =
+    PREFIX + "sslKeystoreName";
 
   /** SSL protocol to use **/
-  public static final String PARAM_SSL_PROTOCOL = PREFIX + "SslProtocol";
+  public static final String PARAM_SSL_PROTOCOL = PREFIX + "sslProtocol";
   public static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
 
   /** Max peer channels.  Only affects outgoing messages; incoming
@@ -234,10 +225,8 @@ public class BlockingStreamComm
 
   private boolean paramUseV3OverSsl = DEFAULT_USE_V3_OVER_SSL;
   private boolean paramSslClientAuth = DEFAULT_USE_SSL_CLIENT_AUTH;
-  private boolean paramSslTempKeystore = DEFAULT_SSL_TEMP_KEYSTORE;
-  private String paramSslKeyStore = DEFAULT_SSL_KEYSTORE;
-  private String paramSslPrivateKeyPasswordFile =
-    DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE;
+  private String paramSslKeyStoreName;
+  private String paramSslKeyStorePassword = null;
   private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private long paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
@@ -264,7 +253,6 @@ public class BlockingStreamComm
   private PooledExecutor pool;
   protected SSLSocketFactory sslSocketFactory = null;
   protected SSLServerSocketFactory sslServerSocketFactory = null;
-  private String paramSslKeyStorePassword = null;
   private boolean paramDissociateOnNoSend = DEFAULT_DISSOCIATE_ON_NO_SEND;
   private boolean paramDissociateOnEveryStop =
     DEFAULT_DISSOCIATE_ON_EVERY_STOP;
@@ -278,6 +266,8 @@ public class BlockingStreamComm
   private PeerAddress.Tcp myPeerAddr;
 
   private IdentityManager idMgr;
+  protected LockssKeyStoreManager keystoreMgr;
+
   private OneShot configShot = new OneShot();
 
   private FifoQueue rcvQueue;	     // PeerMessages received from channels
@@ -777,6 +767,7 @@ public class BlockingStreamComm
     super.startService();
     LockssDaemon daemon = getDaemon();
     idMgr = daemon.getIdentityManager();
+    keystoreMgr = daemon.getKeystoreManager();
     resetConfig();
     try {
       myPeerId = getLocalPeerIdentity();
@@ -830,7 +821,9 @@ public class BlockingStreamComm
   public void setConfig(Configuration config,
 			Configuration prevConfig,
 			Configuration.Differences changedKeys) {
-    if (getDaemon().isDaemonInited()) {
+    // Instances of this manager are started incrementally in testing,
+    // after the daemon is running, so isDaemonInited() won't work here
+    if (isInited()) {
       // one-time only init
       if (configShot.once()) {
 	configure(config, prevConfig, changedKeys);
@@ -901,10 +894,10 @@ public class BlockingStreamComm
     }
   }
 
-  /** Internal config, so can invoke from test constructor  */
-  void configure(Configuration config,
-		 Configuration prevConfig,
-		 Configuration.Differences changedKeys) {
+  /** One-time startup configuration  */
+  private void configure(Configuration config,
+			 Configuration prevConfig,
+			 Configuration.Differences changedKeys) {
     enabled = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
     if (!enabled) {
       return;
@@ -926,142 +919,40 @@ public class BlockingStreamComm
     }
     if (!paramUseV3OverSsl)
 	return;
+    log.info("Using SSL");
     // We're trying to use SSL
     if (changedKeys.contains(PARAM_USE_SSL_CLIENT_AUTH)) {
       paramSslClientAuth = config.getBoolean(PARAM_USE_SSL_CLIENT_AUTH,
 					     DEFAULT_USE_SSL_CLIENT_AUTH);
       sockFact = null;
     }
-    if (changedKeys.contains(PARAM_SSL_TEMP_KEYSTORE)) {
-      paramSslTempKeystore = config.getBoolean(PARAM_SSL_TEMP_KEYSTORE,
-					     DEFAULT_SSL_TEMP_KEYSTORE);
-      sockFact = null;
-    }
     if (sslServerSocketFactory != null && sslSocketFactory != null) {
       // already initialized
       return;
     }
-    if (paramSslTempKeystore) {
-      // We're using the temporary keystore
-      paramSslKeyStore = System.getProperty("javax.net.ssl.keyStore", null);
-      paramSslKeyStorePassword =
-	System.getProperty("javax.net.ssl.keyStorePassword", null);
-      log.debug("Using temporary keystore from " + paramSslKeyStore);
-      // Now create the SSL socket factories from the context
-      sslServerSocketFactory =
-	(SSLServerSocketFactory)SSLServerSocketFactory.getDefault();
-      sslSocketFactory =
-	(SSLSocketFactory)SSLSocketFactory.getDefault();
-      return;
-    }
-    // We're using the real keystore
-    if (changedKeys.contains(PARAM_SSL_KEYSTORE)) {
-	paramSslKeyStore = config.get(PARAM_SSL_KEYSTORE,
-				      DEFAULT_SSL_KEYSTORE);
-	// The password for the keystore is the machine's FQDN.
-	paramSslKeyStorePassword = config.get("org.lockss.platform.fqdn", "");
-	log.debug("Using permanent keystore from " + paramSslKeyStore);
-	sockFact = null;
-    }
-    byte[] sslPrivateKeyPassword = null;
-    if (changedKeys.contains(PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE)) {
-      paramSslPrivateKeyPasswordFile = config.get(PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE,
-						  DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE);
+    if (changedKeys.contains(PARAM_SSL_KEYSTORE_NAME)) {
+      paramSslKeyStoreName = config.get(PARAM_SSL_KEYSTORE_NAME);
+      // The password for the keystore is the machine's FQDN.
+      paramSslKeyStorePassword = config.get("org.lockss.platform.fqdn", "");
+      log.debug("Using keystore " + paramSslKeyStoreName);
       sockFact = null;
     }
     if (changedKeys.contains(PARAM_SSL_PROTOCOL)) {
-      paramSslProtocol = config.get(PARAM_SSL_PROTOCOL,
-				    DEFAULT_SSL_PROTOCOL);
+      paramSslProtocol = config.get(PARAM_SSL_PROTOCOL, DEFAULT_SSL_PROTOCOL);
       sockFact = null;
     }
-    try {
-      File keyStorePasswordFile = new File(paramSslPrivateKeyPasswordFile);
-      if (keyStorePasswordFile.exists()) {
-	FileInputStream fis = new FileInputStream(keyStorePasswordFile);
-	sslPrivateKeyPassword = new byte[(int)keyStorePasswordFile.length()];
-	if (fis.read(sslPrivateKeyPassword) != sslPrivateKeyPassword.length) {
-	  throw new IOException("short read");
-	}
-	fis.close();
-	FileOutputStream fos = new FileOutputStream(keyStorePasswordFile);
-	byte[] junk = new byte[(int)keyStorePasswordFile.length()];
-	for (int i = 0; i < junk.length; i++)
-	  junk[i] = 0;
-	fos.write(junk);
-	fos.close();
-	keyStorePasswordFile.delete();
-      } else {
-        log.debug("SSL password file " + paramSslPrivateKeyPasswordFile + " missing");
-	return;
-      }
-    } catch (IOException ex) {
-      log.error(paramSslPrivateKeyPasswordFile + " threw " + ex);
-      return;
+    KeyManagerFactory kmf =
+      keystoreMgr.getKeyManagerFactory(paramSslKeyStoreName);
+    if (kmf == null) {
+      throw new IllegalArgumentException("Keystore not found: "
+					 + paramSslKeyStoreName);
     }
-    // We now have a password to decrypt the private key in the
-    // SSL keystore.  Next create the keystore from the file.
-    KeyStore keyStore = null;
-    InputStream fis = null;
-    try {
-      keyStore = KeyStore.getInstance("JCEKS");
-      fis = new FileInputStream(paramSslKeyStore);
-      keyStore.load(fis, paramSslKeyStorePassword.toCharArray());
-    } catch (KeyStoreException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } catch (IOException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } catch (CertificateException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } finally {
-      IOUtil.safeClose(fis);
-    }
-    {
-      String temp = new String(sslPrivateKeyPassword);
-      logKeyStore(keyStore, temp.toCharArray());
-    }
-    // Now create a KeyManager from the keystore using the password.
-    KeyManager[] kma = null;
-    try {
-      KeyManagerFactory kmf =
-	KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-      kmf.init(keyStore, new String(sslPrivateKeyPassword).toCharArray());
-      kma = kmf.getKeyManagers();
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("creating SSL key manager threw " + ex);
-      return;
-    } catch (KeyStoreException ex) {
-      log.error("creating SSL key manager threw " + ex);
-      return;
-    } catch (UnrecoverableKeyException ex) {
-      log.error("creating SSL key manager threw " + ex);
-      return;
-    }
-    // Now create a TrustManager from the keystore using the password
-    TrustManager[] tma = null;
-    try {
-      TrustManagerFactory tmf = 
-	TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
-      tmf.init(keyStore);
-      tma = tmf.getTrustManagers();
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("creating SSL trust manager threw " + ex);
-      return;
-    } catch (KeyStoreException ex) {
-      log.error("creating SSL trust manager threw " + ex);
-      return;
-    } finally {
-      // Now forget the password
-      for (int i = 0; i < sslPrivateKeyPassword.length; i++) {
-	sslPrivateKeyPassword[i] = 0;
-      }
-      sslPrivateKeyPassword = null;
-    }
+    KeyManager[] kma = kmf.getKeyManagers();
+
+    TrustManagerFactory tmf =
+      keystoreMgr.getTrustManagerFactory(paramSslKeyStoreName);
+    TrustManager[] tma = tmf.getTrustManagers();
+
     // Now create an SSLContext from the KeyManager
     SSLContext sslContext = null;
     try {
@@ -1070,6 +961,7 @@ public class BlockingStreamComm
       // Now create the SSL socket factories from the context
       sslServerSocketFactory = sslContext.getServerSocketFactory();
       sslSocketFactory = sslContext.getSocketFactory();
+      log.info("SSL init successful");
     } catch (NoSuchAlgorithmException ex) {
       log.error("Creating SSL context threw " + ex);
       sslContext = null;
