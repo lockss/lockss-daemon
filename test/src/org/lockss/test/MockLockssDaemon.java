@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.63 2008-01-27 06:43:40 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.64 2009-06-01 07:45:10 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.List;
 import org.apache.commons.collections.map.LinkedMap;
 
 import org.lockss.alert.AlertManager;
+import org.lockss.account.AccountManager;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.CrawlManager;
@@ -65,6 +66,8 @@ public class MockLockssDaemon extends LockssDaemon {
   WatchdogService wdogService = null;
   MailService mailService = null;
   AlertManager alertManager = null;
+  AccountManager accountManager = null;
+  LockssKeyStoreManager keystoreManager = null;
   HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
@@ -221,6 +224,30 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
     }
     return alertManager;
+  }
+
+  /**
+   * return the account manager instance
+   * @return the AccountManager
+   */
+  public AccountManager getAccountManager() {
+    if (accountManager == null) {
+      accountManager = (AccountManager)newManager(ACCOUNT_MANAGER);
+      managerMap.put(LockssDaemon.ACCOUNT_MANAGER, accountManager);
+    }
+    return accountManager;
+  }
+
+  /**
+   * return the keystore manager instance
+   * @return the KeystoreManager
+   */
+  public LockssKeyStoreManager getKeystoreManager() {
+    if (keystoreManager == null) {
+      keystoreManager = (LockssKeyStoreManager)newManager(KEYSTORE_MANAGER);
+      managerMap.put(LockssDaemon.KEYSTORE_MANAGER, keystoreManager);
+    }
+    return keystoreManager;
   }
 
   /**
@@ -554,6 +581,24 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setAlertManager(AlertManager alertMan) {
     alertManager = alertMan;
     managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
+  }
+
+  /**
+   * Set the AccountManager
+   * @param accountMan the new manager
+   */
+  public void setAccountManager(AccountManager accountMan) {
+    accountManager = accountMan;
+    managerMap.put(LockssDaemon.ACCOUNT_MANAGER, accountManager);
+  }
+
+  /**
+   * Set the KeystoreManager
+   * @param keystoreMan the new manager
+   */
+  public void setKeystoreManager(LockssKeyStoreManager keystoreMan) {
+    keystoreManager = keystoreMan;
+    managerMap.put(LockssDaemon.KEYSTORE_MANAGER, keystoreManager);
   }
 
   /**
