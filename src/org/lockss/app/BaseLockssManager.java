@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.21 2007-10-01 08:13:44 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.22 2009-06-01 07:45:40 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public abstract class BaseLockssManager implements LockssManager {
 
   protected LockssApp theApp = null;
   private Configuration.Callback configCallback;
+  protected boolean isInited = false;
   protected boolean shuttingDown = false;
 
   protected String getClassName() {
@@ -74,6 +75,7 @@ public abstract class BaseLockssManager implements LockssManager {
    * initialized.  Service should extend this to perform any startup
    * necessary. */
   public void startService() {
+    isInited = true;
     if (log.isDebug2()) log.debug2(getClassName() + ".startService()");
   }
 
@@ -104,6 +106,16 @@ public abstract class BaseLockssManager implements LockssManager {
    */
   protected boolean isAppInited() {
     return theApp.isAppInited();
+  }
+
+  /**
+   * Return true iff this manager's init has completed.  This can differ
+   * from isAppInited in some testing situations where additional
+   * managers are started after the daemon is running
+   * @return true if the manager is inited
+   */
+  protected boolean isInited() {
+    return isInited;
   }
 
   private void registerConfigCallback(Configuration.Callback callback) {
