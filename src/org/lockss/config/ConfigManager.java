@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.63 2009-06-01 07:45:55 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.64 2009-06-01 19:15:08 tlipkis Exp $
  */
 
 /*
@@ -1020,7 +1020,6 @@ public class ConfigManager implements LockssManager {
 
   private void setParamsFromPairs(Configuration config, String[] pairs) {
     for (int ix = 0; ix < pairs.length; ix += 2) {
-      log.info("put("+pairs[ix]+", "+pairs[ix + 1]);
       config.put(pairs[ix], pairs[ix + 1]);
     }
   }

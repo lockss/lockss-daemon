@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.11 2009-06-01 07:35:00 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.12 2009-06-01 19:15:07 tlipkis Exp $
  *
 
 Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
@@ -377,8 +377,6 @@ public class FileUtil {
     Collections.sort(lst1);
     Collections.sort(lst2);
     if (!lst1.equals(lst2)) {
-      log.info("not equal: " + lst1);
-      log.info("not equal: " + lst2);
       return false;
     }
     for (String file : lst1) {
