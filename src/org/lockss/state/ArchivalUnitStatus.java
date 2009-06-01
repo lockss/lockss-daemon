@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.79 2009-05-22 19:14:55 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.80 2009-06-01 07:32:07 tlipkis Exp $
  */
 
 /*
@@ -807,6 +807,19 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Created",
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getAuCreationTime())));
+      CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+      if (window != null) {
+	String wmsg = window.toString();
+	if (wmsg.length() > 140) {
+	  wmsg = "(not displayable)";
+	}
+	if (!window.canCrawl()) {
+	  wmsg = "Currently closed: " + wmsg;
+	}
+	res.add(new StatusTable.SummaryInfo("Crawl Window",
+					    ColumnDescriptor.TYPE_STRING,
+					    wmsg));
+      }
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,
