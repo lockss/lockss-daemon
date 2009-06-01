@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.23 2008-02-15 09:06:28 tlipkis Exp $
+ * $Id: Configuration.java,v 1.24 2009-06-01 07:46:20 tlipkis Exp $
  */
 
 /*
@@ -116,12 +116,15 @@ public abstract class Configuration {
   void setTitleConfig(Configuration tc) {
     if (tc == null) return;
     MultiValueMap titleMap = new MultiValueMap();
+    int cnt = 0;
     for (Iterator iter = tc.nodeIterator(); iter.hasNext(); ) {
       String titleKey = (String)iter.next();
       Configuration titleConfig = tc.getConfigTree(titleKey);
       String pluginName = titleConfig.get(BasePlugin.TITLE_PARAM_PLUGIN);
       titleMap.put(pluginName, titleConfig);
+      cnt++;
     }
+    log.info(cnt + " title db entries");
     this.titleMap = titleMap;
   }
 
@@ -318,6 +321,36 @@ public abstract class Configuration {
       return Integer.parseInt(val);
     } catch (NumberFormatException e) {
       log.warning("getInt(\'" + key + "\") = \"" + val + "\"");
+      return dfault;
+    }
+  }
+
+  /** Return the config value as an enum.
+   * @throws Configuration.InvalidParam if the value is missing or
+   * not parsable as an enum.
+   */
+  public Enum getEnum(Class enumType, String key) throws InvalidParam {
+    String name = get(key);
+    try {
+      return Enum.valueOf(enumType, name);
+    } catch (IllegalArgumentException e) {
+      throw newInvalid("Not an enum of type: " + enumType, key, name);
+    }
+  }
+
+  /** Return the config value as an enum.  If it's missing, return the
+   * default value.  If it's present but not parsable as an enum, log a
+   * warning and return the default value
+   */
+  public Enum getEnum(Class enumType, String key, Enum dfault) {
+    String name = get(key);
+    if (name == null) {
+      return dfault;
+    }
+    try {
+      return Enum.valueOf(enumType, name);
+    } catch (IllegalArgumentException e) {
+      log.warning("getEnum(\'" + key + "\") illegal val: \"" + name + "\"");
       return dfault;
     }
   }

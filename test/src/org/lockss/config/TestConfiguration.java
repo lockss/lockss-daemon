@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.11 2008-02-15 09:06:28 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.12 2009-06-01 07:46:20 tlipkis Exp $
  */
 
 /*
@@ -233,6 +233,23 @@ public class TestConfiguration extends LockssTestCase {
     }
     assertTrue(config.containsKey("prop1"));
     assertFalse( config.containsKey("propnot"));
+  }
+
+  enum TestEnum {x, Y, zZ};
+
+  public void testGetEnum() throws Exception {
+    Configuration config = newConfiguration();
+    config.put("foo", "x");
+    config.put("bar", "y");
+    config.put("baz", "Y");
+    assertSame(TestEnum.x, config.getEnum(TestEnum.class, "foo"));
+    assertSame(TestEnum.Y, config.getEnum(TestEnum.class, "baz", TestEnum.x));
+    assertSame(TestEnum.x, config.getEnum(TestEnum.class, "xxx", TestEnum.x));
+    try {
+      config.getEnum(TestEnum.class, "bar");
+      fail("Should have thrown IllegalArgumentException");
+    } catch (Exception ex) {
+    }
   }
 
   private static final String c3 =
