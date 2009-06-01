@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.10 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.11 2009-06-01 07:31:38 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -45,6 +46,7 @@ class PluginStatus {
   static Logger log = Logger.getLogger("PluginStatus");
   final static String PLUGIN_TABLE = "Plugins";
   final static String PLUGIN_DETAIL = "PluginDetail";
+  final static String ALL_AUIDS = "AllAuids";
 
   /** If true the definition of definable plugins will be displayed along
    * with its details. */
@@ -61,12 +63,15 @@ class PluginStatus {
 				      new Plugins(daemon, mgr));
     statusServ.registerStatusAccessor(PLUGIN_DETAIL,
 				      new PluginDetail(daemon, mgr));
+    statusServ.registerStatusAccessor(ALL_AUIDS,
+				      new AllAuids(daemon, mgr));
   }
 
   static void unregister(LockssDaemon daemon) {
     StatusService statusServ = daemon.getStatusService();
     statusServ.unregisterStatusAccessor(PLUGIN_TABLE);
     statusServ.unregisterStatusAccessor(PLUGIN_DETAIL);
+    statusServ.unregisterStatusAccessor(ALL_AUIDS);
   }
 
   PluginStatus(LockssDaemon daemon, PluginManager mgr) {
@@ -306,5 +311,51 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
   }
 }
 
+/**
+ * List of AUID of all currently defined titles.
+ */
+class AllAuids extends PluginStatus implements StatusAccessor.DebugOnly {
 
+  private final List colDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("name", "Name",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("auid", "AUID",
+				       ColumnDescriptor.TYPE_STRING)
+		  );
 
+  private final List sortRules =
+    ListUtil.list(new StatusTable.SortRule("name",
+					   CatalogueOrderComparator.SINGLETON));
+
+  AllAuids(LockssDaemon daemon, PluginManager mgr) {
+    super(daemon, mgr);
+  }
+
+  public String getDisplayName() {
+    return "All Title AUIDs";
+  }
+
+  public boolean requiresKey() {
+    return false;
+  }
+
+  public void populateTable(StatusTable table) {
+    table.setColumnDescriptors(colDescs);
+    table.setDefaultSortRules(sortRules);
+    table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
+  }
+
+  public List getRows(boolean isDebug) {
+    PluginManager pmgr = daemon.getPluginManager();
+    List<TitleConfig> tcs = pmgr.findAllTitleConfigs();
+    List rows = new ArrayList();
+    for (TitleConfig tc : tcs) {
+      Map row = new HashMap();
+      row.put("auid", tc.getAuId(pmgr));
+      row.put("name", tc.getDisplayName());
+      rows.add(row);
+    }
+    return rows;
+  }
+}
