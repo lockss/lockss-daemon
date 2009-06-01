@@ -1,5 +1,5 @@
 /*
- * $Id: TestZipUtil.java,v 1.3 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestZipUtil.java,v 1.4 2009-06-01 07:37:16 tlipkis Exp $
  */
 
 /*
@@ -161,6 +161,37 @@ public class TestZipUtil extends LockssTestCase {
       assertMatchesRE("path traversal", e.getMessage());
     }
   }
+
+  void writeFile(File dir, String relPath, String content) throws IOException {
+    File file = new File(dir, relPath);
+    File parent = new File(file.getParent());
+    parent.mkdirs();
+    FileTestUtil.writeFile(file, content);
+  }
+
+  public void testAddDirToZip() throws IOException {
+    File zipFile = new File(getTempDir(), "testzip.zip");
+    File dir = getTempDir();
+    writeFile(dir, "one", "one");
+    writeFile(dir, "two", "aaaaaaaaaaaaa");
+    writeFile(dir, "d1/1", "d1.1");
+    writeFile(dir, "d1/2", "d1.2");
+    writeFile(dir, "d1/d2/1", "d1.d2.1");
+    writeFile(dir, "d1/d2/2", "d1.d2.2");
+    writeFile(dir, "d1/d2/2", "d1.d2.2");
+    writeFile(dir, "d1/d2/d3/d4/1", "d1.d2.d3.d4.1");
+
+    OutputStream out = new BufferedOutputStream(new FileOutputStream(zipFile));
+    ZipOutputStream z = new ZipOutputStream(out);
+    ZipUtil.addDirToZip(z, dir, "");
+    z.close();
+
+    File todir = getTempDir();
+    ZipUtil.unzip(zipFile, todir);
+
+    assertTrue(FileUtil.equalTrees(dir, todir));
+  }
+
 
 
   class MyBufferedInputStream extends BufferedInputStream {
