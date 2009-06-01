@@ -1,5 +1,5 @@
 /*
- * $Id: UserEditAccount.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: UserEditAccount.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class UserEditAccount extends EditAccountBase {
 
   private void displayUserEdit() throws IOException {
     String name = req.getUserPrincipal().toString();
-    UserAccount acct = acctMgr.getUser(name);
+    UserAccount acct = acctMgr.getUserOrNull(name);
     if (acct == null) {
       displayWarningInLieuOfPage("Error: User " + name + " does not exist");
       return;
@@ -99,7 +99,7 @@ public class UserEditAccount extends EditAccountBase {
     HttpSession session = getSession();
 
     String name = req.getUserPrincipal().toString();
-    UserAccount acct = acctMgr.getUser(name);
+    UserAccount acct = acctMgr.getUserOrNull(name);
     if (acct == null) {
       displayWarningInLieuOfPage("Error: User " + name + " does not exist");
       return;

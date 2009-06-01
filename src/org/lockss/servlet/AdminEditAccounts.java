@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class AdminEditAccounts extends EditAccountBase {
       displayAdminSummary();
       return;
     }
-    UserAccount acct = acctMgr.getUser(name);
+    UserAccount acct = acctMgr.getUserOrNull(name);
     if (acct == null) {
       errMsg = "User " + name + " disappeared abruptly!";
       displayAdminSummary();
@@ -138,7 +138,7 @@ public class AdminEditAccounts extends EditAccountBase {
       }
       acct = acctMgr.createUser(name);
     } else if (action.equals(ACTION_ADMIN_UPDATE)) {
-      acct = acctMgr.getUser(name);
+      acct = acctMgr.getUserOrNull(name);
       if (acct == null) {
 	errMsg = "User " + name + " disappeared abruptly!";
 	displayAdminSummary();
@@ -329,7 +329,7 @@ public class AdminEditAccounts extends EditAccountBase {
     if (StringUtil.isNullString(name)) {
       displayAdminSummary();
     }
-    UserAccount acct = acctMgr.getUser(name);
+    UserAccount acct = acctMgr.getUserOrNull(name);
     if (acct == null) {
       errMsg = "No such user: " + name;
       displayAdminSummary();
@@ -392,46 +392,6 @@ public class AdminEditAccounts extends EditAccountBase {
     Input eml = addTextInput(tbl, "Email address: ", KEY_EMAIL, false);
     eml.attribute("value", acct.getEmail());
     return tbl;
-  }
-
-
-  private Table buildUserEditTable(UserAccount acct) {
-    Table tbl = new Table(0, "align=center cellspacing=1 border=1 cellpadding=2");
-    addTextInput(tbl, "Old password: ", KEY_OLD_PASSWD, true);
-    addTextInput(tbl, "New password: ", KEY_NEW_PASSWD, true);
-    addTextInput(tbl, "Confirm password: ", KEY_NEW_PASSWD_2, true);
-    addTextInput(tbl, "Email address: ", KEY_EMAIL, false);
-    return tbl;
-  }
-
-
-  private void displayUserEdit() throws IOException {
-    if (false) {
-      errMsg = "Error: ";
-      displayAdminSummary();
-      return;
-    }
-
-    String name = req.getUserPrincipal().toString();
-    UserAccount acct = acctMgr.getUser(name);
-    if (acct == null) {
-      errMsg = "Error: User " + name + " does not exist";
-      displayAdminSummary();
-      return;
-    }
-    Page page = newPage();
-    layoutErrorBlock(page);
-    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
-    Table tbl =
-      new Table(0, "align=center cellspacing=4 border=1 cellpadding=2");
-    tbl.newRow();
-    tbl.newCell();
-
-    tbl.add(buildUserEditTable(acct));
-
-    frm.add(tbl);
-    page.add(frm);
-    endPage(page);
   }
 
   private void displayEditAccount(UserAccount acct)

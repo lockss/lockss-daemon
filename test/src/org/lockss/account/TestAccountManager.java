@@ -1,5 +1,5 @@
 /*
- * $Id: TestAccountManager.java,v 1.1 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
  */
 
 /*
@@ -108,6 +108,11 @@ public class TestAccountManager extends LockssTestCase {
     assertEquals("ethel", acct.getName());
   }
 
+  public void testGetUser() throws Exception {
+    assertNull(acctMgr.getUserOrNull("nouser"));
+    assertSame(AccountManager.NOBODY_ACCOUNT, acctMgr.getUser("nouser"));
+  }
+
   public void testAddUser() throws Exception {
     String user = "fred";
     UserAccount acct1 = acctMgr.createUser(user);
@@ -117,7 +122,7 @@ public class TestAccountManager extends LockssTestCase {
     } catch (AccountManager.NotAddedException e) {
     }
     acct1.setPassword("password");
-    assertNull(acctMgr.getUser(user));
+    assertNull(acctMgr.getUserOrNull(user));
     acctMgr.addUser(acct1);
     UserAccount acct2 = acctMgr.getUser(user);
     assertSame(acct1, acct2);
@@ -174,11 +179,25 @@ public class TestAccountManager extends LockssTestCase {
     assertSame(acct1, acctMgr.getUser(acct1.getName()));
     assertSame(acct2, acctMgr.getUser(acct2.getName()));
     acctMgr.clearAccounts();
-    assertNull(acctMgr.getUser(acct2.getName()));
+    assertNull(acctMgr.getUserOrNull(acct2.getName()));
 
     acctMgr.loadUsers();
     assertEqualAccts(acct1, acctMgr.getUser(acct1.getName()));
     assertEqualAccts(acct2, acctMgr.getUser(acct2.getName()));
+  }
+
+  public void testStoreWrongUser() throws Exception {
+    UserAccount acct1 = makeUser("luser");
+    acct1.setPassword(PWD1, true);
+    acctMgr.addUser(acct1);
+
+    UserAccount acct2 = makeUser("luser");
+    acct2.setPassword(PWD1, true);
+    try {
+      acctMgr.storeUser(acct2);
+      fail("Shouldn't be able to store different instance");
+    } catch (IllegalArgumentException e) {
+    }
   }
 
   static class MyAccountManager extends AccountManager {

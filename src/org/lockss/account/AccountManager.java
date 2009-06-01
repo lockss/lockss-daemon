@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.1 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class AccountManager
 
   protected static Logger log = Logger.getLogger("AccountManager");
 
-  static final UserAccount NOBODY_ACCOUNT = new NobodyAccount();
+  public static final UserAccount NOBODY_ACCOUNT = new NobodyAccount();
 
   static final String PREFIX = Configuration.PREFIX + "accounts.";
 
@@ -296,7 +296,7 @@ public class AccountManager
     if (acct.isStaticUser()) {
       throw new IllegalArgumentException("Can't store static account: " + acct);
     }
-    if (getUser(acct.getName()) == null) {
+    if (getUser(acct.getName()) != acct) {
       throw new IllegalArgumentException("Can't store uninstalled account: "
 					 + acct);
     }
@@ -369,11 +369,17 @@ public class AccountManager
   }
 
   /** Return named UserAccount or null */
-  public UserAccount getUser(String username) {
+  public UserAccount getUserOrNull(String username) {
     UserAccount res = accountMap.get(username);
     log.debug2("getUser("+username + "): " + res);
 //     return res != null ? res : NOBODY_ACCOUNT;
     return res;
+  }
+
+  /** Return named UserAccount or Nobody user */
+  public UserAccount getUser(String username) {
+    UserAccount res = getUserOrNull(username);
+    return res != null ? res : NOBODY_ACCOUNT;
   }
 
   /** Return parent dir of all user account files */
