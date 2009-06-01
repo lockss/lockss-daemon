@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.53 2008-02-28 23:07:39 edwardsb1 Exp $
+ * $Id: Logger.java,v 1.54 2009-06-01 07:27:06 tlipkis Exp $
  */
 
 /*
@@ -390,11 +390,11 @@ public class Logger {
     LogTarget tgt;
     try {
       tgt = (LogTarget)tgtClass.newInstance();
-      } catch (Exception e) {
-	System.err.println("Couldn't instantiate log target " + tgtName +
-			   ": " + e.toString());
-	tgt = new StdErrTarget();
-      }
+    } catch (Exception e) {
+      System.err.println("Couldn't instantiate log target " + tgtName +
+			 ": " + e.toString());
+      tgt = new StdErrTarget();
+    }
     return tgt;
   }
 
