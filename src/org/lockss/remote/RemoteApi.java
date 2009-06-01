@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.68 2008-10-02 07:42:58 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.69 2009-06-01 07:56:27 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.zip.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.account.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
@@ -115,6 +116,7 @@ public class RemoteApi
   private ConfigManager configMgr;
   private IdentityManager idMgr;
   private RepositoryManager repoMgr;
+  private AccountManager acctMgr;
 
   private String paramBackupFileVer = DEFAULT_BACKUP_FILE_VERSION;
   private int paramBackupStreamMarkSize = DEFAULT_BACKUP_STREAM_MARK_SIZE;
@@ -135,6 +137,7 @@ public class RemoteApi
     configMgr = getDaemon().getConfigManager();
     idMgr = getDaemon().getIdentityManager();
     repoMgr = getDaemon().getRepositoryManager();
+    acctMgr = getDaemon().getAccountManager();
   }
 
   public void setConfig(Configuration config,
@@ -533,6 +536,10 @@ public class RemoteApi
 	log.debug2("Couldn't write iddb", e);
       }
       zip.closeEntry();
+      if (acctMgr.isEnabled()) {
+	File acctDir = acctMgr.getAcctDir();
+	ZipUtil.addDirToZip(zip, acctDir, "accts");
+      }
       List aus = pluginMgr.getAllAus();
       // add a directory for each AU
       if (aus != null) {
@@ -622,23 +629,17 @@ public class RemoteApi
       throws IOException {
     log.debug("addCfgFileToZip: "+ file);
     try {
-      InputStream in = new BufferedInputStream(new FileInputStream(file));
-      if (entName == null) {
-	entName = file.getName();
-      }
-      addCfgFileToZip(z, in, entName);
+      ZipUtil.addFileToZip(z, file, entName);
     } catch (FileNotFoundException ignore) {}
   }
 
   void addCfgFileToZip(ZipOutputStream z, InputStream in, String entName)
       throws IOException {
     try {
-      z.putNextEntry(new ZipEntry(entName));
-      StreamUtil.copy(in, z);
+      ZipUtil.addFileToZip(z, in, entName);
       log.debug("added: "+ entName);
     } finally {
       IOUtil.safeClose(in);
-      z.closeEntry();
     }
   }
 
