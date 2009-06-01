@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.10 2008-11-02 21:15:24 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.11 2009-06-01 07:35:00 tlipkis Exp $
  *
 
 Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.*;
 import org.apache.oro.text.regex.*;
 
 /** Utilities for Files
@@ -302,6 +302,100 @@ public class FileUtil {
     // dir
     return dir.exists();
   }
+
+  public static String relativeName(String name, String relativeTo) {
+    if (relativeTo == null) {
+      return name;
+    }
+    if (!relativeTo.endsWith(File.pathSeparator)) {
+      relativeTo = relativeTo + File.separator;
+    }
+    if (name.startsWith(relativeTo)) {
+      return name.substring(relativeTo.length());
+    }
+    return name;
+  }
+
+  public static File relativeFile(File file, String relativeTo) {
+    return new File(relativeName(file.getPath(), relativeTo));
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(File root, boolean includeDirs) {
+    return listTree(root, (String)null, includeDirs);
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(String root, String relativeTo,
+				    boolean includeDirs) {
+    return listTree(new File(root), relativeTo, includeDirs);
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(File root, File relativeTo,
+				      boolean includeDirs) {
+    return listTree(root, relativeTo.toString(), includeDirs);
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(File root, String relativeTo,
+				    boolean includeDirs) {
+    List<String> res = new ArrayList();
+    listTree0(res, root, relativeTo, includeDirs);
+    Collections.sort(res);
+    return res;
+  }
+
+  private static List<String> listTree0(List<String> res, File root,
+				      String relativeTo,
+				      boolean includeDirs) {
+    for (File file : root.listFiles()) {
+      if (file.isDirectory()) {
+	if (includeDirs) {
+	  res.add(relativeName(file.getPath(), relativeTo));
+	}
+	listTree0(res, file, relativeTo, includeDirs);
+      } else {
+	res.add(relativeName(file.getPath(), relativeTo));
+      }
+    }
+    return res;
+  }
+
+  /** Compare two trees, return true if identical files and contents */
+  public static boolean equalTrees(File dir1, File dir2) throws IOException {
+    List<String> lst1 = listTree(dir1, dir1, true);
+    List<String> lst2 = listTree(dir2, dir2, true);
+    Collections.sort(lst1);
+    Collections.sort(lst2);
+    if (!lst1.equals(lst2)) {
+      log.info("not equal: " + lst1);
+      log.info("not equal: " + lst2);
+      return false;
+    }
+    for (String file : lst1) {
+      File f1 = new File(dir1, file);
+      File f2 = new File(dir2, file);
+      if (f1.isDirectory() != f2.isDirectory()) {
+	return false;
+      }
+      if (!f1.isDirectory()) {
+	if (!isContentEqual(f1, f2)) {
+	  return false;
+	}
+      }
+    }
+    return true;
+  }
+
 
   /** Delete the contents of a directory, leaving the empty directory.
    * @return true iff successful */
