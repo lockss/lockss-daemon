@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.10 2005-10-11 05:48:47 tlipkis Exp $
+ * $Id: ParamDoc.java,v 1.11 2009-06-01 07:28:07 tlipkis Exp $
  */
 
 /*
@@ -156,13 +156,14 @@ public class ParamDoc {
       }
       pout.print(nblanks(COL - len));
       pout.print(defaultVal);
+      String timeStr = "";
       if (defaultVal instanceof Long) {
-	String timeStr =
-	  StringUtil.timeIntervalToString(((Long)defaultVal).longValue());
-	pout.println(" ("+timeStr+")");
-      } else {
-	pout.println();
+	long val = ((Long)defaultVal).longValue();
+	if (val > 0) {
+	  timeStr = " (" + StringUtil.timeIntervalToString(val) + ")";
+	}	  
       }
+      pout.println(timeStr);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.7 2006-07-11 17:42:24 thib_gc Exp $
+ * $Id: ParamDoclet.java,v 1.8 2009-06-01 07:28:07 tlipkis Exp $
  */
 
 /*
@@ -239,8 +239,12 @@ public class ParamDoclet {
 	defaultVal = (new Integer(fld.getInt(null))).toString();
       } else if (long.class == cls) {
 	long timeVal = fld.getLong(null);
-	defaultVal = timeVal + " (" +
-	  StringUtil.timeIntervalToString(timeVal) + ")";
+	if (timeVal > 0) {
+	  defaultVal = timeVal + " (" +
+	    StringUtil.timeIntervalToString(timeVal) + ")";
+	} else {
+	  defaultVal = Long.toString(timeVal);
+	}
       } else if (boolean.class == cls) {
 	defaultVal = (new Boolean(fld.getBoolean(null))).toString();
       } else {
