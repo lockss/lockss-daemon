@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.14 2008-11-25 04:03:24 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.15 2009-06-01 07:33:05 tlipkis Exp $
  */
 
 /*
@@ -379,6 +379,7 @@ public class HtmlNodeFilters {
    * Abstract class for regex filters
    */
   public abstract static class BaseRegexFilter implements NodeFilter {
+    protected String regex;
     protected Pattern pat;
     protected Perl5Matcher matcher;
 
@@ -398,6 +399,7 @@ public class HtmlNodeFilters {
      * @param ignoreCase If true, match is case insensitive
      */
     public BaseRegexFilter(String regex, boolean ignoreCase) {
+      this.regex = regex;
       int flags = 0;
       if (ignoreCase) {
 	flags |= Perl5Compiler.CASE_INSENSITIVE_MASK;
@@ -419,9 +421,17 @@ public class HtmlNodeFilters {
      */
     private static final String tag = "?url=";
     protected String urlEncode(String url) {
+      return urlEncode(url, false);
+    }
+
+    protected String cssEncode(String url) {
+      return urlEncode(url, true);
+    }
+
+    protected String urlEncode(String url, boolean isCss) {
       int startIx = url.indexOf(tag);
       if (startIx < 0) {
-	log.error("urlEncode: no tag in " + url);
+	log.error("urlEncode: no tag (" + tag + ") in " + url);
 	return url;
       }
       startIx += tag.length();
@@ -438,7 +448,7 @@ public class HtmlNodeFilters {
       if (endIx > startIx) {
 	// meta tag content attribute
 	oldUrl = url.substring(startIx, endIx);
-      } else if ((endIx = url.indexOf(')', startIx)) > startIx) {
+      } else if (isCss && (endIx = url.indexOf(')', startIx)) > startIx) {
 	// CSS @import
 	oldUrl = url.substring(startIx, endIx);
       } else {
@@ -446,6 +456,7 @@ public class HtmlNodeFilters {
 	endIx = -1;
       }
       String newUrl = UrlUtil.encodeUrl(oldUrl);
+      log.debug3("urlEncode: " + oldUrl + " -> " + newUrl);
       return url.substring(0, startIx) + newUrl +
 	(endIx < 0 ? "" : url.substring(endIx));
     }
@@ -523,12 +534,15 @@ public class HtmlNodeFilters {
 		log.debug3("Attribute " + attribute.getName() + " old " + url +
 			   " target " + target + " replace " + replace);
 	      }
-	      String newUrl = urlEncode(url.replaceFirst(target, replace));
-	      attribute.setValue(newUrl);
-	      ((TagNode)node).setAttributeEx(attribute);
-	      if (log.isDebug3()) log.debug3("new " + newUrl);
+	      String newUrl = url.replaceFirst(target, replace);
+	      if (!newUrl.equals(target)) {
+		String encoded = urlEncode(newUrl);
+		attribute.setValue(encoded);
+		((TagNode)node).setAttributeEx(attribute);
+		if (log.isDebug3()) log.debug3("new " + encoded);
+	      }
 	    }
-	    return false;
+// 	    return false;
 	  }
 	}
       }
@@ -574,13 +588,17 @@ public class HtmlNodeFilters {
 	    if (!matcher.contains(url, pat)) {
 	      if (log.isDebug3()) {
 		log.debug3("Attribute " + attribute.getName() + " old " + url);
+		log.debug3("target: " + target + ", replace: " + replace);
 	      }
 	      String newUrl = url.replaceFirst(target, replace);
-	      if (log.isDebug3()) log.debug3("new " + newUrl);
-	      attribute.setValue(urlEncode(newUrl));
-	      ((TagNode)node).setAttributeEx(attribute);
+	      if (!newUrl.equals(target)) {
+		String encoded = urlEncode(newUrl);
+		attribute.setValue(encoded);
+		((TagNode)node).setAttributeEx(attribute);
+		if (log.isDebug3()) log.debug3("new " + encoded);
+	      }
 	    }
-	    return false;
+// 	    return false;
 	  }
 	}
       }
@@ -617,6 +635,7 @@ public class HtmlNodeFilters {
       if (node instanceof StyleTag) {
 	try {
 	  NodeIterator it;
+	  nodeLoop:
 	  for (it = ((StyleTag)node).children(); it.hasMoreNodes(); ) {
 	    Node child = it.nextNode();
 	    if (child instanceof TextNode) {
@@ -628,18 +647,22 @@ public class HtmlNodeFilters {
 		int delta = 0;
 		if (endIx < 0) {
 		  log.error("Can't find close paren in " + text);
-		  return false;
+		  continue nodeLoop;
+// 		  return false;
 		}
 		String oldImport = text.substring(startIx, endIx + 1);
 		if (matcher.contains(oldImport, pat)) {
-		  String newImport =
-		    urlEncode(oldImport.replaceFirst(target, replace));
-		  delta = newImport.length() - oldImport.length();
-		  String newText = text.substring(0, startIx) + 
-		    newImport + text.substring(endIx + 1);
-		  if (log.isDebug3()) log.debug3("Import rewritten " + newText);
-		  text = newText;
-		  ((TextNode)child).setText(text);
+		  String newImport = oldImport.replaceFirst(target, replace);
+		  if (!newImport.equals(oldImport)) {
+		    String encoded = cssEncode(newImport);
+		    delta = encoded.length() - oldImport.length();
+		    String newText = text.substring(0, startIx) + 
+		      encoded + text.substring(endIx + 1);
+		    if (log.isDebug3())
+		      log.debug3("Import rewritten " + newText);
+		    text = newText;
+		    ((TextNode)child).setText(text);
+		  }
 		}
 		startIx = endIx + 1 + delta;
 	      }
@@ -691,18 +714,22 @@ public class HtmlNodeFilters {
 		int delta = 0;
 		if (endIx < 0) {
 		  log.error("Can't find close paren in " + text);
-		  return false;
+		  break;
+// 		  return false;
 		}
 		String oldImport = text.substring(startIx, endIx + 1);
 		if (!matcher.contains(oldImport, pat)) {
-		  String newImport =
-		    urlEncode(oldImport.replaceFirst(target, replace));
-		  delta = newImport.length() - oldImport.length();
-		  String newText = text.substring(0, startIx) + 
-		    newImport + text.substring(endIx + 1);
-		  if (log.isDebug3()) log.debug3("Import rewritten " + newText);
-		  text = newText;
-		  ((TextNode)child).setText(text);
+		  String newImport = oldImport.replaceFirst(target, replace);
+		  if (!newImport.equals(oldImport)) {
+		    String encoded = cssEncode(newImport);
+		    delta = encoded.length() - oldImport.length();
+		    String newText = text.substring(0, startIx) + 
+		      encoded + text.substring(endIx + 1);
+		    if (log.isDebug3())
+		      log.debug3("Import rewritten " + newText);
+		    text = newText;
+		    ((TextNode)child).setText(text);
+		  }
 		}
 		startIx = endIx + 1 + delta;
 	      }
