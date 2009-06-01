@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.6 2009-02-26 05:14:39 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.7 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,9 @@ package org.lockss.servlet;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.account.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
@@ -56,7 +58,8 @@ public class AdminServletManager extends BaseServletManager {
   /** Auth realm */
   public static final String UI_REALM = "LOCKSS Admin";
   /** File holding debug user passwd */
-  public static final String PASSWORD_PROPERTY_FILE = "admin.props";
+  public static final String PASSWORD_PROPERTY_FILE =
+    "/org/lockss/servlet/admin.props";
 
   // All of the params that are defined in terms of SUFFIX_XXX are accessed
   // via the generic mechanism in BaseServletManager.setConfig().  The
@@ -161,42 +164,76 @@ public class AdminServletManager extends BaseServletManager {
   protected static final ServletDescr SERVLET_HOME =
     new ServletDescr("UiHome",
 		     UiHome.class,
-                     "Cache Administration",
+                     "LOCKSS Administration",
 		     "Home",
 		     ServletDescr.LARGE_LOGO);
+  protected static final ServletDescr SERVLET_EDIT_ACCOUNT =
+    new ServletDescr("UserEditAccount",
+		     UserEditAccount.class,
+                     "Edit Account",
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+                     "Update account info") {
+      public boolean isEnabled(LockssDaemon daemon) {
+	AccountManager acctMgr = daemon.getAccountManager();
+	return acctMgr != null && acctMgr.isEnabled();
+      }
+      public boolean isInNav(LockssServlet servlet) {
+	if (servlet.doesUserHaveRole(LockssServlet.ROLE_USER_ADMIN)
+	    && !servlet.doesUserHaveRole(LockssServlet.ROLE_DEBUG)) {
+	  return false;
+	}
+	UserAccount acct = servlet.getUserAccount();
+	return acct != null && acct.isEditable();
+      }
+      public boolean isInUiHome(LockssServlet servlet) {
+	return isInNav(servlet);
+      }};
+
+  protected static final ServletDescr SERVLET_EDIT_ACCOUNTS =
+    new ServletDescr("AdminEditAccounts",
+		     AdminEditAccounts.class,
+                     "Edit Accounts",
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+		      | ServletDescr.NEED_ROLE_USER_ADMIN),
+                     "Administer user accounts") {
+      public boolean isEnabled(LockssDaemon daemon) {
+	AccountManager acctMgr = daemon.getAccountManager();
+	return acctMgr != null && acctMgr.isEnabled();
+      }};
+
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr("BatchAuConfig",
 		     BatchAuConfig.class,
                      "Journal Configuration",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.ADMIN_ONLY),
-                     "Add or remove titles from this cache");
+		      | ServletDescr.NEED_ROLE_AU_ADMIN),
+                     "Add or remove titles from this LOCKSS box");
   protected static final ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr("AuConfig",
 		     AuConfig.class,
                      "Manual Journal Configuration",
-		     (ServletDescr.IN_UIHOME | ServletDescr.ADMIN_ONLY),
+		     (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN),
                      "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr("AdminIpAccess",
 		     AdminIpAccess.class,
                      "Admin Access Control",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.ADMIN_ONLY),
+		      | ServletDescr.NEED_ROLE_USER_ADMIN),
                      "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr("ProxyIpAccess",
 		     ProxyIpAccess.class,
                      "Content Access Control",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.ADMIN_ONLY),
+		      | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
                      "Control access to the preserved content");
   protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
     new ServletDescr("ProxyAndContent",
 		     ProxyAndContent.class,
                      "Content Access Options",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.ADMIN_ONLY),
+		      | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
                      "Configure the audit proxy and the ICP server.");
   protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr("ProxyConfig",
@@ -206,13 +243,13 @@ public class AdminServletManager extends BaseServletManager {
                      ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Info for configuring browsers and proxies"
                      + "<br>"
-                     + "to access preserved content on this cache");
+                     + "to access preserved content on this LOCKSS box");
   protected static final ServletDescr SERVLET_PLUGIN_CONFIG =
     new ServletDescr("PluginConfig",
 		     PluginConfig.class,
                      "Plugin Configuration",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.ADMIN_ONLY),
+		      | ServletDescr.NEED_ROLE_AU_ADMIN),
                      "Manage plugin repositories, title databases") {
       public boolean isInNav(LockssServlet servlet) {
 	return CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
@@ -226,7 +263,7 @@ public class AdminServletManager extends BaseServletManager {
 		     DaemonStatus.class,
                      "Daemon Status",
                      ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-                     "Status of cache contents and operation");
+                     "Status of LOCKSS box contents and operation");
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
     new ServletDescr("ViewContent",
 		     ViewContent.class,
@@ -243,13 +280,13 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("HashCUS",
 		     HashCUS.class,
                      "Hash CUS",
-                     ServletDescr.DEBUG_ONLY);
+                     ServletDescr.NEED_ROLE_DEBUG);
   protected static final ServletDescr LINK_LOGS =
     new ServletDescr(null,
 		     null,
                      "Logs",
                      "log",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
+                     ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
   // Link to ISOs only appears if there are actually any ISOs
   protected static final ServletDescr LINK_ISOS =
     new ServletDescr(null,
@@ -257,7 +294,7 @@ public class AdminServletManager extends BaseServletManager {
                      "ISOs",
                      "iso",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-		      | ServletDescr.ADMIN_ONLY),
+		      | ServletDescr.NEED_ROLE_USER_ADMIN),
 		     "Download configured platform CD image") {
       public boolean isInNav(LockssServlet servlet) {
 	ServletManager mgr = servlet.getServletManager();
@@ -271,18 +308,18 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("ThreadDump",
 		     ThreadDump.class,
                      "Thread Dump",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
+                     ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
   protected static final ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr("RaiseAlert",
 		     RaiseAlert.class,
                      "Raise Alert",
-                     ServletDescr.DEBUG_ONLY | ServletDescr.ADMIN_ONLY);
+                     ServletDescr.NEED_ROLE_DEBUG | ServletDescr.NEED_ROLE_USER_ADMIN);
   protected static final ServletDescr SERVLET_DEBUG_PANEL =
     new ServletDescr("DebugPanel",
 		     DebugPanel.class,
                      "Debug Panel",
-		     (ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY
-		      | ServletDescr.ADMIN_ONLY));
+		     (ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG
+		      | ServletDescr.NEED_ROLE_AU_ADMIN));
   protected static final ServletDescr LINK_CONTACT =
     new ServletDescr(null,
 		     null,
@@ -295,6 +332,23 @@ public class AdminServletManager extends BaseServletManager {
                      "Help", DEFAULT_HELP_URL,
                      ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Online help, FAQs, credits");
+
+  protected static final ServletDescr LINK_LOGOUT =
+    new ServletDescr("LoginForm",
+		     null,
+                     "Logout",
+		     "LoginForm?logout=true",
+		     ServletDescr.IN_NAV) {
+      public boolean isInNav(LockssServlet servlet) {
+	ServletManager mgr = servlet.getServletManager();
+	return (mgr.getAuthenticator() instanceof LockssFormAuthenticator);
+      }};
+
+  protected static final ServletDescr LOGIN_FORM =
+    new ServletDescr("LoginForm",
+		     LoginForm.class,
+                     "LOCKSS Administration",
+		     ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
@@ -330,7 +384,11 @@ public class AdminServletManager extends BaseServletManager {
      SERVLET_RAISE_ALERT,
      SERVLET_HASH_CUS,
      LINK_CONTACT,
+     LINK_LOGOUT,
+     SERVLET_EDIT_ACCOUNT,
+     SERVLET_EDIT_ACCOUNTS,
      LINK_HELP,
+     LOGIN_FORM,
   };
 
   public ServletDescr[] getServletDescrs() {
@@ -395,11 +453,11 @@ public class AdminServletManager extends BaseServletManager {
     return hasIsoFiles;
   }
 
-  protected void installUsers(MDHashUserRealm realm) {
-    installDebugUser(realm);
-    installPlatformUser(realm);
-    installGlobalUsers(realm);
-    installLocalUsers(realm);
+  protected void installUsers() {
+    installDebugUser();
+    installPlatformUser();
+    installGlobalUsers();
+    installLocalUsers();
   }
 
   protected void configureContexts(HttpServer server) {
@@ -419,7 +477,7 @@ public class AdminServletManager extends BaseServletManager {
 	}
       }
       // info currently has same auth as /, but could be different
-      setupInfoContext(server);
+//       setupInfoContext(server);
 
       setupAdminContext(server);
 
@@ -443,7 +501,7 @@ public class AdminServletManager extends BaseServletManager {
     // Create a servlet container.  WebApplicationHandler is a
     // ServletHandler that can apply filters (e.g., compression) around
     // servlets.
-    WebApplicationHandler handler = new WebApplicationHandler();
+    WebApplicationHandler handler = makeWebAppHandler(context);
     addCompressionFilter(handler);
 
     // Request dump servlet
@@ -452,6 +510,8 @@ public class AdminServletManager extends BaseServletManager {
     // Add all servlets in descrs array
     addServlets(getServletDescrs(), handler);
 
+    handler.addServlet("ProxyInfo", "/info/ProxyInfo",
+		       "org.lockss.servlet.ProxyConfig");
     addServletIfAvailable(handler, "Api", "/Api",
 			  "org.lockss.uiapi.servlet.Api");
     context.addHandler(handler);
@@ -463,14 +523,17 @@ public class AdminServletManager extends BaseServletManager {
     log.debug("Resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    rootResourceHandler = new LockssResourceHandler(getDaemon());
-    rootResourceHandler.setDirAllowed(false);
-    setRedirectRootTo(rootResourceHandler, redirectRootTo);
-    //       rHandler.setAcceptRanges(true);
-    context.addHandler(rootResourceHandler);
+    if (redirectRootTo != null) {
+      Map redirMap = new HashMap();
+      redirMap.put("/", redirectRootTo);
+      context.setAttribute(CONTEXT_ATTR_RESOURCE_REDIRECT_MAP, redirMap);
+    }
 
-    // NotFoundHandler
-    context.addHandler(new NotFoundHandler());
+    handler.addServlet("Resource", "/",
+		       "org.lockss.servlet.LockssResourceServlet");
+
+//     // NotFoundHandler
+//     context.addHandler(new NotFoundHandler());
 
     //       context.addHandler(new DumpHandler());
   }
@@ -518,23 +581,26 @@ public class AdminServletManager extends BaseServletManager {
 //     context.addHandler(new NotFoundHandler());
 //   }
 
-  void setupInfoContext(HttpServer server) {
-    HttpContext context = makeContext(server, "/info");
+//   void setupInfoContext(HttpServer server) {
+//     HttpContext context = makeContext(server, "/info");
 
-    // add handlers in the order they should be tried.
+//     // add handlers in the order they should be tried.
 
-    // user authentication handler
-    setContextAuthHandler(context, realm);
+//     // user authentication handler
+//     setContextAuthHandler(context, realm);
 
-    // Create a servlet container
-    ServletHandler handler = new ServletHandler();
-    handler.addServlet("ProxyInfo", "/ProxyInfo",
-		       "org.lockss.servlet.ProxyConfig");
-    context.addHandler(handler);
+//     // Create a servlet container
+//     ServletHandler handler = new WebApplicationHandler();
+//     handler.addServlet("j_security_check", "/j_security_check",
+// 		       "org.mortbay.servlet.Dump");
 
-    // NotFoundHandler
-    context.addHandler(new NotFoundHandler());
-  }
+//     handler.addServlet("ProxyInfo", "/ProxyInfo",
+// 		       "org.lockss.servlet.ProxyConfig");
+//     context.addHandler(handler);
+
+//     // NotFoundHandler
+//     context.addHandler(new NotFoundHandler());
+//   }
 
   protected void setupLogContext(HttpServer server, UserRealm realm,
 				 String contextPath, String logdir)

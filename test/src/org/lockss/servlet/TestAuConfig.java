@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.12 2009-03-24 04:32:37 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.13 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class TestAuConfig extends LockssServletTestCase {
     super.initServletRunner();
     sRunner.registerServlet("/AuConfig", AuConfig.class.getName() );
     sRunner.setServletContextAttribute(LockssServlet.ATTR_ALLOW_ROLES,
-				       ListUtil.list(LockssServlet.ROLE_ADMIN));
+				       ListUtil.list(LockssServlet.ROLE_AU_ADMIN));
   }
 
 

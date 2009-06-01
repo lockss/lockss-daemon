@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.20 2008-09-09 07:55:42 tlipkis Exp $
+ * $Id: UiHome.java,v 1.21 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class UiHome extends LockssServlet {
     Predicate selectUiHome = new Predicate() {
       public boolean evaluate(Object obj) {
 	ServletDescr d = (ServletDescr)obj;
-        return isServletAvailable(d) && d.isInUiHome(UiHome.this);
+        return isServletDisplayed(d) && d.isInUiHome(UiHome.this);
       }
     };
 

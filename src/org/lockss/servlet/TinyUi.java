@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.19 2009-01-21 23:15:46 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.20 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -113,10 +113,50 @@ public class TinyUi extends BaseServletManager {
     return null;
   }
 
-  protected void installUsers(MDHashUserRealm realm) {
-    installDebugUser(realm);
-    installPlatformUser(realm);
-//     installLocalUsers(realm);
+  @Override
+  protected UserRealm newUserRealm() {
+    return new MDHashUserRealm(mi.authRealm);
+  }
+
+  private MDHashUserRealm getRealm() {
+    return (MDHashUserRealm)realm;
+  }
+
+  protected void installUsers() {
+    installDebugUser();
+    installPlatformUser();
+//     installLocalUsers();
+  }
+
+  @Override
+  protected void installDebugUser() {
+    if (enableDebugUser) {
+      try {
+	log.debug("passwd props file: " + mi.debugUserFile);
+ 	URL propsUrl = this.getClass().getResource(mi.debugUserFile);
+ 	if (propsUrl != null) {
+ 	  log.debug("passwd props file: " + propsUrl);
+	  getRealm().load(propsUrl.toString());
+ 	}
+       } catch (IOException e) {
+ 	log.warning("Error loading " + mi.debugUserFile, e);
+      }
+    }
+  }
+
+  @Override
+  // Manually install password set by platform config.
+  protected void installPlatformUser() {
+    // Use platform config as real config hasn't been loaded yet
+    Configuration platConfig = ConfigManager.getPlatformConfig();
+    String platUser = platConfig.get(PARAM_PLATFORM_USERNAME);
+    String platPass = platConfig.get(PARAM_PLATFORM_PASSWORD);
+
+    if (!StringUtil.isNullString(platUser) &&
+	!StringUtil.isNullString(platPass)) {
+      getRealm().put(platUser, platPass);
+      getRealm().addUserToRole(platUser, LockssServlet.ROLE_USER_ADMIN);
+    }
   }
 
   protected void configureContexts(HttpServer server) {

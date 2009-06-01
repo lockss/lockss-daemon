@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.22 2009-02-26 05:14:51 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.23 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -35,15 +35,20 @@ package org.lockss.servlet;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import javax.net.ssl.KeyManagerFactory;
+
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.account.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
+import org.mortbay.http.Authenticator;
 import org.mortbay.http.BasicAuthenticator;
 import org.mortbay.http.handler.*;
+import org.mortbay.jetty.*;
 import org.mortbay.jetty.servlet.*;
 
 /**
@@ -96,6 +101,47 @@ public abstract class BaseServletManager
 //   /** Require user authentication for named server */
 //   public static final String PARAM_USER_AUTH = DOC_PREFIX + SUFFIX_USER_AUTH;
 
+  public static final String SUFFIX_USE_SSL = "useSSL";
+  /** Connect to named server with https if true */
+  public static final String PARAM_USE_SSL =
+    DOC_PREFIX + SUFFIX_USE_SSL;
+  public static final boolean DEFAULT_USE_SSL = false;
+
+  public static final String SUFFIX_SSL_KEYSTORE_NAME = "sslKeystoreName";
+  /** Name of managed keystore to use (see {@link LockssKeystoreManager} */
+  public static final String PARAM_SSL_KEYSTORE_NAME =
+    DOC_PREFIX + SUFFIX_SSL_KEYSTORE_NAME;
+
+  public static final String SUFFIX_SSL_REDIR_FROM = "sslRedirFromPort";
+  /** HTTP Redirector to HTTPS */
+  public static final String PARAM_SSL_REDIR_FROM =
+    DOC_PREFIX + SUFFIX_SSL_REDIR_FROM;
+
+  public static final String SUFFIX_AUTH_TYPE = "authType";
+  /** User authentication type: Basic or Form */
+  public static final String PARAM_AUTH_TYPE = DOC_PREFIX + SUFFIX_AUTH_TYPE;
+  public static final AuthType DEFAULT_AUTH_TYPE = AuthType.Basic;
+
+  public static final String SUFFIX_FORM_LOGIN_URL = "formLoginUrl";
+  /** Login page URL for Form authentication */
+  public static final String PARAM_FORM_LOGIN_URL =
+    DOC_PREFIX + SUFFIX_FORM_LOGIN_URL;
+  public static final String DEFAULT_FORM_LOGIN_URL = "/LoginForm";
+
+  public static final String SUFFIX_FORM_LOGIN_ERROR_URL = "formLoginErrorUrl";
+  /** Login error page URL for Form authentication */
+  public static final String PARAM_FORM_LOGIN_ERROR_URL =
+    DOC_PREFIX + SUFFIX_FORM_LOGIN_ERROR_URL;
+  public static final String DEFAULT_FORM_LOGIN_ERROR_URL =
+    "/LoginForm?error=true";
+
+  public static final String SUFFIX_MAX_LOGIN_INACTIVITY = "maxLoginInactivity";
+  /** Interval after which inactive user must re-login (used only if no
+      per-account inactivity timer) */
+  public static final String PARAM_MAX_LOGIN_INACTIVITY =
+    DOC_PREFIX + SUFFIX_MAX_LOGIN_INACTIVITY;
+  public static long DEFAULT_MAX_LOGIN_INACTIVITY = -1;
+
   public static final String SUFFIX_403_MSG = "403Msg";
   /** Message to include in 403 response */
   public static final String PARAM_403MSG = DOC_PREFIX + SUFFIX_403_MSG;
@@ -124,21 +170,37 @@ public abstract class BaseServletManager
     DOC_USERS_PREFIX + USER_PARAM_ROLES;
 
 
+  public enum AuthType {Basic, Form}
+
   private static String textMimes[] = {
     "out", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
   };
 
   ManagerInfo mi;
   protected int port;
-  protected MDHashUserRealm realm;
+  protected UserRealm realm;
   private boolean start;
   private String includeIps;
   private String excludeIps;
   private boolean logForbidden;
+  private long maxLoginInactivity = DEFAULT_MAX_LOGIN_INACTIVITY;
   protected boolean enableDebugUser;
+  protected boolean useSSL;
+  protected String sslKeystoreName;
+  protected int sslRedirFromPort;
+  protected AuthType authType = DEFAULT_AUTH_TYPE;
+  protected String formLoginUrl = DEFAULT_FORM_LOGIN_URL;
+  protected String formLoginErrorUrl = DEFAULT_FORM_LOGIN_ERROR_URL;
+  protected Authenticator authenticator;
+  protected SecurityConstraint sslConstraint = null;
+
   private String _403Msg;
 
   List accessHandlers = new ArrayList();
+
+  protected LockssSessionManager sessionMgr = new LockssSessionManager();
+  protected AccountManager acctMgr;
+  protected LockssKeyStoreManager keystoreMgr;
 
   public BaseServletManager(String serverName) {
     super(serverName);
@@ -146,6 +208,8 @@ public abstract class BaseServletManager
 
   /** Start servlets  */
   public void startService() {
+    acctMgr = getDaemon().getAccountManager();
+    keystoreMgr = getDaemon().getKeystoreManager();
     initDescrs();
     super.startService();
   }
@@ -169,7 +233,7 @@ public abstract class BaseServletManager
   public abstract ServletDescr[] getServletDescrs();
 
   /** Install appropriate users for these servlets */
-  protected abstract void installUsers(MDHashUserRealm realm);
+  protected abstract void installUsers();
 
   /** Create and configure contexts for this server */
   protected abstract void configureContexts(HttpServer server);
@@ -186,6 +250,26 @@ public abstract class BaseServletManager
       _403Msg = config.get(prefix + SUFFIX_403_MSG, mi.default403Msg);
       enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
 					  mi.defaultEnableDebugUser);
+      useSSL = config.getBoolean(mi.prefix + SUFFIX_USE_SSL, false);
+      if (useSSL) {
+ 	sslKeystoreName = config.get(mi.prefix + SUFFIX_SSL_KEYSTORE_NAME);
+	sslRedirFromPort = config.getInt(mi.prefix + SUFFIX_SSL_REDIR_FROM, -1);
+      }
+      authType = (AuthType)config.getEnum(AuthType.class,
+					  mi.prefix + SUFFIX_AUTH_TYPE,
+					  DEFAULT_AUTH_TYPE);
+      switch (authType) {
+      case Form:
+	formLoginUrl = config.get(mi.prefix + SUFFIX_FORM_LOGIN_URL,
+				  DEFAULT_FORM_LOGIN_URL);
+	formLoginErrorUrl = config.get(mi.prefix + SUFFIX_FORM_LOGIN_ERROR_URL,
+				       DEFAULT_FORM_LOGIN_ERROR_URL);
+	break;
+      default:
+      }
+      maxLoginInactivity =
+	config.getTimeInterval(mi.prefix + SUFFIX_MAX_LOGIN_INACTIVITY,
+			       DEFAULT_MAX_LOGIN_INACTIVITY);
     }
     // Access control prefix not nec. related to prefix, don't nest inside
     // if (changedKeys.contains(prefix))
@@ -203,6 +287,10 @@ public abstract class BaseServletManager
 		", excl: " + excludeIps);
       setIpFilters();
     }
+  }
+
+  public Authenticator getAuthenticator() {
+    return authenticator;
   }
 
   void startOrStop() {
@@ -251,10 +339,43 @@ public abstract class BaseServletManager
     }
     try {
       // Create the server
-      HttpServer server = new HttpServer();
+      HttpServer server = new Server();
 
+      HttpListener listener;
       // Create a port listener
-      server.addListener(new org.mortbay.util.InetAddrPort(port));
+      if (useSSL) {
+	LockssSslListener lsl =
+	  new LockssSslListener(new org.mortbay.util.InetAddrPort(port));
+	KeyManagerFactory kmf =
+	  keystoreMgr.getKeyManagerFactory(sslKeystoreName);
+	if (kmf == null) {
+	  log.error("Keystore " + sslKeystoreName + " not found, not starting");
+	  return;
+	}
+ 	lsl.setKeyManagerFactory(kmf);
+	listener = lsl;
+
+	if (sslRedirFromPort > 0) {
+	  log.debug("redir from: " + sslRedirFromPort);
+	  SocketListener redirListener =
+	    new SocketListener(new org.mortbay.util.InetAddrPort(sslRedirFromPort));
+	  redirListener.setIntegralPort(port);
+// 	  redirListener.setConfidentialPort(port);
+	  server.addListener(redirListener);
+
+	  SecurityConstraint sc = new SecurityConstraint();
+//  	  sc.setAuthenticate(true);
+	  sc.setDataConstraint(SecurityConstraint.DC_INTEGRAL);
+// 	  sc.setDataConstraint(SecurityConstraint.DC_CONFIDENTIAL);
+	  sc.setName("redir");
+	  sc.addRole("*");
+	  sslConstraint = sc;
+	}
+      } else {
+	listener = new SocketListener(new org.mortbay.util.InetAddrPort(port));
+      }
+//       listener.setHttpServer(server);
+      server.addListener(listener);
 
       setupAuthRealm();
 
@@ -272,10 +393,15 @@ public abstract class BaseServletManager
   // doesn't add AuthHandler as not all contexts want it
   HttpContext makeContext(HttpServer server, String path) {
     HttpContext context = server.getContext(path);
+    if (sslConstraint != null) {
+      context.addSecurityConstraint("*", sslConstraint);
+    }
     context.setAttribute(HttpContext.__ErrorHandler,
 			 new LockssErrorHandler("daemon")); 
     context.setAttribute(CONTEXT_ATTR_LOCKSS_APP, theApp);
     context.setAttribute(CONTEXT_ATTR_SERVLET_MGR, this);
+    context.setAttribute(CONTEXT_ATTR_ACCOUNT_MGR,
+			 getDaemon().getAccountManager());
     // In this environment there is no point in consuming memory with
     // cached resources
     context.setMaxCachedFileSize(0);
@@ -308,22 +434,28 @@ public abstract class BaseServletManager
 
   void setupAuthRealm() {
     if (mi.doAuth) {
-      realm = new MDHashUserRealm(mi.authRealm);
-      installUsers(realm);
-      if (realm.isEmpty()) {
+      realm = newUserRealm();
+      installUsers();
+      if (acctMgr != null && acctMgr.getAccounts().isEmpty()) {
 	log.warning("No users created, " + mi.authRealm +
 		    " is effectively disabled.");
       }
     }
   }
 
-  protected void installDebugUser(MDHashUserRealm realm) {
+  protected UserRealm newUserRealm() {
+    return new LockssUserRealm(mi.authRealm, acctMgr);
+  }
+
+  protected void installDebugUser() {
     if (enableDebugUser) {
       try {
+	log.debug("passwd props file: " + mi.debugUserFile);
 	URL propsUrl = this.getClass().getResource(mi.debugUserFile);
 	if (propsUrl != null) {
 	  log.debug("passwd props file: " + propsUrl);
-	  realm.load(propsUrl.toString());
+	  log.debug("debugUserFile: " + mi.debugUserFile);
+	  acctMgr.loadFromProps(mi.debugUserFile);
 	}
       } catch (IOException e) {
 	log.warning("Error loading " + mi.debugUserFile, e);
@@ -332,36 +464,27 @@ public abstract class BaseServletManager
   }
 
   // Manually install password set by platform config.
-  // XXX Doesn't handle roles, will need to be integrated with daemon
-  // password setting mechanism
-  protected void installPlatformUser(MDHashUserRealm realm) {
+  protected void installPlatformUser() {
     // Use platform config in case real config hasn't been loaded yet (when
     // used from TinyUI)
     Configuration platConfig = ConfigManager.getPlatformConfig();
     String platUser = platConfig.get(PARAM_PLATFORM_USERNAME);
     String platPass = platConfig.get(PARAM_PLATFORM_PASSWORD);
-
-    if (!StringUtil.isNullString(platUser) &&
-	!StringUtil.isNullString(platPass)) {
-      realm.put(platUser, platPass);
-      realm.addUserToRole(platUser, LockssServlet.ROLE_ADMIN);
-    }
+    acctMgr.installPlatformUser(platUser, platPass);
   }
 
-  protected void installGlobalUsers(MDHashUserRealm realm) {
+  protected void installGlobalUsers() {
     // Install globally configured users
     // XXX disallow this on the platform
-    installUsers(realm,
-		 ConfigManager.getCurrentConfig().getConfigTree(mi.prefix + SUFFIX_USERS));
+    installUsers(ConfigManager.getCurrentConfig().getConfigTree(mi.prefix + SUFFIX_USERS));
   }
 
-  protected void installLocalUsers(MDHashUserRealm realm) {
+  protected void installLocalUsers() {
     // Install locally configured users
-//     installUsers(realm,
-// 		 ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS));
+//     installUsers(ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS));
   }
 
-  protected void installUsers(MDHashUserRealm realm, Configuration users) {
+  protected void installUsers(Configuration users) {
     for (Iterator iter = users.nodeIterator(); iter.hasNext(); ) {
       Configuration oneUser = users.getConfigTree((String)iter.next());
       String user = oneUser.get(USER_PARAM_USER);
@@ -369,12 +492,13 @@ public abstract class BaseServletManager
       String roles = oneUser.get(USER_PARAM_ROLES);
       if (!StringUtil.isNullString(user) &&
 	  !StringUtil.isNullString(pwd)) {
-	realm.put(user, pwd);
-	if (!StringUtil.isNullString(roles)) {
-	  StringTokenizer tok = new StringTokenizer(roles,", ");
-	  while (tok.hasMoreTokens()) {
-	    realm.addUserToRole(user,tok.nextToken());
+	try {
+	  UserAccount acct = acctMgr.addStaticUser(user, pwd);
+	  if (!StringUtil.isNullString(roles)) {
+	    acct.setRoles(roles);
 	  }
+	} catch (AccountManager.NotAddedException e) {
+	  log.error(e.getMessage());
 	}
       }
     }
@@ -390,29 +514,54 @@ public abstract class BaseServletManager
   protected void setContextAuthHandler(HttpContext context, UserRealm realm) {
     if (realm != null) {
       context.setRealm(realm);
-      context.setAuthenticator(new BasicAuthenticator());
-      context.addHandler(new SecurityHandler());
-      context.addSecurityConstraint("/",
-				    new SecurityConstraint(mi.serverName,
-							   "*"));
+      switch (authType) {
+      case Basic:
+	log.info(mi.serverName + ", " + context.getName() + ": Using basic auth");
+	context.setAuthenticator(new BasicAuthenticator());
+	context.addHandler(new SecurityHandler());
+	context.addSecurityConstraint("/",
+				      new SecurityConstraint(mi.serverName,
+							     "*"));
+	break;
+      case Form:
+	log.info(mi.serverName + ", " + context.getName() + ": Using form auth");
+	LockssFormAuthenticator fa = new LockssFormAuthenticator(getDaemon());
+	fa.setLoginPage(formLoginUrl);
+	fa.setErrorPage(formLoginErrorUrl);
+	if (maxLoginInactivity > 0) {
+	  fa.setMaxInactivity(maxLoginInactivity);
+	}
+	context.addSecurityConstraint("/",
+				      new SecurityConstraint(mi.serverName,
+							     "*"));
+	context.setAuthenticator(fa);
+	break;
+      }
+      authenticator = 	context.getAuthenticator();
     }
+  }
+
+  WebApplicationHandler makeWebAppHandler(HttpContext context) {
+    WebApplicationHandler handler = new WebApplicationHandler();
+    handler.setSessionManager(sessionMgr);
+    context.setAttribute(CONTEXT_ATTR_SERVLET_HANDLER, handler);
+    return handler;
   }
 
   protected void setupDirContext(HttpServer server, UserRealm realm,
 				 String contextPath, String dir,
 				 FilenameFilter filter)
       throws MalformedURLException {
-    HttpContext context = server.getContext(contextPath);
-    // Don't consume memory with cached files
-    context.setMaxCachedFileSize(0);
 
-    // IpAccessHandler is always first handler
-    addAccessHandler(context);
+    HttpContext context = makeContext(server, contextPath);
 
     // user authentication handler
     setContextAuthHandler(context, realm);
 
-    // log dir resource
+    WebApplicationHandler handler = makeWebAppHandler(context);
+    context.addHandler(handler);
+    handler.addServlet("Login", "/LoginForm", "org.lockss.servlet.LoginForm");
+    // Log Dir resource
     String dirname = (dir != null) ? dir : "";
     URL url = new URL("file", null,
 		      new File(dirname).getAbsolutePath());
@@ -433,12 +582,21 @@ public abstract class BaseServletManager
     } else {
       context.setResourceBase(url.toString());
     }
-    ResourceHandler dirRHandler = new ResourceHandler();
-    dirRHandler.setDirAllowed(true);
-    //    dirRHandler.setPutAllowed(false);
-    //       rHandler.setDelAllowed(false);
-    //       rHandler.setAcceptRanges(true);
-    context.addHandler(dirRHandler);
+    switch (authType) {
+    case Basic:
+      break;
+    case Form:
+      Map redirMap = new HashMap();
+      redirMap.put(formLoginUrl + ".*", formLoginUrl);
+      context.setAttribute(CONTEXT_ATTR_RESOURCE_REDIRECT_MAP, redirMap);
+      break;
+    }
+
+    ServletHolder holder =
+      handler.addServlet("Resource", "/",
+			 "org.lockss.servlet.LockssResourceServlet");
+    holder.put("dirAllowed", "true");
+
     for (int ix = 0; ix < textMimes.length; ix++) {
       context.setMimeMapping(textMimes[ix], "text/plain");
     }
@@ -454,7 +612,8 @@ public abstract class BaseServletManager
       Class cls = d.getServletClass();
       if (cls != null
 	  && cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER
-	  && !d.isPathIsUrl()) {
+	  && !d.isPathIsUrl()
+	  && d.isEnabled(getDaemon())) {
 	String path = "/" + d.getPath();
 	log.debug2("addServlet("+d.getServletName()+", "+path+
 		   ", "+cls.getName()+")");
@@ -492,4 +651,5 @@ public abstract class BaseServletManager
     boolean defaultLogForbidden;
     String debugUserFile;
   }
+
 }

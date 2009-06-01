@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.3 2009-02-26 05:14:39 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.4 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -190,7 +190,7 @@ public class ContentServletManager
 					  ? null : redTo);
   }
 
-  protected void installUsers(MDHashUserRealm realm) {
+  protected void installUsers() {
   }
 
   protected void configureContexts(HttpServer server) {

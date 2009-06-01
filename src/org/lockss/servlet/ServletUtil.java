@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.58 2009-03-05 05:40:46 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.59 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,14 @@ public class ServletUtil {
   static final String PARAM_DISABLED_SERVLETS =
     Configuration.PREFIX + "ui.disabledServlets";
   static final List DEFAULT_DISABLED_SERVLETS = Collections.EMPTY_LIST;
+
+  /** URL of third party logo image */
+  static final String PARAM_THIRD_PARTY_LOGO_IMAGE =
+    Configuration.PREFIX + "ui.logo.img";
+
+  /** URL of third party logo link */
+  static final String PARAM_THIRD_PARTY_LOGO_LINK =
+    Configuration.PREFIX + "ui.logo.link";
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -337,6 +345,9 @@ public class ServletUtil {
   private static final String SUBMIT_BEFORE =
     "<br><center>";
 
+  private static String thirdPartyLogo;
+  private static String thirdPartyLogoLink;
+
   private static Map<String,String> disabledServlets = new HashMap();
 
   /** Called by org.lockss.config.MiscConfig
@@ -346,6 +357,10 @@ public class ServletUtil {
 			       Configuration.Differences diffs) {
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);
+    }
+    thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
+    if (thirdPartyLogo != null) {
+      thirdPartyLogoLink = config.get(PARAM_THIRD_PARTY_LOGO_LINK);
     }
     if (diffs.contains(PARAM_DISABLED_SERVLETS)) {
       List<String> dis = config.getList(PARAM_DISABLED_SERVLETS,
@@ -777,12 +792,18 @@ public class ServletUtil {
                                   Iterator descrIterator) {
     Composite comp = new Composite();
     Table table = new Table(HEADER_TABLE_BORDER, HEADER_TABLE_ATTRIBUTES);
-    Image logo = isLargeLogo ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
-
+    Image logo = ((isLargeLogo && thirdPartyLogo == null)
+		  ? IMAGE_LOGO_LARGE
+		  : IMAGE_LOGO_SMALL);
     table.newRow();
     table.newCell("valign=\"top\" align=\"center\" width=\"20%\"");
     table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
     table.add(IMAGE_TM);
+    if (thirdPartyLogo != null) {
+      Image img = new Image(thirdPartyLogo);
+      img.border(0);
+      table.add(new Link(thirdPartyLogoLink, img));
+    }
 
     table.newCell("valign=\"top\" align=\"center\" width=\"60%\"");
     table.add("<br>");

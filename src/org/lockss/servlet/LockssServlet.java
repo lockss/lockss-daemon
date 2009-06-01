@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.110 2009-04-07 04:53:07 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.111 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,7 @@ import org.mortbay.servlet.MultiPartRequest;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.account.*;
 import org.lockss.remote.RemoteApi;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.protocol.*;
@@ -91,13 +92,23 @@ public abstract class LockssServlet extends HttpServlet
   public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String ATTR_ALLOW_ROLES = "AllowRoles";
 
-  public static final String ROLE_ADMIN = "adminRole";
+  /** User may configure admin access (add/delete/modify users, set admin
+   * access list) */
+  public static final String ROLE_USER_ADMIN = "userAdminRole";
+
+  /** User may configure content access (set content access list) */
+  public static final String ROLE_CONTENT_ADMIN = "contentAdminRole";
+
+  /** User may change AU configuration (add/delete content) */
+  public static final String ROLE_AU_ADMIN = "auAdminRole";
+
   public static final String ROLE_DEBUG = "debugRole";
 
   protected ServletContext context;
 
   private LockssApp theApp = null;
   private ServletManager servletMgr;
+  private AccountManager acctMgr;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -128,6 +139,8 @@ public abstract class LockssServlet extends HttpServlet
       (LockssApp)context.getAttribute(ServletManager.CONTEXT_ATTR_LOCKSS_APP);
     servletMgr =
       (ServletManager)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR);
+    acctMgr =
+      (AccountManager)context.getAttribute(ServletManager.CONTEXT_ATTR_ACCOUNT_MGR);
   }
 
   public ServletManager getServletManager() {
@@ -145,7 +158,7 @@ public abstract class LockssServlet extends HttpServlet
   /** Common request handling. */
   public void service(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    multiReq = null;
+    resetState();
     boolean success = false;
     try {
       this.req = req;
@@ -160,14 +173,11 @@ public abstract class LockssServlet extends HttpServlet
 	resp.setHeader("Cache-control", "no-cache");
       }
 
-      footNumber = 0;
-      tabindex = 1;
       reqURL = new URL(UrlUtil.getRequestURL(req));
       clientAddr = getLocalIPAddr();
-      submitButtonNumber = 0;
 
-      // check whether servlet requires admin user
-      if (myServletDescr().isAdminOnly() && !isAdminUser()) {
+      // check that current user has permission to run this servlet
+      if (!isServletAllowed(myServletDescr())) {
 	displayWarningInLieuOfPage("You are not authorized to use " +
 				   myServletDescr().heading);
 	return;
@@ -199,6 +209,16 @@ public abstract class LockssServlet extends HttpServlet
       resetMyLocals();
       resetLocals();
     }
+  }
+
+  protected void resetState() {
+    multiReq = null;
+    footNumber = 0;
+    submitButtonNumber = 0;
+    tabindex = 1;
+    statusMsg = null;
+    errMsg = null;
+    isFramed = false;
   }
 
   protected void resetLocals() {
@@ -412,21 +432,72 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // user predicates
-  protected boolean isDebugUser() {
-    return req.isUserInRole(ROLE_DEBUG) &&
-      StringUtil.isNullString(req.getParameter("nodebug"));
+  String getUsername() {
+    return req.getUserPrincipal().toString();
   }
 
-  protected boolean isAdminUser() {
-    if (req.isUserInRole(ROLE_ADMIN) &&
-	StringUtil.isNullString(req.getParameter("noadmin"))) {
+  protected UserAccount getUserAccount() {
+    if (acctMgr == null) {
+      return null;
+    }
+    log.info("getUserAccount() = " + acctMgr.getUser(getUsername()));
+    return acctMgr.getUser(getUsername());
+  }
+
+  protected boolean isDebugUser() {
+    return doesUserHaveRole(ROLE_DEBUG);
+  }
+
+  protected boolean doesUserHaveRole(String role) {
+    if ((req.isUserInRole(role) || req.isUserInRole(ROLE_USER_ADMIN))
+	&& !hasNoRoleParsm(role)) {
       return true;
     }
+    return hasTestRole(role);
+  }
+
+  static Map<String,String> noRoleParams = new HashMap<String,String>();
+  static {
+    noRoleParams.put(ROLE_USER_ADMIN, "noadmin");
+    noRoleParams.put(ROLE_CONTENT_ADMIN, "nocontent");
+    noRoleParams.put(ROLE_AU_ADMIN, "noau");
+    noRoleParams.put(ROLE_DEBUG, "nodebug");
+  }
+
+  protected boolean hasNoRoleParsm(String roleName) {
+    String noRoleParam = noRoleParams.get(roleName);
+    return (noRoleParam != null &&
+	    !StringUtil.isNullString(req.getParameter(noRoleParam)));
+  }
+
+  protected boolean hasTestRole(String role) {
+    // Servlet test harness puts roles in context
     List roles = (List)context.getAttribute(ATTR_ALLOW_ROLES);
-    if (roles != null) {
-      return roles.contains(ROLE_ADMIN);
-    }
-    return false;
+    return roles != null && (roles.contains(role)
+			     || roles.contains(ROLE_USER_ADMIN));
+  }
+
+  protected boolean isServletAllowed(ServletDescr d) {
+    if (d.needsUserAdminRole() && !doesUserHaveRole(ROLE_USER_ADMIN))
+      return false;
+    if (d.needsContentAdminRole() && !doesUserHaveRole(ROLE_CONTENT_ADMIN))
+      return false;
+    if (d.needsAuAdminRole() && !doesUserHaveRole(ROLE_AU_ADMIN))
+      return false;
+    
+    return d.isEnabled(getLockssDaemon());
+  }
+
+  protected boolean isServletDisplayed(ServletDescr d) {
+    if (!isServletAllowed(d)) return false;
+    if (d.needsDebugRole() && !doesUserHaveRole(ROLE_DEBUG))
+      return false;
+    return true;
+  }
+
+  protected boolean isServletInNav(ServletDescr d) {
+    if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
+    return d.isInNav(this) && isServletDisplayed(d);
   }
 
   // Called when a servlet doesn't get the parameters it expects/needs
@@ -625,18 +696,6 @@ public abstract class LockssServlet extends HttpServlet
     return UrlUtil.encodeUrl(param);
   }
 
-
-  protected boolean isServletAvailable(ServletDescr d) {
-    if (!isDebugUser() && d.isDebugOnly()) return false;
-    if (!isAdminUser() && d.isAdminOnly()) return false;
-    if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
-    return true;
-  }
-
-  protected boolean isServletInNav(ServletDescr d) {
-    return isServletAvailable(d) && d.isInNav(this);
-  }
-
   protected String getRequestKey() {
     String key = req.getPathInfo();
     if (key != null && key.startsWith("/")) {
@@ -655,13 +714,18 @@ public abstract class LockssServlet extends HttpServlet
 
     // Create page and layout header
     Page page = ServletUtil.doNewPage(getPageTitle(), isFramed());
-    FilterIterator inNavIterator = new FilterIterator(
+    Iterator inNavIterator;
+    if (myServletDescr().hasNoNavTable()) {
+      inNavIterator = CollectionUtil.EMPTY_ITERATOR;
+    } else {
+      inNavIterator = new FilterIterator(
         new ObjectArrayIterator(getServletDescrs()),
         new Predicate() {
           public boolean evaluate(Object obj) {
             return isServletInNav((ServletDescr)obj);
           }
         });
+    }
     ServletUtil.layoutHeader(this,
                              page,
                              heading,
@@ -987,11 +1051,16 @@ public abstract class LockssServlet extends HttpServlet
     while (en.hasMoreElements()) {
       String name = (String)en.nextElement();
       String vals[];
-      if (log.isDebug2() && (vals = req.getParameterValues(name)).length > 1) {
-	log.debug(name + " = " + StringUtil.separatedString(vals, ", "));
+      String dispval;
+      if (StringUtil.indexOfIgnoreCase(name, "passw") >= 0) {
+	dispval = req.getParameter(name).length() == 0 ? "" : "********";
+      } else if (log.isDebug2()
+		 && (vals = req.getParameterValues(name)).length > 1) {
+	dispval = StringUtil.separatedString(vals, ", ");
       } else {
-	log.debug(name + " = " + req.getParameter(name));
+	dispval = req.getParameter(name);
       }
+      log.debug(name + " = " + dispval);
     }
   }
 

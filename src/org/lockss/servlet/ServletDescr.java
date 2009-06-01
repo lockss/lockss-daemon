@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.13 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.14 2009-06-01 07:53:32 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.servlet;
+
+import org.lockss.app.*;
 
 public class ServletDescr {
 
@@ -65,13 +67,20 @@ public class ServletDescr {
    * links */
   public static final int PATH_IS_URL = 0x20;
 
-  /** User role: Debug user only */
-  public static final int DEBUG_ONLY = 0x1000;
+  /** Suppress the usual nav table when displaying this servlet */
+  public static final int NO_NAV_TABLE = 0x40;
 
-  /** User role: Admin (read/write) user only */
-  public static final int ADMIN_ONLY = 0x2000;
+  /** Needs debug role */
+  public static final int NEED_ROLE_DEBUG = 0x1000;
 
+  /** Needs user admin role */
+  public static final int NEED_ROLE_USER_ADMIN = 0x2000;
 
+  /** Needs content access admin role */
+  public static final int NEED_ROLE_CONTENT_ADMIN = 0x4000;
+
+  /** Needs AU admin role */
+  public static final int NEED_ROLE_AU_ADMIN = 0x8000;
 
   public ServletDescr(String servletName,
 		      Class cls,
@@ -193,12 +202,20 @@ public class ServletDescr {
     expl = s;
   }
 
-  boolean isDebugOnly() {
-    return (flags & DEBUG_ONLY) != 0;
+  boolean needsUserAdminRole() {
+    return (flags & NEED_ROLE_USER_ADMIN) != 0;
   }
 
-  boolean isAdminOnly() {
-    return (flags & ADMIN_ONLY) != 0;
+  boolean needsContentAdminRole() {
+    return (flags & NEED_ROLE_CONTENT_ADMIN) != 0;
+  }
+
+  boolean needsAuAdminRole() {
+    return (flags & NEED_ROLE_AU_ADMIN) != 0;
+  }
+
+  boolean needsDebugRole() {
+    return (flags & NEED_ROLE_DEBUG) != 0;
   }
 
   boolean isLargeLogo() {
@@ -209,6 +226,11 @@ public class ServletDescr {
     return (flags & PATH_IS_URL) != 0;
   }
 
+  /** return true if servlet should be enabled */
+  public boolean isEnabled(LockssDaemon daemon) {
+    return true;
+  }
+
   /** return true if servlet should be in the nav table of ofServlet */
   public boolean isInNav(LockssServlet ofServlet) {
     return isFlagSet(IN_NAV);
@@ -217,6 +239,11 @@ public class ServletDescr {
   /** return true if servlet should be in UI home page */
   public boolean isInUiHome(LockssServlet uiHomeServlet) {
     return isFlagSet(IN_UIHOME);
+  }
+
+  /** return true if servlet should not have a nav table */
+  public boolean hasNoNavTable() {
+    return isFlagSet(NO_NAV_TABLE);
   }
 
   boolean isFlagSet(int flag) {
