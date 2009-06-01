@@ -1,5 +1,5 @@
 /*
- * $Id: MDHashUserRealm.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
+ * $Id: MDHashUserRealm.java,v 1.4 2009-06-01 07:34:34 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ in this Software without prior written authorization from Stanford University.
 // are private
 
 // ========================================================================
-// $Id: MDHashUserRealm.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
+// $Id: MDHashUserRealm.java,v 1.4 2009-06-01 07:34:34 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ public class MDHashUserRealm extends HashMap
   /* ------------------------------------------------------------ */
   private String _realmName;
   private String _config;
-  protected HashMap _roles=new HashMap(7);
+  protected Map<String,Set> _roles=new HashMap<String,Set>(7);
   private SSORealm _ssoRealm;
 
 
@@ -188,6 +188,9 @@ public class MDHashUserRealm extends HashMap
 				Object credentials,
 				HttpRequest request)
   {
+    if (log.isDebug2()) {
+      log.debug2("authenticate("+username+", "+credentials+")");
+    }
     KnownUser user;
     synchronized (this)
       {
@@ -260,7 +263,7 @@ public class MDHashUserRealm extends HashMap
    */
   public synchronized void addUserToRole(String userName, String roleName)
   {
-    HashSet userSet = (HashSet)_roles.get(roleName);
+    Set userSet = _roles.get(roleName);
     if (userSet==null)
       {
 	userSet=new HashSet(11);
@@ -289,7 +292,7 @@ public class MDHashUserRealm extends HashMap
     if (user==null || ((User)user).getUserRealm()!=this)
       return false;
 
-    HashSet userSet = (HashSet)_roles.get(roleName);
+    Set userSet = _roles.get(roleName);
     return userSet!=null && userSet.contains(user.getName());
   }
 
