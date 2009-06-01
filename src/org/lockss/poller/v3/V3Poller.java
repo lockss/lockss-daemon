@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.96 2009-03-26 04:45:03 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.97 2009-06-01 07:31:03 tlipkis Exp $
  */
 
 /*
@@ -1806,7 +1806,9 @@ public class V3Poller extends BasePoll {
       }
     }
     if (newRepairees > 0) {
-      String info = newRepairees + " new agreeing peers";
+      String info =
+	StringUtil.numberOfUnits(newRepairees,"new agreeing peer",
+				 "new agreeing peers");
       log.info(info + " for " + getAu().getName());
       pollerState.setAdditionalInfo(info);
     }
@@ -2345,16 +2347,23 @@ public class V3Poller extends BasePoll {
 	DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(getAu());
 	synchronized (noAuSet) {
 	  try {
-	    log.debug2("Poll " + getKey() + " Adding no AU peers: "
-		       + noAuPeers);
+	    if (log.isDebug2()) {
+	      log.debug2("Poll " + getKey() + " Adding no AU peers: "
+			 + noAuPeers);
+	    }
 	    noAuSet.load();
-	    int s = noAuSet.size();
-	    noAuSet.addAll(noAuPeers);
-	    if (noAuSet.getDate() < 0) {
+	    // Reset date if set is empty.  Slightly better to do here than
+	    // when set is emptied (due to age) as this doesn't start the
+	    // clock until some entries are actually added to the set.
+	    if (noAuSet.isEmpty()) {
 	      noAuSet.setDate(TimeBase.nowMs());
 	    }
-	    log.debug2("NoAuSet: " + s + " -> " + noAuSet.size()
-		       + ", " + StringUtil.timeIntervalToString(TimeBase.msSince(noAuSet.getDate())));
+	    int s = noAuSet.size();
+	    noAuSet.addAll(noAuPeers);
+	    if (log.isDebug2()) {
+	      log.debug2("NoAuSet: " + s + " -> " + noAuSet.size()
+			 + ", " + StringUtil.timeIntervalToString(TimeBase.msSince(noAuSet.getDate())));
+	    }
 	    noAuSet.store(true);
 	  } catch (IOException e) {
 	    log.error("Failed to update no AU set", e);
