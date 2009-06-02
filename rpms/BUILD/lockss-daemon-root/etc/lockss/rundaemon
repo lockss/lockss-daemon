@@ -130,7 +130,7 @@ EOF
 # If optional SSL setup script exists and is executable, run it.
 RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
 if [ -x ${RUN_SSL} ]; then
-   ${RUN_SSL}
+   ${RUN_SSL} --release @RELEASENAME@
 fi
 
 cd ${LOCKSS_HOME}/
