@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUserRealm.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: LockssUserRealm.java,v 1.2 2009-06-02 07:10:59 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ in this Software without prior written authorization from Stanford University.
 // sure how thay might interact with Jetty
 
 // ========================================================================
-// $Id: LockssUserRealm.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+// $Id: LockssUserRealm.java,v 1.2 2009-06-02 07:10:59 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -245,9 +245,11 @@ public class LockssUserRealm implements UserRealm {
       }
       HttpServletRequest servletRequest =
 	(ServletHttpRequest)request.getWrapper();
-      HttpSession session = servletRequest.getSession();
-      if (msg != null) {
-	if (servletRequest != null) {
+      if (servletRequest != null) {
+	HttpSession session = servletRequest.getSession();
+	log.info("authenticate("+credentials+"): " + res
+		 + ", session: " + session);
+	if (msg != null) {
 	  session.setAttribute(LockssFormAuthenticator.__J_LOCKSS_AUTH_ERROR_MSG,
 			       msg);
 	}
