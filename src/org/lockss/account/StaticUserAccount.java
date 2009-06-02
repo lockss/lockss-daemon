@@ -1,5 +1,5 @@
 /*
- * $Id: StaticUserAccount.java,v 1.1 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: StaticUserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,10 @@ public class StaticUserAccount extends BasicUserAccount {
 
   public StaticUserAccount(String name) {
     super(name);
+  }
+
+  public String getType() {
+    return "Static";
   }
 
   @Override

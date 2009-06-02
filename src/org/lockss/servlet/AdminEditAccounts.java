@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.3 2009-06-02 07:10:21 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class AdminEditAccounts extends EditAccountBase {
   protected static final String ACTION_ADMIN_ADD = "Add user";
   protected static final String ACTION_ADMIN_UPDATE = "Update user";
   protected static final String ACTION_ADMIN_DELETE = "Delete user";
+  protected static final String ACTION_ADMIN_CANCEL = "Cancel";
   protected static final String ACTION_ADMIN_CONFIRM_DELETE = "Confirm delete";
 
   protected void handleAccountRequest() throws IOException {
@@ -81,6 +82,8 @@ public class AdminEditAccounts extends EditAccountBase {
       displayEditUser(req.getParameter(KEY_USER));
     } else if (action.equals(ACTION_ADMIN_CONFIRM_DELETE)) {
       doAdminDelete();
+    } else if (action.equals(ACTION_ADMIN_CANCEL)) {
+      displayAdminSummary();
     } else {
       errMsg = "Unknown action: " + action;
       displayAdminSummary();
@@ -150,6 +153,11 @@ public class AdminEditAccounts extends EditAccountBase {
       return;
     }
 
+    acct.setRoles(roles);
+    if (!StringUtil.isNullString(email)) {
+      acct.setEmail(email);
+    }
+
     if (!StringUtil.equalStrings(pwd1, pwd2)) {
       errMsg = "Error: passwords don't match";
       displayEditAccount(acct);
@@ -164,10 +172,6 @@ public class AdminEditAccounts extends EditAccountBase {
 	displayEditAccount(acct);
 	return;
       }
-    }
-    acct.setRoles(roles);
-    if (!StringUtil.isNullString(email)) {
-      acct.setEmail(email);
     }
     if (action.equals(ACTION_ADMIN_ADD)) {
       try {
@@ -235,6 +239,7 @@ public class AdminEditAccounts extends EditAccountBase {
       String role = rd.name;
       addHeading(tbl, rd.shortDesc + addFootnote(rd.longDesc));
     }
+    addHeading(tbl, "Type");
     addHeading(tbl, "Email address");
     List<UserAccount> users = new ArrayList(acctMgr.getAccounts());
     Collections.sort(users, USER_COMPARATOR);
@@ -248,6 +253,9 @@ public class AdminEditAccounts extends EditAccountBase {
 	String role = rd.name;
 	addRole(acct, tbl, rd.name);
       }
+
+      tbl.newCell();
+      tbl.add(acct.getType());
 
       tbl.newCell();
       tbl.add(acct.getEmail());
@@ -279,6 +287,11 @@ public class AdminEditAccounts extends EditAccountBase {
 
     Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
     Table tbl = new Table(0, "align=center cellspacing=4 border=1 cellpadding=2");
+//     tbl.newRow();
+//     tbl.newCell("align=center");
+//     tbl.add("Account policy: ");
+//     tbl.add(acctMgr.getDefaultAccountType());
+
     tbl.newRow();
     tbl.newCell("align=center");
     tbl.add("Click user name to edit");
@@ -299,8 +312,11 @@ public class AdminEditAccounts extends EditAccountBase {
     tbl.add("Username");
     tbl.add(in);
     tbl.add(new Input(Input.Hidden, KEY_FORM, FORM_SUMMARY));
-    Input btn = new Input(Input.Submit, ACTION_TAG, ACTION_ADMIN_ADD);
-    tbl.add(btn);
+    List btns = ListUtil.list(ACTION_ADMIN_ADD);
+    ServletUtil.layoutAuPropsButtons(this,
+                                     tbl,
+                                     btns.iterator(),
+                                     ACTION_TAG);
 
     frm.add(tbl);
     page.add(frm);
@@ -396,20 +412,22 @@ public class AdminEditAccounts extends EditAccountBase {
 
   private void displayEditAccount(UserAccount acct)
       throws IOException {
+    boolean isDelete = ACTION_ADMIN_DELETE.equals(action);
+
     List actions;
     StringBuilder sb = new StringBuilder();
     if (acctMgr.hasUser(acct.getName())) {
-      if (ACTION_ADMIN_DELETE.equals(action)) {
+      if (isDelete) {
 	sb.append("Confirm delete user: ");
-	actions = ListUtil.list(ACTION_ADMIN_UPDATE,
-				ACTION_ADMIN_CONFIRM_DELETE);
+	actions = ListUtil.list(ACTION_ADMIN_CONFIRM_DELETE,
+				ACTION_ADMIN_CANCEL);
       } else {
 	sb.append("Edit user: ");
 	actions = ListUtil.list(ACTION_ADMIN_UPDATE, ACTION_ADMIN_DELETE);
       }
     } else {
       sb.append("Add user: ");
-      actions = ListUtil.list(ACTION_ADMIN_ADD);
+      actions = ListUtil.list(ACTION_ADMIN_ADD, ACTION_ADMIN_CANCEL);
     }
     sb.append(" ");
     sb.append(acct.getName());
@@ -430,8 +448,10 @@ public class AdminEditAccounts extends EditAccountBase {
     tbl.newRow();
     tbl.newCell();
 
-    tbl.add(buildEditAttrsTable(acct));
-    tbl.add(buildEditRoleTable(acct));
+    if (!isDelete) {
+      tbl.add(buildEditAttrsTable(acct));
+      tbl.add(buildEditRoleTable(acct));
+    }
     tbl.add(new Input(Input.Hidden, KEY_FORM, FORM_ADD_USER));
     tbl.add(new Input(Input.Hidden, KEY_USER, acct.getName()));
     frm.add(tbl);
@@ -440,8 +460,6 @@ public class AdminEditAccounts extends EditAccountBase {
                                      frm,
                                      actions.iterator(),
                                      ACTION_TAG);
-
-//     ServletUtil.layoutSubmitButton(this, frm, action);
     page.add(frm);
     endPage(page);
   }
@@ -451,7 +469,7 @@ public class AdminEditAccounts extends EditAccountBase {
     ServletUtil.writePage(resp, page);
   }
 
-  // make me a link in nav table if not on initial journal config page
+  // make me a link in nav table if not on summary page
   protected boolean linkMeInNav() {
     return action != null
       || !StringUtil.isNullString(req.getParameter(KEY_USER));

@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.7 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.8 2009-06-02 07:10:21 tlipkis Exp $
  */
 
 /*
@@ -170,8 +170,8 @@ public class AdminServletManager extends BaseServletManager {
   protected static final ServletDescr SERVLET_EDIT_ACCOUNT =
     new ServletDescr("UserEditAccount",
 		     UserEditAccount.class,
-                     "Edit Account",
-                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+                     "My Account",
+                     (ServletDescr.IN_NAV),
                      "Update account info") {
       public boolean isEnabled(LockssDaemon daemon) {
 	AccountManager acctMgr = daemon.getAccountManager();
@@ -184,9 +184,6 @@ public class AdminServletManager extends BaseServletManager {
 	}
 	UserAccount acct = servlet.getUserAccount();
 	return acct != null && acct.isEditable();
-      }
-      public boolean isInUiHome(LockssServlet servlet) {
-	return isInNav(servlet);
       }};
 
   protected static final ServletDescr SERVLET_EDIT_ACCOUNTS =
@@ -384,10 +381,10 @@ public class AdminServletManager extends BaseServletManager {
      SERVLET_RAISE_ALERT,
      SERVLET_HASH_CUS,
      LINK_CONTACT,
-     LINK_LOGOUT,
      SERVLET_EDIT_ACCOUNT,
      SERVLET_EDIT_ACCOUNTS,
      LINK_HELP,
+     LINK_LOGOUT,
      LOGIN_FORM,
   };
 

@@ -1,5 +1,5 @@
 /*
- * $Id: EditAccountBase.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: EditAccountBase.java,v 1.2 2009-06-02 07:10:21 tlipkis Exp $
  */
 
 /*
@@ -104,12 +104,12 @@ public abstract class EditAccountBase extends LockssServlet {
   }
 
   RoleDesc[] roleDescs = {
-    new RoleDesc(ROLE_USER_ADMIN, "Admin Users",
+    new RoleDesc(ROLE_USER_ADMIN, "User Admin",
 		 "Administer user accounts and access to admin UI"),
-    new RoleDesc(ROLE_CONTENT_ADMIN, "Admin Access",
+    new RoleDesc(ROLE_CONTENT_ADMIN, "Access Admin",
 		 "Administer access to content"),
-    new RoleDesc(ROLE_AU_ADMIN, "Admin Collection",
-		 "Select content to be collected and preserved"),
+    new RoleDesc(ROLE_AU_ADMIN, "Collection Admin",
+		 "Select content (AUs) to be collected and preserved"),
     new RoleDesc(ROLE_DEBUG, "Debug",
 		 "View debug info"),
   };

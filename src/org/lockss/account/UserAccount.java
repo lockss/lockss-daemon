@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.1 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.util.SerializationException.FileNotFound;
 import org.lockss.jetty.*;
+import org.lockss.alert.*;
 
 /** User account data.
  */
@@ -233,12 +234,15 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       log.info("failedAttempts: " + failedAttempts);
       if (getMaxFailedAttempts() > 0
 	  && failedAttempts >= getMaxFailedAttempts()) {
-	String msg = ("Disabled: " + getMaxFailedAttempts() +
+	String msg = (failedAttempts +
 		      " failed login attempts at "
 		      + expireDf.format(TimeBase.nowDate()));
-	disable(msg);
+	disable("Disabled: " + msg);
 	if (acctMgr != null) {
-	  acctMgr.notifyAccountChange(this, msg);
+	  String emsg = "User " + getName() + " disabled because of " + msg;
+	  acctMgr.alertUser(this,
+			    Alert.cacheAlert(Alert.ACCOUNT_DISABLED),
+			    emsg);
 	}
       }
     }
@@ -262,6 +266,9 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   }
 
   // Must be implemented by subclasses
+
+  /** Return the account type */
+  abstract public String getType();
 
   /** Return the minimum password length */
   abstract protected int getMinPasswordLength();

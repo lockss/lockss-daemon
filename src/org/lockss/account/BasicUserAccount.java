@@ -1,5 +1,5 @@
 /*
- * $Id: BasicUserAccount.java,v 1.1 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: BasicUserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,10 @@ public class BasicUserAccount extends UserAccount {
   protected void postLoadInit(AccountManager acctMgr, Configuration config) {
     this.config = config;
     super.postLoadInit(acctMgr, config);
+  }
+
+  public String getType() {
+    return "Basic";
   }
 
   protected int getMinPasswordLength() {

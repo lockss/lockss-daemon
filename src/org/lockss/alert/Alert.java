@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.10 2008-09-09 07:31:17 tlipkis Exp $
+ * $Id: Alert.java,v 1.11 2009-06-02 07:10:21 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class Alert {
   public static final String ATTR_IS_TIME_CRITICAL = "is_time_critical";
   public static final String ATTR_SEVERITY = "severity";
   public static final String ATTR_RPT_ACTION = "foo";
+  public static final String ATTR_EMAIL_TO = "email_to";
 
   // Severities
   /** Conditions that require immediate attention from a human. */
@@ -163,6 +164,15 @@ public class Alert {
     setAttribute(ATTR_SEVERITY, SEVERITY_ERROR).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
+  public static final Alert PASSWORD_REMINDER =
+    new Alert("PasswordExpiresSoon").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
+
+  public static final Alert ACCOUNT_DISABLED =
+    new Alert("AccountDisabled").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
   private Map attributes;
 //   private Throwable throwable;

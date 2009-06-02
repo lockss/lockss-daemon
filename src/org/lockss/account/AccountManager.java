@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.3 2009-06-02 07:10:22 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.servlet.*;
 import org.lockss.util.*;
+import org.lockss.alert.*;
 
 /** Manage user accounts
  */
@@ -55,6 +56,10 @@ public class AccountManager
   /** Enable account management */
   static final String PARAM_ENABLED = PREFIX + "enabled";
   static final boolean DEFAULT_ENABLED = false;
+
+  /** Enable sending password change reminders */
+  static final String PARAM_MAIL_ENABLED = PREFIX + "mailEnabled";
+  static final boolean DEFAULT_MAIL_ENABLED = false;
 
   /** Select a preconfigured user account policy, one of LC, SSL, FORM,
    * BASIC  */
@@ -76,6 +81,12 @@ public class AccountManager
     PREFIX + "conditionalPlatformUser";
   public static final boolean DEFAULT_CONDITIONAL_PLATFORM_USER = false;
 
+  /** If true, alerts for users who have no email address will be sent to
+   * the admin email */
+  public static final String PARAM_MAIL_ADMIN_IF_NO_USER_EMAIL =
+    PREFIX + "mailAdminIfNoUserEmail";
+  public static final boolean DEFAULT_MAIL_ADMIN_IF_NO_USER_EMAIL = false;
+
 
   // Predefined account policies.  See ConfigManager.setConfigMacros()
 
@@ -84,9 +95,10 @@ public class AccountManager
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "LC",
     PARAM_CONDITIONAL_PLATFORM_USER, "true",
+    PARAM_MAIL_ENABLED, "true",
     "org.lockss.ui.authType", "Form",
     "org.lockss.ui.debugUser.enable", "false",
-    "org.lockss.ui.useSSL", "true",
+    "org.lockss.ui.useSsl", "true",
   };
 
   /** <code>SSL</code>: SSL, form auth, configurable password rules */
@@ -95,7 +107,7 @@ public class AccountManager
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
     PARAM_CONDITIONAL_PLATFORM_USER, "false",
     "org.lockss.ui.authType", "Form",
-    "org.lockss.ui.useSSL", "true",
+    "org.lockss.ui.useSsl", "true",
   };
 
   /** <code>Form</code>: HTTP, form auth */
@@ -104,7 +116,7 @@ public class AccountManager
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
     PARAM_CONDITIONAL_PLATFORM_USER, "false",
     "org.lockss.ui.authType", "Form",
-    "org.lockss.ui.useSSL", "false",
+    "org.lockss.ui.useSsl", "false",
   };
 
   /** <code>Basic</code>: HTTP, basic auth */
@@ -113,13 +125,18 @@ public class AccountManager
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
     PARAM_CONDITIONAL_PLATFORM_USER, "false",
     "org.lockss.ui.authType", "Basic",
-    "org.lockss.ui.useSSL", "false",
+    "org.lockss.ui.useSsl", "false",
   };
 
   private boolean isEnabled = DEFAULT_ENABLED;
+  private boolean mailEnabled = DEFAULT_MAIL_ENABLED;
+  private boolean mailAdminIfNoUserEmail = DEFAULT_MAIL_ADMIN_IF_NO_USER_EMAIL;
+  private String adminEmail = null;
+
   private ConfigManager configMgr;
   private String acctRelDir;
   private UserAccount.Factory acctFact;
+  private String acctType;
 
   // Maps account name to UserAccount
   Map<String,UserAccount> accountMap = new HashMap<String,UserAccount>();
@@ -146,14 +163,23 @@ public class AccountManager
 
     if (changedKeys.contains(PREFIX)) {
       acctRelDir = config.get(PARAM_ACCT_DIR, DEFAULT_ACCT_DIR);
-      acctFact =
-	getUserFactory(config.get(PARAM_NEW_ACCOUNT_TYPE,
-				     DEFAULT_NEW_ACCOUNT_TYPE));
+      acctType = config.get(PARAM_NEW_ACCOUNT_TYPE, DEFAULT_NEW_ACCOUNT_TYPE);
+      acctFact = getUserFactory(acctType);
+
+      mailEnabled = config.getBoolean(PARAM_MAIL_ENABLED, DEFAULT_MAIL_ENABLED);
+      mailAdminIfNoUserEmail =
+	config.getBoolean(PARAM_MAIL_ADMIN_IF_NO_USER_EMAIL,
+			  DEFAULT_MAIL_ADMIN_IF_NO_USER_EMAIL);
+      adminEmail = config.get(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL);
     }
   }
 
   public boolean isEnabled() {
     return isEnabled;
+  }
+
+  public String getDefaultAccountType() {
+    return acctType;
   }
 
   UserAccount.Factory getUserFactory(String type) {
@@ -469,6 +495,27 @@ public class AccountManager
     throw new RuntimeException("Can't generate unique file to store account: "
 			       + acct.getName());
   }
+
+  void alertUser(UserAccount acct, Alert alert, String text) {
+    try {
+      String to = acct.getEmail();
+      if (to == null && mailAdminIfNoUserEmail) {
+	to = adminEmail;
+      }
+      if (StringUtil.isNullString(to)) {
+	log.warning("Can't find address to send alert: " + alert);
+	return;
+      }
+      alert.setAttribute(Alert.ATTR_EMAIL_TO, to);
+      AlertManager alertMgr = getDaemon().getAlertManager();
+      alertMgr.raiseAlert(alert, text);
+    } catch (Exception e) {
+      // ignored, expected during testing
+    }
+  }
+
+  //      Alert alert = Alert.cacheAlert(Alert.PASSWORD_EXPIRES_SOON);
+
 
   private ObjectSerializer makeObjectSerializer() {
     return new XStreamSerializer();

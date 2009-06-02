@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.24 2009-06-01 19:15:30 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.25 2009-06-02 07:10:21 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public abstract class BaseServletManager
 //   /** Require user authentication for named server */
 //   public static final String PARAM_USER_AUTH = DOC_PREFIX + SUFFIX_USER_AUTH;
 
-  public static final String SUFFIX_USE_SSL = "useSSL";
+  public static final String SUFFIX_USE_SSL = "useSsl";
   /** Connect to named server with https if true */
   public static final String PARAM_USE_SSL =
     DOC_PREFIX + SUFFIX_USE_SSL;
@@ -185,7 +185,7 @@ public abstract class BaseServletManager
   private boolean logForbidden;
   private long maxLoginInactivity = DEFAULT_MAX_LOGIN_INACTIVITY;
   protected boolean enableDebugUser;
-  protected boolean useSSL;
+  protected boolean useSsl;
   protected String sslKeystoreName;
   protected int sslRedirFromPort;
   protected AuthType authType = DEFAULT_AUTH_TYPE;
@@ -250,8 +250,8 @@ public abstract class BaseServletManager
       _403Msg = config.get(prefix + SUFFIX_403_MSG, mi.default403Msg);
       enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
 					  mi.defaultEnableDebugUser);
-      useSSL = config.getBoolean(mi.prefix + SUFFIX_USE_SSL, false);
-      if (useSSL) {
+      useSsl = config.getBoolean(mi.prefix + SUFFIX_USE_SSL, false);
+      if (useSsl) {
  	sslKeystoreName = config.get(mi.prefix + SUFFIX_SSL_KEYSTORE_NAME);
 	sslRedirFromPort = config.getInt(mi.prefix + SUFFIX_SSL_REDIR_FROM, -1);
       }
@@ -343,7 +343,7 @@ public abstract class BaseServletManager
 
       HttpListener listener;
       // Create a port listener
-      if (useSSL) {
+      if (useSsl) {
 	LockssSslListener lsl =
 	  new LockssSslListener(new org.mortbay.util.InetAddrPort(port));
 	KeyManagerFactory kmf =
