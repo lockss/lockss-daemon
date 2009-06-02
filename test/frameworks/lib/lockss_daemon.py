@@ -668,7 +668,7 @@ class Client:
         res = []
         for row in table:
             peer = row['identity']
-            res.append(peer)
+            res.append(self.valueOfRef(peer))
         return res
 
     def isCompleteV3Repaired(self, au):
