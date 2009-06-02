@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.2 2009-06-02 21:36:56 greya Exp $ */
+ * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.3 2009-06-02 21:46:17 greya Exp $ */
 
 /*
 
@@ -44,7 +44,7 @@ public class WordsWithoutBordersCrawlHtmlFilterFactory implements FilterFactory 
                                                String encoding)
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <div id="columnThree" name="columnThree">...</div>
+        // Keep only <div id="columnThree" name="columnTwo">...</div>
         HtmlNodeFilterTransform.include(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "columnTwo")),                                                                  

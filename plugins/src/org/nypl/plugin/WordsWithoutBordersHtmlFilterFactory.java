@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersHtmlFilterFactory.java,v 1.2 2009-06-02 21:36:56 greya Exp $ */
+ * $Id: WordsWithoutBordersHtmlFilterFactory.java,v 1.3 2009-06-02 21:46:17 greya Exp $ */
 
 /*
 
@@ -29,7 +29,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.nypl.plugin.wordswithoutborders;
+package org.nypl.plugin;
 
 import java.io.InputStream;
 
@@ -44,12 +44,12 @@ public class WordsWithoutBordersHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <div id="columnOne" name="columnOne">...</div>
+        // Filter out <div id="columnOne">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "columnOne")),
         
-        // Filter out <div id="columnThree" name="columnThree">...</div>
+        // Filter out <div id="columnThree">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "columnThree")),         
