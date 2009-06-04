@@ -8,10 +8,6 @@
     <long>6000</long>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
-    <int>3</int>
-  </entry>
-  <entry>
     <string>au_name</string>
     <string>&quot;Ingenta Journal Plugin, Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s&quot;, base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
   </entry>
