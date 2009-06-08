@@ -29,7 +29,7 @@ extra parameter is: year=</string>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s(:[0-9]+)?/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%slockss%d\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%s%d/&quot;, base_url, year</string>
