@@ -9,11 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
-  </entry>
-  <entry>
-    <string>au_crawl_depth</string>
-    <int>3</int>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -39,10 +35,6 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/&quot;, base_url, subdirectory</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_type</string>
-    <string>HTML Links</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
