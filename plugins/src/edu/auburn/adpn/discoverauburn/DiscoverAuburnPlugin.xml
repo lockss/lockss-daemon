@@ -1,0 +1,65 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.auburn.adpn.discoverauburn.DiscoverAuburnPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Discover Auburn Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Discover Auburn Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Plugin to harvest video (.mov) files of the Discover Auburn Lecture Series. Each Archival Unit represents 1 year of lectures, beginning in 2007. 
+BaseURL is http://fortissimo.lib.auburn.edu:82/da/
+Manifest for each AU is lockssYEAR.html in this folder;
+extra parameter is: year=</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%slockss%d\.html$&quot;, base_url, year</string>
+      <string>2,&quot;^%s%d/&quot;, base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
