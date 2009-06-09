@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.69 2009-06-01 07:36:51 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.69.2.1 2009-06-09 05:50:10 tlipkis Exp $
  */
 
 /*
@@ -513,7 +513,7 @@ public class TestStringUtil extends LockssTestCase {
     }
   }
 
-  public void testTimeInterval() throws Exception {
+  public void testTimeIntervalToString() throws Exception {
     assertEquals("0ms", StringUtil.timeIntervalToString(0));
     assertEquals("1000ms", StringUtil.timeIntervalToString(SECOND));
     assertEquals("-1000ms", StringUtil.timeIntervalToString(- SECOND));
@@ -529,6 +529,28 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("-20d23h0m",
 		 StringUtil.timeIntervalToString(- (WEEK * 3 - (HOUR * 1))));
     assertEquals("3w0d0h", StringUtil.timeIntervalToString(WEEK * 3));
+  }
+
+  public void testTimeIntervalToLong() throws Exception {
+    assertEquals("0 seconds", StringUtil.timeIntervalToLongString(0));
+    assertEquals("1 second", StringUtil.timeIntervalToLongString(SECOND));
+    assertEquals("-1 second", StringUtil.timeIntervalToLongString(- SECOND));
+    assertEquals("9 seconds", StringUtil.timeIntervalToLongString(SECOND * 9));
+    assertEquals("-9 seconds",
+		 StringUtil.timeIntervalToLongString(- SECOND * 9));
+    assertEquals("10 seconds",
+		 StringUtil.timeIntervalToLongString(SECOND * 10));
+    assertEquals("1 minute", StringUtil.timeIntervalToLongString(MINUTE));
+    assertEquals("1 hour", StringUtil.timeIntervalToLongString(HOUR));
+    assertEquals("2 days, 3 hours",
+		 StringUtil.timeIntervalToLongString(DAY * 2 + HOUR * 3));
+    assertEquals("20 days, 23 hours, 45 minutes",
+		 StringUtil.timeIntervalToLongString(WEEK * 3 - (HOUR * 1)
+						     + MINUTE * 45));
+    assertEquals("12 days, 13 minutes, 1 second",
+		 StringUtil.timeIntervalToLongString(DAY * 12 + MINUTE * 13
+						     + SECOND));
+    assertEquals("21 days", StringUtil.timeIntervalToLongString(WEEK * 3));
   }
 
   public void testParseSize() throws Exception {
