@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.11 2009-06-02 07:10:21 tlipkis Exp $
+ * $Id: Alert.java,v 1.12 2009-06-09 06:11:53 tlipkis Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class Alert {
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
   public static final Alert PASSWORD_REMINDER =
-    new Alert("PasswordExpiresSoon").
+    new Alert("PasswordReminder").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
@@ -382,7 +382,7 @@ public class Alert {
 
   public String getMailSubject() {
     StringBuffer sb = new StringBuffer();
-    sb.append("LOCKSS cache ");
+    sb.append("LOCKSS box ");
     sb.append(getSeverityString());
     sb.append(": ");
     sb.append(getName());
@@ -391,9 +391,9 @@ public class Alert {
 
   public String getMailBody() {
     StringBuffer sb = new StringBuffer();
-    sb.append("LOCKSS cache ");
+    sb.append("LOCKSS box '");
     sb.append(getAttribute(ATTR_CACHE));
-    sb.append(" raised an alert at ");
+    sb.append("' raised an alert at ");
     sb.append(getDate());
     sb.append("\n\n");
     appendVal(sb, "Name: ", getName());

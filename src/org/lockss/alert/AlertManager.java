@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManager.java,v 1.4 2005-10-07 23:42:28 tlipkis Exp $
+ * $Id: AlertManager.java,v 1.5 2009-06-09 06:11:53 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -39,6 +39,9 @@ import org.lockss.config.Configuration;
 public interface AlertManager extends LockssManager {
 
   static final String PREFIX = Configuration.PREFIX + "alert.";
+
+  static final String PARAM_ALERTS_ENABLED = PREFIX + "enabled";
+  static final boolean DEFAULT_ALERTS_ENABLED = true;
 
   /**
    * Raise an alert

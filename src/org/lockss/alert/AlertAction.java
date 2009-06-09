@@ -1,5 +1,5 @@
 /*
- * $Id: AlertAction.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: AlertAction.java,v 1.4 2009-06-09 06:11:53 tlipkis Exp $
  */
 
 /*
@@ -56,10 +56,10 @@ public interface AlertAction {
   public long getMaxPendTime();
 
   /** Implementations must implement a suitable equals() and hasCode() in
-   * order for grouped reproting to work */
+   * order for grouped reporting to work */
   public boolean equals(Object obj);
 
   /** Implementations must implement a suitable equals() and hasCode() in
-   * order for grouped reproting to work */
+   * order for grouped reporting to work */
   public int hashCode();
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.7 2005-09-12 04:36:56 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.8 2009-06-09 06:11:53 tlipkis Exp $
  */
 
 /*
@@ -89,10 +89,20 @@ public class TestAlertActionMail extends LockssTestCase {
   }
 
   public void testRecips() {
-    AlertActionMail a = new AlertActionMail("to@here");
-    assertEquals("to@here", a.getRecipients());
-//     a = new AlertActionMail(ListUtil.list("to@here", "and@there"));
-//     assertEquals("to@here, and@there", a.getRecipients());
+    AlertActionMail act1 = new AlertActionMail("to@here");
+    AlertActionMail act2 = new AlertActionMail();
+    assertEquals("to@here", act1.getRecipients(null));
+    try {
+      assertEquals(null, act2.getRecipients(null));
+      fail("Should throw NPE");
+    } catch (NullPointerException e) {
+    }
+//     act1 = new AlertActionMail(ListUtil.list("to@here", "and@there"));
+//     assertEquals("to@here, and@there", act1.getRecipients());
+
+    Alert a1 = new Alert("Foo").setAttribute(Alert.ATTR_EMAIL_TO, "from@there");
+    assertEquals("to@here", act1.getRecipients(a1));
+    assertEquals("from@there", act2.getRecipients(a1));
   }
 
   public void testSenderDefault() {
@@ -126,11 +136,11 @@ public class TestAlertActionMail extends LockssTestCase {
       (String[])StringUtil.breakAt(toString(rec.getMsg()),
 				   "\n").toArray(new String[0]);
     int line = 0;
-    assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
+    assertEquals("From: LOCKSS box cachename <sender>", body[line++]);
     assertEquals("To: recipient", body[line++]);
     String date = body[line++];
     assertTrue(date.startsWith("Date: "));
-    assertEquals("Subject: LOCKSS cache warning: AName", body[line++]);
+    assertEquals("Subject: LOCKSS box warning: AName", body[line++]);
     assertEquals("X-Mailer: " + getXMailer(), body[line++]);
     assertEquals("", body[line++]);
   }
@@ -155,11 +165,11 @@ public class TestAlertActionMail extends LockssTestCase {
       (String[])StringUtil.breakAt(toString(rec.getMsg()),
 				   "\n").toArray(new String[0]);
     int line = 0;
-    assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
+    assertEquals("From: LOCKSS box cachename <sender>", body[line++]);
     assertEquals("To: recipient", body[line++]);
     String date = body[line++];
     assertTrue(date.startsWith("Date: "));
-    assertEquals("Subject: LOCKSS cache warning: AName (multiple)",
+    assertEquals("Subject: LOCKSS box warning: AName (multiple)",
 		 body[line++]);
     assertEquals("X-Mailer: " + getXMailer(), body[line++]);
     assertEquals("", body[line++]);

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: AlertPatterns.java,v 1.5 2009-06-09 06:11:53 tlipkis Exp $
  */
 
 /*
@@ -73,51 +73,61 @@ public class AlertPatterns {
    * fixed value.  relation should be one of <code>Predicate.EQ, NE, GT,
    * GE, LT, LE</code>. */
   public static AlertPattern Predicate(String attribute,
-				       int relation, Object value) {
+				       Predicate.REL relation, Object value) {
     return new Predicate(attribute, relation, value);
   }
 
   /** Return a predicate that is true if the value of the alert's
    * <code>attribute</code> attribute is equal to <code>value</code> */
   public static AlertPattern EQ(String attribute, Object value) {
-    return new Predicate(attribute, Predicate.EQ, value);
+    return new Predicate(attribute, Predicate.REL.EQ, value);
   }
 
   /** Return a predicate that is true if the value of the alert's
    * <code>attribute</code> attribute is not equal to <code>value</code> */
   public static AlertPattern NE(String attribute, Object value) {
-    return new Predicate(attribute, Predicate.NE, value);
+    return new Predicate(attribute, Predicate.REL.NE, value);
   }
 
   /** Return a predicate that is true if the value of the alert's
    * <code>attribute</code> attribute is greater than <code>value</code> */
   public static AlertPattern GT(String attribute, Comparable value) {
-    return new Predicate(attribute, Predicate.GT, value);
+    return new Predicate(attribute, Predicate.REL.GT, value);
   }
 
   /** Return a predicate that is true if the value of the alert's
    * <code>attribute</code> attribute is greater than or equal to
    * <code>value</code> */
   public static AlertPattern GE(String attribute, Comparable value) {
-    return new Predicate(attribute, Predicate.GE, value);
+    return new Predicate(attribute, Predicate.REL.GE, value);
   }
 
   /** Return a predicate that is true if the value of the alert's
    * <code>attribute</code> attribute is less than <code>value</code> */
   public static AlertPattern LT(String attribute, Comparable value) {
-    return new Predicate(attribute, Predicate.LT, value);
+    return new Predicate(attribute, Predicate.REL.LT, value);
   }
 
   /** Return a predicate that is true if the value of the alert's
    * <code>attribute</code> attribute is less than or equal to
    * <code>value</code> */
   public static AlertPattern LE(String attribute, Comparable value) {
-    return new Predicate(attribute, Predicate.LE, value);
+    return new Predicate(attribute, Predicate.REL.LE, value);
+  }
+
+  /** Return a predicate that is true if the value of the alert's
+   * <code>attribute</code> is contained in <code>value</code> */
+  public static AlertPattern CONTAINS(String attribute, Object value) {
+    return new Predicate(attribute, Predicate.REL.CONTAINS, value);
   }
 
   public static class True implements AlertPattern, LockssSerializable {
     public boolean isMatch(Alert alert) {
       return true;
+    }
+
+    public boolean equals(Object o) {
+      return o instanceof True;
     }
   }
 
@@ -125,26 +135,49 @@ public class AlertPatterns {
     public boolean isMatch(Alert alert) {
       return false;
     }
+
+    public boolean equals(Object o) {
+      return o instanceof False;
+    }
   }
 
-  public static class And implements AlertPattern, LockssSerializable {
-    private List patterns;
+  public abstract static class NAry
+    implements AlertPattern, LockssSerializable {
 
-    public And(List patterns) {
-      this.patterns = ListUtil.immutableListOfType(patterns, AlertPattern.class);
+    protected List<AlertPattern> patterns;
+
+    public NAry(List<AlertPattern> patterns) {
+      this.patterns =
+	ListUtil.immutableListOfType(patterns, AlertPattern.class);
     }
 
-    public List getPatterns() {
+    public List<AlertPattern> getPatterns() {
       return patterns;
     }
 
-    public void setPatterns(List patterns) {
+    public void setPatterns(List<AlertPattern> patterns) {
       this.patterns = patterns;
     }
 
+    public abstract boolean isMatch(Alert alert);
+
+    public boolean equals(Object o) {
+      if (o instanceof NAry) {
+	NAry n = (NAry)o;
+	return patterns.equals(n.patterns);
+      }
+      return false;
+    }
+  }
+
+  public static class And extends NAry {
+
+    public And(List<AlertPattern> patterns) {
+      super(patterns);
+    }
+
     public boolean isMatch(Alert alert) {
-      for (Iterator iter = patterns.iterator(); iter.hasNext(); ) {
-        AlertPattern pat = (AlertPattern)iter.next();
+      for (AlertPattern pat : patterns) {
         if (!pat.isMatch(alert)) {
           return false;
         }
@@ -156,24 +189,15 @@ public class AlertPatterns {
       return "[AlertPatterns.And: " + patterns + "]";
     }
   }
-  public static class Or implements AlertPattern, LockssSerializable {
-    private List patterns;
 
-    public Or(List patterns) {
-      this.patterns = ListUtil.immutableListOfType(patterns, AlertPattern.class);
-    }
+  public static class Or extends NAry {
 
-    public List getPatterns() {
-      return patterns;
-    }
-
-    public void setPatterns(List patterns) {
-      this.patterns = patterns;
+    public Or(List<AlertPattern> patterns) {
+      super(patterns);
     }
 
     public boolean isMatch(Alert alert) {
-      for (Iterator iter = patterns.iterator(); iter.hasNext(); ) {
-        AlertPattern pat = (AlertPattern)iter.next();
+      for (AlertPattern pat : patterns) {
         if (pat.isMatch(alert)) {
           return true;
         }
@@ -205,25 +229,28 @@ public class AlertPatterns {
       return !pattern.isMatch(alert);
     }
 
+    public boolean equals(Object o) {
+      if (o instanceof Not) {
+	Not n = (Not)o;
+	return pattern.equals(n.pattern);
+      }
+      return false;
+    }
+
     public String toString() {
       return "[AlertPatterns.Not: " + pattern + "]";
     }
   }
 
   public static class Predicate implements AlertPattern, LockssSerializable {
-    public static final int EQ = 1;
-    public static final int NE = 2;
-    public static final int GT = 3;
-    public static final int GE = 4;
-    public static final int LT = 5;
-    public static final int LE = 6;
+    static enum REL {EQ, NE, GT, GE, LT, LE, CONTAINS};
 
     private String attribute;
-    private int relation;
+    private REL relation;
     private Object value;
 
 
-    public Predicate(String attribute, int relation, Object value) {
+    public Predicate(String attribute, REL relation, Object value) {
       this.attribute = attribute;
       this.relation = relation;
       this.value = value;
@@ -237,11 +264,11 @@ public class AlertPatterns {
       this.attribute = attribute;
     }
 
-    public int getRelation() {
+    public REL getRelation() {
       return relation;
     }
 
-    public void setRelation(int relation) {
+    public void setRelation(REL relation) {
       this.relation = relation;
     }
 
@@ -260,6 +287,12 @@ public class AlertPatterns {
 	switch (relation) {
 	case EQ: return equalObjects(attr, value);
 	case NE: return !equalObjects(attr, value);
+	case CONTAINS: {
+	  if (value instanceof Collection) {
+	    return ((Collection)value).contains(attr);
+	  }
+	  return false;
+	}
 	default:
 	  int cmp = ((Comparable)attr).compareTo(value);
 	  switch (relation) {
@@ -279,6 +312,16 @@ public class AlertPatterns {
     private static boolean equalObjects(Object a, Object b) {
       if (a == null) return b == null;
       return a.equals(b);
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof Predicate) {
+	Predicate pred = (Predicate)o;
+	return relation == pred.relation
+	  && equalObjects(attribute, pred.attribute)
+	  && equalObjects(value, pred.value);
+      }
+      return false;
     }
 
     public String toString() {

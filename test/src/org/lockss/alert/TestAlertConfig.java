@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.2 2004-12-08 00:45:19 troberts Exp $
+ * $Id: TestAlertConfig.java,v 1.3 2009-06-09 06:11:53 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,44 @@ public class TestAlertConfig extends LockssTestCase {
     assertNotEquals(c1.hashCode(), c2.hashCode());
     assertNotEquals(c1.hashCode(), c3.hashCode());
     assertNotEquals(c2.hashCode(), c3.hashCode());
+  }
+
+  public void testGen() throws Exception {
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    AlertManagerImpl mgr = new AlertManagerImpl();
+    daemon.setAlertManager(mgr);
+    mgr.initService(daemon);
+    daemon.setDaemonInited(true);
+    mgr.startService();
+
+    List pwdAlertNames = ListUtil.list(Alert.PASSWORD_REMINDER.getName(),
+				       Alert.ACCOUNT_DISABLED.getName());
+    AlertFilter passwdFilt = 
+      new AlertFilter(AlertPatterns.CONTAINS(Alert.ATTR_NAME,
+					     pwdAlertNames),
+		      new AlertActionMail());
+    AlertFilter crawlExclFilt = 
+      new AlertFilter(AlertPatterns.EQ(Alert.ATTR_NAME,
+				       Alert.CRAWL_EXCLUDED_URL.getName()),
+		      new AlertActionMail("exclmail"));
+    AlertFilter devFilt = 
+      new AlertFilter(AlertPatterns.CONTAINS(Alert.ATTR_NAME,
+					     ListUtil.list("devAlert1",
+							   "devAlert2")),
+		      new AlertActionMail("devmail"));
+
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt));
+
+    File file = new File("/tmp/alertconf.xml");
+    File file2 = new File("/tmp/alertconf.asc");
+    mgr.storeAlertConfig(file, conf);
+
+    Reader rdr =
+      new org.lockss.filter.WhiteSpaceFilter(new BufferedReader(new FileReader(file)));
+    String str = StringUtil.fromReader(rdr);
+    String str2 = org.apache.commons.lang.StringEscapeUtils.escapeXml(str);
+    FileTestUtil.writeFile(file2, str2);
   }
 
 }
