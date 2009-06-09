@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: LockssFormAuthenticator.java,v 1.1.2.1 2009-06-09 05:49:31 tlipkis Exp $
  */
 
 /*
@@ -372,8 +372,10 @@ public class LockssFormAuthenticator implements Authenticator {
       pathInContext!=null &&
       (pathInContext.equals(_formErrorPath)
        || pathInContext.equals(_formLoginPath)
-       || pathInContext.startsWith("/images"));
-    log.debug2("isLoginOrErrorPage("+pathInContext+"): " + res);
+       || pathInContext.startsWith("/images")
+       || pathInContext.startsWith("/favicon.ico"));
+    if (log.isDebug2())
+      log.debug2("isLoginOrErrorPage("+pathInContext+"): " + res);
     return res;
   }
     
