@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.6 2007-07-31 07:55:11 tlipkis Exp $
+ * $Id: TestCron.java,v 1.6.32.1 2009-06-09 05:48:43 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,45 @@ public class TestCron extends LockssTestCase {
     return idf.parse(date).getTime();
   }
 
+  public void testNextHour() throws Exception {
+    assertEquals(1*Constants.DAY, cron.nextHour(23 * Constants.HOUR));
+    assertEquals(23*Constants.HOUR,
+		 cron.nextHour(22 * Constants.HOUR + 59 * Constants.MINUTE));
+  }
+
+  public void testNextDay() throws Exception {
+    assertEquals(1*Constants.DAY, cron.nextDay(0));
+    assertIsDate("1/2/1970 0:00", cron.nextDay(timeOf("1/1/1970 0:00")));
+    // sunday
+    assertIsDate("1/3/2005 0:00", cron.nextDay(timeOf("1/2/2005 1:00")));
+    // monday
+    assertIsDate("1/4/2005 0:00", cron.nextDay(timeOf("1/3/2005 1:00")));
+    assertIsDate("1/5/2005 0:00", cron.nextDay(timeOf("1/4/2005 1:00")));
+  }
+
+  public void testNextWeek() throws Exception {
+    // time 0 is midnight Jan 1, result s.b. Jan 5
+    assertEquals(4*Constants.DAY, cron.nextWeek(0));
+    assertIsDate("1/5/1970 0:00", cron.nextWeek(timeOf("1/1/1970 0:00")));
+    // sunday
+    assertIsDate("1/3/2005 0:00", cron.nextWeek(timeOf("1/2/2005 1:00")));
+    // monday
+    assertIsDate("1/10/2005 0:00", cron.nextWeek(timeOf("1/3/2005 1:00")));
+    assertIsDate("1/10/2005 0:00", cron.nextWeek(timeOf("1/4/2005 1:00")));
+  }
+
+  public void testNextMonth() throws Exception {
+    // time 0 is midnight Jan 1, result s.b. Feb 1
+    assertIsDate("2/1/1970 0:00", cron.nextMonth(0));
+    assertEquals(31*Constants.DAY, cron.nextMonth(0));
+    assertIsDate("2/1/2005 0:00", cron.nextMonth(timeOf("1/1/2005 0:00")));
+    assertIsDate("2/1/2005 0:00", cron.nextMonth(timeOf("1/3/2005 1:00")));
+    assertIsDate("2/1/2005 0:00", cron.nextMonth(timeOf("1/31/2005 1:00")));
+    assertIsDate("12/1/2007 0:00", cron.nextMonth(timeOf("11/30/2007 4:00")));
+    assertIsDate("2/1/2008 0:00", cron.nextMonth(timeOf("1/7/2008 4:00")));
+    assertIsDate("1/1/2008 0:00", cron.nextMonth(timeOf("12/7/2007 4:00")));
+  }
+
   public void testMailBackupFileNextMonth() throws Exception {
     ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
 				  "monthly");
@@ -172,7 +211,7 @@ public class TestCron extends LockssTestCase {
     ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
 				  "weekly");
     Cron.MailBackupFile task = new Cron.MailBackupFile(daemon);
-    // time 0 is midnight Jan 1, result s.b. Feb 1
+    // time 0 is midnight Jan 1, result s.b. Jan 5
     assertEquals(4*Constants.DAY, task.nextTime(0));
     assertIsDate("1/5/1970 0:00", task.nextTime(timeOf("1/1/1970 0:00")));
     // sunday
