@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceServlet.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: LockssResourceServlet.java,v 1.2 2009-06-09 06:13:46 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2004 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceServlet.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+// $Id: LockssResourceServlet.java,v 1.2 2009-06-09 06:13:46 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.servlet;
@@ -112,7 +112,7 @@ public class LockssResourceServlet extends LockssServlet {
       sb.append(e.nextElement());
       sb.append(", ");
     }
-    log.info("init: " + sb.toString());
+    if (log.isDebug3()) log.debug3("init: " + sb.toString());
     _servletHandler =
       (ServletHandler)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_HANDLER);
     _redirMap = (Map)context.getAttribute(ServletManager.CONTEXT_ATTR_RESOURCE_REDIRECT_MAP);
@@ -120,7 +120,6 @@ public class LockssResourceServlet extends LockssServlet {
 
     _acceptRanges=getInitBoolean("acceptRanges");
     _dirAllowed=getInitBoolean("dirAllowed");
-    log.info("_dirAllowed: " + _dirAllowed);
     _putAllowed=getInitBoolean("putAllowed");
     _delAllowed=getInitBoolean("delAllowed");
     _redirectWelcomeFiles=getInitBoolean("redirectWelcome");
@@ -153,7 +152,7 @@ public class LockssResourceServlet extends LockssServlet {
 	  throw new UnavailableException(e.toString()); 
 	}
       }
-    if (log.isDebug()) log.debug("resource base = "+_resourceBase);
+    if (log.isDebug3()) log.debug3("resource base = "+_resourceBase);
         
     if (_putAllowed)
       _AllowString+=", PUT";
@@ -204,7 +203,7 @@ public class LockssResourceServlet extends LockssServlet {
       ? _httpContext.getResource(pathInContext)
       : _resourceBase.addPath(pathInContext);
 
-    if (log.isDebug2()) log.debug2("RESOURCE="+r);
+    if (log.isDebug3()) log.debug3("RESOURCE="+r);
     return r;
   }
     
@@ -307,7 +306,7 @@ public class LockssResourceServlet extends LockssServlet {
   protected void notFound(HttpServletRequest request,
 			  HttpServletResponse response)
       throws IOException {
-    if(log.isDebug2())log.debug2("Not Found "+request.getRequestURI());
+    if(log.isDebug3())log.debug3("Not Found "+request.getRequestURI());
     String method=request.getMethod();
             
     // Not found special requests.
