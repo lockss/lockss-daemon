@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.64 2009-06-01 19:15:08 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.64.2.1 2009-06-09 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -1015,6 +1015,14 @@ public class ConfigManager implements LockssManager {
     }
     if ("basic".equalsIgnoreCase(acctPolicy)) {
       setParamsFromPairs(config, AccountManager.POLICY_BASIC);
+    }
+    if ("compat".equalsIgnoreCase(acctPolicy)) {
+      setParamsFromPairs(config, AccountManager.POLICY_COMPAT);
+    }
+  }
+
+  public static class ConfigMacro{
+    public ConfigMacro(String name, String[] pairs) {
     }
   }
 
