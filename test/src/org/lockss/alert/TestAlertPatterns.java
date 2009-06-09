@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertPatterns.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: TestAlertPatterns.java,v 1.1.90.1 2009-06-09 05:47:47 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,11 @@ public class TestAlertPatterns extends LockssTestCase {
     assertNoMatch(AlertPatterns.LE(ATTR2, new Integer(6)));
     assertMatch(AlertPatterns.LE(ATTR2, new Integer(7)));
     assertMatch(AlertPatterns.LE(ATTR2, new Integer(8)));
+
+    assertMatch(AlertPatterns.CONTAINS(ATTR1, ListUtil.list("four",
+							    "test text")));
+    assertNoMatch(AlertPatterns.CONTAINS(ATTR1, ListUtil.list("four",
+							      "testing 123")));
   }
 
   public void testBool() {

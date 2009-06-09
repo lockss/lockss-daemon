@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.17 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id: AlertManagerImpl.java,v 1.17.56.1 2009-06-09 05:47:47 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -30,7 +30,7 @@
 
 package org.lockss.alert;
 
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 import org.lockss.app.BaseLockssDaemonManager;
@@ -53,9 +53,6 @@ public class AlertManagerImpl
    */
   protected static Logger log = Logger.getLogger("AlertMgr");
 
-  static final String PARAM_ALERTS_ENABLED = PREFIX + "enabled";
-  static final boolean DEFAULT_ALERTS_ENABLED = false;
-
   /** List of names of alerts that should be ignored if raised */
   static final String PARAM_IGNORED_ALERTS = PREFIX + "ignoredAlerts";
 
@@ -70,7 +67,12 @@ public class AlertManagerImpl
   static final String PARAM_DELAY_MAX = DELAY_PREFIX + "max";
   static final long DEFAULT_DELAY_MAX = 2 * Constants.HOUR;
 
-  static final String PARAM_ALERT_ALL_EMAIL = PREFIX + "allEmail";
+  /** XML describing serialized AlertConfig */
+  public static final String PARAM_CONFIG = PREFIX + "config";
+  static final String DEFAULT_CONFIG = null;
+
+  static final String PARAM_ALERT_ALL_EMAIL
+    = PREFIX + "allEmail";
 
   public static final String CONFIG_FILE_ALERT_CONFIG = "alertconfig.xml";
 
@@ -79,9 +81,9 @@ public class AlertManagerImpl
   private boolean alertsEnabled = DEFAULT_ALERTS_ENABLED;
   private Set ignoredAlerts;
 
-  private long initialDelay;
-  private long incrDelay;
-  private long maxDelay;
+  private long initialDelay = DEFAULT_DELAY_INITIAL;
+  private long incrDelay = DEFAULT_DELAY_INCR;
+  private long maxDelay = DEFAULT_DELAY_MAX;
 
   public void startService() {
     super.startService();
@@ -96,7 +98,7 @@ public class AlertManagerImpl
       AlertAction action = new AlertActionMail(address);
       AlertConfig conf =
         new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
-            action)));
+						      action)));
       alertConfig = conf;
     }
   }
@@ -108,25 +110,54 @@ public class AlertManagerImpl
   public synchronized void setConfig(Configuration config,
       Configuration prevConfig,
       Configuration.Differences changedKeys) {
-    alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
-        DEFAULT_ALERTS_ENABLED);
-    initialDelay = config.getTimeInterval(PARAM_DELAY_INITIAL,
-        DEFAULT_DELAY_INITIAL);
-    incrDelay = config.getTimeInterval(PARAM_DELAY_INCR,
-        DEFAULT_DELAY_INCR);
-    maxDelay = config.getTimeInterval(PARAM_DELAY_MAX,
-        DEFAULT_DELAY_MAX);
-    if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)) {
-      tmpConfig(config.get(PARAM_ALERT_ALL_EMAIL));
-    }
-    if (changedKeys.contains(PARAM_IGNORED_ALERTS)) {
+    if (changedKeys.contains(PREFIX)) {
+      alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
+					DEFAULT_ALERTS_ENABLED);
+      initialDelay = config.getTimeInterval(PARAM_DELAY_INITIAL,
+					    DEFAULT_DELAY_INITIAL);
+      incrDelay = config.getTimeInterval(PARAM_DELAY_INCR,
+					 DEFAULT_DELAY_INCR);
+      maxDelay = config.getTimeInterval(PARAM_DELAY_MAX,
+					DEFAULT_DELAY_MAX);
       ignoredAlerts = SetUtil.theSet(config.getList(PARAM_IGNORED_ALERTS));
+
+      if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)) {
+	String allEmail = config.get(PARAM_ALERT_ALL_EMAIL);
+	if (!StringUtil.isNullString(allEmail)) {
+	  tmpConfig(allEmail);
+	}
+      }
+      if (changedKeys.contains(PARAM_CONFIG)) {
+	loadConfig(config.getConfigTree(PARAM_CONFIG));
+      }
     }
+  }
+
+  void loadConfig(Configuration config) {
+    AlertConfig theConfig = new AlertConfig();
+    for (Iterator iter = config.nodeIterator(); iter.hasNext(); ) {
+      String id = (String)iter.next();
+      String xml = config.get(id);
+      if (xml != null) {
+	AlertConfig alertConfig = loadAlertConfig(xml);
+	for (AlertFilter filt : alertConfig.getFilters()) {
+	  theConfig.addFilter(filt);
+	}
+      }
+    }
+    alertConfig = theConfig;
+    if (log.isDebug()) log.debug("Config: " + alertConfig);
+  }
+
+  public void loadConfig(String xml) {
+    alertConfig = loadAlertConfig(xml);
+    if (log.isDebug()) log.debug("Config: " + alertConfig);
   }
 
   public void loadConfig() {
     File file = configMgr.getCacheConfigFile(CONFIG_FILE_ALERT_CONFIG);
     alertConfig = loadAlertConfig(file);
+    if (log.isDebug()) log.debug("Config: " + alertConfig);
   }
 
   public AlertConfig getConfig() {
@@ -171,6 +202,26 @@ public class AlertManagerImpl
       log.error("Could not store alert config", e);
       throw e;
     }
+  }
+
+  AlertConfig loadAlertConfig(String config) {
+    ObjectSerializer deserializer = makeObjectSerializer();
+    try {
+      if (log.isDebug3()) log.debug3("Loading alert config: " + config);
+      Reader rdr = new StringReader(config);
+      AlertConfig ac = (AlertConfig)deserializer.deserialize(rdr);
+      return ac;
+    } catch (SerializationException se) {
+      log.error(
+          "Marshalling exception for alert config", se);
+      // drop down to default value
+    } catch (Exception e) {
+      log.error("Could not load alert config", e);
+      throw new RuntimeException(
+          "Could not load alert config", e);
+    }
+    // Default value
+    return new AlertConfig();
   }
 
   /**
@@ -240,10 +291,14 @@ public class AlertManagerImpl
       if (log.isDebug3()) log.debug3("Raised but ignored: " + alert);
     } else {
       if (log.isDebug3()) log.debug3("Raised " + alert);
-      Set actions = findMatchingActions(alert, alertConfig.getFilters());
-      for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
-	AlertAction action = (AlertAction)iter.next();
-	recordOrDefer(alert, action);
+      try {
+	Set actions = findMatchingActions(alert, alertConfig.getFilters());
+	for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
+	  AlertAction action = (AlertAction)iter.next();
+	  recordOrDefer(alert, action);
+	}
+      } catch (Exception e) {
+	log.error("Filter or action threw", e);
       }
     }
   }

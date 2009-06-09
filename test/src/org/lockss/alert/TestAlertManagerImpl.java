@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.13 2008-08-26 03:04:55 dshr Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.13.12.1 2009-06-09 05:47:47 tlipkis Exp $
  */
 
 /*
@@ -92,8 +92,36 @@ public class TestAlertManagerImpl extends LockssTestCase {
     mgr.storeAlertConfig(file, config);
     assertTrue(file.exists());
     AlertConfig c2 = (AlertConfig)mgr.loadAlertConfig(file);
-    // assertEquals(config, c2); // fails
+    assertEquals(config, c2);
   }
+
+  public void testLoadConfig() throws Exception {
+
+    List alertNames = ListUtil.list(Alert.PASSWORD_REMINDER.getName(),
+				    Alert.ACCOUNT_DISABLED.getName());
+    AlertFilter passwdFilt = 
+      new AlertFilter(AlertPatterns.CONTAINS(Alert.ATTR_NAME, alertNames),
+		      new AlertActionMail());
+    AlertFilter crawlExclFilt = 
+      new AlertFilter(AlertPatterns.EQ(Alert.ATTR_NAME,
+				       Alert.CRAWL_EXCLUDED_URL.getName()),
+		      new AlertActionMail("exclmail"));
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt));
+
+    File file = FileTestUtil.tempFile("alertconfig");
+    mgr.storeAlertConfig(file, conf);
+
+    assertNull(mgr.getConfig());
+
+    Reader rdr =
+      new org.lockss.filter.WhiteSpaceFilter(new BufferedReader(new FileReader(file)));
+    String str = StringUtil.fromReader(rdr);
+    ConfigurationUtil.setFromArgs(AlertManagerImpl.PARAM_CONFIG + ".foo", str);
+
+    assertEquals(conf, mgr.getConfig());
+  }
+
 
   public void config(boolean enable) {
     config(enable, 0, 0, 0);
