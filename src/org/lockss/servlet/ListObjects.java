@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.3 2009-05-23 18:06:26 dshr Exp $
+ * $Id: ListObjects.java,v 1.4 2009-06-09 00:57:27 dshr Exp $
  */
 
 /*
@@ -96,6 +96,14 @@ public class ListObjects extends LockssServlet {
 	return;
       }
       listDOIs();
+    } else if (type.equalsIgnoreCase("articles")) {
+      auid = getParameter("auid");
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+	displayError("No such AU: " + auid);
+	return;
+      }
+      listArticles();
     } else if (type.equalsIgnoreCase("aus")) {
       listAUs();
     } else if (type.equalsIgnoreCase("auids")) {
@@ -133,6 +141,31 @@ public class ListObjects extends LockssServlet {
 	  String doi = md.getDOI();
 	  if (doi != null) {
 	    wrtr.println(doi);
+	  }
+	} catch (IOException e) {
+	  log.warning("listDOIs() threw " + e);
+	} catch (PluginException e) {
+	  log.warning("listDOIs() threw " + e);
+	}
+      }
+    }
+  }
+
+  void listArticles() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+    wrtr.println("# Articles in " + au.getName());
+    wrtr.println();
+    for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
+      CachedUrl cu = (CachedUrl)iter.next();
+      if (cu.hasContent()) {
+        try {
+          Metadata md = cu.getMetadataExtractor().extract(cu);
+	  String doi = md.getDOI();
+	  if (doi != null) {
+	    wrtr.println(cu.getUrl() + "\t" + doi);
+	  } else {
+	    wrtr.println(cu.getUrl() + "\t");
 	  }
 	} catch (IOException e) {
 	  log.warning("listDOIs() threw " + e);

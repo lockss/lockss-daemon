@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.1 2009-05-28 22:52:57 dshr Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.2 2009-06-09 00:57:27 dshr Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -51,11 +52,21 @@ public class SubTreeArticleIterator implements Iterator {
   Iterator it = null;
   ArrayList al = new ArrayList();
   String subTreeRoot = null;
+  Pattern pat = null;
   public SubTreeArticleIterator(String mimeType, ArchivalUnit au,
 				String subTreeRoot) {
     this.mimeType = ( mimeType == null ? "text/html" : mimeType );
     this.au = au;
     this.subTreeRoot = subTreeRoot;
+    log.debug("Mime " + this.mimeType + " subTree " + this.subTreeRoot +
+	      " au " + this.au.toString());
+  }
+  public SubTreeArticleIterator(String mimeType, ArchivalUnit au,
+				String subTreeRoot, Pattern pat) {
+    this.mimeType = ( mimeType == null ? "text/html" : mimeType );
+    this.au = au;
+    this.subTreeRoot = subTreeRoot;
+    this.pat = pat;
     log.debug("Mime " + this.mimeType + " subTree " + this.subTreeRoot +
 	      " au " + this.au.toString());
   }
@@ -81,9 +92,14 @@ public class SubTreeArticleIterator implements Iterator {
 	    String mimeType2 =
 		HeaderUtil.getMimeTypeFromContentType(contentType);
 	    log.debug("CU: " + cu.getUrl() + " mime " + mimeType2);
-	    if (mimeType.equalsIgnoreCase(mimeType2)) {
-		log.debug("Add " + cu.getUrl());
-		al.add(cu);
+	    Matcher match = null;
+	    if (pat != null) {
+	      match = pat.matcher(cu.getUrl());
+	    }
+	    if (mimeType.equalsIgnoreCase(mimeType2) &&
+		(match == null || match.find())) {
+	      log.debug("Add " + cu.getUrl());
+	      al.add(cu);
 	    }
 	} else if (n instanceof CachedUrlSet) {
 	    CachedUrlSet cus2 = (CachedUrlSet) n;
