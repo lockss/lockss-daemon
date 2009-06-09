@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.6 2009-06-09 00:57:27 dshr Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.7 2009-06-09 04:36:42 dshr Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
    * is at a URL like http://apr.sagepub.com/cgi/reprint/34/2/135
    */
   protected String subTreeRoot = "cgi/reprint";
+  protected Pattern pat = Pattern.compile("journal/[0-9]*/[0-9]*/[0-9]*",
+				  Pattern.CASE_INSENSITIVE);
 
   public HighWireArticleIteratorFactory() {
   }
@@ -63,8 +65,6 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
       throws PluginException {
     log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
               ") " + subTreeRoot);
-    Pattern pat = Pattern.compile("journal/[0-9]*/[0-9]*/[0-9]*",
-				  Pattern.CASE_INSENSITIVE);
-    return new SubTreeArticleIterator(mimeType, au, subTreeRoot);
+    return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
   }
 }
