@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.3 2009-06-02 07:10:22 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.4 2009-06-09 06:11:23 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,11 @@ import org.lockss.config.*;
 import org.lockss.servlet.*;
 import org.lockss.util.*;
 import org.lockss.alert.*;
+import org.lockss.mail.*;
+
+import static org.lockss.servlet.BaseServletManager.SUFFIX_AUTH_TYPE;
+import static org.lockss.servlet.BaseServletManager.SUFFIX_ENABLE_DEBUG_USER;
+import static org.lockss.servlet.BaseServletManager.SUFFIX_USE_SSL;
 
 /** Manage user accounts
  */
@@ -87,18 +92,51 @@ public class AccountManager
     PREFIX + "mailAdminIfNoUserEmail";
   public static final boolean DEFAULT_MAIL_ADMIN_IF_NO_USER_EMAIL = false;
 
+  /** Frequency to check for password change reminders to send: daily,
+   * weekly or monthly */
+  public static final String PARAM_PASSWORD_CHECK_FREQ =
+    PREFIX + "passwordCheck.frequency";
+  public static final String DEFAULT_PASSWORD_CHECK_FREQ = "daily";
+
+  /** Alertconfig set by AccountManager */
+  public static final String PARAM_PASSWORD_REMINDER_ALERT_CONFIG =
+    AlertManagerImpl.PARAM_CONFIG + ".acct";
+
+  private static String PASSWORD_REMINDER_ALERT_CONFIG =
+    "<org.lockss.alert.AlertConfig>" +
+    "  <filters>" +
+    "    <org.lockss.alert.AlertFilter>" +
+    "      <pattern class=\"org.lockss.alert.AlertPatterns-Predicate\">" +
+    "        <attribute>name</attribute>" +
+    "        <relation>CONTAINS</relation>" +
+    "        <value class=\"list\">" +
+    "          <string>PasswordReminder</string>" +
+    "          <string>AccountDisabled</string>" +
+    "        </value>" +
+    "      </pattern>" +
+    "      <action class=\"org.lockss.alert.AlertActionMail\"/>" +
+    "    </org.lockss.alert.AlertFilter>" +
+    "  </filters>" +
+    "</org.lockss.alert.AlertConfig>";
+
 
   // Predefined account policies.  See ConfigManager.setConfigMacros()
+
+  private static String UI_PREFIX = AdminServletManager.PREFIX;
 
   /** <code>LC</code>: SSL, form auth, Library of Congress password rules */
   public static String[] POLICY_LC = {
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "LC",
     PARAM_CONDITIONAL_PLATFORM_USER, "true",
+    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
     PARAM_MAIL_ENABLED, "true",
-    "org.lockss.ui.authType", "Form",
-    "org.lockss.ui.debugUser.enable", "false",
-    "org.lockss.ui.useSsl", "true",
+    MailService.PARAM_ENABLED, "true",
+    AlertManager.PARAM_ALERTS_ENABLED, "true",
+    AlertActionMail.PARAM_ENABLED, "true",
+    UI_PREFIX + SUFFIX_AUTH_TYPE, "Form",
+    UI_PREFIX + SUFFIX_ENABLE_DEBUG_USER, "false",
+    UI_PREFIX + SUFFIX_USE_SSL, "true",
   };
 
   /** <code>SSL</code>: SSL, form auth, configurable password rules */
@@ -106,8 +144,9 @@ public class AccountManager
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
     PARAM_CONDITIONAL_PLATFORM_USER, "false",
-    "org.lockss.ui.authType", "Form",
-    "org.lockss.ui.useSsl", "true",
+    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
+    UI_PREFIX + SUFFIX_AUTH_TYPE, "Form",
+    UI_PREFIX + SUFFIX_USE_SSL, "true",
   };
 
   /** <code>Form</code>: HTTP, form auth */
@@ -115,8 +154,9 @@ public class AccountManager
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
     PARAM_CONDITIONAL_PLATFORM_USER, "false",
-    "org.lockss.ui.authType", "Form",
-    "org.lockss.ui.useSsl", "false",
+    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
+    UI_PREFIX + SUFFIX_AUTH_TYPE, "Form",
+    UI_PREFIX + SUFFIX_USE_SSL, "false",
   };
 
   /** <code>Basic</code>: HTTP, basic auth */
@@ -124,8 +164,19 @@ public class AccountManager
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",
     PARAM_CONDITIONAL_PLATFORM_USER, "false",
-    "org.lockss.ui.authType", "Basic",
-    "org.lockss.ui.useSsl", "false",
+    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
+    UI_PREFIX + SUFFIX_AUTH_TYPE, "Basic",
+    UI_PREFIX + SUFFIX_USE_SSL, "false",
+  };
+
+  /** <code>Compat</code>: HTTP, basic auth, no account management */
+  public static String[] POLICY_COMPAT = {
+    PARAM_ENABLED, "false",
+    PARAM_NEW_ACCOUNT_TYPE, "Basic",
+    PARAM_CONDITIONAL_PLATFORM_USER, "false",
+    PARAM_PASSWORD_REMINDER_ALERT_CONFIG, PASSWORD_REMINDER_ALERT_CONFIG,
+    UI_PREFIX + SUFFIX_AUTH_TYPE, "Basic",
+    UI_PREFIX + SUFFIX_USE_SSL, "false",
   };
 
   private boolean isEnabled = DEFAULT_ENABLED;
@@ -145,16 +196,10 @@ public class AccountManager
     super.startService();
     configMgr = getDaemon().getConfigManager();
     resetConfig();
-    isEnabled = configMgr.getCurrentConfig().getBoolean(PARAM_ENABLED,
-							DEFAULT_ENABLED);
     if (isEnabled) {
       ensureAcctDir();
       loadUsers();
     }
-  }
-
-  public synchronized void stopService() {
-    super.stopService();
   }
 
   public synchronized void setConfig(Configuration config,
@@ -162,6 +207,7 @@ public class AccountManager
 				     Configuration.Differences changedKeys) {
 
     if (changedKeys.contains(PREFIX)) {
+      isEnabled = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
       acctRelDir = config.get(PARAM_ACCT_DIR, DEFAULT_ACCT_DIR);
       acctType = config.get(PARAM_NEW_ACCOUNT_TYPE, DEFAULT_NEW_ACCOUNT_TYPE);
       acctFact = getUserFactory(acctType);
@@ -183,24 +229,26 @@ public class AccountManager
   }
 
   UserAccount.Factory getUserFactory(String type) {
-    if (type.equalsIgnoreCase("basic")) {
-      return new BasicUserAccount.Factory();
-    }
-    if (type.equalsIgnoreCase("LC")) {
-      return new LCUserAccount.Factory();
-    }
-    String clsName = type + "$Factory";
-    try {
-      Class cls = Class.forName(clsName);
-      try {
-	return (UserAccount.Factory)cls.newInstance();
-      } catch (Exception e) {
-	log.error("Can't instantiate new account factory: " + cls, e);
+    if (!StringUtil.isNullString(type)) {
+      if (type.equalsIgnoreCase("basic")) {
+	return new BasicUserAccount.Factory();
       }
-    } catch (ClassNotFoundException e) {
-      log.error("New account factory not found: " + clsName);
+      if (type.equalsIgnoreCase("LC")) {
+	return new LCUserAccount.Factory();
+      }
+      String clsName = type + "$Factory";
+      try {
+	Class cls = Class.forName(clsName);
+	try {
+	  return (UserAccount.Factory)cls.newInstance();
+	} catch (Exception e) {
+	  log.error("Can't instantiate new account factory: " + cls, e);
+	}
+      } catch (ClassNotFoundException e) {
+	log.error("New account factory not found: " + clsName);
+      }
     }
-    log.warning("Using basic accounts");
+    log.warning("No factory of type '" + type + "', using basic accounts");
     return new BasicUserAccount.Factory();
   }    
 
@@ -212,7 +260,8 @@ public class AccountManager
 
   /** Add the user account, if doesn't conflict with an existing user and
    * it has a password. */
-  UserAccount internalAddUser(UserAccount acct) throws NotAddedException {
+  synchronized UserAccount internalAddUser(UserAccount acct)
+      throws NotAddedException {
     if (!acct.hasPassword()) {
       throw new NotAddedException("Can't add user without a password");
     }
@@ -248,12 +297,7 @@ public class AccountManager
     } catch (NoSuchAlgorithmException e) {
       log.error("Static user ( "  + acct.getName() + ") not installed", e);
     }
-    try {
-      return addUser(acct);
-    } catch (NotStoredException e) {
-      // impossible with static user
-      throw new RuntimeException("Shouldn't happen", e);
-    }
+    return internalAddUser(acct);
   }
 
   /** Add platform user.  If {@link #PARAM_CONDITIONAL_PLATFORM_USER} is
@@ -273,9 +317,27 @@ public class AccountManager
     }
   }
 
+  boolean shouldInstallPlatformUser() {
+    if (!CurrentConfig.getBooleanParam(PARAM_CONDITIONAL_PLATFORM_USER,
+				       DEFAULT_CONDITIONAL_PLATFORM_USER)) {
+      return true;
+    }
+    for (UserAccount acct : getAccounts()) {
+      if (!acct.isStaticUser()
+	  && acct.isUserInRole(LockssServlet.ROLE_USER_ADMIN)) {
+	return false;
+      }
+    }
+    return true;
+  }
+
   /** Delete the user */
   public boolean deleteUser(String name) {
     UserAccount acct = getUser(name);
+    if (acct.isStaticUser()) {
+      throw new IllegalArgumentException("Can't delete static account: "
+					 + acct);
+    }
     if (acct == null) {
       return true;
     }
@@ -283,7 +345,7 @@ public class AccountManager
   }
 
   /** Delete the user */
-  public boolean deleteUser(UserAccount acct) {
+  public synchronized boolean deleteUser(UserAccount acct) {
     boolean res = true;
     String filename = acct.getFilename();
     if (filename != null) {
@@ -309,9 +371,9 @@ public class AccountManager
     try {
       storeUser(acct, file);
     } catch (SerializationException e) {
-      throw new NotStoredException("Error storing user in databasee", e);
+      throw new NotStoredException("Error storing user in database", e);
     } catch (IOException e) {
-      throw new NotStoredException("Error storing user in databasee", e);
+      throw new NotStoredException("Error storing user in database", e);
     }
 
     acct.setFilename(file.getName());
@@ -334,20 +396,6 @@ public class AccountManager
     }
   }
 
-  boolean shouldInstallPlatformUser() {
-    if (!CurrentConfig.getBooleanParam(PARAM_CONDITIONAL_PLATFORM_USER,
-				       DEFAULT_CONDITIONAL_PLATFORM_USER)) {
-      return true;
-    }
-    for (UserAccount acct : getAccounts()) {
-      if (!acct.isStaticUser()
-	  && acct.isUserInRole(LockssServlet.ROLE_USER_ADMIN)) {
-	return false;
-      }
-    }
-    return true;
-  }
-
   /** Load realm users from properties file.
    * The property file maps usernames to password specs followed by
    * an optional comma separated list of role names.
@@ -356,12 +404,15 @@ public class AccountManager
    * @exception IOException
    */
   public void loadFromProps(String propsUrl) throws IOException {
-    if(log.isDebug())log.debug("Load "+this+" from "+propsUrl);
-    Properties properties = new Properties();
+    if (log.isDebug()) log.debug("Load "+this+" from "+propsUrl);
+    Properties props = new Properties();
     InputStream ins = getClass().getResourceAsStream(propsUrl);
-    properties.load(ins);
+    props.load(ins);
+    loadFromProps(props);
+  }
 
-    for (Map.Entry ent : properties.entrySet()) {
+  public void loadFromProps(Properties props) throws IOException {
+    for (Map.Entry ent : props.entrySet()) {
       String username = ent.getKey().toString().trim();
       String credentials = ent.getValue().toString().trim();
       String roles = null;
@@ -398,7 +449,6 @@ public class AccountManager
   public UserAccount getUserOrNull(String username) {
     UserAccount res = accountMap.get(username);
     log.debug2("getUser("+username + "): " + res);
-//     return res != null ? res : NOBODY_ACCOUNT;
     return res;
   }
 
@@ -411,17 +461,6 @@ public class AccountManager
   /** Return parent dir of all user account files */
   public File getAcctDir() {
     return new File(configMgr.getCacheConfigDir(), acctRelDir);
-  }
-
-  /** Should be called whenever a change has been made to the account, in a
-   * context where AccountManager doesn't otherwise know to save it */
-  public void notifyAccountChange(UserAccount acct, String msg) {
-    try {
-      storeUser(acct);
-    } catch (NotStoredException e) {
-      log.error("Failed to store account: " + acct.getName(), e);
-    }
-    // if msg != null send mail 
   }
 
   File ensureAcctDir() {
@@ -461,6 +500,7 @@ public class AccountManager
       UserAccount acct = (UserAccount)makeObjectSerializer().deserialize(file);
       acct.setFilename(file.getName());
       acct.postLoadInit(this, configMgr.getCurrentConfig());
+      log.debug2("Loaded user " + acct.getName() + " from " + file);
       return acct;
     } catch (Exception e) {
       log.error("Unable to load account data from " + file, e);
@@ -496,7 +536,21 @@ public class AccountManager
 			       + acct.getName());
   }
 
+  /** Called by {@link org.lockss.daemon.Cron.SendPasswordReminder} */
+  public boolean checkPasswordReminders() {
+    for (UserAccount acct : getAccounts()) {
+      if (!acct.isStaticUser()) {
+	acct.checkPasswordReminder();
+      }
+    }
+    return true;
+  }
+
+  /** Send an alert email to the owner of the account */
   void alertUser(UserAccount acct, Alert alert, String text) {
+    if (!mailEnabled) {
+      return;
+    }
     try {
       String to = acct.getEmail();
       if (to == null && mailAdminIfNoUserEmail) {
@@ -514,7 +568,6 @@ public class AccountManager
     }
   }
 
-  //      Alert alert = Alert.cacheAlert(Alert.PASSWORD_EXPIRES_SOON);
 
 
   private ObjectSerializer makeObjectSerializer() {

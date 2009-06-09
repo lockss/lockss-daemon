@@ -1,5 +1,5 @@
 /*
- * $Id: NobodyAccount.java,v 1.1 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: NobodyAccount.java,v 1.2 2009-06-09 06:11:23 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.account;
 
 /** Least privileged user
  */
-public class NobodyAccount extends BasicUserAccount {
+public class NobodyAccount extends UserAccount {
 
   public NobodyAccount() {
     this("Nobody");
@@ -42,6 +42,42 @@ public class NobodyAccount extends BasicUserAccount {
 
   public NobodyAccount(String name) {
     super(name);
+  }
+
+  public String getType() {
+    return "Nobody";
+  }
+
+  protected int getMinPasswordLength() {
+    return -1;
+  }
+
+  protected int getHistorySize() {
+    return -1;
+  }
+
+  protected long getMinPasswordChangeInterval() {
+    return -1;
+  }
+
+  protected long getMaxPasswordChangeInterval() {
+    return -1;
+  }
+
+  protected long getPasswordChangeReminderInterval() {
+    return -1;
+  }
+
+  public long getInactivityLogout() {
+    return -1;
+  }
+
+  protected int getMaxFailedAttempts() {
+    return -1;
+  }
+
+  protected String getDefaultHashAlgorithm() {
+    return null;
   }
 
   public String getRoles() {

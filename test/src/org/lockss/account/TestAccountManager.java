@@ -1,5 +1,5 @@
 /*
- * $Id: TestAccountManager.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.3 2009-06-09 06:11:23 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,9 @@ import java.util.*;
 import java.lang.reflect.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.servlet.*;
 import org.lockss.test.*;
+import static org.lockss.servlet.LockssServlet.ROLE_USER_ADMIN;
 
 /**
  * Test class for org.lockss.account.AccountManager
@@ -96,6 +98,13 @@ public class TestAccountManager extends LockssTestCase {
 	       instanceof LCUserAccount.Factory);
     assertTrue(acctMgr.getUserFactory("org.lockss.account.StaticUserAccount")
 	       instanceof StaticUserAccount.Factory);
+
+    assertTrue(acctMgr.getUserFactory("Unknown")
+	       instanceof BasicUserAccount.Factory);
+    assertTrue(acctMgr.getUserFactory("")
+	       instanceof BasicUserAccount.Factory);
+    assertTrue(acctMgr.getUserFactory(null)
+	       instanceof BasicUserAccount.Factory);
   }
 
   public void testCreateUser() {
@@ -109,8 +118,13 @@ public class TestAccountManager extends LockssTestCase {
   }
 
   public void testGetUser() throws Exception {
+    assertFalse(acctMgr.hasUser("nouser"));
     assertNull(acctMgr.getUserOrNull("nouser"));
     assertSame(AccountManager.NOBODY_ACCOUNT, acctMgr.getUser("nouser"));
+
+    acctMgr.addStaticUser("foo", "SHA-1:0102");
+    assertTrue(acctMgr.hasUser("foo"));
+    assertEquals("foo", acctMgr.getUser("foo").getName());
   }
 
   public void testAddUser() throws Exception {
@@ -135,6 +149,75 @@ public class TestAccountManager extends LockssTestCase {
       fail("Should be illegal to add user with existing name");
     } catch (AccountManager.UserExistsException e) {
     }
+  }
+
+  public void testAddStaticUser() throws Exception {
+    String user = "ferd";
+    String cred = "SHA-1:01020304";
+    UserAccount acct1 = acctMgr.addStaticUser(user, cred);
+    UserAccount acct2 = acctMgr.getUser(user);
+    assertSame(acct1, acct2);
+    assertTrue(acct1.isStaticUser());
+    File f1 = new File(acctMgr.getAcctDir(), "user");
+    assertFalse(f1.exists());
+  }
+
+  public void testAddPlatformUser0() throws Exception {
+    String user = "ferd";
+    String cred = "SHA-1:01020304";
+
+    assertEquals(0, acctMgr.getAccounts().size());
+    acctMgr.installPlatformUser(null, cred);
+    assertEquals(0, acctMgr.getAccounts().size());
+    acctMgr.installPlatformUser(user, null);
+    assertEquals(0, acctMgr.getAccounts().size());
+    ConfigurationUtil.addFromArgs(AccountManager.PARAM_CONDITIONAL_PLATFORM_USER,
+				  "true");
+    acctMgr.installPlatformUser(user, cred);
+    assertEquals(1, acctMgr.getAccounts().size());
+    UserAccount acct1 = acctMgr.getUser(user);
+    assertEquals(user, acct1.getName());
+    assertEquals(ROLE_USER_ADMIN, acct1.getRoles());
+    assertTrue(acct1.isStaticUser());
+    File f1 = new File(acctMgr.getAcctDir(), "user");
+    assertFalse(f1.exists());
+  }
+
+  public void testAddPlatformUser1() throws Exception {
+    String user = "ferd";
+    String cred = "SHA-1:01020304";
+
+    assertEquals(0, acctMgr.getAccounts().size());
+    UserAccount admin = acctMgr.createUser("foo");
+    admin.setPassword("1234Abcd");
+    admin.setRoles(ROLE_USER_ADMIN);
+    acctMgr.addUser(admin);
+    assertEquals(1, acctMgr.getAccounts().size());
+    ConfigurationUtil.addFromArgs(AccountManager.PARAM_CONDITIONAL_PLATFORM_USER,
+				  "true");
+    acctMgr.installPlatformUser(user, cred);
+    assertEquals(1, acctMgr.getAccounts().size());
+    assertNull(acctMgr.getUserOrNull(user));
+  }
+
+  public void testLoadFromProps() throws Exception {
+    String name = "luser";
+    assertEquals(0, acctMgr.getAccounts().size());
+    acctMgr.loadFromProps(PropUtil.fromArgs(name,
+					    "SHA-1:0102,fooRole,barRole\n"));
+    UserAccount acct = acctMgr.getUser(name);
+    assertEquals(SetUtil.set("fooRole", "barRole"),
+		 SetUtil.theSet(acct.getRoleSet()));
+  }
+
+  public void xtestLoadFromProps() throws Exception {
+    String name = "luser";
+    String url =
+      FileTestUtil.urlOfString(name + ": SHA-1:01020304,fooRole,barRole\n");
+    assertEquals(0, acctMgr.getAccounts().size());
+    acctMgr.loadFromProps(url);
+    UserAccount acct = acctMgr.getUser(name);
+    assertEquals(SetUtil.set("FooRole", "BarRole"), acct.getRoleSet());
   }
 
   UserAccount makeUser(String name) {
@@ -198,6 +281,21 @@ public class TestAccountManager extends LockssTestCase {
       fail("Shouldn't be able to store different instance");
     } catch (IllegalArgumentException e) {
     }
+  }
+
+  public void testDeleteUser() throws Exception {
+    String name = "lu@ser";
+    UserAccount acct1 = makeUser(name);
+    acct1.setPassword(PWD1, true);
+    acctMgr.addUser(acct1);
+    File f1 = new File(acctMgr.getAcctDir(), "luser");
+    assertTrue(f1.exists());
+    assertSame(acct1, acctMgr.getUser(name));
+    assertTrue(acctMgr.deleteUser(name));
+    assertFalse(f1.exists());
+    assertNull(acctMgr.getUserOrNull(name));
+
+    assertTrue(acctMgr.deleteUser("notthere"));
   }
 
   static class MyAccountManager extends AccountManager {

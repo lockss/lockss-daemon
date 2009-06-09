@@ -1,5 +1,5 @@
 /*
- * $Id: LCUserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
+ * $Id: LCUserAccount.java,v 1.3 2009-06-09 06:11:23 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class LCUserAccount extends UserAccount {
   }
 
   @Override
-  void checkLegalPassword(String newPwd, String hash, boolean isAdmin)
+  protected void checkLegalPassword(String newPwd, String hash, boolean isAdmin)
       throws IllegalPasswordChange {
     super.checkLegalPassword(newPwd, hash, isAdmin);
 
