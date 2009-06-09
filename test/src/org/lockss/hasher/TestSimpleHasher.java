@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.3 2009-03-05 05:40:05 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.4 2009-06-09 06:13:15 tlipkis Exp $
  */
 
 /*
@@ -95,6 +95,21 @@ public class TestSimpleHasher extends LockssTestCase {
 
   String exp =
     "# comment 17\n" +
+    "DA39A3EE5E6B4B0D3255BFEF95601890AFD80709   http://www.test.com/blah/\n" +
+    "CA44A2EE70C871B73DAAB1ABD23CE8EDF6CDBA33   http://www.test.com/blah/x.html\n" +
+    "1018215CC5D8B604B3238F1E08141145D536BDFC   http://www.test.com/blah/foo/\n" +
+    "DF88B88A0DCC1CBE4157790E24E903E653105F4F   http://www.test.com/blah/foo/1\n" +
+    "621A46465EAF1ED35DCB88CD8F6ED39471A210F7   http://www.test.com/blah/foo/2\n" +
+    "572F349D47A3C67294B0BEFB88014177275720E3   http://www.test.com/blah/foo/2/a.txt\n" +
+    "5960969EEDB86FC43C7AE8A5A9AA0049B4AF216C   http://www.test.com/blah/foo/2/b.txt\n" +
+    "0124C19FB7F0ECFEB572B00EE3C06F453F74CFA4   http://www.test.com/blah/foo/2/c.txt\n" +
+    "57BDD3F19D10A89A1682C5FEF8318345CA44D2A0   http://www.test.com/blah/foo/2/d.txt\n" +
+    "A014C62B813FD27AB76840AC0372310C5E5E5A13   http://www.test.com/blah/foo/3\n" +
+    "C74D7B027A31CE9F885ACAD106D4320438B2B69B   http://www.test.com/blah/foo/3/a.html\n" +
+    "40935FE5E3C5282F6D06B5ACEDBD909B12DE3FC0   http://www.test.com/blah/foo/3/b.html\n";
+
+  String exp64 =
+    "# comment 17\n" +
     "2jmj7l5rSw0yVb/vlWAYkK/YBwk=   http://www.test.com/blah/\n" +
     "ykSi7nDIcbc9qrGr0jzo7fbNujM=   http://www.test.com/blah/x.html\n" +
     "EBghXMXYtgSzI48eCBQRRdU2vfw=   http://www.test.com/blah/foo/\n" +
@@ -120,7 +135,35 @@ public class TestSimpleHasher extends LockssTestCase {
     assertEquals(exp, StringUtil.fromFile(blockFile));
   }
 
+  public void testV364() throws Exception {
+    MockArchivalUnit mau = setupContentTree();
+    mau.setFilterFactory(new SimpleFilterFactory());
+    SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
+					   challenge, verifier);
+    hasher.setBase64Result(true);
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    assertEquals(2282, hasher.getBytesHashed());
+    assertEquals(12, hasher.getFilesHashed());
+    assertEquals(exp64, StringUtil.fromFile(blockFile));
+  }
+
   String expFilt =
+    "# comment 17\n" +
+    "DA39A3EE5E6B4B0D3255BFEF95601890AFD80709   http://www.test.com/blah/\n" +
+    "CA44A2EE70C871B73DAAB1ABD23CE8EDF6CDBA33   http://www.test.com/blah/x.html\n" +
+    "325A92DEB64D764F4C80B30B6EBCA1DEA68773BB   http://www.test.com/blah/foo/\n" +
+    "8F61702A9CDB0CF54C4954C14A455EB147E3D340   http://www.test.com/blah/foo/1\n" +
+    "69EB01F0B9C1A6DC58C05ADC62C077985C5A27D7   http://www.test.com/blah/foo/2\n" +
+    "136B317433070E1355B77BBF8C0D5BC64E100E43   http://www.test.com/blah/foo/2/a.txt\n" +
+    "A89EA485278644EB3E11D3C1F3974DC95E1A2F0F   http://www.test.com/blah/foo/2/b.txt\n" +
+    "F69DA3BFB2B49D8B391D76A1793BFC7C15F238C2   http://www.test.com/blah/foo/2/c.txt\n" +
+    "F92DBF9FE11A9AB2BC2DD670AA82EC1E75B4B682   http://www.test.com/blah/foo/2/d.txt\n" +
+    "442ACC24CEADC9EA9D038B71ABDDFFC50F3C6018   http://www.test.com/blah/foo/3\n" +
+    "B39CA4E43E4C2D9624A83D6D07891A18F804AEE0   http://www.test.com/blah/foo/3/a.html\n" +
+    "62E6BEFE0C9A37D1124F0D4A5CC64614B0396C1C   http://www.test.com/blah/foo/3/b.html\n";
+
+  String expFilt64 =
     "# comment 17\n" +
     "2jmj7l5rSw0yVb/vlWAYkK/YBwk=   http://www.test.com/blah/\n" +
     "ykSi7nDIcbc9qrGr0jzo7fbNujM=   http://www.test.com/blah/x.html\n" +
@@ -146,6 +189,20 @@ public class TestSimpleHasher extends LockssTestCase {
     assertEquals(2282, hasher.getBytesHashed());
     assertEquals(12, hasher.getFilesHashed());
     assertEquals(expFilt, StringUtil.fromFile(blockFile));
+  }
+
+  public void testV3Filtered64() throws Exception {
+    MockArchivalUnit mau = setupContentTree();
+    mau.setFilterFactory(new SimpleFilterFactory());
+    SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
+					   challenge, verifier);
+    hasher.setFiltered(true);
+    hasher.setBase64Result(true);
+    File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    assertEquals(2282, hasher.getBytesHashed());
+    assertEquals(12, hasher.getFilesHashed());
+    assertEquals(expFilt64, StringUtil.fromFile(blockFile));
   }
 
   public class SimpleFilterFactory implements FilterFactory {

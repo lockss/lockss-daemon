@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.5 2009-04-07 20:21:41 tlipkis Exp $
+ * $Id: SimpleHasher.java,v 1.6 2009-06-09 06:13:15 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class SimpleHasher {
   private byte[] verifier;
   private boolean isFiltered = false;
   private boolean isIncludeUrl = false;
+  private boolean isBase64 = false;
 
   private int nbytes = 1000;
   private long bytesHashed = 0;
@@ -95,6 +96,14 @@ public class SimpleHasher {
    */
   public void setIncludeUrl(boolean val) {
     isIncludeUrl = val;
+  }
+
+  /**
+   * If true, result is a Base64 string; if false (the default), result is
+   * a hex string
+   */
+  public void setBase64Result(boolean val) {
+    isBase64 = val;
   }
 
   /** Do a V1 hash of the CUSH */
@@ -165,7 +174,11 @@ public class SimpleHasher {
   }
 
   String byteString(byte[] a) {
-    return String.valueOf(B64Code.encode(a));
+    if (isBase64) {
+      return String.valueOf(B64Code.encode(a));
+    } else {
+      return ByteArray.toHexString(a);
+    }
   }
 
   private class BlockEventHandler implements BlockHasher.EventHandler {
