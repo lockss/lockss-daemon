@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.1 2009-06-01 07:48:32 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.1.2.1 2009-06-09 05:49:03 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class LockssKeyStore {
   KeyStore keystore;
   KeyManagerFactory kmf;
   TrustManagerFactory tmf;
-  boolean initted = false;
+  boolean loaded = false;
 
   LockssKeyStore(String name) {
     if (name == null) {
@@ -80,13 +80,14 @@ public class LockssKeyStore {
     type = val;
   }
 
+  // Infer provider from known keystore types
   String getProvider() {
     if (provider == null) {
       if ("JKS".equals(type)) {
-	return null;
+	return null;			// Can use default provider for JKS
       }
       if ("JCEKS".equals(type)) {
-	return "SunJCE";
+	return "SunJCE";		// JCEKS requires explicit provider
       }
     }
     return provider;
@@ -125,8 +126,8 @@ public class LockssKeyStore {
   }
 
   /** Load the keystore from a file */
-  synchronized void init() throws UnavailableKeyStoreException {
-    if (initted) {
+  synchronized void load() throws UnavailableKeyStoreException {
+    if (loaded) {
       return;
     }
     check();
@@ -137,7 +138,7 @@ public class LockssKeyStore {
       createKeyStore();
       createKeyManagerFactory();
       createTrustManagerFactory();
-      initted = true;
+      loaded = true;
     } catch (Exception e) {
       throw new UnavailableKeyStoreException(e);
     }
@@ -147,7 +148,7 @@ public class LockssKeyStore {
   void check() {
     if (filename == null
 	|| password == null
-	|| keyPassword == null && keyPasswordFile == null) {
+	|| (keyPassword == null && keyPasswordFile == null)) {
       throw new NullPointerException("filename: " + filename + ", " + "password: " + password + ", " + "keyPassword: " + keyPassword + ", " + "keyPasswordFile: " + keyPasswordFile);
     }
   }
@@ -180,11 +181,11 @@ public class LockssKeyStore {
   /** Overwrite and delete file, trap and log any exceptions */
   void overwriteAndDelete(String filename, int len) {
     File file = new File(filename);
-    FileOutputStream fos = null;
+    OutputStream fos = null;
     try {
       fos = new FileOutputStream(file);
       byte[] junk = new byte[len];
-      for (int i = 0; i < len; i++) junk[i] = 0;
+      Arrays.fill(junk, (byte)0x5C);
       fos.write(junk);
     } catch (IOException e) {
       log.error("Couldn't overwrite file: " + file, e);

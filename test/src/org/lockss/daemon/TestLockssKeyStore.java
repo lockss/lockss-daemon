@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.1 2009-06-01 07:48:32 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.1.2.1 2009-06-09 05:49:03 tlipkis Exp $
  */
 
 /*
@@ -86,20 +86,20 @@ public class TestLockssKeyStore extends LockssTestCase {
     try {
       LockssKeyStore lk = createFromProp("lkone", file1.toString(),
 					 passwd, "wrong");
-      lk.init();
+      lk.load();
       fail("Wrong password should fail");
     } catch (LockssKeyStore.UnavailableKeyStoreException e) {
     }
     try {
       LockssKeyStore lk = createFromProp("lkone", file1.toString(),
 					 "wrong", keyPasswd);
-      lk.init();
+      lk.load();
       fail("Wrong password should fail");
     } catch (LockssKeyStore.UnavailableKeyStoreException e) {
     }
     LockssKeyStore lk = createFromProp("lkone", file1.toString(),
 				       passwd, keyPasswd);
-    lk.init();
+    lk.load();
   }
 
   public void testLoad(String filename) throws Exception {
@@ -120,20 +120,20 @@ public class TestLockssKeyStore extends LockssTestCase {
     try {
       LockssKeyStore lk = createFromProp("lkone", file.toString(),
 					 PASSWD, "wrong");
-      lk.init();
+      lk.load();
       fail("Wrong password should fail");
     } catch (LockssKeyStore.UnavailableKeyStoreException e) {
     }
     try {
       LockssKeyStore lk = createFromProp("lkone", file.toString(),
 					 "wrong", "pass42");
-      lk.init();
+      lk.load();
       fail("Wrong password should fail");
     } catch (LockssKeyStore.UnavailableKeyStoreException e) {
     }
     LockssKeyStore lk = createFromProp("lkone", file.toString(),
 				       PASSWD, "pass42");
-    lk.init();
+    lk.load();
     assertNotNull(lk.getKeyManagerFactory());
     assertNotNull(lk.getTrustManagerFactory());
   }
@@ -152,14 +152,14 @@ public class TestLockssKeyStore extends LockssTestCase {
     try {
       LockssKeyStore lk = createFromFile("lkone", file.toString(),
 					 PASSWD, badpassfile.toString());
-      lk.init();
+      lk.load();
       fail("Wrong password should fail");
     } catch (LockssKeyStore.UnavailableKeyStoreException e) {
     }
     assertTrue(passfile.exists());
     LockssKeyStore lk = createFromFile("lkone", file.toString(),
 				       PASSWD, passfile.toString());
-    lk.init();
+    lk.load();
     assertFalse(passfile.exists());
     assertNotNull(lk.getKeyManagerFactory());
     assertNotNull(lk.getTrustManagerFactory());
