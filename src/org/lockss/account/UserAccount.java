@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.2.2.1 2009-06-09 05:53:00 tlipkis Exp $
  */
 
 /*
@@ -38,12 +38,10 @@ import java.security.*;
 import org.apache.oro.text.regex.*;
 import org.apache.commons.lang.*;
 import org.apache.commons.lang.time.*;
-import org.mortbay.util.B64Code;
 import org.mortbay.util.Credential;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.util.SerializationException.FileNotFound;
 import org.lockss.jetty.*;
 import org.lockss.alert.*;
 
@@ -51,6 +49,9 @@ import org.lockss.alert.*;
  */
 public abstract class UserAccount implements LockssSerializable, Comparable {
   static Logger log = Logger.getLogger("UserAccount");
+
+  private static FastDateFormat expireDf =
+    FastDateFormat.getInstance("EEE dd MMM, HH:mm zzz");
 
   protected final String userName;
   protected String email;
@@ -105,156 +106,30 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     return userName;
   }
 
-  /** Return the email address */
-  public String getEmail() {
-    return email;
-  }
-
-  /** Return the encrypted password */
-  public String getPassword() {
-    return currentPassword;
-  }
-
-  /** Return the encrypted password */
-  public boolean hasPassword() {
-    return credential != null || currentPassword != null;
-  }
-
-  /** Return the user's roles as a string */
-  public String getRoles() {
-    return roles;
-  }
-
-  /** Return a collection of the user's roles  */
-  public boolean isUserInRole(String role) {
-    return getRoleSet().contains(role);
-  }
-
-  /** Return a collection of the user's roles  */
-  public Set getRoleSet() {
-    if (roleSet == null) {
-      roleSet =
-	SetUtil.theSet(StringUtil.breakAt(getRoles(), ',', -1, true, true));
-    }
-    return roleSet;
-  }
-
   /** Set the email address */
   public void setEmail(String val) {
     setChanged(!StringUtil.equalStrings(email, val));
     email = val;
   }
 
+  /** Return the email address */
+  public String getEmail() {
+    return email;
+  }
+
   /** Set the filename */
-  public void setFilename(String val) {
+  void setFilename(String val) {
     fileName = val;
   }
 
   /** Get the filename */
-  public String getFilename() {
+  String getFilename() {
     return fileName;
-  }
-
-  /** Get the time the password was last changed */
-  public long getLastPasswordChange() {
-    return lastPasswordChange;
-  }
-  /** Get the time the password was last changed by the user */
-  public long getLastUserPasswordChange() {
-    return lastUserPasswordChange;
-  }
-
-  /** Set the user's roles */
-  public void setRoles(String val) {
-    if (log.isDebug2()) log.debug2(userName + ".setRoles(" + val + ")");
-    setChanged(!StringUtil.equalStrings(roles, val));
-    roles = val;
-    roleSet = null;
-  }
-
-  /** Set the user's roles */
-  public void setRoles(Set roleSet) {
-    if (log.isDebug2()) log.debug2(userName + ".setRoles(" + roleSet + ")");
-    setChanged(!roleSet.equals(getRoleSet()));
-    this.roles = StringUtil.separatedString(roleSet, ",");
-    this.roleSet = roleSet;
   }
 
   /** Return the hash algorithm name */
   public String getHashAlgorithm() {
     return hashAlg;
-  }
-
-  public void setCredential(String cred) throws NoSuchAlgorithmException {
-    if (credential != null) {
-      throw new UnsupportedOperationException("Can't reset credential");
-    }
-    credential = MDCredential.makeCredential(cred);
-    setChanged(true);
-  }
-
-  /** Return the credential string (ALG:encrypted_pwd */
-  public Credential getCredential() {
-    if (credential == null) {
-      String credString = getCredentialString();
-      log.info("credString: " + credString);
-      if (credString == null) {
-	return null;
-      }
-      try {
-	credential = MDCredential.makeCredential(credString);
-	if (log.isDebug2()) log.debug2("Made credential for "
-				       + ": " + credential);
-      } catch (NoSuchAlgorithmException e) {
-	log.error("No credential; account disabled: " + getName(), e);
-	credential = new NullCredential();
-      } catch (RuntimeException e) {
-	log.error("No credential; account disabled: " + getName(), e);
-	credential = new NullCredential();
-      }
-    }
-    return credential;
-  }
-
-  /** Check the credentials against this account's password. */
-  public boolean check(Object credentials) {
-    if (!isEnabled()) {
-      return false;
-    }
-    Credential cred = getCredential();
-    if (cred == null) {
-      return false;
-    }
-    boolean res = cred.check(credentials);
-    if (res) {
-      setChanged(failedAttempts != 0);
-      failedAttempts = 0;
-    } else {
-      ++failedAttempts;
-      log.info("failedAttempts: " + failedAttempts);
-      if (getMaxFailedAttempts() > 0
-	  && failedAttempts >= getMaxFailedAttempts()) {
-	String msg = (failedAttempts +
-		      " failed login attempts at "
-		      + expireDf.format(TimeBase.nowDate()));
-	disable("Disabled: " + msg);
-	if (acctMgr != null) {
-	  String emsg = "User " + getName() + " disabled because of " + msg;
-	  acctMgr.alertUser(this,
-			    Alert.cacheAlert(Alert.ACCOUNT_DISABLED),
-			    emsg);
-	}
-      }
-    }
-    return res;
-  }
-
-  /** Return the credential string (ALG:encrypted_pwd */
-  String getCredentialString() {
-    if (currentPassword == null) {
-      return null;
-    }
-    return hashAlg + ":" + currentPassword;
   }
 
   public boolean isEditable() {
@@ -290,6 +165,65 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   /** Return the hash algorithm to be used for new accounts */
   abstract protected String getDefaultHashAlgorithm();
 
+  // Roles
+
+  /** Set the user's roles */
+  public void setRoles(String val) {
+    if (log.isDebug2()) log.debug2(userName + ".setRoles(" + val + ")");
+    setChanged(!StringUtil.equalStrings(roles, val));
+    roles = val;
+    roleSet = null;
+  }
+
+  /** Set the user's roles */
+  public void setRoles(Set roleSet) {
+    if (log.isDebug2()) log.debug2(userName + ".setRoles(" + roleSet + ")");
+    setChanged(!roleSet.equals(getRoleSet()));
+    this.roles = StringUtil.separatedString(roleSet, ",");
+    this.roleSet = roleSet;
+  }
+
+  /** Return the user's roles as a string */
+  public String getRoles() {
+    return roles == null ? "" : roles;
+  }
+
+  /** Return true if the user has the named role  */
+  public boolean isUserInRole(String role) {
+    return getRoleSet().contains(role);
+  }
+
+  /** Return a collection of the user's roles  */
+  public Set getRoleSet() {
+    if (roleSet == null) {
+      roleSet =
+	SetUtil.theSet(StringUtil.breakAt(getRoles(), ',', -1, true, true));
+    }
+    return roleSet;
+  }
+
+  // Password management
+
+  /** Return the encrypted password */
+  public String getPassword() {
+    return currentPassword;
+  }
+
+  /** Return the encrypted password */
+  public boolean hasPassword() {
+    return credential != null || currentPassword != null;
+  }
+
+  /** Get the time the password was last changed */
+  public long getLastPasswordChange() {
+    return lastPasswordChange;
+  }
+
+  /** Get the time the password was last changed by the user */
+  public long getLastUserPasswordChange() {
+    return lastUserPasswordChange;
+  }
+
   /** Change the password
    * @throws IllegalPassword if the new password is not legal
    * @throws IllegalPasswordChange
@@ -318,10 +252,6 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     clearCaches();
   }
 
-  private void clearCaches() {
-    credential = null;
-  }
-
   void shiftArrayUp(String[] array) {
     System.arraycopy(array, 0, array, 1, array.length-1);
   }
@@ -330,16 +260,11 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     if (pwd == null) {
       throw new IllegalPassword("Password may not be empty");
     }
-    return b64Hash(pwd);
-  }
-
-  String b64Hash(String pwd) {
     try {
-      MessageDigest md = getMessageDigest();
+      MessageDigest md = MessageDigest.getInstance(hashAlg);
       md.update(pwd.getBytes(Constants.DEFAULT_ENCODING));
 
       return ByteArray.toHexString(md.digest());
-//       return String.valueOf(B64Code.encode(md.digest()));
     } catch (NoSuchAlgorithmException e) {
       throw new RuntimeException("Unsupported hash algorithm: " + hashAlg);
     } catch (UnsupportedEncodingException e) {
@@ -349,105 +274,13 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     }
   }
 
-  private MessageDigest getMessageDigest()
-      throws NoSuchAlgorithmException {
-    return MessageDigest.getInstance(hashAlg);
-  }
-
-  private static FastDateFormat expireDf =
-    FastDateFormat.getInstance("EEE dd MMM, HH:mm zzz");
-
-
-  public boolean hasPasswordExpired() {
-    return hasPasswordExpired(getMaxPasswordChangeInterval());
-  }
-
-  private boolean hasPasswordExpired(long expireInterval) {
-    return lastPasswordChange > 0 && expireInterval > 0
-      && TimeBase.msSince(lastPasswordChange) >= expireInterval;
-  }
-
-  public long getLastPasswordReminderTime() {
-    return lastPasswordReminderTime;
-  }
-
-  public void setLastPasswordReminderTime(long val) {
-    lastPasswordReminderTime = val;
-  }
-
-  public String getPasswordChangeReminder() {
-    if (lastPasswordChange > 0) {
-      long expireInterval = getMaxPasswordChangeInterval();
-      if (hasPasswordExpired(expireInterval)) {
-	return "Password has expired";
-      } else {
-	long reminderInterval = getPasswordChangeReminderInterval();
-	if (reminderInterval > 0
-	    && (TimeBase.msSince(lastPasswordChange)
-		>= (expireInterval - reminderInterval))) {
-	  return "You must change your password before "
-	    + expireDf.format(lastPasswordChange + expireInterval);
-	}
-      }
-    }
-    return null;
-  }
-
-  public void enable() {
-    setChanged(isDisabled);
-    isDisabled = false;
-    disableReason = null;
-  }
-
-  public void disable(String reason) {
-    setChanged(!isDisabled || !StringUtil.equalStrings(disableReason, reason));
-    log.debug("Disabled account " + getName() + ": " + reason);
-    isDisabled = true;
-    disableReason = reason;
-  }
-
-  public boolean isEnabled() {
-    if (isDisabled) {
-      return false;
-    }
-    if (hasPasswordExpired()) {
-      return false;
-    }
-    return true;
-  }
-
-  public String getDisabledMessage() {
-    if (isEnabled()) {
-      return null;
-    }
-    if (disableReason != null) {
-      return disableReason;
-    }
-    if (hasPasswordExpired()) {
-      return "Password has expired";
-    }
-    return null;
-  }
-
-  public boolean isChanged() {
-    return isChanged;
-  }
-
-  public void notChanged() {
-    isChanged = false;
-  }
-
-  void setChanged(boolean changed) {
-    isChanged |= changed;
-  }
-
-  void checkLegalPassword(String newPwd, String hash, boolean isAdmin)
+  protected void checkLegalPassword(String newPwd, String hash, boolean isAdmin)
       throws IllegalPasswordChange {
     if (!isAdmin && lastUserPasswordChange > 0 &&
 	(TimeBase.msSince(lastUserPasswordChange)
 	 < getMinPasswordChangeInterval())) {
-      String msg = "May not change password more than once per "
-	+ StringUtil.timeIntervalToString(getMinPasswordChangeInterval());
+      String msg = "Cannot change password more than once every "
+	+ StringUtil.timeIntervalToLongString(getMinPasswordChangeInterval());
       throw new IllegalPasswordChange(msg);
     }
 
@@ -476,6 +309,206 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   boolean hasIllegalCharacter(String str) {
     Perl5Matcher matcher = RegexpUtil.getMatcher();
     return matcher.contains(str, passwdCharPat);
+  }
+
+  // Password rotation, expiration
+
+  public boolean isPasswordExpired() {
+    return isPasswordExpired(getMaxPasswordChangeInterval());
+  }
+
+  private long getPasswordExpiration() {
+    return lastPasswordChange + getMaxPasswordChangeInterval();
+  }
+
+  private boolean isPasswordExpired(long expireInterval) {
+    boolean res = lastPasswordChange > 0 && expireInterval > 0
+      && TimeBase.nowMs() >= getPasswordExpiration();
+    return res;
+  }
+
+  public long getLastPasswordReminderTime() {
+    return lastPasswordReminderTime;
+  }
+
+  public void setLastPasswordReminderTime(long val) {
+    lastPasswordReminderTime = val;
+  }
+
+  public void checkPasswordReminder() {
+    long expireInterval = getMaxPasswordChangeInterval();
+    // Do nothing if no password expiration
+    if (expireInterval < 0) return;
+    // If expired and haven't sent mail since it expired, send now
+    if (isPasswordExpired()) {
+      if (lastPasswordReminderTime < getPasswordExpiration()) {
+	// send now disabled
+	alertAndUpdate(Alert.cacheAlert(Alert.ACCOUNT_DISABLED),
+		       "User '" + getName()
+		       + "' disabled because password has expired.");
+      }
+    } else {
+      long reminderInterval = getPasswordChangeReminderInterval();
+      if (reminderInterval > 0) {
+	// If reminders are enabled ...
+	long reminderTime =
+	  lastPasswordChange + expireInterval - reminderInterval;
+	// If past reminder time and haven't sent mail since reminder time,
+	// send reminder now
+	if (TimeBase.nowMs() >= reminderTime
+	    && lastPasswordReminderTime < reminderTime) {
+	  alertAndUpdate(Alert.cacheAlert(Alert.PASSWORD_REMINDER),
+			 "The password for user '" + getName()
+			 + "' will expire at "
+			 + expireDf.format(lastPasswordChange
+					   + expireInterval)
+			 + ".  Please change it before then.");
+	}
+      }
+    }
+  }
+
+  // Credentials
+
+  /** Set the credential to a string of the form HASH-ALG:encrypted-passwd */
+  public void setCredential(String cred) throws NoSuchAlgorithmException {
+    if (credential != null) {
+      throw new UnsupportedOperationException("Can't reset credential");
+    }
+    credential = MDCredential.makeCredential(cred);
+    setChanged(true);
+  }
+
+  /** Return the credential string (ALG:encrypted_pwd) */
+  String getCredentialString() {
+    if (currentPassword == null) {
+      return null;
+    }
+    return hashAlg + ":" + currentPassword;
+  }
+
+  /** Return the credential string (ALG:encrypted_pwd */
+  public Credential getCredential() {
+    if (credential == null) {
+      String credString = getCredentialString();
+      if (credString == null) {
+	return null;
+      }
+      try {
+	credential = MDCredential.makeCredential(credString);
+	if (log.isDebug2()) log.debug2("Made credential for "
+				       + ": " + credential);
+      } catch (NoSuchAlgorithmException e) {
+	log.error("No credential; account disabled: " + getName(), e);
+	credential = new NullCredential();
+      } catch (RuntimeException e) {
+	log.error("No credential; account disabled: " + getName(), e);
+	credential = new NullCredential();
+      }
+    }
+    return credential;
+  }
+
+  /** Check the credentials against this account's password. */
+  public boolean check(Object credentials) {
+    if (!isEnabled()) {
+      return false;
+    }
+    Credential cred = getCredential();
+    if (cred == null) {
+      return false;
+    }
+    boolean res = cred.check(credentials);
+    if (res) {
+      setChanged(failedAttempts != 0);
+      failedAttempts = 0;
+    } else {
+      ++failedAttempts;
+      if (getMaxFailedAttempts() > 0
+	  && failedAttempts >= getMaxFailedAttempts()) {
+	String msg = (failedAttempts +
+		      " failed login attempts at "
+		      + expireDf.format(TimeBase.nowDate()));
+	disable("Disabled: " + msg);
+	storeUser();
+	if (acctMgr != null) {
+	  String emsg = "User '" + getName() + "' disabled because of " + msg;
+	  acctMgr.alertUser(this,
+			    Alert.cacheAlert(Alert.ACCOUNT_DISABLED),
+			    emsg);
+	}
+      }
+    }
+    return res;
+  }
+
+  private void clearCaches() {
+    credential = null;
+  }
+
+  public void enable() {
+    setChanged(isDisabled);
+    isDisabled = false;
+    disableReason = null;
+  }
+
+  public void disable(String reason) {
+    setChanged(!isDisabled || !StringUtil.equalStrings(disableReason, reason));
+    log.debug("Disabled account " + getName() + ": " + reason);
+    isDisabled = true;
+    disableReason = reason;
+  }
+
+  public boolean isEnabled() {
+    if (isDisabled) {
+      return false;
+    }
+    if (isPasswordExpired()) {
+      return false;
+    }
+    return true;
+  }
+
+  public String getDisabledMessage() {
+    if (isEnabled()) {
+      return null;
+    }
+    if (disableReason != null) {
+      return disableReason;
+    }
+    if (isPasswordExpired()) {
+      return "Password has expired";
+    }
+    return null;
+  }
+
+
+  void alertAndUpdate(Alert alert, String msg) {
+    acctMgr.alertUser(this, alert, msg);
+    lastPasswordReminderTime = TimeBase.nowMs();
+    storeUser();
+  }
+
+  /** Should be called whenever a change has been made to the account, in a
+   * context where AccountManager doesn't otherwise know to save it */
+  public void storeUser() {
+    try {
+      acctMgr.storeUser(this);
+    } catch (AccountManager.NotStoredException e) {
+      log.error("Failed to store account: " + getName(), e);
+    }
+  }
+
+  public boolean isChanged() {
+    return isChanged;
+  }
+
+  public void notChanged() {
+    isChanged = false;
+  }
+
+  void setChanged(boolean changed) {
+    isChanged |= changed;
   }
 
   public int compareTo(Object o) {
