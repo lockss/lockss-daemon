@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.5 2009-05-28 22:52:57 dshr Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.5.2.1 2009-06-09 14:39:06 dshr Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.util.*;
+import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -47,6 +48,8 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
    * is at a URL like http://apr.sagepub.com/cgi/reprint/34/2/135
    */
   protected String subTreeRoot = "cgi/reprint";
+  protected Pattern pat = Pattern.compile("journal/[0-9]*/[0-9]*/[0-9]*",
+				  Pattern.CASE_INSENSITIVE);
 
   public HighWireArticleIteratorFactory() {
   }
@@ -62,6 +65,6 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
       throws PluginException {
     log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
               ") " + subTreeRoot);
-    return new SubTreeArticleIterator(mimeType, au, subTreeRoot);
+    return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
   }
 }

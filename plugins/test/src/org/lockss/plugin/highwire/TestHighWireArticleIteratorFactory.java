@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.2 2009-05-23 18:06:26 dshr Exp $
+ * $Id: TestHighWireArticleIteratorFactory.java,v 1.2.2.1 2009-06-09 14:39:06 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.highwire;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -182,6 +183,7 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
     }
     public void setSubTreeRoot(String root) {
       subTreeRoot = root;
+      pat = Pattern.compile("branch[0-9]*/", Pattern.CASE_INSENSITIVE);
       log.debug("Set subTreeRoot: " + subTreeRoot);
     }
   }
