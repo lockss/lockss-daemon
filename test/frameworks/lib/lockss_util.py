@@ -83,7 +83,9 @@ def loadConfig(f):
             if key and val:
                 config[ key ] = val
             
-    logging.basicConfig( level = logging._levelNames.get( config.get( 'scriptLogLevel', '' ).upper(), logging.INFO ), format = '%(asctime)s.%(msecs)03d: %(levelname)s: %(message)s', datefmt = '%T' )
+    logging.basicConfig( format = '%(asctime)s.%(msecs)03d: %(levelname)s: %(message)s', datefmt = '%T' )
+    logging.getLogger().setLevel( logging._levelNames.get( config.get( 'scriptLogLevel', '' ).upper(), logging.INFO ) )
+
 
 
 config = Config() # Globally accessible Config instance.
