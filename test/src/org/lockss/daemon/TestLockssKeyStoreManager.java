@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStoreManager.java,v 1.1 2009-06-01 07:48:32 tlipkis Exp $
+ * $Id: TestLockssKeyStoreManager.java,v 1.2 2009-06-09 06:13:00 tlipkis Exp $
  */
 
 /*
@@ -46,10 +46,6 @@ public class TestLockssKeyStoreManager extends LockssTestCase {
   static final String PASSWD2 = "Vizzini";
   static final String KEY_PASSWD1 = "Vroomfondel";
   static final String KEY_PASSWD2 = "Slartibartfast";
-
-  public void setUp() throws Exception {
-    super.setUp();
-  }
 
   KeyStore createKeyStore(File file, String pass, String keyPass)
       throws Exception {

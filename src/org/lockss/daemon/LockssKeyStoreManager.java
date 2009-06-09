@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.1 2009-06-01 07:48:32 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.2 2009-06-09 06:13:00 tlipkis Exp $
  */
 
 /*
@@ -114,10 +114,7 @@ public class LockssKeyStoreManager
 
   public void startService() {
     super.startService();
-    initKeyStores();
-  }
-
-  public synchronized void stopService() {
+    loadKeyStores();
   }
 
   public synchronized void setConfig(Configuration config,
@@ -133,7 +130,7 @@ public class LockssKeyStoreManager
 	// defer initial set of keystore loading until startService
 	if (isInited()) {
 	  // load any newly added keystores
-	  initKeyStores();
+	  loadKeyStores();
 	}
       }
     }
@@ -178,10 +175,11 @@ public class LockssKeyStoreManager
 	  log.error("KeyStore definition missing name: " + oneKs);
 	  continue;
 	}
-	if (keystoreMap.containsKey(name)) {
+	LockssKeyStore old = keystoreMap.get(name);
+	if (old != null && !old.getFilename().equals(lk.getFilename())) {
 	  log.error("Duplicate keystore definition: " + oneKs);
 	  log.error("Using original definition: "
-		    + keystoreMap.containsKey(name));
+		    + keystoreMap.get(name));
 	  continue;
 	}
 
@@ -211,14 +209,14 @@ public class LockssKeyStoreManager
     return lk;
   }
 
-  void initKeyStores() {
+  void loadKeyStores() {
     List<LockssKeyStore> lst =
       new ArrayList<LockssKeyStore>(keystoreMap.values());
     for (LockssKeyStore lk : lst) {
       try {
-	lk.init();
+	lk.load();
       } catch (Exception e) {
-	log.error("Can't initialize keystore " + lk.getName(), e);
+	log.error("Can't load keystore " + lk.getName(), e);
 	keystoreMap.remove(lk.getName());
       }
     }
