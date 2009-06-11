@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.3 2009-06-02 21:46:17 greya Exp $ */
+ * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.4 2009-06-11 21:47:17 thib_gc Exp $ */
 
 /*
 
@@ -29,7 +29,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.nypl.plugin.wordswithoutborders;
+package org.nypl.plugin;
 
 import java.io.InputStream;
 
