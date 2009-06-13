@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.70 2009-06-09 06:13:59 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.71 2009-06-13 09:11:20 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,18 @@ public class TestStringUtil extends LockssTestCase {
 		 StringUtil.truncateAt("test|foo|bar", '|'));
     assertEquals("test|blah",
 		 StringUtil.truncateAt("test|blah", '0'));
+  }
+
+  public void testElideMiddleToMaxLen() {
+    assertNull(StringUtil.elideMiddleToMaxLen(null, 10));
+    assertEquals("test",
+		 StringUtil.elideMiddleToMaxLen("test", 10));
+    assertEquals("test123456",
+		 StringUtil.elideMiddleToMaxLen("test123456", 10));
+    assertEquals("test...3456",
+		 StringUtil.elideMiddleToMaxLen("test123456", 9));
+    assertEquals("foo...bar",
+		 StringUtil.elideMiddleToMaxLen("foonlyrebar", 6));
   }
 
   public void testIndexOfIgnoreCase() {
