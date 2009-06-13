@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigStatus.java,v 1.2 2008-10-24 07:08:38 tlipkis Exp $
+ * $Id: ConfigStatus.java,v 1.3 2009-06-13 09:10:38 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,12 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 
   final static String CONFIG_STATUS_TABLE = "ConfigStatus";
 
+  public static final String PREFIX = Configuration.PREFIX + ".configStatus";
+
+  /** Truncate displayed values to this length */
+  static final String PARAM_MAX_DISPLAY_VAL_LEN = PREFIX + "maxDisplayValLen";
+  static final int DEFAULT_MAX_DISPLAY_VAL_LEN = 1000;
+
   final static String PARAM_AU_TREE_DOT = PluginManager.PARAM_AU_TREE + ".";
 
   public ConfigStatus() {
@@ -87,18 +93,21 @@ public class ConfigStatus extends BaseLockssDaemonManager {
       List rows = new ArrayList();
 
       Configuration config = ConfigManager.getCurrentConfig();
+      int maxLen = config.getInt(PARAM_MAX_DISPLAY_VAL_LEN,
+				 DEFAULT_MAX_DISPLAY_VAL_LEN);
       for (Iterator iter = config.keySet().iterator(); iter.hasNext(); ) {
 	String key = (String)iter.next();
 	if (!excludeKey(key)) {
 	  Map row = new HashMap();
 	  row.put("name", key);
-	  row.put("value", config.get(key));
+	  row.put("value",
+		  StringUtil.elideMiddleToMaxLen(config.get(key), maxLen));
 	  rows.add(row);
 	}
       }
       return rows;
     }
-
+    
     boolean excludeKey(String key) {
       return key.startsWith(ConfigManager.PARAM_TITLE_DB)
 	|| key.startsWith(PARAM_AU_TREE_DOT)
