@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.82.2.1 2009-06-09 05:50:10 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.82.2.2 2009-06-13 08:53:13 tlipkis Exp $
  */
 
 /*
@@ -475,6 +475,14 @@ public class StringUtil {
       return str;
     }
     return str.substring(0, pos);
+  }
+
+  public static String elideMiddleToMaxLen(String s, int len) {
+    if (s == null || s.length() <= len) {
+      return s;
+    }
+    int split = len / 2;
+    return s.substring(0, split) + "..." + s.substring(s.length() - split);
   }
 
   /** Like indexOf except is case-independent */
