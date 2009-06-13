@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.2 2009-06-09 06:13:30 tlipkis Exp $
+ * $Id: LockssFormAuthenticator.java,v 1.3 2009-06-13 09:10:48 tlipkis Exp $
  */
 
 /*
@@ -212,8 +212,9 @@ public class LockssFormAuthenticator implements Authenticator {
 	if (form_cred._userPrincipal!=null)
 	  {
 	    // Authenticated OK
-	    if(log.isDebug())
-	      log.debug("Form authentication OK for "+form_cred._jUserName);
+	    log.info("User " + form_cred._jUserName
+		     + " authenticated from "
+		     + request.getRemoteAddr());
 	    session.removeAttribute(__J_URI); // Remove popped return URI.
 	    httpRequest.setAuthType(SecurityConstraint.__FORM_AUTH);
 	    httpRequest.setAuthUser(form_cred._jUserName);
@@ -239,7 +240,9 @@ public class LockssFormAuthenticator implements Authenticator {
 	else if (response!=null)
 	  {
 	    if(log.isDebug())
-	      log.debug("Form authentication FAILED for "+form_cred._jUserName);
+	      log.info("User " + form_cred._jUserName +
+		       " authentication FAILED from "
+		       + request.getRemoteAddr());
 	    if (_formErrorPage!=null)
 	      {
 		response.setContentLength(0);
@@ -286,9 +289,9 @@ public class LockssFormAuthenticator implements Authenticator {
 	// If this credential is still authenticated
 	if (form_cred._userPrincipal!=null)
 	  {
-	    if(log.isDebug())
-	      log.debug("FORM Authenticated for "
-			+form_cred._userPrincipal.getName());
+	    if(log.isDebug3())
+	      log.debug3("User " + form_cred._userPrincipal.getName()
+			 + " still authenticated");
 	    httpRequest.setAuthType(SecurityConstraint.__FORM_AUTH);
 	    httpRequest.setAuthUser(form_cred._userPrincipal.getName());
 	    httpRequest.setUserPrincipal(form_cred._userPrincipal);
@@ -349,10 +352,6 @@ public class LockssFormAuthenticator implements Authenticator {
     AccountManager acctMgr = _daemon.getAccountManager();
     if (acctMgr != null) {
       UserAccount acc = acctMgr.getUser(form_cred._userPrincipal.getName());
-      String msg = acc.getDisabledMessage();
-      if (msg != null) {
-	session.setAttribute(__J_LOCKSS_AUTH_ERROR_MSG, msg);
-      }	
       if (acc != null) {
 	session.setAttribute(__J_LOCKSS_USER, acc);
 	maxInact = acc.getInactivityLogout();
