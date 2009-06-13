@@ -1,5 +1,5 @@
 /*
- * $Id: TestSyslogTarget.java,v 1.7 2003-09-16 23:28:36 eaalto Exp $
+ * $Id: TestSyslogTarget.java,v 1.8 2009-06-13 09:11:42 tlipkis Exp $
  */
 
 /*
@@ -56,16 +56,20 @@ public class TestSyslogTarget extends LockssTestCase {
   }
 
   public void testSeverityToFacility(){
-    assertEquals(10,
+    assertEquals(8+0,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_CRITICAL));
-    assertEquals(11,
+    assertEquals(8+2,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR));
-    assertEquals(12,
+    assertEquals(8+4,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_WARNING));
-    assertEquals(14,
+    assertEquals(8+5,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_INFO));
-    assertEquals(15,
+    assertEquals(8+6,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG));
+    assertEquals(8+7,
+		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG2));
+    assertEquals(8+7,
+		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG3));
   }
 
   private void setConfig(String host, int port) throws Exception {
