@@ -43,6 +43,15 @@ public class SyslogTarget implements LogTarget{
 
   static final int FACILITY = 8; //user level facility
 
+  static final int SYSLOG_EMERG = 0;	// system is unusable
+  static final int SYSLOG_ALERT = 1;	// action must be taken immediately
+  static final int SYSLOG_CRIT = 2;	// critical conditions
+  static final int SYSLOG_ERR = 3;	// error conditions
+  static final int SYSLOG_WARNING = 4;	// warning conditions
+  static final int SYSLOG_NOTICE = 5;   // normal but signification condition
+  static final int SYSLOG_INFO = 6;	// informational
+  static final int SYSLOG_DEBUG = 7;	// debug-level messages
+
   private int port;
   private String hostname = null;
   private InetAddress host = null;
@@ -115,16 +124,19 @@ public class SyslogTarget implements LogTarget{
   protected static int loggerSeverityToSyslogSeverity(int severity){
     switch (severity){
     case Logger.LEVEL_CRITICAL:
-      return FACILITY + 2;
+      return FACILITY + SYSLOG_EMERG;
     default:
     case Logger.LEVEL_ERROR:
-      return FACILITY + 3;
+      return FACILITY + SYSLOG_CRIT;
     case Logger.LEVEL_WARNING:
-      return FACILITY + 4;
+      return FACILITY + SYSLOG_WARNING;
     case Logger.LEVEL_INFO:
-      return FACILITY + 6;
+      return FACILITY + SYSLOG_NOTICE;
     case Logger.LEVEL_DEBUG:
-      return FACILITY + 7;
+      return FACILITY + SYSLOG_INFO;
+    case Logger.LEVEL_DEBUG2:
+    case Logger.LEVEL_DEBUG3:
+      return FACILITY + SYSLOG_DEBUG;
     }
   }
 }
