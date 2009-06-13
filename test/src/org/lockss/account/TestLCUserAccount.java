@@ -1,5 +1,5 @@
 /*
- * $Id: TestLCUserAccount.java,v 1.1.2.1 2009-06-09 05:51:56 tlipkis Exp $
+ * $Id: TestLCUserAccount.java,v 1.1.2.2 2009-06-13 08:51:55 tlipkis Exp $
  */
 
 /*
@@ -330,35 +330,58 @@ public class TestLCUserAccount extends LockssTestCase {
     assertTrue(acct1.check(PWD1));
     assertFalse(acct1.check(PWD2));
     assertTrue(acct1.check(PWD1));
+  }
+
+  public void testExpire() throws Exception {
+    TimeBase.setSimulated(Constants.DAY);
+    acct1.setPassword(PWD1);
+    assertTrue(acct1.check(PWD1));
     // expire password
     TimeBase.step(100 * Constants.DAY);
-    assertFalse(acct1.check(PWD1));
-    assertFalse(acct1.check(PWD2));
     assertFalse(acct1.isEnabled());
+    assertFalse(acct1.check(PWD1));
     assertMatchesRE("Password has expired", acct1.getDisabledMessage());
     // reset
     acct1.setPassword(PWD2);
+    assertTrue(acct1.isEnabled());
     assertTrue(acct1.check(PWD2));
-    // should be disabled after 3 failed attempts
-    assertEquals(0, acctMgr.alerts.size());
     assertFalse(acct1.check(PWD1));
-    assertFalse(acct1.check(PWD1));
-    assertEquals(0, acctMgr.alerts.size());
-    assertFalse(acct1.check(PWD1));
-    assertEquals(1, acctMgr.alerts.size());
-    AlertEvent ev = acctMgr.alerts.get(0);
-    assertMatchesRE("User 'User1' disabled because of 3 failed login attempts",
-		    ev.text);
-    assertFalse(acct1.check(PWD2));
-    assertFalse(acct1.isEnabled());
-    assertMatchesRE("Disabled: 3 failed login attempts at ",
-		    acct1.getDisabledMessage());
+  }
 
-    TimeBase.step(2 * Constants.DAY);
-    acct1.setPassword(PWD3);
-    assertTrue(acct1.check(PWD3));
+  public void testRepeatedFail() throws Exception {
+    TimeBase.setSimulated(Constants.DAY);
+    acct1.setPassword(PWD1);
+    assertTrue(acct1.check(PWD1));
+    assertFalse(acct1.check(PWD2));
+    assertTrue(acct1.isEnabled());
+    assertTrue(acct1.check(PWD1));
+    TimeBase.step(8 * Constants.MINUTE);
+    assertFalse(acct1.check(PWD2));
+    assertTrue(acct1.isEnabled());
+    assertTrue(acct1.check(PWD1));
+    TimeBase.step(8 * Constants.MINUTE);
+    assertFalse(acct1.check(PWD2));
+    // 3 failures within 16 minutes, shouldn't be disabled
+    assertTrue(acct1.check(PWD1));
     assertTrue(acct1.isEnabled());
     assertNull(acct1.getDisabledMessage());
+
+    // 3rd failure within 15 minutes, should be disabled
+    TimeBase.step(7 * Constants.MINUTE);
+    assertFalse(acct1.check(PWD2));
+    assertFalse(acct1.isEnabled());
+    assertFalse(acct1.check(PWD1));
+    assertMatchesRE("3 failed login attempts at", acct1.getDisabledMessage());
+
+    // still disabled 7 minutes later, attempt fails but doesn't reset timer
+    TimeBase.step(7 * Constants.MINUTE);
+    assertFalse(acct1.isEnabled());
+    assertFalse(acct1.check(PWD1));
+    // now 16 minutes since last password failure, re-enabled
+    TimeBase.step(9 * Constants.MINUTE);
+    assertTrue(acct1.isEnabled());
+    assertNull(acct1.getDisabledMessage());
+    assertTrue(acct1.check(PWD1));
   }
 
   static class AlertEvent {

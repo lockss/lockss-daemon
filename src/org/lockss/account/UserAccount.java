@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.2.2.1 2009-06-09 05:53:00 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.2.2.2 2009-06-13 08:51:56 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected String email;
   protected String currentPassword;
   protected String[] passwordHistory;
+  protected long[] failedAttemptHistory;
   protected String hashAlg;
   protected String roles;
   // most recent password change
@@ -73,7 +74,6 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   protected transient Set roleSet = null;
   protected transient Credential credential = null;
-  protected transient int failedAttempts = 0;
   protected transient boolean isChanged = false;
 
   public UserAccount(String name) {
@@ -90,6 +90,9 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected void init(AccountManager acctMgr) {
     if (getHistorySize() > 0) {
       this.passwordHistory = new String[getHistorySize()];
+    }
+    if (getMaxFailedAttempts() > 0) {
+      this.failedAttemptHistory = new long[getMaxFailedAttempts()];
     }
     hashAlg = getDefaultHashAlgorithm();
     lastPasswordChange = -1;
@@ -162,6 +165,10 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   /** Number of consecutive failed password attempts after which the
    * account is disabled */
   abstract protected int getMaxFailedAttempts();
+  /** Interval within which consecutive failed attempts are counted. */
+  abstract protected long getFailedAttemptWindow();
+  /** Time after last failed attempt that disabled account is reenabled */
+  abstract protected long getFailedAttemptResetInterval();
   /** Return the hash algorithm to be used for new accounts */
   abstract protected String getDefaultHashAlgorithm();
 
@@ -253,6 +260,10 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   }
 
   void shiftArrayUp(String[] array) {
+    System.arraycopy(array, 0, array, 1, array.length-1);
+  }
+
+  void shiftArrayUp(long[] array) {
     System.arraycopy(array, 0, array, 1, array.length-1);
   }
 
@@ -419,27 +430,21 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       return false;
     }
     boolean res = cred.check(credentials);
-    if (res) {
-      setChanged(failedAttempts != 0);
-      failedAttempts = 0;
-    } else {
-      ++failedAttempts;
-      if (getMaxFailedAttempts() > 0
-	  && failedAttempts >= getMaxFailedAttempts()) {
-	String msg = (failedAttempts +
-		      " failed login attempts at "
-		      + expireDf.format(TimeBase.nowDate()));
-	disable("Disabled: " + msg);
-	storeUser();
-	if (acctMgr != null) {
-	  String emsg = "User '" + getName() + "' disabled because of " + msg;
-	  acctMgr.alertUser(this,
-			    Alert.cacheAlert(Alert.ACCOUNT_DISABLED),
-			    emsg);
-	}
-      }
+    if (!res) {
+      handleFailedLoginAttempt();
     }
     return res;
+  }
+
+  /** Respond appropriately to failed login attempt.  Default action is to
+   * possibly disable if too many repeated failures within specified time
+   * window */
+  protected void handleFailedLoginAttempt() {
+    if (failedAttemptHistory != null) {
+      shiftArrayUp(failedAttemptHistory);
+      failedAttemptHistory[0] = TimeBase.nowMs();
+      storeUser();
+    }
   }
 
   private void clearCaches() {
@@ -466,6 +471,9 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     if (isPasswordExpired()) {
       return false;
     }
+    if (isExcessiveFailedAttempts()) {
+      return false;
+    }
     return true;
   }
 
@@ -477,11 +485,31 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       return disableReason;
     }
     if (isPasswordExpired()) {
-      return "Password has expired";
+      return "Disabled: Password has expired";
     }
-    return null;
+    if (isExcessiveFailedAttempts()) {
+      return ("Disabled: "
+	      + failedAttemptHistory.length
+	      + " failed login attempts at "
+	      + expireDf.format(failedAttemptHistory[0]));
+    }
+    return "Disabled";
   }
 
+  /** true iff a max repeated login failure has been set, the time between
+   * the nth previous and most recent failure is less than the failed
+   * attempt window, and the time since the most recent failed is less than
+   * the failed attempt reset time */
+  protected boolean isExcessiveFailedAttempts() {
+    long window = getFailedAttemptWindow();
+    return
+      (window > 0
+       && ( ( failedAttemptHistory[0]
+	      - failedAttemptHistory[failedAttemptHistory.length - 1])
+	    <= window)
+       && ( TimeBase.msSince(failedAttemptHistory[0])
+	    < getFailedAttemptResetInterval()));
+  }
 
   void alertAndUpdate(Alert alert, String msg) {
     acctMgr.alertUser(this, alert, msg);
@@ -492,6 +520,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   /** Should be called whenever a change has been made to the account, in a
    * context where AccountManager doesn't otherwise know to save it */
   public void storeUser() {
+    setChanged(true);
     try {
       acctMgr.storeUser(this);
     } catch (AccountManager.NotStoredException e) {

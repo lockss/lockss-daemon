@@ -1,5 +1,5 @@
 /*
- * $Id: LCUserAccount.java,v 1.2.2.1 2009-06-09 05:53:00 tlipkis Exp $
+ * $Id: LCUserAccount.java,v 1.2.2.2 2009-06-13 08:51:56 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,9 @@ public class LCUserAccount extends UserAccount {
   static final long INACTIVITY_LOGOUT = 15 * Constants.MINUTE;
   static final int HISTORY_SIZE = 11;
   static final int MAX_FAILED_ATTEMPTS = 3;
+  static final long MAX_FAILED_ATTEMPT_WINDOW = 15 * Constants.MINUTE;
+  static final long MAX_FAILED_ATTEMPT_RESET_INTERVAL = 15 * Constants.MINUTE;
+
   static final String HASH_ALGORITHM = "SHA-256";
 
   public LCUserAccount(String name) {
@@ -115,6 +118,16 @@ public class LCUserAccount extends UserAccount {
   protected int getMaxFailedAttempts() {
     return MAX_FAILED_ATTEMPTS;
   }
+
+  protected long getFailedAttemptWindow() {
+    return MAX_FAILED_ATTEMPT_WINDOW;
+  }
+
+  protected long getFailedAttemptResetInterval() {
+    return MAX_FAILED_ATTEMPT_RESET_INTERVAL;
+  }
+
+  /** Return the hash algorithm to be used for new accounts */
 
   @Override
   protected void checkLegalPassword(String newPwd, String hash, boolean isAdmin)
