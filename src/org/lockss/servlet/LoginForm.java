@@ -1,5 +1,5 @@
 /*
- * $Id: LoginForm.java,v 1.1 2009-06-01 07:53:51 tlipkis Exp $
+ * $Id: LoginForm.java,v 1.1.2.1 2009-06-13 08:52:42 tlipkis Exp $
  */
 
 /*
@@ -102,15 +102,21 @@ public class LoginForm extends LockssServlet {
       comp.add("</center><br>");
       page.add(comp);
     }
-    String error = getParameter("error");
-    if (!StringUtil.isNullString(error)) {
-      Object msg = getSession().getAttribute(LockssFormAuthenticator.__J_LOCKSS_AUTH_ERROR_MSG);
-      if (msg instanceof String) {
-	errMsg = (String)msg;
-      }
+    Object msg =
+      getSession().getAttribute(LockssFormAuthenticator.__J_LOCKSS_AUTH_ERROR_MSG);
+    if (msg != null) {
+      errMsg = msg.toString();
+      // Display the message only once
+      getSession().setAttribute(LockssFormAuthenticator.__J_LOCKSS_AUTH_ERROR_MSG,
+				null);
+
+    }
+    if (!StringUtil.isNullString(getParameter("error"))) {
       if (StringUtil.isNullString(errMsg)) {
 	errMsg = "Invalid username or password";
       }
+    }
+    if (!StringUtil.isNullString(errMsg)) {
       layoutErrorBlock(page);
     }
     page.add(makeForm());
@@ -118,7 +124,6 @@ public class LoginForm extends LockssServlet {
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
   }
-
 
   private Element makeForm() {
     Form frm = new Form(srvURL(myServletDescr()));
