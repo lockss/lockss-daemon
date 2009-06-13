@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.54 2009-06-01 07:27:06 tlipkis Exp $
+ * $Id: Logger.java,v 1.54.2.1 2009-06-13 08:53:00 tlipkis Exp $
  */
 
 /*
@@ -650,7 +650,7 @@ public class Logger {
     if (unannouncedName != null) {
       String name = unannouncedName;
       unannouncedName = null;
-      info("ThreadId " + id + " is " + name);
+      debug("ThreadId " + id + " is " + name);
       announcedName = name;
     }
     return id;
