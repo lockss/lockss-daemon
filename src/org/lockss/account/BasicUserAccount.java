@@ -1,5 +1,5 @@
 /*
- * $Id: BasicUserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
+ * $Id: BasicUserAccount.java,v 1.3 2009-06-13 09:10:26 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,16 @@ public class BasicUserAccount extends UserAccount {
   static final String PARAM_MAX_FAILED_ATTEMPTS = PREFIX + "maxFailedAttempts";
   static final int DEFAULT_MAX_FAILED_ATTEMPTS = -1;
 
+  /** Interval within which consecutive failed attempts are counted. */
+  static final String PARAM_FAILED_ATTEMPT_WINDOW =
+    PREFIX + "failedAttemptWindow";
+  static final long DEFAULT_FAILED_ATTEMPT_WINDOW = -1;
+
+  /** Time after last failed attempt that disabled account is reenabled */
+  static final String PARAM_FAILED_ATTEMPT_RESET_INTERVAL =
+    PREFIX + "failedAttemptResetInterval";
+  static final long DEFAULT_FAILED_ATTEMPT_RESET_INTERVAL = -1;
+
   private transient Configuration config;
 
   public BasicUserAccount(String name) {
@@ -126,6 +136,16 @@ public class BasicUserAccount extends UserAccount {
   protected int getMaxFailedAttempts() {
     return config.getInt(PARAM_MAX_FAILED_ATTEMPTS,
 			 DEFAULT_MAX_FAILED_ATTEMPTS);
+  }
+
+  protected long getFailedAttemptWindow() {
+    return config.getTimeInterval(PARAM_FAILED_ATTEMPT_WINDOW,
+				  DEFAULT_FAILED_ATTEMPT_WINDOW);
+  }
+
+  protected long getFailedAttemptResetInterval() {
+    return config.getTimeInterval(PARAM_FAILED_ATTEMPT_RESET_INTERVAL,
+				  DEFAULT_FAILED_ATTEMPT_RESET_INTERVAL);
   }
 
   protected String getDefaultHashAlgorithm() {

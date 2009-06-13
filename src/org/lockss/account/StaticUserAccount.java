@@ -1,5 +1,5 @@
 /*
- * $Id: StaticUserAccount.java,v 1.2 2009-06-02 07:10:22 tlipkis Exp $
+ * $Id: StaticUserAccount.java,v 1.3 2009-06-13 09:10:26 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,13 @@ public class StaticUserAccount extends BasicUserAccount {
 
   public boolean hasPasswordExpired() {
     return false;
+  }
+
+  public void checkPasswordReminder() {
+  }
+
+  protected void handleFailedLoginAttempt() {
+    // Login failures don't affect static accounts
   }
 
   public static class Factory extends UserAccount.Factory {

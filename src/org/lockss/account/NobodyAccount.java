@@ -1,5 +1,5 @@
 /*
- * $Id: NobodyAccount.java,v 1.2 2009-06-09 06:11:23 tlipkis Exp $
+ * $Id: NobodyAccount.java,v 1.3 2009-06-13 09:10:26 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,14 @@ public class NobodyAccount extends UserAccount {
   }
 
   protected int getMaxFailedAttempts() {
+    return -1;
+  }
+
+  protected long getFailedAttemptWindow() {
+    return -1;
+  }
+
+  protected long getFailedAttemptResetInterval() {
     return -1;
   }
 
