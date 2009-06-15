@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUserRealm.java,v 1.3 2009-06-09 06:13:00 tlipkis Exp $
+ * $Id: LockssUserRealm.java,v 1.4 2009-06-15 07:51:50 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ in this Software without prior written authorization from Stanford University.
 // sure how thay might interact with Jetty
 
 // ========================================================================
-// $Id: LockssUserRealm.java,v 1.3 2009-06-09 06:13:00 tlipkis Exp $
+// $Id: LockssUserRealm.java,v 1.4 2009-06-15 07:51:50 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -221,36 +221,47 @@ public class LockssUserRealm implements UserRealm {
 
   private class KnownUser extends User {
     private final String _userName;
-    private final UserAccount _acct;
 
     KnownUser(String name) {
       _userName=name;
-      _acct = _acctMgr.getUser(name);
+    }
+
+    UserAccount getUserAcct() {
+      return _acctMgr.getUserOrNull(_userName);
     }
 
     boolean authenticate(Object credentials, HttpRequest request) {
       boolean res;
       String msg = null;
-      if (_acct == null) {
+      UserAccount acct = getUserAcct();
+      if (acct == null) {
 	res = false;
       } else {
-	res = _acct.check(credentials);
+	res = acct.check(credentials);
       }
       if (res) {
-	if (_acct.isPasswordExpired()) {
+	if (acct.isPasswordExpired()) {
 	  msg = "Password expired";
 	  res = false;
 	}
       }
+      // If a message has bee set, and a session exists, store the message
+      // in the session for the login page handler to display.
+
+      // *** Must avoid creating a session here. ***
+      // When using basic auth, this runs in the security handler before
+      // the servlet handler is invoked, when session/cookie processing
+      // hasn't yet happened.  The message isn't useful in that case anyway
+
       HttpServletRequest servletRequest =
 	(ServletHttpRequest)request.getWrapper();
       if (servletRequest != null) {
-	HttpSession session = servletRequest.getSession();
+	HttpSession session = servletRequest.getSession(false);
 	if (log.isDebug2()) {
 	  log.debug2("authenticate("+credentials+"): " + res
 		     + ", session: " + session);
 	}
-	if (msg != null) {
+	if (msg != null && session != null) {
 	  session.setAttribute(LockssFormAuthenticator.__J_LOCKSS_AUTH_ERROR_MSG,
 			       msg);
 	}
@@ -263,11 +274,13 @@ public class LockssUserRealm implements UserRealm {
     }
 
     public boolean isAuthenticated() {
-      return _acct != null && _acct.isEnabled();
+      UserAccount acct = getUserAcct();
+      return acct != null && acct.isEnabled();
     }
 
     public boolean isUserInRole(String role) {
-      return _acct != null && _acct.isUserInRole(role);
+      UserAccount acct = getUserAcct();
+      return acct != null && acct.isUserInRole(role);
     }
   }
 
