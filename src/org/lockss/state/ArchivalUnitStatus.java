@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.80.2.1 2009-06-09 14:39:06 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.80.2.2 2009-06-15 13:35:28 dshr Exp $
  */
 
 /*
@@ -886,12 +886,14 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  urlListLink));
-      res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  doiListLink));
-      res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  articleListLink));
+      if (!(au.getArticleIterator() == CollectionUtil.EMPTY_ITERATOR)) {
+        res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    doiListLink));
+        res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    articleListLink));
+      }
       return res;
     }
 
