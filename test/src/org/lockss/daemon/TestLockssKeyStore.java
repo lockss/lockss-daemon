@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.1.2.1 2009-06-09 05:49:03 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.1.2.2 2009-06-15 07:49:03 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import java.security.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -76,6 +77,19 @@ public class TestLockssKeyStore extends LockssTestCase {
     lk.setKeyPasswordFile(keyPassFile);
     lk.setType(LockssKeyStoreManager.DEFAULT_DEFAULT_KEYSTORE_TYPE);
     return lk;
+  }
+
+  public void testNoFile() throws Exception {
+    File tmpDir = getTempDir("kstmp");
+    File file = new File(tmpDir, "ks1");
+    assertFalse(file.exists());
+    try {
+      LockssKeyStore lk = createFromProp("lkone", file.toString(),
+					 PASSWD, "pass42");
+      lk.load();
+      fail("Missing keystore file should fail");
+    } catch (LockssKeyStore.UnavailableKeyStoreException e) {
+    }
   }
 
   public void testLoad(String filename, String passwd, String keyPasswd)
@@ -163,6 +177,29 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertFalse(passfile.exists());
     assertNotNull(lk.getKeyManagerFactory());
     assertNotNull(lk.getTrustManagerFactory());
+  }
+
+  public void testCreate() throws Exception {
+    File tmpDir = getTempDir("kstmp");
+    File file = new File(tmpDir, "ks1");
+    assertFalse(file.exists());
+    LockssKeyStore lk = createFromProp("lkone", file.toString(),
+				       PASSWD, "pass42");
+    lk.setMayCreate(true);
+    assertFalse(file.exists());
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_FQDN, "fq.dn");
+    lk.load();
+    assertTrue(file.exists());
+    assertNotNull(lk.getKeyManagerFactory());
+    assertNotNull(lk.getTrustManagerFactory());
+
+    LockssKeyStore lk2 = createFromProp("lktwo", file.toString(),
+					PASSWD, "pass42");
+    lk2.load();
+    Collection aliases =
+      ListUtil.fromIterator(new EnumerationIterator(lk2.getKeyStore().aliases()));
+    assertEquals(SetUtil.set("fq.dn.key", "fq.dn.cert"),
+		 SetUtil.theSet(aliases));
   }
 
 }

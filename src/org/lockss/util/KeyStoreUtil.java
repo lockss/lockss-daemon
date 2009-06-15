@@ -1,5 +1,5 @@
 /*
- * $Id: KeyStoreUtil.java,v 1.1 2009-06-01 07:36:28 tlipkis Exp $
+ * $Id: KeyStoreUtil.java,v 1.1.2.1 2009-06-15 07:49:03 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,8 @@ public class KeyStoreUtil {
   public static final String PROP_KEY_ALGORITHM = "KeyAlgorithm";
   /** Default MD5WithRSA */
   public static final String PROP_SIG_ALGORITHM = "SigAlgorithm";
+  /** X500Name.  Default 5 years */
+  public static final String PROP_X500_NAME = "X500Name";
   /** Default 1024 */
   public static final String PROP_KEY_BITS = "KeyBits";
   /** Seconds.  Default 5 years */
@@ -86,6 +88,7 @@ public class KeyStoreUtil {
   public static final String DEFAULT_CERT_ALIAS = "MyCert";
   public static final String DEFAULT_KEY_ALGORITHM = "RSA";
   public static final String DEFAULT_SIG_ALGORITHM = "MD5WithRSA";
+  public static final String DEFAULT_X500_NAME = "CN=LOCKSS box";
   public static final int DEFAULT_KEY_BITS = 1024;
   public static final long DEFAULT_EXPIRE_IN = 5 * Constants.YEAR / 1000;
 
@@ -196,6 +199,7 @@ public class KeyStoreUtil {
     String keyPassword = config.get(PROP_KEY_PASSWORD);
     int keyBits = config.getInt(PROP_KEY_BITS, DEFAULT_KEY_BITS);
     long expireIn = config.getTimeInterval(PROP_EXPIRE_IN, DEFAULT_EXPIRE_IN);
+    String x500String = config.get(PROP_X500_NAME, DEFAULT_X500_NAME);
 
     CertAndKeyGen keypair = new CertAndKeyGen(keyAlgName, sigAlgName);
     keypair.generate(keyBits);
@@ -206,7 +210,7 @@ public class KeyStoreUtil {
 
     X509Certificate[] chain = new X509Certificate[1];
 
-    X500Name x500Name = new X500Name("CN=TestKey, OU=LOCKSS, O=Stanford, L=Stanford, S=California, C=US");
+    X500Name x500Name = new X500Name(x500String);
     chain[0] = keypair.getSelfCertificate(x500Name, expireIn);
     log.debug3("Certificate: " + chain[0].toString());
 

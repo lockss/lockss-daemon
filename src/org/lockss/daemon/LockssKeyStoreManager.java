@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.1.2.1 2009-06-09 05:49:03 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.1.2.2 2009-06-15 07:49:03 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,9 @@ public class LockssKeyStoreManager
   /** private key password file */
   public static final String KEYSTORE_PARAM_KEY_PASSWORD_FILE =
     "keyPasswordFile";
+  /** If true, and the keystore doesn't exist, a keystore with a
+   * self-signed certificate will be be created. */
+  public static final String KEYSTORE_PARAM_CREATE = "create";
 
   protected String defaultKeyStoreType = DEFAULT_DEFAULT_KEYSTORE_TYPE;
   protected String defaultKeyStoreProvider = DEFAULT_DEFAULT_KEYSTORE_PROVIDER;
@@ -106,6 +109,11 @@ public class LockssKeyStoreManager
   /** private key password file */
   public static final String PARAM_KEYSTORE_KEY_PASSWORD_FILE =
     DOC_PREFIX + KEYSTORE_PARAM_KEY_PASSWORD_FILE;
+  /** If true, and the keystore doesn't exist, a keystore with a
+   * self-signed certificate will be be created. */
+  public static final String PARAM_KEYSTORE_CREATE =
+    DOC_PREFIX + KEYSTORE_PARAM_CREATE;
+  public static boolean DEFAULT_CREATE = false;
 
 
   protected Map<String,LockssKeyStore> keystoreMap =
@@ -202,10 +210,10 @@ public class LockssKeyStoreManager
     lk.setProvider(config.get(KEYSTORE_PARAM_PROVIDER,
 			      defaultKeyStoreProvider));
     lk.setPassword(config.get(KEYSTORE_PARAM_PASSWORD,
-			      config.get(ConfigManager.PARAM_PLATFORM_FQDN,
-					 "")));
+			      ConfigManager.getPlatformHostname()));
     lk.setKeyPassword(config.get(KEYSTORE_PARAM_KEY_PASSWORD));
     lk.setKeyPasswordFile(config.get(KEYSTORE_PARAM_KEY_PASSWORD_FILE));
+    lk.setMayCreate(config.getBoolean(KEYSTORE_PARAM_CREATE, DEFAULT_CREATE));
     return lk;
   }
 
@@ -221,5 +229,4 @@ public class LockssKeyStoreManager
       }
     }
   }
-
 }
