@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.4 2009-06-13 09:10:26 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.5 2009-06-15 07:51:09 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected long[] failedAttemptHistory;
   protected String hashAlg;
   protected String roles;
+  protected long lastLogin;
   // most recent password change
   protected long lastPasswordChange;
   // most recent password change by the user (used only for too-frequent
@@ -133,6 +134,11 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   /** Return the hash algorithm name */
   public String getHashAlgorithm() {
     return hashAlg;
+  }
+
+  /** Get the time the user last logged in */
+  public long getLastLogin() {
+    return lastLogin;
   }
 
   public boolean isEditable() {
@@ -430,7 +436,9 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       return false;
     }
     boolean res = cred.check(credentials);
-    if (!res) {
+    if (res) {
+      handleSuccessfulLoginAttempt();
+    } else {
       handleFailedLoginAttempt();
     }
     return res;
@@ -445,6 +453,13 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       failedAttemptHistory[0] = TimeBase.nowMs();
       storeUser();
     }
+  }
+
+  /** Respond appropriately to successful login attempt.  Default action is
+   * to record the last login time */
+  protected void handleSuccessfulLoginAttempt() {
+    lastLogin = TimeBase.nowMs();
+    storeUser();
   }
 
   private void clearCaches() {

@@ -1,5 +1,5 @@
 /*
- * $Id: StaticUserAccount.java,v 1.3 2009-06-13 09:10:26 tlipkis Exp $
+ * $Id: StaticUserAccount.java,v 1.4 2009-06-15 07:51:09 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.account;
 
 import org.lockss.config.*;
+import org.lockss.util.*;
 
 /** Static user account for non-editable accounts
  */
@@ -80,6 +81,11 @@ public class StaticUserAccount extends BasicUserAccount {
 
   protected void handleFailedLoginAttempt() {
     // Login failures don't affect static accounts
+  }
+
+  protected void handleSuccessfulLoginAttempt() {
+    // Record last login time in memory, but can't write
+    lastLogin = TimeBase.nowMs();
   }
 
   public static class Factory extends UserAccount.Factory {
