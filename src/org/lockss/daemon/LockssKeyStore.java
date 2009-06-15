@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.2 2009-06-09 06:13:00 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.3 2009-06-15 07:52:08 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.security.cert.*;
 import javax.net.ssl.*;
 
 import org.lockss.util.*;
+import org.lockss.config.*;
 
 /** Wrapper around a keystore to manager passwords and loading and manager
  * KeyManagerFactory */
@@ -55,6 +56,7 @@ public class LockssKeyStore {
   KeyStore keystore;
   KeyManagerFactory kmf;
   TrustManagerFactory tmf;
+  boolean mayCreate = false;
   boolean loaded = false;
 
   LockssKeyStore(String name) {
@@ -105,6 +107,10 @@ public class LockssKeyStore {
     filename = val;
   }
 
+  void setMayCreate(boolean val) {
+    mayCreate = val;
+  }
+
   void setPassword(String val) {
     password = val;
   }
@@ -125,6 +131,10 @@ public class LockssKeyStore {
     return tmf;
   }
 
+  KeyStore getKeyStore() {
+    return keystore;
+  }
+
   /** Load the keystore from a file */
   synchronized void load() throws UnavailableKeyStoreException {
     if (loaded) {
@@ -135,7 +145,11 @@ public class LockssKeyStore {
       if (keyPassword == null) {
 	keyPassword = readPasswdFile();
       }
-      createKeyStore();
+      File file = new File(filename);
+      if (mayCreate && !file.exists()) {
+	createKeyStore();
+      }
+      loadKeyStore();
       createKeyManagerFactory();
       createTrustManagerFactory();
       loaded = true;
@@ -195,8 +209,41 @@ public class LockssKeyStore {
     file.delete();
   }
 
-  /** Load the keystore from the file */
+  /** Create a keystore with a self-signed certificate */
   void createKeyStore()
+      throws CertificateException,
+	     IOException,
+	     InvalidKeyException,
+	     KeyStoreException,
+	     NoSuchAlgorithmException,
+	     NoSuchProviderException,
+	     SignatureException,
+	     UnrecoverableKeyException {
+    log.info("Creating keystore: " + filename);
+    String fqdn = ConfigManager.getPlatformHostname();
+    if (StringUtil.isNullString(fqdn)) {
+      fqdn = "unknown";
+    }
+    Properties p = new Properties();
+    p.put(KeyStoreUtil.PROP_KEYSTORE_FILE, getFilename());
+    p.put(KeyStoreUtil.PROP_KEYSTORE_TYPE, getType());
+    p.put(KeyStoreUtil.PROP_KEYSTORE_PROVIDER, getProvider());
+    p.put(KeyStoreUtil.PROP_KEY_ALIAS, fqdn + ".key");
+    p.put(KeyStoreUtil.PROP_CERT_ALIAS, fqdn + ".cert");
+    p.put(KeyStoreUtil.PROP_X500_NAME, makeX500Name(fqdn));
+
+    p.put(KeyStoreUtil.PROP_KEYSTORE_PASSWORD, password);
+    p.put(KeyStoreUtil.PROP_KEY_PASSWORD, keyPassword);
+    if (log.isDebug2()) log.debug2("Creating keystore from props: " + p);
+    KeyStore ks = KeyStoreUtil.createKeyStore(p);
+  }
+
+  String makeX500Name(String fqdn) {
+    return "CN=" + fqdn + ", O=LOCKSS box";
+  }
+
+  /** Load the keystore from the file */
+  void loadKeyStore()
       throws KeyStoreException,
 	     IOException,
 	     NoSuchAlgorithmException,
@@ -228,7 +275,7 @@ public class LockssKeyStore {
     kmf.init(keystore, keyPassword.toCharArray());
   }
 
-  /** Create a TrustManagerFactory from the keystore and key password */
+  /** Create a TrustManagerFactory from the keystore */
   void createTrustManagerFactory()
       throws KeyStoreException,
 	     NoSuchAlgorithmException,
