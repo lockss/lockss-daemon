@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.76 2009-03-05 05:40:46 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.77 2009-06-15 07:52:44 tlipkis Exp $
  */
 
 /*
@@ -875,7 +875,7 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  static String dateString(Date d) {
+  public static String dateString(Date d) {
     long val = d.getTime();
     if (val == 0 || val == -1) {
       return "never";

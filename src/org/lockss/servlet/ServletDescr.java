@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.14 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.15 2009-06-15 07:52:44 tlipkis Exp $
  */
 
 /*
@@ -200,6 +200,10 @@ public class ServletDescr {
 
   void setExplanation(String s) {
     expl = s;
+  }
+
+  public String getNavHeading(LockssServlet servlet) {
+    return heading;
   }
 
   boolean needsUserAdminRole() {

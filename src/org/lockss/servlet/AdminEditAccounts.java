@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.3 2009-06-02 07:10:21 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.4 2009-06-15 07:52:44 tlipkis Exp $
  */
 
 /*
@@ -241,14 +241,18 @@ public class AdminEditAccounts extends EditAccountBase {
     }
     addHeading(tbl, "Type");
     addHeading(tbl, "Email address");
+    addHeading(tbl, "Last Login");
     List<UserAccount> users = new ArrayList(acctMgr.getAccounts());
     Collections.sort(users, USER_COMPARATOR);
     for (UserAccount acct : users) {
       tbl.newRow();
       tbl.newCell();
-      Object label;
       String name = acct.getName();
-      tbl.add(linkIfEditable(acct, encodeText(name)));
+      String label = encodeText(name);
+      if (name.equals(req.getUserPrincipal().toString())) {
+	label = "<b>" + label + "<b>";
+      }
+      tbl.add(linkIfEditable(acct, label));
       for (RoleDesc rd : roleDescs) {
 	String role = rd.name;
 	addRole(acct, tbl, rd.name);
@@ -259,6 +263,10 @@ public class AdminEditAccounts extends EditAccountBase {
 
       tbl.newCell();
       tbl.add(acct.getEmail());
+
+      tbl.newCell();
+      tbl.add(DaemonStatus.dateString(new Date(acct.getLastLogin())));
+
       if (!acct.isEnabled()) {
 	tbl.newCell();
 	tbl.add(linkIfEditable(acct, "Disabled"));
