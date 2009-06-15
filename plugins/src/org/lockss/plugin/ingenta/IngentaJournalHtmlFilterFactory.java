@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.3 2009-06-05 21:03:41 greya Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.4 2009-06-15 02:00:37 greya Exp $
  */ 
 
 /*
@@ -66,6 +66,10 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "cart-navbar")),   
+         // Filter out <div class="heading-macfix article-access-options">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "class",
+                                                                         "heading-macfix article-access-options")),                                                                           
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
