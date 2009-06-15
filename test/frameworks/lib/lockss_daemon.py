@@ -1,4 +1,5 @@
 import base64
+import cookielib
 import glob
 import httplib
 import mimetools
@@ -36,7 +37,7 @@ FILE_TYPE_BIN = 16
 
 ###########################################################################
 ##
-## Config file strings, used when creating default config files.
+## Configuration file strings, used when creating default config files.
 ##
 ###########################################################################
 
@@ -115,6 +116,63 @@ org.lockss.proxy.icp.port=%(icpPort)s
 # Classes
 
 
+class LockssDaemon:
+    """Wrapper around a daemon instance.  Controls starting and stopping a LOCKSS Java daemon."""
+
+    def __init__( self, dir, cp, configList ):
+        self.daemonDir = dir
+        self.cp = cp
+        self.configList = configList
+        try:
+            javaHome = os.environ[ 'JAVA_HOME' ]
+        except KeyError:
+            raise LockssError( 'JAVA_HOME must be set' )
+        self.javaBin = path.join( javaHome, 'bin', 'java' )
+        self.logfile = path.join( self.daemonDir, 'test.out' )
+        self.isRunning = False
+
+    def start( self ):
+        if not self.isRunning:
+            oldcwd = os.getcwd()
+            os.chdir( self.daemonDir )
+            cmd = '%s -server -cp %s -Dorg.lockss.defaultLogLevel=debug org.lockss.app.LockssDaemon %s >> %s 2>&1 & echo $! > %s/dpid' % ( self.javaBin, self.cp, ' '.join( self.configList ), self.logfile, self.daemonDir )
+            os.system( cmd )
+            self.pid = int( open( path.join( self.daemonDir, 'dpid' ), 'r' ).readline() )
+            self.isRunning = True
+            os.chdir( oldcwd )
+
+    def stop( self ):
+        if self.isRunning:
+            try:
+                os.kill( self.pid, signal.SIGKILL )
+            except OSError:
+                log.debug( 'Daemon already dead?' )
+            else:
+                log.debug( 'Daemon stopped' )
+            finally:
+                self.isRunning = False
+
+    def requestThreadDump(self):
+        if self.isRunning:
+            os.kill( self.pid, signal.SIGQUIT )
+            # Horrible kludge.  Pause for one second so that the VM has time to comply and flush the daemon log file.
+            time.sleep( 1 )
+
+
+class Node:
+    """In keeping with Python written in a Java accent, here's a simple
+    object that could just as easily have been a tuple or a dict."""
+    def __init__( self, url, file ):
+        self.url = url
+        self.file = file
+
+    def __cmp__( self, other ):
+        return cmp( self.url, other.url )
+
+    def __str__( self ):
+        return "%s" % self.url
+
+
 class Framework:
     """A framework is a set of LOCKSS daemons and associated test
     clients.  The framework daemons can be started or stopped as a
@@ -188,8 +246,7 @@ class Framework:
             port = self.startUiPort + ix
             v3Port = self.startV3Port + ix
 
-            daemonDir = path.abspath(path.join(self.frameworkDir,
-                                               'daemon-' + str(port)))
+            daemonDir = path.abspath( path.join( self.frameworkDir, 'daemon-' + str( port ) ) )
             # local config
             localConfigFile = path.join(daemonDir, 'local.txt')
             # Init the directory
@@ -229,7 +286,7 @@ class Framework:
     def waitForFrameworkReady(self):
         """Convenience function to ensure all daemons are ready"""
         for client in self.clientList:
-            client.waitForDaemonReady()
+            assert client.waitForDaemonReady()
 
     def clean(self):
         """Delete the current framework working directory and local library directory."""
@@ -389,16 +446,17 @@ class Framework:
 class Client:
     """LOCKSS server client interface"""
 
-    def __init__(self, hostname, port, v3Port, username, password):
+    def __init__( self, hostname, port, v3Port, username, password ):
         self.hostname = hostname
         self.port = port
         self.v3Port = v3Port
-        self.url = 'http://' + self.hostname + ':' + str(port) + '/'
-        self.username = username
-        self.password = password
+        self.base_url = 'http://' + self.hostname + ':' + str( port ) + '/'
+        authentication_handler = urllib2.HTTPBasicAuthHandler()
+        authentication_handler.add_password( 'LOCKSS Admin', self.base_url, username, password )
+        self.URL_opener = urllib2.build_opener( urllib2.HTTPCookieProcessor( cookielib.CookieJar() ), authentication_handler, Multipart_Form_HTTP_Handler )
 
     def ID( self ):
-       '''Standardized notation'''
+       """Standardized notation"""
        return self.hostname + ':' + str( self.port )
         
     def getPeerId(self):
@@ -430,7 +488,7 @@ class Client:
         """Modify the configuration of the specified AU to set it's 'pub_down'
         parameter."""
         post = self.__makeAuPost(au, 'Update')
-        post.add('lfp.pub_down', 'true') # Override setting in AU
+        post.add_data( 'lfp.pub_down', 'true' ) # Override setting in AU
         post.execute()
         if not self.waitForPublisherDown(au):
             raise LockssError("Timed out waiting for AU %s to be marked "\
@@ -478,9 +536,7 @@ class Client:
     def backupConfiguration(self):
         """Very quick and dirty way to download the config backup."""
 
-        request = Get(self.url + "BatchAuConfig?lockssAction=Backup",
-                      self.username, self.password)
-        backupData = request.execute().read()
+        backupData = HTTP_Request( self.URL_opener, self.base_url + "BatchAuConfig?lockssAction=Backup" ).execute().read()
 
         # Write the data into a file
         f = file("configbackup.zip", "w")
@@ -490,34 +546,26 @@ class Client:
 
     def restoreConfiguration(self, au):
 
-        post = MultipartPost(self.url + "BatchAuConfig",
-                             self.username, self.password)
-        post.add("lockssAction", "SelectRestoreTitles")
-        post.add("Verb", "5")
-        post.addFile("AuConfigBackupContents", "configbackup.zip")
+        post = HTTP_Request( self.URL_opener, self.base_url + "BatchAuConfig" )
+        post.add_data( 'lockssAction', 'SelectRestoreTitles' )
+        post.add_data( 'Verb', '5' )
+        post.add_file( 'AuConfigBackupContents', 'configbackup.zip' )
 
-        (result, cookie) = post.execute()
+        result = post.execute().read()
 
         log.debug3("Got result from Batch AU Config servlet\n%s" % result)
 
         # Expect to see the strings 'Simulated Content: foo' and
-        # 'Restore Selected AUs' in the response.  FRAGILE, obviously
+        # 'Restore Selected AUs' in the response.  FRAGILE; obviously
         # this will break if the servlet UI is changed.
-
-        p = re.compile("%s.*Restore Selected AUs" % au.title, re.MULTILINE | re.DOTALL)
-
-        if not p.search(result):
-            raise LockssError("Unexpected response from BatchAuConfig servlet")
+        if au.title not in result or 'Restore Selected AUs' not in result:
+            raise LockssError( 'Unexpected response from BatchAuConfig servlet' )
 
         # Now confirm the restoration.
-
-        post = Post(self.url + "BatchAuConfig",
-                    self.username, self.password, cookie)
-
-        post.add("lockssAction", "DoAddAus")
-        post.add("Verb", "5")
-        post.add("auid", au.auId)
-
+        post = HTTP_Request( self.URL_opener, self.base_url + "BatchAuConfig" )
+        post.add_data( 'lockssAction', 'DoAddAus' )
+        post.add_data( 'Verb', '5' )
+        post.add_data( 'auid', au.auId ) 
         result = post.execute()
 
         # If this was successful, delete the configbackup.zip file
@@ -542,14 +590,14 @@ class Client:
     def getAuHashFile( self, AU ):
         """Return the hash file contents for the whole AU."""
         post = self.__makePost( 'HashCUS', { 'action': 'Hash' } )
-        post.add( 'auid', AU.auId )
-        post.add( 'url', 'lockssau:' )
-        post.add( 'hashtype', 4 ) # (sic)
+        post.add_data( 'auid', AU.auId )
+        post.add_data( 'url', 'lockssau:' )
+        post.add_data( 'hashtype', 4 ) # (sic)
         response = post.execute()
         match = re.search( '<td>Hash file:</td.*?><td><a href="/(.+?)">HashFile</a.*?>', response.read(), re.DOTALL )
         if match is None:
             raise LockssError( 'Hash file URL not found' )
-        return self.__makePost( match.group( 1 ), cookie = response.info()[ 'Set-Cookie' ].split( ';' )[ 0 ] ).execute().read()
+        return self.__makePost( match.group( 1 ) ).execute().read()
 
     def getPollResults( self, AU ):
         """Return the current poll results for the AU."""
@@ -614,13 +662,10 @@ class Client:
         else:
             return -1
 
-    def isPublisherDown(self, au):
-        """Return true if the AU is marked 'publisher down' (i.e., if
-        the ArchivalUnitTable lists 'Available From Publisher' as 'No'
-        for this AU."""
-        (summary, table) = self._getStatusTable('ArchivalUnitTable', au.auId)
-        return (summary.has_key('Available From Publisher') and
-                summary['Available From Publisher'] == "No")
+    def isPublisherDown( self, au ):
+        """Return true if the AU is marked 'publisher down' (i.e., if the ArchivalUnitTable lists 'Available From Publisher' as 'No')"""
+        ( summary, table ) = self._getStatusTable( 'ArchivalUnitTable', au.auId )
+        return summary.get( 'Available From Publisher' ) == "No"
 
 
     def isAuOK(self, au):
@@ -650,7 +695,7 @@ class Client:
     def startV3Poll( self, AU ):
         """Start a V3 poll of an AU."""
         post = self.__makePost( 'DebugPanel', { 'action': 'Start V3 Poll' } )
-        post.add( 'auid', AU.auId )
+        post.add_data( 'auid', AU.auId )
         post.execute()
 
     def getV3PollKey(self, au, excludePolls=[]):
@@ -911,9 +956,7 @@ class Client:
         """Return a list of all nodes that have content."""
         # Hack!  Pass the table a very large number for numrows, and
         # pray we don't have more than that.
-        (summary, tab) = self._getStatusTable('ArchivalUnitTable',
-                                               key=au.auId,
-                                               numrows=100000)
+        (summary, tab) = self._getStatusTable('ArchivalUnitTable', key=au.auId, numrows=100000)
         nodes = []
         for row in tab:
             url = row['NodeName']
@@ -924,9 +967,7 @@ class Client:
 
     def getAuNodesWithChildren(self, au):
         """Return a list of all nodes that have children."""
-        (summary, tab) = self._getStatusTable('ArchivalUnitTable',
-                                               key=au.auId,
-                                               numrows=100000)
+        (summary, tab) = self._getStatusTable('ArchivalUnitTable', key=au.auId, numrows=100000)
         nodes = []
         for row in tab:
             url = row['NodeName']
@@ -964,21 +1005,22 @@ class Client:
             peers.append(peer)
         return peers
 
-    def isDaemonReady(self):
+    def isDaemonReady( self ):
         """Ask DaemonStatus whether the server is fully started.
-           When given arg idDaemonReady it returns either True or False"""
+           When given arg isDaemonReady it returns either True or False."""
+        post = self.__makePost( 'DaemonStatus' )
+        post.add_data( 'isDaemonReady', '1' )
         try:
-            post = self.__makePost('DaemonStatus')
-            post.add('isDaemonReady', "1")
-            res = post.execute().read()
-            return res.find("true") >= 0
-        except LockssError:
-            ## If a Lockss error is raised, pass it on.
-            raise
-        except Exception, e:
-            ## On any other error, just return false.
-            log.debug("Got exception: %s" % e)
+            return post.execute().read() == 'true\n'
+        except urllib2.URLError:
             return False
+        except LockssError:
+            # If a Lockss error is raised, pass it on.
+            raise
+        #except Exception, exception:
+        #    # On any other error, just return false.
+        #    log.debug("Got exception: %s" % exception)
+        #    return False
 
     def isAuIdOrRef(self, auRef, au):
         if isinstance(auRef, types.DictType):
@@ -995,11 +1037,9 @@ class Client:
             return possibleref
 
     def getAdminUi(self):
-        """Fetch the contents of the top-level admin UI.  Useful for
-        testing the Tiny UI.  May throw urllib2.URLError or
-        urllib2.HTTPError."""
-        get = Get(self.url, self.username, self.password)
-        return get.execute()
+        """Fetch the contents of the top-level admin UI.  Useful for testing
+        the Tiny UI.  May throw urllib2.URLError or urllib2.HTTPError."""
+        return HTTP_Request( self.URL_opener, self.base_url ).execute()
 
     def hasV3Poller(self, au, excludePolls=[]):
         """Return true if the client has an active or completed V3 Poller
@@ -1642,7 +1682,6 @@ class Client:
         nodeList.sort()
         return nodeList
 
-
     def getAuNode(self, au, url, checkForContent=False):
         """Construct a node from a url on an AU."""
         root = self.getAuRoot(au)
@@ -1651,9 +1690,7 @@ class Client:
             f = root
         else:
             f = path.join(root, url[(len(au.baseUrl) + 1):])
-
         node = Node(url, f)
-
         if checkForContent:
             if path.isfile(path.join(f, '#content', 'current')):
                 return node
@@ -1665,23 +1702,22 @@ class Client:
             else:
                 raise LockssError("Node does not exist: %s" % node.url)
 
-
     ###
     ### Internal methods
     ###
 
-    def _getStatusTable(self, statusTable, key=None, numrows=None):
+    def _getStatusTable( self, statusTable, key = None, numrows = None ):
         """Given an XML string, parse it as a status table and return
         a list of dictionaries representing the data.  Each item in
         the list is a dictionary of column names to values, stored as
         Unicode strings."""
         post = self.__makePost('DaemonStatus')
-        post.add('table', statusTable)
+        post.add_data( 'table', statusTable )
         if not key == None:
-            post.add('key', key)
+            post.add_data( 'key', key )
         if not numrows == None:
-            post.add('numrows', numrows)
-        post.add('output', 'xml')
+            post.add_data( 'numrows', numrows )
+        post.add_data( 'output', 'xml' )
 
         XML = post.execute().read()
         log.debug3( 'Received XML response:\n' + XML )
@@ -1748,52 +1784,51 @@ class Client:
             log.debug2("Connect error: %s" % (e))
             return False
 
-    def __makePost(self, page, form_data=None, cookie=None):
-        postUrl = self.url + page
-        post = Post(postUrl, self.username, self.password, cookie)
+    def __makePost( self, page, form_data = None ):
+        post = HTTP_Request( self.URL_opener, self.base_url + page )
         if form_data:
             for key, value in form_data.iteritems():
-                post.add(key, value)
+                post.add_data( key, value )
         return post
 
     def __makeAuPost(self, au, lockssAction):
         post = self.__makePost('AuConfig', {'lockssAction': lockssAction})
-        post.add('PluginId', au.pluginId)
-        post.add('auid', au.auId)
+        post.add_data( 'PluginId', au.pluginId )
+        post.add_data( 'auid', au.auId )
         simulated_AU = hasattr( au, 'title' ) and au.title.startswith( 'Simulated Content: ' )
         if simulated_AU:
         #    excluded_attributes.update( ( 'auId', 'baseUrl', 'dirStruct', 'fileTypeArray', 'pluginId', 'startUrl', 'title' ) )
-            post.add('lfp.root', au.root)
+            post.add_data( 'lfp.root', au.root )
             if au.depth != -1:
-                post.add('lfp.depth', au.depth)
+                post.add_data( 'lfp.depth', au.depth )
             if au.branch != -1:
-                post.add('lfp.branch', au.branch)
+                post.add_data( 'lfp.branch', au.branch )
             if au.numFiles != -1:
-                post.add('lfp.numFiles', au.numFiles)
+                post.add_data( 'lfp.numFiles', au.numFiles )
             if au.binFileSize != -1:
-                post.add('lfp.binFileSize', au.binFileSize)
+                post.add_data( 'lfp.binFileSize', au.binFileSize )
             if au.binRandomSeed != -1:
-                post.add('lfp.binRandomSeed', au.binRandomSeed)
+                post.add_data( 'lfp.binRandomSeed', au.binRandomSeed )
             if au.maxFileName != -1:
-                post.add('lfp.maxFileName', au.maxFileName)
+                post.add_data( 'lfp.maxFileName', au.maxFileName )
             if au.fileTypes != -1:
-                post.add('lfp.fileTypes', au.fileTypes)
+                post.add_data( 'lfp.fileTypes', au.fileTypes )
             if au.oddBranchContent != -1:
-                post.add('lfp.odd_branch_content', au.oddBranchContent)
+                post.add_data( 'lfp.odd_branch_content', au.oddBranchContent )
             if au.badFileLoc is not None:
-                post.add('lfp.badFileLoc', au.badFileLoc)
+                post.add_data( 'lfp.badFileLoc', au.badFileLoc )
             if au.badFileNum != -1:
-                post.add('lfp.badFileNum', au.badFileNum)
+                post.add_data( 'lfp.badFileNum', au.badFileNum )
             if au.publisherDown:
-                post.add('lfp.pub_down', 'true')
+                post.add_data( 'lfp.pub_down', 'true' )
             if au.protocolVersion > 0:
-                post.add('lfp.protocol_version', au.protocolVersion)
+                post.add_data( 'lfp.protocol_version', au.protocolVersion )
         else:
             excluded_attributes = set( ( 'auId', 'pluginId' ) )
             for key in set( vars( au ) ) - excluded_attributes:
                 value = getattr( au, key )
                 #if not simulated_AU or value is not None and value is not False and Value != -1:
-                post.add( 'lfp.' + key, value )
+                post.add_data( 'lfp.' + key, value )
         return post
 
     def __getRandomContentNode(self, au):
@@ -1857,13 +1892,13 @@ class Client:
 
 
     def __str__(self):
-        return "%s" % self.url
+        return "%s" % self.base_url
 
 
 class Daemon_Client( Client ):
     """Test framework daemon client interface"""
 
-    def __init__(self, daemon, hostname, port, v3Port, username, password):
+    def __init__( self, daemon, hostname, port, v3Port, username, password ):
         Client.__init__( self, hostname, port, v3Port, username, password )
         self.daemon = daemon
         self.daemonDir = daemon.daemonDir
@@ -1972,183 +2007,5 @@ class SimulatedAU( AU ):
         return numFileTypes*self.numFiles*self.branch + numFileTypes*self.numFiles*dp + ( self.branch + 2 )
 
 
-class Node:
-    """In keeping with Python written in a Java accent, here's a
-    simple object that could just as easily have been a tuple or a
-    dict."""
-    def __init__(self, url, file):
-        self.url = url
-        self.file = file
-
-    def __cmp__(self, other):
-        return cmp(self.url, other.url)
-
-    def __str__(self):
-        return "%s" % self.url
-
-
-class LockssDaemon:
-    """Wrapper around a daemon instance.  Controls starting and stopping
-    a LOCKSS Java daemon."""
-    def __init__(self, dir, cp, configList):
-        self.daemonDir = dir
-        self.cp = cp
-        self.configList = configList
-        if not os.environ.has_key('JAVA_HOME'):
-            raise LockssError("JAVA_HOME must be set.")
-        javaHome = os.environ['JAVA_HOME']
-        self.javaBin = path.join(javaHome, 'bin', 'java')
-        self.logfile = path.join(self.daemonDir, 'test.out')
-        self.isRunning = False
-
-    def start(self):
-        if not self.isRunning:
-            oldcwd = os.getcwd()
-            os.chdir(self.daemonDir)
-            cmd = '%s -server -cp %s -Dorg.lockss.defaultLogLevel=debug '\
-                  'org.lockss.app.LockssDaemon %s >> %s 2>&1 & '\
-                  'echo $! > %s/dpid'\
-                  % (self.javaBin, self.cp, ' '.join(self.configList),
-                     self.logfile, self.daemonDir)
-            os.system(cmd)
-            self.pid = int(open(path.join(self.daemonDir, 'dpid'), 'r').readline())
-            self.isRunning = True
-            os.chdir(oldcwd)
-
-    def stop(self):
-        if self.isRunning:
-            try:
-                os.kill(self.pid, signal.SIGKILL)
-            except OSError:
-                log.debug( 'Daemon already dead?' )
-            else:
-                log.debug( 'Daemon stopped' )
-            finally:
-                self.isRunning = False
-
-    def requestThreadDump(self):
-        if self.isRunning:
-            os.kill(self.pid, signal.SIGQUIT)
-            # Horrible kludge.  Pause for one second so that the VM has
-            # time to comply and flush the daemon log file.
-            time.sleep(1)
-
-
-class Post:
-    """A simple wrapper for HTTP post management."""
-    def __init__( self, url = '', username = None, password = None, cookie = None ):
-        self.request = urllib2.Request( url )
-        if cookie:
-            self.request.add_header('Cookie', cookie)
-        if username is not None and password is not None:
-            # Attempt to set authentication
-            encoded = base64.encodestring('%s:%s' % (username, password))[:-1]
-            authheader = "Basic %s" % encoded
-            self.request.add_header("Authorization", authheader)
-        self.postData = []
-
-    def add(self, key, val):
-        self.postData.append((key, val))
-
-    def execute(self):
-        """Send a POST with the pre-initialized form data and return the contents of the resource."""
-        if ( 'output', 'xml' ) not in self.postData:
-            self.request.add_header( 'X-Lockss-Result', 'Please' )
-        args = urllib.urlencode( self.postData )
-        log.debug2( "Sending POST: %s?%s" % ( self.request.get_full_url(), args ) )
-        resource = urllib2.urlopen( self.request, args )
-        if resource.info().getheader( 'X-Lockss-Result' ) == 'Fail':
-            raise LockssError( 'HTML UI transaction failure' )
-        return resource
-
-
-class MultipartPost:
-    def __init__(self, url='', username=None, password=None, cookie=None):
-        urlparts = urlparse.urlsplit(url)
-        self.host = urlparts[1]
-        self.selector = urlparts[2]
-        self.cookie = cookie
-        self.postData = []
-        self.fileData = []
-        self.authHeader = "Basic %s" % base64.encodestring('%s:%s' % (username, password))[:-1]
-
-    def add(self, key, val):
-        self.postData.append((key, val))
-
-    def addFile(self, key, filename):
-        f = open(filename, "r")
-        self.fileData.append((key, filename, f.read()))
-
-    def execute(self):
-        """Returns a tuple of (response body, cookie).  cookie is 'None' if no
-        SetCookie header was received."""
-
-        (contentType, body) = self.encodeMultipartFormdata(self.postData, self.fileData)
-        length = str(len(body))
-        h = httplib.HTTP(self.host)
-        h.putrequest('POST', self.selector)
-        h.putheader("Authorization", self.authHeader)
-        h.putheader("Content-Type", contentType)
-        h.putheader("Content-Length", length)
-        if self.cookie:
-            h.putheader("Cookie", self.cookie)
-        h.endheaders()
-        h.send(body)
-        errcode, errmsg, headers = h.getreply()
-        responseCookie = headers.getheader('Set-Cookie')
-        if responseCookie:
-            responseCookie = responseCookie.split(';')[0]
-        return (h.file.read(), responseCookie)
-
-
-    def encodeMultipartFormdata(self, fields, files):
-        """fields is a sequence of (name, value) elements for regular
-        form fields.  files is a sequence of (name, filename, value)
-        elements for data to be uploaded as files Return (content_type,
-        body) ready for httplib.HTTP instance."""
-
-        boundary = mimetools.choose_boundary()
-
-        content_type = 'multipart/form-data; boundary=%s' % boundary
-
-        data = ''
-        for (key, value) in fields:
-            data += '--%s\r\n' % boundary
-            data += 'Content-Disposition: form-data; name="%s"\r\n' % key
-            data += '\r\n'
-            data += "%s\r\n" % value
-        for (key, filename, value) in files:
-            data += '--%s\r\n' % boundary
-            data += 'Content-Disposition: form-data; name="%s"; filename="%s"\r\n' % \
-                     (key, filename)
-            data += 'Content-Type: %s\r\n' % self.getContentType(filename)
-            data += '\r\n'
-            data += '%s\r\n' % value
-        data += '--%s--\r\n' % boundary
-        data += '\r\n'
-
-        return (content_type, data)
-
-    def getContentType(self, filename):
-        return mimetypes.guess_type(filename)[0] or 'application/octet-stream'
-
-
-class Get:
-    def __init__(self, url='', username=None, password=None):
-        self.request = urllib2.Request(url)
-        if not username == None and not password == None:
-            # Attempt to set authentication
-            encoded = base64.encodestring('%s:%s' % (username, password))[:-1]
-            authheader = "Basic %s" % encoded
-            self.request.add_header("Authorization", authheader)
-
-    def execute(self):
-        opener = urllib2.build_opener()
-        log.debug2("Sending GET: %s" % self.request.get_full_url())
-        return opener.open(self.request)
-
-
 assert sys.version_info >= ( 2, 5 )
-
 frameworkCount = 0
-log = Logger()
