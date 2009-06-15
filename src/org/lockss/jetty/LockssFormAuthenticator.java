@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.1.2.2 2009-06-13 08:52:34 tlipkis Exp $
+ * $Id: LockssFormAuthenticator.java,v 1.1.2.3 2009-06-15 07:47:45 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // Some portions of this code are:
 // ========================================================================
-// Copyright 199-2004 Mort Bay Consulting Pty. Ltd.
+// Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 
 package org.lockss.jetty;
 

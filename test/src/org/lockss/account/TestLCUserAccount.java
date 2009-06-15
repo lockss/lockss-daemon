@@ -1,5 +1,5 @@
 /*
- * $Id: TestLCUserAccount.java,v 1.1.2.2 2009-06-13 08:51:55 tlipkis Exp $
+ * $Id: TestLCUserAccount.java,v 1.1.2.3 2009-06-15 07:47:45 tlipkis Exp $
  */
 
 /*
@@ -327,8 +327,12 @@ public class TestLCUserAccount extends LockssTestCase {
     TimeBase.setSimulated(Constants.DAY);
     acct1.setPassword(PWD1);
     // test good and bad passwd
+    assertNotEquals(TimeBase.nowMs(), acct1.getLastLogin());
     assertTrue(acct1.check(PWD1));
+    assertEquals(TimeBase.nowMs(), acct1.getLastLogin());
+    TimeBase.step(Constants.WEEK);
     assertFalse(acct1.check(PWD2));
+    assertEquals(Constants.DAY, acct1.getLastLogin());
     assertTrue(acct1.check(PWD1));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAccountManager.java,v 1.2.2.1 2009-06-09 05:51:56 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.2.2.2 2009-06-15 07:47:45 tlipkis Exp $
  */
 
 /*
@@ -291,7 +291,9 @@ public class TestAccountManager extends LockssTestCase {
     File f1 = new File(acctMgr.getAcctDir(), "luser");
     assertTrue(f1.exists());
     assertSame(acct1, acctMgr.getUser(name));
+    assertTrue(acct1.isEnabled());
     assertTrue(acctMgr.deleteUser(name));
+    assertFalse(acct1.isEnabled());
     assertFalse(f1.exists());
     assertNull(acctMgr.getUserOrNull(name));
 

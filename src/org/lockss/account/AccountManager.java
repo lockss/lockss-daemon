@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.3.2.1 2009-06-09 05:53:00 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.3.2.2 2009-06-15 07:47:45 tlipkis Exp $
  */
 
 /*
@@ -353,6 +353,8 @@ public class AccountManager
       res = file.delete();
     }
     if (res) {
+      acct.disable("Deleted");		// paranoia, in case someone holds
+					// onto object.
       accountMap.remove(acct.getName());
     }
     return res;

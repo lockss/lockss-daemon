@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUserRealm.java,v 1.2.2.2 2009-06-13 18:50:15 tlipkis Exp $
+ * $Id: LockssUserRealm.java,v 1.2.2.3 2009-06-15 07:47:45 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ in this Software without prior written authorization from Stanford University.
 // sure how thay might interact with Jetty
 
 // ========================================================================
-// $Id: LockssUserRealm.java,v 1.2.2.2 2009-06-13 18:50:15 tlipkis Exp $
+// $Id: LockssUserRealm.java,v 1.2.2.3 2009-06-15 07:47:45 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -221,23 +221,26 @@ public class LockssUserRealm implements UserRealm {
 
   private class KnownUser extends User {
     private final String _userName;
-    private final UserAccount _acct;
 
     KnownUser(String name) {
       _userName=name;
-      _acct = _acctMgr.getUser(name);
+    }
+
+    UserAccount getUserAcct() {
+      return _acctMgr.getUserOrNull(_userName);
     }
 
     boolean authenticate(Object credentials, HttpRequest request) {
       boolean res;
       String msg = null;
-      if (_acct == null) {
+      UserAccount acct = getUserAcct();
+      if (acct == null) {
 	res = false;
       } else {
-	res = _acct.check(credentials);
+	res = acct.check(credentials);
       }
       if (res) {
-	if (_acct.isPasswordExpired()) {
+	if (acct.isPasswordExpired()) {
 	  msg = "Password expired";
 	  res = false;
 	}
@@ -271,11 +274,13 @@ public class LockssUserRealm implements UserRealm {
     }
 
     public boolean isAuthenticated() {
-      return _acct != null && _acct.isEnabled();
+      UserAccount acct = getUserAcct();
+      return acct != null && acct.isEnabled();
     }
 
     public boolean isUserInRole(String role) {
-      return _acct != null && _acct.isUserInRole(role);
+      UserAccount acct = getUserAcct();
+      return acct != null && acct.isUserInRole(role);
     }
   }
 
