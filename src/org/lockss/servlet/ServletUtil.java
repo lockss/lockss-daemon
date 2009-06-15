@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.59 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.59.2.1 2009-06-15 07:50:01 tlipkis Exp $
  */
 
 /*
@@ -1538,7 +1538,8 @@ public class ServletUtil {
       } else {
         navTable.add("<font size=\"-1\">");
       }
-      navTable.add(servlet.conditionalSrvLink(d, d.heading, servlet.isServletLinkInNav(d)));
+      navTable.add(servlet.conditionalSrvLink(d, d.getNavHeading(servlet),
+					      servlet.isServletLinkInNav(d)));
       navTable.add("</font>");
     }
     navTable.add("</font>");
