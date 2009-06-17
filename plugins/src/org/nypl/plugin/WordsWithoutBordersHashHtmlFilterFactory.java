@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.5 2009-06-17 22:09:47 thib_gc Exp $ */
+ * $Id: WordsWithoutBordersHashHtmlFilterFactory.java,v 1.1 2009-06-17 22:09:47 thib_gc Exp $ */
 
 /*
 
@@ -37,23 +37,27 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-/**
- * <p>Only retains the "main" part of HTML pages; used by the link
- * extractor to scan for links only in the "important" section of the
- * HTML.</p> 
- * @author Anya Hunt
- */
-public class WordsWithoutBordersCrawlHtmlFilterFactory implements FilterFactory {
+public class WordsWithoutBordersHashHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
-        // Keep only <div id="columnThree" name="columnTwo">...</div>
-        HtmlNodeFilterTransform.include(HtmlNodeFilters.tagWithAttribute("div",
+        // Filter out <div id="columnOne">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
-                                                                         "columnTwo")),                                                                  
+                                                                         "columnOne")),
+        
+        // Filter out <div id="columnThree">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "columnThree")),         
+                                                                  
+        // Filter out <div id="footer">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "footer")),  
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

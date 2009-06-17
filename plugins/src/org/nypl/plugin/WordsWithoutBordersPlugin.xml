@@ -4,6 +4,10 @@
     <string>org.nypl.plugin.WordsWithoutBordersPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -54,5 +58,13 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.nypl.plugin.WordsWithoutBordersHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.nypl.plugin.WordsWithoutBordersHashHtmlFilterFactory</string>
   </entry>
 </map>

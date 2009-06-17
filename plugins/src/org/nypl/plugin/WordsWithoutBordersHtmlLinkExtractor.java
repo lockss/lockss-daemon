@@ -1,5 +1,6 @@
 /*
- * $Id: WordsWithoutBordersCrawlHtmlFilterFactory.java,v 1.5 2009-06-17 22:09:47 thib_gc Exp $ */
+ * $Id: WordsWithoutBordersHtmlLinkExtractor.java,v 1.1 2009-06-17 22:09:47 thib_gc Exp $
+ */
 
 /*
 
@@ -31,33 +32,39 @@ in this Software without prior written authorization from Stanford University.
 
 package org.nypl.plugin;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
+import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.lockss.extractor.LinkExtractor;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
 
-/**
- * <p>Only retains the "main" part of HTML pages; used by the link
- * extractor to scan for links only in the "important" section of the
- * HTML.</p> 
- * @author Anya Hunt
- */
-public class WordsWithoutBordersCrawlHtmlFilterFactory implements FilterFactory {
+public class WordsWithoutBordersHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Keep only <div id="columnThree" name="columnTwo">...</div>
-        HtmlNodeFilterTransform.include(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "columnTwo")),                                                                  
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(transforms));
+  public WordsWithoutBordersHtmlLinkExtractor() {
+    super();
+  }
+  
+  @Override
+  public void extractUrls(ArchivalUnit au,
+                          InputStream in,
+                          String encoding,
+                          String srcUrl,
+                          Callback cb)
+      throws IOException {
+    try {
+      FilterFactory filter = new WordsWithoutBordersCrawlHtmlFilterFactory();
+      InputStream filtered = filter.createFilteredInputStream(au, in, encoding);
+      super.extractUrls(au, filtered, encoding, srcUrl, cb);
+    }
+    catch (PluginException pe) {
+      // Use new IOException constructor in Java 6
+      IOException ioe = new IOException();
+      ioe.initCause(pe);
+      throw ioe;
+    }
   }
 
 }
