@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.1 2009-05-27 08:00:12 mrbax Exp $'''
+$Id: pylorus.py,v 2.2 2009-06-17 23:17:07 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -21,13 +21,13 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.1 $'.split()[ 1 ]
+REVISION = '$Revision: 2.2 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
 SERVER_READY_TIMEOUT = 60
-MINIMUM_SLEEP_DURATION = 5
-MAXIMUM_SLEEP_DURATION = 3600
+MINIMUM_SLEEP_DURATION = 15
+MAXIMUM_SLEEP_DURATION = 120
 REMOTE_CRAWL_RETRY_TOTAL = 3
 POLL_FAILURE_RETRY_TOTAL = 3
 POLL_MISMATCH_RETRY_TOTAL = 3
