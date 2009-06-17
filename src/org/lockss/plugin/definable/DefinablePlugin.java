@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.40 2009-05-27 16:39:04 dshr Exp $
+ * $Id: DefinablePlugin.java,v 1.41 2009-06-17 06:59:33 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.definable;
 
+import java.util.*;
+import java.io.*;
+import java.net.*;
+
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
@@ -43,10 +47,6 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
 
-import java.util.*;
-import java.io.FileNotFoundException;
-import java.net.*;
-
 /**
  * <p>DefinablePlugin: a plugin which uses the data stored in an
 *  ExternalizableMap to configure it self.</p>
@@ -56,6 +56,7 @@ import java.net.*;
 
 public class DefinablePlugin extends BasePlugin {
   // configuration map keys
+  public static final String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
   public static final String KEY_PLUGIN_NAME = "plugin_name";
   public static final String KEY_PLUGIN_VERSION = "plugin_version";
   public static final String KEY_REQUIRED_DAEMON_VERSION =
@@ -105,11 +106,6 @@ public class DefinablePlugin extends BasePlugin {
     initPlugin(daemon, extMapName, this.getClass().getClassLoader());
   }
 
-  // Used by tests
-  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap) {
-    initPlugin(daemon, defMap, this.getClass().getClassLoader());
-  }
-
   public void initPlugin(LockssDaemon daemon, String extMapName,
 			 ClassLoader loader)
       throws FileNotFoundException {
@@ -117,6 +113,18 @@ public class DefinablePlugin extends BasePlugin {
     // load the configuration map from jar file
     ExternalizableMap defMap = loadMap(extMapName, loader);
     this.initPlugin(daemon, extMapName, defMap, loader);
+  }
+
+  public void initPlugin(LockssDaemon daemon, String extMapName,
+			 ExternalizableMap defMap,
+			 ClassLoader loader) {
+    mapName = extMapName;
+    this.classLoader = loader;
+    this.definitionMap = defMap;
+    // then call the overridden initializaton.
+    super.initPlugin(daemon);
+    initMimeMap();
+    checkParamAgreement();
   }
 
   private ExternalizableMap loadMap(String extMapName, ClassLoader loader)
@@ -159,23 +167,28 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   // Used by tests
+
+  public void initPlugin(LockssDaemon daemon, File file)
+      throws PluginException {
+    ExternalizableMap oneMap = new ExternalizableMap();
+    oneMap.loadMap(file);
+    if (oneMap.getErrorString() != null) {
+      throw new PluginException(oneMap.getErrorString());
+    }
+    initPlugin(daemon, file.getPath(), oneMap, null);
+  }
+
+  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap) {
+    initPlugin(daemon, defMap, this.getClass().getClassLoader());
+  }
+
   void initPlugin(LockssDaemon daemon,
 			 ExternalizableMap defMap,
 			 ClassLoader loader) {
     initPlugin(daemon, "Internal", defMap, loader);
   }
 
-  public void initPlugin(LockssDaemon daemon, String extMapName,
-			 ExternalizableMap defMap,
-			 ClassLoader loader) {
-    mapName = extMapName;
-    this.classLoader = loader;
-    this.definitionMap = defMap;
-    // then call the overridden initializaton.
-    super.initPlugin(daemon);
-    initMimeMap();
-    checkParamAgreement();
-  }
+
 
   void checkParamAgreement() {
     for (String key : DefinableArchivalUnit.printfUrlListKeys) {
