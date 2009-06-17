@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseHtmlFilterFactory.java,v 1.1 2009-06-11 19:36:17 greya Exp $*/
+ * $Id: ProjectMuseHtmlFilterFactory.java,v 1.2 2009-06-17 22:42:31 thib_gc Exp $*/
 
 /*
 
@@ -31,11 +31,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.io.InputStream;
+import java.io.*;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class ProjectMuseHtmlFilterFactory implements FilterFactory {
 
@@ -58,9 +60,16 @@ public class ProjectMuseHtmlFilterFactory implements FilterFactory {
                                                                          "id",
                                                                          "credits")),                                                                  
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(transforms));
+    
+    // First filter with HtmlParser
+    InputStream filteredStream = new HtmlFilterInputStream(in,
+                                                           encoding,
+                                                           new HtmlCompoundTransform(transforms));
+    
+    // Then filter with ProjectMuseFilterRule
+    Reader reader = FilterUtil.getReader(filteredStream, encoding);
+    Reader filtReader = ProjectMuseFilterRule.makeFilteredReader(reader);
+    return new ReaderInputStream(filtReader);
   }
 
 }
