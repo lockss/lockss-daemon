@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.8 2008-08-17 08:43:20 tlipkis Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.9 2009-06-17 22:51:59 thib_gc Exp $
  */
 
 /*
@@ -238,10 +238,8 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testGetFilterRules() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
-    assertNull(au.getFilterRule(null));
-    assertNull(au.getFilterRule("jpg"));
-    assertTrue(WrapperUtil.unwrap(au.getFilterRule("text/html"))
-	       instanceof ProjectMuseFilterRule);
+    assertTrue(WrapperUtil.unwrap(au.getFilterFactory("text/html"))
+	       instanceof ProjectMuseHtmlFilterFactory);
   }
 
   public void testRefetchDepth() throws Exception {
