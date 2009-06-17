@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.1 2006-09-16 23:04:48 tlipkis Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.2 2009-06-17 16:38:49 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,11 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
-import java.util.List;
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 
 public class HighWireHtmlFilterFactory implements FilterFactory {
   // Use the logic in HighWireFilterRule.  That class should be retired in
@@ -46,8 +45,24 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
 					       InputStream in,
 					       String encoding) {
-    Reader reader = FilterUtil.getReader(in, encoding);
+    HtmlTransform[] transforms = new HtmlTransform[] {
+        // Filter out <li id="nav_current_issue">...</li>
+        // Seen at Oxford University Press
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("li",
+                                                                         "id",
+                                                                         "nav_current_issue")),
+    };
+
+    // First filter with HtmlParser
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                     encoding,
+                                                     new HtmlCompoundTransform(transforms));
+
+    // Then filter with HighWireFilterRule
+    Reader reader = FilterUtil.getReader(filtered, encoding);
     Reader filtReader = HighWireFilterRule.makeFilteredReader(reader);
     return new ReaderInputStream(filtReader);
   }
+
 }
+
