@@ -34,6 +34,8 @@
         au < released ; Accounting History Volume 10 ; 10 >
         au < released ; Accounting History Volume 11 ; 11 >
         au < released ; Accounting History Volume 12 ; 12 >
+        au < testing ; Accounting History Volume 13 ; 13 >
+        au < testing ; Accounting History Volume 14 ; 14 >
 
       }
 
@@ -64,6 +66,8 @@
         au < do_not_process ; Acta Sociologica Volume 48 ; 48 >
         au < released ; Acta Sociologica Volume 49 ; 49 >
         au < released ; Acta Sociologica Volume 50 ; 50 >
+        au < manifest ; Acta Sociologica Volume 51 ; 51 >
+        au < manifest ; Acta Sociologica Volume 52 ; 52 >
 
       }
 
@@ -94,6 +98,8 @@
         au < do_not_process ; Action Research Volume 3 ; 3 >
         au < released ; Action Research Volume 4 ; 4 >
         au < released ; Action Research Volume 5 ; 5 >
+        au < testing ; Action Research Volume 6 ; 6 >
+        au < testing ; Action Research Volume 7 ; 7 >
 
       }
 
@@ -124,6 +130,8 @@
         au < do_not_process ; Active Learning in Higher Education Volume 6 ; 6 >
         au < released ; Active Learning in Higher Education Volume 7 ; 7 >
         au < released ; Active Learning in Higher Education Volume 8 ; 8 >
+        au < testing ; Active Learning in Higher Education Volume 9 ; 9 >
+        au < testing ; Active Learning in Higher Education Volume 10 ; 10 >
 
       }
 
@@ -154,6 +162,8 @@
         au < do_not_process ; Adaptive Behavior Volume 13 ; 13 >
         au < released ; Adaptive Behavior Volume 14 ; 14 >
         au < released ; Adaptive Behavior Volume 15 ; 15 >
+        au < testing ; Adaptive Behavior Volume 16 ; 16 >
+        au < testing ; Adaptive Behavior Volume 17 ; 17 >
 
       }
 
@@ -184,6 +194,8 @@
         au < do_not_process ; Administration & Society Volume 37 ; 37 >
         au < released ; Administration & Society Volume 38 ; 38 >
         au < released ; Administration & Society Volume 39 ; 39 >
+        au < testing ; Administration & Society Volume 40 ; 40 >
+        au < testing ; Administration & Society Volume 41 ; 41 >
 
       }
 
@@ -215,6 +227,7 @@
         au < do_not_process ; Adult Education Quarterly Volume 56 ; 56 >
         au < released ; Adult Education Quarterly Volume 57 ; 57 >
         au < released ; Adult Education Quarterly Volume 58 ; 58 >
+        au < testing ; Adult Education Quarterly Volume 59 ; 59 >
 
       }
 
@@ -245,6 +258,8 @@
         au < do_not_process ; Advances in Developing Human Resources Volume 7 ; 7 >
         au < released ; Advances in Developing Human Resources Volume 8 ; 8 >
         au < released ; Advances in Developing Human Resources Volume 9 ; 9 >
+        au < testing ; Advances in Developing Human Resources Volume 10 ; 10 >
+        au < testing ; Advances in Developing Human Resources Volume 11 ; 11 >
 
       }
 
@@ -275,6 +290,8 @@
         au < do_not_process ; Affilia Volume 20 ; 20 >
         au < released ; Affilia Volume 21 ; 21 >
         au < released ; Affilia Volume 22 ; 22 >
+        au < testing ; Affilia Volume 23 ; 23 >
+        au < testing ; Affilia Volume 24 ; 24 >
 
       }
 
@@ -296,6 +313,7 @@
         au < released ; American Behavioral Scientist Volume 49 ; 49 >
         au < released ; American Behavioral Scientist Volume 50 ; 50 >
         au < released ; American Behavioral Scientist Volume 51 ; 51 >
+        au < testing ; American Behavioral Scientist Volume 52 ; 52 >
 
       }
 
@@ -314,6 +332,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Educational Research Journal Volume 44 ; 44 >
+        au < testing ; American Educational Research Journal Volume 45 ; 45 >
+        au < testing ; American Educational Research Journal Volume 46 ; 46 >
 
       }
 
@@ -334,6 +354,8 @@
         au < released ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 >
         au < released ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 >
         au < released ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 >
+        au < testing ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 >
+        au < testing ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
 
       }
 
@@ -364,6 +386,8 @@
         au < do_not_process ; American Journal of Evaluation Volume 26 ; 26 >
         au < released ; American Journal of Evaluation Volume 27 ; 27 >
         au < released ; American Journal of Evaluation Volume 28 ; 28 >
+        au < testing ; American Journal of Evaluation Volume 29 ; 29 >
+        au < testing ; American Journal of Evaluation Volume 30 ; 30 >
 
       }
 
@@ -384,6 +408,8 @@
         au < released ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 >
         au < released ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 >
         au < released ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 >
+        au < manifest ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
+        au < manifest ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
 
       }
 
@@ -402,6 +428,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Lifestyle Medicine Volume 1 ; 1 >
+        au < manifest ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
+        au < manifest ; American Journal of Lifestyle Medicine Volume 3 ; 3 >
 
       }
 
@@ -431,7 +459,9 @@
 
         au < do_not_process ; American Journal of Medical Quality Volume 20 ; 20 >
         au < released ; American Journal of Medical Quality Volume 21 ; 21 >
-        au < rieleased ; American Journal of Medical Quality Volume 22 ; 22 >
+        au < released ; American Journal of Medical Quality Volume 22 ; 22 >
+        au < manifest ; American Journal of Medical Quality Volume 23 ; 23 >
+        au < manifest ; American Journal of Medical Quality Volume 24 ; 24 >
 
       }
 
@@ -450,6 +480,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Men's Health Volume 1 ; 1 >
+        au < manifest ; American Journal of Men's Health Volume 2 ; 2 >
+        au < manifest ; American Journal of Men's Health Volume 3 ; 3 >
 
       }
 
@@ -513,6 +545,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; American Politics Research Volume 33 ; 33 >
         au < do_not_process ; American Politics Research Volume 34 ; 34 >
         au < released ; American Politics Research Volume 35 ; 35 >
+        au < manifest ; American Politics Research Volume 36 ; 36 >
+        au < manifest ; American Politics Research Volume 37 ; 37 >
 
       }
 
@@ -533,6 +567,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; The American Review of Public Administration Volume 35 ; 35 >
         au < released ; The American Review of Public Administration Volume 36 ; 36 >
         au < released ; The American Review of Public Administration Volume 37 ; 37 >
+        au < manifest ; The American Review of Public Administration Volume 38 ; 38 >
+        au < manifest ; The American Review of Public Administration Volume 39 ; 39 >
 
       }
 
@@ -553,6 +589,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Angiology Volume 56 ; 56 >
         au < released ; Angiology Volume 57 ; 57 >
         au < released ; Angiology Volume 58 ; 58 >
+        au < manifest ; Angiology Volume 59 ; 59 >
+        au < manifest ; Angiology Volume 60 ; 60 >
 
       }
 
@@ -572,6 +610,8 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Animation Volume 1 ; 1 >
         au < released ; Animation Volume 2 ; 2 >
+        au < manifest ; Animation Volume 3 ; 3 >
+        au < manifest ; Animation Volume 4 ; 4 >
 
       }
 
@@ -616,6 +656,16 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < ready ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
+        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
 
       }
 
@@ -636,6 +686,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Anthropological Theory Volume 5 ; 5 >
         au < released ; Anthropological Theory Volume 6 ; 6 >
         au < released ; Anthropological Theory Volume 7 ; 7 >
+        au < manifest ; Anthropological Theory Volume 8 ; 8 >
+        au < manifest ; Anthropological Theory Volume 9 ; 9 >
 
       }
 
@@ -666,6 +718,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Applied Psychological Measurement Volume 29 ; 29 >
         au < do_not_process ; Applied Psychological Measurement Volume 30 ; 30 >
         au < released ; Applied Psychological Measurement Volume 31 ; 31 >
+        au < manifest ; Applied Psychological Measurement Volume 32 ; 32 >
+        au < manifest ; Applied Psychological Measurement Volume 33 ; 33 >
 
       }
 
@@ -689,6 +743,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Armed Forces & Society Volume 32 ; 32 >
         au < released ; Armed Forces & Society Volume 33 ; 33 >
         au < released ; Armed Forces & Society Volume 34 ; 34 >
+        au < manifest ; Armed Forces & Society Volume 35 ; 35 >
 
       }
 
@@ -709,6 +764,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Arts and Humanities in Higher Education Volume 4 ; 4 >
         au < released ; Arts and Humanities in Higher Education Volume 5 ; 5 >
         au < released ; Arts and Humanities in Higher Education Volume 6 ; 6 >
+        au < manifest ; Arts and Humanities in Higher Education Volume 7 ; 7 >
+        au < manifest ; Arts and Humanities in Higher Education Volume 8 ; 8 >
 
       }
 
@@ -729,6 +786,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Asia Pacific Journal of Human Resources Volume 43 ; 43 >
         au < released ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
         au < released ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
+        au < manifest ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
+        au < manifest ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
 
       }
 
@@ -747,6 +806,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
+        au < manifest ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
+        au < manifest ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
 
@@ -767,6 +828,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Asian Journal of Management Cases Volume 2 ; 2 >
         au < released ; Asian Journal of Management Cases Volume 3 ; 3 >
         au < released ; Asian Journal of Management Cases Volume 4 ; 4 >
+        au < manifest ; Asian Journal of Management Cases Volume 5 ; 5 >
+        au < manifest ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
 
@@ -787,6 +850,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Assessment Volume 12 ; 12 >
         au < released ; Assessment Volume 13 ; 13 >
         au < released ; Assessment Volume 14 ; 14 >
+        au < manifest ; Assessment Volume 15 ; 15 >
+        au < manifest ; Assessment Volume 16 ; 16 >
 
       }
 
@@ -807,6 +872,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Autism Volume 9 ; 9 >
         au < released ; Autism Volume 10 ; 10 >
         au < released ; Autism Volume 11 ; 11 >
+        au < manifest ; Autism Volume 12 ; 12 >
+        au < manifest ; Autism Volume 13 ; 13 >
 
       }
 
@@ -837,6 +904,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Behavior Modification Volume 29 ; 29 >
         au < do_not_process ; Behavior Modification Volume 30 ; 30 >
         au < released ; Behavior Modification Volume 31 ; 31 >
+        au < manifest ; Behavior Modification Volume 32 ; 32 >
+        au < manifest ; Behavior Modification Volume 33 ; 33 >
 
       }
 
@@ -887,6 +956,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < do_not_process ; Biological Research For Nursing Volume 7 ; 7 >
         au < released ; Biological Research For Nursing Volume 8 ; 8 >
         au < released ; Biological Research For Nursing Volume 9 ; 9 >
+        au < manifest ; Biological Research For Nursing Volume 10 ; 10 >
 
       }
 
@@ -917,6 +987,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Body & Society Volume 11 ; 11 >
         au < do_not_process ; Body & Society Volume 12 ; 12 >
         au < released ; Body & Society Volume 13 ; 13 >
+        au < manifest ; Body & Society Volume 14 ; 14 >
+        au < manifest ; Body & Society Volume 15 ; 15 >
 
       }
 
@@ -935,6 +1007,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; British Journal of Infection Control Volume 8 ; 8 >
+        au < manifest ; British Journal of Infection Control Volume 9 ; 9 >
+        au < manifest ; British Journal of Infection Control Volume 10 ; 10 >
 
       }
 
@@ -955,6 +1029,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; British Journal of Visual Impairment Volume 23 ; 23 >
         au < released ; British Journal of Visual Impairment Volume 24 ; 24 >
         au < released ; British Journal of Visual Impairment Volume 25 ; 25 >
+        au < manifest ; British Journal of Visual Impairment Volume 26 ; 26 >
+        au < manifest ; British Journal of Visual Impairment Volume 27 ; 27 >
 
       }
 
@@ -975,6 +1051,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; British Journalism Review Volume 16 ; 16 >
         au < released ; British Journalism Review Volume 17 ; 17 >
         au < released ; British Journalism Review Volume 18 ; 18 >
+        au < manifest ; British Journalism Review Volume 19 ; 19 >
+        au < manifest ; British Journalism Review Volume 20 ; 20 >
 
       }
 
@@ -994,6 +1072,8 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Building Service Engineering Research and Technology Volume 27 ; 27 >
         au < released ; Building Service Engineering Research and Technology Volume 28 ; 28 >
+        au < manifest ; Building Service Engineering Research and Technology Volume 29 ; 29 >
+        au < manifest ; Building Service Engineering Research and Technology Volume 30 ; 30 >
 
       }
 
@@ -1024,6 +1104,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Bulletin of Science, Technology & Society Volume 25 ; 25 >
         au < do_not_process ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
         au < released ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
+        au < manifest ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
+        au < manifest ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
 
       }
 
@@ -1054,6 +1136,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Business & Society Volume 44 ; 44 >
         au < do_not_process ; Business & Society Volume 45 ; 45 >
         au < released ; Business & Society Volume 46 ; 46 >
+        au < manifest ; Business & Society Volume 47 ; 47 >
+        au < manifest ; Business & Society Volume 48 ; 48 >
 
       }
 
@@ -1074,6 +1158,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Business Communication Quarterly Volume 68 ; 68 >
         au < released ; Business Communication Quarterly Volume 69 ; 69 >
         au < released ; Business Communication Quarterly Volume 70 ; 70 >
+        au < manifest ; Business Communication Quarterly Volume 71 ; 71 >
+        au < manifest ; Business Communication Quarterly Volume 72 ; 72 >
 
       }
 
@@ -1094,6 +1180,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Business Information Review Volume 22 ; 22 >
         au < released ; Business Information Review Volume 23 ; 23 >
         au < released ; Business Information Review Volume 24 ; 24 >
+        au < manifest ; Business Information Review Volume 25 ; 25 >
+        au < manifest ; Business Information Review Volume 26 ; 26 >
 
       }
 
@@ -1115,6 +1203,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Canadian Journal of School Psychology Volume 20 ; 20 >
         au < released ; Canadian Journal of School Psychology Volume 21 ; 21 >
         au < released ; Canadian Journal of School Psychology Volume 22 ; 22 >
+        au < manifest ; Canadian Journal of School Psychology Volume 23 ; 23 >
+        au < manifest ; Canadian Journal of School Psychology Volume 24 ; 24 >
 
       }
 
@@ -1134,6 +1224,8 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < ready ; Child Language Teaching and Therapy Volume 20 ; 20 >
         au < released ; Child Language Teaching and Therapy Volume 23 ; 23 >
+        au < manifest ; Child Language Teaching and Therapy Volume 24 ; 24 >
+        au < manifest ; Child Language Teaching and Therapy Volume 25 ; 25 >
 
       }
 
@@ -1154,6 +1246,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Child Maltreatment Volume 10 ; 10 >
         au < released ; Child Maltreatment Volume 11 ; 11 >
         au < released ; Child Maltreatment Volume 12 ; 12 >
+        au < manifest ; Child Maltreatment Volume 13 ; 13 >
+        au < manifest ; Child Maltreatment Volume 14 ; 14 >
 
       }
 
@@ -1174,6 +1268,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Childhood Volume 12 ; 12 >
         au < released ; Childhood Volume 13 ; 13 >
         au < released ; Childhood Volume 14 ; 14 >
+        au < manifest ; Childhood Volume 15 ; 15 >
+        au < manifest ; Childhood Volume 16 ; 16 >
 
       }
 
@@ -1204,6 +1300,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < do_not_process ; China Information Volume 19 ; 19 >
         au < released ; China Information Volume 20 ; 20 >
         au < released ; China Information Volume 21 ; 21 >
+        au < manifest ; China Information Volume 22 ; 22 >
+        au < manifest ; China Information Volume 23 ; 23 >
 
       }
 
@@ -1224,6 +1322,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; China Report Volume 41 ; 41 >
         au < released ; China Report Volume 42 ; 42 >
         au < released ; China Report Volume 43 ; 43 >
+        au < manifest ; China Report Volume 44 ; 44 >
 
       }
 
@@ -1262,6 +1361,7 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Chronic Respiratory Disease Volume 3 ; 3 >
         au < released ; Chronic Respiratory Disease Volume 4 ; 4 >
+        au < manifest ; Chronic Respiratory Disease Volume 5 ; 5 >
 
       }
 
@@ -1283,6 +1383,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Clin-Alert Volume 43 ; 43 >
         au < released ; Clin-Alert Volume 44 ; 44 >
         au < released ; Clin-Alert Volume 45 ; 45 >
+        au < manifest ; Clin-Alert Volume 46 ; 46 >
+        au < manifest ; Clin-Alert Volume 47 ; 47 >
 
       }
 
@@ -1303,6 +1405,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Clinical and Applied Thrombosis/Hemostasis Volume 11 ; 11 >
         au < released ; Clinical and Applied Thrombosis/Hemostasis Volume 12 ; 12 >
         au < released ; Clinical and Applied Thrombosis/Hemostasis Volume 13 ; 13 >
+        au < manifest ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 >
+        au < manifest ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 >
 
       }
 
@@ -1323,6 +1427,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Clinical Case Studies Volume 4 ; 4 >
         au < released ; Clinical Case Studies Volume 5 ; 5 >
         au < released ; Clinical Case Studies Volume 6 ; 6 >
+        au < manifest ; Clinical Case Studies Volume 7 ; 7 >
+        au < manifest ; Clinical Case Studies Volume 8 ; 8 >
 
       }
 
@@ -1353,6 +1459,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Clinical Child Psychology and Psychiatry Volume 10 ; 10 >
         au < do_not_process ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 >
         au < released ; Clinical Child Psychology and Psychiatry Volume 12 ; 12 >
+        au < manifest ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 >
+        au < manifest ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
 
       }
 
@@ -1383,6 +1491,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Clinical Nursing Research Volume 14 ; 14 >
         au < do_not_process ; Clinical Nursing Research Volume 15 ; 15 >
         au < released ; Clinical Nursing Research Volume 16 ; 16 >
+        au < manifest ; Clinical Nursing Research Volume 17 ; 17 >
+        au < manifest ; Clinical Nursing Research Volume 18 ; 18 >
 
       }
 
@@ -1403,6 +1513,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Clinical Pediatrics Volume 44 ; 44 >
         au < released ; Clinical Pediatrics Volume 45 ; 45 >
         au < released ; Clinical Pediatrics Volume 46 ; 46 >
+        au < manifest ; Clinical Pediatrics Volume 47 ; 47 >
+        au < manifest ; Clinical Pediatrics Volume 48 ; 48 >
 
       }
 
@@ -1422,6 +1534,8 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Clinical Rehabilitation Volume 20 ; 20 >
         au < released ; Clinical Rehabilitation Volume 21 ; 21 >
+        au < manifest ; Clinical Rehabilitation Volume 22 ; 22 >
+        au < manifest ; Clinical Rehabilitation Volume 23 ; 23 >
 
       }
 
@@ -1441,6 +1555,8 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Clinical Trials Volume 3 ; 3 >
         au < released ; Clinical Trials Volume 4 ; 4 >
+        au < manifest ; Clinical Trials Volume 5 ; 5 >
+        au < manifest ; Clinical Trials Volume 6 ; 6 >
 
       }
 
@@ -1460,6 +1576,8 @@ comment[ajsm] = this journal has been moved to H20 platform
 
         au < released ; Clothing and Textiles Research Journal Volume 24 ; 24 >
         au < released ; Clothing and Textiles Research Journal Volume 25 ; 25 >
+        au < manifest ; Clothing and Textiles Research Journal Volume 26 ; 26 >
+        au < manifest ; Clothing and Textiles Research Journal Volume 27 ; 27 >
 
       }
 
@@ -1481,6 +1599,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Communication Research Volume 33 ; 33 >
         au < released ; Communication Research Volume 34 ; 34 >
         au < released ; Communication Research Volume 35 ; 35 >
+        au < manifest ; Communication Research Volume 36 ; 36 >
 
       }
 
@@ -1501,6 +1620,7 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Community College Review Volume 33 ; 33 >
         au < released ; Community College Review Volume 34 ; 34 >
         au < released ; Community College Review Volume 35 ; 35 >
+        au < manifest ; Community College Review Volume 36 ; 36 >
 
       }
 
@@ -1521,6 +1641,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Comparative Political Studies Volume 38 ; 38 >
         au < released ; Comparative Political Studies Volume 39 ; 39 >
         au < released ; Comparative Political Studies Volume 40 ; 40 >
+        au < manifest ; Comparative Political Studies Volume 41 ; 41 >
+        au < manifest ; Comparative Political Studies Volume 42 ; 42 >
 
       }
 
@@ -1551,6 +1673,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Compensation & Benefits Review Volume 37 ; 37 >
         au < do_not_process ; Compensation & Benefits Review Volume 38 ; 38 >
         au < released ; Compensation & Benefits Review Volume 39 ; 39 >
+        au < manifest ; Compensation & Benefits Review Volume 40 ; 40 >
+        au < manifest ; Compensation & Benefits Review Volume 41 ; 41 >
 
       }
 
@@ -1581,6 +1705,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < do_not_process ; Complementary Health Practice Review Volume 10 ; 10 >
         au < released ; Complementary Health Practice Review Volume 11 ; 11 >
         au < released ; Complementary Health Practice Review Volume 12 ; 12 >
+        au < manifest ; Complementary Health Practice Review Volume 13 ; 13 >
+        au < manifest ; Complementary Health Practice Review Volume 14 ; 14 >
 
       }
 
@@ -1611,6 +1737,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < do_not_process ; Concurrent Engineering Volume 13 ; 13 >
         au < released ; Concurrent Engineering Volume 14 ; 14 >
         au < released ; Concurrent Engineering Volume 15 ; 15 >
+        au < manifest ; Concurrent Engineering Volume 16 ; 16 >
+        au < manifest ; Concurrent Engineering Volume 17 ; 17 >
 
       }
 
@@ -1641,6 +1769,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < do_not_process ; Contributions to Indian Sociology Volume 39 ; 39 >
         au < released ; Contributions to Indian Sociology Volume 40 ; 40 >
         au < released ; Contributions to Indian Sociology Volume 41 ; 41 >
+        au < manifest ; Contributions to Indian Sociology Volume 42 ; 42 >
+        au < manifest ; Contributions to Indian Sociology Volume 43 ; 43 >
 
       }
 
@@ -1671,6 +1801,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Convergence: The International Journal of Research into New Media Technologies Volume 11 ; 11 >
         au < do_not_process ; Convergence: The International Journal of Research into New Media Technologies Volume 12 ; 12 >
         au < released ; Convergence: The International Journal of Research into New Media Technologies Volume 13 ; 13 >
+        au < manifest ; Convergence: The International Journal of Research into New Media Technologies Volume 14 ; 14 >
+        au < manifest ; Convergence: The International Journal of Research into New Media Technologies Volume 15 ; 15 >
 
       }
 
@@ -1691,6 +1823,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Cooperation and Conflict Volume 40 ; 40 >
         au < released ; Cooperation and Conflict Volume 41 ; 41 >
         au < released ; Cooperation and Conflict Volume 42 ; 42 >
+        au < manifest ; Cooperation and Conflict Volume 43 ; 43 >
+        au < manifest ; Cooperation and Conflict Volume 44 ; 44 >
 
       }
 
@@ -1721,6 +1855,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Cornell Hotel and Restaurant Administration Quarterly Volume 46 ; 46 >
         au < do_not_process ; Cornell Hotel and Restaurant Administration Quarterly Volume 47 ; 47 >
         au < released ; Cornell Hotel and Restaurant Administration Quarterly Volume 48 ; 48 >
+        au < manifest ; Cornell Hotel and Restaurant Administration Quarterly Volume 49 ; 49 >
+        au < manifest ; Cornell Hotel and Restaurant Administration Quarterly Volume 50 ; 50 >
 
       }
 
@@ -1751,6 +1887,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; The Counseling Psychologist Volume 33 ; 33 >
         au < do_not_process ; The Counseling Psychologist Volume 34 ; 34 >
         au < released ; The Counseling Psychologist Volume 35 ; 35 >
+        au < manifest ; The Counseling Psychologist Volume 36 ; 36 >
+        au < manifest ; The Counseling Psychologist Volume 37 ; 37 >
 
       }
 
@@ -1771,6 +1909,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Crime & Delinquency Volume 51 ; 51 >
         au < ready ; Crime & Delinquency Volume 52 ; 52 >
         au < released ; Crime & Delinquency Volume 53 ; 53 >
+        au < manifest ; Crime & Delinquency Volume 54 ; 54 >
+        au < manifest ; Crime & Delinquency Volume 55 ; 55 >
 
       }
 
@@ -1791,6 +1931,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Crime, Media, Culture Volume 1 ; 1 >
         au < released ; Crime, Media, Culture Volume 2 ; 2 >
         au < released ; Crime, Media, Culture Volume 3 ; 3 >
+        au < manifest ; Crime, Media, Culture Volume 4 ; 4 >
+        au < manifest ; Crime, Media, Culture Volume 5 ; 5 >
 
       }
 
@@ -1811,6 +1953,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Criminology and Criminal Justice Volume 5 ; 5 >
         au < released ; Criminology and Criminal Justice Volume 6 ; 6 >
         au < released ; Criminology and Criminal Justice Volume 7 ; 7 >
+        au < manifest ; Criminology and Criminal Justice Volume 8 ; 8 >
+        au < manifest ; Criminology and Criminal Justice Volume 9 ; 9 >
 
       }
 
@@ -1831,6 +1975,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Criminal Justice and Behavior Volume 32 ; 32 >
         au < released ; Criminal Justice and Behavior Volume 33 ; 33 >
         au < released ; Criminal Justice and Behavior Volume 34 ; 34 >
+        au < manifest ; Criminal Justice and Behavior Volume 35 ; 35 >
+        au < manifest ; Criminal Justice and Behavior Volume 36 ; 36 >
 
       }
 
@@ -1861,6 +2007,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Criminal Justice Policy Review Volume 16 ; 16 >
         au < do_not_process ; Criminal Justice Policy Review Volume 17 ; 17 >
         au < released ; Criminal Justice Policy Review Volume 18 ; 18 >
+        au < manifest ; Criminal Justice Policy Review Volume 19 ; 19 >
+        au < manifest ; Criminal Justice Policy Review Volume 20 ; 20 >
 
       }
 
@@ -1881,6 +2029,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; Criminal Justice Review Volume 30 ; 30 >
         au < released ; Criminal Justice Review Volume 31 ; 31 >
         au < released ; Criminal Justice Review Volume 32 ; 32 >
+        au < manifest ; Criminal Justice Review Volume 33 ; 33 >
+        au < manifest ; Criminal Justice Review Volume 34 ; 34 >
 
       }
 
@@ -1904,6 +2054,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Critical Social Policy Volume 25 ; 25 >
         au < released ; Critical Social Policy Volume 26 ; 26 >
         au < released ; Critical Social Policy Volume 27 ; 27 >
+        au < manifest ; Critical Social Policy Volume 28 ; 28 >
+        au < manifest ; Critical Social Policy Volume 29 ; 29 >
 
       }
 
@@ -1934,6 +2086,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Critique of Anthropology Volume 25 ; 25 >
         au < do_not_process ; Critique of Anthropology Volume 26 ; 26 >
         au < released ; Critique of Anthropology Volume 27 ; 27 >
+        au < manifest ; Critique of Anthropology Volume 28 ; 28 >
+        au < manifest ; Critique of Anthropology Volume 29 ; 29 >
 
       }
 
@@ -1964,6 +2118,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Cross-Cultural Research Volume 39 ; 39 >
         au < do_not_process ; Cross-Cultural Research Volume 40 ; 40 >
         au < released ; Cross-Cultural Research Volume 41 ; 41 >
+        au < manifest ; Cross-Cultural Research Volume 42 ; 42 >
+        au < manifest ; Cross-Cultural Research Volume 43 ; 43 >
 
       }
 
@@ -1984,6 +2140,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Cultural Dynamics Volume 17 ; 17 >
         au < released ; Cultural Dynamics Volume 18 ; 18 >
         au < released ; Cultural Dynamics Volume 19 ; 19 >
+        au < manifest ; Cultural Dynamics Volume 20 ; 20 >
+        au < manifest ; Cultural Dynamics Volume 21 ; 21 >
 
       }
 
@@ -2003,6 +2161,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Cultural Geographies Volume 13 ; 13 >
         au < released ; Cultural Geographies Volume 14 ; 14 >
+        au < manifest ; Cultural Geographies Volume 15 ; 15 >
+        au < manifest ; Cultural Geographies Volume 16 ; 16 >
 
       }
 
@@ -2021,6 +2181,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Cultural Sociology Volume 1 ; 1 >
+        au < manifest ; Cultural Sociology Volume 2 ; 2 >
+        au < manifest ; Cultural Sociology Volume 3 ; 3 >
 
       }
 
@@ -2041,6 +2203,8 @@ comment[csp7] = manifest page is malformed
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
         au < ready ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
         au < ready ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
+        au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
+        au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
 
       }
 
@@ -2071,6 +2235,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Culture & Psychology Volume 11 ; 11 >
         au < do_not_process ; Culture & Psychology Volume 12 ; 12 >
         au < released ; Culture & Psychology Volume 13 ; 13 >
+        au < manifest ; Culture & Psychology Volume 14 ; 14 >
+        au < manifest ; Culture & Psychology Volume 15 ; 15 >
 
       }
 
@@ -2091,6 +2257,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Current Sociology Volume 53 ; 53 >
         au < released ; Current Sociology Volume 54 ; 54 >
         au < released ; Current Sociology Volume 55 ; 55 >
+        au < manifest ; Current Sociology Volume 56 ; 56 >
+        au < manifest ; Current Sociology Volume 57 ; 57 >
 
       }
 
@@ -2122,6 +2290,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Currents in Biblical Research Volume 4 ; 4 >
         au < released ; Currents in Biblical Research Volume 5 ; 5 >
         au < released ; Currents in Biblical Research Volume 6 ; 6 >
+        au < manifest ; Currents in Biblical Research Volume 7 ; 7 >
 
       }
 
@@ -2142,6 +2311,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Dementia Volume 4 ; 4 >
         au < released ; Dementia Volume 5 ; 5 >
         au < released ; Dementia Volume 6 ; 6 >
+        au < manifest ; Dementia Volume 7 ; 7 >
+        au < manifest ; Dementia Volume 8 ; 8 >
 
       }
 
@@ -2172,6 +2343,8 @@ comment[csp7] = manifest page is malformed
         au < released ; The Diabetes Educator Volume 31 ; 31 >
         au < do_not_process ; The Diabetes Educator Volume 32 ; 32 >
         au < released ; The Diabetes Educator Volume 33 ; 33 >
+        au < manifest ; The Diabetes Educator Volume 34 ; 34 >
+        au < manifest ; The Diabetes Educator Volume 35 ; 35 >
 
       }
 
@@ -2192,6 +2365,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Diogenes Volume 52 ; 52 >
         au < released ; Diogenes Volume 53 ; 53 >
         au < released ; Diogenes Volume 54 ; 54 >
+        au < manifest ; Diogenes Volume 55 ; 55 >
+        au < manifest ; Diogenes Volume 56 ; 56 >
 
       }
 
@@ -2210,6 +2385,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Discourse & Communication Volume 1 ; 1 >
+        au < manifest ; Discourse & Communication Volume 2 ; 2 >
+        au < manifest ; Discourse & Communication Volume 3 ; 3 >
 
       }
 
@@ -2230,6 +2407,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Discourse & Society Volume 16 ; 16 >
         au < ready ; Discourse & Society Volume 17 ; 17 >
         au < ready ; Discourse & Society Volume 18 ; 18 >
+        au < manifest ; Discourse & Society Volume 19 ; 19 >
+        au < manifest ; Discourse & Society Volume 20 ; 20 >
 
       }
 
@@ -2250,6 +2429,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Discourse Studies Volume 7 ; 7 >
         au < released ; Discourse Studies Volume 8 ; 8 >
         au < released ; Discourse Studies Volume 9 ; 9 >
+        au < manifest ; Discourse Studies Volume 10 ; 10 >
+        au < manifest ; Discourse Studies Volume 11 ; 11 >
 
       }
 
@@ -2270,6 +2451,8 @@ comment[csp7] = manifest page is malformed
         au < released ; East European Politics & Societies Volume 19 ; 19 >
         au < released ; East European Politics & Societies Volume 20 ; 20 >
         au < released ; East European Politics & Societies Volume 21 ; 21 >
+        au < manifest ; East European Politics & Societies Volume 22 ; 22 >
+        au < manifest ; East European Politics & Societies Volume 23 ; 23 >
 
       }
 
@@ -2282,6 +2465,8 @@ comment[csp7] = manifest page is malformed
       >
 
       {
+
+comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://ecc.sagepub.com/
@@ -2311,6 +2496,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Economic and Industrial Democracy Volume 26 ; 26 >
         au < ready ; Economic and Industrial Democracy Volume 27 ; 27 >
         au < ready ; Economic and Industrial Democracy Volume 28 ; 28 >
+        au < manifest ; Economic and Industrial Democracy Volume 29 ; 29 >
+        au < manifest ; Economic and Industrial Democracy Volume 30 ; 30 >
 
       }
 
@@ -2331,6 +2518,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Economic Development Quarterly Volume 19 ; 19 >
         au < released ; Economic Development Quarterly Volume 20 ; 20 >
         au < released ; Economic Development Quarterly Volume 21 ; 21 >
+        au < manifest ; Economic Development Quarterly Volume 22 ; 22 >
+        au < manifest ; Economic Development Quarterly Volume 23 ; 23 >
 
       }
 
@@ -2362,6 +2551,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Education and Urban Society Volume 38 ; 38 >
         au < released ; Education and Urban Society Volume 39 ; 39 >
         au < released ; Education and Urban Society Volume 40 ; 40 >
+        au < manifest ; Education and Urban Society Volume 41 ; 41 >
 
       }
 
@@ -2381,6 +2571,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Education, Citizenship and Social Justice Volume 1 ; 1 >
         au < released ; Education, Citizenship and Social Justice Volume 2 ; 2 >
+        au < manifest ; Education, Citizenship and Social Justice Volume 3 ; 3 >
+        au < manifest ; Education, Citizenship and Social Justice Volume 4 ; 4 >
 
       }
 
@@ -2411,6 +2603,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Educational Administration Quarterly Volume 41 ; 41 >
         au < do_not_process ; Educational Administration Quarterly Volume 42 ; 42 >
         au < ready ; Educational Administration Quarterly Volume 43 ; 43 >
+        au < manifest ; Educational Administration Quarterly Volume 44 ; 44 >
+        au < manifest ; Educational Administration Quarterly Volume 45 ; 45 >
 
       }
 
@@ -2431,6 +2625,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Educational and Psychological Measurement Volume 65 ; 65 >
         au < ready ; Educational and Psychological Measurement Volume 66 ; 66 >
         au < ready ; Educational and Psychological Measurement Volume 67 ; 67 >
+        au < manifest ; Educational and Psychological Measurement Volume 68 ; 68 >
+        au < manifest ; Educational and Psychological Measurement Volume 69 ; 69 >
 
       }
 
@@ -2449,6 +2645,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Evaluation and Policy Analysis Volume 29 ; 29 >
+        au < manifest ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
+        au < manifest ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
 
       }
 
@@ -2479,6 +2677,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Educational Management Administration & Leadership Volume 33 ; 33 >
         au < do_not_process ; Educational Management Administration & Leadership Volume 34 ; 34 >
         au < released ; Educational Management Administration & Leadership Volume 35 ; 35 >
+        au < manifest ; Educational Management Administration & Leadership Volume 36 ; 36 >
+        au < manifest ; Educational Management Administration & Leadership Volume 37 ; 37 >
 
       }
 
@@ -2499,6 +2699,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Educational Policy Volume 19 ; 19 >
         au < ready ; Educational Policy Volume 20 ; 20 >
         au < released ; Educational Policy Volume 21 ; 21 >
+        au < manifest ; Educational Policy Volume 22 ; 22 >
+        au < manifest ; Educational Policy Volume 23 ; 23 >
 
       }
 
@@ -2517,6 +2719,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Researcher Volume 36 ; 36 >
+        au < manifest ; Educational Researcher Volume 37 ; 37 >
+        au < manifest ; Educational Researcher Volume 38 ; 38 >
 
       }
 
@@ -2529,6 +2733,8 @@ comment[csp7] = manifest page is malformed
       >
 
       {
+
+comment[ebd] = now published by Taylor & Francis
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ebd.sagepub.com/
@@ -2565,6 +2771,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Environment and Behavior Volume 37 ; 37 >
         au < do_not_process ; Environment and Behavior Volume 38 ; 38 >
         au < released ; Environment and Behavior Volume 39 ; 39 >
+        au < manifest ; Environment and Behavior Volume 40 ; 40 >
+        au < manifest ; Environment and Behavior Volume 41 ; 41 >
 
       }
 
@@ -2596,6 +2804,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Environment and Urbanization Volume 17 ; 17 >
         au < released ; Environment and Urbanization Volume 18 ; 18 >
         au < released ; Environment and Urbanization Volume 19 ; 19 >
+        au < manifest ; Environment and Urbanization Volume 20 ; 20 >
+        au < manifest ; Environment and Urbanization Volume 21 ; 21 >
 
       }
 
@@ -2626,6 +2836,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Ethnicities Volume 5 ; 5 >
         au < do_not_process ; Ethnicities Volume 6 ; 6 >
         au < released ; Ethnicities Volume 7 ; 7 >
+        au < manifest ; Ethnicities Volume 8 ; 8 >
+        au < manifest ; Ethnicities Volume 9 ; 9 >
 
       }
 
@@ -2646,6 +2858,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Ethnography Volume 6 ; 6 >
         au < released ; Ethnography Volume 7 ; 7 >
         au < released ; Ethnography Volume 8 ; 8 >
+        au < manifest ; Ethnography Volume 9 ; 9 >
+        au < manifest ; Ethnography Volume 10 ; 10 >
 
       }
 
@@ -2676,6 +2890,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European History Quarterly Volume 35 ; 35 >
         au < do_not_process ; European History Quarterly Volume 36 ; 36 >
         au < released ; European History Quarterly Volume 37 ; 37 >
+        au < manifest ; European History Quarterly Volume 38 ; 38 >
+        au < manifest ; European History Quarterly Volume 39 ; 39 >
 
       }
 
@@ -2706,6 +2922,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Archaeology Volume 7 ; 7 >
         au < do_not_process ; European Journal of Archaeology Volume 8 ; 8 >
         au < released ; European Journal of Archaeology Volume 9 ; 9 >
+        au < manifest ; European Journal of Archaeology Volume 10 ; 10 >
+        au < manifest ; European Journal of Archaeology Volume 11 ; 11 >
 
       }
 
@@ -2726,6 +2944,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Communication Volume 20 ; 20 >
         au < released ; European Journal of Communication Volume 21 ; 21 >
         au < released ; European Journal of Communication Volume 22 ; 22 >
+        au < manifest ; European Journal of Communication Volume 23 ; 23 >
+        au < manifest ; European Journal of Communication Volume 24 ; 24 >
 
       }
 
@@ -2747,6 +2967,7 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Criminology Volume 3 ; 3 >
         au < released ; European Journal of Criminology Volume 4 ; 4 >
         au < released ; European Journal of Criminology Volume 5 ; 5 >
+        au < manifest ; European Journal of Criminology Volume 6 ; 6 >
 
       }
 
@@ -2767,6 +2988,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Cultural Studies Volume 8 ; 8 >
         au < released ; European Journal of Cultural Studies Volume 9 ; 9 >
         au < released ; European Journal of Cultural Studies Volume 10 ; 10 >
+        au < manifest ; European Journal of Cultural Studies Volume 11 ; 11 >
+        au < manifest ; European Journal of Cultural Studies Volume 12 ; 12 >
 
       }
 
@@ -2797,7 +3020,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Industrial Relations Volume 11 ; 11 >
         au < do_not_process ; European Journal of Industrial Relations Volume 12 ; 12 >
         au < released ; European Journal of Industrial Relations Volume 13 ; 13 >
-
+        au < manifest ; European Journal of Industrial Relations Volume 14 ; 14 >
+        au < manifest ; European Journal of Industrial Relations Volume 15 ; 15 >
       }
 
     }
@@ -2827,6 +3051,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of International Relations Volume 11 ; 11 >
         au < do_not_process ; European Journal of International Relations Volume 12 ; 12 >
         au < released ; European Journal of International Relations Volume 13 ; 13 >
+        au < manifest ; European Journal of International Relations Volume 14 ; 14 >
+        au < manifest ; European Journal of International Relations Volume 15 ; 15 >
 
       }
 
@@ -2857,6 +3083,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Political Theory Volume 4 ; 4 >
         au < do_not_process ; European Journal of Political Theory Volume 5 ; 5 >
         au < released ; European Journal of Political Theory Volume 6 ; 6 >
+        au < manifest ; European Journal of Political Theory Volume 7 ; 7 >
+        au < manifest ; European Journal of Political Theory Volume 8 ; 8 >
 
       }
 
@@ -2877,6 +3105,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Social Theory Volume 8 ; 8 >
         au < released ; European Journal of Social Theory Volume 9 ; 9 >
         au < released ; European Journal of Social Theory Volume 10 ; 10 >
+        au < manifest ; European Journal of Social Theory Volume 11 ; 11 >
+        au < manifest ; European Journal of Social Theory Volume 12 ; 12 >
 
       }
 
@@ -2907,6 +3137,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Journal of Women's Studies Volume 12 ; 12 >
         au < do_not_process ; European Journal of Women's Studies Volume 13 ; 13 >
         au < released ; European Journal of Women's Studies Volume 14 ; 14 >
+        au < manifest ; European Journal of Women's Studies Volume 15 ; 15 >
+        au < manifest ; European Journal of Women's Studies Volume 16 ; 16 >
 
       }
 
@@ -2927,6 +3159,7 @@ comment[csp7] = manifest page is malformed
         au < released ; European Physical Education Review Volume 11 ; 11 >
         au < released ; European Physical Education Review Volume 12 ; 12 >
         au < released ; European Physical Education Review Volume 13 ; 13 >
+        au < manifest ; European Physical Education Review Volume 14 ; 14 >
 
       }
 
@@ -2957,6 +3190,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Union Politics Volume 6 ; 6 >
         au < do_not_process ; European Union Politics Volume 7 ; 7 >
         au < released ; European Union Politics Volume 8 ; 8 >
+        au < manifest ; European Union Politics Volume 9 ; 9 >
+        au < manifest ; European Union Politics Volume 10 ; 10 >
 
       }
 
@@ -2987,6 +3222,8 @@ comment[csp7] = manifest page is malformed
         au < released ; European Urban and Regional Studies Volume 12 ; 12 >
         au < do_not_process ; European Urban and Regional Studies Volume 13 ; 13 >
         au < released ; European Urban and Regional Studies Volume 14 ; 14 >
+        au < manifest ; European Urban and Regional Studies Volume 15 ; 15 >
+        au < manifest ; European Urban and Regional Studies Volume 16 ; 16 >
 
       }
 
@@ -3007,6 +3244,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Evaluation Volume 11 ; 11 >
         au < released ; Evaluation Volume 12 ; 12 >
         au < released ; Evaluation Volume 13 ; 13 >
+        au < manifest ; Evaluation Volume 14 ; 14 >
+        au < manifest ; Evaluation Volume 15 ; 15 >
 
       }
 
@@ -3037,6 +3276,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Evaluation & the Health Professions Volume 28 ; 28 >
         au < do_not_process ; Evaluation & the Health Professions Volume 29 ; 29 >
         au < ready ; Evaluation & the Health Professions Volume 30 ; 30 >
+        au < manifest ; Evaluation & the Health Professions Volume 31 ; 31 >
+        au < manifest ; Evaluation & the Health Professions Volume 32 ; 32 >
 
       }
 
@@ -3067,6 +3308,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Evaluation Review Volume 29 ; 29 >
         au < do_not_process ; Evaluation Review Volume 30 ; 30 >
         au < released ; Evaluation Review Volume 31 ; 31 >
+        au < manifest ; Evaluation Review Volume 32 ; 32 >
+        au < manifest ; Evaluation Review Volume 33 ; 33 >
 
       }
 
@@ -3079,6 +3322,8 @@ comment[csp7] = manifest page is malformed
       >
 
       {
+
+comment[exm] = now published by Springer
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://exm.sagepub.com/
@@ -3116,6 +3361,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; The Expository Times Volume 117 ; 117 >
         au < released ; The Expository Times Volume 118 ; 118 >
         au < released ; The Expository Times Volume 119 ; 119 >
+        au < manifest ; The Expository Times Volume 120 ; 120 >
 
       }
 
@@ -3137,6 +3383,7 @@ comment[csp7] = manifest page is malformed
         au < released ; Family and Consumer Sciences Research Journal Volume 34 ; 34 >
         au < released ; Family and Consumer Sciences Research Journal Volume 35 ; 35 >
         au < released ; Family and Consumer Sciences Research Journal Volume 36 ; 36 >
+        au < manifest ; Family and Consumer Sciences Research Journal Volume 37 ; 37 >
 
       }
 
@@ -3157,6 +3404,8 @@ comment[csp7] = manifest page is malformed
         au < released ; The Family Journal Volume 13 ; 13 >
         au < released ; The Family Journal Volume 14 ; 14 >
         au < released ; The Family Journal Volume 15 ; 15 >
+        au < manifest ; The Family Journal Volume 16 ; 16 >
+        au < manifest ; The Family Journal Volume 17 ; 17 >
 
       }
 
@@ -3187,6 +3436,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Feminism & Psychology Volume 15 ; 15 >
         au < do_not_process ; Feminism & Psychology Volume 16 ; 16 >
         au < released ; Feminism & Psychology Volume 17 ; 17 >
+        au < manifest ; Feminism & Psychology Volume 18 ; 18 >
+        au < manifest ; Feminism & Psychology Volume 19 ; 19 >
 
       }
 
@@ -3206,6 +3457,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Feminist Criminology Volume 1 ; 1 >
         au < released ; Feminist Criminology Volume 2 ; 2 >
+        au < manifest ; Feminist Criminology Volume 3 ; 3 >
+        au < manifest ; Feminist Criminology Volume 4 ; 4 >
 
       }
 
@@ -3227,6 +3480,7 @@ comment[csp7] = manifest page is malformed
         au < released ; Feminist Theology Volume 14 ; 14 >
         au < released ; Feminist Theology Volume 15 ; 15 >
         au < released ; Feminist Theology Volume 16 ; 16 >
+        au < manifest ; Feminist Theology Volume 17 ; 17 >
 
       }
 
@@ -3247,6 +3501,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Feminist Theory Volume 6 ; 6 >
         au < released ; Feminist Theory Volume 7 ; 7 >
         au < released ; Feminist Theory Volume 8 ; 8 >
+        au < manifest ; Feminist Theory Volume 9 ; 9 >
+        au < manifest ; Feminist Theory Volume 10 ; 10 >
 
       }
 
@@ -3267,6 +3523,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Field Methods Volume 17 ; 17 >
         au < released ; Field Methods Volume 18 ; 18 >
         au < released ; Field Methods Volume 19 ; 19 >
+        au < manifest ; Field Methods Volume 20 ; 20 >
+        au < manifest ; Field Methods Volume 21 ; 21 >
 
       }
 
@@ -3297,6 +3555,8 @@ comment[csp7] = manifest page is malformed
         au < released ; First Language Volume 25 ; 25 >
         au < do_not_process ; First Language Volume 26 ; 26 >
         au < released ; First Language Volume 27 ; 27 >
+        au < manifest ; First Language Volume 28 ; 28 >
+        au < manifest ; First Language Volume 29 ; 29 >
 
       }
 
@@ -3317,6 +3577,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Food Science and Technology International Volume 11 ; 11 >
         au < released ; Food Science and Technology International Volume 12 ; 12 >
         au < released ; Food Science and Technology International Volume 13 ; 13 >
+        au < manifest ; Food Science and Technology International Volume 14 ; 14 >
+        au < manifest ; Food Science and Technology International Volume 15 ; 15 >
 
       }
 
@@ -3347,6 +3609,8 @@ comment[csp7] = manifest page is malformed
         au < released ; French Cultural Studies Volume 16 ; 16 >
         au < do_not_process ; French Cultural Studies Volume 17 ; 17 >
         au < released ; French Cultural Studies Volume 18 ; 18 >
+        au < manifest ; French Cultural Studies Volume 19 ; 19 >
+        au < manifest ; French Cultural Studies Volume 20 ; 20 >
 
       }
 
@@ -3376,6 +3640,8 @@ comment[csp7] = manifest page is malformed
 
         au < do_not_process ; Games and Culture Volume 1 ; 1 >
         au < released ; Games and Culture Volume 2 ; 2 >
+        au < manifest ; Games and Culture Volume 3 ; 3 >
+        au < manifest ; Games and Culture Volume 4 ; 4 >
 
       }
 
@@ -3396,6 +3662,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Gender & Society Volume 19 ; 19 >
         au < released ; Gender & Society Volume 20 ; 20 >
         au < released ; Gender & Society Volume 21 ; 21 >
+        au < manifest ; Gender & Society Volume 22 ; 22 >
+        au < manifest ; Gender & Society Volume 23 ; 23 >
 
       }
 
@@ -3416,6 +3684,7 @@ comment[csp7] = manifest page is malformed
         au < released ; Gender, Technology and Development Volume 9 ; 9 >
         au < ready ; Gender, Technology and Development Volume 10 ; 10 >
         au < released ; Gender, Technology and Development Volume 11 ; 11 >
+        au < manifest ; Gender, Technology and Development Volume 12 ; 12 >
 
       }
 
@@ -3433,11 +3702,13 @@ comment[csp7] = manifest page is malformed
         param[base_url] = http://ghj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < released ; German History Volume 21 ; 21 >
-        au < exists ; German History Volume 22 ; 22 >
-        au < exists ; German History Volume 23 ; 23 >
-        au < released ; German History Volume 24 ; 24 >
-        au < released ; German History Volume 25 ; 25 >
+comment[ghj] = now published by Oxford Univeristy Press
+
+        au < down ; German History Volume 21 ; 21 >
+        au < down ; German History Volume 22 ; 22 >
+        au < down ; German History Volume 23 ; 23 >
+        au < down ; German History Volume 24 ; 24 >
+        au < down ; German History Volume 25 ; 25 >
 
       }
 
@@ -3457,6 +3728,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Gifted Child Quarterly Volume 50 ; 50 >
         au < released ; Gifted Child Quarterly Volume 51 ; 51 >
+        au < manifest ; Gifted Child Quarterly Volume 52 ; 52 >
+        au < manifest ; Gifted Child Quarterly Volume 53 ; 53 >
 
       }
 
@@ -3477,6 +3750,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Global Business Review Volume 6 ; 6 >
         au < released ; Global Business Review Volume 7 ; 7 >
         au < released ; Global Business Review Volume 8 ; 8 >
+        au < manifest ; Global Business Review Volume 9 ; 9 >
+        au < manifest ; Global Business Review Volume 10 ; 10 >
 
       }
 
@@ -3497,6 +3772,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Global Media and Communication Volume 1 ; 1 >
         au < released ; Global Media and Communication Volume 2 ; 2 >
         au < released ; Global Media and Communication Volume 3 ; 3 >
+        au < manifest ; Global Media and Communication Volume 4 ; 4 >
+        au < manifest ; Global Media and Communication Volume 5 ; 5 >
 
       }
 
@@ -3517,6 +3794,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Global Social Policy Volume 5 ; 5 >
         au < released ; Global Social Policy Volume 6 ; 6 >
         au < released ; Global Social Policy Volume 7 ; 7 >
+        au < manifest ; Global Social Policy Volume 8 ; 8 >
+        au < manifest ; Global Social Policy Volume 9 ; 9 >
 
       }
 
@@ -3547,6 +3826,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Group & Organization Management Volume 30 ; 30 >
         au < do_not_process ; Group & Organization Management Volume 31 ; 31 >
         au < ready ; Group & Organization Management Volume 32 ; 32 >
+        au < manifest ; Group & Organization Management Volume 33 ; 33 >
+        au < manifest ; Group & Organization Management Volume 34 ; 34 >
 
       }
 
@@ -3567,6 +3848,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Group Analysis Volume 38 ; 38 >
         au < released ; Group Analysis Volume 39 ; 39 >
         au < released ; Group Analysis Volume 40 ; 40 >
+        au < manifest ; Group Analysis Volume 41 ; 41 >
+        au < manifest ; Group Analysis Volume 42 ; 42 >
 
       }
 
@@ -3597,6 +3880,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Group Processes & Intergroup Relations Volume 8 ; 8 >
         au < do_not_process ; Group Processes & Intergroup Relations Volume 9 ; 9 >
         au < released ; Group Processes & Intergroup Relations Volume 10 ; 10 >
+        au < manifest ; Group Processes & Intergroup Relations Volume 11 ; 11 >
+        au < manifest ; Group Processes & Intergroup Relations Volume 12 ; 12 >
 
       }
 
@@ -3627,6 +3912,8 @@ comment[csp7] = manifest page is malformed
         au < released ; The Harvard International Journal of Press/Politics Volume 10 ; 10 >
         au < do_not_process ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
         au < ready ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
+        au < manifest ; The Harvard International Journal of Press/Politics Volume 13 ; 13 >
+        au < manifest ; The Harvard International Journal of Press/Politics Volume 14 ; 14 >
 
       }
 
@@ -3657,6 +3944,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Health Education & Behavior Volume 32 ; 32 >
         au < do_not_process ; Health Education & Behavior Volume 33 ; 33 >
         au < released ; Health Education & Behavior Volume 34 ; 34 >
+        au < manifest ; Health Education & Behavior Volume 35 ; 35 >
+        au < manifest ; Health Education & Behavior Volume 36 ; 36 >
 
       }
 
@@ -3676,6 +3965,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Health Education Journal Volume 65 ; 65 >
         au < released ; Health Education Journal Volume 66 ; 66 >
+        au < manifest ; Health Education Journal Volume 67 ; 67 >
+        au < manifest ; Health Education Journal Volume 68 ; 68 >
 
       }
 
@@ -3706,6 +3997,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Health Informatics Journal Volume 11 ; 11 >
         au < do_not_process ; Health Informatics Journal Volume 12 ; 12 >
         au < ready ; Health Informatics Journal Volume 13 ; 13 >
+        au < manifest ; Health Informatics Journal Volume 14 ; 14 >
+        au < manfiest ; Health Informatics Journal Volume 15 ; 15 >
 
       }
 
@@ -3736,6 +4029,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Health Promotion Practice Volume 6 ; 6 >
         au < do_not_process ; Health Promotion Practice Volume 7 ; 7 >
         au < released ; Health Promotion Practice Volume 8 ; 8 >
+        au < manifest ; Health Promotion Practice Volume 9 ; 9 >
+        au < manifest ; Health Promotion Practice Volume 10 ; 10 >
 
       }
 
@@ -3766,6 +4061,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Health: Volume 9 ; 9 >
         au < do_not_process ; Health: Volume 10 ; 10 >
         au < released ; Health: Volume 11 ; 11 >
+        au < manifest ; Health: Volume 12 ; 12 >
+        au < manifest ; Health: Volume 13 ; 13 >
 
       }
 
@@ -3786,6 +4083,8 @@ comment[csp7] = manifest page is malformed
         au < released ; High Performance Polymers Volume 17 ; 17 >
         au < released ; High Performance Polymers Volume 18 ; 18 >
         au < released ; High Performance Polymers Volume 19 ; 19 >
+        au < manifest ; High Performance Polymers Volume 20 ; 20 >
+        au < manifest ; High Performance Polymers Volume 21 ; 21 >
 
       }
 
@@ -3816,6 +4115,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Hispanic Journal of Behavioral Sciences Volume 27 ; 27 >
         au < do_not_process ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
         au < ready ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
+        au < manifest ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 >
+        au < manifest ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 >
 
       }
 
@@ -3846,6 +4147,8 @@ comment[csp7] = manifest page is malformed
         au < released ; History of Psychiatry Volume 16 ; 16 >
         au < do_not_process ; History of Psychiatry Volume 17 ; 17 >
         au < released ; History of Psychiatry Volume 18 ; 18 >
+        au < manifest ; History of Psychiatry Volume 19 ; 19 >
+        au < manifest ; History of Psychiatry Volume 20 ; 20 >
 
       }
 
@@ -3876,6 +4179,8 @@ comment[csp7] = manifest page is malformed
         au < released ; History of the Human Sciences Volume 18 ; 18 >
         au < do_not_process ; History of the Human Sciences Volume 19 ; 19 >
         au < released ; History of the Human Sciences Volume 20 ; 20 >
+        au < manifest ; History of the Human Sciences Volume 21 ; 21 >
+        au < manifest ; History of the Human Sciences Volume 22 ; 22 >
 
       }
 
@@ -3895,6 +4200,8 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; The Holocene Volume 16 ; 16 >
         au < ready ; The Holocene Volume 17 ; 17 >
+        au < manifest ; The Holocene Volume 18 ; 18 >
+        au < manifest ; The Holocene Volume 19 ; 19 >
 
       }
 
@@ -3916,6 +4223,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Home Health Care Management & Practice Volume 18 ; 18 >
         au < ready ; Home Health Care Management & Practice Volume 19 ; 19 >
         au < ready ; Home Health Care Management & Practice Volume 20 ; 20 >
+        au < manifest ; Home Health Care Management & Practice Volume 21 ; 21 >
 
       }
 
@@ -3946,6 +4254,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Homicide Studies Volume 9 ; 9 >
         au < do_not_process ; Homicide Studies Volume 10 ; 10 >
         au < ready ; Homicide Studies Volume 11 ; 11 >
+        au < manifest ; Homicide Studies Volume 12 ; 12 >
+        au < manifest ; Homicide Studies Volume 13 ; 13 >
 
       }
 
@@ -3966,6 +4276,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Human & Experimental Toxicology Volume 21 ; 21 >
         au < ready ; Human & Experimental Toxicology Volume 25 ; 25 >
         au < ready ; Human & Experimental Toxicology Volume 26 ; 26 >
+        au < manifest ; Human & Experimental Toxicology Volume 27 ; 27 >
+        au < manifest ; Human & Experimental Toxicology Volume 28 ; 28 >
 
       }
 
@@ -3996,6 +4308,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Human Relations Volume 58 ; 58 >
         au < do_not_process ; Human Relations Volume 59 ; 59 >
         au < ready ; Human Relations Volume 60 ; 60 >
+        au < manifest ; Human Relations Volume 61 ; 61 >
+        au < manifest ; Human Relations Volume 62 ; 62 >
 
       }
 
@@ -4026,6 +4340,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Human Resource Development Review Volume 4 ; 4 >
         au < do_not_process ; Human Resource Development Review Volume 5 ; 5 >
         au < ready ; Human Resource Development Review Volume 6 ; 6 >
+        au < manifest ; Human Resource Development Review Volume 7 ; 7 >
+        au < manifest ; Human Resource Development Review Volume 8 ; 8 >
 
       }
 
@@ -4056,6 +4372,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; IFLA Journal Volume 31 ; 31 >
         au < do_not_process ; IFLA Journal Volume 32 ; 32 >
         au < ready ; IFLA Journal Volume 33 ; 33 >
+        au < manifest ; IFLA Journal Volume 34 ; 34 >
+        au < manifest ; IFLA Journal Volume 35 ; 35 >
 
       }
 
@@ -4086,6 +4404,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Improving Schools Volume 8 ; 8 >
         au < do_not_process ; Improving Schools Volume 9 ; 9 >
         au < ready ; Improving Schools Volume 10 ; 10 >
+        au < manifest ; Improving Schools Volume 11 ; 11 >
+        au < manifest ; Improving Schools Volume 12 ; 12 >
 
       }
 
@@ -4116,6 +4436,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Indian Economic & Social History Review Volume 42 ; 42 >
         au < ready ; Indian Economic & Social History Review Volume 43 ; 43 >
         au < ready ; Indian Economic & Social History Review Volume 44 ; 44 >
+        au < manifest ; Indian Economic & Social History Review Volume 45 ; 45 >
+        au < manifest ; Indian Economic & Social History Review Volume 46 ; 46 >
 
       }
 
@@ -4146,6 +4468,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Indian Journal of Gender Studies Volume 12 ; 12 >
         au < ready ; Indian Journal of Gender Studies Volume 13 ; 13 >
         au < ready ; Indian Journal of Gender Studies Volume 14 ; 14 >
+        au < manifest ; Indian Journal of Gender Studies Volume 15 ; 15 >
+        au < manifest ; Indian Journal of Gender Studies Volume 16 ; 16 >
 
       }
 
@@ -4176,6 +4500,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Indoor and Built Environment Volume 14 ; 14 >
         au < do_not_process ; Indoor and Built Environment Volume 15 ; 15 >
         au < ready ; Indoor and Built Environment Volume 16 ; 16 >
+        au < manifest ; Indoor and Built Environment Volume 17 ; 17 >
+        au < manifest ; Indoor and Built Environment Volume 18 ; 18 >
 
       }
 
@@ -4206,6 +4532,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Information Development Volume 21 ; 21 >
         au < do_not_process ; Information Development Volume 22 ; 22 >
         au < ready ; Information Development Volume 23 ; 23 >
+        au < manifest ; Information Development Volume 24 ; 24 >
+        au < manifest ; Information Development Volume 25 ; 25 >
 
       }
 
@@ -4236,6 +4564,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Integrative Cancer Therapies Volume 4 ; 4 >
         au < do_not_process ; Integrative Cancer Therapies Volume 5 ; 5 >
         au < ready ; Integrative Cancer Therapies Volume 6 ; 6 >
+        au < manifest ; Integrative Cancer Therapies Volume 7 ; 7 >
+        au < manifest ; Integrative Cancer Therapies Volume 8 ; 8 >
 
       }
 
@@ -4266,6 +4596,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Communication Gazette Volume 67 ; 67 >
         au < do_not_process ; International Communication Gazette Volume 68 ; 68 >
         au < ready ; International Communication Gazette Volume 69 ; 69 >
+        au < manifest ; International Communication Gazette Volume 70 ; 70 >
+        au < manifest ; International Communication Gazette Volume 71 ; 71 >
 
       }
 
@@ -4296,6 +4628,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; International Criminal Justice Review Volume 15 ; 15 >
         au < ready ; International Criminal Justice Review Volume 16 ; 16 >
         au < ready ; International Criminal Justice Review Volume 17 ; 17 >
+        au < manifest ; International Criminal Justice Review Volume 18 ; 18 >
+        au < manifest ; International Criminal Justice Review Volume 19 ; 19 >
 
       }
 
@@ -4329,6 +4663,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of Behavioral Development Volume 29 ; 29 >
         au < do_not_process ; International Journal of Behavioral Development Volume 30 ; 30 >
         au < ready ; International Journal of Behavioral Development Volume 31 ; 31 >
+        au < manifest ; International Journal of Behavioral Development Volume 32 ; 32 >
+        au < manifest ; International Journal of Behavioral Development Volume 33 ; 33 >
 
       }
 
@@ -4359,6 +4695,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of Comparative Sociology Volume 46 ; 46 >
         au < do_not_process ; International Journal of Comparative Sociology Volume 47 ; 47 >
         au < ready ; International Journal of Comparative Sociology Volume 48 ; 48 >
+        au < manifest ; International Journal of Comparative Sociology Volume 49 ; 49 >
+        au < manifest ; International Journal of Comparative Sociology Volume 50 ; 50 >
 
       }
 
@@ -4389,6 +4727,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of Cross Cultural Management Volume 5 ; 5 >
         au < do_not_process ; International Journal of Cross Cultural Management Volume 6 ; 6 >
         au < ready ; International Journal of Cross Cultural Management Volume 7 ; 7 >
+        au < manifest ; International Journal of Cross Cultural Management Volume 8 ; 8 >
+        au < manifest ; International Journal of Cross Cultural Management Volume 9 ; 9 >
 
       }
 
@@ -4419,6 +4759,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of Cultural Studies Volume 8 ; 8 >
         au < do_not_process ; International Journal of Cultural Studies Volume 9 ; 9 >
         au < ready ; International Journal of Cultural Studies Volume 10 ; 10 >
+        au < manifest ; International Journal of Cultural Studies Volume 11 ; 11 >
+        au < manifest ; International Journal of Cultural Studies Volume 12 ; 12 >
 
       }
 
@@ -4449,6 +4791,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of Damage Mechanics Volume 14 ; 14 >
         au < do_not_process ; International Journal of Damage Mechanics Volume 15 ; 15 >
         au < ready ; International Journal of Damage Mechanics Volume 16 ; 16 >
+        au < manifest ; International Journal of Damage Mechanics Volume 17 ; 17 >
+        au < manifest ; International Journal of Damage Mechanics Volume 18 ; 18 >
 
       }
 
@@ -4479,6 +4823,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of High Performance Computing Applications Volume 19 ; 19 >
         au < do_not_process ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
         au < ready ; International Journal of High Performance Computing Applications Volume 21 ; 21 >
+        au < manifest ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
+        au < manifest ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
 
       }
 
@@ -4499,6 +4845,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; The International Journal of Lower Extremity Wounds Volume 4 ; 4 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
+        au < manifest ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
+        au < manifest ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
 
       }
 
@@ -4519,6 +4867,8 @@ comment[csp7] = manifest page is malformed
         au < released ; International Journal of Music Education Volume 23 ; 23 >
         au < released ; International Journal of Music Education Volume 24 ; 24 >
         au < released ; International Journal of Music Education Volume 25 ; 25 >
+        au < manifest ; International Journal of Music Education Volume 26 ; 26 >
+        au < manifest ; International Journal of Music Education Volume 27 ; 27 >
 
       }
 
@@ -4549,6 +4899,8 @@ comment[csp7] = manifest page is malformed
         au < released ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 >
         au < do_not_process ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
         au < released ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 >
+        au < manifest ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
+        au < manifest ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
 
       }
 
@@ -4579,6 +4931,8 @@ comment[csp7] = manifest page is malformed
         au < released ; The International Journal of Robotics Research Volume 24 ; 24 >
         au < do_not_process ; The International Journal of Robotics Research Volume 25 ; 25 >
         au < released ; The International Journal of Robotics Research Volume 26 ; 26 >
+        au < manifest ; The International Journal of Robotics Research Volume 27 ; 27 >
+        au < manifest ; The International Journal of Robotics Research Volume 28 ; 28 >
 
       }
 
@@ -4598,6 +4952,7 @@ comment[csp7] = manifest page is malformed
 
         au < released ; International Journal of Rural Management Volume 1 ; 1 >
         au < released ; International Journal of Rural Management Volume 2 ; 2 >
+        au < manifest ; International Journal of Rural Management Volume 3 ; 3 >
 
       }
 
@@ -4618,6 +4973,8 @@ comment[csp7] = manifest page is malformed
         au < released ; International Journal of Social Psychiatry Volume 51 ; 51 >
         au < released ; International Journal of Social Psychiatry Volume 52 ; 52 >
         au < released ; International Journal of Social Psychiatry Volume 53 ; 53 >
+        au < manifest ; International Journal of Social Psychiatry Volume 54 ; 54 >
+        au < manifest ; International Journal of Social Psychiatry Volume 55 ; 55 >
 
       }
 
@@ -4638,6 +4995,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Journal of Surgical Pathology Volume 13 ; 13 >
         au < ready ; International Journal of Surgical Pathology Volume 14 ; 14 >
         au < ready ; International Journal of Surgical Pathology Volume 15 ; 15 >
+        au < manifest ; International Journal of Surgical Pathology Volume 16 ; 16 >
+        au < manifest ; International Journal of Surgical Pathology Volume 17 ; 17 >
 
       }
 
@@ -4656,6 +5015,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Political Science Abstracts Volume 57 ; 57 >
+        au < manifest ; International Political Science Abstracts Volume 58 ; 58 >
+        au < manifest ; International Political Science Abstracts Volume 59 ; 59 >
 
       }
 
@@ -4676,6 +5037,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Political Science Review Volume 26 ; 26 >
         au < ready ; International Political Science Review Volume 27 ; 27 >
         au < ready ; International Political Science Review Volume 28 ; 28 >
+        au < manifest ; International Political Science Review Volume 29 ; 29 >
+        au < manifest ; International Political Science Review Volume 30 ; 30 >
 
       }
 
@@ -4706,6 +5069,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Regional Science Review Volume 28 ; 28 >
         au < do_not_process ; International Regional Science Review Volume 29 ; 29 >
         au < ready ; International Regional Science Review Volume 30 ; 30 >
+        au < manifest ; International Regional Science Review Volume 31 ; 31 >
+        au < manifest ; International Regional Science Review Volume 32 ; 32 >
 
       }
 
@@ -4726,6 +5091,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Relations Volume 19 ; 19 >
         au < ready ; International Relations Volume 20 ; 20 >
         au < ready ; International Relations Volume 21 ; 21 >
+        au < manifest ; International Relations Volume 22 ; 22 >
+        au < manifest ; International Relations Volume 23 ; 23 >
 
       }
 
@@ -4746,6 +5113,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Review for the Sociology of Sport Volume 40 ; 40 >
         au < ready ; International Review for the Sociology of Sport Volume 41 ; 41 >
         au < ready ; International Review for the Sociology of Sport Volume 42 ; 42 >
+        au < manifest ; International Review for the Sociology of Sport Volume 43 ; 43 >
+        au < manifest ; International Review for the Sociology of Sport Volume 44 ; 44 >
 
       }
 
@@ -4775,7 +5144,9 @@ comment[csp7] = manifest page is malformed
 
         au < do_not_process ; International Review of Administrative Sciences Volume 71 ; 71 >
         au < ready ; International Review of Administrative Sciences Volume 72 ; 72 >
-        au < tesreadyting ; International Review of Administrative Sciences Volume 73 ; 73 >
+        au < ready ; International Review of Administrative Sciences Volume 73 ; 73 >
+        au < manifest ; International Review of Administrative Sciences Volume 74 ; 74 >
+        au < manifest ; International Review of Administrative Sciences Volume 75 ; 75 >
 
       }
 
@@ -4796,6 +5167,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Small Business Journal Volume 23 ; 23 >
         au < ready ; International Small Business Journal Volume 24 ; 24 >
         au < ready ; International Small Business Journal Volume 25 ; 25 >
+        au < manifest ; International Small Business Journal Volume 26 ; 26 >
+        au < manifest ; International Small Business Journal Volume 27 ; 27 >
 
       }
 
@@ -4816,6 +5189,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Social Work Volume 48 ; 48 >
         au < ready ; International Social Work Volume 49 ; 49 >
         au < ready ; International Social Work Volume 50 ; 50 >
+        au < manifest ; International Social Work Volume 51 ; 51 >
+        au < manifest ; International Social Work Volume 52 ; 52 >
 
       }
 
@@ -4836,6 +5211,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Sociology Volume 20 ; 20 >
         au < ready ; International Sociology Volume 21 ; 21 >
         au < ready ; International Sociology Volume 22 ; 22 >
+        au < manifest ; International Sociology Volume 23 ; 23 >
+        au < manifest ; International Sociology Volume 24 ; 24 >
 
       }
 
@@ -4856,6 +5233,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; International Studies Volume 42 ; 42 >
         au < ready ; International Studies Volume 43 ; 43 >
         au < ready ; International Studies Volume 44 ; 44 >
+        au < manifest ; International Studies Volume 45 ; 45 >
 
       }
 
@@ -4875,6 +5253,8 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; Irish Theological Quarterly Volume 71 ; 71 >
         au < ready ; Irish Theological Quarterly Volume 72 ; 72 >
+        au < manifest ; Irish Theological Quarterly Volume 73 ; 73 >
+        au < manifest ; Irish Theological Quarterly Volume 74 ; 74 >
 
       }
 
@@ -4888,14 +5268,16 @@ comment[csp7] = manifest page is malformed
 
       {
 
+comment[jhj] = now published by Brill
+
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jhj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
         au < not_ready ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
-        au < ready ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
-        au < ready ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
-        au < ready ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
+        au < down ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
+        au < down ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
+        au < down ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
 
       }
 
@@ -4927,6 +5309,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal for the Study of the New Testament Volume 28 ; 28 >
         au < ready ; Journal for the Study of the New Testament Volume 29 ; 29 >
         au < ready ; Journal for the Study of the New Testament Volume 30 ; 30 >
+        au < manifest ; Journal for the Study of the New Testament Volume 31 ; 31 >
 
       }
 
@@ -4958,6 +5341,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal for the Study of the Old Testament Volume 30 ; 30 >
         au < ready ; Journal for the Study of the Old Testament Volume 31 ; 31 >
         au < ready ; Journal for the Study of the Old Testament Volume 32 ; 32 >
+        au < manifest ; Journal for the Study of the Old Testament Volume 33 ; 33 >
 
       }
 
@@ -4979,6 +5363,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
         au < ready ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 >
+        au < manifest ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
 
       }
 
@@ -5009,6 +5394,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Adolescent Research Volume 20 ; 20 >
         au < do_not_process ; Journal of Adolescent Research Volume 21 ; 21 >
         au < ready ; Journal of Adolescent Research Volume 22 ; 22 >
+        au < manifest ; Journal of Adolescent Research Volume 23 ; 23 >
+        au < manifest ; Journal of Adolescent Research Volume 24 ; 24 >
 
       }
 
@@ -5039,6 +5426,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Aging and Health Volume 17 ; 17 >
         au < do_not_process ; Journal of Aging and Health Volume 18 ; 18 >
         au < ready ; Journal of Aging and Health Volume 19 ; 19 >
+        au < manifest ; Journal of Aging and Health Volume 20 ; 20 >
+        au < manifest ; Journal of Aging and Health Volume 21 ; 21 >
 
       }
 
@@ -5069,6 +5458,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Anglican Studies Volume 3 ; 3 >
         au < ready ; Journal of Anglican Studies Volume 4 ; 4 >
         au < ready ; Journal of Anglican Studies Volume 5 ; 5 >
+        au < manifest ; Journal of Anglican Studies Volume 6 ; 6 >
 
       }
 
@@ -5099,6 +5489,8 @@ comment[csp7] = manifest page is malformed
         au < released ; The Journal of Applied Behavioral Science Volume 41 ; 41 >
         au < do_not_process ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
         au < released ; The Journal of Applied Behavioral Science Volume 43 ; 43 >
+        au < manifest ; The Journal of Applied Behavioral Science Volume 44 ; 44 >
+        au < manifest ; The Journal of Applied Behavioral Science Volume 45 ; 45 >
 
       }
 
@@ -5129,6 +5521,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Journal of Applied Gerontology Volume 24 ; 24 >
         au < do_not_process ; Journal of Applied Gerontology Volume 25 ; 25 >
         au < released ; Journal of Applied Gerontology Volume 26 ; 26 >
+        au < manifest ; Journal of Applied Gerontology Volume 27 ; 27 >
+        au < manifest ; Journal of Applied Gerontology Volume 28 ; 28 >
 
       }
 
@@ -5159,6 +5553,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Journal of Asian and African Studies Volume 40 ; 40 >
         au < do_not_process ; Journal of Asian and African Studies Volume 41 ; 41 >
         au < released ; Journal of Asian and African Studies Volume 42 ; 42 >
+        au < manifest ; Journal of Asian and African Studies Volume 43 ; 43 >
+        au < manifest ; Journal of Asian and African Studies Volume 44 ; 44 >
 
       }
 
@@ -5180,6 +5576,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Journal of Attention Disorders Volume 9 ; 9 >
         au < released ; Journal of Attention Disorders Volume 10 ; 10 >
         au < released ; Journal of Attention Disorders Volume 11 ; 11 >
+        au < manifest ; Journal of Attention Disorders Volume 12 ; 12 >
+        au < manifest ; Journal of Attention Disorders Volume 13 ; 13 >
 
       }
 
@@ -5200,6 +5598,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Bioactive and Compatible Polymers Volume 20 ; 20 >
         au < ready ; Journal of Bioactive and Compatible Polymers Volume 21 ; 21 >
         au < ready ; Journal of Bioactive and Compatible Polymers Volume 22 ; 22 >
+        au < manifest ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 >
+        au < manifest ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 >
 
       }
 
@@ -5230,6 +5630,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Biological Rhythms Volume 20 ; 20 >
         au < do_not_process ; Journal of Biological Rhythms Volume 21 ; 21 >
         au < ready ; Journal of Biological Rhythms Volume 22 ; 22 >
+        au < manifest ; Journal of Biological Rhythms Volume 23 ; 23 >
+        au < manifest ; Journal of Biological Rhythms Volume 24 ; 24 >
 
       }
 
@@ -5251,6 +5653,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Biomaterials Applications Volume 20 ; 20 >
         au < ready ; Journal of Biomaterials Applications Volume 21 ; 21 >
         au < ready ; Journal of Biomaterials Applications Volume 22 ; 22 >
+        au < manifest ; Journal of Biomaterials Applications Volume 23 ; 23 >
 
       }
 
@@ -5281,6 +5684,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Biomolecular Screening Volume 10 ; 10 >
         au < do_not_process ; Journal of Biomolecular Screening Volume 11 ; 11 >
         au < ready ; Journal of Biomolecular Screening Volume 12 ; 12 >
+        au < manifest ; Journal of Biomolecular Screening Volume 13 ; 13 >
+        au < manifest ; Journal of Biomolecular Screening Volume 14 ; 14 >
 
       }
 
@@ -5311,6 +5716,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Black Psychology Volume 31 ; 31 >
         au < do_not_process ; Journal of Black Psychology Volume 32 ; 32 >
         au < ready ; Journal of Black Psychology Volume 33 ; 33 >
+        au < manifest ; Journal of Black Psychology Volume 34 ; 34 >
+        au < manifest ; Journal of Black Psychology Volume 35 ; 35 >
 
       }
 
@@ -5342,6 +5749,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Black Studies Volume 36 ; 36 >
         au < ready ; Journal of Black Studies Volume 37 ; 37 >
         au < ready ; Journal of Black Studies Volume 38 ; 38 >
+        au < manifest ; Journal of Black Studies Volume 39 ; 39 >
 
       }
 
@@ -5363,6 +5771,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Building Physics Volume 29 ; 29 >
         au < ready ; Journal of Building Physics Volume 30 ; 30 >
         au < ready ; Journal of Building Physics Volume 31 ; 31 >
+        au < manifest ; Journal of Building Physics Volume 32 ; 32 >
 
       }
 
@@ -5393,6 +5802,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Business and Technical Communication Volume 19 ; 19 >
         au < do_not_process ; Journal of Business and Technical Communication Volume 20 ; 20 >
         au < ready ; Journal of Business and Technical Communication Volume 21 ; 21 >
+        au < manifest ; Journal of Business and Technical Communication Volume 22 ; 22 >
+        au < manifest ; Journal of Business and Technical Communication Volume 23 ; 23 >
 
       }
 
@@ -5423,6 +5834,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Business Communication Volume 42 ; 42 >
         au < do_not_process ; Journal of Business Communication Volume 43 ; 43 >
         au < ready ; Journal of Business Communication Volume 44 ; 44 >
+        au < manifest ; Journal of Business Communication Volume 45 ; 45 >
+        au < manifest ; Journal of Business Communication Volume 46 ; 46 >
 
       }
 
@@ -5443,6 +5856,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 10 ; 10 >
         au < ready ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 11 ; 11 >
         au < ready ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 12 ; 12 >
+        au < manifest ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
+        au < manifest ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
 
       }
 
@@ -5473,6 +5888,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Career Assessment Volume 13 ; 13 >
         au < do_not_process ; Journal of Career Assessment Volume 14 ; 14 >
         au < ready ; Journal of Career Assessment Volume 15 ; 15 >
+        au < manifest ; Journal of Career Assessment Volume 16 ; 16 >
+        au < manifest ; Journal of Career Assessment Volume 17 ; 17 >
 
       }
 
@@ -5503,6 +5920,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Career Development Volume 32 ; 32 >
         au < ready ; Journal of Career Development Volume 33 ; 33 >
         au < ready ; Journal of Career Development Volume 34 ; 34 >
+        au < manifest ; Journal of Career Development Volume 35 ; 35 >
 
       }
 
@@ -5523,6 +5941,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Cases in Educational Leadership Volume 8 ; 8 >
         au < ready ; Journal of Cases in Educational Leadership Volume 9 ; 9 >
         au < ready ; Journal of Cases in Educational Leadership Volume 10 ; 10 >
+        au < manifest ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
 
       }
 
@@ -5543,6 +5962,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Cellular Plastics Volume 41 ; 41 >
         au < ready ; Journal of Cellular Plastics Volume 42 ; 42 >
         au < ready ; Journal of Cellular Plastics Volume 43 ; 43 >
+        au < manifest ; Journal of Cellular Plastics Volume 44 ; 44 >
+        au < manifest ; Journal of Cellular Plastics Volume 45 ; 45 >
 
       }
 
@@ -5574,6 +5995,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Child Health Care Volume 9 ; 9 >
         au < do_not_process ; Journal of Child Health Care Volume 10 ; 10 >
         au < ready ; Journal of Child Health Care Volume 11 ; 11 >
+        au < manifest ; Journal of Child Health Care Volume 12 ; 12 >
+        au < manifest ; Journal of Child Health Care Volume 13 ; 13 >
 
       }
 
@@ -5593,6 +6016,8 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; Journal of Child Neurology Volume 21 ; 21 >
         au < ready ; Journal of Child Neurology Volume 22 ; 22 >
+        au < manifest ; Journal of Child Neurology Volume 23 ; 23 >
+        au < manifest ; Journal of Child Neurology Volume 24 ; 24 >
 
       }
 
@@ -5613,6 +6038,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Classical Sociology Volume 5 ; 5 >
         au < ready ; Journal of Classical Sociology Volume 6 ; 6 >
         au < ready ; Journal of Classical Sociology Volume 7 ; 7 >
+        au < manifest ; Journal of Classical Sociology Volume 8 ; 8 >
+        au < manifest ; Journal of Classical Sociology Volume 9 ; 9 >
 
       }
 
@@ -5626,6 +6053,8 @@ comment[csp7] = manifest page is malformed
 
       {
 
+comment[jcp] = some sort of custom layout
+
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jcp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
@@ -5633,6 +6062,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; The Journal of Clinical Pharmacology Volume 45 ; 45 >
         au < ready ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
         au < ready ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
+        au < manifest ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
+        au < manifest ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
 
       }
 
@@ -5663,6 +6094,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; The Journal of Commonwealth Literature Volume 40 ; 40 >
         au < do_not_process ; The Journal of Commonwealth Literature Volume 41 ; 41 >
         au < ready ; The Journal of Commonwealth Literature Volume 42 ; 42 >
+        au < manifest ; The Journal of Commonwealth Literature Volume 43 ; 43 >
+        au < manifest ; The Journal of Commonwealth Literature Volume 44 ; 44 >
 
       }
 
@@ -5694,6 +6127,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Communication Inquiry Volume 30 ; 30 >
         au < ready ; Journal of Communication Inquiry Volume 31 ; 31 >
         au < ready ; Journal of Communication Inquiry Volume 32 ; 32 >
+        au < manifest ; Journal of Communication Inquiry Volume 33 ; 33 >
 
       }
 
@@ -5724,6 +6158,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Composite Materials Volume 39 ; 39 >
         au < do_not_process ; Journal of Composite Materials Volume 40 ; 40 >
         au < ready ; Journal of Composite Materials Volume 41 ; 41 >
+        au < manifest ; Journal of Composite Materials Volume 42 ; 42 >
+        au < manifest ; Journal of Composite Materials Volume 43 ; 43 >
 
       }
 
@@ -5754,6 +6190,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Conflict Resolution Volume 49 ; 49 >
         au < do_not_process ; Journal of Conflict Resolution Volume 50 ; 50 >
         au < ready ; Journal of Conflict Resolution Volume 51 ; 51 >
+        au < manifest ; Journal of Conflict Resolution Volume 52 ; 52 >
+        au < manifest ; Journal of Conflict Resolution Volume 53 ; 53 >
 
       }
 
@@ -5774,6 +6212,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Consumer Culture Volume 5 ; 5 >
         au < ready ; Journal of Consumer Culture Volume 6 ; 6 >
         au < ready ; Journal of Consumer Culture Volume 7 ; 7 >
+        au < manifest ; Journal of Consumer Culture Volume 8 ; 8 >
+        au < manifest ; Journal of Consumer Culture Volume 9 ; 9 >
 
       }
 
@@ -5804,6 +6244,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Contemporary Criminal Justice Volume 21 ; 21 >
         au < do_not_process ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
         au < ready ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
+        au < manifest ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
+        au < manifest ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
 
       }
 
@@ -5824,6 +6266,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Contemporary Ethnography Volume 34 ; 34 >
         au < ready ; Journal of Contemporary Ethnography Volume 35 ; 35 >
         au < ready ; Journal of Contemporary Ethnography Volume 36 ; 36 >
+        au < manifest ; Journal of Contemporary Ethnography Volume 37 ; 37 >
+        au < manifest ; Journal of Contemporary Ethnography Volume 38 ; 38 >
 
       }
 
@@ -5854,6 +6298,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Contemporary History Volume 40 ; 40 >
         au < do_not_process ; Journal of Contemporary History Volume 41 ; 41 >
         au < ready ; Journal of Contemporary History Volume 42 ; 42 >
+        au < manifest ; Journal of Contemporary History Volume 43 ; 43 >
+        au < manifest ; Journal of Contemporary History Volume 44 ; 44 >
 
       }
 
@@ -5873,6 +6319,8 @@ comment[csp7] = manifest page is malformed
 
         au < ready ; Journal of Correctional Health Care Volume 12 ; 12 >
         au < ready ; Journal of Correctional Health Care Volume 13 ; 13 >
+        au < ready ; Journal of Correctional Health Care Volume 14 ; 14 >
+        au < ready ; Journal of Correctional Health Care Volume 15 ; 15 >
 
       }
 
@@ -5891,6 +6339,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Creative Communications Volume 1 ; 1 >
+        au < manifest ; Journal of Creative Communications Volume 2 ; 2 >
+        au < manifest ; Journal of Creative Communications Volume 3 ; 3 >
 
       }
 
@@ -5921,6 +6371,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Cross-Cultural Psychology Volume 36 ; 36 >
         au < do_not_process ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
         au < ready ; Journal of Cross-Cultural Psychology Volume 38 ; 38 >
+        au < manifest ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
+        au < manifest ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
 
       }
 
@@ -5941,6 +6393,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Developing Societies Volume 21 ; 21 >
         au < ready ; Journal of Developing Societies Volume 22 ; 22 >
         au < ready ; Journal of Developing Societies Volume 23 ; 23 >
+        au < manifest ; Journal of Developing Societies Volume 24 ; 24 >
 
       }
 
@@ -5961,6 +6414,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Diagnostic Medical Sonography Volume 21 ; 21 >
         au < ready ; Journal of Diagnostic Medical Sonography Volume 22 ; 22 >
         au < ready ; Journal of Diagnostic Medical Sonography Volume 23 ; 23 >
+        au < manifest ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
+        au < manifest ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
 
       }
 
@@ -5991,6 +6446,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; The Journal of Early Adolescence Volume 25 ; 25 >
         au < do_not_process ; The Journal of Early Adolescence Volume 26 ; 26 >
         au < ready ; The Journal of Early Adolescence Volume 27 ; 27 >
+        au < manifest ; The Journal of Early Adolescence Volume 28 ; 28 >
+        au < manifest ; The Journal of Early Adolescence Volume 29 ; 29 >
 
       }
 
@@ -6011,6 +6468,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Early Childhood Literacy Volume 5 ; 5 >
         au < ready ; Journal of Early Childhood Literacy Volume 6 ; 6 >
         au < ready ; Journal of Early Childhood Literacy Volume 7 ; 7 >
+        au < manifest ; Journal of Early Childhood Literacy Volume 8 ; 8 >
+        au < manifest ; Journal of Early Childhood Literacy Volume 9 ; 9 >
 
       }
 
@@ -6031,6 +6490,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Early Childhood Research Volume 3 ; 3 >
         au < ready ; Journal of Early Childhood Research Volume 4 ; 4 >
         au < ready ; Journal of Early Childhood Research Volume 5 ; 5 >
+        au < manifest ; Journal of Early Childhood Research Volume 6 ; 6 >
+        au < manifest ; Journal of Early Childhood Research Volume 7 ; 7 >
 
       }
 
@@ -6049,6 +6510,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Education for Sustainable Development Volume 1 ; 1 >
+        au < manifest ; Journal of Education for Sustainable Development Volume 2 ; 2 >
 
       }
 
@@ -6067,6 +6529,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Educational and Behavioral Statistics Volume 32 ; 32 >
+        au < manifest ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
+        au < manifest ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
 
       }
 
@@ -6087,6 +6551,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Elastomers and Plastics Volume 37 ; 37 >
         au < ready ; Journal of Elastomers and Plastics Volume 38 ; 38 >
         au < ready ; Journal of Elastomers and Plastics Volume 39 ; 39 >
+        au < manifest ; Journal of Elastomers and Plastics Volume 40 ; 40 >
+        au < manifest ; Journal of Elastomers and Plastics Volume 41 ; 41 >
 
       }
 
@@ -6107,6 +6573,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Emerging Market Finance Volume 4 ; 4 >
         au < ready ; Journal of Emerging Market Finance Volume 5 ; 5 >
         au < ready ; Journal of Emerging Market Finance Volume 6 ; 6 >
+        au < manifest ; Journal of Emerging Market Finance Volume 7 ; 7 >
+        au < manifest ; Journal of Emerging Market Finance Volume 8 ; 8 >
 
       }
 
@@ -6125,6 +6593,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Endotoxin Research Volume 13 ; 13 >
+        au < manifest ; Journal of Endotoxin Research Volume 14 ; 14 >
+        au < manifest ; Journal of Endotoxin Research Volume 15 ; 15 >
 
       }
 
@@ -6155,6 +6625,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of English Linguistics Volume 33 ; 33 >
         au < ready ; Journal of English Linguistics Volume 34 ; 34 >
         au < ready ; Journal of English Linguistics Volume 35 ; 35 >
+        au < manifest ; Journal of English Linguistics Volume 36 ; 36 >
+        au < manifest ; Journal of English Linguistics Volume 37 ; 37 >
 
       }
 
@@ -6185,6 +6657,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Entrepreneurship Volume 14 ; 14 >
         au < ready ; Journal of Entrepreneurship Volume 15 ; 15 >
         au < ready ; Journal of Entrepreneurship Volume 16 ; 16 >
+        au < manifest ; Journal of Entrepreneurship Volume 17 ; 17 >
+        au < manifest ; Journal of Entrepreneurship Volume 18 ; 18 >
 
       }
 
@@ -6215,6 +6689,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; The Journal of Environment & Development Volume 14 ; 14 >
         au < do_not_process ; The Journal of Environment & Development Volume 15 ; 15 >
         au < ready ; The Journal of Environment & Development Volume 16 ; 16 >
+        au < manifest ; The Journal of Environment & Development Volume 17 ; 17 >
+        au < manifest ; The Journal of Environment & Development Volume 18 ; 18 >
 
       }
 
@@ -6245,6 +6721,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of European Social Policy Volume 15 ; 15 >
         au < do_not_process ; Journal of European Social Policy Volume 16 ; 16 >
         au < ready ; Journal of European Social Policy Volume 17 ; 17 >
+        au < manifest ; Journal of European Social Policy Volume 18 ; 18 >
+        au < manifest ; Journal of European Social Policy Volume 19 ; 19 >
 
       }
 
@@ -6275,6 +6753,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of European Studies Volume 35 ; 35 >
         au < do_not_process ; Journal of European Studies Volume 36 ; 36 >
         au < ready ; Journal of European Studies Volume 37 ; 37 >
+        au < manifest ; Journal of European Studies Volume 38 ; 38 >
+        au < manifest ; Journal of European Studies Volume 39 ; 39 >
 
       }
 
@@ -6306,6 +6786,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Family History Volume 31 ; 31 >
         au < ready ; Journal of Family History Volume 32 ; 32 >
         au < ready ; Journal of Family History Volume 33 ; 33 >
+        au < manifest ; Journal of Family History Volume 34 ; 34 >
 
       }
 
@@ -6326,6 +6807,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Family Issues Volume 26 ; 26 >
         au < ready ; Journal of Family Issues Volume 27 ; 27 >
         au < ready ; Journal of Family Issues Volume 28 ; 28 >
+        au < manifest ; Journal of Family Issues Volume 29 ; 29 >
+        au < manifest ; Journal of Family Issues Volume 30 ; 30 >
 
       }
 
@@ -6356,6 +6839,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Family Nursing Volume 11 ; 11 >
         au < do_not_process ; Journal of Family Nursing Volume 12 ; 12 >
         au < ready ; Journal of Family Nursing Volume 13 ; 13 >
+        au < manifest ; Journal of Family Nursing Volume 14 ; 14 >
+        au < manifest ; Journal of Family Nursing Volume 15 ; 15 >
 
       }
 
@@ -6376,6 +6861,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Fire Protection Engineering Volume 15 ; 15 >
         au < ready ; Journal of Fire Protection Engineering Volume 16 ; 16 >
         au < ready ; Journal of Fire Protection Engineering Volume 17 ; 17 >
+        au < manifest ; Journal of Fire Protection Engineering Volume 18 ; 18 >
+        au < manifest ; Journal of Fire Protection Engineering Volume 19 ; 19 >
 
       }
 
@@ -6396,6 +6883,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Fire Sciences Volume 23 ; 23 >
         au < ready ; Journal of Fire Sciences Volume 24 ; 24 >
         au < ready ; Journal of Fire Sciences Volume 25 ; 25 >
+        au < manifest ; Journal of Fire Sciences Volume 26 ; 26 >
+        au < manifest ; Journal of Fire Sciences Volume 27 ; 27 >
 
       }
 
@@ -6426,6 +6915,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 18 ; 18 >
         au < do_not_process ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 20 ; 20 >
+        au < manifest ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
+        au < manifest ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
 
       }
 
@@ -6446,6 +6937,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Health Management Volume 7 ; 7 >
         au < ready ; Journal of Health Management Volume 8 ; 8 >
         au < ready ; Journal of Health Management Volume 9 ; 9 >
+        au < manifest ; Journal of Health Management Volume 10 ; 10 >
 
       }
 
@@ -6466,6 +6958,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Health Psychology Volume 10 ; 10 >
         au < ready ; Journal of Health Psychology Volume 11 ; 11 >
         au < ready ; Journal of Health Psychology Volume 12 ; 12 >
+        au < manifest ; Journal of Health Psychology Volume 13 ; 13 >
+        au < manifest ; Journal of Health Psychology Volume 14 ; 14 >
 
       }
 
@@ -6496,6 +6990,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Hispanic Higher Education Volume 4 ; 4 >
         au < do_not_process ; Journal of Hispanic Higher Education Volume 5 ; 5 >
         au < ready ; Journal of Hispanic Higher Education Volume 6 ; 6 >
+        au < manifest ; Journal of Hispanic Higher Education Volume 7 ; 7 >
+        au < manifest ; Journal of Hispanic Higher Education Volume 8 ; 8 >
 
       }
 
@@ -6526,6 +7022,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Holistic Nursing Volume 23 ; 23 >
         au < do_not_process ; Journal of Holistic Nursing Volume 24 ; 24 >
         au < ready ; Journal of Holistic Nursing Volume 25 ; 25 >
+        au < manifest ; Journal of Holistic Nursing Volume 26 ; 26 >
+        au < manifest ; Journal of Holistic Nursing Volume 27 ; 27 >
 
       }
 
@@ -6556,6 +7054,8 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Hospitality & Tourism Research Volume 29 ; 29 >
         au < ready ; Journal of Hospitality & Tourism Research Volume 30 ; 30 >
         au < ready ; Journal of Hospitality & Tourism Research Volume 31 ; 31 >
+        au < manifest ; Journal of Hospitality & Tourism Research Volume 32 ; 32 >
+        au < manifest ; Journal of Hospitality & Tourism Research Volume 33 ; 33 >
 
       }
 
@@ -6586,6 +7086,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Human Lactation Volume 21 ; 21 >
         au < do_not_process ; Journal of Human Lactation Volume 22 ; 22 >
         au < ready ; Journal of Human Lactation Volume 23 ; 23 >
+        au < manifest ; Journal of Human Lactation Volume 24 ; 24 >
+        au < manifest ; Journal of Human Lactation Volume 25 ; 25 >
 
       }
 
@@ -6616,6 +7118,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Journal of Human Values Volume 11 ; 11 >
         au < ready ; Journal of Human Values Volume 12 ; 12 >
         au < ready ; Journal of Human Values Volume 13 ; 13 >
+        au < manifest ; Journal of Human Values Volume 14 ; 14 >
 
       }
 
@@ -6646,6 +7149,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Humanistic Psychology Volume 45 ; 45 >
         au < do_not_process ; Journal of Humanistic Psychology Volume 46 ; 46 >
         au < ready ; Journal of Humanistic Psychology Volume 47 ; 47 >
+        au < manifest ; Journal of Humanistic Psychology Volume 48 ; 48 >
+        au < manifest ; Journal of Humanistic Psychology Volume 49 ; 49 >
 
       }
 
@@ -6666,6 +7171,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Industrial Relations Volume 47 ; 47 >
         au < ready ; Journal of Industrial Relations Volume 48 ; 48 >
         au < ready ; Journal of Industrial Relations Volume 49 ; 49 >
+        au < manifest ; Journal of Industrial Relations Volume 50 ; 50 >
+        au < manifest ; Journal of Industrial Relations Volume 51 ; 51 >
 
       }
 
@@ -6687,6 +7194,7 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Industrial Textiles Volume 35 ; 35 >
         au < ready ; Journal of Industrial Textiles Volume 36 ; 36 >
         au < ready ; Journal of Industrial Textiles Volume 37 ; 37 >
+        au < manifest ; Journal of Industrial Textiles Volume 38 ; 38 >
 
       }
 
@@ -6707,6 +7215,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Information Science Volume 31 ; 31 >
         au < ready ; Journal of Information Science Volume 32 ; 32 >
         au < ready ; Journal of Information Science Volume 33 ; 33 >
+        au < manifest ; Journal of Information Science Volume 34 ; 34 >
+        au < manifest ; Journal of Information Science Volume 35 ; 35 >
 
       }
 
@@ -6727,6 +7237,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Intellectual Disabilities Volume 9 ; 9 >
         au < ready ; Journal of Intellectual Disabilities Volume 10 ; 10 >
         au < ready ; Journal of Intellectual Disabilities Volume 11 ; 11 >
+        au < manifest ; Journal of Intellectual Disabilities Volume 12 ; 12 >
+        au < manifest ; Journal of Intellectual Disabilities Volume 13 ; 13 >
 
       }
 
@@ -6747,6 +7259,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 16 ; 16 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 17 ; 17 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 18 ; 18 >
+        au < manifest ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
+        au < manifest ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
 
       }
 
@@ -6767,6 +7281,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Intensive Care Medicine Volume 20 ; 20 >
         au < ready ; Journal of Intensive Care Medicine Volume 21 ; 21 >
         au < ready ; Journal of Intensive Care Medicine Volume 22 ; 22 >
+        au < manifest ; Journal of Intensive Care Medicine Volume 23 ; 23 >
+        au < manifest ; Journal of Intensive Care Medicine Volume 24 ; 24 >
 
       }
 
@@ -6787,6 +7303,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Interpersonal Violence Volume 20 ; 20 >
         au < ready ; Journal of Interpersonal Violence Volume 21 ; 21 >
         au < ready ; Journal of Interpersonal Violence Volume 22 ; 22 >
+        au < manifest ; Journal of Interpersonal Violence Volume 23 ; 23 >
+        au < manifest ; Journal of Interpersonal Violence Volume 24 ; 24 >
 
       }
 
@@ -6807,6 +7325,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Language and Social Psychology Volume 24 ; 24 >
         au < ready ; Journal of Language and Social Psychology Volume 25 ; 25 >
         au < ready ; Journal of Language and Social Psychology Volume 26 ; 26 >
+        au < manifest ; Journal of Language and Social Psychology Volume 27 ; 27 >
+        au < manifest ; Journal of Language and Social Psychology Volume 28 ; 28 >
 
       }
 
@@ -6826,6 +7346,7 @@ comment[csp7] = manifest page is malformed
 
         au < testing ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
         au < ready ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
+        au < manifest ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
 
       }
 
@@ -6846,6 +7367,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Librarianship and Information Science Volume 37 ; 37 >
         au < ready ; Journal of Librarianship and Information Science Volume 38 ; 38 >
         au < ready ; Journal of Librarianship and Information Science Volume 39 ; 39 >
+        au < manifest ; Journal of Librarianship and Information Science Volume 40 ; 40 >
+        au < manifest ; Journal of Librarianship and Information Science Volume 41 ; 41 >
 
       }
 
@@ -6866,6 +7389,8 @@ comment[csp7] = manifest page is malformed
         au < ready ; Journal of Macromarketing Volume 25 ; 25 >
         au < ready ; Journal of Macromarketing Volume 26 ; 26 >
         au < ready ; Journal of Macromarketing Volume 27 ; 27 >
+        au < manifest ; Journal of Macromarketing Volume 28 ; 28 >
+        au < manifest ; Journal of Macromarketing Volume 29 ; 29 >
 
       }
 
@@ -6887,6 +7412,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Journal of Management Volume 31 ; 31 >
         au < released ; Journal of Management Volume 32 ; 32 >
         au < released ; Journal of Management Volume 33 ; 33 >
+        au < manifest ; Journal of Management Volume 34 ; 34 >
+        au < manifest ; Journal of Management Volume 35 ; 35 >
 
       }
 
@@ -6907,6 +7434,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Journal of Management Education Volume 29 ; 29 >
         au < released ; Journal of Management Education Volume 30 ; 30 >
         au < released ; Journal of Management Education Volume 31 ; 31 >
+        au < manifest ; Journal of Management Education Volume 32 ; 32 >
+        au < manifest ; Journal of Management Education Volume 33 ; 33 >
 
       }
 
