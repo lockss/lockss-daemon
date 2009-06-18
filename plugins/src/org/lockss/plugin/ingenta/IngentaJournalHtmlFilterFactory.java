@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.4 2009-06-15 02:00:37 greya Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.5 2009-06-18 00:26:24 thib_gc Exp $
  */ 
 
 /*
@@ -49,7 +49,6 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "top-ad-alignment")),
-        
         // Filter out <div id="ident">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
