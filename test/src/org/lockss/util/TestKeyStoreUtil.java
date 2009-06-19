@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyStoreUtil.java,v 1.1 2009-06-01 07:36:28 tlipkis Exp $
+ * $Id: TestKeyStoreUtil.java,v 1.1.2.1 2009-06-19 08:24:41 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,22 @@ public class TestKeyStoreUtil extends LockssTestCase {
     p.put(KeyStoreUtil.PROP_KEYSTORE_PASSWORD, PASSWD);
     p.put(KeyStoreUtil.PROP_KEY_PASSWORD, KEY_PASSWD);
     return p;
+  }
+
+  void assertCharsBetween(int low, int hi, String str) {
+    for (int ch : str.toCharArray()) {
+      assertTrue(ch >= low && ch <= hi);
+    }
+  }
+
+  public void testRandomString() throws Exception {
+    String r10 = KeyStoreUtil.randomString(10);
+    String r1024 = KeyStoreUtil.randomString(1024);
+    assertEquals(10, r10.length());
+    assertEquals(1024, r1024.length());
+    assertCharsBetween(32, 126, r10);
+    assertCharsBetween(32, 126, r1024);
+    assertNotEquals(r1024, KeyStoreUtil.randomString(1024));
   }
 
   public void testDefaults() throws Exception {
