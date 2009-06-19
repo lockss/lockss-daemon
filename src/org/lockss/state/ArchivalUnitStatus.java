@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.82 2009-06-15 03:32:09 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.83 2009-06-19 08:29:30 tlipkis Exp $
  */
 
 /*
@@ -753,6 +753,9 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
+      res.add(new StatusTable.SummaryInfo("Plugin",
+					  ColumnDescriptor.TYPE_STRING,
+					  au.getPlugin().getPluginName()));
       AuState.AccessType atype = state.getAccessType();
       if (atype != null) {
 	res.add(new StatusTable.SummaryInfo("Access Type",
