@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.80 2007-09-08 01:47:40 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.80.26.1 2009-06-19 08:23:36 tlipkis Exp $
  */
 
 /*
@@ -1221,6 +1221,10 @@ public class TestPluginManager extends LockssTestCase {
     mgr.processRegistryAus(registryAus);
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
     assertNotNull(mockPlugin);
+    assertEquals(preferLoadable, mgr.isLoadablePlugin(mockPlugin));
+    assertFalse(mgr.isInternalPlugin(mockPlugin));
+    assertEquals(preferLoadable ? "Loadable" : "Builtin",
+		 mgr.getPluginType(mockPlugin));
     assertEquals("1", mockPlugin.getVersion());
     PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(mockPlugin);
     assertEquals(mmau.getNthUrl(1), info.getCuUrl());
