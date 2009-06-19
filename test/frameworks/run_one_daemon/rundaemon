@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TITLE_DBS="../title_db_files/*.xml"
+TITLE_DBS=""
 
 while true ; do
   case "$1" in
@@ -19,11 +19,14 @@ while true ; do
       jdb=1
       shift; continue;;
     "-notitle" )
-      TITLE_DBS=""
+      TITLE_DBS=" "
       shift; continue;;
+    "-titlepat" )
+      TITLE_DBS="${TITLE_DBS} $2"
+      shift; shift; continue;;
     "-p" )
       EXTRA_PROP_URLS="${EXTRA_PROP_URLS} $2"
-      shift; continue;;
+      shift; shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
 	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
@@ -57,7 +60,14 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
+if [ -z "${TITLE_DBS}" ]; then
+  TITLE_DBS="../title_db_files/*.xml"
+fi
+
+
+
 # NB leading space meaningful here
+echo TITLE_DBS = "${TITLE_DBS}"
 PROP_URL_LIST="../common.xml ${TITLE_DBS} lockss.txt lockss.opt ${EXTRA_PROP_URLS}"
 PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
