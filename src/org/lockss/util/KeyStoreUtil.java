@@ -1,5 +1,5 @@
 /*
- * $Id: KeyStoreUtil.java,v 1.2 2009-06-15 07:52:07 tlipkis Exp $
+ * $Id: KeyStoreUtil.java,v 1.3 2009-06-19 08:29:48 tlipkis Exp $
  */
 
 /*
@@ -93,31 +93,13 @@ public class KeyStoreUtil {
   public static final long DEFAULT_EXPIRE_IN = 5 * Constants.YEAR / 1000;
 
 
-  public static String randomString() {
-    return randomString();
-  }
-
   public static String randomString(int len)
       throws NoSuchAlgorithmException,
-	     NoSuchProviderException,
-	     UnsupportedEncodingException {
+	     NoSuchProviderException {
     SecureRandom rng = SecureRandom.getInstance("SHA1PRNG", "SUN");
-    byte[] rand = new byte[len];
-    rng.nextBytes(rand);
-    for (int i = 0; i < rand.length; i++) {
-      if (rand[i] < 0) {
-	rand[i] = (byte) (128 + (int)rand[i]);
-      }
-      if (rand[i] == 127) {
-	rand[i] = 0;
-      }
-      if (rand[i] < 32) {
-	rand[i] += 32;
-      }
-    }
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    baos.write(rand, 0, rand.length);
-    return baos.toString("ASCII");
+    return org.apache.commons.lang.RandomStringUtils.random(len, 32, 126,
+							    false, false,
+							    null, rng);
   }
 
   public static KeyStore createKeyStore(Properties p)
