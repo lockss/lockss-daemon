@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.1.2.3 2009-06-15 07:47:45 tlipkis Exp $
+ * $Id: LockssFormAuthenticator.java,v 1.1.2.4 2009-06-19 08:23:11 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.StringUtil;
 import org.lockss.account.*;
+import org.lockss.servlet.*;
 
 /* ------------------------------------------------------------ */
 /** FORM Authentication Authenticator, with automatic inactivity logout
@@ -57,12 +58,20 @@ import org.lockss.account.*;
 public class LockssFormAuthenticator implements Authenticator {
   static Logger log = Logger.getLogger("LockssFormAuthenticator");
 
+  /** Login form submission URL */
+  public final static String __J_SECURITY_CHECK="j_security_check";
+  /** Login form user field */
+  public final static String __J_USERNAME="j_username";
+  /** Login form passwd field */
+  public final static String __J_PASSWORD="j_password";
+
+
   /* ------------------------------------------------------------ */
+  // Session attributes
   public final static String __J_URI="org.mortbay.jetty.URI";
   public final static String __J_AUTHENTICATED="org.mortbay.jetty.Auth";
-  public final static String __J_SECURITY_CHECK="j_security_check";
-  public final static String __J_USERNAME="j_username";
-  public final static String __J_PASSWORD="j_password";
+  public final static String __J_LOGIN_TIME="j_login_time";
+
   public final static String __J_AUTH_ACTIVITY="org.lockss.jetty.AuthActivity";
   public final static String __J_AUTH_MAX_INACTIVITY="org.lockss.jetty.maxInactivity";
   public final static String __J_LOCKSS_USER="org.lockss.jetty.UserAccount";
@@ -148,12 +157,8 @@ public class LockssFormAuthenticator implements Authenticator {
 
   /* ------------------------------------------------------------ */
   void checkInactivity(HttpSession session) {
-    Long active = (Long)session.getAttribute(__J_AUTH_ACTIVITY);
-    Long maxInactivity = (Long)session.getAttribute(__J_AUTH_MAX_INACTIVITY);
-    if (active != null && maxInactivity != null) {
-      if (TimeBase.msSince(active.longValue()) > maxInactivity.longValue()) {
-	logout(session, "Logged out due to inactivity");
-      }
+    if (LockssSessionManager.isInactiveTimeout(session)) {
+      logout(session, "Logged out due to inactivity");
     }
   }
 
@@ -162,6 +167,9 @@ public class LockssFormAuthenticator implements Authenticator {
   }
 
   public void logout(HttpSession session, String message) {
+    if (log.isDebug2()) {
+      log.debug2("logout " + session.getAttribute(__J_LOCKSS_USER));
+    }
     session.setAttribute(__J_LOCKSS_AUTH_ERROR_MSG, message);
     session.setAttribute(__J_AUTHENTICATED, null);
     session.setAttribute(__J_LOCKSS_USER, null);
@@ -192,74 +200,12 @@ public class LockssFormAuthenticator implements Authenticator {
       return null;
         
     // Handle a request for authentication.
-    if ( uri.substring(uri.lastIndexOf("/")+1).startsWith(__J_SECURITY_CHECK) )
-      {
-	// Check the session object for login info.
-	FormCredential form_cred=new FormCredential();
-	form_cred.authenticate(realm,
-			       request.getParameter(__J_USERNAME),
-			       request.getParameter(__J_PASSWORD),
-			       httpRequest);
-            
-	String nuri=(String)session.getAttribute(__J_URI);
-	if (nuri==null || nuri.length()==0)
-	  {
-	    nuri=request.getContextPath();
-	    if (nuri.length()==0)
-	      nuri="/";
-	  }
-            
-	if (form_cred._userPrincipal!=null)
-	  {
-	    // Authenticated OK
-	    log.info("User " + form_cred._jUserName
-		     + " authenticated from "
-		     + request.getRemoteAddr());
-	    session.removeAttribute(__J_URI); // Remove popped return URI.
-	    httpRequest.setAuthType(SecurityConstraint.__FORM_AUTH);
-	    httpRequest.setAuthUser(form_cred._jUserName);
-	    httpRequest.setUserPrincipal(form_cred._userPrincipal);
-	    nowAuthenticated(session, form_cred);
-
-	    // Sign-on to SSO mechanism
-	    if (realm instanceof SSORealm)
-	      {
-		((SSORealm)realm).setSingleSignOn(httpRequest,
-						  httpResponse,
-						  form_cred._userPrincipal,
-						  new Password(form_cred._jPassword));
-	      }
-
-	    // Redirect to original request
-	    if (response!=null)
-	      {
-		response.setContentLength(0);
-		response.sendRedirect(response.encodeRedirectURL(nuri));
-	      }
-	  }   
-	else if (response!=null)
-	  {
-	    if(log.isDebug())
-	      log.info("User " + form_cred._jUserName +
-		       " authentication FAILED from "
-		       + request.getRemoteAddr());
-	    if (_formErrorPage!=null)
-	      {
-		response.setContentLength(0);
-		response.sendRedirect(response.encodeRedirectURL
-				      (URI.addPaths(request.getContextPath(),
-						    _formErrorPage)));
-	      }
-	    else
-	      {
-		response.sendError(HttpResponse.__403_Forbidden);
-	      }
-	  }
-            
-	// Security check is always false, only true after final redirection.
-	return null;
-      }
-        
+    if (uri.substring(uri.lastIndexOf("/")+1).startsWith(__J_SECURITY_CHECK)) {
+      handleLogin(realm, pathInContext, httpRequest, httpResponse,
+		  request, response, session);
+      // Security check is always false, only true after final redirection.
+      return null;
+    }
     checkInactivity(session);
 
     // Check if the session is already authenticated.
@@ -295,12 +241,12 @@ public class LockssFormAuthenticator implements Authenticator {
 	    httpRequest.setAuthType(SecurityConstraint.__FORM_AUTH);
 	    httpRequest.setAuthUser(form_cred._userPrincipal.getName());
 	    httpRequest.setUserPrincipal(form_cred._userPrincipal);
+	    updateActivity(session);
 	    return form_cred._userPrincipal;
 	  }
 	else
 	  {
-	    session.setAttribute(__J_AUTHENTICATED,null);
-	    updateActivity(session);
+	    logout(session);
 	  }
       }
     else if (realm instanceof SSORealm)
@@ -345,6 +291,79 @@ public class LockssFormAuthenticator implements Authenticator {
 
     return null;
   }
+
+  void handleLogin(UserRealm realm,
+		   String pathInContext,
+		   HttpRequest httpRequest,
+		   HttpResponse httpResponse,
+		   HttpServletRequest request,
+		   HttpServletResponse response,
+		   HttpSession session)
+      throws IOException {
+    // Check the session object for login info.
+    FormCredential form_cred=new FormCredential();
+    form_cred.authenticate(realm,
+			   request.getParameter(__J_USERNAME),
+			   request.getParameter(__J_PASSWORD),
+			   httpRequest);
+            
+    String nuri=(String)session.getAttribute(__J_URI);
+    if (nuri==null || nuri.length()==0)
+      {
+	nuri=request.getContextPath();
+	if (nuri.length()==0)
+	  nuri="/";
+      }
+            
+    if (form_cred._userPrincipal!=null)
+      {
+	// Authenticated OK
+	log.info("User " + form_cred._jUserName
+		 + " authenticated from "
+		 + request.getRemoteAddr());
+	session.removeAttribute(__J_URI); // Remove popped return URI.
+	httpRequest.setAuthType(SecurityConstraint.__FORM_AUTH);
+	httpRequest.setAuthUser(form_cred._jUserName);
+	httpRequest.setUserPrincipal(form_cred._userPrincipal);
+	nowAuthenticated(session, form_cred);
+	session.setAttribute(__J_LOGIN_TIME, TimeBase.nowMs());
+
+	// Sign-on to SSO mechanism
+	if (realm instanceof SSORealm)
+	  {
+	    ((SSORealm)realm).setSingleSignOn(httpRequest,
+					      httpResponse,
+					      form_cred._userPrincipal,
+					      new Password(form_cred._jPassword));
+	  }
+
+	// Redirect to original request
+	if (response!=null)
+	  {
+	    response.setContentLength(0);
+	    response.sendRedirect(response.encodeRedirectURL(nuri));
+	  }
+      }   
+    else if (response!=null)
+      {
+	if(log.isDebug())
+	  log.info("User " + form_cred._jUserName +
+		   " authentication FAILED from "
+		   + request.getRemoteAddr());
+	if (_formErrorPage!=null)
+	  {
+	    response.setContentLength(0);
+	    response.sendRedirect(response.encodeRedirectURL
+				  (URI.addPaths(request.getContextPath(),
+						_formErrorPage)));
+	  }
+	else
+	  {
+	    response.sendError(HttpResponse.__403_Forbidden);
+	  }
+      }
+  }
+
 
   void nowAuthenticated(HttpSession session, FormCredential form_cred) {
     long maxInact = -1;
