@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.4 2009-06-15 07:52:44 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.5 2009-06-19 08:29:19 tlipkis Exp $
  */
 
 /*
@@ -204,7 +204,14 @@ public class AdminEditAccounts extends EditAccountBase {
 
   void addRole(UserAccount acct, Table tbl, String role) {
     tbl.newCell("align=center");
-    tbl.add(acct.isUserInRole(role) ? "Yes" : "No");
+
+    String val;
+    if (!role.equals(ROLE_USER_ADMIN) && acct.isUserInRole(ROLE_USER_ADMIN)) {
+      val = ServletUtil.gray("Yes");
+    } else {
+      val = acct.isUserInRole(role) ? "Yes" : "No";
+    }
+    tbl.add(val);
   }
 
   void addHeading(Table tbl, String head) {
@@ -242,7 +249,7 @@ public class AdminEditAccounts extends EditAccountBase {
     addHeading(tbl, "Type");
     addHeading(tbl, "Email address");
     addHeading(tbl, "Last Login");
-    List<UserAccount> users = new ArrayList(acctMgr.getAccounts());
+    List<UserAccount> users = new ArrayList(acctMgr.getUsers());
     Collections.sort(users, USER_COMPARATOR);
     for (UserAccount acct : users) {
       tbl.newRow();
@@ -369,9 +376,14 @@ public class AdminEditAccounts extends EditAccountBase {
     tbl.newRow();
     tbl.newCell();
     Input cb = new Input(Input.Checkbox, ROLE_PREFIX + role, "true");
-    if (acct.isUserInRole(role)) {
+    if (!role.equals(ROLE_USER_ADMIN) && acct.isUserInRole(ROLE_USER_ADMIN)) {
       cb.check();
-    }      
+      cb.attribute("disabled", "true");
+    } else {
+      if (acct.isUserInRole(role)) {
+	cb.check();
+      }
+    }
     tbl.add(cb);
     tbl.add(rd.longDesc);
   }
