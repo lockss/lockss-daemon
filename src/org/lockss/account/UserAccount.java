@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.2.2.3 2009-06-15 07:47:45 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.2.2.4 2009-06-19 08:22:06 tlipkis Exp $
  */
 
 /*
@@ -519,6 +519,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     long window = getFailedAttemptWindow();
     return
       (window > 0
+       && failedAttemptHistory != null
        && ( ( failedAttemptHistory[0]
 	      - failedAttemptHistory[failedAttemptHistory.length - 1])
 	    <= window)
