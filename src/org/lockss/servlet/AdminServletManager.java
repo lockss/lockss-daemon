@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.9 2009-06-15 07:52:44 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.10 2009-06-19 08:27:25 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,10 @@ public class AdminServletManager extends BaseServletManager {
     PREFIX + SUFFIX_LOG_FORBIDDEN;
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
+  public static final String PARAM_RESOLVE_REMOTE_HOST =
+    PREFIX + SUFFIX_RESOLVE_REMOTE_HOST;
+  public static boolean DEFAULT_RESOLVE_REMOTE_HOST = true;
+
   public static final String PARAM_403_MSG = PREFIX + SUFFIX_403_MSG;
   public static final String DEFAULT_403_MSG =
     "Access to the admin UI is not allowed from this IP address (%IP%)";
@@ -108,6 +112,7 @@ public class AdminServletManager extends BaseServletManager {
     mi.authRealm = UI_REALM;
     mi.defaultEnableDebugUser = DEFAULT_ENABLE_DEBUG_USER;
     mi.defaultLogForbidden = DEFAULT_LOG_FORBIDDEN;
+    mi.defaultResolveRemoteHost = DEFAULT_RESOLVE_REMOTE_HOST;
     mi.debugUserFile = PASSWORD_PROPERTY_FILE;
     return mi;
   }
@@ -610,5 +615,12 @@ public class AdminServletManager extends BaseServletManager {
 				 String contextPath, String logdir)
       throws MalformedURLException {
     setupDirContext(server, realm, contextPath, logdir, null);
+  }
+
+  public Collection<UserSession> getUserSessions() {
+    if (sessionMgr != null) {
+      return sessionMgr.getUserSessions();
+    }
+    return null;
   }
 }

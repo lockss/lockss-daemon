@@ -1,5 +1,5 @@
 /*
- * $Id: TestAccountManager.java,v 1.4 2009-06-15 07:51:09 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.5 2009-06-19 08:27:25 tlipkis Exp $
  */
 
 /*
@@ -166,15 +166,15 @@ public class TestAccountManager extends LockssTestCase {
     String user = "ferd";
     String cred = "SHA-1:01020304";
 
-    assertEquals(0, acctMgr.getAccounts().size());
+    assertEquals(0, acctMgr.getUsers().size());
     acctMgr.installPlatformUser(null, cred);
-    assertEquals(0, acctMgr.getAccounts().size());
+    assertEquals(0, acctMgr.getUsers().size());
     acctMgr.installPlatformUser(user, null);
-    assertEquals(0, acctMgr.getAccounts().size());
+    assertEquals(0, acctMgr.getUsers().size());
     ConfigurationUtil.addFromArgs(AccountManager.PARAM_CONDITIONAL_PLATFORM_USER,
 				  "true");
     acctMgr.installPlatformUser(user, cred);
-    assertEquals(1, acctMgr.getAccounts().size());
+    assertEquals(1, acctMgr.getUsers().size());
     UserAccount acct1 = acctMgr.getUser(user);
     assertEquals(user, acct1.getName());
     assertEquals(ROLE_USER_ADMIN, acct1.getRoles());
@@ -187,22 +187,22 @@ public class TestAccountManager extends LockssTestCase {
     String user = "ferd";
     String cred = "SHA-1:01020304";
 
-    assertEquals(0, acctMgr.getAccounts().size());
+    assertEquals(0, acctMgr.getUsers().size());
     UserAccount admin = acctMgr.createUser("foo");
     admin.setPassword("1234Abcd");
     admin.setRoles(ROLE_USER_ADMIN);
     acctMgr.addUser(admin);
-    assertEquals(1, acctMgr.getAccounts().size());
+    assertEquals(1, acctMgr.getUsers().size());
     ConfigurationUtil.addFromArgs(AccountManager.PARAM_CONDITIONAL_PLATFORM_USER,
 				  "true");
     acctMgr.installPlatformUser(user, cred);
-    assertEquals(1, acctMgr.getAccounts().size());
+    assertEquals(1, acctMgr.getUsers().size());
     assertNull(acctMgr.getUserOrNull(user));
   }
 
   public void testLoadFromProps() throws Exception {
     String name = "luser";
-    assertEquals(0, acctMgr.getAccounts().size());
+    assertEquals(0, acctMgr.getUsers().size());
     acctMgr.loadFromProps(PropUtil.fromArgs(name,
 					    "SHA-1:0102,fooRole,barRole\n"));
     UserAccount acct = acctMgr.getUser(name);
@@ -214,7 +214,7 @@ public class TestAccountManager extends LockssTestCase {
     String name = "luser";
     String url =
       FileTestUtil.urlOfString(name + ": SHA-1:01020304,fooRole,barRole\n");
-    assertEquals(0, acctMgr.getAccounts().size());
+    assertEquals(0, acctMgr.getUsers().size());
     acctMgr.loadFromProps(url);
     UserAccount acct = acctMgr.getUser(name);
     assertEquals(SetUtil.set("FooRole", "BarRole"), acct.getRoleSet());
@@ -223,6 +223,12 @@ public class TestAccountManager extends LockssTestCase {
   UserAccount makeUser(String name) {
     UserAccount acct = new BasicUserAccount.Factory().newUser(name, acctMgr);
     return acct;
+  }
+
+  public void testSanitizeName() {
+    assertEquals("foobar123", acctMgr.sanitizeName("foobar123"));
+    assertEquals("foobar", acctMgr.sanitizeName("foo.bar"));
+    assertEquals("foobar_", acctMgr.sanitizeName(" +.!|,foo.bar?<>_"));
   }
 
   public void testGenerateFilename() {
@@ -235,6 +241,7 @@ public class TestAccountManager extends LockssTestCase {
   static String PWD1 = "123Sb!@#";
   static String PWD2 = "223Sb!@#";
 
+  // This tests both storeUser() and loadUsers()
   public void testStoreUser() throws Exception {
     UserAccount acct1 = makeUser("lu@ser");
     acct1.setPassword(PWD1, true);
@@ -266,6 +273,28 @@ public class TestAccountManager extends LockssTestCase {
 
     acctMgr.loadUsers();
     assertEqualAccts(acct1, acctMgr.getUser(acct1.getName()));
+    assertEqualAccts(acct2, acctMgr.getUser(acct2.getName()));
+    assertEquals(2, acctMgr.getUsers().size());
+
+    // Now test loadUsers' file filtering
+
+    acctMgr.clearAccounts();
+    assertEquals(0, acctMgr.getUsers().size());
+
+    // Rename acct1 file to a name that shouldn't pass the filter
+    File illFile = new File(f1.getParent(), "lu.ser");
+    assertEquals(f1.getParent(), illFile.getParent());
+    f1.renameTo(illFile);
+
+    // Create a subdir that shouldn't pass the filter.  It doesn't hurt
+    // anything even if AccountManager tries to process the subdir, and the
+    // test won't fail, but the error will appear in the test log.
+    File subdir = new File(f1.getParent(), "adir");
+    subdir.mkdir();
+
+    acctMgr.loadUsers();
+    assertEquals(1, acctMgr.getUsers().size());
+    assertNull(acctMgr.getUserOrNull(acct1.getName()));
     assertEqualAccts(acct2, acctMgr.getUser(acct2.getName()));
   }
 
