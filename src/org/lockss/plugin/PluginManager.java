@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.195 2009-06-17 06:59:33 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.196 2009-06-19 08:29:02 tlipkis Exp $
  */
 
 /*
@@ -1051,6 +1051,20 @@ public class PluginManager
       return false;
     }
     return info.isOnLoadablePath();
+  }
+
+  /**
+   * Return a String identifying the type of plugin {Loadable, Internally,
+   * Builtin}
+   */
+  public String getPluginType(Plugin plugin) {
+    if (isLoadablePlugin(plugin)) {
+      return "Loadable";
+    } else if (isInternalPlugin(plugin)) {
+      return "Internal";
+    } else {
+      return "Builtin";
+    }
   }
 
   /**
