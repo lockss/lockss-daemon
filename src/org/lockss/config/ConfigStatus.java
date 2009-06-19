@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigStatus.java,v 1.3 2009-06-13 09:10:38 tlipkis Exp $
+ * $Id: ConfigStatus.java,v 1.4 2009-06-19 08:28:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,8 +51,6 @@ public class ConfigStatus extends BaseLockssDaemonManager {
   static final String PARAM_MAX_DISPLAY_VAL_LEN = PREFIX + "maxDisplayValLen";
   static final int DEFAULT_MAX_DISPLAY_VAL_LEN = 1000;
 
-  final static String PARAM_AU_TREE_DOT = PluginManager.PARAM_AU_TREE + ".";
-
   public ConfigStatus() {
   }
 
@@ -97,7 +95,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 				 DEFAULT_MAX_DISPLAY_VAL_LEN);
       for (Iterator iter = config.keySet().iterator(); iter.hasNext(); ) {
 	String key = (String)iter.next();
-	if (!excludeKey(key)) {
+	if (ConfigManager.shouldParamBeLogged(key)) {
 	  Map row = new HashMap();
 	  row.put("name", key);
 	  row.put("value",
@@ -108,11 +106,6 @@ public class ConfigStatus extends BaseLockssDaemonManager {
       return rows;
     }
     
-    boolean excludeKey(String key) {
-      return key.startsWith(ConfigManager.PARAM_TITLE_DB)
-	|| key.startsWith(PARAM_AU_TREE_DOT)
-	|| key.indexOf(".password") >= 0;
-    }
   }
 }
 
