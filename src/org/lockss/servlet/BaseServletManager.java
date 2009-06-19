@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.26 2009-06-09 06:13:46 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.27 2009-06-19 08:28:39 tlipkis Exp $
  */
 
 /*
@@ -142,6 +142,11 @@ public abstract class BaseServletManager
     DOC_PREFIX + SUFFIX_MAX_LOGIN_INACTIVITY;
   public static long DEFAULT_MAX_LOGIN_INACTIVITY = -1;
 
+  public static final String SUFFIX_RESOLVE_REMOTE_HOST = "resolveRemoteHost";
+  /** True if should attempt to resolve remote host (request source IP) */
+  public static final String PARAM_RESOLVE_REMOTE_HOST =
+    DOC_PREFIX + SUFFIX_RESOLVE_REMOTE_HOST;
+
   public static final String SUFFIX_403_MSG = "403Msg";
   /** Message to include in 403 response */
   public static final String PARAM_403MSG = DOC_PREFIX + SUFFIX_403_MSG;
@@ -186,6 +191,7 @@ public abstract class BaseServletManager
   private long maxLoginInactivity = DEFAULT_MAX_LOGIN_INACTIVITY;
   protected boolean enableDebugUser;
   protected boolean useSsl;
+  protected boolean resolveRemoteHost;
   protected String sslKeystoreName;
   protected int sslRedirFromPort;
   protected AuthType authType = DEFAULT_AUTH_TYPE;
@@ -270,6 +276,10 @@ public abstract class BaseServletManager
       maxLoginInactivity =
 	config.getTimeInterval(mi.prefix + SUFFIX_MAX_LOGIN_INACTIVITY,
 			       DEFAULT_MAX_LOGIN_INACTIVITY);
+      resolveRemoteHost = config.getBoolean(mi.prefix
+					    + SUFFIX_RESOLVE_REMOTE_HOST,
+					    mi.defaultResolveRemoteHost);
+
     }
     // Access control prefix not nec. related to prefix, don't nest inside
     // if (changedKeys.contains(prefix))
@@ -286,6 +296,17 @@ public abstract class BaseServletManager
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
       setIpFilters();
+    }
+  }
+
+  /** Return true iff the auth method is of a type that results in there
+   * always being user sessions to display */
+  public boolean hasUserSessions() {
+    switch (authType) {
+    case Form:
+      return true;
+    default:
+      return false;
     }
   }
 
@@ -340,7 +361,9 @@ public abstract class BaseServletManager
     try {
       // Create the server
       HttpServer server = new Server();
-
+      if (resolveRemoteHost) {
+	server.setResolveRemoteHost(true);
+      }
       HttpListener listener;
       // Create a port listener
       if (useSsl) {
@@ -395,7 +418,7 @@ public abstract class BaseServletManager
   HttpContext makeContext(HttpServer server, String path) {
     HttpContext context = server.getContext(path);
     if (sslConstraint != null) {
-      context.addSecurityConstraint("*", sslConstraint);
+      context.addSecurityConstraint("/", sslConstraint);
     }
     context.setAttribute(HttpContext.__ErrorHandler,
 			 new LockssErrorHandler("daemon")); 
@@ -435,7 +458,7 @@ public abstract class BaseServletManager
     if (mi.doAuth) {
       realm = newUserRealm();
       installUsers();
-      if (acctMgr != null && acctMgr.getAccounts().isEmpty()) {
+      if (acctMgr != null && acctMgr.getUsers().isEmpty()) {
 	log.warning("No users created, " + mi.authRealm +
 		    " is effectively disabled.");
       }
@@ -648,6 +671,7 @@ public abstract class BaseServletManager
     String authRealm;
     boolean defaultEnableDebugUser;
     boolean defaultLogForbidden;
+    boolean defaultResolveRemoteHost;
     String debugUserFile;
   }
 

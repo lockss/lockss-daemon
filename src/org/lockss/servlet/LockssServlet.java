@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.113 2009-06-01 23:38:10 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.114 2009-06-19 08:28:39 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.apache.commons.collections.*;
 import org.apache.commons.collections.bidimap.*;
 import org.apache.commons.collections.iterators.*;
 import org.mortbay.html.*;
+import org.mortbay.http.*;
 import org.mortbay.servlet.MultiPartRequest;
 
 import org.lockss.app.*;
@@ -53,6 +54,7 @@ import org.lockss.account.*;
 import org.lockss.remote.RemoteApi;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.protocol.*;
+import org.lockss.jetty.*;
 import org.lockss.util.*;
 
 /** Abstract base class for LOCKSS servlets
@@ -82,6 +84,12 @@ public abstract class LockssServlet extends HttpServlet
   /** The warning string to display when the UI is disabled. */
   static final String PARAM_UI_WARNING =
     Configuration.PREFIX + "ui.warning";
+
+  // session keys
+  static final String SESSION_KEY_OBJECT_ID = "obj_id";
+  static final String SESSION_KEY_OBJ_MAP = "obj_map";
+  public static final String SESSION_KEY_RUNNING_SERVLET = "running_servlet";
+  public static final String SESSION_KEY_REQUEST_HOST = "request_host";
 
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
@@ -162,6 +170,7 @@ public abstract class LockssServlet extends HttpServlet
       throws ServletException, IOException {
     resetState();
     boolean success = false;
+    HttpSession session = req.getSession(false);
     try {
       this.req = req;
       this.resp = resp;
@@ -192,6 +201,16 @@ public abstract class LockssServlet extends HttpServlet
 	displayWarningInLieuOfPage("This function is disabled. " + reason);
 	return;
       }
+      if (session != null) {
+	session.setAttribute(SESSION_KEY_RUNNING_SERVLET,
+			     getHeading());
+	String reqHost = req.getRemoteHost();
+	String forw = req.getHeader(HttpFields.__XForwardedFor);
+	if (!StringUtil.isNullString(forw)) {
+	  reqHost += " (proxies for " + forw + ")";
+	}
+	session.setAttribute(SESSION_KEY_REQUEST_HOST, reqHost);
+      }
       lockssHandleRequest();
       success = (errMsg == null);
     } catch (ServletException e) {
@@ -204,6 +223,11 @@ public abstract class LockssServlet extends HttpServlet
       log.error("Servlet threw", e);
       throw e;
     } finally {
+      if (session != null) {
+	session.setAttribute(SESSION_KEY_RUNNING_SERVLET, null);
+	session.setAttribute(LockssFormAuthenticator.__J_AUTH_ACTIVITY,
+			     TimeBase.nowMs());
+      }
       if ("please".equalsIgnoreCase(req.getHeader("X-Lockss-Result"))) {
 	log.debug3("X-Lockss-Result: " + (success ? "Ok" : "Fail"));
 	resp.setHeader("X-Lockss-Result", success ? "Ok" : "Fail");
@@ -275,9 +299,6 @@ public abstract class LockssServlet extends HttpServlet
   protected boolean hasSession() {
     return req.getSession(false) != null;
   }
-
-  static final String SESSION_KEY_OBJECT_ID = "obj_id";
-  static final String SESSION_KEY_OBJ_MAP = "obj_map";
 
   /** Get an unused ID string for storing an object in the session */
   protected String getNewSessionObjectId() {
