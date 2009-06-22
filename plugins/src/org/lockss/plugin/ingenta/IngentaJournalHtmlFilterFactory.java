@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.5 2009-06-18 00:26:24 thib_gc Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.6 2009-06-22 18:42:06 greya Exp $
  */ 
 
 /*
@@ -69,7 +69,11 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "class",
                                                                          "heading-macfix article-access-options")),                                                                           
-    };
+          // Filter out <div id="baynote-recommendations">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "baynote-recommendations")),   
+ 	};
     return new HtmlFilterInputStream(in,
                                      encoding,
                                      new HtmlCompoundTransform(transforms));
