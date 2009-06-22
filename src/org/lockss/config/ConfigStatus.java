@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigStatus.java,v 1.4 2009-06-19 08:28:12 tlipkis Exp $
+ * $Id: ConfigStatus.java,v 1.5 2009-06-22 04:43:03 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 
   final static String CONFIG_STATUS_TABLE = "ConfigStatus";
 
-  public static final String PREFIX = Configuration.PREFIX + ".configStatus";
+  public static final String PREFIX = Configuration.PREFIX + "configStatus.";
 
   /** Truncate displayed values to this length */
   static final String PARAM_MAX_DISPLAY_VAL_LEN = PREFIX + "maxDisplayValLen";
