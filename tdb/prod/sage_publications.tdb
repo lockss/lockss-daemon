@@ -3998,7 +3998,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < do_not_process ; Health Informatics Journal Volume 12 ; 12 >
         au < ready ; Health Informatics Journal Volume 13 ; 13 >
         au < manifest ; Health Informatics Journal Volume 14 ; 14 >
-        au < manfiest ; Health Informatics Journal Volume 15 ; 15 >
+        au < manifest ; Health Informatics Journal Volume 15 ; 15 >
 
       }
 
@@ -6883,8 +6883,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Fire Sciences Volume 23 ; 23 >
         au < ready ; Journal of Fire Sciences Volume 24 ; 24 >
         au < ready ; Journal of Fire Sciences Volume 25 ; 25 >
-        au < manifest ; Journal of Fire Sciences Volume 26 ; 26 >
-        au < manifest ; Journal of Fire Sciences Volume 27 ; 27 >
+        au < testing ; Journal of Fire Sciences Volume 26 ; 26 >
+        au < testing ; Journal of Fire Sciences Volume 27 ; 27 >
 
       }
 
@@ -6915,8 +6915,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 18 ; 18 >
         au < do_not_process ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 20 ; 20 >
-        au < manifest ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
-        au < manifest ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
+        au < testing ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
+        au < testing ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
 
       }
 
@@ -6937,7 +6937,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Health Management Volume 7 ; 7 >
         au < ready ; Journal of Health Management Volume 8 ; 8 >
         au < ready ; Journal of Health Management Volume 9 ; 9 >
-        au < manifest ; Journal of Health Management Volume 10 ; 10 >
+        au < testing ; Journal of Health Management Volume 10 ; 10 >
 
       }
 
@@ -6958,8 +6958,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Health Psychology Volume 10 ; 10 >
         au < ready ; Journal of Health Psychology Volume 11 ; 11 >
         au < ready ; Journal of Health Psychology Volume 12 ; 12 >
-        au < manifest ; Journal of Health Psychology Volume 13 ; 13 >
-        au < manifest ; Journal of Health Psychology Volume 14 ; 14 >
+        au < testing ; Journal of Health Psychology Volume 13 ; 13 >
+        au < testing ; Journal of Health Psychology Volume 14 ; 14 >
 
       }
 
@@ -7456,6 +7456,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Journal of Management Inquiry Volume 14 ; 14 >
         au < released ; Journal of Management Inquiry Volume 15 ; 15 >
         au < released ; Journal of Management Inquiry Volume 16 ; 16 >
+        au < manifest ; Journal of Management Inquiry Volume 17 ; 17 >
+        au < manifest ; Journal of Management Inquiry Volume 18 ; 18 >
 
       }
 
@@ -7476,6 +7478,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Journal of Marketing Education Volume 27 ; 27 >
         au < released ; Journal of Marketing Education Volume 28 ; 28 >
         au < released ; Journal of Marketing Education Volume 29 ; 29 >
+        au < manifest ; Journal of Marketing Education Volume 30 ; 30 >
+        au < manifest ; Journal of Marketing Education Volume 31 ; 31 >
 
       }
 
@@ -7496,6 +7500,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Journal of Material Culture Volume 10 ; 10 >
         au < released ; Journal of Material Culture Volume 11 ; 11 >
         au < released ; Journal of Material Culture Volume 12 ; 12 >
+        au < manifest ; Journal of Material Culture Volume 13 ; 13 >
+        au < manifest ; Journal of Material Culture Volume 14 ; 14 >
 
       }
 
@@ -7515,6 +7521,7 @@ comment[jcp] = some sort of custom layout
 
         au < released ; Journal of Mixed Methods Research Volume 1 ; 1 >
         au < released ; Journal of Mixed Methods Research Volume 2 ; 2 >
+        au < manifest ; Journal of Mixed Methods Research Volume 3 ; 3 >
 
       }
 
@@ -7528,14 +7535,16 @@ comment[jcp] = some sort of custom layout
 
       {
 
+comment[mpj] = now published by Brill
+
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://mpj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < released ; Journal of Moral Philosophy Volume 1 ; 1 >
-        au < released ; Journal of Moral Philosophy Volume 2 ; 2 >
-        au < released ; Journal of Moral Philosophy Volume 3 ; 3 >
-        au < released ; Journal of Moral Philosophy Volume 4 ; 4 >
+        au < down ; Journal of Moral Philosophy Volume 1 ; 1 >
+        au < down ; Journal of Moral Philosophy Volume 2 ; 2 >
+        au < down ; Journal of Moral Philosophy Volume 3 ; 3 >
+        au < down ; Journal of Moral Philosophy Volume 4 ; 4 >
 
       }
 
@@ -7556,6 +7565,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Oncology Pharmacy Practice Volume 11 ; 11 >
         au < ready ; Journal of Oncology Pharmacy Practice Volume 12 ; 12 >
         au < ready ; Journal of Oncology Pharmacy Practice Volume 13 ; 13 >
+        au < manifest ; Journal of Oncology Pharmacy Practice Volume 14 ; 14 >
+        au < manifest ; Journal of Oncology Pharmacy Practice Volume 15 ; 15 >
 
       }
 
@@ -7576,6 +7587,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Peace Research Volume 42 ; 42 >
         au < ready ; Journal of Peace Research Volume 43 ; 43 >
         au < ready ; Journal of Peace Research Volume 44 ; 44 >
+        au < manifest ; Journal of Peace Research Volume 45 ; 45 >
+        au < manifest ; Journal of Peace Research Volume 46 ; 46 >
 
       }
 
@@ -7596,26 +7609,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Pediatric Oncology Nursing Volume 22 ; 22 >
         au < ready ; Journal of Pediatric Oncology Nursing Volume 23 ; 23 >
         au < ready ; Journal of Pediatric Oncology Nursing Volume 24 ; 24 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Journal of Pentecostal Theology 
-      >
-
-      {
-
-        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-        param[base_url] = http://jpt.sagepub.com/
-        implicit < status ; name ; param[volume_name] >
-
-        au < ready ; Journal of Pentecostal Theology Volume 13 ; 13 >
-        au < ready ; Journal of Pentecostal Theology Volume 14 ; 14 >
-        au < ready ; Journal of Pentecostal Theology Volume 15 ; 15 >
+        au < manifest ; Journal of Pediatric Oncology Nursing Volume 25 ; 25 >
+        au < manifest ; Journal of Pediatric Oncology Nursing Volume 26 ; 26 >
 
       }
 
@@ -7636,6 +7631,8 @@ comment[jcp] = some sort of custom layout
         au < testing ; Journal of Pharmacy Practice Volume 18 ; 18 >
         au < ready ; Journal of Pharmacy Practice Volume 19 ; 19 >
         au < ready ; Journal of Pharmacy Practice Volume 20 ; 20 >
+        au < manifest ; Journal of Pharmacy Practice Volume 21 ; 21 >
+        au < manifest ; Journal of Pharmacy Practice Volume 22 ; 22 >
 
       }
 
@@ -7657,6 +7654,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Planning Education and Research Volume 25 ; 25 >
         au < ready ; Journal of Planning Education and Research Volume 26 ; 26 >
         au < ready ; Journal of Planning Education and Research Volume 27 ; 27 >
+        au < manifest ; Journal of Planning Education and Research Volume 28 ; 28 >
 
       }
 
@@ -7677,6 +7675,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Journal of Planning History Volume 4 ; 4 >
         au < released ; Journal of Planning History Volume 5 ; 5 >
         au < released ; Journal of Planning History Volume 6 ; 6 >
+        au < manifest ; Journal of Planning History Volume 7 ; 7 >
+        au < manifest ; Journal of Planning History Volume 8 ; 8 >
 
       }
 
@@ -7698,6 +7698,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Journal of Planning Literature Volume 20 ; 20 >
         au < released ; Journal of Planning Literature Volume 21 ; 21 >
         au < released ; Journal of Planning Literature Volume 22 ; 22 >
+        au < manifest ; Journal of Planning Literature Volume 23 ; 23 >
 
       }
 
@@ -7718,6 +7719,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Journal of Plastic Film and Sheeting Volume 21 ; 21 >
         au < released ; Journal of Plastic Film and Sheeting Volume 22 ; 22 >
         au < released ; Journal of Plastic Film and Sheeting Volume 23 ; 23 >
+        au < manifest ; Journal of Plastic Film and Sheeting Volume 24 ; 24 >
 
       }
 
@@ -7748,6 +7750,9 @@ comment[jcp] = some sort of custom layout
         au < do_not_process ; Journal of Psychoeducational Assessment Volume 23 ; 23 >
         au < released ; Journal of Psychoeducational Assessment Volume 24 ; 24 >
         au < released ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
+        au < released ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
+        au < manifest ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
+        au < manifest ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
 
       }
 
@@ -7768,6 +7773,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Psychopharmacology Volume 19 ; 19 >
         au < ready ; Journal of Psychopharmacology Volume 20 ; 20 >
         au < ready ; Journal of Psychopharmacology Volume 21 ; 21 >
+        au < manifest ; Journal of Psychopharmacology Volume 22 ; 22 >
+        au < manifest ; Journal of Psychopharmacology Volume 23 ; 23 >
 
       }
 
@@ -7788,6 +7795,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Reinforced Plastics and Composites Volume 24 ; 24 >
         au < ready ; Journal of Reinforced Plastics and Composites Volume 25 ; 25 >
         au < ready ; Journal of Reinforced Plastics and Composites Volume 26 ; 26 >
+        au < manifest ; Journal of Reinforced Plastics and Composites Volume 27 ; 27 >
+        au < manifest ; Journal of Reinforced Plastics and Composites Volume 28 ; 28 >
 
       }
 
@@ -7808,6 +7817,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Research in Crime and Delinquency Volume 42 ; 42 >
         au < ready ; Journal of Research in Crime and Delinquency Volume 43 ; 43 >
         au < ready ; Journal of Research in Crime and Delinquency Volume 44 ; 44 >
+        au < manifest ; Journal of Research in Crime and Delinquency Volume 45 ; 45 >
+        au < manifest ; Journal of Research in Crime and Delinquency Volume 46 ; 46 >
 
       }
 
@@ -7828,6 +7839,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Research in International Education Volume 4 ; 4 >
         au < ready ; Journal of Research in International Education Volume 5 ; 5 >
         au < ready ; Journal of Research in International Education Volume 6 ; 6 >
+        au < manifest ; Journal of Research in International Education Volume 7 ; 7 >
+        au < manifest ; Journal of Research in International Education Volume 8 ; 8 >
 
       }
 
@@ -7848,6 +7861,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Research in Nursing Volume 10 ; 10 >
         au < ready ; Journal of Research in Nursing Volume 11 ; 11 >
         au < ready ; Journal of Research in Nursing Volume 12 ; 12 >
+        au < manifest ; Journal of Research in Nursing Volume 13 ; 13 >
+        au < manifest ; Journal of Research in Nursing Volume 14 ; 14 >
 
       }
 
@@ -7868,6 +7883,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Sandwich Structures and Materials Volume 7 ; 7 >
         au < ready ; Journal of Sandwich Structures and Materials Volume 8 ; 8 >
         au < ready ; Journal of Sandwich Structures and Materials Volume 9 ; 9 >
+        au < manifest ; Journal of Sandwich Structures and Materials Volume 10 ; 10 >
+        au < manifest ; Journal of Sandwich Structures and Materials Volume 11 ; 11 >
 
       }
 
@@ -7889,6 +7906,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Service Research Volume 8 ; 8 >
         au < ready ; Journal of Service Research Volume 9 ; 9 >
         au < ready ; Journal of Service Research Volume 10 ; 10 >
+        au < manifest ; Journal of Service Research Volume 11 ; 11 >
 
       }
 
@@ -7909,6 +7927,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Social and Personal Relationships Volume 22 ; 22 >
         au < ready ; Journal of Social and Personal Relationships Volume 23 ; 23 >
         au < ready ; Journal of Social and Personal Relationships Volume 24 ; 24 >
+        au < manifest ; Journal of Social and Personal Relationships Volume 25 ; 25 >
+        au < manifest ; Journal of Social and Personal Relationships Volume 26 ; 26 >
 
       }
 
@@ -7930,6 +7950,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Social Archaeology Volume 5 ; 5 >
         au < ready ; Journal of Social Archaeology Volume 6 ; 6 >
         au < ready ; Journal of Social Archaeology Volume 7 ; 7 >
+        au < manifest ; Journal of Social Archaeology Volume 8 ; 8 >
+        au < manifest ; Journal of Social Archaeology Volume 9 ; 9 >
 
       }
 
@@ -7950,6 +7972,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Social Work Volume 5 ; 5 >
         au < manifest ; Journal of Social Work Volume 6 ; 6 >
         au < ready ; Journal of Social Work Volume 7 ; 7 >
+        au < manifest ; Journal of Social Work Volume 8 ; 8 >
+        au < manifest ; Journal of Social Work Volume 9 ; 9 >
 
       }
 
@@ -7970,6 +7994,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Journal of Sociology Volume 41 ; 41 >
         au < ready ; Journal of Sociology Volume 42 ; 42 >
         au < ready ; Journal of Sociology Volume 43 ; 43 >
+        au < manifest ; Journal of Sociology Volume 44 ; 44 >
+        au < manifest ; Journal of Sociology Volume 45 ; 45 >
 
       }
 
@@ -7989,6 +8015,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Journal of South Asian Development Volume 1 ; 1 >
         au < manifest ; Journal of South Asian Development Volume 2 ; 2 >
+        au < manifest ; Journal of South Asian Development Volume 3 ; 3 >
+        au < manifest ; Journal of South Asian Development Volume 4 ; 4 >
 
       }
 
@@ -8009,6 +8037,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Sport & Social Issues Volume 29 ; 29 >
         au < ready ; Journal of Sport & Social Issues Volume 30 ; 30 >
         au < manifest ; Journal of Sport & Social Issues Volume 31 ; 31 >
+        au < manifest ; Journal of Sport & Social Issues Volume 32 ; 32 >
+        au < manifest ; Journal of Sport & Social Issues Volume 33 ; 33 >
 
       }
 
@@ -8029,6 +8059,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Sports Economics Volume 6 ; 6 >
         au < ready ; Journal of Sports Economics Volume 7 ; 7 >
         au < ready ; Journal of Sports Economics Volume 8 ; 8 >
+        au < manifest ; Journal of Sports Economics Volume 9 ; 9 >
+        au < manifest ; Journal of Sports Economics Volume 10 ; 10 >
 
       }
 
@@ -8049,6 +8081,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Studies in International Education Volume 9 ; 9 >
         au < manifest ; Journal of Studies in International Education Volume 10 ; 10 >
         au < manifest ; Journal of Studies in International Education Volume 11 ; 11 >
+        au < manifest ; Journal of Studies in International Education Volume 12 ; 12 >
+        au < manifest ; Journal of Studies in International Education Volume 13 ; 13 >
 
       }
 
@@ -8069,11 +8103,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Teacher Education Volume 56 ; 56 >
         au < ready ; Journal of Teacher Education Volume 57 ; 57 >
         au < manifest ; Journal of Teacher Education Volume 58 ; 58 >
-        au < ready ; Journal of Teacher Education Volume 33 ; 33 >
-        au < manifest ; Journal of Teacher Education Volume 34 ; 34 >
-        au < manifest ; Journal of Teacher Education Volume 11 ; 11 >
-        au < ready ; Journal of Teacher Education Volume 12 ; 12 >
-        au < ready ; Journal of Teacher Education Volume 13 ; 13 >
+        au < manifest ; Journal of Teacher Education Volume 59 ; 59 >
+        au < manifest ; Journal of Teacher Education Volume 60 ; 60 >
 
       }
 
@@ -8094,6 +8125,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 5 ; 5 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 6 ; 6 >
+        au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
+        au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
 
       }
 
@@ -8114,6 +8147,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 >
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 >
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 >
+        au < manifest ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
+        au < manifest ; The Journal of the Royal Society for the Promotion of Health Volume 129 ; 129 >
 
       }
 
@@ -8134,6 +8169,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Theoretical Politics Volume 17 ; 17 >
         au < ready ; Journal of Theoretical Politics Volume 18 ; 18 >
         au < ready ; Journal of Theoretical Politics Volume 19 ; 19 >
+        au < manifest ; Journal of Theoretical Politics Volume 20 ; 20 >
+        au < manifest ; Journal of Theoretical Politics Volume 21 ; 21 >
 
       }
 
@@ -8154,6 +8191,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Journal of Thermoplastic Composite Materials Volume 18 ; 18 >
         au < manifest ; Journal of Thermoplastic Composite Materials Volume 19 ; 19 >
         au < manifest ; Journal of Thermoplastic Composite Materials Volume 20 ; 20 >
+        au < manifest ; Journal of Thermoplastic Composite Materials Volume 21 ; 21 >
+        au < manifest ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 >
 
       }
 
@@ -8174,6 +8213,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Transcultural Nursing Volume 16 ; 16 >
         au < ready ; Journal of Transcultural Nursing Volume 17 ; 17 >
         au < ready ; Journal of Transcultural Nursing Volume 18 ; 18 >
+        au < manifest ; Journal of Transcultural Nursing Volume 19 ; 19 >
+        au < manifest ; Journal of Transcultural Nursing Volume 20 ; 20 >
 
       }
 
@@ -8194,6 +8235,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Transformative Education Volume 3 ; 3 >
         au < manifest ; Journal of Transformative Education Volume 4 ; 4 >
         au < ready ; Journal of Transformative Education Volume 5 ; 5 >
+        au < manifest ; Journal of Transformative Education Volume 6 ; 6 >
 
       }
 
@@ -8215,6 +8257,7 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Journal of Travel Research Volume 44 ; 44 >
         au < manifest ; Journal of Travel Research Volume 45 ; 45 >
         au < ready ; Journal of Travel Research Volume 46 ; 46 >
+        au < manifest ; Journal of Travel Research Volume 47 ; 47 >
 
       }
 
@@ -8236,6 +8279,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Urban History Volume 32 ; 32 >
         au < ready ; Journal of Urban History Volume 33 ; 33 >
         au < ready ; Journal of Urban History Volume 34 ; 34 >
+        au < manifest ; Journal of Urban History Volume 35 ; 35 >
 
       }
 
@@ -8258,6 +8302,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Vacation Marketing Volume 12 ; 12 >
         au < ready ; Journal of Vacation Marketing Volume 13 ; 13 >
         au < ready ; Journal of Vacation Marketing Volume 14 ; 14 >
+        au < manifest ; Journal of Vacation Marketing Volume 15 ; 15 >
 
       }
 
@@ -8278,6 +8323,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Journal of Vibration and Control Volume 11 ; 11 >
         au < ready ; Journal of Vibration and Control Volume 12 ; 12 >
         au < manifest ; Journal of Vibration and Control Volume 13 ; 13 >
+        au < manifest ; Journal of Vibration and Control Volume 14 ; 14 >
+        au < manifest ; Journal of Vibration and Control Volume 15 ; 15 >
 
       }
 
@@ -8298,6 +8345,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Visual Culture Volume 4 ; 4 >
         au < ready ; Journal of Visual Culture Volume 5 ; 5 >
         au < manifest ; Journal of Visual Culture Volume 6 ; 6 >
+        au < manifest ; Journal of Visual Culture Volume 7 ; 7 >
+        au < manifest ; Journal of Visual Culture Volume 8 ; 8 >
 
       }
 
@@ -8336,6 +8385,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journalism Volume 6 ; 6 >
         au < ready ; Journalism Volume 7 ; 7 >
         au < ready ; Journalism Volume 8 ; 8 >
+        au < manifest ; Journalism Volume 9 ; 9 >
+        au < manifest ; Journalism Volume 10 ; 10 >
 
       }
 
@@ -8354,6 +8405,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Labor Studies Journal Volume 32 ; 32 >
+        au < manifest ; Labor Studies Journal Volume 33 ; 33 >
+        au < manifest ; Labor Studies Journal Volume 34 ; 34 >
 
       }
 
@@ -8374,6 +8427,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Language and Literature Volume 14 ; 14 >
         au < ready ; Language and Literature Volume 15 ; 15 >
         au < ready ; Language and Literature Volume 16 ; 16 >
+        au < manifest ; Language and Literature Volume 17 ; 17 >
+        au < manifest ; Language and Literature Volume 18 ; 18 >
 
       }
 
@@ -8393,6 +8448,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Language Teaching Research Volume 10 ; 10 >
         au < ready ; Language Teaching Research Volume 11 ; 11 >
+        au < manifest ; Language Teaching Research Volume 12 ; 12 >
+        au < manifest ; Language Teaching Research Volume 13 ; 13 >
 
       }
 
@@ -8412,6 +8469,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Language Testing Volume 23 ; 23 >
         au < ready ; Language Testing Volume 24 ; 24 >
+        au < manifest ; Language Testing Volume 25 ; 25 >
+        au < manifest ; Language Testing Volume 26 ; 26 >
 
       }
 
@@ -8432,6 +8491,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Latin American Perspectives Volume 32 ; 32 >
         au < ready ; Latin American Perspectives Volume 33 ; 33 >
         au < ready ; Latin American Perspectives Volume 34 ; 34 >
+        au < manifest ; Latin American Perspectives Volume 35 ; 35 >
+        au < manifest ; Latin American Perspectives Volume 36 ; 36 >
 
       }
 
@@ -8451,6 +8512,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Law, Culture and the Humanities Volume 2 ; 2 >
         au < ready ; Law, Culture and the Humanities Volume 3 ; 3 >
+        au < manifest ; Law, Culture and the Humanities Volume 4 ; 4 >
+        au < manifest ; Law, Culture and the Humanities Volume 5 ; 5 >
 
       }
 
@@ -8471,6 +8534,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Leadership Volume 1 ; 1 >
         au < ready ; Leadership Volume 2 ; 2 >
         au < ready ; Leadership Volume 3 ; 3 >
+        au < manifest ; Leadership Volume 4 ; 4 >
+        au < manifest ; Leadership Volume 5 ; 5 >
 
       }
 
@@ -8490,6 +8555,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Lighting Research and Technology Volume 38 ; 38 >
         au < ready ; Lighting Research and Technology Volume 39 ; 39 >
+        au < manifest ; Lighting Research and Technology Volume 40 ; 40 >
+        au < manifest ; Lighting Research and Technology Volume 41 ; 41 >
 
       }
 
@@ -8509,6 +8576,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Lupus Volume 15 ; 15 >
         au < ready ; Lupus Volume 16 ; 16 >
+        au < manifest ; Lupus Volume 17 ; 17 >
+        au < manifest ; Lupus Volume 18 ; 18 >
 
       }
 
@@ -8528,6 +8597,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Management & Organizational History Volume 1 ; 1 >
         au < ready ; Management & Organizational History Volume 2 ; 2 >
+        au < manifest ; Management & Organizational History Volume 3 ; 3 >
+        au < manifest ; Management & Organizational History Volume 4 ; 4 >
 
       }
 
@@ -8549,6 +8620,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Management Communication Quarterly Volume 19 ; 19 >
         au < manifest ; Management Communication Quarterly Volume 20 ; 20 >
         au < manifest ; Management Communication Quarterly Volume 21 ; 21 >
+        au < manifest ; Management Communication Quarterly Volume 22 ; 22 >
 
       }
 
@@ -8568,6 +8640,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Management in Education Volume 18 ; 18 >
         au < ready ; Management in Education Volume 21 ; 21 >
+        au < manifest ; Management in Education Volume 22 ; 22 >
+        au < manifest ; Management in Education Volume 23 ; 23 >
 
       }
 
@@ -8588,6 +8662,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Management Learning Volume 36 ; 36 >
         au < ready ; Management Learning Volume 37 ; 37 >
         au < ready ; Management Learning Volume 38 ; 38 >
+        au < manifest ; Management Learning Volume 39 ; 39 >
+        au < manifest ; Management Learning Volume 40 ; 40 >
 
       }
 
@@ -8606,6 +8682,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Margin: The Journal of Applied Economic Research Volume 1 ; 1 >
+        au < manifest ; Margin: The Journal of Applied Economic Research Volume 2 ; 2 >
+        au < manifest ; Margin: The Journal of Applied Economic Research Volume 3 ; 3 >
 
       }
 
@@ -8626,6 +8704,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Marketing Theory Volume 5 ; 5 >
         au < ready ; Marketing Theory Volume 6 ; 6 >
         au < ready ; Marketing Theory Volume 7 ; 7 >
+        au < manifest ; Marketing Theory Volume 8 ; 8 >
+        au < manifest ; Marketing Theory Volume 9 ; 9 >
 
       }
 
@@ -8646,6 +8726,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Mathematics and Mechanics of Solids Volume 10 ; 10 >
         au < manifest ; Mathematics and Mechanics of Solids Volume 11 ; 11 >
         au < manifest ; Mathematics and Mechanics of Solids Volume 12 ; 12 >
+        au < manifest ; Mathematics and Mechanics of Solids Volume 13 ; 13 >
+        au < manifest ; Mathematics and Mechanics of Solids Volume 14 ; 14 >
 
       }
 
@@ -8666,6 +8748,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Media, Culture & Society Volume 27 ; 27 >
         au < ready ; Media, Culture & Society Volume 28 ; 28 >
         au < manifest ; Media, Culture & Society Volume 29 ; 29 >
+        au < manifest ; Media, Culture & Society Volume 30 ; 30 >
+        au < manifest ; Media, Culture & Society Volume 31 ; 31 >
 
       }
 
@@ -8686,6 +8770,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Medical Care Research and Review Volume 62 ; 62 >
         au < ready ; Medical Care Research and Review Volume 63 ; 63 >
         au < ready ; Medical Care Research and Review Volume 64 ; 64 >
+        au < manifest ; Medical Care Research and Review Volume 65 ; 65 >
+        au < manifest ; Medical Care Research and Review Volume 66 ; 66 >
 
       }
 
@@ -8706,6 +8792,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Medical Decision Making Volume 25 ; 25 >
         au < ready ; Medical Decision Making Volume 26 ; 26 >
         au < ready ; Medical Decision Making Volume 27 ; 27 >
+        au < manifest ; Medical Decision Making Volume 28 ; 28 >
+        au < manifest ; Medical Decision Making Volume 29 ; 29 >
 
       }
 
@@ -8726,6 +8814,7 @@ comment[jcp] = some sort of custom layout
         au < manifest ; The Medieval History Journal Volume 8 ; 8 >
         au < manifest ; The Medieval History Journal Volume 9 ; 9 >
         au < manifest ; The Medieval History Journal Volume 10 ; 10 >
+        au < manifest ; The Medieval History Journal Volume 11 ; 11 >
 
       }
 
@@ -8747,6 +8836,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Men and Masculinities Volume 8 ; 8 >
         au < ready ; Men and Masculinities Volume 9 ; 9 >
         au < ready ; Men and Masculinities Volume 10 ; 10 >
+        au < manifest ; Men and Masculinities Volume 11 ; 11 >
 
       }
 
@@ -8767,6 +8857,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Modern China Volume 31 ; 31 >
         au < ready ; Modern China Volume 32 ; 32 >
         au < ready ; Modern China Volume 33 ; 33 >
+        au < manifest ; Modern China Volume 34 ; 34 >
+        au < manifest ; Modern China Volume 35 ; 35 >
 
       }
 
@@ -8786,6 +8878,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Multiple Sclerosis Volume 12 ; 12 >
         au < ready ; Multiple Sclerosis Volume 13 ; 13 >
+        au < manifest ; Multiple Sclerosis Volume 14 ; 14 >
+        au < manifest ; Multiple Sclerosis Volume 15 ; 15 >
 
       }
 
@@ -8806,6 +8900,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; NASSP Bulletin Volume 89 ; 89 >
         au < ready ; NASSP Bulletin Volume 90 ; 90 >
         au < ready ; NASSP Bulletin Volume 91 ; 91 >
+        au < manifest ; NASSP Bulletin Volume 92 ; 92 >
+        au < manifest ; NASSP Bulletin Volume 93 ; 93 >
 
       }
 
@@ -8834,6 +8930,12 @@ comment[jcp] = some sort of custom layout
         au < ready ; National Institute Economic Review Volume 200 ; 200 >
         au < ready ; National Institute Economic Review Volume 201 ; 201 >
         au < ready ; National Institute Economic Review Volume 202 ; 202 >
+        au < manifest ; National Institute Economic Review Volume 203 ; 203 >
+        au < manifest ; National Institute Economic Review Volume 204 ; 204 >
+        au < manifest ; National Institute Economic Review Volume 205 ; 205 >
+        au < manifest ; National Institute Economic Review Volume 206 ; 206 >
+        au < manifest ; National Institute Economic Review Volume 207 ; 207 >
+        au < manifest ; National Institute Economic Review Volume 208 ; 208 >
 
       }
 
@@ -8854,6 +8956,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Neurorehabilitation and Neural Repair Volume 19 ; 19 >
         au < ready ; Neurorehabilitation and Neural Repair Volume 20 ; 20 >
         au < ready ; Neurorehabilitation and Neural Repair Volume 21 ; 21 >
+        au < manifest ; Neurorehabilitation and Neural Repair Volume 22 ; 22 >
+        au < manifest ; Neurorehabilitation and Neural Repair Volume 23 ; 23 >
 
       }
 
@@ -8874,6 +8978,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; The Neuroscientist Volume 11 ; 11 >
         au < ready ; The Neuroscientist Volume 12 ; 12 >
         au < manifest ; The Neuroscientist Volume 13 ; 13 >
+        au < manifest ; The Neuroscientist Volume 14 ; 14 >
+        au < manifest ; The Neuroscientist Volume 15 ; 15 >
 
       }
 
@@ -8894,6 +9000,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; New Media & Society Volume 7 ; 7 >
         au < ready ; New Media & Society Volume 8 ; 8 >
         au < ready ; New Media & Society Volume 9 ; 9 >
+        au < manifest ; New Media & Society Volume 10 ; 10 >
+        au < manifest ; New Media & Society Volume 11 ; 11 >
 
       }
 
@@ -8914,6 +9022,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 34 ; 34 >
         au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 35 ; 35 >
         au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 36 ; 36 >
+        au < manifest ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 >
+        au < manifest ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 >
 
       }
 
@@ -8933,6 +9043,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Nursing Ethics Volume 13 ; 13 >
         au < ready ; Nursing Ethics Volume 14 ; 14 >
+        au < manifest ; Nursing Ethics Volume 15 ; 15 >
+        au < manifest ; Nursing Ethics Volume 16 ; 16 >
 
       }
 
@@ -8953,6 +9065,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Nursing Science Quarterly Volume 18 ; 18 >
         au < ready ; Nursing Science Quarterly Volume 19 ; 19 >
         au < ready ; Nursing Science Quarterly Volume 20 ; 20 >
+        au < manifest ; Nursing Science Quarterly Volume 21 ; 21 >
+        au < manifest ; Nursing Science Quarterly Volume 22 ; 22 >
 
       }
 
@@ -8973,6 +9087,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Organization Volume 12 ; 12 >
         au < ready ; Organization Volume 13 ; 13 >
         au < ready ; Organization Volume 14 ; 14 >
+        au < manifest ; Organization Volume 15 ; 15 >
+        au < manifest ; Organization Volume 16 ; 16 >
 
       }
 
@@ -8993,6 +9109,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Organization & Environment Volume 18 ; 18 >
         au < ready ; Organization & Environment Volume 19 ; 19 >
         au < ready ; Organization & Environment Volume 20 ; 20 >
+        au < manifest ; Organization & Environment Volume 21 ; 21 >
+        au < manifest ; Organization & Environment Volume 22 ; 22 >
 
       }
 
@@ -9013,6 +9131,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Organization Studies Volume 26 ; 26 >
         au < ready ; Organization Studies Volume 27 ; 27 >
         au < ready ; Organization Studies Volume 28 ; 28 >
+        au < manifest ; Organization Studies Volume 29 ; 29 >
+        au < manifest ; Organization Studies Volume 30 ; 30 >
 
       }
 
@@ -9034,6 +9154,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Organizational Research Methods Volume 8 ; 8 >
         au < ready ; Organizational Research Methods Volume 9 ; 9 >
         au < ready ; Organizational Research Methods Volume 10 ; 10 >
+        au < manifest ; Organizational Research Methods Volume 11 ; 11 >
+        au < manifest ; Organizational Research Methods Volume 12 ; 12 >
 
       }
 
@@ -9055,6 +9177,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Palliative Medicine Volume 19 ; 19 >
         au < ready ; Palliative Medicine Volume 20 ; 20 >
         au < ready ; Palliative Medicine Volume 21 ; 21 >
+        au < manifest ; Palliative Medicine Volume 22 ; 22 >
+        au < manifest ; Palliative Medicine Volume 23 ; 23 >
 
       }
 
@@ -9075,6 +9199,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Party Politics Volume 11 ; 11 >
         au < ready ; Party Politics Volume 12 ; 12 >
         au < ready ; Party Politics Volume 13 ; 13 >
+        au < manifest ; Party Politics Volume 14 ; 14 >
+        au < manifest ; Party Politics Volume 15 ; 15 >
 
       }
 
@@ -9094,6 +9220,7 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Perfusion Volume 21 ; 21 >
         au < ready ; Perfusion Volume 22 ; 22 >
+        au < manifest ; Perfusion Volume 23 ; 23 >
 
       }
 
@@ -9114,6 +9241,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Personality and Social Psychology Bulletin Volume 31 ; 31 >
         au < ready ; Personality and Social Psychology Bulletin Volume 32 ; 32 >
         au < ready ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
+        au < manifest ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
+        au < manifest ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
 
       }
 
@@ -9132,6 +9261,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Personality and Social Psychology Review Volume 11 ; 11 >
+        au < manifest ; Personality and Social Psychology Review Volume 12 ; 12 >
+        au < manifest ; Personality and Social Psychology Review Volume 13 ; 13 >
 
       }
 
@@ -9152,6 +9283,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 17 ; 17 >
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 18 ; 18 >
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
+        au < manifest ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
+        au < manifest ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
 
       }
 
@@ -9172,6 +9305,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Philosophy & Social Criticism Volume 31 ; 31 >
         au < manifest ; Philosophy & Social Criticism Volume 32 ; 32 >
         au < ready ; Philosophy & Social Criticism Volume 33 ; 33 >
+        au < manifest ; Philosophy & Social Criticism Volume 34 ; 34 >
+        au < manifest ; Philosophy & Social Criticism Volume 35 ; 35 >
 
       }
 
@@ -9192,6 +9327,18 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Philosophy of the Social Sciences Volume 25 ; 25 >
         au < manifest ; Philosophy of the Social Sciences Volume 26 ; 26 >
         au < manifest ; Philosophy of the Social Sciences Volume 27 ; 27 >
+        au < manifest ; Philosophy of the Social Sciences Volume 28 ; 28 >
+        au < manifest ; Philosophy of the Social Sciences Volume 29 ; 29 >
+        au < manifest ; Philosophy of the Social Sciences Volume 30 ; 30 >
+        au < manifest ; Philosophy of the Social Sciences Volume 31 ; 31 >
+        au < manifest ; Philosophy of the Social Sciences Volume 32 ; 32 >
+        au < manifest ; Philosophy of the Social Sciences Volume 33 ; 33 >
+        au < manifest ; Philosophy of the Social Sciences Volume 34 ; 34 >
+        au < manifest ; Philosophy of the Social Sciences Volume 35 ; 35 >
+        au < manifest ; Philosophy of the Social Sciences Volume 36 ; 36 >
+        au < manifest ; Philosophy of the Social Sciences Volume 37 ; 37 >
+        au < manifest ; Philosophy of the Social Sciences Volume 38 ; 38 >
+        au < manifest ; Philosophy of the Social Sciences Volume 39 ; 39 >
 
       }
 
@@ -9212,6 +9359,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Planning Theory Volume 4 ; 4 >
         au < ready ; Planning Theory Volume 5 ; 5 >
         au < ready ; Planning Theory Volume 6 ; 6 >
+        au < manifest ; Planning Theory Volume 7 ; 7 >
+        au < manifest ; Planning Theory Volume 8 ; 8 >
 
       }
 
@@ -9232,6 +9381,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Police Quarterly Volume 8 ; 8 >
         au < ready ; Police Quarterly Volume 9 ; 9 >
         au < ready ; Police Quarterly Volume 10 ; 10 >
+        au < manifest ; Police Quarterly Volume 11 ; 11 >
+        au < manifest ; Police Quarterly Volume 12 ; 12 >
 
       }
 
@@ -9252,6 +9403,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Policy, Politics, & Nursing Practice Volume 6 ; 6 >
         au < manifest ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
         au < ready ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
+        au < manifest ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
+        au < manifest ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
 
       }
 
@@ -9271,6 +9424,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Political Research Quarterly Volume 59 ; 59 >
         au < ready ; Political Research Quarterly Volume 60 ; 60 >
+        au < manifest ; Political Research Quarterly Volume 61 ; 61 >
+        au < manifest ; Political Research Quarterly Volume 62 ; 62 >
 
       }
 
@@ -9291,6 +9446,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Political Theory Volume 33 ; 33 >
         au < ready ; Political Theory Volume 34 ; 34 >
         au < ready ; Political Theory Volume 35 ; 35 >
+        au < manifest ; Political Theory Volume 36 ; 36 >
+        au < manifest ; Political Theory Volume 37 ; 37 >
 
       }
 
@@ -9311,6 +9468,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Politics & Society Volume 33 ; 33 >
         au < ready ; Politics & Society Volume 34 ; 34 >
         au < ready ; Politics & Society Volume 35 ; 35 >
+        au < manifest ; Politics & Society Volume 36 ; 36 >
+        au < manifest ; Politics & Society Volume 37 ; 37 >
 
       }
 
@@ -9331,6 +9490,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Politics, Philosophy & Economics Volume 4 ; 4 >
         au < manifest ; Politics, Philosophy & Economics Volume 5 ; 5 >
         au < ready ; Politics, Philosophy & Economics Volume 6 ; 6 >
+        au < manifest ; Politics, Philosophy & Economics Volume 7 ; 7 >
+        au < manifest ; Politics, Philosophy & Economics Volume 8 ; 8 >
 
       }
 
@@ -9351,6 +9512,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; The Prison Journal Volume 85 ; 85 >
         au < manifest ; The Prison Journal Volume 86 ; 86 >
         au < ready ; The Prison Journal Volume 87 ; 87 >
+        au < manifest ; The Prison Journal Volume 88 ; 88 >
+        au < manifest ; The Prison Journal Volume 89 ; 89 >
 
       }
 
@@ -9371,6 +9534,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Probation Journal Volume 52 ; 52 >
         au < ready ; Probation Journal Volume 53 ; 53 >
         au < ready ; Probation Journal Volume 54 ; 54 >
+        au < manifest ; Probation Journal Volume 55 ; 55 >
+        au < manifest ; Probation Journal Volume 56 ; 56 >
 
       }
 
@@ -9390,6 +9555,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Progress in Development Studies Volume 6 ; 6 >
         au < ready ; Progress in Development Studies Volume 7 ; 7 >
+        au < manifest ; Progress in Development Studies Volume 8 ; 8 >
+        au < manifest ; Progress in Development Studies Volume 9 ; 9 >
 
       }
 
@@ -9410,6 +9577,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Progress in Human Geography Volume 23 ; 23 >
         au < ready ; Progress in Human Geography Volume 30 ; 30 >
         au < ready ; Progress in Human Geography Volume 31 ; 31 >
+        au < manifest ; Progress in Human Geography Volume 32 ; 32 >
+        au < manifest ; Progress in Human Geography Volume 33 ; 33 >
 
       }
 
@@ -9429,6 +9598,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Progress in Physical Geography Volume 30 ; 30 >
         au < ready ; Progress in Physical Geography Volume 31 ; 31 >
+        au < manifest ; Progress in Physical Geography Volume 32 ; 32 >
+        au < manifest ; Progress in Physical Geography Volume 33 ; 33 >
 
       }
 
@@ -9449,6 +9620,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Psychology & Developing Societies Volume 17 ; 17 >
         au < ready ; Psychology & Developing Societies Volume 18 ; 18 >
         au < ready ; Psychology & Developing Societies Volume 19 ; 19 >
+        au < manifest ; Psychology & Developing Societies Volume 20 ; 20 >
 
       }
 
@@ -9469,6 +9641,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Psychology of Music Volume 33 ; 33 >
         au < ready ; Psychology of Music Volume 34 ; 34 >
         au < ready ; Psychology of Music Volume 35 ; 35 >
+        au < manifest ; Psychology of Music Volume 36 ; 36 >
+        au < manifest ; Psychology of Music Volume 37 ; 37 >
 
       }
 
@@ -9489,6 +9663,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Public Finance Review Volume 33 ; 33 >
         au < ready ; Public Finance Review Volume 34 ; 34 >
         au < ready ; Public Finance Review Volume 35 ; 35 >
+        au < manifest ; Public Finance Review Volume 36 ; 36 >
+        au < manifest ; Public Finance Review Volume 37 ; 37 >
 
       }
 
@@ -9508,6 +9684,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Public Policy and Administration Volume 21 ; 21 >
         au < ready ; Public Policy and Administration Volume 22 ; 22 >
+        au < manifest ; Public Policy and Administration Volume 23 ; 23 >
+        au < manifest ; Public Policy and Administration Volume 24 ; 24 >
 
       }
 
@@ -9528,6 +9706,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Public Understanding of Science Volume 14 ; 14 >
         au < ready ; Public Understanding of Science Volume 15 ; 15 >
         au < ready ; Public Understanding of Science Volume 16 ; 16 >
+        au < manifest ; Public Understanding of Science Volume 17 ; 17 >
+        au < manifest ; Public Understanding of Science Volume 18 ; 18 >
 
       }
 
@@ -9549,6 +9729,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Public Works Management & Policy Volume 10 ; 10 >
         au < ready ; Public Works Management & Policy Volume 11 ; 11 >
         au < ready ; Public Works Management & Policy Volume 12 ; 12 >
+        au < manifest ; Public Works Management & Policy Volume 13 ; 13 >
 
       }
 
@@ -9570,6 +9751,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Punishment & Society Volume 8 ; 8 >
         au < ready ; Punishment & Society Volume 9 ; 9 >
         au < ready ; Punishment & Society Volume 10 ; 10 >
+        au < manifest ; Punishment & Society Volume 11 ; 11 >
 
       }
 
@@ -9590,6 +9772,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Qualitative Health Research Volume 15 ; 15 >
         au < ready ; Qualitative Health Research Volume 16 ; 16 >
         au < ready ; Qualitative Health Research Volume 17 ; 17 >
+        au < manifest ; Qualitative Health Research Volume 18 ; 18 >
+        au < manifest ; Qualitative Health Research Volume 19 ; 19 >
 
       }
 
@@ -9611,6 +9795,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Qualitative Inquiry Volume 12 ; 12 >
         au < ready ; Qualitative Inquiry Volume 13 ; 13 >
         au < ready ; Qualitative Inquiry Volume 14 ; 14 >
+        au < manifest ; Qualitative Inquiry Volume 15 ; 15 >
 
       }
 
@@ -9631,6 +9816,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Qualitative Research Volume 5 ; 5 >
         au < manifest ; Qualitative Research Volume 6 ; 6 >
         au < ready ; Qualitative Research Volume 7 ; 7 >
+        au < manifest ; Qualitative Research Volume 8 ; 8 >
+        au < manifest ; Qualitative Research Volume 9 ; 9 >
 
       }
 
@@ -9651,6 +9838,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Qualitative Social Work Volume 4 ; 4 >
         au < ready ; Qualitative Social Work Volume 5 ; 5 >
         au < ready ; Qualitative Social Work Volume 6 ; 6 >
+        au < manifest ; Qualitative Social Work Volume 7 ; 7 >
+        au < manifest ; Qualitative Social Work Volume 8 ; 8 >
 
       }
 
@@ -9672,6 +9861,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Race & Class Volume 47 ; 47 >
         au < ready ; Race & Class Volume 48 ; 48 >
         au < ready ; Race & Class Volume 49 ; 49 >
+        au < manifest ; Race & Class Volume 50 ; 50 >
 
       }
 
@@ -9692,6 +9882,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Rationality and Society Volume 17 ; 17 >
         au < ready ; Rationality and Society Volume 18 ; 18 >
         au < ready ; Rationality and Society Volume 19 ; 19 >
+        au < manifest ; Rationality and Society Volume 20 ; 20 >
+        au < manifest ; Rationality and Society Volume 21 ; 21 >
 
       }
 
@@ -9712,6 +9904,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; RELC Journal Volume 36 ; 36 >
         au < ready ; RELC Journal Volume 37 ; 37 >
         au < ready ; RELC Journal Volume 38 ; 38 >
+        au < manifest ; RELC Journal Volume 39 ; 39 >
+        au < manifest ; RELC Journal Volume 40 ; 40 >
 
       }
 
@@ -9731,6 +9925,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Reproductive Sciences Volume 12 ; 12 >
         au < manifest ; Reproductive Sciences Volume 14 ; 14 >
+        au < manifest ; Reproductive Sciences Volume 15 ; 15 >
+        au < manifest ; Reproductive Sciences Volume 16 ; 16 >
 
       }
 
@@ -9751,6 +9947,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Research on Aging Volume 27 ; 27 >
         au < ready ; Research on Aging Volume 28 ; 28 >
         au < ready ; Research on Aging Volume 29 ; 29 >
+        au < manifest ; Research on Aging Volume 30 ; 30 >
+        au < manifest ; Research on Aging Volume 31 ; 31 >
 
       }
 
@@ -9771,6 +9969,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Research on Social Work Practice Volume 15 ; 15 >
         au < ready ; Research on Social Work Practice Volume 16 ; 16 >
         au < ready ; Research on Social Work Practice Volume 17 ; 17 >
+        au < manifest ; Research on Social Work Practice Volume 18 ; 18 >
+        au < manifest ; Research on Social Work Practice Volume 19 ; 19 >
 
       }
 
@@ -9789,6 +9989,9 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Research Studies in Music Education Volume 28 ; 28 >
+        au < manifest ; Research Studies in Music Education Volume 29 ; 29 >
+        au < manifest ; Research Studies in Music Education Volume 30 ; 30 >
+        au < manifest ; Research Studies in Music Education Volume 31 ; 31 >
 
       }
 
@@ -9825,6 +10028,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Review of Educational Research Volume 77 ; 77 >
+        au < manifest ; Review of Educational Research Volume 78 ; 78 >
+        au < manifest ; Review of Educational Research Volume 79 ; 79 >
 
       }
 
@@ -9845,6 +10050,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Review of Public Personnel Administration Volume 25 ; 25 >
         au < ready ; Review of Public Personnel Administration Volume 26 ; 26 >
         au < ready ; Review of Public Personnel Administration Volume 27 ; 27 >
+        au < manifest ; Review of Public Personnel Administration Volume 28 ; 28 >
+        au < manifest ; Review of Public Personnel Administration Volume 29 ; 29 >
 
       }
 
@@ -9865,6 +10072,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Review of Radical Political Economics Volume 37 ; 37 >
         au < ready ; Review of Radical Political Economics Volume 38 ; 38 >
         au < ready ; Review of Radical Political Economics Volume 39 ; 39 >
+        au < manifest ; Review of Radical Political Economics Volume 40 ; 40 >
+        au < manifest ; Review of Radical Political Economics Volume 41 ; 41 >
 
       }
 
@@ -9883,26 +10092,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Review of Research in Education Volume 31 ; 31 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = SAGE Race Relations Abstracts 
-      >
-
-      {
-
-        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-        param[base_url] = http://sra.sagepub.com/
-        implicit < status ; name ; param[volume_name] >
-
-        au < manifest ; SAGE Race Relations Abstracts Volume 30 ; 30 >
-        au < ready ; SAGE Race Relations Abstracts Volume 31 ; 31 >
-        au < ready ; SAGE Race Relations Abstracts Volume 32 ; 32 >
+        au < manifest ; Review of Research in Education Volume 32 ; 32 >
+        au < manifest ; Review of Research in Education Volume 33 ; 33 >
 
       }
 
@@ -9923,6 +10114,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; School Psychology International Volume 26 ; 26 >
         au < ready ; School Psychology International Volume 27 ; 27 >
         au < ready ; School Psychology International Volume 28 ; 28 >
+        au < manifest ; School Psychology International Volume 29 ; 29 >
+        au < manifest ; School Psychology International Volume 30 ; 30 >
 
       }
 
@@ -9944,6 +10137,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Science Communication Volume 27 ; 27 >
         au < ready ; Science Communication Volume 28 ; 28 >
         au < ready ; Science Communication Volume 29 ; 29 >
+        au < manifest ; Science Communication Volume 30 ; 30 >
 
       }
 
@@ -9964,6 +10158,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Science Technology & Society Volume 10 ; 10 >
         au < ready ; Science Technology & Society Volume 11 ; 11 >
         au < ready ; Science Technology & Society Volume 12 ; 12 >
+        au < manifest ; Science Technology & Society Volume 13 ; 13 >
+        au < manifest ; Science Technology & Society Volume 14 ; 14 >
 
       }
 
@@ -9984,6 +10180,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Science, Technology & Human Values Volume 30 ; 30 >
         au < manifest ; Science, Technology & Human Values Volume 31 ; 31 >
         au < manifest ; Science, Technology & Human Values Volume 32 ; 32 >
+        au < manifest ; Science, Technology & Human Values Volume 33 ; 33 >
+        au < manifest ; Science, Technology & Human Values Volume 34 ; 34 >
 
       }
 
@@ -10003,6 +10201,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Second Language Research Volume 22 ; 22 >
         au < ready ; Second Language Research Volume 23 ; 23 >
+        au < manifest ; Second Language Research Volume 24 ; 24 >
+        au < manifest ; Second Language Research Volume 25 ; 25 >
 
       }
 
@@ -10023,6 +10223,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Security Dialogue Volume 36 ; 36 >
         au < ready ; Security Dialogue Volume 37 ; 37 >
         au < ready ; Security Dialogue Volume 38 ; 38 >
+        au < manifest ; Security Dialogue Volume 39 ; 39 >
+        au < manifest ; Security Dialogue Volume 40 ; 40 >
 
       }
 
@@ -10043,6 +10245,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 9 ; 9 >
         au < ready ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 10 ; 10 >
         au < ready ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 11 ; 11 >
+        au < manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 >
+        au < manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
 
       }
 
@@ -10063,26 +10267,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Sexualities Volume 8 ; 8 >
         au < ready ; Sexualities Volume 9 ; 9 >
         au < ready ; Sexualities Volume 10 ; 10 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = The Shock and Vibration Digest 
-      >
-
-      {
-
-        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-        param[base_url] = http://svd.sagepub.com/
-        implicit < status ; name ; param[volume_name] >
-
-        au < ready ; The Shock and Vibration Digest Volume 37 ; 37 >
-        au < ready ; The Shock and Vibration Digest Volume 38 ; 38 >
-        au < ready ; The Shock and Vibration Digest Volume 39 ; 39 >
+        au < manifest ; Sexualities Volume 11 ; 11 >
+        au < manifest ; Sexualities Volume 12 ; 12 >
 
       }
 
@@ -10103,6 +10289,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; SIMULATION Volume 81 ; 81 >
         au < ready ; SIMULATION Volume 82 ; 82 >
         au < ready ; SIMULATION Volume 83 ; 83 >
+        au < manifest ; SIMULATION Volume 84 ; 84 >
+        au < manifest ; SIMULATION Volume 85 ; 85 >
 
       }
 
@@ -10123,6 +10311,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Simulation & Gaming Volume 36 ; 36 >
         au < ready ; Simulation & Gaming Volume 37 ; 37 >
         au < ready ; Simulation & Gaming Volume 38 ; 38 >
+        au < manifest ; Simulation & Gaming Volume 39 ; 39 >
+        au < manifest ; Simulation & Gaming Volume 40 ; 40 >
 
       }
 
@@ -10143,6 +10333,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Small Group Research Volume 36 ; 36 >
         au < ready ; Small Group Research Volume 37 ; 37 >
         au < ready ; Small Group Research Volume 38 ; 38 >
+        au < manifest ; Small Group Research Volume 39 ; 39 >
+        au < manifest ; Small Group Research Volume 40 ; 40 >
 
       }
 
@@ -10163,6 +10355,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Social & Legal Studies Volume 14 ; 14 >
         au < manifest ; Social & Legal Studies Volume 15 ; 15 >
         au < ready ; Social & Legal Studies Volume 16 ; 16 >
+        au < manifest ; Social & Legal Studies Volume 17 ; 17 >
+        au < manifest ; Social & Legal Studies Volume 18 ; 18 >
 
       }
 
@@ -10183,6 +10377,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Social Compass Volume 52 ; 52 >
         au < ready ; Social Compass Volume 53 ; 53 >
         au < ready ; Social Compass Volume 54 ; 54 >
+        au < manifest ; Social Compass Volume 55 ; 55 >
+        au < manifest ; Social Compass Volume 56 ; 56 >
 
       }
 
@@ -10203,6 +10399,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Social Science Computer Review Volume 23 ; 23 >
         au < ready ; Social Science Computer Review Volume 24 ; 24 >
         au < manifest ; Social Science Computer Review Volume 25 ; 25 >
+        au < manifest ; Social Science Computer Review Volume 26 ; 26 >
+        au < manifest ; Social Science Computer Review Volume 27 ; 27 >
 
       }
 
@@ -10223,6 +10421,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Social Science Information Volume 44 ; 44 >
         au < ready ; Social Science Information Volume 45 ; 45 >
         au < ready ; Social Science Information Volume 46 ; 46 >
+        au < manifest ; Social Science Information Volume 47 ; 47 >
+        au < manifest ; Social Science Information Volume 48 ; 48 >
 
       }
 
@@ -10243,6 +10443,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Social Studies of Science Volume 35 ; 35 >
         au < ready ; Social Studies of Science Volume 36 ; 36 >
         au < ready ; Social Studies of Science Volume 37 ; 37 >
+        au < manifest ; Social Studies of Science Volume 38 ; 38 >
+        au < manifest ; Social Studies of Science Volume 39 ; 39 >
 
       }
 
@@ -10264,6 +10466,7 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Sociological Methods & Research Volume 34 ; 34 >
         au < manifest ; Sociological Methods & Research Volume 35 ; 35 >
         au < ready ; Sociological Methods & Research Volume 36 ; 36 >
+        au < manifest ; Sociological Methods & Research Volume 37 ; 37 >
 
       }
 
@@ -10284,6 +10487,8 @@ comment[jcp] = some sort of custom layout
         au < manifest ; Sociology Volume 39 ; 39 >
         au < ready ; Sociology Volume 40 ; 40 >
         au < ready ; Sociology Volume 41 ; 41 >
+        au < manifest ; Sociology Volume 42 ; 42 >
+        au < manifest ; Sociology Volume 43 ; 43 >
 
       }
 
@@ -10304,6 +10509,7 @@ comment[jcp] = some sort of custom layout
         au < manifest ; South Asia Economic Journal Volume 6 ; 6 >
         au < manifest ; South Asia Economic Journal Volume 7 ; 7 >
         au < manifest ; South Asia Economic Journal Volume 8 ; 8 >
+        au < manifest ; South Asia Economic Journal Volume 9 ; 9 >
 
       }
 
@@ -10324,6 +10530,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; South Asia Research Volume 25 ; 25 >
         au < ready ; South Asia Research Volume 26 ; 26 >
         au < ready ; South Asia Research Volume 27 ; 27 >
+        au < manifest ; South Asia Research Volume 28 ; 28 >
+        au < manifest ; South Asia Research Volume 29 ; 29 >
 
       }
 
@@ -10343,6 +10551,9 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; South Asian Survey Volume 12 ; 12 >
         au < ready ; South Asian Survey Volume 13 ; 13 >
+        au < manifest ; South Asian Survey Volume 14 ; 14 >
+        au < manifest ; South Asian Survey Volume 15 ; 15 >
+        au < manifest ; South Asian Survey Volume 16 ; 16 >
 
       }
 
@@ -10363,6 +10574,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Space and Culture Volume 8 ; 8 >
         au < ready ; Space and Culture Volume 9 ; 9 >
         au < ready ; Space and Culture Volume 10 ; 10 >
+        au < manifest ; Space and Culture Volume 11 ; 11 >
+        au < manifest ; Space and Culture Volume 12 ; 12 >
 
       }
 
@@ -10382,6 +10595,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Statistical Methods in Medical Research Volume 15 ; 15 >
         au < ready ; Statistical Methods in Medical Research Volume 16 ; 16 >
+        au < manifest ; Statistical Methods in Medical Research Volume 17 ; 17 >
+        au < manifest ; Statistical Methods in Medical Research Volume 18 ; 18 >
 
       }
 
@@ -10402,6 +10617,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Strategic Organization Volume 3 ; 3 >
         au < released ; Strategic Organization Volume 4 ; 4 >
         au < released ; Strategic Organization Volume 5 ; 5 >
+        au < manifest ; Strategic Organization Volume 6 ; 6 >
+        au < manifest ; Strategic Organization Volume 7 ; 7 >
 
       }
 
@@ -10422,6 +10639,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Structural Health Monitoring Volume 4 ; 4 >
         au < released ; Structural Health Monitoring Volume 5 ; 5 >
         au < released ; Structural Health Monitoring Volume 6 ; 6 >
+        au < manifest ; Structural Health Monitoring Volume 7 ; 7 >
+        au < manifest ; Structural Health Monitoring Volume 8 ; 8 >
 
       }
 
@@ -10442,6 +10661,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Studies in Christian Ethics Volume 18 ; 18 >
         au < released ; Studies in Christian Ethics Volume 19 ; 19 >
         au < released ; Studies in Christian Ethics Volume 20 ; 20 >
+        au < manifest ; Studies in Christian Ethics Volume 21 ; 21 >
+        au < manifest ; Studies in Christian Ethics Volume 22 ; 22 >
 
       }
 
@@ -10462,6 +10683,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Studies in History Volume 21 ; 21 >
         au < released ; Studies in History Volume 22 ; 22 >
         au < released ; Studies in History Volume 23 ; 23 >
+        au < manifest ; Studies in History Volume 24 ; 24 >
 
       }
 
@@ -10482,6 +10704,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Surgical Innovation Volume 12 ; 12 >
         au < ready ; Surgical Innovation Volume 13 ; 13 >
         au < ready ; Surgical Innovation Volume 14 ; 14 >
+        au < manifest ; Surgical Innovation Volume 15 ; 15 >
+        au < manifest ; Surgical Innovation Volume 16 ; 16 >
 
       }
 
@@ -10503,6 +10727,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Television & New Media Volume 7 ; 7 >
         au < ready ; Television & New Media Volume 8 ; 8 >
         au < ready ; Television & New Media Volume 9 ; 9 >
+        au < manifest ; Television & New Media Volume 10 ; 10 >
 
       }
 
@@ -10523,6 +10748,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Textile Research Journal Volume 75 ; 75 >
         au < ready ; Textile Research Journal Volume 76 ; 76 >
         au < ready ; Textile Research Journal Volume 77 ; 77 >
+        au < manifest ; Textile Research Journal Volume 78 ; 78 >
+        au < manifest ; Textile Research Journal Volume 79 ; 79 >
 
       }
 
@@ -10564,6 +10791,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Theoretical Criminology Volume 9 ; 9 >
         au < manifest ; Theoretical Criminology Volume 10 ; 10 >
         au < ready ; Theoretical Criminology Volume 11 ; 11 >
+        au < manifest ; Theoretical Criminology Volume 12 ; 12 >
+        au < manifest ; Theoretical Criminology Volume 13 ; 13 >
 
       }
 
@@ -10584,6 +10813,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Theory & Psychology Volume 15 ; 15 >
         au < ready ; Theory & Psychology Volume 16 ; 16 >
         au < ready ; Theory & Psychology Volume 17 ; 17 >
+        au < manifest ; Theory & Psychology Volume 18 ; 18 >
+        au < manifest ; Theory & Psychology Volume 19 ; 19 >
 
       }
 
@@ -10604,6 +10835,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Theory and Research in Education Volume 3 ; 3 >
         au < ready ; Theory and Research in Education Volume 4 ; 4 >
         au < ready ; Theory and Research in Education Volume 5 ; 5 >
+        au < manifest ; Theory and Research in Education Volume 6 ; 6 >
+        au < manifest ; Theory and Research in Education Volume 7 ; 7 >
 
       }
 
@@ -10624,6 +10857,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Theory, Culture & Society Volume 22 ; 22 >
         au < manifest ; Theory, Culture & Society Volume 23 ; 23 >
         au < ready ; Theory, Culture & Society Volume 24 ; 24 >
+        au < manifest ; Theory, Culture & Society Volume 25 ; 25 >
+        au < manifest ; Theory, Culture & Society Volume 26 ; 26 >
 
       }
 
@@ -10642,6 +10877,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Therapeutic Advances in Cardiovascular Disease Volume 1 ; 1 >
+        au < manifest ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 >
+        au < manifest ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
 
       }
 
@@ -10660,6 +10897,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Therapeutic Advances in Respiratory Disease Volume 1 ; 1 >
+        au < manifest ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 >
+        au < manifest ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
 
       }
 
@@ -10689,6 +10928,12 @@ comment[jcp] = some sort of custom layout
         au < released ; Thesis Eleven Volume 89 ; 89 >
         au < released ; Thesis Eleven Volume 90 ; 90 >
         au < released ; Thesis Eleven Volume 91 ; 91 >
+        au < manifest ; Thesis Eleven Volume 92 ; 92 >
+        au < manifest ; Thesis Eleven Volume 93 ; 93 >
+        au < manifest ; Thesis Eleven Volume 94 ; 94 >
+        au < manifest ; Thesis Eleven Volume 95 ; 95 >
+        au < manifest ; Thesis Eleven Volume 96 ; 96 >
+        au < manifest ; Thesis Eleven Volume 97 ; 97 >
 
       }
 
@@ -10709,6 +10954,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Time & Society Volume 14 ; 14 >
         au < released ; Time & Society Volume 15 ; 15 >
         au < released ; Time & Society Volume 16 ; 16 >
+        au < manifest ; Time & Society Volume 17 ; 17 >
+        au < manifest ; Time & Society Volume 18 ; 18 >
 
       }
 
@@ -10730,6 +10977,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Tourist Studies Volume 5 ; 5 >
         au < released ; Tourist Studies Volume 6 ; 6 >
         au < released ; Tourist Studies Volume 7 ; 7 >
+        au < manifest ; Tourist Studies Volume 8 ; 8 >
 
       }
 
@@ -10749,6 +10997,8 @@ comment[jcp] = some sort of custom layout
 
         au < ready ; Toxicology and Industrial Health Volume 22 ; 22 >
         au < released ; Toxicology and Industrial Health Volume 23 ; 23 >
+        au < manifest ; Toxicology and Industrial Health Volume 24 ; 24 >
+        au < manifest ; Toxicology and Industrial Health Volume 25 ; 25 >
 
       }
 
@@ -10768,6 +11018,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Transactions of the Institute of Measurement and Control Volume 28 ; 28 >
         au < released ; Transactions of the Institute of Measurement and Control Volume 29 ; 29 >
+        au < manifest ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 >
+        au < manifest ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
 
       }
 
@@ -10788,6 +11040,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Transcultural Psychiatry Volume 42 ; 42 >
         au < ready ; Transcultural Psychiatry Volume 43 ; 43 >
         au < released ; Transcultural Psychiatry Volume 44 ; 44 >
+        au < manifest ; Transcultural Psychiatry Volume 45 ; 45 >
+        au < manifest ; Transcultural Psychiatry Volume 46 ; 46 >
 
       }
 
@@ -10808,6 +11062,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Trauma Volume 2 ; 2 >
         au < ready ; Trauma Volume 8 ; 8 >
         au < released ; Trauma Volume 9 ; 9 >
+        au < manifest ; Trauma Volume 10 ; 10 >
+        au < manifest ; Trauma Volume 11 ; 11 >
 
       }
 
@@ -10828,6 +11084,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Trauma, Violence, & Abuse Volume 6 ; 6 >
         au < released ; Trauma, Violence, & Abuse Volume 7 ; 7 >
         au < manifest ; Trauma, Violence, & Abuse Volume 8 ; 8 >
+        au < manifest ; Trauma, Violence, & Abuse Volume 9 ; 9 >
+        au < manifest ; Trauma, Violence, & Abuse Volume 10 ; 10 >
 
       }
 
@@ -10847,6 +11105,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Traumatology Volume 12 ; 12 >
         au < released ; Traumatology Volume 13 ; 13 >
+        au < manifest ; Traumatology Volume 14 ; 14 >
+        au < manifest ; Traumatology Volume 15 ; 15 >
 
       }
 
@@ -10867,6 +11127,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Trends in Amplification Volume 9 ; 9 >
         au < ready ; Trends in Amplification Volume 10 ; 10 >
         au < manifest ; Trends in Amplification Volume 11 ; 11 >
+        au < manifest ; Trends in Amplification Volume 12 ; 12 >
+        au < manifest ; Trends in Amplification Volume 13 ; 13 >
 
       }
 
@@ -10888,6 +11150,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Urban Affairs Review Volume 41 ; 41 >
         au < released ; Urban Affairs Review Volume 42 ; 42 >
         au < released ; Urban Affairs Review Volume 43 ; 43 >
+        au < manifest ; Urban Affairs Review Volume 44 ; 44 >
 
       }
 
@@ -10908,6 +11171,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Urban Education Volume 40 ; 40 >
         au < released ; Urban Education Volume 41 ; 41 >
         au < released ; Urban Education Volume 42 ; 42 >
+        au < manifest ; Urban Education Volume 43 ; 43 >
+        au < manifest ; Urban Education Volume 44 ; 44 >
 
       }
 
@@ -10928,6 +11193,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Vascular and Endovascular Surgery Volume 39 ; 39 >
         au < ready ; Vascular and Endovascular Surgery Volume 40 ; 40 >
         au < ready ; Vascular and Endovascular Surgery Volume 41 ; 41 >
+        au < manifest ; Vascular and Endovascular Surgery Volume 42 ; 42 >
 
       }
 
@@ -10947,6 +11213,8 @@ comment[jcp] = some sort of custom layout
 
         au < manifest ; Vascular Medicine Volume 11 ; 11 >
         au < released ; Vascular Medicine Volume 12 ; 12 >
+        au < manifest ; Vascular Medicine Volume 13 ; 13 >
+        au < manifest ; Vascular Medicine Volume 14 ; 14 >
 
       }
 
@@ -10967,6 +11235,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Violence Against Women Volume 11 ; 11 >
         au < ready ; Violence Against Women Volume 12 ; 12 >
         au < ready ; Violence Against Women Volume 13 ; 13 >
+        au < manifest ; Violence Against Women Volume 14 ; 14 >
+        au < manifest ; Violence Against Women Volume 15 ; 15 >
 
       }
 
@@ -10987,6 +11257,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Visual Communication Volume 4 ; 4 >
         au < released ; Visual Communication Volume 5 ; 5 >
         au < released ; Visual Communication Volume 6 ; 6 >
+        au < manifest ; Visual Communication Volume 7 ; 7 >
+        au < manifest ; Visual Communication Volume 8 ; 8 >
 
       }
 
@@ -11007,6 +11279,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; War in History Volume 7 ; 7 >
         au < ready ; War in History Volume 13 ; 13 >
         au < released ; War in History Volume 14 ; 14 >
+        au < manifest ; War in History Volume 15 ; 15 >
+        au < manifest ; War in History Volume 16 ; 16 >
 
       }
 
@@ -11027,6 +11301,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Waste Management & Research Volume 23 ; 23 >
         au < ready ; Waste Management & Research Volume 24 ; 24 >
         au < ready ; Waste Management & Research Volume 25 ; 25 >
+        au < manifest ; Waste Management & Research Volume 26 ; 26 >
+        au < manifest ; Waste Management & Research Volume 27 ; 27 >
 
       }
 
@@ -11047,6 +11323,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Western Journal of Nursing Research Volume 27 ; 27 >
         au < manifest ; Western Journal of Nursing Research Volume 28 ; 28 >
         au < manifest ; Western Journal of Nursing Research Volume 29 ; 29 >
+        au < manifest ; Western Journal of Nursing Research Volume 30 ; 30 >
+        au < manifest ; Western Journal of Nursing Research Volume 31 ; 31 >
 
       }
 
@@ -11067,6 +11345,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Work and Occupations Volume 32 ; 32 >
         au < released ; Work and Occupations Volume 33 ; 33 >
         au < released ; Work and Occupations Volume 34 ; 34 >
+        au < manifest ; Work and Occupations Volume 35 ; 35 >
+        au < manifest ; Work and Occupations Volume 36 ; 36 >
 
       }
 
@@ -11087,6 +11367,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Work, Employment & Society Volume 19 ; 19 >
         au < manifest ; Work, Employment & Society Volume 20 ; 20 >
         au < ready ; Work, Employment & Society Volume 21 ; 21 >
+        au < manifest ; Work, Employment & Society Volume 22 ; 22 >
+        au < manifest ; Work, Employment & Society Volume 23 ; 23 >
 
       }
 
@@ -11107,6 +11389,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Written Communication Volume 22 ; 22 >
         au < released ; Written Communication Volume 23 ; 23 >
         au < released ; Written Communication Volume 24 ; 24 >
+        au < manifest ; Written Communication Volume 25 ; 25 >
+        au < manifest ; Written Communication Volume 26 ; 26 >
 
       }
 
@@ -11127,6 +11411,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Young Volume 13 ; 13 >
         au < released ; Young Volume 14 ; 14 >
         au < released ; Young Volume 15 ; 15 >
+        au < manifest ; Young Volume 16 ; 16 >
+        au < manifest ; Young Volume 17 ; 17 >
 
       }
 
@@ -11148,6 +11434,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Youth & Society Volume 37 ; 37 >
         au < released ; Youth & Society Volume 38 ; 38 >
         au < released ; Youth & Society Volume 39 ; 39 >
+        au < manifest ; Youth & Society Volume 40 ; 40 >
 
       }
 
@@ -11168,6 +11455,8 @@ comment[jcp] = some sort of custom layout
         au < released ; Youth Justice Volume 5 ; 5 >
         au < released ; Youth Justice Volume 6 ; 6 >
         au < released ; Youth Justice Volume 7 ; 7 >
+        au < manifest ; Youth Justice Volume 8 ; 8 >
+        au < manifest ; Youth Justice Volume 9 ; 9 >
 
       }
 
@@ -11189,6 +11478,7 @@ comment[jcp] = some sort of custom layout
         au < released ; Youth Violence and Juvenile Justice Volume 4 ; 4 >
         au < released ; Youth Violence and Juvenile Justice Volume 5 ; 5 >
         au < released ; Youth Violence and Juvenile Justice Volume 6 ; 6 >
+        au < manifest ; Youth Violence and Juvenile Justice Volume 7 ; 7 >
 
       }
 
