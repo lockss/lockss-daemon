@@ -66,8 +66,8 @@
         au < do_not_process ; Acta Sociologica Volume 48 ; 48 >
         au < released ; Acta Sociologica Volume 49 ; 49 >
         au < released ; Acta Sociologica Volume 50 ; 50 >
-        au < manifest ; Acta Sociologica Volume 51 ; 51 >
-        au < manifest ; Acta Sociologica Volume 52 ; 52 >
+        au < testing ; Acta Sociologica Volume 51 ; 51 >
+        au < testing ; Acta Sociologica Volume 52 ; 52 >
 
       }
 
@@ -408,8 +408,8 @@
         au < released ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 >
         au < released ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 >
         au < released ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 >
-        au < manifest ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
-        au < manifest ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
+        au < testing ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
+        au < testing ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
 
       }
 
@@ -428,8 +428,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Lifestyle Medicine Volume 1 ; 1 >
-        au < manifest ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
-        au < manifest ; American Journal of Lifestyle Medicine Volume 3 ; 3 >
+        au < testing ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
+        au < testing ; American Journal of Lifestyle Medicine Volume 3 ; 3 >
 
       }
 
@@ -460,8 +460,8 @@
         au < do_not_process ; American Journal of Medical Quality Volume 20 ; 20 >
         au < released ; American Journal of Medical Quality Volume 21 ; 21 >
         au < released ; American Journal of Medical Quality Volume 22 ; 22 >
-        au < manifest ; American Journal of Medical Quality Volume 23 ; 23 >
-        au < manifest ; American Journal of Medical Quality Volume 24 ; 24 >
+        au < testing ; American Journal of Medical Quality Volume 23 ; 23 >
+        au < testing ; American Journal of Medical Quality Volume 24 ; 24 >
 
       }
 
@@ -480,8 +480,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Men's Health Volume 1 ; 1 >
-        au < manifest ; American Journal of Men's Health Volume 2 ; 2 >
-        au < manifest ; American Journal of Men's Health Volume 3 ; 3 >
+        au < testing ; American Journal of Men's Health Volume 2 ; 2 >
+        au < testing ; American Journal of Men's Health Volume 3 ; 3 >
 
       }
 
@@ -493,7 +493,7 @@
         name = The American Journal of Sports Medicine 
       >
 
-comment[ajsm] = this journal has been moved to H20 platform
+comment[ajs] = this journal has been moved to H20 platform
 
       {
 
@@ -511,10 +511,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The American Journal of Sports Medicine Volume 33 ; 33 >
         au < do_not_process ; The American Journal of Sports Medicine Volume 34 ; 34 >
         au < down ; The American Journal of Sports Medicine Volume 35 ; 35 >
-        au < do_not_process ; The American Journal of Sports Medicine Volume 36 ; 36 >
 
       }
 
@@ -545,8 +543,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; American Politics Research Volume 33 ; 33 >
         au < do_not_process ; American Politics Research Volume 34 ; 34 >
         au < released ; American Politics Research Volume 35 ; 35 >
-        au < manifest ; American Politics Research Volume 36 ; 36 >
-        au < manifest ; American Politics Research Volume 37 ; 37 >
+        au < testing ; American Politics Research Volume 36 ; 36 >
+        au < testing ; American Politics Research Volume 37 ; 37 >
 
       }
 
@@ -567,8 +565,8 @@ comment[ajsm] = this journal has been moved to H20 platform
         au < released ; The American Review of Public Administration Volume 35 ; 35 >
         au < released ; The American Review of Public Administration Volume 36 ; 36 >
         au < released ; The American Review of Public Administration Volume 37 ; 37 >
-        au < manifest ; The American Review of Public Administration Volume 38 ; 38 >
-        au < manifest ; The American Review of Public Administration Volume 39 ; 39 >
+        au < testing ; The American Review of Public Administration Volume 38 ; 38 >
+        au < testing ; The American Review of Public Administration Volume 39 ; 39 >
 
       }
 
@@ -6883,8 +6881,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Fire Sciences Volume 23 ; 23 >
         au < ready ; Journal of Fire Sciences Volume 24 ; 24 >
         au < ready ; Journal of Fire Sciences Volume 25 ; 25 >
-        au < testing ; Journal of Fire Sciences Volume 26 ; 26 >
-        au < testing ; Journal of Fire Sciences Volume 27 ; 27 >
+        au < ready ; Journal of Fire Sciences Volume 26 ; 26 >
+        au < ready ; Journal of Fire Sciences Volume 27 ; 27 >
 
       }
 
@@ -6915,8 +6913,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 18 ; 18 >
         au < do_not_process ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 20 ; 20 >
-        au < testing ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
-        au < testing ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
+        au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
+        au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
 
       }
 
@@ -6937,7 +6935,7 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Health Management Volume 7 ; 7 >
         au < ready ; Journal of Health Management Volume 8 ; 8 >
         au < ready ; Journal of Health Management Volume 9 ; 9 >
-        au < testing ; Journal of Health Management Volume 10 ; 10 >
+        au < ready ; Journal of Health Management Volume 10 ; 10 >
 
       }
 
@@ -6958,8 +6956,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Health Psychology Volume 10 ; 10 >
         au < ready ; Journal of Health Psychology Volume 11 ; 11 >
         au < ready ; Journal of Health Psychology Volume 12 ; 12 >
-        au < testing ; Journal of Health Psychology Volume 13 ; 13 >
-        au < testing ; Journal of Health Psychology Volume 14 ; 14 >
+        au < ready ; Journal of Health Psychology Volume 13 ; 13 >
+        au < ready ; Journal of Health Psychology Volume 14 ; 14 >
 
       }
 
@@ -7237,8 +7235,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Intellectual Disabilities Volume 9 ; 9 >
         au < ready ; Journal of Intellectual Disabilities Volume 10 ; 10 >
         au < ready ; Journal of Intellectual Disabilities Volume 11 ; 11 >
-        au < manifest ; Journal of Intellectual Disabilities Volume 12 ; 12 >
-        au < manifest ; Journal of Intellectual Disabilities Volume 13 ; 13 >
+        au < testing ; Journal of Intellectual Disabilities Volume 12 ; 12 >
+        au < testing ; Journal of Intellectual Disabilities Volume 13 ; 13 >
 
       }
 
@@ -7259,8 +7257,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 16 ; 16 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 17 ; 17 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 18 ; 18 >
-        au < manifest ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
-        au < manifest ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
+        au < testing ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
+        au < testing ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
 
       }
 
@@ -7325,8 +7323,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Language and Social Psychology Volume 24 ; 24 >
         au < ready ; Journal of Language and Social Psychology Volume 25 ; 25 >
         au < ready ; Journal of Language and Social Psychology Volume 26 ; 26 >
-        au < manifest ; Journal of Language and Social Psychology Volume 27 ; 27 >
-        au < manifest ; Journal of Language and Social Psychology Volume 28 ; 28 >
+        au < testing ; Journal of Language and Social Psychology Volume 27 ; 27 >
+        au < testing ; Journal of Language and Social Psychology Volume 28 ; 28 >
 
       }
 
@@ -7345,8 +7343,8 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < testing ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
-        au < ready ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
-        au < manifest ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
+        au < testing ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
+        au < testing ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
 
       }
 
@@ -7367,8 +7365,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Librarianship and Information Science Volume 37 ; 37 >
         au < ready ; Journal of Librarianship and Information Science Volume 38 ; 38 >
         au < ready ; Journal of Librarianship and Information Science Volume 39 ; 39 >
-        au < manifest ; Journal of Librarianship and Information Science Volume 40 ; 40 >
-        au < manifest ; Journal of Librarianship and Information Science Volume 41 ; 41 >
+        au < testing ; Journal of Librarianship and Information Science Volume 40 ; 40 >
+        au < testing ; Journal of Librarianship and Information Science Volume 41 ; 41 >
 
       }
 
@@ -7631,8 +7629,8 @@ comment[mpj] = now published by Brill
         au < testing ; Journal of Pharmacy Practice Volume 18 ; 18 >
         au < ready ; Journal of Pharmacy Practice Volume 19 ; 19 >
         au < ready ; Journal of Pharmacy Practice Volume 20 ; 20 >
-        au < manifest ; Journal of Pharmacy Practice Volume 21 ; 21 >
-        au < manifest ; Journal of Pharmacy Practice Volume 22 ; 22 >
+        au < testing ; Journal of Pharmacy Practice Volume 21 ; 21 >
+        au < testing ; Journal of Pharmacy Practice Volume 22 ; 22 >
 
       }
 
@@ -7883,8 +7881,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Sandwich Structures and Materials Volume 7 ; 7 >
         au < ready ; Journal of Sandwich Structures and Materials Volume 8 ; 8 >
         au < ready ; Journal of Sandwich Structures and Materials Volume 9 ; 9 >
-        au < manifest ; Journal of Sandwich Structures and Materials Volume 10 ; 10 >
-        au < manifest ; Journal of Sandwich Structures and Materials Volume 11 ; 11 >
+        au < testing ; Journal of Sandwich Structures and Materials Volume 10 ; 10 >
+        au < testing ; Journal of Sandwich Structures and Materials Volume 11 ; 11 >
 
       }
 
