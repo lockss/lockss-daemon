@@ -85,17 +85,17 @@
     param[journal_id] = bjhp
     param[journal_issn] = 1359-107X  
 
-    au < manifest ; British Journal of Health Psychology Volume 4 ; 4 >
-    au < manifest ; British Journal of Health Psychology Volume 5 ; 5 >
-    au < manifest ; British Journal of Health Psychology Volume 6 ; 6 >
-    au < manifest ; British Journal of Health Psychology Volume 7 ; 7 >
-    au < manifest ; British Journal of Health Psychology Volume 8 ; 8 >
-    au < manifest ; British Journal of Health Psychology Volume 9 ; 9 >
-    au < manifest ; British Journal of Health Psychology Volume 10 ; 10 >
-    au < manifest ; British Journal of Health Psychology Volume 11 ; 11 >
-    au < manifest ; British Journal of Health Psychology Volume 12 ; 12 >
-    au < manifest ; British Journal of Health Psychology Volume 13 ; 13 >
-    au < manifest ; British Journal of Health Psychology Volume 14 ; 14 >
+    au < ready ; British Journal of Health Psychology Volume 4 ; 4 >
+    au < ready ; British Journal of Health Psychology Volume 5 ; 5 >
+    au < ready ; British Journal of Health Psychology Volume 6 ; 6 >
+    au < ready ; British Journal of Health Psychology Volume 7 ; 7 >
+    au < ready ; British Journal of Health Psychology Volume 8 ; 8 >
+    au < ready ; British Journal of Health Psychology Volume 9 ; 9 >
+    au < ready ; British Journal of Health Psychology Volume 10 ; 10 >
+    au < ready ; British Journal of Health Psychology Volume 11 ; 11 >
+    au < ready ; British Journal of Health Psychology Volume 12 ; 12 >
+    au < ready ; British Journal of Health Psychology Volume 13 ; 13 >
+    au < ready ; British Journal of Health Psychology Volume 14 ; 14 >
     
   }
   
@@ -107,17 +107,17 @@
     param[journal_id] = bjmsp
     param[journal_issn] = 0007-1102  
 
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 52 ; 52 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 53 ; 53 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 54 ; 54 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 55 ; 55 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 56 ; 56 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 57 ; 57 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 58 ; 58 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 59 ; 59 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 60 ; 60 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 61 ; 61 >
-    au < manifest ; British Journal of Mathematical and Statistical Psychology Volume 62 ; 62 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 52 ; 52 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 53 ; 53 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 54 ; 54 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 55 ; 55 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 56 ; 56 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 57 ; 57 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 58 ; 58 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 59 ; 59 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 60 ; 60 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 61 ; 61 >
+    au < ready ; British Journal of Mathematical and Statistical Psychology Volume 62 ; 62 >
     
   }
 
@@ -129,9 +129,9 @@
     param[journal_id] = bjmp
     param[journal_issn] = 0007-1129  
 
-    au < manifest ; British Journal of Medical Psychology Volume 72 ; 72 >
-    au < manifest ; British Journal of Medical Psychology Volume 73 ; 73 >
-    au < manifest ; British Journal of Medical Psychology Volume 74 ; 74 >
+    au < testing ; British Journal of Medical Psychology Volume 72 ; 72 >
+    au < testing ; British Journal of Medical Psychology Volume 73 ; 73 >
+    au < testing ; British Journal of Medical Psychology Volume 74 ; 74 >
     
   }
   
