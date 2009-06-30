@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.25 2008-11-02 21:16:43 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.26 2009-06-30 09:08:54 tlipkis Exp $
  */
 
 /*
@@ -116,12 +116,12 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     PD_BIN_FILE_SIZE.getKey();
 
   /**
-   * The size to make binary files, if chosen as a type.
+   * The seed for random binary files, if chosen as a type.
    */
   static final ConfigParamDescr PD_BIN_RANDOM_SEED = new ConfigParamDescr();
   static {
     PD_BIN_RANDOM_SEED.setKey("binRandomSeed");
-    PD_BIN_RANDOM_SEED.setDisplayName("Binary file size");
+    PD_BIN_RANDOM_SEED.setDisplayName("Bin file random seed");
     PD_BIN_RANDOM_SEED.setType(ConfigParamDescr.TYPE_LONG);
     PD_BIN_RANDOM_SEED.setSize(8);
     PD_BIN_RANDOM_SEED.setDefinitional(false);
