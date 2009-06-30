@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaLinkExtractorFactory.java,v 1.2 2009-06-30 21:56:18 thib_gc Exp $
+ * $Id: IngentaHtmlLinkExtractorFactory.java,v 1.1 2009-06-30 22:39:30 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.plugin.ingenta;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 
-public class IngentaLinkExtractorFactory implements LinkExtractorFactory {
+public class IngentaHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
     return new IngentaHtmlLinkExtractor();
