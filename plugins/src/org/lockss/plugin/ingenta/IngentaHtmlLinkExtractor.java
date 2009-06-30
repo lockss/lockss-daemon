@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaLinkExtractorFactory.java,v 1.2 2009-06-30 21:56:18 thib_gc Exp $
+ * $Id: IngentaHtmlLinkExtractor.java,v 1.1 2009-06-30 21:56:18 thib_gc Exp $
  */
 
 /*
@@ -32,13 +32,36 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.extractor.*;
+import java.io.IOException;
 
-public class IngentaLinkExtractorFactory implements LinkExtractorFactory {
+import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 
-  public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-    return new IngentaHtmlLinkExtractor();
+public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
+
+  protected static Logger logger = Logger.getLogger("IngentaHtmlLinkExtractor");
+  
+  public IngentaHtmlLinkExtractor() {
+    super();
+  }
+  
+  @Override
+  protected String extractLinkFromTag(StringBuffer link,
+                                      ArchivalUnit au,
+                                      Callback cb)
+      throws IOException {
+    char ch = link.charAt(0);
+    if ((ch == 'm' || ch == 'M') && beginsWithTag(link, METATAG)) {
+      String key = getAttributeValue("name", link);
+      if (key != null && key.startsWith("CRAWLER.")) {
+        logger.debug3("Found a suitable <meta> tag");
+        return getAttributeValue("content", link);
+      }
+    }
+    
+    logger.debug3("No suitable <meta> tag");
+    return super.extractLinkFromTag(link, au, cb);
   }
   
 }

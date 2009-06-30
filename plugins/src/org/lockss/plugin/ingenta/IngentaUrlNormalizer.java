@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaLinkExtractor.java,v 1.2 2009-06-29 23:23:38 thib_gc Exp $
+ * $Id: IngentaUrlNormalizer.java,v 1.1 2009-06-30 21:56:18 thib_gc Exp $
  */
 
 /*
@@ -32,36 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.io.IOException;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.*;
 
-import org.lockss.extractor.GoslingHtmlLinkExtractor;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Logger;
 
-public class IngentaLinkExtractor extends GoslingHtmlLinkExtractor {
+public class IngentaUrlNormalizer implements UrlNormalizer {
 
-  protected static Logger logger = Logger.getLogger("IngentaLinkExtractor");
-  
-  public IngentaLinkExtractor() {
-    super();
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    return url.replaceFirst(";jsessionid=[^?]+", "");
   }
-  
-  @Override
-  protected String extractLinkFromTag(StringBuffer link,
-                                      ArchivalUnit au,
-                                      Callback cb)
-      throws IOException {
-    char ch = link.charAt(0);
-    if ((ch == 'm' || ch == 'M') && beginsWithTag(link, METATAG)) {
-      String key = getAttributeValue("name", link);
-      if (key != null && key.startsWith("CRAWLER.")) {
-        logger.debug3("Found a suitable <meta> tag");
-        return getAttributeValue("content", link);
-      }
-    }
-    
-    logger.debug3("No suitable <meta> tag");
-    return super.extractLinkFromTag(link, au, cb);
-  }
-  
+
 }

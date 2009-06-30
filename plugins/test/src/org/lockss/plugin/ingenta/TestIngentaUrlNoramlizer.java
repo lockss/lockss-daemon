@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaLinkExtractorFactory.java,v 1.2 2009-06-30 21:56:18 thib_gc Exp $
+ * $Id: TestIngentaUrlNoramlizer.java,v 1.1 2009-06-30 21:56:18 thib_gc Exp $
  */
 
 /*
@@ -32,13 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.extractor.*;
+import org.lockss.plugin.UrlNormalizer;
+import org.lockss.test.LockssTestCase;
 
-public class IngentaLinkExtractorFactory implements LinkExtractorFactory {
+public class TestIngentaUrlNoramlizer extends LockssTestCase {
 
-  public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-    return new IngentaHtmlLinkExtractor();
+  public void testNormalizer() throws Exception {
+    UrlNormalizer normalizer = new IngentaUrlNormalizer();
+    assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003",
+                 normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003", null));
+    assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003",
+        normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice", null));
+    assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003?format=print&view=popup",
+                 normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice?format=print&view=popup", null));
   }
   
 }
