@@ -639,7 +639,7 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < released ; The Annals of the American Academy of Political and Social Science Volume 598 ; 598 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 599 ; 599 >
-        au < ready ; The Annals of the American Academy of Political and Social Science Volume 600 ; 600 >
+        au < releasing ; The Annals of the American Academy of Political and Social Science Volume 600 ; 600 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 601 ; 601 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 602 ; 602 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 603 ; 603 >
@@ -651,7 +651,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; The Annals of the American Academy of Political and Social Science Volume 609 ; 609 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 610 ; 610 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 611 ; 611 >
-        au < ready ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
+        au < releasing ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
         au < manifest ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
@@ -1220,7 +1220,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://clt.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Child Language Teaching and Therapy Volume 20 ; 20 >
+        au < releasing ; Child Language Teaching and Therapy Volume 20 ; 20 >
         au < released ; Child Language Teaching and Therapy Volume 23 ; 23 >
         au < manifest ; Child Language Teaching and Therapy Volume 24 ; 24 >
         au < manifest ; Child Language Teaching and Therapy Volume 25 ; 25 >
@@ -1338,7 +1338,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://chi.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Chronic Illness Volume 2 ; 2 >
+        au < releasing ; Chronic Illness Volume 2 ; 2 >
         au < released ; Chronic Illness Volume 3 ; 3 >
 
       }
@@ -1905,7 +1905,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Crime & Delinquency Volume 51 ; 51 >
-        au < ready ; Crime & Delinquency Volume 52 ; 52 >
+        au < releasing ; Crime & Delinquency Volume 52 ; 52 >
         au < released ; Crime & Delinquency Volume 53 ; 53 >
         au < manifest ; Crime & Delinquency Volume 54 ; 54 >
         au < manifest ; Crime & Delinquency Volume 55 ; 55 >
@@ -2199,8 +2199,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
-        au < ready ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
-        au < ready ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
+        au < releasing ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
+        au < releasing ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
         au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
         au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
 
@@ -2403,8 +2403,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Discourse & Society Volume 16 ; 16 >
-        au < ready ; Discourse & Society Volume 17 ; 17 >
-        au < ready ; Discourse & Society Volume 18 ; 18 >
+        au < releasing ; Discourse & Society Volume 17 ; 17 >
+        au < releasing ; Discourse & Society Volume 18 ; 18 >
         au < manifest ; Discourse & Society Volume 19 ; 19 >
         au < manifest ; Discourse & Society Volume 20 ; 20 >
 
@@ -2491,9 +2491,9 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         param[base_url] = http://eid.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Economic and Industrial Democracy Volume 26 ; 26 >
-        au < ready ; Economic and Industrial Democracy Volume 27 ; 27 >
-        au < ready ; Economic and Industrial Democracy Volume 28 ; 28 >
+        au < releasing ; Economic and Industrial Democracy Volume 26 ; 26 >
+        au < releasing ; Economic and Industrial Democracy Volume 27 ; 27 >
+        au < releasing ; Economic and Industrial Democracy Volume 28 ; 28 >
         au < manifest ; Economic and Industrial Democracy Volume 29 ; 29 >
         au < manifest ; Economic and Industrial Democracy Volume 30 ; 30 >
 
@@ -2600,7 +2600,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
         au < released ; Educational Administration Quarterly Volume 41 ; 41 >
         au < do_not_process ; Educational Administration Quarterly Volume 42 ; 42 >
-        au < ready ; Educational Administration Quarterly Volume 43 ; 43 >
+        au < releasing ; Educational Administration Quarterly Volume 43 ; 43 >
         au < manifest ; Educational Administration Quarterly Volume 44 ; 44 >
         au < manifest ; Educational Administration Quarterly Volume 45 ; 45 >
 
@@ -2621,8 +2621,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational and Psychological Measurement Volume 65 ; 65 >
-        au < ready ; Educational and Psychological Measurement Volume 66 ; 66 >
-        au < ready ; Educational and Psychological Measurement Volume 67 ; 67 >
+        au < releasing ; Educational and Psychological Measurement Volume 66 ; 66 >
+        au < releasing ; Educational and Psychological Measurement Volume 67 ; 67 >
         au < manifest ; Educational and Psychological Measurement Volume 68 ; 68 >
         au < manifest ; Educational and Psychological Measurement Volume 69 ; 69 >
 
@@ -2695,7 +2695,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Policy Volume 19 ; 19 >
-        au < ready ; Educational Policy Volume 20 ; 20 >
+        au < releasing ; Educational Policy Volume 20 ; 20 >
         au < released ; Educational Policy Volume 21 ; 21 >
         au < manifest ; Educational Policy Volume 22 ; 22 >
         au < manifest ; Educational Policy Volume 23 ; 23 >
@@ -3273,7 +3273,7 @@ comment[ebd] = now published by Taylor & Francis
 
         au < released ; Evaluation & the Health Professions Volume 28 ; 28 >
         au < do_not_process ; Evaluation & the Health Professions Volume 29 ; 29 >
-        au < ready ; Evaluation & the Health Professions Volume 30 ; 30 >
+        au < releasing ; Evaluation & the Health Professions Volume 30 ; 30 >
         au < manifest ; Evaluation & the Health Professions Volume 31 ; 31 >
         au < manifest ; Evaluation & the Health Professions Volume 32 ; 32 >
 
@@ -3680,7 +3680,7 @@ comment[exm] = now published by Springer
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Gender, Technology and Development Volume 9 ; 9 >
-        au < ready ; Gender, Technology and Development Volume 10 ; 10 >
+        au < releasing ; Gender, Technology and Development Volume 10 ; 10 >
         au < released ; Gender, Technology and Development Volume 11 ; 11 >
         au < manifest ; Gender, Technology and Development Volume 12 ; 12 >
 
@@ -3823,7 +3823,7 @@ comment[ghj] = now published by Oxford Univeristy Press
 
         au < released ; Group & Organization Management Volume 30 ; 30 >
         au < do_not_process ; Group & Organization Management Volume 31 ; 31 >
-        au < ready ; Group & Organization Management Volume 32 ; 32 >
+        au < releasing ; Group & Organization Management Volume 32 ; 32 >
         au < manifest ; Group & Organization Management Volume 33 ; 33 >
         au < manifest ; Group & Organization Management Volume 34 ; 34 >
 
@@ -3909,7 +3909,7 @@ comment[ghj] = now published by Oxford Univeristy Press
 
         au < released ; The Harvard International Journal of Press/Politics Volume 10 ; 10 >
         au < do_not_process ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
-        au < ready ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
+        au < releasing ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
         au < manifest ; The Harvard International Journal of Press/Politics Volume 13 ; 13 >
         au < manifest ; The Harvard International Journal of Press/Politics Volume 14 ; 14 >
 
@@ -3994,7 +3994,7 @@ comment[ghj] = now published by Oxford Univeristy Press
 
         au < released ; Health Informatics Journal Volume 11 ; 11 >
         au < do_not_process ; Health Informatics Journal Volume 12 ; 12 >
-        au < ready ; Health Informatics Journal Volume 13 ; 13 >
+        au < releasing ; Health Informatics Journal Volume 13 ; 13 >
         au < manifest ; Health Informatics Journal Volume 14 ; 14 >
         au < manifest ; Health Informatics Journal Volume 15 ; 15 >
 
@@ -4112,7 +4112,7 @@ comment[ghj] = now published by Oxford Univeristy Press
 
         au < released ; Hispanic Journal of Behavioral Sciences Volume 27 ; 27 >
         au < do_not_process ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
-        au < ready ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
+        au < releasing ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
         au < manifest ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 >
         au < manifest ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 >
 
@@ -4196,8 +4196,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://hol.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; The Holocene Volume 16 ; 16 >
-        au < ready ; The Holocene Volume 17 ; 17 >
+        au < releasing ; The Holocene Volume 16 ; 16 >
+        au < releasing ; The Holocene Volume 17 ; 17 >
         au < manifest ; The Holocene Volume 18 ; 18 >
         au < manifest ; The Holocene Volume 19 ; 19 >
 
@@ -4217,10 +4217,10 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://hhc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Home Health Care Management & Practice Volume 17 ; 17 >
-        au < ready ; Home Health Care Management & Practice Volume 18 ; 18 >
-        au < ready ; Home Health Care Management & Practice Volume 19 ; 19 >
-        au < ready ; Home Health Care Management & Practice Volume 20 ; 20 >
+        au < releasing ; Home Health Care Management & Practice Volume 17 ; 17 >
+        au < releasing ; Home Health Care Management & Practice Volume 18 ; 18 >
+        au < releasing ; Home Health Care Management & Practice Volume 19 ; 19 >
+        au < releasing ; Home Health Care Management & Practice Volume 20 ; 20 >
         au < manifest ; Home Health Care Management & Practice Volume 21 ; 21 >
 
       }
@@ -4249,9 +4249,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://hsx.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Homicide Studies Volume 9 ; 9 >
+        au < releasing ; Homicide Studies Volume 9 ; 9 >
         au < do_not_process ; Homicide Studies Volume 10 ; 10 >
-        au < ready ; Homicide Studies Volume 11 ; 11 >
+        au < releasing ; Homicide Studies Volume 11 ; 11 >
         au < manifest ; Homicide Studies Volume 12 ; 12 >
         au < manifest ; Homicide Studies Volume 13 ; 13 >
 
@@ -4271,9 +4271,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://het.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Human & Experimental Toxicology Volume 21 ; 21 >
-        au < ready ; Human & Experimental Toxicology Volume 25 ; 25 >
-        au < ready ; Human & Experimental Toxicology Volume 26 ; 26 >
+        au < releasing ; Human & Experimental Toxicology Volume 21 ; 21 >
+        au < releasing ; Human & Experimental Toxicology Volume 25 ; 25 >
+        au < releasing ; Human & Experimental Toxicology Volume 26 ; 26 >
         au < manifest ; Human & Experimental Toxicology Volume 27 ; 27 >
         au < manifest ; Human & Experimental Toxicology Volume 28 ; 28 >
 
@@ -4303,9 +4303,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://hum.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Human Relations Volume 58 ; 58 >
+        au < releasing ; Human Relations Volume 58 ; 58 >
         au < do_not_process ; Human Relations Volume 59 ; 59 >
-        au < ready ; Human Relations Volume 60 ; 60 >
+        au < releasing ; Human Relations Volume 60 ; 60 >
         au < manifest ; Human Relations Volume 61 ; 61 >
         au < manifest ; Human Relations Volume 62 ; 62 >
 
@@ -4335,9 +4335,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://hrd.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Human Resource Development Review Volume 4 ; 4 >
+        au < releasing ; Human Resource Development Review Volume 4 ; 4 >
         au < do_not_process ; Human Resource Development Review Volume 5 ; 5 >
-        au < ready ; Human Resource Development Review Volume 6 ; 6 >
+        au < releasing ; Human Resource Development Review Volume 6 ; 6 >
         au < manifest ; Human Resource Development Review Volume 7 ; 7 >
         au < manifest ; Human Resource Development Review Volume 8 ; 8 >
 
@@ -4367,9 +4367,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://ifl.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; IFLA Journal Volume 31 ; 31 >
+        au < releasing ; IFLA Journal Volume 31 ; 31 >
         au < do_not_process ; IFLA Journal Volume 32 ; 32 >
-        au < ready ; IFLA Journal Volume 33 ; 33 >
+        au < releasing ; IFLA Journal Volume 33 ; 33 >
         au < manifest ; IFLA Journal Volume 34 ; 34 >
         au < manifest ; IFLA Journal Volume 35 ; 35 >
 
@@ -4399,9 +4399,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://imp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < ready ; Improving Schools Volume 8 ; 8 >
+        au < releasing ; Improving Schools Volume 8 ; 8 >
         au < do_not_process ; Improving Schools Volume 9 ; 9 >
-        au < ready ; Improving Schools Volume 10 ; 10 >
+        au < releasing ; Improving Schools Volume 10 ; 10 >
         au < manifest ; Improving Schools Volume 11 ; 11 >
         au < manifest ; Improving Schools Volume 12 ; 12 >
 
@@ -4432,8 +4432,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Indian Economic & Social History Review Volume 42 ; 42 >
-        au < ready ; Indian Economic & Social History Review Volume 43 ; 43 >
-        au < ready ; Indian Economic & Social History Review Volume 44 ; 44 >
+        au < releasing ; Indian Economic & Social History Review Volume 43 ; 43 >
+        au < releasing ; Indian Economic & Social History Review Volume 44 ; 44 >
         au < manifest ; Indian Economic & Social History Review Volume 45 ; 45 >
         au < manifest ; Indian Economic & Social History Review Volume 46 ; 46 >
 
@@ -4464,8 +4464,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Indian Journal of Gender Studies Volume 12 ; 12 >
-        au < ready ; Indian Journal of Gender Studies Volume 13 ; 13 >
-        au < ready ; Indian Journal of Gender Studies Volume 14 ; 14 >
+        au < releasing ; Indian Journal of Gender Studies Volume 13 ; 13 >
+        au < releasing ; Indian Journal of Gender Studies Volume 14 ; 14 >
         au < manifest ; Indian Journal of Gender Studies Volume 15 ; 15 >
         au < manifest ; Indian Journal of Gender Studies Volume 16 ; 16 >
 
