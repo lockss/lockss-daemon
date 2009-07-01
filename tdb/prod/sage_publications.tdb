@@ -1220,7 +1220,11 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://clt.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < releasing ; Child Language Teaching and Therapy Volume 20 ; 20 >
+        comment[20] = manifest page incomplete
+
+        au < not_ready ; Child Language Teaching and Therapy Volume 20 ; 20 >
+        au < exists ; Child Language Teaching and Therapy Volume 21 ; 21 >
+        au < exists ; Child Language Teaching and Therapy Volume 22 ; 22 >
         au < released ; Child Language Teaching and Therapy Volume 23 ; 23 >
         au < manifest ; Child Language Teaching and Therapy Volume 24 ; 24 >
         au < manifest ; Child Language Teaching and Therapy Volume 25 ; 25 >
@@ -4272,6 +4276,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < releasing ; Human & Experimental Toxicology Volume 21 ; 21 >
+        au < exists ; Human & Experimental Toxicology Volume 22 ; 22 >
+        au < exists ; Human & Experimental Toxicology Volume 23 ; 23 >
+        au < exists ; Human & Experimental Toxicology Volume 24 ; 24 >
         au < releasing ; Human & Experimental Toxicology Volume 25 ; 25 >
         au < releasing ; Human & Experimental Toxicology Volume 26 ; 26 >
         au < manifest ; Human & Experimental Toxicology Volume 27 ; 27 >
