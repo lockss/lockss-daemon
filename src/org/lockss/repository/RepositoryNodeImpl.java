@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.84.4.1 2009-04-30 20:11:02 edwardsb1 Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.84.4.2 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -35,12 +35,14 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
+
 import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.protocol.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.plugin.AuUrl;
+import org.lockss.repository.v2.NoTextException;
 import org.lockss.util.*;
 
 /**
@@ -1623,7 +1625,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return sb.toString();
   }
 
-  public class RepositoryNodeVersionImpl implements RepositoryNodeVersion {
+  /**
+   * This class handles the new RepositoryFileVersion.
+   *
+   */
+  public class RepositoryNodeVersionImpl implements RepositoryNodeVersion, 
+  org.lockss.repository.v2.RepositoryFileVersion {
     private int version;
     private File contentFile = null;
 
@@ -1653,7 +1660,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return version;
     }
 
-    public RepositoryNode.RepositoryNodeContents getNodeContents() {
+    public RepositoryNodeContentsImpl getNodeContents() {
       if (!hasContent()) {
 	throw new UnsupportedOperationException("No content for version " +
 						getVersion() + "of " + url);
@@ -1669,7 +1676,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	this.version = version;
       }
 
-      protected File getContentFile() {
+      public File getContentFile() {
 	return RepositoryNodeVersionImpl.this.getContentFile();
       }
 
@@ -1687,7 +1694,68 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       protected void handleOpenError(IOException e) {
       }
-  }
+    }
+
+    /* The following methods implement RepositoryFileVersion. */
+    
+    public void commit() throws IOException, LockssRepositoryException,
+        NoTextException {
+      // The original 'sealVersion' can only seal the last version of the repository.
+      // Since this is an earlier version, we can't call 'sealVersion'.
+      
+      curOutputStream = null;
+      newPropsSet = false;
+    }
+
+    public void delete() throws LockssRepositoryException {
+      markAsDeleted();
+    }
+
+    public void discard() throws LockssRepositoryException {
+    }
+
+    public InputStream getInputStream() throws IOException,
+        LockssRepositoryException {
+      return getNodeContents().getInputStream();
+    }
+
+    public Properties getProperties() throws IOException,
+        LockssRepositoryException {
+      return getNodeContents().getProperties();
+    }
+
+    public boolean isDeleted() throws LockssRepositoryException {
+      return currentVersion == DELETED_VERSION;
+    }
+
+    public void move(String strNewLocation) throws LockssRepositoryException {
+      throw new LockssRepositoryException("The old repository does not easily move files.");
+    }
+
+    // This method reads the data from the input stream, and copies it into the 
+    // content file.
+    public void setInputStream(InputStream istr) throws IOException,
+        LockssRepositoryException {
+      File fileContent;
+      
+      fileContent = getNodeContents().getContentFile();
+      curOutputStream = new FileOutputStream(fileContent);
+      StreamUtil.copy(istr, curOutputStream);
+    }
+
+    public void setProperties(Properties prop) throws IOException,
+        LockssRepositoryException {
+      File propsFile = getVersionedPropsFile(version);
+
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(
+          propsFile));
+      prop.store(os, "HTTP headers for " + url);
+      os.close();
+    }
+
+    public void undelete() throws LockssRepositoryException {
+      markAsNotDeleted();
+    }
 
   }
 
@@ -1695,7 +1763,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   /**
    * Intended to ensure props and stream reflect a consistent view of a
-   * single version.  This version gurantees that only if the stream is
+   * single version.  This version guarantees that only if the stream is
    * fetched only once.
    */
   class RepositoryNodeContentsImpl implements RepositoryNodeContents {
@@ -1741,7 +1809,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
 
-    protected File getContentFile() {
+    public File getContentFile() {
       return curInputFile;
     }
 
@@ -1785,4 +1853,61 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return ((File)o1).getName().compareTo(((File)o2).getName());
     }
   }
+
+  /* The following methods implement RepositoryFileVersion. */
+  
+  public void commit() throws IOException, LockssRepositoryException,
+      NoTextException {
+    sealNewVersion();
+  }
+
+  public void delete() throws LockssRepositoryException {
+    markAsDeleted();
+  }
+
+  public void discard() throws LockssRepositoryException {
+    abandonNewVersion();
+  }
+
+  public InputStream getInputStream() throws IOException,
+      LockssRepositoryException {
+    return getNodeContents().getInputStream();
+  }
+
+  public Properties getProperties() throws IOException,
+      LockssRepositoryException {
+    return getNodeContents().getProperties();
+  }
+
+  public void move(String strNewLocation) throws LockssRepositoryException {
+    throw new LockssRepositoryException("The old repository does not easily move files.");
+  }
+
+  public void setInputStream(InputStream istr) throws IOException,
+      LockssRepositoryException {
+    OutputStream ostrContent;
+    
+    newVersionOpen = true;
+    versionTimeout = Deadline.in(
+        CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
+                                   DEFAULT_VERSION_TIMEOUT));
+    
+    ostrContent = getNewOutputStream();
+    StreamUtil.copy(istr, ostrContent);    
+  }
+
+  public void setProperties(Properties prop) throws IOException,
+      LockssRepositoryException {
+    newVersionOpen = true;
+    versionTimeout = Deadline.in(
+      CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
+                                 DEFAULT_VERSION_TIMEOUT));
+    setNewProperties(prop);
+  }
+
+  public void undelete() throws LockssRepositoryException {
+    markAsNotDeleted();
+  }
+  
+  /* End of methods for RepositoryFileVersion. */
 }

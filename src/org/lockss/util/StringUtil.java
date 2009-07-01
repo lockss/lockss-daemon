@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.81 2008-08-17 08:49:25 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.81.12.1 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -285,11 +285,11 @@ public class StringUtil {
    * included in the result.
    * @param trimEachString is true, each string in the result will be trim()ed
    */
-  public static Vector breakAt(String s, char sep,
+  public static Vector<String> breakAt(String s, char sep,
 			       int maxItems,
 			       boolean discardEmptyStrings,
 			       boolean trimEachString) {
-    Vector res = new Vector();
+    Vector<String> res = new Vector<String>();
     int len;
     if (s == null || (len = s.length()) == 0) {
       return res;
@@ -330,11 +330,11 @@ public class StringUtil {
    * included in the result.
    * @param trimEachString is true, each string in the result will be trim()ed
    */
-  public static Vector breakAt(String s, String sep,
+  public static Vector<String> breakAt(String s, String sep,
 			       int maxItems,
 			       boolean discardEmptyStrings,
 			       boolean trimEachString) {
-    Vector res = new Vector();
+    Vector<String> res = new Vector<String>();
     int len;
     if (s == null || (len = s.length()) == 0) {
       return res;
@@ -373,7 +373,7 @@ public class StringUtil {
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
    * included in the result. */
-  public static Vector breakAt(String s, char sep,
+  public static Vector<String> breakAt(String s, char sep,
 			       int maxItems,
 			       boolean discardEmptyStrings) {
     return breakAt(s, sep, maxItems, discardEmptyStrings, false);
@@ -384,7 +384,7 @@ public class StringUtil {
    * @param s string containing zero or more occurrences of separator
    * @param sep the separator char
    */
-  public static Vector breakAt(String s, char sep) {
+  public static Vector<String> breakAt(String s, char sep) {
     return breakAt(s, sep, 0);
   }
 
@@ -395,7 +395,7 @@ public class StringUtil {
    * @param maxItems maximum size of returned vector, 0 = unlimited.  If
    * nonzero, substrings past the nth are discarded.
    */
-  public static Vector breakAt(String s, char sep, int maxItems) {
+  public static Vector<String> breakAt(String s, char sep, int maxItems) {
     return breakAt(s, sep, maxItems, false);
   }
 
@@ -408,7 +408,7 @@ public class StringUtil {
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
    * included in the result. */
-  public static Vector breakAt(String s, String sep,
+  public static Vector<String> breakAt(String s, String sep,
 			       int maxItems,
 			       boolean discardEmptyStrings) {
     return breakAt(s, sep, maxItems, discardEmptyStrings, false);
@@ -419,7 +419,7 @@ public class StringUtil {
    * @param s string containing zero or more occurrences of separator
    * @param sep the separator String
    */
-  public static Vector breakAt(String s, String sep) {
+  public static Vector<String> breakAt(String s, String sep) {
     return breakAt(s, sep, 0);
   }
 
@@ -430,7 +430,7 @@ public class StringUtil {
    * @param maxItems maximum size of returned vector, 0 = unlimited.  If
    * nonzero, substrings past the nth are discarded.
    */
-  public static Vector breakAt(String s, String sep, int maxItems) {
+  public static Vector<String> breakAt(String s, String sep, int maxItems) {
     return breakAt(s, sep, maxItems, false);
   }
 

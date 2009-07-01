@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.12.24.1 2009-04-30 20:11:02 edwardsb1 Exp $
+ * $Id: RepositoryManager.java,v 1.12.24.2 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.repository;
 
 import java.net.*;
 import java.util.*;
-import org.apache.commons.collections.map.LinkedMap;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -233,12 +232,12 @@ public class RepositoryManager
 	res.add(repoName);
       }
     }
-    return res == null ? Collections.EMPTY_LIST : res;
+    return res == null ? (List<String>) Collections.EMPTY_LIST : res;
   }
 
   // hack only local
   public synchronized LockssRepository getRepositoryFromPath(String path) {
-    LockssRepository repo = (LockssRepository) localRepos.get(path);
+    LockssRepository repo = localRepos.get(path);
     if (repo == null) {
       repo =  new LockssRepositoryImpl(path);
       repo.initService(getDaemon());

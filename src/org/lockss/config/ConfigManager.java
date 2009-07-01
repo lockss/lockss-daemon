@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.62 2009-02-05 05:08:11 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.62.4.1 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.apache.commons.collections.PredicateUtils;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.app.*;
 import org.lockss.clockss.*;
+import org.lockss.config.ConfigFile.Generation;
+import org.lockss.config.Configuration.Callback;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
@@ -125,8 +127,8 @@ public class ConfigManager implements LockssManager {
   /** Group names, for group= config file conditional */
   public static final String PARAM_DAEMON_GROUPS = DAEMON + "groups";
   public static final String DEFAULT_DAEMON_GROUP = "nogroup";
-  public static final List DEFAULT_DAEMON_GROUP_LIST =
-    ListUtil.list(DEFAULT_DAEMON_GROUP);
+  public static final List<String> DEFAULT_DAEMON_GROUP_LIST =
+    (List<String>) ListUtil.list(DEFAULT_DAEMON_GROUP);
 
   /** Local (routable) IP address, for lcap identity */
   public static final String PARAM_PLATFORM_IP_ADDRESS =
@@ -202,16 +204,17 @@ public class ConfigManager implements LockssManager {
 
   protected LockssApp theApp = null;
 
-  private List configChangedCallbacks = new ArrayList();
+  private List<Configuration.Callback> configChangedCallbacks = 
+    new ArrayList<Configuration.Callback>();
 
-  private List cacheConfigFileList = null;
-  private List configUrlList;		// list of config file urls
+  private List<File> cacheConfigFileList = null;
+  private List<URL> configUrlList;		// list of config file urls
   // XXX needs synchronization
-  private List titledbUrlList;		// global titledb urls
-  private List auxPropUrlList;		// auxilliary prop files
-  private List pluginTitledbUrlList;	// list of titledb urls (usually
+  private List<String> titledbUrlList;		// global titledb urls
+  private List<String> auxPropUrlList;		// auxilliary prop files
+  private List<URL> pluginTitledbUrlList;	// list of titledb urls (usually
 					// jar:) specified by plugins
-  private List userTitledbUrlList;	// titledb urls added from UI
+  private List<String> userTitledbUrlList;	// titledb urls added from UI
   private String groupNames;		// daemon group names
 
   private String recentLoadError;
@@ -239,13 +242,13 @@ public class ConfigManager implements LockssManager {
     this(null, null);
   }
 
-  public ConfigManager(List urls) {
+  public ConfigManager(List<URL> urls) {
     this(urls, null);
   }
 
-  public ConfigManager(List urls, String groupNames) {
+  public ConfigManager(List<URL> urls, String groupNames) {
     if (urls != null) {
-      configUrlList = new ArrayList(urls);
+      configUrlList = new ArrayList<URL>(urls);
     }
     this.groupNames = groupNames;
     registerConfigurationCallback(Logger.getConfigCallback());
@@ -278,7 +281,7 @@ public class ConfigManager implements LockssManager {
     currentConfig = newConfiguration();
     // this currently runs afoul of Logger, which registers itself once
     // only, on first use.
-    configChangedCallbacks = new ArrayList();
+    configChangedCallbacks = new ArrayList<Configuration.Callback>();
     configUrlList = null;
     cacheConfigInited = false;
     cacheConfigDir = null;
@@ -298,12 +301,12 @@ public class ConfigManager implements LockssManager {
     return theMgr;
   }
 
-  public static ConfigManager makeConfigManager(List urls) {
+  public static ConfigManager makeConfigManager(List<URL> urls) {
     theMgr = new ConfigManager(urls);
     return theMgr;
   }
 
-  public static ConfigManager makeConfigManager(List urls, String groupNames) {
+  public static ConfigManager makeConfigManager(List<URL> urls, String groupNames) {
     theMgr = new ConfigManager(urls, groupNames);
     return theMgr;
   }
@@ -368,8 +371,6 @@ public class ConfigManager implements LockssManager {
    * Convenience methods for getting useful platform settings.
    */
   public static DaemonVersion getDaemonVersion() {
-    DaemonVersion daemon = null;
-
     String ver = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
     // If BuildInfo doesn't give us a value, see if we already have it
     // in the props.  Useful for testing.
@@ -416,8 +417,8 @@ public class ConfigManager implements LockssManager {
     return getPlatformConfig().get(PARAM_DAEMON_GROUPS, DEFAULT_DAEMON_GROUP);
   }
 
-  public static List getPlatformGroupList() {
-    return getPlatformConfig().getList(PARAM_DAEMON_GROUPS,
+  public static List<String> getPlatformGroupList() {
+    return (List<String>) getPlatformConfig().getList(PARAM_DAEMON_GROUPS,
 				       DEFAULT_DAEMON_GROUP_LIST);
   }
 
@@ -475,10 +476,10 @@ public class ConfigManager implements LockssManager {
     // requires calculating diffs that encompass both loads.
 
     // copy the list of callbacks as it could change during the loop.
-    List cblist = new ArrayList(configChangedCallbacks);
-    for (Iterator iter = cblist.iterator(); iter.hasNext();) {
+    List<Callback> cblist = new ArrayList<Callback>(configChangedCallbacks);
+    for (Iterator<Callback> iter = cblist.iterator(); iter.hasNext();) {
       try {
-	Configuration.Callback cb = (Configuration.Callback)iter.next();
+	Configuration.Callback cb = iter.next();
 	runCallback(cb, newConfig, oldConfig, diffs);
       } catch (RuntimeException e) {
 	throw e;
@@ -486,15 +487,15 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  public Configuration readConfig(List urlList) throws IOException {
-    return readConfig(urlList, null);
+  public Configuration readConfig(List<String> configUrls) throws IOException {
+    return readConfig(configUrls, null);
   }
 
   /**
    * Return a new <code>Configuration</code> instance loaded from the
    * url list
    */
-  public Configuration readConfig(List urlList, String groupNames)
+  public Configuration readConfig(List<String> urlList, String groupNames)
       throws IOException {
     if (urlList == null) {
       return null;
@@ -520,10 +521,10 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  private Map generationMap = new HashMap();
+  private Map<String, Integer> generationMap = new HashMap<String, Integer>();
 
   int getGeneration(String url) {
-    Integer gen = (Integer)generationMap.get(url);
+    Integer gen = generationMap.get(url);
     if (gen == null) return -1;
     return gen.intValue();
   }
@@ -535,7 +536,7 @@ public class ConfigManager implements LockssManager {
   /**
    * @return a List of the urls from which the config is loaded.
    */
-  public List getConfigUrlList() {
+  public List<URL> getConfigUrlList() {
     return configUrlList;
   }
 
@@ -614,12 +615,12 @@ public class ConfigManager implements LockssManager {
 
   boolean isChanged(ConfigFile.Generation gen) {
     boolean val = (gen.getGeneration() != getGeneration(gen.getUrl()));
-    return (gen.getGeneration() != getGeneration(gen.getUrl()));
+    return val;
   }
 
-  boolean isChanged(Collection gens) {
-    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+  boolean isChanged(Collection<Generation> gens) {
+    for (Iterator<Generation> iter = gens.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = iter.next();
       if (gen != null && isChanged(gen)) {
 	return true;
       }
@@ -627,20 +628,23 @@ public class ConfigManager implements LockssManager {
     return false;
   }
 
-  List getConfigGenerations(Collection urls, boolean required,
+  List<Generation> getConfigGenerations(Collection urls, boolean required,
 			    boolean reload, String msg)
       throws IOException {
     return getConfigGenerations(urls, required, reload, msg,
 				PredicateUtils.truePredicate());
   }
 
-  List getConfigGenerations(Collection urls, boolean required,
+  /* Note: the collection can be either of ConfigFile -or- of general objects. 
+   *       This confusion prevents the code from being type-safe.  
+   */
+  List<Generation> getConfigGenerations(Collection urls, boolean required,
 			    boolean reload, String msg,
 			    Predicate keyPredicate)
       throws IOException {
 
     if (urls == null) return Collections.EMPTY_LIST;
-    List res = new ArrayList(urls.size());
+    List<Generation> res = new ArrayList<Generation>(urls.size());
     for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
       Object o = iter.next();
       ConfigFile.Generation gen;
@@ -673,11 +677,11 @@ public class ConfigManager implements LockssManager {
 	return false;
       }};
 
-  List getStandardConfigGenerations(List urls, boolean reload)
+  List<Generation> getStandardConfigGenerations(List urls, boolean reload)
       throws IOException {
-    List res = new ArrayList(20);
+    List<Generation> res = new ArrayList<Generation>(20);
 
-    List configGens = getConfigGenerations(urls, true, reload, "props");
+    List<Generation> configGens = getConfigGenerations(urls, true, reload, "props");
     res.addAll(configGens);
 
     res.addAll(getConfigGenerations(auxPropUrlList, false, reload,
@@ -694,8 +698,8 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
-  List getCacheConfigGenerations(boolean reload) throws IOException {
-    List localGens = getConfigGenerations(getCacheConfigFiles(), false, reload,
+  List<Generation> getCacheConfigGenerations(boolean reload) throws IOException {
+    List<Generation> localGens = getConfigGenerations(getCacheConfigFiles(), false, reload,
 					  "cache config");
     if (!localGens.isEmpty()) {
       hasLocalCacheConfig = true;
@@ -733,13 +737,12 @@ public class ConfigManager implements LockssManager {
     }
     if (currentConfig.isEmpty() ||
 	TimeBase.msSince(lastSendVersion) >= sendVersionEvery) {
-      LockssApp app = getApp();
       sendVersionInfo = getVersionString();
       lastSendVersion = TimeBase.nowMs();
     } else {
       sendVersionInfo = null;
     }
-    List gens;
+    List<Generation> gens;
     try {
       gens = getStandardConfigGenerations(urls, reload);
     } catch (IOException e) {
@@ -816,15 +819,18 @@ public class ConfigManager implements LockssManager {
   }
 
 
-  void loadList(Configuration intoConfig, Collection gens) {
-    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+  void loadList(Configuration intoConfig, Collection<Generation> gens) {
+    for (Iterator<Generation> iter = gens.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = iter.next();
       if (gen != null) {
 	intoConfig.copyFrom(gen.getConfig());
       }
     }
   }
 
+  /* Again, this list can be either of ConfigFile or of general objects.
+   * This is generally bad for object-oriented programming.
+   */
   void setupPlatformConfig(List urls) {
     Configuration platConfig = initNewConfiguration();
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
@@ -856,7 +862,7 @@ public class ConfigManager implements LockssManager {
     return installConfig(newConfig, Collections.EMPTY_LIST);
   }
 
-  boolean installConfig(Configuration newConfig, List gens) {
+  boolean installConfig(Configuration newConfig, List<Generation> gens) {
     if (newConfig == null) {
       return false;
     }
@@ -888,9 +894,9 @@ public class ConfigManager implements LockssManager {
     return true;
   }
 
-  void updateGenerations(List gens) {
-    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+  void updateGenerations(List<Generation> gens) {
+    for (Iterator<Generation> iter = gens.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = iter.next();
       setGeneration(gen.getUrl(), gen.getGeneration());
     }
   }
@@ -936,14 +942,14 @@ public class ConfigManager implements LockssManager {
   private void logConfigLoaded(Configuration newConfig,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs,
-			       List gens) {
+			       List<Generation> gens) {
     StringBuffer sb = new StringBuffer("Config updated, ");
     sb.append(newConfig.keySet().size());
     sb.append(" keys");
     if (gens != null && !gens.isEmpty()) {
-      List names = new ArrayList(gens.size());
-      for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-	ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+      List<String> names = new ArrayList<String>(gens.size());
+      for (Iterator<Generation> iter = gens.iterator(); iter.hasNext(); ) {
+	ConfigFile.Generation gen = iter.next();
 	if (gen != null) {
 	  names.add(gen.getUrl());
 	}
@@ -1187,10 +1193,10 @@ public class ConfigManager implements LockssManager {
     return Boolean.getBoolean("org.lockss.unitTesting");
   }
 
-  private String getFromGenerations(List configGenerations, String param,
+  private String getFromGenerations(List<Generation> configGenerations, String param,
 				    String dfault) {
-    for (Iterator iter = configGenerations.iterator(); iter.hasNext(); ) {
-      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+    for (Iterator<Generation> iter = configGenerations.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = iter.next();
       if (gen != null) {
 	String val = gen.getConfig().get(param);
 	if (val != null) {
@@ -1203,13 +1209,13 @@ public class ConfigManager implements LockssManager {
 
   private void initCacheConfig(String dspace, String relConfigPath) {
     if (cacheConfigInited) return;
-    Vector v = StringUtil.breakAt(dspace, ';');
+    Vector<String> v = StringUtil.breakAt(dspace, ';');
     if (!isUnitTesting() && v.size() == 0) {
       log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
 		" not specified, not configuring local cache config dir");
       return;
     }
-    for (Iterator iter = v.iterator(); iter.hasNext(); ) {
+    for (Iterator<String> iter = v.iterator(); iter.hasNext(); ) {
       String path = (String)iter.next();
       File configDir = new File(path, relConfigPath);
       if (configDir.exists()) {
@@ -1229,7 +1235,7 @@ public class ConfigManager implements LockssManager {
     cacheConfigInited = true;
   }
 
-  private void initCacheConfig(List configGenerations) {
+  private void initCacheConfig(List<Generation> configGenerations) {
     if (cacheConfigInited) return;
     String dspace = getFromGenerations(configGenerations,
 				       PARAM_PLATFORM_DISK_SPACE_LIST,
@@ -1269,9 +1275,9 @@ public class ConfigManager implements LockssManager {
   }
 
   /** Return the list of cache config file names */
-  public List getCacheConfigFiles() {
+  public List<File> getCacheConfigFiles() {
     if (cacheConfigFileList == null) {
-      List res = new ArrayList();
+      List<File> res = new ArrayList<File>();
       for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
 	File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
 	res.add(cfile);
@@ -1550,7 +1556,7 @@ public class ConfigManager implements LockssManager {
    * @see #cacheConfigFiles
    */
   public synchronized void modifyCacheConfigFile(Configuration updateConfig,
-                                                 Set deleteSet,
+                                                 Set<String> deleteSet,
                                                  String cacheConfigFileName,
                                                  String header)
       throws IOException {
@@ -1569,7 +1575,7 @@ public class ConfigManager implements LockssManager {
 
     // Add or update
     if (updateConfig != null && !updateConfig.isEmpty()) {
-      for (Iterator iter = updateConfig.keyIterator() ; iter.hasNext() ; ) {
+      for (Iterator<String> iter = updateConfig.keyIterator() ; iter.hasNext() ; ) {
         String key = (String)iter.next();
         fileConfig.put(key, updateConfig.get(key));
       }
@@ -1580,7 +1586,7 @@ public class ConfigManager implements LockssManager {
       if (updateConfig == null) {
         updateConfig = ConfigManager.newConfiguration();
       }
-      for (Iterator iter = deleteSet.iterator() ; iter.hasNext() ; ) {
+      for (Iterator<String> iter = deleteSet.iterator() ; iter.hasNext() ; ) {
         String key = (String)iter.next();
         if (updateConfig.containsKey(key)) {
           throw new IllegalArgumentException("The following key appears in the update set and in the delete set: " + key);
@@ -1739,3 +1745,4 @@ public class ConfigManager implements LockssManager {
     }
   }
 }
+

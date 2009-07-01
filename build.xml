@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.245 2009-04-02 22:53:15 tlipkis Exp $
+ $Id: build.xml,v 1.245.2.1 2009-07-01 03:05:16 edwardsb1 Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -235,11 +235,32 @@ Args:
   <!-- Needed by Flute: -->
   <property name="sac.jar" value="${lib}/sac-1.3.jar" />
   <!-- Needed by ArcExploder: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-1.10.2.jar" />
+<!--  <property name="heritrix.jar" value="${lib}/heritrix-1.10.2.jar" /> -->
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
+  <!-- Needed by JCR extensions: -->
+  <property name="commons-pool.jar" value="${lib}/commons-pool-1.3.jar" />
+  <property name="derby.jar" value="${lib}/derby.jar" />
+  <property name="heritrix.jar" value="${lib}/heritrix-1.14.0.jar" />
+  <property name="jackrabbit-api.jar" value="${lib}/jackrabbit-api-1.5.0.jar" />
+  <property name="jackrabbit-core.jar" value="${lib}/jackrabbit-core-1.5.4.jar" />
+  <property name="jackrabbit-jcr-commons.jar" value="${lib}/jackrabbit-jcr-commons-1.5.3.jar" />
+  <property name="jackrabbit-spi.jar" value="${lib}/jackrabbit-spi-1.5.0.jar" />
+  <property name="jackrabbit-spi-commons.jar" value="${lib}/jackrabbit-spi-commons-1.5.0.jar" />
+  <property name="jackrabbit-text-extractors.jar" value="${lib}/jackrabbit-text-extractors-1.5.0.jar" />
+  <property name="jcr.jar" value="${lib}/jcr-1.0.jar" />
+  <property name="lucene-core.jar" value="${lib}/lucene-core-2.3.1.jar" />
+  <property name="PDFBox.jar" value="${lib}/PDFBox-0.7.3.jar" />
+  <property name="poi.jar" value="${lib}/poi-3.0.2-FINAL-20080204.jar" />
+  <property name="slf4j-api.jar" value="${lib}/slf4j-api-1.5.0.jar" />
+  <property name="slf4j-jcl.jar" value="${lib}/slf4j-jcl-1.5.0.jar" />
+  <property name="slf4j-log4j.jar" value="${lib}/slf4j-log4j12-1.5.0.jar" />
+  <property name="slf4j-simple.jar" value="${lib}/slf4j-simple-1.5.0.jar" />
+  <property name="tm-extractors.jar" value="${lib}/tm-extractors-0.4.jar" />
+  <property name="xpp3_min.jar" value="${lib}/xpp3_min-1.1.4c.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
+  
 
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -330,6 +351,26 @@ Args:
     <!-- jars needed by the ArcCrawler -->
     <pathelement path="${heritrix.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
+    <!-- jars needed by JCR extensions -->
+    <pathelement path="${commons-pool.jar}" />
+    <pathelement path="${derby.jar}" />
+    <pathelement path="${heritrix.jar}" />
+    <pathelement path="${jackrabbit-api.jar}" />
+    <pathelement path="${jackrabbit-core.jar}" />
+    <pathelement path="${jackrabbit-jcr-commons.jar}" />
+    <pathelement path="${jackrabbit-spi.jar}" />
+    <pathelement path="${jackrabbit-spi-commons.jar}" />
+    <pathelement path="${jackrabbit-text-extractors.jar}" />
+    <pathelement path="${jcr.jar}" />
+    <pathelement path="${lucene-core.jar}" />
+    <pathelement path="${PDFBox.jar}" />
+    <pathelement path="${poi.jar}" />
+    <pathelement path="${slf4j-api.jar}" />
+    <pathelement path="${slf4j-jcl.jar}" />
+    <pathelement path="${slf4j-log4j.jar}" />
+    <pathelement path="${slf4j-simple.jar}" />
+    <pathelement path="${tm-extractors.jar}" />
+    <pathelement path="${xpp3_min.jar}" />
   </path>
 
   <path id="run.classpath">

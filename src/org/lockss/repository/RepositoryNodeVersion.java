@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeVersion.java,v 1.2 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: RepositoryNodeVersion.java,v 1.2.52.1 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.CachedUrlSetSpec;
 /**
  * RepositoryNodeVersion represents a specific version of content at a
  * node. */
-public interface RepositoryNodeVersion {
+public interface RepositoryNodeVersion extends org.lockss.repository.v2.RepositoryFileVersion {
   /**
    * Returns the version number of this version.
    * @return the current version

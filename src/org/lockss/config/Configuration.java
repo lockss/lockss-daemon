@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.23 2008-02-15 09:06:28 tlipkis Exp $
+ * $Id: Configuration.java,v 1.23.22.1 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -325,11 +325,11 @@ public abstract class Configuration {
   /**
    * Return a list of values for the specified key.
    */
-  public abstract List getList(String key);
+  public abstract List<String> getList(String key);
 
-  public List getList(String key, List dfault) {
+  public List<String> getList(String key, List<String> dfault) {
     if (get(key) != null) {
-      return getList(key);
+      return (List<String>) getList(key);
     } else {
       return dfault;
     }

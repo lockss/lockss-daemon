@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.60 2009-02-05 05:09:46 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.60.4.1 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -41,6 +41,9 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
+import org.lockss.repository.v2.*;
+import org.lockss.repository.RepositoryNodeImpl.RepositoryNodeVersionImpl;
+import org.lockss.repository.jcr.*;
 
 /**
  * This is the test class for org.lockss.repository.RepositoryNodeImpl
@@ -1841,6 +1844,152 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
                  dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
   }
 
+  // The following tests are for RepositoryFileVersion methods.
+  
+  public void testRFVInputStream() throws Exception {
+    int i;
+    int ix;
+    InputStream istrResult;
+    InputStream istrText;
+    StringBuilder sbRandomText;
+    
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties props = new Properties();
+
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (ix = 1; ix <= max; ix++) {
+      props.setProperty(key, val+ix);
+      // Notice that this sets initial, default text...
+      createContentVersion(leaf, cntnt(ix), props);
+    }
+    
+    // We need to get multiple versions, because RepositoryFileVersionImpl
+    // handles the last version differently than the other versions!
+    for (ix = 1; ix <= max; ix++) {
+      // Create text for the repository file version.
+      sbRandomText = new StringBuilder();
+      for (i = 0; i < 100; i++) {
+        // Series of random letters...
+        sbRandomText.append((char) (Math.random() * 26) + 65);
+      }
+      
+      // Enter it into the RFV.
+      istrText = new ByteArrayInputStream(sbRandomText.toString().getBytes());
+      RepositoryFileVersion rfvText = (RepositoryFileVersion) leaf.getNodeVersion(ix);
+      rfvText.setInputStream(istrText);
+      rfvText.setProperties(props);
+      
+      rfvText.commit();
+      
+      // Retrieve it from the RFV.
+      istrResult = rfvText.getInputStream();
+      
+      // Verify that what's sent and what's retrieved are the same.
+      istrText = new ByteArrayInputStream(sbRandomText.toString().getBytes());
+      assertTrue(StreamUtil.compare(istrResult, istrText));
+    }
+  }
+  
+  public void testRFVIsDeleted() throws Exception {
+    int ix;
+    
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties props = new Properties();
+
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (ix = 1; ix <= max; ix++) {
+      props.setProperty(key, val+ix);
+      // Notice that this sets initial, default text...
+      createContentVersion(leaf, cntnt(ix), props);
+    }
+    
+    // We need to get multiple versions, because RepositoryFileVersionImpl
+    // handles the last version differently than the other versions!
+    for (ix = 1; ix <= max; ix++) {
+      RepositoryFileVersion rfvDeleted = (RepositoryFileVersion) leaf.getNodeVersion(ix);
+      
+      // Delete and check.
+      rfvDeleted.delete();
+      assertTrue(rfvDeleted.isDeleted());
+      
+      // Undelete and check.
+      rfvDeleted.undelete();
+      assertFalse(rfvDeleted.isDeleted());
+      
+      // Redelete and check.
+      rfvDeleted.delete();
+      assertTrue(rfvDeleted.isDeleted());
+      
+      // We leave one version deleted in order to verify that 
+      // it doesn't affect the next...
+    }
+  }
+  
+  public void testRFVProperties() throws Exception {
+    int i;
+    int ix;
+    InputStream istrResult;
+    InputStream istrText;
+    Properties propsOrig;
+    Properties propsResult;
+    StringBuilder sbRandomText;
+    String strResult;
+    
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties props = new Properties();
+
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (ix = 1; ix <= max; ix++) {
+      props.setProperty(key, val+ix);
+      // Notice that this sets initial, default text...
+      createContentVersion(leaf, cntnt(ix), props);
+    }
+    
+    // We need to get multiple versions, because RepositoryFileVersionImpl
+    // handles the last version differently than the other versions!
+    for (ix = 1; ix <= max; ix++) {
+      // Create text for the properties.
+      sbRandomText = new StringBuilder();
+      for (i = 0; i < 100; i++) {
+        // Series of random letters...
+        sbRandomText.append((char) ((Math.random() * 26) + 65));
+      }
+      
+      // Enter props into the RFV.
+      RepositoryFileVersion rfvText = (RepositoryFileVersion) leaf.getNodeVersion(ix);
+      props = new Properties();
+      props.setProperty(key, sbRandomText.toString());
+      rfvText.setProperties(props);
+      
+      istrText = new ByteArrayInputStream(cntnt(20).getBytes());
+      rfvText.setInputStream(istrText);
+      
+      rfvText.commit();
+      
+      // Retrieve props from the RFV.
+      propsResult = rfvText.getProperties();
+      
+      // Verify that what's sent and what's retrieved are the same.
+      strResult = propsResult.getProperty(key);
+      assertEquals(sbRandomText.toString(), strResult);
+    }
+  }
+  
+  // End of RepositoryFileVersion method tests.
+  
+  
   private RepositoryNode createLeaf(String url, String content,
       Properties props) throws Exception {
     return createLeaf(repo, url, content, props);

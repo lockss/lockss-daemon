@@ -13,17 +13,17 @@ import org.lockss.util.Logger;
  *
  */
 public class UnixRepositoryManager implements LockssRepositoryManager {
-  // Class variables...
-  private static Logger logger = Logger.getLogger("LockssRepository");
+  // Class variables
+  private static Logger logger = Logger.getLogger("UnixRepositoryManager");
   
-  // Member variables...
+  // Member variables
   String m_repoPath;
   File m_repoCacheFile;
   Map<String, String> m_auMap;
 
-  UnixRepositoryManager(String m_repoPath) {
-    this.m_repoPath = m_repoPath;
-    m_repoCacheFile = new File(m_repoPath, LockssRepositoryImpl.CACHE_ROOT_NAME);
+  UnixRepositoryManager(String repoPath) {
+    this.m_repoPath = repoPath;
+    m_repoCacheFile = new File(repoPath, LockssRepositoryImpl.CACHE_ROOT_NAME);
   }
 
   public String getRepositoryPath() {

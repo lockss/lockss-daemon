@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: MockRepositoryNode.java,v 1.15.34.1 2009-07-01 03:05:16 edwardsb1 Exp $
  */
 
 /*
@@ -34,9 +34,11 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.*;
+import org.lockss.repository.v2.NoTextException;
 import org.lockss.util.*;
 
 /**
@@ -222,5 +224,58 @@ public class MockRepositoryNode implements RepositoryNode {
 
     public void release() {
     }
+  }
+
+  /* The following methods are stubs, used to complete the
+   * RepositoryFileVersion. 
+   */
+  public void commit() throws IOException, LockssRepositoryException,
+      NoTextException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void delete() throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void discard() throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public InputStream getInputStream() throws IOException,
+      LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  public Properties getProperties() throws IOException,
+      LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  public void move(String strNewLocation) throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void setInputStream(InputStream istr) throws IOException,
+      LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void setProperties(Properties prop) throws IOException,
+      LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void undelete() throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
   }
 }
