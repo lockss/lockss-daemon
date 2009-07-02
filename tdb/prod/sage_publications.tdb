@@ -34,8 +34,8 @@
         au < released ; Accounting History Volume 10 ; 10 >
         au < released ; Accounting History Volume 11 ; 11 >
         au < released ; Accounting History Volume 12 ; 12 >
-        au < testing ; Accounting History Volume 13 ; 13 >
-        au < testing ; Accounting History Volume 14 ; 14 >
+        au < ready ; Accounting History Volume 13 ; 13 >
+        au < ready ; Accounting History Volume 14 ; 14 >
 
       }
 
@@ -98,8 +98,8 @@
         au < do_not_process ; Action Research Volume 3 ; 3 >
         au < released ; Action Research Volume 4 ; 4 >
         au < released ; Action Research Volume 5 ; 5 >
-        au < testing ; Action Research Volume 6 ; 6 >
-        au < testing ; Action Research Volume 7 ; 7 >
+        au < ready ; Action Research Volume 6 ; 6 >
+        au < ready ; Action Research Volume 7 ; 7 >
 
       }
 
@@ -130,8 +130,8 @@
         au < do_not_process ; Active Learning in Higher Education Volume 6 ; 6 >
         au < released ; Active Learning in Higher Education Volume 7 ; 7 >
         au < released ; Active Learning in Higher Education Volume 8 ; 8 >
-        au < testing ; Active Learning in Higher Education Volume 9 ; 9 >
-        au < testing ; Active Learning in Higher Education Volume 10 ; 10 >
+        au < ready ; Active Learning in Higher Education Volume 9 ; 9 >
+        au < ready ; Active Learning in Higher Education Volume 10 ; 10 >
 
       }
 
@@ -162,8 +162,8 @@
         au < do_not_process ; Adaptive Behavior Volume 13 ; 13 >
         au < released ; Adaptive Behavior Volume 14 ; 14 >
         au < released ; Adaptive Behavior Volume 15 ; 15 >
-        au < testing ; Adaptive Behavior Volume 16 ; 16 >
-        au < testing ; Adaptive Behavior Volume 17 ; 17 >
+        au < ready ; Adaptive Behavior Volume 16 ; 16 >
+        au < ready ; Adaptive Behavior Volume 17 ; 17 >
 
       }
 
@@ -194,8 +194,8 @@
         au < do_not_process ; Administration & Society Volume 37 ; 37 >
         au < released ; Administration & Society Volume 38 ; 38 >
         au < released ; Administration & Society Volume 39 ; 39 >
-        au < testing ; Administration & Society Volume 40 ; 40 >
-        au < testing ; Administration & Society Volume 41 ; 41 >
+        au < ready ; Administration & Society Volume 40 ; 40 >
+        au < ready ; Administration & Society Volume 41 ; 41 >
 
       }
 
@@ -227,7 +227,7 @@
         au < do_not_process ; Adult Education Quarterly Volume 56 ; 56 >
         au < released ; Adult Education Quarterly Volume 57 ; 57 >
         au < released ; Adult Education Quarterly Volume 58 ; 58 >
-        au < testing ; Adult Education Quarterly Volume 59 ; 59 >
+        au < ready ; Adult Education Quarterly Volume 59 ; 59 >
 
       }
 
@@ -258,8 +258,8 @@
         au < do_not_process ; Advances in Developing Human Resources Volume 7 ; 7 >
         au < released ; Advances in Developing Human Resources Volume 8 ; 8 >
         au < released ; Advances in Developing Human Resources Volume 9 ; 9 >
-        au < testing ; Advances in Developing Human Resources Volume 10 ; 10 >
-        au < testing ; Advances in Developing Human Resources Volume 11 ; 11 >
+        au < ready ; Advances in Developing Human Resources Volume 10 ; 10 >
+        au < ready ; Advances in Developing Human Resources Volume 11 ; 11 >
 
       }
 
@@ -290,8 +290,8 @@
         au < do_not_process ; Affilia Volume 20 ; 20 >
         au < released ; Affilia Volume 21 ; 21 >
         au < released ; Affilia Volume 22 ; 22 >
-        au < testing ; Affilia Volume 23 ; 23 >
-        au < testing ; Affilia Volume 24 ; 24 >
+        au < ready ; Affilia Volume 23 ; 23 >
+        au < ready ; Affilia Volume 24 ; 24 >
 
       }
 
@@ -313,7 +313,7 @@
         au < released ; American Behavioral Scientist Volume 49 ; 49 >
         au < released ; American Behavioral Scientist Volume 50 ; 50 >
         au < released ; American Behavioral Scientist Volume 51 ; 51 >
-        au < testing ; American Behavioral Scientist Volume 52 ; 52 >
+        au < ready ; American Behavioral Scientist Volume 52 ; 52 >
 
       }
 
@@ -332,8 +332,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Educational Research Journal Volume 44 ; 44 >
-        au < testing ; American Educational Research Journal Volume 45 ; 45 >
-        au < testing ; American Educational Research Journal Volume 46 ; 46 >
+        au < ready ; American Educational Research Journal Volume 45 ; 45 >
+        au < ready ; American Educational Research Journal Volume 46 ; 46 >
 
       }
 
@@ -354,8 +354,8 @@
         au < released ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 >
         au < released ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 >
         au < released ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 >
-        au < testing ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 >
-        au < testing ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
+        au < ready ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 >
+        au < ready ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
 
       }
 
@@ -386,8 +386,8 @@
         au < do_not_process ; American Journal of Evaluation Volume 26 ; 26 >
         au < released ; American Journal of Evaluation Volume 27 ; 27 >
         au < released ; American Journal of Evaluation Volume 28 ; 28 >
-        au < testing ; American Journal of Evaluation Volume 29 ; 29 >
-        au < testing ; American Journal of Evaluation Volume 30 ; 30 >
+        au < ready ; American Journal of Evaluation Volume 29 ; 29 >
+        au < ready ; American Journal of Evaluation Volume 30 ; 30 >
 
       }
 
@@ -408,8 +408,8 @@
         au < released ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 >
         au < released ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 >
         au < released ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 >
-        au < testing ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
-        au < testing ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
+        au < ready ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
+        au < ready ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
 
       }
 
@@ -587,8 +587,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Angiology Volume 56 ; 56 >
         au < released ; Angiology Volume 57 ; 57 >
         au < released ; Angiology Volume 58 ; 58 >
-        au < manifest ; Angiology Volume 59 ; 59 >
-        au < manifest ; Angiology Volume 60 ; 60 >
+        au < testing ; Angiology Volume 59 ; 59 >
+        au < testing ; Angiology Volume 60 ; 60 >
 
       }
 
@@ -608,8 +608,8 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < released ; Animation Volume 1 ; 1 >
         au < released ; Animation Volume 2 ; 2 >
-        au < manifest ; Animation Volume 3 ; 3 >
-        au < manifest ; Animation Volume 4 ; 4 >
+        au < testing ; Animation Volume 3 ; 3 >
+        au < testing ; Animation Volume 4 ; 4 >
 
       }
 
@@ -654,16 +654,16 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
-        au < manifest ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
+        au < testing ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
 
       }
 
@@ -684,8 +684,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Anthropological Theory Volume 5 ; 5 >
         au < released ; Anthropological Theory Volume 6 ; 6 >
         au < released ; Anthropological Theory Volume 7 ; 7 >
-        au < manifest ; Anthropological Theory Volume 8 ; 8 >
-        au < manifest ; Anthropological Theory Volume 9 ; 9 >
+        au < testing ; Anthropological Theory Volume 8 ; 8 >
+        au < testing ; Anthropological Theory Volume 9 ; 9 >
 
       }
 
@@ -716,8 +716,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Applied Psychological Measurement Volume 29 ; 29 >
         au < do_not_process ; Applied Psychological Measurement Volume 30 ; 30 >
         au < released ; Applied Psychological Measurement Volume 31 ; 31 >
-        au < manifest ; Applied Psychological Measurement Volume 32 ; 32 >
-        au < manifest ; Applied Psychological Measurement Volume 33 ; 33 >
+        au < testing ; Applied Psychological Measurement Volume 32 ; 32 >
+        au < testing ; Applied Psychological Measurement Volume 33 ; 33 >
 
       }
 
@@ -741,7 +741,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Armed Forces & Society Volume 32 ; 32 >
         au < released ; Armed Forces & Society Volume 33 ; 33 >
         au < released ; Armed Forces & Society Volume 34 ; 34 >
-        au < manifest ; Armed Forces & Society Volume 35 ; 35 >
+        au < testing ; Armed Forces & Society Volume 35 ; 35 >
 
       }
 
@@ -762,8 +762,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Arts and Humanities in Higher Education Volume 4 ; 4 >
         au < released ; Arts and Humanities in Higher Education Volume 5 ; 5 >
         au < released ; Arts and Humanities in Higher Education Volume 6 ; 6 >
-        au < manifest ; Arts and Humanities in Higher Education Volume 7 ; 7 >
-        au < manifest ; Arts and Humanities in Higher Education Volume 8 ; 8 >
+        au < testing ; Arts and Humanities in Higher Education Volume 7 ; 7 >
+        au < testing ; Arts and Humanities in Higher Education Volume 8 ; 8 >
 
       }
 
@@ -784,8 +784,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Asia Pacific Journal of Human Resources Volume 43 ; 43 >
         au < released ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
         au < released ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
-        au < manifest ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
-        au < manifest ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
+        au < testing ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
+        au < testing ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
 
       }
 
@@ -804,8 +804,8 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
-        au < manifest ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
-        au < manifest ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
+        au < testing ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
+        au < testing ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
 
@@ -826,8 +826,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Asian Journal of Management Cases Volume 2 ; 2 >
         au < released ; Asian Journal of Management Cases Volume 3 ; 3 >
         au < released ; Asian Journal of Management Cases Volume 4 ; 4 >
-        au < manifest ; Asian Journal of Management Cases Volume 5 ; 5 >
-        au < manifest ; Asian Journal of Management Cases Volume 6 ; 6 >
+        au < testing ; Asian Journal of Management Cases Volume 5 ; 5 >
+        au < testing ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
 
@@ -4473,9 +4473,9 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < do_not_process ; Indian Journal of Gender Studies Volume 12 ; 12 >
         au < released ; Indian Journal of Gender Studies Volume 13 ; 13 >
         au < released ; Indian Journal of Gender Studies Volume 14 ; 14 >
-        au < manifest ; Indian Journal of Gender Studies Volume 15 ; 15 >
-        au < manifest ; Indian Journal of Gender Studies Volume 16 ; 16 >
-
+        au < testing ; Indian Journal of Gender Studies Volume 15 ; 15 >
+        au < testing ; Indian Journal of Gender Studies Volume 16 ; 16 >
+        
       }
 
     }
@@ -4505,8 +4505,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; Indoor and Built Environment Volume 14 ; 14 >
         au < do_not_process ; Indoor and Built Environment Volume 15 ; 15 >
         au < ready ; Indoor and Built Environment Volume 16 ; 16 >
-        au < manifest ; Indoor and Built Environment Volume 17 ; 17 >
-        au < manifest ; Indoor and Built Environment Volume 18 ; 18 >
+        au < testing ; Indoor and Built Environment Volume 17 ; 17 >
+        au < testing ; Indoor and Built Environment Volume 18 ; 18 >
 
       }
 
@@ -4537,8 +4537,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; Information Development Volume 21 ; 21 >
         au < do_not_process ; Information Development Volume 22 ; 22 >
         au < ready ; Information Development Volume 23 ; 23 >
-        au < manifest ; Information Development Volume 24 ; 24 >
-        au < manifest ; Information Development Volume 25 ; 25 >
+        au < testing ; Information Development Volume 24 ; 24 >
+        au < testing ; Information Development Volume 25 ; 25 >
 
       }
 
@@ -4569,8 +4569,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; Integrative Cancer Therapies Volume 4 ; 4 >
         au < do_not_process ; Integrative Cancer Therapies Volume 5 ; 5 >
         au < ready ; Integrative Cancer Therapies Volume 6 ; 6 >
-        au < manifest ; Integrative Cancer Therapies Volume 7 ; 7 >
-        au < manifest ; Integrative Cancer Therapies Volume 8 ; 8 >
+        au < testing ; Integrative Cancer Therapies Volume 7 ; 7 >
+        au < testing ; Integrative Cancer Therapies Volume 8 ; 8 >
 
       }
 
@@ -4601,8 +4601,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Communication Gazette Volume 67 ; 67 >
         au < do_not_process ; International Communication Gazette Volume 68 ; 68 >
         au < ready ; International Communication Gazette Volume 69 ; 69 >
-        au < manifest ; International Communication Gazette Volume 70 ; 70 >
-        au < manifest ; International Communication Gazette Volume 71 ; 71 >
+        au < testing ; International Communication Gazette Volume 70 ; 70 >
+        au < testing ; International Communication Gazette Volume 71 ; 71 >
 
       }
 
@@ -4633,8 +4633,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < do_not_process ; International Criminal Justice Review Volume 15 ; 15 >
         au < ready ; International Criminal Justice Review Volume 16 ; 16 >
         au < ready ; International Criminal Justice Review Volume 17 ; 17 >
-        au < manifest ; International Criminal Justice Review Volume 18 ; 18 >
-        au < manifest ; International Criminal Justice Review Volume 19 ; 19 >
+        au < testing ; International Criminal Justice Review Volume 18 ; 18 >
+        au < testing ; International Criminal Justice Review Volume 19 ; 19 >
 
       }
 
@@ -4668,8 +4668,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Behavioral Development Volume 29 ; 29 >
         au < do_not_process ; International Journal of Behavioral Development Volume 30 ; 30 >
         au < ready ; International Journal of Behavioral Development Volume 31 ; 31 >
-        au < manifest ; International Journal of Behavioral Development Volume 32 ; 32 >
-        au < manifest ; International Journal of Behavioral Development Volume 33 ; 33 >
+        au < testing ; International Journal of Behavioral Development Volume 32 ; 32 >
+        au < testing ; International Journal of Behavioral Development Volume 33 ; 33 >
 
       }
 
@@ -7242,8 +7242,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Intellectual Disabilities Volume 9 ; 9 >
         au < ready ; Journal of Intellectual Disabilities Volume 10 ; 10 >
         au < ready ; Journal of Intellectual Disabilities Volume 11 ; 11 >
-        au < testing ; Journal of Intellectual Disabilities Volume 12 ; 12 >
-        au < testing ; Journal of Intellectual Disabilities Volume 13 ; 13 >
+        au < ready ; Journal of Intellectual Disabilities Volume 12 ; 12 >
+        au < ready ; Journal of Intellectual Disabilities Volume 13 ; 13 >
 
       }
 
@@ -7264,8 +7264,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 16 ; 16 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 17 ; 17 >
         au < ready ; Journal of Intelligent Material Systems and Structures Volume 18 ; 18 >
-        au < testing ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
-        au < testing ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
+        au < ready ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
+        au < ready ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
 
       }
 
@@ -7330,8 +7330,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Language and Social Psychology Volume 24 ; 24 >
         au < ready ; Journal of Language and Social Psychology Volume 25 ; 25 >
         au < ready ; Journal of Language and Social Psychology Volume 26 ; 26 >
-        au < testing ; Journal of Language and Social Psychology Volume 27 ; 27 >
-        au < testing ; Journal of Language and Social Psychology Volume 28 ; 28 >
+        au < ready ; Journal of Language and Social Psychology Volume 27 ; 27 >
+        au < ready ; Journal of Language and Social Psychology Volume 28 ; 28 >
 
       }
 
@@ -7349,9 +7349,9 @@ comment[jcp] = some sort of custom layout
         param[base_url] = http://jlo.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
-        au < testing ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
-        au < testing ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
+        au < ready ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
+        au < ready ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
+        au < ready ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
 
       }
 
@@ -7636,8 +7636,8 @@ comment[mpj] = now published by Brill
         au < testing ; Journal of Pharmacy Practice Volume 18 ; 18 >
         au < ready ; Journal of Pharmacy Practice Volume 19 ; 19 >
         au < ready ; Journal of Pharmacy Practice Volume 20 ; 20 >
-        au < testing ; Journal of Pharmacy Practice Volume 21 ; 21 >
-        au < testing ; Journal of Pharmacy Practice Volume 22 ; 22 >
+        au < ready ; Journal of Pharmacy Practice Volume 21 ; 21 >
+        au < ready ; Journal of Pharmacy Practice Volume 22 ; 22 >
 
       }
 
@@ -7888,8 +7888,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Sandwich Structures and Materials Volume 7 ; 7 >
         au < ready ; Journal of Sandwich Structures and Materials Volume 8 ; 8 >
         au < ready ; Journal of Sandwich Structures and Materials Volume 9 ; 9 >
-        au < testing ; Journal of Sandwich Structures and Materials Volume 10 ; 10 >
-        au < testing ; Journal of Sandwich Structures and Materials Volume 11 ; 11 >
+        au < ready ; Journal of Sandwich Structures and Materials Volume 10 ; 10 >
+        au < ready ; Journal of Sandwich Structures and Materials Volume 11 ; 11 >
 
       }
 
@@ -7911,7 +7911,7 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Service Research Volume 8 ; 8 >
         au < ready ; Journal of Service Research Volume 9 ; 9 >
         au < ready ; Journal of Service Research Volume 10 ; 10 >
-        au < manifest ; Journal of Service Research Volume 11 ; 11 >
+        au < testing ; Journal of Service Research Volume 11 ; 11 >
 
       }
 
@@ -7932,8 +7932,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Social and Personal Relationships Volume 22 ; 22 >
         au < ready ; Journal of Social and Personal Relationships Volume 23 ; 23 >
         au < ready ; Journal of Social and Personal Relationships Volume 24 ; 24 >
-        au < manifest ; Journal of Social and Personal Relationships Volume 25 ; 25 >
-        au < manifest ; Journal of Social and Personal Relationships Volume 26 ; 26 >
+        au < testing ; Journal of Social and Personal Relationships Volume 25 ; 25 >
+        au < testing ; Journal of Social and Personal Relationships Volume 26 ; 26 >
 
       }
 
@@ -7955,8 +7955,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Social Archaeology Volume 5 ; 5 >
         au < ready ; Journal of Social Archaeology Volume 6 ; 6 >
         au < ready ; Journal of Social Archaeology Volume 7 ; 7 >
-        au < manifest ; Journal of Social Archaeology Volume 8 ; 8 >
-        au < manifest ; Journal of Social Archaeology Volume 9 ; 9 >
+        au < testing ; Journal of Social Archaeology Volume 8 ; 8 >
+        au < testing ; Journal of Social Archaeology Volume 9 ; 9 >
 
       }
 
@@ -7975,10 +7975,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Social Work Volume 5 ; 5 >
-        au < manifest ; Journal of Social Work Volume 6 ; 6 >
+        au < testing ; Journal of Social Work Volume 6 ; 6 >
         au < ready ; Journal of Social Work Volume 7 ; 7 >
-        au < manifest ; Journal of Social Work Volume 8 ; 8 >
-        au < manifest ; Journal of Social Work Volume 9 ; 9 >
+        au < testing ; Journal of Social Work Volume 8 ; 8 >
+        au < testing ; Journal of Social Work Volume 9 ; 9 >
 
       }
 
@@ -7996,11 +7996,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jos.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Sociology Volume 41 ; 41 >
+        au < testing ; Journal of Sociology Volume 41 ; 41 >
         au < ready ; Journal of Sociology Volume 42 ; 42 >
         au < ready ; Journal of Sociology Volume 43 ; 43 >
-        au < manifest ; Journal of Sociology Volume 44 ; 44 >
-        au < manifest ; Journal of Sociology Volume 45 ; 45 >
+        au < testing ; Journal of Sociology Volume 44 ; 44 >
+        au < testing ; Journal of Sociology Volume 45 ; 45 >
 
       }
 
@@ -8390,8 +8390,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journalism Volume 6 ; 6 >
         au < ready ; Journalism Volume 7 ; 7 >
         au < ready ; Journalism Volume 8 ; 8 >
-        au < manifest ; Journalism Volume 9 ; 9 >
-        au < manifest ; Journalism Volume 10 ; 10 >
+        au < ready ; Journalism Volume 9 ; 9 >
+        au < ready ; Journalism Volume 10 ; 10 >
 
       }
 
