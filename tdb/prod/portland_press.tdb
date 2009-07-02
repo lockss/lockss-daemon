@@ -635,7 +635,7 @@ comment[bab] = not_ready because of 500 errors
       name = Clinical Science
     >
 
-comment[cs103-107] = 500 errors
+comment[cs103_107] = 500 errors
 
     param[base_url] = http://www.clinsci.org/
     param[journal_id] = cs
