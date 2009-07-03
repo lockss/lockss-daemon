@@ -587,8 +587,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Angiology Volume 56 ; 56 >
         au < released ; Angiology Volume 57 ; 57 >
         au < released ; Angiology Volume 58 ; 58 >
-        au < testing ; Angiology Volume 59 ; 59 >
-        au < testing ; Angiology Volume 60 ; 60 >
+        au < ready ; Angiology Volume 59 ; 59 >
+        au < ready ; Angiology Volume 60 ; 60 >
 
       }
 
@@ -608,8 +608,8 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < released ; Animation Volume 1 ; 1 >
         au < released ; Animation Volume 2 ; 2 >
-        au < testing ; Animation Volume 3 ; 3 >
-        au < testing ; Animation Volume 4 ; 4 >
+        au < ready ; Animation Volume 3 ; 3 >
+        au < ready ; Animation Volume 4 ; 4 >
 
       }
 
@@ -659,11 +659,11 @@ comment[ajs] = this journal has been moved to H20 platform
         au < testing ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
         au < testing ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
         au < testing ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
 
       }
 
@@ -684,8 +684,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Anthropological Theory Volume 5 ; 5 >
         au < released ; Anthropological Theory Volume 6 ; 6 >
         au < released ; Anthropological Theory Volume 7 ; 7 >
-        au < testing ; Anthropological Theory Volume 8 ; 8 >
-        au < testing ; Anthropological Theory Volume 9 ; 9 >
+        au < ready ; Anthropological Theory Volume 8 ; 8 >
+        au < ready ; Anthropological Theory Volume 9 ; 9 >
 
       }
 
@@ -716,8 +716,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Applied Psychological Measurement Volume 29 ; 29 >
         au < do_not_process ; Applied Psychological Measurement Volume 30 ; 30 >
         au < released ; Applied Psychological Measurement Volume 31 ; 31 >
-        au < testing ; Applied Psychological Measurement Volume 32 ; 32 >
-        au < testing ; Applied Psychological Measurement Volume 33 ; 33 >
+        au < ready ; Applied Psychological Measurement Volume 32 ; 32 >
+        au < ready ; Applied Psychological Measurement Volume 33 ; 33 >
 
       }
 
@@ -762,8 +762,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Arts and Humanities in Higher Education Volume 4 ; 4 >
         au < released ; Arts and Humanities in Higher Education Volume 5 ; 5 >
         au < released ; Arts and Humanities in Higher Education Volume 6 ; 6 >
-        au < testing ; Arts and Humanities in Higher Education Volume 7 ; 7 >
-        au < testing ; Arts and Humanities in Higher Education Volume 8 ; 8 >
+        au < ready ; Arts and Humanities in Higher Education Volume 7 ; 7 >
+        au < ready ; Arts and Humanities in Higher Education Volume 8 ; 8 >
 
       }
 
@@ -784,8 +784,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Asia Pacific Journal of Human Resources Volume 43 ; 43 >
         au < released ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
         au < released ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
-        au < testing ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
-        au < testing ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
+        au < ready ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
+        au < ready ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
 
       }
 
@@ -804,8 +804,8 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
-        au < testing ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
-        au < testing ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
+        au < ready ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
+        au < ready ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
 
@@ -826,8 +826,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Asian Journal of Management Cases Volume 2 ; 2 >
         au < released ; Asian Journal of Management Cases Volume 3 ; 3 >
         au < released ; Asian Journal of Management Cases Volume 4 ; 4 >
-        au < testing ; Asian Journal of Management Cases Volume 5 ; 5 >
-        au < testing ; Asian Journal of Management Cases Volume 6 ; 6 >
+        au < ready ; Asian Journal of Management Cases Volume 5 ; 5 >
+        au < ready ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
 
@@ -4700,8 +4700,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Comparative Sociology Volume 46 ; 46 >
         au < do_not_process ; International Journal of Comparative Sociology Volume 47 ; 47 >
         au < ready ; International Journal of Comparative Sociology Volume 48 ; 48 >
-        au < manifest ; International Journal of Comparative Sociology Volume 49 ; 49 >
-        au < manifest ; International Journal of Comparative Sociology Volume 50 ; 50 >
+        au < testing ; International Journal of Comparative Sociology Volume 49 ; 49 >
+        au < testing ; International Journal of Comparative Sociology Volume 50 ; 50 >
 
       }
 
@@ -4732,8 +4732,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Cross Cultural Management Volume 5 ; 5 >
         au < do_not_process ; International Journal of Cross Cultural Management Volume 6 ; 6 >
         au < ready ; International Journal of Cross Cultural Management Volume 7 ; 7 >
-        au < manifest ; International Journal of Cross Cultural Management Volume 8 ; 8 >
-        au < manifest ; International Journal of Cross Cultural Management Volume 9 ; 9 >
+        au < testing ; International Journal of Cross Cultural Management Volume 8 ; 8 >
+        au < testing ; International Journal of Cross Cultural Management Volume 9 ; 9 >
 
       }
 
@@ -4764,8 +4764,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Cultural Studies Volume 8 ; 8 >
         au < do_not_process ; International Journal of Cultural Studies Volume 9 ; 9 >
         au < ready ; International Journal of Cultural Studies Volume 10 ; 10 >
-        au < manifest ; International Journal of Cultural Studies Volume 11 ; 11 >
-        au < manifest ; International Journal of Cultural Studies Volume 12 ; 12 >
+        au < testing ; International Journal of Cultural Studies Volume 11 ; 11 >
+        au < testing ; International Journal of Cultural Studies Volume 12 ; 12 >
 
       }
 
@@ -4796,8 +4796,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Damage Mechanics Volume 14 ; 14 >
         au < do_not_process ; International Journal of Damage Mechanics Volume 15 ; 15 >
         au < ready ; International Journal of Damage Mechanics Volume 16 ; 16 >
-        au < manifest ; International Journal of Damage Mechanics Volume 17 ; 17 >
-        au < manifest ; International Journal of Damage Mechanics Volume 18 ; 18 >
+        au < testing ; International Journal of Damage Mechanics Volume 17 ; 17 >
+        au < testing ; International Journal of Damage Mechanics Volume 18 ; 18 >
 
       }
 
@@ -4828,8 +4828,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of High Performance Computing Applications Volume 19 ; 19 >
         au < do_not_process ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
         au < ready ; International Journal of High Performance Computing Applications Volume 21 ; 21 >
-        au < manifest ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
-        au < manifest ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
+        au < testing ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
+        au < testing ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
 
       }
 
@@ -4850,8 +4850,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; The International Journal of Lower Extremity Wounds Volume 4 ; 4 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
-        au < manifest ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
-        au < manifest ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
+        au < testing ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
+        au < testing ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
 
       }
 
@@ -4872,8 +4872,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < released ; International Journal of Music Education Volume 23 ; 23 >
         au < released ; International Journal of Music Education Volume 24 ; 24 >
         au < released ; International Journal of Music Education Volume 25 ; 25 >
-        au < manifest ; International Journal of Music Education Volume 26 ; 26 >
-        au < manifest ; International Journal of Music Education Volume 27 ; 27 >
+        au < testing ; International Journal of Music Education Volume 26 ; 26 >
+        au < testing ; International Journal of Music Education Volume 27 ; 27 >
 
       }
 
