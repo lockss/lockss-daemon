@@ -687,11 +687,11 @@ comment[cs103_107] = 500 errors
     au < ready ; Clinical Science Volume 100 ; 100 >
     au < ready ; Clinical Science Volume 101 ; 101 >
     au < ready ; Clinical Science Volume 102 ; 102 >
-    au < not_ready ; Clinical Science Volume 103 ; 103 >
-    au < not_ready ; Clinical Science Volume 104 ; 104 >
-    au < not_ready ; Clinical Science Volume 105 ; 105 >
-    au < not_ready ; Clinical Science Volume 106 ; 106 >
-    au < not_ready ; Clinical Science Volume 107 ; 107 >
+    au < testing ; Clinical Science Volume 103 ; 103 >
+    au < testing ; Clinical Science Volume 104 ; 104 >
+    au < testing ; Clinical Science Volume 105 ; 105 >
+    au < testing ; Clinical Science Volume 106 ; 106 >
+    au < testing ; Clinical Science Volume 107 ; 107 >
     au < ready ; Clinical Science Volume 108 ; 108 >
     au < ready ; Clinical Science Volume 109 ; 109 >
     au < ready ; Clinical Science Volume 110 ; 110 >
