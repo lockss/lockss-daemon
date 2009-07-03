@@ -4473,8 +4473,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < do_not_process ; Indian Journal of Gender Studies Volume 12 ; 12 >
         au < released ; Indian Journal of Gender Studies Volume 13 ; 13 >
         au < released ; Indian Journal of Gender Studies Volume 14 ; 14 >
-        au < testing ; Indian Journal of Gender Studies Volume 15 ; 15 >
-        au < testing ; Indian Journal of Gender Studies Volume 16 ; 16 >
+        au < ready ; Indian Journal of Gender Studies Volume 15 ; 15 >
+        au < ready ; Indian Journal of Gender Studies Volume 16 ; 16 >
         
       }
 
@@ -4505,8 +4505,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; Indoor and Built Environment Volume 14 ; 14 >
         au < do_not_process ; Indoor and Built Environment Volume 15 ; 15 >
         au < ready ; Indoor and Built Environment Volume 16 ; 16 >
-        au < testing ; Indoor and Built Environment Volume 17 ; 17 >
-        au < testing ; Indoor and Built Environment Volume 18 ; 18 >
+        au < ready ; Indoor and Built Environment Volume 17 ; 17 >
+        au < ready ; Indoor and Built Environment Volume 18 ; 18 >
 
       }
 
@@ -4537,8 +4537,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; Information Development Volume 21 ; 21 >
         au < do_not_process ; Information Development Volume 22 ; 22 >
         au < ready ; Information Development Volume 23 ; 23 >
-        au < testing ; Information Development Volume 24 ; 24 >
-        au < testing ; Information Development Volume 25 ; 25 >
+        au < ready ; Information Development Volume 24 ; 24 >
+        au < ready ; Information Development Volume 25 ; 25 >
 
       }
 
@@ -4569,8 +4569,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; Integrative Cancer Therapies Volume 4 ; 4 >
         au < do_not_process ; Integrative Cancer Therapies Volume 5 ; 5 >
         au < ready ; Integrative Cancer Therapies Volume 6 ; 6 >
-        au < testing ; Integrative Cancer Therapies Volume 7 ; 7 >
-        au < testing ; Integrative Cancer Therapies Volume 8 ; 8 >
+        au < ready ; Integrative Cancer Therapies Volume 7 ; 7 >
+        au < ready ; Integrative Cancer Therapies Volume 8 ; 8 >
 
       }
 
@@ -4601,8 +4601,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Communication Gazette Volume 67 ; 67 >
         au < do_not_process ; International Communication Gazette Volume 68 ; 68 >
         au < ready ; International Communication Gazette Volume 69 ; 69 >
-        au < testing ; International Communication Gazette Volume 70 ; 70 >
-        au < testing ; International Communication Gazette Volume 71 ; 71 >
+        au < ready ; International Communication Gazette Volume 70 ; 70 >
+        au < ready ; International Communication Gazette Volume 71 ; 71 >
 
       }
 
@@ -4633,8 +4633,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < do_not_process ; International Criminal Justice Review Volume 15 ; 15 >
         au < ready ; International Criminal Justice Review Volume 16 ; 16 >
         au < ready ; International Criminal Justice Review Volume 17 ; 17 >
-        au < testing ; International Criminal Justice Review Volume 18 ; 18 >
-        au < testing ; International Criminal Justice Review Volume 19 ; 19 >
+        au < ready ; International Criminal Justice Review Volume 18 ; 18 >
+        au < ready ; International Criminal Justice Review Volume 19 ; 19 >
 
       }
 
@@ -4668,8 +4668,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Behavioral Development Volume 29 ; 29 >
         au < do_not_process ; International Journal of Behavioral Development Volume 30 ; 30 >
         au < ready ; International Journal of Behavioral Development Volume 31 ; 31 >
-        au < testing ; International Journal of Behavioral Development Volume 32 ; 32 >
-        au < testing ; International Journal of Behavioral Development Volume 33 ; 33 >
+        au < ready ; International Journal of Behavioral Development Volume 32 ; 32 >
+        au < ready ; International Journal of Behavioral Development Volume 33 ; 33 >
 
       }
 
@@ -7911,7 +7911,7 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Service Research Volume 8 ; 8 >
         au < ready ; Journal of Service Research Volume 9 ; 9 >
         au < ready ; Journal of Service Research Volume 10 ; 10 >
-        au < testing ; Journal of Service Research Volume 11 ; 11 >
+        au < ready ; Journal of Service Research Volume 11 ; 11 >
 
       }
 
@@ -7932,8 +7932,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Social and Personal Relationships Volume 22 ; 22 >
         au < ready ; Journal of Social and Personal Relationships Volume 23 ; 23 >
         au < ready ; Journal of Social and Personal Relationships Volume 24 ; 24 >
-        au < testing ; Journal of Social and Personal Relationships Volume 25 ; 25 >
-        au < testing ; Journal of Social and Personal Relationships Volume 26 ; 26 >
+        au < ready ; Journal of Social and Personal Relationships Volume 25 ; 25 >
+        au < ready ; Journal of Social and Personal Relationships Volume 26 ; 26 >
 
       }
 
@@ -7955,8 +7955,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Social Archaeology Volume 5 ; 5 >
         au < ready ; Journal of Social Archaeology Volume 6 ; 6 >
         au < ready ; Journal of Social Archaeology Volume 7 ; 7 >
-        au < testing ; Journal of Social Archaeology Volume 8 ; 8 >
-        au < testing ; Journal of Social Archaeology Volume 9 ; 9 >
+        au < ready ; Journal of Social Archaeology Volume 8 ; 8 >
+        au < ready ; Journal of Social Archaeology Volume 9 ; 9 >
 
       }
 
@@ -7975,10 +7975,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Social Work Volume 5 ; 5 >
-        au < testing ; Journal of Social Work Volume 6 ; 6 >
+        au < ready ; Journal of Social Work Volume 6 ; 6 >
         au < ready ; Journal of Social Work Volume 7 ; 7 >
-        au < testing ; Journal of Social Work Volume 8 ; 8 >
-        au < testing ; Journal of Social Work Volume 9 ; 9 >
+        au < ready ; Journal of Social Work Volume 8 ; 8 >
+        au < ready ; Journal of Social Work Volume 9 ; 9 >
 
       }
 
@@ -7996,11 +7996,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jos.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Sociology Volume 41 ; 41 >
+        au < ready ; Journal of Sociology Volume 41 ; 41 >
         au < ready ; Journal of Sociology Volume 42 ; 42 >
         au < ready ; Journal of Sociology Volume 43 ; 43 >
-        au < testing ; Journal of Sociology Volume 44 ; 44 >
-        au < testing ; Journal of Sociology Volume 45 ; 45 >
+        au < ready ; Journal of Sociology Volume 44 ; 44 >
+        au < ready ; Journal of Sociology Volume 45 ; 45 >
 
       }
 
@@ -8018,10 +8018,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sad.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of South Asian Development Volume 1 ; 1 >
-        au < manifest ; Journal of South Asian Development Volume 2 ; 2 >
-        au < manifest ; Journal of South Asian Development Volume 3 ; 3 >
-        au < manifest ; Journal of South Asian Development Volume 4 ; 4 >
+        au < ready ; Journal of South Asian Development Volume 1 ; 1 >
+        au < ready ; Journal of South Asian Development Volume 2 ; 2 >
+        au < ready ; Journal of South Asian Development Volume 3 ; 3 >
+        au < ready ; Journal of South Asian Development Volume 4 ; 4 >
 
       }
 
@@ -8041,9 +8041,9 @@ comment[mpj] = now published by Brill
 
         au < ready ; Journal of Sport & Social Issues Volume 29 ; 29 >
         au < ready ; Journal of Sport & Social Issues Volume 30 ; 30 >
-        au < manifest ; Journal of Sport & Social Issues Volume 31 ; 31 >
-        au < manifest ; Journal of Sport & Social Issues Volume 32 ; 32 >
-        au < manifest ; Journal of Sport & Social Issues Volume 33 ; 33 >
+        au < testing ; Journal of Sport & Social Issues Volume 31 ; 31 >
+        au < testing ; Journal of Sport & Social Issues Volume 32 ; 32 >
+        au < testing ; Journal of Sport & Social Issues Volume 33 ; 33 >
 
       }
 
@@ -8064,8 +8064,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Sports Economics Volume 6 ; 6 >
         au < ready ; Journal of Sports Economics Volume 7 ; 7 >
         au < ready ; Journal of Sports Economics Volume 8 ; 8 >
-        au < manifest ; Journal of Sports Economics Volume 9 ; 9 >
-        au < manifest ; Journal of Sports Economics Volume 10 ; 10 >
+        au < testing ; Journal of Sports Economics Volume 9 ; 9 >
+        au < testing ; Journal of Sports Economics Volume 10 ; 10 >
 
       }
 
@@ -8084,10 +8084,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Studies in International Education Volume 9 ; 9 >
-        au < manifest ; Journal of Studies in International Education Volume 10 ; 10 >
-        au < manifest ; Journal of Studies in International Education Volume 11 ; 11 >
-        au < manifest ; Journal of Studies in International Education Volume 12 ; 12 >
-        au < manifest ; Journal of Studies in International Education Volume 13 ; 13 >
+        au < testing ; Journal of Studies in International Education Volume 10 ; 10 >
+        au < testing ; Journal of Studies in International Education Volume 11 ; 11 >
+        au < testing ; Journal of Studies in International Education Volume 12 ; 12 >
+        au < testing ; Journal of Studies in International Education Volume 13 ; 13 >
 
       }
 
@@ -8107,9 +8107,9 @@ comment[mpj] = now published by Brill
 
         au < ready ; Journal of Teacher Education Volume 56 ; 56 >
         au < ready ; Journal of Teacher Education Volume 57 ; 57 >
-        au < manifest ; Journal of Teacher Education Volume 58 ; 58 >
-        au < manifest ; Journal of Teacher Education Volume 59 ; 59 >
-        au < manifest ; Journal of Teacher Education Volume 60 ; 60 >
+        au < testing ; Journal of Teacher Education Volume 58 ; 58 >
+        au < testing ; Journal of Teacher Education Volume 59 ; 59 >
+        au < testing ; Journal of Teacher Education Volume 60 ; 60 >
 
       }
 
@@ -8130,8 +8130,8 @@ comment[mpj] = now published by Brill
         au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 5 ; 5 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 6 ; 6 >
-        au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
-        au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
+        au < testing ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
+        au < testing ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
 
       }
 
