@@ -149,11 +149,11 @@
     au < ready ; British Journal of Psychology Volume 93 ; 93 >
     au < ready ; British Journal of Psychology Volume 94 ; 94 >
     au < ready ; British Journal of Psychology Volume 95 ; 95 >
-    au < testing ; British Journal of Psychology Volume 96 ; 96 >
+    au < ready ; British Journal of Psychology Volume 96 ; 96 >
     au < ready ; British Journal of Psychology Volume 97 ; 97 >
     au < ready ; British Journal of Psychology Volume 98 ; 98 >
     au < ready ; British Journal of Psychology Volume 99 ; 99 >
-    au < testing ; British Journal of Psychology Volume 100 ; 100 >
+    au < ready ; British Journal of Psychology Volume 100 ; 100 >
     
   }
   
@@ -166,16 +166,16 @@
     param[journal_issn] = 0144-6665  
 
     au < testing ; British Journal of Social Psychology Volume 38 ; 38 >
-    au < testing ; British Journal of Social Psychology Volume 39 ; 39 >
-    au < testing ; British Journal of Social Psychology Volume 40 ; 40 >
-    au < testing ; British Journal of Social Psychology Volume 41 ; 41 >
+    au < ready ; British Journal of Social Psychology Volume 39 ; 39 >
+    au < ready ; British Journal of Social Psychology Volume 40 ; 40 >
+    au < ready ; British Journal of Social Psychology Volume 41 ; 41 >
     au < testing ; British Journal of Social Psychology Volume 42 ; 42 >
-    au < testing ; British Journal of Social Psychology Volume 43 ; 43 >
-    au < testing ; British Journal of Social Psychology Volume 44 ; 44 >
-    au < testing ; British Journal of Social Psychology Volume 45 ; 45 >
-    au < testing ; British Journal of Social Psychology Volume 46 ; 46 >
-    au < testing ; British Journal of Social Psychology Volume 47 ; 47 >
-    au < testing ; British Journal of Social Psychology Volume 48 ; 48 >
+    au < ready ; British Journal of Social Psychology Volume 43 ; 43 >
+    au < ready ; British Journal of Social Psychology Volume 44 ; 44 >
+    au < ready ; British Journal of Social Psychology Volume 45 ; 45 >
+    au < ready ; British Journal of Social Psychology Volume 46 ; 46 >
+    au < ready ; British Journal of Social Psychology Volume 47 ; 47 >
+    au < ready ; British Journal of Social Psychology Volume 48 ; 48 >
     
   }
   
@@ -187,7 +187,7 @@
     param[journal_id] = joop
     param[journal_issn] = 0963-1798  
 
-    au < manifest ; Journal of Occupational and Organizational Psychology Volume 80 ; 80 >   
+    au < testing ; Journal of Occupational and Organizational Psychology Volume 80 ; 80 >   
     
   }
   
@@ -199,7 +199,7 @@
     param[journal_id] = lcp
     param[journal_issn] = 1355-3259  
 
-    au < manifest ; Journal of Occupational and Organizational Psychology Volume 12 ; 12 >   
+    au < testing ; Journal of Occupational and Organizational Psychology Volume 12 ; 12 >   
     
   }
   
@@ -211,7 +211,7 @@
     param[journal_id] = paptrap
     param[journal_issn] = 1476-0835  
 
-    au < manifest ; Psychology and Psychotherapy: Theory, Research and Practice Volume 80 ; 80 >   
+    au < testing ; Psychology and Psychotherapy: Theory, Research and Practice Volume 80 ; 80 >   
     
   }
   
