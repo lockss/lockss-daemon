@@ -654,11 +654,11 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
-        au < testing ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
+        au < ready ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
         au < ready ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
         au < ready ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
         au < ready ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
@@ -848,8 +848,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Assessment Volume 12 ; 12 >
         au < released ; Assessment Volume 13 ; 13 >
         au < released ; Assessment Volume 14 ; 14 >
-        au < manifest ; Assessment Volume 15 ; 15 >
-        au < manifest ; Assessment Volume 16 ; 16 >
+        au < testing ; Assessment Volume 15 ; 15 >
+        au < testing ; Assessment Volume 16 ; 16 >
 
       }
 
@@ -870,8 +870,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Autism Volume 9 ; 9 >
         au < released ; Autism Volume 10 ; 10 >
         au < released ; Autism Volume 11 ; 11 >
-        au < manifest ; Autism Volume 12 ; 12 >
-        au < manifest ; Autism Volume 13 ; 13 >
+        au < testing ; Autism Volume 12 ; 12 >
+        au < testing ; Autism Volume 13 ; 13 >
 
       }
 
@@ -902,8 +902,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Behavior Modification Volume 29 ; 29 >
         au < do_not_process ; Behavior Modification Volume 30 ; 30 >
         au < released ; Behavior Modification Volume 31 ; 31 >
-        au < manifest ; Behavior Modification Volume 32 ; 32 >
-        au < manifest ; Behavior Modification Volume 33 ; 33 >
+        au < testing ; Behavior Modification Volume 32 ; 32 >
+        au < testing ; Behavior Modification Volume 33 ; 33 >
 
       }
 
@@ -954,7 +954,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < do_not_process ; Biological Research For Nursing Volume 7 ; 7 >
         au < released ; Biological Research For Nursing Volume 8 ; 8 >
         au < released ; Biological Research For Nursing Volume 9 ; 9 >
-        au < manifest ; Biological Research For Nursing Volume 10 ; 10 >
+        au < testing ; Biological Research For Nursing Volume 10 ; 10 >
 
       }
 
@@ -985,8 +985,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Body & Society Volume 11 ; 11 >
         au < do_not_process ; Body & Society Volume 12 ; 12 >
         au < released ; Body & Society Volume 13 ; 13 >
-        au < manifest ; Body & Society Volume 14 ; 14 >
-        au < manifest ; Body & Society Volume 15 ; 15 >
+        au < testing ; Body & Society Volume 14 ; 14 >
+        au < testing ; Body & Society Volume 15 ; 15 >
 
       }
 
@@ -1005,8 +1005,8 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; British Journal of Infection Control Volume 8 ; 8 >
-        au < manifest ; British Journal of Infection Control Volume 9 ; 9 >
-        au < manifest ; British Journal of Infection Control Volume 10 ; 10 >
+        au < testing ; British Journal of Infection Control Volume 9 ; 9 >
+        au < testing ; British Journal of Infection Control Volume 10 ; 10 >
 
       }
 
@@ -1027,8 +1027,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; British Journal of Visual Impairment Volume 23 ; 23 >
         au < released ; British Journal of Visual Impairment Volume 24 ; 24 >
         au < released ; British Journal of Visual Impairment Volume 25 ; 25 >
-        au < manifest ; British Journal of Visual Impairment Volume 26 ; 26 >
-        au < manifest ; British Journal of Visual Impairment Volume 27 ; 27 >
+        au < testing ; British Journal of Visual Impairment Volume 26 ; 26 >
+        au < testing ; British Journal of Visual Impairment Volume 27 ; 27 >
 
       }
 
@@ -8041,9 +8041,9 @@ comment[mpj] = now published by Brill
 
         au < ready ; Journal of Sport & Social Issues Volume 29 ; 29 >
         au < ready ; Journal of Sport & Social Issues Volume 30 ; 30 >
-        au < testing ; Journal of Sport & Social Issues Volume 31 ; 31 >
-        au < testing ; Journal of Sport & Social Issues Volume 32 ; 32 >
-        au < testing ; Journal of Sport & Social Issues Volume 33 ; 33 >
+        au < ready ; Journal of Sport & Social Issues Volume 31 ; 31 >
+        au < ready ; Journal of Sport & Social Issues Volume 32 ; 32 >
+        au < ready ; Journal of Sport & Social Issues Volume 33 ; 33 >
 
       }
 
@@ -8064,8 +8064,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Sports Economics Volume 6 ; 6 >
         au < ready ; Journal of Sports Economics Volume 7 ; 7 >
         au < ready ; Journal of Sports Economics Volume 8 ; 8 >
-        au < testing ; Journal of Sports Economics Volume 9 ; 9 >
-        au < testing ; Journal of Sports Economics Volume 10 ; 10 >
+        au < ready ; Journal of Sports Economics Volume 9 ; 9 >
+        au < ready ; Journal of Sports Economics Volume 10 ; 10 >
 
       }
 
@@ -8084,10 +8084,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Studies in International Education Volume 9 ; 9 >
-        au < testing ; Journal of Studies in International Education Volume 10 ; 10 >
-        au < testing ; Journal of Studies in International Education Volume 11 ; 11 >
-        au < testing ; Journal of Studies in International Education Volume 12 ; 12 >
-        au < testing ; Journal of Studies in International Education Volume 13 ; 13 >
+        au < ready ; Journal of Studies in International Education Volume 10 ; 10 >
+        au < ready ; Journal of Studies in International Education Volume 11 ; 11 >
+        au < ready ; Journal of Studies in International Education Volume 12 ; 12 >
+        au < ready ; Journal of Studies in International Education Volume 13 ; 13 >
 
       }
 
@@ -8107,9 +8107,9 @@ comment[mpj] = now published by Brill
 
         au < ready ; Journal of Teacher Education Volume 56 ; 56 >
         au < ready ; Journal of Teacher Education Volume 57 ; 57 >
-        au < testing ; Journal of Teacher Education Volume 58 ; 58 >
-        au < testing ; Journal of Teacher Education Volume 59 ; 59 >
-        au < testing ; Journal of Teacher Education Volume 60 ; 60 >
+        au < ready ; Journal of Teacher Education Volume 58 ; 58 >
+        au < ready ; Journal of Teacher Education Volume 59 ; 59 >
+        au < ready ; Journal of Teacher Education Volume 60 ; 60 >
 
       }
 
@@ -8127,11 +8127,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jia.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
+        au < testing ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 5 ; 5 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 6 ; 6 >
-        au < testing ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
-        au < testing ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
+        au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
+        au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
 
       }
 
@@ -8152,8 +8152,8 @@ comment[mpj] = now published by Brill
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 >
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 >
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 >
-        au < manifest ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
-        au < manifest ; The Journal of the Royal Society for the Promotion of Health Volume 129 ; 129 >
+        au < testing ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
+        au < testing ; The Journal of the Royal Society for the Promotion of Health Volume 129 ; 129 >
 
       }
 
@@ -8174,8 +8174,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Theoretical Politics Volume 17 ; 17 >
         au < ready ; Journal of Theoretical Politics Volume 18 ; 18 >
         au < ready ; Journal of Theoretical Politics Volume 19 ; 19 >
-        au < manifest ; Journal of Theoretical Politics Volume 20 ; 20 >
-        au < manifest ; Journal of Theoretical Politics Volume 21 ; 21 >
+        au < testing ; Journal of Theoretical Politics Volume 20 ; 20 >
+        au < testing ; Journal of Theoretical Politics Volume 21 ; 21 >
 
       }
 
@@ -8193,11 +8193,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jtc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Thermoplastic Composite Materials Volume 18 ; 18 >
-        au < manifest ; Journal of Thermoplastic Composite Materials Volume 19 ; 19 >
-        au < manifest ; Journal of Thermoplastic Composite Materials Volume 20 ; 20 >
-        au < manifest ; Journal of Thermoplastic Composite Materials Volume 21 ; 21 >
-        au < manifest ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 >
+        au < testing ; Journal of Thermoplastic Composite Materials Volume 18 ; 18 >
+        au < testing ; Journal of Thermoplastic Composite Materials Volume 19 ; 19 >
+        au < testing ; Journal of Thermoplastic Composite Materials Volume 20 ; 20 >
+        au < testing ; Journal of Thermoplastic Composite Materials Volume 21 ; 21 >
+        au < testing ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 >
 
       }
 
@@ -8218,8 +8218,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Transcultural Nursing Volume 16 ; 16 >
         au < ready ; Journal of Transcultural Nursing Volume 17 ; 17 >
         au < ready ; Journal of Transcultural Nursing Volume 18 ; 18 >
-        au < manifest ; Journal of Transcultural Nursing Volume 19 ; 19 >
-        au < manifest ; Journal of Transcultural Nursing Volume 20 ; 20 >
+        au < testing ; Journal of Transcultural Nursing Volume 19 ; 19 >
+        au < testing ; Journal of Transcultural Nursing Volume 20 ; 20 >
 
       }
 
@@ -8238,9 +8238,9 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Transformative Education Volume 3 ; 3 >
-        au < manifest ; Journal of Transformative Education Volume 4 ; 4 >
+        au < testing ; Journal of Transformative Education Volume 4 ; 4 >
         au < ready ; Journal of Transformative Education Volume 5 ; 5 >
-        au < manifest ; Journal of Transformative Education Volume 6 ; 6 >
+        au < testing ; Journal of Transformative Education Volume 6 ; 6 >
 
       }
 
