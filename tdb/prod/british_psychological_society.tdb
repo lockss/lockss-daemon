@@ -143,9 +143,9 @@
     param[journal_id] = bjp
     param[journal_issn] = 0007-1269   
 
-    au < testing ; British Journal of Psychology Volume 90 ; 90 >
-    au < testing ; British Journal of Psychology Volume 91 ; 91 >
-    au < testing ; British Journal of Psychology Volume 92 ; 92 >
+    au < ready ; British Journal of Psychology Volume 90 ; 90 >
+    au < ready ; British Journal of Psychology Volume 91 ; 91 >
+    au < ready ; British Journal of Psychology Volume 92 ; 92 >
     au < ready ; British Journal of Psychology Volume 93 ; 93 >
     au < ready ; British Journal of Psychology Volume 94 ; 94 >
     au < ready ; British Journal of Psychology Volume 95 ; 95 >
@@ -165,11 +165,11 @@
     param[journal_id] = bjsp
     param[journal_issn] = 0144-6665  
 
-    au < testing ; British Journal of Social Psychology Volume 38 ; 38 >
+    au < ready ; British Journal of Social Psychology Volume 38 ; 38 >
     au < ready ; British Journal of Social Psychology Volume 39 ; 39 >
     au < ready ; British Journal of Social Psychology Volume 40 ; 40 >
     au < ready ; British Journal of Social Psychology Volume 41 ; 41 >
-    au < testing ; British Journal of Social Psychology Volume 42 ; 42 >
+    au < ready ; British Journal of Social Psychology Volume 42 ; 42 >
     au < ready ; British Journal of Social Psychology Volume 43 ; 43 >
     au < ready ; British Journal of Social Psychology Volume 44 ; 44 >
     au < ready ; British Journal of Social Psychology Volume 45 ; 45 >
@@ -187,7 +187,7 @@
     param[journal_id] = joop
     param[journal_issn] = 0963-1798  
 
-    au < testing ; Journal of Occupational and Organizational Psychology Volume 80 ; 80 >   
+    au < ready ; Journal of Occupational and Organizational Psychology Volume 80 ; 80 >   
     
   }
   
@@ -199,7 +199,7 @@
     param[journal_id] = lcp
     param[journal_issn] = 1355-3259  
 
-    au < testing ; Journal of Occupational and Organizational Psychology Volume 12 ; 12 >   
+    au < ready ; Journal of Occupational and Organizational Psychology Volume 12 ; 12 >   
     
   }
   
@@ -211,7 +211,7 @@
     param[journal_id] = paptrap
     param[journal_issn] = 1476-0835  
 
-    au < testing ; Psychology and Psychotherapy: Theory, Research and Practice Volume 80 ; 80 >   
+    au < ready ; Psychology and Psychotherapy: Theory, Research and Practice Volume 80 ; 80 >   
     
   }
   
