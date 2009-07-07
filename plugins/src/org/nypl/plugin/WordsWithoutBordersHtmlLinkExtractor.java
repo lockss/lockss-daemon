@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersHtmlLinkExtractor.java,v 1.1 2009-06-17 22:09:47 thib_gc Exp $
+ * $Id: WordsWithoutBordersHtmlLinkExtractor.java,v 1.2 2009-07-07 22:19:27 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
-import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 
