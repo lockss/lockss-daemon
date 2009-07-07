@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersHtmlLinkExtractorFactory.java,v 1.1 2009-06-17 22:09:47 thib_gc Exp $
+ * $Id: WordsWithoutBordersHtmlLinkExtractorFactory.java,v 1.2 2009-07-07 22:23:06 thib_gc Exp $
  */
 
 /*
@@ -33,8 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.nypl.plugin;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.LinkExtractor;
-import org.lockss.extractor.LinkExtractorFactory;
+import org.lockss.extractor.*;
 
 public class WordsWithoutBordersHtmlLinkExtractorFactory implements LinkExtractorFactory {
 

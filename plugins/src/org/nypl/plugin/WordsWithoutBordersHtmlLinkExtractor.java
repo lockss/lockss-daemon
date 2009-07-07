@@ -1,5 +1,5 @@
 /*
- * $Id: WordsWithoutBordersHtmlLinkExtractor.java,v 1.2 2009-07-07 22:19:27 thib_gc Exp $
+ * $Id: WordsWithoutBordersHtmlLinkExtractor.java,v 1.3 2009-07-07 22:23:06 thib_gc Exp $
  */
 
 /*
@@ -32,13 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.nypl.plugin;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
+import org.lockss.plugin.*;
 
 public class WordsWithoutBordersHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
