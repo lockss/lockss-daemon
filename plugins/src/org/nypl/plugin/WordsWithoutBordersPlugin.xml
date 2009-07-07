@@ -29,7 +29,7 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%s?front=[A-Z/]+ ?%d&quot;, base_url, year</string>
-      <string>1,&quot;%sarticle\.php\?.*&quot;, base_url</string>
+      <string>1,&quot;%s?(lab|sec|translator|author)=[\w]+&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
