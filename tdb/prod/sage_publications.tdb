@@ -848,8 +848,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Assessment Volume 12 ; 12 >
         au < released ; Assessment Volume 13 ; 13 >
         au < released ; Assessment Volume 14 ; 14 >
-        au < testing ; Assessment Volume 15 ; 15 >
-        au < testing ; Assessment Volume 16 ; 16 >
+        au < ready ; Assessment Volume 15 ; 15 >
+        au < ready ; Assessment Volume 16 ; 16 >
 
       }
 
@@ -870,8 +870,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Autism Volume 9 ; 9 >
         au < released ; Autism Volume 10 ; 10 >
         au < released ; Autism Volume 11 ; 11 >
-        au < testing ; Autism Volume 12 ; 12 >
-        au < testing ; Autism Volume 13 ; 13 >
+        au < ready ; Autism Volume 12 ; 12 >
+        au < ready ; Autism Volume 13 ; 13 >
 
       }
 
@@ -902,8 +902,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Behavior Modification Volume 29 ; 29 >
         au < do_not_process ; Behavior Modification Volume 30 ; 30 >
         au < released ; Behavior Modification Volume 31 ; 31 >
-        au < testing ; Behavior Modification Volume 32 ; 32 >
-        au < testing ; Behavior Modification Volume 33 ; 33 >
+        au < ready ; Behavior Modification Volume 32 ; 32 >
+        au < ready ; Behavior Modification Volume 33 ; 33 >
 
       }
 
@@ -954,7 +954,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < do_not_process ; Biological Research For Nursing Volume 7 ; 7 >
         au < released ; Biological Research For Nursing Volume 8 ; 8 >
         au < released ; Biological Research For Nursing Volume 9 ; 9 >
-        au < testing ; Biological Research For Nursing Volume 10 ; 10 >
+        au < ready ; Biological Research For Nursing Volume 10 ; 10 >
 
       }
 
@@ -985,8 +985,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Body & Society Volume 11 ; 11 >
         au < do_not_process ; Body & Society Volume 12 ; 12 >
         au < released ; Body & Society Volume 13 ; 13 >
-        au < testing ; Body & Society Volume 14 ; 14 >
-        au < testing ; Body & Society Volume 15 ; 15 >
+        au < ready ; Body & Society Volume 14 ; 14 >
+        au < ready ; Body & Society Volume 15 ; 15 >
 
       }
 
@@ -1005,8 +1005,8 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; British Journal of Infection Control Volume 8 ; 8 >
-        au < testing ; British Journal of Infection Control Volume 9 ; 9 >
-        au < testing ; British Journal of Infection Control Volume 10 ; 10 >
+        au < ready ; British Journal of Infection Control Volume 9 ; 9 >
+        au < ready ; British Journal of Infection Control Volume 10 ; 10 >
 
       }
 
@@ -1027,8 +1027,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; British Journal of Visual Impairment Volume 23 ; 23 >
         au < released ; British Journal of Visual Impairment Volume 24 ; 24 >
         au < released ; British Journal of Visual Impairment Volume 25 ; 25 >
-        au < testing ; British Journal of Visual Impairment Volume 26 ; 26 >
-        au < testing ; British Journal of Visual Impairment Volume 27 ; 27 >
+        au < ready ; British Journal of Visual Impairment Volume 26 ; 26 >
+        au < ready ; British Journal of Visual Impairment Volume 27 ; 27 >
 
       }
 
@@ -1049,8 +1049,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; British Journalism Review Volume 16 ; 16 >
         au < released ; British Journalism Review Volume 17 ; 17 >
         au < released ; British Journalism Review Volume 18 ; 18 >
-        au < manifest ; British Journalism Review Volume 19 ; 19 >
-        au < manifest ; British Journalism Review Volume 20 ; 20 >
+        au < testing ; British Journalism Review Volume 19 ; 19 >
+        au < testing ; British Journalism Review Volume 20 ; 20 >
 
       }
 
@@ -1070,8 +1070,8 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < released ; Building Service Engineering Research and Technology Volume 27 ; 27 >
         au < released ; Building Service Engineering Research and Technology Volume 28 ; 28 >
-        au < manifest ; Building Service Engineering Research and Technology Volume 29 ; 29 >
-        au < manifest ; Building Service Engineering Research and Technology Volume 30 ; 30 >
+        au < testing ; Building Service Engineering Research and Technology Volume 29 ; 29 >
+        au < testing ; Building Service Engineering Research and Technology Volume 30 ; 30 >
 
       }
 
@@ -1102,8 +1102,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Bulletin of Science, Technology & Society Volume 25 ; 25 >
         au < do_not_process ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
         au < released ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
-        au < manifest ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
-        au < manifest ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
+        au < testing ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
+        au < testing ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
 
       }
 
@@ -1134,8 +1134,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Business & Society Volume 44 ; 44 >
         au < do_not_process ; Business & Society Volume 45 ; 45 >
         au < released ; Business & Society Volume 46 ; 46 >
-        au < manifest ; Business & Society Volume 47 ; 47 >
-        au < manifest ; Business & Society Volume 48 ; 48 >
+        au < testing ; Business & Society Volume 47 ; 47 >
+        au < testing ; Business & Society Volume 48 ; 48 >
 
       }
 
@@ -1156,8 +1156,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Business Communication Quarterly Volume 68 ; 68 >
         au < released ; Business Communication Quarterly Volume 69 ; 69 >
         au < released ; Business Communication Quarterly Volume 70 ; 70 >
-        au < manifest ; Business Communication Quarterly Volume 71 ; 71 >
-        au < manifest ; Business Communication Quarterly Volume 72 ; 72 >
+        au < testing ; Business Communication Quarterly Volume 71 ; 71 >
+        au < testing ; Business Communication Quarterly Volume 72 ; 72 >
 
       }
 
@@ -4700,8 +4700,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Comparative Sociology Volume 46 ; 46 >
         au < do_not_process ; International Journal of Comparative Sociology Volume 47 ; 47 >
         au < ready ; International Journal of Comparative Sociology Volume 48 ; 48 >
-        au < testing ; International Journal of Comparative Sociology Volume 49 ; 49 >
-        au < testing ; International Journal of Comparative Sociology Volume 50 ; 50 >
+        au < ready ; International Journal of Comparative Sociology Volume 49 ; 49 >
+        au < ready ; International Journal of Comparative Sociology Volume 50 ; 50 >
 
       }
 
@@ -4732,8 +4732,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Cross Cultural Management Volume 5 ; 5 >
         au < do_not_process ; International Journal of Cross Cultural Management Volume 6 ; 6 >
         au < ready ; International Journal of Cross Cultural Management Volume 7 ; 7 >
-        au < testing ; International Journal of Cross Cultural Management Volume 8 ; 8 >
-        au < testing ; International Journal of Cross Cultural Management Volume 9 ; 9 >
+        au < ready ; International Journal of Cross Cultural Management Volume 8 ; 8 >
+        au < ready ; International Journal of Cross Cultural Management Volume 9 ; 9 >
 
       }
 
@@ -4796,8 +4796,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Damage Mechanics Volume 14 ; 14 >
         au < do_not_process ; International Journal of Damage Mechanics Volume 15 ; 15 >
         au < ready ; International Journal of Damage Mechanics Volume 16 ; 16 >
-        au < testing ; International Journal of Damage Mechanics Volume 17 ; 17 >
-        au < testing ; International Journal of Damage Mechanics Volume 18 ; 18 >
+        au < ready ; International Journal of Damage Mechanics Volume 17 ; 17 >
+        au < ready ; International Journal of Damage Mechanics Volume 18 ; 18 >
 
       }
 
@@ -4828,8 +4828,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of High Performance Computing Applications Volume 19 ; 19 >
         au < do_not_process ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
         au < ready ; International Journal of High Performance Computing Applications Volume 21 ; 21 >
-        au < testing ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
-        au < testing ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
+        au < ready ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
+        au < ready ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
 
       }
 
@@ -4850,8 +4850,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; The International Journal of Lower Extremity Wounds Volume 4 ; 4 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
         au < ready ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
-        au < testing ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
-        au < testing ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
+        au < ready ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
+        au < ready ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
 
       }
 
@@ -4872,8 +4872,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < released ; International Journal of Music Education Volume 23 ; 23 >
         au < released ; International Journal of Music Education Volume 24 ; 24 >
         au < released ; International Journal of Music Education Volume 25 ; 25 >
-        au < testing ; International Journal of Music Education Volume 26 ; 26 >
-        au < testing ; International Journal of Music Education Volume 27 ; 27 >
+        au < ready ; International Journal of Music Education Volume 26 ; 26 >
+        au < ready ; International Journal of Music Education Volume 27 ; 27 >
 
       }
 
@@ -4904,8 +4904,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < released ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 >
         au < do_not_process ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
         au < released ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 >
-        au < manifest ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
-        au < manifest ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
+        au < testing ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
+        au < testing ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
 
       }
 
@@ -4936,8 +4936,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < released ; The International Journal of Robotics Research Volume 24 ; 24 >
         au < do_not_process ; The International Journal of Robotics Research Volume 25 ; 25 >
         au < released ; The International Journal of Robotics Research Volume 26 ; 26 >
-        au < manifest ; The International Journal of Robotics Research Volume 27 ; 27 >
-        au < manifest ; The International Journal of Robotics Research Volume 28 ; 28 >
+        au < testing ; The International Journal of Robotics Research Volume 27 ; 27 >
+        au < testing ; The International Journal of Robotics Research Volume 28 ; 28 >
 
       }
 
@@ -4957,7 +4957,7 @@ comment[ghj] = now published by Oxford Univeristy Press
 
         au < released ; International Journal of Rural Management Volume 1 ; 1 >
         au < released ; International Journal of Rural Management Volume 2 ; 2 >
-        au < manifest ; International Journal of Rural Management Volume 3 ; 3 >
+        au < testing ; International Journal of Rural Management Volume 3 ; 3 >
 
       }
 
@@ -4978,8 +4978,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < released ; International Journal of Social Psychiatry Volume 51 ; 51 >
         au < released ; International Journal of Social Psychiatry Volume 52 ; 52 >
         au < released ; International Journal of Social Psychiatry Volume 53 ; 53 >
-        au < manifest ; International Journal of Social Psychiatry Volume 54 ; 54 >
-        au < manifest ; International Journal of Social Psychiatry Volume 55 ; 55 >
+        au < testing ; International Journal of Social Psychiatry Volume 54 ; 54 >
+        au < testing ; International Journal of Social Psychiatry Volume 55 ; 55 >
 
       }
 
@@ -5000,8 +5000,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Surgical Pathology Volume 13 ; 13 >
         au < ready ; International Journal of Surgical Pathology Volume 14 ; 14 >
         au < ready ; International Journal of Surgical Pathology Volume 15 ; 15 >
-        au < manifest ; International Journal of Surgical Pathology Volume 16 ; 16 >
-        au < manifest ; International Journal of Surgical Pathology Volume 17 ; 17 >
+        au < testing ; International Journal of Surgical Pathology Volume 16 ; 16 >
+        au < testing ; International Journal of Surgical Pathology Volume 17 ; 17 >
 
       }
 
@@ -5020,8 +5020,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Political Science Abstracts Volume 57 ; 57 >
-        au < manifest ; International Political Science Abstracts Volume 58 ; 58 >
-        au < manifest ; International Political Science Abstracts Volume 59 ; 59 >
+        au < testing ; International Political Science Abstracts Volume 58 ; 58 >
+        au < testing ; International Political Science Abstracts Volume 59 ; 59 >
 
       }
 
@@ -5042,8 +5042,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Political Science Review Volume 26 ; 26 >
         au < ready ; International Political Science Review Volume 27 ; 27 >
         au < ready ; International Political Science Review Volume 28 ; 28 >
-        au < manifest ; International Political Science Review Volume 29 ; 29 >
-        au < manifest ; International Political Science Review Volume 30 ; 30 >
+        au < testing ; International Political Science Review Volume 29 ; 29 >
+        au < testing ; International Political Science Review Volume 30 ; 30 >
 
       }
 
@@ -8152,8 +8152,8 @@ comment[mpj] = now published by Brill
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 >
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 >
         au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 >
-        au < testing ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
-        au < testing ; The Journal of the Royal Society for the Promotion of Health Volume 129 ; 129 >
+        au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
+        au < ready ; The Journal of the Royal Society for the Promotion of Health Volume 129 ; 129 >
 
       }
 
@@ -8174,8 +8174,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Theoretical Politics Volume 17 ; 17 >
         au < ready ; Journal of Theoretical Politics Volume 18 ; 18 >
         au < ready ; Journal of Theoretical Politics Volume 19 ; 19 >
-        au < testing ; Journal of Theoretical Politics Volume 20 ; 20 >
-        au < testing ; Journal of Theoretical Politics Volume 21 ; 21 >
+        au < ready ; Journal of Theoretical Politics Volume 20 ; 20 >
+        au < ready ; Journal of Theoretical Politics Volume 21 ; 21 >
 
       }
 
@@ -8193,11 +8193,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jtc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Thermoplastic Composite Materials Volume 18 ; 18 >
-        au < testing ; Journal of Thermoplastic Composite Materials Volume 19 ; 19 >
-        au < testing ; Journal of Thermoplastic Composite Materials Volume 20 ; 20 >
-        au < testing ; Journal of Thermoplastic Composite Materials Volume 21 ; 21 >
-        au < testing ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 >
+        au < ready ; Journal of Thermoplastic Composite Materials Volume 18 ; 18 >
+        au < ready ; Journal of Thermoplastic Composite Materials Volume 19 ; 19 >
+        au < ready ; Journal of Thermoplastic Composite Materials Volume 20 ; 20 >
+        au < ready ; Journal of Thermoplastic Composite Materials Volume 21 ; 21 >
+        au < ready ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 >
 
       }
 
@@ -8218,8 +8218,8 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Transcultural Nursing Volume 16 ; 16 >
         au < ready ; Journal of Transcultural Nursing Volume 17 ; 17 >
         au < ready ; Journal of Transcultural Nursing Volume 18 ; 18 >
-        au < testing ; Journal of Transcultural Nursing Volume 19 ; 19 >
-        au < testing ; Journal of Transcultural Nursing Volume 20 ; 20 >
+        au < ready ; Journal of Transcultural Nursing Volume 19 ; 19 >
+        au < ready ; Journal of Transcultural Nursing Volume 20 ; 20 >
 
       }
 
@@ -8238,9 +8238,9 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Transformative Education Volume 3 ; 3 >
-        au < testing ; Journal of Transformative Education Volume 4 ; 4 >
+        au < ready ; Journal of Transformative Education Volume 4 ; 4 >
         au < ready ; Journal of Transformative Education Volume 5 ; 5 >
-        au < testing ; Journal of Transformative Education Volume 6 ; 6 >
+        au < ready ; Journal of Transformative Education Volume 6 ; 6 >
 
       }
 
@@ -8259,10 +8259,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Travel Research Volume 43 ; 43 >
-        au < manifest ; Journal of Travel Research Volume 44 ; 44 >
-        au < manifest ; Journal of Travel Research Volume 45 ; 45 >
+        au < testing ; Journal of Travel Research Volume 44 ; 44 >
+        au < testing ; Journal of Travel Research Volume 45 ; 45 >
         au < ready ; Journal of Travel Research Volume 46 ; 46 >
-        au < manifest ; Journal of Travel Research Volume 47 ; 47 >
+        au < testing ; Journal of Travel Research Volume 47 ; 47 >
 
       }
 
@@ -8284,7 +8284,7 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Urban History Volume 32 ; 32 >
         au < ready ; Journal of Urban History Volume 33 ; 33 >
         au < ready ; Journal of Urban History Volume 34 ; 34 >
-        au < manifest ; Journal of Urban History Volume 35 ; 35 >
+        au < testing ; Journal of Urban History Volume 35 ; 35 >
 
       }
 
@@ -8307,7 +8307,7 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Vacation Marketing Volume 12 ; 12 >
         au < ready ; Journal of Vacation Marketing Volume 13 ; 13 >
         au < ready ; Journal of Vacation Marketing Volume 14 ; 14 >
-        au < manifest ; Journal of Vacation Marketing Volume 15 ; 15 >
+        au < testing ; Journal of Vacation Marketing Volume 15 ; 15 >
 
       }
 
@@ -8325,11 +8325,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jvc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Vibration and Control Volume 11 ; 11 >
+        au < testing ; Journal of Vibration and Control Volume 11 ; 11 >
         au < ready ; Journal of Vibration and Control Volume 12 ; 12 >
-        au < manifest ; Journal of Vibration and Control Volume 13 ; 13 >
-        au < manifest ; Journal of Vibration and Control Volume 14 ; 14 >
-        au < manifest ; Journal of Vibration and Control Volume 15 ; 15 >
+        au < testing ; Journal of Vibration and Control Volume 13 ; 13 >
+        au < testing ; Journal of Vibration and Control Volume 14 ; 14 >
+        au < testing ; Journal of Vibration and Control Volume 15 ; 15 >
 
       }
 
@@ -8410,8 +8410,8 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Labor Studies Journal Volume 32 ; 32 >
-        au < manifest ; Labor Studies Journal Volume 33 ; 33 >
-        au < manifest ; Labor Studies Journal Volume 34 ; 34 >
+        au < testing ; Labor Studies Journal Volume 33 ; 33 >
+        au < testing ; Labor Studies Journal Volume 34 ; 34 >
 
       }
 
@@ -8432,8 +8432,8 @@ comment[mpj] = now published by Brill
         au < ready ; Language and Literature Volume 14 ; 14 >
         au < ready ; Language and Literature Volume 15 ; 15 >
         au < ready ; Language and Literature Volume 16 ; 16 >
-        au < manifest ; Language and Literature Volume 17 ; 17 >
-        au < manifest ; Language and Literature Volume 18 ; 18 >
+        au < testing ; Language and Literature Volume 17 ; 17 >
+        au < testing ; Language and Literature Volume 18 ; 18 >
 
       }
 
@@ -8451,10 +8451,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ltr.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Language Teaching Research Volume 10 ; 10 >
+        au < testing ; Language Teaching Research Volume 10 ; 10 >
         au < ready ; Language Teaching Research Volume 11 ; 11 >
-        au < manifest ; Language Teaching Research Volume 12 ; 12 >
-        au < manifest ; Language Teaching Research Volume 13 ; 13 >
+        au < testing ; Language Teaching Research Volume 12 ; 12 >
+        au < testing ; Language Teaching Research Volume 13 ; 13 >
 
       }
 
