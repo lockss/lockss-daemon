@@ -610,22 +610,22 @@ comment[bab] = not_ready because of 500 errors
     au < ready ; Biotechnology and Applied Biochemistry Volume 34 ; 034 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 35 ; 035 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 36 ; 036 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 37 ; 037 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 38 ; 038 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 37 ; 037 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 38 ; 038 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 39 ; 039 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 40 ; 040 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 41 ; 041 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 42 ; 042 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 41 ; 041 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 42 ; 042 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 43 ; 043 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 44 ; 044 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 45 ; 045 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 46 ; 046 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 48 ; 048 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 49 ; 049 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
-    au < not_ready ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
+    au < testing ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
     au < ready ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
     
   }
@@ -692,14 +692,14 @@ comment[cs103_107] = 500 errors
     au < testing ; Clinical Science Volume 105 ; 105 >
     au < testing ; Clinical Science Volume 106 ; 106 >
     au < testing ; Clinical Science Volume 107 ; 107 >
-    au < testing ; Clinical Science Volume 108 ; 108 >
-    au < testing ; Clinical Science Volume 109 ; 109 >
-    au < testing ; Clinical Science Volume 110 ; 110 >
-    au < testing ; Clinical Science Volume 111 ; 111 >
-    au < testing ; Clinical Science Volume 112 ; 112 >
-    au < testing ; Clinical Science Volume 113 ; 113 >
-    au < testing ; Clinical Science Volume 114 ; 114 >
-    au < testing ; Clinical Science Volume 115 ; 115 >
+    au < ready ; Clinical Science Volume 108 ; 108 >
+    au < ready ; Clinical Science Volume 109 ; 109 >
+    au < ready ; Clinical Science Volume 110 ; 110 >
+    au < ready ; Clinical Science Volume 111 ; 111 >
+    au < ready ; Clinical Science Volume 112 ; 112 >
+    au < ready ; Clinical Science Volume 113 ; 113 >
+    au < ready ; Clinical Science Volume 114 ; 114 >
+    au < ready ; Clinical Science Volume 115 ; 115 >
         
   }
   
