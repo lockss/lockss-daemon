@@ -1,30 +1,37 @@
 {
+
   publisher <
     name = American Registry of Professional Animal Scientists
   >
 
-  implicit < status ; name ; param[volume_name] >
-  plugin = org.lockss.plugin.highwire.HighWireH20Plugin
-
   {
-   title <
-     name = Professional Animal Scientist 
-   >
+
+    title <
+      name = Professional Animal Scientist 
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://pas.fass.org/
+      implicit < status ; name ; param[volume_name] >
+      comment[h20] = This is an H20 title
    
-   param[base_url] = http://pas.fass.org/
-   
-   au < exists ; Professional Animal Scientist Volume 13 ; 13 >
-   au < exists ; Professional Animal Scientist Volume 14 ; 14 >
-   au < exists ; Professional Animal Scientist Volume 15 ; 15 >
-   au < exists ; Professional Animal Scientist Volume 16 ; 16 >
-   au < exists ; Professional Animal Scientist Volume 17 ; 17 >
-   au < exists ; Professional Animal Scientist Volume 18 ; 18 >
-   au < exists ; Professional Animal Scientist Volume 19 ; 19 >
-   au < exists ; Professional Animal Scientist Volume 20 ; 20 >
-   au < exists ; Professional Animal Scientist Volume 21 ; 21 >
-   au < exists ; Professional Animal Scientist Volume 22 ; 22 >
-   au < exists ; Professional Animal Scientist Volume 23 ; 23 >
-   au < exists ; Professional Animal Scientist Volume 24 ; 24 >
+      au < exists ; Professional Animal Scientist Volume 13 ; 13 >
+      au < exists ; Professional Animal Scientist Volume 14 ; 14 >
+      au < exists ; Professional Animal Scientist Volume 15 ; 15 >
+      au < exists ; Professional Animal Scientist Volume 16 ; 16 >
+      au < exists ; Professional Animal Scientist Volume 17 ; 17 >
+      au < exists ; Professional Animal Scientist Volume 18 ; 18 >
+      au < exists ; Professional Animal Scientist Volume 19 ; 19 >
+      au < exists ; Professional Animal Scientist Volume 20 ; 20 >
+      au < exists ; Professional Animal Scientist Volume 21 ; 21 >
+      au < exists ; Professional Animal Scientist Volume 22 ; 22 >
+      au < exists ; Professional Animal Scientist Volume 23 ; 23 >
+      au < exists ; Professional Animal Scientist Volume 24 ; 24 >
+
+    }
    
   }
+
 }
