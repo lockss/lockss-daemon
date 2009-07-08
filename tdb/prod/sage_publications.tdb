@@ -8259,10 +8259,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Travel Research Volume 43 ; 43 >
-        au < testing ; Journal of Travel Research Volume 44 ; 44 >
-        au < testing ; Journal of Travel Research Volume 45 ; 45 >
+        au < ready ; Journal of Travel Research Volume 44 ; 44 >
+        au < ready ; Journal of Travel Research Volume 45 ; 45 >
         au < ready ; Journal of Travel Research Volume 46 ; 46 >
-        au < testing ; Journal of Travel Research Volume 47 ; 47 >
+        au < ready ; Journal of Travel Research Volume 47 ; 47 >
 
       }
 
@@ -8284,7 +8284,7 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Urban History Volume 32 ; 32 >
         au < ready ; Journal of Urban History Volume 33 ; 33 >
         au < ready ; Journal of Urban History Volume 34 ; 34 >
-        au < testing ; Journal of Urban History Volume 35 ; 35 >
+        au < ready ; Journal of Urban History Volume 35 ; 35 >
 
       }
 
@@ -8307,7 +8307,7 @@ comment[mpj] = now published by Brill
         au < ready ; Journal of Vacation Marketing Volume 12 ; 12 >
         au < ready ; Journal of Vacation Marketing Volume 13 ; 13 >
         au < ready ; Journal of Vacation Marketing Volume 14 ; 14 >
-        au < testing ; Journal of Vacation Marketing Volume 15 ; 15 >
+        au < ready ; Journal of Vacation Marketing Volume 15 ; 15 >
 
       }
 
@@ -8325,11 +8325,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jvc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Vibration and Control Volume 11 ; 11 >
+        au < ready ; Journal of Vibration and Control Volume 11 ; 11 >
         au < ready ; Journal of Vibration and Control Volume 12 ; 12 >
-        au < testing ; Journal of Vibration and Control Volume 13 ; 13 >
-        au < testing ; Journal of Vibration and Control Volume 14 ; 14 >
-        au < testing ; Journal of Vibration and Control Volume 15 ; 15 >
+        au < ready ; Journal of Vibration and Control Volume 13 ; 13 >
+        au < ready ; Journal of Vibration and Control Volume 14 ; 14 >
+        au < ready ; Journal of Vibration and Control Volume 15 ; 15 >
 
       }
 
@@ -8349,9 +8349,9 @@ comment[mpj] = now published by Brill
 
         au < ready ; Journal of Visual Culture Volume 4 ; 4 >
         au < ready ; Journal of Visual Culture Volume 5 ; 5 >
-        au < manifest ; Journal of Visual Culture Volume 6 ; 6 >
-        au < manifest ; Journal of Visual Culture Volume 7 ; 7 >
-        au < manifest ; Journal of Visual Culture Volume 8 ; 8 >
+        au < testing ; Journal of Visual Culture Volume 6 ; 6 >
+        au < testing ; Journal of Visual Culture Volume 7 ; 7 >
+        au < testing ; Journal of Visual Culture Volume 8 ; 8 >
 
       }
 
@@ -8410,8 +8410,8 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Labor Studies Journal Volume 32 ; 32 >
-        au < testing ; Labor Studies Journal Volume 33 ; 33 >
-        au < testing ; Labor Studies Journal Volume 34 ; 34 >
+        au < ready ; Labor Studies Journal Volume 33 ; 33 >
+        au < ready ; Labor Studies Journal Volume 34 ; 34 >
 
       }
 
@@ -8432,8 +8432,8 @@ comment[mpj] = now published by Brill
         au < ready ; Language and Literature Volume 14 ; 14 >
         au < ready ; Language and Literature Volume 15 ; 15 >
         au < ready ; Language and Literature Volume 16 ; 16 >
-        au < testing ; Language and Literature Volume 17 ; 17 >
-        au < testing ; Language and Literature Volume 18 ; 18 >
+        au < ready ; Language and Literature Volume 17 ; 17 >
+        au < ready ; Language and Literature Volume 18 ; 18 >
 
       }
 
@@ -8451,10 +8451,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ltr.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Language Teaching Research Volume 10 ; 10 >
+        au < ready ; Language Teaching Research Volume 10 ; 10 >
         au < ready ; Language Teaching Research Volume 11 ; 11 >
-        au < testing ; Language Teaching Research Volume 12 ; 12 >
-        au < testing ; Language Teaching Research Volume 13 ; 13 >
+        au < ready ; Language Teaching Research Volume 12 ; 12 >
+        au < ready ; Language Teaching Research Volume 13 ; 13 >
 
       }
 
@@ -8472,10 +8472,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ltj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Language Testing Volume 23 ; 23 >
+        au < testing ; Language Testing Volume 23 ; 23 >
         au < ready ; Language Testing Volume 24 ; 24 >
-        au < manifest ; Language Testing Volume 25 ; 25 >
-        au < manifest ; Language Testing Volume 26 ; 26 >
+        au < testing ; Language Testing Volume 25 ; 25 >
+        au < testing ; Language Testing Volume 26 ; 26 >
 
       }
 
@@ -8496,8 +8496,8 @@ comment[mpj] = now published by Brill
         au < ready ; Latin American Perspectives Volume 32 ; 32 >
         au < ready ; Latin American Perspectives Volume 33 ; 33 >
         au < ready ; Latin American Perspectives Volume 34 ; 34 >
-        au < manifest ; Latin American Perspectives Volume 35 ; 35 >
-        au < manifest ; Latin American Perspectives Volume 36 ; 36 >
+        au < testing ; Latin American Perspectives Volume 35 ; 35 >
+        au < testing ; Latin American Perspectives Volume 36 ; 36 >
 
       }
 
@@ -8515,10 +8515,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://lch.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Law, Culture and the Humanities Volume 2 ; 2 >
+        au < testing ; Law, Culture and the Humanities Volume 2 ; 2 >
         au < ready ; Law, Culture and the Humanities Volume 3 ; 3 >
-        au < manifest ; Law, Culture and the Humanities Volume 4 ; 4 >
-        au < manifest ; Law, Culture and the Humanities Volume 5 ; 5 >
+        au < testing ; Law, Culture and the Humanities Volume 4 ; 4 >
+        au < testing ; Law, Culture and the Humanities Volume 5 ; 5 >
 
       }
 
@@ -8539,8 +8539,8 @@ comment[mpj] = now published by Brill
         au < ready ; Leadership Volume 1 ; 1 >
         au < ready ; Leadership Volume 2 ; 2 >
         au < ready ; Leadership Volume 3 ; 3 >
-        au < manifest ; Leadership Volume 4 ; 4 >
-        au < manifest ; Leadership Volume 5 ; 5 >
+        au < testing ; Leadership Volume 4 ; 4 >
+        au < testing ; Leadership Volume 5 ; 5 >
 
       }
 
@@ -8558,10 +8558,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://lrt.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Lighting Research and Technology Volume 38 ; 38 >
+        au < testing ; Lighting Research and Technology Volume 38 ; 38 >
         au < ready ; Lighting Research and Technology Volume 39 ; 39 >
-        au < manifest ; Lighting Research and Technology Volume 40 ; 40 >
-        au < manifest ; Lighting Research and Technology Volume 41 ; 41 >
+        au < testing ; Lighting Research and Technology Volume 40 ; 40 >
+        au < testing ; Lighting Research and Technology Volume 41 ; 41 >
 
       }
 
