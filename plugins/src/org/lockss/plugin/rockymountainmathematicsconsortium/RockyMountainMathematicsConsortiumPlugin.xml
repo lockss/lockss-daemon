@@ -71,4 +71,8 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>application/pdf_link_extractor_factory</string>
+    <string>org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPdfLinkExtractorFactory</string>
+  </entry>
 </map>
