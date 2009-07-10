@@ -540,31 +540,31 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.bioscirep.org/
     param[journal_id] = bsr
 
-    au < not_ready ; Bioscience Reports Volume 1 ; 001 >
+    au < testing ; Bioscience Reports Volume 1 ; 001 >
     au < ready ; Bioscience Reports Volume 2 ; 002 >
     au < ready ; Bioscience Reports Volume 3 ; 003 >
     au < ready ; Bioscience Reports Volume 4 ; 004 >
     au < ready ; Bioscience Reports Volume 5 ; 005 >
-    au < not_ready ; Bioscience Reports Volume 6 ; 006 >
-    au < not_ready ; Bioscience Reports Volume 7 ; 007 >
+    au < testing ; Bioscience Reports Volume 6 ; 006 >
+    au < testing ; Bioscience Reports Volume 7 ; 007 >
     au < ready ; Bioscience Reports Volume 8 ; 008 >
-    au < not_ready  ; Bioscience Reports Volume 9 ; 009 >
-    au < not_ready ; Bioscience Reports Volume 10 ; 010 >
+    au < testing  ; Bioscience Reports Volume 9 ; 009 >
+    au < testing ; Bioscience Reports Volume 10 ; 010 >
     au < ready ; Bioscience Reports Volume 11 ; 011 >
     au < ready ; Bioscience Reports Volume 12 ; 012 >
-    au < not_ready ; Bioscience Reports Volume 13 ; 013 >
+    au < testing ; Bioscience Reports Volume 13 ; 013 >
     au < ready ; Bioscience Reports Volume 14 ; 014 >
     au < ready ; Bioscience Reports Volume 15 ; 015 >
     au < ready ; Bioscience Reports Volume 16 ; 016 >
-    au < not_ready ; Bioscience Reports Volume 17 ; 017 >
+    au < testing ; Bioscience Reports Volume 17 ; 017 >
     au < ready ; Bioscience Reports Volume 18 ; 018 >
     au < ready ; Bioscience Reports Volume 19 ; 019 >
     au < ready ; Bioscience Reports Volume 20 ; 020 >
-    au < not_ready ; Bioscience Reports Volume 21 ; 021 >
-    au < not_ready ; Bioscience Reports Volume 22 ; 022 >
+    au < testing ; Bioscience Reports Volume 21 ; 021 >
+    au < testing ; Bioscience Reports Volume 22 ; 022 >
     au < ready ; Bioscience Reports Volume 23 ; 023 >
-    au < not_ready ; Bioscience Reports Volume 24 ; 024 >
-    au < not_ready ; Bioscience Reports Volume 25 ; 025 >
+    au < testing ; Bioscience Reports Volume 24 ; 024 >
+    au < testing ; Bioscience Reports Volume 25 ; 025 >
     au < ready ; Bioscience Reports Volume 26 ; 026 >
     au < ready ; Bioscience Reports Volume 27 ; 027 >
     au < ready ; Bioscience Reports Volume 28 ; 028 >
@@ -687,11 +687,11 @@ comment[cs103_107] = 500 errors
     au < ready ; Clinical Science Volume 100 ; 100 >
     au < ready ; Clinical Science Volume 101 ; 101 >
     au < ready ; Clinical Science Volume 102 ; 102 >
-    au < testing ; Clinical Science Volume 103 ; 103 >
-    au < testing ; Clinical Science Volume 104 ; 104 >
-    au < testing ; Clinical Science Volume 105 ; 105 >
-    au < testing ; Clinical Science Volume 106 ; 106 >
-    au < testing ; Clinical Science Volume 107 ; 107 >
+    au < ready ; Clinical Science Volume 103 ; 103 >
+    au < ready ; Clinical Science Volume 104 ; 104 >
+    au < ready ; Clinical Science Volume 105 ; 105 >
+    au < ready ; Clinical Science Volume 106 ; 106 >
+    au < ready ; Clinical Science Volume 107 ; 107 >
     au < ready ; Clinical Science Volume 108 ; 108 >
     au < ready ; Clinical Science Volume 109 ; 109 >
     au < ready ; Clinical Science Volume 110 ; 110 >
