@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.6 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.7 2009-07-13 06:52:06 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class AccountManager
     UI_PREFIX + SUFFIX_USE_SSL, "true",
   };
 
-  /** <code>Form</code>: HTTP, form auth */
+  /** <code>Form</code>: HTTP, form auth, configurable password rules */
   public static String[] POLICY_FORM = {
     PARAM_ENABLED, "true",
     PARAM_NEW_ACCOUNT_TYPE, "Basic",

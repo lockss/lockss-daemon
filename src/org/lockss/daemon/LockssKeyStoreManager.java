@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.3 2009-06-15 07:52:08 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.4 2009-07-13 06:52:06 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class LockssKeyStoreManager
 
   static final String PREFIX = Configuration.PREFIX + "keyMgr.";
 
-  /** Default keystore type.  */
+  /** Default type for newly created keystores.  */
   public static final String PARAM_DEFAULT_KEYSTORE_TYPE =
     PREFIX + "defaultKeyStoreType";
   public static final String DEFAULT_DEFAULT_KEYSTORE_TYPE = "JCEKS";
@@ -60,7 +60,8 @@ public class LockssKeyStoreManager
     PREFIX + "defaultKeyStoreProvider";
   public static final String DEFAULT_DEFAULT_KEYSTORE_PROVIDER = null;
 
-  /** Root of keystore definitions.  */
+  /** Root of keystore definitions.  For each keystore, pick a unique
+   * identifier and use it in place of &lt;id&gt; in the following */
   public static final String PARAM_KEYSTORE = PREFIX + "keystore";
 
   /** keystore name, used by clients to refer to it */
@@ -88,7 +89,7 @@ public class LockssKeyStoreManager
   // Pseudo params for param doc
   public static final String DOC_PREFIX = PARAM_KEYSTORE + ".<id>.";
 
-  /** Keystore name, key by which clients access it */
+  /** Name by which daemon component(s) refer to this keystore */
   public static final String PARAM_KEYSTORE_NAME =
     DOC_PREFIX + KEYSTORE_PARAM_NAME;
   /** Keystore filename */
@@ -100,7 +101,7 @@ public class LockssKeyStoreManager
   /** Keystore provider (SunJCE, etc.) */
   public static final String PARAM_KEYSTORE_PROVIDER =
     DOC_PREFIX + KEYSTORE_PARAM_PROVIDER;
-  /** Keystore password */
+  /** Keystore password.  Default is machine's fqdn */
   public static final String PARAM_KEYSTORE_PASSWORD =
     DOC_PREFIX + KEYSTORE_PARAM_PASSWORD;
   /** Private key password */

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.27 2009-06-19 08:28:39 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.28 2009-07-13 06:52:06 tlipkis Exp $
  */
 
 /*
@@ -108,7 +108,8 @@ public abstract class BaseServletManager
   public static final boolean DEFAULT_USE_SSL = false;
 
   public static final String SUFFIX_SSL_KEYSTORE_NAME = "sslKeystoreName";
-  /** Name of managed keystore to use (see {@link LockssKeystoreManager} */
+  /** Name of managed keystore to use (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name) */
   public static final String PARAM_SSL_KEYSTORE_NAME =
     DOC_PREFIX + SUFFIX_SSL_KEYSTORE_NAME;
 
