@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.8 2009-06-01 07:28:07 tlipkis Exp $
+ * $Id: ParamDoclet.java,v 1.8.2.1 2009-07-13 06:51:46 tlipkis Exp $
  */
 
 /*
@@ -169,9 +169,10 @@ public class ParamDoclet {
   }
 
   private static void printParamInfo(ParamInfo info) {
+    String pname = info.paramName.trim();
     out.println("<tr>\n  <td colspan=\"2\" class=\"paramHeader\">");
-    out.print("    <span class=\"paramName\">" +
-		info.paramName.trim() + "</span> &nbsp; ");
+    out.print("    <span class=\"paramName\" id=\"" + pname + "\">" + 
+	      pname + "</span> &nbsp; ");
     out.print("<span class=\"defaultValue\">[");
     out.print(info.defaultValue == null ?
 	      "" : info.defaultValue.toString());
