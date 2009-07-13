@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.8.2.2 2009-06-19 08:22:06 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.8.2.3 2009-07-13 06:51:06 tlipkis Exp $
  */
 
 /*
@@ -65,22 +65,46 @@ public class AdminServletManager extends BaseServletManager {
   // via the generic mechanism in BaseServletManager.setConfig().  The
   // PARAM_XXX symbols for those params are here for the ParamDoc tools;
   // some are also used by other packages to set the params referenced here
+
+  /** The port the admin UI listens on */
   public static final String PARAM_PORT = PREFIX + SUFFIX_PORT;
   public static final int DEFAULT_PORT = 8081;
 
+  /** If true the admin UI will be started */
   public static final String PARAM_START = PREFIX + SUFFIX_START;
   public static final boolean DEFAULT_START = true;
 
   public static final String IP_ACCESS_PREFIX =
     PREFIX + SUFFIX_IP_ACCESS_PREFIX;
+  /** List of IPs or subnets to allow */
   public static final String PARAM_IP_INCLUDE =
     IP_ACCESS_PREFIX + SUFFIX_IP_INCLUDE;
+  /** List of IPs or subnets to reject */
   public static final String PARAM_IP_PLATFORM_SUBNET =
     IP_ACCESS_PREFIX + SUFFIX_IP_PLATFORM_SUBNET;
 
+  /** Log accesses from forbidden IP addresses */
   public static final String PARAM_LOG_FORBIDDEN =
     PREFIX + SUFFIX_LOG_FORBIDDEN;
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
+
+  /** Connect to named server with https if true */
+  public static final String PARAM_USE_SSL = PREFIX + SUFFIX_USE_SSL;
+  public static final boolean DEFAULT_USE_SSL = false;
+
+  /** Name of managed keystore to use (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name) */
+  public static final String PARAM_SSL_KEYSTORE_NAME =
+    PREFIX + SUFFIX_SSL_KEYSTORE_NAME;
+
+  /** If set, http: connections to this port will be redirected to the
+   * https: port */
+  public static final String PARAM_SSL_REDIR_FROM =
+    PREFIX + SUFFIX_SSL_REDIR_FROM;
+
+  /** User authentication type: Basic or Form */
+  public static final String PARAM_AUTH_TYPE = PREFIX + SUFFIX_AUTH_TYPE;
+  public static final AuthType DEFAULT_AUTH_TYPE = AuthType.Basic;
 
   public static final String PARAM_RESOLVE_REMOTE_HOST =
     PREFIX + SUFFIX_RESOLVE_REMOTE_HOST;

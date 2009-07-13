@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.43 2009-06-01 07:56:02 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.43.2.1 2009-07-13 06:51:06 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,8 @@ public class BlockingStreamComm
     PREFIX + "sslClientAuth";
   public static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
 
-  /** Name of managed keystore to use (see {@link LockssKeystoreManager} */
+  /** Name of managed keystore to use (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name) */
   public static final String PARAM_SSL_KEYSTORE_NAME =
     PREFIX + "sslKeystoreName";
 
