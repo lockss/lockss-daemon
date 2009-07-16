@@ -1,0 +1,142 @@
+{
+
+  publisher <
+    name = American Medical Association
+  >
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title <
+      name = Archives of Dermatology
+    >
+    
+    param[base_url] = http://archderm.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Dermatology Volume 144 ; 144 >
+    au < manifest ; 2009 ; Archives of Dermatology Volume 145 ; 145 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Facial Plastic Surgery
+    >
+    
+    param[base_url] = http://archfaci.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 >
+    au < manifest ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of General Psychiatry
+    >
+    
+    param[base_url] = http://archpsyc.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 >
+    au < manifest ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Internal Medicine
+    >
+    
+    param[base_url] = http://archinte.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 >
+    au < manifest ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Neurology
+    >
+    
+    param[base_url] = http://archneur.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Neurology Volume 65 ; 65 >
+    au < manifest ; 2009 ; Archives of Neurology Volume 66 ; 66 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Ophthalmology
+    >
+    
+    param[base_url] = http://archopht.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 >
+    au < manifest ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Otolaryngology - Head & Neck Surgery
+    >
+    
+    param[base_url] = http://archotol.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 >
+    au < manifest ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Pediatrics & Adolescent Medicine
+    >
+    
+    param[base_url] = http://archpedi.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 >
+    au < manifest ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 >
+  
+  }
+
+  {
+  
+    title <
+      name = Archives of Surgery
+    >
+    
+    param[base_url] = http://archsurg.ama-assn.org/
+    
+    au < manifest ; 2008 ; Archives of Surgery Volume 143 ; 143 >
+    au < manifest ; 2009 ; Archives of Surgery Volume 144 ; 144 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of the American Medical Association
+    >
+    
+    param[base_url] = http://jama.ama-assn.org/
+    
+    au < manifest ; 2008 ; Journal of the American Medical Association Volume 199 ; 199 >
+    au < manifest ; 2008 ; Journal of the American Medical Association Volume 200 ; 200 >
+    au < manifest ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 >
+    au < manifest ; 2009 ; Journal of the American Medical Association Volume 202 ; 202 >
+  
+  }
+
+}
