@@ -1,2 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>plugin_version</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Intermarium_%d_vol%d", year, volume</ElementValue></MapElement><MapElement><ElementKey>au_def_new_content_crawl</ElementKey><ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">7862400000</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Intermarium</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"^%sintermarium-vol%d.html", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%s.*.gif", base_url</string><string xsi:type="java:java.lang.String">1,"^%svol%dno.*/*.html", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%svol%dno.*/*.jpg$", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%svol%dno.*/*.gif$", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%svol%dno.*/*.pdf$", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%svol%dno.*/*.ram$", base_url, volume</string></ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sintermarium-vol%d.html", base_url, volume</ElementValue></MapElement><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.yale.library.lockss.plugin.IntermariumPlugin</ElementValue></MapElement><MapElement><ElementKey>au_def_pause_time</ElementKey><ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3000</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>6</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.yale.library.lockss.plugin.IntermariumPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Intermarium_%d_vol%d&quot;, year, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Intermarium</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>7862400000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sintermarium-vol%d.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%s.*.gif&quot;, base_url</string>
+      <string>1,&quot;^%svol%dno.*/*.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%svol%dno.*/*.jpg$&quot;, base_url, volume</string>
+      <string>1,&quot;^%svol%dno.*/*.gif$&quot;, base_url, volume</string>
+      <string>1,&quot;^%svol%dno.*/*.pdf$&quot;, base_url, volume</string>
+      <string>1,&quot;^%svol%dno.*/*.ram$&quot;, base_url, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sintermarium-vol%d.html&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
