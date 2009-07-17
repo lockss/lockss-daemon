@@ -1911,8 +1911,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Crime & Delinquency Volume 51 ; 51 >
         au < released ; Crime & Delinquency Volume 52 ; 52 >
         au < released ; Crime & Delinquency Volume 53 ; 53 >
-        au < testing ; Crime & Delinquency Volume 54 ; 54 >
-        au < testing ; Crime & Delinquency Volume 55 ; 55 >
+        au < ready ; Crime & Delinquency Volume 54 ; 54 >
+        au < ready ; Crime & Delinquency Volume 55 ; 55 >
 
       }
 
@@ -1933,8 +1933,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Crime, Media, Culture Volume 1 ; 1 >
         au < released ; Crime, Media, Culture Volume 2 ; 2 >
         au < released ; Crime, Media, Culture Volume 3 ; 3 >
-        au < testing ; Crime, Media, Culture Volume 4 ; 4 >
-        au < testing ; Crime, Media, Culture Volume 5 ; 5 >
+        au < ready ; Crime, Media, Culture Volume 4 ; 4 >
+        au < ready ; Crime, Media, Culture Volume 5 ; 5 >
 
       }
 
@@ -1955,8 +1955,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Criminology and Criminal Justice Volume 5 ; 5 >
         au < released ; Criminology and Criminal Justice Volume 6 ; 6 >
         au < released ; Criminology and Criminal Justice Volume 7 ; 7 >
-        au < testing ; Criminology and Criminal Justice Volume 8 ; 8 >
-        au < testing ; Criminology and Criminal Justice Volume 9 ; 9 >
+        au < ready ; Criminology and Criminal Justice Volume 8 ; 8 >
+        au < ready ; Criminology and Criminal Justice Volume 9 ; 9 >
 
       }
 
@@ -1977,8 +1977,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Criminal Justice and Behavior Volume 32 ; 32 >
         au < released ; Criminal Justice and Behavior Volume 33 ; 33 >
         au < released ; Criminal Justice and Behavior Volume 34 ; 34 >
-        au < testing ; Criminal Justice and Behavior Volume 35 ; 35 >
-        au < testing ; Criminal Justice and Behavior Volume 36 ; 36 >
+        au < ready ; Criminal Justice and Behavior Volume 35 ; 35 >
+        au < ready ; Criminal Justice and Behavior Volume 36 ; 36 >
 
       }
 
@@ -2009,8 +2009,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Criminal Justice Policy Review Volume 16 ; 16 >
         au < do_not_process ; Criminal Justice Policy Review Volume 17 ; 17 >
         au < released ; Criminal Justice Policy Review Volume 18 ; 18 >
-        au < testing ; Criminal Justice Policy Review Volume 19 ; 19 >
-        au < testing ; Criminal Justice Policy Review Volume 20 ; 20 >
+        au < ready ; Criminal Justice Policy Review Volume 19 ; 19 >
+        au < ready ; Criminal Justice Policy Review Volume 20 ; 20 >
 
       }
 
@@ -2031,8 +2031,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Criminal Justice Review Volume 30 ; 30 >
         au < released ; Criminal Justice Review Volume 31 ; 31 >
         au < released ; Criminal Justice Review Volume 32 ; 32 >
-        au < testing ; Criminal Justice Review Volume 33 ; 33 >
-        au < testing ; Criminal Justice Review Volume 34 ; 34 >
+        au < ready ; Criminal Justice Review Volume 33 ; 33 >
+        au < ready ; Criminal Justice Review Volume 34 ; 34 >
 
       }
 
@@ -2056,8 +2056,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Critical Social Policy Volume 25 ; 25 >
         au < released ; Critical Social Policy Volume 26 ; 26 >
         au < released ; Critical Social Policy Volume 27 ; 27 >
-        au < manifest ; Critical Social Policy Volume 28 ; 28 >
-        au < manifest ; Critical Social Policy Volume 29 ; 29 >
+        au < ready ; Critical Social Policy Volume 28 ; 28 >
+        au < ready ; Critical Social Policy Volume 29 ; 29 >
 
       }
 
@@ -2088,8 +2088,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Critique of Anthropology Volume 25 ; 25 >
         au < do_not_process ; Critique of Anthropology Volume 26 ; 26 >
         au < released ; Critique of Anthropology Volume 27 ; 27 >
-        au < manifest ; Critique of Anthropology Volume 28 ; 28 >
-        au < manifest ; Critique of Anthropology Volume 29 ; 29 >
+        au < testing ; Critique of Anthropology Volume 28 ; 28 >
+        au < testing ; Critique of Anthropology Volume 29 ; 29 >
 
       }
 
@@ -2120,8 +2120,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Cross-Cultural Research Volume 39 ; 39 >
         au < do_not_process ; Cross-Cultural Research Volume 40 ; 40 >
         au < released ; Cross-Cultural Research Volume 41 ; 41 >
-        au < manifest ; Cross-Cultural Research Volume 42 ; 42 >
-        au < manifest ; Cross-Cultural Research Volume 43 ; 43 >
+        au < testing ; Cross-Cultural Research Volume 42 ; 42 >
+        au < testing ; Cross-Cultural Research Volume 43 ; 43 >
 
       }
 
@@ -2142,8 +2142,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Cultural Dynamics Volume 17 ; 17 >
         au < released ; Cultural Dynamics Volume 18 ; 18 >
         au < released ; Cultural Dynamics Volume 19 ; 19 >
-        au < manifest ; Cultural Dynamics Volume 20 ; 20 >
-        au < manifest ; Cultural Dynamics Volume 21 ; 21 >
+        au < testing ; Cultural Dynamics Volume 20 ; 20 >
+        au < testing ; Cultural Dynamics Volume 21 ; 21 >
 
       }
 
@@ -2163,8 +2163,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Cultural Geographies Volume 13 ; 13 >
         au < released ; Cultural Geographies Volume 14 ; 14 >
-        au < manifest ; Cultural Geographies Volume 15 ; 15 >
-        au < manifest ; Cultural Geographies Volume 16 ; 16 >
+        au < testing ; Cultural Geographies Volume 15 ; 15 >
+        au < testing ; Cultural Geographies Volume 16 ; 16 >
 
       }
 
@@ -2183,8 +2183,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Cultural Sociology Volume 1 ; 1 >
-        au < manifest ; Cultural Sociology Volume 2 ; 2 >
-        au < manifest ; Cultural Sociology Volume 3 ; 3 >
+        au < testing ; Cultural Sociology Volume 2 ; 2 >
+        au < testing ; Cultural Sociology Volume 3 ; 3 >
 
       }
 
@@ -2205,8 +2205,8 @@ comment[csp7] = manifest page is malformed
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
-        au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
-        au < manifest ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
+        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
+        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
 
       }
 
@@ -2237,8 +2237,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Culture & Psychology Volume 11 ; 11 >
         au < do_not_process ; Culture & Psychology Volume 12 ; 12 >
         au < released ; Culture & Psychology Volume 13 ; 13 >
-        au < manifest ; Culture & Psychology Volume 14 ; 14 >
-        au < manifest ; Culture & Psychology Volume 15 ; 15 >
+        au < testing ; Culture & Psychology Volume 14 ; 14 >
+        au < testing ; Culture & Psychology Volume 15 ; 15 >
 
       }
 
