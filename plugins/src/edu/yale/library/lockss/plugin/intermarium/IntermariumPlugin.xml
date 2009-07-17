@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Intermarium_%d_vol%d&quot;, year, volume</string>
+    <string>&quot;Intermarium Plugin, Volume %d, Year %d&quot;, volume, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Intermarium</string>
+    <string>Intermarium Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -26,14 +26,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sintermarium-vol%d.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%s.*.gif&quot;, base_url</string>
-      <string>1,&quot;^%svol%dno.*/*.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%svol%dno.*/*.jpg$&quot;, base_url, volume</string>
-      <string>1,&quot;^%svol%dno.*/*.gif$&quot;, base_url, volume</string>
-      <string>1,&quot;^%svol%dno.*/*.pdf$&quot;, base_url, volume</string>
-      <string>1,&quot;^%svol%dno.*/*.ram$&quot;, base_url, volume</string>
+      <string>1,&quot;^%svol%dno.*&quot;, base_url, volume</string>
     </list>
   </entry>
   <entry>
