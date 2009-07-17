@@ -23,6 +23,17 @@
   {
   
     title <
+      name = Archives of Family Medicine
+    >
+    
+    param[base_url] = http://archfami.ama-assn.org/
+    comment[legacy] = 1992-2000
+  
+  }
+
+  {
+  
+    title <
       name = Archives of Facial Plastic Surgery
     >
     
