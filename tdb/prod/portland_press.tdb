@@ -18,16 +18,16 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
 
 
     au < testing ; Biochemical Journal Volume 1 ; 001 >
-    au < testing ; Biochemical Journal Volume 2 ; 002 >
-    au < testing ; Biochemical Journal Volume 3 ; 003 >
-    au < testing ; Biochemical Journal Volume 4 ; 004 >
+    au < ready ; Biochemical Journal Volume 2 ; 002 >
+    au < ready ; Biochemical Journal Volume 3 ; 003 >
+    au < ready ; Biochemical Journal Volume 4 ; 004 >
     au < testing ; Biochemical Journal Volume 5 ; 005 >
-    au < testing ; Biochemical Journal Volume 6 ; 006 >
+    au < ready ; Biochemical Journal Volume 6 ; 006 >
     au < testing ; Biochemical Journal Volume 7 ; 007 >
     au < testing ; Biochemical Journal Volume 8 ; 008 >
     au < testing ; Biochemical Journal Volume 9 ; 009 >
     au < testing ; Biochemical Journal Volume 10 ; 010 >
-    au < testing ; Biochemical Journal Volume 11 ; 011 >
+    au < ready ; Biochemical Journal Volume 11 ; 011 >
     au < manifest ; Biochemical Journal Volume 12 ; 012 >
     au < manifest ; Biochemical Journal Volume 13 ; 013 >
     au < manifest ; Biochemical Journal Volume 14 ; 014 >
@@ -406,17 +406,17 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
     au < manifest ; Biochemical Journal Volume 387 ; 387 >
     au < manifest ; Biochemical Journal Volume 388 ; 388 >
     au < manifest ; Biochemical Journal Volume 389 ; 389 >
-    au < manifest ; Biochemical Journal Volume 390 ; 390 >
-    au < manifest ; Biochemical Journal Volume 391 ; 391 >
-    au < manifest ; Biochemical Journal Volume 392 ; 392 >
-    au < manifest ; Biochemical Journal Volume 393 ; 393 >
-    au < manifest ; Biochemical Journal Volume 394 ; 394 >
-    au < manifest ; Biochemical Journal Volume 395 ; 395 >
-    au < manifest ; Biochemical Journal Volume 396 ; 396 >
-    au < manifest ; Biochemical Journal Volume 397 ; 397 >
-    au < manifest ; Biochemical Journal Volume 398 ; 398 >
-    au < manifest ; Biochemical Journal Volume 399 ; 399 >
-    au < manifest ; Biochemical Journal Volume 400 ; 400 >
+    au < testing ; Biochemical Journal Volume 390 ; 390 >
+    au < testing ; Biochemical Journal Volume 391 ; 391 >
+    au < testing ; Biochemical Journal Volume 392 ; 392 >
+    au < testing ; Biochemical Journal Volume 393 ; 393 >
+    au < testing ; Biochemical Journal Volume 394 ; 394 >
+    au < testing ; Biochemical Journal Volume 395 ; 395 >
+    au < testing ; Biochemical Journal Volume 396 ; 396 >
+    au < testing ; Biochemical Journal Volume 397 ; 397 >
+    au < testing ; Biochemical Journal Volume 398 ; 398 >
+    au < testing ; Biochemical Journal Volume 399 ; 399 >
+    au < testing ; Biochemical Journal Volume 400 ; 400 >
     au < ready ; Biochemical Journal Volume 401 ; 401 >
     au < ready ; Biochemical Journal Volume 402 ; 402 >
     au < ready ; Biochemical Journal Volume 403 ; 403 >
