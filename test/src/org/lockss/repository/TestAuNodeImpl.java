@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.12 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestAuNodeImpl.java,v 1.12.82.1 2009-07-18 01:28:28 edwardsb1 Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.plugin.AuUrl;
  * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
  */
 public class TestAuNodeImpl extends LockssTestCase {
+  private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private String tempDirPath;
@@ -52,7 +53,7 @@ public class TestAuNodeImpl extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    MockArchivalUnit mau = new MockArchivalUnit();
+    mau = new MockArchivalUnit();
 
     theDaemon = getMockLockssDaemon();
     repo = theDaemon.getLockssRepository(mau);
@@ -92,7 +93,7 @@ public class TestAuNodeImpl extends LockssTestCase {
   }
 
   public void testIllegalOperations() throws Exception {
-    RepositoryNode auNode = new AuNodeImpl("lockssAu:test", "", null);
+    RepositoryNode auNode = new AuNodeImpl("lockssAu:test", "", null, mau);
     assertFalse(auNode.hasContent());
     assertFalse(auNode.isLeaf());
     assertFalse(auNode.isContentInactive());

@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.14 2007-05-29 01:05:45 tlipkis Exp $
+ * $Id: AuNodeImpl.java,v 1.14.30.1 2009-07-18 01:28:27 edwardsb1 Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.PlatformUtil;
 
 /**
@@ -56,8 +57,8 @@ public class AuNodeImpl extends RepositoryNodeImpl {
 
 
   AuNodeImpl(String url, String nodeLocation,
-             LockssRepositoryImpl repository) {
-    super(url, nodeLocation, repository);
+             LockssRepositoryImpl repository, ArchivalUnit au) {
+    super(url, nodeLocation, repository, au);
   }
 
   /**

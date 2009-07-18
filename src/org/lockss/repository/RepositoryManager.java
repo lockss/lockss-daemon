@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.12.24.2 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: RepositoryManager.java,v 1.12.24.3 2009-07-18 01:28:27 edwardsb1 Exp $
  */
 
 /*
@@ -236,10 +236,10 @@ public class RepositoryManager
   }
 
   // hack only local
-  public synchronized LockssRepository getRepositoryFromPath(String path) {
+  public synchronized LockssRepository getRepositoryFromPath(String path, ArchivalUnit au) {
     LockssRepository repo = localRepos.get(path);
     if (repo == null) {
-      repo =  new LockssRepositoryImpl(path);
+      repo =  new LockssRepositoryImpl(path, au);
       repo.initService(getDaemon());
       repo.startService();
       localRepos.put(path, repo);
@@ -255,8 +255,8 @@ public class RepositoryManager
    * consumeing)
    * @return the AU's disk usage in bytes, or -1 if unknown
    */
-  public long getRepoDiskUsage(String repoAuPath, boolean calcIfUnknown) {
-    LockssRepository repo = getRepositoryFromPath(repoAuPath);
+  public long getRepoDiskUsage(String repoAuPath, boolean calcIfUnknown, ArchivalUnit au) {
+    LockssRepository repo = getRepositoryFromPath(repoAuPath, au);
     if (repo != null) {
       try {
 	RepositoryNode repoNode = repo.getNode(AuCachedUrlSetSpec.URL);

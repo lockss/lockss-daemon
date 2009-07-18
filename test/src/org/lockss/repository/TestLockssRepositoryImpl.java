@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.63.24.1 2009-04-30 20:11:03 edwardsb1 Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.63.24.2 2009-07-18 01:28:28 edwardsb1 Exp $
  */
 
 /*
@@ -542,7 +542,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   static class MyMockRepositoryNode extends RepositoryNodeImpl {
     boolean isConsistent = true;
     MyMockRepositoryNode(RepositoryNodeImpl nodeImpl) {
-      super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
+      super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository, new MockArchivalUnit());
     }
 
     boolean checkNodeConsistency() {

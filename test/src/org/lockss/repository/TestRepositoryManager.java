@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.8 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.8.24.1 2009-07-18 01:28:28 edwardsb1 Exp $
  */
 
 /*
@@ -132,9 +132,9 @@ public class TestRepositoryManager extends LockssTestCase {
   public void testSizeCalc () throws Exception {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     mgr.setSem(sem);
-    RepositoryNode node1 = new RepositoryNodeImpl("url1", "testDir", null);
-    RepositoryNode node2 = new RepositoryNodeImpl("url2", "testDir", null);
-    RepositoryNode node3 = new RepositoryNodeImpl("url3", "testDir", null);
+    RepositoryNode node1 = new RepositoryNodeImpl("url1", "testDir", null, mau);
+    RepositoryNode node2 = new RepositoryNodeImpl("url2", "testDir", null, mau);
+    RepositoryNode node3 = new RepositoryNodeImpl("url3", "testDir", null, mau);
     mgr.queueSizeCalc(node1);
     assertTrue(sem.take(TIMEOUT_SHOULDNT));
     assertEquals(ListUtil.list(node1), mgr.getNodes());
@@ -197,7 +197,7 @@ public class TestRepositoryManager extends LockssTestCase {
     int cnt = 0;
 
     public MyMockLockssRepositoryImpl(String root) {
-      super(root);
+      super(root, mau);
     }
 
     public void setNodeCacheSize(int size) {

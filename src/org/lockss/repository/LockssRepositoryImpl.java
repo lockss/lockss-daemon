@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.80.12.1 2009-04-30 20:11:02 edwardsb1 Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.80.12.2 2009-07-18 01:28:27 edwardsb1 Exp $
  */
 
 /*
@@ -96,8 +96,9 @@ public class LockssRepositoryImpl
   UniqueRefLruCache nodeCache;
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
+  protected ArchivalUnit au;
 
-  LockssRepositoryImpl(String rootPath) {
+  LockssRepositoryImpl(String rootPath, ArchivalUnit au) {
     if (rootPath.endsWith(File.separator)) {
       rootLocation = rootPath;
     } else {
@@ -111,6 +112,8 @@ public class LockssRepositoryImpl
     // Test code still needs this.
     nodeCache =
       new UniqueRefLruCache(RepositoryManager.DEFAULT_MAX_PER_AU_CACHE_SIZE);
+    
+    this.au = au;
   }
 
   public void startService() {
@@ -203,12 +206,12 @@ public class LockssRepositoryImpl
     if (isAuUrl) {
       // base directory of ArchivalUnit
       nodeLocation = rootLocation;
-      node = new AuNodeImpl(canonUrl, nodeLocation, this);
+      node = new AuNodeImpl(canonUrl, nodeLocation, this, au);
     } else {
       // determine proper node location
       nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
           canonUrl);
-      node = new RepositoryNodeImpl(canonUrl, nodeLocation, this);
+      node = new RepositoryNodeImpl(canonUrl, nodeLocation, this, au);
     }
 
     if (!create) {
@@ -326,7 +329,7 @@ public class LockssRepositoryImpl
     String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
     logger.debug("repo: " + auDir + ", au: " + au.getName());
     staticCacheLocation = extendCacheLocation(root);
-    LockssRepositoryImpl repo = new LockssRepositoryImpl(auDir);
+    LockssRepositoryImpl repo = new LockssRepositoryImpl(auDir, au);
     Plugin plugin = au.getPlugin();
     if (plugin != null) {
       LockssDaemon daemon = plugin.getDaemon();

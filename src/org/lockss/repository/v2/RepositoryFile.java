@@ -45,7 +45,7 @@ public interface RepositoryFile extends RepositoryNode {
   /**
    * Stores PollHistories from a NodeState in this repository file.
    */
-  public void setPollHistories(NodeState nodeState) throws LockssRepositoryException;
+//  public void setPollHistories(NodeState nodeState) throws LockssRepositoryException;
 
   /**
    * Does the preferred file have stored content? This method refers to the

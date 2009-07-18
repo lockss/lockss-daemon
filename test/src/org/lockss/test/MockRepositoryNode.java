@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15.34.1 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: MockRepositoryNode.java,v 1.15.34.2 2009-07-18 01:28:28 edwardsb1 Exp $
  */
 
 /*
@@ -36,15 +36,18 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.protocol.PeerIdentity;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.protocol.*;
 import org.lockss.repository.*;
-import org.lockss.repository.v2.NoTextException;
+import org.lockss.repository.v2.*;
+import org.lockss.repository.v2.RepositoryNode;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 /**
  * Mock version of the RepositoryNode.
  */
-public class MockRepositoryNode implements RepositoryNode {
+public class MockRepositoryNode implements org.lockss.repository.RepositoryNode {
   public boolean newVersionOpen = false;
   public boolean newOutputCalled = false;
   public boolean newPropsSet = false;
@@ -180,7 +183,7 @@ public class MockRepositoryNode implements RepositoryNode {
     throw new UnsupportedOperationException("Not supported.");
   }
 
-  public synchronized RepositoryNode.RepositoryNodeContents getNodeContents() {
+  public synchronized org.lockss.repository.RepositoryNode.RepositoryNodeContents getNodeContents() {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
@@ -275,6 +278,167 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public void undelete() throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  
+  public void cleanDatabase() throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  
+  public RepositoryFileVersion createNewVersion()
+      throws LockssRepositoryException, FileNotFoundException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryFileVersion createNewVersionBefore(
+      RepositoryFileVersion rfvBefore) throws LockssRepositoryException,
+      FileNotFoundException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public PersistentPeerIdSet getAgreeingPeerIdSet()
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public long getContentSize(boolean mostRecentOnly)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  
+  public RepositoryFileVersion getPreferredVersion()
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public List<RepositoryFileVersion> listVersions()
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public List<RepositoryFileVersion> listVersions(int numVersions)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public void setAgreeingPeerIdSet(PersistentPeerIdSet sepi)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  
+  public void setPollHistories(NodeState nodeState)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  
+  public void setPreferredVersion(RepositoryFileVersion rfv)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    
+  }
+
+  
+  public List<RepositoryFile> getFileList(CachedUrlSetSpec filter)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public List<RepositoryFile> getFileList(CachedUrlSetSpec filter,
+      boolean includeDeleted) throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryFile[] getFiles() throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryFile[] getFiles(boolean includeDeleted)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryFile[] getFiles(int maxVersions)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryFile[] getFiles(int maxVersions, boolean includeDeleted)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public List<PollHistory> getPollHistoryList()
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public long getTreeContentSize(CachedUrlSetSpec filter,
+      boolean calcIfUnknown, boolean preferredOnly)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  
+  public NodeState loadNodeState(CachedUrlSet cus)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryFile makeNewRepositoryFile(String name)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public RepositoryNode makeNewRepositoryNode(String name)
+      throws LockssRepositoryException {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  
+  public void storeNodeState(NodeState nodeState)
+      throws LockssRepositoryException {
     // TODO Auto-generated method stub
     
   }

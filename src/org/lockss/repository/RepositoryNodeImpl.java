@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.84.4.2 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.84.4.3 2009-07-18 01:28:27 edwardsb1 Exp $
  */
 
 /*
@@ -41,8 +41,9 @@ import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.protocol.*;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.plugin.AuUrl;
-import org.lockss.repository.v2.NoTextException;
+import org.lockss.plugin.*;
+import org.lockss.repository.v2.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 /**
@@ -179,14 +180,25 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected String nodeLocation;
   protected static Logger logger = Logger.getLogger("RepositoryNode");
   protected LockssRepositoryImpl repository;
+  protected ArchivalUnit au;
+  protected HistoryRepository histRepo;
+  
   // preset so testIllegalOperations() doesn't null pointer
   private Deadline versionTimeout = Deadline.MAX;
 
   RepositoryNodeImpl(String url, String nodeLocation,
-                     LockssRepositoryImpl repository) {
+                     LockssRepositoryImpl repository,
+                     ArchivalUnit au) {
     this.url = url;
     this.nodeLocation = nodeLocation;
     this.repository = repository;
+    this.au = au;
+    
+    if (repository != null) {
+      this.histRepo = repository.getDaemon().getHistoryRepository(au);
+    } else {
+      this.histRepo = null;  // Make this explicit.
+    }
   }
 
   public String getNodeUrl() {
@@ -242,9 +254,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // since RepositoryNodes update and cache tree size, efficient to use them
     int children = 0;
-    for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
+    for (Iterator<RepositoryNode> subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
       // call recursively on all children
-      RepositoryNode subNode = (RepositoryNode)subNodes.next();
+      RepositoryNode subNode = subNodes.next();
       totalSize += subNode.getTreeContentSize(null, true);
       children++;
     }
@@ -283,7 +295,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return true;
   }
 
-  public Iterator listChildren(CachedUrlSetSpec filter, boolean includeInactive) {
+  public Iterator<RepositoryNode> listChildren(CachedUrlSetSpec filter, boolean includeInactive) {
     return getNodeList(filter, includeInactive).iterator();
   }
 
@@ -294,7 +306,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * @param includeInactive true iff inactive nodes to be included
    * @return List the child list of RepositoryNodes
    */
-  protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
+  protected List<RepositoryNode> getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
     if (nodeRootFile==null) initNodeRoot();
     if (contentDir==null) getContentDir();
     File[] children = nodeRootFile.listFiles();
@@ -319,7 +331,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       CurrentConfig.getBooleanParam(PARAM_FIX_UNNORMALIZED,
 				    DEFAULT_FIX_UNNORMALIZED);
 
-    ArrayList childL = new ArrayList(listSize);
+    ArrayList<RepositoryNode> childL = new ArrayList<RepositoryNode>(listSize);
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
       if ((child.getName().equals(CONTENT_DIR)) || (!child.isDirectory())) {
@@ -1139,8 +1151,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   
   
   /** Consume the input stream, decoding peer identity keys  */
-  Set decodeAgreementHistory(DataInputStream is) {
-    Set history = new HashSet();
+  Set<String> decodeAgreementHistory(DataInputStream is) {
+    Set<String> history = new HashSet<String>();
     String id;
     try {
       while ((id = IDUtil.decodeOneKey(is)) != null) {
@@ -1610,7 +1622,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[reponode: (");
-    List flags = new ArrayList();
+    List<String> flags = new ArrayList<String>();
     if (newVersionOpen) flags.add("newver");
     if (newPropsSet) flags.add("np");
     if (wasInactive) flags.add("wasinact");
@@ -1699,10 +1711,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     /* The following methods implement RepositoryFileVersion. */
     
     public void commit() throws IOException, LockssRepositoryException,
-        NoTextException {
-      // The original 'sealVersion' can only seal the last version of the repository.
-      // Since this is an earlier version, we can't call 'sealVersion'.
-      
+        NoTextException {      
       curOutputStream = null;
       newPropsSet = false;
     }
@@ -1737,14 +1746,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
     public void setInputStream(InputStream istr) throws IOException,
         LockssRepositoryException {
       File fileContent;
+      OutputStream ostrContent;
       
-      fileContent = getNodeContents().getContentFile();
-      curOutputStream = new FileOutputStream(fileContent);
-      StreamUtil.copy(istr, curOutputStream);
+      fileContent = getContentFile();
+      ostrContent = new FileOutputStream(fileContent);
+      
+      StreamUtil.copy(istr, ostrContent);
     }
 
     public void setProperties(Properties prop) throws IOException,
         LockssRepositoryException {
+      newPropsSet = true;
+      
       File propsFile = getVersionedPropsFile(version);
 
       OutputStream os = new BufferedOutputStream(new FileOutputStream(
@@ -1874,9 +1887,30 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return getNodeContents().getInputStream();
   }
 
+  // IMPORTANT: The temp props file has priority over the main
+  // props file for this function.
+  
   public Properties getProperties() throws IOException,
       LockssRepositoryException {
-    return getNodeContents().getProperties();
+    Properties props;
+    
+    props = new Properties();
+    try {
+      // check properties to see if deleted
+      loadPropsInto(tempPropsFile, props);
+    } catch (FileNotFoundException e) {
+      try {
+        loadPropsInto(currentPropsFile, props);
+      } catch (FileNotFoundException e2) {
+        props = null;
+      }
+    } catch (Exception e) {
+      logger.error("Error loading node props from " + nodePropsFile.getPath(),
+                   e);
+      throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
+    }
+
+    return props;
   }
 
   public void move(String strNewLocation) throws LockssRepositoryException {
@@ -1885,15 +1919,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public void setInputStream(InputStream istr) throws IOException,
       LockssRepositoryException {
-    OutputStream ostrContent;
+    OutputStream ostrContent = null;
     
     newVersionOpen = true;
     versionTimeout = Deadline.in(
         CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
                                    DEFAULT_VERSION_TIMEOUT));
     
-    ostrContent = getNewOutputStream();
-    StreamUtil.copy(istr, ostrContent);    
+    try {
+      ostrContent = getNewOutputStream();
+      StreamUtil.copy(istr, ostrContent);
+    } finally {
+      if (ostrContent != null) {
+        ostrContent.close();
+      }
+      if (istr != null) {
+        istr.close();
+      }
+    }
   }
 
   public void setProperties(Properties prop) throws IOException,
@@ -1908,6 +1951,270 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public void undelete() throws LockssRepositoryException {
     markAsNotDeleted();
   }
+
   
-  /* End of methods for RepositoryFileVersion. */
+  public void cleanDatabase() throws LockssRepositoryException {
+    // For now, do nothing.
+    // This may change.
+  }
+
+  /* The following methods create RepositoryFile. */
+  public RepositoryFileVersion createNewVersion()
+      throws LockssRepositoryException, FileNotFoundException {
+    makeNewVersion();
+    
+    return this; // This is a RepositoryFileVersion (as well as many other things.)
+  }
+
+  
+  public RepositoryFileVersion createNewVersionBefore(
+      RepositoryFileVersion rfvBefore) throws LockssRepositoryException,
+      FileNotFoundException {
+    // The old repository is NOT set up to accept versions out of order.
+    throw new LockssRepositoryException("The v1 repository cannot accept versions out of order.");
+  }
+
+  
+  public PersistentPeerIdSet getAgreeingPeerIdSet()
+      throws LockssRepositoryException {
+    return loadAgreementHistory();
+  }
+
+  
+  public long getContentSize(boolean mostRecentOnly)
+      throws LockssRepositoryException {
+    long total;
+    
+    if (mostRecentOnly) {
+      return getContentSize();
+    }
+    
+    total = 0;
+    for (RepositoryFileVersion rfvNext : listVersions()) {
+      total += rfvNext.getContentSize();
+    }
+    
+    return total;    
+  }
+
+  
+  public RepositoryFileVersion getPreferredVersion()
+      throws LockssRepositoryException {
+    // Important note: This version of the repository does NOT have preferred versions.
+    // I am returning the current version.
+    return this;
+  }
+
+  
+  public List<RepositoryFileVersion> listVersions()
+      throws LockssRepositoryException {
+    return listVersions(Integer.MAX_VALUE);
+  }
+
+  
+  public List<RepositoryFileVersion> listVersions(int numVersions)
+      throws LockssRepositoryException {
+    int[] arinVersionNumbers;
+    int i;
+    List<RepositoryFileVersion> lirfvVersions;
+    
+    lirfvVersions = new ArrayList<RepositoryFileVersion>();
+    
+    arinVersionNumbers = getVersionNumbers();
+    Arrays.sort(arinVersionNumbers); // This method may not be necessary.
+    for (i = (numVersions > arinVersionNumbers.length ? 0 : arinVersionNumbers.length - numVersions - 1); 
+         i < arinVersionNumbers.length; 
+         i++) {
+      lirfvVersions.add(getNodeVersion(arinVersionNumbers[i]));
+    }
+    
+    // Don't forget the current version...
+    lirfvVersions.add(this);
+    
+    return lirfvVersions;
+  }
+
+  
+  public void setAgreeingPeerIdSet(PersistentPeerIdSet sepi)
+      throws LockssRepositoryException {
+    PersistentPeerIdSet ppisReturn;
+    Streamer streamer;
+    
+    if (agreementFile == null) {
+      initAgreementFile();
+    }  
+    
+    if (!ensureDirExists(getContentDir())) {
+      logger.error("Could not create content directory in setAgreeingPeerIdSet.");
+      throw new LockssRepository.RepositoryStateException("Couldn't create content directory.");
+    }
+    
+    try {
+      streamer = new StreamerFile(agreementFile);
+      sepi.setStreamer(streamer);
+      sepi.store(true);
+    } catch (Exception e) {
+      logger.error("Error saving agreement history" + e.getMessage());
+      throw new LockssRepository.RepositoryStateException("Couldn't save agreement file.");
+    }
+  }
+
+  
+//  public void setPollHistories(NodeState nodeState)
+//      throws LockssRepositoryException {
+//    histRepo.storePollHistories(nodeState);
+//  }
+
+  
+  public void setPreferredVersion(RepositoryFileVersion rfv)
+      throws LockssRepositoryException {
+    // There is no concept of a preferred version under the old repository node.
+    throw new LockssRepositoryException("The v1 repository does not have the concept of a preferred version.");
+  }
+
+  
+  public List<RepositoryFile> getFileList(CachedUrlSetSpec filter
+      /*, includeDeleted = false */)
+      throws LockssRepositoryException {
+    return getFileList(filter, false);
+  }
+
+  
+  public List<RepositoryFile> getFileList(CachedUrlSetSpec filter,
+      boolean includeDeleted) throws LockssRepositoryException {
+    // The old listChildren() method returns an iterator; this method returns a list.
+    
+    List<RepositoryFile> lirfFiles;
+    Iterator<RepositoryNode> itrnChildren;
+    RepositoryNode rnChild;
+
+    lirfFiles = new ArrayList<RepositoryFile>();
+    itrnChildren = listChildren(filter, includeDeleted);
+    while (itrnChildren.hasNext()) {
+      rnChild = itrnChildren.next();
+      lirfFiles.add(rnChild);
+    }
+    
+    return lirfFiles;
+  }
+
+  
+  public RepositoryFile[] getFiles(/* includeDeleted = false */) throws LockssRepositoryException {
+    return getFiles(false);
+  }
+
+  
+  public RepositoryFile[] getFiles(boolean includeDeleted)
+      throws LockssRepositoryException {
+    return (RepositoryFile[]) getFileList(null, includeDeleted).toArray();
+  }
+
+  
+  public RepositoryFile[] getFiles(int maxVersions /*, includeDeleted = false */)
+      throws LockssRepositoryException {
+    return getFiles(maxVersions, false);
+  }
+
+  
+  public RepositoryFile[] getFiles(int maxVersions, boolean includeDeleted)
+      throws LockssRepositoryException {
+    RepositoryFile[] arfiOrig;
+    RepositoryFile[] arfiReturn;
+    
+    arfiOrig = (RepositoryFile[]) getFileList(null, includeDeleted).toArray();
+    
+    if (maxVersions < arfiOrig.length) {
+      int i;
+      int iDiff;
+      
+      arfiReturn = new RepositoryFile[maxVersions];
+      iDiff = arfiOrig.length - maxVersions;
+      for (i = arfiOrig.length - maxVersions; i < arfiOrig.length; i++) {
+        arfiReturn[i - iDiff] = arfiOrig[i];
+      }
+    } else {
+      arfiReturn = arfiOrig;
+    }
+    
+    return arfiReturn;
+  }
+
+  /* This method depends on there already being a node state associated with this
+   * instance.
+   * 
+   * Note that the old repository gave an iterator; the new interface returns a list.
+   * 
+   * (non-Javadoc)
+   * @see org.lockss.repository.v2.RepositoryNode#getPollHistoryList()
+   */
+//  @SuppressWarnings("unchecked")
+//  public List<PollHistory> getPollHistoryList()
+//      throws LockssRepositoryException {
+//    NodeState ns;
+//    Iterator<PollHistory> itphPolls;
+//    List<PollHistory> liphPolls;
+//    
+//    
+//    ns = histRepo.loadNodeState(null);
+//    
+//    liphPolls = new ArrayList<PollHistory>();
+//    itphPolls = ns.getPollHistories();
+//    
+//    while (itphPolls.hasNext()) {
+//      liphPolls.add(itphPolls.next());
+//    }
+//    
+//    return liphPolls;
+//  }
+
+  
+  public long getTreeContentSize(CachedUrlSetSpec filter,
+      boolean calcIfUnknown, boolean preferredOnly)
+      throws LockssRepositoryException {
+    if (preferredOnly) {
+      if (filter == null || filter.matches(url)) {
+        return getContentSize();
+      } 
+        
+      return 0;      
+    }
+    
+    return getTreeContentSize(filter, calcIfUnknown);
+  }
+
+  
+  public NodeState loadNodeState(CachedUrlSet cus)
+      throws LockssRepositoryException {
+    return histRepo.loadNodeState(cus);
+  }
+
+  
+  public RepositoryFile makeNewRepositoryFile(String name)
+      throws LockssRepositoryException {
+    try {
+      LockssRepository lr = repository.getDaemon().getLockssRepository(au);
+      return lr.createNewNode(url + "/" + name);
+    } catch (MalformedURLException e) {
+      throw new LockssRepositoryException(e);
+    }
+  }
+
+  
+  public org.lockss.repository.v2.RepositoryNode makeNewRepositoryNode(
+      String name) throws LockssRepositoryException {
+    try {
+      LockssRepository lr = repository.getDaemon().getLockssRepository(au);
+      return lr.createNewNode(url + "/" + name);
+    } catch (MalformedURLException e) {
+      throw new LockssRepositoryException(e);
+    }
+  }
+
+  
+  public void storeNodeState(NodeState nodeState)
+      throws LockssRepositoryException {
+    histRepo.storeNodeState(nodeState);
+  }
+  
+  /* End of methods for RepositoryFile. */
 }

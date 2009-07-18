@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.60.4.1 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.60.4.2 2009-07-18 01:28:28 edwardsb1 Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
+import javax.jcr.Node;
+
 import org.lockss.test.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -53,6 +56,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNodeImpl.TREE_SIZE_PROPERTY;
   static final String CHILD_COUNT_PROPERTY =
     RepositoryNodeImpl.CHILD_COUNT_PROPERTY;
+  
+  // Used by the "getPreferredVersion" and "createNewVersion" tests. 
+  private static int k_numTestVersions = 10;
 
   private MockLockssDaemon theDaemon;
   private MyLockssRepositoryImpl repo;
@@ -109,9 +115,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testGetNodeUrl() {
-    RepositoryNode node = new RepositoryNodeImpl("testUrl", "testDir", null);
+    RepositoryNode node = new RepositoryNodeImpl("testUrl", "testDir", null, mau);
     assertEquals("testUrl", node.getNodeUrl());
-    node = new RepositoryNodeImpl("testUrl/test.txt", "testUrl/test.txt", null);
+    node = new RepositoryNodeImpl("testUrl/test.txt", "testUrl/test.txt", null, mau);
     assertEquals("testUrl/test.txt", node.getNodeUrl());
   }
 
@@ -318,7 +324,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public void testListEntriesNonexistentDir() throws Exception {
     RepositoryNode node = new RepositoryNodeImpl("foo-no-url", "foo-no-dir",
-						 null);
+						 null, mau);
     try {
       node.listChildren(null, false);
       fail("listChildren() is nonexistent dir should throw");
@@ -396,7 +402,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testNormalizeUrlEncodingCase() throws Exception {
-    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
+    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null, mau);
     // nothing to normalize
     File file = new File("foo/bar/baz");
     assertSame(file, node.normalize(file));
@@ -417,7 +423,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testNormalizeTrailingQuestion() throws Exception {
-    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
+    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null, mau);
     // nothing to normalize
     File file = new File("foo/bar/baz");
     assertSame(file, node.normalize(file));
@@ -1031,7 +1037,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(1, leaf.getCurrentVersion());
   }
 
-  public void testGetInputStream() throws Exception {
+  public void testGetInputStream1() throws Exception {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/test.cache",
         "test stream", null);
@@ -1039,7 +1045,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("test stream", resultStr);
   }
 
-  public void testGetProperties() throws Exception {
+  public void testGetProperties1() throws Exception {
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
     RepositoryNode leaf =
@@ -1407,7 +1413,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("true", leaf.nodeProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY));
   }
 
-  public void testDelete() throws Exception {
+  public void testDelete1() throws Exception {
     RepositoryNodeImpl leaf =
         (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
                                        "test stream", null);
@@ -1857,14 +1863,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String url = "http://www.example.com/versionedcontent.txt";
     String key = "key";
     String val = "grrl";
-    Properties props = new Properties();
+    Properties myProps = new Properties();
 
     RepositoryNode leaf = repo.createNewNode(url);
     // create several versions
     for (ix = 1; ix <= max; ix++) {
-      props.setProperty(key, val+ix);
+      myProps.setProperty(key, val+ix);
       // Notice that this sets initial, default text...
-      createContentVersion(leaf, cntnt(ix), props);
+      createContentVersion(leaf, cntnt(ix), myProps);
     }
     
     // We need to get multiple versions, because RepositoryFileVersionImpl
@@ -1879,9 +1885,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       
       // Enter it into the RFV.
       istrText = new ByteArrayInputStream(sbRandomText.toString().getBytes());
-      RepositoryFileVersion rfvText = (RepositoryFileVersion) leaf.getNodeVersion(ix);
+      RepositoryFileVersion rfvText = leaf.getNodeVersion(ix);
       rfvText.setInputStream(istrText);
-      rfvText.setProperties(props);
+      rfvText.setProperties(myProps);
       
       rfvText.commit();
       
@@ -1901,20 +1907,20 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String url = "http://www.example.com/versionedcontent.txt";
     String key = "key";
     String val = "grrl";
-    Properties props = new Properties();
+    Properties myProps = new Properties();
 
     RepositoryNode leaf = repo.createNewNode(url);
     // create several versions
     for (ix = 1; ix <= max; ix++) {
-      props.setProperty(key, val+ix);
+      myProps.setProperty(key, val+ix);
       // Notice that this sets initial, default text...
-      createContentVersion(leaf, cntnt(ix), props);
+      createContentVersion(leaf, cntnt(ix), myProps);
     }
     
     // We need to get multiple versions, because RepositoryFileVersionImpl
     // handles the last version differently than the other versions!
     for (ix = 1; ix <= max; ix++) {
-      RepositoryFileVersion rfvDeleted = (RepositoryFileVersion) leaf.getNodeVersion(ix);
+      RepositoryFileVersion rfvDeleted = leaf.getNodeVersion(ix);
       
       // Delete and check.
       rfvDeleted.delete();
@@ -1936,9 +1942,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testRFVProperties() throws Exception {
     int i;
     int ix;
-    InputStream istrResult;
     InputStream istrText;
-    Properties propsOrig;
+    Properties myProps;
     Properties propsResult;
     StringBuilder sbRandomText;
     String strResult;
@@ -1947,14 +1952,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String url = "http://www.example.com/versionedcontent.txt";
     String key = "key";
     String val = "grrl";
-    Properties props = new Properties();
 
+    myProps = new Properties();
     RepositoryNode leaf = repo.createNewNode(url);
     // create several versions
     for (ix = 1; ix <= max; ix++) {
-      props.setProperty(key, val+ix);
+      myProps.setProperty(key, val+ix);
       // Notice that this sets initial, default text...
-      createContentVersion(leaf, cntnt(ix), props);
+      createContentVersion(leaf, cntnt(ix), myProps);
     }
     
     // We need to get multiple versions, because RepositoryFileVersionImpl
@@ -1968,10 +1973,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       }
       
       // Enter props into the RFV.
-      RepositoryFileVersion rfvText = (RepositoryFileVersion) leaf.getNodeVersion(ix);
-      props = new Properties();
-      props.setProperty(key, sbRandomText.toString());
-      rfvText.setProperties(props);
+      RepositoryFileVersion rfvText = leaf.getNodeVersion(ix);
+      myProps = new Properties();
+      myProps.setProperty(key, sbRandomText.toString());
+      rfvText.setProperties(myProps);
       
       istrText = new ByteArrayInputStream(cntnt(20).getBytes());
       rfvText.setInputStream(istrText);
@@ -1987,12 +1992,264 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
   }
   
-  // End of RepositoryFileVersion method tests.
+  // End of RepositoryFileVersion interface tests.
   
+  // Start of RepositoryFile interface tests.
+  
+  // Note that RepositoryFile.getNodeUrl() is tested above.
+    
+  /**
+   * Test method for RepositoryFile.getProperties()
+   * This obviously also tests .setProperties().
+   * 
+   * This code is based on the tests for RepositoryFileVersion.Properties.
+   * 
+   * @throws Exception
+   */
+  public final void testRFGetProperties() throws Exception {
+    int i;
+    int ix;
+    Properties propsResult;
+    StringBuilder sbRandomText;
+    String strResult;
+    
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties myProps = new Properties();
+
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (ix = 1; ix <= max; ix++) {
+      myProps.setProperty(key, val+ix);
+      // Notice that this sets initial, default text...
+      createContentVersion(leaf, cntnt(ix), myProps);
+    }
+    
+    // Create text for the properties.
+    sbRandomText = new StringBuilder();
+    for (i = 0; i < 100; i++) {
+      // Series of random letters...
+      sbRandomText.append((char) ((Math.random() * 26) + 65));
+    }
+    
+    RepositoryFile rfText = leaf;
+    
+    // Enter props into the RFV.
+    myProps = new Properties();
+    myProps.setProperty(key, sbRandomText.toString());
+    rfText.setProperties(myProps);
+                
+    // Retrieve props from the RFV.
+    propsResult = rfText.getProperties();
+    
+    // Verify that what's sent and what's retrieved are the same.
+    strResult = propsResult.getProperty(key);
+    assertEquals(sbRandomText.toString(), strResult);
+  }
+  
+    
+  /**
+   * Test method for RepositoryFile.createNewVersion()
+   * @throws Exception
+   */
+  public final void testRFCreateNewVersion() throws Exception {
+    int i;
+    InputStream istrContent;
+    Properties myProps = new Properties();
+    RepositoryFileVersion[] arrfvNewVersion = new RepositoryFileVersion[10];
+    String url = "http://www.example.com/versionedcontent.txt";
+
+    RepositoryFile rfTest = repo.createNewNode(url);
+    myProps.put("key", "value");
+    
+    for (i = 0; i < 10; i++) {
+      arrfvNewVersion[i] = rfTest.createNewVersion();
+      
+      istrContent = new ByteArrayInputStream(cntnt(i).getBytes());
+      arrfvNewVersion[i].setInputStream(istrContent);
+      arrfvNewVersion[i].setProperties(myProps);
+      arrfvNewVersion[i].commit();
+    }
+
+    // Just verify that we have the right number of children.
+    assertEquals(10, rfTest.listVersions().size());
+  }
+  
+  
+  /**
+   * Test method for RepositoryFile.getAgreeingPeerIdSet()
+   * It also tests .setAgreeingPeerIdSet.
+   * 
+   * Most material in this test comes from TestRepositoryFileImpl.testGetAgreeingPeerIdSet.
+   * 
+   * @throws Exception
+   */
+  
+  private final String k_filenamePPIS = "PPIS.data";
+  private final static String k_strPeerIdentityOne = "TCP:[127.0.0.2]:0";
+  private final static String k_strPeerIdentityTwo = "TCP:[192.168.0.128]:0";
+
+  public final void testRFGetAgreeingPeerIdSet() throws Exception {
+    File filePPIS;
+    MockIdentityManager idman;
+    PeerIdentity piOne;
+    PeerIdentity piTwo;
+    PersistentPeerIdSet ppisSource;
+    PersistentPeerIdSet ppisRetrieve;
+    RepositoryFile rfPeerIdSet;
+    String url = "http://www.example.com/versionedcontent.txt";
+        
+    idmgr.addPeerIdentity(k_strPeerIdentityOne, new MockPeerIdentity(k_strPeerIdentityOne));
+    idmgr.addPeerIdentity(k_strPeerIdentityTwo, new MockPeerIdentity(k_strPeerIdentityTwo));
+    piOne = idmgr.findPeerIdentity(k_strPeerIdentityOne);
+    piTwo = idmgr.findPeerIdentity(k_strPeerIdentityTwo);
+    
+    // Construct and populate a PersistentPeerIdSet.
+    filePPIS = FileTestUtil.tempFile(k_filenamePPIS);
+    ppisSource = new PersistentPeerIdSetImpl(new StreamerFile(filePPIS), idmgr);
+    ppisSource.add(piOne);
+    ppisSource.add(piTwo);
+    ppisSource.store();
+    
+    // Construct and populate the Repository Node.
+    rfPeerIdSet = repo.createNewNode(url);    
+    rfPeerIdSet.setAgreeingPeerIdSet(ppisSource);
+    
+    // Test.
+    ppisRetrieve = rfPeerIdSet.getAgreeingPeerIdSet();
+    assertEquals(2, ppisRetrieve.size());
+    assertTrue(ppisRetrieve.contains(piOne));
+    assertTrue(ppisRetrieve.contains(piTwo));
+  }
+  
+  
+  /**
+   * Test method for RepositoryFile.getContentSize()
+   * @throws Exception
+   */
+  public final void testRFGetContentSize() throws Exception {
+    byte[] arbyContent;
+    RepositoryFileVersion[] arrfvVersions;
+    int b;
+    InputStream istrContent;
+    int lenContent;
+    long lenTotal;
+    Node nodeGetContentSize;
+    Properties props = new Properties();
+    RepositoryFile rfGetContentSize;
+    String url = "http://www.example.com/versionedcontent.txt";
+    int ver;
+    
+    // We assume that the RepositoryFileVersion.getContentSize()
+    // works correctly.
+    
+    // Create a file with multiple versions.
+    arrfvVersions = new RepositoryFileVersion[k_numTestVersions];
+    
+    rfGetContentSize = repo.createNewNode(url);
+
+    lenTotal = 0;
+    for (ver = 0; ver < k_numTestVersions; ver++) {
+      arrfvVersions[ver] = rfGetContentSize.createNewVersion();
+      
+      lenContent = (int) (Math.random() * 200) + 1;
+      lenTotal += lenContent;
+      
+      arbyContent = new byte[lenContent];
+      for (b = 0; b < lenContent; b++) {
+        arbyContent[b] = (byte) (65 + Math.random() * 26);
+      }
+      
+      istrContent = new ByteArrayInputStream(arbyContent);
+      arrfvVersions[ver].setInputStream(istrContent);
+      arrfvVersions[ver].setProperties(props);
+      arrfvVersions[ver].commit();
+    }
+    
+    // Test that 'getContentSize(false)' is the total of all lengths.
+    assertEquals(lenTotal, rfGetContentSize.getContentSize(false));
+  }
+  
+  
+  /**
+   * Test method for RepositoryFile.getPreferredVersion()
+   * @throws Exception
+   */
+  public final void testRFGetPreferredVersion() throws Exception {
+    // The version 1 repository has no way to set the preferred version;
+    // it only returns the last version given.  
+    int ix;
+    
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties myProps = new Properties();
+    Properties propTest;
+    
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (ix = 1; ix <= max; ix++) {
+      myProps.setProperty(key, val+ix);
+      // Notice that this sets initial, default text...
+      createContentVersion(leaf, cntnt(ix), myProps);
+    }
+
+    RepositoryFile rfGetVersion = leaf;
+    RepositoryFileVersion rfvVersion = rfGetVersion.getPreferredVersion();
+
+    // Verify that we have the right version through properties...
+    propTest = rfvVersion.getProperties();
+    assertEquals(propTest.getProperty(key), val+max);
+  }
+  
+  
+  /**
+   * Test method for RepositoryFile.listVersions()
+   * @throws Exception
+   */
+  public final void testRFListVersions() throws Exception {
+    // The version 1 repository has no way to set the preferred version;
+    // it only returns the last version given.  
+    int ix;
+    
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties myProps = new Properties();
+    Properties propTest;
+    
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (ix = 1; ix <= max; ix++) {
+      myProps.setProperty(key, val+ix);
+      // Notice that this sets initial, default text...
+      createContentVersion(leaf, cntnt(ix), myProps);
+    }
+
+    RepositoryFile rfGetVersion = leaf;
+    List<RepositoryFileVersion> lirfvVersion = rfGetVersion.listVersions();
+
+    // Verify that we have the right versions through properties...
+    // Note: This test may need to be tuned if the list is in a different order.
+    ix = 1;
+    for (RepositoryFileVersion rfv : lirfvVersion) {
+      propTest = rfv.getProperties();
+      assertEquals(propTest.getProperty(key), val+ix);
+      ix++;
+    }
+  }
+  
+  
+  
+  // Additional methods used for testing...
   
   private RepositoryNode createLeaf(String url, String content,
-      Properties props) throws Exception {
-    return createLeaf(repo, url, content, props);
+      Properties theProps) throws Exception {
+    return createLeaf(repo, url, content, theProps);
   }
 
   public static RepositoryNode createLeaf(LockssRepository repo, String url,
@@ -2059,7 +2316,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     static boolean failEnsureDirExists = false;
 
     MyMockRepositoryNode(RepositoryNodeImpl nodeImpl) {
-      super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
+      super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository, new MockArchivalUnit());
     }
 
     File getDatedVersionedPropsFile(int version, long date) {
@@ -2082,33 +2339,33 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     boolean checkNodeRootConsistency() {
       if (failRootConsist) {
         return false;
-      } else {
-        return super.checkNodeRootConsistency();
-      }
+      } 
+      
+      return super.checkNodeRootConsistency();
     }
 
     boolean checkContentConsistency() {
       if (failContentConsist) {
         return false;
-      } else {
-        return super.checkContentConsistency();
-      }
+      } 
+      
+      return super.checkContentConsistency();
     }
 
     void ensureCurrentInfoLoaded() {
       if (failEnsureCurrentLoaded) {
         throw new LockssRepository.RepositoryStateException("Couldn't load current info.");
-      } else {
-        super.ensureCurrentInfoLoaded();
-      }
+      } 
+      
+      super.ensureCurrentInfoLoaded();
     }
 
     boolean ensureDirExists(File dirFile) {
       if (failEnsureDirExists) {
         return false;
-      } else {
-        return super.ensureDirExists(dirFile);
-      }
+      } 
+      
+      return super.ensureDirExists(dirFile);
     }
   }
 
@@ -2119,12 +2376,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
 
     MyLockssRepositoryImpl(String rootPath) {
-      super(rootPath);
+      super(rootPath, new MockArchivalUnit());
     }
 
     public String canonicalizePath(String url)
 	throws MalformedURLException {
-      if (dontNormalize) return url;
+      if (dontNormalize) {
+        return url;
+      }
+      
       return super.canonicalizePath(url);
     }
 
@@ -2139,7 +2399,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       LockssRepositoryImpl repo = new MyLockssRepositoryImpl(auDir);
       Plugin plugin = au.getPlugin();
       if (plugin != null) {
-	LockssDaemon daemon = plugin.getDaemon();
+ 	LockssDaemon daemon = plugin.getDaemon();
 	if (daemon != null) {
 	  RepositoryManager mgr = daemon.getRepositoryManager();
 	  if (mgr != null) {

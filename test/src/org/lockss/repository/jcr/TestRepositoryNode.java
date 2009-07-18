@@ -753,7 +753,7 @@ public class TestRepositoryNode extends TestCase {
     // NodeStateImpl.
   }
 
- 
+
   // Private methods, used by the above tests.
   
   /**

@@ -118,7 +118,8 @@ public interface RepositoryNode {
   /**
    * Used by LockssAuRepository.loadPollHistories.
    */
-  public List<PollHistory> getPollHistoryList() throws LockssRepositoryException;
+  // public List<PollHistory> getPollHistoryList() throws LockssRepositoryException;
+  // Removed.
 
   /**
    * Creates a new file under this node, and returns the associated RepositoryFile.
@@ -147,12 +148,12 @@ public interface RepositoryNode {
    * @param cus the CachedUrlSet
    * @return a {@link NodeState}
    */
-  public NodeState loadNodeState(CachedUrlSet cus) throws LockssRepositoryException;
+//  public NodeState loadNodeState(CachedUrlSet cus) throws LockssRepositoryException;
 
   /**
    * Stores the current node state info, except the histories.
    */
-  public void storeNodeState(NodeState nodeState) throws LockssRepositoryException;
+//  public void storeNodeState(NodeState nodeState) throws LockssRepositoryException;
 
   /**
    * Move the location of the .warc files

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.30 2007-08-22 06:45:15 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.30.24.1 2009-07-18 01:28:27 edwardsb1 Exp $
  */
 
 /*
@@ -220,7 +220,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  row.put("params", config);
 	} else {
 	  row.put("au", "");
-	  long du = repoMgr.getRepoDiskUsage(dirString, false);
+	  long du = repoMgr.getRepoDiskUsage(dirString, false, au);
 	  if (du != -1) {
 	    addDu(row, du);
 	  }
