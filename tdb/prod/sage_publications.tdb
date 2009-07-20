@@ -2088,8 +2088,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Critique of Anthropology Volume 25 ; 25 >
         au < do_not_process ; Critique of Anthropology Volume 26 ; 26 >
         au < released ; Critique of Anthropology Volume 27 ; 27 >
-        au < testing ; Critique of Anthropology Volume 28 ; 28 >
-        au < testing ; Critique of Anthropology Volume 29 ; 29 >
+        au < ready ; Critique of Anthropology Volume 28 ; 28 >
+        au < ready ; Critique of Anthropology Volume 29 ; 29 >
 
       }
 
@@ -2120,8 +2120,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Cross-Cultural Research Volume 39 ; 39 >
         au < do_not_process ; Cross-Cultural Research Volume 40 ; 40 >
         au < released ; Cross-Cultural Research Volume 41 ; 41 >
-        au < testing ; Cross-Cultural Research Volume 42 ; 42 >
-        au < testing ; Cross-Cultural Research Volume 43 ; 43 >
+        au < ready ; Cross-Cultural Research Volume 42 ; 42 >
+        au < ready ; Cross-Cultural Research Volume 43 ; 43 >
 
       }
 
@@ -2142,8 +2142,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Cultural Dynamics Volume 17 ; 17 >
         au < released ; Cultural Dynamics Volume 18 ; 18 >
         au < released ; Cultural Dynamics Volume 19 ; 19 >
-        au < testing ; Cultural Dynamics Volume 20 ; 20 >
-        au < testing ; Cultural Dynamics Volume 21 ; 21 >
+        au < ready ; Cultural Dynamics Volume 20 ; 20 >
+        au < ready ; Cultural Dynamics Volume 21 ; 21 >
 
       }
 
@@ -2163,8 +2163,8 @@ comment[csp7] = manifest page is malformed
 
         au < released ; Cultural Geographies Volume 13 ; 13 >
         au < released ; Cultural Geographies Volume 14 ; 14 >
-        au < testing ; Cultural Geographies Volume 15 ; 15 >
-        au < testing ; Cultural Geographies Volume 16 ; 16 >
+        au < ready ; Cultural Geographies Volume 15 ; 15 >
+        au < ready ; Cultural Geographies Volume 16 ; 16 >
 
       }
 
@@ -2205,8 +2205,8 @@ comment[csp7] = manifest page is malformed
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
         au < released ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
-        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
-        au < testing ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
+        au < ready ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
+        au < ready ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
 
       }
 
@@ -2237,8 +2237,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Culture & Psychology Volume 11 ; 11 >
         au < do_not_process ; Culture & Psychology Volume 12 ; 12 >
         au < released ; Culture & Psychology Volume 13 ; 13 >
-        au < testing ; Culture & Psychology Volume 14 ; 14 >
-        au < testing ; Culture & Psychology Volume 15 ; 15 >
+        au < ready ; Culture & Psychology Volume 14 ; 14 >
+        au < ready ; Culture & Psychology Volume 15 ; 15 >
 
       }
 
@@ -2259,8 +2259,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Current Sociology Volume 53 ; 53 >
         au < released ; Current Sociology Volume 54 ; 54 >
         au < released ; Current Sociology Volume 55 ; 55 >
-        au < manifest ; Current Sociology Volume 56 ; 56 >
-        au < manifest ; Current Sociology Volume 57 ; 57 >
+        au < testing ; Current Sociology Volume 56 ; 56 >
+        au < testing ; Current Sociology Volume 57 ; 57 >
 
       }
 
@@ -2292,7 +2292,7 @@ comment[csp7] = manifest page is malformed
         au < do_not_process ; Currents in Biblical Research Volume 4 ; 4 >
         au < released ; Currents in Biblical Research Volume 5 ; 5 >
         au < released ; Currents in Biblical Research Volume 6 ; 6 >
-        au < manifest ; Currents in Biblical Research Volume 7 ; 7 >
+        au < testing ; Currents in Biblical Research Volume 7 ; 7 >
 
       }
 
@@ -2313,8 +2313,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Dementia Volume 4 ; 4 >
         au < released ; Dementia Volume 5 ; 5 >
         au < released ; Dementia Volume 6 ; 6 >
-        au < manifest ; Dementia Volume 7 ; 7 >
-        au < manifest ; Dementia Volume 8 ; 8 >
+        au < testing ; Dementia Volume 7 ; 7 >
+        au < testing ; Dementia Volume 8 ; 8 >
 
       }
 
@@ -2345,8 +2345,8 @@ comment[csp7] = manifest page is malformed
         au < released ; The Diabetes Educator Volume 31 ; 31 >
         au < do_not_process ; The Diabetes Educator Volume 32 ; 32 >
         au < released ; The Diabetes Educator Volume 33 ; 33 >
-        au < manifest ; The Diabetes Educator Volume 34 ; 34 >
-        au < manifest ; The Diabetes Educator Volume 35 ; 35 >
+        au < testing ; The Diabetes Educator Volume 34 ; 34 >
+        au < testing ; The Diabetes Educator Volume 35 ; 35 >
 
       }
 
@@ -2367,8 +2367,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Diogenes Volume 52 ; 52 >
         au < released ; Diogenes Volume 53 ; 53 >
         au < released ; Diogenes Volume 54 ; 54 >
-        au < manifest ; Diogenes Volume 55 ; 55 >
-        au < manifest ; Diogenes Volume 56 ; 56 >
+        au < testing ; Diogenes Volume 55 ; 55 >
+        au < testing ; Diogenes Volume 56 ; 56 >
 
       }
 
@@ -2387,8 +2387,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Discourse & Communication Volume 1 ; 1 >
-        au < manifest ; Discourse & Communication Volume 2 ; 2 >
-        au < manifest ; Discourse & Communication Volume 3 ; 3 >
+        au < testing ; Discourse & Communication Volume 2 ; 2 >
+        au < testing ; Discourse & Communication Volume 3 ; 3 >
 
       }
 
@@ -2409,8 +2409,8 @@ comment[csp7] = manifest page is malformed
         au < released ; Discourse & Society Volume 16 ; 16 >
         au < released ; Discourse & Society Volume 17 ; 17 >
         au < released ; Discourse & Society Volume 18 ; 18 >
-        au < manifest ; Discourse & Society Volume 19 ; 19 >
-        au < manifest ; Discourse & Society Volume 20 ; 20 >
+        au < testing ; Discourse & Society Volume 19 ; 19 >
+        au < testing ; Discourse & Society Volume 20 ; 20 >
 
       }
 
@@ -6067,8 +6067,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; The Journal of Clinical Pharmacology Volume 45 ; 45 >
         au < ready ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
         au < ready ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
-        au < manifest ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
-        au < manifest ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
+        au < ready ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
+        au < ready ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
 
       }
 
@@ -8841,7 +8841,7 @@ comment[mpj] = now published by Brill
         au < ready ; Men and Masculinities Volume 8 ; 8 >
         au < ready ; Men and Masculinities Volume 9 ; 9 >
         au < ready ; Men and Masculinities Volume 10 ; 10 >
-        au < testing ; Men and Masculinities Volume 11 ; 11 >
+        au < ready ; Men and Masculinities Volume 11 ; 11 >
 
       }
 
@@ -8862,8 +8862,8 @@ comment[mpj] = now published by Brill
         au < ready ; Modern China Volume 31 ; 31 >
         au < ready ; Modern China Volume 32 ; 32 >
         au < ready ; Modern China Volume 33 ; 33 >
-        au < testing ; Modern China Volume 34 ; 34 >
-        au < testing ; Modern China Volume 35 ; 35 >
+        au < ready ; Modern China Volume 34 ; 34 >
+        au < ready ; Modern China Volume 35 ; 35 >
 
       }
 
@@ -8883,8 +8883,8 @@ comment[mpj] = now published by Brill
 
         au < ready ; Multiple Sclerosis Volume 12 ; 12 >
         au < ready ; Multiple Sclerosis Volume 13 ; 13 >
-        au < testing ; Multiple Sclerosis Volume 14 ; 14 >
-        au < testing ; Multiple Sclerosis Volume 15 ; 15 >
+        au < ready ; Multiple Sclerosis Volume 14 ; 14 >
+        au < ready ; Multiple Sclerosis Volume 15 ; 15 >
 
       }
 
@@ -8905,8 +8905,8 @@ comment[mpj] = now published by Brill
         au < testing ; NASSP Bulletin Volume 89 ; 89 >
         au < ready ; NASSP Bulletin Volume 90 ; 90 >
         au < ready ; NASSP Bulletin Volume 91 ; 91 >
-        au < testing ; NASSP Bulletin Volume 92 ; 92 >
-        au < testing ; NASSP Bulletin Volume 93 ; 93 >
+        au < ready ; NASSP Bulletin Volume 92 ; 92 >
+        au < ready ; NASSP Bulletin Volume 93 ; 93 >
 
       }
 
@@ -8935,12 +8935,12 @@ comment[mpj] = now published by Brill
         au < ready ; National Institute Economic Review Volume 200 ; 200 >
         au < ready ; National Institute Economic Review Volume 201 ; 201 >
         au < ready ; National Institute Economic Review Volume 202 ; 202 >
-        au < testing ; National Institute Economic Review Volume 203 ; 203 >
-        au < testing ; National Institute Economic Review Volume 204 ; 204 >
-        au < testing ; National Institute Economic Review Volume 205 ; 205 >
-        au < testing ; National Institute Economic Review Volume 206 ; 206 >
-        au < testing ; National Institute Economic Review Volume 207 ; 207 >
-        au < testing ; National Institute Economic Review Volume 208 ; 208 >
+        au < ready ; National Institute Economic Review Volume 203 ; 203 >
+        au < ready ; National Institute Economic Review Volume 204 ; 204 >
+        au < ready ; National Institute Economic Review Volume 205 ; 205 >
+        au < ready ; National Institute Economic Review Volume 206 ; 206 >
+        au < ready ; National Institute Economic Review Volume 207 ; 207 >
+        au < ready ; National Institute Economic Review Volume 208 ; 208 >
 
       }
 
@@ -8961,8 +8961,8 @@ comment[mpj] = now published by Brill
         au < ready ; Neurorehabilitation and Neural Repair Volume 19 ; 19 >
         au < ready ; Neurorehabilitation and Neural Repair Volume 20 ; 20 >
         au < ready ; Neurorehabilitation and Neural Repair Volume 21 ; 21 >
-        au < testing ; Neurorehabilitation and Neural Repair Volume 22 ; 22 >
-        au < testing ; Neurorehabilitation and Neural Repair Volume 23 ; 23 >
+        au < ready ; Neurorehabilitation and Neural Repair Volume 22 ; 22 >
+        au < ready ; Neurorehabilitation and Neural Repair Volume 23 ; 23 >
 
       }
 
@@ -8982,9 +8982,9 @@ comment[mpj] = now published by Brill
 
         au < ready ; The Neuroscientist Volume 11 ; 11 >
         au < ready ; The Neuroscientist Volume 12 ; 12 >
-        au < testing ; The Neuroscientist Volume 13 ; 13 >
-        au < testing ; The Neuroscientist Volume 14 ; 14 >
-        au < testing ; The Neuroscientist Volume 15 ; 15 >
+        au < ready ; The Neuroscientist Volume 13 ; 13 >
+        au < ready ; The Neuroscientist Volume 14 ; 14 >
+        au < ready ; The Neuroscientist Volume 15 ; 15 >
 
       }
 
@@ -9005,8 +9005,8 @@ comment[mpj] = now published by Brill
         au < ready ; New Media & Society Volume 7 ; 7 >
         au < ready ; New Media & Society Volume 8 ; 8 >
         au < ready ; New Media & Society Volume 9 ; 9 >
-        au < testing ; New Media & Society Volume 10 ; 10 >
-        au < testing ; New Media & Society Volume 11 ; 11 >
+        au < ready ; New Media & Society Volume 10 ; 10 >
+        au < ready ; New Media & Society Volume 11 ; 11 >
 
       }
 
@@ -9027,8 +9027,8 @@ comment[mpj] = now published by Brill
         au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 34 ; 34 >
         au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 35 ; 35 >
         au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 36 ; 36 >
-        au < testing ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 >
-        au < testing ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 >
+        au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 >
+        au < ready ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 >
 
       }
 
@@ -9048,8 +9048,8 @@ comment[mpj] = now published by Brill
 
         au < ready ; Nursing Ethics Volume 13 ; 13 >
         au < ready ; Nursing Ethics Volume 14 ; 14 >
-        au < testing ; Nursing Ethics Volume 15 ; 15 >
-        au < testing ; Nursing Ethics Volume 16 ; 16 >
+        au < ready ; Nursing Ethics Volume 15 ; 15 >
+        au < ready ; Nursing Ethics Volume 16 ; 16 >
 
       }
 
@@ -9070,8 +9070,8 @@ comment[mpj] = now published by Brill
         au < ready ; Nursing Science Quarterly Volume 18 ; 18 >
         au < ready ; Nursing Science Quarterly Volume 19 ; 19 >
         au < ready ; Nursing Science Quarterly Volume 20 ; 20 >
-        au < testing ; Nursing Science Quarterly Volume 21 ; 21 >
-        au < testing ; Nursing Science Quarterly Volume 22 ; 22 >
+        au < ready ; Nursing Science Quarterly Volume 21 ; 21 >
+        au < ready ; Nursing Science Quarterly Volume 22 ; 22 >
 
       }
 
@@ -9092,8 +9092,8 @@ comment[mpj] = now published by Brill
         au < ready ; Organization Volume 12 ; 12 >
         au < ready ; Organization Volume 13 ; 13 >
         au < ready ; Organization Volume 14 ; 14 >
-        au < testing ; Organization Volume 15 ; 15 >
-        au < testing ; Organization Volume 16 ; 16 >
+        au < ready ; Organization Volume 15 ; 15 >
+        au < ready ; Organization Volume 16 ; 16 >
 
       }
 
@@ -9114,8 +9114,8 @@ comment[mpj] = now published by Brill
         au < ready ; Organization & Environment Volume 18 ; 18 >
         au < ready ; Organization & Environment Volume 19 ; 19 >
         au < ready ; Organization & Environment Volume 20 ; 20 >
-        au < testing ; Organization & Environment Volume 21 ; 21 >
-        au < testing ; Organization & Environment Volume 22 ; 22 >
+        au < ready ; Organization & Environment Volume 21 ; 21 >
+        au < ready ; Organization & Environment Volume 22 ; 22 >
 
       }
 
@@ -9133,11 +9133,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://oss.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Organization Studies Volume 26 ; 26 >
+        au < ready ; Organization Studies Volume 26 ; 26 >
         au < ready ; Organization Studies Volume 27 ; 27 >
         au < ready ; Organization Studies Volume 28 ; 28 >
-        au < manifest ; Organization Studies Volume 29 ; 29 >
-        au < manifest ; Organization Studies Volume 30 ; 30 >
+        au < ready ; Organization Studies Volume 29 ; 29 >
+        au < ready ; Organization Studies Volume 30 ; 30 >
 
       }
 
@@ -9159,8 +9159,8 @@ comment[mpj] = now published by Brill
         au < ready ; Organizational Research Methods Volume 8 ; 8 >
         au < ready ; Organizational Research Methods Volume 9 ; 9 >
         au < ready ; Organizational Research Methods Volume 10 ; 10 >
-        au < manifest ; Organizational Research Methods Volume 11 ; 11 >
-        au < manifest ; Organizational Research Methods Volume 12 ; 12 >
+        au < testing ; Organizational Research Methods Volume 11 ; 11 >
+        au < testing ; Organizational Research Methods Volume 12 ; 12 >
 
       }
 
@@ -9179,11 +9179,11 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Palliative Medicine Volume 18 ; 18 >
-        au < manifest ; Palliative Medicine Volume 19 ; 19 >
+        au < testing ; Palliative Medicine Volume 19 ; 19 >
         au < ready ; Palliative Medicine Volume 20 ; 20 >
         au < ready ; Palliative Medicine Volume 21 ; 21 >
-        au < manifest ; Palliative Medicine Volume 22 ; 22 >
-        au < manifest ; Palliative Medicine Volume 23 ; 23 >
+        au < testing ; Palliative Medicine Volume 22 ; 22 >
+        au < testing ; Palliative Medicine Volume 23 ; 23 >
 
       }
 
@@ -9204,8 +9204,8 @@ comment[mpj] = now published by Brill
         au < ready ; Party Politics Volume 11 ; 11 >
         au < ready ; Party Politics Volume 12 ; 12 >
         au < ready ; Party Politics Volume 13 ; 13 >
-        au < manifest ; Party Politics Volume 14 ; 14 >
-        au < manifest ; Party Politics Volume 15 ; 15 >
+        au < testing ; Party Politics Volume 14 ; 14 >
+        au < testing ; Party Politics Volume 15 ; 15 >
 
       }
 
@@ -9225,7 +9225,7 @@ comment[mpj] = now published by Brill
 
         au < ready ; Perfusion Volume 21 ; 21 >
         au < ready ; Perfusion Volume 22 ; 22 >
-        au < manifest ; Perfusion Volume 23 ; 23 >
+        au < testing ; Perfusion Volume 23 ; 23 >
 
       }
 
@@ -9246,8 +9246,8 @@ comment[mpj] = now published by Brill
         au < ready ; Personality and Social Psychology Bulletin Volume 31 ; 31 >
         au < ready ; Personality and Social Psychology Bulletin Volume 32 ; 32 >
         au < ready ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
-        au < manifest ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
-        au < manifest ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
+        au < testing ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
+        au < testing ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
 
       }
 
@@ -9266,8 +9266,8 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Personality and Social Psychology Review Volume 11 ; 11 >
-        au < manifest ; Personality and Social Psychology Review Volume 12 ; 12 >
-        au < manifest ; Personality and Social Psychology Review Volume 13 ; 13 >
+        au < testing ; Personality and Social Psychology Review Volume 12 ; 12 >
+        au < testing ; Personality and Social Psychology Review Volume 13 ; 13 >
 
       }
 
@@ -9288,8 +9288,8 @@ comment[mpj] = now published by Brill
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 17 ; 17 >
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 18 ; 18 >
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
-        au < manifest ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
-        au < manifest ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
+        au < testing ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
+        au < testing ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
 
       }
 
@@ -9307,11 +9307,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Philosophy & Social Criticism Volume 31 ; 31 >
-        au < manifest ; Philosophy & Social Criticism Volume 32 ; 32 >
+        au < testing ; Philosophy & Social Criticism Volume 31 ; 31 >
+        au < testing ; Philosophy & Social Criticism Volume 32 ; 32 >
         au < ready ; Philosophy & Social Criticism Volume 33 ; 33 >
-        au < manifest ; Philosophy & Social Criticism Volume 34 ; 34 >
-        au < manifest ; Philosophy & Social Criticism Volume 35 ; 35 >
+        au < testing ; Philosophy & Social Criticism Volume 34 ; 34 >
+        au < testing ; Philosophy & Social Criticism Volume 35 ; 35 >
 
       }
 
@@ -9329,21 +9329,21 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pos.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Philosophy of the Social Sciences Volume 25 ; 25 >
-        au < manifest ; Philosophy of the Social Sciences Volume 26 ; 26 >
-        au < manifest ; Philosophy of the Social Sciences Volume 27 ; 27 >
-        au < manifest ; Philosophy of the Social Sciences Volume 28 ; 28 >
-        au < manifest ; Philosophy of the Social Sciences Volume 29 ; 29 >
-        au < manifest ; Philosophy of the Social Sciences Volume 30 ; 30 >
-        au < manifest ; Philosophy of the Social Sciences Volume 31 ; 31 >
-        au < manifest ; Philosophy of the Social Sciences Volume 32 ; 32 >
-        au < manifest ; Philosophy of the Social Sciences Volume 33 ; 33 >
-        au < manifest ; Philosophy of the Social Sciences Volume 34 ; 34 >
-        au < manifest ; Philosophy of the Social Sciences Volume 35 ; 35 >
-        au < manifest ; Philosophy of the Social Sciences Volume 36 ; 36 >
-        au < manifest ; Philosophy of the Social Sciences Volume 37 ; 37 >
-        au < manifest ; Philosophy of the Social Sciences Volume 38 ; 38 >
-        au < manifest ; Philosophy of the Social Sciences Volume 39 ; 39 >
+        au < testing ; Philosophy of the Social Sciences Volume 25 ; 25 >
+        au < testing ; Philosophy of the Social Sciences Volume 26 ; 26 >
+        au < testing ; Philosophy of the Social Sciences Volume 27 ; 27 >
+        au < testing ; Philosophy of the Social Sciences Volume 28 ; 28 >
+        au < testing ; Philosophy of the Social Sciences Volume 29 ; 29 >
+        au < testing ; Philosophy of the Social Sciences Volume 30 ; 30 >
+        au < testing ; Philosophy of the Social Sciences Volume 31 ; 31 >
+        au < testing ; Philosophy of the Social Sciences Volume 32 ; 32 >
+        au < testing ; Philosophy of the Social Sciences Volume 33 ; 33 >
+        au < testing ; Philosophy of the Social Sciences Volume 34 ; 34 >
+        au < testing ; Philosophy of the Social Sciences Volume 35 ; 35 >
+        au < testing ; Philosophy of the Social Sciences Volume 36 ; 36 >
+        au < testing ; Philosophy of the Social Sciences Volume 37 ; 37 >
+        au < testing ; Philosophy of the Social Sciences Volume 38 ; 38 >
+        au < testing ; Philosophy of the Social Sciences Volume 39 ; 39 >
 
       }
 
