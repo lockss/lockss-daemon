@@ -1,0 +1,1026 @@
+{
+
+  publisher <
+    name = Nature Publishing Group
+  >
+  
+  {
+
+    title <
+      name = Acta Pharmacologica Sinica
+    >
+
+    param[journal_id] = aps
+
+    au < manifest ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 29 >
+    au < manifest ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 30 >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Gastroenterology
+    >
+
+    param[journal_id] = ajg
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Hypertension
+    >
+
+    param[journal_id] = ajh
+
+  }
+
+  {
+
+    title <
+      name = Asian Journal of Andrology
+    >
+
+    param[journal_id] = aja
+
+    au < manifest ; 2008 ; Asian Journal of Andrology Volume 10 ; 10 >
+    au < manifest ; 2009 ; Asian Journal of Andrology Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Bone Marrow Transplantation
+    >
+
+    param[journal_id] = bmt
+
+    au < manifest ; 2008 ; Bone Marrow Transplantation Volume 41 ; 41 >
+    au < manifest ; 2008 ; Bone Marrow Transplantation Volume 42 ; 42 >
+    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 43 ; 43 >
+    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 44 ; 44 >
+
+  }
+
+  {
+
+    title <
+      name = British Dental Journal
+    >
+
+    param[journal_id] = bdj
+
+  }
+
+  {
+
+    title <
+      name = British Journal of Cancer
+    >
+
+    param[journal_id] = bjc
+
+    comment[clockss] = True
+    comment[verify] = different website design?
+
+  }
+
+  {
+
+    title <
+      name = Cancer Gene Therapy
+    >
+
+    param[journal_id] = cgt
+
+    au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 15 >
+    au < manifest ; 2009 ; Cancer Gene Therapy Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Cell Death and Differentiation
+    >
+
+    param[journal_id] = cdd
+
+    au < manifest ; 2008 ; Cell Death and Differentiation Volume 15 ; 15 >
+    au < manifest ; 2009 ; Cell Death and Differentiation Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Cell Research
+    >
+
+    param[journal_id] = cr
+
+    au < manifest ; 2008 ; Cell Research Volume 18 ; 18 >
+    au < manifest ; 2009 ; Cell Research Volume 19 ; 19 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Pharmacology & Therapeutics
+    >
+
+    param[journal_id] = clpt
+
+  }
+
+  {
+
+    title <
+      name = The EMBO Journal
+    >
+
+    param[journal_id] = emboj
+
+    au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 27 >
+    au < manifest ; 2009 ; The EMBO Journal Volume 28 ; 28 >
+
+  }
+
+  {
+
+    title <
+      name = EMBO Reports
+    >
+
+    param[journal_id] = embor
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Clinical Nutrition
+    >
+
+    param[journal_id] = ejcn
+
+    au < manifest ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 62 >
+    au < manifest ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 63 >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Human Genetics
+    >
+
+    param[journal_id] = ejhg
+
+  }
+
+  {
+
+    title <
+      name = Evidence-Based Dentistry
+    >
+
+    param[journal_id] = ebd
+
+  }
+
+  {
+
+    title <
+      name = Eye
+    >
+
+    param[journal_id] = eye
+
+    au < manifest ; 2008 ; Eye Volume 22 ; 22 >
+    au < manifest ; 2009 ; Eye Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Gene Therapy
+    >
+
+    param[journal_id] = gt
+
+    au < manifest ; 2008 ; Gene Therapy Volume 15 ; 15 >
+    au < manifest ; 2009 ; Gene Therapy Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Genes and Immunity
+    >
+
+    param[journal_id] = gene
+
+    au < manifest ; 2008 ; Genes and Immunity Volume 9 ; 9 >
+    au < manifest ; 2009 ; Genes and Immunity Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Heredity
+    >
+
+    param[journal_id] = hdy
+
+    au < manifest ; 2008 ; Heredity Volume 100 ; 100 >
+    au < manifest ; 2008 ; Heredity Volume 101 ; 101 >
+    au < manifest ; 2009 ; Heredity Volume 102 ; 102 >
+    au < manifest ; 2009 ; Heredity Volume 103 ; 103 >
+
+  }
+
+  {
+
+    title <
+      name = Hypertension Research
+    >
+
+    param[journal_id] = hr
+
+    au < manifest ; 2008 ; Hypertension Research Volume 31 ; 31 >
+    au < manifest ; 2009 ; Hypertension Research Volume 32 ; 32 >
+
+  }
+
+  {
+
+    title <
+      name = Immunology & Cell Biology
+    >
+
+    param[journal_id] = icb
+
+    au < manifest ; 2008 ; Immunology & Cell Biology Volume 86 ; 86 >
+    au < manifest ; 2009 ; Immunology & Cell Biology Volume 87 ; 87 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Impotence Research
+    >
+
+    param[journal_id] = ijir
+
+    au < manifest ; 2008 ; International Journal of Impotence Research Volume 20 ; 20 >
+    au < manifest ; 2009 ; International Journal of Impotence Research Volume 21 ; 21 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Obesity
+    >
+
+    param[journal_id] = ijo
+
+    au < manifest ; 2008 ; International Journal of Obesity Volume 32 ; 32 >
+    au < manifest ; 2009 ; International Journal of Obesity Volume 33 ; 33 >
+
+  }
+
+  {
+
+    title <
+      name = The ISME Journal
+    >
+
+    param[journal_id] = ismej
+
+  }
+
+  {
+
+    title <
+      name = JID Symposium Proceedings
+    >
+
+    param[journal_id] = jidsp
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Antibiotics
+    >
+
+    param[journal_id] = ja
+
+    au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 61 >
+    au < manifest ; 2009 ; The Journal of Antibiotics Volume 62 ; 62 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cerebral Blood Flow and Metabolism
+    >
+
+    param[journal_id] = jcbfm
+
+  }
+
+  {
+
+    title <
+      name = Journal of Exposure Science and Environmental Epidemiology
+    >
+
+    param[journal_id] = jes
+
+    au < manifest ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 18 >
+    au < manifest ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 19 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Genetics
+    >
+
+    param[journal_id] = jhg
+
+    au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 53 >
+    au < manifest ; 2009 ; Journal of Human Genetics Volume 54 ; 54 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Hypertension
+    >
+
+    param[journal_id] = jhh
+
+    au < manifest ; 2008 ; Journal of Human Hypertension Volume 22 ; 22 >
+    au < manifest ; 2009 ; Journal of Human Hypertension Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Investigative Dermatology
+    >
+
+    param[journal_id] = jid
+
+    au < manifest ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 128 >
+    au < manifest ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 129 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Perinatology
+    >
+
+    param[journal_id] = jp
+
+    au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 28 >
+    au < manifest ; 2009 ; Journal of Perinatology Volume 29 ; 29 >
+
+  }
+
+  {
+
+    title <
+      name = Kidney International 
+    >
+
+    param[journal_id] = ki
+
+  }
+
+  {
+
+    title <
+      name = Laboratory Investigation
+    >
+
+    param[journal_id] = labinvest
+
+  }
+
+  {
+
+    title <
+      name = Leukemia
+    >
+
+    param[journal_id] = leu
+
+    au < manifest ; 2008 ; Leukemia Volume 22 ; 22 >
+    au < manifest ; 2009 ; Leukemia Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Modern Pathology
+    >
+
+    param[journal_id] = modpathol
+
+  }
+
+  {
+
+    title <
+      name = Molecular Psychiatry
+    >
+
+    param[journal_id] = mp
+
+    au < manifest ; 2008 ; Molecular Psychiatry Volume 13 ; 13 >
+    au < manifest ; 2009 ; Molecular Psychiatry Volume 14 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Molecular Systems Biology
+    >
+
+    param[journal_id] = msb
+
+  }
+
+  {
+
+    title <
+      name = Molecular Therapy
+    >
+
+    param[journal_id] = mt
+
+  }
+
+  {
+
+    title <
+      name = Mucosal Immunology
+    >
+
+    param[journal_id] = mi
+
+  }
+
+  {
+
+    title <
+      name = Nature
+    >
+
+    param[journal_id] = nature
+
+    au < manifest ; 2008 ; Nature Volume 451 ; 451 >
+    au < manifest ; 2008 ; Nature Volume 452 ; 452 >
+    au < manifest ; 2008 ; Nature Volume 453 ; 453 >
+    au < manifest ; 2008 ; Nature Volume 454 ; 454 >
+    au < manifest ; 2008 ; Nature Volume 455 ; 455 >
+    au < manifest ; 2008 ; Nature Volume 456 ; 456 >
+    au < manifest ; 2009 ; Nature Volume 457 ; 457 >
+    au < manifest ; 2009 ; Nature Volume 458 ; 458 >
+    au < manifest ; 2009 ; Nature Volume 459 ; 459 >
+    au < manifest ; 2009 ; Nature Volume 460 ; 460 >
+    au < manifest ; 2009 ; Nature Volume 461 ; 461 >
+    au < manifest ; 2009 ; Nature Volume 462 ; 462 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Biotechnology
+    >
+
+    param[journal_id] = nbt
+
+    au < manifest ; 2008 ; Nature Biotechnology Volume 26 ; 26 >
+    au < manifest ; 2009 ; Nature Biotechnology Volume 27 ; 27 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Cell Biology
+    >
+
+    param[journal_id] = ncb
+
+    au < manifest ; 2008 ; Nature Cell Biology Volume 10 ; 10 >
+    au < manifest ; 2009 ; Nature Cell Biology Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Chemical Biology
+    >
+
+    param[journal_id] = nchembio
+
+    au < manifest ; 2008 ; Nature Chemical Biology Volume 4 ; 4 >
+    au < manifest ; 2009 ; Nature Chemical Biology Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Chemistry
+    >
+
+    param[journal_id] = nchem
+
+    au < manifest ; 2009 ; Nature Chemistry Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Digest
+    >
+
+    param[journal_id] = ndigest
+
+    au < manifest ; 2008 ; Nature Digest Volume 5 ; 5 >
+    au < manifest ; 2009 ; Nature Digest Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Genetics
+    >
+
+    param[journal_id] = ng
+
+    au < manifest ; 2008 ; Nature Genetics Volume 40 ; 40 >
+    au < manifest ; 2009 ; Nature Genetics Volume 41 ; 41 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Geoscience
+    >
+
+    param[journal_id] = ngeo
+
+    au < manifest ; 2008 ; Nature Geoscience Volume 1 ; 1 >
+    au < manifest ; 2009 ; Nature Geoscience Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Immunology
+    >
+
+    param[journal_id] = ni
+
+    au < manifest ; 2008 ; Nature Immunology Volume 9 ; 9 >
+    au < manifest ; 2009 ; Nature Immunology Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Materials
+    >
+
+    param[journal_id] = nmat
+
+    au < manifest ; 2008 ; Nature Materials Volume 7 ; 7 >
+    au < manifest ; 2009 ; Nature Materials Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Medicine
+    >
+
+    param[journal_id] = nm
+
+    au < manifest ; 2008 ; Nature Medicine Volume 14 ; 14 >
+    au < manifest ; 2009 ; Nature Medicine Volume 15 ; 15 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Methods
+    >
+
+    param[journal_id] = nmeth
+
+    au < manifest ; 2008 ; Nature Methods Volume  ;  >
+    au < manifest ; 2009 ; Nature Methods Volume  ;  >
+
+  }
+
+  {
+
+    title <
+      name = Nature Nanotechnology
+    >
+
+    param[journal_id] = nnano
+
+    au < manifest ; 2008 ; Nature Nanotechnology Volume 5 ; 5 >
+    au < manifest ; 2009 ; Nature Nanotechnology Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Neuroscience
+    >
+
+    param[journal_id] = neuro
+
+    au < manifest ; 2008 ; Nature Neuroscience Volume 11 ; 11 >
+    au < manifest ; 2009 ; Nature Neuroscience Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Photonics
+    >
+
+    param[journal_id] = nphoton
+
+    au < manifest ; 2008 ; Nature Photonics Volume 2 ; 2 >
+    au < manifest ; 2009 ; Nature Photonics Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Physics
+    >
+
+    param[journal_id] = nphys
+
+    au < manifest ; 2008 ; Nature Physics Volume 4 ; 4 >
+    au < manifest ; 2009 ; Nature Physics Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Protocols
+    >
+
+    param[journal_id] = nprot
+
+    au < manifest ; 2008 ; Nature Protocols Volume 3 ; 3 >
+    au < manifest ; 2009 ; Nature Protocols Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Cancer
+    >
+
+    param[journal_id] = nrc
+
+    au < manifest ; 2008 ; Nature Reviews Cancer Volume 8 ; 8 >
+    au < manifest ; 2009 ; Nature Reviews Cancer Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Cardiology
+    >
+
+    param[journal_id] = nrcardio
+
+    au < manifest ; 2008 ; Nature Reviews Cardiology Volume 5 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Cardiology Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Clinical Oncology
+    >
+
+    param[journal_id] = nrclinonc
+
+    au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Drug Discovery
+    >
+
+    param[journal_id] = nrd
+
+    au < manifest ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 7 >
+    au < manifest ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Endocrinology
+    >
+
+    param[journal_id] = nrendo
+
+    au < manifest ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Gastroenterology and Hepatology
+    >
+
+    param[journal_id] = nrgastro
+
+    au < manifest ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Genetics
+    >
+
+    param[journal_id] = nrg
+
+    au < manifest ; 2008 ; Nature Reviews Genetics Volume 9 ; 9 >
+    au < manifest ; 2009 ; Nature Reviews Genetics Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Immunology
+    >
+
+    param[journal_id] = nri
+
+    au < manifest ; 2008 ; Nature Reviews Immunology Volume 8 ; 8 >
+    au < manifest ; 2009 ; Nature Reviews Immunology Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Microbiology
+    >
+
+    param[journal_id] = nrmicro
+
+    au < manifest ; 2008 ; Nature Reviews Microbiology Volume 6 ; 6 >
+    au < manifest ; 2009 ; Nature Reviews Microbiology Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Molecular Cell Biology
+    >
+
+    param[journal_id] = nrm
+
+    au < manifest ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 9 >
+    au < manifest ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Nephrology
+    >
+
+    param[journal_id] = nrneph
+
+    au < manifest ; 2008 ; Nature Reviews Nephrology Volume 4 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Nephrology Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Neurology
+    >
+
+    param[journal_id] = nrneurol
+
+    au < manifest ; 2008 ; Nature Reviews Neurology Volume  ;  >
+    au < manifest ; 2009 ; Nature Reviews Neurology Volume  ;  >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Neuroscience
+    >
+
+    param[journal_id] = nrn
+
+    au < manifest ; 2008 ; Nature Reviews Neuroscience Volume 4 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Neuroscience Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Rheumatology
+    >
+
+    param[journal_id] = nrrheum
+
+    au < manifest ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Urology
+    >
+
+    param[journal_id] = nrurol
+
+    au < manifest ; 2008 ; Nature Reviews Urology Volume 5 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Urology Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Structural and Molecular Biology
+    >
+
+    param[journal_id] = nsmb
+
+    au < manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 15 >
+    au < manifest ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Neuropsychopharmacology
+    >
+
+    param[journal_id] = npp
+
+  }
+
+  {
+
+    title <
+      name = Obesity
+    >
+
+    param[journal_id] = oby
+
+  }
+
+  {
+
+    title <
+      name = Oncogene
+    >
+
+    param[journal_id] = onc
+
+    au < manifest ; 2008 ; Oncogene Volume 27 ; 27 >
+    au < manifest ; 2009 ; Oncogene Volume 28 ; 28 >
+
+  }
+
+  {
+
+    title <
+      name = Pharmacogenomics Journal
+    >
+
+    param[journal_id] = tpj
+
+    au < manifest ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 8 >
+    au < manifest ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Prostate Cancer and Prostatic Diseases
+    >
+
+    param[journal_id] = pcan
+
+    au < manifest ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 11 >
+    au < manifest ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = SciBX: Science-Business eXchange
+    >
+
+    param[journal_id] = scibx
+
+  }
+
+  {
+
+    title <
+      name = Spinal Cord
+    >
+
+    param[journal_id] = sc
+
+    au < manifest ; 2008 ; Spinal Cord Volume 46 ; 46 >
+    au < manifest ; 2009 ; Spinal Cord Volume 47 ; 47 >
+
+  }
+
+  {
+
+    title <
+      name = Vital
+    >
+
+    param[journal_id] = vital
+
+  }
+
+}
