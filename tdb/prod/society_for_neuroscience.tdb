@@ -1,0 +1,52 @@
+{
+  publisher <
+    name = Society for Neuroscience
+  >
+
+  {
+    title <
+      name = Journal of Neuroscience
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jneurosci.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Neuroscience Volume 1 ; 1 >
+      au < manifest ; Journal of Neuroscience Volume 2 ; 2 >
+      au < manifest ; Journal of Neuroscience Volume 3 ; 3 >
+      au < manifest ; Journal of Neuroscience Volume 4 ; 4 >
+      au < manifest ; Journal of Neuroscience Volume 5 ; 5 >
+      au < manifest ; Journal of Neuroscience Volume 6 ; 6 >
+      au < manifest ; Journal of Neuroscience Volume 7 ; 7 >
+      au < manifest ; Journal of Neuroscience Volume 8 ; 8 >
+      au < manifest ; Journal of Neuroscience Volume 9 ; 9 >
+      au < manifest ; Journal of Neuroscience Volume 10 ; 10 >
+      au < manifest ; Journal of Neuroscience Volume 11 ; 11 >
+      au < manifest ; Journal of Neuroscience Volume 12 ; 12 >
+      au < manifest ; Journal of Neuroscience Volume 13 ; 13 >
+      au < manifest ; Journal of Neuroscience Volume 14 ; 14 >
+      au < manifest ; Journal of Neuroscience Volume 15 ; 15 >
+      au < manifest ; Journal of Neuroscience Volume 16 ; 16 >
+      au < manifest ; Journal of Neuroscience Volume 17 ; 17 >
+      au < manifest ; Journal of Neuroscience Volume 18 ; 18 >
+      au < manifest ; Journal of Neuroscience Volume 19 ; 19 >
+      au < manifest ; Journal of Neuroscience Volume 20 ; 20 >
+      au < manifest ; Journal of Neuroscience Volume 21 ; 21 >
+      au < manifest ; Journal of Neuroscience Volume 22 ; 22 >
+      au < manifest ; Journal of Neuroscience Volume 23 ; 23 >
+      au < manifest ; Journal of Neuroscience Volume 24 ; 24 >
+      au < manifest ; Journal of Neuroscience Volume 25 ; 25 >
+      au < manifest ; Journal of Neuroscience Volume 26 ; 26 >
+      au < manifest ; Journal of Neuroscience Volume 27 ; 27 >
+      au < manifest ; Journal of Neuroscience Volume 28 ; 28 >
+      au < manifest ; Journal of Neuroscience Volume 29 ; 29 >
+
+    }
+
+  }
+
+}
+

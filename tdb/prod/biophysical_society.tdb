@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Biophysical Society
+  >
+
+  {
+    title <
+      name = Biophysical Journal
+    >
+
+    comment[not_highwire] = moved to Elsevier
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.biophysj.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Biophysical Journal Volume 88 ; 88 >
+      au < released ; Biophysical Journal Volume 89 ; 89 >
+      au < released ; Biophysical Journal Volume 90 ; 90 >
+      au < released ; Biophysical Journal Volume 91 ; 91 >
+      au < released ; Biophysical Journal Volume 92 ; 92 >
+
+    }
+
+  }
+
+}
+

@@ -3,133 +3,270 @@
     name = Cold Spring Harbor Laboratory Press
   >
 
-  implicit < status ; name ; param[volume_name] >
-  plugin = org.lockss.plugin.highwire.HighWireH20Plugin
-   
- {
-   title <
-     name = Genome Research
-   >
-   
-   param[base_url] = http://genome.cshlp.org/
-
-comment[0] = dynamic pdfs    
-comment[17] = vol 17, repository error caused by too-long urls
-
-   au < exists ; Genome Research Volume 1 ; 1 >    
-   au < exists ; Genome Research Volume 2 ; 2 >   
-   au < exists ; Genome Research Volume 3 ; 3 >   
-   au < exists ; Genome Research Volume 4 ; 4 >   
-   au < exists ; Genome Research Volume 5 ; 5 >   
-   au < exists ; Genome Research Volume 6 ; 6 >   
-   au < exists ; Genome Research Volume 7 ; 7 >   
-   au < exists ; Genome Research Volume 8 ; 8 >   
-   au < exists ; Genome Research Volume 9 ; 9 >   
-   au < exists ; Genome Research Volume 10 ; 10 >   
-   au < exists ; Genome Research Volume 11 ; 11 >   
-   au < exists ; Genome Research Volume 12 ; 12 >   
-   au < exists ; Genome Research Volume 13 ; 13 >   
-   au < exists ; Genome Research Volume 14 ; 14 >   
-   au < exists ; Genome Research Volume 15 ; 15 >   
-   au < exists ; Genome Research Volume 16 ; 16 >   
-   au < exists ; Genome Research Volume 17 ; 17 >   
-   au < exists ; Genome Research Volume 18 ; 18 >   
-   au < exists ; Genome Research Volume 19 ; 19 >   
- 
- }  
-   
-   
- {
-   title <
-     name = Genes & Development
-   >
-   
-   param[base_url] = http://genesdev.cshlp.org/
-
-   au < exists ; Genes & Development Volume 1 ; 1 >   
-   au < exists ; Genes & Development Volume 2 ; 2 >   
-   au < exists ; Genes & Development Volume 3 ; 3 >   
-   au < exists ; Genes & Development Volume 4 ; 4 >   
-   au < exists ; Genes & Development Volume 5 ; 5 >   
-   au < exists ; Genes & Development Volume 6 ; 6 >   
-   au < exists ; Genes & Development Volume 7 ; 7 >   
-   au < exists ; Genes & Development Volume 8 ; 8 >   
-   au < exists ; Genes & Development Volume 9 ; 9 >   
-   au < exists ; Genes & Development Volume 10 ; 10 >   
-   au < exists ; Genes & Development Volume 11 ; 11 >   
-   au < exists ; Genes & Development Volume 12 ; 12 >   
-   au < exists ; Genes & Development Volume 13 ; 13 >   
-   au < exists ; Genes & Development Volume 14 ; 14 >   
-   au < exists ; Genes & Development Volume 15 ; 15 >   
-   au < exists ; Genes & Development Volume 16 ; 16 >   
-   au < exists ; Genes & Development Volume 17 ; 17 >   
-   au < exists ; Genes & Development Volume 18 ; 18 >   
-   au < manifest ; Genes & Development Volume 19 ; 19 >   
-   au < manifest ; Genes & Development Volume 20 ; 20 >   
-   au < manifest ; Genes & Development Volume 21 ; 21 >   
-   au < manifest ; Genes & Development Volume 22 ; 22 >   
-   au < manifest ; Genes & Development Volume 23 ; 23 >   
-   
- }
-
-   
   {
-   title <
-     name = RNA
-   >
-   
-   param[base_url] = http://rnajournal.cshlp.org/
+    title <
+      name = Cold Spring Harbor Symposia on Quantitative Biology
+    >
 
-   au < manifest ; RNA Volume 1 ; 1 >   
-   au < manifest ; RNA Volume 2 ; 2 >   
-   au < manifest ; RNA Volume 3 ; 3 >   
-   au < manifest ; RNA Volume 4 ; 4 >   
-   au < manifest ; RNA Volume 5 ; 5 >   
-   au < manifest ; RNA Volume 6 ; 6 >   
-   au < manifest ; RNA Volume 7 ; 7 >   
-   au < manifest ; RNA Volume 8 ; 8 >   
-   au < manifest ; RNA Volume 9 ; 9 >   
-   au < manifest ; RNA Volume 10 ; 10 >   
-   au < manifest ; RNA Volume 11 ; 11 >   
-   au < manifest ; RNA Volume 12 ; 12 >   
-   au < manifest ; RNA Volume 13 ; 13 >   
-   au < manifest ; RNA Volume 14 ; 14 >   
-   au < manifest ; RNA Volume 15 ; 15 >     
-   
- }  
-   
-  
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://symposium.cshlp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 1 ; 1 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 2 ; 2 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 3 ; 3 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 4 ; 4 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 5 ; 5 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 6 ; 6 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 7 ; 7 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 24 ; 24 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 25 ; 25 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 26 ; 26 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 27 ; 27 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 28 ; 28 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 29 ; 29 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 30 ; 30 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 31 ; 31 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 32 ; 32 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 33 ; 33 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 34 ; 34 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 41 ; 41 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 42 ; 42 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 43 ; 43 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 44 ; 44 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 54 ; 54 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 64 ; 64 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 65 ; 65 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 66 ; 66 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 67 ; 67 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 68 ; 68 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 69 ; 69 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 70 ; 70 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 71 ; 71 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 72 ; 72 >
+      au < exists ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 >
+
+    }
+
+  }
+
   {
-   title <
-     name = Learning & Memory 
-   >
-   
-   param[base_url] = http://learnmem.cshlp.org/
+    title <
+      name = CSH Protocols
+    >
 
-   au < manifest ; Learning & Memory Volume 1 ; 1 >   
-   au < manifest ; Learning & Memory Volume 2 ; 2 >   
-   au < manifest ; Learning & Memory Volume 3 ; 3 >   
-   au < manifest ; Learning & Memory Volume 4 ; 4 >   
-   au < manifest ; Learning & Memory Volume 5 ; 5 >   
-   au < manifest ; Learning & Memory Volume 6 ; 6 >   
-   au < manifest ; Learning & Memory Volume 7 ; 7 >   
-   au < manifest ; Learning & Memory Volume 8 ; 8 >   
-   au < manifest ; Learning & Memory Volume 9 ; 9 >   
-   au < manifest ; Learning & Memory Volume 10 ; 10 >   
-   au < manifest ; Learning & Memory Volume 11 ; 11 >   
-   au < manifest ; Learning & Memory Volume 12 ; 12 >   
-   au < manifest ; Learning & Memory Volume 13 ; 13 >   
-   au < manifest ; Learning & Memory Volume 14 ; 14 >   
-   au < manifest ; Learning & Memory Volume 15 ; 15 >     
-   au < manifest ; Learning & Memory Volume 16 ; 16 >     
-   
-  }  
-   
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cshprotocols.cshlp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; CSH Protocols Volume 2006 ; 2006 >
+      au < exists ; CSH Protocols Volume 2007 ; 2007 >
+      au < exists ; CSH Protocols Volume 2008 ; 2008 >
+      au < exists ; CSH Protocols Volume 2009 ; 2009 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Genes & Development
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://genesdev.cshlp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Genes & Development Volume 1 ; 1 >
+      au < exists ; Genes & Development Volume 2 ; 2 >
+      au < exists ; Genes & Development Volume 3 ; 3 >
+      au < exists ; Genes & Development Volume 4 ; 4 >
+      au < exists ; Genes & Development Volume 5 ; 5 >
+      au < exists ; Genes & Development Volume 6 ; 6 >
+      au < exists ; Genes & Development Volume 7 ; 7 >
+      au < exists ; Genes & Development Volume 8 ; 8 >
+      au < exists ; Genes & Development Volume 9 ; 9 >
+      au < exists ; Genes & Development Volume 10 ; 10 >
+      au < exists ; Genes & Development Volume 11 ; 11 >
+      au < exists ; Genes & Development Volume 12 ; 12 >
+      au < exists ; Genes & Development Volume 13 ; 13 >
+      au < exists ; Genes & Development Volume 14 ; 14 >
+      au < exists ; Genes & Development Volume 15 ; 15 >
+      au < exists ; Genes & Development Volume 16 ; 16 >
+      au < exists ; Genes & Development Volume 17 ; 17 >
+      au < exists ; Genes & Development Volume 18 ; 18 >
+      au < manifest ; Genes & Development Volume 19 ; 19 >
+      au < manifest ; Genes & Development Volume 20 ; 20 >
+      au < manifest ; Genes & Development Volume 21 ; 21 >
+      au < manifest ; Genes & Development Volume 22 ; 22 >
+      au < manifest ; Genes & Development Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Genome Research
+    >
+
+    comment[h20] = H20 title
+
+    comment[0] = dynamic pdfs
+    comment[17] = vol 17, repository error caused by too-long urls
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://genome.cshlp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Genome Research Volume 1 ; 1 >
+      au < exists ; Genome Research Volume 2 ; 2 >
+      au < exists ; Genome Research Volume 3 ; 3 >
+      au < exists ; Genome Research Volume 4 ; 4 >
+      au < exists ; Genome Research Volume 5 ; 5 >
+      au < exists ; Genome Research Volume 6 ; 6 >
+      au < exists ; Genome Research Volume 7 ; 7 >
+      au < exists ; Genome Research Volume 8 ; 8 >
+      au < exists ; Genome Research Volume 9 ; 9 >
+      au < exists ; Genome Research Volume 10 ; 10 >
+      au < exists ; Genome Research Volume 11 ; 11 >
+      au < exists ; Genome Research Volume 12 ; 12 >
+      au < exists ; Genome Research Volume 13 ; 13 >
+      au < exists ; Genome Research Volume 14 ; 14 >
+      au < manifest ; Genome Research Volume 15 ; 15 >
+      au < manifest ; Genome Research Volume 16 ; 16 >
+      au < manifest ; Genome Research Volume 17 ; 17 >
+      au < manifest ; Genome Research Volume 18 ; 18 >
+      au < manifest ; Genome Research Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Learning & Memory
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://learnmem.cshlp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Learning & Memory Volume 1 ; 1 >
+      au < exists ; Learning & Memory Volume 2 ; 2 >
+      au < exists ; Learning & Memory Volume 3 ; 3 >
+      au < exists ; Learning & Memory Volume 4 ; 4 >
+      au < exists ; Learning & Memory Volume 5 ; 5 >
+      au < exists ; Learning & Memory Volume 6 ; 6 >
+      au < exists ; Learning & Memory Volume 7 ; 7 >
+      au < exists ; Learning & Memory Volume 8 ; 8 >
+      au < exists ; Learning & Memory Volume 9 ; 9 >
+      au < exists ; Learning & Memory Volume 10 ; 10 >
+      au < exists ; Learning & Memory Volume 11 ; 11 >
+      au < manifest ; Learning & Memory Volume 12 ; 12 >
+      au < manifest ; Learning & Memory Volume 13 ; 13 >
+      au < manifest ; Learning & Memory Volume 14 ; 14 >
+      au < manifest ; Learning & Memory Volume 15 ; 15 >
+      au < manifest ; Learning & Memory Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = RNA
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://rnajournal.cshlp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; RNA Volume 1 ; 1 >
+      au < exists ; RNA Volume 2 ; 2 >
+      au < exists ; RNA Volume 3 ; 3 >
+      au < exists ; RNA Volume 4 ; 4 >
+      au < exists ; RNA Volume 5 ; 5 >
+      au < exists ; RNA Volume 6 ; 6 >
+      au < exists ; RNA Volume 7 ; 7 >
+      au < exists ; RNA Volume 8 ; 8 >
+      au < exists ; RNA Volume 9 ; 9 >
+      au < exists ; RNA Volume 10 ; 10 >
+      au < manifest ; RNA Volume 11 ; 11 >
+      au < manifest ; RNA Volume 12 ; 12 >
+      au < manifest ; RNA Volume 13 ; 13 >
+      au < manifest ; RNA Volume 14 ; 14 >
+      au < manifest ; RNA Volume 15 ; 15 >
+
+    }
+
+  }
+
 }
-   
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+

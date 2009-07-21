@@ -1,0 +1,142 @@
+{
+  publisher <
+    name = American Association of Immunologists
+  >
+
+  {
+    title <
+      name = The Journal of Immunology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jimmunol.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Journal of Immunology Volume 64 ; 64 >
+      au < exists ; The Journal of Immunology Volume 65 ; 65 >
+      au < exists ; The Journal of Immunology Volume 66 ; 66 >
+      au < exists ; The Journal of Immunology Volume 67 ; 67 >
+      au < exists ; The Journal of Immunology Volume 68 ; 68 >
+      au < exists ; The Journal of Immunology Volume 69 ; 69 >
+      au < exists ; The Journal of Immunology Volume 70 ; 70 >
+      au < exists ; The Journal of Immunology Volume 71 ; 71 >
+      au < exists ; The Journal of Immunology Volume 72 ; 72 >
+      au < exists ; The Journal of Immunology Volume 73 ; 73 >
+      au < exists ; The Journal of Immunology Volume 74 ; 74 >
+      au < exists ; The Journal of Immunology Volume 75 ; 75 >
+      au < exists ; The Journal of Immunology Volume 76 ; 76 >
+      au < exists ; The Journal of Immunology Volume 77 ; 77 >
+      au < exists ; The Journal of Immunology Volume 78 ; 78 >
+      au < exists ; The Journal of Immunology Volume 79 ; 79 >
+      au < exists ; The Journal of Immunology Volume 80 ; 80 >
+      au < exists ; The Journal of Immunology Volume 81 ; 81 >
+      au < exists ; The Journal of Immunology Volume 82 ; 82 >
+      au < exists ; The Journal of Immunology Volume 83 ; 83 >
+      au < exists ; The Journal of Immunology Volume 84 ; 84 >
+      au < exists ; The Journal of Immunology Volume 85 ; 85 >
+      au < exists ; The Journal of Immunology Volume 86 ; 86 >
+      au < exists ; The Journal of Immunology Volume 87 ; 87 >
+      au < exists ; The Journal of Immunology Volume 88 ; 88 >
+      au < exists ; The Journal of Immunology Volume 89 ; 89 >
+      au < exists ; The Journal of Immunology Volume 90 ; 90 >
+      au < exists ; The Journal of Immunology Volume 91 ; 91 >
+      au < exists ; The Journal of Immunology Volume 92 ; 92 >
+      au < exists ; The Journal of Immunology Volume 93 ; 93 >
+      au < exists ; The Journal of Immunology Volume 94 ; 94 >
+      au < exists ; The Journal of Immunology Volume 95 ; 95 >
+      au < exists ; The Journal of Immunology Volume 96 ; 96 >
+      au < exists ; The Journal of Immunology Volume 97 ; 97 >
+      au < exists ; The Journal of Immunology Volume 98 ; 98 >
+      au < exists ; The Journal of Immunology Volume 99 ; 99 >
+      au < exists ; The Journal of Immunology Volume 100 ; 100 >
+      au < exists ; The Journal of Immunology Volume 101 ; 101 >
+      au < exists ; The Journal of Immunology Volume 102 ; 102 >
+      au < exists ; The Journal of Immunology Volume 103 ; 103 >
+      au < exists ; The Journal of Immunology Volume 104 ; 104 >
+      au < exists ; The Journal of Immunology Volume 105 ; 105 >
+      au < exists ; The Journal of Immunology Volume 106 ; 106 >
+      au < exists ; The Journal of Immunology Volume 107 ; 107 >
+      au < exists ; The Journal of Immunology Volume 108 ; 108 >
+      au < exists ; The Journal of Immunology Volume 109 ; 109 >
+      au < exists ; The Journal of Immunology Volume 110 ; 110 >
+      au < exists ; The Journal of Immunology Volume 111 ; 111 >
+      au < exists ; The Journal of Immunology Volume 112 ; 112 >
+      au < exists ; The Journal of Immunology Volume 113 ; 113 >
+      au < exists ; The Journal of Immunology Volume 115 ; 115 >
+      au < exists ; The Journal of Immunology Volume 116 ; 116 >
+      au < exists ; The Journal of Immunology Volume 117 ; 117 >
+      au < exists ; The Journal of Immunology Volume 118 ; 118 >
+      au < exists ; The Journal of Immunology Volume 119 ; 119 >
+      au < exists ; The Journal of Immunology Volume 120 ; 120 >
+      au < exists ; The Journal of Immunology Volume 121 ; 121 >
+      au < exists ; The Journal of Immunology Volume 122 ; 122 >
+      au < exists ; The Journal of Immunology Volume 123 ; 123 >
+      au < exists ; The Journal of Immunology Volume 124 ; 124 >
+      au < exists ; The Journal of Immunology Volume 125 ; 125 >
+      au < exists ; The Journal of Immunology Volume 126 ; 126 >
+      au < exists ; The Journal of Immunology Volume 127 ; 127 >
+      au < exists ; The Journal of Immunology Volume 128 ; 128 >
+      au < exists ; The Journal of Immunology Volume 129 ; 129 >
+      au < exists ; The Journal of Immunology Volume 130 ; 130 >
+      au < exists ; The Journal of Immunology Volume 131 ; 131 >
+      au < exists ; The Journal of Immunology Volume 132 ; 132 >
+      au < exists ; The Journal of Immunology Volume 133 ; 133 >
+      au < exists ; The Journal of Immunology Volume 134 ; 134 >
+      au < exists ; The Journal of Immunology Volume 135 ; 135 >
+      au < exists ; The Journal of Immunology Volume 136 ; 136 >
+      au < exists ; The Journal of Immunology Volume 137 ; 137 >
+      au < exists ; The Journal of Immunology Volume 138 ; 138 >
+      au < exists ; The Journal of Immunology Volume 139 ; 139 >
+      au < exists ; The Journal of Immunology Volume 140 ; 140 >
+      au < exists ; The Journal of Immunology Volume 141 ; 141 >
+      au < exists ; The Journal of Immunology Volume 142 ; 142 >
+      au < exists ; The Journal of Immunology Volume 143 ; 143 >
+      au < exists ; The Journal of Immunology Volume 144 ; 144 >
+      au < exists ; The Journal of Immunology Volume 145 ; 145 >
+      au < exists ; The Journal of Immunology Volume 146 ; 146 >
+      au < exists ; The Journal of Immunology Volume 147 ; 147 >
+      au < exists ; The Journal of Immunology Volume 148 ; 148 >
+      au < exists ; The Journal of Immunology Volume 149 ; 149 >
+      au < exists ; The Journal of Immunology Volume 150 ; 150 >
+      au < exists ; The Journal of Immunology Volume 151 ; 151 >
+      au < exists ; The Journal of Immunology Volume 152 ; 152 >
+      au < exists ; The Journal of Immunology Volume 153 ; 153 >
+      au < exists ; The Journal of Immunology Volume 154 ; 154 >
+      au < exists ; The Journal of Immunology Volume 155 ; 155 >
+      au < exists ; The Journal of Immunology Volume 156 ; 156 >
+      au < exists ; The Journal of Immunology Volume 157 ; 157 >
+      au < exists ; The Journal of Immunology Volume 158 ; 158 >
+      au < exists ; The Journal of Immunology Volume 159 ; 159 >
+      au < exists ; The Journal of Immunology Volume 160 ; 160 >
+      au < exists ; The Journal of Immunology Volume 161 ; 161 >
+      au < exists ; The Journal of Immunology Volume 162 ; 162 >
+      au < exists ; The Journal of Immunology Volume 163 ; 163 >
+      au < exists ; The Journal of Immunology Volume 164 ; 164 >
+      au < exists ; The Journal of Immunology Volume 165 ; 165 >
+      au < exists ; The Journal of Immunology Volume 166 ; 166 >
+      au < exists ; The Journal of Immunology Volume 167 ; 167 >
+      au < exists ; The Journal of Immunology Volume 168 ; 168 >
+      au < exists ; The Journal of Immunology Volume 169 ; 169 >
+      au < exists ; The Journal of Immunology Volume 170 ; 170 >
+      au < exists ; The Journal of Immunology Volume 171 ; 171 >
+      au < exists ; The Journal of Immunology Volume 172 ; 172 >
+      au < exists ; The Journal of Immunology Volume 173 ; 173 >
+      au < exists ; The Journal of Immunology Volume 174 ; 174 >
+      au < exists ; The Journal of Immunology Volume 175 ; 175 >
+      au < exists ; The Journal of Immunology Volume 176 ; 176 >
+      au < exists ; The Journal of Immunology Volume 177 ; 177 >
+      au < exists ; The Journal of Immunology Volume 178 ; 178 >
+      au < exists ; The Journal of Immunology Volume 179 ; 179 >
+      au < exists ; The Journal of Immunology Volume 180 ; 180 >
+      au < exists ; The Journal of Immunology Volume 181 ; 181 >
+      au < exists ; The Journal of Immunology Volume 182 ; 182 >
+      au < exists ; The Journal of Immunology Volume 183 ; 183 >
+
+    }
+
+  }
+
+}
+

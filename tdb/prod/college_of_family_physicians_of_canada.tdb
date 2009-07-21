@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = College of Family Physicians of Canada
+  >
+
+  {
+    title <
+      name = Canadian Family Physician
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.cfp.ca/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Canadian Family Physician Volume 46 ; 46 >
+      au < exists ; Canadian Family Physician Volume 47 ; 47 >
+      au < exists ; Canadian Family Physician Volume 48 ; 48 >
+      au < exists ; Canadian Family Physician Volume 49 ; 49 >
+      au < exists ; Canadian Family Physician Volume 50 ; 50 >
+      au < exists ; Canadian Family Physician Volume 51 ; 51 >
+      au < exists ; Canadian Family Physician Volume 52 ; 52 >
+      au < exists ; Canadian Family Physician Volume 53 ; 53 >
+      au < exists ; Canadian Family Physician Volume 54 ; 54 >
+      au < exists ; Canadian Family Physician Volume 55 ; 55 >
+
+    }
+
+  }
+
+}
+

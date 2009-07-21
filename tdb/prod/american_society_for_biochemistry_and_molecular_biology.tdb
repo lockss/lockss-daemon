@@ -1,0 +1,232 @@
+{
+  publisher <
+    name = American Society for Biochemistry and Molecular Biology
+  >
+
+  {
+    title <
+      name = Journal of Biological Chemistry
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jbc.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Biological Chemistry Volume 166 ; 166 >
+      au < exists ; Journal of Biological Chemistry Volume 167 ; 167 >
+      au < exists ; Journal of Biological Chemistry Volume 168 ; 168 >
+      au < exists ; Journal of Biological Chemistry Volume 169 ; 169 >
+      au < exists ; Journal of Biological Chemistry Volume 170 ; 170 >
+      au < exists ; Journal of Biological Chemistry Volume 171 ; 171 >
+      au < exists ; Journal of Biological Chemistry Volume 172 ; 172 >
+      au < exists ; Journal of Biological Chemistry Volume 173 ; 173 >
+      au < exists ; Journal of Biological Chemistry Volume 174 ; 174 >
+      au < exists ; Journal of Biological Chemistry Volume 175 ; 175 >
+      au < exists ; Journal of Biological Chemistry Volume 176 ; 176 >
+      au < exists ; Journal of Biological Chemistry Volume 177 ; 177 >
+      au < exists ; Journal of Biological Chemistry Volume 178 ; 178 >
+      au < exists ; Journal of Biological Chemistry Volume 179 ; 179 >
+      au < exists ; Journal of Biological Chemistry Volume 180 ; 180 >
+      au < exists ; Journal of Biological Chemistry Volume 181 ; 181 >
+      au < exists ; Journal of Biological Chemistry Volume 182 ; 182 >
+      au < exists ; Journal of Biological Chemistry Volume 183 ; 183 >
+      au < exists ; Journal of Biological Chemistry Volume 184 ; 184 >
+      au < exists ; Journal of Biological Chemistry Volume 185 ; 185 >
+      au < exists ; Journal of Biological Chemistry Volume 186 ; 186 >
+      au < exists ; Journal of Biological Chemistry Volume 187 ; 187 >
+      au < exists ; Journal of Biological Chemistry Volume 188 ; 188 >
+      au < exists ; Journal of Biological Chemistry Volume 189 ; 189 >
+      au < exists ; Journal of Biological Chemistry Volume 190 ; 190 >
+      au < exists ; Journal of Biological Chemistry Volume 191 ; 191 >
+      au < exists ; Journal of Biological Chemistry Volume 192 ; 192 >
+      au < exists ; Journal of Biological Chemistry Volume 193 ; 193 >
+      au < exists ; Journal of Biological Chemistry Volume 194 ; 194 >
+      au < exists ; Journal of Biological Chemistry Volume 195 ; 195 >
+      au < exists ; Journal of Biological Chemistry Volume 196 ; 196 >
+      au < exists ; Journal of Biological Chemistry Volume 197 ; 197 >
+      au < exists ; Journal of Biological Chemistry Volume 198 ; 198 >
+      au < exists ; Journal of Biological Chemistry Volume 199 ; 199 >
+      au < exists ; Journal of Biological Chemistry Volume 200 ; 200 >
+      au < exists ; Journal of Biological Chemistry Volume 201 ; 201 >
+      au < exists ; Journal of Biological Chemistry Volume 202 ; 202 >
+      au < exists ; Journal of Biological Chemistry Volume 203 ; 203 >
+      au < exists ; Journal of Biological Chemistry Volume 204 ; 204 >
+      au < exists ; Journal of Biological Chemistry Volume 205 ; 205 >
+      au < exists ; Journal of Biological Chemistry Volume 206 ; 206 >
+      au < exists ; Journal of Biological Chemistry Volume 207 ; 207 >
+      au < exists ; Journal of Biological Chemistry Volume 208 ; 208 >
+      au < exists ; Journal of Biological Chemistry Volume 209 ; 209 >
+      au < exists ; Journal of Biological Chemistry Volume 210 ; 210 >
+      au < exists ; Journal of Biological Chemistry Volume 211 ; 211 >
+      au < exists ; Journal of Biological Chemistry Volume 212 ; 212 >
+      au < exists ; Journal of Biological Chemistry Volume 213 ; 213 >
+      au < exists ; Journal of Biological Chemistry Volume 214 ; 214 >
+      au < exists ; Journal of Biological Chemistry Volume 215 ; 215 >
+      au < exists ; Journal of Biological Chemistry Volume 216 ; 216 >
+      au < exists ; Journal of Biological Chemistry Volume 217 ; 217 >
+      au < exists ; Journal of Biological Chemistry Volume 218 ; 218 >
+      au < exists ; Journal of Biological Chemistry Volume 219 ; 219 >
+      au < exists ; Journal of Biological Chemistry Volume 220 ; 220 >
+      au < exists ; Journal of Biological Chemistry Volume 221 ; 221 >
+      au < exists ; Journal of Biological Chemistry Volume 222 ; 222 >
+      au < exists ; Journal of Biological Chemistry Volume 223 ; 223 >
+      au < exists ; Journal of Biological Chemistry Volume 224 ; 224 >
+      au < exists ; Journal of Biological Chemistry Volume 225 ; 225 >
+      au < exists ; Journal of Biological Chemistry Volume 226 ; 226 >
+      au < exists ; Journal of Biological Chemistry Volume 227 ; 227 >
+      au < exists ; Journal of Biological Chemistry Volume 228 ; 228 >
+      au < exists ; Journal of Biological Chemistry Volume 229 ; 229 >
+      au < exists ; Journal of Biological Chemistry Volume 230 ; 230 >
+      au < exists ; Journal of Biological Chemistry Volume 231 ; 231 >
+      au < exists ; Journal of Biological Chemistry Volume 232 ; 232 >
+      au < exists ; Journal of Biological Chemistry Volume 233 ; 233 >
+      au < exists ; Journal of Biological Chemistry Volume 234 ; 234 >
+      au < exists ; Journal of Biological Chemistry Volume 235 ; 235 >
+      au < exists ; Journal of Biological Chemistry Volume 236 ; 236 >
+      au < exists ; Journal of Biological Chemistry Volume 237 ; 237 >
+      au < exists ; Journal of Biological Chemistry Volume 238 ; 238 >
+      au < exists ; Journal of Biological Chemistry Volume 239 ; 239 >
+      au < exists ; Journal of Biological Chemistry Volume 240 ; 240 >
+      au < exists ; Journal of Biological Chemistry Volume 241 ; 241 >
+      au < exists ; Journal of Biological Chemistry Volume 242 ; 242 >
+      au < exists ; Journal of Biological Chemistry Volume 243 ; 243 >
+      au < exists ; Journal of Biological Chemistry Volume 244 ; 244 >
+      au < exists ; Journal of Biological Chemistry Volume 245 ; 245 >
+      au < exists ; Journal of Biological Chemistry Volume 246 ; 246 >
+      au < exists ; Journal of Biological Chemistry Volume 247 ; 247 >
+      au < exists ; Journal of Biological Chemistry Volume 248 ; 248 >
+      au < exists ; Journal of Biological Chemistry Volume 249 ; 249 >
+      au < exists ; Journal of Biological Chemistry Volume 250 ; 250 >
+      au < exists ; Journal of Biological Chemistry Volume 251 ; 251 >
+      au < exists ; Journal of Biological Chemistry Volume 252 ; 252 >
+      au < exists ; Journal of Biological Chemistry Volume 253 ; 253 >
+      au < exists ; Journal of Biological Chemistry Volume 254 ; 254 >
+      au < exists ; Journal of Biological Chemistry Volume 255 ; 255 >
+      au < exists ; Journal of Biological Chemistry Volume 256 ; 256 >
+      au < exists ; Journal of Biological Chemistry Volume 257 ; 257 >
+      au < exists ; Journal of Biological Chemistry Volume 258 ; 258 >
+      au < exists ; Journal of Biological Chemistry Volume 259 ; 259 >
+      au < exists ; Journal of Biological Chemistry Volume 260 ; 260 >
+      au < exists ; Journal of Biological Chemistry Volume 261 ; 261 >
+      au < exists ; Journal of Biological Chemistry Volume 262 ; 262 >
+      au < exists ; Journal of Biological Chemistry Volume 263 ; 263 >
+      au < exists ; Journal of Biological Chemistry Volume 264 ; 264 >
+      au < exists ; Journal of Biological Chemistry Volume 265 ; 265 >
+      au < exists ; Journal of Biological Chemistry Volume 266 ; 266 >
+      au < exists ; Journal of Biological Chemistry Volume 267 ; 267 >
+      au < exists ; Journal of Biological Chemistry Volume 268 ; 268 >
+      au < exists ; Journal of Biological Chemistry Volume 269 ; 269 >
+      au < exists ; Journal of Biological Chemistry Volume 270 ; 270 >
+      au < exists ; Journal of Biological Chemistry Volume 271 ; 271 >
+      au < exists ; Journal of Biological Chemistry Volume 272 ; 272 >
+      au < exists ; Journal of Biological Chemistry Volume 273 ; 273 >
+      au < exists ; Journal of Biological Chemistry Volume 274 ; 274 >
+      au < exists ; Journal of Biological Chemistry Volume 275 ; 275 >
+      au < exists ; Journal of Biological Chemistry Volume 276 ; 276 >
+      au < exists ; Journal of Biological Chemistry Volume 277 ; 277 >
+      au < exists ; Journal of Biological Chemistry Volume 278 ; 278 >
+      au < exists ; Journal of Biological Chemistry Volume 279 ; 279 >
+      au < manifest ; Journal of Biological Chemistry Volume 280 ; 280 >
+      au < manifest ; Journal of Biological Chemistry Volume 281 ; 281 >
+      au < manifest ; Journal of Biological Chemistry Volume 282 ; 282 >
+      au < manifest ; Journal of Biological Chemistry Volume 283 ; 283 >
+      au < manifest ; Journal of Biological Chemistry Volume 284 ; 284 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = The Journal of Lipid Research
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jlr.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Journal of Lipid Research Volume 1 ; 1 >
+      au < exists ; The Journal of Lipid Research Volume 2 ; 2 >
+      au < exists ; The Journal of Lipid Research Volume 3 ; 3 >
+      au < exists ; The Journal of Lipid Research Volume 4 ; 4 >
+      au < exists ; The Journal of Lipid Research Volume 5 ; 5 >
+      au < exists ; The Journal of Lipid Research Volume 6 ; 6 >
+      au < exists ; The Journal of Lipid Research Volume 7 ; 7 >
+      au < exists ; The Journal of Lipid Research Volume 8 ; 8 >
+      au < exists ; The Journal of Lipid Research Volume 9 ; 9 >
+      au < exists ; The Journal of Lipid Research Volume 10 ; 10 >
+      au < exists ; The Journal of Lipid Research Volume 11 ; 11 >
+      au < exists ; The Journal of Lipid Research Volume 12 ; 12 >
+      au < exists ; The Journal of Lipid Research Volume 13 ; 13 >
+      au < exists ; The Journal of Lipid Research Volume 14 ; 14 >
+      au < exists ; The Journal of Lipid Research Volume 15 ; 15 >
+      au < exists ; The Journal of Lipid Research Volume 16 ; 16 >
+      au < exists ; The Journal of Lipid Research Volume 17 ; 17 >
+      au < exists ; The Journal of Lipid Research Volume 18 ; 18 >
+      au < exists ; The Journal of Lipid Research Volume 19 ; 19 >
+      au < exists ; The Journal of Lipid Research Volume 20 ; 20 >
+      au < exists ; The Journal of Lipid Research Volume 21 ; 21 >
+      au < exists ; The Journal of Lipid Research Volume 22 ; 22 >
+      au < exists ; The Journal of Lipid Research Volume 23 ; 23 >
+      au < exists ; The Journal of Lipid Research Volume 24 ; 24 >
+      au < exists ; The Journal of Lipid Research Volume 25 ; 25 >
+      au < exists ; The Journal of Lipid Research Volume 26 ; 26 >
+      au < exists ; The Journal of Lipid Research Volume 27 ; 27 >
+      au < exists ; The Journal of Lipid Research Volume 28 ; 28 >
+      au < exists ; The Journal of Lipid Research Volume 29 ; 29 >
+      au < exists ; The Journal of Lipid Research Volume 30 ; 30 >
+      au < exists ; The Journal of Lipid Research Volume 31 ; 31 >
+      au < exists ; The Journal of Lipid Research Volume 32 ; 32 >
+      au < exists ; The Journal of Lipid Research Volume 33 ; 33 >
+      au < exists ; The Journal of Lipid Research Volume 34 ; 34 >
+      au < exists ; The Journal of Lipid Research Volume 35 ; 35 >
+      au < exists ; The Journal of Lipid Research Volume 36 ; 36 >
+      au < exists ; The Journal of Lipid Research Volume 37 ; 37 >
+      au < exists ; The Journal of Lipid Research Volume 38 ; 38 >
+      au < exists ; The Journal of Lipid Research Volume 39 ; 39 >
+      au < exists ; The Journal of Lipid Research Volume 40 ; 40 >
+      au < exists ; The Journal of Lipid Research Volume 41 ; 41 >
+      au < exists ; The Journal of Lipid Research Volume 42 ; 42 >
+      au < exists ; The Journal of Lipid Research Volume 43 ; 43 >
+      au < exists ; The Journal of Lipid Research Volume 44 ; 44 >
+      au < exists ; The Journal of Lipid Research Volume 45 ; 45 >
+      au < manifest ; The Journal of Lipid Research Volume 46 ; 46 >
+      au < manifest ; The Journal of Lipid Research Volume 47 ; 47 >
+      au < manifest ; The Journal of Lipid Research Volume 48 ; 48 >
+      au < manifest ; The Journal of Lipid Research Volume 49 ; 49 >
+      au < manifest ; The Journal of Lipid Research Volume 50 ; 50 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Molecular & Cellular Proteomics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.mcponline.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Molecular & Cellular Proteomics Volume 1 ; 1 >
+      au < exists ; Molecular & Cellular Proteomics Volume 2 ; 2 >
+      au < exists ; Molecular & Cellular Proteomics Volume 3 ; 3 >
+      au < manifest ; Molecular & Cellular Proteomics Volume 4 ; 4 >
+      au < manifest ; Molecular & Cellular Proteomics Volume 5 ; 5 >
+      au < manifest ; Molecular & Cellular Proteomics Volume 6 ; 6 >
+      au < manifest ; Molecular & Cellular Proteomics Volume 7 ; 7 >
+      au < manifest ; Molecular & Cellular Proteomics Volume 8 ; 8 >
+
+    }
+
+  }
+
+}
+

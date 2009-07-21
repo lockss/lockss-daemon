@@ -1,0 +1,506 @@
+{
+  publisher <
+    name = Royal Society of Medicine
+  >
+
+  {
+    title <
+      name = Annals of Clinical Biochemistry
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://acb.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < manifest ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Clinical Ethics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ce.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Clinical Ethics Volume 1 ; 1 >
+      au < manifest ; Clinical Ethics Volume 2 ; 2 >
+      au < manifest ; Clinical Ethics Volume 3 ; 3 >
+      au < manifest ; Clinical Ethics Volume 4 ; 4 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Clinical Risk
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cr.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Clinical Risk Volume 7 ; 7 >
+      au < manifest ; Clinical Risk Volume 8 ; 8 >
+      au < manifest ; Clinical Risk Volume 9 ; 9 >
+      au < manifest ; Clinical Risk Volume 10 ; 10 >
+      au < manifest ; Clinical Risk Volume 11 ; 11 >
+      au < manifest ; Clinical Risk Volume 12 ; 12 >
+      au < manifest ; Clinical Risk Volume 13 ; 13 >
+      au < manifest ; Clinical Risk Volume 14 ; 14 >
+      au < manifest ; Clinical Risk Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Hand Therapy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ht.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Hand Therapy Volume 8 ; 8 >
+      au < exists ; Hand Therapy Volume 9 ; 9 >
+      au < exists ; Hand Therapy Volume 10 ; 10 >
+      au < exists ; Hand Therapy Volume 11 ; 11 >
+      au < exists ; Hand Therapy Volume 12 ; 12 >
+      au < exists ; Hand Therapy Volume 13 ; 13 >
+      au < manifest ; Hand Therapy Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Handbook of Practice Management
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://hpm.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Handbook of Practice Management Volume 71 ; 71 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Health Services Management Research
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://hsmr.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Health Services Management Research Volume 14 ; 14 >
+      au < manifest ; Health Services Management Research Volume 15 ; 15 >
+      au < manifest ; Health Services Management Research Volume 16 ; 16 >
+      au < manifest ; Health Services Management Research Volume 17 ; 17 >
+      au < manifest ; Health Services Management Research Volume 18 ; 18 >
+      au < manifest ; Health Services Management Research Volume 19 ; 19 >
+      au < manifest ; Health Services Management Research Volume 20 ; 20 >
+      au < manifest ; Health Services Management Research Volume 21 ; 21 >
+      au < manifest ; Health Services Management Research Volume 22 ; 22 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = International Journal of Care Pathways
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ijcp.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; International Journal of Care Pathways Volume 9 ; 9 >
+      au < manifest ; International Journal of Care Pathways Volume 10 ; 10 >
+      au < manifest ; International Journal of Care Pathways Volume 11 ; 11 >
+      au < manifest ; International Journal of Care Pathways Volume 12 ; 12 >
+      au < manifest ; International Journal of Care Pathways Volume 13 ; 13 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = International Journal of STD & AIDS
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ijsa.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; International Journal of STD & AIDS Volume 7 ; 7 >
+      au < manifest ; International Journal of STD & AIDS Volume 8 ; 8 >
+      au < manifest ; International Journal of STD & AIDS Volume 9 ; 9 >
+      au < manifest ; International Journal of STD & AIDS Volume 10 ; 10 >
+      au < manifest ; International Journal of STD & AIDS Volume 11 ; 11 >
+      au < manifest ; International Journal of STD & AIDS Volume 12 ; 12 >
+      au < manifest ; International Journal of STD & AIDS Volume 13 ; 13 >
+      au < manifest ; International Journal of STD & AIDS Volume 14 ; 14 >
+      au < manifest ; International Journal of STD & AIDS Volume 15 ; 15 >
+      au < manifest ; International Journal of STD & AIDS Volume 16 ; 16 >
+      au < manifest ; International Journal of STD & AIDS Volume 17 ; 17 >
+      au < manifest ; International Journal of STD & AIDS Volume 18 ; 18 >
+      au < manifest ; International Journal of STD & AIDS Volume 19 ; 19 >
+      au < manifest ; International Journal of STD & AIDS Volume 20 ; 20 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Health Services Research & Policy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jhsrp.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+      au < manifest ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Biography
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jmb.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Medical Biography Volume 13 ; 13 >
+      au < manifest ; Journal of Medical Biography Volume 14 ; 14 >
+      au < manifest ; Journal of Medical Biography Volume 15 ; 15 >
+      au < manifest ; Journal of Medical Biography Volume 16 ; 16 >
+      au < manifest ; Journal of Medical Biography Volume 17 ; 17 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Screening
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jms.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Medical Screening Volume 5 ; 5 >
+      au < manifest ; Journal of Medical Screening Volume 6 ; 6 >
+      au < manifest ; Journal of Medical Screening Volume 7 ; 7 >
+      au < manifest ; Journal of Medical Screening Volume 8 ; 8 >
+      au < manifest ; Journal of Medical Screening Volume 9 ; 9 >
+      au < manifest ; Journal of Medical Screening Volume 10 ; 10 >
+      au < manifest ; Journal of Medical Screening Volume 11 ; 11 >
+      au < manifest ; Journal of Medical Screening Volume 12 ; 12 >
+      au < manifest ; Journal of Medical Screening Volume 13 ; 13 >
+      au < manifest ; Journal of Medical Screening Volume 14 ; 14 >
+      au < manifest ; Journal of Medical Screening Volume 15 ; 15 >
+      au < manifest ; Journal of Medical Screening Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Telemedicine and Telecare
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jtt.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+      au < manifest ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = JRSM
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jrsm.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; JRSM Volume 58 ; 58 >
+      au < manifest ; JRSM Volume 59 ; 59 >
+      au < manifest ; JRSM Volume 60 ; 60 >
+      au < manifest ; JRSM Volume 61 ; 61 >
+      au < manifest ; JRSM Volume 62 ; 62 >
+      au < manifest ; JRSM Volume 63 ; 63 >
+      au < manifest ; JRSM Volume 64 ; 64 >
+      au < manifest ; JRSM Volume 65 ; 65 >
+      au < manifest ; JRSM Volume 66 ; 66 >
+      au < manifest ; JRSM Volume 67 ; 67 >
+      au < manifest ; JRSM Volume 68 ; 68 >
+      au < manifest ; JRSM Volume 69 ; 69 >
+      au < manifest ; JRSM Volume 70 ; 70 >
+      au < manifest ; JRSM Volume 71 ; 71 >
+      au < manifest ; JRSM Volume 72 ; 72 >
+      au < manifest ; JRSM Volume 73 ; 73 >
+      au < manifest ; JRSM Volume 74 ; 74 >
+      au < manifest ; JRSM Volume 75 ; 75 >
+      au < manifest ; JRSM Volume 76 ; 76 >
+      au < manifest ; JRSM Volume 77 ; 77 >
+      au < manifest ; JRSM Volume 78 ; 78 >
+      au < manifest ; JRSM Volume 79 ; 79 >
+      au < manifest ; JRSM Volume 80 ; 80 >
+      au < manifest ; JRSM Volume 81 ; 81 >
+      au < manifest ; JRSM Volume 82 ; 82 >
+      au < manifest ; JRSM Volume 83 ; 83 >
+      au < manifest ; JRSM Volume 84 ; 84 >
+      au < manifest ; JRSM Volume 85 ; 85 >
+      au < manifest ; JRSM Volume 86 ; 86 >
+      au < manifest ; JRSM Volume 87 ; 87 >
+      au < manifest ; JRSM Volume 88 ; 88 >
+      au < manifest ; JRSM Volume 89 ; 89 >
+      au < manifest ; JRSM Volume 90 ; 90 >
+      au < manifest ; JRSM Volume 91 ; 91 >
+      au < manifest ; JRSM Volume 92 ; 92 >
+      au < manifest ; JRSM Volume 93 ; 93 >
+      au < manifest ; JRSM Volume 94 ; 94 >
+      au < manifest ; JRSM Volume 95 ; 95 >
+      au < manifest ; JRSM Volume 96 ; 96 >
+      au < manifest ; JRSM Volume 97 ; 97 >
+      au < manifest ; JRSM Volume 98 ; 98 >
+      au < manifest ; JRSM Volume 99 ; 99 >
+      au < manifest ; JRSM Volume 100 ; 100 >
+      au < manifest ; JRSM Volume 101 ; 101 >
+      au < manifest ; JRSM Volume 102 ; 102 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Laboratory Animals
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://la.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Laboratory Animals Volume 1 ; 1 >
+      au < manifest ; Laboratory Animals Volume 2 ; 2 >
+      au < manifest ; Laboratory Animals Volume 3 ; 3 >
+      au < manifest ; Laboratory Animals Volume 4 ; 4 >
+      au < manifest ; Laboratory Animals Volume 5 ; 5 >
+      au < manifest ; Laboratory Animals Volume 6 ; 6 >
+      au < manifest ; Laboratory Animals Volume 7 ; 7 >
+      au < manifest ; Laboratory Animals Volume 8 ; 8 >
+      au < manifest ; Laboratory Animals Volume 9 ; 9 >
+      au < manifest ; Laboratory Animals Volume 10 ; 10 >
+      au < manifest ; Laboratory Animals Volume 11 ; 11 >
+      au < manifest ; Laboratory Animals Volume 12 ; 12 >
+      au < manifest ; Laboratory Animals Volume 13 ; 13 >
+      au < manifest ; Laboratory Animals Volume 14 ; 14 >
+      au < manifest ; Laboratory Animals Volume 15 ; 15 >
+      au < manifest ; Laboratory Animals Volume 16 ; 16 >
+      au < manifest ; Laboratory Animals Volume 17 ; 17 >
+      au < manifest ; Laboratory Animals Volume 18 ; 18 >
+      au < manifest ; Laboratory Animals Volume 19 ; 19 >
+      au < manifest ; Laboratory Animals Volume 20 ; 20 >
+      au < manifest ; Laboratory Animals Volume 21 ; 21 >
+      au < manifest ; Laboratory Animals Volume 22 ; 22 >
+      au < manifest ; Laboratory Animals Volume 23 ; 23 >
+      au < manifest ; Laboratory Animals Volume 24 ; 24 >
+      au < manifest ; Laboratory Animals Volume 25 ; 25 >
+      au < manifest ; Laboratory Animals Volume 26 ; 26 >
+      au < manifest ; Laboratory Animals Volume 27 ; 27 >
+      au < manifest ; Laboratory Animals Volume 28 ; 28 >
+      au < manifest ; Laboratory Animals Volume 29 ; 29 >
+      au < manifest ; Laboratory Animals Volume 30 ; 30 >
+      au < manifest ; Laboratory Animals Volume 31 ; 31 >
+      au < manifest ; Laboratory Animals Volume 32 ; 32 >
+      au < manifest ; Laboratory Animals Volume 33 ; 33 >
+      au < manifest ; Laboratory Animals Volume 34 ; 34 >
+      au < manifest ; Laboratory Animals Volume 35 ; 35 >
+      au < manifest ; Laboratory Animals Volume 36 ; 36 >
+      au < manifest ; Laboratory Animals Volume 37 ; 37 >
+      au < manifest ; Laboratory Animals Volume 38 ; 38 >
+      au < manifest ; Laboratory Animals Volume 39 ; 39 >
+      au < manifest ; Laboratory Animals Volume 40 ; 40 >
+      au < manifest ; Laboratory Animals Volume 41 ; 41 >
+      au < manifest ; Laboratory Animals Volume 42 ; 42 >
+      au < manifest ; Laboratory Animals Volume 43 ; 43 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Menopause International
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mi.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Menopause International Volume 6 ; 6 >
+      au < manifest ; Menopause International Volume 7 ; 7 >
+      au < manifest ; Menopause International Volume 8 ; 8 >
+      au < manifest ; Menopause International Volume 9 ; 9 >
+      au < manifest ; Menopause International Volume 10 ; 10 >
+      au < manifest ; Menopause International Volume 11 ; 11 >
+      au < manifest ; Menopause International Volume 12 ; 12 >
+      au < manifest ; Menopause International Volume 13 ; 13 >
+      au < manifest ; Menopause International Volume 14 ; 14 >
+      au < manifest ; Menopause International Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Obstetric Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://obmed.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Obstetric Medicine Volume 1 ; 1 >
+      au < manifest ; Obstetric Medicine Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Phlebology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://phleb.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Phlebology Volume 18 ; 18 >
+      au < manifest ; Phlebology Volume 19 ; 19 >
+      au < manifest ; Phlebology Volume 20 ; 20 >
+      au < manifest ; Phlebology Volume 21 ; 21 >
+      au < manifest ; Phlebology Volume 22 ; 22 >
+      au < manifest ; Phlebology Volume 23 ; 23 >
+      au < manifest ; Phlebology Volume 24 ; 24 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Tropical Doctor
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://td.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Tropical Doctor Volume 35 ; 35 >
+      au < manifest ; Tropical Doctor Volume 36 ; 36 >
+      au < manifest ; Tropical Doctor Volume 37 ; 37 >
+      au < manifest ; Tropical Doctor Volume 38 ; 38 >
+      au < manifest ; Tropical Doctor Volume 39 ; 39 >
+
+    }
+
+  }
+
+}
+

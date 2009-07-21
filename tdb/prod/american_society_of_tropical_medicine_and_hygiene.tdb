@@ -1,0 +1,103 @@
+{
+  publisher <
+    name = American Society of Tropical Medicine and Hygiene
+  >
+
+  {
+    title <
+      name = The American Journal of Tropical Medicine and Hygiene
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ajtmh.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 1 ; 1 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 2 ; 2 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 3 ; 3 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 4 ; 4 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 5 ; 5 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 6 ; 6 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 7 ; 7 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 8 ; 8 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 9 ; 9 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 10 ; 10 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 11 ; 11 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 12 ; 12 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 13 ; 13 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 14 ; 14 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 15 ; 15 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 16 ; 16 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 17 ; 17 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 18 ; 18 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 19 ; 19 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 20 ; 20 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 21 ; 21 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 23 ; 23 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 24 ; 24 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 25 ; 25 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 26 ; 26 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 27 ; 27 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 28 ; 28 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 29 ; 29 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 30 ; 30 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 31 ; 31 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 32 ; 32 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 33 ; 33 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 34 ; 34 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 35 ; 35 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 36 ; 36 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 37 ; 37 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 38 ; 38 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 39 ; 39 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 40 ; 40 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 41 ; 41 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 42 ; 42 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 43 ; 43 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 44 ; 44 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 45 ; 45 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 46 ; 46 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 47 ; 47 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 48 ; 48 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 49 ; 49 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 50 ; 50 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 51 ; 51 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 52 ; 52 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 53 ; 53 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 54 ; 54 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 55 ; 55 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 56 ; 56 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 57 ; 57 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 58 ; 58 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 59 ; 59 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 60 ; 60 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 61 ; 61 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 62 ; 62 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 63 ; 63 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 64 ; 64 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 65 ; 65 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 66 ; 66 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 67 ; 67 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 68 ; 68 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 69 ; 69 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 70 ; 70 >
+      au < exists ; The American Journal of Tropical Medicine and Hygiene Volume 71 ; 71 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 72 ; 72 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 73 ; 73 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 74 ; 74 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 75 ; 75 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 76 ; 76 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 77 ; 77 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 78 ; 78 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 80 ; 80 >
+      au < manifest ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
+
+    }
+
+  }
+
+}
+

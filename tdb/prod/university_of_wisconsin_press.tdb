@@ -3,71 +3,305 @@
     name = University of Wisconsin Press
   >
 
-  implicit < status ; name ; param[volume] >
-
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
-
   {
     title <
-      name = Contemporary Literature 
+      name = American Orthoptic Journal
     >
 
-    param[journal_dir] = contemporary_literature
+    {
 
-    au < released ; Contemporary Literature Volume 45 ; 45 >
-    au < released ; Contemporary Literature Volume 46 ; 46 >
-    au < released ; Contemporary Literature Volume 47 ; 47 >
-    au < released ; Contemporary Literature Volume 48 ; 48 >
-    au < manifest ; Contemporary Literature Volume 49 ; 49 >
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aoj.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Orthoptic Journal Volume 51 ; 51 >
+      au < exists ; American Orthoptic Journal Volume 52 ; 52 >
+      au < exists ; American Orthoptic Journal Volume 53 ; 53 >
+      au < exists ; American Orthoptic Journal Volume 54 ; 54 >
+      au < exists ; American Orthoptic Journal Volume 55 ; 55 >
+      au < exists ; American Orthoptic Journal Volume 56 ; 56 >
+      au < exists ; American Orthoptic Journal Volume 57 ; 57 >
+      au < exists ; American Orthoptic Journal Volume 58 ; 58 >
+
+    }
 
   }
 
   {
     title <
-      name = Luso-Brazilian Review 
+      name = Arctic Anthropology
     >
 
-    param[journal_dir] = luso-brazilian_review
+    {
 
-    au < released ; Luso-Brazilian Review Volume 41 ; 41 >
-    au < released ; Luso-Brazilian Review Volume 42 ; 42 >
-    au < released ; Luso-Brazilian Review Volume 43 ; 43 >
-    au < manifest ; Luso-Brazilian Review Volume 44 ; 44 >
-    au < manifest ; Luso-Brazilian Review Volume 45 ; 45 >
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aa.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Arctic Anthropology Volume 40 ; 40 >
+      au < exists ; Arctic Anthropology Volume 41 ; 41 >
+      au < exists ; Arctic Anthropology Volume 42 ; 42 >
+      au < exists ; Arctic Anthropology Volume 43 ; 43 >
+      au < exists ; Arctic Anthropology Volume 44 ; 44 >
+      au < exists ; Arctic Anthropology Volume 45 ; 45 >
+
+    }
 
   }
 
   {
     title <
-      name = Monatshefte 
+      name = Contemporary Literature
     >
 
-    param[journal_dir] = monatshefte
+    {
 
-    au < released ; Monatshefte Volume 99 ; 99 >
-    au < manifest ; Monatshefte Volume 100 ; 100 >
-    au < manifest ; Monatshefte Volume 101 ; 101 >
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cl.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Contemporary Literature Volume 44 ; 44 >
+      au < exists ; Contemporary Literature Volume 45 ; 45 >
+      au < exists ; Contemporary Literature Volume 46 ; 46 >
+      au < exists ; Contemporary Literature Volume 47 ; 47 >
+      au < exists ; Contemporary Literature Volume 48 ; 48 >
+      au < exists ; Contemporary Literature Volume 49 ; 49 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = contemporary_literature
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Contemporary Literature Volume 45 ; 45 >
+      au < released ; Contemporary Literature Volume 46 ; 46 >
+      au < released ; Contemporary Literature Volume 47 ; 47 >
+      au < released ; Contemporary Literature Volume 48 ; 48 >
+      au < manifest ; Contemporary Literature Volume 49 ; 49 >
+
+    }
 
   }
 
   {
     title <
-      name = SubStance 
+      name = Ecological Restoration
     >
 
-    param[journal_dir] = substance
+    {
 
-    au < released ; SubStance Volume 28 ; 28 >
-    au < released ; SubStance Volume 29 ; 29 >
-    au < released ; SubStance Volume 30 ; 30 >
-    au < released ; SubStance Volume 31 ; 31 >
-    au < released ; SubStance Volume 32 ; 32 >
-    au < released ; SubStance Volume 33 ; 33 >
-    au < released ; SubStance Volume 34 ; 34 >
-    au < released ; SubStance Volume 35 ; 35 >
-    au < released ; SubStance Volume 36 ; 36 >
-    au < manifest ; SubStance Volume 37 ; 37 >
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://er.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Ecological Restoration Volume 20 ; 20 >
+      au < exists ; Ecological Restoration Volume 21 ; 21 >
+      au < exists ; Ecological Restoration Volume 22 ; 22 >
+      au < exists ; Ecological Restoration Volume 23 ; 23 >
+      au < exists ; Ecological Restoration Volume 24 ; 24 >
+      au < exists ; Ecological Restoration Volume 25 ; 25 >
+      au < exists ; Ecological Restoration Volume 26 ; 26 >
+      au < exists ; Ecological Restoration Volume 27 ; 27 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Ecquid Novi: African Journalism Studies
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ajs.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Ecquid Novi: African Journalism Studies Volume 29 ; 29 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Human Resources
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jhr.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Human Resources Volume 43 ; 43 >
+      au < exists ; Journal of Human Resources Volume 44 ; 44 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Land Economics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://le.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Land Economics Volume 77 ; 77 >
+      au < exists ; Land Economics Volume 78 ; 78 >
+      au < exists ; Land Economics Volume 79 ; 79 >
+      au < exists ; Land Economics Volume 80 ; 80 >
+      au < exists ; Land Economics Volume 81 ; 81 >
+      au < exists ; Land Economics Volume 82 ; 82 >
+      au < exists ; Land Economics Volume 83 ; 83 >
+      au < exists ; Land Economics Volume 84 ; 84 >
+      au < exists ; Land Economics Volume 85 ; 85 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Landscape Journal
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://lj.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Landscape Journal Volume 21 ; 21 >
+      au < exists ; Landscape Journal Volume 22 ; 22 >
+      au < exists ; Landscape Journal Volume 23 ; 23 >
+      au < exists ; Landscape Journal Volume 24 ; 24 >
+      au < exists ; Landscape Journal Volume 25 ; 25 >
+      au < exists ; Landscape Journal Volume 26 ; 26 >
+      au < exists ; Landscape Journal Volume 27 ; 27 >
+      au < exists ; Landscape Journal Volume 28 ; 28 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Luso-Brazilian Review
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://lbr.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Luso-Brazilian Review Volume 40 ; 40 >
+      au < exists ; Luso-Brazilian Review Volume 41 ; 41 >
+      au < exists ; Luso-Brazilian Review Volume 42 ; 42 >
+      au < exists ; Luso-Brazilian Review Volume 43 ; 43 >
+      au < exists ; Luso-Brazilian Review Volume 44 ; 44 >
+      au < exists ; Luso-Brazilian Review Volume 45 ; 45 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = luso-brazilian_review
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Luso-Brazilian Review Volume 41 ; 41 >
+      au < released ; Luso-Brazilian Review Volume 42 ; 42 >
+      au < released ; Luso-Brazilian Review Volume 43 ; 43 >
+      au < manifest ; Luso-Brazilian Review Volume 44 ; 44 >
+      au < manifest ; Luso-Brazilian Review Volume 45 ; 45 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Monatshefte
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mon.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Monatshefte Volume 100 ; 100 >
+      au < exists ; Monatshefte Volume 101 ; 101 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = monatshefte
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Monatshefte Volume 99 ; 99 >
+      au < manifest ; Monatshefte Volume 100 ; 100 >
+      au < manifest ; Monatshefte Volume 101 ; 101 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = SubStance
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://sub.uwpress.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; SubStance Volume 32 ; 32 >
+      au < exists ; SubStance Volume 33 ; 33 >
+      au < exists ; SubStance Volume 34 ; 34 >
+      au < exists ; SubStance Volume 35 ; 35 >
+      au < exists ; SubStance Volume 36 ; 36 >
+      au < exists ; SubStance Volume 37 ; 37 >
+      au < exists ; SubStance Volume 38 ; 38 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = substance
+      implicit < status ; name ; param[volume] >
+
+      au < released ; SubStance Volume 28 ; 28 >
+      au < released ; SubStance Volume 29 ; 29 >
+      au < released ; SubStance Volume 30 ; 30 >
+      au < released ; SubStance Volume 31 ; 31 >
+      au < released ; SubStance Volume 32 ; 32 >
+      au < released ; SubStance Volume 33 ; 33 >
+      au < released ; SubStance Volume 34 ; 34 >
+      au < released ; SubStance Volume 35 ; 35 >
+      au < released ; SubStance Volume 36 ; 36 >
+      au < manifest ; SubStance Volume 37 ; 37 >
+
+    }
 
   }
 

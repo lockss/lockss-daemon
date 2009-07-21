@@ -1,0 +1,172 @@
+{
+  publisher <
+    name = American Society of Hematology
+  >
+
+  {
+    title <
+      name = ASH Education Program Book
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://asheducationbook.hematologylibrary.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; ASH Education Program Book Volume 2000 ; 2000 >
+      au < exists ; ASH Education Program Book Volume 2001 ; 2001 >
+      au < exists ; ASH Education Program Book Volume 2002 ; 2002 >
+      au < exists ; ASH Education Program Book Volume 2003 ; 2003 >
+      au < manifest ; ASH Education Program Book Volume 2004 ; 2004 >
+      au < manifest ; ASH Education Program Book Volume 2005 ; 2005 >
+      au < manifest ; ASH Education Program Book Volume 2006 ; 2006 >
+      au < manifest ; ASH Education Program Book Volume 2007 ; 2007 >
+      au < manifest ; ASH Education Program Book Volume 2008 ; 2008 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Blood
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      param[base_url] = http://bloodjournal.hematologylibrary.org/
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Blood Volume 106 ; 106 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://bloodjournal.hematologylibrary.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Blood Volume 1 ; 1 >
+      au < exists ; Blood Volume 2 ; 2 >
+      au < exists ; Blood Volume 3 ; 3 >
+      au < exists ; Blood Volume 4 ; 4 >
+      au < exists ; Blood Volume 5 ; 5 >
+      au < exists ; Blood Volume 6 ; 6 >
+      au < exists ; Blood Volume 7 ; 7 >
+      au < exists ; Blood Volume 8 ; 8 >
+      au < exists ; Blood Volume 9 ; 9 >
+      au < exists ; Blood Volume 10 ; 10 >
+      au < exists ; Blood Volume 11 ; 11 >
+      au < exists ; Blood Volume 12 ; 12 >
+      au < exists ; Blood Volume 13 ; 13 >
+      au < exists ; Blood Volume 14 ; 14 >
+      au < exists ; Blood Volume 15 ; 15 >
+      au < exists ; Blood Volume 16 ; 16 >
+      au < exists ; Blood Volume 17 ; 17 >
+      au < exists ; Blood Volume 18 ; 18 >
+      au < exists ; Blood Volume 19 ; 19 >
+      au < exists ; Blood Volume 20 ; 20 >
+      au < exists ; Blood Volume 21 ; 21 >
+      au < exists ; Blood Volume 22 ; 22 >
+      au < exists ; Blood Volume 23 ; 23 >
+      au < exists ; Blood Volume 24 ; 24 >
+      au < exists ; Blood Volume 25 ; 25 >
+      au < exists ; Blood Volume 26 ; 26 >
+      au < exists ; Blood Volume 27 ; 27 >
+      au < exists ; Blood Volume 28 ; 28 >
+      au < exists ; Blood Volume 29 ; 29 >
+      au < exists ; Blood Volume 30 ; 30 >
+      au < exists ; Blood Volume 31 ; 31 >
+      au < exists ; Blood Volume 32 ; 32 >
+      au < exists ; Blood Volume 33 ; 33 >
+      au < exists ; Blood Volume 34 ; 34 >
+      au < exists ; Blood Volume 35 ; 35 >
+      au < exists ; Blood Volume 36 ; 36 >
+      au < exists ; Blood Volume 37 ; 37 >
+      au < exists ; Blood Volume 38 ; 38 >
+      au < exists ; Blood Volume 39 ; 39 >
+      au < exists ; Blood Volume 40 ; 40 >
+      au < exists ; Blood Volume 41 ; 41 >
+      au < exists ; Blood Volume 42 ; 42 >
+      au < exists ; Blood Volume 43 ; 43 >
+      au < exists ; Blood Volume 44 ; 44 >
+      au < exists ; Blood Volume 45 ; 45 >
+      au < exists ; Blood Volume 46 ; 46 >
+      au < exists ; Blood Volume 47 ; 47 >
+      au < exists ; Blood Volume 48 ; 48 >
+      au < exists ; Blood Volume 49 ; 49 >
+      au < exists ; Blood Volume 50 ; 50 >
+      au < exists ; Blood Volume 51 ; 51 >
+      au < exists ; Blood Volume 52 ; 52 >
+      au < exists ; Blood Volume 53 ; 53 >
+      au < exists ; Blood Volume 54 ; 54 >
+      au < exists ; Blood Volume 55 ; 55 >
+      au < exists ; Blood Volume 56 ; 56 >
+      au < exists ; Blood Volume 57 ; 57 >
+      au < exists ; Blood Volume 58 ; 58 >
+      au < exists ; Blood Volume 59 ; 59 >
+      au < exists ; Blood Volume 60 ; 60 >
+      au < exists ; Blood Volume 61 ; 61 >
+      au < exists ; Blood Volume 62 ; 62 >
+      au < exists ; Blood Volume 63 ; 63 >
+      au < exists ; Blood Volume 64 ; 64 >
+      au < exists ; Blood Volume 65 ; 65 >
+      au < exists ; Blood Volume 66 ; 66 >
+      au < exists ; Blood Volume 67 ; 67 >
+      au < exists ; Blood Volume 68 ; 68 >
+      au < exists ; Blood Volume 69 ; 69 >
+      au < exists ; Blood Volume 70 ; 70 >
+      au < exists ; Blood Volume 71 ; 71 >
+      au < exists ; Blood Volume 72 ; 72 >
+      au < exists ; Blood Volume 73 ; 73 >
+      au < exists ; Blood Volume 74 ; 74 >
+      au < exists ; Blood Volume 75 ; 75 >
+      au < exists ; Blood Volume 76 ; 76 >
+      au < exists ; Blood Volume 77 ; 77 >
+      au < exists ; Blood Volume 78 ; 78 >
+      au < exists ; Blood Volume 79 ; 79 >
+      au < exists ; Blood Volume 80 ; 80 >
+      au < exists ; Blood Volume 81 ; 81 >
+      au < exists ; Blood Volume 82 ; 82 >
+      au < exists ; Blood Volume 83 ; 83 >
+      au < exists ; Blood Volume 84 ; 84 >
+      au < exists ; Blood Volume 85 ; 85 >
+      au < exists ; Blood Volume 86 ; 86 >
+      au < exists ; Blood Volume 87 ; 87 >
+      au < exists ; Blood Volume 88 ; 88 >
+      au < exists ; Blood Volume 89 ; 89 >
+      au < exists ; Blood Volume 90 ; 90 >
+      au < exists ; Blood Volume 91 ; 91 >
+      au < exists ; Blood Volume 92 ; 92 >
+      au < exists ; Blood Volume 93 ; 93 >
+      au < exists ; Blood Volume 94 ; 94 >
+      au < exists ; Blood Volume 95 ; 95 >
+      au < exists ; Blood Volume 96 ; 96 >
+      au < exists ; Blood Volume 97 ; 97 >
+      au < exists ; Blood Volume 98 ; 98 >
+      au < exists ; Blood Volume 99 ; 99 >
+      au < exists ; Blood Volume 100 ; 100 >
+      au < exists ; Blood Volume 101 ; 101 >
+      au < exists ; Blood Volume 102 ; 102 >
+      au < exists ; Blood Volume 103 ; 103 >
+      au < exists ; Blood Volume 104 ; 104 >
+      au < manifest ; Blood Volume 105 ; 105 >
+      au < do_not_process ; Blood Volume 106 ; 106 >
+      au < manifest ; Blood Volume 107 ; 107 >
+      au < manifest ; Blood Volume 108 ; 108 >
+      au < manifest ; Blood Volume 109 ; 109 >
+      au < manifest ; Blood Volume 110 ; 110 >
+      au < manifest ; Blood Volume 111 ; 111 >
+      au < manifest ; Blood Volume 112 ; 112 >
+      au < manifest ; Blood Volume 113 ; 113 >
+      au < manifest ; Blood Volume 114 ; 114 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,110 @@
+{
+  publisher <
+    name = American Society of Animal Science
+  >
+
+  {
+    title <
+      name = Journal of Animal Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jas.fass.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Animal Science Volume 1 ; 1 >
+      au < manifest ; Journal of Animal Science Volume 2 ; 2 >
+      au < manifest ; Journal of Animal Science Volume 3 ; 3 >
+      au < manifest ; Journal of Animal Science Volume 4 ; 4 >
+      au < manifest ; Journal of Animal Science Volume 5 ; 5 >
+      au < manifest ; Journal of Animal Science Volume 6 ; 6 >
+      au < manifest ; Journal of Animal Science Volume 7 ; 7 >
+      au < manifest ; Journal of Animal Science Volume 8 ; 8 >
+      au < manifest ; Journal of Animal Science Volume 9 ; 9 >
+      au < manifest ; Journal of Animal Science Volume 10 ; 10 >
+      au < manifest ; Journal of Animal Science Volume 11 ; 11 >
+      au < manifest ; Journal of Animal Science Volume 12 ; 12 >
+      au < manifest ; Journal of Animal Science Volume 13 ; 13 >
+      au < manifest ; Journal of Animal Science Volume 14 ; 14 >
+      au < manifest ; Journal of Animal Science Volume 15 ; 15 >
+      au < manifest ; Journal of Animal Science Volume 16 ; 16 >
+      au < manifest ; Journal of Animal Science Volume 17 ; 17 >
+      au < manifest ; Journal of Animal Science Volume 18 ; 18 >
+      au < manifest ; Journal of Animal Science Volume 19 ; 19 >
+      au < manifest ; Journal of Animal Science Volume 20 ; 20 >
+      au < manifest ; Journal of Animal Science Volume 21 ; 21 >
+      au < manifest ; Journal of Animal Science Volume 22 ; 22 >
+      au < manifest ; Journal of Animal Science Volume 23 ; 23 >
+      au < manifest ; Journal of Animal Science Volume 24 ; 24 >
+      au < manifest ; Journal of Animal Science Volume 25 ; 25 >
+      au < manifest ; Journal of Animal Science Volume 26 ; 26 >
+      au < manifest ; Journal of Animal Science Volume 27 ; 27 >
+      au < manifest ; Journal of Animal Science Volume 28 ; 28 >
+      au < manifest ; Journal of Animal Science Volume 29 ; 29 >
+      au < manifest ; Journal of Animal Science Volume 30 ; 30 >
+      au < manifest ; Journal of Animal Science Volume 31 ; 31 >
+      au < manifest ; Journal of Animal Science Volume 32 ; 32 >
+      au < manifest ; Journal of Animal Science Volume 33 ; 33 >
+      au < manifest ; Journal of Animal Science Volume 34 ; 34 >
+      au < manifest ; Journal of Animal Science Volume 35 ; 35 >
+      au < manifest ; Journal of Animal Science Volume 36 ; 36 >
+      au < manifest ; Journal of Animal Science Volume 37 ; 37 >
+      au < manifest ; Journal of Animal Science Volume 38 ; 38 >
+      au < manifest ; Journal of Animal Science Volume 39 ; 39 >
+      au < manifest ; Journal of Animal Science Volume 40 ; 40 >
+      au < manifest ; Journal of Animal Science Volume 41 ; 41 >
+      au < manifest ; Journal of Animal Science Volume 42 ; 42 >
+      au < manifest ; Journal of Animal Science Volume 43 ; 43 >
+      au < manifest ; Journal of Animal Science Volume 44 ; 44 >
+      au < manifest ; Journal of Animal Science Volume 45 ; 45 >
+      au < manifest ; Journal of Animal Science Volume 46 ; 46 >
+      au < manifest ; Journal of Animal Science Volume 47 ; 47 >
+      au < manifest ; Journal of Animal Science Volume 48 ; 48 >
+      au < manifest ; Journal of Animal Science Volume 49 ; 49 >
+      au < manifest ; Journal of Animal Science Volume 50 ; 50 >
+      au < manifest ; Journal of Animal Science Volume 51 ; 51 >
+      au < manifest ; Journal of Animal Science Volume 52 ; 52 >
+      au < manifest ; Journal of Animal Science Volume 53 ; 53 >
+      au < manifest ; Journal of Animal Science Volume 54 ; 54 >
+      au < manifest ; Journal of Animal Science Volume 55 ; 55 >
+      au < manifest ; Journal of Animal Science Volume 56 ; 56 >
+      au < manifest ; Journal of Animal Science Volume 57 ; 57 >
+      au < manifest ; Journal of Animal Science Volume 58 ; 58 >
+      au < manifest ; Journal of Animal Science Volume 59 ; 59 >
+      au < manifest ; Journal of Animal Science Volume 60 ; 60 >
+      au < manifest ; Journal of Animal Science Volume 61 ; 61 >
+      au < manifest ; Journal of Animal Science Volume 62 ; 62 >
+      au < manifest ; Journal of Animal Science Volume 63 ; 63 >
+      au < manifest ; Journal of Animal Science Volume 64 ; 64 >
+      au < manifest ; Journal of Animal Science Volume 65 ; 65 >
+      au < manifest ; Journal of Animal Science Volume 66 ; 66 >
+      au < manifest ; Journal of Animal Science Volume 67 ; 67 >
+      au < released ; Journal of Animal Science Volume 68 ; 68 >
+      au < released ; Journal of Animal Science Volume 69 ; 69 >
+      au < released ; Journal of Animal Science Volume 70 ; 70 >
+      au < released ; Journal of Animal Science Volume 71 ; 71 >
+      au < released ; Journal of Animal Science Volume 72 ; 72 >
+      au < released ; Journal of Animal Science Volume 73 ; 73 >
+      au < released ; Journal of Animal Science Volume 74 ; 74 >
+      au < released ; Journal of Animal Science Volume 75 ; 75 >
+      au < released ; Journal of Animal Science Volume 76 ; 76 >
+      au < released ; Journal of Animal Science Volume 77 ; 77 >
+      au < released ; Journal of Animal Science Volume 78 ; 78 >
+      au < released ; Journal of Animal Science Volume 79 ; 79 >
+      au < released ; Journal of Animal Science Volume 80 ; 80 >
+      au < released ; Journal of Animal Science Volume 81 ; 81 >
+      au < released ; Journal of Animal Science Volume 82 ; 82 >
+      au < released ; Journal of Animal Science Volume 83 ; 83 >
+      au < released ; Journal of Animal Science Volume 84 ; 84 >
+      au < manifest ; Journal of Animal Science Volume 85 ; 85 >
+      au < manifest ; Journal of Animal Science Volume 86 ; 86 >
+      au < manifest ; Journal of Animal Science Volume 87 ; 87 >
+
+    }
+
+  }
+
+}
+

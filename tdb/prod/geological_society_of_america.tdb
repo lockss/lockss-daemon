@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Geological Society of America
+  >
+
+  {
+    title <
+      name = Lithosphere
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://lithosphere.gsapubs.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Lithosphere Volume 1 ; 1 >
+
+    }
+
+  }
+
+}
+

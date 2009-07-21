@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = Botanical Society of America
+  >
+
+  {
+    title <
+      name = American Journal of Botany
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.amjbot.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Botany Volume 84 ; 84 >
+      au < exists ; American Journal of Botany Volume 85 ; 85 >
+      au < exists ; American Journal of Botany Volume 86 ; 86 >
+      au < exists ; American Journal of Botany Volume 87 ; 87 >
+      au < exists ; American Journal of Botany Volume 88 ; 88 >
+      au < exists ; American Journal of Botany Volume 89 ; 89 >
+      au < exists ; American Journal of Botany Volume 90 ; 90 >
+      au < exists ; American Journal of Botany Volume 91 ; 91 >
+      au < released ; American Journal of Botany Volume 92 ; 92 >
+      au < released ; American Journal of Botany Volume 93 ; 93 >
+      au < released ; American Journal of Botany Volume 94 ; 94 >
+      au < manifest ; American Journal of Botany Volume 95 ; 95 >
+      au < manifest ; American Journal of Botany Volume 96 ; 96 >
+
+    }
+
+  }
+
+}
+

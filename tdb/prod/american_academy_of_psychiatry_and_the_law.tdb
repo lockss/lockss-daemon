@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = American Academy of Psychiatry and the Law
+  >
+
+  {
+    title <
+      name = Journal of the American Academy of Psychiatry and the Law Online
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jaapl.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 ; 25 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 ; 26 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 ; 27 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 ; 28 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 ; 29 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 34 ; 34 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 >
+      au < exists ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,114 @@
+{
+  publisher <
+    name = American Society for Horticultural Science
+  >
+
+  {
+    title <
+      name = HortScience
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://hortsci.ashspublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; HortScience Volume 25 ; 25 >
+      au < exists ; HortScience Volume 26 ; 26 >
+      au < exists ; HortScience Volume 27 ; 27 >
+      au < exists ; HortScience Volume 28 ; 28 >
+      au < exists ; HortScience Volume 29 ; 29 >
+      au < exists ; HortScience Volume 30 ; 30 >
+      au < exists ; HortScience Volume 31 ; 31 >
+      au < exists ; HortScience Volume 32 ; 32 >
+      au < exists ; HortScience Volume 33 ; 33 >
+      au < exists ; HortScience Volume 34 ; 34 >
+      au < exists ; HortScience Volume 35 ; 35 >
+      au < exists ; HortScience Volume 36 ; 36 >
+      au < exists ; HortScience Volume 37 ; 37 >
+      au < exists ; HortScience Volume 38 ; 38 >
+      au < exists ; HortScience Volume 39 ; 39 >
+      au < exists ; HortScience Volume 40 ; 40 >
+      au < exists ; HortScience Volume 41 ; 41 >
+      au < exists ; HortScience Volume 42 ; 42 >
+      au < exists ; HortScience Volume 43 ; 43 >
+      au < exists ; HortScience Volume 44 ; 44 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = HortTechnology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://horttech.ashspublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; HortTechnology Volume 1 ; 1 >
+      au < exists ; HortTechnology Volume 2 ; 2 >
+      au < exists ; HortTechnology Volume 3 ; 3 >
+      au < exists ; HortTechnology Volume 4 ; 4 >
+      au < exists ; HortTechnology Volume 5 ; 5 >
+      au < exists ; HortTechnology Volume 6 ; 6 >
+      au < exists ; HortTechnology Volume 7 ; 7 >
+      au < exists ; HortTechnology Volume 8 ; 8 >
+      au < exists ; HortTechnology Volume 9 ; 9 >
+      au < exists ; HortTechnology Volume 10 ; 10 >
+      au < exists ; HortTechnology Volume 11 ; 11 >
+      au < exists ; HortTechnology Volume 12 ; 12 >
+      au < exists ; HortTechnology Volume 13 ; 13 >
+      au < exists ; HortTechnology Volume 14 ; 14 >
+      au < exists ; HortTechnology Volume 15 ; 15 >
+      au < exists ; HortTechnology Volume 16 ; 16 >
+      au < exists ; HortTechnology Volume 17 ; 17 >
+      au < exists ; HortTechnology Volume 18 ; 18 >
+      au < exists ; HortTechnology Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of the American Society for Horticultural Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://journal.ashspublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of the American Society for Horticultural Science Volume 115 ; 115 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 116 ; 116 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 117 ; 117 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 118 ; 118 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 119 ; 119 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 120 ; 120 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 121 ; 121 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 122 ; 122 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 123 ; 123 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 124 ; 124 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 125 ; 125 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 126 ; 126 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 127 ; 127 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 128 ; 128 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 129 ; 129 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 130 ; 130 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 131 ; 131 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 132 ; 132 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 133 ; 133 >
+      au < exists ; Journal of the American Society for Horticultural Science Volume 134 ; 134 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = Association for Molecular Pathology
+  >
+
+  {
+    title <
+      name = Journal of Molecular Diagnostics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jmd.amjpathol.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Molecular Diagnostics Volume 1 ; 1 >
+      au < exists ; Journal of Molecular Diagnostics Volume 2 ; 2 >
+      au < exists ; Journal of Molecular Diagnostics Volume 3 ; 3 >
+      au < exists ; Journal of Molecular Diagnostics Volume 4 ; 4 >
+      au < exists ; Journal of Molecular Diagnostics Volume 5 ; 5 >
+      au < exists ; Journal of Molecular Diagnostics Volume 6 ; 6 >
+      au < exists ; Journal of Molecular Diagnostics Volume 7 ; 7 >
+      au < exists ; Journal of Molecular Diagnostics Volume 8 ; 8 >
+      au < exists ; Journal of Molecular Diagnostics Volume 9 ; 9 >
+      au < exists ; Journal of Molecular Diagnostics Volume 10 ; 10 >
+      au < exists ; Journal of Molecular Diagnostics Volume 11 ; 11 >
+
+    }
+
+  }
+
+}
+

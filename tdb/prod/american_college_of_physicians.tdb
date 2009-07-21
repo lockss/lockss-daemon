@@ -1,0 +1,140 @@
+{
+  publisher <
+    name = American College of Physicians
+  >
+
+  {
+    title <
+      name = Annals of Internal Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.annals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Annals of Internal Medicine Volume 32 ; 32 >
+      au < exists ; Annals of Internal Medicine Volume 33 ; 33 >
+      au < exists ; Annals of Internal Medicine Volume 34 ; 34 >
+      au < exists ; Annals of Internal Medicine Volume 35 ; 35 >
+      au < exists ; Annals of Internal Medicine Volume 36 ; 36 >
+      au < exists ; Annals of Internal Medicine Volume 37 ; 37 >
+      au < exists ; Annals of Internal Medicine Volume 38 ; 38 >
+      au < exists ; Annals of Internal Medicine Volume 39 ; 39 >
+      au < exists ; Annals of Internal Medicine Volume 40 ; 40 >
+      au < exists ; Annals of Internal Medicine Volume 41 ; 41 >
+      au < exists ; Annals of Internal Medicine Volume 42 ; 42 >
+      au < exists ; Annals of Internal Medicine Volume 43 ; 43 >
+      au < exists ; Annals of Internal Medicine Volume 44 ; 44 >
+      au < exists ; Annals of Internal Medicine Volume 45 ; 45 >
+      au < exists ; Annals of Internal Medicine Volume 46 ; 46 >
+      au < exists ; Annals of Internal Medicine Volume 47 ; 47 >
+      au < exists ; Annals of Internal Medicine Volume 48 ; 48 >
+      au < exists ; Annals of Internal Medicine Volume 49 ; 49 >
+      au < exists ; Annals of Internal Medicine Volume 50 ; 50 >
+      au < exists ; Annals of Internal Medicine Volume 51 ; 51 >
+      au < exists ; Annals of Internal Medicine Volume 52 ; 52 >
+      au < exists ; Annals of Internal Medicine Volume 53 ; 53 >
+      au < exists ; Annals of Internal Medicine Volume 54 ; 54 >
+      au < exists ; Annals of Internal Medicine Volume 55 ; 55 >
+      au < exists ; Annals of Internal Medicine Volume 56 ; 56 >
+      au < exists ; Annals of Internal Medicine Volume 57 ; 57 >
+      au < exists ; Annals of Internal Medicine Volume 58 ; 58 >
+      au < exists ; Annals of Internal Medicine Volume 60 ; 60 >
+      au < exists ; Annals of Internal Medicine Volume 61 ; 61 >
+      au < exists ; Annals of Internal Medicine Volume 62 ; 62 >
+      au < exists ; Annals of Internal Medicine Volume 63 ; 63 >
+      au < exists ; Annals of Internal Medicine Volume 64 ; 64 >
+      au < exists ; Annals of Internal Medicine Volume 65 ; 65 >
+      au < exists ; Annals of Internal Medicine Volume 66 ; 66 >
+      au < exists ; Annals of Internal Medicine Volume 67 ; 67 >
+      au < exists ; Annals of Internal Medicine Volume 68 ; 68 >
+      au < exists ; Annals of Internal Medicine Volume 69 ; 69 >
+      au < exists ; Annals of Internal Medicine Volume 70 ; 70 >
+      au < exists ; Annals of Internal Medicine Volume 71 ; 71 >
+      au < exists ; Annals of Internal Medicine Volume 72 ; 72 >
+      au < exists ; Annals of Internal Medicine Volume 73 ; 73 >
+      au < exists ; Annals of Internal Medicine Volume 74 ; 74 >
+      au < exists ; Annals of Internal Medicine Volume 75 ; 75 >
+      au < exists ; Annals of Internal Medicine Volume 76 ; 76 >
+      au < exists ; Annals of Internal Medicine Volume 77 ; 77 >
+      au < exists ; Annals of Internal Medicine Volume 78 ; 78 >
+      au < exists ; Annals of Internal Medicine Volume 79 ; 79 >
+      au < exists ; Annals of Internal Medicine Volume 80 ; 80 >
+      au < exists ; Annals of Internal Medicine Volume 81 ; 81 >
+      au < exists ; Annals of Internal Medicine Volume 82 ; 82 >
+      au < exists ; Annals of Internal Medicine Volume 83 ; 83 >
+      au < exists ; Annals of Internal Medicine Volume 84 ; 84 >
+      au < exists ; Annals of Internal Medicine Volume 85 ; 85 >
+      au < exists ; Annals of Internal Medicine Volume 86 ; 86 >
+      au < exists ; Annals of Internal Medicine Volume 87 ; 87 >
+      au < exists ; Annals of Internal Medicine Volume 88 ; 88 >
+      au < exists ; Annals of Internal Medicine Volume 89 ; 89 >
+      au < exists ; Annals of Internal Medicine Volume 90 ; 90 >
+      au < exists ; Annals of Internal Medicine Volume 91 ; 91 >
+      au < exists ; Annals of Internal Medicine Volume 92 ; 92 >
+      au < exists ; Annals of Internal Medicine Volume 94 ; 94 >
+      au < exists ; Annals of Internal Medicine Volume 95 ; 95 >
+      au < exists ; Annals of Internal Medicine Volume 96 ; 96 >
+      au < exists ; Annals of Internal Medicine Volume 97 ; 97 >
+      au < exists ; Annals of Internal Medicine Volume 98 ; 98 >
+      au < exists ; Annals of Internal Medicine Volume 99 ; 99 >
+      au < exists ; Annals of Internal Medicine Volume 100 ; 100 >
+      au < exists ; Annals of Internal Medicine Volume 101 ; 101 >
+      au < exists ; Annals of Internal Medicine Volume 102 ; 102 >
+      au < exists ; Annals of Internal Medicine Volume 103 ; 103 >
+      au < exists ; Annals of Internal Medicine Volume 104 ; 104 >
+      au < exists ; Annals of Internal Medicine Volume 105 ; 105 >
+      au < exists ; Annals of Internal Medicine Volume 106 ; 106 >
+      au < exists ; Annals of Internal Medicine Volume 107 ; 107 >
+      au < exists ; Annals of Internal Medicine Volume 108 ; 108 >
+      au < exists ; Annals of Internal Medicine Volume 109 ; 109 >
+      au < exists ; Annals of Internal Medicine Volume 110 ; 110 >
+      au < exists ; Annals of Internal Medicine Volume 111 ; 111 >
+      au < exists ; Annals of Internal Medicine Volume 112 ; 112 >
+      au < exists ; Annals of Internal Medicine Volume 113 ; 113 >
+      au < exists ; Annals of Internal Medicine Volume 114 ; 114 >
+      au < exists ; Annals of Internal Medicine Volume 115 ; 115 >
+      au < exists ; Annals of Internal Medicine Volume 116 ; 116 >
+      au < exists ; Annals of Internal Medicine Volume 117 ; 117 >
+      au < exists ; Annals of Internal Medicine Volume 118 ; 118 >
+      au < exists ; Annals of Internal Medicine Volume 119 ; 119 >
+      au < exists ; Annals of Internal Medicine Volume 120 ; 120 >
+      au < exists ; Annals of Internal Medicine Volume 121 ; 121 >
+      au < exists ; Annals of Internal Medicine Volume 122 ; 122 >
+      au < exists ; Annals of Internal Medicine Volume 123 ; 123 >
+      au < exists ; Annals of Internal Medicine Volume 125 ; 125 >
+      au < exists ; Annals of Internal Medicine Volume 126 ; 126 >
+      au < exists ; Annals of Internal Medicine Volume 127 ; 127 >
+      au < exists ; Annals of Internal Medicine Volume 128 ; 128 >
+      au < exists ; Annals of Internal Medicine Volume 129 ; 129 >
+      au < exists ; Annals of Internal Medicine Volume 130 ; 130 >
+      au < exists ; Annals of Internal Medicine Volume 131 ; 131 >
+      au < exists ; Annals of Internal Medicine Volume 132 ; 132 >
+      au < exists ; Annals of Internal Medicine Volume 133 ; 133 >
+      au < exists ; Annals of Internal Medicine Volume 134 ; 134 >
+      au < exists ; Annals of Internal Medicine Volume 135 ; 135 >
+      au < exists ; Annals of Internal Medicine Volume 136 ; 136 >
+      au < exists ; Annals of Internal Medicine Volume 137 ; 137 >
+      au < exists ; Annals of Internal Medicine Volume 138 ; 138 >
+      au < exists ; Annals of Internal Medicine Volume 139 ; 139 >
+      au < exists ; Annals of Internal Medicine Volume 140 ; 140 >
+      au < exists ; Annals of Internal Medicine Volume 141 ; 141 >
+      au < exists ; Annals of Internal Medicine Volume 142 ; 142 >
+      au < exists ; Annals of Internal Medicine Volume 143 ; 143 >
+      au < exists ; Annals of Internal Medicine Volume 144 ; 144 >
+      au < exists ; Annals of Internal Medicine Volume 145 ; 145 >
+      au < exists ; Annals of Internal Medicine Volume 146 ; 146 >
+      au < exists ; Annals of Internal Medicine Volume 147 ; 147 >
+      au < exists ; Annals of Internal Medicine Volume 148 ; 148 >
+      au < exists ; Annals of Internal Medicine Volume 149 ; 149 >
+      au < exists ; Annals of Internal Medicine Volume 150 ; 150 >
+      au < exists ; Annals of Internal Medicine Volume 151 ; 151 >
+
+    }
+
+  }
+
+}
+

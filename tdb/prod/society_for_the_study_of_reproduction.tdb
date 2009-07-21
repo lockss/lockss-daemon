@@ -7,15 +7,85 @@
   {
     title <
       name = Biology of Reproduction ;
-      issn = 0006-3363 
+      issn = 0006-3363
     >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.biolreprod.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Biology of Reproduction Volume 21 ; 21 >
+      au < exists ; Biology of Reproduction Volume 22 ; 22 >
+      au < exists ; Biology of Reproduction Volume 23 ; 23 >
+      au < exists ; Biology of Reproduction Volume 24 ; 24 >
+      au < exists ; Biology of Reproduction Volume 25 ; 25 >
+      au < exists ; Biology of Reproduction Volume 26 ; 26 >
+      au < exists ; Biology of Reproduction Volume 27 ; 27 >
+      au < exists ; Biology of Reproduction Volume 28 ; 28 >
+      au < exists ; Biology of Reproduction Volume 29 ; 29 >
+      au < exists ; Biology of Reproduction Volume 30 ; 30 >
+      au < exists ; Biology of Reproduction Volume 31 ; 31 >
+      au < exists ; Biology of Reproduction Volume 32 ; 32 >
+      au < exists ; Biology of Reproduction Volume 33 ; 33 >
+      au < exists ; Biology of Reproduction Volume 34 ; 34 >
+      au < exists ; Biology of Reproduction Volume 35 ; 35 >
+      au < exists ; Biology of Reproduction Volume 36 ; 36 >
+      au < exists ; Biology of Reproduction Volume 37 ; 37 >
+      au < exists ; Biology of Reproduction Volume 38 ; 38 >
+      au < exists ; Biology of Reproduction Volume 39 ; 39 >
+      au < exists ; Biology of Reproduction Volume 40 ; 40 >
+      au < exists ; Biology of Reproduction Volume 41 ; 41 >
+      au < exists ; Biology of Reproduction Volume 42 ; 42 >
+      au < exists ; Biology of Reproduction Volume 43 ; 43 >
+      au < exists ; Biology of Reproduction Volume 44 ; 44 >
+      au < exists ; Biology of Reproduction Volume 45 ; 45 >
+      au < exists ; Biology of Reproduction Volume 46 ; 46 >
+      au < exists ; Biology of Reproduction Volume 47 ; 47 >
+      au < exists ; Biology of Reproduction Volume 48 ; 48 >
+      au < exists ; Biology of Reproduction Volume 49 ; 49 >
+      au < exists ; Biology of Reproduction Volume 50 ; 50 >
+      au < exists ; Biology of Reproduction Volume 51 ; 51 >
+      au < exists ; Biology of Reproduction Volume 52 ; 52 >
+      au < exists ; Biology of Reproduction Volume 53 ; 53 >
+      au < exists ; Biology of Reproduction Volume 54 ; 54 >
+      au < exists ; Biology of Reproduction Volume 55 ; 55 >
+      au < exists ; Biology of Reproduction Volume 56 ; 56 >
+      au < exists ; Biology of Reproduction Volume 57 ; 57 >
+      au < exists ; Biology of Reproduction Volume 58 ; 58 >
+      au < exists ; Biology of Reproduction Volume 59 ; 59 >
+      au < exists ; Biology of Reproduction Volume 60 ; 60 >
+      au < exists ; Biology of Reproduction Volume 61 ; 61 >
+      au < exists ; Biology of Reproduction Volume 62 ; 62 >
+      au < exists ; Biology of Reproduction Volume 63 ; 63 >
+      au < exists ; Biology of Reproduction Volume 64 ; 64 >
+      au < exists ; Biology of Reproduction Volume 65 ; 65 >
+      au < exists ; Biology of Reproduction Volume 66 ; 66 >
+      au < exists ; Biology of Reproduction Volume 67 ; 67 >
+      au < exists ; Biology of Reproduction Volume 68 ; 68 >
+      au < exists ; Biology of Reproduction Volume 69 ; 69 >
+      au < exists ; Biology of Reproduction Volume 70 ; 70 >
+      au < exists ; Biology of Reproduction Volume 71 ; 71 >
+      au < manifest ; Biology of Reproduction Volume 72 ; 72 >
+      au < manifest ; Biology of Reproduction Volume 73 ; 73 >
+      au < manifest ; Biology of Reproduction Volume 74 ; 74 >
+      au < manifest ; Biology of Reproduction Volume 75 ; 75 >
+      au < manifest ; Biology of Reproduction Volume 76 ; 76 >
+      au < manifest ; Biology of Reproduction Volume 77 ; 77 >
+      au < manifest ; Biology of Reproduction Volume 78 ; 78 >
+      au < manifest ; Biology of Reproduction Volume 79 ; 79 >
+      au < manifest ; Biology of Reproduction Volume 80 ; 80 >
+      au < manifest ; Biology of Reproduction Volume 81 ; 81 >
+
+    }
 
     {
       implicit < status ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-3363
-  
+
       au < do_not_process ; Biology of Reproduction Volume 62 ; 62 >
       au < do_not_process ; Biology of Reproduction Volume 63 ; 63 >
       au < do_not_process ; Biology of Reproduction Volume 64 ; 64 >
@@ -30,12 +100,6 @@
       au < do_not_process ; Biology of Reproduction Volume 73 ; 73 >
       au < do_not_process ; Biology of Reproduction Volume 74 ; 74 >
       au < do_not_process ; Biology of Reproduction Volume 75 ; 75 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
-
     }
 
   }

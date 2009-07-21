@@ -1,0 +1,165 @@
+{
+  publisher <
+    name = Crop Science Society of America
+  >
+
+  {
+    title <
+      name = Crop Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://crop.scijournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Crop Science Volume 1 ; 1 >
+      au < exists ; Crop Science Volume 2 ; 2 >
+      au < exists ; Crop Science Volume 3 ; 3 >
+      au < exists ; Crop Science Volume 4 ; 4 >
+      au < exists ; Crop Science Volume 5 ; 5 >
+      au < exists ; Crop Science Volume 6 ; 6 >
+      au < exists ; Crop Science Volume 7 ; 7 >
+      au < exists ; Crop Science Volume 8 ; 8 >
+      au < exists ; Crop Science Volume 9 ; 9 >
+      au < exists ; Crop Science Volume 10 ; 10 >
+      au < exists ; Crop Science Volume 11 ; 11 >
+      au < exists ; Crop Science Volume 12 ; 12 >
+      au < exists ; Crop Science Volume 13 ; 13 >
+      au < exists ; Crop Science Volume 14 ; 14 >
+      au < exists ; Crop Science Volume 15 ; 15 >
+      au < exists ; Crop Science Volume 16 ; 16 >
+      au < exists ; Crop Science Volume 17 ; 17 >
+      au < exists ; Crop Science Volume 18 ; 18 >
+      au < exists ; Crop Science Volume 19 ; 19 >
+      au < exists ; Crop Science Volume 20 ; 20 >
+      au < exists ; Crop Science Volume 21 ; 21 >
+      au < exists ; Crop Science Volume 22 ; 22 >
+      au < exists ; Crop Science Volume 23 ; 23 >
+      au < exists ; Crop Science Volume 24 ; 24 >
+      au < exists ; Crop Science Volume 25 ; 25 >
+      au < exists ; Crop Science Volume 26 ; 26 >
+      au < exists ; Crop Science Volume 27 ; 27 >
+      au < exists ; Crop Science Volume 28 ; 28 >
+      au < exists ; Crop Science Volume 29 ; 29 >
+      au < exists ; Crop Science Volume 30 ; 30 >
+      au < exists ; Crop Science Volume 31 ; 31 >
+      au < exists ; Crop Science Volume 32 ; 32 >
+      au < exists ; Crop Science Volume 33 ; 33 >
+      au < exists ; Crop Science Volume 34 ; 34 >
+      au < exists ; Crop Science Volume 35 ; 35 >
+      au < exists ; Crop Science Volume 36 ; 36 >
+      au < exists ; Crop Science Volume 37 ; 37 >
+      au < released ; Crop Science Volume 38 ; 38 >
+      au < released ; Crop Science Volume 39 ; 39 >
+      au < released ; Crop Science Volume 40 ; 40 >
+      au < released ; Crop Science Volume 41 ; 41 >
+      au < released ; Crop Science Volume 42 ; 42 >
+      au < released ; Crop Science Volume 43 ; 43 >
+      au < released ; Crop Science Volume 44 ; 44 >
+      au < released ; Crop Science Volume 45 ; 45 >
+      au < released ; Crop Science Volume 46 ; 46 >
+      au < manifest ; Crop Science Volume 47 ; 47 >
+      au < manifest ; Crop Science Volume 48 ; 48 >
+      au < manifest ; Crop Science Volume 49 ; 49 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Environmental Quality
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jeq.scijournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Environmental Quality Volume 1 ; 1 >
+      au < exists ; Journal of Environmental Quality Volume 2 ; 2 >
+      au < exists ; Journal of Environmental Quality Volume 3 ; 3 >
+      au < exists ; Journal of Environmental Quality Volume 4 ; 4 >
+      au < exists ; Journal of Environmental Quality Volume 5 ; 5 >
+      au < exists ; Journal of Environmental Quality Volume 6 ; 6 >
+      au < exists ; Journal of Environmental Quality Volume 7 ; 7 >
+      au < exists ; Journal of Environmental Quality Volume 8 ; 8 >
+      au < exists ; Journal of Environmental Quality Volume 9 ; 9 >
+      au < exists ; Journal of Environmental Quality Volume 10 ; 10 >
+      au < exists ; Journal of Environmental Quality Volume 11 ; 11 >
+      au < exists ; Journal of Environmental Quality Volume 12 ; 12 >
+      au < exists ; Journal of Environmental Quality Volume 13 ; 13 >
+      au < exists ; Journal of Environmental Quality Volume 14 ; 14 >
+      au < exists ; Journal of Environmental Quality Volume 15 ; 15 >
+      au < exists ; Journal of Environmental Quality Volume 16 ; 16 >
+      au < exists ; Journal of Environmental Quality Volume 17 ; 17 >
+      au < exists ; Journal of Environmental Quality Volume 18 ; 18 >
+      au < exists ; Journal of Environmental Quality Volume 19 ; 19 >
+      au < exists ; Journal of Environmental Quality Volume 20 ; 20 >
+      au < exists ; Journal of Environmental Quality Volume 21 ; 21 >
+      au < exists ; Journal of Environmental Quality Volume 22 ; 22 >
+      au < exists ; Journal of Environmental Quality Volume 23 ; 23 >
+      au < exists ; Journal of Environmental Quality Volume 24 ; 24 >
+      au < exists ; Journal of Environmental Quality Volume 25 ; 25 >
+      au < exists ; Journal of Environmental Quality Volume 26 ; 26 >
+      au < exists ; Journal of Environmental Quality Volume 27 ; 27 >
+      au < exists ; Journal of Environmental Quality Volume 28 ; 28 >
+      au < exists ; Journal of Environmental Quality Volume 29 ; 29 >
+      au < manifest ; Journal of Environmental Quality Volume 30 ; 30 >
+      au < manifest ; Journal of Environmental Quality Volume 31 ; 31 >
+      au < manifest ; Journal of Environmental Quality Volume 32 ; 32 >
+      au < manifest ; Journal of Environmental Quality Volume 33 ; 33 >
+      au < manifest ; Journal of Environmental Quality Volume 34 ; 34 >
+      au < manifest ; Journal of Environmental Quality Volume 35 ; 35 >
+      au < manifest ; Journal of Environmental Quality Volume 36 ; 36 >
+      au < manifest ; Journal of Environmental Quality Volume 37 ; 37 >
+      au < manifest ; Journal of Environmental Quality Volume 38 ; 38 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Plant Registrations
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jpr.scijournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Plant Registrations Volume 1 ; 1 >
+      au < manifest ; Journal of Plant Registrations Volume 2 ; 2 >
+      au < manifest ; Journal of Plant Registrations Volume 3 ; 3 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = The Plant Genome
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://plantgenome.scijournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Plant Genome Volume 1 ; 1 >
+      au < exists ; The Plant Genome Volume 2 ; 2 >
+
+    }
+
+  }
+
+}
+

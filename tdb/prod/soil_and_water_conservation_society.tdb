@@ -1,0 +1,54 @@
+{
+  publisher <
+    name = Soil and Water Conservation Society
+  >
+
+  {
+    title <
+      name = Journal of Soil and Water Conservation
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://www.jswconline.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Soil and Water Conservation Volume 36 ; 36 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 37 ; 37 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 38 ; 38 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 39 ; 39 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 40 ; 40 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 41 ; 41 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 42 ; 42 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 43 ; 43 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 44 ; 44 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 45 ; 45 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 46 ; 46 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 47 ; 47 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 48 ; 48 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 49 ; 49 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 50 ; 50 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 51 ; 51 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 52 ; 52 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 53 ; 53 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 54 ; 54 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 55 ; 55 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 56 ; 56 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 57 ; 57 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 58 ; 58 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 59 ; 59 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 60 ; 60 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 61 ; 61 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 62 ; 62 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 63 ; 63 >
+      au < manifest ; Journal of Soil and Water Conservation Volume 64 ; 64 >
+
+    }
+
+  }
+
+}
+

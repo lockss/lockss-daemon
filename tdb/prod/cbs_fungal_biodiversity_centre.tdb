@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = CBS Fungal Biodiversity Centre
+  >
+
+  {
+    title <
+      name = Studies in Mycology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.studiesinmycology.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Studies in Mycology Volume 53 ; 53 >
+      au < exists ; Studies in Mycology Volume 54 ; 54 >
+      au < exists ; Studies in Mycology Volume 55 ; 55 >
+      au < exists ; Studies in Mycology Volume 56 ; 56 >
+      au < exists ; Studies in Mycology Volume 57 ; 57 >
+      au < exists ; Studies in Mycology Volume 58 ; 58 >
+      au < exists ; Studies in Mycology Volume 59 ; 59 >
+      au < exists ; Studies in Mycology Volume 60 ; 60 >
+      au < exists ; Studies in Mycology Volume 61 ; 61 >
+      au < exists ; Studies in Mycology Volume 62 ; 62 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,390 @@
+{
+  publisher <
+    name = American Society for Pharmacology and Experimental Therapeutics
+  >
+
+  {
+    title <
+      name = Drug Metabolism and Disposition
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://dmd.aspetjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Drug Metabolism and Disposition Volume 1 ; 1 >
+      au < exists ; Drug Metabolism and Disposition Volume 2 ; 2 >
+      au < exists ; Drug Metabolism and Disposition Volume 3 ; 3 >
+      au < exists ; Drug Metabolism and Disposition Volume 4 ; 4 >
+      au < exists ; Drug Metabolism and Disposition Volume 5 ; 5 >
+      au < exists ; Drug Metabolism and Disposition Volume 6 ; 6 >
+      au < exists ; Drug Metabolism and Disposition Volume 7 ; 7 >
+      au < exists ; Drug Metabolism and Disposition Volume 8 ; 8 >
+      au < exists ; Drug Metabolism and Disposition Volume 9 ; 9 >
+      au < exists ; Drug Metabolism and Disposition Volume 10 ; 10 >
+      au < exists ; Drug Metabolism and Disposition Volume 11 ; 11 >
+      au < exists ; Drug Metabolism and Disposition Volume 12 ; 12 >
+      au < exists ; Drug Metabolism and Disposition Volume 13 ; 13 >
+      au < exists ; Drug Metabolism and Disposition Volume 14 ; 14 >
+      au < exists ; Drug Metabolism and Disposition Volume 15 ; 15 >
+      au < exists ; Drug Metabolism and Disposition Volume 16 ; 16 >
+      au < exists ; Drug Metabolism and Disposition Volume 17 ; 17 >
+      au < exists ; Drug Metabolism and Disposition Volume 18 ; 18 >
+      au < exists ; Drug Metabolism and Disposition Volume 19 ; 19 >
+      au < exists ; Drug Metabolism and Disposition Volume 20 ; 20 >
+      au < exists ; Drug Metabolism and Disposition Volume 21 ; 21 >
+      au < exists ; Drug Metabolism and Disposition Volume 22 ; 22 >
+      au < exists ; Drug Metabolism and Disposition Volume 23 ; 23 >
+      au < exists ; Drug Metabolism and Disposition Volume 24 ; 24 >
+      au < exists ; Drug Metabolism and Disposition Volume 25 ; 25 >
+      au < exists ; Drug Metabolism and Disposition Volume 26 ; 26 >
+      au < exists ; Drug Metabolism and Disposition Volume 27 ; 27 >
+      au < exists ; Drug Metabolism and Disposition Volume 28 ; 28 >
+      au < exists ; Drug Metabolism and Disposition Volume 29 ; 29 >
+      au < exists ; Drug Metabolism and Disposition Volume 30 ; 30 >
+      au < exists ; Drug Metabolism and Disposition Volume 31 ; 31 >
+      au < exists ; Drug Metabolism and Disposition Volume 32 ; 32 >
+      au < released ; Drug Metabolism and Disposition Volume 33 ; 33 >
+      au < released ; Drug Metabolism and Disposition Volume 34 ; 34 >
+      au < released ; Drug Metabolism and Disposition Volume 35 ; 35 >
+      au < manifest ; Drug Metabolism and Disposition Volume 36 ; 36 >
+      au < manifest ; Drug Metabolism and Disposition Volume 37 ; 37 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Pharmacology and Experimental Therapeutics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jpet.aspetjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 211 ; 211 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 212 ; 212 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 213 ; 213 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 214 ; 214 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 215 ; 215 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 216 ; 216 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 217 ; 217 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 218 ; 218 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 219 ; 219 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 220 ; 220 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 221 ; 221 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 222 ; 222 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 223 ; 223 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 224 ; 224 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 225 ; 225 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 226 ; 226 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 227 ; 227 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 228 ; 228 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 229 ; 229 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 230 ; 230 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 231 ; 231 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 232 ; 232 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 233 ; 233 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 234 ; 234 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 235 ; 235 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 236 ; 236 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 237 ; 237 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 238 ; 238 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 239 ; 239 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 240 ; 240 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 241 ; 241 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 242 ; 242 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 243 ; 243 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 244 ; 244 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 245 ; 245 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 246 ; 246 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 247 ; 247 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 248 ; 248 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 249 ; 249 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 250 ; 250 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 251 ; 251 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 252 ; 252 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 253 ; 253 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 254 ; 254 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 255 ; 255 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 256 ; 256 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 257 ; 257 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 258 ; 258 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 259 ; 259 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 260 ; 260 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 261 ; 261 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 262 ; 262 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 263 ; 263 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 264 ; 264 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 265 ; 265 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 266 ; 266 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 267 ; 267 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 268 ; 268 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 269 ; 269 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 270 ; 270 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 271 ; 271 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 272 ; 272 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 273 ; 273 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 274 ; 274 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 275 ; 275 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 276 ; 276 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 277 ; 277 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 278 ; 278 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 279 ; 279 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 280 ; 280 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 281 ; 281 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 282 ; 282 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 283 ; 283 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 284 ; 284 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 285 ; 285 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 286 ; 286 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 287 ; 287 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 288 ; 288 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 289 ; 289 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 290 ; 290 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 291 ; 291 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 292 ; 292 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 293 ; 293 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 294 ; 294 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 295 ; 295 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 296 ; 296 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 297 ; 297 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 298 ; 298 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 299 ; 299 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 300 ; 300 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 301 ; 301 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 302 ; 302 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 303 ; 303 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 304 ; 304 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 305 ; 305 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 306 ; 306 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 307 ; 307 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 308 ; 308 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 309 ; 309 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 310 ; 310 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 311 ; 311 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 312 ; 312 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 313 ; 313 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 314 ; 314 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 315 ; 315 >
+      au < exists ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 317 ; 317 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 318 ; 318 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 319 ; 319 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 320 ; 320 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 321 ; 321 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 322 ; 322 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 324 ; 324 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 325 ; 325 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 326 ; 326 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 327 ; 327 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 328 ; 328 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 329 ; 329 >
+      au < manifest ; Journal of Pharmacology and Experimental Therapeutics Volume 330 ; 330 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Molecular Interventions
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://molinterv.aspetjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Molecular Interventions Volume 1 ; 1 >
+      au < exists ; Molecular Interventions Volume 2 ; 2 >
+      au < exists ; Molecular Interventions Volume 3 ; 3 >
+      au < exists ; Molecular Interventions Volume 4 ; 4 >
+      au < manifest ; Molecular Interventions Volume 5 ; 5 >
+      au < manifest ; Molecular Interventions Volume 6 ; 6 >
+      au < manifest ; Molecular Interventions Volume 7 ; 7 >
+      au < manifest ; Molecular Interventions Volume 8 ; 8 >
+      au < manifest ; Molecular Interventions Volume 9 ; 9 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Molecular Pharmacology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://molpharm.aspetjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Molecular Pharmacology Volume 1 ; 1 >
+      au < exists ; Molecular Pharmacology Volume 2 ; 2 >
+      au < exists ; Molecular Pharmacology Volume 3 ; 3 >
+      au < exists ; Molecular Pharmacology Volume 4 ; 4 >
+      au < exists ; Molecular Pharmacology Volume 5 ; 5 >
+      au < exists ; Molecular Pharmacology Volume 6 ; 6 >
+      au < exists ; Molecular Pharmacology Volume 7 ; 7 >
+      au < exists ; Molecular Pharmacology Volume 8 ; 8 >
+      au < exists ; Molecular Pharmacology Volume 9 ; 9 >
+      au < exists ; Molecular Pharmacology Volume 10 ; 10 >
+      au < exists ; Molecular Pharmacology Volume 11 ; 11 >
+      au < exists ; Molecular Pharmacology Volume 12 ; 12 >
+      au < exists ; Molecular Pharmacology Volume 13 ; 13 >
+      au < exists ; Molecular Pharmacology Volume 14 ; 14 >
+      au < exists ; Molecular Pharmacology Volume 15 ; 15 >
+      au < exists ; Molecular Pharmacology Volume 16 ; 16 >
+      au < exists ; Molecular Pharmacology Volume 17 ; 17 >
+      au < exists ; Molecular Pharmacology Volume 18 ; 18 >
+      au < exists ; Molecular Pharmacology Volume 19 ; 19 >
+      au < exists ; Molecular Pharmacology Volume 20 ; 20 >
+      au < exists ; Molecular Pharmacology Volume 21 ; 21 >
+      au < exists ; Molecular Pharmacology Volume 22 ; 22 >
+      au < exists ; Molecular Pharmacology Volume 23 ; 23 >
+      au < exists ; Molecular Pharmacology Volume 24 ; 24 >
+      au < exists ; Molecular Pharmacology Volume 25 ; 25 >
+      au < exists ; Molecular Pharmacology Volume 26 ; 26 >
+      au < exists ; Molecular Pharmacology Volume 27 ; 27 >
+      au < exists ; Molecular Pharmacology Volume 28 ; 28 >
+      au < exists ; Molecular Pharmacology Volume 29 ; 29 >
+      au < exists ; Molecular Pharmacology Volume 30 ; 30 >
+      au < exists ; Molecular Pharmacology Volume 31 ; 31 >
+      au < exists ; Molecular Pharmacology Volume 32 ; 32 >
+      au < exists ; Molecular Pharmacology Volume 33 ; 33 >
+      au < exists ; Molecular Pharmacology Volume 34 ; 34 >
+      au < exists ; Molecular Pharmacology Volume 35 ; 35 >
+      au < exists ; Molecular Pharmacology Volume 36 ; 36 >
+      au < exists ; Molecular Pharmacology Volume 37 ; 37 >
+      au < exists ; Molecular Pharmacology Volume 38 ; 38 >
+      au < exists ; Molecular Pharmacology Volume 39 ; 39 >
+      au < exists ; Molecular Pharmacology Volume 40 ; 40 >
+      au < exists ; Molecular Pharmacology Volume 41 ; 41 >
+      au < exists ; Molecular Pharmacology Volume 42 ; 42 >
+      au < exists ; Molecular Pharmacology Volume 43 ; 43 >
+      au < exists ; Molecular Pharmacology Volume 44 ; 44 >
+      au < exists ; Molecular Pharmacology Volume 45 ; 45 >
+      au < exists ; Molecular Pharmacology Volume 46 ; 46 >
+      au < exists ; Molecular Pharmacology Volume 47 ; 47 >
+      au < exists ; Molecular Pharmacology Volume 48 ; 48 >
+      au < exists ; Molecular Pharmacology Volume 49 ; 49 >
+      au < exists ; Molecular Pharmacology Volume 50 ; 50 >
+      au < exists ; Molecular Pharmacology Volume 51 ; 51 >
+      au < exists ; Molecular Pharmacology Volume 52 ; 52 >
+      au < exists ; Molecular Pharmacology Volume 53 ; 53 >
+      au < exists ; Molecular Pharmacology Volume 54 ; 54 >
+      au < exists ; Molecular Pharmacology Volume 55 ; 55 >
+      au < exists ; Molecular Pharmacology Volume 56 ; 56 >
+      au < exists ; Molecular Pharmacology Volume 57 ; 57 >
+      au < exists ; Molecular Pharmacology Volume 58 ; 58 >
+      au < exists ; Molecular Pharmacology Volume 59 ; 59 >
+      au < exists ; Molecular Pharmacology Volume 60 ; 60 >
+      au < exists ; Molecular Pharmacology Volume 61 ; 61 >
+      au < exists ; Molecular Pharmacology Volume 62 ; 62 >
+      au < exists ; Molecular Pharmacology Volume 63 ; 63 >
+      au < exists ; Molecular Pharmacology Volume 64 ; 64 >
+      au < exists ; Molecular Pharmacology Volume 65 ; 65 >
+      au < exists ; Molecular Pharmacology Volume 66 ; 66 >
+      au < released ; Molecular Pharmacology Volume 67 ; 67 >
+      au < released ; Molecular Pharmacology Volume 68 ; 68 >
+      au < released ; Molecular Pharmacology Volume 69 ; 69 >
+      au < released ; Molecular Pharmacology Volume 70 ; 70 >
+      au < released ; Molecular Pharmacology Volume 71 ; 71 >
+      au < manifest ; Molecular Pharmacology Volume 72 ; 72 >
+      au < manifest ; Molecular Pharmacology Volume 73 ; 73 >
+      au < manifest ; Molecular Pharmacology Volume 74 ; 74 >
+      au < manifest ; Molecular Pharmacology Volume 75 ; 75 >
+      au < manifest ; Molecular Pharmacology Volume 76 ; 76 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Pharmacological Reviews
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://pharmrev.aspetjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Pharmacological Reviews Volume 1 ; 1 >
+      au < exists ; Pharmacological Reviews Volume 2 ; 2 >
+      au < exists ; Pharmacological Reviews Volume 3 ; 3 >
+      au < exists ; Pharmacological Reviews Volume 4 ; 4 >
+      au < exists ; Pharmacological Reviews Volume 5 ; 5 >
+      au < exists ; Pharmacological Reviews Volume 6 ; 6 >
+      au < exists ; Pharmacological Reviews Volume 7 ; 7 >
+      au < exists ; Pharmacological Reviews Volume 8 ; 8 >
+      au < exists ; Pharmacological Reviews Volume 9 ; 9 >
+      au < exists ; Pharmacological Reviews Volume 10 ; 10 >
+      au < exists ; Pharmacological Reviews Volume 11 ; 11 >
+      au < exists ; Pharmacological Reviews Volume 12 ; 12 >
+      au < exists ; Pharmacological Reviews Volume 13 ; 13 >
+      au < exists ; Pharmacological Reviews Volume 14 ; 14 >
+      au < exists ; Pharmacological Reviews Volume 15 ; 15 >
+      au < exists ; Pharmacological Reviews Volume 16 ; 16 >
+      au < exists ; Pharmacological Reviews Volume 17 ; 17 >
+      au < exists ; Pharmacological Reviews Volume 18 ; 18 >
+      au < exists ; Pharmacological Reviews Volume 19 ; 19 >
+      au < exists ; Pharmacological Reviews Volume 20 ; 20 >
+      au < exists ; Pharmacological Reviews Volume 21 ; 21 >
+      au < exists ; Pharmacological Reviews Volume 22 ; 22 >
+      au < exists ; Pharmacological Reviews Volume 23 ; 23 >
+      au < exists ; Pharmacological Reviews Volume 24 ; 24 >
+      au < exists ; Pharmacological Reviews Volume 25 ; 25 >
+      au < exists ; Pharmacological Reviews Volume 26 ; 26 >
+      au < exists ; Pharmacological Reviews Volume 27 ; 27 >
+      au < exists ; Pharmacological Reviews Volume 28 ; 28 >
+      au < exists ; Pharmacological Reviews Volume 29 ; 29 >
+      au < exists ; Pharmacological Reviews Volume 30 ; 30 >
+      au < exists ; Pharmacological Reviews Volume 31 ; 31 >
+      au < exists ; Pharmacological Reviews Volume 32 ; 32 >
+      au < exists ; Pharmacological Reviews Volume 33 ; 33 >
+      au < exists ; Pharmacological Reviews Volume 34 ; 34 >
+      au < exists ; Pharmacological Reviews Volume 35 ; 35 >
+      au < exists ; Pharmacological Reviews Volume 36 ; 36 >
+      au < exists ; Pharmacological Reviews Volume 37 ; 37 >
+      au < exists ; Pharmacological Reviews Volume 38 ; 38 >
+      au < exists ; Pharmacological Reviews Volume 39 ; 39 >
+      au < exists ; Pharmacological Reviews Volume 40 ; 40 >
+      au < exists ; Pharmacological Reviews Volume 41 ; 41 >
+      au < exists ; Pharmacological Reviews Volume 42 ; 42 >
+      au < exists ; Pharmacological Reviews Volume 43 ; 43 >
+      au < exists ; Pharmacological Reviews Volume 44 ; 44 >
+      au < exists ; Pharmacological Reviews Volume 45 ; 45 >
+      au < exists ; Pharmacological Reviews Volume 46 ; 46 >
+      au < exists ; Pharmacological Reviews Volume 47 ; 47 >
+      au < exists ; Pharmacological Reviews Volume 48 ; 48 >
+      au < exists ; Pharmacological Reviews Volume 49 ; 49 >
+      au < exists ; Pharmacological Reviews Volume 50 ; 50 >
+      au < exists ; Pharmacological Reviews Volume 51 ; 51 >
+      au < exists ; Pharmacological Reviews Volume 52 ; 52 >
+      au < exists ; Pharmacological Reviews Volume 53 ; 53 >
+      au < exists ; Pharmacological Reviews Volume 54 ; 54 >
+      au < exists ; Pharmacological Reviews Volume 55 ; 55 >
+      au < exists ; Pharmacological Reviews Volume 56 ; 56 >
+      au < manifest ; Pharmacological Reviews Volume 57 ; 57 >
+      au < manifest ; Pharmacological Reviews Volume 58 ; 58 >
+      au < manifest ; Pharmacological Reviews Volume 59 ; 59 >
+      au < manifest ; Pharmacological Reviews Volume 60 ; 60 >
+      au < manifest ; Pharmacological Reviews Volume 61 ; 61 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,83 @@
+{
+  publisher <
+    name = American Society for Enology and Viticulture
+  >
+
+  {
+    title <
+      name = American Journal of Enology and Viticulture
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ajevonline.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Enology and Viticulture Volume 1 ; 1 >
+      au < exists ; American Journal of Enology and Viticulture Volume 2 ; 2 >
+      au < exists ; American Journal of Enology and Viticulture Volume 3 ; 3 >
+      au < exists ; American Journal of Enology and Viticulture Volume 4 ; 4 >
+      au < exists ; American Journal of Enology and Viticulture Volume 5 ; 5 >
+      au < exists ; American Journal of Enology and Viticulture Volume 6 ; 6 >
+      au < exists ; American Journal of Enology and Viticulture Volume 7 ; 7 >
+      au < exists ; American Journal of Enology and Viticulture Volume 8 ; 8 >
+      au < exists ; American Journal of Enology and Viticulture Volume 9 ; 9 >
+      au < exists ; American Journal of Enology and Viticulture Volume 10 ; 10 >
+      au < exists ; American Journal of Enology and Viticulture Volume 11 ; 11 >
+      au < exists ; American Journal of Enology and Viticulture Volume 12 ; 12 >
+      au < exists ; American Journal of Enology and Viticulture Volume 13 ; 13 >
+      au < exists ; American Journal of Enology and Viticulture Volume 14 ; 14 >
+      au < exists ; American Journal of Enology and Viticulture Volume 15 ; 15 >
+      au < exists ; American Journal of Enology and Viticulture Volume 16 ; 16 >
+      au < exists ; American Journal of Enology and Viticulture Volume 17 ; 17 >
+      au < exists ; American Journal of Enology and Viticulture Volume 18 ; 18 >
+      au < exists ; American Journal of Enology and Viticulture Volume 19 ; 19 >
+      au < exists ; American Journal of Enology and Viticulture Volume 20 ; 20 >
+      au < exists ; American Journal of Enology and Viticulture Volume 21 ; 21 >
+      au < exists ; American Journal of Enology and Viticulture Volume 22 ; 22 >
+      au < exists ; American Journal of Enology and Viticulture Volume 23 ; 23 >
+      au < exists ; American Journal of Enology and Viticulture Volume 24 ; 24 >
+      au < exists ; American Journal of Enology and Viticulture Volume 25 ; 25 >
+      au < exists ; American Journal of Enology and Viticulture Volume 26 ; 26 >
+      au < exists ; American Journal of Enology and Viticulture Volume 27 ; 27 >
+      au < exists ; American Journal of Enology and Viticulture Volume 28 ; 28 >
+      au < exists ; American Journal of Enology and Viticulture Volume 29 ; 29 >
+      au < exists ; American Journal of Enology and Viticulture Volume 30 ; 30 >
+      au < exists ; American Journal of Enology and Viticulture Volume 31 ; 31 >
+      au < exists ; American Journal of Enology and Viticulture Volume 32 ; 32 >
+      au < exists ; American Journal of Enology and Viticulture Volume 33 ; 33 >
+      au < exists ; American Journal of Enology and Viticulture Volume 34 ; 34 >
+      au < exists ; American Journal of Enology and Viticulture Volume 35 ; 35 >
+      au < exists ; American Journal of Enology and Viticulture Volume 36 ; 36 >
+      au < exists ; American Journal of Enology and Viticulture Volume 37 ; 37 >
+      au < exists ; American Journal of Enology and Viticulture Volume 38 ; 38 >
+      au < exists ; American Journal of Enology and Viticulture Volume 39 ; 39 >
+      au < exists ; American Journal of Enology and Viticulture Volume 40 ; 40 >
+      au < exists ; American Journal of Enology and Viticulture Volume 41 ; 41 >
+      au < exists ; American Journal of Enology and Viticulture Volume 42 ; 42 >
+      au < exists ; American Journal of Enology and Viticulture Volume 43 ; 43 >
+      au < exists ; American Journal of Enology and Viticulture Volume 44 ; 44 >
+      au < exists ; American Journal of Enology and Viticulture Volume 45 ; 45 >
+      au < exists ; American Journal of Enology and Viticulture Volume 46 ; 46 >
+      au < exists ; American Journal of Enology and Viticulture Volume 47 ; 47 >
+      au < exists ; American Journal of Enology and Viticulture Volume 48 ; 48 >
+      au < exists ; American Journal of Enology and Viticulture Volume 49 ; 49 >
+      au < exists ; American Journal of Enology and Viticulture Volume 50 ; 50 >
+      au < exists ; American Journal of Enology and Viticulture Volume 51 ; 51 >
+      au < exists ; American Journal of Enology and Viticulture Volume 52 ; 52 >
+      au < exists ; American Journal of Enology and Viticulture Volume 53 ; 53 >
+      au < exists ; American Journal of Enology and Viticulture Volume 54 ; 54 >
+      au < exists ; American Journal of Enology and Viticulture Volume 55 ; 55 >
+      au < exists ; American Journal of Enology and Viticulture Volume 56 ; 56 >
+      au < exists ; American Journal of Enology and Viticulture Volume 57 ; 57 >
+      au < exists ; American Journal of Enology and Viticulture Volume 58 ; 58 >
+      au < exists ; American Journal of Enology and Viticulture Volume 59 ; 59 >
+      au < exists ; American Journal of Enology and Viticulture Volume 60 ; 60 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,308 @@
+{
+  publisher <
+    name = American Academy of Pediatrics
+  >
+
+  {
+    title <
+      name = AAP Grand Rounds
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aapgrandrounds.aappublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; AAP Grand Rounds Volume 1 ; 1 >
+      au < exists ; AAP Grand Rounds Volume 2 ; 2 >
+      au < exists ; AAP Grand Rounds Volume 3 ; 3 >
+      au < exists ; AAP Grand Rounds Volume 4 ; 4 >
+      au < exists ; AAP Grand Rounds Volume 5 ; 5 >
+      au < exists ; AAP Grand Rounds Volume 6 ; 6 >
+      au < exists ; AAP Grand Rounds Volume 7 ; 7 >
+      au < exists ; AAP Grand Rounds Volume 8 ; 8 >
+      au < exists ; AAP Grand Rounds Volume 9 ; 9 >
+      au < exists ; AAP Grand Rounds Volume 10 ; 10 >
+      au < exists ; AAP Grand Rounds Volume 11 ; 11 >
+      au < exists ; AAP Grand Rounds Volume 12 ; 12 >
+      au < exists ; AAP Grand Rounds Volume 13 ; 13 >
+      au < exists ; AAP Grand Rounds Volume 14 ; 14 >
+      au < exists ; AAP Grand Rounds Volume 15 ; 15 >
+      au < exists ; AAP Grand Rounds Volume 16 ; 16 >
+      au < manifest ; AAP Grand Rounds Volume 17 ; 17 >
+      au < manifest ; AAP Grand Rounds Volume 18 ; 18 >
+      au < manifest ; AAP Grand Rounds Volume 19 ; 19 >
+      au < manifest ; AAP Grand Rounds Volume 20 ; 20 >
+      au < manifest ; AAP Grand Rounds Volume 21 ; 21 >
+      au < manifest ; AAP Grand Rounds Volume 22 ; 22 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = AAP News
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aapnews.aappublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; AAP News Volume 1 ; 1 >
+      au < exists ; AAP News Volume 2 ; 2 >
+      au < exists ; AAP News Volume 3 ; 3 >
+      au < exists ; AAP News Volume 4 ; 4 >
+      au < exists ; AAP News Volume 5 ; 5 >
+      au < exists ; AAP News Volume 6 ; 6 >
+      au < exists ; AAP News Volume 7 ; 7 >
+      au < exists ; AAP News Volume 8 ; 8 >
+      au < exists ; AAP News Volume 9 ; 9 >
+      au < exists ; AAP News Volume 10 ; 10 >
+      au < exists ; AAP News Volume 11 ; 11 >
+      au < exists ; AAP News Volume 12 ; 12 >
+      au < exists ; AAP News Volume 13 ; 13 >
+      au < exists ; AAP News Volume 14 ; 14 >
+      au < exists ; AAP News Volume 15 ; 15 >
+      au < exists ; AAP News Volume 16 ; 16 >
+      au < exists ; AAP News Volume 17 ; 17 >
+      au < exists ; AAP News Volume 18 ; 18 >
+      au < exists ; AAP News Volume 19 ; 19 >
+      au < exists ; AAP News Volume 20 ; 20 >
+      au < exists ; AAP News Volume 21 ; 21 >
+      au < exists ; AAP News Volume 22 ; 22 >
+      au < exists ; AAP News Volume 23 ; 23 >
+      au < exists ; AAP News Volume 24 ; 24 >
+      au < exists ; AAP News Volume 25 ; 25 >
+      au < exists ; AAP News Volume 26 ; 26 >
+      au < exists ; AAP News Volume 27 ; 27 >
+      au < manifest ; AAP News Volume 28 ; 28 >
+      au < manifest ; AAP News Volume 29 ; 29 >
+      au < manifest ; AAP News Volume 30 ; 30 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = NeoReviews
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://neoreviews.aappublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; NeoReviews Volume 1 ; 1 >
+      au < exists ; NeoReviews Volume 2 ; 2 >
+      au < exists ; NeoReviews Volume 3 ; 3 >
+      au < exists ; NeoReviews Volume 4 ; 4 >
+      au < exists ; NeoReviews Volume 5 ; 5 >
+      au < exists ; NeoReviews Volume 6 ; 6 >
+      au < exists ; NeoReviews Volume 7 ; 7 >
+      au < manifest ; NeoReviews Volume 8 ; 8 >
+      au < manifest ; NeoReviews Volume 9 ; 9 >
+      au < manifest ; NeoReviews Volume 10 ; 10 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Pediatrics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://pediatrics.aappublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Pediatrics Volume 15 ; 15 >
+      au < exists ; Pediatrics Volume 16 ; 16 >
+      au < exists ; Pediatrics Volume 17 ; 17 >
+      au < exists ; Pediatrics Volume 18 ; 18 >
+      au < exists ; Pediatrics Volume 19 ; 19 >
+      au < exists ; Pediatrics Volume 20 ; 20 >
+      au < exists ; Pediatrics Volume 21 ; 21 >
+      au < exists ; Pediatrics Volume 22 ; 22 >
+      au < exists ; Pediatrics Volume 23 ; 23 >
+      au < exists ; Pediatrics Volume 24 ; 24 >
+      au < exists ; Pediatrics Volume 25 ; 25 >
+      au < exists ; Pediatrics Volume 26 ; 26 >
+      au < exists ; Pediatrics Volume 27 ; 27 >
+      au < exists ; Pediatrics Volume 28 ; 28 >
+      au < exists ; Pediatrics Volume 29 ; 29 >
+      au < exists ; Pediatrics Volume 30 ; 30 >
+      au < exists ; Pediatrics Volume 31 ; 31 >
+      au < exists ; Pediatrics Volume 32 ; 32 >
+      au < exists ; Pediatrics Volume 33 ; 33 >
+      au < exists ; Pediatrics Volume 34 ; 34 >
+      au < exists ; Pediatrics Volume 35 ; 35 >
+      au < exists ; Pediatrics Volume 36 ; 36 >
+      au < exists ; Pediatrics Volume 37 ; 37 >
+      au < exists ; Pediatrics Volume 38 ; 38 >
+      au < exists ; Pediatrics Volume 39 ; 39 >
+      au < exists ; Pediatrics Volume 40 ; 40 >
+      au < exists ; Pediatrics Volume 41 ; 41 >
+      au < exists ; Pediatrics Volume 42 ; 42 >
+      au < exists ; Pediatrics Volume 43 ; 43 >
+      au < exists ; Pediatrics Volume 44 ; 44 >
+      au < exists ; Pediatrics Volume 45 ; 45 >
+      au < exists ; Pediatrics Volume 46 ; 46 >
+      au < exists ; Pediatrics Volume 47 ; 47 >
+      au < exists ; Pediatrics Volume 48 ; 48 >
+      au < exists ; Pediatrics Volume 49 ; 49 >
+      au < exists ; Pediatrics Volume 50 ; 50 >
+      au < exists ; Pediatrics Volume 51 ; 51 >
+      au < exists ; Pediatrics Volume 52 ; 52 >
+      au < exists ; Pediatrics Volume 53 ; 53 >
+      au < exists ; Pediatrics Volume 54 ; 54 >
+      au < exists ; Pediatrics Volume 55 ; 55 >
+      au < exists ; Pediatrics Volume 56 ; 56 >
+      au < exists ; Pediatrics Volume 57 ; 57 >
+      au < exists ; Pediatrics Volume 58 ; 58 >
+      au < exists ; Pediatrics Volume 59 ; 59 >
+      au < exists ; Pediatrics Volume 60 ; 60 >
+      au < exists ; Pediatrics Volume 61 ; 61 >
+      au < exists ; Pediatrics Volume 62 ; 62 >
+      au < exists ; Pediatrics Volume 63 ; 63 >
+      au < exists ; Pediatrics Volume 64 ; 64 >
+      au < exists ; Pediatrics Volume 65 ; 65 >
+      au < exists ; Pediatrics Volume 66 ; 66 >
+      au < exists ; Pediatrics Volume 67 ; 67 >
+      au < exists ; Pediatrics Volume 68 ; 68 >
+      au < exists ; Pediatrics Volume 69 ; 69 >
+      au < exists ; Pediatrics Volume 70 ; 70 >
+      au < exists ; Pediatrics Volume 71 ; 71 >
+      au < exists ; Pediatrics Volume 72 ; 72 >
+      au < exists ; Pediatrics Volume 73 ; 73 >
+      au < exists ; Pediatrics Volume 74 ; 74 >
+      au < exists ; Pediatrics Volume 75 ; 75 >
+      au < exists ; Pediatrics Volume 76 ; 76 >
+      au < exists ; Pediatrics Volume 77 ; 77 >
+      au < exists ; Pediatrics Volume 78 ; 78 >
+      au < exists ; Pediatrics Volume 79 ; 79 >
+      au < exists ; Pediatrics Volume 80 ; 80 >
+      au < exists ; Pediatrics Volume 81 ; 81 >
+      au < exists ; Pediatrics Volume 82 ; 82 >
+      au < exists ; Pediatrics Volume 83 ; 83 >
+      au < exists ; Pediatrics Volume 84 ; 84 >
+      au < exists ; Pediatrics Volume 85 ; 85 >
+      au < exists ; Pediatrics Volume 86 ; 86 >
+      au < exists ; Pediatrics Volume 87 ; 87 >
+      au < exists ; Pediatrics Volume 88 ; 88 >
+      au < exists ; Pediatrics Volume 89 ; 89 >
+      au < exists ; Pediatrics Volume 90 ; 90 >
+      au < exists ; Pediatrics Volume 91 ; 91 >
+      au < exists ; Pediatrics Volume 92 ; 92 >
+      au < exists ; Pediatrics Volume 93 ; 93 >
+      au < exists ; Pediatrics Volume 94 ; 94 >
+      au < exists ; Pediatrics Volume 95 ; 95 >
+      au < exists ; Pediatrics Volume 96 ; 96 >
+      au < exists ; Pediatrics Volume 97 ; 97 >
+      au < exists ; Pediatrics Volume 98 ; 98 >
+      au < exists ; Pediatrics Volume 99 ; 99 >
+      au < exists ; Pediatrics Volume 100 ; 100 >
+      au < exists ; Pediatrics Volume 101 ; 101 >
+      au < exists ; Pediatrics Volume 102 ; 102 >
+      au < exists ; Pediatrics Volume 103 ; 103 >
+      au < exists ; Pediatrics Volume 104 ; 104 >
+      au < exists ; Pediatrics Volume 105 ; 105 >
+      au < exists ; Pediatrics Volume 106 ; 106 >
+      au < exists ; Pediatrics Volume 107 ; 107 >
+      au < exists ; Pediatrics Volume 108 ; 108 >
+      au < exists ; Pediatrics Volume 109 ; 109 >
+      au < exists ; Pediatrics Volume 110 ; 110 >
+      au < exists ; Pediatrics Volume 111 ; 111 >
+      au < exists ; Pediatrics Volume 112 ; 112 >
+      au < exists ; Pediatrics Volume 113 ; 113 >
+      au < exists ; Pediatrics Volume 114 ; 114 >
+      au < exists ; Pediatrics Volume 115 ; 115 >
+      au < exists ; Pediatrics Volume 116 ; 116 >
+      au < exists ; Pediatrics Volume 117 ; 117 >
+      au < exists ; Pediatrics Volume 118 ; 118 >
+      au < manifest ; Pediatrics Volume 119 ; 119 >
+      au < manifest ; Pediatrics Volume 120 ; 120 >
+      au < manifest ; Pediatrics Volume 121 ; 121 >
+      au < manifest ; Pediatrics Volume 122 ; 122 >
+      au < manifest ; Pediatrics Volume 123 ; 123 >
+      au < manifest ; Pediatrics Volume 124 ; 124 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Pediatrics in Review
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://pedsinreview.aappublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Pediatrics in Review Volume 1 ; 1 >
+      au < exists ; Pediatrics in Review Volume 2 ; 2 >
+      au < exists ; Pediatrics in Review Volume 3 ; 3 >
+      au < exists ; Pediatrics in Review Volume 4 ; 4 >
+      au < exists ; Pediatrics in Review Volume 5 ; 5 >
+      au < exists ; Pediatrics in Review Volume 6 ; 6 >
+      au < exists ; Pediatrics in Review Volume 7 ; 7 >
+      au < exists ; Pediatrics in Review Volume 8 ; 8 >
+      au < exists ; Pediatrics in Review Volume 9 ; 9 >
+      au < exists ; Pediatrics in Review Volume 10 ; 10 >
+      au < exists ; Pediatrics in Review Volume 11 ; 11 >
+      au < exists ; Pediatrics in Review Volume 12 ; 12 >
+      au < exists ; Pediatrics in Review Volume 13 ; 13 >
+      au < exists ; Pediatrics in Review Volume 14 ; 14 >
+      au < exists ; Pediatrics in Review Volume 15 ; 15 >
+      au < exists ; Pediatrics in Review Volume 16 ; 16 >
+      au < exists ; Pediatrics in Review Volume 17 ; 17 >
+      au < exists ; Pediatrics in Review Volume 18 ; 18 >
+      au < exists ; Pediatrics in Review Volume 19 ; 19 >
+      au < exists ; Pediatrics in Review Volume 20 ; 20 >
+      au < exists ; Pediatrics in Review Volume 21 ; 21 >
+      au < exists ; Pediatrics in Review Volume 22 ; 22 >
+      au < exists ; Pediatrics in Review Volume 23 ; 23 >
+      au < exists ; Pediatrics in Review Volume 24 ; 24 >
+      au < exists ; Pediatrics in Review Volume 25 ; 25 >
+      au < exists ; Pediatrics in Review Volume 26 ; 26 >
+      au < exists ; Pediatrics in Review Volume 27 ; 27 >
+      au < manifest ; Pediatrics in Review Volume 28 ; 28 >
+      au < manifest ; Pediatrics in Review Volume 29 ; 29 >
+      au < manifest ; Pediatrics in Review Volume 30 ; 30 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Red Book Online
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aapredbook.aappublications.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Red Book Online Volume 2000 ; 2000 >
+      au < exists ; Red Book Online Volume 2003 ; 2003 >
+      au < exists ; Red Book Online Volume 2006 ; 2006 >
+
+    }
+
+  }
+
+}
+

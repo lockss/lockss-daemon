@@ -1,0 +1,90 @@
+{
+  publisher <
+    name = American Journal of Science
+  >
+
+  {
+    title <
+      name = American Journal of Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ajsonline.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Science Volume 243 ; 243 >
+      au < exists ; American Journal of Science Volume 244 ; 244 >
+      au < exists ; American Journal of Science Volume 245 ; 245 >
+      au < exists ; American Journal of Science Volume 246 ; 246 >
+      au < exists ; American Journal of Science Volume 247 ; 247 >
+      au < exists ; American Journal of Science Volume 248 ; 248 >
+      au < exists ; American Journal of Science Volume 249 ; 249 >
+      au < exists ; American Journal of Science Volume 250 ; 250 >
+      au < exists ; American Journal of Science Volume 251 ; 251 >
+      au < exists ; American Journal of Science Volume 252 ; 252 >
+      au < exists ; American Journal of Science Volume 253 ; 253 >
+      au < exists ; American Journal of Science Volume 254 ; 254 >
+      au < exists ; American Journal of Science Volume 255 ; 255 >
+      au < exists ; American Journal of Science Volume 256 ; 256 >
+      au < exists ; American Journal of Science Volume 257 ; 257 >
+      au < exists ; American Journal of Science Volume 258 ; 258 >
+      au < exists ; American Journal of Science Volume 259 ; 259 >
+      au < exists ; American Journal of Science Volume 260 ; 260 >
+      au < exists ; American Journal of Science Volume 261 ; 261 >
+      au < exists ; American Journal of Science Volume 262 ; 262 >
+      au < exists ; American Journal of Science Volume 263 ; 263 >
+      au < exists ; American Journal of Science Volume 264 ; 264 >
+      au < exists ; American Journal of Science Volume 265 ; 265 >
+      au < exists ; American Journal of Science Volume 266 ; 266 >
+      au < exists ; American Journal of Science Volume 267 ; 267 >
+      au < exists ; American Journal of Science Volume 268 ; 268 >
+      au < exists ; American Journal of Science Volume 269 ; 269 >
+      au < exists ; American Journal of Science Volume 270 ; 270 >
+      au < exists ; American Journal of Science Volume 271 ; 271 >
+      au < exists ; American Journal of Science Volume 272 ; 272 >
+      au < exists ; American Journal of Science Volume 273 ; 273 >
+      au < exists ; American Journal of Science Volume 274 ; 274 >
+      au < exists ; American Journal of Science Volume 275 ; 275 >
+      au < exists ; American Journal of Science Volume 276 ; 276 >
+      au < exists ; American Journal of Science Volume 277 ; 277 >
+      au < exists ; American Journal of Science Volume 278 ; 278 >
+      au < exists ; American Journal of Science Volume 279 ; 279 >
+      au < exists ; American Journal of Science Volume 280 ; 280 >
+      au < exists ; American Journal of Science Volume 281 ; 281 >
+      au < exists ; American Journal of Science Volume 282 ; 282 >
+      au < exists ; American Journal of Science Volume 283 ; 283 >
+      au < exists ; American Journal of Science Volume 284 ; 284 >
+      au < exists ; American Journal of Science Volume 285 ; 285 >
+      au < exists ; American Journal of Science Volume 286 ; 286 >
+      au < exists ; American Journal of Science Volume 287 ; 287 >
+      au < exists ; American Journal of Science Volume 288 ; 288 >
+      au < exists ; American Journal of Science Volume 289 ; 289 >
+      au < exists ; American Journal of Science Volume 290 ; 290 >
+      au < exists ; American Journal of Science Volume 291 ; 291 >
+      au < exists ; American Journal of Science Volume 292 ; 292 >
+      au < exists ; American Journal of Science Volume 293 ; 293 >
+      au < exists ; American Journal of Science Volume 294 ; 294 >
+      au < exists ; American Journal of Science Volume 295 ; 295 >
+      au < exists ; American Journal of Science Volume 296 ; 296 >
+      au < exists ; American Journal of Science Volume 297 ; 297 >
+      au < exists ; American Journal of Science Volume 298 ; 298 >
+      au < exists ; American Journal of Science Volume 299 ; 299 >
+      au < exists ; American Journal of Science Volume 300 ; 300 >
+      au < exists ; American Journal of Science Volume 301 ; 301 >
+      au < exists ; American Journal of Science Volume 302 ; 302 >
+      au < exists ; American Journal of Science Volume 303 ; 303 >
+      au < exists ; American Journal of Science Volume 304 ; 304 >
+      au < exists ; American Journal of Science Volume 305 ; 305 >
+      au < exists ; American Journal of Science Volume 306 ; 306 >
+      au < exists ; American Journal of Science Volume 307 ; 307 >
+      au < exists ; American Journal of Science Volume 308 ; 308 >
+      au < exists ; American Journal of Science Volume 309 ; 309 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = American Institute of Ultrasound in Medicine
+  >
+
+  {
+    title <
+      name = Journal of Ultrasound in Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jultrasoundmed.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Ultrasound in Medicine Volume 1 ; 1 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 2 ; 2 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 3 ; 3 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 4 ; 4 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 5 ; 5 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 6 ; 6 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 7 ; 7 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 8 ; 8 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 9 ; 9 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 10 ; 10 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 11 ; 11 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 12 ; 12 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 13 ; 13 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 14 ; 14 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 15 ; 15 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 16 ; 16 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 17 ; 17 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 18 ; 18 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 19 ; 19 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 20 ; 20 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 21 ; 21 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 22 ; 22 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 23 ; 23 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 24 ; 24 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 25 ; 25 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 26 ; 26 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 27 ; 27 >
+      au < exists ; Journal of Ultrasound in Medicine Volume 28 ; 28 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,111 @@
+{
+  publisher <
+    name = Canadian Medical Association
+  >
+
+  {
+    title <
+      name = Canadian Medical Association Journal
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.cmaj.ca/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Canadian Medical Association Journal Volume 94 ; 94 >
+      au < exists ; Canadian Medical Association Journal Volume 95 ; 95 >
+      au < exists ; Canadian Medical Association Journal Volume 96 ; 96 >
+      au < exists ; Canadian Medical Association Journal Volume 97 ; 97 >
+      au < exists ; Canadian Medical Association Journal Volume 98 ; 98 >
+      au < exists ; Canadian Medical Association Journal Volume 99 ; 99 >
+      au < exists ; Canadian Medical Association Journal Volume 100 ; 100 >
+      au < exists ; Canadian Medical Association Journal Volume 101 ; 101 >
+      au < exists ; Canadian Medical Association Journal Volume 102 ; 102 >
+      au < exists ; Canadian Medical Association Journal Volume 103 ; 103 >
+      au < exists ; Canadian Medical Association Journal Volume 104 ; 104 >
+      au < exists ; Canadian Medical Association Journal Volume 105 ; 105 >
+      au < exists ; Canadian Medical Association Journal Volume 106 ; 106 >
+      au < exists ; Canadian Medical Association Journal Volume 107 ; 107 >
+      au < exists ; Canadian Medical Association Journal Volume 108 ; 108 >
+      au < exists ; Canadian Medical Association Journal Volume 109 ; 109 >
+      au < exists ; Canadian Medical Association Journal Volume 110 ; 110 >
+      au < exists ; Canadian Medical Association Journal Volume 111 ; 111 >
+      au < exists ; Canadian Medical Association Journal Volume 112 ; 112 >
+      au < exists ; Canadian Medical Association Journal Volume 113 ; 113 >
+      au < exists ; Canadian Medical Association Journal Volume 114 ; 114 >
+      au < exists ; Canadian Medical Association Journal Volume 115 ; 115 >
+      au < exists ; Canadian Medical Association Journal Volume 116 ; 116 >
+      au < exists ; Canadian Medical Association Journal Volume 117 ; 117 >
+      au < exists ; Canadian Medical Association Journal Volume 118 ; 118 >
+      au < exists ; Canadian Medical Association Journal Volume 119 ; 119 >
+      au < exists ; Canadian Medical Association Journal Volume 120 ; 120 >
+      au < exists ; Canadian Medical Association Journal Volume 121 ; 121 >
+      au < exists ; Canadian Medical Association Journal Volume 122 ; 122 >
+      au < exists ; Canadian Medical Association Journal Volume 123 ; 123 >
+      au < exists ; Canadian Medical Association Journal Volume 124 ; 124 >
+      au < exists ; Canadian Medical Association Journal Volume 125 ; 125 >
+      au < exists ; Canadian Medical Association Journal Volume 126 ; 126 >
+      au < exists ; Canadian Medical Association Journal Volume 127 ; 127 >
+      au < exists ; Canadian Medical Association Journal Volume 128 ; 128 >
+      au < exists ; Canadian Medical Association Journal Volume 129 ; 129 >
+      au < exists ; Canadian Medical Association Journal Volume 130 ; 130 >
+      au < exists ; Canadian Medical Association Journal Volume 131 ; 131 >
+      au < exists ; Canadian Medical Association Journal Volume 132 ; 132 >
+      au < exists ; Canadian Medical Association Journal Volume 133 ; 133 >
+      au < exists ; Canadian Medical Association Journal Volume 134 ; 134 >
+      au < exists ; Canadian Medical Association Journal Volume 135 ; 135 >
+      au < exists ; Canadian Medical Association Journal Volume 136 ; 136 >
+      au < exists ; Canadian Medical Association Journal Volume 137 ; 137 >
+      au < exists ; Canadian Medical Association Journal Volume 138 ; 138 >
+      au < exists ; Canadian Medical Association Journal Volume 139 ; 139 >
+      au < exists ; Canadian Medical Association Journal Volume 140 ; 140 >
+      au < exists ; Canadian Medical Association Journal Volume 141 ; 141 >
+      au < exists ; Canadian Medical Association Journal Volume 142 ; 142 >
+      au < exists ; Canadian Medical Association Journal Volume 143 ; 143 >
+      au < exists ; Canadian Medical Association Journal Volume 144 ; 144 >
+      au < exists ; Canadian Medical Association Journal Volume 145 ; 145 >
+      au < exists ; Canadian Medical Association Journal Volume 146 ; 146 >
+      au < exists ; Canadian Medical Association Journal Volume 147 ; 147 >
+      au < exists ; Canadian Medical Association Journal Volume 148 ; 148 >
+      au < exists ; Canadian Medical Association Journal Volume 149 ; 149 >
+      au < exists ; Canadian Medical Association Journal Volume 150 ; 150 >
+      au < exists ; Canadian Medical Association Journal Volume 151 ; 151 >
+      au < exists ; Canadian Medical Association Journal Volume 152 ; 152 >
+      au < exists ; Canadian Medical Association Journal Volume 153 ; 153 >
+      au < exists ; Canadian Medical Association Journal Volume 154 ; 154 >
+      au < exists ; Canadian Medical Association Journal Volume 155 ; 155 >
+      au < exists ; Canadian Medical Association Journal Volume 156 ; 156 >
+      au < exists ; Canadian Medical Association Journal Volume 157 ; 157 >
+      au < exists ; Canadian Medical Association Journal Volume 158 ; 158 >
+      au < exists ; Canadian Medical Association Journal Volume 159 ; 159 >
+      au < exists ; Canadian Medical Association Journal Volume 160 ; 160 >
+      au < exists ; Canadian Medical Association Journal Volume 161 ; 161 >
+      au < exists ; Canadian Medical Association Journal Volume 162 ; 162 >
+      au < exists ; Canadian Medical Association Journal Volume 163 ; 163 >
+      au < exists ; Canadian Medical Association Journal Volume 164 ; 164 >
+      au < exists ; Canadian Medical Association Journal Volume 165 ; 165 >
+      au < exists ; Canadian Medical Association Journal Volume 166 ; 166 >
+      au < exists ; Canadian Medical Association Journal Volume 167 ; 167 >
+      au < exists ; Canadian Medical Association Journal Volume 168 ; 168 >
+      au < exists ; Canadian Medical Association Journal Volume 169 ; 169 >
+      au < exists ; Canadian Medical Association Journal Volume 170 ; 170 >
+      au < exists ; Canadian Medical Association Journal Volume 171 ; 171 >
+      au < released ; Canadian Medical Association Journal Volume 172 ; 172 >
+      au < released ; Canadian Medical Association Journal Volume 173 ; 173 >
+      au < released ; Canadian Medical Association Journal Volume 174 ; 174 >
+      au < released ; Canadian Medical Association Journal Volume 175 ; 175 >
+      au < manifest ; Canadian Medical Association Journal Volume 176 ; 176 >
+      au < manifest ; Canadian Medical Association Journal Volume 177 ; 177 >
+      au < manifest ; Canadian Medical Association Journal Volume 178 ; 178 >
+      au < manifest ; Canadian Medical Association Journal Volume 179 ; 179 >
+      au < manifest ; Canadian Medical Association Journal Volume 180 ; 180 >
+      au < manifest ; Canadian Medical Association Journal Volume 181 ; 181 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,783 @@
+{
+  publisher <
+    name = American Society for Microbiology
+  >
+
+  {
+    title <
+      name = Antimicrobial Agents and Chemotherapy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aac.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 3 ; 3 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 4 ; 4 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 5 ; 5 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 6 ; 6 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 7 ; 7 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 8 ; 8 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 9 ; 9 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 10 ; 10 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 11 ; 11 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 12 ; 12 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 13 ; 13 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 14 ; 14 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 15 ; 15 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 16 ; 16 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 17 ; 17 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 18 ; 18 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 19 ; 19 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 20 ; 20 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 21 ; 21 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 23 ; 23 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 24 ; 24 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 25 ; 25 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 26 ; 26 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 27 ; 27 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 28 ; 28 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 29 ; 29 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 30 ; 30 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 31 ; 31 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 32 ; 32 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 33 ; 33 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 34 ; 34 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 35 ; 35 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 36 ; 36 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 37 ; 37 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 38 ; 38 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 39 ; 39 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 40 ; 40 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 41 ; 41 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 42 ; 42 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 43 ; 43 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 44 ; 44 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 45 ; 45 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 46 ; 46 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 47 ; 47 >
+      au < exists ; Antimicrobial Agents and Chemotherapy Volume 48 ; 48 >
+      au < manifest ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
+      au < released ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
+      au < manifest ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
+      au < manifest ; Antimicrobial Agents and Chemotherapy Volume 52 ; 52 >
+      au < manifest ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Applied and Environmental Microbiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aem.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Applied and Environmental Microbiology Volume 1 ; 1 >
+      au < exists ; Applied and Environmental Microbiology Volume 2 ; 2 >
+      au < exists ; Applied and Environmental Microbiology Volume 3 ; 3 >
+      au < exists ; Applied and Environmental Microbiology Volume 4 ; 4 >
+      au < exists ; Applied and Environmental Microbiology Volume 5 ; 5 >
+      au < exists ; Applied and Environmental Microbiology Volume 6 ; 6 >
+      au < exists ; Applied and Environmental Microbiology Volume 7 ; 7 >
+      au < exists ; Applied and Environmental Microbiology Volume 8 ; 8 >
+      au < exists ; Applied and Environmental Microbiology Volume 9 ; 9 >
+      au < exists ; Applied and Environmental Microbiology Volume 10 ; 10 >
+      au < exists ; Applied and Environmental Microbiology Volume 11 ; 11 >
+      au < exists ; Applied and Environmental Microbiology Volume 12 ; 12 >
+      au < exists ; Applied and Environmental Microbiology Volume 13 ; 13 >
+      au < exists ; Applied and Environmental Microbiology Volume 14 ; 14 >
+      au < exists ; Applied and Environmental Microbiology Volume 15 ; 15 >
+      au < exists ; Applied and Environmental Microbiology Volume 16 ; 16 >
+      au < exists ; Applied and Environmental Microbiology Volume 17 ; 17 >
+      au < exists ; Applied and Environmental Microbiology Volume 18 ; 18 >
+      au < exists ; Applied and Environmental Microbiology Volume 19 ; 19 >
+      au < exists ; Applied and Environmental Microbiology Volume 20 ; 20 >
+      au < exists ; Applied and Environmental Microbiology Volume 21 ; 21 >
+      au < exists ; Applied and Environmental Microbiology Volume 22 ; 22 >
+      au < exists ; Applied and Environmental Microbiology Volume 23 ; 23 >
+      au < exists ; Applied and Environmental Microbiology Volume 24 ; 24 >
+      au < exists ; Applied and Environmental Microbiology Volume 25 ; 25 >
+      au < exists ; Applied and Environmental Microbiology Volume 26 ; 26 >
+      au < exists ; Applied and Environmental Microbiology Volume 27 ; 27 >
+      au < exists ; Applied and Environmental Microbiology Volume 28 ; 28 >
+      au < exists ; Applied and Environmental Microbiology Volume 29 ; 29 >
+      au < exists ; Applied and Environmental Microbiology Volume 30 ; 30 >
+      au < exists ; Applied and Environmental Microbiology Volume 31 ; 31 >
+      au < exists ; Applied and Environmental Microbiology Volume 32 ; 32 >
+      au < exists ; Applied and Environmental Microbiology Volume 33 ; 33 >
+      au < exists ; Applied and Environmental Microbiology Volume 34 ; 34 >
+      au < exists ; Applied and Environmental Microbiology Volume 35 ; 35 >
+      au < exists ; Applied and Environmental Microbiology Volume 36 ; 36 >
+      au < exists ; Applied and Environmental Microbiology Volume 37 ; 37 >
+      au < exists ; Applied and Environmental Microbiology Volume 38 ; 38 >
+      au < exists ; Applied and Environmental Microbiology Volume 39 ; 39 >
+      au < exists ; Applied and Environmental Microbiology Volume 40 ; 40 >
+      au < exists ; Applied and Environmental Microbiology Volume 41 ; 41 >
+      au < exists ; Applied and Environmental Microbiology Volume 42 ; 42 >
+      au < exists ; Applied and Environmental Microbiology Volume 43 ; 43 >
+      au < exists ; Applied and Environmental Microbiology Volume 44 ; 44 >
+      au < exists ; Applied and Environmental Microbiology Volume 45 ; 45 >
+      au < exists ; Applied and Environmental Microbiology Volume 46 ; 46 >
+      au < exists ; Applied and Environmental Microbiology Volume 47 ; 47 >
+      au < exists ; Applied and Environmental Microbiology Volume 48 ; 48 >
+      au < exists ; Applied and Environmental Microbiology Volume 49 ; 49 >
+      au < exists ; Applied and Environmental Microbiology Volume 50 ; 50 >
+      au < exists ; Applied and Environmental Microbiology Volume 51 ; 51 >
+      au < exists ; Applied and Environmental Microbiology Volume 52 ; 52 >
+      au < exists ; Applied and Environmental Microbiology Volume 53 ; 53 >
+      au < exists ; Applied and Environmental Microbiology Volume 54 ; 54 >
+      au < exists ; Applied and Environmental Microbiology Volume 55 ; 55 >
+      au < exists ; Applied and Environmental Microbiology Volume 56 ; 56 >
+      au < exists ; Applied and Environmental Microbiology Volume 57 ; 57 >
+      au < exists ; Applied and Environmental Microbiology Volume 58 ; 58 >
+      au < exists ; Applied and Environmental Microbiology Volume 59 ; 59 >
+      au < exists ; Applied and Environmental Microbiology Volume 60 ; 60 >
+      au < exists ; Applied and Environmental Microbiology Volume 61 ; 61 >
+      au < exists ; Applied and Environmental Microbiology Volume 62 ; 62 >
+      au < exists ; Applied and Environmental Microbiology Volume 63 ; 63 >
+      au < exists ; Applied and Environmental Microbiology Volume 64 ; 64 >
+      au < exists ; Applied and Environmental Microbiology Volume 65 ; 65 >
+      au < exists ; Applied and Environmental Microbiology Volume 66 ; 66 >
+      au < exists ; Applied and Environmental Microbiology Volume 67 ; 67 >
+      au < exists ; Applied and Environmental Microbiology Volume 68 ; 68 >
+      au < exists ; Applied and Environmental Microbiology Volume 69 ; 69 >
+      au < exists ; Applied and Environmental Microbiology Volume 70 ; 70 >
+      au < released ; Applied and Environmental Microbiology Volume 71 ; 71 >
+      au < released ; Applied and Environmental Microbiology Volume 72 ; 72 >
+      au < released ; Applied and Environmental Microbiology Volume 73 ; 73 >
+      au < manifest ; Applied and Environmental Microbiology Volume 74 ; 74 >
+      au < manifest ; Applied and Environmental Microbiology Volume 75 ; 75 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Clinical and Vaccine Immunology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cvi.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Clinical and Vaccine Immunology Volume 1 ; 1 >
+      au < exists ; Clinical and Vaccine Immunology Volume 2 ; 2 >
+      au < exists ; Clinical and Vaccine Immunology Volume 3 ; 3 >
+      au < exists ; Clinical and Vaccine Immunology Volume 4 ; 4 >
+      au < exists ; Clinical and Vaccine Immunology Volume 5 ; 5 >
+      au < exists ; Clinical and Vaccine Immunology Volume 6 ; 6 >
+      au < exists ; Clinical and Vaccine Immunology Volume 7 ; 7 >
+      au < exists ; Clinical and Vaccine Immunology Volume 8 ; 8 >
+      au < exists ; Clinical and Vaccine Immunology Volume 9 ; 9 >
+      au < exists ; Clinical and Vaccine Immunology Volume 10 ; 10 >
+      au < exists ; Clinical and Vaccine Immunology Volume 11 ; 11 >
+      au < manifest ; Clinical and Vaccine Immunology Volume 12 ; 12 >
+      au < released ; Clinical and Vaccine Immunology Volume 13 ; 13 >
+      au < manifest ; Clinical and Vaccine Immunology Volume 14 ; 14 >
+      au < manifest ; Clinical and Vaccine Immunology Volume 15 ; 15 >
+      au < manifest ; Clinical and Vaccine Immunology Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Clinical Microbiology Reviews
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cmr.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Clinical Microbiology Reviews Volume 1 ; 1 >
+      au < exists ; Clinical Microbiology Reviews Volume 2 ; 2 >
+      au < exists ; Clinical Microbiology Reviews Volume 3 ; 3 >
+      au < exists ; Clinical Microbiology Reviews Volume 4 ; 4 >
+      au < exists ; Clinical Microbiology Reviews Volume 5 ; 5 >
+      au < exists ; Clinical Microbiology Reviews Volume 6 ; 6 >
+      au < exists ; Clinical Microbiology Reviews Volume 7 ; 7 >
+      au < exists ; Clinical Microbiology Reviews Volume 8 ; 8 >
+      au < exists ; Clinical Microbiology Reviews Volume 9 ; 9 >
+      au < exists ; Clinical Microbiology Reviews Volume 10 ; 10 >
+      au < exists ; Clinical Microbiology Reviews Volume 11 ; 11 >
+      au < exists ; Clinical Microbiology Reviews Volume 12 ; 12 >
+      au < exists ; Clinical Microbiology Reviews Volume 13 ; 13 >
+      au < exists ; Clinical Microbiology Reviews Volume 14 ; 14 >
+      au < exists ; Clinical Microbiology Reviews Volume 15 ; 15 >
+      au < exists ; Clinical Microbiology Reviews Volume 16 ; 16 >
+      au < exists ; Clinical Microbiology Reviews Volume 17 ; 17 >
+      au < manifest ; Clinical Microbiology Reviews Volume 18 ; 18 >
+      au < released ; Clinical Microbiology Reviews Volume 19 ; 19 >
+      au < manifest ; Clinical Microbiology Reviews Volume 20 ; 20 >
+      au < manifest ; Clinical Microbiology Reviews Volume 21 ; 21 >
+      au < manifest ; Clinical Microbiology Reviews Volume 22 ; 22 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Eukaryotic Cell
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ec.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Eukaryotic Cell Volume 1 ; 1 >
+      au < exists ; Eukaryotic Cell Volume 2 ; 2 >
+      au < exists ; Eukaryotic Cell Volume 3 ; 3 >
+      au < manifest ; Eukaryotic Cell Volume 4 ; 4 >
+      au < released ; Eukaryotic Cell Volume 5 ; 5 >
+      au < manifest ; Eukaryotic Cell Volume 6 ; 6 >
+      au < manifest ; Eukaryotic Cell Volume 7 ; 7 >
+      au < manifest ; Eukaryotic Cell Volume 8 ; 8 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Infection and Immunity
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://iai.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Infection and Immunity Volume 1 ; 1 >
+      au < exists ; Infection and Immunity Volume 2 ; 2 >
+      au < exists ; Infection and Immunity Volume 3 ; 3 >
+      au < exists ; Infection and Immunity Volume 4 ; 4 >
+      au < exists ; Infection and Immunity Volume 5 ; 5 >
+      au < exists ; Infection and Immunity Volume 6 ; 6 >
+      au < exists ; Infection and Immunity Volume 7 ; 7 >
+      au < exists ; Infection and Immunity Volume 8 ; 8 >
+      au < exists ; Infection and Immunity Volume 9 ; 9 >
+      au < exists ; Infection and Immunity Volume 10 ; 10 >
+      au < exists ; Infection and Immunity Volume 11 ; 11 >
+      au < exists ; Infection and Immunity Volume 12 ; 12 >
+      au < exists ; Infection and Immunity Volume 13 ; 13 >
+      au < exists ; Infection and Immunity Volume 14 ; 14 >
+      au < exists ; Infection and Immunity Volume 15 ; 15 >
+      au < exists ; Infection and Immunity Volume 16 ; 16 >
+      au < exists ; Infection and Immunity Volume 17 ; 17 >
+      au < exists ; Infection and Immunity Volume 18 ; 18 >
+      au < exists ; Infection and Immunity Volume 19 ; 19 >
+      au < exists ; Infection and Immunity Volume 20 ; 20 >
+      au < exists ; Infection and Immunity Volume 21 ; 21 >
+      au < exists ; Infection and Immunity Volume 22 ; 22 >
+      au < exists ; Infection and Immunity Volume 23 ; 23 >
+      au < exists ; Infection and Immunity Volume 24 ; 24 >
+      au < exists ; Infection and Immunity Volume 25 ; 25 >
+      au < exists ; Infection and Immunity Volume 26 ; 26 >
+      au < exists ; Infection and Immunity Volume 27 ; 27 >
+      au < exists ; Infection and Immunity Volume 28 ; 28 >
+      au < exists ; Infection and Immunity Volume 29 ; 29 >
+      au < exists ; Infection and Immunity Volume 30 ; 30 >
+      au < exists ; Infection and Immunity Volume 31 ; 31 >
+      au < exists ; Infection and Immunity Volume 32 ; 32 >
+      au < exists ; Infection and Immunity Volume 33 ; 33 >
+      au < exists ; Infection and Immunity Volume 34 ; 34 >
+      au < exists ; Infection and Immunity Volume 35 ; 35 >
+      au < exists ; Infection and Immunity Volume 36 ; 36 >
+      au < exists ; Infection and Immunity Volume 37 ; 37 >
+      au < exists ; Infection and Immunity Volume 38 ; 38 >
+      au < exists ; Infection and Immunity Volume 39 ; 39 >
+      au < exists ; Infection and Immunity Volume 40 ; 40 >
+      au < exists ; Infection and Immunity Volume 41 ; 41 >
+      au < exists ; Infection and Immunity Volume 42 ; 42 >
+      au < exists ; Infection and Immunity Volume 43 ; 43 >
+      au < exists ; Infection and Immunity Volume 44 ; 44 >
+      au < exists ; Infection and Immunity Volume 45 ; 45 >
+      au < exists ; Infection and Immunity Volume 46 ; 46 >
+      au < exists ; Infection and Immunity Volume 47 ; 47 >
+      au < exists ; Infection and Immunity Volume 48 ; 48 >
+      au < exists ; Infection and Immunity Volume 49 ; 49 >
+      au < exists ; Infection and Immunity Volume 50 ; 50 >
+      au < exists ; Infection and Immunity Volume 51 ; 51 >
+      au < exists ; Infection and Immunity Volume 52 ; 52 >
+      au < exists ; Infection and Immunity Volume 53 ; 53 >
+      au < exists ; Infection and Immunity Volume 54 ; 54 >
+      au < exists ; Infection and Immunity Volume 55 ; 55 >
+      au < exists ; Infection and Immunity Volume 56 ; 56 >
+      au < exists ; Infection and Immunity Volume 57 ; 57 >
+      au < exists ; Infection and Immunity Volume 58 ; 58 >
+      au < exists ; Infection and Immunity Volume 59 ; 59 >
+      au < exists ; Infection and Immunity Volume 60 ; 60 >
+      au < exists ; Infection and Immunity Volume 61 ; 61 >
+      au < exists ; Infection and Immunity Volume 62 ; 62 >
+      au < exists ; Infection and Immunity Volume 63 ; 63 >
+      au < exists ; Infection and Immunity Volume 64 ; 64 >
+      au < exists ; Infection and Immunity Volume 65 ; 65 >
+      au < exists ; Infection and Immunity Volume 66 ; 66 >
+      au < exists ; Infection and Immunity Volume 67 ; 67 >
+      au < exists ; Infection and Immunity Volume 68 ; 68 >
+      au < exists ; Infection and Immunity Volume 69 ; 69 >
+      au < exists ; Infection and Immunity Volume 70 ; 70 >
+      au < exists ; Infection and Immunity Volume 71 ; 71 >
+      au < exists ; Infection and Immunity Volume 72 ; 72 >
+      au < manifest ; Infection and Immunity Volume 73 ; 73 >
+      au < released ; Infection and Immunity Volume 74 ; 74 >
+      au < manifest ; Infection and Immunity Volume 75 ; 75 >
+      au < manifest ; Infection and Immunity Volume 76 ; 76 >
+      au < manifest ; Infection and Immunity Volume 77 ; 77 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Bacteriology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jb.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Bacteriology Volume 73 ; 73 >
+      au < exists ; Journal of Bacteriology Volume 74 ; 74 >
+      au < exists ; Journal of Bacteriology Volume 75 ; 75 >
+      au < exists ; Journal of Bacteriology Volume 76 ; 76 >
+      au < exists ; Journal of Bacteriology Volume 77 ; 77 >
+      au < exists ; Journal of Bacteriology Volume 78 ; 78 >
+      au < exists ; Journal of Bacteriology Volume 79 ; 79 >
+      au < exists ; Journal of Bacteriology Volume 80 ; 80 >
+      au < exists ; Journal of Bacteriology Volume 81 ; 81 >
+      au < exists ; Journal of Bacteriology Volume 82 ; 82 >
+      au < exists ; Journal of Bacteriology Volume 83 ; 83 >
+      au < exists ; Journal of Bacteriology Volume 84 ; 84 >
+      au < exists ; Journal of Bacteriology Volume 85 ; 85 >
+      au < exists ; Journal of Bacteriology Volume 86 ; 86 >
+      au < exists ; Journal of Bacteriology Volume 87 ; 87 >
+      au < exists ; Journal of Bacteriology Volume 88 ; 88 >
+      au < exists ; Journal of Bacteriology Volume 89 ; 89 >
+      au < exists ; Journal of Bacteriology Volume 90 ; 90 >
+      au < exists ; Journal of Bacteriology Volume 91 ; 91 >
+      au < exists ; Journal of Bacteriology Volume 92 ; 92 >
+      au < exists ; Journal of Bacteriology Volume 93 ; 93 >
+      au < exists ; Journal of Bacteriology Volume 94 ; 94 >
+      au < exists ; Journal of Bacteriology Volume 95 ; 95 >
+      au < exists ; Journal of Bacteriology Volume 96 ; 96 >
+      au < exists ; Journal of Bacteriology Volume 97 ; 97 >
+      au < exists ; Journal of Bacteriology Volume 98 ; 98 >
+      au < exists ; Journal of Bacteriology Volume 99 ; 99 >
+      au < exists ; Journal of Bacteriology Volume 100 ; 100 >
+      au < exists ; Journal of Bacteriology Volume 101 ; 101 >
+      au < exists ; Journal of Bacteriology Volume 102 ; 102 >
+      au < exists ; Journal of Bacteriology Volume 103 ; 103 >
+      au < exists ; Journal of Bacteriology Volume 104 ; 104 >
+      au < exists ; Journal of Bacteriology Volume 105 ; 105 >
+      au < exists ; Journal of Bacteriology Volume 106 ; 106 >
+      au < exists ; Journal of Bacteriology Volume 107 ; 107 >
+      au < exists ; Journal of Bacteriology Volume 108 ; 108 >
+      au < exists ; Journal of Bacteriology Volume 109 ; 109 >
+      au < exists ; Journal of Bacteriology Volume 110 ; 110 >
+      au < exists ; Journal of Bacteriology Volume 111 ; 111 >
+      au < exists ; Journal of Bacteriology Volume 112 ; 112 >
+      au < exists ; Journal of Bacteriology Volume 113 ; 113 >
+      au < exists ; Journal of Bacteriology Volume 114 ; 114 >
+      au < exists ; Journal of Bacteriology Volume 115 ; 115 >
+      au < exists ; Journal of Bacteriology Volume 116 ; 116 >
+      au < exists ; Journal of Bacteriology Volume 117 ; 117 >
+      au < exists ; Journal of Bacteriology Volume 118 ; 118 >
+      au < exists ; Journal of Bacteriology Volume 119 ; 119 >
+      au < exists ; Journal of Bacteriology Volume 120 ; 120 >
+      au < exists ; Journal of Bacteriology Volume 121 ; 121 >
+      au < exists ; Journal of Bacteriology Volume 122 ; 122 >
+      au < exists ; Journal of Bacteriology Volume 123 ; 123 >
+      au < exists ; Journal of Bacteriology Volume 124 ; 124 >
+      au < exists ; Journal of Bacteriology Volume 125 ; 125 >
+      au < exists ; Journal of Bacteriology Volume 126 ; 126 >
+      au < exists ; Journal of Bacteriology Volume 127 ; 127 >
+      au < exists ; Journal of Bacteriology Volume 128 ; 128 >
+      au < exists ; Journal of Bacteriology Volume 129 ; 129 >
+      au < exists ; Journal of Bacteriology Volume 130 ; 130 >
+      au < exists ; Journal of Bacteriology Volume 131 ; 131 >
+      au < exists ; Journal of Bacteriology Volume 132 ; 132 >
+      au < exists ; Journal of Bacteriology Volume 133 ; 133 >
+      au < exists ; Journal of Bacteriology Volume 134 ; 134 >
+      au < exists ; Journal of Bacteriology Volume 135 ; 135 >
+      au < exists ; Journal of Bacteriology Volume 136 ; 136 >
+      au < exists ; Journal of Bacteriology Volume 137 ; 137 >
+      au < exists ; Journal of Bacteriology Volume 138 ; 138 >
+      au < exists ; Journal of Bacteriology Volume 139 ; 139 >
+      au < exists ; Journal of Bacteriology Volume 140 ; 140 >
+      au < exists ; Journal of Bacteriology Volume 141 ; 141 >
+      au < exists ; Journal of Bacteriology Volume 142 ; 142 >
+      au < exists ; Journal of Bacteriology Volume 143 ; 143 >
+      au < exists ; Journal of Bacteriology Volume 144 ; 144 >
+      au < exists ; Journal of Bacteriology Volume 145 ; 145 >
+      au < exists ; Journal of Bacteriology Volume 146 ; 146 >
+      au < exists ; Journal of Bacteriology Volume 147 ; 147 >
+      au < exists ; Journal of Bacteriology Volume 148 ; 148 >
+      au < exists ; Journal of Bacteriology Volume 149 ; 149 >
+      au < exists ; Journal of Bacteriology Volume 150 ; 150 >
+      au < exists ; Journal of Bacteriology Volume 151 ; 151 >
+      au < exists ; Journal of Bacteriology Volume 152 ; 152 >
+      au < exists ; Journal of Bacteriology Volume 153 ; 153 >
+      au < exists ; Journal of Bacteriology Volume 154 ; 154 >
+      au < exists ; Journal of Bacteriology Volume 155 ; 155 >
+      au < exists ; Journal of Bacteriology Volume 156 ; 156 >
+      au < exists ; Journal of Bacteriology Volume 157 ; 157 >
+      au < exists ; Journal of Bacteriology Volume 158 ; 158 >
+      au < exists ; Journal of Bacteriology Volume 159 ; 159 >
+      au < exists ; Journal of Bacteriology Volume 160 ; 160 >
+      au < exists ; Journal of Bacteriology Volume 161 ; 161 >
+      au < exists ; Journal of Bacteriology Volume 162 ; 162 >
+      au < exists ; Journal of Bacteriology Volume 163 ; 163 >
+      au < exists ; Journal of Bacteriology Volume 164 ; 164 >
+      au < exists ; Journal of Bacteriology Volume 165 ; 165 >
+      au < exists ; Journal of Bacteriology Volume 166 ; 166 >
+      au < exists ; Journal of Bacteriology Volume 167 ; 167 >
+      au < exists ; Journal of Bacteriology Volume 168 ; 168 >
+      au < exists ; Journal of Bacteriology Volume 169 ; 169 >
+      au < exists ; Journal of Bacteriology Volume 170 ; 170 >
+      au < exists ; Journal of Bacteriology Volume 171 ; 171 >
+      au < exists ; Journal of Bacteriology Volume 172 ; 172 >
+      au < exists ; Journal of Bacteriology Volume 173 ; 173 >
+      au < exists ; Journal of Bacteriology Volume 174 ; 174 >
+      au < exists ; Journal of Bacteriology Volume 175 ; 175 >
+      au < exists ; Journal of Bacteriology Volume 176 ; 176 >
+      au < exists ; Journal of Bacteriology Volume 177 ; 177 >
+      au < exists ; Journal of Bacteriology Volume 178 ; 178 >
+      au < exists ; Journal of Bacteriology Volume 179 ; 179 >
+      au < exists ; Journal of Bacteriology Volume 180 ; 180 >
+      au < exists ; Journal of Bacteriology Volume 181 ; 181 >
+      au < exists ; Journal of Bacteriology Volume 182 ; 182 >
+      au < exists ; Journal of Bacteriology Volume 183 ; 183 >
+      au < exists ; Journal of Bacteriology Volume 184 ; 184 >
+      au < exists ; Journal of Bacteriology Volume 185 ; 185 >
+      au < exists ; Journal of Bacteriology Volume 186 ; 186 >
+      au < manifest ; Journal of Bacteriology Volume 187 ; 187 >
+      au < released ; Journal of Bacteriology Volume 188 ; 188 >
+      au < manifest ; Journal of Bacteriology Volume 189 ; 189 >
+      au < manifest ; Journal of Bacteriology Volume 190 ; 190 >
+      au < manifest ; Journal of Bacteriology Volume 191 ; 191 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Microbiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jcm.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Clinical Microbiology Volume 1 ; 1 >
+      au < exists ; Journal of Clinical Microbiology Volume 2 ; 2 >
+      au < exists ; Journal of Clinical Microbiology Volume 3 ; 3 >
+      au < exists ; Journal of Clinical Microbiology Volume 4 ; 4 >
+      au < exists ; Journal of Clinical Microbiology Volume 5 ; 5 >
+      au < exists ; Journal of Clinical Microbiology Volume 6 ; 6 >
+      au < exists ; Journal of Clinical Microbiology Volume 7 ; 7 >
+      au < exists ; Journal of Clinical Microbiology Volume 8 ; 8 >
+      au < exists ; Journal of Clinical Microbiology Volume 9 ; 9 >
+      au < exists ; Journal of Clinical Microbiology Volume 10 ; 10 >
+      au < exists ; Journal of Clinical Microbiology Volume 11 ; 11 >
+      au < exists ; Journal of Clinical Microbiology Volume 12 ; 12 >
+      au < exists ; Journal of Clinical Microbiology Volume 13 ; 13 >
+      au < exists ; Journal of Clinical Microbiology Volume 14 ; 14 >
+      au < exists ; Journal of Clinical Microbiology Volume 15 ; 15 >
+      au < exists ; Journal of Clinical Microbiology Volume 16 ; 16 >
+      au < exists ; Journal of Clinical Microbiology Volume 17 ; 17 >
+      au < exists ; Journal of Clinical Microbiology Volume 18 ; 18 >
+      au < exists ; Journal of Clinical Microbiology Volume 19 ; 19 >
+      au < exists ; Journal of Clinical Microbiology Volume 20 ; 20 >
+      au < exists ; Journal of Clinical Microbiology Volume 21 ; 21 >
+      au < exists ; Journal of Clinical Microbiology Volume 22 ; 22 >
+      au < exists ; Journal of Clinical Microbiology Volume 23 ; 23 >
+      au < exists ; Journal of Clinical Microbiology Volume 24 ; 24 >
+      au < exists ; Journal of Clinical Microbiology Volume 25 ; 25 >
+      au < exists ; Journal of Clinical Microbiology Volume 26 ; 26 >
+      au < exists ; Journal of Clinical Microbiology Volume 27 ; 27 >
+      au < exists ; Journal of Clinical Microbiology Volume 28 ; 28 >
+      au < exists ; Journal of Clinical Microbiology Volume 29 ; 29 >
+      au < exists ; Journal of Clinical Microbiology Volume 30 ; 30 >
+      au < exists ; Journal of Clinical Microbiology Volume 31 ; 31 >
+      au < exists ; Journal of Clinical Microbiology Volume 32 ; 32 >
+      au < exists ; Journal of Clinical Microbiology Volume 33 ; 33 >
+      au < exists ; Journal of Clinical Microbiology Volume 34 ; 34 >
+      au < exists ; Journal of Clinical Microbiology Volume 35 ; 35 >
+      au < exists ; Journal of Clinical Microbiology Volume 36 ; 36 >
+      au < exists ; Journal of Clinical Microbiology Volume 37 ; 37 >
+      au < exists ; Journal of Clinical Microbiology Volume 38 ; 38 >
+      au < exists ; Journal of Clinical Microbiology Volume 39 ; 39 >
+      au < exists ; Journal of Clinical Microbiology Volume 40 ; 40 >
+      au < exists ; Journal of Clinical Microbiology Volume 41 ; 41 >
+      au < exists ; Journal of Clinical Microbiology Volume 42 ; 42 >
+      au < manifest ; Journal of Clinical Microbiology Volume 43 ; 43 >
+      au < released ; Journal of Clinical Microbiology Volume 44 ; 44 >
+      au < manifest ; Journal of Clinical Microbiology Volume 45 ; 45 >
+      au < manifest ; Journal of Clinical Microbiology Volume 46 ; 46 >
+      au < manifest ; Journal of Clinical Microbiology Volume 47 ; 47 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Virology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jvi.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Virology Volume 1 ; 1 >
+      au < exists ; Journal of Virology Volume 2 ; 2 >
+      au < exists ; Journal of Virology Volume 3 ; 3 >
+      au < exists ; Journal of Virology Volume 4 ; 4 >
+      au < exists ; Journal of Virology Volume 5 ; 5 >
+      au < exists ; Journal of Virology Volume 6 ; 6 >
+      au < exists ; Journal of Virology Volume 7 ; 7 >
+      au < exists ; Journal of Virology Volume 8 ; 8 >
+      au < exists ; Journal of Virology Volume 9 ; 9 >
+      au < exists ; Journal of Virology Volume 10 ; 10 >
+      au < exists ; Journal of Virology Volume 11 ; 11 >
+      au < exists ; Journal of Virology Volume 12 ; 12 >
+      au < exists ; Journal of Virology Volume 13 ; 13 >
+      au < exists ; Journal of Virology Volume 14 ; 14 >
+      au < exists ; Journal of Virology Volume 15 ; 15 >
+      au < exists ; Journal of Virology Volume 16 ; 16 >
+      au < exists ; Journal of Virology Volume 17 ; 17 >
+      au < exists ; Journal of Virology Volume 18 ; 18 >
+      au < exists ; Journal of Virology Volume 19 ; 19 >
+      au < exists ; Journal of Virology Volume 20 ; 20 >
+      au < exists ; Journal of Virology Volume 21 ; 21 >
+      au < exists ; Journal of Virology Volume 22 ; 22 >
+      au < exists ; Journal of Virology Volume 23 ; 23 >
+      au < exists ; Journal of Virology Volume 24 ; 24 >
+      au < exists ; Journal of Virology Volume 25 ; 25 >
+      au < exists ; Journal of Virology Volume 26 ; 26 >
+      au < exists ; Journal of Virology Volume 27 ; 27 >
+      au < exists ; Journal of Virology Volume 28 ; 28 >
+      au < exists ; Journal of Virology Volume 29 ; 29 >
+      au < exists ; Journal of Virology Volume 30 ; 30 >
+      au < exists ; Journal of Virology Volume 31 ; 31 >
+      au < exists ; Journal of Virology Volume 32 ; 32 >
+      au < exists ; Journal of Virology Volume 33 ; 33 >
+      au < exists ; Journal of Virology Volume 34 ; 34 >
+      au < exists ; Journal of Virology Volume 35 ; 35 >
+      au < exists ; Journal of Virology Volume 36 ; 36 >
+      au < exists ; Journal of Virology Volume 37 ; 37 >
+      au < exists ; Journal of Virology Volume 38 ; 38 >
+      au < exists ; Journal of Virology Volume 39 ; 39 >
+      au < exists ; Journal of Virology Volume 40 ; 40 >
+      au < exists ; Journal of Virology Volume 41 ; 41 >
+      au < exists ; Journal of Virology Volume 42 ; 42 >
+      au < exists ; Journal of Virology Volume 43 ; 43 >
+      au < exists ; Journal of Virology Volume 44 ; 44 >
+      au < exists ; Journal of Virology Volume 45 ; 45 >
+      au < exists ; Journal of Virology Volume 46 ; 46 >
+      au < exists ; Journal of Virology Volume 47 ; 47 >
+      au < exists ; Journal of Virology Volume 48 ; 48 >
+      au < exists ; Journal of Virology Volume 49 ; 49 >
+      au < exists ; Journal of Virology Volume 50 ; 50 >
+      au < exists ; Journal of Virology Volume 51 ; 51 >
+      au < exists ; Journal of Virology Volume 52 ; 52 >
+      au < exists ; Journal of Virology Volume 53 ; 53 >
+      au < exists ; Journal of Virology Volume 54 ; 54 >
+      au < exists ; Journal of Virology Volume 55 ; 55 >
+      au < exists ; Journal of Virology Volume 56 ; 56 >
+      au < exists ; Journal of Virology Volume 57 ; 57 >
+      au < exists ; Journal of Virology Volume 58 ; 58 >
+      au < exists ; Journal of Virology Volume 59 ; 59 >
+      au < exists ; Journal of Virology Volume 60 ; 60 >
+      au < exists ; Journal of Virology Volume 61 ; 61 >
+      au < exists ; Journal of Virology Volume 62 ; 62 >
+      au < exists ; Journal of Virology Volume 63 ; 63 >
+      au < exists ; Journal of Virology Volume 64 ; 64 >
+      au < exists ; Journal of Virology Volume 65 ; 65 >
+      au < exists ; Journal of Virology Volume 66 ; 66 >
+      au < exists ; Journal of Virology Volume 67 ; 67 >
+      au < exists ; Journal of Virology Volume 68 ; 68 >
+      au < exists ; Journal of Virology Volume 69 ; 69 >
+      au < exists ; Journal of Virology Volume 70 ; 70 >
+      au < exists ; Journal of Virology Volume 71 ; 71 >
+      au < exists ; Journal of Virology Volume 72 ; 72 >
+      au < exists ; Journal of Virology Volume 73 ; 73 >
+      au < exists ; Journal of Virology Volume 74 ; 74 >
+      au < exists ; Journal of Virology Volume 75 ; 75 >
+      au < exists ; Journal of Virology Volume 76 ; 76 >
+      au < exists ; Journal of Virology Volume 77 ; 77 >
+      au < exists ; Journal of Virology Volume 78 ; 78 >
+      au < manifest ; Journal of Virology Volume 79 ; 79 >
+      au < released ; Journal of Virology Volume 80 ; 80 >
+      au < manifest ; Journal of Virology Volume 81 ; 81 >
+      au < manifest ; Journal of Virology Volume 82 ; 82 >
+      au < manifest ; Journal of Virology Volume 83 ; 83 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Microbiology and Molecular Biology Reviews
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mmbr.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 1 ; 1 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 2 ; 2 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 3 ; 3 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 4 ; 4 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 5 ; 5 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 6 ; 6 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 7 ; 7 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 8 ; 8 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 9 ; 9 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 11 ; 11 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 12 ; 12 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 13 ; 13 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 14 ; 14 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 15 ; 15 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 16 ; 16 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 17 ; 17 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 18 ; 18 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 19 ; 19 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 20 ; 20 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 21 ; 21 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 22 ; 22 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 23 ; 23 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 24 ; 24 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 25 ; 25 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 26 ; 26 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 27 ; 27 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 28 ; 28 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 29 ; 29 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 30 ; 30 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 31 ; 31 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 32 ; 32 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 33 ; 33 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 34 ; 34 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 35 ; 35 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 36 ; 36 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 37 ; 37 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 38 ; 38 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 39 ; 39 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 40 ; 40 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 41 ; 41 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 42 ; 42 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 43 ; 43 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 44 ; 44 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 45 ; 45 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 46 ; 46 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 47 ; 47 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 48 ; 48 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 49 ; 49 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 50 ; 50 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 51 ; 51 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 52 ; 52 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 53 ; 53 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 54 ; 54 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 55 ; 55 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 56 ; 56 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 57 ; 57 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 58 ; 58 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 59 ; 59 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 60 ; 60 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 61 ; 61 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 62 ; 62 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 63 ; 63 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 64 ; 64 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 65 ; 65 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 66 ; 66 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 67 ; 67 >
+      au < exists ; Microbiology and Molecular Biology Reviews Volume 68 ; 68 >
+      au < manifest ; Microbiology and Molecular Biology Reviews Volume 69 ; 69 >
+      au < released ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
+      au < manifest ; Microbiology and Molecular Biology Reviews Volume 71 ; 71 >
+      au < manifest ; Microbiology and Molecular Biology Reviews Volume 72 ; 72 >
+      au < manifest ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Molecular and Cellular Biology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mcb.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Molecular and Cellular Biology Volume 1 ; 1 >
+      au < exists ; Molecular and Cellular Biology Volume 2 ; 2 >
+      au < exists ; Molecular and Cellular Biology Volume 3 ; 3 >
+      au < exists ; Molecular and Cellular Biology Volume 4 ; 4 >
+      au < exists ; Molecular and Cellular Biology Volume 5 ; 5 >
+      au < exists ; Molecular and Cellular Biology Volume 6 ; 6 >
+      au < exists ; Molecular and Cellular Biology Volume 7 ; 7 >
+      au < exists ; Molecular and Cellular Biology Volume 8 ; 8 >
+      au < exists ; Molecular and Cellular Biology Volume 9 ; 9 >
+      au < exists ; Molecular and Cellular Biology Volume 10 ; 10 >
+      au < exists ; Molecular and Cellular Biology Volume 11 ; 11 >
+      au < exists ; Molecular and Cellular Biology Volume 12 ; 12 >
+      au < exists ; Molecular and Cellular Biology Volume 13 ; 13 >
+      au < exists ; Molecular and Cellular Biology Volume 14 ; 14 >
+      au < exists ; Molecular and Cellular Biology Volume 15 ; 15 >
+      au < exists ; Molecular and Cellular Biology Volume 16 ; 16 >
+      au < exists ; Molecular and Cellular Biology Volume 17 ; 17 >
+      au < exists ; Molecular and Cellular Biology Volume 18 ; 18 >
+      au < exists ; Molecular and Cellular Biology Volume 19 ; 19 >
+      au < exists ; Molecular and Cellular Biology Volume 20 ; 20 >
+      au < exists ; Molecular and Cellular Biology Volume 21 ; 21 >
+      au < exists ; Molecular and Cellular Biology Volume 22 ; 22 >
+      au < exists ; Molecular and Cellular Biology Volume 23 ; 23 >
+      au < exists ; Molecular and Cellular Biology Volume 24 ; 24 >
+      au < manifest ; Molecular and Cellular Biology Volume 25 ; 25 >
+      au < released ; Molecular and Cellular Biology Volume 26 ; 26 >
+      au < manifest ; Molecular and Cellular Biology Volume 27 ; 27 >
+      au < manifest ; Molecular and Cellular Biology Volume 28 ; 28 >
+      au < manifest ; Molecular and Cellular Biology Volume 29 ; 29 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Mycological Society of America
+  >
+
+  {
+    title <
+      name = Mycologia
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.mycologia.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Mycologia Volume 94 ; 94 >
+      au < exists ; Mycologia Volume 95 ; 95 >
+      au < exists ; Mycologia Volume 96 ; 96 >
+      au < exists ; Mycologia Volume 97 ; 97 >
+      au < exists ; Mycologia Volume 98 ; 98 >
+      au < exists ; Mycologia Volume 99 ; 99 >
+      au < exists ; Mycologia Volume 100 ; 100 >
+      au < exists ; Mycologia Volume 101 ; 101 >
+
+    }
+
+  }
+
+}
+

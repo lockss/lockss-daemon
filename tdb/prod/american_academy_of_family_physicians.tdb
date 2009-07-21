@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = American Academy of Family Physicians
+  >
+
+  {
+    title <
+      name = The Annals of Family Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.annfammed.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Annals of Family Medicine Volume 1 ; 1 >
+      au < exists ; The Annals of Family Medicine Volume 2 ; 2 >
+      au < exists ; The Annals of Family Medicine Volume 3 ; 3 >
+      au < exists ; The Annals of Family Medicine Volume 4 ; 4 >
+      au < exists ; The Annals of Family Medicine Volume 5 ; 5 >
+      au < exists ; The Annals of Family Medicine Volume 6 ; 6 >
+      au < exists ; The Annals of Family Medicine Volume 7 ; 7 >
+
+    }
+
+  }
+
+}
+

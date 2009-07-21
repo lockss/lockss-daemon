@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Marshfield Clinic
+  >
+
+  {
+    title <
+      name = Clinical Medicine & Research
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.clinmedres.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Clinical Medicine & Research Volume 1 ; 1 >
+      au < exists ; Clinical Medicine & Research Volume 2 ; 2 >
+      au < exists ; Clinical Medicine & Research Volume 3 ; 3 >
+      au < exists ; Clinical Medicine & Research Volume 4 ; 4 >
+      au < exists ; Clinical Medicine & Research Volume 5 ; 5 >
+      au < exists ; Clinical Medicine & Research Volume 6 ; 6 >
+
+    }
+
+  }
+
+}
+

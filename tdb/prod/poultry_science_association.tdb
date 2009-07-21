@@ -1,0 +1,70 @@
+{
+  publisher <
+    name = Poultry Science Association
+  >
+
+  {
+    title <
+      name = Journal of Applied Poultry Research
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://japr.fass.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; The Journal of Applied Poultry Research Volume 1 ; 1 >
+      au < released ; The Journal of Applied Poultry Research Volume 2 ; 2 >
+      au < released ; The Journal of Applied Poultry Research Volume 3 ; 3 >
+      au < manifest ; Journal of Applied Poultry Research Volume 4 ; 4 >
+      au < released ; The Journal of Applied Poultry Research Volume 5 ; 5 >
+      au < released ; The Journal of Applied Poultry Research Volume 6 ; 6 >
+      au < manifest ; Journal of Applied Poultry Research Volume 7 ; 7 >
+      au < released ; The Journal of Applied Poultry Research Volume 8 ; 8 >
+      au < released ; The Journal of Applied Poultry Research Volume 9 ; 9 >
+      au < released ; The Journal of Applied Poultry Research Volume 10 ; 10 >
+      au < released ; The Journal of Applied Poultry Research Volume 11 ; 11 >
+      au < released ; The Journal of Applied Poultry Research Volume 12 ; 12 >
+      au < released ; The Journal of Applied Poultry Research Volume 13 ; 13 >
+      au < released ; The Journal of Applied Poultry Research Volume 14 ; 14 >
+      au < released ; The Journal of Applied Poultry Research Volume 15 ; 15 >
+      au < manifest ; Journal of Applied Poultry Research Volume 16 ; 16 >
+      au < manifest ; Journal of Applied Poultry Research Volume 17 ; 17 >
+      au < manifest ; Journal of Applied Poultry Research Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Poultry Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ps.fass.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Poultry Science Volume 76 ; 76 >
+      au < released ; Poultry Science Volume 77 ; 77 >
+      au < released ; Poultry Science Volume 78 ; 78 >
+      au < released ; Poultry Science Volume 79 ; 79 >
+      au < released ; Poultry Science Volume 80 ; 80 >
+      au < released ; Poultry Science Volume 81 ; 81 >
+      au < released ; Poultry Science Volume 82 ; 82 >
+      au < released ; Poultry Science Volume 83 ; 83 >
+      au < released ; Poultry Science Volume 84 ; 84 >
+      au < manifest ; Poultry Science Volume 85 ; 85 >
+      au < manifest ; Poultry Science Volume 86 ; 86 >
+      au < manifest ; Poultry Science Volume 87 ; 87 >
+      au < manifest ; Poultry Science Volume 88 ; 88 >
+
+    }
+
+  }
+
+}
+

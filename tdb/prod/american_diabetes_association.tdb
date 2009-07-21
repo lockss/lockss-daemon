@@ -1,0 +1,196 @@
+{
+  publisher <
+    name = American Diabetes Association
+  >
+
+  {
+    title <
+      name = Clinical Diabetes
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://clinical.diabetesjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Clinical Diabetes Volume 19 ; 19 >
+      au < exists ; Clinical Diabetes Volume 20 ; 20 >
+      au < exists ; Clinical Diabetes Volume 21 ; 21 >
+      au < exists ; Clinical Diabetes Volume 22 ; 22 >
+      au < exists ; Clinical Diabetes Volume 23 ; 23 >
+      au < exists ; Clinical Diabetes Volume 24 ; 24 >
+      au < exists ; Clinical Diabetes Volume 25 ; 25 >
+      au < exists ; Clinical Diabetes Volume 26 ; 26 >
+      au < exists ; Clinical Diabetes Volume 27 ; 27 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Diabetes
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://diabetes.diabetesjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Diabetes Volume 15 ; 15 >
+      au < exists ; Diabetes Volume 16 ; 16 >
+      au < exists ; Diabetes Volume 17 ; 17 >
+      au < exists ; Diabetes Volume 18 ; 18 >
+      au < exists ; Diabetes Volume 19 ; 19 >
+      au < exists ; Diabetes Volume 20 ; 20 >
+      au < exists ; Diabetes Volume 21 ; 21 >
+      au < exists ; Diabetes Volume 22 ; 22 >
+      au < exists ; Diabetes Volume 23 ; 23 >
+      au < exists ; Diabetes Volume 24 ; 24 >
+      au < exists ; Diabetes Volume 25 ; 25 >
+      au < exists ; Diabetes Volume 26 ; 26 >
+      au < exists ; Diabetes Volume 27 ; 27 >
+      au < exists ; Diabetes Volume 28 ; 28 >
+      au < exists ; Diabetes Volume 29 ; 29 >
+      au < exists ; Diabetes Volume 30 ; 30 >
+      au < exists ; Diabetes Volume 31 ; 31 >
+      au < exists ; Diabetes Volume 32 ; 32 >
+      au < exists ; Diabetes Volume 33 ; 33 >
+      au < exists ; Diabetes Volume 34 ; 34 >
+      au < exists ; Diabetes Volume 35 ; 35 >
+      au < exists ; Diabetes Volume 36 ; 36 >
+      au < exists ; Diabetes Volume 37 ; 37 >
+      au < exists ; Diabetes Volume 38 ; 38 >
+      au < exists ; Diabetes Volume 39 ; 39 >
+      au < exists ; Diabetes Volume 40 ; 40 >
+      au < exists ; Diabetes Volume 41 ; 41 >
+      au < exists ; Diabetes Volume 42 ; 42 >
+      au < exists ; Diabetes Volume 43 ; 43 >
+      au < exists ; Diabetes Volume 44 ; 44 >
+      au < exists ; Diabetes Volume 45 ; 45 >
+      au < exists ; Diabetes Volume 46 ; 46 >
+      au < exists ; Diabetes Volume 47 ; 47 >
+      au < exists ; Diabetes Volume 48 ; 48 >
+      au < exists ; Diabetes Volume 49 ; 49 >
+      au < exists ; Diabetes Volume 50 ; 50 >
+      au < exists ; Diabetes Volume 51 ; 51 >
+      au < exists ; Diabetes Volume 52 ; 52 >
+      au < exists ; Diabetes Volume 53 ; 53 >
+      au < exists ; Diabetes Volume 54 ; 54 >
+      au < exists ; Diabetes Volume 55 ; 55 >
+      au < exists ; Diabetes Volume 56 ; 56 >
+      au < exists ; Diabetes Volume 57 ; 57 >
+      au < exists ; Diabetes Volume 58 ; 58 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Diabetes Care
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://care.diabetesjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Diabetes Care Volume 1 ; 1 >
+      au < exists ; Diabetes Care Volume 2 ; 2 >
+      au < exists ; Diabetes Care Volume 3 ; 3 >
+      au < exists ; Diabetes Care Volume 4 ; 4 >
+      au < exists ; Diabetes Care Volume 5 ; 5 >
+      au < exists ; Diabetes Care Volume 6 ; 6 >
+      au < exists ; Diabetes Care Volume 7 ; 7 >
+      au < exists ; Diabetes Care Volume 8 ; 8 >
+      au < exists ; Diabetes Care Volume 9 ; 9 >
+      au < exists ; Diabetes Care Volume 10 ; 10 >
+      au < exists ; Diabetes Care Volume 11 ; 11 >
+      au < exists ; Diabetes Care Volume 12 ; 12 >
+      au < exists ; Diabetes Care Volume 13 ; 13 >
+      au < exists ; Diabetes Care Volume 14 ; 14 >
+      au < exists ; Diabetes Care Volume 15 ; 15 >
+      au < exists ; Diabetes Care Volume 16 ; 16 >
+      au < exists ; Diabetes Care Volume 17 ; 17 >
+      au < exists ; Diabetes Care Volume 18 ; 18 >
+      au < exists ; Diabetes Care Volume 19 ; 19 >
+      au < exists ; Diabetes Care Volume 20 ; 20 >
+      au < exists ; Diabetes Care Volume 21 ; 21 >
+      au < exists ; Diabetes Care Volume 22 ; 22 >
+      au < exists ; Diabetes Care Volume 23 ; 23 >
+      au < exists ; Diabetes Care Volume 24 ; 24 >
+      au < exists ; Diabetes Care Volume 25 ; 25 >
+      au < exists ; Diabetes Care Volume 26 ; 26 >
+      au < exists ; Diabetes Care Volume 27 ; 27 >
+      au < exists ; Diabetes Care Volume 28 ; 28 >
+      au < exists ; Diabetes Care Volume 29 ; 29 >
+      au < exists ; Diabetes Care Volume 30 ; 30 >
+      au < exists ; Diabetes Care Volume 31 ; 31 >
+      au < exists ; Diabetes Care Volume 32 ; 32 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Diabetes Spectrum
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://spectrum.diabetesjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Diabetes Spectrum Volume 14 ; 14 >
+      au < exists ; Diabetes Spectrum Volume 15 ; 15 >
+      au < exists ; Diabetes Spectrum Volume 16 ; 16 >
+      au < exists ; Diabetes Spectrum Volume 17 ; 17 >
+      au < exists ; Diabetes Spectrum Volume 18 ; 18 >
+      au < exists ; Diabetes Spectrum Volume 19 ; 19 >
+      au < exists ; Diabetes Spectrum Volume 20 ; 20 >
+      au < exists ; Diabetes Spectrum Volume 21 ; 21 >
+      au < exists ; Diabetes Spectrum Volume 22 ; 22 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = DOC News
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      param[base_url] = http://docnews.diabetesjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; DOC News Volume 1 ; 1 >
+      au < exists ; DOC News Volume 2 ; 2 >
+      au < exists ; DOC News Volume 3 ; 3 >
+      au < exists ; DOC News Volume 4 ; 4 >
+      au < exists ; DOC News Volume 5 ; 5 >
+
+    }
+
+  }
+
+}
+

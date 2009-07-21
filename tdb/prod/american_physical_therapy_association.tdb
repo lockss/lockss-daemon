@@ -1,0 +1,53 @@
+{
+  publisher <
+    name = American Physical Therapy Association
+  >
+
+  {
+    title <
+      name = Physical Therapy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ptjournal.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Physical Therapy Volume 60 ; 60 >
+      au < exists ; Physical Therapy Volume 61 ; 61 >
+      au < exists ; Physical Therapy Volume 62 ; 62 >
+      au < exists ; Physical Therapy Volume 63 ; 63 >
+      au < exists ; Physical Therapy Volume 64 ; 64 >
+      au < exists ; Physical Therapy Volume 65 ; 65 >
+      au < exists ; Physical Therapy Volume 66 ; 66 >
+      au < exists ; Physical Therapy Volume 67 ; 67 >
+      au < exists ; Physical Therapy Volume 68 ; 68 >
+      au < exists ; Physical Therapy Volume 69 ; 69 >
+      au < exists ; Physical Therapy Volume 70 ; 70 >
+      au < exists ; Physical Therapy Volume 71 ; 71 >
+      au < exists ; Physical Therapy Volume 72 ; 72 >
+      au < exists ; Physical Therapy Volume 73 ; 73 >
+      au < exists ; Physical Therapy Volume 74 ; 74 >
+      au < exists ; Physical Therapy Volume 75 ; 75 >
+      au < exists ; Physical Therapy Volume 76 ; 76 >
+      au < exists ; Physical Therapy Volume 77 ; 77 >
+      au < exists ; Physical Therapy Volume 78 ; 78 >
+      au < exists ; Physical Therapy Volume 79 ; 79 >
+      au < exists ; Physical Therapy Volume 80 ; 80 >
+      au < exists ; Physical Therapy Volume 81 ; 81 >
+      au < exists ; Physical Therapy Volume 82 ; 82 >
+      au < exists ; Physical Therapy Volume 83 ; 83 >
+      au < exists ; Physical Therapy Volume 84 ; 84 >
+      au < exists ; Physical Therapy Volume 85 ; 85 >
+      au < exists ; Physical Therapy Volume 86 ; 86 >
+      au < exists ; Physical Therapy Volume 87 ; 87 >
+      au < exists ; Physical Therapy Volume 88 ; 88 >
+      au < exists ; Physical Therapy Volume 89 ; 89 >
+
+    }
+
+  }
+
+}
+
