@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = Cold Spring Harbor Laboratory Press
   >
 
   {
+
     title <
       name = Cold Spring Harbor Symposia on Quantitative Biology
     >
@@ -95,26 +97,7 @@
   }
 
   {
-    title <
-      name = CSH Protocols
-    >
 
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://cshprotocols.cshlp.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < exists ; CSH Protocols Volume 2006 ; 2006 >
-      au < exists ; CSH Protocols Volume 2007 ; 2007 >
-      au < exists ; CSH Protocols Volume 2008 ; 2008 >
-      au < exists ; CSH Protocols Volume 2009 ; 2009 >
-
-    }
-
-  }
-
-  {
     title <
       name = Genes & Development
     >
@@ -156,6 +139,7 @@
   }
 
   {
+  
     title <
       name = Genome Research
     >
@@ -196,6 +180,7 @@
   }
 
   {
+  
     title <
       name = Learning & Memory
     >
@@ -230,6 +215,7 @@
   }
 
   {
+  
     title <
       name = RNA
     >
@@ -263,10 +249,3 @@
   }
 
 }
-
-
-
-
-
-
-

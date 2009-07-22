@@ -5,6 +5,7 @@
   >
 
   {
+  
     title <
       name = Biology of Reproduction ;
       issn = 0006-3363
@@ -81,6 +82,7 @@
     }
 
     {
+    
       implicit < status ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
@@ -105,4 +107,3 @@
   }
 
 }
-

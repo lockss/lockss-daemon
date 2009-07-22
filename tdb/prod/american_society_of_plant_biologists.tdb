@@ -5,8 +5,9 @@
   >
 
   {
+  
     title <
-      name = The Plant Cell Online
+      name = The Plant Cell
     >
 
     {
@@ -25,27 +26,27 @@
       param[base_url] = http://www.plantcell.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < exists ; The Plant Cell Online Volume 1 ; 1 >
-      au < exists ; The Plant Cell Online Volume 2 ; 2 >
-      au < exists ; The Plant Cell Online Volume 3 ; 3 >
-      au < exists ; The Plant Cell Online Volume 4 ; 4 >
-      au < exists ; The Plant Cell Online Volume 5 ; 5 >
-      au < exists ; The Plant Cell Online Volume 6 ; 6 >
-      au < exists ; The Plant Cell Online Volume 7 ; 7 >
-      au < exists ; The Plant Cell Online Volume 8 ; 8 >
-      au < exists ; The Plant Cell Online Volume 9 ; 9 >
-      au < exists ; The Plant Cell Online Volume 10 ; 10 >
-      au < exists ; The Plant Cell Online Volume 11 ; 11 >
-      au < exists ; The Plant Cell Online Volume 12 ; 12 >
-      au < exists ; The Plant Cell Online Volume 13 ; 13 >
-      au < exists ; The Plant Cell Online Volume 14 ; 14 >
-      au < exists ; The Plant Cell Online Volume 15 ; 15 >
-      au < exists ; The Plant Cell Online Volume 16 ; 16 >
+      au < exists ; The Plant Cell Volume 1 ; 1 >
+      au < exists ; The Plant Cell Volume 2 ; 2 >
+      au < exists ; The Plant Cell Volume 3 ; 3 >
+      au < exists ; The Plant Cell Volume 4 ; 4 >
+      au < exists ; The Plant Cell Volume 5 ; 5 >
+      au < exists ; The Plant Cell Volume 6 ; 6 >
+      au < exists ; The Plant Cell Volume 7 ; 7 >
+      au < exists ; The Plant Cell Volume 8 ; 8 >
+      au < exists ; The Plant Cell Volume 9 ; 9 >
+      au < exists ; The Plant Cell Volume 10 ; 10 >
+      au < exists ; The Plant Cell Volume 11 ; 11 >
+      au < exists ; The Plant Cell Volume 12 ; 12 >
+      au < exists ; The Plant Cell Volume 13 ; 13 >
+      au < exists ; The Plant Cell Volume 14 ; 14 >
+      au < exists ; The Plant Cell Volume 15 ; 15 >
+      au < exists ; The Plant Cell Volume 16 ; 16 >
       au < do_not_process ; The Plant Cell Volume 17 ; 17 >
       au < released ; The Plant Cell Volume 18 ; 18 >
       au < released ; The Plant Cell Volume 19 ; 19 >
-      au < manifest ; The Plant Cell Online Volume 20 ; 20 >
-      au < manifest ; The Plant Cell Online Volume 21 ; 21 >
+      au < manifest ; The Plant Cell Volume 20 ; 20 >
+      au < manifest ; The Plant Cell Volume 21 ; 21 >
 
     }
 
@@ -168,6 +169,7 @@
   }
 
   {
+  
     title <
       name = The Arabidopsis Book ;
       issn = 1543-8120
