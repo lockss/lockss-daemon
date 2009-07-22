@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.71 2009-06-13 09:11:20 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.72 2009-07-22 06:41:55 tlipkis Exp $
  */
 
 /*
@@ -703,6 +703,13 @@ public class TestStringUtil extends LockssTestCase {
     catch (IOException e) {
       fail(e.getMessage());
     }
+  }
+
+  public void testToFile() throws Exception {
+    String txt = "Here is some weird text.\nIt has !@#$%^&*()214 in it.";
+    File file = new File(getTempDir(), "foo.txt");
+    StringUtil.toFile(file, txt);
+    assertReaderMatchesString(txt, new FileReader(file));
   }
 
   public void testUpToFinal() {

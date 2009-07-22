@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.17 2006-11-02 04:20:02 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.18 2009-07-22 06:41:55 tlipkis Exp $
  */
 /*
 
@@ -84,6 +84,7 @@ public class PropUtil {
     return props;
   }
 
+  /** Load Properties from a file */
   public static Properties fromFile(File file) throws IOException {
     Properties res = new Properties();
     InputStream in = null;
@@ -94,6 +95,16 @@ public class PropUtil {
       IOUtil.safeClose(in);
     }
     return res;
+  }
+
+  /** Store the Properties in the file */
+  public static void toFile(File file, Properties props) throws IOException {
+    OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
+    try {
+      props.store(os, "test");
+    } finally {
+      IOUtil.safeClose(os);
+    }
   }
 
   private static boolean isKeySame(String key, Properties p1, Properties p2) {
