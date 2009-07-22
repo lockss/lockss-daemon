@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.21.34.1 2009-07-18 01:28:27 edwardsb1 Exp $
+ * $Id: RepositoryNode.java,v 1.21.34.2 2009-07-22 00:25:06 edwardsb1 Exp $
  */
 
 /*
@@ -42,7 +42,8 @@ import org.lockss.repository.v2.RepositoryFile;
  * RepositoryNode is used to store the contents and
  * meta-information of urls being cached.
  */
-public interface RepositoryNode extends RepositoryNodeVersion, RepositoryFile {
+public interface RepositoryNode extends RepositoryNodeVersion, RepositoryFile, 
+  org.lockss.repository.v2.RepositoryNode {
   /**
    * Returns the url represented by this node.
    * @return the node's url

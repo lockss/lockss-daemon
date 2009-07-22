@@ -485,7 +485,7 @@ RepositoryNode  {
   
   public long getTreeContentSize(CachedUrlSetSpec filter,
       boolean calcIfUnknown /*
-                             * , boolean preferredOnly = true */) 
+                             * , boolean mostRecentOnly = true */) 
       throws LockssRepositoryException {
     return getTreeContentSize(filter, calcIfUnknown, true);
   }

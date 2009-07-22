@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.60.4.2 2009-07-18 01:28:28 edwardsb1 Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.60.4.3 2009-07-22 00:25:07 edwardsb1 Exp $
  */
 
 /*
@@ -2243,6 +2243,172 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
   }
   
+  
+  // Testing methods used for the version 2 repository node...
+  
+  // This method is heavily based on the testTreeSize() test.
+  // NOTE: The v1 repository does NOT take the third parameter into account.
+  
+  public void testRNTreeContentSize3() throws Exception {
+    createLeaf("http://www.example.com/testDir", "test", null);
+    createLeaf("http://www.example.com/testDir/test1", "test1", null);
+    createLeaf("http://www.example.com/testDir/test2", "test2", null);
+    createLeaf("http://www.example.com/testDir/test3/branch1",
+               "test33", null);
+    createLeaf("http://www.example.com/testDir/test3/branch2",
+               "test33", null);
+
+    RepositoryNode leaf = repo.getNode("http://www.example.com/testDir");
+    assertEquals(-1, leaf.getTreeContentSize(null, false, false));
+    assertEquals(26, leaf.getTreeContentSize(null, true, false));
+    assertEquals(26, leaf.getTreeContentSize(null, true, true));
+    assertEquals(26, leaf.getTreeContentSize(null, false, false));
+    assertEquals(26, leaf.getTreeContentSize(null, false, true));
+    leaf = repo.getNode("http://www.example.com/testDir/test1");
+    assertEquals(5, leaf.getTreeContentSize(null, true, false));
+    assertEquals(5, leaf.getTreeContentSize(null, true, true));
+    leaf = repo.getNode("http://www.example.com/testDir/test3");
+    assertEquals(12, leaf.getTreeContentSize(null, true, false));
+    assertEquals(12, leaf.getTreeContentSize(null, true, true));
+    CachedUrlSetSpec cuss =
+      new RangeCachedUrlSetSpec("http://www.example.com/testDir/test3",
+                                "/branch1", "/branch1");
+    assertEquals(6, leaf.getTreeContentSize(cuss, true, false));
+    assertEquals(6, leaf.getTreeContentSize(cuss, true, true));
+  }
+
+  
+  // Test getFileList(CachedUrlSetSpec, boolean)
+  public void testRNGetFileList() throws Exception {
+    CachedUrlSetSpec cuss;
+    List<org.lockss.repository.v2.RepositoryFile> lirfFiles;
+    RepositoryNode rnDelete;
+    RepositoryNode rnNode;
+    
+    createLeaf("http://www.example.com/RNGetFileList/file1.txt", "test", null);
+    createLeaf("http://www.example.com/RNGetFileList/file2.txt", "test1", null);
+    createLeaf("http://www.example.com/RNGetFileList/file3.txt", "test2", null);
+    createLeaf("http://www.example.com/RNGetFileList/file4.txt", "test33", null);
+    createLeaf("http://www.example.com/RNGetFileList/file5.txt", "test33", null);
+        
+    // Test against all files.
+    rnNode = repo.getNode("http://www.example.com/RNGetFileList/");
+    lirfFiles = rnNode.getFileList(null, false);
+    assertEquals(5, lirfFiles.size());
+    for (org.lockss.repository.v2.RepositoryFile rfFile : lirfFiles) {
+      assertTrue(rfFile.getNodeUrl().contains("file"));
+    }
+    
+    // Delete two files.
+    rnDelete = repo.getNode("http://www.example.com/RNGetFileList/file4.txt");
+    rnDelete.delete();
+    rnDelete = repo.getNode("http://www.example.com/RNGetFileList/file5.txt");
+    rnDelete.delete();
+    
+    // Test with deleted nodes.
+    lirfFiles = rnNode.getFileList(null, false);
+    assertEquals(3, lirfFiles.size());
+    lirfFiles = rnNode.getFileList(null, true);
+    assertEquals(5, lirfFiles.size());
+    
+    // Test against the CachedUrlSetSpec: it's present.
+    cuss = new SingleNodeCachedUrlSetSpec("http://www.example.com/RNGetFileList/file2.txt");
+    lirfFiles = rnNode.getFileList(cuss, false);
+    assertEquals(1, lirfFiles.size());
+    lirfFiles = rnNode.getFileList(cuss, true);
+    assertEquals(1, lirfFiles.size());
+
+    // Test against the CachedUrlSetSpec: it's deleted.
+    cuss = new SingleNodeCachedUrlSetSpec("http://www.example.com/RNGetFileList/file5.txt");
+    lirfFiles = rnNode.getFileList(cuss, false);
+    assertEquals(0, lirfFiles.size());
+    lirfFiles = rnNode.getFileList(cuss, true);
+    assertEquals(1, lirfFiles.size());
+
+    // Test against the CachedUrlSetSpec: it's absent.
+    cuss = new SingleNodeCachedUrlSetSpec("http://www.example.com/RNGetFileList/notpresent");
+    lirfFiles = rnNode.getFileList(cuss, false);
+    assertEquals(0, lirfFiles.size());
+    lirfFiles = rnNode.getFileList(cuss, true);
+    assertEquals(0, lirfFiles.size());
+  }
+  
+  
+  // Test getFiles(int max, boolean)
+  public void testRNGetFiles() throws Exception {
+    CachedUrlSetSpec cuss;
+    org.lockss.repository.v2.RepositoryFile[] arrfFiles;
+    RepositoryNode rnDelete;
+    RepositoryNode rnNode;
+    
+    createLeaf("http://www.example.com/RNGetFiles/file1.txt", "test", null);
+    createLeaf("http://www.example.com/RNGetFiles/file2.txt", "test1", null);
+    createLeaf("http://www.example.com/RNGetFiles/file3.txt", "test2", null);
+    createLeaf("http://www.example.com/RNGetFiles/file4.txt", "test33", null);
+    createLeaf("http://www.example.com/RNGetFiles/file5.txt", "test33", null);
+        
+    // Test against all files.
+    rnNode = repo.getNode("http://www.example.com/RNGetFiles/");
+    arrfFiles = rnNode.getFiles(10, true);
+    assertEquals(5, arrfFiles.length);
+    for (org.lockss.repository.v2.RepositoryFile rfFile : arrfFiles) {
+      assertTrue(rfFile.getNodeUrl().contains("file"));
+    }
+    
+    arrfFiles = rnNode.getFiles(10, false);
+    assertEquals(5, arrfFiles.length);
+    for (org.lockss.repository.v2.RepositoryFile rfFile : arrfFiles) {
+      assertTrue(rfFile.getNodeUrl().contains("file"));
+    }
+
+    // Test the maxVersions...
+    arrfFiles = rnNode.getFiles(3, true);
+    assertEquals(3, arrfFiles.length);
+    
+    // Delete a few nodes...
+    rnDelete = repo.getNode("http://www.example.com/RNGetFiles/file4.txt");
+    rnDelete.delete();
+    rnDelete = repo.getNode("http://www.example.com/RNGetFiles/file5.txt");
+    rnDelete.delete();
+    
+    // Test the deletions...
+    arrfFiles = rnNode.getFiles(10, false);
+    assertEquals(3, arrfFiles.length);
+    arrfFiles = rnNode.getFiles(10, true);
+    assertEquals(5, arrfFiles.length);
+  }
+  
+  
+  // Test makeNewRepositoryFile(String)
+  public void testRNMakeNewRepositoryFile() throws Exception {
+    RepositoryFile rfChild;
+    RepositoryNode rnParent;
+    
+    createLeaf("http://www.example.com/RNMakeNewRepositoryFile", null, null);
+    rnParent = repo.getNode("http://www.example.com/RNMakeNewRepositoryFile");
+    rfChild = rnParent.makeNewRepositoryFile("child.txt");
+    
+    // Check the URL of the child.
+    assertEquals(rfChild.getNodeUrl(), "http://www.example.com/RNMakeNewRepositoryFile/child.txt");
+    
+    // I don't know what else to test here...
+  }
+  
+  
+  // Test makeNewRepositoryNode(String)
+  public void testRNMakeNewRepositoryNode() throws Exception {
+    org.lockss.repository.v2.RepositoryNode rnChild;
+    RepositoryNode rnParent;
+    
+    createLeaf("http://www.example.com/RNMakeNewRepositoryFile", null, null);
+    rnParent = repo.getNode("http://www.example.com/RNMakeNewRepositoryFile");
+    rnChild = rnParent.makeNewRepositoryNode("child.txt");
+    
+    // Check the URL of the child.
+    assertEquals(rnChild.getNodeUrl(), "http://www.example.com/RNMakeNewRepositoryFile/child.txt");
+    
+    // I don't know what else to test here...
+  }
   
   
   // Additional methods used for testing...

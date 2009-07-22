@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.84.4.3 2009-07-18 01:28:27 edwardsb1 Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.84.4.4 2009-07-22 00:25:06 edwardsb1 Exp $
  */
 
 /*
@@ -2079,23 +2079,90 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return getFileList(filter, false);
   }
 
-  
+
+  /* This method is heavily based on that of getNodeList.  However, I had to
+   * rewrite it for two reasons: 
+   * 
+   * 1. getNodeList -always- ignores deleted nodes, but we want to be able to include
+   *    deleted nodes.
+   * 2. getNodeList returns a List<RepositoryNode>, but we need a List<RepositoryFile>.
+   * 
+   * (non-Javadoc)
+   * @see org.lockss.repository.v2.RepositoryNode#getFileList(org.lockss.daemon.CachedUrlSetSpec, boolean)
+   */
   public List<RepositoryFile> getFileList(CachedUrlSetSpec filter,
       boolean includeDeleted) throws LockssRepositoryException {
-    // The old listChildren() method returns an iterator; this method returns a list.
+    File[] arfiChildren;
+    ArrayList<RepositoryFile> alrfChildren;
+    boolean checkUnnormalized;
+    int sizeList;
     
-    List<RepositoryFile> lirfFiles;
-    Iterator<RepositoryNode> itrnChildren;
-    RepositoryNode rnChild;
+    if (nodeRootFile==null) initNodeRoot();
+    if (contentDir==null) getContentDir();
+    
+    arfiChildren = nodeRootFile.listFiles();
+    if (arfiChildren == null) {
+      String msg = "No cache directory located for: " + url;
+      logger.error(msg);
+      throw new LockssRepository.RepositoryStateException(msg);
+    }
+    // sorts alphabetically relying on File.compareTo()
+    Arrays.sort(arfiChildren, new FileComparator());
+    
+    if (filter==null) {
+      sizeList = arfiChildren.length;
+    } else {
+      // give a reasonable minimum since, if it's filtered, the array size
+      // may be much smaller than the total children, particularly in very
+      // flat trees
+      sizeList = Math.min(40, arfiChildren.length);
+    }
 
-    lirfFiles = new ArrayList<RepositoryFile>();
-    itrnChildren = listChildren(filter, includeDeleted);
-    while (itrnChildren.hasNext()) {
-      rnChild = itrnChildren.next();
-      lirfFiles.add(rnChild);
+    checkUnnormalized =
+      CurrentConfig.getBooleanParam(PARAM_FIX_UNNORMALIZED,
+                                    DEFAULT_FIX_UNNORMALIZED);
+
+    alrfChildren = new ArrayList<RepositoryFile>(sizeList);
+    for (int ii=0; ii<arfiChildren.length; ii++) {
+      String childUrl; 
+      
+      File child = arfiChildren[ii];
+      if ((child.getName().equals(CONTENT_DIR)) || (!child.isDirectory())) {
+        // all children are in their own directories, and the content dir
+        // must be ignored
+        continue;
+      }
+      if (checkUnnormalized) {
+        child = checkUnnormalized(child, arfiChildren, ii);
+      }
+      if (child == null) {
+        continue;
+      }
+      childUrl = constructChildUrl(url, child.getName());
+      if ((filter==null) || (filter.matches(childUrl))) {
+        try {
+          RepositoryNode node;
+          
+          node = repository.getNode(childUrl);
+          // add all nodes which are internal or active leaves
+          // deleted nodes never included
+//           boolean activeInternal = !node.isLeaf() && !node.isDeleted();
+//           boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
+//               (!node.isContentInactive() || includeInactive);
+//           if (activeInternal || activeLeaf) {
+          if (!node.isDeleted() || includeDeleted) {
+            alrfChildren.add(repository.getNode(childUrl));
+          }
+        } catch (MalformedURLException ignore) {
+          // this can safely skip bad files because they will
+          // eventually be trimmed by the repository integrity checker
+          // and the content will be replaced by a poll repair
+          logger.error("Malformed child url: "+childUrl);
+        }
+      }
     }
     
-    return lirfFiles;
+    return alrfChildren;
   }
 
   
@@ -2118,10 +2185,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   
   public RepositoryFile[] getFiles(int maxVersions, boolean includeDeleted)
       throws LockssRepositoryException {
-    RepositoryFile[] arfiOrig;
+    RepositoryFile[] arfiOrig = new RepositoryFile[0];
     RepositoryFile[] arfiReturn;
     
-    arfiOrig = (RepositoryFile[]) getFileList(null, includeDeleted).toArray();
+    arfiOrig = getFileList(null, includeDeleted).toArray(arfiOrig);
     
     if (maxVersions < arfiOrig.length) {
       int i;
@@ -2168,17 +2235,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 //  }
 
   
+  // NOTE: The v1 repository does not need to worry about 'preferredOnly'. 
   public long getTreeContentSize(CachedUrlSetSpec filter,
       boolean calcIfUnknown, boolean preferredOnly)
-      throws LockssRepositoryException {
-    if (preferredOnly) {
-      if (filter == null || filter.matches(url)) {
-        return getContentSize();
-      } 
-        
-      return 0;      
-    }
-    
+      throws LockssRepositoryException {    
     return getTreeContentSize(filter, calcIfUnknown);
   }
 
