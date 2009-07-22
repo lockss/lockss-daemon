@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.18 2009-02-26 05:14:17 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.19 2009-07-22 06:41:08 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 import java.util.List;
 import java.net.*;
 import java.text.*;
+import org.apache.commons.collections.*;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
@@ -68,12 +69,19 @@ public class ServeContent extends LockssServlet {
    * implemented) */
   public static final int MISSING_FILE_ACTION_FORWARD_REQUEST = 3;
 
-  /** Jetty server name */
+  /** Determines actions when a URL is requested that is not in the cache.
+   * One of <code>Error_404</code>, <code>HostAuIndex</code>,
+   * <code>AuIndex</code>, <code>ForwardRequest</code>. */
   public static final String PARAM_MISSING_FILE_ACTION =
     PREFIX + "missingFileAction";
+  public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
+    MissingFileAction.HostAuIndex;;
 
-  public static final int DEFAULT_MISSING_FILE_ACTION =
-    MISSING_FILE_ACTION_404;
+  public enum MissingFileAction {
+    Error_404,
+      HostAuIndex,
+      AuIndex,
+      ForwardRequest}
 
   /** If true, rewritten links will be absolute
    * (http:/host:port/ServeContent?url=...).  If false, relative
@@ -97,10 +105,18 @@ public class ServeContent extends LockssServlet {
 
   public static final List DEFAULT_EXCLUDE_PLUGINS = Collections.EMPTY_LIST;
 
-  private static int missingFileAction = DEFAULT_MISSING_FILE_ACTION;
+  /** If true, Include internal AUs (plugin registries) in index */
+  public static final String PARAM_INCLUDE_INTERNAL_AUS =
+    PREFIX + "includeInternalAus";
+
+  public static final boolean DEFAULT_INCLUDE_INTERNAL_AUS = false;
+
+  private static MissingFileAction missingFileAction =
+    DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
   private static List excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List includePlugins = DEFAULT_INCLUDE_PLUGINS;
+  private static boolean includeInternalAus = DEFAULT_INCLUDE_INTERNAL_AUS;
 
   private String action;
   private String verbose;
@@ -112,6 +128,7 @@ public class ServeContent extends LockssServlet {
   private String spage;
   private String ctype;
   private CachedUrl cu;
+  private boolean enabledPluginsOnly;
 
   private PluginManager pluginMgr;
 
@@ -144,12 +161,16 @@ public class ServeContent extends LockssServlet {
 			Configuration oldConfig,
 			Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
-      missingFileAction = config.getInt(PARAM_MISSING_FILE_ACTION,
-					DEFAULT_MISSING_FILE_ACTION);
+      missingFileAction =
+	(MissingFileAction)config.getEnum(MissingFileAction.class,
+					  PARAM_MISSING_FILE_ACTION,
+					  DEFAULT_MISSING_FILE_ACTION);
       excludePlugins = config.getList(PARAM_EXCLUDE_PLUGINS,
 				      DEFAULT_EXCLUDE_PLUGINS);
       includePlugins = config.getList(PARAM_INCLUDE_PLUGINS,
 				      DEFAULT_INCLUDE_PLUGINS);
+      includeInternalAus = config.getBoolean(PARAM_INCLUDE_INTERNAL_AUS,
+					     DEFAULT_INCLUDE_INTERNAL_AUS);
       absoluteLinks = config.getBoolean(PARAM_ABSOLUTE_LINKS,
 					DEFAULT_ABSOLUTE_LINKS);
     }
@@ -184,6 +205,9 @@ public class ServeContent extends LockssServlet {
       displayNotStarted();
       return;
     }
+    enabledPluginsOnly =
+      !"no".equalsIgnoreCase(req.getParameter("filterPlugins"));
+
     verbose = getParameter("verbose");
     url = getParameter("url");
     if (!StringUtil.isNullString(url)) {
@@ -328,11 +352,31 @@ public class ServeContent extends LockssServlet {
       throws IOException {
     String err = "URL " + missingUrl + " not found";
     switch (missingFileAction) {
-    case MISSING_FILE_ACTION_404:
+    case Error_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-		     missingUrl + "  not found on this LOCKSS box");
+		     missingUrl + " is not preserved on this LOCKSS box");
       break;
-    case MISSING_FILE_ACTION_FORWARD_REQUEST:
+    case HostAuIndex:
+      Collection candidateAus = pluginMgr.getCandidateAus(missingUrl);
+      if (candidateAus != null && !candidateAus.isEmpty()) {
+	displayIndexPage(candidateAus,
+			 HttpResponse.__404_Not_Found,
+			 "Requested URL ( " + missingUrl
+			 + " ) is not preserved on this LOCKSS box.  "
+			 + "Possibly related content may be found "
+			 + "in the following Archival Units");
+      } else {
+	resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+		       missingUrl + " is not preserved on this LOCKSS box");
+      }
+      break;
+    case AuIndex:
+      displayIndexPage(pluginMgr.getAllAus(),
+		       HttpResponse.__404_Not_Found,
+		       "Requested URL ( " + missingUrl
+		       + " ) is not preserved on this LOCKSS box.");
+      break;
+    case ForwardRequest:
       // Easiest way to do this is probably to return without handling the
       // request and add a proxy handler to the context.
       resp.sendError(HttpServletResponse.SC_NOT_FOUND, err); // placeholder
@@ -352,32 +396,90 @@ public class ServeContent extends LockssServlet {
   }
 
   void displayIndexPage() throws IOException {
-    // Filter AUs by included or excluded plugin list
-    List<ArchivalUnit> auList = new ArrayList();
-    for (ArchivalUnit au : pluginMgr.getAllAus()) {
-      if (isIncludedAu(au)) {
-	auList.add(au);
-      }
-    }
-    Collections.sort(auList, new AuOrderComparator());
-
-    Page page = newPage();
-
-    // Layout manifest index w/ URLs pointing to this servlet
-    Element ele =
-      ServletUtil.manifestIndex(pluginMgr,
-				auList,
-				null,
-				new ServletUtil.ManifestUrlTransform() {
-				  public Object transformUrl(String url) {
-				    return srvLink(myServletDescr(),
-						   url,
-						   "url=" + url);
-				  }},
-				true);
-    page.add(ele);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    displayIndexPage(pluginMgr.getAllAus(), -1, null);
   }
 
+  void displayIndexPage(Collection<ArchivalUnit> auList,
+			int result,
+			String header)
+    throws IOException {
+    Predicate pred;
+    boolean offerUnfilteredList = false;
+    if (enabledPluginsOnly) {
+      pred = PredicateUtils.andPredicate(enabledAusPred, allAusPred);
+      offerUnfilteredList = areAnyExcluded(auList, enabledAusPred);
+    } else {
+      pred = allAusPred;
+    }
+    Page page = newPage();
+
+    if (areAllExcluded(auList, pred) && !offerUnfilteredList) {
+      ServletUtil.layoutExplanationBlock(page,
+					 "No content has been preserved on this LOCKSS box");
+    } else {
+      // Layout manifest index w/ URLs pointing to this servlet
+      Element ele =
+	ServletUtil.manifestIndex(pluginMgr,
+				  auList,
+				  pred,
+				  header,
+				  new ServletUtil.ManifestUrlTransform() {
+				    public Object transformUrl(String url) {
+				      return srvLink(myServletDescr(),
+						     url,
+						     "url=" + url);
+				    }},
+				  true);
+      page.add(ele);
+      if (offerUnfilteredList) {
+	Block centeredBlock = new Block(Block.Center);
+	centeredBlock.add("<br>");
+	centeredBlock.add("Other possibly relevant content has not yet been "
+			  + "certified for use with ServeContent and may not "
+			  + "display correctly.  Click ");
+	Properties args = getParamsAsProps();
+	args.put("filterPlugins", "no");
+	centeredBlock.add(srvLink(myServletDescr(), "here", args));
+	centeredBlock.add(" to see the complete list.");
+	page.add(centeredBlock);
+      }
+    }
+    layoutFooter(page);
+    ServletUtil.writePage(resp, page);
+    if (result > 0) {
+      resp.setStatus(result);
+    }
+  }
+
+  boolean areAnyExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
+    for (ArchivalUnit au : auList) {
+      if (!pred.evaluate(au)) {
+	return true;
+      }
+    }
+    return false;
+  }
+
+  boolean areAllExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
+    for (ArchivalUnit au : auList) {
+      if (pred.evaluate(au)) {
+	return false;
+      }
+    }
+    return true;
+  }
+
+  // true of non-registry AUs, or all AUs if includeInternalAus
+  Predicate allAusPred = new Predicate() {
+      public boolean evaluate(Object obj) {
+	return includeInternalAus
+	  || !pluginMgr.isInternalAu((ArchivalUnit)obj);
+      }};
+
+  // true of AUs belonging to plugins included by includePlugins and
+  // excludePlugins
+  Predicate enabledAusPred = new Predicate() {
+      public boolean evaluate(Object obj) {
+	return isIncludedAu((ArchivalUnit)obj);
+      }};
 }

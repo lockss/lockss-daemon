@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.60 2009-06-15 07:52:44 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.61 2009-07-22 06:41:08 tlipkis Exp $
  */
 
 /*
@@ -1669,13 +1669,15 @@ public class ServletUtil {
   }
 
   /** Return an index of manifest pages for the given AUs. */
-  public static Element manifestIndex(LockssDaemon daemon, Collection aus) {
+  public static Element manifestIndex(LockssDaemon daemon,
+				      Collection<ArchivalUnit> aus) {
     return manifestIndex(daemon.getPluginManager(), aus, null);
   }
 
   /** Return an index of manifest pages for the given AUs. */
   public static Element manifestIndex(LockssDaemon daemon,
-				      Collection aus, String header) {
+				      Collection<ArchivalUnit> aus,
+				      String header) {
     return manifestIndex(daemon.getPluginManager(), aus, header);
   }
 
@@ -1685,7 +1687,8 @@ public class ServletUtil {
 
   /** Return an index of manifest pages for the given AUs. */
   public static Element manifestIndex(PluginManager pluginMgr,
-				      Collection aus, String header) {
+				      Collection<ArchivalUnit> aus,
+				      String header) {
     return manifestIndex(pluginMgr,
 			 aus,
 			 header,
@@ -1697,7 +1700,21 @@ public class ServletUtil {
   }
 
   public static Element manifestIndex(PluginManager pluginMgr,
-				      Collection aus, String header,
+				      Collection<ArchivalUnit> aus,
+				      String header,
+				      ManifestUrlTransform xform,
+				      boolean checkCollected) {
+    return manifestIndex(pluginMgr,
+			 aus, null,
+			 header,
+			 xform,
+			 checkCollected);
+  }
+
+  public static Element manifestIndex(PluginManager pluginMgr,
+				      Collection<ArchivalUnit> aus,
+				      Predicate pred,
+				      String header,
 				      ManifestUrlTransform xform,
 				      boolean checkCollected) {
     Table tbl = new Table(AUSUMMARY_TABLE_BORDER,
@@ -1713,12 +1730,14 @@ public class ServletUtil {
       tbl.add(ServletUtil.notStartedWarning());
     }
     tbl.newRow();
-    tbl.addHeading("Archival Unit");
+    tbl.addHeading("Archival Unit", "align=left");
     tbl.newCell("width=8");
     tbl.add("&nbsp;");
-    tbl.addHeading("Manifest");
-    for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
+    tbl.addHeading("Manifest", "align=left");
+    for (ArchivalUnit au : aus) {
+      if (pred != null && !pred.evaluate(au)) {
+	continue;
+      }
       CrawlSpec spec = au.getCrawlSpec();
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT);
