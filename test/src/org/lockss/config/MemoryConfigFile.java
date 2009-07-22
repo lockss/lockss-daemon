@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryConfigFile.java,v 1.2 2007-07-18 07:12:56 tlipkis Exp $
+ * $Id: MemoryConfigFile.java,v 1.3 2009-07-22 06:36:28 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class MemoryConfigFile implements ConfigFile {
   private ConfigurationPropTreeImpl m_config;
   private int m_generation = 0;
   private LockssUrlConnectionPool connPool;
+  protected ConfigManager.KeyPredicate keyPred;
 
   /**
    * Create a ConfigFile for the URL
@@ -103,6 +104,10 @@ public class MemoryConfigFile implements ConfigFile {
 
   public long getLastAttemptTime() {
     throw new UnsupportedOperationException();
+  }
+
+  public void setKeyPredicate(ConfigManager.KeyPredicate pred) {
+    keyPred = pred;
   }
 
   public Generation getGeneration() throws IOException {

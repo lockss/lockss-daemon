@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.12 2007-07-18 07:12:56 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.13 2009-07-22 06:36:28 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,8 @@ public interface ConfigFile {
   public String getLastModified();
 
   public long getLastAttemptTime();
+
+  public void setKeyPredicate(ConfigManager.KeyPredicate pred);
 
   public Generation getGeneration() throws IOException;
 

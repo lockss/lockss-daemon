@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.7 2007-07-31 06:31:28 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.8 2009-07-22 06:36:28 tlipkis Exp $
  */
 
 /*
@@ -41,9 +41,10 @@ import junit.framework.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import static org.lockss.config.ConfigManager.KeyPredicate;
 
 /**
- * Abstract superclass for tests of ConfigFile variants, which follow this
+ * Abstract superclass for tests of ConfigFile variants, nested in this
  * class
  */
 public abstract class TestConfigFile extends LockssTestCase {
@@ -109,7 +110,7 @@ public abstract class TestConfigFile extends LockssTestCase {
     return isXml ? ".xml" : ".txt";
   }
 
-  // Parameterized tests - invoked either from tests in the class or
+  // Parameterized tests - invoked either from tests in this class or
   // subclasses
 
   /** Load file, check status, load again, check no change, force change,
@@ -174,6 +175,62 @@ public abstract class TestConfigFile extends LockssTestCase {
   public void testIllContent(String content, boolean xml, String re)
       throws IOException {
     testCantRead(makeConfigFile(content, xml), re);
+  }
+
+  public void testKeyPredicate() throws IOException {
+    KeyPredicate keyPred = new KeyPredicate() {
+	public boolean evaluate(Object obj) {
+ 	  return ((String)obj).indexOf("bad") < 0;
+	}
+	public boolean failOnIllegalKey() {
+	  return false;
+	}};
+
+    String str = "foo.bar=one\nfoo.bad=two\nfoo.foo=four\n";
+
+    ConfigFile cf = makeConfigFile(str, false);
+    cf.setKeyPredicate(keyPred);
+    assertFalse(cf.isLoaded());
+
+    Configuration config = cf.getConfiguration();
+    assertEquals("one", config.get("foo.bar"));
+    assertEquals("four", config.get("foo.foo"));
+    assertNull(config.get("foo.bad"));
+    assertFalse(config.containsKey("foo.bad"));
+  }
+
+  // Matching key should throw IOException
+  public void testKeyPredicateThrow() throws IOException {
+    KeyPredicate keyPred = new KeyPredicate() {
+	public boolean evaluate(Object obj) {
+ 	  return ((String)obj).indexOf("bad") < 0;
+	}
+	public boolean failOnIllegalKey() {
+	  return true;
+	}};
+
+    String str = "foo.bar=one\nfoo.bad=two\nfoo.foo=four\n";
+
+    ConfigFile cf = makeConfigFile(str, false);
+    cf.setKeyPredicate(keyPred);
+    assertFalse(cf.isLoaded());
+    try {
+      Configuration config = cf.getConfiguration();
+      fail("Loading config file with illegal key should throw");
+    } catch (IOException e) {
+    }
+
+    // this one doesn't match, shouldn't throw
+    String str2 = "foo.bar=one\nfoo.dab=two\nfoo.foo=four\n";
+
+    ConfigFile cf2 = makeConfigFile(str2, false);
+    cf2.setKeyPredicate(keyPred);
+    assertFalse(cf2.isLoaded());
+
+    Configuration config2 = cf2.getConfiguration();
+    assertEquals("one", config2.get("foo.bar"));
+    assertEquals("four", config2.get("foo.foo"));
+    assertEquals("two", config2.get("foo.dab"));
   }
 
   // Test cases.  These will be run once for each ConfigFile variant
