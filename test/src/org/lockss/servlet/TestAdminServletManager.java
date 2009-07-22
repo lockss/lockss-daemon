@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.3 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: TestAdminServletManager.java,v 1.4 2009-07-22 06:37:20 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class TestAdminServletManager extends LockssTestCase {
     LINK_ISOS,
     SERVLET_RAISE_ALERT,
     SERVLET_EDIT_ACCOUNTS,
+    SERVLET_EXPERT_CONFIG,
   };
 
   ServletDescr auAdminDescrs[] = {

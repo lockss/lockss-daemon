@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.69 2009-06-01 07:56:27 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.70 2009-07-22 06:37:20 tlipkis Exp $
  */
 
 /*
@@ -518,9 +518,8 @@ public class RemoteApi
 		    machineName);
 
       // add all the cache config files
-      for (Iterator iter = configMgr.getCacheConfigFiles().iterator();
-	   iter.hasNext(); ) {
-	File cfgfile = (File)iter.next();
+      for (ConfigManager.LocalFileDescr lfd : configMgr.getLocalFileDescrs()) {
+	File cfgfile = lfd.getFile();
 	if (cfgfile.getName().equals(ConfigManager.CONFIG_FILE_AU_CONFIG)) {
 	  addCfgFileToZip(zip, getAuConfigBackupStreamV1(machineName),
 			  ConfigManager.CONFIG_FILE_AU_CONFIG);

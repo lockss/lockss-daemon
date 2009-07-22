@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.66 2009-06-19 08:28:12 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.67 2009-07-22 06:37:20 tlipkis Exp $
  */
 
 /*
@@ -37,8 +37,8 @@ import java.util.*;
 import java.net.URL;
 
 import org.apache.commons.collections.Predicate;
-import org.apache.commons.collections.PredicateUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.account.*;
 import org.lockss.clockss.*;
@@ -83,6 +83,20 @@ public class ConfigManager implements LockssManager {
   /** Config param written to local config files to indicate file version */
   static final String PARAM_CONFIG_FILE_VERSION =
     MYPREFIX + "fileVersion.<filename>";
+
+  /** List of URLs of auxilliary config files */
+  public static final String PARAM_EXPERT_ALLOW = MYPREFIX + "expert.allow";
+  public static final List DEFAULT_EXPERT_ALLOW = null;
+  public static final String PARAM_EXPERT_DENY = MYPREFIX + "expert.deny";
+  static String ODLD = "^org\\.lockss\\.";
+  public static final List DEFAULT_EXPERT_DENY =
+    ListUtil.list("[pP]assword$",
+		  "password",
+		  ODLD +"platform\\.",
+		  ODLD +"exitOnce$",
+		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY),
+		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW)
+		  );
 
   /** Temporary param to enable new scheduler */
   public static final String PARAM_NEW_SCHEDULER =
@@ -168,6 +182,7 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_ACCESS_GROUPS =
     "access_groups_config.txt"; // not yet in use
   public static final String CONFIG_FILE_CRAWL_PROXY = "crawl_proxy.txt";
+  public static final String CONFIG_FILE_EXPERT = "expert_config.txt";
 
   /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
   public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt";
@@ -175,18 +190,157 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
 
+  /** Describes a config file stored on the local disk, normally maintained
+   * by the daemon. See writeCacheConfigFile(), et al. */
+  public static class LocalFileDescr {
+    String name;
+    File file;
+    KeyPredicate keyPred;
+    Predicate includePred;
+
+    LocalFileDescr(String name) {
+      this.name = name;
+    }
+
+    String getName() {
+      return name;
+    }
+
+    public File getFile() {
+      return file;
+    }
+
+    public void setFile(File file) {
+      this.file = file;
+    }
+
+    KeyPredicate getKeyPredicate() {
+      return keyPred;
+    }
+
+    LocalFileDescr setKeyPredicate(KeyPredicate keyPred) {
+      this.keyPred = keyPred;
+      return this;
+    }
+
+    Predicate getIncludePredicate() {
+      return includePred;
+    }
+
+    LocalFileDescr setIncludePredicate(Predicate pred) {
+      this.includePred = pred;
+      return this;
+    }
+  }
+
+  /** KeyPredicate determines legal keys, and whether illegal keys cause
+   * file to fail or are just ignored */
+  public interface KeyPredicate extends Predicate {
+    public boolean failOnIllegalKey();
+  }
+
+  /** Always true predicate */
+  KeyPredicate trueKeyPredicate = new KeyPredicate() {
+      public boolean evaluate(Object obj) {
+	return true;
+      }
+      public boolean failOnIllegalKey() {
+	return false;
+      }
+      public String toString() {
+	return "trueKeyPredicate";
+      }};
+
+
+  /** Allow only params below o.l.title and o.l.titleSet .  For use with
+   * title DB files */
+  static final String titleDot = PARAM_TITLE_DB + ".";
+  static final String titleSetDot = PluginManager.PARAM_TITLE_SETS + ".";
+
+  KeyPredicate titleDbOnlyPred = new KeyPredicate() {
+      public boolean evaluate(Object obj) {
+	if (obj instanceof String) {
+	  return ((String)obj).startsWith(titleDot) ||
+	    ((String)obj).startsWith(titleSetDot);
+	}
+	return false;
+      }
+      public boolean failOnIllegalKey() {
+	return true;
+      }
+      public String toString() {
+	return "titleDbOnlyPred";
+      }};
+
+  /** Disallow keys prohibited in expert config file, defined by {@LINK
+   * PARAM_EXPERT_ALLOW} and {@LINK PARAM_EXPERT_DENY} */
+  public KeyPredicate expertConfigKeyPredicate = new KeyPredicate() {
+      public boolean evaluate(Object obj) {
+	if (obj instanceof String) {
+	  return isLegalExpertConfigKey((String)obj);
+	}
+	return false;
+      }
+      public boolean failOnIllegalKey() {
+	return false;
+      }
+      public String toString() {
+	return "expertConfigKeyPredicate";
+      }};
+
+  /** Argless predicate that's true if expert config file should be
+   * loaded */
+  Predicate expertConfigIncludePredicate = new Predicate() {
+      public boolean evaluate(Object obj) {
+	return enableExpertConfig;
+      }
+      public String toString() {
+	return "expertConfigIncludePredicate";
+      }};
+
+  public boolean isExpertConfigEnabled() {
+    return enableExpertConfig;
+  }
+
+  /** If org.lockss.config.expert.allow is set to a list, only keys
+   * matching a pattern in the list are allowed.  Otherwise, if
+   * org.lockss.config.expert.deny is set to a list, only keys not matching
+   * a pattern in the list are allowed.  Otherwise, all keys are allowed */
+  public boolean isLegalExpertConfigKey(String key) {
+    if (expertConfigAllowPats != null) {
+      for (Pattern pat : expertConfigAllowPats) {
+	if (RegexpUtil.getMatcher().contains(key, pat)) {
+	  return true;
+	}
+	return false;
+      }
+    }
+    if (expertConfigDenyPats != null) {
+      for (Pattern pat : expertConfigDenyPats) {
+	if (RegexpUtil.getMatcher().contains(key, pat)) {
+	  return false;
+	}
+	return true;
+      }
+    }
+    return true;
+  }
+
   /** array of local cache config file names */
-  static String cacheConfigFiles[] = {
-    CONFIG_FILE_UI_IP_ACCESS,
-    CONFIG_FILE_PROXY_IP_ACCESS,
-    CONFIG_FILE_PLUGIN_CONFIG,
-    CONFIG_FILE_AU_CONFIG,
-    CONFIG_FILE_ICP_SERVER,		// obsolescent
-    CONFIG_FILE_AUDIT_PROXY,		// obsolescent
-    CONFIG_FILE_CONTENT_SERVERS,	// must be after obsolescent icp
-					// server and audit proxy files
-    CONFIG_FILE_ACCESS_GROUPS,		// not yet in use
-    CONFIG_FILE_CRAWL_PROXY,
+  LocalFileDescr cacheConfigFiles[] = {
+    new LocalFileDescr(CONFIG_FILE_UI_IP_ACCESS),
+    new LocalFileDescr(CONFIG_FILE_PROXY_IP_ACCESS),
+    new LocalFileDescr(CONFIG_FILE_PLUGIN_CONFIG),
+    new LocalFileDescr(CONFIG_FILE_AU_CONFIG),
+    new LocalFileDescr(CONFIG_FILE_ICP_SERVER), // obsolescent
+    new LocalFileDescr(CONFIG_FILE_AUDIT_PROXY),	// obsolescent
+    // must follow obsolescent icp server and audit proxy files
+    new LocalFileDescr(CONFIG_FILE_CONTENT_SERVERS),
+    new LocalFileDescr(CONFIG_FILE_ACCESS_GROUPS), // not yet in use
+    new LocalFileDescr(CONFIG_FILE_CRAWL_PROXY),
+    new LocalFileDescr(CONFIG_FILE_EXPERT)
+    .setKeyPredicate(expertConfigKeyPredicate)
+    .setIncludePredicate(expertConfigIncludePredicate),
   };
 
   // MUST pass in explicit log level to avoid recursive call back to
@@ -235,6 +389,10 @@ public class ConfigManager implements LockssManager {
 
   private long reloadInterval = 10 * Constants.MINUTE;
   private long sendVersionEvery = DEFAULT_SEND_VERSION_EVERY;
+
+  private List<Pattern> expertConfigAllowPats;
+  private List<Pattern> expertConfigDenyPats;
+  private boolean enableExpertConfig;
 
   public ConfigManager() {
     this(null, null);
@@ -548,22 +706,11 @@ public class ConfigManager implements LockssManager {
 
   ConfigFile.Generation getConfigGeneration(String url, boolean required,
 					    boolean reload, String msg,
-					    Predicate keyPredicate)
+					    KeyPredicate keyPred)
       throws IOException {
     log.debug2("Loading " + msg + " from: " + url);
     return getConfigGeneration(configCache.find(url),
-			       required, reload, msg, keyPredicate);
-  }
-
-  void checkConfig(ConfigFile.Generation gen, Predicate keyPredicate)
-      throws IOException {
-    for (String key : gen.getConfig().keySet()) {
-      if (!keyPredicate.evaluate(key)) {
-	String msg = "Illegal config key: " + key + " in " + gen.getUrl();
-	log.error(msg);
-	throw new IOException(msg);
-      }
-    }
+			       required, reload, msg, keyPred);
   }
 
   ConfigFile.Generation getConfigGeneration(ConfigFile cf, boolean required,
@@ -574,7 +721,7 @@ public class ConfigManager implements LockssManager {
 
   ConfigFile.Generation getConfigGeneration(ConfigFile cf, boolean required,
 					    boolean reload, String msg,
-					    Predicate keyPredicate)
+					    KeyPredicate keyPred)
       throws IOException {
     try {
       cf.setConnectionPool(connPool);
@@ -586,10 +733,10 @@ public class ConfigManager implements LockssManager {
       if (reload) {
 	cf.setNeedsReload();
       }
-      ConfigFile.Generation gen = cf.getGeneration();
-      if (keyPredicate != null) {
-	checkConfig(gen, keyPredicate);
+      if (keyPred != null) {
+	cf.setKeyPredicate(keyPred);
       }
+      ConfigFile.Generation gen = cf.getGeneration();
       return gen;
     } catch (IOException e) {
       String url = cf.getFileUrl();
@@ -613,6 +760,13 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  public Configuration loadConfigFromFile(String url)
+      throws IOException {
+    ConfigFile cf = new FileConfigFile(url);
+    ConfigFile.Generation gen = cf.getGeneration();
+    return gen.getConfig();
+  }
+
   boolean isChanged(ConfigFile.Generation gen) {
     boolean val = (gen.getGeneration() != getGeneration(gen.getUrl()));
     return (gen.getGeneration() != getGeneration(gen.getUrl()));
@@ -632,25 +786,36 @@ public class ConfigManager implements LockssManager {
 			    boolean reload, String msg)
       throws IOException {
     return getConfigGenerations(urls, required, reload, msg,
-				PredicateUtils.truePredicate());
+				trueKeyPredicate);
   }
 
   List getConfigGenerations(Collection urls, boolean required,
 			    boolean reload, String msg,
-			    Predicate keyPredicate)
+			    KeyPredicate keyPred)
       throws IOException {
 
     if (urls == null) return Collections.EMPTY_LIST;
     List res = new ArrayList(urls.size());
-    for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
-      Object o = iter.next();
+    for (Object o : urls) {
       ConfigFile.Generation gen;
       if (o instanceof ConfigFile) {
 	gen = getConfigGeneration((ConfigFile)o, required, reload, msg,
-				  keyPredicate);
+				  keyPred);
+      } else if (o instanceof LocalFileDescr) {
+	LocalFileDescr lfd = (LocalFileDescr)o;
+	String filename = lfd.getFile().toString();
+	Predicate includePred = lfd.getIncludePredicate();
+	if (includePred != null && !includePred.evaluate(filename)) {
+	  continue;
+	}
+	KeyPredicate pred = keyPred;
+	if (lfd.getKeyPredicate() != null) {
+	  pred = lfd.getKeyPredicate();
+	}
+	gen = getConfigGeneration(filename, required, reload, msg, pred);
       } else {
 	String url = o.toString();
-	gen = getConfigGeneration(url, required, reload, msg, keyPredicate);
+	gen = getConfigGeneration(url, required, reload, msg, keyPred);
       }
       if (gen != null) {
 	res.add(gen);
@@ -658,21 +823,6 @@ public class ConfigManager implements LockssManager {
     }
     return res;
   }
-
-  // Restrict title DB files to set props only below o.l.title and
-  // o.l.titleSet
-
-  static final String titleDot = PARAM_TITLE_DB + ".";
-  static final String titleSetDot = PluginManager.PARAM_TITLE_SETS + ".";
-
-  Predicate titleDbOnlyPred = new Predicate() {
-      public boolean evaluate(Object obj) {
-	if (obj instanceof String) {
-	  return ((String)obj).startsWith(titleDot) ||
-	    ((String)obj).startsWith(titleSetDot);
-	}
-	return false;
-      }};
 
   List getStandardConfigGenerations(List urls, boolean reload)
       throws IOException {
@@ -696,7 +846,7 @@ public class ConfigManager implements LockssManager {
   }
 
   List getCacheConfigGenerations(boolean reload) throws IOException {
-    List localGens = getConfigGenerations(getCacheConfigFiles(), false, reload,
+    List localGens = getConfigGenerations(getLocalFileDescrs(), false, reload,
 					  "cache config");
     if (!localGens.isEmpty()) {
       hasLocalCacheConfig = true;
@@ -834,7 +984,7 @@ public class ConfigManager implements LockssManager {
       if (o instanceof ConfigFile) {
 	cf = (ConfigFile)o;
       } else {
-	cf = configCache.find((String)o);
+	cf = configCache.find(o.toString());
       }
       if (cf.isPlatformFile()) {
 	try {
@@ -1226,6 +1376,20 @@ public class ConfigManager implements LockssManager {
     return Boolean.getBoolean("org.lockss.unitTesting");
   }
 
+  List<Pattern> compilePatternList(List<String> patterns)
+      throws MalformedPatternException {
+    if (patterns == null) {
+      return null;
+    }
+    int flags = Perl5Compiler.READ_ONLY_MASK;
+    List<Pattern> res = new ArrayList<Pattern>(patterns.size());
+
+    for (String pat : patterns) {
+      res.add(RegexpUtil.getCompiler().compile(pat, flags));
+    }
+    return res;
+  }
+
   private String getFromGenerations(List configGenerations, String param,
 				    String dfault) {
     for (Iterator iter = configGenerations.iterator(); iter.hasNext(); ) {
@@ -1234,6 +1398,20 @@ public class ConfigManager implements LockssManager {
 	String val = gen.getConfig().get(param);
 	if (val != null) {
 	  return val;
+	}
+      }
+    }
+    return dfault;
+  }
+
+  private List getListFromGenerations(List configGenerations, String param,
+				      List dfault) {
+    for (Iterator iter = configGenerations.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+      if (gen != null) {
+	Configuration config = gen.getConfig();
+	if (config.containsKey(param)) {
+	  return config.getList(param);
 	}
       }
     }
@@ -1269,6 +1447,15 @@ public class ConfigManager implements LockssManager {
   }
 
   private void initCacheConfig(List configGenerations) {
+    if (!cacheConfigInited || isChanged(configGenerations)) {
+      List<String> expertAllow =
+	getListFromGenerations(configGenerations,
+			       PARAM_EXPERT_ALLOW, DEFAULT_EXPERT_ALLOW);
+      List<String> expertDeny =
+	getListFromGenerations(configGenerations,
+			       PARAM_EXPERT_DENY, DEFAULT_EXPERT_DENY);
+      processExpertAllowDeny(expertAllow, expertDeny);
+    }
     if (cacheConfigInited) return;
     String dspace = getFromGenerations(configGenerations,
 				       PARAM_PLATFORM_DISK_SPACE_LIST,
@@ -1280,11 +1467,30 @@ public class ConfigManager implements LockssManager {
   }
 
   private void initCacheConfig(Configuration newConfig) {
+    List<String> expertAllow =
+      newConfig.getList(PARAM_EXPERT_ALLOW, DEFAULT_EXPERT_ALLOW);
+    List<String> expertDeny =
+      newConfig.getList(PARAM_EXPERT_DENY, DEFAULT_EXPERT_DENY);
+    processExpertAllowDeny(expertAllow, expertDeny);
+
     if (cacheConfigInited) return;
     String dspace = newConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
     String relConfigPath = newConfig.get(PARAM_CONFIG_PATH,
 					 DEFAULT_CONFIG_PATH);
     initCacheConfig(dspace, relConfigPath);
+  }
+
+  private void processExpertAllowDeny(List<String> expertAllow,
+				      List<String> expertDeny) {
+    log.debug("processExpertAllowDeny("+expertAllow+", "+expertDeny+")");
+    try {
+      expertConfigAllowPats = compilePatternList(expertAllow);
+      expertConfigDenyPats =  compilePatternList(expertDeny);
+      enableExpertConfig = true;
+    } catch (MalformedPatternException e) {
+      log.error("Expert config allow/deny error", e);
+      enableExpertConfig = false;
+    }
   }
 
   /**
@@ -1308,12 +1514,12 @@ public class ConfigManager implements LockssManager {
   }
 
   /** Return the list of cache config file names */
-  public List getCacheConfigFiles() {
+  public List<LocalFileDescr> getLocalFileDescrs() {
     if (cacheConfigFileList == null) {
-      List res = new ArrayList();
-      for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
-	File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
-	res.add(cfile);
+      List<LocalFileDescr> res = new ArrayList<LocalFileDescr>();
+      for (LocalFileDescr ccf: cacheConfigFiles) {
+ 	ccf.setFile(new File(cacheConfigDir, ccf.getName()));
+	res.add(ccf);
       }
       cacheConfigFileList = res;
     }
@@ -1432,7 +1638,6 @@ public class ConfigManager implements LockssManager {
 		  cacheConfigFileName + ", but no cache config dir exists");
       throw new RuntimeException("No cache config dir");
     }
-    File cfile = new File(cacheConfigDir, cacheConfigFileName);
     // Write to a temp file and rename
     File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
     OutputStream os = new FileOutputStream(tempfile);
@@ -1448,6 +1653,7 @@ public class ConfigManager implements LockssManager {
     tmpConfig.seal();
     tmpConfig.store(os, header);
     os.close();
+    File cfile = new File(cacheConfigDir, cacheConfigFileName);
     if (!PlatformUtil.updateAtomically(tempfile, cfile)) {
       throw new RuntimeException("Couldn't rename temp file: " +
 				 tempfile + " to: " + cfile);
@@ -1459,6 +1665,36 @@ public class ConfigManager implements LockssManager {
     } else {
       log.warning("Not a FileConfigFile: " + cf);
     }
+    if (!suppressReload) {
+      requestReload();
+    }
+  }
+
+  /** Write the named local cache config file into the previously determined
+   * cache config directory.
+   * @param config Configuration with properties to write
+   * @param cacheConfigFileName filename, no path
+   * @param header file header string
+   */
+  public synchronized void writeCacheConfigFile(String text,
+						String cacheConfigFileName,
+						boolean suppressReload)
+      throws IOException {
+    if (cacheConfigDir == null) {
+      log.warning("Attempting to write cache config file: " +
+		  cacheConfigFileName + ", but no cache config dir exists");
+      throw new RuntimeException("No cache config dir");
+    }
+    // Write to a temp file and rename
+    File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
+    StringUtil.toFile(tempfile, text);
+    File cfile = new File(cacheConfigDir, cacheConfigFileName);
+    if (!PlatformUtil.updateAtomically(tempfile, cfile)) {
+      throw new RuntimeException("Couldn't rename temp file: " +
+				 tempfile + " to: " + cfile);
+    }
+    log.debug2("Wrote cache config file: " + cfile);
+    ConfigFile cf = configCache.get(cfile.toString());
     if (!suppressReload) {
       requestReload();
     }

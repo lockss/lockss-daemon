@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.11 2009-07-13 06:52:06 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.12 2009-07-22 06:37:20 tlipkis Exp $
  */
 
 /*
@@ -277,6 +277,13 @@ public class AdminServletManager extends BaseServletManager {
                      "Info for configuring browsers and proxies"
                      + "<br>"
                      + "to access preserved content on this LOCKSS box");
+  protected static final ServletDescr SERVLET_EXPERT_CONFIG =
+    new ServletDescr("ExpertConfig",
+		     ExpertConfig.class,
+                     "Expert Config",
+                     (ServletDescr.IN_NAV
+		      | ServletDescr.NEED_ROLE_USER_ADMIN),
+                     "Allows arbitrary local configuration");
   protected static final ServletDescr SERVLET_PLUGIN_CONFIG =
     new ServletDescr("PluginConfig",
 		     PluginConfig.class,
@@ -411,6 +418,7 @@ public class AdminServletManager extends BaseServletManager {
      SERVLET_SERVE_CONTENT,
      SERVLET_LIST_OBJECTS,
      SERVLET_DEBUG_PANEL,
+     SERVLET_EXPERT_CONFIG,
      LINK_LOGS,
      LINK_ISOS,
      SERVLET_THREAD_DUMP,

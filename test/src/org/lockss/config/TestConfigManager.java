@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.31 2008-10-25 01:19:19 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.32 2009-07-22 06:37:20 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 
 import org.lockss.test.*;
@@ -175,6 +176,94 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(SetUtil.set("prop4", "prop2"), cbDiffs.getDifferenceSet());
     log.debug(ConfigManager.getCurrentConfig().toString());
 
+  }
+
+  public void testListDiffs() throws IOException {
+    String xml1 = "<lockss-config>\n" +
+      "<property name=\"org.lockss\">\n" +
+      " <property name=\"xxx\" value=\"two;four;six\" />" +
+      " <property name=\"foo\">" +
+      "  <list>" +
+      "   <value>fore</value>" +
+      "   <value>17</value>" +
+      "  </list>" +
+      " </property>" +
+      "</property>" +
+      "</lockss-config>";
+
+    String xml2 = "<lockss-config>\n" +
+      "<property name=\"org.lockss\">\n" +
+      " <property name=\"xxx\" value=\"two;four;six\" />" +
+      " <property name=\"foo\">" +
+      "  <list>" +
+      "   <value>fore</value>" +
+      "   <value>17</value>" +
+      "  </list>" +
+      " </property>" +
+      " <property name=\"extra\" value=\"2\" />" +
+      "</property>" +
+      "</lockss-config>";
+
+    String xml3 = "<lockss-config>\n" +
+      "<property name=\"org.lockss\">\n" +
+      " <property name=\"xxx\" value=\"two;six;four\" />" +
+      " <property name=\"foo\">" +
+      "  <list>" +
+      "   <value>fore</value>" +
+      "   <value>18</value>" +
+      "  </list>" +
+      " </property>" +
+      " <property name=\"extra\" value=\"2\" />" +
+      "</property>" +
+      "</lockss-config>";
+
+    mgr.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
+					 Configuration.Differences diffs) {
+	  log.debug("Notify: " + diffs);
+	  cbDiffs = diffs;
+	}
+      });
+
+    String u1 = FileTestUtil.urlOfString(xml1, ".xml");
+    assertFalse(mgr.waitConfig(Deadline.EXPIRED));
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    assertTrue(mgr.waitConfig(Deadline.EXPIRED));
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals(ListUtil.list("fore", "17"), config.getList("org.lockss.foo"));
+    assertEquals(ListUtil.list("two", "four", "six"),
+		 config.getList("org.lockss.xxx"));
+    assertTrue(cbDiffs.contains("org.lockss.foo"));
+    assertTrue(cbDiffs.contains("org.lockss.xxx"));
+
+    // change file contents, ensure correct diffs
+    File file = new File(new URL(u1).getFile());
+    FileTestUtil.writeFile(file, xml2);
+    FileConfigFile cf = (FileConfigFile)mgr.getConfigCache().find(u1);
+    cf.m_lastModified = "";		// ensure file is reread
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    Configuration config2 = mgr.getCurrentConfig();
+    assertEquals(ListUtil.list("fore", "17"),
+		 config2.getList("org.lockss.foo"));
+    assertEquals(ListUtil.list("two", "four", "six"),
+		 config2.getList("org.lockss.xxx"));
+    assertFalse(cbDiffs.contains("org.lockss.foo"));
+    assertFalse(cbDiffs.contains("org.lockss.xxx"));
+    assertTrue(cbDiffs.contains("org.lockss.extra"));
+
+    // once more
+    FileTestUtil.writeFile(file, xml3);
+    cf.m_lastModified = "a";		// ensure file is reread
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    Configuration config3 = mgr.getCurrentConfig();
+    assertEquals(ListUtil.list("fore", "18"),
+		 config3.getList("org.lockss.foo"));
+    assertEquals(ListUtil.list("two", "six", "four"),
+		 config3.getList("org.lockss.xxx"));
+    assertTrue(cbDiffs.contains("org.lockss.foo"));
+    assertTrue(cbDiffs.contains("org.lockss.xxx"));
+    assertFalse(cbDiffs.contains("org.lockss.extra"));
   }
 
   public void testPlatformProps() throws Exception {
@@ -507,6 +596,117 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("12345", config2.get("foo.bar"));
   }
 
+  public void testExpertConfigFile() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File pfile = new File(tmpdir, "props.txt");
+    Properties pprops = new Properties();
+    pprops.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    PropUtil.toFile(pfile, pprops);
+
+    String relConfigPath =
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    cdir.mkdirs();
+    File efile = new File(cdir, ConfigManager.CONFIG_FILE_EXPERT);
+
+    assertTrue(cdir.exists());
+    String k1 = "org.lockss.foo";
+    String k2 = "org.lockss.user.1.password";
+    String k3 = "org.lockss.keyMgr.keystore.foo.keyPassword";
+
+    Properties eprops = new Properties();
+    eprops.put(k1, "12345");
+    eprops.put(k2, "ignore");
+    eprops.put(k3 , "ignore2");
+    PropUtil.toFile(efile, eprops);
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertNull(config.get(k1));
+    assertNull(config.get(k2));
+    assertNull(config.get(k3));
+    assertTrue(mgr.updateConfig(ListUtil.list(pfile)));
+    Configuration config2 = ConfigManager.getCurrentConfig();
+    assertEquals("12345", config2.get(k1));
+    assertNull(config2.get(k2));
+    assertNull(config2.get(k3));
+  }
+
+  public void testExpertConfigFileDeny() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File pfile = new File(tmpdir, "props.txt");
+    Properties pprops = new Properties();
+    pprops.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    pprops.put(ConfigManager.PARAM_EXPERT_DENY, "foo");
+    PropUtil.toFile(pfile, pprops);
+
+    String relConfigPath =
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    cdir.mkdirs();
+    File efile = new File(cdir, ConfigManager.CONFIG_FILE_EXPERT);
+
+    assertTrue(cdir.exists());
+    String k1 = "org.lockss.foo";
+    String k2 = "org.lockss.user.1.password";
+    String k3 = "org.lockss.keyMgr.keystore.foo.keyPassword";
+
+    Properties eprops = new Properties();
+    eprops.put(k1, "12345");
+    eprops.put(k2, "v2");
+    eprops.put(k3, "v3");
+    PropUtil.toFile(efile, eprops);
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertNull(config.get(k1));
+    assertNull(config.get(k2));
+    assertNull(config.get(k3));
+    assertTrue(mgr.updateConfig(ListUtil.list(pfile)));
+    Configuration config2 = ConfigManager.getCurrentConfig();
+    assertNull(config2.get(k1));
+    assertEquals("v2", config2.get(k2));
+    assertNull(config2.get(k3));
+  }
+
+  public void testExpertConfigFileAllow() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File pfile = new File(tmpdir, "props.txt");
+    Properties pprops = new Properties();
+    pprops.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    pprops.put(ConfigManager.PARAM_EXPERT_DENY, "");
+    pprops.put(ConfigManager.PARAM_EXPERT_ALLOW, "foo");
+    PropUtil.toFile(pfile, pprops);
+
+    String relConfigPath =
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    cdir.mkdirs();
+    File efile = new File(cdir, ConfigManager.CONFIG_FILE_EXPERT);
+
+    assertTrue(cdir.exists());
+    String k1 = "org.lockss.foo";
+    String k2 = "org.lockss.user.1.password";
+    String k3 = "org.lockss.keyMgr.keystore.foo.keyPassword";
+
+    Properties eprops = new Properties();
+    eprops.put(k1, "12345");
+    eprops.put(k2, "v2");
+    eprops.put(k3, "v3");
+    PropUtil.toFile(efile, eprops);
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertNull(config.get(k1));
+    assertNull(config.get(k2));
+    assertNull(config.get(k3));
+    assertTrue(mgr.updateConfig(ListUtil.list(pfile)));
+    Configuration config2 = ConfigManager.getCurrentConfig();
+    assertEquals("12345", config2.get(k1));
+    assertNull(config2.get(k2));
+    assertEquals("v3", config2.get(k3));
+  }
+
   public void testUpdateAuConfig() throws Exception {
     String tmpdir = getTempDir().toString();
     // establish cache config dir
@@ -568,9 +768,8 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   void updateAuLastModified(long time) {
-    for (Iterator iter = mgr.getCacheConfigFiles().iterator();
-	 iter.hasNext(); ) {
-      File file = (File)iter.next();
+    for (ConfigManager.LocalFileDescr lfd : mgr.getLocalFileDescrs()) {
+      File file = lfd.getFile();
       if (ConfigManager.CONFIG_FILE_AU_CONFIG.equals(file.getName())) {
 	file.setLastModified(time);
       }
@@ -686,9 +885,20 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.waitConfig(Deadline.EXPIRED));
   }
 
-  // Currently an illegal key prevents loading the entire file.  I'm not
-  // sure that's desirable
+  // Illegal title db key prevents loading the entire file.
   public void testLoadIllTitleDb() throws IOException {
+    String u2 = FileTestUtil.urlOfString("org.lockss.notTitleDb.foo=bar\n" +
+					 "org.lockss.title.x.foo=bar");
+    String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals(null, config.get("org.lockss.title.x.foo"));
+    assertEquals(null, config.get("org.lockss.notTitleDb.foo"));
+    assertEquals("1", config.get("a"));
+  }
+
+  // Illegal key in expert config file is ignored, rest of file loads.
+  public void testLoadIllExpert() throws IOException {
     String u2 = FileTestUtil.urlOfString("org.lockss.notTitleDb.foo=bar\n" +
 					 "org.lockss.title.x.foo=bar");
     String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
