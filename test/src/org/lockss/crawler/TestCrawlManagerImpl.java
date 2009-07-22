@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.77 2008-10-05 07:38:23 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.78 2009-07-22 06:38:04 tlipkis Exp $
  */
 
 /*
@@ -241,9 +241,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
 
-    private void setNewContentRateLimit(String rate, String startRate) {
+    private void setNewContentRateLimit(String rate, String startRate,
+					String pluginRate) {
       cprops.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, rate);
       cprops.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE, startRate);
+      cprops.put(CrawlManagerImpl.PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE,
+		 pluginRate);
       ConfigurationUtil.addFromProps(cprops);
     }
 
@@ -310,7 +313,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public void testNewContentRateLimiter() {
       TimeBase.setSimulated(100);
-      setNewContentRateLimit("4/100", "unlimited");
+      setNewContentRateLimit("4/100", "unlimited", "1/100000");
       activityRegulator.setStartAuActivity(true);
       for (int ix = 1; ix <= 4; ix++) {
 	assertDoesCrawlNew();
@@ -323,7 +326,32 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertDoesCrawlNew();
       TimeBase.step(500);
       // ensure RateLimiter changes when config does
-      setNewContentRateLimit("2/5", "unlimited");
+      setNewContentRateLimit("2/5", "unlimited", "1/100000");
+      assertDoesCrawlNew();
+      assertDoesCrawlNew();
+      assertDoesNotCrawlNew();
+      TimeBase.step(5);
+      assertDoesCrawlNew();
+      assertDoesCrawlNew();
+    }
+
+    public void testPluginRegistryNewContentRateLimiter() {
+      crawlManager.setInternalAu(true);
+      TimeBase.setSimulated(100);
+      setNewContentRateLimit("1/1000000", "unlimited", "3/100");
+      activityRegulator.setStartAuActivity(true);
+      for (int ix = 1; ix <= 3; ix++) {
+	assertDoesCrawlNew();
+	TimeBase.step(10);
+      }
+      assertDoesNotCrawlNew();
+      TimeBase.step(10);
+      assertDoesNotCrawlNew();
+      TimeBase.step(60);
+      assertDoesCrawlNew();
+      TimeBase.step(500);
+      // ensure RateLimiter changes when config does
+      setNewContentRateLimit("1/1000000", "unlimited", "2/5");
       assertDoesCrawlNew();
       assertDoesCrawlNew();
       assertDoesNotCrawlNew();
@@ -336,7 +364,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       TimeBase.setSimulated(100);
       CrawlSpec cspec2 = new SpiderCrawlSpec("two", new MockCrawlRule());
       mau.setCrawlSpec(cspec2);
-      setNewContentRateLimit("1/10", "unlimited");
+      setNewContentRateLimit("1/10", "unlimited", "1/100000");
       assertDoesCrawlNew();
       assertDoesNotCrawlNew();
       TimeBase.step(10);
@@ -377,7 +405,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public void testRateLimitedNewContentCrawlDoesntGrabLocks() {
       TimeBase.setSimulated(100);
-      setNewContentRateLimit("1/200", "unlimited");
+      setNewContentRateLimit("1/200", "unlimited", "1/100000");
       assertDoesCrawlNew();
       activityRegulator.resetLastActivityLock();
       assertDoesNotCrawlNew();
@@ -1369,6 +1397,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private List executed = new ArrayList();
     private SimpleBinarySemaphore executedSem = new SimpleBinarySemaphore();
     private OneShotSemaphore ausStartedSem;
+    private boolean isInternalAu = false;
 
     protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
       MockCrawler crawler = getCrawler(au);
@@ -1471,6 +1500,15 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     CrawlPriorityComparator cmprtr() {
       return new CrawlPriorityComparator();
+    }
+
+    void setInternalAu(boolean val) {
+      isInternalAu = val;
+    }
+
+    @Override
+    protected boolean isInternalAu(ArchivalUnit au) {
+      return isInternalAu || super.isInternalAu(au);
     }
 
   }

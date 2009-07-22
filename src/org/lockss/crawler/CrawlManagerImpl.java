@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.125 2008-10-05 07:38:23 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.126 2009-07-22 06:38:04 tlipkis Exp $
  */
 
 /*
@@ -185,6 +185,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "maxNewContentRate";
   public static final String DEFAULT_MAX_NEW_CONTENT_RATE = "1/18h";
 
+  /** Maximum rate at which we will start new content crawls for any
+   * particular plugin registry */
+  public static final String PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE =
+    PREFIX + "maxPluginRegistryNewContentRate";
+  public static final String DEFAULT_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE =
+    "1/2h";
+
   /** Maximum rate at which we will start any new content crawl, to keep
    * multiple crawls from starting at exactly the same time and all
    * fatching in synch.  Should be one event per less than a second,
@@ -261,6 +268,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   private Map repairRateLimiters = new HashMap();
   private Map newContentRateLimiters = new HashMap();
+  private Map pluginRegistryNewContentRateLimiters = new HashMap();
   private RateLimiter newContentStartRateLimiter;
 
   private AuEventHandler auEventHandler;
@@ -452,6 +460,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			  PARAM_MAX_NEW_CONTENT_RATE,
 			  DEFAULT_MAX_NEW_CONTENT_RATE);
       }
+      if (changedKeys.contains(PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE)) {
+	resetRateLimiters(config, pluginRegistryNewContentRateLimiters,
+			  PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE,
+			  DEFAULT_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE);
+      }
       if (changedKeys.contains(PARAM_NEW_CONTENT_START_RATE)) {
 	newContentStartRateLimiter =
 	  RateLimiter.getConfiguredRateLimiter(config,
@@ -604,8 +617,17 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return limiter;
   }
 
+  // Overridable for testing
+  protected boolean isInternalAu(ArchivalUnit au) {
+    return pluginMgr.isInternalAu(au);
+  }
+
   public RateLimiter getNewContentRateLimiter(ArchivalUnit au) {
-    if (pluginMgr.isInternalAu(au)) return null;
+    if (isInternalAu(au)) {
+      return getRateLimiter(au, pluginRegistryNewContentRateLimiters,
+			    PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE,
+			    DEFAULT_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE);
+    }
     return getRateLimiter(au, newContentRateLimiters,
 			  PARAM_MAX_NEW_CONTENT_RATE,
 			  DEFAULT_MAX_NEW_CONTENT_RATE);
@@ -1459,7 +1481,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	while (crawlStartIter.hasNext() &&
 	       poolQueue.size() < paramPoolQueueSize) {
 	  ArchivalUnit au = (ArchivalUnit)crawlStartIter.next();
-	  if (!pluginMgr.isInternalAu(au)) {
+	  if (!isInternalAu(au)) {
 	    possiblyStartCrawl(au);
 	  }
 	}
