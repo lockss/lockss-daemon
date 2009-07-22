@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.9 2007-03-16 21:23:08 thib_gc Exp $
+ * $Id: AuditProxyManager.java,v 1.10 2009-07-22 06:40:41 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,12 @@ public class AuditProxyManager extends BaseProxyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final boolean DEFAULT_START = false;
 
+  public static final String PARAM_INDEX = PREFIX + "index";
+  public static final boolean DEFAULT_INDEX = false;
+
   public static final String PARAM_PORT = PREFIX + "port";
+
+  protected boolean auditIndex = DEFAULT_INDEX;
 
   protected String getServerName() {
     return SERVER_NAME;
@@ -67,6 +72,7 @@ public class AuditProxyManager extends BaseProxyManager {
     if (changedKeys.contains(PREFIX)) {
       port = config.getInt(PARAM_PORT, -1);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
+      auditIndex = config.getBoolean(PARAM_INDEX, DEFAULT_INDEX);
       if (start) {
 	if (getDaemon().isDaemonRunning()) {
 	  startProxy();
@@ -83,6 +89,7 @@ public class AuditProxyManager extends BaseProxyManager {
     org.lockss.proxy.ProxyHandler handler =
       new org.lockss.proxy.ProxyHandler(getDaemon());
     handler.setAuditProxy(true);
+    handler.setAuditIndex(auditIndex);
     return handler;
   }
 }

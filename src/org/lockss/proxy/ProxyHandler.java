@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.62 2009-02-26 05:14:17 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.63 2009-07-22 06:40:41 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.62 2009-02-26 05:14:17 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.63 2009-07-22 06:40:41 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -95,6 +95,8 @@ public class ProxyHandler extends AbstractHttpHandler {
   private String hostname;
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
   private boolean auditProxy = false;
+  private boolean auditIndex = false;
+
   private boolean isFailOver = false;
   private URI failOverTargetUri;
 
@@ -131,6 +133,12 @@ public class ProxyHandler extends AbstractHttpHandler {
   public void setAuditProxy(boolean flg) {
     auditProxy = flg;
     setFromCacheOnly(flg);
+  }
+
+  /** If set to true, audit proxy will generate a manifest index just like
+   * the normal proxy does */
+  public void setAuditIndex(boolean flg) {
+    auditIndex = flg;
   }
 
   /** If set to true, content will be served only from the cache; requests
@@ -350,6 +358,13 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  serveFromCache(pathInContext, pathParams, request,
 			 response, cu);
 	  return;
+	} else if (auditIndex) {
+	  // else generate an error page
+	  sendErrorPage(request,
+			response,
+			404, "Not found",
+			pluginMgr.getCandidateAus(urlString));
+	  return;
 	} else {
 	  // Don't forward request if it's a repair or we were told not to.
 	  response.sendError(HttpResponse.__404_Not_Found);
@@ -548,7 +563,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return;
       }
       if (isPubNever(cu)) {
-	Collection candidateAus = pluginMgr.getCandidateAus(urlString);
+	Collection<ArchivalUnit> candidateAus =
+	  pluginMgr.getCandidateAus(urlString);
 	if (candidateAus != null && !candidateAus.isEmpty()) {
 	  sendErrorPage(request, response, 404,
 			"Host " + request.getURI().getHost() +
@@ -707,7 +723,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return;
       }
 
-      Collection candidateAus = null;
+      Collection<ArchivalUnit> candidateAus = null;
       int code=conn.getResponseCode();
       if (proxyMgr.showManifestIndexForResponse(code)) {
 	switch (code) {
@@ -970,7 +986,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   void sendProxyErrorPage(IOException e,
 			  HttpRequest request,
 			  HttpResponse response,
-			  Collection candidateAus)
+			  Collection<ArchivalUnit> candidateAus)
       throws IOException {
     URI uri = request.getURI();
     if (e instanceof java.net.UnknownHostException) {
@@ -1029,7 +1045,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 
   void sendErrorPage(HttpRequest request,
 		     HttpResponse response,
-		     int code, String msg, Collection candidateAus)
+		     int code, String msg,
+		     Collection<ArchivalUnit> candidateAus)
       throws HttpException, IOException {
     response.setStatus(code);
     Integer codeInt = new Integer(code);
@@ -1079,7 +1096,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   }
 
   void writeErrorAuIndex(Writer writer, String urlString,
-			 Collection candidateAus)
+			 Collection<ArchivalUnit> candidateAus)
       throws IOException {
     if (true) {
       if (candidateAus != null && !candidateAus.isEmpty()) {
@@ -1146,7 +1163,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   // Eventually this should display both the server's error response and
   // the local AU index
   void forwardResponseWithIndex(HttpRequest request, HttpResponse response,
-				Collection candidateAus,
+				Collection<ArchivalUnit> candidateAus,
 				LockssUrlConnection conn)
       throws HttpException, IOException {
     int code = conn.getResponseCode();
