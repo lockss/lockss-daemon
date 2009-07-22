@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.7 2009-06-01 07:56:02 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.8 2009-07-22 06:40:21 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 
   @Override
   public void addSuiteProps(Properties p) {
+    super.addSuiteProps(p);
     p.setProperty(BlockingStreamComm.PARAM_USE_V3_OVER_SSL, "true");
     p.setProperty(BlockingStreamComm.PARAM_SSL_KEYSTORE_NAME, KS_NAME);
     p.setProperty(BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH, "true");

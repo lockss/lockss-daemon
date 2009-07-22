@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.44 2009-07-13 06:52:06 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.45 2009-07-22 06:40:21 tlipkis Exp $
  */
 
 /*
@@ -999,6 +999,12 @@ public class BlockingStreamComm
     } catch (Exception ex) {
       log.error("logKeyStore() threw " + ex);
     }
+  }
+
+  /** Return true iff all connections are authenticated; <i>ie</i>, we only
+   * talk to known peers */
+  public boolean isTrustedNetwork() {
+    return paramUseV3OverSsl && paramSslClientAuth;
   }
 
   // overridable for testing

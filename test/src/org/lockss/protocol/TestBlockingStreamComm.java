@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.26 2009-02-07 01:24:51 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.27 2009-07-22 06:40:21 tlipkis Exp $
  */
 
 /*
@@ -415,6 +415,16 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   // Tests of BlockingPeerChannel
+
+  // Assumes that ssl test enables clientAuth, which may change
+  public void testIsTrusted() throws IOException {
+    setupComm1();
+    if (isSsl()) {
+      assertTrue(comm1.isTrustedNetwork());
+    } else {
+      assertFalse(comm1.isTrustedNetwork());
+    }
+  }
 
   public void testStateTrans() throws IOException {
     setupComm1();

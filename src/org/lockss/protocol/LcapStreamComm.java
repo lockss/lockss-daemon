@@ -1,5 +1,5 @@
 /*
- * $Id: LcapStreamComm.java,v 1.2 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: LcapStreamComm.java,v 1.3 2009-07-22 06:40:21 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,10 @@ public interface LcapStreamComm extends PeerMessage.Factory {
    */
   public void sendTo(PeerMessage msg, PeerIdentity id, RateLimiter limiter)
       throws IOException;
+
+  /** Return true iff all connections are authenticated; <i>ie</i>, we only
+   * talk to known peers */
+  public boolean isTrustedNetwork();
 
   /**
    * LcapStreamComm.MessageHandler defines the callback registered by
