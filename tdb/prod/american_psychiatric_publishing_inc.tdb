@@ -4,6 +4,7 @@
   >
 
   {
+  
     title <
       name = Academic Psychiatry
     >
@@ -41,8 +42,9 @@
   }
 
   {
+  
     title <
-      name = American Journal of Psychiatry
+      name = The American Journal of Psychiatry
     >
 
     {
@@ -51,109 +53,110 @@
       param[base_url] = http://ajp.psychiatryonline.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < exists ; American Journal of Psychiatry Volume 70 ; 70 >
-      au < exists ; American Journal of Psychiatry Volume 71 ; 71 >
-      au < exists ; American Journal of Psychiatry Volume 72 ; 72 >
-      au < exists ; American Journal of Psychiatry Volume 73 ; 73 >
-      au < exists ; American Journal of Psychiatry Volume 74 ; 74 >
-      au < exists ; American Journal of Psychiatry Volume 75 ; 75 >
-      au < exists ; American Journal of Psychiatry Volume 76 ; 76 >
-      au < exists ; American Journal of Psychiatry Volume 77 ; 77 >
-      au < exists ; American Journal of Psychiatry Volume 78 ; 78 >
-      au < exists ; American Journal of Psychiatry Volume 79 ; 79 >
-      au < exists ; American Journal of Psychiatry Volume 80 ; 80 >
-      au < exists ; American Journal of Psychiatry Volume 81 ; 81 >
-      au < exists ; American Journal of Psychiatry Volume 82 ; 82 >
-      au < exists ; American Journal of Psychiatry Volume 83 ; 83 >
-      au < exists ; American Journal of Psychiatry Volume 84 ; 84 >
-      au < exists ; American Journal of Psychiatry Volume 85 ; 85 >
-      au < exists ; American Journal of Psychiatry Volume 86 ; 86 >
-      au < exists ; American Journal of Psychiatry Volume 87 ; 87 >
-      au < exists ; American Journal of Psychiatry Volume 88 ; 88 >
-      au < exists ; American Journal of Psychiatry Volume 89 ; 89 >
-      au < exists ; American Journal of Psychiatry Volume 90 ; 90 >
-      au < exists ; American Journal of Psychiatry Volume 91 ; 91 >
-      au < exists ; American Journal of Psychiatry Volume 92 ; 92 >
-      au < exists ; American Journal of Psychiatry Volume 93 ; 93 >
-      au < exists ; American Journal of Psychiatry Volume 94 ; 94 >
-      au < exists ; American Journal of Psychiatry Volume 95 ; 95 >
-      au < exists ; American Journal of Psychiatry Volume 96 ; 96 >
-      au < exists ; American Journal of Psychiatry Volume 97 ; 97 >
-      au < exists ; American Journal of Psychiatry Volume 98 ; 98 >
-      au < exists ; American Journal of Psychiatry Volume 99 ; 99 >
-      au < exists ; American Journal of Psychiatry Volume 100 ; 100 >
-      au < exists ; American Journal of Psychiatry Volume 101 ; 101 >
-      au < exists ; American Journal of Psychiatry Volume 102 ; 102 >
-      au < exists ; American Journal of Psychiatry Volume 103 ; 103 >
-      au < exists ; American Journal of Psychiatry Volume 104 ; 104 >
-      au < exists ; American Journal of Psychiatry Volume 105 ; 105 >
-      au < exists ; American Journal of Psychiatry Volume 106 ; 106 >
-      au < exists ; American Journal of Psychiatry Volume 107 ; 107 >
-      au < exists ; American Journal of Psychiatry Volume 108 ; 108 >
-      au < exists ; American Journal of Psychiatry Volume 109 ; 109 >
-      au < exists ; American Journal of Psychiatry Volume 110 ; 110 >
-      au < exists ; American Journal of Psychiatry Volume 111 ; 111 >
-      au < exists ; American Journal of Psychiatry Volume 112 ; 112 >
-      au < exists ; American Journal of Psychiatry Volume 113 ; 113 >
-      au < exists ; American Journal of Psychiatry Volume 114 ; 114 >
-      au < exists ; American Journal of Psychiatry Volume 115 ; 115 >
-      au < exists ; American Journal of Psychiatry Volume 116 ; 116 >
-      au < exists ; American Journal of Psychiatry Volume 117 ; 117 >
-      au < exists ; American Journal of Psychiatry Volume 118 ; 118 >
-      au < exists ; American Journal of Psychiatry Volume 119 ; 119 >
-      au < exists ; American Journal of Psychiatry Volume 120 ; 120 >
-      au < exists ; American Journal of Psychiatry Volume 121 ; 121 >
-      au < exists ; American Journal of Psychiatry Volume 122 ; 122 >
-      au < exists ; American Journal of Psychiatry Volume 123 ; 123 >
-      au < exists ; American Journal of Psychiatry Volume 124 ; 124 >
-      au < exists ; American Journal of Psychiatry Volume 125 ; 125 >
-      au < exists ; American Journal of Psychiatry Volume 126 ; 126 >
-      au < exists ; American Journal of Psychiatry Volume 127 ; 127 >
-      au < exists ; American Journal of Psychiatry Volume 128 ; 128 >
-      au < exists ; American Journal of Psychiatry Volume 129 ; 129 >
-      au < exists ; American Journal of Psychiatry Volume 130 ; 130 >
-      au < exists ; American Journal of Psychiatry Volume 131 ; 131 >
-      au < exists ; American Journal of Psychiatry Volume 132 ; 132 >
-      au < exists ; American Journal of Psychiatry Volume 133 ; 133 >
-      au < exists ; American Journal of Psychiatry Volume 134 ; 134 >
-      au < exists ; American Journal of Psychiatry Volume 135 ; 135 >
-      au < exists ; American Journal of Psychiatry Volume 136 ; 136 >
-      au < exists ; American Journal of Psychiatry Volume 137 ; 137 >
-      au < exists ; American Journal of Psychiatry Volume 138 ; 138 >
-      au < exists ; American Journal of Psychiatry Volume 139 ; 139 >
-      au < exists ; American Journal of Psychiatry Volume 140 ; 140 >
-      au < exists ; American Journal of Psychiatry Volume 141 ; 141 >
-      au < exists ; American Journal of Psychiatry Volume 142 ; 142 >
-      au < exists ; American Journal of Psychiatry Volume 143 ; 143 >
-      au < exists ; American Journal of Psychiatry Volume 144 ; 144 >
-      au < exists ; American Journal of Psychiatry Volume 145 ; 145 >
-      au < exists ; American Journal of Psychiatry Volume 146 ; 146 >
-      au < exists ; American Journal of Psychiatry Volume 147 ; 147 >
-      au < exists ; American Journal of Psychiatry Volume 148 ; 148 >
-      au < exists ; American Journal of Psychiatry Volume 149 ; 149 >
-      au < exists ; American Journal of Psychiatry Volume 150 ; 150 >
-      au < exists ; American Journal of Psychiatry Volume 151 ; 151 >
-      au < exists ; American Journal of Psychiatry Volume 152 ; 152 >
-      au < exists ; American Journal of Psychiatry Volume 153 ; 153 >
-      au < exists ; American Journal of Psychiatry Volume 154 ; 154 >
-      au < exists ; American Journal of Psychiatry Volume 155 ; 155 >
-      au < exists ; American Journal of Psychiatry Volume 156 ; 156 >
-      au < exists ; American Journal of Psychiatry Volume 157 ; 157 >
-      au < exists ; American Journal of Psychiatry Volume 158 ; 158 >
-      au < exists ; American Journal of Psychiatry Volume 159 ; 159 >
-      au < exists ; American Journal of Psychiatry Volume 160 ; 160 >
-      au < exists ; American Journal of Psychiatry Volume 161 ; 161 >
+      au < exists ; The American Journal of Psychiatry Volume 70 ; 70 >
+      au < exists ; The American Journal of Psychiatry Volume 71 ; 71 >
+      au < exists ; The American Journal of Psychiatry Volume 72 ; 72 >
+      au < exists ; The American Journal of Psychiatry Volume 73 ; 73 >
+      au < exists ; The American Journal of Psychiatry Volume 74 ; 74 >
+      au < exists ; The American Journal of Psychiatry Volume 75 ; 75 >
+      au < exists ; The American Journal of Psychiatry Volume 76 ; 76 >
+      au < exists ; The American Journal of Psychiatry Volume 77 ; 77 >
+      au < exists ; The American Journal of Psychiatry Volume 78 ; 78 >
+      au < exists ; The American Journal of Psychiatry Volume 79 ; 79 >
+      au < exists ; The American Journal of Psychiatry Volume 80 ; 80 >
+      au < exists ; The American Journal of Psychiatry Volume 81 ; 81 >
+      au < exists ; The American Journal of Psychiatry Volume 82 ; 82 >
+      au < exists ; The American Journal of Psychiatry Volume 83 ; 83 >
+      au < exists ; The American Journal of Psychiatry Volume 84 ; 84 >
+      au < exists ; The American Journal of Psychiatry Volume 85 ; 85 >
+      au < exists ; The American Journal of Psychiatry Volume 86 ; 86 >
+      au < exists ; The American Journal of Psychiatry Volume 87 ; 87 >
+      au < exists ; The American Journal of Psychiatry Volume 88 ; 88 >
+      au < exists ; The American Journal of Psychiatry Volume 89 ; 89 >
+      au < exists ; The American Journal of Psychiatry Volume 90 ; 90 >
+      au < exists ; The American Journal of Psychiatry Volume 91 ; 91 >
+      au < exists ; The American Journal of Psychiatry Volume 92 ; 92 >
+      au < exists ; The American Journal of Psychiatry Volume 93 ; 93 >
+      au < exists ; The American Journal of Psychiatry Volume 94 ; 94 >
+      au < exists ; The American Journal of Psychiatry Volume 95 ; 95 >
+      au < exists ; The American Journal of Psychiatry Volume 96 ; 96 >
+      au < exists ; The American Journal of Psychiatry Volume 97 ; 97 >
+      au < exists ; The American Journal of Psychiatry Volume 98 ; 98 >
+      au < exists ; The American Journal of Psychiatry Volume 99 ; 99 >
+      au < exists ; The American Journal of Psychiatry Volume 100 ; 100 >
+      au < exists ; The American Journal of Psychiatry Volume 101 ; 101 >
+      au < exists ; The American Journal of Psychiatry Volume 102 ; 102 >
+      au < exists ; The American Journal of Psychiatry Volume 103 ; 103 >
+      au < exists ; The American Journal of Psychiatry Volume 104 ; 104 >
+      au < exists ; The American Journal of Psychiatry Volume 105 ; 105 >
+      au < exists ; The American Journal of Psychiatry Volume 106 ; 106 >
+      au < exists ; The American Journal of Psychiatry Volume 107 ; 107 >
+      au < exists ; The American Journal of Psychiatry Volume 108 ; 108 >
+      au < exists ; The American Journal of Psychiatry Volume 109 ; 109 >
+      au < exists ; The American Journal of Psychiatry Volume 110 ; 110 >
+      au < exists ; The American Journal of Psychiatry Volume 111 ; 111 >
+      au < exists ; The American Journal of Psychiatry Volume 112 ; 112 >
+      au < exists ; The American Journal of Psychiatry Volume 113 ; 113 >
+      au < exists ; The American Journal of Psychiatry Volume 114 ; 114 >
+      au < exists ; The American Journal of Psychiatry Volume 115 ; 115 >
+      au < exists ; The American Journal of Psychiatry Volume 116 ; 116 >
+      au < exists ; The American Journal of Psychiatry Volume 117 ; 117 >
+      au < exists ; The American Journal of Psychiatry Volume 118 ; 118 >
+      au < exists ; The American Journal of Psychiatry Volume 119 ; 119 >
+      au < exists ; The American Journal of Psychiatry Volume 120 ; 120 >
+      au < exists ; The American Journal of Psychiatry Volume 121 ; 121 >
+      au < exists ; The American Journal of Psychiatry Volume 122 ; 122 >
+      au < exists ; The American Journal of Psychiatry Volume 123 ; 123 >
+      au < exists ; The American Journal of Psychiatry Volume 124 ; 124 >
+      au < exists ; The American Journal of Psychiatry Volume 125 ; 125 >
+      au < exists ; The American Journal of Psychiatry Volume 126 ; 126 >
+      au < exists ; The American Journal of Psychiatry Volume 127 ; 127 >
+      au < exists ; The American Journal of Psychiatry Volume 128 ; 128 >
+      au < exists ; The American Journal of Psychiatry Volume 129 ; 129 >
+      au < exists ; The American Journal of Psychiatry Volume 130 ; 130 >
+      au < exists ; The American Journal of Psychiatry Volume 131 ; 131 >
+      au < exists ; The American Journal of Psychiatry Volume 132 ; 132 >
+      au < exists ; The American Journal of Psychiatry Volume 133 ; 133 >
+      au < exists ; The American Journal of Psychiatry Volume 134 ; 134 >
+      au < exists ; The American Journal of Psychiatry Volume 135 ; 135 >
+      au < exists ; The American Journal of Psychiatry Volume 136 ; 136 >
+      au < exists ; The American Journal of Psychiatry Volume 137 ; 137 >
+      au < exists ; The American Journal of Psychiatry Volume 138 ; 138 >
+      au < exists ; The American Journal of Psychiatry Volume 139 ; 139 >
+      au < exists ; The American Journal of Psychiatry Volume 140 ; 140 >
+      au < exists ; The American Journal of Psychiatry Volume 141 ; 141 >
+      au < exists ; The American Journal of Psychiatry Volume 142 ; 142 >
+      au < exists ; The American Journal of Psychiatry Volume 143 ; 143 >
+      au < exists ; The American Journal of Psychiatry Volume 144 ; 144 >
+      au < exists ; The American Journal of Psychiatry Volume 145 ; 145 >
+      au < exists ; The American Journal of Psychiatry Volume 146 ; 146 >
+      au < exists ; The American Journal of Psychiatry Volume 147 ; 147 >
+      au < exists ; The American Journal of Psychiatry Volume 148 ; 148 >
+      au < exists ; The American Journal of Psychiatry Volume 149 ; 149 >
+      au < exists ; The American Journal of Psychiatry Volume 150 ; 150 >
+      au < exists ; The American Journal of Psychiatry Volume 151 ; 151 >
+      au < exists ; The American Journal of Psychiatry Volume 152 ; 152 >
+      au < exists ; The American Journal of Psychiatry Volume 153 ; 153 >
+      au < exists ; The American Journal of Psychiatry Volume 154 ; 154 >
+      au < exists ; The American Journal of Psychiatry Volume 155 ; 155 >
+      au < exists ; The American Journal of Psychiatry Volume 156 ; 156 >
+      au < exists ; The American Journal of Psychiatry Volume 157 ; 157 >
+      au < exists ; The American Journal of Psychiatry Volume 158 ; 158 >
+      au < exists ; The American Journal of Psychiatry Volume 159 ; 159 >
+      au < exists ; The American Journal of Psychiatry Volume 160 ; 160 >
+      au < exists ; The American Journal of Psychiatry Volume 161 ; 161 >
       au < released ; The American Journal of Psychiatry Volume 162 ; 162 >
       au < released ; The American Journal of Psychiatry Volume 163 ; 163 >
       au < released ; The American Journal of Psychiatry Volume 164 ; 164 >
-      au < manifest ; American Journal of Psychiatry Volume 165 ; 165 >
-      au < manifest ; American Journal of Psychiatry Volume 166 ; 166 >
+      au < manifest ; The American Journal of Psychiatry Volume 165 ; 165 >
+      au < manifest ; The American Journal of Psychiatry Volume 166 ; 166 >
 
     }
 
   }
 
   {
+  
     title <
       name = Focus
     >
@@ -177,6 +180,7 @@
   }
 
   {
+
     title <
       name = Journal of Neuropsychiatry and Clinical Neurosciences
     >
@@ -214,6 +218,7 @@
   }
 
   {
+
     title <
       name = Journal of Psychotherapy Practice and Research
     >
@@ -240,6 +245,7 @@
   }
 
   {
+
     title <
       name = Psychiatric News
     >
@@ -265,6 +271,7 @@
   }
 
   {
+
     title <
       name = Psychiatric Services
     >
@@ -342,28 +349,6 @@
 
   {
     title <
-      name = PsychiatryOnline CME
-    >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://cme.psychiatryonline.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < exists ; PsychiatryOnline CME Volume 2003 ; 2003 >
-      au < exists ; PsychiatryOnline CME Volume 2004 ; 2004 >
-      au < exists ; PsychiatryOnline CME Volume 2005 ; 2005 >
-      au < exists ; PsychiatryOnline CME Volume 2006 ; 2006 >
-      au < exists ; PsychiatryOnline CME Volume 2007 ; 2007 >
-      au < exists ; PsychiatryOnline CME Volume 2008 ; 2008 >
-
-    }
-
-  }
-
-  {
-    title <
       name = Psychosomatics
     >
 
@@ -429,11 +414,13 @@
   }
 
   {
+  
     implicit < status ; name >
     plugin = org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin
     param[base_url] = http://www.psychiatryonline.com/
 
     {
+
       title <
         name = The American Psychiatric Publishing Textbook of Psychiatry
       >
@@ -445,13 +432,14 @@
     }
 
     {
+
       title <
         name = Essentials of Clinical Psychopharmacology
       >
 
       param[resource_id] = 7
 
-      au < released ; Essentials of Clinical Psychopharmacology (2nd Edition) >
+      au < down ; Essentials of Clinical Psychopharmacology (2nd Edition) >
 
     }
 
