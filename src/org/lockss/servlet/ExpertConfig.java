@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.1 2009-07-22 06:37:20 tlipkis Exp $
+ * $Id: ExpertConfig.java,v 1.2 2009-07-22 22:24:12 uid77510 Exp $
  */
 
 /*
@@ -210,8 +210,9 @@ public class ExpertConfig extends LockssServlet {
    * Save the include and exclude lists to the access control file
    */
   protected boolean testAndSaveConfig() {
+    File tmpfile = null;
     try {
-      File tmpfile = FileUtil.createTempFile("econfig_test", ".txt");
+      tmpfile = FileUtil.createTempFile("econfig_test", ".txt");
       StringUtil.toFile(tmpfile, etext);
 
       ConfigManager.KeyPredicate keyPred = configMgr.expertConfigKeyPredicate;
@@ -240,25 +241,10 @@ public class ExpertConfig extends LockssServlet {
     } catch (IOException e) {
       errMsg = "Not saved: " + e.toString();
       return false;
+    } finally {
+      if (tmpfile != null) {
+	tmpfile.delete();
+      }
     }
   }
-
-//   protected void addConfigProps(Properties props) {
-//     String plugStr = StringUtil.separatedString(pluginUrls, ";");
-//     String titleStr = StringUtil.separatedString(titleDbUrls, ";");
-
-//     props.put(PluginManager.PARAM_USER_PLUGIN_REGISTRIES, plugStr);
-//     props.put(ConfigManager.PARAM_USER_TITLE_DB_URLS, titleStr);
-//     if (!StringUtil.isNullString(keystoreUrl)) {
-//       props.put(PluginManager.PARAM_USER_KEYSTORE_LOCATION, keystoreUrl);
-//       props.put(PluginManager.PARAM_USER_KEYSTORE_PASSWORD,
-// 		keystorePassword);
-//     }
-//     props.put(PluginManager.PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
-// 	      Boolean.toString(useDefaultPluginRegistries));
-// //     props.put(PluginManager.PARAM_USE_DEFAULT_KEYSTORE,
-// // 	      Boolean.toString(useDefaultKeystore));
-//   }
-
-
 }
