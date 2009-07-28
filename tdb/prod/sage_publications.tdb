@@ -2453,8 +2453,8 @@ comment[csp7] = manifest page is malformed
         au < released ; East European Politics & Societies Volume 19 ; 19 >
         au < released ; East European Politics & Societies Volume 20 ; 20 >
         au < released ; East European Politics & Societies Volume 21 ; 21 >
-        au < testing ; East European Politics & Societies Volume 22 ; 22 >
-        au < testing ; East European Politics & Societies Volume 23 ; 23 >
+        au < ready ; East European Politics & Societies Volume 22 ; 22 >
+        au < ready ; East European Politics & Societies Volume 23 ; 23 >
 
       }
 
@@ -2498,8 +2498,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < released ; Economic and Industrial Democracy Volume 26 ; 26 >
         au < released ; Economic and Industrial Democracy Volume 27 ; 27 >
         au < released ; Economic and Industrial Democracy Volume 28 ; 28 >
-        au < testing ; Economic and Industrial Democracy Volume 29 ; 29 >
-        au < testing ; Economic and Industrial Democracy Volume 30 ; 30 >
+        au < ready ; Economic and Industrial Democracy Volume 29 ; 29 >
+        au < ready ; Economic and Industrial Democracy Volume 30 ; 30 >
 
       }
 
@@ -2520,8 +2520,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < released ; Economic Development Quarterly Volume 19 ; 19 >
         au < released ; Economic Development Quarterly Volume 20 ; 20 >
         au < released ; Economic Development Quarterly Volume 21 ; 21 >
-        au < testing ; Economic Development Quarterly Volume 22 ; 22 >
-        au < testing ; Economic Development Quarterly Volume 23 ; 23 >
+        au < ready ; Economic Development Quarterly Volume 22 ; 22 >
+        au < ready ; Economic Development Quarterly Volume 23 ; 23 >
 
       }
 
@@ -2553,7 +2553,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < do_not_process ; Education and Urban Society Volume 38 ; 38 >
         au < released ; Education and Urban Society Volume 39 ; 39 >
         au < released ; Education and Urban Society Volume 40 ; 40 >
-        au < testing ; Education and Urban Society Volume 41 ; 41 >
+        au < ready ; Education and Urban Society Volume 41 ; 41 >
 
       }
 
@@ -2573,8 +2573,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
         au < released ; Education, Citizenship and Social Justice Volume 1 ; 1 >
         au < released ; Education, Citizenship and Social Justice Volume 2 ; 2 >
-        au < testing ; Education, Citizenship and Social Justice Volume 3 ; 3 >
-        au < testing ; Education, Citizenship and Social Justice Volume 4 ; 4 >
+        au < ready ; Education, Citizenship and Social Justice Volume 3 ; 3 >
+        au < ready ; Education, Citizenship and Social Justice Volume 4 ; 4 >
 
       }
 
@@ -2605,8 +2605,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < released ; Educational Administration Quarterly Volume 41 ; 41 >
         au < do_not_process ; Educational Administration Quarterly Volume 42 ; 42 >
         au < released ; Educational Administration Quarterly Volume 43 ; 43 >
-        au < testing ; Educational Administration Quarterly Volume 44 ; 44 >
-        au < testing ; Educational Administration Quarterly Volume 45 ; 45 >
+        au < ready ; Educational Administration Quarterly Volume 44 ; 44 >
+        au < ready ; Educational Administration Quarterly Volume 45 ; 45 >
 
       }
 
@@ -2627,8 +2627,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < released ; Educational and Psychological Measurement Volume 65 ; 65 >
         au < released ; Educational and Psychological Measurement Volume 66 ; 66 >
         au < released ; Educational and Psychological Measurement Volume 67 ; 67 >
-        au < testing ; Educational and Psychological Measurement Volume 68 ; 68 >
-        au < testing ; Educational and Psychological Measurement Volume 69 ; 69 >
+        au < ready ; Educational and Psychological Measurement Volume 68 ; 68 >
+        au < ready ; Educational and Psychological Measurement Volume 69 ; 69 >
 
       }
 
@@ -2647,8 +2647,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Evaluation and Policy Analysis Volume 29 ; 29 >
-        au < testing ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
-        au < testing ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
+        au < ready ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
+        au < ready ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
 
       }
 
@@ -2679,8 +2679,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < released ; Educational Management Administration & Leadership Volume 33 ; 33 >
         au < do_not_process ; Educational Management Administration & Leadership Volume 34 ; 34 >
         au < released ; Educational Management Administration & Leadership Volume 35 ; 35 >
-        au < manifest ; Educational Management Administration & Leadership Volume 36 ; 36 >
-        au < manifest ; Educational Management Administration & Leadership Volume 37 ; 37 >
+        au < testing ; Educational Management Administration & Leadership Volume 36 ; 36 >
+        au < testing ; Educational Management Administration & Leadership Volume 37 ; 37 >
 
       }
 
@@ -2701,8 +2701,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < released ; Educational Policy Volume 19 ; 19 >
         au < released ; Educational Policy Volume 20 ; 20 >
         au < released ; Educational Policy Volume 21 ; 21 >
-        au < manifest ; Educational Policy Volume 22 ; 22 >
-        au < manifest ; Educational Policy Volume 23 ; 23 >
+        au < testing ; Educational Policy Volume 22 ; 22 >
+        au < testing ; Educational Policy Volume 23 ; 23 >
 
       }
 
@@ -2721,8 +2721,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Researcher Volume 36 ; 36 >
-        au < manifest ; Educational Researcher Volume 37 ; 37 >
-        au < manifest ; Educational Researcher Volume 38 ; 38 >
+        au < testing ; Educational Researcher Volume 37 ; 37 >
+        au < testing ; Educational Researcher Volume 38 ; 38 >
 
       }
 
@@ -2773,8 +2773,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; Environment and Behavior Volume 37 ; 37 >
         au < do_not_process ; Environment and Behavior Volume 38 ; 38 >
         au < released ; Environment and Behavior Volume 39 ; 39 >
-        au < manifest ; Environment and Behavior Volume 40 ; 40 >
-        au < manifest ; Environment and Behavior Volume 41 ; 41 >
+        au < testing ; Environment and Behavior Volume 40 ; 40 >
+        au < testing ; Environment and Behavior Volume 41 ; 41 >
 
       }
 
@@ -2806,8 +2806,8 @@ comment[ebd] = now published by Taylor & Francis
         au < do_not_process ; Environment and Urbanization Volume 17 ; 17 >
         au < released ; Environment and Urbanization Volume 18 ; 18 >
         au < released ; Environment and Urbanization Volume 19 ; 19 >
-        au < manifest ; Environment and Urbanization Volume 20 ; 20 >
-        au < manifest ; Environment and Urbanization Volume 21 ; 21 >
+        au < testing ; Environment and Urbanization Volume 20 ; 20 >
+        au < testing ; Environment and Urbanization Volume 21 ; 21 >
 
       }
 
@@ -2838,8 +2838,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; Ethnicities Volume 5 ; 5 >
         au < do_not_process ; Ethnicities Volume 6 ; 6 >
         au < released ; Ethnicities Volume 7 ; 7 >
-        au < manifest ; Ethnicities Volume 8 ; 8 >
-        au < manifest ; Ethnicities Volume 9 ; 9 >
+        au < testing ; Ethnicities Volume 8 ; 8 >
+        au < testing ; Ethnicities Volume 9 ; 9 >
 
       }
 
@@ -2860,8 +2860,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; Ethnography Volume 6 ; 6 >
         au < released ; Ethnography Volume 7 ; 7 >
         au < released ; Ethnography Volume 8 ; 8 >
-        au < manifest ; Ethnography Volume 9 ; 9 >
-        au < manifest ; Ethnography Volume 10 ; 10 >
+        au < testing ; Ethnography Volume 9 ; 9 >
+        au < testing ; Ethnography Volume 10 ; 10 >
 
       }
 
