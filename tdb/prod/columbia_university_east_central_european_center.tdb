@@ -1,11 +1,11 @@
-{
+﻿{
   publisher <
     name = Columbia University East Central European Center
   >
   
   {
   
-    plugin = edu.yale.library.lockss.plugin.IntermariumPlugin
+    plugin = edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin
     implicit < status ; name ; param[volume] ; param[year] >
     
     title <
@@ -24,22 +24,56 @@
       
       param[base_url] = http://www.sipa.columbia.edu/ece/research/intermarium/  
     
-      au < manifest ; InterMarium Volume 1  ; 1 ; 1997 >
-      au < manifest ; InterMarium Volume 2  ; 2 ; 1998 >
-      au < manifest ; InterMarium Volume 3  ; 3 ; 1999 >
-      au < manifest ; InterMarium Volume 4  ; 4 ; 2000 >
-      au < manifest ; InterMarium Volume 5  ; 5 ; 2002 >
-      au < manifest ; InterMarium Volume 6  ; 6 ; 2003 >
-      au < manifest ; InterMarium Volume 7  ; 7 ; 2004 >
-      au < manifest ; InterMarium Volume 8  ; 8 ; 2005 >
-      au < manifest ; InterMarium Volume 9  ; 9 ; 2006 >
-      au < manifest ; InterMarium Volume 10 ; 10 ; 2007 >
-      au < manifest ; InterMarium Volume 12 ; 12 ; 2008 >
+      au < ready ; InterMarium Volume 1  ; 1 ; 1997 >
+      au < ready ; InterMarium Volume 2  ; 2 ; 1998 >
+      au < ready ; InterMarium Volume 3  ; 3 ; 1999 >
+      au < ready ; InterMarium Volume 4  ; 4 ; 2000 >
+      au < ready ; InterMarium Volume 5  ; 5 ; 2002 >
+      au < ready ; InterMarium Volume 6  ; 6 ; 2003 >
+      au < ready ; InterMarium Volume 7  ; 7 ; 2004 >
+      au < ready ; InterMarium Volume 8  ; 8 ; 2005 >
+      au < ready ; InterMarium Volume 9  ; 9 ; 2006 >
+      au < ready ; InterMarium Volume 10 ; 10 ; 2007 >
+      au < ready ; InterMarium Volume 12 ; 12 ; 2008 >
       
     }
     
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
