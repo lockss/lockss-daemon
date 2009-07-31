@@ -51,8 +51,8 @@
     au < released ; Annual Review of Anthropology Volume 33 ; 33 >
     au < released ; Annual Review of Anthropology Volume 34 ; 34 >
     au < released ; Annual Review of Anthropology Volume 35 ; 35 >
-    au < manifest ; Annual Review of Anthropology Volume 36 ; 36 >
-    au < manifest ; Annual Review of Anthropology Volume 37 ; 37 >
+    au < testing ; Annual Review of Anthropology Volume 36 ; 36 >
+    au < testing ; Annual Review of Anthropology Volume 37 ; 37 >
 
   }
 
@@ -110,9 +110,9 @@
     au < released ; Annual Review of Astronomy and Astrophysics Volume 42 ; 42 >
     au < released ; Annual Review of Astronomy and Astrophysics Volume 43 ; 43 >
     au < released ; Annual Review of Astronomy and Astrophysics Volume 44 ; 44 >
-    au < manifest ; Annual Review of Astronomy and Astrophysics Volume 45 ; 45 >
-    au < manifest ; Annual Review of Astronomy and Astrophysics Volume 46 ; 46 >
-    au < manifest ; Annual Review of Astronomy and Astrophysics Volume 47 ; 47 >
+    au < testing ; Annual Review of Astronomy and Astrophysics Volume 45 ; 45 >
+    au < testing ; Annual Review of Astronomy and Astrophysics Volume 46 ; 46 >
+    au < testing ; Annual Review of Astronomy and Astrophysics Volume 47 ; 47 >
 
   }
 
@@ -128,7 +128,7 @@
 
     au < released ; Annual Review of Biochemistry Volume 1 ; 1 >
     au < released ; Annual Review of Biochemistry Volume 2 ; 2 >
-    au < manifest ; Annual Review of Biochemistry Volume 3 ; 3 >
+    au < testing ; Annual Review of Biochemistry Volume 3 ; 3 >
     au < released ; Annual Review of Biochemistry Volume 4 ; 4 >
     au < released ; Annual Review of Biochemistry Volume 5 ; 5 >
     au < released ; Annual Review of Biochemistry Volume 6 ; 6 >
@@ -202,8 +202,8 @@
     au < released ; Annual Review of Biochemistry Volume 74 ; 74 >
     au < released ; Annual Review of Biochemistry Volume 75 ; 75 >
     au < released ; Annual Review of Biochemistry Volume 76 ; 76 >
-    au < manifest ; Annual Review of Biochemistry Volume 77 ; 77 >
-    au < manifest ; Annual Review of Biochemistry Volume 78 ; 78 >
+    au < testing ; Annual Review of Biochemistry Volume 77 ; 77 >
+    au < testing ; Annual Review of Biochemistry Volume 78 ; 78 >
   }
 
 
@@ -225,9 +225,9 @@
     au < released ; Annual Review of Biomedical Engineering Volume 7 ; 7 >
     au < released ; Annual Review of Biomedical Engineering Volume 8 ; 8 >
     au < released ; Annual Review of Biomedical Engineering Volume 9 ; 9 >
-    au < manifest ; Annual Review of Biomedical Engineering Volume 10 ; 10 >
-    au < manifest ; Annual Review of Biomedical Engineering Volume 11 ; 11 >
-    au < manifest ; Annual Review of Biomedical Engineering Volume 12 ; 12 >
+    au < testing ; Annual Review of Biomedical Engineering Volume 10 ; 10 >
+    au < testing ; Annual Review of Biomedical Engineering Volume 11 ; 11 >
+    au < testing ; Annual Review of Biomedical Engineering Volume 12 ; 12 >
   }
 
 
@@ -242,7 +242,7 @@ comment[bb1] = next 3 title entries are continuation of the same journal
     param[journal_id] = biophys
     param[short_journal_id] = bb
 
-    au < manifest ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
+    au < testing ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 2 ; 2 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 3 ; 3 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 4 ; 4 >
@@ -251,10 +251,10 @@ comment[bb1] = next 3 title entries are continuation of the same journal
     au < released ; Annual Review of Biophysics and Bioengineering Volume 7 ; 7 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 8 ; 8 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 9 ; 9 >
-    au < manifest ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
+    au < testing ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 11 ; 11 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 12 ; 12 >
-    au < manifest ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
+    au < testing ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
 
   }
 
@@ -272,9 +272,9 @@ comment[bb2] = continued from previous title entry
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
-    au < manifest ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
+    au < testing ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
-    au < manifest ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
+    au < testing ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
   }
 
@@ -305,9 +305,9 @@ comment[bb3] = continued from previous title entry
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 34 ; 34 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 35 ; 35 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 36 ; 36 >
-    au < manifest ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
-    au < manifest ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
-    au < manifest ; Annual Review of Biophysics and Biomolecular Structure Volume 39 ; 39 >
+    au < testing ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
+    au < testing ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
+    au < testing ; Annual Review of Biophysics and Biomolecular Structure Volume 39 ; 39 >
   }
 
 
