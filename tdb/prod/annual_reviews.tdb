@@ -128,7 +128,7 @@
 
     au < released ; Annual Review of Biochemistry Volume 1 ; 1 >
     au < released ; Annual Review of Biochemistry Volume 2 ; 2 >
-    au < ready ; Annual Review of Biochemistry Volume 3 ; 3 >
+    au < manifest ; Annual Review of Biochemistry Volume 3 ; 3 >
     au < released ; Annual Review of Biochemistry Volume 4 ; 4 >
     au < released ; Annual Review of Biochemistry Volume 5 ; 5 >
     au < released ; Annual Review of Biochemistry Volume 6 ; 6 >
@@ -242,7 +242,7 @@ comment[bb1] = next 3 title entries are continuation of the same journal
     param[journal_id] = biophys
     param[short_journal_id] = bb
 
-    au < ready ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
+    au < manifest ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 2 ; 2 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 3 ; 3 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 4 ; 4 >
@@ -251,7 +251,7 @@ comment[bb1] = next 3 title entries are continuation of the same journal
     au < released ; Annual Review of Biophysics and Bioengineering Volume 7 ; 7 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 8 ; 8 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 9 ; 9 >
-    au < ready ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
+    au < manifest ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 11 ; 11 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 12 ; 12 >
     au < manifest ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
@@ -272,9 +272,9 @@ comment[bb2] = continued from previous title entry
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
-    au < ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
+    au < manifest ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
-    au < ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
+    au < manifest ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
   }
 
@@ -857,7 +857,7 @@ comment[ms1] = next title entry is a continuation of this journal
     au < released ; Annual Review of Materials Science Volume 21 ; 21 >
     au < released ; Annual Review of Materials Science Volume 22 ; 22 >
     au < released ; Annual Review of Materials Science Volume 23 ; 23 >
-    au < ready ; Annual Review of Materials Science Volume 24 ; 24 >
+    au < manifest ; Annual Review of Materials Science Volume 24 ; 24 >
     au < released ; Annual Review of Materials Science Volume 25 ; 25 >
     au < released ; Annual Review of Materials Science Volume 26 ; 26 >
     au < released ; Annual Review of Materials Science Volume 27 ; 27 >
@@ -1222,8 +1222,8 @@ comment[ns2] = continued from previous title entry
     param[journal_id] = pathmechdis
     param[short_journal_id] = pathol
 
-    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 1 ; 1 >
-    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 2 ; 2 >
+    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 1 ; 1 >
+    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 2 ; 2 >
     au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 3 ; 3 >
     au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 4 ; 4 >
     au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 5 ; 5 >
@@ -1243,7 +1243,7 @@ comment[pa1] = next title entry is a continuation of this journal
 
     au < released ; Annual Review of Pharmacology Volume 1 ; 1 >
     au < released ; Annual Review of Pharmacology Volume 2 ; 2 >
-    au < ready ; Annual Review of Pharmacology Volume 3 ; 3 >
+    au < manifest ; Annual Review of Pharmacology Volume 3 ; 3 >
     au < released ; Annual Review of Pharmacology Volume 4 ; 4 >
     au < released ; Annual Review of Pharmacology Volume 5 ; 5 >
     au < released ; Annual Review of Pharmacology Volume 6 ; 6 >
@@ -1348,22 +1348,22 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Physical Chemistry Volume 29 ; 29 >
     au < released ; Annual Review of Physical Chemistry Volume 30 ; 30 >
     au < released ; Annual Review of Physical Chemistry Volume 31 ; 31 >
-    au < ready ; Annual Review of Physical Chemistry Volume 32 ; 32 >
-    au < ready ; Annual Review of Physical Chemistry Volume 33 ; 33 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 32 ; 32 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 33 ; 33 >
     au < released ; Annual Review of Physical Chemistry Volume 34 ; 34 >
     au < released ; Annual Review of Physical Chemistry Volume 35 ; 35 >
     au < released ; Annual Review of Physical Chemistry Volume 36 ; 36 >
-    au < ready ; Annual Review of Physical Chemistry Volume 37 ; 37 >
-    au < ready ; Annual Review of Physical Chemistry Volume 38 ; 38 >
-    au < ready ; Annual Review of Physical Chemistry Volume 39 ; 39 >
-    au < ready ; Annual Review of Physical Chemistry Volume 40 ; 40 >
-    au < ready ; Annual Review of Physical Chemistry Volume 41 ; 41 >
-    au < ready ; Annual Review of Physical Chemistry Volume 42 ; 42 >
-    au < ready ; Annual Review of Physical Chemistry Volume 43 ; 43 >
-    au < ready ; Annual Review of Physical Chemistry Volume 44 ; 44 >
-    au < ready ; Annual Review of Physical Chemistry Volume 45 ; 45 >
-    au < ready ; Annual Review of Physical Chemistry Volume 46 ; 46 >
-    au < ready ; Annual Review of Physical Chemistry Volume 47 ; 47 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 37 ; 37 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 38 ; 38 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 39 ; 39 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 40 ; 40 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 41 ; 41 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 42 ; 42 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 43 ; 43 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 44 ; 44 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 45 ; 45 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 46 ; 46 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 47 ; 47 >
     au < released ; Annual Review of Physical Chemistry Volume 48 ; 48 >
     au < released ; Annual Review of Physical Chemistry Volume 49 ; 49 >
     au < released ; Annual Review of Physical Chemistry Volume 50 ; 50 >
@@ -1374,7 +1374,7 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Physical Chemistry Volume 55 ; 55 >
     au < released ; Annual Review of Physical Chemistry Volume 56 ; 56 >
     au < released ; Annual Review of Physical Chemistry Volume 57 ; 57 >
-    au < ready ; Annual Review of Physical Chemistry Volume 58 ; 58 >
+    au < manifest ; Annual Review of Physical Chemistry Volume 58 ; 58 >
     au < manifest ; Annual Review of Physical Chemistry Volume 59 ; 59 >
     au < manifest ; Annual Review of Physical Chemistry Volume 60 ; 60 >
     au < manifest ; Annual Review of Physical Chemistry Volume 61 ; 61 >
@@ -1606,16 +1606,16 @@ comment[pa2] = continued from previous title entry
     param[journal_id] = polisci
     param[short_journal_id] = none
 
-    au < ready ; Annual Review of Political Science Volume 1 ; 1 >
-    au < ready ; Annual Review of Political Science Volume 2 ; 2 >
+    au < manifest ; Annual Review of Political Science Volume 1 ; 1 >
+    au < manifest ; Annual Review of Political Science Volume 2 ; 2 >
     au < released ; Annual Review of Political Science Volume 3 ; 3 >
     au < released ; Annual Review of Political Science Volume 4 ; 4 >
-    au < ready ; Annual Review of Political Science Volume 5 ; 5 >
+    au < manifest ; Annual Review of Political Science Volume 5 ; 5 >
     au < released ; Annual Review of Political Science Volume 6 ; 6 >
     au < released ; Annual Review of Political Science Volume 7 ; 7 >
     au < released ; Annual Review of Political Science Volume 8 ; 8 >
     au < released ; Annual Review of Political Science Volume 9 ; 9 >
-    au < ready ; Annual Review of Political Science Volume 10 ; 10 >
+    au < manifest ; Annual Review of Political Science Volume 10 ; 10 >
     au < manifest ; Annual Review of Political Science Volume 11 ; 11 >
     au < manifest ; Annual Review of Political Science Volume 12 ; 12 >
     au < manifest ; Annual Review of Political Science Volume 13 ; 13 >
