@@ -1,5 +1,5 @@
 /*
- * $Id: NatureArticleIteratorFactory.java,v 1.2 2009-06-09 00:57:27 dshr Exp $
+ * $Id: NatureArticleIteratorFactory.java,v 1.3 2009-08-01 10:16:36 thib_gc Exp $
  */
 
 /*
@@ -34,10 +34,10 @@ package org.lockss.plugin.nature;
 
 import java.util.*;
 import java.util.regex.*;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.config.*;
 import org.lockss.daemon.PluginException;
 
 public class NatureArticleIteratorFactory implements ArticleIteratorFactory {
@@ -64,16 +64,11 @@ public class NatureArticleIteratorFactory implements ArticleIteratorFactory {
       throws PluginException {
     String jid;
     jid = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
-    int vol;
-    try {
-      vol = au.getConfiguration().getInt(ConfigParamDescr.VOLUME_NUMBER.getKey());
-    } catch (Configuration.InvalidParam ex) {
-       throw new PluginException("NatureArticleIteratorFactory: " + ex);
-    }
+    String vol = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
     subTreeRoot = jid + "/journal/v" + vol;
     log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
               ") " + subTreeRoot);
-    Pattern pat = Pattern.compile("journal/v[0-9]*/n[0-9]*/full/",
+    Pattern pat = Pattern.compile("journal/v[^/]+/n[^/]+/full/",
 				  Pattern.CASE_INSENSITIVE);
     return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
   }

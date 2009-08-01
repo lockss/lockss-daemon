@@ -1,15 +1,15 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.nature.ClockssNaturePlugin</string>
+    <string>org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>12000</long>
   </entry>
   <entry>
-    <string>text/html_filter</string>
-    <string>org.lockss.plugin.nature.NatureFilterRule</string>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_article_iterator_factory</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Nature %s Volume %d (%d)&quot;, journal_id, volume, year</string>
+    <string>&quot;Nature Publishing Group Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s&quot;, base_url, journal_id, year, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -38,16 +38,15 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Nature Plugin</string>
+    <string>Nature Publishing Group Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
-      <string>1,&quot;^%s%s/archive/index.html\?showyears=%d$&quot;, base_url, journal_id, year</string>
-      <string>1,&quot;^%s%s/journal/v%d/&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;\.(jpg|gif|css|js)$&quot;</string>
+      <string>1,&quot;^%s%s/journal/v%s/&quot;, base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -85,10 +84,10 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume</key>
-        <displayName>Volume No.</displayName>
-        <type>6</type>
-        <size>8</size>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
