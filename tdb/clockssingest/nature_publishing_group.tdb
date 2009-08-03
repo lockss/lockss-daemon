@@ -3,6 +3,10 @@
   publisher <
     name = Nature Publishing Group
   >
+
+  plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
+  param[base_url] = http://www.nature.com/
+  implicit < status ; year ; name ; param[year] ; param[volume_name] >
   
   {
 
@@ -12,8 +16,8 @@
 
     param[journal_id] = aps
 
-    au < manifest ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 29 >
-    au < manifest ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 30 >
+    au < manifest ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
+    au < manifest ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
 
@@ -45,8 +49,8 @@
 
     param[journal_id] = aja
 
-    au < manifest ; 2008 ; Asian Journal of Andrology Volume 10 ; 10 >
-    au < manifest ; 2009 ; Asian Journal of Andrology Volume 11 ; 11 >
+    au < manifest ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
+    au < manifest ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
 
   }
 
@@ -58,10 +62,10 @@
 
     param[journal_id] = bmt
 
-    au < manifest ; 2008 ; Bone Marrow Transplantation Volume 41 ; 41 >
-    au < manifest ; 2008 ; Bone Marrow Transplantation Volume 42 ; 42 >
-    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 43 ; 43 >
-    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 44 ; 44 >
+    au < manifest ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
+    au < manifest ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
+    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
+    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
 
   }
 
@@ -96,8 +100,8 @@
 
     param[journal_id] = cgt
 
-    au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 15 >
-    au < manifest ; 2009 ; Cancer Gene Therapy Volume 16 ; 16 >
+    au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
+    au < manifest ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -109,8 +113,8 @@
 
     param[journal_id] = cdd
 
-    au < manifest ; 2008 ; Cell Death and Differentiation Volume 15 ; 15 >
-    au < manifest ; 2009 ; Cell Death and Differentiation Volume 16 ; 16 >
+    au < manifest ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
+    au < manifest ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -122,8 +126,8 @@
 
     param[journal_id] = cr
 
-    au < manifest ; 2008 ; Cell Research Volume 18 ; 18 >
-    au < manifest ; 2009 ; Cell Research Volume 19 ; 19 >
+    au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
+    au < manifest ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -145,8 +149,8 @@
 
     param[journal_id] = emboj
 
-    au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 27 >
-    au < manifest ; 2009 ; The EMBO Journal Volume 28 ; 28 >
+    au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
+    au < manifest ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
 
   }
 
@@ -168,8 +172,8 @@
 
     param[journal_id] = ejcn
 
-    au < manifest ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 62 >
-    au < manifest ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 63 >
+    au < manifest ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
+    au < manifest ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
 
   }
 
@@ -201,8 +205,8 @@
 
     param[journal_id] = eye
 
-    au < manifest ; 2008 ; Eye Volume 22 ; 22 >
-    au < manifest ; 2009 ; Eye Volume 23 ; 23 >
+    au < manifest ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
+    au < manifest ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -214,8 +218,8 @@
 
     param[journal_id] = gt
 
-    au < manifest ; 2008 ; Gene Therapy Volume 15 ; 15 >
-    au < manifest ; 2009 ; Gene Therapy Volume 16 ; 16 >
+    au < manifest ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
+    au < manifest ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -227,8 +231,8 @@
 
     param[journal_id] = gene
 
-    au < manifest ; 2008 ; Genes and Immunity Volume 9 ; 9 >
-    au < manifest ; 2009 ; Genes and Immunity Volume 10 ; 10 >
+    au < manifest ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
+    au < manifest ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -240,10 +244,10 @@
 
     param[journal_id] = hdy
 
-    au < manifest ; 2008 ; Heredity Volume 100 ; 100 >
-    au < manifest ; 2008 ; Heredity Volume 101 ; 101 >
-    au < manifest ; 2009 ; Heredity Volume 102 ; 102 >
-    au < manifest ; 2009 ; Heredity Volume 103 ; 103 >
+    au < manifest ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
+    au < manifest ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
+    au < manifest ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < manifest ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
 
   }
 
@@ -255,8 +259,8 @@
 
     param[journal_id] = hr
 
-    au < manifest ; 2008 ; Hypertension Research Volume 31 ; 31 >
-    au < manifest ; 2009 ; Hypertension Research Volume 32 ; 32 >
+    au < manifest ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
+    au < manifest ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
 
   }
 
@@ -268,8 +272,8 @@
 
     param[journal_id] = icb
 
-    au < manifest ; 2008 ; Immunology & Cell Biology Volume 86 ; 86 >
-    au < manifest ; 2009 ; Immunology & Cell Biology Volume 87 ; 87 >
+    au < manifest ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
+    au < manifest ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
 
   }
 
@@ -281,8 +285,8 @@
 
     param[journal_id] = ijir
 
-    au < manifest ; 2008 ; International Journal of Impotence Research Volume 20 ; 20 >
-    au < manifest ; 2009 ; International Journal of Impotence Research Volume 21 ; 21 >
+    au < manifest ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
+    au < manifest ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
 
   }
 
@@ -294,8 +298,8 @@
 
     param[journal_id] = ijo
 
-    au < manifest ; 2008 ; International Journal of Obesity Volume 32 ; 32 >
-    au < manifest ; 2009 ; International Journal of Obesity Volume 33 ; 33 >
+    au < manifest ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
+    au < manifest ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
 
   }
 
@@ -327,8 +331,8 @@
 
     param[journal_id] = ja
 
-    au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 61 >
-    au < manifest ; 2009 ; The Journal of Antibiotics Volume 62 ; 62 >
+    au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
+    au < manifest ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
 
   }
 
@@ -350,8 +354,8 @@
 
     param[journal_id] = jes
 
-    au < manifest ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 18 >
-    au < manifest ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 19 >
+    au < manifest ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
+    au < manifest ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -363,8 +367,8 @@
 
     param[journal_id] = jhg
 
-    au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 53 >
-    au < manifest ; 2009 ; Journal of Human Genetics Volume 54 ; 54 >
+    au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
+    au < manifest ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
 
   }
 
@@ -376,8 +380,8 @@
 
     param[journal_id] = jhh
 
-    au < manifest ; 2008 ; Journal of Human Hypertension Volume 22 ; 22 >
-    au < manifest ; 2009 ; Journal of Human Hypertension Volume 23 ; 23 >
+    au < manifest ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
+    au < manifest ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -389,8 +393,8 @@
 
     param[journal_id] = jid
 
-    au < manifest ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 128 >
-    au < manifest ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 129 >
+    au < manifest ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
+    au < manifest ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
 
   }
 
@@ -402,8 +406,8 @@
 
     param[journal_id] = jp
 
-    au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 28 >
-    au < manifest ; 2009 ; Journal of Perinatology Volume 29 ; 29 >
+    au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
+    au < manifest ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
 
   }
 
@@ -435,8 +439,8 @@
 
     param[journal_id] = leu
 
-    au < manifest ; 2008 ; Leukemia Volume 22 ; 22 >
-    au < manifest ; 2009 ; Leukemia Volume 23 ; 23 >
+    au < manifest ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
+    au < manifest ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -458,8 +462,8 @@
 
     param[journal_id] = mp
 
-    au < manifest ; 2008 ; Molecular Psychiatry Volume 13 ; 13 >
-    au < manifest ; 2009 ; Molecular Psychiatry Volume 14 ; 14 >
+    au < manifest ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
+    au < manifest ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
 
   }
 
@@ -501,18 +505,18 @@
 
     param[journal_id] = nature
 
-    au < manifest ; 2008 ; Nature Volume 451 ; 451 >
-    au < manifest ; 2008 ; Nature Volume 452 ; 452 >
-    au < manifest ; 2008 ; Nature Volume 453 ; 453 >
-    au < manifest ; 2008 ; Nature Volume 454 ; 454 >
-    au < manifest ; 2008 ; Nature Volume 455 ; 455 >
-    au < manifest ; 2008 ; Nature Volume 456 ; 456 >
-    au < manifest ; 2009 ; Nature Volume 457 ; 457 >
-    au < manifest ; 2009 ; Nature Volume 458 ; 458 >
-    au < manifest ; 2009 ; Nature Volume 459 ; 459 >
-    au < manifest ; 2009 ; Nature Volume 460 ; 460 >
-    au < manifest ; 2009 ; Nature Volume 461 ; 461 >
-    au < manifest ; 2009 ; Nature Volume 462 ; 462 >
+    au < manifest ; 2008 ; Nature Volume 451 ; 2008 ; 451 >
+    au < manifest ; 2008 ; Nature Volume 452 ; 2008 ; 452 >
+    au < manifest ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
+    au < manifest ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
+    au < manifest ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
+    au < manifest ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
+    au < manifest ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
+    au < manifest ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
+    au < manifest ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
+    au < manifest ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
+    au < manifest ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
+    au < manifest ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
 
   }
 
@@ -524,8 +528,8 @@
 
     param[journal_id] = nbt
 
-    au < manifest ; 2008 ; Nature Biotechnology Volume 26 ; 26 >
-    au < manifest ; 2009 ; Nature Biotechnology Volume 27 ; 27 >
+    au < manifest ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
+    au < manifest ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
 
   }
 
@@ -537,8 +541,8 @@
 
     param[journal_id] = ncb
 
-    au < manifest ; 2008 ; Nature Cell Biology Volume 10 ; 10 >
-    au < manifest ; 2009 ; Nature Cell Biology Volume 11 ; 11 >
+    au < manifest ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
+    au < manifest ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
 
   }
 
@@ -550,8 +554,8 @@
 
     param[journal_id] = nchembio
 
-    au < manifest ; 2008 ; Nature Chemical Biology Volume 4 ; 4 >
-    au < manifest ; 2009 ; Nature Chemical Biology Volume 5 ; 5 >
+    au < manifest ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
+    au < manifest ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -563,7 +567,7 @@
 
     param[journal_id] = nchem
 
-    au < manifest ; 2009 ; Nature Chemistry Volume 1 ; 1 >
+    au < manifest ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
 
@@ -575,8 +579,8 @@
 
     param[journal_id] = ndigest
 
-    au < manifest ; 2008 ; Nature Digest Volume 5 ; 5 >
-    au < manifest ; 2009 ; Nature Digest Volume 6 ; 6 >
+    au < manifest ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
+    au < manifest ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -588,8 +592,8 @@
 
     param[journal_id] = ng
 
-    au < manifest ; 2008 ; Nature Genetics Volume 40 ; 40 >
-    au < manifest ; 2009 ; Nature Genetics Volume 41 ; 41 >
+    au < manifest ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
+    au < manifest ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
 
   }
 
@@ -601,8 +605,8 @@
 
     param[journal_id] = ngeo
 
-    au < manifest ; 2008 ; Nature Geoscience Volume 1 ; 1 >
-    au < manifest ; 2009 ; Nature Geoscience Volume 2 ; 2 >
+    au < manifest ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
+    au < manifest ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
 
   }
 
@@ -614,8 +618,8 @@
 
     param[journal_id] = ni
 
-    au < manifest ; 2008 ; Nature Immunology Volume 9 ; 9 >
-    au < manifest ; 2009 ; Nature Immunology Volume 10 ; 10 >
+    au < manifest ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
+    au < manifest ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -627,8 +631,8 @@
 
     param[journal_id] = nmat
 
-    au < manifest ; 2008 ; Nature Materials Volume 7 ; 7 >
-    au < manifest ; 2009 ; Nature Materials Volume 8 ; 8 >
+    au < manifest ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
+    au < manifest ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
 
   }
 
@@ -640,8 +644,8 @@
 
     param[journal_id] = nm
 
-    au < manifest ; 2008 ; Nature Medicine Volume 14 ; 14 >
-    au < manifest ; 2009 ; Nature Medicine Volume 15 ; 15 >
+    au < manifest ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
+    au < manifest ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
 
   }
 
@@ -653,8 +657,8 @@
 
     param[journal_id] = nmeth
 
-    au < manifest ; 2008 ; Nature Methods Volume  ;  >
-    au < manifest ; 2009 ; Nature Methods Volume  ;  >
+    au < manifest ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
+    au < manifest ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -666,8 +670,8 @@
 
     param[journal_id] = nnano
 
-    au < manifest ; 2008 ; Nature Nanotechnology Volume 5 ; 5 >
-    au < manifest ; 2009 ; Nature Nanotechnology Volume 6 ; 6 >
+    au < manifest ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
+    au < manifest ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
 
   }
 
@@ -679,8 +683,8 @@
 
     param[journal_id] = neuro
 
-    au < manifest ; 2008 ; Nature Neuroscience Volume 11 ; 11 >
-    au < manifest ; 2009 ; Nature Neuroscience Volume 12 ; 12 >
+    au < manifest ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
+    au < manifest ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
 
   }
 
@@ -692,8 +696,8 @@
 
     param[journal_id] = nphoton
 
-    au < manifest ; 2008 ; Nature Photonics Volume 2 ; 2 >
-    au < manifest ; 2009 ; Nature Photonics Volume 3 ; 3 >
+    au < manifest ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
+    au < manifest ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
 
   }
 
@@ -705,8 +709,8 @@
 
     param[journal_id] = nphys
 
-    au < manifest ; 2008 ; Nature Physics Volume 4 ; 4 >
-    au < manifest ; 2009 ; Nature Physics Volume 5 ; 5 >
+    au < manifest ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
+    au < manifest ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -718,8 +722,8 @@
 
     param[journal_id] = nprot
 
-    au < manifest ; 2008 ; Nature Protocols Volume 3 ; 3 >
-    au < manifest ; 2009 ; Nature Protocols Volume 4 ; 4 >
+    au < manifest ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
+    au < manifest ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
 
   }
 
@@ -731,8 +735,8 @@
 
     param[journal_id] = nrc
 
-    au < manifest ; 2008 ; Nature Reviews Cancer Volume 8 ; 8 >
-    au < manifest ; 2009 ; Nature Reviews Cancer Volume 9 ; 9 >
+    au < manifest ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
+    au < manifest ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
 
   }
 
@@ -744,8 +748,8 @@
 
     param[journal_id] = nrcardio
 
-    au < manifest ; 2008 ; Nature Reviews Cardiology Volume 5 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Cardiology Volume 6 ; 6 >
+    au < manifest ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -757,8 +761,8 @@
 
     param[journal_id] = nrclinonc
 
-    au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 6 >
+    au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -770,8 +774,8 @@
 
     param[journal_id] = nrd
 
-    au < manifest ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 7 >
-    au < manifest ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 8 >
+    au < manifest ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
+    au < manifest ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
 
   }
 
@@ -783,8 +787,8 @@
 
     param[journal_id] = nrendo
 
-    au < manifest ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 5 >
+    au < manifest ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -796,8 +800,8 @@
 
     param[journal_id] = nrgastro
 
-    au < manifest ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 6 >
+    au < manifest ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -809,8 +813,8 @@
 
     param[journal_id] = nrg
 
-    au < manifest ; 2008 ; Nature Reviews Genetics Volume 9 ; 9 >
-    au < manifest ; 2009 ; Nature Reviews Genetics Volume 10 ; 10 >
+    au < manifest ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
+    au < manifest ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -822,8 +826,8 @@
 
     param[journal_id] = nri
 
-    au < manifest ; 2008 ; Nature Reviews Immunology Volume 8 ; 8 >
-    au < manifest ; 2009 ; Nature Reviews Immunology Volume 9 ; 9 >
+    au < manifest ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
+    au < manifest ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
 
   }
 
@@ -835,8 +839,8 @@
 
     param[journal_id] = nrmicro
 
-    au < manifest ; 2008 ; Nature Reviews Microbiology Volume 6 ; 6 >
-    au < manifest ; 2009 ; Nature Reviews Microbiology Volume 7 ; 7 >
+    au < manifest ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
+    au < manifest ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
 
   }
 
@@ -848,8 +852,8 @@
 
     param[journal_id] = nrm
 
-    au < manifest ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 9 >
-    au < manifest ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 10 >
+    au < manifest ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
+    au < manifest ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -861,8 +865,8 @@
 
     param[journal_id] = nrneph
 
-    au < manifest ; 2008 ; Nature Reviews Nephrology Volume 4 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Nephrology Volume 5 ; 5 >
+    au < manifest ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -874,8 +878,8 @@
 
     param[journal_id] = nrneurol
 
-    au < manifest ; 2008 ; Nature Reviews Neurology Volume  ;  >
-    au < manifest ; 2009 ; Nature Reviews Neurology Volume  ;  >
+    au < manifest ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -887,8 +891,8 @@
 
     param[journal_id] = nrn
 
-    au < manifest ; 2008 ; Nature Reviews Neuroscience Volume 4 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Neuroscience Volume 5 ; 5 >
+    au < manifest ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
+    au < manifest ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -900,8 +904,8 @@
 
     param[journal_id] = nrrheum
 
-    au < manifest ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 5 >
+    au < manifest ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
+    au < manifest ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -913,8 +917,8 @@
 
     param[journal_id] = nrurol
 
-    au < manifest ; 2008 ; Nature Reviews Urology Volume 5 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Urology Volume 6 ; 6 >
+    au < manifest ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
+    au < manifest ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -926,8 +930,8 @@
 
     param[journal_id] = nsmb
 
-    au < manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 15 >
-    au < manifest ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 16 >
+    au < manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
+    au < manifest ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -959,8 +963,8 @@
 
     param[journal_id] = onc
 
-    au < manifest ; 2008 ; Oncogene Volume 27 ; 27 >
-    au < manifest ; 2009 ; Oncogene Volume 28 ; 28 >
+    au < manifest ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
+    au < manifest ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
 
   }
 
@@ -972,8 +976,8 @@
 
     param[journal_id] = tpj
 
-    au < manifest ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 8 >
-    au < manifest ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 9 >
+    au < manifest ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
+    au < manifest ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
 
   }
 
@@ -985,8 +989,8 @@
 
     param[journal_id] = pcan
 
-    au < manifest ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 11 >
-    au < manifest ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 12 >
+    au < manifest ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
+    au < manifest ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
 
   }
 
@@ -1008,8 +1012,8 @@
 
     param[journal_id] = sc
 
-    au < manifest ; 2008 ; Spinal Cord Volume 46 ; 46 >
-    au < manifest ; 2009 ; Spinal Cord Volume 47 ; 47 >
+    au < manifest ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
+    au < manifest ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
 
   }
 
