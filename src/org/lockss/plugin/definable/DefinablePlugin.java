@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.41.2.1 2009-08-03 04:25:11 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.41.2.2 2009-08-03 04:47:16 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_PARENT = "plugin_parent";
   public static final String KEY_PLUGIN_PARENT_VERSION = "plugin_parent_version";
   public static final String KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY =
-    "crawl_url_comparator_factory";
+    "plugin_crawl_url_comparator_factory";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
