@@ -1,9 +1,9 @@
 /*
- * $Id: BasePlugin.java,v 1.57 2009-06-01 07:31:19 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.57.4.1 2009-08-03 04:25:11 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -36,6 +36,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.rewriter.*;
 import org.lockss.plugin.wrapper.*;
+import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 
 /**
@@ -440,7 +441,11 @@ public abstract class BasePlugin
   protected ExploderHelper getExploderHelper() {
     return null;
   }
-  protected ExploderHelper exploderHelper = null;
+
+  protected Comparator<CrawlUrl> getCrawlUrlComparator(ArchivalUnit au)
+      throws PluginException.LinkageError {
+    return null;
+  }
 
   /**
    * Returns a filter rule from the cache if found, otherwise calls

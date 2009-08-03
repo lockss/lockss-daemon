@@ -1,10 +1,10 @@
 /*
- * $Id: NullPlugin.java,v 1.98 2009-05-23 18:06:26 dshr Exp $
+ * $Id: NullPlugin.java,v 1.98.4.1 2009-08-03 04:25:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -522,6 +522,10 @@ public class NullPlugin {
     }
 
     public TypedEntryMap getProperties() {
+      return null;
+    }
+
+    public Comparator<CrawlUrl> getCrawlUrlComparator() {
       return null;
     }
 
