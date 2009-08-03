@@ -1,10 +1,10 @@
 /*
- * $Id: DefinablePlugin.java,v 1.41 2009-06-17 06:59:33 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.42 2009-08-03 04:35:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,6 +42,7 @@ import org.lockss.rewriter.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -79,9 +80,12 @@ public class DefinablePlugin extends BasePlugin {
     "plugin_per_host_permission_path";
   public static final String KEY_PLUGIN_PARENT = "plugin_parent";
   public static final String KEY_PLUGIN_PARENT_VERSION = "plugin_parent_version";
+  public static final String KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY =
+    "crawl_url_comparator_factory";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
+
   public static final String MAP_SUFFIX = ".xml";
 
   public static final String CRAWL_TYPE_HTML_LINKS = "HTML Links";
@@ -530,6 +534,8 @@ public class DefinablePlugin extends BasePlugin {
     return urlNorm;
   }
 
+  protected ExploderHelper exploderHelper = null;
+
   protected ExploderHelper getExploderHelper() {
     if (exploderHelper == null) {
       String helperClass =
@@ -541,6 +547,31 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return exploderHelper;
+  }
+
+  protected CrawlUrlComparatorFactory crawlUrlComparatorFactory = null;
+
+  protected CrawlUrlComparatorFactory getCrawlUrlComparatorFactory() {
+    if (crawlUrlComparatorFactory == null) {
+      String factClass =
+	definitionMap.getString(DefinablePlugin.KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY,
+				null);
+      if (factClass != null) {
+	crawlUrlComparatorFactory =
+	  (CrawlUrlComparatorFactory)newAuxClass(factClass,
+						 CrawlUrlComparatorFactory.class);
+      }
+    }
+    return crawlUrlComparatorFactory;
+  }
+
+  protected Comparator<CrawlUrl> getCrawlUrlComparator(ArchivalUnit au)
+      throws PluginException.LinkageError {
+    CrawlUrlComparatorFactory fact = getCrawlUrlComparatorFactory();
+    if (fact == null) {
+      return null;
+    }
+    return fact.createCrawlUrlComparator(au);
   }
 
   protected FilterRule constructFilterRule(String contentType) {

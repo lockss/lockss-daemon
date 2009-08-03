@@ -1,10 +1,10 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.134 2009-05-23 18:06:26 dshr Exp $
+ * $Id: BaseArchivalUnit.java,v 1.135 2009-08-03 04:35:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -423,6 +423,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return plugin.siteNormalizeUrl(url, this);
   }
 
+  public Comparator<CrawlUrl> getCrawlUrlComparator()
+      throws PluginException.LinkageError {
+    return plugin.getCrawlUrlComparator(this);
+  }
+
   /**
    * Return the CachedUrlSet representing the entire contents
    * of this AU
@@ -548,10 +553,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public String getName() {
     return paramMap.getString(KEY_AU_TITLE, auName);
-  }
-
-  protected UrlNormalizer makeUrlNormalizer() {
-    return null;
   }
 
 
