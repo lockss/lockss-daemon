@@ -1,10 +1,10 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.29 2008-05-19 07:38:58 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.30 2009-08-03 04:32:38 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -777,56 +777,72 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEmpty(aus.getCrawlUrls());
   }
 
-  public void testCrawlListPreservesUncrawledUrls() {
-    setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
+//   public void testCrawlListPreservesUncrawledUrls() {
+//     setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
+//     String url1= "http://www.example.com/link1.html";
+//     String url2= "http://www.example.com/link2.html";
+//     String url3= "http://www.example.com/link3.html";
 
-    spec.setCrawlWindow(new MyMockCrawlWindow(3)); //permission page & first URL
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2,
-                                                                     url3));
-    crawlUrls(ListUtil.list(url1, url2, url3));
-    // assertEquals(SetUtil.set(url2, url3), aus.getCrawlUrls());
-    // crawlUrls in AuState has to be a HashSet for historical reasons
-    // so we can't predict the order in which the URLs will be crawled
-    // so all we can do here is to check how many there are.
-    assertEquals(2, aus.getCrawlUrls().size());
+//     spec.setCrawlWindow(new MyMockCrawlWindow(3)); //permission page & first URL
+//     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2,
+//                                                                      url3));
+//     crawlUrls(ListUtil.list(url1, url2, url3));
+//     // assertEquals(SetUtil.set(url2, url3), aus.getCrawlUrls());
+//     // crawlUrls in AuState has to be a HashSet for historical reasons
+//     // so we can't predict the order in which the URLs will be crawled
+//     // so all we can do here is to check how many there are.
+//     assertEquals(2, aus.getCrawlUrls().size());
+//   }
+
+//   public void testCrawlListDoesntPreserveUncrawledUrlsIfParam() {
+//     setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "false");
+//     String url1= "http://www.example.com/link1.html";
+//     String url2= "http://www.example.com/link2.html";
+//     String url3= "http://www.example.com/link3.html";
+
+//     spec.setCrawlWindow(new MyMockCrawlWindow(3));
+//     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2,
+//                                                                      url3));
+//     crawlUrls(ListUtil.list(url1, url2, url3));
+//     assertEquals(SetUtil.set(), aus.getCrawlUrls());
+//   }
+
+//   public void testUpdatedCrawlListCalledForEachFetchIfParam() {
+//     setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
+//     String url1= "http://www.example.com/link1.html";
+//     String url2= "http://www.example.com/link2.html";
+//     String url3= "http://www.example.com/link3.html";
+
+//     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
+//     crawlUrls(ListUtil.list(url1, url2, url3));
+//     aus.assertUpdatedCrawlListCalled(3); //not called for startUrl
+//   }
+
+//   public void testUpdatedCrawlListCalledForEachFetch() {
+//     setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "false");
+//     String url1= "http://www.example.com/link1.html";
+//     String url2= "http://www.example.com/link2.html";
+//     String url3= "http://www.example.com/link3.html";
+
+//     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
+//     crawlUrls(ListUtil.list(url1, url2, url3));
+//     aus.assertUpdatedCrawlListCalled(0); //not called for startUrl
+//   }
+
+  List<String> queueUrlList(CrawlQueue cq) {
+    List<String> res = new ArrayList<String>();
+    for (CrawlUrl curl : queueList(cq)) {
+      res.add(curl.getUrl());
+    }
+    return res;
   }
 
-  public void testCrawlListDoesntPreserveUncrawledUrlsIfParam() {
-    setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "false");
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    spec.setCrawlWindow(new MyMockCrawlWindow(3));
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2,
-                                                                     url3));
-    crawlUrls(ListUtil.list(url1, url2, url3));
-    assertEquals(SetUtil.set(), aus.getCrawlUrls());
-  }
-
-  public void testUpdatedCrawlListCalledForEachFetchIfParam() {
-    setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
-    crawlUrls(ListUtil.list(url1, url2, url3));
-    aus.assertUpdatedCrawlListCalled(3); //not called for startUrl
-  }
-
-  public void testUpdatedCrawlListCalledForEachFetch() {
-    setProperty(TestableFollowLinkCrawler.PARAM_PERSIST_CRAWL_LIST, "false");
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
-    crawlUrls(ListUtil.list(url1, url2, url3));
-    aus.assertUpdatedCrawlListCalled(0); //not called for startUrl
+  List<CrawlUrl> queueList(CrawlQueue cq) {
+    List<CrawlUrl> res = new ArrayList<CrawlUrl>();
+    while (!cq.isEmpty()) {
+      res.add(cq.remove());
+    }
+    return res;
   }
 
   public void testMyLinkExtractorCallback() {
@@ -841,27 +857,29 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 	  return StringUtil.replaceString(url, "SESSION/", "");
 	}
       };
-    Set extractedUrls = new HashSet();
+    CrawlUrl curl = new CrawlUrl("referring.url", 0);
+    CrawlQueue cq = new CrawlQueue(null);
     TestableFollowLinkCrawler.MyLinkExtractorCallback mfuc =
-      crawler.newFoundUrlCallback(Collections.EMPTY_SET,
-					       extractedUrls, mau);
+      crawler.newFoundUrlCallback(mau, curl, cq, new HashMap(), new HashMap());
+
     mfuc.foundLink("http://www.example.com/foo.bar");
     mfuc.foundLink("http://www.example.com/SESSION/foo.bar");
     mfuc.foundLink("HTTP://www.example.com/SESSION/foo.bar");
-    assertEquals(SetUtil.set("http://www.example.com/foo.bar"), extractedUrls);
-    extractedUrls.clear();
+    assertEquals(ListUtil.list("http://www.example.com/foo.bar"),
+		 queueUrlList(cq));
     // illegal url gets added depending on path traversal action
     mfuc.foundLink("http://www.example.com/foo/../..");
     switch (CurrentConfig.getIntParam(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
 				      UrlUtil.DEFAULT_PATH_TRAVERSAL_ACTION)) {
     case UrlUtil.PATH_TRAVERSAL_ACTION_ALLOW:
-      assertEquals(SetUtil.set("http://www.example.com/../"), extractedUrls);
+      assertEquals(ListUtil.list("http://www.example.com/../"),
+		   queueUrlList(cq));
       break;
     case UrlUtil.PATH_TRAVERSAL_ACTION_REMOVE:
-      assertEquals(SetUtil.set("http://www.example.com/"), extractedUrls);
+      assertEquals(ListUtil.list("http://www.example.com/"), queueUrlList(cq));
       break;
     case UrlUtil.PATH_TRAVERSAL_ACTION_THROW:
-      assertEmpty(extractedUrls);
+      assertTrue(cq.isEmpty());
       break;
     }
   }
@@ -1219,15 +1237,23 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 		    null);
     }
 
-    MyLinkExtractorCallback newFoundUrlCallback(Set parsedPages,
-						Collection extractedUrls,
-						ArchivalUnit au) {
-      return new MyLinkExtractorCallback(parsedPages, extractedUrls, au);
+    MyLinkExtractorCallback
+      newFoundUrlCallback(ArchivalUnit au,
+			  CrawlUrl curl,
+			  CrawlQueue fetchQueue,
+			  Map<String,CrawlUrl> processedUrls,
+			  Map<String,CrawlUrl> maxDepthUrls) {
+      return new MyLinkExtractorCallback(au, curl, fetchQueue,
+					 processedUrls, maxDepthUrls);
     }
 
     protected boolean shouldFollowLink(){
       //always return true here
       return true;
+    }
+
+    protected int getRefetchDepth() {
+      return 0;
     }
 
     /** suppress these actions */
