@@ -1,10 +1,10 @@
 /*
- * $Id: OaiCrawler.java,v 1.19 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.19.30.1 2009-08-03 04:23:26 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -85,6 +85,10 @@ public class OaiCrawler extends FollowLinkCrawler {
     return true;
   }
 
+  protected int getRefetchDepth() {
+    return 0;
+  }
+
   /**
    * Here for the test code to override
    * @return a new instance of OaiHandler
@@ -140,7 +144,6 @@ public class OaiCrawler extends FollowLinkCrawler {
         logger.debug2("Trying to process " +url);
 
         if (spec.isIncluded(url)) {
-	  crawlStatus.addPendingUrl(url);
 	  oaiStartUrls.add(url);
         } else {
           logger.debug("OAI response url not in crawl spec: " + url);

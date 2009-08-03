@@ -1,10 +1,10 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.70 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.70.14.1 2009-08-03 04:23:26 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,7 +63,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   protected String startUrl = "http://www.example.com/index.html";
   protected String permissionPage = "http://www.example.com/permission.html";
   protected List startUrls;
-  protected BaseCrawler crawler = null;
+  protected MyNewContentCrawler crawler = null;
   protected MockLinkExtractor extractor = new MockLinkExtractor();
 
 
@@ -93,6 +93,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(NewContentCrawler.PARAM_DEFAULT_RETRY_DELAY, "0");
     p.setProperty(FollowLinkCrawler.PARAM_MIN_RETRY_DELAY, "0");
+    p.setProperty("org.lockss.log.FollowLinkCrawler.level", "3");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
@@ -216,9 +217,11 @@ public class TestNewContentCrawler extends LockssTestCase {
       crawlRule.addUrlToCrawl(curUrl);
     }
 
-    spec = new SpiderCrawlSpec(urls, ListUtil.list(permissionPage), crawlRule, 1);
+    spec = new SpiderCrawlSpec(urls, ListUtil.list(permissionPage),
+			       crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(1));
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(1));
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
@@ -911,6 +914,163 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
+  List permuteBy(List data, List<Integer> indices) {
+    List res = new ArrayList(indices.size());
+    for (int ix : indices) {
+      res.add(data.get(ix));
+    }
+    return res;
+  }
+
+  public void testPriorityQueue(int refetchDepth,
+				boolean hasContent,
+				Comparator<CrawlUrl> cmp,
+				List expFetched) {
+    testPriorityQueue(refetchDepth, hasContent, cmp, expFetched, true);
+  }
+
+  public void testPriorityQueue(int refetchDepth,
+				boolean hasContent,
+				Comparator<CrawlUrl> cmp,
+				List expFetched,
+				boolean expResult) {
+    List permissionList = ListUtil.list(permissionPage);
+
+    spec = new SpiderCrawlSpec(startUrls, permissionList,
+			       crawlRule, refetchDepth);
+    mau.setCrawlSpec(spec);
+    mau.setCrawlUrlComparator(cmp);
+
+
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(1));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1= "http://www.example.com/issue1/toc";
+    String url2= "http://www.example.com/issue1/art1.html";
+    String url3= "http://www.example.com/issue1/art2.html";
+    String url4= "http://www.example.com/issue2/toc";
+    String url5= "http://www.example.com/issue2/art1.html";
+    String url6= "http://www.example.com/issue2/art2.html";
+    String url7= "http://www.example.com/extra/arx.html";
+    String url8= "http://www.example.com/images/img1.png";
+    String url9= "http://www.example.com/images/img2.png";
+
+    List<String> urls = ListUtil.list(startUrl,
+				      url1, url2, url3, url4,
+				      url5, url6, url7, url8, url9);
+    //    mau.setLinkExtractor(extractor);
+    extractor.addUrlsToReturn(startUrl, SetUtil.set(url1, url4));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url2, url3));
+    extractor.addUrlsToReturn(url2, SetUtil.set(url7));
+    extractor.addUrlsToReturn(url7, SetUtil.set(url8));
+    extractor.addUrlsToReturn(url4, SetUtil.set(url5, url6, url8));
+    extractor.addUrlsToReturn(url6, SetUtil.set(url9));
+
+    mau.addUrl(startUrl, false, true);
+    for (String url : urls) {
+      mau.addUrl(url, hasContent, true);
+      crawlRule.addUrlToCrawl(url);
+    }
+    assertEquals(expResult, crawler.doCrawl());
+
+    assertEquals(permuteBy(urls, expFetched), crawler.getFetchedUrls());
+  }
+
+  public void testPriorityQueueBreadthFirst1() {
+    testPriorityQueue(1, false, null,
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9));
+  }
+
+  public void testPriorityQueueBreadthFirst3() {
+    testPriorityQueue(3, false, null,
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9));
+  }
+
+  public void testPriorityQueueBreadthFirstRecrawl1() {
+    testPriorityQueue(1, true, null,
+		      ListUtil.list(0));
+  }
+
+  public void testPriorityQueueBreadthFirstRecrawl3() {
+    testPriorityQueue(3, true, null,
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6));
+  }
+
+  public void testPriorityQueueAlphabetic1() {
+    testPriorityQueue(1, false, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 7, 8, 3, 4, 5, 6, 9));
+  }
+
+  public void testPriorityQueueAlphabetic3() {
+    testPriorityQueue(3, false, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 7, 8, 3, 4, 5, 6, 9));
+  }
+
+  public void testPriorityQueueAlphabeticRecrawl1() {
+    testPriorityQueue(1, true, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0));
+  }
+
+  public void testPriorityQueueAlphabeticRecrawl3() {
+    testPriorityQueue(3, true, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 3, 4, 8, 5, 6));
+  }
+
+  public void testPriorityQueueBreadthFirst1MaxDepth4() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "4");
+    testPriorityQueue(1, false, null,
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9));
+  }
+
+  public void testPriorityQueueBreadthFirst1MaxDepth3() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "3");
+    testPriorityQueue(1, false, null,
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6),
+		      false);
+  }
+
+  public void testPriorityQueueAlphabetic1MaxDepth4() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "4");
+    testPriorityQueue(1, false, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 7, 3, 4, 8, 5, 6, 9));
+  }
+
+  public void testPriorityQueueAlphabetic1MaxDepth3() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "3");
+    testPriorityQueue(1, false, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 3, 4, 8, 5, 6),
+		      false);
+  }
+
+  public void testPriorityQueueAlphabeticRecrawl1MaxDepth4() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "4");
+    testPriorityQueue(1, true, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0));
+  }
+
+  public void testPriorityQueueAlphabeticRecrawl3MaxDepth4() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "4");
+    testPriorityQueue(3, true, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 3, 4, 8, 5, 6));
+  }
+
+  public void testPriorityQueueAlphabeticRecrawl3MaxDepth3() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
+				  "3");
+    testPriorityQueue(3, true, new AlphabeticUrlOrderComparator(),
+		      ListUtil.list(0, 1, 2, 3, 4, 8, 5, 6),
+		      false);
+  }
+
+
   public void testPerHostPermissionOk() {
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
 			       crawlRule, 1);
@@ -1072,6 +1232,8 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   private static class MyNewContentCrawler extends NewContentCrawler {
+    List fetchedUrls = new ArrayList();
+    
     protected MyNewContentCrawler(ArchivalUnit au, CrawlSpec spec,
 				  AuState aus) {
       super(au, spec, aus);
@@ -1081,12 +1243,24 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
     // Ordered set makes results easier to check
+    @Override
     protected Set newSet() {
       return new ListOrderedSet();
     }
 
     /** suppress these actions */
+    @Override
     protected void doCrawlEndActions() {
+    }
+
+    protected void cacheWithRetries(UrlCacher uc)
+	throws IOException {
+      fetchedUrls.add(uc.getUrl());
+      super.cacheWithRetries(uc);
+    }
+
+    List getFetchedUrls() {
+      return fetchedUrls;
     }
   }
 
@@ -1219,6 +1393,12 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
     public void setFatal() {
       attributeBits.set(CacheException.ATTRIBUTE_FATAL);
+    }
+  }
+
+  static class AlphabeticUrlOrderComparator implements Comparator<CrawlUrl> {
+    public int compare(CrawlUrl curl1, CrawlUrl curl2) {
+      return curl1.getUrl().compareTo(curl2.getUrl());
     }
   }
 

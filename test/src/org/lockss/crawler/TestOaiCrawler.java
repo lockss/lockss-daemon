@@ -1,10 +1,10 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.17 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.17.40.1 2009-08-03 04:23:26 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -363,11 +363,13 @@ public class TestOaiCrawler extends LockssTestCase {
     }
 
     // Ordered set makes results easier to check
+    @Override
     protected Set newSet() {
       return new ListOrderedSet();
     }
 
     /** suppress these actions */
+    @Override
     protected void doCrawlEndActions() {
     }
   }
