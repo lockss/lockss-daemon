@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.70.14.1 2009-08-03 04:23:26 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.70.14.2 2009-08-04 02:19:44 tlipkis Exp $
  */
 
 /*
@@ -960,13 +960,14 @@ public class TestNewContentCrawler extends LockssTestCase {
     List<String> urls = ListUtil.list(startUrl,
 				      url1, url2, url3, url4,
 				      url5, url6, url7, url8, url9);
-    //    mau.setLinkExtractor(extractor);
     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1, url4));
     extractor.addUrlsToReturn(url1, SetUtil.set(url2, url3));
     extractor.addUrlsToReturn(url2, SetUtil.set(url7));
     extractor.addUrlsToReturn(url7, SetUtil.set(url8));
     extractor.addUrlsToReturn(url4, SetUtil.set(url5, url6, url8));
     extractor.addUrlsToReturn(url6, SetUtil.set(url9));
+    // Add a cycle for good measure
+    extractor.addUrlsToReturn(url9, SetUtil.set(url2));
 
     mau.addUrl(startUrl, false, true);
     for (String url : urls) {
