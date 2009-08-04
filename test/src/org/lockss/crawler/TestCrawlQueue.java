@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlQueue.java,v 1.2 2009-08-03 04:31:16 tlipkis Exp $
+ * $Id: TestCrawlQueue.java,v 1.3 2009-08-04 02:19:56 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 public class TestCrawlQueue extends LockssTestCase {
   public void testIll() {
     CrawlQueue cq = new CrawlQueue(null);
-    CrawlUrl c1 = new CrawlUrl("u1", 0);
+    CrawlUrlData c1 = new CrawlUrlData("u1", 0);
     assertTrue(cq.isEmpty());
     cq.add(c1);
     assertFalse(cq.isEmpty());
@@ -52,11 +52,11 @@ public class TestCrawlQueue extends LockssTestCase {
 
   public void testDefaultSort() {
     CrawlQueue cq = new CrawlQueue(null);
-    CrawlUrl c1 = new CrawlUrl("x1", 0);
-    CrawlUrl c2 = new CrawlUrl("u3", 1);
-    CrawlUrl c3 = new CrawlUrl("u2", 1);
-    CrawlUrl c4 = new CrawlUrl("u4", 2);
-    CrawlUrl c5 = new CrawlUrl("a5", 3);
+    CrawlUrlData c1 = new CrawlUrlData("x1", 0);
+    CrawlUrlData c2 = new CrawlUrlData("u3", 1);
+    CrawlUrlData c3 = new CrawlUrlData("u2", 1);
+    CrawlUrlData c4 = new CrawlUrlData("u4", 2);
+    CrawlUrlData c5 = new CrawlUrlData("a5", 3);
     
     assertTrue(cq.isEmpty());
     assertNull(cq.get(c4.getUrl()));
@@ -84,11 +84,11 @@ public class TestCrawlQueue extends LockssTestCase {
 
   public void testCustomSort() {
     CrawlQueue cq = new CrawlQueue(new DeepestFirstUrlOrderComparator());
-    CrawlUrl c1 = new CrawlUrl("u1", 0);
-    CrawlUrl c2 = new CrawlUrl("u3", 1);
-    CrawlUrl c3 = new CrawlUrl("u2", 1);
-    CrawlUrl c4 = new CrawlUrl("u4", 2);
-    CrawlUrl c5 = new CrawlUrl("u5", 3);
+    CrawlUrlData c1 = new CrawlUrlData("u1", 0);
+    CrawlUrlData c2 = new CrawlUrlData("u3", 1);
+    CrawlUrlData c3 = new CrawlUrlData("u2", 1);
+    CrawlUrlData c4 = new CrawlUrlData("u4", 2);
+    CrawlUrlData c5 = new CrawlUrlData("u5", 3);
     
     assertTrue(cq.isEmpty());
     assertNull(cq.get(c4.getUrl()));

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.30 2009-08-03 04:32:38 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.31 2009-08-04 02:19:56 tlipkis Exp $
  */
 
 /*
@@ -857,7 +857,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 	  return StringUtil.replaceString(url, "SESSION/", "");
 	}
       };
-    CrawlUrl curl = new CrawlUrl("referring.url", 0);
+    CrawlUrlData curl = new CrawlUrlData("referring.url", 0);
     CrawlQueue cq = new CrawlQueue(null);
     TestableFollowLinkCrawler.MyLinkExtractorCallback mfuc =
       crawler.newFoundUrlCallback(mau, curl, cq, new HashMap(), new HashMap());
@@ -1239,10 +1239,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     MyLinkExtractorCallback
       newFoundUrlCallback(ArchivalUnit au,
-			  CrawlUrl curl,
+			  CrawlUrlData curl,
 			  CrawlQueue fetchQueue,
-			  Map<String,CrawlUrl> processedUrls,
-			  Map<String,CrawlUrl> maxDepthUrls) {
+			  Map<String,CrawlUrlData> processedUrls,
+			  Map<String,CrawlUrlData> maxDepthUrls) {
       return new MyLinkExtractorCallback(au, curl, fetchQueue,
 					 processedUrls, maxDepthUrls);
     }

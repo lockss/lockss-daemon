@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlUrl.java,v 1.2 2009-08-03 04:31:36 tlipkis Exp $
+ * $Id: TestCrawlUrlData.java,v 1.2 2009-08-04 02:19:56 tlipkis Exp $
  */
 
 /*
@@ -35,19 +35,19 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
-public class TestCrawlUrl extends LockssTestCase {
+public class TestCrawlUrlData extends LockssTestCase {
   public void testIll() {
     try {
-      new CrawlUrl(null, 3);
+      new CrawlUrlData(null, 3);
       fail("null URL should throw");
     } catch (NullPointerException e) {
     }
     try {
-      new CrawlUrl("bar", -1);
+      new CrawlUrlData("bar", -1);
       fail("negative depth should throw");
     } catch (IllegalArgumentException e) {
     }
-    CrawlUrl cu1 = new CrawlUrl("foo", 3);
+    CrawlUrlData cu1 = new CrawlUrlData("foo", 3);
     try {
       cu1.encounteredAtDepth(-1);
       fail("negative depth should throw");
@@ -56,7 +56,7 @@ public class TestCrawlUrl extends LockssTestCase {
   }
 
   public void testFlags() {
-    CrawlUrl curl = new CrawlUrl("foo", 7);
+    CrawlUrlData curl = new CrawlUrlData("foo", 7);
     assertFalse(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
@@ -87,10 +87,10 @@ public class TestCrawlUrl extends LockssTestCase {
   }
 
   class Event {
-    CrawlUrl curl;
+    CrawlUrlData curl;
     int from;
     int to;
-    Event(CrawlUrl curl, int from, int to) {
+    Event(CrawlUrlData curl, int from, int to) {
       this.curl = curl;
       this.from = from;
       this.to = to;
@@ -108,10 +108,10 @@ public class TestCrawlUrl extends LockssTestCase {
     }
   }
 
-  class EventRecorder implements CrawlUrl.ReducedDepthHandler {
+  class EventRecorder implements CrawlUrlData.ReducedDepthHandler {
     List<Event> events = new ArrayList<Event>();
 
-    public void depthReduced(CrawlUrl curl, int from, int to) {
+    public void depthReduced(CrawlUrlData curl, int from, int to) {
       events.add(new Event(curl, from, to));
     }
     Event getEvent(int n) {
@@ -120,13 +120,13 @@ public class TestCrawlUrl extends LockssTestCase {
   }
 
   public void testNoChildren() {
-    CrawlUrl cu1 = new CrawlUrl("foo", 0);
+    CrawlUrlData cu1 = new CrawlUrlData("foo", 0);
     assertEquals("foo", cu1.getUrl());
     assertEquals(0, cu1.getDepth());
     cu1.encounteredAtDepth(3);
     assertEquals(0, cu1.getDepth());
 
-    CrawlUrl cu2 = new CrawlUrl("http://foo.com/bar", 8);
+    CrawlUrlData cu2 = new CrawlUrlData("http://foo.com/bar", 8);
     assertEquals("http://foo.com/bar", cu2.getUrl());
     assertEquals(8, cu2.getDepth());
     cu2.encounteredAtDepth(9);
@@ -145,13 +145,13 @@ public class TestCrawlUrl extends LockssTestCase {
   public void testChildren() {
     EventRecorder er = new EventRecorder();
 
-    CrawlUrl cu1 = new CrawlUrl("c1", 0);
-    CrawlUrl cu2 = new CrawlUrl("c2", 2);
-    CrawlUrl cu3 = new CrawlUrl("c3", 4);
-    CrawlUrl cu4 = new CrawlUrl("c4", 5);
-    CrawlUrl cu5 = new CrawlUrl("c5", 6);
-    CrawlUrl cu6 = new CrawlUrl("c6", 8);
-    CrawlUrl cu7 = new CrawlUrl("c6", 2);
+    CrawlUrlData cu1 = new CrawlUrlData("c1", 0);
+    CrawlUrlData cu2 = new CrawlUrlData("c2", 2);
+    CrawlUrlData cu3 = new CrawlUrlData("c3", 4);
+    CrawlUrlData cu4 = new CrawlUrlData("c4", 5);
+    CrawlUrlData cu5 = new CrawlUrlData("c5", 6);
+    CrawlUrlData cu6 = new CrawlUrlData("c6", 8);
+    CrawlUrlData cu7 = new CrawlUrlData("c6", 2);
     assertEquals("c1", cu1.getUrl());
     assertEquals(0, cu1.getDepth());
     assertEquals(2, cu2.getDepth());

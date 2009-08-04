@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrl.java,v 1.2 2009-08-03 04:31:36 tlipkis Exp $
+ * $Id: CrawlUrl.java,v 1.3 2009-08-04 02:19:56 tlipkis Exp $
  */
 
 /*
@@ -34,135 +34,17 @@ package org.lockss.crawler;
 import java.util.*;
 
 /**
- * Represents a URL and the minimum depth at which we encountered it in the
- * crawl.  If supplied with links {@link #addChild(CrawlUrl)} will traverse
- * graph whenever a node's depth is reduced, maintaining minimum depth info
- * and optionally calling a handler for any node whose depth is reduced.
+ * View of crawl queue elements (CrawlUrlData) presented to plugin-supplied
+ * comparator.  Each URL is represented by a single CrawlUrl thoughout any
+ * one crawl.  A node's depth may change, so the comparator shouldn't use
+ * it to determine order (unless it implements breadth-first, in which case
+ * depth will remain constant).
  */
-public class CrawlUrl {
-  public static final int IS_FETCHED = 1;
-  public static final int IS_FAILED_FETCH = 2;
-  public static final int IS_FAILED_PARSE = 4;
-
-  private String url;
-  private int depth;
-  private int flags;
-  private ArrayList<CrawlUrl> children;
-
-  public CrawlUrl(String url, int depth) {
-    if (url == null) throw new NullPointerException();
-    if (depth < 0) throw new IllegalArgumentException();
-    this.url = url;
-    this.depth = depth;
-  }
+public interface CrawlUrl {
 
   /** Return the URL */
-  public String getUrl() {
-    return url;
-  }
+  public String getUrl();
 
   /** Return the minimum depth at which this URL has been seen */
-  public int getDepth() {
-    return depth;
-  }
-
-  public boolean isFetched() {
-    return (flags & IS_FETCHED) != 0;
-  }
-
-  public void setFetched(boolean val) {
-    if (val) {
-      flags |= IS_FETCHED;
-    } else {
-      flags &= ~IS_FETCHED;
-    }
-  }
-
-  public boolean isFailedFetch() {
-    return (flags & IS_FAILED_FETCH) != 0;
-  }
-
-  public void setFailedFetch(boolean val) {
-    if (val) {
-      flags |= IS_FAILED_FETCH;
-    } else {
-      flags &= ~IS_FAILED_FETCH;
-    }
-  }
-
-  public boolean isFailedParse() {
-    return (flags & IS_FAILED_PARSE) != 0;
-  }
-
-  public void setFailedParse(boolean val) {
-    if (val) {
-      flags |= IS_FAILED_PARSE;
-    } else {
-      flags &= ~IS_FAILED_PARSE;
-    }
-  }
-
-  /** If this is a new minimum depth, record it and return true, else
-   * return false */
-  public boolean encounteredAtDepth(int n) {
-    return encounteredAtDepth(n, null);
-  }
-
-  /** If this is a new minimum depth, record it and return true, else
-   * return false. Call the ReducedDepthHandler on this or any descendant
-   * whose depth is reduced. */
-  private boolean encounteredAtDepth(int n, ReducedDepthHandler rdh) {
-    if (n < 0) throw new IllegalArgumentException();
-    if (n < depth) {
-      int olddepth = depth;
-      depth = n;
-      if (children != null) {
-	for (CrawlUrl child : children) {
-	  child.encounteredAtDepth(depth + 1, rdh);
-	}
-      }
-      if (rdh != null) {
-	rdh.depthReduced(this, olddepth, n);
-      }
-      return true;
-    }
-    return false;
-  }
-
-  /** Add a child node.  If the child's depth is reduced and it has
-   * children, reduce their depths as necessary */
-  public void addChild(CrawlUrl child) {
-    addChild(child, null);
-  }
-
-  /** Add a child node.  If the child's depth is reduced and it has
-   * children, reduce their depths as necessary, notifying the
-   * ReducedDepthHandler */
-  public void addChild(CrawlUrl child, ReducedDepthHandler rdh) {
-    if (children == null) {
-      children = new ArrayList<CrawlUrl>();
-    }
-    children.add(child);
-    child.encounteredAtDepth(depth + 1, rdh);
-  }
-
-  /** When finished updating the child list, converts it into a more
-   * storage-efficient structure */
-  public void sealChildren() {
-    if (children != null) {
-      children.trimToSize();
-    }
-  }
-
-  /** Make the child list editable (again) */
-  public void unsealChildren() {
-  }
-
-  public String toString() {
-    return "[curl: " + getDepth() + ", " + getUrl() + "]";
-  }
-
-  public interface ReducedDepthHandler {
-    public void depthReduced(CrawlUrl curl, int oldDepth, int newDepth);
-  }
+  public int getDepth();
 }

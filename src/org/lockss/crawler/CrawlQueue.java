@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlQueue.java,v 1.2 2009-08-03 04:31:16 tlipkis Exp $
+ * $Id: CrawlQueue.java,v 1.3 2009-08-04 02:19:56 tlipkis Exp $
  */
 
 /*
@@ -39,32 +39,34 @@ import org.apache.commons.collections.buffer.*;
 import org.lockss.util.*;
 
 /**
- * CrawlQueue is a Map<String,CrawlUrl> sorted by value.  It is not
- * synchronized.
+ * CrawlQueue is a priority queue of CrawlUrlData keyed by URL String.  It
+ * is not synchronized.  CrawlQueue sorts {@link CrawlUrlData}s (viewed as
+ * {@link CrawlUrl}s) by the specified comparator.  If comparator is null,
+ * the urls are sorted first by depth then alphabetically, resulting in a
+ * breadth-first crawl.  The comparator should never return 0; if it does
+ * the results are undefined.
  */
 public class CrawlQueue {
   static Logger log = Logger.getLogger("CrawlQueue");
 
   PriorityBuffer sorted;
-  Map<String,CrawlUrl> map;
+  Map<String,CrawlUrlData> map;
 
-  /** Create a CrawlQueue that sorts CrawlUrls by the specified comparator.
-   * If comparator is null, the urls are sorted first by depth then
-   * alphabetically, resulting in a breadth-first crawl.  The comparator
-   * should never return 0; if it does the results are undefined */
+  /** Create a CrawlQueue that sorts {@link CrawlUrlData} object (viewed as
+   * {@link CrawlUrl}) by the specified comparator. */
   public CrawlQueue(Comparator<CrawlUrl> comparator) {
     if (comparator == null) {
-      comparator = new BreadthFirstUrlOrderComparator();
+      comparator = new BreadthFirstUrlComparator();
     }
     sorted = new PriorityBuffer(comparator);
-    map = new HashMap<String,CrawlUrl>();
+    map = new HashMap<String,CrawlUrlData>();
   }
 
-  /** Add CrawlUrl to the queue.
-   * @throws IllegalArgumentException if the CrawlUrl is already in the
+  /** Add CrawlUrlData to the queue.
+   * @throws IllegalArgumentException if the CrawlUrlData is already in the
    * queue
    */
-  public void add(CrawlUrl curl) {
+  public void add(CrawlUrlData curl) {
     String url = curl.getUrl();
     if (map.containsKey(url)) {
       throw new IllegalArgumentException("Illegal to replace entry");
@@ -79,21 +81,26 @@ public class CrawlQueue {
     }
   }
 
-  /** Return the first CrawlUrl in the queue */
-  public CrawlUrl first() {
-    return (CrawlUrl)sorted.get();
+  /** Return the first CrawlUrlData in the queue */
+  public CrawlUrlData first() {
+    return (CrawlUrlData)sorted.get();
   }
 
-  /** Remove the first CrawlUrl from the queue and return it */
-  public CrawlUrl remove() {
-    CrawlUrl res = (CrawlUrl)sorted.remove();
+  /** Remove the first CrawlUrlData from the queue and return it */
+  public CrawlUrlData remove() {
+    CrawlUrlData res = (CrawlUrlData)sorted.remove();
     map.remove(res.getUrl());
     return res;
   }
 
-  /** Retun the CrawlUrl corresponding to the URL */
-  public CrawlUrl get(String url) {
+  /** Retun the CrawlUrlData corresponding to the URL */
+  public CrawlUrlData get(String url) {
     return map.get(url);
+  }
+
+  /** Return the number of elements in the queue */
+  public int size() {
+    return sorted.size();
   }
 
   public boolean isEmpty() {
@@ -104,7 +111,7 @@ public class CrawlQueue {
     return "[" + StringUtil.separatedString(sorted, ", ") + "]";
   }
 
-  static class BreadthFirstUrlOrderComparator implements Comparator<CrawlUrl> {
+  static class BreadthFirstUrlComparator implements Comparator<CrawlUrl> {
     public int compare(CrawlUrl curl1, CrawlUrl curl2) {
       int res = curl1.getDepth() - curl2.getDepth();
       if (res == 0) {
