@@ -9159,8 +9159,8 @@ comment[mpj] = now published by Brill
         au < ready ; Organizational Research Methods Volume 8 ; 8 >
         au < ready ; Organizational Research Methods Volume 9 ; 9 >
         au < ready ; Organizational Research Methods Volume 10 ; 10 >
-        au < testing ; Organizational Research Methods Volume 11 ; 11 >
-        au < testing ; Organizational Research Methods Volume 12 ; 12 >
+        au < ready ; Organizational Research Methods Volume 11 ; 11 >
+        au < ready ; Organizational Research Methods Volume 12 ; 12 >
 
       }
 
@@ -9179,11 +9179,10 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Palliative Medicine Volume 18 ; 18 >
-        au < testing ; Palliative Medicine Volume 19 ; 19 >
         au < ready ; Palliative Medicine Volume 20 ; 20 >
         au < ready ; Palliative Medicine Volume 21 ; 21 >
-        au < testing ; Palliative Medicine Volume 22 ; 22 >
-        au < testing ; Palliative Medicine Volume 23 ; 23 >
+        au < ready ; Palliative Medicine Volume 22 ; 22 >
+        au < ready ; Palliative Medicine Volume 23 ; 23 >
 
       }
 
@@ -9204,8 +9203,8 @@ comment[mpj] = now published by Brill
         au < ready ; Party Politics Volume 11 ; 11 >
         au < ready ; Party Politics Volume 12 ; 12 >
         au < ready ; Party Politics Volume 13 ; 13 >
-        au < testing ; Party Politics Volume 14 ; 14 >
-        au < testing ; Party Politics Volume 15 ; 15 >
+        au < ready ; Party Politics Volume 14 ; 14 >
+        au < ready ; Party Politics Volume 15 ; 15 >
 
       }
 
@@ -9225,7 +9224,7 @@ comment[mpj] = now published by Brill
 
         au < ready ; Perfusion Volume 21 ; 21 >
         au < ready ; Perfusion Volume 22 ; 22 >
-        au < testing ; Perfusion Volume 23 ; 23 >
+        au < ready ; Perfusion Volume 23 ; 23 >
 
       }
 
@@ -9246,8 +9245,8 @@ comment[mpj] = now published by Brill
         au < ready ; Personality and Social Psychology Bulletin Volume 31 ; 31 >
         au < ready ; Personality and Social Psychology Bulletin Volume 32 ; 32 >
         au < ready ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
-        au < testing ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
-        au < testing ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
+        au < ready ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
+        au < ready ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
 
       }
 
@@ -9266,8 +9265,8 @@ comment[mpj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Personality and Social Psychology Review Volume 11 ; 11 >
-        au < testing ; Personality and Social Psychology Review Volume 12 ; 12 >
-        au < testing ; Personality and Social Psychology Review Volume 13 ; 13 >
+        au < ready ; Personality and Social Psychology Review Volume 12 ; 12 >
+        au < ready ; Personality and Social Psychology Review Volume 13 ; 13 >
 
       }
 
@@ -9288,8 +9287,8 @@ comment[mpj] = now published by Brill
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 17 ; 17 >
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 18 ; 18 >
         au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
-        au < testing ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
-        au < testing ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
+        au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
+        au < ready ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
 
       }
 
@@ -9307,11 +9306,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psc.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Philosophy & Social Criticism Volume 31 ; 31 >
-        au < testing ; Philosophy & Social Criticism Volume 32 ; 32 >
+        au < ready ; Philosophy & Social Criticism Volume 31 ; 31 >
+        au < ready ; Philosophy & Social Criticism Volume 32 ; 32 >
         au < ready ; Philosophy & Social Criticism Volume 33 ; 33 >
-        au < testing ; Philosophy & Social Criticism Volume 34 ; 34 >
-        au < testing ; Philosophy & Social Criticism Volume 35 ; 35 >
+        au < ready ; Philosophy & Social Criticism Volume 34 ; 34 >
+        au < ready ; Philosophy & Social Criticism Volume 35 ; 35 >
 
       }
 
@@ -9329,21 +9328,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pos.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Philosophy of the Social Sciences Volume 25 ; 25 >
-        au < testing ; Philosophy of the Social Sciences Volume 26 ; 26 >
-        au < testing ; Philosophy of the Social Sciences Volume 27 ; 27 >
-        au < testing ; Philosophy of the Social Sciences Volume 28 ; 28 >
-        au < testing ; Philosophy of the Social Sciences Volume 29 ; 29 >
-        au < testing ; Philosophy of the Social Sciences Volume 30 ; 30 >
-        au < testing ; Philosophy of the Social Sciences Volume 31 ; 31 >
-        au < testing ; Philosophy of the Social Sciences Volume 32 ; 32 >
-        au < testing ; Philosophy of the Social Sciences Volume 33 ; 33 >
-        au < testing ; Philosophy of the Social Sciences Volume 34 ; 34 >
-        au < testing ; Philosophy of the Social Sciences Volume 35 ; 35 >
-        au < testing ; Philosophy of the Social Sciences Volume 36 ; 36 >
-        au < testing ; Philosophy of the Social Sciences Volume 37 ; 37 >
-        au < testing ; Philosophy of the Social Sciences Volume 38 ; 38 >
-        au < testing ; Philosophy of the Social Sciences Volume 39 ; 39 >
+        au < ready ; Philosophy of the Social Sciences Volume 35 ; 35 >
+        au < ready ; Philosophy of the Social Sciences Volume 36 ; 36 >
+        au < ready ; Philosophy of the Social Sciences Volume 37 ; 37 >
+        au < ready ; Philosophy of the Social Sciences Volume 38 ; 38 >
+        au < ready ; Philosophy of the Social Sciences Volume 39 ; 39 >
 
       }
 
