@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.95 2008-08-20 05:51:07 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.96 2009-08-04 00:43:15 thib_gc Exp $
  */
 
 /*
@@ -455,7 +455,7 @@ public class LockssTestCase extends TestCase {
       sb.append(msg);
       sb.append(" ");
     }
-    sb.append("Expected a positive value but got ");
+    sb.append("Expected a negative value but got ");
     sb.append(value);
     assertTrue(sb.toString(), value<0);
   }
