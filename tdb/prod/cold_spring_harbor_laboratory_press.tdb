@@ -14,7 +14,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://symposium.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -106,7 +106,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://genesdev.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -151,7 +151,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://genome.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -189,7 +189,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://learnmem.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -224,7 +224,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rnajournal.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 

@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rsbm.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -84,7 +84,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rsbl.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -107,7 +107,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rsif.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -131,7 +131,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rsnr.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -212,7 +212,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rsta.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -349,7 +349,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rstb.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -486,7 +486,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rstl.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -551,7 +551,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rspa.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -688,7 +688,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rspb.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -825,7 +825,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rspl.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
 

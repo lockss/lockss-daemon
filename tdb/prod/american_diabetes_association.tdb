@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://clinical.diabetesjournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -39,7 +39,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://diabetes.diabetesjournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -101,7 +101,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://care.diabetesjournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -151,7 +151,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://spectrum.diabetesjournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -178,7 +178,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://docnews.diabetesjournals.org/
       implicit < status ; name ; param[volume_name] >
 

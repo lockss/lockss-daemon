@@ -150,7 +150,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://plantgenome.scijournals.org/
       implicit < status ; name ; param[volume_name] >
 
