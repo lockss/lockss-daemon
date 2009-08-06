@@ -37,7 +37,8 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s(content|powerpoint)/%s/&quot;, base_url, volume_name</string>
+      <string>2,&quot;^%s(content|powerpoint|lookup/volpage)/%s/.*(cited-by|related-urls)=yes&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s(content|powerpoint|lookup/volpage)/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s(cgi/data/[^/]+/|content/[^/]+/[^/]+/|content/suppl/[0-9]+/[0-9]+/[0-9]+/[0-9]+/[^/]+\.)DC([0-9]+|supplemental)&quot;, base_url</string>
     </list>
   </entry>
