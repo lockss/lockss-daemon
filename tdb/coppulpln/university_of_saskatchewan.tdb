@@ -12,15 +12,15 @@
 
     plugin = ca.usask.etd.UniversityOfSaskatchewanETDPlugin
     param[base_url] = http://library2.usask.ca/
-    implicit < status ; name ; param[year] > 
+    implicit < status ; year ; name ; param[year] > 
     
-    au < ready ; Electronic Theses & Dissertations 2003 ; 2003 >
-    au < ready ; Electronic Theses & Dissertations 2004 ; 2004 >
-    au < ready ; Electronic Theses & Dissertations 2005 ; 2005 >
-    au < ready ; Electronic Theses & Dissertations 2006 ; 2006 >
-    au < ready ; Electronic Theses & Dissertations 2007 ; 2007 >
-    au < ready ; Electronic Theses & Dissertations 2008 ; 2008 >
-    au < ready ; Electronic Theses & Dissertations 2009 ; 2009 >
+    au < ready ; 2003 ; Electronic Theses & Dissertations 2003 ; 2003 >
+    au < ready ; 2004 ; Electronic Theses & Dissertations 2004 ; 2004 >
+    au < ready ; 2005 ; Electronic Theses & Dissertations 2005 ; 2005 >
+    au < ready ; 2006 ; Electronic Theses & Dissertations 2006 ; 2006 >
+    au < ready ; 2007 ; Electronic Theses & Dissertations 2007 ; 2007 >
+    au < ready ; 2008 ; Electronic Theses & Dissertations 2008 ; 2008 >
+    au < ready ; 2009 ; Electronic Theses & Dissertations 2009 ; 2009 >
     
   }
   

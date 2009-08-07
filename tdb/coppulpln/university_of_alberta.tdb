@@ -1,50 +1,55 @@
 {
+
   publisher <
     name = University of Alberta
   >
 
   {
-    implicit < status ; name ; param[year] >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://ejournals.library.ualberta.ca/
+    implicit < status ; year ; name ; param[year] >
 
     {
+    
       title <
         name = Alternative Francophone
       >
 
       param[journal_id] = af
 
-      au < released ; Alternative Francophone Volume 1 ; 2008 >
+      au < released ; 2008 ; Alternative Francophone Volume 1 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Canadian Journal of Arthropod Identification
       >
 
       param[journal_id] = cjai
 
-      au < released ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
-      au < released ; Canadian Journal of Arthropod Identification 2007 ; 2007 >
-      au < released ; Canadian Journal of Arthropod Identification 2008 ; 2008 >
+      au < released ; 2006 ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
+      au < released ; 2007 ; Canadian Journal of Arthropod Identification 2007 ; 2007 >
+      au < released ; 2008 ; Canadian Journal of Arthropod Identification 2008 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Canadian Journal of Family and Youth
       >
 
       param[journal_id] = cjfy
 
-      au < exists ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
+      au < exists ; 2008 ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Canadian Journal of Irish Studies
       >
@@ -54,91 +59,98 @@
     }
 
     {
+    
       title <
         name = Canadian Journal of Sociology
       >
 
       param[journal_id] = cjs
 
-      au < released ; Canadian Journal of Sociology Volume 33 ; 2008 >
+      au < released ; 2008 ; Canadian Journal of Sociology Volume 33 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée
       >
 
       param[journal_id] = crcl
 
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 >
-      au < exists ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 >
+      au < exists ; 1992 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 >
+      au < exists ; 1993 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 >
+      au < exists ; 1994 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 >
+      au < exists ; 1995 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 >
+      au < exists ; 1996 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 >
+      au < exists ; 1997 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 >
+      au < exists ; 1998 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 >
+      au < exists ; 1999 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 >
+      au < exists ; 2000 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 >
 
     }
 
     {
+    
       title <
         name = ESC: English Studies in Canada
       >
 
       param[journal_id] = esc
 
-      au < exists ; ESC: English Studies in Canada Volume 29 ; 2003 >
-      au < exists ; ESC: English Studies in Canada Volume 30 ; 2004 >
-      au < exists ; ESC: English Studies in Canada Volume 31 ; 2005 >
-      au < exists ; ESC: English Studies in Canada Volume 32 ; 2006 >
+      au < exists ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 >
+      au < exists ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 >
+      au < exists ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 >
+      au < exists ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 >
 
     }
 
     {
+    
       title <
         name = Exceptionality Education International
       >
 
       param[journal_id] = eei
 
-comment[eei1] = subscription title
+      comment[eei1] = subscription title
 
-      au < not_ready ; Exceptionality Education International Volume 18 ; 2008 >
+      au < not_ready ; 2008 ; Exceptionality Education International Volume 18 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Evidence Based Library and Information Practice
       >
 
       param[journal_id] = eblip
 
-      au < released ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
-      au < released ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
-      au < released ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
+      au < released ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
+      au < released ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
+      au < released ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
 
     }
 
     {
+    
       title <
         name = International Journal of Qualitative Methods
       >
 
       param[journal_id] = ijqm
 
-      au < released ; International Journal of Qualitative Methods Volume 3 ; 2004 >
-      au < released ; International Journal of Qualitative Methods Volume 4 ; 2005 >
-      au < released ; International Journal of Qualitative Methods Volume 5 ; 2006 >
-      au < released ; International Journal of Qualitative Methods Volume 6 ; 2007 >
-      au < released ; International Journal of Qualitative Methods Volume 7 ; 2008 >
+      au < released ; 2004 ; International Journal of Qualitative Methods Volume 3 ; 2004 >
+      au < released ; 2005 ; International Journal of Qualitative Methods Volume 4 ; 2005 >
+      au < released ; 2006 ; International Journal of Qualitative Methods Volume 5 ; 2006 >
+      au < released ; 2007 ; International Journal of Qualitative Methods Volume 6 ; 2007 >
+      au < released ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 2008 >
 
     }
 
     {
+    
       title <
         name = In Tune
       >
@@ -148,19 +160,21 @@ comment[eei1] = subscription title
     }
 
     {
+    
       title <
         name = Journal of Contemporary Issues in Education
       >
 
       param[journal_id] = jcie
 
-      au < exists ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
-      au < exists ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
-      au < exists ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
+      au < exists ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
+      au < exists ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
+      au < exists ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Journal of Curriculum and Pedagogy
       >
@@ -170,43 +184,46 @@ comment[eei1] = subscription title
     }
 
     {
+    
       title <
         name = Journal of Pharmacy & Pharmaceutical Sciences
       >
 
       param[journal_id] = jpps
 
-      au < exists ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 >
-      au < exists ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 >
-      au < exists ; Journal of Pharmacy & Pharmaceutical Sciences Volume 12 ; 2009 >
+      au < exists ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 >
+      au < exists ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 >
+      au < exists ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 12 ; 2009 >
 
     }
 
     {
+    
       title <
         name = Past Imperfect
       >
 
       param[journal_id] = pi
 
-      au < exists ; Past Imperfect Volume 1 ; 1992 >
-      au < exists ; Past Imperfect Volume 2 ; 1993 >
-      au < exists ; Past Imperfect Volume 3 ; 1994 >
-      au < exists ; Past Imperfect Volume 4 ; 1995 >
-      au < exists ; Past Imperfect Volume 5 ; 1996 >
-      au < exists ; Past Imperfect Volume 6 ; 1997 >
-      au < exists ; Past Imperfect Volume 7 ; 1998 >
-      au < exists ; Past Imperfect Volume 8 ; 1999 >
-      au < exists ; Past Imperfect Volume 9 ; 2001 >
-      au < exists ; Past Imperfect Volume 10 ; 2004 >
-      au < exists ; Past Imperfect Volume 11 ; 2005 >
-      au < exists ; Past Imperfect Volume 12 ; 2006 >
-      au < exists ; Past Imperfect Volume 13 ; 2007 >
-      au < exists ; Past Imperfect Volume 14 ; 2008 >
+      au < exists ; 1992 ; Past Imperfect Volume 1 ; 1992 >
+      au < exists ; 1993 ; Past Imperfect Volume 2 ; 1993 >
+      au < exists ; 1994 ; Past Imperfect Volume 3 ; 1994 >
+      au < exists ; 1995 ; Past Imperfect Volume 4 ; 1995 >
+      au < exists ; 1996 ; Past Imperfect Volume 5 ; 1996 >
+      au < exists ; 1997 ; Past Imperfect Volume 6 ; 1997 >
+      au < exists ; 1998 ; Past Imperfect Volume 7 ; 1998 >
+      au < exists ; 1999 ; Past Imperfect Volume 8 ; 1999 >
+      au < exists ; 2000 ; Past Imperfect Volume 9 ; 2001 >
+      au < exists ; 2004 ; Past Imperfect Volume 10 ; 2004 >
+      au < exists ; 2005 ; Past Imperfect Volume 11 ; 2005 >
+      au < exists ; 2006 ; Past Imperfect Volume 12 ; 2006 >
+      au < exists ; 2007 ; Past Imperfect Volume 13 ; 2007 >
+      au < exists ; 2008 ; Past Imperfect Volume 14 ; 2008 >
 
     }
 
     {
+    
       title <
         name = Philosophical Explanations
       >
@@ -216,17 +233,19 @@ comment[eei1] = subscription title
     }
 
     {
+    
       title <
         name = TranscUlturAl
       >
 
       param[journal_id] = tc
 
-      au < released ; TranscUlturAl Volume 1 ; 2008 >
+      au < released ; 2008 ; TranscUlturAl Volume 1 ; 2008 >
 
     }
 
     {
+    
       title <
         name = U of A Engineer
       >
@@ -236,6 +255,7 @@ comment[eei1] = subscription title
     }
 
     {
+    
       title <
         name = UArctic Research Papers
       >
