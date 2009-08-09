@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.70.14.2 2009-08-04 02:19:44 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.70.14.3 2009-08-09 07:36:26 tlipkis Exp $
  */
 
 /*
@@ -929,6 +929,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     testPriorityQueue(refetchDepth, hasContent, cmp, expFetched, true);
   }
 
+  String url7= "http://www.example.com/extra/aux.html";
+
   public void testPriorityQueue(int refetchDepth,
 				boolean hasContent,
 				Comparator<CrawlUrl> cmp,
@@ -953,19 +955,23 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url4= "http://www.example.com/issue2/toc";
     String url5= "http://www.example.com/issue2/art1.html";
     String url6= "http://www.example.com/issue2/art2.html";
-    String url7= "http://www.example.com/extra/arx.html";
+
     String url8= "http://www.example.com/images/img1.png";
     String url9= "http://www.example.com/images/img2.png";
+    // url10 will be found both times url8 is parsed,so is the canary for
+    // the child list not being cleared upon reparse
+    String url10= "http://www.example.com/images/img3.png";
 
     List<String> urls = ListUtil.list(startUrl,
-				      url1, url2, url3, url4,
-				      url5, url6, url7, url8, url9);
+				      url1, url2, url3, url4, url5,
+				      url6, url7, url8, url9, url10);
     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1, url4));
     extractor.addUrlsToReturn(url1, SetUtil.set(url2, url3));
     extractor.addUrlsToReturn(url2, SetUtil.set(url7));
     extractor.addUrlsToReturn(url7, SetUtil.set(url8));
     extractor.addUrlsToReturn(url4, SetUtil.set(url5, url6, url8));
     extractor.addUrlsToReturn(url6, SetUtil.set(url9));
+    extractor.addUrlsToReturn(url8, SetUtil.set(url10));
     // Add a cycle for good measure
     extractor.addUrlsToReturn(url9, SetUtil.set(url2));
 
@@ -981,12 +987,12 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testPriorityQueueBreadthFirst1() {
     testPriorityQueue(1, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9));
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
   }
 
   public void testPriorityQueueBreadthFirst3() {
     testPriorityQueue(3, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9));
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
   }
 
   public void testPriorityQueueBreadthFirstRecrawl1() {
@@ -1001,12 +1007,12 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testPriorityQueueAlphabetic1() {
     testPriorityQueue(1, false, new AlphabeticUrlOrderComparator(),
-		      ListUtil.list(0, 1, 2, 7, 8, 3, 4, 5, 6, 9));
+		      ListUtil.list(0, 1, 2, 7, 8, 10, 3, 4, 5, 6, 9));
   }
 
   public void testPriorityQueueAlphabetic3() {
     testPriorityQueue(3, false, new AlphabeticUrlOrderComparator(),
-		      ListUtil.list(0, 1, 2, 7, 8, 3, 4, 5, 6, 9));
+		      ListUtil.list(0, 1, 2, 7, 8, 10, 3, 4, 5, 6, 9));
   }
 
   public void testPriorityQueueAlphabeticRecrawl1() {
@@ -1023,7 +1029,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
 				  "4");
     testPriorityQueue(1, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9));
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
   }
 
   public void testPriorityQueueBreadthFirst1MaxDepth3() {
@@ -1038,7 +1044,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
 				  "4");
     testPriorityQueue(1, false, new AlphabeticUrlOrderComparator(),
-		      ListUtil.list(0, 1, 2, 7, 3, 4, 8, 5, 6, 9));
+		      ListUtil.list(0, 1, 2, 7, 3, 4, 8, 10, 5, 6, 9));
   }
 
   public void testPriorityQueueAlphabetic1MaxDepth3() {
@@ -1068,6 +1074,14 @@ public class TestNewContentCrawler extends LockssTestCase {
 				  "3");
     testPriorityQueue(3, true, new AlphabeticUrlOrderComparator(),
 		      ListUtil.list(0, 1, 2, 3, 4, 8, 5, 6),
+		      false);
+  }
+
+  public void testPriorityQueueComparatorThrows() {
+    AlphabeticUrlOrderComparator cmp = new AlphabeticUrlOrderComparator();
+    cmp.setErrorUrl(url7);
+    testPriorityQueue(3, false, cmp,
+		      ListUtil.list(0, 1, 2),
 		      false);
   }
 
@@ -1263,6 +1277,26 @@ public class TestNewContentCrawler extends LockssTestCase {
     List getFetchedUrls() {
       return fetchedUrls;
     }
+
+    protected CrawlUrlData newCrawlUrlData(String url, int depth) {
+      return new MyCrawlUrlData(url, depth);
+    }
+  }
+
+  static class MyCrawlUrlData extends CrawlUrlData {
+    public MyCrawlUrlData(String url, int depth) {
+      super(url, depth);
+    }
+
+    // Cause an error if a child is added twice.  Ensures that the child
+    // list is cleared before reparse.
+    @Override
+    public void addChild(CrawlUrlData child, ReducedDepthHandler rdh) {
+      if (isChild(child)) {
+	throw new IllegalStateException("Attempt to add existing child");
+      }
+      super.addChild(child, rdh);
+    }
   }
 
   static class MyCrawlerStatus extends CrawlerStatus {
@@ -1398,9 +1432,20 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   static class AlphabeticUrlOrderComparator implements Comparator<CrawlUrl> {
+    String errorUrl;
+
     public int compare(CrawlUrl curl1, CrawlUrl curl2) {
+      if (errorUrl != null && (errorUrl.equals(curl1.getUrl())
+			       || errorUrl.equals(curl2.getUrl()))) {
+	throw new ExpectedRuntimeException("Comparator exception");
+      }
       return curl1.getUrl().compareTo(curl2.getUrl());
     }
+
+    void setErrorUrl(String url) {
+      errorUrl = url;
+    }
+
   }
 
   public static void main(String[] argv) {

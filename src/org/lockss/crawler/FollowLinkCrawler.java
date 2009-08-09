@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.73.8.2 2009-08-04 02:19:44 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.73.8.3 2009-08-09 07:36:26 tlipkis Exp $
  */
 
 /*
@@ -247,9 +247,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     try {
       fetchQueue = new CrawlQueue(urlOrderComparator);
       for (String url : getUrlsToFollow()) {
-	CrawlUrlData curl = new CrawlUrlData(url, 1);
-	fetchQueue.add(curl);
-	crawlStatus.addPendingUrl(curl.getUrl());
+	CrawlUrlData curl = newCrawlUrlData(url, 1);
+	addToQueue(curl, fetchQueue, crawlStatus);
       }
     } catch (RuntimeException e) {
       logger.warning("Unexpected exception, should have been caught lower", e);
@@ -336,6 +335,29 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     return (!crawlStatus.isCrawlError());
   }
 
+  // Overridable for testing
+  protected CrawlUrlData newCrawlUrlData(String url, int depth) {
+    return new CrawlUrlData(url, depth);
+  }
+
+  void addToQueue(CrawlUrlData curl,
+			 CrawlQueue queue,
+			 CrawlerStatus cstat) {
+    try {
+      queue.add(curl);
+      cstat.addPendingUrl(curl.getUrl());
+    } catch (RuntimeException e) {
+      logger.error("URL comparator error", e);
+      cstat.signalErrorForUrl(curl.getUrl(),
+			      "URL comparator error, can't add to queue: "
+			      + curl.getUrl() + ": " + e.getMessage());
+      cstat.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR);
+      // PriorityBuffer can't recover from comparator error, so this must
+      // abort.
+      abortCrawl();
+    }      
+  }
+
   // Default Set impl overridden for some tests
   protected Set newSet() {
     return new HashSet();
@@ -387,7 +409,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				  boolean reparse) {
 
     String url = curl.getUrl();
-    logger.debug3("Dequeued url from list: "+url);
 
     //makeUrlCacher needed to handle connection pool
     UrlCacher uc = makeUrlCacher(url);
@@ -492,7 +513,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      InputStream in = null;
 	      try {
 		in = cu.getUnfilteredInputStream();
-		curl.unsealChildren();
+		// Might be reparsing with new content (if depth reduced
+		// below refetch depth); clear any existing children
+		curl.clearChildren();
 		extractor.extractUrls(au, in,
 				      getCharset(cu),
 				      PluginUtil.getBaseUrl(cu),
@@ -500,7 +523,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 								  fetchQueue,
 								  processedUrls,
 								  maxDepthUrls));
-		curl.sealChildren();
+		// done adding children, trim to size
+		curl.trimChildren();
 		crawlStatus.signalUrlParsed(uc.getUrl());
 	      } catch (PluginException e) {
 		logger.error("Plugin LinkExtractor error", e);
@@ -747,7 +771,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      if (logger.isDebug2()) {
 		logger.debug2("Included url: "+normUrl);
 	      }
-	      child = new CrawlUrlData(normUrl, curl.getDepth() + 1);
+	      child = newCrawlUrlData(normUrl, curl.getDepth() + 1);
 	      if (child.getDepth() > maxDepth) {
 		maxDepthUrls.put(normUrl, child);
 	      } else {
@@ -774,8 +798,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
 
     void addToFetchQueue(CrawlUrlData curl) {
-      fetchQueue.add(curl);
-      crawlStatus.addPendingUrl(curl.getUrl());
+      addToQueue(curl, fetchQueue, crawlStatus);
     }
 
     /** Called whenever the depth of an already-known child node is reduced
