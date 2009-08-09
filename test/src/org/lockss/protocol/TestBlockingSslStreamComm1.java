@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.8 2009-07-22 06:40:21 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.8.2.1 2009-08-09 07:36:55 tlipkis Exp $
  */
 
 /*
@@ -32,15 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-/*
- * NB - this and its companion TestBlockingSslStreamComm2 should really be
- * two variants in one test.  They were separated because executing this
- * one first and the permanent keystore version second failed,  where in
- * the other order they both succeeded.  This seems to be some issue with
- * Junit class initialization,  but rather than tackling it I opted to
- * split them.  At some point these two files should be re-combined.
- */
-
 import java.util.*;
 import java.io.*;
 import java.net.*;
@@ -72,6 +63,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 
   LockssKeyStoreManager keystoreMgr;
 
+  File keyStoreDir;
   String keyStorePassword = "Bad Password";
   String keyPassword = "No Donut!";
   String keyStoreFileName = null;
@@ -85,7 +77,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
   }
 
   public void setUp() throws Exception {
-    File keyStoreDir = getTempDir("TestBlockingSslStreamComm1");
+    keyStoreDir = getTempDir("TestBlockingSslStreamComm1");
     keyStoreFileName = new File(keyStoreDir, "test.keystore").toString();
     super.setUp();
     shutdownOutputSupported = false;
@@ -95,7 +87,6 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
   }
 
   static String KS_NAME = "ks1";
-  static String PREF = LockssKeyStoreManager.PARAM_KEYSTORE + ".id1.";
 
 
   @Override
@@ -104,15 +95,27 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     p.setProperty(BlockingStreamComm.PARAM_USE_V3_OVER_SSL, "true");
     p.setProperty(BlockingStreamComm.PARAM_SSL_KEYSTORE_NAME, KS_NAME);
     p.setProperty(BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH, "true");
+    setKeyStoreProps(p, "id1", KS_NAME,
+		     keyStoreFileName, keyStorePassword, keyPassword, null);
+  }
 
-    p.put(PREF + LockssKeyStoreManager.KEYSTORE_PARAM_NAME, KS_NAME);
-    p.put(PREF + LockssKeyStoreManager.KEYSTORE_PARAM_FILE,
-	  keyStoreFileName);
-    p.put(PREF + LockssKeyStoreManager.KEYSTORE_PARAM_TYPE, "JCEKS");
-    p.put(PREF + LockssKeyStoreManager.KEYSTORE_PARAM_PASSWORD,
-	  keyStorePassword);
-    p.put(PREF + LockssKeyStoreManager.KEYSTORE_PARAM_KEY_PASSWORD,
-	  keyPassword);
+  void setKeyStoreProps(Properties p, String id,
+			String ksname, String filename,
+			String kspasswd, String privatePassword,
+			String privatePasswordFile) {
+    String pref = LockssKeyStoreManager.PARAM_KEYSTORE + "." + id + ".";
+    p.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_NAME, ksname);
+    p.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_FILE, filename);
+    p.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_TYPE, "JCEKS");
+    p.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_PASSWORD, kspasswd);
+    if (privatePassword != null) {
+      p.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_KEY_PASSWORD,
+	    privatePassword);
+    }
+    if (privatePasswordFile != null) {
+      p.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_KEY_PASSWORD_FILE,
+	    privatePasswordFile);
+    }
   }
 
   private KeyStore setupKeyStore() throws Exception {
@@ -123,6 +126,196 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     return KeyStoreUtil.createKeyStore(p);
   }
 
+  // Harness to test that clientAuth works as intended.  I.e., if either or
+  // both sides require client auth, connections in either direction are
+  // successful only if the certificate is verified.
+
+  void createKeystores(File dir, List hostnames)
+      throws NoSuchAlgorithmException, NoSuchProviderException {
+    KeyStoreUtil.createPLNKeyStores(null, dir, hostnames);
+  }
+
+  public void testClientAuth(Properties comm1Props,
+			     Properties comm2Props,
+			     boolean expectedSuccess)
+      throws Exception {
+    createKeystores(keyStoreDir, ListUtil.list("host1", "host2"));
+    createKeystores(keyStoreDir, ListUtil.list("bad1", "bad2"));
+    setKeyStoreProps(cprops, "ii11", "cks1",
+		     new File(keyStoreDir, "host1.jceks").toString(), "host1",
+		     null, new File(keyStoreDir, "host1.pass").toString());
+    setKeyStoreProps(cprops, "ii22", "cks2",
+		     new File(keyStoreDir, "host2.jceks").toString(), "host2",
+		     null, new File(keyStoreDir, "host2.pass").toString());
+    setKeyStoreProps(cprops, "ii33", "cks3",
+		     new File(keyStoreDir, "bad1.jceks").toString(), "bad1",
+		     null, new File(keyStoreDir, "bad1.pass").toString());
+    cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    ConfigurationUtil.addFromProps(cprops);
+    
+    comm1 = new MyBlockingStreamComm(setupPid(1));
+    comm2 = new MyBlockingStreamComm(setupPid(2));
+    SimpleQueue hsq1 = new SimpleQueue.Fifo();
+    SimpleQueue hsq2 = new SimpleQueue.Fifo();
+    comm1.setHandShakeQueue(hsq1);
+    comm2.setHandShakeQueue(hsq2);
+
+    comm1.setInstanceConfig(comm1Props);
+    comm2.setInstanceConfig(comm2Props);
+
+    setupComm(1, comm1);
+    setupComm(2, comm2);
+
+    PeerMessage msgIn;
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 10);
+    comm1.sendTo(msg1, pid2, null);
+    if (comm1.isSsl()) {
+      if (comm1.isClientAuth()) {
+	Object hs = hsq1.get(TIMEOUT_SHOULDNT);
+	assertNotNull("Expected handShake event didn't occur", hs);
+	if (expectedSuccess) {
+	  assertTrue(hs instanceof SSLSocket);
+	} else {
+	  assertTrue(hs instanceof SSLPeerUnverifiedException);
+	}
+      } else {
+	assertEquals(null, hsq1.get(TIMEOUT_SHOULD));
+      }
+      if (expectedSuccess) {
+	msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+	assertEqualsMessageFrom(msg1, pid1, msgIn);
+	assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+      } else {
+	msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULD);
+	assertEquals(null, msgIn);
+      }
+    } else {
+      assertEquals(null, hsq1.get(TIMEOUT_SHOULD));
+      if (expectedSuccess) {
+	msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+	assertEqualsMessageFrom(msg1, pid1, msgIn);
+	assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+      } else {
+	msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULD);
+	assertEquals(null, msgIn);
+      }
+    }
+    if (comm2.isSsl()) {
+      if (comm2.isClientAuth()) {
+	Object hs = hsq2.get(TIMEOUT_SHOULDNT);
+	assertNotNull("Expected handShake event didn't occur", hs);
+	if (expectedSuccess) {
+	  assertTrue(hs instanceof SSLSocket);
+	} else {
+	  assertTrue(hs instanceof SSLPeerUnverifiedException);
+	}
+      } else {
+	assertEquals(null, hsq2.get(TIMEOUT_SHOULD));
+      }
+    } else {
+      assertEquals(null, hsq2.get(TIMEOUT_SHOULD));
+    }
+  }
+
+  static final String PARAM_USE_V3_OVER_SSL =
+    BlockingStreamComm.PARAM_USE_V3_OVER_SSL;
+  static final String PARAM_USE_SSL_CLIENT_AUTH =
+    BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH;
+  static final String PARAM_SSL_KEYSTORE_NAME = 
+    BlockingStreamComm.PARAM_SSL_KEYSTORE_NAME;
+
+
+  // Valid certs, both require client auth, should connect
+  public void testClientAuthOk() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks2");
+    testClientAuth(p1, p2, true);
+  }
+
+  // Invalid certs, both require client auth, should not connect
+  public void testClientAuthFailCert() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks3");
+    testClientAuth(p1, p2, false);
+  }
+
+  // Valid certs, Only sender requires client auth, should connect
+  public void testClientAuthSenderOnly() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks2");
+    testClientAuth(p1, p2, true);
+  }
+
+  // Invalid certs, Only sender requires client auth, should not connect
+  public void testClientAuthSenderOnlyFail() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks3");
+    testClientAuth(p1, p2, false);
+  }
+
+  // Valid certs, Only receiver requires client auth, should connect
+  public void testClientAuthReceiverOnly() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks2");
+    testClientAuth(p1, p2, true);
+  }
+
+  // Invalid certs, Only receiver requires client auth, should not connect
+  public void testClientAuthReceiverOnlyFail() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_KEYSTORE_NAME, "cks3");
+    testClientAuth(p1, p2, false);
+  }
+
+  // Valid certs, Only sender uses SSL, should not connect
+  public void testClientAuthSenderOnlySsl() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "false",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks2");
+    isCheckSocketType = false;
+    testClientAuth(p1, p2, false);
+  }
+
+  // Valid certs, Only receiver uses SSL, should not connect
+  public void testClientAuthReceiverOnlySsl() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "false",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "false",
+				      PARAM_SSL_KEYSTORE_NAME, "cks2");
+    isCheckSocketType = false;
+    testClientAuth(p1, p2, false);
+  }
+
+  // Run all tests in TestBlockingStreamComm, with SSL enabled
   public static class SslStreams extends TestBlockingSslStreamComm1 {
     public SslStreams(String name) {
       super(name);

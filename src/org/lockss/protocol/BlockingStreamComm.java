@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.45 2009-07-22 06:40:21 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.45.2.1 2009-08-09 07:36:55 tlipkis Exp $
  */
 
 /*
@@ -829,19 +829,18 @@ public class BlockingStreamComm
       if (configShot.once()) {
 	configure(config, prevConfig, changedKeys);
       }
-      // these params can be changed on the fly
-      paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
-					      DEFAULT_MIN_FILE_MESSAGE_SIZE);
-      paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
-					   DEFAULT_MAX_MESSAGE_SIZE);
-      paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
-					      DEFAULT_IS_BUFFERED_SEND);
-      paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
-					    DEFAULT_TCP_NODELAY);
-      paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
-					     DEFAULT_WAIT_EXIT);
-
+      // the following params can be changed on the fly
       if (changedKeys.contains(PREFIX)) {
+	paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
+						DEFAULT_MIN_FILE_MESSAGE_SIZE);
+	paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
+					     DEFAULT_MAX_MESSAGE_SIZE);
+	paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
+						DEFAULT_IS_BUFFERED_SEND);
+	paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
+					      DEFAULT_TCP_NODELAY);
+	paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
+					       DEFAULT_WAIT_EXIT);
 	String paramDataDir = config.get(PARAM_DATA_DIR,
 					 PlatformUtil.getSystemTempDir());
 	File dir = new File(paramDataDir);
@@ -1272,7 +1271,8 @@ public class BlockingStreamComm
   // overridable for testing
   void processIncomingConnection(Socket sock) throws IOException {
     if (sock.isClosed()) {
-      throw new SocketException("socket closed during handshake");
+      // This should no longer happen
+      throw new SocketException("processIncomingConnection got closed socket");
     }
     log.debug2("Accepted connection from " +
 	       new IPAddr(sock.getInetAddress()));
@@ -1362,7 +1362,7 @@ public class BlockingStreamComm
     }
   }
 
-  protected void handShake(SSLSocket s) {
+  protected void handShake(SSLSocket s) throws SSLPeerUnverifiedException {
     SSLSession session = s.getSession();
     try {
       java.security.cert.Certificate[] certs = session.getPeerCertificates();
@@ -1374,6 +1374,7 @@ public class BlockingStreamComm
       } catch (IOException ex2) {
 	log.error("Socket close threw " + ex2);
       }
+      throw ex;
     }
   }
 
@@ -1518,7 +1519,8 @@ public class BlockingStreamComm
       triggerWDogOnExit(true);
 //       startWDog(WDOG_PARAM_SLISTEN, WDOG_DEFAULT_SLISTEN);
       nowRunning();
-
+      String sockmsg =
+	(listenSock instanceof SSLServerSocket) ? "SSL Listener" : "Listener";
       while (goOn) {
 // 	pokeWDog();
 	log.debug3("accept()");
@@ -1534,14 +1536,10 @@ public class BlockingStreamComm
 	  processIncomingConnection(sock);
 	} catch (SocketException e) {
 	  if (goOn) {
-	    log.warning("Listener", e);
+	    log.warning(sockmsg, e);
 	  }
 	} catch (Exception e) {
-	  if (listenSock instanceof SSLServerSocket) {
-	    log.debug("SSL Listener ", e);
-	  } else {
-	    log.warning("Listener", e);
-          }
+	  log.warning(sockmsg, e);
 	}
       }
       listenThread = null;
