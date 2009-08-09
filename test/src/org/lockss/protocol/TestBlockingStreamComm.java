@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.27 2009-07-22 06:40:21 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.28 2009-08-09 07:39:21 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import junit.framework.*;
 import org.lockss.protocol.BlockingPeerChannel.ChannelState;
 import org.lockss.protocol.BlockingStreamComm.PeerData;
 
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -119,6 +119,13 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   protected boolean isSsl() {
     return false;
+  }
+
+  // Allow socket type check in SocketFactory to be disabled, for
+  // mixed-mode tests
+  protected boolean isCheckSocketType = true;
+  protected boolean isCheckSocketType() {
+    return isCheckSocketType;
   }
 
   void addSuiteProps(Properties p) {
@@ -272,9 +279,13 @@ public class TestBlockingStreamComm extends LockssTestCase {
   /** Create and start BlockingStreamComm instance ix, register message
    * handlers for it
    */
-   void setupComm(int ix) throws IOException {
+  void setupComm(int ix) throws IOException {
     if (pids[ix] == null) setupPid(ix);
-    setupCommArrayEntry(ix);
+    setupComm(ix, new MyBlockingStreamComm(pids[ix]));
+  }
+
+  void setupComm(int ix, MyBlockingStreamComm scomm) throws IOException {
+    comms[ix] = scomm;
     comms[ix].initService(daemon);
     comms[ix].startService();
     rcvdMsgss[ix] = new SimpleQueue.Fifo();
@@ -283,10 +294,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
 				       new MessageHandler(rcvdMsgss[ix]));
     }
     commhack(ix);
-  }
-
-  void setupCommArrayEntry(int ix) {
-    comms[ix] = new MyBlockingStreamComm(pids[ix]);
   }
 
   void commhack(int ix) {
@@ -963,7 +970,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		 "dissoc", event.get(0));
   }
 
-  // Connect reqtry & msg queueing mechanism
+  // Connect retry & msg queueing mechanism
 
   public void testWaitingPeerTreeSet() throws IOException {
     setupPid(1);
@@ -1512,17 +1519,53 @@ public class TestBlockingStreamComm extends LockssTestCase {
   static int createCounter = 1;
   class MyBlockingStreamComm extends BlockingStreamComm {
 
+    Properties instanceConfig;
     SocketFactory sockFact;
     PeerIdentity localId;
     SimpleQueue assocEvents;
+    SimpleQueue handShakeEvents;
     SimpleBinarySemaphore acceptSem;
     BlockingStreamComm.SocketFactory superSockFact;
     int uniqueId;
+    boolean isSsl;
+    boolean isClientAuth;
 
     MyBlockingStreamComm(PeerIdentity localId) {
       this.localId = localId;
       sockFact = null;
       uniqueId = createCounter++;
+    }
+
+    @Override
+    public void setConfig(Configuration config,
+			  Configuration prevConfig,
+			  Configuration.Differences changedKeys) {
+      if (instanceConfig != null) {
+	Configuration copy = ConfigManager.newConfiguration();
+	copy.copyFrom(config);
+	for (Map.Entry ent : instanceConfig.entrySet()) {
+	  copy.put((String)ent.getKey(), (String)ent.getValue());
+	}
+	config = copy;
+      }
+      super.setConfig(config, prevConfig, changedKeys);
+      isSsl = config.getBoolean(BlockingStreamComm.PARAM_USE_V3_OVER_SSL,
+				BlockingStreamComm.DEFAULT_USE_V3_OVER_SSL);
+      isClientAuth =
+	config.getBoolean(BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH,
+			  BlockingStreamComm.DEFAULT_USE_SSL_CLIENT_AUTH);
+    }
+
+    void setInstanceConfig(Properties props) {
+      instanceConfig = props;
+    }
+
+    boolean isSsl() {
+      return isSsl;
+    }
+
+    boolean isClientAuth() {
+      return isClientAuth;
     }
 
     protected String getStatusAccessorName(String base) {
@@ -1568,8 +1611,21 @@ public class TestBlockingStreamComm extends LockssTestCase {
       super.processIncomingConnection(sock);
     }
 
-    void setAssocQueue(SimpleQueue sem1) {
-      assocEvents = sem1;
+    protected void handShake(SSLSocket s) throws SSLPeerUnverifiedException {
+      try {
+	super.handShake(s);
+	if (handShakeEvents != null) handShakeEvents.put(s);
+      } catch (SSLPeerUnverifiedException e) {
+	if (handShakeEvents != null) handShakeEvents.put(e);
+	throw e;
+      }
+    }
+
+    void setHandShakeQueue(SimpleQueue q) {
+      handShakeEvents = q;
+    }
+    void setAssocQueue(SimpleQueue q) {
+      assocEvents = q;
     }
     void setAcceptSem(SimpleBinarySemaphore sem1) {
       acceptSem = sem1;
@@ -1605,10 +1661,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	return new InternalServerSocket(port, backlog);
       } else {
 	ServerSocket ss = sf.newServerSocket(port, backlog);
-	if (isSsl()) {
-	  assertTrue(ss instanceof SSLServerSocket);
-	} else {
-	  assertFalse(ss instanceof SSLServerSocket);
+	if (isCheckSocketType()) {
+	  if (isSsl()) {
+	    assertTrue(ss instanceof SSLServerSocket);
+	  } else {
+	    assertFalse(ss instanceof SSLServerSocket);
+	  }
 	}
         return ss;
       }
@@ -1622,10 +1680,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	return new InternalSocket(addr.getInetAddr(), port);
       } else {
 	Socket s = sf.newSocket(addr, port);
-	if (isSsl()) {
-	  assertTrue(s instanceof SSLSocket);
-	} else {
-	  assertFalse(s instanceof SSLSocket);
+	if (isCheckSocketType()) {
+	  if (isSsl()) {
+	    assertTrue(s instanceof SSLSocket);
+	  } else {
+	    assertFalse(s instanceof SSLSocket);
+	  }
 	}
         return s;
       }
