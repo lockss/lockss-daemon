@@ -291,8 +291,8 @@ if [ -r "${CONFIG_FILE}" ]; then
     echo "Setting defaults from existing config: ${CONFIG_FILE}"
     read_config ${CONFIG_FILE}
 else
+    # these dirs should be owned by config user; don't need to chown them
     mkdir -p ${LOCKSS_HOME}/etc/lockss
-    chown ${LOCKSS_USER} ${LOCKSS_HOME}/etc ${LOCKSS_HOME}/etc/lockss
 fi
 
 CONFIG_OK=N
