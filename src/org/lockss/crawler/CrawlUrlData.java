@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlData.java,v 1.2 2009-08-04 02:19:56 tlipkis Exp $
+ * $Id: CrawlUrlData.java,v 1.3 2009-08-09 07:38:50 tlipkis Exp $
  */
 
 /*
@@ -148,14 +148,25 @@ public class CrawlUrlData implements CrawlUrl {
 
   /** When finished updating the child list, converts it into a more
    * storage-efficient structure */
-  public void sealChildren() {
+  public void trimChildren() {
     if (children != null) {
       children.trimToSize();
     }
   }
 
-  /** Make the child list editable (again) */
-  public void unsealChildren() {
+  // used only by unit tests
+  boolean isChild(CrawlUrlData curl) {
+    return children != null && children.contains(curl);
+  }
+
+  /** Reinitialize the child list */
+  public void clearChildren() {
+    children = null;
+  }
+
+  /** For unit test */
+  public int numChildren() {
+    return children == null ? 0 : children.size();
   }
 
   public String toString() {

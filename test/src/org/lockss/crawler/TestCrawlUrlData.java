@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlUrlData.java,v 1.2 2009-08-04 02:19:56 tlipkis Exp $
+ * $Id: TestCrawlUrlData.java,v 1.3 2009-08-09 07:38:50 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,22 @@ public class TestCrawlUrlData extends LockssTestCase {
     assertFalse(curl.isFailedParse());
   }
 
+  public void testChildren() {
+    CrawlUrlData c0 = new CrawlUrlData("c0", 0);
+    CrawlUrlData c1 = new CrawlUrlData("c1", 0);
+    CrawlUrlData c2 = new CrawlUrlData("c2", 0);
+
+    assertEquals(0, c0.numChildren());
+    c0.addChild(c1);
+    assertEquals(1, c0.numChildren());
+    c0.addChild(c2);
+    assertEquals(2, c0.numChildren());
+    c0.trimChildren();
+    assertEquals(2, c0.numChildren());
+    c0.clearChildren();
+    assertEquals(0, c0.numChildren());
+  }
+
   class Event {
     CrawlUrlData curl;
     int from;
@@ -119,7 +135,7 @@ public class TestCrawlUrlData extends LockssTestCase {
     }
   }
 
-  public void testNoChildren() {
+  public void testEncounteredAtDepth() {
     CrawlUrlData cu1 = new CrawlUrlData("foo", 0);
     assertEquals("foo", cu1.getUrl());
     assertEquals(0, cu1.getDepth());
@@ -142,7 +158,7 @@ public class TestCrawlUrlData extends LockssTestCase {
 //     assertEquals(ListUtil.list(new Event(cu2, 8, 6), new Event(cu2, 6, 3)),
 // 		 er.events);
 
-  public void testChildren() {
+  public void testAddChild() {
     EventRecorder er = new EventRecorder();
 
     CrawlUrlData cu1 = new CrawlUrlData("c1", 0);
