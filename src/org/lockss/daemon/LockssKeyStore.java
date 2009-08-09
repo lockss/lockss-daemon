@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.4 2009-06-19 08:28:20 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.4.2.1 2009-08-09 07:36:36 tlipkis Exp $
  */
 
 /*
@@ -153,7 +153,9 @@ public class LockssKeyStore {
       createKeyManagerFactory();
       createTrustManagerFactory();
       loaded = true;
+      log.info("Loaded keystore: " + name);
     } catch (Exception e) {
+      log.error("Error loading keystore: " + name, e);
       throw new UnavailableKeyStoreException(e);
     }
   }
