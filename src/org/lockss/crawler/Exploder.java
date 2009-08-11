@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.11 2008-05-27 04:30:37 dshr Exp $
+ * $Id: Exploder.java,v 1.11.20.1 2009-08-11 19:42:11 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public abstract class Exploder {
     Configuration.PREFIX + "crawler.exploder.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 3*Constants.SECOND;
   public static final String PARAM_EXPLODED_AU_BASE_URL =
-    Configuration.PREFIX + "crawler.exploder.PARAM_EXPLODED_AU_BASE_URL";
+    Configuration.PREFIX + "crawler.exploder.explodedAuBaseUrl";
   public static final String DEFAULT_EXPLODED_AU_BASE_URL = "none";
 
 
