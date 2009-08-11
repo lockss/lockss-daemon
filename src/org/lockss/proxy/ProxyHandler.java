@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.63 2009-07-22 06:40:41 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.64 2009-08-11 19:43:45 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.63 2009-07-22 06:40:41 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.64 2009-08-11 19:43:45 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -820,42 +820,46 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws HttpException, IOException {
     URI uri = request.getURI();
 
-    try {
-      if(jlog.isDebugEnabled())jlog.debug("CONNECT: "+uri);
-      InetAddrPort addrPort=new InetAddrPort(uri.toString());
+    // Never needed in LOCKSS proxy, prevent use as relay
+    sendForbid(request,response,uri);
+    return;
 
-      if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
-	sendForbid(request,response,uri);
-      } else {
-	Socket socket =
-	  new Socket(addrPort.getInetAddress(),addrPort.getPort());
+//     try {
+//       if(jlog.isDebugEnabled())jlog.debug("CONNECT: "+uri);
+//       InetAddrPort addrPort=new InetAddrPort(uri.toString());
 
-	// XXX - need to setup semi-busy loop for IE.
-	int timeoutMs=30000;
-	if (_tunnelTimeoutMs > 0) {
-	  socket.setSoTimeout(_tunnelTimeoutMs);
-	  Object maybesocket = request.getHttpConnection().getConnection();
-	  try {
-	    Socket s = (Socket) maybesocket;
-	    timeoutMs=s.getSoTimeout();
-	    s.setSoTimeout(_tunnelTimeoutMs);
-	  } catch (Exception e) {
-	    LogSupport.ignore(jlog,e);
-	  }
-	}
+//       if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
+// 	sendForbid(request,response,uri);
+//       } else {
+// 	Socket socket =
+// 	  new Socket(addrPort.getInetAddress(),addrPort.getPort());
 
-	customizeConnection(pathInContext,pathParams,request,socket);
-	request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
-								 timeoutMs));
-	response.setStatus(HttpResponse.__200_OK);
-	response.setContentLength(0);
-	request.setHandled(true);
-      }
-    } catch (Exception e) {
-      LogSupport.ignore(jlog,e);
-      response.sendError(HttpResponse.__500_Internal_Server_Error,
-			 e.getMessage());
-    }
+// 	// XXX - need to setup semi-busy loop for IE.
+// 	int timeoutMs=30000;
+// 	if (_tunnelTimeoutMs > 0) {
+// 	  socket.setSoTimeout(_tunnelTimeoutMs);
+// 	  Object maybesocket = request.getHttpConnection().getConnection();
+// 	  try {
+// 	    Socket s = (Socket) maybesocket;
+// 	    timeoutMs=s.getSoTimeout();
+// 	    s.setSoTimeout(_tunnelTimeoutMs);
+// 	  } catch (Exception e) {
+// 	    LogSupport.ignore(jlog,e);
+// 	  }
+// 	}
+
+// 	customizeConnection(pathInContext,pathParams,request,socket);
+// 	request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
+// 								 timeoutMs));
+// 	response.setStatus(HttpResponse.__200_OK);
+// 	response.setContentLength(0);
+// 	request.setHandled(true);
+//       }
+//     } catch (Exception e) {
+//       LogSupport.ignore(jlog,e);
+//       response.sendError(HttpResponse.__500_Internal_Server_Error,
+// 			 e.getMessage());
+//     }
   }
 
   /* ------------------------------------------------------------ */
