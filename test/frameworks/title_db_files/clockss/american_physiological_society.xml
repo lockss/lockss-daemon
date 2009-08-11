@@ -35,1516 +35,473 @@
 ]>
 
 <lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="American Physiological Society">
+   <property name="name" value="All American Physiological Society Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='American Physiological Society']" />
+  </property>
+  
+ </property>
+ 
  <property name="org.lockss.title">
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology1">
+  <property name="AdvancesinPhysiologyEducation32">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 1" />
+   <property name="journalTitle" value="Advances in Physiology Education" />
+   <property name="title" value="Advances in Physiology Education Volume 32" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="1" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology2">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 2" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="2" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology3">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 3" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="3" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology4">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 4" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="4" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology5">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 5" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="5" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology6">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 6" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="6" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology7">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 7" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="7" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology8">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 8" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="8" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology9">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 9" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="9" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology10">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 10" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="10" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology11">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 11" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="11" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology12">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 12" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="12" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology13">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 13" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="13" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology14">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 14" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="14" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology15">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 15" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="15" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology16">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 16" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="16" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology17">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 17" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="17" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology18">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 18" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="18" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology19">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 19" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="19" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology20">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 20" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="20" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology21">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 21" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="21" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology22">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 22" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="22" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology23">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 23" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="23" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology24">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 24" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="24" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology25">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 25" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="25" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology26">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 26" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="26" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology27">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 27" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="27" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology28">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 28" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="28" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology29">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 29" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="29" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology30">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 30" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="30" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology31">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 31" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="31" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology32">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 32" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://advan.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="32" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology33">
+  <property name="AdvancesinPhysiologyEducation33">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 33" />
+   <property name="journalTitle" value="Advances in Physiology Education" />
+   <property name="title" value="Advances in Physiology Education Volume 33" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://advan.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="33" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology34">
+  <property name="AmericanJournalofPhysiologyCellPhysiology294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 34" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="34" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology35">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 35" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="35" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology36">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 36" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="36" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology37">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 37" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="37" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology38">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 38" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="38" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology39">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 39" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="39" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology40">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 40" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="40" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology41">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 41" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="41" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology42">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 42" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="42" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology43">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 43" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="43" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology44">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 44" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="44" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology45">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 45" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="45" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology46">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 46" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="46" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology47">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 47" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="47" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology48">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 48" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="48" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology49">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 49" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="49" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology50">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 50" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="50" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology51">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 51" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="51" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology52">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 52" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="52" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology53">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 53" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="53" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology54">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 54" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="54" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology55">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 55" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="55" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology56">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 56" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="56" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology57">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 57" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="57" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology58">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 58" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="58" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology59">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 59" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="59" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology60">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 60" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="60" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology61">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 61" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="61" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology62">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 62" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="62" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology63">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 63" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="63" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology64">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 64" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="64" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology65">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 65" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="65" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology66">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 66" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="66" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology67">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 67" />
+   <property name="journalTitle" value="American Journal of Physiology - Cell Physiology" />
+   <property name="title" value="American Journal of Physiology - Cell Physiology Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpcell.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="67" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology68">
+  <property name="AmericanJournalofPhysiologyCellPhysiology295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 68" />
+   <property name="journalTitle" value="American Journal of Physiology - Cell Physiology" />
+   <property name="title" value="American Journal of Physiology - Cell Physiology Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpcell.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="68" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology69">
+  <property name="AmericanJournalofPhysiologyCellPhysiology296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 69" />
+   <property name="journalTitle" value="American Journal of Physiology - Cell Physiology" />
+   <property name="title" value="American Journal of Physiology - Cell Physiology Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpcell.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="69" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology70">
+  <property name="AmericanJournalofPhysiologyCellPhysiology297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 70" />
+   <property name="journalTitle" value="American Journal of Physiology - Cell Physiology" />
+   <property name="title" value="American Journal of Physiology - Cell Physiology Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpcell.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="70" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology71">
+  <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 71" />
+   <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metablism" />
+   <property name="title" value="American Journal of Physiology - Endocrinology and Metablism Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpendo.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="71" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology72">
+  <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 72" />
+   <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metablism" />
+   <property name="title" value="American Journal of Physiology - Endocrinology and Metablism Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpendo.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="72" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology73">
+  <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 73" />
+   <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metablism" />
+   <property name="title" value="American Journal of Physiology - Endocrinology and Metablism Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpendo.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="73" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology74">
+  <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 74" />
+   <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metablism" />
+   <property name="title" value="American Journal of Physiology - Endocrinology and Metablism Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpendo.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="74" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology75">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 75" />
+   <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpgi.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="75" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology76">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 76" />
+   <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpgi.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="76" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology77">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 77" />
+   <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpgi.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="77" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology78">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 78" />
+   <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpgi.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="78" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology79">
+  <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 79" />
+   <property name="journalTitle" value="American Journal of Physiology - Heart and Circulatory Physiology" />
+   <property name="title" value="American Journal of Physiology - Heart and Circulatory Physiology Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpheart.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="79" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology80">
+  <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 80" />
+   <property name="journalTitle" value="American Journal of Physiology - Heart and Circulatory Physiology" />
+   <property name="title" value="American Journal of Physiology - Heart and Circulatory Physiology Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpheart.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="80" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology81">
+  <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 81" />
+   <property name="journalTitle" value="American Journal of Physiology - Heart and Circulatory Physiology" />
+   <property name="title" value="American Journal of Physiology - Heart and Circulatory Physiology Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpheart.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="81" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology82">
+  <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 82" />
+   <property name="journalTitle" value="American Journal of Physiology - Heart and Circulatory Physiology" />
+   <property name="title" value="American Journal of Physiology - Heart and Circulatory Physiology Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpheart.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="82" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology83">
+  <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 83" />
+   <property name="journalTitle" value="American Journal of Physiology - Lung Cellular and Molecular Physiology" />
+   <property name="title" value="American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajplung.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="83" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology84">
+  <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 84" />
+   <property name="journalTitle" value="American Journal of Physiology - Lung Cellular and Molecular Physiology" />
+   <property name="title" value="American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajplung.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="84" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology85">
+  <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 85" />
+   <property name="journalTitle" value="American Journal of Physiology - Lung Cellular and Molecular Physiology" />
+   <property name="title" value="American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajplung.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="85" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology86">
+  <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 86" />
+   <property name="journalTitle" value="American Journal of Physiology - Lung Cellular and Molecular Physiology" />
+   <property name="title" value="American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajplung.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="86" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology87">
+  <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 87" />
+   <property name="journalTitle" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology" />
+   <property name="title" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpregu.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="87" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology88">
+  <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 88" />
+   <property name="journalTitle" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology" />
+   <property name="title" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpregu.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="88" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology89">
+  <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 89" />
+   <property name="journalTitle" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology" />
+   <property name="title" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpregu.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="89" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology90">
+  <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 90" />
+   <property name="journalTitle" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology" />
+   <property name="title" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajpregu.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="90" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology91">
+  <property name="AmericanJournalofPhysiologyRenalPhysiology294">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 91" />
+   <property name="journalTitle" value="American Journal of Physiology - Renal Physiology" />
+   <property name="title" value="American Journal of Physiology - Renal Physiology Volume 294" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajprenal.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="91" />
+    <property name="value" value="294" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology92">
+  <property name="AmericanJournalofPhysiologyRenalPhysiology295">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 92" />
+   <property name="journalTitle" value="American Journal of Physiology - Renal Physiology" />
+   <property name="title" value="American Journal of Physiology - Renal Physiology Volume 295" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajprenal.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="92" />
+    <property name="value" value="295" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology93">
+  <property name="AmericanJournalofPhysiologyRenalPhysiology296">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 93" />
+   <property name="journalTitle" value="American Journal of Physiology - Renal Physiology" />
+   <property name="title" value="American Journal of Physiology - Renal Physiology Volume 296" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajprenal.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="93" />
+    <property name="value" value="296" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology94">
+  <property name="AmericanJournalofPhysiologyRenalPhysiology297">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 94" />
+   <property name="journalTitle" value="American Journal of Physiology - Renal Physiology" />
+   <property name="title" value="American Journal of Physiology - Renal Physiology Volume 297" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://ajprenal.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="94" />
+    <property name="value" value="297" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology95">
+  <property name="JournalofAppliedPhysiology104">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 95" />
+   <property name="title" value="Journal of Applied Physiology Volume 104" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -1552,15 +509,14 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="95" />
+    <property name="value" value="104" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology96">
+  <property name="JournalofAppliedPhysiology105">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 96" />
+   <property name="title" value="Journal of Applied Physiology Volume 105" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -1568,15 +524,14 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="96" />
+    <property name="value" value="105" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology97">
+  <property name="JournalofAppliedPhysiology106">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 97" />
+   <property name="title" value="Journal of Applied Physiology Volume 106" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -1584,15 +539,14 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="97" />
+    <property name="value" value="106" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology98">
+  <property name="JournalofAppliedPhysiology107">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 98" />
+   <property name="title" value="Journal of Applied Physiology Volume 107" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -1600,59 +554,265 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="98" />
+    <property name="value" value="107" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology99">
+  <property name="JournalofNeurophysiology99">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 99" />
+   <property name="journalTitle" value="Journal of Neurophysiology" />
+   <property name="title" value="Journal of Neurophysiology Volume 99" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://jn.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="99" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology100">
+  <property name="JournalofNeurophysiology100">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 100" />
+   <property name="journalTitle" value="Journal of Neurophysiology" />
+   <property name="title" value="Journal of Neurophysiology Volume 100" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://jn.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="100" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="CLOCKSSAPSJournalofAppliedPhysiology101">
+  <property name="JournalofNeurophysiology101">
    <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 101" />
+   <property name="journalTitle" value="Journal of Neurophysiology" />
+   <property name="title" value="Journal of Neurophysiology Volume 101" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
+    <property name="value" value="http://jn.physiology.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="101" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="JournalofNeurophysiology102">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Journal of Neurophysiology" />
+   <property name="title" value="Journal of Neurophysiology Volume 102" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jn.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="102" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics32">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics33">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics34">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics35">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics36">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics37">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics38">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics39">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalGenomics40">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalReviews88">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Reviews" />
+   <property name="title" value="Physiological Reviews Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physrev.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="88" />
+   </property>
+  </property>
+
+  <property name="PhysiologicalReviews89">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Reviews" />
+   <property name="title" value="Physiological Reviews Volume 89" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physrev.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="89" />
+   </property>
+  </property>
+
+  <property name="Physiology23">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiology" />
+   <property name="title" value="Physiology Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiologyonline.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="Physiology24">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiology" />
+   <property name="title" value="Physiology Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiologyonline.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
   </property>
 
  </property>
-</lockss-config>
 
+</lockss-config>

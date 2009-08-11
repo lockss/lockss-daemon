@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="American Academy of Pediatrics">
+   <property name="name" value="All American Academy of Pediatrics Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='American Academy of Pediatrics']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AAPGrandRounds19">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="AAP Grand Rounds" />
+   <property name="title" value="AAP Grand Rounds Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aapgrandrounds.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="AAPGrandRounds20">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="AAP Grand Rounds" />
+   <property name="title" value="AAP Grand Rounds Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aapgrandrounds.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="AAPGrandRounds21">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="AAP Grand Rounds" />
+   <property name="title" value="AAP Grand Rounds Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aapgrandrounds.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="AAPGrandRounds22">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="AAP Grand Rounds" />
+   <property name="title" value="AAP Grand Rounds Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aapgrandrounds.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="AAPNews19">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="AAP News" />
+   <property name="title" value="AAP News Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aapnews.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="AAPNews20">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="AAP News" />
+   <property name="title" value="AAP News Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aapnews.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="NeoReviews9">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="NeoReviews" />
+   <property name="title" value="NeoReviews Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://neoreviews.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="NeoReviews10">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="NeoReviews" />
+   <property name="title" value="NeoReviews Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://neoreviews.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="Pediatrics121">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="Pediatrics" />
+   <property name="title" value="Pediatrics Volume 121" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://pediatrics.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="121" />
+   </property>
+  </property>
+
+  <property name="Pediatrics122">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="Pediatrics" />
+   <property name="title" value="Pediatrics Volume 122" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://pediatrics.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="122" />
+   </property>
+  </property>
+
+  <property name="Pediatrics123">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="Pediatrics" />
+   <property name="title" value="Pediatrics Volume 123" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://pediatrics.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="123" />
+   </property>
+  </property>
+
+  <property name="Pediatrics124">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="Pediatrics" />
+   <property name="title" value="Pediatrics Volume 124" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://pediatrics.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="124" />
+   </property>
+  </property>
+
+  <property name="PediatricsinReview29">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="Pediatrics in Review" />
+   <property name="title" value="Pediatrics in Review Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://pedsinreview.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="PediatricsinReview30">
+   <property name="attributes.publisher" value="American Academy of Pediatrics" />
+   <property name="journalTitle" value="Pediatrics in Review" />
+   <property name="title" value="Pediatrics in Review Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://pedsinreview.aappublications.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
