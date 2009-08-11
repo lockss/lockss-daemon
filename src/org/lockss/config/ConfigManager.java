@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.67 2009-07-22 06:37:20 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.67.2.1 2009-08-11 19:41:56 tlipkis Exp $
  */
 
 /*
@@ -83,20 +83,6 @@ public class ConfigManager implements LockssManager {
   /** Config param written to local config files to indicate file version */
   static final String PARAM_CONFIG_FILE_VERSION =
     MYPREFIX + "fileVersion.<filename>";
-
-  /** List of URLs of auxilliary config files */
-  public static final String PARAM_EXPERT_ALLOW = MYPREFIX + "expert.allow";
-  public static final List DEFAULT_EXPERT_ALLOW = null;
-  public static final String PARAM_EXPERT_DENY = MYPREFIX + "expert.deny";
-  static String ODLD = "^org\\.lockss\\.";
-  public static final List DEFAULT_EXPERT_DENY =
-    ListUtil.list("[pP]assword$",
-		  "password",
-		  ODLD +"platform\\.",
-		  ODLD +"exitOnce$",
-		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY),
-		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW)
-		  );
 
   /** Temporary param to enable new scheduler */
   public static final String PARAM_NEW_SCHEDULER =
@@ -189,6 +175,28 @@ public class ConfigManager implements LockssManager {
   /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
+
+  /** If set to a list of regexps, only parameter names that match one of
+   * them will be allowed to be set in expert config.  */
+  public static final String PARAM_EXPERT_ALLOW = MYPREFIX + "expert.allow";
+  public static final List DEFAULT_EXPERT_ALLOW = null;
+  /** If set to a list of regexps, only parameter names that do not match
+   * one of them will be allowed to be set in expert config.  */
+  public static final String PARAM_EXPERT_DENY = MYPREFIX + "expert.deny";
+  static String ODLD = "^org\\.lockss\\.";
+  public static final List DEFAULT_EXPERT_DENY =
+    ListUtil.list("[pP]assword\\b",
+		  ODLD +"platform\\.",
+		  ODLD +"keystore\\..*\\.keyPasswordFile$",
+		  ODLD +"app\\.exit(Once|After|Immediately)$",
+		  Perl5Compiler.quotemeta(PARAM_AUX_PROP_URLS),
+		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_IP),
+		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_IDENTITY),
+		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_PORT),
+		  Perl5Compiler.quotemeta(IpAccessControl.PARAM_ERROR_BELOW_BITS),
+		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW),
+		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY)
+		  );
 
   /** Describes a config file stored on the local disk, normally maintained
    * by the daemon. See writeCacheConfigFile(), et al. */
@@ -312,16 +320,16 @@ public class ConfigManager implements LockssManager {
 	if (RegexpUtil.getMatcher().contains(key, pat)) {
 	  return true;
 	}
-	return false;
       }
+      return false;
     }
     if (expertConfigDenyPats != null) {
       for (Pattern pat : expertConfigDenyPats) {
 	if (RegexpUtil.getMatcher().contains(key, pat)) {
 	  return false;
 	}
-	return true;
       }
+      return true;
     }
     return true;
   }
