@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.32 2009-07-22 06:37:20 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.33 2009-08-11 19:43:17 tlipkis Exp $
  */
 
 /*
@@ -637,7 +637,8 @@ public class TestConfigManager extends LockssTestCase {
     File pfile = new File(tmpdir, "props.txt");
     Properties pprops = new Properties();
     pprops.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
-    pprops.put(ConfigManager.PARAM_EXPERT_DENY, "foo");
+    pprops.put(ConfigManager.PARAM_EXPERT_DENY,
+	       "foo;bar;^org\\.lockss\\.platform\\.");
     PropUtil.toFile(pfile, pprops);
 
     String relConfigPath =
@@ -651,17 +652,20 @@ public class TestConfigManager extends LockssTestCase {
     String k1 = "org.lockss.foo";
     String k2 = "org.lockss.user.1.password";
     String k3 = "org.lockss.keyMgr.keystore.foo.keyPassword";
+    String k4 = "org.lockss.platform.foo";
 
     Properties eprops = new Properties();
     eprops.put(k1, "12345");
     eprops.put(k2, "v2");
     eprops.put(k3, "v3");
+    eprops.put(k4, "v4");
     PropUtil.toFile(efile, eprops);
 
     Configuration config = ConfigManager.getCurrentConfig();
     assertNull(config.get(k1));
     assertNull(config.get(k2));
     assertNull(config.get(k3));
+    assertNull(config.get(k4));
     assertTrue(mgr.updateConfig(ListUtil.list(pfile)));
     Configuration config2 = ConfigManager.getCurrentConfig();
     assertNull(config2.get(k1));
@@ -705,6 +709,26 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("12345", config2.get(k1));
     assertNull(config2.get(k2));
     assertEquals("v3", config2.get(k3));
+  }
+
+  public void testExpertConfigDefaultDeny() throws Exception {
+    mgr.updateConfig(Collections.EMPTY_LIST);
+    assertTrue(mgr.isLegalExpertConfigKey("org.lockss.unrelated.param"));
+    assertTrue(mgr.isLegalExpertConfigKey("org.lockss.foo.passwordFrob"));
+    assertTrue(mgr.isLegalExpertConfigKey("org.lockss.keystore.abcdy.keyFile"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.foo.password"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.keystore.foo.keyPasswordFile"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.platform.anything"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.app.exitOnce"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.app.exitImmediately"));
+    assertTrue(mgr.isLegalExpertConfigKey("org.lockss.app.exitWhenever"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.app.exitAfter"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.auxPropUrls"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.localIPAddress"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.localV3Identity"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.localV3Port"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.config.expert.deny"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.config.expert.allow"));
   }
 
   public void testUpdateAuConfig() throws Exception {
