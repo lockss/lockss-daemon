@@ -4,8 +4,12 @@
     <string>org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
-    <long>12000</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -92,5 +96,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupLoginPageChecker</string>
   </entry>
 </map>
