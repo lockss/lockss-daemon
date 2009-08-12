@@ -51,8 +51,8 @@
     au < released ; Annual Review of Anthropology Volume 33 ; 33 >
     au < released ; Annual Review of Anthropology Volume 34 ; 34 >
     au < released ; Annual Review of Anthropology Volume 35 ; 35 >
-    au < testing ; Annual Review of Anthropology Volume 36 ; 36 >
-    au < testing ; Annual Review of Anthropology Volume 37 ; 37 >
+    au < ready ; Annual Review of Anthropology Volume 36 ; 36 >
+    au < ready ; Annual Review of Anthropology Volume 37 ; 37 >
 
   }
 
@@ -110,9 +110,9 @@
     au < released ; Annual Review of Astronomy and Astrophysics Volume 42 ; 42 >
     au < released ; Annual Review of Astronomy and Astrophysics Volume 43 ; 43 >
     au < released ; Annual Review of Astronomy and Astrophysics Volume 44 ; 44 >
-    au < testing ; Annual Review of Astronomy and Astrophysics Volume 45 ; 45 >
-    au < testing ; Annual Review of Astronomy and Astrophysics Volume 46 ; 46 >
-    au < testing ; Annual Review of Astronomy and Astrophysics Volume 47 ; 47 >
+    au < ready ; Annual Review of Astronomy and Astrophysics Volume 45 ; 45 >
+    au < ready ; Annual Review of Astronomy and Astrophysics Volume 46 ; 46 >
+    au < ready ; Annual Review of Astronomy and Astrophysics Volume 47 ; 47 >
 
   }
 
@@ -203,7 +203,7 @@
     au < released ; Annual Review of Biochemistry Volume 75 ; 75 >
     au < released ; Annual Review of Biochemistry Volume 76 ; 76 >
     au < testing ; Annual Review of Biochemistry Volume 77 ; 77 >
-    au < testing ; Annual Review of Biochemistry Volume 78 ; 78 >
+    au < ready ; Annual Review of Biochemistry Volume 78 ; 78 >
   }
 
 
@@ -225,9 +225,9 @@
     au < released ; Annual Review of Biomedical Engineering Volume 7 ; 7 >
     au < released ; Annual Review of Biomedical Engineering Volume 8 ; 8 >
     au < released ; Annual Review of Biomedical Engineering Volume 9 ; 9 >
-    au < testing ; Annual Review of Biomedical Engineering Volume 10 ; 10 >
-    au < testing ; Annual Review of Biomedical Engineering Volume 11 ; 11 >
-    au < testing ; Annual Review of Biomedical Engineering Volume 12 ; 12 >
+    au < ready ; Annual Review of Biomedical Engineering Volume 10 ; 10 >
+    au < ready ; Annual Review of Biomedical Engineering Volume 11 ; 11 >
+    au < ready ; Annual Review of Biomedical Engineering Volume 12 ; 12 >
   }
 
 
@@ -251,7 +251,7 @@ comment[bb1] = next 3 title entries are continuation of the same journal
     au < released ; Annual Review of Biophysics and Bioengineering Volume 7 ; 7 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 8 ; 8 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 9 ; 9 >
-    au < testing ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
+    au < ready ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 11 ; 11 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 12 ; 12 >
     au < testing ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
@@ -305,9 +305,9 @@ comment[bb3] = continued from previous title entry
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 34 ; 34 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 35 ; 35 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 36 ; 36 >
-    au < testing ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
-    au < testing ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
-    au < testing ; Annual Review of Biophysics and Biomolecular Structure Volume 39 ; 39 >
+    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
+    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
+    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 39 ; 39 >
   }
 
 
@@ -356,9 +356,9 @@ comment[cb2] = continued from previous title entry
     au < released ; Annual Review of Cell and Developmental Biology Volume 20 ; 20 >
     au < released ; Annual Review of Cell and Developmental Biology Volume 21 ; 21 >
     au < released ; Annual Review of Cell and Developmental Biology Volume 22 ; 22 >
-    au < manifest ; Annual Review of Cell and Developmental Biology Volume 23 ; 23 >
-    au < manifest ; Annual Review of Cell and Developmental Biology Volume 24 ; 24 >
-    au < manifest ; Annual Review of Cell and Developmental Biology Volume 25 ; 25 >
+    au < ready ; Annual Review of Cell and Developmental Biology Volume 23 ; 23 >
+    au < testing ; Annual Review of Cell and Developmental Biology Volume 24 ; 24 >
+    au < ready ; Annual Review of Cell and Developmental Biology Volume 25 ; 25 >
   }
 
 
@@ -366,16 +366,28 @@ comment[cb2] = continued from previous title entry
     title <
       name = Annual Review of Clinical Psychology 
     >
+    
+    {  
+    
+      param[journal_id] = clinpsy
+      param[short_journal_id] = none
 
-    param[journal_id] = clinpsy
-    param[short_journal_id] = none
+      au < released ; Annual Review of Clinical Psychology Volume 1 ; 1 >
+      au < released ; Annual Review of Clinical Psychology Volume 2 ; 2 >
+      au < released ; Annual Review of Clinical Psychology Volume 3 ; 3 >
+      
+    }
+    
+    { 
 
-    au < released ; Annual Review of Clinical Psychology Volume 1 ; 1 >
-    au < released ; Annual Review of Clinical Psychology Volume 2 ; 2 >
-    au < released ; Annual Review of Clinical Psychology Volume 3 ; 3 >
-    au < manifest ; Annual Review of Clinical Psychology Volume 4 ; 4 >
-    au < manifest ; Annual Review of Clinical Psychology Volume 5 ; 5 >
-    au < manifest ; Annual Review of Clinical Psychology Volume 6 ; 6 >
+      param[journal_id] = clinpsy
+      param[short_journal_id] = cp
+      
+      au < ready ; Annual Review of Clinical Psychology Volume 4 ; 4 >
+      au < ready ; Annual Review of Clinical Psychology Volume 5 ; 5 >
+      au < ready ; Annual Review of Clinical Psychology Volume 6 ; 6 >
+      
+    }
   }
 
 
@@ -423,9 +435,9 @@ comment[cb2] = continued from previous title entry
     au < released ; Annual Review of Earth and Planetary Sciences Volume 33 ; 33 >
     au < released ; Annual Review of Earth and Planetary Sciences Volume 34 ; 34 >
     au < released ; Annual Review of Earth and Planetary Sciences Volume 35 ; 35 >
-    au < manifest ; Annual Review of Earth and Planetary Sciences Volume 36 ; 36 >
-    au < manifest ; Annual Review of Earth and Planetary Sciences Volume 37 ; 37 >
-    au < manifest ; Annual Review of Earth and Planetary Sciences Volume 38 ; 38 >
+    au < ready ; Annual Review of Earth and Planetary Sciences Volume 36 ; 36 >
+    au < ready ; Annual Review of Earth and Planetary Sciences Volume 37 ; 37 >
+    au < ready ; Annual Review of Earth and Planetary Sciences Volume 38 ; 38 >
   }
 
 
@@ -487,9 +499,9 @@ comment[cb2] = continued from previous title entry
     au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 35 ; 35 >
     au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 36 ; 36 >
     au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 37 ; 37 >
-    au < manifest ; Annual Review of Ecology, Evolution, and Systematics Volume 38 ; 38 >
-    au < manifest ; Annual Review of Ecology, Evolution, and Systematics Volume 39 ; 39 >
-    au < manifest ; Annual Review of Ecology, Evolution, and Systematics Volume 40 ; 40 >
+    au < ready ; Annual Review of Ecology, Evolution, and Systematics Volume 38 ; 38 >
+    au < ready ; Annual Review of Ecology, Evolution, and Systematics Volume 39 ; 39 >
+    au < ready ; Annual Review of Ecology, Evolution, and Systematics Volume 40 ; 40 >
   }
 
 
@@ -563,9 +575,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Environment and Resources Volume 29 ; 29 >
     au < released ; Annual Review of Environment and Resources Volume 30 ; 30 >
     au < released ; Annual Review of Environment and Resources Volume 31 ; 31 >
-    au < manifest ; Annual Review of Environment and Resources Volume 32 ; 32 >
-    au < manifest ; Annual Review of Environment and Resources Volume 33 ; 33 >
-    au < manifest ; Annual Review of Environment and Resources Volume 34 ; 34 >
+    au < ready ; Annual Review of Environment and Resources Volume 32 ; 32 >
+    au < ready ; Annual Review of Environment and Resources Volume 33 ; 33 >
+    au < ready ; Annual Review of Environment and Resources Volume 34 ; 34 >
   }
 
 
@@ -630,9 +642,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Entomology Volume 50 ; 50 >
     au < released ; Annual Review of Entomology Volume 51 ; 51 >
     au < released ; Annual Review of Entomology Volume 52 ; 52 >
-    au < manifest ; Annual Review of Entomology Volume 53 ; 53 >
-    au < manifest ; Annual Review of Entomology Volume 54 ; 54 >
-    au < manifest ; Annual Review of Entomology Volume 55 ; 55 >
+    au < ready ; Annual Review of Entomology Volume 53 ; 53 >
+    au < ready ; Annual Review of Entomology Volume 54 ; 54 >
+    au < ready ; Annual Review of Entomology Volume 55 ; 55 >
   }
 
 
@@ -684,9 +696,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Fluid Mechanics Volume 37 ; 37 >
     au < released ; Annual Review of Fluid Mechanics Volume 38 ; 38 >
     au < released ; Annual Review of Fluid Mechanics Volume 39 ; 39 >
-    au < manifest ; Annual Review of Fluid Mechanics Volume 40 ; 40 >
-    au < manifest ; Annual Review of Fluid Mechanics Volume 41 ; 41 >
-    au < manifest ; Annual Review of Fluid Mechanics Volume 42 ; 42 >
+    au < testing ; Annual Review of Fluid Mechanics Volume 40 ; 40 >
+    au < testing ; Annual Review of Fluid Mechanics Volume 41 ; 41 >
+    au < testing ; Annual Review of Fluid Mechanics Volume 42 ; 42 >
   }
 
 
@@ -739,9 +751,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Genetics Volume 38 ; 38 >
     au < released ; Annual Review of Genetics Volume 39 ; 39 >
     au < released ; Annual Review of Genetics Volume 40 ; 40 >
-    au < manifest ; Annual Review of Genetics Volume 41 ; 41 >
-    au < manifest ; Annual Review of Genetics Volume 42 ; 42 >
-    au < manifest ; Annual Review of Genetics Volume 43 ; 43 >
+    au < testing ; Annual Review of Genetics Volume 41 ; 41 >
+    au < testing ; Annual Review of Genetics Volume 42 ; 42 >
+    au < testing ; Annual Review of Genetics Volume 43 ; 43 >
   }
 
 
@@ -761,9 +773,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Genomics and Human Genetics Volume 5 ; 5 >
     au < released ; Annual Review of Genomics and Human Genetics Volume 6 ; 6 >
     au < released ; Annual Review of Genomics and Human Genetics Volume 7 ; 7 >
-    au < manifest ; Annual Review of Genomics and Human Genetics Volume 8 ; 8 >
-    au < manifest ; Annual Review of Genomics and Human Genetics Volume 9 ; 9 >
-    au < manifest ; Annual Review of Genomics and Human Genetics Volume 10 ; 10 >
+    au < testing ; Annual Review of Genomics and Human Genetics Volume 8 ; 8 >
+    au < testing ; Annual Review of Genomics and Human Genetics Volume 9 ; 9 >
+    au < testing ; Annual Review of Genomics and Human Genetics Volume 10 ; 10 >
   }
 
 
@@ -801,9 +813,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Immunology Volume 23 ; 23 >
     au < released ; Annual Review of Immunology Volume 24 ; 24 >
     au < released ; Annual Review of Immunology Volume 25 ; 25 >
-    au < manifest ; Annual Review of Immunology Volume 26 ; 26 >
-    au < manifest ; Annual Review of Immunology Volume 27 ; 27 >
-    au < manifest ; Annual Review of Immunology Volume 28 ; 28 >
+    au < testing ; Annual Review of Immunology Volume 26 ; 26 >
+    au < testing ; Annual Review of Immunology Volume 27 ; 27 >
+    au < testing ; Annual Review of Immunology Volume 28 ; 28 >
   }
 
 
