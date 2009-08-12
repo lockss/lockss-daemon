@@ -61,6 +61,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="32" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AdvancesinPhysiologyEducation33">
@@ -76,6 +77,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="33" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyCellPhysiology294">
@@ -91,6 +93,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyCellPhysiology295">
@@ -106,6 +109,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyCellPhysiology296">
@@ -121,6 +125,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyCellPhysiology297">
@@ -136,6 +141,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism294">
@@ -151,6 +157,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism295">
@@ -166,6 +173,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism296">
@@ -181,6 +189,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyEndocrinologyandMetablism297">
@@ -196,6 +205,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
@@ -211,6 +221,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology295">
@@ -226,6 +237,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology296">
@@ -241,6 +253,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology297">
@@ -256,6 +269,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology294">
@@ -271,6 +285,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology295">
@@ -286,6 +301,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology296">
@@ -301,6 +317,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology297">
@@ -316,6 +333,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology294">
@@ -331,6 +349,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology295">
@@ -346,6 +365,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology296">
@@ -361,6 +381,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology297">
@@ -376,6 +397,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology294">
@@ -391,6 +413,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology295">
@@ -406,6 +429,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology296">
@@ -421,6 +445,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology297">
@@ -436,6 +461,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRenalPhysiology294">
@@ -451,6 +477,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="294" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRenalPhysiology295">
@@ -466,6 +493,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="295" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRenalPhysiology296">
@@ -481,6 +509,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="296" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="AmericanJournalofPhysiologyRenalPhysiology297">
@@ -496,6 +525,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="297" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofAppliedPhysiology104">
@@ -511,6 +541,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="104" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofAppliedPhysiology105">
@@ -526,6 +557,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="105" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofAppliedPhysiology106">
@@ -541,6 +573,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="106" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofAppliedPhysiology107">
@@ -556,6 +589,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="107" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofNeurophysiology99">
@@ -571,6 +605,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="99" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofNeurophysiology100">
@@ -586,6 +621,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="100" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofNeurophysiology101">
@@ -601,6 +637,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="101" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="JournalofNeurophysiology102">
@@ -616,6 +653,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="102" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics32">
@@ -631,6 +669,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="32" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics33">
@@ -646,6 +685,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="33" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics34">
@@ -661,6 +701,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="34" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics35">
@@ -676,6 +717,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="35" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics36">
@@ -691,6 +733,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="36" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics37">
@@ -706,6 +749,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="37" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics38">
@@ -721,6 +765,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="38" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics39">
@@ -736,6 +781,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="39" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalGenomics40">
@@ -751,6 +797,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="40" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalReviews88">
@@ -766,6 +813,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="88" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="PhysiologicalReviews89">
@@ -781,6 +829,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="89" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="Physiology23">
@@ -796,6 +845,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="23" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
   <property name="Physiology24">
@@ -811,6 +861,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="24" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
  </property>
