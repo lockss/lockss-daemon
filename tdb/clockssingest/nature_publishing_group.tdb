@@ -16,7 +16,7 @@
 
     param[journal_id] = aps
 
-    au < testing ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
+    au < manifest ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < manifest ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
@@ -505,8 +505,8 @@
 
     param[journal_id] = nature
 
-    au < manifest ; 2008 ; Nature Volume 451 ; 2008 ; 451 >
-    au < manifest ; 2008 ; Nature Volume 452 ; 2008 ; 452 >
+    au < testing ; 2008 ; Nature Volume 451 ; 2008 ; 451 >
+    au < testing ; 2008 ; Nature Volume 452 ; 2008 ; 452 >
     au < manifest ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
     au < manifest ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
     au < manifest ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
