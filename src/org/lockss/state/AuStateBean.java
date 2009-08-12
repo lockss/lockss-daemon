@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.27 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: AuStateBean.java,v 1.27.4.1 2009-08-12 18:46:41 edwardsb1 Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class AuStateBean extends AuState {
    * Constructor to create the bean from an AuState prior to marshalling.
    * @param auState the AuState
    */
-  AuStateBean(AuState auState) {super(auState.au, auState.lastCrawlTime,
+  public AuStateBean(AuState auState) {super(auState.au, auState.lastCrawlTime,
 				      auState.lastCrawlAttempt,
 				      auState.lastCrawlResult,
 				      auState.lastCrawlResultMsg,

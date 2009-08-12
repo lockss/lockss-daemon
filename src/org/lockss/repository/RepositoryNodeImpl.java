@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.84.4.4 2009-07-22 00:25:06 edwardsb1 Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.84.4.5 2009-08-12 18:46:40 edwardsb1 Exp $
  */
 
 /*
@@ -2020,12 +2020,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
     
     lirfvVersions = new ArrayList<RepositoryFileVersion>();
     
-    arinVersionNumbers = getVersionNumbers();
-    Arrays.sort(arinVersionNumbers); // This method may not be necessary.
-    for (i = (numVersions > arinVersionNumbers.length ? 0 : arinVersionNumbers.length - numVersions - 1); 
-         i < arinVersionNumbers.length; 
-         i++) {
-      lirfvVersions.add(getNodeVersion(arinVersionNumbers[i]));
+    if (numVersions > 1) {
+      arinVersionNumbers = getVersionNumbers();
+      Arrays.sort(arinVersionNumbers); // This method may not be necessary.
+      for (i = (numVersions > arinVersionNumbers.length ? 0 : arinVersionNumbers.length - numVersions + 1); 
+           i < arinVersionNumbers.length; 
+           i++) {
+        lirfvVersions.add(getNodeVersion(arinVersionNumbers[i]));
+      }
     }
     
     // Don't forget the current version...
@@ -2080,7 +2082,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
 
-  /* This method is heavily based on that of getNodeList.  However, I had to
+  /* This method was based on that of getNodeList.  However, I had to
    * rewrite it for two reasons: 
    * 
    * 1. getNodeList -always- ignores deleted nodes, but we want to be able to include
@@ -2124,40 +2126,36 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     alrfChildren = new ArrayList<RepositoryFile>(sizeList);
     for (int ii=0; ii<arfiChildren.length; ii++) {
-      String childUrl; 
+      String urlChild; 
       
       File child = arfiChildren[ii];
-      if ((child.getName().equals(CONTENT_DIR)) || (!child.isDirectory())) {
-        // all children are in their own directories, and the content dir
-        // must be ignored
-        continue;
-      }
       if (checkUnnormalized) {
         child = checkUnnormalized(child, arfiChildren, ii);
       }
+      
       if (child == null) {
         continue;
       }
-      childUrl = constructChildUrl(url, child.getName());
-      if ((filter==null) || (filter.matches(childUrl))) {
+      
+      // Create the RepositoryFile for the child...
+      urlChild = constructChildUrl(url, child.getName());
+      
+      if (filter == null || filter.matches(urlChild)) {
+//      rfChild = new RepositoryNodeImpl(urlChild, child.toString(), repository, au);
+
         try {
-          RepositoryNode node;
-          
-          node = repository.getNode(childUrl);
-          // add all nodes which are internal or active leaves
-          // deleted nodes never included
-//           boolean activeInternal = !node.isLeaf() && !node.isDeleted();
-//           boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
-//               (!node.isContentInactive() || includeInactive);
-//           if (activeInternal || activeLeaf) {
-          if (!node.isDeleted() || includeDeleted) {
-            alrfChildren.add(repository.getNode(childUrl));
+          RepositoryNode rnChild;
+        
+          rnChild = repository.getNode(urlChild);
+        
+          if (!rnChild.isDeleted() || includeDeleted) {
+            alrfChildren.add(rnChild);
           }
-        } catch (MalformedURLException ignore) {
+        } catch (MalformedURLException e) {
           // this can safely skip bad files because they will
           // eventually be trimmed by the repository integrity checker
           // and the content will be replaced by a poll repair
-          logger.error("Malformed child url: "+childUrl);
+          logger.error("Malformed child url: " + urlChild);
         }
       }
     }

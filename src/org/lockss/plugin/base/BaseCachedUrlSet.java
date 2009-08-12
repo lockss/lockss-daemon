@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.25 2008-11-02 21:11:52 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.25.8.1 2009-08-12 18:46:42 edwardsb1 Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 
 /**
- * Base class for CachedUrlSets.  Utilizes the LockssRepository.
+ * Base class for CachedUrlSets.  Utilizes the LockssRootRepository.
  * Plugins may extend this to get some common CachedUrlSet functionality.
  */
 public class BaseCachedUrlSet implements CachedUrlSet {

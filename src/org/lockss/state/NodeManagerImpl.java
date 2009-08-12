@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.218 2008-02-15 09:12:46 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.218.20.1 2009-08-12 18:46:41 edwardsb1 Exp $
  */
 
 /*
@@ -1560,7 +1560,7 @@ public class NodeManagerImpl
   }
 
   /**
-   * Deletes the node from the LockssRepository.
+   * Deletes the node from the LockssRootRepository.
    * @param cus CachedUrlSet
    * @throws IOException
    */
@@ -1572,7 +1572,7 @@ public class NodeManagerImpl
   }
 
   /**
-   * Deactivates the node in the LockssRepository.
+   * Deactivates the node in the LockssRootRepository.
    * @param cus CachedUrlSet
    * @throws IOException
    */

@@ -192,21 +192,21 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
    * All other tests in this class use the constructor.  This one just
    * verifies that the constructor works.
    *
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#LockssAuRepositoryImpl(org.lockss.plugin.ArchivalUnit)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#LockssAuRepositoryImpl(org.lockss.plugin.ArchivalUnit)}.
    */
-  public final void testLockssAuRepositoryImpl() throws Exception {
+  public final void testLockssOneAuRepositoryImpl() throws Exception {
     ArchivalUnit au;
     
     au = new MockArchivalUnit("TestAu");
-    new LockssAuRepositoryImpl(au);
+    new LockssOneAuRepositoryImpl(au);
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getAuCreationTime()}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#getAuCreationTime()}.
    */
   public final void testGetAuCreationTime() throws Exception {
     ArchivalUnit au;
-    LockssAuRepositoryImpl lari;
+    LockssOneAuRepositoryImpl lari;
     long timeCreation;
     long timeEnd;
     long timeStart;
@@ -214,7 +214,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     timeStart = System.currentTimeMillis();
     
     au = createAu();
-    lari = new LockssAuRepositoryImpl(au);
+    lari = new LockssOneAuRepositoryImpl(au);
     
     timeCreation = lari.getAuCreationTime();
     timeEnd = System.currentTimeMillis();
@@ -225,7 +225,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getAuStateRawContents()}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#getAuStateRawContents()}.
    */
   public final void testGetAuStateRawContents() throws Exception {
     ArchivalUnit auOther;
@@ -236,7 +236,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     InputStream istrAuState2;
     InputStream istrAuState3;
     InputStream istrOther;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     String strAuOther;
     String strAuState1;
     String strAuState2;
@@ -246,7 +246,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     auTest = createAu();
     ausTest = new MockAuState(auTest);
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // --- istrAuState1: store the Au State.
     lariTest.storeAuState(ausTest);    
@@ -278,7 +278,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getFile(java.lang.String, boolean)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#getFile(java.lang.String, boolean)}.
    */
   
   public final void testGetFile() throws Exception {
@@ -287,17 +287,17 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     byte [] arbyContent;
     InputStream istrContent;
     Node nodeGetFile;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     RepositoryFile rfGetFile1;
     RepositoryFile rfGetFile2;
     RepositoryFile rfGetFile3;    
     RepositoryFileVersion rfvGetFile;
     
-    // Generate a LockssAuRepository.
+    // Generate a LockssOneAuRepository.
     auTest = createAu();
     ausTest = new MockAuState(auTest);
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Get its associated RepositoryFile at a spot.
     rfGetFile1 = lariTest.getFile(k_urlGetFile, true);
@@ -331,17 +331,17 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     byte [] arbyContent;
     InputStream istrContent;
     Node nodeGetFile;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     RepositoryFile rfGetFile1;
     RepositoryFile rfGetFile2;
     RepositoryFile rfGetFile3;    
     RepositoryFileVersion rfvGetFile;
     
-    // Generate a LockssAuRepository.
+    // Generate a LockssOneAuRepository.
     auTest = createAu();
     ausTest = new MockAuState(auTest);
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
 
     // TEST: GetFile with empty path, file, and query.
     
@@ -394,7 +394,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   
   /**
    * 
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getIdentityAgreementRawContents()}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#getIdentityAgreementRawContents()}.
    */
   public final void testGetIdentityAgreementRawContents() throws Exception {
     ArchivalUnit auTest;
@@ -403,7 +403,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     InputStream istrIdentityAgreement1;
     InputStream istrIdentityAgreement2;
     InputStream istrIdentityAgreement3;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     List<IdentityAgreement> liidag1;
     List<IdentityAgreement> liidag2;
     MockPeerIdentity mpid1;
@@ -412,10 +412,10 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     String strIdentityAgreement2;
     String strIdentityAgreement3;
     
-    // Generate a LockssAuRepository.
+    // Generate a LockssOneAuRepository.
     auTest = createAu();
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Create and store one identity agreement.
     mpid1 = new MockPeerIdentity("foobar1");
@@ -453,7 +453,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
 
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getNoAuPeerSet()}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#getNoAuPeerSet()}.
    */
   public final void testGetNoAuPeerSet() throws Exception {
     // Changes to the DatedPeerIdSet should be passed among different copies
@@ -462,12 +462,12 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     ArchivalUnit auTest;
     DatedPeerIdSet dpis1;
     DatedPeerIdSet dpis2;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     PeerIdentity mpid;
 
-    // Create the LockssAuRepositoryImpl
+    // Create the LockssOneAuRepositoryImpl
     auTest = createAu();    
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Insert info into the DatedPeerIdSet.
     mpid = m_idman.findPeerIdentity(k_strPeerID);
@@ -483,19 +483,19 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getNode(java.lang.String, boolean)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#getNode(java.lang.String, boolean)}.
    */
   public final void testGetNode() throws Exception {
     ArchivalUnit auTest;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     RepositoryNode rnGetFile1;
     RepositoryNode rnGetFile2;
     RepositoryNode rnGetFile3;    
     RepositoryNode rnNewAddition;
     
-    // Generate a LockssAuRepository.
+    // Generate a LockssOneAuRepository.
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
 
     // Get its associated RepositoryNode at a spot.
     rnGetFile1 = lariTest.getNode(k_urlGetNode, true);
@@ -520,17 +520,17 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#loadAuState()}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#loadAuState()}.
    */
   public final void testLoadAuState() throws Exception {
     ArchivalUnit auTest;
     AuState ausOriginal;
     AuState ausRetrieved1;
     AuState ausRetrieved2;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Save an AU state, and retrieve it.
     ausOriginal = new MockAuState(auTest);
@@ -555,18 +555,18 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
 
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#loadIdentityAgreements()}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#loadIdentityAgreements()}.
    */
   public final void testLoadIdentityAgreements() throws Exception {
     ArchivalUnit auTest;
     IdentityManager.IdentityAgreement idag;
     List<IdentityManager.IdentityAgreement> liidag;
     List<IdentityManager.IdentityAgreement> liidagReturned;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     PeerIdentity pid;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Create a list of identity agreements.
     pid = new MockPeerIdentity(k_strPeerID);
@@ -584,7 +584,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)}.
    */
   public final void testQueueSizeCalcRepositoryNode() {
     // This method will be difficult to test.
@@ -592,7 +592,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#storeAuStateRawContents(java.io.InputStream)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#storeAuStateRawContents(java.io.InputStream)}.
    */
   public final void testStoreAuStateRawContents() throws Exception {
     ArchivalUnit auTest;
@@ -602,11 +602,11 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     AuState ausRetrieved;
     InputStream istrAuState;
     InputStream istrAuState2;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     String strAuState;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Store an Au State, and retrieve the raw contents.
     ausOriginal1 = new MockAuState(auTest);
@@ -636,7 +636,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#storeIdentityAgreementsRawContents(java.io.InputStream)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#storeIdentityAgreementsRawContents(java.io.InputStream)}.
    */
   public final void testStoreIdentityAgreementsRawContents() throws Exception {
     ArchivalUnit auTest;
@@ -648,13 +648,13 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     List<IdentityManager.IdentityAgreement> liidagreeOriginal2;
     List<IdentityManager.IdentityAgreement> liidagreeReceived1;
     List<IdentityManager.IdentityAgreement> liidagreeReceived2;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     PeerIdentity pid1;
     PeerIdentity pid2;
     String strIdentityAgreements;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Store an Identity Agreement, and retrieve the raw contents.
     pid1 = new MockPeerIdentity(k_strPeerID);
@@ -684,7 +684,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#storeAuState(org.lockss.state.AuState)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#storeAuState(org.lockss.state.AuState)}.
    */
   public final void testStoreAuState() throws Exception {
     ArchivalUnit auTest;
@@ -692,10 +692,10 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     AuState ausOriginal1;
     AuState ausOriginal2;
     AuState ausRetrieved;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Store an Au State, and retrieve the raw contents.
     ausOriginal1 = new MockAuState(auTest);
@@ -725,7 +725,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
 
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#storeIdentityAgreements(java.util.List)}.
+   * Test method for {@link org.lockss.repository.jcr.LockssOneAuRepositoryImpl#storeIdentityAgreements(java.util.List)}.
    */
   public final void testStoreIdentityAgreements() throws Exception {
     ArchivalUnit auTest;
@@ -737,13 +737,13 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     List<IdentityManager.IdentityAgreement> liidagreeOriginal2;
     List<IdentityManager.IdentityAgreement> liidagreeReceived1;
     List<IdentityManager.IdentityAgreement> liidagreeReceived2;
-    LockssAuRepositoryImpl lariTest;
+    LockssOneAuRepositoryImpl lariTest;
     PeerIdentity pid1;
     PeerIdentity pid2;
     String strIdentityAgreements;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssOneAuRepositoryImpl(auTest);
     
     // Store an Identity Agreement, and retrieve the raw contents.
     pid1 = new MockPeerIdentity(k_strPeerID);

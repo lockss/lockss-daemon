@@ -450,7 +450,7 @@ RepositoryNode  {
   
   
   /**
-   * Used by LockssAuRepository.loadPollHistories.
+   * Used by LockssOneAuRepository.loadPollHistories.
    * 
    * @see org.lockss.repository.v2.RepositoryNode#getTreeContentSize(org.lockss.daemon.CachedUrlSetSpec, boolean)
    * @param filter

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.81 2009-04-07 04:52:29 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.81.2.1 2009-08-12 18:46:42 edwardsb1 Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 
 /**
- * Basic, fully functional UrlCacher.  Utilizes the LockssRepository for
+ * Basic, fully functional UrlCacher.  Utilizes the LockssRootRepository for
  * caching, and {@link LockssUrlConnection}s for fetching.  Plugins may
  * extend this to achieve, <i>eg</i>, specialized host connection or
  * authentication.  The redirection semantics offered here must be

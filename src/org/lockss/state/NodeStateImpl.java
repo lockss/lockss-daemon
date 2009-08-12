@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.39 2008-11-15 02:30:53 edwardsb1 Exp $
+ * $Id: NodeStateImpl.java,v 1.39.6.1 2009-08-12 18:46:41 edwardsb1 Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ public class NodeStateImpl
     Collections.sort(pollHistories, new HistoryComparator());
   }
 
-  protected List getPollHistoryList() {
+  public List getPollHistoryList() {
     return (pollHistories == null) ? new ArrayList() : pollHistories;
   }
 

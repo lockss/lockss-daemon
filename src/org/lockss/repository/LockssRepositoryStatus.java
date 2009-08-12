@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.30.24.1 2009-07-18 01:28:27 edwardsb1 Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.30.24.2 2009-08-12 18:46:41 edwardsb1 Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.*;
 
 /**
- * Collect and report the status of the LockssRepository
+ * Collect and report the status of the LockssRootRepository
  */
 public class LockssRepositoryStatus extends BaseLockssDaemonManager {
   public static final String SERVICE_STATUS_TABLE_NAME = "RepositoryTable";

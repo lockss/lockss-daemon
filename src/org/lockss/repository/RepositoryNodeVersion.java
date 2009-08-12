@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeVersion.java,v 1.2.52.1 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: RepositoryNodeVersion.java,v 1.2.52.2 2009-08-12 18:46:40 edwardsb1 Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public interface RepositoryNodeVersion extends org.lockss.repository.v2.Reposito
   /**
    * Returns the content of this content version
    * @return size
-   * @throws LockssRepository.RepositoryStateException
+   * @throws LockssRootRepository.RepositoryStateException
    */
   public long getContentSize();
 
@@ -64,7 +64,7 @@ public interface RepositoryNodeVersion extends org.lockss.repository.v2.Reposito
    * content-less or inactive node.
    * @return an {@link RepositoryNode.RepositoryNodeContents} object from
    * which the contents of the cache can be read.
-   * @throws LockssRepository.RepositoryStateException
+   * @throws LockssRootRepository.RepositoryStateException
    */
   public RepositoryNode.RepositoryNodeContents getNodeContents();
 

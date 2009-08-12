@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.36 2009-01-21 23:15:06 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.36.6.1 2009-08-12 18:46:42 edwardsb1 Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
 
-/** Base class for CachedUrls.  Expects the LockssRepository for storage.
+/** Base class for CachedUrls.  Expects the LockssRootRepository for storage.
  * Plugins may extend this to get some common CachedUrl functionality.
  */
 public class BaseCachedUrl implements CachedUrl {

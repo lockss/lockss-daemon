@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.80.12.2 2009-07-18 01:28:27 edwardsb1 Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.80.12.3 2009-08-12 18:46:40 edwardsb1 Exp $
  */
 
 /*
@@ -39,10 +39,13 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.IdentityAgreementList;
 import org.lockss.util.*;
+import org.lockss.repository.v2.*;
+import org.lockss.state.*;
 
 /**
- * LockssRepository is used to organize the urls being cached.
+ * LockssRootRepository is used to organize the urls being cached.
  * It keeps a memory cache of the most recently used nodes as a
  * least-recently-used map, and also caches weak references to the instances
  * as they're doled out.  This ensures that two instances of the same node are
@@ -51,8 +54,8 @@ import org.lockss.util.*;
  * removed from the cache on finalize()).
  */
 public class LockssRepositoryImpl
-  extends BaseLockssDaemonManager implements LockssRepository {
-  private static Logger logger = Logger.getLogger("LockssRepository");
+  extends BaseLockssDaemonManager implements LockssRepository, LockssOneAuRepository {
+  private static Logger logger = Logger.getLogger("LockssRepositoryImpl");
 
   /**
    * Configuration parameter name for Lockss cache location.
@@ -150,7 +153,7 @@ public class LockssRepositoryImpl
   public void setAuConfig(Configuration auConfig) {
   }
 
-  void queueSizeCalc(RepositoryNode node) {
+  public void queueSizeCalc(RepositoryNode node) {
     repoMgr.queueSizeCalc(node);
   }
 
@@ -183,7 +186,7 @@ public class LockssRepositoryImpl
    * @return RepositoryNode the node
    * @throws MalformedURLException
    */
-  private synchronized RepositoryNode getNode(String url, boolean create)
+  public synchronized RepositoryNode getNode(String url, boolean create)
       throws MalformedURLException {
     String canonUrl;
     boolean isAuUrl = false;
@@ -314,9 +317,9 @@ public class LockssRepositoryImpl
   // static calls
 
   /**
-   * Factory method to create new LockssRepository instances.
+   * Factory method to create new LockssRootRepository instances.
    * @param au the {@link ArchivalUnit}
-   * @return the new LockssRepository instance
+   * @return the new LockssRootRepository instance
    */
   public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
     String root = getRepositoryRoot(au);
@@ -583,14 +586,14 @@ public class LockssRepositoryImpl
     return new File(location + File.separator + AU_ID_FILE);
   }
   
-  // NOTE: LockssAuRepositoryImpl does NOT pass in a location.
+  // NOTE: LockssOneAuRepositoryImpl does NOT pass in a location.
   
   public InputStream getAuStateRawContents() 
       throws IOException {
     File fileAuState;
     FileInputStream fisAuState;
     
-    fileAuState = new File(rootLocation + File.separator + AU_FILE_NAME);
+    fileAuState = getAuStateFile();
     
     fisAuState = new FileInputStream(fileAuState);
     
@@ -612,7 +615,7 @@ public class LockssRepositoryImpl
     StreamUtil.copy(istrAuState, osTemp);
     
     // Atomically move the file to the correct location.
-    fileAuState = new File(rootLocation + File.separator + AU_FILE_NAME);
+    fileAuState = getAuStateFile();
     PlatformUtil.updateAtomically(fileTemp, fileAuState);
   }
 
@@ -731,5 +734,396 @@ public class LockssRepositoryImpl
     public LockssAuManager createAuManager(ArchivalUnit au) {
       return createNewLockssRepository(au);
     }
+  }
+
+  // The following methods implement LockssRootRepository.
+  
+  public void checkConsistency() {
+    // This method is a stub, and it has been intentionally left blank.
+  }
+
+  public long getAuCreationTime() {
+    AuState austate;
+    
+    austate = loadAuState();
+    return austate.getAuCreationTime();
+  }
+
+  public File getAuStateFile() {
+    return new File(rootLocation + File.separator + AU_FILE_NAME);
+  }
+  
+  File getDamagedNodeFile() {
+    return new File(rootLocation, HistoryRepositoryImpl.DAMAGED_NODES_FILE_NAME);
+  }
+
+  public File getIdentityAgreementFile() {
+    return new File(rootLocation, HistoryRepositoryImpl.IDENTITY_AGREEMENT_FILE_NAME);
+  }
+
+  // Most of this method comes indirectly from HistoryRepositoryImpl.
+  public AuState loadAuState() {
+    AuState ausReturn;
+    CXSerializer obser;
+    File fileAuState;
+    
+    // Mostly taken from HistoryRepositoryImpl.makeObjectSerializer
+    obser = new CXSerializer(getDaemon(),
+        CastorSerializer.getMapping(HistoryRepositoryImpl.MAPPING_FILES),
+        AuStateBean.class);
+    obser.setFailedDeserializationMode(ObjectSerializer.FAILED_DESERIALIZATION_RENAME);
+    obser.setCompatibilityMode(CXSerializer.getCompatibilityModeFromConfiguration());
+
+    // Mostly taken from loadAuState
+    try {
+      fileAuState = getAuStateFile();
+      ausReturn = (AuState) obser.deserialize(fileAuState);
+    } catch (InterruptedIOException e) {
+      logger.debug2("Interrupted IO Exception.  Continuing: ", e);
+      ausReturn = new AuState(au, getDaemon().getHistoryRepository(au));
+    } catch (SerializationException e) {
+      logger.debug2("Serialization Exception.  Continuing: ", e);
+      if (getDaemon() == null) {
+        logger.error("In LockssRepositoryImpl.loadAuState, Daemon is null; cancelling.");
+        throw new LockssRepository.RepositoryStateException("Daemon is null.");
+      }
+      
+      if (getDaemon().getHistoryRepository(au) == null) {
+        logger.error("In LockssRepositoryImpl.loadAuState, history repository is null.  Cancelling.");
+        throw new LockssRepository.RepositoryStateException("History repository is null.");
+      }
+      ausReturn = new AuState(au, getDaemon().getHistoryRepository(au));
+    }
+    
+    return ausReturn;
+  }
+
+  // Mostly taken from HistoryRepositoryImpl.loadDamagedNodeSet.
+  
+  public DamagedNodeSet loadDamagedNodeSet() {
+    CXSerializer obser;
+    DamagedNodeSet dnsReturn;
+    File fileDamagedNodeSet;
+
+    // Mostly taken from HistoryRepositoryImpl.makeObjectSerializer
+    obser = new CXSerializer(getDaemon(),
+        CastorSerializer.getMapping(HistoryRepositoryImpl.MAPPING_FILES),
+        DamagedNodeSet.class);
+    obser.setFailedDeserializationMode(ObjectSerializer.FAILED_DESERIALIZATION_RENAME);
+    obser.setCompatibilityMode(CXSerializer.getCompatibilityModeFromConfiguration());
+
+    // Mostly taken from loadDamagedNodeSet
+    try {
+      fileDamagedNodeSet = getDamagedNodeFile();
+      dnsReturn = (DamagedNodeSet) obser.deserialize(fileDamagedNodeSet);
+    } catch (InterruptedIOException e) {
+      logger.debug2("Interrupted IO Exception.  Continuing: ", e);
+      dnsReturn = new DamagedNodeSet(au, getDaemon().getHistoryRepository(au));
+    } catch (SerializationException e) {
+      logger.debug2("Serialization Exception.  Continuing: ", e);
+      dnsReturn = new DamagedNodeSet(au, getDaemon().getHistoryRepository(au));
+    }
+    
+    return dnsReturn;
+  }
+
+  
+  public List loadIdentityAgreements() {
+    CXSerializer obser;
+    List liIdentityAgreements;
+    File fileIdentityAgreements;
+
+    // Mostly taken from HistoryRepositoryImpl.makeObjectSerializer
+    obser = new CXSerializer(getDaemon(),
+        CastorSerializer.getMapping(HistoryRepositoryImpl.MAPPING_FILES),
+        IdentityAgreementList.class);
+    obser.setFailedDeserializationMode(ObjectSerializer.FAILED_DESERIALIZATION_RENAME);
+    obser.setCompatibilityMode(CXSerializer.getCompatibilityModeFromConfiguration());
+
+    // Mostly taken from loadDamagedNodeSet (modified for identity agreements)
+    try {
+      fileIdentityAgreements = getIdentityAgreementFile();
+      liIdentityAgreements = (List) obser.deserialize(fileIdentityAgreements);
+    } catch (InterruptedIOException e) {
+      logger.debug2("Interrupted IO Exception.  Continuing: ", e);
+      liIdentityAgreements = new ArrayList();
+    } catch (SerializationException e) {
+      logger.debug2("Serialization Exception.  Continuing: ", e);
+      liIdentityAgreements = new ArrayList();
+    }
+    
+    return liIdentityAgreements;
+  }
+
+  public NodeState loadNodeState(CachedUrlSet cus) {
+    // This method is a stub; it has been intentionally left blank.
+    return null;
+  }
+
+  public void loadPollHistories(NodeState nodeState) {
+    // This method is a stub; it has been intentionally left blank.
+    
+  }
+
+  // Note that this merely sets the stream inside a node.  It does not,
+  // for example, copy all child nodes.
+  
+  public void setNode(String url, RepositoryNode node) throws MalformedURLException,
+    LockssRepositoryException {
+    RepositoryNode nodeSet;
+    
+    nodeSet = getNode(url);
+    try {
+      nodeSet.setInputStream(node.getInputStream());
+    } catch (LockssRepositoryException e) {
+      logger.error("Lockss Repository Exception: ", e);
+      throw e;
+    } catch (IOException e) {
+      logger.error("IO Exception: ", e);
+      throw new LockssRepositoryException(e);
+    }
+  }
+
+  /** Most of this method comes from HistoryRepositoryImpl.storeAuState.
+   * 
+   */
+  
+  public void storeAuState(AuState auState) {
+    CXSerializer obser;
+    
+    logger.debug3("Storing state for AU '" + auState.getArchivalUnit().getName() + "'");
+    File file = prepareFile(rootLocation, AU_FILE_NAME);
+    
+    // Mostly taken from HistoryRepositoryImpl.makeObjectSerializer
+    obser = new CXSerializer(getDaemon(),
+        CastorSerializer.getMapping(HistoryRepositoryImpl.MAPPING_FILES),
+        AuStateBean.class);
+    obser.setFailedDeserializationMode(ObjectSerializer.FAILED_DESERIALIZATION_RENAME);
+    obser.setCompatibilityMode(CXSerializer.getCompatibilityModeFromConfiguration());
+
+    try {
+      // CASTOR: remove wrap() when Castor is phased out
+      obser.serialize(file, wrap(auState));
+    }
+    catch (Exception exc) {
+      String errorString = "Could not store AU state for AU '" + auState.getArchivalUnit().getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
+    }    
+  }
+
+  
+  /** Mostly taken from HistoryRepositoryImpl.storeDamagedNodeSet.
+   * 
+   */
+  
+  public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
+    CXSerializer obser;
+    
+    logger.debug3("Storing damaged nodes for AU '" + nodeSet.getArchivalUnit().getName() + "'");
+    File file = getDamagedNodeFile();
+    
+    // Mostly taken from HistoryRepositoryImpl.makeObjectSerializer
+    obser = new CXSerializer(getDaemon(),
+        CastorSerializer.getMapping(HistoryRepositoryImpl.MAPPING_FILES),
+        DamagedNodeSet.class);
+    obser.setFailedDeserializationMode(ObjectSerializer.FAILED_DESERIALIZATION_RENAME);
+    obser.setCompatibilityMode(CXSerializer.getCompatibilityModeFromConfiguration());
+    
+    try {
+      // CASTOR: NO CHANGE when Castor is phased out
+      obser.serialize(file, nodeSet);
+    }
+    catch (Exception exc) {
+      String errorString = "Could not store damaged nodes for AU '" + nodeSet.getArchivalUnit().getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
+    }
+  }
+
+  
+  /** Mostly taken from HistoryRepositoryImpl.storeIdentityAgreements.
+   * 
+   */
+  
+  public void storeIdentityAgreements(List identAgreements) {
+    CXSerializer obser;
+    
+    logger.debug3("Storing identity agreements for AU '" + au.getName() + "'");
+    File file = prepareFile(rootLocation, HistoryRepositoryImpl.IDENTITY_AGREEMENT_FILE_NAME);
+
+    // Mostly taken from HistoryRepositoryImpl.makeObjectSerializer
+    obser = new CXSerializer(getDaemon(),
+        CastorSerializer.getMapping(HistoryRepositoryImpl.MAPPING_FILES),
+        IdentityAgreementList.class);
+    obser.setFailedDeserializationMode(ObjectSerializer.FAILED_DESERIALIZATION_RENAME);
+    obser.setCompatibilityMode(CXSerializer.getCompatibilityModeFromConfiguration());
+
+    
+    try {
+      // CASTOR: remove wrap() when Castor is phased out
+      obser.serialize(file, wrap(identAgreements));
+    }
+    catch (Exception exc) {
+      String errorString = "Could not store identity agreements for AU '" + au.getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
+    }
+  
+  }
+
+  public void storeNodeState(NodeState nodeState) {
+    // This method is a stub; it has been intentionally left blank.
+  }
+
+  public void storePollHistories(NodeState nodeState) {
+    // Because loadPollHistories is a stub, I assume that this method
+    // should also be a stub.
+  }
+  
+  public void undeleteNode(String url) throws MalformedURLException {
+    RepositoryNode node = getNode(url, false);
+    if (node!=null) {
+      node.markAsNotDeleted();
+    }
+  }  
+
+  // --- Methods used by the above methods.
+  
+  /**
+   * <p>Computes the node location from a CUS URL. Uses
+   * LockssRepositoryImpl static functions.</p>
+   * @param cus A CachedUrlSet instance.
+   * @return The CUS' file system location.
+   * @throws MalformedURLException
+   */
+  protected String getNodeLocation(CachedUrlSet cus)
+      throws MalformedURLException {
+    String urlStr = cus.getUrl();
+    if (AuUrl.isAuUrl(urlStr)) {
+      return rootLocation;
+    } 
+    
+    return mapUrlToFileLocation(rootLocation, canonicalizePath(urlStr));
+  }
+
+  
+  /**
+   * <p>Instantiates a {@link File} instance with the given prefix and
+   * suffix, creating the path of directories denoted by the prefix if
+   * needed by calling {@link File#mkdirs}.</p>
+   * @param parent The path prefix.
+   * @param child  The file name.
+   * @return A new file instance with the prefix appropriately
+   *         created.
+   */
+  private static File prepareFile(String parent, String child) {
+    File parentFile = new File(parent);
+    if (!parentFile.exists()) { parentFile.mkdirs(); }
+    return new File(parentFile, child);
+  }
+
+  /**
+   * <p>Might wrap an AuState into an AuStateBean.</p>
+   * @param auState An AuState instance.
+   * @return An object suitable for serialization.
+   */
+  private static LockssSerializable wrap(AuState auState) {
+    // CASTOR: Phase out with Castor
+    if (HistoryRepositoryImpl.isCastorMode()) { return new AuStateBean(auState); }
+    else                { return auState; }
+  }
+
+  /**
+   * <p>Might wrap a List into an IdentityAgreementList.</p>
+   * @param idList An identity agreement list.
+   * @return An object suitable for serialization.
+   */
+  private static Serializable wrap(List idList) {
+    // CASTOR: Phase out with Castor
+    if (HistoryRepositoryImpl.isCastorMode()) { return new IdentityAgreementList(idList); }
+    else                { return (Serializable)idList; }
+  }
+
+  /* (non-Javadoc)
+   * Always returns the latest version of the node.
+   * 
+   * @see org.lockss.repository.v2.LockssOneAuRepository#getFile(java.lang.String, boolean)
+   */
+  public RepositoryFile getFile(String url, boolean create)
+      throws MalformedURLException, LockssRepositoryException {
+    RepositoryNode rnFile;
+    
+    rnFile = getNode(url, create);
+    if (rnFile == null) {
+      if (!create) {
+        // Everything is normal.
+        return null;
+      } 
+      
+      logger.error("getFile: getNode returned null, even though it was asked to create the node.");
+      throw new LockssRepositoryException("Did not successfully create the node.");
+    }
+    
+    return rnFile;
+  }
+
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssOneAuRepository#getNoAuPeerSetRawContents()
+   */
+  public InputStream getNoAuPeerSetRawContents()
+      throws LockssRepositoryException {
+    InputStream istr;
+    
+    try {
+      istr = new FileInputStream(getNoAuFile());
+    
+      return istr;
+    } catch (FileNotFoundException e) {
+      logger.error("File not found exception: ", e);
+      return null;
+    }
+  }
+
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssOneAuRepository#hasNoAuPeerSet()
+   */
+  public boolean hasNoAuPeerSet() {
+    return getNoAuFile().exists();
+  }
+
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssOneAuRepository#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)
+   */
+  public void queueSizeCalc(org.lockss.repository.v2.RepositoryNode node) {
+    if (logger.isDebug3()) {
+      logger.debug3("queueSizeCale for these kinds of nodes is not implemented yet.");
+    }
+  }
+
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssOneAuRepository#storeNoAuRawContents(java.io.InputStream)
+   */
+  public void storeNoAuRawContents(InputStream istr)
+      throws LockssRepositoryException {
+    OutputStream ostrNoAu;
+    
+    try {
+      ostrNoAu = new FileOutputStream(getNoAuFile());
+      StreamUtil.copy(istr, ostrNoAu);
+    } catch (FileNotFoundException e) {
+      logger.error("File not found exception: ", e);
+    } catch (IOException e) {
+      logger.error("IO Exception: ", e);
+    }
+    
+  }
+
+  private File getNoAuFile() {
+    File fileNoAu;
+    
+    fileNoAu = new File(rootLocation, HistoryRepositoryImpl.NO_AU_PEER_ID_SET_FILE_NAME);
+    
+    return fileNoAu;
   }
 }

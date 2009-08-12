@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.13.34.1 2009-04-30 20:11:03 edwardsb1 Exp $
+ * $Id: MockLockssRepository.java,v 1.13.34.2 2009-08-12 18:46:42 edwardsb1 Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.repository.*;
 import org.lockss.util.StreamUtil;
 
 /**
- * Mock version of LockssRepository.
+ * Mock version of LockssRootRepository.
  */
 public class MockLockssRepository implements LockssRepository {
   public static final String AU_FILE_NAME = "#au_state.xml";

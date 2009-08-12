@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.87.4.1 2009-04-30 20:11:03 edwardsb1 Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.87.4.2 2009-08-12 18:46:41 edwardsb1 Exp $
  */
 
 /*
@@ -78,23 +78,23 @@ public class HistoryRepositoryImpl
   /**
    * <p>The damaged nodes file name.</p>
    */
-  static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
+  public static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
 
   /**
    * <p>File name of the dated peer id set of peers who have said they
    * don't have the AU</p>
    */
-  static final String NO_AU_PEER_ID_SET_FILE_NAME = "#no_au_peers";
+  public static final String NO_AU_PEER_ID_SET_FILE_NAME = "#no_au_peers";
   
   /**
    * <p>The history file name.</p>
    */
-  static final String HISTORY_FILE_NAME = "#history.xml";
+  public static final String HISTORY_FILE_NAME = "#history.xml";
 
   /**
    * <p>The identity agreement list file name.</p>
    */
-  static final String IDENTITY_AGREEMENT_FILE_NAME = "#id_agreement.xml";
+  public static final String IDENTITY_AGREEMENT_FILE_NAME = "#id_agreement.xml";
 
   /**
    * <p>Mapping file for polls.</p>
@@ -104,7 +104,7 @@ public class HistoryRepositoryImpl
   /**
    * <p>All relevant mapping files used by this class.</p>
    */
-  static final String[] MAPPING_FILES = {
+  public static final String[] MAPPING_FILES = {
       MAPPING_FILE_NAME,
       ExternalizableMap.MAPPING_FILE_NAME,
       IdentityManager.MAPPING_FILE_NAME
@@ -245,7 +245,7 @@ public class HistoryRepositoryImpl
   /**
    * <p>Loads the state of an AU using the given deserializer.</p>
    * @param deserializer A deserializer instance.
-   * @return An AuState instance loaded from file.
+   * @return An unw instance loaded from file.
    * @throws RepositoryStateException if an error condition arises
    *                                  that is neither a file not found
    *                                  exception nor a serialization
@@ -848,7 +848,7 @@ public class HistoryRepositoryImpl
    *         configured to run in Castor mode.
    * @see CXSerializer#CASTOR_MODE
    */
-  protected static boolean isCastorMode() {
+  public static boolean isCastorMode() {
     return getCompatibilityMode() == CXSerializer.CASTOR_MODE;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.63 2008-01-27 06:43:40 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.63.20.1 2009-08-12 18:46:42 edwardsb1 Exp $
  */
 
 /*
@@ -685,7 +685,7 @@ public class MockLockssDaemon extends LockssDaemon {
     }
   }
 
-  /** Return LockssRepository for AU */
+  /** Return LockssRootRepository for AU */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
     try {
       return super.getLockssRepository(au);
@@ -724,7 +724,7 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the LockssRepository for a given AU.
+   * Set the LockssRootRepository for a given AU.
    * @param repo the new repository
    * @param au the ArchivalUnit
    */

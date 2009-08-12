@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.98 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.98.14.1 2009-08-12 18:46:39 edwardsb1 Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String POLL_MANAGER = "PollManager";
   public static final String PSM_MANAGER = "PsmManager";
   public static final String REPOSITORY_MANAGER = "RepositoryManager";
-  public static final String LOCKSS_REPOSITORY = "LockssRepository";
+  public static final String LOCKSS_REPOSITORY = "LockssRootRepository";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
   public static final String NODE_MANAGER = "NodeManager";
   public static final String CONTENT_SERVLET_MANAGER = "ContentManager";
@@ -192,13 +192,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected static final ManagerDesc[] auManagerDescs = {
     new ManagerDesc(ACTIVITY_REGULATOR,
 		    "org.lockss.daemon.ActivityRegulator$Factory"),
-    // LockssRepository uses ActivityRegulator
+    // LockssRootRepository uses ActivityRegulator
     new ManagerDesc(LOCKSS_REPOSITORY,
 		    "org.lockss.repository.LockssRepositoryImpl$Factory"),
     // HistoryRepository needs no extra managers
     new ManagerDesc(HISTORY_REPOSITORY,
 		    "org.lockss.state.HistoryRepositoryImpl$Factory"),
-    // NodeManager uses LockssRepository, HistoryRepository, and
+    // NodeManager uses LockssRootRepository, HistoryRepository, and
     // ActivityRegulator
     new ManagerDesc(NODE_MANAGER, "org.lockss.state.NodeManagerImpl$Factory"),
   };
@@ -491,7 +491,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /**
    * Get Lockss Repository instance
    * @param au the ArchivalUnit
-   * @return the LockssRepository
+   * @return the LockssRootRepository
    * @throws IllegalArgumentException if the manager is not available.
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
