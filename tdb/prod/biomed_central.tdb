@@ -128,12 +128,12 @@
 
       param[journal_issn] = 1471-2407
 
-      au < released ; BMC Cancer Volume 1 ; 1 >
-      au < released ; BMC Cancer Volume 2 ; 2 >
-      au < released ; BMC Cancer Volume 3 ; 3 >
-      au < released ; BMC Cancer Volume 4 ; 4 >
-      au < released ; BMC Cancer Volume 5 ; 5 >
-      au < released ; BMC Cancer Volume 6 ; 6 >
+      au < manifest ; BMC Cancer Volume 1 ; 1 >
+      au < manifest ; BMC Cancer Volume 2 ; 2 >
+      au < manifest ; BMC Cancer Volume 3 ; 3 >
+      au < manifest ; BMC Cancer Volume 4 ; 4 >
+      au < ready ; BMC Cancer Volume 5 ; 5 >
+      au < manifest ; BMC Cancer Volume 6 ; 6 >
     }
 
 
@@ -1255,11 +1255,11 @@
       param[base_url] = http://www.anzhealthpolicy.com/
       param[journal_issn] = 1743-8462
 
-      au < testing ; Australia and New Zealand Health Policy Volume 1 ; 1 >
-      au < testing ; Australia and New Zealand Health Policy Volume 2 ; 2 >
-      au < testing ; Australia and New Zealand Health Policy Volume 3 ; 3 >
-      au < testing ; Australia and New Zealand Health Policy Volume 4 ; 4 >
-      au < testing ; Australia and New Zealand Health Policy Volume 5 ; 5 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 1 ; 1 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 2 ; 2 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 3 ; 3 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 4 ; 4 >
+      au < manifest ; Australia and New Zealand Health Policy Volume 5 ; 5 >
     }
 
 
@@ -2122,11 +2122,11 @@
       param[base_url] = http://www.jautoimdis.com/
       param[journal_issn] = 1740-2557
 
-      au < testing ; Journal of Autoimmune Diseases Volume 1 ; 1 >
-      au < testing ; Journal of Autoimmune Diseases Volume 2 ; 2 >
-      au < testing ; Journal of Autoimmune Diseases Volume 3 ; 3 >
-      au < testing ; Journal of Autoimmune Diseases Volume 4 ; 4 >
-      au < testing ; Journal of Autoimmune Diseases Volume 5 ; 5 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 1 ; 1 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 2 ; 2 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 3 ; 3 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 4 ; 4 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 5 ; 5 >
     }
 
 
