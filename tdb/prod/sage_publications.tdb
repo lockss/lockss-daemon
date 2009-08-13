@@ -66,8 +66,8 @@
         au < do_not_process ; Acta Sociologica Volume 48 ; 48 >
         au < released ; Acta Sociologica Volume 49 ; 49 >
         au < released ; Acta Sociologica Volume 50 ; 50 >
-        au < testing ; Acta Sociologica Volume 51 ; 51 >
-        au < testing ; Acta Sociologica Volume 52 ; 52 >
+        au < ready ; Acta Sociologica Volume 51 ; 51 >
+        au < ready ; Acta Sociologica Volume 52 ; 52 >
 
       }
 
@@ -428,8 +428,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Lifestyle Medicine Volume 1 ; 1 >
-        au < testing ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
-        au < testing ; American Journal of Lifestyle Medicine Volume 3 ; 3 >
+        au < ready ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
+        au < ready ; American Journal of Lifestyle Medicine Volume 3 ; 3 >
 
       }
 
@@ -460,8 +460,8 @@
         au < do_not_process ; American Journal of Medical Quality Volume 20 ; 20 >
         au < released ; American Journal of Medical Quality Volume 21 ; 21 >
         au < released ; American Journal of Medical Quality Volume 22 ; 22 >
-        au < testing ; American Journal of Medical Quality Volume 23 ; 23 >
-        au < testing ; American Journal of Medical Quality Volume 24 ; 24 >
+        au < ready ; American Journal of Medical Quality Volume 23 ; 23 >
+        au < ready ; American Journal of Medical Quality Volume 24 ; 24 >
 
       }
 
@@ -480,8 +480,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Journal of Men's Health Volume 1 ; 1 >
-        au < testing ; American Journal of Men's Health Volume 2 ; 2 >
-        au < testing ; American Journal of Men's Health Volume 3 ; 3 >
+        au < ready ; American Journal of Men's Health Volume 2 ; 2 >
+        au < ready ; American Journal of Men's Health Volume 3 ; 3 >
 
       }
 
@@ -543,8 +543,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; American Politics Research Volume 33 ; 33 >
         au < do_not_process ; American Politics Research Volume 34 ; 34 >
         au < released ; American Politics Research Volume 35 ; 35 >
-        au < testing ; American Politics Research Volume 36 ; 36 >
-        au < testing ; American Politics Research Volume 37 ; 37 >
+        au < ready ; American Politics Research Volume 36 ; 36 >
+        au < ready ; American Politics Research Volume 37 ; 37 >
 
       }
 
@@ -565,8 +565,8 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; The American Review of Public Administration Volume 35 ; 35 >
         au < released ; The American Review of Public Administration Volume 36 ; 36 >
         au < released ; The American Review of Public Administration Volume 37 ; 37 >
-        au < testing ; The American Review of Public Administration Volume 38 ; 38 >
-        au < testing ; The American Review of Public Administration Volume 39 ; 39 >
+        au < ready ; The American Review of Public Administration Volume 38 ; 38 >
+        au < ready ; The American Review of Public Administration Volume 39 ; 39 >
 
       }
 
@@ -741,7 +741,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; Armed Forces & Society Volume 32 ; 32 >
         au < released ; Armed Forces & Society Volume 33 ; 33 >
         au < released ; Armed Forces & Society Volume 34 ; 34 >
-        au < testing ; Armed Forces & Society Volume 35 ; 35 >
+        au < ready ; Armed Forces & Society Volume 35 ; 35 >
 
       }
 
@@ -2183,8 +2183,8 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Cultural Sociology Volume 1 ; 1 >
-        au < testing ; Cultural Sociology Volume 2 ; 2 >
-        au < testing ; Cultural Sociology Volume 3 ; 3 >
+        au < ready ; Cultural Sociology Volume 2 ; 2 >
+        au < ready ; Cultural Sociology Volume 3 ; 3 >
 
       }
 
@@ -2720,6 +2720,8 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         param[base_url] = http://edr.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
+comment[edr01] = pdf filter problems
+
         au < released ; Educational Researcher Volume 36 ; 36 >
         au < testing ; Educational Researcher Volume 37 ; 37 >
         au < testing ; Educational Researcher Volume 38 ; 38 >
@@ -2892,8 +2894,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European History Quarterly Volume 35 ; 35 >
         au < do_not_process ; European History Quarterly Volume 36 ; 36 >
         au < released ; European History Quarterly Volume 37 ; 37 >
-        au < manifest ; European History Quarterly Volume 38 ; 38 >
-        au < manifest ; European History Quarterly Volume 39 ; 39 >
+        au < testing ; European History Quarterly Volume 38 ; 38 >
+        au < testing ; European History Quarterly Volume 39 ; 39 >
 
       }
 
@@ -2924,8 +2926,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Archaeology Volume 7 ; 7 >
         au < do_not_process ; European Journal of Archaeology Volume 8 ; 8 >
         au < released ; European Journal of Archaeology Volume 9 ; 9 >
-        au < manifest ; European Journal of Archaeology Volume 10 ; 10 >
-        au < manifest ; European Journal of Archaeology Volume 11 ; 11 >
+        au < testing ; European Journal of Archaeology Volume 10 ; 10 >
+        au < testing ; European Journal of Archaeology Volume 11 ; 11 >
 
       }
 
@@ -2946,8 +2948,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Communication Volume 20 ; 20 >
         au < released ; European Journal of Communication Volume 21 ; 21 >
         au < released ; European Journal of Communication Volume 22 ; 22 >
-        au < manifest ; European Journal of Communication Volume 23 ; 23 >
-        au < manifest ; European Journal of Communication Volume 24 ; 24 >
+        au < testing ; European Journal of Communication Volume 23 ; 23 >
+        au < testing ; European Journal of Communication Volume 24 ; 24 >
 
       }
 
@@ -2969,7 +2971,7 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Criminology Volume 3 ; 3 >
         au < released ; European Journal of Criminology Volume 4 ; 4 >
         au < released ; European Journal of Criminology Volume 5 ; 5 >
-        au < manifest ; European Journal of Criminology Volume 6 ; 6 >
+        au < testing ; European Journal of Criminology Volume 6 ; 6 >
 
       }
 
@@ -2990,8 +2992,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Cultural Studies Volume 8 ; 8 >
         au < released ; European Journal of Cultural Studies Volume 9 ; 9 >
         au < released ; European Journal of Cultural Studies Volume 10 ; 10 >
-        au < manifest ; European Journal of Cultural Studies Volume 11 ; 11 >
-        au < manifest ; European Journal of Cultural Studies Volume 12 ; 12 >
+        au < testing ; European Journal of Cultural Studies Volume 11 ; 11 >
+        au < testing ; European Journal of Cultural Studies Volume 12 ; 12 >
 
       }
 
@@ -3022,8 +3024,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Industrial Relations Volume 11 ; 11 >
         au < do_not_process ; European Journal of Industrial Relations Volume 12 ; 12 >
         au < released ; European Journal of Industrial Relations Volume 13 ; 13 >
-        au < manifest ; European Journal of Industrial Relations Volume 14 ; 14 >
-        au < manifest ; European Journal of Industrial Relations Volume 15 ; 15 >
+        au < testing ; European Journal of Industrial Relations Volume 14 ; 14 >
+        au < testing ; European Journal of Industrial Relations Volume 15 ; 15 >
       }
 
     }
@@ -3053,8 +3055,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of International Relations Volume 11 ; 11 >
         au < do_not_process ; European Journal of International Relations Volume 12 ; 12 >
         au < released ; European Journal of International Relations Volume 13 ; 13 >
-        au < manifest ; European Journal of International Relations Volume 14 ; 14 >
-        au < manifest ; European Journal of International Relations Volume 15 ; 15 >
+        au < testing ; European Journal of International Relations Volume 14 ; 14 >
+        au < testing ; European Journal of International Relations Volume 15 ; 15 >
 
       }
 
@@ -3085,8 +3087,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Political Theory Volume 4 ; 4 >
         au < do_not_process ; European Journal of Political Theory Volume 5 ; 5 >
         au < released ; European Journal of Political Theory Volume 6 ; 6 >
-        au < manifest ; European Journal of Political Theory Volume 7 ; 7 >
-        au < manifest ; European Journal of Political Theory Volume 8 ; 8 >
+        au < testing ; European Journal of Political Theory Volume 7 ; 7 >
+        au < testing ; European Journal of Political Theory Volume 8 ; 8 >
 
       }
 
@@ -3107,8 +3109,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Social Theory Volume 8 ; 8 >
         au < released ; European Journal of Social Theory Volume 9 ; 9 >
         au < released ; European Journal of Social Theory Volume 10 ; 10 >
-        au < manifest ; European Journal of Social Theory Volume 11 ; 11 >
-        au < manifest ; European Journal of Social Theory Volume 12 ; 12 >
+        au < testing ; European Journal of Social Theory Volume 11 ; 11 >
+        au < testing ; European Journal of Social Theory Volume 12 ; 12 >
 
       }
 
@@ -3139,8 +3141,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Journal of Women's Studies Volume 12 ; 12 >
         au < do_not_process ; European Journal of Women's Studies Volume 13 ; 13 >
         au < released ; European Journal of Women's Studies Volume 14 ; 14 >
-        au < manifest ; European Journal of Women's Studies Volume 15 ; 15 >
-        au < manifest ; European Journal of Women's Studies Volume 16 ; 16 >
+        au < testing ; European Journal of Women's Studies Volume 15 ; 15 >
+        au < testing ; European Journal of Women's Studies Volume 16 ; 16 >
 
       }
 
@@ -3161,7 +3163,7 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Physical Education Review Volume 11 ; 11 >
         au < released ; European Physical Education Review Volume 12 ; 12 >
         au < released ; European Physical Education Review Volume 13 ; 13 >
-        au < manifest ; European Physical Education Review Volume 14 ; 14 >
+        au < testing ; European Physical Education Review Volume 14 ; 14 >
 
       }
 
@@ -3192,8 +3194,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Union Politics Volume 6 ; 6 >
         au < do_not_process ; European Union Politics Volume 7 ; 7 >
         au < released ; European Union Politics Volume 8 ; 8 >
-        au < manifest ; European Union Politics Volume 9 ; 9 >
-        au < manifest ; European Union Politics Volume 10 ; 10 >
+        au < testing ; European Union Politics Volume 9 ; 9 >
+        au < testing ; European Union Politics Volume 10 ; 10 >
 
       }
 
@@ -3224,8 +3226,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; European Urban and Regional Studies Volume 12 ; 12 >
         au < do_not_process ; European Urban and Regional Studies Volume 13 ; 13 >
         au < released ; European Urban and Regional Studies Volume 14 ; 14 >
-        au < manifest ; European Urban and Regional Studies Volume 15 ; 15 >
-        au < manifest ; European Urban and Regional Studies Volume 16 ; 16 >
+        au < testing ; European Urban and Regional Studies Volume 15 ; 15 >
+        au < testing ; European Urban and Regional Studies Volume 16 ; 16 >
 
       }
 
@@ -3246,8 +3248,8 @@ comment[ebd] = now published by Taylor & Francis
         au < released ; Evaluation Volume 11 ; 11 >
         au < released ; Evaluation Volume 12 ; 12 >
         au < released ; Evaluation Volume 13 ; 13 >
-        au < manifest ; Evaluation Volume 14 ; 14 >
-        au < manifest ; Evaluation Volume 15 ; 15 >
+        au < testing ; Evaluation Volume 14 ; 14 >
+        au < testing ; Evaluation Volume 15 ; 15 >
 
       }
 
@@ -4663,7 +4665,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of Behavioral Development Volume 5 ; 5 >
-        au < testing ; International Journal of Behavioral Development Volume 12 ; 12 >
+        au < ready ; International Journal of Behavioral Development Volume 12 ; 12 >
         au < ready ; International Journal of Behavioral Development Volume 27 ; 27 >
         au < ready ; International Journal of Behavioral Development Volume 29 ; 29 >
         au < do_not_process ; International Journal of Behavioral Development Volume 30 ; 30 >
@@ -4764,8 +4766,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Cultural Studies Volume 8 ; 8 >
         au < do_not_process ; International Journal of Cultural Studies Volume 9 ; 9 >
         au < ready ; International Journal of Cultural Studies Volume 10 ; 10 >
-        au < testing ; International Journal of Cultural Studies Volume 11 ; 11 >
-        au < testing ; International Journal of Cultural Studies Volume 12 ; 12 >
+        au < ready ; International Journal of Cultural Studies Volume 11 ; 11 >
+        au < ready ; International Journal of Cultural Studies Volume 12 ; 12 >
 
       }
 
@@ -7372,8 +7374,8 @@ comment[jcp] = some sort of custom layout
         au < ready ; Journal of Librarianship and Information Science Volume 37 ; 37 >
         au < ready ; Journal of Librarianship and Information Science Volume 38 ; 38 >
         au < ready ; Journal of Librarianship and Information Science Volume 39 ; 39 >
-        au < testing ; Journal of Librarianship and Information Science Volume 40 ; 40 >
-        au < testing ; Journal of Librarianship and Information Science Volume 41 ; 41 >
+        au < ready ; Journal of Librarianship and Information Science Volume 40 ; 40 >
+        au < ready ; Journal of Librarianship and Information Science Volume 41 ; 41 >
 
       }
 
@@ -7633,7 +7635,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jpp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Pharmacy Practice Volume 18 ; 18 >
+        au < ready ; Journal of Pharmacy Practice Volume 18 ; 18 >
         au < ready ; Journal of Pharmacy Practice Volume 19 ; 19 >
         au < ready ; Journal of Pharmacy Practice Volume 20 ; 20 >
         au < ready ; Journal of Pharmacy Practice Volume 21 ; 21 >
@@ -8127,7 +8129,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jia.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
+        au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 5 ; 5 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 6 ; 6 >
         au < ready ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
@@ -8902,7 +8904,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://bul.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; NASSP Bulletin Volume 89 ; 89 >
+        au < ready ; NASSP Bulletin Volume 89 ; 89 >
         au < ready ; NASSP Bulletin Volume 90 ; 90 >
         au < ready ; NASSP Bulletin Volume 91 ; 91 >
         au < ready ; NASSP Bulletin Volume 92 ; 92 >
