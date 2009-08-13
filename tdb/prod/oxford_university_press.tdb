@@ -721,7 +721,7 @@
         param[base_url] = http://bmb.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; British Medical Bulletin Volume 72 ; 72 >
+        au < ready ; British Medical Bulletin Volume 72 ; 72 >
         au < released ; British Medical Bulletin Volume 73-74 ; 83 >
 
       }
@@ -817,7 +817,7 @@
         param[base_url] = http://cmlj.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Capital Markets Law Journal Volume 1 ; 1 >
+        au < ready ; Capital Markets Law Journal Volume 1 ; 1 >
 
       }
 
@@ -1563,8 +1563,8 @@
         param[base_url] = http://erae.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; European Review of Agricultural Economics Volume 32 ; 32 >
-        au < manifest ; European Review of Agricultural Economics Volume 33 ; 33 >
+        au < ready ; European Review of Agricultural Economics Volume 32 ; 32 >
+        au < ready ; European Review of Agricultural Economics Volume 33 ; 33 >
 
       }
 
@@ -3415,7 +3415,7 @@
         param[base_url] = http://mollus.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Journal of Molluscan Studies Volume 71 ; 71 >
+        au < ready ; Journal of Molluscan Studies Volume 71 ; 71 >
         au < do_not_process ; Journal of Molluscan Studies Volume 72 ; 72 >
 
       }
@@ -4163,9 +4163,9 @@
         param[base_url] = http://mj.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Modern Judaism Volume 25 ; 25 >
+        au < ready ; Modern Judaism Volume 25 ; 25 >
         au < do_not_process ; Modern Judaism Volume 26 ; 26 >
-        au < manifest ; Modern Judaism Volume 27 ; 27 >
+        au < ready ; Modern Judaism Volume 27 ; 27 >
 
       }
 
@@ -4392,7 +4392,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; Nucleic Acids Research Volume 33 ; 33 >
-        au < manifest ; Nucleic Acids Research Volume 34 ; 34 >
+        au < ready ; Nucleic Acids Research Volume 34 ; 34 >
         au < ready ; Nucleic Acids Research Volume 35 ; 35 >
 
       }
@@ -4481,7 +4481,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < do_not_process ; The Opera Quarterly Volume 21 ; 21 >
-        au < manifest ; The Opera Quarterly Volume 22 ; 22 >
+        au < ready ; The Opera Quarterly Volume 22 ; 22 >
 
       }
 
@@ -4647,7 +4647,7 @@
         param[base_url] = http://past.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < manifest ; Past & Present Volume 190 ; 190 >
+        au < ready ; Past & Present Volume 190 ; 190 >
 
       }
 
@@ -4659,12 +4659,12 @@
 
         au < released ; Past & Present Volume 186 ; 186 >
         au < released ; Past & Present Volume 187 ; 187 >
-        au < manifest ; Past & Present Volume 188 ; 188 >
-        au < manifest ; Past & Present Volume 189 ; 189 >
+        au < ready ; Past & Present Volume 188 ; 188 >
+        au < ready ; Past & Present Volume 189 ; 189 >
         au < do_not_process ; Past & Present Volume 190 ; 190 >
-        au < manifest ; Past & Present Volume 191 ; 191 >
-        au < manifest ; Past & Present Volume 192 ; 192 >
-        au < manifest ; Past & Present Volume 193 ; 193 >
+        au < ready ; Past & Present Volume 191 ; 191 >
+        au < ready ; Past & Present Volume 192 ; 192 >
+        au < ready ; Past & Present Volume 193 ; 193 >
 
       }
 
@@ -4889,7 +4889,7 @@
 
         au < released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
         au < do_not_process ; QJM: An International Journal of Medicine Volume 99 ; 99 >
-        au < manifest ; QJM: An International Journal of Medicine Volume 100 ; 100 >
+        au < ready ; QJM: An International Journal of Medicine Volume 100 ; 100 >
 
       }
 
@@ -4938,7 +4938,7 @@
 
         au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 >
         au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 >
-        au < manifest ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
+        au < ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
 
       }
 
@@ -5050,7 +5050,7 @@
         param[base_url] = http://reep.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Review of Environmental Economics and Policy Volume 1 ; 1 >
+        au < ready ; Review of Environmental Economics and Policy Volume 1 ; 1 >
 
       }
 
@@ -5069,7 +5069,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Review of Finance Volume 10 ; 10 >
-        au < manifest ; Review of Finance Volume 11 ; 11 >
+        au < ready ; Review of Finance Volume 11 ; 11 >
 
       }
 
@@ -5119,7 +5119,7 @@
 
         au < released ; Rheumatology Volume 44 ; 44 >
         au < manifest ; Rheumatology Volume 45 ; 45 >
-        au < manifest ; Rheumatology Volume 46 ; 46 >
+        au < ready ; Rheumatology Volume 46 ; 46 >
 
       }
 
@@ -5196,7 +5196,7 @@
         param[base_url] = http://scan.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < manifest ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
+        au < ready ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
 
       }
 
@@ -5313,7 +5313,7 @@
 
         au < ready ; Socio-Economic Review Volume 3 ; 3 >
         au < do_not_process ; Socio-Economic Review Volume 4 ; 4 >
-        au < manifest ; Socio-Economic Review Volume 5 ; 5 >
+        au < ready ; Socio-Economic Review Volume 5 ; 5 >
 
       }
 
