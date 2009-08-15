@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositories.java,v 1.1.2.1 2009-08-12 18:46:40 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositories.java,v 1.1.2.2 2009-08-15 00:51:25 edwardsb1 Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository.v2;
 
-import java.io.File;
+import java.io.*;
 import java.util.Map;
 
 /**
@@ -54,5 +54,7 @@ public interface CollectionOfAuRepositories {
    * @return Map<String, Object>:
    *    Given the name of an AU repository, it returns the 
    */
-  public Map<String, Object> listAuRepositories(File dirSource);
+  public Map<String, Object> listAuRepositories(File dirSource) throws IOException;
+  
+  public void generateAuRepository(File dirSource) throws IOException;
 }

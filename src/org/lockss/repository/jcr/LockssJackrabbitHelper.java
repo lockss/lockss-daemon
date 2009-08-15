@@ -56,7 +56,7 @@ public class LockssJackrabbitHelper extends BaseLockssDaemonManager {
   // (The default for a JCR repository is that any user name and
   // password works for the database.)
   static private final String k_DATASTORE = "LargeDatastore.xml";
-  static private final String k_FILENAME_DATASTORE = "/org/lockss/repository/jcr/LargeDatastore.xml"; 
+  static private final String k_FILENAME_DATASTORE = "/org/lockss/repository/jcr/DatastoreFiles/LargeDatastore.xml"; 
   static private final String k_PASSWORD = "password";
   static protected final String k_SIZE_WARC_MAX = "SizeWarcMax";
   static protected final String k_STEM_FILE = "StemFile";
@@ -95,7 +95,7 @@ public class LockssJackrabbitHelper extends BaseLockssDaemonManager {
     super();
     
     File fileDirectory;
-    InputStream isXml;
+    InputStream istrXml;
     FileOutputStream fosXml;
     RepositoryNode repnode;
 
@@ -116,9 +116,9 @@ public class LockssJackrabbitHelper extends BaseLockssDaemonManager {
     
     // Copy the files into the directory.
     try {
-      isXml = getClass().getResourceAsStream(k_FILENAME_DATASTORE);
+      istrXml = getClass().getResourceAsStream(k_FILENAME_DATASTORE);
       fosXml = new FileOutputStream(strDirectory + File.pathSeparator + k_DATASTORE);
-      StreamUtil.copy(isXml, fosXml);
+      StreamUtil.copy(istrXml, fosXml);
     } catch (FileNotFoundException e) {
       logger.error("(constructor): Very unexpected exception: ", e);
       logger.error("Aborting.");
