@@ -128,7 +128,7 @@
 
     au < released ; Annual Review of Biochemistry Volume 1 ; 1 >
     au < released ; Annual Review of Biochemistry Volume 2 ; 2 >
-    au < testing ; Annual Review of Biochemistry Volume 3 ; 3 >
+    au < ready ; Annual Review of Biochemistry Volume 3 ; 3 >
     au < released ; Annual Review of Biochemistry Volume 4 ; 4 >
     au < released ; Annual Review of Biochemistry Volume 5 ; 5 >
     au < released ; Annual Review of Biochemistry Volume 6 ; 6 >
@@ -202,7 +202,7 @@
     au < released ; Annual Review of Biochemistry Volume 74 ; 74 >
     au < released ; Annual Review of Biochemistry Volume 75 ; 75 >
     au < released ; Annual Review of Biochemistry Volume 76 ; 76 >
-    au < testing ; Annual Review of Biochemistry Volume 77 ; 77 >
+    au < ready ; Annual Review of Biochemistry Volume 77 ; 77 >
     au < ready ; Annual Review of Biochemistry Volume 78 ; 78 >
   }
 
@@ -238,11 +238,12 @@
     >
 
 comment[bb1] = next 3 title entries are continuation of the same journal
+comment[bb1] = pdf filter issues
 
     param[journal_id] = biophys
     param[short_journal_id] = bb
 
-    au < testing ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
+    au < not_ready ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 2 ; 2 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 3 ; 3 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 4 ; 4 >
@@ -265,6 +266,7 @@ comment[bb1] = next 3 title entries are continuation of the same journal
     >
 
 comment[bb2] = continued from previous title entry
+comment[bb19_17] = pdf filter issues
 
     param[journal_id] = biophys
     param[short_journal_id] = bb
@@ -272,9 +274,9 @@ comment[bb2] = continued from previous title entry
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
-    au < testing ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
+    au < not_ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
-    au < testing ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
+    au < not_ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
   }
 
@@ -340,6 +342,7 @@ comment[cb1] = next title entry is a continuation of this journal
     >
 
 comment[cb2] = continued from previous title entry
+comment[cb24] = times out due to 500 errors (see relevant email)
 
     param[journal_id] = cellbio
     param[short_journal_id] = cb
@@ -357,7 +360,7 @@ comment[cb2] = continued from previous title entry
     au < released ; Annual Review of Cell and Developmental Biology Volume 21 ; 21 >
     au < released ; Annual Review of Cell and Developmental Biology Volume 22 ; 22 >
     au < ready ; Annual Review of Cell and Developmental Biology Volume 23 ; 23 >
-    au < testing ; Annual Review of Cell and Developmental Biology Volume 24 ; 24 >
+    au < not_ready ; Annual Review of Cell and Developmental Biology Volume 24 ; 24 >
     au < ready ; Annual Review of Cell and Developmental Biology Volume 25 ; 25 >
   }
 
@@ -696,9 +699,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Fluid Mechanics Volume 37 ; 37 >
     au < released ; Annual Review of Fluid Mechanics Volume 38 ; 38 >
     au < released ; Annual Review of Fluid Mechanics Volume 39 ; 39 >
-    au < testing ; Annual Review of Fluid Mechanics Volume 40 ; 40 >
-    au < testing ; Annual Review of Fluid Mechanics Volume 41 ; 41 >
-    au < testing ; Annual Review of Fluid Mechanics Volume 42 ; 42 >
+    au < ready ; Annual Review of Fluid Mechanics Volume 40 ; 40 >
+    au < ready ; Annual Review of Fluid Mechanics Volume 41 ; 41 >
+    au < ready ; Annual Review of Fluid Mechanics Volume 42 ; 42 >
   }
 
 
@@ -751,9 +754,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Genetics Volume 38 ; 38 >
     au < released ; Annual Review of Genetics Volume 39 ; 39 >
     au < released ; Annual Review of Genetics Volume 40 ; 40 >
-    au < testing ; Annual Review of Genetics Volume 41 ; 41 >
-    au < testing ; Annual Review of Genetics Volume 42 ; 42 >
-    au < testing ; Annual Review of Genetics Volume 43 ; 43 >
+    au < ready ; Annual Review of Genetics Volume 41 ; 41 >
+    au < ready ; Annual Review of Genetics Volume 42 ; 42 >
+    au < ready ; Annual Review of Genetics Volume 43 ; 43 >
   }
 
 
@@ -773,9 +776,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Genomics and Human Genetics Volume 5 ; 5 >
     au < released ; Annual Review of Genomics and Human Genetics Volume 6 ; 6 >
     au < released ; Annual Review of Genomics and Human Genetics Volume 7 ; 7 >
-    au < testing ; Annual Review of Genomics and Human Genetics Volume 8 ; 8 >
-    au < testing ; Annual Review of Genomics and Human Genetics Volume 9 ; 9 >
-    au < testing ; Annual Review of Genomics and Human Genetics Volume 10 ; 10 >
+    au < ready ; Annual Review of Genomics and Human Genetics Volume 8 ; 8 >
+    au < ready ; Annual Review of Genomics and Human Genetics Volume 9 ; 9 >
+    au < ready ; Annual Review of Genomics and Human Genetics Volume 10 ; 10 >
   }
 
 
@@ -813,9 +816,9 @@ comment[eg3] = continued from previous title entry
     au < released ; Annual Review of Immunology Volume 23 ; 23 >
     au < released ; Annual Review of Immunology Volume 24 ; 24 >
     au < released ; Annual Review of Immunology Volume 25 ; 25 >
-    au < testing ; Annual Review of Immunology Volume 26 ; 26 >
-    au < testing ; Annual Review of Immunology Volume 27 ; 27 >
-    au < testing ; Annual Review of Immunology Volume 28 ; 28 >
+    au < ready ; Annual Review of Immunology Volume 26 ; 26 >
+    au < ready ; Annual Review of Immunology Volume 27 ; 27 >
+    au < ready ; Annual Review of Immunology Volume 28 ; 28 >
   }
 
 
