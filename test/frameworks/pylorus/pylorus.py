@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.2 2009-06-17 23:17:07 thib_gc Exp $'''
+$Id: pylorus.py,v 2.3 2009-08-17 22:46:26 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -21,7 +21,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.2 $'.split()[ 1 ]
+REVISION = '$Revision: 2.3 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
@@ -38,7 +38,7 @@ CONFIGURATION_DEFAULTS = {
     'username':         'lockss-u',
     'password':         'lockss-p',
     'agreement':        95,
-    'expiration':       72,
+    'expiration':       168,
     'verbosity':        1,
     'delete':           'no',
     'batch':            'no',
