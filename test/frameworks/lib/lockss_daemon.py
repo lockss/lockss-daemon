@@ -575,6 +575,14 @@ class Client:
     ## General status accessors
     ##
 
+    def getPlatformConfig(self):
+        """Returns the platform config summary data"""
+        return self._getStatusTable('PlatformStatus')[0]
+
+    def getV3Identity(self):
+        """Returns the V3 identity from the platform config table"""
+        return self.getPlatformConfig()['V3 Identity']
+
     def getCrawlStatus(self, au=None):
         """Return the current crawl status of this cache."""
         key = None
@@ -977,7 +985,8 @@ class Client:
         return nodes
 
     def getAuRepairerInfo(self, au):
-        """ Return a dict: peer -> dict w/ highestAgree and highestHint. """
+        """ Return a dict: peer -> dict w/ keys highestAgree, 
+        highestHint, lastAgree, lastHint """
         (summary, table) = self._getStatusTable('PeerRepair', au.auId)
         peerDict = {}
         p = re.compile('(\d+)%')
@@ -991,9 +1000,19 @@ class Client:
                 highestHint = int(p.match(row['HighestPercentAgreementHint']).group(1))
             else:
                 highestHint = 0
+            if row.has_key('LastPercentAgreement'):
+                lastAgree = int(p.match(row['LastPercentAgreement']).group(1))
+            else:
+                lastAgree = 0
+            if row.has_key('LastPercentAgreementHint'):
+                lastHint = int(p.match(row['LastPercentAgreementHint']).group(1))
+            else:
+                lastHint = 0
 
             peerDict[peer] = {'highestAgree': highestAgree,
-                              'highestHint': highestHint}
+                              'highestHint': highestHint,
+                              'lastAgree': lastAgree,
+                              'lastHint': lastHint }
         return peerDict
 
     def getNoAuPeers(self, au):

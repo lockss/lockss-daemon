@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.3 2009-08-17 22:46:26 thib_gc Exp $'''
+$Id: pylorus.py,v 2.4 2009-08-18 23:06:36 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -21,7 +21,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.3 $'.split()[ 1 ]
+REVISION = '$Revision: 2.4 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
@@ -31,6 +31,7 @@ MAXIMUM_SLEEP_DURATION = 120
 REMOTE_CRAWL_RETRY_TOTAL = 3
 POLL_FAILURE_RETRY_TOTAL = 3
 POLL_MISMATCH_RETRY_TOTAL = 3
+DIRECTED_POLL_MIN_AGREEMENT_DIFFERENCE = 10
 CONFIGURATION_DEFAULTS = { 
     'configuration':    '',
     'local_servers':    'validate://localhost:8081\nvalidate://localhost:8082\ningest://localhost:8081\ningest://localhost:8082',
@@ -44,7 +45,7 @@ CONFIGURATION_DEFAULTS = {
     'batch':            'no',
     'test':             'no',
     'snapshot':         '',
-    'content_list':     ''
+    'content_list':     '',
 }
 
 
@@ -212,7 +213,7 @@ class Content:
             self.crawl_successes.append( self.client )
             if self.action == self.Action.VALIDATE:
                 self.state = Content.State.HASH
-            elif len( self.crawl_successes ) < ( 3 if self.remote_clients else 2 ):
+            elif len( self.crawl_successes ) < len( self.local_clients ) + len( self.remote_clients ):
                 self.state = Content.State.CHECK
             else:
                 self.state = Content.State.POLL
@@ -276,7 +277,11 @@ class Content:
     
     def poll( self ):
         '''Run a poll for this AU on the server'''
-        self.client = random.choice( self.crawl_successes[ : 2 ] )
+        if self.directed_poll_clients:
+            self.client = random.choice( self.directed_poll_clients )
+            self.directed_poll_clients = None
+        else:
+            self.client = random.choice( self.crawl_successes[ : 2 ] )
         logging.info( self.status_message( 'Starting poll of %s on %s' ) )
         try:
             self.client.startV3Poll( self.AU )
@@ -306,6 +311,27 @@ class Content:
                 if not self.poll_mismatch_retries:
                     self.state = Content.State.POLL_MISMATCH
                     raise Leaving_Pipeline
+                # Analyze the poll results
+                repairerInfo = self.client.getAuRepairerInfo(self.AU)
+                minagr = 100
+                maxagr = 0
+                agrmap = {}
+                for repairer in repairerInfo:
+                    repairer_client = v3_identities.get(repairer)
+                    if repairer_client:
+                        agrval = int(repairerInfo[repairer]['lastAgree'].split('%',1)[0])
+                        if agrval < minagr: minagr = agrval
+                        if agrval > maxagr: maxagr = agrval
+                        lst = agrmap.get(agrval, [])
+                        lst.append(repairer_client)
+                        agrmap[agr] = lst
+                    else:
+                        logging.warn('No client corresponding to %s' % repairer)
+                logging.debug('minagr: %d, maxagr: %d' % (minagr, maxagr))
+                if maxagr - minagr > DIRECTED_POLL_MIN_AGREEMENT_DIFFERENCE:
+                    self.directed_poll_clients = agrmap[minagr]
+                else:
+                    self.directed_poll_clients = None
         else:
             logging.warn( self.status_message( 'Poll failed (' + result + ') for %s on %s' ) )
             time.sleep( 20 )
@@ -508,6 +534,7 @@ try:
             remote_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, DEFAULT_V3_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
 
         simulated_AU_cache = {}
+        v3_identities = {}
 
     pipeline = []
     processed_content = []
@@ -538,13 +565,19 @@ try:
     logging.info( 'Waiting for local servers' )
     for action, clients in local_clients.iteritems():
         for client in clients:
-            client.waitForDaemonReady( 60 )
+            if client.waitForDaemonReady( 60 ):
+                v3_identities[client.getV3Identity()] = client
+            else:
+                logging.warn('NOT READY: %s' % client.ID())
 
     if any( remote_clients.values() ):
         logging.info( 'Waiting for remote servers' )
         for action, clients in remote_clients.iteritems():
             for client in clients:
-                client.waitForDaemonReady( 60 )
+                if client.waitForDaemonReady( 60 ):
+                    v3_identities[client.getV3Identity()] = client
+                else:
+                    logging.warn('NOT READY: %s' % client.ID())
 
     initial_length = len( pipeline )
     cycle = 0
