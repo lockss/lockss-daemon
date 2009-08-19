@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaUrlNoramlizer.java,v 1.1 2009-06-30 21:56:18 thib_gc Exp $
+ * $Id: TestIngentaUrlNoramlizer.java,v 1.2 2009-08-19 22:26:14 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class TestIngentaUrlNoramlizer extends LockssTestCase {
     assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003",
                  normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003", null));
     assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003",
-        normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice", null));
+                 normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice", null));
     assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003?format=print&view=popup",
                  normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice?format=print&view=popup", null));
   }
