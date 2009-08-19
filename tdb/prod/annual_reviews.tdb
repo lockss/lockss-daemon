@@ -237,8 +237,8 @@
       name = Annual Review of Biophysics and Bioengineering 
     >
 
-comment[bb1] = next 3 title entries are continuation of the same journal
-comment[bb1] = pdf filter issues
+comment[bb1a] = next 3 title entries are continuation of the same journal
+comment[bb1b] = pdf filter issues
 
     param[journal_id] = biophys
     param[short_journal_id] = bb
