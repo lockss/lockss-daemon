@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.4 2009-08-18 23:06:36 thib_gc Exp $'''
+$Id: pylorus.py,v 2.5 2009-08-19 09:19:14 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -21,7 +21,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.4 $'.split()[ 1 ]
+REVISION = '$Revision: 2.5 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
@@ -113,6 +113,7 @@ class Content:
         self.thread = None
         self.update_time = time.time()
         self.state = Content.State.CREATE
+        self.directed_poll_clients = None
     
     def status_message( self, template ):
         return template % ( 'AU "%s"' % self.AU, 'server ' + self.client.ID() )
@@ -319,12 +320,12 @@ class Content:
                 for repairer in repairerInfo:
                     repairer_client = v3_identities.get(repairer)
                     if repairer_client:
-                        agrval = int(repairerInfo[repairer]['lastAgree'].split('%',1)[0])
+                        agrval = repairerInfo[repairer]['lastAgree']
                         if agrval < minagr: minagr = agrval
                         if agrval > maxagr: maxagr = agrval
                         lst = agrmap.get(agrval, [])
                         lst.append(repairer_client)
-                        agrmap[agr] = lst
+                        agrmap[agrval] = lst
                     else:
                         logging.warn('No client corresponding to %s' % repairer)
                 logging.debug('minagr: %d, maxagr: %d' % (minagr, maxagr))
