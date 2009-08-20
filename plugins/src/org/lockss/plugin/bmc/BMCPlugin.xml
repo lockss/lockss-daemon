@@ -35,17 +35,13 @@
       <string>1,&quot;^%slockss/&quot;, base_url</string>
       <string>2,&quot;^%s.*/(email|postcomment)$&quot;, base_url</string>
       <string>1,&quot;^%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s/[^/]+/%s\?page=[0-9]+$&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/.*/%s-%s[^/]+\.[^/]+&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s/[\w]*/%s\?page=[0-9]*$&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
-  </entry>
-  <entry>
-    <string>plugin_crawl_type</string>
-    <string>HTML Links</string>
   </entry>
   <entry>
     <string>au_manifest</string>
