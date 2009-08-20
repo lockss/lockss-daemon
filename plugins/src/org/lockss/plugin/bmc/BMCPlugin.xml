@@ -30,12 +30,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s.{0,150}&quot;, base_url</string>
       <string>1,&quot;^%slockss/&quot;, base_url</string>
       <string>2,&quot;^%s.*/(email|postcomment)$&quot;, base_url</string>
       <string>1,&quot;^%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
       <string>1,&quot;^%scontent/.*/%s-%s[^/]+\.[^/]+&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s/[\w]*/%s\?page=[0-9]*$&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>
