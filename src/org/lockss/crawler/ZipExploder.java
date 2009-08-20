@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.10 2008-05-27 04:30:37 dshr Exp $
+ * $Id: ZipExploder.java,v 1.11 2009-08-20 23:11:09 dshr Exp $
  */
 
 /*
@@ -132,7 +132,8 @@ public class ZipExploder extends Exploder {
 					     ze.getTime(),
 					     zis,
 					     crawlSpec,
-					     this);
+					     this,
+					     urlCacher.getUrl());
 	  long bytesStored = ae.getSize();
 	  logger.debug3("ArchiveEntry: " + ae.getName()
 			+ " bytes "  + bytesStored);

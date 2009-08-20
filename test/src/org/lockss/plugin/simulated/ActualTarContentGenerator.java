@@ -1,5 +1,5 @@
 /*
- * $Id: ActualTarContentGenerator.java,v 1.2 2007-09-24 18:37:13 dshr Exp $
+ * $Id: ActualTarContentGenerator.java,v 1.3 2009-08-20 23:11:09 dshr Exp $
  */
 
 /*
@@ -69,16 +69,24 @@ public class ActualTarContentGenerator extends SimulatedContentGenerator {
     "image/jpg",
     "application/octet-stream",
   };
+
   String stem = "http://www.content.org/";
+  String tarInName = "ElsevierSample.tar";
+  String tarOutName = "ElsevierSample.tar";
 
   public ActualTarContentGenerator(String rootPath) {
     super(rootPath);
     logger.debug3("Created instance for " + rootPath);
   }
 
+    public ActualTarContentGenerator(String rootPath, String name) {
+    super(rootPath);
+    tarOutName = name;
+    logger.debug3("Created instance for " + rootPath);
+  }
+
   public String generateContentTree() {
     String ret = super.generateContentTree();
-    String tarName = "ElsevierSample.tar";
 
     //  There should now be a suitable hierarchy at contentRoot,
     //  except that we need to copy the TAR file into place and
@@ -86,11 +94,11 @@ public class ActualTarContentGenerator extends SimulatedContentGenerator {
     InputStream in = null;
     OutputStream os = null;
     try {
-      in = this.getClass().getResourceAsStream(tarName);
+      in = this.getClass().getResourceAsStream(tarInName);
       if (in == null) {
-	throw new IOException(tarName + " missing");
+	throw new IOException(tarInName + " missing");
       }
-      File of = new File(contentRoot + File.separator + tarName);
+      File of = new File(contentRoot + File.separator + tarOutName);
       os = new FileOutputStream(of);
       byte[] buffer = new byte[4096];
       int i = 0;
