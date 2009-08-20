@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.7 2008-05-06 21:35:36 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.7.22.1 2009-08-20 23:44:50 dshr Exp $
  */
 
 /*
@@ -73,8 +73,10 @@ public class FuncTarExploder2 extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
   private static int maxDepth=DEFAULT_MAX_DEPTH;
 
+  // Three articles in issue 2007004 of ISSN 1356689X
+  private static String issn = "1356689X";
   private static String URL_PREFIX =
-    "http://elsevier.clockss.org/20070004";
+    "http://elsevier.clockss.org/" + issn + "/20070004";
   static String[] url = {
     URL_PREFIX + "/07700618/main.raw",
     URL_PREFIX + "/07700618/main.pdf",
@@ -92,7 +94,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 
   static String[] url2 = {
     "http://www.example.com/index.html",
-    "http://www.example.com/ElsevierSample.tar",
+    "http://www.example.com/" + issn + ".tar",
     "http://www.example.com/001file.bin",
     "http://www.example.com/002file.bin",
     "http://www.example.com/branch1/001file.bin",
@@ -153,6 +155,7 @@ public class FuncTarExploder2 extends LockssTestCase {
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", "true");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", "true");
+    props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFileName", issn + ".tar");
 
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");

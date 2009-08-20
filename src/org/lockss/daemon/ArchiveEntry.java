@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.4 2008-05-27 04:30:37 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.4.20.1 2009-08-20 23:44:50 dshr Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class ArchiveEntry {
   private InputStream is;
   private CrawlSpec crawlSpec;
   private Exploder exploder;
+  private String archiveName;
   // Output fields
   private String baseUrl;
   private String restOfUrl;
@@ -64,16 +65,23 @@ public class ArchiveEntry {
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec) {
-    setup(name, bytes, date, is, crawlSpec, (Exploder) null);
+    setup(name, bytes, date, is, crawlSpec, (Exploder) null, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec, Exploder exploder) {
-    setup(name, bytes, date, is, crawlSpec, exploder);
+    setup(name, bytes, date, is, crawlSpec, exploder, null);
+  }
+
+  public ArchiveEntry(String name, long bytes, long date, InputStream is,
+		      CrawlSpec crawlSpec, Exploder exploder,
+		      String archiveName) {
+    setup(name, bytes, date, is, crawlSpec, exploder, archiveName);
   }
 
   private void setup(String name, long bytes, long date, InputStream is,
-		     CrawlSpec crawlSpec, Exploder exploder) {
+		     CrawlSpec crawlSpec, Exploder exploder,
+		     String archiveName) {
     if (name.startsWith("./")) {
       this.name = name.substring(2);
     } else {
@@ -84,6 +92,7 @@ public class ArchiveEntry {
     this.is = is;
     this.crawlSpec = crawlSpec;
     this.exploder = exploder;
+    this.archiveName = archiveName;
     baseUrl = null;
     restOfUrl = null;
     header = null;
@@ -115,6 +124,10 @@ public class ArchiveEntry {
 
   public Exploder getExploder() {
     return exploder;
+  }
+
+  public String  getArchiveName() {
+    return archiveName;
   }
 
   // Output field accessors

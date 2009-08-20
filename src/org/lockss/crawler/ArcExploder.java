@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.7 2008-05-04 02:18:06 dshr Exp $
+ * $Id: ArcExploder.java,v 1.7.22.1 2009-08-20 23:44:50 dshr Exp $
  */
 
 /*
@@ -156,7 +156,9 @@ public class ArcExploder extends Exploder {
 			     elementLength,
 			     0, // XXX need to convert getDate string to long
 			     element, // ArchiveRecord extends InputStream
-			     crawlSpec);
+			     crawlSpec,
+			     this,
+			     urlCacher.getUrl());
 	  ae.setHeaderFields(makeCIProperties(elementHeader));
 	  long bytesStored = elementLength;
 	  logger.debug3("ArchiveEntry: " + ae.getName()

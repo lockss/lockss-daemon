@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.11 2008-04-01 08:00:55 tlipkis Exp $
+ * $Id: TarExploder.java,v 1.11.24.1 2009-08-20 23:44:50 dshr Exp $
  */
 
 /*
@@ -132,7 +132,8 @@ public class TarExploder extends Exploder {
 	  ArchiveEntry ae = new ArchiveEntry(te.getName(),
 					     te.getSize(),
 					     te.getModTime().getTime(),
-					     tis, crawlSpec);
+					     tis, crawlSpec, this,
+					     urlCacher.getUrl());
 	  long bytesStored = ae.getSize();
 	  logger.debug3("ArchiveEntry: " + ae.getName()
 			+ " bytes "  + bytesStored);
