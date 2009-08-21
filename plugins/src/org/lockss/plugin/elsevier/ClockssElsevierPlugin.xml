@@ -8,10 +8,6 @@
     <long>6000</long>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>5</string>
-  </entry>
-  <entry>
     <string>au_name</string>
     <string>&quot;Elsevier Source Plugin (CLOCKSS), Year %d&quot;, year</string>
   </entry>
@@ -80,5 +76,13 @@
   <entry>
     <string>plugin_notes</string>
     <string>Plugin for CLOCKSS ingest of Elsevier source files</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>6</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.39.3</string>
   </entry>
 </map>
