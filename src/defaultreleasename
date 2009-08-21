@@ -1,5 +1,6 @@
 # This file supplies a default release name (<major>.<minor>.<build>) for
 # daemon builds.  The major and minor numbers should be those of the next
 # release, build should be 0.
+# Modified for 1.39.X (X > 3) to allow for changes to ArchiveEntry class.
 
-1.39.0
+1.39.3-Test
