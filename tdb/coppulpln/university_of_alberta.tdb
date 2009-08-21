@@ -186,6 +186,26 @@
     {
     
       title <
+        name = Journal of Hebrew Scriptures
+      >
+
+      param[journal_id] = jhs
+
+      au < exists ; 1997 ; Journal of Hebrew Scriptures Volume 1 ; 1997 >
+      au < exists ; 1999 ; Journal of Hebrew Scriptures Volume 2 ; 1999 >
+      au < exists ; 2001 ; Journal of Hebrew Scriptures Volume 3 ; 2001 >
+      au < exists ; 2003 ; Journal of Hebrew Scriptures Volume 4 ; 2003 >
+      au < exists ; 2005 ; Journal of Hebrew Scriptures Volume 5 ; 2005 >
+      au < exists ; 2006 ; Journal of Hebrew Scriptures Volume 6 ; 2006 >
+      au < exists ; 2007 ; Journal of Hebrew Scriptures Volume 7 ; 2007 >
+      au < exists ; 2008 ; Journal of Hebrew Scriptures Volume 8 ; 2008 >
+      au < exists ; 2009 ; Journal of Hebrew Scriptures Volume 9 ; 2009 >
+
+    }
+
+    {
+    
+      title <
         name = Journal of Pharmacy & Pharmaceutical Sciences
       >
 
