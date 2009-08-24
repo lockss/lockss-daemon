@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.2 2009-08-24 22:53:42 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.3 2009-08-24 23:02:44 thib_gc Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
          * Article pages may have a dynamically-generated list of
          * articles similar to the current one.
          * 
-         * Remove div id="more-like-this">
+         * Remove <div id="more-like-this">
          */
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
