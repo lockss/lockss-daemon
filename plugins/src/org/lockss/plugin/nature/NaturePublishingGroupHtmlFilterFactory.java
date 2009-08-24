@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.1 2009-08-01 10:16:36 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.2 2009-08-24 22:53:42 thib_gc Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     
     HtmlTransform[] transforms = new HtmlTransform[] {
+        
         /*
          * At the top of an issue table of contents, a "leaderboard"
          * can contain a banner ad which is clearly marked as such
@@ -117,6 +118,7 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "more-like-this")),
+                                                                         
     };
 
     return new HtmlFilterInputStream(in,
