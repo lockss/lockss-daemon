@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Berkeley Electronic Press Plugin, Base URL %s, Journal Code %s, Volume %d&quot;, base_url, journal_abbr, volume</string>
+    <string>&quot;Berkeley Electronic Press Plugin (CLOCKSS), Base URL %s, Journal Code %s, Volume %d&quot;, base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Berkeley Electronic Press Plugin</string>
+    <string>Berkeley Electronic Press Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -22,12 +22,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s%s/lockss-volume%d.html$&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%s%s/([^/]+/)?vol%d&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%s%s/%d/&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
-      <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>S
     </list>
   </entry>
   <entry>
@@ -36,7 +36,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.bepress.BePressPlugin</string>
+    <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

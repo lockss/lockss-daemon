@@ -1,0 +1,76 @@
+{
+
+  publisher <
+    name = Berkeley Electronic Press
+  >
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  param[base_url] = http://www.bepress.com/
+  implicit < status ; year ; name ; param[volume] >
+  
+  {
+
+    title <
+      name = Asian Journal of Comparative Law
+    >
+
+    param[journal_abbr] = asjcl
+
+    au < manifest ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
+    au < manifest ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Economic Analysis & Policy
+    >
+
+    param[journal_abbr] = bejeap
+
+    au < manifest ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
+    au < manifest ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Macroeconomics
+    >
+
+    param[journal_abbr] = bejm
+
+    au < manifest ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
+    au < manifest ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Theoretical Economics
+    >
+
+    param[journal_abbr] = bejte
+
+    au < manifest ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
+    au < manifest ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Basic Income Studies
+    >
+
+    param[journal_abbr] = bep
+
+    au < manifest ; 2008 ; Basic Income Studies Volume 3 ; 3 >
+    au < manifest ; 2009 ; Basic Income Studies Volume 4 ; 4 >
+
+  }
+
+}

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Berkeley Electronic Press">
+   <property name="name" value="All Berkeley Electronic Press Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Berkeley Electronic Press']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AsianJournalofComparativeLaw3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="title" value="Asian Journal of Comparative Law Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="asjcl" />
+   </property>
+  </property>
+
+  <property name="AsianJournalofComparativeLaw4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="title" value="Asian Journal of Comparative Law Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="asjcl" />
+   </property>
+  </property>
+
+  <property name="TheBEJournalofEconomicAnalysisPolicy8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+  </property>
+
+  <property name="TheBEJournalofEconomicAnalysisPolicy9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+  </property>
+
+  <property name="TheBEJournalofMacroeconomics8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+  </property>
+
+  <property name="TheBEJournalofMacroeconomics9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+  </property>
+
+  <property name="TheBEJournalofTheoreticalEconomics8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+  </property>
+
+  <property name="TheBEJournalofTheoreticalEconomics9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+  </property>
+
+  <property name="BasicIncomeStudies3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Basic Income Studies" />
+   <property name="title" value="Basic Income Studies Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bep" />
+   </property>
+  </property>
+
+  <property name="BasicIncomeStudies4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Basic Income Studies" />
+   <property name="title" value="Basic Income Studies Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bep" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
