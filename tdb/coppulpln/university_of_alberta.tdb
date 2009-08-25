@@ -44,7 +44,7 @@
 
       param[journal_id] = cjfy
 
-      au < exists ; 2008 ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
+      au < manifest ; 2008 ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
 
     }
 
@@ -98,10 +98,10 @@
 
       param[journal_id] = esc
 
-      au < exists ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 >
-      au < exists ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 >
-      au < exists ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 >
-      au < exists ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 >
+      au < manifest ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 >
+      au < manifest ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 >
+      au < manifest ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 >
+      au < manifest ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 >
 
     }
 
@@ -167,9 +167,10 @@
 
       param[journal_id] = jcie
 
-      au < exists ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
-      au < exists ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
-      au < exists ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
+      au < manifest ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
+      au < manifest ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
+      au < manifest ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
+      au < manifest ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 >
 
     }
 
