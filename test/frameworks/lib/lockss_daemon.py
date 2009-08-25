@@ -716,6 +716,14 @@ class Client:
                 return pollKey
         return None
 
+    def getV3PollKeys(self, au):
+        """Return the keys of all polls on the au"""
+        ret = []
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            ret.append(row['pollId']['key'])
+        return ret
+
     def getV3PollInvitedPeers(self, pollKey, au):
         (summary, table) = self.getV3PollerDetail(pollKey)
         res = []
@@ -1352,6 +1360,19 @@ class Client:
         def waitFunc():
             return self.getPollResults( AU )[ 0 ]
         return self.wait( waitFunc, timeout, sleep )
+
+    def waitForFinishedV3Poll( self, au, excludePolls=[], timeout=DEF_TIMEOUT, sleep=DEF_SLEEP ):
+        """Wait until a poll not among excludePolls has finished
+        running"""
+        def waitFunc():
+            pollKey = self.getV3PollKey(au, excludePolls)
+            return pollKey and self.isFinishedV3Poll(pollKey)
+        return self.wait( waitFunc, timeout, sleep )
+
+    def isFinishedV3Poll(self, pollKey):
+        (summary, table) = self.getV3PollerDetail(pollKey)
+        return summary and summary['Status'] in [ 'No Time Available', 'Complete',
+                                                  'No Quorum', 'Error', 'Expired' ]
 
     def waitForV3Poller(self, au, excludePolls=[], timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
