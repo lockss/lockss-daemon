@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.6 2009-08-25 21:56:34 thib_gc Exp $'''
+$Id: pylorus.py,v 2.7 2009-08-25 22:23:16 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -21,7 +21,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.6 $'.split()[ 1 ]
+REVISION = '$Revision: 2.7 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 DEFAULT_V3_PORT = 8801
@@ -160,13 +160,13 @@ class Content:
             self.state = Content.State.CREATION_FAILURE
             raise Leaving_Pipeline
         logging.debug( 'Created AU from "%s"' % self.description )
-        self.clients = self.local_clients
+        self.clients = self.local_clients[:]
         self.state = Content.State.CHECK
 
     def check( self ):
         '''Does the server already have this AU?'''
         if len( self.crawl_successes ) == 2:
-            self.clients = self.remote_clients
+            self.clients = self.remote_clients[:]
         self.client = self.clients.pop( random.randrange( len( self.clients ) ) )
         logging.info( self.status_message( 'Checking for %s on %s' ) )
         self.pre_existent = self.client.hasAu( self.AU )
