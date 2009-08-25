@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.3 2009-08-24 23:02:44 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.4 2009-08-25 18:39:45 thib_gc Exp $
  */
 
 /*
@@ -71,6 +71,40 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "class",
                                                                          "ad-vert")),
+
+        /*
+         * There can be ads in mid-bastract. These ads are enclosed in
+         * a div whose class name begins with "ad" but has other words
+         * in it.
+         * 
+         * Remove <div class="ad ...">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+                                                                              "class",
+                                                                              "^ad ")),
+
+
+        /*
+         * Articles can have user-posted comments. We need to first
+         * remove the paragraph that appears when there are no
+         * comments.
+         * 
+         * Remove <p>There are currently no comments.</p>
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithText("p",
+                                                                    "There are currently no comments.")),                                                            
+
+
+        /*
+         * When there are posted comments, that paragraph is replaced
+         * by a list of comments, which we also need to remove.
+         * 
+         * Remove <ul class="comments ...">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("ul",
+                                                                              "class",
+                                                                              "^comments ")),
+                                                                    
         /*
          * The elements in the left-hand column of most pages are not
          * particularly dynamic but they are also liable to change
