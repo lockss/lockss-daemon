@@ -1,0 +1,33 @@
+<map>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordEarlyYearsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;GPO Congressional Record Plugin (Early Years), Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>GPO Congressional Record Plugin (Early Years)</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>&quot;%sgpo.gov/record/%d.tgz&quot;, base_url, year</string>
+      <string>&quot;%sgpo.gov/record/%d/&quot;, base_url, year</string>
+    </list>
+  </entry>
+</map>
