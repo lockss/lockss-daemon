@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.1 2007-12-23 21:18:12 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.2 2009-08-26 21:24:08 thib_gc Exp $
  */
 
 /*
@@ -59,33 +59,21 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
 					       InputStream in,
 					       String encoding) {
 
-    NodeFilter[] filters = new NodeFilter[9];
-    filters[0] =
-      new TagNameFilter("script");
-
-    filters[1] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring");
-
-    filters[2] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea");
-
-    filters[3] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav");
-
-    filters[4] =
-      HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table");
-
-    filters[5] =
-      HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox");
-
-    filters[6] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav");
-
-    filters[7] =
-      HtmlNodeFilters.tagWithText("strong", "related", true);
-
-    filters[8] =
-      HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false));
+    NodeFilter[] filters = new NodeFilter[] {
+      new TagNameFilter("script"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav"),
+      HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table"),
+      HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav"),
+      HtmlNodeFilters.tagWithText("strong", "related", true),
+      HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
+      // Contains the name of the institution:
+      HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolBar"),
+      // Contains the date and time:
+      HtmlNodeFilters.tagWithAttribute("a", "target", "help"),
+    };
 
     OrFilter combineFilter = new OrFilter();
     combineFilter.setPredicates(filters);

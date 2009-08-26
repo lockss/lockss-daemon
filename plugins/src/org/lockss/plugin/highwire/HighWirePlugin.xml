@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>604800000</long>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
