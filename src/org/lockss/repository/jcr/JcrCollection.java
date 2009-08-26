@@ -1,5 +1,5 @@
 /*
- * $Id: JcrCollection.java,v 1.1.2.1 2009-08-15 00:51:25 edwardsb1 Exp $
+ * $Id: JcrCollection.java,v 1.1.2.2 2009-08-26 22:47:24 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -27,8 +27,11 @@ package org.lockss.repository.jcr;
 import java.io.*;
 import java.util.*;
 
-import org.lockss.repository.v2.CollectionOfAuRepositories;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.repository.LockssRepositoryException;
+import org.lockss.repository.v2.*;
 import org.lockss.util.*;
+import org.lockss.util.PlatformUtil.*;
 
 /**
  * @author edwardsb
@@ -43,12 +46,19 @@ public class JcrCollection implements CollectionOfAuRepositories {
   // Static variables
   private static Logger logger = Logger.getLogger("JcrCollection");
 
+  // Member variables
+  private File m_dirSource;
+  
   /*
    * Constructor...
    */
-  public JcrCollection() {
-    /* Constructor */
-    /* Does nothing for now... */
+  public JcrCollection(File dirSource) throws LockssRepositoryException {
+    if (!dirSource.exists() || !dirSource.isDirectory()) {
+      logger.error("The source must be a directory.");      
+      throw new LockssRepositoryException("The JcrCollection must be created with a directory.");
+    }
+    
+    m_dirSource = dirSource;
   }
   
   /* (non-Javadoc)
@@ -80,24 +90,26 @@ public class JcrCollection implements CollectionOfAuRepositories {
     // Does anything else need to be done for the Au Repository?
   }
 
+  
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#listAuRepositories(java.io.File)
    */
-  public Map<String, Object> listAuRepositories(File dirSource) {
+  public Map<String, File> listAuRepositories() {
     // This routine looks for all directories under a given directory with the
     // k_FILENAME_DATASTORE in them.  The object returned is just the string
     // for the directory...
-    return recurseDirectories(dirSource, new HashMap<String, Object>());
+    return recurseDirectories(m_dirSource, new HashMap<String, File>());
   }
 
+  
   // A depth-first search for all directories with k_FILENAME_DATASTORE.
-  private Map<String, Object> recurseDirectories(File dirCurrent, Map<String, Object> mastrobj) {
+  private Map<String, File> recurseDirectories(File dirCurrent, Map<String, File> mastrfile) {
     File[] arfileChildren;
     File fileDatastore;
     
     fileDatastore = new File(dirCurrent, k_FILENAME_DATASTORE);
     if (fileDatastore.exists()) {
-      mastrobj.put(dirCurrent.getName(), dirCurrent.toString());
+      mastrfile.put(dirCurrent.getName(), fileDatastore);
     }
     
     // Poorly-chosen function name.  It lists files and directories.
@@ -106,9 +118,51 @@ public class JcrCollection implements CollectionOfAuRepositories {
     // *grumble*  The 'for' statement doesn't work correctly with a null variable.
     if (arfileChildren != null) {
       for (File fileChild : arfileChildren) {
-        recurseDirectories(fileChild, mastrobj);
+        recurseDirectories(fileChild, mastrfile);
       }
     }
-    return mastrobj;
+    return mastrfile;
+  }
+
+  
+  /**
+   * This method opens an AU in a given directory.
+   * Important note: I assume that the AU is already available, from outside the JcrCollection.
+   * @throws FileNotFoundException 
+   * 
+   * @see org.lockss.repository.v2.CollectionOfAuRepositories#openAuRepository(java.io.File)
+   */
+  public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation)
+      throws LockssRepositoryException, FileNotFoundException {
+    LockssAuRepository lar;
+    LockssJackrabbitHelper ljh;
+    RepositoryNodeImpl rni;
+    
+    if (!LockssJackrabbitHelper.isConstructed()) {
+      logger.error("You must call LockssJackrabbitHelper.preconstructor before you call openAuRepository.");
+      throw new LockssRepositoryException("LockssJackrabbitHelper.preconstructor must be called first.");
+    }
+    
+    // Make sure that the location is in the LockssJackrabbitHelper.
+    ljh = LockssJackrabbitHelper.constructor();
+    rni = (RepositoryNodeImpl) ljh.getRepositoryNode(au.getAuId());
+    
+    if (rni == null || rni.m_stemFile != dirLocation.toString()) {
+      ljh.addRepository(au.getAuId(), dirLocation.toString());
+    }
+    
+    lar = new LockssAuRepositoryImpl(au);
+
+    return lar;
+  }
+
+  
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.CollectionOfAuRepositories#getDF()
+   */
+  public DF getDF() throws UnsupportedException {
+    PlatformUtil pu = PlatformUtil.getInstance();
+    
+    return pu.getDF(m_dirSource.getAbsolutePath());
   }
 }

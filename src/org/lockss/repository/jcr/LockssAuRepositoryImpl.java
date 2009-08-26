@@ -52,8 +52,8 @@ import org.lockss.util.*;
  *
  * It is important that each AU be kept in separate directories.
  */
-public class LockssOneAuRepositoryImpl extends BaseLockssManager
-    implements HistoryRepository, LockssOneAuRepository {
+public class LockssAuRepositoryImpl extends BaseLockssManager
+    implements HistoryRepository, LockssAuRepository {
   // == Constants
   // The following are used as properties in the JCR.
   private static final String k_propAuState = "AuState";
@@ -71,7 +71,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   private static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
 
   // Static variables
-  private static Logger logger = Logger.getLogger("LockssOneAuRepositoryImpl");
+  private static Logger logger = Logger.getLogger("LockssAuRepositoryImpl");
   protected static ObjectSerializer sm_xssTransformer = 
     new XStreamSerializer();
   
@@ -84,13 +84,13 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   private float m_sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
 
   /**
-   * You must call LocksJackrabbitRepositorySingleton.preconstructor()
+   * You must call LocksJackrabbitHelper.preconstructor()
    * before you call this method.
    * 
    * @param au
    * @throws LockssRepositoryException
    */
-  public LockssOneAuRepositoryImpl(
+  public LockssAuRepositoryImpl(
       ArchivalUnit au) 
       throws LockssRepositoryException {
     Node node;
@@ -115,7 +115,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   }
     
   /**
-   * @see org.lockss.repository.v2.LockssOneAuRepository#checkConsistency()
+   * @see org.lockss.repository.v2.LockssAuRepository#checkConsistency()
    */
   public void checkConsistency() {
     // For now, there is no consistency check.
@@ -143,7 +143,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   }
   
   /**
-   * @see org.lockss.repository.v2.LockssOneAuRepository#getAuCreationTime()
+   * @see org.lockss.repository.v2.LockssAuRepository#getAuCreationTime()
    * @return
    */
   public long getAuCreationTime() 
@@ -200,7 +200,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
    * 
    * I assume that the URL is absolute, not a relative URL. 
 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#getFile(java.lang.String, boolean)
+   * @see org.lockss.repository.v2.LockssAuRepository#getFile(java.lang.String, boolean)
    * @param url
    * @param create
    * @return
@@ -320,7 +320,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
    * 
    * The calling method must close the returned InputStream.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#getIdentityAgreementFile()
+   * @see org.lockss.repository.v2.LockssAuRepository#getIdentityAgreementFile()
    * @return File
    */
   public InputStream getIdentityAgreementRawContents() throws LockssRepositoryException {
@@ -352,7 +352,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   }
 
   /**
-   * @see org.lockss.repository.v2.LockssOneAuRepository#getNode(java.lang.String, boolean)
+   * @see org.lockss.repository.v2.LockssAuRepository#getNode(java.lang.String, boolean)
    * @param url
    * @param createib
    * @return
@@ -463,7 +463,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   
 
   /**
-   * @see org.lockss.repository.v2.LockssOneAuRepository#loadAuState()
+   * @see org.lockss.repository.v2.LockssAuRepository#loadAuState()
    * @return AuState
    */
   public AuState loadAuState() {
@@ -496,7 +496,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   }
 
   /**
-   * @see org.lockss.repository.v2.LockssOneAuRepository#loadDamagedNodeSet()
+   * @see org.lockss.repository.v2.LockssAuRepository#loadDamagedNodeSet()
    * @return
    * 
    * This method is a stub, and does nothing useful.
@@ -512,7 +512,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
    * load the identity agreements; it only retrieves them.  This method makes 
    * no change to the methods.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#loadIdentityAgreements()
+   * @see org.lockss.repository.v2.LockssAuRepository#loadIdentityAgreements()
    * @return
    */
   public List loadIdentityAgreements() 
@@ -551,7 +551,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   /**
    * This method is a stub method.  It does nothing any longer.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#loadPollHistories(org.lockss.state.NodeState)
+   * @see org.lockss.repository.v2.LockssAuRepository#loadPollHistories(org.lockss.state.NodeState)
    * @param nodeState
    */
   public void loadPollHistories(NodeState nodeState) {
@@ -570,7 +570,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
    * reports -- then swallows -- Lockss Repository Exceptions.
    * Feel free to disagree with me on this choice.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#queueSizeCalc(org.lockss.repository.RepositoryNode)
+   * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.RepositoryNode)
    * @param node
    */
   private Set<RepositoryNode> m_sizeCalcQueue = new HashSet<RepositoryNode>();
@@ -598,7 +598,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   /**
    * This method restores an input stream from backup.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#storeAuState(org.lockss.state.AuState)
+   * @see org.lockss.repository.v2.LockssAuRepository#storeAuState(org.lockss.state.AuState)
    * @param istrState
    */
   public void storeAuStateRawContents(InputStream istrAuState) 
@@ -607,7 +607,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   }
 
   /**
-   * @see org.lockss.repository.v2.LockssOneAuRepository#storeDamagedNodeSet(org.lockss.state.DamagedNodeSet)
+   * @see org.lockss.repository.v2.LockssAuRepository#storeDamagedNodeSet(org.lockss.state.DamagedNodeSet)
    * @param dns
    * 
    * This method is a stub, and does nothing useful.
@@ -619,7 +619,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   /**
    * This method is used to restore a backup.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#storeIdentityAgreements(java.util.List)
+   * @see org.lockss.repository.v2.LockssAuRepository#storeIdentityAgreements(java.util.List)
    * @param identAgreements
    */
   public void storeIdentityAgreementsRawContents(InputStream istrIdentityAgreements) 
@@ -662,7 +662,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
    * 
    * Feel free to disagree with me on either of the above assumptions.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)
+   * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)
    * @param node
    */
   public void queueSizeCalc(org.lockss.repository.RepositoryNode node) {
@@ -963,7 +963,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   
 
   /**
-   * This factory returns the same LockssOneAuRepositoryImpl for the same
+   * This factory returns the same LockssAuRepositoryImpl for the same
    * AU.  It depends on LockssLinkedHashMap.
    * 
    * @author edwardsb
@@ -973,10 +973,10 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
   implements LockssAuManager.Factory {
     
     public LockssAuManager createAuManager(ArchivalUnit au) {
-      LockssOneAuRepository lar;
+      LockssAuRepository lar;
       
       try {
-        lar = new LockssOneAuRepositoryImpl(au);
+        lar = new LockssAuRepositoryImpl(au);
       } catch (LockssRepositoryException e) {
         logger.error("LockssAuRepositoryFactory.createAuManager: Lockss Repository Exception", e);
         lar = null;
@@ -991,7 +991,7 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
     private volatile boolean goOn = true;
     
     protected SizeCalcThread() {
-      super("LockssOneAuRepositoryImpl.SizeCalcThread");
+      super("LockssAuRepositoryImpl.SizeCalcThread");
     }
 
     @Override
@@ -1072,5 +1072,14 @@ public class LockssOneAuRepositoryImpl extends BaseLockssManager
       goOn = false;
       interrupt();
     }
+  }
+
+
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssAuRepository#getRepoDiskUsage(boolean)
+   */
+  public long getRepoDiskUsage(boolean calcIfUnknown) throws LockssRepositoryException {
+    RepositoryNode rn = m_ljh.getRepositoryNode(m_au.getAuId());
+    return rn.getTreeContentSize(null, calcIfUnknown);
   }  
 }

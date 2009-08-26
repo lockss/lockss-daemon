@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrCollection.java,v 1.1.2.1 2009-08-15 00:51:25 edwardsb1 Exp $
+ * $Id: TestJcrCollection.java,v 1.1.2.2 2009-08-26 22:47:24 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -24,10 +24,20 @@
  */
 package org.lockss.repository.jcr;
 
-import java.io.File;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
-import org.lockss.util.FileUtil;
+import javax.jcr.Session;
+
+import org.apache.jackrabbit.core.RepositoryImpl;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.poller.v3.V3Poller;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.repository.*;
+import org.lockss.repository.v2.LockssAuRepository;
+import org.lockss.test.*;
+import org.lockss.util.*;
+import org.lockss.util.PlatformUtil.DF;
 
 import junit.framework.TestCase;
 
@@ -35,13 +45,59 @@ import junit.framework.TestCase;
  * @author edwardsb
  *
  */
-public class TestJcrCollection extends TestCase {
+public class TestJcrCollection extends LockssTestCase {
+  // Constants...
+  private static final String k_nameXml = "LargeDatastore.xml";
+  private static final long k_sizeWarcMax = 10000;
+  private static final String k_stemFile = "stem";
+  private static final String k_strAuId = "AUID";
+  private static final String k_strDirectory = "TestRepository/";
+  private static final String k_strPeerID = "TCP:[192.168.0.1]:9723";
+  private static final String k_url = "http://www.example.com/";
+
+  
+  // Member variables
+  private IdentityManager m_idman;
+  private MockLockssDaemon m_ldTest;
 
   /* (non-Javadoc)
    * @see junit.framework.TestCase#setUp()
    */
   protected void setUp() throws Exception {
     super.setUp();
+    
+    if (!LockssJackrabbitHelper.isConstructed()) {
+      // Taken from org.lockss.state.TestHistoryRepository
+      m_ldTest = getMockLockssDaemon();
+      m_ldTest.startDaemon();
+      
+      // Taken from org.lockss.poller.v3.TestBlockTally
+      Properties p = new Properties();
+      p.setProperty(IdentityManager.PARAM_IDDB_DIR, k_strDirectory + "iddb");
+      p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, k_strDirectory);
+      p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+      p.setProperty(V3Poller.PARAM_V3_VOTE_MARGIN, "73");
+      p.setProperty(V3Poller.PARAM_V3_TRUSTED_WEIGHT, "300");
+      ConfigurationUtil.setCurrentConfigFromProps(p);
+  
+      m_idman = m_ldTest.getIdentityManager();
+      m_idman.startService();
+      
+      // The following are the peer identities that should be used in tests...
+      m_idman.stringToPeerIdentity(k_strPeerID);
+       
+      LockssJackrabbitHelper.preconstructor(k_strDirectory, k_nameXml, 
+          k_strDirectory + "/" + k_stemFile, k_sizeWarcMax, k_url, m_idman, m_ldTest,
+          k_strAuId);
+
+    } else { // isConstructed
+      LockssJackrabbitHelper ljh;
+      
+      ljh = LockssJackrabbitHelper.constructor();
+      
+      m_ldTest = (MockLockssDaemon) ljh.getDaemon();
+      m_idman = ljh.getIdentityManager();
+    }
   }
 
   /* (non-Javadoc)
@@ -61,7 +117,7 @@ public class TestJcrCollection extends TestCase {
     
     dirTest = FileUtil.createTempDir("test", "generateAuRepository");
     
-    jcTest = new JcrCollection();
+    jcTest = new JcrCollection(dirTest);
     jcTest.generateAuRepository(dirTest);
     
     // Verify it...
@@ -84,7 +140,7 @@ public class TestJcrCollection extends TestCase {
     File fileDatastore1;
     File fileDatastore2;
     JcrCollection jcTest;
-    Map<String, Object> mastrobjResult;
+    Map<String, File> mastrfileResult;
     
     // Create two directories that will have the right file...
     dirParent = FileUtil.createTempDir("test", "listAuRepositories");
@@ -102,12 +158,12 @@ public class TestJcrCollection extends TestCase {
     fileDatastore2.createNewFile();
     
     // Run listAuRepositories...
-    jcTest = new JcrCollection();
-    mastrobjResult = jcTest.listAuRepositories(dirParent);
+    jcTest = new JcrCollection(dirParent);
+    mastrfileResult = jcTest.listAuRepositories();
     
     // Check it.
-    assertTrue(mastrobjResult.containsKey("dir1"));
-    assertTrue(mastrobjResult.containsKey("child"));
+    assertTrue(mastrfileResult.containsKey("dir1"));
+    assertTrue(mastrfileResult.containsKey("child"));
     
     // Clean up.
     fileDatastore2.delete();
@@ -116,5 +172,90 @@ public class TestJcrCollection extends TestCase {
     dir2.delete();
     dir1.delete();
   }
+
+  
+  /**
+   * Test JcrCollection.openAuRepository()
+   */
+  public final void testOpenAuRepository() throws Exception {
+    ArchivalUnit auGood;
+    File dirTest;    
+    File dirLocation;
+    JcrCollection jcTest;
+    LockssAuRepository larTest;
+    
+    dirTest = FileUtil.createTempDir("test", "OpenAuRepository");
+    jcTest = new JcrCollection(dirTest);
+
+    auGood = createAu(dirTest);
+    
+    larTest = jcTest.openAuRepository(auGood, dirTest);
+    
+    // TODO: Test the larTest.  I'm not sure what to do here.
+
+    // Clean up.
+    FileUtil.delTree(dirTest);
+  }
+  
+  
+  /**
+   * Test JcrCollection.getDF()
+   */
+  public final void testGetDF() throws Exception {
+    DF df1;
+    DF df2;
+    File dirTest;
+    File fileFiller;
+    int i;
+    JcrCollection jcTest;
+    OutputStream ostrFiller;
+    
+    
+    dirTest = FileUtil.createTempDir("test", "getDF");
+    jcTest = new JcrCollection(dirTest);
+    df1 = jcTest.getDF();
+    
+    // I don't want to create an AU, fill it.  This test just makes sure that the
+    // DF goes to the correct directory.
+    fileFiller = new File(dirTest, "filler.txt");
+    ostrFiller = new FileOutputStream(fileFiller);
+    for (i = 0; i < 50000; i++) {
+      ostrFiller.write((i % 26) + 65);  // 'ABCDEFG...'
+    }
+    ostrFiller.close();
+    
+    df2 = jcTest.getDF();
+    
+    // Compare the two DF's...
+    assertTrue(df2.isFullerThan(df1));
+    
+    // Clean up.
+    FileUtil.delTree(dirTest);
+  }
+  
+  
+  // Helper methods
+  /**
+   * @return a new Archival Unit.
+   * 
+   * Based on a method in TestLockssAuRepositoryImpl.
+   */
+  private ArchivalUnit createAu(File fileDirectory) throws LockssRepositoryException, FileNotFoundException {
+    ArchivalUnit au;
+    String strName;
+
+    // gensym creates an AUID that's unique per run.
+    // The combination of gensym and the current time should be unique
+    // across runs.
+    
+    strName = StringUtil.gensym("AUID" + System.currentTimeMillis());    
+    au = new MockArchivalUnit(strName);
+    
+    // So that the requests have a place to go in the helper.
+    LockssJackrabbitHelper.addRepository(au.getAuId(), fileDirectory.toString());
+              
+    return au;
+  }
+
 
 }

@@ -88,8 +88,11 @@ public class LockssJackrabbitHelper extends BaseLockssDaemonManager {
    * @param idman The ID Manager of the parent process
    * @param ld The Lockss Daemon of the parent process.
    */
-  private LockssJackrabbitHelper(String strDirectory, 
+  private LockssJackrabbitHelper(
+      /* One per-database */
+      String strDirectory, 
     String stemFile, long sizeWarcMax, String url, IdentityManager idman,
+      /* The initial per-AU material */
     LockssDaemon ld, String auId) 
     throws LockssRepositoryException {
     super();
@@ -212,6 +215,11 @@ public class LockssJackrabbitHelper extends BaseLockssDaemonManager {
   static public void addRepository(String strAuId, String directory) throws FileNotFoundException, LockssRepositoryException {
     RepositoryNode repnode;
     
+    if (m_ljrsThis == null) {
+      logger.error("Please call preconstructor before you add a repository.");
+      throw new LockssRepositoryException("addRepository: Please call preconstructor before you call addRepository.");
+    }
+   
     repnode = RepositoryNodeImpl.constructor(m_ljrsThis.m_session, 
         m_ljrsThis.m_nodeRoot, directory, m_ljrsThis.m_sizeWarcMax, 
         m_ljrsThis.m_url, m_ljrsThis.m_idman);
@@ -234,8 +242,6 @@ public class LockssJackrabbitHelper extends BaseLockssDaemonManager {
     try {
       RepositoryNodeImpl rniRoot;
       
-//      rniRoot = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_session, m_nodeRoot, m_stemFile, 
-//          m_sizeWarcMax, m_url, m_idman);
       if (m_marepnode.containsKey(strAuId)) {  
         rniRoot = (RepositoryNodeImpl) m_marepnode.get(strAuId);
         return rniRoot.getNode(strAuId, "", true);

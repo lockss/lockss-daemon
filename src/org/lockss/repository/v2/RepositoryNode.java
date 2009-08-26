@@ -116,7 +116,7 @@ public interface RepositoryNode {
   
   
   /**
-   * Used by LockssOneAuRepository.loadPollHistories.
+   * Used by LockssAuRepository.loadPollHistories.
    */
   // public List<PollHistory> getPollHistoryList() throws LockssRepositoryException;
   // Removed.

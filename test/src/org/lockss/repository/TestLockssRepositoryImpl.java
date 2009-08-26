@@ -531,7 +531,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
         .unescape(expectedStr));
   }
 
-  // Beginning of tests for LockssOneAuRepository methods.
+  // Beginning of tests for LockssAuRepository methods.
 
   public void testGetAuCreationTime() throws Exception {
     LockssRepositoryImpl lriCreated;
@@ -714,7 +714,20 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     // Not tested for now.  
   }
 
-  // End tests: LockssOneAuRepository.
+  
+  /**
+   * Test method for {@link org.lockss.repository.jcr.LockssAuRepositoryImpl#getRepoDiskUsage}
+   */
+  public final void testGetRepoDiskUsage() throws Exception {
+    long lDiskBefore;
+    
+    lDiskBefore = repo.getRepoDiskUsage(true);
+    
+    // TODO: I don't have a good idea for a test...
+  }
+
+
+  // End tests: LockssAuRepository.
 
   private RepositoryNode createLeaf(String url, String content, Properties props)
       throws Exception {

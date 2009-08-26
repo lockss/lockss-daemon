@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.80.12.3 2009-08-12 18:46:40 edwardsb1 Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.80.12.4 2009-08-26 22:47:24 edwardsb1 Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.state.*;
  * removed from the cache on finalize()).
  */
 public class LockssRepositoryImpl
-  extends BaseLockssDaemonManager implements LockssRepository, LockssOneAuRepository {
+  extends BaseLockssDaemonManager implements LockssRepository, LockssAuRepository {
   private static Logger logger = Logger.getLogger("LockssRepositoryImpl");
 
   /**
@@ -586,7 +586,7 @@ public class LockssRepositoryImpl
     return new File(location + File.separator + AU_ID_FILE);
   }
   
-  // NOTE: LockssOneAuRepositoryImpl does NOT pass in a location.
+  // NOTE: LockssAuRepositoryImpl does NOT pass in a location.
   
   public InputStream getAuStateRawContents() 
       throws IOException {
@@ -1048,7 +1048,7 @@ public class LockssRepositoryImpl
   /* (non-Javadoc)
    * Always returns the latest version of the node.
    * 
-   * @see org.lockss.repository.v2.LockssOneAuRepository#getFile(java.lang.String, boolean)
+   * @see org.lockss.repository.v2.LockssAuRepository#getFile(java.lang.String, boolean)
    */
   public RepositoryFile getFile(String url, boolean create)
       throws MalformedURLException, LockssRepositoryException {
@@ -1069,7 +1069,7 @@ public class LockssRepositoryImpl
   }
 
   /* (non-Javadoc)
-   * @see org.lockss.repository.v2.LockssOneAuRepository#getNoAuPeerSetRawContents()
+   * @see org.lockss.repository.v2.LockssAuRepository#getNoAuPeerSetRawContents()
    */
   public InputStream getNoAuPeerSetRawContents()
       throws LockssRepositoryException {
@@ -1086,14 +1086,14 @@ public class LockssRepositoryImpl
   }
 
   /* (non-Javadoc)
-   * @see org.lockss.repository.v2.LockssOneAuRepository#hasNoAuPeerSet()
+   * @see org.lockss.repository.v2.LockssAuRepository#hasNoAuPeerSet()
    */
   public boolean hasNoAuPeerSet() {
     return getNoAuFile().exists();
   }
 
   /* (non-Javadoc)
-   * @see org.lockss.repository.v2.LockssOneAuRepository#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)
+   * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)
    */
   public void queueSizeCalc(org.lockss.repository.v2.RepositoryNode node) {
     if (logger.isDebug3()) {
@@ -1102,7 +1102,7 @@ public class LockssRepositoryImpl
   }
 
   /* (non-Javadoc)
-   * @see org.lockss.repository.v2.LockssOneAuRepository#storeNoAuRawContents(java.io.InputStream)
+   * @see org.lockss.repository.v2.LockssAuRepository#storeNoAuRawContents(java.io.InputStream)
    */
   public void storeNoAuRawContents(InputStream istr)
       throws LockssRepositoryException {
@@ -1125,5 +1125,15 @@ public class LockssRepositoryImpl
     fileNoAu = new File(rootLocation, HistoryRepositoryImpl.NO_AU_PEER_ID_SET_FILE_NAME);
     
     return fileNoAu;
+  }
+
+  
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssAuRepository#getRepoDiskUsage(boolean)
+   */
+  public long getRepoDiskUsage(boolean calcIfUnknown) {
+    // I assume that the disk usage wanted is that of the root location.
+    PlatformUtil pu = PlatformUtil.getInstance();
+    return pu.getDiskUsage(rootLocation);
   }
 }

@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class exists only to supply common, useful methods
  * and common constants.
  */
-public class JcrRepositoryBase {
+public abstract class JcrRepositoryBase {
   // Constants  
   protected final static String k_propIsTreeSizeFilled = "IsTreeSizeFilled";
   protected final static String k_propSizeMax = "SizeMax";

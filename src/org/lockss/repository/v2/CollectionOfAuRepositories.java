@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositories.java,v 1.1.2.2 2009-08-15 00:51:25 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositories.java,v 1.1.2.3 2009-08-26 22:47:24 edwardsb1 Exp $
  */
 
 /*
@@ -35,6 +35,10 @@ package org.lockss.repository.v2;
 import java.io.*;
 import java.util.Map;
 
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.repository.LockssRepositoryException;
+import org.lockss.util.PlatformUtil.*;
+
 /**
  * @author edwardsb
  *
@@ -50,11 +54,31 @@ public interface CollectionOfAuRepositories {
    * “v2cache” subdir.  Within that space (the collection) there will only be AUs 
    * of its type.
    *
-   * @param dirSource
+   * @param dirSource -- the parent directory for all directories underneath.
    * @return Map<String, Object>:
-   *    Given the name of an AU repository, it returns the 
+   *    Given the name of an AU repository, it returns the directory where this repository
+   *    is found.
    */
-  public Map<String, Object> listAuRepositories(File dirSource) throws IOException;
+  public Map<String, File> listAuRepositories() throws IOException;
   
+  /**
+   * This method creates a new AU Repository in a given directory.
+   * 
+   * @param dirSource
+   * @throws IOException
+   */
   public void generateAuRepository(File dirSource) throws IOException;
+  
+  
+  /**
+   * This method opens an AU repository in a given directory.
+   */
+  public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation) throws IOException, LockssRepositoryException;
+  
+  
+  /**
+   * Return the space used by this collection.
+   * @throws UnsupportedException 
+   */
+  public DF getDF() throws UnsupportedException; 
 }
