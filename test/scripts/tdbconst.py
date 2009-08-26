@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.8 2009-08-26 09:32:28 thib_gc Exp $
+# $Id: tdbconst.py,v 1.9 2009-08-26 09:35:43 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -32,6 +32,7 @@ TDB_OPTION_LEVEL                   = 'level'
 TDB_LEVEL_CONTENT_TESTING          = 'contentTesting'
 TDB_LEVEL_CONTENT_TESTING_STATUSES = [ AU.STATUS_EXISTS,
                                        AU.STATUS_MANIFEST,
+                                       AU.STATUS_WANTED,
                                        AU.STATUS_TESTING,
                                        AU.STATUS_NOT_READY,
                                        AU.STATUS_READY,
@@ -41,15 +42,15 @@ TDB_LEVEL_CONTENT_TESTING_STATUSES = [ AU.STATUS_EXISTS,
                                        AU.STATUS_RELEASED,
                                        AU.STATUS_DOWN ]
 TDB_LEVEL_EVERYTHING               = 'everything'
-TDB_LEVEL_EVERYTHING_STATUSES      = tuple(AU.STATUSES)
+TDB_LEVEL_EVERYTHING_STATUSES      = AU.STATUSES[:]
 TDB_LEVEL_PRODUCTION               = 'production'
 TDB_LEVEL_PRODUCTION_STATUSES      = [ AU.STATUS_RELEASED,
                                        AU.STATUS_DOWN,
                                        AU.STATUS_SUPERSEDED ]
 TDB_LEVEL_DEFAULT                  = [ TDB_LEVEL_PRODUCTION ]
-TDB_LEVELS                         = AU.STATUSES + [ TDB_LEVEL_CONTENT_TESTING,
-                                                     TDB_LEVEL_EVERYTHING,
-                                                     TDB_LEVEL_PRODUCTION ]
+TDB_LEVELS                         = AU.STATUSES[:] + [ TDB_LEVEL_CONTENT_TESTING,
+                                                        TDB_LEVEL_EVERYTHING,
+                                                        TDB_LEVEL_PRODUCTION ]
 
 TDB_OPTION_STYLE      = 'style'
 TDB_STYLE_NONE        = 'none'
