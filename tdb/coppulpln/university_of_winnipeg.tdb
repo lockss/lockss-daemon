@@ -15,21 +15,21 @@
     param[journal_id] = jms
     implicit < status ; year ; name ; param[year] >
 
-    au < manifest ; 1983 ; Journal of Mennonite Studies Volume 1 ; 1983 >
-    au < manifest ; 1984 ; Journal of Mennonite Studies Volume 2 ; 1984 >
-    au < manifest ; 1985 ; Journal of Mennonite Studies Volume 3 ; 1985 >
-    au < manifest ; 1986 ; Journal of Mennonite Studies Volume 4 ; 1986 >
-    au < manifest ; 1987 ; Journal of Mennonite Studies Volume 5 ; 1987 >
-    au < manifest ; 1988 ; Journal of Mennonite Studies Volume 6 ; 1988 >
-    au < manifest ; 1989 ; Journal of Mennonite Studies Volume 7 ; 1989 >
-    au < manifest ; 1990 ; Journal of Mennonite Studies Volume 8 ; 1990 >
-    au < manifest ; 1991 ; Journal of Mennonite Studies Volume 9 ; 1991 >
-    au < manifest ; 1992 ; Journal of Mennonite Studies Volume 10 ; 1992 >
-    au < manifest ; 1993 ; Journal of Mennonite Studies Volume 11 ; 1993 >
-    au < manifest ; 1994 ; Journal of Mennonite Studies Volume 12 and Volume 14 ; 1994 >
-    au < manifest ; 1995 ; Journal of Mennonite Studies Volume 13 ; 1995 >
-    au < manifest ; 1997 ; Journal of Mennonite Studies Volume 15 ; 1997 >
-    au < manifest ; 1998 ; Journal of Mennonite Studies Volume 16 ; 1998 >
+    au < wanted ; 1983 ; Journal of Mennonite Studies Volume 1 ; 1983 >
+    au < wanted ; 1984 ; Journal of Mennonite Studies Volume 2 ; 1984 >
+    au < wanted ; 1985 ; Journal of Mennonite Studies Volume 3 ; 1985 >
+    au < wanted ; 1986 ; Journal of Mennonite Studies Volume 4 ; 1986 >
+    au < wanted ; 1987 ; Journal of Mennonite Studies Volume 5 ; 1987 >
+    au < wanted ; 1988 ; Journal of Mennonite Studies Volume 6 ; 1988 >
+    au < wanted ; 1989 ; Journal of Mennonite Studies Volume 7 ; 1989 >
+    au < wanted ; 1990 ; Journal of Mennonite Studies Volume 8 ; 1990 >
+    au < wanted ; 1991 ; Journal of Mennonite Studies Volume 9 ; 1991 >
+    au < wanted ; 1992 ; Journal of Mennonite Studies Volume 10 ; 1992 >
+    au < wanted ; 1993 ; Journal of Mennonite Studies Volume 11 ; 1993 >
+    au < wanted ; 1994 ; Journal of Mennonite Studies Volume 12 and Volume 14 ; 1994 >
+    au < wanted ; 1995 ; Journal of Mennonite Studies Volume 13 ; 1995 >
+    au < wanted ; 1997 ; Journal of Mennonite Studies Volume 15 ; 1997 >
+    au < wanted ; 1998 ; Journal of Mennonite Studies Volume 16 ; 1998 >
 
   }
 
