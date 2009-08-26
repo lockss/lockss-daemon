@@ -16,13 +16,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0010-065X
   
-      au < do_not_process ; The Coleopterists Bulletin Volume 54 ; 54 >
-      au < do_not_process ; The Coleopterists Bulletin Volume 55 ; 55 >
-      au < do_not_process ; The Coleopterists Bulletin Volume 56 ; 56 >
-      au < do_not_process ; The Coleopterists Bulletin Volume 57 ; 57 >
+      au < doNotProcess ; The Coleopterists Bulletin Volume 54 ; 54 >
+      au < doNotProcess ; The Coleopterists Bulletin Volume 55 ; 55 >
+      au < doNotProcess ; The Coleopterists Bulletin Volume 56 ; 56 >
+      au < doNotProcess ; The Coleopterists Bulletin Volume 57 ; 57 >
       au < superseded ; The Coleopterists Bulletin Volume 58 ; 58 >
-      au < do_not_process ; The Coleopterists Bulletin Volume 59 ; 59 >
-      au < do_not_process ; The Coleopterists Bulletin Volume 60 ; 60 >
+      au < doNotProcess ; The Coleopterists Bulletin Volume 59 ; 59 >
+      au < doNotProcess ; The Coleopterists Bulletin Volume 60 ; 60 >
     }
 
     {

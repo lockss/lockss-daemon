@@ -60,7 +60,7 @@
     au < ready ; Congressional Hearings, 104th Congress ; 104 >
     au < released ; Congressional Hearings, 105th Congress ; 105 >
     au < released ; Congressional Hearings, 106th Congress ; 106 >
-    au < not_ready ; Congressional Hearings, 107th Congress ; 107 >
+    au < notReady ; Congressional Hearings, 107th Congress ; 107 >
     au < released ; Congressional Hearings, 108th Congress ; 108 >
     au < released ; Congressional Hearings, 109th Congress ; 109 >
     au < released ; Congressional Hearings, 110th Congress ; 110 >
@@ -180,8 +180,8 @@
     au < released ; Federal Register 1998 ; 1998 >
     au < released ; Federal Register 1999 ; 1999 >
     au < released ; Federal Register 2000 ; 2000 >
-    au < does_not_exist ; Federal Register 2001 ; 2001 >
-    au < does_not_exist ; Federal Register 2002 ; 2002 >
+    au < doesNotExist ; Federal Register 2001 ; 2001 >
+    au < doesNotExist ; Federal Register 2002 ; 2002 >
     au < released ; Federal Register 2003 ; 2003 >
     au < released ; Federal Register 2004 ; 2004 >
     au < released ; Federal Register 2005 ; 2005 >

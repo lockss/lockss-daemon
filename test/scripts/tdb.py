@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.9 2009-01-25 01:34:35 thib_gc Exp $
+# $Id: tdb.py,v 1.10 2009-08-26 09:32:28 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -35,19 +35,27 @@ class Map(object):
 
     def get(self, key):
         if type(key) is not tuple: key = ( key, )
-        return self._dictionary.get(key) or self._prefix_get(key)
+        return self._get(key, self._dictionary)
     
-    def set(self, key, value):
+    def _get(self, key, rec):
+        if len(key) == 0: return rec
+        newrec = rec.get(key[0])
+        if newrec: return self._get(key[1:], newrec)
+        return None
+    
+    def set(self, key, val):
         if type(key) is not tuple: key = ( key, )
-        self._dictionary[key] = value
+        self._set(key, val, self._dictionary)
     
-    def _prefix_get(self, key):
-        result = dict()
-        for k in self._dictionary.keys():
-            if k[0:len(key)] == key:
-                result[k[len(key):]] = self._dictionary[k]
-        if len(result) == 0: return None
-        return result
+    def _set(self, key, val, rec):
+        k0 = key[0]
+        if len(key) == 1:
+            rec[k0] = val
+            return
+        if k0 not in rec:
+            rec[k0] = dict()
+        newrec = rec.get(k0)
+        self._set(key[1:], val, newrec)
     
 class ChainedMap(Map):
     
@@ -59,10 +67,19 @@ class ChainedMap(Map):
         myval = super(ChainedMap,self).get(key)
         if self._next is None: return myval
         nextval = self._next.get(key)
-        if nextval and type(nextval) is dict:
-            if myval: nextval.update(myval)
-            return nextval
-        else: return myval or nextval
+        if myval is None: return nextval
+        if nextval is None or type(myval) is not dict: return myval
+        nextval = nextval.copy()
+        self._recursive_update(nextval, myval)
+        return nextval
+        
+    def _recursive_update(self, map1, map2):
+        for (k2,v2) in map2.items():
+            if type(v2) is dict:
+                if k2 not in map1: map1[k2] = dict()
+                self._recursive_update(map1[k2], v2)
+            else: map1[k2] = v2
+        
 
 class Publisher(Map):
 
@@ -96,37 +113,37 @@ class AU(ChainedMap):
     PARAM = 'param'
     PLUGIN = 'plugin'
     RIGHTS = 'rights'
-
     STATUS = 'status'
-    STATUS_DOES_NOT_EXIST = 'does_not_exist'
-    STATUS_DO_NOT_PROCESS = 'do_not_process'
+    STATUS_DOES_NOT_EXIST = 'doesNotExist'
+    STATUS_DO_NOT_PROCESS = 'doNotProcess'
     STATUS_EXISTS         = 'exists'
     STATUS_MANIFEST       = 'manifest'
+    STATUS_WANTED         = 'wanted'
     STATUS_TESTING        = 'testing'
-    STATUS_NOT_READY      = 'not_ready'
+    STATUS_NOT_READY      = 'notReady'
     STATUS_READY          = 'ready'
-    STATUS_PRE_RELEASING  = 'pre_releasing'
-    STATUS_PRE_RELEASED   = 'pre_released'
+    STATUS_PRE_RELEASING  = 'preReleasing'
+    STATUS_PRE_RELEASED   = 'preReleased'
     STATUS_RELEASING      = 'releasing'
     STATUS_RELEASED       = 'released'
     STATUS_DOWN           = 'down'
     STATUS_SUPERSEDED     = 'superseded'
     STATUS_RETRACTED      = 'retracted'
-    STATUSES = (STATUS_DOES_NOT_EXIST,
-                STATUS_DO_NOT_PROCESS,
-                STATUS_EXISTS,
-                STATUS_MANIFEST,
-                STATUS_TESTING,
-                STATUS_NOT_READY,
-                STATUS_READY,
-                STATUS_PRE_RELEASING,
-                STATUS_PRE_RELEASED,
-                STATUS_RELEASING,
-                STATUS_RELEASED,
-                STATUS_DOWN,
-                STATUS_SUPERSEDED,
-                STATUS_RETRACTED)
-    
+    STATUSES = [ STATUS_DOES_NOT_EXIST,
+                 STATUS_DO_NOT_PROCESS,
+                 STATUS_EXISTS,
+                 STATUS_MANIFEST,
+                 STATUS_WANTED,
+                 STATUS_TESTING,
+                 STATUS_NOT_READY,
+                 STATUS_READY,
+                 STATUS_PRE_RELEASING,
+                 STATUS_PRE_RELEASED,
+                 STATUS_RELEASING,
+                 STATUS_RELEASED,
+                 STATUS_DOWN,
+                 STATUS_SUPERSEDED,
+                 STATUS_RETRACTED ]
     TITLE = 'title'
 
     def __init__(self, next=None):
@@ -135,11 +152,11 @@ class AU(ChainedMap):
 
     def set_title(self, title): self.set(AU.TITLE, title)
 
-    def attr(self, attr): return self.get(( AU.ATTR, attr ))
+    def attr(self, attr): return self.get( (AU.ATTR, attr) )
     def attrs(self): return self.get(AU.ATTR) or dict()
     def issn(self): return self.get(AU.ISSN)
     def name(self): return self.get(AU.NAME)
-    def param(self, param): return self.get(( AU.PARAM, param ))
+    def param(self, param): return self.get( (AU.PARAM, param) )
     def params(self): return self.get(AU.PARAM) or dict()
     def plugin(self): return self.get(AU.PLUGIN)
     def rights(self): return self.get(AU.RIGHTS)

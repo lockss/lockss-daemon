@@ -16,13 +16,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0028-7199
   
-      au < do_not_process ; Journal of the New York Entomological Society Volume 108 ; 108 >
-      au < do_not_process ; Journal of the New York Entomological Society Volume 109 ; 109 >
-      au < do_not_process ; Journal of the New York Entomological Society Volume 110 ; 110 >
-      au < do_not_process ; Journal of the New York Entomological Society Volume 111 ; 111 >
+      au < doNotProcess ; Journal of the New York Entomological Society Volume 108 ; 108 >
+      au < doNotProcess ; Journal of the New York Entomological Society Volume 109 ; 109 >
+      au < doNotProcess ; Journal of the New York Entomological Society Volume 110 ; 110 >
+      au < doNotProcess ; Journal of the New York Entomological Society Volume 111 ; 111 >
       au < superseded ; Journal of the New York Entomological Society Volume 112 ; 112 >
-      au < do_not_process ; Journal of the New York Entomological Society Volume 113 ; 113 >
-      au < do_not_process ; Journal of the New York Entomological Society Volume 114 ; 114 >
+      au < doNotProcess ; Journal of the New York Entomological Society Volume 113 ; 113 >
+      au < doNotProcess ; Journal of the New York Entomological Society Volume 114 ; 114 >
     }
 
     {

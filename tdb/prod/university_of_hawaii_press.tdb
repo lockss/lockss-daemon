@@ -16,10 +16,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1534-6188
   
-      au < do_not_process ; Pacific Science Volume 59 ; 59 >
-      au < do_not_process ; Pacific Science Volume 60 ; 60 >
-      au < do_not_process ; Pacific Science Volume 61 ; 61 >
-      au < do_not_process ; Pacific Science Volume 62 ; 62 >
+      au < doNotProcess ; Pacific Science Volume 59 ; 59 >
+      au < doNotProcess ; Pacific Science Volume 60 ; 60 >
+      au < doNotProcess ; Pacific Science Volume 61 ; 61 >
+      au < doNotProcess ; Pacific Science Volume 62 ; 62 >
     }
 
     {

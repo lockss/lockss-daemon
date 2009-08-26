@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1342-8144
   
-      au < do_not_process ; Paleontological Research Volume 9 ; 9 >
-      au < do_not_process ; Paleontological Research Volume 10 ; 10 >
-      au < do_not_process ; Paleontological Research Volume 11 ; 11 >
+      au < doNotProcess ; Paleontological Research Volume 9 ; 9 >
+      au < doNotProcess ; Paleontological Research Volume 10 ; 10 >
+      au < doNotProcess ; Paleontological Research Volume 11 ; 11 >
     }
 
     {

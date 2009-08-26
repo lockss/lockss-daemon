@@ -16,14 +16,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0732-9393
   
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 17 ; 17 >
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 18 ; 18 >
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 19 ; 19 >
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 20 ; 20 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 17 ; 17 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 18 ; 18 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 19 ; 19 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 20 ; 20 >
       au < superseded ; The Society of Wetland Scientists Bulletin Volume 21 ; 21 >
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 22 ; 22 >
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 23 ; 23 >
-      au < do_not_process ; The Society of Wetland Scientists Bulletin Volume 24 ; 24 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 22 ; 22 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 23 ; 23 >
+      au < doNotProcess ; The Society of Wetland Scientists Bulletin Volume 24 ; 24 >
     }
 
   }
@@ -41,14 +41,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0277-5212
   
-      au < do_not_process ; Wetlands Volume 20 ; 20 >
-      au < do_not_process ; Wetlands Volume 21 ; 21 >
-      au < do_not_process ; Wetlands Volume 22 ; 22 >
-      au < do_not_process ; Wetlands Volume 23 ; 23 >
+      au < doNotProcess ; Wetlands Volume 20 ; 20 >
+      au < doNotProcess ; Wetlands Volume 21 ; 21 >
+      au < doNotProcess ; Wetlands Volume 22 ; 22 >
+      au < doNotProcess ; Wetlands Volume 23 ; 23 >
       au < superseded ; Wetlands Volume 24 ; 24 >
-      au < do_not_process ; Wetlands Volume 25 ; 25 >
-      au < do_not_process ; Wetlands Volume 26 ; 26 >
-      au < do_not_process ; Wetlands Volume 27 ; 27 >
+      au < doNotProcess ; Wetlands Volume 25 ; 25 >
+      au < doNotProcess ; Wetlands Volume 26 ; 26 >
+      au < doNotProcess ; Wetlands Volume 27 ; 27 >
     }
 
     {

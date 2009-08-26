@@ -16,10 +16,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1066-5234
   
-      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
-      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
-      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
-      au < do_not_process ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
+      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
+      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
+      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
+      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
       au < superseded ; The Journal of Eukaryotic Microbiology Volume 51 ; 51 >
     }
 

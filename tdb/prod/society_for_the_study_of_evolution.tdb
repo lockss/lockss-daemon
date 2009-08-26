@@ -16,14 +16,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0014-3820
   
-      au < do_not_process ; Evolution Volume 54 ; 54 >
-      au < do_not_process ; Evolution Volume 55 ; 55 >
-      au < do_not_process ; Evolution Volume 56 ; 56 >
-      au < do_not_process ; Evolution Volume 57 ; 57 >
-      au < do_not_process ; Evolution Volume 58 ; 58 >
+      au < doNotProcess ; Evolution Volume 54 ; 54 >
+      au < doNotProcess ; Evolution Volume 55 ; 55 >
+      au < doNotProcess ; Evolution Volume 56 ; 56 >
+      au < doNotProcess ; Evolution Volume 57 ; 57 >
+      au < doNotProcess ; Evolution Volume 58 ; 58 >
       au < superseded ; Evolution Volume 59 ; 59 >
-      au < do_not_process ; Evolution Volume 60 ; 60 >
-      au < do_not_process ; Evolution Volume 61 ; 61 >
+      au < doNotProcess ; Evolution Volume 60 ; 60 >
+      au < doNotProcess ; Evolution Volume 61 ; 61 >
     }
 
     {

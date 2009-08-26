@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1347-5878
   
-      au < do_not_process ; Journal of Mammalian Ova Research Volume 22 ; 22 >
-      au < do_not_process ; Journal of Mammalian Ova Research Volume 23 ; 23 >
-      au < do_not_process ; Journal of Mammalian Ova Research Volume 24 ; 24 >
+      au < doNotProcess ; Journal of Mammalian Ova Research Volume 22 ; 22 >
+      au < doNotProcess ; Journal of Mammalian Ova Research Volume 23 ; 23 >
+      au < doNotProcess ; Journal of Mammalian Ova Research Volume 24 ; 24 >
     }
 
     {

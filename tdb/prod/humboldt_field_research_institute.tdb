@@ -16,14 +16,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1092-6194
   
-      au < do_not_process ; Northeastern Naturalist Volume 7 ; 7 >
-      au < do_not_process ; Northeastern Naturalist Volume 8 ; 8 >
-      au < do_not_process ; Northeastern Naturalist Volume 9 ; 9 >
-      au < do_not_process ; Northeastern Naturalist Volume 10 ; 10 >
+      au < doNotProcess ; Northeastern Naturalist Volume 7 ; 7 >
+      au < doNotProcess ; Northeastern Naturalist Volume 8 ; 8 >
+      au < doNotProcess ; Northeastern Naturalist Volume 9 ; 9 >
+      au < doNotProcess ; Northeastern Naturalist Volume 10 ; 10 >
       au < superseded ; Northeastern Naturalist Volume 11 ; 11 >
-      au < do_not_process ; Northeastern Naturalist Volume 12 ; 12 >
-      au < do_not_process ; Northeastern Naturalist Volume 13 ; 13 >
-      au < do_not_process ; Northeastern Naturalist Volume 14 ; 14 >
+      au < doNotProcess ; Northeastern Naturalist Volume 12 ; 12 >
+      au < doNotProcess ; Northeastern Naturalist Volume 13 ; 13 >
+      au < doNotProcess ; Northeastern Naturalist Volume 14 ; 14 >
     }
 
   }
@@ -41,12 +41,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1528-7092
   
-      au < do_not_process ; Southeastern Naturalist Volume 1 ; 1 >
-      au < do_not_process ; Southeastern Naturalist Volume 2 ; 2 >
+      au < doNotProcess ; Southeastern Naturalist Volume 1 ; 1 >
+      au < doNotProcess ; Southeastern Naturalist Volume 2 ; 2 >
       au < superseded ; Southeastern Naturalist Volume 3 ; 3 >
-      au < do_not_process ; Southeastern Naturalist Volume 4 ; 4 >
-      au < do_not_process ; Southeastern Naturalist Volume 5 ; 5 >
-      au < do_not_process ; Southeastern Naturalist Volume 6 ; 6 >
+      au < doNotProcess ; Southeastern Naturalist Volume 4 ; 4 >
+      au < doNotProcess ; Southeastern Naturalist Volume 5 ; 5 >
+      au < doNotProcess ; Southeastern Naturalist Volume 6 ; 6 >
     }
 
     {

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.10 2009-05-19 00:33:34 thib_gc Exp $
+# $Id: tdbxml.py,v 1.11 2009-08-26 09:32:28 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -34,7 +34,7 @@ _IMPLICIT_PARAM_ORDER = [
     'base_url', 'base_url2', 'base_url3', 'base_url4', 'base_url5',
     'oai_request_url',
     'publisher_id', 'publisher_code', 'publisher_name',
-    'journal_id', 'journal_code', 'journal_issn', 'journal_dir',
+    'journal_id', 'journal_code', 'journal_issn', 'journal_abbr', 'journal_dir',
     'year',
     'issues', 'issue_set', 'issue_range', 'num_issue_range',
     'volume_name', 'volume'
@@ -130,18 +130,20 @@ def _process_au(au, options):
         _escape(au.name()),
         au.plugin() )
     i = 1
+    au_params = au.params()
     for param in _IMPLICIT_PARAM_ORDER:
-        if ( param, ) in au.params():
+        if param in au_params:
             _do_param(au, i, param)
             i = i + 1
-    for paramtup in au.params():
-        if paramtup[0] not in _IMPLICIT_PARAM_ORDER:
-            _do_param(au, i, paramtup[0])
+    for param in au_params:
+        if param not in _IMPLICIT_PARAM_ORDER:
+            _do_param(au, i, au_params[param])
             i = i + 1
     if au.status() == AU.STATUS_DOWN:
         _do_param(au, 99, 'pub_down', value='true')
-    for attrtup in au.attrs():
-        _do_attr(au, attrtup[0])
+    au_attrs = au.attrs()
+    for attr in au_attrs:
+        _do_attr(au, attr, au_attrs[attr])
     if au.status() == AU.STATUS_PRE_RELEASED:
         _do_attr(au, 'releaseStatus', 'pre-release')
     if au.rights() == 'openaccess':

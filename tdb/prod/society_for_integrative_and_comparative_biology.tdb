@@ -16,7 +16,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0003-1569
   
-      au < do_not_process ; American Zoologist Volume 40 ; 40 >
+      au < doNotProcess ; American Zoologist Volume 40 ; 40 >
       au < superseded ; American Zoologist Volume 41 ; 41 >
     }
 
@@ -35,10 +35,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1540-7063
   
-      au < do_not_process ; Integrative and Comparative Biology Volume 42 ; 42 >
-      au < do_not_process ; Integrative and Comparative Biology Volume 43 ; 43 >
+      au < doNotProcess ; Integrative and Comparative Biology Volume 42 ; 42 >
+      au < doNotProcess ; Integrative and Comparative Biology Volume 43 ; 43 >
       au < superseded ; Integrative and Comparative Biology Volume 44 ; 44 >
-      au < do_not_process ; Integrative and Comparative Biology Volume 45 ; 45 >
+      au < doNotProcess ; Integrative and Comparative Biology Volume 45 ; 45 >
     }
 
     {

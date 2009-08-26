@@ -30,7 +30,7 @@
         param[base_url] = http://ach.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Accounting History Volume 5 ; 5 >
+        au < doNotProcess ; Accounting History Volume 5 ; 5 >
         au < released ; Accounting History Volume 10 ; 10 >
         au < released ; Accounting History Volume 11 ; 11 >
         au < released ; Accounting History Volume 12 ; 12 >
@@ -63,7 +63,7 @@
         param[base_url] = http://asj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Acta Sociologica Volume 48 ; 48 >
+        au < doNotProcess ; Acta Sociologica Volume 48 ; 48 >
         au < released ; Acta Sociologica Volume 49 ; 49 >
         au < released ; Acta Sociologica Volume 50 ; 50 >
         au < ready ; Acta Sociologica Volume 51 ; 51 >
@@ -95,7 +95,7 @@
         param[base_url] = http://arj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Action Research Volume 3 ; 3 >
+        au < doNotProcess ; Action Research Volume 3 ; 3 >
         au < released ; Action Research Volume 4 ; 4 >
         au < released ; Action Research Volume 5 ; 5 >
         au < ready ; Action Research Volume 6 ; 6 >
@@ -127,7 +127,7 @@
         param[base_url] = http://alh.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Active Learning in Higher Education Volume 6 ; 6 >
+        au < doNotProcess ; Active Learning in Higher Education Volume 6 ; 6 >
         au < released ; Active Learning in Higher Education Volume 7 ; 7 >
         au < released ; Active Learning in Higher Education Volume 8 ; 8 >
         au < ready ; Active Learning in Higher Education Volume 9 ; 9 >
@@ -159,7 +159,7 @@
         param[base_url] = http://adb.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Adaptive Behavior Volume 13 ; 13 >
+        au < doNotProcess ; Adaptive Behavior Volume 13 ; 13 >
         au < released ; Adaptive Behavior Volume 14 ; 14 >
         au < released ; Adaptive Behavior Volume 15 ; 15 >
         au < ready ; Adaptive Behavior Volume 16 ; 16 >
@@ -191,7 +191,7 @@
         param[base_url] = http://aas.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Administration & Society Volume 37 ; 37 >
+        au < doNotProcess ; Administration & Society Volume 37 ; 37 >
         au < released ; Administration & Society Volume 38 ; 38 >
         au < released ; Administration & Society Volume 39 ; 39 >
         au < ready ; Administration & Society Volume 40 ; 40 >
@@ -224,7 +224,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Adult Education Quarterly Volume 55 ; 55 >
-        au < do_not_process ; Adult Education Quarterly Volume 56 ; 56 >
+        au < doNotProcess ; Adult Education Quarterly Volume 56 ; 56 >
         au < released ; Adult Education Quarterly Volume 57 ; 57 >
         au < released ; Adult Education Quarterly Volume 58 ; 58 >
         au < ready ; Adult Education Quarterly Volume 59 ; 59 >
@@ -255,7 +255,7 @@
         param[base_url] = http://adh.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Advances in Developing Human Resources Volume 7 ; 7 >
+        au < doNotProcess ; Advances in Developing Human Resources Volume 7 ; 7 >
         au < released ; Advances in Developing Human Resources Volume 8 ; 8 >
         au < released ; Advances in Developing Human Resources Volume 9 ; 9 >
         au < ready ; Advances in Developing Human Resources Volume 10 ; 10 >
@@ -287,7 +287,7 @@
         param[base_url] = http://aff.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Affilia Volume 20 ; 20 >
+        au < doNotProcess ; Affilia Volume 20 ; 20 >
         au < released ; Affilia Volume 21 ; 21 >
         au < released ; Affilia Volume 22 ; 22 >
         au < ready ; Affilia Volume 23 ; 23 >
@@ -383,7 +383,7 @@
         param[base_url] = http://aje.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; American Journal of Evaluation Volume 26 ; 26 >
+        au < doNotProcess ; American Journal of Evaluation Volume 26 ; 26 >
         au < released ; American Journal of Evaluation Volume 27 ; 27 >
         au < released ; American Journal of Evaluation Volume 28 ; 28 >
         au < ready ; American Journal of Evaluation Volume 29 ; 29 >
@@ -457,7 +457,7 @@
         param[base_url] = http://ajm.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; American Journal of Medical Quality Volume 20 ; 20 >
+        au < doNotProcess ; American Journal of Medical Quality Volume 20 ; 20 >
         au < released ; American Journal of Medical Quality Volume 21 ; 21 >
         au < released ; American Journal of Medical Quality Volume 22 ; 22 >
         au < ready ; American Journal of Medical Quality Volume 23 ; 23 >
@@ -511,7 +511,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The American Journal of Sports Medicine Volume 34 ; 34 >
+        au < doNotProcess ; The American Journal of Sports Medicine Volume 34 ; 34 >
         au < down ; The American Journal of Sports Medicine Volume 35 ; 35 >
 
       }
@@ -541,7 +541,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Politics Research Volume 33 ; 33 >
-        au < do_not_process ; American Politics Research Volume 34 ; 34 >
+        au < doNotProcess ; American Politics Research Volume 34 ; 34 >
         au < released ; American Politics Research Volume 35 ; 35 >
         au < ready ; American Politics Research Volume 36 ; 36 >
         au < ready ; American Politics Research Volume 37 ; 37 >
@@ -643,7 +643,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < released ; The Annals of the American Academy of Political and Social Science Volume 601 ; 601 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 602 ; 602 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 603 ; 603 >
-        au < do_not_process ; The Annals of the American Academy of Political and Social Science Volume 604 ; 604 >
+        au < doNotProcess ; The Annals of the American Academy of Political and Social Science Volume 604 ; 604 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 605 ; 605 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 606 ; 606 >
         au < released ; The Annals of the American Academy of Political and Social Science Volume 607 ; 607 >
@@ -714,7 +714,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Applied Psychological Measurement Volume 29 ; 29 >
-        au < do_not_process ; Applied Psychological Measurement Volume 30 ; 30 >
+        au < doNotProcess ; Applied Psychological Measurement Volume 30 ; 30 >
         au < released ; Applied Psychological Measurement Volume 31 ; 31 >
         au < ready ; Applied Psychological Measurement Volume 32 ; 32 >
         au < ready ; Applied Psychological Measurement Volume 33 ; 33 >
@@ -900,7 +900,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Behavior Modification Volume 29 ; 29 >
-        au < do_not_process ; Behavior Modification Volume 30 ; 30 >
+        au < doNotProcess ; Behavior Modification Volume 30 ; 30 >
         au < released ; Behavior Modification Volume 31 ; 31 >
         au < ready ; Behavior Modification Volume 32 ; 32 >
         au < ready ; Behavior Modification Volume 33 ; 33 >
@@ -951,7 +951,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Biological Research For Nursing Volume 6 ; 6 >
-        au < do_not_process ; Biological Research For Nursing Volume 7 ; 7 >
+        au < doNotProcess ; Biological Research For Nursing Volume 7 ; 7 >
         au < released ; Biological Research For Nursing Volume 8 ; 8 >
         au < released ; Biological Research For Nursing Volume 9 ; 9 >
         au < ready ; Biological Research For Nursing Volume 10 ; 10 >
@@ -983,7 +983,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Body & Society Volume 11 ; 11 >
-        au < do_not_process ; Body & Society Volume 12 ; 12 >
+        au < doNotProcess ; Body & Society Volume 12 ; 12 >
         au < released ; Body & Society Volume 13 ; 13 >
         au < ready ; Body & Society Volume 14 ; 14 >
         au < ready ; Body & Society Volume 15 ; 15 >
@@ -1100,7 +1100,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Bulletin of Science, Technology & Society Volume 25 ; 25 >
-        au < do_not_process ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
+        au < doNotProcess ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
         au < released ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
         au < ready ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
         au < ready ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
@@ -1132,7 +1132,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Business & Society Volume 44 ; 44 >
-        au < do_not_process ; Business & Society Volume 45 ; 45 >
+        au < doNotProcess ; Business & Society Volume 45 ; 45 >
         au < released ; Business & Society Volume 46 ; 46 >
         au < ready ; Business & Society Volume 47 ; 47 >
         au < ready ; Business & Society Volume 48 ; 48 >
@@ -1299,7 +1299,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://cin.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; China Information Volume 19 ; 19 >
+        au < doNotProcess ; China Information Volume 19 ; 19 >
         au < released ; China Information Volume 20 ; 20 >
         au < released ; China Information Volume 21 ; 21 >
         au < ready ; China Information Volume 22 ; 22 >
@@ -1459,7 +1459,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Clinical Child Psychology and Psychiatry Volume 10 ; 10 >
-        au < do_not_process ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 >
+        au < doNotProcess ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 >
         au < released ; Clinical Child Psychology and Psychiatry Volume 12 ; 12 >
         au < ready ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 >
         au < ready ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
@@ -1491,7 +1491,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Clinical Nursing Research Volume 14 ; 14 >
-        au < do_not_process ; Clinical Nursing Research Volume 15 ; 15 >
+        au < doNotProcess ; Clinical Nursing Research Volume 15 ; 15 >
         au < released ; Clinical Nursing Research Volume 16 ; 16 >
         au < ready ; Clinical Nursing Research Volume 17 ; 17 >
         au < ready ; Clinical Nursing Research Volume 18 ; 18 >
@@ -1673,7 +1673,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Compensation & Benefits Review Volume 37 ; 37 >
-        au < do_not_process ; Compensation & Benefits Review Volume 38 ; 38 >
+        au < doNotProcess ; Compensation & Benefits Review Volume 38 ; 38 >
         au < released ; Compensation & Benefits Review Volume 39 ; 39 >
         au < ready ; Compensation & Benefits Review Volume 40 ; 40 >
         au < ready ; Compensation & Benefits Review Volume 41 ; 41 >
@@ -1704,7 +1704,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://chp.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Complementary Health Practice Review Volume 10 ; 10 >
+        au < doNotProcess ; Complementary Health Practice Review Volume 10 ; 10 >
         au < released ; Complementary Health Practice Review Volume 11 ; 11 >
         au < released ; Complementary Health Practice Review Volume 12 ; 12 >
         au < ready ; Complementary Health Practice Review Volume 13 ; 13 >
@@ -1736,7 +1736,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://cer.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Concurrent Engineering Volume 13 ; 13 >
+        au < doNotProcess ; Concurrent Engineering Volume 13 ; 13 >
         au < released ; Concurrent Engineering Volume 14 ; 14 >
         au < released ; Concurrent Engineering Volume 15 ; 15 >
         au < ready ; Concurrent Engineering Volume 16 ; 16 >
@@ -1768,7 +1768,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://cis.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Contributions to Indian Sociology Volume 39 ; 39 >
+        au < doNotProcess ; Contributions to Indian Sociology Volume 39 ; 39 >
         au < released ; Contributions to Indian Sociology Volume 40 ; 40 >
         au < released ; Contributions to Indian Sociology Volume 41 ; 41 >
         au < ready ; Contributions to Indian Sociology Volume 42 ; 42 >
@@ -1801,7 +1801,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Convergence: The International Journal of Research into New Media Technologies Volume 11 ; 11 >
-        au < do_not_process ; Convergence: The International Journal of Research into New Media Technologies Volume 12 ; 12 >
+        au < doNotProcess ; Convergence: The International Journal of Research into New Media Technologies Volume 12 ; 12 >
         au < released ; Convergence: The International Journal of Research into New Media Technologies Volume 13 ; 13 >
         au < ready ; Convergence: The International Journal of Research into New Media Technologies Volume 14 ; 14 >
         au < ready ; Convergence: The International Journal of Research into New Media Technologies Volume 15 ; 15 >
@@ -1855,7 +1855,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Cornell Hotel and Restaurant Administration Quarterly Volume 46 ; 46 >
-        au < do_not_process ; Cornell Hotel and Restaurant Administration Quarterly Volume 47 ; 47 >
+        au < doNotProcess ; Cornell Hotel and Restaurant Administration Quarterly Volume 47 ; 47 >
         au < released ; Cornell Hotel and Restaurant Administration Quarterly Volume 48 ; 48 >
         au < ready ; Cornell Hotel and Restaurant Administration Quarterly Volume 49 ; 49 >
         au < ready ; Cornell Hotel and Restaurant Administration Quarterly Volume 50 ; 50 >
@@ -1887,7 +1887,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Counseling Psychologist Volume 33 ; 33 >
-        au < do_not_process ; The Counseling Psychologist Volume 34 ; 34 >
+        au < doNotProcess ; The Counseling Psychologist Volume 34 ; 34 >
         au < released ; The Counseling Psychologist Volume 35 ; 35 >
         au < ready ; The Counseling Psychologist Volume 36 ; 36 >
         au < ready ; The Counseling Psychologist Volume 37 ; 37 >
@@ -2007,7 +2007,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Criminal Justice Policy Review Volume 16 ; 16 >
-        au < do_not_process ; Criminal Justice Policy Review Volume 17 ; 17 >
+        au < doNotProcess ; Criminal Justice Policy Review Volume 17 ; 17 >
         au < released ; Criminal Justice Policy Review Volume 18 ; 18 >
         au < ready ; Criminal Justice Policy Review Volume 19 ; 19 >
         au < ready ; Criminal Justice Policy Review Volume 20 ; 20 >
@@ -2052,7 +2052,7 @@ comment[ajs] = this journal has been moved to H20 platform
 
 comment[csp7] = manifest page is malformed
 
-        au < not_ready ; Critical Social Policy Volume 7 ; 7 >
+        au < notReady ; Critical Social Policy Volume 7 ; 7 >
         au < released ; Critical Social Policy Volume 25 ; 25 >
         au < released ; Critical Social Policy Volume 26 ; 26 >
         au < released ; Critical Social Policy Volume 27 ; 27 >
@@ -2086,7 +2086,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Critique of Anthropology Volume 25 ; 25 >
-        au < do_not_process ; Critique of Anthropology Volume 26 ; 26 >
+        au < doNotProcess ; Critique of Anthropology Volume 26 ; 26 >
         au < released ; Critique of Anthropology Volume 27 ; 27 >
         au < ready ; Critique of Anthropology Volume 28 ; 28 >
         au < ready ; Critique of Anthropology Volume 29 ; 29 >
@@ -2118,7 +2118,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Cross-Cultural Research Volume 39 ; 39 >
-        au < do_not_process ; Cross-Cultural Research Volume 40 ; 40 >
+        au < doNotProcess ; Cross-Cultural Research Volume 40 ; 40 >
         au < released ; Cross-Cultural Research Volume 41 ; 41 >
         au < ready ; Cross-Cultural Research Volume 42 ; 42 >
         au < ready ; Cross-Cultural Research Volume 43 ; 43 >
@@ -2235,7 +2235,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Culture & Psychology Volume 11 ; 11 >
-        au < do_not_process ; Culture & Psychology Volume 12 ; 12 >
+        au < doNotProcess ; Culture & Psychology Volume 12 ; 12 >
         au < released ; Culture & Psychology Volume 13 ; 13 >
         au < ready ; Culture & Psychology Volume 14 ; 14 >
         au < ready ; Culture & Psychology Volume 15 ; 15 >
@@ -2289,7 +2289,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Currents in Biblical Research Volume 3 ; 3 >
-        au < do_not_process ; Currents in Biblical Research Volume 4 ; 4 >
+        au < doNotProcess ; Currents in Biblical Research Volume 4 ; 4 >
         au < released ; Currents in Biblical Research Volume 5 ; 5 >
         au < released ; Currents in Biblical Research Volume 6 ; 6 >
         au < ready ; Currents in Biblical Research Volume 7 ; 7 >
@@ -2343,7 +2343,7 @@ comment[csp7] = manifest page is malformed
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Diabetes Educator Volume 31 ; 31 >
-        au < do_not_process ; The Diabetes Educator Volume 32 ; 32 >
+        au < doNotProcess ; The Diabetes Educator Volume 32 ; 32 >
         au < released ; The Diabetes Educator Volume 33 ; 33 >
         au < ready ; The Diabetes Educator Volume 34 ; 34 >
         au < ready ; The Diabetes Educator Volume 35 ; 35 >
@@ -2550,7 +2550,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Education and Urban Society Volume 37 ; 37 >
-        au < do_not_process ; Education and Urban Society Volume 38 ; 38 >
+        au < doNotProcess ; Education and Urban Society Volume 38 ; 38 >
         au < released ; Education and Urban Society Volume 39 ; 39 >
         au < released ; Education and Urban Society Volume 40 ; 40 >
         au < ready ; Education and Urban Society Volume 41 ; 41 >
@@ -2603,7 +2603,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Administration Quarterly Volume 41 ; 41 >
-        au < do_not_process ; Educational Administration Quarterly Volume 42 ; 42 >
+        au < doNotProcess ; Educational Administration Quarterly Volume 42 ; 42 >
         au < released ; Educational Administration Quarterly Volume 43 ; 43 >
         au < ready ; Educational Administration Quarterly Volume 44 ; 44 >
         au < ready ; Educational Administration Quarterly Volume 45 ; 45 >
@@ -2677,7 +2677,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Educational Management Administration & Leadership Volume 33 ; 33 >
-        au < do_not_process ; Educational Management Administration & Leadership Volume 34 ; 34 >
+        au < doNotProcess ; Educational Management Administration & Leadership Volume 34 ; 34 >
         au < released ; Educational Management Administration & Leadership Volume 35 ; 35 >
         au < ready ; Educational Management Administration & Leadership Volume 36 ; 36 >
         au < ready ; Educational Management Administration & Leadership Volume 37 ; 37 >
@@ -2773,7 +2773,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Environment and Behavior Volume 37 ; 37 >
-        au < do_not_process ; Environment and Behavior Volume 38 ; 38 >
+        au < doNotProcess ; Environment and Behavior Volume 38 ; 38 >
         au < released ; Environment and Behavior Volume 39 ; 39 >
         au < ready ; Environment and Behavior Volume 40 ; 40 >
         au < ready ; Environment and Behavior Volume 41 ; 41 >
@@ -2805,7 +2805,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Environment and Urbanization Volume 14 ; 14 >
-        au < do_not_process ; Environment and Urbanization Volume 17 ; 17 >
+        au < doNotProcess ; Environment and Urbanization Volume 17 ; 17 >
         au < released ; Environment and Urbanization Volume 18 ; 18 >
         au < released ; Environment and Urbanization Volume 19 ; 19 >
         au < ready ; Environment and Urbanization Volume 20 ; 20 >
@@ -2838,7 +2838,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Ethnicities Volume 5 ; 5 >
-        au < do_not_process ; Ethnicities Volume 6 ; 6 >
+        au < doNotProcess ; Ethnicities Volume 6 ; 6 >
         au < released ; Ethnicities Volume 7 ; 7 >
         au < ready ; Ethnicities Volume 8 ; 8 >
         au < ready ; Ethnicities Volume 9 ; 9 >
@@ -2892,7 +2892,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European History Quarterly Volume 35 ; 35 >
-        au < do_not_process ; European History Quarterly Volume 36 ; 36 >
+        au < doNotProcess ; European History Quarterly Volume 36 ; 36 >
         au < released ; European History Quarterly Volume 37 ; 37 >
         au < ready ; European History Quarterly Volume 38 ; 38 >
         au < ready ; European History Quarterly Volume 39 ; 39 >
@@ -2924,7 +2924,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of Archaeology Volume 7 ; 7 >
-        au < do_not_process ; European Journal of Archaeology Volume 8 ; 8 >
+        au < doNotProcess ; European Journal of Archaeology Volume 8 ; 8 >
         au < released ; European Journal of Archaeology Volume 9 ; 9 >
         au < ready ; European Journal of Archaeology Volume 10 ; 10 >
         au < ready ; European Journal of Archaeology Volume 11 ; 11 >
@@ -3022,7 +3022,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of Industrial Relations Volume 11 ; 11 >
-        au < do_not_process ; European Journal of Industrial Relations Volume 12 ; 12 >
+        au < doNotProcess ; European Journal of Industrial Relations Volume 12 ; 12 >
         au < released ; European Journal of Industrial Relations Volume 13 ; 13 >
         au < ready ; European Journal of Industrial Relations Volume 14 ; 14 >
         au < ready ; European Journal of Industrial Relations Volume 15 ; 15 >
@@ -3053,7 +3053,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of International Relations Volume 11 ; 11 >
-        au < do_not_process ; European Journal of International Relations Volume 12 ; 12 >
+        au < doNotProcess ; European Journal of International Relations Volume 12 ; 12 >
         au < released ; European Journal of International Relations Volume 13 ; 13 >
         au < ready ; European Journal of International Relations Volume 14 ; 14 >
         au < ready ; European Journal of International Relations Volume 15 ; 15 >
@@ -3085,7 +3085,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of Political Theory Volume 4 ; 4 >
-        au < do_not_process ; European Journal of Political Theory Volume 5 ; 5 >
+        au < doNotProcess ; European Journal of Political Theory Volume 5 ; 5 >
         au < released ; European Journal of Political Theory Volume 6 ; 6 >
         au < ready ; European Journal of Political Theory Volume 7 ; 7 >
         au < ready ; European Journal of Political Theory Volume 8 ; 8 >
@@ -3139,7 +3139,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of Women's Studies Volume 12 ; 12 >
-        au < do_not_process ; European Journal of Women's Studies Volume 13 ; 13 >
+        au < doNotProcess ; European Journal of Women's Studies Volume 13 ; 13 >
         au < released ; European Journal of Women's Studies Volume 14 ; 14 >
         au < ready ; European Journal of Women's Studies Volume 15 ; 15 >
         au < ready ; European Journal of Women's Studies Volume 16 ; 16 >
@@ -3192,7 +3192,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Union Politics Volume 6 ; 6 >
-        au < do_not_process ; European Union Politics Volume 7 ; 7 >
+        au < doNotProcess ; European Union Politics Volume 7 ; 7 >
         au < released ; European Union Politics Volume 8 ; 8 >
         au < ready ; European Union Politics Volume 9 ; 9 >
         au < ready ; European Union Politics Volume 10 ; 10 >
@@ -3224,7 +3224,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Urban and Regional Studies Volume 12 ; 12 >
-        au < do_not_process ; European Urban and Regional Studies Volume 13 ; 13 >
+        au < doNotProcess ; European Urban and Regional Studies Volume 13 ; 13 >
         au < released ; European Urban and Regional Studies Volume 14 ; 14 >
         au < ready ; European Urban and Regional Studies Volume 15 ; 15 >
         au < ready ; European Urban and Regional Studies Volume 16 ; 16 >
@@ -3278,7 +3278,7 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Evaluation & the Health Professions Volume 28 ; 28 >
-        au < do_not_process ; Evaluation & the Health Professions Volume 29 ; 29 >
+        au < doNotProcess ; Evaluation & the Health Professions Volume 29 ; 29 >
         au < released ; Evaluation & the Health Professions Volume 30 ; 30 >
         au < ready ; Evaluation & the Health Professions Volume 31 ; 31 >
         au < ready ; Evaluation & the Health Professions Volume 32 ; 32 >
@@ -3310,9 +3310,9 @@ comment[ebd] = now published by Taylor & Francis
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Evaluation Review Volume 29 ; 29 >
-        au < do_not_process ; Evaluation Review Volume 30 ; 30 >
+        au < doNotProcess ; Evaluation Review Volume 30 ; 30 >
         au < released ; Evaluation Review Volume 31 ; 31 >
-        au < not_ready ; Evaluation Review Volume 32 ; 32 >
+        au < notReady ; Evaluation Review Volume 32 ; 32 >
         au < ready ; Evaluation Review Volume 33 ; 33 >
 
       }
@@ -3362,7 +3362,7 @@ comment[exm] = now published by Springer
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Expository Times Volume 116 ; 116 >
-        au < do_not_process ; The Expository Times Volume 117 ; 117 >
+        au < doNotProcess ; The Expository Times Volume 117 ; 117 >
         au < released ; The Expository Times Volume 118 ; 118 >
         au < released ; The Expository Times Volume 119 ; 119 >
         au < ready ; The Expository Times Volume 120 ; 120 >
@@ -3438,10 +3438,10 @@ comment[exm] = now published by Springer
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Feminism & Psychology Volume 15 ; 15 >
-        au < do_not_process ; Feminism & Psychology Volume 16 ; 16 >
+        au < doNotProcess ; Feminism & Psychology Volume 16 ; 16 >
         au < released ; Feminism & Psychology Volume 17 ; 17 >
         au < ready ; Feminism & Psychology Volume 18 ; 18 >
-        au < not_ready ; Feminism & Psychology Volume 19 ; 19 >
+        au < notReady ; Feminism & Psychology Volume 19 ; 19 >
 
       }
 
@@ -3557,7 +3557,7 @@ comment[exm] = now published by Springer
         implicit < status ; name ; param[volume_name] >
 
         au < released ; First Language Volume 25 ; 25 >
-        au < do_not_process ; First Language Volume 26 ; 26 >
+        au < doNotProcess ; First Language Volume 26 ; 26 >
         au < released ; First Language Volume 27 ; 27 >
         au < ready ; First Language Volume 28 ; 28 >
         au < ready ; First Language Volume 29 ; 29 >
@@ -3611,7 +3611,7 @@ comment[exm] = now published by Springer
         implicit < status ; name ; param[volume_name] >
 
         au < released ; French Cultural Studies Volume 16 ; 16 >
-        au < do_not_process ; French Cultural Studies Volume 17 ; 17 >
+        au < doNotProcess ; French Cultural Studies Volume 17 ; 17 >
         au < released ; French Cultural Studies Volume 18 ; 18 >
         au < testing ; French Cultural Studies Volume 19 ; 19 >
         au < ready ; French Cultural Studies Volume 20 ; 20 >
@@ -3642,7 +3642,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://gac.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Games and Culture Volume 1 ; 1 >
+        au < doNotProcess ; Games and Culture Volume 1 ; 1 >
         au < released ; Games and Culture Volume 2 ; 2 >
         au < testing ; Games and Culture Volume 3 ; 3 >
         au < ready ; Games and Culture Volume 4 ; 4 >
@@ -3828,7 +3828,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Group & Organization Management Volume 30 ; 30 >
-        au < do_not_process ; Group & Organization Management Volume 31 ; 31 >
+        au < doNotProcess ; Group & Organization Management Volume 31 ; 31 >
         au < released ; Group & Organization Management Volume 32 ; 32 >
         au < testing ; Group & Organization Management Volume 33 ; 33 >
         au < testing ; Group & Organization Management Volume 34 ; 34 >
@@ -3882,7 +3882,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Group Processes & Intergroup Relations Volume 8 ; 8 >
-        au < do_not_process ; Group Processes & Intergroup Relations Volume 9 ; 9 >
+        au < doNotProcess ; Group Processes & Intergroup Relations Volume 9 ; 9 >
         au < released ; Group Processes & Intergroup Relations Volume 10 ; 10 >
         au < manifest ; Group Processes & Intergroup Relations Volume 11 ; 11 >
         au < manifest ; Group Processes & Intergroup Relations Volume 12 ; 12 >
@@ -3914,7 +3914,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Harvard International Journal of Press/Politics Volume 10 ; 10 >
-        au < do_not_process ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
+        au < doNotProcess ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
         au < released ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
         au < manifest ; The Harvard International Journal of Press/Politics Volume 13 ; 13 >
         au < manifest ; The Harvard International Journal of Press/Politics Volume 14 ; 14 >
@@ -3946,7 +3946,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Education & Behavior Volume 32 ; 32 >
-        au < do_not_process ; Health Education & Behavior Volume 33 ; 33 >
+        au < doNotProcess ; Health Education & Behavior Volume 33 ; 33 >
         au < released ; Health Education & Behavior Volume 34 ; 34 >
         au < manifest ; Health Education & Behavior Volume 35 ; 35 >
         au < manifest ; Health Education & Behavior Volume 36 ; 36 >
@@ -3999,7 +3999,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Informatics Journal Volume 11 ; 11 >
-        au < do_not_process ; Health Informatics Journal Volume 12 ; 12 >
+        au < doNotProcess ; Health Informatics Journal Volume 12 ; 12 >
         au < released ; Health Informatics Journal Volume 13 ; 13 >
         au < manifest ; Health Informatics Journal Volume 14 ; 14 >
         au < manifest ; Health Informatics Journal Volume 15 ; 15 >
@@ -4031,7 +4031,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Promotion Practice Volume 6 ; 6 >
-        au < do_not_process ; Health Promotion Practice Volume 7 ; 7 >
+        au < doNotProcess ; Health Promotion Practice Volume 7 ; 7 >
         au < released ; Health Promotion Practice Volume 8 ; 8 >
         au < manifest ; Health Promotion Practice Volume 9 ; 9 >
         au < manifest ; Health Promotion Practice Volume 10 ; 10 >
@@ -4063,7 +4063,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health: Volume 9 ; 9 >
-        au < do_not_process ; Health: Volume 10 ; 10 >
+        au < doNotProcess ; Health: Volume 10 ; 10 >
         au < released ; Health: Volume 11 ; 11 >
         au < manifest ; Health: Volume 12 ; 12 >
         au < manifest ; Health: Volume 13 ; 13 >
@@ -4117,7 +4117,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Hispanic Journal of Behavioral Sciences Volume 27 ; 27 >
-        au < do_not_process ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
+        au < doNotProcess ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
         au < released ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
         au < manifest ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 >
         au < manifest ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 >
@@ -4149,7 +4149,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; History of Psychiatry Volume 16 ; 16 >
-        au < do_not_process ; History of Psychiatry Volume 17 ; 17 >
+        au < doNotProcess ; History of Psychiatry Volume 17 ; 17 >
         au < released ; History of Psychiatry Volume 18 ; 18 >
         au < manifest ; History of Psychiatry Volume 19 ; 19 >
         au < manifest ; History of Psychiatry Volume 20 ; 20 >
@@ -4181,7 +4181,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; History of the Human Sciences Volume 18 ; 18 >
-        au < do_not_process ; History of the Human Sciences Volume 19 ; 19 >
+        au < doNotProcess ; History of the Human Sciences Volume 19 ; 19 >
         au < released ; History of the Human Sciences Volume 20 ; 20 >
         au < manifest ; History of the Human Sciences Volume 21 ; 21 >
         au < manifest ; History of the Human Sciences Volume 22 ; 22 >
@@ -4256,7 +4256,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Homicide Studies Volume 9 ; 9 >
-        au < do_not_process ; Homicide Studies Volume 10 ; 10 >
+        au < doNotProcess ; Homicide Studies Volume 10 ; 10 >
         au < released ; Homicide Studies Volume 11 ; 11 >
         au < manifest ; Homicide Studies Volume 12 ; 12 >
         au < manifest ; Homicide Studies Volume 13 ; 13 >
@@ -4313,7 +4313,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Human Relations Volume 58 ; 58 >
-        au < do_not_process ; Human Relations Volume 59 ; 59 >
+        au < doNotProcess ; Human Relations Volume 59 ; 59 >
         au < released ; Human Relations Volume 60 ; 60 >
         au < manifest ; Human Relations Volume 61 ; 61 >
         au < manifest ; Human Relations Volume 62 ; 62 >
@@ -4345,7 +4345,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Human Resource Development Review Volume 4 ; 4 >
-        au < do_not_process ; Human Resource Development Review Volume 5 ; 5 >
+        au < doNotProcess ; Human Resource Development Review Volume 5 ; 5 >
         au < released ; Human Resource Development Review Volume 6 ; 6 >
         au < manifest ; Human Resource Development Review Volume 7 ; 7 >
         au < manifest ; Human Resource Development Review Volume 8 ; 8 >
@@ -4377,7 +4377,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; IFLA Journal Volume 31 ; 31 >
-        au < do_not_process ; IFLA Journal Volume 32 ; 32 >
+        au < doNotProcess ; IFLA Journal Volume 32 ; 32 >
         au < released ; IFLA Journal Volume 33 ; 33 >
         au < manifest ; IFLA Journal Volume 34 ; 34 >
         au < manifest ; IFLA Journal Volume 35 ; 35 >
@@ -4409,7 +4409,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Improving Schools Volume 8 ; 8 >
-        au < do_not_process ; Improving Schools Volume 9 ; 9 >
+        au < doNotProcess ; Improving Schools Volume 9 ; 9 >
         au < released ; Improving Schools Volume 10 ; 10 >
         au < manifest ; Improving Schools Volume 11 ; 11 >
         au < manifest ; Improving Schools Volume 12 ; 12 >
@@ -4440,7 +4440,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://ier.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Indian Economic & Social History Review Volume 42 ; 42 >
+        au < doNotProcess ; Indian Economic & Social History Review Volume 42 ; 42 >
         au < released ; Indian Economic & Social History Review Volume 43 ; 43 >
         au < released ; Indian Economic & Social History Review Volume 44 ; 44 >
         au < manifest ; Indian Economic & Social History Review Volume 45 ; 45 >
@@ -4472,7 +4472,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://ijg.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Indian Journal of Gender Studies Volume 12 ; 12 >
+        au < doNotProcess ; Indian Journal of Gender Studies Volume 12 ; 12 >
         au < released ; Indian Journal of Gender Studies Volume 13 ; 13 >
         au < released ; Indian Journal of Gender Studies Volume 14 ; 14 >
         au < ready ; Indian Journal of Gender Studies Volume 15 ; 15 >
@@ -4505,7 +4505,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Indoor and Built Environment Volume 14 ; 14 >
-        au < do_not_process ; Indoor and Built Environment Volume 15 ; 15 >
+        au < doNotProcess ; Indoor and Built Environment Volume 15 ; 15 >
         au < ready ; Indoor and Built Environment Volume 16 ; 16 >
         au < ready ; Indoor and Built Environment Volume 17 ; 17 >
         au < ready ; Indoor and Built Environment Volume 18 ; 18 >
@@ -4537,7 +4537,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Information Development Volume 21 ; 21 >
-        au < do_not_process ; Information Development Volume 22 ; 22 >
+        au < doNotProcess ; Information Development Volume 22 ; 22 >
         au < ready ; Information Development Volume 23 ; 23 >
         au < ready ; Information Development Volume 24 ; 24 >
         au < ready ; Information Development Volume 25 ; 25 >
@@ -4569,7 +4569,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Integrative Cancer Therapies Volume 4 ; 4 >
-        au < do_not_process ; Integrative Cancer Therapies Volume 5 ; 5 >
+        au < doNotProcess ; Integrative Cancer Therapies Volume 5 ; 5 >
         au < ready ; Integrative Cancer Therapies Volume 6 ; 6 >
         au < ready ; Integrative Cancer Therapies Volume 7 ; 7 >
         au < ready ; Integrative Cancer Therapies Volume 8 ; 8 >
@@ -4601,7 +4601,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Communication Gazette Volume 67 ; 67 >
-        au < do_not_process ; International Communication Gazette Volume 68 ; 68 >
+        au < doNotProcess ; International Communication Gazette Volume 68 ; 68 >
         au < ready ; International Communication Gazette Volume 69 ; 69 >
         au < ready ; International Communication Gazette Volume 70 ; 70 >
         au < ready ; International Communication Gazette Volume 71 ; 71 >
@@ -4632,7 +4632,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://icj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; International Criminal Justice Review Volume 15 ; 15 >
+        au < doNotProcess ; International Criminal Justice Review Volume 15 ; 15 >
         au < ready ; International Criminal Justice Review Volume 16 ; 16 >
         au < ready ; International Criminal Justice Review Volume 17 ; 17 >
         au < ready ; International Criminal Justice Review Volume 18 ; 18 >
@@ -4668,7 +4668,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Journal of Behavioral Development Volume 12 ; 12 >
         au < ready ; International Journal of Behavioral Development Volume 27 ; 27 >
         au < ready ; International Journal of Behavioral Development Volume 29 ; 29 >
-        au < do_not_process ; International Journal of Behavioral Development Volume 30 ; 30 >
+        au < doNotProcess ; International Journal of Behavioral Development Volume 30 ; 30 >
         au < ready ; International Journal of Behavioral Development Volume 31 ; 31 >
         au < ready ; International Journal of Behavioral Development Volume 32 ; 32 >
         au < ready ; International Journal of Behavioral Development Volume 33 ; 33 >
@@ -4700,7 +4700,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of Comparative Sociology Volume 46 ; 46 >
-        au < do_not_process ; International Journal of Comparative Sociology Volume 47 ; 47 >
+        au < doNotProcess ; International Journal of Comparative Sociology Volume 47 ; 47 >
         au < ready ; International Journal of Comparative Sociology Volume 48 ; 48 >
         au < ready ; International Journal of Comparative Sociology Volume 49 ; 49 >
         au < ready ; International Journal of Comparative Sociology Volume 50 ; 50 >
@@ -4732,7 +4732,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of Cross Cultural Management Volume 5 ; 5 >
-        au < do_not_process ; International Journal of Cross Cultural Management Volume 6 ; 6 >
+        au < doNotProcess ; International Journal of Cross Cultural Management Volume 6 ; 6 >
         au < ready ; International Journal of Cross Cultural Management Volume 7 ; 7 >
         au < ready ; International Journal of Cross Cultural Management Volume 8 ; 8 >
         au < ready ; International Journal of Cross Cultural Management Volume 9 ; 9 >
@@ -4764,7 +4764,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of Cultural Studies Volume 8 ; 8 >
-        au < do_not_process ; International Journal of Cultural Studies Volume 9 ; 9 >
+        au < doNotProcess ; International Journal of Cultural Studies Volume 9 ; 9 >
         au < ready ; International Journal of Cultural Studies Volume 10 ; 10 >
         au < ready ; International Journal of Cultural Studies Volume 11 ; 11 >
         au < ready ; International Journal of Cultural Studies Volume 12 ; 12 >
@@ -4796,7 +4796,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of Damage Mechanics Volume 14 ; 14 >
-        au < do_not_process ; International Journal of Damage Mechanics Volume 15 ; 15 >
+        au < doNotProcess ; International Journal of Damage Mechanics Volume 15 ; 15 >
         au < ready ; International Journal of Damage Mechanics Volume 16 ; 16 >
         au < ready ; International Journal of Damage Mechanics Volume 17 ; 17 >
         au < ready ; International Journal of Damage Mechanics Volume 18 ; 18 >
@@ -4828,7 +4828,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Journal of High Performance Computing Applications Volume 19 ; 19 >
-        au < do_not_process ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
+        au < doNotProcess ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
         au < ready ; International Journal of High Performance Computing Applications Volume 21 ; 21 >
         au < ready ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
         au < ready ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
@@ -4904,7 +4904,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 >
-        au < do_not_process ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
+        au < doNotProcess ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
         au < released ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 >
         au < ready ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
         au < ready ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
@@ -4936,7 +4936,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The International Journal of Robotics Research Volume 24 ; 24 >
-        au < do_not_process ; The International Journal of Robotics Research Volume 25 ; 25 >
+        au < doNotProcess ; The International Journal of Robotics Research Volume 25 ; 25 >
         au < released ; The International Journal of Robotics Research Volume 26 ; 26 >
         au < ready ; The International Journal of Robotics Research Volume 27 ; 27 >
         au < ready ; The International Journal of Robotics Research Volume 28 ; 28 >
@@ -5074,7 +5074,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; International Regional Science Review Volume 28 ; 28 >
-        au < do_not_process ; International Regional Science Review Volume 29 ; 29 >
+        au < doNotProcess ; International Regional Science Review Volume 29 ; 29 >
         au < ready ; International Regional Science Review Volume 30 ; 30 >
         au < manifest ; International Regional Science Review Volume 31 ; 31 >
         au < manifest ; International Regional Science Review Volume 32 ; 32 >
@@ -5149,7 +5149,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://ras.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; International Review of Administrative Sciences Volume 71 ; 71 >
+        au < doNotProcess ; International Review of Administrative Sciences Volume 71 ; 71 >
         au < ready ; International Review of Administrative Sciences Volume 72 ; 72 >
         au < ready ; International Review of Administrative Sciences Volume 73 ; 73 >
         au < manifest ; International Review of Administrative Sciences Volume 74 ; 74 >
@@ -5281,7 +5281,7 @@ comment[jhj] = now published by Brill
         param[base_url] = http://jhj.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < not_ready ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
+        au < notReady ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
         au < down ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
         au < down ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
         au < down ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
@@ -5313,7 +5313,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal for the Study of the New Testament Volume 27 ; 27 >
-        au < do_not_process ; Journal for the Study of the New Testament Volume 28 ; 28 >
+        au < doNotProcess ; Journal for the Study of the New Testament Volume 28 ; 28 >
         au < ready ; Journal for the Study of the New Testament Volume 29 ; 29 >
         au < ready ; Journal for the Study of the New Testament Volume 30 ; 30 >
         au < manifest ; Journal for the Study of the New Testament Volume 31 ; 31 >
@@ -5345,7 +5345,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal for the Study of the Old Testament Volume 29 ; 29 >
-        au < do_not_process ; Journal for the Study of the Old Testament Volume 30 ; 30 >
+        au < doNotProcess ; Journal for the Study of the Old Testament Volume 30 ; 30 >
         au < ready ; Journal for the Study of the Old Testament Volume 31 ; 31 >
         au < ready ; Journal for the Study of the Old Testament Volume 32 ; 32 >
         au < manifest ; Journal for the Study of the Old Testament Volume 33 ; 33 >
@@ -5399,7 +5399,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Adolescent Research Volume 20 ; 20 >
-        au < do_not_process ; Journal of Adolescent Research Volume 21 ; 21 >
+        au < doNotProcess ; Journal of Adolescent Research Volume 21 ; 21 >
         au < ready ; Journal of Adolescent Research Volume 22 ; 22 >
         au < manifest ; Journal of Adolescent Research Volume 23 ; 23 >
         au < manifest ; Journal of Adolescent Research Volume 24 ; 24 >
@@ -5431,7 +5431,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Aging and Health Volume 17 ; 17 >
-        au < do_not_process ; Journal of Aging and Health Volume 18 ; 18 >
+        au < doNotProcess ; Journal of Aging and Health Volume 18 ; 18 >
         au < ready ; Journal of Aging and Health Volume 19 ; 19 >
         au < manifest ; Journal of Aging and Health Volume 20 ; 20 >
         au < manifest ; Journal of Aging and Health Volume 21 ; 21 >
@@ -5462,7 +5462,7 @@ comment[jhj] = now published by Brill
         param[base_url] = http://ast.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Anglican Studies Volume 3 ; 3 >
+        au < doNotProcess ; Journal of Anglican Studies Volume 3 ; 3 >
         au < ready ; Journal of Anglican Studies Volume 4 ; 4 >
         au < ready ; Journal of Anglican Studies Volume 5 ; 5 >
         au < manifest ; Journal of Anglican Studies Volume 6 ; 6 >
@@ -5494,7 +5494,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Journal of Applied Behavioral Science Volume 41 ; 41 >
-        au < do_not_process ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
+        au < doNotProcess ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
         au < released ; The Journal of Applied Behavioral Science Volume 43 ; 43 >
         au < manifest ; The Journal of Applied Behavioral Science Volume 44 ; 44 >
         au < manifest ; The Journal of Applied Behavioral Science Volume 45 ; 45 >
@@ -5526,7 +5526,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Applied Gerontology Volume 24 ; 24 >
-        au < do_not_process ; Journal of Applied Gerontology Volume 25 ; 25 >
+        au < doNotProcess ; Journal of Applied Gerontology Volume 25 ; 25 >
         au < released ; Journal of Applied Gerontology Volume 26 ; 26 >
         au < manifest ; Journal of Applied Gerontology Volume 27 ; 27 >
         au < manifest ; Journal of Applied Gerontology Volume 28 ; 28 >
@@ -5558,7 +5558,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Asian and African Studies Volume 40 ; 40 >
-        au < do_not_process ; Journal of Asian and African Studies Volume 41 ; 41 >
+        au < doNotProcess ; Journal of Asian and African Studies Volume 41 ; 41 >
         au < released ; Journal of Asian and African Studies Volume 42 ; 42 >
         au < manifest ; Journal of Asian and African Studies Volume 43 ; 43 >
         au < manifest ; Journal of Asian and African Studies Volume 44 ; 44 >
@@ -5635,7 +5635,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Biological Rhythms Volume 20 ; 20 >
-        au < do_not_process ; Journal of Biological Rhythms Volume 21 ; 21 >
+        au < doNotProcess ; Journal of Biological Rhythms Volume 21 ; 21 >
         au < ready ; Journal of Biological Rhythms Volume 22 ; 22 >
         au < manifest ; Journal of Biological Rhythms Volume 23 ; 23 >
         au < manifest ; Journal of Biological Rhythms Volume 24 ; 24 >
@@ -5689,7 +5689,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Biomolecular Screening Volume 10 ; 10 >
-        au < do_not_process ; Journal of Biomolecular Screening Volume 11 ; 11 >
+        au < doNotProcess ; Journal of Biomolecular Screening Volume 11 ; 11 >
         au < ready ; Journal of Biomolecular Screening Volume 12 ; 12 >
         au < manifest ; Journal of Biomolecular Screening Volume 13 ; 13 >
         au < manifest ; Journal of Biomolecular Screening Volume 14 ; 14 >
@@ -5721,7 +5721,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Black Psychology Volume 31 ; 31 >
-        au < do_not_process ; Journal of Black Psychology Volume 32 ; 32 >
+        au < doNotProcess ; Journal of Black Psychology Volume 32 ; 32 >
         au < ready ; Journal of Black Psychology Volume 33 ; 33 >
         au < manifest ; Journal of Black Psychology Volume 34 ; 34 >
         au < manifest ; Journal of Black Psychology Volume 35 ; 35 >
@@ -5753,7 +5753,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Black Studies Volume 35 ; 35 >
-        au < do_not_process ; Journal of Black Studies Volume 36 ; 36 >
+        au < doNotProcess ; Journal of Black Studies Volume 36 ; 36 >
         au < ready ; Journal of Black Studies Volume 37 ; 37 >
         au < ready ; Journal of Black Studies Volume 38 ; 38 >
         au < manifest ; Journal of Black Studies Volume 39 ; 39 >
@@ -5807,7 +5807,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Business and Technical Communication Volume 19 ; 19 >
-        au < do_not_process ; Journal of Business and Technical Communication Volume 20 ; 20 >
+        au < doNotProcess ; Journal of Business and Technical Communication Volume 20 ; 20 >
         au < ready ; Journal of Business and Technical Communication Volume 21 ; 21 >
         au < manifest ; Journal of Business and Technical Communication Volume 22 ; 22 >
         au < manifest ; Journal of Business and Technical Communication Volume 23 ; 23 >
@@ -5839,7 +5839,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Business Communication Volume 42 ; 42 >
-        au < do_not_process ; Journal of Business Communication Volume 43 ; 43 >
+        au < doNotProcess ; Journal of Business Communication Volume 43 ; 43 >
         au < ready ; Journal of Business Communication Volume 44 ; 44 >
         au < manifest ; Journal of Business Communication Volume 45 ; 45 >
         au < manifest ; Journal of Business Communication Volume 46 ; 46 >
@@ -5893,7 +5893,7 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Career Assessment Volume 13 ; 13 >
-        au < do_not_process ; Journal of Career Assessment Volume 14 ; 14 >
+        au < doNotProcess ; Journal of Career Assessment Volume 14 ; 14 >
         au < ready ; Journal of Career Assessment Volume 15 ; 15 >
         au < manifest ; Journal of Career Assessment Volume 16 ; 16 >
         au < manifest ; Journal of Career Assessment Volume 17 ; 17 >
@@ -5924,7 +5924,7 @@ comment[jhj] = now published by Brill
         param[base_url] = http://jcd.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Career Development Volume 32 ; 32 >
+        au < doNotProcess ; Journal of Career Development Volume 32 ; 32 >
         au < ready ; Journal of Career Development Volume 33 ; 33 >
         au < ready ; Journal of Career Development Volume 34 ; 34 >
         au < manifest ; Journal of Career Development Volume 35 ; 35 >
@@ -6000,7 +6000,7 @@ comment[jhj] = now published by Brill
 
         au < ready ; Journal of Child Health Care Volume 1 ; 1 >
         au < ready ; Journal of Child Health Care Volume 9 ; 9 >
-        au < do_not_process ; Journal of Child Health Care Volume 10 ; 10 >
+        au < doNotProcess ; Journal of Child Health Care Volume 10 ; 10 >
         au < ready ; Journal of Child Health Care Volume 11 ; 11 >
         au < manifest ; Journal of Child Health Care Volume 12 ; 12 >
         au < manifest ; Journal of Child Health Care Volume 13 ; 13 >
@@ -6099,7 +6099,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; The Journal of Commonwealth Literature Volume 40 ; 40 >
-        au < do_not_process ; The Journal of Commonwealth Literature Volume 41 ; 41 >
+        au < doNotProcess ; The Journal of Commonwealth Literature Volume 41 ; 41 >
         au < ready ; The Journal of Commonwealth Literature Volume 42 ; 42 >
         au < manifest ; The Journal of Commonwealth Literature Volume 43 ; 43 >
         au < manifest ; The Journal of Commonwealth Literature Volume 44 ; 44 >
@@ -6131,7 +6131,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Communication Inquiry Volume 29 ; 29 >
-        au < do_not_process ; Journal of Communication Inquiry Volume 30 ; 30 >
+        au < doNotProcess ; Journal of Communication Inquiry Volume 30 ; 30 >
         au < ready ; Journal of Communication Inquiry Volume 31 ; 31 >
         au < ready ; Journal of Communication Inquiry Volume 32 ; 32 >
         au < manifest ; Journal of Communication Inquiry Volume 33 ; 33 >
@@ -6163,7 +6163,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Composite Materials Volume 39 ; 39 >
-        au < do_not_process ; Journal of Composite Materials Volume 40 ; 40 >
+        au < doNotProcess ; Journal of Composite Materials Volume 40 ; 40 >
         au < ready ; Journal of Composite Materials Volume 41 ; 41 >
         au < manifest ; Journal of Composite Materials Volume 42 ; 42 >
         au < manifest ; Journal of Composite Materials Volume 43 ; 43 >
@@ -6195,7 +6195,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Conflict Resolution Volume 49 ; 49 >
-        au < do_not_process ; Journal of Conflict Resolution Volume 50 ; 50 >
+        au < doNotProcess ; Journal of Conflict Resolution Volume 50 ; 50 >
         au < ready ; Journal of Conflict Resolution Volume 51 ; 51 >
         au < manifest ; Journal of Conflict Resolution Volume 52 ; 52 >
         au < manifest ; Journal of Conflict Resolution Volume 53 ; 53 >
@@ -6249,7 +6249,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Contemporary Criminal Justice Volume 21 ; 21 >
-        au < do_not_process ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
+        au < doNotProcess ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
         au < ready ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
         au < manifest ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
         au < manifest ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
@@ -6303,7 +6303,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Contemporary History Volume 40 ; 40 >
-        au < do_not_process ; Journal of Contemporary History Volume 41 ; 41 >
+        au < doNotProcess ; Journal of Contemporary History Volume 41 ; 41 >
         au < ready ; Journal of Contemporary History Volume 42 ; 42 >
         au < manifest ; Journal of Contemporary History Volume 43 ; 43 >
         au < manifest ; Journal of Contemporary History Volume 44 ; 44 >
@@ -6376,7 +6376,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Cross-Cultural Psychology Volume 36 ; 36 >
-        au < do_not_process ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
+        au < doNotProcess ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
         au < ready ; Journal of Cross-Cultural Psychology Volume 38 ; 38 >
         au < manifest ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
         au < manifest ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
@@ -6451,7 +6451,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; The Journal of Early Adolescence Volume 25 ; 25 >
-        au < do_not_process ; The Journal of Early Adolescence Volume 26 ; 26 >
+        au < doNotProcess ; The Journal of Early Adolescence Volume 26 ; 26 >
         au < ready ; The Journal of Early Adolescence Volume 27 ; 27 >
         au < manifest ; The Journal of Early Adolescence Volume 28 ; 28 >
         au < manifest ; The Journal of Early Adolescence Volume 29 ; 29 >
@@ -6629,7 +6629,7 @@ comment[jcp] = some sort of custom layout
         param[base_url] = http://eng.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of English Linguistics Volume 33 ; 33 >
+        au < doNotProcess ; Journal of English Linguistics Volume 33 ; 33 >
         au < ready ; Journal of English Linguistics Volume 34 ; 34 >
         au < ready ; Journal of English Linguistics Volume 35 ; 35 >
         au < manifest ; Journal of English Linguistics Volume 36 ; 36 >
@@ -6661,7 +6661,7 @@ comment[jcp] = some sort of custom layout
         param[base_url] = http://joe.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Entrepreneurship Volume 14 ; 14 >
+        au < doNotProcess ; Journal of Entrepreneurship Volume 14 ; 14 >
         au < ready ; Journal of Entrepreneurship Volume 15 ; 15 >
         au < ready ; Journal of Entrepreneurship Volume 16 ; 16 >
         au < manifest ; Journal of Entrepreneurship Volume 17 ; 17 >
@@ -6694,7 +6694,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; The Journal of Environment & Development Volume 14 ; 14 >
-        au < do_not_process ; The Journal of Environment & Development Volume 15 ; 15 >
+        au < doNotProcess ; The Journal of Environment & Development Volume 15 ; 15 >
         au < ready ; The Journal of Environment & Development Volume 16 ; 16 >
         au < manifest ; The Journal of Environment & Development Volume 17 ; 17 >
         au < manifest ; The Journal of Environment & Development Volume 18 ; 18 >
@@ -6726,7 +6726,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of European Social Policy Volume 15 ; 15 >
-        au < do_not_process ; Journal of European Social Policy Volume 16 ; 16 >
+        au < doNotProcess ; Journal of European Social Policy Volume 16 ; 16 >
         au < ready ; Journal of European Social Policy Volume 17 ; 17 >
         au < manifest ; Journal of European Social Policy Volume 18 ; 18 >
         au < manifest ; Journal of European Social Policy Volume 19 ; 19 >
@@ -6758,7 +6758,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of European Studies Volume 35 ; 35 >
-        au < do_not_process ; Journal of European Studies Volume 36 ; 36 >
+        au < doNotProcess ; Journal of European Studies Volume 36 ; 36 >
         au < ready ; Journal of European Studies Volume 37 ; 37 >
         au < manifest ; Journal of European Studies Volume 38 ; 38 >
         au < manifest ; Journal of European Studies Volume 39 ; 39 >
@@ -6790,7 +6790,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Family History Volume 30 ; 30 >
-        au < do_not_process ; Journal of Family History Volume 31 ; 31 >
+        au < doNotProcess ; Journal of Family History Volume 31 ; 31 >
         au < ready ; Journal of Family History Volume 32 ; 32 >
         au < ready ; Journal of Family History Volume 33 ; 33 >
         au < manifest ; Journal of Family History Volume 34 ; 34 >
@@ -6844,7 +6844,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Family Nursing Volume 11 ; 11 >
-        au < do_not_process ; Journal of Family Nursing Volume 12 ; 12 >
+        au < doNotProcess ; Journal of Family Nursing Volume 12 ; 12 >
         au < ready ; Journal of Family Nursing Volume 13 ; 13 >
         au < manifest ; Journal of Family Nursing Volume 14 ; 14 >
         au < manifest ; Journal of Family Nursing Volume 15 ; 15 >
@@ -6920,7 +6920,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 18 ; 18 >
-        au < do_not_process ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
+        au < doNotProcess ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 20 ; 20 >
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
         au < ready ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
@@ -6995,7 +6995,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Hispanic Higher Education Volume 4 ; 4 >
-        au < do_not_process ; Journal of Hispanic Higher Education Volume 5 ; 5 >
+        au < doNotProcess ; Journal of Hispanic Higher Education Volume 5 ; 5 >
         au < ready ; Journal of Hispanic Higher Education Volume 6 ; 6 >
         au < manifest ; Journal of Hispanic Higher Education Volume 7 ; 7 >
         au < manifest ; Journal of Hispanic Higher Education Volume 8 ; 8 >
@@ -7027,7 +7027,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Holistic Nursing Volume 23 ; 23 >
-        au < do_not_process ; Journal of Holistic Nursing Volume 24 ; 24 >
+        au < doNotProcess ; Journal of Holistic Nursing Volume 24 ; 24 >
         au < ready ; Journal of Holistic Nursing Volume 25 ; 25 >
         au < manifest ; Journal of Holistic Nursing Volume 26 ; 26 >
         au < manifest ; Journal of Holistic Nursing Volume 27 ; 27 >
@@ -7058,7 +7058,7 @@ comment[jcp] = some sort of custom layout
         param[base_url] = http://jht.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Hospitality & Tourism Research Volume 29 ; 29 >
+        au < doNotProcess ; Journal of Hospitality & Tourism Research Volume 29 ; 29 >
         au < ready ; Journal of Hospitality & Tourism Research Volume 30 ; 30 >
         au < ready ; Journal of Hospitality & Tourism Research Volume 31 ; 31 >
         au < manifest ; Journal of Hospitality & Tourism Research Volume 32 ; 32 >
@@ -7091,7 +7091,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Human Lactation Volume 21 ; 21 >
-        au < do_not_process ; Journal of Human Lactation Volume 22 ; 22 >
+        au < doNotProcess ; Journal of Human Lactation Volume 22 ; 22 >
         au < ready ; Journal of Human Lactation Volume 23 ; 23 >
         au < manifest ; Journal of Human Lactation Volume 24 ; 24 >
         au < manifest ; Journal of Human Lactation Volume 25 ; 25 >
@@ -7122,7 +7122,7 @@ comment[jcp] = some sort of custom layout
         param[base_url] = http://jhv.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Human Values Volume 11 ; 11 >
+        au < doNotProcess ; Journal of Human Values Volume 11 ; 11 >
         au < ready ; Journal of Human Values Volume 12 ; 12 >
         au < ready ; Journal of Human Values Volume 13 ; 13 >
         au < manifest ; Journal of Human Values Volume 14 ; 14 >
@@ -7154,7 +7154,7 @@ comment[jcp] = some sort of custom layout
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Humanistic Psychology Volume 45 ; 45 >
-        au < do_not_process ; Journal of Humanistic Psychology Volume 46 ; 46 >
+        au < doNotProcess ; Journal of Humanistic Psychology Volume 46 ; 46 >
         au < ready ; Journal of Humanistic Psychology Volume 47 ; 47 >
         au < manifest ; Journal of Humanistic Psychology Volume 48 ; 48 >
         au < manifest ; Journal of Humanistic Psychology Volume 49 ; 49 >
@@ -7754,7 +7754,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jpa.sagepub.com/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Psychoeducational Assessment Volume 23 ; 23 >
+        au < doNotProcess ; Journal of Psychoeducational Assessment Volume 23 ; 23 >
         au < released ; Journal of Psychoeducational Assessment Volume 24 ; 24 >
         au < released ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < released ; Journal of Psychoeducational Assessment Volume 25 ; 25 >

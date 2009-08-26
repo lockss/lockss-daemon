@@ -16,12 +16,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0015-4040
   
-      au < do_not_process ; Florida Entomologist Volume 85 ; 85 >
-      au < do_not_process ; Florida Entomologist Volume 86 ; 86 >
+      au < doNotProcess ; Florida Entomologist Volume 85 ; 85 >
+      au < doNotProcess ; Florida Entomologist Volume 86 ; 86 >
       au < superseded ; Florida Entomologist Volume 87 ; 87 >
-      au < do_not_process ; Florida Entomologist Volume 88 ; 88 >
-      au < do_not_process ; Florida Entomologist Volume 89 ; 89 >
-      au < do_not_process ; Florida Entomologist Volume 90 ; 90 >
+      au < doNotProcess ; Florida Entomologist Volume 88 ; 88 >
+      au < doNotProcess ; Florida Entomologist Volume 89 ; 89 >
+      au < doNotProcess ; Florida Entomologist Volume 90 ; 90 >
     }
 
     {

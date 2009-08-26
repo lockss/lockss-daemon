@@ -28,7 +28,7 @@
         param[base_url] = http://afraf.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; African Affairs Volume 105 ; 105 >
+        au < doNotProcess ; African Affairs Volume 105 ; 105 >
         au < released ; African Affairs Volume 106 ; 106 >
         au < manifest ; African Affairs Volume 107 ; 107 >
         au < manifest ; African Affairs Volume 108 ; 108 >
@@ -60,7 +60,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Age and Ageing Volume 34 ; 34 >
-        au < do_not_process ; Age and Ageing Volume 35 ; 35 >
+        au < doNotProcess ; Age and Ageing Volume 35 ; 35 >
         au < released ; Age and Ageing Volume 36 ; 36 >
         au < manifest ; Age and Ageing Volume 37 ; 37 >
         au < manifest ; Age and Ageing Volume 38 ; 38 >
@@ -115,7 +115,7 @@
 
         au < released ; American Journal of Epidemiology Volume 161 ; 161 >
         au < released ; American Journal of Epidemiology Volume 162 ; 162 >
-        au < do_not_process ; American Journal of Epidemiology Volume 163 ; 163 >
+        au < doNotProcess ; American Journal of Epidemiology Volume 163 ; 163 >
         au < released ; American Journal of Epidemiology Volume 164 ; 164 >
         au < released ; American Journal of Epidemiology Volume 165 ; 165 >
         au < manifest ; American Journal of Epidemiology Volume 166 ; 166 >
@@ -151,7 +151,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; American Law and Economics Review Volume 7 ; 7 >
-        au < do_not_process ; American Law and Economics Review Volume 8 ; 8 >
+        au < doNotProcess ; American Law and Economics Review Volume 8 ; 8 >
         au < manifest ; American Law and Economics Review Volume 9 ; 9 >
         au < manifest ; American Law and Economics Review Volume 10 ; 10 >
 
@@ -181,7 +181,7 @@
         param[base_url] = http://alh.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; American Literary History Volume 17 ; 17 >
+        au < doNotProcess ; American Literary History Volume 17 ; 17 >
         au < released ; American Literary History Volume 18 ; 18 >
         au < released ; American Literary History Volume 19 ; 19 >
         au < manifest ; American Literary History Volume 20 ; 20 >
@@ -216,7 +216,7 @@
 
         au < released ; Annals of Botany Volume 95 ; 95 >
         au < released ; Annals of Botany Volume 96 ; 96 >
-        au < do_not_process ; Annals of Botany Volume 97 ; 97 >
+        au < doNotProcess ; Annals of Botany Volume 97 ; 97 >
         au < released ; Annals of Botany Volume 98 ; 98 >
         au < released ; Annals of Botany Volume 99 ; 99 >
         au < manifest ; Annals of Botany Volume 100 ; 100 >
@@ -252,7 +252,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Annals of Occupational Hygiene Volume 49 ; 49 >
-        au < do_not_process ; Annals of Occupational Hygiene Volume 50 ; 50 >
+        au < doNotProcess ; Annals of Occupational Hygiene Volume 50 ; 50 >
         au < released ; Annals of Occupational Hygiene Volume 51 ; 51 >
         au < manifest ; Annals of Occupational Hygiene Volume 52 ; 52 >
         au < manifest ; Annals of Occupational Hygiene Volume 53 ; 53 >
@@ -306,7 +306,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Applied Linguistics Volume 26 ; 26 >
-        au < do_not_process ; Applied Linguistics Volume 27 ; 27 >
+        au < doNotProcess ; Applied Linguistics Volume 27 ; 27 >
         au < manifest ; Applied Linguistics Volume 28 ; 28 >
         au < manifest ; Applied Linguistics Volume 29 ; 29 >
         au < manifest ; Applied Linguistics Volume 30 ; 30 >
@@ -338,7 +338,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Behavioral Ecology Volume 16 ; 16 >
-        au < do_not_process ; Behavioral Ecology Volume 17 ; 17 >
+        au < doNotProcess ; Behavioral Ecology Volume 17 ; 17 >
         au < released ; Behavioral Ecology Volume 18 ; 18 >
         au < manifest ; Behavioral Ecology Volume 19 ; 19 >
         au < manifest ; Behavioral Ecology Volume 20 ; 20 >
@@ -369,7 +369,7 @@
         param[base_url] = http://bioinformatics.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Bioinformatics Volume 21 ; 21 >
+        au < doNotProcess ; Bioinformatics Volume 21 ; 21 >
         au < released ; Bioinformatics Volume 22 ; 22 >
         au < released ; Bioinformatics Volume 23 ; 23 >
         au < manifest ; Bioinformatics Volume 24 ; 24 >
@@ -402,7 +402,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Biometrika Volume 92 ; 92 >
-        au < do_not_process ; Biometrika Volume 93 ; 93 >
+        au < doNotProcess ; Biometrika Volume 93 ; 93 >
         au < manifest ; Biometrika Volume 94 ; 94 >
         au < manifest ; Biometrika Volume 95 ; 95 >
         au < manifest ; Biometrika Volume 96 ; 96 >
@@ -433,7 +433,7 @@
         param[base_url] = http://biostatistics.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Biostatistics Volume 6 ; 6 >
+        au < doNotProcess ; Biostatistics Volume 6 ; 6 >
         au < released ; Biostatistics Volume 7 ; 7 >
         au < released ; Biostatistics Volume 8 ; 8 >
         au < manifest ; Biostatistics Volume 9 ; 9 >
@@ -466,7 +466,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
-        au < do_not_process ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+        au < doNotProcess ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
         au < released ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
         au < manifest ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
         au < manifest ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
@@ -497,7 +497,7 @@
         param[base_url] = http://brain.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Brain Volume 128 ; 128 >
+        au < doNotProcess ; Brain Volume 128 ; 128 >
         au < released ; Brain Volume 129 ; 129 >
         au < released ; Brain Volume 130 ; 130 >
         au < manifest ; Brain Volume 131 ; 131 >
@@ -533,7 +533,7 @@
         au < releasing ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
         au < releasing ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
         au < releasing ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
-        au < do_not_process ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+        au < doNotProcess ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
         au < released ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
         au < released ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
         au < releasing ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
@@ -564,7 +564,7 @@
         param[base_url] = http://bib.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Briefings in Bioinformatics Volume 7 ; 7 >
+        au < doNotProcess ; Briefings in Bioinformatics Volume 7 ; 7 >
         au < released ; Briefings in Bioinformatics Volume 8 ; 8 >
         au < manifest ; Briefings in Bioinformatics Volume 9 ; 9 >
         au < manifest ; Briefings in Bioinformatics Volume 10 ; 10 >
@@ -595,7 +595,7 @@
         param[base_url] = http://bfgp.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
+        au < doNotProcess ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
         au < manifest ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
         au < manifest ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
         au < manifest ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
@@ -626,7 +626,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
-        au < do_not_process ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
+        au < doNotProcess ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
         au < manifest ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
         au < manifest ; The British Journal for the Philosophy of Science Volume 59 ; 59 >
         au < manifest ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
@@ -657,7 +657,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The British Journal of Aesthetics Volume 45 ; 45 >
-        au < do_not_process ; The British Journal of Aesthetics Volume 46 ; 46 >
+        au < doNotProcess ; The British Journal of Aesthetics Volume 46 ; 46 >
         au < released ; The British Journal of Aesthetics Volume 47 ; 47 >
         au < manifest ; The British Journal of Aesthetics Volume 48 ; 48 >
         au < manifest ; The British Journal of Aesthetics Volume 49 ; 49 >
@@ -690,7 +690,7 @@
 
         au < released ; British Journal of Anaesthesia Volume 94 ; 94 >
         au < released ; British Journal of Anaesthesia Volume 95 ; 95 >
-        au < do_not_process ; British Journal of Anaesthesia Volume 96 ; 96 >
+        au < doNotProcess ; British Journal of Anaesthesia Volume 96 ; 96 >
         au < released ; British Journal of Anaesthesia Volume 97 ; 97 >
         au < released ; British Journal of Anaesthesia Volume 98 ; 98 >
         au < manifest ; British Journal of Anaesthesia Volume 99 ; 99 >
@@ -726,7 +726,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 45 ; 45 >
-        au < do_not_process ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
+        au < doNotProcess ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
         au < released ; The British Journal of Criminology: An International Review of Crime and Society Volume 47 ; 47 >
         au < manifest ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 >
         au < manifest ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 >
@@ -758,7 +758,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; British Journal of Social Work Volume 35 ; 35 >
-        au < do_not_process ; British Journal of Social Work Volume 36 ; 36 >
+        au < doNotProcess ; British Journal of Social Work Volume 36 ; 36 >
         au < released ; British Journal of Social Work Volume 37 ; 37 >
         au < manifest ; British Journal of Social Work Volume 38 ; 38 >
         au < manifest ; British Journal of Social Work Volume 39 ; 39 >
@@ -837,7 +837,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Cambridge Journal of Economics Volume 29 ; 29 >
-        au < do_not_process ; Cambridge Journal of Economics Volume 30 ; 30 >
+        au < doNotProcess ; Cambridge Journal of Economics Volume 30 ; 30 >
         au < released ; Cambridge Journal of Economics Volume 31 ; 31 >
 
       }
@@ -867,7 +867,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < manifest ; The Cambridge Quarterly Volume 34 ; 34 >
-        au < do_not_process ; The Cambridge Quarterly Volume 35 ; 35 >
+        au < doNotProcess ; The Cambridge Quarterly Volume 35 ; 35 >
 
       }
 
@@ -913,7 +913,7 @@
         param[base_url] = http://carcin.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Carcinogenesis Volume 26 ; 26 >
+        au < doNotProcess ; Carcinogenesis Volume 26 ; 26 >
         au < released ; Carcinogenesis Volume 27 ; 27 >
         au < released ; Carcinogenesis Volume 28 ; 28 >
 
@@ -943,7 +943,7 @@
         param[base_url] = http://cercor.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Cerebral Cortex Volume 15 ; 15 >
+        au < doNotProcess ; Cerebral Cortex Volume 15 ; 15 >
         au < released ; Cerebral Cortex Volume 16 ; 16 >
         au < released ; Cerebral Cortex Volume 17 ; 17 >
 
@@ -974,7 +974,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; CESifo Economic Studies Volume 51 ; 51 >
-        au < do_not_process ; CESifo Economic Studies Volume 52 ; 52 >
+        au < doNotProcess ; CESifo Economic Studies Volume 52 ; 52 >
 
       }
 
@@ -1003,7 +1003,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Chemical Senses Volume 30 ; 30 >
-        au < do_not_process ; Chemical Senses Volume 31 ; 31 >
+        au < doNotProcess ; Chemical Senses Volume 31 ; 31 >
         au < released ; Chemical Senses Volume 32 ; 32 >
 
       }
@@ -1032,7 +1032,7 @@
         param[base_url] = http://chinesejil.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Chinese Journal of International Law Volume 4 ; 4 >
+        au < doNotProcess ; Chinese Journal of International Law Volume 4 ; 4 >
         au < released ; Chinese Journal of International Law Volume 5 ; 5 >
 
       }
@@ -1079,7 +1079,7 @@
         param[base_url] = http://ct.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Communication Theory Volume 15 ; 15 >
+        au < doNotProcess ; Communication Theory Volume 15 ; 15 >
 
       }
 
@@ -1108,7 +1108,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Community Development Journal Volume 40 ; 40 >
-        au < do_not_process ; Community Development Journal Volume 41 ; 41 >
+        au < doNotProcess ; Community Development Journal Volume 41 ; 41 >
         au < released ; Community Development Journal Volume 42 ; 42 >
 
       }
@@ -1137,7 +1137,7 @@
         param[base_url] = http://comjnl.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Computer Journal Volume 49 ; 49 >
+        au < doNotProcess ; Computer Journal Volume 49 ; 49 >
         au < released ; Computer Journal Volume 50 ; 50 >
 
       }
@@ -1166,7 +1166,7 @@
         param[base_url] = http://cep.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Contemporary Economic Policy Volume 24 ; 24 >
+        au < doNotProcess ; Contemporary Economic Policy Volume 24 ; 24 >
 
       }
 
@@ -1194,7 +1194,7 @@
         param[base_url] = http://cpe.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Contributions to Political Economy Volume 24 ; 24 >
+        au < doNotProcess ; Contributions to Political Economy Volume 24 ; 24 >
         au < released ; Contributions to Political Economy Volume 25 ; 25 >
 
       }
@@ -1223,7 +1223,7 @@
         param[base_url] = http://dnaresearch.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; DNA Research Volume 13 ; 13 >
+        au < doNotProcess ; DNA Research Volume 13 ; 13 >
 
       }
 
@@ -1251,7 +1251,7 @@
         param[base_url] = http://em.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Early Music Volume 33 ; 33 >
+        au < doNotProcess ; Early Music Volume 33 ; 33 >
         au < released ; Early Music Volume 34 ; 34 >
 
       }
@@ -1280,7 +1280,7 @@
         param[base_url] = http://ei.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Economic Inquiry Volume 44 ; 44 >
+        au < doNotProcess ; Economic Inquiry Volume 44 ; 44 >
 
       }
 
@@ -1309,7 +1309,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; ELT Journal Volume 59 ; 59 >
-        au < do_not_process ; ELT Journal Volume 60 ; 60 >
+        au < doNotProcess ; ELT Journal Volume 60 ; 60 >
         au < released ; ELT Journal Volume 61 ; 61 >
 
       }
@@ -1357,7 +1357,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Enterprise & Society Volume 6 ; 6 >
-        au < do_not_process ; Enterprise & Society Volume 7 ; 7 >
+        au < doNotProcess ; Enterprise & Society Volume 7 ; 7 >
 
       }
 
@@ -1385,7 +1385,7 @@
         param[base_url] = http://epirev.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Epidemiologic Reviews Volume 27 ; 27 >
+        au < doNotProcess ; Epidemiologic Reviews Volume 27 ; 27 >
         au < released ; Epidemiologic Reviews Volume 28 ; 28 >
 
       }
@@ -1414,7 +1414,7 @@
         param[base_url] = http://eshremonographs.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; ESHRE Monographs 2005 ; 2005 >
+        au < doNotProcess ; ESHRE Monographs 2005 ; 2005 >
         au < released ; ESHRE Monographs 2006 ; 2006 >
         au < released ; ESHRE Monographs 2007 ; 2007 >
 
@@ -1444,7 +1444,7 @@
         param[base_url] = http://eic.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Essays in Criticism Volume 55 ; 55 >
+        au < doNotProcess ; Essays in Criticism Volume 55 ; 55 >
         au < released ; Essays in Criticism Volume 56 ; 56 >
         au < released ; Essays in Criticism Volume 57 ; 57 >
 
@@ -1474,7 +1474,7 @@
         param[base_url] = http://europace.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Europace Volume 8 ; 8 >
+        au < doNotProcess ; Europace Volume 8 ; 8 >
         au < released ; Europace Volume 9 ; 9 >
 
       }
@@ -1524,7 +1524,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Heart Journal Supplements Volume 7 ; 7 >
-        au < do_not_process ; European Heart Journal Supplements Volume 8 ; 8 >
+        au < doNotProcess ; European Heart Journal Supplements Volume 8 ; 8 >
         au < released ; European Heart Journal Supplements Volume 9 ; 9 >
 
       }
@@ -1554,7 +1554,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of International Law Volume 16 ; 16 >
-        au < do_not_process ; European Journal of International Law Volume 17 ; 17 >
+        au < doNotProcess ; European Journal of International Law Volume 17 ; 17 >
 
       }
 
@@ -1582,7 +1582,7 @@
         param[base_url] = http://ejo.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; European Journal of Orthodontics Volume 28 ; 28 >
+        au < doNotProcess ; European Journal of Orthodontics Volume 28 ; 28 >
         au < released ; European Journal of Orthodontics Volume 29 ; 29 >
 
       }
@@ -1612,7 +1612,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Journal of Public Health Volume 15 ; 15 >
-        au < do_not_process ; European Journal of Public Health Volume 16 ; 16 >
+        au < doNotProcess ; European Journal of Public Health Volume 16 ; 16 >
         au < released ; European Journal of Public Health Volume 17 ; 17 >
 
       }
@@ -1661,7 +1661,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; European Sociological Review Volume 21 ; 21 >
-        au < do_not_process ; European Sociological Review Volume 22 ; 22 >
+        au < doNotProcess ; European Sociological Review Volume 22 ; 22 >
         au < released ; European Sociological Review Volume 23 ; 23 >
 
       }
@@ -1691,7 +1691,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
-        au < do_not_process ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
+        au < doNotProcess ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
 
       }
 
@@ -1720,7 +1720,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Family Practice Volume 22 ; 22 >
-        au < do_not_process ; Family Practice Volume 23 ; 23 >
+        au < doNotProcess ; Family Practice Volume 23 ; 23 >
 
       }
 
@@ -1749,7 +1749,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Forestry Volume 78 ; 78 >
-        au < do_not_process ; Forestry Volume 79 ; 79 >
+        au < doNotProcess ; Forestry Volume 79 ; 79 >
         au < released ; Forestry Volume 80 ; 80 >
 
       }
@@ -1779,7 +1779,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Forum for Modern Language Studies Volume 41 ; 41 >
-        au < do_not_process ; Forum for Modern Language Studies Volume 42 ; 42 >
+        au < doNotProcess ; Forum for Modern Language Studies Volume 42 ; 42 >
 
       }
 
@@ -1808,7 +1808,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; French History Volume 19 ; 19 >
-        au < do_not_process ; French History Volume 20 ; 20 >
+        au < doNotProcess ; French History Volume 20 ; 20 >
 
       }
 
@@ -1837,7 +1837,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; French Studies Volume 59 ; 59 >
-        au < do_not_process ; French Studies Volume 60 ; 60 >
+        au < doNotProcess ; French Studies Volume 60 ; 60 >
         au < released ; French Studies Volume 61 ; 61 >
 
       }
@@ -1883,7 +1883,7 @@
         param[base_url] = http://glycob.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Glycobiology Volume 15 ; 15 >
+        au < doNotProcess ; Glycobiology Volume 15 ; 15 >
         au < released ; Glycobiology Volume 16 ; 16 >
         au < released ; Glycobiology Volume 17 ; 17 >
 
@@ -1914,7 +1914,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Education Research Volume 20 ; 20 >
-        au < do_not_process ; Health Education Research Volume 21 ; 21 >
+        au < doNotProcess ; Health Education Research Volume 21 ; 21 >
         au < released ; Health Education Research Volume 22 ; 22 >
 
       }
@@ -1944,7 +1944,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Policy and Planning Volume 20 ; 20 >
-        au < do_not_process ; Health Policy and Planning Volume 21 ; 21 >
+        au < doNotProcess ; Health Policy and Planning Volume 21 ; 21 >
         au < released ; Health Policy and Planning Volume 22 ; 22 >
 
       }
@@ -1974,7 +1974,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Health Promotion International Volume 20 ; 20 >
-        au < do_not_process ; Health Promotion International Volume 21 ; 21 >
+        au < doNotProcess ; Health Promotion International Volume 21 ; 21 >
 
       }
 
@@ -2004,7 +2004,7 @@
 
         au < released ; History Workshop Journal Volume 59 ; 59 >
         au < released ; History Workshop Journal Volume 60 ; 60 >
-        au < do_not_process ; History Workshop Journal Volume 61 ; 61 >
+        au < doNotProcess ; History Workshop Journal Volume 61 ; 61 >
         au < released ; History Workshop Journal Volume 62 ; 62 >
 
       }
@@ -2052,7 +2052,7 @@
         param[base_url] = http://hcr.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Human Communication Research Volume 31 ; 31 >
+        au < doNotProcess ; Human Communication Research Volume 31 ; 31 >
 
       }
 
@@ -2080,7 +2080,7 @@
         param[base_url] = http://hmg.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Human Molecular Genetics Volume 14 ; 14 >
+        au < doNotProcess ; Human Molecular Genetics Volume 14 ; 14 >
         au < released ; Human Molecular Genetics Volume 15 ; 15 >
         au < released ; Human Molecular Genetics Volume 16 ; 16 >
 
@@ -2111,7 +2111,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Human Reproduction Volume 20 ; 20 >
-        au < do_not_process ; Human Reproduction Volume 21 ; 21 >
+        au < doNotProcess ; Human Reproduction Volume 21 ; 21 >
         au < released ; Human Reproduction Volume 22 ; 22 >
 
       }
@@ -2141,7 +2141,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Human Reproduction Update Volume 11 ; 11 >
-        au < do_not_process ; Human Reproduction Update Volume 12 ; 12 >
+        au < doNotProcess ; Human Reproduction Update Volume 12 ; 12 >
         au < released ; Human Reproduction Update Volume 13 ; 13 >
 
       }
@@ -2170,7 +2170,7 @@
         param[base_url] = http://hrlr.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Human Rights Law Review Volume 5 ; 5 >
+        au < doNotProcess ; Human Rights Law Review Volume 5 ; 5 >
         au < released ; Human Rights Law Review Volume 6 ; 6 >
 
       }
@@ -2286,7 +2286,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Applied Mathematics Volume 70 ; 70 >
-        au < do_not_process ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
+        au < doNotProcess ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
         au < released ; IMA Journal of Applied Mathematics Volume 72 ; 72 >
 
       }
@@ -2316,7 +2316,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Management Mathematics Volume 16 ; 16 >
-        au < do_not_process ; IMA Journal of Management Mathematics Volume 17 ; 17 >
+        au < doNotProcess ; IMA Journal of Management Mathematics Volume 17 ; 17 >
         au < released ; IMA Journal of Management Mathematics Volume 18 ; 18 >
 
       }
@@ -2346,7 +2346,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 >
-        au < do_not_process ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
+        au < doNotProcess ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
 
       }
 
@@ -2375,7 +2375,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; IMA Journal of Numerical Analysis Volume 25 ; 25 >
-        au < do_not_process ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
+        au < doNotProcess ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
         au < released ; IMA Journal of Numerical Analysis Volume 27 ; 27 >
 
       }
@@ -2405,7 +2405,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Industrial and Corporate Change Volume 14 ; 14 >
-        au < do_not_process ; Industrial and Corporate Change Volume 15 ; 15 >
+        au < doNotProcess ; Industrial and Corporate Change Volume 15 ; 15 >
 
       }
 
@@ -2434,7 +2434,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Industrial Law Journal Volume 34 ; 34 >
-        au < do_not_process ; Industrial Law Journal Volume 35 ; 35 >
+        au < doNotProcess ; Industrial Law Journal Volume 35 ; 35 >
 
       }
 
@@ -2463,7 +2463,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Integrative and Comparative Biology Volume 45 ; 45 >
-        au < do_not_process ; Integrative and Comparative Biology Volume 46 ; 46 >
+        au < doNotProcess ; Integrative and Comparative Biology Volume 46 ; 46 >
 
       }
 
@@ -2492,7 +2492,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International and Comparative Law Quarterly Volume 54 ; 54 >
-        au < do_not_process ; International and Comparative Law Quarterly Volume 55 ; 55 >
+        au < doNotProcess ; International and Comparative Law Quarterly Volume 55 ; 55 >
         au < released ; International and Comparative Law Quarterly Volume 56 ; 56 >
 
       }
@@ -2521,7 +2521,7 @@
         param[base_url] = http://intimm.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; International Immunology Volume 18 ; 18 >
+        au < doNotProcess ; International Immunology Volume 18 ; 18 >
         au < released ; International Immunology Volume 19 ; 19 >
 
       }
@@ -2551,7 +2551,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal for Quality in Health Care Volume 17 ; 17 >
-        au < do_not_process ; International Journal for Quality in Health Care Volume 18 ; 18 >
+        au < doNotProcess ; International Journal for Quality in Health Care Volume 18 ; 18 >
         au < released ; International Journal for Quality in Health Care Volume 19 ; 19 >
 
       }
@@ -2581,7 +2581,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Constitutional Law Volume 3 ; 3 >
-        au < do_not_process ; International Journal of Constitutional Law Volume 4 ; 4 >
+        au < doNotProcess ; International Journal of Constitutional Law Volume 4 ; 4 >
         au < released ; International Journal of Constitutional Law Volume 5 ; 5 >
 
       }
@@ -2611,7 +2611,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Epidemiology Volume 34 ; 34 >
-        au < do_not_process ; International Journal of Epidemiology Volume 35 ; 35 >
+        au < doNotProcess ; International Journal of Epidemiology Volume 35 ; 35 >
 
       }
 
@@ -2640,8 +2640,8 @@
         param[base_url] = http://ijlit.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; International Journal of Law and Information Technology Volume 13 ; 13 >
-        au < do_not_process ; International Journal of Law and Information Technology Volume 14 ; 14 >
+        au < doNotProcess ; International Journal of Law and Information Technology Volume 13 ; 13 >
+        au < doNotProcess ; International Journal of Law and Information Technology Volume 14 ; 14 >
         au < released ; International Journal of Law and Information Technology Volume 15 ; 15 >
 
       }
@@ -2671,7 +2671,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Law, Policy and the Family Volume 19 ; 19 >
-        au < do_not_process ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
+        au < doNotProcess ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
 
       }
 
@@ -2700,7 +2700,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Lexicography Volume 18 ; 18 >
-        au < do_not_process ; International Journal of Lexicography Volume 19 ; 19 >
+        au < doNotProcess ; International Journal of Lexicography Volume 19 ; 19 >
 
       }
 
@@ -2729,7 +2729,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Public Opinion Research Volume 17 ; 17 >
-        au < do_not_process ; International Journal of Public Opinion Research Volume 18 ; 18 >
+        au < doNotProcess ; International Journal of Public Opinion Research Volume 18 ; 18 >
 
       }
 
@@ -2758,7 +2758,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Journal of Refugee Law Volume 17 ; 17 >
-        au < do_not_process ; International Journal of Refugee Law Volume 18 ; 18 >
+        au < doNotProcess ; International Journal of Refugee Law Volume 18 ; 18 >
 
       }
 
@@ -2805,7 +2805,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; International Relations of the Asia-Pacific Volume 5 ; 5 >
-        au < do_not_process ; International Relations of the Asia-Pacific Volume 6 ; 6 >
+        au < doNotProcess ; International Relations of the Asia-Pacific Volume 6 ; 6 >
         au < released ; International Relations of the Asia-Pacific Volume 7 ; 7 >
 
       }
@@ -2835,7 +2835,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; ITNOW Volume 47 ; 47 >
-        au < do_not_process ; ITNOW Volume 48 ; 48 >
+        au < doNotProcess ; ITNOW Volume 48 ; 48 >
         au < released ; ITNOW Volume 49 ; 49 >
 
       }
@@ -2865,7 +2865,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Japanese Journal of Clinical Oncology Volume 35 ; 35 >
-        au < do_not_process ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
+        au < doNotProcess ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
         au < released ; Japanese Journal of Clinical Oncology Volume 37 ; 37 >
 
       }
@@ -2913,7 +2913,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of African Economies Volume 14 ; 14 >
-        au < do_not_process ; Journal of African Economies Volume 15 ; 15 >
+        au < doNotProcess ; Journal of African Economies Volume 15 ; 15 >
         au < released ; Journal of African Economies Volume 16 ; 16 >
 
       }
@@ -2944,7 +2944,7 @@
 
         au < released ; Journal of Antimicrobial Chemotherapy Volume 55 ; 55 >
         au < released ; Journal of Antimicrobial Chemotherapy Volume 56 ; 56 >
-        au < do_not_process ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 >
+        au < doNotProcess ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 >
         au < released ; Journal of Antimicrobial Chemotherapy Volume 58 ; 58 >
         au < released ; Journal of Antimicrobial Chemotherapy Volume 59 ; 59 >
 
@@ -2974,7 +2974,7 @@
         param[base_url] = http://jb.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The Journal of Biochemistry Volume 139 ; 139 >
+        au < doNotProcess ; The Journal of Biochemistry Volume 139 ; 139 >
         au < ready ; The Journal of Biochemistry Volume 140 ; 140 >
 
       }
@@ -3003,7 +3003,7 @@
         param[base_url] = http://joc.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Communication Volume 55 ; 55 >
+        au < doNotProcess ; Journal of Communication Volume 55 ; 55 >
 
       }
 
@@ -3032,7 +3032,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Competition Law and Economics Volume 1 ; 1 >
-        au < do_not_process ; Journal of Competition Law and Economics Volume 2 ; 2 >
+        au < doNotProcess ; Journal of Competition Law and Economics Volume 2 ; 2 >
 
       }
 
@@ -3061,7 +3061,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Conflict and Security Law Volume 10 ; 10 >
-        au < do_not_process ; Journal of Conflict and Security Law Volume 11 ; 11 >
+        au < doNotProcess ; Journal of Conflict and Security Law Volume 11 ; 11 >
 
       }
 
@@ -3110,7 +3110,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Design History Volume 18 ; 18 >
-        au < do_not_process ; Journal of Design History Volume 19 ; 19 >
+        au < doNotProcess ; Journal of Design History Volume 19 ; 19 >
 
       }
 
@@ -3139,7 +3139,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Economic Geography Volume 5 ; 5 >
-        au < do_not_process ; Journal of Economic Geography Volume 6 ; 6 >
+        au < doNotProcess ; Journal of Economic Geography Volume 6 ; 6 >
         au < released ; Journal of Economic Geography Volume 7 ; 7 >
 
       }
@@ -3169,7 +3169,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Electron Microscopy Volume 54 ; 54 >
-        au < do_not_process ; Journal of Electron Microscopy Volume 55 ; 55 >
+        au < doNotProcess ; Journal of Electron Microscopy Volume 55 ; 55 >
 
       }
 
@@ -3198,7 +3198,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Environmental Law Volume 17 ; 17 >
-        au < do_not_process ; Journal of Environmental Law Volume 18 ; 18 >
+        au < doNotProcess ; Journal of Environmental Law Volume 18 ; 18 >
 
       }
 
@@ -3227,7 +3227,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Experimental Botany Volume 56 ; 56 >
-        au < do_not_process ; Journal of Experimental Botany Volume 57 ; 57 >
+        au < doNotProcess ; Journal of Experimental Botany Volume 57 ; 57 >
         au < released ; Journal of Experimental Botany Volume 58 ; 58 >
 
       }
@@ -3257,7 +3257,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Financial Econometrics Volume 3 ; 3 >
-        au < do_not_process ; Journal of Financial Econometrics Volume 4 ; 4 >
+        au < doNotProcess ; Journal of Financial Econometrics Volume 4 ; 4 >
         au < released ; Journal of Financial Econometrics Volume 5 ; 5 >
 
       }
@@ -3287,7 +3287,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Heredity Volume 96 ; 96 >
-        au < do_not_process ; Journal of Heredity Volume 97 ; 97 >
+        au < doNotProcess ; Journal of Heredity Volume 97 ; 97 >
         au < released ; Journal of Heredity Volume 98 ; 98 >
 
       }
@@ -3336,7 +3336,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Journal of International Criminal Justice Volume 3 ; 3 >
-        au < do_not_process ; Journal of International Criminal Justice Volume 4 ; 4 >
+        au < doNotProcess ; Journal of International Criminal Justice Volume 4 ; 4 >
 
       }
 
@@ -3365,7 +3365,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of International Economic Law Volume 8 ; 8 >
-        au < do_not_process ; Journal of International Economic Law Volume 9 ; 9 >
+        au < doNotProcess ; Journal of International Economic Law Volume 9 ; 9 >
 
       }
 
@@ -3394,7 +3394,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Islamic Studies Volume 16 ; 16 >
-        au < do_not_process ; Journal of Islamic Studies Volume 17 ; 17 >
+        au < doNotProcess ; Journal of Islamic Studies Volume 17 ; 17 >
         au < released ; Journal of Islamic Studies Volume 18 ; 18 >
 
       }
@@ -3424,7 +3424,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Law, Economics, and Organization Volume 21 ; 21 >
-        au < do_not_process ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
+        au < doNotProcess ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
         au < released ; Journal of Law, Economics, and Organization Volume 23 ; 23 >
 
       }
@@ -3453,7 +3453,7 @@
         param[base_url] = http://logcom.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Logic and Computation Volume 15 ; 15 >
+        au < doNotProcess ; Journal of Logic and Computation Volume 15 ; 15 >
         au < released ; Journal of Logic and Computation Volume 16 ; 16 >
         au < released ; Journal of Logic and Computation Volume 17 ; 17 >
 
@@ -3484,7 +3484,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Molluscan Studies Volume 71 ; 71 >
-        au < do_not_process ; Journal of Molluscan Studies Volume 72 ; 72 >
+        au < doNotProcess ; Journal of Molluscan Studies Volume 72 ; 72 >
 
       }
 
@@ -3513,7 +3513,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Pediatric Psychology Volume 30 ; 30 >
-        au < do_not_process ; Journal of Pediatric Psychology Volume 31 ; 31 >
+        au < doNotProcess ; Journal of Pediatric Psychology Volume 31 ; 31 >
         au < released ; Journal of Pediatric Psychology Volume 32 ; 32 >
 
       }
@@ -3542,7 +3542,7 @@
         param[base_url] = http://petrology.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Petrology Volume 46 ; 46 >
+        au < doNotProcess ; Journal of Petrology Volume 46 ; 46 >
         au < released ; Journal of Petrology Volume 47 ; 47 >
         au < released ; Journal of Petrology Volume 48 ; 48 >
 
@@ -3572,7 +3572,7 @@
         param[base_url] = http://plankt.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Plankton Research Volume 27 ; 27 >
+        au < doNotProcess ; Journal of Plankton Research Volume 27 ; 27 >
         au < released ; Journal of Plankton Research Volume 28 ; 28 >
 
       }
@@ -3602,7 +3602,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Public Administration Research and Theory Volume 15 ; 15 >
-        au < do_not_process ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
+        au < doNotProcess ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
         au < released ; Journal of Public Administration Research and Theory Volume 17 ; 17 >
 
       }
@@ -3632,7 +3632,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Public Health Volume 27 ; 27 >
-        au < do_not_process ; Journal of Public Health Volume 28 ; 28 >
+        au < doNotProcess ; Journal of Public Health Volume 28 ; 28 >
 
       }
 
@@ -3660,7 +3660,7 @@
         param[base_url] = http://jrs.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Refugee Studies Volume 18 ; 18 >
+        au < doNotProcess ; Journal of Refugee Studies Volume 18 ; 18 >
         au < released ; Journal of Refugee Studies Volume 19 ; 19 >
 
       }
@@ -3689,7 +3689,7 @@
         param[base_url] = http://jos.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of Semantics Volume 22 ; 22 >
+        au < doNotProcess ; Journal of Semantics Volume 22 ; 22 >
         au < released ; Journal of Semantics Volume 23 ; 23 >
         au < released ; Journal of Semantics Volume 24 ; 24 >
 
@@ -3720,7 +3720,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of Semitic Studies Volume 50 ; 50 >
-        au < do_not_process ; Journal of Semitic Studies Volume 51 ; 51 >
+        au < doNotProcess ; Journal of Semitic Studies Volume 51 ; 51 >
 
       }
 
@@ -3768,7 +3768,7 @@
         param[base_url] = http://jhc.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of the History of Collections Volume 17 ; 17 >
+        au < doNotProcess ; Journal of the History of Collections Volume 17 ; 17 >
         au < released ; Journal of the History of Collections Volume 18 ; 18 >
 
       }
@@ -3797,7 +3797,7 @@
         param[base_url] = http://jhmas.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
+        au < doNotProcess ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
         au < released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
         au < released ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
 
@@ -3828,7 +3828,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of the ICRU Volume 5 ; 5 >
-        au < do_not_process ; Journal of the ICRU Volume 6 ; 6 >
+        au < doNotProcess ; Journal of the ICRU Volume 6 ; 6 >
 
       }
 
@@ -3874,7 +3874,7 @@
         param[base_url] = http://jrma.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Journal of the Royal Musical Association Volume 130 ; 130 >
+        au < doNotProcess ; Journal of the Royal Musical Association Volume 130 ; 130 >
         au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
 
       }
@@ -3904,7 +3904,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Journal of Theological Studies Volume 56 ; 56 >
-        au < do_not_process ; The Journal of Theological Studies Volume 57 ; 57 >
+        au < doNotProcess ; The Journal of Theological Studies Volume 57 ; 57 >
 
       }
 
@@ -3951,7 +3951,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Journal of Tropical Pediatrics Volume 51 ; 51 >
-        au < do_not_process ; Journal of Tropical Pediatrics Volume 52 ; 52 >
+        au < doNotProcess ; Journal of Tropical Pediatrics Volume 52 ; 52 >
         au < ready ; Journal of Tropical Pediatrics Volume 53 ; 53 >
 
       }
@@ -3980,7 +3980,7 @@
         param[base_url] = http://lpr.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Law, Probability and Risk Volume 4 ; 4 >
+        au < doNotProcess ; Law, Probability and Risk Volume 4 ; 4 >
 
       }
 
@@ -4009,7 +4009,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Library Volume 6 ; 6 >
-        au < do_not_process ; The Library Volume 7 ; 7 >
+        au < doNotProcess ; The Library Volume 7 ; 7 >
 
       }
 
@@ -4038,7 +4038,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Literary and Linguistic Computing Volume 20 ; 20 >
-        au < do_not_process ; Literary and Linguistic Computing Volume 21 ; 21 >
+        au < doNotProcess ; Literary and Linguistic Computing Volume 21 ; 21 >
 
       }
 
@@ -4085,7 +4085,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Literature and Theology Volume 19 ; 19 >
-        au < do_not_process ; Literature and Theology Volume 20 ; 20 >
+        au < doNotProcess ; Literature and Theology Volume 20 ; 20 >
 
       }
 
@@ -4114,7 +4114,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Logic Journal of the IGPL Volume 13 ; 13 >
-        au < do_not_process ; Logic Journal of the IGPL Volume 14 ; 14 >
+        au < doNotProcess ; Logic Journal of the IGPL Volume 14 ; 14 >
         au < released ; Logic Journal of the IGPL Volume 15 ; 15 >
 
       }
@@ -4144,7 +4144,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Mathematical Medicine and Biology Volume 22 ; 22 >
-        au < do_not_process ; Mathematical Medicine and Biology Volume 23 ; 23 >
+        au < doNotProcess ; Mathematical Medicine and Biology Volume 23 ; 23 >
 
       }
 
@@ -4173,7 +4173,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Medical Law Review Volume 13 ; 13 >
-        au < do_not_process ; Medical Law Review Volume 14 ; 14 >
+        au < doNotProcess ; Medical Law Review Volume 14 ; 14 >
 
       }
 
@@ -4202,7 +4202,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Mind Volume 114 ; 114 >
-        au < do_not_process ; Mind Volume 115 ; 115 >
+        au < doNotProcess ; Mind Volume 115 ; 115 >
         au < ready ; Mind Volume 116 ; 116 >
 
       }
@@ -4232,7 +4232,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Modern Judaism Volume 25 ; 25 >
-        au < do_not_process ; Modern Judaism Volume 26 ; 26 >
+        au < doNotProcess ; Modern Judaism Volume 26 ; 26 >
         au < ready ; Modern Judaism Volume 27 ; 27 >
 
       }
@@ -4262,7 +4262,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Molecular Biology and Evolution Volume 22 ; 22 >
-        au < do_not_process ; Molecular Biology and Evolution Volume 23 ; 23 >
+        au < doNotProcess ; Molecular Biology and Evolution Volume 23 ; 23 >
         au < released ; Molecular Biology and Evolution Volume 24 ; 24 >
 
       }
@@ -4311,7 +4311,7 @@
         param[base_url] = http://ml.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Music and Letters Volume 86 ; 86 >
+        au < doNotProcess ; Music and Letters Volume 86 ; 86 >
         au < released ; Music and Letters Volume 87 ; 87 >
         au < released ; Music and Letters Volume 88 ; 88 >
 
@@ -4341,7 +4341,7 @@
         param[base_url] = http://mq.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The Musical Quarterly Volume 87 ; 87 >
+        au < doNotProcess ; The Musical Quarterly Volume 87 ; 87 >
         au < released ; The Musical Quarterly Volume 88 ; 88 >
 
       }
@@ -4371,7 +4371,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Mutagenesis Volume 20 ; 20 >
-        au < do_not_process ; Mutagenesis Volume 21 ; 21 >
+        au < doNotProcess ; Mutagenesis Volume 21 ; 21 >
         au < released ; Mutagenesis Volume 22 ; 22 >
 
       }
@@ -4401,7 +4401,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Nephrology Dialysis Transplantation Volume 20 ; 20 >
-        au < do_not_process ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
+        au < doNotProcess ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
         au < released ; Nephrology Dialysis Transplantation Volume 22 ; 22 >
 
       }
@@ -4431,7 +4431,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Notes and Queries Volume 52 ; 52 >
-        au < do_not_process ; Notes and Queries Volume 53 ; 53 >
+        au < doNotProcess ; Notes and Queries Volume 53 ; 53 >
 
       }
 
@@ -4459,7 +4459,7 @@
         param[base_url] = http://nar.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Nucleic Acids Research Volume 33 ; 33 >
+        au < doNotProcess ; Nucleic Acids Research Volume 33 ; 33 >
         au < ready ; Nucleic Acids Research Volume 34 ; 34 >
         au < ready ; Nucleic Acids Research Volume 35 ; 35 >
 
@@ -4489,7 +4489,7 @@
         param[base_url] = http://nass.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Nucleic Acids Symposium Series Volume 49 ; 49 >
+        au < doNotProcess ; Nucleic Acids Symposium Series Volume 49 ; 49 >
         au < released ; Nucleic Acids Symposium Series Volume 50 ; 50 >
 
       }
@@ -4519,7 +4519,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Occupational Medicine Volume 55 ; 55 >
-        au < do_not_process ; Occupational Medicine Volume 56 ; 56 >
+        au < doNotProcess ; Occupational Medicine Volume 56 ; 56 >
         au < released ; Occupational Medicine Volume 57 ; 57 >
 
       }
@@ -4548,7 +4548,7 @@
         param[base_url] = http://oq.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The Opera Quarterly Volume 21 ; 21 >
+        au < doNotProcess ; The Opera Quarterly Volume 21 ; 21 >
         au < ready ; The Opera Quarterly Volume 22 ; 22 >
 
       }
@@ -4578,8 +4578,8 @@
         param[base_url] = http://oaj.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Oxford Art Journal Volume 28 ; 28 >
-        au < do_not_process ; Oxford Art Journal Volume 29 ; 29 >
+        au < doNotProcess ; Oxford Art Journal Volume 28 ; 28 >
+        au < doNotProcess ; Oxford Art Journal Volume 29 ; 29 >
 
       }
 
@@ -4608,7 +4608,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Oxford Economic Papers Volume 57 ; 57 >
-        au < do_not_process ; Oxford Economic Papers Volume 58 ; 58 >
+        au < doNotProcess ; Oxford Economic Papers Volume 58 ; 58 >
         au < released ; Oxford Economic Papers Volume 59 ; 59 >
 
       }
@@ -4638,7 +4638,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Oxford Journal of Legal Studies Volume 25 ; 25 >
-        au < do_not_process ; Oxford Journal of Legal Studies Volume 26 ; 26 >
+        au < doNotProcess ; Oxford Journal of Legal Studies Volume 26 ; 26 >
 
       }
 
@@ -4667,7 +4667,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Oxford Review of Economic Policy Volume 21 ; 21 >
-        au < do_not_process ; Oxford Review of Economic Policy Volume 22 ; 22 >
+        au < doNotProcess ; Oxford Review of Economic Policy Volume 22 ; 22 >
 
       }
 
@@ -4696,7 +4696,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Parliamentary Affairs Volume 58 ; 58 >
-        au < do_not_process ; Parliamentary Affairs Volume 59 ; 59 >
+        au < doNotProcess ; Parliamentary Affairs Volume 59 ; 59 >
         au < released ; Parliamentary Affairs Volume 60 ; 60 >
 
       }
@@ -4729,7 +4729,7 @@
         au < released ; Past & Present Volume 187 ; 187 >
         au < ready ; Past & Present Volume 188 ; 188 >
         au < ready ; Past & Present Volume 189 ; 189 >
-        au < do_not_process ; Past & Present Volume 190 ; 190 >
+        au < doNotProcess ; Past & Present Volume 190 ; 190 >
         au < ready ; Past & Present Volume 191 ; 191 >
         au < ready ; Past & Present Volume 192 ; 192 >
         au < ready ; Past & Present Volume 193 ; 193 >
@@ -4761,7 +4761,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Philosophia Mathematica Volume 13 ; 13 >
-        au < do_not_process ; Philosophia Mathematica Volume 14 ; 14 >
+        au < doNotProcess ; Philosophia Mathematica Volume 14 ; 14 >
         au < released ; Philosophia Mathematica Volume 15 ; 15 >
 
       }
@@ -4790,7 +4790,7 @@
         param[base_url] = http://pcp.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Plant and Cell Physiology Volume 47 ; 47 >
+        au < doNotProcess ; Plant and Cell Physiology Volume 47 ; 47 >
         au < released ; Plant and Cell Physiology Volume 48 ; 48 >
 
       }
@@ -4820,7 +4820,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Political Analysis Volume 13 ; 13 >
-        au < do_not_process ; Political Analysis Volume 14 ; 14 >
+        au < doNotProcess ; Political Analysis Volume 14 ; 14 >
         au < released ; Political Analysis Volume 15 ; 15 >
 
       }
@@ -4867,7 +4867,7 @@
         param[base_url] = http://peds.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Protein Engineering Design and Selection Volume 18 ; 18 >
+        au < doNotProcess ; Protein Engineering Design and Selection Volume 18 ; 18 >
         au < released ; Protein Engineering Design and Selection Volume 19 ; 19 >
         au < released ; Protein Engineering Design and Selection Volume 20 ; 20 >
 
@@ -4898,7 +4898,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Public Opinion Quarterly Volume 69 ; 69 >
-        au < do_not_process ; Public Opinion Quarterly Volume 70 ; 70 >
+        au < doNotProcess ; Public Opinion Quarterly Volume 70 ; 70 >
 
       }
 
@@ -4926,7 +4926,7 @@
         param[base_url] = http://publius.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Publius: The Journal of Federalism Volume 36 ; 36 >
+        au < doNotProcess ; Publius: The Journal of Federalism Volume 36 ; 36 >
         au < released ; Publius: The Journal of Federalism Volume 37 ; 37 >
 
       }
@@ -4956,7 +4956,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
-        au < do_not_process ; QJM: An International Journal of Medicine Volume 99 ; 99 >
+        au < doNotProcess ; QJM: An International Journal of Medicine Volume 99 ; 99 >
         au < ready ; QJM: An International Journal of Medicine Volume 100 ; 100 >
 
       }
@@ -4985,7 +4985,7 @@
         param[base_url] = http://qjmath.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
+        au < doNotProcess ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
         au < released ; The Quarterly Journal of Mathematics Volume 57 ; 57 >
 
       }
@@ -5039,7 +5039,7 @@
         au < ready ; Radiation Protection Dosimetry Volume 115 ; 115 >
         au < ready ; Radiation Protection Dosimetry Volume 116 ; 116 >
         au < released ; Radiation Protection Dosimetry Volume 117 ; 117 >
-        au < do_not_process ; Radiation Protection Dosimetry Volume 118 ; 118 >
+        au < doNotProcess ; Radiation Protection Dosimetry Volume 118 ; 118 >
         au < released ; Radiation Protection Dosimetry Volume 119 ; 119 >
         au < released ; Radiation Protection Dosimetry Volume 120 ; 120 >
         au < ready ; Radiation Protection Dosimetry Volume 121 ; 121 >
@@ -5071,7 +5071,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Refugee Survey Quarterly Volume 24 ; 24 >
-        au < do_not_process ; Refugee Survey Quarterly Volume 25 ; 25 >
+        au < doNotProcess ; Refugee Survey Quarterly Volume 25 ; 25 >
 
       }
 
@@ -5100,7 +5100,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The Review of English Studies Volume 56 ; 56 >
-        au < do_not_process ; The Review of English Studies Volume 57 ; 57 >
+        au < doNotProcess ; The Review of English Studies Volume 57 ; 57 >
 
       }
 
@@ -5166,7 +5166,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Review of Financial Studies Volume 18 ; 18 >
-        au < do_not_process ; Review of Financial Studies Volume 19 ; 19 >
+        au < doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < released ; Review of Financial Studies Volume 20 ; 20 >
 
       }
@@ -5216,7 +5216,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < manifest ; Schizophrenia Bulletin Volume 31 ; 31 >
-        au < do_not_process ; Schizophrenia Bulletin Volume 32 ; 32 >
+        au < doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
         au < ready ; Schizophrenia Bulletin Volume 33 ; 33 >
 
       }
@@ -5245,7 +5245,7 @@
         param[base_url] = http://screen.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Screen Volume 46 ; 46 >
+        au < doNotProcess ; Screen Volume 46 ; 46 >
         au < released ; Screen Volume 47 ; 47 >
 
       }
@@ -5292,7 +5292,7 @@
         param[base_url] = http://shm.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Social History of Medicine Volume 18 ; 18 >
+        au < doNotProcess ; Social History of Medicine Volume 18 ; 18 >
         au < released ; Social History of Medicine Volume 19 ; 19 >
 
       }
@@ -5321,7 +5321,7 @@
         param[base_url] = http://sp.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
+        au < doNotProcess ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
         au < released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
 
       }
@@ -5350,7 +5350,7 @@
         param[base_url] = http://ssjj.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; Social Science Japan Journal Volume 8 ; 8 >
+        au < doNotProcess ; Social Science Japan Journal Volume 8 ; 8 >
         au < ready ; Social Science Japan Journal Volume 9 ; 9 >
 
       }
@@ -5380,7 +5380,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Socio-Economic Review Volume 3 ; 3 >
-        au < do_not_process ; Socio-Economic Review Volume 4 ; 4 >
+        au < doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
         au < ready ; Socio-Economic Review Volume 5 ; 5 >
 
       }
@@ -5410,7 +5410,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Statute Law Review Volume 26 ; 26 >
-        au < do_not_process ; Statute Law Review Volume 27 ; 27 >
+        au < doNotProcess ; Statute Law Review Volume 27 ; 27 >
         au < released ; Statute Law Review Volume 28 ; 28 >
 
       }
@@ -5440,7 +5440,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
-        au < do_not_process ; Teaching Mathematics and its Applications Volume 25 ; 25 >
+        au < doNotProcess ; Teaching Mathematics and its Applications Volume 25 ; 25 >
 
       }
 
@@ -5476,7 +5476,7 @@
         au < released ; Toxicological Sciences Volume 88 ; 88 >
         au < manifest ; Toxicological Sciences Volume 89 ; 89 >
         au < manifest ; Toxicological Sciences Volume 90 ; 90 >
-        au < do_not_process ; Toxicological Sciences Volume 91 ; 91 >
+        au < doNotProcess ; Toxicological Sciences Volume 91 ; 91 >
         au < ready ; Toxicological Sciences Volume 92 ; 92 >
         au < ready ; Toxicological Sciences Volume 93 ; 93 >
         au < ready ; Toxicological Sciences Volume 94 ; 94 >
@@ -5534,7 +5534,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Twentieth Century British History Volume 16 ; 16 >
-        au < do_not_process ; Twentieth Century British History Volume 17 ; 17 >
+        au < doNotProcess ; Twentieth Century British History Volume 17 ; 17 >
         au < testing ; Twentieth Century British History Volume 18 ; 18 >
         au < testing ; Twentieth Century British History Volume 19 ; 19 >
         au < testing ; Twentieth Century British History Volume 20 ; 20 >
@@ -5567,7 +5567,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The World Bank Economic Review Volume 19 ; 19 >
-        au < do_not_process ; The World Bank Economic Review Volume 20 ; 20 >
+        au < doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
         au < testing ; The World Bank Economic Review Volume 21 ; 21 >
         au < testing ; The World Bank Economic Review Volume 22 ; 22 >
         au < testing ; The World Bank Economic Review Volume 23 ; 23 >
@@ -5599,7 +5599,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; The World Bank Research Observer Volume 20 ; 20 >
-        au < do_not_process ; The World Bank Research Observer Volume 21 ; 21 >
+        au < doNotProcess ; The World Bank Research Observer Volume 21 ; 21 >
         au < testing ; The World Bank Research Observer Volume 22 ; 22 >
         au < testing ; The World Bank Research Observer Volume 23 ; 23 >
         au < testing ; The World Bank Research Observer Volume 24 ; 24 >
@@ -5630,7 +5630,7 @@
         param[base_url] = http://ywcct.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
+        au < doNotProcess ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
         au < released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
         au < testing ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
         au < testing ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
@@ -5661,7 +5661,7 @@
         param[base_url] = http://ywes.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < do_not_process ; The Year's Work in English Studies Volume 84 ; 84 >
+        au < doNotProcess ; The Year's Work in English Studies Volume 84 ; 84 >
         au < released ; The Year's Work in English Studies Volume 85 ; 85 >
         au < testing ; The Year's Work in English Studies Volume 86 ; 86 >
         au < testing ; The Year's Work in English Studies Volume 87 ; 87 >

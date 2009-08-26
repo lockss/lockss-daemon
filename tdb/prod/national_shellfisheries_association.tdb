@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0730-8000
   
-      au < do_not_process ; Journal of Shellfish Research Volume 24 ; 24 >
-      au < do_not_process ; Journal of Shellfish Research Volume 25 ; 25 >
-      au < do_not_process ; Journal of Shellfish Research Volume 26 ; 26 >
+      au < doNotProcess ; Journal of Shellfish Research Volume 24 ; 24 >
+      au < doNotProcess ; Journal of Shellfish Research Volume 25 ; 25 >
+      au < doNotProcess ; Journal of Shellfish Research Volume 26 ; 26 >
     }
 
     {

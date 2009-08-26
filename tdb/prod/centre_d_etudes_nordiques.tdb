@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1195-6860
   
-      au < do_not_process ; Ecoscience Volume 12 ; 12 >
-      au < do_not_process ; Ecoscience Volume 13 ; 13 >
-      au < do_not_process ; Ecoscience Volume 14 ; 14 >
+      au < doNotProcess ; Ecoscience Volume 12 ; 12 >
+      au < doNotProcess ; Ecoscience Volume 13 ; 13 >
+      au < doNotProcess ; Ecoscience Volume 14 ; 14 >
     }
 
     {

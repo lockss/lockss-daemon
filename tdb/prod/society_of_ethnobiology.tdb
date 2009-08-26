@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0278-0771
   
-      au < do_not_process ; Journal of Ethnobiology Volume 25 ; 25 >
-      au < do_not_process ; Journal of Ethnobiology Volume 26 ; 26 >
-      au < do_not_process ; Journal of Ethnobiology Volume 27 ; 27 >
+      au < doNotProcess ; Journal of Ethnobiology Volume 25 ; 25 >
+      au < doNotProcess ; Journal of Ethnobiology Volume 26 ; 26 >
+      au < doNotProcess ; Journal of Ethnobiology Volume 27 ; 27 >
     }
 
     {

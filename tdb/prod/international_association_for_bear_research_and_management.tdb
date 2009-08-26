@@ -16,10 +16,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1537-6176
   
-      au < do_not_process ; Ursus Volume 15 ; 15 >
-      au < do_not_process ; Ursus Volume 16 ; 16 >
-      au < do_not_process ; Ursus Volume 17 ; 17 >
-      au < do_not_process ; Ursus Volume 18 ; 18 >
+      au < doNotProcess ; Ursus Volume 15 ; 15 >
+      au < doNotProcess ; Ursus Volume 16 ; 16 >
+      au < doNotProcess ; Ursus Volume 17 ; 17 >
+      au < doNotProcess ; Ursus Volume 18 ; 18 >
     }
 
     {

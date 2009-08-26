@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1098-7096
   
-      au < do_not_process ; Journal of the Kentucky Academy of Science Volume 66 ; 66 >
-      au < do_not_process ; Journal of the Kentucky Academy of Science Volume 67 ; 67 >
-      au < do_not_process ; Journal of the Kentucky Academy of Science Volume 68 ; 68 >
+      au < doNotProcess ; Journal of the Kentucky Academy of Science Volume 66 ; 66 >
+      au < doNotProcess ; Journal of the Kentucky Academy of Science Volume 67 ; 67 >
+      au < doNotProcess ; Journal of the Kentucky Academy of Science Volume 68 ; 68 >
     }
 
     {
