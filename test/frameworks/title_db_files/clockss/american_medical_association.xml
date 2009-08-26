@@ -61,6 +61,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="144" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofDermatology145">
@@ -76,6 +77,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="145" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofFacialPlasticSurgery10">
@@ -91,6 +93,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="10" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofFacialPlasticSurgery11">
@@ -106,6 +109,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="11" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofGeneralPsychiatry65">
@@ -121,6 +125,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="65" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofGeneralPsychiatry66">
@@ -136,6 +141,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="66" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofInternalMedicine168">
@@ -151,6 +157,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="168" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofInternalMedicine169">
@@ -166,6 +173,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="169" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofNeurology65">
@@ -181,6 +189,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="65" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofNeurology66">
@@ -196,6 +205,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="66" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofOphthalmology126">
@@ -211,6 +221,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="126" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofOphthalmology127">
@@ -226,6 +237,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="127" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofOtolaryngologyHeadNeckSurgery134">
@@ -241,6 +253,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="134" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofOtolaryngologyHeadNeckSurgery135">
@@ -256,6 +269,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="135" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofPediatricsAdolescentMedicine162">
@@ -271,6 +285,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="162" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofPediatricsAdolescentMedicine163">
@@ -286,6 +301,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="163" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofSurgery143">
@@ -301,6 +317,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="143" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="ArchivesofSurgery144">
@@ -316,6 +333,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="144" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="JournaloftheAmericanMedicalAssociation199">
@@ -331,6 +349,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="199" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="JournaloftheAmericanMedicalAssociation200">
@@ -346,6 +365,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="200" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="JournaloftheAmericanMedicalAssociation201">
@@ -361,6 +381,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="201" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
   <property name="JournaloftheAmericanMedicalAssociation202">
@@ -376,6 +397,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="202" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
  </property>
