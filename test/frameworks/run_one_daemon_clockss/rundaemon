@@ -1,6 +1,6 @@
 #! /bin/bash
 
-TITLE_DBS="../title_db_files/*.xml"
+TITLE_DBS="../title_db_files/clockss/*.xml"
 
 while true ; do
   case "$1" in
@@ -76,5 +76,5 @@ if [ -z "$jdb" ]; then
  wait `cat dpid`
  echo stopped with status $? at `date`
 else
- jdb -mx256m $args org.lockss.app.LockssDaemon ${PROP_ARGS}
+ jdb -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS}
 fi
