@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.67 2009-05-23 18:06:26 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.68 2009-08-28 22:40:06 dshr Exp $
  */
 
 /*
@@ -80,15 +80,17 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   Set toBeDamaged = new HashSet();
 
-  private Iterator articleIterator = null;
+  private ArticleIteratorFactory articleIteratorFactory = null;
 
   public SimulatedArchivalUnit(Plugin owner) {
     super(owner);
+    log.debug2("Plugin is " + owner);
   }
 
   /** Convenience methods, as most creators don't care about the plugin */
   public SimulatedArchivalUnit() {
     this(new SimulatedPlugin());
+    log.debug2("Null plugin");
   }
 
   public UrlCacher makeUrlCacher(String url) {
@@ -109,10 +111,24 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return SIMULATED_URL_START;
   }
 
+  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+    log.debug3("getArticleIteratorFactory: " + articleIteratorFactory);
+    return articleIteratorFactory;
+  }
+
+  public ArticleIteratorFactory getArticleIteratorFactory() {
+    log.debug3("getArticleIteratorFactory: " + articleIteratorFactory);
+    return articleIteratorFactory;
+  }
+
   // public methods
 
   public boolean shouldCallTopLevelPoll(AuState aus) {
     return true;
+  }
+
+  public void setArticleIteratorFactory(ArticleIteratorFactory aif) {
+    articleIteratorFactory = aif;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.26 2009-06-30 09:08:54 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.27 2009-08-28 22:40:06 dshr Exp $
  */
 
 /*
@@ -243,6 +243,20 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   public static final String AU_PARAM_HASH_FILTER_SPEC =
     PD_HASH_FILTER_SPEC.getKey();
 
+  /**
+   * The default article mime type for the ArticleIterator
+   */
+  static final ConfigParamDescr PD_DEFAULT_ARTICLE_MIME_TYPE =
+    new ConfigParamDescr();
+  static {
+    PD_DEFAULT_ARTICLE_MIME_TYPE.setKey("default_article_mime_type");
+    PD_DEFAULT_ARTICLE_MIME_TYPE.setDisplayName("DefaultArticleMimeType");
+    PD_DEFAULT_ARTICLE_MIME_TYPE.setType(ConfigParamDescr.TYPE_STRING);
+    PD_DEFAULT_ARTICLE_MIME_TYPE.setSize(20);
+  }
+  public static final String AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE =
+    PD_DEFAULT_ARTICLE_MIME_TYPE.getKey();
+
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
   private int stopCtr = 0;
@@ -305,7 +319,18 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     log.debug("createAU(" + auConfig + ")");
     ArchivalUnit au = new SimulatedArchivalUnit(this);
     au.setConfiguration(auConfig);
+    this.auConfig = auConfig;
     return au;
+  }
+
+  public String getDefaultArticleMimeType() {
+    if (auConfig == null) {
+      throw new IllegalArgumentException("auConfig null");
+    }
+    String ret = auConfig.get(AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE,
+			      "never/happens");
+    log.debug("DefaultArticleMimeType is " + ret);
+    return ret;
   }
 
   // SimulatedPlugin methods, not part of Plugin interface

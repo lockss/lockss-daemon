@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.43 2009-08-03 04:47:48 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.44 2009-08-28 22:40:05 dshr Exp $
  */
 
 /*
@@ -82,6 +82,9 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_PARENT_VERSION = "plugin_parent_version";
   public static final String KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY =
     "plugin_crawl_url_comparator_factory";
+
+  public static final String KEY_DEFAULT_ARTICLE_MIME_TYPE =
+    "plugin_default_article_mime_type";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
@@ -271,6 +274,18 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getPluginNotes() {
     return definitionMap.getString(KEY_PLUGIN_NOTES, null);
+  }
+
+  public String getDefaultArticleMimeType() {
+    String ret = definitionMap.getString(KEY_DEFAULT_ARTICLE_MIME_TYPE,
+					 DEFAULT_ARTICLE_MIME_TYPE);
+    log.debug3("DefaultArticleMimeType " + ret);
+    if (ret == null) {
+      ret = super.getDefaultArticleMimeType();
+      log.debug3("DefaultArticleMimeType from super " + ret);
+      
+    }
+    return ret;
   }
 
   public List<String> getElementList(String key) {

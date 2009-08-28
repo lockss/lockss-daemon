@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.28 2009-08-03 04:35:51 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.29 2009-08-28 22:40:06 dshr Exp $
  */
 
 /*
@@ -252,6 +252,15 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(DefinablePlugin.KEY_PUBLISHING_PLATFORM, expectedReturn);
     assertEquals("return value", expectedReturn,
 		 definablePlugin.getPublishingPlatform());
+  }
+
+  public void testGetDefaultArticleMimeType() throws Exception {
+    assertEquals("text/html", definablePlugin.getDefaultArticleMimeType());
+    String expectedReturn = "mime/type";
+    defMap.putString(DefinablePlugin.KEY_DEFAULT_ARTICLE_MIME_TYPE,
+		     expectedReturn);
+    assertEquals("return value", expectedReturn,
+		 definablePlugin.getDefaultArticleMimeType());
   }
 
   public void testInitPlugin() throws Exception {

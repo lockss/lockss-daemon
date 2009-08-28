@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.72 2009-05-27 16:39:04 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.73 2009-08-28 22:40:05 dshr Exp $
  */
 
 /*
@@ -89,9 +89,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "_link_rewriter_factory";
   public static final String SUFFIX_ARTICLE_ITERATOR_FACTORY =
     "_article_iterator_factory";
+  public static final String SUFFIX_ARTICLE_MIME_TYPE =
+    "_article_mime_type";
   public static final String SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP =
-    "_metadata_extractor_factory_map";
-  public static final String SUFFIX_FETCH_RATE_LIMITER = "_fetch_rate_limiter";
+    "_metadata_extractor_factory_map"; 
+
+ public static final String SUFFIX_FETCH_RATE_LIMITER = "_fetch_rate_limiter";
 
   public static final String KEY_AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";

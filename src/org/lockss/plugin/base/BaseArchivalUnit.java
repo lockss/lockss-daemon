@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.135 2009-08-03 04:35:51 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.136 2009-08-28 22:40:05 dshr Exp $
  */
 
 /*
@@ -100,7 +100,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected List<String> startUrls;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
-  static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
 
   protected String auName;   // the name of the AU (constructed by plugin)
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
@@ -723,7 +722,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the Iterator for the AU's articles.
    */
   public Iterator getArticleIterator() {
-    return getArticleIterator(DEFAULT_ARTICLE_MIME_TYPE);
+    return getArticleIterator(null);
   }
 
 
