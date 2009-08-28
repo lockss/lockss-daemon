@@ -16,8 +16,8 @@
 
     param[journal_abbr] = asjcl
 
-    au < manifest ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
-    au < manifest ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
+    au < testing ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
+    au < testing ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
 
   }
 
@@ -29,8 +29,8 @@
 
     param[journal_abbr] = bejeap
 
-    au < manifest ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
-    au < manifest ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
+    au < testing ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
+    au < testing ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
 
   }
 
@@ -42,8 +42,8 @@
 
     param[journal_abbr] = bejm
 
-    au < manifest ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
-    au < manifest ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
+    au < testing ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
+    au < testing ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
 
   }
 
@@ -55,8 +55,8 @@
 
     param[journal_abbr] = bejte
 
-    au < manifest ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
-    au < manifest ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
+    au < testing ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
+    au < testing ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
 
   }
 
@@ -68,8 +68,8 @@
 
     param[journal_abbr] = bis
 
-    au < manifest ; 2008 ; Basic Income Studies Volume 3 ; 3 >
-    au < manifest ; 2009 ; Basic Income Studies Volume 4 ; 4 >
+    au < testing ; 2008 ; Basic Income Studies Volume 3 ; 3 >
+    au < testing ; 2009 ; Basic Income Studies Volume 4 ; 4 >
 
   }
 
