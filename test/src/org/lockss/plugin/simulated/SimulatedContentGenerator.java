@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.28.12.1 2009-08-20 23:44:50 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.28.12.2 2009-08-28 23:03:16 dshr Exp $
  */
 
 /*
@@ -93,6 +93,12 @@ public class SimulatedContentGenerator {
   public static final String ABNORMAL_DIR_CONTENT =
     "This is abnormal directory %1, depth %2.";
 
+  public static final String NORMAL_XML_FILE_CONTENT =
+    "<map>" +
+    "<entry><key>file</key><value>%1</value></entry>" +
+    "<entry><key>depth</key><value>%2</value></entry>" +
+    "<entry><key>branch</key><value>%3</value></entry>" +
+    "</map>";
   /**
    * Name of top directory in which the content is generated.
    */
@@ -145,6 +151,11 @@ public class SimulatedContentGenerator {
    * file-types.
    */
   public static final int FILE_TYPE_BIN = 16;
+  /**
+   * File-type value for XML files.  Independent bitwise from the other
+   * file-types.
+   */
+  public static final int FILE_TYPE_XML = 32;
 
   // how deep the tree extends
   private int treeDepth = 4;
@@ -507,6 +518,9 @@ public class SimulatedContentGenerator {
     if ((getFileTypes() & FILE_TYPE_BIN) > 0) {
       createBinaryFile(parentDir, fileNum, binaryFileSize);
     }
+    if ((getFileTypes() & FILE_TYPE_XML) > 0) {
+      createXmlFile(parentDir, fileNum, depth, branchNum, isAbnormal);
+    }
   }
 
   private void createTxtFile(File parentDir, int fileNum, int depth,
@@ -535,6 +549,22 @@ public class SimulatedContentGenerator {
       PrintWriter pw = new PrintWriter(fos);
       logger.debug3("Creating HTML file at " + file.getAbsolutePath());
       String file_content = getHtmlFileContent(filename, fileNum, depth,
+					       branchNum, isAbnormal);
+      pw.print(file_content);
+      pw.flush();
+      pw.close();
+      fos.close();
+    } catch (Exception e) { System.err.println(e); }
+  }
+  private void createXmlFile(File parentDir, int fileNum, int depth,
+			      int branchNum, boolean isAbnormal) {
+    try {
+      String filename = getFileName(fileNum, FILE_TYPE_XML);
+      File file = new File(parentDir, filename);
+      FileOutputStream fos = new FileOutputStream(file);
+      PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating HTML file at " + file.getAbsolutePath());
+      String file_content = getXmlFileContent(filename, fileNum, depth,
 					       branchNum, isAbnormal);
       pw.print(file_content);
       pw.flush();
@@ -666,6 +696,25 @@ public class SimulatedContentGenerator {
   }
 
   /**
+   * Generates standard xml content for an xml file.
+   * @param filename name of file (used in title)
+   * @param fileNum local file number
+   * @param depth file depth (0 for root)
+   * @param branchNum local branch number (0 for root)
+   * @param isAbnormal whether or not to generate abnormal content
+   * @return file content
+   */
+  public static String getXmlFileContent(String filename, int fileNum,
+					 int depth, int branchNum,
+					 boolean isAbnormal) {
+    String file_content = NORMAL_XML_FILE_CONTENT;
+    file_content = StringUtil.replaceString(file_content, "%1", ""+fileNum);
+    file_content = StringUtil.replaceString(file_content, "%2", ""+depth);
+    file_content = StringUtil.replaceString(file_content, "%3", ""+branchNum);
+    return file_content;
+  }
+
+  /**
    * Generates index file for a directory, in html form with each sibling
    * file or sub-directory index file as a link.  This is to allow crawling.
    *
@@ -754,6 +803,9 @@ public class SimulatedContentGenerator {
       break;
     case FILE_TYPE_BIN:
       fileName.append( ".bin");
+      break;
+    case FILE_TYPE_XML:
+      fileName.append( ".xml");
       break;
     }
     return fileName.toString();

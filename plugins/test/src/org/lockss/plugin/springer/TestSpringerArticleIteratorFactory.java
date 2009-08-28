@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.3.2.1 2009-08-28 23:03:16 dshr Exp $
+ * $Id: TestSpringerArticleIteratorFactory.java,v 1.1.2.2 2009-08-28 23:03:16 dshr Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.plugin.springer;
 
 import java.io.*;
 import java.util.*;
@@ -46,8 +46,8 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
-public class TestHighWireArticleIteratorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestHighWireArticleIteratorFactory");
+public class TestSpringerArticleIteratorFactory extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestSpringerArticleIteratorFactory");
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
@@ -58,7 +58,7 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
   private static int maxDepth=DEFAULT_MAX_DEPTH;
 
   public static void main(String[] args) throws Exception {
-    TestHighWireArticleIteratorFactory test = new TestHighWireArticleIteratorFactory();
+    TestSpringerArticleIteratorFactory test = new TestSpringerArticleIteratorFactory();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
@@ -67,7 +67,7 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
 
     test.setUp(maxDepth);
     test.testArticleCountAndDefaultType();
-    test.testArticleCountAndPDFType();
+    test.dontTestArticleCountAndHtmlType();
     test.tearDown();
   }
 
@@ -79,7 +79,7 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|highwire|TestHighWireArticleIteratorFactory$MySimulatedPlugin.root~" +
+    String auId = "org|lockss|plugin|springer|TestSpringerArticleIteratorFactory$MySimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
@@ -101,6 +101,9 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
 		       SimulatedContentGenerator.FILE_TYPE_HTML));
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
+    props.setProperty("org.lockss.au." + auId + "." +
+                      SimulatedPlugin.AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE,
+		      "application/pdf");
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -115,6 +118,8 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
         (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
     theDaemon.getLockssRepository(sau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), sau);
+    ArticleIteratorFactory aif = new SpringerArticleIteratorFactory();
+    sau.setArticleIteratorFactory(aif);
   }
 
   public void tearDown() throws Exception {
@@ -131,32 +136,9 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
 
     crawlContent();
 
+    String articleMimeType = "application/pdf";
     int count = 0;
     for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
-	BaseCachedUrl cu = (BaseCachedUrl)it.next();
-	assertNotNull(cu);
-	assert(cu instanceof CachedUrl);
-	String contentType = cu.getContentType();
-	assertNotNull(contentType);
-	assert(contentType.toLowerCase().startsWith("text/html"));
-	log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
-	count++;
-    }
-    log.debug("Article count is " + count);
-    assertEquals(32, count);
-  }
-
-  public void testArticleCountAndPDFType() throws Exception {
-    createContent();
-
-    // get the root of the simContent
-    String simDir = sau.getSimRoot();
-
-    crawlContent();
-
-    int count = 0;
-    String articleMimeType = "application/pdf";
-    for (Iterator it = sau.getArticleIterator(articleMimeType); it.hasNext();) {
 	BaseCachedUrl cu = (BaseCachedUrl)it.next();
 	assertNotNull(cu);
 	assert(cu instanceof CachedUrl);
@@ -168,6 +150,30 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
     }
     log.debug("Article count is " + count);
     assertEquals(28, count);
+  }
+
+  public void dontTestArticleCountAndHtmlType() throws Exception {
+    createContent();
+
+    // get the root of the simContent
+    String simDir = sau.getSimRoot();
+
+    crawlContent();
+
+    int count = 0;
+    String articleMimeType = "text/html";
+    for (Iterator it = sau.getArticleIterator(articleMimeType); it.hasNext();) {
+	BaseCachedUrl cu = (BaseCachedUrl)it.next();
+	assertNotNull(cu);
+	assert(cu instanceof CachedUrl);
+	String contentType = cu.getContentType();
+	assertNotNull(contentType);
+	assert(contentType.toLowerCase().startsWith(articleMimeType));
+	log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
+	count++;
+    }
+    log.debug("Article count is " + count);
+    assertEquals(32, count);
   }
 
   private void createContent() {
@@ -186,28 +192,22 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
     /**
      * Returns the article iterator factory for the mime type, if any
      * @param contentType the content type
      * @return the ArticleIteratorFactory
      */
     public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
-      MyHighWireArticleIteratorFactory ret =
-	  new MyHighWireArticleIteratorFactory();
+      MySpringerArticleIteratorFactory ret =
+	  new MySpringerArticleIteratorFactory();
       ret.setSubTreeRoot("branch1/branch1");
       return ret;
     }
   }
 
-  public static class MyHighWireArticleIteratorFactory
-      extends HighWireArticleIteratorFactory {
-    MyHighWireArticleIteratorFactory() {
+  public static class MySpringerArticleIteratorFactory
+      extends SpringerArticleIteratorFactory {
+    MySpringerArticleIteratorFactory() {
     }
     public void setSubTreeRoot(String root) {
       subTreeRoot = root;

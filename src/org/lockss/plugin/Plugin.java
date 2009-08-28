@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.29 2009-05-23 18:06:26 dshr Exp $
+ * $Id: Plugin.java,v 1.29.4.1 2009-08-28 23:03:16 dshr Exp $
  */
 
 /*
@@ -180,4 +180,10 @@ public interface Plugin {
    * @return the ArticleIteratorFactory
    */
     public ArticleIteratorFactory getArticleIteratorFactory(String contentType);
+
+  /**
+   * Returns the default mime type of articles in this AU
+   * @return the default MimeType
+   */
+  public String getDefaultArticleMimeType();
 }

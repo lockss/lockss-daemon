@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.57.4.1 2009-08-03 04:25:11 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.57.4.2 2009-08-28 23:03:16 dshr Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public abstract class BasePlugin
   static Logger log = Logger.getLogger("BasePlugin");
 
   static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
+  public static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
 
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
@@ -522,6 +523,9 @@ public abstract class BasePlugin
    */
     public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
     ArticleIteratorFactory ret = null;
+    if (contentType == null) {
+      contentType = getDefaultArticleMimeType();
+    }
     MimeTypeInfo mti = getMimeTypeInfo(contentType);
     if (mti == null) {
       if (log.isDebug3())
@@ -572,6 +576,12 @@ public abstract class BasePlugin
       }
     }
     return null;
+  }
+
+
+  public String getDefaultArticleMimeType() {
+    log.debug3("getDefaultArticleMimeType: " + DEFAULT_ARTICLE_MIME_TYPE);
+    return DEFAULT_ARTICLE_MIME_TYPE;
   }
 
   // ---------------------------------------------------------------------

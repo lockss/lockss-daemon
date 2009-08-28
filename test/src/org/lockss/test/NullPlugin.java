@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.98.4.1 2009-08-03 04:25:11 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.98.4.2 2009-08-28 23:03:16 dshr Exp $
  */
 
 /*
@@ -138,6 +138,10 @@ public class NullPlugin {
     }
 
     public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+      return null;
+    }
+
+    public String getDefaultArticleMimeType() {
       return null;
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.26 2006-04-05 22:57:37 tlipkis Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.26.60.1 2009-08-28 23:03:16 dshr Exp $
  */
 
 /*
@@ -163,6 +163,9 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
         SimulatedContentGenerator.FILE_TYPE_JPEG));
     expectedStr = SimulatedContentGenerator.BRANCH_PREFIX + "15";
     assertEquals(expectedStr, SimulatedContentGenerator.getDirectoryName(15));
+    expectedStr = "016" + SimulatedContentGenerator.FILE_PREFIX + ".xml";
+    assertEquals(expectedStr, gen.getFileName(16,
+        SimulatedContentGenerator.FILE_TYPE_XML));
 
     // Test with maxFilenameLength set.
 
@@ -263,6 +266,22 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     String expectedContent =
       SimulatedContentGenerator.getHtmlFileContent(scgen.getFileName(1,
         SimulatedContentGenerator.FILE_TYPE_HTML), 1, 0, 0, false);
+    assertEquals("content incorrect.", expectedContent, content);
+  }
+
+  public void testXmlFileContent() throws Exception {
+    scgen.setTreeDepth(0);
+    scgen.setNumFilesPerBranch(1);
+    scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_XML);
+    scgen.generateContentTree();
+    String childName = scgen.getContentRoot() + File.separator +
+                       scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_XML);
+    File child = new File(childName);
+    assertTrue("File not found.", child.exists() && !child.isDirectory());
+    String content = getFileContent(child);
+    String expectedContent =
+      SimulatedContentGenerator.getXmlFileContent(scgen.getFileName(1,
+        SimulatedContentGenerator.FILE_TYPE_XML), 1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
   }
 
