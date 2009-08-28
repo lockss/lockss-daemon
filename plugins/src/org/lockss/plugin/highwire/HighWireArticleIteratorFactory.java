@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.8 2009-07-19 20:01:39 dshr Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.9 2009-08-28 21:15:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,10 +34,9 @@ package org.lockss.plugin.highwire;
 
 import java.util.*;
 import java.util.regex.*;
+
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.daemon.PluginException;
 
 public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
@@ -46,9 +45,16 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
   /*
    * The HighWire URL structure means that the HTML for an article
    * is at a URL like http://apr.sagepub.com/cgi/reprint/34/2/135
+   * where 34 is a volume name, 2 an issue name and 135 a page name.
+   * In the best of cases all three are integers but they can all be
+   * strings, e.g. OUP's English Historical Review uses Roman numerals
+   * for volume names, many HighWire titles have supplementary issues
+   * named supp_1, supp_2, etc. and most APS journals have page names
+   * prepended with a letter reminiscent of the journal title's main
+   * keyword.
    */
   protected String subTreeRoot = "cgi/reprint";
-  protected Pattern pat = Pattern.compile("/[0-9]*/[0-9]*/[0-9]*",
+  protected Pattern pat = Pattern.compile("/[^/]+/[^/]+/[^/]+",
 				  Pattern.CASE_INSENSITIVE);
 
   public HighWireArticleIteratorFactory() {
@@ -67,4 +73,5 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
               ") " + subTreeRoot);
     return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
   }
+
 }
