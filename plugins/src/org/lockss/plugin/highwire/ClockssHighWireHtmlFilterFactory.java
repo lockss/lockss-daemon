@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.3 2009-08-28 21:15:01 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.4 2009-08-28 22:05:41 thib_gc Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithText("strong", "related", true),
         HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
         // Contains the name of the institution:
-        HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolBar"),
+        HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolbar"),
         // Contains the date and time:
         HtmlNodeFilters.tagWithAttribute("a", "target", "help"),
         // Typically contains ads:
