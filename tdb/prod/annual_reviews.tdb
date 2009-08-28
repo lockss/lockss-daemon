@@ -833,9 +833,9 @@ comment[eg3] = continued from previous title entry
 
     au < released ; Annual Review of Law and Social Science Volume 1 ; 1 >
     au < released ; Annual Review of Law and Social Science Volume 2 ; 2 >
-    au < manifest ; Annual Review of Law and Social Science Volume 3 ; 3 >
-    au < manifest ; Annual Review of Law and Social Science Volume 4 ; 4 >
-    au < manifest ; Annual Review of Law and Social Science Volume 5 ; 5 >
+    au < ready ; Annual Review of Law and Social Science Volume 3 ; 3 >
+    au < ready ; Annual Review of Law and Social Science Volume 4 ; 4 >
+    au < ready ; Annual Review of Law and Social Science Volume 5 ; 5 >
   }
 
 
@@ -872,7 +872,7 @@ comment[ms1] = next title entry is a continuation of this journal
     au < released ; Annual Review of Materials Science Volume 21 ; 21 >
     au < released ; Annual Review of Materials Science Volume 22 ; 22 >
     au < released ; Annual Review of Materials Science Volume 23 ; 23 >
-    au < manifest ; Annual Review of Materials Science Volume 24 ; 24 >
+    au < ready ; Annual Review of Materials Science Volume 24 ; 24 >
     au < released ; Annual Review of Materials Science Volume 25 ; 25 >
     au < released ; Annual Review of Materials Science Volume 26 ; 26 >
     au < released ; Annual Review of Materials Science Volume 27 ; 27 >
@@ -898,9 +898,9 @@ comment[ms2] = continued from previous title entry
     au < released ; Annual Review of Materials Research Volume 34 ; 34 >
     au < released ; Annual Review of Materials Research Volume 35 ; 35 >
     au < released ; Annual Review of Materials Research Volume 36 ; 36 >
-    au < manifest ; Annual Review of Materials Research Volume 37 ; 37 >
-    au < manifest ; Annual Review of Materials Research Volume 38 ; 38 >
-    au < manifest ; Annual Review of Materials Research Volume 39 ; 39 >
+    au < ready ; Annual Review of Materials Research Volume 37 ; 37 >
+    au < ready ; Annual Review of Materials Research Volume 38 ; 38 >
+    au < ready ; Annual Review of Materials Research Volume 39 ; 39 >
   }
 
 
@@ -973,9 +973,9 @@ comment[ms2] = continued from previous title entry
     au < released ; Annual Review of Medicine Volume 56 ; 56 >
     au < released ; Annual Review of Medicine Volume 57 ; 57 >
     au < released ; Annual Review of Medicine Volume 58 ; 58 >
-    au < manifest ; Annual Review of Medicine Volume 59 ; 59 >
-    au < manifest ; Annual Review of Medicine Volume 60 ; 60 >
-    au < manifest ; Annual Review of Medicine Volume 61 ; 61 >
+    au < ready ; Annual Review of Medicine Volume 59 ; 59 >
+    au < ready ; Annual Review of Medicine Volume 60 ; 60 >
+    au < ready ; Annual Review of Medicine Volume 61 ; 61 >
   }
 
 
@@ -1048,9 +1048,9 @@ comment[ms2] = continued from previous title entry
     au < released ; Annual Review of Microbiology Volume 58 ; 58 >
     au < released ; Annual Review of Microbiology Volume 59 ; 59 >
     au < released ; Annual Review of Microbiology Volume 60 ; 60 >
-    au < manifest ; Annual Review of Microbiology Volume 61 ; 61 >
-    au < manifest ; Annual Review of Microbiology Volume 62 ; 62 >
-    au < manifest ; Annual Review of Microbiology Volume 63 ; 63 >
+    au < ready ; Annual Review of Microbiology Volume 61 ; 61 >
+    au < ready ; Annual Review of Microbiology Volume 62 ; 62 >
+    au < ready ; Annual Review of Microbiology Volume 63 ; 63 >
   }
 
 
@@ -1093,9 +1093,9 @@ comment[ms2] = continued from previous title entry
     au < released ; Annual Review of Neuroscience Volume 28 ; 28 >
     au < released ; Annual Review of Neuroscience Volume 29 ; 29 >
     au < released ; Annual Review of Neuroscience Volume 30 ; 30 >
-    au < manifest ; Annual Review of Neuroscience Volume 31 ; 31 >
-    au < manifest ; Annual Review of Neuroscience Volume 32 ; 32 >
-    au < manifest ; Annual Review of Neuroscience Volume 33 ; 33 >
+    au < ready ; Annual Review of Neuroscience Volume 31 ; 31 >
+    au < ready ; Annual Review of Neuroscience Volume 32 ; 32 >
+    au < ready ; Annual Review of Neuroscience Volume 33 ; 33 >
   }
 
 
@@ -1178,9 +1178,9 @@ comment[ns2] = continued from previous title entry
     au < released ; Annual Review of Nuclear and Particle Science Volume 54 ; 54 >
     au < released ; Annual Review of Nuclear and Particle Science Volume 55 ; 55 >
     au < released ; Annual Review of Nuclear and Particle Science Volume 56 ; 56 >
-    au < manifest ; Annual Review of Nuclear and Particle Science Volume 57 ; 57 >
-    au < manifest ; Annual Review of Nuclear and Particle Science Volume 58 ; 58 >
-    au < manifest ; Annual Review of Nuclear and Particle Science Volume 59 ; 59 >
+    au < testing ; Annual Review of Nuclear and Particle Science Volume 57 ; 57 >
+    au < testing ; Annual Review of Nuclear and Particle Science Volume 58 ; 58 >
+    au < testing ; Annual Review of Nuclear and Particle Science Volume 59 ; 59 >
   }
 
 
@@ -1221,10 +1221,10 @@ comment[ns2] = continued from previous title entry
     au < released ; Annual Review of Nutrition Volume 24 ; 24 >
     au < released ; Annual Review of Nutrition Volume 25 ; 25 >
     au < released ; Annual Review of Nutrition Volume 26 ; 26 >
-    au < manifest ; Annual Review of Nutrition Volume 27 ; 27 >
-    au < manifest ; Annual Review of Nutrition Volume 28 ; 28 >
-    au < manifest ; Annual Review of Nutrition Volume 29 ; 29 >
-    au < manifest ; Annual Review of Nutrition Volume 30 ; 30 >
+    au < testing ; Annual Review of Nutrition Volume 27 ; 27 >
+    au < testing ; Annual Review of Nutrition Volume 28 ; 28 >
+    au < testing ; Annual Review of Nutrition Volume 29 ; 29 >
+    au < testing ; Annual Review of Nutrition Volume 30 ; 30 >
   }
 
 
@@ -1237,11 +1237,11 @@ comment[ns2] = continued from previous title entry
     param[journal_id] = pathmechdis
     param[short_journal_id] = pathol
 
-    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 1 ; 1 >
-    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 2 ; 2 >
-    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 3 ; 3 >
-    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 4 ; 4 >
-    au < manifest ; Annual Review of Pathology: Mechanisms of Disease Volume 5 ; 5 >
+    au < testing ; Annual Review of Pathology: Mechanisms of Disease Volume 1 ; 1 >
+    au < testing ; Annual Review of Pathology: Mechanisms of Disease Volume 2 ; 2 >
+    au < testing ; Annual Review of Pathology: Mechanisms of Disease Volume 3 ; 3 >
+    au < testing ; Annual Review of Pathology: Mechanisms of Disease Volume 4 ; 4 >
+    au < testing ; Annual Review of Pathology: Mechanisms of Disease Volume 5 ; 5 >
   }
 
 
@@ -1258,7 +1258,7 @@ comment[pa1] = next title entry is a continuation of this journal
 
     au < released ; Annual Review of Pharmacology Volume 1 ; 1 >
     au < released ; Annual Review of Pharmacology Volume 2 ; 2 >
-    au < manifest ; Annual Review of Pharmacology Volume 3 ; 3 >
+    au < testing ; Annual Review of Pharmacology Volume 3 ; 3 >
     au < released ; Annual Review of Pharmacology Volume 4 ; 4 >
     au < released ; Annual Review of Pharmacology Volume 5 ; 5 >
     au < released ; Annual Review of Pharmacology Volume 6 ; 6 >
@@ -1317,9 +1317,9 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Pharmacology and Toxicology Volume 45 ; 45 >
     au < released ; Annual Review of Pharmacology and Toxicology Volume 46 ; 46 >
     au < released ; Annual Review of Pharmacology and Toxicology Volume 47 ; 47 >
-    au < manifest ; Annual Review of Pharmacology and Toxicology Volume 48 ; 48 >
-    au < manifest ; Annual Review of Pharmacology and Toxicology Volume 49 ; 49 >
-    au < manifest ; Annual Review of Pharmacology and Toxicology Volume 50 ; 50 >
+    au < testing ; Annual Review of Pharmacology and Toxicology Volume 48 ; 48 >
+    au < testing ; Annual Review of Pharmacology and Toxicology Volume 49 ; 49 >
+    au < testing ; Annual Review of Pharmacology and Toxicology Volume 50 ; 50 >
   }
 
 
