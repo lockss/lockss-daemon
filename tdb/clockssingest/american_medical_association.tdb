@@ -16,8 +16,8 @@
     
     param[base_url] = http://archderm.ama-assn.org/
     
-    au < testing ; 2008 ; Archives of Dermatology Volume 144 ; 144 >
-    au < manifest ; 2009 ; Archives of Dermatology Volume 145 ; 145 >
+    au < ready ; 2008 ; Archives of Dermatology Volume 144 ; 144 >
+    au < wanted ; 2009 ; Archives of Dermatology Volume 145 ; 145 >
   
   }
 
@@ -40,8 +40,8 @@
     
     param[base_url] = http://archfaci.ama-assn.org/
     
-    au < manifest ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 >
-    au < manifest ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 >
+    au < wanted ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 >
+    au < wanted ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 >
   
   }
 
