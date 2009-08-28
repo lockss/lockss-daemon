@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.9 2009-08-28 21:15:01 thib_gc Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.10 2009-08-28 23:46:29 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
    * prepended with a letter reminiscent of the journal title's main
    * keyword.
    */
-  protected String subTreeRoot = "cgi/reprint";
+  protected String subTreeRoot = "cgi/reprintframed";
   protected Pattern pat = Pattern.compile("/[^/]+/[^/]+/[^/]+",
 				  Pattern.CASE_INSENSITIVE);
 
