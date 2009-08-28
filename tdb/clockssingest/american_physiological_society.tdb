@@ -17,7 +17,7 @@
     param[base_url] = http://advan.physiology.org/
     
     au < ready ; 2008 ; Advances in Physiology Education Volume 32 ; 32 >
-    au < testing ; 2009 ; Advances in Physiology Education Volume 33 ; 33 >
+    au < ready ; 2009 ; Advances in Physiology Education Volume 33 ; 33 >
   
   }
 
@@ -40,10 +40,10 @@
     
     param[base_url] = http://ajpcell.physiology.org/
     
-    au < testing ; 2008 ; American Journal of Physiology - Cell Physiology Volume 294 ; 294 >
-    au < testing ; 2008 ; American Journal of Physiology - Cell Physiology Volume 295 ; 295 >
-    au < manifest ; 2009 ; American Journal of Physiology - Cell Physiology Volume 296 ; 296 >
-    au < manifest ; 2009 ; American Journal of Physiology - Cell Physiology Volume 297 ; 297 >
+    au < ready ; 2008 ; American Journal of Physiology - Cell Physiology Volume 294 ; 294 >
+    au < ready ; 2008 ; American Journal of Physiology - Cell Physiology Volume 295 ; 295 >
+    au < wanted ; 2009 ; American Journal of Physiology - Cell Physiology Volume 296 ; 296 >
+    au < wanted ; 2009 ; American Journal of Physiology - Cell Physiology Volume 297 ; 297 >
   
   }
 
@@ -55,8 +55,8 @@
     
     param[base_url] = http://ajpendo.physiology.org/
     
-    au < manifest ; 2008 ; American Journal of Physiology - Endocrinology and Metablism Volume 294 ; 294 >
-    au < manifest ; 2008 ; American Journal of Physiology - Endocrinology and Metablism Volume 295 ; 295 >
+    au < wanted ; 2008 ; American Journal of Physiology - Endocrinology and Metablism Volume 294 ; 294 >
+    au < wanted ; 2008 ; American Journal of Physiology - Endocrinology and Metablism Volume 295 ; 295 >
     au < manifest ; 2009 ; American Journal of Physiology - Endocrinology and Metablism Volume 296 ; 296 >
     au < manifest ; 2009 ; American Journal of Physiology - Endocrinology and Metablism Volume 297 ; 297 >
   
