@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataExtractorTestCase.java,v 1.1 2009-05-22 19:14:55 dshr Exp $
+ * $Id: MetadataExtractorTestCase.java,v 1.2 2009-08-29 04:26:28 dshr Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public abstract class MetadataExtractorTestCase extends LockssTestCase {
   public static String URL = "http://www.example.com/";
 
   public static String MIME_TYPE_HTML = "text/html";
+  public static String MIME_TYPE_XML = "application/xml";
   public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
 
   protected MetadataExtractor extractor = null;
