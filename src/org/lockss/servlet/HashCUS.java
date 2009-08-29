@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.42 2009-04-07 20:21:41 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.42.6.1 2009-08-29 04:37:42 tlipkis Exp $
  */
 
 /*
@@ -35,23 +35,28 @@ package org.lockss.servlet;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-//import java.util.List;
 import java.text.*;
 import java.security.*;
 import org.mortbay.html.*;
 import org.mortbay.util.B64Code;
+
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
-import org.lockss.daemon.*;
 
 /** Hash a CUS on demand, display the results and filtered input stream
  */
 public class HashCUS extends LockssServlet {
-  static int MAX_RECORD = 100 * 1024;
+  /** If set to a positive number, the record of each filtered stream is
+   * truncated to that many bytes.  -1 means no limit */
+  static final String PARAM_TRUNCATE_FILETERD_STREAM = 
+    Configuration.PREFIX + "hashcus.truncateFilteredStream";
+  static final long DEFAULT_TRUNCATE_FILETERD_STREAM = 100 * 1024;
 
   static final String KEY_AUID = "auid";
   static final String KEY_URL = "url";
@@ -520,8 +525,11 @@ public class HashCUS extends LockssServlet {
 	  recordFile = File.createTempFile("HashCUS", ".tmp");
 	  recordStream =
 	    new BufferedOutputStream(new FileOutputStream(recordFile));
+	  long truncateTo =
+	    CurrentConfig.getLongParam(PARAM_TRUNCATE_FILETERD_STREAM,
+				       DEFAULT_TRUNCATE_FILETERD_STREAM);
 	  digest = new RecordingMessageDigest(digest, recordStream,
-					      MAX_RECORD);
+					      truncateTo);
 // 	  recordFile.deleteOnExit();
 	}
 
