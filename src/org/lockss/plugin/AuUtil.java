@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.22 2008-01-30 00:48:43 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.22.26.1 2009-08-29 04:37:31 tlipkis Exp $
  */
 
 /*
@@ -253,6 +253,13 @@ public class AuUtil {
   public static int getIntValue(Object value, int dfault) {
     if (value instanceof Integer) {
       return ((Integer)value).intValue();
+    }
+    return dfault;
+  }
+
+  public static String getStringValue(Object value, String dfault) {
+    if (value instanceof String) {
+      return (String)value;
     }
     return dfault;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.29.22.2 2009-08-04 02:19:44 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.29.22.3 2009-08-29 04:37:31 tlipkis Exp $
  */
 
 /*
@@ -125,6 +125,95 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 	   " which should not be implemented in FollowLinkCrawler");
     } catch (UnsupportedOperationException usoe) {
     }
+  }
+
+  public void testNoProxy() {
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    mau.addUrl(startUrl);
+    crawler.makeUrlCacher(startUrl);
+    MyMockUrlCacher mmuc = mau.lastMmuc;
+    assertEquals(null, mmuc.proxyHost);
+  }
+
+  public void testGlobalProxy() {
+    Properties p = new Properties();
+    p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
+    p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
+    p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    ConfigurationUtil.addFromProps(p);
+
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    mau.addUrl(startUrl);
+    crawler.makeUrlCacher(startUrl);
+    MyMockUrlCacher mmuc = mau.lastMmuc;
+    assertEquals("pr.wub", mmuc.proxyHost);
+    assertEquals(27, mmuc.proxyPort);
+  }
+
+  public void testAuProxyOverride() throws Exception {
+    Properties p = new Properties();
+    p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
+    p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
+    p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    ConfigurationUtil.addFromProps(p);
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				 "proxy.host:8086");
+    mau.setConfiguration(auConfig);
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    mau.addUrl(startUrl);
+    crawler.makeUrlCacher(startUrl);
+    MyMockUrlCacher mmuc = mau.lastMmuc;
+    assertEquals("proxy.host", mmuc.proxyHost);
+    assertEquals(8086, mmuc.proxyPort);
+  }
+
+  public void testAuProxyOnly() throws Exception {
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				 "proxy.host:8087");
+    mau.setConfiguration(auConfig);
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    mau.addUrl(startUrl);
+    crawler.makeUrlCacher(startUrl);
+    MyMockUrlCacher mmuc = mau.lastMmuc;
+    assertEquals("proxy.host", mmuc.proxyHost);
+    assertEquals(8087, mmuc.proxyPort);
+  }
+
+  public void testAuProxyDisable() throws Exception {
+    Properties p = new Properties();
+    p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
+    p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
+    p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    ConfigurationUtil.addFromProps(p);
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				 "direct");
+    mau.setConfiguration(auConfig);
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    mau.addUrl(startUrl);
+    crawler.makeUrlCacher(startUrl);
+    MyMockUrlCacher mmuc = mau.lastMmuc;
+    assertEquals(null, mmuc.proxyHost);
+  }
+
+  public void testIllAuProxy() throws Exception {
+    Properties p = new Properties();
+    p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
+    p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
+    p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    ConfigurationUtil.addFromProps(p);
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				 "proxy.host:8086:foo");
+    mau.setConfiguration(auConfig);
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    mau.addUrl(startUrl);
+    crawler.makeUrlCacher(startUrl);
+    MyMockUrlCacher mmuc = mau.lastMmuc;
+    assertEquals("pr.wub", mmuc.proxyHost);
+    assertEquals(27, mmuc.proxyPort);
   }
 
   public void testMakeUrlCacher() {
