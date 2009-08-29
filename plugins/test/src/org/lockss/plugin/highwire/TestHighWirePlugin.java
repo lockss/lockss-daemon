@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.9 2009-05-27 16:39:04 dshr Exp $
+ * $Id: TestHighWirePlugin.java,v 1.9.4.1 2009-08-29 05:21:35 dshr Exp $
  */
 
 /*
@@ -169,5 +169,9 @@ public class TestHighWirePlugin extends LockssTestCase {
     assertNotNull(plugin.getArticleIteratorFactory("text/html"));
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory("text/html"))
 	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
+  }
+  public void testGetDefaultArticleMimeType() {
+    assertNotNull(plugin.getDefaultArticleMimeType());
+    assertEquals("text/html", plugin.getDefaultArticleMimeType());
   }
 }
