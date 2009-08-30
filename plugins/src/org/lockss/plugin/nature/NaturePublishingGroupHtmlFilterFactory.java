@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.4 2009-08-25 18:39:45 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.5 2009-08-30 00:07:18 thib_gc Exp $
  */
 
 /*
@@ -84,6 +84,16 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
                                                                               "^ad ")),
 
 
+        /*
+         * At the top of various pages, the institution name is
+         * visible; remove it.
+         * 
+         * Remove <div class="logon ..."
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+                                                                              "class",
+                                                                              "^logon ")),
+                                                                              
         /*
          * Articles can have user-posted comments. We need to first
          * remove the paragraph that appears when there are no
