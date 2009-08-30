@@ -137,4 +137,69 @@
 
   }
 
+  {
+
+    title <
+      name = The Forum
+    >
+
+    param[journal_abbr] = forum
+
+    au < testing ; 2008 ; The Forum Volume 6 ; 6 >
+    au < testing ; 2009 ; The Forum Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Forum for Health Economics & Policy
+    >
+
+    param[journal_abbr] = fhep
+
+    au < testing ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
+    au < testing ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Global Economy Journal
+    >
+
+    param[journal_abbr] = gej
+
+    au < testing ; 2008 ; Global Economy Journal Volume 8 ; 8 >
+    au < testing ; 2009 ; Global Economy Journal Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Global Jurist
+    >
+
+    param[journal_abbr] = gj
+
+    au < testing ; 2008 ; Global Jurist Volume 8 ; 8 >
+    au < testing ; 2009 ; Global Jurist Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = International Commentary on Evidence
+    >
+
+    param[journal_abbr] = ice
+
+    au < testing ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
+    au < testing ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
+
+  }
+
 }
