@@ -145,8 +145,8 @@
 
     param[journal_abbr] = forum
 
-    au < testing ; 2008 ; The Forum Volume 6 ; 6 >
-    au < testing ; 2009 ; The Forum Volume 7 ; 7 >
+    au < ready ; 2008 ; The Forum Volume 6 ; 6 >
+    au < ready ; 2009 ; The Forum Volume 7 ; 7 >
 
   }
 
@@ -158,8 +158,8 @@
 
     param[journal_abbr] = fhep
 
-    au < testing ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
-    au < testing ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
+    au < ready ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
+    au < ready ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
 
   }
 
@@ -171,8 +171,8 @@
 
     param[journal_abbr] = gej
 
-    au < testing ; 2008 ; Global Economy Journal Volume 8 ; 8 >
-    au < testing ; 2009 ; Global Economy Journal Volume 9 ; 9 >
+    au < ready ; 2008 ; Global Economy Journal Volume 8 ; 8 >
+    au < ready ; 2009 ; Global Economy Journal Volume 9 ; 9 >
 
   }
 
@@ -184,8 +184,8 @@
 
     param[journal_abbr] = gj
 
-    au < testing ; 2008 ; Global Jurist Volume 8 ; 8 >
-    au < testing ; 2009 ; Global Jurist Volume 9 ; 9 >
+    au < ready ; 2008 ; Global Jurist Volume 8 ; 8 >
+    au < ready ; 2009 ; Global Jurist Volume 9 ; 9 >
 
   }
 
@@ -197,8 +197,73 @@
 
     param[journal_abbr] = ice
 
-    au < testing ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
-    au < testing ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
+    au < ready ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
+    au < ready ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Biostatistics
+    >
+
+    param[journal_abbr] = ijb
+
+    au < testing ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
+    au < testing ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Chemical Reactor Engineering
+    >
+
+    param[journal_abbr] = ijcre
+
+    au < testing ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
+    au < testing ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Emerging Electric Power Systems
+    >
+
+    param[journal_abbr] = ijeeps
+
+    au < testing ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
+    au < testing ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Food Engineering
+    >
+
+    param[journal_abbr] = ijfe
+
+    au < testing ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
+    au < testing ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Nursing Education Scholarship
+    >
+
+    param[journal_abbr] = ijnes
+
+    au < testing ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
+    au < testing ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
 
   }
 

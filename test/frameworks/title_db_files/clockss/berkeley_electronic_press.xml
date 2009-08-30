@@ -599,6 +599,196 @@
    </property>
   </property>
 
+  <property name="TheInternationalJournalofBiostatistics4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="title" value="The International Journal of Biostatistics Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="TheInternationalJournalofBiostatistics5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="title" value="The International Journal of Biostatistics Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofChemicalReactorEngineering6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofChemicalReactorEngineering7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofEmergingElectricPowerSystems9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofEmergingElectricPowerSystems10">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofFoodEngineering4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="title" value="International Journal of Food Engineering Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijfe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofFoodEngineering5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="title" value="International Journal of Food Engineering Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijfe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofNursingEducationScholarship5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="title" value="International Journal of Nursing Education Scholarship Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijnes" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="InternationalJournalofNursingEducationScholarship6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="title" value="International Journal of Nursing Education Scholarship Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijnes" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
  </property>
 
 </lockss-config>
