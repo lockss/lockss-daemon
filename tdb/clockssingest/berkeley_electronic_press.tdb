@@ -73,4 +73,68 @@
 
   }
 
+  {
+
+    title <
+      name = Business and Politics
+    >
+
+    param[journal_abbr] = bap
+
+    au < testing ; 2008 ; Business and Politics Volume 10 ; 10 >
+    au < testing ; 2009 ; Business and Politics Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = California Journal of Politics and Policy
+    >
+
+    param[journal_abbr] = cjpp
+
+    au < testing ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Capitalism and Society
+    >
+
+    param[journal_abbr] = cas
+
+    au < testing ; 2008 ; Capitalism and Society Volume 3 ; 3 >
+    au < testing ; 2009 ; Capitalism and Society Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Chemical Product and Process Modeling
+    >
+
+    param[journal_abbr] = cppm
+
+    au < testing ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
+    au < testing ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = The Economists' Voice
+    >
+
+    param[journal_abbr] = ev
+
+    au < testing ; 2008 ; The Economists' Voice Volume 5 ; 5 >
+    au < testing ; 2009 ; The Economists' Voice Volume 6 ; 6 >
+
+  }
+
 }

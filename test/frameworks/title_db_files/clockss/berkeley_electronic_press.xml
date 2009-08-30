@@ -58,12 +58,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="3" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="asjcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
    </property>
   </property>
 
@@ -77,12 +77,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="4" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="asjcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
    </property>
   </property>
 
@@ -96,12 +96,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="8" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
    </property>
   </property>
 
@@ -115,12 +115,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="9" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
    </property>
   </property>
 
@@ -134,12 +134,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="8" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
    </property>
   </property>
 
@@ -153,12 +153,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="9" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
    </property>
   </property>
 
@@ -172,12 +172,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="8" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
    </property>
   </property>
 
@@ -191,12 +191,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="9" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
    </property>
   </property>
 
@@ -210,12 +210,12 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
-    <property name="key" value="volume" />
-    <property name="value" value="3" />
-   </property>
-   <property name="param.3">
     <property name="key" value="journal_abbr" />
     <property name="value" value="bis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
    </property>
   </property>
 
@@ -229,12 +229,183 @@
     <property name="value" value="http://www.bepress.com/" />
    </property>
    <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bis" />
+   </property>
+   <property name="param.3">
     <property name="key" value="volume" />
     <property name="value" value="4" />
    </property>
-   <property name="param.3">
+  </property>
+
+  <property name="BusinessandPolitics10">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="journal_abbr" />
-    <property name="value" value="bis" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="BusinessandPolitics11">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="CaliforniaJournalofPoliticsandPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="California Journal of Politics and Policy" />
+   <property name="title" value="California Journal of Politics and Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cjpp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="CapitalismandSociety3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Capitalism and Society" />
+   <property name="title" value="Capitalism and Society Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="CapitalismandSociety4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Capitalism and Society" />
+   <property name="title" value="Capitalism and Society Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="ChemicalProductandProcessModeling3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="title" value="Chemical Product and Process Modeling Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cppm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="ChemicalProductandProcessModeling4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="title" value="Chemical Product and Process Modeling Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cppm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="TheEconomistsVoice5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="title" value="The Economists' Voice Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="TheEconomistsVoice6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="title" value="The Economists' Voice Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
    </property>
   </property>
 
