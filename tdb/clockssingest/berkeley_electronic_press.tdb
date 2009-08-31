@@ -275,8 +275,8 @@
 
     param[journal_abbr] = jafio
 
-    au < testing ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
-    au < testing ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
+    au < ready ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
+    au < ready ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
 
   }
 
@@ -288,8 +288,8 @@
 
     param[journal_abbr] = jbvela
 
-    au < testing ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
-    au < testing ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
+    au < ready ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
 
   }
 
@@ -301,8 +301,8 @@
 
     param[journal_abbr] = jcim
 
-    au < testing ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
-    au < testing ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
+    au < ready ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
+    au < ready ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
 
   }
 
@@ -314,8 +314,8 @@
 
     param[journal_abbr] = jdpa
 
-    au < testing ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
-    au < testing ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
+    au < ready ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
+    au < ready ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
 
   }
 
@@ -327,8 +327,8 @@
 
     param[journal_abbr] = jhsem
 
-    au < testing ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
-    au < testing ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
+    au < ready ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
+    au < ready ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
 
   }
 
@@ -340,8 +340,8 @@
 
     param[journal_abbr] = jirspa
 
-    au < testing ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
-    au < testing ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
+    au < ready ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
 
   }
 
@@ -353,8 +353,8 @@
 
     param[journal_abbr] = jioe
 
-    au < testing ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
-    au < testing ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
+    au < ready ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
 
   }
 
@@ -366,8 +366,8 @@
 
     param[journal_abbr] = jqas
 
-    au < testing ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
-    au < testing ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
+    au < ready ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
+    au < ready ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
 
   }
 
@@ -379,7 +379,7 @@
 
     param[journal_abbr] = jtse
 
-    au < testing ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
+    au < ready ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
 
   }
 
@@ -391,7 +391,7 @@
 
     param[journal_abbr] = jtl
 
-    au < testing ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
+    au < ready ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
 
   }
 
@@ -403,8 +403,8 @@
 
     param[journal_abbr] = lehr
 
-    au < testing ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
-    au < testing ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
+    au < ready ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
+    au < ready ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
 
   }
 
@@ -416,8 +416,8 @@
 
     param[journal_abbr] = ldr
 
-    au < testing ; 2008 ; The Law and Development Review Volume 1 ; 1 >
-    au < testing ; 2009 ; The Law and Development Review Volume 2 ; 2 >
+    au < ready ; 2008 ; The Law and Development Review Volume 1 ; 1 >
+    au < ready ; 2009 ; The Law and Development Review Volume 2 ; 2 >
 
   }
 
@@ -429,7 +429,7 @@
 
     param[journal_abbr] = mwjhr
 
-    au < manifest ; 2008 ; Muslim World Journal of Human Rights Volume 4 ; 4 >
+    au < wanted ; 2008 ; Muslim World Journal of Human Rights Volume 4 ; 4 >
 
   }
 
@@ -441,8 +441,8 @@
 
     param[journal_abbr] = ngs
 
-    au < manifest ; 2008 ; New Global Studies Volume 2 ; 2 >
-    au < manifest ; 2009 ; New Global Studies Volume 3 ; 3 >
+    au < wanted ; 2008 ; New Global Studies Volume 2 ; 2 >
+    au < wanted ; 2009 ; New Global Studies Volume 3 ; 3 >
 
   }
 
@@ -454,8 +454,8 @@
 
     param[journal_abbr] = peps
 
-    au < manifest ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
-    au < manifest ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
+    au < wanted ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
+    au < wanted ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
 
   }
 
@@ -467,7 +467,7 @@
 
     param[journal_abbr] = pso_poverty
 
-    au < manifest ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >
+    au < wanted ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >
 
   }
 
@@ -479,8 +479,8 @@
 
     param[journal_abbr] = rle
 
-    au < manifest ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
-    au < manifest ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
+    au < wanted ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
+    au < wanted ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
 
   }
 
@@ -492,8 +492,8 @@
 
     param[journal_abbr] = romsjournal
 
-    au < manifest ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
-    au < manifest ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
+    au < wanted ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
+    au < wanted ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
 
   }
 
@@ -505,8 +505,8 @@
 
     param[journal_abbr] = rmeef
 
-    au < manifest ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
-    au < manifest ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
+    au < wanted ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
+    au < wanted ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
 
   }
 
@@ -518,8 +518,8 @@
 
     param[journal_abbr] = sagmb
 
-    au < manifest ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
-    au < manifest ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
+    au < wanted ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
+    au < wanted ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
 
   }
 
@@ -531,7 +531,7 @@
 
     param[journal_abbr] = scid
 
-    au < manifest ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 >
+    au < wanted ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 >
 
   }
 
@@ -543,8 +543,8 @@
 
     param[journal_abbr] = selt
 
-    au < manifest ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
-    au < manifest ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
+    au < wanted ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
+    au < wanted ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
 
   }
 
@@ -556,8 +556,8 @@
 
     param[journal_abbr] = snde
 
-    au < manifest ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
-    au < manifest ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
+    au < wanted ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
+    au < wanted ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
 
   }
 
@@ -569,8 +569,8 @@
 
     param[journal_abbr] = til
 
-    au < manifest ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
-    au < manifest ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
+    au < wanted ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
+    au < wanted ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
 
   }
 
@@ -582,8 +582,8 @@
 
     param[journal_abbr] = wpsr
 
-    au < manifest ; 2008 ; World Political Science Review Volume 4 ; 4 >
-    au < manifest ; 2009 ; World Political Science Review Volume 5 ; 5 >
+    au < wanted ; 2008 ; World Political Science Review Volume 4 ; 4 >
+    au < wanted ; 2009 ; World Political Science Review Volume 5 ; 5 >
 
   }
 
