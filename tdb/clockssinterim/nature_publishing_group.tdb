@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Nature Publishing Group
+  >
+
+  plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
+  param[base_url] = http://www.nature.com/
+  implicit < status ; year ; name ; param[year] ; param[volume_name] >
+  
+  {
+
+    title <
+      name = Nature
+    >
+
+    param[journal_id] = nature
+
+    au < ready ; 2008 ; Nature Volume 451 ; 2008 ; 451 >
+    au < ready ; 2008 ; Nature Volume 452 ; 2008 ; 452 >
+
+    au < ready ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
+
+  }
+
+}
