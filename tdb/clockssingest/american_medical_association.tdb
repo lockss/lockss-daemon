@@ -80,7 +80,7 @@
     param[base_url] = http://archneur.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Neurology Volume 65 ; 65 >
-    au < manifest ; 2009 ; Archives of Neurology Volume 66 ; 66 >
+    au < wanted ; 2009 ; Archives of Neurology Volume 66 ; 66 >
   
   }
 
@@ -93,7 +93,7 @@
     param[base_url] = http://archopht.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 >
-    au < manifest ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
+    au < wanted ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
   
   }
 
@@ -106,7 +106,7 @@
     param[base_url] = http://archotol.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 >
-    au < manifest ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 >
+    au < wanted ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 >
   
   }
 
@@ -119,7 +119,7 @@
     param[base_url] = http://archpedi.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 >
-    au < manifest ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 >
+    au < wanted ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 >
   
   }
 
