@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleXmlMetadataExtractor.java,v 1.1.2.2 2009-08-29 05:21:35 dshr Exp $
+ * $Id: SimpleXmlMetadataExtractor.java,v 1.1.2.3 2009-08-31 16:50:18 dshr Exp $
  */
 
 /*
@@ -38,13 +38,13 @@ import org.lockss.plugin.*;
 
 public class SimpleXmlMetadataExtractor implements MetadataExtractor {
   static Logger log = Logger.getLogger("SimpleXmlMetadataExtractor");
-  private Map tagMap;
+  private Map<String, String> tagMap;
 
   /**
    * @param tagMap a map from XML tags to the property name in the
    * extracted Metadata object
    */
-  public SimpleXmlMetadataExtractor(Map tagMap) {
+  public SimpleXmlMetadataExtractor(Map<String, String> tagMap) {
     this.tagMap = tagMap;
   }
 
