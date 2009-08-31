@@ -16,8 +16,8 @@
 
     param[journal_abbr] = asjcl
 
-    au < ready ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
-    au < ready ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
+    au < released ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
+    au < released ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
 
   }
 
@@ -29,8 +29,8 @@
 
     param[journal_abbr] = bejeap
 
-    au < ready ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
-    au < ready ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
+    au < released ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
+    au < released ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
 
   }
 
@@ -42,8 +42,8 @@
 
     param[journal_abbr] = bejm
 
-    au < ready ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
-    au < ready ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
+    au < released ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
+    au < released ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
 
   }
 
@@ -55,8 +55,8 @@
 
     param[journal_abbr] = bejte
 
-    au < ready ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
-    au < ready ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
+    au < released ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
+    au < released ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
 
   }
 
@@ -68,8 +68,8 @@
 
     param[journal_abbr] = bis
 
-    au < ready ; 2008 ; Basic Income Studies Volume 3 ; 3 >
-    au < ready ; 2009 ; Basic Income Studies Volume 4 ; 4 >
+    au < released ; 2008 ; Basic Income Studies Volume 3 ; 3 >
+    au < released ; 2009 ; Basic Income Studies Volume 4 ; 4 >
 
   }
 
@@ -81,8 +81,8 @@
 
     param[journal_abbr] = bap
 
-    au < ready ; 2008 ; Business and Politics Volume 10 ; 10 >
-    au < ready ; 2009 ; Business and Politics Volume 11 ; 11 >
+    au < released ; 2008 ; Business and Politics Volume 10 ; 10 >
+    au < released ; 2009 ; Business and Politics Volume 11 ; 11 >
 
   }
 
@@ -94,7 +94,7 @@
 
     param[journal_abbr] = cjpp
 
-    au < ready ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
+    au < released ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
 
   }
 
@@ -106,8 +106,8 @@
 
     param[journal_abbr] = cas
 
-    au < ready ; 2008 ; Capitalism and Society Volume 3 ; 3 >
-    au < ready ; 2009 ; Capitalism and Society Volume 4 ; 4 >
+    au < released ; 2008 ; Capitalism and Society Volume 3 ; 3 >
+    au < released ; 2009 ; Capitalism and Society Volume 4 ; 4 >
 
   }
 
@@ -119,8 +119,8 @@
 
     param[journal_abbr] = cppm
 
-    au < ready ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
-    au < ready ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
+    au < released ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
+    au < released ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
 
   }
 
@@ -132,8 +132,8 @@
 
     param[journal_abbr] = ev
 
-    au < ready ; 2008 ; The Economists' Voice Volume 5 ; 5 >
-    au < ready ; 2009 ; The Economists' Voice Volume 6 ; 6 >
+    au < released ; 2008 ; The Economists' Voice Volume 5 ; 5 >
+    au < released ; 2009 ; The Economists' Voice Volume 6 ; 6 >
 
   }
 
@@ -145,8 +145,8 @@
 
     param[journal_abbr] = forum
 
-    au < ready ; 2008 ; The Forum Volume 6 ; 6 >
-    au < ready ; 2009 ; The Forum Volume 7 ; 7 >
+    au < released ; 2008 ; The Forum Volume 6 ; 6 >
+    au < released ; 2009 ; The Forum Volume 7 ; 7 >
 
   }
 
@@ -158,8 +158,8 @@
 
     param[journal_abbr] = fhep
 
-    au < ready ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
-    au < ready ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
+    au < released ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
+    au < released ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
 
   }
 
@@ -171,8 +171,8 @@
 
     param[journal_abbr] = gej
 
-    au < ready ; 2008 ; Global Economy Journal Volume 8 ; 8 >
-    au < ready ; 2009 ; Global Economy Journal Volume 9 ; 9 >
+    au < released ; 2008 ; Global Economy Journal Volume 8 ; 8 >
+    au < released ; 2009 ; Global Economy Journal Volume 9 ; 9 >
 
   }
 
@@ -184,8 +184,8 @@
 
     param[journal_abbr] = gj
 
-    au < ready ; 2008 ; Global Jurist Volume 8 ; 8 >
-    au < ready ; 2009 ; Global Jurist Volume 9 ; 9 >
+    au < released ; 2008 ; Global Jurist Volume 8 ; 8 >
+    au < released ; 2009 ; Global Jurist Volume 9 ; 9 >
 
   }
 
@@ -197,8 +197,8 @@
 
     param[journal_abbr] = ice
 
-    au < ready ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
-    au < ready ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
+    au < released ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
+    au < released ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
 
   }
 
@@ -210,8 +210,8 @@
 
     param[journal_abbr] = ijb
 
-    au < ready ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
-    au < ready ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
+    au < released ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
+    au < released ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
 
   }
 
@@ -223,8 +223,8 @@
 
     param[journal_abbr] = ijcre
 
-    au < ready ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
-    au < ready ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
+    au < released ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
+    au < released ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
 
   }
 
@@ -236,8 +236,8 @@
 
     param[journal_abbr] = ijeeps
 
-    au < ready ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
-    au < ready ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
+    au < released ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
+    au < released ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
 
   }
 
@@ -249,8 +249,8 @@
 
     param[journal_abbr] = ijfe
 
-    au < ready ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
+    au < released ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
 
   }
 
@@ -262,8 +262,8 @@
 
     param[journal_abbr] = ijnes
 
-    au < ready ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
-    au < ready ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
+    au < released ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
+    au < released ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
 
   }
 
@@ -275,8 +275,8 @@
 
     param[journal_abbr] = jafio
 
-    au < ready ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
-    au < ready ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
+    au < released ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
+    au < released ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
 
   }
 
@@ -288,8 +288,8 @@
 
     param[journal_abbr] = jbvela
 
-    au < ready ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
-    au < ready ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
+    au < released ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
 
   }
 
@@ -301,8 +301,8 @@
 
     param[journal_abbr] = jcim
 
-    au < ready ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
-    au < ready ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
+    au < released ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
+    au < released ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
 
   }
 
@@ -314,8 +314,8 @@
 
     param[journal_abbr] = jdpa
 
-    au < ready ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
-    au < ready ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
+    au < released ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
+    au < released ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
 
   }
 
@@ -327,8 +327,8 @@
 
     param[journal_abbr] = jhsem
 
-    au < ready ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
-    au < ready ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
+    au < released ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
+    au < released ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
 
   }
 
@@ -340,8 +340,8 @@
 
     param[journal_abbr] = jirspa
 
-    au < ready ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
-    au < ready ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
+    au < released ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
 
   }
 
@@ -353,8 +353,8 @@
 
     param[journal_abbr] = jioe
 
-    au < ready ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
-    au < ready ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
+    au < released ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
 
   }
 
@@ -366,8 +366,8 @@
 
     param[journal_abbr] = jqas
 
-    au < ready ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
-    au < ready ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
+    au < released ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
+    au < released ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
 
   }
 
@@ -379,7 +379,7 @@
 
     param[journal_abbr] = jtse
 
-    au < ready ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
+    au < released ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
 
   }
 
@@ -391,7 +391,7 @@
 
     param[journal_abbr] = jtl
 
-    au < ready ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
+    au < released ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
 
   }
 
@@ -403,8 +403,8 @@
 
     param[journal_abbr] = lehr
 
-    au < ready ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
-    au < ready ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
+    au < released ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
+    au < released ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
 
   }
 
@@ -416,8 +416,8 @@
 
     param[journal_abbr] = ldr
 
-    au < ready ; 2008 ; The Law and Development Review Volume 1 ; 1 >
-    au < ready ; 2009 ; The Law and Development Review Volume 2 ; 2 >
+    au < released ; 2008 ; The Law and Development Review Volume 1 ; 1 >
+    au < released ; 2009 ; The Law and Development Review Volume 2 ; 2 >
 
   }
 
