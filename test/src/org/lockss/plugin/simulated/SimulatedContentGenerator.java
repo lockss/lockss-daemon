@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.31 2009-08-29 23:17:55 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.32 2009-08-31 16:31:03 dshr Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class SimulatedContentGenerator {
     "<entry><key>branch</key><value>%3</value></entry>" +
     "</map>" +
     "<ce:doi>%1.%2/%3</ce:doi>" +  // Elsevier DOI
-    "<XXX>%1.%2/%3</XXX>" + // Springer DOI
+    "<ArticleDOI>%1.%2/%3</ArticleDOI>" + // Springer DOI
     "<foo>bar</foo>";
   /**
    * Name of top directory in which the content is generated.
@@ -173,6 +173,7 @@ public class SimulatedContentGenerator {
   private boolean fillOutFilenames = false;
   private boolean oddBranchesHaveContent = false;
   private int fileTypes = FILE_TYPE_TXT;
+  private boolean isSpringer = false;
 
   private boolean isAbnormalFile = false;
   private String abnormalBranchStr = "";
@@ -202,6 +203,7 @@ public class SimulatedContentGenerator {
     boolean arc = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", false);
     boolean zip = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doZipFile", false);
     boolean tar = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", false);
+    boolean springer = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer", false);
     logger.debug3("SimulatedContentGenerator: arc " + arc + " zip " + zip +
 		  " tar " + tar);
     if (arc) {
@@ -228,6 +230,9 @@ public class SimulatedContentGenerator {
       }
     } else {
       ret = new SimulatedContentGenerator(rootPath);
+      if (springer) {
+	ret.isSpringer = true;
+      }
     }
     return ret;
   }
@@ -579,6 +584,32 @@ public class SimulatedContentGenerator {
 			     int branchNum, boolean isAbnormal) {
     try {
       String fileName = getFileName(fileNum, FILE_TYPE_PDF);
+      File bodyRef = null;
+      File pdf = null;
+      if (isSpringer) {
+	String bodyRefName = "BodyRef";
+	String pdfName = "PDF";
+	bodyRef = new File(parentDir, bodyRefName);
+	if (!bodyRef.exists()) {
+	  if (bodyRef.mkdir()) {
+	    pdf = new File(bodyRef, pdfName);
+	    if (pdf.mkdir()) {
+	      parentDir = pdf;
+	    } else {
+	      throw new PluginException("Can't create  " +
+					pdf.getAbsolutePath());
+	    }
+	  } else {
+	    throw new PluginException("Can't create  " +
+				      bodyRef.getAbsolutePath());
+	  }
+	} else {
+	  pdf = new File(bodyRef, pdfName);
+	  parentDir = pdf;
+	}
+      }
+      logger.debug2("Create PDF at " + parentDir.getAbsolutePath() + "/" +
+		    fileName);
       File file = new File(parentDir, fileName);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
@@ -589,6 +620,13 @@ public class SimulatedContentGenerator {
       pw.flush();
       pw.close();
       fos.close();
+      if (bodyRef != null) {
+	generateIndexFile(bodyRef, null);
+      }
+      if (pdf != null) {
+	generateIndexFile(pdf, null);
+      }
+	
     } catch (Exception e) { System.err.println(e); }
   }
   private void createJpegFile(File parentDir, int fileNum, int depth,
@@ -809,6 +847,9 @@ public class SimulatedContentGenerator {
       break;
     case FILE_TYPE_XML:
       fileName.append( ".xml");
+      if (isSpringer) {
+	fileName.append(".Meta");
+      }
       break;
     }
     return fileName.toString();
