@@ -1,5 +1,5 @@
 /*
- * $Id: MockExplodedPlugin.java,v 1.1 2007-10-01 08:13:21 tlipkis Exp $
+ * $Id: MockExplodedPlugin.java,v 1.2 2009-09-01 20:56:32 dshr Exp $
  */
 
 /*
@@ -35,13 +35,18 @@ package org.lockss.crawler;
 import org.lockss.test.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.exploded.*;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.extractor.*;
 
 /** MockExplodedPlugin extends ExplodedPlugin to register new AUs with
  * MockLockssDaemon */
 
 public class MockExplodedPlugin extends ExplodedPlugin {
+
+  private ArticleIteratorFactory articleIteratorFactory = null;
+  private MetadataExtractorFactory metadataExtractorFactory = null;
+  private String defaultArticleMimeType = null;
 
   public MockExplodedPlugin() {
     super();
@@ -64,4 +69,49 @@ public class MockExplodedPlugin extends ExplodedPlugin {
     daemon.setNodeManager(new MockNodeManager(), au);
   }
 
+  /**
+   * Return a {@link MetadataExtractor} that knows how to extract URLs from
+   * content of the given MIME type
+   * @param contentType content type to get a content parser for
+   * @param au the AU in question
+   * @return A MetadataExtractor or null
+   */
+  public MetadataExtractor getMetadataExtractor(String contentType,
+						ArchivalUnit au) {
+    MetadataExtractor ret = null;
+    if (metadataExtractorFactory != null) {
+      try {
+	ret = metadataExtractorFactory.createMetadataExtractor(contentType);
+      } catch (PluginException e) {
+	throw new RuntimeException(e);
+      }
+    }
+    return ret;
+  }
+  public void setMetadataExtractorFactory(MetadataExtractorFactory mef) {
+    metadataExtractorFactory = mef;
+  }
+
+  /**
+   * Returns the article iterator factory for the mime type, if any
+   * @param contentType the content type
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+    return articleIteratorFactory;
+  }
+  public void setArticleIteratorFactory(ArticleIteratorFactory aif) {
+    articleIteratorFactory = aif;
+  }
+
+  /**
+   * Returns the default mime type of articles in this AU
+   * @return the default MimeType
+   */
+  public String getDefaultArticleMimeType() {
+    return defaultArticleMimeType;
+  }
+  public void setDefaultArticleMimeType(String damt) {
+    defaultArticleMimeType = damt;
+  }
 }
