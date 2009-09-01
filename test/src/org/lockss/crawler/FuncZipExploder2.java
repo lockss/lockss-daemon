@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.7 2008-05-06 21:35:36 dshr Exp $
+ * $Id: FuncZipExploder2.java,v 1.8 2009-09-01 21:58:25 dshr Exp $
  */
 
 /*
@@ -43,10 +43,12 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.plugin.springer.*;
+import org.lockss.plugin.base.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.extractor.*;
 
 /**
  * Functional tests for the ZIP file exploder.  It
@@ -77,6 +79,14 @@ public class FuncZipExploder2 extends LockssTestCase {
     URL_PREFIX + "/ART=2005_721/BodyRef/PDF/109_2005_Article_721.pdf",
     URL_PREFIX + "/ART=2005_724/109_2005_Article_724.xml.meta",
     URL_PREFIX + "/ART=2005_724/BodyRef/PDF/109_2005_Article_724.pdf",
+  };
+
+  // The DOIs in the sample
+  private static final Set<String> doiSet = new HashSet<String>();
+  static {
+    doiSet.add("10.1007/s00109-005-0721-x");
+    doiSet.add("10.1007/s00109-005-0724-7");
+    doiSet.add("10.1007/s00109-005-0719-4");
   };
 
   static String[] url2 = {
@@ -232,6 +242,60 @@ public class FuncZipExploder2 extends LockssTestCase {
       // This test is screwed up by the use of shouldBeCached() in
       // ZipExploder() to find the AU to store the URL in.
       //assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
+    }
+    // Now check the DOIs
+    checkDOIs();
+  }
+
+  private void checkDOIs() {
+    List<ArchivalUnit> auList =
+      theDaemon.getPluginManager().getAllAus();
+    for (int i = 0; i < auList.size(); i++) {
+      ArchivalUnit au = auList.get(i);
+      assertNotNull(au);
+      log.debug("AU " + i + " : " + au);
+      Plugin plugin = au.getPlugin();
+      assertNotNull(plugin);
+      log.debug("Exploded Plugin: " + plugin);
+      if (plugin instanceof MockExplodedPlugin) {
+	MockExplodedPlugin mep = (MockExplodedPlugin)plugin;
+	String articleMimeType = "application/pdf";
+	mep.setDefaultArticleMimeType(articleMimeType);
+	mep.setArticleIteratorFactory(new SpringerArticleIteratorFactory());
+	mep.setMetadataExtractorFactory(new SpringerMetadataExtractorFactory());
+	MetadataExtractor me = plugin.getMetadataExtractor(articleMimeType, au);
+	assertNotNull(me);
+	assert(me instanceof
+	       SpringerMetadataExtractorFactory.SpringerMetadataExtractor);
+	int count = 0;
+	Set foundDoiSet = new HashSet();
+	for (Iterator it = au.getArticleIterator(); it.hasNext(); ) {
+	  BaseCachedUrl cu = (BaseCachedUrl)it.next();
+	  assertNotNull(cu);
+	  assert(cu instanceof CachedUrl);
+	  String contentType = cu.getContentType();
+	  assertNotNull(contentType);
+	  assert(contentType.toLowerCase().startsWith(articleMimeType));
+	  log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
+	  count++;
+	  try {
+	    Metadata md = me.extract(cu);
+	    assertNotNull(md);
+	    String doi = md.getDOI();
+	    assertNotNull(doi);
+	    log.debug(cu.getUrl() + " doi " + doi);
+	    String doi2 = md.getProperty(Metadata.KEY_DOI);
+	    assert(doi2.startsWith(Metadata.PROTOCOL_DOI));
+	    assertEquals(doi, doi2.substring(Metadata.PROTOCOL_DOI.length()));
+	    foundDoiSet.add(doi);
+	  } catch (Exception ex) {
+	    fail(ex.toString());
+	  }
+	}
+	log.debug("Article count is " + count);
+	assertEquals(doiSet.size(), count);
+	assertEquals(doiSet, foundDoiSet);
+      }
     }
   }
 
