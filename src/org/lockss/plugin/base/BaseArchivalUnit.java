@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.134.4.2 2009-08-28 23:03:16 dshr Exp $
+ * $Id: BaseArchivalUnit.java,v 1.134.4.3 2009-09-02 01:35:36 tlipkis Exp $
  */
 
 /*
@@ -56,8 +56,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public static final long
     DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
-  public static final long
-    MIN_FETCH_DELAY = 6 * Constants.SECOND;
+
+  /** Minimum fetch delay.  Plugin-specified fetch delay may be used only
+   * to increase the delay. */
+  public static final String PARAM_MIN_FETCH_DELAY =
+    Configuration.PREFIX+"baseau.minFetchDelay";
+  public static final long DEFAULT_MIN_FETCH_DELAY = 6 * Constants.SECOND;;
 
   /** Default fetch rate limiter source for plugins that don't specify
    * au_fetch_rate_limiter_source.  Can be "au" or "plugin"; default is
@@ -226,12 +230,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     paramMap.putUrl(KEY_AU_BASE_URL, baseUrl);
 
     // get the fetch delay
+    long minFetchDelay = CurrentConfig.getLongParam(PARAM_MIN_FETCH_DELAY,
+						    DEFAULT_MIN_FETCH_DELAY);
     long fetchDelay =
-      (config.containsKey(KEY_PAUSE_TIME)
-       ? Math.max(config.getTimeInterval(KEY_PAUSE_TIME, defaultFetchDelay),
-		  MIN_FETCH_DELAY)
-       : paramMap.getLong(KEY_AU_FETCH_DELAY,
-			  Math.max(defaultFetchDelay, MIN_FETCH_DELAY)));
+      Math.max(minFetchDelay,
+	       (config.containsKey(KEY_PAUSE_TIME)
+		? config.getTimeInterval(KEY_PAUSE_TIME, defaultFetchDelay)
+		: paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay)));
     logger.debug2("Set fetch delay to " + fetchDelay);
     paramMap.putLong(KEY_AU_FETCH_DELAY, fetchDelay);
 

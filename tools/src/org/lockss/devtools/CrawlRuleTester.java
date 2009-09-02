@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.27 2009-05-23 18:06:26 dshr Exp $
+ * $Id: CrawlRuleTester.java,v 1.27.4.1 2009-09-02 01:35:36 tlipkis Exp $
  */
 
 /*
@@ -70,8 +70,6 @@ public class CrawlRuleTester extends Thread {
   public static final int URL_SUMMARY_MESSAGE = 3;
   public static final int TEST_SUMMARY_MESSAGE = 4;
 
-  public static long MIN_DELAY = BaseArchivalUnit.MIN_FETCH_DELAY;
-
   private String m_baseUrl;
   private CrawlSpec m_crawlSpec;
   private int m_crawlDepth;
@@ -98,7 +96,10 @@ public class CrawlRuleTester extends Thread {
                          CrawlSpec crawlSpec) {
     super("crawlrule tester");
     m_crawlDepth = crawlDepth;
-    m_crawlDelay = Math.max(crawlDelay, MIN_DELAY);
+    long minFetchDelay =
+      CurrentConfig.getLongParam(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,
+				 BaseArchivalUnit.DEFAULT_MIN_FETCH_DELAY);
+    m_crawlDelay = Math.max(crawlDelay, minFetchDelay);
     m_baseUrl = baseUrl;
     m_crawlSpec = crawlSpec;
 
