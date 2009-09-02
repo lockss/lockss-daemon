@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.5 2009-08-20 23:11:09 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.6 2009-09-02 00:43:05 dshr Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class ArchiveEntry {
   private CrawlSpec crawlSpec;
   private Exploder exploder;
   private String archiveName;
+  private String explodedAUBaseUrlStem;
   // Output fields
   private String baseUrl;
   private String restOfUrl;
@@ -65,23 +66,29 @@ public class ArchiveEntry {
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec) {
-    setup(name, bytes, date, is, crawlSpec, (Exploder) null, null);
+    setup(name, bytes, date, is, crawlSpec, (Exploder) null, null, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec, Exploder exploder) {
-    setup(name, bytes, date, is, crawlSpec, exploder, null);
+    setup(name, bytes, date, is, crawlSpec, exploder, null, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec, Exploder exploder,
 		      String archiveName) {
-    setup(name, bytes, date, is, crawlSpec, exploder, archiveName);
+    setup(name, bytes, date, is, crawlSpec, exploder, archiveName, null);
+  }
+
+  public ArchiveEntry(String name, long bytes, long date, InputStream is,
+		      CrawlSpec crawlSpec, Exploder exploder,
+		      String archiveName, String baseStem) {
+    setup(name, bytes, date, is, crawlSpec, exploder, archiveName, baseStem);
   }
 
   private void setup(String name, long bytes, long date, InputStream is,
 		     CrawlSpec crawlSpec, Exploder exploder,
-		     String archiveName) {
+		     String archiveName, String baseStem) {
     if (name.startsWith("./")) {
       this.name = name.substring(2);
     } else {
@@ -93,6 +100,7 @@ public class ArchiveEntry {
     this.crawlSpec = crawlSpec;
     this.exploder = exploder;
     this.archiveName = archiveName;
+    explodedAUBaseUrlStem = baseStem;
     baseUrl = null;
     restOfUrl = null;
     header = null;
@@ -128,6 +136,10 @@ public class ArchiveEntry {
 
   public String  getArchiveName() {
     return archiveName;
+  }
+
+  public String  getExplodedAUBaseUrlStem() {
+    return explodedAUBaseUrlStem;
   }
 
   // Output field accessors

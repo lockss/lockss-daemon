@@ -1,5 +1,5 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
+ * $Id: WileyExploderHelper.java,v 1.4 2009-09-02 00:43:05 dshr Exp $
  */
 
 /*
@@ -92,7 +92,11 @@ public class WileyExploderHelper implements ExploderHelper {
   }
 
   public void process(ArchiveEntry ae) {
-    String baseUrl = BASE_URL_STEM;
+    String baseUrlStem = ae.getExplodedAUBaseUrlStem();
+    if (baseUrlStem == null) {
+      baseUrlStem = BASE_URL_STEM;
+    }
+    String baseUrl = baseUrlStem;
     // Parse the name
     String[] pathElements = ae.getName().split("/");
     if (pathElements.length < minimumPathLength) {

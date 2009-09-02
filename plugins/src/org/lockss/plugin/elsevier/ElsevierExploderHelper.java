@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.8 2009-08-20 23:11:08 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.9 2009-09-02 00:43:05 dshr Exp $
  */
 
 /*
@@ -101,7 +101,11 @@ public class ElsevierExploderHelper implements ExploderHelper {
       return;
     }
     // The base URL contains the ISSN from the archive name
-    String baseUrl = BASE_URL + issn + "/";
+    String baseUrlStem = ae.getExplodedAUBaseUrlStem();
+    if (baseUrlStem == null) {
+      baseUrlStem = BASE_URL;
+    }
+    String baseUrl = baseUrlStem + issn + "/";
     // Parse the name
     String fullName = ae.getName();
     String[] pathElements = fullName.split("/");

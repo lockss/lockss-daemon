@@ -34,6 +34,18 @@ public class TestWileyExploderHelper extends LockssTestCase {
     // XXX - check AuProps
   }
 
+  public void testExplodedAuBaseUrlStem() throws Exception {
+    String urlStem = "http://somebody.clockss.org/";
+    ArchiveEntry ae = new ArchiveEntry(basePath + year + pathStem + pdfPath,
+				       7654, 0, null, null, null, null,
+				       urlStem);
+    WileyExploderHelper eeh = new WileyExploderHelper();
+
+    eeh.process(ae);
+    assertEquals(ae.getBaseUrl(), urlStem + basePath);
+    assertEquals(ae.getRestOfUrl(), pathStem + pdfPath);
+  }
+
   public void testProcessCorrectSgmEntry() throws Exception {
     ArchiveEntry ae = new ArchiveEntry(basePath + year + pathStem + sgmPath,
 				      76543, 0, null, null);

@@ -65,6 +65,34 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     }
   }
 
+  public void testExplodedAuBaseUrlStem() throws Exception {
+    String urlStem = "http://somebody.clockss.org/";
+    for (int i = 0; i < journalPath.length; i++) {
+      for (int j = 0; j < issuePath.length; j++) {
+        for (int k = 0; k < articlePath.length; k++) {
+          String archiveName = "http://www.exmp.com/" + journalPath[i] + ".tar";
+	  ArchiveEntry ae = new ArchiveEntry(issuePath[j] + articlePath[k] +
+					     pdfPath, (long)7654, (long)0,
+					     (InputStream) null,
+					     (CrawlSpec) null,
+					     (Exploder) null,
+					     archiveName, urlStem);
+	  ElsevierExploderHelper eeh = new ElsevierExploderHelper();
+
+	  eeh.process(ae);
+	  assertEquals(urlStem + journalPath[i] + "/", ae.getBaseUrl());
+	  assertEquals(issuePath[j] + articlePath[k] + pdfPath,
+		       ae.getRestOfUrl());
+	  assertEquals("application/pdf",
+		       ae.getHeaderFields().get("Content-Type"));
+	  assertEquals("7654", ae.getHeaderFields().get("Content-Length"));
+	  // XXX - check addText
+	  // XXX - check auProps
+	}
+      }
+    }
+  }
+
   public void testProcessCorrectXmlEntry() throws Exception {
     for (int i = 0; i < journalPath.length; i++) {
       for (int j = 0; j < issuePath.length; j++) {
