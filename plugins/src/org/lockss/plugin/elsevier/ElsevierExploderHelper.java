@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.9 2009-09-02 00:43:05 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.10 2009-09-02 19:37:26 dshr Exp $
  */
 
 /*
@@ -163,12 +163,41 @@ public class ElsevierExploderHelper implements ExploderHelper {
   }
 
   private boolean checkISSN(String s) {
-    boolean ret = true;
-    // XXX
+    char[] c = s.toCharArray();
     // The ISSN is 7 digits followed by either a digit or X
     // The last digit is a check digit as described here:
     // http://en.wikipedia.org/wiki/ISSN
-    return ret;
+    if (c.length != 8) {
+      return false;
+    }
+    int checksum = 0;
+    for (int i = 0; i < c.length-1; i++) {
+      if (!Character.isDigit(c[i])) {
+	return false;
+      }
+      try {
+	int j = Integer.parseInt(Character.toString(c[i]));
+	checksum += j * (c.length - i);
+      } catch (NumberFormatException ex) {
+	return false;
+      }
+    }
+    if (Character.isDigit(c[c.length-1])) {
+      try {
+	int j = Integer.parseInt(Character.toString(c[c.length-1]));
+	checksum += j;
+      } catch (NumberFormatException ex) {
+	return false;
+      }
+    } else if (c[c.length-1] == 'X') {
+      checksum += 10;
+    } else {
+      return false;
+    }
+    if ((checksum % 11) != 0) {
+      return false;
+    }
+    return true;
   }
 
   private String archiveNameToISSN(ArchiveEntry ae) {
