@@ -420,5 +420,172 @@
     au < released ; 2009 ; The Law and Development Review Volume 2 ; 2 >
 
   }
+  
+  {
 
+    title <
+      name = Muslim World Journal of Human Rights
+    >
+
+    param[journal_abbr] = mwjhr
+
+    au < ready ; 2008 ; Muslim World Journal of Human Rights Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = New Global Studies
+    >
+
+    param[journal_abbr] = ngs
+
+    au < ready ; 2008 ; New Global Studies Volume 2 ; 2 >
+    au < ready ; 2009 ; New Global Studies Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Peace Economics, Peace Science and Public Policy
+    >
+
+    param[journal_abbr] = peps
+
+    au < ready ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
+    au < ready ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
+
+  }
+
+  {
+
+    title <
+      name = Poverty & Public Policy
+    >
+
+    param[journal_abbr] = pso_poverty
+
+    au < ready ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Law & Economics
+    >
+
+    param[journal_abbr] = rle
+
+    au < ready ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
+    au < ready ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Marketing Science
+    >
+
+    param[journal_abbr] = romsjournal
+
+    au < ready ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
+    au < ready ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Middle East Economics and Finance
+    >
+
+    param[journal_abbr] = rmeef
+
+    au < ready ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
+    au < ready ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Statistical Applications in Genetics and Molecular Biology
+    >
+
+    param[journal_abbr] = sagmb
+
+    au < ready ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
+    au < ready ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Statistical Communications in Infectious Diseases
+    >
+
+    param[journal_abbr] = scid
+
+    au < ready ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Studies in Ethics, Law, and Technology
+    >
+
+    param[journal_abbr] = selt
+
+    au < ready ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
+    au < ready ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Studies in Nonlinear Dynamics & Econometrics
+    >
+
+    param[journal_abbr] = snde
+
+    au < ready ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
+    au < ready ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
+
+  }
+
+  {
+
+    title <
+      name = Theoretical Inquiries in Law
+    >
+
+    param[journal_abbr] = til
+
+    au < ready ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
+    au < ready ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = World Political Science Review
+    >
+
+    param[journal_abbr] = wpsr
+
+comment[wpsr4] = daemon bug
+
+    au < ready ; 2009 ; World Political Science Review Volume 5 ; 5 >
+
+  }
+  
 }
