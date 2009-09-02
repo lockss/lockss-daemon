@@ -30,8 +30,8 @@
 
         au < doNotProcess ; African Affairs Volume 105 ; 105 >
         au < released ; African Affairs Volume 106 ; 106 >
-        au < testing ; African Affairs Volume 107 ; 107 >
-        au < testing ; African Affairs Volume 108 ; 108 >
+        au < ready ; African Affairs Volume 107 ; 107 >
+        au < ready ; African Affairs Volume 108 ; 108 >
 
       }
 
@@ -760,8 +760,8 @@
         au < released ; British Journal of Social Work Volume 35 ; 35 >
         au < doNotProcess ; British Journal of Social Work Volume 36 ; 36 >
         au < released ; British Journal of Social Work Volume 37 ; 37 >
-        au < testing ; British Journal of Social Work Volume 38 ; 38 >
-        au < testing ; British Journal of Social Work Volume 39 ; 39 >
+        au < ready ; British Journal of Social Work Volume 38 ; 38 >
+        au < ready ; British Journal of Social Work Volume 39 ; 39 >
 
       }
 
@@ -781,13 +781,13 @@
 
         au < ready ; British Medical Bulletin Volume 72 ; 72 >
         au < released ; British Medical Bulletin Volume 73-74 ; 83 >
-        au < testing ; British Medical Bulletin Volume 84 ; 84 >
-        au < testing ; British Medical Bulletin Volume 85 ; 85 >
-        au < testing ; British Medical Bulletin Volume 86 ; 86 >
-        au < testing ; British Medical Bulletin Volume 87 ; 87 >
-        au < testing ; British Medical Bulletin Volume 88 ; 88 >
-        au < testing ; British Medical Bulletin Volume 89 ; 89 >
-        au < testing ; British Medical Bulletin Volume 90 ; 90 >
+        au < ready ; British Medical Bulletin Volume 84 ; 84 >
+        au < ready ; British Medical Bulletin Volume 85 ; 85 >
+        au < ready ; British Medical Bulletin Volume 86 ; 86 >
+        au < ready ; British Medical Bulletin Volume 87 ; 87 >
+        au < ready ; British Medical Bulletin Volume 88 ; 88 >
+        au < ready ; British Medical Bulletin Volume 89 ; 89 >
+        au < ready ; British Medical Bulletin Volume 90 ; 90 >
 
 
       }
@@ -807,8 +807,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Bulletin of the London Mathematical Society Volume 39 ; 39 >
-        au < testing ; Bulletin of the London Mathematical Society Volume 40 ; 40 >
-        au < testing ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
+        au < ready ; Bulletin of the London Mathematical Society Volume 40 ; 40 >
+        au < ready ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
 
       }
 
@@ -866,7 +866,7 @@
         param[base_url] = http://camqtly.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; The Cambridge Quarterly Volume 34 ; 34 >
+        au < exists ; The Cambridge Quarterly Volume 34 ; 34 >
         au < doNotProcess ; The Cambridge Quarterly Volume 35 ; 35 >
 
       }
@@ -3335,7 +3335,7 @@
         param[base_url] = http://jicj.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of International Criminal Justice Volume 3 ; 3 >
+        au < exists ; Journal of International Criminal Justice Volume 3 ; 3 >
         au < doNotProcess ; Journal of International Criminal Justice Volume 4 ; 4 >
 
       }
@@ -3829,6 +3829,9 @@
 
         au < released ; Journal of the ICRU Volume 5 ; 5 >
         au < doNotProcess ; Journal of the ICRU Volume 6 ; 6 >
+        au < testing ; Journal of the ICRU Volume 7 ; 7 >
+        au < testing ; Journal of the ICRU Volume 8 ; 8 >
+        au < testing ; Journal of the ICRU Volume 9 ; 9 >
 
       }
 
@@ -3847,6 +3850,11 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of the London Mathematical Society Volume 75 ; 75 >
+        au < testing ; Journal of the London Mathematical Society Volume 76 ; 76 >
+        au < testing ; Journal of the London Mathematical Society Volume 77 ; 77 >
+        au < testing ; Journal of the London Mathematical Society Volume 78 ; 78 >
+        au < testing ; Journal of the London Mathematical Society Volume 79 ; 79 >
+        au < testing ; Journal of the London Mathematical Society Volume 80 ; 80 >
 
       }
 
@@ -3873,6 +3881,8 @@
         plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
         param[base_url] = http://jrma.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
+
+comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Journal of the Royal Musical Association Volume 130 ; 130 >
         au < released ; Journal of the Royal Musical Association Volume 131 ; 131 >
@@ -3905,6 +3915,9 @@
 
         au < released ; The Journal of Theological Studies Volume 56 ; 56 >
         au < doNotProcess ; The Journal of Theological Studies Volume 57 ; 57 >
+        au < testing ; The Journal of Theological Studies Volume 58 ; 58 >
+        au < testing ; The Journal of Theological Studies Volume 59 ; 59 >
+        au < testing ; The Journal of Theological Studies Volume 60 ; 60 >
 
       }
 
@@ -3922,7 +3935,7 @@
         param[base_url] = http://jtopol.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Journal of Topology Volume 1 ; 1 >
+        au < ready ; Journal of Topology Volume 1 ; 1 >
 
       }
 
@@ -5186,7 +5199,7 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Rheumatology Volume 44 ; 44 >
-        au < testing ; Rheumatology Volume 45 ; 45 >
+        au < ready ; Rheumatology Volume 45 ; 45 >
         au < ready ; Rheumatology Volume 46 ; 46 >
 
       }
@@ -5215,7 +5228,7 @@
         param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
         implicit < status ; name ; param[volume_name] >
 
-        au < testing ; Schizophrenia Bulletin Volume 31 ; 31 >
+        au < exists ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
         au < ready ; Schizophrenia Bulletin Volume 33 ; 33 >
 
@@ -5474,8 +5487,8 @@
         au < released ; Toxicological Sciences Volume 86 ; 86 >
         au < released ; Toxicological Sciences Volume 87 ; 87 >
         au < released ; Toxicological Sciences Volume 88 ; 88 >
-        au < testing ; Toxicological Sciences Volume 89 ; 89 >
-        au < testing ; Toxicological Sciences Volume 90 ; 90 >
+        au < exists ; Toxicological Sciences Volume 89 ; 89 >
+        au < exists ; Toxicological Sciences Volume 90 ; 90 >
         au < doNotProcess ; Toxicological Sciences Volume 91 ; 91 >
         au < ready ; Toxicological Sciences Volume 92 ; 92 >
         au < ready ; Toxicological Sciences Volume 93 ; 93 >
@@ -5485,6 +5498,18 @@
         au < ready ; Toxicological Sciences Volume 97 ; 97 >
         au < ready ; Toxicological Sciences Volume 98 ; 98 >
         au < ready ; Toxicological Sciences Volume 99 ; 99 >
+        au < testing ; Toxicological Sciences Volume 100 ; 100 >
+        au < testing ; Toxicological Sciences Volume 101 ; 101 >
+        au < testing ; Toxicological Sciences Volume 102 ; 102 >
+        au < testing ; Toxicological Sciences Volume 103 ; 103 >
+        au < testing ; Toxicological Sciences Volume 104 ; 104 >
+        au < testing ; Toxicological Sciences Volume 105 ; 105 >
+        au < testing ; Toxicological Sciences Volume 106 ; 106 >
+        au < testing ; Toxicological Sciences Volume 107 ; 107 >
+        au < testing ; Toxicological Sciences Volume 108 ; 108 >
+        au < testing ; Toxicological Sciences Volume 109 ; 109 >
+        au < testing ; Toxicological Sciences Volume 110 ; 110 >
+        au < testing ; Toxicological Sciences Volume 111 ; 111 >
 
       }
 
@@ -5503,8 +5528,8 @@
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Trusts & Trustees Volume 12 ; 12 >
-        au < testing ; Trusts & Trustees Volume 13 ; 13 >
-        au < testing ; Trusts & Trustees Volume 14 ; 14 >
+        au < ready ; Trusts & Trustees Volume 13 ; 13 >
+        au < ready ; Trusts & Trustees Volume 14 ; 14 >
         au < ready ; Trusts & Trustees Volume 15 ; 15 >
 
       }
