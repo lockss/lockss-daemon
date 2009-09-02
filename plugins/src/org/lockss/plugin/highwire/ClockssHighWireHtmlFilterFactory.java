@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.4 2009-08-28 22:05:41 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.5 2009-09-02 08:51:44 thib_gc Exp $
  */
 
 /*
@@ -62,18 +62,29 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         new TagNameFilter("script"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring"),
+        // Contains institution name (e.g. SAGE Publications)
         HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea"),
+        // Contains institution name (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "inst_logo"),
+        // Contains institution name (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolbar"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav"),
         HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav"),
         HtmlNodeFilters.tagWithText("strong", "related", true),
         HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
-        // Contains the name of the institution:
-        HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolbar"),
-        // Contains the date and time:
+        // Contains the current year (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "copyright"),
+        // Contains the current year (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains the current date and time (e.g. American Medical Association)
         HtmlNodeFilters.tagWithAttribute("a", "target", "help"),
-        // Typically contains ads:
+        // Contains ads or variable banners (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "oas_top"),
+        // Contains ads or variable banners (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "oas_bottom"),
+        // Typically contains ads 
         new TagNameFilter("iframe"),
     };
 
