@@ -582,7 +582,7 @@
 
     param[journal_abbr] = wpsr
 
-comment[wpsr4] = daemon bug
+    comment[4] = malformed manifest page, ticket #1352
 
     au < ready ; 2009 ; World Political Science Review Volume 5 ; 5 >
 
