@@ -1,5 +1,5 @@
 /*
- * $Id: LockssSslListener.java,v 1.1 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: LockssSslListener.java,v 1.2 2009-09-03 00:53:40 tlipkis Exp $
  */
 
 /*
@@ -35,27 +35,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.jetty;
 
-import java.io.*;
 import java.net.*;
-import java.security.Principal;
+import java.security.*;
 import javax.net.ssl.*;
-// import java.security.KeyStore;
-// import java.security.cert.X509Certificate;
 
-import javax.servlet.http.*;
-import org.mortbay.jetty.servlet.*;
 import org.mortbay.http.*;
 import org.mortbay.util.*;
 
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.util.StringUtil;
-import org.lockss.account.*;
 
-import org.apache.commons.logging.Log;
-import org.mortbay.log.LogFactory;
-import org.mortbay.jetty.servlet.ServletSSL;
-import org.mortbay.util.*;
 
 /**
  * Extension of org.mortbay.http.SslListener that works with an externally
@@ -86,9 +76,12 @@ public class LockssSslListener extends SslListener {
     if (_keyManagerFactory == null) {
       return super.createFactory();
     }
+    RandomManager rmgr = LockssDaemon.getLockssDaemon().getRandomManager();
+    SecureRandom rng = rmgr.getSecureRandom();
+
     SSLContext context = SSLContext.getInstance(getProtocol());
     context.init(_keyManagerFactory.getKeyManagers(),
-		 null, new java.security.SecureRandom());
+		 null, rng);
     return context.getServerSocketFactory();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.99 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.100 2009-09-03 00:53:40 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     20 * Constants.WEEK;
 
   // Parameter keys for daemon managers
+  public static final String RANDOM_MANAGER = "RandomManager";
   public static final String ACCOUNT_MANAGER = "AccountManager";
   public static final String KEYSTORE_MANAGER = "KeystoreManager";
   public static final String ACTIVITY_REGULATOR = "ActivityRegulator";
@@ -132,6 +133,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   protected final ManagerDesc[] managerDescs = {
+    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
@@ -250,6 +252,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return true iff all managers have been started */
   public boolean isDaemonRunning() {
     return isAppRunning();
+  }
+
+  /**
+   * Return the LockssDaemon instance
+   */
+  public static LockssDaemon getLockssDaemon() {
+    return (LockssDaemon)theApp;
   }
 
   /** Return the LOCKSS user-agent string.
@@ -414,6 +423,16 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   public AccountManager getAccountManager() {
     return (AccountManager) getManager(ACCOUNT_MANAGER);
+  }
+
+  /**
+   * return the Random Manager
+   * @return RandomManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+
+  public RandomManager getRandomManager() {
+    return (RandomManager) getManager(RANDOM_MANAGER);
   }
 
   /**

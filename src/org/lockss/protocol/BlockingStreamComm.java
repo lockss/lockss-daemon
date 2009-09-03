@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.46 2009-08-09 07:39:21 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.47 2009-09-03 00:53:40 tlipkis Exp $
  */
 
 /*
@@ -956,13 +956,19 @@ public class BlockingStreamComm
     // Now create an SSLContext from the KeyManager
     SSLContext sslContext = null;
     try {
+      RandomManager rmgr = getDaemon().getRandomManager();
+      SecureRandom rng = rmgr.getSecureRandom();
+
       sslContext = SSLContext.getInstance(paramSslProtocol);
-      sslContext.init(kma, tma, null);
+      sslContext.init(kma, tma, rng);
       // Now create the SSL socket factories from the context
       sslServerSocketFactory = sslContext.getServerSocketFactory();
       sslSocketFactory = sslContext.getSocketFactory();
       log.info("SSL init successful");
     } catch (NoSuchAlgorithmException ex) {
+      log.error("Creating SSL context threw " + ex);
+      sslContext = null;
+    } catch (NoSuchProviderException ex) {
       log.error("Creating SSL context threw " + ex);
       sslContext = null;
     } catch (KeyManagementException ex) {

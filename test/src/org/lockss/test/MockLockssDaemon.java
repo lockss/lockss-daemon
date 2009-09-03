@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.64 2009-06-01 07:45:10 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.65 2009-09-03 00:53:39 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class MockLockssDaemon extends LockssDaemon {
   MailService mailService = null;
   AlertManager alertManager = null;
   AccountManager accountManager = null;
+  RandomManager randomManager = null;
   LockssKeyStoreManager keystoreManager = null;
   HashService hashService = null;
   SchedService schedService = null;
@@ -236,6 +237,18 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.ACCOUNT_MANAGER, accountManager);
     }
     return accountManager;
+  }
+
+  /**
+   * return the random manager instance
+   * @return the RandomManager
+   */
+  public RandomManager getRandomManager() {
+    if (randomManager == null) {
+      randomManager = (RandomManager)newManager(RANDOM_MANAGER);
+      managerMap.put(LockssDaemon.RANDOM_MANAGER, randomManager);
+    }
+    return randomManager;
   }
 
   /**
@@ -590,6 +603,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setAccountManager(AccountManager accountMan) {
     accountManager = accountMan;
     managerMap.put(LockssDaemon.ACCOUNT_MANAGER, accountManager);
+  }
+
+  /**
+   * Set the RandomManager
+   * @param randomMan the new manager
+   */
+  public void setRandomManager(RandomManager randomMan) {
+    randomManager = randomMan;
+    managerMap.put(LockssDaemon.RANDOM_MANAGER, randomManager);
   }
 
   /**
