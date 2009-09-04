@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder.java,v 1.7 2008-05-06 21:35:36 dshr Exp $
+ * $Id: FuncTarExploder.java,v 1.8 2009-09-04 03:52:20 dshr Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.app.*;
 
 /**
  * Functional tests for the TAR file exploder.  It
@@ -148,18 +149,23 @@ public class FuncTarExploder extends LockssTestCase {
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-    props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME,
-		      MockExplodedPlugin.class.getName());
+    String explodedPluginName =
+      "org.lockss.crawler.FuncTarExploderMockExplodedPlugin";
+    props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
+    props.setProperty(LockssApp.MANAGER_PREFIX + LockssDaemon.PLUGIN_MANAGER,
+		      MyPluginManager.class.getName());
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
+    
     pluginMgr = theDaemon.getPluginManager();
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginMgr.startService();
     pluginMgr.startLoadablePlugins();
-    pluginMgr.loadBuiltinPlugin(MockExplodedPlugin.class);
+    String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
+    pluginMgr.ensurePluginLoaded(explodedPluginKey);
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -170,7 +176,9 @@ public class FuncTarExploder extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    theDaemon.stopDaemon();
+    if (theDaemon != null) {
+      theDaemon.stopDaemon();
+    }
     super.tearDown();
   }
 
@@ -450,4 +458,14 @@ public class FuncTarExploder extends LockssTestCase {
     }
   }
 
+  public static class MyPluginManager extends PluginManager {
+    MyPluginManager() {
+      super();
+    }
+    protected String getConfigurablePluginName(String pluginName) {
+      pluginName = MockExplodedPlugin.class.getName();
+      log.debug("getConfigurablePluginName returns " + pluginName);
+      return pluginName;
+    }
+  }
 }

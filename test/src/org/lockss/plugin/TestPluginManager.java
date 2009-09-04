@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.81 2009-06-19 08:29:02 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.82 2009-09-04 03:52:20 dshr Exp $
  */
 
 /*
@@ -704,7 +704,7 @@ public class TestPluginManager extends LockssTestCase {
     private String processOneRegistryJarThrowIf = null;
     private DaemonVersion mockDaemonVersion = null;
 
-    protected String getConfigurablePluginName() {
+    protected String getConfigurablePluginName(String pluginName) {
       return MyMockConfigurablePlugin.class.getName();
     }
     protected void processOneRegistryAu(ArchivalUnit au, Map tmpMap) {
