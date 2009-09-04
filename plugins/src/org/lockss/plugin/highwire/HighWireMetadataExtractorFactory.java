@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireMetadataExtractorFactory.java,v 1.1 2009-06-01 23:48:25 dshr Exp $
+ * $Id: HighWireMetadataExtractorFactory.java,v 1.2 2009-09-04 23:09:41 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 import java.io.*;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -58,12 +59,30 @@ public class HighWireMetadataExtractorFactory
     }
 
     public Metadata extract(CachedUrl cu) throws IOException {
-      Metadata ret = super.extract(cu);
-      // HighWire doesn't prefix the DOI in dc.Identifier with doi:
-      String content = ret.getProperty(Metadata.KEY_DOI);
-      if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
-	ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI + content);
+      final String reprintPrefix = "/cgi/reprint/";
+      final String reprintframedPrefix = "/cgi/reprintframed/";
+      
+      Metadata ret = null;
+      String reprintUrl = cu.getUrl();
+      if (reprintUrl.startsWith(reprintPrefix)) {
+        String reprintframedUrl = reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
+        CachedUrl reprintframedCu = cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
+        try {
+          if (reprintframedCu != null && reprintframedCu.hasContent()) {
+            ret = super.extract(reprintframedCu);
+            // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+            String content = ret.getProperty(Metadata.KEY_DOI);
+            if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
+              ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI
+                      + content);
+            }
+          }
+        }
+        finally {
+          AuUtil.safeRelease(reprintframedCu);
+        }        
       }
+      
       return ret;
     }
   }

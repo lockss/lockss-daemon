@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.10 2009-08-28 23:46:29 thib_gc Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.11 2009-09-04 23:09:41 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
   static Logger log = Logger.getLogger("HighWireArticleIterator");
 
   /*
-   * The HighWire URL structure means that the HTML for an article
+   * The HighWire URL structure means that the PDF for an article
    * is at a URL like http://apr.sagepub.com/cgi/reprint/34/2/135
    * where 34 is a volume name, 2 an issue name and 135 a page name.
    * In the best of cases all three are integers but they can all be
@@ -53,7 +53,7 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
    * prepended with a letter reminiscent of the journal title's main
    * keyword.
    */
-  protected String subTreeRoot = "cgi/reprintframed";
+  protected String subTreeRoot = "cgi/reprint";
   protected Pattern pat = Pattern.compile("/[^/]+/[^/]+/[^/]+",
 				  Pattern.CASE_INSENSITIVE);
 
