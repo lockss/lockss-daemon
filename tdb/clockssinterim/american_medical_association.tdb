@@ -33,5 +33,29 @@
     au < released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 >
   
   }
+
+  {
+  
+    title <
+      name = Archives of General Psychiatry
+    >
+    
+    param[base_url] = http://archpsyc.ama-assn.org/
+    
+    au < ready ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 >
+  
+  }  
+
+  {
+  
+    title <
+      name = Archives of Internal Medicine
+    >
+    
+    param[base_url] = http://archinte.ama-assn.org/
+    
+    au < ready ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
+  
+  }
   
 }

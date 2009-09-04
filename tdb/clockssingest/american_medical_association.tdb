@@ -54,7 +54,7 @@
     param[base_url] = http://archpsyc.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 >
-    au < testing ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 >
+    au < ready ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 >
   
   }
 
@@ -67,7 +67,7 @@
     param[base_url] = http://archinte.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 >
-    au < testing ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
+    au < ready ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
   
   }
 
@@ -80,7 +80,7 @@
     param[base_url] = http://archneur.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Neurology Volume 65 ; 65 >
-    au < wanted ; 2009 ; Archives of Neurology Volume 66 ; 66 >
+    au < testing ; 2009 ; Archives of Neurology Volume 66 ; 66 >
   
   }
 
@@ -93,7 +93,7 @@
     param[base_url] = http://archopht.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 >
-    au < wanted ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
+    au < testing ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
   
   }
 

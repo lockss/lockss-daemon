@@ -17,7 +17,7 @@
     param[journal_id] = aps
 
     au < manifest ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
-    au < wanted ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
+    au < testing ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
 
@@ -50,7 +50,7 @@
     param[journal_id] = aja
 
     au < manifest ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
-    au < wanted ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
+    au < testing ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
 
   }
 
@@ -512,9 +512,9 @@
     au < ready ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
     au < manifest ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
     au < ready ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
-    au < testing ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
+    au < ready ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
     au < ready ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
-    au < wanted ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
+    au < testing ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
     au < does_not_exist ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < does_not_exist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
 
