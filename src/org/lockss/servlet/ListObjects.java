@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.4 2009-06-09 00:57:27 dshr Exp $
+ * $Id: ListObjects.java,v 1.4.2.1 2009-09-04 23:12:23 thib_gc Exp $
  */
 
 /*
@@ -146,7 +146,9 @@ public class ListObjects extends LockssServlet {
 	  log.warning("listDOIs() threw " + e);
 	} catch (PluginException e) {
 	  log.warning("listDOIs() threw " + e);
-	}
+	} finally {
+          AuUtil.safeRelease(cu);
+        }
       }
     }
   }
@@ -171,7 +173,9 @@ public class ListObjects extends LockssServlet {
 	  log.warning("listDOIs() threw " + e);
 	} catch (PluginException e) {
 	  log.warning("listDOIs() threw " + e);
-	}
+	} finally {
+          AuUtil.safeRelease(cu);       
+        }
       }
     }
   }
