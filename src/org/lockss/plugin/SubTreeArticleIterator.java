@@ -1,10 +1,10 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.2 2009-06-09 00:57:27 dshr Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.3 2009-09-04 22:59:11 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,11 +34,11 @@ package org.lockss.plugin;
 
 import java.util.*;
 import java.util.regex.*;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.daemon.PluginException;
+
 
 /*
  * XXX This implementation builds an ArrayList of the CachedUrls.
@@ -46,21 +46,21 @@ import org.lockss.daemon.PluginException;
  * XXX internal iterators to avoid holding that much memory.
  */
 public class SubTreeArticleIterator implements Iterator {
+  
   static Logger log = Logger.getLogger("SubTreeArticleIterator");
+  
   String mimeType;
   ArchivalUnit au;
   Iterator it = null;
   ArrayList al = new ArrayList();
   String subTreeRoot = null;
   Pattern pat = null;
+  
   public SubTreeArticleIterator(String mimeType, ArchivalUnit au,
 				String subTreeRoot) {
-    this.mimeType = ( mimeType == null ? "text/html" : mimeType );
-    this.au = au;
-    this.subTreeRoot = subTreeRoot;
-    log.debug("Mime " + this.mimeType + " subTree " + this.subTreeRoot +
-	      " au " + this.au.toString());
+    this(mimeType, au, subTreeRoot, null);
   }
+  
   public SubTreeArticleIterator(String mimeType, ArchivalUnit au,
 				String subTreeRoot, Pattern pat) {
     this.mimeType = ( mimeType == null ? "text/html" : mimeType );
@@ -70,6 +70,7 @@ public class SubTreeArticleIterator implements Iterator {
     log.debug("Mime " + this.mimeType + " subTree " + this.subTreeRoot +
 	      " au " + this.au.toString());
   }
+  
   public void makeIterator() {
     Collection stems = au.getUrlStems();
     for (Iterator it = stems.iterator(); it.hasNext(); ) {
@@ -88,19 +89,24 @@ public class SubTreeArticleIterator implements Iterator {
 	Object n = chi.next();
 	if (n instanceof CachedUrl) {
 	    CachedUrl cu = (CachedUrl) n;
-	    String contentType = cu.getContentType();
-	    String mimeType2 =
-		HeaderUtil.getMimeTypeFromContentType(contentType);
-	    log.debug("CU: " + cu.getUrl() + " mime " + mimeType2);
-	    Matcher match = null;
-	    if (pat != null) {
-	      match = pat.matcher(cu.getUrl());
-	    }
-	    if (mimeType.equalsIgnoreCase(mimeType2) &&
-		(match == null || match.find())) {
-	      log.debug("Add " + cu.getUrl());
-	      al.add(cu);
-	    }
+            try {
+              String contentType = cu.getContentType();
+              String mimeType2 = HeaderUtil
+                  .getMimeTypeFromContentType(contentType);
+              log.debug("CU: " + cu.getUrl() + " mime " + mimeType2);
+              Matcher match = null;
+              if (pat != null) {
+                match = pat.matcher(cu.getUrl());
+              }
+              if (mimeType.equalsIgnoreCase(mimeType2)
+                  && (match == null || match.find())) {
+                log.debug("Add " + cu.getUrl());
+                al.add(cu);
+              }
+            }
+            finally {
+              AuUtil.safeRelease(cu);
+            }	    
 	} else if (n instanceof CachedUrlSet) {
 	    CachedUrlSet cus2 = (CachedUrlSet) n;
 	    log.debug("CUS: " + cus.getUrl());
@@ -112,19 +118,23 @@ public class SubTreeArticleIterator implements Iterator {
     al.trimToSize();
     it = al.iterator();
   }
+  
   public boolean hasNext() {
     if (it == null) {
       makeIterator();
     }
     return it.hasNext();
   }
+  
   public Object next() {
     if (it == null) {
       makeIterator();
     }
     return it.next();
   }
+  
   public void remove() {
     throw new UnsupportedOperationException();
   }
+  
 }

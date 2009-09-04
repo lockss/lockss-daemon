@@ -1,10 +1,10 @@
 /*
- * $Id: ElsevierMetadataExtractorFactory.java,v 1.1 2009-08-29 23:17:55 dshr Exp $
+ * $Id: ElsevierMetadataExtractorFactory.java,v 1.2 2009-09-04 22:59:11 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,14 +73,21 @@ public class ElsevierMetadataExtractorFactory
       if (StringUtil.endsWithIgnoreCase(pdfUrl, ".pdf")) {
 	String xmlUrl = pdfUrl.substring(0, pdfUrl.length()-4) + ".xml";
 	CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
-	if (xmlCu != null && xmlCu.hasContent()) {
-	  ret = super.extract(xmlCu);
-	  // Elsevier doesn't prefix the DOI in dc.Identifier with doi:
-	  String content = ret.getProperty(Metadata.KEY_DOI);
-	  if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
-	    ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI + content);
-	  }
-	}
+        try {
+          if (xmlCu != null && xmlCu.hasContent()) {
+            ret = super.extract(xmlCu);
+            // Elsevier doesn't prefix the DOI in dc.Identifier with doi:
+            String content = ret.getProperty(Metadata.KEY_DOI);
+            if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
+              ret
+                  .setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI
+                      + content);
+            }
+          }
+        }
+        finally {
+          AuUtil.safeRelease(xmlCu);
+        }	
       }
       return ret;
     }

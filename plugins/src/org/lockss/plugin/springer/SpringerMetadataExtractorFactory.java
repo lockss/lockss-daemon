@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerMetadataExtractorFactory.java,v 1.2 2009-09-01 21:58:25 dshr Exp $
+ * $Id: SpringerMetadataExtractorFactory.java,v 1.3 2009-09-04 22:59:11 thib_gc Exp $
  */
 
 /*
@@ -90,19 +90,24 @@ public class SpringerMetadataExtractorFactory
 	    pdfUrl.replaceFirst(part1, "").replaceFirst(part2, ".xml.meta");
 	  xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
 	}
-	if (xmlCu != null || xmlCu.hasContent()) {
-	  ret = super.extract(xmlCu);
-	  // Springer doesn't prefix the DOI in dc.Identifier with doi:
-	  content = ret.getProperty(Metadata.KEY_DOI);
-	} else {
-	  if (xmlCu == null) {
-	    log.debug("xmlCu is null");
+	try {
+	  if (xmlCu != null || xmlCu.hasContent()) {
+	    ret = super.extract(xmlCu);
+	    // Springer doesn't prefix the DOI in dc.Identifier with doi:
+	    content = ret.getProperty(Metadata.KEY_DOI);
 	  } else {
-	    log.debug(xmlCu.getUrl() + " no content");
+	    if (xmlCu == null) {
+	      log.debug("xmlCu is null");
+	    } else {
+	      log.debug(xmlCu.getUrl() + " no content");
+	    }
+	  }
+	  if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
+	    ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI + content);
 	  }
 	}
-	if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
-	  ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI + content);
+	finally {
+	  AuUtil.safeRelease(xmlCu);
 	}
       } else {
 	log.debug(pdfUrl + " doesn't match " + regex);
