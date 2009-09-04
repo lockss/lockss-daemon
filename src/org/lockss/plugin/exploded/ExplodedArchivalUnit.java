@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.7 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.7.18.1 2009-09-04 18:08:53 dshr Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.state.AuState;
 
 /**
@@ -47,14 +48,14 @@ import org.lockss.state.AuState;
  * @version 1.0
  */
 
-public class ExplodedArchivalUnit extends BaseArchivalUnit {
+public class ExplodedArchivalUnit extends DefinableArchivalUnit {
   private String m_explodedBaseUrl = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
   private ArrayList permissionPageUrls = new ArrayList();
   private ArrayList urlStems = new ArrayList();
 
-  public ExplodedArchivalUnit(ExplodedPlugin plugin) {
-    super(plugin);
+  public ExplodedArchivalUnit(ExplodedPlugin plugin, ExternalizableMap defMap) {
+    super(plugin, defMap);
   }
 
   public void loadAuConfigDescrs(Configuration config)
@@ -79,14 +80,6 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     addUrlStemToAU(m_explodedBaseUrl);
   }
 
-
-  // Called by RegistryPlugin iff any config below RegistryPlugin.PREFIX
-  // has changed
-  protected void setConfig(Configuration config,
-			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
-    // XXX
-  }
 
   /**
    * return a string that represents the plugin registry.  This is
@@ -193,5 +186,4 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
       super(startUrls, null, null, null);
     }
   }
-    
 }

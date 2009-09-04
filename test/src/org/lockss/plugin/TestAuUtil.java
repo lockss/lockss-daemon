@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.8 2009-03-11 06:24:43 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.8.8.1 2009-09-04 18:08:53 dshr Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class TestAuUtil extends LockssTestCase {
 
   public void testOkDeleteExtraFiles() {
     assertTrue(AuUtil.okDeleteExtraFiles(new MockArchivalUnit()));
-    assertFalse(AuUtil.okDeleteExtraFiles(new ExplodedArchivalUnit(new ExplodedPlugin())));
+    assertFalse(AuUtil.okDeleteExtraFiles(new ExplodedArchivalUnit(new ExplodedPlugin(), null)));
   }
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {

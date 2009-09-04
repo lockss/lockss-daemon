@@ -1,0 +1,65 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.crawler.FuncArcExploderMockExplodedPlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>FuncArcExploder MockExplodedPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>FuncArcExploder MockExplodedPlugin</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s/index.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_exploder_helper</string>
+    <string>org.lockss.crawler.FuncArcExploder.MyExploderHelper</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>application/pdf_article_iterator_factory</string>
+    <string>org.lockss.plugin.archiveit.ArchiveItArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItMetadataExtractorFactory</string>
+      </entry>
+      <entry>
+        <string>DublinCore</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Plugin for FuncArcExploder test</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.39.0</string>
+  </entry>
+</map>

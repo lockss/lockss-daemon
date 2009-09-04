@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.7.22.2 2009-09-01 22:17:47 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.7.22.3 2009-09-04 18:08:53 dshr Exp $
  */
 
 /*
@@ -175,8 +175,9 @@ public class FuncTarExploder2 extends LockssTestCase {
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-    props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME,
-		      MockExplodedPlugin.class.getName());
+    String explodedPluginName =
+      "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
+    props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -186,7 +187,8 @@ public class FuncTarExploder2 extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     pluginMgr.startService();
     pluginMgr.startLoadablePlugins();
-    pluginMgr.loadBuiltinPlugin(MockExplodedPlugin.class);
+    String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
+    pluginMgr.ensurePluginLoaded(explodedPluginKey);
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 

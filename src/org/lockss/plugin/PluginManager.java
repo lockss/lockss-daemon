@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.196 2009-06-19 08:29:02 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.196.2.1 2009-09-04 18:08:53 dshr Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class PluginManager
   public static final List NON_USER_SETTABLE_AU_PARAMS =
     Collections.unmodifiableList(new ArrayList());
 
-  static final String CONFIGURABLE_PLUGIN_NAME =
+  static final String DEFAULT_CONFIGURABLE_PLUGIN_NAME =
     DefinablePlugin.class.getName();
 
   private static Logger log = Logger.getLogger("PluginMgr");
@@ -246,9 +246,11 @@ public class PluginManager
   private Map titleSetMap;
   private TreeSet titleSets;
 
-  private boolean explodedPluginLoaded = false;
-  private Plugin explodedPlugin = null;
-
+  private static Map<String,String> configurablePluginNameMap = new HashMap();
+  static {
+    configurablePluginNameMap.put(".*ExplodedPlugin$",
+				  "org.lockss.plugin.exploded.ExplodedPlugin");
+  }
   public static final int PREFER_XML_PLUGIN = 0;
   public static final int PREFER_CLASS_PLUGIN = 1;
 
@@ -298,19 +300,6 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     initPluginRegistry(config);
-    Class explodedPluginClass = null;
-    String name = "org.lockss.plugin.exploded.ExplodedPlugin";
-    if (!explodedPluginLoaded) {
-      explodedPluginLoaded = true;
-      try {
-	explodedPluginClass = Class.forName(name);
-      } catch (ClassNotFoundException ex) {
-	log.warning("No class " + name);
-      }
-      if (explodedPluginClass != null) {
-	explodedPlugin = loadBuiltinPlugin(explodedPluginClass);
-      }
-    }
     configureAllPlugins(config);
     loadablePluginsReady = true;
   }
@@ -1157,7 +1146,9 @@ public class PluginManager
     // First look for a loadable plugin definition.
     try {
       log.debug3(pluginName + ": Looking for XML definition.");
-      Class c = Class.forName(getConfigurablePluginName(), true, loader);
+      Class c = Class.forName(getConfigurablePluginName(pluginName),
+			      true, loader);
+      log.debug3("Class is " + c.getName());
       DefinablePlugin xmlPlugin = (DefinablePlugin)c.newInstance();
       xmlPlugin.initPlugin(getDaemon(), pluginName, loader);
       if (isCompatible(xmlPlugin)) {
@@ -1247,6 +1238,7 @@ public class PluginManager
    * @return true if loaded
    */
   public boolean ensurePluginLoaded(String pluginKey) {
+    log.debug3("ensurePluginLoaded(" + pluginKey + ")");
     if (pluginMap.containsKey(pluginKey)) {
       return true;
     }
@@ -1307,8 +1299,24 @@ public class PluginManager
     pluginfoMap.remove(key);
   }
 
-  protected String getConfigurablePluginName() {
-    return CONFIGURABLE_PLUGIN_NAME;
+  /**
+   * Return the class name (of possibly a subclass) of DefinablePlugin
+   * that can be configured by an XML file.
+   * @param pluginName -  the class name of the plugin wanted
+   * @return - the class name of the configurable class that will implement
+   * the named plugin
+   */
+  protected String getConfigurablePluginName(String pluginName) {
+    String ret = DEFAULT_CONFIGURABLE_PLUGIN_NAME;
+    for (Iterator it = configurablePluginNameMap.keySet().iterator();
+	 it.hasNext(); ) {
+      String regex = (String)it.next();
+      if (pluginName.matches(regex)) {
+	ret = configurablePluginNameMap.get(regex);
+	break;
+      }
+    }
+    return ret;
   }
 
   /**
