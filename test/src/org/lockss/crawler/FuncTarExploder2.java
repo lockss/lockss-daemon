@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.7.22.3 2009-09-04 18:08:53 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.7.22.4 2009-09-05 18:03:02 dshr Exp $
  */
 
 /*
@@ -178,6 +178,7 @@ public class FuncTarExploder2 extends LockssTestCase {
     String explodedPluginName =
       "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, "1997");
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.4.28.1 2009-09-02 01:19:07 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.4.28.2 2009-09-05 18:03:02 dshr Exp $
  */
 
 /*
@@ -92,16 +92,15 @@ public class SpringerExploderHelper implements ExploderHelper {
   }
 
   public void process(ArchiveEntry ae) {
-    String baseUrlStem = ae.getExplodedAUBaseUrlStem();
-    if (baseUrlStem == null) {
-      baseUrlStem = BASE_URL_STEM;
-    }
-    String baseUrl = baseUrlStem;
+    String baseUrl = BASE_URL_STEM;
     // Parse the name
     String[] pathElements = ae.getName().split("/");
     if (pathElements.length < minimumPathLength) {
       logger.warning("Path " + ae.getName() + " too short");
       return;
+    }
+    for (int i = 0; i < pathElements.length; i++) {
+      logger.debug3("pathElements[" + i + "] = " + pathElements[i]);
     }
     for (int i = 0; i <= endOfBase; i++) {
       if (pathElements[i].startsWith(tags[i])) {
@@ -154,6 +153,8 @@ public class SpringerExploderHelper implements ExploderHelper {
 	      pathElements[PUB_INDEX].substring(4));
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX].substring(4));
+    props.put(ConfigParamDescr.YEAR.getKey(),
+	      pathElements[ART_INDEX].substring(4,8));
     ae.setAuProps(props);
   }
 }

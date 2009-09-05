@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.4.20.2 2009-09-02 01:19:07 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.4.20.3 2009-09-05 18:03:02 dshr Exp $
  */
 
 /*
@@ -66,29 +66,23 @@ public class ArchiveEntry {
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec) {
-    setup(name, bytes, date, is, crawlSpec, (Exploder) null, null, null);
+    setup(name, bytes, date, is, crawlSpec, (Exploder) null, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec, Exploder exploder) {
-    setup(name, bytes, date, is, crawlSpec, exploder, null, null);
+    setup(name, bytes, date, is, crawlSpec, exploder, null);
   }
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec, Exploder exploder,
 		      String archiveName) {
-    setup(name, bytes, date, is, crawlSpec, exploder, archiveName, null);
-  }
-
-  public ArchiveEntry(String name, long bytes, long date, InputStream is,
-		      CrawlSpec crawlSpec, Exploder exploder,
-		      String archiveName, String baseStem) {
-    setup(name, bytes, date, is, crawlSpec, exploder, archiveName, baseStem);
+    setup(name, bytes, date, is, crawlSpec, exploder, archiveName);
   }
 
   private void setup(String name, long bytes, long date, InputStream is,
 		     CrawlSpec crawlSpec, Exploder exploder,
-		     String archiveName, String baseStem) {
+		     String archiveName) {
     if (name.startsWith("./")) {
       this.name = name.substring(2);
     } else {
@@ -100,7 +94,6 @@ public class ArchiveEntry {
     this.crawlSpec = crawlSpec;
     this.exploder = exploder;
     this.archiveName = archiveName;
-    explodedAUBaseUrlStem = baseStem;
     baseUrl = null;
     restOfUrl = null;
     header = null;
@@ -136,10 +129,6 @@ public class ArchiveEntry {
 
   public String  getArchiveName() {
     return archiveName;
-  }
-
-  public String  getExplodedAUBaseUrlStem() {
-    return explodedAUBaseUrlStem;
   }
 
   // Output field accessors

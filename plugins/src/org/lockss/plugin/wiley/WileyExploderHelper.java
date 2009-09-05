@@ -1,5 +1,5 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.3.28.1 2009-09-02 01:19:07 dshr Exp $
+ * $Id: WileyExploderHelper.java,v 1.3.28.2 2009-09-05 18:03:02 dshr Exp $
  */
 
 /*
@@ -92,11 +92,7 @@ public class WileyExploderHelper implements ExploderHelper {
   }
 
   public void process(ArchiveEntry ae) {
-    String baseUrlStem = ae.getExplodedAUBaseUrlStem();
-    if (baseUrlStem == null) {
-      baseUrlStem = BASE_URL_STEM;
-    }
-    String baseUrl = baseUrlStem;
+    String baseUrl = BASE_URL_STEM;
     // Parse the name
     String[] pathElements = ae.getName().split("/");
     if (pathElements.length < minimumPathLength) {
@@ -155,6 +151,8 @@ public class WileyExploderHelper implements ExploderHelper {
 	      "Wiley");
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX]);
+    props.put(ConfigParamDescr.YEAR.getKey(),
+	      pathElements[YER_INDEX]);
     logger.debug3(baseUrl + restOfUrl + " AU props " + props);
     ae.setAuProps(props);
   }
