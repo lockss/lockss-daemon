@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder.java,v 1.8 2009-09-04 03:52:20 dshr Exp $
+ * $Id: FuncTarExploder.java,v 1.9 2009-09-05 18:03:27 dshr Exp $
  */
 
 /*
@@ -96,6 +96,8 @@ public class FuncTarExploder extends LockssTestCase {
     "http://www.example.com/content.tar",
   };
 
+  static final String GOOD_YEAR = "1968";
+
 
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
@@ -152,6 +154,7 @@ public class FuncTarExploder extends LockssTestCase {
     String explodedPluginName =
       "org.lockss.crawler.FuncTarExploderMockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, GOOD_YEAR);
     props.setProperty(LockssApp.MANAGER_PREFIX + LockssDaemon.PLUGIN_MANAGER,
 		      MyPluginManager.class.getName());
 
@@ -291,11 +294,17 @@ public class FuncTarExploder extends LockssTestCase {
     for (int i = 0; i < url.length; i++) {
       CachedUrl cu = pluginMgr.findCachedUrl(url[i]);
       assertTrue(url[i] + " not in any AU", cu != null);
-      log.debug2("Check: " + url[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
+      ArchivalUnit explodedAU = cu.getArchivalUnit();
+      log.debug2("Check: " + url[i] + " cu " + cu + " au " +
+		 explodedAU.getAuId());
       assertTrue(cu + " has no content", cu.hasContent());
       assertTrue(cu + " isn't ExplodedArchivalUnit",
-		 (cu.getArchivalUnit() instanceof ExplodedArchivalUnit));
-      assertNotEquals(sau, cu.getArchivalUnit());
+		 (explodedAU instanceof ExplodedArchivalUnit));
+      assertNotEquals(cu + " isn't in ExplodedArchivalUnit", sau, explodedAU);
+      Configuration explodedConfig = explodedAU.getConfiguration();
+      log.debug3(cu + " config " + explodedConfig);
+      assertEquals(cu + " wrong year", GOOD_YEAR,
+		   explodedConfig.get(ConfigParamDescr.YEAR.getKey()));
     }
     log.debug2("Checking Exploded URLs done.");
   }
@@ -305,11 +314,12 @@ public class FuncTarExploder extends LockssTestCase {
     for (int i = 0; i < url2.length; i++) {
       CachedUrl cu = pluginMgr.findCachedUrl(url2[i]);
       assertTrue(url2[i] + " not in any AU", cu != null);
-      log.debug2("Check: " + url2[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
+      ArchivalUnit unExplodedAU = cu.getArchivalUnit();
+      log.debug2("Check: " + url2[i] + " cu " + cu + " au " + unExplodedAU.getAuId());
       assertTrue(cu + " has no content", cu.hasContent());
       assertTrue(cu + " isn't MySimulatedArchivalUnit",
-		 (cu.getArchivalUnit() instanceof MySimulatedArchivalUnit));
-      assertEquals(sau, cu.getArchivalUnit());
+		 (unExplodedAU instanceof MySimulatedArchivalUnit));
+      assertEquals(sau, unExplodedAU);
     }
     log.debug2("Checking UnExploded URLs done.");
   }

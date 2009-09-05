@@ -40,18 +40,6 @@ public class TestSpringerExploderHelper extends LockssTestCase {
     // XXX test auProps
   }
 
-  public void testExplodedAuBaseUrlStem() throws Exception {
-    String urlStem = "http://somebody.clockss.org/";
-    ArchiveEntry ae = new ArchiveEntry(basePath+ pathStem + pdfPath,
-				       7654, 0, null, null, null, null,
-				       urlStem);
-    SpringerExploderHelper seh = new SpringerExploderHelper();
-
-    seh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + pdfPath);
-  }
-
   public void testProcessCorrectXmlEntry() throws Exception {
     ArchiveEntry ae = new ArchiveEntry(basePath+ pathStem + xmlPath,
 				      76543, 0, null, null);

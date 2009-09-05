@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.9 2009-09-04 03:52:20 dshr Exp $
+ * $Id: FuncZipExploder2.java,v 1.10 2009-09-05 18:03:28 dshr Exp $
  */
 
 /*
@@ -104,6 +104,8 @@ public class FuncZipExploder2 extends LockssTestCase {
     "http://www.example.com/branch1/branch1/index.html",
     "http://www.example.com/branch1/index.html",
   };
+
+  static final String GOOD_YEAR = "2005";
 
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
@@ -333,11 +335,17 @@ public class FuncZipExploder2 extends LockssTestCase {
     for (int i = 0; i < url.length; i++) {
       CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(url[i]);
       assertTrue(url[i] + " not in any AU", cu != null);
-      log.debug2("Check: " + url[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
+      ArchivalUnit explodedAU = cu.getArchivalUnit();
+      log.debug2("Check: " + url[i] + " cu " + cu + " au " +
+		 explodedAU.getAuId());
       assertTrue(cu + " has no content", cu.hasContent());
       assertTrue(cu + " isn't ExplodedArchivalUnit",
-		 !(cu instanceof ExplodedArchivalUnit));
-      assertNotEquals(sau, cu.getArchivalUnit());
+		 (explodedAU instanceof ExplodedArchivalUnit));
+      assertNotEquals(sau, explodedAU);
+      Configuration explodedConfig = explodedAU.getConfiguration();
+      log.debug3(cu + " config " + explodedConfig);
+      assertEquals(cu + " wrong year", GOOD_YEAR,
+		   explodedConfig.get(ConfigParamDescr.YEAR.getKey()));
     }
     log.debug2("Checking Exploded URLs done.");
   }
