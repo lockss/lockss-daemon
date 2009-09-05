@@ -64,8 +64,8 @@
 
     au < manifest ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
     au < manifest ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
-    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
-    au < manifest ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
+    au < testing ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
+    au < testing ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
 
   }
 
@@ -514,7 +514,7 @@
     au < released ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
     au < released ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
     au < released ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
-    au < testing ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
+    au < ready ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
     au < does_not_exist ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < does_not_exist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
 
