@@ -7,6 +7,31 @@
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
   param[base_url] = http://www.nature.com/
   implicit < status ; year ; name ; param[year] ; param[volume_name] >
+
+  
+  {
+
+    title <
+      name = Acta Pharmacologica Sinica
+    >
+
+    param[journal_id] = aps
+
+    au < ready ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
+
+  }
+  
+  {
+
+    title <
+      name = Asian Journal of Andrology
+    >
+
+    param[journal_id] = aja
+
+    au < ready ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
+
+  }
   
   {
 

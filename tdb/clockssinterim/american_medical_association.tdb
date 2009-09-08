@@ -57,5 +57,29 @@
     au < released ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
   
   }
+
+  {
+  
+    title <
+      name = Archives of Neurology
+    >
+    
+    param[base_url] = http://archneur.ama-assn.org/
+    
+    au < ready ; 2009 ; Archives of Neurology Volume 66 ; 66 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Archives of Ophthalmology
+    >
+    
+    param[base_url] = http://archopht.ama-assn.org/
+    
+    au < ready ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
+  
+  }  
   
 }

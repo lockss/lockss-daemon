@@ -61,4 +61,30 @@
     au < released ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 >
   
   }
+
+  {
+  
+    title <
+      name = American Journal of Physiology - Heart and Circulatory Physiology
+    >
+    
+    param[base_url] = http://ajpheart.physiology.org/
+    
+    au < ready ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 296 ; 296 >
+  
+  }
+  
+  {
+  
+    title <
+      name = American Journal of Physiology - Lung Cellular and Molecular Physiology
+    >
+    
+    param[base_url] = http://ajplung.physiology.org/
+    
+    au < ready ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 296 ; 296 >
+  
+  }
+
+
 }
