@@ -184,24 +184,24 @@ comment[jme43] = "Found a login page".  Thib will need to look at this later.
       param[base_url] = http://jme.endocrinology-journals.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; Journal of Molecular Endocrinology Volume 1 ; 1 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 2 ; 2 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 3 ; 3 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 4 ; 4 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 5 ; 5 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 6 ; 6 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 7 ; 7 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 8 ; 8 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 9 ; 9 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 10 ; 10 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 11 ; 11 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 12 ; 12 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 13 ; 13 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 14 ; 14 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 15 ; 15 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 16 ; 16 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 17 ; 17 >
-      au < manifest ; Journal of Molecular Endocrinology Volume 18 ; 18 >
+      au < testing ; Journal of Molecular Endocrinology Volume 1 ; 1 >
+      au < testing ; Journal of Molecular Endocrinology Volume 2 ; 2 >
+      au < testing ; Journal of Molecular Endocrinology Volume 3 ; 3 >
+      au < testing ; Journal of Molecular Endocrinology Volume 4 ; 4 >
+      au < testing ; Journal of Molecular Endocrinology Volume 5 ; 5 >
+      au < testing ; Journal of Molecular Endocrinology Volume 6 ; 6 >
+      au < testing ; Journal of Molecular Endocrinology Volume 7 ; 7 >
+      au < testing ; Journal of Molecular Endocrinology Volume 8 ; 8 >
+      au < testing ; Journal of Molecular Endocrinology Volume 9 ; 9 >
+      au < testing ; Journal of Molecular Endocrinology Volume 10 ; 10 >
+      au < testing ; Journal of Molecular Endocrinology Volume 11 ; 11 >
+      au < testing ; Journal of Molecular Endocrinology Volume 12 ; 12 >
+      au < testing ; Journal of Molecular Endocrinology Volume 13 ; 13 >
+      au < testing ; Journal of Molecular Endocrinology Volume 14 ; 14 >
+      au < testing ; Journal of Molecular Endocrinology Volume 15 ; 15 >
+      au < testing ; Journal of Molecular Endocrinology Volume 16 ; 16 >
+      au < testing ; Journal of Molecular Endocrinology Volume 17 ; 17 >
+      au < testing ; Journal of Molecular Endocrinology Volume 18 ; 18 >
       au < manifest ; Journal of Molecular Endocrinology Volume 19 ; 19 >
       au < manifest ; Journal of Molecular Endocrinology Volume 20 ; 20 >
       au < manifest ; Journal of Molecular Endocrinology Volume 21 ; 21 >

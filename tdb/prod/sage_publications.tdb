@@ -5218,8 +5218,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Sociology Volume 20 ; 20 >
         au < ready ; International Sociology Volume 21 ; 21 >
         au < ready ; International Sociology Volume 22 ; 22 >
-        au < testing ; International Sociology Volume 23 ; 23 >
-        au < testing ; International Sociology Volume 24 ; 24 >
+        au < ready ; International Sociology Volume 23 ; 23 >
+        au < ready ; International Sociology Volume 24 ; 24 >
 
       }
 
@@ -5240,7 +5240,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < ready ; International Studies Volume 42 ; 42 >
         au < ready ; International Studies Volume 43 ; 43 >
         au < ready ; International Studies Volume 44 ; 44 >
-        au < testing ; International Studies Volume 45 ; 45 >
+        au < ready ; International Studies Volume 45 ; 45 >
 
       }
 
@@ -5260,8 +5260,8 @@ comment[ghj] = now published by Oxford Univeristy Press
 
         au < ready ; Irish Theological Quarterly Volume 71 ; 71 >
         au < ready ; Irish Theological Quarterly Volume 72 ; 72 >
-        au < testing ; Irish Theological Quarterly Volume 73 ; 73 >
-        au < testing ; Irish Theological Quarterly Volume 74 ; 74 >
+        au < ready ; Irish Theological Quarterly Volume 73 ; 73 >
+        au < ready ; Irish Theological Quarterly Volume 74 ; 74 >
 
       }
 
@@ -5348,7 +5348,7 @@ comment[jhj] = now published by Brill
         au < doNotProcess ; Journal for the Study of the Old Testament Volume 30 ; 30 >
         au < ready ; Journal for the Study of the Old Testament Volume 31 ; 31 >
         au < ready ; Journal for the Study of the Old Testament Volume 32 ; 32 >
-        au < testing ; Journal for the Study of the Old Testament Volume 33 ; 33 >
+        au < ready ; Journal for the Study of the Old Testament Volume 33 ; 33 >
 
       }
 
@@ -5401,8 +5401,8 @@ comment[jhj] = now published by Brill
         au < ready ; Journal of Adolescent Research Volume 20 ; 20 >
         au < doNotProcess ; Journal of Adolescent Research Volume 21 ; 21 >
         au < ready ; Journal of Adolescent Research Volume 22 ; 22 >
-        au < testing ; Journal of Adolescent Research Volume 23 ; 23 >
-        au < testing ; Journal of Adolescent Research Volume 24 ; 24 >
+        au < ready ; Journal of Adolescent Research Volume 23 ; 23 >
+        au < ready ; Journal of Adolescent Research Volume 24 ; 24 >
 
       }
 
@@ -5433,7 +5433,7 @@ comment[jhj] = now published by Brill
         au < ready ; Journal of Aging and Health Volume 17 ; 17 >
         au < doNotProcess ; Journal of Aging and Health Volume 18 ; 18 >
         au < ready ; Journal of Aging and Health Volume 19 ; 19 >
-        au < testing ; Journal of Aging and Health Volume 20 ; 20 >
+        au < ready ; Journal of Aging and Health Volume 20 ; 20 >
         au < testing ; Journal of Aging and Health Volume 21 ; 21 >
 
       }
@@ -5446,13 +5446,15 @@ comment[jhj] = now published by Brill
         name = Journal of Anglican Studies 
       >
 
+comment[ast] = no longer available with Sage.  Moved to Cambridge University Press.
+
       {
 
         plugin = org.lockss.plugin.highwire.HighWirePlugin
         param[base_url] = http://ast.sagepub.com/
         implicit < status ; name ; param[volume] >
 
-        au < released ; Journal of Anglican Studies Volume 3 ; 3 >
+        au < down ; Journal of Anglican Studies Volume 3 ; 3 >
 
       }
 
@@ -5463,9 +5465,6 @@ comment[jhj] = now published by Brill
         implicit < status ; name ; param[volume_name] >
 
         au < doNotProcess ; Journal of Anglican Studies Volume 3 ; 3 >
-        au < ready ; Journal of Anglican Studies Volume 4 ; 4 >
-        au < ready ; Journal of Anglican Studies Volume 5 ; 5 >
-        au < testing ; Journal of Anglican Studies Volume 6 ; 6 >
 
       }
 

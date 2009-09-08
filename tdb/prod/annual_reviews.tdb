@@ -1378,7 +1378,7 @@ comment[pa2] = continued from previous title entry
     au < testing ; Annual Review of Physical Chemistry Volume 44 ; 44 >
     au < testing ; Annual Review of Physical Chemistry Volume 45 ; 45 >
     au < testing ; Annual Review of Physical Chemistry Volume 46 ; 46 >
-    au < testing ; Annual Review of Physical Chemistry Volume 47 ; 47 >
+    au < ready ; Annual Review of Physical Chemistry Volume 47 ; 47 >
     au < released ; Annual Review of Physical Chemistry Volume 48 ; 48 >
     au < released ; Annual Review of Physical Chemistry Volume 49 ; 49 >
     au < released ; Annual Review of Physical Chemistry Volume 50 ; 50 >
@@ -1389,10 +1389,10 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Physical Chemistry Volume 55 ; 55 >
     au < released ; Annual Review of Physical Chemistry Volume 56 ; 56 >
     au < released ; Annual Review of Physical Chemistry Volume 57 ; 57 >
-    au < testing ; Annual Review of Physical Chemistry Volume 58 ; 58 >
-    au < testing ; Annual Review of Physical Chemistry Volume 59 ; 59 >
-    au < testing ; Annual Review of Physical Chemistry Volume 60 ; 60 >
-    au < testing ; Annual Review of Physical Chemistry Volume 61 ; 61 >
+    au < ready ; Annual Review of Physical Chemistry Volume 58 ; 58 >
+    au < ready ; Annual Review of Physical Chemistry Volume 59 ; 59 >
+    au < ready ; Annual Review of Physical Chemistry Volume 60 ; 60 >
+    au < ready ; Annual Review of Physical Chemistry Volume 61 ; 61 >
   }
 
 
@@ -1474,9 +1474,9 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Physiology Volume 67 ; 67 >
     au < released ; Annual Review of Physiology Volume 68 ; 68 >
     au < released ; Annual Review of Physiology Volume 69 ; 69 >
-    au < manifest ; Annual Review of Physiology Volume 70 ; 70 >
-    au < manifest ; Annual Review of Physiology Volume 71 ; 71 >
-    au < manifest ; Annual Review of Physiology Volume 72 ; 72 >
+    au < ready ; Annual Review of Physiology Volume 70 ; 70 >
+    au < ready ; Annual Review of Physiology Volume 71 ; 71 >
+    au < ready ; Annual Review of Physiology Volume 72 ; 72 >
   }
 
 
@@ -1533,9 +1533,9 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Phytopathology Volume 42 ; 42 >
     au < released ; Annual Review of Phytopathology Volume 43 ; 43 >
     au < released ; Annual Review of Phytopathology Volume 44 ; 44 >
-    au < manifest ; Annual Review of Phytopathology Volume 45 ; 45 >
-    au < manifest ; Annual Review of Phytopathology Volume 46 ; 46 >
-    au < manifest ; Annual Review of Phytopathology Volume 47 ; 47 >
+    au < ready ; Annual Review of Phytopathology Volume 45 ; 45 >
+    au < ready ; Annual Review of Phytopathology Volume 46 ; 46 >
+    au < ready ; Annual Review of Phytopathology Volume 47 ; 47 >
   }
 
 
@@ -1606,9 +1606,8 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Plant Biology Volume 56 ; 56 >
     au < released ; Annual Review of Plant Biology Volume 57 ; 57 >
     au < released ; Annual Review of Plant Biology Volume 58 ; 58 >
-    au < manifest ; Annual Review of Plant Biology Volume 59 ; 59 >
-    au < manifest ; Annual Review of Plant Biology Volume 60 ; 60 >
-    au < manifest ; Annual Review of Plant Biology Volume 61 ; 61 >
+    au < ready ; Annual Review of Plant Biology Volume 59 ; 59 >
+    au < ready ; Annual Review of Plant Biology Volume 60 ; 60 >
   }
 
 
@@ -1621,19 +1620,19 @@ comment[pa2] = continued from previous title entry
     param[journal_id] = polisci
     param[short_journal_id] = none
 
-    au < manifest ; Annual Review of Political Science Volume 1 ; 1 >
-    au < manifest ; Annual Review of Political Science Volume 2 ; 2 >
+    au < ready ; Annual Review of Political Science Volume 1 ; 1 >
+    au < ready ; Annual Review of Political Science Volume 2 ; 2 >
     au < released ; Annual Review of Political Science Volume 3 ; 3 >
     au < released ; Annual Review of Political Science Volume 4 ; 4 >
-    au < manifest ; Annual Review of Political Science Volume 5 ; 5 >
+    au < ready ; Annual Review of Political Science Volume 5 ; 5 >
     au < released ; Annual Review of Political Science Volume 6 ; 6 >
     au < released ; Annual Review of Political Science Volume 7 ; 7 >
     au < released ; Annual Review of Political Science Volume 8 ; 8 >
     au < released ; Annual Review of Political Science Volume 9 ; 9 >
-    au < manifest ; Annual Review of Political Science Volume 10 ; 10 >
-    au < manifest ; Annual Review of Political Science Volume 11 ; 11 >
-    au < manifest ; Annual Review of Political Science Volume 12 ; 12 >
-    au < manifest ; Annual Review of Political Science Volume 13 ; 13 >
+    au < testing ; Annual Review of Political Science Volume 10 ; 10 >
+    au < testing ; Annual Review of Political Science Volume 11 ; 11 >
+    au < testing ; Annual Review of Political Science Volume 12 ; 12 >
+    au < testing ; Annual Review of Political Science Volume 13 ; 13 >
   }
 
 
@@ -1704,9 +1703,9 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Psychology Volume 56 ; 56 >
     au < released ; Annual Review of Psychology Volume 57 ; 57 >
     au < released ; Annual Review of Psychology Volume 58 ; 58 >
-    au < manifest ; Annual Review of Psychology Volume 59 ; 59 >
-    au < manifest ; Annual Review of Psychology Volume 60 ; 60 >
-    au < manifest ; Annual Review of Psychology Volume 61 ; 61 >
+    au < testing ; Annual Review of Psychology Volume 59 ; 59 >
+    au < testing ; Annual Review of Psychology Volume 60 ; 60 >
+    au < testing ; Annual Review of Psychology Volume 61 ; 61 >
   }
 
 
@@ -1747,9 +1746,9 @@ comment[pa2] = continued from previous title entry
     au < released ; Annual Review of Public Health Volume 26 ; 26 >
     au < released ; Annual Review of Public Health Volume 27 ; 27 >
     au < released ; Annual Review of Public Health Volume 28 ; 28 >
-    au < manifest ; Annual Review of Public Health Volume 29 ; 29 >
-    au < manifest ; Annual Review of Public Health Volume 30 ; 30 >
-    au < manifest ; Annual Review of Public Health Volume 31 ; 31 >
+    au < testing ; Annual Review of Public Health Volume 29 ; 29 >
+    au < testing ; Annual Review of Public Health Volume 30 ; 30 >
+    au < testing ; Annual Review of Public Health Volume 31 ; 31 >
   }
 
 

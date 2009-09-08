@@ -3829,9 +3829,9 @@
 
         au < released ; Journal of the ICRU Volume 5 ; 5 >
         au < doNotProcess ; Journal of the ICRU Volume 6 ; 6 >
-        au < testing ; Journal of the ICRU Volume 7 ; 7 >
-        au < testing ; Journal of the ICRU Volume 8 ; 8 >
-        au < testing ; Journal of the ICRU Volume 9 ; 9 >
+        au < ready ; Journal of the ICRU Volume 7 ; 7 >
+        au < ready ; Journal of the ICRU Volume 8 ; 8 >
+        au < ready ; Journal of the ICRU Volume 9 ; 9 >
 
       }
 
@@ -3850,11 +3850,11 @@
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Journal of the London Mathematical Society Volume 75 ; 75 >
-        au < testing ; Journal of the London Mathematical Society Volume 76 ; 76 >
-        au < testing ; Journal of the London Mathematical Society Volume 77 ; 77 >
-        au < testing ; Journal of the London Mathematical Society Volume 78 ; 78 >
-        au < testing ; Journal of the London Mathematical Society Volume 79 ; 79 >
-        au < testing ; Journal of the London Mathematical Society Volume 80 ; 80 >
+        au < ready ; Journal of the London Mathematical Society Volume 76 ; 76 >
+        au < ready ; Journal of the London Mathematical Society Volume 77 ; 77 >
+        au < ready ; Journal of the London Mathematical Society Volume 78 ; 78 >
+        au < ready ; Journal of the London Mathematical Society Volume 79 ; 79 >
+        au < ready ; Journal of the London Mathematical Society Volume 80 ; 80 >
 
       }
 
@@ -3915,9 +3915,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; The Journal of Theological Studies Volume 56 ; 56 >
         au < doNotProcess ; The Journal of Theological Studies Volume 57 ; 57 >
-        au < testing ; The Journal of Theological Studies Volume 58 ; 58 >
-        au < testing ; The Journal of Theological Studies Volume 59 ; 59 >
-        au < testing ; The Journal of Theological Studies Volume 60 ; 60 >
+        au < ready ; The Journal of Theological Studies Volume 58 ; 58 >
+        au < ready ; The Journal of Theological Studies Volume 59 ; 59 >
+        au < ready ; The Journal of Theological Studies Volume 60 ; 60 >
 
       }
 
@@ -5231,6 +5231,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < exists ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
         au < ready ; Schizophrenia Bulletin Volume 33 ; 33 >
+        au < testing ; Schizophrenia Bulletin Volume 34 ; 34 >
+        au < testing ; Schizophrenia Bulletin Volume 35 ; 35 >
 
       }
 
@@ -5260,6 +5262,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Screen Volume 46 ; 46 >
         au < released ; Screen Volume 47 ; 47 >
+        au < testing ; Screen Volume 48 ; 48 >
+        au < testing ; Screen Volume 49 ; 49 >
+        au < testing ; Screen Volume 50 ; 50 >
 
       }
 
@@ -5278,6 +5283,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
+        au < testing ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
+        au < testing ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
+        au < testing ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
 
       }
 
@@ -5307,6 +5315,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Social History of Medicine Volume 18 ; 18 >
         au < released ; Social History of Medicine Volume 19 ; 19 >
+        au < testing ; Social History of Medicine Volume 20 ; 20 >
+        au < testing ; Social History of Medicine Volume 21 ; 21 >
+        au < testing ; Social History of Medicine Volume 22 ; 22 >
 
       }
 
@@ -5336,6 +5347,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
         au < released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
+        au < testing ; Social Politics: International Studies in Gender, State & Society Volume 14 ; 14 >
+        au < testing ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 >
+        au < testing ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 >
 
       }
 
@@ -5365,6 +5379,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Social Science Japan Journal Volume 8 ; 8 >
         au < ready ; Social Science Japan Journal Volume 9 ; 9 >
+        au < testing ; Social Science Japan Journal Volume 10 ; 10 >
+        au < testing ; Social Science Japan Journal Volume 11 ; 11 >
+        au < testing ; Social Science Japan Journal Volume 12 ; 12 >
 
       }
 
@@ -5395,6 +5412,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < ready ; Socio-Economic Review Volume 3 ; 3 >
         au < doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
         au < ready ; Socio-Economic Review Volume 5 ; 5 >
+        au < testing ; Socio-Economic Review Volume 6 ; 6 >
+        au < testing ; Socio-Economic Review Volume 7 ; 7 >
 
       }
 
@@ -5425,6 +5444,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Statute Law Review Volume 26 ; 26 >
         au < doNotProcess ; Statute Law Review Volume 27 ; 27 >
         au < released ; Statute Law Review Volume 28 ; 28 >
+        au < testing ; Statute Law Review Volume 29 ; 29 >
+        au < testing ; Statute Law Review Volume 30 ; 30 >
 
       }
 
@@ -5454,6 +5475,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
         au < doNotProcess ; Teaching Mathematics and its Applications Volume 25 ; 25 >
+        au < testing ; Teaching Mathematics and its Applications Volume 26 ; 26 >
+        au < testing ; Teaching Mathematics and its Applications Volume 27 ; 27 >
+        au < testing ; Teaching Mathematics and its Applications Volume 28 ; 28 >
 
       }
 
@@ -5498,18 +5522,18 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < ready ; Toxicological Sciences Volume 97 ; 97 >
         au < ready ; Toxicological Sciences Volume 98 ; 98 >
         au < ready ; Toxicological Sciences Volume 99 ; 99 >
-        au < testing ; Toxicological Sciences Volume 100 ; 100 >
-        au < testing ; Toxicological Sciences Volume 101 ; 101 >
-        au < testing ; Toxicological Sciences Volume 102 ; 102 >
-        au < testing ; Toxicological Sciences Volume 103 ; 103 >
-        au < testing ; Toxicological Sciences Volume 104 ; 104 >
-        au < testing ; Toxicological Sciences Volume 105 ; 105 >
-        au < testing ; Toxicological Sciences Volume 106 ; 106 >
-        au < testing ; Toxicological Sciences Volume 107 ; 107 >
-        au < testing ; Toxicological Sciences Volume 108 ; 108 >
-        au < testing ; Toxicological Sciences Volume 109 ; 109 >
-        au < testing ; Toxicological Sciences Volume 110 ; 110 >
-        au < testing ; Toxicological Sciences Volume 111 ; 111 >
+        au < ready ; Toxicological Sciences Volume 100 ; 100 >
+        au < ready ; Toxicological Sciences Volume 101 ; 101 >
+        au < ready ; Toxicological Sciences Volume 102 ; 102 >
+        au < ready ; Toxicological Sciences Volume 103 ; 103 >
+        au < ready ; Toxicological Sciences Volume 104 ; 104 >
+        au < ready ; Toxicological Sciences Volume 105 ; 105 >
+        au < ready ; Toxicological Sciences Volume 106 ; 106 >
+        au < ready ; Toxicological Sciences Volume 107 ; 107 >
+        au < ready ; Toxicological Sciences Volume 108 ; 108 >
+        au < ready ; Toxicological Sciences Volume 109 ; 109 >
+        au < ready ; Toxicological Sciences Volume 110 ; 110 >
+        au < ready ; Toxicological Sciences Volume 111 ; 111 >
 
       }
 
@@ -5625,7 +5649,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; The World Bank Research Observer Volume 20 ; 20 >
         au < doNotProcess ; The World Bank Research Observer Volume 21 ; 21 >
-        au < testing ; The World Bank Research Observer Volume 22 ; 22 >
+        au < ready ; The World Bank Research Observer Volume 22 ; 22 >
         au < ready ; The World Bank Research Observer Volume 23 ; 23 >
         au < ready ; The World Bank Research Observer Volume 24 ; 24 >
 

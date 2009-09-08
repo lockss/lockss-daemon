@@ -17,12 +17,12 @@
       
       implicit < status ; year ; name ; param[year] ; param[optional_standards] >
       
-      au < wanted ; 1997 ; ";login: 1997" ; 1997 ; stndrdswrthit,1,2,3,4,5,6,7,9,10,11 >
-      au < wanted ; 1998 ; ";login: 1998" ; 1998 ; 12,13,14,15,16.posix,17,16.editorial,18,19,20,21,22 >
-      au < wanted ; 1999 ; ";login: 1999" ; 1999 ; 23,24,25,26,27,28,29,30 >
-      au < wanted ; 2000 ; ";login: 2000" ; 2000 ; 31,32,33,34,35,36,37,38,39,42,43,44,45,46,47,48,49 >
-      au < wanted ; 2001 ; ";login: 2001" ; 2001 ; 40,41,simonsen,hedquist,51 >
-      au < wanted ; 2002 ; ";login: 2002" ; 2002 ; 52,53,54 >
+      au < testing ; 1997 ; ";login: 1997" ; 1997 ; stndrdswrthit,1,2,3,4,5,6,7,9,10,11 >
+      au < testing ; 1998 ; ";login: 1998" ; 1998 ; 12,13,14,15,16.posix,17,16.editorial,18,19,20,21,22 >
+      au < testing ; 1999 ; ";login: 1999" ; 1999 ; 23,24,25,26,27,28,29,30 >
+      au < testing ; 2000 ; ";login: 2000" ; 2000 ; 31,32,33,34,35,36,37,38,39,42,43,44,45,46,47,48,49 >
+      au < testing ; 2001 ; ";login: 2001" ; 2001 ; 40,41,simonsen,hedquist,51 >
+      au < testing ; 2002 ; ";login: 2002" ; 2002 ; 52,53,54 >
       
     }
     
