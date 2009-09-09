@@ -5132,6 +5132,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Review of Environmental Economics and Policy Volume 1 ; 1 >
+        au < testing ; Review of Environmental Economics and Policy Volume 2 ; 2 >
+        au < testing ; Review of Environmental Economics and Policy Volume 3 ; 3 >
 
       }
 
@@ -5151,6 +5153,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < ready ; Review of Finance Volume 10 ; 10 >
         au < ready ; Review of Finance Volume 11 ; 11 >
+        au < testing ; Review of Finance Volume 12 ; 12 >
+        au < testing ; Review of Finance Volume 13 ; 13 >
 
       }
 
@@ -5181,6 +5185,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Review of Financial Studies Volume 18 ; 18 >
         au < doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < released ; Review of Financial Studies Volume 20 ; 20 >
+        au < testing ; Review of Financial Studies Volume 21 ; 21 >
+        au < testing ; Review of Financial Studies Volume 22 ; 22 >
 
       }
 
@@ -5201,6 +5207,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Rheumatology Volume 44 ; 44 >
         au < ready ; Rheumatology Volume 45 ; 45 >
         au < ready ; Rheumatology Volume 46 ; 46 >
+        au < testing ; Rheumatology Volume 47 ; 47 >
+        au < testing ; Rheumatology Volume 48 ; 48 >
 
       }
 
@@ -5347,9 +5355,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
         au < released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
-        au < testing ; Social Politics: International Studies in Gender, State & Society Volume 14 ; 14 >
-        au < testing ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 >
-        au < testing ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 >
+        au < ready ; Social Politics: International Studies in Gender, State & Society Volume 14 ; 14 >
+        au < ready ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 >
+        au < ready ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 >
 
       }
 
@@ -5379,9 +5387,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Social Science Japan Journal Volume 8 ; 8 >
         au < ready ; Social Science Japan Journal Volume 9 ; 9 >
-        au < testing ; Social Science Japan Journal Volume 10 ; 10 >
-        au < testing ; Social Science Japan Journal Volume 11 ; 11 >
-        au < testing ; Social Science Japan Journal Volume 12 ; 12 >
+        au < ready ; Social Science Japan Journal Volume 10 ; 10 >
+        au < ready ; Social Science Japan Journal Volume 11 ; 11 >
+        au < ready ; Social Science Japan Journal Volume 12 ; 12 >
 
       }
 
@@ -5412,8 +5420,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < ready ; Socio-Economic Review Volume 3 ; 3 >
         au < doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
         au < ready ; Socio-Economic Review Volume 5 ; 5 >
-        au < testing ; Socio-Economic Review Volume 6 ; 6 >
-        au < testing ; Socio-Economic Review Volume 7 ; 7 >
+        au < ready ; Socio-Economic Review Volume 6 ; 6 >
+        au < ready ; Socio-Economic Review Volume 7 ; 7 >
 
       }
 
@@ -5444,8 +5452,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Statute Law Review Volume 26 ; 26 >
         au < doNotProcess ; Statute Law Review Volume 27 ; 27 >
         au < released ; Statute Law Review Volume 28 ; 28 >
-        au < testing ; Statute Law Review Volume 29 ; 29 >
-        au < testing ; Statute Law Review Volume 30 ; 30 >
+        au < ready ; Statute Law Review Volume 29 ; 29 >
+        au < ready ; Statute Law Review Volume 30 ; 30 >
 
       }
 
@@ -5475,9 +5483,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
         au < doNotProcess ; Teaching Mathematics and its Applications Volume 25 ; 25 >
-        au < testing ; Teaching Mathematics and its Applications Volume 26 ; 26 >
-        au < testing ; Teaching Mathematics and its Applications Volume 27 ; 27 >
-        au < testing ; Teaching Mathematics and its Applications Volume 28 ; 28 >
+        au < ready ; Teaching Mathematics and its Applications Volume 26 ; 26 >
+        au < ready ; Teaching Mathematics and its Applications Volume 27 ; 27 >
+        au < ready ; Teaching Mathematics and its Applications Volume 28 ; 28 >
 
       }
 
