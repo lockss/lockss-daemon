@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.5 2009-09-02 08:51:44 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.6 2009-09-09 00:22:46 thib_gc Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
 
     NodeFilter[] filters = new NodeFilter[] {
         new TagNameFilter("script"),
+        // Typically contains ads 
+        new TagNameFilter("iframe"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring"),
         // Contains institution name (e.g. SAGE Publications)
         HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea"),
@@ -80,27 +82,25 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Contains the current date and time (e.g. American Medical Association)
         HtmlNodeFilters.tagWithAttribute("a", "target", "help"),
+        // Contains the name and date of the current issue (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue"),
         // Contains ads or variable banners (e.g. Oxford University Press)
         HtmlNodeFilters.tagWithAttribute("div", "id", "oas_top"),
         // Contains ads or variable banners (e.g. Oxford University Press)
         HtmlNodeFilters.tagWithAttribute("div", "id", "oas_bottom"),
-        // Typically contains ads 
-        new TagNameFilter("iframe"),
+        // Optional institution-specific citation resolver (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
     };
 
-    OrFilter combineFilter = new OrFilter();
-    combineFilter.setPredicates(filters);
+    OrFilter orFilter = new OrFilter();
+    orFilter.setPredicates(filters);
 
-    HtmlTransform xform1 =
-      HtmlNodeFilterTransform.exclude(combineFilter);
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                       encoding,
+                                                       HtmlNodeFilterTransform.exclude(orFilter));
 
-    // Still need to remove actual inverse citation section
-
-    InputStream htmlFilter = new HtmlFilterInputStream(in, encoding, xform1);
-
-    Reader rdr = FilterUtil.getReader(htmlFilter, encoding);
+    Reader rdr = FilterUtil.getReader(filtered, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
-    //    return new ReaderInputStream(tagFilter);
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
