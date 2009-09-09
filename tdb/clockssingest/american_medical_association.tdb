@@ -132,7 +132,7 @@
     param[base_url] = http://archsurg.ama-assn.org/
     
     au < manifest ; 2008 ; Archives of Surgery Volume 143 ; 143 >
-    au < manifest ; 2009 ; Archives of Surgery Volume 144 ; 144 >
+    au < wanted ; 2009 ; Archives of Surgery Volume 144 ; 144 >
   
   }
 
@@ -143,10 +143,12 @@
     >
     
     param[base_url] = http://jama.ama-assn.org/
+
+comment[r] = monitor the crawl
     
     au < manifest ; 2008 ; Journal of the American Medical Association Volume 199 ; 199 >
     au < manifest ; 2008 ; Journal of the American Medical Association Volume 200 ; 200 >
-    au < manifest ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 >
+    au < wanted ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 >
     au < manifest ; 2009 ; Journal of the American Medical Association Volume 202 ; 202 >
   
   }

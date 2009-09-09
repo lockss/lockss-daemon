@@ -64,7 +64,7 @@
 
     au < manifest ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
     au < manifest ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
-    au < testing ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
+    au < ready ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < testing ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
 
   }
@@ -101,7 +101,7 @@
     param[journal_id] = cgt
 
     au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
-    au < manifest ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < testing ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -114,7 +114,7 @@
     param[journal_id] = cdd
 
     au < manifest ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
-    au < manifest ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+    au < testing ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -127,7 +127,7 @@
     param[journal_id] = cr
 
     au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
-    au < manifest ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+    au < testing ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -150,7 +150,7 @@
     param[journal_id] = emboj
 
     au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
-    au < manifest ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
+    au < testing ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
 
   }
 
