@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.10 2009-08-26 09:32:28 thib_gc Exp $
+# $Id: tdb.py,v 1.11 2009-09-11 09:51:33 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -112,6 +112,8 @@ class AU(ChainedMap):
     NAME = 'name'
     PARAM = 'param'
     PLUGIN = 'plugin'
+    PLUGIN_PREFIX = 'pluginPrefix'
+    PLUGIN_SUFFIX = 'pluginSuffix'
     RIGHTS = 'rights'
     STATUS = 'status'
     STATUS_DOES_NOT_EXIST = 'doesNotExist'
@@ -158,7 +160,7 @@ class AU(ChainedMap):
     def name(self): return self.get(AU.NAME)
     def param(self, param): return self.get( (AU.PARAM, param) )
     def params(self): return self.get(AU.PARAM) or dict()
-    def plugin(self): return self.get(AU.PLUGIN)
+    def plugin(self): return self.get(AU.PLUGIN) or self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX)
     def rights(self): return self.get(AU.RIGHTS)
     def status(self): return self.get(AU.STATUS)
     def title(self): return self.get(AU.TITLE)
