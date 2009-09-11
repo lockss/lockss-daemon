@@ -5056,6 +5056,21 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Radiation Protection Dosimetry Volume 119 ; 119 >
         au < released ; Radiation Protection Dosimetry Volume 120 ; 120 >
         au < ready ; Radiation Protection Dosimetry Volume 121 ; 121 >
+        au < testing ; Radiation Protection Dosimetry Volume 122 ; 122 >
+        au < testing ; Radiation Protection Dosimetry Volume 123 ; 123 >
+        au < testing ; Radiation Protection Dosimetry Volume 124 ; 124 >
+        au < testing ; Radiation Protection Dosimetry Volume 125 ; 125 >
+        au < testing ; Radiation Protection Dosimetry Volume 126 ; 126 >
+        au < testing ; Radiation Protection Dosimetry Volume 127 ; 127 >
+        au < testing ; Radiation Protection Dosimetry Volume 128 ; 128 >
+        au < testing ; Radiation Protection Dosimetry Volume 129 ; 129 >
+        au < ready ; Radiation Protection Dosimetry Volume 130 ; 130 >
+        au < ready ; Radiation Protection Dosimetry Volume 131 ; 131 >
+        au < ready ; Radiation Protection Dosimetry Volume 132 ; 132 >
+        au < ready ; Radiation Protection Dosimetry Volume 133 ; 133 >
+        au < ready ; Radiation Protection Dosimetry Volume 134 ; 134 >
+        au < ready ; Radiation Protection Dosimetry Volume 135 ; 135 >
+        au < ready ; Radiation Protection Dosimetry Volume 136 ; 136 >
 
       }
 
@@ -5085,6 +5100,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; Refugee Survey Quarterly Volume 24 ; 24 >
         au < doNotProcess ; Refugee Survey Quarterly Volume 25 ; 25 >
+        au < testing ; Refugee Survey Quarterly Volume 26 ; 26 >
+        au < testing ; Refugee Survey Quarterly Volume 27 ; 27 >
+        au < testing ; Refugee Survey Quarterly Volume 28 ; 28 >
 
       }
 
@@ -5114,6 +5132,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; The Review of English Studies Volume 56 ; 56 >
         au < doNotProcess ; The Review of English Studies Volume 57 ; 57 >
+        au < testing ; The Review of English Studies Volume 58 ; 58 >
+        au < testing ; The Review of English Studies Volume 59 ; 59 >
+        au < testing ; The Review of English Studies Volume 60 ; 60 >
 
       }
 
@@ -5207,8 +5228,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Rheumatology Volume 44 ; 44 >
         au < ready ; Rheumatology Volume 45 ; 45 >
         au < ready ; Rheumatology Volume 46 ; 46 >
-        au < testing ; Rheumatology Volume 47 ; 47 >
-        au < testing ; Rheumatology Volume 48 ; 48 >
+        au < ready ; Rheumatology Volume 47 ; 47 >
+        au < ready ; Rheumatology Volume 48 ; 48 >
 
       }
 
@@ -5239,8 +5260,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < exists ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
         au < ready ; Schizophrenia Bulletin Volume 33 ; 33 >
-        au < testing ; Schizophrenia Bulletin Volume 34 ; 34 >
-        au < testing ; Schizophrenia Bulletin Volume 35 ; 35 >
+        au < ready ; Schizophrenia Bulletin Volume 34 ; 34 >
+        au < ready ; Schizophrenia Bulletin Volume 35 ; 35 >
 
       }
 
@@ -5270,9 +5291,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Screen Volume 46 ; 46 >
         au < released ; Screen Volume 47 ; 47 >
-        au < testing ; Screen Volume 48 ; 48 >
-        au < testing ; Screen Volume 49 ; 49 >
-        au < testing ; Screen Volume 50 ; 50 >
+        au < ready ; Screen Volume 48 ; 48 >
+        au < ready ; Screen Volume 49 ; 49 >
+        au < ready ; Screen Volume 50 ; 50 >
 
       }
 
@@ -5291,9 +5312,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
-        au < testing ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
-        au < testing ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
-        au < testing ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
+        au < ready ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
+        au < ready ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
+        au < ready ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
 
       }
 
@@ -5323,9 +5344,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Social History of Medicine Volume 18 ; 18 >
         au < released ; Social History of Medicine Volume 19 ; 19 >
-        au < testing ; Social History of Medicine Volume 20 ; 20 >
-        au < testing ; Social History of Medicine Volume 21 ; 21 >
-        au < testing ; Social History of Medicine Volume 22 ; 22 >
+        au < ready ; Social History of Medicine Volume 20 ; 20 >
+        au < ready ; Social History of Medicine Volume 21 ; 21 >
+        au < ready ; Social History of Medicine Volume 22 ; 22 >
 
       }
 
