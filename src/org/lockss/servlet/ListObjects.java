@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.5 2009-09-04 22:59:11 thib_gc Exp $
+ * $Id: ListObjects.java,v 1.6 2009-09-11 19:23:47 dshr Exp $
  */
 
 /*
@@ -96,6 +96,14 @@ public class ListObjects extends LockssServlet {
 	return;
       }
       listDOIs();
+    } else if (type.equalsIgnoreCase("files")) {
+      auid = getParameter("auid");
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+	displayError("No such AU: " + auid);
+	return;
+      }
+      listFiles();
     } else if (type.equalsIgnoreCase("articles")) {
       auid = getParameter("auid");
       au = pluginMgr.getAuFromId(auid);
@@ -153,6 +161,31 @@ public class ListObjects extends LockssServlet {
     }
   }
 
+  void listFiles() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+    wrtr.println("# Files in " + au.getName());
+    wrtr.println("# URL\tContentType\tsize");
+    wrtr.println();
+    for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
+	 iter.hasNext(); ) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
+      if (cusn.isLeaf()) {
+	CachedUrl cu = (CachedUrl)cusn;
+	if (cu.hasContent()) {
+	  String url = cu.getUrl();
+	  String contentType = cu.getContentType();
+	  long bytes = cu.getContentSize();
+	  if (contentType == null) {
+	    contentType = "unknown";
+	  }
+	  wrtr.println(url + "\t" + contentType + "\t" + bytes);
+	}
+	AuUtil.safeRelease(cu);
+      }
+    }
+  }
+
   void listArticles() throws IOException {
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
@@ -171,9 +204,9 @@ public class ListObjects extends LockssServlet {
           }
         }
       } catch (IOException e) {
-        log.warning("listDOIs() threw " + e);
+        log.warning("listArticless() threw " + e);
       } catch (PluginException e) {
-        log.warning("listDOIs() threw " + e);
+        log.warning("listArticless() threw " + e);
       } finally {
         AuUtil.safeRelease(cu);       
       }

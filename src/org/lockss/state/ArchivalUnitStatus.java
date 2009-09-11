@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.83 2009-06-19 08:29:30 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.84 2009-09-11 19:23:47 dshr Exp $
  */
 
 /*
@@ -749,6 +749,12 @@ public class ArchivalUnitStatus
 				PropUtil.fromArgs("type", "articles",
 						  "auid", au.getAuId()));
 
+      StatusTable.SrvLink fileListLink =
+	new StatusTable.SrvLink("File list",
+				AdminServletManager.SERVLET_LIST_OBJECTS,
+				PropUtil.fromArgs("type", "files",
+						  "auid", au.getAuId()));
+
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
@@ -897,6 +903,9 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    articleListLink));
       }
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  fileListLink));
       return res;
     }
 
