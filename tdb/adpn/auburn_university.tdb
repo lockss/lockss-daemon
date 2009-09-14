@@ -14,9 +14,10 @@
     param[base_url] = http://content.lib.auburn.edu/   
     implicit < status ; name ; param[volume_name] >
   
-    au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
     au < released ; Auburn University Alabama Cooperative Extension Service Photographs ; autest >
+    au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
     au < released ; Auburn University Football Program ; football >
+    au < manifest ; Auburn University Photographs Collection ; aunumphoto >
   
   }
       
