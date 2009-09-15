@@ -48,6 +48,70 @@
  
  <property name="org.lockss.title">
 
+  <property name="ArchivesofDermatology140">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 140" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="140" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofDermatology141">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 141" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="141" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofDermatology142">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 142" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="142" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofDermatology143">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 143" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="143" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
   <property name="ArchivesofDermatology144">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Dermatology" />
@@ -76,6 +140,70 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="145" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofFacialPlasticSurgery6">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archfaci.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofFacialPlasticSurgery7">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archfaci.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofFacialPlasticSurgery8">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archfaci.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofFacialPlasticSurgery9">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archfaci.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
@@ -112,6 +240,70 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
+  <property name="ArchivesofGeneralPsychiatry61">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of General Psychiatry" />
+   <property name="title" value="Archives of General Psychiatry Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpsyc.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="61" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofGeneralPsychiatry62">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of General Psychiatry" />
+   <property name="title" value="Archives of General Psychiatry Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpsyc.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="62" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofGeneralPsychiatry63">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of General Psychiatry" />
+   <property name="title" value="Archives of General Psychiatry Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpsyc.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="63" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofGeneralPsychiatry64">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of General Psychiatry" />
+   <property name="title" value="Archives of General Psychiatry Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpsyc.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="64" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
   <property name="ArchivesofGeneralPsychiatry65">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of General Psychiatry" />
@@ -140,6 +332,70 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="66" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofInternalMedicine164">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Internal Medicine" />
+   <property name="title" value="Archives of Internal Medicine Volume 164" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archinte.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="164" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofInternalMedicine165">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Internal Medicine" />
+   <property name="title" value="Archives of Internal Medicine Volume 165" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archinte.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="165" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofInternalMedicine166">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Internal Medicine" />
+   <property name="title" value="Archives of Internal Medicine Volume 166" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archinte.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="166" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofInternalMedicine167">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Internal Medicine" />
+   <property name="title" value="Archives of Internal Medicine Volume 167" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archinte.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="167" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
@@ -176,6 +432,70 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
+  <property name="ArchivesofNeurology61">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Neurology" />
+   <property name="title" value="Archives of Neurology Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archneur.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="61" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofNeurology62">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Neurology" />
+   <property name="title" value="Archives of Neurology Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archneur.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="62" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofNeurology63">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Neurology" />
+   <property name="title" value="Archives of Neurology Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archneur.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="63" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofNeurology64">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Neurology" />
+   <property name="title" value="Archives of Neurology Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archneur.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="64" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
   <property name="ArchivesofNeurology65">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Neurology" />
@@ -204,6 +524,70 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="66" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOphthalmology122">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Ophthalmology" />
+   <property name="title" value="Archives of Ophthalmology Volume 122" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archopht.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="122" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOphthalmology123">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Ophthalmology" />
+   <property name="title" value="Archives of Ophthalmology Volume 123" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archopht.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="123" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOphthalmology124">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Ophthalmology" />
+   <property name="title" value="Archives of Ophthalmology Volume 124" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archopht.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="124" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOphthalmology125">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Ophthalmology" />
+   <property name="title" value="Archives of Ophthalmology Volume 125" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archopht.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="125" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
@@ -240,6 +624,70 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
+  <property name="ArchivesofOtolaryngologyHeadNeckSurgery130">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Otolaryngology - Head &amp; Neck Surgery" />
+   <property name="title" value="Archives of Otolaryngology - Head &amp; Neck Surgery Volume 130" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archotol.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="130" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOtolaryngologyHeadNeckSurgery131">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Otolaryngology - Head &amp; Neck Surgery" />
+   <property name="title" value="Archives of Otolaryngology - Head &amp; Neck Surgery Volume 131" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archotol.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="131" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOtolaryngologyHeadNeckSurgery132">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Otolaryngology - Head &amp; Neck Surgery" />
+   <property name="title" value="Archives of Otolaryngology - Head &amp; Neck Surgery Volume 132" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archotol.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="132" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofOtolaryngologyHeadNeckSurgery133">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Otolaryngology - Head &amp; Neck Surgery" />
+   <property name="title" value="Archives of Otolaryngology - Head &amp; Neck Surgery Volume 133" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archotol.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="133" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
   <property name="ArchivesofOtolaryngologyHeadNeckSurgery134">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Otolaryngology - Head &amp; Neck Surgery" />
@@ -268,6 +716,70 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="135" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofPediatricsAdolescentMedicine158">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Pediatrics &amp; Adolescent Medicine" />
+   <property name="title" value="Archives of Pediatrics &amp; Adolescent Medicine Volume 158" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpedi.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="158" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofPediatricsAdolescentMedicine159">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Pediatrics &amp; Adolescent Medicine" />
+   <property name="title" value="Archives of Pediatrics &amp; Adolescent Medicine Volume 159" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpedi.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="159" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofPediatricsAdolescentMedicine161">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Pediatrics &amp; Adolescent Medicine" />
+   <property name="title" value="Archives of Pediatrics &amp; Adolescent Medicine Volume 161" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpedi.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="161" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofPediatricsAdolescentMedicine162">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Pediatrics &amp; Adolescent Medicine" />
+   <property name="title" value="Archives of Pediatrics &amp; Adolescent Medicine Volume 162" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archpedi.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="162" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
@@ -304,6 +816,70 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
 
+  <property name="ArchivesofSurgery139">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Surgery" />
+   <property name="title" value="Archives of Surgery Volume 139" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archsurg.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="139" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofSurgery140">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Surgery" />
+   <property name="title" value="Archives of Surgery Volume 140" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archsurg.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="140" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofSurgery141">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Surgery" />
+   <property name="title" value="Archives of Surgery Volume 141" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archsurg.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="141" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofSurgery142">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Surgery" />
+   <property name="title" value="Archives of Surgery Volume 142" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archsurg.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="142" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
   <property name="ArchivesofSurgery143">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Surgery" />
@@ -332,6 +908,134 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="144" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation191">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 191" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="191" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation192">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 192" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="192" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation193">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 193" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="193" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation194">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 194" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="194" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation195">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 195" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="195" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation196">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 196" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="196" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation197">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 197" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="197" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournaloftheAmericanMedicalAssociation198">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Journal of the American Medical Association" />
+   <property name="title" value="Journal of the American Medical Association Volume 198" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jama.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="198" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
   </property>
