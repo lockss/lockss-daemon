@@ -336,22 +336,6 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyEndocrinologyandMetabolism285">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metabolism" />
-   <property name="title" value="American Journal of Physiology - Endocrinology and Metabolism Volume 285" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://ajpendo.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="286" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
   <property name="AmericanJournalofPhysiologyEndocrinologyandMetabolism286">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metabolism" />
@@ -363,7 +347,7 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="287" />
+    <property name="value" value="286" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
@@ -379,7 +363,7 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="288" />
+    <property name="value" value="287" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
@@ -395,7 +379,7 @@
    </property>
    <property name="param.2">
     <property name="key" value="volume_name" />
-    <property name="value" value="289" />
+    <property name="value" value="288" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
@@ -404,6 +388,22 @@
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metabolism" />
    <property name="title" value="American Journal of Physiology - Endocrinology and Metabolism Volume 289" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ajpendo.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="289" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="AmericanJournalofPhysiologyEndocrinologyandMetabolism290">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="American Journal of Physiology - Endocrinology and Metabolism" />
+   <property name="title" value="American Journal of Physiology - Endocrinology and Metabolism Volume 290" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -528,10 +528,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology286">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 286" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -544,10 +544,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology287">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 287" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -560,10 +560,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology288">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 288" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -576,10 +576,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology289">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 289" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -592,10 +592,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology290">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -608,10 +608,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology291">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 291" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -624,10 +624,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology292">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 292" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -640,10 +640,10 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology294">
+  <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology293">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
-   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294" />
+   <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 293" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -1488,22 +1488,6 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
-  <property name="JournalofAppliedPhysiology95">
-   <property name="attributes.publisher" value="American Physiological Society" />
-   <property name="journalTitle" value="Journal of Applied Physiology" />
-   <property name="title" value="Journal of Applied Physiology Volume 95" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jap.physiology.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="95" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
-  </property>
-
   <property name="JournalofAppliedPhysiology96">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="Journal of Applied Physiology" />
@@ -1564,6 +1548,22 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="99" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="JournalofAppliedPhysiology100">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Journal of Applied Physiology" />
+   <property name="title" value="Journal of Applied Physiology Volume 100" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jap.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="100" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
