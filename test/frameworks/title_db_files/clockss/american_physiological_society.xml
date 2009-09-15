@@ -656,6 +656,262 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
   </property>
 
+  <property name="PhysiologicalGenomics16">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics17">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics18">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics19">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics20">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics21">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics22">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics23">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics24">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics25">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics26">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics27">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics28">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics29">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics30">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
+  <property name="PhysiologicalGenomics31">
+   <property name="attributes.publisher" value="American Physiological Society" />
+   <property name="journalTitle" value="Physiological Genomics" />
+   <property name="title" value="Physiological Genomics Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://physiolgenomics.physiology.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform" />
+  </property>
+
   <property name="PhysiologicalGenomics32">
    <property name="attributes.publisher" value="American Physiological Society" />
    <property name="journalTitle" value="Physiological Genomics" />
