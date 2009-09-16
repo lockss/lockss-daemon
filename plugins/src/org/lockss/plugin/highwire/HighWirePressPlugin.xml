@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.HighWireStrVolPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWirePressPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire Press Plugin (H10b)</string>
+    <string>HighWire Press Plugin (H10c)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;HighWire Press Plugin (H10b), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>&quot;HighWire Press Plugin (H10c), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -92,7 +92,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireHtmlFilterFactory</string>
+    <string>org.lockss.plugin.highwire.ClockssHighWireHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

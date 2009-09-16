@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20Plugin</string>
+    <string>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire Press Plugin (H20)</string>
+    <string>HighWire Press Plugin (H20 for CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -43,11 +43,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;HighWire Press Plugin (H20), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>&quot;HighWire Press Plugin (H20 for CLOCKSS), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+    <string>&quot;%sclockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>
@@ -58,7 +58,7 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%sclockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
       <string>2,&quot;^%s(content|powerpoint|lookup/volpage)/%s/.*(cited-by|related-urls)=yes&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s(content|powerpoint|lookup/volpage)/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s(cgi/data/[^/]+/|(cgi/)?content/([^/]+/){2,4}|content/suppl/([0-9]+/){2,4}[^/]+\.)DC(Supplemental|[0-9]+)&quot;, base_url</string>
@@ -70,11 +70,11 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>3250</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.ClockssHighWirePressCrawlWindow</string>
+    <string>org.lockss.plugin.highwire.HighWireCrawlWindow</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
