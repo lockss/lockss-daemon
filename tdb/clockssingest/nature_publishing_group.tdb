@@ -101,7 +101,7 @@
     param[journal_id] = cgt
 
     au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
-    au < testing ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < ready ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -114,7 +114,7 @@
     param[journal_id] = cdd
 
     au < manifest ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
-    au < testing ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+    au < ready ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -127,7 +127,7 @@
     param[journal_id] = cr
 
     au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
-    au < testing ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+    au < ready ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -150,7 +150,7 @@
     param[journal_id] = emboj
 
     au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
-    au < testing ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
+    au < NotReady ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
 
   }
 
@@ -173,7 +173,7 @@
     param[journal_id] = ejcn
 
     au < manifest ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
-    au < wanted ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
+    au < ready ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
 
   }
 
@@ -206,7 +206,7 @@
     param[journal_id] = eye
 
     au < manifest ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
-    au < wanted ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
+    au < ready ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -219,7 +219,7 @@
     param[journal_id] = gt
 
     au < manifest ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
-    au < wanted ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < testing ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -232,7 +232,7 @@
     param[journal_id] = gene
 
     au < manifest ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
-    au < wanted ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
+    au < testing ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -246,7 +246,7 @@
 
     au < manifest ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
     au < manifest ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
-    au < wanted ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < testing ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < manifest ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
 
   }
@@ -260,7 +260,7 @@
     param[journal_id] = hr
 
     au < manifest ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
-    au < wanted ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
+    au < testing ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
 
   }
 

@@ -81,5 +81,16 @@
     au < ready ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
   
   }  
+
+  {
   
+    title <
+      name = Archives of Pediatrics & Adolescent Medicine
+    >
+    
+    param[base_url] = http://archpedi.ama-assn.org/
+    
+    au < ready ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 >
+  
+  }  
 }

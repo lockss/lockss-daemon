@@ -44,6 +44,54 @@
     au < ready ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
 
   }
+
+  {
+
+    title <
+      name = Cancer Gene Therapy
+    >
+
+    param[journal_id] = cgt
+
+    au < ready ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Cell Death and Differentiation
+    >
+
+    param[journal_id] = cdd
+
+    au < ready ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+
+  }
+  
+  {
+
+    title <
+      name = European Journal of Clinical Nutrition
+    >
+
+    param[journal_id] = ejcn
+
+    au < ready ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
+
+  }  
+
+  {
+
+    title <
+      name = Eye
+    >
+
+    param[journal_id] = eye
+
+    au < ready ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
+
+  }
   
   {
 
