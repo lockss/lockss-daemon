@@ -30,13 +30,15 @@
       
       implicit < status ; year ; name ; param[year] >
       
-      au < testing ; 2003 ; ";login: 2003" ; 2003 >
-      au < testing ; 2004 ; ";login: 2004" ; 2004 >
-      au < testing ; 2005 ; ";login: 2005" ; 2005 >
-      au < testing ; 2006 ; ";login: 2006" ; 2006 >
-      au < testing ; 2007 ; ";login: 2007" ; 2007 >
-      au < testing ; 2008 ; ";login: 2008" ; 2008 >
-      au < testing ; 2009 ; ";login: 2009" ; 2009 >
+comment[0] = content becomes openly available after 1 year
+      
+      au < ready ; 2003 ; ";login: 2003" ; 2003 >
+      au < ready ; 2004 ; ";login: 2004" ; 2004 >
+      au < ready ; 2005 ; ";login: 2005" ; 2005 >
+      au < ready ; 2006 ; ";login: 2006" ; 2006 >
+      au < ready ; 2007 ; ";login: 2007" ; 2007 >
+      au < ready ; 2008 ; ";login: 2008" ; 2008 >
+      au < manifest ; 2009 ; ";login: 2009" ; 2009 >
 
     }
   

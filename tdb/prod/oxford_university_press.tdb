@@ -4746,6 +4746,16 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < ready ; Past & Present Volume 191 ; 191 >
         au < ready ; Past & Present Volume 192 ; 192 >
         au < ready ; Past & Present Volume 193 ; 193 >
+        au < wanted ; Past & Present Volume 194 ; 194 >
+        au < wanted ; Past & Present Volume 195 ; 195 >
+        au < wanted ; Past & Present Volume 196 ; 196 >
+        au < wanted ; Past & Present Volume 197 ; 197 >
+        au < wanted ; Past & Present Volume 198 ; 198 >
+        au < wanted ; Past & Present Volume 199 ; 199 >
+        au < wanted ; Past & Present Volume 200 ; 200 >
+        au < wanted ; Past & Present Volume 201 ; 201 >
+        au < wanted ; Past & Present Volume 202 ; 202 >
+        au < wanted ; Past & Present Volume 203 ; 203 >
 
       }
 
@@ -4776,6 +4786,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Philosophia Mathematica Volume 13 ; 13 >
         au < doNotProcess ; Philosophia Mathematica Volume 14 ; 14 >
         au < released ; Philosophia Mathematica Volume 15 ; 15 >
+        au < testing ; Philosophia Mathematica Volume 16 ; 16 >
+        au < testing ; Philosophia Mathematica Volume 17 ; 17 >
 
       }
 
@@ -4805,6 +4817,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Plant and Cell Physiology Volume 47 ; 47 >
         au < released ; Plant and Cell Physiology Volume 48 ; 48 >
+        au < testing ; Plant and Cell Physiology Volume 49 ; 49 >
+        au < testing ; Plant and Cell Physiology Volume 50 ; 50 >
 
       }
 
@@ -4835,6 +4849,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Political Analysis Volume 13 ; 13 >
         au < doNotProcess ; Political Analysis Volume 14 ; 14 >
         au < released ; Political Analysis Volume 15 ; 15 >
+        au < testing ; Political Analysis Volume 16 ; 16 >
+        au < testing ; Political Analysis Volume 17 ; 17 >
 
       }
 
@@ -4853,6 +4869,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < status ; name ; param[volume_name] >
 
         au < released ; Proceedings of the London Mathematical Society Volume 94 ; 94 >
+        au < testing ; Proceedings of the London Mathematical Society Volume 95 ; 95 >
+        au < testing ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
+        au < testing ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
+        au < testing ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
+        au < testing ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
 
       }
 
@@ -4883,6 +4904,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < doNotProcess ; Protein Engineering Design and Selection Volume 18 ; 18 >
         au < released ; Protein Engineering Design and Selection Volume 19 ; 19 >
         au < released ; Protein Engineering Design and Selection Volume 20 ; 20 >
+        au < testing ; Protein Engineering Design and Selection Volume 21 ; 21 >
+        au < testing ; Protein Engineering Design and Selection Volume 22 ; 22 >
 
       }
 
@@ -4912,6 +4935,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; Public Opinion Quarterly Volume 69 ; 69 >
         au < doNotProcess ; Public Opinion Quarterly Volume 70 ; 70 >
+        au < testing ; Public Opinion Quarterly Volume 71 ; 71 >
+        au < testing ; Public Opinion Quarterly Volume 72 ; 72 >
 
       }
 
@@ -4941,6 +4966,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; Publius: The Journal of Federalism Volume 36 ; 36 >
         au < released ; Publius: The Journal of Federalism Volume 37 ; 37 >
+        au < testing ; Publius: The Journal of Federalism Volume 38 ; 38 >
+        au < testing ; Publius: The Journal of Federalism Volume 39 ; 39 >
 
       }
 
@@ -4971,6 +4998,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
         au < doNotProcess ; QJM: An International Journal of Medicine Volume 99 ; 99 >
         au < ready ; QJM: An International Journal of Medicine Volume 100 ; 100 >
+        au < testing ; QJM: An International Journal of Medicine Volume 101 ; 101 >
+        au < testing ; QJM: An International Journal of Medicine Volume 102 ; 102 >
 
       }
 
@@ -5000,6 +5029,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < doNotProcess ; The Quarterly Journal of Mathematics Volume 56 ; 56 >
         au < released ; The Quarterly Journal of Mathematics Volume 57 ; 57 >
+        au < testing ; The Quarterly Journal of Mathematics Volume 58 ; 58 >
+        au < testing ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
+        au < testing ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
 
       }
 
@@ -5020,6 +5052,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 >
         au < released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 >
         au < ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
+        au < testing ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
+        au < testing ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
 
       }
 
@@ -5056,14 +5090,14 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Radiation Protection Dosimetry Volume 119 ; 119 >
         au < released ; Radiation Protection Dosimetry Volume 120 ; 120 >
         au < ready ; Radiation Protection Dosimetry Volume 121 ; 121 >
-        au < testing ; Radiation Protection Dosimetry Volume 122 ; 122 >
-        au < testing ; Radiation Protection Dosimetry Volume 123 ; 123 >
-        au < testing ; Radiation Protection Dosimetry Volume 124 ; 124 >
-        au < testing ; Radiation Protection Dosimetry Volume 125 ; 125 >
-        au < testing ; Radiation Protection Dosimetry Volume 126 ; 126 >
-        au < testing ; Radiation Protection Dosimetry Volume 127 ; 127 >
-        au < testing ; Radiation Protection Dosimetry Volume 128 ; 128 >
-        au < testing ; Radiation Protection Dosimetry Volume 129 ; 129 >
+        au < ready ; Radiation Protection Dosimetry Volume 122 ; 122 >
+        au < ready ; Radiation Protection Dosimetry Volume 123 ; 123 >
+        au < ready ; Radiation Protection Dosimetry Volume 124 ; 124 >
+        au < ready ; Radiation Protection Dosimetry Volume 125 ; 125 >
+        au < ready ; Radiation Protection Dosimetry Volume 126 ; 126 >
+        au < ready ; Radiation Protection Dosimetry Volume 127 ; 127 >
+        au < ready ; Radiation Protection Dosimetry Volume 128 ; 128 >
+        au < ready ; Radiation Protection Dosimetry Volume 129 ; 129 >
         au < ready ; Radiation Protection Dosimetry Volume 130 ; 130 >
         au < ready ; Radiation Protection Dosimetry Volume 131 ; 131 >
         au < ready ; Radiation Protection Dosimetry Volume 132 ; 132 >
@@ -5100,9 +5134,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; Refugee Survey Quarterly Volume 24 ; 24 >
         au < doNotProcess ; Refugee Survey Quarterly Volume 25 ; 25 >
-        au < testing ; Refugee Survey Quarterly Volume 26 ; 26 >
-        au < testing ; Refugee Survey Quarterly Volume 27 ; 27 >
-        au < testing ; Refugee Survey Quarterly Volume 28 ; 28 >
+        au < ready ; Refugee Survey Quarterly Volume 26 ; 26 >
+        au < ready ; Refugee Survey Quarterly Volume 27 ; 27 >
+        au < ready ; Refugee Survey Quarterly Volume 28 ; 28 >
 
       }
 
@@ -5132,9 +5166,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; The Review of English Studies Volume 56 ; 56 >
         au < doNotProcess ; The Review of English Studies Volume 57 ; 57 >
-        au < testing ; The Review of English Studies Volume 58 ; 58 >
-        au < testing ; The Review of English Studies Volume 59 ; 59 >
-        au < testing ; The Review of English Studies Volume 60 ; 60 >
+        au < ready ; The Review of English Studies Volume 58 ; 58 >
+        au < ready ; The Review of English Studies Volume 59 ; 59 >
+        au < ready ; The Review of English Studies Volume 60 ; 60 >
 
       }
 
@@ -5153,8 +5187,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < status ; name ; param[volume_name] >
 
         au < ready ; Review of Environmental Economics and Policy Volume 1 ; 1 >
-        au < testing ; Review of Environmental Economics and Policy Volume 2 ; 2 >
-        au < testing ; Review of Environmental Economics and Policy Volume 3 ; 3 >
+        au < ready ; Review of Environmental Economics and Policy Volume 2 ; 2 >
+        au < ready ; Review of Environmental Economics and Policy Volume 3 ; 3 >
 
       }
 
@@ -5174,8 +5208,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < ready ; Review of Finance Volume 10 ; 10 >
         au < ready ; Review of Finance Volume 11 ; 11 >
-        au < testing ; Review of Finance Volume 12 ; 12 >
-        au < testing ; Review of Finance Volume 13 ; 13 >
+        au < ready ; Review of Finance Volume 12 ; 12 >
+        au < ready ; Review of Finance Volume 13 ; 13 >
 
       }
 
@@ -5206,8 +5240,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < released ; Review of Financial Studies Volume 18 ; 18 >
         au < doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < released ; Review of Financial Studies Volume 20 ; 20 >
-        au < testing ; Review of Financial Studies Volume 21 ; 21 >
-        au < testing ; Review of Financial Studies Volume 22 ; 22 >
+        au < ready ; Review of Financial Studies Volume 21 ; 21 >
+        au < ready ; Review of Financial Studies Volume 22 ; 22 >
 
       }
 
