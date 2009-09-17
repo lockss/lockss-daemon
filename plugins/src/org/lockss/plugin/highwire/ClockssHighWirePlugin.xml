@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -75,10 +75,6 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3250</long>
-  </entry>
-  <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.ClockssHighWirePressCrawlWindow</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
