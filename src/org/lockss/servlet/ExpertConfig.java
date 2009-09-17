@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.2 2009-07-22 22:24:12 uid77510 Exp $
+ * $Id: ExpertConfig.java,v 1.3 2009-09-17 02:52:58 tlipkis Exp $
  */
 
 /*
@@ -124,8 +124,9 @@ public class ExpertConfig extends LockssServlet {
       displayPage();
     } else {
       try {
-	testAndSaveConfig();
-	statusMsg = "Update successful";
+	if (testAndSaveConfig()) {
+	  statusMsg = "Update successful";
+	}
       } catch (Exception e) {
 	log.error("Error saving changes", e);
 	errMsg = "Error: Couldn't save changes:<br>" + e.toString();
