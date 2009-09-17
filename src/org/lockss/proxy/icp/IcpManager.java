@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.35 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: IcpManager.java,v 1.36 2009-09-17 02:53:38 tlipkis Exp $
  */
 
 /*
@@ -421,6 +421,7 @@ public class IcpManager
             logger.debug2("processMessage: MISS_NOFETCH");
             response = message.makeMissNoFetch();
           }
+	  AuUtil.safeRelease(cu);
         }
       }
       catch (IcpException ipe) {

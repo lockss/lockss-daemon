@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.25 2008-11-02 21:11:52 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.26 2009-09-17 02:53:38 tlipkis Exp $
  */
 
 /*
@@ -107,7 +107,11 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       return false;
     }
     CachedUrl cu = au.makeCachedUrl(getUrl());
-    return (cu == null ? false : cu.hasContent());
+    try {
+      return (cu == null ? false : cu.hasContent());
+    } finally {
+      AuUtil.safeRelease(cu);
+    }	    
   }
 
   /**

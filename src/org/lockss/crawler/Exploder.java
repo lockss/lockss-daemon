@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.14 2009-09-05 18:03:27 dshr Exp $
+ * $Id: Exploder.java,v 1.15 2009-09-17 02:53:38 tlipkis Exp $
  */
 
 /*
@@ -310,6 +310,7 @@ public abstract class Exploder {
 				 manifestPageTag, manifestPageAdd);
       props = manifestCu.getProperties();
       props.setProperty("x-lockss-node-url", UrlUtil.minimallyEncodeUrl(url));
+      manifestCu.release();
     } else {
       logger.debug3("Adding text " + newText + " to page " + url +
 		    " in " + au.getAuId());

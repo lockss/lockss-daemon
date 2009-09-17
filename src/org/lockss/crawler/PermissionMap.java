@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.26 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.27 2009-09-17 02:53:38 tlipkis Exp $
  */
 
 /*
@@ -490,6 +490,7 @@ public class PermissionMap {
 	CachedUrl cu = uc.getCachedUrl();
 	if (cu != null && cu.hasContent()) {
 	  crawlStatus.addContentBytesFetched(cu.getContentSize());
+	  cu.release();
 	}
       }
     } finally {
