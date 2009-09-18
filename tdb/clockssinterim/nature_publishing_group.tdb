@@ -84,12 +84,48 @@
   {
 
     title <
+      name = The EMBO Journal
+    >
+
+    param[journal_id] = emboj
+
+    au < ready ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
+
+  }
+  
+  {
+
+    title <
       name = Eye
     >
 
     param[journal_id] = eye
 
     au < ready ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Gene Therapy
+    >
+
+    param[journal_id] = gt
+
+    au < ready ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
+
+  }
+  
+  {
+
+    title <
+      name = Genes and Immunity
+    >
+
+    param[journal_id] = gene
+
+    au < ready ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
 
   }
   

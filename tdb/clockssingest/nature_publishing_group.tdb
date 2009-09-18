@@ -126,8 +126,10 @@
 
     param[journal_id] = cr
 
+comment[cr] = waiting for the last issue to be crawled by all machines
+
     au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
-    au < ready ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+    au < notReady ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -150,7 +152,7 @@
     param[journal_id] = emboj
 
     au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
-    au < NotReady ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
+    au < ready ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
 
   }
 
@@ -219,7 +221,7 @@
     param[journal_id] = gt
 
     au < manifest ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
-    au < testing ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < ready ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -232,7 +234,7 @@
     param[journal_id] = gene
 
     au < manifest ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
-    au < testing ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
+    au < ready ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -529,7 +531,7 @@
     param[journal_id] = nbt
 
     au < manifest ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
-    au < wanted ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+    au < testing ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
 
   }
 
@@ -542,7 +544,7 @@
     param[journal_id] = ncb
 
     au < manifest ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
-    au < wanted ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+    au < testing ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
 
   }
 
