@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbxml.py,v 1.11 2009-08-26 09:32:28 thib_gc Exp $
+# $Id: tdbxml.py,v 1.12 2009-09-22 23:36:08 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -137,7 +137,7 @@ def _process_au(au, options):
             i = i + 1
     for param in au_params:
         if param not in _IMPLICIT_PARAM_ORDER:
-            _do_param(au, i, au_params[param])
+            _do_param(au, i, param)
             i = i + 1
     if au.status() == AU.STATUS_DOWN:
         _do_param(au, 99, 'pub_down', value='true')
