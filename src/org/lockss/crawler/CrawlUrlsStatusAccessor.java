@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.6 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.7 2009-09-22 02:06:52 thib_gc Exp $
  */
 
 /*
@@ -238,7 +238,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       if (status.getNumExcludedExcludes() > 0) {
 	List summary = new ArrayList();
 	String str = status.getNumExcludedExcludes() +
-	  " or fewer additional off-site URLS were excluded but not listed";
+	  " or fewer additional off-site URLs were excluded but not listed";
 	summary.add(new StatusTable.SummaryInfo(null,
 						ColumnDescriptor.TYPE_STRING,
 						str));
