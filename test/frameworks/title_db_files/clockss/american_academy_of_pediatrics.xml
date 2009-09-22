@@ -61,7 +61,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="19" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="AAPGrandRounds20">
@@ -77,7 +77,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="20" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="AAPGrandRounds21">
@@ -93,7 +93,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="21" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="AAPGrandRounds22">
@@ -109,7 +109,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="22" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="AAPNews19">
@@ -125,7 +125,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="19" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="AAPNews20">
@@ -141,7 +141,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="20" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="NeoReviews9">
@@ -157,7 +157,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="9" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="NeoReviews10">
@@ -173,7 +173,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="10" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="Pediatrics121">
@@ -189,7 +189,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="121" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="Pediatrics122">
@@ -205,7 +205,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="122" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="Pediatrics123">
@@ -221,7 +221,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="123" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="Pediatrics124">
@@ -237,7 +237,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="124" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="PediatricsinReview29">
@@ -253,7 +253,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="29" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
   <property name="PediatricsinReview30">
@@ -269,7 +269,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="30" />
    </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform" />
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified" />
   </property>
 
  </property>
