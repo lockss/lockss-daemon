@@ -17,7 +17,7 @@
 
     param[journal_id] = aps
 
-    au < ready ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
+    au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
   
@@ -29,7 +29,7 @@
 
     param[journal_id] = aja
 
-    au < ready ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
+    au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
 
   }
 
@@ -41,7 +41,7 @@
 
     param[journal_id] = bmt
 
-    au < ready ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
+    au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
 
   }
 
@@ -53,7 +53,7 @@
 
     param[journal_id] = cgt
 
-    au < ready ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
 
@@ -65,7 +65,19 @@
 
     param[journal_id] = cdd
 
-    au < ready ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+    au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+
+  }
+  
+  {
+
+    title <
+      name = The EMBO Journal
+    >
+
+    param[journal_id] = emboj
+
+    au < released ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
 
   }
   
@@ -77,22 +89,10 @@
 
     param[journal_id] = ejcn
 
-    au < ready ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
+    au < released ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
 
   }  
 
-  {
-
-    title <
-      name = The EMBO Journal
-    >
-
-    param[journal_id] = emboj
-
-    au < ready ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
-
-  }
-  
   {
 
     title <
@@ -101,7 +101,7 @@
 
     param[journal_id] = eye
 
-    au < ready ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
+    au < released ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -113,7 +113,7 @@
 
     param[journal_id] = gt
 
-    au < ready ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < released ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
   
@@ -125,7 +125,7 @@
 
     param[journal_id] = gene
 
-    au < ready ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
+    au < released ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
 
   }
   
@@ -146,7 +146,7 @@
     au < released ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
     au < released ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
     au < released ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
-    au < ready ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
+    au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
 
   }
 
