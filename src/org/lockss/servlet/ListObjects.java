@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.4.2.1 2009-09-04 23:12:23 thib_gc Exp $
+ * $Id: ListObjects.java,v 1.4.2.2 2009-09-22 09:24:01 thib_gc Exp $
  */
 
 /*
@@ -135,20 +135,22 @@ public class ListObjects extends LockssServlet {
     wrtr.println();
     for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
       CachedUrl cu = (CachedUrl)iter.next();
-      if (cu.hasContent()) {
-        try {
+      try {
+        if (cu.hasContent()) {
           Metadata md = cu.getMetadataExtractor().extract(cu);
-	  String doi = md.getDOI();
-	  if (doi != null) {
-	    wrtr.println(doi);
-	  }
-	} catch (IOException e) {
-	  log.warning("listDOIs() threw " + e);
-	} catch (PluginException e) {
-	  log.warning("listDOIs() threw " + e);
-	} finally {
-          AuUtil.safeRelease(cu);
+          if (md != null) {
+            String doi = md.getDOI();
+            if (doi != null) {
+              wrtr.println(doi);
+            }
+          }          
         }
+      } catch (IOException e) {
+        log.warning("listDOIs() threw " + e);
+      } catch (PluginException e) {
+        log.warning("listDOIs() threw " + e);
+      } finally {
+        AuUtil.safeRelease(cu);
       }
     }
   }
@@ -160,22 +162,28 @@ public class ListObjects extends LockssServlet {
     wrtr.println();
     for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
       CachedUrl cu = (CachedUrl)iter.next();
-      if (cu.hasContent()) {
-        try {
+      try {
+        if (cu.hasContent()) {
           Metadata md = cu.getMetadataExtractor().extract(cu);
-	  String doi = md.getDOI();
-	  if (doi != null) {
-	    wrtr.println(cu.getUrl() + "\t" + doi);
-	  } else {
-	    wrtr.println(cu.getUrl() + "\t");
-	  }
-	} catch (IOException e) {
-	  log.warning("listDOIs() threw " + e);
-	} catch (PluginException e) {
-	  log.warning("listDOIs() threw " + e);
-	} finally {
-          AuUtil.safeRelease(cu);       
+          if (md == null) {
+            wrtr.println(cu.getUrl() + "\t");
+          }
+          else {
+            String doi = md.getDOI();
+            if (doi != null) {
+              wrtr.println(cu.getUrl() + "\t" + doi);
+            }
+            else {
+              wrtr.println(cu.getUrl() + "\t");
+            }
+          }
         }
+      } catch (IOException e) {
+        log.warning("listArticles() threw " + e);
+      } catch (PluginException e) {
+        log.warning("listArticles() threw " + e);
+      } finally {
+        AuUtil.safeRelease(cu);       
       }
     }
   }
