@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.7 2009-09-16 23:55:42 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.8 2009-09-22 01:27:36 thib_gc Exp $
  */
 
 /*
@@ -60,7 +60,12 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
 					       String encoding) {
 
     NodeFilter[] filters = new NodeFilter[] {
+        // Contains variable ad-generating code
         new TagNameFilter("script"),
+        // Contains variable ad-generating code
+        new TagNameFilter("noscript"),
+        // Typically contains ads (e.g. American Academy of Pediatrics)
+        new TagNameFilter("object"),
         // Typically contains ads 
         new TagNameFilter("iframe"),
         // Contains ads (e.g. American Medical Association)
@@ -92,6 +97,8 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "oas_bottom"),
         // Optional institution-specific citation resolver (e.g. SAGE Publications)
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
+        // Contains ad-dependent URLs (e.g. American Academy of Pediatrics)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
     };
 
     OrFilter orFilter = new OrFilter(filters);
