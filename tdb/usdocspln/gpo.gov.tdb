@@ -16,7 +16,7 @@
     param[base_url] = http://bulk.resource.org/
     implicit < status ; name ; param[congress] >
 
-    au < manifest ; Congressional Bills, 103rd Congress ; 103 >
+    au < wanted ; Congressional Bills, 103rd Congress ; 103 >
     au < released ; Congressional Bills, 104th Congress ; 104 >
     au < released ; Congressional Bills, 105th Congress ; 105 >
     au < released ; Congressional Bills, 106th Congress ; 106 >
@@ -53,17 +53,31 @@
       name = Congressional Hearings
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin
-    param[base_url] = http://bulk.resource.org/
-    implicit < status ; name ; param[congress] >
+    {
 
-    au < ready ; Congressional Hearings, 104th Congress ; 104 >
-    au < released ; Congressional Hearings, 105th Congress ; 105 >
-    au < released ; Congressional Hearings, 106th Congress ; 106 >
-    au < notReady ; Congressional Hearings, 107th Congress ; 107 >
-    au < released ; Congressional Hearings, 108th Congress ; 108 >
-    au < released ; Congressional Hearings, 109th Congress ; 109 >
-    au < released ; Congressional Hearings, 110th Congress ; 110 >
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsHouseOnlyPlugin
+      param[base_url] = http://bulk.resource.org/
+      implicit < status ; name ; param[congress] >
+
+      au < ready ; Congressional Hearings, 104th Congress (House only) ; 104 >
+      
+    }
+
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin
+      param[base_url] = http://bulk.resource.org/
+      implicit < status ; name ; param[congress] >
+
+      au < doNotProcess ; Congressional Hearings, 104th Congress ; 104 >
+      au < released ; Congressional Hearings, 105th Congress ; 105 >
+      au < released ; Congressional Hearings, 106th Congress ; 106 >
+      au < wanted ; Congressional Hearings, 107th Congress ; 107 >
+      au < released ; Congressional Hearings, 108th Congress ; 108 >
+      au < released ; Congressional Hearings, 109th Congress ; 109 >
+      au < released ; Congressional Hearings, 110th Congress ; 110 >
+      
+    }
 
   }
 
@@ -98,9 +112,9 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[year] >
 
-      au < released ; Congressional Record 1995 ; 1995 >
-      au < released ; Congressional Record 1996 ; 1996 >
-      au < released ; Congressional Record 1997 ; 1997 >
+      au < ready ; Congressional Record 1995 ; 1995 >
+      au < ready ; Congressional Record 1996 ; 1996 >
+      au < ready ; Congressional Record 1997 ; 1997 >
     
     }
 
@@ -149,6 +163,26 @@
 
   }
 
+  {
+
+    title <
+      name = Congressional Rules
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.rules.CongressionalRulesPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[volume_name] >
+
+    au < released ; Congressional Rules: Cannon's Precedents ; cannon >
+    au < released ; Congressional Rules: Deschler's Precedents ; deschler >
+    au < released ; Congressional Rules: Hinds' Precedents ; hinds >
+    au < released ; Congressional Rules: House Manual ; manual >
+    au < released ; Congressional Rules: House Practice Guide ; practice >
+    au < released ; Congressional Rules: Riddick's Senate Procedure ; riddick >
+    au < released ; Congressional Rules: Senate Manual ; sen_manual >
+  
+  }
+  
   {
 
     title <
@@ -216,6 +250,33 @@
   {
 
     title <
+      name = Presidential Papers
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.papers.PresidentialPapersPlugin
+    param[base_url] = http://bulk.resource.org/      
+    implicit < status ; name ; param[year] >
+
+    au < released ; Presidential Papers 1991 ; 1991 >
+    au < released ; Presidential Papers 1992 ; 1992 >
+    au < released ; Presidential Papers 1993 ; 1993 >
+    au < released ; Presidential Papers 1994 ; 1994 >
+    au < released ; Presidential Papers 1995 ; 1995 >
+    au < released ; Presidential Papers 1996 ; 1996 >
+    au < released ; Presidential Papers 1997 ; 1997 >
+    au < released ; Presidential Papers 1998 ; 1998 >
+    au < released ; Presidential Papers 1999 ; 1999 >
+    au < released ; Presidential Papers 2000 ; 2000 >
+    au < released ; Presidential Papers 2001 ; 2001 >
+    au < released ; Presidential Papers 2002 ; 2002 >
+    au < released ; Presidential Papers 2003 ; 2003 >
+    au < released ; Presidential Papers 2004 ; 2004 >
+   
+  }
+
+  {
+
+    title <
       name = Public and Private Laws 
     >
       
@@ -256,51 +317,4 @@
    
   }
 
-  {
-
-    title <
-      name = Presidential Papers
-    >
-
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.papers.PresidentialPapersPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[year] >
-
-    au < ready ; Presidential Papers 1991 ; 1991 >
-    au < ready ; Presidential Papers 1992 ; 1992 >
-    au < ready ; Presidential Papers 1993 ; 1993 >
-    au < ready ; Presidential Papers 1994 ; 1994 >
-    au < ready ; Presidential Papers 1995 ; 1995 >
-    au < ready ; Presidential Papers 1996 ; 1996 >
-    au < ready ; Presidential Papers 1997 ; 1997 >
-    au < ready ; Presidential Papers 1998 ; 1998 >
-    au < ready ; Presidential Papers 1999 ; 1999 >
-    au < ready ; Presidential Papers 2000 ; 2000 >
-    au < ready ; Presidential Papers 2001 ; 2001 >
-    au < ready ; Presidential Papers 2002 ; 2002 >
-    au < ready ; Presidential Papers 2003 ; 2003 >
-    au < ready ; Presidential Papers 2004 ; 2004 >
-   
-  }
-
-  {
-
-    title <
-      name = Congressional Rules
-    >
-
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.rules.CongressionalRulesPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[volume_name] >
-
-    au < ready ; Congressional Rules: Cannon's Precedents ; cannon >
-    au < ready ; Congressional Rules: Deschler's Precedents ; deschler >
-    au < ready ; Congressional Rules: Hinds' Precedents ; hinds >
-    au < ready ; Congressional Rules: House Manual ; manual >
-    au < ready ; Congressional Rules: House Practice Guide ; practice >
-    au < ready ; Congressional Rules: Riddick's Senate Procedure ; riddick >
-    au < ready ; Congressional Rules: Senate Manual ; sen_manual >
-  
-  }
-  
 }
