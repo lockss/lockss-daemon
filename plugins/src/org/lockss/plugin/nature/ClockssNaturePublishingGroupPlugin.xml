@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -51,7 +51,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
       <string>2,&quot;^%s%s/journal/v%s/[^/]+/(index\.html)?\?lang=&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%s%s/journal/v%s/[^/]+/abs/[^/]+_ja\.html$&quot;, base_url, journal_id, volume_name</string>
+      <string>2,&quot;^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%s%s/journal/v%s/[^/]+/pubmed/&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%s%s/journal/v%s/&quot;, base_url, journal_id, volume_name</string>
     </list>
