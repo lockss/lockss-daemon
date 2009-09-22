@@ -44,7 +44,7 @@
 
       param[journal_id] = cjfy
 
-      au < ready ; 2008 ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
+      au < released ; 2008 ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
 
     }
 
@@ -98,10 +98,10 @@
 
       param[journal_id] = esc
 
-      au < ready ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 >
-      au < ready ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 >
-      au < ready ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 >
-      au < ready ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 >
+      au < released ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 >
+      au < released ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 >
+      au < released ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 >
+      au < released ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 >
 
     }
 
@@ -167,10 +167,10 @@
 
       param[journal_id] = jcie
 
-      au < ready ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
-      au < ready ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
-      au < ready ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
-      au < ready ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 >
+      au < released ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 >
+      au < released ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
+      au < released ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
+      au < released ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 >
 
     }
 
@@ -192,15 +192,15 @@
 
       param[journal_id] = jhs
 
-      au < ready ; 1997 ; Journal of Hebrew Scriptures Volume 1 ; 1997 >
-      au < ready ; 1999 ; Journal of Hebrew Scriptures Volume 2 ; 1999 >
-      au < ready ; 2001 ; Journal of Hebrew Scriptures Volume 3 ; 2001 >
-      au < ready ; 2003 ; Journal of Hebrew Scriptures Volume 4 ; 2003 >
-      au < ready ; 2005 ; Journal of Hebrew Scriptures Volume 5 ; 2005 >
-      au < ready ; 2006 ; Journal of Hebrew Scriptures Volume 6 ; 2006 >
-      au < ready ; 2007 ; Journal of Hebrew Scriptures Volume 7 ; 2007 >
-      au < ready ; 2008 ; Journal of Hebrew Scriptures Volume 8 ; 2008 >
-      au < ready ; 2009 ; Journal of Hebrew Scriptures Volume 9 ; 2009 >
+      au < released ; 1997 ; Journal of Hebrew Scriptures Volume 1 ; 1997 >
+      au < released ; 1999 ; Journal of Hebrew Scriptures Volume 2 ; 1999 >
+      au < released ; 2001 ; Journal of Hebrew Scriptures Volume 3 ; 2001 >
+      au < released ; 2003 ; Journal of Hebrew Scriptures Volume 4 ; 2003 >
+      au < released ; 2005 ; Journal of Hebrew Scriptures Volume 5 ; 2005 >
+      au < released ; 2006 ; Journal of Hebrew Scriptures Volume 6 ; 2006 >
+      au < released ; 2007 ; Journal of Hebrew Scriptures Volume 7 ; 2007 >
+      au < released ; 2008 ; Journal of Hebrew Scriptures Volume 8 ; 2008 >
+      au < released ; 2009 ; Journal of Hebrew Scriptures Volume 9 ; 2009 >
 
     }
 
@@ -226,20 +226,20 @@
 
       param[journal_id] = pi
 
-      au < ready ; 1992 ; Past Imperfect Volume 1 ; 1992 >
-      au < ready ; 1993 ; Past Imperfect Volume 2 ; 1993 >
-      au < ready ; 1994 ; Past Imperfect Volume 3 ; 1994 >
-      au < ready ; 1995 ; Past Imperfect Volume 4 ; 1995 >
-      au < ready ; 1996 ; Past Imperfect Volume 5 ; 1996 >
-      au < ready ; 1997 ; Past Imperfect Volume 6 ; 1997 >
-      au < ready ; 1998 ; Past Imperfect Volume 7 ; 1998 >
-      au < ready ; 1999 ; Past Imperfect Volume 8 ; 1999 >
-      au < ready ; 2000 ; Past Imperfect Volume 9 ; 2001 >
-      au < ready ; 2004 ; Past Imperfect Volume 10 ; 2004 >
-      au < ready ; 2005 ; Past Imperfect Volume 11 ; 2005 >
-      au < ready ; 2006 ; Past Imperfect Volume 12 ; 2006 >
-      au < ready ; 2007 ; Past Imperfect Volume 13 ; 2007 >
-      au < ready ; 2008 ; Past Imperfect Volume 14 ; 2008 >
+      au < released ; 1992 ; Past Imperfect Volume 1 ; 1992 >
+      au < released ; 1993 ; Past Imperfect Volume 2 ; 1993 >
+      au < released ; 1994 ; Past Imperfect Volume 3 ; 1994 >
+      au < released ; 1995 ; Past Imperfect Volume 4 ; 1995 >
+      au < released ; 1996 ; Past Imperfect Volume 5 ; 1996 >
+      au < released ; 1997 ; Past Imperfect Volume 6 ; 1997 >
+      au < released ; 1998 ; Past Imperfect Volume 7 ; 1998 >
+      au < released ; 1999 ; Past Imperfect Volume 8 ; 1999 >
+      au < released ; 2000 ; Past Imperfect Volume 9 ; 2001 >
+      au < released ; 2004 ; Past Imperfect Volume 10 ; 2004 >
+      au < released ; 2005 ; Past Imperfect Volume 11 ; 2005 >
+      au < released ; 2006 ; Past Imperfect Volume 12 ; 2006 >
+      au < released ; 2007 ; Past Imperfect Volume 13 ; 2007 >
+      au < released ; 2008 ; Past Imperfect Volume 14 ; 2008 >
 
     }
 
