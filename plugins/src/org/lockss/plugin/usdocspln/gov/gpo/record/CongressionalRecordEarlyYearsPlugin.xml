@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.38.0</string>
+  </entry>
+  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordPlugin</string>
   </entry>

@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -29,9 +29,8 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s$&quot;, base_url</string>
-      <string>1,&quot;%sgpo.gov/papers/$&quot;, base_url</string>
+      <string>1,&quot;^%sgpo.gov/papers/$&quot;, base_url</string>
       <string>1,&quot;^%sgpo.gov/papers/%d&quot;, base_url, year</string>
-      <string>1,&quot;%sgpo.gov/papers/$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
