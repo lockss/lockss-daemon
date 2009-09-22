@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.6 2009-09-11 19:23:47 dshr Exp $
+ * $Id: ListObjects.java,v 1.7 2009-09-22 08:55:21 thib_gc Exp $
  */
 
 /*
@@ -146,10 +146,12 @@ public class ListObjects extends LockssServlet {
       try {
         if (cu.hasContent()) {
           Metadata md = cu.getMetadataExtractor().extract(cu);
-          String doi = md.getDOI();
-          if (doi != null) {
-            wrtr.println(doi);
-          }
+          if (md != null) {
+            String doi = md.getDOI();
+            if (doi != null) {
+              wrtr.println(doi);
+            }
+          }          
         }
       } catch (IOException e) {
         log.warning("listDOIs() threw " + e);
@@ -196,17 +198,23 @@ public class ListObjects extends LockssServlet {
       try {
         if (cu.hasContent()) {
           Metadata md = cu.getMetadataExtractor().extract(cu);
-          String doi = md.getDOI();
-          if (doi != null) {
-            wrtr.println(cu.getUrl() + "\t" + doi);
-          } else {
+          if (md == null) {
             wrtr.println(cu.getUrl() + "\t");
+          }
+          else {
+            String doi = md.getDOI();
+            if (doi != null) {
+              wrtr.println(cu.getUrl() + "\t" + doi);
+            }
+            else {
+              wrtr.println(cu.getUrl() + "\t");
+            }
           }
         }
       } catch (IOException e) {
-        log.warning("listArticless() threw " + e);
+        log.warning("listArticles() threw " + e);
       } catch (PluginException e) {
-        log.warning("listArticless() threw " + e);
+        log.warning("listArticles() threw " + e);
       } finally {
         AuUtil.safeRelease(cu);       
       }
