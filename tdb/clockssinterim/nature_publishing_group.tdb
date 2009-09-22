@@ -128,6 +128,30 @@
     au < released ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
 
   }
+
+  {
+
+    title <
+      name = Heredity
+    >
+
+    param[journal_id] = hdy
+
+    au < ready ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+
+  }
+
+  {
+
+    title <
+      name = Hypertension Research
+    >
+
+    param[journal_id] = hr
+
+    au < ready ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
+
+  }
   
   {
 

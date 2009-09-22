@@ -248,7 +248,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     au < manifest ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
     au < manifest ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
-    au < testing ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < ready ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < manifest ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
 
   }
@@ -262,7 +262,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
     param[journal_id] = hr
 
     au < manifest ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
-    au < testing ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
+    au < ready ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
 
   }
 
@@ -557,7 +557,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
     param[journal_id] = nchembio
 
     au < manifest ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
-    au < wanted ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+    au < testing ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -569,7 +569,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nchem
 
-    au < manifest ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+    au < testing ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
 
