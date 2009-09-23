@@ -41,6 +41,7 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.repository.v2.*;
 import org.lockss.test.*;
+import org.lockss.util.FileUtil;
 
 import junit.framework.*;
 
@@ -128,7 +129,11 @@ public class TestRepositoryFileVersionImpl extends TestCase {
 
       m_repos.shutdown();
       m_repos = null;
+
+      checkLockFile();
       
+      // The file name comes from k_stemFile
+      FileUtil.delTree(new File("TestRepository"));
       super.tearDown();
     }
 
@@ -1029,6 +1034,18 @@ public class TestRepositoryFileVersionImpl extends TestCase {
 
     assertEquals(-1, isContent.read());
   }
+  
+  
+  /**
+   * To be run at the (start and) end of every test: verify that no .lock file exists.
+   */
+  private void checkLockFile() {
+    File fileLock;
+    
+    fileLock = new File(k_dirXml + ".lock");
+    assertFalse(".lock file was not removed.", fileLock.exists());
+  }
+
   
   // Helper classes ------------------
   private class Event {

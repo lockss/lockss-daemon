@@ -68,7 +68,6 @@ implements RepositoryFileVersion {
   private final static String k_propSizeCurrent = "SizeCurrent";
   private final static String k_propSizeDeferredStream = "SizeDeferredStream";
   private final static String k_propSizeEditing = "SizeEditing";
-  private final static String k_propVersionNumber = "VersionNumber";
 
   // Static member variables ----
   // The WARCWriter requires an atomic integer.
@@ -503,11 +502,11 @@ implements RepositoryFileVersion {
     if (!isDeleted()) {
       return m_fileContentParameterized != null && 
         m_posWarc != k_locUnset;
-    } else { // if isDeleted
-      logger.error("hasContent: called when content was " +
-                        "deleted.");
-      return false;
     }
+    
+    logger.error("hasContent: called when content was " +
+                      "deleted.");
+    return false;    
   }
 
   /**
@@ -523,11 +522,12 @@ implements RepositoryFileVersion {
       if (m_node.hasProperty(k_propDeleted)) {
         propDeleted = m_node.getProperty(k_propDeleted);
         return propDeleted.getBoolean();
-      } else {
-        logger.debug3("isDeleted: the property was not set.  " +
-                        "Returning false.");
-        return false;
       }
+      
+      logger.debug3("isDeleted: the property was not set.  " +
+                      "Returning false.");
+      return false;
+      
     } catch (PathNotFoundException e) {
       logger.error("In isDeleted(), the '" + k_propDeleted
           + "' property was not found.  Returning false.");
@@ -721,6 +721,7 @@ implements RepositoryFileVersion {
   
   private FileOutputStream getPermanentOutputStream()
       throws FileNotFoundException, LockssRepositoryException {
+    File fileParentDirectory;
     FileOutputStream fosWarc;
     String strFilename;
 
@@ -732,8 +733,16 @@ implements RepositoryFileVersion {
       m_lFileIndex++;
       strFilename = createPermanentFileName(m_stemFile, m_lFileIndex);      
       m_fileContentParameterized = new File(strFilename);
+      
+      fileParentDirectory = m_fileContentParameterized.getParentFile();
+      
+      // If the strFilename has no directory, then fileParentDirectory is the root
+      // -- wherever the program happens to be.  The root doesn't need to be created.
+      if (fileParentDirectory != null && !fileParentDirectory.exists()) {
+        fileParentDirectory.mkdirs();
+      }
     }
-
+   
     fosWarc = new FileOutputStream(m_fileContentParameterized, true);
 
     try {
@@ -797,5 +806,14 @@ implements RepositoryFileVersion {
     } catch (RepositoryException e) {
       throw new LockssRepositoryException(e);
     }
+  }
+
+
+  /**
+   * @see java.lang.Object#hashCode()
+   */
+  @Override
+  public int hashCode() {
+    return m_node.hashCode();
   }
 }

@@ -110,7 +110,7 @@ public abstract class JcrRepositoryBase {
         propStemFile = m_node.getProperty(k_propStemFile);
         m_stemFile = propStemFile.getString();
       } else {
-        logger.error("The stem file was not found on this node.");
+        logger.error("The stem file was not found on this node; the node probably didn't already exist.  You probably should have used the extended (6-parameter) constructor instead.");
         throw new LockssRepositoryException(
             "The stem file was not found on this node.");
       }

@@ -43,7 +43,6 @@ import org.lockss.daemon.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.repository.v2.*;
-import org.lockss.repository.v2.RepositoryFile;
 import org.lockss.repository.v2.RepositoryNode;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -116,8 +115,6 @@ public class TestRepositoryNode extends TestCase {
 
       m_repos.shutdown();
       m_repos = null;
-      
-      super.tearDown();
     }
 
     // In order to shut down the Derby database, we need to do this...
@@ -136,6 +133,9 @@ public class TestRepositoryNode extends TestCase {
 
     System.gc();
 
+    checkLockFile();
+    FileUtil.delTree(new File("TestRepository"));
+    
     super.tearDown();
   }
 
@@ -771,4 +771,15 @@ public class TestRepositoryNode extends TestCase {
     
     return sbUrl.toString();
   }
+  
+  /**
+   * To be run at the (start and) end of every test: verify that no .lock file exists.
+   */
+  private void checkLockFile() {
+    File fileLock;
+    
+    fileLock = new File(k_dirXml + ".lock");
+    assertFalse(".lock file was not removed.", fileLock.exists());
+  }
+
 }

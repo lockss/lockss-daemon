@@ -44,12 +44,10 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.IdentityManager.*;
 import org.lockss.repository.*;
 import org.lockss.repository.v2.*;
-import org.lockss.repository.v2.RepositoryFile;
 import org.lockss.repository.v2.RepositoryNode;
 import org.lockss.state.*;
 import org.lockss.test.*;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 import sun.security.action.GetLongAction;
 
@@ -66,7 +64,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   private static final long k_sizeWarcMax = 10000;
   private static final String k_stemFile = "stem";
   private static final String k_strAuId = "AUID";
-  private static final String k_strDirectory = "TestRepository/";
+  private static final String k_strDirectory = "TestLockssAuRepositoryImpl/";
   private static final String k_strPeerID = "TCP:[192.168.0.1]:9723";
   private static final String k_url = "http://www.example.com/";
   private static final String k_urlGetFile = "http://www.example.com/cgi-bin?foo=bar";
@@ -80,9 +78,9 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   
   // Member variables
   private IdentityManager m_idman;
+  private JcrHelperRepository m_jhr;
+  private JcrHelperRepositoryFactory m_jhrf;
   private MockLockssDaemon m_ldTest;
-  private RepositoryImpl m_repos;
-  private Session m_session;
   
   /**
    * @param name
@@ -99,7 +97,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     
-    if (!LockssJackrabbitHelper.isConstructed()) {
+    if (!JcrHelperRepositoryFactory.isPreconstructed()) {
       // Taken from org.lockss.state.TestHistoryRepository
       m_ldTest = getMockLockssDaemon();
       m_ldTest.startDaemon();
@@ -119,21 +117,15 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
       // The following are the peer identities that should be used in tests...
       m_idman.stringToPeerIdentity(k_strPeerID);
        
-      LockssJackrabbitHelper.preconstructor(k_strDirectory, k_nameXml, 
-          k_strDirectory + "/" + k_stemFile, k_sizeWarcMax, k_url, m_idman, m_ldTest,
-          k_strAuId);
+      JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
 
-      m_repos = LockssJackrabbitHelper.getRepository();
-      m_session = LockssJackrabbitHelper.getSession();    
+      m_jhrf = JcrHelperRepositoryFactory.constructor();
+      m_jhr = m_jhrf.createHelperRepository("LockssAuRepositoryImpl", new File(k_strDirectory));    
     } else { // isConstructed
-      LockssJackrabbitHelper ljh;
+      m_jhrf = JcrHelperRepositoryFactory.constructor();
       
-      ljh = LockssJackrabbitHelper.constructor();
-      
-      m_ldTest = (MockLockssDaemon) ljh.getDaemon();
-      m_idman = ljh.getIdentityManager();
-      m_repos = LockssJackrabbitHelper.getRepository();
-      m_session = LockssJackrabbitHelper.getSession();
+      m_ldTest = (MockLockssDaemon) m_jhrf.getLockssDaemon();
+      m_idman = m_jhrf.getIdentityManager();
     }
   }
 
@@ -142,49 +134,12 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
    * @throws java.lang.Exception
    */
   protected void tearDown() throws Exception {
-    // We have only one repository.  The repository needs to be saved throughout 
-    // the tests.  Therefore, we do not tear down the repository with every test.
+    JcrHelperRepositoryFactory.reset();
     
-//    DataStore ds;
-//
-//    if (m_repos != null) {
-//      ds = m_repos.getDataStore();
-//      if (ds != null) {
-//        try {
-//          ds.clearInUse();
-//          ds.close();
-//        } catch (DataStoreException e) {
-//          e.printStackTrace();
-//        }
-//      }
-//
-//      m_repos.shutdown();
-//      m_repos = null;
-      
-//      super.tearDown();
-//    }
-
-    // In order to shut down the Derby database, we need to do this...
-    // See:
-    // http://publib.boulder.ibm.com/infocenter/cldscp10/index.jsp?topic=/com.ibm.cloudscape.doc/develop15.htm
-
-//    try {
-//      DriverManager.getConnection("jdbc:derby:;shutdown=true");
-//    } catch (SQLException e) {
-      // From the documentation:
-
-      // A successful shutdown always results in an SQLException to indicate
-      // that Cloudscape [Derby]
-      // has shut down and that there is no other exception.
-//    }
+    checkLockFile();
     
-    if (m_idman != null) {
-      m_idman.stopService();
-      m_idman = null;
-    }
-
-    System.gc();
-
+    FileUtil.delTree(new File(k_strDirectory));
+    
     super.tearDown();
   }
 
@@ -218,9 +173,16 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     
     timeCreation = lari.getAuCreationTime();
     timeEnd = System.currentTimeMillis();
+  
+    // Removed for an important reason:
+    // The LockssAuRepositoryImpl's creation time is the time that its underlying JcrHelperRepository
+    // was created.  
+//    if (timeCreation < timeStart) {
+//      fail("Creation time is before the start of this routine: either the AU was not created at this point, or something corrupted the AU's time.");
+//    }
     
-    if (timeCreation < timeStart || timeCreation > timeEnd) {
-      fail("Creation time is impossible.");
+    if (timeEnd < timeCreation) {
+      fail("Creation time is impossibly late.");
     }
   }
 
@@ -508,7 +470,6 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     // that the added file is in the RepositoryFile.
     
     rnNewAddition = rnGetFile1.makeNewRepositoryNode("test1");
-    m_session.save();
     
     rnGetFile3 = lariTest.getNode(k_urlGetNode, false);    
     assertEquals(rnGetFile3.getChildCount(), 1);
@@ -516,7 +477,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
 
   
   public final void testGetPersistentPeerIdRawContents() throws Exception {
-    
+    // TODO
   }
   
   /**
@@ -801,13 +762,9 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     // The combination of gensym and the current time should be unique
     // across runs.
     
-    strName = StringUtil.gensym("AUID" + System.currentTimeMillis());    
+    strName = StringUtil.gensym(k_strAuId + System.currentTimeMillis());    
     au = new MockArchivalUnit(strName);
-    
-    // So that the requests have a place to go in the helper.
-    LockssJackrabbitHelper.addRepository(au.getAuId(), k_strDirectory);
-      
-        
+            
     return au;
   }
 
@@ -845,5 +802,14 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
       istr.write((byte) str.charAt(inChar)); 
     }
   }
-
+  
+  /**
+   * To be run at the (start and) end of every test: verify that no .lock file exists.
+   */
+  private void checkLockFile() {
+    File fileLock;
+    
+    fileLock = new File(k_strDirectory + ".lock");
+    assertFalse(".lock file was not removed.", fileLock.exists());
+  }
 }

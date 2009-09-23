@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrCollection.java,v 1.1.2.2 2009-08-26 22:47:24 edwardsb1 Exp $
+ * $Id: TestJcrCollection.java,v 1.1.2.3 2009-09-23 02:03:02 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -30,6 +30,7 @@ import java.util.*;
 import javax.jcr.Session;
 
 import org.apache.jackrabbit.core.RepositoryImpl;
+import org.apache.jackrabbit.core.data.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.poller.v3.V3Poller;
 import org.lockss.protocol.IdentityManager;
@@ -47,14 +48,12 @@ import junit.framework.TestCase;
  */
 public class TestJcrCollection extends LockssTestCase {
   // Constants...
-  private static final String k_nameXml = "LargeDatastore.xml";
   private static final long k_sizeWarcMax = 10000;
   private static final String k_stemFile = "stem";
   private static final String k_strAuId = "AUID";
-  private static final String k_strDirectory = "TestRepository/";
+  private static final String k_strDirectory = "TestJcrCollection/";
   private static final String k_strPeerID = "TCP:[192.168.0.1]:9723";
   private static final String k_url = "http://www.example.com/";
-
   
   // Member variables
   private IdentityManager m_idman;
@@ -66,7 +65,9 @@ public class TestJcrCollection extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     
-    if (!LockssJackrabbitHelper.isConstructed()) {
+    JcrHelperRepositoryFactory jhrf;
+
+    if (!JcrHelperRepositoryFactory.isPreconstructed()) {
       // Taken from org.lockss.state.TestHistoryRepository
       m_ldTest = getMockLockssDaemon();
       m_ldTest.startDaemon();
@@ -86,24 +87,31 @@ public class TestJcrCollection extends LockssTestCase {
       // The following are the peer identities that should be used in tests...
       m_idman.stringToPeerIdentity(k_strPeerID);
        
-      LockssJackrabbitHelper.preconstructor(k_strDirectory, k_nameXml, 
-          k_strDirectory + "/" + k_stemFile, k_sizeWarcMax, k_url, m_idman, m_ldTest,
-          k_strAuId);
-
+      JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+      jhrf = JcrHelperRepositoryFactory.constructor();
     } else { // isConstructed
-      LockssJackrabbitHelper ljh;
       
-      ljh = LockssJackrabbitHelper.constructor();
+      jhrf = JcrHelperRepositoryFactory.constructor();
       
-      m_ldTest = (MockLockssDaemon) ljh.getDaemon();
-      m_idman = ljh.getIdentityManager();
+      m_ldTest = (MockLockssDaemon) jhrf.getLockssDaemon();
+      m_idman = jhrf.getIdentityManager();
     }
+    
+    jhrf.createHelperRepository("TestJcrCollection", new File("TestJcrCollection"));
   }
 
   /* (non-Javadoc)
    * @see junit.framework.TestCase#tearDown()
    */
   protected void tearDown() throws Exception {
+    JcrHelperRepositoryFactory.reset();
+    
+    // This check verifies that the test shut down correctly.
+    checkLockFile();
+    
+    // Clean up everything! 
+    FileUtil.delTree(new File(k_strDirectory));
+    
     super.tearDown();
   }
 
@@ -186,7 +194,7 @@ public class TestJcrCollection extends LockssTestCase {
     
     dirTest = FileUtil.createTempDir("test", "OpenAuRepository");
     jcTest = new JcrCollection(dirTest);
-
+    
     auGood = createAu(dirTest);
     
     larTest = jcTest.openAuRepository(auGood, dirTest);
@@ -250,12 +258,17 @@ public class TestJcrCollection extends LockssTestCase {
     
     strName = StringUtil.gensym("AUID" + System.currentTimeMillis());    
     au = new MockArchivalUnit(strName);
-    
-    // So that the requests have a place to go in the helper.
-    LockssJackrabbitHelper.addRepository(au.getAuId(), fileDirectory.toString());
-              
+                  
     return au;
   }
 
-
+  /**
+   * To be run at the (start and) end of every test: verify that no .lock file exists.
+   */
+  private void checkLockFile() {
+    File fileLock;
+    
+    fileLock = new File(k_strDirectory + ".lock");
+    assertFalse(".lock file was not removed.", fileLock.exists());
+  }
 }

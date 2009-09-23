@@ -141,8 +141,8 @@ RepositoryNode  {
           nodeReturn = new RepositoryNodeImpl(session, node, idman);
         }
       } else {
-        logger.debug3("constructor: k_propIsFile was null.  Constructing a new node.");
-        nodeReturn = new RepositoryNodeImpl(session, node, idman);
+        logger.debug3("constructor: k_propIsFile was null. Returning null.");
+        nodeReturn = null;
       }
     } catch (RepositoryException e) {
       logger.error("constructor: " + e.getMessage());
@@ -525,8 +525,10 @@ RepositoryNode  {
             nodeIter = ni.nextNode();
             rnIter = constructor(m_session, nodeIter, m_idman);
   
-            lContentSize += rnIter.getTreeContentSize(filter, calcIfUnknown, 
+            if (rnIter != null) {
+              lContentSize += rnIter.getTreeContentSize(filter, calcIfUnknown, 
                     mostRecentOnly);
+            }
           }
   
           m_node.setProperty(k_propTreeContentSize, lContentSize);

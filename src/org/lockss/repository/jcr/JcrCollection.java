@@ -1,5 +1,5 @@
 /*
- * $Id: JcrCollection.java,v 1.1.2.2 2009-08-26 22:47:24 edwardsb1 Exp $
+ * $Id: JcrCollection.java,v 1.1.2.3 2009-09-23 02:03:02 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -128,28 +128,37 @@ public class JcrCollection implements CollectionOfAuRepositories {
   /**
    * This method opens an AU in a given directory.
    * Important note: I assume that the AU is already available, from outside the JcrCollection.
+   * 
    * @throws FileNotFoundException 
    * 
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#openAuRepository(java.io.File)
    */
   public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation)
       throws LockssRepositoryException, FileNotFoundException {
+//    JcrHelperRepository jhrAu;
+//    JcrHelperRepositoryFactory jhrf;
     LockssAuRepository lar;
-    LockssJackrabbitHelper ljh;
-    RepositoryNodeImpl rni;
     
-    if (!LockssJackrabbitHelper.isConstructed()) {
-      logger.error("You must call LockssJackrabbitHelper.preconstructor before you call openAuRepository.");
-      throw new LockssRepositoryException("LockssJackrabbitHelper.preconstructor must be called first.");
-    }
-    
-    // Make sure that the location is in the LockssJackrabbitHelper.
-    ljh = LockssJackrabbitHelper.constructor();
-    rni = (RepositoryNodeImpl) ljh.getRepositoryNode(au.getAuId());
-    
-    if (rni == null || rni.m_stemFile != dirLocation.toString()) {
-      ljh.addRepository(au.getAuId(), dirLocation.toString());
-    }
+//    RepositoryNodeImpl rni;
+//    
+//    if (!JcrHelperRepositoryFactory.isPreconstructed()) {
+//      logger.error("You must call JcrHelperRepositoryFactory.preconstructor before you call openAuRepository.");
+//      throw new LockssRepositoryException("JcrHelperRepositoryFactory.preconstructor must be called first.");
+//    }
+//    
+//    jhrf = JcrHelperRepositoryFactory.constructor();
+//    jhrAu = jhrf.getHelperRepositoryByDirectory(dirLocation);
+//
+//    if (jhrAu == null) {
+//      // The repository isn't in the JcrHelperRepositoryFactory.
+//      // Choose an arbitrary repository.
+//      jhrAu = jhrf.chooseHelperRepository();
+//      
+//      if (jhrAu == null) {
+//        logger.error("Cannot open an AU repository if no JcrHelperRepositories exist.");
+//        throw new LockssRepositoryException("No JcrHelperRepositories.");
+//      }
+//    }
     
     lar = new LockssAuRepositoryImpl(au);
 

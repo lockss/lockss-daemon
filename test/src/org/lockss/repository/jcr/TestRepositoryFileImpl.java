@@ -41,7 +41,6 @@ import org.lockss.daemon.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.repository.v2.*;
-import org.lockss.repository.v2.RepositoryFile;
 import org.lockss.repository.v2.RepositoryNode;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -115,6 +114,11 @@ public class TestRepositoryFileImpl extends TestCase {
 
       m_repos.shutdown();
       m_repos = null;
+
+      checkLockFile();
+      
+      // The directory name comes from k_stemFile.
+      FileUtil.delTree(new File("TestRepository"));
       
       super.tearDown();
     }
@@ -1331,4 +1335,15 @@ public class TestRepositoryFileImpl extends TestCase {
     
     return sbRandom.toString();
   }
+  
+  /**
+   * To be run at the (start and) end of every test: verify that no .lock file exists.
+   */
+  private void checkLockFile() {
+    File fileLock;
+    
+    fileLock = new File(k_dirXml + ".lock");
+    assertFalse(".lock file was not removed.", fileLock.exists());
+  }
+
 }

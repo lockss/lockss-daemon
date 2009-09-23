@@ -1,6 +1,6 @@
 /**
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,6 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.repository.v2.RepositoryNode;
-import org.lockss.repository.v2.RepositoryFile;
 import org.lockss.repository.v2.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -78,13 +77,14 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   // Variables
   private ArchivalUnit m_au;
   private DatedPeerIdSet m_dpisNoAu;
-  private LockssJackrabbitHelper m_ljh;
+  private JcrHelperRepository m_jhr;
+  private JcrHelperRepositoryFactory m_jhrf;
   private BinarySemaphore m_sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread m_sizeCalcThread;
   private float m_sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
 
   /**
-   * You must call LocksJackrabbitHelper.preconstructor()
+   * You must call JcrHelperRepositoryFactory.preconstructor()
    * before you call this method.
    * 
    * @param au
@@ -95,15 +95,21 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       throws LockssRepositoryException {
     Node node;
     
-    // Store variables.
+    // Store some variables
+    m_jhrf = JcrHelperRepositoryFactory.constructor();
+
+    if (!m_jhrf.isPreconstructed()) {
+      logger.error("You must call JcrHelperRepositoryFactory.preconstructor before you call this routine.");
+      throw new LockssRepositoryException("JcrHelperRepositoryFactory.preconstructor has not been called.");
+    }
+    
     m_au = au;
        
-    // Construct some variables
-    m_ljh = LockssJackrabbitHelper.constructor();
-   
-    // Is this the first time this repository was created?
     try {
-      node = m_ljh.getRootNode(m_au.getAuId());
+      // Put the LockssAuRepositoryImpl into an appropriate helper repository.
+      m_jhr = m_jhrf.chooseHelperRepository();
+            
+      node = m_jhr.getRootNode();
       if (!node.hasProperty(k_propCreationTime)) {
         // Run the constructor.
         constructNewAu();
@@ -132,7 +138,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       // Set the creation time.
       lCreationTime = System.currentTimeMillis();
       
-      node = m_ljh.getRootNode(m_au.getAuId());
+      node = m_jhr.getRootNode();
       node.setProperty(k_propCreationTime, lCreationTime);      
       node.save();
       node.refresh(true);
@@ -155,7 +161,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
 
     try {
       strAuId = m_au.getAuId();
-      node = m_ljh.getRootNode(strAuId);
+      node = m_jhr.getRootNode();
       
       if (node.hasProperty(k_propCreationTime)) {
         propCreationTime = node.getProperty(k_propCreationTime);
@@ -227,8 +233,25 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     
     sbUrlConstructed = new StringBuilder();
     
-    // Construct the base node. 
-    rniNode = (RepositoryNodeImpl) m_ljh.getRepositoryNode(m_au.getAuId()); 
+    // Retrieve the base node.
+    rniNode = (RepositoryNodeImpl) m_jhr.getRepositoryNode(strUrl); 
+    
+    if (rniNode == null) {
+      if (create) {
+        rniNode = createRepositoryNode(strUrl);
+        // Create the base node.
+        try {
+          rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), 
+              m_jhr.getRootNode(), m_jhr.getDirectory().toString(), m_jhrf.getSizeWarcMax(), strUrl, m_jhrf.getIdentityManager());
+        } catch (FileNotFoundException e) {
+          logger.error("File Not Found Exception: ", e);
+          throw new LockssRepositoryException(e);
+        }
+      } else {  // !create
+        logger.debug3("The RepositoryFile didn't exist, and I was asked not to create it.  Returning null.");
+        return null;
+      }
+    }
       
     url = new URL(strUrl);
     
@@ -338,8 +361,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     StreamerJcr strjcr;
     
     if (m_dpisNoAu == null) {
-      idman = m_ljh.getIdentityManager();
-      strjcr = new StreamerJcr(k_propPeerId, m_ljh.getRootNode(m_au.getAuId()));
+      idman = m_jhr.getIdentityManager();
+      strjcr = new StreamerJcr(k_propPeerId, m_jhr.getRootNode());
       m_dpisNoAu = new DatedPeerIdSetImpl(strjcr, idman);
     }
     
@@ -382,7 +405,16 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     sbUrlConstructed = new StringBuilder();
     
     // Construct the base node. 
-    rniNode = (RepositoryNodeImpl) m_ljh.getRepositoryNode(m_au.getAuId()); 
+    rniNode = (RepositoryNodeImpl) m_jhr.getRepositoryNode(m_au.getAuId()); 
+    
+    if (rniNode == null) {
+      if (create) {
+        rniNode = createRepositoryNode(strUrl);
+      } else {  // Don't create...
+        logger.debug3("getNode was not asked to create anything.  The repository node did not exist.");
+        return null;
+      }
+    }
      
     url = new URL(strUrl);
     
@@ -452,10 +484,10 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   public boolean hasNoAuPeerSet() {
     Node nodeRoot;
     try {
-      nodeRoot = m_ljh.getRootNode(m_au.getAuId());
+      nodeRoot = m_jhr.getRootNode();
       return nodeRoot.hasProperty(k_propPeerId);
     } catch (RepositoryException e) {
-      logger.error("hasNoAuPeerSet: ", e);
+      logger.error("hasNoAuPeerSet: RepositoryException: ", e);
       logger.error("Thrown into the bit bucket; I'm just returning false.");
       return false;
     }
@@ -700,6 +732,21 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }    
   }
 
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.LockssAuRepository#getRepoDiskUsage(boolean)
+   */
+  public long getRepoDiskUsage(boolean calcIfUnknown) throws LockssRepositoryException {
+    RepositoryNode rn;
+    
+    rn = m_jhr.getRepositoryNode(m_au.getAuId());
+    
+    if (rn == null) {
+      rn = createRepositoryNode(m_au.getAuId());
+    }
+    
+    return rn.getTreeContentSize(null, calcIfUnknown);
+  }  
+
   // --- Private methods ---
   
   /* JCR cannot use any of the following characters:
@@ -798,7 +845,26 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     
     return fileReturn;
   }
-  
+
+  /**
+   * @param strUrl
+   * @return
+   * @throws LockssRepositoryException
+   */
+  private RepositoryNodeImpl createRepositoryNode(String strUrl) throws LockssRepositoryException {
+    RepositoryNodeImpl rniNode;
+    
+    try {
+      rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), m_jhr.getRootNode(),
+          m_jhr.getDirectory().toString(), m_jhrf.getSizeWarcMax(), strUrl,
+          m_jhr.getIdentityManager());
+      m_jhr.addRepositoryNode(strUrl, rniNode);
+    } catch (FileNotFoundException e) {
+      logger.error("In getNode", e);
+      throw new LockssRepositoryException(e);
+    }
+    return rniNode;
+  }
     
   private InputStream getInputStreamFromJcr(String prop) 
         throws LockssRepositoryException {
@@ -806,7 +872,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     Node nodeRoot;
     Property propReturn;
     
-    nodeRoot = m_ljh.getRootNode(m_au.getAuId());
+    nodeRoot = m_jhr.getRootNode();
     
     try {
       if (nodeRoot.hasProperty(prop)) {
@@ -852,8 +918,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
     
     try {
-      node = m_ljh.getRootNode(m_au.getAuId());
-      session = m_ljh.getSession();
+      node = m_jhr.getRootNode();
+      session = m_jhr.getSession();
       
       baisAuState = new ByteArrayInputStream(arbyAuState);    
       node.setProperty(prop, baisAuState);
@@ -891,8 +957,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
 
     try {
-      node = m_ljh.getRootNode(m_au.getAuId());
-      session = m_ljh.getSession();
+      node = m_jhr.getRootNode();
+      session = m_jhr.getSession();
 
       baisAuState = new ByteArrayInputStream(arbyAuState);    
       node.setProperty(prop, baisAuState);
@@ -913,7 +979,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       throws LockssRepositoryException {
     Node nodeRoot;
     
-    nodeRoot = m_ljh.getRootNode(m_au.getAuId());
+    nodeRoot = m_jhr.getRootNode();
     
     try {
       nodeRoot.setProperty(prop, istr);
@@ -1075,11 +1141,4 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
 
 
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.LockssAuRepository#getRepoDiskUsage(boolean)
-   */
-  public long getRepoDiskUsage(boolean calcIfUnknown) throws LockssRepositoryException {
-    RepositoryNode rn = m_ljh.getRepositoryNode(m_au.getAuId());
-    return rn.getTreeContentSize(null, calcIfUnknown);
-  }  
 }
