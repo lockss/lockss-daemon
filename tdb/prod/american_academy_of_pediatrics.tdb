@@ -10,7 +10,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aapgrandrounds.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -48,7 +48,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aapnews.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -94,7 +94,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://neoreviews.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -120,7 +120,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://pediatrics.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -246,7 +246,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://pedsinreview.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -292,7 +292,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aapredbook.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
