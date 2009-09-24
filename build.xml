@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.245 2009-04-02 22:53:15 tlipkis Exp $
+ $Id: build.xml,v 1.246 2009-09-24 03:11:28 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -952,7 +952,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
       <fileset dir="${plugins.classes}">
 	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
-	<include name="${plugin-path}/${plugin-file}" />
+	<include name="${plugin-path}/*.xml" />
       </fileset>
       <manifest>
 	<section name="${plugin-path}/${plugin-file}">
