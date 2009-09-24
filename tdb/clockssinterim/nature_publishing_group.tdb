@@ -174,4 +174,28 @@
 
   }
 
+  {
+
+    title <
+      name = Nature Biotechnology
+    >
+
+    param[journal_id] = nbt
+
+    au < ready ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Cell Biology
+    >
+
+    param[journal_id] = ncb
+
+    au < ready ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+
+  }
+
 }

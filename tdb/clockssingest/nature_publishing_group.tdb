@@ -530,8 +530,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nbt
 
-    au < wanted ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
-    au < testing ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+    au < testing ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
+    au < ready ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
 
   }
 
@@ -543,8 +543,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ncb
 
-    au < wanted ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
-    au < testing ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+    au < testing ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
+    au < ready ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
 
   }
 
