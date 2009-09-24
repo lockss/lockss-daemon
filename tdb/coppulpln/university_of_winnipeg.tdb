@@ -15,21 +15,21 @@
     param[journal_id] = jms
     implicit < status ; year ; name ; param[year] >
 
-    au < testing ; 1983 ; Journal of Mennonite Studies Volume 1 ; 1983 >
-    au < testing ; 1984 ; Journal of Mennonite Studies Volume 2 ; 1984 >
-    au < testing ; 1985 ; Journal of Mennonite Studies Volume 3 ; 1985 >
-    au < testing ; 1986 ; Journal of Mennonite Studies Volume 4 ; 1986 >
-    au < testing ; 1987 ; Journal of Mennonite Studies Volume 5 ; 1987 >
-    au < testing ; 1988 ; Journal of Mennonite Studies Volume 6 ; 1988 >
-    au < testing ; 1989 ; Journal of Mennonite Studies Volume 7 ; 1989 >
-    au < testing ; 1990 ; Journal of Mennonite Studies Volume 8 ; 1990 >
-    au < testing ; 1991 ; Journal of Mennonite Studies Volume 9 ; 1991 >
-    au < testing ; 1992 ; Journal of Mennonite Studies Volume 10 ; 1992 >
-    au < testing ; 1993 ; Journal of Mennonite Studies Volume 11 ; 1993 >
-    au < testing ; 1994 ; Journal of Mennonite Studies Volume 12 and Volume 14 ; 1994 >
-    au < testing ; 1995 ; Journal of Mennonite Studies Volume 13 ; 1995 >
-    au < testing ; 1997 ; Journal of Mennonite Studies Volume 15 ; 1997 >
-    au < testing ; 1998 ; Journal of Mennonite Studies Volume 16 ; 1998 >
+    au < released ; 1983 ; Journal of Mennonite Studies Volume 1 ; 1983 >
+    au < released ; 1984 ; Journal of Mennonite Studies Volume 2 ; 1984 >
+    au < released ; 1985 ; Journal of Mennonite Studies Volume 3 ; 1985 >
+    au < released ; 1986 ; Journal of Mennonite Studies Volume 4 ; 1986 >
+    au < released ; 1987 ; Journal of Mennonite Studies Volume 5 ; 1987 >
+    au < released ; 1988 ; Journal of Mennonite Studies Volume 6 ; 1988 >
+    au < released ; 1989 ; Journal of Mennonite Studies Volume 7 ; 1989 >
+    au < released ; 1990 ; Journal of Mennonite Studies Volume 8 ; 1990 >
+    au < released ; 1991 ; Journal of Mennonite Studies Volume 9 ; 1991 >
+    au < released ; 1992 ; Journal of Mennonite Studies Volume 10 ; 1992 >
+    au < released ; 1993 ; Journal of Mennonite Studies Volume 11 ; 1993 >
+    au < released ; 1994 ; Journal of Mennonite Studies Volume 12 and Volume 14 ; 1994 >
+    au < released ; 1995 ; Journal of Mennonite Studies Volume 13 ; 1995 >
+    au < released ; 1997 ; Journal of Mennonite Studies Volume 15 ; 1997 >
+    au < released ; 1998 ; Journal of Mennonite Studies Volume 16 ; 1998 >
 
   }
 
