@@ -2,21 +2,54 @@
 
 from sys import exit
 from getpass import getpass
+from optparse import OptionParser
 from os import path, environ, popen
 
-# DN constants
-dn_ou = "LOCKSS"
-dn_o = "Stanford University"
-dn_l = "Palo Alto"
-dn_s = "California"
-dn_c = "US"
+# DN defaults
+DEFAULT_DN_OU = "LOCKSS"
+DEFAULT_DN_O = "Stanford University"
+DEFAULT_DN_L = "Palo Alto"
+DEFAULT_DN_S = "California"
+DEFAULT_DN_C = "US"
 
 # Other constants
 validDays = 3650 # ~ 10 years
 defStorepass = "password"
 keyTool = path.join(environ.get('JAVA_HOME'), 'bin', 'keytool')
 
+parser = OptionParser()
+parser.add_option("-n", "--name",
+                  dest="name", default=DEFAULT_DN_OU,
+                  help="common name, default %s" % DEFAULT_DN_OU)
+parser.add_option("-o", "--org",
+                  dest="org", default=DEFAULT_DN_O,
+                  help="organization, default %s" % DEFAULT_DN_O)
+parser.add_option("-l", "--locality",
+                  dest="locality", default=DEFAULT_DN_L,
+                  help="location value, default %s" % DEFAULT_DN_L)
+parser.add_option("-s", "--state",
+                  dest="state", default=DEFAULT_DN_S, 
+                  help="entity's state, province, default %s" % DEFAULT_DN_S)
+parser.add_option("-c", "--country",
+                  dest="country", default=DEFAULT_DN_C, 
+                  help="entity's country, default %s" % DEFAULT_DN_C)
+parser.add_option("-f", "--full_name",
+                  dest="full_name", default="");  
+parser.add_option("-a", "--alias",
+                  dest="alias", default="");  
+
+
+(options, args) = parser.parse_args()
 args = {}
+args['full_name'] = options.full_name; 
+args['alias'] = options.alias; 
+
+# DN constants
+dn_ou = options.name
+dn_o = options.org
+dn_l = options.locality;
+dn_s = options.state;
+dn_c = options.country;
 
 def prompt_password():
     passphrase = ''
@@ -73,6 +106,7 @@ def main():
 def run_command(cmd, displayOut):
     """ Run the given command, return error if any """
 
+    # print (cmd); 
     child = popen(cmd)
     output = child.read()
     if displayOut:
