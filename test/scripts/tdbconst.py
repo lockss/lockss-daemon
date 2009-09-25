@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.9 2009-08-26 09:35:43 thib_gc Exp $
+# $Id: tdbconst.py,v 1.10 2009-09-25 23:51:54 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -34,6 +34,7 @@ TDB_LEVEL_CONTENT_TESTING_STATUSES = [ AU.STATUS_EXISTS,
                                        AU.STATUS_MANIFEST,
                                        AU.STATUS_WANTED,
                                        AU.STATUS_TESTING,
+                                       AU.STATUS_TESTED,
                                        AU.STATUS_NOT_READY,
                                        AU.STATUS_READY,
                                        AU.STATUS_PRE_RELEASING,

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.11 2009-09-11 09:51:33 thib_gc Exp $
+# $Id: tdb.py,v 1.12 2009-09-25 23:51:54 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -122,6 +122,7 @@ class AU(ChainedMap):
     STATUS_MANIFEST       = 'manifest'
     STATUS_WANTED         = 'wanted'
     STATUS_TESTING        = 'testing'
+    STATUS_TESTED         = 'tested'
     STATUS_NOT_READY      = 'notReady'
     STATUS_READY          = 'ready'
     STATUS_PRE_RELEASING  = 'preReleasing'
@@ -137,6 +138,7 @@ class AU(ChainedMap):
                  STATUS_MANIFEST,
                  STATUS_WANTED,
                  STATUS_TESTING,
+                 STATUS_TESTED,
                  STATUS_NOT_READY,
                  STATUS_READY,
                  STATUS_PRE_RELEASING,
