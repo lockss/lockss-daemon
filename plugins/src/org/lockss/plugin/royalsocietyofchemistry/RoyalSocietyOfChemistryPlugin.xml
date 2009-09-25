@@ -42,7 +42,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url, resolver_url</string>
+      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url_host, resolver_url_host</string>
       <string>4,&quot;^(%s|%s)&quot;, base_url, resolver_url</string>
       <string>1,&quot;^%spublishing/journals/lockss/\?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
       <string>1,&quot;^%slockss.htm$&quot;, resolver_url</string>
