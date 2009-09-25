@@ -8,8 +8,12 @@
     <long>30000</long>
   </entry>
   <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -17,7 +21,7 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>&quot;%sdenial/denial\.cfm&quot;, base_url</string>
+    <string>&quot;%s(denial|eAuthentication)/&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -38,20 +42,19 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url, resolver_url</string>
       <string>4,&quot;^(%s|%s)&quot;, base_url, resolver_url</string>
       <string>1,&quot;^%spublishing/journals/lockss/\?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
       <string>1,&quot;^%slockss.htm$&quot;, resolver_url</string>
       <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
-      <string>2,&quot;^%serrorpage\.asp&quot;, base_url</string>
       <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Type=Issue&amp;VolumeYear=%d&amp;JournalCode=%s&amp;Volume=%s&quot;, base_url, journal_code, year, journal_code, volume_name</string>
       <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Journal=&amp;VolumeYear=%d&amp;Volume=%s&amp;JournalCode=%s.*&amp;Type=Issue&amp;Page=&quot;, base_url, journal_code, year, volume_name, journal_code</string>
       <string>2,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=.*&amp;type=ForwardLink&quot;, base_url, journal_code</string>
       <string>1,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=&quot;, base_url, journal_code</string>
-      <string>1,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&amp;Year=%d&amp;ManuscriptID=[^&amp;]+&amp;type=citonly$&quot;, base_url, journal_code, year</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&amp;Year=%d&amp;ManuscriptID=.*&amp;type=citonly$&quot;, base_url, journal_code, year</string>
       <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.(cfm|asp)\?doi=.*&amp;JournalCode=%s&quot;, base_url, journal_code</string>
       <string>1,&quot;^%ssuppdata/%s/&quot;, base_url, journal_code</string>
       <string>1,&quot;^%s(ej|ejarchive|ejga|ejpdfcontents)/%s/%d/&quot;, base_url, journal_code, year</string>
-      <string>1,&quot;^%s.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
