@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.32 2007-12-19 05:14:18 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.33 2009-09-26 17:23:53 tlipkis Exp $
  */
 
 /*
@@ -367,6 +367,36 @@ public class TestUrlUtil extends LockssTestCase {
 
     assertEquals("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033",
 		 UrlUtil.normalizeUrl("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033#content"));
+  }
+
+  public void testNormalizeAkamai() throws MalformedURLException {
+    String a1 =
+      "http://a123.g.akamai.net/f/123/4567/1d/www.pubsite.com/images/blip.ico";
+    String u1 = "http://www.pubsite.com/images/blip.ico";
+    String a2 =
+      "http://a123.akamai.net/f/123/4567/1d/www.pubsite.com/images/blip.ico";
+    String u2 = u1;
+    String a3 =
+      "http://a123.g.akamai.net/f/123/odd/4/1d/www.pubsite.com/images/blip.ico";
+    String u3 = "http://1d/www.pubsite.com/images/blip.ico";
+    String a4 =
+      "http://a123.g.akamai.net/f/123/4/1d/www.PUBSITE.com/foo/../images/blip.ico";
+    String u4 = u2;
+    String a5 = "http://a.com/xy";
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_AKAMAI_URL, "false");
+    assertSame(a1, UrlUtil.normalizeUrl(a1));
+    assertSame(a2, UrlUtil.normalizeUrl(a2));
+    assertSame(a3, UrlUtil.normalizeUrl(a3));
+    assertNotEquals(a4, UrlUtil.normalizeUrl(a4));
+    assertSame(a5, UrlUtil.normalizeUrl(a5));
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_AKAMAI_URL, "true");
+    assertEquals(u1, UrlUtil.normalizeUrl(a1));
+    assertEquals(u2, UrlUtil.normalizeUrl(a2));
+    assertEquals(u3, UrlUtil.normalizeUrl(a3));
+    assertEquals(u4, UrlUtil.normalizeUrl(a4));
+    assertSame(a5, UrlUtil.normalizeUrl(a5));
   }
 
   public void testEqualUrls() throws MalformedURLException {

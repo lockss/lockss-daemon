@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.49 2008-09-15 02:46:10 dshr Exp $
+ * $Id: UrlUtil.java,v 1.50 2009-09-26 17:23:53 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -38,6 +38,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.PluginBehaviorException;
@@ -89,11 +90,21 @@ public class UrlUtil {
   static final String PARAM_USE_HTTPCLIENT = PREFIX + "useHttpClient";
   static final boolean DEFAULT_USE_HTTPCLIENT = true;
 
+  /** If true, normalizeUrl replaces Akamai Resource Locator URLs (ARL) of
+   * the form
+   * <code>http://a123.g.akamai.net/f/123/4567/1d/www.pubsite.com/images/blip.ico</code>
+   * with the embedded URL (e.g.,
+   * <code>http://www.pubsite.com/images/blip.ico</code>). */
+  public static final String PARAM_NORMALIZE_AKAMAI_URL =
+    PREFIX + "normalizeAkamaiUrl";
+  public static final boolean DEFAULT_NORMALIZE_AKAMAI_URL = false;
+
   private static boolean useHttpClient = DEFAULT_USE_HTTPCLIENT;
   private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
   private static boolean normalizeUrlEncodingCase =
     DEFAULT_NORMALIZE_URL_ENCODING_CASE;
   private static boolean normalizeEmptyQuery = DEFAULT_NORMALIZE_EMPTY_QUERY;
+  private static boolean normalizeAkamaiUrl = DEFAULT_NORMALIZE_AKAMAI_URL;
 
 
   /** Called by org.lockss.config.MiscConfig
@@ -111,6 +122,8 @@ public class UrlUtil {
 			  DEFAULT_NORMALIZE_URL_ENCODING_CASE);
       normalizeEmptyQuery = config.getBoolean(PARAM_NORMALIZE_EMPTY_QUERY,
 					      DEFAULT_NORMALIZE_EMPTY_QUERY);
+      normalizeAkamaiUrl = config.getBoolean(PARAM_NORMALIZE_AKAMAI_URL,
+					     DEFAULT_NORMALIZE_AKAMAI_URL);
     }
   }
 
@@ -119,6 +132,10 @@ public class UrlUtil {
     urlString = StringUtil.trimNewlinesAndLeadingWhitespace(urlString);
     return urlString;
   }
+
+  static Pattern AKAMAI_PATH_PAT =
+    RegexpUtil.uncheckedCompile("/(?:[^/]+/){4}([^/]+)(/.*)?$",
+				Perl5Compiler.READ_ONLY_MASK);
 
   /** Normalize URL to a canonical form: lowercase scheme and hostname,
    * normalize path.  Removes any reference part.  XXX need to add
@@ -162,6 +179,19 @@ public class UrlUtil {
     if (!urlString.startsWith(protocol)) { // protocol was lowercased
       changed = true;
     }
+
+    if (normalizeAkamaiUrl &&
+	StringUtil.endsWithIgnoreCase(host, ".akamai.net")) {
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      if (matcher.contains(path, AKAMAI_PATH_PAT)) {
+	MatchResult matchResult = matcher.getMatch();
+	host = matchResult.group(1);
+	path = matchResult.group(2);
+	changed = true;
+	log.info("newhost, newpath: " + host + ", " + path);
+      }
+    }
+
 //     if ("http".equals(protocol) || "ftp".equals(protocol)) {
     if (host != null) {
       String newHost = host.toLowerCase(); // lowercase host
