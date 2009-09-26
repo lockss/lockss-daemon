@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.49 2009-09-02 01:34:53 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.50 2009-09-26 17:24:29 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -339,14 +339,14 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau2.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				  "plugin");
     mbau3.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
-				  "plugin");
+				  "au");
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
     RateLimiter limit3 = mbau3.findFetchRateLimiter();
     assertEquals("1/6000ms", limit.getRate());
     assertSame(limit, limit2);
     assertNotSame(limit, limit3);
-    assertSame(mbau.getPlugin(), mbau.getFetchRateLimiterKey());
+    assertEquals(mbau.getPlugin().getPluginId(), mbau.getFetchRateLimiterKey());
   }
 
   public void testFindFetchRateLimiterDefaultPlugin() throws Exception {
@@ -361,8 +361,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     RateLimiter limit3 = mbau3.findFetchRateLimiter();
     assertEquals("1/6000ms", limit.getRate());
     assertSame(limit, limit2);
-    assertNotSame(limit, limit3);
-    assertSame(mbau.getPlugin(), mbau.getFetchRateLimiterKey());
+    assertSame(limit, limit3);
+    assertEquals(mbau.getPlugin().getPluginId(), mbau.getFetchRateLimiterKey());
   }
 
   public void testFindFetchRateLimiterDefaultIllegal() throws Exception {
