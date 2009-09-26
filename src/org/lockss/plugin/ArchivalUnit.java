@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.48.4.1 2009-08-03 04:25:11 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.48.4.2 2009-09-26 17:20:08 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,15 @@ public interface ArchivalUnit {
 
   static final String KEY_AU_BASE_URL  = "au_base_url";
   static final String KEY_AU_FETCH_DELAY = "au_fetch_delay";
-  static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE = "au_fetch_rate_limiter_source";
+  /** One of:
+   * au
+   * plugin
+   * key:<key>
+   * host:<param>
+   * title_attr:<attr>
+   */
+  static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE =
+    "au_fetch_rate_limiter_source";
   static final String KEY_AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
   static final String KEY_AU_NEW_CONTENT_CRAWL_INTERVAL = "au_new_crawl_interval";
   static final String KEY_AU_CRAWL_SPEC = "au_crawl_spec";

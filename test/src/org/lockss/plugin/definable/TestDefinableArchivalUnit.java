@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.37 2008-08-26 06:50:17 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.37.14.1 2009-09-26 17:20:08 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -903,6 +903,82 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(expStartUrls, au.getNewContentCrawlUrls());
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
+  }
+
+  public void testRateLimiterSourceAu() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.RateLimiterSource1";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertEquals("au", au.getFetchRateLimiterSource());
+    assertEquals(null, au.getFetchRateLimiterKey());
+  }
+
+  public void testRateLimiterSourcePlugin() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.RateLimiterSource2";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertEquals("plugin", au.getFetchRateLimiterSource());
+    assertEquals(pname, au.getFetchRateLimiterKey());
+  }
+
+  public void testRateLimiterSourceKey() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.RateLimiterSource3";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    String limiterKey = "org.lockss.rateKey.SharedLimiter";
+    assertEquals("key:" + limiterKey, au.getFetchRateLimiterSource());
+    assertEquals(limiterKey, au.getFetchRateLimiterKey());
+  }
+
+  public void testRateLimiterSourceHost() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.RateLimiterSource4";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertEquals("host:base_url", au.getFetchRateLimiterSource());
+    assertEquals("host:base.foo", au.getFetchRateLimiterKey());
   }
 
   public static class PositiveCrawlRuleFactory

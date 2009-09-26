@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.72.4.1 2009-08-28 23:03:16 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.72.4.2 2009-09-26 17:20:08 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -186,6 +186,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public String getPerHostPermissionPath() {
     return (String)definitionMap.getMapElement(DefinablePlugin.KEY_PER_HOST_PERMISSION_PATH);
+  }
+
+  /** Use rate limiter source specified in AU, if any, then in plugin, then
+   * default */
+  @Override
+  protected String getFetchRateLimiterSource() {
+    String pluginSrc = 
+      definitionMap.getString(DefinablePlugin.KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE,
+			      DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
+    return paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, pluginSrc);
   }
 
   @Override

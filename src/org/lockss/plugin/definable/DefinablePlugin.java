@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.41.2.3 2009-08-28 23:03:16 dshr Exp $
+ * $Id: DefinablePlugin.java,v 1.41.2.4 2009-09-26 17:20:08 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,8 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_PARENT_VERSION = "plugin_parent_version";
   public static final String KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY =
     "plugin_crawl_url_comparator_factory";
+  public static final String KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE =
+    "plugin_fetch_rate_limiter_source";
 
   public static final String KEY_DEFAULT_ARTICLE_MIME_TYPE =
     "plugin_default_article_mime_type";
