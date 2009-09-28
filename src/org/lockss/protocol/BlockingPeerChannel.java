@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.27 2009-03-24 20:35:33 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.27.6.1 2009-09-28 07:45:56 tlipkis Exp $
  */
 
 /*
@@ -723,12 +723,17 @@ class BlockingPeerChannel implements PeerChannel {
     if (len > scomm.getMaxMessageSize()) {
       throw new ProtocolException("Too-large incoming message: " + len);
     }
+    long startTime = 0;
+    if (len >= scomm.getMinMeasuredMessageSize()) {
+      startTime = TimeBase.nowMs();
+    }
     PeerMessage msg = scomm.newPeerMessage(len);
     msg.setProtocol(proto);
     msg.setSender(peer);
     try {
       OutputStream msgOut = msg.getOutputStream();
       copyBytes(ins, msgOut, len, stats.getInCount());
+      logRate("Rcv", len, startTime);
       msgOut.close();
       // update lastActiveTime *before* queuing message; produces more
       // predictable behavior when running in simulated time in unit tests
@@ -799,6 +804,26 @@ class BlockingPeerChannel implements PeerChannel {
 
   int getRcvdMessageOp() {
     return ByteArray.decodeByte(rcvHeader, HEADER_OFF_OP);
+  }
+
+  private void logRate(String direction, long len, long startTime) {
+    if (startTime <= 0 || !log.isDebug()) {
+      return;
+    }
+    long dur = TimeBase.msSince(startTime);
+    if (dur <= 0) {
+      return;
+    }
+    long bpms = len / dur;
+    if (bpms >= 1000) {
+      log.debug(String.format("%s%s rate: %.1fMB/s (%d bytes in %s)",
+			      p(), direction, (bpms / 1000.0), len,
+			      StringUtil.timeIntervalToString(dur)));
+    } else {
+      log.debug(String.format("%s%s rate: %dKB/s (%d bytes in %s)",
+			      p(), direction, bpms, len,
+			      StringUtil.timeIntervalToString(dur)));
+    }
   }
 
   // Message sending, invoked by ChannelWriter
@@ -911,13 +936,19 @@ class BlockingPeerChannel implements PeerChannel {
   /** send data msg
    */
   void writeDataMsg(PeerMessage msg) throws IOException {
+    long len = msg.getDataSize();
     if (log.isDebug3()) log.debug3("Sending data: " + msg.getProtocol() +
-				   ", len: " + msg.getDataSize());
+				   ", len: " + len);
+    long startTime = 0;
+    if (len >= scomm.getMinMeasuredMessageSize()) {
+      startTime = TimeBase.nowMs();
+    }
     writeHeader(OP_DATA, msg.getDataSize(), msg.getProtocol());
     copyBytes(msg.getInputStream(), outs, msg.getDataSize(),
 	      stats.getOutCount());
     outs.flush();
     stats.sentMsg();
+    logRate("Send", len, startTime);
   }
 
   /** send msg header
