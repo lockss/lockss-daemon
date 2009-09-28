@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrHelperRepositoryFactory.java,v 1.1.2.1 2009-09-23 02:03:02 edwardsb1 Exp $
+ * $Id: TestJcrHelperRepositoryFactory.java,v 1.1.2.2 2009-09-28 23:49:54 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -139,6 +139,64 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   }
 
   
+  public final void testChooseHelperRepository() throws Exception {
+    File dir1;
+    File dir2;
+    JcrHelperRepositoryFactory jcrh;
+    JcrHelperRepository jcr1;
+    JcrHelperRepository jcr2;
+    JcrHelperRepository jcrReturn1;
+    JcrHelperRepository jcrReturn2;    
+    
+    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    
+    // Create two helper repositories
+    jcrh = JcrHelperRepositoryFactory.constructor();
+    
+    dir1 = getTempDir();
+    jcr1 = jcrh.createHelperRepository("key1", dir1);
+    
+    dir2 = getTempDir();
+    jcr2 = jcrh.createHelperRepository("key2", dir2);
+    
+    // chooseHelperRepository should return one of the two repositories.
+    jcrReturn1 = jcrh.chooseHelperRepository();
+    
+    assertTrue(jcrReturn1.hashCode() == jcr1.hashCode() ||
+        jcrReturn1.hashCode() == jcr2.hashCode());
+    
+    // chooseHelperRepository should now return the other of the two repositories.
+    jcrReturn2 = jcrh.chooseHelperRepository();
+
+    assertTrue(jcrReturn2.hashCode() == jcr1.hashCode() ||
+        jcrReturn2.hashCode() == jcr2.hashCode());
+    assertFalse(jcrReturn1.hashCode() == jcrReturn2.hashCode());
+
+    FileUtil.delTree(dir2);
+    FileUtil.delTree(dir1);
+  }
+  
+  
+  public final void testCreateHelperRepository() throws Exception {
+    File dir;
+    JcrHelperRepository jhr;
+    JcrHelperRepositoryFactory jhrf;
+    
+    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    
+    jhrf = JcrHelperRepositoryFactory.constructor();
+    
+    dir = getTempDir();
+    jhr = jhrf.createHelperRepository("key", dir);
+    
+    // Verify that there's something in the temp directory... 
+    assertTrue(dir.isDirectory());
+    assertTrue(dir.list().length > 0);
+    
+    FileUtil.delTree(dir);
+  }  
+  
+  
   /**
    * Test method for {@link org.lockss.repository.jcr.JcrHelperRepositoryFactory#getHelperRepository(java.lang.String)}.
    */
@@ -180,5 +238,76 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     FileUtil.delTree(tempDir2);
     FileUtil.delTree(tempDir1);
   }
+  
+  
+  public final void testGetHelperRepositoryByDirectory() throws Exception {
+    File dir1;
+    File dir2;
+    JcrHelperRepositoryFactory jcrh;
+    JcrHelperRepository jcr1;
+    JcrHelperRepository jcr2;
+    JcrHelperRepository jcrReturn1;
+    JcrHelperRepository jcrReturn2;    
+    
+    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    
+    // Create two helper repositories
+    jcrh = JcrHelperRepositoryFactory.constructor();
+    
+    dir1 = getTempDir();
+    jcr1 = jcrh.createHelperRepository("key1", dir1);
+    
+    dir2 = getTempDir();
+    jcr2 = jcrh.createHelperRepository("key2", dir2);
+    
+    // Verify our getHelperRepository...
+    jcrReturn1 = jcrh.getHelperRepositoryByDirectory(dir1);
+    
+    assertTrue(jcrReturn1.hashCode() == jcr1.hashCode());
+    
+    jcrReturn2 = jcrh.getHelperRepositoryByDirectory(dir2);
 
+    assertTrue(jcrReturn2.hashCode() == jcr2.hashCode());
+    
+    FileUtil.delTree(dir2);
+    FileUtil.delTree(dir1);
+  }
+
+  
+  public final void testGetIdentityManager() throws Exception {
+    IdentityManager idman;
+    JcrHelperRepositoryFactory jhrf;
+    
+    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrHelperRepositoryFactory.constructor();
+
+    idman = jhrf.getIdentityManager();
+    
+    assertEquals(m_idman.hashCode(), idman.hashCode());
+  }
+  
+  
+  public final void testLockssDaemon() throws Exception {
+    LockssDaemon ld;
+    JcrHelperRepositoryFactory jhrf;
+    
+    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrHelperRepositoryFactory.constructor();
+
+    ld = jhrf.getLockssDaemon();
+    
+    assertEquals(m_ldTest.hashCode(), ld.hashCode());
+  }
+
+  public final void testGetSizeWarcMax() throws Exception {
+    long sizeWarc;
+    JcrHelperRepositoryFactory jhrf;
+    
+    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrHelperRepositoryFactory.constructor();
+
+    sizeWarc = jhrf.getSizeWarcMax();
+    
+    assertEquals(k_sizeWarcMax, sizeWarc);    
+  }
 }
