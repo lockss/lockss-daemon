@@ -1,0 +1,439 @@
+{
+
+  publisher <
+    name = Royal Society of Chemistry
+  >
+  
+  plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin
+  param[base_url] = http://www.rsc.org/
+  param[resolver_url] = http://xlink.rsc.org/
+  implicit < status ; year ; name ; param[volume_name] ; param[year] >
+  
+  {
+  
+    title <
+      name = The Analyst
+    >
+    
+    param[journal_code] = an
+    
+    au < manifest ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < manifest ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Analytical Communications
+    >
+    
+    param[journal_code] = ac
+    comment[legacy] = 1997-1999 only
+  
+  }
+
+  {
+  
+    title <
+      name = Analytical Methods
+    >
+    
+    param[journal_code] = ay
+    
+    au < manifest ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry
+    >
+    
+    param[journal_code] = ic
+    comment[none] = no manifest pages
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry
+    >
+    
+    param[journal_code] = oc
+    comment[none] = no manifest pages
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry
+    >
+    
+    param[journal_code] = pc
+    comment[none] = no manifest pages
+  
+  }
+
+  {
+  
+    title <
+      name = Chemical Communications
+    >
+    
+    param[journal_code] = cc
+    
+    au < manifest ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
+    au < manifest ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemical Society Reviews
+    >
+    
+    param[journal_code] = cs
+    
+    au < manifest ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
+    au < manifest ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemistry Education Research and Practice
+    >
+    
+    param[journal_code] = rp
+    
+    au < manifest ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
+    au < manifest ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Contemporary Organic Synthesis
+    >
+    
+    param[journal_code] = co
+    comment[legacy] = 1997 only
+  
+  }
+
+  {
+  
+    title <
+      name = CrystEngComm
+    >
+    
+    param[journal_code] = ce
+    
+    au < manifest ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
+    au < manifest ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Dalton Transactions
+    >
+    
+    param[journal_code] = dt
+    
+    au < manifest ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
+    au < manifest ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Energy & Environmental Science
+    >
+    
+    param[journal_code] = ee
+    
+    au < manifest ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
+    au < manifest ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Faraday Discussions
+    >
+    
+    param[journal_code] = fd
+    comment[none] = no manifest pages
+  
+  }
+
+  {
+  
+    title <
+      name = Geochemical Transactions
+    >
+    
+    param[journal_code] = gt
+    comment[legacy] = 2000-2003 only
+  
+  }
+
+  {
+  
+    title <
+      name = Green Chemistry
+    >
+    
+    param[journal_code] = gc
+    
+    au < manifest ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
+    au < manifest ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Integrative Biology
+    >
+    
+    param[journal_code] = ib
+    
+    au < manifest ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Analytical Atomic Spectrometry
+    >
+    
+    param[journal_code] = ja
+    
+    au < manifest ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
+    au < manifest ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Chemical Research, Synopses
+    >
+    
+    param[journal_code] = jc
+    comment[legacy] = 1997-1999 only
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of the Chemical Society, Perkin Transactions 1
+    >
+    
+    param[journal_code] = p1
+    comment[legacy] = 1997-2002 only
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of the Chemical Society, Perkin Transactions 2
+    >
+    
+    param[journal_code] = p2
+    comment[legacy] = 1997-2002 only
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Environmental Monitoring
+    >
+    
+    param[journal_code] = em
+    
+    au < manifest ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
+    au < manifest ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Materials Chemistry
+    >
+    
+    param[journal_code] = jm
+    
+    au < manifest ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
+    au < manifest ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Lab on a Chip
+    >
+    
+    param[journal_code] = lc
+    
+    au < manifest ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
+    au < manifest ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Metallomics
+    >
+    
+    param[journal_code] = mt
+    
+    au < manifest ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Molecular BioSystems
+    >
+    
+    param[journal_code] = mb
+    
+    au < manifest ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
+    au < manifest ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Nanoscale
+    >
+    
+    param[journal_code] = nr
+    
+    au < manifest ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Natural Product Reports
+    >
+    
+    param[journal_code] = np
+    
+    au < manifest ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
+    au < manifest ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = New Journal of Chemistry
+    >
+    
+    param[journal_code] = nj
+    
+    au < manifest ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < manifest ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Organic & Biomolecular Chemistry
+    >
+    
+    param[journal_code] = ob
+    
+    au < manifest ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < manifest ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Pesticide Outlook
+    >
+    
+    param[journal_code] = po
+    comment[legacy] = 2000-2003 only
+  
+  }
+
+  {
+  
+    title <
+      name = Photochemical & Photobiological Sciences
+    >
+    
+    param[journal_code] = pp
+    
+    au < manifest ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
+    au < manifest ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = PhysChemComm
+    >
+    
+    param[journal_code] = qu
+    comment[legacy] = 1998-2003 only
+  
+  }
+
+  {
+  
+    title <
+      name = Physical Chemistry Chemical Physics
+    >
+    
+    param[journal_code] = cp
+    
+    au < manifest ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
+    au < manifest ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Soft Matter
+    >
+    
+    param[journal_code] = sm
+    
+    au < manifest ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
+    au < manifest ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
+  
+  }
+
+}
