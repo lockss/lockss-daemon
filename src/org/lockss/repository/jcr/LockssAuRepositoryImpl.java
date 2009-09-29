@@ -59,6 +59,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   private static final String k_propCreationTime = "CreationTime";
   private static final String k_propIdentityAgreement = "IdentityAgreement";
   private static final String k_propPeerId = "PeerId";
+  private static final String k_strWarcInitial = "WARC";  // The string that appears before the numbers designating which WARC file to create.
       
   /**
    * Taken from RepositoryManager.
@@ -242,7 +243,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
         // Create the base node.
         try {
           rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), 
-              m_jhr.getRootNode(), m_jhr.getDirectory().toString(), m_jhrf.getSizeWarcMax(), strUrl, m_jhrf.getIdentityManager());
+              m_jhr.getRootNode(), m_jhr.getDirectory().toString() + "/" + k_strWarcInitial , m_jhrf.getSizeWarcMax(), strUrl, m_jhrf.getIdentityManager());
         } catch (FileNotFoundException e) {
           logger.error("File Not Found Exception: ", e);
           throw new LockssRepositoryException(e);
