@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.47 2009-09-03 00:53:40 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.48 2009-09-29 23:20:45 tlipkis Exp $
  */
 
 /*
@@ -166,6 +166,12 @@ public class BlockingStreamComm
     PREFIX + "maxMessageSize";
   public static final long DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024 * 1024;
 
+  /** Rough transmission speed will be measured for messages at least this
+   * large, reported at debug level */
+  public static final String PARAM_MIN_MEASURED_MESSAGE_SIZE =
+    PREFIX + "minMeasuredMessageSize";
+  public static final long DEFAULT_MIN_MEASURED_MESSAGE_SIZE = 5 * 1024 * 1024;
+
   /** Dir for PeerMessage data storage */
   public static final String PARAM_DATA_DIR = PREFIX + "messageDataDir";
   /** Default is PlatformInfo.getSystemTempDir() */
@@ -231,6 +237,8 @@ public class BlockingStreamComm
   private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private long paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
+  private long paramMinMeasuredMessageSize =
+    DEFAULT_MIN_MEASURED_MESSAGE_SIZE;
   private File dataDir = null;
   private int paramBacklog = DEFAULT_LISTEN_BACKLOG;
   private int paramMaxChannels = DEFAULT_MAX_CHANNELS;
@@ -835,6 +843,9 @@ public class BlockingStreamComm
 						DEFAULT_MIN_FILE_MESSAGE_SIZE);
 	paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
 					     DEFAULT_MAX_MESSAGE_SIZE);
+	paramMinMeasuredMessageSize =
+	  config.getLong(PARAM_MIN_MEASURED_MESSAGE_SIZE,
+			 DEFAULT_MIN_MEASURED_MESSAGE_SIZE);
 	paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
 						DEFAULT_IS_BUFFERED_SEND);
 	paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
@@ -1066,6 +1077,10 @@ public class BlockingStreamComm
 
   long getMaxMessageSize() {
     return paramMaxMessageSize;
+  }
+
+  long getMinMeasuredMessageSize() {
+    return paramMinMeasuredMessageSize;
   }
 
   boolean isBufferedSend() {
