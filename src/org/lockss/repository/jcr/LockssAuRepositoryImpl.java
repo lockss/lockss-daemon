@@ -94,6 +94,22 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   public LockssAuRepositoryImpl(
       ArchivalUnit au) 
       throws LockssRepositoryException {
+    this(au, null);    
+  }
+   
+  /**
+   * Important note: If jhr is the special value 'null', then the code picks a random
+   * helper repository.  It would be far better if the one-operator constructor could call 
+   * LockssRepositoryImpl(au, m_jhrf.chooseHelperRepository()) -- but m_jhrf isn't 
+   * initialized when the one-argument constructor is created.
+   * 
+   * @param au
+   * @param jhr
+   * @throws LockssRepositoryException
+   */
+  public LockssAuRepositoryImpl(
+      ArchivalUnit au, JcrHelperRepository jhr) 
+      throws LockssRepositoryException {
     Node node;
     
     // Store some variables
@@ -108,7 +124,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
        
     try {
       // Put the LockssAuRepositoryImpl into an appropriate helper repository.
-      m_jhr = m_jhrf.chooseHelperRepository();
+      if (m_jhr != null) {
+        m_jhr = jhr;
+      } else {  // Probably called by the one-argument constructor
+        m_jhr = m_jhrf.chooseHelperRepository();
+      }
             
       node = m_jhr.getRootNode();
       if (!node.hasProperty(k_propCreationTime)) {
@@ -120,7 +140,9 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       throw new LockssRepositoryException(e);
     }
   }
-    
+
+  
+  
   /**
    * @see org.lockss.repository.v2.LockssAuRepository#checkConsistency()
    */
