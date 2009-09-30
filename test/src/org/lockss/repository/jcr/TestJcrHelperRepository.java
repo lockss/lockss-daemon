@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrHelperRepository.java,v 1.1.2.1 2009-09-23 02:03:02 edwardsb1 Exp $
+ * $Id: TestJcrHelperRepository.java,v 1.1.2.2 2009-09-30 23:02:33 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -79,7 +79,7 @@ public class TestJcrHelperRepository extends LockssTestCase {
     super.setUp();
     
     RepositoryConfig repconfig;
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jhrf;
 
     m_ldTest = getMockLockssDaemon();
     m_ldTest.startDaemon();
@@ -103,7 +103,7 @@ public class TestJcrHelperRepository extends LockssTestCase {
         .toCharArray()));
     m_nodeRoot = m_session.getRootNode();
 
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);    
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);    
   }
 
   /* (non-Javadoc)
@@ -146,7 +146,7 @@ public class TestJcrHelperRepository extends LockssTestCase {
       // has shut down and that there is no other exception.
     }
     
-    JcrHelperRepositoryFactory.reset();
+    JcrRepositoryHelperFactory.reset();
 
     checkLockFile();
     
@@ -156,24 +156,24 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#JcrHelperRepository(java.lang.String, long, org.lockss.protocol.IdentityManager, org.lockss.app.LockssDaemon)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#JcrHelperRepository(java.lang.String, long, org.lockss.protocol.IdentityManager, org.lockss.app.LockssDaemon)}.
    */
-  public final void testJcrHelperRepository() throws Exception {
-    JcrHelperRepository jhrTest = null;
+  public final void testJcrRepositoryHelper() throws Exception {
+    JcrRepositoryHelper jhrTest = null;
   
     // Other tests will run with the helper repository after the constructor.
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     jhrTest.reset();
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#getIdentityManager()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#getIdentityManager()}.
    */
   public final void testGetIdentityManager() throws Exception {
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     IdentityManager idmanTest;
     
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     idmanTest = jhrTest.getIdentityManager();
     
     // Even if they're different objects, this should test equality.
@@ -182,13 +182,13 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#getRepositoryConfig()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#getRepositoryConfig()}.
    */
   public final void testGetRepositoryConfig() throws Exception {
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     RepositoryConfig rcTest;
 
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     rcTest = jhrTest.getRepositoryConfig();
     
     assertTrue(rcTest.getHomeDir().contains(k_directory.getName()));
@@ -197,14 +197,14 @@ public class TestJcrHelperRepository extends LockssTestCase {
   
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#getRepositoryNode()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#getRepositoryNode()}.
    */
   public final void testGetRepositoryNode() throws Exception {
-    JcrHelperRepository jhrTest;
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelper jhrTest;
+    JcrRepositoryHelperFactory jhrf;
     RepositoryNode rn;
     
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    jhrf = JcrRepositoryHelperFactory.getSingleton();
     
     jhrTest = jhrf.createHelperRepository("test", k_directory);
     
@@ -220,13 +220,13 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#getRootNode(java.lang.String)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#getRootNode(java.lang.String)}.
    */
   public final void testGetRootNode() throws Exception {
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     Node nodeRoot;
     
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     nodeRoot = jhrTest.getRootNode();
     
     // I'm not sure what to test about the node...
@@ -235,13 +235,13 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#getSession()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#getSession()}.
    */
   public final void testGetSession() throws Exception {
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     Session sessionRoot;
     
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     sessionRoot = jhrTest.getSession();
     
     // I'm not sure what to test about the session...
@@ -250,13 +250,13 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#getSizeWarcMax()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#getSizeWarcMax()}.
    */
   public final void testGetSizeWarcMax() throws Exception {
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     long sizeWarc;
     
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     sizeWarc = jhrTest.getSizeWarcMax();
 
     assertEquals(sizeWarc, k_sizeWarcMax);
@@ -265,12 +265,12 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#moveRepository(java.lang.String, java.lang.String)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#moveRepository(java.lang.String, java.lang.String)}.
    */
   public final void testMoveRepository() throws Exception {
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     jhrTest.moveRepository(k_strAuId, k_stemFileMoved);
     
     // I'm not sure what to test.
@@ -278,27 +278,27 @@ public class TestJcrHelperRepository extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepository#setConfig(org.lockss.config.Configuration, org.lockss.config.Configuration, org.lockss.config.Configuration.Differences)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelper#setConfig(org.lockss.config.Configuration, org.lockss.config.Configuration, org.lockss.config.Configuration.Differences)}.
    */
   public final void testSetConfig() throws Exception {
     Configuration conf1;
     Configuration conf2;
     Configuration.Differences confdiff;
-    JcrHelperRepository jhrTest = null;
+    JcrRepositoryHelper jhrTest = null;
     Properties props1;
     Properties props2;
     
     props1 = new PropertyTree();
-    props1.put(JcrHelperRepository.k_SIZE_WARC_MAX, k_sizestrWarcMax);
+    props1.put(JcrRepositoryHelper.k_SIZE_WARC_MAX, k_sizestrWarcMax);
     conf1 = ConfigurationUtil.fromProps(props1);
     
     props2 = new PropertyTree();
-    props2.put(JcrHelperRepository.k_SIZE_WARC_MAX, k_sizestrWarcMaxChanged);
+    props2.put(JcrRepositoryHelper.k_SIZE_WARC_MAX, k_sizestrWarcMaxChanged);
     conf2 = ConfigurationUtil.fromProps(props2);
     
     confdiff = conf2.differences(conf1);
 
-    jhrTest = new JcrHelperRepository(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
+    jhrTest = new JcrRepositoryHelper(k_directory, k_sizeWarcMax, m_idman, m_ldTest);
     jhrTest.setConfig(conf2, conf1, confdiff);
     
     assertEquals(jhrTest.getSizeWarcMax(), k_sizeWarcMaxChanged);

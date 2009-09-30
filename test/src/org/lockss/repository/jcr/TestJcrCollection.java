@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrCollection.java,v 1.1.2.3 2009-09-23 02:03:02 edwardsb1 Exp $
+ * $Id: TestJcrCollection.java,v 1.1.2.4 2009-09-30 23:02:32 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -65,9 +65,9 @@ public class TestJcrCollection extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jhrf;
 
-    if (!JcrHelperRepositoryFactory.isPreconstructed()) {
+    if (!JcrRepositoryHelperFactory.isPreconstructed()) {
       // Taken from org.lockss.state.TestHistoryRepository
       m_ldTest = getMockLockssDaemon();
       m_ldTest.startDaemon();
@@ -87,11 +87,11 @@ public class TestJcrCollection extends LockssTestCase {
       // The following are the peer identities that should be used in tests...
       m_idman.stringToPeerIdentity(k_strPeerID);
        
-      JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
-      jhrf = JcrHelperRepositoryFactory.constructor();
+      JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+      jhrf = JcrRepositoryHelperFactory.getSingleton();
     } else { // isConstructed
       
-      jhrf = JcrHelperRepositoryFactory.constructor();
+      jhrf = JcrRepositoryHelperFactory.getSingleton();
       
       m_ldTest = (MockLockssDaemon) jhrf.getLockssDaemon();
       m_idman = jhrf.getIdentityManager();
@@ -104,7 +104,7 @@ public class TestJcrCollection extends LockssTestCase {
    * @see junit.framework.TestCase#tearDown()
    */
   protected void tearDown() throws Exception {
-    JcrHelperRepositoryFactory.reset();
+    JcrRepositoryHelperFactory.reset();
     
     // This check verifies that the test shut down correctly.
     checkLockFile();
@@ -116,20 +116,20 @@ public class TestJcrCollection extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrCollection#generateAuRepository(java.io.File)}.
+   * Test method for {@link org.lockss.repository.jcr.CollectionOfAuRepositoriesImpl#generateAuRepository(java.io.File)}.
    */
   public final void testGenerateAuRepository() throws Exception {
     File dirTest;
     File fileDatastore;
-    JcrCollection jcTest;
+    CollectionOfAuRepositoriesImpl jcTest;
     
     dirTest = FileUtil.createTempDir("test", "generateAuRepository");
     
-    jcTest = new JcrCollection(dirTest);
+    jcTest = new CollectionOfAuRepositoriesImpl(dirTest);
     jcTest.generateAuRepository(dirTest);
     
     // Verify it...
-    fileDatastore = new File(dirTest, JcrCollection.k_FILENAME_DATASTORE);
+    fileDatastore = new File(dirTest, CollectionOfAuRepositoriesImpl.k_FILENAME_DATASTORE);
     assertTrue(fileDatastore.exists());
     
     // Delete everything.
@@ -138,7 +138,7 @@ public class TestJcrCollection extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrCollection#listAuRepositories(java.io.File)}.
+   * Test method for {@link org.lockss.repository.jcr.CollectionOfAuRepositoriesImpl#listAuRepositories(java.io.File)}.
    */
   public final void testListAuRepositories() throws Exception {
     File dir1;
@@ -147,7 +147,7 @@ public class TestJcrCollection extends LockssTestCase {
     File dirParent;
     File fileDatastore1;
     File fileDatastore2;
-    JcrCollection jcTest;
+    CollectionOfAuRepositoriesImpl jcTest;
     Map<String, File> mastrfileResult;
     
     // Create two directories that will have the right file...
@@ -155,18 +155,18 @@ public class TestJcrCollection extends LockssTestCase {
     
     dir1 = new File(dirParent, "dir1");
     dir1.mkdir();
-    fileDatastore1 = new File(dir1, JcrCollection.k_FILENAME_DATASTORE);
+    fileDatastore1 = new File(dir1, CollectionOfAuRepositoriesImpl.k_FILENAME_DATASTORE);
     fileDatastore1.createNewFile();
     
     dir2 = new File(dirParent, "parent");
     dir2.mkdir();
     dir3 = new File(dirParent, "child");
     dir3.mkdir();
-    fileDatastore2 = new File(dir3, JcrCollection.k_FILENAME_DATASTORE);
+    fileDatastore2 = new File(dir3, CollectionOfAuRepositoriesImpl.k_FILENAME_DATASTORE);
     fileDatastore2.createNewFile();
     
     // Run listAuRepositories...
-    jcTest = new JcrCollection(dirParent);
+    jcTest = new CollectionOfAuRepositoriesImpl(dirParent);
     mastrfileResult = jcTest.listAuRepositories();
     
     // Check it.
@@ -183,17 +183,17 @@ public class TestJcrCollection extends LockssTestCase {
 
   
   /**
-   * Test JcrCollection.openAuRepository()
+   * Test CollectionOfAuRepositoriesImpl.openAuRepository()
    */
   public final void testOpenAuRepository() throws Exception {
     ArchivalUnit auGood;
     File dirTest;    
     File dirLocation;
-    JcrCollection jcTest;
+    CollectionOfAuRepositoriesImpl jcTest;
     LockssAuRepository larTest;
     
     dirTest = FileUtil.createTempDir("test", "OpenAuRepository");
-    jcTest = new JcrCollection(dirTest);
+    jcTest = new CollectionOfAuRepositoriesImpl(dirTest);
     
     auGood = createAu(dirTest);
     
@@ -207,7 +207,7 @@ public class TestJcrCollection extends LockssTestCase {
   
   
   /**
-   * Test JcrCollection.getDF()
+   * Test CollectionOfAuRepositoriesImpl.getDF()
    */
   public final void testGetDF() throws Exception {
     DF df1;
@@ -215,12 +215,12 @@ public class TestJcrCollection extends LockssTestCase {
     File dirTest;
     File fileFiller;
     int i;
-    JcrCollection jcTest;
+    CollectionOfAuRepositoriesImpl jcTest;
     OutputStream ostrFiller;
     
     
     dirTest = FileUtil.createTempDir("test", "getDF");
-    jcTest = new JcrCollection(dirTest);
+    jcTest = new CollectionOfAuRepositoriesImpl(dirTest);
     df1 = jcTest.getDF();
     
     // I don't want to create an AU, fill it.  This test just makes sure that the

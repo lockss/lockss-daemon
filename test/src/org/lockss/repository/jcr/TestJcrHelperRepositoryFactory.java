@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrHelperRepositoryFactory.java,v 1.1.2.2 2009-09-28 23:49:54 edwardsb1 Exp $
+ * $Id: TestJcrHelperRepositoryFactory.java,v 1.1.2.3 2009-09-30 23:02:33 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -71,14 +71,14 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     m_idman = m_ldTest.getIdentityManager();
     m_idman.startService();
 
-    JcrHelperRepositoryFactory.reset();
+    JcrRepositoryHelperFactory.reset();
   }
 
   /* (non-Javadoc)
    * @see junit.framework.TestCase#tearDown()
    */
   protected void tearDown() throws Exception {
-    JcrHelperRepositoryFactory.reset();
+    JcrRepositoryHelperFactory.reset();
     
     FileUtil.delTree(new File(k_strDirectory));
     
@@ -86,14 +86,14 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepositoryFactory#preconstructor(long, org.lockss.protocol.IdentityManager, org.lockss.app.LockssDaemon)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelperFactory#preconstructor(long, org.lockss.protocol.IdentityManager, org.lockss.app.LockssDaemon)}.
    */
   public final void testPreconstructor() throws Exception {
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
 
     // Running the preconstructor twice should cause an error.    
     try {
-      JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+      JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
       
       fail("Running the preconstructor twice should have caused an error.");
     } catch (LockssRepositoryException e) {
@@ -102,38 +102,38 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   }
 
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepositoryFactory#isPreonstructed()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelperFactory#isPreonstructed()}.
    */
   public final void testIsPreonstructed() throws Exception {
     // Before anything is preconstructed...
-    assertFalse(JcrHelperRepositoryFactory.isPreconstructed());
+    assertFalse(JcrRepositoryHelperFactory.isPreconstructed());
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
     
-    assertTrue(JcrHelperRepositoryFactory.isPreconstructed());
+    assertTrue(JcrRepositoryHelperFactory.isPreconstructed());
   }
 
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepositoryFactory#constructor()}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelperFactory#getSingleton()}.
    */
   public final void testConstructor() throws Exception {
-    JcrHelperRepositoryFactory jhrf1;
-    JcrHelperRepositoryFactory jhrf2;
+    JcrRepositoryHelperFactory jhrf1;
+    JcrRepositoryHelperFactory jhrf2;
     
     // Running the constructor before the preconstructor should cause an error.
     try {
-      jhrf1 = JcrHelperRepositoryFactory.constructor();
+      jhrf1 = JcrRepositoryHelperFactory.getSingleton();
       
       fail("Running the constructor before the preconstructor should have caused an error.");
     } catch (LockssRepositoryException e) {
       // Passes the test.
     }
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
 
-    jhrf1 = JcrHelperRepositoryFactory.constructor();
-    jhrf2 = JcrHelperRepositoryFactory.constructor();
+    jhrf1 = JcrRepositoryHelperFactory.getSingleton();
+    jhrf2 = JcrRepositoryHelperFactory.getSingleton();
     
     assertEquals(jhrf1.hashCode(), jhrf2.hashCode());
   }
@@ -142,16 +142,16 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   public final void testChooseHelperRepository() throws Exception {
     File dir1;
     File dir2;
-    JcrHelperRepositoryFactory jcrh;
-    JcrHelperRepository jcr1;
-    JcrHelperRepository jcr2;
-    JcrHelperRepository jcrReturn1;
-    JcrHelperRepository jcrReturn2;    
+    JcrRepositoryHelperFactory jcrh;
+    JcrRepositoryHelper jcr1;
+    JcrRepositoryHelper jcr2;
+    JcrRepositoryHelper jcrReturn1;
+    JcrRepositoryHelper jcrReturn2;    
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
     
     // Create two helper repositories
-    jcrh = JcrHelperRepositoryFactory.constructor();
+    jcrh = JcrRepositoryHelperFactory.getSingleton();
     
     dir1 = getTempDir();
     jcr1 = jcrh.createHelperRepository("key1", dir1);
@@ -179,12 +179,12 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   
   public final void testCreateHelperRepository() throws Exception {
     File dir;
-    JcrHelperRepository jhr;
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelper jhr;
+    JcrRepositoryHelperFactory jhrf;
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
     
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    jhrf = JcrRepositoryHelperFactory.getSingleton();
     
     dir = getTempDir();
     jhr = jhrf.createHelperRepository("key", dir);
@@ -198,19 +198,19 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrHelperRepositoryFactory#getHelperRepository(java.lang.String)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelperFactory#getHelperRepository(java.lang.String)}.
    */
   public final void testGetHelperRepository() throws Exception {
-    JcrHelperRepositoryFactory jhrf;
-    JcrHelperRepository jhr1;
-    JcrHelperRepository jhr2a;
-    JcrHelperRepository jhr2b;
-    JcrHelperRepository jhr3;
+    JcrRepositoryHelperFactory jhrf;
+    JcrRepositoryHelper jhr1;
+    JcrRepositoryHelper jhr2a;
+    JcrRepositoryHelper jhr2b;
+    JcrRepositoryHelper jhr3;
     File tempDir1;
     File tempDir2;
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrRepositoryHelperFactory.getSingleton();
     
     // No repositories added; we SHOULD get null.
     jhr1 = jhrf.getHelperRepository("nullandvoid");
@@ -243,16 +243,16 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   public final void testGetHelperRepositoryByDirectory() throws Exception {
     File dir1;
     File dir2;
-    JcrHelperRepositoryFactory jcrh;
-    JcrHelperRepository jcr1;
-    JcrHelperRepository jcr2;
-    JcrHelperRepository jcrReturn1;
-    JcrHelperRepository jcrReturn2;    
+    JcrRepositoryHelperFactory jcrh;
+    JcrRepositoryHelper jcr1;
+    JcrRepositoryHelper jcr2;
+    JcrRepositoryHelper jcrReturn1;
+    JcrRepositoryHelper jcrReturn2;    
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
     
     // Create two helper repositories
-    jcrh = JcrHelperRepositoryFactory.constructor();
+    jcrh = JcrRepositoryHelperFactory.getSingleton();
     
     dir1 = getTempDir();
     jcr1 = jcrh.createHelperRepository("key1", dir1);
@@ -276,10 +276,10 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   
   public final void testGetIdentityManager() throws Exception {
     IdentityManager idman;
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jhrf;
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrRepositoryHelperFactory.getSingleton();
 
     idman = jhrf.getIdentityManager();
     
@@ -289,10 +289,10 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   
   public final void testLockssDaemon() throws Exception {
     LockssDaemon ld;
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jhrf;
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrRepositoryHelperFactory.getSingleton();
 
     ld = jhrf.getLockssDaemon();
     
@@ -301,10 +301,10 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
 
   public final void testGetSizeWarcMax() throws Exception {
     long sizeWarc;
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jhrf;
     
-    JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+    jhrf = JcrRepositoryHelperFactory.getSingleton();
 
     sizeWarc = jhrf.getSizeWarcMax();
     

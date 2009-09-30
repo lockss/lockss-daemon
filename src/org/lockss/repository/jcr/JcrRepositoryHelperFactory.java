@@ -1,5 +1,5 @@
 /*
- * $Id: JcrHelperRepositoryFactory.java,v 1.1.2.1 2009-09-23 02:03:02 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.1 2009-09-30 23:02:32 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -40,57 +40,67 @@ import org.lockss.util.Logger;
  * @author edwardsb
  *
  */
-public class JcrHelperRepositoryFactory {
+public class JcrRepositoryHelperFactory {
+  // Constants
+  private static int k_maxHelpers = 8;
+  
   // Static variables
-  private static JcrHelperRepositoryFactory sm_jhrf = null;
-  private static Logger logger = Logger.getLogger("JcrHelperRepositoryFactory");
+  private static JcrRepositoryHelperFactory sm_jrhf = null;
+  private static Logger logger = Logger.getLogger("JcrRepositoryHelperFactory");
 
   // Class variables
   private IdentityManager m_idman;
   private int m_indexNextHelperRepository = 0;
   private LockssDaemon m_ld;
-  // Only one copy of each JcrHelperRepository, please...
-  private Map<String /* Directory */, JcrHelperRepository> m_mapdirjhr = new HashMap<String, JcrHelperRepository>();
+  // Only one copy of each JcrRepositoryHelper, please...
+  private Map<String /* Directory */, JcrRepositoryHelper> m_mapdirjhr = new HashMap<String, JcrRepositoryHelper>();
   private long m_sizeWarcMax;
   
-  private JcrHelperRepositoryFactory(long sizeWarcMax, IdentityManager idman, LockssDaemon ld) {
+  private JcrRepositoryHelperFactory(long sizeWarcMax, IdentityManager idman, LockssDaemon ld) {
     m_sizeWarcMax = sizeWarcMax;
     m_idman = idman;
     m_ld = ld;
   }
   
+  // Any suggested names for this method?  It must be called before the call
+  // to getSingleton.
   
   public static void preconstructor(long sizeWarcMax, IdentityManager idman, LockssDaemon ld) 
   throws LockssRepositoryException {
-    if (sm_jhrf == null) {
-      sm_jhrf = new JcrHelperRepositoryFactory(sizeWarcMax, idman, ld);
+    if (sm_jrhf == null) {
+      sm_jrhf = new JcrRepositoryHelperFactory(sizeWarcMax, idman, ld);
     } else {
-      logger.error("JcrHelperRepositoryFactory: the preconstructor was called multiple times.");
-      throw new LockssRepositoryException("Don't call JcrHelperRepositoryFactory.preconstructor more than once.");
+      logger.error("JcrRepositoryHelperFactory: the preconstructor was called multiple times.");
+      throw new LockssRepositoryException("Don't call JcrRepositoryHelperFactory.preconstructor more than once.");
     }
   }
   
   
   public static boolean isPreconstructed() {
-    return sm_jhrf != null;
+    return sm_jrhf != null;
   }
   
   
-  public static JcrHelperRepositoryFactory constructor() throws LockssRepositoryException {
-    if (sm_jhrf != null) {
-      return sm_jhrf;
+  public static JcrRepositoryHelperFactory getSingleton() throws LockssRepositoryException {
+    if (sm_jrhf != null) {
+      return sm_jrhf;
     }
     
-    logger.error("JcrHelperRepositoryFactory: call the preconstructor before you call the constructor.");
-    throw new LockssRepositoryException("Call preconstructor before you call the constructor.");
+    logger.error("JcrRepositoryHelperFactory: call the preconstructor before you get a singleton.");
+    throw new LockssRepositoryException("Call preconstructor before you get the singleton.");
   }
   
   
-  public void addHelperRepository(String strKey, JcrHelperRepository jhr) 
+  public void addHelperRepository(String strKey, JcrRepositoryHelper jhr) 
   throws LockssRepositoryException {
     if (m_mapdirjhr.containsKey(strKey)) {
       logger.error("Duplicate helper repository name.");
       throw new LockssRepositoryException("Duplicate helper repository name.");
+    }
+    
+    if (k_maxHelpers <= m_mapdirjhr.size()) {
+      logger.error("Too many helper repositories.");
+      throw new LockssRepositoryException("Too many helper repositories.");
     }
     
     m_mapdirjhr.put(strKey, jhr);
@@ -101,13 +111,13 @@ public class JcrHelperRepositoryFactory {
    * 
    * This is a simple round-robin method to choose a helper repository. 
    * */
-  public JcrHelperRepository chooseHelperRepository() throws LockssRepositoryException {
-    Collection<JcrHelperRepository> coljhrValues;
-    JcrHelperRepository[] arjhrValues = new JcrHelperRepository[1];
-    JcrHelperRepository jhrReturn;
+  public JcrRepositoryHelper chooseHelperRepository() throws LockssRepositoryException {
+    Collection<JcrRepositoryHelper> coljhrValues;
+    JcrRepositoryHelper[] arjhrValues = new JcrRepositoryHelper[1];
+    JcrRepositoryHelper jhrReturn;
     
     coljhrValues = m_mapdirjhr.values();
-    arjhrValues = (JcrHelperRepository []) coljhrValues.toArray(arjhrValues);
+    arjhrValues = (JcrRepositoryHelper []) coljhrValues.toArray(arjhrValues);
     
     if (arjhrValues.length == 0) {
       logger.error("There are no JcrHelperRepositories to choose from!");
@@ -125,16 +135,21 @@ public class JcrHelperRepositoryFactory {
   }
   
 
-  public JcrHelperRepository createHelperRepository(String strKey, File directory)
+  public JcrRepositoryHelper createHelperRepository(String strKey, File directory)
   throws LockssRepositoryException {
-    JcrHelperRepository jhr;
+    JcrRepositoryHelper jhr;
     
     if (m_mapdirjhr.containsKey(strKey)) {
       logger.error("Duplicate helper repository name.");
       throw new LockssRepositoryException("Duplicate helper repository name.");
     }
     
-    jhr = new JcrHelperRepository(directory, m_sizeWarcMax, m_idman, m_ld);
+    if (k_maxHelpers <= m_mapdirjhr.size()) {
+      logger.error("Too many helper repositories.");
+      throw new LockssRepositoryException("Too many helper repositories.");
+    }
+    
+    jhr = new JcrRepositoryHelper(directory, m_sizeWarcMax, m_idman, m_ld);
     m_mapdirjhr.put(strKey, jhr);
     
     return jhr;
@@ -147,8 +162,8 @@ public class JcrHelperRepositoryFactory {
   // currently-available one.
   // You will need to create helper repositories as part of the construction.
   
-  public JcrHelperRepository getHelperRepository(String nameHelperRepository) throws LockssRepositoryException {
-    JcrHelperRepository jhr;
+  public JcrRepositoryHelper getHelperRepository(String nameHelperRepository) throws LockssRepositoryException {
+    JcrRepositoryHelper jhr;
     
     jhr = m_mapdirjhr.get(nameHelperRepository);
     
@@ -163,9 +178,9 @@ public class JcrHelperRepositoryFactory {
   } 
   
   // Note: This method returns 'null' if no helper repository is found.
-  public JcrHelperRepository getHelperRepositoryByDirectory(File dirLocation) {
-    Collection<JcrHelperRepository> colljhr;
-    JcrHelperRepository jhrReturn = null;
+  public JcrRepositoryHelper getHelperRepositoryByDirectory(File dirLocation) {
+    Collection<JcrRepositoryHelper> colljhr;
+    JcrRepositoryHelper jhrReturn = null;
     
     colljhr = m_mapdirjhr.values();
     
@@ -175,7 +190,7 @@ public class JcrHelperRepositoryFactory {
     // sorted list.)  A linear search is fine, unless this method gets
     // called frequently.
     if (colljhr.size() > 0) {
-      for (JcrHelperRepository jhr : colljhr) {
+      for (JcrRepositoryHelper jhr : colljhr) {
         if (jhr.getDirectory().equals(dirLocation)) {
           jhrReturn = jhr;
           break;  // Out of the 'for' loop.
@@ -203,20 +218,20 @@ public class JcrHelperRepositoryFactory {
     return m_sizeWarcMax;
   }
   
-  static public void reset() {
-    Collection<JcrHelperRepository> colljhr;
-    Set<JcrHelperRepository> setjhr;
+  static void reset() {
+    Collection<JcrRepositoryHelper> colljhr;
+    Set<JcrRepositoryHelper> setjhr;
 
-    if (sm_jhrf != null) {
+    if (sm_jrhf != null) {
       // Reset all helper repositories...
-      colljhr = sm_jhrf.m_mapdirjhr.values();
+      colljhr = sm_jrhf.m_mapdirjhr.values();
      
       // ...but just once each.
       if (colljhr.size() > 0) {
-        setjhr = new HashSet<JcrHelperRepository>();
+        setjhr = new HashSet<JcrRepositoryHelper>();
         setjhr.addAll(colljhr);
         
-        for (JcrHelperRepository jhr : setjhr) {
+        for (JcrRepositoryHelper jhr : setjhr) {
           // I do not understand how jhr can remain null, but it has happened
           // with one test.
           if (jhr != null) {
@@ -226,6 +241,6 @@ public class JcrHelperRepositoryFactory {
       }
     }
     
-    sm_jhrf = null;
+    sm_jrhf = null;
   }
 }

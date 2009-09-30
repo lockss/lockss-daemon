@@ -78,14 +78,13 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   // Variables
   private ArchivalUnit m_au;
   private DatedPeerIdSet m_dpisNoAu;
-  private JcrHelperRepository m_jhr;
-  private JcrHelperRepositoryFactory m_jhrf;
+  private JcrRepositoryHelper m_jhr;
   private BinarySemaphore m_sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread m_sizeCalcThread;
   private float m_sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
 
   /**
-   * You must call JcrHelperRepositoryFactory.preconstructor()
+   * You must call JcrRepositoryHelperFactory.preconstructor()
    * before you call this method.
    * 
    * @param au
@@ -100,7 +99,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   /**
    * Important note: If jhr is the special value 'null', then the code picks a random
    * helper repository.  It would be far better if the one-operator constructor could call 
-   * LockssRepositoryImpl(au, m_jhrf.chooseHelperRepository()) -- but m_jhrf isn't 
+   * LockssRepositoryImpl(au, m_jrhf.chooseHelperRepository()) -- but m_jrhf isn't 
    * initialized when the one-argument constructor is created.
    * 
    * @param au
@@ -108,18 +107,20 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * @throws LockssRepositoryException
    */
   public LockssAuRepositoryImpl(
-      ArchivalUnit au, JcrHelperRepository jhr) 
+      ArchivalUnit au, JcrRepositoryHelper jhr) 
       throws LockssRepositoryException {
-    Node node;
+    JcrRepositoryHelperFactory jrhf;
+    Node node;    
+    
     
     // Store some variables
-    m_jhrf = JcrHelperRepositoryFactory.constructor();
-
-    if (!m_jhrf.isPreconstructed()) {
-      logger.error("You must call JcrHelperRepositoryFactory.preconstructor before you call this routine.");
-      throw new LockssRepositoryException("JcrHelperRepositoryFactory.preconstructor has not been called.");
+    if (!JcrRepositoryHelperFactory.isPreconstructed()) {
+      logger.error("You must call JcrRepositoryHelperFactory.preconstructor before you call this routine.");
+      throw new LockssRepositoryException("JcrRepositoryHelperFactory.preconstructor has not been called.");
     }
     
+    jrhf = JcrRepositoryHelperFactory.getSingleton();
+
     m_au = au;
        
     try {
@@ -127,7 +128,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       if (m_jhr != null) {
         m_jhr = jhr;
       } else {  // Probably called by the one-argument constructor
-        m_jhr = m_jhrf.chooseHelperRepository();
+        m_jhr = jrhf.chooseHelperRepository();
       }
             
       node = m_jhr.getRootNode();
@@ -244,6 +245,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     // These restrictions make for slightly weird code...
     String[] arstrPath;
     int i;
+    JcrRepositoryHelperFactory jrhf;
     RepositoryNodeImpl rniHost;
     RepositoryNodeImpl rniNode;
     RepositoryNodeImpl rniPath;
@@ -264,8 +266,9 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
         rniNode = createRepositoryNode(strUrl);
         // Create the base node.
         try {
+          jrhf = JcrRepositoryHelperFactory.getSingleton();
           rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), 
-              m_jhr.getRootNode(), m_jhr.getDirectory().toString() + "/" + k_strWarcInitial , m_jhrf.getSizeWarcMax(), strUrl, m_jhrf.getIdentityManager());
+              m_jhr.getRootNode(), m_jhr.getDirectory().toString() + "/" + k_strWarcInitial , jrhf.getSizeWarcMax(), strUrl, jrhf.getIdentityManager());
         } catch (FileNotFoundException e) {
           logger.error("File Not Found Exception: ", e);
           throw new LockssRepositoryException(e);
@@ -875,11 +878,13 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * @throws LockssRepositoryException
    */
   private RepositoryNodeImpl createRepositoryNode(String strUrl) throws LockssRepositoryException {
+    JcrRepositoryHelperFactory jrhf;
     RepositoryNodeImpl rniNode;
     
     try {
+      jrhf = JcrRepositoryHelperFactory.getSingleton();
       rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), m_jhr.getRootNode(),
-          m_jhr.getDirectory().toString(), m_jhrf.getSizeWarcMax(), strUrl,
+          m_jhr.getDirectory().toString(), jrhf.getSizeWarcMax(), strUrl,
           m_jhr.getIdentityManager());
       m_jhr.addRepositoryNode(strUrl, rniNode);
     } catch (FileNotFoundException e) {

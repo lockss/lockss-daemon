@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.2 2009-09-30 00:29:16 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.3 2009-09-30 23:02:32 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -22,89 +22,132 @@
  be used in advertising or otherwise to promote the sale, use or other dealings
  in this Software without prior written authorization from Stanford University.
  */
-
 package org.lockss.repository.jcr;
 
 import java.io.*;
-import java.util.Map;
+import java.util.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.repository.LockssRepositoryException;
 import org.lockss.repository.v2.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import org.lockss.util.PlatformUtil.*;
 
 /**
- * @author Brent E. Edwards
+ * @author edwardsb
  *
- * This class acts as a collection of AU repositories.  
- * 
- * A CollectionOfAuRepositories implementation reads all directories under 
- * the given directory, looking for AUs of its type (either Unix repositories 
- * or JCR repositories.)  It gathers them and all information needed to 
- * generate them, and provides this map to the RepositoryManagerManager.
- * 
- * Each implementation knows how to find its space within the pool (“cache” 
- * or “v2cache” subdir.  Within that space (the collection) there will only 
- * be AUs of its type.
- * 
- * This class is mostly implemented through a JcrHelperRepository.
  */
-public class CollectionOfAuRepositoriesImpl implements
-    CollectionOfAuRepositories {
+public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositories {
 
-  // Private static variables
+  // Constants
+  static private final String k_DIRECTORY_DATASTORE = "/org/lockss/repository/jcr/DatastoreFiles/";
+  static public final String k_FILENAME_DATASTORE = "LargeDatastore.xml";
+
+  // Static variables
   private static Logger logger = Logger.getLogger("CollectionOfAuRepositoriesImpl");
 
-  // Class variables
-  private JcrHelperRepository m_jhr;
+  // Member variables
+  private File m_dirSource;
   
-  public CollectionOfAuRepositoriesImpl(String strKey, File dirSource) throws LockssRepositoryException {
-    JcrHelperRepositoryFactory jhrf;
-    
-    // I'm making the need to call JcrHelperRepositoryFactory.preconstructor 
-    // explicit.
-    if (! JcrHelperRepositoryFactory.isPreconstructed()) {
-      logger.error("Call JcrHelperRepositoryFactory.preconstructor before you construct CollectionOfAuRepositoriesImpl.");
-      throw new LockssRepositoryException("Call JcrHelperRepositoryFactory.preconstructor before you construct CollectionOfAuRepositoriesImpl.");
+  /*
+   * Constructor...
+   */
+  public CollectionOfAuRepositoriesImpl(File dirSource) throws LockssRepositoryException {
+    if (!dirSource.exists() || !dirSource.isDirectory()) {
+      logger.error("The source must be a directory.");      
+      throw new LockssRepositoryException("The CollectionOfAuRepositoriesImpl must be created with a directory.");
     }
     
-    jhrf = JcrHelperRepositoryFactory.constructor();
-    
-    m_jhr = jhrf.createHelperRepository(strKey, dirSource);
+    m_dirSource = dirSource;
   }
   
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#generateAuRepository(java.io.File)
    */
   public void generateAuRepository(File dirSource) throws IOException {
-    // TODO Auto-generated method stub
+    InputStream istrDatastore;
+    OutputStream ostrDatastore;
+    
+    // Given a directory, this method will create the necessary files to generate the database...
+    
+    if (!dirSource.exists()) {
+      if (!dirSource.mkdirs()) {
+        logger.error("Could not construct " + dirSource);
+        throw new IOException("Could not construct " + dirSource);
+      }
+    }
 
+    if (!dirSource.isDirectory()) {
+      logger.error(dirSource + " is not a directory.");
+      throw new IOException(dirSource + " is not a directory.");
+    }
+    
+    // Okay.  It's a directory.  Copy the necessary file there.
+    istrDatastore = getClass().getResourceAsStream(k_DIRECTORY_DATASTORE + k_FILENAME_DATASTORE);
+    ostrDatastore = new FileOutputStream(new File(dirSource, k_FILENAME_DATASTORE));
+    StreamUtil.copy(istrDatastore, ostrDatastore);
+    
+    // Does anything else need to be done for the Au Repository?
   }
 
+  
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.CollectionOfAuRepositories#listAuRepositories(java.io.File)
+   */
+  public Map<String, File> listAuRepositories() {
+    // This routine looks for all directories under a given directory with the
+    // k_FILENAME_DATASTORE in them.  The object returned is just the string
+    // for the directory...
+    return recurseDirectories(m_dirSource, new HashMap<String, File>());
+  }
+
+  
+  // A depth-first search for all directories with k_FILENAME_DATASTORE.
+  private Map<String, File> recurseDirectories(File dirCurrent, Map<String, File> mastrfile) {
+    File[] arfileChildren;
+    File fileDatastore;
+    
+    fileDatastore = new File(dirCurrent, k_FILENAME_DATASTORE);
+    if (fileDatastore.exists()) {
+      mastrfile.put(dirCurrent.getName(), fileDatastore);
+    }
+    
+    // Poorly-chosen function name.  It lists files and directories.
+    arfileChildren = dirCurrent.listFiles();
+
+    // *grumble*  The 'for' statement doesn't work correctly with a null variable.
+    if (arfileChildren != null) {
+      for (File fileChild : arfileChildren) {
+        recurseDirectories(fileChild, mastrfile);
+      }
+    }
+    return mastrfile;
+  }
+
+  
+  /**
+   * This method opens an AU in a given directory.
+   * Important note: I assume that the AU is already available, from outside the CollectionOfAuRepositoriesImpl.
+   * 
+   * @throws FileNotFoundException 
+   * 
+   * @see org.lockss.repository.v2.CollectionOfAuRepositories#openAuRepository(java.io.File)
+   */
+  public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation)
+      throws LockssRepositoryException, FileNotFoundException {
+    LockssAuRepository lar;
+    
+    lar = new LockssAuRepositoryImpl(au);
+    return lar;
+  }
+
+  
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#getDF()
    */
   public DF getDF() throws UnsupportedException {
-    // TODO Auto-generated method stub
-    return null;
+    PlatformUtil pu = PlatformUtil.getInstance();
+    
+    return pu.getDF(m_dirSource.getAbsolutePath());
   }
-
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.CollectionOfAuRepositories#listAuRepositories()
-   */
-  public Map<String, File> listAuRepositories() throws IOException {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.CollectionOfAuRepositories#openAuRepository(org.lockss.plugin.ArchivalUnit, java.io.File)
-   */
-  public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation)
-      throws IOException, LockssRepositoryException {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
 }

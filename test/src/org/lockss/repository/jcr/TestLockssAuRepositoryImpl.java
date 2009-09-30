@@ -78,8 +78,8 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   
   // Member variables
   private IdentityManager m_idman;
-  private JcrHelperRepository m_jhr;
-  private JcrHelperRepositoryFactory m_jhrf;
+  private JcrRepositoryHelper m_jhr;
+  private JcrRepositoryHelperFactory m_jhrf;
   private MockLockssDaemon m_ldTest;
   
   /**
@@ -97,7 +97,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     
-    if (!JcrHelperRepositoryFactory.isPreconstructed()) {
+    if (!JcrRepositoryHelperFactory.isPreconstructed()) {
       // Taken from org.lockss.state.TestHistoryRepository
       m_ldTest = getMockLockssDaemon();
       m_ldTest.startDaemon();
@@ -117,12 +117,12 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
       // The following are the peer identities that should be used in tests...
       m_idman.stringToPeerIdentity(k_strPeerID);
        
-      JcrHelperRepositoryFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
+      JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
 
-      m_jhrf = JcrHelperRepositoryFactory.constructor();
+      m_jhrf = JcrRepositoryHelperFactory.getSingleton();
       m_jhr = m_jhrf.createHelperRepository("LockssAuRepositoryImpl", new File(k_strDirectory));    
     } else { // isConstructed
-      m_jhrf = JcrHelperRepositoryFactory.constructor();
+      m_jhrf = JcrRepositoryHelperFactory.getSingleton();
       
       m_ldTest = (MockLockssDaemon) m_jhrf.getLockssDaemon();
       m_idman = m_jhrf.getIdentityManager();
@@ -134,7 +134,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
    * @throws java.lang.Exception
    */
   protected void tearDown() throws Exception {
-    JcrHelperRepositoryFactory.reset();
+    JcrRepositoryHelperFactory.reset();
     
     checkLockFile();
     
@@ -175,7 +175,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     timeEnd = System.currentTimeMillis();
   
     // Removed for an important reason:
-    // The LockssAuRepositoryImpl's creation time is the time that its underlying JcrHelperRepository
+    // The LockssAuRepositoryImpl's creation time is the time that its underlying JcrRepositoryHelper
     // was created.  
 //    if (timeCreation < timeStart) {
 //      fail("Creation time is before the start of this routine: either the AU was not created at this point, or something corrupted the AU's time.");

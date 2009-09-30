@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManager.java,v 1.1.2.2 2009-09-30 00:29:16 edwardsb1 Exp $
+ * $Id: RepositoryManagerManager.java,v 1.1.2.3 2009-09-30 23:02:32 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -47,5 +47,5 @@ public interface RepositoryManagerManager extends ConfigurableManager {
   public DF getDiskFullThreshold();
   public UniqueRefLruCache getGlobalNodeCache();  // Just used by the old repository.
   public void queueSizeCale(ArchivalUnit au, RepositoryNode node);
-  public void doSizeCale(RepositoryNode node);
+  public void doSizeCalc(RepositoryNode node);
 }

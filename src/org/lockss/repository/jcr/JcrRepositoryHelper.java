@@ -1,5 +1,5 @@
 /*
- * $Id: JcrHelperRepository.java,v 1.1.2.1 2009-09-23 02:03:02 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelper.java,v 1.1.2.1 2009-09-30 23:02:32 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -31,6 +31,7 @@ import java.util.*;
 
 import javax.jcr.*;
 
+import org.apache.commons.collections.map.LRUMap;
 import org.apache.jackrabbit.core.RepositoryImpl;
 import org.apache.jackrabbit.core.config.*;
 import org.apache.jackrabbit.core.data.*;
@@ -46,21 +47,22 @@ import org.lockss.util.*;
  *
  * This class represents one repository of JcrHelperPerAu's.
  */
-public class JcrHelperRepository extends BaseLockssDaemonManager {
+public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   // Constants 
   static private final String k_DATASTORE = "LargeDatastore.xml";
-  static private final String k_FILENAME_DATASTORE = "/org/lockss/repository/jcr/DatastoreFiles/LargeDatastore.xml";   
+  static private final String k_FILENAME_DATASTORE = "/org/lockss/repository/jcr/DatastoreFiles/LargeDatastore.xml";
+  static private final int k_LRUSize = 20;
   static private final String k_PASSWORD = "password";
   static protected final String k_SIZE_WARC_MAX = "SizeWarcMax";
   static protected final String k_USERNAME = "user";
 
   // Static variables
-  static private Logger logger = Logger.getLogger("JcrHelperRepository.java");
+  static private Logger logger = Logger.getLogger("JcrRepositoryHelper.java");
   
   // Class Variables
   private File m_directory;
   private IdentityManager m_idman;
-  private Map<String, RepositoryNode> m_mapstrrn = new HashMap<String, RepositoryNode> ();
+  private LRUMap m_mapstrrnCache = new LRUMap (k_LRUSize);
   private Node m_nodeRoot;
   private RepositoryConfig m_repconfig;
   private RepositoryImpl m_repos;
@@ -68,7 +70,7 @@ public class JcrHelperRepository extends BaseLockssDaemonManager {
   private long m_sizeWarcMax;
   
   // Constructor...
-  JcrHelperRepository(
+  JcrRepositoryHelper(
       File directory, 
       long sizeWarcMax, 
       IdentityManager idman,
@@ -136,12 +138,12 @@ public class JcrHelperRepository extends BaseLockssDaemonManager {
   // I assume that the repository node is part of the repository here.
   public void addRepositoryNode(String key, RepositoryNode rnAdd) throws LockssRepositoryException
   { 
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jrhf;
     
-    m_mapstrrn.put(key, rnAdd);
+    m_mapstrrnCache.put(key, rnAdd);
     
-    jhrf = JcrHelperRepositoryFactory.constructor();
-    jhrf.addHelperRepository(key, this);
+    jrhf = JcrRepositoryHelperFactory.getSingleton();
+    jrhf.addHelperRepository(key, this);
   }
   
   public File getDirectory() {
@@ -160,10 +162,10 @@ public class JcrHelperRepository extends BaseLockssDaemonManager {
   // 
   
   public RepositoryNode getRepositoryNode(String key) throws LockssRepositoryException {
-    JcrHelperRepositoryFactory jhrf;
+    JcrRepositoryHelperFactory jrhf;
     RepositoryNode rnReturn;
     
-    rnReturn = m_mapstrrn.get(key);
+    rnReturn = (RepositoryNode) m_mapstrrnCache.get(key);
     
     if (rnReturn != null) {
       return rnReturn;
@@ -172,12 +174,12 @@ public class JcrHelperRepository extends BaseLockssDaemonManager {
     // Get it from the repository (which will construct the node
     // if necessary.
     
-    jhrf = JcrHelperRepositoryFactory.constructor();
+    jrhf = JcrRepositoryHelperFactory.getSingleton();
     
     rnReturn = RepositoryNodeImpl.constructor(m_session, m_nodeRoot, m_idman);
     
     if (rnReturn != null) {
-      m_mapstrrn.put(key, rnReturn);
+      m_mapstrrnCache.put(key, rnReturn);
     }
     
     return rnReturn;
@@ -198,7 +200,7 @@ public class JcrHelperRepository extends BaseLockssDaemonManager {
   public void moveRepository(String strAuId, String stemNew) throws LockssRepositoryException {
     RepositoryNode rn;
     
-    rn = m_mapstrrn.get(strAuId);
+    rn = (RepositoryNode) m_mapstrrnCache.get(strAuId);
     
     if (rn != null) {
         rn.move(stemNew);
@@ -209,7 +211,7 @@ public class JcrHelperRepository extends BaseLockssDaemonManager {
   }
   
   // This method is used for testing.
-  public void reset() {
+  void reset() {
     DataStore ds;
     
     if (m_repos != null) {

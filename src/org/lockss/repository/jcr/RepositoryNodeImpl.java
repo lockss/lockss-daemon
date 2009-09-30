@@ -483,6 +483,11 @@ RepositoryNode  {
     return liphReturn;
   }
   
+  // Used by RepositoryManagerManager.
+  protected String getStemFile() {
+    return m_stemFile;
+  }
+  
   public long getTreeContentSize(CachedUrlSetSpec filter,
       boolean calcIfUnknown /*
                              * , boolean mostRecentOnly = true */) 
