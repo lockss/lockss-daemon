@@ -17,8 +17,8 @@
     
     param[journal_code] = an
     
-    au < manifest ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
-    au < manifest ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+    au < wanted ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < wanted ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
   
   }
 
@@ -86,8 +86,8 @@
     
     param[journal_code] = cc
     
-    au < manifest ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
-    au < manifest ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
+    au < wanted ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
+    au < wanted ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
   
   }
 
