@@ -4518,6 +4518,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Oxford Review of Economic Policy Volume 21 ; 21 >
         au < HighWirePressPlugin ; doNotProcess ; Oxford Review of Economic Policy Volume 22 ; 22 >
+        au < HighWirePressPlugin ; testing ; Oxford Review of Economic Policy Volume 23 ; 23 >
+        au < HighWirePressPlugin ; testing ; Oxford Review of Economic Policy Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; Oxford Review of Economic Policy Volume 25 ; 25 >
 
       }
 
@@ -4547,6 +4550,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Parliamentary Affairs Volume 58 ; 58 >
         au < HighWirePressPlugin ; doNotProcess ; Parliamentary Affairs Volume 59 ; 59 >
         au < HighWireStrVolPlugin ; released ; Parliamentary Affairs Volume 60 ; 60 >
+        au < HighWirePressPlugin ; testing ; Parliamentary Affairs Volume 61 ; 61 >
+        au < HighWirePressPlugin ; testing ; Parliamentary Affairs Volume 62 ; 62 >
 
       }
 
@@ -4581,16 +4586,16 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; ready ; Past & Present Volume 191 ; 191 >
         au < HighWireStrVolPlugin ; ready ; Past & Present Volume 192 ; 192 >
         au < HighWireStrVolPlugin ; ready ; Past & Present Volume 193 ; 193 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 194 ; 194 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 195 ; 195 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 196 ; 196 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 197 ; 197 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 198 ; 198 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 199 ; 199 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 200 ; 200 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 201 ; 201 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 202 ; 202 >
-        au < HighWireStrVolPlugin ; wanted ; Past & Present Volume 203 ; 203 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 194 ; 194 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 195 ; 195 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 196 ; 196 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 197 ; 197 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 198 ; 198 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 199 ; 199 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 200 ; 200 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 201 ; 201 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 202 ; 202 >
+        au < HighWirePressPlugin ; ready ; Past & Present Volume 203 ; 203 >
 
       }
 

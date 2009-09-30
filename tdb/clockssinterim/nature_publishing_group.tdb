@@ -198,4 +198,27 @@
 
   }
 
+  {
+
+    title <
+      name = Nature Chemical Biology
+    >
+
+    param[journal_id] = nchembio
+
+    au < ready ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Chemistry
+    >
+
+    param[journal_id] = nchem
+
+    au < ready ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+
+  }
 }

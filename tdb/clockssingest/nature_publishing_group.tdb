@@ -16,7 +16,7 @@
 
     param[journal_id] = aps
 
-    au < wanted ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
+    au < testing ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
@@ -556,8 +556,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nchembio
 
-    au < wanted ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
-    au < testing ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+    au < testing ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
+    au < ready ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -569,7 +569,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nchem
 
-    au < testing ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+    au < ready ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
 
