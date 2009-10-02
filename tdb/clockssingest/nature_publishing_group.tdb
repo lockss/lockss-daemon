@@ -16,7 +16,7 @@
 
     param[journal_id] = aps
 
-    au < testing ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
+    au < notReady ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
@@ -49,7 +49,7 @@
 
     param[journal_id] = aja
 
-    au < wanted ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
+    au < testing ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
 
   }
@@ -62,7 +62,7 @@
 
     param[journal_id] = bmt
 
-    au < wanted ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
+    au < testing ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
     au < wanted ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < testing ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
@@ -543,7 +543,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ncb
 
-    au < testing ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
+    au < ready ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < ready ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
 
   }
@@ -556,7 +556,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nchembio
 
-    au < testing ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
+    au < ready ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
     au < ready ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
 
   }

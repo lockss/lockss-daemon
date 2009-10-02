@@ -1,0 +1,81 @@
+{
+
+  publisher <
+    name = Oxford University Press
+  >
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+
+  {
+
+    title <
+      name = Oxford Economic Papers
+    >
+
+    param[base_url] = http://oep.oxfordjournals.org/
+
+    au < tested ; 2008 ; Oxford Economic Papers Volume 60 ; 60 >
+    au < tested ; 2009 ; Oxford Economic Papers Volume 61 ; 61 >
+
+  }
+
+  {
+
+    title <
+      name = Oxford Journal of Legal Studies
+    >
+
+    param[base_url] = http://ojls.oxfordjournals.org/
+
+    au < tested ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 >
+    au < tested ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 >
+
+  }
+
+  {
+
+    title <
+      name = Oxford Review of Economic Policy
+    >
+
+    param[base_url] = http://oxrep.oxfordjournals.org/
+
+    au < tested ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 >
+    au < tested ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 >
+
+  }
+
+  {
+
+    title <
+      name = Parliamentary Affairs
+    >
+
+    param[base_url] = http://pa.oxfordjournals.org/
+
+    au < tested ; 2008 ; Parliamentary Affairs Volume 61 ; 61 >
+    au < tested ; 2009 ; Parliamentary Affairs Volume 62 ; 62 >
+
+  }
+
+  {
+
+    title <
+      name = Past & Present
+    >
+
+    param[base_url] = http://past.oxfordjournals.org/
+
+    au < tested ; 2008 ; Past & Present Volume 198 ; 198 >
+    au < tested ; 2008 ; Past & Present Volume 199 ; 199 >
+    au < tested ; 2008 ; Past & Present Volume 200 ; 200 >
+    au < tested ; 2008 ; Past & Present Volume 201 ; 201 >
+    au < tested ; 2009 ; Past & Present Volume 202 ; 202 >
+    au < tested ; 2009 ; Past & Present Volume 203 ; 203 >
+
+  }
+
+
+}
