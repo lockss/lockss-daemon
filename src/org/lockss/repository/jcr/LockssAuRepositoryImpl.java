@@ -61,15 +61,6 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   private static final String k_propPeerId = "PeerId";
   private static final String k_strWarcInitial = "WARC";  // The string that appears before the numbers designating which WARC file to create.
       
-  /**
-   * Taken from RepositoryManager.
-   */
-  public static final float DEFAULT_SIZE_CALC_MAX_LOAD = 0.5F;
-  private static final String PRIORITY_PARAM_SIZE_CALC = "SizeCalc";
-  private static final int PRIORITY_DEFAULT_SIZE_CALC = Thread.NORM_PRIORITY - 1;
-  private static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
-  private static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
-
   // Static variables
   private static Logger logger = Logger.getLogger("LockssAuRepositoryImpl");
   protected static ObjectSerializer sm_xssTransformer = 
@@ -78,10 +69,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   // Variables
   private ArchivalUnit m_au;
   private DatedPeerIdSet m_dpisNoAu;
-  private JcrRepositoryHelper m_jhr;
-  private BinarySemaphore m_sizeCalcSem = new BinarySemaphore();
-  private SizeCalcThread m_sizeCalcThread;
-  private float m_sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
+  private JcrRepositoryHelper m_jrh;
 
   /**
    * You must call JcrRepositoryHelperFactory.preconstructor()
@@ -97,17 +85,17 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
    
   /**
-   * Important note: If jhr is the special value 'null', then the code picks a random
+   * Important note: If jrh is the special value 'null', then the code picks a random
    * helper repository.  It would be far better if the one-operator constructor could call 
    * LockssRepositoryImpl(au, m_jrhf.chooseHelperRepository()) -- but m_jrhf isn't 
    * initialized when the one-argument constructor is created.
    * 
    * @param au
-   * @param jhr
+   * @param jrh
    * @throws LockssRepositoryException
    */
   public LockssAuRepositoryImpl(
-      ArchivalUnit au, JcrRepositoryHelper jhr) 
+      ArchivalUnit au, JcrRepositoryHelper jrh) 
       throws LockssRepositoryException {
     JcrRepositoryHelperFactory jrhf;
     Node node;    
@@ -125,13 +113,13 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
        
     try {
       // Put the LockssAuRepositoryImpl into an appropriate helper repository.
-      if (m_jhr != null) {
-        m_jhr = jhr;
+      if (m_jrh != null) {
+        m_jrh = jrh;
       } else {  // Probably called by the one-argument constructor
-        m_jhr = jrhf.chooseHelperRepository();
+        m_jrh = jrhf.chooseHelperRepository();
       }
             
-      node = m_jhr.getRootNode();
+      node = m_jrh.getRootNode();
       if (!node.hasProperty(k_propCreationTime)) {
         // Run the constructor.
         constructNewAu();
@@ -162,7 +150,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       // Set the creation time.
       lCreationTime = System.currentTimeMillis();
       
-      node = m_jhr.getRootNode();
+      node = m_jrh.getRootNode();
       node.setProperty(k_propCreationTime, lCreationTime);      
       node.save();
       node.refresh(true);
@@ -185,7 +173,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
 
     try {
       strAuId = m_au.getAuId();
-      node = m_jhr.getRootNode();
+      node = m_jrh.getRootNode();
       
       if (node.hasProperty(k_propCreationTime)) {
         propCreationTime = node.getProperty(k_propCreationTime);
@@ -259,7 +247,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     sbUrlConstructed = new StringBuilder();
     
     // Retrieve the base node.
-    rniNode = (RepositoryNodeImpl) m_jhr.getRepositoryNode(strUrl); 
+    rniNode = (RepositoryNodeImpl) m_jrh.getRepositoryNode(strUrl); 
     
     if (rniNode == null) {
       if (create) {
@@ -267,8 +255,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
         // Create the base node.
         try {
           jrhf = JcrRepositoryHelperFactory.getSingleton();
-          rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), 
-              m_jhr.getRootNode(), m_jhr.getDirectory().toString() + "/" + k_strWarcInitial , jrhf.getSizeWarcMax(), strUrl, jrhf.getIdentityManager());
+          rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jrh.getSession(), 
+              m_jrh.getRootNode(), m_jrh.getDirectory().toString() + "/" + k_strWarcInitial , jrhf.getSizeWarcMax(), strUrl, jrhf.getIdentityManager());
         } catch (FileNotFoundException e) {
           logger.error("File Not Found Exception: ", e);
           throw new LockssRepositoryException(e);
@@ -387,8 +375,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     StreamerJcr strjcr;
     
     if (m_dpisNoAu == null) {
-      idman = m_jhr.getIdentityManager();
-      strjcr = new StreamerJcr(k_propPeerId, m_jhr.getRootNode());
+      idman = m_jrh.getIdentityManager();
+      strjcr = new StreamerJcr(k_propPeerId, m_jrh.getRootNode());
       m_dpisNoAu = new DatedPeerIdSetImpl(strjcr, idman);
     }
     
@@ -431,7 +419,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     sbUrlConstructed = new StringBuilder();
     
     // Construct the base node. 
-    rniNode = (RepositoryNodeImpl) m_jhr.getRepositoryNode(m_au.getAuId()); 
+    rniNode = (RepositoryNodeImpl) m_jrh.getRepositoryNode(m_au.getAuId()); 
     
     if (rniNode == null) {
       if (create) {
@@ -510,7 +498,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   public boolean hasNoAuPeerSet() {
     Node nodeRoot;
     try {
-      nodeRoot = m_jhr.getRootNode();
+      nodeRoot = m_jrh.getRootNode();
       return nodeRoot.hasProperty(k_propPeerId);
     } catch (RepositoryException e) {
       logger.error("hasNoAuPeerSet: RepositoryException: ", e);
@@ -631,13 +619,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.RepositoryNode)
    * @param node
    */
-  private Set<RepositoryNode> m_sizeCalcQueue = new HashSet<RepositoryNode>();
 
   public void queueSizeCalc(RepositoryNode rn) {
-    synchronized (m_sizeCalcQueue) {
-      if (m_sizeCalcQueue.add(rn)) {
+    synchronized (m_jrh.m_sizeCalcQueue) {
+      if (m_jrh.m_sizeCalcQueue.add(rn)) {
         logger.debug2("Queue size calc: " + rn);
-        startOrKickThread();
+        m_jrh.startOrKickThread();
       }
     }
   }
@@ -764,7 +751,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   public long getRepoDiskUsage(boolean calcIfUnknown) throws LockssRepositoryException {
     RepositoryNode rn;
     
-    rn = m_jhr.getRepositoryNode(m_au.getAuId());
+    rn = m_jrh.getRepositoryNode(m_au.getAuId());
     
     if (rn == null) {
       rn = createRepositoryNode(m_au.getAuId());
@@ -883,10 +870,10 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     
     try {
       jrhf = JcrRepositoryHelperFactory.getSingleton();
-      rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jhr.getSession(), m_jhr.getRootNode(),
-          m_jhr.getDirectory().toString(), jrhf.getSizeWarcMax(), strUrl,
-          m_jhr.getIdentityManager());
-      m_jhr.addRepositoryNode(strUrl, rniNode);
+      rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jrh.getSession(), m_jrh.getRootNode(),
+          m_jrh.getDirectory().toString(), jrhf.getSizeWarcMax(), strUrl,
+          m_jrh.getIdentityManager());
+      m_jrh.addRepositoryNode(strUrl, rniNode);
     } catch (FileNotFoundException e) {
       logger.error("In getNode", e);
       throw new LockssRepositoryException(e);
@@ -900,7 +887,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     Node nodeRoot;
     Property propReturn;
     
-    nodeRoot = m_jhr.getRootNode();
+    nodeRoot = m_jrh.getRootNode();
     
     try {
       if (nodeRoot.hasProperty(prop)) {
@@ -946,8 +933,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
     
     try {
-      node = m_jhr.getRootNode();
-      session = m_jhr.getSession();
+      node = m_jrh.getRootNode();
+      session = m_jrh.getSession();
       
       baisAuState = new ByteArrayInputStream(arbyAuState);    
       node.setProperty(prop, baisAuState);
@@ -985,8 +972,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
 
     try {
-      node = m_jhr.getRootNode();
-      session = m_jhr.getSession();
+      node = m_jrh.getRootNode();
+      session = m_jrh.getSession();
 
       baisAuState = new ByteArrayInputStream(arbyAuState);    
       node.setProperty(prop, baisAuState);
@@ -1007,7 +994,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       throws LockssRepositoryException {
     Node nodeRoot;
     
-    nodeRoot = m_jhr.getRootNode();
+    nodeRoot = m_jrh.getRootNode();
     
     try {
       nodeRoot.setProperty(prop, istr);
@@ -1017,25 +1004,6 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
   
-  private void startOrKickThread() {
-    if (m_sizeCalcThread == null) {
-      logger.debug2("Starting thread");
-      m_sizeCalcThread = new SizeCalcThread();
-      m_sizeCalcThread.start();
-      m_sizeCalcThread.waitRunning();
-    }
-    
-    m_sizeCalcSem.give();
-  }
-  
-  void stopThread() {
-    if (m_sizeCalcThread != null) {
-      logger.debug2("Stopping thread");
-      m_sizeCalcThread.stopSizeCalc();
-      m_sizeCalcThread = null;
-    }
-  }
-
   void doSizeCalc(RepositoryNode node) {
     try {
       node.getTreeContentSize(null, true);
@@ -1045,10 +1013,6 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     } catch (LockssRepositoryException e) {
       logger.debug("doSizeCalc: LockssRepositoryException: ", e);
     }
-  }
-
-  long sleepTimeToAchieveLoad(long runDuration, float maxLoad) {
-    return Math.round(((double)runDuration / maxLoad) - runDuration);
   }
 
 
@@ -1081,92 +1045,6 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
   
   
-  private class SizeCalcThread extends LockssThread {
-    private volatile boolean goOn = true;
-    
-    protected SizeCalcThread() {
-      super("LockssAuRepositoryImpl.SizeCalcThread");
-    }
-
-    @Override
-    protected void lockssRun() {
-      long dur;
-      RepositoryNode node;
-      long start;
-      
-      setPriority(PRIORITY_PARAM_SIZE_CALC, PRIORITY_DEFAULT_SIZE_CALC);
-      startWDog(WDOG_PARAM_SIZE_CALC, WDOG_DEFAULT_SIZE_CALC);
-      triggerWDogOnExit(true);
-      nowRunning();
-
-      while (goOn) {
-        try {
-          pokeWDog();
-          
-          // Important note: the original RepositoryManager
-          // has 'if m_sizeCalcQueue.isEmpty'.  I changed it to
-          // 'while', because I cannot be certain that we'll have
-          // something in the queue, even an hour from now.
-          
-          while (m_sizeCalcQueue.isEmpty()) {
-            Deadline timeout = Deadline.in(Constants.HOUR);
-            m_sizeCalcSem.take(timeout);
-          }
-
-          synchronized (m_sizeCalcQueue) {
-            node = (RepositoryNode)CollectionUtil.getAnElement(m_sizeCalcQueue);
-          }
-          
-          // The original RepositoryManager tests whether the
-          // node is null.  This node should never be null;
-          // it should only leave the above 'while' loop when
-          // m_sizeCalcQueue is not empty.  
-          
-          // However, I often test for even 'impossible' conditions.
-          if (node != null) {
-            start = TimeBase.nowMs();
-            logger.debug2("CalcSize start: " + node);
-            dur = 0;
-            
-            node.getTreeContentSize(null, true);
-            
-            dur = TimeBase.nowMs() - start;
-            logger.debug2("CalcSize finish (" +
-                       StringUtil.timeIntervalToString(dur) + "): " + node);
-
-            synchronized (m_sizeCalcQueue) {
-              m_sizeCalcQueue.remove(node);
-            }
-            
-            pokeWDog();
-            
-            // This delay is, according to another programmer, intentional.
-            // At this time, the priority of Java threads is tenuous. 
-            // For now, instead of lowering the thread's priority, we force
-            // a sleep.
-            long sleep = sleepTimeToAchieveLoad(dur, m_sizeCalcMaxLoad);
-            Deadline.in(sleep).sleep();
-          } else {
-            logger.debug3("SizeCalcThread.lockssRun: even though " +
-                    "m_sizeCalcQueue was not empty, getting an element still " +
-                    "returned a null.  Please investigate.");
-          }
-          
-        } catch (InterruptedException e) {
-          // The original code just wakes up and checks for the exit
-          // (ie: whether goOn has been reset.)
-        } catch (LockssRepositoryException e) {
-          logger.error("queueSizeCalc", e);
-        }
-      }
-      
-    }
-    
-    protected void stopSizeCalc() {
-      goOn = false;
-      interrupt();
-    }
-  }
 
 
 }
