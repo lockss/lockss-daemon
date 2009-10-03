@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrCollection.java,v 1.1.2.4 2009-09-30 23:02:32 edwardsb1 Exp $
+ * $Id: TestJcrCollection.java,v 1.1.2.5 2009-10-03 01:49:12 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -97,7 +97,7 @@ public class TestJcrCollection extends LockssTestCase {
       m_idman = jhrf.getIdentityManager();
     }
     
-    jhrf.createHelperRepository("TestJcrCollection", new File("TestJcrCollection"));
+    jhrf.createRepositoryHelper("TestJcrCollection", new File("TestJcrCollection"));
   }
 
   /* (non-Javadoc)

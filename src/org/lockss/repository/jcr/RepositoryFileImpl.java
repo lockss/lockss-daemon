@@ -1,6 +1,6 @@
 /**
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -104,12 +104,26 @@ RepositoryFile {
   private long m_sizePreferred;  // -1 means no stored size.
   private long m_sizeTotal;      // -1 means no stored size.
   
-  // Constructor
-  // This constructor allows the user to set a new fileContent.
-  
-  // IMPORTANT: fileContent is ASSUMED to have a writable directory.
-  // This condition -=>must<=- be tested further up the chain.
-  
+  /**
+   * This constructor creates a new fileContent.
+   * IMPORTANT: fileContent is ASSUMED to have a writable directory.
+   * This condition -=>must<=- be tested further up the chain.
+   * 
+   * **** TODO: Get session, sizeWarcMax, and idman from 
+   * <code>JcrRepositoryHelperFactory</code>
+   * 
+   * @param session        The session for the JCR session 
+   * @param node           The current node in the JCR session
+   * @param stemFile       The base that all WARC files should have.
+   * For example, '/lockss/a/jcr/file' would create WARC files
+   * '/lockss/a/jcr/file00001.warc', '/lockss/a/jcr/file00002.warc', etc.
+   * @param sizeWarcMax    How many bytes per WARC file
+   * @param url            The URL for this file
+   * @param idman          The Lockss Identity Manager
+   * @throws LockssRepositoryException
+   * @throws FileNotFoundException
+   */
+
   protected RepositoryFileImpl(Session session, Node node, String stemFile,
       long sizeWarcMax, String url, IdentityManager idman)
       throws LockssRepositoryException, FileNotFoundException {
@@ -132,9 +146,16 @@ RepositoryFile {
     
   }
 
-  
-  // This constructor assumes that the file already has the fileContent
-  // installed.
+  /**
+   * This constructor assumes that the file already has the fileContent
+   * installed.
+   *
+   * @param session
+   * @param node
+   * @param idman
+   * @throws NoUrlException
+   * @throws LockssRepositoryException
+   */
   protected RepositoryFileImpl(Session session, Node node, 
       IdentityManager idman) 
       throws NoUrlException, LockssRepositoryException {

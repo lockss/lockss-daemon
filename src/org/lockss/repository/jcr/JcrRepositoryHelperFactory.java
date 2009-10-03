@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.1 2009-09-30 23:02:32 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.2 2009-10-03 01:49:13 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -37,7 +37,7 @@ import org.lockss.util.Logger;
  * This class is a singleton.  It creates JcrHelperRepositories, and it returns the
  * ones that are already around.
  * 
- * @author edwardsb
+ * @author Brent E. Edwards
  *
  */
 public class JcrRepositoryHelperFactory {
@@ -50,20 +50,37 @@ public class JcrRepositoryHelperFactory {
 
   // Class variables
   private IdentityManager m_idman;
-  private int m_indexNextHelperRepository = 0;
+  private int m_indexNextRepositoryHelper = 0;
   private LockssDaemon m_ld;
   // Only one copy of each JcrRepositoryHelper, please...
   private Map<String /* Directory */, JcrRepositoryHelper> m_mapdirjhr = new HashMap<String, JcrRepositoryHelper>();
   private long m_sizeWarcMax;
   
+  /**
+   * The constructor.  JcrRepositoryHelperFactory is a singleton, so this 
+   * method should only be called by the preconstructor. 
+   * 
+   * @param sizeWarcMax  How many characters per WARC file?
+   * @param idman        The identity of a LOCKSS cache
+   * @param ld           The daemon
+   */
   private JcrRepositoryHelperFactory(long sizeWarcMax, IdentityManager idman, LockssDaemon ld) {
     m_sizeWarcMax = sizeWarcMax;
     m_idman = idman;
     m_ld = ld;
   }
   
-  // Any suggested names for this method?  It must be called before the call
-  // to getSingleton.
+  /**
+   * Call this method exactly once before calling <code>getSingleton</code>
+   *
+   * Any suggested names for this method?  It must be called before the call
+   * to getSingleton.
+   * 
+   * @param sizeWarcMax   How many characters per WARC file?
+   * @param idman         The identity of a LOCKSS cache
+   * @param ld            The daemon
+   * @throws LockssRepositoryException
+   */
   
   public static void preconstructor(long sizeWarcMax, IdentityManager idman, LockssDaemon ld) 
   throws LockssRepositoryException {
@@ -75,12 +92,22 @@ public class JcrRepositoryHelperFactory {
     }
   }
   
-  
+  /**
+   * Has the method <code>preconstructor</code> been called?
+   * 
+   * @return Whether the method <code>preconstructor</code> has been called.
+   */
   public static boolean isPreconstructed() {
     return sm_jrhf != null;
   }
   
   
+  /**
+   * How other methods can get a copy of the JcrRepositoryHelperFactory.
+   * 
+   * @return The singleton for this class.
+   * @throws LockssRepositoryException
+   */
   public static JcrRepositoryHelperFactory getSingleton() throws LockssRepositoryException {
     if (sm_jrhf != null) {
       return sm_jrhf;
@@ -90,8 +117,14 @@ public class JcrRepositoryHelperFactory {
     throw new LockssRepositoryException("Call preconstructor before you get the singleton.");
   }
   
-  
-  public void addHelperRepository(String strKey, JcrRepositoryHelper jhr) 
+  /**
+   * Add one repository helper to this JRHF.
+   * 
+   * @param strKey How to re-find the helper repository
+   * @param jhr    The helper repository to add.
+   * @throws LockssRepositoryException
+   */
+  public void addRepositoryHelper(String strKey, JcrRepositoryHelper jhr) 
   throws LockssRepositoryException {
     if (m_mapdirjhr.containsKey(strKey)) {
       logger.error("Duplicate helper repository name.");
@@ -107,11 +140,14 @@ public class JcrRepositoryHelperFactory {
   }
   
   
-  /* This method chooses a helper repository, for when you have no preference which one to use. 
+  /**
+   * This method chooses a helper repository, for when you have no preference which one to use. 
    * 
    * This is a simple round-robin method to choose a helper repository. 
-   * */
-  public JcrRepositoryHelper chooseHelperRepository() throws LockssRepositoryException {
+   * 
+   * @return An arbitrary JcrRepositoryHelper.
+   */
+  public JcrRepositoryHelper chooseRepositoryHelper() throws LockssRepositoryException {
     Collection<JcrRepositoryHelper> coljhrValues;
     JcrRepositoryHelper[] arjhrValues = new JcrRepositoryHelper[1];
     JcrRepositoryHelper jhrReturn;
@@ -124,18 +160,25 @@ public class JcrRepositoryHelperFactory {
       throw new LockssRepositoryException("There are no JcrHelperRepositories to choose from.");
     }
     
-    if (m_indexNextHelperRepository >= arjhrValues.length) {
-      m_indexNextHelperRepository = m_indexNextHelperRepository % arjhrValues.length;
+    if (m_indexNextRepositoryHelper >= arjhrValues.length) {
+      m_indexNextRepositoryHelper = m_indexNextRepositoryHelper % arjhrValues.length;
     }
     
-    jhrReturn = arjhrValues[m_indexNextHelperRepository];
-    m_indexNextHelperRepository++;
+    jhrReturn = arjhrValues[m_indexNextRepositoryHelper];
+    m_indexNextRepositoryHelper++;
     
     return jhrReturn;
   }
   
-
-  public JcrRepositoryHelper createHelperRepository(String strKey, File directory)
+  /**
+   * Just create a new repository helper in a given directory.
+   * 
+   * @param strKey
+   * @param directory
+   * @return
+   * @throws LockssRepositoryException
+   */
+  public JcrRepositoryHelper createRepositoryHelper(String strKey, File directory)
   throws LockssRepositoryException {
     JcrRepositoryHelper jhr;
     
@@ -156,29 +199,44 @@ public class JcrRepositoryHelperFactory {
   }
   
   
-  // IMPORTANT NOTE: This method does not create new helper repositories.
-  // (An earlier version of this method did.)
-  // However, given a helper repository that it does not know, it will choose and save a
-  // currently-available one.
-  // You will need to create helper repositories as part of the construction.
+  /**
+   * Retrieve a repository helper by a previously-known name.
+   * 
+   * This method does not create new helper repositories.
+   * However, given a helper repository that it does not know, it will choose and save a
+   * currently-available one.
+   * 
+   * *** BUG: This method does not work across executions -- it does not save the
+   * <code>m_mapdirjhr</code>.
+   * 
+   * @param nameRepositoryHelper
+   * @return
+   * @throws LockssRepositoryException
+   */
   
-  public JcrRepositoryHelper getHelperRepository(String nameHelperRepository) throws LockssRepositoryException {
+  public JcrRepositoryHelper getRepositoryHelper(String nameRepositoryHelper) throws LockssRepositoryException {
     JcrRepositoryHelper jhr;
     
-    jhr = m_mapdirjhr.get(nameHelperRepository);
+    jhr = m_mapdirjhr.get(nameRepositoryHelper);
     
     if (jhr != null) {
       return jhr;
     }
 
-    jhr = chooseHelperRepository();
-    m_mapdirjhr.put(nameHelperRepository, jhr);
+    jhr = chooseRepositoryHelper();
+    m_mapdirjhr.put(nameRepositoryHelper, jhr);
     
     return jhr;
   } 
   
-  // Note: This method returns 'null' if no helper repository is found.
-  public JcrRepositoryHelper getHelperRepositoryByDirectory(File dirLocation) {
+
+  /**
+   * Return a JcrRepositoryHelper based on its directory.
+   * 
+   * @param dirLocation
+   * @return The JcrRepositoryHelper from <code>dirLocation</code>
+   */
+  public JcrRepositoryHelper getRepositoryHelperByDirectory(File dirLocation) {
     Collection<JcrRepositoryHelper> colljhr;
     JcrRepositoryHelper jhrReturn = null;
     
@@ -203,21 +261,38 @@ public class JcrRepositoryHelperFactory {
     return jhrReturn;
   }
   
-  
+  /**
+   * The identity manager for this Repository Helper Factory.
+   * 
+   * @return The identity manager from the constructor.
+   */
   public IdentityManager getIdentityManager() {
     return m_idman;
   }
   
-  
+  /**
+   * The Lockss daemon for this Repository Helper Factory.
+   * 
+   * @return The Lockss daemon from the constructor.
+   */
   public LockssDaemon getLockssDaemon() {
     return m_ld;
   }
   
-  
+  /**
+   * The maximum size of a WARC file.
+   * 
+   * @return The maximum WARC size.
+   */
   public long getSizeWarcMax() {
     return m_sizeWarcMax;
   }
   
+  /**
+   * This method should only be used in testing; it clears the
+   * variables in the factory.
+   * 
+   */
   static void reset() {
     Collection<JcrRepositoryHelper> colljhr;
     Set<JcrRepositoryHelper> setjhr;

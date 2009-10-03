@@ -1,6 +1,6 @@
 /**
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +36,11 @@ import org.lockss.repository.v2.*;
 import org.lockss.util.*;
 
 /**
- * @author edwardsb
- *
  * This class exists only to supply common, useful methods
  * and common constants.
+ *
+ * @author edwardsb
+ *
  */
 public abstract class JcrRepositoryBase {
   // Constants  
@@ -56,14 +57,24 @@ public abstract class JcrRepositoryBase {
     new StringObjectTransformer();
   
   // Member variables
-  protected IdentityManager m_idman;
+  protected IdentityManager m_idman;    // TODO: Remove.  Use the one in JcrRepositoryHelperFactory
   protected Node m_node;
-  protected Session m_session;
-  protected long m_sizeWarcMax;
+  protected Session m_session;          
+  protected long m_sizeWarcMax;         // TODO: Remove.  Use the one in JcrRepositoryHelperFactory
   protected String m_stemFile;  // The filename, without the 5-digit suffix.
   protected String m_url;
 
-
+  /**
+   * This constructor creates a new JcrRepositoryBase.
+   * 
+   * @param session            The current JCR session
+   * @param node               The JCR node that contains the database portion
+   * @param stemFile           The location to put .WARC files
+   * @param sizeWarcMax        How large a .WARC file should be before the next is created.
+   * @param url                The associated URL
+   * @param idman              Identity of a LOCKSS cache.
+   * @throws LockssRepositoryException
+   */
   public JcrRepositoryBase(Session session, Node node, String stemFile,
       long sizeWarcMax, String url, IdentityManager idman)
       throws LockssRepositoryException {
@@ -90,11 +101,19 @@ public abstract class JcrRepositoryBase {
       m_session.save();
       m_session.refresh(true);
     } catch (RepositoryException e) {
-      logger.error("constructor: " + e.getMessage());
+      logger.error("Repository Exception in constructor(1): " + e.getMessage());
       throw new LockssRepositoryException(e);
     }
   }
   
+  /**
+   * This constructor assumes that the JcrRepositoryBase is already in the database.
+   * 
+   * @param session       The current JCR session
+   * @param node          The JCR node that contains the database portion of the data
+   * @param idman         Identity of a LOCKSS cache.
+   * @throws LockssRepositoryException
+   */
   protected JcrRepositoryBase(Session session, Node node,
       IdentityManager idman) throws LockssRepositoryException {
     Property propStemFile;
@@ -137,13 +156,17 @@ public abstract class JcrRepositoryBase {
     }
   }
 
+  
   /**
+   * This method holds code shared between the two constructors
+   * for RepositoryNodeImpl.
+   *  
+   * @param session    The current JCR session
+   * @param node       The JCR node that contains the database portion of the data
    * @throws LockssRepositoryException
    * @throws PathNotFoundException
    * @throws ValueFormatException
    */
-  // This method holds code shared between the two constructors
-  // for RepositoryNodeImpl.
   protected void constructorShared(Session session, Node node) 
       throws LockssRepositoryException {
     testIfNull(session, "session");
@@ -160,6 +183,8 @@ public abstract class JcrRepositoryBase {
   }
   
   /**
+   * Create a node in the database with a version name.
+   * 
    * @param strVersion
    * @return
    * @throws LockssRepositoryException
@@ -228,6 +253,9 @@ public abstract class JcrRepositoryBase {
    *     }
    * 
    * is far too long.  :->
+   * 
+   * @param obj      An object to be testing for equality to null.
+   * @param strName  The name of the above object.
    */
   protected void testIfNull(Object obj, String strName) {
     if (obj == null) {

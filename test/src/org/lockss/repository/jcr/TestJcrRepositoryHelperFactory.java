@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrHelperRepositoryFactory.java,v 1.1.2.3 2009-09-30 23:02:33 edwardsb1 Exp $
+ * $Id: TestJcrRepositoryHelperFactory.java,v 1.1.2.1 2009-10-03 01:49:12 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -40,11 +40,11 @@ import junit.framework.TestCase;
  * @author edwardsb
  *
  */
-public class TestJcrHelperRepositoryFactory extends LockssTestCase {
+public class TestJcrRepositoryHelperFactory extends LockssTestCase {
 
   // Constants
   private static final long k_sizeWarcMax = 10000;
-  private static final String k_strDirectory = "TestJcrHelperRepositoryFactory/";
+  private static final String k_strDirectory = "TestJcrRepositoryHelperFactory/";
 
   // Member variables
   private IdentityManager m_idman;
@@ -139,7 +139,7 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   }
 
   
-  public final void testChooseHelperRepository() throws Exception {
+  public final void testChooseRepositoryHelper() throws Exception {
     File dir1;
     File dir2;
     JcrRepositoryHelperFactory jcrh;
@@ -154,19 +154,19 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     jcrh = JcrRepositoryHelperFactory.getSingleton();
     
     dir1 = getTempDir();
-    jcr1 = jcrh.createHelperRepository("key1", dir1);
+    jcr1 = jcrh.createRepositoryHelper("key1", dir1);
     
     dir2 = getTempDir();
-    jcr2 = jcrh.createHelperRepository("key2", dir2);
+    jcr2 = jcrh.createRepositoryHelper("key2", dir2);
     
-    // chooseHelperRepository should return one of the two repositories.
-    jcrReturn1 = jcrh.chooseHelperRepository();
+    // chooseRepositoryHelper should return one of the two repositories.
+    jcrReturn1 = jcrh.chooseRepositoryHelper();
     
     assertTrue(jcrReturn1.hashCode() == jcr1.hashCode() ||
         jcrReturn1.hashCode() == jcr2.hashCode());
     
-    // chooseHelperRepository should now return the other of the two repositories.
-    jcrReturn2 = jcrh.chooseHelperRepository();
+    // chooseRepositoryHelper should now return the other of the two repositories.
+    jcrReturn2 = jcrh.chooseRepositoryHelper();
 
     assertTrue(jcrReturn2.hashCode() == jcr1.hashCode() ||
         jcrReturn2.hashCode() == jcr2.hashCode());
@@ -177,7 +177,7 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   }
   
   
-  public final void testCreateHelperRepository() throws Exception {
+  public final void testCreateRepositoryHelper() throws Exception {
     File dir;
     JcrRepositoryHelper jhr;
     JcrRepositoryHelperFactory jhrf;
@@ -187,7 +187,7 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     jhrf = JcrRepositoryHelperFactory.getSingleton();
     
     dir = getTempDir();
-    jhr = jhrf.createHelperRepository("key", dir);
+    jhr = jhrf.createRepositoryHelper("key", dir);
     
     // Verify that there's something in the temp directory... 
     assertTrue(dir.isDirectory());
@@ -198,9 +198,9 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   
   
   /**
-   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelperFactory#getHelperRepository(java.lang.String)}.
+   * Test method for {@link org.lockss.repository.jcr.JcrRepositoryHelperFactory#getRepositoryHelper(java.lang.String)}.
    */
-  public final void testGetHelperRepository() throws Exception {
+  public final void testGetRepositoryHelper() throws Exception {
     JcrRepositoryHelperFactory jhrf;
     JcrRepositoryHelper jhr1;
     JcrRepositoryHelper jhr2a;
@@ -213,15 +213,15 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     jhrf = JcrRepositoryHelperFactory.getSingleton();
     
     // No repositories added; we SHOULD get null.
-    jhr1 = jhrf.getHelperRepository("nullandvoid");
+    jhr1 = jhrf.getRepositoryHelper("nullandvoid");
     assertNull(jhr1);
     
     // Add a 'foobar' repository, then get it a few times.
     tempDir1 = getTempDir();
-    jhrf.createHelperRepository("foobar", tempDir1);
+    jhrf.createRepositoryHelper("foobar", tempDir1);
     
-    jhr2a = jhrf.getHelperRepository("foobar");
-    jhr2b = jhrf.getHelperRepository("foobar");
+    jhr2a = jhrf.getRepositoryHelper("foobar");
+    jhr2b = jhrf.getRepositoryHelper("foobar");
     
     assertNotNull(jhr2a);
     assertNotNull(jhr2b);
@@ -229,8 +229,8 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     
     // Add a 'wozniak' repository.
     tempDir2 = getTempDir();
-    jhrf.createHelperRepository("wozniak", tempDir2);
-    jhr3 = jhrf.getHelperRepository("wozniak");
+    jhrf.createRepositoryHelper("wozniak", tempDir2);
+    jhr3 = jhrf.getRepositoryHelper("wozniak");
     
     assertNotNull(jhr3);
     assertNotEquals(jhr2a.hashCode(), jhr3.hashCode());
@@ -240,7 +240,7 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
   }
   
   
-  public final void testGetHelperRepositoryByDirectory() throws Exception {
+  public final void testGetRepositoryHelperByDirectory() throws Exception {
     File dir1;
     File dir2;
     JcrRepositoryHelperFactory jcrh;
@@ -255,17 +255,17 @@ public class TestJcrHelperRepositoryFactory extends LockssTestCase {
     jcrh = JcrRepositoryHelperFactory.getSingleton();
     
     dir1 = getTempDir();
-    jcr1 = jcrh.createHelperRepository("key1", dir1);
+    jcr1 = jcrh.createRepositoryHelper("key1", dir1);
     
     dir2 = getTempDir();
-    jcr2 = jcrh.createHelperRepository("key2", dir2);
+    jcr2 = jcrh.createRepositoryHelper("key2", dir2);
     
-    // Verify our getHelperRepository...
-    jcrReturn1 = jcrh.getHelperRepositoryByDirectory(dir1);
+    // Verify our getRepositoryHelper...
+    jcrReturn1 = jcrh.getRepositoryHelperByDirectory(dir1);
     
     assertTrue(jcrReturn1.hashCode() == jcr1.hashCode());
     
-    jcrReturn2 = jcrh.getHelperRepositoryByDirectory(dir2);
+    jcrReturn2 = jcrh.getRepositoryHelperByDirectory(dir2);
 
     assertTrue(jcrReturn2.hashCode() == jcr2.hashCode());
     

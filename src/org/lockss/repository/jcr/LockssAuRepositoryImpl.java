@@ -87,7 +87,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   /**
    * Important note: If jrh is the special value 'null', then the code picks a random
    * helper repository.  It would be far better if the one-operator constructor could call 
-   * LockssRepositoryImpl(au, m_jrhf.chooseHelperRepository()) -- but m_jrhf isn't 
+   * LockssRepositoryImpl(au, m_jrhf.chooseRepositoryHelper()) -- but m_jrhf isn't 
    * initialized when the one-argument constructor is created.
    * 
    * @param au
@@ -116,7 +116,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       if (m_jrh != null) {
         m_jrh = jrh;
       } else {  // Probably called by the one-argument constructor
-        m_jrh = jrhf.chooseHelperRepository();
+        m_jrh = jrhf.chooseRepositoryHelper();
       }
             
       node = m_jrh.getRootNode();

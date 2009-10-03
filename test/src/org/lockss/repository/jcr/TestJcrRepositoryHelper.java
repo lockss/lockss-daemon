@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrHelperRepository.java,v 1.1.2.2 2009-09-30 23:02:33 edwardsb1 Exp $
+ * $Id: TestJcrRepositoryHelper.java,v 1.1.2.1 2009-10-03 01:49:12 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -48,10 +48,10 @@ import junit.framework.TestCase;
  * @author edwardsb
  *
  */
-public class TestJcrHelperRepository extends LockssTestCase {
+public class TestJcrRepositoryHelper extends LockssTestCase {
 
   // Constants
-  private static final File k_directory = new File("TestJcrHelperRepository/");
+  private static final File k_directory = new File("TestJcrRepositoryHelper/");
   private static final String k_dirXml = "test/src/org/lockss/repository/jcr/TestRepository/";
   private static final String k_nameXml = "LargeDatastore.xml";
   private static final String k_password = "password";
@@ -206,7 +206,7 @@ public class TestJcrHelperRepository extends LockssTestCase {
     
     jhrf = JcrRepositoryHelperFactory.getSingleton();
     
-    jhrTest = jhrf.createHelperRepository("test", k_directory);
+    jhrTest = jhrf.createRepositoryHelper("test", k_directory);
     
     assertNull(jhrTest.getRepositoryNode("foobar"));
     

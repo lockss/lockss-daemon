@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.3 2009-09-30 23:02:32 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.4 2009-10-03 01:49:13 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -34,7 +34,10 @@ import org.lockss.util.*;
 import org.lockss.util.PlatformUtil.*;
 
 /**
- * @author edwardsb
+ * Maintains all AU repositories under a given directory.  
+ * I assume that all drives have their own directory.
+ * 
+ * @author Brent E. Edwards
  *
  */
 public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositories {
@@ -48,9 +51,12 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
 
   // Member variables
   private File m_dirSource;
-  
-  /*
-   * Constructor...
+
+  /**
+   * Construct the class.
+   * 
+   * @param dirSource                    a File, under which all AuRepositories are.
+   * @throws LockssRepositoryException   if <code>dirSource</code> is not a directory.
    */
   public CollectionOfAuRepositoriesImpl(File dirSource) throws LockssRepositoryException {
     if (!dirSource.exists() || !dirSource.isDirectory()) {
@@ -61,9 +67,13 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
     m_dirSource = dirSource;
   }
   
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.CollectionOfAuRepositories#generateAuRepository(java.io.File)
-   */
+   /**
+    * Given a directory, add the files necessary to store files there.
+    * 
+    * @param dirSource        Where to generate the files for an AU Repository.
+    * @throws IOException     If <code>dirSource</code> either was not a directory, or it could not be created. 
+    * @see org.lockss.repository.v2.CollectionOfAuRepositories#generateAuRepository(java.io.File)
+    */
   public void generateAuRepository(File dirSource) throws IOException {
     InputStream istrDatastore;
     OutputStream ostrDatastore;
@@ -91,18 +101,31 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
   }
 
   
-  /* (non-Javadoc)
+  /**
+   *  This routine looks for all directories under a given directory with the
+   *  k_FILENAME_DATASTORE in them.
+   *  
+   *  ** NOTE: BUG: The list returned now returns the directory name, NOT the
+   *  name that was originally given.
+   *  
+   * @return 
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#listAuRepositories(java.io.File)
    */
   public Map<String, File> listAuRepositories() {
-    // This routine looks for all directories under a given directory with the
-    // k_FILENAME_DATASTORE in them.  The object returned is just the string
-    // for the directory...
     return recurseDirectories(m_dirSource, new HashMap<String, File>());
   }
 
-  
-  // A depth-first search for all directories with k_FILENAME_DATASTORE.
+
+  /**
+   * A depth-first search among all directories under a given directory.
+   * This method obviously does not correctly handle non-DAG directory structures.
+   * 
+   * *** BUG: This routine should return the name originally given to an AU.
+   * 
+   * @param dirCurrent  The directory being searched
+   * @param mastrfile   The current list of directories that could hold the files for a repository. 
+   * @return A map from a string to the file the string represents. 
+   */
   private Map<String, File> recurseDirectories(File dirCurrent, Map<String, File> mastrfile) {
     File[] arfileChildren;
     File fileDatastore;
@@ -112,7 +135,7 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
       mastrfile.put(dirCurrent.getName(), fileDatastore);
     }
     
-    // Poorly-chosen function name.  It lists files and directories.
+    // This function lists both files and directories, not just files.
     arfileChildren = dirCurrent.listFiles();
 
     // *grumble*  The 'for' statement doesn't work correctly with a null variable.
@@ -127,8 +150,9 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
   
   /**
    * This method opens an AU in a given directory.
-   * Important note: I assume that the AU is already available, from outside the CollectionOfAuRepositoriesImpl.
    * 
+   * @param au The archival unit to open
+   * @param dirLocation Where the AU holds its data
    * @throws FileNotFoundException 
    * 
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#openAuRepository(java.io.File)
@@ -142,7 +166,9 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
   }
 
   
-  /* (non-Javadoc)
+  /**
+   * The disk space used and available for the directory of this class.
+   * 
    * @see org.lockss.repository.v2.CollectionOfAuRepositories#getDF()
    */
   public DF getDF() throws UnsupportedException {

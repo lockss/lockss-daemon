@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManager.java,v 1.1.2.3 2009-09-30 23:02:32 edwardsb1 Exp $
+ * $Id: RepositoryManagerManager.java,v 1.1.2.4 2009-10-03 01:49:13 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -36,6 +36,8 @@ import org.lockss.util.PlatformUtil.DF;
  *
  */
 public interface RepositoryManagerManager extends ConfigurableManager {
+  // RepositorySpec is "jcr://path" or "local://path".
+  public void addToAUIDtoCoar(String AUID, String RepositorySpec);
   public List<String /* CoarSpec */> getRepositoryList();
   public DF getRepositoryDf();
   public Map<String, DF> getRepositoryMap();

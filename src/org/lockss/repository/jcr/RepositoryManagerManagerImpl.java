@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManagerImpl.java,v 1.1.2.1 2009-09-30 23:02:32 edwardsb1 Exp $
+ * $Id: RepositoryManagerManagerImpl.java,v 1.1.2.2 2009-10-03 01:49:13 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -24,7 +24,6 @@
  */
 package org.lockss.repository.jcr;
 
-import java.io.File;
 import java.util.*;
 
 import org.lockss.config.Configuration;
@@ -40,13 +39,14 @@ import org.lockss.util.PlatformUtil.DF;
  */
 public class RepositoryManagerManagerImpl implements RepositoryManagerManager {
   public RepositoryManagerManagerImpl() {
-    
+    // TODO
   }
 
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#doSizeCalc(org.lockss.repository.v2.RepositoryNode)
    */
   public void doSizeCalc(RepositoryNode node) {
+    // TODO
   }
 
   /* (non-Javadoc)
@@ -144,6 +144,14 @@ public class RepositoryManagerManagerImpl implements RepositoryManagerManager {
       Differences changedKeys) {
     // TODO Auto-generated method stub
 
+  }
+
+  /* (non-Javadoc)
+   * @see org.lockss.repository.v2.RepositoryManagerManager#addToAUIDtoCoar(java.lang.String, java.lang.String)
+   */
+  public void addToAUIDtoCoar(String AUID, String RepositorySpec) {
+    // TODO Auto-generated method stub
+    
   }
 
 }

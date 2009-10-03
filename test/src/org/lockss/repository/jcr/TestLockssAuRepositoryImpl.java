@@ -120,7 +120,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
       JcrRepositoryHelperFactory.preconstructor(k_sizeWarcMax, m_idman, m_ldTest);
 
       m_jhrf = JcrRepositoryHelperFactory.getSingleton();
-      m_jhr = m_jhrf.createHelperRepository("LockssAuRepositoryImpl", new File(k_strDirectory));    
+      m_jhr = m_jhrf.createRepositoryHelper("LockssAuRepositoryImpl", new File(k_strDirectory));    
     } else { // isConstructed
       m_jhrf = JcrRepositoryHelperFactory.getSingleton();
       

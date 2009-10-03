@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelper.java,v 1.1.2.2 2009-10-02 04:15:46 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelper.java,v 1.1.2.3 2009-10-03 01:49:13 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -44,9 +44,10 @@ import org.lockss.repository.v2.RepositoryNode;
 import org.lockss.util.*;
 
 /**
- * @author edwardsb
+ * This class represents one database repository.  It should be created by
+ * the JcrRepositoryHelperFactory.
  *
- * This class represents one repository of JcrHelperPerAu's.
+ * @author edwardsb
  */
 public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   // Constants 
@@ -67,7 +68,7 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   
   // Class Variables
   private File m_directory;
-  private IdentityManager m_idman;
+  private IdentityManager m_idman;  // TODO: Remove.  Use the one in the JcrRepositoryHelperFactory.
   private LRUMap m_mapstrrnCache = new LRUMap (k_LRUSize);
   private Node m_nodeRoot;
   private RepositoryConfig m_repconfig;
@@ -77,10 +78,19 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   protected Set<RepositoryNode> m_sizeCalcQueue = new HashSet<RepositoryNode>();
   private BinarySemaphore m_sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread m_sizeCalcThread;
-  private long m_sizeWarcMax;
+  private long m_sizeWarcMax;   // TODO: Remove.  Use the one in the JcrRepositoryHelperFactory.
   
-  // Constructor...
-  JcrRepositoryHelper(
+  /**
+   * Construct a new JCR Repository Helper.
+   * This method should only be called by JcrRepositoryHelperFactory.
+   * 
+   * @param directory      The parent directory for this repository.
+   * @param sizeWarcMax    The size of any .WARC files.   To be removed.
+   * @param idman          To be removed.
+   * @param ld             To be removed.  
+   * @throws LockssRepositoryException
+   */
+  protected JcrRepositoryHelper(
       File directory, 
       long sizeWarcMax, 
       IdentityManager idman,
@@ -95,7 +105,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
     
     // Set up the node and session.
     m_idman = idman;
-    initService(ld);
     
     // Create the directory if necessary.
     if (directory.exists()) {
@@ -153,7 +162,7 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
     m_mapstrrnCache.put(key, rnAdd);
     
     jrhf = JcrRepositoryHelperFactory.getSingleton();
-    jrhf.addHelperRepository(key, this);
+    jrhf.addRepositoryHelper(key, this);
   }
   
   public File getDirectory() {
