@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.50 2009-09-26 17:23:53 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.51 2009-10-03 02:55:16 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -253,7 +253,7 @@ public class UrlUtil {
    * changes constitute more than "normalization".  This might be too
    * strict; transformations such as <code>publisher.com ->
    * www.publisher.com</code> might fall within the scope of normalization.
-   * @throws MalformedURLException if the plugin's nromalizer throws, or if
+   * @throws MalformedURLException if the plugin's normalizer throws, or if
    * the URL it returns is malformed.
    * @throws PluginBehaviorException if the plugin changes the URL in a way
    * it should (<i>e.g.</i>, the protocol)
