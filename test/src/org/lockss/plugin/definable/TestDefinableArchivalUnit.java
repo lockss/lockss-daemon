@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.37.14.1 2009-09-26 17:20:08 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.37.14.2 2009-10-03 01:18:02 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
@@ -903,6 +904,33 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(expStartUrls, au.getNewContentCrawlUrls());
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
+  }
+
+  public void testRateLimiterSourceDefault() throws Exception {
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
+				  "plugin");
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a plugin definition that doesn't set the limiter source
+    String pname = "org.lockss.plugin.definable.GoodPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertEquals("plugin", au.getFetchRateLimiterSource());
+    assertEquals(pname, au.getFetchRateLimiterKey());
+
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
+				  "au");
+    assertEquals("au", au.getFetchRateLimiterSource());
+    assertEquals(null, au.getFetchRateLimiterKey());
+
   }
 
   public void testRateLimiterSourceAu() throws Exception {
