@@ -133,6 +133,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   
   
   /**
+   * This method should perform consistency checks on the set of AU repositories
+   * under its control.
+   * 
+   * At this time, there are no consistency checks.
+   * 
    * @see org.lockss.repository.v2.LockssAuRepository#checkConsistency()
    */
   public void checkConsistency() {
@@ -140,8 +145,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     // As bugs get noticed (and auto-repairable), this method exists to 
     // find those bugs.
   }
-  
-  // No AU exists yet.  This method sets up the AU.
+
+  /**
+   * This method is called to create this AU.
+   * 
+   * @throws LockssRepositoryException
+   */
   private void constructNewAu() throws LockssRepositoryException {
     long lCreationTime;
     Node node;
@@ -161,6 +170,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
   
   /**
+   * Returns the creation time for this AU.
+   * 
    * @see org.lockss.repository.v2.LockssAuRepository#getAuCreationTime()
    * @return
    */
@@ -193,7 +204,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   /**
    * Method required by org.lockss.state.HistoryRepository
    * 
-   * @return
+   * @deprecated
+   * @return null.  Always.  This method is deprecated.
    */
   public File getAuStateFile() {
     logger.debug3("getAuStateFile called: Please use getAuStateRawContents instead.");
@@ -205,6 +217,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * AU State file per AU.
    * 
    * The calling method must close the InputStream. 
+   * @return The raw contents of the AU state.
    */
   public InputStream getAuStateRawContents()
      throws LockssRepositoryException
@@ -217,11 +230,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * will mostly use this method.
    * 
    * I assume that the URL is absolute, not a relative URL. 
-
+   *
    * @see org.lockss.repository.v2.LockssAuRepository#getFile(java.lang.String, boolean)
-   * @param url
-   * @param create
-   * @return
+   * @param strUrl  The URL that we're looking up 
+   * @param create  If the URL does not exist, should we create it?
+   * @return The associated <code>RepositoryFile</code>
    * @throws MalformedURLException
    * @throws LockssRepositoryException
    */
@@ -339,13 +352,15 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   
 
   /**
-   * Method required by org.lockss.state.HistoryRepository. 
+   * Method required by org.lockss.state.HistoryRepository.
+   * 
+   *  @return null.  Always.
+   *  @deprecated
    */
   public File getIdentityAgreementFile() {
     logger.debug3("getIdentityAgreementFile called: Please use getAuStateRawContents instead.");    
     return null;
   }
-
 
 
   /**
@@ -358,7 +373,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * The calling method must close the returned InputStream.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#getIdentityAgreementFile()
-   * @return File
+   * @return   The Identity Agreement contents.
    */
   public InputStream getIdentityAgreementRawContents() throws LockssRepositoryException {
     return getInputStreamFromJcr(k_propIdentityAgreement);
@@ -368,7 +383,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * Returns the DatedPeerIdSet associated with this AU.
    * 
    * @see org.lockss.state.HistoryRepository#getNoAuPeerSet()
-   * @return
+   * @return  The dated, persistent peer ID set.
    */
   public DatedPeerIdSet getNoAuPeerSet() {
     IdentityManager idman;
@@ -384,22 +399,29 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
 
   
+  /**
+   * Get a stream representing the peer ids associated with this repository.
+   * 
+   * @return An input stream containing the peer ids associated with this AU.
+   * @throws LockssRepositoryException 
+   */
   public InputStream getNoAuPeerSetRawContents() throws LockssRepositoryException {
     return getInputStreamFromJcr(k_propPeerId);
   }
 
   /**
-   * @see org.lockss.repository.v2.LockssAuRepository#getNode(java.lang.String, boolean)
-   * @param url
-   * @param createib
-   * @return
-   * @throws MalformedURLException
-   * 
    * This method returns the RepositoryNode associated with a URL.  Unless your URL
    * represents a directory (that you plan to iterate through), you probably will
    * want to use getFile(). 
    * 
-   * I assume that the URL is absolute, not a relative URL. 
+   * This method assumes that the URL is absolute, not a relative URL.
+   * 
+   * @see org.lockss.repository.v2.LockssAuRepository#getNode(java.lang.String, boolean)
+   * @param strUrl   What URL holds the repository node?     
+   * @param create   If the URL doesn't yet exist, should we create it?
+   * @return RepositoryNode corresponding to the URL.
+   * @throws MalformedURLException
+   * 
    */
   public RepositoryNode getNode(String strUrl, boolean create)
       throws MalformedURLException, LockssRepositoryException {
@@ -495,6 +517,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     return rniQuery;
   }
 
+  /**
+   * Does this AU Repository have a NoAuPeerSet?
+   * 
+   * @return Does this AU Repository have a NoAuPeerSet?
+   */
   public boolean hasNoAuPeerSet() {
     Node nodeRoot;
     try {
@@ -509,6 +536,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   
 
   /**
+   * Slightly misnamed: This method returns the current AU State.
+   * 
    * @see org.lockss.repository.v2.LockssAuRepository#loadAuState()
    * @return AuState
    */
@@ -518,7 +547,6 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     String strError = "Could not load AU state for AU '" + m_au.getName() + "' :"; 
 
     logger.debug3("Loading state for AU '" + m_au.getName() + "'");
-
 
     // Get all the text in the AU state file.
     try {
@@ -541,11 +569,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     return auState;
   }
 
-  /**
-   * @see org.lockss.repository.v2.LockssAuRepository#loadDamagedNodeSet()
-   * @return
-   * 
+  /** 
    * This method is a stub, and does nothing useful.
+   * 
+   * @see org.lockss.repository.v2.LockssAuRepository#loadDamagedNodeSet()
+   * @return null
+   * @deprecated
    */
   public DamagedNodeSet loadDamagedNodeSet() {
     logger.debug1("loadDamagedNodeSet called; it's a stub and does nothing useful.");
@@ -555,11 +584,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
 
   /**
    * HistoryRepositoryImpl.loadIdentityAgreements is badly named: it doesn't 
-   * load the identity agreements; it only retrieves them.  This method makes 
-   * no change to the methods.
+   * load the identity agreements; it only retrieves them.  This method follows
+   * that pattern.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#loadIdentityAgreements()
-   * @return
+   * @return List of identity agreements.
+   * @exception LockssRepositoryException
    */
   public List loadIdentityAgreements() 
       throws LockssRepositoryException {
@@ -582,11 +612,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
 
   /**
-   * Stub method.  Not to be called.
+   * Stub method.
    * 
    * @see org.lockss.state.HistoryRepository#loadNodeState(org.lockss.plugin.CachedUrlSet)
    * @param cus
-   * @return
+   * @return null.  Always.
+   * @deprecated
    */
   public NodeState loadNodeState(CachedUrlSet cus) {
     logger.debug3("loadNodeState called.  This method is a stub.");
@@ -599,6 +630,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#loadPollHistories(org.lockss.state.NodeState)
    * @param nodeState
+   * @deprecated
    */
   public void loadPollHistories(NodeState nodeState) {
     logger.debug3("loadPollHistories is now a stub.");
@@ -617,7 +649,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * Feel free to disagree with me on this choice.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.RepositoryNode)
-   * @param node
+   * @param node  Which node to compute on
    */
 
   public void queueSizeCalc(RepositoryNode rn) {
@@ -630,8 +662,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
 
   /**
+   * This method is now a stub.
+   * 
    * @see org.lockss.app.LockssAuManager#setAuConfig(org.lockss.config.Configuration)
    * @param auConfig
+   * @deprecated
    */
   public void setAuConfig(Configuration auConfig) {
     // Both HistoryRepositoryImpl.setAuConfig() and 
@@ -645,27 +680,32 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#storeAuState(org.lockss.state.AuState)
    * @param istrState
+   * @throws LockssRepositoryException
    */
   public void storeAuStateRawContents(InputStream istrAuState) 
       throws LockssRepositoryException {
     storeStreamForJcr(istrAuState, k_propAuState);
   }
 
-  /**
+  /** 
+   * This method is a stub, and does nothing useful.
+   * 
    * @see org.lockss.repository.v2.LockssAuRepository#storeDamagedNodeSet(org.lockss.state.DamagedNodeSet)
    * @param dns
-   * 
-   * This method is a stub, and does nothing useful.
+   * @deprecated
    */
   public void storeDamagedNodeSet(DamagedNodeSet dns) {
     logger.debug3("storeDamagedNodeSet called.  This method is a stub.");
   }
 
   /**
-   * This method is used to restore a backup.
+   * Re-create the identity agreements from a stream.
+   * 
+   * This method useful when restoring from a backup.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#storeIdentityAgreements(java.util.List)
-   * @param identAgreements
+   * @param istrIdentityAgreements  A stream containing the identity agreements
+   * @throws LockssRepositoryException
    */
   public void storeIdentityAgreementsRawContents(InputStream istrIdentityAgreements) 
   throws LockssRepositoryException {
@@ -677,6 +717,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * 
    * @see org.lockss.state.HistoryRepository#storeNodeState(org.lockss.state.NodeState)
    * @param nodeState
+   * @deprecated
    */
   public void storeNodeState(NodeState nodeState) {
     logger.debug3("storeNodeState called.  This method is a stub.");    
@@ -688,6 +729,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * 
    * @see org.lockss.state.HistoryRepository#storePollHistories(org.lockss.state.NodeState)
    * @param nodeState
+   * @deprecated
    */
   public void storePollHistories(NodeState nodeState) {
     logger.debug3("storePollHistories called.  This method is a stub.");
@@ -709,11 +751,20 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.v2.RepositoryNode)
    * @param node
+   * @deprecated
    */
   public void queueSizeCalc(org.lockss.repository.RepositoryNode node) {
     logger.error("Called queueSizeCalc with the wrong kind of RepositoryNode.");
   }
   
+  /**
+   * Store the (one and only) AU State associated with this AU Repository.
+   * 
+   * NOTE: This method tosses LockssRepositoryExceptions into the bit bucket,
+   * due to <code>HistoryRepository</code>.
+   * 
+   * @param auState  What to store.
+   */
   public void storeAuState(AuState auState){
     try {
       storeObjectInJcr(auState, k_propAuState);
@@ -723,6 +774,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
 
+  /**
+   * Store the identity agreements.
+   * 
+   * @param list  The list of identity agreements.
+   * @throws LockssRepositoryException 
+   */
   public void storeIdentityAgreements(List list)
           throws LockssRepositoryException {
     if (list instanceof Serializable) {
@@ -734,6 +791,13 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
 
+  /**
+   * Store the NoAu set, as an input stream.  This method is useful for restoring
+   * from backups.
+   * 
+   * @param istr  An input stream containing the NoAu raw contents.
+   * @throws LockssRepositoryException
+   */
   public void storeNoAuRawContents(InputStream istr)
   throws LockssRepositoryException
   {
@@ -745,7 +809,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }    
   }
 
-  /* (non-Javadoc)
+  /**
+   * Retrieve the disk usage for this repository.
+   * 
+   * @param calcIfUnknown Calculate the repository disk usage, if we don't know it.
+   * @throws LockssRepositoryException
    * @see org.lockss.repository.v2.LockssAuRepository#getRepoDiskUsage(boolean)
    */
   public long getRepoDiskUsage(boolean calcIfUnknown) throws LockssRepositoryException {
@@ -762,7 +830,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
 
   // --- Private methods ---
   
-  /* JCR cannot use any of the following characters:
+  /**
+   * Convert a generic string to one that can be used by JCR.
+   * This method must be one-to-one.
+   * 
+   * JCR cannot use any of the following characters:
    *  . / : [ ] * ' " | or whitespace
    *  
    *  This method generates an intended-to-be-one-way map from any string to 
@@ -771,6 +843,8 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    *  This encoding is similar to the conversion that's done to URLs.
    *  A # is used instead of %, so that URL substitutions and JCR
    *  substitutions don't clash.  (A # character can never be part of a URL.)
+   *  
+   *  @param strName   The name to be converted
    */
   private String createJcrSafeName(String strName) {
     // According to a meeting, which white space used may impact the
@@ -842,6 +916,16 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
 
   // The following methods are derived from the ones in RepositoryManager.
 
+  /**
+   * Used to copy an InputStream to a temporary file.
+   * 
+   * It is the calling method's responsibility to delete this temporary
+   * file when it's done with it.
+   * 
+   * @param istr       The stream to copy from
+   * @param filename   Part of the file name.  It's still a temporary file.
+   * @return           A File, containing the input stream.
+   */
   private File createFileFromInputStream(InputStream istr, String filename) {
     File fileReturn;
     FileOutputStream fostr;
@@ -860,8 +944,10 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
 
   /**
-   * @param strUrl
-   * @return
+   * Just create a repository node.
+   * 
+   * @param strUrl  The URL to create
+   * @return  A <code>RepositoryNodeImpl</code> at the correct URL.
    * @throws LockssRepositoryException
    */
   private RepositoryNodeImpl createRepositoryNode(String strUrl) throws LockssRepositoryException {
@@ -880,7 +966,15 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
     return rniNode;
   }
-    
+  
+  
+  /**
+   * Return an input stream from a given prop in the JCR.
+   * 
+   * @param prop  Where to find the input stream
+   * @return  InputStream
+   * @throws LockssRepositoryException
+   */
   private InputStream getInputStreamFromJcr(String prop) 
         throws LockssRepositoryException {
     InputStream istr;
@@ -906,10 +1000,23 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     return istr;
   }
   
+  /**
+   * Whether a string is null or has length zero.  It's simple, actually.
+   * 
+   * @param str  What we're testing
+   * @return  boolean: false if there's something in the string.
+   */
   private boolean isEmptyString(String str) {
     return str == null || str.length() == 0;
   }
   
+  /**
+   * Store any object in the JCR database.
+   * 
+   * @param objStore  What you're storing
+   * @param prop      Where you're storing it.
+   * @throws LockssRepositoryException
+   */
   private void storeObjectInJcr(Serializable objStore, String prop) 
       throws LockssRepositoryException {
     byte[] arbyAuState = null;
@@ -949,6 +1056,14 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
 
+  /**
+   * Since LockssSerializable is NOT derived from Serializable, I
+   * need two methods to store objects.
+   * 
+   * @param objStore
+   * @param prop
+   * @throws LockssRepositoryException
+   */
   private void storeObjectInJcr(LockssSerializable objStore, String prop) 
   throws LockssRepositoryException {
     byte[] arbyAuState = null;
@@ -989,7 +1104,13 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   }
 
 
-  
+  /**
+   * Store a stream in the repository.
+   * 
+   * @param istr is an <code>InputStream</code>, not an <code>OutputStream</code>
+   * @param prop  Where to store it.
+   * @throws LockssRepositoryException
+   */
   private void storeStreamForJcr(InputStream istr, String prop)
       throws LockssRepositoryException {
     Node nodeRoot;
@@ -1004,6 +1125,11 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
   
+  /**
+   * Calculate the size of a node.
+   * 
+   * @param node
+   */
   void doSizeCalc(RepositoryNode node) {
     try {
       node.getTreeContentSize(null, true);
@@ -1043,8 +1169,4 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       return lar;
     }
   }
-  
-  
-
-
 }
