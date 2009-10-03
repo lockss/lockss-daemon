@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.20 2009-08-03 04:36:14 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.20.2.1 2009-10-03 02:54:24 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,12 @@ public class ServeContent extends LockssServlet {
     PREFIX + "absoluteLinks";
   public static final boolean DEFAULT_ABSOLUTE_LINKS = true;
 
+  /** If true, the url arg to ServeContent will be normalized before being
+   * looked up. */
+  public static final String PARAM_NORMALIZE_URL_ARG =
+    PREFIX + "normalizeUrlArg";
+  public static final boolean DEFAULT_NORMALIZE_URL_ARG = true;
+
   /** Include in index AUs in listed plugins.  Set only one of
    * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
   public static final String PARAM_INCLUDE_PLUGINS =
@@ -114,6 +120,7 @@ public class ServeContent extends LockssServlet {
   private static MissingFileAction missingFileAction =
     DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
+  private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
   private static List excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List includePlugins = DEFAULT_INCLUDE_PLUGINS;
   private static boolean includeInternalAus = DEFAULT_INCLUDE_INTERNAL_AUS;
@@ -173,6 +180,8 @@ public class ServeContent extends LockssServlet {
 					     DEFAULT_INCLUDE_INTERNAL_AUS);
       absoluteLinks = config.getBoolean(PARAM_ABSOLUTE_LINKS,
 					DEFAULT_ABSOLUTE_LINKS);
+      normalizeUrl = config.getBoolean(PARAM_NORMALIZE_URL_ARG,
+					DEFAULT_NORMALIZE_URL_ARG);
     }
   }
 
@@ -208,6 +217,13 @@ public class ServeContent extends LockssServlet {
     verbose = getParameter("verbose");
     url = getParameter("url");
     if (!StringUtil.isNullString(url)) {
+      if (normalizeUrl) {
+	String normUrl = UrlUtil.normalizeUrl(url);
+	if (normUrl != url) {
+	  log.debug(url + " normalized to " + normUrl);
+	  url = normUrl;
+	}
+      }
       handleUrlRequest();
       return;
     }
