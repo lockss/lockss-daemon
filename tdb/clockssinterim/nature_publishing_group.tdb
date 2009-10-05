@@ -43,7 +43,7 @@
     param[journal_id] = bmt
 
     au < ready ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
-
+    au < ready ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
 
   }
@@ -56,6 +56,7 @@
 
     param[journal_id] = cgt
 
+    au < ready ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
