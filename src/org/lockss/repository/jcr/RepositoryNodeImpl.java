@@ -78,11 +78,12 @@ RepositoryNode  {
   /**
    * This method generates a new repository node.
    * 
-   * @param session
+   * @param session  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param node
    * @param stemFile
-   * @param sizeMax
+   * @param sizeWarcMax  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param url
+   * @param idman -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @throws LockssRepositoryException
    */
   protected RepositoryNodeImpl(Session session, Node node, String stemFile,
@@ -106,9 +107,9 @@ RepositoryNode  {
    * Important: the node passed in must have had JcrRepositoryBase.k_propStemFile,
    * JcrRepositoryBase.k_propSizeMax, and JcrRepositoryBase.k_propUrl set. 
    * 
-   * @param session
+   * @param session  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param node
-   * @param idman
+   * @param idman  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    */
   protected RepositoryNodeImpl(Session session, Node node, IdentityManager idman) 
       throws LockssRepositoryException {
@@ -118,13 +119,21 @@ RepositoryNode  {
   }
 
   
-  // Call this method instead of the other constructor for nodes that
-  // already exist in the database.
-  
-  // It reads whether the item being constructed is a node or a file.
-  // If it's a new node, then this method creates a new RepositoryNode.
-  
-  // TODO: Verify that all fields are available after the constructor is done.
+  /**
+   * Call this method instead of the other constructor for nodes that
+   * already exist in the database.
+   *
+   * It reads whether the item being constructed is a node or a file.
+   * If it's a new node, then this method creates a new RepositoryNode.
+   *
+   * TODO: Verify that all fields are available after the constructor is done.
+   * 
+   * @param session  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @param node
+   * @param idman  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @return The RepositoryNode that you're looking for.
+   * @throws LockssRepositoryException
+   */
   public static RepositoryNode constructor(Session session, Node node, 
       IdentityManager idman)
       throws LockssRepositoryException {
@@ -142,7 +151,6 @@ RepositoryNode  {
         }
       } else {
         logger.debug3("constructor: k_propIsFile was null. Returning null.");
-        nodeReturn = null;
       }
     } catch (RepositoryException e) {
       logger.error("constructor: " + e.getMessage());
@@ -152,6 +160,19 @@ RepositoryNode  {
     return nodeReturn;
   }
   
+  /**
+   * Call this method for nodes that do not already exist in the database.
+   * 
+   * @param session -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @param node
+   * @param stemFile
+   * @param sizeWarcMax -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @param url
+   * @param idman -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @return A new RepositoryNode
+   * @throws LockssRepositoryException
+   * @throws FileNotFoundException
+   */
   public static RepositoryNode constructor(Session session, Node node,
       String stemFile, long sizeWarcMax, String url, 
       IdentityManager idman)
@@ -186,8 +207,8 @@ RepositoryNode  {
    *  The only thing that matters is the m_node.
    *  
    * @see java.lang.Object#equals(java.lang.Object)
-   * @param obj
-   * @return
+   * @param obj  The object that we're investigating.
+   * @return Whether obj == this.  Or maybe whether P = NP.
    */
   public boolean equals(Object obj) {
     RepositoryNodeImpl rniObj;
@@ -202,9 +223,10 @@ RepositoryNode  {
         logger.error("Throwing exception into the bit bucket; returning false.");
         return false;
       }
-    } else {  // obj is not a repository node impl.
-      return false;
-    }
+    } 
+    
+    // obj is not a repository node impl.
+    return false;    
   }
   
   
@@ -215,6 +237,8 @@ RepositoryNode  {
    * files and undeleted files.  (Files are a type of node.  If the
    * preferred version of a file is deleted, then the file is considered
    * deleted.)
+   * 
+   * @return The number of children, including deleted children.
    */
   public int getChildCount() 
       throws LockssRepositoryException {
@@ -239,13 +263,14 @@ RepositoryNode  {
   
   /**
    * Returns the file under a repository node.
-   * This method is not in the interface. 
-   *
-   * TODO: Add a parameter to getFile, specifying whether it should create the
-   * file.  
    * 
-   * @param nameSubtree
-   * @return
+   * It is an error to give a URL and nameSubtree combination that do not match.
+   *
+   * @param nameSubtree  Which subtree to get
+   * @param strUrl What is its URL
+   * @param fCreate Create the subtree?
+   * 
+   * @return A <code>RepositoryNode</code> under the current node. 
    * @throws LockssRepositoryException
    */
   protected RepositoryNode getFile(String nameSubtree, String strUrl, boolean fCreate)
@@ -280,10 +305,11 @@ RepositoryNode  {
     try {
       if (node.hasProperty(k_propIsFile)) {
         return new RepositoryFileImpl(m_session, node, m_idman);
-      } else {
-        return new RepositoryFileImpl(m_session, node, m_stemFile, 
-            m_sizeWarcMax, strUrl,  m_idman);
-      }
+      } 
+      
+      // The node doesn't have the right property.
+      return new RepositoryFileImpl(m_session, node, m_stemFile, 
+          m_sizeWarcMax, strUrl,  m_idman);
     } catch (FileNotFoundException e) {
       logger.error("getFile: ", e);
       throw new LockssRepositoryException(e);
@@ -294,26 +320,32 @@ RepositoryNode  {
   }
 
 
+  /**
+   * Return the files under this node.
+   * 
+   * @param filter Which nodes?
+   * @return A list of <code>RepositoryFile</code>
+   * @exception LockssRepositoryException
+   */
   public List<org.lockss.repository.v2.RepositoryFile> getFileList(CachedUrlSetSpec filter) 
       throws LockssRepositoryException {
     return getFileList(filter, false);
   }
 
   /**
-   * Asembles a list of immediate children, possibly filtered. Sorted
+   * Assembles a list of immediate children, possibly filtered. Sorted
    * alphabetically by File.compareTo().
    * 
-   * @param filter:
-   *                a spec to filter on. Null for no filtering.
-   * @param includeInactive:
-   *                true iff inactive nodes should be included.
-   * @return the list of child RepositoryNodes.
-   *
    * If the filter is null, then return the repository file.
    * 
    * (This method will be used by the RepositoryNode and
    * RepositoryNodeImpl classes.  This method is the base case for
    * a recursive definition.)
+   * 
+   * @param filter Which files to retrieve?
+   * @param includeDeleted  Should we include the deleted files?
+   * @return A list of <code>RepositoryFile</code>
+   * @throws LockssRepositoryException 
    */
   public List<org.lockss.repository.v2.RepositoryFile> getFileList(CachedUrlSetSpec filter,
       boolean includeDeleted) 
@@ -342,16 +374,36 @@ RepositoryNode  {
     return lirf;
   }
 
+  /**
+   * Get all the files, in an array format.
+   * 
+   * @return <code>RepositoryFile[]</code>
+   * @throws LockssRepositoryException
+   */
   public RepositoryFile[] getFiles() 
       throws LockssRepositoryException {
     return getFiles(Integer.MAX_VALUE, false);
   }
 
+  /**
+   * Either get all non-deleted files, or get all files.
+   * 
+   * @param includeDeleted  Should we include the deleted files?
+   * @return <code>RepositoryFile[]</code>
+   * @throws LockssRepositoryException
+   */
   public RepositoryFile[] getFiles(boolean includeDeleted) 
       throws LockssRepositoryException {
     return getFiles(Integer.MAX_VALUE, includeDeleted);
   }
 
+  /**
+   * Get at most <code>maxVersions</code> files.
+   * 
+   * @param maxVersions How many files?
+   * @return <code>RepositoryFile[]</code>
+   * @throws LockssRepositoryException
+   */
   public RepositoryFile[] getFiles(int maxVersions) 
       throws LockssRepositoryException {
     return getFiles(maxVersions, false);
@@ -364,7 +416,7 @@ RepositoryNode  {
    * @see org.lockss.repository.v2.RepositoryNode#getFiles(int, boolean)
    * @param maxVersion
    * @param includeDeleted
-   * @return
+   * @return RepositoryFile[]
    * @throws LockssRepositoryException
    */
   public RepositoryFile[] getFiles(int maxVersion, boolean includeDeleted) 
@@ -400,10 +452,13 @@ RepositoryNode  {
   
   /**
    * Returns a direct descendant of a repository node.
-   * This method is not in the interface. 
+   *
+   * It's an error if nameSubtree and urlNew don't refer to the same node.
    * 
-   * @param nameSubtree
-   * @return
+   * @param nameSubtree  Which subtree?
+   * @param urlNew       Which URL?
+   * @param fCreate      Create if it doesn't exist
+   * @return RepositoryNode
    * @throws LockssRepositoryException
    */
   protected RepositoryNode getNode(String nameSubtree, String urlNew, boolean fCreate)
@@ -443,7 +498,11 @@ RepositoryNode  {
     }
   }
 
-  
+  /**
+   * Returns the node URL.
+   * 
+   * @return The node URL
+   */
   public String getNodeUrl() {
     return m_url;
   }
@@ -453,9 +512,7 @@ RepositoryNode  {
    * Used by LockssAuRepository.loadPollHistories.
    * 
    * @see org.lockss.repository.v2.RepositoryNode#getTreeContentSize(org.lockss.daemon.CachedUrlSetSpec, boolean)
-   * @param filter
-   * @param calcIfUnknown
-   * @return
+   * @return List<PollHistory>  The poll history list.
    * @throws LockssRepositoryException
    */
   public List<PollHistory> getPollHistoryList() 
@@ -483,11 +540,26 @@ RepositoryNode  {
     return liphReturn;
   }
   
-  // Used by RepositoryManagerManager.
+  /**
+   * Gets the stem file.  (That is, the directory plus the first part of the
+   * permanent file name.)
+   * 
+   * Used by RepositoryManagerManager.
+   * 
+   * @return The stem file
+   */
   protected String getStemFile() {
     return m_stemFile;
   }
   
+  /**
+   * How much disk space does this repository node use?
+   * 
+   * @param filter  Which nodes should be examined?
+   * @param calcIfUnknown Should this be calculated if we don't have it cached?
+   * @return long The size
+   * @throws LockssRepositoryException
+   */
   public long getTreeContentSize(CachedUrlSetSpec filter,
       boolean calcIfUnknown /*
                              * , boolean mostRecentOnly = true */) 
@@ -496,13 +568,12 @@ RepositoryNode  {
   }
   
   /**
-   * Notice that the filter is only used in the {@link RepositoryFile#getTreeContentSize()}
+   * Notice that the filter is only used in the {@link RepositoryFile#getTreeContentSize(CachedUrlSetSpec, boolean, boolean)}
    * 
-   * @see org.lockss.repository.v2.RepositoryNode#getTreeContentSize(org.lockss.daemon.CachedUrlSetSpec, boolean, boolean)
    * @param filter
    * @param calcIfUnknown
    * @param mostRecentOnly
-   * @return
+   * @return the size
    * @throws LockssRepositoryException
    */
   public long getTreeContentSize(CachedUrlSetSpec filter,
@@ -553,14 +624,23 @@ RepositoryNode  {
     return lContentSize;
   }
 
-  
+  /**
+   * The hash code only depends on the node.
+   * 
+   * @return An arbitrary number based on the node.
+   */
   public int hashCode() {
     return m_node.hashCode();
   }
-  
-  // BEST GUESS:
-  // The node state is stored with each node.
-  // We retrieve it from the storage, and set a few items on it.
+
+  /**
+   * The node state is stored with each node.
+   * We retrieve it from the storage, and set a few items on it.
+   * 
+   * @param cus
+   * @return A node state.
+   * @throws LockssRepositoryException
+   */
   
   public NodeState loadNodeState(CachedUrlSet cus)
       throws LockssRepositoryException {
@@ -618,7 +698,7 @@ RepositoryNode  {
    *   
    * @see org.lockss.repository.v2.RepositoryNode#makeNewRepositoryFile(java.lang.String)
    * @param name
-   * @return
+   * @return A repository file
    * @throws LockssRepositoryException
    */
   public RepositoryFile makeNewRepositoryFile(String name) 
@@ -642,6 +722,13 @@ RepositoryNode  {
     return rfNew;
   }
 
+  /**
+   * Create a new repository node under this one.
+   * 
+   * @param name  The new repository node
+   * @return RepositoryNode The repository node under this one
+   * @throws LockssRepositoryException
+   */
   public RepositoryNode makeNewRepositoryNode(String name) 
       throws LockssRepositoryException {
     Node node;
@@ -658,6 +745,13 @@ RepositoryNode  {
     return rnNew;
   }
 
+  
+  /**
+   * We don't like the new neighbors.
+   * 
+   * @param stemNewLocation -- Where to move to
+   * @throws LockssRepositoryException
+   */
   public void move(String stemNewLocation) throws LockssRepositoryException {
     Node nodeIter;
     NodeIterator ni;
@@ -698,6 +792,8 @@ RepositoryNode  {
    * 
    * If these property sets become too large, then this method should
    * use a DeferredTempFileOutputStream. 
+   * 
+   * @param prop  What properties to set
    */
   public void setProperties(Properties prop)
       throws IOException, LockssRepositoryException {
@@ -728,7 +824,12 @@ RepositoryNode  {
     }
   }
 
-  
+  /**
+   * Keep around a <code>NodeState</code>
+   * 
+   * @param nodeState
+   * @throws LockssRepositoryException
+   */
   public void storeNodeState(NodeState nodeState)
       throws LockssRepositoryException {
     String strNodeState;
@@ -741,8 +842,5 @@ RepositoryNode  {
       logger.error("storeNodeState: " + e.getMessage());
       throw new LockssRepositoryException(e);
     }
-  }
-
-  // Internally-used methods
-  
+  }  
 }

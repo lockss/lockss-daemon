@@ -185,8 +185,8 @@ public abstract class JcrRepositoryBase {
   /**
    * Create a node in the database with a version name.
    * 
-   * @param strVersion
-   * @return
+   * @param strVersion  The version name.
+   * @return The shiny, new, happy Node!  Isn't it cute?
    * @throws LockssRepositoryException
    */
   protected Node createNode(String strVersion) 

@@ -80,7 +80,6 @@ public interface RepositoryFile extends RepositoryNode {
   /**
    * Create a new version under the current RepositoryFile.
    * 
-   * @param isPreferred -- Should we set this code as the preferred version?
    * @return RepositoryFileVersion.
    * @throws LockssRepositoryException
    */
@@ -88,8 +87,8 @@ public interface RepositoryFile extends RepositoryNode {
 
   /**
    * Create a new version under the current RepositoryFile, before another version.
-   * 
-   * @param isPreferred -- Should we set this code as the preferred version?
+   *
+   * @param rfvBefore -- Which version to put the new version before.
    * @return RepositoryFileVersion.
    * @throws LockssRepositoryException
    */
@@ -97,14 +96,20 @@ public interface RepositoryFile extends RepositoryNode {
 
   /**
    * Return the size of the contents of this "file".
-   * 
-   * @param mostRecentOnly -- If true, return the size of only one version.
-   *                           If false, include all versions. 
-   * @return
+   * This version only returns the most recent version of the file.
+   *  
+   * @return The size of the contents of this file.
    */
   public long getContentSize(/* boolean mostRecentOnly = true */)
     throws LockssRepositoryException;
 
+  /**
+   * Return the size of the contents of this "file".
+   * 
+   * @param mostRecentOnly -- If true, return the size of only one version.
+   *                           If false, include all versions. 
+   * @return The size of the contents of this file.
+   */
   public long getContentSize(boolean mostRecentOnly)
     throws LockssRepositoryException;
   

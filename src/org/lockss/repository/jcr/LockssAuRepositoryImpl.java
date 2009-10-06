@@ -173,7 +173,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * Returns the creation time for this AU.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#getAuCreationTime()
-   * @return
+   * @return A <code>long</code> representing the number of seconds after the epoch that this AU was created.
    */
   public long getAuCreationTime() 
       throws LockssRepositoryException {
@@ -648,8 +648,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * reports -- then swallows -- Lockss Repository Exceptions.
    * Feel free to disagree with me on this choice.
    * 
-   * @see org.lockss.repository.v2.LockssAuRepository#queueSizeCalc(org.lockss.repository.RepositoryNode)
-   * @param node  Which node to compute on
+   * @param rn  Which node to compute on
    */
 
   public void queueSizeCalc(RepositoryNode rn) {
@@ -679,7 +678,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * This method restores an input stream from backup.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#storeAuState(org.lockss.state.AuState)
-   * @param istrState
+   * @param istrAuState
    * @throws LockssRepositoryException
    */
   public void storeAuStateRawContents(InputStream istrAuState) 

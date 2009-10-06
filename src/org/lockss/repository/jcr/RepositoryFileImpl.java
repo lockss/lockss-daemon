@@ -33,9 +33,6 @@ import java.util.*;
 import java.util.concurrent.atomic.*;
 
 import javax.jcr.*;
-import javax.jcr.lock.LockException;
-import javax.jcr.nodetype.ConstraintViolationException;
-import javax.jcr.version.VersionException;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -95,8 +92,6 @@ RepositoryFile {
   // threads are happening.
   
   private static Logger logger = Logger.getLogger("RepositoryFileImpl");
-  private static StringObjectTransformer sm_sotTransformer = 
-    new StringObjectTransformer();
 
   // Member variables
   protected Node m_nodeVersionEnd;  // The last version in the linked list.
@@ -305,8 +300,6 @@ RepositoryFile {
       if (nodeCurrent.hasProperty(k_propPreviousVersion)) {
         propPrevious = nodeCurrent.getProperty(k_propPreviousVersion);
         nodePrevious = propPrevious.getNode();
-      } else {
-        nodePrevious = null;
       }
 
       lVersion = sm_alVersion.incrementAndGet();
@@ -358,11 +351,12 @@ RepositoryFile {
     rfvPreferred.delete();
   }
 
-  /** Used by hashes.
+  /** 
+   * Used by hashes.
    * 
-   * @see org.lockss.repository.v2.RepositoryNodeImpl#equals(java.lang.Object)
-   * @param obj
-   * @return
+   * @see org.lockss.repository.jcr.RepositoryNodeImpl#equals(Object)
+   * @param obj What we're comparing against
+   * @return Whether <code>this</code> is equal to <code>obj</code>
    */
   
   public boolean equals(Object obj) {
@@ -378,9 +372,10 @@ RepositoryFile {
         logger.error("Tossing the exception into the bit bucket; returning false.");
         return false;
       }
-    } else {  // obj is not a repository node impl.
-      return false;
     }
+    
+    // obj is not RepositoryFileImpl.
+    return false;
   }
 
   
@@ -406,8 +401,12 @@ RepositoryFile {
   }
 
     
-  // A file is a leaf.  It has no nodes as children.
-  // (File versions are NOT nodes.) 
+  /**
+   * A file is a leaf.  It has no nodes as children.
+   * (File versions are NOT nodes, so they are not children.)
+   * 
+   * @return 0  Always.
+   */
   
   public int getChildCount()
       throws LockssRepositoryException {
@@ -415,18 +414,23 @@ RepositoryFile {
   }
   
   /**
-   * Returns the size of the current version of stored cache.
-   * Note that deleted objects are ALWAYS included in this version.
-   * 
-   * @param preferredOnly:
-   *                If true, then only consider the most recent version. If
-   *                false, then compute the size for ALL versions.
+   * @return The length of your preferred content.
+   * @throws LockssRepositoryException
    */
   public long getContentSize(/* preferredOnly = true */) 
       throws LockssRepositoryException {
     return getContentSize(true);
   }
 
+  /**
+   * Returns the size of the current version of stored cache.
+   * Note that deleted objects are ALWAYS included in this version.
+   * 
+   * @param preferredOnly
+   *                If true, then only consider the most recent version. If
+   *                false, then compute the size for ALL versions.
+   * @return How long IS your content?  That long?  Impressive.
+   */
   public long getContentSize(boolean preferredOnly) 
       throws LockssRepositoryException {
     Node nodeIter;
@@ -443,35 +447,37 @@ RepositoryFile {
         }
         
         return m_sizePreferred;
-      } else {
-        logger.error("No preferred version.");
-        throw new NullPointerException("No preferred version.");
-      }
-    } else {  // !preferredOnly -- give the sum of all versions.
-      if (m_sizeTotal == -1) {
-        try {
-          m_sizeTotal = 0;
-          nodeIter = m_nodeVersionEnd;
-          while (nodeIter != null) {
-            rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                    m_idman);
-            m_sizeTotal += rfvIter.getContentSize();
-            
-            if (nodeIter.hasProperty(k_propPreviousVersion)) {
-              propIter = nodeIter.getProperty(k_propPreviousVersion);
-              nodeIter = propIter.getNode();
-            } else {
-              break;
-            }
+      } 
+      // rfvPreferred is null.
+      logger.error("No preferred version.");
+      throw new NullPointerException("No preferred version.");
+    } 
+    
+    // !preferredOnly -- give the sum of all versions.
+    if (m_sizeTotal == -1) {
+      try {
+        m_sizeTotal = 0;
+        nodeIter = m_nodeVersionEnd;
+        while (nodeIter != null) {
+          rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
+                  m_idman);
+          m_sizeTotal += rfvIter.getContentSize();
+          
+          if (nodeIter.hasProperty(k_propPreviousVersion)) {
+            propIter = nodeIter.getProperty(k_propPreviousVersion);
+            nodeIter = propIter.getNode();
+          } else {
+            break;
           }
-        } catch (RepositoryException e) {
-          logger.error("getContentSize: " + e.getMessage());
-          throw new LockssRepositoryException(e);
         }
+      } catch (RepositoryException e) {
+        logger.error("getContentSize: " + e.getMessage());
+        throw new LockssRepositoryException(e);
       }
-      
-      return m_sizeTotal;
     }
+    
+    return m_sizeTotal;
+    
   }
 
   
@@ -479,10 +485,8 @@ RepositoryFile {
    * Asembles a list of immediate children, possibly filtered. Sorted
    * alphabetically by File.compareTo().
    * 
-   * @param filter:
-   *                a spec to filter on. Null for no filtering.
-   * @param includeInactive:
-   *                true iff inactive nodes should be included.
+   * @param filter            a spec to filter on. Null for no filtering.
+   * @param includeDeleted    true iff deleted nodes should be included.
    * @return the list of child RepositoryNodes.
    *
    * If the filter is null, then return the repository file.
@@ -512,7 +516,7 @@ RepositoryFile {
    * @see org.lockss.repository.v2.RepositoryNode#getFiles(int, boolean)
    * @param maxVersions -- the number of versions to return.
    * @param includeDeleted
-   * @return
+   * @return an array of <code>RepositoryFile</code>
    * @throws LockssRepositoryException
    */
   
@@ -533,6 +537,7 @@ RepositoryFile {
 
   /**
    * This method has been intentionally stubbed out.
+   * @return An <code>UnsupportedOperationException</code>.  Always.
    */
   public NodeState getPollHistories() throws LockssRepositoryException {
     throw new UnsupportedOperationException("getPollHistories is no longer supported.");
@@ -551,7 +556,7 @@ RepositoryFile {
    * recommend that you always call 'setPreferredVersion' first.  
    * 
    * @see RepositoryFile#getPreferredVersion()
-   * @return
+   * @return A RepositoryFileVersion according to the above formula.
    * @throws LockssRepositoryException
    */
   public RepositoryFileVersion getPreferredVersion() 
@@ -563,30 +568,31 @@ RepositoryFile {
     // If you called setPreferredVersion, then return it. 
     if (m_rfvPreferred != null) {
       return m_rfvPreferred;
-    } else { // setPreferredVersion was not called.
-      try {
-        nodeIter = m_nodeVersionEnd;
-        while (nodeIter != null) {
-          rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                  m_idman);
-          
-          if (!rfvIter.isDeleted()) {
-            return rfvIter;
-          }
-          
-          if (nodeIter.hasProperty(k_propPreviousVersion)) {
-            propIter = nodeIter.getProperty(k_propPreviousVersion);
-            nodeIter = propIter.getNode();
-          } else {
-            break;
-          }
-        }
-      } catch (RepositoryException e) {
-        logger.error("getContentSize: " + e.getMessage());
-        throw new LockssRepositoryException(e);
-      }
-    }
+    } 
     
+    // setPreferredVersion was not called.
+    try {
+      nodeIter = m_nodeVersionEnd;
+      while (nodeIter != null) {
+        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
+                m_idman);
+        
+        if (!rfvIter.isDeleted()) {
+          return rfvIter;
+        }
+        
+        if (nodeIter.hasProperty(k_propPreviousVersion)) {
+          propIter = nodeIter.getProperty(k_propPreviousVersion);
+          nodeIter = propIter.getNode();
+        } else {
+          break;
+        }
+      }
+    } catch (RepositoryException e) {
+      logger.error("getContentSize: " + e.getMessage());
+      throw new LockssRepositoryException(e);
+    }
+        
     // No undeleted node was found.
     return null;
   }
@@ -622,14 +628,11 @@ RepositoryFile {
    * Returns the size of the content tree under (and including) this cache in
    * bytes.
    * 
-   * @param filter:
-   *                Whether to filter the URLs being searched.
-   * @param calcIfUnknown:
-   *                If true, then calculate what's not known.
+   * @param filter          Whether to filter the URLs being searched.
+   * @param calcIfUnknown   If true, then calculate what's not known.
    *                This parameter does nothing, for this version
    *                of the software.
-   * @param preferredOnly:
-   *                If true, then only consider the preferred version. If
+   * @param preferredOnly   If true, then only consider the preferred version. If
    *                false, then compute for ALL versions.
    */
   public long getTreeContentSize(CachedUrlSetSpec filter,
@@ -650,48 +653,51 @@ RepositoryFile {
           }
           
           return m_sizePreferred;
-        } else {
-          return 0;
-        }
-      } else {
-        if (m_sizeTotal == -1) {
-          try {
-            m_sizeTotal = 0;
-            
-            nodeIter = m_nodeVersionEnd;
-            while (nodeIter != null) {
-              rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                      m_idman);
-              
-              m_sizeTotal += rfvIter.getContentSize();
-              
-              if (nodeIter.hasProperty(k_propPreviousVersion)) {
-                propIter = nodeIter.getProperty(k_propPreviousVersion);
-                nodeIter = propIter.getNode();
-              } else {
-                break;
-              }
-            }
-            
-          } catch (RepositoryException e) {
-            logger.error("getContentSize: " + e.getMessage());
-            throw new LockssRepositoryException(e);
-          }
-        }
+        } 
         
-        return m_sizeTotal;
-      } // if preferredOnly
-    } else {
-      return 0;
-    }
+        // !preferredOnly
+        return 0;
+      } 
+      
+      // Not preferredOnly.
+      if (m_sizeTotal == -1) {
+        try {
+          m_sizeTotal = 0;
+          
+          nodeIter = m_nodeVersionEnd;
+          while (nodeIter != null) {
+            rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
+                    m_idman);
+            
+            m_sizeTotal += rfvIter.getContentSize();
+            
+            if (nodeIter.hasProperty(k_propPreviousVersion)) {
+              propIter = nodeIter.getProperty(k_propPreviousVersion);
+              nodeIter = propIter.getNode();
+            } else {
+              break;
+            }
+          }
+          
+        } catch (RepositoryException e) {
+          logger.error("getContentSize: " + e.getMessage());
+          throw new LockssRepositoryException(e);
+        }
+      }
+      
+      return m_sizeTotal;
+    } 
+    
+    // The filter doesn't match our URL. 
+    return 0;
   }
 
 
   /**
    * Since we have equals(), we must have hashCode().
    * 
-   * @see org.lockss.repository.v2.RepositoryNodeImpl#hashCode()
-   * @return
+   * @see org.lockss.repository.jcr.RepositoryNodeImpl#hashCode()
+   * @return An arbitrary integer, related to the m_node.
    */
   public int hashCode() {
     return m_node.hashCode();
@@ -709,9 +715,10 @@ RepositoryFile {
     
     if (rfvPreferred != null) {
       return getPreferredVersion().hasContent();
-    } else {
-      return false;
     }
+    
+    // rfvPreferred == null.
+    return false;
   }
   
 
@@ -1008,6 +1015,7 @@ RepositoryFile {
    * This method is called by 'commit()'.
    */
   public void clearTempContent() {
+    // This method does nothing.
   }
 
 }

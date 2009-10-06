@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.4 2009-10-03 01:49:13 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.5 2009-10-06 01:23:24 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -105,11 +105,10 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
    *  This routine looks for all directories under a given directory with the
    *  k_FILENAME_DATASTORE in them.
    *  
-   *  ** NOTE: BUG: The list returned now returns the directory name, NOT the
+   *  ** NOTE: MAJOR BUG: The list returned now returns the directory name, NOT the
    *  name that was originally given.
    *  
-   * @return 
-   * @see org.lockss.repository.v2.CollectionOfAuRepositories#listAuRepositories(java.io.File)
+   * @return A map from the name of a file to the <code>File</code> associated. 
    */
   public Map<String, File> listAuRepositories() {
     return recurseDirectories(m_dirSource, new HashMap<String, File>());
@@ -154,8 +153,6 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
    * @param au The archival unit to open
    * @param dirLocation Where the AU holds its data
    * @throws FileNotFoundException 
-   * 
-   * @see org.lockss.repository.v2.CollectionOfAuRepositories#openAuRepository(java.io.File)
    */
   public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation)
       throws LockssRepositoryException, FileNotFoundException {

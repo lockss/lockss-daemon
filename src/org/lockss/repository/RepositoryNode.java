@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.21.34.2 2009-07-22 00:25:06 edwardsb1 Exp $
+ * $Id: RepositoryNode.java,v 1.21.34.3 2009-10-06 01:23:24 edwardsb1 Exp $
  */
 
 /*
@@ -252,7 +252,6 @@ public interface RepositoryNode extends RepositoryNodeVersion, RepositoryFile,
    * This is intended to ensure props and stream reflect a consistent view
    * of a single version, but see the comments in
    * RepositoryNodeImpl.RepositoryNodeContentsImpl.
-   * @see RepositoryNodeImpl.RepositoryNodeContentsImpl
    */
   public interface RepositoryNodeContents {
     /** Return an InputStream */

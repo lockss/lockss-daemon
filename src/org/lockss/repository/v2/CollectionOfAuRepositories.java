@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositories.java,v 1.1.2.3 2009-08-26 22:47:24 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositories.java,v 1.1.2.4 2009-10-06 01:23:25 edwardsb1 Exp $
  */
 
 /*
@@ -40,24 +40,24 @@ import org.lockss.repository.LockssRepositoryException;
 import org.lockss.util.PlatformUtil.*;
 
 /**
+ * A CollectionOfAuRepositories implementation reads all directories under the
+ * given directory, looking for AUs of its type (either Unix repositories or 
+ * JCR repositories.)  It gathers them and all information needed to generate 
+ * them, and provides this map to the RepositoryManagerManager.
+ * 
+ * Each implementation knows how to find its space within the pool (“cache” or 
+ * “v2cache” subdir.  Within that space (the collection) there will only be AUs 
+ * of its type.
+ * 
  * @author edwardsb
  *
  */
 public interface CollectionOfAuRepositories {
   /**
-   * A CollectionOfAuRepositories implementation reads all directories under the
-   * given directory, looking for AUs of its type (either Unix repositories or 
-   * JCR repositories.)  It gathers them and all information needed to generate 
-   * them, and provides this map to the RepositoryManagerManager.
-   * 
-   * Each implementation knows how to find its space within the pool (“cache” or 
-   * “v2cache” subdir.  Within that space (the collection) there will only be AUs 
-   * of its type.
+   *  Given the name of an AU repository, it returns the directory where this repository
+   *  is found.
    *
-   * @param dirSource -- the parent directory for all directories underneath.
    * @return Map<String, Object>:
-   *    Given the name of an AU repository, it returns the directory where this repository
-   *    is found.
    */
   public Map<String, File> listAuRepositories() throws IOException;
   

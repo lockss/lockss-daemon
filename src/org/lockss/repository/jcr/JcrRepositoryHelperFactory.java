@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.2 2009-10-03 01:49:13 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.3 2009-10-06 01:23:24 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -173,9 +173,9 @@ public class JcrRepositoryHelperFactory {
   /**
    * Just create a new repository helper in a given directory.
    * 
-   * @param strKey
-   * @param directory
-   * @return
+   * @param strKey  What should I call it?
+   * @param directory  Where should I put it?
+   * @return A new JcrRepositoryHelper.  Unless an exception happens. 
    * @throws LockssRepositoryException
    */
   public JcrRepositoryHelper createRepositoryHelper(String strKey, File directory)
@@ -210,7 +210,7 @@ public class JcrRepositoryHelperFactory {
    * <code>m_mapdirjhr</code>.
    * 
    * @param nameRepositoryHelper
-   * @return
+   * @return The old JcrRepositoryHelper that you had seen before.
    * @throws LockssRepositoryException
    */
   

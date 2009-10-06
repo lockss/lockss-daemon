@@ -55,31 +55,36 @@ public interface RepositoryNode {
    * Returns the size of the content tree under (and including) this cache in
    * bytes.
    * 
-   * @param filter:
-   *                Whether to filter the URLs being searched.
-   * @param calcIfUnknown:
-   *                If true, then calculate what's not known.
-   * @param preferredOnly:
-   *                If true, then only consider the preferred version. If
-   *                false, then compute for ALL versions.
+   * In this version, <code>preferredOnly</code> is always true.
+   * 
+   * @param filter          Whether to filter the URLs being searched.
+   * @param calcIfUnknown   If true, then calculate what's not known.
    */
   public long getTreeContentSize(CachedUrlSetSpec filter,
       boolean calcIfUnknown /*
                              * , boolean preferredOnly = true */)
   throws LockssRepositoryException;
 
+  /**
+   * Returns the size of the content tree under (and including) this cache in
+   * bytes.
+   * 
+   * @param filter          Whether to filter the URLs being searched.
+   * @param calcIfUnknown   If true, then calculate what's not known.
+   * @param preferredOnly   If true, then only consider the preferred version. If
+   *                false, then compute for ALL versions.
+   */
   public long getTreeContentSize(CachedUrlSetSpec filter,
       boolean calcIfUnknown, boolean preferredOnly )
   throws LockssRepositoryException;
 
   /**
-   * Asembles a list of immediate children, possibly filtered. Sorted
+   * Assembles a list of immediate children, possibly filtered. Sorted
    * alphabetically by File.compareTo()
    * 
-   * @param filter:
-   *                a spec to filter on. Null for no filtering.
-   * @param includeInactive:
-   *                true iff inactive nodes should be included.
+   * In this version, <code>includeDeleted</code> is always false.
+   * 
+   * @param filter --           a spec to filter on. Null for no filtering.
    * @return the list of child RepositoryNodes.
    * 
    * Note from Brent: I do not understand why "listChildren" and "getNodeList"
@@ -89,6 +94,17 @@ public interface RepositoryNode {
                                         /* , boolean includeDeleted = false */)
                                         throws LockssRepositoryException;
 
+  /**
+   * Assembles a list of immediate children, possibly filtered. Sorted
+   * alphabetically by File.compareTo()
+   * 
+   * @param filter --           a spec to filter on. Null for no filtering.
+   * @param includeDeleted --  true iff deleted nodes should be included.
+   * @return the list of child RepositoryNodes.
+   * 
+   * Note from Brent: I do not understand why "listChildren" and "getNodeList"
+   * should both exist.
+   */
   public List<org.lockss.repository.v2.RepositoryFile> getFileList(CachedUrlSetSpec filter,
       boolean includeDeleted) throws LockssRepositoryException;
 

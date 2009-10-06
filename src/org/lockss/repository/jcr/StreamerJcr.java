@@ -15,6 +15,12 @@ import org.lockss.util.*;
 /**
  * @author edwardsb
  *
+ * This class gets around a limitation of the JCR classes:
+ * JCR classes only work with input streams, not input and
+ * output streams.
+ * 
+ * This class is used by the PersistentPeerIdSetImpl for input and
+ * output streams.
  */
 
 // Helper classes
@@ -32,6 +38,9 @@ class StreamerJcr implements org.lockss.util.Streamer {
     m_node = node;
   }
 
+  /**
+   * Return an InputStream for this data.
+   */
   public InputStream getInputStream() {
     try {
       return m_node.getProperty(m_prop).getStream();
@@ -47,11 +56,12 @@ class StreamerJcr implements org.lockss.util.Streamer {
     }
   }
 
+  /**
+   * Return an output stream for this data
+   */
   public OutputStream getOutputStream() {
     return new JcrOutputStream(k_thresholdDeferredStream);
   }
-  
-  // Inner class within an inner class!
   
   // Note that the caller MUST call close() on a JcrOutputStream.
   class JcrOutputStream extends DeferredTempFileOutputStream {

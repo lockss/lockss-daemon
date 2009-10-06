@@ -88,15 +88,19 @@ implements RepositoryFileVersion {
   protected long m_sizeEditing;
 
   /**
-   * Note that "node" should NOT be the node from the parent RepositoryFile.
+   * Construct a new RepositoryFileVersionImpl.
+   * 
+   * Note that "node" should NOT be the same node as the parent RepositoryFile.
    * Each version should have its own node.
    * 
-   * @param session
+   * @param session  -- BUG: This should come from JcrRepositoryHelperFactory
    * @param node
    * @param stemFile -- the filename, without the five-digit extension.
-   * @param sizeMax
-   * @param url
-   * @param RepositoryFileImpl
+   * @param sizeMax -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @param url -- BUG: The URL should come from <code>rfiParent</code>
+   * @param rfiParent -- The parent of this node.
+   * @param sizeDeferredStream -- How many bytes, before a deferred stream becomes a file?
+   * @param idman -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * 
    * @throws LockssRepositoryException
    * @throws FileNotFoundException
@@ -134,7 +138,15 @@ implements RepositoryFileVersion {
     }
   }
   
-  
+  /**
+   * Re-create a RepositoryFileVersionImpl.
+   *  
+   * @param session  -- BUG: Should come from <code>JcrRepositoryHelperFactory</code>.
+   * @param node
+   * @param rfiParent
+   * @param idman  -- BUG: Should come from <code>JcrRepositoryHelperFactory</code>
+   * @throws LockssRepositoryException
+   */
   protected RepositoryFileVersionImpl(Session session, Node node, RepositoryFileImpl rfiParent,
           IdentityManager idman) 
       throws LockssRepositoryException {
@@ -234,7 +246,13 @@ implements RepositoryFileVersion {
     }
   }
   
-  // This method holds all code shared between the two constructors.
+  /**
+   * This method holds all code shared between the two constructors.
+   * 
+   * @param session  -- BUG: Should come from <code>JcrRepositoryHelperFactory</code>
+   * @param node
+   * @throws LockssRepositoryException
+   */
   private void constructorShared2(Session session, Node node) 
       throws LockssRepositoryException {
     m_deffileTempContent = null;
@@ -253,6 +271,8 @@ implements RepositoryFileVersion {
 
   
   /**
+   * Save all changes from temporary storage to permanent storage.
+   * 
    * @see org.lockss.repository.v2.RepositoryFileVersion#commit()
    * @throws IOException
    * @throws LockssRepositoryException
@@ -347,7 +367,8 @@ implements RepositoryFileVersion {
    * This method does not actually delete the file (ie: it does not call
    * m_nodeVersion.remove().)
    * 
-   * This method can be called, even after a version is locked.
+   * This method can be called even after a version is locked.
+   * @throws LockssRepositoryException
    */
   public void delete() 
       throws LockssRepositoryException {
@@ -367,6 +388,7 @@ implements RepositoryFileVersion {
    * and returns to the last saved version. See also: <code>commit</code>.
    * 
    * Discard just removes the information from the editing node.
+   * @throws LockssRepositoryException
    */
   public void discard() 
       throws LockssRepositoryException {
@@ -401,6 +423,7 @@ implements RepositoryFileVersion {
    *
    * IMPORTANT: The method returns the size regardless of whether 
    * the 'isDeleted' flag has been set.  
+   * @throws LockssRepositoryException
    */  
   public long getContentSize() 
       throws LockssRepositoryException {
@@ -418,6 +441,8 @@ implements RepositoryFileVersion {
    * A future programmer should determine whether there are
    * streams left open by this method -- even if the returned
    * istrContent is closed.
+   * @throws IOException
+   * @throws LockssRepositoryException
    */
   public InputStream getInputStream() 
       throws IOException, LockssRepositoryException {
@@ -470,6 +495,9 @@ implements RepositoryFileVersion {
    * 
    * Important note: properties are independent of the text.  The 'commit'
    * method only changes text; properties are permanent once they're set.
+   * 
+   * @throws IOException
+   * @throws LockssRepositoryException
    */
   public Properties getProperties() 
       throws IOException, LockssRepositoryException {
@@ -493,10 +521,15 @@ implements RepositoryFileVersion {
       IOUtil.safeClose(istrReturn);
     }
     
-
     return propsReturn;
   }
   
+  /**
+   * Returns whether this <code>RepositoryFileVersionImpl</code> contains
+   * any content.
+   * 
+   * @throws LockssRepositoryException
+   */
   public boolean hasContent() 
       throws LockssRepositoryException {
     if (!isDeleted()) {
@@ -513,6 +546,8 @@ implements RepositoryFileVersion {
    * Determines whether this file is deleted. Deleted files may have old content
    * or children, but will appear in the list of files only when explicitly
    * asked for.
+   * 
+   * @throws LockssRepositoryException
    */
   public boolean isDeleted() 
       throws LockssRepositoryException {
@@ -543,10 +578,12 @@ implements RepositoryFileVersion {
    * 
    * The parameter is the stem for the new file.  We need to move the file assigned to this
    * stem to the new stem.
+   * 
+   * @param stemNew    The directory and initial part of the filename, to move everything to
+   * @throws LockssRepositoryException
    */
   public void move(String stemNew) throws LockssRepositoryException {
     InputStream istrContent;
-    OutputStream ostrContent;
     
     testIfNull(stemNew, "stemNew");
 
@@ -587,6 +624,10 @@ implements RepositoryFileVersion {
    * stream. What you put into the stream is exactly what you get out of the
    * stream. You cannot write bytes of a String into the input stream, then use
    * readUTF to get the String back.
+   * 
+   * @param istrContent   The content that you want the <code>RepositoryFileVersionImpl</code> to have
+   * @throws IOException
+   * @throws LockssRepositoryException
    */
   public void setInputStream(InputStream istrContent) 
       throws IOException, LockssRepositoryException {
@@ -617,6 +658,10 @@ implements RepositoryFileVersion {
 
   /**
    * Sets the properties within a RepositoryFile.
+   * 
+   * @param prop  The properties to set
+   * @throws IOException
+   * @throws LockssRepositoryException
    */
   public void setProperties(Properties prop)
       throws IOException, LockssRepositoryException {
@@ -660,6 +705,7 @@ implements RepositoryFileVersion {
    * reactivates content.
    * 
    * Note that undelete may be called, even when m_isLocked is set.
+   * @throws LockssRepositoryException
    */
   public void undelete() 
       throws LockssRepositoryException {
@@ -673,7 +719,11 @@ implements RepositoryFileVersion {
     }
   }
   
-  // The following method is useful for object recognition.
+  /**
+   * The following method is useful for object recognition.
+   *  
+   * @param obj -- The object to test for equality
+   */
   public boolean equals(Object obj) {
     RepositoryFileVersionImpl rfviObj;
     
@@ -687,9 +737,10 @@ implements RepositoryFileVersion {
         logger.error("Tossing the exception into the bit bucket; returning false.");
         return false;
       }
-    } else {  // obj is not RepositoryFileVersion
-      return false;
-    }
+    } 
+    
+    // obj is not RepositoryFileVersion
+    return false;
   }
   
   // The following private methods should not be called by outside members, except for testing.
@@ -719,6 +770,16 @@ implements RepositoryFileVersion {
   }
   
   
+  /**
+   * A 'permanent' output stream that contains what's inside this 
+   * <code>RepositoryFileVersionImpl</code>.  
+   * 
+   * Called when committing this variable.
+   * 
+   * @return FileOutputStream
+   * @throws FileNotFoundException
+   * @throws LockssRepositoryException
+   */
   private FileOutputStream getPermanentOutputStream()
       throws FileNotFoundException, LockssRepositoryException {
     File fileParentDirectory;
@@ -760,9 +821,15 @@ implements RepositoryFileVersion {
   }
 
   /**
+   * Create a filename for our permanent record.
+   * 
    * 'protected' because it's used by the test program.
+   * 
+   * @param stemFile -- Most of the file name.
+   * @param lFileParameter -- The number for the end of the file.
+   * @return A String that's a file name.
    */
-  static protected String createPermanentFileName(String strOldFilename, 
+  static protected String createPermanentFileName(String stemFile, 
           long lFileParameter) {
     StringBuilder sbFilename;
   
@@ -776,7 +843,7 @@ implements RepositoryFileVersion {
     // with the number greater than 99999.  
     
     sbFilename = new StringBuilder();
-    sbFilename.append(strOldFilename);
+    sbFilename.append(stemFile);
     sbFilename.append(String.format("%1$05d", lFileParameter));
     sbFilename.append(".warc");
     
@@ -786,23 +853,26 @@ implements RepositoryFileVersion {
   /**
    * To save a bit of typing, again and again...
    *  
-   * prop:    Which property under m_nodeVersion to return.
-   * isError: if true, then throw an error if there's no property.
+   * @param prop --    Which property under m_nodeVersion to return.
+   * @param isError -- if true, then throw an error if there's no property.
    *          if false, then return null if there's no property.
+   * @return Property A value on the node.
    */
   private Property getProperty(String prop, boolean isError) 
       throws LockssRepositoryException {
     try {
       if (m_node.hasProperty(prop)) {
         return m_node.getProperty(prop);
-      } else {
-        if (isError) {
-          logger.error("Property " + prop + " was not found in the version.");
-          throw new LockssRepositoryException("Property " + prop + " was not found in the version.");
-        } else {
-          return null;
-        }
       }
+      
+      // We couldn't get the property...
+      if (isError) {
+        logger.error("Property " + prop + " was not found in the version.");
+        throw new LockssRepositoryException("Property " + prop + " was not found in the version.");
+      } 
+
+      // We couldn't get the property, and we were told to stay quiet about it.
+      return null;
     } catch (RepositoryException e) {
       throw new LockssRepositoryException(e);
     }
