@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = American Academy of Pediatrics
+  >
+  
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title <
+      name = AAP Grand Rounds
+    >
+    
+    param[base_url] = http://aapgrandrounds.aappublications.org/
+    
+    au < ready ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+  
+  }
+
+  {
+  
+    title <
+      name = Pediatrics
+    >
+    
+    param[base_url] = http://pediatrics.aappublications.org/
+    
+    au < ready ; 2009 ; Pediatrics Volume 124 ; 124 >
+  
+  }
+
+}
