@@ -115,7 +115,7 @@ comment[bmt44] = at least one machine can't see the latest issue
 
     param[journal_id] = cdd
 
-    au < testing ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
+    au < ready ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
@@ -276,8 +276,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = icb
 
-    au < manifest ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
-    au < manifest ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
+    au < wanted ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
+    au < wanted ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
 
   }
 
@@ -289,8 +289,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ijir
 
-    au < manifest ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
-    au < manifest ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
+    au < wanted ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
+    au < wanted ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
 
   }
 
@@ -302,8 +302,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ijo
 
-    au < manifest ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
-    au < manifest ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+    au < wanted ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
+    au < wanted ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
 
   }
 
@@ -514,12 +514,12 @@ comment[cr] = waiting for the last issue to be crawled by all machines
     au < released ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
     au < released ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
     au < released ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
-    au < testing ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
+    au < ready ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
     au < released ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
     au < released ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
     au < released ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
     au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
-    au < testing ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
+    au < ready ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < does_not_exist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
 
   }
@@ -532,7 +532,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nbt
 
-    au < testing ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
+    au < ready ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
     au < ready ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
 
   }
@@ -596,8 +596,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ng
 
-    au < manifest ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
-    au < manifest ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
+    au < wanted ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
+    au < wanted ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
 
   }
 
@@ -609,8 +609,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ngeo
 
-    au < manifest ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
-    au < manifest ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
+    au < wanted ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
+    au < wanted ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
 
   }
 
@@ -622,8 +622,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ni
 
-    au < manifest ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
-    au < manifest ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
+    au < wanted ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
+    au < wanted ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
 
   }
 

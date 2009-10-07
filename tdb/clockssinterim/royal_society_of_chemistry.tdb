@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Royal Society of Chemistry
+  >
+  
+  plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin
+  param[base_url] = http://www.rsc.org/
+  param[resolver_url] = http://xlink.rsc.org/
+  implicit < status ; year ; name ; param[volume_name] ; param[year] >
+  
+  {
+  
+    title <
+      name = The Analyst
+    >
+    
+    param[journal_code] = an
+    
+    au < ready ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < ready ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+  
+  }
+
+}

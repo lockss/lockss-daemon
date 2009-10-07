@@ -17,8 +17,8 @@
     
     param[journal_code] = an
     
-    au < testing ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
-    au < testing ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+    au < ready ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < ready ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
   
   }
 
@@ -41,7 +41,7 @@
     
     param[journal_code] = ay
     
-    au < manifest ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
+    au < testing ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
   
   }
 
@@ -100,7 +100,7 @@
     param[journal_code] = cs
     
     au < manifest ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
-    au < manifest ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
+    au < testing ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
   
   }
 
@@ -113,7 +113,7 @@
     param[journal_code] = rp
     
     au < manifest ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
-    au < manifest ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+    au < testing ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
   
   }
 
