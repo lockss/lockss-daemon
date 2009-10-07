@@ -276,8 +276,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = icb
 
-    au < wanted ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
-    au < wanted ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
+    au < testing ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
+    au < testing ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
 
   }
 
@@ -289,8 +289,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ijir
 
-    au < wanted ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
-    au < wanted ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
+    au < testing ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
+    au < testing ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
 
   }
 
@@ -302,8 +302,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ijo
 
-    au < wanted ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
-    au < wanted ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+    au < testing ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
+    au < testing ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
 
   }
 
@@ -596,8 +596,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ng
 
-    au < wanted ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
-    au < wanted ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
+    au < testing ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
+    au < testing ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
 
   }
 
@@ -609,8 +609,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ngeo
 
-    au < wanted ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
-    au < wanted ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
+    au < testing ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
+    au < testing ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
 
   }
 
@@ -622,8 +622,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ni
 
-    au < wanted ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
-    au < wanted ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
+    au < testing ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
+    au < testing ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
 
   }
 
