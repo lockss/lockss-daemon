@@ -5,7 +5,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.40.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -29,8 +33,8 @@
       <string>1,&quot;^https?://(%s|%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, api_url_host, graphics_url_host</string>
       <string>4,&quot;^(%s|%s|%s)&quot;, base_url, api_url, graphics_url</string>
       <string>1,&quot;^(%s|%s)content/%s\?format=lockss&amp;volume=%s$&quot;, base_url, api_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[0-9]+$&quot;, api_url, publisher_id, journal_id, volume_name</string>
-      <string>2,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(\?format=rss|/trial)$&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(/trial|/citations|\?format=rss)$&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
       <string>1,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
       <string>1,&quot;^%s&quot;, graphics_url</string>
     </list>

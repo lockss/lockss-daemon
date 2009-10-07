@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.6 2009-06-22 18:42:06 greya Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.7 2009-10-07 23:37:21 thib_gc Exp $
  */ 
 
 /*
@@ -45,30 +45,42 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
+        // Filter out <div id="footer">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "footer")),
         // Filter out <div id="top-ad-alignment">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "top-ad-alignment")),
+        // Filter out <div id="top-ad">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "top-ad")),
         // Filter out <div id="ident">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "ident")),         
+        // Filter out <div id="ad">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "ad")),
         // Filter out <div id="vertical-ad">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
-                                                                         "vertical-ad")),
-        // Filter out <div class="right-col-download">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "right-col-download")),                                                               
+                                                                          "vertical-ad")),
+//        // Filter out <div class="right-col-download">...</div>
+//        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+//                                                                         "class",
+//                                                                         "right-col-download")),                                                               
         // Filter out <div id="cart-navbar">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "cart-navbar")),   
-         // Filter out <div class="heading-macfix article-access-options">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "heading-macfix article-access-options")),                                                                           
+//         // Filter out <div class="heading-macfix article-access-options">...</div>
+//        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+//                                                                         "class",
+//                                                                         "heading-macfix article-access-options")),                                                                           
           // Filter out <div id="baynote-recommendations">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",

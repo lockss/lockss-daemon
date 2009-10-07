@@ -3,7 +3,6 @@ package org.lockss.plugin.ingenta;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.lockss.filter.pdf.DocumentTransform;
 import org.lockss.filter.pdf.OutputDocumentTransform;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.PdfDocument;

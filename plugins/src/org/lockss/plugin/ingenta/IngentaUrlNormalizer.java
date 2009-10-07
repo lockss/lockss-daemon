@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaUrlNormalizer.java,v 1.1 2009-06-30 21:56:18 thib_gc Exp $
+ * $Id: IngentaUrlNormalizer.java,v 1.2 2009-10-07 23:37:22 thib_gc Exp $
  */
 
 /*
@@ -32,14 +32,61 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import org.lockss.daemon.PluginException;
+import org.apache.commons.lang.StringUtils;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-
 
 public class IngentaUrlNormalizer implements UrlNormalizer {
 
+  /**
+   * <p>The key for the non-standard configuration parameters
+   * 'api_url', of type URL.</p>
+   */
+  protected static final String KEY_API_URL = "api_url";
+  
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    return url.replaceFirst(";jsessionid=[^?]+", "");
+
+    /*
+     * An Ingenta URL may have a jsessionid in it, which begins with
+     * ";jesessionid=" and ends at the question mark for the URL query
+     * or at the end of the URL if there is none.
+     */
+    
+    if (url.contains(";jsessionid=")) {
+      url = url.replaceFirst(";jsessionid=[^?]+", "");
+    }
+    
+    /*
+     * The IngentaConnect platform is organized somewhat like an
+     * interactive process, whereby one must click through to articles
+     * and obtain one-time or short-lived URLs on the way. An
+     * alternate access mechanism is in place for robots and
+     * crawlers; see the HTML link extractor for that. Now the URL
+     * normalizer needs to intercept requests for the gateway URLs
+     * that lead to one-time or short-lived URLs and translate them
+     * into the URL that is actually extracted and preserved.
+     */
+
+    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    final String INFOBIKE_PATH = "search/download?pub=infobike%3a%2f%2f";
+    String baseUrlPrefix = baseUrl + INFOBIKE_PATH;
+    if (StringUtils.containsIgnoreCase(url, INFOBIKE_PATH)) {
+      // First remove the exitTargetId
+      if (url.contains("&exitTargetId=")) {
+        url = url.replaceFirst("&exitTargetId=[^&]+", "");
+      }
+      
+      // Then massage the path to include slashes and "?crawler=true"
+      String path = url.substring(baseUrlPrefix.length());
+      path = path.replaceAll("%2[Ff]", "/");
+      path = path.replaceFirst("&mimetype=", "?crawler=true&mimetype=");
+      
+      // Now construct the URL
+      String apiUrl = au.getConfiguration().get(KEY_API_URL);
+      url = apiUrl + "content/" + path;
+    }
+    
+    return url;
   }
 
 }
