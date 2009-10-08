@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.12 2009-09-25 23:51:54 thib_gc Exp $
+# $Id: tdb.py,v 1.13 2009-10-08 00:01:21 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -79,7 +79,6 @@ class ChainedMap(Map):
                 if k2 not in map1: map1[k2] = dict()
                 self._recursive_update(map1[k2], v2)
             else: map1[k2] = v2
-        
 
 class Publisher(Map):
 

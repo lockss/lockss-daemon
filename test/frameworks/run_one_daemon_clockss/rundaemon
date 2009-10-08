@@ -71,7 +71,7 @@ echo running at `date`
 # for large caches, need to pass "-ms4m -mx64m" to java
 #java org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
 if [ -z "$jdb" ]; then
- java -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+ java -mx800m $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
  echo $! >dpid
  wait `cat dpid`
  echo stopped with status $? at `date`

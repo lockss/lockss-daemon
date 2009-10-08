@@ -1,5 +1,5 @@
 /*
- * $Id: PdfLinkExtractor.java,v 1.1 2007-03-13 01:14:54 thib_gc Exp $
+ * $Id: PdfLinkExtractor.java,v 1.2 2009-10-08 00:01:21 thib_gc Exp $
  */
 
 /*
@@ -95,6 +95,7 @@ public class PdfLinkExtractor implements LinkExtractor {
     PageTransform pageTransform = new OutputAllLinks(srcUrl, cb);
     DocumentTransform documentTransform = new TransformEachPage(pageTransform);
     documentTransform.transform(pdfDocument);
+    pdfDocument.close();
   }
 
   private static final Logger logger = Logger.getLogger("PdfLinkExtractor");
