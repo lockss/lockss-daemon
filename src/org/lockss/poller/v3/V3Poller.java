@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.98 2009-06-23 06:19:34 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.99 2009-10-08 02:10:15 tlipkis Exp $
  */
 
 /*
@@ -1300,17 +1300,17 @@ public class V3Poller extends BasePoll {
 	break;
       case BlockTally.RESULT_LOST:
 	tallyStatus.addDisagreedUrl(url);
-	log.debug("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
+	log.debug2("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
 	requestRepair(url, tally.getDisagreeVoters());
 	break;
       case BlockTally.RESULT_LOST_EXTRA_BLOCK:
-	log.debug("Lost tally" + vMsg + ": Removing " + url +
-		  " in poll " + getKey());
+	log.debug2("Lost tally" + vMsg + ": Removing " + url +
+		   " in poll " + getKey());
 	deleteBlock(url);
 	break;
       case BlockTally.RESULT_LOST_MISSING_BLOCK:
-	log.info("Lost tally. Requesting repair for missing block: " +
-		 url + " in poll " + getKey());
+	log.debug2("Lost tally. Requesting repair for missing block: " +
+		   url + " in poll " + getKey());
 	tallyStatus.addDisagreedUrl(url);
 	String missingURL = tally.getMissingBlockUrl();
 	requestRepair(missingURL,
@@ -1881,8 +1881,8 @@ public class V3Poller extends BasePoll {
   }
 
   void removeParticipant(PeerIdentity id, int peerStatus, PollNak nak) {
-    log.debug("Removing voter " + id + " from poll " +
-              pollerState.getPollKey());
+    log.debug2("Removing voter " + id + " from poll " +
+	       pollerState.getPollKey());
     try {
       synchronized(theParticipants) {
         ParticipantUserData ud = getParticipant(id);
