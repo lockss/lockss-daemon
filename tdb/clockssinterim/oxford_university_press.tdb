@@ -7,6 +7,83 @@
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   implicit < status ; year ; name ; param[volume_name] >
 
+  {
+
+    title <
+      name = The Quarterly Journal of Mathematics
+    >
+
+    param[base_url] = http://qjmath.oxfordjournals.org/
+
+    au < ready ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
+    au < ready ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
+
+  }
+
+  {
+
+    title <
+      name = The Quarterly Journal of Mechanics and Applied Mathematics
+    >
+
+    param[base_url] = http://qjmam.oxfordjournals.org/
+
+    au < ready ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
+    au < ready ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
+
+  }
+  
+  {
+
+    title <
+      name = Nucleic Acids Symposium Series
+    >
+
+    param[base_url] = http://nass.oxfordjournals.org/
+
+    au < ready ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 >
+    au < ready ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 >
+
+  }
+
+  {
+
+    title <
+      name = Occupational Medicine
+    >
+
+    param[base_url] = http://occmed.oxfordjournals.org/
+
+    au < ready ; 2008 ; Occupational Medicine Volume 58 ; 58 >
+    au < ready ; 2009 ; Occupational Medicine Volume 59 ; 59 >
+
+  }
+  
+  {
+
+    title <
+      name = The Oral History Review
+    >
+
+    param[base_url] = http://ohr.oxfordjournals.org/
+
+    au < ready ; 2008 ; The Oral History Review Volume 35 ; 35 >
+    au < ready ; 2009 ; The Oral History Review Volume 36 ; 36 >
+
+  }
+
+  {
+
+    title <
+      name = Oxford Art Journal
+    >
+
+    param[base_url] = http://oaj.oxfordjournals.org/
+
+    au < ready ; 2008 ; Oxford Art Journal Volume 31 ; 31 >
+    au < ready ; 2009 ; Oxford Art Journal Volume 32 ; 32 >
+
+  }
 
   {
 
