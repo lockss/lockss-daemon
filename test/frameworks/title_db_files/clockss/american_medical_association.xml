@@ -48,6 +48,70 @@
  
  <property name="org.lockss.title">
 
+  <property name="ArchivesofDermatology136">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 136" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="136" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofDermatology137">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 137" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="137" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofDermatology138">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 138" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="138" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
+  <property name="ArchivesofDermatology139">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Archives of Dermatology" />
+   <property name="title" value="Archives of Dermatology Volume 139" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://archderm.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="139" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
+  </property>
+
   <property name="ArchivesofDermatology140">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Dermatology" />
