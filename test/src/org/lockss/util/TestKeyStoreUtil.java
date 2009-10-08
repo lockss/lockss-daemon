@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyStoreUtil.java,v 1.2 2009-06-19 08:29:48 tlipkis Exp $
+ * $Id: TestKeyStoreUtil.java,v 1.3 2009-10-08 02:12:03 tlipkis Exp $
  */
 
 /*
@@ -71,13 +71,14 @@ public class TestKeyStoreUtil extends LockssTestCase {
   }
 
   public void testRandomString() throws Exception {
-    String r10 = KeyStoreUtil.randomString(10);
-    String r1024 = KeyStoreUtil.randomString(1024);
+    SecureRandom rng = MiscTestUtil.getSecureRandom();
+    String r10 = KeyStoreUtil.randomString(10, rng);
+    String r1024 = KeyStoreUtil.randomString(1024, rng);
     assertEquals(10, r10.length());
     assertEquals(1024, r1024.length());
     assertCharsBetween(32, 126, r10);
     assertCharsBetween(32, 126, r1024);
-    assertNotEquals(r1024, KeyStoreUtil.randomString(1024));
+    assertNotEquals(r1024, KeyStoreUtil.randomString(1024, rng));
   }
 
   public void testDefaults() throws Exception {

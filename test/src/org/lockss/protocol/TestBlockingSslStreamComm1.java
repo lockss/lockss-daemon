@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.10 2009-09-03 00:53:39 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.11 2009-10-08 02:12:03 tlipkis Exp $
  */
 
 /*
@@ -135,9 +135,9 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
   // both sides require client auth, connections in either direction are
   // successful only if the certificate is verified.
 
-  void createKeystores(File dir, List hostnames)
-      throws NoSuchAlgorithmException, NoSuchProviderException {
-    KeyStoreUtil.createPLNKeyStores(null, dir, hostnames);
+  void createKeystores(File dir, List hostnames) throws Exception {
+    KeyStoreUtil.createPLNKeyStores(null, dir, hostnames,
+				    MiscTestUtil.getSecureRandom());
   }
 
   public void testClientAuth(Properties comm1Props,

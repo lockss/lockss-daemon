@@ -1,5 +1,5 @@
 /*
- * $Id: MiscTestUtil.java,v 1.2 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: MiscTestUtil.java,v 1.3 2009-10-08 02:12:03 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+import java.security.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -61,4 +62,22 @@ public class MiscTestUtil {
     }
     return false;
   }
+
+  // Return a SecureRandom that doesn't depend on kernel randomness.  Some
+  // tests create a large number of SecureRandom instances; if each one
+  // generates its own seed the kernel's entropy pool (/dev/random) gets
+  // exhausted and the tests block while more is collected.  This can take
+  // several minutes on an otherwise idle machine.
+
+  public static SecureRandom getSecureRandom()
+      throws NoSuchAlgorithmException, NoSuchProviderException {
+    LockssRandom lrand = new LockssRandom();
+    byte[] rseed = new byte[4];
+    lrand.nextBytes(rseed);
+    SecureRandom rng = SecureRandom.getInstance("SHA1PRNG", "SUN");
+    rng.setSeed(rseed);
+    return rng;
+  }
+
+
 }

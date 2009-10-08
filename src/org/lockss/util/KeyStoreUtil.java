@@ -1,5 +1,5 @@
 /*
- * $Id: KeyStoreUtil.java,v 1.5 2009-09-03 00:53:39 tlipkis Exp $
+ * $Id: KeyStoreUtil.java,v 1.6 2009-10-08 02:12:03 tlipkis Exp $
  */
 
 /*
@@ -95,14 +95,18 @@ public class KeyStoreUtil {
   public static final long DEFAULT_EXPIRE_IN = 5 * Constants.YEAR / 1000;
 
 
-  public static String randomString(int len)
-      throws NoSuchAlgorithmException,
-	     NoSuchProviderException {
-    RandomManager rmgr = LockssDaemon.getLockssDaemon().getRandomManager();
-    SecureRandom rng = rmgr.getSecureRandom();
+  public static String randomString(int len, SecureRandom rng) {
     return org.apache.commons.lang.RandomStringUtils.random(len, 32, 126,
 							    false, false,
 							    null, rng);
+  }
+
+  public static String randomString(int len, LockssDaemon daemon)
+      throws NoSuchAlgorithmException,
+	     NoSuchProviderException {
+    RandomManager rmgr = daemon.getRandomManager();
+    SecureRandom rng = rmgr.getSecureRandom();
+    return randomString(len, rng);
   }
 
   public static KeyStore createKeyStore(Properties p)
@@ -212,8 +216,9 @@ public class KeyStoreUtil {
   // code.  Should be integrated with methods above.
   public static void createPLNKeyStores(File inDir,
 					File outDir,
-					List hostlist)
-      throws NoSuchAlgorithmException, NoSuchProviderException {
+					List hostlist,
+					SecureRandom rng)
+      throws Exception {
 
     String[] hosts = (String[])hostlist.toArray(new String[0]);
     KeyStore[] ks = new KeyStore[hosts.length];
@@ -227,14 +232,23 @@ public class KeyStoreUtil {
      * Read in any existing keystores and their passwords
      */
     for (int i = 0; i < hosts.length; i++) {
-      readKeyStore(hosts, ks, pwd, i, inDir);
+      Exception err = null;
+      try {
+	readKeyStore(hosts, ks, pwd, i, inDir);
+      } catch (Exception e) {
+	log.error("Couldn't read keystore for " + hosts[i], e);
+	err = e;
+      }
+      if (err != null) {
+	throw err;
+      }
     }
     /*
      * Create a password for each machine's keystore
      */
     for (int i = 0; i < hosts.length; i++) {
       if (pwd[i] == null) {
-	pwd[i] = randomString(20);
+	pwd[i] = randomString(20, rng);
       }
     }
     /*
@@ -285,7 +299,15 @@ public class KeyStoreUtil {
   private static String keyStoreType[] = { "JCEKS", "JKS" };
   private static String keyStoreSPI[]  = { "SunJCE", null };
 
-  public static KeyStore createKeystore(String domainName, String password) {
+  private static KeyStore createKeystore(String domainName, String password)
+      throws CertificateException,
+	     IOException,
+	     InvalidKeyException,
+	     KeyStoreException,
+	     NoSuchAlgorithmException,
+	     NoSuchProviderException,
+	     SignatureException,
+	     UnrecoverableKeyException {
     //  No KeyStore - make one.
     KeyStore ks = null;
     //  Will probably not work if JCEKS is not available
@@ -297,17 +319,19 @@ public class KeyStoreUtil {
 	  ks = KeyStore.getInstance(keyStoreType[i], keyStoreSPI[i]);
 	}
       } catch (KeyStoreException e) {
-	OUTdebug("KeyStore.getInstance(" + keyStoreType[i] + ") threw " + e);
+	log.debug("KeyStore.getInstance(" + keyStoreType[i] + ") threw " + e);
+	throw e;
       } catch (NoSuchProviderException e) {
-	OUTdebug("KeyStore.getInstance(" + keyStoreType[i] + ") threw " + e);
+	log.debug("KeyStore.getInstance(" + keyStoreType[i] + ") threw " + e);
+	throw e;
       }
       if (ks != null) {
-	OUTdebug("Using key store type " + keyStoreType[i]);
+	log.debug("Using key store type " + keyStoreType[i]);
 	break;
       }
     }
     if (ks == null) {
-      OUTerror("No key store available");
+      log.error("No key store available");
       return null;  // will fail subsequently
     }
     String keyStoreFile = domainName + ".jceks";
@@ -319,136 +343,125 @@ public class KeyStoreUtil {
   private static String keySuffix = ".key";
   private static String crtSuffix = ".crt";
   private static void initializeKeyStore(KeyStore keyStore,
-					 String domainName, String password) {
+					 String domainName, String password)
+      throws IOException,
+	     CertificateException,
+	     InvalidKeyException,
+	     SignatureException,
+	     NoSuchAlgorithmException,
+	     NoSuchProviderException,
+	     KeyStoreException,
+	     UnrecoverableKeyException {
     String keyAlias = domainName + keySuffix;
     String certAlias = domainName + crtSuffix;
     String keyStorePassword = domainName;
     String keyStoreFileName = domainName + ".jceks";
     File keyStoreFile = new File(keyStoreFileName);
     if (keyStoreFile.exists()) {
-      OUTdebug("Key store file " + keyStoreFileName + " exists");
-      return;
+      log.debug("Key store file " + keyStoreFileName + " exists");
+      throw new IOException("Key store file " + keyStoreFileName + " exists");
     }
     String keyAlgName = "RSA";
     String sigAlgName = "MD5WithRSA";
-    OUTdebug("About to create a CertAndKeyGen: " + keyAlgName + " " + sigAlgName);
+    log.debug("About to create a CertAndKeyGen: " + keyAlgName + " " + sigAlgName);
     CertAndKeyGen keypair;
     try {
       keypair = new CertAndKeyGen(keyAlgName, sigAlgName);
     } catch (NoSuchAlgorithmException e) {
-      OUTdebug("new CertAndKeyGen(" + keyAlgName + "," + sigAlgName +
+      log.debug("new CertAndKeyGen(" + keyAlgName + "," + sigAlgName +
 	       ") threw " + e);
-      return;
+      throw e;
     }
-    OUTdebug("About to generate a key pair");
+    log.debug("About to generate a key pair");
     try {
       keypair.generate(1024);
     } catch (InvalidKeyException e) {
-      OUTdebug("keypair.generate(1024) threw " + e);
-      return;
+      log.debug("keypair.generate(1024) threw " + e);
+      throw e;
     }
-    OUTdebug("About to get a PrivateKey");
+    log.debug("About to get a PrivateKey");
     PrivateKey privKey = keypair.getPrivateKey();
-    OUTdebug("MyKey: " + privKey.getAlgorithm() + " " +
-	     privKey.getFormat());
-    OUTdebug("About to get a self-signed certificate");
+    log.debug("MyKey: " + privKey.getAlgorithm() + " " +
+	      privKey.getFormat());
+    log.debug("About to get a self-signed certificate");
     X509Certificate[] chain = new X509Certificate[1];
-    try {
-      X500Name x500Name = new X500Name("CN=" + domainName + ", " +
-				       "OU=LOCKSS Team, O=Stanford, " +
-				       "L=Stanford, S=California, C=US");
-      chain[0] = keypair.getSelfCertificate(x500Name, 365*24*60*60);
-    } catch (IOException e) {
-      OUTdebug("new X500Name() threw " + e);
-      return;
-    } catch (CertificateException e) {
-      OUTdebug("keypair.getSelfCertificate() threw " + e);
-      return;
-    } catch (InvalidKeyException e) {
-      OUTdebug("keypair.getSelfCertificate() threw " + e);
-      return;
-    } catch (SignatureException e) {
-      OUTdebug("keypair.getSelfCertificate() threw " + e);
-      return;
-    } catch (NoSuchAlgorithmException e) {
-      OUTdebug("keypair.getSelfCertificate() threw " + e);
-      return;
-    } catch (NoSuchProviderException e) {
-      OUTdebug("keypair.getSelfCertificate() threw " + e);
-      return;
-    }
-    OUTdebug("Certificate: " + chain[0].toString());
-    OUTdebug("About to keyStore.load(null)");
+    X500Name x500Name = new X500Name("CN=" + domainName + ", " +
+				     "OU=LOCKSS Team, O=Stanford, " +
+				     "L=Stanford, S=California, C=US");
+    chain[0] = keypair.getSelfCertificate(x500Name, 365*24*60*60);
+    log.debug("Certificate: " + chain[0].toString());
+    log.debug("About to keyStore.load(null)");
     try {
       keyStore.load(null, keyStorePassword.toCharArray());
     } catch (IOException e) {
-      OUTdebug("keyStore.load() threw " + e);
-      return;
+      log.debug("keyStore.load() threw " + e);
+      throw e;
     } catch (CertificateException e) {
-      OUTdebug("keyStore.load() threw " + e);
-      return;
+      log.debug("keyStore.load() threw " + e);
+      throw e;
     } catch (NoSuchAlgorithmException e) {
-      OUTdebug("keyStore.load() threw " + e);
-      return;
+      log.debug("keyStore.load() threw " + e);
+      throw e;
     }
-    OUTdebug("About to store " + certAlias + " in key store");
+    log.debug("About to store " + certAlias + " in key store");
     try {
       keyStore.setCertificateEntry(certAlias, chain[0]);
     } catch (KeyStoreException e) {
-      OUTdebug("keyStore.setCertificateEntry() threw " + e);
-      return;
+      log.debug("keyStore.setCertificateEntry() threw " + e);
+      throw e;
     }
-    OUTdebug("About to store " + keyAlias + " in key store");
+    log.debug("About to store " + keyAlias + " in key store");
     try {
       keyStore.setKeyEntry(keyAlias, privKey,
 			   password.toCharArray(), chain);
     } catch (KeyStoreException e) {
-      OUTdebug("keyStore.setKeyEntry() threw " + e);
-      return;
+      log.debug("keyStore.setKeyEntry() threw " + e);
+      throw e;
     }
-    try {
-      OUTdebug("About to getKeyEntry()");
-      Key myKey = keyStore.getKey(keyAlias,
-				  password.toCharArray());
-      OUTdebug("MyKey: " + myKey.getAlgorithm() + " " +
-	       myKey.getFormat());
-    } catch (Throwable e) {
-      OUTerror("getKeyEntry() threw: " + e);
-    }
-    OUTdebug("Done storing");
+    log.debug("About to getKeyEntry()");
+    Key myKey = keyStore.getKey(keyAlias,
+				password.toCharArray());
+    log.debug("MyKey: " + myKey.getAlgorithm() + " " +
+	      myKey.getFormat());
+    log.debug("Done storing");
   }
 
   public static java.security.cert.Certificate
-    getCertificate(String[] domainNames, KeyStore[] keyStores, int i) {
+    getCertificate(String[] domainNames, KeyStore[] keyStores, int i)
+      throws KeyStoreException {
     java.security.cert.Certificate ret;
     String alias = domainNames[i] + crtSuffix;
     try {
       ret = keyStores[i].getCertificate(alias);
+      log.debug(alias + ": " + ret.getType());
+      return ret;
     } catch (KeyStoreException e) {
-      OUTerror("keyStore.getCertificate(" + alias + ") threw: " + e);
-      return null;
+      log.error("keyStore.getCertificate(" + alias + ") threw: " + e);
+      throw e;
     }
-    OUTdebug(alias + ": " + ret.getType());
-    return ret;
   }
 
   public static void addCertificates(String[] domainNames,
 				     KeyStore keyStore,
 				     java.security.cert.Certificate[] certs,
-				     int i) {
+				     int i) throws KeyStoreException {
+    KeyStoreException err = null;
     for (int j = 0; j <domainNames.length; j++) {
       if (j != i) {
 	String alias = domainNames[j] + crtSuffix;
-	OUTdebug("About to store " + alias + " in keyStore for " +
+	log.debug("About to store " + alias + " in keyStore for " +
 		 domainNames[i]);
 	try {
 	  keyStore.setCertificateEntry(alias, certs[j]);
 	} catch (KeyStoreException e) {
-	  OUTdebug("keyStore.setCertificateEntry(" + alias + "," +
+	  log.debug("keyStore.setCertificateEntry(" + alias + "," +
 		   domainNames[i] + ") threw " + e);
-	  return;
+	  err = e;
 	}
       }
+    }
+    if (err != null) {
+      throw err;
     }
   }
 
@@ -456,7 +469,8 @@ public class KeyStoreUtil {
 				    KeyStore kss[],
 				    String passwords[],
 				    int i,
-				    File outDir) {
+				    File outDir)
+      throws FileNotFoundException {
     String domainName = domainNames[i];
     KeyStore ks = kss[i];
     String password = passwords[i];
@@ -464,29 +478,29 @@ public class KeyStoreUtil {
       return;
     }
     if (!outDir.exists() || !outDir.isDirectory()) {
-      OUTerror("No directory " + outDir);
-      return;
+      log.error("No directory " + outDir);
+      throw new FileNotFoundException("No directory " + outDir);
     }
     File keyStoreFile = new File(outDir, domainName + ".jceks");
     File passwordFile = new File(outDir, domainName + ".pass");
     String keyStorePassword = domainName;
     try {
-      OUTdebug("Writing KeyStore to " + keyStoreFile);
+      log.debug("Writing KeyStore to " + keyStoreFile);
       FileOutputStream fos = new FileOutputStream(keyStoreFile);
       ks.store(fos, keyStorePassword.toCharArray());
       fos.close();
-      OUTdebug("Done storing KeyStore in " + keyStoreFile);
+      log.debug("Done storing KeyStore in " + keyStoreFile);
     } catch (Exception e) {
-      OUTdebug("ks.store(" + keyStoreFile + ") threw " + e);
+      log.debug("ks.store(" + keyStoreFile + ") threw " + e);
     }
     try {
-      OUTdebug("Writing Password to " + passwordFile);
+      log.debug("Writing Password to " + passwordFile);
       PrintWriter pw = new PrintWriter(new FileOutputStream(passwordFile));
       pw.print(password);
       pw.close();
-      OUTdebug("Done storing Password in " + passwordFile);
+      log.debug("Done storing Password in " + passwordFile);
     } catch (Exception e) {
-      OUTdebug("ks.store(" + passwordFile + ") threw " + e);
+      log.debug("ks.store(" + passwordFile + ") threw " + e);
     }
   }
 
@@ -494,7 +508,7 @@ public class KeyStoreUtil {
 				   KeyStore kss[],
 				   String passwords[],
 				   int i,
-				   File inDir) {
+				   File inDir) throws Exception {
     String domainName = domainNames[i];
     if (domainName == null) {
       return;
@@ -504,36 +518,36 @@ public class KeyStoreUtil {
     String password = null;
     try {
       if (!passwordFile.exists() || !passwordFile.isFile()) {
-	OUTdebug("No password file " + passwordFile);
+	log.debug("No password file " + passwordFile);
 	return;
       }
-      OUTdebug("Trying to read password from " + passwordFile);
+      log.debug("Trying to read password from " + passwordFile);
       FileInputStream fis = new FileInputStream(passwordFile);
       byte[] buf = new byte[fis.available()];
       int l = fis.read(buf);
       if (l != buf.length) {
-	OUTdebug("password read short " + l + " != " + buf.length);
+	log.debug("password read short " + l + " != " + buf.length);
 	return;
       }
       password = new String(buf);
-    } catch (Exception e) {
-      OUTdebug("Read password threw " + e);
-      return;
+    } catch (IOException e) {
+      log.debug("Read password threw " + e);
+      throw e;
     }
     KeyStore ks = null;
     try {
       ks = KeyStore.getInstance(keyStoreType[0], keyStoreSPI[0]);
-      OUTdebug("Trying to read KeyStore from " + keyStoreFile);
+      log.debug("Trying to read KeyStore from " + keyStoreFile);
       FileInputStream fis = new FileInputStream(keyStoreFile);
       ks.load(fis, domainName.toCharArray());
     } catch (Exception e) {
-      OUTdebug("ks.load(" + keyStoreFile + ") threw " + e);
-      return;
+      log.debug("ks.load(" + keyStoreFile + ") threw " + e);
+      throw e;
     }
     String keyStorePassword = domainName;
     passwords[i] = password;
     kss[i] = ks;
-    OUTdebug("KeyStore and password for " + domainName + " read");
+    log.debug("KeyStore and password for " + domainName + " read");
   }
 
   private static boolean verifyKeyStore(String domainNames[],
@@ -547,11 +561,11 @@ public class KeyStoreUtil {
       hasKey[j] = false;
       hasCert[j] = false;
     }
-    OUTdebug("start of key store verification for " + domainNames[i]);
+    log.debug("start of key store verification for " + domainNames[i]);
     try {
       for (Enumeration en = kss[i].aliases(); en.hasMoreElements(); ) {
         String alias = (String) en.nextElement();
-	OUTdebug("Next alias " + alias);
+	log.debug("Next alias " + alias);
 	int k = -1;
 	for (int j = 0; j < domainNames.length; j++) {
 	  if (alias.startsWith(domainNames[j])) {
@@ -559,45 +573,45 @@ public class KeyStoreUtil {
 	  }
 	}
 	if (k < 0) {
-	  OUTerror(alias + " not in domain names");
+	  log.error(alias + " not in domain names");
 	  return ret;
 	}
         if (kss[i].isCertificateEntry(alias)) {
-	  OUTdebug("About to Certificate");
+	  log.debug("About to Certificate");
           java.security.cert.Certificate cert = kss[i].getCertificate(alias);
           if (cert == null) {
-            OUTerror(alias + " null cert chain");
+            log.error(alias + " null cert chain");
 	    return ret;
 	  }
-	  OUTdebug("Cert for " + alias);
+	  log.debug("Cert for " + alias);
           hasCert[k] = true;
         } else if (kss[i].isKeyEntry(alias)) {
-	  OUTdebug("About to getKey");
+	  log.debug("About to getKey");
   	  Key privateKey = kss[i].getKey(alias, passwords[i].toCharArray());
 	  if (privateKey != null) {
-	    OUTdebug("Key for " + alias);
+	    log.debug("Key for " + alias);
 	    hasKey[k] = true;
 	  } else {
-	    OUTerror("No private key for " + alias);
+	    log.error("No private key for " + alias);
 	    return ret;
 	  }
         } else {
-  	  OUTerror(alias + " neither key nor cert");
+  	  log.error(alias + " neither key nor cert");
 	  return ret;
         }
       }
-      OUTdebug("end of key store verification for "+ domainNames[i]);
+      log.debug("end of key store verification for "+ domainNames[i]);
     } catch (Exception ex) {
-      OUTerror("listKeyStore() threw " + ex);
+      log.error("listKeyStore() threw " + ex);
       return ret;
     }
     if (!hasKey[i]) {
-      OUTdebug("no key for " + domainNames[i]);
+      log.debug("no key for " + domainNames[i]);
       return ret;
     }
     for (int j = 0; j < domainNames.length; j++) {
       if (!hasCert[j]) {
-	OUTdebug("no cert for " + domainNames[j]);
+	log.debug("no cert for " + domainNames[j]);
 	return ret;
       }
     }
@@ -609,39 +623,31 @@ public class KeyStoreUtil {
 				   KeyStore kss[],
 				   String passwords[],
 				   int i) {
-    OUTdebug("start of key store for " + domainNames[i]);
+    log.debug("start of key store for " + domainNames[i]);
     try {
       for (Enumeration en = kss[i].aliases(); en.hasMoreElements(); ) {
         String alias = (String) en.nextElement();
-	OUTdebug("Next alias " + alias);
+	log.debug("Next alias " + alias);
         if (kss[i].isCertificateEntry(alias)) {
-	  OUTdebug("About to Certificate");
+	  log.debug("About to Certificate");
           java.security.cert.Certificate cert = kss[i].getCertificate(alias);
           if (cert == null) {
-            OUTdebug(alias + " null cert chain");
+            log.debug(alias + " null cert chain");
           } else {
-            OUTdebug("Cert for " + alias + " is " + cert.toString());
+            log.debug("Cert for " + alias + " is " + cert.toString());
           }
         } else if (kss[i].isKeyEntry(alias)) {
-	  OUTdebug("About to getKey");
+	  log.debug("About to getKey");
   	  Key privateKey = kss[i].getKey(alias, passwords[i].toCharArray());
-  	  OUTdebug(alias + " key " + privateKey.getAlgorithm() +
+  	  log.debug(alias + " key " + privateKey.getAlgorithm() +
 		   "/" + privateKey.getFormat());
         } else {
-  	  OUTerror(alias + " neither key nor cert");
+  	  log.error(alias + " neither key nor cert");
         }
       }
-      OUTdebug("end of key store for "+ domainNames[i]);
+      log.debug("end of key store for "+ domainNames[i]);
     } catch (Exception ex) {
-      OUTerror("listKeyStore() threw " + ex);
+      log.error("listKeyStore() threw " + ex);
     }
-  }
-  private static void OUTdebug(String s) {
-    if (false)
-      System.err.println("debug:" + s);
-  }
-  private static void OUTerror(String s) {
-    if (true)
-      System.err.println("error: " + s);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: EditKeyStores.java,v 1.3 2009-08-09 07:39:47 tlipkis Exp $
+ * $Id: EditKeyStores.java,v 1.4 2009-10-08 02:12:03 tlipkis Exp $
  */
 
 /*
@@ -57,13 +57,20 @@ import sun.security.pkcs.PKCS10;
 import sun.security.provider.IdentityDatabase;
 import sun.security.provider.SystemSigner;
 
-import org.lockss.util.KeyStoreUtil;
+import org.lockss.util.*;
 
 /**
  * A tool to build key stores for V3 over SSL support in CLOCKSS
  */
 
 public class EditKeyStores {
+  protected static Logger log = Logger.getLogger("EditKeyStores");
+  
+  private static SecureRandom testOnlySecureRandom = null;
+
+  static void setTestOnlySecureRandom(SecureRandom rng) {
+    testOnlySecureRandom = rng;
+  }
 
   private static void usage() {
     System.out.println("Usage: [-i inputDir] [-o outputDir] host1 host2 ...");
@@ -74,6 +81,7 @@ public class EditKeyStores {
     String inDir = "/tmp/input";
     String outDir = "/tmp/output";
     List hostlist = new ArrayList();
+    boolean tflag = false;
 
     /*
      * Parse args
@@ -85,14 +93,20 @@ public class EditKeyStores {
     try {
       for (int ix = 0; ix < args.length; ix++) {
 	if (args[ix].startsWith("-")) {
+	  if ("-t".equals(args[ix])) {
+	    // testing - allows use of an rng that doesn't require kernel
+	    // randomness, and prevent error exit
+	    tflag = true;
+	    continue;
+	  }
 	  if ("-i".equals(args[ix])) {
 	    inDir = args[++ix];
-	    OUTdebug("Input directory " + inDir);
+	    log.debug("Input directory " + inDir);
 	    continue;
 	  }
 	  if ("-o".equals(args[ix])) {
 	    outDir = args[++ix];
-	    OUTdebug("Output directory " + outDir);
+	    log.debug("Output directory " + outDir);
 	    continue;
 	  }
 	  usage();
@@ -106,25 +120,29 @@ public class EditKeyStores {
     if (hostlist.isEmpty()) {
       usage();
     }
+    File outDirFile = new File(outDir);
+    if (!outDirFile.isDirectory()) {
+      outDirFile.mkdirs();
+    }
     try {
-      KeyStoreUtil.createPLNKeyStores(new File(inDir), new File(outDir),
-				      hostlist);
-    } catch (NoSuchAlgorithmException ex) {
-      OUTerror("createPLNKeyStores threw " + ex);
-      return;
-    } catch (NoSuchProviderException ex) {
-      OUTerror("createPLNKeyStores threw: " + ex);
-      return;
+      SecureRandom rng = tflag ? testOnlySecureRandom : getSecureRandom();
+      KeyStoreUtil.createPLNKeyStores(new File(inDir), outDirFile,
+				      hostlist, rng);
+      log.info("Keystores generated in " + outDirFile);
+    } catch (Exception e) {
+      log.error("Failed, keystores not generated: " + e.toString());
+      if (!tflag) {
+	System.exit(1);
+      }
     }
   }
 
-
-  private static void OUTdebug(String s) {
-    if (false)
-      System.err.println("debug:" + s);
-  }
-  private static void OUTerror(String s) {
-    if (true)
-      System.err.println("error: " + s);
+  static SecureRandom getSecureRandom() {
+    try {
+      return SecureRandom.getInstance("SHA1PRNG", "SUN");
+    } catch (Exception ex) {
+      log.error("Couldn't get SecureRandom: " + ex);
+      return null;
+    }
   }
 }
