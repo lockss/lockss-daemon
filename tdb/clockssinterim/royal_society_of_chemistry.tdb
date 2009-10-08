@@ -22,4 +22,52 @@
   
   }
 
+  {
+  
+    title <
+      name = Analytical Methods
+    >
+    
+    param[journal_code] = ay
+    
+    au < ready ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemical Communications
+    >
+    
+    param[journal_code] = cc
+    
+    au < ready ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
+    au < ready ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Chemical Society Reviews
+    >
+    
+    param[journal_code] = cs
+    
+    au < ready ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemistry Education Research and Practice
+    >
+    
+    param[journal_code] = rp
+    
+    au < ready ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+  
+  }  
 }
