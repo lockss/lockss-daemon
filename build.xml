@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.246 2009-09-24 03:11:28 tlipkis Exp $
+ $Id: build.xml,v 1.247 2009-10-08 02:09:38 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -274,6 +274,7 @@ Args:
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
+  <property name="javac.deprecation"       value="false" />
 
   <!-- jikes is too strict if deprecations and warnings are turned on -->
   <condition property="nowarn"  value="true">
@@ -281,11 +282,6 @@ Args:
   </condition>
   <condition property="javac.deprecation"  value="false">
    <equals arg1="${build.compiler}" arg2="jikes" />
-  </condition>
-  <condition property="javac.deprecation"  value="true">
-   <not>
-    <equals arg1="${build.compiler}" arg2="jikes" />
-   </not>
   </condition>
 
 
@@ -1589,7 +1585,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
    description="Run a tools class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
-    <java classname="${class}" fork="true">
+    <java classname="${class}" fork="true" failonerror="yes">
        <classpath refid="tools.test.run.classpath" />
        <arg line="${args}" />
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
