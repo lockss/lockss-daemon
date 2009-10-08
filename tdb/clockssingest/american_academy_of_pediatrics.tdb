@@ -54,6 +54,8 @@
     title <
       name = Pediatrics
     >
+
+comment[p123] = 500 error
     
     param[base_url] = http://pediatrics.aappublications.org/
     
@@ -73,7 +75,7 @@
     param[base_url] = http://pedsinreview.aappublications.org/
     
     au < manifest ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-    au < manifest ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+    au < testing ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
   
   }
 
