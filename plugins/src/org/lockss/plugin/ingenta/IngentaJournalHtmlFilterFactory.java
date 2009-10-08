@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.7 2009-10-07 23:37:21 thib_gc Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.8 2009-10-08 07:24:14 thib_gc Exp $
  */ 
 
 /*
@@ -69,10 +69,10 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                           "vertical-ad")),
-//        // Filter out <div class="right-col-download">...</div>
-//        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-//                                                                         "class",
-//                                                                         "right-col-download")),                                                               
+        // Filter out <div class="right-col-download">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "class",
+                                                                         "right-col-download")),                                                               
         // Filter out <div id="cart-navbar">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
@@ -81,11 +81,11 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
 //        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
 //                                                                         "class",
 //                                                                         "heading-macfix article-access-options")),                                                                           
-          // Filter out <div id="baynote-recommendations">...</div>
+        // Filter out <div id="baynote-recommendations">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "baynote-recommendations")),   
- 	};
+    };
     return new HtmlFilterInputStream(in,
                                      encoding,
                                      new HtmlCompoundTransform(transforms));
