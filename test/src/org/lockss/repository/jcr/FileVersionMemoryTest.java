@@ -38,7 +38,7 @@ import org.apache.jackrabbit.core.config.*;
 import org.apache.jackrabbit.core.data.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.v2.*;
-import org.lockss.repository.v2.RepositoryFile;
+import org.lockss.test.MockLockssDaemon;
 
 /**
  * @author edwardsb
@@ -72,6 +72,7 @@ public class FileVersionMemoryTest {
     IdentityManager idman;
     int i;
     InputStream istrContent;
+    MockLockssDaemon ld;
     Node nodeFVMT;
     Node nodeTest;
     int numNode;
@@ -98,6 +99,9 @@ public class FileVersionMemoryTest {
 
     nodeFVMT = m_nodeRoot.addNode("FileVersionMemoryTest");
     m_nodeRoot.save();
+    
+    // Since we're not running within a LockssDaemon, we can't get one.
+    JcrRepositoryHelperFactory.preconstructor(k_sizeMaxBuffer, idman, null);
 
     // Test.
     // Notice that there is exactly ONE RepositoryFile and exactly
@@ -108,7 +112,7 @@ public class FileVersionMemoryTest {
       m_nodeRoot.save();
       
       rfTest = new RepositoryFileImpl(m_session, nodeTest, 
-          k_stemFile, k_sizeMaxBuffer, k_urlDefault, idman);
+          k_stemFile, k_urlDefault);
       
       for (numVersion = 0; numVersion < k_maxVersion; numVersion++) {
         istrContent = new ByteArrayInputStream(arbyContent);

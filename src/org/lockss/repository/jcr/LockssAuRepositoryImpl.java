@@ -269,7 +269,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
         try {
           jrhf = JcrRepositoryHelperFactory.getSingleton();
           rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jrh.getSession(), 
-              m_jrh.getRootNode(), m_jrh.getDirectory().toString() + "/" + k_strWarcInitial , jrhf.getSizeWarcMax(), strUrl, jrhf.getIdentityManager());
+              m_jrh.getRootNode(), m_jrh.getDirectory().toString() + "/" + k_strWarcInitial , strUrl);
         } catch (FileNotFoundException e) {
           logger.error("File Not Found Exception: ", e);
           throw new LockssRepositoryException(e);
@@ -956,8 +956,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     try {
       jrhf = JcrRepositoryHelperFactory.getSingleton();
       rniNode = (RepositoryNodeImpl) RepositoryNodeImpl.constructor(m_jrh.getSession(), m_jrh.getRootNode(),
-          m_jrh.getDirectory().toString(), jrhf.getSizeWarcMax(), strUrl,
-          m_jrh.getIdentityManager());
+          m_jrh.getDirectory().toString() + "/" + k_strWarcInitial, strUrl);
       m_jrh.addRepositoryNode(strUrl, rniNode);
     } catch (FileNotFoundException e) {
       logger.error("In getNode", e);

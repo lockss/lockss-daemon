@@ -51,7 +51,7 @@ import junit.framework.TestCase;
  * @author edwardsb
  * 
  */
-public class TestRepositoryFileImpl extends TestCase {
+public class TestRepositoryFileImpl extends LockssTestCase {
 
   // Constants
   private static final String k_dirXml = "test/src/org/lockss/repository/jcr/TestRepository/";
@@ -79,13 +79,14 @@ public class TestRepositoryFileImpl extends TestCase {
 
   // Member variables
   private MockIdentityManager m_idman;
+  MockLockssDaemon m_ld;
   private Node m_nodeRoot;
   private RepositoryImpl m_repos;
   private Session m_session;
   
   protected void setUp() throws Exception {
     super.setUp();
-
+    
     RepositoryConfig repconfig;
 
     repconfig = RepositoryConfig.create(k_dirXml + k_nameXml,
@@ -96,11 +97,20 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot = m_session.getRootNode();
     
     m_idman = new MockIdentityManager();
+    
+    m_ld = getMockLockssDaemon();
+    m_ld.startDaemon();
+    
+    JcrRepositoryHelperFactory.preconstructor(k_sizeMaxBuffer, m_idman, m_ld);
   }
 
   protected void tearDown() throws Exception {
     DataStore ds;
+    
+    JcrRepositoryHelperFactory.reset();
 
+    m_ld.stopDaemon();
+    
     if (m_repos != null) {
       ds = m_repos.getDataStore();
       if (ds != null) {
@@ -152,16 +162,15 @@ public class TestRepositoryFileImpl extends TestCase {
     
     // Verify that no parameter may start as 'null'.
     try {
-      new RepositoryFileImpl(null, nodeConstructor, k_stemFile, 
-          k_sizeMaxBuffer, k_urlDefault, m_idman);
+      new RepositoryFileImpl(null, nodeConstructor, k_stemFile, k_urlDefault);
       fail("When the session is null, it should throw a " + 
-          "LockssRepositoryException. (five-parameter)");
+          "LockssRepositoryException. (four-parameter)");
     } catch (NullPointerException e) {
       // Pass.
     }
     
     try {
-      new RepositoryFileImpl(null, nodeConstructor, m_idman);
+      new RepositoryFileImpl(null, nodeConstructor);
       fail("When the session is null, it should throw a " + 
           "LockssRepositoryException. (two-parameter)");
     } catch (NullPointerException e) {
@@ -169,16 +178,15 @@ public class TestRepositoryFileImpl extends TestCase {
     }
     
     try {
-      new RepositoryFileImpl(m_session, null, k_stemFile, 
-          k_sizeMaxBuffer, k_urlDefault, m_idman);
+      new RepositoryFileImpl(m_session, null, k_stemFile, k_urlDefault);
       fail("When the node is null, it should throw a " + 
-          "LockssRepositoryException. (five-parameter)");
+          "LockssRepositoryException. (four-parameter)");
     } catch (NullPointerException e) {
       // Pass.
     }
     
     try {
-      new RepositoryFileImpl(m_session, null, m_idman);
+      new RepositoryFileImpl(m_session, null);
       fail("When the node is null, it should throw a " + 
           "LockssRepositoryException. (two-parameter)");
     } catch (NullPointerException e) {
@@ -186,26 +194,15 @@ public class TestRepositoryFileImpl extends TestCase {
     }
     
     try {
-      new RepositoryFileImpl(m_session, nodeConstructor, null, 
-          k_sizeMaxBuffer, k_urlDefault, m_idman);
+      new RepositoryFileImpl(m_session, nodeConstructor, null, k_urlDefault);
       fail("When the stem file is null, it should throw a " + 
-          "LockssRepositoryException.");
+          "LockssRepositoryException. (four-parameter)");
     } catch (NullPointerException e) {
       // Pass.
     }
 
     try {
-      new RepositoryFileImpl(m_session, nodeConstructor, k_stemFile, 
-          0, k_urlDefault, m_idman);
-      fail("When the sizeMax is not positive, it should throw a " + 
-          "LockssRepositoryException.");
-    } catch (LockssRepositoryException e) {
-      // Pass.
-    }
-
-    try {
-      new RepositoryFileImpl(m_session, nodeConstructor, k_stemFile, 
-          k_sizeMaxBuffer, null, m_idman);
+      new RepositoryFileImpl(m_session, nodeConstructor, k_stemFile, null);
       fail("When the URL is null, it should throw a " + 
           "LockssRepositoryException.");
     } catch (NullPointerException e) {
@@ -218,9 +215,8 @@ public class TestRepositoryFileImpl extends TestCase {
     // then running the two-parameter constructor, will get the original
     // node.
     rfConstructor1 = new RepositoryFileImpl(m_session, nodeConstructor,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
-    rfConstructor2 = new RepositoryFileImpl(m_session, nodeConstructor,
-        m_idman);
+        k_stemFile, k_urlDefault);
+    rfConstructor2 = new RepositoryFileImpl(m_session, nodeConstructor);
     
     assertEquals(rfConstructor1, rfConstructor2);
   }
@@ -239,7 +235,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
     
     rfCreateNewVersion = new RepositoryFileImpl(m_session, nodeCreateNewVersion,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     arrfvCreated = new RepositoryFileVersion[k_numTestVersions];
     for (ver = 0; ver < k_numTestVersions; ver++) {
@@ -268,8 +264,7 @@ public class TestRepositoryFileImpl extends TestCase {
     
     // Insert before a version in the middle.
     rfCreateNewVersionBefore = new RepositoryFileImpl(m_session, 
-        nodeCreateNewVersionBefore, k_stemFile, k_sizeMaxBuffer, 
-        k_urlDefault, m_idman);
+        nodeCreateNewVersionBefore, k_stemFile, k_urlDefault);
     
     arrfvCreated = new RepositoryFileVersion[4];
     for (ver = 0; ver < 4; ver++) {
@@ -287,8 +282,7 @@ public class TestRepositoryFileImpl extends TestCase {
         
     // Insert before the very first version.
     rfCreateNewVersionBefore = new RepositoryFileImpl(m_session, 
-        nodeCreateNewVersionBefore, k_stemFile, k_sizeMaxBuffer, 
-        k_urlDefault, m_idman);
+        nodeCreateNewVersionBefore, k_stemFile, k_urlDefault);
     
     arrfvCreated = new RepositoryFileVersion[4];
     for (ver = 0; ver < 4; ver++) {
@@ -317,7 +311,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
 
     rfiDelete = new RepositoryFileImpl(m_session, nodeDelete,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+      k_stemFile, k_urlDefault);
 
     // When the code has no preferred version, delete() should throw
     // an exception.
@@ -372,7 +366,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Construct and populate the Repository Node.
     nodePeerIdSet = m_nodeRoot.addNode("testGetAgreeingPeerIdSet");
     rfPeerIdSet = new RepositoryFileImpl(m_session, nodePeerIdSet, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     rfPeerIdSet.setAgreeingPeerIdSet(ppisSource);
     
     // Test.
@@ -404,7 +398,7 @@ public class TestRepositoryFileImpl extends TestCase {
     istrContent = new ByteArrayInputStream(arbyContent);
     
     rfGetChildCount = new RepositoryFileImpl(m_session, nodeGetChildCount, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     // Required for 'getChildCount'.
     rfvGetChildCount = rfGetChildCount.createNewVersion();
     rfvGetChildCount.setInputStream(istrContent);
@@ -449,7 +443,7 @@ public class TestRepositoryFileImpl extends TestCase {
     arrfvVersions = new RepositoryFileVersion[k_numTestVersions];
     
     rfGetContentSize = new RepositoryFileImpl(m_session, nodeGetContentSize,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     for (ver = 0; ver < k_numTestVersions; ver++) {
       arrfvVersions[ver] = rfGetContentSize.createNewVersion();
@@ -514,7 +508,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Construct rfDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rfDeleted = new RepositoryFileImpl(m_session, nodeDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     rfvDeleted = rfDeleted.createNewVersion();
     rfvDeleted.setInputStream(istrContent);
     rfvDeleted.commit();
@@ -524,7 +518,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Construct rfNotDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rfNotDeleted = new RepositoryFileImpl(m_session, nodeNotDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     rfvNotDeleted = rfNotDeleted.createNewVersion();
     rfvNotDeleted.setInputStream(istrContent);
     rfvNotDeleted.commit();
@@ -602,7 +596,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Construct rfDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rfDeleted = new RepositoryFileImpl(m_session, nodeDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     rfvDeleted = rfDeleted.createNewVersion();
     rfvDeleted.setInputStream(istrContent);
     rfvDeleted.commit();
@@ -612,7 +606,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Construct rfNotDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rfNotDeleted = new RepositoryFileImpl(m_session, nodeNotDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     rfvNotDeleted = rfNotDeleted.createNewVersion();
     rfvNotDeleted.setInputStream(istrContent);
     rfvNotDeleted.commit();
@@ -681,15 +675,13 @@ public class TestRepositoryFileImpl extends TestCase {
       url = sbUrl.toString();
       
       rfGetNodeUrl = new RepositoryFileImpl(m_session, 
-          nodeGetNodeUrl, k_stemFile, k_sizeMaxBuffer, url, 
-          m_idman);
+          nodeGetNodeUrl, k_stemFile, url);
       
       assertEquals(url, rfGetNodeUrl.getNodeUrl());
     }
     
     // And verify that we get the last URL when we restart...
-    rfGetNodeUrl = new RepositoryFileImpl(m_session, nodeGetNodeUrl,
-        m_idman);
+    rfGetNodeUrl = new RepositoryFileImpl(m_session, nodeGetNodeUrl);
     assertEquals(url, rfGetNodeUrl.getNodeUrl());
   }
 
@@ -711,7 +703,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
     
     rfPreferredVersion = new RepositoryFileImpl(m_session, nodePreferredVersion,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     arbyContent = new byte[1];
     arbyContent[0] = 33;
@@ -737,7 +729,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
     
     rfPreferredVersion = new RepositoryFileImpl(m_session, nodePreferredVersion,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // If no versions have been added, then return null.
     assertEquals(null, rfPreferredVersion.getPreferredVersion());
@@ -780,7 +772,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
 
     rfGetProperties = new RepositoryFileImpl(m_session, nodeGetProperties,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // Create properties.
     propsGetProperties1 = new Properties();
@@ -830,8 +822,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
     
     rfGetTreeContentSize = new RepositoryFileImpl(m_session, 
-        nodeGetTreeContentSize, k_stemFile, k_sizeMaxBuffer, k_urlDefault,
-        m_idman);
+        nodeGetTreeContentSize, k_stemFile, k_urlDefault);
       
     // Check that when no versions are set, that the tree content size is 0.
     assertEquals(0, rfGetTreeContentSize.getTreeContentSize(null, true, true));
@@ -886,7 +877,7 @@ public class TestRepositoryFileImpl extends TestCase {
     
     nodeHasContent = m_nodeRoot.addNode("testHasContent");
     rfHasContent = new RepositoryFileImpl(m_session, nodeHasContent,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // Test the RepositoryFile before it has content.
     assertFalse(rfHasContent.hasContent());
@@ -915,7 +906,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
 
     rfiIsDeleted = new RepositoryFileImpl(m_session, nodeIsDeleted,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
 
     // When the code has no preferred version, isDeleted() should 
     // return false.
@@ -961,7 +952,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Generate the sets of versions...
     nodeListVersions = m_nodeRoot.addNode("testListVersions");
     rfListVersions = new RepositoryFileImpl(m_session, nodeListVersions, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // Generate real versions that won't be part of the final
     // rfvGoodVersion...
@@ -971,7 +962,7 @@ public class TestRepositoryFileImpl extends TestCase {
       istrContent = new ByteArrayInputStream(arbyContent);
       
       rfvBadVersion = new RepositoryFileVersionHarnessImpl(m_session, nodeListVersions,
-          k_stemFile, rfListVersions, m_idman);
+          k_stemFile, rfListVersions);
       rfvBadVersion.setInputStream(istrContent);
       rfvBadVersion.commit();
       arrfvBadVersions[i] = rfvBadVersion;
@@ -1045,7 +1036,7 @@ public class TestRepositoryFileImpl extends TestCase {
     
     nodeTestMove = m_nodeRoot.addNode("testMove");
     rfTestMove = new RepositoryFileImpl(m_session, nodeTestMove, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // Create two nodes with random text.
     strText1 = createRandomText(256);
@@ -1090,8 +1081,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
 
     rfAgreeingPeerIDSet = new RepositoryFileImpl(m_session,
-        nodeAgreeingPeerIDSet, k_stemFile, k_sizeMaxBuffer, k_urlDefault,
-        m_idman);
+        nodeAgreeingPeerIDSet, k_stemFile, k_urlDefault);
 
     // Try setting the peer id set with null.
     rfAgreeingPeerIDSet.setAgreeingPeerIdSet(null);
@@ -1121,9 +1111,9 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
     
     rfiTrue = new RepositoryFileImpl(m_session, nodeSetPreferredVersion1, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     rfiFalse = new RepositoryFileImpl(m_session, nodeSetPreferredVersion2, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     arbyContent = new byte[1];
     arbyContent[0] = 45;
@@ -1141,8 +1131,7 @@ public class TestRepositoryFileImpl extends TestCase {
     // Test: setPreferredVersion should reject a version that is not 
     // of the same file (even if it is committed).
     rfviFalse = new RepositoryFileVersionImpl(m_session, nodeSetPreferredVersion2,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, rfiFalse,
-        k_sizeDeferredStream, m_idman);
+        k_stemFile, k_urlDefault, rfiFalse, k_sizeDeferredStream);
 
     isContent = new ByteArrayInputStream(arbyContent);
     rfviFalse.setInputStream(isContent);
@@ -1197,7 +1186,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
 
     rfNewVersionsAreEmpty = new RepositoryFileImpl(m_session, nodeNewVersionsAreEmpty,
-        k_stemFile, 100000, "http://www.example.com/my-file.html", m_idman);
+        k_stemFile, "http://www.example.com/my-file.html");
     rfvhNVAE1 = rfNewVersionsAreEmpty.createNewVersion();
 
     // Create properties.
@@ -1261,7 +1250,7 @@ public class TestRepositoryFileImpl extends TestCase {
     m_nodeRoot.save();
 
     rfiUndelete = new RepositoryFileImpl(m_session, nodeUndelete,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
 
     // When the code has no preferred version, undelete() should throw
     // an exception.

@@ -57,10 +57,8 @@ public abstract class JcrRepositoryBase {
     new StringObjectTransformer();
   
   // Member variables
-  protected IdentityManager m_idman;    // TODO: Remove.  Use the one in JcrRepositoryHelperFactory
   protected Node m_node;
   protected Session m_session;          
-  protected long m_sizeWarcMax;         // TODO: Remove.  Use the one in JcrRepositoryHelperFactory
   protected String m_stemFile;  // The filename, without the 5-digit suffix.
   protected String m_url;
 
@@ -70,32 +68,22 @@ public abstract class JcrRepositoryBase {
    * @param session            The current JCR session
    * @param node               The JCR node that contains the database portion
    * @param stemFile           The location to put .WARC files
-   * @param sizeWarcMax        How large a .WARC file should be before the next is created.
    * @param url                The associated URL
-   * @param idman              Identity of a LOCKSS cache.
    * @throws LockssRepositoryException
    */
-  public JcrRepositoryBase(Session session, Node node, String stemFile,
-      long sizeWarcMax, String url, IdentityManager idman)
+  public JcrRepositoryBase(Session session, Node node, String stemFile, String url)
       throws LockssRepositoryException {
     try {
       testIfNull(session, "session");
       testIfNull(node, "node");
       testIfNull(stemFile, "stemFile");
       testIfNull(url, "url");
-      testIfNull(idman, "idman");
-      if (sizeWarcMax < 1) {
-        throw new LockssRepositoryException(
-            "sizeMax must be strictly positive.");
-      }
+
       m_stemFile = stemFile;
-      m_sizeWarcMax = sizeWarcMax;
       m_url = url;
-      m_idman = idman;
       
       constructorShared(session, node);
       
-      m_node.setProperty(k_propSizeMax, sizeWarcMax);
       m_node.setProperty(k_propStemFile, stemFile);
       m_node.setProperty(k_propUrl, m_url);
       m_session.save();
@@ -111,19 +99,16 @@ public abstract class JcrRepositoryBase {
    * 
    * @param session       The current JCR session
    * @param node          The JCR node that contains the database portion of the data
-   * @param idman         Identity of a LOCKSS cache.
    * @throws LockssRepositoryException
    */
-  protected JcrRepositoryBase(Session session, Node node,
-      IdentityManager idman) throws LockssRepositoryException {
+  protected JcrRepositoryBase(Session session, Node node) throws LockssRepositoryException {
     Property propStemFile;
     Property propSizeMax;
     Property propURL;
     try {
       testIfNull(session, "session");
       testIfNull(node, "node");
-      testIfNull(idman, "idman");
-      m_idman = idman;
+
       constructorShared(session, node);
       if (m_node.hasProperty(k_propStemFile)) {
         propStemFile = m_node.getProperty(k_propStemFile);
@@ -133,15 +118,7 @@ public abstract class JcrRepositoryBase {
         throw new LockssRepositoryException(
             "The stem file was not found on this node.");
       }
-      if (m_node.hasProperty(k_propSizeMax)) {
-        propSizeMax = m_node.getProperty(k_propSizeMax);
-        m_sizeWarcMax = propSizeMax.getLong();
-      } else {
-        logger
-            .error("The maximum size for a file was not found on this node.");
-        throw new LockssRepositoryException(
-            "The maximum size was not found on this node.");
-      }
+
       if (m_node.hasProperty(k_propUrl)) {
         propURL = m_node.getProperty(k_propUrl);
         m_url = propURL.getString();

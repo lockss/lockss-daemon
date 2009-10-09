@@ -96,20 +96,18 @@ implements RepositoryFileVersion {
    * @param session  -- BUG: This should come from JcrRepositoryHelperFactory
    * @param node
    * @param stemFile -- the filename, without the five-digit extension.
-   * @param sizeMax -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param url -- BUG: The URL should come from <code>rfiParent</code>
    * @param rfiParent -- The parent of this node.
    * @param sizeDeferredStream -- How many bytes, before a deferred stream becomes a file?
-   * @param idman -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * 
    * @throws LockssRepositoryException
    * @throws FileNotFoundException
    */
   protected RepositoryFileVersionImpl(Session session, Node node, String stemFile,
-      long sizeMax, String url, RepositoryFileImpl rfiParent, 
-      int sizeDeferredStream, IdentityManager idman)
+      String url, RepositoryFileImpl rfiParent, 
+      int sizeDeferredStream)
       throws LockssRepositoryException, FileNotFoundException {
-    super(session, node, stemFile, sizeMax, url, idman);
+    super(session, node, stemFile, url);
     
     testIfNull(rfiParent, "rfiParent");
         
@@ -144,13 +142,11 @@ implements RepositoryFileVersion {
    * @param session  -- BUG: Should come from <code>JcrRepositoryHelperFactory</code>.
    * @param node
    * @param rfiParent
-   * @param idman  -- BUG: Should come from <code>JcrRepositoryHelperFactory</code>
    * @throws LockssRepositoryException
    */
-  protected RepositoryFileVersionImpl(Session session, Node node, RepositoryFileImpl rfiParent,
-          IdentityManager idman) 
+  protected RepositoryFileVersionImpl(Session session, Node node, RepositoryFileImpl rfiParent) 
       throws LockssRepositoryException {
-    super(session, node, idman);
+    super(session, node);
     
     Property propStemFile;
     Property propFileContentParameterized;
@@ -230,9 +226,6 @@ implements RepositoryFileVersion {
         logger.info("Editing size not found.  Using default value of 0.");
         m_sizeEditing = 0;
       }
-
-      propSizeMax = getProperty(k_propSizeMax, true);
-      m_sizeWarcMax = propSizeMax.getLong();
 
       propUrl = getProperty(k_propUrl, true);
       m_url = propUrl.getString();
@@ -784,13 +777,21 @@ implements RepositoryFileVersion {
       throws FileNotFoundException, LockssRepositoryException {
     File fileParentDirectory;
     FileOutputStream fosWarc;
+    JcrRepositoryHelperFactory jrhf;
+    long sizeWarcMax;
     String strFilename;
+    
+    jrhf = JcrRepositoryHelperFactory.getSingleton();
+    if (jrhf == null) {
+      logger.error("Please call JcrRepositoryHelperFactory.preconstructor before you call this method.");
+      throw new LockssRepositoryException("Please call JcrRepositoryHelperFactory.preconstructor before you call this method.");
+    }
+    sizeWarcMax = jrhf.getSizeWarcMax();
 
-//  Determine whether the current, parameterized file has enough
-//  space for our new material.
+    // Find the last file that has space...
     while (m_fileContentParameterized == null || 
-        (m_fileContentParameterized.length() + m_sizeEditing > 
-        m_sizeWarcMax)) {
+        (m_fileContentParameterized.exists() && 
+            (m_fileContentParameterized.length() + m_sizeEditing > sizeWarcMax))) {
       m_lFileIndex++;
       strFilename = createPermanentFileName(m_stemFile, m_lFileIndex);      
       m_fileContentParameterized = new File(strFilename);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestJcrRepositoryHelper.java,v 1.1.2.1 2009-10-03 01:49:12 edwardsb1 Exp $
+ * $Id: TestJcrRepositoryHelper.java,v 1.1.2.2 2009-10-09 00:21:03 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -210,8 +210,7 @@ public class TestJcrRepositoryHelper extends LockssTestCase {
     
     assertNull(jhrTest.getRepositoryNode("foobar"));
     
-    rn = new RepositoryNodeImpl(m_session, m_nodeRoot, k_stemFile, k_sizeWarcMax, 
-        k_strUrl, m_idman);
+    rn = new RepositoryNodeImpl(m_session, m_nodeRoot, k_stemFile, k_strUrl);
     jhrTest.addRepositoryNode("foobar", rn);
     
     assertNotNull(jhrTest.getRepositoryNode("foobar"));

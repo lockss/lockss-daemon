@@ -49,7 +49,7 @@ import junit.framework.*;
  * @author edwardsb
  *
  */
-public class TestRepositoryFileVersionImpl extends TestCase {
+public class TestRepositoryFileVersionImpl extends LockssTestCase {
   
   // Constants
   private static final String k_nameXml = "LargeDatastore.xml";
@@ -63,6 +63,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
   private static final String k_strFileNonexisting = "NonexistingFile";
   private static final String k_urlDefault = "http://www.example.com/example.html";
   private static final String k_username = "username";
+  private static final long k_warcMax = 10000;
   
   // These constants can be anything, as long as they are not the same, and not
   // the same length.
@@ -79,6 +80,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
   
   // Member variables
   private IdentityManager m_idman;
+  private MockLockssDaemon m_ld;
   private List<Event> m_lievents;
   private Node m_nodeRoot;
   private RepositoryImpl m_repos;
@@ -93,7 +95,6 @@ public class TestRepositoryFileVersionImpl extends TestCase {
   protected void setUp() throws Exception {
     super.setUp();
     
-    IdentityManager idman;
     RepositoryConfig repconfig;
 
     repconfig = RepositoryConfig.create(k_dirXml + k_nameXml,
@@ -102,11 +103,14 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_session = m_repos.login(new SimpleCredentials(k_username, k_password
         .toCharArray()));
     m_nodeRoot = m_session.getRootNode();
-    idman = new MockIdentityManager();
-    m_rfiParent = new RepositoryFileImpl(m_session, m_nodeRoot, k_stemFile, 
-        k_sizeBuffer, k_urlDefault, idman);
+    m_rfiParent = new RepositoryFileImpl(m_session, m_nodeRoot, k_stemFile, k_urlDefault);
     
     m_idman = new MockIdentityManager();
+    
+    m_ld = getMockLockssDaemon();
+    m_ld.startDaemon();
+    
+    JcrRepositoryHelperFactory.preconstructor(k_warcMax, m_idman, m_ld);
   }
 
   /**
@@ -115,6 +119,10 @@ public class TestRepositoryFileVersionImpl extends TestCase {
    */
   protected void tearDown() throws Exception {
     DataStore ds;
+    
+    JcrRepositoryHelperFactory.reset();
+    
+    m_ld.stopDaemon();
 
     if (m_repos != null) {
       ds = m_repos.getDataStore();
@@ -174,59 +182,59 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_session.refresh(true);
     nodeConstructor = m_nodeRoot.getNode("testConstructor");
     
-    // Set each of the three possible parameters to null. Each should cause an
+    // Set each of the possible parameters to null. Each should cause an
     // exception.
     try {
       rfvhTestNull = new RepositoryFileVersionHarnessImpl(null, nodeConstructor,
-          k_stemFile, m_rfiParent, m_idman);
-      fail("testConstructor(3): null for session");
+          k_stemFile, m_rfiParent);
+      fail("testConstructor(4): null for session");
     } catch (NullPointerException e) {
       // Pass.
     }
 
     try {
       rfvhTestNull = new RepositoryFileVersionHarnessImpl(m_session, null, k_stemFile,
-          m_rfiParent, m_idman);
-      fail("testConstructor(3): null for node");
+          m_rfiParent);
+      fail("testConstructor(4): null for node");
     } catch (NullPointerException e) {
       // Pass.
     }
 
     try {
       rfvhTestNull = new RepositoryFileVersionHarnessImpl(m_session, 
-          nodeConstructor, null, m_rfiParent, m_idman);
-      fail("testConstructor(3): null for file");
+          nodeConstructor, null, m_rfiParent);
+      fail("testConstructor(4): null for file");
     } catch (NullPointerException e) {
       // Pass.
     }
 
     try {
       rfvhTestNull = new RepositoryFileVersionHarnessImpl(null, nodeConstructor, 
-          m_rfiParent, m_idman);
-      fail("testConstructor(2): null for session");
+          m_rfiParent);
+      fail("testConstructor(3): null for session");
     } catch (NullPointerException e) {
       // Pass.
     }
 
     try {
       rfvhTestNull = new RepositoryFileVersionHarnessImpl(m_session, null,
-          m_rfiParent, m_idman);
-      fail("testConstructor(2): null for node");
+          m_rfiParent);
+      fail("testConstructor(3): null for node");
     } catch (NullPointerException e) {
       // Pass.
     }
 
-    // This test verifies that the two-element constructor gets information
-    // correctly from the three-element constructor.
+    // This test verifies that the three-element constructor gets information
+    // correctly from the four-element constructor.
 
     arbyMessage = (k_strContentCommit + "constructor").getBytes();
     rfvhOrig = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeConstructor, k_stemFile, m_rfiParent, m_idman);
+        nodeConstructor, k_stemFile, m_rfiParent);
     rfvhOrig.setContent(arbyMessage);
     rfvhOrig.commit();
 
     rfvhOrig2 = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeConstructor, m_rfiParent, m_idman);
+        nodeConstructor, m_rfiParent);
     arbyResult = rfvhOrig2.getContent();
     compareByteArrays(arbyMessage, arbyResult);
         
@@ -237,7 +245,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     assertEquals(nodeConstructor.getUUID(), nodeConstructor2.getUUID());    
                 
     rfvhOrig2 = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeConstructor2, m_rfiParent, m_idman);
+        nodeConstructor2, m_rfiParent);
     arbyResult = rfvhOrig2.getContent();
     compareByteArrays(arbyMessage, arbyResult);
     
@@ -256,12 +264,12 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     nodeConstructor2 = m_nodeRoot.addNode("testConstructor2");
     
     rfvhOrig = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeConstructor2, k_stemFile, m_rfiParent, m_idman);
+        nodeConstructor2, k_stemFile, m_rfiParent);
     rfvhOrig.setContent(arbyMessage);
     // Notice: No commit.
                 
     rfvhOrig2 = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeConstructor2, m_rfiParent, m_idman);
+        nodeConstructor2, m_rfiParent);
     rfvhOrig2.setContent(arbyMessage);
     rfvhOrig2.commit();  // This line is the real test.  It would generate an
                        // exception if it didn't know that the node wasn't
@@ -286,7 +294,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhCommit = new RepositoryFileVersionHarnessImpl(m_session, nodeCommit, k_stemFile,
-        m_rfiParent, m_idman);
+        m_rfiParent);
 
     // Notice that no content goes in...
     assertFalse(rfvhCommit.hasContent());
@@ -307,7 +315,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     arbyContent[0] = 5;
     
     rfvhCommit = new RepositoryFileVersionHarnessImpl(m_session, nodeCommit, 
-        k_stemFile, m_rfiParent, m_idman);
+        k_stemFile, m_rfiParent);
     rfvhCommit.setContent(arbyContent);
     
     // The first commit should cast no exception.
@@ -334,7 +342,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhDfelete = new RepositoryFileVersionHarnessImpl(m_session, nodeDelete, 
-        k_stemFile, m_rfiParent, m_idman);
+        k_stemFile, m_rfiParent);
 
     // A RepositoryFileVersionHarness should start undeleted.
     assertFalse(rfvhDfelete.isDeleted());
@@ -364,7 +372,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhDiscard = new RepositoryFileVersionHarnessImpl(m_session, nodeDiscard,
-        k_stemFile, m_rfiParent, m_idman);
+        k_stemFile, m_rfiParent);
 
     // Set information in the node, then roll back.
     rfvhDiscard.setContent((k_strContentCommit + "testDiscard-2").getBytes());
@@ -384,7 +392,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhDiscard2 = new RepositoryFileVersionHarnessImpl(m_session, nodeDiscard2,
-        k_stemFile, m_rfiParent, m_idman);
+        k_stemFile, m_rfiParent);
 
     // Add content -- but don't commit.
     rfvhDiscard2.setContent((k_strContentCommit + "testDiscard-3").getBytes());
@@ -395,7 +403,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     
     // Test that discard() after a commit() causes an exception.
     rfvhDiscard = new RepositoryFileVersionHarnessImpl(m_session, nodeDiscard, 
-        k_stemFile, m_rfiParent, m_idman);
+        k_stemFile, m_rfiParent);
     rfvhDiscard.setContent((k_strContentCommit + "testDiscard-3").getBytes());
     rfvhDiscard.commit();
     
@@ -427,7 +435,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     // First: verify that we can save and remove an empty string.
     arbyContent = new byte[0];
     rfvhContent = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeContent, k_stemFile, m_rfiParent, m_idman);
+        nodeContent, k_stemFile, m_rfiParent);
     rfvhContent.setContent(arbyContent);
     rfvhContent.commit();
     arbyResult = rfvhContent.getContent();
@@ -445,7 +453,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
       m_nodeRoot.save();
 
       rfvhContent = new RepositoryFileVersionHarnessImpl(m_session, 
-          nodeContent, k_stemFile, m_rfiParent, m_idman);
+          nodeContent, k_stemFile, m_rfiParent);
       rfvhContent.setContent(arbyContent);
       rfvhContent.commit();
       arbyResult = rfvhContent.getContent();
@@ -474,7 +482,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
         sbContent.append("*");
       }
       rfvhContentSize = new RepositoryFileVersionHarnessImpl(m_session, 
-          nodeContentSize, k_stemFile, m_rfiParent, m_idman);
+          nodeContentSize, k_stemFile, m_rfiParent);
       rfvhContentSize.setContent(sbContent.toString().getBytes());
       rfvhContentSize.commit();
       assertEquals(sizeTest, rfvhContentSize.getContentSize());
@@ -482,7 +490,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
 
     // Now, test getting content size with commit and deletion...
     rfvhContentSize = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeContentSize, k_stemFile, m_rfiParent, m_idman);
+        nodeContentSize, k_stemFile, m_rfiParent);
     rfvhContentSize.setContent(k_strContentCommit.getBytes());
     rfvhContentSize.commit();
     sizeTest = rfvhContentSize.getContentSize();
@@ -496,7 +504,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
 
     // Test against discard -- this should remove the content. 
     rfvhContentSize = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeContentSize, k_stemFile, m_rfiParent, m_idman);
+        nodeContentSize, k_stemFile, m_rfiParent);
     rfvhContentSize.setContent(k_strContentDiscard.getBytes());
     rfvhContentSize.discard();
     sizeTest = rfvhContentSize.getContentSize();
@@ -505,12 +513,12 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     // Generate content, load with the 3-value
     // constructor, and verify that we get our content size.
     rfvhContentSize = new RepositoryFileVersionHarnessImpl(m_session,
-        nodeContentSize, k_stemFile, m_rfiParent, m_idman);
+        nodeContentSize, k_stemFile, m_rfiParent);
     rfvhContentSize.setContent(k_strContentCommit.getBytes());
     rfvhContentSize.commit();
     
     rfvhContentSize2 = new RepositoryFileVersionHarnessImpl(m_session,
-        nodeContentSize, m_rfiParent, m_idman);
+        nodeContentSize, m_rfiParent);
     assertEquals(rfvhContentSize.getContentSize(), 
         rfvhContentSize2.getContentSize());
     
@@ -527,7 +535,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhGetInputStream = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeGetInputStream, k_stemFile, m_rfiParent, m_idman);
+        nodeGetInputStream, k_stemFile, m_rfiParent);
 
     // Set the content
     strContent = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -553,7 +561,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhGetProperties = new RepositoryFileVersionHarnessImpl(m_session,
-        nodeGetProperties, k_stemFile, m_rfiParent, m_idman);
+        nodeGetProperties, k_stemFile, m_rfiParent);
     
     // Create simple content.
     arbyContent = new byte[3];
@@ -595,7 +603,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhHasContent = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeHasContent, k_stemFile, m_rfiParent, m_idman);
+        nodeHasContent, k_stemFile, m_rfiParent);
 
     // Verify that an unset node has no content.
     assertFalse(rfvhHasContent.hasContent());
@@ -635,7 +643,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhIsDeleted = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeIsDeleted, k_stemFile, m_rfiParent, m_idman);
+        nodeIsDeleted, k_stemFile, m_rfiParent);
 
     // Verify that the node doesn't start out deleted.
     assertFalse(rfvhIsDeleted.isDeleted());
@@ -666,7 +674,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
     
     rfvhMove = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeMove, k_stemFile, m_rfiParent, m_idman);
+        nodeMove, k_stemFile, m_rfiParent);
     
     // Put some text in the node.
     rfvhMove.setContent(k_arbyTestMoveText);
@@ -699,7 +707,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhSetContent = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeSetContent, k_stemFile, m_rfiParent, m_idman);
+        nodeSetContent, k_stemFile, m_rfiParent);
 
     // Setting the content with null should cause a NullPointerException.
     try {
@@ -722,7 +730,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhSetInputStream = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeSetInputStream, k_stemFile, m_rfiParent, m_idman);
+        nodeSetInputStream, k_stemFile, m_rfiParent);
 
     // Setting the input stream with null should cause a NullPointerException.
     try {
@@ -739,7 +747,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     istrContent = new ByteArrayInputStream(arbyContent);
     
     rfvhSetInputStream = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeSetInputStream, k_stemFile, m_rfiParent, m_idman);
+        nodeSetInputStream, k_stemFile, m_rfiParent);
     rfvhSetInputStream.setInputStream(istrContent);
     rfvhSetInputStream.commit();
     
@@ -768,7 +776,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhSetProperties = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeSetProperties, k_stemFile, m_rfiParent, m_idman);
+        nodeSetProperties, k_stemFile, m_rfiParent);
 
     // Setting the properties with a null value is not okay.
     try {
@@ -814,7 +822,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhStemFile = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeStemFile, k_stemFileAbsolute, m_rfiParent, m_idman);
+        nodeStemFile, k_stemFileAbsolute, m_rfiParent);
 
     arbyContent = new byte[1];
     arbyContent[0] = 55;
@@ -838,7 +846,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     m_nodeRoot.save();
 
     rfvhUndelete = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeUndelete, k_stemFile, m_rfiParent, m_idman);
+        nodeUndelete, k_stemFile, m_rfiParent);
 
     // A RepositoryFileVersionHarness should start undeleted.
     assertFalse(rfvhUndelete.isDeleted());
@@ -885,7 +893,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
     arbyMessage = (k_strContentCommit + "constructor").getBytes();
 
     rfvhNonexisting = new RepositoryFileVersionHarnessImpl(m_session, 
-        nodeConstructor, stemNonexisting, m_rfiParent, m_idman);
+        nodeConstructor, stemNonexisting, m_rfiParent);
     rfvhNonexisting.setContent(arbyMessage);
     rfvhNonexisting.commit();
 
@@ -939,9 +947,7 @@ public class TestRepositoryFileVersionImpl extends TestCase {
           rfvhMultipleFiles = new RepositoryFileVersionHarnessImpl(m_session, 
             nodeMultipleFiles,
             stemMultipleFiles, 
-            10000,
-            m_rfiParent,
-            m_idman);
+            m_rfiParent);
           rfvhMultipleFiles.setContent(arbyTestData);
           rfvhMultipleFiles.commit();
       }
@@ -1101,8 +1107,7 @@ loop:
           Thread.sleep(ms_random.nextInt(100));
           
           rfTest = new RepositoryFileVersionImpl(m_session, nodeTestThread, 
-              k_stemFile, k_sizeBuffer, k_urlDefault, m_rfiParent,
-              k_sizeDeferredStream, m_idman);
+              k_stemFile, k_urlDefault, m_rfiParent, k_sizeDeferredStream);
           
           // Create some random content.
           arbyTest = new byte[k_sizeBuffer];        

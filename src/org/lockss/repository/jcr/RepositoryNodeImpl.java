@@ -81,15 +81,12 @@ RepositoryNode  {
    * @param session  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param node
    * @param stemFile
-   * @param sizeWarcMax  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param url
-   * @param idman -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @throws LockssRepositoryException
    */
-  protected RepositoryNodeImpl(Session session, Node node, String stemFile,
-      long sizeWarcMax, String url, IdentityManager idman) 
+  protected RepositoryNodeImpl(Session session, Node node, String stemFile, String url) 
       throws LockssRepositoryException {
-    super(session, node, stemFile, sizeWarcMax, url, idman);
+    super(session, node, stemFile, url);
     
     try {
       m_node.setProperty(k_propIsFile, false);
@@ -109,11 +106,10 @@ RepositoryNode  {
    * 
    * @param session  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param node
-   * @param idman  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    */
-  protected RepositoryNodeImpl(Session session, Node node, IdentityManager idman) 
+  protected RepositoryNodeImpl(Session session, Node node) 
       throws LockssRepositoryException {
-    super(session, node, idman);
+    super(session, node);
     
     invalidateTreeSize();
   }
@@ -128,14 +124,12 @@ RepositoryNode  {
    *
    * TODO: Verify that all fields are available after the constructor is done.
    * 
-   * @param session  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
+   * @param session  -- BUG: This should come from <code>JcrRepositoryHelper</code>
    * @param node
-   * @param idman  -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @return The RepositoryNode that you're looking for.
    * @throws LockssRepositoryException
    */
-  public static RepositoryNode constructor(Session session, Node node, 
-      IdentityManager idman)
+  public static RepositoryNode constructor(Session session, Node node)
       throws LockssRepositoryException {
     Property propIsFile;
     RepositoryNode nodeReturn = null;
@@ -145,9 +139,9 @@ RepositoryNode  {
         propIsFile = node.getProperty(k_propIsFile);
         
         if (propIsFile.getBoolean()) {
-          nodeReturn = new RepositoryFileImpl(session, node, idman);
+          nodeReturn = new RepositoryFileImpl(session, node);
         } else {
-          nodeReturn = new RepositoryNodeImpl(session, node, idman);
+          nodeReturn = new RepositoryNodeImpl(session, node);
         }
       } else {
         logger.debug3("constructor: k_propIsFile was null. Returning null.");
@@ -166,16 +160,13 @@ RepositoryNode  {
    * @param session -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param node
    * @param stemFile
-   * @param sizeWarcMax -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @param url
-   * @param idman -- BUG: This should come from <code>JcrRepositoryHelperFactory</code>
    * @return A new RepositoryNode
    * @throws LockssRepositoryException
    * @throws FileNotFoundException
    */
   public static RepositoryNode constructor(Session session, Node node,
-      String stemFile, long sizeWarcMax, String url, 
-      IdentityManager idman)
+      String stemFile, String url)
       throws LockssRepositoryException, FileNotFoundException {
     Property propIsFile;
     RepositoryNode nodeReturn = null;
@@ -185,13 +176,13 @@ RepositoryNode  {
         propIsFile = node.getProperty(k_propIsFile);
         
         if (propIsFile.getBoolean()) {
-          nodeReturn = new RepositoryFileImpl(session, node, stemFile, sizeWarcMax, url, idman);
+          nodeReturn = new RepositoryFileImpl(session, node, stemFile, url);
         } else {
-          nodeReturn = new RepositoryNodeImpl(session, node, stemFile, sizeWarcMax, url, idman);
+          nodeReturn = new RepositoryNodeImpl(session, node, stemFile, url);
         }
       } else {
         logger.debug3("constructor: k_propIsFile was null.  Constructing a new node.");
-        nodeReturn = new RepositoryNodeImpl(session, node, stemFile, sizeWarcMax, url, idman);
+        nodeReturn = new RepositoryNodeImpl(session, node, stemFile, url);
       }
     } catch (RepositoryException e) {
       logger.error("constructor: " + e.getMessage());
@@ -304,12 +295,11 @@ RepositoryNode  {
     
     try {
       if (node.hasProperty(k_propIsFile)) {
-        return new RepositoryFileImpl(m_session, node, m_idman);
+        return new RepositoryFileImpl(m_session, node);
       } 
       
       // The node doesn't have the right property.
-      return new RepositoryFileImpl(m_session, node, m_stemFile, 
-          m_sizeWarcMax, strUrl,  m_idman);
+      return new RepositoryFileImpl(m_session, node, m_stemFile, strUrl);
     } catch (FileNotFoundException e) {
       logger.error("getFile: ", e);
       throw new LockssRepositoryException(e);
@@ -362,7 +352,7 @@ RepositoryNode  {
       ni = m_node.getNodes();
       while (ni.hasNext()) {
         nodeIter = ni.nextNode();
-        rnIter = constructor(m_session, nodeIter, m_idman);
+        rnIter = constructor(m_session, nodeIter);
         
         lirf.addAll(rnIter.getFileList(filter, includeDeleted));
       }
@@ -434,7 +424,7 @@ RepositoryNode  {
       ni = m_node.getNodes();
       while (ni.hasNext()) {
         nodeIter = ni.nextNode();
-        rnIter = constructor(m_session, nodeIter, m_idman);
+        rnIter = constructor(m_session, nodeIter);
         
         arrf = rnIter.getFiles(maxVersion, includeDeleted);
         
@@ -491,7 +481,7 @@ RepositoryNode  {
     } 
     
     try {
-      return constructor(m_session, node, m_stemFile, m_sizeWarcMax, urlNew, m_idman);
+      return constructor(m_session, node, m_stemFile, urlNew);
     } catch (FileNotFoundException e) {
       logger.error("getNode: " + e.getMessage());
       throw new LockssRepositoryException(e);      
@@ -599,7 +589,7 @@ RepositoryNode  {
           ni = m_node.getNodes();
           while (ni.hasNext()) {
             nodeIter = ni.nextNode();
-            rnIter = constructor(m_session, nodeIter, m_idman);
+            rnIter = constructor(m_session, nodeIter);
   
             if (rnIter != null) {
               lContentSize += rnIter.getTreeContentSize(filter, calcIfUnknown, 
@@ -710,8 +700,7 @@ RepositoryNode  {
     try {
       node = createNode(name);
       url = m_url + "/" + name;
-      rfNew = new RepositoryFileImpl(m_session, node, m_stemFile, 
-          m_sizeWarcMax, url, m_idman);
+      rfNew = new RepositoryFileImpl(m_session, node, m_stemFile, url);
     } catch (FileNotFoundException e) {
       logger.error("makeNewRepositoryFile: FileNotFoundException: " + e.getMessage());
       throw new LockssRepositoryException(e);      
@@ -737,8 +726,7 @@ RepositoryNode  {
     
     node = createNode(name);
     url = m_url + "/" + name;
-    rnNew = new RepositoryNodeImpl(m_session, node, m_stemFile, 
-        m_sizeWarcMax, url, m_idman);
+    rnNew = new RepositoryNodeImpl(m_session, node, m_stemFile, url);
     
     invalidateTreeSize();
     
@@ -772,7 +760,7 @@ RepositoryNode  {
       ni = m_node.getNodes();
       while (ni.hasNext()) {
         nodeIter = ni.nextNode();
-        rnIter = constructor(m_session, nodeIter, m_idman);
+        rnIter = constructor(m_session, nodeIter);
         rnIter.move(stemNewLocation);
       }
     } catch (RepositoryException e) {

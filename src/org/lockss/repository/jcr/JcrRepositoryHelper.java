@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelper.java,v 1.1.2.3 2009-10-03 01:49:13 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelper.java,v 1.1.2.4 2009-10-09 00:21:03 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -195,7 +195,7 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
     
     jrhf = JcrRepositoryHelperFactory.getSingleton();
     
-    rnReturn = RepositoryNodeImpl.constructor(m_session, m_nodeRoot, m_idman);
+    rnReturn = RepositoryNodeImpl.constructor(m_session, m_nodeRoot);
     
     if (rnReturn != null) {
       m_mapstrrnCache.put(key, rnReturn);

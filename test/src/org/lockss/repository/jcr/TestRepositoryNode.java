@@ -54,23 +54,29 @@ import junit.framework.*;
  * @author edwardsb
  *
  */
-public class TestRepositoryNode extends TestCase {
+public class TestRepositoryNode extends LockssTestCase {
   
   // Constants
   private static final String k_dirXml = "test/src/org/lockss/repository/jcr/TestRepository/";
   private static final int k_maxChildren = 50;
   private static final String k_nameXml = "LargeDatastore.xml";
+  private static final int k_numNodes = 10;
+  private static final int k_numFilesPerNode = 10;
+  private static final int k_numVersionsPerFile = 3;
   private static final String k_password = "password";
   private static final int k_sizeMaxBuffer = 10000;
   private static final String k_stemFile = "TestRepository/Content";
   private static final String k_urlDefault = "http://www.example.com/example.html";
   private static final String k_username = "username";
+  private static final int k_sizeFile = 1000;
+  
   
   // Static member variables
   private static Random ms_random = new Random();
 
   // Member variables
   private MockIdentityManager m_idman;
+  private MockLockssDaemon m_ld;
   private Node m_nodeRoot;
   private RepositoryImpl m_repos;
   private Session m_session;
@@ -92,6 +98,11 @@ public class TestRepositoryNode extends TestCase {
     m_nodeRoot = m_session.getRootNode();
     
     m_idman = new MockIdentityManager();
+    
+    m_ld = getMockLockssDaemon();
+    m_ld.startDaemon();
+    
+    JcrRepositoryHelperFactory.preconstructor(k_sizeFile, m_idman, m_ld);
   }
 
   
@@ -102,6 +113,8 @@ public class TestRepositoryNode extends TestCase {
   protected void tearDown() throws Exception {
     DataStore ds;
 
+    JcrRepositoryHelperFactory.reset();
+    
     if (m_repos != null) {
       ds = m_repos.getDataStore();
       if (ds != null) {
@@ -151,54 +164,42 @@ public class TestRepositoryNode extends TestCase {
     nodeConstructor = m_nodeRoot.addNode("testConstructor");
     
     try {
-      new RepositoryNodeImpl(null, nodeConstructor, k_stemFile, 
-          k_sizeMaxBuffer, k_urlDefault, m_idman);
+      new RepositoryNodeImpl(null, nodeConstructor, k_stemFile, k_urlDefault);
       fail("A null session should have caused a failure.");
     } catch (NullPointerException e) {
       // Pass.
     }
     
     try {
-      new RepositoryNodeImpl(m_session, null, k_stemFile, 
-          k_sizeMaxBuffer, k_urlDefault, m_idman);
+      new RepositoryNodeImpl(m_session, null, k_stemFile, k_urlDefault);
       fail("A null node should have caused a failure.");
     } catch (NullPointerException e) {
       // Pass.
     }
     
     try {
-      new RepositoryNodeImpl(m_session, nodeConstructor, null, 
-          k_sizeMaxBuffer, k_urlDefault, m_idman);
+      new RepositoryNodeImpl(m_session, nodeConstructor, null, k_urlDefault);
       fail("A null stem file should have caused a failure.");
     } catch (NullPointerException e) {
       // Pass.
     }
 
     try {
-      new RepositoryNodeImpl(m_session, nodeConstructor, k_stemFile, 
-          0, k_urlDefault, m_idman);
-      fail("A nonpositive size should have caused a failure.");
-    } catch (LockssRepositoryException e) {
-      // Pass.
-    }
-    
-    try {
-      new RepositoryNodeImpl(m_session, nodeConstructor, k_stemFile, 
-          k_sizeMaxBuffer, null, m_idman);
+      new RepositoryNodeImpl(m_session, nodeConstructor, k_stemFile, null);
       fail("A null URL should have caused a failure.");
     } catch (NullPointerException e) {
       // Pass.
     }
     
     try {
-      new RepositoryNodeImpl(null, nodeConstructor, m_idman);
+      new RepositoryNodeImpl(null, nodeConstructor);
       fail("A null session should have caused a failure. (2)");
     } catch (NullPointerException e) {
       // Pass
     }
     
     try {
-      new RepositoryNodeImpl(m_session, null, m_idman);
+      new RepositoryNodeImpl(m_session, null);
       fail("A null node should have caused a failure. (2)");
     } catch (NullPointerException e) {
       // Pass
@@ -207,9 +208,8 @@ public class TestRepositoryNode extends TestCase {
     // Verify that constructing a node, then reconstructing it via the 
     // 2-parameter constructor, generates the same node.
     rnConstructor = new RepositoryNodeImpl(m_session, nodeConstructor,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
-    rnDuplicate = new RepositoryNodeImpl(m_session, nodeConstructor,
-        m_idman);
+        k_stemFile, k_urlDefault);
+    rnDuplicate = new RepositoryNodeImpl(m_session, nodeConstructor);
     
     assertEquals(rnConstructor, rnDuplicate);
   }
@@ -232,18 +232,16 @@ public class TestRepositoryNode extends TestCase {
     
     // Verify that, given a file, we get back a file.
     rfOrig = new RepositoryFileImpl(m_session, 
-        nodeTestConstructor2File, k_stemFile, k_sizeMaxBuffer, k_urlDefault,
-        m_idman);
+        nodeTestConstructor2File, k_stemFile, k_urlDefault);
     rfTest = RepositoryNodeImpl.constructor(m_session, 
-        nodeTestConstructor2File, k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        nodeTestConstructor2File, k_stemFile, k_urlDefault);
     assertTrue(rfTest instanceof RepositoryFileImpl);
     
     // Verify that, given a node, we get back a node.
     rnOrig = new RepositoryNodeImpl(m_session, 
-        nodeTestConstructor2Node, k_stemFile, k_sizeMaxBuffer, k_urlDefault,
-        m_idman);
+        nodeTestConstructor2Node, k_stemFile, k_urlDefault);
     rfTest = RepositoryNodeImpl.constructor(m_session, 
-        nodeTestConstructor2Node, k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        nodeTestConstructor2Node, k_stemFile, k_urlDefault);
     assertTrue(rfTest instanceof RepositoryNodeImpl);    
   }
   
@@ -271,7 +269,7 @@ public class TestRepositoryNode extends TestCase {
     
     // Test for just one level of children nodes.
     rnGetChildCount = new RepositoryNodeImpl(m_session, nodeGetChildCount, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     assertEquals(0, rnGetChildCount.getChildCount());
     
@@ -287,7 +285,7 @@ public class TestRepositoryNode extends TestCase {
     nodeGetChildCount2 = m_nodeRoot.addNode("testGetChildCount2");
     m_nodeRoot.save();
     rnGetChildCount = new RepositoryNodeImpl(m_session, nodeGetChildCount2, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     arrnGetChildCountChildren = new RepositoryNode[k_maxChildren + 1];
     arrnGetChildCountChildren[0] = rnGetChildCount.makeNewRepositoryNode("root");
@@ -304,7 +302,7 @@ public class TestRepositoryNode extends TestCase {
     nodeGetChildCount3 = m_nodeRoot.addNode("testGetChildCount3");
     m_nodeRoot.save();
     rnGetChildCount = new RepositoryNodeImpl(m_session, nodeGetChildCount3, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     arrfGetChildCountFiles = new RepositoryFileImpl[k_maxChildren];
     
     for (numChildren = 1; numChildren <= k_maxChildren; numChildren++) {
@@ -338,11 +336,6 @@ public class TestRepositoryNode extends TestCase {
    * Test method for {@link org.lockss.repository.v2.RepositoryNode#getTreeContentSize(org.lockss.daemon.CachedUrlSetSpec, boolean, boolean)}.
    */
   
-  private static final int k_numNodes = 10;
-  private static final int k_numFilesPerNode = 10;
-  private static final int k_numVersionsPerFile = 3;
-  private static final int k_sizeFile = 1000;
-  
   public final void testGetTreeContentSizeCachedUrlSetSpecBooleanBoolean() throws Exception {
     byte [] arbyContent;
     int countFilePerNode;
@@ -367,7 +360,7 @@ public class TestRepositoryNode extends TestCase {
     }
     
     rnGetTreeContentSize = new RepositoryNodeImpl(m_session, nodeGetTreeContentSize, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     for (countNode = 0; countNode < k_numNodes; countNode++) {
       rnIter = rnGetTreeContentSize.makeNewRepositoryNode("Node" + countNode);
@@ -429,7 +422,7 @@ public class TestRepositoryNode extends TestCase {
     // Construct rnDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rnDeleted = new RepositoryNodeImpl(m_session, nodeDeleted,
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault+"/Deleted", m_idman);
+        k_stemFile, k_urlDefault+"/Deleted");
     rfDeleted = rnDeleted.makeNewRepositoryFile("test1");
     rfvDeleted = rfDeleted.createNewVersion();
     rfvDeleted.setInputStream(istrContent);
@@ -441,7 +434,7 @@ public class TestRepositoryNode extends TestCase {
     
     istrContent = new ByteArrayInputStream(arbyContent);
     rnNotDeleted = new RepositoryNodeImpl(m_session, nodeNotDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault+"/NotDeleted", m_idman);
+        k_stemFile, k_urlDefault+"/NotDeleted");
     rfNotDeleted = rnNotDeleted.makeNewRepositoryFile("test2");
     rfvNotDeleted = rfNotDeleted.createNewVersion();
     rfvNotDeleted.setInputStream(istrContent);
@@ -524,13 +517,13 @@ public class TestRepositoryNode extends TestCase {
       url = sbUrl.toString();
       
       rnGetNodeUrl = new RepositoryNodeImpl(m_session, 
-          nodeGetNodeUrl, k_stemFile, k_sizeMaxBuffer, url, m_idman);
+          nodeGetNodeUrl, k_stemFile, url);
       
       assertEquals(url, rnGetNodeUrl.getNodeUrl());
     }
     
     // And verify that we get the last URL when we restart...
-    rnGetNodeUrl = new RepositoryNodeImpl(m_session, nodeGetNodeUrl, m_idman);
+    rnGetNodeUrl = new RepositoryNodeImpl(m_session, nodeGetNodeUrl);
     assertEquals(url, rnGetNodeUrl.getNodeUrl());
 
     // New test: a child node of a parent node should concatenate
@@ -570,7 +563,7 @@ public class TestRepositoryNode extends TestCase {
     // Construct rfDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rnDeleted = new RepositoryNodeImpl(m_session, nodeDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault+"/Deleted", m_idman);
+        k_stemFile, k_urlDefault+"/Deleted");
     rfDeleted = rnDeleted.makeNewRepositoryFile("deleted");
     rfvDeleted = rfDeleted.createNewVersion();
     rfvDeleted.setInputStream(istrContent);
@@ -581,7 +574,7 @@ public class TestRepositoryNode extends TestCase {
     // Construct rfNotDeleted.
     istrContent = new ByteArrayInputStream(arbyContent);
     rnNotDeleted = new RepositoryNodeImpl(m_session, nodeNotDeleted, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault+"/NotDeleted", m_idman);
+        k_stemFile, k_urlDefault+"/NotDeleted");
     rfNotDeleted = rnNotDeleted.makeNewRepositoryFile("notDeleted");
     rfvNotDeleted = rfNotDeleted.createNewVersion();
     rfvNotDeleted.setInputStream(istrContent);
@@ -643,7 +636,7 @@ public class TestRepositoryNode extends TestCase {
     
     nodeNewRepositoryFile = m_nodeRoot.addNode("testMakeNewRepositoryFile");
     rnNewRepositoryFile = new RepositoryNodeImpl(m_session, nodeNewRepositoryFile, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // Construct and test the new repository file...
     rfChild = rnNewRepositoryFile.makeNewRepositoryFile("child");
@@ -670,7 +663,7 @@ public class TestRepositoryNode extends TestCase {
     
     nodeNewRepositoryFile = m_nodeRoot.addNode("testMakeNewRepositoryFile");
     rnNewRepositoryFile = new RepositoryNodeImpl(m_session, nodeNewRepositoryFile, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     // Construct and test the new repository file...
     rnChild = rnNewRepositoryFile.makeNewRepositoryFile("child");
@@ -696,7 +689,7 @@ public class TestRepositoryNode extends TestCase {
     
     nodeTestMove = m_nodeRoot.addNode("testMove");
     rnTestMove = new RepositoryNodeImpl(m_session, nodeTestMove, 
-        k_stemFile, k_sizeMaxBuffer, k_urlDefault, m_idman);
+        k_stemFile, k_urlDefault);
     
     rfTestMove = rnTestMove.makeNewRepositoryFile("TestMove");
     

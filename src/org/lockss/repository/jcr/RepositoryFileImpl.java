@@ -104,25 +104,21 @@ RepositoryFile {
    * IMPORTANT: fileContent is ASSUMED to have a writable directory.
    * This condition -=>must<=- be tested further up the chain.
    * 
-   * **** TODO: Get session, sizeWarcMax, and idman from 
-   * <code>JcrRepositoryHelperFactory</code>
+   * **** TODO: Get session from <code>JcrRepositoryHelper</code>
    * 
    * @param session        The session for the JCR session 
    * @param node           The current node in the JCR session
    * @param stemFile       The base that all WARC files should have.
    * For example, '/lockss/a/jcr/file' would create WARC files
    * '/lockss/a/jcr/file00001.warc', '/lockss/a/jcr/file00002.warc', etc.
-   * @param sizeWarcMax    How many bytes per WARC file
    * @param url            The URL for this file
-   * @param idman          The Lockss Identity Manager
    * @throws LockssRepositoryException
    * @throws FileNotFoundException
    */
 
-  protected RepositoryFileImpl(Session session, Node node, String stemFile,
-      long sizeWarcMax, String url, IdentityManager idman)
+  protected RepositoryFileImpl(Session session, Node node, String stemFile, String url)
       throws LockssRepositoryException, FileNotFoundException {
-    super(session, node, stemFile, sizeWarcMax, url, idman);
+    super(session, node, stemFile, url);
     
     m_rfvPreferred = null;
     m_nodeVersionEnd = null;
@@ -147,14 +143,12 @@ RepositoryFile {
    *
    * @param session
    * @param node
-   * @param idman
    * @throws NoUrlException
    * @throws LockssRepositoryException
    */
-  protected RepositoryFileImpl(Session session, Node node, 
-      IdentityManager idman) 
+  protected RepositoryFileImpl(Session session, Node node) 
       throws NoUrlException, LockssRepositoryException {
-    super(session, node, idman);
+    super(session, node);
 
     Node nodePreferredVersion;
     Property propIsFile;
@@ -165,7 +159,6 @@ RepositoryFile {
     
     testIfNull(session, "session");
     testIfNull(node, "node");
-    testIfNull(idman, "idman");
 
     try {
       constructorShared(session, node);
@@ -184,7 +177,7 @@ RepositoryFile {
         propPreferredVersion = m_node.getProperty(k_propPreferredVersion);
         nodePreferredVersion = propPreferredVersion.getNode();
         m_rfvPreferred = new RepositoryFileVersionImpl(m_session, 
-                nodePreferredVersion, this, m_idman);
+                nodePreferredVersion, this);
       } else {
         // It is not a bug if setPreferredVersion was never called.
         logger.info("RepositoryFileImpl: No preferred version was found for this node.");
@@ -255,8 +248,7 @@ RepositoryFile {
     
     // Create the new version.
     rfvVersion = new RepositoryFileVersionImpl(m_session, nodeNew, 
-        m_stemFile, m_sizeWarcMax, m_url, this, k_thresholdDeferredStream,
-        m_idman);
+        m_stemFile, m_url, this, k_thresholdDeferredStream);
     
     m_sizePreferred = -1;
     m_sizeTotal = -1;
@@ -315,8 +307,7 @@ RepositoryFile {
     
     // Create the new version.
     rfvVersion = new RepositoryFileVersionImpl(m_session, nodeNew, 
-        m_stemFile, m_sizeWarcMax, m_url, this, k_thresholdDeferredStream,
-        m_idman);
+        m_stemFile, m_url, this, k_thresholdDeferredStream);
     
     m_sizePreferred = -1;
     m_sizeTotal = -1;
@@ -381,13 +372,22 @@ RepositoryFile {
   
   public PersistentPeerIdSet getAgreeingPeerIdSet() 
       throws LockssRepositoryException {
+    IdentityManager idman;
+    JcrRepositoryHelperFactory jrhf;
     PersistentPeerIdSet ppis;
     StreamerJcr strjcr;
     
     try {
       if (m_node.hasProperty(k_propAgreeingPeerId)) {
+        jrhf = JcrRepositoryHelperFactory.getSingleton();
+        if (jrhf == null) {
+          throw new LockssRepositoryException("You must call JcrRepositoryHelperFactory.preconstructor before you call this method.");
+        }
+        idman = jrhf.getIdentityManager();
+        
         strjcr = new StreamerJcr(k_propAgreeingPeerId, m_node);
-        ppis = new PersistentPeerIdSetImpl(strjcr, m_idman);
+        
+        ppis = new PersistentPeerIdSetImpl(strjcr, idman);
       } else {
         logger.debug3("getAgreeingPeerIDSet: Internal "
                 + "error: Agreeing Peer ID set did not exist.  Returning null.");
@@ -459,8 +459,7 @@ RepositoryFile {
         m_sizeTotal = 0;
         nodeIter = m_nodeVersionEnd;
         while (nodeIter != null) {
-          rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                  m_idman);
+          rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this);
           m_sizeTotal += rfvIter.getContentSize();
           
           if (nodeIter.hasProperty(k_propPreviousVersion)) {
@@ -574,8 +573,7 @@ RepositoryFile {
     try {
       nodeIter = m_nodeVersionEnd;
       while (nodeIter != null) {
-        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                m_idman);
+        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this);
         
         if (!rfvIter.isDeleted()) {
           return rfvIter;
@@ -666,8 +664,7 @@ RepositoryFile {
           
           nodeIter = m_nodeVersionEnd;
           while (nodeIter != null) {
-            rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                    m_idman);
+            rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this);
             
             m_sizeTotal += rfvIter.getContentSize();
             
@@ -784,8 +781,7 @@ RepositoryFile {
       for (i = 0, nodeIter = m_nodeVersionEnd; 
            i < numVersions && nodeIter != null; 
            i++) {
-        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                m_idman);
+        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this);
         alrfvVersions.add(rfvIter);
         
         if (nodeIter.hasProperty(k_propPreviousVersion)) {
@@ -845,8 +841,7 @@ RepositoryFile {
       nodeIter = m_nodeVersionEnd;
       
       while (nodeIter != null) {
-        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this,
-                m_idman);
+        rfvIter = new RepositoryFileVersionImpl(m_session, nodeIter, this);
         rfvIter.move(stemNewLocation);
         
         if (nodeIter.hasProperty(k_propPreviousVersion)) {

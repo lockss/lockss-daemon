@@ -14,8 +14,11 @@ import org.lockss.repository.v2.*;
 import org.lockss.util.*;
 
 /**
+ * This class simplifies getting data into and out of a RepositoryFileVersionImpl
+ * by adding 'setContent' and 'getContent'.  These methods are very useful for
+ * testing, but not the main program.
+ * 
  * @author edwardsb
- *
  */
 public class RepositoryFileVersionHarnessImpl extends RepositoryFileVersionImpl implements
     RepositoryFileVersionHarness {
@@ -26,45 +29,29 @@ public class RepositoryFileVersionHarnessImpl extends RepositoryFileVersionImpl 
   /**
    * @param session
    * @param node
-   * @param fileContent
+   * @param stemFile
+   * @param rfiParent
    * @throws IOException
    */
   public RepositoryFileVersionHarnessImpl(Session session, Node node,
-      String stemFile, RepositoryFileImpl rfiParent, IdentityManager idman)
+      String stemFile, RepositoryFileImpl rfiParent) 
       throws IOException, LockssRepositoryException {
-    super(session, node, stemFile, k_sizeMax, k_urlDefault, rfiParent,
-        k_sizeDeferredStream, idman);
-  }
-
-  /**
-   * @param session
-   * @param node
-   * @param fileContent
-   * @param sizeMax
-   * @throws IOException
-   */
-  public RepositoryFileVersionHarnessImpl(Session session, Node node,
-      String stemFile, long sizeMax, RepositoryFileImpl rfiParent,
-      IdentityManager idman) 
-      throws IOException, LockssRepositoryException {
-    super(session, node, stemFile, sizeMax, k_urlDefault, rfiParent,
-        k_sizeDeferredStream, idman);
+    super(session, node, stemFile, k_urlDefault, rfiParent, k_sizeDeferredStream);
   }
   
   /**
    * @param session
    * @param node
-   * @param fileContent
-   * @param sizeMax
-   * @param URL
+   * @param stemFile
+   * @param url
+   * @param rfiParent
    * @throws IOException
    */
   public RepositoryFileVersionHarnessImpl(Session session, Node node,
-      String stemFile, long sizeMax, String url, RepositoryFileImpl
-      rfiParent, IdentityManager idman) 
+      String stemFile, String url, RepositoryFileImpl
+      rfiParent) 
       throws IOException, LockssRepositoryException {
-    super(session, node, stemFile, sizeMax, url, rfiParent,
-        k_sizeDeferredStream, idman);
+    super(session, node, stemFile, url, rfiParent, k_sizeDeferredStream);
   }
 
   
@@ -72,11 +59,12 @@ public class RepositoryFileVersionHarnessImpl extends RepositoryFileVersionImpl 
   /**
    * @param session
    * @param node
+   * @param rfiParent
    */
   public RepositoryFileVersionHarnessImpl(Session session, Node node,
-      RepositoryFileImpl rfiParent, IdentityManager idman) 
+      RepositoryFileImpl rfiParent) 
   throws LockssRepositoryException, NoUrlException {
-    super(session, node, rfiParent, idman);
+    super(session, node, rfiParent);
   }
   
   /**
@@ -87,6 +75,10 @@ public class RepositoryFileVersionHarnessImpl extends RepositoryFileVersionImpl 
    * 
    * A future version of this software should use the RepositoryFileImpl
    * methods, rather than set protected values.
+   * 
+   * @param arbyContent  -- The content to set
+   * @throws NullPointerException
+   * @throws LockssRepositoryException
    */
   public void setContent(byte[] arbyContent) throws NullPointerException, LockssRepositoryException {
     
@@ -137,7 +129,10 @@ public class RepositoryFileVersionHarnessImpl extends RepositoryFileVersionImpl 
 
   
   /**
-   * This method retrieves the content as a string.
+   * This method retrieves the content as a byte array.
+   * 
+   * @return byte[]
+   * @throws LockssRepositoryException
    */
   public byte[] getContent() throws LockssRepositoryException {
     Byte ByTemp;
