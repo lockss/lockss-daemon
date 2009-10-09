@@ -382,17 +382,31 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   /**
    * Returns the DatedPeerIdSet associated with this AU.
    * 
+   * Note: I did not want to change HistoryRepository.getNoAuPeerSet, so 
+   * I did not add a "throws" to this method.  It returns null if there is an error.
+   * 
    * @see org.lockss.state.HistoryRepository#getNoAuPeerSet()
    * @return  The dated, persistent peer ID set.
    */
   public DatedPeerIdSet getNoAuPeerSet() {
     IdentityManager idman;
+    JcrRepositoryHelperFactory jrhf;
     StreamerJcr strjcr;
     
     if (m_dpisNoAu == null) {
-      idman = m_jrh.getIdentityManager();
-      strjcr = new StreamerJcr(k_propPeerId, m_jrh.getRootNode());
-      m_dpisNoAu = new DatedPeerIdSetImpl(strjcr, idman);
+      try {
+        jrhf = JcrRepositoryHelperFactory.getSingleton();
+        if (jrhf == null) {
+          logger.error("Please call JcrRepositoryHelperFactory.preconstructor before you call getNoAuPeerSet.");
+          return null;
+        }
+        idman = jrhf.getIdentityManager();
+        strjcr = new StreamerJcr(k_propPeerId, m_jrh.getRootNode());
+        m_dpisNoAu = new DatedPeerIdSetImpl(strjcr, idman);
+      } catch (LockssRepositoryException e) {
+        logger.error("LockssRepositoryException: ", e);
+        return null;
+      }
     }
     
     return m_dpisNoAu;

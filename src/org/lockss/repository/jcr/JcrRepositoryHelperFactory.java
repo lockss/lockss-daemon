@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.3 2009-10-06 01:23:24 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.4 2009-10-09 22:06:49 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -192,7 +192,7 @@ public class JcrRepositoryHelperFactory {
       throw new LockssRepositoryException("Too many helper repositories.");
     }
     
-    jhr = new JcrRepositoryHelper(directory, m_sizeWarcMax, m_idman, m_ld);
+    jhr = new JcrRepositoryHelper(directory, m_ld);
     m_mapdirjhr.put(strKey, jhr);
     
     return jhr;

@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelper.java,v 1.1.2.4 2009-10-09 00:21:03 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelper.java,v 1.1.2.5 2009-10-09 22:06:49 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -68,7 +68,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   
   // Class Variables
   private File m_directory;
-  private IdentityManager m_idman;  // TODO: Remove.  Use the one in the JcrRepositoryHelperFactory.
   private LRUMap m_mapstrrnCache = new LRUMap (k_LRUSize);
   private Node m_nodeRoot;
   private RepositoryConfig m_repconfig;
@@ -78,7 +77,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   protected Set<RepositoryNode> m_sizeCalcQueue = new HashSet<RepositoryNode>();
   private BinarySemaphore m_sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread m_sizeCalcThread;
-  private long m_sizeWarcMax;   // TODO: Remove.  Use the one in the JcrRepositoryHelperFactory.
   
   /**
    * Construct a new JCR Repository Helper.
@@ -92,28 +90,22 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
    */
   protected JcrRepositoryHelper(
       File directory, 
-      long sizeWarcMax, 
-      IdentityManager idman,
       LockssDaemon ld) throws LockssRepositoryException {
     super();
     
     InputStream istrXml;
     FileOutputStream fosXml;
 
-    m_sizeWarcMax = sizeWarcMax;
     m_directory = directory;
     
-    // Set up the node and session.
-    m_idman = idman;
-    
     // Create the directory if necessary.
-    if (directory.exists()) {
-      if (! directory.isDirectory()) {
+    if (m_directory.exists()) {
+      if (! m_directory.isDirectory()) {
         logger.error("(constructor): Given location for files was not a directory.  Aborting!");
         return;
       }
     } else {  // The directory does not exist; create it (and any parents).
-      directory.mkdirs();
+      m_directory.mkdirs();
     }
     
     // Copy the files into the directory.
@@ -140,7 +132,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
       m_session = m_repos.login(new SimpleCredentials(k_USERNAME, k_PASSWORD
           .toCharArray()));
       m_nodeRoot = m_session.getRootNode();
-      m_sizeWarcMax = sizeWarcMax;      
     } catch (ConfigurationException e) {
       logger.error("(constructor): Configuration exception: ", e);
       throw new LockssRepositoryException(e);
@@ -167,10 +158,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   
   public File getDirectory() {
     return m_directory;
-  }
-  
-  public IdentityManager getIdentityManager() {
-    return m_idman;
   }
   
   public RepositoryConfig getRepositoryConfig() {
@@ -210,10 +197,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   
   public Session getSession() {
     return m_session;
-  }
-  
-  public long getSizeWarcMax() {
-    return m_sizeWarcMax;
   }
   
   public void moveRepository(String strAuId, String stemNew) throws LockssRepositoryException {
@@ -276,7 +259,7 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   
   public void setConfig(Configuration config, Configuration oldConfig, 
       Configuration.Differences changedKeys) {
-    m_sizeWarcMax = config.getLong(k_SIZE_WARC_MAX, m_sizeWarcMax);
+    // This method does nothing.
   }
   
   protected void startOrKickThread() {
