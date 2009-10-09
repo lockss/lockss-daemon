@@ -1508,8 +1508,8 @@
 
     param[base_url] = http://edr.sagepub.com/
 
-    au < manifest ; 2008 ; Educational Researcher Volume 37 ; 37 >
-    au < manifest ; 2009 ; Educational Researcher Volume 38 ; 38 >
+    au < notReady ; 2008 ; Educational Researcher Volume 37 ; 37 >
+    au < notReady ; 2009 ; Educational Researcher Volume 38 ; 38 >
 
   }
 
@@ -1521,7 +1521,7 @@
 
     param[base_url] = http://emr.sagepub.com/
 
-    au < manifest ; 2009 ; Emotion Review Volume 1 ; 1 >
+    au < testing ; 2009 ; Emotion Review Volume 1 ; 1 >
 
   }
 
@@ -1533,8 +1533,8 @@
 
     param[base_url] = http://eab.sagepub.com/
 
-    au < manifest ; 2008 ; Environment and Behavior Volume 40 ; 40 >
-    au < manifest ; 2009 ; Environment and Behavior Volume 41 ; 41 >
+    au < testing ; 2008 ; Environment and Behavior Volume 40 ; 40 >
+    au < testing ; 2009 ; Environment and Behavior Volume 41 ; 41 >
 
   }
 
@@ -1546,8 +1546,8 @@
 
     param[base_url] = http://eau.sagepub.com/
 
-    au < manifest ; 2008 ; Environment and Urbanization Volume 20 ; 20 >
-    au < manifest ; 2009 ; Environment and Urbanization Volume 21 ; 21 >
+    au < testing ; 2008 ; Environment and Urbanization Volume 20 ; 20 >
+    au < testing ; 2009 ; Environment and Urbanization Volume 21 ; 21 >
 
   }
 
@@ -1716,7 +1716,7 @@
 
     param[base_url] = http://epe.sagepub.com/
 
-    au < manifest ; 2008 ; European Physical Education Review Volume 14 ; 14 >
+    au < notReady ; 2008 ; European Physical Education Review Volume 14 ; 14 >
 
   }
 
@@ -2861,7 +2861,7 @@
 
     param[base_url] = http://jnt.sagepub.com/
 
-    au < manifest ; 2008 ; Journal for the Study of the New Testament Volume 31 ; 31 >
+    au < notReady ; 2008 ; Journal for the Study of the New Testament Volume 31 ; 31 >
 
   }
 
@@ -2885,7 +2885,7 @@
 
     param[base_url] = http://jsp.sagepub.com/
 
-    au < manifest ; 2008 ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
+    au < notReady ; 2008 ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
 
   }
 
@@ -2911,7 +2911,7 @@
     param[base_url] = http://jah.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Aging and Health Volume 20 ; 20 >
-    au < manifest ; 2009 ; Journal of Aging and Health Volume 21 ; 21 >
+    au < notReady ; 2009 ; Journal of Aging and Health Volume 21 ; 21 >
 
   }
 
@@ -2988,8 +2988,8 @@
 
     param[base_url] = http://jbr.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
-    au < manifest ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
+    au < ready ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
+    au < ready ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
 
   }
 
@@ -3001,8 +3001,8 @@
 
     param[base_url] = http://jba.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 >
-    au < manifest ; 2009 ; Journal of Biomaterials Applications Volume 24 ; 24 >
+    au < ready ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 >
+    au < notReady ; 2009 ; Journal of Biomaterials Applications Volume 24 ; 24 >
 
   }
 
@@ -3014,8 +3014,8 @@
 
     param[base_url] = http://jbx.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
-    au < manifest ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
+    au < ready ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
+    au < ready ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
 
   }
 
@@ -3027,8 +3027,8 @@
 
     param[base_url] = http://jbp.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
-    au < manifest ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
+    au < ready ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
+    au < ready ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
 
   }
 
@@ -3040,8 +3040,8 @@
 
     param[base_url] = http://jbs.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Black Studies Volume 39 ; 39 >
-    au < manifest ; 2009 ; Journal of Black Studies Volume 40 ; 40 >
+    au < testing ; 2008 ; Journal of Black Studies Volume 39 ; 39 >
+    au < testing ; 2009 ; Journal of Black Studies Volume 40 ; 40 >
 
   }
 
@@ -3053,8 +3053,8 @@
 
     param[base_url] = http://jen.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Building Physics Volume 32 ; 32 >
-    au < manifest ; 2009 ; Journal of Building Physics Volume 33 ; 33 >
+    au < testing ; 2008 ; Journal of Building Physics Volume 32 ; 32 >
+    au < testing ; 2009 ; Journal of Building Physics Volume 33 ; 33 >
 
   }
 
@@ -3066,8 +3066,8 @@
 
     param[base_url] = http://jbt.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
-    au < manifest ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
+    au < testing ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
+    au < testing ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
 
   }
 
@@ -3079,8 +3079,8 @@
 
     param[base_url] = http://job.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
-    au < manifest ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
+    au < testing ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
+    au < testing ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
 
   }
 
@@ -3092,8 +3092,8 @@
 
     param[base_url] = http://cpt.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
-    au < manifest ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
+    au < testing ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
+    au < testing ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
 
   }
 
@@ -3105,8 +3105,8 @@
 
     param[base_url] = http://jca.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
-    au < manifest ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
+    au < testing ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
+    au < testing ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
 
   }
 

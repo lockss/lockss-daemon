@@ -2168,8 +2168,8 @@
 
     param[base_url] = http://mbe.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 >
-    au < manifest ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
+    au < testing ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 >
+    au < testing ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
 
   }
 
@@ -2181,8 +2181,8 @@
 
     param[base_url] = http://mplant.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Molecular Plant Volume 1 ; 1 >
-    au < manifest ; 2009 ; Molecular Plant Volume 2 ; 2 >
+    au < testing ; 2008 ; Molecular Plant Volume 1 ; 1 >
+    au < testing ; 2009 ; Molecular Plant Volume 2 ; 2 >
 
   }
 
@@ -2194,8 +2194,8 @@
 
     param[base_url] = http://ml.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Music and Letters Volume 89 ; 89 >
-    au < manifest ; 2009 ; Music and Letters Volume 90 ; 90 >
+    au < testing ; 2008 ; Music and Letters Volume 89 ; 89 >
+    au < testing ; 2009 ; Music and Letters Volume 90 ; 90 >
 
   }
 
