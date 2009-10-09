@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireMetadataExtractorFactory.java,v 1.2 2009-09-04 23:09:41 thib_gc Exp $
+ * $Id: HighWireMetadataExtractorFactory.java,v 1.3 2009-10-09 00:41:36 thib_gc Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class HighWireMetadataExtractorFactory
       
       Metadata ret = null;
       String reprintUrl = cu.getUrl();
-      if (reprintUrl.startsWith(reprintPrefix)) {
+      if (reprintUrl.contains(reprintPrefix)) {
         String reprintframedUrl = reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
         CachedUrl reprintframedCu = cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
         try {
