@@ -15,8 +15,8 @@
 
     param[base_url] = http://qjmath.oxfordjournals.org/
 
-    au < ready ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
-    au < ready ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
+    au < tested ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
+    au < tested ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
 
   }
 
@@ -28,8 +28,8 @@
 
     param[base_url] = http://qjmam.oxfordjournals.org/
 
-    au < ready ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
-    au < ready ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
+    au < tested ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
+    au < tested ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
 
   }
   
@@ -41,8 +41,8 @@
 
     param[base_url] = http://nass.oxfordjournals.org/
 
-    au < ready ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 >
-    au < ready ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 >
+    au < tested ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 >
+    au < tested ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 >
 
   }
 
@@ -54,8 +54,8 @@
 
     param[base_url] = http://occmed.oxfordjournals.org/
 
-    au < ready ; 2008 ; Occupational Medicine Volume 58 ; 58 >
-    au < ready ; 2009 ; Occupational Medicine Volume 59 ; 59 >
+    au < tested ; 2008 ; Occupational Medicine Volume 58 ; 58 >
+    au < tested ; 2009 ; Occupational Medicine Volume 59 ; 59 >
 
   }
   
@@ -67,8 +67,8 @@
 
     param[base_url] = http://ohr.oxfordjournals.org/
 
-    au < ready ; 2008 ; The Oral History Review Volume 35 ; 35 >
-    au < ready ; 2009 ; The Oral History Review Volume 36 ; 36 >
+    au < tested ; 2008 ; The Oral History Review Volume 35 ; 35 >
+    au < tested ; 2009 ; The Oral History Review Volume 36 ; 36 >
 
   }
 
@@ -80,8 +80,8 @@
 
     param[base_url] = http://oaj.oxfordjournals.org/
 
-    au < ready ; 2008 ; Oxford Art Journal Volume 31 ; 31 >
-    au < ready ; 2009 ; Oxford Art Journal Volume 32 ; 32 >
+    au < tested ; 2008 ; Oxford Art Journal Volume 31 ; 31 >
+    au < tested ; 2009 ; Oxford Art Journal Volume 32 ; 32 >
 
   }
 

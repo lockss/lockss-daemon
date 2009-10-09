@@ -2988,8 +2988,8 @@
 
     param[base_url] = http://jbr.sagepub.com/
 
-    au < ready ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
-    au < ready ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
+    au < tested ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
+    au < tested ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
 
   }
 
@@ -3001,7 +3001,7 @@
 
     param[base_url] = http://jba.sagepub.com/
 
-    au < ready ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 >
+    au < tested ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 >
     au < notReady ; 2009 ; Journal of Biomaterials Applications Volume 24 ; 24 >
 
   }
@@ -3014,8 +3014,8 @@
 
     param[base_url] = http://jbx.sagepub.com/
 
-    au < ready ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
-    au < ready ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
+    au < tested ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
 
   }
 
@@ -3027,8 +3027,8 @@
 
     param[base_url] = http://jbp.sagepub.com/
 
-    au < ready ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
-    au < ready ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
+    au < tested ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
+    au < tested ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
 
   }
 
@@ -3040,7 +3040,7 @@
 
     param[base_url] = http://jbs.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Black Studies Volume 39 ; 39 >
+    au < tested ; 2008 ; Journal of Black Studies Volume 39 ; 39 >
     au < testing ; 2009 ; Journal of Black Studies Volume 40 ; 40 >
 
   }
@@ -3054,7 +3054,7 @@
     param[base_url] = http://jen.sagepub.com/
 
     au < testing ; 2008 ; Journal of Building Physics Volume 32 ; 32 >
-    au < testing ; 2009 ; Journal of Building Physics Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Building Physics Volume 33 ; 33 >
 
   }
 
@@ -3066,8 +3066,8 @@
 
     param[base_url] = http://jbt.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
-    au < testing ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
+    au < tested ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
+    au < tested ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
 
   }
 
@@ -3079,8 +3079,8 @@
 
     param[base_url] = http://job.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
-    au < testing ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
+    au < tested ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
+    au < tested ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
 
   }
 
@@ -3092,8 +3092,8 @@
 
     param[base_url] = http://cpt.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
-    au < testing ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
+    au < tested ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
 
   }
 
@@ -3105,8 +3105,8 @@
 
     param[base_url] = http://jca.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
-    au < testing ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
+    au < tested ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
+    au < tested ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
 
   }
 
@@ -3118,8 +3118,8 @@
 
     param[base_url] = http://jcd.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Career Development Volume 35 ; 35 >
-    au < manifest ; 2009 ; Journal of Career Development Volume 36 ; 36 >
+    au < testing ; 2008 ; Journal of Career Development Volume 35 ; 35 >
+    au < testing ; 2009 ; Journal of Career Development Volume 36 ; 36 >
 
   }
 
@@ -3131,7 +3131,7 @@
 
     param[base_url] = http://jel.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
+    au < testing ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
 
   }
 
@@ -3143,8 +3143,8 @@
 
     param[base_url] = http://cel.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
-    au < manifest ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
+    au < testing ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
+    au < testing ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
 
   }
 
@@ -3156,8 +3156,8 @@
 
     param[base_url] = http://chc.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
-    au < manifest ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
+    au < testing ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
+    au < testing ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
 
   }
 
@@ -3169,8 +3169,8 @@
 
     param[base_url] = http://jcn.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Child Neurology Volume 23 ; 23 >
-    au < manifest ; 2009 ; Journal of Child Neurology Volume 24 ; 24 >
+    au < testing ; 2008 ; Journal of Child Neurology Volume 23 ; 23 >
+    au < testing ; 2009 ; Journal of Child Neurology Volume 24 ; 24 >
 
   }
 
@@ -3182,8 +3182,8 @@
 
     param[base_url] = http://jcs.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
-    au < manifest ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
+    au < testing ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
+    au < testing ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
 
   }
 
@@ -3195,8 +3195,8 @@
 
     param[base_url] = http://jcp.sagepub.com/
 
-    au < manifest ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
-    au < manifest ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
+    au < testing ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
+    au < testing ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
 
   }
 
@@ -3208,8 +3208,8 @@
 
     param[base_url] = http://jcl.sagepub.com/
 
-    au < manifest ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 >
-    au < manifest ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 >
+    au < testing ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 >
+    au < testing ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 >
 
   }
 
@@ -3221,8 +3221,8 @@
 
     param[base_url] = http://jci.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 >
-    au < manifest ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 >
+    au < testing ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 >
+    au < testing ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 >
 
   }
 
@@ -3234,7 +3234,7 @@
 
     param[base_url] = http://jcm.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Composite Materials Volume 42 ; 42 >
+    au < testing ; 2008 ; Journal of Composite Materials Volume 42 ; 42 >
     au < manifest ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
 
   }

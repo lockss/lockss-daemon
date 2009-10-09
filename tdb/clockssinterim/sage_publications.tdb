@@ -9,6 +9,132 @@
   implicit < status ; year ; name ; param[volume_name] >
 
 
+  {
 
+    title <
+      name = Journal of Biological Rhythms
+    >
+
+    param[base_url] = http://jbr.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
+    au < tested ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Biomaterials Applications
+    >
+
+    param[base_url] = http://jba.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Biomolecular Screening
+    >
+
+    param[base_url] = http://jbx.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Black Psychology
+    >
+
+    param[base_url] = http://jbp.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
+    au < tested ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Black Studies
+    >
+
+    param[base_url] = http://jbs.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Black Studies Volume 39 ; 39 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Building Physics
+    >
+
+    param[base_url] = http://jen.sagepub.com/
+
+    au < tested ; 2009 ; Journal of Building Physics Volume 33 ; 33 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Business and Technical Communication
+    >
+
+    param[base_url] = http://jbt.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
+    au < tested ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
+
+  }
+
+
+  {
+
+    title <
+      name = Journal of Business Communication
+    >
+
+    param[base_url] = http://job.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
+    au < tested ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cardiovascular Pharmacology and Therapeutics
+    >
+
+    param[base_url] = http://cpt.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Career Assessment
+    >
+
+    param[base_url] = http://jca.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
+    au < tested ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
+
+  }
 
 }
