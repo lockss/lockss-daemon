@@ -1107,7 +1107,7 @@ loop:
           Thread.sleep(ms_random.nextInt(100));
           
           rfTest = new RepositoryFileVersionImpl(m_session, nodeTestThread, 
-              k_stemFile, k_urlDefault, m_rfiParent, k_sizeDeferredStream);
+              k_stemFile, m_rfiParent, k_sizeDeferredStream);
           
           // Create some random content.
           arbyTest = new byte[k_sizeBuffer];        

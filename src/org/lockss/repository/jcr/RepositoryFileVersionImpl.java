@@ -93,10 +93,9 @@ implements RepositoryFileVersion {
    * Note that "node" should NOT be the same node as the parent RepositoryFile.
    * Each version should have its own node.
    * 
-   * @param session  -- BUG: This should come from JcrRepositoryHelperFactory
+   * @param session  -- BUG: This should come from JcrRepositoryHelper
    * @param node
    * @param stemFile -- the filename, without the five-digit extension.
-   * @param url -- BUG: The URL should come from <code>rfiParent</code>
    * @param rfiParent -- The parent of this node.
    * @param sizeDeferredStream -- How many bytes, before a deferred stream becomes a file?
    * 
@@ -104,10 +103,9 @@ implements RepositoryFileVersion {
    * @throws FileNotFoundException
    */
   protected RepositoryFileVersionImpl(Session session, Node node, String stemFile,
-      String url, RepositoryFileImpl rfiParent, 
-      int sizeDeferredStream)
+      RepositoryFileImpl rfiParent, int sizeDeferredStream)
       throws LockssRepositoryException, FileNotFoundException {
-    super(session, node, stemFile, url);
+    super(session, node, stemFile, rfiParent.getNodeUrl());
     
     testIfNull(rfiParent, "rfiParent");
         

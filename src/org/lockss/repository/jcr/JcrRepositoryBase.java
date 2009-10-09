@@ -39,6 +39,13 @@ import org.lockss.util.*;
  * This class exists only to supply common, useful methods
  * and common constants.
  *
+ * **** IMPORTANT NOTE ****
+ * Because this class is the base class for RepositoryNodeImpl, RepositoryFileImpl,
+ * and RepositoryFileVersionImpl, every instance contains an instance of these
+ * variables.  This takes a fair bit of memory.  When you need to free up more memory,
+ * you should eliminate the member variables of this class, and move up the chain to 
+ * find the ancestor with the value for the variables in this class.
+ * 
  * @author edwardsb
  *
  */

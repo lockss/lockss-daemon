@@ -36,24 +36,8 @@ public class RepositoryFileVersionHarnessImpl extends RepositoryFileVersionImpl 
   public RepositoryFileVersionHarnessImpl(Session session, Node node,
       String stemFile, RepositoryFileImpl rfiParent) 
       throws IOException, LockssRepositoryException {
-    super(session, node, stemFile, k_urlDefault, rfiParent, k_sizeDeferredStream);
+    super(session, node, stemFile, rfiParent, k_sizeDeferredStream);
   }
-  
-  /**
-   * @param session
-   * @param node
-   * @param stemFile
-   * @param url
-   * @param rfiParent
-   * @throws IOException
-   */
-  public RepositoryFileVersionHarnessImpl(Session session, Node node,
-      String stemFile, String url, RepositoryFileImpl
-      rfiParent) 
-      throws IOException, LockssRepositoryException {
-    super(session, node, stemFile, url, rfiParent, k_sizeDeferredStream);
-  }
-
   
   
   /**

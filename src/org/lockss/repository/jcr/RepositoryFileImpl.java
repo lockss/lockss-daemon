@@ -248,7 +248,7 @@ RepositoryFile {
     
     // Create the new version.
     rfvVersion = new RepositoryFileVersionImpl(m_session, nodeNew, 
-        m_stemFile, m_url, this, k_thresholdDeferredStream);
+        m_stemFile, this, k_thresholdDeferredStream);
     
     m_sizePreferred = -1;
     m_sizeTotal = -1;
@@ -307,7 +307,7 @@ RepositoryFile {
     
     // Create the new version.
     rfvVersion = new RepositoryFileVersionImpl(m_session, nodeNew, 
-        m_stemFile, m_url, this, k_thresholdDeferredStream);
+        m_stemFile, this, k_thresholdDeferredStream);
     
     m_sizePreferred = -1;
     m_sizeTotal = -1;

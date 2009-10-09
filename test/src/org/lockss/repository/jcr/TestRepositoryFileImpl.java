@@ -1131,7 +1131,7 @@ public class TestRepositoryFileImpl extends LockssTestCase {
     // Test: setPreferredVersion should reject a version that is not 
     // of the same file (even if it is committed).
     rfviFalse = new RepositoryFileVersionImpl(m_session, nodeSetPreferredVersion2,
-        k_stemFile, k_urlDefault, rfiFalse, k_sizeDeferredStream);
+        k_stemFile, rfiFalse, k_sizeDeferredStream);
 
     isContent = new ByteArrayInputStream(arbyContent);
     rfviFalse.setInputStream(isContent);
