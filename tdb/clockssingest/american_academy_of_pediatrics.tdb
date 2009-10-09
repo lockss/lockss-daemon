@@ -18,8 +18,8 @@
     
     au < manifest ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
     au < manifest ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-    au < testing ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-    au < ready ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+    au < ready ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+    au < notReady ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
   
   }
 
@@ -32,7 +32,7 @@
     param[base_url] = http://aapnews.aappublications.org/
     
     au < manifest ; 2008 ; AAP News Volume 19 ; 19 >
-    au < manifest ; 2009 ; AAP News Volume 20 ; 20 >
+    au < testing ; 2009 ; AAP News Volume 20 ; 20 >
   
   }
 
@@ -45,7 +45,7 @@
     param[base_url] = http://neoreviews.aappublications.org/
     
     au < manifest ; 2008 ; NeoReviews Volume 9 ; 9 >
-    au < manifest ; 2009 ; NeoReviews Volume 10 ; 10 >
+    au < testing ; 2009 ; NeoReviews Volume 10 ; 10 >
   
   }
 
