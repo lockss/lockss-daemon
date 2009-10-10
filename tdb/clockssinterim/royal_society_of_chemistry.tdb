@@ -62,6 +62,42 @@
   {
   
     title <
+      name = CrystEngComm
+    >
+    
+    param[journal_code] = ce
+    
+    au < ready ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Dalton Transactions
+    >
+    
+    param[journal_code] = dt
+    
+    au < ready ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Energy & Environmental Science
+    >
+    
+    param[journal_code] = ee
+    
+    au < ready ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
+  
+  }
+  
+  {
+  
+    title <
       name = Green Chemistry
     >
     

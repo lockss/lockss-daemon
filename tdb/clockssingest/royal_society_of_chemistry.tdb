@@ -137,7 +137,7 @@
     param[journal_code] = ce
     
     au < manifest ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
-    au < testing ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
+    au < ready ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
   
   }
 
@@ -150,7 +150,7 @@
     param[journal_code] = dt
     
     au < manifest ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
-    au < testing ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
+    au < ready ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
   
   }
 
@@ -163,7 +163,7 @@
     param[journal_code] = ee
     
     au < manifest ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
-    au < testing ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
+    au < ready ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
   
   }
 
@@ -223,7 +223,7 @@
     param[journal_code] = ja
     
     au < manifest ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
-    au < manifest ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
+    au < testing ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
   
   }
 
@@ -269,7 +269,7 @@
     param[journal_code] = em
     
     au < manifest ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
-    au < manifest ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
+    au < testing ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
   
   }
 
@@ -282,7 +282,7 @@
     param[journal_code] = jm
     
     au < manifest ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
-    au < manifest ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
+    au < testing ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
   
   }
 
@@ -295,7 +295,7 @@
     param[journal_code] = lc
     
     au < manifest ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
-    au < manifest ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
+    au < testing ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
   
   }
 
