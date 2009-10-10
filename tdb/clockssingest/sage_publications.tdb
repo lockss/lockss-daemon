@@ -3118,8 +3118,8 @@
 
     param[base_url] = http://jcd.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Career Development Volume 35 ; 35 >
-    au < testing ; 2009 ; Journal of Career Development Volume 36 ; 36 >
+    au < tested ; 2008 ; Journal of Career Development Volume 35 ; 35 >
+    au < notReady ; 2009 ; Journal of Career Development Volume 36 ; 36 >
 
   }
 
@@ -3131,7 +3131,7 @@
 
     param[base_url] = http://jel.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
+    au < tested ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
 
   }
 
@@ -3143,8 +3143,8 @@
 
     param[base_url] = http://cel.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
-    au < testing ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
+    au < tested ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
+    au < tested ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
 
   }
 
@@ -3156,7 +3156,7 @@
 
     param[base_url] = http://chc.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
+    au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
     au < testing ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
 
   }
@@ -3235,7 +3235,7 @@
     param[base_url] = http://jcm.sagepub.com/
 
     au < testing ; 2008 ; Journal of Composite Materials Volume 42 ; 42 >
-    au < manifest ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
+    au < testing ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
 
   }
 
@@ -3247,8 +3247,8 @@
 
     param[base_url] = http://jcr.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 >
-    au < manifest ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 >
+    au < testing ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 >
+    au < testing ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 >
 
   }
 
@@ -3260,8 +3260,8 @@
 
     param[base_url] = http://joc.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 >
-    au < manifest ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 >
+    au < testing ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 >
+    au < testing ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 >
 
   }
 
