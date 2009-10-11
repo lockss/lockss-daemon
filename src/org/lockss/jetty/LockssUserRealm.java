@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUserRealm.java,v 1.4 2009-06-15 07:51:50 tlipkis Exp $
+ * $Id: LockssUserRealm.java,v 1.4.4.1 2009-10-11 19:07:50 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ in this Software without prior written authorization from Stanford University.
 // sure how thay might interact with Jetty
 
 // ========================================================================
-// $Id: LockssUserRealm.java,v 1.4 2009-06-15 07:51:50 tlipkis Exp $
+// $Id: LockssUserRealm.java,v 1.4.4.1 2009-10-11 19:07:50 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ public class LockssUserRealm implements UserRealm {
 
   /** Construct new realm
    * @param name Realm Name
-   * @param name acctMgr the LOCKSS AccountManager
+   * @param acctMgr the LOCKSS AccountManager
    */
   public LockssUserRealm(String name, AccountManager acctMgr) {
     _realmName=name;
