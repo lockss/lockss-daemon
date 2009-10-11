@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.3.2.1 2009-10-11 22:35:04 dshr Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.3.2.2 2009-10-11 23:08:12 tlipkis Exp $
  */
 
 /*
@@ -93,16 +93,16 @@ public class SubTreeArticleIterator implements Iterator {
 	    processCachedUrl(cu);
 	  } catch (Exception ex) {
 	    // No action intended - iterator should ignore this cu.
-	    log.debug(cu.getUrl() + " threw " + ex);
+	    log.warning("Error processing " + cu.getUrl(), ex);
 	  }
 	  finally {
 	    AuUtil.safeRelease(cu);
 	  }
 	} else if (n instanceof CachedUrlSet) {
 	  CachedUrlSet cus2 = (CachedUrlSet) n;
-	  log.debug("CUS: " + cus.getUrl());
+	  if (log.isDebug2()) log.debug2("CUS: " + cus.getUrl());
 	} else {
-	  log.debug("XXX: " + n.getClass());
+	  log.warning("Unknown node type: " + n.getClass());
 	}
       }
     }
@@ -115,14 +115,16 @@ public class SubTreeArticleIterator implements Iterator {
       String contentType = cu.getContentType();
       String mimeType2 =
 	HeaderUtil.getMimeTypeFromContentType(contentType);
-      log.debug("CU: " + cu.getUrl() + " mime " + mimeType2);
+      if (log.isDebug2()) {
+	log.debug2("CU: " + cu.getUrl() + " mime " + mimeType2);
+      }
       Matcher match = null;
       if (pat != null) {
 	match = pat.matcher(cu.getUrl());
       }
       if (mimeType.equalsIgnoreCase(mimeType2)
 	  && (match == null || match.find())) {
-	log.debug("Add " + cu.getUrl());
+	if (log.isDebug2()) log.debug2("Add " + cu.getUrl());
 	al.add(cu);
       }
     }
