@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.3 2009-09-04 22:59:11 thib_gc Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.3.2.1 2009-10-11 22:35:04 dshr Exp $
  */
 
 /*
@@ -88,35 +88,44 @@ public class SubTreeArticleIterator implements Iterator {
       while (chi.hasNext()) {
 	Object n = chi.next();
 	if (n instanceof CachedUrl) {
-	    CachedUrl cu = (CachedUrl) n;
-            try {
-              String contentType = cu.getContentType();
-              String mimeType2 = HeaderUtil
-                  .getMimeTypeFromContentType(contentType);
-              log.debug("CU: " + cu.getUrl() + " mime " + mimeType2);
-              Matcher match = null;
-              if (pat != null) {
-                match = pat.matcher(cu.getUrl());
-              }
-              if (mimeType.equalsIgnoreCase(mimeType2)
-                  && (match == null || match.find())) {
-                log.debug("Add " + cu.getUrl());
-                al.add(cu);
-              }
-            }
-            finally {
-              AuUtil.safeRelease(cu);
-            }	    
+	  CachedUrl cu = (CachedUrl) n;
+	  try {
+	    processCachedUrl(cu);
+	  } catch (Exception ex) {
+	    // No action intended - iterator should ignore this cu.
+	    log.debug(cu.getUrl() + " threw " + ex);
+	  }
+	  finally {
+	    AuUtil.safeRelease(cu);
+	  }
 	} else if (n instanceof CachedUrlSet) {
-	    CachedUrlSet cus2 = (CachedUrlSet) n;
-	    log.debug("CUS: " + cus.getUrl());
+	  CachedUrlSet cus2 = (CachedUrlSet) n;
+	  log.debug("CUS: " + cus.getUrl());
 	} else {
-	    log.debug("XXX: " + n.getClass());
+	  log.debug("XXX: " + n.getClass());
 	}
       }
     }
     al.trimToSize();
     it = al.iterator();
+  }
+
+  protected void processCachedUrl(CachedUrl cu) {
+    if (cu.hasContent()) {
+      String contentType = cu.getContentType();
+      String mimeType2 =
+	HeaderUtil.getMimeTypeFromContentType(contentType);
+      log.debug("CU: " + cu.getUrl() + " mime " + mimeType2);
+      Matcher match = null;
+      if (pat != null) {
+	match = pat.matcher(cu.getUrl());
+      }
+      if (mimeType.equalsIgnoreCase(mimeType2)
+	  && (match == null || match.find())) {
+	log.debug("Add " + cu.getUrl());
+	al.add(cu);
+      }
+    }
   }
   
   public boolean hasNext() {

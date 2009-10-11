@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.1 2009-05-28 22:52:57 dshr Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.1.6.1 2009-10-11 22:35:04 dshr Exp $
  */
 
 /*
@@ -51,10 +51,13 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
   private CrawlManager crawlMgr;
+  private static int exceptionCount;
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
   private static int maxDepth=DEFAULT_MAX_DEPTH;
+  private static int urlCount = 32;
+  private static int testExceptions = 3;
 
   public static void main(String[] args) throws Exception {
     TestSubTreeArticleIterator test = new TestSubTreeArticleIterator();
@@ -129,6 +132,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
     crawlContent();
 
+    exceptionCount = 0;
     int count = 0;
     for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
 	BaseCachedUrl cu = (BaseCachedUrl)it.next();
@@ -138,7 +142,28 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 	count++;
     }
     log.debug("Article count is " + count);
-    assertEquals(32, count);
+    assertEquals(urlCount, count);
+  }
+
+  public void testException() throws Exception {
+    createContent();
+
+    // get the root of the simContent
+    String simDir = sau.getSimRoot();
+
+    crawlContent();
+
+    exceptionCount = testExceptions;
+    int count = 0;
+    for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
+	BaseCachedUrl cu = (BaseCachedUrl)it.next();
+	assertNotNull(cu);
+	assert(cu instanceof CachedUrl);
+	log.debug("count " + count + " url " + cu.getUrl());
+	count++;
+    }
+    log.debug("Article count is " + count);
+    assertEquals(urlCount - testExceptions, count);
   }
 
   private void createContent() {
@@ -191,12 +216,33 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
      */
     public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
 	throws PluginException {
-      Iterator ret = new SubTreeArticleIterator(mimeType, au, subTreeRoot);
+      Iterator ret;
+      if (exceptionCount == 0) {
+	ret = new SubTreeArticleIterator(mimeType, au, subTreeRoot);
+      } else {
+	ret = new MySubTreeArticleIterator(mimeType, au, subTreeRoot,
+					   exceptionCount);
+      }
       return ret;
     }
     public void setSubTreeRoot(String root) {
       subTreeRoot = root;
       log.debug("Set subTreeRoot: " + subTreeRoot);
+    }
+  }
+  public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
+    int exceptionCount;
+    MySubTreeArticleIterator(String mimeType, ArchivalUnit au,
+			     String subTreeRoot, int exceptionCount) {
+      super(mimeType, au, subTreeRoot);
+      this.exceptionCount = exceptionCount;
+    }
+    protected void processCachedUrl(CachedUrl cu) {
+      if (exceptionCount > 0 && cu.getUrl().endsWith(".html")) {
+	exceptionCount--;
+	throw new UnsupportedOperationException();
+      }
+      super.processCachedUrl(cu);
     }
   }
 }
