@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
-  implicit < status ; year ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] ; proxy >
   
   {
   
@@ -16,8 +16,8 @@
     
     param[base_url] = http://archderm.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Dermatology Volume 144 ; 144 >
-    au < released ; 2009 ; Archives of Dermatology Volume 145 ; 145 >
+    au < released ; 2008 ; Archives of Dermatology Volume 144 ; 144 ; >
+    au < released ; 2009 ; Archives of Dermatology Volume 145 ; 145 ; >
   
   }
   
@@ -29,8 +29,8 @@
     
     param[base_url] = http://archfaci.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 >
-    au < released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 >
+    au < released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
+    au < released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
   
   }
 
@@ -42,8 +42,8 @@
     
     param[base_url] = http://archpsyc.ama-assn.org/
     
-    au < released ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 >
-    au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 >
+    au < released ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
+    au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
   
   }  
 
@@ -55,8 +55,8 @@
     
     param[base_url] = http://archinte.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 >
-    au < released ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
+    au < released ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 ; >
+    au < released ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 ; >
   
   }
 
@@ -68,8 +68,8 @@
     
     param[base_url] = http://archneur.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Neurology Volume 65 ; 65 >
-    au < released ; 2009 ; Archives of Neurology Volume 66 ; 66 >
+    au < released ; 2008 ; Archives of Neurology Volume 65 ; 65 ; >
+    au < released ; 2009 ; Archives of Neurology Volume 66 ; 66 ; >
   
   }
   
@@ -81,8 +81,8 @@
     
     param[base_url] = http://archopht.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 >
-    au < released ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
+    au < released ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 ; >
+    au < released ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 ; >
   
   }  
 
@@ -94,8 +94,8 @@
     
     param[base_url] = http://archotol.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 >
-    au < released ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 >
+    au < released ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 ; >
+    au < released ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 ; >
   
   }
 
@@ -107,8 +107,8 @@
     
     param[base_url] = http://archpedi.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 >
-    au < released ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 >
+    au < released ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 ; >
+    au < released ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 ; >
   
   }  
   
@@ -120,8 +120,8 @@
     
     param[base_url] = http://archsurg.ama-assn.org/
     
-    au < released ; 2008 ; Archives of Surgery Volume 143 ; 143 >
-    au < released ; 2009 ; Archives of Surgery Volume 144 ; 144 >
+    au < released ; 2008 ; Archives of Surgery Volume 143 ; 143 ; >
+    au < released ; 2009 ; Archives of Surgery Volume 144 ; 144 ; >
   
   }
 
@@ -133,10 +133,10 @@
     
     param[base_url] = http://jama.ama-assn.org/
 
-    au < released ; 2008 ; Journal of the American Medical Association Volume 199 ; 199 >
-    au < released ; 2008 ; Journal of the American Medical Association Volume 200 ; 200 >
-    au < released ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 >
-    au < released ; 2009 ; Journal of the American Medical Association Volume 202 ; 202 >
+    au < released ; 2008 ; Journal of the American Medical Association Volume 199 ; 199 ; >
+    au < released ; 2008 ; Journal of the American Medical Association Volume 200 ; 200 ; >
+    au < released ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 ; >
+    au < released ; 2009 ; Journal of the American Medical Association Volume 202 ; 202 ; >
   
   }
 

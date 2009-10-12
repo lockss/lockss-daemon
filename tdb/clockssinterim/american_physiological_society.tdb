@@ -6,7 +6,7 @@
   
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
-  implicit < status ; year ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] ; proxy >
   
   {
   
@@ -16,8 +16,8 @@
     
     param[base_url] = http://advan.physiology.org/
     
-    au < released ; 2008 ; Advances in Physiology Education Volume 32 ; 32 >
-    au < released ; 2009 ; Advances in Physiology Education Volume 33 ; 33 >
+    au < released ; 2008 ; Advances in Physiology Education Volume 32 ; 32 ; >
+    au < released ; 2009 ; Advances in Physiology Education Volume 33 ; 33 ; >
   
   }
 
@@ -29,10 +29,10 @@
     
     param[base_url] = http://ajpcell.physiology.org/
     
-    au < released ; 2008 ; American Journal of Physiology - Cell Physiology Volume 294 ; 294 >
-    au < released ; 2008 ; American Journal of Physiology - Cell Physiology Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Cell Physiology Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Cell Physiology Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Cell Physiology Volume 294 ; 294 ; >
+    au < released ; 2008 ; American Journal of Physiology - Cell Physiology Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Cell Physiology Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Cell Physiology Volume 297 ; 297 ; >
   
   }
 
@@ -44,10 +44,10 @@
     
     param[base_url] = http://ajpendo.physiology.org/
 
-    au < released ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 294 ; 294 >    
-    au < released ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 294 ; 294 ; >    
+    au < released ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 ; >
   
   }
   
@@ -59,10 +59,10 @@
     
     param[base_url] = http://ajpgi.physiology.org/
     
-    au < released ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294 ; 294 >
-    au < released ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294 ; 294 ; >
+    au < released ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297 ; 297 ; >
   
   }
 
@@ -74,10 +74,10 @@
     
     param[base_url] = http://ajpheart.physiology.org/
     
-    au < released ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 294 ; 294 >
-    au < released ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 294 ; 294 ; >
+    au < released ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 297 ; 297 ; >
   
   }
   
@@ -89,10 +89,10 @@
     
     param[base_url] = http://ajplung.physiology.org/
     
-    au < released ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294 ; 294 >
-    au < released ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294 ; 294 ; >
+    au < released ; 2008 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 297 ; 297 ; >
   
   }
 
@@ -104,10 +104,10 @@
     
     param[base_url] = http://ajpregu.physiology.org/
     
-    au < released ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 294 ; 294 >
-    au < released ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 294 ; 294 ; >
+    au < released ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297 ; 297 ; >
     
   }
 
@@ -119,10 +119,10 @@
     
     param[base_url] = http://ajprenal.physiology.org/
     
-    au < released ; 2008 ; American Journal of Physiology - Renal Physiology Volume 294 ; 294 >
-    au < released ; 2008 ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 >
-    au < released ; 2009 ; American Journal of Physiology - Renal Physiology Volume 296 ; 296 >
-    au < released ; 2009 ; American Journal of Physiology - Renal Physiology Volume 297 ; 297 >
+    au < released ; 2008 ; American Journal of Physiology - Renal Physiology Volume 294 ; 294 ; >
+    au < released ; 2008 ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 ; >
+    au < released ; 2009 ; American Journal of Physiology - Renal Physiology Volume 296 ; 296 ; >
+    au < released ; 2009 ; American Journal of Physiology - Renal Physiology Volume 297 ; 297 ; >
   
   }
 
@@ -134,10 +134,10 @@
     
     param[base_url] = http://jap.physiology.org/
     
-    au < released ; 2008 ; Journal of Applied Physiology Volume 104 ; 104 >
-    au < released ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 >
-    au < released ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 >
-    au < released ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 >
+    au < released ; 2008 ; Journal of Applied Physiology Volume 104 ; 104 ; >
+    au < released ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 ; >
+    au < released ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 ; >
+    au < released ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 ; >
   
   }
 
@@ -149,10 +149,10 @@
     
     param[base_url] = http://jn.physiology.org/
     
-    au < released ; 2008 ; Journal of Neurophysiology Volume 99 ; 99 >
-    au < released ; 2008 ; Journal of Neurophysiology Volume 100 ; 100 >
-    au < released ; 2009 ; Journal of Neurophysiology Volume 101 ; 101 >
-    au < released ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 >
+    au < released ; 2008 ; Journal of Neurophysiology Volume 99 ; 99 ; >
+    au < released ; 2008 ; Journal of Neurophysiology Volume 100 ; 100 ; >
+    au < released ; 2009 ; Journal of Neurophysiology Volume 101 ; 101 ; >
+    au < released ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 ; >
   
   }
 
@@ -164,14 +164,14 @@
     
     param[base_url] = http://physiolgenomics.physiology.org/
     
-    au < released ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 >
-    au < released ; 2008 ; Physiological Genomics Volume 33 ; 33 >
-    au < released ; 2008 ; Physiological Genomics Volume 34 ; 34 >
-    au < released ; 2008 ; Physiological Genomics Volume 35 ; 35 >
-    au < released ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 >
-    au < released ; 2009 ; Physiological Genomics Volume 37 ; 37 >
-    au < released ; 2009 ; Physiological Genomics Volume 38 ; 38 >
-    au < released ; 2009 ; Physiological Genomics Volume 39 ; 39 >
+    au < released ; 2007-2008 ; Physiological Genomics Volume 32 ; 32 ; >
+    au < released ; 2008 ; Physiological Genomics Volume 33 ; 33 ; >
+    au < released ; 2008 ; Physiological Genomics Volume 34 ; 34 ; >
+    au < released ; 2008 ; Physiological Genomics Volume 35 ; 35 ; >
+    au < released ; 2008-2009 ; Physiological Genomics Volume 36 ; 36 ; >
+    au < released ; 2009 ; Physiological Genomics Volume 37 ; 37 ; >
+    au < released ; 2009 ; Physiological Genomics Volume 38 ; 38 ; >
+    au < released ; 2009 ; Physiological Genomics Volume 39 ; 39 ; >
   
   }
 
@@ -183,8 +183,8 @@
     
     param[base_url] = http://physrev.physiology.org/
     
-    au < released ; 2008 ; Physiological Reviews Volume 88 ; 88 >
-    au < released ; 2009 ; Physiological Reviews Volume 89 ; 89 >
+    au < released ; 2008 ; Physiological Reviews Volume 88 ; 88 ; >
+    au < released ; 2009 ; Physiological Reviews Volume 89 ; 89 ; >
   
   }
 
@@ -196,8 +196,8 @@
     
     param[base_url] = http://physiologyonline.physiology.org/
     
-    au < released ; 2008 ; Physiology Volume 23 ; 23 >
-    au < released ; 2009 ; Physiology Volume 24 ; 24 >
+    au < released ; 2008 ; Physiology Volume 23 ; 23 ; >
+    au < released ; 2009 ; Physiology Volume 24 ; 24 ; >
   
   }
 
