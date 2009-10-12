@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.4 2009-10-09 22:06:49 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelperFactory.java,v 1.1.2.5 2009-10-12 20:28:58 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -119,6 +119,11 @@ public class JcrRepositoryHelperFactory {
   
   /**
    * Add one repository helper to this JRHF.
+   * 
+   * *** IMPORTANT ***
+   * I assume that some other part of the code is responsible for knowing the links
+   * between keys and their JcrRepositoryHelper.  This code does not maintain the
+   * list between executions. 
    * 
    * @param strKey How to re-find the helper repository
    * @param jhr    The helper repository to add.

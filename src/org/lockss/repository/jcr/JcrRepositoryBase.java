@@ -55,7 +55,6 @@ public abstract class JcrRepositoryBase {
   protected final static String k_propSizeMax = "SizeMax";
   protected final static String k_propStemFile = "StemFile";
   protected final static String k_propTreeContentSize = "TreeContentSize";
-  protected final static String k_propUrl = "URL";
 
   // Static variables.  These variables must work when multiple 
   // threads are happening.
@@ -67,7 +66,6 @@ public abstract class JcrRepositoryBase {
   protected Node m_node;
   protected Session m_session;          
   protected String m_stemFile;  // The filename, without the 5-digit suffix.
-  protected String m_url;
 
   /**
    * This constructor creates a new JcrRepositoryBase.
@@ -78,21 +76,18 @@ public abstract class JcrRepositoryBase {
    * @param url                The associated URL
    * @throws LockssRepositoryException
    */
-  public JcrRepositoryBase(Session session, Node node, String stemFile, String url)
+  public JcrRepositoryBase(Session session, Node node, String stemFile)
       throws LockssRepositoryException {
     try {
       testIfNull(session, "session");
       testIfNull(node, "node");
       testIfNull(stemFile, "stemFile");
-      testIfNull(url, "url");
 
       m_stemFile = stemFile;
-      m_url = url;
       
       constructorShared(session, node);
       
       m_node.setProperty(k_propStemFile, stemFile);
-      m_node.setProperty(k_propUrl, m_url);
       m_session.save();
       m_session.refresh(true);
     } catch (RepositoryException e) {
@@ -126,13 +121,6 @@ public abstract class JcrRepositoryBase {
             "The stem file was not found on this node.");
       }
 
-      if (m_node.hasProperty(k_propUrl)) {
-        propURL = m_node.getProperty(k_propUrl);
-        m_url = propURL.getString();
-      } else {
-        logger.error("The URL was not found on this node.");
-        throw new NoUrlException("The URL was not found on this node.");
-      }
     } catch (RepositoryException e) {
       logger.error("Repository Exception in constructor(2): "
           + e.getMessage());

@@ -105,7 +105,7 @@ implements RepositoryFileVersion {
   protected RepositoryFileVersionImpl(Session session, Node node, String stemFile,
       RepositoryFileImpl rfiParent, int sizeDeferredStream)
       throws LockssRepositoryException, FileNotFoundException {
-    super(session, node, stemFile, rfiParent.getNodeUrl());
+    super(session, node, stemFile);
     
     testIfNull(rfiParent, "rfiParent");
         
@@ -225,9 +225,6 @@ implements RepositoryFileVersion {
         m_sizeEditing = 0;
       }
 
-      propUrl = getProperty(k_propUrl, true);
-      m_url = propUrl.getString();
-
       m_rfiParent = rfiParent;
       
       propSizeDeferredStream = getProperty(k_propSizeDeferredStream, true);
@@ -312,7 +309,7 @@ implements RepositoryFileVersion {
             fileTempContent = m_deffileTempContent.getFile();
             istrTempContent = new FileInputStream(fileTempContent);
           }
-          warcw.writeResourceRecord(m_url, ArchiveUtils.get14DigitDate(),
+          warcw.writeResourceRecord(m_rfiParent.getNodeUrl(), ArchiveUtils.get14DigitDate(),
               "application/octet-stream", m_anvlRecord, istrTempContent,
               m_deffileTempContent.getByteCount());
         } finally {

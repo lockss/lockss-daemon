@@ -69,11 +69,15 @@ RepositoryNode  {
   protected final static String k_propNodeState = "NodeState";
   protected final static String k_propPollHistoryList = "PollHistoryList";
   protected final static String k_propProperties = "Properties";
+  protected final static String k_propUrl = "URL";
 
   // Static variables.  These variables must work when multiple 
   // threads are happening.
   
   private static Logger logger = Logger.getLogger("RepositoryNodeImpl");
+  
+  // Internal variables
+  protected String m_url;
   
   /**
    * This method generates a new repository node.
@@ -86,10 +90,14 @@ RepositoryNode  {
    */
   protected RepositoryNodeImpl(Session session, Node node, String stemFile, String url) 
       throws LockssRepositoryException {
-    super(session, node, stemFile, url);
+    super(session, node, stemFile);
+    
+    testIfNull(url, "url");
+    m_url = url;
     
     try {
       m_node.setProperty(k_propIsFile, false);
+      m_node.setProperty(k_propUrl, url);
       
       m_session.save();
       m_session.refresh(true);
@@ -110,6 +118,16 @@ RepositoryNode  {
   protected RepositoryNodeImpl(Session session, Node node) 
       throws LockssRepositoryException {
     super(session, node);
+    
+    Property propUrl;
+    
+    try {
+      propUrl = m_node.getProperty(k_propUrl);
+      m_url = propUrl.getString();
+    } catch (RepositoryException e) {
+      logger.error("RepositoryNodeImpl.constructor(2): ", e);
+      throw new LockssRepositoryException(e);
+    }
     
     invalidateTreeSize();
   }
