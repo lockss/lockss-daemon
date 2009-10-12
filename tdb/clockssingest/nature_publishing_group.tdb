@@ -49,7 +49,7 @@
 
     param[journal_id] = aja
 
-    au < ready ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
+    au < released ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
 
   }
@@ -64,8 +64,8 @@
     
 comment[bmt44] = at least one machine can't see the latest issue
 
-    au < ready ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
-    au < ready ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
+    au < released ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
+    au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < notReady ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
 
@@ -102,7 +102,7 @@ comment[bmt44] = at least one machine can't see the latest issue
 
     param[journal_id] = cgt
 
-    au < ready ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
+    au < released ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
@@ -115,7 +115,7 @@ comment[bmt44] = at least one machine can't see the latest issue
 
     param[journal_id] = cdd
 
-    au < ready ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
+    au < released ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
@@ -250,7 +250,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     au < manifest ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
     au < manifest ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
-    au < ready ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < testing ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
 
   }
@@ -264,7 +264,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
     param[journal_id] = hr
 
     au < manifest ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
-    au < ready ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
+    au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
 
   }
 
@@ -514,13 +514,13 @@ comment[cr] = waiting for the last issue to be crawled by all machines
     au < released ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
     au < released ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
     au < released ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
-    au < ready ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
+    au < released ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
     au < released ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
     au < released ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
     au < released ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
     au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
-    au < ready ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
-    au < does_not_exist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
+    au < released ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
+    au < doesNotExist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
 
   }
 
@@ -532,8 +532,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nbt
 
-    au < ready ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
-    au < ready ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+    au < released ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
+    au < released ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
 
   }
 
@@ -545,8 +545,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ncb
 
-    au < ready ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
-    au < ready ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+    au < released ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
+    au < released ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
 
   }
 
@@ -558,8 +558,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nchembio
 
-    au < ready ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
-    au < ready ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+    au < released ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -571,7 +571,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nchem
 
-    au < ready ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+    au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
 

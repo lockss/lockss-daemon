@@ -29,7 +29,7 @@
 
     param[journal_id] = aja
 
-    au < ready ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
+    au < released ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
 
   }
@@ -42,8 +42,8 @@
 
     param[journal_id] = bmt
 
-    au < ready ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
-    au < ready ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
+    au < released ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
+    au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
 
   }
@@ -56,7 +56,7 @@
 
     param[journal_id] = cgt
 
-    au < ready ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
+    au < released ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
@@ -69,7 +69,7 @@
 
     param[journal_id] = cdd
 
-    au < ready ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
+    au < released ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
@@ -142,7 +142,7 @@
 
     param[journal_id] = hdy
 
-    au < ready ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
 
   }
 
@@ -154,7 +154,7 @@
 
     param[journal_id] = hr
 
-    au < ready ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
+    au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
 
   }
   
@@ -171,12 +171,12 @@
     au < released ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
     au < released ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
     au < released ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
-    au < ready ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
+    au < released ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
     au < released ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
     au < released ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
     au < released ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
     au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
-    au < ready ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
+    au < released ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
 
   }
 
@@ -188,8 +188,8 @@
 
     param[journal_id] = nbt
 
-    au < ready ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
-    au < ready ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+    au < released ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
+    au < released ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
 
   }
 
@@ -201,7 +201,8 @@
 
     param[journal_id] = ncb
 
-    au < ready ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+    au < released ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
+    au < released ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
 
   }
 
@@ -213,8 +214,8 @@
 
     param[journal_id] = nchembio
 
-    au < ready ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
-    au < ready ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+    au < released ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -226,7 +227,7 @@
 
     param[journal_id] = nchem
 
-    au < ready ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+    au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
 }

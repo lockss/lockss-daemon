@@ -77,7 +77,7 @@
     au < manifest ; 2005 ; Archives of General Psychiatry Volume 62 ; 62 >
     au < manifest ; 2006 ; Archives of General Psychiatry Volume 63 ; 63 >
     au < manifest ; 2007 ; Archives of General Psychiatry Volume 64 ; 64 >
-    au < manifest ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 >
+    au < released ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 >
     au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 >
   
   }
@@ -98,7 +98,7 @@
     au < manifest ; 2005 ; Archives of Internal Medicine Volume 165 ; 165 >
     au < manifest ; 2006 ; Archives of Internal Medicine Volume 166 ; 166 >
     au < manifest ; 2007 ; Archives of Internal Medicine Volume 167 ; 167 >
-    au < manifest ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 >
+    au < released ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 >
     au < released ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 >
   
   }
@@ -119,7 +119,7 @@
     au < manifest ; 2005 ; Archives of Neurology Volume 62 ; 62 >
     au < manifest ; 2006 ; Archives of Neurology Volume 63 ; 63 >
     au < manifest ; 2007 ; Archives of Neurology Volume 64 ; 64 >
-    au < manifest ; 2008 ; Archives of Neurology Volume 65 ; 65 >
+    au < released ; 2008 ; Archives of Neurology Volume 65 ; 65 >
     au < released ; 2009 ; Archives of Neurology Volume 66 ; 66 >
   
   }
@@ -140,7 +140,7 @@
     au < manifest ; 2005 ; Archives of Ophthalmology Volume 123 ; 123 >
     au < manifest ; 2006 ; Archives of Ophthalmology Volume 124 ; 124 >
     au < manifest ; 2007 ; Archives of Ophthalmology Volume 125 ; 125 >
-    au < manifest ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 >
+    au < released ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 >
     au < released ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 >
   
   }
@@ -161,8 +161,8 @@
     au < manifest ; 2005 ; Archives of Otolaryngology - Head & Neck Surgery Volume 131 ; 131 >
     au < manifest ; 2006 ; Archives of Otolaryngology - Head & Neck Surgery Volume 132 ; 132 >
     au < manifest ; 2007 ; Archives of Otolaryngology - Head & Neck Surgery Volume 133 ; 133 >
-    au < manifest ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 >
-    au < testing ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 >
+    au < released ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 >
+    au < released ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 >
   
   }
 
@@ -182,7 +182,7 @@
     au < manifest ; 2005 ; Archives of Pediatrics & Adolescent Medicine Volume 159 ; 159 >
     au < manifest ; 2006 ; Archives of Pediatrics & Adolescent Medicine Volume 160 ; 160 >
     au < manifest ; 2007 ; Archives of Pediatrics & Adolescent Medicine Volume 161 ; 161 >
-    au < manifest ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 >
+    au < released ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 >
     au < released ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 >
   
   }
@@ -203,8 +203,8 @@
     au < manifest ; 2005 ; Archives of Surgery Volume 140 ; 140 >
     au < manifest ; 2006 ; Archives of Surgery Volume 141 ; 141 >
     au < manifest ; 2007 ; Archives of Surgery Volume 142 ; 142 >
-    au < manifest ; 2008 ; Archives of Surgery Volume 143 ; 143 >
-    au < testing ; 2009 ; Archives of Surgery Volume 144 ; 144 >
+    au < released ; 2008 ; Archives of Surgery Volume 143 ; 143 >
+    au < released ; 2009 ; Archives of Surgery Volume 144 ; 144 >
   
   }
 
@@ -216,8 +216,6 @@
     
     param[base_url] = http://jama.ama-assn.org/
 
-comment[r] = monitor the crawl
-    
     au < manifest ; 2000 ; Journal of the American Medical Association Volume 183 ; 183 >
     au < manifest ; 2000 ; Journal of the American Medical Association Volume 184 ; 184 >
     au < manifest ; 2001 ; Journal of the American Medical Association Volume 185 ; 185 >
@@ -234,10 +232,10 @@ comment[r] = monitor the crawl
     au < manifest ; 2006 ; Journal of the American Medical Association Volume 196 ; 196 >
     au < manifest ; 2007 ; Journal of the American Medical Association Volume 197 ; 197 >
     au < manifest ; 2007 ; Journal of the American Medical Association Volume 198 ; 198 >
-    au < manifest ; 2008 ; Journal of the American Medical Association Volume 199 ; 199 >
-    au < manifest ; 2008 ; Journal of the American Medical Association Volume 200 ; 200 >
-    au < testing ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 >
-    au < manifest ; 2009 ; Journal of the American Medical Association Volume 202 ; 202 >
+    au < released ; 2008 ; Journal of the American Medical Association Volume 199 ; 199 >
+    au < released ; 2008 ; Journal of the American Medical Association Volume 200 ; 200 >
+    au < released ; 2009 ; Journal of the American Medical Association Volume 201 ; 201 >
+    au < released ; 2009 ; Journal of the American Medical Association Volume 202 ; 202 >
   
   }
 
