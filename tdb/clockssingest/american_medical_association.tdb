@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
-  implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+  implicit < status ; attr[year] ; name ; param[volume_name] ; comment[proxy] >
   
   {
   
