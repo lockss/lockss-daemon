@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.84 2009-09-11 19:23:47 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.84.2.1 2009-10-13 22:33:54 thib_gc Exp $
  */
 
 /*
@@ -762,6 +762,12 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Plugin",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getPlugin().getPluginName()));
+      String yearStr = AuUtil.getTitleAttribute(au, "year");
+      if (yearStr != null) {
+        res.add(new StatusTable.SummaryInfo("Year",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            yearStr));
+      }
       AuState.AccessType atype = state.getAccessType();
       if (atype != null) {
 	res.add(new StatusTable.SummaryInfo("Access Type",
