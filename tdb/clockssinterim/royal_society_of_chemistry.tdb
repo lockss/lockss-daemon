@@ -118,6 +118,54 @@
     au < released ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
   
   }
+
+  {
+  
+    title <
+      name = Journal of Analytical Atomic Spectrometry
+    >
+    
+    param[journal_code] = ja
+    
+    au < ready ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Journal of Environmental Monitoring
+    >
+    
+    param[journal_code] = em
+    
+    au < ready ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Materials Chemistry
+    >
+    
+    param[journal_code] = jm
+    
+    au < ready ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Lab on a Chip
+    >
+    
+    param[journal_code] = lc
+    
+    au < ready ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
+  
+  }
   
   {
   

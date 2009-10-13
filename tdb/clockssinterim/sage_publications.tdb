@@ -12,6 +12,18 @@
   {
 
     title <
+      name = Journal of Child Health Care
+    >
+
+    param[base_url] = http://chc.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Biological Rhythms
     >
 
@@ -136,5 +148,120 @@
     au < tested ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
 
   }
+  
+  {
 
+    title <
+      name = Journal of Career Development
+    >
+
+    param[base_url] = http://jcd.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Career Development Volume 35 ; 35 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cases in Educational Leadership
+    >
+
+    param[base_url] = http://jel.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cellular Plastics
+    >
+
+    param[base_url] = http://cel.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
+    au < tested ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Composite Materials
+    >
+
+    param[base_url] = http://jcm.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Composite Materials Volume 42 ; 42 >
+    au < tested ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Conflict Resolution
+    >
+
+    param[base_url] = http://jcr.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 >
+    au < tested ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Consumer Culture
+    >
+
+    param[base_url] = http://joc.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Contemporary Criminal Justice
+    >
+
+    param[base_url] = http://ccj.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
+    au < tested ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Contemporary Ethnography
+    >
+
+    param[base_url] = http://jce.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 >
+    au < tested ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Contemporary History
+    >
+
+    param[base_url] = http://jch.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Contemporary History Volume 43 ; 43 >
+    au < tested ; 2009 ; Journal of Contemporary History Volume 44 ; 44 >
+
+  }
+  
 }

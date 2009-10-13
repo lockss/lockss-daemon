@@ -230,4 +230,31 @@
     au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
+  
+  {
+
+    title <
+      name = Nature Digest
+    >
+
+    param[journal_id] = ndigest
+
+    au < ready ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
+    au < ready ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
+
+  }
+  
+  {
+
+    title <
+      name = Nature Materials
+    >
+
+    param[journal_id] = nmat
+
+    au < ready ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
+    au < manifest ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
+
+  }
+  
 }
