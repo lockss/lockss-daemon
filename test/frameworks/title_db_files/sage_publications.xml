@@ -16696,6 +16696,22 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
   </property>
 
+  <property name="JournalofBiomaterialsApplications24">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Biomaterials Applications" />
+   <property name="title" value="Journal of Biomaterials Applications Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jba.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
   <property name="JournalofBiomolecularScreening11">
    <property name="attributes.publisher" value="SAGE Publications" />
    <property name="journalTitle" value="Journal of Biomolecular Screening" />
@@ -17012,6 +17028,22 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="32" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournalofBuildingPhysics33">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Building Physics" />
+   <property name="title" value="Journal of Building Physics Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jen.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
   </property>
@@ -18836,6 +18868,38 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="25" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournalofDisabilityPolicyStudies19">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Disability Policy Studies" />
+   <property name="title" value="Journal of Disability Policy Studies Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://dps.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournalofDisabilityPolicyStudies20">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Disability Policy Studies" />
+   <property name="title" value="Journal of Disability Policy Studies Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://dps.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
   </property>
