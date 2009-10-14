@@ -166,6 +166,54 @@
     au < ready ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
   
   }
+
+  {
+  
+    title <
+      name = Metallomics
+    >
+    
+    param[journal_code] = mt
+    
+    au < ready ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Molecular BioSystems
+    >
+    
+    param[journal_code] = mb
+    
+    au < ready ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Nanoscale
+    >
+    
+    param[journal_code] = nr
+    
+    au < ready ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Natural Product Reports
+    >
+    
+    param[journal_code] = np
+    
+    au < ready ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
+  
+  }
   
   {
   

@@ -32,7 +32,7 @@
     param[base_url] = http://aapnews.aappublications.org/
     
     au < manifest ; 2008 ; AAP News Volume 19 ; 19 >
-    au < testing ; 2009 ; AAP News Volume 20 ; 20 >
+    au < ready ; 2009 ; AAP News Volume 20 ; 20 >
   
   }
 
@@ -43,9 +43,11 @@
     >
     
     param[base_url] = http://neoreviews.aappublications.org/
+
+comment[nr] = 500 errors
     
     au < manifest ; 2008 ; NeoReviews Volume 9 ; 9 >
-    au < testing ; 2009 ; NeoReviews Volume 10 ; 10 >
+    au < notReady ; 2009 ; NeoReviews Volume 10 ; 10 >
   
   }
 
@@ -75,7 +77,7 @@ comment[p123] = 500 error
     param[base_url] = http://pedsinreview.aappublications.org/
     
     au < manifest ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-    au < testing ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+    au < ready ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
   
   }
 

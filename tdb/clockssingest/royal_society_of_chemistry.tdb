@@ -307,7 +307,7 @@
     
     param[journal_code] = mt
     
-    au < testing ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
+    au < ready ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
   
   }
 
@@ -320,7 +320,7 @@
     param[journal_code] = mb
     
     au < manifest ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
-    au < testing ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
+    au < ready ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
   
   }
 
@@ -332,7 +332,7 @@
     
     param[journal_code] = nr
     
-    au < testing ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
+    au < ready ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
   
   }
 
@@ -345,7 +345,7 @@
     param[journal_code] = np
     
     au < manifest ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
-    au < testing ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
+    au < ready ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
   
   }
 
@@ -358,7 +358,7 @@
     param[journal_code] = nj
     
     au < manifest ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
-    au < manifest ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+    au < testing ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
   
   }
 
@@ -371,7 +371,7 @@
     param[journal_code] = ob
     
     au < manifest ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
-    au < manifest ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+    au < testing ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
   
   }
 
@@ -395,7 +395,7 @@
     param[journal_code] = pp
     
     au < manifest ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
-    au < manifest ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+    au < testing ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
   
   }
 
@@ -419,7 +419,7 @@
     param[journal_code] = cp
     
     au < manifest ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
-    au < manifest ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
+    au < testing ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
   
   }
 

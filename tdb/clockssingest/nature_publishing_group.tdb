@@ -250,8 +250,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     au < manifest ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
     au < manifest ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
-    au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
-    au < testing ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
+    au < ready ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < ready ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
 
   }
 
@@ -276,8 +276,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = icb
 
-    au < testing ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
-    au < testing ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
+    au < ready ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
+    au < ready ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
 
   }
 
@@ -336,7 +336,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
     param[journal_id] = ja
 
     au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
-    au < testing ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
+    au < ready ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
 
   }
 
@@ -583,8 +583,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = ndigest
 
-    au < testing ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
-    au < testing ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
+    au < ready ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
+    au < ready ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -635,7 +635,7 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nmat
 
-    au < testing ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
+    au < ready ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < manifest ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
 
   }
@@ -648,8 +648,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nm
 
-    au < manifest ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
-    au < manifest ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
+    au < testing ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
+    au < testing ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
 
   }
 
@@ -661,8 +661,8 @@ comment[cr] = waiting for the last issue to be crawled by all machines
 
     param[journal_id] = nmeth
 
-    au < manifest ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
-    au < manifest ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
+    au < testing ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
+    au < testing ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
 
   }
 
