@@ -6021,8 +6021,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary Criminal Justice Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
-        au < HighWirePressPlugin ; manifest ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
-        au < HighWirePressPlugin ; manifest ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
+        au < HighWirePressPlugin ; ready ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
 
       }
 
@@ -6042,8 +6042,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary Ethnography Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary Ethnography Volume 35 ; 35 >
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary Ethnography Volume 36 ; 36 >
-        au < HighWirePressPlugin ; manifest ; Journal of Contemporary Ethnography Volume 37 ; 37 >
-        au < HighWirePressPlugin ; manifest ; Journal of Contemporary Ethnography Volume 38 ; 38 >
+        au < HighWirePressPlugin ; ready ; Journal of Contemporary Ethnography Volume 37 ; 37 >
+        au < HighWirePressPlugin ; ready ; Journal of Contemporary Ethnography Volume 38 ; 38 >
 
       }
 
@@ -6073,8 +6073,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary History Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Contemporary History Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; ready ; Journal of Contemporary History Volume 42 ; 42 >
-        au < HighWirePressPlugin ; manifest ; Journal of Contemporary History Volume 43 ; 43 >
-        au < HighWirePressPlugin ; manifest ; Journal of Contemporary History Volume 44 ; 44 >
+        au < HighWirePressPlugin ; ready ; Journal of Contemporary History Volume 43 ; 43 >
+        au < HighWirePressPlugin ; ready ; Journal of Contemporary History Volume 44 ; 44 >
 
       }
 
@@ -6164,7 +6164,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Developing Societies Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; Journal of Developing Societies Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; ready ; Journal of Developing Societies Volume 23 ; 23 >
-        au < HighWirePressPlugin ; manifest ; Journal of Developing Societies Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; Journal of Developing Societies Volume 24 ; 24 >
 
       }
 
@@ -6184,13 +6184,31 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Diagnostic Medical Sonography Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; Journal of Diagnostic Medical Sonography Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; ready ; Journal of Diagnostic Medical Sonography Volume 23 ; 23 >
-        au < HighWirePressPlugin ; manifest ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
-        au < HighWirePressPlugin ; manifest ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
+        au < HighWirePressPlugin ; testing ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
 
       }
 
     }
 
+    {
+
+      title <
+        name = Journal of Disability Policy Studies
+      >
+      
+      {
+
+        param[base_url] = http://dps.sagepub.com/       
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; ready ; Journal of Disability Policy Studies Volume 19 ; 19 >
+        au < HighWirePressPlugin ; ready ; Journal of Disability Policy Studies Volume 20 ; 20 >
+ 
+      } 
+      
+    }
+  
     {
 
       title <
@@ -6215,8 +6233,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; The Journal of Early Adolescence Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; doNotProcess ; The Journal of Early Adolescence Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; ready ; The Journal of Early Adolescence Volume 27 ; 27 >
-        au < HighWirePressPlugin ; manifest ; The Journal of Early Adolescence Volume 28 ; 28 >
-        au < HighWirePressPlugin ; manifest ; The Journal of Early Adolescence Volume 29 ; 29 >
+        au < HighWirePressPlugin ; ready ; The Journal of Early Adolescence Volume 28 ; 28 >
+        au < HighWirePressPlugin ; ready ; The Journal of Early Adolescence Volume 29 ; 29 >
 
       }
 
@@ -6236,8 +6254,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Early Childhood Literacy Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Journal of Early Childhood Literacy Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of Early Childhood Literacy Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Journal of Early Childhood Literacy Volume 8 ; 8 >
-        au < HighWirePressPlugin ; manifest ; Journal of Early Childhood Literacy Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Journal of Early Childhood Literacy Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Journal of Early Childhood Literacy Volume 9 ; 9 >
 
       }
 
@@ -6257,13 +6275,29 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Early Childhood Research Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; ready ; Journal of Early Childhood Research Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; ready ; Journal of Early Childhood Research Volume 5 ; 5 >
-        au < HighWirePressPlugin ; manifest ; Journal of Early Childhood Research Volume 6 ; 6 >
-        au < HighWirePressPlugin ; manifest ; Journal of Early Childhood Research Volume 7 ; 7 >
+        au < HighWirePressPlugin ; ready ; Journal of Early Childhood Research Volume 6 ; 6 >
+        au < HighWirePressPlugin ; ready ; Journal of Early Childhood Research Volume 7 ; 7 >
 
       }
 
     }
 
+  {
+
+    title <
+      name = Journal of Early Intervention
+    >
+
+    {
+
+      param[base_url] = http://jei.sagepub.com/
+
+      au < HighWirePressPlugin ; testing ; Journal of Early Intervention Volume 31 ; 31 >
+    
+    }
+    
+  }
+  
     {
 
       title <
@@ -6276,7 +6310,8 @@ comment[jcp] = some sort of custom layout
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; ready ; Journal of Education for Sustainable Development Volume 1 ; 1 >
-        au < HighWirePressPlugin ; manifest ; Journal of Education for Sustainable Development Volume 2 ; 2 >
+        au < HighWirePressPlugin ; testing ; Journal of Education for Sustainable Development Volume 2 ; 2 >
+        au < HighWirePressPlugin ; testing ; Journal of Education for Sustainable Development Volume 3 ; 3 >
 
       }
 
@@ -6294,8 +6329,8 @@ comment[jcp] = some sort of custom layout
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; ready ; Journal of Educational and Behavioral Statistics Volume 32 ; 32 >
-        au < HighWirePressPlugin ; manifest ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
-        au < HighWirePressPlugin ; manifest ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
+        au < HighWirePressPlugin ; testing ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
+        au < HighWirePressPlugin ; testing ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
 
       }
 
@@ -6315,8 +6350,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Elastomers and Plastics Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; ready ; Journal of Elastomers and Plastics Volume 38 ; 38 >
         au < HighWireStrVolPlugin ; ready ; Journal of Elastomers and Plastics Volume 39 ; 39 >
-        au < HighWirePressPlugin ; manifest ; Journal of Elastomers and Plastics Volume 40 ; 40 >
-        au < HighWirePressPlugin ; manifest ; Journal of Elastomers and Plastics Volume 41 ; 41 >
+        au < HighWirePressPlugin ; testing ; Journal of Elastomers and Plastics Volume 40 ; 40 >
+        au < HighWirePressPlugin ; testing ; Journal of Elastomers and Plastics Volume 41 ; 41 >
 
       }
 
@@ -6336,8 +6371,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Emerging Market Finance Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; ready ; Journal of Emerging Market Finance Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Journal of Emerging Market Finance Volume 6 ; 6 >
-        au < HighWirePressPlugin ; manifest ; Journal of Emerging Market Finance Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Journal of Emerging Market Finance Volume 8 ; 8 >
+        au < HighWirePressPlugin ; testing ; Journal of Emerging Market Finance Volume 7 ; 7 >
+        au < HighWirePressPlugin ; testing ; Journal of Emerging Market Finance Volume 8 ; 8 >
 
       }
 

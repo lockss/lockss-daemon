@@ -263,5 +263,82 @@
     au < tested ; 2009 ; Journal of Contemporary History Volume 44 ; 44 >
 
   }
+
+  {
+
+    title <
+      name = Journal of Developing Societies
+    >
+
+    param[base_url] = http://jds.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Developing Societies Volume 24 ; 24 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Diagnostic Medical Sonography
+    >
+
+    param[base_url] = http://jdm.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
+    au < tested ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Disability Policy Studies
+    >
+
+    param[base_url] = http://dps.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Disability Policy Studies Volume 19 ; 19 >
+    au < tested ; 2009 ; Journal of Disability Policy Studies Volume 20 ; 20 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Early Adolescence
+    >
+
+    param[base_url] = http://jea.sagepub.com/
+
+    au < tested ; 2008 ; The Journal of Early Adolescence Volume 28 ; 28 >
+    au < tested ; 2009 ; The Journal of Early Adolescence Volume 29 ; 29 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Early Childhood Literacy
+    >
+
+    param[base_url] = http://ecl.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Early Childhood Literacy Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of Early Childhood Literacy Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Early Childhood Research
+    >
+
+    param[base_url] = http://ecr.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Early Childhood Research Volume 6 ; 6 >
+    au < tested ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 >
+
+  }
   
 }
