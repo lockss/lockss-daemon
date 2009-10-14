@@ -1,5 +1,5 @@
 /*
- * $Id: BePressMetadataExtractorFactory.java,v 1.4 2009-09-08 20:23:38 thib_gc Exp $
+ * $Id: BePressMetadataExtractorFactory.java,v 1.5 2009-10-14 21:43:06 dshr Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class BePressMetadataExtractorFactory
 
     public BePressMetadataExtractor() {
     }
-      String[] bePressField = {
+    String[] bePressField = {
       "bepress_citation_doi",
       "bepress_citation_date",
       "bepress_citation_authors",
@@ -68,19 +68,71 @@ public class BePressMetadataExtractorFactory
       "dc.Contributor",
       "dc.Title",
     };
+    String[] bePressField2 = {
+      "bepress_citation_volume",
+      "bepress_citation_issue",
+      "bepress_citation_firstpage",
+    };
 
     public Metadata extract(CachedUrl cu) throws IOException {
       Metadata ret = super.extract(cu);
       for (int i = 0; i < bePressField.length; i++) {
 	String content = ret.getProperty(bePressField[i]);
 	if (content != null) {
-	  if (dublinCoreField[i].equalsIgnoreCase(Metadata.KEY_DOI)) {
-	    content = Metadata.PROTOCOL_DOI + content;
-	  }
 	  ret.setProperty(dublinCoreField[i], content);
+	  if (dublinCoreField[i].equalsIgnoreCase("dc.Identifier")) {
+	    ret.putDOI(content);
+	  }
 	}
       }
+      for (int i = 0; i < bePressField2.length; i++) {
+	String content = ret.getProperty(bePressField2[i]);
+	if (content != null) {
+	  switch (i) {
+	  case 0:
+	    ret.putVolume(content);
+	    break;
+	  case 1:
+	    ret.putIssue(content);
+	    break;
+	  case 2:
+	    ret.putStartPage(content);
+	    break;
+	  }
+	}
+      }
+      // The ISSN is not in a meta tag but we can find it in the text
+      if (cu == null) {
+	throw new IllegalArgumentException("extract(null)");
+      }
+      BufferedReader bReader =
+	new BufferedReader(cu.openForReading());
+      for (String line = bReader.readLine();
+	   line != null;
+	   line = bReader.readLine()) {
+	line = line.trim();
+	if (StringUtil.startsWithIgnoreCase(line, "<div id=\"issn\">")) {
+	  log.debug2("Line: " + line);
+	  addISSN(line, ret);
+	}
+      }
+      IOUtil.safeClose(bReader);
       return ret;
+    }
+    protected void addISSN(String line, Metadata ret) {
+      String issnFlag = "ISSN: ";
+      int issnBegin = StringUtil.indexOfIgnoreCase(line, issnFlag);
+      if (issnBegin <= 0) {
+	log.debug(line + " : no " + issnFlag);
+	return;
+      }
+      issnBegin += issnFlag.length();
+      String issn = line.substring(issnBegin, issnBegin + 9);
+      if (issn.length() < 9) {
+	log.debug(line + " : too short");
+	return;
+      }
+      ret.putISSN(issn);
     }
   }
 }

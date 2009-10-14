@@ -1,5 +1,5 @@
 /*
- * $Id: NatureMetadataExtractorFactory.java,v 1.3 2009-08-01 10:16:36 thib_gc Exp $
+ * $Id: NatureMetadataExtractorFactory.java,v 1.4 2009-10-14 21:43:06 dshr Exp $
  */
 
 /*
@@ -63,6 +63,15 @@ public class NatureMetadataExtractorFactory implements MetadataExtractorFactory 
     String[] dublinCoreField = {
       "dc.Contributor",
     };
+    String[] metaFields = {
+      "citation_volume", // <meta name="citation_volume" content="19" />
+      "citation_issue", // <meta name="citation_issue" content="2" />
+      "citation_firstpage", // <meta name="citation_firstpage" content="119" />
+      "citation_doi", // <meta name="citation_doi" content="doi:10.1038/sj.ijir.3901490" />
+      "prism.issn", // <meta name="prism.issn" content="0955-9930" />
+      "prism.eIssn", // <meta name="prism.eIssn" content="1476-5489" />
+    };
+
 
     public Metadata extract(CachedUrl cu) throws IOException {
       Metadata ret = super.extract(cu);
@@ -70,6 +79,28 @@ public class NatureMetadataExtractorFactory implements MetadataExtractorFactory 
 	String content = ret.getProperty(natureField[i]);
 	if (content != null) {
 	  ret.setProperty(dublinCoreField[i], content);
+	}
+      }
+      for (int i = 0; i <metaFields.length; i++) {
+	String content = ret.getProperty(metaFields[i]);
+	if (content != null) {
+	  switch (i) {
+	  case 0:
+	    ret.putVolume(content);
+	    break;
+	  case 1:
+	    ret.putIssue(content);
+	    break;
+	  case 2:
+	    ret.putStartPage(content);
+	    break;
+	  case 3:
+	    ret.putDOI(content);
+	    break;
+	  case 4:
+	    ret.putISSN(content);
+	    break;
+	  }
 	}
       }
       return ret;

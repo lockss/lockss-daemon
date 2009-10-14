@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierMetadataExtractorFactory.java,v 1.2 2009-09-04 22:59:11 thib_gc Exp $
+ * $Id: ElsevierMetadataExtractorFactory.java,v 1.3 2009-10-14 21:43:06 dshr Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class ElsevierMetadataExtractorFactory
   private static final Map<String, String> tagMap =
     new HashMap<String, String>();
   static {
-    tagMap.put("ce:doi", Metadata.KEY_DOI);
+    tagMap.put("ce:doi", "dc.Identifier");
   };
 
   /**
@@ -67,7 +67,9 @@ public class ElsevierMetadataExtractorFactory
 
     public Metadata extract(CachedUrl cu) throws IOException {
       // cu points to a file whose name is .../main.pdf
-      // but the metadata we want is in a file whose name is .../main.xml
+      // but the DOI we want is in a file whose name is .../main.xml
+      // The rest of the metadata is in the dataset.toc file that
+      // describes the package in which the article was delivered.
       Metadata ret = null;
       String pdfUrl = cu.getUrl();
       if (StringUtil.endsWithIgnoreCase(pdfUrl, ".pdf")) {
@@ -77,11 +79,9 @@ public class ElsevierMetadataExtractorFactory
           if (xmlCu != null && xmlCu.hasContent()) {
             ret = super.extract(xmlCu);
             // Elsevier doesn't prefix the DOI in dc.Identifier with doi:
-            String content = ret.getProperty(Metadata.KEY_DOI);
-            if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
-              ret
-                  .setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI
-                      + content);
+            String content = ret.getProperty("dc.Identifier");
+            if (content != null) {
+	      ret.putDOI(content);
             }
           }
         }

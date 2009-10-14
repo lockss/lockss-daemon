@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireMetadataExtractorFactory.java,v 1.3 2009-10-09 00:41:36 thib_gc Exp $
+ * $Id: HighWireMetadataExtractorFactory.java,v 1.4 2009-10-14 21:43:06 dshr Exp $
  */
 
 /*
@@ -71,11 +71,28 @@ public class HighWireMetadataExtractorFactory
           if (reprintframedCu != null && reprintframedCu.hasContent()) {
             ret = super.extract(reprintframedCu);
             // HighWire doesn't prefix the DOI in dc.Identifier with doi:
-            String content = ret.getProperty(Metadata.KEY_DOI);
-            if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
-              ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI
-                      + content);
-            }
+            String content = ret.getProperty("dc.Identifier");
+	    if (content != null && !"".equals(content)) {
+	      ret.putDOI(content);
+	    }
+	    // Many HighWire journals either omit citation_issn
+	    // or have an empty citation_issn
+	    content = ret.getProperty("citation_issn");
+	    if (content != null && !"".equals(content)) {
+	      ret.putISSN(content);
+	    }
+	    content = ret.getProperty("citation_volume");
+	    if (content != null && !"".equals(content)) {
+	      ret.putVolume(content);
+	    }
+	    content = ret.getProperty("citation_issue");
+	    if (content != null && !"".equals(content)) {
+	      ret.putIssue(content);
+	    }
+	    content = ret.getProperty("citation_firstpage");
+	    if (content != null && !"".equals(content)) {
+	      ret.putStartPage(content);
+	    }
           }
         }
         finally {
