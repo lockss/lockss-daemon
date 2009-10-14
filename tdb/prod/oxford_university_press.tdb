@@ -3956,6 +3956,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Literature and Theology Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; Literature and Theology Volume 20 ; 20 >
+        au < HighWirePressPlugin ; testing ; Literature and Theology Volume 21 ; 21 >
+        au < HighWirePressPlugin ; testing ; Literature and Theology Volume 22 ; 22 >
+        au < HighWirePressPlugin ; testing ; Literature and Theology Volume 23 ; 23 >
 
       }
 
@@ -3985,6 +3988,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Logic Journal of the IGPL Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Logic Journal of the IGPL Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Logic Journal of the IGPL Volume 15 ; 15 >
+        au < HighWirePressPlugin ; testing ; Logic Journal of the IGPL Volume 16 ; 16 >
+        au < HighWirePressPlugin ; testing ; Logic Journal of the IGPL Volume 17 ; 17 >
 
       }
 
@@ -4013,6 +4018,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Mathematical Medicine and Biology Volume 22 ; 22 >
         au < HighWirePressPlugin ; doNotProcess ; Mathematical Medicine and Biology Volume 23 ; 23 >
+        au < HighWirePressPlugin ; testing ; Mathematical Medicine and Biology Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; Mathematical Medicine and Biology Volume 25 ; 25 >
+        au < HighWirePressPlugin ; testing ; Mathematical Medicine and Biology Volume 26 ; 26 >
 
       }
 
@@ -4041,6 +4049,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Medical Law Review Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Medical Law Review Volume 14 ; 14 >
+        au < HighWirePressPlugin ; testing ; Medical Law Review Volume 15 ; 15 >
+        au < HighWirePressPlugin ; testing ; Medical Law Review Volume 16 ; 16 >
+        au < HighWirePressPlugin ; testing ; Medical Law Review Volume 17 ; 17 >
 
       }
 
@@ -4099,6 +4110,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; ready ; Modern Judaism Volume 25 ; 25 >
         au < HighWirePressPlugin ; doNotProcess ; Modern Judaism Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; ready ; Modern Judaism Volume 27 ; 27 >
+        au < HighWirePressPlugin ; testing ; Modern Judaism Volume 28 ; 28 >
+        au < HighWirePressPlugin ; testing ; Modern Judaism Volume 29 ; 29 >
 
       }
 
@@ -4149,6 +4162,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Molecular Human Reproduction Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; released ; Molecular Human Reproduction Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; released ; Molecular Human Reproduction Volume 13 ; 13 >
+        au < HighWirePressPlugin ; testing ; Molecular Human Reproduction Volume 14 ; 14 >
+        au < HighWirePressPlugin ; testing ; Molecular Human Reproduction Volume 15 ; 15 >
 
       }
 
@@ -4159,12 +4174,16 @@ comment[jrma] = moved to informaworld.  should be marked down?
       title <
         name = Molecular Plant
       >
+      
+      {
+      
+        param[base_url] = http://mplant.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      param[base_url] = http://mplant.oxfordjournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        au < HighWirePressPlugin ; testing ; Molecular Plant Volume 1 ; 1 >
+        au < HighWirePressPlugin ; testing ; Molecular Plant Volume 2 ; 2 >
 
-      au < HighWirePressPlugin ; testing ; Molecular Plant Volume 1 ; 1 >
-      au < HighWirePressPlugin ; testing ; Molecular Plant Volume 2 ; 2 >
+      }
 
     }
   
@@ -4251,8 +4270,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Mutagenesis Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Mutagenesis Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; released ; Mutagenesis Volume 22 ; 22 >
-        au < HighWirePressPlugin ; testing ; Mutagenesis Volume 23 ; 23 >
-        au < HighWirePressPlugin ; testing ; Mutagenesis Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Mutagenesis Volume 23 ; 23 >
+        au < HighWirePressPlugin ; ready ; Mutagenesis Volume 24 ; 24 >
 
       }
 
@@ -4264,11 +4283,15 @@ comment[jrma] = moved to informaworld.  should be marked down?
         name = NDT Plus
       >
 
-      param[base_url] = http://ndtplus.oxfordjournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+      {
+
+        param[base_url] = http://ndtplus.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
   
-      au < HighWirePressPlugin ; testing ; NDT Plus Volume 1 ; 1 >
-      au < HighWirePressPlugin ; testing ; NDT Plus Volume 2 ; 2 >
+        au < HighWirePressPlugin ; ready ; NDT Plus Volume 1 ; 1 >
+        au < HighWirePressPlugin ; ready ; NDT Plus Volume 2 ; 2 >
+
+      }
 
     }
   
@@ -4296,8 +4319,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Nephrology Dialysis Transplantation Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; released ; Nephrology Dialysis Transplantation Volume 22 ; 22 >
-        au < HighWirePressPlugin ; testing ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
-        au < HighWirePressPlugin ; testing ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
+        au < HighWirePressPlugin ; ready ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
 
       }
 
@@ -4402,11 +4425,15 @@ comment[jrma] = moved to informaworld.  should be marked down?
         name = Nicotine and Tobacco Research
       >
 
-      param[base_url] = http://ntr.oxfordjournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+      {
+
+        param[base_url] = http://ntr.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
   
-      au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 10 ; 10 >
-      au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 11 ; 11 >
+        au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 10 ; 10 >
+        au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 11 ; 11 >
+
+      }
 
     }
   
