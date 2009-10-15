@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerMetadataExtractorFactory.java,v 1.5 2009-10-14 23:30:30 dshr Exp $
+ * $Id: SpringerMetadataExtractorFactory.java,v 1.6 2009-10-15 01:11:08 dshr Exp $
  */
 
 /*
@@ -41,10 +41,20 @@ import org.lockss.plugin.*;
 public class SpringerMetadataExtractorFactory
     implements MetadataExtractorFactory {
   static Logger log = Logger.getLogger("SpringerMetadataExtractorFactory");
+  private static final String VOLUME_START = "LOCKSS.Springer.VolumeStart";
+  private static final String VOLUME_END = "LOCKSS.Springer.VolumeEnd";
+  private static final String ISSUE_START = "LOCKSS.Springer.IssueStart";
+  private static final String ISSUE_END = "LOCKSS.Springer.IssueEnd";
   private static final Map<String, String> tagMap =
     new HashMap<String, String>();
   static {
-    tagMap.put("articledoi", Metadata.KEY_DOI);
+    tagMap.put("articledoi", "dc.Identifier");
+    tagMap.put("JournalPrintISSN", Metadata.KEY_ISSN);
+    tagMap.put("VolumeIDStart", VOLUME_START);
+    tagMap.put("VolumeIDEnd", VOLUME_END);
+    tagMap.put("IssueIDStart", ISSUE_START);
+    tagMap.put("IssueIDEnd", ISSUE_END);
+    tagMap.put("ArticleFirstPage", Metadata.KEY_START_PAGE);
   };
 
   /**
@@ -71,12 +81,12 @@ public class SpringerMetadataExtractorFactory
     }
 
     public Metadata extract(CachedUrl cu) throws IOException {
-      // cu points to a file whose name is .../main.pdf
-      // but the metadata we want is in a file whose name is .../main.xml
+      // cu points to a file whose name is ....pdf
+      // but the metadata we want is in a file whose name is ....xml.Meta
       Metadata ret = null;
       String pdfUrl = cu.getUrl();
       if (pdfUrl.matches(regex)) {
-	String content = null;
+	String doi = null;
 	String xmlUrl =
 	  pdfUrl.replaceFirst(part1, "").replaceFirst(part2, ".xml.Meta");
 	CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
@@ -94,16 +104,57 @@ public class SpringerMetadataExtractorFactory
 	  if (xmlCu != null || xmlCu.hasContent()) {
 	    ret = super.extract(xmlCu);
 	    // Springer doesn't prefix the DOI in dc.Identifier with doi:
-	    content = ret.getProperty(Metadata.KEY_DOI);
+	    doi = ret.getProperty("dc.Identifier");
+	    if (doi != null) {
+	      log.debug3(xmlCu.getUrl() + " DOI " + doi);
+	      ret.putDOI(doi);
+	    } else {
+	      log.debug3(xmlCu.getUrl() + " no DOI");
+	    }
+	    String start = ret.getProperty(VOLUME_START);
+	    String end = ret.getProperty(VOLUME_END);
+	    if (start != null) {
+	      if (end != null) {
+		if (end.equals(start)) {
+		  log.debug3(xmlCu.getUrl() + " " + VOLUME_START + "=" + start);
+		  ret.putVolume(start);
+		} else {
+		  log.debug3(xmlCu.getUrl() + " " + VOLUME_START + " " + start +
+			    " " + VOLUME_END + end);
+		  ret.putVolume(start + "-" + end);
+		}
+	      } else {
+		log.debug3(xmlCu.getUrl() + " " + VOLUME_START + " " + start);
+		ret.putVolume(start);
+	      }
+	    } else {
+	      log.debug3(xmlCu.getUrl() + " no " + VOLUME_START);
+	    }
+	    start = ret.getProperty(ISSUE_START);
+	    end = ret.getProperty(ISSUE_END);
+	    if (start != null) {
+	      if (end != null) {
+		if (end.equals(start)) {
+		  log.debug3(xmlCu.getUrl() + " " + ISSUE_START + "=" + start);
+		  ret.putIssue(start);
+		} else {
+		  log.debug3(xmlCu.getUrl() + " " + ISSUE_START + " " + start +
+			    " " + ISSUE_END + end);
+		  ret.putIssue(start + "-" + end);
+		}
+	      } else {
+		log.debug3(xmlCu.getUrl() + " " + ISSUE_START + " " + start);
+		ret.putIssue(start);
+	      }
+	    } else {
+	      log.debug3(xmlCu.getUrl() + " no " + ISSUE_START);
+	    }
 	  } else {
 	    if (xmlCu == null) {
 	      log.debug("xmlCu is null");
 	    } else {
 	      log.debug(xmlCu.getUrl() + " no content");
 	    }
-	  }
-	  if (content != null && !content.startsWith(Metadata.PROTOCOL_DOI)) {
-	    ret.setProperty(Metadata.KEY_DOI, Metadata.PROTOCOL_DOI + content);
 	  }
 	}
 	finally {
