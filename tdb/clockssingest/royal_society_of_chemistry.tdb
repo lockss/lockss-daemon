@@ -358,7 +358,7 @@
     param[journal_code] = nj
     
     au < manifest ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
-    au < testing ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+    au < ready ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
   
   }
 
@@ -371,7 +371,7 @@
     param[journal_code] = ob
     
     au < manifest ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
-    au < testing ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+    au < ready ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
   
   }
 

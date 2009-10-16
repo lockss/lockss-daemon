@@ -58,7 +58,19 @@
     au < released ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
   
   }
-
+  
+  {
+  
+    title <
+      name = Chemistry Education Research and Practice
+    >
+    
+    param[journal_code] = rp
+    
+    au < ready ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+  
+  }  
+  
   {
   
     title <
@@ -214,16 +226,31 @@
     au < ready ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
   
   }
-  
+
   {
   
     title <
-      name = Chemistry Education Research and Practice
+      name = New Journal of Chemistry
     >
     
-    param[journal_code] = rp
+    param[journal_code] = nj
     
-    au < ready ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+    au < manifest ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < ready ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
   
-  }  
+  }
+
+  {
+  
+    title <
+      name = Organic & Biomolecular Chemistry
+    >
+    
+    param[journal_code] = ob
+    
+    au < manifest ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < ready ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+  
+  }
+
 }
