@@ -62,7 +62,7 @@
 
     param[journal_id] = bmt
     
-comment[bmt44] = at least one machine can't see the latest issue
+comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
     au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
@@ -128,10 +128,8 @@ comment[bmt44] = at least one machine can't see the latest issue
 
     param[journal_id] = cr
 
-comment[cr] = waiting for the last issue to be crawled by all machines
-
     au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
-    au < notReady ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+    au < ready ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
 
   }
 

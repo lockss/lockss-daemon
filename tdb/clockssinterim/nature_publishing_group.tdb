@@ -78,6 +78,19 @@
   {
 
     title <
+      name = Cell Research
+    >
+
+    param[journal_id] = cr
+
+    au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
+    au < ready ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+
+  }
+
+  {
+
+    title <
       name = The EMBO Journal
     >
 
