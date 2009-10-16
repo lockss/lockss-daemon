@@ -252,5 +252,27 @@
     au < ready ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
   
   }
+  
+    title <
+      name = Photochemical & Photobiological Sciences
+    >
+    
+    param[journal_code] = pp
+    
+    au < ready ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+  
+  }
 
+  {
+  
+    title <
+      name = Physical Chemistry Chemical Physics
+    >
+    
+    param[journal_code] = cp
+    
+    au < ready ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
+  
+  }
+  
 }

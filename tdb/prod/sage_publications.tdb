@@ -5602,6 +5602,24 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
     }
 
+  {
+
+    title <
+      name = Journal of Dental Research
+    >
+    
+    {
+    
+      param[base_url] = http://jdr.sagepub.com/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 87 ; 87 >
+      au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 88 ; 88 >
+    
+    }
+    
+  }
+  
     {
 
       title <
@@ -5782,7 +5800,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Child Health Care Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; ready ; Journal of Child Health Care Volume 11 ; 11 >
         au < HighWirePressPlugin ; ready ; Journal of Child Health Care Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Journal of Child Health Care Volume 13 ; 13 >
+        au < HighWirePressPlugin ; tested ; Journal of Child Health Care Volume 13 ; 13 >
 
       }
 
@@ -5822,8 +5840,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; ready ; Journal of Classical Sociology Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Journal of Classical Sociology Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of Classical Sociology Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Journal of Classical Sociology Volume 8 ; 8 >
-        au < HighWirePressPlugin ; manifest ; Journal of Classical Sociology Volume 9 ; 9 >
+        au < HighWirePressPlugin ; tested ; Journal of Classical Sociology Volume 8 ; 8 >
+        au < HighWirePressPlugin ; tested ; Journal of Classical Sociology Volume 9 ; 9 >
 
       }
 
@@ -6113,12 +6131,29 @@ comment[jcp] = some sort of custom layout
 
         au < HighWireStrVolPlugin ; ready ; Journal of Creative Communications Volume 1 ; 1 >
         au < HighWirePressPlugin ; manifest ; Journal of Creative Communications Volume 2 ; 2 >
-        au < HighWirePressPlugin ; manifest ; Journal of Creative Communications Volume 3 ; 3 >
+        au < HighWirePressPlugin ; ready ; Journal of Creative Communications Volume 3 ; 3 >
 
       }
 
     }
 
+  {
+
+    title <
+      name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology
+    >
+
+    {
+
+      param[base_url] = http://dms.sagepub.com/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+      au < manifest ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+
+    }
+
+  }
+  
     {
 
       title <
@@ -6143,8 +6178,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Cross-Cultural Psychology Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; ready ; Journal of Cross-Cultural Psychology Volume 38 ; 38 >
-        au < HighWirePressPlugin ; manifest ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
-        au < HighWirePressPlugin ; manifest ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
+        au < HighWirePressPlugin ; ready ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
+        au < HighWirePressPlugin ; ready ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
 
       }
 
@@ -6291,6 +6326,7 @@ comment[jcp] = some sort of custom layout
     {
 
       param[base_url] = http://jei.sagepub.com/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
       au < HighWirePressPlugin ; testing ; Journal of Early Intervention Volume 31 ; 31 >
     

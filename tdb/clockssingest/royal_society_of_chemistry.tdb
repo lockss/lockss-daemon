@@ -394,8 +394,8 @@
     
     param[journal_code] = pp
     
-    au < manifest ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
-    au < testing ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+    au < testing ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
+    au < ready ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
   
   }
 
@@ -418,8 +418,8 @@
     
     param[journal_code] = cp
     
-    au < manifest ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
-    au < testing ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
+    au < testing ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
+    au < ready ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
   
   }
 
@@ -431,8 +431,8 @@
     
     param[journal_code] = sm
     
-    au < manifest ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
-    au < manifest ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
+    au < testing ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
+    au < testing ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
   
   }
 

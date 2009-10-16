@@ -7,6 +7,72 @@
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   implicit < status ; attr[year] ; name ; param[volume_name] >
 
+ 
+  {
+
+    title <
+      name = Literature and Theology
+    >
+
+    param[base_url] = http://litthe.oxfordjournals.org/
+
+    au < tested ; 2008 ; Literature and Theology Volume 22 ; 22 >
+    au < tested ; 2009 ; Literature and Theology Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Logic Journal of the IGPL
+    >
+
+comment[j17] = no subscription
+
+    param[base_url] = http://jigpal.oxfordjournals.org/
+
+    au < testing ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Mathematical Medicine and Biology: A Journal of the IMA
+    >
+
+    param[base_url] = http://imammb.oxfordjournals.org/
+
+    au < tested ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 >
+    au < tested ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 >
+
+  }
+
+  {
+
+    title <
+      name = Medical Law Review
+    >
+
+    param[base_url] = http://medlaw.oxfordjournals.org/
+
+    au < tested ; 2008 ; Medical Law Review Volume 16 ; 16 >
+    au < tested ; 2009 ; Medical Law Review Volume 17 ; 17 >
+
+  }
+
+  {
+
+    title <
+      name = Modern Judaism - A Journal of Jewish Ideas and Experience
+    >
+
+    param[base_url] = http://mj.oxfordjournals.org/
+
+    au < tested ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 >
+    au < tested ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 >
+
+  }
   
   {
 

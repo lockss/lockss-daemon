@@ -2090,8 +2090,8 @@
 
     param[base_url] = http://litthe.oxfordjournals.org/
 
-    au < testing ; 2008 ; Literature and Theology Volume 22 ; 22 >
-    au < testing ; 2009 ; Literature and Theology Volume 23 ; 23 >
+    au < tested ; 2008 ; Literature and Theology Volume 22 ; 22 >
+    au < tested ; 2009 ; Literature and Theology Volume 23 ; 23 >
 
   }
 
@@ -2101,10 +2101,12 @@
       name = Logic Journal of the IGPL
     >
 
+comment[j17] = no subscription
+
     param[base_url] = http://jigpal.oxfordjournals.org/
 
     au < testing ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 >
-    au < testing ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
+    au < notReady ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
 
   }
 
@@ -2116,8 +2118,8 @@
 
     param[base_url] = http://imammb.oxfordjournals.org/
 
-    au < testing ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 >
-    au < testing ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 >
+    au < tested ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 >
+    au < tested ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 >
 
   }
 
@@ -2129,8 +2131,8 @@
 
     param[base_url] = http://medlaw.oxfordjournals.org/
 
-    au < testing ; 2008 ; Medical Law Review Volume 16 ; 16 >
-    au < testing ; 2009 ; Medical Law Review Volume 17 ; 17 >
+    au < tested ; 2008 ; Medical Law Review Volume 16 ; 16 >
+    au < tested ; 2009 ; Medical Law Review Volume 17 ; 17 >
 
   }
 
@@ -2155,8 +2157,8 @@
 
     param[base_url] = http://mj.oxfordjournals.org/
 
-    au < testing ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 >
-    au < testing ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 >
+    au < tested ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 >
+    au < tested ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 >
 
   }
 

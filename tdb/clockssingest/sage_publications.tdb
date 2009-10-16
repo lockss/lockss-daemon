@@ -3157,7 +3157,7 @@
     param[base_url] = http://chc.sagepub.com/
 
     au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
-    au < testing ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
 
   }
 
@@ -3182,8 +3182,8 @@
 
     param[base_url] = http://jcs.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
-    au < testing ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
+    au < tested ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
 
   }
 
@@ -3325,7 +3325,7 @@
 
     param[base_url] = http://crc.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
+    au < tested ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
 
   }
 
@@ -3337,8 +3337,8 @@
 
     param[base_url] = http://jcc.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
-    au < manifest ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
+    au < tested ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
+    au < tested ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
 
   }
 
@@ -3362,8 +3362,8 @@
 
     param[base_url] = http://jdr.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Dental Research Volume 87 ; 87 >
-    au < manifest ; 2009 ; Journal of Dental Research Volume 88 ; 88 >
+    au < testing ; 2008 ; Journal of Dental Research Volume 87 ; 87 >
+    au < testing ; 2009 ; Journal of Dental Research Volume 88 ; 88 >
 
   }
 
