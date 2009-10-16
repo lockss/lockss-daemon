@@ -17128,6 +17128,38 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
   </property>
 
+  <property name="JournalofDentalResearch87">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Dental Research" />
+   <property name="title" value="Journal of Dental Research Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jdr.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="87" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournalofDentalResearch88">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Dental Research" />
+   <property name="title" value="Journal of Dental Research Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jdr.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="88" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
   <property name="JournalofBusinessCommunication43">
    <property name="attributes.publisher" value="SAGE Publications" />
    <property name="journalTitle" value="Journal of Business Communication" />
@@ -19144,6 +19176,22 @@
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
   </property>
 
+  <property name="JournalofEarlyIntervention31">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Early Intervention" />
+   <property name="title" value="Journal of Early Intervention Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jei.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
   <property name="JournalofEducationforSustainableDevelopment1">
    <property name="attributes.publisher" value="SAGE Publications" />
    <property name="journalTitle" value="Journal of Education for Sustainable Development" />
@@ -19172,6 +19220,22 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="2" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+  </property>
+
+  <property name="JournalofEducationforSustainableDevelopment3">
+   <property name="attributes.publisher" value="SAGE Publications" />
+   <property name="journalTitle" value="Journal of Education for Sustainable Development" />
+   <property name="title" value="Journal of Education for Sustainable Development Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jsd.sagepub.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
   </property>
