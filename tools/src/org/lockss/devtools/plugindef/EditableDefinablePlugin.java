@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.31 2008-11-25 04:04:03 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.32 2009-10-19 05:28:12 tlipkis Exp $
  */
 
 /*
@@ -155,6 +155,9 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public String getAuStartUrl() {
     List urls = getAuStartUrls();
+    if (urls == null) {
+      return null;
+    }
     String ret = (String)urls.get(0);
     if (urls.size() > 1) {
       logger.warning("Using only the first start URL: " + ret);
@@ -209,7 +212,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
         logger.debug("Retrieving the AU crawl rules in detail: none");
       }
     }
-    return definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES);
+    return definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, defaultCrawlRules);
   }
 
   public void removeAuCrawlRules() {
@@ -296,7 +299,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   // DefinableFilterRule is in fact not well-supported in the rest of the code
-  public void setAuFilter(String mimeType, List rules) {
+  public void setHashFilterRule(String mimeType, List rules) {
     logger.info("Set the AU filter rule for MIME type " + mimeType);
     if (rules.size() > 0) {
       try {
@@ -314,7 +317,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
   }
 
-  public void setAuFilter(String mimeType,
+  public void setHashFilterRule(String mimeType,
                           String filterRuleClass,
                           boolean tryDynamic)
       throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
@@ -335,7 +338,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
   }
 
-  public Map getAuFilters() {
+  public Map getHashFilterRules() {
     logger.info("Retrieving the AU filter rules");
     HashMap rules = new HashMap();
     Iterator it = definitionMap.keySet().iterator();
@@ -350,40 +353,55 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     return rules;
   }
 
-  public void removeAuFilter(String mimeType) {
+  public void removeHashFilterRule(String mimeType) {
     logger.info("Removing the AU filter rule for MIME type: " + mimeType);
     definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE);
   }
 
-  public void setAuFilterFactory(String mimeType,
-                          String filterFactoryClass,
-                          boolean tryDynamic)
+  public void clearHashFilterRules() {
+    logger.info("Clearing filter rules");
+    List<String> toRemove = new ArrayList<String>();
+    for (String key : (Set<String>)(definitionMap.keySet())) {
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_RULE)) {
+	toRemove.add(key);
+      }
+    }
+    for (String key : toRemove) {
+      definitionMap.removeMapElement(key);
+    }
+  }
+
+  public void setHashFilterFactory(String mimeType,
+				   String filterFactoryClass,
+				   boolean tryDynamic)
       throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
-    logger.info("Setting AU filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
+    logger.info("Setting hash filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
     try {
       if (tryDynamic) {
         tryDynamic(filterFactoryClass, FilterFactory.class);
       }
-      definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY, filterFactoryClass);
+      definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY, filterFactoryClass);
     }
     catch (DynamicallyLoadedComponentException dlce) {
       throw dlce; // rethrow
     }
     catch (PluginException.InvalidDefinition ide) {
-      String logMessage = "Failed to set the AU filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;
+      String logMessage = "Failed to set the hash filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;
       logger.error(logMessage, ide);
       throw new PluginException.InvalidDefinition(logMessage, ide);
     }
   }
 
-  public Map getAuFilterFactories() {
-    logger.info("Retrieving the AU filter factories");
+  public Map getHashFilterFactories() {
+    logger.info("Retrieving the hash filter factories");
     Map rules = new HashMap();
     Iterator it = definitionMap.keySet().iterator();
     for (int ix = 1 ; it.hasNext() ; ++ix) {
       String key = (String)it.next();
-      if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
-        String mimeType = StringUtils.chomp(key, DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)
+	  // XXX hack until hash filter key changed
+	  && !key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+        String mimeType = StringUtils.chomp(key, DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
         logger.debug("MIME type " + ix + ": " + key + " maps to: " + definitionMap.getMapElement(key));
         rules.put(mimeType, definitionMap.getMapElement(key));
       }
@@ -391,9 +409,78 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     return rules;
   }
 
-  public void removeAuFilterFactory(String mimeType) {
-    logger.info("Removing the AU filter factory for MIME type: " + mimeType);
-    definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
+  public void removeHashFilterFactory(String mimeType) {
+    logger.info("Removing the hash filter factory for MIME type: " + mimeType);
+    definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
+  }
+
+  public void clearHashFilterFactories() {
+    logger.info("Clearing the hash filter factories");
+    List<String> toRemove = new ArrayList<String>();
+    for (String key : (Set<String>)(definitionMap.keySet())) {
+      // XXX hack until rename key
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)
+	  && !key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+	toRemove.add(key);
+      }
+    }
+    for (String key : toRemove) {
+      definitionMap.removeMapElement(key);
+    }
+  }
+
+  public void setCrawlFilterFactory(String mimeType,
+				   String filterFactoryClass,
+				   boolean tryDynamic)
+      throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
+    logger.info("Setting crawl filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
+    try {
+      if (tryDynamic) {
+        tryDynamic(filterFactoryClass, FilterFactory.class);
+      }
+      definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY, filterFactoryClass);
+    }
+    catch (DynamicallyLoadedComponentException dlce) {
+      throw dlce; // rethrow
+    }
+    catch (PluginException.InvalidDefinition ide) {
+      String logMessage = "Failed to set the crawl filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;
+      logger.error(logMessage, ide);
+      throw new PluginException.InvalidDefinition(logMessage, ide);
+    }
+  }
+
+  public Map getCrawlFilterFactories() {
+    logger.info("Retrieving the crawl filter factories");
+    Map rules = new HashMap();
+    Iterator it = definitionMap.keySet().iterator();
+    for (int ix = 1 ; it.hasNext() ; ++ix) {
+      String key = (String)it.next();
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+        String mimeType = StringUtils.chomp(key, DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY);
+        logger.debug("MIME type " + ix + ": " + key + " maps to: " + definitionMap.getMapElement(key));
+        rules.put(mimeType, definitionMap.getMapElement(key));
+      }
+    }
+    return rules;
+  }
+
+  public void removeCrawlFilterFactory(String mimeType) {
+    logger.info("Removing the crawl filter factory for MIME type: " + mimeType);
+    definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY);
+  }
+
+  public void clearCrawlFilterFactories() {
+    logger.info("Clearing the crawl filter factories");
+    List<String> toRemove = new ArrayList<String>();
+    for (String key : (Set<String>)(definitionMap.keySet())) {
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+	toRemove.add(key);
+      }
+    }
+    for (String key : toRemove) {
+      definitionMap.removeMapElement(key);
+    }
   }
 
   public void setAuExpectedBasePath(String path) {

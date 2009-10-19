@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.29 2008-09-16 03:57:22 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.30 2009-10-19 05:28:12 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+
+import static org.lockss.plugin.definable.DefinableArchivalUnit.*;
 
 /**
  * <p>Title: </p>
@@ -94,7 +96,7 @@ public class TestEditableDefinablePlugin
     edPlugin.addAuCrawlRule(rule1);
     edPlugin.addAuCrawlRule(rule2);
     List expected = ListUtil.list(rule1, rule2);
-    List actual = (List) edPlugin.getMap().getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, null);
+    List actual = (List) edPlugin.getMap().getCollection(KEY_AU_CRAWL_RULES, null);
     assertIsomorphic("CrawlRules", expected, actual);
 
     edPlugin.removeCrawlRule(rule2);
@@ -261,15 +263,15 @@ public class TestEditableDefinablePlugin
   public void testSetAndRemoveAuCrawlDepth() {
     int defDepth = 1;
     int expected = 4;
-    int actual = edPlugin.getMap().getInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH, defDepth);
+    int actual = edPlugin.getMap().getInt(KEY_AU_CRAWL_DEPTH, defDepth);
     assertEquals("default depth", defDepth, actual);
 
     edPlugin.setAuCrawlDepth(expected);
-    actual = edPlugin.getMap().getInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH, defDepth);
+    actual = edPlugin.getMap().getInt(KEY_AU_CRAWL_DEPTH, defDepth);
     assertEquals("crawl depth", expected, actual);
 
     edPlugin.removeAuCrawlDepth();
-    actual = edPlugin.getMap().getInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH, defDepth);
+    actual = edPlugin.getMap().getInt(KEY_AU_CRAWL_DEPTH, defDepth);
     assertEquals("default depth", defDepth, actual);
 
   }
@@ -279,17 +281,17 @@ public class TestEditableDefinablePlugin
     Collection expRules = ListUtil.list("rule1", "rule2");
     Collection actRules;
     // default assigned
-    actRules = edPlugin.getMap().getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, defRules);
+    actRules = edPlugin.getMap().getCollection(KEY_AU_CRAWL_RULES, defRules);
     assertIsomorphic("default rules", defRules, actRules);
 
     // assign a list
     edPlugin.setAuCrawlRules(expRules);
-    actRules = edPlugin.getMap().getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, defRules);
+    actRules = edPlugin.getMap().getCollection(KEY_AU_CRAWL_RULES, defRules);
     assertIsomorphic("default rules", expRules, actRules);
 
     // remove an restore default
     edPlugin.removeAuCrawlRules();
-    actRules = edPlugin.getMap().getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, defRules);
+    actRules = edPlugin.getMap().getCollection(KEY_AU_CRAWL_RULES, defRules);
     assertIsomorphic("default rules", defRules, actRules);
 
   }
@@ -301,17 +303,17 @@ public class TestEditableDefinablePlugin
     CrawlWindow expWindow = makeCrawlWindow();
 
     // test default
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(KEY_AU_CRAWL_WINDOW_SER);
     assertEquals("default window", defWindow, actWindow);
 
     // test good class name is ok
     edPlugin.setAuCrawlWindowSer(expWindow);
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(KEY_AU_CRAWL_WINDOW_SER);
     assertEquals("set window", expWindow, actWindow);
 
     // test remove
     edPlugin.removeAuCrawlWindowSer();
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(KEY_AU_CRAWL_WINDOW_SER);
     assertEquals("default window", defWindow, actWindow);
   }
 
@@ -333,17 +335,17 @@ public class TestEditableDefinablePlugin
     String actPath = null;
 
     // test default
-    actPath = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_EXPECTED_BASE_PATH, defPath);
+    actPath = edPlugin.getMap().getString(KEY_AU_EXPECTED_BASE_PATH, defPath);
     assertEquals("default path", defPath, actPath);
 
     // test setting
     edPlugin.setAuExpectedBasePath(expPath);
-    actPath = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_EXPECTED_BASE_PATH, defPath);
+    actPath = edPlugin.getMap().getString(KEY_AU_EXPECTED_BASE_PATH, defPath);
     assertEquals("expected path", expPath, actPath);
 
     // test remove
     edPlugin.removeAuExpectedBasePath();
-    actPath = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_EXPECTED_BASE_PATH, defPath);
+    actPath = edPlugin.getMap().getString(KEY_AU_EXPECTED_BASE_PATH, defPath);
     assertEquals("default path", defPath, actPath);
 
   }
@@ -353,42 +355,89 @@ public class TestEditableDefinablePlugin
     long expDelay = 1000L;
     long actDelay = 0L;
 
-    actDelay = edPlugin.getMap().getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, defDelay);
+    actDelay = edPlugin.getMap().getLong(KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, defDelay);
     assertEquals("default delay", defDelay, actDelay);
 
     edPlugin.setNewContentCrawlInterval(expDelay);
-    actDelay = edPlugin.getMap().getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, defDelay);
+    actDelay = edPlugin.getMap().getLong(KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, defDelay);
     assertEquals("fetch delay", expDelay, actDelay);
 
     edPlugin.removeNewContentCrawlInterval();
-    actDelay = edPlugin.getMap().getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, defDelay);
+    actDelay = edPlugin.getMap().getLong(KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, defDelay);
     assertEquals("default delay", defDelay, actDelay);
 
   }
 
-  public void testSetAndRemoveAuFilter() {
-    String mimetype = "text/html";
-    String defFilter = null;
-    String expFilter = "org.lockss.test.MockFilterRule";
-    String actFilter = null;
+  String getDefMapString(String key) {
+    return edPlugin.getMap().getString(key, null);
+  }
 
-    actFilter = edPlugin.getMap().getString(mimetype +
-                                            DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-                                            defFilter);
-    assertEquals("default filter", defFilter, actFilter);
+  public void testHashFilterRule() {
+    String mime1 = "text/html";
+    String mime2 = "application/pdf";
+    String filt1 = "org.lockss.test.MockFilterRule";
+    String filt2 = "org.lockss.Foo";
+    String filt3 = "org.lockss.Bar";
 
-    edPlugin.setAuFilter(mimetype, expFilter, true);
-    actFilter = edPlugin.getMap().getString(mimetype +
-                                            DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-                                            defFilter);
-    assertEquals("Au filter", expFilter, actFilter);
+    assertEquals(null, getDefMapString(mime1 + SUFFIX_FILTER_RULE));
 
-    edPlugin.removeAuFilter(mimetype);
-    actFilter = edPlugin.getMap().getString(mimetype +
-                                            DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-                                            defFilter);
-    assertEquals("default filter", defFilter, actFilter);
+    edPlugin.setHashFilterRule(mime1, filt1, true);
+    assertEquals(filt1, getDefMapString(mime1 + SUFFIX_FILTER_RULE));
+    assertEquals(MapUtil.map(mime1, filt1), edPlugin.getHashFilterRules());
+    edPlugin.setHashFilterRule(mime2, filt2, false);
+    edPlugin.setHashFilterFactory(mime1, filt3, false);
+    assertEquals(MapUtil.map(mime1, filt1, mime2, filt2),
+		 edPlugin.getHashFilterRules());
+    assertEquals(MapUtil.map(mime1, filt3), edPlugin.getHashFilterFactories());
 
+    edPlugin.clearHashFilterRules();
+    assertEquals(null, getDefMapString(mime1 + SUFFIX_FILTER_RULE));
+    assertEmpty(edPlugin.getHashFilterRules());
+    assertEquals(MapUtil.map(mime1, filt3), edPlugin.getHashFilterFactories());
+  }
+
+  public void testHashFilterFactory() {
+    String mime1 = "text/html";
+    String mime2 = "application/pdf";
+    String filt1 = "org.lockss.test.MockFilterFactory";
+    String filt2 = "org.lockss.Foo";
+    String filt3 = "org.lockss.Bar";
+
+    assertEquals(null, getDefMapString(mime1 + SUFFIX_HASH_FILTER_FACTORY));
+
+    edPlugin.setHashFilterFactory(mime1, filt1, true);
+    assertEquals(filt1, getDefMapString(mime1 + SUFFIX_HASH_FILTER_FACTORY));
+    assertEquals(MapUtil.map(mime1, filt1), edPlugin.getHashFilterFactories());
+    edPlugin.setHashFilterFactory(mime2, filt2, false);
+    edPlugin.setHashFilterRule(mime1, filt3, false);
+    assertEquals(MapUtil.map(mime1, filt1, mime2, filt2),
+		 edPlugin.getHashFilterFactories());
+    assertEquals(MapUtil.map(mime1, filt3), edPlugin.getHashFilterRules());
+
+    edPlugin.clearHashFilterFactories();
+    assertEquals(null, getDefMapString(mime1 + SUFFIX_HASH_FILTER_FACTORY));
+    assertEmpty(edPlugin.getHashFilterFactories());
+    assertEquals(MapUtil.map(mime1, filt3), edPlugin.getHashFilterRules());
+  }
+
+  public void testCrawlFilterFactory() {
+    String mime1 = "text/html";
+    String mime2 = "application/pdf";
+    String filt1 = "org.lockss.test.MockFilterFactory";
+    String filt2 = "org.lockss.Foo";
+
+    assertEquals(null, getDefMapString(mime1 + SUFFIX_CRAWL_FILTER_FACTORY));
+
+    edPlugin.setCrawlFilterFactory(mime1, filt1, true);
+    assertEquals(filt1, getDefMapString(mime1 + SUFFIX_CRAWL_FILTER_FACTORY));
+    assertEquals(MapUtil.map(mime1, filt1), edPlugin.getCrawlFilterFactories());
+    edPlugin.setCrawlFilterFactory(mime2, filt2, false);
+    assertEquals(MapUtil.map(mime1, filt1, mime2, filt2),
+		 edPlugin.getCrawlFilterFactories());
+
+    edPlugin.clearCrawlFilterFactories();
+    assertEquals(null, getDefMapString(mime1 + SUFFIX_CRAWL_FILTER_FACTORY));
+    assertEmpty(edPlugin.getCrawlFilterFactories());
   }
 
   public void testSetAndRemoveAuManifestPage() {
@@ -396,17 +445,17 @@ public class TestEditableDefinablePlugin
     String expManifest = "http://www.example.com/manifest.html";
     String actManifest = null;
 
-    actManifest = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(KEY_AU_MANIFEST,
                                               defManifest);
     assertEquals("default manifest", defManifest, actManifest);
 
     edPlugin.setAuManifestPage(expManifest);
-    actManifest = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(KEY_AU_MANIFEST,
                                               defManifest);
     assertEquals("manifest", expManifest, actManifest);
 
     edPlugin.removeAuManifestPage();
-    actManifest = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(KEY_AU_MANIFEST,
                                               defManifest);
     assertEquals("default manifest", defManifest, actManifest);
 
@@ -417,15 +466,15 @@ public class TestEditableDefinablePlugin
     String expName = "au name";
     String actName = null;
 
-    actName = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_NAME, defName);
+    actName = edPlugin.getMap().getString(KEY_AU_NAME, defName);
     assertEquals("default name", defName, actName);
 
     edPlugin.setAuName(expName);
-    actName = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_NAME, defName);
+    actName = edPlugin.getMap().getString(KEY_AU_NAME, defName);
     assertEquals("au name", expName, actName);
 
     edPlugin.removeAuName();
-    actName = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_NAME, defName);
+    actName = edPlugin.getMap().getString(KEY_AU_NAME, defName);
     assertEquals("default name", defName, actName);
 
   }
@@ -435,15 +484,15 @@ public class TestEditableDefinablePlugin
     long expPause = 1000L;
     long actPause = 0L;
 
-    actPause = edPlugin.getMap().getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME, defPause);
+    actPause = edPlugin.getMap().getLong(KEY_AU_DEFAULT_PAUSE_TIME, defPause);
     assertEquals("default pause time", defPause, actPause);
 
     edPlugin.setAuPauseTime(expPause);
-    actPause = edPlugin.getMap().getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME, defPause);
+    actPause = edPlugin.getMap().getLong(KEY_AU_DEFAULT_PAUSE_TIME, defPause);
     assertEquals("set pause time", expPause, actPause);
 
     edPlugin.removeAuPauseTime();
-    actPause = edPlugin.getMap().getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME, defPause);
+    actPause = edPlugin.getMap().getLong(KEY_AU_DEFAULT_PAUSE_TIME, defPause);
     assertEquals("default pause time", defPause, actPause);
 
   }
@@ -453,15 +502,15 @@ public class TestEditableDefinablePlugin
     String expUrl = "http://www.example.com/index.html";
     String actUrl = null;
 
-    actUrl = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_START_URL, defUrl);
+    actUrl = edPlugin.getMap().getString(KEY_AU_START_URL, defUrl);
     assertEquals("default startUrl", defUrl, actUrl);
 
     edPlugin.setAuStartUrl(expUrl);
-    actUrl = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_START_URL, defUrl);
+    actUrl = edPlugin.getMap().getString(KEY_AU_START_URL, defUrl);
     assertEquals("startUrl", expUrl, actUrl);
 
     edPlugin.removeAuStartUrl();
-    actUrl = edPlugin.getMap().getString(DefinableArchivalUnit.KEY_AU_START_URL, defUrl);
+    actUrl = edPlugin.getMap().getString(KEY_AU_START_URL, defUrl);
     assertEquals("default startUrl", defUrl, actUrl);
 
   }
