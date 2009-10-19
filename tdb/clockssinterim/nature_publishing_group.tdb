@@ -188,6 +188,32 @@
   {
 
     title <
+      name = International Journal of Impotence Research
+    >
+
+    param[journal_id] = ijir
+
+    au < ready ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
+    au < ready ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Obesity
+    >
+
+    param[journal_id] = ijo
+
+    au < ready ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
+    au < ready ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+
+  }
+
+  {
+
+    title <
       name = Nature
     >
 
@@ -284,4 +310,29 @@
 
   }
   
+  {
+
+    title <
+      name = Nature Medicine
+    >
+
+    param[journal_id] = nm
+
+    au < ready ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
+    au < ready ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Methods
+    >
+
+    param[journal_id] = nmeth
+
+    au < ready ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
+
+  }
+
 }
