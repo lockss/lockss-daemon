@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.18 2009-08-29 04:50:06 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.19 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -145,11 +145,13 @@ public class TestBasePlugin extends LockssTestCase {
     MimeTypeInfo mti = mbp.getMimeTypeInfo("text/html");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof GoslingHtmlLinkExtractor.Factory);
-    assertNull(mti.getFilterFactory());
+    assertNull(mti.getHashFilterFactory());
+    assertNull(mti.getCrawlFilterFactory());
     mti = mbp.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof CssLinkExtractor.Factory);
-    assertNull(mti.getFilterFactory());
+    assertNull(mti.getHashFilterFactory());
+    assertNull(mti.getCrawlFilterFactory());
   }
 
   public void testGetLinkExtractor() throws IOException {
@@ -192,20 +194,20 @@ public class TestBasePlugin extends LockssTestCase {
 
     assertNull(mbp.factory);
     assertEquals(0, mbp.factoryCacheMiss);
-    assertNull(mbp.getFilterFactory("test1"));
+    assertNull(mbp.getHashFilterFactory("test1"));
     assertEquals(1, mbp.factoryCacheMiss);
     mbp.factory = factory1;
-    assertNotNull(mbp.getFilterFactory("test1"));
+    assertNotNull(mbp.getHashFilterFactory("test1"));
     assertEquals(2, mbp.factoryCacheMiss);
     mbp.factory = factory2;
-    assertNotNull(mbp.getFilterFactory("test2"));
+    assertNotNull(mbp.getHashFilterFactory("test2"));
     assertEquals(3, mbp.factoryCacheMiss);
 
-    factory1 = (MockFilterFactory)mbp.getFilterFactory("test2");
+    factory1 = (MockFilterFactory)mbp.getHashFilterFactory("test2");
     assertEquals(3, mbp.factoryCacheMiss);
     assertEquals("factory2", StringUtil.fromInputStream(
         factory1.createFilteredInputStream(null, null, null)));
-    factory2 = (MockFilterFactory)mbp.getFilterFactory("test1");
+    factory2 = (MockFilterFactory)mbp.getHashFilterFactory("test1");
     assertEquals(3, mbp.factoryCacheMiss);
     assertEquals("factory1", StringUtil.fromInputStream(
         factory2.createFilteredInputStream(null, null, null)));

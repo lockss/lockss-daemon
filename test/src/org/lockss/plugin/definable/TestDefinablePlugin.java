@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.29 2009-08-28 22:40:06 dshr Exp $
+ * $Id: TestDefinablePlugin.java,v 1.30 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -92,12 +92,16 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertTrue(mti.getLinkRewriterFactory()
 	       instanceof StringFilterCssLinkRewriterFactory);
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
-    assertNull(mti.getFilterFactory());
+    assertNull(mti.getHashFilterFactory());
+    assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getFetchRateLimiter());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
 
     defMap.putString(  ("application/pdf"
-			+ DefinableArchivalUnit.SUFFIX_FILTER_FACTORY),
+			+ DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY),
+		     "org.lockss.test.MockFilterFactory");
+    defMap.putString(  ("application/pdf"
+			+ DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY),
 		     "org.lockss.test.MockFilterFactory");
     defMap.putString(  ("text/html"
 			+ DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY),
@@ -109,8 +113,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     factMap.put(MimeTypeInfo.DEFAULT_METADATA_TYPE,
 		"org.lockss.test.MockMetadataExtractorFactory");
     defMap.putMap(  ("text/html"
-                    + DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP),
-                   factMap);
+		     + DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP),
+                  factMap);
     defMap.putString(  ("text/html"
 			+ DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY),
 		     "org.lockss.test.MockArticleIteratorFactory");
@@ -144,9 +148,13 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof CssLinkExtractor.Factory);
     assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
-    assertTrue(mti.getFilterFactory()
+    assertTrue(mti.getHashFilterFactory()
 	       instanceof FilterFactoryWrapper);
-    assertTrue(WrapperUtil.unwrap(mti.getFilterFactory())
+    assertTrue(mti.getCrawlFilterFactory()
+	       instanceof FilterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(mti.getHashFilterFactory())
+	       instanceof MockFilterFactory);
+    assertTrue(WrapperUtil.unwrap(mti.getCrawlFilterFactory())
 	       instanceof MockFilterFactory);
     assertEquals("1/30s", mti.getFetchRateLimiter().getRate());
 
@@ -166,7 +174,8 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof StringFilterCssLinkRewriterFactory);
 
     mti = p2.getMimeTypeInfo("application/pdf");
-    assertNull(mti.getFilterFactory());
+    assertNull(mti.getHashFilterFactory());
+    assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getFetchRateLimiter());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.44 2009-05-23 18:06:26 dshr Exp $
+ * $Id: MockCachedUrl.java,v 1.45 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -215,7 +215,7 @@ public class MockCachedUrl implements CachedUrl {
     InputStream is = null;
     // look for a FilterFactory
     if (au != null) {
-      FilterFactory fact = au.getFilterFactory(contentType);
+      FilterFactory fact = au.getHashFilterFactory(contentType);
       if (fact != null) {
 	InputStream unfis = getUnfilteredInputStream();
 	if (log.isDebug3()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.20 2007-09-12 18:32:51 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.21 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -218,7 +218,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       InputStream urlIs = cu.getUnfilteredInputStream();
       assertNotEquals(str, StringUtil.fromInputStream(urlIs));
 
-      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+      mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
       urlIs = cu.getUnfilteredInputStream();
       assertNotEquals(str, StringUtil.fromInputStream(urlIs));
     }
@@ -235,7 +235,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       InputStream urlIs = cu.openForHashing();
       assertNotEquals(str, StringUtil.fromInputStream(urlIs));
 
-      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+      mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
       urlIs = cu.openForHashing();
       assertNotEquals(str, StringUtil.fromInputStream(urlIs));
     }
@@ -259,7 +259,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       ConfigurationUtil.setCurrentConfigFromString(config);
       createLeaf(url1, "blah <test stream>", null);
       String str = "This is a filtered stream";
-      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+      mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
 
       CachedUrl cu = getTestCu(url1);
       InputStream urlIs = cu.openForHashing();
@@ -274,7 +274,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       String strRule = "This is a filtered stream";
       mau.setFilterRule(new MyMockFilterRule(new StringReader(strRule)));
       String strFact = "This is a filtered stream";
-      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(strFact)));
+      mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(strFact)));
 
       CachedUrl cu = getTestCu(url1);
       InputStream urlIs = cu.openForHashing();
@@ -300,7 +300,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       String str = "This is a filtered stream";
       MyMockFilterFactory fact =
 	new MyMockFilterFactory(new StringInputStream(str));
-      mau.setFilterFactory(fact);
+      mau.setHashFilterFactory(fact);
       CachedUrl cu1 = getTestCu(url1);
       CachedUrl cu2 = getTestCu(url2);
       assertEquals(str, StringUtil.fromInputStream(cu1.openForHashing()));
@@ -324,7 +324,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       String str = "This is a filtered stream";
       MyMockFilterFactory fact =
 	new MyMockFilterFactory(new StringInputStream(str));
-      mau.setFilterFactory(fact);
+      mau.setHashFilterFactory(fact);
       CachedUrl cu1 = getTestCu(url1);
       CachedUrl cu2 = getTestCu(url2);
       assertEquals(str, StringUtil.fromInputStream(cu1.openForHashing()));
@@ -427,7 +427,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 	  }
 	};
     }
-    public FilterFactory getFilterFactory(String mimeType) {
+    public FilterFactory getHashFilterFactory(String mimeType) {
       return new FilterFactory() {
 	  public InputStream createFilteredInputStream(ArchivalUnit au,
 						       InputStream in,

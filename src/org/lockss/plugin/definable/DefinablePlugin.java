@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.45 2009-09-26 17:24:29 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.46 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -352,16 +352,30 @@ public class DefinablePlugin extends BasePlugin {
 					      LinkExtractorFactory.class);
 	  mti.setLinkExtractorFactory(fact);
 	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+	// XXX This clause must precede the one for SUFFIX_HASH_FILTER_FACTORY
+	// XXX unless/until that key is changed to not be a terminal substring
+	// XXX of this one
 	String mime = stripSuffix(key,
-				  DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
+				  DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY);
+	if (val instanceof String) {
+	  String factName = (String)val;
+	  log.debug(mime + " crawl filter: " + factName);
+	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	  FilterFactory fact =
+	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
+	  mti.setCrawlFilterFactory(fact);
+	}
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)) {
+	String mime = stripSuffix(key,
+				  DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
 	if (val instanceof String) {
 	  String factName = (String)val;
 	  log.debug(mime + " filter: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  FilterFactory fact =
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
-	  mti.setFilterFactory(fact);
+	  mti.setHashFilterFactory(fact);
 	}
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER)) {
 	String mime =

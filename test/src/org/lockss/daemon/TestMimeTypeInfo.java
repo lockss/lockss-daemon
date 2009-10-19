@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.6 2009-05-27 16:39:04 dshr Exp $
+ * $Id: TestMimeTypeInfo.java,v 1.7 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -49,13 +49,18 @@ public class TestMimeTypeInfo extends LockssTestCase {
 
   public void testAccessors() {
     MimeTypeInfo.Mutable mti = new MimeTypeInfo.Impl();
-    assertNull(mti.getFilterFactory());
+    assertNull(mti.getHashFilterFactory());
+    assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getLinkExtractorFactory());
     assertNull(mti.getFetchRateLimiter());
 
     FilterFactory ff = new MockFilterFactory();
-    mti.setFilterFactory(ff);
-    assertSame(ff, mti.getFilterFactory());
+    mti.setHashFilterFactory(ff);
+    assertSame(ff, mti.getHashFilterFactory());
+
+    FilterFactory cff = new MockFilterFactory();
+    mti.setCrawlFilterFactory(cff);
+    assertSame(cff, mti.getCrawlFilterFactory());
 
     LinkExtractorFactory uf = new MockLinkExtractorFactory();
     mti.setLinkExtractorFactory(uf);
@@ -83,7 +88,8 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertNull(mti.getMetadataExtractorFactory("BogusMetadataType"));
 
     MimeTypeInfo m2 = new MimeTypeInfo.Impl(mti);
-    assertSame(ff, m2.getFilterFactory());
+    assertSame(ff, m2.getHashFilterFactory());
+    assertSame(cff, m2.getCrawlFilterFactory());
     assertSame(uf, m2.getLinkExtractorFactory());
     assertSame(rl, m2.getFetchRateLimiter());
     assertSame(lr, m2.getLinkRewriterFactory());

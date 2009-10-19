@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.100 2009-08-28 22:40:06 dshr Exp $
+ * $Id: NullPlugin.java,v 1.101 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -509,7 +509,11 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public FilterFactory getFilterFactory(String mimeType) {
+    public FilterFactory getHashFilterFactory(String mimeType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public FilterFactory getCrawlFilterFactory(String mimeType) {
       throw new UnsupportedOperationException("Not implemented");
     }
 

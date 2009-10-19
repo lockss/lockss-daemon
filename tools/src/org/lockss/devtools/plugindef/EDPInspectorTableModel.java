@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.18 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.19 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -105,10 +105,13 @@ public class EDPInspectorTableModel extends AbstractTableModel
                        "New Content Crawl Interval",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-		       "Filter Rules",
+		       "Hash Filter Rules (obs.)",
                        inspectorCellEditor), 
-    new InspectorEntry(DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-                       "Filter Factories",
+    new InspectorEntry(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY,
+                       "Hash Filter Factories",
+                       inspectorCellEditor),
+    new InspectorEntry(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
+                       "Crawl Filter Factories",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
                        "Default Crawl Depth"),

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.28 2007-08-27 06:50:55 tlipkis Exp $
+ * $Id: PdfUtil.java,v 1.29 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -795,7 +795,7 @@ return success;
   }
 
   public static OutputDocumentTransform getOutputDocumentTransform(ArchivalUnit au) {
-    String key = PREFIX_PDF_FILTER_FACTORY_HINT + PDF_MIME_TYPE + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY;
+    String key = PREFIX_PDF_FILTER_FACTORY_HINT + PDF_MIME_TYPE + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY;
     String className = AuUtil.getTitleAttribute(au, key);
     if (className == null) {
       logger.debug2("No PDF filter factory hint");

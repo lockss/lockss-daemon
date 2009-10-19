@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.75 2009-10-02 21:11:29 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.76 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
     "_link_extractor_factory";
   public static final String SUFFIX_FILTER_RULE = "_filter";
-  public static final String SUFFIX_FILTER_FACTORY = "_filter_factory";
+  // XXX _filter_factory should be changed to _hash_filter_factory but
+  // plugins will have to be changed.  Note that this symbol is also used
+  // in PdfUtil to refer to the PDF filter factory hint in the title DB;
+  // either that will need to change or the title DB will.
+  public static final String SUFFIX_HASH_FILTER_FACTORY = "_filter_factory";
+  public static final String SUFFIX_CRAWL_FILTER_FACTORY =
+    "_crawl_filter_factory";
   public static final String SUFFIX_LINK_REWRITER_FACTORY =
     "_link_rewriter_factory";
   public static final String SUFFIX_ARTICLE_ITERATOR_FACTORY =

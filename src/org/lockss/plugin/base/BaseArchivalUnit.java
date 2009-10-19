@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.138 2009-09-26 17:24:29 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.139 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -671,33 +671,36 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /**
-   * Returns a filter rule from the cache if found, otherwise calls
-   * 'constructFilterRule()' and caches the result if non-null.  Content-type
-   * is converted to lowercase.  If contenttype is null, returns null.
+   * Returns the hash rule specified by the plugin, or null
    * @param contentType the content type
    * @return the FilterRule
+   * @deprecated
    */
+
   public FilterRule getFilterRule(String contentType) {
     return plugin.getFilterRule(contentType);
   }
 
   /**
-   * Returns a filter factory from the cache if found, otherwise calls
-   * 'constructFilterFactory()' and caches the result if non-null.
-   * Content-type is converted to lowercase.  If contenttype is null,
-   * returns null.
+   * Returns the hash filter factory specified by the plugin, or null
    * @param contentType the content type
    * @return the FilterFactory
    */
-  public FilterFactory getFilterFactory(String contentType) {
-    return plugin.getFilterFactory(contentType);
+  public FilterFactory getHashFilterFactory(String contentType) {
+    return plugin.getHashFilterFactory(contentType);
   }
 
   /**
-   * Returns a link rewriter factory from the cache if found, otherwise calls
-   * 'constructLinkFactory()' and caches the result if non-null.
-   * Content-type is converted to lowercase.  If contenttype is null,
-   * returns null.
+   * Returns the crawl filter factory specified by the plugin, or null
+   * @param contentType the content type
+   * @return the FilterFactory
+   */
+  public FilterFactory getCrawlFilterFactory(String contentType) {
+    return plugin.getCrawlFilterFactory(contentType);
+  }
+
+  /**
+   * Returns the link rewriter factory specified by the plugin, or null
    * @param contentType the content type
    * @return the LinkFactory
    */

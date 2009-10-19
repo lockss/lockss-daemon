@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.4 2009-06-09 06:13:15 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.5 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class TestSimpleHasher extends LockssTestCase {
 
   public void testV3() throws Exception {
     MockArchivalUnit mau = setupContentTree();
-    mau.setFilterFactory(new SimpleFilterFactory());
+    mau.setHashFilterFactory(new SimpleFilterFactory());
     SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
 					   challenge, verifier);
     File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
@@ -137,7 +137,7 @@ public class TestSimpleHasher extends LockssTestCase {
 
   public void testV364() throws Exception {
     MockArchivalUnit mau = setupContentTree();
-    mau.setFilterFactory(new SimpleFilterFactory());
+    mau.setHashFilterFactory(new SimpleFilterFactory());
     SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
 					   challenge, verifier);
     hasher.setBase64Result(true);
@@ -180,7 +180,7 @@ public class TestSimpleHasher extends LockssTestCase {
 
   public void testV3Filtered() throws Exception {
     MockArchivalUnit mau = setupContentTree();
-    mau.setFilterFactory(new SimpleFilterFactory());
+    mau.setHashFilterFactory(new SimpleFilterFactory());
     SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
 					   challenge, verifier);
     hasher.setFiltered(true);
@@ -193,7 +193,7 @@ public class TestSimpleHasher extends LockssTestCase {
 
   public void testV3Filtered64() throws Exception {
     MockArchivalUnit mau = setupContentTree();
-    mau.setFilterFactory(new SimpleFilterFactory());
+    mau.setHashFilterFactory(new SimpleFilterFactory());
     SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
 					   challenge, verifier);
     hasher.setFiltered(true);

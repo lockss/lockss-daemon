@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.37 2009-05-23 18:06:26 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.38 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -285,7 +285,7 @@ public class BaseCachedUrl implements CachedUrl {
     String contentType = getContentType();
     InputStream is = null;
     // first look for a FilterFactory
-    FilterFactory fact = au.getFilterFactory(contentType);
+    FilterFactory fact = au.getHashFilterFactory(contentType);
     if (fact != null) {
       if (logger.isDebug3()) {
 	logger.debug3("Filtering " + contentType +

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.11 2009-09-16 23:55:43 thib_gc Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.12 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -216,7 +216,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testGetFilterRuleHtmlContentType() throws Exception {
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
-    assertTrue(WrapperUtil.unwrap(au.getFilterFactory("text/html"))
+    assertTrue(WrapperUtil.unwrap(au.getHashFilterFactory("text/html"))
 	       instanceof HighWireHtmlFilterFactory);
   }
 

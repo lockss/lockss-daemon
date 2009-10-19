@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.12 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.13 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,10 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final String BUTTON_PAUSETIME = "pausetime";
   protected static final String BUTTON_CRAWLINTV = "crawlinterval";
   protected static final String BUTTON_FILTERRULES = "filterrules";
-  protected static final String BUTTON_FILTERFACTORIES = "filterfactories";
+  protected static final String BUTTON_HASH_FILTERFACTORIES =
+    "hashfilterfactories";
+  protected static final String BUTTON_CRAWL_FILTERFACTORIES =
+    "crawlfilterfactories";
   protected static final String BUTTON_CRAWLWINDOWSER = "windowser";
   protected static final String BUTTON_EXCEPTIONS = "exceptions";
 
@@ -73,14 +76,15 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final int INDEX_PAUSETIME = 8;
   protected static final int INDEX_CRAWLINTV = 9;
   protected static final int INDEX_FILTERRULES = 10;
-  protected static final int INDEX_FILTERFACTORIES = 11;
-  protected static final int INDEX_CRAWLDEPTH = 12;
-  protected static final int INDEX_CRAWLWINDOW = 13;
-  protected static final int INDEX_CRAWLWINDOWSER = 14;
-  protected static final int INDEX_EXCEPTIONS = 15;
-  protected static final int INDEX_EXMAP = 16;
-  protected static final int INDEX_REQUIREDDAEMONVERSION = 17;
-  protected static final int NUMEDITORS = 18;
+  protected static final int INDEX_HASH_FILTERFACTORIES = 11;
+  protected static final int INDEX_CRAWL_FILTERFACTORIES = 12;
+  protected static final int INDEX_CRAWLDEPTH = 13;
+  protected static final int INDEX_CRAWLWINDOW = 14;
+  protected static final int INDEX_CRAWLWINDOWSER = 15;
+  protected static final int INDEX_EXCEPTIONS = 16;
+  protected static final int INDEX_EXMAP = 17;
+  protected static final int INDEX_REQUIREDDAEMONVERSION = 18;
+  protected static final int NUMEDITORS = 19;
 
   protected CellEditorEntry[] editorEntries;
 
@@ -135,11 +139,16 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
       new CellEditorEntry(BUTTON_FILTERRULES,
                           new MimeTypeEditor(new MimeTypeEditor.FilterRuleEditorBuilder(), parentFrame),
                           makeButton(BUTTON_FILTERRULES));
-    // filter factory classes
-    editorEntries[INDEX_FILTERFACTORIES] =
-      new CellEditorEntry(BUTTON_FILTERFACTORIES,
-                          new MimeTypeEditor(new MimeTypeEditor.FilterFactoryEditorBuilder(), parentFrame),
-                          makeButton(BUTTON_FILTERFACTORIES));
+    // hash filter factory classes
+    editorEntries[INDEX_HASH_FILTERFACTORIES] =
+      new CellEditorEntry(BUTTON_HASH_FILTERFACTORIES,
+                          new MimeTypeEditor(new MimeTypeEditor.HashFilterFactoryEditorBuilder(), parentFrame),
+                          makeButton(BUTTON_HASH_FILTERFACTORIES));
+    // crawl filter factory classes
+    editorEntries[INDEX_CRAWL_FILTERFACTORIES] =
+      new CellEditorEntry(BUTTON_CRAWL_FILTERFACTORIES,
+                          new MimeTypeEditor(new MimeTypeEditor.CrawlFilterFactoryEditorBuilder(), parentFrame),
+                          makeButton(BUTTON_CRAWL_FILTERFACTORIES));
     // exception remappings
     editorEntries[INDEX_EXMAP] =
       new CellEditorEntry(BUTTON_EXCEPTIONS, new ExceptionsMapEditor(parentFrame),

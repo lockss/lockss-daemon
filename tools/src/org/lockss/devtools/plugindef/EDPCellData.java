@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.17 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.18 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -90,10 +90,13 @@ public class EDPCellData {
       m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlInterval());
     }
     else if(key.equals(DefinableArchivalUnit.SUFFIX_FILTER_RULE)) {
-      m_data = edp.getAuFilters();
+      m_data = edp.getHashFilterRules();
     }
-    else if(key.equals(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
-      m_data = edp.getAuFilterFactories();
+    else if(key.equals(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)) {
+      m_data = edp.getHashFilterFactories();
+    }
+    else if(key.equals(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+      m_data = edp.getCrawlFilterFactories();
     }
     else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH)) {
       m_data = new Integer(edp.getAuCrawlDepth());

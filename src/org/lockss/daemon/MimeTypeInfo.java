@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.8 2009-05-27 16:39:04 dshr Exp $
+ * $Id: MimeTypeInfo.java,v 1.9 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -44,8 +44,10 @@ public interface MimeTypeInfo {
 
   public static final String DEFAULT_METADATA_TYPE = "*";
 
-  /** Returns the FilterFactory, or null */
-  public FilterFactory getFilterFactory();
+  /** Returns the hash FilterFactory, or null */
+  public FilterFactory getHashFilterFactory();
+  /** Returns the crarl FilterFactory, or null */
+  public FilterFactory getCrawlFilterFactory();
   /** Returns the LinkExtractorFactory, or null */
   public LinkExtractorFactory getLinkExtractorFactory();
   /** Returns the RateLimiter, or null */
@@ -63,7 +65,8 @@ public interface MimeTypeInfo {
 
   /** Sub interface adds setters */
   public interface Mutable extends MimeTypeInfo {
-    public Impl setFilterFactory(FilterFactory fact);
+    public Impl setHashFilterFactory(FilterFactory fact);
+    public Impl setCrawlFilterFactory(FilterFactory fact);
     public Impl setLinkExtractorFactory(LinkExtractorFactory fact);
     public Impl setFetchRateLimiter(RateLimiter limiter);
     public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
@@ -74,7 +77,8 @@ public interface MimeTypeInfo {
   class Impl implements Mutable {
     static Logger log = Logger.getLogger("MimeTypeInfo");
 
-    private FilterFactory filterFactory;
+    private FilterFactory hashFilterFactory;
+    private FilterFactory crawlFilterFactory;
     private LinkExtractorFactory extractorFactory;
     private RateLimiter fetchRateLimiter;
     private LinkRewriterFactory linkFactory;
@@ -86,7 +90,8 @@ public interface MimeTypeInfo {
 
     public Impl(MimeTypeInfo toClone) {
       if (toClone != null) {
-	filterFactory = toClone.getFilterFactory();
+	hashFilterFactory = toClone.getHashFilterFactory();
+	crawlFilterFactory = toClone.getCrawlFilterFactory();
 	extractorFactory = toClone.getLinkExtractorFactory();
 	fetchRateLimiter = toClone.getFetchRateLimiter();
 	linkFactory = toClone.getLinkRewriterFactory();
@@ -95,12 +100,21 @@ public interface MimeTypeInfo {
       }
     }
 
-    public FilterFactory getFilterFactory() {
-      return filterFactory;
+    public FilterFactory getHashFilterFactory() {
+      return hashFilterFactory;
     }
 
-    public Impl setFilterFactory(FilterFactory fact) {
-      filterFactory = fact;
+    public Impl setHashFilterFactory(FilterFactory fact) {
+      hashFilterFactory = fact;
+      return this;
+    }
+
+    public FilterFactory getCrawlFilterFactory() {
+      return crawlFilterFactory;
+    }
+
+    public Impl setCrawlFilterFactory(FilterFactory fact) {
+      crawlFilterFactory = fact;
       return this;
     }
 

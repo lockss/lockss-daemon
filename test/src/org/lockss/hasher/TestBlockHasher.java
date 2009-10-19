@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.12 2009-03-11 06:22:53 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.13 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -417,7 +417,7 @@ public class TestBlockHasher extends LockssTestCase {
 
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
-    mau.setFilterFactory(new SimpleFilterFactory());
+    mau.setHashFilterFactory(new SimpleFilterFactory());
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     addContent(mau, urls[4], str);
     MessageDigest[] digs = { dig };

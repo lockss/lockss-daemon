@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.76 2009-08-09 07:38:50 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.77 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.hasher.*;
+import org.lockss.filter.*;
 import org.lockss.extractor.*;
 
 /**
@@ -516,8 +517,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 		// Might be reparsing with new content (if depth reduced
 		// below refetch depth); clear any existing children
 		curl.clearChildren();
-		extractor.extractUrls(au, in,
-				      getCharset(cu),
+		String charset = getCharset(cu);
+		in = FilterUtil.getCrawlFilteredStream(au, in, charset,
+						       cu.getContentType());
+		extractor.extractUrls(au, in, charset,
 				      PluginUtil.getBaseUrl(cu),
 				      new MyLinkExtractorCallback(au, curl,
 								  fetchQueue,

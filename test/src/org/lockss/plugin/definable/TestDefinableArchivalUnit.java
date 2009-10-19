@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.39 2009-10-02 21:11:29 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.40 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -784,43 +784,82 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(rule) instanceof MyMockFilterRule);
   }
 
-  public void testGetFilterFactoryMimeType() throws Exception {
+  public void testGetHashFilterFactoryMimeType() throws Exception {
     setupAu();
-    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
-    FilterFactory fact = cau.getFilterFactory("text/html");
-    System.err.println("fact: " + fact);
+    FilterFactory fact = cau.getHashFilterFactory("text/html");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-  public void testGetFilterFactoryMimeTypeSpace() throws Exception {
+  public void testGetHashFilterFactoryMimeTypeSpace() throws Exception {
     setupAu();
-    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
-    FilterFactory fact = cau.getFilterFactory(" text/html ");
+    FilterFactory fact = cau.getHashFilterFactory(" text/html ");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-  public void testGetFilterFactoryContentType() throws Exception {
+  public void testGetHashFilterFactoryContentType() throws Exception {
     setupAu();
-    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
-    FilterFactory fact = cau.getFilterFactory("text/html ; random-char-set");
+    FilterFactory fact = cau.getHashFilterFactory("text/html ; random-char-set");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-  public void testGetFilterFactoryContentTypeSpace() throws Exception {
+  public void testGetHashFilterFactoryContentTypeSpace() throws Exception {
     setupAu();
-    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
     cp.initPlugin(getMockLockssDaemon(), defMap);
-    FilterFactory fact = cau.getFilterFactory(" text/html ; random-char-set");
+    FilterFactory fact = cau.getHashFilterFactory(" text/html ; random-char-set");
+    assertTrue(fact instanceof FilterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
+  }
+
+  public void testGetCrawlFilterFactoryMimeType() throws Exception {
+    setupAu();
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
+    FilterFactory fact = cau.getCrawlFilterFactory("text/html");
+    assertTrue(fact instanceof FilterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
+  }
+
+  public void testGetCrawlFilterFactoryMimeTypeSpace() throws Exception {
+    setupAu();
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
+    FilterFactory fact = cau.getCrawlFilterFactory(" text/html ");
+    assertTrue(fact instanceof FilterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
+  }
+
+  public void testGetCrawlFilterFactoryContentType() throws Exception {
+    setupAu();
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
+    FilterFactory fact = cau.getCrawlFilterFactory("text/html ; random-char-set");
+    assertTrue(fact instanceof FilterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
+  }
+
+  public void testGetCrawlFilterFactoryContentTypeSpace() throws Exception {
+    setupAu();
+    defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
+    FilterFactory fact = cau.getCrawlFilterFactory(" text/html ; random-char-set");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }

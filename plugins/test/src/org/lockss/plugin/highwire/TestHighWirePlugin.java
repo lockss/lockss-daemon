@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.11 2009-09-16 23:55:43 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.12 2009-10-19 05:27:00 tlipkis Exp $
  */
 
 /*
@@ -158,10 +158,10 @@ public class TestHighWirePlugin extends LockssTestCase {
     assertTrue(plugin.getMetadataExtractor("text/html", au) instanceof
 	       org.lockss.extractor.SimpleMetaTagMetadataExtractor);
   }
-  public void testGetFilterFactory() {
-    assertNull(plugin.getFilterFactory("BogusFilterFactory"));
-    assertNotNull(plugin.getFilterFactory("application/pdf"));
-    assertTrue(WrapperUtil.unwrap(plugin.getFilterFactory("application/pdf"))
+  public void testGetHashFilterFactory() {
+    assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
+    assertNotNull(plugin.getHashFilterFactory("application/pdf"));
+    assertTrue(WrapperUtil.unwrap(plugin.getHashFilterFactory("application/pdf"))
 	       instanceof org.lockss.plugin.highwire.HighWirePdfFilterFactory);
   }
   public void testGetArticleIteratorFactory() {
