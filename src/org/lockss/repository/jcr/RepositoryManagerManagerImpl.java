@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManagerImpl.java,v 1.1.2.2 2009-10-03 01:49:13 edwardsb1 Exp $
+ * $Id: RepositoryManagerManagerImpl.java,v 1.1.2.3 2009-10-19 23:04:57 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -24,11 +24,15 @@
  */
 package org.lockss.repository.jcr;
 
+import java.io.*;
+import java.net.*;
 import java.util.*;
 
+import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.repository.LockssRepositoryException;
 import org.lockss.repository.v2.*;
 import org.lockss.util.*;
 import org.lockss.util.PlatformUtil.DF;
@@ -37,9 +41,67 @@ import org.lockss.util.PlatformUtil.DF;
  * @author edwardsb
  *
  */
-public class RepositoryManagerManagerImpl implements RepositoryManagerManager {
+public class RepositoryManagerManagerImpl extends BaseLockssDaemonManager 
+implements RepositoryManagerManager {
+  // Constants
+  private static final String k_schemeJcr = "jcr";
+  
+  // Static variables
+  private static Logger logger = Logger.getLogger("JcrRepositoryHelperFactory");
+  
+  // Class Variables
+  Map<String, CollectionOfAuRepositories> m_mapAuidToCoar;
+  
   public RepositoryManagerManagerImpl() {
     // TODO
+  }
+
+  // Initialization code ---
+  
+  /**
+   * Called at the start of the RepositoryManagerManagerImpl.
+   */
+  public void startService() {
+    super.startService();
+    
+    m_mapAuidToCoar = new HashMap<String, CollectionOfAuRepositories>();
+  }
+
+  // Routines.
+  
+  /**
+   * This version only works with JCR CollectionOfAuRepositories.  It will
+   * need to be expanded to work with Unix CollectionOfAuRepositories.
+   * 
+   * @param AUID  The name of the AUID
+   * @param RepositorySpec  The specification for the files of the repository.
+   * @see org.lockss.repository.v2.RepositoryManagerManager#addToAUIDtoCoar(java.lang.String, java.lang.String)
+   * @throws LockssRepositoryException
+   * @throws URISyntaxException
+   * @throws IOException
+   */
+  public void addToAUIDtoCoar(String AUID, String repositorySpec) 
+  throws LockssRepositoryException, URISyntaxException, IOException {
+    CollectionOfAuRepositories coar;
+    File path;
+    String strPath;
+    String strScheme;
+    URI uriRepositorySpec;
+    
+    // The RepositorySpec is a URI.  
+    uriRepositorySpec = new URI(repositorySpec);
+    strScheme = uriRepositorySpec.getScheme();
+    
+    if (strScheme.equalsIgnoreCase(k_schemeJcr)) {
+      strPath = uriRepositorySpec.getSchemeSpecificPart();
+      path = new File(strPath);
+      coar = new CollectionOfAuRepositoriesImpl(path);
+      m_mapAuidToCoar.put(AUID, coar);
+    } else {
+      logger.error("Unknown scheme.  Please use jcr: as your scheme.");
+      throw new LockssRepositoryException("Unknown scheme.");
+    }
+        
   }
 
   /* (non-Javadoc)
@@ -144,14 +206,6 @@ public class RepositoryManagerManagerImpl implements RepositoryManagerManager {
       Differences changedKeys) {
     // TODO Auto-generated method stub
 
-  }
-
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.RepositoryManagerManager#addToAUIDtoCoar(java.lang.String, java.lang.String)
-   */
-  public void addToAUIDtoCoar(String AUID, String RepositorySpec) {
-    // TODO Auto-generated method stub
-    
   }
 
 }

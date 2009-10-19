@@ -77,6 +77,8 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   private static Logger logger = Logger.getLoggerWithInitialLevel("TestLockssAuRepositoryImpl", 3);
   
   // Member variables
+  private CollectionOfAuRepositories m_coar;
+  private File m_dirCoar;
   private IdentityManager m_idman;
   private JcrRepositoryHelper m_jhr;
   private JcrRepositoryHelperFactory m_jhrf;
@@ -127,6 +129,10 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
       m_ldTest = (MockLockssDaemon) m_jhrf.getLockssDaemon();
       m_idman = m_jhrf.getIdentityManager();
     }
+    
+    // Create a COAR.
+    m_dirCoar = FileUtil.createTempDir("TestLockssAuRepositoryImpl", null);
+    m_coar = new CollectionOfAuRepositoriesImpl(m_dirCoar);
   }
 
   /**
@@ -136,9 +142,10 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
   protected void tearDown() throws Exception {
     JcrRepositoryHelperFactory.reset();
     
-    checkLockFile();
+    checkLockFile();    
     
-    FileUtil.delTree(new File(k_strDirectory));
+    FileUtil.delTree(new File(k_strDirectory));    
+    FileUtil.delTree(m_dirCoar);
     
     super.tearDown();
   }
@@ -153,7 +160,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     ArchivalUnit au;
     
     au = new MockArchivalUnit("TestAu");
-    new LockssAuRepositoryImpl(au);
+    new LockssAuRepositoryImpl(au, m_coar);
   }
 
   /**
@@ -169,7 +176,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     timeStart = System.currentTimeMillis();
     
     au = createAu();
-    lari = new LockssAuRepositoryImpl(au);
+    lari = new LockssAuRepositoryImpl(au, m_coar);
     
     timeCreation = lari.getAuCreationTime();
     timeEnd = System.currentTimeMillis();
@@ -208,7 +215,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     auTest = createAu();
     ausTest = new MockAuState(auTest);
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // --- istrAuState1: store the Au State.
     lariTest.storeAuState(ausTest);    
@@ -259,7 +266,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     auTest = createAu();
     ausTest = new MockAuState(auTest);
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Get its associated RepositoryFile at a spot.
     rfGetFile1 = lariTest.getFile(k_urlGetFile, true);
@@ -303,7 +310,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     auTest = createAu();
     ausTest = new MockAuState(auTest);
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
 
     // TEST: GetFile with empty path, file, and query.
     
@@ -377,7 +384,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     // Generate a LockssAuRepository.
     auTest = createAu();
     
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Create and store one identity agreement.
     mpid1 = new MockPeerIdentity("foobar1");
@@ -429,7 +436,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
 
     // Create the LockssAuRepositoryImpl
     auTest = createAu();    
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Insert info into the DatedPeerIdSet.
     mpid = m_idman.findPeerIdentity(k_strPeerID);
@@ -457,7 +464,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     
     // Generate a LockssAuRepository.
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
 
     // Get its associated RepositoryNode at a spot.
     rnGetFile1 = lariTest.getNode(k_urlGetNode, true);
@@ -491,7 +498,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     LockssAuRepositoryImpl lariTest;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Save an AU state, and retrieve it.
     ausOriginal = new MockAuState(auTest);
@@ -527,7 +534,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     PeerIdentity pid;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Create a list of identity agreements.
     pid = new MockPeerIdentity(k_strPeerID);
@@ -567,7 +574,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     String strAuState;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Store an Au State, and retrieve the raw contents.
     ausOriginal1 = new MockAuState(auTest);
@@ -615,7 +622,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     String strIdentityAgreements;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Store an Identity Agreement, and retrieve the raw contents.
     pid1 = new MockPeerIdentity(k_strPeerID);
@@ -656,7 +663,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     LockssAuRepositoryImpl lariTest;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Store an Au State, and retrieve the raw contents.
     ausOriginal1 = new MockAuState(auTest);
@@ -701,7 +708,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     PeerIdentity pid2;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
     
     // Store an Identity Agreement, and retrieve the raw contents.
     pid1 = new MockPeerIdentity(k_strPeerID);
@@ -738,7 +745,7 @@ public class TestLockssAuRepositoryImpl extends LockssTestCase {
     long lDiskBefore;
     
     auTest = createAu();
-    lariTest = new LockssAuRepositoryImpl(auTest);
+    lariTest = new LockssAuRepositoryImpl(auTest, m_coar);
 
     lDiskBefore = lariTest.getRepoDiskUsage(true);
     

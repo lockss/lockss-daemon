@@ -1,5 +1,6 @@
 /*
- * $Id: TestJcrCollection.java,v 1.1.2.5 2009-10-03 01:49:12 edwardsb1 Exp $
+
+ * $Id: TestCollectionOfAuRepositoriesImpl.java,v 1.1.2.1 2009-10-19 23:04:57 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -35,7 +36,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.poller.v3.V3Poller;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.*;
-import org.lockss.repository.v2.LockssAuRepository;
+import org.lockss.repository.v2.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.PlatformUtil.DF;
@@ -46,16 +47,20 @@ import junit.framework.TestCase;
  * @author edwardsb
  *
  */
-public class TestJcrCollection extends LockssTestCase {
+public class TestCollectionOfAuRepositoriesImpl extends LockssTestCase {
   // Constants...
+  private static final String k_auid1 = "AUID1";
+  private static final String k_dirNonexistent = "/ueato7au/htsdt/tsthndfeu/tsthsnheaou/tstuoehautsha/sseuthanseu/tsateuhons/teusateuhas/";  // This directory should not exist!
+  private static final String k_dirSubdirectory = "subdirectory/";
   private static final long k_sizeWarcMax = 10000;
   private static final String k_stemFile = "stem";
   private static final String k_strAuId = "AUID";
-  private static final String k_strDirectory = "TestJcrCollection/";
+  private static final String k_strDirectory = "TestCollectionOfAuRepositoriesImpl/";
   private static final String k_strPeerID = "TCP:[192.168.0.1]:9723";
   private static final String k_url = "http://www.example.com/";
   
   // Member variables
+  private ArchivalUnit m_au1;
   private IdentityManager m_idman;
   private MockLockssDaemon m_ldTest;
 
@@ -97,7 +102,9 @@ public class TestJcrCollection extends LockssTestCase {
       m_idman = jhrf.getIdentityManager();
     }
     
-    jhrf.createRepositoryHelper("TestJcrCollection", new File("TestJcrCollection"));
+    jhrf.createRepositoryHelper("TestCollectionOfAuRepositoriesImpl", new File("TestCollectionOfAuRepositoriesImpl"));
+    m_au1 = new MockArchivalUnit(k_auid1);
+
   }
 
   /* (non-Javadoc)
@@ -116,17 +123,54 @@ public class TestJcrCollection extends LockssTestCase {
   }
 
   /**
+   * Test method for {@link org.lockss.repository.jcr.CollectionOfAuRepositoriesImpl#CollectionOfAuRepositoriesImpl(java.io.File)}.
+   * All other tests will verify the methods of a COAR; this test examines
+   * only the constructor's parameters. 
+   */
+  public final void testCollectionOfAuRepositoriesImpl() throws Exception {
+    File fileDir;
+    File fileFile;
+    File fileNonexistent;
+    
+    // Test: Create a COAR with a nonexistent directory...
+    fileNonexistent = new File(k_dirNonexistent);
+    try {
+      new CollectionOfAuRepositoriesImpl(fileNonexistent);
+      fail("The nonexistent directory should have thrown an exception.");
+    } catch (IOException e) {
+      // Pass test!
+    }
+    
+    // Test: Create a temp file (not a directory!) and try to put a COAR in it.
+    fileFile = FileUtil.createTempFile("testCOARImpl", "foo");
+    try {
+      new CollectionOfAuRepositoriesImpl(fileFile);
+      fail("Creating a COAR on a file should have thrown an exception.");
+    } catch (IOException e) {
+      // Pass test!
+    }
+    fileFile.delete();
+    
+    // Test: Create a temp directory with nothing in it, and try to put a COAR in it.
+    fileDir = FileUtil.createTempDir("testCOARImpl", "dir");
+    new CollectionOfAuRepositoriesImpl(fileDir);
+    FileUtil.delTree(fileDir);
+  }
+  
+  /**
    * Test method for {@link org.lockss.repository.jcr.CollectionOfAuRepositoriesImpl#generateAuRepository(java.io.File)}.
    */
   public final void testGenerateAuRepository() throws Exception {
+    ArchivalUnit au;
     File dirTest;
     File fileDatastore;
     CollectionOfAuRepositoriesImpl jcTest;
     
     dirTest = FileUtil.createTempDir("test", "generateAuRepository");
     
+    au = new MockArchivalUnit(k_strAuId);
     jcTest = new CollectionOfAuRepositoriesImpl(dirTest);
-    jcTest.generateAuRepository(dirTest);
+    jcTest.generateAuRepository(au, dirTest);
     
     // Verify it...
     fileDatastore = new File(dirTest, CollectionOfAuRepositoriesImpl.k_FILENAME_DATASTORE);
@@ -138,45 +182,92 @@ public class TestJcrCollection extends LockssTestCase {
   }
 
   /**
+   * Test method for {@link org.lockss.repository.jcr.CollectionOfAuRepositoriesImpl#generateAuRepository(java.io.File)}.
+   * This method was created independently of the above test, but they're both useful.
+   */
+  public final void testGenerateAuRepository2() throws Exception {
+    CollectionOfAuRepositories coarGenerate;
+    File fileGenerate;
+    File fileFile;
+    File fileUnused;
+    File fileSubdirectory;
+    
+    fileGenerate = FileUtil.createTempDir("testGenerateAuRepository", null);
+    coarGenerate = new CollectionOfAuRepositoriesImpl(fileGenerate);
+
+    // Test: Verify that a null AU causes an error.
+    try {
+      coarGenerate.generateAuRepository(null, fileGenerate);
+      fail("A null AU should have caused an exception.");
+    } catch (LockssRepositoryException e) {
+      // Pass test!
+    }
+    
+    // Test: create an Au Repository with an unused directory.
+    fileUnused = new File(k_dirNonexistent);
+    try {
+      coarGenerate.generateAuRepository(m_au1, fileUnused);
+      fail("The nonexistent directory should have thrown an exception.");
+    } catch (IOException e) {
+      // Pass test!
+    }
+    
+    // Test: Create a temp file (not a directory!) and try to put an Au Repository in it.
+    fileFile = FileUtil.createTempFile("testCOARImpl", "foo");
+    try {
+      coarGenerate.generateAuRepository(m_au1, fileFile);
+      fail("Creating a COAR on a file should have thrown an exception.");
+    } catch (IOException e) {
+      // Pass test!
+    }
+    fileFile.delete();
+
+    // Test: Create a directory under fileGenerate, and finally create a real AU Repository.
+    fileSubdirectory = new File(fileGenerate, k_dirSubdirectory);
+    coarGenerate.generateAuRepository(m_au1, fileSubdirectory);
+    assertTrue(fileSubdirectory.list().length > 0);
+    
+    // This command also deletes fileSubdirectory.
+    FileUtil.delTree(fileGenerate);
+  }
+
+  
+
+  
+  
+  /**
    * Test method for {@link org.lockss.repository.jcr.CollectionOfAuRepositoriesImpl#listAuRepositories(java.io.File)}.
    */
   public final void testListAuRepositories() throws Exception {
+    ArchivalUnit au1;
+    ArchivalUnit au2;
     File dir1;
     File dir2;
-    File dir3;
     File dirParent;
-    File fileDatastore1;
-    File fileDatastore2;
-    CollectionOfAuRepositoriesImpl jcTest;
-    Map<String, File> mastrfileResult;
+    CollectionOfAuRepositoriesImpl coarTest;
+    List<String> lifilenameResult;
     
-    // Create two directories that will have the right file...
+    // Create two directories that will have an AU
     dirParent = FileUtil.createTempDir("test", "listAuRepositories");
     
-    dir1 = new File(dirParent, "dir1");
-    dir1.mkdir();
-    fileDatastore1 = new File(dir1, CollectionOfAuRepositoriesImpl.k_FILENAME_DATASTORE);
-    fileDatastore1.createNewFile();
-    
-    dir2 = new File(dirParent, "parent");
+    dir1 = new File(dirParent, "child1");
+    dir1.mkdir();        
+    dir2 = new File(dirParent, "child2");
     dir2.mkdir();
-    dir3 = new File(dirParent, "child");
-    dir3.mkdir();
-    fileDatastore2 = new File(dir3, CollectionOfAuRepositoriesImpl.k_FILENAME_DATASTORE);
-    fileDatastore2.createNewFile();
     
-    // Run listAuRepositories...
-    jcTest = new CollectionOfAuRepositoriesImpl(dirParent);
-    mastrfileResult = jcTest.listAuRepositories();
+    coarTest = new CollectionOfAuRepositoriesImpl(dirParent);
+    au1 = new MockArchivalUnit("auid1");
+    coarTest.generateAuRepository(au1, dir1);
+    au2 = new MockArchivalUnit("auid2");
+    coarTest.generateAuRepository(au2, dir2);
     
-    // Check it.
-    assertTrue(mastrfileResult.containsKey("dir1"));
-    assertTrue(mastrfileResult.containsKey("child"));
+    // Setup is done.  Get the results.
+    lifilenameResult = coarTest.listAuRepositories();
+    
+    assertTrue(lifilenameResult.contains("auid1"));
+    assertTrue(lifilenameResult.contains("auid2"));
     
     // Clean up.
-    fileDatastore2.delete();
-    fileDatastore1.delete();
-    dir3.delete();
     dir2.delete();
     dir1.delete();
   }
@@ -187,17 +278,17 @@ public class TestJcrCollection extends LockssTestCase {
    */
   public final void testOpenAuRepository() throws Exception {
     ArchivalUnit auGood;
+    CollectionOfAuRepositoriesImpl coarTest;
     File dirTest;    
     File dirLocation;
-    CollectionOfAuRepositoriesImpl jcTest;
     LockssAuRepository larTest;
     
     dirTest = FileUtil.createTempDir("test", "OpenAuRepository");
-    jcTest = new CollectionOfAuRepositoriesImpl(dirTest);
+    coarTest = new CollectionOfAuRepositoriesImpl(dirTest);
     
     auGood = createAu(dirTest);
     
-    larTest = jcTest.openAuRepository(auGood, dirTest);
+    larTest = coarTest.openAuRepository(auGood, dirTest);
     
     // TODO: Test the larTest.  I'm not sure what to do here.
 

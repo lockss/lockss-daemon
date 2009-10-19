@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManager.java,v 1.1.2.4 2009-10-03 01:49:13 edwardsb1 Exp $
+ * $Id: RepositoryManagerManager.java,v 1.1.2.5 2009-10-19 23:04:57 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -24,10 +24,13 @@
  */
 package org.lockss.repository.v2;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.*;
 
 import org.lockss.app.ConfigurableManager;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.repository.LockssRepositoryException;
 import org.lockss.util.UniqueRefLruCache;
 import org.lockss.util.PlatformUtil.DF;
 
@@ -37,7 +40,7 @@ import org.lockss.util.PlatformUtil.DF;
  */
 public interface RepositoryManagerManager extends ConfigurableManager {
   // RepositorySpec is "jcr://path" or "local://path".
-  public void addToAUIDtoCoar(String AUID, String RepositorySpec);
+  public void addToAUIDtoCoar(String AUID, String RepositorySpec) throws URISyntaxException, LockssRepositoryException, IOException;
   public List<String /* CoarSpec */> getRepositoryList();
   public DF getRepositoryDf();
   public Map<String, DF> getRepositoryMap();

@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositories.java,v 1.1.2.4 2009-10-06 01:23:25 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositories.java,v 1.1.2.5 2009-10-19 23:04:57 edwardsb1 Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository.v2;
 
 import java.io.*;
-import java.util.Map;
+import java.util.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.repository.LockssRepositoryException;
@@ -54,20 +54,20 @@ import org.lockss.util.PlatformUtil.*;
  */
 public interface CollectionOfAuRepositories {
   /**
-   *  Given the name of an AU repository, it returns the directory where this repository
-   *  is found.
-   *
-   * @return Map<String, Object>:
-   */
-  public Map<String, File> listAuRepositories() throws IOException;
-  
-  /**
    * This method creates a new AU Repository in a given directory.
    * 
    * @param dirSource
-   * @throws IOException
+   * @throws LockssRepositoryException 
+   * @throws LockssRepositoryException 
    */
-  public void generateAuRepository(File dirSource) throws IOException;
+  public void generateAuRepository(ArchivalUnit au, File dirSource) throws IOException, LockssRepositoryException;
+  
+  /**
+   *  List the AUIDs available inside this 
+   *
+   * @return List<AUID>:
+   */
+  public List<String /* AUID */> listAuRepositories() throws IOException;
   
   
   /**

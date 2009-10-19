@@ -49,7 +49,11 @@ import org.lockss.util.*;
 /**
  * @author edwardsb
  *
- * It is important that each AU be kept in separate directories.
+ * An AU has two parts: 
+ * 1. The text is stored in a WARC file, and is controlled by the CollectionOfAuRepositories
+ * 2. The metadata is stored in a JCR repository, and is controlled by the JcrRepositoryHelper.
+ *  
+ * The text for different AUs should be kept in different directories.
  */
 public class LockssAuRepositoryImpl extends BaseLockssManager
     implements HistoryRepository, LockssAuRepository {
@@ -68,12 +72,15 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   
   // Variables
   private ArchivalUnit m_au;
+  private CollectionOfAuRepositories m_coar;
   private DatedPeerIdSet m_dpisNoAu;
   private JcrRepositoryHelper m_jrh;
 
   /**
    * You must call JcrRepositoryHelperFactory.preconstructor()
-   * before you call this method.
+   * before you call any constructor.
+   * 
+   * It is currently an error to not specify the CollectionOfAuRepositories.
    * 
    * @param au
    * @throws LockssRepositoryException
@@ -81,25 +88,41 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   public LockssAuRepositoryImpl(
       ArchivalUnit au) 
       throws LockssRepositoryException {
-    this(au, null);    
+    logger.warning("It is currently an error to not specify the COAR.");
+    throw new LockssRepositoryException("It is currently an error to not specify the COAR.");
+    // this(au, null, null);    
   }
    
+  public LockssAuRepositoryImpl(
+      ArchivalUnit au, JcrRepositoryHelper jrh) 
+      throws LockssRepositoryException {
+    logger.warning("It is currently an error to not specify the COAR.");
+    throw new LockssRepositoryException("It is currently an error to not specify the COAR.");
+    // this(au, jrh, null);
+  }
+  
+  public LockssAuRepositoryImpl(
+      ArchivalUnit au, CollectionOfAuRepositories coar)
+    throws LockssRepositoryException {
+    this(au, null, coar);
+  }
+  
   /**
-   * Important note: If jrh is the special value 'null', then the code picks a random
-   * helper repository.  It would be far better if the one-operator constructor could call 
-   * LockssRepositoryImpl(au, m_jrhf.chooseRepositoryHelper()) -- but m_jrhf isn't 
-   * initialized when the one-argument constructor is created.
+   * Important note: If jrh or lari are the special value 'null', then the code picks a random
+   * helper repository or LockssAuRepositoryImpl.  It would be far better if 
+   * the one-operator constructor could call 
+   * LockssRepositoryImpl(au, m_jrhf.chooseRepositoryHelper()) -- but 
+   * m_jrhf isn't initialized when the one-argument constructor is created.
    * 
    * @param au
    * @param jrh
    * @throws LockssRepositoryException
    */
   public LockssAuRepositoryImpl(
-      ArchivalUnit au, JcrRepositoryHelper jrh) 
+      ArchivalUnit au, JcrRepositoryHelper jrh, CollectionOfAuRepositories coar) 
       throws LockssRepositoryException {
     JcrRepositoryHelperFactory jrhf;
     Node node;    
-    
     
     // Store some variables
     if (!JcrRepositoryHelperFactory.isPreconstructed()) {
@@ -109,16 +132,28 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     
     jrhf = JcrRepositoryHelperFactory.getSingleton();
 
+    if (au == null) {
+      logger.error("No AU was specified.");
+      throw new LockssRepositoryException("No AU was specified.");
+    }
     m_au = au;
-       
+    
     try {
-      // Put the LockssAuRepositoryImpl into an appropriate helper repository.
-      if (m_jrh != null) {
+      // Put this LockssAuRepositoryImpl into an appropriate helper repository.
+      if (jrh != null) {
         m_jrh = jrh;
-      } else {  // Probably called by the one-argument constructor
+      } else {  // The user didn't specify a JRH.  Choose any.
         m_jrh = jrhf.chooseRepositoryHelper();
       }
-            
+
+      // Put this LockssAuRepositoryImpl into an appropriate COAR.
+      if (coar != null) {
+        m_coar = coar;
+      } else { // The user didn't specify a COAR.  This is currently an error.
+        logger.error("It is (currently) an error to not specify a COAR.");
+        throw new LockssRepositoryException("It is (currently) an error to not specify a COAR.");
+      }
+
       node = m_jrh.getRootNode();
       if (!node.hasProperty(k_propCreationTime)) {
         // Run the constructor.
@@ -136,7 +171,9 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * This method should perform consistency checks on the set of AU repositories
    * under its control.
    * 
-   * At this time, there are no consistency checks.
+   * In the future, this should check that the metadata stored in the 
+   * JcrRepositoryHelper is the same as the metadata stored in the 
+   * CollectionOfAuRepositories.
    * 
    * @see org.lockss.repository.v2.LockssAuRepository#checkConsistency()
    */
