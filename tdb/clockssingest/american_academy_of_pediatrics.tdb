@@ -19,7 +19,7 @@
     au < manifest ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
     au < manifest ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
     au < released ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-    au < notReady ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+    au < ready ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
   
   }
 
@@ -44,7 +44,7 @@
     
     param[base_url] = http://neoreviews.aappublications.org/
 
-comment[nr] = 500 errors
+comment[nr] = 500 error on index-by-author pages
     
     au < manifest ; 2008 ; NeoReviews Volume 9 ; 9 >
     au < notReady ; 2009 ; NeoReviews Volume 10 ; 10 >
@@ -57,13 +57,13 @@ comment[nr] = 500 errors
       name = Pediatrics
     >
 
-comment[p123] = 500 error
+comment[p123] = 500 error http://pediatrics.aappublications.org/cgi/eletters/123/2/PRIMACK_WALSH_CRTQ_fichiers/filelist.xml
     
     param[base_url] = http://pediatrics.aappublications.org/
     
     au < manifest ; 2008 ; Pediatrics Volume 121 ; 121 >
     au < manifest ; 2008 ; Pediatrics Volume 122 ; 122 >
-    au < testing ; 2009 ; Pediatrics Volume 123 ; 123 >
+    au < notReady ; 2009 ; Pediatrics Volume 123 ; 123 >
     au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
   
   }
