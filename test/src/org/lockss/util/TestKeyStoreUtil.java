@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyStoreUtil.java,v 1.3 2009-10-08 02:12:03 tlipkis Exp $
+ * $Id: TestKeyStoreUtil.java,v 1.4 2009-10-19 05:28:42 tlipkis Exp $
  */
 
 /*
@@ -38,11 +38,6 @@ import java.net.*;
 import java.security.*;
 import java.security.cert.*;
 import javax.net.ssl.*;
-
-import sun.security.x509.*;
-import sun.security.pkcs.PKCS10;
-import sun.security.provider.IdentityDatabase;
-import sun.security.provider.SystemSigner;
 
 import org.lockss.test.*;
 import org.lockss.config.*;
