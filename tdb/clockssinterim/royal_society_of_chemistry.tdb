@@ -55,6 +55,7 @@
     
     param[journal_code] = cs
     
+    au < ready ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
     au < released ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
   
   }
@@ -67,6 +68,7 @@
     
     param[journal_code] = rp
     
+    au < ready ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
     au < ready ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
   
   }  
@@ -91,6 +93,7 @@
     
     param[journal_code] = ce
     
+    au < ready ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
     au < released ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
   
   }
@@ -103,6 +106,7 @@
     
     param[journal_code] = dt
     
+    au < ready ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
     au < released ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
   
   }
@@ -115,6 +119,7 @@
     
     param[journal_code] = ee
     
+    au < ready ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
     au < released ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
   
   }
@@ -127,6 +132,7 @@
     
     param[journal_code] = gc
     
+    au < ready ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
     au < released ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
   
   }

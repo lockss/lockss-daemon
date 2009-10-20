@@ -24,6 +24,44 @@
   {
 
     title <
+      name = Journal of Child Neurology
+    >
+
+    param[base_url] = http://jcn.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Child Neurology Volume 23 ; 23 >
+    au < tested ; 2009 ; Journal of Child Neurology Volume 24 ; 24 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Classical Sociology
+    >
+
+    param[base_url] = http://jcs.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Clinical Pharmacology
+    >
+
+    param[base_url] = http://jcp.sagepub.com/
+
+    au < tested ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
+
+  }
+  
+  {
+
+    title <
       name = Journal of Biological Rhythms
     >
 
@@ -344,6 +382,70 @@
   {
 
     title <
+      name = Journal of Education for Sustainable Development
+    >
+
+    param[base_url] = http://jsd.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Educational and Behavioral Statistics
+    >
+
+    param[base_url] = http://jeb.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Elastomers and Plastics
+    >
+
+    param[base_url] = http://jep.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Elastomers and Plastics Volume 40 ; 40 >
+    au < tested ; 2009 ; Journal of Elastomers and Plastics Volume 41 ; 41 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Emerging Market Finance
+    >
+
+    param[base_url] = http://emf.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Emerging Market Finance Volume 7 ; 7 >
+    au < tested ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Correctional Health Care
+    >
+
+    param[base_url] = http://jcx.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 >
+    au < tested ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 >
+
+  }
+  
+  {
+
+    title <
       name = Journal of Creative Communications
     >
 
@@ -365,5 +467,31 @@
     au < tested ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
 
   }
+
+  {
+
+    title <
+      name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology
+    >
+
+    param[base_url] = http://dms.sagepub.com/
+
+    au < tested ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Dental Research
+    >
+
+    param[base_url] = http://jdr.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Dental Research Volume 87 ; 87 >
+    au < tested ; 2009 ; Journal of Dental Research Volume 88 ; 88 >
+
+  }
+  
   
 }

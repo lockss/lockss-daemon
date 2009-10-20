@@ -99,7 +99,7 @@
     
     param[journal_code] = cs
     
-    au < testing ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
+    au < ready ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
     au < released ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
   
   }
@@ -112,7 +112,7 @@
     
     param[journal_code] = rp
     
-    au < testing ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
+    au < ready ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
     au < released ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
   
   }
@@ -136,7 +136,7 @@
     
     param[journal_code] = ce
     
-    au < testing ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
+    au < ready ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
     au < released ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
   
   }
@@ -149,7 +149,7 @@
     
     param[journal_code] = dt
     
-    au < testing ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
+    au < ready ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
     au < released ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
   
   }
@@ -162,7 +162,7 @@
     
     param[journal_code] = ee
     
-    au < testing ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
+    au < ready ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
     au < released ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
   
   }
@@ -197,7 +197,7 @@
     
     param[journal_code] = gc
     
-    au < testing ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
+    au < ready ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
     au < released ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
   
   }
@@ -357,7 +357,7 @@
     
     param[journal_code] = nj
     
-    au < manifest ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < testing ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
     au < ready ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
   
   }
@@ -370,7 +370,7 @@
     
     param[journal_code] = ob
     
-    au < manifest ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < testing ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
     au < ready ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
   
   }

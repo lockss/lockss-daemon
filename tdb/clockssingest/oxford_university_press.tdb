@@ -2039,7 +2039,7 @@
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
+    au < testing ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
 
   }
 
@@ -2051,8 +2051,8 @@
 
     param[base_url] = http://library.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Library Volume 9 ; 9 >
-    au < manifest ; 2009 ; The Library Volume 10 ; 10 >
+    au < testing ; 2008 ; The Library Volume 9 ; 9 >
+    au < testing ; 2009 ; The Library Volume 10 ; 10 >
 
   }
 
@@ -2064,8 +2064,8 @@
 
     param[base_url] = http://litimag.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Literary Imagination Volume 10 ; 10 >
-    au < manifest ; 2009 ; Literary Imagination Volume 11 ; 11 >
+    au < testing ; 2008 ; Literary Imagination Volume 10 ; 10 >
+    au < testing ; 2009 ; Literary Imagination Volume 11 ; 11 >
 
   }
 
@@ -2077,8 +2077,8 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 >
-    au < manifest ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 >
+    au < testing ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 >
+    au < testing ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 >
 
   }
 
@@ -2144,8 +2144,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://molehr.oxfordjournals.org/
 
-    au < testing ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
-    au < testing ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
+    au < tested ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
+    au < tested ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
 
   }
 
@@ -2170,8 +2170,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://mbe.oxfordjournals.org/
 
-    au < testing ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 >
-    au < testing ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
+    au < tested ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 >
+    au < tested ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
 
   }
 
@@ -2196,7 +2196,7 @@ comment[j17] = no subscription
 
     param[base_url] = http://ml.oxfordjournals.org/
 
-    au < testing ; 2008 ; Music and Letters Volume 89 ; 89 >
+    au < tested ; 2008 ; Music and Letters Volume 89 ; 89 >
     au < testing ; 2009 ; Music and Letters Volume 90 ; 90 >
 
   }

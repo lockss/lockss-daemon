@@ -64,6 +64,19 @@ comment[j17] = no subscription
   {
 
     title <
+      name = MHR: Basic science of reproductive medicine
+    >
+
+    param[base_url] = http://molehr.oxfordjournals.org/
+
+    au < tested ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
+    au < tested ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
+
+  }
+  
+  {
+
+    title <
       name = Modern Judaism - A Journal of Jewish Ideas and Experience
     >
 
@@ -71,6 +84,32 @@ comment[j17] = no subscription
 
     au < tested ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 >
     au < tested ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 >
+
+  }
+
+  {
+
+    title <
+      name = Molecular Biology and Evolution
+    >
+
+    param[base_url] = http://mbe.oxfordjournals.org/
+
+    au < tested ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 >
+    au < tested ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
+
+  }
+
+  {
+
+    title <
+      name = Music and Letters
+    >
+
+    param[base_url] = http://ml.oxfordjournals.org/
+
+    au < tested ; 2008 ; Music and Letters Volume 89 ; 89 >
+    au < testing ; 2009 ; Music and Letters Volume 90 ; 90 >
 
   }
   
