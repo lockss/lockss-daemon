@@ -203,24 +203,26 @@
       name = Journal of the American Medical Association
     >
     
+    comment[jama_183_202] = volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
+
     param[base_url] = http://jama.ama-assn.org/
 
-    au < retracted ; 1963 ; Journal of the American Medical Association Volume 183 ; 183 ; reingest1.clockss.org:8082 >
-    au < retracted ; 1963 ; Journal of the American Medical Association Volume 184 ; 184 ; reingest1.clockss.org:8082 >
-    au < retracted ; 1963 ; Journal of the American Medical Association Volume 185 ; 185 ; reingest2.clockss.org:8085 >
-    au < retracted ; 1963 ; Journal of the American Medical Association Volume 186 ; 186 ; reingest2.clockss.org:8085 >
-    au < retracted ; 1964 ; Journal of the American Medical Association Volume 187 ; 187 ; reingest3.clockss.org:8083 >
-    au < retracted ; 1964 ; Journal of the American Medical Association Volume 188 ; 188 ; reingest3.clockss.org:8083 >
-    au < retracted ; 1964 ; Journal of the American Medical Association Volume 189 ; 189 ; reingest4.clockss.org:8082 >
-    au < retracted ; 1964 ; Journal of the American Medical Association Volume 190 ; 190 ; reingest4.clockss.org:8082 >
-    au < retracted ; 1965 ; Journal of the American Medical Association Volume 191 ; 191 ; reingest1.clockss.org:8082 >
-    au < retracted ; 1965 ; Journal of the American Medical Association Volume 192 ; 192 ; reingest1.clockss.org:8082 >
+    au < released ; 1963 ; Journal of the American Medical Association Volume 183 ; 183 ; reingest1.clockss.org:8082 >
+    au < released ; 1963 ; Journal of the American Medical Association Volume 184 ; 184 ; reingest1.clockss.org:8082 >
+    au < released ; 1963 ; Journal of the American Medical Association Volume 185 ; 185 ; reingest2.clockss.org:8085 >
+    au < released ; 1963 ; Journal of the American Medical Association Volume 186 ; 186 ; reingest2.clockss.org:8085 >
+    au < released ; 1964 ; Journal of the American Medical Association Volume 187 ; 187 ; reingest3.clockss.org:8083 >
+    au < released ; 1964 ; Journal of the American Medical Association Volume 188 ; 188 ; reingest3.clockss.org:8083 >
+    au < released ; 1964 ; Journal of the American Medical Association Volume 189 ; 189 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Journal of the American Medical Association Volume 190 ; 190 ; reingest4.clockss.org:8082 >
+    au < released ; 1965 ; Journal of the American Medical Association Volume 191 ; 191 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Journal of the American Medical Association Volume 192 ; 192 ; reingest1.clockss.org:8082 >
     au < released ; 1965 ; Journal of the American Medical Association Volume 193 ; 193 ; reingest2.clockss.org:8085 >
     au < released ; 1965 ; Journal of the American Medical Association Volume 194 ; 194 ; reingest2.clockss.org:8085 >
     au < released ; 1966 ; Journal of the American Medical Association Volume 195 ; 195 ; reingest3.clockss.org:8083 >
     au < released ; 1966 ; Journal of the American Medical Association Volume 196 ; 196 ; reingest3.clockss.org:8083 >
-    au < retracted ; 1966 ; Journal of the American Medical Association Volume 197 ; 197 ; reingest4.clockss.org:8082 >
-    au < retracted ; 1966 ; Journal of the American Medical Association Volume 198 ; 198 ; reingest4.clockss.org:8082 >
+    au < released ; 1966 ; Journal of the American Medical Association Volume 197 ; 197 ; reingest4.clockss.org:8082 >
+    au < released ; 1966 ; Journal of the American Medical Association Volume 198 ; 198 ; reingest4.clockss.org:8082 >
     au < released ; 1967 ; Journal of the American Medical Association Volume 199 ; 199 ; >
     au < released ; 1967 ; Journal of the American Medical Association Volume 200 ; 200 ; >
     au < released ; 1967 ; Journal of the American Medical Association Volume 201 ; 201 ; >
