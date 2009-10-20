@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.19 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.20 2009-10-20 22:38:16 tlipkis Exp $
  */
 
 /*
@@ -264,7 +264,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
       else if (cause instanceof ClassNotFoundException) {
         errorMessage = "The class you have specified does not seem to be loadable under the current class path.";
       }
-      else if (cause instanceof InstantiationError) {
+      else if (cause instanceof InstantiationException) {
         errorMessage = "The class you have specified seems to have caused an instantiation error.";
       }
       else if (cause instanceof IllegalAccessException) {

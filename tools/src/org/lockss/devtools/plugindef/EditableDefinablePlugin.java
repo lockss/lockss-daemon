@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.32 2009-10-19 05:28:12 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.33 2009-10-20 22:38:16 tlipkis Exp $
  */
 
 /*
@@ -317,19 +317,21 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
   }
 
+  public void checkHashFilterRule(String mimeType,
+				  String filterRuleClass)
+      throws DynamicallyLoadedComponentException,
+	     PluginException.InvalidDefinition {
+    logger.debug("Checking hash filter rule for: " + mimeType + ": "
+		 + filterRuleClass);
+    tryDynamic(filterRuleClass, FilterRule.class);
+  }
+
   public void setHashFilterRule(String mimeType,
-                          String filterRuleClass,
-                          boolean tryDynamic)
+                          String filterRuleClass)
       throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
     logger.info("Setting AU filter rule for MIME type: " + mimeType + " to: " + filterRuleClass);
     try {
-      if (tryDynamic) {
-        tryDynamic(filterRuleClass, FilterRule.class);
-      }
       definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE, filterRuleClass);
-    }
-    catch (DynamicallyLoadedComponentException dlce) {
-      throw dlce; // rethrow
     }
     catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the AU filter rule for MIME type: " + mimeType + " to: " + filterRuleClass;
@@ -371,19 +373,21 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
   }
 
+  public void checkHashFilterFactory(String mimeType,
+				  String filterFactoryClass)
+      throws DynamicallyLoadedComponentException,
+	     PluginException.InvalidDefinition {
+    logger.debug("Checking hash filter factory for: " + mimeType + ": "
+		 + filterFactoryClass);
+    tryDynamic(filterFactoryClass, FilterFactory.class);
+  }
+
   public void setHashFilterFactory(String mimeType,
-				   String filterFactoryClass,
-				   boolean tryDynamic)
+				   String filterFactoryClass)
       throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
     logger.info("Setting hash filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
     try {
-      if (tryDynamic) {
-        tryDynamic(filterFactoryClass, FilterFactory.class);
-      }
       definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY, filterFactoryClass);
-    }
-    catch (DynamicallyLoadedComponentException dlce) {
-      throw dlce; // rethrow
     }
     catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the hash filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;
@@ -429,19 +433,21 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
   }
 
+  public void checkCrawlFilterFactory(String mimeType,
+				      String filterFactoryClass)
+      throws DynamicallyLoadedComponentException,
+	     PluginException.InvalidDefinition {
+    logger.debug("Checking crawl filter factory for: " + mimeType + ": "
+		 + filterFactoryClass);
+    tryDynamic(filterFactoryClass, FilterFactory.class);
+  }
+
   public void setCrawlFilterFactory(String mimeType,
-				   String filterFactoryClass,
-				   boolean tryDynamic)
+				   String filterFactoryClass)
       throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
     logger.info("Setting crawl filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
     try {
-      if (tryDynamic) {
-        tryDynamic(filterFactoryClass, FilterFactory.class);
-      }
       definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY, filterFactoryClass);
-    }
-    catch (DynamicallyLoadedComponentException dlce) {
-      throw dlce; // rethrow
     }
     catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the crawl filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;

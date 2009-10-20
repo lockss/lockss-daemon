@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.30 2009-10-19 05:28:12 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.31 2009-10-20 22:38:16 tlipkis Exp $
  */
 
 /*
@@ -376,16 +376,27 @@ public class TestEditableDefinablePlugin
     String mime1 = "text/html";
     String mime2 = "application/pdf";
     String filt1 = "org.lockss.test.MockFilterRule";
-    String filt2 = "org.lockss.Foo";
-    String filt3 = "org.lockss.Bar";
+    String filt2 = "org.lockss.FooNoClass";
+    String filt3 = "org.lockss.plugin.FilterRule";
 
     assertEquals(null, getDefMapString(mime1 + SUFFIX_FILTER_RULE));
 
-    edPlugin.setHashFilterRule(mime1, filt1, true);
+    edPlugin.checkHashFilterRule(mime1, filt1);
+    edPlugin.setHashFilterRule(mime1, filt1);
     assertEquals(filt1, getDefMapString(mime1 + SUFFIX_FILTER_RULE));
     assertEquals(MapUtil.map(mime1, filt1), edPlugin.getHashFilterRules());
-    edPlugin.setHashFilterRule(mime2, filt2, false);
-    edPlugin.setHashFilterFactory(mime1, filt3, false);
+    try {
+      edPlugin.checkHashFilterRule(mime1, filt2);
+      fail("checkHashFilterRule of nonexistent class should fail");
+    } catch (EditableDefinablePlugin.DynamicallyLoadedComponentException e) {
+    }
+    try {
+      edPlugin.checkHashFilterRule(mime1, filt3);
+      fail("checkHashFilterRule of interface should fail");
+    } catch (EditableDefinablePlugin.DynamicallyLoadedComponentException e) {
+    }
+    edPlugin.setHashFilterRule(mime2, filt2);
+    edPlugin.setHashFilterFactory(mime1, filt3);
     assertEquals(MapUtil.map(mime1, filt1, mime2, filt2),
 		 edPlugin.getHashFilterRules());
     assertEquals(MapUtil.map(mime1, filt3), edPlugin.getHashFilterFactories());
@@ -400,16 +411,27 @@ public class TestEditableDefinablePlugin
     String mime1 = "text/html";
     String mime2 = "application/pdf";
     String filt1 = "org.lockss.test.MockFilterFactory";
-    String filt2 = "org.lockss.Foo";
-    String filt3 = "org.lockss.Bar";
+    String filt2 = "org.lockss.FooNoClass";
+    String filt3 = "org.lockss.plugin.FilterFactory";
 
     assertEquals(null, getDefMapString(mime1 + SUFFIX_HASH_FILTER_FACTORY));
 
-    edPlugin.setHashFilterFactory(mime1, filt1, true);
+    edPlugin.checkHashFilterFactory(mime1, filt1);
+    edPlugin.setHashFilterFactory(mime1, filt1);
     assertEquals(filt1, getDefMapString(mime1 + SUFFIX_HASH_FILTER_FACTORY));
     assertEquals(MapUtil.map(mime1, filt1), edPlugin.getHashFilterFactories());
-    edPlugin.setHashFilterFactory(mime2, filt2, false);
-    edPlugin.setHashFilterRule(mime1, filt3, false);
+    try {
+      edPlugin.checkHashFilterFactory(mime1, filt2);
+      fail("checkHashFilterFactory of nonexistent class should fail");
+    } catch (EditableDefinablePlugin.DynamicallyLoadedComponentException e) {
+    }
+    try {
+      edPlugin.checkHashFilterFactory(mime1, filt3);
+      fail("checkHashFilterFactory of interface should fail");
+    } catch (EditableDefinablePlugin.DynamicallyLoadedComponentException e) {
+    }
+    edPlugin.setHashFilterFactory(mime2, filt2);
+    edPlugin.setHashFilterRule(mime1, filt3);
     assertEquals(MapUtil.map(mime1, filt1, mime2, filt2),
 		 edPlugin.getHashFilterFactories());
     assertEquals(MapUtil.map(mime1, filt3), edPlugin.getHashFilterRules());
@@ -424,14 +446,26 @@ public class TestEditableDefinablePlugin
     String mime1 = "text/html";
     String mime2 = "application/pdf";
     String filt1 = "org.lockss.test.MockFilterFactory";
-    String filt2 = "org.lockss.Foo";
+    String filt2 = "org.lockss.FooNoClass";
+    String filt3 = "org.lockss.plugin.FilterFactory";
 
     assertEquals(null, getDefMapString(mime1 + SUFFIX_CRAWL_FILTER_FACTORY));
 
-    edPlugin.setCrawlFilterFactory(mime1, filt1, true);
+    edPlugin.checkCrawlFilterFactory(mime1, filt1);
+    edPlugin.setCrawlFilterFactory(mime1, filt1);
     assertEquals(filt1, getDefMapString(mime1 + SUFFIX_CRAWL_FILTER_FACTORY));
     assertEquals(MapUtil.map(mime1, filt1), edPlugin.getCrawlFilterFactories());
-    edPlugin.setCrawlFilterFactory(mime2, filt2, false);
+    try {
+      edPlugin.checkCrawlFilterFactory(mime1, filt2);
+      fail("checkCrawlFilterFactory of nonexistent class should fail");
+    } catch (EditableDefinablePlugin.DynamicallyLoadedComponentException e) {
+    }
+    try {
+      edPlugin.checkCrawlFilterFactory(mime1, filt3);
+      fail("checkCrawlFilterFactory of interface should fail");
+    } catch (EditableDefinablePlugin.DynamicallyLoadedComponentException e) {
+    }
+    edPlugin.setCrawlFilterFactory(mime2, filt2);
     assertEquals(MapUtil.map(mime1, filt1, mime2, filt2),
 		 edPlugin.getCrawlFilterFactories());
 
