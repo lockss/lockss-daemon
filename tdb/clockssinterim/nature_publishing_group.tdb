@@ -17,7 +17,7 @@
 
     param[journal_id] = aps
 
-    au < ready ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
+    au < released ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
@@ -84,7 +84,7 @@
     param[journal_id] = cr
 
     au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
-    au < ready ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+    au < released ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -157,6 +157,7 @@
     param[journal_id] = hdy
 
     au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < released ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
 
   }
 
@@ -180,8 +181,8 @@
 
     param[journal_id] = icb
 
-    au < ready ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
-    au < ready ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
+    au < released ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
+    au < released ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
 
   }
   
@@ -193,8 +194,8 @@
 
     param[journal_id] = ijir
 
-    au < ready ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
-    au < ready ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
+    au < released ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
+    au < released ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
 
   }
 
@@ -206,8 +207,21 @@
 
     param[journal_id] = ijo
 
-    au < ready ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
-    au < ready ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+    au < released ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
+    au < released ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Antibiotics
+    >
+
+    param[journal_id] = ja
+
+    au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
+    au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
 
   }
 
@@ -292,8 +306,8 @@
 
     param[journal_id] = ndigest
 
-    au < ready ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
-    au < ready ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
+    au < released ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
+    au < released ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
 
   }
   
@@ -305,7 +319,7 @@
 
     param[journal_id] = nmat
 
-    au < ready ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
+    au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < manifest ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
 
   }
@@ -318,8 +332,8 @@
 
     param[journal_id] = nm
 
-    au < ready ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
-    au < ready ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
+    au < released ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
+    au < released ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
 
   }
 
@@ -331,7 +345,7 @@
 
     param[journal_id] = nmeth
 
-    au < ready ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
+    au < released ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
 
   }
 

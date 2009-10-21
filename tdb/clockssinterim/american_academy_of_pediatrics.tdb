@@ -17,7 +17,7 @@
     param[base_url] = http://aapgrandrounds.aappublications.org/
     
     au < released ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-    au < ready ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+    au < released ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
   
   }
   
@@ -40,7 +40,7 @@
     
     param[base_url] = http://pedsinreview.aappublications.org/
     
-    au < ready ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+    au < released ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
   
   }
 
@@ -52,8 +52,8 @@
     
     param[base_url] = http://pedsinreview.aappublications.org/
     
-    au < ready ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-    au < ready ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+    au < released ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
+    au < released ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
   
   }
   
