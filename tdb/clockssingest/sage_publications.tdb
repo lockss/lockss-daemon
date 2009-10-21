@@ -3452,7 +3452,7 @@
 
     param[base_url] = http://jei.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Early Intervention Volume 31 ; 31 >
+    au < tested ; 2008 ; Journal of Early Intervention Volume 31 ; 31 >
 
   }
 
@@ -3465,7 +3465,7 @@
     param[base_url] = http://jsd.sagepub.com/
 
     au < tested ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 >
-    au < testing ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 >
+    au < tested ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 >
 
   }
 
@@ -3568,8 +3568,8 @@
 
     param[base_url] = http://esp.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of European Social Policy Volume 18 ; 18 >
-    au < manifest ; 2009 ; Journal of European Social Policy Volume 19 ; 19 >
+    au < tested ; 2008 ; Journal of European Social Policy Volume 18 ; 18 >
+    au < tested ; 2009 ; Journal of European Social Policy Volume 19 ; 19 >
 
   }
 
@@ -3581,8 +3581,8 @@
 
     param[base_url] = http://jes.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of European Studies Volume 38 ; 38 >
-    au < manifest ; 2009 ; Journal of European Studies Volume 39 ; 39 >
+    au < tested ; 2008 ; Journal of European Studies Volume 38 ; 38 >
+    au < tested ; 2009 ; Journal of European Studies Volume 39 ; 39 >
 
   }
 
@@ -3594,8 +3594,8 @@
 
     param[base_url] = http://jfh.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Family History Volume 33 ; 33 >
-    au < manifest ; 2009 ; Journal of Family History Volume 34 ; 34 >
+    au < tested ; 2008 ; Journal of Family History Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Family History Volume 34 ; 34 >
 
   }
 
@@ -3646,8 +3646,8 @@
 
     param[base_url] = http://jfs.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 >
-    au < manifest ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 >
+    au < testing ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 >
+    au < testing ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 >
 
   }
 
@@ -3659,8 +3659,8 @@
 
     param[base_url] = http://jgp.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
-    au < manifest ; 2009 ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
+    au < testing ; 2008 ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
+    au < testing ; 2009 ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
 
   }
 
@@ -3672,8 +3672,8 @@
 
     param[base_url] = http://jhs.sagepub.com/
 
-    au < manifest ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 >
-    au < manifest ; 2009 ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 >
+    au < testing ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 >
+    au < testing ; 2009 ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 >
 
   }
 

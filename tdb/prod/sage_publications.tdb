@@ -6785,6 +6785,24 @@ comment[jcp] = some sort of custom layout
     {
 
       title <
+        name = Journal of Hand Surgery (European Volume)
+      >
+
+      {
+
+        param[base_url] = http://jhs.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest  ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 >
+        au < HighWirePressPlugin ; manifest  ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 >
+
+      }
+
+    }
+  
+    {
+
+      title <
         name = Journal of Health Psychology 
       >
 
