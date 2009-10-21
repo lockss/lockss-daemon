@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.77 2009-06-15 07:52:44 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.77.4.1 2009-10-21 00:07:51 thib_gc Exp $
  */
 
 /*
@@ -249,7 +249,9 @@ public class DaemonStatus extends LockssServlet {
   private void doXmlStatusTable()
       throws IOException, XmlDomBuilder.XmlDomException {
     PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/xml");
+    // By default, XmlDomBuilder will produce UTF-8.  Must set content type
+    // *before* calling getWriter()
+    resp.setContentType("text/xml;charset=UTF-8");
     try {
       StatusTable statTable = makeTable();
       XmlStatusTable xmlTable = new XmlStatusTable(statTable);
