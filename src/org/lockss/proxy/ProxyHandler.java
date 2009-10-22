@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.64 2009-08-11 19:43:45 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.64.2.1 2009-10-22 03:13:58 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.64 2009-08-11 19:43:45 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.64.2.1 2009-10-22 03:13:58 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -358,20 +358,24 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  serveFromCache(pathInContext, pathParams, request,
 			 response, cu);
 	  return;
-	} else if (auditIndex) {
-	  // else generate an error page
-	  sendErrorPage(request,
-			response,
-			404, "Not found",
-			pluginMgr.getCandidateAus(urlString));
-	  return;
 	} else {
-	  // Don't forward request if it's a repair or we were told not to.
-	  response.sendError(HttpResponse.__404_Not_Found);
-	  request.setHandled(true);
+	  // Not found on cache and told not to forward request
+	  String errmsg = auditProxy
+	    ? "Not found in LOCKSS box " + PlatformUtil.getLocalHostname()
+	    : "Not found";
+	  if (auditIndex) {
+	    sendErrorPage(request,
+			  response,
+			  404, errmsg,
+			  pluginMgr.getCandidateAus(urlString));
+	  } else {
+	    response.sendError(HttpResponse.__404_Not_Found, errmsg);
+	    request.setHandled(true);
+	  }
 	  return;
 	}
       }
+
       if (!isInCache
 	  && (proxyMgr.getHostDownAction() ==
 	      ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
