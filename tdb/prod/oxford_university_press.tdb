@@ -4349,9 +4349,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Notes and Queries Volume 52 ; 52 >
         au < HighWirePressPlugin ; doNotProcess ; Notes and Queries Volume 53 ; 53 >
-        au < HighWirePressPlugin ; testing ; Notes and Queries Volume 54 ; 54 >
-        au < HighWirePressPlugin ; testing ; Notes and Queries Volume 55 ; 55 >
-        au < HighWirePressPlugin ; testing ; Notes and Queries Volume 56 ; 56 >
+        au < HighWirePressPlugin ; ready ; Notes and Queries Volume 54 ; 54 >
+        au < HighWirePressPlugin ; ready ; Notes and Queries Volume 55 ; 55 >
+        au < HighWirePressPlugin ; ready ; Notes and Queries Volume 56 ; 56 >
 
       }
 
@@ -4381,8 +4381,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Nucleic Acids Research Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; ready ; Nucleic Acids Research Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; ready ; Nucleic Acids Research Volume 35 ; 35 >
-        au < HighWirePressPlugin ; testing ; Nucleic Acids Research Volume 36 ; 36 >
-        au < HighWirePressPlugin ; testing ; Nucleic Acids Research Volume 37 ; 37 >
+        au < HighWirePressPlugin ; ready ; Nucleic Acids Research Volume 36 ; 36 >
+        au < HighWirePressPlugin ; ready ; Nucleic Acids Research Volume 37 ; 37 >
 
       }
 

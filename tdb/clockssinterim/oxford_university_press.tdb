@@ -151,6 +151,45 @@ comment[j17] = no subscription
     au < tested ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
 
   }
+
+  {
+
+    title <
+      name = Nicotine and Tobacco Research
+    >
+
+    param[base_url] = http://ntr.oxfordjournals.org/
+
+    au < tested ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 >
+    au < tested ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Notes and Queries
+    >
+
+    param[base_url] = http://nq.oxfordjournals.org/
+
+    au < tested ; 2008 ; Notes and Queries Volume 55 ; 55 >
+    au < tested ; 2009 ; Notes and Queries Volume 56 ; 56 >
+
+  }
+
+  {
+
+    title <
+      name = Nucleic Acids Research
+    >
+
+    param[base_url] = http://nar.oxfordjournals.org/
+
+    au < tested ; 2008 ; Nucleic Acids Research Volume 36 ; 36 >
+    au < tested ; 2009 ; Nucleic Acids Research Volume 37 ; 37 >
+
+  }
   
   {
 
