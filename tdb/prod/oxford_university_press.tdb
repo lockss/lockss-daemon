@@ -3883,6 +3883,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The Library Volume 6 ; 6 >
         au < HighWirePressPlugin ; doNotProcess ; The Library Volume 7 ; 7 >
+        au < HighWirePressPlugin ; manifest ; The Library Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; The Library Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; The Library Volume 10 ; 10 >
 
       }
 
@@ -3928,6 +3931,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; ready ; Literary Imagination Volume 8 ; 8 >
+        au < HighWirePressPlugin ; manifest ; Literary Imagination Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Literary Imagination Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Literary Imagination Volume 11 ; 11 >
 
       }
 

@@ -7,6 +7,32 @@
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   implicit < status ; attr[year] ; name ; param[volume_name] >
 
+
+  {
+
+    title <
+      name = The Library
+    >
+
+    param[base_url] = http://library.oxfordjournals.org/
+
+    au < tested ; 2008 ; The Library Volume 9 ; 9 >
+    au < tested ; 2009 ; The Library Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Literary Imagination
+    >
+
+    param[base_url] = http://litimag.oxfordjournals.org/
+
+    au < tested ; 2008 ; Literary Imagination Volume 10 ; 10 >
+    au < tested ; 2009 ; Literary Imagination Volume 11 ; 11 >
+
+  }
  
   {
 

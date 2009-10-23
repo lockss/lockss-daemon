@@ -2051,8 +2051,8 @@
 
     param[base_url] = http://library.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Library Volume 9 ; 9 >
-    au < testing ; 2009 ; The Library Volume 10 ; 10 >
+    au < tested ; 2008 ; The Library Volume 9 ; 9 >
+    au < tested ; 2009 ; The Library Volume 10 ; 10 >
 
   }
 
@@ -2064,8 +2064,8 @@
 
     param[base_url] = http://litimag.oxfordjournals.org/
 
-    au < testing ; 2008 ; Literary Imagination Volume 10 ; 10 >
-    au < testing ; 2009 ; Literary Imagination Volume 11 ; 11 >
+    au < tested ; 2008 ; Literary Imagination Volume 10 ; 10 >
+    au < tested ; 2009 ; Literary Imagination Volume 11 ; 11 >
 
   }
 
@@ -2183,8 +2183,10 @@ comment[j17] = no subscription
 
     param[base_url] = http://mplant.oxfordjournals.org/
 
-    au < testing ; 2008 ; Molecular Plant Volume 1 ; 1 >
-    au < testing ; 2009 ; Molecular Plant Volume 2 ; 2 >
+comment[mplant] = no manifest page
+
+    au < notReady ; 2008 ; Molecular Plant Volume 1 ; 1 >
+    au < notReady ; 2009 ; Molecular Plant Volume 2 ; 2 >
 
   }
 

@@ -6724,8 +6724,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Fire Sciences Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; ready ; Journal of Fire Sciences Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; ready ; Journal of Fire Sciences Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Fire Sciences Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Fire Sciences Volume 27 ; 27 >
+        au < HighWirePressPlugin ; ready ; Journal of Fire Sciences Volume 26 ; 26 >
+        au < HighWirePressPlugin ; ready ; Journal of Fire Sciences Volume 27 ; 27 >
 
       }
 
@@ -6755,8 +6755,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Geriatric Psychiatry and Neurology Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; ready ; Journal of Geriatric Psychiatry and Neurology Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
+        au < HighWirePressPlugin ; ready ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
+        au < HighWirePressPlugin ; ready ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
 
       }
 
@@ -6793,8 +6793,8 @@ comment[jcp] = some sort of custom layout
         param[base_url] = http://jhs.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest  ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 >
-        au < HighWirePressPlugin ; manifest  ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 >
+        au < HighWirePressPlugin ; ready  ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 >
+        au < HighWirePressPlugin ; ready  ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 >
 
       }
 
@@ -7126,7 +7126,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Intensive Care Medicine Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; Journal of Intensive Care Medicine Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; Journal of Intensive Care Medicine Volume 23 ; 23 >
-        au < HighWirePressPlugin ; manifest ; Journal of Intensive Care Medicine Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; Journal of Intensive Care Medicine Volume 24 ; 24 >
 
       }
 
@@ -7147,7 +7147,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Interpersonal Violence Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; Journal of Interpersonal Violence Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; Journal of Interpersonal Violence Volume 23 ; 23 >
-        au < HighWirePressPlugin ; manifest ; Journal of Interpersonal Violence Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; Journal of Interpersonal Violence Volume 24 ; 24 >
 
       }
 
@@ -7168,7 +7168,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Language and Social Psychology Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; ready ; Journal of Language and Social Psychology Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; ready ; Journal of Language and Social Psychology Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Language and Social Psychology Volume 28 ; 28 >
+        au < HighWirePressPlugin ; testing ; Journal of Language and Social Psychology Volume 28 ; 28 >
 
       }
 
@@ -7188,6 +7188,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Leadership & Organizational Studies Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; ready ; Journal of Leadership & Organizational Studies Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; ready ; Journal of Leadership & Organizational Studies Volume 15 ; 15 >
+        au < HighWirePressPlugin ; testing ; Journal of Leadership & Organizational Studies Volume 16 ; 16 >
 
       }
 
@@ -7208,7 +7209,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Librarianship and Information Science Volume 38 ; 38 >
         au < HighWireStrVolPlugin ; ready ; Journal of Librarianship and Information Science Volume 39 ; 39 >
         au < HighWireStrVolPlugin ; ready ; Journal of Librarianship and Information Science Volume 40 ; 40 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Librarianship and Information Science Volume 41 ; 41 >
+        au < HighWirePressPlugin ; testing ; Journal of Librarianship and Information Science Volume 41 ; 41 >
 
       }
 
