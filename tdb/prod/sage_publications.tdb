@@ -6444,8 +6444,8 @@ comment[jcp] = some sort of custom layout
       param[base_url] = http://ebx.sagepub.com/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; testing ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
-      au < HighWirePressPlugin ; testing ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
+      au < HighWirePressPlugin ; ready ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
+      au < HighWirePressPlugin ; ready ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
     
     }
     
@@ -6475,8 +6475,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of English Linguistics Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; ready ; Journal of English Linguistics Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; ready ; Journal of English Linguistics Volume 35 ; 35 >
-        au < HighWirePressPlugin ; testing ; Journal of English Linguistics Volume 36 ; 36 >
-        au < HighWirePressPlugin ; testing ; Journal of English Linguistics Volume 37 ; 37 >
+        au < HighWirePressPlugin ; ready ; Journal of English Linguistics Volume 36 ; 36 >
+        au < HighWirePressPlugin ; ready ; Journal of English Linguistics Volume 37 ; 37 >
 
       }
 
@@ -6506,8 +6506,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Entrepreneurship Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; ready ; Journal of Entrepreneurship Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; ready ; Journal of Entrepreneurship Volume 16 ; 16 >
-        au < HighWirePressPlugin ; testing ; Journal of Entrepreneurship Volume 17 ; 17 >
-        au < HighWirePressPlugin ; testing ; Journal of Entrepreneurship Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Journal of Entrepreneurship Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; Journal of Entrepreneurship Volume 18 ; 18 >
 
       }
 
@@ -6537,8 +6537,8 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; The Journal of Environment & Development Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; doNotProcess ; The Journal of Environment & Development Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; ready ; The Journal of Environment & Development Volume 16 ; 16 >
-        au < HighWirePressPlugin ; testing ; The Journal of Environment & Development Volume 17 ; 17 >
-        au < HighWirePressPlugin ; testing ; The Journal of Environment & Development Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; The Journal of Environment & Development Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; The Journal of Environment & Development Volume 18 ; 18 >
 
       }
 

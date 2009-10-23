@@ -3516,8 +3516,8 @@
 
     param[base_url] = http://ebx.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
-    au < testing ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
+    au < tested ; 2008 ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
+    au < tested ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
 
   }
 
@@ -3529,8 +3529,8 @@
 
     param[base_url] = http://eng.sagepub.com/
 
-    au < testing ; 2008 ; Journal of English Linguistics Volume 36 ; 36 >
-    au < testing ; 2009 ; Journal of English Linguistics Volume 37 ; 37 >
+    au < tested ; 2008 ; Journal of English Linguistics Volume 36 ; 36 >
+    au < tested ; 2009 ; Journal of English Linguistics Volume 37 ; 37 >
 
   }
 
@@ -3542,8 +3542,8 @@
 
     param[base_url] = http://joe.sagepub.com/
 
-    au < testing ; 2008 ; Journal of Entrepreneurship Volume 17 ; 17 >
-    au < testing ; 2009 ; Journal of Entrepreneurship Volume 18 ; 18 >
+    au < tested ; 2008 ; Journal of Entrepreneurship Volume 17 ; 17 >
+    au < tested ; 2009 ; Journal of Entrepreneurship Volume 18 ; 18 >
 
   }
 
@@ -3555,8 +3555,8 @@
 
     param[base_url] = http://jed.sagepub.com/
 
-    au < testing ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 >
-    au < testing ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 >
+    au < tested ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 >
+    au < tested ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 >
 
   }
 
@@ -3776,7 +3776,7 @@
     param[base_url] = http://jhp.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Humanistic Psychology Volume 48 ; 48 >
-    au < manifest ; 2009 ; Journal of Humanistic Psychology Volume 49 ; 49 >
+    au < testing ; 2009 ; Journal of Humanistic Psychology Volume 49 ; 49 >
 
   }
 
@@ -3789,7 +3789,7 @@
     param[base_url] = http://jir.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Industrial Relations Volume 50 ; 50 >
-    au < manifest ; 2009 ; Journal of Industrial Relations Volume 51 ; 51 >
+    au < testing ; 2009 ; Journal of Industrial Relations Volume 51 ; 51 >
 
   }
 
@@ -3802,7 +3802,7 @@
     param[base_url] = http://jit.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Industrial Textiles Volume 38 ; 38 >
-    au < manifest ; 2009 ; Journal of Industrial Textiles Volume 39 ; 39 >
+    au < testing ; 2009 ; Journal of Industrial Textiles Volume 39 ; 39 >
 
   }
 
@@ -3815,7 +3815,7 @@
     param[base_url] = http://bji.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Infection Prevention Volume 9 ; 9 >
-    au < manifest ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 >
+    au < testing ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 >
 
   }
 
@@ -3828,7 +3828,7 @@
     param[base_url] = http://jis.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Information Science Volume 34 ; 34 >
-    au < manifest ; 2009 ; Journal of Information Science Volume 35 ; 35 >
+    au < testing ; 2009 ; Journal of Information Science Volume 35 ; 35 >
 
   }
 
@@ -3841,7 +3841,7 @@
     param[base_url] = http://jid.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Intellectual Disabilities Volume 12 ; 12 >
-    au < manifest ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 >
+    au < testing ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 >
 
   }
 
@@ -3854,7 +3854,7 @@
     param[base_url] = http://jim.sagepub.com/
 
     au < manifest ; 2008 ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
-    au < manifest ; 2009 ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
+    au < testing ; 2009 ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
 
   }
 
