@@ -43,7 +43,7 @@
     {
 
 comment[joe153] = 500 error (content2a)
-comment[joe154] = found a login page (content2a)
+comment[joe154] = found a login page (content2a) vol 154 and down
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://joe.endocrinology-journals.org/
@@ -115,10 +115,10 @@ comment[joe154] = found a login page (content2a)
       au < manifest ; Journal of Endocrinology Volume 146 ; 146 >
       au < manifest ; Journal of Endocrinology Volume 147 ; 147 >
       au < notReady ; Journal of Endocrinology Volume 148 ; 148 >
-      au < testing ; Journal of Endocrinology Volume 149 ; 149 >
-      au < testing ; Journal of Endocrinology Volume 150 ; 150 >
-      au < testing ; Journal of Endocrinology Volume 151 ; 151 >
-      au < testing ; Journal of Endocrinology Volume 152 ; 152 >
+      au < notReady ; Journal of Endocrinology Volume 149 ; 149 >
+      au < notReady ; Journal of Endocrinology Volume 150 ; 150 >
+      au < notReady ; Journal of Endocrinology Volume 151 ; 151 >
+      au < notReady ; Journal of Endocrinology Volume 152 ; 152 >
       au < notReady ; Journal of Endocrinology Volume 153 ; 153 >
       au < notReady ; Journal of Endocrinology Volume 154 ; 154 >
       au < ready ; Journal of Endocrinology Volume 155 ; 155 >

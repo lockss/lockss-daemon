@@ -3564,6 +3564,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Journal of Semantics Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; released ; Journal of Semantics Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; released ; Journal of Semantics Volume 24 ; 24 >
+        au < HighWirePressPlugin ; manifest ; Journal of Semantics Volume 25 ; 25 >
+        au < HighWirePressPlugin ; ready ; Journal of Semantics Volume 26 ; 26 >
 
       }
 
@@ -3592,6 +3594,9 @@
 
         au < HighWireStrVolPlugin ; released ; Journal of Semitic Studies Volume 50 ; 50 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Semitic Studies Volume 51 ; 51 >
+        au < HighWirePressPlugin ; manifest ; Journal of Semitic Studies Volume 52 ; 52 >
+        au < HighWirePressPlugin ; manifest ; Journal of Semitic Studies Volume 53 ; 53 >
+        au < HighWirePressPlugin ; ready ; Journal of Semitic Studies Volume 54 ; 54 >
 
       }
 
@@ -3781,7 +3786,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; The Journal of Theological Studies Volume 57 ; 57 >
         au < HighWireStrVolPlugin ; ready ; The Journal of Theological Studies Volume 58 ; 58 >
         au < HighWireStrVolPlugin ; ready ; The Journal of Theological Studies Volume 59 ; 59 >
-        au < HighWireStrVolPlugin ; ready ; The Journal of Theological Studies Volume 60 ; 60 >
+        au < HighWirePressPlugin ; ready ; The Journal of Theological Studies Volume 60 ; 60 >
 
       }
 
@@ -3799,6 +3804,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; ready ; Journal of Topology Volume 1 ; 1 >
+        au < HighWirePressPlugin ; ready ; Journal of Topology Volume 2 ; 2 >
 
       }
 
@@ -3828,6 +3834,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; ready ; Journal of Tropical Pediatrics Volume 51 ; 51 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Tropical Pediatrics Volume 52 ; 52 >
         au < HighWireStrVolPlugin ; ready ; Journal of Tropical Pediatrics Volume 53 ; 53 >
+        au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 54 ; 54 >
+        au < HighWirePressPlugin ; ready ; Journal of Tropical Pediatrics Volume 55 ; 55 >
 
       }
 
@@ -3855,6 +3863,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Law, Probability and Risk Volume 4 ; 4 >
+        au < HighWirePressPlugin ; manifest ; Law, Probability and Risk Volume 5 ; 5 >
+        au < HighWirePressPlugin ; manifest ; Law, Probability and Risk Volume 6 ; 6 >
+        au < HighWirePressPlugin ; manifest ; Law, Probability and Risk Volume 7 ; 7 >
+        au < HighWirePressPlugin ; ready ; Law, Probability and Risk Volume 8 ; 8 >
 
       }
 

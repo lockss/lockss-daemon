@@ -1819,7 +1819,7 @@
     param[base_url] = http://mollus.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 >
-    au < manifest ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
+    au < testing ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
 
   }
 
@@ -1832,7 +1832,7 @@
     param[base_url] = http://jnci.oxfordjournals.org/
 
     au < manifest ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 >
-    au < manifest ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 >
+    au < testing ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 >
 
   }
 
@@ -1845,7 +1845,7 @@
     param[base_url] = http://jicru.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 >
-    au < manifest ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
+    au < testing ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
 
   }
 
@@ -1858,7 +1858,7 @@
     param[base_url] = http://jwelb.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
-    au < manifest ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
+    au < testing ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
 
   }
 
@@ -1871,7 +1871,7 @@
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 >
-    au < manifest ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 >
+    au < testing ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 >
 
   }
 
@@ -1884,7 +1884,7 @@
     param[base_url] = http://petrology.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Petrology Volume 49 ; 49 >
-    au < manifest ; 2009 ; Journal of Petrology Volume 50 ; 50 >
+    au < testing ; 2009 ; Journal of Petrology Volume 50 ; 50 >
 
   }
 
@@ -1897,7 +1897,7 @@
     param[base_url] = http://plankt.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Plankton Research Volume 30 ; 30 >
-    au < manifest ; 2009 ; Journal of Plankton Research Volume 31 ; 31 >
+    au < testing ; 2009 ; Journal of Plankton Research Volume 31 ; 31 >
 
   }
 
@@ -1910,7 +1910,7 @@
     param[base_url] = http://jpe.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
-    au < manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
+    au < testing ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
 
   }
 
@@ -1923,7 +1923,7 @@
     param[base_url] = http://jpart.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 >
-    au < manifest ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
+    au < testing ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
 
   }
 
@@ -1936,7 +1936,7 @@
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Public Health Volume 30 ; 30 >
-    au < manifest ; 2009 ; Journal of Public Health Volume 31 ; 31 >
+    au < testing ; 2009 ; Journal of Public Health Volume 31 ; 31 >
 
   }
 
@@ -1949,7 +1949,7 @@
     param[base_url] = http://jrs.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 >
-    au < manifest ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 >
+    au < testing ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 >
 
   }
 
@@ -1962,7 +1962,7 @@
     param[base_url] = http://jos.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Semantics Volume 25 ; 25 >
-    au < manifest ; 2009 ; Journal of Semantics Volume 26 ; 26 >
+    au < tested ; 2009 ; Journal of Semantics Volume 26 ; 26 >
 
   }
 
@@ -1975,7 +1975,7 @@
     param[base_url] = http://jss.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 >
-    au < manifest ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 >
+    au < tested ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 >
 
   }
 
@@ -1988,7 +1988,7 @@
     param[base_url] = http://jts.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 >
-    au < manifest ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 >
+    au < tested ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 >
 
   }
 
@@ -2001,7 +2001,7 @@
     param[base_url] = http://jtopol.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Topology Volume 1 ; 1 >
-    au < manifest ; 2009 ; Journal of Topology Volume 2 ; 2 >
+    au < tested ; 2009 ; Journal of Topology Volume 2 ; 2 >
 
   }
 
@@ -2014,7 +2014,7 @@
     param[base_url] = http://tropej.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 >
-    au < manifest ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 >
+    au < tested ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 >
 
   }
 
@@ -2027,7 +2027,7 @@
     param[base_url] = http://lpr.oxfordjournals.org/
 
     au < manifest ; 2008 ; Law, Probability and Risk Volume 7 ; 7 >
-    au < manifest ; 2009 ; Law, Probability and Risk Volume 8 ; 8 >
+    au < tested ; 2009 ; Law, Probability and Risk Volume 8 ; 8 >
 
   }
 
