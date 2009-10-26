@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.27 2009-08-28 22:40:06 dshr Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.28 2009-10-26 13:51:45 dshr Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     makeDir(new File(directory, "branch1"));
     makeDir(new File(directory, "branch2"));
 
-    String content = SimulatedContentGenerator.getIndexContent(directory,
+    String content = scgen.getIndexContent(directory,
         "index.html", null).toLowerCase();
     //test for correct links
     assertTrue(content.indexOf("<a href=\"file1.txt\">file1.txt</a>")>=0);
@@ -131,7 +131,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     expectedStr += "\n</BODY></HTML>";
     expectedStr = StringUtil.replaceString(expectedStr, "%", "");
     assertEquals(expectedStr,
-                 SimulatedContentGenerator.getHtmlFileContent("testfile",
+                 scgen.getHtmlFileContent("testfile",
                  1, 2, 3, false));
   }
 
@@ -139,32 +139,31 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     // assumes the value of NORMAL_TXT_FILE_CONTENT is unchanged
     String expectedStr = "This is file 1, depth 2, branch 3.";
     assertEquals(expectedStr,
-                 SimulatedContentGenerator.getTxtContent(
+                 scgen.getTxtContent(
                  1, 2, 3, false));
     // assumes the value of ABNORMAL_TXT_FILE_CONTENT is unchanged
     expectedStr = "This is abnormal file 3, depth 1, branch 2.";
-    assertEquals(expectedStr, SimulatedContentGenerator.getTxtContent(
+    assertEquals(expectedStr, scgen.getTxtContent(
         3, 1, 2, true));
   }
   public void testGetFileName() {
-    SimulatedContentGenerator gen = new SimulatedContentGenerator("test");
     String expectedStr;
     expectedStr = "011" + SimulatedContentGenerator.FILE_PREFIX + ".txt";
-    assertEquals(expectedStr, gen.getFileName(11,
+    assertEquals(expectedStr, scgen.getFileName(11,
         SimulatedContentGenerator.FILE_TYPE_TXT));
     expectedStr = "012" + SimulatedContentGenerator.FILE_PREFIX + ".html";
-    assertEquals(expectedStr, gen.getFileName(12,
+    assertEquals(expectedStr, scgen.getFileName(12,
         SimulatedContentGenerator.FILE_TYPE_HTML));
     expectedStr = "013" + SimulatedContentGenerator.FILE_PREFIX + ".pdf";
-    assertEquals(expectedStr, gen.getFileName(13,
+    assertEquals(expectedStr, scgen.getFileName(13,
         SimulatedContentGenerator.FILE_TYPE_PDF));
     expectedStr = "014" + SimulatedContentGenerator.FILE_PREFIX + ".jpg";
-    assertEquals(expectedStr, gen.getFileName(14,
+    assertEquals(expectedStr, scgen.getFileName(14,
         SimulatedContentGenerator.FILE_TYPE_JPEG));
     expectedStr = SimulatedContentGenerator.BRANCH_PREFIX + "15";
-    assertEquals(expectedStr, SimulatedContentGenerator.getDirectoryName(15));
+    assertEquals(expectedStr, scgen.getDirectoryName(15));
     expectedStr = "016" + SimulatedContentGenerator.FILE_PREFIX + ".xml";
-    assertEquals(expectedStr, gen.getFileName(16,
+    assertEquals(expectedStr, scgen.getFileName(16,
         SimulatedContentGenerator.FILE_TYPE_XML));
 
     // Test with maxFilenameLength set.
@@ -212,9 +211,9 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setNumFilesPerBranch(0);
     scgen.generateContentTree();
     String depth2Name = scgen.getContentRoot() + File.separator +
-                        SimulatedContentGenerator.getDirectoryName(1) +
+                        scgen.getDirectoryName(1) +
                         File.separator +
-                        SimulatedContentGenerator.getDirectoryName(2);
+                        scgen.getDirectoryName(2);
     File depth2Dir = new File(depth2Name);
     assertTrue("Depth 2 directory not found.",
                depth2Dir.exists() && depth2Dir.isDirectory());
@@ -232,7 +231,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     File[] rootChildren = rootFile.listFiles();
     assertEquals("root has wrong number of children.", 4, rootChildren.length);
     String subName = scgen.getContentRoot() + File.separator +
-                     SimulatedContentGenerator.getDirectoryName(1);
+                     scgen.getDirectoryName(1);
     File subDir = new File(subName);
     assertTrue("Directory not found.", subDir.exists() && subDir.isDirectory());
     File[] children = subDir.listFiles();
@@ -249,7 +248,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     File child = new File(childName);
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
-    String expectedContent = SimulatedContentGenerator.getTxtContent(1, 0, 0, false);
+    String expectedContent = scgen.getTxtContent(1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
   }
 
@@ -264,7 +263,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
     String expectedContent =
-      SimulatedContentGenerator.getHtmlFileContent(scgen.getFileName(1,
+      scgen.getHtmlFileContent(scgen.getFileName(1,
         SimulatedContentGenerator.FILE_TYPE_HTML), 1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
   }
@@ -280,7 +279,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
     String expectedContent =
-      SimulatedContentGenerator.getXmlFileContent(scgen.getFileName(1,
+      scgen.getXmlFileContent(scgen.getFileName(1,
         SimulatedContentGenerator.FILE_TYPE_XML), 1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
   }
@@ -306,24 +305,24 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_TXT);
     scgen.generateContentTree();
     String depth2Name = scgen.getContentRoot() + File.separator +
-        SimulatedContentGenerator.getDirectoryName(2) + File.separator +
-        SimulatedContentGenerator.getDirectoryName(1) + File.separator +
+        scgen.getDirectoryName(2) + File.separator +
+        scgen.getDirectoryName(1) + File.separator +
         scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
     File depth2file = new File(depth2Name);
     assertTrue("Depth 2 file not found.",
                depth2file.exists() && !depth2file.isDirectory());
     String content = getFileContent(depth2file);
-    String expectedContent = SimulatedContentGenerator.getTxtContent(1, 2, 1, false);
+    String expectedContent = scgen.getTxtContent(1, 2, 1, false);
     assertTrue("content incorrect.", content.equals(expectedContent));
     depth2Name = scgen.getContentRoot() + File.separator +
-        SimulatedContentGenerator.getDirectoryName(2) + File.separator +
-        SimulatedContentGenerator.getDirectoryName(1) + File.separator +
+        scgen.getDirectoryName(2) + File.separator +
+        scgen.getDirectoryName(1) + File.separator +
         scgen.getFileName(2, SimulatedContentGenerator.FILE_TYPE_TXT);
     depth2file = new File(depth2Name);
     assertTrue("Depth 2 file not found.",
                depth2file.exists() && !depth2file.isDirectory());
     content = getFileContent(depth2file);
-    expectedContent = SimulatedContentGenerator.getTxtContent(2, 2, 1, true);
+    expectedContent = scgen.getTxtContent(2, 2, 1, true);
     assertEquals("abnormal content incorrect.", expectedContent, content);
   }
 
@@ -368,45 +367,45 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.generateContentTree();
 
     String branchName = scgen.getContentRoot() + File.separator +
-        SimulatedContentGenerator.getDirectoryName(1);
+        scgen.getDirectoryName(1);
     File child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertTrue(child.exists());
     FileInputStream fis = new FileInputStream(child);
     ByteArrayOutputStream baos = new ByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
-    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(1),
+    assertEquals(scgen.getBranchContent(scgen.getDirectoryName(1),
                                                             1, false),
                  baos.toString());
 
     branchName = scgen.getContentRoot() + File.separator +
-        SimulatedContentGenerator.getDirectoryName(2);
+        scgen.getDirectoryName(2);
     child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertFalse(child.exists());
 
     branchName = scgen.getContentRoot() + File.separator +
-        SimulatedContentGenerator.getDirectoryName(1) + File.separator +
-        SimulatedContentGenerator.getDirectoryName(2);
+        scgen.getDirectoryName(1) + File.separator +
+        scgen.getDirectoryName(2);
     child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertTrue(child.exists());
     fis = new FileInputStream(child);
     baos = new ByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
-    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(2),
+    assertEquals(scgen.getBranchContent(scgen.getDirectoryName(2),
                                                             2, true),
                  baos.toString());
 
     branchName = scgen.getContentRoot() + File.separator +
-        SimulatedContentGenerator.getDirectoryName(2) + File.separator +
-        SimulatedContentGenerator.getDirectoryName(1);
+        scgen.getDirectoryName(2) + File.separator +
+        scgen.getDirectoryName(1);
     child = new File(branchName, SimulatedContentGenerator.DIR_CONTENT_NAME);
     assertTrue(child.exists());
     fis = new FileInputStream(child);
     baos = new ByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
-    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(1),
+    assertEquals(scgen.getBranchContent(scgen.getDirectoryName(1),
                                                             2, false),
                  baos.toString());
   }

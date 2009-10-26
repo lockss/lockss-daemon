@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.32 2009-08-31 16:31:03 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.33 2009-10-26 13:51:45 dshr Exp $
  */
 
 /*
@@ -671,7 +671,7 @@ public class SimulatedContentGenerator {
    * @param isAbnormal whether or not to generate abnormal content
    * @return branch content
    */
-  public static String getBranchContent(String name, int depth,
+  public String getBranchContent(String name, int depth,
                                         boolean isAbnormal) {
     String branch_content = NORMAL_DIR_CONTENT;
     if (isAbnormal) branch_content = ABNORMAL_DIR_CONTENT;
@@ -688,7 +688,7 @@ public class SimulatedContentGenerator {
    * @param isAbnormal whether or not to generate abnormal content
    * @return file content
    */
-  public static String getTxtContent(int fileNum, int depth,
+  public String getTxtContent(int fileNum, int depth,
 				     int branchNum, boolean isAbnormal) {
     String file_content = NORMAL_TXT_FILE_CONTENT;
     if (isAbnormal) file_content = ABNORMAL_TXT_FILE_CONTENT;
@@ -706,7 +706,7 @@ public class SimulatedContentGenerator {
    * @param isAbnormal whether or not to generate abnormal content
    * @return file content
    */
-  public static String getHtmlContent(int fileNum, int depth,
+  public String getHtmlContent(int fileNum, int depth,
 				      int branchNum, boolean isAbnormal) {
     String file_content = NORMAL_HTML_FILE_CONTENT;
     if (isAbnormal) file_content = ABNORMAL_HTML_FILE_CONTENT;
@@ -726,7 +726,7 @@ public class SimulatedContentGenerator {
    * @param isAbnormal whether or not to generate abnormal content
    * @return file content
    */
-  public static String getHtmlFileContent(String filename, int fileNum,
+  public String getHtmlFileContent(String filename, int fileNum,
                                           int depth, int branchNum,
 					  boolean isAbnormal) {
     String file_content =
@@ -745,7 +745,7 @@ public class SimulatedContentGenerator {
    * @param isAbnormal whether or not to generate abnormal content
    * @return file content
    */
-  public static String getXmlFileContent(String filename, int fileNum,
+  public String getXmlFileContent(String filename, int fileNum,
 					 int depth, int branchNum,
 					 boolean isAbnormal) {
     String file_content = NORMAL_XML_FILE_CONTENT;
@@ -765,7 +765,7 @@ public class SimulatedContentGenerator {
    * @return index file content
    */
 
-  public static String getIndexContent(File directory,
+  public String getIndexContent(File directory,
                                        String filename,
                                        String permission) {
     if ((directory==null) || (!directory.exists()) ||
@@ -855,11 +855,11 @@ public class SimulatedContentGenerator {
     return fileName.toString();
   }
 
-  public static String getDirectoryName(int branchNum) {
+  public String getDirectoryName(int branchNum) {
     return BRANCH_PREFIX + branchNum;
   }
 
-  public static String getDirectoryContentFile(String dirPath) {
+  public String getDirectoryContentFile(String dirPath) {
     return dirPath + File.separator + DIR_CONTENT_NAME;
   }
 
