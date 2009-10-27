@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.3 2009-10-27 13:00:31 dshr Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.1 2009-10-27 13:00:31 dshr Exp $
  */
 
 /*
@@ -30,10 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
+package org.lockss.plugin.highwire;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -41,12 +42,13 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.repository.*;
+import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
-public class TestSubTreeArticleIterator extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestSubTreeArticleIterator");
+public class TestHighWireMetadataExtractor extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestHighWireMetadataExtractor");
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
@@ -56,11 +58,39 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
   private static int maxDepth=DEFAULT_MAX_DEPTH;
-  private static int urlCount = 32;
+  private static int urlCount = 28;
   private static int testExceptions = 3;
 
+  private static final Map<String, String> tagMap =
+    new HashMap<String, String>();
+  static {
+    tagMap.put("citation_journal_title", "AJP - Renal Physiology");
+    tagMap.put("citation_issn", "0363-6127");
+
+    tagMap.put("citation_authors", "Rodriguez, Mariano; Nemeth, Edward; Martin, David");
+    tagMap.put("citation_title", "The calcium-sensing receptor: a key factor in the pathogenesis of secondary hyperparathyroidism");
+    tagMap.put("citation_date", "02/01/2005");
+    tagMap.put("citation_volume", "288");
+    tagMap.put("citation_issue", "2");
+    tagMap.put("citation_firstpage", "F253");
+    tagMap.put("citation_id", "288/2/F253");
+    tagMap.put("citation_mjid", "ajprenal;288/2/F253");
+    tagMap.put("citation_doi", "10.1152/ajprenal.00302.2004");
+    tagMap.put("citation_abstract_html_url", "http://ajprenal.physiology.org/cgi/content/abstract/288/2/F253");
+    tagMap.put("citation_fulltext_html_url", "http://ajprenal.physiology.org/cgi/content/full/288/2/F253");
+    tagMap.put("citation_pdf_url", "http://ajprenal.physiology.org/cgi/reprint/288/2/F253.pdf");
+    tagMap.put("citation_pmid", "15507543");
+
+    tagMap.put("dc.Contributor", "Rodriguez, Mariano");
+    tagMap.put("dc.Contributor", "Nemeth, Edward");
+    tagMap.put("dc.Contributor", "Martin, David");
+    tagMap.put("dc.Title", "The calcium-sensing receptor: a key factor in the pathogenesis of secondary hyperparathyroidism");
+    tagMap.put("dc.Identifier", "10.1152/ajprenal.00302.2004");
+    tagMap.put("dc.Date", "02/01/2005");
+  };
+
   public static void main(String[] args) throws Exception {
-    TestSubTreeArticleIterator test = new TestSubTreeArticleIterator();
+    TestHighWireMetadataExtractor test = new TestHighWireMetadataExtractor();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
@@ -68,8 +98,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     }
 
     test.setUp(maxDepth);
-    test.testArticleCount();
-    test.testException();
+    test.testExtraction();
     test.tearDown();
   }
 
@@ -81,7 +110,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|TestSubTreeArticleIterator$MySimulatedPlugin.root~" +
+    String auId = "org|lockss|plugin|highwire|TestHighWireMetadataExtractor$MySimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
@@ -125,7 +154,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testArticleCount() throws Exception {
+  public void testExtraction() throws Exception {
     createContent();
 
     // get the root of the simContent
@@ -138,33 +167,19 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
 	BaseCachedUrl cu = (BaseCachedUrl)it.next();
 	assertNotNull(cu);
-	assert(cu instanceof CachedUrl);
-	log.debug("count " + count + " url " + cu.getUrl());
+	assertTrue(cu instanceof CachedUrl);
+	log.debug3("count " + count + " url " + cu.getUrl());
+	MetadataExtractor me = cu.getMetadataExtractor();
+	log.debug3("Extractor: " + me.toString());
+	assertTrue(me instanceof
+		   HighWireMetadataExtractorFactory.HighWireMetadataExtractor);
+	Metadata md = me.extract(cu);
+	assertNotNull(md);
+	checkMetadata(md);
 	count++;
     }
     log.debug("Article count is " + count);
     assertEquals(urlCount, count);
-  }
-
-  public void testException() throws Exception {
-    createContent();
-
-    // get the root of the simContent
-    String simDir = sau.getSimRoot();
-
-    crawlContent();
-
-    exceptionCount = testExceptions;
-    int count = 0;
-    for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
-	BaseCachedUrl cu = (BaseCachedUrl)it.next();
-	assertNotNull(cu);
-	assert(cu instanceof CachedUrl);
-	log.debug("count " + count + " url " + cu.getUrl());
-	count++;
-    }
-    log.debug("Article count is " + count);
-    assertEquals(urlCount - testExceptions, count);
   }
 
   private void createContent() {
@@ -180,6 +195,26 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       new NewContentCrawler(sau, spec, new MockAuState());
     //crawler.setCrawlManager(crawlMgr);
     crawler.doCrawl();
+  }
+
+  public void checkMetadata(Metadata md) {
+    // Does md have all the fields in the meta tags with the right content?
+    for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
+      String expected_name = (String)it.next();
+      String expected_content = tagMap.get(expected_name);
+      assertNotNull(expected_content);
+      log.debug("key: " + expected_name + " value: " + expected_content);
+      String actual_content = (String)md.get(expected_name.toLowerCase());
+      assertNotNull(actual_content);
+      log.debug("expected: " + expected_content + " actual: " + actual_content);
+      assertEquals(expected_content, actual_content);
+    }
+    // Do the accessors return the expected values?
+    assertEquals(tagMap.get("citation_issn"), md.getISSN());
+    assertEquals(tagMap.get("citation_volume"), md.getVolume());
+    assertEquals(tagMap.get("citation_issue"), md.getIssue());
+    assertEquals(tagMap.get("citation_firstpage"), md.getStartPage());
+    assertEquals(tagMap.get("dc.Identifier"), md.getDOI());
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {
@@ -200,6 +235,22 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       ret.setSubTreeRoot("branch1/branch1");
       return ret;
     }
+    public SimulatedContentGenerator getContentGenerator(Configuration cf,
+							 String fileRoot) {
+      return new MySimulatedContentGenerator(fileRoot);
+    }
+    public MetadataExtractor getMetadataExtractor(String fileType,
+						  ArchivalUnit au) {
+      MetadataExtractorFactory mef = new HighWireMetadataExtractorFactory();
+      MetadataExtractor me = null;
+      try {
+	me = mef.createMetadataExtractor("text/html");
+      } catch (PluginException ex) {
+	log.error("createMetadataExtractor threw: " + ex);
+      }
+      return me;
+    }
+
   }
 
   public static class MySubTreeArticleIteratorFactory
@@ -218,8 +269,9 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
 	throws PluginException {
       Iterator ret;
+      Pattern pat = Pattern.compile("^.*[0-9][0-9][0-9]file.html$");
       if (exceptionCount == 0) {
-	ret = new SubTreeArticleIterator(mimeType, au, subTreeRoot);
+	ret = new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
       } else {
 	ret = new MySubTreeArticleIterator(mimeType, au, subTreeRoot,
 					   exceptionCount);
@@ -244,6 +296,30 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 	throw new UnsupportedOperationException();
       }
       super.processCachedUrl(cu);
+    }
+  }
+
+  public static class MySimulatedContentGenerator extends SimulatedContentGenerator {
+    protected MySimulatedContentGenerator(String fileRoot) {
+      super(fileRoot);
+    }
+
+    public String getHtmlFileContent(String filename, int fileNum,
+				     int depth, int branchNum,
+				     boolean isAbnormal) {
+      String file_content =
+	"<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
+      for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
+	String name = (String)it.next();
+	String content = tagMap.get(name);
+	file_content += "  <meta name=\"" + name + "\" content=\"" + content +
+	  "\">\n";
+      }
+      file_content += getHtmlContent(fileNum, depth, branchNum, isAbnormal);
+      file_content += "\n</BODY></HTML>";
+      logger.debug("MySimulatedContentGenerator.getHtmlFileContent: " +
+		   file_content);
+      return file_content;
     }
   }
 }

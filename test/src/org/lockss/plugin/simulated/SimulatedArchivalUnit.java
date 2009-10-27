@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.68 2009-08-28 22:40:06 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.69 2009-10-27 13:00:31 dshr Exp $
  */
 
 /*
@@ -153,10 +153,43 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return the generator
    */
   public SimulatedContentGenerator getContentGenerator() {
-    if (scgen == null) {
-      scgen = SimulatedContentGenerator.getInstance(fileRoot);
+    return getContentGenerator(fileRoot);
+  }
+  /**
+   * Returns the {@link SimulatedContentGenerator} for setting
+   * parameters.
+   * @param root the root of the file hierarchy
+   * @return the generator
+   */
+  public SimulatedContentGenerator getContentGenerator(String root) {
+    Configuration cf = getConfiguration();
+    return getContentGenerator(cf, root);
+  }
+  /**
+   * Returns the {@link SimulatedContentGenerator} for setting
+   * parameters.
+   * @param root the root of the file hierarchy
+   * @return the generator
+   */
+  public SimulatedContentGenerator getContentGenerator(Configuration cf,
+                                                       String root) {
+    SimulatedContentGenerator ret = scgen;
+    if (ret == null) {
+      log.debug("getContentGenerator: new");
+      if (root == null) {
+	root = fileRoot;
+      }
+      Plugin pl = getPlugin();
+      if (pl instanceof SimulatedPlugin) {
+        ret = ((SimulatedPlugin)pl).getContentGenerator(cf, fileRoot);
+      } else {
+	ret = SimulatedContentGenerator.getInstance(fileRoot);
+      }
+      scgen = ret;
+    } else {
+      log.debug("getContentGenerator: old");
     }
-    return scgen;
+    return ret;
   }
 
   /**
@@ -274,12 +307,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
           ArchivalUnit.ConfigurationException("Missing configuration value for: "+
                                               SimulatedPlugin.AU_PARAM_ROOT);
       }
-      SimulatedContentGenerator gen = SimulatedContentGenerator.getInstance(fileRoot);
-      if (gen == null) {
-	throw new
-	  ArchivalUnit.ConfigurationException("No generator: "+
-                                              SimulatedPlugin.AU_PARAM_ROOT);
-      }
+      SimulatedContentGenerator gen = getContentGenerator(config, fileRoot);
       if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
         gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
       }

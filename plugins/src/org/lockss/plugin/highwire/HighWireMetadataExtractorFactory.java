@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireMetadataExtractorFactory.java,v 1.4 2009-10-14 21:43:06 dshr Exp $
+ * $Id: HighWireMetadataExtractorFactory.java,v 1.5 2009-10-27 13:00:30 dshr Exp $
  */
 
 /*
@@ -65,40 +65,45 @@ public class HighWireMetadataExtractorFactory
       Metadata ret = null;
       String reprintUrl = cu.getUrl();
       if (reprintUrl.contains(reprintPrefix)) {
-        String reprintframedUrl = reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
-        CachedUrl reprintframedCu = cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
-        try {
-          if (reprintframedCu != null && reprintframedCu.hasContent()) {
-            ret = super.extract(reprintframedCu);
-            // HighWire doesn't prefix the DOI in dc.Identifier with doi:
-            String content = ret.getProperty("dc.Identifier");
-	    if (content != null && !"".equals(content)) {
-	      ret.putDOI(content);
-	    }
-	    // Many HighWire journals either omit citation_issn
-	    // or have an empty citation_issn
-	    content = ret.getProperty("citation_issn");
-	    if (content != null && !"".equals(content)) {
-	      ret.putISSN(content);
-	    }
-	    content = ret.getProperty("citation_volume");
-	    if (content != null && !"".equals(content)) {
-	      ret.putVolume(content);
-	    }
-	    content = ret.getProperty("citation_issue");
-	    if (content != null && !"".equals(content)) {
-	      ret.putIssue(content);
-	    }
-	    content = ret.getProperty("citation_firstpage");
-	    if (content != null && !"".equals(content)) {
-	      ret.putStartPage(content);
-	    }
-          }
-        }
-        finally {
-          AuUtil.safeRelease(reprintframedCu);
-        }        
+        String reprintframedUrl =
+	  reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
+        CachedUrl reprintframedCu =
+	  cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
+	if (reprintframedCu != null) {
+	  cu = reprintframedCu;
+	}
       }
+      try {
+	if (cu != null && cu.hasContent()) {
+	  ret = super.extract(cu);
+	  // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+	  String content = ret.getProperty("dc.Identifier");
+	  if (content != null && !"".equals(content)) {
+	    ret.putDOI(content);
+	  }
+	  // Many HighWire journals either omit citation_issn
+	  // or have an empty citation_issn
+	  content = ret.getProperty("citation_issn");
+	  if (content != null && !"".equals(content)) {
+	    ret.putISSN(content);
+	  }
+	  content = ret.getProperty("citation_volume");
+	  if (content != null && !"".equals(content)) {
+	    ret.putVolume(content);
+	  }
+	  content = ret.getProperty("citation_issue");
+	  if (content != null && !"".equals(content)) {
+	    ret.putIssue(content);
+	  }
+	  content = ret.getProperty("citation_firstpage");
+	  if (content != null && !"".equals(content)) {
+	    ret.putStartPage(content);
+	  }
+	}
+      }
+      finally {
+	AuUtil.safeRelease(cu);
+      }        
       
       return ret;
     }

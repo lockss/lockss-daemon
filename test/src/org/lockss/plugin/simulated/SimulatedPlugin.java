@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.27 2009-08-28 22:40:06 dshr Exp $
+ * $Id: SimulatedPlugin.java,v 1.28 2009-10-27 13:00:31 dshr Exp $
  */
 
 /*
@@ -351,5 +351,9 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     aus.remove(au);
   }
 
+  public SimulatedContentGenerator getContentGenerator(Configuration cf,
+                                                       String fileRoot) {
+    return SimulatedContentGenerator.getInstance(fileRoot);
+  }
 
 }
