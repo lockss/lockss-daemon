@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.1 2009-10-27 13:00:31 dshr Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.2 2009-10-27 22:22:31 dshr Exp $
  */
 
 /*
@@ -64,29 +64,27 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   private static final Map<String, String> tagMap =
     new HashMap<String, String>();
   static {
-    tagMap.put("citation_journal_title", "AJP - Renal Physiology");
-    tagMap.put("citation_issn", "0363-6127");
+    tagMap.put("citation_journal_title", "JOURNAL %1 %2 %3");
+    tagMap.put("citation_issn", "%1-%2-%3");
 
-    tagMap.put("citation_authors", "Rodriguez, Mariano; Nemeth, Edward; Martin, David");
-    tagMap.put("citation_title", "The calcium-sensing receptor: a key factor in the pathogenesis of secondary hyperparathyroidism");
-    tagMap.put("citation_date", "02/01/2005");
-    tagMap.put("citation_volume", "288");
-    tagMap.put("citation_issue", "2");
-    tagMap.put("citation_firstpage", "F253");
-    tagMap.put("citation_id", "288/2/F253");
-    tagMap.put("citation_mjid", "ajprenal;288/2/F253");
-    tagMap.put("citation_doi", "10.1152/ajprenal.00302.2004");
-    tagMap.put("citation_abstract_html_url", "http://ajprenal.physiology.org/cgi/content/abstract/288/2/F253");
-    tagMap.put("citation_fulltext_html_url", "http://ajprenal.physiology.org/cgi/content/full/288/2/F253");
-    tagMap.put("citation_pdf_url", "http://ajprenal.physiology.org/cgi/reprint/288/2/F253.pdf");
-    tagMap.put("citation_pmid", "15507543");
+    tagMap.put("citation_authors", "AUTHOR %1 %2 %3");
+    tagMap.put("citation_title", "TITLE %1 %2 %3");
+    tagMap.put("citation_date", "%1/%2/%3");
+    tagMap.put("citation_volume", "%1%2%3");
+    tagMap.put("citation_issue", "%3%2%1");
+    tagMap.put("citation_firstpage", "%2%1%3");
+    tagMap.put("citation_id", "%1%2%3/%3%2%1/%2%1%3");
+    tagMap.put("citation_mjid", "MJID;%1%2%3/%3%2%1/%2%1%3");
+    tagMap.put("citation_doi", "10.1152/ajprenal.%1%2%3.2004");
+    tagMap.put("citation_abstract_html_url", "http://www.example.com/cgi/content/abstract/%1%2%3/%3%2%1/%2%1%3");
+    tagMap.put("citation_fulltext_html_url", "http://www.example.com/cgi/content/full/%1%2%3/%3%2%1/%2%1%3");
+    tagMap.put("citation_pdf_url", "http://www.example.com/cgi/reprint/%1%2%3/%3%2%1/%2%1%3.pdf");
+    tagMap.put("citation_pmid", "%3%2%1");
 
-    tagMap.put("dc.Contributor", "Rodriguez, Mariano");
-    tagMap.put("dc.Contributor", "Nemeth, Edward");
-    tagMap.put("dc.Contributor", "Martin, David");
-    tagMap.put("dc.Title", "The calcium-sensing receptor: a key factor in the pathogenesis of secondary hyperparathyroidism");
-    tagMap.put("dc.Identifier", "10.1152/ajprenal.00302.2004");
-    tagMap.put("dc.Date", "02/01/2005");
+    tagMap.put("dc.Contributor", "AUTHOR %1 %2 %3");
+    tagMap.put("dc.Title", "TITLE %1 %2 %3");
+    tagMap.put("dc.Identifier", "10.1152/ajprenal.%1%2%3.2004");
+    tagMap.put("dc.Date", "%1/%2/%3");
   };
 
   public static void main(String[] args) throws Exception {
@@ -197,11 +195,48 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     crawler.doCrawl();
   }
 
+  private static String getFieldContent(String content, int fileNum, int depth,
+				 int branchNum) {
+    content = StringUtil.replaceString(content, "%1", ""+fileNum);
+    content = StringUtil.replaceString(content, "%2", ""+depth);
+    content = StringUtil.replaceString(content, "%3", ""+branchNum);
+    return content;
+  }
+
   public void checkMetadata(Metadata md) {
+    String temp = null;
+    temp = (String) md.get("lockss.filenum");
+    int fileNum = -1;
+    try {
+      fileNum = Integer.parseInt(temp);
+    } catch (NumberFormatException ex) {
+      log.error(temp + " caused " + ex);
+      fail();
+    }
+    temp = (String) md.get("lockss.depth");
+    int depth = -1;
+    try {
+      depth = Integer.parseInt(temp);
+    } catch (NumberFormatException ex) {
+      log.error(temp + " caused " + ex);
+      fail();
+    }
+    temp = (String) md.get("lockss.branchnum");
+    int branchNum = -1;
+    try {
+      branchNum = Integer.parseInt(temp);
+    } catch (NumberFormatException ex) {
+      log.error(temp + " caused " + ex);
+      fail();
+    }
     // Does md have all the fields in the meta tags with the right content?
     for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
       String expected_name = (String)it.next();
-      String expected_content = tagMap.get(expected_name);
+      if (expected_name.startsWith("lockss")) {
+	continue;
+      }
+      String expected_content = getFieldContent(tagMap.get(expected_name),
+						fileNum, depth, branchNum);
       assertNotNull(expected_content);
       log.debug("key: " + expected_name + " value: " + expected_content);
       String actual_content = (String)md.get(expected_name.toLowerCase());
@@ -210,11 +245,16 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       assertEquals(expected_content, actual_content);
     }
     // Do the accessors return the expected values?
-    assertEquals(tagMap.get("citation_issn"), md.getISSN());
-    assertEquals(tagMap.get("citation_volume"), md.getVolume());
-    assertEquals(tagMap.get("citation_issue"), md.getIssue());
-    assertEquals(tagMap.get("citation_firstpage"), md.getStartPage());
-    assertEquals(tagMap.get("dc.Identifier"), md.getDOI());
+    assertEquals(getFieldContent(tagMap.get("citation_issn"), fileNum,
+				 depth, branchNum), md.getISSN());
+    assertEquals(getFieldContent(tagMap.get("citation_volume"), fileNum,
+				 depth, branchNum), md.getVolume());
+    assertEquals(getFieldContent(tagMap.get("citation_issue"), fileNum,
+				 depth, branchNum), md.getIssue());
+    assertEquals(getFieldContent(tagMap.get("citation_firstpage"), fileNum,
+				 depth, branchNum), md.getStartPage());
+    assertEquals(getFieldContent(tagMap.get("dc.Identifier"), fileNum,
+				 depth, branchNum), md.getDOI());
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {
@@ -312,9 +352,15 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
 	String name = (String)it.next();
 	String content = tagMap.get(name);
-	file_content += "  <meta name=\"" + name + "\" content=\"" + content +
-	  "\">\n";
+	file_content += "  <meta name=\"" + name + "\" content=\"" +
+	  getFieldContent(content, fileNum, depth, branchNum) + "\">\n";
       }
+      file_content += "  <meta name=\"lockss.filenum\" content=\"" + fileNum +
+	"\">\n";
+      file_content += "  <meta name=\"lockss.depth\" content=\"" + depth +
+	"\">\n";
+      file_content += "  <meta name=\"lockss.branchnum\" content=\"" +
+	branchNum + "\">\n";
       file_content += getHtmlContent(fileNum, depth, branchNum, isAbnormal);
       file_content += "\n</BODY></HTML>";
       logger.debug("MySimulatedContentGenerator.getHtmlFileContent: " +
