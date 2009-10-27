@@ -1,0 +1,24 @@
+{
+
+ publisher <
+   name = Drogo Research
+ >
+
+ {
+  title <
+    name = International Journal of Psychiatric Nursing Research
+  >
+
+  {
+
+    plugin = uk.org.lockss.plugin.drogoresearch.DrogoResearchPlugin
+    param[base_url] = http://drogoresearch.com/
+    implicit < status ; name >
+
+    au < manifest ; International Journal of Psychiatric Nursing Research >
+
+  }
+
+ }
+
+}
