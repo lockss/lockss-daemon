@@ -1740,7 +1740,7 @@
     param[base_url] = http://jis.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 >
-    au < manifest ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
+    au < testing ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
 
   }
 
@@ -1753,7 +1753,7 @@
     param[base_url] = http://jleo.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 >
-    au < manifest ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 >
+    au < testing ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 >
 
   }
 
@@ -1766,7 +1766,7 @@
     param[base_url] = http://logcom.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 >
-    au < manifest ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
+    au < testing ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
 
   }
 
@@ -1780,8 +1780,8 @@
 
     au < manifest ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 >
     au < manifest ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 >
-    au < manifest ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 >
-    au < manifest ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 >
+    au < testing ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 >
+    au < testing ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 >
 
   }
 
@@ -1794,7 +1794,7 @@
     param[base_url] = http://jmp.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
-    au < manifest ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+    au < testing ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
 
   }
 
@@ -1806,7 +1806,7 @@
 
     param[base_url] = http://jmcb.oxfordjournals.org/
 
-    au < manifest ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+    au < testing ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 >
 
   }
 
@@ -1884,7 +1884,7 @@
     param[base_url] = http://petrology.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Petrology Volume 49 ; 49 >
-    au < testing ; 2009 ; Journal of Petrology Volume 50 ; 50 >
+    au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 >
 
   }
 
@@ -1897,7 +1897,7 @@
     param[base_url] = http://plankt.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Plankton Research Volume 30 ; 30 >
-    au < testing ; 2009 ; Journal of Plankton Research Volume 31 ; 31 >
+    au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 >
 
   }
 
@@ -1909,8 +1909,8 @@
 
     param[base_url] = http://jpe.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
-    au < testing ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
+    au < exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
+    au < exists ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
 
   }
 
@@ -1923,7 +1923,7 @@
     param[base_url] = http://jpart.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 >
-    au < testing ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
+    au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
 
   }
 
@@ -1936,7 +1936,7 @@
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Public Health Volume 30 ; 30 >
-    au < testing ; 2009 ; Journal of Public Health Volume 31 ; 31 >
+    au < tested ; 2009 ; Journal of Public Health Volume 31 ; 31 >
 
   }
 
@@ -1949,7 +1949,7 @@
     param[base_url] = http://jrs.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 >
-    au < testing ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 >
+    au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 >
 
   }
 
@@ -2039,7 +2039,7 @@
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
+    au < exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
 
   }
 
@@ -2077,8 +2077,8 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
 
-    au < testing ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 >
-    au < testing ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 >
+    au < tested ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 >
+    au < tested ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 >
 
   }
 
@@ -2185,8 +2185,8 @@ comment[j17] = no subscription
 
 comment[mplant] = no manifest page
 
-    au < notReady ; 2008 ; Molecular Plant Volume 1 ; 1 >
-    au < notReady ; 2009 ; Molecular Plant Volume 2 ; 2 >
+    au < exists ; 2008 ; Molecular Plant Volume 1 ; 1 >
+    au < exists ; 2009 ; Molecular Plant Volume 2 ; 2 >
 
   }
 

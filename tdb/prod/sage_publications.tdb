@@ -7232,7 +7232,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; ready ; Journal of Macromarketing Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; ready ; Journal of Macromarketing Volume 27 ; 27 >
         au < HighWirePressPlugin ; manifest ; Journal of Macromarketing Volume 28 ; 28 >
-        au < HighWirePressPlugin ; manifest ; Journal of Macromarketing Volume 29 ; 29 >
+        au < HighWirePressPlugin ; ready ; Journal of Macromarketing Volume 29 ; 29 >
 
       }
 
@@ -7254,7 +7254,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; released ; Journal of Management Volume 32 ; 32 >
         au < HighWireStrVolPlugin ; released ; Journal of Management Volume 33 ; 33 >
         au < HighWirePressPlugin ; manifest ; Journal of Management Volume 34 ; 34 >
-        au < HighWirePressPlugin ; manifest ; Journal of Management Volume 35 ; 35 >
+        au < HighWirePressPlugin ; ready ; Journal of Management Volume 35 ; 35 >
 
       }
 
@@ -7275,7 +7275,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; released ; Journal of Management Education Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; released ; Journal of Management Education Volume 31 ; 31 >
         au < HighWirePressPlugin ; manifest ; Journal of Management Education Volume 32 ; 32 >
-        au < HighWirePressPlugin ; manifest ; Journal of Management Education Volume 33 ; 33 >
+        au < HighWirePressPlugin ; ready ; Journal of Management Education Volume 33 ; 33 >
 
       }
 
@@ -7296,7 +7296,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; released ; Journal of Management Inquiry Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Journal of Management Inquiry Volume 16 ; 16 >
         au < HighWirePressPlugin ; manifest ; Journal of Management Inquiry Volume 17 ; 17 >
-        au < HighWirePressPlugin ; manifest ; Journal of Management Inquiry Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Journal of Management Inquiry Volume 18 ; 18 >
 
       }
 
@@ -7317,7 +7317,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; released ; Journal of Marketing Education Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; released ; Journal of Marketing Education Volume 29 ; 29 >
         au < HighWirePressPlugin ; manifest ; Journal of Marketing Education Volume 30 ; 30 >
-        au < HighWirePressPlugin ; manifest ; Journal of Marketing Education Volume 31 ; 31 >
+        au < HighWirePressPlugin ; ready ; Journal of Marketing Education Volume 31 ; 31 >
 
       }
 
@@ -7338,7 +7338,7 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; released ; Journal of Material Culture Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; released ; Journal of Material Culture Volume 12 ; 12 >
         au < HighWirePressPlugin ; manifest ; Journal of Material Culture Volume 13 ; 13 >
-        au < HighWirePressPlugin ; manifest ; Journal of Material Culture Volume 14 ; 14 >
+        au < HighWirePressPlugin ; ready ; Journal of Material Culture Volume 14 ; 14 >
 
       }
 
@@ -7357,7 +7357,7 @@ comment[jcp] = some sort of custom layout
 
         au < HighWireStrVolPlugin ; released ; Journal of Mixed Methods Research Volume 1 ; 1 >
         au < HighWireStrVolPlugin ; released ; Journal of Mixed Methods Research Volume 2 ; 2 >
-        au < HighWirePressPlugin ; manifest ; Journal of Mixed Methods Research Volume 3 ; 3 >
+        au < HighWirePressPlugin ; ready ; Journal of Mixed Methods Research Volume 3 ; 3 >
 
       }
 
@@ -7400,7 +7400,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Oncology Pharmacy Practice Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; ready ; Journal of Oncology Pharmacy Practice Volume 13 ; 13 >
         au < HighWirePressPlugin ; manifest ; Journal of Oncology Pharmacy Practice Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; Journal of Oncology Pharmacy Practice Volume 15 ; 15 >
+        au < HighWirePressPlugin ; ready ; Journal of Oncology Pharmacy Practice Volume 15 ; 15 >
 
       }
 
@@ -7421,12 +7421,29 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Peace Research Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; ready ; Journal of Peace Research Volume 44 ; 44 >
         au < HighWirePressPlugin ; manifest ; Journal of Peace Research Volume 45 ; 45 >
-        au < HighWirePressPlugin ; manifest ; Journal of Peace Research Volume 46 ; 46 >
+        au < HighWirePressPlugin ; ready ; Journal of Peace Research Volume 46 ; 46 >
 
       }
 
     }
 
+    {
+
+      title <
+        name = Journal of Parenteral and Enteral Nutrition
+      >
+    
+      {
+
+        param[base_url] = http://pen.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; ready ; Journal of Parenteral and Enteral Nutrition Volume 33 ; 33 >
+    
+      }
+    
+    }
+  
     {
 
       title <
@@ -7442,7 +7459,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Pediatric Oncology Nursing Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; ready ; Journal of Pediatric Oncology Nursing Volume 24 ; 24 >
         au < HighWirePressPlugin ; manifest ; Journal of Pediatric Oncology Nursing Volume 25 ; 25 >
-        au < HighWirePressPlugin ; manifest ; Journal of Pediatric Oncology Nursing Volume 26 ; 26 >
+        au < HighWirePressPlugin ; ready ; Journal of Pediatric Oncology Nursing Volume 26 ; 26 >
 
       }
 
@@ -7505,12 +7522,25 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; released ; Journal of Planning History Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Journal of Planning History Volume 6 ; 6 >
         au < HighWirePressPlugin ; manifest ; Journal of Planning History Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Journal of Planning History Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Journal of Planning History Volume 8 ; 8 >
 
       }
 
     }
 
+  {
+
+    title <
+      name = Journal of Positive Behavior Interventions
+    >
+
+    param[base_url] = http://pbi.sagepub.com/
+
+    au < manifest ; 2008 ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
+    au < tested ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
+
+  }
+  
     {
 
       title <
@@ -7578,7 +7608,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; released ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; released ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < HighWirePressPlugin ; manifest ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
-        au < HighWirePressPlugin ; manifest ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
+        au < HighWirePressPlugin ; ready ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
 
       }
 

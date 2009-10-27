@@ -10,6 +10,9 @@
 
     {
 
+comment[erc15] = found a login page
+comment[erc16] = no permission on manifest page (no subscription)
+
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://erc.endocrinology-journals.org/
       implicit < status ; name ; param[volume_name] >
@@ -28,8 +31,8 @@
       au < manifest ; Endocrine-Related Cancer Volume 12 ; 12 >
       au < manifest ; Endocrine-Related Cancer Volume 13 ; 13 >
       au < manifest ; Endocrine-Related Cancer Volume 14 ; 14 >
-      au < manifest ; Endocrine-Related Cancer Volume 15 ; 15 >
-      au < manifest ; Endocrine-Related Cancer Volume 16 ; 16 >
+      au < notReady ; Endocrine-Related Cancer Volume 15 ; 15 >
+      au < exists ; Endocrine-Related Cancer Volume 16 ; 16 >
 
     }
 

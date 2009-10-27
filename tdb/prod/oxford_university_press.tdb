@@ -3422,6 +3422,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Journal of Petrology Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; released ; Journal of Petrology Volume 47 ; 47 >
         au < HighWireStrVolPlugin ; released ; Journal of Petrology Volume 48 ; 48 >
+        au < HighWirePressPlugin ; manifest ; Journal of Petrology Volume 49 ; 49 >
+        au < HighWirePressPlugin ; ready ; Journal of Petrology Volume 50 ; 50 >
 
       }
 
@@ -3450,6 +3452,9 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Journal of Plankton Research Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; released ; Journal of Plankton Research Volume 28 ; 28 >
+        au < HighWirePressPlugin ; manifest ; Journal of Plankton Research Volume 29 ; 29 >
+        au < HighWirePressPlugin ; manifest ; Journal of Plankton Research Volume 30 ; 30 >
+        au < HighWirePressPlugin ; manifest ; Journal of Plankton Research Volume 31 ; 31 >
 
       }
 
@@ -3479,6 +3484,8 @@
         au < HighWireStrVolPlugin ; released ; Journal of Public Administration Research and Theory Volume 15 ; 15 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Public Administration Research and Theory Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; released ; Journal of Public Administration Research and Theory Volume 17 ; 17 >
+        au < HighWirePressPlugin ; manifest ; Journal of Public Administration Research and Theory Volume 18 ; 18 >
+        au < HighWirePressPlugin ; manifest ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
 
       }
 
@@ -3507,6 +3514,9 @@
 
         au < HighWireStrVolPlugin ; released ; Journal of Public Health Volume 27 ; 27 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Public Health Volume 28 ; 28 >
+        au < HighWirePressPlugin ; manifest ; Journal of Public Health Volume 29 ; 29 >
+        au < HighWirePressPlugin ; manifest ; Journal of Public Health Volume 30 ; 30 >
+        au < HighWirePressPlugin ; ready ; Journal of Public Health Volume 31 ; 31 >
 
       }
 
@@ -3535,6 +3545,9 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Journal of Refugee Studies Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; released ; Journal of Refugee Studies Volume 19 ; 19 >
+        au < HighWirePressPlugin ; manifest ; Journal of Refugee Studies Volume 20 ; 20 >
+        au < HighWirePressPlugin ; manifest ; Journal of Refugee Studies Volume 21 ; 21 >
+        au < HighWirePressPlugin ; ready ; Journal of Refugee Studies Volume 22 ; 22 >
 
       }
 
@@ -3926,6 +3939,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Literary and Linguistic Computing Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Literary and Linguistic Computing Volume 21 ; 21 >
+        au < HighWirePressPlugin ; manifest ; Literary and Linguistic Computing Volume 22 ; 22 >
+        au < HighWirePressPlugin ; ready ; Literary and Linguistic Computing Volume 23 ; 23 >
+        au < HighWirePressPlugin ; ready ; Literary and Linguistic Computing Volume 24 ; 24 >
 
       }
 
@@ -4198,8 +4214,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://mplant.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; testing ; Molecular Plant Volume 1 ; 1 >
-        au < HighWirePressPlugin ; testing ; Molecular Plant Volume 2 ; 2 >
+        au < HighWirePressPlugin ; exists ; Molecular Plant Volume 1 ; 1 >
+        au < HighWirePressPlugin ; exists ; Molecular Plant Volume 2 ; 2 >
 
       }
 

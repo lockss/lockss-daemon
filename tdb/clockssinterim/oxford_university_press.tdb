@@ -11,6 +11,66 @@
   {
 
     title <
+      name = Journal of Petrology
+    >
+
+    param[base_url] = http://petrology.oxfordjournals.org/
+
+    au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Plankton Research
+    >
+
+    param[base_url] = http://plankt.oxfordjournals.org/
+
+    au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Public Administration Research and Theory
+    >
+
+    param[base_url] = http://jpart.oxfordjournals.org/
+
+    au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Public Health
+    >
+
+    param[base_url] = http://jpubhealth.oxfordjournals.org/
+
+    au < tested ; 2009 ; Journal of Public Health Volume 31 ; 31 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Refugee Studies
+    >
+
+    param[base_url] = http://jrs.oxfordjournals.org/
+
+    au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Semantics
     >
 
@@ -105,7 +165,20 @@
     au < tested ; 2009 ; Literary Imagination Volume 11 ; 11 >
 
   }
- 
+
+  {
+
+    title <
+      name = Literary and Linguistic Computing
+    >
+
+    param[base_url] = http://llc.oxfordjournals.org/
+
+    au < tested ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 >
+    au < tested ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 >
+
+  }
+  
   {
 
     title <
