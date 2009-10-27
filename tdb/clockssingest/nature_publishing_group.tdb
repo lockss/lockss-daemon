@@ -356,8 +356,10 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = jes
 
+comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
+
     au < manifest ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
-    au < testing ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
+    au < notReady ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
 
   }
 
@@ -370,7 +372,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = jhg
 
     au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
-    au < testing ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
+    au < ready ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
 
   }
 
@@ -383,7 +385,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = jhh
 
     au < manifest ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
-    au < testing ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
+    au < ready ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -396,7 +398,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = jid
 
     au < manifest ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
-    au < testing ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
+    au < ready ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
 
   }
 
@@ -409,7 +411,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = jp
 
     au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
-    au < manifest ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
+    au < testing ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
 
   }
 
@@ -442,7 +444,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = leu
 
     au < manifest ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
-    au < manifest ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
+    au < testing ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -465,7 +467,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = mp
 
     au < manifest ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
-    au < manifest ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
+    au < testing ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
 
   }
 
@@ -966,7 +968,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = onc
 
     au < manifest ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
-    au < manifest ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
+    au < testing ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
 
   }
 
@@ -979,7 +981,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = tpj
 
     au < manifest ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
-    au < manifest ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
+    au < testing ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
 
   }
 

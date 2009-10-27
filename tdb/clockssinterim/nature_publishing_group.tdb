@@ -220,8 +220,43 @@
 
     param[journal_id] = ja
 
-    au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Genetics
+    >
+
+    param[journal_id] = jhg
+
+    au < ready ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Hypertension
+    >
+
+    param[journal_id] = jhh
+
+    au < ready ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Investigative Dermatology
+    >
+
+    param[journal_id] = jid
+
+    au < ready ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
 
   }
 
