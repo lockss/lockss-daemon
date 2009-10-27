@@ -28,10 +28,10 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%spublications/login/lockss_manifest/lockss-%d\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%spublications/login/%d-[^/]+/&quot;, base_url, year</string>
       <string>1,&quot;^%spublications/login/contents/contents\.(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)%02d\.html&quot;, base_url, au_short_year</string>
       <string>1,&quot;^%spublications/java/&quot;, base_url</string>
-      <string>1,&quot;^%spublications/login/lockss_manifest/lockss-%d\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%spublications/login/standards/((index|standards)\.html)?$&quot;, base_url</string>
       <string>1,&quot;^%spublications/login/standards/%s\.&quot;, base_url, optional_standards</string>
     </list>
