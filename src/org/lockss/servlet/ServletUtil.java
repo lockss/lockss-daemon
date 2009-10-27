@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.61 2009-07-22 06:41:08 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.62 2009-10-27 02:09:25 tlipkis Exp $
  */
 
 /*
@@ -1045,8 +1045,8 @@ public class ServletUtil {
     }
 
     tbl.newRow();
-    tbl.newCell();
-    tbl.add(layoutSelectAllButton(servlet));
+    tbl.newCell(ALIGN_LEFT + " colspan=\"99\"");
+    Block selAllBlock1 = tbl.cell();
 
     tbl.newRow();
     tbl.addHeading(verb.cap + "?", ALIGN_RIGHT + " rowspan=\"2\"");
@@ -1065,6 +1065,7 @@ public class ServletUtil {
     }
 
     boolean isAnyAssignedRepo = false;
+    boolean isAnyNotAssignedRepo = false;
     while (basEntryIter.hasNext()) {
       // Get next entry
       BatchAuStatus.Entry rs = (BatchAuStatus.Entry)basEntryIter.next();
@@ -1078,14 +1079,15 @@ public class ServletUtil {
         cb.attribute("onClick", "if (this.checked) selectRepo(this, this.form);");
         tbl.add(cb);
 
+	List existingRepoNames = rs.getRepoNames();
+	String firstRepo = null;
+	if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
+	  firstRepo = (String)existingRepoNames.get(0);
+	  isAnyAssignedRepo = true;
+	} else {
+	  isAnyNotAssignedRepo = true;
+	}
         if (repoFlg) {
-          List existingRepoNames = rs.getRepoNames();
-          String firstRepo = null;
-          if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
-            firstRepo = (String)existingRepoNames.get(0);
-            isAnyAssignedRepo = true;
-          }
-
           int ix = 1;
           for (Iterator riter = repos.iterator(); riter.hasNext(); ++ix) {
             String repo = (String)riter.next();
@@ -1103,8 +1105,14 @@ public class ServletUtil {
             }
           }
         }
-        else if (reposSize > 0) {
-          tbl.newCell("colspan=\"" + reposSize + "\"");
+        else if (firstRepo != null) {
+	  // The Select On Disk button looks for entries with a
+	  // defaultChecked radio button.  If no repo choice, add a hidden
+	  // button just for that.
+	  Block div = new Block(Block.Div, "style=\"display:none\"");
+	  div.add(radioButton(servlet, keyRepo + "_" + auid,
+			      "1", null, true));
+	  tbl.add(div);
         }
 
         tbl.newCell();
@@ -1119,10 +1127,13 @@ public class ServletUtil {
       }
     }
 
+    boolean includeOnDiskButton = isAnyAssignedRepo && isAnyNotAssignedRepo;
+    selAllBlock1.add(layoutSelectAllButton(servlet, includeOnDiskButton));
+
     if (isLong) {
       tbl.newRow();
-      tbl.newCell();
-      tbl.add(layoutSelectAllButton(servlet));
+      tbl.newCell(ALIGN_LEFT + " colspan=\"99\"");
+      tbl.add(layoutSelectAllButton(servlet, includeOnDiskButton));
     }
 
     if (repoFootElement != null && isAnyAssignedRepo) {
@@ -1557,14 +1568,20 @@ public class ServletUtil {
                    + "--> </style>");
   }
 
-  private static Composite layoutSelectAllButton(LockssServlet servlet) {
+  private static Composite layoutSelectAllButton(LockssServlet servlet,
+						 boolean includeOnDiskButton) {
     Table tbl = new Table(SELECTALL_BORDER, SELECTALL_ATTRIBUTES);
     tbl.newRow();
-    tbl.newCell(ALIGN_RIGHT);
-    tbl.add(javascriptButton(servlet, "Select All", "selectAll(this.form, 0);"));
-    tbl.newRow();
-    tbl.newCell(ALIGN_RIGHT);
-    tbl.add(javascriptButton(servlet, "Clear All", "selectAll(this.form, 1);"));
+    tbl.newCell();
+    tbl.add(javascriptButton(servlet, "Select All", "selectAll(this.form, 'all');"));
+//     tbl.newRow();
+//     tbl.newCell(ALIGN_RIGHT);
+    tbl.add(javascriptButton(servlet, "Clear All", "selectAll(this.form, 'clear');"));
+    if (includeOnDiskButton) {
+//       tbl.newRow();
+//       tbl.newCell(ALIGN_RIGHT);
+      tbl.add(javascriptButton(servlet, "On Disk", "selectAll(this.form, 'inRepo');"));
+    }
     return tbl;
   }
 
