@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.2 2009-10-28 00:24:50 thib_gc Exp $
+ * $Id: HodderArnoldPdfTransform.java,v 1.1 2009-10-28 00:24:50 thib_gc Exp $
  */ 
 
 /*
@@ -32,34 +32,26 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.OutputDocumentTransform;
-import org.lockss.plugin.*;
+import org.lockss.filter.pdf.*;
+import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.util.*;
 
-public class IngentaPdfFilterFactory implements FilterFactory {
+public class HodderArnoldPdfTransform implements OutputDocumentTransform {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    logger.debug2("PDF filter factory for: " + au.getName());
-    OutputDocumentTransform documentTransform = PdfUtil.getOutputDocumentTransform(au);
-    if (documentTransform == null) {
-      logger.debug2("Unfiltered");
-      return in;
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    try {
+      return new TransformEachPage(new ExtractStringsToOutputStream(outputStream)).transform(pdfDocument);
     }
-    else {
-      logger.debug2("Filtered with " + documentTransform.getClass().getName());
-      return PdfUtil.applyFromInputStream(documentTransform, in);
+    catch (IOException ioe) {
+      return false;
     }
   }
 
-  /**
-   * <p>A logger for use by this class.</p>
-   */
-  static Logger logger = Logger.getLogger("IngentaPdfFilterFactory");
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    throw new IOException(new UnsupportedOperationException());
+  }
 
 }

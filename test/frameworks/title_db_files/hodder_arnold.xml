@@ -81,6 +81,7 @@
     <property name="key" value="api_url" />
     <property name="value" value="http://api.ingentaconnect.com/" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -117,6 +118,7 @@
     <property name="key" value="api_url" />
     <property name="value" value="http://api.ingentaconnect.com/" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -153,6 +155,7 @@
     <property name="key" value="api_url" />
     <property name="value" value="http://api.ingentaconnect.com/" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -189,6 +192,7 @@
     <property name="key" value="api_url" />
     <property name="value" value="http://api.ingentaconnect.com/" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -225,6 +229,7 @@
     <property name="key" value="api_url" />
     <property name="value" value="http://api.ingentaconnect.com/" />
    </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 

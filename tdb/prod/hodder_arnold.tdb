@@ -9,6 +9,7 @@
   param[api_url] = http://api.ingentaconnect.com/
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = arn
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.HodderArnoldPdfTransform
   implicit < status ; year ; name ; param[volume_name] >
   
   {
