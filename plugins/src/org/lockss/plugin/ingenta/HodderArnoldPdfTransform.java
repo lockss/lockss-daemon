@@ -1,5 +1,5 @@
 /*
- * $Id: HodderArnoldPdfTransform.java,v 1.1 2009-10-28 00:24:50 thib_gc Exp $
+ * $Id: HodderArnoldPdfTransform.java,v 1.2 2009-10-28 00:31:58 thib_gc Exp $
  */ 
 
 /*
@@ -51,7 +51,7 @@ public class HodderArnoldPdfTransform implements OutputDocumentTransform {
   }
 
   public boolean transform(PdfDocument pdfDocument) throws IOException {
-    throw new IOException(new UnsupportedOperationException());
+    throw new IOException("HodderArnoldPdfTransform is an OutputDocumentTransform");
   }
 
 }
