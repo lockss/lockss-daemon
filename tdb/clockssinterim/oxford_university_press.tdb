@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-  implicit < status ; attr[year] ; name ; param[volume_name] >
+  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
 
 
   {
@@ -16,7 +16,7 @@
 
     param[base_url] = http://jhc.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the History of Collections Volume 21 ; 21 >
+    au < tested ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
 
   }
 
@@ -28,7 +28,7 @@
 
     param[base_url] = http://jhmas.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
+    au < tested ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
 
   }
 
@@ -40,7 +40,7 @@
 
     param[base_url] = http://jhrp.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 >
+    au < tested ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
 
   }
 
@@ -52,7 +52,7 @@
 
     param[base_url] = http://jiplp.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 >
+    au < tested ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
 
   }
 
@@ -64,7 +64,7 @@
 
     param[base_url] = http://jicj.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
+    au < tested ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
 
   }
 
@@ -76,7 +76,7 @@
 
     param[base_url] = http://jiel.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of International Economic Law Volume 12 ; 12 >
+    au < tested ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
 
   }
 
@@ -88,7 +88,7 @@
 
     param[base_url] = http://jis.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
+    au < tested ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
 
   }
 
@@ -100,7 +100,7 @@
 
     param[base_url] = http://jleo.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 >
+    au < tested ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
 
   }
 
@@ -112,7 +112,7 @@
 
     param[base_url] = http://logcom.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
+    au < tested ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
 
   }
 
@@ -124,8 +124,8 @@
 
     param[base_url] = http://jlms.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 >
-    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 >
+    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
+    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
 
   }
 
@@ -137,7 +137,7 @@
 
     param[base_url] = http://jmp.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+    au < tested ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
 
   }
 
@@ -149,7 +149,7 @@
 
     param[base_url] = http://jmcb.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+    au < tested ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
 
   }
 
@@ -161,7 +161,7 @@
 
     param[base_url] = http://mollus.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
+    au < tested ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
 
   }
 
@@ -173,7 +173,7 @@
 
     param[base_url] = http://jnci.oxfordjournals.org/
 
-    au < tested ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 >
+    au < tested ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 ; >
 
   }
 
@@ -185,7 +185,7 @@
 
     param[base_url] = http://jicru.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
+    au < tested ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
 
   }
 
@@ -197,7 +197,7 @@
 
     param[base_url] = http://jwelb.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
+    au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
 
   }
 
@@ -209,7 +209,7 @@
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 >
+    au < tested ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
 
   }
 
@@ -221,7 +221,7 @@
 
     param[base_url] = http://petrology.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 >
+    au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
 
   }
 
@@ -233,7 +233,7 @@
 
     param[base_url] = http://plankt.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 >
+    au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
 
   }
 
@@ -245,7 +245,7 @@
 
     param[base_url] = http://jpart.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
+    au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
 
   }
 
@@ -257,7 +257,7 @@
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Public Health Volume 31 ; 31 >
+    au < tested ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
 
   }
 
@@ -269,7 +269,7 @@
 
     param[base_url] = http://jrs.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 >
+    au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
 
   }
 
@@ -281,7 +281,7 @@
 
     param[base_url] = http://jos.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Semantics Volume 26 ; 26 >
+    au < tested ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
 
   }
 
@@ -293,7 +293,7 @@
 
     param[base_url] = http://jss.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 >
+    au < tested ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
 
   }
 
@@ -305,7 +305,7 @@
 
     param[base_url] = http://jts.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 >
+    au < tested ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
 
   }
 
@@ -317,7 +317,7 @@
 
     param[base_url] = http://jtopol.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Topology Volume 2 ; 2 >
+    au < tested ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
 
   }
 
@@ -329,7 +329,7 @@
 
     param[base_url] = http://tropej.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 >
+    au < tested ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
 
   }
 
@@ -341,7 +341,7 @@
 
     param[base_url] = http://lpr.oxfordjournals.org/
 
-    au < tested ; 2009 ; Law, Probability and Risk Volume 8 ; 8 >
+    au < tested ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
 
   }
 
@@ -353,8 +353,8 @@
 
     param[base_url] = http://library.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Library Volume 9 ; 9 >
-    au < tested ; 2009 ; The Library Volume 10 ; 10 >
+    au < tested ; 2008 ; The Library Volume 9 ; 9 ; >
+    au < tested ; 2009 ; The Library Volume 10 ; 10 ; >
 
   }
 
@@ -366,8 +366,8 @@
 
     param[base_url] = http://litimag.oxfordjournals.org/
 
-    au < tested ; 2008 ; Literary Imagination Volume 10 ; 10 >
-    au < tested ; 2009 ; Literary Imagination Volume 11 ; 11 >
+    au < tested ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
+    au < tested ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
 
   }
 
@@ -379,8 +379,8 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
 
-    au < tested ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 >
-    au < tested ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 >
+    au < tested ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
 
   }
   
@@ -392,8 +392,8 @@
 
     param[base_url] = http://litthe.oxfordjournals.org/
 
-    au < tested ; 2008 ; Literature and Theology Volume 22 ; 22 >
-    au < tested ; 2009 ; Literature and Theology Volume 23 ; 23 >
+    au < tested ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
+    au < tested ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
 
   }
 
@@ -407,7 +407,7 @@ comment[j17] = no subscription
 
     param[base_url] = http://jigpal.oxfordjournals.org/
 
-    au < testing ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 >
+    au < testing ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
 
   }
 
@@ -419,8 +419,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://imammb.oxfordjournals.org/
 
-    au < tested ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 >
-    au < tested ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 >
+    au < tested ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
+    au < tested ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 ; >
 
   }
 
@@ -432,8 +432,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://medlaw.oxfordjournals.org/
 
-    au < tested ; 2008 ; Medical Law Review Volume 16 ; 16 >
-    au < tested ; 2009 ; Medical Law Review Volume 17 ; 17 >
+    au < tested ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
+    au < tested ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
 
   }
 
@@ -445,8 +445,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://molehr.oxfordjournals.org/
 
-    au < tested ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
-    au < tested ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
+    au < tested ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
+    au < tested ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
 
   }
   
@@ -458,8 +458,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://mj.oxfordjournals.org/
 
-    au < tested ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 >
-    au < tested ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 >
+    au < tested ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 ; >
+    au < tested ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 ; >
 
   }
 
@@ -471,8 +471,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://mbe.oxfordjournals.org/
 
-    au < tested ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 >
-    au < tested ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
+    au < tested ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
+    au < tested ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
 
   }
 
@@ -484,8 +484,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://ml.oxfordjournals.org/
 
-    au < tested ; 2008 ; Music and Letters Volume 89 ; 89 >
-    au < testing ; 2009 ; Music and Letters Volume 90 ; 90 >
+    au < tested ; 2008 ; Music and Letters Volume 89 ; 89 ; >
+    au < testing ; 2009 ; Music and Letters Volume 90 ; 90 ; >
 
   }
   
@@ -497,8 +497,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://mutage.oxfordjournals.org/
 
-    au < tested ; 2008 ; Mutagenesis Volume 23 ; 23 >
-    au < tested ; 2009 ; Mutagenesis Volume 24 ; 24 >
+    au < tested ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
 
   }
 
@@ -510,8 +510,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
 
-    au < tested ; 2008 ; NDT Plus Volume 1 ; 1 >
-    au < tested ; 2009 ; NDT Plus Volume 2 ; 2 >
+    au < tested ; 2008 ; NDT Plus Volume 1 ; 1 ; >
+    au < tested ; 2009 ; NDT Plus Volume 2 ; 2 ; >
 
   }
 
@@ -523,8 +523,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://ndt.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
-    au < tested ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
+    au < tested ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
 
   }
 
@@ -536,8 +536,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://ntr.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 >
-    au < tested ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 >
+    au < tested ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
+    au < tested ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 ; >
 
   }
 
@@ -549,8 +549,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://nq.oxfordjournals.org/
 
-    au < tested ; 2008 ; Notes and Queries Volume 55 ; 55 >
-    au < tested ; 2009 ; Notes and Queries Volume 56 ; 56 >
+    au < tested ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
+    au < tested ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
 
   }
 
@@ -562,8 +562,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://nar.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nucleic Acids Research Volume 36 ; 36 >
-    au < tested ; 2009 ; Nucleic Acids Research Volume 37 ; 37 >
+    au < tested ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
+    au < tested ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
 
   }
   
@@ -575,8 +575,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://nass.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 >
-    au < tested ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 >
+    au < tested ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
+    au < tested ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
 
   }
 
@@ -588,8 +588,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://occmed.oxfordjournals.org/
 
-    au < tested ; 2008 ; Occupational Medicine Volume 58 ; 58 >
-    au < tested ; 2009 ; Occupational Medicine Volume 59 ; 59 >
+    au < tested ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
+    au < tested ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
 
   }
   
@@ -601,8 +601,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://ohr.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Oral History Review Volume 35 ; 35 >
-    au < tested ; 2009 ; The Oral History Review Volume 36 ; 36 >
+    au < tested ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
+    au < tested ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
 
   }
 
@@ -614,8 +614,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://oaj.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Art Journal Volume 31 ; 31 >
-    au < tested ; 2009 ; Oxford Art Journal Volume 32 ; 32 >
+    au < tested ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
+    au < tested ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
 
   }
 
@@ -627,8 +627,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://oep.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Economic Papers Volume 60 ; 60 >
-    au < tested ; 2009 ; Oxford Economic Papers Volume 61 ; 61 >
+    au < tested ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
+    au < tested ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
 
   }
 
@@ -640,8 +640,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://ojls.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 >
-    au < tested ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 >
+    au < tested ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
+    au < tested ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
 
   }
 
@@ -653,8 +653,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://oxrep.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 >
-    au < tested ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 >
+    au < tested ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
+    au < tested ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
 
   }
 
@@ -666,8 +666,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://pa.oxfordjournals.org/
 
-    au < tested ; 2008 ; Parliamentary Affairs Volume 61 ; 61 >
-    au < tested ; 2009 ; Parliamentary Affairs Volume 62 ; 62 >
+    au < tested ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
+    au < tested ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
 
   }
 
@@ -679,12 +679,12 @@ comment[j17] = no subscription
 
     param[base_url] = http://past.oxfordjournals.org/
 
-    au < tested ; 2008 ; Past & Present Volume 198 ; 198 >
-    au < tested ; 2008 ; Past & Present Volume 199 ; 199 >
-    au < tested ; 2008 ; Past & Present Volume 200 ; 200 >
-    au < tested ; 2008 ; Past & Present Volume 201 ; 201 >
-    au < tested ; 2009 ; Past & Present Volume 202 ; 202 >
-    au < tested ; 2009 ; Past & Present Volume 203 ; 203 >
+    au < tested ; 2008 ; Past & Present Volume 198 ; 198 ; >
+    au < tested ; 2008 ; Past & Present Volume 199 ; 199 ; >
+    au < tested ; 2008 ; Past & Present Volume 200 ; 200 ; >
+    au < tested ; 2008 ; Past & Present Volume 201 ; 201 ; >
+    au < tested ; 2009 ; Past & Present Volume 202 ; 202 ; >
+    au < tested ; 2009 ; Past & Present Volume 203 ; 203 ; >
 
   }
   
@@ -696,8 +696,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://qjmath.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
-    au < tested ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
+    au < tested ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
+    au < tested ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
 
   }
 
@@ -709,8 +709,8 @@ comment[j17] = no subscription
 
     param[base_url] = http://qjmam.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
-    au < tested ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
+    au < tested ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
+    au < tested ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
 
   }
 

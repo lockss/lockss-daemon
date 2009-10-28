@@ -6,8 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-  implicit < status ; attr[year] ; name ; param[volume_name] >
-
+  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
 
   {
 
@@ -17,7 +16,7 @@
 
     param[base_url] = http://chc.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
+    au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
 
   }
 
@@ -29,8 +28,8 @@
 
     param[base_url] = http://jcn.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Child Neurology Volume 23 ; 23 >
-    au < tested ; 2009 ; Journal of Child Neurology Volume 24 ; 24 >
+    au < tested ; 2008 ; Journal of Child Neurology Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Journal of Child Neurology Volume 24 ; 24 ; >
 
   }
 
@@ -42,8 +41,8 @@
 
     param[base_url] = http://jcs.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
-    au < tested ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
+    au < tested ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 ; >
+    au < tested ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
 
   }
 
@@ -55,7 +54,7 @@
 
     param[base_url] = http://jcp.sagepub.com/
 
-    au < tested ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
+    au < tested ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
 
   }
   
@@ -67,8 +66,8 @@
 
     param[base_url] = http://jbr.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
-    au < tested ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
+    au < tested ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 ; >
 
   }
 
@@ -80,7 +79,7 @@
 
     param[base_url] = http://jba.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 >
+    au < tested ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 ; >
 
   }
 
@@ -92,8 +91,8 @@
 
     param[base_url] = http://jbx.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
-    au < tested ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
+    au < tested ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 ; >
+    au < tested ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 ; >
 
   }
 
@@ -105,8 +104,8 @@
 
     param[base_url] = http://jbp.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
-    au < tested ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
+    au < tested ; 2008 ; Journal of Black Psychology Volume 34 ; 34 ; >
+    au < tested ; 2009 ; Journal of Black Psychology Volume 35 ; 35 ; >
 
   }
 
@@ -118,7 +117,7 @@
 
     param[base_url] = http://jbs.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Black Studies Volume 39 ; 39 >
+    au < tested ; 2008 ; Journal of Black Studies Volume 39 ; 39 ; >
 
   }
 
@@ -130,7 +129,7 @@
 
     param[base_url] = http://jen.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Building Physics Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Building Physics Volume 33 ; 33 ; >
 
   }
 
@@ -142,8 +141,8 @@
 
     param[base_url] = http://jbt.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
-    au < tested ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
+    au < tested ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 ; >
+    au < tested ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 ; >
 
   }
 
@@ -156,8 +155,8 @@
 
     param[base_url] = http://job.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
-    au < tested ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
+    au < tested ; 2008 ; Journal of Business Communication Volume 45 ; 45 ; >
+    au < tested ; 2009 ; Journal of Business Communication Volume 46 ; 46 ; >
 
   }
 
@@ -169,8 +168,8 @@
 
     param[base_url] = http://cpt.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
-    au < tested ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
+    au < tested ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 ; >
+    au < tested ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 ; >
 
   }
 
@@ -182,8 +181,8 @@
 
     param[base_url] = http://jca.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
-    au < tested ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
+    au < tested ; 2008 ; Journal of Career Assessment Volume 16 ; 16 ; >
+    au < tested ; 2009 ; Journal of Career Assessment Volume 17 ; 17 ; >
 
   }
   
@@ -195,7 +194,7 @@
 
     param[base_url] = http://jcd.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Career Development Volume 35 ; 35 >
+    au < tested ; 2008 ; Journal of Career Development Volume 35 ; 35 ; >
 
   }
 
@@ -207,7 +206,7 @@
 
     param[base_url] = http://jel.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
+    au < tested ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 ; >
 
   }
 
@@ -219,8 +218,8 @@
 
     param[base_url] = http://cel.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
-    au < tested ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
+    au < tested ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 ; >
+    au < tested ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 ; >
 
   }
 
@@ -232,8 +231,8 @@
 
     param[base_url] = http://jcm.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Composite Materials Volume 42 ; 42 >
-    au < tested ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
+    au < tested ; 2008 ; Journal of Composite Materials Volume 42 ; 42 ; >
+    au < tested ; 2009 ; Journal of Composite Materials Volume 43 ; 43 ; >
 
   }
 
@@ -245,8 +244,8 @@
 
     param[base_url] = http://jcr.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 >
-    au < tested ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 >
+    au < tested ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 ; >
+    au < tested ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; >
 
   }
 
@@ -258,8 +257,8 @@
 
     param[base_url] = http://joc.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 >
-    au < tested ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 >
+    au < tested ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 ; >
+    au < tested ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 ; >
 
   }
 
@@ -271,8 +270,8 @@
 
     param[base_url] = http://ccj.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
-    au < tested ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
+    au < tested ; 2008 ; Journal of Contemporary Criminal Justice Volume 24 ; 24 ; >
+    au < tested ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 ; >
 
   }
 
@@ -284,8 +283,8 @@
 
     param[base_url] = http://jce.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 >
-    au < tested ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 >
+    au < tested ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 ; >
+    au < tested ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 ; >
 
   }
 
@@ -297,8 +296,8 @@
 
     param[base_url] = http://jch.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Contemporary History Volume 43 ; 43 >
-    au < tested ; 2009 ; Journal of Contemporary History Volume 44 ; 44 >
+    au < tested ; 2008 ; Journal of Contemporary History Volume 43 ; 43 ; >
+    au < tested ; 2009 ; Journal of Contemporary History Volume 44 ; 44 ; >
 
   }
 
@@ -310,7 +309,7 @@
 
     param[base_url] = http://jds.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Developing Societies Volume 24 ; 24 >
+    au < tested ; 2008 ; Journal of Developing Societies Volume 24 ; 24 ; >
 
   }
 
@@ -322,8 +321,8 @@
 
     param[base_url] = http://jdm.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
-    au < tested ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
+    au < tested ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 ; >
+    au < tested ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 ; >
 
   }
 
@@ -335,8 +334,8 @@
 
     param[base_url] = http://dps.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Disability Policy Studies Volume 19 ; 19 >
-    au < tested ; 2009 ; Journal of Disability Policy Studies Volume 20 ; 20 >
+    au < tested ; 2008 ; Journal of Disability Policy Studies Volume 19 ; 19 ; >
+    au < tested ; 2009 ; Journal of Disability Policy Studies Volume 20 ; 20 ; >
 
   }
 
@@ -348,8 +347,8 @@
 
     param[base_url] = http://jea.sagepub.com/
 
-    au < tested ; 2008 ; The Journal of Early Adolescence Volume 28 ; 28 >
-    au < tested ; 2009 ; The Journal of Early Adolescence Volume 29 ; 29 >
+    au < tested ; 2008 ; The Journal of Early Adolescence Volume 28 ; 28 ; >
+    au < tested ; 2009 ; The Journal of Early Adolescence Volume 29 ; 29 ; >
 
   }
 
@@ -361,8 +360,8 @@
 
     param[base_url] = http://ecl.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Early Childhood Literacy Volume 8 ; 8 >
-    au < tested ; 2009 ; Journal of Early Childhood Literacy Volume 9 ; 9 >
+    au < tested ; 2008 ; Journal of Early Childhood Literacy Volume 8 ; 8 ; >
+    au < tested ; 2009 ; Journal of Early Childhood Literacy Volume 9 ; 9 ; >
 
   }
 
@@ -374,8 +373,8 @@
 
     param[base_url] = http://ecr.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Early Childhood Research Volume 6 ; 6 >
-    au < tested ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 >
+    au < tested ; 2008 ; Journal of Early Childhood Research Volume 6 ; 6 ; >
+    au < tested ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 ; >
  
   }
 
@@ -387,7 +386,7 @@
 
     param[base_url] = http://jei.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Early Intervention Volume 31 ; 31 >
+    au < tested ; 2008 ; Journal of Early Intervention Volume 31 ; 31 ; >
 
   }
   
@@ -399,8 +398,8 @@
 
     param[base_url] = http://jsd.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 >
-    au < tested ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 >
+    au < tested ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 ; >
+    au < tested ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 ; >
 
   }
 
@@ -412,8 +411,8 @@
 
     param[base_url] = http://jeb.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
-    au < tested ; 2009 ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
+    au < tested ; 2008 ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 ; >
+    au < tested ; 2009 ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 ; >
 
   }
 
@@ -425,8 +424,8 @@
 
     param[base_url] = http://jep.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Elastomers and Plastics Volume 40 ; 40 >
-    au < tested ; 2009 ; Journal of Elastomers and Plastics Volume 41 ; 41 >
+    au < tested ; 2008 ; Journal of Elastomers and Plastics Volume 40 ; 40 ; >
+    au < tested ; 2009 ; Journal of Elastomers and Plastics Volume 41 ; 41 ; >
 
   }
 
@@ -438,8 +437,8 @@
 
     param[base_url] = http://emf.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Emerging Market Finance Volume 7 ; 7 >
-    au < tested ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 >
+    au < tested ; 2008 ; Journal of Emerging Market Finance Volume 7 ; 7 ; >
+    au < tested ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 ; >
 
   }
 
@@ -451,8 +450,8 @@
 
     param[base_url] = http://ebx.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
-    au < tested ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
+    au < tested ; 2008 ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 ; >
+    au < tested ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 ; >
 
   }
 
@@ -464,8 +463,8 @@
 
     param[base_url] = http://eng.sagepub.com/
 
-    au < tested ; 2008 ; Journal of English Linguistics Volume 36 ; 36 >
-    au < tested ; 2009 ; Journal of English Linguistics Volume 37 ; 37 >
+    au < tested ; 2008 ; Journal of English Linguistics Volume 36 ; 36 ; >
+    au < tested ; 2009 ; Journal of English Linguistics Volume 37 ; 37 ; >
 
   }
 
@@ -477,8 +476,8 @@
 
     param[base_url] = http://joe.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Entrepreneurship Volume 17 ; 17 >
-    au < tested ; 2009 ; Journal of Entrepreneurship Volume 18 ; 18 >
+    au < tested ; 2008 ; Journal of Entrepreneurship Volume 17 ; 17 ; >
+    au < tested ; 2009 ; Journal of Entrepreneurship Volume 18 ; 18 ; >
 
   }
 
@@ -490,8 +489,8 @@
 
     param[base_url] = http://jed.sagepub.com/
 
-    au < tested ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 >
-    au < tested ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 >
+    au < tested ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 ; >
+    au < tested ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 ; >
 
   }
   
@@ -503,8 +502,8 @@
 
     param[base_url] = http://esp.sagepub.com/
 
-    au < tested ; 2008 ; Journal of European Social Policy Volume 18 ; 18 >
-    au < tested ; 2009 ; Journal of European Social Policy Volume 19 ; 19 >
+    au < tested ; 2008 ; Journal of European Social Policy Volume 18 ; 18 ; >
+    au < tested ; 2009 ; Journal of European Social Policy Volume 19 ; 19 ; >
 
   }
 
@@ -516,8 +515,8 @@
 
     param[base_url] = http://jes.sagepub.com/
 
-    au < tested ; 2008 ; Journal of European Studies Volume 38 ; 38 >
-    au < tested ; 2009 ; Journal of European Studies Volume 39 ; 39 >
+    au < tested ; 2008 ; Journal of European Studies Volume 38 ; 38 ; >
+    au < tested ; 2009 ; Journal of European Studies Volume 39 ; 39 ; >
 
   }
 
@@ -529,8 +528,8 @@
 
     param[base_url] = http://jfh.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Family History Volume 33 ; 33 >
-    au < tested ; 2009 ; Journal of Family History Volume 34 ; 34 >
+    au < tested ; 2008 ; Journal of Family History Volume 33 ; 33 ; >
+    au < tested ; 2009 ; Journal of Family History Volume 34 ; 34 ; >
 
   }
 
@@ -542,8 +541,8 @@
 
     param[base_url] = http://jfi.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Family Issues Volume 29 ; 29 >
-    au < tested ; 2009 ; Journal of Family Issues Volume 30 ; 30 >
+    au < tested ; 2008 ; Journal of Family Issues Volume 29 ; 29 ; >
+    au < tested ; 2009 ; Journal of Family Issues Volume 30 ; 30 ; >
 
   }
 
@@ -555,8 +554,8 @@
 
     param[base_url] = http://jfn.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Family Nursing Volume 14 ; 14 >
-    au < tested ; 2009 ; Journal of Family Nursing Volume 15 ; 15 >
+    au < tested ; 2008 ; Journal of Family Nursing Volume 14 ; 14 ; >
+    au < tested ; 2009 ; Journal of Family Nursing Volume 15 ; 15 ; >
 
   }
 
@@ -568,8 +567,8 @@
 
     param[base_url] = http://jfe.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Fire Protection Engineering Volume 18 ; 18 >
-    au < tested ; 2009 ; Journal of Fire Protection Engineering Volume 19 ; 19 >
+    au < tested ; 2008 ; Journal of Fire Protection Engineering Volume 18 ; 18 ; >
+    au < tested ; 2009 ; Journal of Fire Protection Engineering Volume 19 ; 19 ; >
 
   }
 
@@ -581,8 +580,8 @@
 
     param[base_url] = http://jfs.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 >
-    au < tested ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 >
+    au < tested ; 2008 ; Journal of Fire Sciences Volume 26 ; 26 ; >
+    au < tested ; 2009 ; Journal of Fire Sciences Volume 27 ; 27 ; >
 
   }
 
@@ -594,8 +593,8 @@
 
     param[base_url] = http://jgp.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 >
-    au < tested ; 2009 ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 >
+    au < tested ; 2008 ; Journal of Geriatric Psychiatry and Neurology Volume 21 ; 21 ; >
+    au < tested ; 2009 ; Journal of Geriatric Psychiatry and Neurology Volume 22 ; 22 ; >
 
   }
 
@@ -607,8 +606,8 @@
 
     param[base_url] = http://jhs.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 >
-    au < tested ; 2009 ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 >
+    au < tested ; 2008 ; Journal of Hand Surgery (European Volume) Volume 33 ; 33 ; >
+    au < tested ; 2009 ; Journal of Hand Surgery (European Volume) Volume 34 ; 34 ; >
 
   }
 
@@ -620,7 +619,7 @@
 
     param[base_url] = http://jhm.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Health Management Volume 11 ; 11 >
+    au < tested ; 2009 ; Journal of Health Management Volume 11 ; 11 ; >
 
   }
 
@@ -632,7 +631,7 @@
 
     param[base_url] = http://hpq.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Health Psychology Volume 14 ; 14 >
+    au < tested ; 2009 ; Journal of Health Psychology Volume 14 ; 14 ; >
 
   }
 
@@ -644,7 +643,7 @@
 
     param[base_url] = http://jhh.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Hispanic Higher Education Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of Hispanic Higher Education Volume 8 ; 8 ; >
 
   }
 
@@ -656,7 +655,7 @@
 
     param[base_url] = http://jhn.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Holistic Nursing Volume 27 ; 27 >
+    au < tested ; 2009 ; Journal of Holistic Nursing Volume 27 ; 27 ; >
 
   }
 
@@ -668,7 +667,7 @@
 
     param[base_url] = http://jht.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Hospitality & Tourism Research Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Hospitality & Tourism Research Volume 33 ; 33 ; >
 
   }
 
@@ -680,7 +679,7 @@
 
     param[base_url] = http://jhl.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Human Lactation Volume 25 ; 25 >
+    au < tested ; 2009 ; Journal of Human Lactation Volume 25 ; 25 ; >
 
   }
 
@@ -692,7 +691,7 @@
 
     param[base_url] = http://jhp.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Humanistic Psychology Volume 49 ; 49 >
+    au < tested ; 2009 ; Journal of Humanistic Psychology Volume 49 ; 49 ; >
 
   }
 
@@ -704,7 +703,7 @@
 
     param[base_url] = http://jir.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Industrial Relations Volume 51 ; 51 >
+    au < tested ; 2009 ; Journal of Industrial Relations Volume 51 ; 51 ; >
 
   }
 
@@ -716,7 +715,7 @@
 
     param[base_url] = http://jit.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Industrial Textiles Volume 39 ; 39 >
+    au < tested ; 2009 ; Journal of Industrial Textiles Volume 39 ; 39 ; >
 
   }
 
@@ -728,7 +727,7 @@
 
     param[base_url] = http://bji.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 >
+    au < tested ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 ; >
 
   }
 
@@ -740,7 +739,7 @@
 
     param[base_url] = http://jis.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Information Science Volume 35 ; 35 >
+    au < tested ; 2009 ; Journal of Information Science Volume 35 ; 35 ; >
 
   }
 
@@ -752,7 +751,7 @@
 
     param[base_url] = http://jid.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 ; >
 
   }
 
@@ -764,7 +763,7 @@
 
     param[base_url] = http://jim.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
+    au < tested ; 2009 ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 ; >
 
   }
 
@@ -776,7 +775,7 @@
 
     param[base_url] = http://jic.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Intensive Care Medicine Volume 24 ; 24 >
+    au < tested ; 2009 ; Journal of Intensive Care Medicine Volume 24 ; 24 ; >
 
   }
 
@@ -788,7 +787,7 @@
 
     param[base_url] = http://jiv.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Interpersonal Violence Volume 24 ; 24 >
+    au < tested ; 2009 ; Journal of Interpersonal Violence Volume 24 ; 24 ; >
 
   }
 
@@ -800,7 +799,7 @@
 
     param[base_url] = http://jls.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Language and Social Psychology Volume 28 ; 28 >
+    au < tested ; 2009 ; Journal of Language and Social Psychology Volume 28 ; 28 ; >
 
   }
 
@@ -812,7 +811,7 @@
 
     param[base_url] = http://jlo.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 >
+    au < tested ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 ; >
 
   }
 
@@ -824,7 +823,7 @@
 
     param[base_url] = http://ldx.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Learning Disabilities Volume 42 ; 42 >
+    au < tested ; 2009 ; Journal of Learning Disabilities Volume 42 ; 42 ; >
 
   }
 
@@ -836,7 +835,7 @@
 
     param[base_url] = http://lis.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Librarianship and Information Science Volume 41 ; 41 >
+    au < tested ; 2009 ; Journal of Librarianship and Information Science Volume 41 ; 41 ; >
 
   }
 
@@ -848,7 +847,7 @@
 
     param[base_url] = http://jmk.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Macromarketing Volume 29 ; 29 >
+    au < tested ; 2009 ; Journal of Macromarketing Volume 29 ; 29 ; >
 
   }
 
@@ -860,7 +859,7 @@
 
     param[base_url] = http://jom.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Management Volume 35 ; 35 >
+    au < tested ; 2009 ; Journal of Management Volume 35 ; 35 ; >
 
   }
 
@@ -872,7 +871,7 @@
 
     param[base_url] = http://jme.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Management Education Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Management Education Volume 33 ; 33 ; >
 
   }
 
@@ -884,7 +883,7 @@
 
     param[base_url] = http://jmi.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Management Inquiry Volume 18 ; 18 >
+    au < tested ; 2009 ; Journal of Management Inquiry Volume 18 ; 18 ; >
 
   }
 
@@ -896,7 +895,7 @@
 
     param[base_url] = http://jmd.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Marketing Education Volume 31 ; 31 >
+    au < tested ; 2009 ; Journal of Marketing Education Volume 31 ; 31 ; >
 
   }
 
@@ -908,7 +907,7 @@
 
     param[base_url] = http://mcu.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Material Culture Volume 14 ; 14 >
+    au < tested ; 2009 ; Journal of Material Culture Volume 14 ; 14 ; >
 
   }
 
@@ -920,7 +919,7 @@
 
     param[base_url] = http://mmr.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Mixed Methods Research Volume 3 ; 3 >
+    au < tested ; 2009 ; Journal of Mixed Methods Research Volume 3 ; 3 ; >
 
   }
 
@@ -932,7 +931,7 @@
 
     param[base_url] = http://opp.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Oncology Pharmacy Practice Volume 15 ; 15 >
+    au < tested ; 2009 ; Journal of Oncology Pharmacy Practice Volume 15 ; 15 ; >
 
   }
 
@@ -944,7 +943,7 @@
 
     param[base_url] = http://pen.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Parenteral and Enteral Nutrition Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Parenteral and Enteral Nutrition Volume 33 ; 33 ; >
 
   }
 
@@ -956,7 +955,7 @@
 
     param[base_url] = http://jpr.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Peace Research Volume 46 ; 46 >
+    au < tested ; 2009 ; Journal of Peace Research Volume 46 ; 46 ; >
 
   }
 
@@ -968,7 +967,7 @@
 
     param[base_url] = http://jpo.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Pediatric Oncology Nursing Volume 26 ; 26 >
+    au < tested ; 2009 ; Journal of Pediatric Oncology Nursing Volume 26 ; 26 ; >
 
   }
 
@@ -980,7 +979,7 @@
 
     param[base_url] = http://jpp.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Pharmacy Practice Volume 22 ; 22 >
+    au < tested ; 2009 ; Journal of Pharmacy Practice Volume 22 ; 22 ; >
 
   }
 
@@ -992,7 +991,7 @@
 
     param[base_url] = http://jph.sagepub.com/
 
-    au < ready ; 2009 ; Journal of Planning History Volume 8 ; 8 >
+    au < ready ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
 
   }
   
@@ -1004,7 +1003,7 @@
 
     param[base_url] = http://pbi.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
+    au < tested ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 ; >
 
   }
 
@@ -1016,7 +1015,7 @@
 
     param[base_url] = http://jpa.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
+    au < tested ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 ; >
 
   }
 
@@ -1028,7 +1027,7 @@
 
     param[base_url] = http://jop.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Psychopharmacology Volume 23 ; 23 >
+    au < tested ; 2009 ; Journal of Psychopharmacology Volume 23 ; 23 ; >
 
   }
 
@@ -1040,7 +1039,7 @@
 
     param[base_url] = http://jrp.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Reinforced Plastics and Composites Volume 28 ; 28 >
+    au < tested ; 2009 ; Journal of Reinforced Plastics and Composites Volume 28 ; 28 ; >
 
   }
 
@@ -1052,7 +1051,7 @@
 
     param[base_url] = http://jra.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Renin-Angiotensin-Aldosterone System Volume 10 ; 10 >
+    au < tested ; 2009 ; Journal of Renin-Angiotensin-Aldosterone System Volume 10 ; 10 ; >
 
   }
 
@@ -1064,7 +1063,7 @@
 
     param[base_url] = http://jrc.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Research in Crime and Delinquency Volume 46 ; 46 >
+    au < tested ; 2009 ; Journal of Research in Crime and Delinquency Volume 46 ; 46 ; >
 
   }
  
@@ -1076,7 +1075,7 @@
 
     param[base_url] = http://jri.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Research in International Education Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of Research in International Education Volume 8 ; 8 ; >
 
   }
 
@@ -1088,7 +1087,7 @@
 
     param[base_url] = http://jrm.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Research in Music Education Volume 57 ; 57 >
+    au < tested ; 2009 ; Journal of Research in Music Education Volume 57 ; 57 ; >
 
   }
 
@@ -1100,7 +1099,7 @@
 
     param[base_url] = http://jrn.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Research in Nursing Volume 14 ; 14 >
+    au < tested ; 2009 ; Journal of Research in Nursing Volume 14 ; 14 ; >
 
   }
 
@@ -1112,7 +1111,7 @@
 
     param[base_url] = http://jsm.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Sandwich Structures and Materials Volume 11 ; 11 >
+    au < tested ; 2009 ; Journal of Sandwich Structures and Materials Volume 11 ; 11 ; >
 
   }
 
@@ -1124,7 +1123,7 @@
 
     param[base_url] = http://jsn.sagepub.com/
 
-    au < tested ; 2009 ; The Journal of School Nursing Volume 25 ; 25 >
+    au < tested ; 2009 ; The Journal of School Nursing Volume 25 ; 25 ; >
 
   }
 
@@ -1136,7 +1135,7 @@
 
     param[base_url] = http://jsr.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Service Research Volume 12 ; 12 >
+    au < tested ; 2009 ; Journal of Service Research Volume 12 ; 12 ; >
 
   }
 
@@ -1148,7 +1147,7 @@
 
     param[base_url] = http://spr.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Social and Personal Relationships Volume 26 ; 26 >
+    au < tested ; 2009 ; Journal of Social and Personal Relationships Volume 26 ; 26 ; >
 
   }
 
@@ -1160,7 +1159,7 @@
 
     param[base_url] = http://jsa.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Social Archaeology Volume 9 ; 9 >
+    au < tested ; 2009 ; Journal of Social Archaeology Volume 9 ; 9 ; >
 
   }
 
@@ -1172,7 +1171,7 @@
 
     param[base_url] = http://jsw.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Social Work Volume 9 ; 9 >
+    au < tested ; 2009 ; Journal of Social Work Volume 9 ; 9 ; >
 
   }
 
@@ -1184,7 +1183,7 @@
 
     param[base_url] = http://jos.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Sociology Volume 45 ; 45 >
+    au < tested ; 2009 ; Journal of Sociology Volume 45 ; 45 ; >
 
   }
 
@@ -1196,7 +1195,7 @@
 
     param[base_url] = http://sad.sagepub.com/
 
-    au < tested ; 2009 ; Journal of South Asian Development Volume 4 ; 4 >
+    au < tested ; 2009 ; Journal of South Asian Development Volume 4 ; 4 ; >
 
   }
 
@@ -1208,7 +1207,7 @@
 
     param[base_url] = http://sed.sagepub.com/
 
-    au < tested ; 2009 ; The Journal of Special Education Volume 43 ; 43 >
+    au < tested ; 2009 ; The Journal of Special Education Volume 43 ; 43 ; >
 
   }
 
@@ -1220,7 +1219,7 @@
 
     param[base_url] = http://jss.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Sport & Social Issues Volume 33 ; 33 >
+    au < tested ; 2009 ; Journal of Sport & Social Issues Volume 33 ; 33 ; >
 
   }
 
@@ -1232,7 +1231,7 @@
 
     param[base_url] = http://jse.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Sports Economics Volume 10 ; 10 >
+    au < tested ; 2009 ; Journal of Sports Economics Volume 10 ; 10 ; >
 
   }
 
@@ -1244,7 +1243,7 @@
 
     param[base_url] = http://jsi.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Studies in International Education Volume 13 ; 13 >
+    au < tested ; 2009 ; Journal of Studies in International Education Volume 13 ; 13 ; >
 
   }
 
@@ -1256,7 +1255,7 @@
 
     param[base_url] = http://jte.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Teacher Education Volume 60 ; 60 >
+    au < tested ; 2009 ; Journal of Teacher Education Volume 60 ; 60 ; >
 
   }
 
@@ -1279,7 +1278,7 @@
 
     param[base_url] = http://jap.sagepub.com/
 
-    au < tested ; 2009 ; Journal of the American Psychiatric Nurses Association Volume 15 ; 15 >
+    au < tested ; 2009 ; Journal of the American Psychiatric Nurses Association Volume 15 ; 15 ; >
 
   }
 
@@ -1291,7 +1290,7 @@
 
     param[base_url] = http://apa.sagepub.com/
 
-    au < tested ; 2009 ; Journal of the American Psychoanalytic Association Volume 57 ; 57 >
+    au < tested ; 2009 ; Journal of the American Psychoanalytic Association Volume 57 ; 57 ; >
 
   }
 
@@ -1303,7 +1302,7 @@
 
     param[base_url] = http://jia.sagepub.com/
 
-    au < tested ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 >
+    au < tested ; 2009 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 ; >
 
   }
 
@@ -1315,7 +1314,7 @@
 
     param[base_url] = http://jtp.sagepub.com/
 
-    au < tested ; 2009 ; Journal of Theoretical Politics Volume 21 ; 21 >
+    au < tested ; 2009 ; Journal of Theoretical Politics Volume 21 ; 21 ; >
 
   }
  
@@ -1327,8 +1326,8 @@
 
     param[base_url] = http://jcx.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 >
-    au < tested ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 >
+    au < tested ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 ; >
+    au < tested ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; >
 
   }
   
@@ -1340,7 +1339,7 @@
 
     param[base_url] = http://crc.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
+    au < tested ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
 
   }
 
@@ -1352,8 +1351,8 @@
 
     param[base_url] = http://jcc.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
-    au < tested ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
+    au < tested ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 ; >
+    au < tested ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 ; >
 
   }
 
@@ -1365,7 +1364,7 @@
 
     param[base_url] = http://dms.sagepub.com/
 
-    au < tested ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+    au < tested ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 ; >
 
   }
 
@@ -1377,8 +1376,8 @@
 
     param[base_url] = http://jdr.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Dental Research Volume 87 ; 87 >
-    au < tested ; 2009 ; Journal of Dental Research Volume 88 ; 88 >
+    au < tested ; 2008 ; Journal of Dental Research Volume 87 ; 87 ; >
+    au < tested ; 2009 ; Journal of Dental Research Volume 88 ; 88 ; >
 
   }
   
