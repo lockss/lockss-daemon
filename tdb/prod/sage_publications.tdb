@@ -7533,11 +7533,16 @@ comment[mpj] = now published by Brill
     title <
       name = Journal of Positive Behavior Interventions
     >
+    
+    {
 
-    param[base_url] = http://pbi.sagepub.com/
+      param[base_url] = http://pbi.sagepub.com/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-    au < manifest ; 2008 ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
-    au < tested ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
+      au < manifest ; 2008 ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
+      au < tested ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
+
+    }
 
   }
   
@@ -7692,12 +7697,30 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Research in International Education Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Journal of Research in International Education Volume 6 ; 6 >
         au < HighWirePressPlugin ; manifest ; Journal of Research in International Education Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Journal of Research in International Education Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Journal of Research in International Education Volume 8 ; 8 >
 
       }
 
     }
 
+    {
+
+      title <
+        name = Journal of Research in Nursing
+      >
+      
+      {
+      
+      param[base_url] = http://jrn.sagepub.com/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; manifest ; Journal of Research in Nursing Volume 13 ; 13 >
+      au < HighWirePressPlugin ; ready ; Journal of Research in Nursing Volume 14 ; 14 >
+    
+      }
+      
+    }
+  
     {
 
       title <
@@ -7713,7 +7736,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Research in Nursing Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; ready ; Journal of Research in Nursing Volume 12 ; 12 >
         au < HighWirePressPlugin ; manifest ; Journal of Research in Nursing Volume 13 ; 13 >
-        au < HighWirePressPlugin ; manifest ; Journal of Research in Nursing Volume 14 ; 14 >
+        au < HighWirePressPlugin ; ready ; Journal of Research in Nursing Volume 14 ; 14 >
 
       }
 
@@ -7756,6 +7779,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Service Research Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; ready ; Journal of Service Research Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; ready ; Journal of Service Research Volume 11 ; 11 >
+        au < HighWirePressPlugin ; ready ; Journal of Service Research Volume 12 ; 12 >
 
       }
 
@@ -7798,7 +7822,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Social Archaeology Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of Social Archaeology Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; ready ; Journal of Social Archaeology Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Social Archaeology Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Journal of Social Archaeology Volume 9 ; 9 >
 
       }
 
@@ -7819,7 +7843,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Social Work Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of Social Work Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; ready ; Journal of Social Work Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Social Work Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Journal of Social Work Volume 9 ; 9 >
 
       }
 
@@ -7840,7 +7864,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Sociology Volume 42 ; 42 >
         au < HighWireStrVolPlugin ; ready ; Journal of Sociology Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; ready ; Journal of Sociology Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Sociology Volume 45 ; 45 >
+        au < HighWirePressPlugin ; ready ; Journal of Sociology Volume 45 ; 45 >
 
       }
 
@@ -7860,7 +7884,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of South Asian Development Volume 1 ; 1 >
         au < HighWireStrVolPlugin ; ready ; Journal of South Asian Development Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; ready ; Journal of South Asian Development Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; ready ; Journal of South Asian Development Volume 4 ; 4 >
+        au < HighWirePressPlugin ; ready ; Journal of South Asian Development Volume 4 ; 4 >
 
       }
 
@@ -7881,7 +7905,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Sport & Social Issues Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; ready ; Journal of Sport & Social Issues Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; ready ; Journal of Sport & Social Issues Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Sport & Social Issues Volume 33 ; 33 >
+        au < HighWirePressPlugin ; ready ; Journal of Sport & Social Issues Volume 33 ; 33 >
 
       }
 
@@ -7902,7 +7926,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Sports Economics Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; ready ; Journal of Sports Economics Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; ready ; Journal of Sports Economics Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Sports Economics Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Journal of Sports Economics Volume 10 ; 10 >
 
       }
 
@@ -7923,7 +7947,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Studies in International Education Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; ready ; Journal of Studies in International Education Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; ready ; Journal of Studies in International Education Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Studies in International Education Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Journal of Studies in International Education Volume 13 ; 13 >
 
       }
 
@@ -7944,10 +7968,28 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Teacher Education Volume 57 ; 57 >
         au < HighWireStrVolPlugin ; ready ; Journal of Teacher Education Volume 58 ; 58 >
         au < HighWireStrVolPlugin ; ready ; Journal of Teacher Education Volume 59 ; 59 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Teacher Education Volume 60 ; 60 >
+        au < HighWirePressPlugin ; ready ; Journal of Teacher Education Volume 60 ; 60 >
 
       }
 
+    }
+
+    {
+
+      title <
+        name = Journal of the American Psychoanalytic Association
+      >
+
+      {
+
+      param[base_url] = http://apa.sagepub.com/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; manifest ; Journal of the American Psychoanalytic Association Volume 56 ; 56 >
+      au < HighWirePressPlugin ; ready ; Journal of the American Psychoanalytic Association Volume 57 ; 57 >
+ 
+      }
+ 
     }
 
     {
@@ -7965,7 +8007,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of the International Association of Physicians in AIDS Care Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Journal of the International Association of Physicians in AIDS Care Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
 
       }
 
@@ -8007,7 +8049,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Journal of Theoretical Politics Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; ready ; Journal of Theoretical Politics Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; ready ; Journal of Theoretical Politics Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Theoretical Politics Volume 21 ; 21 >
+        au < HighWirePressPlugin ; ready ; Journal of Theoretical Politics Volume 21 ; 21 >
 
       }
 

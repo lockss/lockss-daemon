@@ -16,7 +16,7 @@
     
     param[base_url] = http://aapgrandrounds.aappublications.org/
     
-    au < manifest ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
+    au < ready ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
     au < ready ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
     au < released ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
     au < released ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
@@ -57,12 +57,12 @@ comment[nr] = 500 error on index-by-author pages
       name = Pediatrics
     >
 
-comment[p123] = 500 error http://pediatrics.aappublications.org/cgi/eletters/123/2/PRIMACK_WALSH_CRTQ_fichiers/filelist.xml
+comment[p122_123] = 500 error http://pediatrics.aappublications.org/cgi/eletters/123/2/PRIMACK_WALSH_CRTQ_fichiers/filelist.xml
     
     param[base_url] = http://pediatrics.aappublications.org/
     
     au < manifest ; 2008 ; Pediatrics Volume 121 ; 121 >
-    au < manifest ; 2008 ; Pediatrics Volume 122 ; 122 >
+    au < notReady ; 2008 ; Pediatrics Volume 122 ; 122 >
     au < notReady ; 2009 ; Pediatrics Volume 123 ; 123 >
     au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
   

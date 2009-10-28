@@ -1416,7 +1416,7 @@
     param[base_url] = http://jjco.oxfordjournals.org/
 
     au < manifest ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 >
-    au < manifest ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 >
+    au < testing ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 >
 
   }
 
@@ -1429,7 +1429,7 @@
     param[base_url] = http://jae.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of African Economies Volume 17 ; 17 >
-    au < manifest ; 2009 ; Journal of African Economies Volume 18 ; 18 >
+    au < testing ; 2009 ; Journal of African Economies Volume 18 ; 18 >
 
   }
 
@@ -1442,7 +1442,7 @@
     param[base_url] = http://jaar.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 >
-    au < manifest ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
+    au < testing ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
 
   }
 
@@ -1456,8 +1456,8 @@
 
     au < manifest ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 >
     au < manifest ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 >
-    au < manifest ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 >
-    au < manifest ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 >
+    au < testing ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 >
+    au < testing ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 >
 
   }
 
@@ -1471,8 +1471,8 @@
 
     au < manifest ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 >
     au < manifest ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 >
-    au < manifest ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 >
-    au < manifest ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 >
+    au < testing ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 >
+    au < testing ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 >
 
   }
 
@@ -1497,7 +1497,7 @@
     param[base_url] = http://jcle.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 >
-    au < manifest ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 >
+    au < testing ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 >
 
   }
 
@@ -1510,7 +1510,7 @@
     param[base_url] = http://jcsl.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 >
-    au < manifest ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 >
+    au < testing ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 >
 
   }
 
@@ -1523,7 +1523,7 @@
     param[base_url] = http://jdsde.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
-    au < manifest ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
+    au < testing ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
 
   }
 
@@ -1536,7 +1536,7 @@
     param[base_url] = http://jdh.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Design History Volume 21 ; 21 >
-    au < manifest ; 2009 ; Journal of Design History Volume 22 ; 22 >
+    au < testing ; 2009 ; Journal of Design History Volume 22 ; 22 >
 
   }
 
@@ -1549,7 +1549,7 @@
     param[base_url] = http://joeg.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Economic Geography Volume 8 ; 8 >
-    au < manifest ; 2009 ; Journal of Economic Geography Volume 9 ; 9 >
+    au < testing ; 2009 ; Journal of Economic Geography Volume 9 ; 9 >
 
   }
 
@@ -1562,7 +1562,7 @@
     param[base_url] = http://jmicro.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 >
-    au < manifest ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 >
+    au < testing ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 >
 
   }
 
@@ -1663,7 +1663,7 @@
     param[base_url] = http://jhc.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of the History of Collections Volume 20 ; 20 >
-    au < manifest ; 2009 ; Journal of the History of Collections Volume 21 ; 21 >
+    au < tested ; 2009 ; Journal of the History of Collections Volume 21 ; 21 >
 
   }
 
@@ -1676,7 +1676,7 @@
     param[base_url] = http://jhmas.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 >
-    au < manifest ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
+    au < tested ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
 
   }
 
@@ -1688,7 +1688,7 @@
 
     param[base_url] = http://jhrp.oxfordjournals.org/
 
-    au < manifest ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 >
+    au < tested ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 >
 
   }
 
@@ -1701,7 +1701,7 @@
     param[base_url] = http://jiplp.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 >
-    au < manifest ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 >
+    au < tested ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 >
 
   }
 
@@ -1714,7 +1714,7 @@
     param[base_url] = http://jicj.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 >
-    au < manifest ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
+    au < tested ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
 
   }
 
@@ -1727,7 +1727,7 @@
     param[base_url] = http://jiel.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of International Economic Law Volume 11 ; 11 >
-    au < manifest ; 2009 ; Journal of International Economic Law Volume 12 ; 12 >
+    au < tested ; 2009 ; Journal of International Economic Law Volume 12 ; 12 >
 
   }
 
@@ -1740,7 +1740,7 @@
     param[base_url] = http://jis.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 >
-    au < testing ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
+    au < tested ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
 
   }
 
@@ -1753,7 +1753,7 @@
     param[base_url] = http://jleo.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 >
-    au < testing ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 >
+    au < tested ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 >
 
   }
 
@@ -1766,7 +1766,7 @@
     param[base_url] = http://logcom.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 >
-    au < testing ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
+    au < tested ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
 
   }
 
@@ -1780,8 +1780,8 @@
 
     au < manifest ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 >
     au < manifest ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 >
-    au < testing ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 >
-    au < testing ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 >
+    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 >
+    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 >
 
   }
 
@@ -1794,7 +1794,7 @@
     param[base_url] = http://jmp.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
-    au < testing ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+    au < tested ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
 
   }
 
@@ -1806,7 +1806,7 @@
 
     param[base_url] = http://jmcb.oxfordjournals.org/
 
-    au < testing ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+    au < tested ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 >
 
   }
 
@@ -1819,7 +1819,7 @@
     param[base_url] = http://mollus.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 >
-    au < testing ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
+    au < tested ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
 
   }
 
@@ -1832,7 +1832,7 @@
     param[base_url] = http://jnci.oxfordjournals.org/
 
     au < manifest ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 >
-    au < testing ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 >
+    au < tested ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 >
 
   }
 
@@ -1845,7 +1845,7 @@
     param[base_url] = http://jicru.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 >
-    au < testing ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
+    au < tested ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
 
   }
 
@@ -1858,7 +1858,7 @@
     param[base_url] = http://jwelb.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
-    au < testing ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
+    au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
 
   }
 
@@ -1871,7 +1871,7 @@
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 >
-    au < testing ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 >
+    au < tested ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 >
 
   }
 
@@ -2199,7 +2199,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://ml.oxfordjournals.org/
 
     au < tested ; 2008 ; Music and Letters Volume 89 ; 89 >
-    au < testing ; 2009 ; Music and Letters Volume 90 ; 90 >
+    au < tested ; 2009 ; Music and Letters Volume 90 ; 90 >
 
   }
 

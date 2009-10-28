@@ -2785,6 +2785,8 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; JNCI Journal of the National Cancer Institute Volume 99 ; 99 >
+        au < HighWirePressPlugin ; manifest ; JNCI Journal of the National Cancer Institute Volume 100 ; 100 >
+        au < HighWirePressPlugin ; ready ; JNCI Journal of the National Cancer Institute Volume 101 ; 101 >
 
       }
 
@@ -3193,6 +3195,8 @@
 
         au < HighWireStrVolPlugin ; released ; Journal of Intellectual Property Law & Practice Volume 1 ; 1 >
         au < HighWireStrVolPlugin ; released ; Journal of Intellectual Property Law & Practice Volume 2 ; 2 >
+        au < HighWirePressPlugin ; manifest ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 >
+        au < HighWirePressPlugin ; ready ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 >
 
       }
 
@@ -3221,6 +3225,9 @@
 
         au < HighWirePressPlugin ; exists ; Journal of International Criminal Justice Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of International Criminal Justice Volume 4 ; 4 >
+        au < HighWirePressPlugin ; manifest ; Journal of International Criminal Justice Volume 5 ; 5 >
+        au < HighWirePressPlugin ; manifest ; Journal of International Criminal Justice Volume 6 ; 6 >
+        au < HighWirePressPlugin ; ready ; Journal of International Criminal Justice Volume 7 ; 7 >
 
       }
 
@@ -3249,6 +3256,9 @@
 
         au < HighWireStrVolPlugin ; released ; Journal of International Economic Law Volume 8 ; 8 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of International Economic Law Volume 9 ; 9 >
+        au < HighWirePressPlugin ; manifest ; Journal of International Economic Law Volume 10 ; 10 >
+        au < HighWirePressPlugin ; manifest ; Journal of International Economic Law Volume 11 ; 11 >
+        au < HighWirePressPlugin ; ready ; Journal of International Economic Law Volume 12 ; 12 >
 
       }
 
@@ -3278,6 +3288,8 @@
         au < HighWireStrVolPlugin ; released ; Journal of Islamic Studies Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Islamic Studies Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; released ; Journal of Islamic Studies Volume 18 ; 18 >
+        au < HighWirePressPlugin ; manifest ; Journal of Islamic Studies Volume 19 ; 19 >
+        au < HighWirePressPlugin ; ready ; Journal of Islamic Studies Volume 20 ; 20 >
 
       }
 
@@ -3307,6 +3319,8 @@
         au < HighWireStrVolPlugin ; released ; Journal of Law, Economics, and Organization Volume 21 ; 21 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; released ; Journal of Law, Economics, and Organization Volume 23 ; 23 >
+        au < HighWirePressPlugin ; manifest ; Journal of Law, Economics, and Organization Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Journal of Law, Economics, and Organization Volume 25 ; 25 >
 
       }
 
@@ -3336,6 +3350,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Journal of Logic and Computation Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Journal of Logic and Computation Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; released ; Journal of Logic and Computation Volume 17 ; 17 >
+        au < HighWirePressPlugin ; manifest ; Journal of Logic and Computation Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Journal of Logic and Computation Volume 19 ; 19 >
 
       }
 
@@ -3364,6 +3380,9 @@
 
         au < HighWireStrVolPlugin ; ready ; Journal of Molluscan Studies Volume 71 ; 71 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Molluscan Studies Volume 72 ; 72 >
+        au < HighWirePressPlugin ; manifest ; Journal of Molluscan Studies Volume 73 ; 73 >
+        au < HighWirePressPlugin ; manifest ; Journal of Molluscan Studies Volume 74 ; 74 >
+        au < HighWirePressPlugin ; ready ; Journal of Molluscan Studies Volume 75 ; 75 >
 
       }
 
@@ -3393,6 +3412,8 @@
         au < HighWireStrVolPlugin ; released ; Journal of Pediatric Psychology Volume 30 ; 30 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Pediatric Psychology Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; released ; Journal of Pediatric Psychology Volume 32 ; 32 >
+        au < HighWirePressPlugin ; manifest ; Journal of Pediatric Psychology Volume 33 ; 33 >
+        au < HighWirePressPlugin ; manifest ; Journal of Pediatric Psychology Volume 34 ; 34 >
 
       }
 
@@ -3657,6 +3678,9 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Journal of the History of Collections Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; released ; Journal of the History of Collections Volume 18 ; 18 >
+        au < HighWirePressPlugin ; manifest ; Journal of the History of Collections Volume 19 ; 19 >
+        au < HighWirePressPlugin ; manifest ; Journal of the History of Collections Volume 20 ; 20 >
+        au < HighWirePressPlugin ; ready ; Journal of the History of Collections Volume 21 ; 21 >
 
       }
 
@@ -3686,11 +3710,29 @@
         au < HighWirePressPlugin ; doNotProcess ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 >
         au < HighWireStrVolPlugin ; released ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 >
         au < HighWireStrVolPlugin ; released ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
+        au < HighWirePressPlugin ; manifest ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 >
+        au < HighWirePressPlugin ; ready ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
 
       }
 
     }
+    
+    {
 
+      title <
+        name = Journal of Human Rights Practice
+      >
+      
+      { 
+      
+        param[base_url] = http://jhrp.oxfordjournals.org/
+
+        au < HighWirePressPlugin ; ready ; Journal of Human Rights Practice Volume 1 ; 1 >
+
+      }
+  
+    }
+  
     {
 
       title <
@@ -3716,12 +3758,30 @@
         au < HighWirePressPlugin ; doNotProcess ; Journal of the ICRU Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of the ICRU Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; ready ; Journal of the ICRU Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the ICRU Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Journal of the ICRU Volume 9 ; 9 >
 
       }
 
     }
 
+    {
+
+      title <
+        name = The Journal of World Energy Law & Business
+      >
+
+      {
+
+        param[base_url] = http://jwelb.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
+        au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
+
+      }
+  
+    }
+  
     {
 
       title <
@@ -3738,12 +3798,46 @@
         au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 77 ; 77 >
         au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 78 ; 78 >
         au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 79 ; 79 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 80 ; 80 >
+        au < HighWirePressPlugin ; ready ; Journal of the London Mathematical Society Volume 80 ; 80 >
 
       }
 
     }
 
+  {
+
+    title <
+      name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine
+    >
+
+    {
+ 
+      param[base_url] = http://jmp.oxfordjournals.org/
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+      au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
+      au < HighWirePressPlugin ; ready ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+
+    }
+
+  }
+    
+  {
+
+    title <
+      name = Journal of Molecular Cell Biology
+    >
+
+    {
+
+      param[base_url] = http://jmcb.oxfordjournals.org/
+
+      au < HighWirePressPlugin ; ready ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+
+    }
+
+  }
+       
     {
 
       title <
@@ -4246,7 +4340,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Music and Letters Volume 87 ; 87 >
         au < HighWireStrVolPlugin ; released ; Music and Letters Volume 88 ; 88 >
         au < HighWirePressPlugin ; ready ; Music and Letters Volume 89 ; 89 >
-        au < HighWirePressPlugin ; testing ; Music and Letters Volume 90 ; 90 >
+        au < HighWirePressPlugin ; ready ; Music and Letters Volume 90 ; 90 >
 
       }
 

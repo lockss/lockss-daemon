@@ -384,4 +384,52 @@
 
   }
 
+  {
+
+    title <
+      name = Nature Nanotechnology
+    >
+
+    param[journal_id] = nnano
+
+    au < ready ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Neuroscience
+    >
+
+    param[journal_id] = neuro
+
+    au < ready ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Photonics
+    >
+
+    param[journal_id] = nphoton
+
+    au < ready ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Physics
+    >
+
+    param[journal_id] = nphys
+
+    au < ready ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
+
+  }
+
 }
