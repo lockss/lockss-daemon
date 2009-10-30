@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.69 2009-10-27 13:00:31 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.70 2009-10-30 16:43:12 dshr Exp $
  */
 
 /*
@@ -175,7 +175,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
                                                        String root) {
     SimulatedContentGenerator ret = scgen;
     if (ret == null) {
-      log.debug("getContentGenerator: new");
       if (root == null) {
 	root = fileRoot;
       }
@@ -186,8 +185,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 	ret = SimulatedContentGenerator.getInstance(fileRoot);
       }
       scgen = ret;
-    } else {
-      log.debug("getContentGenerator: old");
     }
     return ret;
   }
@@ -196,8 +193,15 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * generateContentTree() generates the simulated content.
    */
   public void generateContentTree() {
-    if (!getContentGenerator().isContentTree()) {
-      simRoot = getContentGenerator().generateContentTree();
+    if (scgen == null) {
+      scgen = getContentGenerator();
+    }
+    if (scgen == null) {
+      log.error("scgen null in generateContentTree");
+      return;
+    }
+    if (!scgen.isContentTree()) {
+      simRoot = scgen.generateContentTree();
     }
   }
 
@@ -207,10 +211,13 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public void resetContentTree() {
     // clears and restores content tree to starting state
-    if (getContentGenerator().isContentTree()) {
-      getContentGenerator().deleteContentTree();
+    if (scgen == null) {
+      scgen = getContentGenerator();
     }
-    simRoot = getContentGenerator().generateContentTree();
+    if (scgen.isContentTree()) {
+      scgen.deleteContentTree();
+    }
+    simRoot = scgen.generateContentTree();
   }
 
   public void alterContentTree() {
@@ -226,7 +233,10 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * deleteContentTree() deletes the simulated content.
    */
   public void deleteContentTree() {
-    getContentGenerator().deleteContentTree();
+    if (scgen == null) {
+      scgen = getContentGenerator();
+    }
+    scgen.deleteContentTree();
   }
 
   public void pauseBeforeFetch(String previousContentType) {
@@ -351,8 +361,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       doFilter = !StringUtil.isNullString(spec);
       // if no previous generator, any content-determining parameters have
       // changed from last time, generate new content
-      log.debug("gen: " + gen);
-
       if (scgen == null ||
 	  !(gen.getContentRoot().equals(scgen.getContentRoot()) &&
 	    gen.getTreeDepth() == scgen.getTreeDepth() &&
@@ -366,6 +374,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 	    gen.getAbnormalFileNumber() == scgen.getAbnormalFileNumber())) {
 	scgen = gen;
 	resetContentTree();
+      } else if (scgen != null && !scgen.isContentTree()) {
+	simRoot = scgen.generateContentTree();
       }
     } catch (Configuration.InvalidParam e) {
       throw new ArchivalUnit.ConfigurationException("Bad config value", e);
