@@ -7,6 +7,245 @@
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
 
+  {
+
+    title <
+      name = Forestry: An International Journal of Forest Research
+    >
+
+    param[base_url] = http://forestry.oxfordjournals.org/
+
+    au < ready ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Forum for Modern Language Studies
+    >
+
+    param[base_url] = http://fmls.oxfordjournals.org/
+
+    au < ready ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = French History
+    >
+
+    param[base_url] = http://fh.oxfordjournals.org/
+
+    au < ready ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = French Studies
+    >
+
+    param[base_url] = http://fs.oxfordjournals.org/
+
+    au < ready ; 2009 ; French Studies Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = German History
+    >
+
+    param[base_url] = http://gh.oxfordjournals.org/
+
+    au < ready ; 2009 ; German History Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = The Gerontologist
+    >
+
+    param[base_url] = http://gerontologist.oxfordjournals.org/
+
+    au < ready ; 2009 ; The Gerontologist Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Glycobiology
+    >
+
+    param[base_url] = http://glycob.oxfordjournals.org/
+
+    au < ready ; 2009 ; Glycobiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Health Education Research
+    >
+
+    param[base_url] = http://her.oxfordjournals.org/
+
+    au < ready ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Health Policy and Planning
+    >
+
+    param[base_url] = http://heapol.oxfordjournals.org/
+
+    au < ready ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Health Promotion International
+    >
+
+    param[base_url] = http://heapro.oxfordjournals.org/
+
+    au < ready ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = IMA Journal of Numerical Analysis
+    >
+
+    param[base_url] = http://imajna.oxfordjournals.org/
+
+    au < ready ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Industrial and Corporate Change
+    >
+
+    param[base_url] = http://icc.oxfordjournals.org/
+
+    au < ready ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Industrial Law Journal
+    >
+
+    param[base_url] = http://ilj.oxfordjournals.org/
+
+    au < ready ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = InnovAiT
+    >
+
+    param[base_url] = http://rcgp-innovait.oxfordjournals.org/
+
+    au < ready ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Integrative and Comparative Biology
+    >
+
+    param[base_url] = http://icb.oxfordjournals.org/
+
+    au < ready ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Interdisciplinary Studies in Literature and Environment
+    >
+
+    param[base_url] = http://isle.oxfordjournals.org/
+
+    au < ready ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = International Immunology
+    >
+
+    param[base_url] = http://intimm.oxfordjournals.org/
+
+    au < ready ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Constitutional Law
+    >
+
+    param[base_url] = http://icon.oxfordjournals.org/
+
+    au < ready ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Epidemiology
+    >
+
+    param[base_url] = http://ije.oxfordjournals.org/
+
+    au < ready ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Law and Information Technology
+    >
+
+    param[base_url] = http://ijlit.oxfordjournals.org/
+
+    au < ready ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+
+  }
 
   {
 
