@@ -4,7 +4,7 @@
     <string>uk.org.lockss.plugin.drogoresearch.DrogoResearchPlugin</string>
   </entry>
   <entry>
-    <string>text/html_filter</string>
+    <string>text/html_filter_factory</string>
     <string>uk.org.lockss.plugin.drogoresearch.DrogoResearchHtmlFilterFactory</string>
   </entry>
   <entry>
