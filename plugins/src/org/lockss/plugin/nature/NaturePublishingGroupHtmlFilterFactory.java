@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.6 2009-08-30 00:36:22 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.7 2009-10-30 20:09:45 thib_gc Exp $
  */
 
 /*
@@ -71,6 +71,16 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "class",
                                                                          "ad-vert")),
+
+        /*
+         * Another category of ads that can appear on (for example)
+         * abstract pages.
+         * 
+         * Remove <div class="ad-rh ...">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+                                                                              "class",
+                                                                              "^ad-rh ")),
 
         /*
          * There can be ads in mid-bastract. These ads are enclosed in
@@ -165,7 +175,45 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "more-like-this")),
+
                                                                          
+        /*
+         * Some Nature titles (e.g. Nature Methods) seem to be using
+         * an older layout that is table-oriented. They require their
+         * own set of mitigating filter rules. 
+         */
+        
+        /*
+         * The institution name is enclosed in a recognizable <div>.
+         * 
+         * Remove <div class="logon">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "class",
+                                                                         "logon")),
+
+        /*
+         * The right column is no longer enclosed in a recognizable
+         * <div>, so we need to single out those variable parts we
+         * can. The first one is the Nature Jobs ticker.
+         * 
+         * Remove <div id="natjob">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "natjob")),
+                                                                         
+        /*
+         * Similarly, we need to filter out the Nature Open Innovation
+         * Challenge section.
+         * 
+         * Remove <div id="natpav">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "natpav")),
+
+
     };
 
     return new HtmlFilterInputStream(in,
