@@ -474,7 +474,7 @@
     param[base_url] = http://cercor.oxfordjournals.org/
 
     au < manifest ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
-    au < manifest ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; >
+    au < testing ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; >
 
   }
 
@@ -487,7 +487,7 @@
     param[base_url] = http://cesifo.oxfordjournals.org/
 
     au < manifest ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
-    au < manifest ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; >
+    au < testing ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; >
 
   }
 
@@ -500,7 +500,7 @@
     param[base_url] = http://chemse.oxfordjournals.org/
 
     au < manifest ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
-    au < manifest ; 2009 ; Chemical Senses Volume 34 ; 34 ; >
+    au < testing ; 2009 ; Chemical Senses Volume 34 ; 34 ; >
 
   }
 
@@ -513,7 +513,7 @@
     param[base_url] = http://chinesejil.oxfordjournals.org/
 
     au < manifest ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
-    au < manifest ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; >
+    au < testing ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; >
 
   }
 
@@ -538,7 +538,7 @@
     param[base_url] = http://cb.oxfordjournals.org/
 
     au < manifest ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
-    au < manifest ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; >
+    au < testing ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; >
 
   }
 
@@ -551,7 +551,7 @@
     param[base_url] = http://cdj.oxfordjournals.org/
 
     au < manifest ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
-    au < manifest ; 2009 ; Community Development Journal Volume 44 ; 44 ; >
+    au < testing ; 2009 ; Community Development Journal Volume 44 ; 44 ; >
 
   }
 
@@ -1497,7 +1497,7 @@
     param[base_url] = http://jcle.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
-    au < testing ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+    au < ready ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
 
   }
 
@@ -1510,7 +1510,7 @@
     param[base_url] = http://jcsl.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
-    au < testing ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+    au < ready ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
 
   }
 
@@ -1523,7 +1523,7 @@
     param[base_url] = http://jdsde.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
-    au < testing ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+    au < ready ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
 
   }
 
@@ -1536,7 +1536,7 @@
     param[base_url] = http://jdh.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
-    au < testing ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+    au < ready ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
 
   }
 
@@ -1549,7 +1549,7 @@
     param[base_url] = http://joeg.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
-    au < testing ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+    au < ready ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
 
   }
 
@@ -1562,7 +1562,7 @@
     param[base_url] = http://jmicro.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
-    au < testing ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
+    au < ready ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
 
   }
 

@@ -9195,7 +9195,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Police Quarterly Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; ready ; Police Quarterly Volume 10 ; 10 >
         au < HighWirePressPlugin ; manifest ; Police Quarterly Volume 11 ; 11 >
-        au < HighWirePressPlugin ; manifest ; Police Quarterly Volume 12 ; 12 >
+        au < HighWirePressPlugin ; ready ; Police Quarterly Volume 12 ; 12 >
 
       }
 
@@ -9216,7 +9216,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; manifest ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; ready ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
         au < HighWirePressPlugin ; manifest ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
-        au < HighWirePressPlugin ; manifest ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
 
       }
 
@@ -9236,7 +9236,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Political Research Quarterly Volume 59 ; 59 >
         au < HighWireStrVolPlugin ; ready ; Political Research Quarterly Volume 60 ; 60 >
         au < HighWirePressPlugin ; manifest ; Political Research Quarterly Volume 61 ; 61 >
-        au < HighWirePressPlugin ; manifest ; Political Research Quarterly Volume 62 ; 62 >
+        au < HighWirePressPlugin ; ready ; Political Research Quarterly Volume 62 ; 62 >
 
       }
 
@@ -9257,7 +9257,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Political Theory Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; ready ; Political Theory Volume 35 ; 35 >
         au < HighWirePressPlugin ; manifest ; Political Theory Volume 36 ; 36 >
-        au < HighWirePressPlugin ; manifest ; Political Theory Volume 37 ; 37 >
+        au < HighWirePressPlugin ; ready ; Political Theory Volume 37 ; 37 >
 
       }
 
@@ -9278,7 +9278,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Politics & Society Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; ready ; Politics & Society Volume 35 ; 35 >
         au < HighWirePressPlugin ; manifest ; Politics & Society Volume 36 ; 36 >
-        au < HighWirePressPlugin ; manifest ; Politics & Society Volume 37 ; 37 >
+        au < HighWirePressPlugin ; ready ; Politics & Society Volume 37 ; 37 >
 
       }
 
@@ -9299,7 +9299,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; manifest ; Politics, Philosophy & Economics Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Politics, Philosophy & Economics Volume 6 ; 6 >
         au < HighWirePressPlugin ; manifest ; Politics, Philosophy & Economics Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Politics, Philosophy & Economics Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Politics, Philosophy & Economics Volume 8 ; 8 >
 
       }
 
@@ -9320,7 +9320,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; manifest ; The Prison Journal Volume 86 ; 86 >
         au < HighWireStrVolPlugin ; ready ; The Prison Journal Volume 87 ; 87 >
         au < HighWirePressPlugin ; manifest ; The Prison Journal Volume 88 ; 88 >
-        au < HighWirePressPlugin ; manifest ; The Prison Journal Volume 89 ; 89 >
+        au < HighWirePressPlugin ; ready ; The Prison Journal Volume 89 ; 89 >
 
       }
 
@@ -10985,7 +10985,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; released ; Visual Communication Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Visual Communication Volume 6 ; 6 >
         au < HighWirePressPlugin ; manifest ; Visual Communication Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Visual Communication Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Visual Communication Volume 8 ; 8 >
 
       }
 
@@ -11006,7 +11006,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; War in History Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; War in History Volume 14 ; 14 >
         au < HighWirePressPlugin ; manifest ; War in History Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; War in History Volume 16 ; 16 >
+        au < HighWirePressPlugin ; ready ; War in History Volume 16 ; 16 >
 
       }
 
@@ -11027,7 +11027,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Waste Management & Research Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; ready ; Waste Management & Research Volume 25 ; 25 >
         au < HighWirePressPlugin ; manifest ; Waste Management & Research Volume 26 ; 26 >
-        au < HighWirePressPlugin ; manifest ; Waste Management & Research Volume 27 ; 27 >
+        au < HighWirePressPlugin ; ready ; Waste Management & Research Volume 27 ; 27 >
 
       }
 
@@ -11048,7 +11048,25 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; manifest ; Western Journal of Nursing Research Volume 28 ; 28 >
         au < HighWirePressPlugin ; manifest ; Western Journal of Nursing Research Volume 29 ; 29 >
         au < HighWirePressPlugin ; manifest ; Western Journal of Nursing Research Volume 30 ; 30 >
-        au < HighWirePressPlugin ; manifest ; Western Journal of Nursing Research Volume 31 ; 31 >
+        au < HighWirePressPlugin ; ready ; Western Journal of Nursing Research Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Word of Mouth
+      >
+      
+      {
+
+        param[base_url] = http://wom.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Word of Mouth Volume 20 ; 20 ; >
+        au < HighWirePressPlugin ; ready ; Word of Mouth Volume 21 ; 21 ; >
 
       }
 
@@ -11069,7 +11087,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; released ; Work and Occupations Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; released ; Work and Occupations Volume 34 ; 34 >
         au < HighWirePressPlugin ; manifest ; Work and Occupations Volume 35 ; 35 >
-        au < HighWirePressPlugin ; manifest ; Work and Occupations Volume 36 ; 36 >
+        au < HighWirePressPlugin ; ready ; Work and Occupations Volume 36 ; 36 >
 
       }
 

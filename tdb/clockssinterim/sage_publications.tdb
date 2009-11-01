@@ -1380,6 +1380,90 @@
     au < tested ; 2009 ; Journal of Dental Research Volume 88 ; 88 ; >
 
   }
+
+  {
+
+    title <
+      name = Police Quarterly
+    >
+
+    param[base_url] = http://pqx.sagepub.com/
+
+    au < tested ; 2009 ; Police Quarterly Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+    title <
+      name = Policy, Politics, & Nursing Practice
+    >
+
+    param[base_url] = http://ppn.sagepub.com/
+
+    au < tested ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Political Research Quarterly
+    >
+
+    param[base_url] = http://prq.sagepub.com/
+
+    au < tested ; 2009 ; Political Research Quarterly Volume 62 ; 62 ; >
+
+  }
+
+  {
+
+    title <
+      name = Political Theory
+    >
+
+    param[base_url] = http://ptx.sagepub.com/
+
+    au < tested ; 2009 ; Political Theory Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+    title <
+      name = Politics & Society
+    >
+
+    param[base_url] = http://pas.sagepub.com/
+
+    au < tested ; 2009 ; Politics & Society Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+    title <
+      name = Politics, Philosophy & Economics
+    >
+
+    param[base_url] = http://ppe.sagepub.com/
+
+    au < tested ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Prison Journal
+    >
+
+    param[base_url] = http://tpj.sagepub.com/
+
+    au < tested ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
+
+  }
   
   {
 
@@ -1619,6 +1703,78 @@
     param[base_url] = http://sri.sagepub.com/
 
     au < ready ; 2009 ; Surgical Innovation Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Visual Communication
+    >
+
+    param[base_url] = http://vcj.sagepub.com/
+
+    au < tested ; 2009 ; Visual Communication Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = War in History
+    >
+
+    param[base_url] = http://wih.sagepub.com/
+
+    au < tested ; 2009 ; War in History Volume 16 ; 16 ; >
+
+  }
+
+  {
+
+    title <
+      name = Waste Management & Research
+    >
+
+    param[base_url] = http://wmr.sagepub.com/
+
+    au < tested ; 2009 ; Waste Management & Research Volume 27 ; 27 ; >
+
+  }
+
+  {
+
+    title <
+      name = Western Journal of Nursing Research
+    >
+
+    param[base_url] = http://wjn.sagepub.com/
+
+    au < tested ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+    title <
+      name = Word of Mouth
+    >
+
+    param[base_url] = http://wom.sagepub.com/
+
+    au < tested ; 2009 ; Word of Mouth Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+    title <
+      name = Work and Occupations
+    >
+
+    param[base_url] = http://wox.sagepub.com/
+
+    au < tested ; 2009 ; Work and Occupations Volume 36 ; 36 ; >
 
   }
 
