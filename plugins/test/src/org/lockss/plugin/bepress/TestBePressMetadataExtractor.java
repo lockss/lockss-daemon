@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.2 2009-11-02 18:17:45 dshr Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.3 2009-11-02 19:43:17 dshr Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.plugin.simulated.*;
 
 public class TestBePressMetadataExtractor extends LockssTestCase{
 
-  static Logger log = Logger.getLogger("TestBepressMetadataExtractor");
+  static Logger log = Logger.getLogger("TestBePressMetadataExtractor");
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
@@ -80,7 +80,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
   };
 
   public static void main(String[] args) throws Exception {
-    TestBepressMetadataExtractor test = new TestBepressMetadataExtractor();
+    TestBePressMetadataExtractor test = new TestBePressMetadataExtractor();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
@@ -100,7 +100,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|bepress|TestBepressMetadataExtractor$MySimulatedPlugin.root~" + PropKeyEncoder.encode(tempDirPath);
+    String auId = "org|lockss|plugin|bepress|TestBePressMetadataExtractor$MySimulatedPlugin.root~" + PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
