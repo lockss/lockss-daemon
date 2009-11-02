@@ -978,8 +978,8 @@
 
     au < manifest ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
     au < manifest ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
-    au < testing ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
-    au < testing ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -992,7 +992,7 @@
     param[base_url] = http://hgs.oxfordjournals.org/
 
     au < manifest ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
-    au < testing ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1005,7 +1005,7 @@
     param[base_url] = http://hmg.oxfordjournals.org/
 
     au < manifest ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
-    au < testing ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1018,7 +1018,7 @@
     param[base_url] = http://humrep.oxfordjournals.org/
 
     au < manifest ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
-    au < testing ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1031,7 +1031,7 @@
     param[base_url] = http://humupd.oxfordjournals.org/
 
     au < manifest ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
-    au < testing ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1044,7 +1044,7 @@
     param[base_url] = http://hrlr.oxfordjournals.org/
 
     au < manifest ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
-    au < testing ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1057,7 +1057,7 @@
     param[base_url] = http://icesjms.oxfordjournals.org/
 
     au < manifest ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
-    au < testing ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1118,7 +1118,7 @@
     param[base_url] = http://imamat.oxfordjournals.org/
 
     au < manifest ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
-    au < testing ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1131,7 +1131,7 @@
     param[base_url] = http://imaman.oxfordjournals.org/
 
     au < manifest ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
-    au < testing ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1144,7 +1144,7 @@
     param[base_url] = http://imamci.oxfordjournals.org/
 
     au < manifest ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
-    au < testing ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1287,7 +1287,7 @@
     param[base_url] = http://lawfam.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
-    au < testing ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1300,7 +1300,7 @@
     param[base_url] = http://ijl.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
-    au < testing ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1313,7 +1313,7 @@
     param[base_url] = http://ijlct.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
-    au < testing ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1326,7 +1326,7 @@
     param[base_url] = http://ijpor.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
-    au < testing ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1339,7 +1339,7 @@
     param[base_url] = http://intqhc.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
-    au < testing ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1352,7 +1352,7 @@
     param[base_url] = http://ijrl.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
-    au < testing ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1365,7 +1365,7 @@
     param[base_url] = http://ijtj.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
-    au < testing ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1377,7 +1377,7 @@
 
     param[base_url] = http://imrn.oxfordjournals.org/
 
-    au < testing ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1390,7 +1390,7 @@
     param[base_url] = http://irap.oxfordjournals.org/
 
     au < manifest ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
-    au < testing ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1403,7 +1403,7 @@
     param[base_url] = http://itnow.oxfordjournals.org/
 
     au < manifest ; 2008 ; ITNOW Volume 50 ; 50 ; >
-    au < testing ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
 
   }
 
