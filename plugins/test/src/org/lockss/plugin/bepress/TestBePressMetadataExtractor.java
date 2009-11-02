@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.1 2009-11-02 17:56:19 dshr Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.2 2009-11-02 18:17:45 dshr Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 
-public class TestBepressMetadataExtractor extends LockssTestCase{
+public class TestBePressMetadataExtractor extends LockssTestCase{
 
   static Logger log = Logger.getLogger("TestBepressMetadataExtractor");
 
