@@ -16,7 +16,7 @@
     param[base_url] = http://abbs.oxfordjournals.org/
 
     au < manifest ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
-    au < manifest ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
+    au < testing ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -29,7 +29,7 @@
     param[base_url] = http://adaptation.oxfordjournals.org/
 
     au < manifest ; 2008 ; Adaptation Volume 1 ; 1 ; >
-    au < manifest ; 2009 ; Adaptation Volume 2 ; 2 ; >
+    au < testing ; 2009 ; Adaptation Volume 2 ; 2 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -42,7 +42,7 @@
     param[base_url] = http://ageing.oxfordjournals.org/
 
     au < manifest ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
-    au < manifest ; 2009 ; Age and Ageing Volume 38 ; 38 ; >
+    au < testing ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -55,7 +55,7 @@
     param[base_url] = http://alcalc.oxfordjournals.org/
 
     au < manifest ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < manifest ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+    au < testing ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -69,8 +69,8 @@
 
     au < manifest ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
     au < manifest ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
-    au < manifest ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; >
-    au < manifest ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
+    au < testing ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+    au < testing ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -83,7 +83,7 @@
     param[base_url] = http://aler.oxfordjournals.org/
 
     au < manifest ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
-    au < manifest ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; >
+    au < testing ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -95,7 +95,7 @@
 
     param[base_url] = http://alh.oxfordjournals.org/
 
-    au < manifest ; 2009 ; American Literary History Volume 21 ; 21 ; >
+    au < testing ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -108,7 +108,7 @@
     param[base_url] = http://analysis.oxfordjournals.org/
 
     au < manifest ; 2008 ; Analysis Volume 68 ; 68 ; >
-    au < manifest ; 2009 ; Analysis Volume 69 ; 69 ; >
+    au < testing ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -122,8 +122,8 @@
 
     au < manifest ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
     au < manifest ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
-    au < manifest ; 2009 ; Annals of Botany Volume 103 ; 103 ; >
-    au < manifest ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
+    au < testing ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+    au < testing ; 2009 ; Annals of Botany Volume 104 ; 104 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -136,7 +136,7 @@
     param[base_url] = http://annhyg.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
-    au < manifest ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; >
+    au < testing ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -149,7 +149,7 @@
     param[base_url] = http://annonc.oxfordjournals.org/
 
     au < manifest ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
-    au < manifest ; 2009 ; Annals of Oncology Volume 20 ; 20 ; >
+    au < testing ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -162,7 +162,7 @@
     param[base_url] = http://applij.oxfordjournals.org/
 
     au < manifest ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
-    au < manifest ; 2009 ; Applied Linguistics Volume 30 ; 30 ; >
+    au < testing ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -175,7 +175,7 @@
     param[base_url] = http://acn.oxfordjournals.org/
 
     au < manifest ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
-    au < manifest ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; >
+    au < testing ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -188,7 +188,7 @@
     param[base_url] = http://beheco.oxfordjournals.org/
 
     au < manifest ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
-    au < manifest ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; >
+    au < testing ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -201,7 +201,7 @@
     param[base_url] = http://bioinformatics.oxfordjournals.org/
 
     au < manifest ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
-    au < manifest ; 2009 ; Bioinformatics Volume 25 ; 25 ; >
+    au < testing ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -214,7 +214,7 @@
     param[base_url] = http://biomet.oxfordjournals.org/
 
     au < manifest ; 2008 ; Biometrika Volume 95 ; 95 ; >
-    au < manifest ; 2009 ; Biometrika Volume 96 ; 96 ; >
+    au < testing ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -227,7 +227,7 @@
     param[base_url] = http://biohorizons.oxfordjournals.org/
 
     au < manifest ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
-    au < manifest ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; >
+    au < testing ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -240,7 +240,7 @@
     param[base_url] = http://biostatistics.oxfordjournals.org/
 
     au < manifest ; 2008 ; Biostatistics Volume 9 ; 9 ; >
-    au < manifest ; 2009 ; Biostatistics Volume 10 ; 10 ; >
+    au < testing ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -254,8 +254,8 @@
 
     au < manifest ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
     au < manifest ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
-    au < manifest ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; >
-    au < manifest ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; >
+    au < testing ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -268,7 +268,7 @@
     param[base_url] = http://brain.oxfordjournals.org/
 
     au < manifest ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < manifest ; 2009 ; Brain Volume 132 ; 132 ; >
+    au < testing ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -281,7 +281,7 @@
     param[base_url] = http://bib.oxfordjournals.org/
 
     au < manifest ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
-    au < manifest ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; >
+    au < testing ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -294,7 +294,7 @@
     param[base_url] = http://bfgp.oxfordjournals.org/
 
     au < manifest ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < manifest ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
+    au < testing ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -307,7 +307,7 @@
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
 
     au < manifest ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
-    au < manifest ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
+    au < testing ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -320,7 +320,7 @@
     param[base_url] = http://bjc.oxfordjournals.org/
 
     au < manifest ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
-    au < manifest ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; >
+    au < testing ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -333,7 +333,7 @@
     param[base_url] = http://bjps.oxfordjournals.org/
 
     au < manifest ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
-    au < manifest ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
+    au < testing ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -346,7 +346,7 @@
     param[base_url] = http://bjsw.oxfordjournals.org/
 
     au < manifest ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
-    au < manifest ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
+    au < testing ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -362,9 +362,9 @@
     au < manifest ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
     au < manifest ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < manifest ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
-    au < manifest ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; >
-    au < manifest ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; >
-    au < manifest ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; >
+    au < testing ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -377,7 +377,7 @@
     param[base_url] = http://blms.oxfordjournals.org/
 
     au < manifest ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
-    au < manifest ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
+    au < testing ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -390,7 +390,7 @@
     param[base_url] = http://cje.oxfordjournals.org/
 
     au < manifest ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
-    au < manifest ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; >
+    au < testing ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -403,7 +403,7 @@
     param[base_url] = http://cjres.oxfordjournals.org/
 
     au < manifest ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
-    au < manifest ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; >
+    au < testing ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -416,7 +416,7 @@
     param[base_url] = http://camqtly.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
-    au < manifest ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; >
+    au < testing ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -429,7 +429,7 @@
     param[base_url] = http://cmlj.oxfordjournals.org/
 
     au < manifest ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
-    au < manifest ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; >
+    au < testing ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -442,7 +442,7 @@
     param[base_url] = http://carcin.oxfordjournals.org/
 
     au < manifest ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
-    au < manifest ; 2009 ; Carcinogenesis Volume 30 ; 30 ; >
+    au < testing ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -458,9 +458,9 @@
     au < manifest ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
     au < manifest ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < manifest ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < manifest ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
-    au < manifest ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
-    au < manifest ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
+    au < testing ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < testing ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < testing ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
     au < manifest ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
 
   }
@@ -474,7 +474,7 @@
     param[base_url] = http://cercor.oxfordjournals.org/
 
     au < manifest ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
-    au < testing ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; >
+    au < testing ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -487,7 +487,7 @@
     param[base_url] = http://cesifo.oxfordjournals.org/
 
     au < manifest ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
-    au < testing ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; >
+    au < testing ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -500,7 +500,7 @@
     param[base_url] = http://chemse.oxfordjournals.org/
 
     au < manifest ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
-    au < testing ; 2009 ; Chemical Senses Volume 34 ; 34 ; >
+    au < testing ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -513,7 +513,7 @@
     param[base_url] = http://chinesejil.oxfordjournals.org/
 
     au < manifest ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
-    au < testing ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; >
+    au < testing ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -538,7 +538,7 @@
     param[base_url] = http://cb.oxfordjournals.org/
 
     au < manifest ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
-    au < testing ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; >
+    au < testing ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -551,7 +551,7 @@
     param[base_url] = http://cdj.oxfordjournals.org/
 
     au < manifest ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
-    au < testing ; 2009 ; Community Development Journal Volume 44 ; 44 ; >
+    au < testing ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2769,7 +2769,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://slr.oxfordjournals.org/
 
     au < manifest ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
-    au < manifest ; 2009 ; Statute Law Review Volume 30 ; 30 ; >
+    au < testing ; 2009 ; Statute Law Review Volume 30 ; 30 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2782,7 +2782,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://sysbio.oxfordjournals.org/
 
     au < manifest ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
-    au < manifest ; 2009 ; Systematic Biology Volume 58 ; 58 ; >
+    au < testing ; 2009 ; Systematic Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2795,7 +2795,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://teamat.oxfordjournals.org/
 
     au < manifest ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
-    au < manifest ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; >
+    au < testing ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2813,10 +2813,10 @@ comment[mplant] = no manifest page
     au < manifest ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
     au < manifest ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
     au < manifest ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
-    au < manifest ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; >
-    au < manifest ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; >
-    au < manifest ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; >
-    au < manifest ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; >
+    au < testing ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; reingest4.clockss.org:8082 >
     au < manifest ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
 
   }
@@ -2830,7 +2830,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://treephys.oxfordjournals.org/
 
     au < manifest ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
-    au < manifest ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
+    au < testing ; 2009 ; Tree Physiology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2843,7 +2843,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://tandt.oxfordjournals.org/
 
     au < manifest ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
-    au < manifest ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
+    au < testing ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2856,7 +2856,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://tcbh.oxfordjournals.org/
 
     au < manifest ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
-    au < manifest ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
+    au < testing ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2869,7 +2869,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://wber.oxfordjournals.org/
 
     au < manifest ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
-    au < manifest ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
+    au < testing ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2882,7 +2882,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://wbro.oxfordjournals.org/
 
     au < manifest ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
-    au < manifest ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; >
+    au < testing ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2895,7 +2895,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://ywcct.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
-    au < manifest ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; >
+    au < testing ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; reingest4.clockss.org:8082 >
 
   }
 
