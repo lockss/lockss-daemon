@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.48 2009-09-29 23:20:45 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.49 2009-11-03 05:56:06 tlipkis Exp $
  */
 
 /*
@@ -116,6 +116,15 @@ public class BlockingStreamComm
     PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 0;
 
+  /** Enable SO_KEEPALIVE if true */
+  public static final String PARAM_SOCKET_KEEPALIVE =
+    PREFIX + "socketKeepAlive";
+  public static final boolean DEFAULT_SOCKET_KEEPALIVE = true;
+
+  /** Enable TCP_NODELAY if true */
+  public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNoDelay";
+  public static final boolean DEFAULT_TCP_NODELAY = true;
+
   /** Time after which idle channel will be closed */
   public static final String PARAM_CHANNEL_IDLE_TIME =
     PREFIX + "channelIdleTime";
@@ -181,10 +190,6 @@ public class BlockingStreamComm
   public static final String PARAM_IS_BUFFERED_SEND = PREFIX + "bufferedSend";
   public static final boolean DEFAULT_IS_BUFFERED_SEND = true;
 
-  /** TCP_NODELAY */
-  public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNodelay";
-  public static final boolean DEFAULT_TCP_NODELAY = true;
-
   /** Amount of time BlockingStreamComm.stopService() should wait for
    * worker threads to exit.  Zero disables wait.  */
   public static final String PARAM_WAIT_EXIT = PREFIX + "waitExit";
@@ -247,6 +252,8 @@ public class BlockingStreamComm
   private long paramPoolKeepaliveTime = DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE;
   private long paramConnectTimeout = DEFAULT_CONNECT_TIMEOUT;
   private long paramSoTimeout = DEFAULT_DATA_TIMEOUT;
+  private boolean paramSoKeepAlive = DEFAULT_SOCKET_KEEPALIVE;
+  private boolean paramIsTcpNoDelay = DEFAULT_TCP_NODELAY;
   private long paramSendWakeupTime = DEFAULT_SEND_WAKEUP_TIME;
   private long paramRetryBeforeExpiration = DEFAULT_RETRY_BEFORE_EXPIRATION;
   private long paramMaxPeerRetryInterval = DEFAULT_MAX_PEER_RETRY_INTERVAL;
@@ -255,7 +262,6 @@ public class BlockingStreamComm
   protected long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
   private long paramDrainInputTime = DEFAULT_DRAIN_INPUT_TIME;
   private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
-  private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
   private long paramWaitExit = DEFAULT_WAIT_EXIT;
   private boolean paramAbortOnUnknownOp = DEFAULT_ABORT_ON_UNKNOWN_OP;
   private long lastHungCheckTime = 0;
@@ -848,7 +854,7 @@ public class BlockingStreamComm
 			 DEFAULT_MIN_MEASURED_MESSAGE_SIZE);
 	paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
 						DEFAULT_IS_BUFFERED_SEND);
-	paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
+	paramIsTcpNoDelay = config.getBoolean(PARAM_TCP_NODELAY,
 					      DEFAULT_TCP_NODELAY);
 	paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
 					       DEFAULT_WAIT_EXIT);
@@ -871,6 +877,8 @@ public class BlockingStreamComm
 						     DEFAULT_CONNECT_TIMEOUT);
 	paramSoTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
 						DEFAULT_DATA_TIMEOUT);
+	paramSoKeepAlive = config.getBoolean(PARAM_SOCKET_KEEPALIVE,
+					     DEFAULT_SOCKET_KEEPALIVE);
 	paramSendWakeupTime = config.getTimeInterval(PARAM_SEND_WAKEUP_TIME,
 						     DEFAULT_SEND_WAKEUP_TIME);
 
@@ -1087,8 +1095,8 @@ public class BlockingStreamComm
     return paramIsBufferedSend;
   }
 
-  boolean isTcpNodelay() {
-    return paramIsTcpNodelay;
+  boolean isTcpNoDelay() {
+    return paramIsTcpNoDelay;
   }
 
   boolean getAbortOnUnknownOp() {
@@ -1288,12 +1296,31 @@ public class BlockingStreamComm
     pool.execute(run);
   }
 
+  /** Setup all socket options.  Should be called before any read/write
+   * calls */
+  void setupOpenSocket(Socket sock) throws SocketException {
+    if (log.isDebug3()) {
+      log.debug3(sock + "SO_TIMEOUT: " + getSoTimeout()
+		 + ", TcpNoDelay: " + isTcpNoDelay()
+		 + ", KeepAlive: " + paramSoKeepAlive);
+    }
+    sock.setSoTimeout((int)getSoTimeout());
+    sock.setTcpNoDelay(isTcpNoDelay());
+    sock.setKeepAlive(paramSoKeepAlive);
+  }
+
   // process a socket returned by accept()
   // overridable for testing
   void processIncomingConnection(Socket sock) throws IOException {
     if (sock.isClosed()) {
       // This should no longer happen
       throw new SocketException("processIncomingConnection got closed socket");
+    }
+    // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
+    setupOpenSocket(sock);
+    if (sock instanceof SSLSocket && paramSslClientAuth) {
+      // Ensure handshake is complete before doing anything else
+      handShake((SSLSocket)sock);
     }
     log.debug2("Accepted connection from " +
 	       new IPAddr(sock.getInetAddress()));
@@ -1550,10 +1577,6 @@ public class BlockingStreamComm
 	  if (!goOn) {
 	    break;
 	  }
-	  if (sock instanceof SSLSocket && paramSslClientAuth) {
-	    // Ensure handshake is complete before doing anything else
-	    handShake((SSLSocket)sock);
-	  }
 	  processIncomingConnection(sock);
 	} catch (SocketException e) {
 	  if (goOn) {
@@ -1671,17 +1694,23 @@ public class BlockingStreamComm
     }
   }
 
-  /** SocketFactory interface allows test code to use instrumented or mock
+  /** SocketFactory interface allows encapsulation of socket type details
+      (normal, SSL, etc.) and allows test code to use instrumented or mock
       sockets and peer channels */
   interface SocketFactory {
+    /** Return a listen socket of the appropriate type */
     ServerSocket newServerSocket(int port, int backlog) throws IOException;
 
+    /** Return a socket of the appropriate type connected to the remote
+     * address, with its options set */
     Socket newSocket(IPAddr addr, int port) throws IOException;
 
+    /** Overridable for testing */
     BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
 				       Socket sock)
 	throws IOException;
 
+    /** Overridable for testing */
     BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
 				       PeerIdentity peer)
 	throws IOException;
@@ -1695,7 +1724,9 @@ public class BlockingStreamComm
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
-      return new Socket(addr.getInetAddr(), port);
+      Socket sock = new Socket(addr.getInetAddr(), port);
+      setupOpenSocket(sock);
+      return sock;
     }
 
     public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
@@ -1750,6 +1781,8 @@ public class BlockingStreamComm
       SSLSocket s = (SSLSocket)
 	  sslSocketFactory.createSocket(addr.getInetAddr(), port);
       log.debug2("New SSL client socket: " + port + "@" + addr.toString());
+      // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
+      setupOpenSocket(s);
       if (paramSslClientAuth) {
 	handShake(s);
       }

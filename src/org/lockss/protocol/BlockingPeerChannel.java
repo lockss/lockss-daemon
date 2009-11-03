@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.28 2009-09-29 23:20:45 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.29 2009-11-03 05:56:06 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,7 @@ class BlockingPeerChannel implements PeerChannel {
   BlockingPeerChannel(BlockingStreamComm scomm, Socket sock) {
     this(scomm);
     this.sock = sock;
+    setSocket(sock);
     setState(ChannelState.ACCEPTED);
   }
 
@@ -143,6 +144,10 @@ class BlockingPeerChannel implements PeerChannel {
     this.peer = peer;
     this.ins = ins;
     this.outs = outs;
+  }
+
+  /** Test overrides to access socket */
+  void setSocket(Socket sock) {
   }
 
   /** Return our peer, or null if not known yet */
@@ -383,10 +388,6 @@ class BlockingPeerChannel implements PeerChannel {
   private void startConnectedChannel() throws IOException {
     assertState(ChannelState.STARTING, "startConnectedChannel");
     try {
-      sock.setSoTimeout((int)scomm.getSoTimeout());
-      boolean nodelay = scomm.isTcpNodelay();
-      if (log.isDebug3()) log.debug3(p()+"Setting NoDelay " + nodelay);
-      sock.setTcpNoDelay(nodelay);
       ins = sock.getInputStream();
       outs = sock.getOutputStream();
       if (scomm.isBufferedSend()) {
@@ -511,6 +512,7 @@ class BlockingPeerChannel implements PeerChannel {
       try {
 	sock = scomm.getSocketFactory().newSocket(tpad.getIPAddr(),
 						  tpad.getPort());
+	setSocket(sock);
 	connector.cancelTimeout();
 	didOpen = true;
 	this.connecter = wtConnecter = null;

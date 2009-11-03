@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.28 2009-08-09 07:39:21 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.29 2009-11-03 05:56:05 tlipkis Exp $
  */
 
 /*
@@ -1604,6 +1604,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       }
     }
 
+    @Override
     void processIncomingConnection(Socket sock) throws IOException {
       if (acceptSem != null) {
 	acceptSem.take();
@@ -1611,6 +1612,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       super.processIncomingConnection(sock);
     }
 
+    @Override
     protected void handShake(SSLSocket s) throws SSLPeerUnverifiedException {
       try {
 	super.handShake(s);
@@ -1714,6 +1716,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     volatile SimpleBinarySemaphore calcSendWaitSem;
     volatile int calcSendWaitCtr = 0;
     boolean simulateSendBusy = false;
+    Socket sock;
 
     MyBlockingPeerChannel(BlockingStreamComm scomm, PeerIdentity peer) {
       super(scomm, peer);
@@ -1721,6 +1724,14 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
     MyBlockingPeerChannel(BlockingStreamComm scomm, Socket sock) {
       super(scomm, sock);
+    }
+
+    void setSocket(Socket sock) {
+      this.sock = sock;
+    }
+
+    Socket getSocket() {
+      return sock;
     }
 
     void stopChannel(boolean abort, String msg, Throwable t) {
@@ -1775,15 +1786,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
-  public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
-      throws IOException {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
-//   public void writeIdentityDbTo(OutputStream out) throws IOException {
-//     throw new UnsupportedOperationException("not implemented");
-//   }
-
   // Suppress delete() because it prevents comparison with messages that
   // have been sent
   static class MyMemoryPeerMessage extends MemoryPeerMessage {
@@ -1791,6 +1793,26 @@ public class TestBlockingStreamComm extends LockssTestCase {
     public void delete() {
       isDeleted = true;
     }
+  }
+
+  public void testSockOpts(boolean expNoDelay, boolean expKeepAlive)
+      throws IOException {
+    PeerMessage msgIn;
+    setupComm1();
+    setupComm2();
+    msg2 = makePeerMessage(1, "1234567890", 10);
+    comm1.sendTo(msg1, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    MyBlockingPeerChannel chan1 =
+      (MyBlockingPeerChannel)getChannel(comm1, pid2);
+    MyBlockingPeerChannel chan2 =
+      (MyBlockingPeerChannel)getChannel(comm2, pid1);
+    Socket sock1 = chan1.getSocket();
+    Socket sock2 = chan2.getSocket();
+    assertEquals("NODELAY 1", expNoDelay, sock1.getTcpNoDelay());
+    assertEquals("KEEPALIVE 1", expKeepAlive, sock1.getKeepAlive());
+    assertEquals("NODELAY 2", expNoDelay, sock2.getTcpNoDelay());
+    assertEquals("KEEPALIVE 2", expKeepAlive, sock2.getKeepAlive());
   }
 
   // Variants:
@@ -1826,6 +1848,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
       p.setProperty(BlockingStreamComm.PARAM_IS_BUFFERED_SEND, "true");
       p.setProperty(BlockingStreamComm.PARAM_TCP_NODELAY, "true");
     }
+
+    public void testIsNoDelay() throws IOException {
+      testSockOpts(true, true);
+    }
   }
 
   /** Unbuffered OutputStream, TCP_NODELAY */
@@ -1836,6 +1862,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
     public void addSuiteProps(Properties p) {
       p.setProperty(BlockingStreamComm.PARAM_IS_BUFFERED_SEND, "false");
       p.setProperty(BlockingStreamComm.PARAM_TCP_NODELAY, "true");
+    }
+
+    public void testIsNoDelay() throws IOException {
+      testSockOpts(true, true);
     }
   }
 
