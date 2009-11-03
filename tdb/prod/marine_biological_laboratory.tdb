@@ -1,0 +1,141 @@
+{
+  publisher <
+    name = Marine Biological Laboratory
+  >
+
+  {
+    title <
+      name = The Biological Bulletin
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.biolbull.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Biological Bulletin Volume 98 ; 98 >
+      au < exists ; The Biological Bulletin Volume 99 ; 99 >
+      au < exists ; The Biological Bulletin Volume 100 ; 100 >
+      au < exists ; The Biological Bulletin Volume 101 ; 101 >
+      au < exists ; The Biological Bulletin Volume 103 ; 103 >
+      au < exists ; The Biological Bulletin Volume 104 ; 104 >
+      au < exists ; The Biological Bulletin Volume 105 ; 105 >
+      au < exists ; The Biological Bulletin Volume 106 ; 106 >
+      au < exists ; The Biological Bulletin Volume 107 ; 107 >
+      au < exists ; The Biological Bulletin Volume 108 ; 108 >
+      au < exists ; The Biological Bulletin Volume 109 ; 109 >
+      au < exists ; The Biological Bulletin Volume 110 ; 110 >
+      au < exists ; The Biological Bulletin Volume 111 ; 111 >
+      au < exists ; The Biological Bulletin Volume 112 ; 112 >
+      au < exists ; The Biological Bulletin Volume 113 ; 113 >
+      au < exists ; The Biological Bulletin Volume 114 ; 114 >
+      au < exists ; The Biological Bulletin Volume 115 ; 115 >
+      au < exists ; The Biological Bulletin Volume 116 ; 116 >
+      au < exists ; The Biological Bulletin Volume 117 ; 117 >
+      au < exists ; The Biological Bulletin Volume 118 ; 118 >
+      au < exists ; The Biological Bulletin Volume 119 ; 119 >
+      au < exists ; The Biological Bulletin Volume 120 ; 120 >
+      au < exists ; The Biological Bulletin Volume 121 ; 121 >
+      au < exists ; The Biological Bulletin Volume 122 ; 122 >
+      au < exists ; The Biological Bulletin Volume 123 ; 123 >
+      au < exists ; The Biological Bulletin Volume 124 ; 124 >
+      au < exists ; The Biological Bulletin Volume 125 ; 125 >
+      au < exists ; The Biological Bulletin Volume 126 ; 126 >
+      au < exists ; The Biological Bulletin Volume 127 ; 127 >
+      au < exists ; The Biological Bulletin Volume 128 ; 128 >
+      au < exists ; The Biological Bulletin Volume 129 ; 129 >
+      au < exists ; The Biological Bulletin Volume 130 ; 130 >
+      au < exists ; The Biological Bulletin Volume 131 ; 131 >
+      au < exists ; The Biological Bulletin Volume 132 ; 132 >
+      au < exists ; The Biological Bulletin Volume 133 ; 133 >
+      au < exists ; The Biological Bulletin Volume 134 ; 134 >
+      au < exists ; The Biological Bulletin Volume 135 ; 135 >
+      au < exists ; The Biological Bulletin Volume 136 ; 136 >
+      au < exists ; The Biological Bulletin Volume 137 ; 137 >
+      au < exists ; The Biological Bulletin Volume 138 ; 138 >
+      au < exists ; The Biological Bulletin Volume 139 ; 139 >
+      au < exists ; The Biological Bulletin Volume 140 ; 140 >
+      au < exists ; The Biological Bulletin Volume 141 ; 141 >
+      au < exists ; The Biological Bulletin Volume 142 ; 142 >
+      au < exists ; The Biological Bulletin Volume 143 ; 143 >
+      au < exists ; The Biological Bulletin Volume 144 ; 144 >
+      au < exists ; The Biological Bulletin Volume 145 ; 145 >
+      au < exists ; The Biological Bulletin Volume 146 ; 146 >
+      au < exists ; The Biological Bulletin Volume 147 ; 147 >
+      au < exists ; The Biological Bulletin Volume 148 ; 148 >
+      au < exists ; The Biological Bulletin Volume 149 ; 149 >
+      au < exists ; The Biological Bulletin Volume 150 ; 150 >
+      au < exists ; The Biological Bulletin Volume 151 ; 151 >
+      au < exists ; The Biological Bulletin Volume 152 ; 152 >
+      au < exists ; The Biological Bulletin Volume 153 ; 153 >
+      au < exists ; The Biological Bulletin Volume 154 ; 154 >
+      au < exists ; The Biological Bulletin Volume 155 ; 155 >
+      au < exists ; The Biological Bulletin Volume 156 ; 156 >
+      au < exists ; The Biological Bulletin Volume 157 ; 157 >
+      au < exists ; The Biological Bulletin Volume 158 ; 158 >
+      au < exists ; The Biological Bulletin Volume 159 ; 159 >
+      au < exists ; The Biological Bulletin Volume 160 ; 160 >
+      au < exists ; The Biological Bulletin Volume 161 ; 161 >
+      au < exists ; The Biological Bulletin Volume 162 ; 162 >
+      au < exists ; The Biological Bulletin Volume 163 ; 163 >
+      au < exists ; The Biological Bulletin Volume 164 ; 164 >
+      au < exists ; The Biological Bulletin Volume 165 ; 165 >
+      au < exists ; The Biological Bulletin Volume 166 ; 166 >
+      au < exists ; The Biological Bulletin Volume 167 ; 167 >
+      au < exists ; The Biological Bulletin Volume 168 ; 168 >
+      au < exists ; The Biological Bulletin Volume 169 ; 169 >
+      au < exists ; The Biological Bulletin Volume 170 ; 170 >
+      au < exists ; The Biological Bulletin Volume 171 ; 171 >
+      au < exists ; The Biological Bulletin Volume 172 ; 172 >
+      au < exists ; The Biological Bulletin Volume 173 ; 173 >
+      au < exists ; The Biological Bulletin Volume 174 ; 174 >
+      au < exists ; The Biological Bulletin Volume 175 ; 175 >
+      au < exists ; The Biological Bulletin Volume 176 ; 176 >
+      au < exists ; The Biological Bulletin Volume 177 ; 177 >
+      au < exists ; The Biological Bulletin Volume 178 ; 178 >
+      au < exists ; The Biological Bulletin Volume 179 ; 179 >
+      au < exists ; The Biological Bulletin Volume 180 ; 180 >
+      au < exists ; The Biological Bulletin Volume 181 ; 181 >
+      au < exists ; The Biological Bulletin Volume 182 ; 182 >
+      au < exists ; The Biological Bulletin Volume 183 ; 183 >
+      au < exists ; The Biological Bulletin Volume 184 ; 184 >
+      au < exists ; The Biological Bulletin Volume 185 ; 185 >
+      au < exists ; The Biological Bulletin Volume 186 ; 186 >
+      au < exists ; The Biological Bulletin Volume 187 ; 187 >
+      au < exists ; The Biological Bulletin Volume 188 ; 188 >
+      au < exists ; The Biological Bulletin Volume 189 ; 189 >
+      au < exists ; The Biological Bulletin Volume 190 ; 190 >
+      au < exists ; The Biological Bulletin Volume 191 ; 191 >
+      au < exists ; The Biological Bulletin Volume 192 ; 192 >
+      au < exists ; The Biological Bulletin Volume 193 ; 193 >
+      au < exists ; The Biological Bulletin Volume 194 ; 194 >
+      au < exists ; The Biological Bulletin Volume 195 ; 195 >
+      au < exists ; The Biological Bulletin Volume 196 ; 196 >
+      au < exists ; The Biological Bulletin Volume 197 ; 197 >
+      au < exists ; The Biological Bulletin Volume 198 ; 198 >
+      au < exists ; The Biological Bulletin Volume 199 ; 199 >
+      au < exists ; The Biological Bulletin Volume 200 ; 200 >
+      au < exists ; The Biological Bulletin Volume 201 ; 201 >
+      au < exists ; The Biological Bulletin Volume 202 ; 202 >
+      au < exists ; The Biological Bulletin Volume 203 ; 203 >
+      au < exists ; The Biological Bulletin Volume 204 ; 204 >
+      au < exists ; The Biological Bulletin Volume 205 ; 205 >
+      au < exists ; The Biological Bulletin Volume 206 ; 206 >
+      au < exists ; The Biological Bulletin Volume 207 ; 207 >
+      au < released ; The Biological Bulletin Volume 208 ; 208 >
+      au < released ; The Biological Bulletin Volume 209 ; 209 >
+      au < released ; The Biological Bulletin Volume 210 ; 210 >
+      au < released ; The Biological Bulletin Volume 211 ; 211 >
+      au < released ; The Biological Bulletin Volume 212 ; 212 >
+      au < manifest ; The Biological Bulletin Volume 213 ; 213 >
+      au < manifest ; The Biological Bulletin Volume 214 ; 214 >
+      au < manifest ; The Biological Bulletin Volume 215 ; 215 >
+      au < manifest ; The Biological Bulletin Volume 216 ; 216 >
+
+    }
+
+  }
+
+}
+

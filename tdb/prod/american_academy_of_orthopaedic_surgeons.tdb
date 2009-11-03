@@ -1,0 +1,40 @@
+{
+  publisher <
+    name = American Academy of Orthopaedic Surgeons
+  >
+
+  {
+    title <
+      name = Journal of the American Academy of Orthopaedic Surgeons
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jaaos.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 1 ; 1 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 2 ; 2 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 3 ; 3 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 4 ; 4 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 5 ; 5 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 6 ; 6 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 7 ; 7 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 8 ; 8 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 9 ; 9 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 10 ; 10 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 11 ; 11 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 12 ; 12 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 13 ; 13 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 14 ; 14 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 15 ; 15 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 16 ; 16 >
+      au < exists ; Journal of the American Academy of Orthopaedic Surgeons Volume 17 ; 17 >
+
+    }
+
+  }
+
+}
+

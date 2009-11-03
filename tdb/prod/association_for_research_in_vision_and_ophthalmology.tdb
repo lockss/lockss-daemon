@@ -1,0 +1,94 @@
+{
+  publisher <
+    name = Association for Research in Vision and Ophthalmology
+  >
+
+  {
+    title <
+      name = ARVO Meeting Abstracts
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.iovs.org
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; ARVO Meeting Abstracts Volume 46 ; 46 >
+      au < manifest ; ARVO Meeting Abstracts Volume 47 ; 47 >
+      au < manifest ; ARVO Meeting Abstracts Volume 48 ; 48 >
+      au < manifest ; ARVO Meeting Abstracts Volume 49 ; 49 >
+      au < manifest ; ARVO Meeting Abstracts Volume 50 ; 50 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Investigative Ophthalmology & Visual Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.iovs.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 1 ; 1 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 2 ; 2 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 3 ; 3 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 4 ; 4 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 5 ; 5 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 6 ; 6 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 7 ; 7 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 8 ; 8 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 9 ; 9 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 10 ; 10 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 11 ; 11 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 12 ; 12 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 13 ; 13 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 14 ; 14 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 15 ; 15 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 16 ; 16 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 17 ; 17 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 18 ; 18 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 19 ; 19 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 20 ; 20 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 21 ; 21 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 22 ; 22 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 23 ; 23 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 24 ; 24 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 25 ; 25 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 26 ; 26 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 27 ; 27 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 28 ; 28 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 29 ; 29 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 30 ; 30 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 31 ; 31 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 32 ; 32 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 33 ; 33 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 34 ; 34 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 35 ; 35 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 36 ; 36 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 37 ; 37 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 38 ; 38 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 39 ; 39 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 40 ; 40 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 41 ; 41 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 42 ; 42 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 43 ; 43 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 44 ; 44 >
+      au < exists ; Investigative Ophthalmology & Visual Science Volume 45 ; 45 >
+      au < released ; Investigative Ophthalmology & Visual Science Volume 46 ; 46 >
+      au < released ; Investigative Ophthalmology & Visual Science Volume 47 ; 47 >
+      au < released ; Investigative Ophthalmology & Visual Science Volume 48 ; 48 >
+      au < manifest ; Investigative Ophthalmology & Visual Science Volume 49 ; 49 >
+      au < manifest ; Investigative Ophthalmology & Visual Science Volume 50 ; 50 >
+
+    }
+
+  }
+
+}
+

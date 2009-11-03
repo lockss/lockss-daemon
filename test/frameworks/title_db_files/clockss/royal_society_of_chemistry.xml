@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Royal Society of Chemistry">
+   <property name="name" value="All Royal Society of Chemistry Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Royal Society of Chemistry']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="TheAnalyst133">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="The Analyst" />
+   <property name="title" value="The Analyst Volume 133" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="an" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="133" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="TheAnalyst134">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="The Analyst" />
+   <property name="title" value="The Analyst Volume 134" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="an" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="134" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="AnalyticalMethods1">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Analytical Methods" />
+   <property name="title" value="Analytical Methods Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ay" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ChemicalCommunications2008">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Chemical Communications" />
+   <property name="title" value="Chemical Communications 2008" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="cc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="0" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="ChemicalCommunications2009">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Chemical Communications" />
+   <property name="title" value="Chemical Communications 2009" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="cc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="0" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ChemicalSocietyReviews37">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Chemical Society Reviews" />
+   <property name="title" value="Chemical Society Reviews Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="cs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="ChemicalSocietyReviews38">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Chemical Society Reviews" />
+   <property name="title" value="Chemical Society Reviews Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="cs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ChemistryEducationResearchandPractice9">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Chemistry Education Research and Practice" />
+   <property name="title" value="Chemistry Education Research and Practice Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="rp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="ChemistryEducationResearchandPractice10">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Chemistry Education Research and Practice" />
+   <property name="title" value="Chemistry Education Research and Practice Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="rp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="CrystEngComm10">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="CrystEngComm" />
+   <property name="title" value="CrystEngComm Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ce" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="CrystEngComm11">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="CrystEngComm" />
+   <property name="title" value="CrystEngComm Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ce" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="DaltonTransactions2008">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Dalton Transactions" />
+   <property name="title" value="Dalton Transactions 2008" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="dt" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="0" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="DaltonTransactions2009">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Dalton Transactions" />
+   <property name="title" value="Dalton Transactions 2009" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="dt" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="0" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="EnergyEnvironmentalScience1">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Energy &amp; Environmental Science" />
+   <property name="title" value="Energy &amp; Environmental Science Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ee" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="EnergyEnvironmentalScience2">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Energy &amp; Environmental Science" />
+   <property name="title" value="Energy &amp; Environmental Science Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ee" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="GreenChemistry10">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Green Chemistry" />
+   <property name="title" value="Green Chemistry Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="gc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="GreenChemistry11">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Green Chemistry" />
+   <property name="title" value="Green Chemistry Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="gc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="IntegrativeBiology1">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Integrative Biology" />
+   <property name="title" value="Integrative Biology Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ib" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="JournalofAnalyticalAtomicSpectrometry23">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
+   <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ja" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="JournalofAnalyticalAtomicSpectrometry24">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
+   <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ja" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="JournalofEnvironmentalMonitoring10">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Journal of Environmental Monitoring" />
+   <property name="title" value="Journal of Environmental Monitoring Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="em" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="JournalofEnvironmentalMonitoring11">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Journal of Environmental Monitoring" />
+   <property name="title" value="Journal of Environmental Monitoring Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="em" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="JournalofMaterialsChemistry18">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Journal of Materials Chemistry" />
+   <property name="title" value="Journal of Materials Chemistry Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="jm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="JournalofMaterialsChemistry19">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Journal of Materials Chemistry" />
+   <property name="title" value="Journal of Materials Chemistry Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="jm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="LabonaChip8">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Lab on a Chip" />
+   <property name="title" value="Lab on a Chip Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="lc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="LabonaChip9">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Lab on a Chip" />
+   <property name="title" value="Lab on a Chip Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="lc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="Metallomics1">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Metallomics" />
+   <property name="title" value="Metallomics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="mt" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="MolecularBioSystems4">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Molecular BioSystems" />
+   <property name="title" value="Molecular BioSystems Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="mb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="MolecularBioSystems5">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Molecular BioSystems" />
+   <property name="title" value="Molecular BioSystems Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="mb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="Nanoscale1">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Nanoscale" />
+   <property name="title" value="Nanoscale Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="nr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="NaturalProductReports25">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Natural Product Reports" />
+   <property name="title" value="Natural Product Reports Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="np" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="NaturalProductReports26">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Natural Product Reports" />
+   <property name="title" value="Natural Product Reports Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="np" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="NewJournalofChemistry32">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="New Journal of Chemistry" />
+   <property name="title" value="New Journal of Chemistry Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="nj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="NewJournalofChemistry33">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="New Journal of Chemistry" />
+   <property name="title" value="New Journal of Chemistry Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="nj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="OrganicBiomolecularChemistry6">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Organic &amp; Biomolecular Chemistry" />
+   <property name="title" value="Organic &amp; Biomolecular Chemistry Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ob" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="OrganicBiomolecularChemistry7">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Organic &amp; Biomolecular Chemistry" />
+   <property name="title" value="Organic &amp; Biomolecular Chemistry Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="ob" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="PhotochemicalPhotobiologicalSciences7">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
+   <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="pp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="PhotochemicalPhotobiologicalSciences8">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
+   <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="pp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="PhysicalChemistryChemicalPhysics10">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Physical Chemistry Chemical Physics" />
+   <property name="title" value="Physical Chemistry Chemical Physics Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="cp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="PhysicalChemistryChemicalPhysics11">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Physical Chemistry Chemical Physics" />
+   <property name="title" value="Physical Chemistry Chemical Physics Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="cp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SoftMatter4">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Soft Matter" />
+   <property name="title" value="Soft Matter Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="sm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SoftMatter5">
+   <property name="attributes.publisher" value="Royal Society of Chemistry" />
+   <property name="journalTitle" value="Soft Matter" />
+   <property name="title" value="Soft Matter Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.rsc.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="sm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="resolver_url" />
+    <property name="value" value="http://xlink.rsc.org/" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+ </property>
+
+</lockss-config>

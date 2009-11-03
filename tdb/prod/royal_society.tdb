@@ -1,0 +1,913 @@
+{
+  publisher <
+    name = Royal Society
+  >
+
+  {
+    title <
+      name = Biographical Memoirs of Fellows of the Royal Society
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rsbm.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 2 ; 2 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 3 ; 3 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 4 ; 4 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 5 ; 5 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 6 ; 6 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 7 ; 7 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 8 ; 8 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 9 ; 9 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 10 ; 10 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 11 ; 11 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 12 ; 12 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 13 ; 13 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 14 ; 14 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 15 ; 15 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 16 ; 16 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 17 ; 17 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 18 ; 18 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 40 ; 40 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 41 ; 41 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 42 ; 42 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 43 ; 43 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 44 ; 44 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 52 ; 52 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 53 ; 53 >
+      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Biology Letters
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rsbl.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Biology Letters Volume 1 ; 1 >
+      au < manifest ; Biology Letters Volume 2 ; 2 >
+      au < manifest ; Biology Letters Volume 3 ; 3 >
+      au < manifest ; Biology Letters Volume 4 ; 4 >
+      au < manifest ; Biology Letters Volume 5 ; 5 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of The Royal Society Interface
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rsif.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of The Royal Society Interface Volume 1 ; 1 >
+      au < manifest ; Journal of The Royal Society Interface Volume 2 ; 2 >
+      au < manifest ; Journal of The Royal Society Interface Volume 3 ; 3 >
+      au < manifest ; Journal of The Royal Society Interface Volume 4 ; 4 >
+      au < manifest ; Journal of The Royal Society Interface Volume 5 ; 5 >
+      au < manifest ; Journal of The Royal Society Interface Volume 6 ; 6 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Notes and Records of the Royal Society
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rsnr.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Notes and Records of the Royal Society Volume 1 ; 1 >
+      au < manifest ; Notes and Records of the Royal Society Volume 2 ; 2 >
+      au < manifest ; Notes and Records of the Royal Society Volume 3 ; 3 >
+      au < manifest ; Notes and Records of the Royal Society Volume 4 ; 4 >
+      au < manifest ; Notes and Records of the Royal Society Volume 5 ; 5 >
+      au < manifest ; Notes and Records of the Royal Society Volume 6 ; 6 >
+      au < manifest ; Notes and Records of the Royal Society Volume 7 ; 7 >
+      au < manifest ; Notes and Records of the Royal Society Volume 8 ; 8 >
+      au < manifest ; Notes and Records of the Royal Society Volume 9 ; 9 >
+      au < manifest ; Notes and Records of the Royal Society Volume 10 ; 10 >
+      au < manifest ; Notes and Records of the Royal Society Volume 11 ; 11 >
+      au < manifest ; Notes and Records of the Royal Society Volume 12 ; 12 >
+      au < manifest ; Notes and Records of the Royal Society Volume 13 ; 13 >
+      au < manifest ; Notes and Records of the Royal Society Volume 14 ; 14 >
+      au < manifest ; Notes and Records of the Royal Society Volume 15 ; 15 >
+      au < manifest ; Notes and Records of the Royal Society Volume 16 ; 16 >
+      au < manifest ; Notes and Records of the Royal Society Volume 17 ; 17 >
+      au < manifest ; Notes and Records of the Royal Society Volume 18 ; 18 >
+      au < manifest ; Notes and Records of the Royal Society Volume 19 ; 19 >
+      au < manifest ; Notes and Records of the Royal Society Volume 20 ; 20 >
+      au < manifest ; Notes and Records of the Royal Society Volume 21 ; 21 >
+      au < manifest ; Notes and Records of the Royal Society Volume 22 ; 22 >
+      au < manifest ; Notes and Records of the Royal Society Volume 23 ; 23 >
+      au < manifest ; Notes and Records of the Royal Society Volume 24 ; 24 >
+      au < manifest ; Notes and Records of the Royal Society Volume 25 ; 25 >
+      au < manifest ; Notes and Records of the Royal Society Volume 26 ; 26 >
+      au < manifest ; Notes and Records of the Royal Society Volume 27 ; 27 >
+      au < manifest ; Notes and Records of the Royal Society Volume 28 ; 28 >
+      au < manifest ; Notes and Records of the Royal Society Volume 29 ; 29 >
+      au < manifest ; Notes and Records of the Royal Society Volume 30 ; 30 >
+      au < manifest ; Notes and Records of the Royal Society Volume 31 ; 31 >
+      au < manifest ; Notes and Records of the Royal Society Volume 32 ; 32 >
+      au < manifest ; Notes and Records of the Royal Society Volume 33 ; 33 >
+      au < manifest ; Notes and Records of the Royal Society Volume 34 ; 34 >
+      au < manifest ; Notes and Records of the Royal Society Volume 35 ; 35 >
+      au < manifest ; Notes and Records of the Royal Society Volume 36 ; 36 >
+      au < manifest ; Notes and Records of the Royal Society Volume 37 ; 37 >
+      au < manifest ; Notes and Records of the Royal Society Volume 38 ; 38 >
+      au < manifest ; Notes and Records of the Royal Society Volume 39 ; 39 >
+      au < manifest ; Notes and Records of the Royal Society Volume 40 ; 40 >
+      au < manifest ; Notes and Records of the Royal Society Volume 41 ; 41 >
+      au < manifest ; Notes and Records of the Royal Society Volume 42 ; 42 >
+      au < manifest ; Notes and Records of the Royal Society Volume 43 ; 43 >
+      au < manifest ; Notes and Records of the Royal Society Volume 44 ; 44 >
+      au < manifest ; Notes and Records of the Royal Society Volume 45 ; 45 >
+      au < manifest ; Notes and Records of the Royal Society Volume 46 ; 46 >
+      au < manifest ; Notes and Records of the Royal Society Volume 47 ; 47 >
+      au < manifest ; Notes and Records of the Royal Society Volume 48 ; 48 >
+      au < manifest ; Notes and Records of the Royal Society Volume 49 ; 49 >
+      au < manifest ; Notes and Records of the Royal Society Volume 50 ; 50 >
+      au < manifest ; Notes and Records of the Royal Society Volume 51 ; 51 >
+      au < manifest ; Notes and Records of the Royal Society Volume 52 ; 52 >
+      au < manifest ; Notes and Records of the Royal Society Volume 53 ; 53 >
+      au < manifest ; Notes and Records of the Royal Society Volume 54 ; 54 >
+      au < manifest ; Notes and Records of the Royal Society Volume 55 ; 55 >
+      au < manifest ; Notes and Records of the Royal Society Volume 56 ; 56 >
+      au < manifest ; Notes and Records of the Royal Society Volume 57 ; 57 >
+      au < manifest ; Notes and Records of the Royal Society Volume 58 ; 58 >
+      au < manifest ; Notes and Records of the Royal Society Volume 59 ; 59 >
+      au < manifest ; Notes and Records of the Royal Society Volume 60 ; 60 >
+      au < manifest ; Notes and Records of the Royal Society Volume 61 ; 61 >
+      au < manifest ; Notes and Records of the Royal Society Volume 62 ; 62 >
+      au < manifest ; Notes and Records of the Royal Society Volume 63 ; 63 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rsta.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 249 ; 249 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 250 ; 250 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 251 ; 251 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 252 ; 252 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 253 ; 253 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 254 ; 254 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 255 ; 255 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 256 ; 256 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 257 ; 257 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 258 ; 258 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 259 ; 259 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 260 ; 260 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 261 ; 261 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 262 ; 262 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 263 ; 263 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 264 ; 264 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 265 ; 265 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 266 ; 266 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 267 ; 267 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 268 ; 268 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 269 ; 269 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 270 ; 270 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 271 ; 271 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 272 ; 272 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 273 ; 273 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 274 ; 274 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 275 ; 275 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 276 ; 276 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 277 ; 277 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 278 ; 278 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 279 ; 279 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 280 ; 280 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 281 ; 281 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 282 ; 282 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 283 ; 283 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 284 ; 284 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 285 ; 285 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 286 ; 286 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 287 ; 287 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 288 ; 288 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 289 ; 289 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 290 ; 290 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 292 ; 292 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 293 ; 293 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 294 ; 294 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 295 ; 295 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 296 ; 296 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 297 ; 297 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 298 ; 298 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 299 ; 299 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 300 ; 300 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 301 ; 301 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 302 ; 302 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 303 ; 303 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 304 ; 304 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 305 ; 305 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 306 ; 306 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 307 ; 307 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 308 ; 308 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 309 ; 309 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 310 ; 310 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 311 ; 311 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 312 ; 312 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 313 ; 313 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 314 ; 314 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 315 ; 315 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 316 ; 316 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 317 ; 317 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 318 ; 318 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 319 ; 319 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 320 ; 320 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 321 ; 321 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 322 ; 322 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 323 ; 323 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 324 ; 324 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 325 ; 325 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 326 ; 326 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 327 ; 327 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 328 ; 328 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 335 ; 335 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 336 ; 336 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 337 ; 337 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 338 ; 338 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 339 ; 339 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 340 ; 340 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 341 ; 341 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 342 ; 342 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 343 ; 343 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 344 ; 344 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 345 ; 345 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 346 ; 346 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 347 ; 347 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
+      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Philosophical Transactions of the Royal Society B: Biological Sciences
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rstb.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 246 ; 246 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 247 ; 247 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 248 ; 248 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 249 ; 249 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 250 ; 250 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 251 ; 251 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 252 ; 252 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 253 ; 253 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 254 ; 254 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 255 ; 255 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 256 ; 256 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 257 ; 257 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 258 ; 258 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 259 ; 259 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 260 ; 260 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 261 ; 261 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 262 ; 262 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 263 ; 263 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 264 ; 264 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 265 ; 265 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 266 ; 266 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 267 ; 267 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 268 ; 268 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 269 ; 269 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 270 ; 270 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 271 ; 271 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 272 ; 272 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 273 ; 273 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 274 ; 274 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 275 ; 275 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 276 ; 276 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 277 ; 277 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 278 ; 278 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 279 ; 279 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 280 ; 280 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 281 ; 281 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 282 ; 282 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 283 ; 283 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 284 ; 284 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 285 ; 285 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 286 ; 286 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 287 ; 287 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 288 ; 288 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 289 ; 289 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 290 ; 290 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 291 ; 291 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 292 ; 292 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 293 ; 293 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 294 ; 294 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 295 ; 295 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 296 ; 296 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 297 ; 297 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 298 ; 298 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 299 ; 299 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 300 ; 300 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 301 ; 301 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 302 ; 302 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 303 ; 303 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 304 ; 304 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 305 ; 305 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 306 ; 306 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 307 ; 307 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 308 ; 308 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 309 ; 309 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 310 ; 310 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 311 ; 311 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 312 ; 312 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 313 ; 313 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 314 ; 314 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 315 ; 315 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 316 ; 316 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 317 ; 317 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 318 ; 318 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 319 ; 319 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 320 ; 320 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 321 ; 321 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 322 ; 322 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 323 ; 323 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 324 ; 324 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 325 ; 325 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 326 ; 326 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 329 ; 329 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 330 ; 330 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 331 ; 331 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 332 ; 332 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 333 ; 333 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 334 ; 334 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 335 ; 335 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 336 ; 336 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 337 ; 337 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 338 ; 338 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 339 ; 339 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 340 ; 340 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 341 ; 341 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 342 ; 342 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 343 ; 343 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 344 ; 344 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 345 ; 345 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 346 ; 346 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 347 ; 347 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 348 ; 348 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 349 ; 349 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 350 ; 350 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 354 ; 354 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 355 ; 355 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 356 ; 356 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 357 ; 357 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 358 ; 358 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 359 ; 359 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 360 ; 360 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 361 ; 361 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 362 ; 362 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 >
+      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Philosophical Transactions of the Royal Society of London
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rstl.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 3 ; 3 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 4 ; 4 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 5 ; 5 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 6 ; 6 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 7 ; 7 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 8 ; 8 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 17 ; 17 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 21 ; 21 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 40 ; 40 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
+      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rspa.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 347 ; 347 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 371 ; 371 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 379 ; 379 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 380 ; 380 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 381 ; 381 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 382 ; 382 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 383 ; 383 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 384 ; 384 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 385 ; 385 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 386 ; 386 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 387 ; 387 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 388 ; 388 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 389 ; 389 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 390 ; 390 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 391 ; 391 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 392 ; 392 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 393 ; 393 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 394 ; 394 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 395 ; 395 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 396 ; 396 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 397 ; 397 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 398 ; 398 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 399 ; 399 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 400 ; 400 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 401 ; 401 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 402 ; 402 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 403 ; 403 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 404 ; 404 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 405 ; 405 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 406 ; 406 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 407 ; 407 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 408 ; 408 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 409 ; 409 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 410 ; 410 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 411 ; 411 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 412 ; 412 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 413 ; 413 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 414 ; 414 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 415 ; 415 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 416 ; 416 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 417 ; 417 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 418 ; 418 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 419 ; 419 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 420 ; 420 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 421 ; 421 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 422 ; 422 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 423 ; 423 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 424 ; 424 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 425 ; 425 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 426 ; 426 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 428 ; 428 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 430 ; 430 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 433 ; 433 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 434 ; 434 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 435 ; 435 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 438 ; 438 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 439 ; 439 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 440 ; 440 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 441 ; 441 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 442 ; 442 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 443 ; 443 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 444 ; 444 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 445 ; 445 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 446 ; 446 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 447 ; 447 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 448 ; 448 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 449 ; 449 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 450 ; 450 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 451 ; 451 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 452 ; 452 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 454 ; 454 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 455 ; 455 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 457 ; 457 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 460 ; 460 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 462 ; 462 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 >
+      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Proceedings of the Royal Society B: Biological Sciences
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rspb.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 158 ; 158 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 159 ; 159 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 160 ; 160 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 161 ; 161 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 162 ; 162 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 163 ; 163 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 164 ; 164 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 165 ; 165 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 166 ; 166 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 167 ; 167 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 168 ; 168 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 169 ; 169 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 170 ; 170 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 171 ; 171 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 172 ; 172 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 173 ; 173 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 174 ; 174 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 175 ; 175 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 176 ; 176 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 177 ; 177 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 178 ; 178 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 179 ; 179 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 180 ; 180 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 181 ; 181 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 182 ; 182 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 183 ; 183 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 184 ; 184 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 185 ; 185 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 186 ; 186 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 187 ; 187 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 188 ; 188 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 189 ; 189 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 190 ; 190 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 191 ; 191 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 192 ; 192 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 193 ; 193 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 194 ; 194 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 195 ; 195 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 196 ; 196 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 197 ; 197 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 198 ; 198 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 199 ; 199 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 200 ; 200 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 201 ; 201 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 202 ; 202 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 203 ; 203 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 204 ; 204 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 205 ; 205 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 206 ; 206 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 207 ; 207 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 208 ; 208 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 209 ; 209 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 210 ; 210 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 211 ; 211 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 212 ; 212 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 213 ; 213 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 214 ; 214 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 215 ; 215 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 216 ; 216 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 217 ; 217 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 218 ; 218 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 219 ; 219 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 220 ; 220 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 221 ; 221 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 222 ; 222 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 223 ; 223 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 224 ; 224 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 225 ; 225 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 226 ; 226 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 227 ; 227 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 228 ; 228 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 229 ; 229 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 230 ; 230 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 231 ; 231 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 232 ; 232 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 233 ; 233 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 234 ; 234 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 235 ; 235 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 236 ; 236 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 237 ; 237 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 238 ; 238 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 242 ; 242 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 250 ; 250 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 251 ; 251 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 252 ; 252 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 253 ; 253 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 254 ; 254 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 255 ; 255 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 256 ; 256 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 257 ; 257 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 258 ; 258 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 259 ; 259 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 260 ; 260 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 261 ; 261 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 262 ; 262 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 263 ; 263 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 264 ; 264 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 265 ; 265 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 266 ; 266 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 267 ; 267 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 268 ; 268 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 269 ; 269 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 270 ; 270 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 271 ; 271 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 272 ; 272 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 273 ; 273 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 274 ; 274 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 275 ; 275 >
+      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Proceedings of the Royal Society of London
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://rspl.royalsocietypublishing.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Proceedings of the Royal Society of London Volume 1 ; 1 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 2 ; 2 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 3 ; 3 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 4 ; 4 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 5 ; 5 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 6 ; 6 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 7 ; 7 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 8 ; 8 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 9 ; 9 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 10 ; 10 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 11 ; 11 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 12 ; 12 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 13 ; 13 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 14 ; 14 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 15 ; 15 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 16 ; 16 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 17 ; 17 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 18 ; 18 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 19 ; 19 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 20 ; 20 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 21 ; 21 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 22 ; 22 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 23 ; 23 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 24 ; 24 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 25 ; 25 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 26 ; 26 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 27 ; 27 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 28 ; 28 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 29 ; 29 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 30 ; 30 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 31 ; 31 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 32 ; 32 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 33 ; 33 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 34 ; 34 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 35 ; 35 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 36 ; 36 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 37 ; 37 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 38 ; 38 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 39 ; 39 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 40 ; 40 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 41 ; 41 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 42 ; 42 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 43 ; 43 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 44 ; 44 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 45 ; 45 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 46 ; 46 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 47 ; 47 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 48 ; 48 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 49 ; 49 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 50 ; 50 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 51 ; 51 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 52 ; 52 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 53 ; 53 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 54 ; 54 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 55 ; 55 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 56 ; 56 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 57 ; 57 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 58 ; 58 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 59 ; 59 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 60 ; 60 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 61 ; 61 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 62 ; 62 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 63 ; 63 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 64 ; 64 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 65 ; 65 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 66 ; 66 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 67 ; 67 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 68 ; 68 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 69 ; 69 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 70 ; 70 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 71 ; 71 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 72 ; 72 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 73 ; 73 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 74 ; 74 >
+      au < manifest ; Proceedings of the Royal Society of London Volume 75 ; 75 >
+
+    }
+
+  }
+
+}
+

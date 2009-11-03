@@ -1,0 +1,87 @@
+{
+  publisher <
+    name = British Editorial Society of Bone and Joint Surgery
+  >
+
+  {
+    title <
+      name = Journal of Bone & Joint Surgery, British Volume
+    >
+
+    comment[volume_strings] = Volumes have always been like "45-B", but manifest page URLs only include the -B starting with volume 90-B.
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jbjs.org.uk/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 32 ; 32 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 33 ; 33 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 34 ; 34 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 35 ; 35 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 36 ; 36 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 37 ; 37 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 38 ; 38 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 39 ; 39 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 40 ; 40 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 41 ; 41 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 42 ; 42 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 43 ; 43 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 44 ; 44 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 45 ; 45 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 46 ; 46 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 47 ; 47 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 48 ; 48 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 49 ; 49 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 50 ; 50 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 51 ; 51 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 52 ; 52 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 53 ; 53 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 54 ; 54 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 55 ; 55 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 56 ; 56 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 57 ; 57 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 58 ; 58 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 59 ; 59 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 60 ; 60 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 61 ; 61 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 62 ; 62 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 63 ; 63 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 64 ; 64 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 65 ; 65 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 66 ; 66 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 67 ; 67 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 68 ; 68 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 69 ; 69 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 70 ; 70 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 71 ; 71 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 72 ; 72 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 73 ; 73 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 74 ; 74 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 75 ; 75 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 76 ; 76 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 77 ; 77 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 78 ; 78 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 79 ; 79 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 80 ; 80 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 81 ; 81 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 82 ; 82 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 83 ; 83 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 84 ; 84 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 85 ; 85 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89 >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 90-B ; 90-B >
+      au < manifest ; Journal of Bone & Joint Surgery, British Volume Volume 91-B ; 91-B >
+
+    }
+
+  }
+
+}
+

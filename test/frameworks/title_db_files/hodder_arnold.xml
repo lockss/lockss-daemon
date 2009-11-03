@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Hodder Arnold">
+   <property name="name" value="All Hodder Arnold Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Hodder Arnold']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="PainReviews5">
+   <property name="attributes.publisher" value="Hodder Arnold" />
+   <property name="journalTitle" value="Pain Reviews" />
+   <property name="title" value="Pain Reviews Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.ingenta.IngentaJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.ingentaconnect.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="publisher_id" />
+    <property name="value" value="arn" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pr" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0968-1302" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="param.6">
+    <property name="key" value="graphics_url" />
+    <property name="value" value="http://graphics.ingentaconnect.com/" />
+   </property>
+   <property name="param.7">
+    <property name="key" value="api_url" />
+    <property name="value" value="http://api.ingentaconnect.com/" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="PainReviews6">
+   <property name="attributes.publisher" value="Hodder Arnold" />
+   <property name="journalTitle" value="Pain Reviews" />
+   <property name="title" value="Pain Reviews Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.ingenta.IngentaJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.ingentaconnect.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="publisher_id" />
+    <property name="value" value="arn" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pr" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0968-1302" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="param.6">
+    <property name="key" value="graphics_url" />
+    <property name="value" value="http://graphics.ingentaconnect.com/" />
+   </property>
+   <property name="param.7">
+    <property name="key" value="api_url" />
+    <property name="value" value="http://api.ingentaconnect.com/" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="PainReviews7">
+   <property name="attributes.publisher" value="Hodder Arnold" />
+   <property name="journalTitle" value="Pain Reviews" />
+   <property name="title" value="Pain Reviews Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.ingenta.IngentaJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.ingentaconnect.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="publisher_id" />
+    <property name="value" value="arn" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pr" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0968-1302" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="param.6">
+    <property name="key" value="graphics_url" />
+    <property name="value" value="http://graphics.ingentaconnect.com/" />
+   </property>
+   <property name="param.7">
+    <property name="key" value="api_url" />
+    <property name="value" value="http://api.ingentaconnect.com/" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="PainReviews8">
+   <property name="attributes.publisher" value="Hodder Arnold" />
+   <property name="journalTitle" value="Pain Reviews" />
+   <property name="title" value="Pain Reviews Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.ingenta.IngentaJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.ingentaconnect.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="publisher_id" />
+    <property name="value" value="arn" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pr" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0968-1302" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.6">
+    <property name="key" value="graphics_url" />
+    <property name="value" value="http://graphics.ingentaconnect.com/" />
+   </property>
+   <property name="param.7">
+    <property name="key" value="api_url" />
+    <property name="value" value="http://api.ingentaconnect.com/" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="PainReviews9">
+   <property name="attributes.publisher" value="Hodder Arnold" />
+   <property name="journalTitle" value="Pain Reviews" />
+   <property name="title" value="Pain Reviews Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.ingenta.IngentaJournalPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.ingentaconnect.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="publisher_id" />
+    <property name="value" value="arn" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="journal_id" />
+    <property name="value" value="pr" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0968-1302" />
+   </property>
+   <property name="param.5">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.6">
+    <property name="key" value="graphics_url" />
+    <property name="value" value="http://graphics.ingentaconnect.com/" />
+   </property>
+   <property name="param.7">
+    <property name="key" value="api_url" />
+    <property name="value" value="http://api.ingentaconnect.com/" />
+   </property>
+   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.ingenta.HodderArnoldPdfTransform" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>

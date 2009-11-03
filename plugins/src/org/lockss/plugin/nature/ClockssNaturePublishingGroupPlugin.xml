@@ -1,0 +1,107 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_article_iterator_factory</string>
+    <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.nature.NatureMetadataExtractorFactory</string>
+      </entry>
+      <entry>
+        <string>DublinCore</string>
+        <string>org.lockss.plugin.nature.NatureMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Nature Publishing Group Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s&quot;, base_url, journal_id, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Nature Publishing Group Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%s%s/clockss/%s_clockss_%d.html$&quot;, base_url, journal_id, journal_id, year</string>
+      <string>2,&quot;^%s%s/journal/v%s/.*\?lang=[a-z]{2}$&quot;, base_url, journal_id, volume_name</string>
+      <string>2,&quot;^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$&quot;, base_url, journal_id, volume_name</string>
+      <string>2,&quot;^%s%s/journal/v%s/[^/]+/pubmed/&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%s%s/journal/v%s/&quot;, base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupLoginPageChecker</string>
+  </entry>
+</map>

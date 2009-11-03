@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = Project HOPE - The People-to-People Health Foundation, Inc.
+  >
+
+  {
+    title <
+      name = Health Affairs
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://content.healthaffairs.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Health Affairs Volume 1 ; 1 >
+      au < exists ; Health Affairs Volume 2 ; 2 >
+      au < exists ; Health Affairs Volume 3 ; 3 >
+      au < exists ; Health Affairs Volume 4 ; 4 >
+      au < exists ; Health Affairs Volume 5 ; 5 >
+      au < exists ; Health Affairs Volume 6 ; 6 >
+      au < exists ; Health Affairs Volume 7 ; 7 >
+      au < exists ; Health Affairs Volume 8 ; 8 >
+      au < exists ; Health Affairs Volume 9 ; 9 >
+      au < exists ; Health Affairs Volume 10 ; 10 >
+      au < exists ; Health Affairs Volume 11 ; 11 >
+      au < exists ; Health Affairs Volume 12 ; 12 >
+      au < exists ; Health Affairs Volume 13 ; 13 >
+      au < exists ; Health Affairs Volume 14 ; 14 >
+      au < exists ; Health Affairs Volume 15 ; 15 >
+      au < exists ; Health Affairs Volume 16 ; 16 >
+      au < exists ; Health Affairs Volume 17 ; 17 >
+      au < exists ; Health Affairs Volume 18 ; 18 >
+      au < exists ; Health Affairs Volume 19 ; 19 >
+      au < exists ; Health Affairs Volume 20 ; 20 >
+      au < exists ; Health Affairs Volume 21 ; 21 >
+      au < exists ; Health Affairs Volume 22 ; 22 >
+      au < exists ; Health Affairs Volume 23 ; 23 >
+      au < manifest ; Health Affairs Volume 24 ; 24 >
+      au < manifest ; Health Affairs Volume 25 ; 25 >
+      au < manifest ; Health Affairs Volume 26 ; 26 >
+      au < manifest ; Health Affairs Volume 27 ; 27 >
+      au < manifest ; Health Affairs Volume 28 ; 28 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,120 @@
+{
+  publisher <
+    name = American Public Health Association
+  >
+
+  {
+    title <
+      name = American Journal of Public Health
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ajph.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Public Health Volume 2 ; 2 >
+      au < exists ; American Journal of Public Health Volume 3 ; 3 >
+      au < exists ; American Journal of Public Health Volume 4 ; 4 >
+      au < exists ; American Journal of Public Health Volume 5 ; 5 >
+      au < exists ; American Journal of Public Health Volume 6 ; 6 >
+      au < exists ; American Journal of Public Health Volume 7 ; 7 >
+      au < exists ; American Journal of Public Health Volume 8 ; 8 >
+      au < exists ; American Journal of Public Health Volume 9 ; 9 >
+      au < exists ; American Journal of Public Health Volume 10 ; 10 >
+      au < exists ; American Journal of Public Health Volume 11 ; 11 >
+      au < exists ; American Journal of Public Health Volume 12 ; 12 >
+      au < exists ; American Journal of Public Health Volume 13 ; 13 >
+      au < exists ; American Journal of Public Health Volume 14 ; 14 >
+      au < exists ; American Journal of Public Health Volume 15 ; 15 >
+      au < exists ; American Journal of Public Health Volume 16 ; 16 >
+      au < exists ; American Journal of Public Health Volume 17 ; 17 >
+      au < exists ; American Journal of Public Health Volume 18 ; 18 >
+      au < exists ; American Journal of Public Health Volume 19 ; 19 >
+      au < exists ; American Journal of Public Health Volume 20 ; 20 >
+      au < exists ; American Journal of Public Health Volume 21 ; 21 >
+      au < exists ; American Journal of Public Health Volume 22 ; 22 >
+      au < exists ; American Journal of Public Health Volume 23 ; 23 >
+      au < exists ; American Journal of Public Health Volume 24 ; 24 >
+      au < exists ; American Journal of Public Health Volume 25 ; 25 >
+      au < exists ; American Journal of Public Health Volume 26 ; 26 >
+      au < exists ; American Journal of Public Health Volume 27 ; 27 >
+      au < exists ; American Journal of Public Health Volume 28 ; 28 >
+      au < exists ; American Journal of Public Health Volume 29 ; 29 >
+      au < exists ; American Journal of Public Health Volume 30 ; 30 >
+      au < exists ; American Journal of Public Health Volume 31 ; 31 >
+      au < exists ; American Journal of Public Health Volume 32 ; 32 >
+      au < exists ; American Journal of Public Health Volume 33 ; 33 >
+      au < exists ; American Journal of Public Health Volume 34 ; 34 >
+      au < exists ; American Journal of Public Health Volume 35 ; 35 >
+      au < exists ; American Journal of Public Health Volume 36 ; 36 >
+      au < exists ; American Journal of Public Health Volume 37 ; 37 >
+      au < exists ; American Journal of Public Health Volume 39 ; 39 >
+      au < exists ; American Journal of Public Health Volume 40 ; 40 >
+      au < exists ; American Journal of Public Health Volume 41 ; 41 >
+      au < exists ; American Journal of Public Health Volume 42 ; 42 >
+      au < exists ; American Journal of Public Health Volume 43 ; 43 >
+      au < exists ; American Journal of Public Health Volume 44 ; 44 >
+      au < exists ; American Journal of Public Health Volume 45 ; 45 >
+      au < exists ; American Journal of Public Health Volume 46 ; 46 >
+      au < exists ; American Journal of Public Health Volume 47 ; 47 >
+      au < exists ; American Journal of Public Health Volume 48 ; 48 >
+      au < exists ; American Journal of Public Health Volume 49 ; 49 >
+      au < exists ; American Journal of Public Health Volume 50 ; 50 >
+      au < exists ; American Journal of Public Health Volume 51 ; 51 >
+      au < exists ; American Journal of Public Health Volume 52 ; 52 >
+      au < exists ; American Journal of Public Health Volume 53 ; 53 >
+      au < exists ; American Journal of Public Health Volume 54 ; 54 >
+      au < exists ; American Journal of Public Health Volume 55 ; 55 >
+      au < exists ; American Journal of Public Health Volume 56 ; 56 >
+      au < exists ; American Journal of Public Health Volume 57 ; 57 >
+      au < exists ; American Journal of Public Health Volume 58 ; 58 >
+      au < exists ; American Journal of Public Health Volume 59 ; 59 >
+      au < exists ; American Journal of Public Health Volume 60 ; 60 >
+      au < exists ; American Journal of Public Health Volume 61 ; 61 >
+      au < exists ; American Journal of Public Health Volume 62 ; 62 >
+      au < exists ; American Journal of Public Health Volume 63 ; 63 >
+      au < exists ; American Journal of Public Health Volume 64 ; 64 >
+      au < exists ; American Journal of Public Health Volume 65 ; 65 >
+      au < exists ; American Journal of Public Health Volume 66 ; 66 >
+      au < exists ; American Journal of Public Health Volume 67 ; 67 >
+      au < exists ; American Journal of Public Health Volume 68 ; 68 >
+      au < exists ; American Journal of Public Health Volume 69 ; 69 >
+      au < exists ; American Journal of Public Health Volume 70 ; 70 >
+      au < exists ; American Journal of Public Health Volume 71 ; 71 >
+      au < exists ; American Journal of Public Health Volume 72 ; 72 >
+      au < exists ; American Journal of Public Health Volume 73 ; 73 >
+      au < exists ; American Journal of Public Health Volume 74 ; 74 >
+      au < exists ; American Journal of Public Health Volume 75 ; 75 >
+      au < exists ; American Journal of Public Health Volume 76 ; 76 >
+      au < exists ; American Journal of Public Health Volume 77 ; 77 >
+      au < exists ; American Journal of Public Health Volume 78 ; 78 >
+      au < exists ; American Journal of Public Health Volume 79 ; 79 >
+      au < exists ; American Journal of Public Health Volume 80 ; 80 >
+      au < exists ; American Journal of Public Health Volume 81 ; 81 >
+      au < exists ; American Journal of Public Health Volume 82 ; 82 >
+      au < exists ; American Journal of Public Health Volume 83 ; 83 >
+      au < exists ; American Journal of Public Health Volume 84 ; 84 >
+      au < exists ; American Journal of Public Health Volume 85 ; 85 >
+      au < exists ; American Journal of Public Health Volume 86 ; 86 >
+      au < exists ; American Journal of Public Health Volume 87 ; 87 >
+      au < exists ; American Journal of Public Health Volume 88 ; 88 >
+      au < exists ; American Journal of Public Health Volume 89 ; 89 >
+      au < exists ; American Journal of Public Health Volume 90 ; 90 >
+      au < exists ; American Journal of Public Health Volume 91 ; 91 >
+      au < exists ; American Journal of Public Health Volume 92 ; 92 >
+      au < exists ; American Journal of Public Health Volume 93 ; 93 >
+      au < exists ; American Journal of Public Health Volume 94 ; 94 >
+      au < exists ; American Journal of Public Health Volume 95 ; 95 >
+      au < exists ; American Journal of Public Health Volume 96 ; 96 >
+      au < exists ; American Journal of Public Health Volume 97 ; 97 >
+      au < exists ; American Journal of Public Health Volume 98 ; 98 >
+      au < exists ; American Journal of Public Health Volume 99 ; 99 >
+
+    }
+
+  }
+
+}
+

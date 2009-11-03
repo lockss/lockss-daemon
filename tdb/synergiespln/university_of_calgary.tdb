@@ -1,0 +1,88 @@
+{
+
+  publisher <
+    name = University of Calgary
+  >
+
+  implicit < status ; year ; name ; param[year] >
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  
+  {
+  
+    title <
+      name = ARIEL: A Review of International English Literature
+    >
+    
+    param[base_url] = http://ariel.synergiesprairies.ca/ariel/
+    param[journal_id] = ariel
+
+    au < released ; 1970 ; ARIEL: A Review of International English Literature Volume 1 ; 1970 >
+    au < released ; 1971 ; ARIEL: A Review of International English Literature Volume 2 ; 1971 >
+    au < released ; 1972 ; ARIEL: A Review of International English Literature Volume 3 ; 1972 >
+    au < released ; 1973 ; ARIEL: A Review of International English Literature Volume 4 ; 1973 >
+    au < released ; 1974 ; ARIEL: A Review of International English Literature Volume 5 ; 1974 >
+    au < released ; 1975 ; ARIEL: A Review of International English Literature Volume 6 ; 1975 >
+    au < released ; 1976 ; ARIEL: A Review of International English Literature Volume 7 ; 1976 >
+    au < released ; 1977 ; ARIEL: A Review of International English Literature Volume 8 ; 1977 >
+    au < released ; 1978 ; ARIEL: A Review of International English Literature Volume 9 ; 1978 >
+    au < released ; 1979 ; ARIEL: A Review of International English Literature Volume 10 ; 1979 >
+    au < released ; 1980 ; ARIEL: A Review of International English Literature Volume 11 ; 1980 >
+    au < released ; 1981 ; ARIEL: A Review of International English Literature Volume 12 ; 1981 >
+    au < released ; 1982 ; ARIEL: A Review of International English Literature Volume 13 ; 1982 >
+    au < released ; 1983 ; ARIEL: A Review of International English Literature Volume 14 ; 1983 >
+    au < released ; 1984 ; ARIEL: A Review of International English Literature Volume 15 ; 1984 >
+    au < released ; 1985 ; ARIEL: A Review of International English Literature Volume 16 ; 1985 >
+    au < released ; 1986 ; ARIEL: A Review of International English Literature Volume 17 ; 1986 >
+    au < released ; 1987 ; ARIEL: A Review of International English Literature Volume 18 ; 1987 >
+    au < released ; 1988 ; ARIEL: A Review of International English Literature Volume 19 ; 1988 >
+    au < released ; 1989 ; ARIEL: A Review of International English Literature Volume 20 ; 1989 >
+    au < released ; 1990 ; ARIEL: A Review of International English Literature Volume 21 ; 1990 >
+    au < released ; 1991 ; ARIEL: A Review of International English Literature Volume 22 ; 1991 >
+    au < released ; 1992 ; ARIEL: A Review of International English Literature Volume 23 ; 1992 >
+    au < released ; 1993 ; ARIEL: A Review of International English Literature Volume 24 ; 1993 >
+    au < released ; 1994 ; ARIEL: A Review of International English Literature Volume 25 ; 1994 >
+    au < released ; 1995 ; ARIEL: A Review of International English Literature Volume 26 ; 1995 >
+    au < released ; 1996 ; ARIEL: A Review of International English Literature Volume 27 ; 1996 >
+    au < released ; 1997 ; ARIEL: A Review of International English Literature Volume 28 ; 1997 >
+    au < doesNotExist ; 1998 ; ARIEL: A Review of International English Literature Volume 29 ; 1998 >
+    au < doesNotExist ; 1999 ; ARIEL: A Review of International English Literature Volume 30 ; 1999 >
+    au < doesNotExist ; 2000 ; ARIEL: A Review of International English Literature Volume 31 ; 2000 >
+    au < doesNotExist ; 2001 ; ARIEL: A Review of International English Literature Volume 32 ; 2001 >
+    au < doesNotExist ; 2002 ; ARIEL: A Review of International English Literature Volume 33 ; 2002 >
+    au < doesNotExist ; 2003 ; ARIEL: A Review of International English Literature Volume 34 ; 2003 >
+    au < released ; 2004 ; ARIEL: A Review of International English Literature Volume 35 ; 2004 >
+    au < released ; 2005 ; ARIEL: A Review of International English Literature Volume 36 ; 2005 >
+    au < released ; 2006 ; ARIEL: A Review of International English Literature Volume 37 ; 2006 >
+    au < released ; 2007 ; ARIEL: A Review of International English Literature Volume 38 ; 2007 >
+
+  }
+  
+  {
+  
+    title <
+      name = Canadian Journal of Counselling / Revue Canadienne de Counseling
+    >
+    
+    param[base_url] = http://cjc-rcc.ucalgary.ca/cjc/
+    param[journal_id] = rcc
+
+    au < released ; 1992 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 26 ; 1992 >
+    au < released ; 1993 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 27 ; 1993 >
+    au < released ; 1994 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 28 ; 1994 >
+    au < released ; 1995 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 29 ; 1995 >
+    au < released ; 1996 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 30 ; 1996 >
+    au < released ; 1997 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 31 ; 1997 >
+    au < released ; 1998 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 32 ; 1998 >
+    au < released ; 1999 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 33 ; 1999 >
+    au < released ; 2000 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 34 ; 2000 >
+    au < released ; 2001 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 35 ; 2001 >
+    au < released ; 2002 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 36 ; 2002 >
+    au < released ; 2003 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 37 ; 2003 >
+    au < released ; 2004 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 38 ; 2004 >
+    au < released ; 2005 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 39 ; 2005 >
+    au < released ; 2006 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 40 ; 2006 >
+    au < released ; 2007 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 41 ; 2007 >
+
+  }
+  
+}

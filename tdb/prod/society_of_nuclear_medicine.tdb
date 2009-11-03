@@ -1,0 +1,98 @@
+{
+  publisher <
+    name = Society of Nuclear Medicine
+  >
+
+  {
+    title <
+      name = Journal of Nuclear Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jnm.snmjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Nuclear Medicine Volume 5 ; 5 >
+      au < exists ; Journal of Nuclear Medicine Volume 6 ; 6 >
+      au < exists ; Journal of Nuclear Medicine Volume 7 ; 7 >
+      au < exists ; Journal of Nuclear Medicine Volume 8 ; 8 >
+      au < exists ; Journal of Nuclear Medicine Volume 9 ; 9 >
+      au < exists ; Journal of Nuclear Medicine Volume 10 ; 10 >
+      au < exists ; Journal of Nuclear Medicine Volume 11 ; 11 >
+      au < exists ; Journal of Nuclear Medicine Volume 12 ; 12 >
+      au < exists ; Journal of Nuclear Medicine Volume 13 ; 13 >
+      au < exists ; Journal of Nuclear Medicine Volume 14 ; 14 >
+      au < exists ; Journal of Nuclear Medicine Volume 15 ; 15 >
+      au < exists ; Journal of Nuclear Medicine Volume 16 ; 16 >
+      au < exists ; Journal of Nuclear Medicine Volume 17 ; 17 >
+      au < exists ; Journal of Nuclear Medicine Volume 18 ; 18 >
+      au < exists ; Journal of Nuclear Medicine Volume 19 ; 19 >
+      au < exists ; Journal of Nuclear Medicine Volume 20 ; 20 >
+      au < exists ; Journal of Nuclear Medicine Volume 21 ; 21 >
+      au < exists ; Journal of Nuclear Medicine Volume 22 ; 22 >
+      au < exists ; Journal of Nuclear Medicine Volume 23 ; 23 >
+      au < exists ; Journal of Nuclear Medicine Volume 24 ; 24 >
+      au < exists ; Journal of Nuclear Medicine Volume 25 ; 25 >
+      au < exists ; Journal of Nuclear Medicine Volume 26 ; 26 >
+      au < exists ; Journal of Nuclear Medicine Volume 27 ; 27 >
+      au < exists ; Journal of Nuclear Medicine Volume 28 ; 28 >
+      au < exists ; Journal of Nuclear Medicine Volume 29 ; 29 >
+      au < exists ; Journal of Nuclear Medicine Volume 30 ; 30 >
+      au < exists ; Journal of Nuclear Medicine Volume 31 ; 31 >
+      au < exists ; Journal of Nuclear Medicine Volume 32 ; 32 >
+      au < exists ; Journal of Nuclear Medicine Volume 33 ; 33 >
+      au < exists ; Journal of Nuclear Medicine Volume 34 ; 34 >
+      au < exists ; Journal of Nuclear Medicine Volume 35 ; 35 >
+      au < exists ; Journal of Nuclear Medicine Volume 36 ; 36 >
+      au < exists ; Journal of Nuclear Medicine Volume 37 ; 37 >
+      au < exists ; Journal of Nuclear Medicine Volume 38 ; 38 >
+      au < exists ; Journal of Nuclear Medicine Volume 39 ; 39 >
+      au < exists ; Journal of Nuclear Medicine Volume 40 ; 40 >
+      au < exists ; Journal of Nuclear Medicine Volume 41 ; 41 >
+      au < exists ; Journal of Nuclear Medicine Volume 42 ; 42 >
+      au < exists ; Journal of Nuclear Medicine Volume 43 ; 43 >
+      au < exists ; Journal of Nuclear Medicine Volume 44 ; 44 >
+      au < exists ; Journal of Nuclear Medicine Volume 45 ; 45 >
+      au < exists ; Journal of Nuclear Medicine Volume 46 ; 46 >
+      au < exists ; Journal of Nuclear Medicine Volume 47 ; 47 >
+      au < exists ; Journal of Nuclear Medicine Volume 48 ; 48 >
+      au < exists ; Journal of Nuclear Medicine Volume 49 ; 49 >
+      au < exists ; Journal of Nuclear Medicine Volume 50 ; 50 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Nuclear Medicine Technology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://tech.snmjournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Nuclear Medicine Technology Volume 25 ; 25 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 26 ; 26 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 27 ; 27 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 28 ; 28 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 29 ; 29 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 30 ; 30 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 31 ; 31 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 32 ; 32 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 33 ; 33 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 34 ; 34 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 35 ; 35 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 36 ; 36 >
+      au < exists ; Journal of Nuclear Medicine Technology Volume 37 ; 37 >
+
+    }
+
+  }
+
+}
+

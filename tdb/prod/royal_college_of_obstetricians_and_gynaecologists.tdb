@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = Royal College of Obstetricians and Gynaecologists
+  >
+
+  {
+    title <
+      name = The Obstetrician & Gynaecologist
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://onlinetog.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Obstetrician & Gynaecologist Volume 1 ; 1 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 2 ; 2 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 3 ; 3 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 4 ; 4 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 5 ; 5 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 6 ; 6 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 7 ; 7 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 8 ; 8 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 9 ; 9 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 10 ; 10 >
+      au < exists ; The Obstetrician & Gynaecologist Volume 11 ; 11 >
+
+    }
+
+  }
+
+}
+

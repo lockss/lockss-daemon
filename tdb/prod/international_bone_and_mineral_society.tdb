@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = International Bone and Mineral Society
+  >
+
+  {
+    title <
+      name = IBMS BoneKEy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.bonekey-ibms.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; IBMS BoneKEy Volume 1 ; 1 >
+      au < exists ; IBMS BoneKEy Volume 2 ; 2 >
+      au < exists ; IBMS BoneKEy Volume 3 ; 3 >
+      au < exists ; IBMS BoneKEy Volume 4 ; 4 >
+      au < exists ; IBMS BoneKEy Volume 5 ; 5 >
+      au < exists ; IBMS BoneKEy Volume 6 ; 6 >
+
+    }
+
+  }
+
+}
+

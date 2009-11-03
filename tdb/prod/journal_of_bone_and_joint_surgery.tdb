@@ -1,0 +1,114 @@
+{
+  publisher <
+    name = Journal of Bone and Joint Surgery
+  >
+
+  {
+    title <
+      name = The Journal of Bone and Joint Surgery
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ejbjs.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Journal of Bone and Joint Surgery Volume 1 ; 1 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 2 ; 2 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 3 ; 3 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 4 ; 4 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 5 ; 5 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 6 ; 6 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 7 ; 7 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 8 ; 8 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 9 ; 9 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 10 ; 10 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 11 ; 11 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 12 ; 12 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 13 ; 13 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 14 ; 14 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 15 ; 15 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 16 ; 16 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 17 ; 17 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 18 ; 18 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 19 ; 19 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 20 ; 20 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 21 ; 21 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 22 ; 22 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 23 ; 23 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 24 ; 24 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 25 ; 25 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 26 ; 26 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 27 ; 27 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 28 ; 28 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 29 ; 29 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 30 ; 30 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 31 ; 31 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 32 ; 32 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 33 ; 33 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 34 ; 34 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 35 ; 35 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 36 ; 36 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 37 ; 37 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 38 ; 38 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 39 ; 39 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 40 ; 40 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 41 ; 41 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 42 ; 42 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 43 ; 43 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 44 ; 44 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 45 ; 45 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 46 ; 46 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 47 ; 47 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 48 ; 48 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 49 ; 49 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 50 ; 50 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 51 ; 51 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 52 ; 52 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 53 ; 53 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 54 ; 54 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 55 ; 55 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 56 ; 56 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 57 ; 57 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 58 ; 58 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 59 ; 59 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 60 ; 60 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 61 ; 61 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 62 ; 62 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 63 ; 63 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 64 ; 64 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 65 ; 65 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 66 ; 66 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 67 ; 67 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 68 ; 68 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 69 ; 69 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 70 ; 70 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 71 ; 71 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 72 ; 72 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 73 ; 73 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 74 ; 74 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 75 ; 75 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 76 ; 76 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 77 ; 77 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 78 ; 78 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 79 ; 79 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 80 ; 80 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 81 ; 81 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 82 ; 82 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 83 ; 83 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 84 ; 84 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 85 ; 85 >
+      au < exists ; The Journal of Bone and Joint Surgery Volume 86 ; 86 >
+      au < manifest ; The Journal of Bone and Joint Surgery Volume 87 ; 87 >
+      au < manifest ; The Journal of Bone and Joint Surgery Volume 88 ; 88 >
+      au < manifest ; The Journal of Bone and Joint Surgery Volume 89 ; 89 >
+      au < manifest ; The Journal of Bone and Joint Surgery Volume 90 ; 90 >
+      au < manifest ; The Journal of Bone and Joint Surgery Volume 91 ; 91 >
+
+    }
+
+  }
+
+}
+

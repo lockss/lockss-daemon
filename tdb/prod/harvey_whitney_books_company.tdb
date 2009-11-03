@@ -1,0 +1,66 @@
+{
+  publisher <
+    name = Harvey Whitney Books Company
+  >
+
+  {
+    title <
+      name = The Annals of Pharmacotherapy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.theannals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Annals of Pharmacotherapy Volume 1 ; 1 >
+      au < exists ; The Annals of Pharmacotherapy Volume 2 ; 2 >
+      au < exists ; The Annals of Pharmacotherapy Volume 3 ; 3 >
+      au < exists ; The Annals of Pharmacotherapy Volume 4 ; 4 >
+      au < exists ; The Annals of Pharmacotherapy Volume 5 ; 5 >
+      au < exists ; The Annals of Pharmacotherapy Volume 6 ; 6 >
+      au < exists ; The Annals of Pharmacotherapy Volume 7 ; 7 >
+      au < exists ; The Annals of Pharmacotherapy Volume 8 ; 8 >
+      au < exists ; The Annals of Pharmacotherapy Volume 9 ; 9 >
+      au < exists ; The Annals of Pharmacotherapy Volume 10 ; 10 >
+      au < exists ; The Annals of Pharmacotherapy Volume 11 ; 11 >
+      au < exists ; The Annals of Pharmacotherapy Volume 12 ; 12 >
+      au < exists ; The Annals of Pharmacotherapy Volume 13 ; 13 >
+      au < exists ; The Annals of Pharmacotherapy Volume 14 ; 14 >
+      au < exists ; The Annals of Pharmacotherapy Volume 15 ; 15 >
+      au < exists ; The Annals of Pharmacotherapy Volume 16 ; 16 >
+      au < exists ; The Annals of Pharmacotherapy Volume 17 ; 17 >
+      au < exists ; The Annals of Pharmacotherapy Volume 18 ; 18 >
+      au < exists ; The Annals of Pharmacotherapy Volume 19 ; 19 >
+      au < exists ; The Annals of Pharmacotherapy Volume 20 ; 20 >
+      au < exists ; The Annals of Pharmacotherapy Volume 21 ; 21 >
+      au < exists ; The Annals of Pharmacotherapy Volume 22 ; 22 >
+      au < exists ; The Annals of Pharmacotherapy Volume 23 ; 23 >
+      au < exists ; The Annals of Pharmacotherapy Volume 24 ; 24 >
+      au < exists ; The Annals of Pharmacotherapy Volume 25 ; 25 >
+      au < exists ; The Annals of Pharmacotherapy Volume 26 ; 26 >
+      au < exists ; The Annals of Pharmacotherapy Volume 27 ; 27 >
+      au < exists ; The Annals of Pharmacotherapy Volume 28 ; 28 >
+      au < exists ; The Annals of Pharmacotherapy Volume 29 ; 29 >
+      au < exists ; The Annals of Pharmacotherapy Volume 30 ; 30 >
+      au < exists ; The Annals of Pharmacotherapy Volume 31 ; 31 >
+      au < exists ; The Annals of Pharmacotherapy Volume 32 ; 32 >
+      au < exists ; The Annals of Pharmacotherapy Volume 33 ; 33 >
+      au < exists ; The Annals of Pharmacotherapy Volume 34 ; 34 >
+      au < exists ; The Annals of Pharmacotherapy Volume 35 ; 35 >
+      au < exists ; The Annals of Pharmacotherapy Volume 36 ; 36 >
+      au < exists ; The Annals of Pharmacotherapy Volume 37 ; 37 >
+      au < exists ; The Annals of Pharmacotherapy Volume 38 ; 38 >
+      au < exists ; The Annals of Pharmacotherapy Volume 39 ; 39 >
+      au < exists ; The Annals of Pharmacotherapy Volume 40 ; 40 >
+      au < exists ; The Annals of Pharmacotherapy Volume 41 ; 41 >
+      au < exists ; The Annals of Pharmacotherapy Volume 42 ; 42 >
+      au < exists ; The Annals of Pharmacotherapy Volume 43 ; 43 >
+
+    }
+
+  }
+
+}
+

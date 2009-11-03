@@ -1,0 +1,543 @@
+{
+  publisher <
+    name = American Heart Association
+  >
+
+  {
+    title <
+      name = Arteriosclerosis, Thrombosis, and Vascular Biology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://atvb.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 1 ; 1 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 2 ; 2 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 3 ; 3 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 4 ; 4 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 5 ; 5 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 6 ; 6 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 7 ; 7 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 8 ; 8 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 9 ; 9 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 10 ; 10 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 11 ; 11 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 12 ; 12 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 13 ; 13 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 14 ; 14 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 15 ; 15 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 16 ; 16 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 17 ; 17 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 18 ; 18 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 19 ; 19 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 20 ; 20 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 21 ; 21 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 22 ; 22 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 23 ; 23 >
+      au < exists ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 24 ; 24 >
+      au < manifest ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 25 ; 25 >
+      au < manifest ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26 ; 26 >
+      au < manifest ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 27 ; 27 >
+      au < manifest ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 28 ; 28 >
+      au < manifest ; Arteriosclerosis, Thrombosis, and Vascular Biology Volume 29 ; 29 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circ.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Circulation Volume 1 ; 1 >
+      au < exists ; Circulation Volume 2 ; 2 >
+      au < exists ; Circulation Volume 3 ; 3 >
+      au < exists ; Circulation Volume 4 ; 4 >
+      au < exists ; Circulation Volume 5 ; 5 >
+      au < exists ; Circulation Volume 6 ; 6 >
+      au < exists ; Circulation Volume 7 ; 7 >
+      au < exists ; Circulation Volume 8 ; 8 >
+      au < exists ; Circulation Volume 9 ; 9 >
+      au < exists ; Circulation Volume 10 ; 10 >
+      au < exists ; Circulation Volume 11 ; 11 >
+      au < exists ; Circulation Volume 12 ; 12 >
+      au < exists ; Circulation Volume 13 ; 13 >
+      au < exists ; Circulation Volume 14 ; 14 >
+      au < exists ; Circulation Volume 15 ; 15 >
+      au < exists ; Circulation Volume 16 ; 16 >
+      au < exists ; Circulation Volume 17 ; 17 >
+      au < exists ; Circulation Volume 18 ; 18 >
+      au < exists ; Circulation Volume 19 ; 19 >
+      au < exists ; Circulation Volume 20 ; 20 >
+      au < exists ; Circulation Volume 21 ; 21 >
+      au < exists ; Circulation Volume 22 ; 22 >
+      au < exists ; Circulation Volume 23 ; 23 >
+      au < exists ; Circulation Volume 24 ; 24 >
+      au < exists ; Circulation Volume 25 ; 25 >
+      au < exists ; Circulation Volume 26 ; 26 >
+      au < exists ; Circulation Volume 27 ; 27 >
+      au < exists ; Circulation Volume 28 ; 28 >
+      au < exists ; Circulation Volume 29 ; 29 >
+      au < exists ; Circulation Volume 30 ; 30 >
+      au < exists ; Circulation Volume 31 ; 31 >
+      au < exists ; Circulation Volume 32 ; 32 >
+      au < exists ; Circulation Volume 33 ; 33 >
+      au < exists ; Circulation Volume 34 ; 34 >
+      au < exists ; Circulation Volume 35 ; 35 >
+      au < exists ; Circulation Volume 36 ; 36 >
+      au < exists ; Circulation Volume 37 ; 37 >
+      au < exists ; Circulation Volume 38 ; 38 >
+      au < exists ; Circulation Volume 39 ; 39 >
+      au < exists ; Circulation Volume 40 ; 40 >
+      au < exists ; Circulation Volume 41 ; 41 >
+      au < exists ; Circulation Volume 42 ; 42 >
+      au < exists ; Circulation Volume 43 ; 43 >
+      au < exists ; Circulation Volume 44 ; 44 >
+      au < exists ; Circulation Volume 45 ; 45 >
+      au < exists ; Circulation Volume 46 ; 46 >
+      au < exists ; Circulation Volume 47 ; 47 >
+      au < exists ; Circulation Volume 48 ; 48 >
+      au < exists ; Circulation Volume 49 ; 49 >
+      au < exists ; Circulation Volume 50 ; 50 >
+      au < exists ; Circulation Volume 51 ; 51 >
+      au < exists ; Circulation Volume 52 ; 52 >
+      au < exists ; Circulation Volume 53 ; 53 >
+      au < exists ; Circulation Volume 54 ; 54 >
+      au < exists ; Circulation Volume 55 ; 55 >
+      au < exists ; Circulation Volume 56 ; 56 >
+      au < exists ; Circulation Volume 57 ; 57 >
+      au < exists ; Circulation Volume 58 ; 58 >
+      au < exists ; Circulation Volume 59 ; 59 >
+      au < exists ; Circulation Volume 60 ; 60 >
+      au < exists ; Circulation Volume 61 ; 61 >
+      au < exists ; Circulation Volume 62 ; 62 >
+      au < exists ; Circulation Volume 63 ; 63 >
+      au < exists ; Circulation Volume 64 ; 64 >
+      au < exists ; Circulation Volume 65 ; 65 >
+      au < exists ; Circulation Volume 66 ; 66 >
+      au < exists ; Circulation Volume 67 ; 67 >
+      au < exists ; Circulation Volume 68 ; 68 >
+      au < exists ; Circulation Volume 69 ; 69 >
+      au < exists ; Circulation Volume 70 ; 70 >
+      au < exists ; Circulation Volume 71 ; 71 >
+      au < exists ; Circulation Volume 72 ; 72 >
+      au < exists ; Circulation Volume 73 ; 73 >
+      au < exists ; Circulation Volume 74 ; 74 >
+      au < exists ; Circulation Volume 75 ; 75 >
+      au < exists ; Circulation Volume 76 ; 76 >
+      au < exists ; Circulation Volume 77 ; 77 >
+      au < exists ; Circulation Volume 78 ; 78 >
+      au < exists ; Circulation Volume 79 ; 79 >
+      au < exists ; Circulation Volume 80 ; 80 >
+      au < exists ; Circulation Volume 81 ; 81 >
+      au < exists ; Circulation Volume 82 ; 82 >
+      au < exists ; Circulation Volume 83 ; 83 >
+      au < exists ; Circulation Volume 84 ; 84 >
+      au < exists ; Circulation Volume 85 ; 85 >
+      au < exists ; Circulation Volume 86 ; 86 >
+      au < exists ; Circulation Volume 87 ; 87 >
+      au < exists ; Circulation Volume 88 ; 88 >
+      au < exists ; Circulation Volume 89 ; 89 >
+      au < exists ; Circulation Volume 90 ; 90 >
+      au < exists ; Circulation Volume 91 ; 91 >
+      au < exists ; Circulation Volume 92 ; 92 >
+      au < exists ; Circulation Volume 93 ; 93 >
+      au < exists ; Circulation Volume 94 ; 94 >
+      au < exists ; Circulation Volume 95 ; 95 >
+      au < exists ; Circulation Volume 96 ; 96 >
+      au < exists ; Circulation Volume 97 ; 97 >
+      au < exists ; Circulation Volume 98 ; 98 >
+      au < exists ; Circulation Volume 99 ; 99 >
+      au < exists ; Circulation Volume 100 ; 100 >
+      au < exists ; Circulation Volume 101 ; 101 >
+      au < exists ; Circulation Volume 102 ; 102 >
+      au < exists ; Circulation Volume 103 ; 103 >
+      au < exists ; Circulation Volume 104 ; 104 >
+      au < exists ; Circulation Volume 105 ; 105 >
+      au < exists ; Circulation Volume 106 ; 106 >
+      au < exists ; Circulation Volume 107 ; 107 >
+      au < exists ; Circulation Volume 108 ; 108 >
+      au < exists ; Circulation Volume 109 ; 109 >
+      au < exists ; Circulation Volume 110 ; 110 >
+      au < manifest ; Circulation Volume 111 ; 111 >
+      au < manifest ; Circulation Volume 112 ; 112 >
+      au < manifest ; Circulation Volume 113 ; 113 >
+      au < manifest ; Circulation Volume 114 ; 114 >
+      au < manifest ; Circulation Volume 115 ; 115 >
+      au < manifest ; Circulation Volume 116 ; 116 >
+      au < manifest ; Circulation Volume 117 ; 117 >
+      au < manifest ; Circulation Volume 118 ; 118 >
+      au < manifest ; Circulation Volume 119 ; 119 >
+      au < manifest ; Circulation Volume 120 ; 120 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation Research
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circres.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Circulation Research Volume 1 ; 1 >
+      au < exists ; Circulation Research Volume 2 ; 2 >
+      au < exists ; Circulation Research Volume 3 ; 3 >
+      au < exists ; Circulation Research Volume 4 ; 4 >
+      au < exists ; Circulation Research Volume 5 ; 5 >
+      au < exists ; Circulation Research Volume 6 ; 6 >
+      au < exists ; Circulation Research Volume 7 ; 7 >
+      au < exists ; Circulation Research Volume 8 ; 8 >
+      au < exists ; Circulation Research Volume 9 ; 9 >
+      au < exists ; Circulation Research Volume 10 ; 10 >
+      au < exists ; Circulation Research Volume 11 ; 11 >
+      au < exists ; Circulation Research Volume 12 ; 12 >
+      au < exists ; Circulation Research Volume 13 ; 13 >
+      au < exists ; Circulation Research Volume 14 ; 14 >
+      au < exists ; Circulation Research Volume 15 ; 15 >
+      au < exists ; Circulation Research Volume 16 ; 16 >
+      au < exists ; Circulation Research Volume 17 ; 17 >
+      au < exists ; Circulation Research Volume 18 ; 18 >
+      au < exists ; Circulation Research Volume 19 ; 19 >
+      au < exists ; Circulation Research Volume 20 ; 20 >
+      au < exists ; Circulation Research Volume 21 ; 21 >
+      au < exists ; Circulation Research Volume 22 ; 22 >
+      au < exists ; Circulation Research Volume 23 ; 23 >
+      au < exists ; Circulation Research Volume 24 ; 24 >
+      au < exists ; Circulation Research Volume 25 ; 25 >
+      au < exists ; Circulation Research Volume 26 ; 26 >
+      au < exists ; Circulation Research Volume 27 ; 27 >
+      au < exists ; Circulation Research Volume 28 ; 28 >
+      au < exists ; Circulation Research Volume 29 ; 29 >
+      au < exists ; Circulation Research Volume 30 ; 30 >
+      au < exists ; Circulation Research Volume 31 ; 31 >
+      au < exists ; Circulation Research Volume 32 ; 32 >
+      au < exists ; Circulation Research Volume 33 ; 33 >
+      au < exists ; Circulation Research Volume 34 ; 34 >
+      au < exists ; Circulation Research Volume 35 ; 35 >
+      au < exists ; Circulation Research Volume 36 ; 36 >
+      au < exists ; Circulation Research Volume 37 ; 37 >
+      au < exists ; Circulation Research Volume 38 ; 38 >
+      au < exists ; Circulation Research Volume 39 ; 39 >
+      au < exists ; Circulation Research Volume 40 ; 40 >
+      au < exists ; Circulation Research Volume 41 ; 41 >
+      au < exists ; Circulation Research Volume 42 ; 42 >
+      au < exists ; Circulation Research Volume 43 ; 43 >
+      au < exists ; Circulation Research Volume 44 ; 44 >
+      au < exists ; Circulation Research Volume 45 ; 45 >
+      au < exists ; Circulation Research Volume 46 ; 46 >
+      au < exists ; Circulation Research Volume 47 ; 47 >
+      au < exists ; Circulation Research Volume 48 ; 48 >
+      au < exists ; Circulation Research Volume 49 ; 49 >
+      au < exists ; Circulation Research Volume 50 ; 50 >
+      au < exists ; Circulation Research Volume 51 ; 51 >
+      au < exists ; Circulation Research Volume 52 ; 52 >
+      au < exists ; Circulation Research Volume 53 ; 53 >
+      au < exists ; Circulation Research Volume 54 ; 54 >
+      au < exists ; Circulation Research Volume 55 ; 55 >
+      au < exists ; Circulation Research Volume 56 ; 56 >
+      au < exists ; Circulation Research Volume 57 ; 57 >
+      au < exists ; Circulation Research Volume 58 ; 58 >
+      au < exists ; Circulation Research Volume 59 ; 59 >
+      au < exists ; Circulation Research Volume 60 ; 60 >
+      au < exists ; Circulation Research Volume 61 ; 61 >
+      au < exists ; Circulation Research Volume 62 ; 62 >
+      au < exists ; Circulation Research Volume 63 ; 63 >
+      au < exists ; Circulation Research Volume 64 ; 64 >
+      au < exists ; Circulation Research Volume 65 ; 65 >
+      au < exists ; Circulation Research Volume 66 ; 66 >
+      au < exists ; Circulation Research Volume 67 ; 67 >
+      au < exists ; Circulation Research Volume 68 ; 68 >
+      au < exists ; Circulation Research Volume 69 ; 69 >
+      au < exists ; Circulation Research Volume 70 ; 70 >
+      au < exists ; Circulation Research Volume 71 ; 71 >
+      au < exists ; Circulation Research Volume 72 ; 72 >
+      au < exists ; Circulation Research Volume 73 ; 73 >
+      au < exists ; Circulation Research Volume 74 ; 74 >
+      au < exists ; Circulation Research Volume 75 ; 75 >
+      au < exists ; Circulation Research Volume 76 ; 76 >
+      au < exists ; Circulation Research Volume 77 ; 77 >
+      au < exists ; Circulation Research Volume 78 ; 78 >
+      au < exists ; Circulation Research Volume 79 ; 79 >
+      au < exists ; Circulation Research Volume 80 ; 80 >
+      au < exists ; Circulation Research Volume 81 ; 81 >
+      au < exists ; Circulation Research Volume 82 ; 82 >
+      au < exists ; Circulation Research Volume 83 ; 83 >
+      au < exists ; Circulation Research Volume 84 ; 84 >
+      au < exists ; Circulation Research Volume 85 ; 85 >
+      au < exists ; Circulation Research Volume 86 ; 86 >
+      au < exists ; Circulation Research Volume 87 ; 87 >
+      au < exists ; Circulation Research Volume 88 ; 88 >
+      au < exists ; Circulation Research Volume 89 ; 89 >
+      au < exists ; Circulation Research Volume 90 ; 90 >
+      au < exists ; Circulation Research Volume 91 ; 91 >
+      au < exists ; Circulation Research Volume 92 ; 92 >
+      au < exists ; Circulation Research Volume 93 ; 93 >
+      au < exists ; Circulation Research Volume 94 ; 94 >
+      au < exists ; Circulation Research Volume 95 ; 95 >
+      au < manifest ; Circulation Research Volume 96 ; 96 >
+      au < manifest ; Circulation Research Volume 97 ; 97 >
+      au < manifest ; Circulation Research Volume 98 ; 98 >
+      au < manifest ; Circulation Research Volume 99 ; 99 >
+      au < manifest ; Circulation Research Volume 100 ; 100 >
+      au < manifest ; Circulation Research Volume 101 ; 101 >
+      au < manifest ; Circulation Research Volume 102 ; 102 >
+      au < manifest ; Circulation Research Volume 103 ; 103 >
+      au < manifest ; Circulation Research Volume 104 ; 104 >
+      au < manifest ; Circulation Research Volume 105 ; 105 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation: Arrhythmia and Electrophysiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circep.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Circulation: Arrhythmia and Electrophysiology Volume 1 ; 1 >
+      au < manifest ; Circulation: Arrhythmia and Electrophysiology Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation: Cardiovascular Genetics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circgenetics.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Circulation: Cardiovascular Genetics Volume 1 ; 1 >
+      au < manifest ; Circulation: Cardiovascular Genetics Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation: Cardiovascular Imaging
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circimaging.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Circulation: Cardiovascular Imaging Volume 1 ; 1 >
+      au < manifest ; Circulation: Cardiovascular Imaging Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation: Cardiovascular Interventions
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circinterventions.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Circulation: Cardiovascular Interventions Volume 1 ; 1 >
+      au < manifest ; Circulation: Cardiovascular Interventions Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation: Cardiovascular Quality and Outcomes
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circoutcomes.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
+      au < manifest ; Circulation: Cardiovascular Quality and Outcomes Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Circulation: Heart Failure
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://circheartfailure.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Circulation: Heart Failure Volume 1 ; 1 >
+      au < manifest ; Circulation: Heart Failure Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Hypertension
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://hyper.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Hypertension Volume 1 ; 1 >
+      au < exists ; Hypertension Volume 2 ; 2 >
+      au < exists ; Hypertension Volume 3 ; 3 >
+      au < exists ; Hypertension Volume 4 ; 4 >
+      au < exists ; Hypertension Volume 5 ; 5 >
+      au < exists ; Hypertension Volume 6 ; 6 >
+      au < exists ; Hypertension Volume 7 ; 7 >
+      au < exists ; Hypertension Volume 8 ; 8 >
+      au < exists ; Hypertension Volume 9 ; 9 >
+      au < exists ; Hypertension Volume 10 ; 10 >
+      au < exists ; Hypertension Volume 11 ; 11 >
+      au < exists ; Hypertension Volume 12 ; 12 >
+      au < exists ; Hypertension Volume 13 ; 13 >
+      au < exists ; Hypertension Volume 14 ; 14 >
+      au < exists ; Hypertension Volume 15 ; 15 >
+      au < exists ; Hypertension Volume 16 ; 16 >
+      au < exists ; Hypertension Volume 17 ; 17 >
+      au < exists ; Hypertension Volume 18 ; 18 >
+      au < exists ; Hypertension Volume 19 ; 19 >
+      au < exists ; Hypertension Volume 20 ; 20 >
+      au < exists ; Hypertension Volume 21 ; 21 >
+      au < exists ; Hypertension Volume 22 ; 22 >
+      au < exists ; Hypertension Volume 23 ; 23 >
+      au < exists ; Hypertension Volume 24 ; 24 >
+      au < exists ; Hypertension Volume 25 ; 25 >
+      au < exists ; Hypertension Volume 26 ; 26 >
+      au < exists ; Hypertension Volume 27 ; 27 >
+      au < exists ; Hypertension Volume 28 ; 28 >
+      au < exists ; Hypertension Volume 29 ; 29 >
+      au < exists ; Hypertension Volume 30 ; 30 >
+      au < exists ; Hypertension Volume 31 ; 31 >
+      au < exists ; Hypertension Volume 32 ; 32 >
+      au < exists ; Hypertension Volume 33 ; 33 >
+      au < exists ; Hypertension Volume 34 ; 34 >
+      au < exists ; Hypertension Volume 35 ; 35 >
+      au < exists ; Hypertension Volume 36 ; 36 >
+      au < exists ; Hypertension Volume 37 ; 37 >
+      au < exists ; Hypertension Volume 38 ; 38 >
+      au < exists ; Hypertension Volume 39 ; 39 >
+      au < exists ; Hypertension Volume 40 ; 40 >
+      au < exists ; Hypertension Volume 41 ; 41 >
+      au < exists ; Hypertension Volume 42 ; 42 >
+      au < exists ; Hypertension Volume 43 ; 43 >
+      au < exists ; Hypertension Volume 44 ; 44 >
+      au < manifest ; Hypertension Volume 45 ; 45 >
+      au < manifest ; Hypertension Volume 46 ; 46 >
+      au < manifest ; Hypertension Volume 47 ; 47 >
+      au < manifest ; Hypertension Volume 48 ; 48 >
+      au < manifest ; Hypertension Volume 49 ; 49 >
+      au < manifest ; Hypertension Volume 50 ; 50 >
+      au < manifest ; Hypertension Volume 51 ; 51 >
+      au < manifest ; Hypertension Volume 52 ; 52 >
+      au < manifest ; Hypertension Volume 53 ; 53 >
+      au < manifest ; Hypertension Volume 54 ; 54 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Stroke
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://stroke.ahajournals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Stroke Volume 1 ; 1 >
+      au < exists ; Stroke Volume 2 ; 2 >
+      au < exists ; Stroke Volume 3 ; 3 >
+      au < exists ; Stroke Volume 4 ; 4 >
+      au < exists ; Stroke Volume 5 ; 5 >
+      au < exists ; Stroke Volume 6 ; 6 >
+      au < exists ; Stroke Volume 7 ; 7 >
+      au < exists ; Stroke Volume 8 ; 8 >
+      au < exists ; Stroke Volume 9 ; 9 >
+      au < exists ; Stroke Volume 10 ; 10 >
+      au < exists ; Stroke Volume 11 ; 11 >
+      au < exists ; Stroke Volume 12 ; 12 >
+      au < exists ; Stroke Volume 13 ; 13 >
+      au < exists ; Stroke Volume 14 ; 14 >
+      au < exists ; Stroke Volume 15 ; 15 >
+      au < exists ; Stroke Volume 16 ; 16 >
+      au < exists ; Stroke Volume 17 ; 17 >
+      au < exists ; Stroke Volume 18 ; 18 >
+      au < exists ; Stroke Volume 19 ; 19 >
+      au < exists ; Stroke Volume 20 ; 20 >
+      au < exists ; Stroke Volume 21 ; 21 >
+      au < exists ; Stroke Volume 22 ; 22 >
+      au < exists ; Stroke Volume 23 ; 23 >
+      au < exists ; Stroke Volume 24 ; 24 >
+      au < exists ; Stroke Volume 25 ; 25 >
+      au < exists ; Stroke Volume 26 ; 26 >
+      au < exists ; Stroke Volume 27 ; 27 >
+      au < exists ; Stroke Volume 28 ; 28 >
+      au < exists ; Stroke Volume 29 ; 29 >
+      au < exists ; Stroke Volume 30 ; 30 >
+      au < exists ; Stroke Volume 31 ; 31 >
+      au < exists ; Stroke Volume 32 ; 32 >
+      au < exists ; Stroke Volume 33 ; 33 >
+      au < exists ; Stroke Volume 34 ; 34 >
+      au < exists ; Stroke Volume 35 ; 35 >
+      au < manifest ; Stroke Volume 36 ; 36 >
+      au < manifest ; Stroke Volume 37 ; 37 >
+      au < manifest ; Stroke Volume 38 ; 38 >
+      au < manifest ; Stroke Volume 39 ; 39 >
+      au < manifest ; Stroke Volume 40 ; 40 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = American College of Nutrition
+  >
+
+  {
+    title <
+      name = Journal of the American College of Nutrition
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jacn.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of the American College of Nutrition Volume 1 ; 1 >
+      au < exists ; Journal of the American College of Nutrition Volume 2 ; 2 >
+      au < exists ; Journal of the American College of Nutrition Volume 3 ; 3 >
+      au < exists ; Journal of the American College of Nutrition Volume 4 ; 4 >
+      au < exists ; Journal of the American College of Nutrition Volume 5 ; 5 >
+      au < exists ; Journal of the American College of Nutrition Volume 6 ; 6 >
+      au < exists ; Journal of the American College of Nutrition Volume 7 ; 7 >
+      au < exists ; Journal of the American College of Nutrition Volume 8 ; 8 >
+      au < exists ; Journal of the American College of Nutrition Volume 9 ; 9 >
+      au < exists ; Journal of the American College of Nutrition Volume 10 ; 10 >
+      au < exists ; Journal of the American College of Nutrition Volume 11 ; 11 >
+      au < exists ; Journal of the American College of Nutrition Volume 12 ; 12 >
+      au < exists ; Journal of the American College of Nutrition Volume 13 ; 13 >
+      au < exists ; Journal of the American College of Nutrition Volume 14 ; 14 >
+      au < exists ; Journal of the American College of Nutrition Volume 15 ; 15 >
+      au < exists ; Journal of the American College of Nutrition Volume 16 ; 16 >
+      au < exists ; Journal of the American College of Nutrition Volume 17 ; 17 >
+      au < exists ; Journal of the American College of Nutrition Volume 18 ; 18 >
+      au < exists ; Journal of the American College of Nutrition Volume 19 ; 19 >
+      au < exists ; Journal of the American College of Nutrition Volume 20 ; 20 >
+      au < exists ; Journal of the American College of Nutrition Volume 21 ; 21 >
+      au < exists ; Journal of the American College of Nutrition Volume 22 ; 22 >
+      au < exists ; Journal of the American College of Nutrition Volume 23 ; 23 >
+      au < exists ; Journal of the American College of Nutrition Volume 24 ; 24 >
+      au < exists ; Journal of the American College of Nutrition Volume 25 ; 25 >
+      au < exists ; Journal of the American College of Nutrition Volume 26 ; 26 >
+      au < exists ; Journal of the American College of Nutrition Volume 27 ; 27 >
+      au < exists ; Journal of the American College of Nutrition Volume 28 ; 28 >
+
+    }
+
+  }
+
+}
+

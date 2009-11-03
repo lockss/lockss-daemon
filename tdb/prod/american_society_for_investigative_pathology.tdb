@@ -1,0 +1,170 @@
+{
+  publisher <
+    name = American Society for Investigative Pathology
+  >
+
+  {
+    title <
+      name = American Journal Of Pathology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ajp.amjpathol.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal Of Pathology Volume 56 ; 56 >
+      au < exists ; American Journal Of Pathology Volume 57 ; 57 >
+      au < exists ; American Journal Of Pathology Volume 58 ; 58 >
+      au < exists ; American Journal Of Pathology Volume 59 ; 59 >
+      au < exists ; American Journal Of Pathology Volume 60 ; 60 >
+      au < exists ; American Journal Of Pathology Volume 61 ; 61 >
+      au < exists ; American Journal Of Pathology Volume 62 ; 62 >
+      au < exists ; American Journal Of Pathology Volume 63 ; 63 >
+      au < exists ; American Journal Of Pathology Volume 64 ; 64 >
+      au < exists ; American Journal Of Pathology Volume 65 ; 65 >
+      au < exists ; American Journal Of Pathology Volume 66 ; 66 >
+      au < exists ; American Journal Of Pathology Volume 67 ; 67 >
+      au < exists ; American Journal Of Pathology Volume 68 ; 68 >
+      au < exists ; American Journal Of Pathology Volume 69 ; 69 >
+      au < exists ; American Journal Of Pathology Volume 70 ; 70 >
+      au < exists ; American Journal Of Pathology Volume 71 ; 71 >
+      au < exists ; American Journal Of Pathology Volume 72 ; 72 >
+      au < exists ; American Journal Of Pathology Volume 73 ; 73 >
+      au < exists ; American Journal Of Pathology Volume 74 ; 74 >
+      au < exists ; American Journal Of Pathology Volume 75 ; 75 >
+      au < exists ; American Journal Of Pathology Volume 76 ; 76 >
+      au < exists ; American Journal Of Pathology Volume 77 ; 77 >
+      au < exists ; American Journal Of Pathology Volume 78 ; 78 >
+      au < exists ; American Journal Of Pathology Volume 79 ; 79 >
+      au < exists ; American Journal Of Pathology Volume 80 ; 80 >
+      au < exists ; American Journal Of Pathology Volume 81 ; 81 >
+      au < exists ; American Journal Of Pathology Volume 82 ; 82 >
+      au < exists ; American Journal Of Pathology Volume 83 ; 83 >
+      au < exists ; American Journal Of Pathology Volume 84 ; 84 >
+      au < exists ; American Journal Of Pathology Volume 85 ; 85 >
+      au < exists ; American Journal Of Pathology Volume 86 ; 86 >
+      au < exists ; American Journal Of Pathology Volume 87 ; 87 >
+      au < exists ; American Journal Of Pathology Volume 88 ; 88 >
+      au < exists ; American Journal Of Pathology Volume 89 ; 89 >
+      au < exists ; American Journal Of Pathology Volume 90 ; 90 >
+      au < exists ; American Journal Of Pathology Volume 91 ; 91 >
+      au < exists ; American Journal Of Pathology Volume 92 ; 92 >
+      au < exists ; American Journal Of Pathology Volume 93 ; 93 >
+      au < exists ; American Journal Of Pathology Volume 94 ; 94 >
+      au < exists ; American Journal Of Pathology Volume 95 ; 95 >
+      au < exists ; American Journal Of Pathology Volume 96 ; 96 >
+      au < exists ; American Journal Of Pathology Volume 97 ; 97 >
+      au < exists ; American Journal Of Pathology Volume 98 ; 98 >
+      au < exists ; American Journal Of Pathology Volume 99 ; 99 >
+      au < exists ; American Journal Of Pathology Volume 100 ; 100 >
+      au < exists ; American Journal Of Pathology Volume 101 ; 101 >
+      au < exists ; American Journal Of Pathology Volume 102 ; 102 >
+      au < exists ; American Journal Of Pathology Volume 103 ; 103 >
+      au < exists ; American Journal Of Pathology Volume 104 ; 104 >
+      au < exists ; American Journal Of Pathology Volume 105 ; 105 >
+      au < exists ; American Journal Of Pathology Volume 106 ; 106 >
+      au < exists ; American Journal Of Pathology Volume 107 ; 107 >
+      au < exists ; American Journal Of Pathology Volume 108 ; 108 >
+      au < exists ; American Journal Of Pathology Volume 109 ; 109 >
+      au < exists ; American Journal Of Pathology Volume 110 ; 110 >
+      au < exists ; American Journal Of Pathology Volume 111 ; 111 >
+      au < exists ; American Journal Of Pathology Volume 112 ; 112 >
+      au < exists ; American Journal Of Pathology Volume 113 ; 113 >
+      au < exists ; American Journal Of Pathology Volume 114 ; 114 >
+      au < exists ; American Journal Of Pathology Volume 115 ; 115 >
+      au < exists ; American Journal Of Pathology Volume 116 ; 116 >
+      au < exists ; American Journal Of Pathology Volume 117 ; 117 >
+      au < exists ; American Journal Of Pathology Volume 118 ; 118 >
+      au < exists ; American Journal Of Pathology Volume 119 ; 119 >
+      au < exists ; American Journal Of Pathology Volume 120 ; 120 >
+      au < exists ; American Journal Of Pathology Volume 121 ; 121 >
+      au < exists ; American Journal Of Pathology Volume 122 ; 122 >
+      au < exists ; American Journal Of Pathology Volume 123 ; 123 >
+      au < exists ; American Journal Of Pathology Volume 124 ; 124 >
+      au < exists ; American Journal Of Pathology Volume 125 ; 125 >
+      au < exists ; American Journal Of Pathology Volume 126 ; 126 >
+      au < exists ; American Journal Of Pathology Volume 127 ; 127 >
+      au < exists ; American Journal Of Pathology Volume 128 ; 128 >
+      au < exists ; American Journal Of Pathology Volume 129 ; 129 >
+      au < exists ; American Journal Of Pathology Volume 130 ; 130 >
+      au < exists ; American Journal Of Pathology Volume 131 ; 131 >
+      au < exists ; American Journal Of Pathology Volume 132 ; 132 >
+      au < exists ; American Journal Of Pathology Volume 133 ; 133 >
+      au < exists ; American Journal Of Pathology Volume 134 ; 134 >
+      au < exists ; American Journal Of Pathology Volume 135 ; 135 >
+      au < exists ; American Journal Of Pathology Volume 136 ; 136 >
+      au < exists ; American Journal Of Pathology Volume 137 ; 137 >
+      au < exists ; American Journal Of Pathology Volume 138 ; 138 >
+      au < exists ; American Journal Of Pathology Volume 139 ; 139 >
+      au < exists ; American Journal Of Pathology Volume 140 ; 140 >
+      au < exists ; American Journal Of Pathology Volume 141 ; 141 >
+      au < exists ; American Journal Of Pathology Volume 142 ; 142 >
+      au < exists ; American Journal Of Pathology Volume 143 ; 143 >
+      au < exists ; American Journal Of Pathology Volume 144 ; 144 >
+      au < exists ; American Journal Of Pathology Volume 145 ; 145 >
+      au < exists ; American Journal Of Pathology Volume 146 ; 146 >
+      au < exists ; American Journal Of Pathology Volume 147 ; 147 >
+      au < exists ; American Journal Of Pathology Volume 148 ; 148 >
+      au < exists ; American Journal Of Pathology Volume 149 ; 149 >
+      au < exists ; American Journal Of Pathology Volume 150 ; 150 >
+      au < exists ; American Journal Of Pathology Volume 151 ; 151 >
+      au < exists ; American Journal Of Pathology Volume 152 ; 152 >
+      au < exists ; American Journal Of Pathology Volume 153 ; 153 >
+      au < exists ; American Journal Of Pathology Volume 154 ; 154 >
+      au < exists ; American Journal Of Pathology Volume 155 ; 155 >
+      au < exists ; American Journal Of Pathology Volume 156 ; 156 >
+      au < exists ; American Journal Of Pathology Volume 157 ; 157 >
+      au < exists ; American Journal Of Pathology Volume 158 ; 158 >
+      au < exists ; American Journal Of Pathology Volume 159 ; 159 >
+      au < exists ; American Journal Of Pathology Volume 160 ; 160 >
+      au < exists ; American Journal Of Pathology Volume 161 ; 161 >
+      au < exists ; American Journal Of Pathology Volume 162 ; 162 >
+      au < exists ; American Journal Of Pathology Volume 163 ; 163 >
+      au < exists ; American Journal Of Pathology Volume 164 ; 164 >
+      au < exists ; American Journal Of Pathology Volume 165 ; 165 >
+      au < exists ; American Journal Of Pathology Volume 166 ; 166 >
+      au < exists ; American Journal Of Pathology Volume 167 ; 167 >
+      au < exists ; American Journal Of Pathology Volume 168 ; 168 >
+      au < exists ; American Journal Of Pathology Volume 169 ; 169 >
+      au < exists ; American Journal Of Pathology Volume 170 ; 170 >
+      au < exists ; American Journal Of Pathology Volume 171 ; 171 >
+      au < exists ; American Journal Of Pathology Volume 172 ; 172 >
+      au < exists ; American Journal Of Pathology Volume 173 ; 173 >
+      au < exists ; American Journal Of Pathology Volume 174 ; 174 >
+      au < exists ; American Journal Of Pathology Volume 175 ; 175 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Molecular Diagnostics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jmd.amjpathol.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Molecular Diagnostics Volume 1 ; 1 >
+      au < exists ; Journal of Molecular Diagnostics Volume 2 ; 2 >
+      au < exists ; Journal of Molecular Diagnostics Volume 3 ; 3 >
+      au < exists ; Journal of Molecular Diagnostics Volume 4 ; 4 >
+      au < exists ; Journal of Molecular Diagnostics Volume 5 ; 5 >
+      au < exists ; Journal of Molecular Diagnostics Volume 6 ; 6 >
+      au < exists ; Journal of Molecular Diagnostics Volume 7 ; 7 >
+      au < exists ; Journal of Molecular Diagnostics Volume 8 ; 8 >
+      au < exists ; Journal of Molecular Diagnostics Volume 9 ; 9 >
+      au < exists ; Journal of Molecular Diagnostics Volume 10 ; 10 >
+      au < exists ; Journal of Molecular Diagnostics Volume 11 ; 11 >
+
+    }
+
+  }
+
+}
+

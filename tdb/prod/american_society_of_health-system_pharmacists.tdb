@@ -1,0 +1,67 @@
+{
+  publisher <
+    name = American Society of Health-System Pharmacists
+  >
+
+  {
+    title <
+      name = American Journal of Health-System Pharmacy
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.ajhp.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Health-System Pharmacy Volume 23 ; 23 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 24 ; 24 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 25 ; 25 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 26 ; 26 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 27 ; 27 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 28 ; 28 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 29 ; 29 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 30 ; 30 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 31 ; 31 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 32 ; 32 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 33 ; 33 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 34 ; 34 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 35 ; 35 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 36 ; 36 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 37 ; 37 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 38 ; 38 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 39 ; 39 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 40 ; 40 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 41 ; 41 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 42 ; 42 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 43 ; 43 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 44 ; 44 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 45 ; 45 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 46 ; 46 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 47 ; 47 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 48 ; 48 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 49 ; 49 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 50 ; 50 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 51 ; 51 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 52 ; 52 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 53 ; 53 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
+      au < exists ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
+
+    }
+
+  }
+
+}
+

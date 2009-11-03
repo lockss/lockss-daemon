@@ -1,0 +1,111 @@
+{
+  publisher <
+    name = Massachusetts Medical Society
+  >
+
+  {
+    title <
+      name = New England Journal of Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://content.nejm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; New England Journal of Medicine Volume 274 ; 274 >
+      au < exists ; New England Journal of Medicine Volume 275 ; 275 >
+      au < exists ; New England Journal of Medicine Volume 276 ; 276 >
+      au < exists ; New England Journal of Medicine Volume 277 ; 277 >
+      au < exists ; New England Journal of Medicine Volume 278 ; 278 >
+      au < exists ; New England Journal of Medicine Volume 279 ; 279 >
+      au < exists ; New England Journal of Medicine Volume 280 ; 280 >
+      au < exists ; New England Journal of Medicine Volume 281 ; 281 >
+      au < exists ; New England Journal of Medicine Volume 282 ; 282 >
+      au < exists ; New England Journal of Medicine Volume 283 ; 283 >
+      au < exists ; New England Journal of Medicine Volume 284 ; 284 >
+      au < exists ; New England Journal of Medicine Volume 285 ; 285 >
+      au < exists ; New England Journal of Medicine Volume 286 ; 286 >
+      au < exists ; New England Journal of Medicine Volume 287 ; 287 >
+      au < exists ; New England Journal of Medicine Volume 288 ; 288 >
+      au < exists ; New England Journal of Medicine Volume 289 ; 289 >
+      au < exists ; New England Journal of Medicine Volume 290 ; 290 >
+      au < exists ; New England Journal of Medicine Volume 291 ; 291 >
+      au < exists ; New England Journal of Medicine Volume 292 ; 292 >
+      au < exists ; New England Journal of Medicine Volume 293 ; 293 >
+      au < exists ; New England Journal of Medicine Volume 294 ; 294 >
+      au < exists ; New England Journal of Medicine Volume 295 ; 295 >
+      au < exists ; New England Journal of Medicine Volume 296 ; 296 >
+      au < exists ; New England Journal of Medicine Volume 297 ; 297 >
+      au < exists ; New England Journal of Medicine Volume 298 ; 298 >
+      au < exists ; New England Journal of Medicine Volume 299 ; 299 >
+      au < exists ; New England Journal of Medicine Volume 300 ; 300 >
+      au < exists ; New England Journal of Medicine Volume 301 ; 301 >
+      au < exists ; New England Journal of Medicine Volume 302 ; 302 >
+      au < exists ; New England Journal of Medicine Volume 303 ; 303 >
+      au < exists ; New England Journal of Medicine Volume 304 ; 304 >
+      au < exists ; New England Journal of Medicine Volume 305 ; 305 >
+      au < exists ; New England Journal of Medicine Volume 306 ; 306 >
+      au < exists ; New England Journal of Medicine Volume 307 ; 307 >
+      au < exists ; New England Journal of Medicine Volume 308 ; 308 >
+      au < exists ; New England Journal of Medicine Volume 309 ; 309 >
+      au < exists ; New England Journal of Medicine Volume 310 ; 310 >
+      au < exists ; New England Journal of Medicine Volume 311 ; 311 >
+      au < exists ; New England Journal of Medicine Volume 312 ; 312 >
+      au < exists ; New England Journal of Medicine Volume 313 ; 313 >
+      au < exists ; New England Journal of Medicine Volume 314 ; 314 >
+      au < exists ; New England Journal of Medicine Volume 315 ; 315 >
+      au < exists ; New England Journal of Medicine Volume 316 ; 316 >
+      au < exists ; New England Journal of Medicine Volume 317 ; 317 >
+      au < exists ; New England Journal of Medicine Volume 318 ; 318 >
+      au < exists ; New England Journal of Medicine Volume 319 ; 319 >
+      au < exists ; New England Journal of Medicine Volume 320 ; 320 >
+      au < exists ; New England Journal of Medicine Volume 321 ; 321 >
+      au < exists ; New England Journal of Medicine Volume 322 ; 322 >
+      au < exists ; New England Journal of Medicine Volume 323 ; 323 >
+      au < exists ; New England Journal of Medicine Volume 324 ; 324 >
+      au < exists ; New England Journal of Medicine Volume 325 ; 325 >
+      au < exists ; New England Journal of Medicine Volume 326 ; 326 >
+      au < exists ; New England Journal of Medicine Volume 327 ; 327 >
+      au < exists ; New England Journal of Medicine Volume 328 ; 328 >
+      au < exists ; New England Journal of Medicine Volume 329 ; 329 >
+      au < exists ; New England Journal of Medicine Volume 330 ; 330 >
+      au < exists ; New England Journal of Medicine Volume 331 ; 331 >
+      au < exists ; New England Journal of Medicine Volume 332 ; 332 >
+      au < exists ; New England Journal of Medicine Volume 333 ; 333 >
+      au < exists ; New England Journal of Medicine Volume 334 ; 334 >
+      au < exists ; New England Journal of Medicine Volume 335 ; 335 >
+      au < exists ; New England Journal of Medicine Volume 336 ; 336 >
+      au < exists ; New England Journal of Medicine Volume 337 ; 337 >
+      au < exists ; New England Journal of Medicine Volume 338 ; 338 >
+      au < exists ; New England Journal of Medicine Volume 339 ; 339 >
+      au < exists ; New England Journal of Medicine Volume 340 ; 340 >
+      au < exists ; New England Journal of Medicine Volume 341 ; 341 >
+      au < exists ; New England Journal of Medicine Volume 342 ; 342 >
+      au < exists ; New England Journal of Medicine Volume 343 ; 343 >
+      au < exists ; New England Journal of Medicine Volume 344 ; 344 >
+      au < exists ; New England Journal of Medicine Volume 345 ; 345 >
+      au < exists ; New England Journal of Medicine Volume 346 ; 346 >
+      au < exists ; New England Journal of Medicine Volume 347 ; 347 >
+      au < exists ; New England Journal of Medicine Volume 348 ; 348 >
+      au < exists ; New England Journal of Medicine Volume 349 ; 349 >
+      au < exists ; New England Journal of Medicine Volume 350 ; 350 >
+      au < exists ; New England Journal of Medicine Volume 351 ; 351 >
+      au < released ; New England Journal of Medicine Volume 352 ; 352 >
+      au < released ; New England Journal of Medicine Volume 353 ; 353 >
+      au < released ; New England Journal of Medicine Volume 354 ; 354 >
+      au < released ; New England Journal of Medicine Volume 355 ; 355 >
+      au < manifest ; New England Journal of Medicine Volume 356 ; 356 >
+      au < manifest ; New England Journal of Medicine Volume 357 ; 357 >
+      au < manifest ; New England Journal of Medicine Volume 358 ; 358 >
+      au < manifest ; New England Journal of Medicine Volume 359 ; 359 >
+      au < manifest ; New England Journal of Medicine Volume 360 ; 360 >
+      au < manifest ; New England Journal of Medicine Volume 361 ; 361 >
+
+    }
+
+  }
+
+}
+

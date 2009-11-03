@@ -1,0 +1,161 @@
+{
+  publisher <
+    name = American College of Chest Physicians
+  >
+
+  {
+    title <
+      name = Chest
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.chestjournal.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Chest Volume 1 ; 1 >
+      au < exists ; Chest Volume 2 ; 2 >
+      au < exists ; Chest Volume 3 ; 3 >
+      au < exists ; Chest Volume 4 ; 4 >
+      au < exists ; Chest Volume 5 ; 5 >
+      au < exists ; Chest Volume 6 ; 6 >
+      au < exists ; Chest Volume 7 ; 7 >
+      au < exists ; Chest Volume 8 ; 8 >
+      au < exists ; Chest Volume 9 ; 9 >
+      au < exists ; Chest Volume 10 ; 10 >
+      au < exists ; Chest Volume 11 ; 11 >
+      au < exists ; Chest Volume 12 ; 12 >
+      au < exists ; Chest Volume 13 ; 13 >
+      au < exists ; Chest Volume 14 ; 14 >
+      au < exists ; Chest Volume 15 ; 15 >
+      au < exists ; Chest Volume 16 ; 16 >
+      au < exists ; Chest Volume 17 ; 17 >
+      au < exists ; Chest Volume 18 ; 18 >
+      au < exists ; Chest Volume 19 ; 19 >
+      au < exists ; Chest Volume 20 ; 20 >
+      au < exists ; Chest Volume 21 ; 21 >
+      au < exists ; Chest Volume 22 ; 22 >
+      au < exists ; Chest Volume 23 ; 23 >
+      au < exists ; Chest Volume 24 ; 24 >
+      au < exists ; Chest Volume 25 ; 25 >
+      au < exists ; Chest Volume 26 ; 26 >
+      au < exists ; Chest Volume 27 ; 27 >
+      au < exists ; Chest Volume 28 ; 28 >
+      au < exists ; Chest Volume 29 ; 29 >
+      au < exists ; Chest Volume 30 ; 30 >
+      au < exists ; Chest Volume 31 ; 31 >
+      au < exists ; Chest Volume 32 ; 32 >
+      au < exists ; Chest Volume 33 ; 33 >
+      au < exists ; Chest Volume 34 ; 34 >
+      au < exists ; Chest Volume 35 ; 35 >
+      au < exists ; Chest Volume 36 ; 36 >
+      au < exists ; Chest Volume 37 ; 37 >
+      au < exists ; Chest Volume 38 ; 38 >
+      au < exists ; Chest Volume 39 ; 39 >
+      au < exists ; Chest Volume 40 ; 40 >
+      au < exists ; Chest Volume 41 ; 41 >
+      au < exists ; Chest Volume 42 ; 42 >
+      au < exists ; Chest Volume 43 ; 43 >
+      au < exists ; Chest Volume 44 ; 44 >
+      au < exists ; Chest Volume 45 ; 45 >
+      au < exists ; Chest Volume 46 ; 46 >
+      au < exists ; Chest Volume 47 ; 47 >
+      au < exists ; Chest Volume 48 ; 48 >
+      au < exists ; Chest Volume 49 ; 49 >
+      au < exists ; Chest Volume 50 ; 50 >
+      au < exists ; Chest Volume 51 ; 51 >
+      au < exists ; Chest Volume 52 ; 52 >
+      au < exists ; Chest Volume 53 ; 53 >
+      au < exists ; Chest Volume 54 ; 54 >
+      au < exists ; Chest Volume 55 ; 55 >
+      au < exists ; Chest Volume 56 ; 56 >
+      au < exists ; Chest Volume 57 ; 57 >
+      au < exists ; Chest Volume 58 ; 58 >
+      au < exists ; Chest Volume 59 ; 59 >
+      au < exists ; Chest Volume 60 ; 60 >
+      au < exists ; Chest Volume 61 ; 61 >
+      au < exists ; Chest Volume 62 ; 62 >
+      au < exists ; Chest Volume 63 ; 63 >
+      au < exists ; Chest Volume 64 ; 64 >
+      au < exists ; Chest Volume 65 ; 65 >
+      au < exists ; Chest Volume 66 ; 66 >
+      au < exists ; Chest Volume 67 ; 67 >
+      au < exists ; Chest Volume 68 ; 68 >
+      au < exists ; Chest Volume 69 ; 69 >
+      au < exists ; Chest Volume 70 ; 70 >
+      au < exists ; Chest Volume 71 ; 71 >
+      au < exists ; Chest Volume 72 ; 72 >
+      au < exists ; Chest Volume 73 ; 73 >
+      au < exists ; Chest Volume 74 ; 74 >
+      au < exists ; Chest Volume 75 ; 75 >
+      au < exists ; Chest Volume 76 ; 76 >
+      au < exists ; Chest Volume 77 ; 77 >
+      au < exists ; Chest Volume 78 ; 78 >
+      au < exists ; Chest Volume 79 ; 79 >
+      au < exists ; Chest Volume 80 ; 80 >
+      au < exists ; Chest Volume 81 ; 81 >
+      au < exists ; Chest Volume 82 ; 82 >
+      au < exists ; Chest Volume 83 ; 83 >
+      au < exists ; Chest Volume 84 ; 84 >
+      au < exists ; Chest Volume 85 ; 85 >
+      au < exists ; Chest Volume 86 ; 86 >
+      au < exists ; Chest Volume 87 ; 87 >
+      au < exists ; Chest Volume 88 ; 88 >
+      au < exists ; Chest Volume 89 ; 89 >
+      au < exists ; Chest Volume 90 ; 90 >
+      au < exists ; Chest Volume 91 ; 91 >
+      au < exists ; Chest Volume 92 ; 92 >
+      au < exists ; Chest Volume 93 ; 93 >
+      au < exists ; Chest Volume 94 ; 94 >
+      au < exists ; Chest Volume 95 ; 95 >
+      au < exists ; Chest Volume 96 ; 96 >
+      au < exists ; Chest Volume 97 ; 97 >
+      au < exists ; Chest Volume 98 ; 98 >
+      au < exists ; Chest Volume 99 ; 99 >
+      au < exists ; Chest Volume 100 ; 100 >
+      au < exists ; Chest Volume 101 ; 101 >
+      au < exists ; Chest Volume 102 ; 102 >
+      au < exists ; Chest Volume 103 ; 103 >
+      au < exists ; Chest Volume 104 ; 104 >
+      au < exists ; Chest Volume 105 ; 105 >
+      au < exists ; Chest Volume 106 ; 106 >
+      au < exists ; Chest Volume 107 ; 107 >
+      au < exists ; Chest Volume 108 ; 108 >
+      au < exists ; Chest Volume 109 ; 109 >
+      au < exists ; Chest Volume 110 ; 110 >
+      au < exists ; Chest Volume 111 ; 111 >
+      au < exists ; Chest Volume 112 ; 112 >
+      au < exists ; Chest Volume 113 ; 113 >
+      au < exists ; Chest Volume 114 ; 114 >
+      au < exists ; Chest Volume 115 ; 115 >
+      au < exists ; Chest Volume 116 ; 116 >
+      au < exists ; Chest Volume 117 ; 117 >
+      au < exists ; Chest Volume 118 ; 118 >
+      au < exists ; Chest Volume 119 ; 119 >
+      au < exists ; Chest Volume 120 ; 120 >
+      au < exists ; Chest Volume 121 ; 121 >
+      au < exists ; Chest Volume 122 ; 122 >
+      au < exists ; Chest Volume 123 ; 123 >
+      au < exists ; Chest Volume 124 ; 124 >
+      au < exists ; Chest Volume 125 ; 125 >
+      au < exists ; Chest Volume 126 ; 126 >
+      au < manifest ; Chest Volume 127 ; 127 >
+      au < manifest ; Chest Volume 128 ; 128 >
+      au < manifest ; Chest Volume 129 ; 129 >
+      au < manifest ; Chest Volume 130 ; 130 >
+      au < manifest ; Chest Volume 131 ; 131 >
+      au < manifest ; Chest Volume 132 ; 132 >
+      au < manifest ; Chest Volume 133 ; 133 >
+      au < manifest ; Chest Volume 134 ; 134 >
+      au < manifest ; Chest Volume 135 ; 135 >
+      au < exists ; Chest Volume 136 ; 136 >
+
+    }
+
+  }
+
+}
+

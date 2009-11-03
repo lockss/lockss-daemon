@@ -1,0 +1,66 @@
+{
+  publisher <
+    name = American Podiatric Medical Association
+  >
+
+  {
+    title <
+      name = Journal of the American Podiatric Medical Association
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.japmaonline.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of the American Podiatric Medical Association Volume 56 ; 56 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 57 ; 57 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 59 ; 59 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 60 ; 60 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 61 ; 61 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 62 ; 62 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 63 ; 63 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 64 ; 64 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 65 ; 65 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 66 ; 66 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 67 ; 67 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 68 ; 68 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 69 ; 69 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 70 ; 70 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 71 ; 71 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 72 ; 72 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 73 ; 73 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 74 ; 74 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 75 ; 75 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 76 ; 76 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 77 ; 77 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 78 ; 78 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 79 ; 79 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 80 ; 80 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 81 ; 81 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 82 ; 82 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 83 ; 83 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 84 ; 84 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 85 ; 85 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 86 ; 86 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 87 ; 87 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 88 ; 88 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 89 ; 89 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 90 ; 90 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 91 ; 91 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 92 ; 92 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 93 ; 93 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 94 ; 94 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 95 ; 95 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 96 ; 96 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 97 ; 97 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 98 ; 98 >
+      au < exists ; Journal of the American Podiatric Medical Association Volume 99 ; 99 >
+
+    }
+
+  }
+
+}
+

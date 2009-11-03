@@ -1,0 +1,91 @@
+{
+  publisher <
+    name = Histochemical Society
+  >
+
+  {
+    title <
+      name = Journal of Histochemistry and Cytochemistry
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      param[base_url] = http://www.jhc.org/
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < released ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jhc.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 2 ; 2 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 3 ; 3 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 4 ; 4 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 5 ; 5 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 6 ; 6 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 7 ; 7 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 8 ; 8 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 9 ; 9 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 10 ; 10 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 11 ; 11 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 12 ; 12 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 13 ; 13 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 14 ; 14 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 15 ; 15 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 16 ; 16 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 17 ; 17 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 18 ; 18 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 19 ; 19 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 20 ; 20 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 21 ; 21 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 22 ; 22 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 23 ; 23 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 24 ; 24 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 25 ; 25 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 26 ; 26 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 27 ; 27 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 28 ; 28 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 29 ; 29 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 30 ; 30 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 31 ; 31 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 32 ; 32 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 33 ; 33 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 34 ; 34 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 35 ; 35 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 36 ; 36 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 37 ; 37 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 38 ; 38 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 39 ; 39 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 48 ; 48 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 49 ; 49 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 50 ; 50 >
+      au < exists ; Journal of Histochemistry and Cytochemistry Volume 51 ; 51 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < released ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+      au < released ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+      au < manifest ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+      au < manifest ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+
+    }
+
+  }
+
+}
+

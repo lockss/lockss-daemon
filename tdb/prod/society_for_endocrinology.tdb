@@ -1,0 +1,242 @@
+{
+  publisher <
+    name = Society for Endocrinology
+  >
+
+  {
+    title <
+      name = Endocrine-Related Cancer
+    >
+
+    {
+
+comment[erc15] = found a login page
+comment[erc16] = no permission on manifest page (no subscription)
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://erc.endocrinology-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Endocrine-Related Cancer Volume 1 ; 1 >
+      au < exists ; Endocrine-Related Cancer Volume 2 ; 2 >
+      au < exists ; Endocrine-Related Cancer Volume 3 ; 3 >
+      au < exists ; Endocrine-Related Cancer Volume 4 ; 4 >
+      au < manifest ; Endocrine-Related Cancer Volume 5 ; 5 >
+      au < manifest ; Endocrine-Related Cancer Volume 6 ; 6 >
+      au < manifest ; Endocrine-Related Cancer Volume 7 ; 7 >
+      au < manifest ; Endocrine-Related Cancer Volume 8 ; 8 >
+      au < manifest ; Endocrine-Related Cancer Volume 9 ; 9 >
+      au < manifest ; Endocrine-Related Cancer Volume 10 ; 10 >
+      au < manifest ; Endocrine-Related Cancer Volume 11 ; 11 >
+      au < manifest ; Endocrine-Related Cancer Volume 12 ; 12 >
+      au < manifest ; Endocrine-Related Cancer Volume 13 ; 13 >
+      au < manifest ; Endocrine-Related Cancer Volume 14 ; 14 >
+      au < notReady ; Endocrine-Related Cancer Volume 15 ; 15 >
+      au < exists ; Endocrine-Related Cancer Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Endocrinology
+    >
+
+    {
+
+comment[joe153] = 500 error (content2a)
+comment[joe154] = found a login page (content2a) vol 154 and down
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://joe.endocrinology-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < NotReady ; Journal of Endocrinology Volume 83 ; 83 >
+      au < NotReady ; Journal of Endocrinology Volume 84 ; 84 >
+      au < NotReady ; Journal of Endocrinology Volume 85 ; 85 >
+      au < NotReady ; Journal of Endocrinology Volume 86 ; 86 >
+      au < NotReady ; Journal of Endocrinology Volume 87 ; 87 >
+      au < NotReady ; Journal of Endocrinology Volume 88 ; 88 >
+      au < NotReady ; Journal of Endocrinology Volume 89 ; 89 >
+      au < NotReady ; Journal of Endocrinology Volume 90 ; 90 >
+      au < NotReady ; Journal of Endocrinology Volume 91 ; 91 >
+      au < NotReady ; Journal of Endocrinology Volume 92 ; 92 >
+      au < NotReady ; Journal of Endocrinology Volume 93 ; 93 >
+      au < NotReady ; Journal of Endocrinology Volume 94 ; 94 >
+      au < NotReady ; Journal of Endocrinology Volume 95 ; 95 >
+      au < NotReady ; Journal of Endocrinology Volume 96 ; 96 >
+      au < NotReady ; Journal of Endocrinology Volume 97 ; 97 >
+      au < NotReady ; Journal of Endocrinology Volume 98 ; 98 >
+      au < NotReady ; Journal of Endocrinology Volume 99 ; 99 >
+      au < manifest ; Journal of Endocrinology Volume 100 ; 100 >
+      au < manifest ; Journal of Endocrinology Volume 101 ; 101 >
+      au < manifest ; Journal of Endocrinology Volume 102 ; 102 >
+      au < manifest ; Journal of Endocrinology Volume 103 ; 103 >
+      au < manifest ; Journal of Endocrinology Volume 104 ; 104 >
+      au < manifest ; Journal of Endocrinology Volume 105 ; 105 >
+      au < manifest ; Journal of Endocrinology Volume 106 ; 106 >
+      au < manifest ; Journal of Endocrinology Volume 107 ; 107 >
+      au < manifest ; Journal of Endocrinology Volume 108 ; 108 >
+      au < manifest ; Journal of Endocrinology Volume 109 ; 109 >
+      au < manifest ; Journal of Endocrinology Volume 110 ; 110 >
+      au < manifest ; Journal of Endocrinology Volume 111 ; 111 >
+      au < manifest ; Journal of Endocrinology Volume 112 ; 112 >
+      au < manifest ; Journal of Endocrinology Volume 113 ; 113 >
+      au < manifest ; Journal of Endocrinology Volume 114 ; 114 >
+      au < manifest ; Journal of Endocrinology Volume 115 ; 115 >
+      au < manifest ; Journal of Endocrinology Volume 116 ; 116 >
+      au < manifest ; Journal of Endocrinology Volume 117 ; 117 >
+      au < manifest ; Journal of Endocrinology Volume 118 ; 118 >
+      au < manifest ; Journal of Endocrinology Volume 119 ; 119 >
+      au < manifest ; Journal of Endocrinology Volume 120 ; 120 >
+      au < manifest ; Journal of Endocrinology Volume 121 ; 121 >
+      au < manifest ; Journal of Endocrinology Volume 122 ; 122 >
+      au < manifest ; Journal of Endocrinology Volume 123 ; 123 >
+      au < manifest ; Journal of Endocrinology Volume 124 ; 124 >
+      au < manifest ; Journal of Endocrinology Volume 125 ; 125 >
+      au < manifest ; Journal of Endocrinology Volume 126 ; 126 >
+      au < manifest ; Journal of Endocrinology Volume 127 ; 127 >
+      au < manifest ; Journal of Endocrinology Volume 128 ; 128 >
+      au < manifest ; Journal of Endocrinology Volume 129 ; 129 >
+      au < manifest ; Journal of Endocrinology Volume 130 ; 130 >
+      au < manifest ; Journal of Endocrinology Volume 131 ; 131 >
+      au < manifest ; Journal of Endocrinology Volume 132 ; 132 >
+      au < manifest ; Journal of Endocrinology Volume 133 ; 133 >
+      au < manifest ; Journal of Endocrinology Volume 134 ; 134 >
+      au < manifest ; Journal of Endocrinology Volume 135 ; 135 >
+      au < manifest ; Journal of Endocrinology Volume 136 ; 136 >
+      au < manifest ; Journal of Endocrinology Volume 137 ; 137 >
+      au < manifest ; Journal of Endocrinology Volume 138 ; 138 >
+      au < manifest ; Journal of Endocrinology Volume 139 ; 139 >
+      au < manifest ; Journal of Endocrinology Volume 140 ; 140 >
+      au < manifest ; Journal of Endocrinology Volume 141 ; 141 >
+      au < manifest ; Journal of Endocrinology Volume 142 ; 142 >
+      au < manifest ; Journal of Endocrinology Volume 143 ; 143 >
+      au < manifest ; Journal of Endocrinology Volume 144 ; 144 >
+      au < manifest ; Journal of Endocrinology Volume 145 ; 145 >
+      au < manifest ; Journal of Endocrinology Volume 146 ; 146 >
+      au < manifest ; Journal of Endocrinology Volume 147 ; 147 >
+      au < notReady ; Journal of Endocrinology Volume 148 ; 148 >
+      au < notReady ; Journal of Endocrinology Volume 149 ; 149 >
+      au < notReady ; Journal of Endocrinology Volume 150 ; 150 >
+      au < notReady ; Journal of Endocrinology Volume 151 ; 151 >
+      au < notReady ; Journal of Endocrinology Volume 152 ; 152 >
+      au < notReady ; Journal of Endocrinology Volume 153 ; 153 >
+      au < notReady ; Journal of Endocrinology Volume 154 ; 154 >
+      au < ready ; Journal of Endocrinology Volume 155 ; 155 >
+      au < ready ; Journal of Endocrinology Volume 156 ; 156 >
+      au < ready ; Journal of Endocrinology Volume 157 ; 157 >
+      au < ready ; Journal of Endocrinology Volume 158 ; 158 >
+      au < ready ; Journal of Endocrinology Volume 159 ; 159 >
+      au < ready ; Journal of Endocrinology Volume 160 ; 160 >
+      au < ready ; Journal of Endocrinology Volume 161 ; 161 >
+      au < ready ; Journal of Endocrinology Volume 162 ; 162 >
+      au < ready ; Journal of Endocrinology Volume 163 ; 163 >
+      au < ready ; Journal of Endocrinology Volume 164 ; 164 >
+      au < ready ; Journal of Endocrinology Volume 165 ; 165 >
+      au < ready ; Journal of Endocrinology Volume 166 ; 166 >
+      au < ready ; Journal of Endocrinology Volume 167 ; 167 >
+      au < ready ; Journal of Endocrinology Volume 168 ; 168 >
+      au < ready ; Journal of Endocrinology Volume 169 ; 169 >
+      au < ready ; Journal of Endocrinology Volume 170 ; 170 >
+      au < ready ; Journal of Endocrinology Volume 171 ; 171 >
+      au < ready ; Journal of Endocrinology Volume 172 ; 172 >
+      au < ready ; Journal of Endocrinology Volume 173 ; 173 >
+      au < ready ; Journal of Endocrinology Volume 174 ; 174 >
+      au < ready ; Journal of Endocrinology Volume 175 ; 175 >
+      au < ready ; Journal of Endocrinology Volume 176 ; 176 >
+      au < ready ; Journal of Endocrinology Volume 177 ; 177 >
+      au < ready ; Journal of Endocrinology Volume 178 ; 178 >
+      au < ready ; Journal of Endocrinology Volume 179 ; 179 >
+      au < ready ; Journal of Endocrinology Volume 180 ; 180 >
+      au < ready ; Journal of Endocrinology Volume 181 ; 181 >
+      au < ready ; Journal of Endocrinology Volume 182 ; 182 >
+      au < ready ; Journal of Endocrinology Volume 183 ; 183 >
+      au < ready ; Journal of Endocrinology Volume 184 ; 184 >
+      au < ready ; Journal of Endocrinology Volume 185 ; 185 >
+      au < ready ; Journal of Endocrinology Volume 186 ; 186 >
+      au < ready ; Journal of Endocrinology Volume 187 ; 187 >
+      au < ready ; Journal of Endocrinology Volume 188 ; 188 >
+      au < ready ; Journal of Endocrinology Volume 189 ; 189 >
+      au < ready ; Journal of Endocrinology Volume 190 ; 190 >
+      au < ready ; Journal of Endocrinology Volume 191 ; 191 >
+      au < ready ; Journal of Endocrinology Volume 192 ; 192 >
+      au < ready ; Journal of Endocrinology Volume 193 ; 193 >
+      au < ready ; Journal of Endocrinology Volume 194 ; 194 >
+      au < ready ; Journal of Endocrinology Volume 195 ; 195 >
+      au < ready ; Journal of Endocrinology Volume 196 ; 196 >
+      au < ready ; Journal of Endocrinology Volume 197 ; 197 >
+      au < ready ; Journal of Endocrinology Volume 198 ; 198 >
+      au < ready ; Journal of Endocrinology Volume 199 ; 199 >
+      au < ready ; Journal of Endocrinology Volume 200 ; 200 >
+      au < ready ; Journal of Endocrinology Volume 201 ; 201 >
+      au < ready ; Journal of Endocrinology Volume 202 ; 202 >
+      
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Molecular Endocrinology
+    >
+
+    {
+
+comment[jme43] = "Found a login page".  Thib will need to look at this later.
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jme.endocrinology-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < NotReady ; Journal of Molecular Endocrinology Volume 1 ; 1 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 2 ; 2 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 3 ; 3 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 4 ; 4 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 5 ; 5 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 6 ; 6 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 7 ; 7 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 8 ; 8 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 9 ; 9 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 10 ; 10 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 11 ; 11 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 12 ; 12 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 13 ; 13 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 14 ; 14 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 15 ; 15 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 16 ; 16 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 17 ; 17 >
+      au < NotReady ; Journal of Molecular Endocrinology Volume 18 ; 18 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 19 ; 19 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 20 ; 20 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 21 ; 21 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 22 ; 22 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 23 ; 23 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 24 ; 24 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 25 ; 25 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 26 ; 26 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 27 ; 27 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 28 ; 28 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 29 ; 29 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 30 ; 30 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 31 ; 31 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 32 ; 32 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 33 ; 33 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 34 ; 34 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 35 ; 35 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 36 ; 36 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 37 ; 37 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 38 ; 38 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 39 ; 39 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 40 ; 40 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 41 ; 41 >
+      au < manifest ; Journal of Molecular Endocrinology Volume 42 ; 42 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 43 ; 43 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,94 @@
+{
+  publisher <
+    name = American Academy of Neurology
+  >
+
+  {
+    title <
+      name = Neurology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.neurology.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Neurology Volume 1 ; 1 >
+      au < exists ; Neurology Volume 3 ; 3 >
+      au < exists ; Neurology Volume 4 ; 4 >
+      au < exists ; Neurology Volume 5 ; 5 >
+      au < exists ; Neurology Volume 6 ; 6 >
+      au < exists ; Neurology Volume 7 ; 7 >
+      au < exists ; Neurology Volume 8 ; 8 >
+      au < exists ; Neurology Volume 9 ; 9 >
+      au < exists ; Neurology Volume 10 ; 10 >
+      au < exists ; Neurology Volume 11 ; 11 >
+      au < exists ; Neurology Volume 12 ; 12 >
+      au < exists ; Neurology Volume 13 ; 13 >
+      au < exists ; Neurology Volume 14 ; 14 >
+      au < exists ; Neurology Volume 15 ; 15 >
+      au < exists ; Neurology Volume 16 ; 16 >
+      au < exists ; Neurology Volume 17 ; 17 >
+      au < exists ; Neurology Volume 19 ; 19 >
+      au < exists ; Neurology Volume 20 ; 20 >
+      au < exists ; Neurology Volume 21 ; 21 >
+      au < exists ; Neurology Volume 22 ; 22 >
+      au < exists ; Neurology Volume 23 ; 23 >
+      au < exists ; Neurology Volume 24 ; 24 >
+      au < exists ; Neurology Volume 25 ; 25 >
+      au < exists ; Neurology Volume 26 ; 26 >
+      au < exists ; Neurology Volume 27 ; 27 >
+      au < exists ; Neurology Volume 28 ; 28 >
+      au < exists ; Neurology Volume 29 ; 29 >
+      au < exists ; Neurology Volume 30 ; 30 >
+      au < exists ; Neurology Volume 31 ; 31 >
+      au < exists ; Neurology Volume 32 ; 32 >
+      au < exists ; Neurology Volume 33 ; 33 >
+      au < exists ; Neurology Volume 34 ; 34 >
+      au < exists ; Neurology Volume 35 ; 35 >
+      au < exists ; Neurology Volume 36 ; 36 >
+      au < exists ; Neurology Volume 37 ; 37 >
+      au < exists ; Neurology Volume 38 ; 38 >
+      au < exists ; Neurology Volume 39 ; 39 >
+      au < exists ; Neurology Volume 40 ; 40 >
+      au < exists ; Neurology Volume 41 ; 41 >
+      au < exists ; Neurology Volume 42 ; 42 >
+      au < exists ; Neurology Volume 43 ; 43 >
+      au < exists ; Neurology Volume 44 ; 44 >
+      au < exists ; Neurology Volume 45 ; 45 >
+      au < exists ; Neurology Volume 46 ; 46 >
+      au < exists ; Neurology Volume 47 ; 47 >
+      au < exists ; Neurology Volume 48 ; 48 >
+      au < exists ; Neurology Volume 49 ; 49 >
+      au < exists ; Neurology Volume 50 ; 50 >
+      au < exists ; Neurology Volume 51 ; 51 >
+      au < exists ; Neurology Volume 52 ; 52 >
+      au < exists ; Neurology Volume 53 ; 53 >
+      au < exists ; Neurology Volume 54 ; 54 >
+      au < exists ; Neurology Volume 55 ; 55 >
+      au < exists ; Neurology Volume 56 ; 56 >
+      au < exists ; Neurology Volume 57 ; 57 >
+      au < exists ; Neurology Volume 58 ; 58 >
+      au < exists ; Neurology Volume 59 ; 59 >
+      au < exists ; Neurology Volume 60 ; 60 >
+      au < exists ; Neurology Volume 61 ; 61 >
+      au < exists ; Neurology Volume 62 ; 62 >
+      au < exists ; Neurology Volume 63 ; 63 >
+      au < exists ; Neurology Volume 64 ; 64 >
+      au < exists ; Neurology Volume 65 ; 65 >
+      au < exists ; Neurology Volume 66 ; 66 >
+      au < exists ; Neurology Volume 67 ; 67 >
+      au < exists ; Neurology Volume 68 ; 68 >
+      au < exists ; Neurology Volume 69 ; 69 >
+      au < exists ; Neurology Volume 70 ; 70 >
+      au < exists ; Neurology Volume 71 ; 71 >
+      au < exists ; Neurology Volume 72 ; 72 >
+      au < exists ; Neurology Volume 73 ; 73 >
+
+    }
+
+  }
+
+}
+

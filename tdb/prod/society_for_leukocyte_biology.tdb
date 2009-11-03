@@ -1,0 +1,75 @@
+{
+  publisher <
+    name = Society for Leukocyte Biology
+  >
+
+  {
+    title <
+      name = Journal of Leukocyte Biology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jleukbio.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Leukocyte Biology Volume 35 ; 35 >
+      au < exists ; Journal of Leukocyte Biology Volume 36 ; 36 >
+      au < exists ; Journal of Leukocyte Biology Volume 37 ; 37 >
+      au < exists ; Journal of Leukocyte Biology Volume 38 ; 38 >
+      au < exists ; Journal of Leukocyte Biology Volume 39 ; 39 >
+      au < exists ; Journal of Leukocyte Biology Volume 40 ; 40 >
+      au < exists ; Journal of Leukocyte Biology Volume 41 ; 41 >
+      au < exists ; Journal of Leukocyte Biology Volume 42 ; 42 >
+      au < exists ; Journal of Leukocyte Biology Volume 43 ; 43 >
+      au < exists ; Journal of Leukocyte Biology Volume 44 ; 44 >
+      au < exists ; Journal of Leukocyte Biology Volume 45 ; 45 >
+      au < exists ; Journal of Leukocyte Biology Volume 46 ; 46 >
+      au < exists ; Journal of Leukocyte Biology Volume 47 ; 47 >
+      au < exists ; Journal of Leukocyte Biology Volume 48 ; 48 >
+      au < exists ; Journal of Leukocyte Biology Volume 49 ; 49 >
+      au < exists ; Journal of Leukocyte Biology Volume 50 ; 50 >
+      au < exists ; Journal of Leukocyte Biology Volume 51 ; 51 >
+      au < exists ; Journal of Leukocyte Biology Volume 52 ; 52 >
+      au < exists ; Journal of Leukocyte Biology Volume 53 ; 53 >
+      au < exists ; Journal of Leukocyte Biology Volume 54 ; 54 >
+      au < exists ; Journal of Leukocyte Biology Volume 55 ; 55 >
+      au < exists ; Journal of Leukocyte Biology Volume 56 ; 56 >
+      au < exists ; Journal of Leukocyte Biology Volume 57 ; 57 >
+      au < exists ; Journal of Leukocyte Biology Volume 58 ; 58 >
+      au < exists ; Journal of Leukocyte Biology Volume 59 ; 59 >
+      au < exists ; Journal of Leukocyte Biology Volume 60 ; 60 >
+      au < exists ; Journal of Leukocyte Biology Volume 61 ; 61 >
+      au < exists ; Journal of Leukocyte Biology Volume 62 ; 62 >
+      au < exists ; Journal of Leukocyte Biology Volume 63 ; 63 >
+      au < exists ; Journal of Leukocyte Biology Volume 64 ; 64 >
+      au < exists ; Journal of Leukocyte Biology Volume 65 ; 65 >
+      au < exists ; Journal of Leukocyte Biology Volume 66 ; 66 >
+      au < exists ; Journal of Leukocyte Biology Volume 67 ; 67 >
+      au < exists ; Journal of Leukocyte Biology Volume 68 ; 68 >
+      au < exists ; Journal of Leukocyte Biology Volume 69 ; 69 >
+      au < exists ; Journal of Leukocyte Biology Volume 70 ; 70 >
+      au < exists ; Journal of Leukocyte Biology Volume 71 ; 71 >
+      au < exists ; Journal of Leukocyte Biology Volume 72 ; 72 >
+      au < exists ; Journal of Leukocyte Biology Volume 73 ; 73 >
+      au < exists ; Journal of Leukocyte Biology Volume 74 ; 74 >
+      au < exists ; Journal of Leukocyte Biology Volume 75 ; 75 >
+      au < exists ; Journal of Leukocyte Biology Volume 76 ; 76 >
+      au < released ; Journal of Leukocyte Biology Volume 77 ; 77 >
+      au < released ; Journal of Leukocyte Biology Volume 78 ; 78 >
+      au < released ; Journal of Leukocyte Biology Volume 79 ; 79 >
+      au < released ; Journal of Leukocyte Biology Volume 80 ; 80 >
+      au < released ; Journal of Leukocyte Biology Volume 81 ; 81 >
+      au < manifest ; Journal of Leukocyte Biology Volume 82 ; 82 >
+      au < manifest ; Journal of Leukocyte Biology Volume 83 ; 83 >
+      au < manifest ; Journal of Leukocyte Biology Volume 84 ; 84 >
+      au < manifest ; Journal of Leukocyte Biology Volume 85 ; 85 >
+      au < manifest ; Journal of Leukocyte Biology Volume 86 ; 86 >
+
+    }
+
+  }
+
+}
+

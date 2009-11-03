@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = American Society of Radiologic Technologists
+  >
+
+  {
+    title <
+      name = Radiologic Technology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.radiologictechnology.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Radiologic Technology Volume 77 ; 77 >
+      au < manifest ; Radiologic Technology Volume 78 ; 78 >
+      au < manifest ; Radiologic Technology Volume 79 ; 79 >
+      au < manifest ; Radiologic Technology Volume 80 ; 80 >
+
+    }
+
+  }
+
+}
+

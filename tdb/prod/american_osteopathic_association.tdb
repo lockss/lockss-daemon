@@ -1,0 +1,68 @@
+{
+  publisher <
+    name = American Osteopathic Association
+  >
+
+  {
+    title <
+      name = JAOA: Journal of the American Osteopathic Association
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jaoa.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 65 ; 65 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 66 ; 66 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 67 ; 67 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 68 ; 68 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 69 ; 69 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 70 ; 70 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 71 ; 71 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 72 ; 72 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 73 ; 73 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 74 ; 74 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 75 ; 75 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 76 ; 76 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 77 ; 77 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 78 ; 78 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 79 ; 79 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 80 ; 80 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 81 ; 81 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 82 ; 82 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 83 ; 83 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 84 ; 84 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 85 ; 85 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 86 ; 86 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 87 ; 87 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 88 ; 88 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 89 ; 89 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 90 ; 90 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 91 ; 91 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 92 ; 92 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 93 ; 93 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 94 ; 94 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 95 ; 95 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 96 ; 96 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 97 ; 97 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 98 ; 98 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 99 ; 99 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 100 ; 100 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 101 ; 101 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 102 ; 102 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 103 ; 103 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 104 ; 104 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 105 ; 105 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 106 ; 106 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 107 ; 107 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 108 ; 108 >
+      au < exists ; JAOA: Journal of the American Osteopathic Association Volume 109 ; 109 >
+
+    }
+
+  }
+
+}
+

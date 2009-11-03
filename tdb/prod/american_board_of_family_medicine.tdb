@@ -1,0 +1,35 @@
+{
+  publisher <
+    name = American Board of Family Medicine
+  >
+
+  {
+    title <
+      name = The Journal of the American Board of Family Medicine
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.jabfm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Journal of the American Board of Family Medicine Volume 11 ; 11 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 12 ; 12 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 13 ; 13 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 14 ; 14 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 15 ; 15 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 16 ; 16 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 17 ; 17 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 18 ; 18 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 19 ; 19 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 20 ; 20 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 21 ; 21 >
+      au < exists ; The Journal of the American Board of Family Medicine Volume 22 ; 22 >
+
+    }
+
+  }
+
+}
+

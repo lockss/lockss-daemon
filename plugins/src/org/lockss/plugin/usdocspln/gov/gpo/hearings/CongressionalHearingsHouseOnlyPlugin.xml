@@ -1,0 +1,38 @@
+<map>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.38.0</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsHouseOnlyPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;GPO Congressional Hearings Plugin (House only), Base URL %s, Congress  %d&quot;, base_url, congress</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>GPO Congressional Hearings Plugin (House only)</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>&quot;%sgpo.gov/hearings/%dh.tgz&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/hearings/%dh.html&quot;, base_url, congress</string>
+      <string>&quot;%sgpo.gov/hearings/%dh/&quot;, base_url, congress</string>
+    </list>
+  </entry>
+</map>

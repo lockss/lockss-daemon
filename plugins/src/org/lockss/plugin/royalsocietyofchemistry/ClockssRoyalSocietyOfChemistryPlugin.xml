@@ -1,0 +1,121 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>10</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Royal Society of Chemistry Plugin (CLOCKSS), Base URL %s, Resolver URL %s, Journal Code %s, Volume %s, Year %d&quot;, base_url, resolver_url, journal_code, volume_name, year</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%s(denial|eAuthentication)/&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Royal Society of Chemistry Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Currently, it is NOT allowed to preserve the full-text HTML view of articles (plain or enhanced).</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>2,&quot;^(%s|%s)errorpage\.asp&quot;, base_url, resolver_url</string>
+      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url_host, resolver_url_host</string>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, resolver_url</string>
+      <string>1,&quot;^%spublishing/journals/lockss/\?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
+      <string>1,&quot;^%slockss.htm$&quot;, resolver_url</string>
+      <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
+      <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Type=Issue&amp;VolumeYear=%d&amp;JournalCode=%s&amp;Volume=%s&quot;, base_url, journal_code, year, journal_code, volume_name</string>
+      <string>1,&quot;^%spublishing/journals/%s/article\.asp\?Journal=&amp;VolumeYear=%d&amp;Volume=%s&amp;JournalCode=%s.*&amp;Type=Issue&amp;Page=&quot;, base_url, journal_code, year, volume_name, journal_code</string>
+      <string>2,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=.*&amp;type=ForwardLink&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&amp;Year=%d&amp;ManuscriptID=.*&amp;type=citonly$&quot;, base_url, journal_code, year</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.(cfm|asp)\?doi=.*&amp;JournalCode=%s&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%ssuppdata/%s/&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%s(ej|ejarchive|ejga|ejpdfcontents)/%s/%d/&quot;, base_url, journal_code, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resolver_url</key>
+        <displayName>Resolver Url</displayName>
+        <description>Resolver for xlink.rsc.org</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <description>The journal&apos;s short journal code</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
+      <string>&quot;%slockss.htm&quot;, resolver_url</string>
+    </list>
+  </entry>
+</map>

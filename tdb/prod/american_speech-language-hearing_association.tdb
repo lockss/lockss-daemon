@@ -1,0 +1,739 @@
+{
+  publisher <
+    name = American Speech-Language-Hearing Association
+  >
+
+  {
+    title <
+      name = American Journal of Audiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aja.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Audiology Volume 1 ; 1 >
+      au < exists ; American Journal of Audiology Volume 2 ; 2 >
+      au < exists ; American Journal of Audiology Volume 3 ; 3 >
+      au < exists ; American Journal of Audiology Volume 4 ; 4 >
+      au < exists ; American Journal of Audiology Volume 5 ; 5 >
+      au < exists ; American Journal of Audiology Volume 6 ; 6 >
+      au < exists ; American Journal of Audiology Volume 7 ; 7 >
+      au < exists ; American Journal of Audiology Volume 8 ; 8 >
+      au < exists ; American Journal of Audiology Volume 9 ; 9 >
+      au < exists ; American Journal of Audiology Volume 10 ; 10 >
+      au < exists ; American Journal of Audiology Volume 11 ; 11 >
+      au < exists ; American Journal of Audiology Volume 12 ; 12 >
+      au < exists ; American Journal of Audiology Volume 13 ; 13 >
+      au < exists ; American Journal of Audiology Volume 14 ; 14 >
+      au < exists ; American Journal of Audiology Volume 15 ; 15 >
+      au < exists ; American Journal of Audiology Volume 16 ; 16 >
+      au < exists ; American Journal of Audiology Volume 17 ; 17 >
+      au < exists ; American Journal of Audiology Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = American Journal of Speech-Language Pathology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ajslp.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; American Journal of Speech-Language Pathology Volume 1 ; 1 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 2 ; 2 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 3 ; 3 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 4 ; 4 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 5 ; 5 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 6 ; 6 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 7 ; 7 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 8 ; 8 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 9 ; 9 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 10 ; 10 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 11 ; 11 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 12 ; 12 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 13 ; 13 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 14 ; 14 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 15 ; 15 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 16 ; 16 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 17 ; 17 >
+      au < exists ; American Journal of Speech-Language Pathology Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Speech and Hearing Disorders
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jshd.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Speech and Hearing Disorders Volume 1 ; 1 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 2 ; 2 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 3 ; 3 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 4 ; 4 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 5 ; 5 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 6 ; 6 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 7 ; 7 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 8 ; 8 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 9 ; 9 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 10 ; 10 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 11 ; 11 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 12 ; 12 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 13 ; 13 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 14 ; 14 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 15 ; 15 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 16 ; 16 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 17 ; 17 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 18 ; 18 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 19 ; 19 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 20 ; 20 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 21 ; 21 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 22 ; 22 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 23 ; 23 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 24 ; 24 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 25 ; 25 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 26 ; 26 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 27 ; 27 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 28 ; 28 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 29 ; 29 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 30 ; 30 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 31 ; 31 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 32 ; 32 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 33 ; 33 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 34 ; 34 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 35 ; 35 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 36 ; 36 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 37 ; 37 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 38 ; 38 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 39 ; 39 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 40 ; 40 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 41 ; 41 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 42 ; 42 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 43 ; 43 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 44 ; 44 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 45 ; 45 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 46 ; 46 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 47 ; 47 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 48 ; 48 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 49 ; 49 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 50 ; 50 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 51 ; 51 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 52 ; 52 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 53 ; 53 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 54 ; 54 >
+      au < exists ; Journal of Speech and Hearing Disorders Volume 55 ; 55 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Speech, Language, and Hearing Research
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jslhr.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 2 ; 2 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 3 ; 3 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 4 ; 4 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 5 ; 5 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 6 ; 6 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 7 ; 7 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 8 ; 8 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 9 ; 9 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 10 ; 10 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 11 ; 11 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 12 ; 12 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 13 ; 13 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 14 ; 14 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 15 ; 15 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 16 ; 16 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 17 ; 17 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 18 ; 18 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 19 ; 19 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 20 ; 20 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 21 ; 21 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 22 ; 22 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 23 ; 23 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 24 ; 24 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 25 ; 25 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 26 ; 26 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 27 ; 27 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 28 ; 28 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 29 ; 29 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 30 ; 30 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 31 ; 31 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 32 ; 32 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 33 ; 33 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 34 ; 34 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 35 ; 35 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 36 ; 36 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 37 ; 37 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 38 ; 38 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 39 ; 39 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 40 ; 40 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 41 ; 41 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 42 ; 42 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 43 ; 43 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 44 ; 44 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 45 ; 45 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 46 ; 46 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 47 ; 47 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 48 ; 48 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 49 ; 49 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 50 ; 50 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 51 ; 51 >
+      au < exists ; Journal of Speech, Language, and Hearing Research Volume 52 ; 52 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Language, Speech, and Hearing Services in Schools
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://lshss.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 4 ; 4 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 5 ; 5 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 6 ; 6 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 7 ; 7 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 8 ; 8 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 9 ; 9 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 10 ; 10 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 11 ; 11 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 12 ; 12 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 13 ; 13 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 14 ; 14 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 15 ; 15 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 16 ; 16 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 17 ; 17 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 18 ; 18 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 19 ; 19 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 20 ; 20 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 21 ; 21 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 22 ; 22 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 23 ; 23 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 24 ; 24 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 25 ; 25 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 26 ; 26 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 27 ; 27 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 28 ; 28 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 29 ; 29 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 30 ; 30 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 31 ; 31 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 32 ; 32 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 33 ; 33 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 34 ; 34 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 35 ; 35 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 36 ; 36 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 37 ; 37 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 38 ; 38 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 39 ; 39 >
+      au < exists ; Language, Speech, and Hearing Services in Schools Volume 40 ; 40 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Administration and Supervision
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div11perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Administration and Supervision Volume 7 ; 7 >
+      au < exists ; Perspectives on Administration and Supervision Volume 8 ; 8 >
+      au < exists ; Perspectives on Administration and Supervision Volume 9 ; 9 >
+      au < exists ; Perspectives on Administration and Supervision Volume 10 ; 10 >
+      au < exists ; Perspectives on Administration and Supervision Volume 11 ; 11 >
+      au < exists ; Perspectives on Administration and Supervision Volume 12 ; 12 >
+      au < exists ; Perspectives on Administration and Supervision Volume 13 ; 13 >
+      au < exists ; Perspectives on Administration and Supervision Volume 14 ; 14 >
+      au < exists ; Perspectives on Administration and Supervision Volume 15 ; 15 >
+      au < exists ; Perspectives on Administration and Supervision Volume 16 ; 16 >
+      au < exists ; Perspectives on Administration and Supervision Volume 17 ; 17 >
+      au < exists ; Perspectives on Administration and Supervision Volume 18 ; 18 >
+      au < exists ; Perspectives on Administration and Supervision Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Audiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://accperspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Audiology Volume 1 ; 1 >
+      au < exists ; Perspectives on Audiology Volume 2 ; 2 >
+      au < exists ; Perspectives on Audiology Volume 3 ; 3 >
+      au < exists ; Perspectives on Audiology Volume 4 ; 4 >
+      au < exists ; Perspectives on Audiology Volume 5 ; 5 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Augmentative and Alternative Communication
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div12perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 6 ; 6 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 7 ; 7 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 8 ; 8 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 9 ; 9 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 10 ; 10 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 11 ; 11 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 12 ; 12 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 13 ; 13 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 14 ; 14 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 15 ; 15 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 16 ; 16 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 17 ; 17 >
+      au < exists ; Perspectives on Augmentative and Alternative Communication Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Aural Rehabilitation and Its Instrumentation
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div7perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 6 ; 6 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 7 ; 7 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 8 ; 8 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 9 ; 9 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 10 ; 10 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 11 ; 11 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 12 ; 12 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 13 ; 13 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 14 ; 14 >
+      au < exists ; Perspectives on Aural Rehabilitation and Its Instrumentation Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div14perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 3 ; 3 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 4 ; 4 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 5 ; 5 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 6 ; 6 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 7 ; 7 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 8 ; 8 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 9 ; 9 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 11 ; 11 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 12 ; 12 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 13 ; 13 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 14 ; 14 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 15 ; 15 >
+      au < exists ; Perspectives on Communication Disorders and Sciences in Culturally and Linguistically Diverse Populations Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Fluency and Fluency Disorders
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div4perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 7 ; 7 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 8 ; 8 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 9 ; 9 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 10 ; 10 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 11 ; 11 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 12 ; 12 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 13 ; 13 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 14 ; 14 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 15 ; 15 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 16 ; 16 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 17 ; 17 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 18 ; 18 >
+      au < exists ; Perspectives on Fluency and Fluency Disorders Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Gerontology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div15perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Gerontology Volume 2 ; 2 >
+      au < exists ; Perspectives on Gerontology Volume 3 ; 3 >
+      au < exists ; Perspectives on Gerontology Volume 4 ; 4 >
+      au < exists ; Perspectives on Gerontology Volume 5 ; 5 >
+      au < exists ; Perspectives on Gerontology Volume 6 ; 6 >
+      au < exists ; Perspectives on Gerontology Volume 7 ; 7 >
+      au < exists ; Perspectives on Gerontology Volume 8 ; 8 >
+      au < exists ; Perspectives on Gerontology Volume 9 ; 9 >
+      au < exists ; Perspectives on Gerontology Volume 10 ; 10 >
+      au < exists ; Perspectives on Gerontology Volume 11 ; 11 >
+      au < exists ; Perspectives on Gerontology Volume 12 ; 12 >
+      au < exists ; Perspectives on Gerontology Volume 13 ; 13 >
+      au < exists ; Perspectives on Gerontology Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Hearing and Hearing Disorders in Childhood
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div9perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 7 ; 7 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 8 ; 8 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 9 ; 9 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 10 ; 10 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 11 ; 11 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 12 ; 12 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 13 ; 13 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 14 ; 14 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 15 ; 15 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 16 ; 16 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 17 ; 17 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 18 ; 18 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders in Childhood Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Hearing and Hearing Disorders: Research and Diagnostics
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div6perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 1 ; 1 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 2 ; 2 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 3 ; 3 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 4 ; 4 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 5 ; 5 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 6 ; 6 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 7 ; 7 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 8 ; 8 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 9 ; 9 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 10 ; 10 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 11 ; 11 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 12 ; 12 >
+      au < exists ; Perspectives on Hearing and Hearing Disorders: Research and Diagnostics Volume 13 ; 13 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Hearing Conservation and Occupational Audiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div8perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 4 ; 4 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 5 ; 5 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 6 ; 6 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 7 ; 7 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 8 ; 8 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 9 ; 9 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 10 ; 10 >
+      au < exists ; Perspectives on Hearing Conservation and Occupational Audiology Volume 11 ; 11 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Issues in Higher Education
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div10perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Issues in Higher Education Volume 1 ; 1 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 2 ; 2 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 3 ; 3 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 4 ; 4 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 5 ; 5 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 6 ; 6 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 7 ; 7 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 8 ; 8 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 10 ; 10 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 11 ; 11 >
+      au < exists ; Perspectives on Issues in Higher Education Volume 12 ; 12 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Language Learning and Education
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div1perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Language Learning and Education Volume 4 ; 4 >
+      au < exists ; Perspectives on Language Learning and Education Volume 5 ; 5 >
+      au < exists ; Perspectives on Language Learning and Education Volume 6 ; 6 >
+      au < exists ; Perspectives on Language Learning and Education Volume 7 ; 7 >
+      au < exists ; Perspectives on Language Learning and Education Volume 8 ; 8 >
+      au < exists ; Perspectives on Language Learning and Education Volume 9 ; 9 >
+      au < exists ; Perspectives on Language Learning and Education Volume 10 ; 10 >
+      au < exists ; Perspectives on Language Learning and Education Volume 11 ; 11 >
+      au < exists ; Perspectives on Language Learning and Education Volume 12 ; 12 >
+      au < exists ; Perspectives on Language Learning and Education Volume 13 ; 13 >
+      au < exists ; Perspectives on Language Learning and Education Volume 14 ; 14 >
+      au < exists ; Perspectives on Language Learning and Education Volume 15 ; 15 >
+      au < exists ; Perspectives on Language Learning and Education Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div2perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 7 ; 7 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 8 ; 8 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 9 ; 9 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 10 ; 10 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 11 ; 11 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 12 ; 12 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 13 ; 13 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 14 ; 14 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 15 ; 15 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 16 ; 16 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 17 ; 17 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 18 ; 18 >
+      au < exists ; Perspectives on Neurophysiology and Neurogenic Speech and Language Disorders Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on School-Based Issues
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div16perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on School-Based Issues Volume 1 ; 1 >
+      au < exists ; Perspectives on School-Based Issues Volume 2 ; 2 >
+      au < exists ; Perspectives on School-Based Issues Volume 3 ; 3 >
+      au < exists ; Perspectives on School-Based Issues Volume 4 ; 4 >
+      au < exists ; Perspectives on School-Based Issues Volume 5 ; 5 >
+      au < exists ; Perspectives on School-Based Issues Volume 6 ; 6 >
+      au < exists ; Perspectives on School-Based Issues Volume 7 ; 7 >
+      au < exists ; Perspectives on School-Based Issues Volume 8 ; 8 >
+      au < exists ; Perspectives on School-Based Issues Volume 9 ; 9 >
+      au < exists ; Perspectives on School-Based Issues Volume 10 ; 10 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Speech Science and Orofacial Disorders
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div5perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 7 ; 7 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 8 ; 8 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 9 ; 9 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 10 ; 10 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 11 ; 11 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 12 ; 12 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 13 ; 13 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 14 ; 14 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 15 ; 15 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 16 ; 16 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 17 ; 17 >
+      au < exists ; Perspectives on Speech Science and Orofacial Disorders Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Swallowing and Swallowing Disorders (Dysphagia)
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div13perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 6 ; 6 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 7 ; 7 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 8 ; 8 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 9 ; 9 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 10 ; 10 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 11 ; 11 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 12 ; 12 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 13 ; 13 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 14 ; 14 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 15 ; 15 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 16 ; 16 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 17 ; 17 >
+      au < exists ; Perspectives on Swallowing and Swallowing Disorders (Dysphagia) Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Perspectives on Voice and Voice Disorders
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://div3perspectives.asha.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 7 ; 7 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 8 ; 8 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 9 ; 9 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 10 ; 10 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 12 ; 12 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 13 ; 13 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 14 ; 14 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 15 ; 15 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 16 ; 16 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 17 ; 17 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 18 ; 18 >
+      au < exists ; Perspectives on Voice and Voice Disorders Volume 19 ; 19 >
+
+    }
+
+  }
+
+}
+

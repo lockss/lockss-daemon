@@ -1,0 +1,75 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.usenix.login.UsenixLoginPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;USENIX Association Plugin (;login:), Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>USENIX Association Plugin (;login:)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%spublications/login/lockss_manifest/lockss-%d\.html$&quot;, base_url, year</string>
+      <string>1,&quot;^%spublications/login/%d-[^/]+/&quot;, base_url, year</string>
+      <string>1,&quot;^%spublications/login/contents/contents\.(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)%02d\.html&quot;, base_url, au_short_year</string>
+      <string>1,&quot;^%spublications/java/&quot;, base_url</string>
+      <string>1,&quot;^%spublications/login/standards/((index|standards)\.html)?$&quot;, base_url</string>
+      <string>1,&quot;^%spublications/login/standards/%s\.&quot;, base_url, optional_standards</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%spublications/login/lockss_manifest/lockss-%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>optional_standards</key>
+        <displayName>Optional Standards</displayName>
+        <description>A comma-separated list of hints to collect additional materials from the Standards section</description>
+        <type>9</type>
+        <size>70</size>
+        <definitional>false</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

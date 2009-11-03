@@ -1,0 +1,279 @@
+{
+  publisher <
+    name = BioScientifica
+  >
+
+  {
+    title <
+      name = European Journal of Endocrinology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.eje-online.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; European Journal of Endocrinology Volume 42 ; 42 >
+      au < exists ; European Journal of Endocrinology Volume 43 ; 43 >
+      au < exists ; European Journal of Endocrinology Volume 44 ; 44 >
+      au < exists ; European Journal of Endocrinology Volume 45 ; 45 >
+      au < exists ; European Journal of Endocrinology Volume 46 ; 46 >
+      au < exists ; European Journal of Endocrinology Volume 47 ; 47 >
+      au < exists ; European Journal of Endocrinology Volume 48 ; 48 >
+      au < exists ; European Journal of Endocrinology Volume 49 ; 49 >
+      au < exists ; European Journal of Endocrinology Volume 50 ; 50 >
+      au < exists ; European Journal of Endocrinology Volume 51 ; 51 >
+      au < exists ; European Journal of Endocrinology Volume 52 ; 52 >
+      au < exists ; European Journal of Endocrinology Volume 53 ; 53 >
+      au < exists ; European Journal of Endocrinology Volume 54 ; 54 >
+      au < exists ; European Journal of Endocrinology Volume 55 ; 55 >
+      au < exists ; European Journal of Endocrinology Volume 56 ; 56 >
+      au < exists ; European Journal of Endocrinology Volume 57 ; 57 >
+      au < exists ; European Journal of Endocrinology Volume 58 ; 58 >
+      au < exists ; European Journal of Endocrinology Volume 59 ; 59 >
+      au < exists ; European Journal of Endocrinology Volume 60 ; 60 >
+      au < exists ; European Journal of Endocrinology Volume 61 ; 61 >
+      au < exists ; European Journal of Endocrinology Volume 62 ; 62 >
+      au < exists ; European Journal of Endocrinology Volume 63 ; 63 >
+      au < exists ; European Journal of Endocrinology Volume 64 ; 64 >
+      au < exists ; European Journal of Endocrinology Volume 65 ; 65 >
+      au < exists ; European Journal of Endocrinology Volume 66 ; 66 >
+      au < exists ; European Journal of Endocrinology Volume 67 ; 67 >
+      au < exists ; European Journal of Endocrinology Volume 68 ; 68 >
+      au < exists ; European Journal of Endocrinology Volume 69 ; 69 >
+      au < exists ; European Journal of Endocrinology Volume 70 ; 70 >
+      au < exists ; European Journal of Endocrinology Volume 71 ; 71 >
+      au < exists ; European Journal of Endocrinology Volume 72 ; 72 >
+      au < exists ; European Journal of Endocrinology Volume 73 ; 73 >
+      au < exists ; European Journal of Endocrinology Volume 74 ; 74 >
+      au < exists ; European Journal of Endocrinology Volume 75 ; 75 >
+      au < exists ; European Journal of Endocrinology Volume 76 ; 76 >
+      au < exists ; European Journal of Endocrinology Volume 77 ; 77 >
+      au < exists ; European Journal of Endocrinology Volume 78 ; 78 >
+      au < exists ; European Journal of Endocrinology Volume 79 ; 79 >
+      au < exists ; European Journal of Endocrinology Volume 80 ; 80 >
+      au < exists ; European Journal of Endocrinology Volume 81 ; 81 >
+      au < exists ; European Journal of Endocrinology Volume 82 ; 82 >
+      au < exists ; European Journal of Endocrinology Volume 83 ; 83 >
+      au < exists ; European Journal of Endocrinology Volume 84 ; 84 >
+      au < exists ; European Journal of Endocrinology Volume 85 ; 85 >
+      au < exists ; European Journal of Endocrinology Volume 86 ; 86 >
+      au < exists ; European Journal of Endocrinology Volume 87 ; 87 >
+      au < exists ; European Journal of Endocrinology Volume 88 ; 88 >
+      au < exists ; European Journal of Endocrinology Volume 89 ; 89 >
+      au < exists ; European Journal of Endocrinology Volume 90 ; 90 >
+      au < exists ; European Journal of Endocrinology Volume 91 ; 91 >
+      au < exists ; European Journal of Endocrinology Volume 92 ; 92 >
+      au < exists ; European Journal of Endocrinology Volume 93 ; 93 >
+      au < exists ; European Journal of Endocrinology Volume 94 ; 94 >
+      au < exists ; European Journal of Endocrinology Volume 95 ; 95 >
+      au < exists ; European Journal of Endocrinology Volume 96 ; 96 >
+      au < exists ; European Journal of Endocrinology Volume 97 ; 97 >
+      au < exists ; European Journal of Endocrinology Volume 98 ; 98 >
+      au < exists ; European Journal of Endocrinology Volume 99 ; 99 >
+      au < exists ; European Journal of Endocrinology Volume 100 ; 100 >
+      au < exists ; European Journal of Endocrinology Volume 101 ; 101 >
+      au < exists ; European Journal of Endocrinology Volume 102 ; 102 >
+      au < exists ; European Journal of Endocrinology Volume 103 ; 103 >
+      au < exists ; European Journal of Endocrinology Volume 104 ; 104 >
+      au < exists ; European Journal of Endocrinology Volume 105 ; 105 >
+      au < exists ; European Journal of Endocrinology Volume 106 ; 106 >
+      au < exists ; European Journal of Endocrinology Volume 107 ; 107 >
+      au < exists ; European Journal of Endocrinology Volume 108 ; 108 >
+      au < exists ; European Journal of Endocrinology Volume 109 ; 109 >
+      au < exists ; European Journal of Endocrinology Volume 110 ; 110 >
+      au < exists ; European Journal of Endocrinology Volume 111 ; 111 >
+      au < exists ; European Journal of Endocrinology Volume 112 ; 112 >
+      au < exists ; European Journal of Endocrinology Volume 113 ; 113 >
+      au < exists ; European Journal of Endocrinology Volume 114 ; 114 >
+      au < exists ; European Journal of Endocrinology Volume 115 ; 115 >
+      au < exists ; European Journal of Endocrinology Volume 116 ; 116 >
+      au < exists ; European Journal of Endocrinology Volume 117 ; 117 >
+      au < exists ; European Journal of Endocrinology Volume 118 ; 118 >
+      au < exists ; European Journal of Endocrinology Volume 119 ; 119 >
+      au < exists ; European Journal of Endocrinology Volume 120 ; 120 >
+      au < exists ; European Journal of Endocrinology Volume 121 ; 121 >
+      au < exists ; European Journal of Endocrinology Volume 122 ; 122 >
+      au < exists ; European Journal of Endocrinology Volume 123 ; 123 >
+      au < exists ; European Journal of Endocrinology Volume 124 ; 124 >
+      au < exists ; European Journal of Endocrinology Volume 125 ; 125 >
+      au < exists ; European Journal of Endocrinology Volume 126 ; 126 >
+      au < exists ; European Journal of Endocrinology Volume 127 ; 127 >
+      au < exists ; European Journal of Endocrinology Volume 128 ; 128 >
+      au < exists ; European Journal of Endocrinology Volume 129 ; 129 >
+      au < manifest ; European Journal of Endocrinology Volume 130 ; 130 >
+      au < manifest ; European Journal of Endocrinology Volume 131 ; 131 >
+      au < manifest ; European Journal of Endocrinology Volume 132 ; 132 >
+      au < manifest ; European Journal of Endocrinology Volume 133 ; 133 >
+      au < manifest ; European Journal of Endocrinology Volume 134 ; 134 >
+      au < manifest ; European Journal of Endocrinology Volume 135 ; 135 >
+      au < manifest ; European Journal of Endocrinology Volume 136 ; 136 >
+      au < manifest ; European Journal of Endocrinology Volume 137 ; 137 >
+      au < manifest ; European Journal of Endocrinology Volume 138 ; 138 >
+      au < manifest ; European Journal of Endocrinology Volume 139 ; 139 >
+      au < manifest ; European Journal of Endocrinology Volume 140 ; 140 >
+      au < manifest ; European Journal of Endocrinology Volume 141 ; 141 >
+      au < manifest ; European Journal of Endocrinology Volume 142 ; 142 >
+      au < manifest ; European Journal of Endocrinology Volume 143 ; 143 >
+      au < manifest ; European Journal of Endocrinology Volume 144 ; 144 >
+      au < manifest ; European Journal of Endocrinology Volume 145 ; 145 >
+      au < manifest ; European Journal of Endocrinology Volume 146 ; 146 >
+      au < manifest ; European Journal of Endocrinology Volume 147 ; 147 >
+      au < manifest ; European Journal of Endocrinology Volume 148 ; 148 >
+      au < manifest ; European Journal of Endocrinology Volume 149 ; 149 >
+      au < manifest ; European Journal of Endocrinology Volume 150 ; 150 >
+      au < manifest ; European Journal of Endocrinology Volume 151 ; 151 >
+      au < manifest ; European Journal of Endocrinology Volume 152 ; 152 >
+      au < manifest ; European Journal of Endocrinology Volume 153 ; 153 >
+      au < manifest ; European Journal of Endocrinology Volume 154 ; 154 >
+      au < manifest ; European Journal of Endocrinology Volume 155 ; 155 >
+      au < manifest ; European Journal of Endocrinology Volume 156 ; 156 >
+      au < manifest ; European Journal of Endocrinology Volume 157 ; 157 >
+      au < manifest ; European Journal of Endocrinology Volume 158 ; 158 >
+      au < manifest ; European Journal of Endocrinology Volume 159 ; 159 >
+      au < manifest ; European Journal of Endocrinology Volume 160 ; 160 >
+      au < manifest ; European Journal of Endocrinology Volume 161 ; 161 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Reproduction
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.reproduction-online.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Reproduction Volume 19 ; 19 >
+      au < manifest ; Reproduction Volume 20 ; 20 >
+      au < manifest ; Reproduction Volume 21 ; 21 >
+      au < manifest ; Reproduction Volume 22 ; 22 >
+      au < manifest ; Reproduction Volume 23 ; 23 >
+      au < manifest ; Reproduction Volume 24 ; 24 >
+      au < manifest ; Reproduction Volume 25 ; 25 >
+      au < manifest ; Reproduction Volume 26 ; 26 >
+      au < manifest ; Reproduction Volume 27 ; 27 >
+      au < manifest ; Reproduction Volume 28 ; 28 >
+      au < manifest ; Reproduction Volume 29 ; 29 >
+      au < manifest ; Reproduction Volume 30 ; 30 >
+      au < manifest ; Reproduction Volume 31 ; 31 >
+      au < manifest ; Reproduction Volume 32 ; 32 >
+      au < manifest ; Reproduction Volume 33 ; 33 >
+      au < manifest ; Reproduction Volume 34 ; 34 >
+      au < manifest ; Reproduction Volume 35 ; 35 >
+      au < manifest ; Reproduction Volume 36 ; 36 >
+      au < manifest ; Reproduction Volume 37 ; 37 >
+      au < manifest ; Reproduction Volume 38 ; 38 >
+      au < manifest ; Reproduction Volume 39 ; 39 >
+      au < manifest ; Reproduction Volume 40 ; 40 >
+      au < manifest ; Reproduction Volume 41 ; 41 >
+      au < manifest ; Reproduction Volume 42 ; 42 >
+      au < manifest ; Reproduction Volume 43 ; 43 >
+      au < manifest ; Reproduction Volume 44 ; 44 >
+      au < manifest ; Reproduction Volume 45 ; 45 >
+      au < manifest ; Reproduction Volume 46 ; 46 >
+      au < manifest ; Reproduction Volume 47 ; 47 >
+      au < manifest ; Reproduction Volume 48 ; 48 >
+      au < manifest ; Reproduction Volume 49 ; 49 >
+      au < manifest ; Reproduction Volume 50 ; 50 >
+      au < manifest ; Reproduction Volume 51 ; 51 >
+      au < manifest ; Reproduction Volume 52 ; 52 >
+      au < manifest ; Reproduction Volume 53 ; 53 >
+      au < manifest ; Reproduction Volume 54 ; 54 >
+      au < manifest ; Reproduction Volume 55 ; 55 >
+      au < manifest ; Reproduction Volume 56 ; 56 >
+      au < manifest ; Reproduction Volume 57 ; 57 >
+      au < manifest ; Reproduction Volume 58 ; 58 >
+      au < manifest ; Reproduction Volume 59 ; 59 >
+      au < manifest ; Reproduction Volume 60 ; 60 >
+      au < manifest ; Reproduction Volume 61 ; 61 >
+      au < manifest ; Reproduction Volume 62 ; 62 >
+      au < manifest ; Reproduction Volume 63 ; 63 >
+      au < manifest ; Reproduction Volume 64 ; 64 >
+      au < manifest ; Reproduction Volume 65 ; 65 >
+      au < manifest ; Reproduction Volume 66 ; 66 >
+      au < manifest ; Reproduction Volume 67 ; 67 >
+      au < manifest ; Reproduction Volume 68 ; 68 >
+      au < manifest ; Reproduction Volume 69 ; 69 >
+      au < manifest ; Reproduction Volume 70 ; 70 >
+      au < manifest ; Reproduction Volume 71 ; 71 >
+      au < manifest ; Reproduction Volume 72 ; 72 >
+      au < manifest ; Reproduction Volume 73 ; 73 >
+      au < manifest ; Reproduction Volume 74 ; 74 >
+      au < manifest ; Reproduction Volume 75 ; 75 >
+      au < manifest ; Reproduction Volume 76 ; 76 >
+      au < manifest ; Reproduction Volume 77 ; 77 >
+      au < manifest ; Reproduction Volume 78 ; 78 >
+      au < manifest ; Reproduction Volume 79 ; 79 >
+      au < manifest ; Reproduction Volume 80 ; 80 >
+      au < manifest ; Reproduction Volume 81 ; 81 >
+      au < manifest ; Reproduction Volume 82 ; 82 >
+      au < manifest ; Reproduction Volume 83 ; 83 >
+      au < manifest ; Reproduction Volume 84 ; 84 >
+      au < manifest ; Reproduction Volume 85 ; 85 >
+      au < manifest ; Reproduction Volume 86 ; 86 >
+      au < manifest ; Reproduction Volume 87 ; 87 >
+      au < manifest ; Reproduction Volume 88 ; 88 >
+      au < manifest ; Reproduction Volume 89 ; 89 >
+      au < manifest ; Reproduction Volume 90 ; 90 >
+      au < manifest ; Reproduction Volume 91 ; 91 >
+      au < manifest ; Reproduction Volume 92 ; 92 >
+      au < manifest ; Reproduction Volume 93 ; 93 >
+      au < manifest ; Reproduction Volume 94 ; 94 >
+      au < manifest ; Reproduction Volume 95 ; 95 >
+      au < manifest ; Reproduction Volume 96 ; 96 >
+      au < manifest ; Reproduction Volume 97 ; 97 >
+      au < manifest ; Reproduction Volume 98 ; 98 >
+      au < manifest ; Reproduction Volume 99 ; 99 >
+      au < manifest ; Reproduction Volume 100 ; 100 >
+      au < manifest ; Reproduction Volume 101 ; 101 >
+      au < manifest ; Reproduction Volume 102 ; 102 >
+      au < manifest ; Reproduction Volume 103 ; 103 >
+      au < manifest ; Reproduction Volume 104 ; 104 >
+      au < manifest ; Reproduction Volume 105 ; 105 >
+      au < manifest ; Reproduction Volume 106 ; 106 >
+      au < manifest ; Reproduction Volume 107 ; 107 >
+      au < manifest ; Reproduction Volume 108 ; 108 >
+      au < manifest ; Reproduction Volume 109 ; 109 >
+      au < manifest ; Reproduction Volume 110 ; 110 >
+      au < manifest ; Reproduction Volume 111 ; 111 >
+      au < manifest ; Reproduction Volume 112 ; 112 >
+      au < manifest ; Reproduction Volume 113 ; 113 >
+      au < manifest ; Reproduction Volume 114 ; 114 >
+      au < manifest ; Reproduction Volume 115 ; 115 >
+      au < manifest ; Reproduction Volume 116 ; 116 >
+      au < manifest ; Reproduction Volume 117 ; 117 >
+      au < manifest ; Reproduction Volume 118 ; 118 >
+      au < manifest ; Reproduction Volume 119 ; 119 >
+      au < manifest ; Reproduction Volume 120 ; 120 >
+      au < manifest ; Reproduction Volume 121 ; 121 >
+      au < manifest ; Reproduction Volume 122 ; 122 >
+      au < manifest ; Reproduction Volume 123 ; 123 >
+      au < manifest ; Reproduction Volume 124 ; 124 >
+      au < manifest ; Reproduction Volume 125 ; 125 >
+      au < manifest ; Reproduction Volume 126 ; 126 >
+      au < manifest ; Reproduction Volume 127 ; 127 >
+      au < manifest ; Reproduction Volume 128 ; 128 >
+      au < manifest ; Reproduction Volume 129 ; 129 >
+      au < manifest ; Reproduction Volume 130 ; 130 >
+      au < manifest ; Reproduction Volume 131 ; 131 >
+      au < manifest ; Reproduction Volume 132 ; 132 >
+      au < manifest ; Reproduction Volume 133 ; 133 >
+      au < manifest ; Reproduction Volume 134 ; 134 >
+      au < manifest ; Reproduction Volume 135 ; 135 >
+      au < manifest ; Reproduction Volume 136 ; 136 >
+      au < manifest ; Reproduction Volume 137 ; 137 >
+      au < manifest ; Reproduction Volume 138 ; 138 >
+
+    }
+
+  }
+
+}
+

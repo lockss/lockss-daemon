@@ -1,0 +1,365 @@
+{
+  publisher <
+    name = Geological Society of London
+  >
+
+  {
+    title <
+      name = Geochemistry: Exploration, Environment, Analysis
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://geea.lyellcollection.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 8 ; 8 >
+      au < exists ; Geochemistry: Exploration, Environment, Analysis Volume 9 ; 9 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Geological Society, London, Engineering Geology Special Publications
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://egsp.lyellcollection.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 2 ; 2 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 3 ; 3 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 4 ; 4 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 5 ; 5 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 6 ; 6 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 7 ; 7 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 10 ; 10 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 11 ; 11 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 12 ; 12 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 13 ; 13 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 14 ; 14 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 15 ; 15 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 16 ; 16 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 17 ; 17 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 18 ; 18 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 19 ; 19 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 20 ; 20 >
+      au < manifest ; Geological Society, London, Engineering Geology Special Publications Volume 21 ; 21 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Geological Society, London, Memoirs
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mem.lyellcollection.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Geological Society, London, Memoirs Volume 1 ; 1 >
+      au < manifest ; Geological Society, London, Memoirs Volume 2 ; 2 >
+      au < manifest ; Geological Society, London, Memoirs Volume 3 ; 3 >
+      au < manifest ; Geological Society, London, Memoirs Volume 4 ; 4 >
+      au < manifest ; Geological Society, London, Memoirs Volume 5 ; 5 >
+      au < manifest ; Geological Society, London, Memoirs Volume 6 ; 6 >
+      au < manifest ; Geological Society, London, Memoirs Volume 7 ; 7 >
+      au < manifest ; Geological Society, London, Memoirs Volume 8 ; 8 >
+      au < manifest ; Geological Society, London, Memoirs Volume 9 ; 9 >
+      au < manifest ; Geological Society, London, Memoirs Volume 10 ; 10 >
+      au < manifest ; Geological Society, London, Memoirs Volume 11 ; 11 >
+      au < manifest ; Geological Society, London, Memoirs Volume 12 ; 12 >
+      au < manifest ; Geological Society, London, Memoirs Volume 13 ; 13 >
+      au < manifest ; Geological Society, London, Memoirs Volume 14 ; 14 >
+      au < manifest ; Geological Society, London, Memoirs Volume 15 ; 15 >
+      au < manifest ; Geological Society, London, Memoirs Volume 16 ; 16 >
+      au < manifest ; Geological Society, London, Memoirs Volume 17 ; 17 >
+      au < manifest ; Geological Society, London, Memoirs Volume 18 ; 18 >
+      au < manifest ; Geological Society, London, Memoirs Volume 19 ; 19 >
+      au < manifest ; Geological Society, London, Memoirs Volume 20 ; 20 >
+      au < manifest ; Geological Society, London, Memoirs Volume 21 ; 21 >
+      au < manifest ; Geological Society, London, Memoirs Volume 22 ; 22 >
+      au < manifest ; Geological Society, London, Memoirs Volume 23 ; 23 >
+      au < manifest ; Geological Society, London, Memoirs Volume 24 ; 24 >
+      au < manifest ; Geological Society, London, Memoirs Volume 25 ; 25 >
+      au < manifest ; Geological Society, London, Memoirs Volume 26 ; 26 >
+      au < manifest ; Geological Society, London, Memoirs Volume 27 ; 27 >
+      au < manifest ; Geological Society, London, Memoirs Volume 28 ; 28 >
+      au < manifest ; Geological Society, London, Memoirs Volume 29 ; 29 >
+      au < manifest ; Geological Society, London, Memoirs Volume 30 ; 30 >
+      au < manifest ; Geological Society, London, Memoirs Volume 31 ; 31 >
+      au < manifest ; Geological Society, London, Memoirs Volume 32 ; 32 >
+      au < manifest ; Geological Society, London, Memoirs Volume 33 ; 33 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Geological Society, London, Special Publications
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://sp.lyellcollection.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Geological Society, London, Special Publications Volume 197 ; 197 >
+      au < manifest ; Geological Society, London, Special Publications Volume 198 ; 198 >
+      au < manifest ; Geological Society, London, Special Publications Volume 199 ; 199 >
+      au < manifest ; Geological Society, London, Special Publications Volume 200 ; 200 >
+      au < manifest ; Geological Society, London, Special Publications Volume 201 ; 201 >
+      au < manifest ; Geological Society, London, Special Publications Volume 202 ; 202 >
+      au < manifest ; Geological Society, London, Special Publications Volume 203 ; 203 >
+      au < manifest ; Geological Society, London, Special Publications Volume 204 ; 204 >
+      au < manifest ; Geological Society, London, Special Publications Volume 205 ; 205 >
+      au < manifest ; Geological Society, London, Special Publications Volume 206 ; 206 >
+      au < manifest ; Geological Society, London, Special Publications Volume 207 ; 207 >
+      au < manifest ; Geological Society, London, Special Publications Volume 208 ; 208 >
+      au < manifest ; Geological Society, London, Special Publications Volume 209 ; 209 >
+      au < manifest ; Geological Society, London, Special Publications Volume 210 ; 210 >
+      au < manifest ; Geological Society, London, Special Publications Volume 211 ; 211 >
+      au < manifest ; Geological Society, London, Special Publications Volume 212 ; 212 >
+      au < manifest ; Geological Society, London, Special Publications Volume 213 ; 213 >
+      au < manifest ; Geological Society, London, Special Publications Volume 214 ; 214 >
+      au < manifest ; Geological Society, London, Special Publications Volume 215 ; 215 >
+      au < manifest ; Geological Society, London, Special Publications Volume 216 ; 216 >
+      au < manifest ; Geological Society, London, Special Publications Volume 217 ; 217 >
+      au < manifest ; Geological Society, London, Special Publications Volume 218 ; 218 >
+      au < manifest ; Geological Society, London, Special Publications Volume 219 ; 219 >
+      au < manifest ; Geological Society, London, Special Publications Volume 220 ; 220 >
+      au < manifest ; Geological Society, London, Special Publications Volume 221 ; 221 >
+      au < manifest ; Geological Society, London, Special Publications Volume 222 ; 222 >
+      au < manifest ; Geological Society, London, Special Publications Volume 223 ; 223 >
+      au < manifest ; Geological Society, London, Special Publications Volume 224 ; 224 >
+      au < manifest ; Geological Society, London, Special Publications Volume 225 ; 225 >
+      au < manifest ; Geological Society, London, Special Publications Volume 226 ; 226 >
+      au < manifest ; Geological Society, London, Special Publications Volume 227 ; 227 >
+      au < manifest ; Geological Society, London, Special Publications Volume 228 ; 228 >
+      au < manifest ; Geological Society, London, Special Publications Volume 229 ; 229 >
+      au < manifest ; Geological Society, London, Special Publications Volume 230 ; 230 >
+      au < manifest ; Geological Society, London, Special Publications Volume 231 ; 231 >
+      au < manifest ; Geological Society, London, Special Publications Volume 232 ; 232 >
+      au < manifest ; Geological Society, London, Special Publications Volume 233 ; 233 >
+      au < manifest ; Geological Society, London, Special Publications Volume 234 ; 234 >
+      au < manifest ; Geological Society, London, Special Publications Volume 235 ; 235 >
+      au < manifest ; Geological Society, London, Special Publications Volume 236 ; 236 >
+      au < manifest ; Geological Society, London, Special Publications Volume 237 ; 237 >
+      au < manifest ; Geological Society, London, Special Publications Volume 238 ; 238 >
+      au < manifest ; Geological Society, London, Special Publications Volume 239 ; 239 >
+      au < manifest ; Geological Society, London, Special Publications Volume 240 ; 240 >
+      au < manifest ; Geological Society, London, Special Publications Volume 241 ; 241 >
+      au < manifest ; Geological Society, London, Special Publications Volume 242 ; 242 >
+      au < manifest ; Geological Society, London, Special Publications Volume 243 ; 243 >
+      au < manifest ; Geological Society, London, Special Publications Volume 244 ; 244 >
+      au < manifest ; Geological Society, London, Special Publications Volume 245 ; 245 >
+      au < manifest ; Geological Society, London, Special Publications Volume 246 ; 246 >
+      au < manifest ; Geological Society, London, Special Publications Volume 247 ; 247 >
+      au < manifest ; Geological Society, London, Special Publications Volume 248 ; 248 >
+      au < manifest ; Geological Society, London, Special Publications Volume 249 ; 249 >
+      au < manifest ; Geological Society, London, Special Publications Volume 250 ; 250 >
+      au < manifest ; Geological Society, London, Special Publications Volume 251 ; 251 >
+      au < manifest ; Geological Society, London, Special Publications Volume 252 ; 252 >
+      au < manifest ; Geological Society, London, Special Publications Volume 253 ; 253 >
+      au < manifest ; Geological Society, London, Special Publications Volume 254 ; 254 >
+      au < manifest ; Geological Society, London, Special Publications Volume 255 ; 255 >
+      au < manifest ; Geological Society, London, Special Publications Volume 256 ; 256 >
+      au < manifest ; Geological Society, London, Special Publications Volume 257 ; 257 >
+      au < manifest ; Geological Society, London, Special Publications Volume 258 ; 258 >
+      au < manifest ; Geological Society, London, Special Publications Volume 259 ; 259 >
+      au < manifest ; Geological Society, London, Special Publications Volume 260 ; 260 >
+      au < manifest ; Geological Society, London, Special Publications Volume 261 ; 261 >
+      au < manifest ; Geological Society, London, Special Publications Volume 262 ; 262 >
+      au < manifest ; Geological Society, London, Special Publications Volume 263 ; 263 >
+      au < manifest ; Geological Society, London, Special Publications Volume 264 ; 264 >
+      au < manifest ; Geological Society, London, Special Publications Volume 265 ; 265 >
+      au < manifest ; Geological Society, London, Special Publications Volume 266 ; 266 >
+      au < manifest ; Geological Society, London, Special Publications Volume 267 ; 267 >
+      au < manifest ; Geological Society, London, Special Publications Volume 268 ; 268 >
+      au < manifest ; Geological Society, London, Special Publications Volume 269 ; 269 >
+      au < manifest ; Geological Society, London, Special Publications Volume 270 ; 270 >
+      au < manifest ; Geological Society, London, Special Publications Volume 271 ; 271 >
+      au < manifest ; Geological Society, London, Special Publications Volume 272 ; 272 >
+      au < manifest ; Geological Society, London, Special Publications Volume 273 ; 273 >
+      au < manifest ; Geological Society, London, Special Publications Volume 274 ; 274 >
+      au < manifest ; Geological Society, London, Special Publications Volume 275 ; 275 >
+      au < manifest ; Geological Society, London, Special Publications Volume 276 ; 276 >
+      au < manifest ; Geological Society, London, Special Publications Volume 277 ; 277 >
+      au < manifest ; Geological Society, London, Special Publications Volume 278 ; 278 >
+      au < manifest ; Geological Society, London, Special Publications Volume 279 ; 279 >
+      au < manifest ; Geological Society, London, Special Publications Volume 280 ; 280 >
+      au < manifest ; Geological Society, London, Special Publications Volume 281 ; 281 >
+      au < manifest ; Geological Society, London, Special Publications Volume 282 ; 282 >
+      au < manifest ; Geological Society, London, Special Publications Volume 283 ; 283 >
+      au < manifest ; Geological Society, London, Special Publications Volume 284 ; 284 >
+      au < manifest ; Geological Society, London, Special Publications Volume 285 ; 285 >
+      au < manifest ; Geological Society, London, Special Publications Volume 286 ; 286 >
+      au < manifest ; Geological Society, London, Special Publications Volume 287 ; 287 >
+      au < manifest ; Geological Society, London, Special Publications Volume 288 ; 288 >
+      au < manifest ; Geological Society, London, Special Publications Volume 289 ; 289 >
+      au < manifest ; Geological Society, London, Special Publications Volume 290 ; 290 >
+      au < manifest ; Geological Society, London, Special Publications Volume 291 ; 291 >
+      au < manifest ; Geological Society, London, Special Publications Volume 292 ; 292 >
+      au < manifest ; Geological Society, London, Special Publications Volume 293 ; 293 >
+      au < manifest ; Geological Society, London, Special Publications Volume 294 ; 294 >
+      au < manifest ; Geological Society, London, Special Publications Volume 295 ; 295 >
+      au < manifest ; Geological Society, London, Special Publications Volume 296 ; 296 >
+      au < manifest ; Geological Society, London, Special Publications Volume 297 ; 297 >
+      au < manifest ; Geological Society, London, Special Publications Volume 298 ; 298 >
+      au < manifest ; Geological Society, London, Special Publications Volume 299 ; 299 >
+      au < manifest ; Geological Society, London, Special Publications Volume 300 ; 300 >
+      au < manifest ; Geological Society, London, Special Publications Volume 301 ; 301 >
+      au < manifest ; Geological Society, London, Special Publications Volume 302 ; 302 >
+      au < manifest ; Geological Society, London, Special Publications Volume 303 ; 303 >
+      au < manifest ; Geological Society, London, Special Publications Volume 304 ; 304 >
+      au < manifest ; Geological Society, London, Special Publications Volume 305 ; 305 >
+      au < manifest ; Geological Society, London, Special Publications Volume 306 ; 306 >
+      au < manifest ; Geological Society, London, Special Publications Volume 307 ; 307 >
+      au < manifest ; Geological Society, London, Special Publications Volume 308 ; 308 >
+      au < manifest ; Geological Society, London, Special Publications Volume 309 ; 309 >
+      au < manifest ; Geological Society, London, Special Publications Volume 310 ; 310 >
+      au < manifest ; Geological Society, London, Special Publications Volume 311 ; 311 >
+      au < manifest ; Geological Society, London, Special Publications Volume 312 ; 312 >
+      au < manifest ; Geological Society, London, Special Publications Volume 313 ; 313 >
+      au < manifest ; Geological Society, London, Special Publications Volume 314 ; 314 >
+      au < manifest ; Geological Society, London, Special Publications Volume 315 ; 315 >
+      au < manifest ; Geological Society, London, Special Publications Volume 316 ; 316 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of the Geological Society
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jgs.lyellcollection.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Journal of the Geological Society Volume 127 ; 127 >
+      au < manifest ; Journal of the Geological Society Volume 128 ; 128 >
+      au < manifest ; Journal of the Geological Society Volume 129 ; 129 >
+      au < manifest ; Journal of the Geological Society Volume 130 ; 130 >
+      au < manifest ; Journal of the Geological Society Volume 131 ; 131 >
+      au < manifest ; Journal of the Geological Society Volume 132 ; 132 >
+      au < manifest ; Journal of the Geological Society Volume 133 ; 133 >
+      au < manifest ; Journal of the Geological Society Volume 134 ; 134 >
+      au < manifest ; Journal of the Geological Society Volume 135 ; 135 >
+      au < manifest ; Journal of the Geological Society Volume 136 ; 136 >
+      au < manifest ; Journal of the Geological Society Volume 137 ; 137 >
+      au < manifest ; Journal of the Geological Society Volume 138 ; 138 >
+      au < manifest ; Journal of the Geological Society Volume 139 ; 139 >
+      au < manifest ; Journal of the Geological Society Volume 140 ; 140 >
+      au < manifest ; Journal of the Geological Society Volume 141 ; 141 >
+      au < manifest ; Journal of the Geological Society Volume 142 ; 142 >
+      au < manifest ; Journal of the Geological Society Volume 143 ; 143 >
+      au < manifest ; Journal of the Geological Society Volume 144 ; 144 >
+      au < manifest ; Journal of the Geological Society Volume 145 ; 145 >
+      au < manifest ; Journal of the Geological Society Volume 146 ; 146 >
+      au < manifest ; Journal of the Geological Society Volume 147 ; 147 >
+      au < manifest ; Journal of the Geological Society Volume 148 ; 148 >
+      au < manifest ; Journal of the Geological Society Volume 149 ; 149 >
+      au < manifest ; Journal of the Geological Society Volume 150 ; 150 >
+      au < manifest ; Journal of the Geological Society Volume 151 ; 151 >
+      au < manifest ; Journal of the Geological Society Volume 152 ; 152 >
+      au < manifest ; Journal of the Geological Society Volume 153 ; 153 >
+      au < manifest ; Journal of the Geological Society Volume 154 ; 154 >
+      au < manifest ; Journal of the Geological Society Volume 155 ; 155 >
+      au < manifest ; Journal of the Geological Society Volume 156 ; 156 >
+      au < manifest ; Journal of the Geological Society Volume 157 ; 157 >
+      au < manifest ; Journal of the Geological Society Volume 158 ; 158 >
+      au < manifest ; Journal of the Geological Society Volume 159 ; 159 >
+      au < manifest ; Journal of the Geological Society Volume 160 ; 160 >
+      au < manifest ; Journal of the Geological Society Volume 161 ; 161 >
+      au < manifest ; Journal of the Geological Society Volume 162 ; 162 >
+      au < manifest ; Journal of the Geological Society Volume 163 ; 163 >
+      au < manifest ; Journal of the Geological Society Volume 164 ; 164 >
+      au < manifest ; Journal of the Geological Society Volume 165 ; 165 >
+      au < manifest ; Journal of the Geological Society Volume 166 ; 166 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Quarterly Journal of Engineering Geology and Hydrogeology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://qjegh.lyellcollection.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 1 ; 1 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 2 ; 2 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 3 ; 3 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 4 ; 4 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 5 ; 5 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 6 ; 6 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 7 ; 7 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 8 ; 8 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 9 ; 9 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 10 ; 10 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 11 ; 11 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 12 ; 12 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 13 ; 13 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 14 ; 14 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 15 ; 15 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 16 ; 16 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 17 ; 17 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 18 ; 18 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 19 ; 19 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 20 ; 20 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 21 ; 21 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 22 ; 22 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 23 ; 23 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 24 ; 24 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 25 ; 25 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 26 ; 26 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 27 ; 27 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 28 ; 28 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 29 ; 29 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 30 ; 30 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 31 ; 31 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 32 ; 32 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 33 ; 33 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 34 ; 34 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 35 ; 35 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 36 ; 36 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 37 ; 37 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 38 ; 38 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 39 ; 39 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 40 ; 40 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 41 ; 41 >
+      au < manifest ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 42 ; 42 >
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,169 @@
+{
+  publisher <
+    name = Psychonomic Society Publications
+  >
+
+  {
+    title <
+      name = Attention, Perception & Psychophysics
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://app.psychonomic-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Attention, Perception & Psychophysics Volume 63 ; 63 >
+      au < exists ; Attention, Perception & Psychophysics Volume 64 ; 64 >
+      au < exists ; Attention, Perception & Psychophysics Volume 65 ; 65 >
+      au < exists ; Attention, Perception & Psychophysics Volume 66 ; 66 >
+      au < exists ; Attention, Perception & Psychophysics Volume 67 ; 67 >
+      au < exists ; Attention, Perception & Psychophysics Volume 68 ; 68 >
+      au < exists ; Attention, Perception & Psychophysics Volume 69 ; 69 >
+      au < exists ; Attention, Perception & Psychophysics Volume 70 ; 70 >
+      au < exists ; Attention, Perception & Psychophysics Volume 71 ; 71 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Behavior Research Methods
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://brm.psychonomic-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Behavior Research Methods Volume 33 ; 33 >
+      au < exists ; Behavior Research Methods Volume 34 ; 34 >
+      au < exists ; Behavior Research Methods Volume 35 ; 35 >
+      au < exists ; Behavior Research Methods Volume 36 ; 36 >
+      au < exists ; Behavior Research Methods Volume 37 ; 37 >
+      au < exists ; Behavior Research Methods Volume 38 ; 38 >
+      au < exists ; Behavior Research Methods Volume 39 ; 39 >
+      au < exists ; Behavior Research Methods Volume 40 ; 40 >
+      au < exists ; Behavior Research Methods Volume 41 ; 41 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Cognitive, Affective, & Behavioral Neuroscience
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://cabn.psychonomic-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 1 ; 1 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 2 ; 2 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 3 ; 3 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 4 ; 4 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 5 ; 5 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 6 ; 6 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 7 ; 7 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 8 ; 8 >
+      au < exists ; Cognitive, Affective, & Behavioral Neuroscience Volume 9 ; 9 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Learning & Behavior
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://lb.psychonomic-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Learning & Behavior Volume 29 ; 29 >
+      au < exists ; Learning & Behavior Volume 30 ; 30 >
+      au < exists ; Learning & Behavior Volume 31 ; 31 >
+      au < exists ; Learning & Behavior Volume 32 ; 32 >
+      au < exists ; Learning & Behavior Volume 33 ; 33 >
+      au < exists ; Learning & Behavior Volume 34 ; 34 >
+      au < exists ; Learning & Behavior Volume 35 ; 35 >
+      au < exists ; Learning & Behavior Volume 36 ; 36 >
+      au < exists ; Learning & Behavior Volume 37 ; 37 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Memory & Cognition
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://mc.psychonomic-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Memory & Cognition Volume 29 ; 29 >
+      au < exists ; Memory & Cognition Volume 30 ; 30 >
+      au < exists ; Memory & Cognition Volume 31 ; 31 >
+      au < exists ; Memory & Cognition Volume 32 ; 32 >
+      au < exists ; Memory & Cognition Volume 33 ; 33 >
+      au < exists ; Memory & Cognition Volume 34 ; 34 >
+      au < exists ; Memory & Cognition Volume 35 ; 35 >
+      au < exists ; Memory & Cognition Volume 36 ; 36 >
+      au < exists ; Memory & Cognition Volume 37 ; 37 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Psychonomic Bulletin & Review
+    >
+
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://pbr.psychonomic-journals.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Psychonomic Bulletin & Review Volume 8 ; 8 >
+      au < exists ; Psychonomic Bulletin & Review Volume 9 ; 9 >
+      au < exists ; Psychonomic Bulletin & Review Volume 10 ; 10 >
+      au < exists ; Psychonomic Bulletin & Review Volume 11 ; 11 >
+      au < exists ; Psychonomic Bulletin & Review Volume 12 ; 12 >
+      au < exists ; Psychonomic Bulletin & Review Volume 13 ; 13 >
+      au < exists ; Psychonomic Bulletin & Review Volume 14 ; 14 >
+      au < exists ; Psychonomic Bulletin & Review Volume 15 ; 15 >
+      au < exists ; Psychonomic Bulletin & Review Volume 16 ; 16 >
+
+    }
+
+  }
+
+}
+

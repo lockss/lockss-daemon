@@ -1,0 +1,60 @@
+{
+  publisher <
+    name = Association of Clinical Scientists
+  >
+
+  {
+    title <
+      name = Annals of Clinical & Laboratory Science
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.annclinlabsci.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Annals of Clinical & Laboratory Science Volume 3 ; 3 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 4 ; 4 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 5 ; 5 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 6 ; 6 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 7 ; 7 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 8 ; 8 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 9 ; 9 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 10 ; 10 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 11 ; 11 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 12 ; 12 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 13 ; 13 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 14 ; 14 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 15 ; 15 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 16 ; 16 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 17 ; 17 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 18 ; 18 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 19 ; 19 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 20 ; 20 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 21 ; 21 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 22 ; 22 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 23 ; 23 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 24 ; 24 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 25 ; 25 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 26 ; 26 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 27 ; 27 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 28 ; 28 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 29 ; 29 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 30 ; 30 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 31 ; 31 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 32 ; 32 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 33 ; 33 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 34 ; 34 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 35 ; 35 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 36 ; 36 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 37 ; 37 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 38 ; 38 >
+      au < exists ; Annals of Clinical & Laboratory Science Volume 39 ; 39 >
+
+    }
+
+  }
+
+}
+
