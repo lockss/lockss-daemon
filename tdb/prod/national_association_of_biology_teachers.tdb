@@ -16,14 +16,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0002-7685
   
-      au < do_not_process ; The American Biology Teacher Volume 62 ; 62 >
-      au < do_not_process ; The American Biology Teacher Volume 63 ; 63 >
-      au < do_not_process ; The American Biology Teacher Volume 64 ; 64 >
-      au < do_not_process ; The American Biology Teacher Volume 65 ; 65 >
+      au < doNotProcess ; The American Biology Teacher Volume 62 ; 62 >
+      au < doNotProcess ; The American Biology Teacher Volume 63 ; 63 >
+      au < doNotProcess ; The American Biology Teacher Volume 64 ; 64 >
+      au < doNotProcess ; The American Biology Teacher Volume 65 ; 65 >
       au < superseded ; The American Biology Teacher Volume 66 ; 66 >
-      au < do_not_process ; The American Biology Teacher Volume 67 ; 67 >
-      au < do_not_process ; The American Biology Teacher Volume 68 ; 68 >
-      au < do_not_process ; The American Biology Teacher Volume 69 ; 69 >
+      au < doNotProcess ; The American Biology Teacher Volume 67 ; 67 >
+      au < doNotProcess ; The American Biology Teacher Volume 68 ; 68 >
+      au < doNotProcess ; The American Biology Teacher Volume 69 ; 69 >
     }
 
     {

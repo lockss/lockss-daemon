@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.4 2007-07-18 07:12:56 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.4.30.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -56,6 +57,7 @@ public abstract class BaseConfigFile implements ConfigFile {
   protected ConfigurationPropTreeImpl m_config;
   protected int m_generation = 0;
   protected Map m_props;
+  protected ConfigManager.KeyPredicate keyPred;
 
   /**
    * Create a ConfigFile for the URL
@@ -190,6 +192,7 @@ public abstract class BaseConfigFile implements ConfigFile {
       } else {
 	newConfig.getPropertyTree().load(in);
       }
+      filterConfig(newConfig);
       // update stored configuration atomically
       newConfig.seal();
       m_config = newConfig;
@@ -203,6 +206,37 @@ public abstract class BaseConfigFile implements ConfigFile {
     } catch (Exception ex) {
       log.debug("Unexpected non-IO error loading configuration", ex);
       throw new IOException(ex.toString());
+    }
+  }
+
+  public void setKeyPredicate(ConfigManager.KeyPredicate pred) {
+    keyPred = pred;
+  }
+
+  protected void filterConfig(Configuration config) throws IOException {
+    if (keyPred != null) {
+      List<String> delKeys = null;
+      for (String key : config.keySet()) {
+	if (!keyPred.evaluate(key)) {
+	  String msg = "Illegal config key: " + key + " = "
+	    + StringUtils.abbreviate(config.get(key), 50) + " in " + m_fileUrl;
+	  if (keyPred.failOnIllegalKey()) {
+	    log.error(msg);
+	    throw new IOException(msg);
+	  } else {
+	    log.warning(msg);
+	    if (delKeys == null) {
+	      delKeys = new ArrayList<String>();
+	    }
+	    delKeys.add(key);
+	  }
+	}
+      }
+      if (delKeys != null) {
+	for (String key : delKeys) {
+	  config.remove(key);
+	}
+      }	
     }
   }
 

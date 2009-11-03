@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.28 2008-08-17 08:40:29 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.28.12.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
+import org.lockss.extractor.*;
 
 /**
  * This is a mock version of <code>Plugin</code> used for testing
@@ -59,7 +60,11 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private String pubPlatform = null;
   private String requiredDaemonVersion = "0.0.0";
   private List auConfigDescrs = ListUtil.list(ConfigParamDescr.BASE_URL,
-					      ConfigParamDescr.VOLUME_NUMBER);
+                                              ConfigParamDescr.VOLUME_NUMBER);
+
+  private MetadataExtractor metadataExtractor = null;
+  private ArticleIteratorFactory articleIteratorFactory = null;
+  
 
   public MockPlugin(){
     super();
@@ -124,6 +129,23 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     this.pubPlatform = pubPlatform;
   }
 
+  public MetadataExtractor getMetadataExtractor(String contentType,
+                                                ArchivalUnit au) {
+    return metadataExtractor;
+  }
+
+  public void setMetadataExtractor(MetadataExtractor me) {
+    metadataExtractor = me;
+  }
+
+  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+    return articleIteratorFactory;
+  }
+
+  public void setArticleIteratorFactory(ArticleIteratorFactory aif) {
+    articleIteratorFactory = aif;
+  }
+
   /**
    * Return the list of names of the Archival Units and volranges supported by
    * this plugin
@@ -145,7 +167,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   public void setAuConfigDescrs(List descrs) {
     auConfigDescrs = descrs;
-    allParamDescrs = null;		// clear cache
+    allParamDescrs = null;              // clear cache
   }
 
   /**

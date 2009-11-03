@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1348-6160
   
-      au < do_not_process ; Mammal Study Volume 30 ; 30 >
-      au < do_not_process ; Mammal Study Volume 31 ; 31 >
-      au < do_not_process ; Mammal Study Volume 32 ; 32 >
+      au < doNotProcess ; Mammal Study Volume 30 ; 30 >
+      au < doNotProcess ; Mammal Study Volume 31 ; 31 >
+      au < doNotProcess ; Mammal Study Volume 32 ; 32 >
     }
 
     {

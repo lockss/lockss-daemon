@@ -1,5 +1,5 @@
 /*
- * $Id: FilterUtil.java,v 1.2 2007-02-06 00:52:27 tlipkis Exp $
+ * $Id: FilterUtil.java,v 1.2.36.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.filter;
 import java.io.*;
 import java.util.List;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /** Convenience methods for filters and filter factories */
 public class FilterUtil {
@@ -56,4 +58,33 @@ public class FilterUtil {
   public static Reader getReader(InputStream in, String encoding) {
     return StreamUtil.getReader(in, encoding);
   }
+
+  /** Wrap a stream in a crawl filter, if one exists for this mime type,
+   * else return the orginal stream.
+   * @param au the AU
+   * @param in InputStream to filter
+   * @param encoding charset whith which to interpret byte stream
+   * @param mimeType look for a filter of this MIME type
+   * @return a filtered stream, or the original stream if AU has no filter
+   * for this MIME type
+   */
+  public static InputStream getCrawlFilteredStream(ArchivalUnit au,
+                                                   InputStream in,
+                                                   String encoding,
+                                                   String mimeType) {
+    FilterFactory fact = au.getCrawlFilterFactory(mimeType);
+    if (fact == null) {
+      return in;
+    }
+    if (log.isDebug3()) {
+      log.debug3("Filtering " + mimeType +
+                 " with " + fact.getClass().getName());
+    }
+    try {
+      return fact.createFilteredInputStream(au, in, encoding);
+    } catch (PluginException e) {
+      IOUtil.safeClose(in);
+      throw new RuntimeException(e);
+    }
+  }    
 }

@@ -16,11 +16,11 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0038-4909
   
-      au < do_not_process ; The Southwestern Naturalist Volume 48 ; 48 >
+      au < doNotProcess ; The Southwestern Naturalist Volume 48 ; 48 >
       au < superseded ; The Southwestern Naturalist Volume 49 ; 49 >
-      au < do_not_process ; The Southwestern Naturalist Volume 50 ; 50 >
-      au < do_not_process ; The Southwestern Naturalist Volume 51 ; 51 >
-      au < do_not_process ; The Southwestern Naturalist Volume 52 ; 52 >
+      au < doNotProcess ; The Southwestern Naturalist Volume 50 ; 50 >
+      au < doNotProcess ; The Southwestern Naturalist Volume 51 ; 51 >
+      au < doNotProcess ; The Southwestern Naturalist Volume 52 ; 52 >
     }
 
     {

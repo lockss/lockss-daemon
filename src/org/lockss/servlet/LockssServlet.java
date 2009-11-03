@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.110 2009-04-07 04:53:07 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.110.2.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.List;
+import java.security.Principal;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -44,13 +45,16 @@ import org.apache.commons.collections.*;
 import org.apache.commons.collections.bidimap.*;
 import org.apache.commons.collections.iterators.*;
 import org.mortbay.html.*;
+import org.mortbay.http.*;
 import org.mortbay.servlet.MultiPartRequest;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.account.*;
 import org.lockss.remote.RemoteApi;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.protocol.*;
+import org.lockss.jetty.*;
 import org.lockss.util.*;
 
 /** Abstract base class for LOCKSS servlets
@@ -81,6 +85,12 @@ public abstract class LockssServlet extends HttpServlet
   static final String PARAM_UI_WARNING =
     Configuration.PREFIX + "ui.warning";
 
+  // session keys
+  static final String SESSION_KEY_OBJECT_ID = "obj_id";
+  static final String SESSION_KEY_OBJ_MAP = "obj_map";
+  public static final String SESSION_KEY_RUNNING_SERVLET = "running_servlet";
+  public static final String SESSION_KEY_REQUEST_HOST = "request_host";
+
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
@@ -91,13 +101,23 @@ public abstract class LockssServlet extends HttpServlet
   public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String ATTR_ALLOW_ROLES = "AllowRoles";
 
-  public static final String ROLE_ADMIN = "adminRole";
+  /** User may configure admin access (add/delete/modify users, set admin
+   * access list) */
+  public static final String ROLE_USER_ADMIN = "userAdminRole";
+
+  /** User may configure content access (set content access list) */
+  public static final String ROLE_CONTENT_ADMIN = "contentAdminRole";
+
+  /** User may change AU configuration (add/delete content) */
+  public static final String ROLE_AU_ADMIN = "auAdminRole";
+
   public static final String ROLE_DEBUG = "debugRole";
 
   protected ServletContext context;
 
   private LockssApp theApp = null;
   private ServletManager servletMgr;
+  private AccountManager acctMgr;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -107,7 +127,7 @@ public abstract class LockssServlet extends HttpServlet
   protected URL reqURL;
   protected HttpSession session;
   private String adminDir = null;
-  protected String clientAddr;	// client addr, even if no param
+  protected String clientAddr;  // client addr, even if no param
   protected String localAddr;
   protected MultiPartRequest multiReq;
 
@@ -128,6 +148,9 @@ public abstract class LockssServlet extends HttpServlet
       (LockssApp)context.getAttribute(ServletManager.CONTEXT_ATTR_LOCKSS_APP);
     servletMgr =
       (ServletManager)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR);
+    if (theApp instanceof LockssDaemon) {
+      acctMgr = getLockssDaemon().getAccountManager();
+    }
   }
 
   public ServletManager getServletManager() {
@@ -145,40 +168,48 @@ public abstract class LockssServlet extends HttpServlet
   /** Common request handling. */
   public void service(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    multiReq = null;
+    resetState();
     boolean success = false;
+    HttpSession session = req.getSession(false);
     try {
       this.req = req;
       this.resp = resp;
       if (log.isDebug()) {
-	logParams();
+        logParams();
       }
       resp.setContentType("text/html");
 
       if (!mayPageBeCached()) {
-	resp.setHeader("pragma", "no-cache");
-	resp.setHeader("Cache-control", "no-cache");
+        resp.setHeader("pragma", "no-cache");
+        resp.setHeader("Cache-control", "no-cache");
       }
 
-      footNumber = 0;
-      tabindex = 1;
       reqURL = new URL(UrlUtil.getRequestURL(req));
       clientAddr = getLocalIPAddr();
-      submitButtonNumber = 0;
 
-      // check whether servlet requires admin user
-      if (myServletDescr().isAdminOnly() && !isAdminUser()) {
-	displayWarningInLieuOfPage("You are not authorized to use " +
-				   myServletDescr().heading);
-	return;
+      // check that current user has permission to run this servlet
+      if (!isServletAllowed(myServletDescr())) {
+        displayWarningInLieuOfPage("You are not authorized to use " +
+                                   myServletDescr().heading);
+        return;
       }
 
       // check whether servlet is disabled
       String reason =
-	ServletUtil.servletDisabledReason(myServletDescr().getServletName());
+        ServletUtil.servletDisabledReason(myServletDescr().getServletName());
       if (reason != null) {
-	displayWarningInLieuOfPage("This function is disabled. " + reason);
-	return;
+        displayWarningInLieuOfPage("This function is disabled. " + reason);
+        return;
+      }
+      if (session != null) {
+        session.setAttribute(SESSION_KEY_RUNNING_SERVLET,
+                             getHeading());
+        String reqHost = req.getRemoteHost();
+        String forw = req.getHeader(HttpFields.__XForwardedFor);
+        if (!StringUtil.isNullString(forw)) {
+          reqHost += " (proxies for " + forw + ")";
+        }
+        session.setAttribute(SESSION_KEY_REQUEST_HOST, reqHost);
       }
       lockssHandleRequest();
       success = (errMsg == null);
@@ -192,13 +223,28 @@ public abstract class LockssServlet extends HttpServlet
       log.error("Servlet threw", e);
       throw e;
     } finally {
+      if (session != null) {
+        session.setAttribute(SESSION_KEY_RUNNING_SERVLET, null);
+        session.setAttribute(LockssFormAuthenticator.__J_AUTH_ACTIVITY,
+                             TimeBase.nowMs());
+      }
       if ("please".equalsIgnoreCase(req.getHeader("X-Lockss-Result"))) {
-	log.debug3("X-Lockss-Result: " + (success ? "Ok" : "Fail"));
-	resp.setHeader("X-Lockss-Result", success ? "Ok" : "Fail");
+        log.debug3("X-Lockss-Result: " + (success ? "Ok" : "Fail"));
+        resp.setHeader("X-Lockss-Result", success ? "Ok" : "Fail");
       }
       resetMyLocals();
       resetLocals();
     }
+  }
+
+  protected void resetState() {
+    multiReq = null;
+    footNumber = 0;
+    submitButtonNumber = 0;
+    tabindex = 1;
+    statusMsg = null;
+    errMsg = null;
+    isFramed = false;
   }
 
   protected void resetLocals() {
@@ -228,8 +274,8 @@ public abstract class LockssServlet extends HttpServlet
   protected void setSessionTimeout(HttpSession session) {
     Configuration config = CurrentConfig.getCurrentConfig();
     setSessionTimeout(session,
-		      config.getTimeInterval(PARAM_UI_SESSION_TIMEOUT,
-					     DEFAULT_UI_SESSION_TIMEOUT));
+                      config.getTimeInterval(PARAM_UI_SESSION_TIMEOUT,
+                                             DEFAULT_UI_SESSION_TIMEOUT));
   }
 
   /** Set the session timeout */
@@ -243,7 +289,7 @@ public abstract class LockssServlet extends HttpServlet
     if (session == null) {
       session = req.getSession(true);
       if (session.isNew()) {
-	setSessionTimeout(session);
+        setSessionTimeout(session);
       }
     }
     return session;
@@ -254,19 +300,16 @@ public abstract class LockssServlet extends HttpServlet
     return req.getSession(false) != null;
   }
 
-  static final String SESSION_KEY_OBJECT_ID = "obj_id";
-  static final String SESSION_KEY_OBJ_MAP = "obj_map";
-
   /** Get an unused ID string for storing an object in the session */
   protected String getNewSessionObjectId() {
     HttpSession session = getSession();
     synchronized (session) {
       Integer id = (Integer)getSession().getAttribute(SESSION_KEY_OBJECT_ID);
       if (id == null) {
-	id = new Integer(1);
+        id = new Integer(1);
       }
       session.setAttribute(SESSION_KEY_OBJECT_ID,
-			   new Integer(id.intValue() + 1));
+                           new Integer(id.intValue() + 1));
       return id.toString();
     }
   }    
@@ -277,7 +320,7 @@ public abstract class LockssServlet extends HttpServlet
     synchronized (session) {
       BidiMap map = (BidiMap)session.getAttribute(SESSION_KEY_OBJ_MAP);
       if (map == null) {
-	return null;
+        return null;
       }
       return map.getKey(id);
     }
@@ -296,15 +339,15 @@ public abstract class LockssServlet extends HttpServlet
     synchronized (session) {
       map = (BidiMap)session.getAttribute(SESSION_KEY_OBJ_MAP);
       if (map == null) {
-	map = new DualHashBidiMap();
-	session.setAttribute(SESSION_KEY_OBJ_MAP, map);
+        map = new DualHashBidiMap();
+        session.setAttribute(SESSION_KEY_OBJ_MAP, map);
       }
     }
     synchronized (map) {
       String id = (String)map.get(obj);
       if (id == null) {
-	id = getNewSessionObjectId();
-	map.put(obj, id);
+        id = getNewSessionObjectId();
+        map.put(obj, id);
       }
       return id;
     }
@@ -332,12 +375,12 @@ public abstract class LockssServlet extends HttpServlet
   String getLocalIPAddr() {
     if (localAddr == null) {
       try {
-	IPAddr localHost = IPAddr.getLocalHost();
-	localAddr = localHost.getHostAddress();
+        IPAddr localHost = IPAddr.getLocalHost();
+        localAddr = localHost.getHostAddress();
       } catch (UnknownHostException e) {
-	// shouldn't happen
-	log.error("LockssServlet: getLocalHost: " + e.toString());
-	return "???";
+        // shouldn't happen
+        log.error("LockssServlet: getLocalHost: " + e.toString());
+        return "???";
       }
     }
     return localAddr;
@@ -361,13 +404,13 @@ public abstract class LockssServlet extends HttpServlet
       // might be the address of a NAT that we're behind.)
       String host = reqURL.getHost();
       try {
-	IPAddr localHost = IPAddr.getByName(host);
-	String ip = localHost.getHostAddress();
-	myName = getMachineName(ip);
+        IPAddr localHost = IPAddr.getByName(host);
+        String ip = localHost.getHostAddress();
+        myName = getMachineName(ip);
       } catch (UnknownHostException e) {
-	// shouldn't happen
-	log.error("getMachineName", e);
-	return host;
+        // shouldn't happen
+        log.error("getMachineName", e);
+        return host;
       }
     }
     return myName;
@@ -412,21 +455,72 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // user predicates
-  protected boolean isDebugUser() {
-    return req.isUserInRole(ROLE_DEBUG) &&
-      StringUtil.isNullString(req.getParameter("nodebug"));
+  String getUsername() {
+    Principal user = req.getUserPrincipal();
+    return user != null ? user.toString() : null;
   }
 
-  protected boolean isAdminUser() {
-    if (req.isUserInRole(ROLE_ADMIN) &&
-	StringUtil.isNullString(req.getParameter("noadmin"))) {
+  protected UserAccount getUserAccount() {
+    if (acctMgr != null) {
+      return acctMgr.getUser(getUsername());
+    }
+    return AccountManager.NOBODY_ACCOUNT;
+  }
+
+  protected boolean isDebugUser() {
+    return doesUserHaveRole(ROLE_DEBUG);
+  }
+
+  protected boolean doesUserHaveRole(String role) {
+    if ((req.isUserInRole(role) || req.isUserInRole(ROLE_USER_ADMIN))
+        && !hasNoRoleParsm(role)) {
       return true;
     }
+    return hasTestRole(role);
+  }
+
+  static Map<String,String> noRoleParams = new HashMap<String,String>();
+  static {
+    noRoleParams.put(ROLE_USER_ADMIN, "noadmin");
+    noRoleParams.put(ROLE_CONTENT_ADMIN, "nocontent");
+    noRoleParams.put(ROLE_AU_ADMIN, "noau");
+    noRoleParams.put(ROLE_DEBUG, "nodebug");
+  }
+
+  protected boolean hasNoRoleParsm(String roleName) {
+    String noRoleParam = noRoleParams.get(roleName);
+    return (noRoleParam != null &&
+            !StringUtil.isNullString(req.getParameter(noRoleParam)));
+  }
+
+  protected boolean hasTestRole(String role) {
+    // Servlet test harness puts roles in context
     List roles = (List)context.getAttribute(ATTR_ALLOW_ROLES);
-    if (roles != null) {
-      return roles.contains(ROLE_ADMIN);
-    }
-    return false;
+    return roles != null && (roles.contains(role)
+                             || roles.contains(ROLE_USER_ADMIN));
+  }
+
+  protected boolean isServletAllowed(ServletDescr d) {
+    if (d.needsUserAdminRole() && !doesUserHaveRole(ROLE_USER_ADMIN))
+      return false;
+    if (d.needsContentAdminRole() && !doesUserHaveRole(ROLE_CONTENT_ADMIN))
+      return false;
+    if (d.needsAuAdminRole() && !doesUserHaveRole(ROLE_AU_ADMIN))
+      return false;
+    
+    return d.isEnabled(getLockssDaemon());
+  }
+
+  protected boolean isServletDisplayed(ServletDescr d) {
+    if (!isServletAllowed(d)) return false;
+    if (d.needsDebugRole() && !doesUserHaveRole(ROLE_DEBUG))
+      return false;
+    return true;
+  }
+
+  protected boolean isServletInNav(ServletDescr d) {
+    if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
+    return d.isInNav(this) && isServletDisplayed(d);
   }
 
   // Called when a servlet doesn't get the parameters it expects/needs
@@ -496,7 +590,7 @@ public abstract class LockssServlet extends HttpServlet
     if (stem != null) {
       sb.append(stem);
       if (stem.charAt(stem.length() - 1) != '/') {
-	sb.append('/');
+        sb.append('/');
       }
     } else {
       // ensure absolute path even if no scheme/host/port
@@ -531,13 +625,13 @@ public abstract class LockssServlet extends HttpServlet
   /** Return a link to a servlet with params */
   String srvLink(ServletDescr d, String text, String params) {
     return new Link(srvURL(d, params),
-		    (text != null ? text : d.heading)).toString();
+                    (text != null ? text : d.heading)).toString();
   }
 
   /** Return a link to a servlet with params */
   String srvLink(ServletDescr d, String text, Properties params) {
     return new Link(srvURL(d, params),
-		    text).toString();
+                    text).toString();
   }
 
   /** Return an absolute link to a servlet with params */
@@ -548,25 +642,25 @@ public abstract class LockssServlet extends HttpServlet
   /** Return an absolute link to a servlet with params */
   String srvAbsLink(ServletDescr d, String text, String params) {
     return new Link(srvAbsURL(d, params),
-		    (text != null ? text : d.heading)).toString();
+                    (text != null ? text : d.heading)).toString();
   }
 
   /** Return an absolute link to a servlet with params */
   String srvAbsLink(String host, ServletDescr d, String text, String params) {
     return new Link(srvURL(host, d, params),
-		    (text != null ? text : d.heading)).toString();
+                    (text != null ? text : d.heading)).toString();
   }
 
   /** Return an absolute link to a servlet with params */
   String srvAbsLink(PeerIdentity peer, ServletDescr d, String text,
-		    String params) {
+                    String params) {
     return new Link(srvURL(peer, d, params),
-		    (text != null ? text : d.heading)).toString();
+                    (text != null ? text : d.heading)).toString();
   }
 
   /** Return text as a link iff isLink */
   String conditionalSrvLink(ServletDescr d, String text, String params,
-			    boolean isLink) {
+                            boolean isLink) {
     if (isLink) {
       return srvLink(d, text, params);
     } else {
@@ -600,7 +694,7 @@ public abstract class LockssServlet extends HttpServlet
       String key = (String)iter.next();
       String val = props.getProperty(key);
       if (!StringUtil.isNullString(val)) {
-	list.add(key + "=" + urlEncode(val));
+        list.add(key + "=" + urlEncode(val));
       }
     }
     return StringUtil.separatedString(list, "&");
@@ -625,18 +719,6 @@ public abstract class LockssServlet extends HttpServlet
     return UrlUtil.encodeUrl(param);
   }
 
-
-  protected boolean isServletAvailable(ServletDescr d) {
-    if (!isDebugUser() && d.isDebugOnly()) return false;
-    if (!isAdminUser() && d.isAdminOnly()) return false;
-    if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
-    return true;
-  }
-
-  protected boolean isServletInNav(ServletDescr d) {
-    return isServletAvailable(d) && d.isInNav(this);
-  }
-
   protected String getRequestKey() {
     String key = req.getPathInfo();
     if (key != null && key.startsWith("/")) {
@@ -655,13 +737,18 @@ public abstract class LockssServlet extends HttpServlet
 
     // Create page and layout header
     Page page = ServletUtil.doNewPage(getPageTitle(), isFramed());
-    FilterIterator inNavIterator = new FilterIterator(
+    Iterator inNavIterator;
+    if (myServletDescr().hasNoNavTable()) {
+      inNavIterator = CollectionUtil.EMPTY_ITERATOR;
+    } else {
+      inNavIterator = new FilterIterator(
         new ObjectArrayIterator(getServletDescrs()),
         new Predicate() {
           public boolean evaluate(Object obj) {
             return isServletInNav((ServletDescr)obj);
           }
         });
+    }
     ServletUtil.layoutHeader(this,
                              page,
                              heading,
@@ -734,7 +821,7 @@ public abstract class LockssServlet extends HttpServlet
    * specified action, first storing the value in the specified form
    * prop. */
   protected Element submitButton(String label, String action,
-				 String prop, String value) {
+                                 String prop, String value) {
     StringBuilder sb = new StringBuilder(40);
     sb.append("lockssButton(this, '");
     sb.append(action);
@@ -794,7 +881,7 @@ public abstract class LockssServlet extends HttpServlet
    * @return a readio button Element
    */
   protected Element radioButton(String label, String value,
-			       String key, boolean checked) {
+                               String key, boolean checked) {
     Composite c = new Composite();
     Input in = new Input(Input.Radio, key, value);
     if (checked) {
@@ -832,9 +919,9 @@ public abstract class LockssServlet extends HttpServlet
     }
     if (footNumber == 0) {
       if (footnotes == null) {
-	footnotes = new Vector(10, 10);
+        footnotes = new Vector(10, 10);
       } else {
-	footnotes.removeAllElements();
+        footnotes.removeAllElements();
       }
     }
     int n = footnotes.indexOf(s);
@@ -874,12 +961,12 @@ public abstract class LockssServlet extends HttpServlet
   private static synchronized String getJavascript() {
     if (jstext == null) {
       try {
-	ClassLoader loader = Thread.currentThread().getContextClassLoader();
-	InputStream istr = loader.getResourceAsStream(JAVASCRIPT_RESOURCE);
-	jstext = StringUtil.fromInputStream(istr);
-	istr.close();
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        InputStream istr = loader.getResourceAsStream(JAVASCRIPT_RESOURCE);
+        jstext = StringUtil.fromInputStream(istr);
+        istr.close();
       } catch (Exception e) {
-	log.error("Can't load javascript", e);
+        log.error("Can't load javascript", e);
       }
     }
     return jstext;
@@ -902,45 +989,45 @@ public abstract class LockssServlet extends HttpServlet
    */
   protected void displayWarningInLieuOfPage(String msg) throws IOException {
     displayMsgInLieuOfPage("<center><font color=red size=+1>" + msg +
-			   "</font></center>");
+                           "</font></center>");
   }
 
   /** Display "The cache isn't ready yet, come back later"
    */
   protected void displayNotStarted() throws IOException {
     displayWarningInLieuOfPage("This LOCKSS box is still starting.  Please "
-			       + srvLink(myServletDescr(), "try again",
-					 getParamsAsProps())
-			       + " in a moment.");
+                               + srvLink(myServletDescr(), "try again",
+                                         getParamsAsProps())
+                               + " in a moment.");
   }
 
   public MultiPartRequest getMultiPartRequest()
       throws FormDataTooLongException, IOException {
     int maxUpload = CurrentConfig.getIntParam(PARAM_MAX_UPLOAD_FILE_SIZE,
-					      DEFAULT_MAX_UPLOAD_FILE_SIZE);
+                                              DEFAULT_MAX_UPLOAD_FILE_SIZE);
     return getMultiPartRequest(maxUpload);
   }
 
   public MultiPartRequest getMultiPartRequest(int maxLen)
       throws FormDataTooLongException, IOException {
     if (req.getContentType() == null ||
-	!req.getContentType().startsWith("multipart/form-data")) {
+        !req.getContentType().startsWith("multipart/form-data")) {
       return null;
     }
     if (req.getContentLength() > maxLen) {
       throw new FormDataTooLongException(req.getContentLength() + " bytes, " +
-					 maxLen + " allowed");
+                                         maxLen + " allowed");
     }
     MultiPartRequest multi = new MultiPartRequest(req);
     if (log.isDebug2()) {
       String[] parts = multi.getPartNames();
       log.debug3("Multipart request, " + parts.length + " parts");
       if (log.isDebug3()) {
-	for (int p = 0; p < parts.length; p++) {
-	  String name = parts[p];
-	  String cont = multi.getString(parts[p]);
-	  log.debug3(name + ": " + cont);
-	}
+        for (int p = 0; p < parts.length; p++) {
+          String name = parts[p];
+          String cont = multi.getString(parts[p]);
+          log.debug3(name + ": " + cont);
+        }
       }
     }
     multiReq = multi;
@@ -987,11 +1074,16 @@ public abstract class LockssServlet extends HttpServlet
     while (en.hasMoreElements()) {
       String name = (String)en.nextElement();
       String vals[];
-      if (log.isDebug2() && (vals = req.getParameterValues(name)).length > 1) {
-	log.debug(name + " = " + StringUtil.separatedString(vals, ", "));
+      String dispval;
+      if (StringUtil.indexOfIgnoreCase(name, "passw") >= 0) {
+        dispval = req.getParameter(name).length() == 0 ? "" : "********";
+      } else if (log.isDebug2()
+                 && (vals = req.getParameterValues(name)).length > 1) {
+        dispval = StringUtil.separatedString(vals, ", ");
       } else {
-	log.debug(name + " = " + req.getParameter(name));
+        dispval = req.getParameter(name);
       }
+      log.debug(name + " = " + dispval);
     }
   }
 

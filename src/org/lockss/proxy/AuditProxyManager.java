@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.9 2007-03-16 21:23:08 thib_gc Exp $
+ * $Id: AuditProxyManager.java,v 1.9.34.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -46,33 +46,39 @@ public class AuditProxyManager extends BaseProxyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final boolean DEFAULT_START = false;
 
+  public static final String PARAM_INDEX = PREFIX + "index";
+  public static final boolean DEFAULT_INDEX = false;
+
   public static final String PARAM_PORT = PREFIX + "port";
+
+  protected boolean auditIndex = DEFAULT_INDEX;
 
   protected String getServerName() {
     return SERVER_NAME;
   }
 
   public void setConfig(Configuration config, Configuration prevConfig,
-			Configuration.Differences changedKeys) {
+                        Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(ProxyManager.PREFIX)) {
       includeIps = config.get(ProxyManager.PARAM_IP_INCLUDE, "");
       excludeIps = config.get(ProxyManager.PARAM_IP_EXCLUDE, "");
       logForbidden = config.getBoolean(ProxyManager.PARAM_LOG_FORBIDDEN,
-				       ProxyManager.DEFAULT_LOG_FORBIDDEN);
+                                       ProxyManager.DEFAULT_LOG_FORBIDDEN);
       log.debug("Installing new ip filter: incl: " + includeIps +
-		", excl: " + excludeIps);
+                ", excl: " + excludeIps);
       setIpFilter();
     }
     if (changedKeys.contains(PREFIX)) {
       port = config.getInt(PARAM_PORT, -1);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
+      auditIndex = config.getBoolean(PARAM_INDEX, DEFAULT_INDEX);
       if (start) {
-	if (getDaemon().isDaemonRunning()) {
-	  startProxy();
-	}
+        if (getDaemon().isDaemonRunning()) {
+          startProxy();
+        }
       } else if (isServerRunning()) {
-	stopProxy();
+        stopProxy();
       }
     }
   }
@@ -83,6 +89,7 @@ public class AuditProxyManager extends BaseProxyManager {
     org.lockss.proxy.ProxyHandler handler =
       new org.lockss.proxy.ProxyHandler(getDaemon());
     handler.setAuditProxy(true);
+    handler.setAuditIndex(auditIndex);
     return handler;
   }
 }

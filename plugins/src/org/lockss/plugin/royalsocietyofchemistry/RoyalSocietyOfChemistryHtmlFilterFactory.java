@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryHtmlFilterFactory.java,v 1.2 2009-01-20 23:13:11 thib_gc Exp $
+ * $Id: RoyalSocietyOfChemistryHtmlFilterFactory.java,v 1.2.6.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -45,14 +45,42 @@ public class RoyalSocietyOfChemistryHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
 
-        // Filter out <div id="footer">...</div>
+        /*
+         * These sections contain (sometimes many) ads.
+         * 
+         * Exclude <div class="ads">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ads")),
+        
+        /*
+         * Contains the current year.
+         * 
+         * Exclude <div id="footer">
+         */
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
                                                                               "id",
                                                                               "footer")),
-        // Filter out <img alt="...">...</img> where the href value matches a regular exception
+        /*
+         * References the thumbnail of the current issue.
+         * 
+         * Exclude <img alt="...Cover image...">
+         */
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("img",
                                                                               "alt",
                                                                               "Cover image")),
+
+        /*
+         * On article landing pages, the list of view links is
+         * institution-dependent, as it may include optional open URL
+         * items (for instance). The only reliable way to normalize
+         * the list of view links between institutions is to filter
+         * out the entirety of the list.
+         * 
+         * Exclude <div class="hilite">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+                                                                              "class",
+                                                                              "hilite")),
 
     };
     return new HtmlFilterInputStream(in,

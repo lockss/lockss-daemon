@@ -1,10 +1,10 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.1 2007-12-23 21:18:12 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.1.22.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,47 +59,55 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
 					       InputStream in,
 					       String encoding) {
 
-    NodeFilter[] filters = new NodeFilter[9];
-    filters[0] =
-      new TagNameFilter("script");
+    NodeFilter[] filters = new NodeFilter[] {
+        // Contains variable ad-generating code
+        new TagNameFilter("script"),
+        // Contains variable ad-generating code
+        new TagNameFilter("noscript"),
+        // Typically contains ads (e.g. American Academy of Pediatrics)
+        new TagNameFilter("object"),
+        // Typically contains ads 
+        new TagNameFilter("iframe"),
+        // Contains ads (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "advertisement"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring"),
+        // Contains institution name (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea"),
+        // Contains institution name (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "inst_logo"),
+        // Contains institution name (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolbar"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav"),
+        HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table"),
+        HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav"),
+        HtmlNodeFilters.tagWithText("strong", "related", true),
+        HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
+        // Contains the current year (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "copyright"),
+        // Contains the current year (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains the current date and time (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("a", "target", "help"),
+        // Contains the name and date of the current issue (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue"),
+        // Contains ads or variable banners (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "oas_top"),
+        // Contains ads or variable banners (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "oas_bottom"),
+        // Optional institution-specific citation resolver (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
+        // Contains ad-dependent URLs (e.g. American Academy of Pediatrics)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
+    };
 
-    filters[1] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring");
+    OrFilter orFilter = new OrFilter(filters);
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                       encoding,
+                                                       HtmlNodeFilterTransform.exclude(orFilter));
 
-    filters[2] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea");
-
-    filters[3] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav");
-
-    filters[4] =
-      HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table");
-
-    filters[5] =
-      HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox");
-
-    filters[6] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav");
-
-    filters[7] =
-      HtmlNodeFilters.tagWithText("strong", "related", true);
-
-    filters[8] =
-      HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false));
-
-    OrFilter combineFilter = new OrFilter();
-    combineFilter.setPredicates(filters);
-
-    HtmlTransform xform1 =
-      HtmlNodeFilterTransform.exclude(combineFilter);
-
-    // Still need to remove actual inverse citation section
-
-    InputStream htmlFilter = new HtmlFilterInputStream(in, encoding, xform1);
-
-    Reader rdr = FilterUtil.getReader(htmlFilter, encoding);
+    Reader rdr = FilterUtil.getReader(filtered, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
-    //    return new ReaderInputStream(tagFilter);
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 

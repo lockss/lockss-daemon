@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.17 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.17.40.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class EDPCellData {
   ArrayList m_listeners = new ArrayList();
 
   EDPCellData(EditableDefinablePlugin edp, String key, Object data,
-	      String displayString) {
+              String displayString) {
     m_plugin = edp;
     m_key = key;
     m_data = data;
@@ -90,10 +90,13 @@ public class EDPCellData {
       m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlInterval());
     }
     else if(key.equals(DefinableArchivalUnit.SUFFIX_FILTER_RULE)) {
-      m_data = edp.getAuFilters();
+      m_data = edp.getHashFilterRules();
     }
-    else if(key.equals(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
-      m_data = edp.getAuFilterFactories();
+    else if(key.equals(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)) {
+      m_data = edp.getHashFilterFactories();
+    }
+    else if(key.equals(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+      m_data = edp.getCrawlFilterFactories();
     }
     else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH)) {
       m_data = new Integer(edp.getAuCrawlDepth());
@@ -162,18 +165,18 @@ public class EDPCellData {
   public String toString() {
     if(m_displayString == null) {
       if (m_data instanceof Collection || m_data instanceof Map ||
-	  m_data instanceof CrawlWindows.Interval ||
-	  m_data instanceof CrawlWindows.Not) {
-	m_displayString = ELLIPSIS;
+          m_data instanceof CrawlWindows.Interval ||
+          m_data instanceof CrawlWindows.Not) {
+        m_displayString = ELLIPSIS;
       }
       else if (m_data == null) {
-	  if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW))
-	      m_displayString = ELLIPSIS;
-	  else
-	      m_displayString = "NONE";
+          if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW))
+              m_displayString = ELLIPSIS;
+          else
+              m_displayString = "NONE";
       }
       else {
-	m_displayString = m_data.toString();
+        m_displayString = m_data.toString();
       }
     }
     return m_displayString;

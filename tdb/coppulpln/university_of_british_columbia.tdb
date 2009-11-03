@@ -1,14 +1,15 @@
 {
+
   publisher <
     name = University of British Columbia
   >
 
-  implicit < status ; name ; param[year] >
-
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   param[base_url] = http://ojs.library.ubc.ca/
+  implicit < status ; year ; name ; param[year] >
   
   {
+  
     title <
       name = BC Studies: The British Columbian Quarterly
     >
@@ -18,46 +19,49 @@
   }
 
   {
+  
     title <
       name = Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme
     >
     
     param[journal_id] = cjmrp
 
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1 (2002) ; 2002 >
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1-2 (2003) ; 2003 >
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 2-3 (2004) ; 2004 >
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 3-4 (2005) ; 2005 >
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 4-5 (2006) ; 2006 >
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 6-7 (2007) ; 2007 >
-    au < released ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 7 (2008) ; 2008 >
+    au < released ; 2002 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1 (2002) ; 2002 >
+    au < released ; 2003 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 1-2 (2003) ; 2003 >
+    au < released ; 2004 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 2-3 (2004) ; 2004 >
+    au < released ; 2005 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 3-4 (2005) ; 2005 >
+    au < released ; 2006 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 4-5 (2006) ; 2006 >
+    au < released ; 2007 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 6-7 (2007) ; 2007 >
+    au < released ; 2008 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 7 (2008) ; 2008 >
 
   }
 
   {
+  
     title <
       name = Transnational Curriculum Inquiry
     >
     
     param[journal_id] = tci
 
-    au < released ; Transnational Curriculum Inquiry Volume 1 ; 2004 >
-    au < released ; Transnational Curriculum Inquiry Volume 2 ; 2005 >
-    au < released ; Transnational Curriculum Inquiry Volume 3 ; 2006 >
-    au < released ; Transnational Curriculum Inquiry Volume 4 ; 2007 >
-    au < released ; Transnational Curriculum Inquiry Volume 5 ; 2008 >
+    au < released ; 2004 ; Transnational Curriculum Inquiry Volume 1 ; 2004 >
+    au < released ; 2005 ; Transnational Curriculum Inquiry Volume 2 ; 2005 >
+    au < released ; 2006 ; Transnational Curriculum Inquiry Volume 3 ; 2006 >
+    au < released ; 2007 ; Transnational Curriculum Inquiry Volume 4 ; 2007 >
+    au < released ; 2008 ; Transnational Curriculum Inquiry Volume 5 ; 2008 >
 
   }
 
   {
+  
     title <
       name = New Proposals: Journal of Marxism and Interdisciplinary Inquiry
     >
     
     param[journal_id] = newproposals
 
-    au < released ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1 (2007) ; 2007 >
-    au < released ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1-2 (2008) ; 2008 >
+    au < released ; 2007 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1 (2007) ; 2007 >
+    au < released ; 2008 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1-2 (2008) ; 2008 >
 
   }
 

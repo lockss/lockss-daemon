@@ -14,209 +14,209 @@
     param[base_url] = http://www.biochemj.org/
     param[journal_id] = bj
     
-comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
+comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted
 
 
-    au < testing ; Biochemical Journal Volume 1 ; 001 >
-    au < testing ; Biochemical Journal Volume 2 ; 002 >
-    au < manifest ; Biochemical Journal Volume 3 ; 003 >
-    au < manifest ; Biochemical Journal Volume 4 ; 004 >
-    au < manifest ; Biochemical Journal Volume 5 ; 005 >
-    au < manifest ; Biochemical Journal Volume 6 ; 006 >
-    au < manifest ; Biochemical Journal Volume 7 ; 007 >
-    au < manifest ; Biochemical Journal Volume 8 ; 008 >
-    au < manifest ; Biochemical Journal Volume 9 ; 009 >
-    au < manifest ; Biochemical Journal Volume 10 ; 010 >
-    au < manifest ; Biochemical Journal Volume 11 ; 011 >
-    au < manifest ; Biochemical Journal Volume 12 ; 012 >
-    au < manifest ; Biochemical Journal Volume 13 ; 013 >
-    au < manifest ; Biochemical Journal Volume 14 ; 014 >
-    au < manifest ; Biochemical Journal Volume 15 ; 015 >
-    au < manifest ; Biochemical Journal Volume 16 ; 016 >
-    au < manifest ; Biochemical Journal Volume 17 ; 017 >
-    au < manifest ; Biochemical Journal Volume 18 ; 018 >
-    au < manifest ; Biochemical Journal Volume 19 ; 019 >
-    au < manifest ; Biochemical Journal Volume 20 ; 020 >
-    au < manifest ; Biochemical Journal Volume 21 ; 021 >
-    au < manifest ; Biochemical Journal Volume 22 ; 022 >
-    au < not_ready ; Biochemical Journal Volume 23 ; 023 >
-    au < not_ready ; Biochemical Journal Volume 24 ; 024 >    
-    au < manifest ; Biochemical Journal Volume 25 ; 025 >
-    au < manifest ; Biochemical Journal Volume 26 ; 026 >
-    au < manifest ; Biochemical Journal Volume 27 ; 027 >
-    au < manifest ; Biochemical Journal Volume 28 ; 028 >
-    au < manifest ; Biochemical Journal Volume 29 ; 029 >
-    au < manifest ; Biochemical Journal Volume 30 ; 030 >
-    au < manifest ; Biochemical Journal Volume 31 ; 031 >
-    au < manifest ; Biochemical Journal Volume 32 ; 032 >
-    au < manifest ; Biochemical Journal Volume 33 ; 033 >
-    au < manifest ; Biochemical Journal Volume 34 ; 034 >
-    au < manifest ; Biochemical Journal Volume 35 ; 035 >
-    au < manifest ; Biochemical Journal Volume 36 ; 036 >
+    au < notReady ; Biochemical Journal Volume 1 ; 001 >
+    au < ready ; Biochemical Journal Volume 2 ; 002 >
+    au < ready ; Biochemical Journal Volume 3 ; 003 >
+    au < ready ; Biochemical Journal Volume 4 ; 004 >
+    au < notReady ; Biochemical Journal Volume 5 ; 005 >
+    au < ready ; Biochemical Journal Volume 6 ; 006 >
+    au < notReady ; Biochemical Journal Volume 7 ; 007 >
+    au < notReady ; Biochemical Journal Volume 8 ; 008 >
+    au < notReady ; Biochemical Journal Volume 9 ; 009 >
+    au < notReady ; Biochemical Journal Volume 10 ; 010 >
+    au < ready ; Biochemical Journal Volume 11 ; 011 >
+    au < ready ; Biochemical Journal Volume 12 ; 012 >
+    au < notReady ; Biochemical Journal Volume 13 ; 013 >
+    au < notReady ; Biochemical Journal Volume 14 ; 014 >
+    au < notReady ; Biochemical Journal Volume 15 ; 015 >
+    au < notReady ; Biochemical Journal Volume 16 ; 016 >
+    au < notReady ; Biochemical Journal Volume 17 ; 017 >
+    au < ready ; Biochemical Journal Volume 18 ; 018 >
+    au < notReady ; Biochemical Journal Volume 19 ; 019 >
+    au < notReady ; Biochemical Journal Volume 20 ; 020 >
+    au < notReady ; Biochemical Journal Volume 21 ; 021 >
+    au < notReady ; Biochemical Journal Volume 22 ; 022 >
+    au < notReady ; Biochemical Journal Volume 23 ; 023 >
+    au < notReady ; Biochemical Journal Volume 24 ; 024 >    
+    au < notReady ; Biochemical Journal Volume 25 ; 025 >
+    au < ready ; Biochemical Journal Volume 26 ; 026 >
+    au < notReady ; Biochemical Journal Volume 27 ; 027 >
+    au < notReady ; Biochemical Journal Volume 28 ; 028 >
+    au < notReady ; Biochemical Journal Volume 29 ; 029 >
+    au < notReady ; Biochemical Journal Volume 30 ; 030 >
+    au < notReady ; Biochemical Journal Volume 31 ; 031 >
+    au < ready ; Biochemical Journal Volume 32 ; 032 >
+    au < notReady ; Biochemical Journal Volume 33 ; 033 >
+    au < notReady ; Biochemical Journal Volume 34 ; 034 >
+    au < notReady ; Biochemical Journal Volume 35 ; 035 >
+    au < ready ; Biochemical Journal Volume 36 ; 036 >
     au < manifest ; Biochemical Journal Volume 37 ; 037 >
-    au < manifest ; Biochemical Journal Volume 38 ; 038 >
-    au < manifest ; Biochemical Journal Volume 39 ; 039 >
-    au < manifest ; Biochemical Journal Volume 40 ; 040 >
-    au < manifest ; Biochemical Journal Volume 41 ; 041 >
-    au < manifest ; Biochemical Journal Volume 42 ; 042 >
-    au < manifest ; Biochemical Journal Volume 43 ; 043 >
-    au < manifest ; Biochemical Journal Volume 44 ; 044 >
-    au < manifest ; Biochemical Journal Volume 45 ; 045 >
-    au < manifest ; Biochemical Journal Volume 46 ; 046 >
-    au < manifest ; Biochemical Journal Volume 47 ; 047 >
-    au < manifest ; Biochemical Journal Volume 48 ; 048 >
-    au < manifest ; Biochemical Journal Volume 49 ; 049 >
-    au < manifest ; Biochemical Journal Volume 50 ; 050 >
-    au < manifest ; Biochemical Journal Volume 51 ; 051 >
-    au < manifest ; Biochemical Journal Volume 52 ; 052 >
-    au < manifest ; Biochemical Journal Volume 53 ; 053 >
-    au < manifest ; Biochemical Journal Volume 54 ; 054 >
-    au < manifest ; Biochemical Journal Volume 55 ; 055 >
-    au < manifest ; Biochemical Journal Volume 56 ; 056 >
-    au < manifest ; Biochemical Journal Volume 57 ; 057 >
-    au < manifest ; Biochemical Journal Volume 58 ; 058 >
-    au < manifest ; Biochemical Journal Volume 59 ; 059 >
-    au < manifest ; Biochemical Journal Volume 60 ; 060 >
-    au < manifest ; Biochemical Journal Volume 61 ; 061 >
-    au < manifest ; Biochemical Journal Volume 62 ; 062 >
-    au < manifest ; Biochemical Journal Volume 63 ; 063 >
-    au < manifest ; Biochemical Journal Volume 64 ; 064 >
-    au < manifest ; Biochemical Journal Volume 65 ; 065 >
-    au < manifest ; Biochemical Journal Volume 66 ; 066 >
-    au < manifest ; Biochemical Journal Volume 67 ; 067 >
-    au < manifest ; Biochemical Journal Volume 68 ; 068 >
-    au < manifest ; Biochemical Journal Volume 69 ; 069 >
-    au < manifest ; Biochemical Journal Volume 70 ; 070 >
-    au < manifest ; Biochemical Journal Volume 71 ; 071 >
-    au < manifest ; Biochemical Journal Volume 72 ; 072 >
-    au < manifest ; Biochemical Journal Volume 73 ; 073 >
-    au < manifest ; Biochemical Journal Volume 74 ; 074 >
-    au < manifest ; Biochemical Journal Volume 75 ; 075 >
-    au < manifest ; Biochemical Journal Volume 76 ; 076 >
-    au < manifest ; Biochemical Journal Volume 77 ; 077 >
-    au < manifest ; Biochemical Journal Volume 78 ; 078 >
-    au < manifest ; Biochemical Journal Volume 79 ; 079 >
-    au < manifest ; Biochemical Journal Volume 80 ; 080 >
-    au < manifest ; Biochemical Journal Volume 81 ; 081 >
-    au < manifest ; Biochemical Journal Volume 82 ; 082 >
-    au < manifest ; Biochemical Journal Volume 83 ; 083 >
-    au < manifest ; Biochemical Journal Volume 84 ; 084 >
-    au < manifest ; Biochemical Journal Volume 85 ; 085 >
-    au < manifest ; Biochemical Journal Volume 86 ; 086 >
-    au < manifest ; Biochemical Journal Volume 87 ; 087 >
-    au < manifest ; Biochemical Journal Volume 88 ; 088 >
-    au < manifest ; Biochemical Journal Volume 89 ; 089 >
-    au < manifest ; Biochemical Journal Volume 90 ; 090 >
-    au < manifest ; Biochemical Journal Volume 91 ; 091 >
-    au < manifest ; Biochemical Journal Volume 92 ; 092 >
-    au < manifest ; Biochemical Journal Volume 93 ; 093 >
-    au < manifest ; Biochemical Journal Volume 94 ; 094 >
-    au < manifest ; Biochemical Journal Volume 95 ; 095 >
-    au < manifest ; Biochemical Journal Volume 96 ; 096 >
-    au < manifest ; Biochemical Journal Volume 97 ; 097 >
-    au < manifest ; Biochemical Journal Volume 98 ; 098 >
-    au < manifest ; Biochemical Journal Volume 99 ; 099 >
-    au < manifest ; Biochemical Journal Volume 100 ; 100 >
-    au < manifest ; Biochemical Journal Volume 101 ; 101 >
-    au < manifest ; Biochemical Journal Volume 102 ; 102 >
-    au < manifest ; Biochemical Journal Volume 103 ; 103 >
-    au < manifest ; Biochemical Journal Volume 104 ; 104 >
-    au < manifest ; Biochemical Journal Volume 105 ; 105 >
-    au < manifest ; Biochemical Journal Volume 106 ; 106 >
-    au < manifest ; Biochemical Journal Volume 107 ; 107 >
-    au < manifest ; Biochemical Journal Volume 108 ; 108 >
-    au < manifest ; Biochemical Journal Volume 109 ; 109 >
-    au < manifest ; Biochemical Journal Volume 110 ; 110 >
-    au < manifest ; Biochemical Journal Volume 111 ; 111 >
-    au < manifest ; Biochemical Journal Volume 112 ; 112 >
-    au < manifest ; Biochemical Journal Volume 113 ; 113 >
-    au < manifest ; Biochemical Journal Volume 114 ; 114 >
-    au < manifest ; Biochemical Journal Volume 115 ; 115 >
-    au < manifest ; Biochemical Journal Volume 116 ; 116 >
-    au < manifest ; Biochemical Journal Volume 117 ; 117 >
-    au < manifest ; Biochemical Journal Volume 118 ; 118 >
-    au < manifest ; Biochemical Journal Volume 119 ; 119 >
-    au < manifest ; Biochemical Journal Volume 120 ; 120 >
-    au < manifest ; Biochemical Journal Volume 121 ; 121 >
-    au < manifest ; Biochemical Journal Volume 122 ; 122 >
-    au < manifest ; Biochemical Journal Volume 123 ; 123 >
-    au < manifest ; Biochemical Journal Volume 124 ; 124 >
-    au < manifest ; Biochemical Journal Volume 125 ; 125 >
-    au < manifest ; Biochemical Journal Volume 126 ; 126 >
-    au < manifest ; Biochemical Journal Volume 127 ; 127 >
-    au < manifest ; Biochemical Journal Volume 128 ; 128 >
-    au < manifest ; Biochemical Journal Volume 129 ; 129 >
-    au < manifest ; Biochemical Journal Volume 130 ; 130 >
-    au < manifest ; Biochemical Journal Volume 131 ; 131 >
-    au < manifest ; Biochemical Journal Volume 132 ; 132 >
-    au < manifest ; Biochemical Journal Volume 133 ; 133 >
-    au < manifest ; Biochemical Journal Volume 134 ; 134 >
-    au < manifest ; Biochemical Journal Volume 135 ; 135 >
-    au < manifest ; Biochemical Journal Volume 136 ; 136 >
-    au < manifest ; Biochemical Journal Volume 137 ; 137 >
-    au < manifest ; Biochemical Journal Volume 138 ; 138 >
-    au < manifest ; Biochemical Journal Volume 139 ; 139 >
-    au < manifest ; Biochemical Journal Volume 140 ; 140 >
-    au < manifest ; Biochemical Journal Volume 141 ; 141 >
-    au < manifest ; Biochemical Journal Volume 142 ; 142 >
-    au < manifest ; Biochemical Journal Volume 143 ; 143 >
-    au < manifest ; Biochemical Journal Volume 144 ; 144 >
-    au < manifest ; Biochemical Journal Volume 145 ; 145 >
-    au < manifest ; Biochemical Journal Volume 146 ; 146 >
-    au < manifest ; Biochemical Journal Volume 147 ; 147 >
-    au < manifest ; Biochemical Journal Volume 148 ; 148 >
-    au < manifest ; Biochemical Journal Volume 149 ; 149 >
-    au < manifest ; Biochemical Journal Volume 150 ; 150 >
-    au < manifest ; Biochemical Journal Volume 151 ; 151 >
-    au < manifest ; Biochemical Journal Volume 152 ; 152 >
-    au < manifest ; Biochemical Journal Volume 153 ; 153 >
-    au < manifest ; Biochemical Journal Volume 154 ; 154 >
-    au < manifest ; Biochemical Journal Volume 155 ; 155 >
-    au < manifest ; Biochemical Journal Volume 156 ; 156 >
-    au < manifest ; Biochemical Journal Volume 157 ; 157 >
-    au < manifest ; Biochemical Journal Volume 158 ; 158 >
-    au < manifest ; Biochemical Journal Volume 159 ; 159 >
-    au < manifest ; Biochemical Journal Volume 160 ; 160 >
-    au < manifest ; Biochemical Journal Volume 161 ; 161 >
-    au < manifest ; Biochemical Journal Volume 162 ; 162 >
-    au < manifest ; Biochemical Journal Volume 163 ; 163 >
-    au < manifest ; Biochemical Journal Volume 164 ; 164 >
-    au < manifest ; Biochemical Journal Volume 165 ; 165 >
-    au < manifest ; Biochemical Journal Volume 166 ; 166 >
-    au < manifest ; Biochemical Journal Volume 167 ; 167 >
-    au < manifest ; Biochemical Journal Volume 168 ; 168 >
-    au < manifest ; Biochemical Journal Volume 169 ; 169 >
-    au < manifest ; Biochemical Journal Volume 170 ; 170 >
-    au < manifest ; Biochemical Journal Volume 171 ; 171 >
-    au < manifest ; Biochemical Journal Volume 172 ; 172 >
-    au < manifest ; Biochemical Journal Volume 173 ; 173 >
-    au < manifest ; Biochemical Journal Volume 174 ; 174 >
-    au < manifest ; Biochemical Journal Volume 175 ; 175 >
-    au < manifest ; Biochemical Journal Volume 176 ; 176 >
-    au < manifest ; Biochemical Journal Volume 177 ; 177 >
-    au < manifest ; Biochemical Journal Volume 178 ; 178 >
-    au < manifest ; Biochemical Journal Volume 179 ; 179 >
-    au < manifest ; Biochemical Journal Volume 180 ; 180 >
-    au < manifest ; Biochemical Journal Volume 181 ; 181 >
-    au < manifest ; Biochemical Journal Volume 182 ; 182 >
-    au < manifest ; Biochemical Journal Volume 183 ; 183 >
-    au < manifest ; Biochemical Journal Volume 184 ; 184 >
-    au < manifest ; Biochemical Journal Volume 185 ; 185 >
-    au < manifest ; Biochemical Journal Volume 186 ; 186 >
-    au < manifest ; Biochemical Journal Volume 187 ; 187 >
-    au < manifest ; Biochemical Journal Volume 188 ; 188 >
-    au < manifest ; Biochemical Journal Volume 189 ; 189 >
-    au < manifest ; Biochemical Journal Volume 190 ; 190 >
-    au < manifest ; Biochemical Journal Volume 191 ; 191 >
-    au < manifest ; Biochemical Journal Volume 192 ; 192 >
-    au < manifest ; Biochemical Journal Volume 193 ; 193 >
-    au < manifest ; Biochemical Journal Volume 194 ; 194 >
-    au < manifest ; Biochemical Journal Volume 195 ; 195 >
-    au < manifest ; Biochemical Journal Volume 196 ; 196 >
-    au < manifest ; Biochemical Journal Volume 197 ; 197 >
-    au < manifest ; Biochemical Journal Volume 198 ; 198 >
-    au < manifest ; Biochemical Journal Volume 199 ; 199 >
-    au < manifest ; Biochemical Journal Volume 200 ; 200 >
+    au < ready ; Biochemical Journal Volume 38 ; 038 >
+    au < ready ; Biochemical Journal Volume 39 ; 039 >
+    au < ready ; Biochemical Journal Volume 40 ; 040 >
+    au < notReady ; Biochemical Journal Volume 41 ; 041 >
+    au < ready ; Biochemical Journal Volume 42 ; 042 >
+    au < ready ; Biochemical Journal Volume 43 ; 043 >
+    au < ready ; Biochemical Journal Volume 44 ; 044 >
+    au < ready ; Biochemical Journal Volume 45 ; 045 >
+    au < ready ; Biochemical Journal Volume 46 ; 046 >
+    au < ready ; Biochemical Journal Volume 47 ; 047 >
+    au < ready ; Biochemical Journal Volume 48 ; 048 >
+    au < ready ; Biochemical Journal Volume 49 ; 049 >
+    au < ready ; Biochemical Journal Volume 50 ; 050 >
+    au < ready ; Biochemical Journal Volume 51 ; 051 >
+    au < ready ; Biochemical Journal Volume 52 ; 052 >
+    au < ready ; Biochemical Journal Volume 53 ; 053 >
+    au < ready ; Biochemical Journal Volume 54 ; 054 >
+    au < ready ; Biochemical Journal Volume 55 ; 055 >
+    au < ready ; Biochemical Journal Volume 56 ; 056 >
+    au < ready ; Biochemical Journal Volume 57 ; 057 >
+    au < ready ; Biochemical Journal Volume 58 ; 058 >
+    au < ready ; Biochemical Journal Volume 59 ; 059 >
+    au < ready ; Biochemical Journal Volume 60 ; 060 >
+    au < ready ; Biochemical Journal Volume 61 ; 061 >
+    au < ready ; Biochemical Journal Volume 62 ; 062 >
+    au < ready ; Biochemical Journal Volume 63 ; 063 >
+    au < ready ; Biochemical Journal Volume 64 ; 064 >
+    au < ready ; Biochemical Journal Volume 65 ; 065 >
+    au < ready ; Biochemical Journal Volume 66 ; 066 >
+    au < ready ; Biochemical Journal Volume 67 ; 067 >
+    au < ready ; Biochemical Journal Volume 68 ; 068 >
+    au < ready ; Biochemical Journal Volume 69 ; 069 >
+    au < ready ; Biochemical Journal Volume 70 ; 070 >
+    au < ready ; Biochemical Journal Volume 71 ; 071 >
+    au < ready ; Biochemical Journal Volume 72 ; 072 >
+    au < ready ; Biochemical Journal Volume 73 ; 073 >
+    au < ready ; Biochemical Journal Volume 74 ; 074 >
+    au < ready ; Biochemical Journal Volume 75 ; 075 >
+    au < ready ; Biochemical Journal Volume 76 ; 076 >
+    au < ready ; Biochemical Journal Volume 77 ; 077 >
+    au < ready ; Biochemical Journal Volume 78 ; 078 >
+    au < ready ; Biochemical Journal Volume 79 ; 079 >
+    au < ready ; Biochemical Journal Volume 80 ; 080 >
+    au < ready ; Biochemical Journal Volume 81 ; 081 >
+    au < ready ; Biochemical Journal Volume 82 ; 082 >
+    au < ready ; Biochemical Journal Volume 83 ; 083 >
+    au < ready ; Biochemical Journal Volume 84 ; 084 >
+    au < ready ; Biochemical Journal Volume 85 ; 085 >
+    au < ready ; Biochemical Journal Volume 86 ; 086 >
+    au < ready ; Biochemical Journal Volume 87 ; 087 >
+    au < ready ; Biochemical Journal Volume 88 ; 088 >
+    au < ready ; Biochemical Journal Volume 89 ; 089 >
+    au < ready ; Biochemical Journal Volume 90 ; 090 >
+    au < ready ; Biochemical Journal Volume 91 ; 091 >
+    au < ready ; Biochemical Journal Volume 92 ; 092 >
+    au < ready ; Biochemical Journal Volume 93 ; 093 >
+    au < ready ; Biochemical Journal Volume 94 ; 094 >
+    au < ready ; Biochemical Journal Volume 95 ; 095 >
+    au < ready ; Biochemical Journal Volume 96 ; 096 >
+    au < ready ; Biochemical Journal Volume 97 ; 097 >
+    au < ready ; Biochemical Journal Volume 98 ; 098 >
+    au < ready ; Biochemical Journal Volume 99 ; 099 >
+    au < ready ; Biochemical Journal Volume 100 ; 100 >
+    au < ready ; Biochemical Journal Volume 101 ; 101 >
+    au < ready ; Biochemical Journal Volume 102 ; 102 >
+    au < ready ; Biochemical Journal Volume 103 ; 103 >
+    au < ready ; Biochemical Journal Volume 104 ; 104 >
+    au < ready ; Biochemical Journal Volume 105 ; 105 >
+    au < ready ; Biochemical Journal Volume 106 ; 106 >
+    au < ready ; Biochemical Journal Volume 107 ; 107 >
+    au < ready ; Biochemical Journal Volume 108 ; 108 >
+    au < notReady ; Biochemical Journal Volume 109 ; 109 >
+    au < notReady ; Biochemical Journal Volume 110 ; 110 >
+    au < ready ; Biochemical Journal Volume 111 ; 111 >
+    au < ready ; Biochemical Journal Volume 112 ; 112 >
+    au < ready ; Biochemical Journal Volume 113 ; 113 >
+    au < ready ; Biochemical Journal Volume 114 ; 114 >
+    au < ready ; Biochemical Journal Volume 115 ; 115 >
+    au < notReady ; Biochemical Journal Volume 116 ; 116 >
+    au < notReady ; Biochemical Journal Volume 117 ; 117 >
+    au < ready ; Biochemical Journal Volume 118 ; 118 >
+    au < ready ; Biochemical Journal Volume 119 ; 119 >
+    au < ready ; Biochemical Journal Volume 120 ; 120 >
+    au < ready ; Biochemical Journal Volume 121 ; 121 >
+    au < ready ; Biochemical Journal Volume 122 ; 122 >
+    au < ready ; Biochemical Journal Volume 123 ; 123 >
+    au < ready ; Biochemical Journal Volume 124 ; 124 >
+    au < ready ; Biochemical Journal Volume 125 ; 125 >
+    au < ready ; Biochemical Journal Volume 126 ; 126 >
+    au < ready ; Biochemical Journal Volume 127 ; 127 >
+    au < ready ; Biochemical Journal Volume 128 ; 128 >
+    au < ready ; Biochemical Journal Volume 129 ; 129 >
+    au < notReady ; Biochemical Journal Volume 130 ; 130 >
+    au < ready ; Biochemical Journal Volume 131 ; 131 >
+    au < ready ; Biochemical Journal Volume 132 ; 132 >
+    au < ready ; Biochemical Journal Volume 133 ; 133 >
+    au < ready ; Biochemical Journal Volume 134 ; 134 >
+    au < ready ; Biochemical Journal Volume 135 ; 135 >
+    au < ready ; Biochemical Journal Volume 136 ; 136 >
+    au < ready ; Biochemical Journal Volume 137 ; 137 >
+    au < ready ; Biochemical Journal Volume 138 ; 138 >
+    au < ready ; Biochemical Journal Volume 139 ; 139 >
+    au < ready ; Biochemical Journal Volume 140 ; 140 >
+    au < ready ; Biochemical Journal Volume 141 ; 141 >
+    au < ready ; Biochemical Journal Volume 142 ; 142 >
+    au < ready ; Biochemical Journal Volume 143 ; 143 >
+    au < ready ; Biochemical Journal Volume 144 ; 144 >
+    au < notReady ; Biochemical Journal Volume 145 ; 145 >
+    au < ready ; Biochemical Journal Volume 146 ; 146 >
+    au < ready ; Biochemical Journal Volume 147 ; 147 >
+    au < ready ; Biochemical Journal Volume 148 ; 148 >
+    au < ready ; Biochemical Journal Volume 149 ; 149 >
+    au < ready ; Biochemical Journal Volume 150 ; 150 >
+    au < ready ; Biochemical Journal Volume 151 ; 151 >
+    au < ready ; Biochemical Journal Volume 152 ; 152 >
+    au < ready ; Biochemical Journal Volume 153 ; 153 >
+    au < ready ; Biochemical Journal Volume 154 ; 154 >
+    au < ready ; Biochemical Journal Volume 155 ; 155 >
+    au < ready ; Biochemical Journal Volume 156 ; 156 >
+    au < ready ; Biochemical Journal Volume 157 ; 157 >
+    au < ready ; Biochemical Journal Volume 158 ; 158 >
+    au < ready ; Biochemical Journal Volume 159 ; 159 >
+    au < ready ; Biochemical Journal Volume 160 ; 160 >
+    au < ready ; Biochemical Journal Volume 161 ; 161 >
+    au < ready ; Biochemical Journal Volume 162 ; 162 >
+    au < ready ; Biochemical Journal Volume 163 ; 163 >
+    au < ready ; Biochemical Journal Volume 164 ; 164 >
+    au < ready ; Biochemical Journal Volume 165 ; 165 >
+    au < ready ; Biochemical Journal Volume 166 ; 166 >
+    au < ready ; Biochemical Journal Volume 167 ; 167 >
+    au < ready ; Biochemical Journal Volume 168 ; 168 >
+    au < ready ; Biochemical Journal Volume 169 ; 169 >
+    au < ready ; Biochemical Journal Volume 170 ; 170 >
+    au < ready ; Biochemical Journal Volume 171 ; 171 >
+    au < ready ; Biochemical Journal Volume 172 ; 172 >
+    au < ready ; Biochemical Journal Volume 173 ; 173 >
+    au < ready ; Biochemical Journal Volume 174 ; 174 >
+    au < ready ; Biochemical Journal Volume 175 ; 175 >
+    au < ready ; Biochemical Journal Volume 176 ; 176 >
+    au < ready ; Biochemical Journal Volume 177 ; 177 >
+    au < ready ; Biochemical Journal Volume 178 ; 178 >
+    au < ready ; Biochemical Journal Volume 179 ; 179 >
+    au < ready ; Biochemical Journal Volume 180 ; 180 >
+    au < ready ; Biochemical Journal Volume 181 ; 181 >
+    au < ready ; Biochemical Journal Volume 182 ; 182 >
+    au < ready ; Biochemical Journal Volume 183 ; 183 >
+    au < ready ; Biochemical Journal Volume 184 ; 184 >
+    au < ready ; Biochemical Journal Volume 185 ; 185 >
+    au < ready ; Biochemical Journal Volume 186 ; 186 >
+    au < ready ; Biochemical Journal Volume 187 ; 187 >
+    au < ready ; Biochemical Journal Volume 188 ; 188 >
+    au < ready ; Biochemical Journal Volume 189 ; 189 >
+    au < ready ; Biochemical Journal Volume 190 ; 190 >
+    au < ready ; Biochemical Journal Volume 191 ; 191 >
+    au < ready ; Biochemical Journal Volume 192 ; 192 >
+    au < ready ; Biochemical Journal Volume 193 ; 193 >
+    au < ready ; Biochemical Journal Volume 194 ; 194 >
+    au < testing ; Biochemical Journal Volume 195 ; 195 >
+    au < testing ; Biochemical Journal Volume 196 ; 196 >
+    au < testing ; Biochemical Journal Volume 197 ; 197 >
+    au < testing ; Biochemical Journal Volume 198 ; 198 >
+    au < testing ; Biochemical Journal Volume 199 ; 199 >
+    au < testing ; Biochemical Journal Volume 200 ; 200 >
     au < manifest ; Biochemical Journal Volume 201 ; 201 >
     au < manifest ; Biochemical Journal Volume 202 ; 202 >
     au < manifest ; Biochemical Journal Volume 203 ; 203 >
@@ -406,32 +406,32 @@ comment[bj_allnotready_aus] = 500 errors, unless otherwise noted
     au < manifest ; Biochemical Journal Volume 387 ; 387 >
     au < manifest ; Biochemical Journal Volume 388 ; 388 >
     au < manifest ; Biochemical Journal Volume 389 ; 389 >
-    au < manifest ; Biochemical Journal Volume 390 ; 390 >
-    au < manifest ; Biochemical Journal Volume 391 ; 391 >
-    au < manifest ; Biochemical Journal Volume 392 ; 392 >
-    au < manifest ; Biochemical Journal Volume 393 ; 393 >
-    au < manifest ; Biochemical Journal Volume 394 ; 394 >
-    au < manifest ; Biochemical Journal Volume 395 ; 395 >
-    au < manifest ; Biochemical Journal Volume 396 ; 396 >
-    au < manifest ; Biochemical Journal Volume 397 ; 397 >
-    au < manifest ; Biochemical Journal Volume 398 ; 398 >
-    au < manifest ; Biochemical Journal Volume 399 ; 399 >
-    au < manifest ; Biochemical Journal Volume 400 ; 400 >
+    au < notReady ; Biochemical Journal Volume 390 ; 390 >
+    au < ready ; Biochemical Journal Volume 391 ; 391 >
+    au < ready ; Biochemical Journal Volume 392 ; 392 >
+    au < ready ; Biochemical Journal Volume 393 ; 393 >
+    au < ready ; Biochemical Journal Volume 394 ; 394 >
+    au < ready ; Biochemical Journal Volume 395 ; 395 >
+    au < ready ; Biochemical Journal Volume 396 ; 396 >
+    au < ready ; Biochemical Journal Volume 397 ; 397 >
+    au < ready ; Biochemical Journal Volume 398 ; 398 >
+    au < notReady ; Biochemical Journal Volume 399 ; 399 >
+    au < ready ; Biochemical Journal Volume 400 ; 400 >
     au < ready ; Biochemical Journal Volume 401 ; 401 >
     au < ready ; Biochemical Journal Volume 402 ; 402 >
     au < ready ; Biochemical Journal Volume 403 ; 403 >
-    au < not_ready ; Biochemical Journal Volume 404 ; 404 >
-    au < not_ready ; Biochemical Journal Volume 405 ; 405 >
-    au < not_ready ; Biochemical Journal Volume 406 ; 406 >
-    au < not_ready ; Biochemical Journal Volume 407 ; 407 >
-    au < not_ready ; Biochemical Journal Volume 408 ; 408 >
-    au < not_ready ; Biochemical Journal Volume 409 ; 409 >
-    au < not_ready ; Biochemical Journal Volume 410 ; 410 >
+    au < notReady ; Biochemical Journal Volume 404 ; 404 >
+    au < notReady ; Biochemical Journal Volume 405 ; 405 >
+    au < notReady ; Biochemical Journal Volume 406 ; 406 >
+    au < notReady ; Biochemical Journal Volume 407 ; 407 >
+    au < notReady ; Biochemical Journal Volume 408 ; 408 >
+    au < notReady ; Biochemical Journal Volume 409 ; 409 >
+    au < notReady ; Biochemical Journal Volume 410 ; 410 >
     au < ready ; Biochemical Journal Volume 411 ; 411 >
-    au < not_ready ; Biochemical Journal Volume 412 ; 412 >
-    au < not_ready ; Biochemical Journal Volume 413 ; 413 >
-    au < not_ready ; Biochemical Journal Volume 414 ; 414 >
-    au < not_ready ; Biochemical Journal Volume 415 ; 415 >
+    au < notReady ; Biochemical Journal Volume 412 ; 412 >
+    au < notReady ; Biochemical Journal Volume 413 ; 413 >
+    au < notReady ; Biochemical Journal Volume 414 ; 414 >
+    au < notReady ; Biochemical Journal Volume 415 ; 415 >
     au < ready ; Biochemical Journal Volume 416 ; 416 >
     au < ready ; Biochemical Journal Volume 417 ; 417 >
     au < ready ; Biochemical Journal Volume 418 ; 418 >
@@ -451,7 +451,7 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
 
 
     au < ready ; Biology of the Cell Volume 48 ; 048 >
-    au < not_ready ; Biology of the Cell Volume 49 ; 049 >
+    au < notReady ; Biology of the Cell Volume 49 ; 049 >
     au < ready ; Biology of the Cell Volume 50 ; 050 >
     au < ready ; Biology of the Cell Volume 51 ; 051 >
     au < ready ; Biology of the Cell Volume 52 ; 052 >
@@ -459,20 +459,20 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < ready ; Biology of the Cell Volume 54 ; 054 >
     au < ready ; Biology of the Cell Volume 55 ; 055 >
     au < ready ; Biology of the Cell Volume 56 ; 056 >
-    au < not_ready ; Biology of the Cell Volume 57 ; 057 >
+    au < notReady ; Biology of the Cell Volume 57 ; 057 >
     au < ready ; Biology of the Cell Volume 58 ; 058 >
     au < ready ; Biology of the Cell Volume 59 ; 059 >
     au < ready ; Biology of the Cell Volume 60 ; 060 >
     au < ready ; Biology of the Cell Volume 61 ; 061 >
     au < ready ; Biology of the Cell Volume 62 ; 062 >
     au < ready ; Biology of the Cell Volume 63 ; 063 >
-    au < testing ; Biology of the Cell Volume 64 ; 064 >
+    au < notReady ; Biology of the Cell Volume 64 ; 064 >
     au < ready ; Biology of the Cell Volume 65 ; 065 >
     au < ready ; Biology of the Cell Volume 66 ; 066 >
     au < ready ; Biology of the Cell Volume 67 ; 067 >
     au < ready ; Biology of the Cell Volume 68 ; 068 >
     au < ready ; Biology of the Cell Volume 69 ; 069 >
-    au < not_ready ; Biology of the Cell Volume 70 ; 070 >
+    au < notReady ; Biology of the Cell Volume 70 ; 070 >
     au < ready ; Biology of the Cell Volume 71 ; 071 >
     au < ready ; Biology of the Cell Volume 72 ; 072 >
     au < ready ; Biology of the Cell Volume 73 ; 073 >
@@ -486,7 +486,7 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < ready ; Biology of the Cell Volume 81 ; 081 >
     au < ready ; Biology of the Cell Volume 82 ; 082 >
     au < ready ; Biology of the Cell Volume 83 ; 083 >
-    au < not_ready ; Biology of the Cell Volume 84 ; 084 >
+    au < notReady ; Biology of the Cell Volume 84 ; 084 >
     au < ready ; Biology of the Cell Volume 85 ; 085 >
     au < ready ; Biology of the Cell Volume 86 ; 086 >
     au < ready ; Biology of the Cell Volume 87 ; 087 >
@@ -514,21 +514,21 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.biochemsoctrans.org/
     param[journal_id] = bst
 
-    au < testing ; Biochemical Society Transactions Volume 23 ; 023 >
-    au < testing ; Biochemical Society Transactions Volume 24 ; 024 >
-    au < testing ; Biochemical Society Transactions Volume 25 ; 025 >
-    au < testing ; Biochemical Society Transactions Volume 26 ; 026 >
-    au < testing ; Biochemical Society Transactions Volume 27 ; 027 >
-    au < testing ; Biochemical Society Transactions Volume 28 ; 028 >
-    au < testing ; Biochemical Society Transactions Volume 29 ; 029 >
-    au < testing ; Biochemical Society Transactions Volume 30 ; 030 >
-    au < testing ; Biochemical Society Transactions Volume 31 ; 031 >
-    au < testing ; Biochemical Society Transactions Volume 32 ; 032 >
-    au < testing ; Biochemical Society Transactions Volume 33 ; 033 >
-    au < testing ; Biochemical Society Transactions Volume 34 ; 034 >
-    au < testing ; Biochemical Society Transactions Volume 35 ; 035 >
-    au < testing ; Biochemical Society Transactions Volume 36 ; 036 >
-    au < testing ; Biochemical Society Transactions Volume 37 ; 037 >
+    au < ready ; Biochemical Society Transactions Volume 23 ; 023 >
+    au < ready ; Biochemical Society Transactions Volume 24 ; 024 >
+    au < ready ; Biochemical Society Transactions Volume 25 ; 025 >
+    au < ready ; Biochemical Society Transactions Volume 26 ; 026 >
+    au < ready ; Biochemical Society Transactions Volume 27 ; 027 >
+    au < ready ; Biochemical Society Transactions Volume 28 ; 028 >
+    au < ready ; Biochemical Society Transactions Volume 29 ; 029 >
+    au < notReady ; Biochemical Society Transactions Volume 30 ; 030 >
+    au < notReady ; Biochemical Society Transactions Volume 31 ; 031 >
+    au < ready ; Biochemical Society Transactions Volume 32 ; 032 >
+    au < ready ; Biochemical Society Transactions Volume 33 ; 033 >
+    au < ready ; Biochemical Society Transactions Volume 34 ; 034 >
+    au < notReady ; Biochemical Society Transactions Volume 35 ; 035 >
+    au < ready ; Biochemical Society Transactions Volume 36 ; 036 >
+    au < ready ; Biochemical Society Transactions Volume 37 ; 037 >
     
   }
   
@@ -540,35 +540,35 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.bioscirep.org/
     param[journal_id] = bsr
 
-    au < testing ; Bioscience Reports Volume 1 ; 001 >
-    au < testing ; Bioscience Reports Volume 2 ; 002 >
-    au < testing ; Bioscience Reports Volume 3 ; 003 >
-    au < testing ; Bioscience Reports Volume 4 ; 004 >
-    au < testing ; Bioscience Reports Volume 5 ; 005 >
-    au < testing ; Bioscience Reports Volume 6 ; 006 >
-    au < testing ; Bioscience Reports Volume 7 ; 007 >
-    au < testing ; Bioscience Reports Volume 8 ; 008 >
-    au < testing ; Bioscience Reports Volume 9 ; 009 >
-    au < manifest ; Bioscience Reports Volume 10 ; 010 >
-    au < manifest ; Bioscience Reports Volume 11 ; 011 >
-    au < manifest ; Bioscience Reports Volume 12 ; 012 >
-    au < manifest ; Bioscience Reports Volume 13 ; 013 >
-    au < manifest ; Bioscience Reports Volume 14 ; 014 >
-    au < manifest ; Bioscience Reports Volume 15 ; 015 >
-    au < manifest ; Bioscience Reports Volume 16 ; 016 >
-    au < manifest ; Bioscience Reports Volume 17 ; 017 >
-    au < manifest ; Bioscience Reports Volume 18 ; 018 >
-    au < manifest ; Bioscience Reports Volume 19 ; 019 >
-    au < manifest ; Bioscience Reports Volume 20 ; 020 >
-    au < manifest ; Bioscience Reports Volume 21 ; 021 >
-    au < manifest ; Bioscience Reports Volume 22 ; 022 >
-    au < manifest ; Bioscience Reports Volume 23 ; 023 >
-    au < manifest ; Bioscience Reports Volume 24 ; 024 >
-    au < manifest ; Bioscience Reports Volume 25 ; 025 >
-    au < manifest ; Bioscience Reports Volume 26 ; 026 >
-    au < manifest ; Bioscience Reports Volume 27 ; 027 >
-    au < manifest ; Bioscience Reports Volume 28 ; 028 >
-    au < manifest ; Bioscience Reports Volume 29 ; 029 >
+    au < notReady ; Bioscience Reports Volume 1 ; 001 >
+    au < ready ; Bioscience Reports Volume 2 ; 002 >
+    au < ready ; Bioscience Reports Volume 3 ; 003 >
+    au < ready ; Bioscience Reports Volume 4 ; 004 >
+    au < ready ; Bioscience Reports Volume 5 ; 005 >
+    au < notReady ; Bioscience Reports Volume 6 ; 006 >
+    au < notReady ; Bioscience Reports Volume 7 ; 007 >
+    au < ready ; Bioscience Reports Volume 8 ; 008 >
+    au < notReady  ; Bioscience Reports Volume 9 ; 009 >
+    au < notReady ; Bioscience Reports Volume 10 ; 010 >
+    au < ready ; Bioscience Reports Volume 11 ; 011 >
+    au < ready ; Bioscience Reports Volume 12 ; 012 >
+    au < notReady ; Bioscience Reports Volume 13 ; 013 >
+    au < ready ; Bioscience Reports Volume 14 ; 014 >
+    au < ready ; Bioscience Reports Volume 15 ; 015 >
+    au < ready ; Bioscience Reports Volume 16 ; 016 >
+    au < notReady ; Bioscience Reports Volume 17 ; 017 >
+    au < ready ; Bioscience Reports Volume 18 ; 018 >
+    au < ready ; Bioscience Reports Volume 19 ; 019 >
+    au < ready ; Bioscience Reports Volume 20 ; 020 >
+    au < notReady ; Bioscience Reports Volume 21 ; 021 >
+    au < notReady ; Bioscience Reports Volume 22 ; 022 >
+    au < ready ; Bioscience Reports Volume 23 ; 023 >
+    au < notReady ; Bioscience Reports Volume 24 ; 024 >
+    au < notReady ; Bioscience Reports Volume 25 ; 025 >
+    au < ready ; Bioscience Reports Volume 26 ; 026 >
+    au < ready ; Bioscience Reports Volume 27 ; 027 >
+    au < ready ; Bioscience Reports Volume 28 ; 028 >
+    au < ready ; Bioscience Reports Volume 29 ; 029 >
 
   }
 
@@ -577,54 +577,56 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
       name = Biotechnology and Applied Biochemistry
     >
 
-    param[base_url] = http://www.bioscirep.org/
-    param[journal_id] = bsr
+comment[bab] = not_ready because of 500 errors
 
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 9 ; 009 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 10 ; 010 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 11 ; 011 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 12 ; 012 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 13 ; 013 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 14 ; 014 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 15 ; 015 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 16 ; 016 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 17 ; 017 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 18 ; 018 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 19 ; 019 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 20 ; 020 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 21 ; 021 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 22 ; 022 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 23 ; 023 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 24 ; 024 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 25 ; 025 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 26 ; 026 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 27 ; 027 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 28 ; 028 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 29 ; 029 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 30 ; 030 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 31 ; 031 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 32 ; 032 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 33 ; 033 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 34 ; 034 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 35 ; 035 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 36 ; 036 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 37 ; 037 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 38 ; 038 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 39 ; 039 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 40 ; 040 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 41 ; 041 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 42 ; 042 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 43 ; 043 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 44 ; 044 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 45 ; 045 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 46 ; 046 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 48 ; 048 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 49 ; 049 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
-    au < manifest ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
+    param[base_url] = http://www.babonline.org/
+    param[journal_id] = bab
+
+    au < ready ; Biotechnology and Applied Biochemistry Volume 9 ; 009 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 10 ; 010 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 11 ; 011 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 12 ; 012 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 13 ; 013 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 14 ; 014 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 15 ; 015 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 16 ; 016 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 17 ; 017 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 18 ; 018 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 19 ; 019 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 20 ; 020 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 21 ; 021 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 22 ; 022 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 23 ; 023 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 24 ; 024 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 25 ; 025 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 26 ; 026 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 27 ; 027 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 28 ; 028 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 29 ; 029 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 30 ; 030 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 31 ; 031 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 32 ; 032 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 33 ; 033 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 34 ; 034 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 35 ; 035 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 36 ; 036 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 37 ; 037 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 38 ; 038 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 39 ; 039 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 40 ; 040 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 41 ; 041 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 42 ; 042 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 43 ; 043 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 44 ; 044 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 45 ; 045 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 46 ; 046 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 47 ; 047 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 48 ; 048 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 49 ; 049 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 50 ; 050 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
+    au < notReady ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
+    au < ready ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
     
   }
 
@@ -633,69 +635,71 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
       name = Clinical Science
     >
 
+comment[cs103_107] = 500 errors
+
     param[base_url] = http://www.clinsci.org/
     param[journal_id] = cs
 
-    au < manifest ; Clinical Science Volume 56 ; 056 >
-    au < manifest ; Clinical Science Volume 57 ; 057 >
-    au < manifest ; Clinical Science Volume 58 ; 058 >
-    au < manifest ; Clinical Science Volume 59 ; 059 >
-    au < manifest ; Clinical Science Volume 60 ; 060 >
-    au < manifest ; Clinical Science Volume 61 ; 061 >
-    au < manifest ; Clinical Science Volume 62 ; 062 >
-    au < manifest ; Clinical Science Volume 63 ; 063 >
-    au < manifest ; Clinical Science Volume 64 ; 064 >
-    au < manifest ; Clinical Science Volume 65 ; 065 >
-    au < manifest ; Clinical Science Volume 66 ; 066 >
-    au < manifest ; Clinical Science Volume 67 ; 067 >
-    au < manifest ; Clinical Science Volume 68 ; 068 >
-    au < manifest ; Clinical Science Volume 69 ; 069 >
-    au < manifest ; Clinical Science Volume 70 ; 070 >
-    au < manifest ; Clinical Science Volume 71 ; 071 >
-    au < manifest ; Clinical Science Volume 72 ; 072 >
-    au < manifest ; Clinical Science Volume 73 ; 073 >
-    au < manifest ; Clinical Science Volume 74 ; 074 >
-    au < manifest ; Clinical Science Volume 75 ; 075 >
-    au < manifest ; Clinical Science Volume 76 ; 076 >
-    au < manifest ; Clinical Science Volume 77 ; 077 >
-    au < manifest ; Clinical Science Volume 78 ; 078 >
-    au < manifest ; Clinical Science Volume 79 ; 079 >
-    au < manifest ; Clinical Science Volume 80 ; 080 >
-    au < manifest ; Clinical Science Volume 81 ; 081 >
-    au < manifest ; Clinical Science Volume 82 ; 082 >
-    au < manifest ; Clinical Science Volume 83 ; 083 >
-    au < manifest ; Clinical Science Volume 84 ; 084 >
-    au < manifest ; Clinical Science Volume 85 ; 085 >
-    au < manifest ; Clinical Science Volume 86 ; 086 >
-    au < manifest ; Clinical Science Volume 87 ; 087 >
-    au < manifest ; Clinical Science Volume 88 ; 088 >
-    au < manifest ; Clinical Science Volume 89 ; 089 >
-    au < manifest ; Clinical Science Volume 90 ; 090 >
-    au < manifest ; Clinical Science Volume 91 ; 091 >
-    au < manifest ; Clinical Science Volume 92 ; 092 >
-    au < manifest ; Clinical Science Volume 93 ; 093 >
-    au < manifest ; Clinical Science Volume 94 ; 094 >
-    au < manifest ; Clinical Science Volume 95 ; 095 >
-    au < manifest ; Clinical Science Volume 96 ; 096 >
-    au < manifest ; Clinical Science Volume 97 ; 097 >
-    au < manifest ; Clinical Science Volume 98 ; 098 >
-    au < manifest ; Clinical Science Volume 99 ; 099 >
-    au < manifest ; Clinical Science Volume 100 ; 100 >
-    au < manifest ; Clinical Science Volume 101 ; 101 >
-    au < manifest ; Clinical Science Volume 102 ; 102 >
-    au < manifest ; Clinical Science Volume 103 ; 103 >
-    au < manifest ; Clinical Science Volume 104 ; 104 >
-    au < manifest ; Clinical Science Volume 105 ; 105 >
-    au < manifest ; Clinical Science Volume 106 ; 106 >
-    au < manifest ; Clinical Science Volume 107 ; 107 >
-    au < manifest ; Clinical Science Volume 108 ; 108 >
-    au < manifest ; Clinical Science Volume 109 ; 109 >
-    au < manifest ; Clinical Science Volume 110 ; 110 >
-    au < manifest ; Clinical Science Volume 111 ; 111 >
-    au < manifest ; Clinical Science Volume 112 ; 112 >
-    au < manifest ; Clinical Science Volume 113 ; 113 >
-    au < manifest ; Clinical Science Volume 114 ; 114 >
-    au < manifest ; Clinical Science Volume 115 ; 115 >
+    au < released ; Clinical Science Volume 56 ; 056 >
+    au < released ; Clinical Science Volume 57 ; 057 >
+    au < released ; Clinical Science Volume 58 ; 058 >
+    au < released ; Clinical Science Volume 59 ; 059 >
+    au < released ; Clinical Science Volume 60 ; 060 >
+    au < released ; Clinical Science Volume 61 ; 061 >
+    au < released ; Clinical Science Volume 62 ; 062 >
+    au < released ; Clinical Science Volume 63 ; 063 >
+    au < released ; Clinical Science Volume 64 ; 064 >
+    au < released ; Clinical Science Volume 65 ; 065 >
+    au < released ; Clinical Science Volume 66 ; 066 >
+    au < released ; Clinical Science Volume 67 ; 067 >
+    au < released ; Clinical Science Volume 68 ; 068 >
+    au < released ; Clinical Science Volume 69 ; 069 >
+    au < released ; Clinical Science Volume 70 ; 070 >
+    au < released ; Clinical Science Volume 71 ; 071 >
+    au < released ; Clinical Science Volume 72 ; 072 >
+    au < released ; Clinical Science Volume 73 ; 073 >
+    au < released ; Clinical Science Volume 74 ; 074 >
+    au < released ; Clinical Science Volume 75 ; 075 >
+    au < released ; Clinical Science Volume 76 ; 076 >
+    au < released ; Clinical Science Volume 77 ; 077 >
+    au < released ; Clinical Science Volume 78 ; 078 >
+    au < released ; Clinical Science Volume 79 ; 079 >
+    au < released ; Clinical Science Volume 80 ; 080 >
+    au < released ; Clinical Science Volume 81 ; 081 >
+    au < released ; Clinical Science Volume 82 ; 082 >
+    au < released ; Clinical Science Volume 83 ; 083 >
+    au < released ; Clinical Science Volume 84 ; 084 >
+    au < released ; Clinical Science Volume 85 ; 085 >
+    au < released ; Clinical Science Volume 86 ; 086 >
+    au < released ; Clinical Science Volume 87 ; 087 >
+    au < released ; Clinical Science Volume 88 ; 088 >
+    au < released ; Clinical Science Volume 89 ; 089 >
+    au < released ; Clinical Science Volume 90 ; 090 >
+    au < released ; Clinical Science Volume 91 ; 091 >
+    au < released ; Clinical Science Volume 92 ; 092 >
+    au < released ; Clinical Science Volume 93 ; 093 >
+    au < released ; Clinical Science Volume 94 ; 094 >
+    au < released ; Clinical Science Volume 95 ; 095 >
+    au < released ; Clinical Science Volume 96 ; 096 >
+    au < released ; Clinical Science Volume 97 ; 097 >
+    au < released ; Clinical Science Volume 98 ; 098 >
+    au < released ; Clinical Science Volume 99 ; 099 >
+    au < released ; Clinical Science Volume 100 ; 100 >
+    au < released ; Clinical Science Volume 101 ; 101 >
+    au < released ; Clinical Science Volume 102 ; 102 >
+    au < released ; Clinical Science Volume 103 ; 103 >
+    au < released ; Clinical Science Volume 104 ; 104 >
+    au < released ; Clinical Science Volume 105 ; 105 >
+    au < released ; Clinical Science Volume 106 ; 106 >
+    au < released ; Clinical Science Volume 107 ; 107 >
+    au < released ; Clinical Science Volume 108 ; 108 >
+    au < released ; Clinical Science Volume 109 ; 109 >
+    au < released ; Clinical Science Volume 110 ; 110 >
+    au < released ; Clinical Science Volume 111 ; 111 >
+    au < released ; Clinical Science Volume 112 ; 112 >
+    au < released ; Clinical Science Volume 113 ; 113 >
+    au < released ; Clinical Science Volume 114 ; 114 >
+    au < released ; Clinical Science Volume 115 ; 115 >
         
   }
   
@@ -707,18 +711,18 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://essays.biochemistry.org/
     param[journal_id] = bsessays
 
-    au < manifest ; Essays in Biochemistry Volume 33 ; 033 >  
-    au < manifest ; Essays in Biochemistry Volume 34 ; 034 >  
-    au < manifest ; Essays in Biochemistry Volume 35 ; 035 > 
-    au < manifest ; Essays in Biochemistry Volume 36 ; 036 >  
-    au < manifest ; Essays in Biochemistry Volume 37 ; 037 >  
-    au < manifest ; Essays in Biochemistry Volume 38 ; 038 >  
-    au < manifest ; Essays in Biochemistry Volume 39 ; 039 >  
-    au < manifest ; Essays in Biochemistry Volume 40 ; 040 >  
-    au < manifest ; Essays in Biochemistry Volume 41 ; 041 >  
-    au < manifest ; Essays in Biochemistry Volume 42 ; 042 >  
-    au < manifest ; Essays in Biochemistry Volume 43 ; 043 >  
-    au < manifest ; Essays in Biochemistry Volume 44 ; 044 >  
+    au < ready ; Essays in Biochemistry Volume 33 ; 033 >  
+    au < ready ; Essays in Biochemistry Volume 34 ; 034 >  
+    au < ready ; Essays in Biochemistry Volume 35 ; 035 > 
+    au < ready ; Essays in Biochemistry Volume 36 ; 036 >  
+    au < ready ; Essays in Biochemistry Volume 37 ; 037 >  
+    au < ready ; Essays in Biochemistry Volume 38 ; 038 >  
+    au < ready ; Essays in Biochemistry Volume 39 ; 039 >  
+    au < ready ; Essays in Biochemistry Volume 40 ; 040 >  
+    au < ready ; Essays in Biochemistry Volume 41 ; 041 >  
+    au < ready ; Essays in Biochemistry Volume 42 ; 042 >  
+    au < ready ; Essays in Biochemistry Volume 43 ; 043 >  
+    au < ready ; Essays in Biochemistry Volume 44 ; 044 >  
 
   }
   

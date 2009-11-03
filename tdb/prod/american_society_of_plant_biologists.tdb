@@ -5,9 +5,174 @@
   >
 
   {
+  
+    title <
+      name = The Plant Cell
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      param[base_url] = http://www.plantcell.org/
+      implicit < status ; name ; param[volume] >
+
+      au < released ; The Plant Cell Volume 17 ; 17 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.plantcell.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; The Plant Cell Volume 1 ; 1 >
+      au < exists ; The Plant Cell Volume 2 ; 2 >
+      au < exists ; The Plant Cell Volume 3 ; 3 >
+      au < exists ; The Plant Cell Volume 4 ; 4 >
+      au < exists ; The Plant Cell Volume 5 ; 5 >
+      au < exists ; The Plant Cell Volume 6 ; 6 >
+      au < exists ; The Plant Cell Volume 7 ; 7 >
+      au < exists ; The Plant Cell Volume 8 ; 8 >
+      au < exists ; The Plant Cell Volume 9 ; 9 >
+      au < exists ; The Plant Cell Volume 10 ; 10 >
+      au < exists ; The Plant Cell Volume 11 ; 11 >
+      au < exists ; The Plant Cell Volume 12 ; 12 >
+      au < exists ; The Plant Cell Volume 13 ; 13 >
+      au < exists ; The Plant Cell Volume 14 ; 14 >
+      au < exists ; The Plant Cell Volume 15 ; 15 >
+      au < exists ; The Plant Cell Volume 16 ; 16 >
+      au < doNotProcess ; The Plant Cell Volume 17 ; 17 >
+      au < released ; The Plant Cell Volume 18 ; 18 >
+      au < released ; The Plant Cell Volume 19 ; 19 >
+      au < manifest ; The Plant Cell Volume 20 ; 20 >
+      au < manifest ; The Plant Cell Volume 21 ; 21 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Plant Physiology
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.plantphysiol.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Plant Physiology Volume 51 ; 51 >
+      au < exists ; Plant Physiology Volume 52 ; 52 >
+      au < exists ; Plant Physiology Volume 53 ; 53 >
+      au < exists ; Plant Physiology Volume 54 ; 54 >
+      au < exists ; Plant Physiology Volume 55 ; 55 >
+      au < exists ; Plant Physiology Volume 56 ; 56 >
+      au < exists ; Plant Physiology Volume 57 ; 57 >
+      au < exists ; Plant Physiology Volume 58 ; 58 >
+      au < exists ; Plant Physiology Volume 59 ; 59 >
+      au < exists ; Plant Physiology Volume 60 ; 60 >
+      au < exists ; Plant Physiology Volume 61 ; 61 >
+      au < exists ; Plant Physiology Volume 62 ; 62 >
+      au < exists ; Plant Physiology Volume 63 ; 63 >
+      au < exists ; Plant Physiology Volume 64 ; 64 >
+      au < exists ; Plant Physiology Volume 65 ; 65 >
+      au < exists ; Plant Physiology Volume 66 ; 66 >
+      au < exists ; Plant Physiology Volume 67 ; 67 >
+      au < exists ; Plant Physiology Volume 68 ; 68 >
+      au < exists ; Plant Physiology Volume 69 ; 69 >
+      au < exists ; Plant Physiology Volume 70 ; 70 >
+      au < exists ; Plant Physiology Volume 71 ; 71 >
+      au < exists ; Plant Physiology Volume 72 ; 72 >
+      au < exists ; Plant Physiology Volume 73 ; 73 >
+      au < exists ; Plant Physiology Volume 74 ; 74 >
+      au < exists ; Plant Physiology Volume 75 ; 75 >
+      au < exists ; Plant Physiology Volume 76 ; 76 >
+      au < exists ; Plant Physiology Volume 77 ; 77 >
+      au < exists ; Plant Physiology Volume 78 ; 78 >
+      au < exists ; Plant Physiology Volume 79 ; 79 >
+      au < exists ; Plant Physiology Volume 80 ; 80 >
+      au < exists ; Plant Physiology Volume 81 ; 81 >
+      au < exists ; Plant Physiology Volume 82 ; 82 >
+      au < exists ; Plant Physiology Volume 83 ; 83 >
+      au < exists ; Plant Physiology Volume 84 ; 84 >
+      au < exists ; Plant Physiology Volume 85 ; 85 >
+      au < exists ; Plant Physiology Volume 86 ; 86 >
+      au < exists ; Plant Physiology Volume 87 ; 87 >
+      au < exists ; Plant Physiology Volume 88 ; 88 >
+      au < exists ; Plant Physiology Volume 89 ; 89 >
+      au < exists ; Plant Physiology Volume 90 ; 90 >
+      au < exists ; Plant Physiology Volume 91 ; 91 >
+      au < exists ; Plant Physiology Volume 92 ; 92 >
+      au < exists ; Plant Physiology Volume 93 ; 93 >
+      au < exists ; Plant Physiology Volume 94 ; 94 >
+      au < exists ; Plant Physiology Volume 95 ; 95 >
+      au < exists ; Plant Physiology Volume 96 ; 96 >
+      au < exists ; Plant Physiology Volume 97 ; 97 >
+      au < exists ; Plant Physiology Volume 98 ; 98 >
+      au < exists ; Plant Physiology Volume 99 ; 99 >
+      au < exists ; Plant Physiology Volume 100 ; 100 >
+      au < exists ; Plant Physiology Volume 101 ; 101 >
+      au < exists ; Plant Physiology Volume 102 ; 102 >
+      au < exists ; Plant Physiology Volume 103 ; 103 >
+      au < exists ; Plant Physiology Volume 104 ; 104 >
+      au < exists ; Plant Physiology Volume 105 ; 105 >
+      au < exists ; Plant Physiology Volume 106 ; 106 >
+      au < exists ; Plant Physiology Volume 107 ; 107 >
+      au < exists ; Plant Physiology Volume 108 ; 108 >
+      au < exists ; Plant Physiology Volume 109 ; 109 >
+      au < exists ; Plant Physiology Volume 110 ; 110 >
+      au < exists ; Plant Physiology Volume 111 ; 111 >
+      au < exists ; Plant Physiology Volume 112 ; 112 >
+      au < exists ; Plant Physiology Volume 113 ; 113 >
+      au < exists ; Plant Physiology Volume 114 ; 114 >
+      au < exists ; Plant Physiology Volume 115 ; 115 >
+      au < exists ; Plant Physiology Volume 116 ; 116 >
+      au < exists ; Plant Physiology Volume 117 ; 117 >
+      au < exists ; Plant Physiology Volume 118 ; 118 >
+      au < exists ; Plant Physiology Volume 119 ; 119 >
+      au < exists ; Plant Physiology Volume 120 ; 120 >
+      au < exists ; Plant Physiology Volume 121 ; 121 >
+      au < exists ; Plant Physiology Volume 122 ; 122 >
+      au < exists ; Plant Physiology Volume 123 ; 123 >
+      au < exists ; Plant Physiology Volume 124 ; 124 >
+      au < exists ; Plant Physiology Volume 125 ; 125 >
+      au < exists ; Plant Physiology Volume 126 ; 126 >
+      au < exists ; Plant Physiology Volume 127 ; 127 >
+      au < exists ; Plant Physiology Volume 128 ; 128 >
+      au < exists ; Plant Physiology Volume 129 ; 129 >
+      au < exists ; Plant Physiology Volume 130 ; 130 >
+      au < exists ; Plant Physiology Volume 131 ; 131 >
+      au < exists ; Plant Physiology Volume 132 ; 132 >
+      au < exists ; Plant Physiology Volume 133 ; 133 >
+      au < exists ; Plant Physiology Volume 134 ; 134 >
+      au < exists ; Plant Physiology Volume 135 ; 135 >
+      au < exists ; Plant Physiology Volume 136 ; 136 >
+      au < released ; Plant Physiology Volume 137 ; 137 >
+      au < released ; Plant Physiology Volume 138 ; 138 >
+      au < released ; Plant Physiology Volume 139 ; 139 >
+      au < released ; Plant Physiology Volume 140 ; 140 >
+      au < released ; Plant Physiology Volume 141 ; 141 >
+      au < released ; Plant Physiology Volume 142 ; 142 >
+      au < manifest ; Plant Physiology Volume 143 ; 143 >
+      au < manifest ; Plant Physiology Volume 144 ; 144 >
+      au < manifest ; Plant Physiology Volume 145 ; 145 >
+      au < manifest ; Plant Physiology Volume 146 ; 146 >
+      au < manifest ; Plant Physiology Volume 147 ; 147 >
+      au < manifest ; Plant Physiology Volume 148 ; 148 >
+      au < manifest ; Plant Physiology Volume 149 ; 149 >
+      au < manifest ; Plant Physiology Volume 150 ; 150 >
+
+    }
+
+  }
+
+  {
+  
     title <
       name = The Arabidopsis Book ;
-      issn = 1543-8120 
+      issn = 1543-8120
     >
 
     {
@@ -15,71 +180,65 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1543-8120
-  
-      au < do_not_process ; The Arabidopsis Book Volume 1 ; 1 >
-      au < do_not_process ; The Arabidopsis Book Volume 2 ; 2 >
-      au < do_not_process ; The Arabidopsis Book Volume 3 ; 3 >
-      au < do_not_process ; The Arabidopsis Book Volume 4 ; 4 >
-      au < do_not_process ; The Arabidopsis Book Volume 5 ; 5 >
-      au < do_not_process ; The Arabidopsis Book Volume 6 ; 6 >
-      au < do_not_process ; The Arabidopsis Book Volume 7 ; 7 >
-      au < do_not_process ; The Arabidopsis Book Volume 8 ; 8 >
-      au < do_not_process ; The Arabidopsis Book Volume 9 ; 9 >
-      au < do_not_process ; The Arabidopsis Book Volume 10 ; 10 >
-      au < do_not_process ; The Arabidopsis Book Volume 11 ; 11 >
-      au < do_not_process ; The Arabidopsis Book Volume 12 ; 12 >
-      au < do_not_process ; The Arabidopsis Book Volume 13 ; 13 >
-      au < do_not_process ; The Arabidopsis Book Volume 14 ; 14 >
-      au < do_not_process ; The Arabidopsis Book Volume 15 ; 15 >
-      au < do_not_process ; The Arabidopsis Book Volume 16 ; 16 >
-      au < do_not_process ; The Arabidopsis Book Volume 17 ; 17 >
-      au < do_not_process ; The Arabidopsis Book Volume 18 ; 18 >
-      au < do_not_process ; The Arabidopsis Book Volume 19 ; 19 >
-      au < do_not_process ; The Arabidopsis Book Volume 20 ; 20 >
-      au < do_not_process ; The Arabidopsis Book Volume 21 ; 21 >
-      au < do_not_process ; The Arabidopsis Book Volume 22 ; 22 >
-      au < do_not_process ; The Arabidopsis Book Volume 23 ; 23 >
-      au < do_not_process ; The Arabidopsis Book Volume 24 ; 24 >
-      au < do_not_process ; The Arabidopsis Book Volume 25 ; 25 >
-      au < do_not_process ; The Arabidopsis Book Volume 26 ; 26 >
-      au < do_not_process ; The Arabidopsis Book Volume 27 ; 27 >
-      au < do_not_process ; The Arabidopsis Book Volume 28 ; 28 >
-      au < do_not_process ; The Arabidopsis Book Volume 29 ; 29 >
-      au < do_not_process ; The Arabidopsis Book Volume 30 ; 30 >
-      au < do_not_process ; The Arabidopsis Book Volume 31 ; 31 >
-      au < do_not_process ; The Arabidopsis Book Volume 32 ; 32 >
-      au < do_not_process ; The Arabidopsis Book Volume 33 ; 33 >
-      au < do_not_process ; The Arabidopsis Book Volume 34 ; 34 >
-      au < do_not_process ; The Arabidopsis Book Volume 35 ; 35 >
-      au < do_not_process ; The Arabidopsis Book Volume 36 ; 36 >
-      au < do_not_process ; The Arabidopsis Book Volume 37 ; 37 >
-      au < do_not_process ; The Arabidopsis Book Volume 38 ; 38 >
-      au < do_not_process ; The Arabidopsis Book Volume 39 ; 39 >
-      au < do_not_process ; The Arabidopsis Book Volume 40 ; 40 >
-      au < do_not_process ; The Arabidopsis Book Volume 41 ; 41 >
-      au < do_not_process ; The Arabidopsis Book Volume 42 ; 42 >
-      au < do_not_process ; The Arabidopsis Book Volume 43 ; 43 >
-      au < do_not_process ; The Arabidopsis Book Volume 44 ; 44 >
-      au < do_not_process ; The Arabidopsis Book Volume 45 ; 45 >
-      au < do_not_process ; The Arabidopsis Book Volume 46 ; 46 >
-      au < do_not_process ; The Arabidopsis Book Volume 47 ; 47 >
-      au < do_not_process ; The Arabidopsis Book Volume 48 ; 48 >
-      au < do_not_process ; The Arabidopsis Book Volume 49 ; 49 >
-      au < do_not_process ; The Arabidopsis Book Volume 50 ; 50 >
-      au < do_not_process ; The Arabidopsis Book Volume 51 ; 51 >
-      au < do_not_process ; The Arabidopsis Book Volume 52 ; 52 >
-      au < do_not_process ; The Arabidopsis Book Volume 53 ; 53 >
-      au < do_not_process ; The Arabidopsis Book Volume 54 ; 54 >
-      au < do_not_process ; The Arabidopsis Book Volume 55 ; 55 >
-      au < do_not_process ; The Arabidopsis Book Volume 56 ; 56 >
-      au < do_not_process ; The Arabidopsis Book Volume 57 ; 57 >
-      au < do_not_process ; The Arabidopsis Book Volume 58 ; 58 >
-    }
 
-    {
-
-comment[0] = Atypon AUs
-
+      au < doNotProcess ; The Arabidopsis Book Volume 1 ; 1 >
+      au < doNotProcess ; The Arabidopsis Book Volume 2 ; 2 >
+      au < doNotProcess ; The Arabidopsis Book Volume 3 ; 3 >
+      au < doNotProcess ; The Arabidopsis Book Volume 4 ; 4 >
+      au < doNotProcess ; The Arabidopsis Book Volume 5 ; 5 >
+      au < doNotProcess ; The Arabidopsis Book Volume 6 ; 6 >
+      au < doNotProcess ; The Arabidopsis Book Volume 7 ; 7 >
+      au < doNotProcess ; The Arabidopsis Book Volume 8 ; 8 >
+      au < doNotProcess ; The Arabidopsis Book Volume 9 ; 9 >
+      au < doNotProcess ; The Arabidopsis Book Volume 10 ; 10 >
+      au < doNotProcess ; The Arabidopsis Book Volume 11 ; 11 >
+      au < doNotProcess ; The Arabidopsis Book Volume 12 ; 12 >
+      au < doNotProcess ; The Arabidopsis Book Volume 13 ; 13 >
+      au < doNotProcess ; The Arabidopsis Book Volume 14 ; 14 >
+      au < doNotProcess ; The Arabidopsis Book Volume 15 ; 15 >
+      au < doNotProcess ; The Arabidopsis Book Volume 16 ; 16 >
+      au < doNotProcess ; The Arabidopsis Book Volume 17 ; 17 >
+      au < doNotProcess ; The Arabidopsis Book Volume 18 ; 18 >
+      au < doNotProcess ; The Arabidopsis Book Volume 19 ; 19 >
+      au < doNotProcess ; The Arabidopsis Book Volume 20 ; 20 >
+      au < doNotProcess ; The Arabidopsis Book Volume 21 ; 21 >
+      au < doNotProcess ; The Arabidopsis Book Volume 22 ; 22 >
+      au < doNotProcess ; The Arabidopsis Book Volume 23 ; 23 >
+      au < doNotProcess ; The Arabidopsis Book Volume 24 ; 24 >
+      au < doNotProcess ; The Arabidopsis Book Volume 25 ; 25 >
+      au < doNotProcess ; The Arabidopsis Book Volume 26 ; 26 >
+      au < doNotProcess ; The Arabidopsis Book Volume 27 ; 27 >
+      au < doNotProcess ; The Arabidopsis Book Volume 28 ; 28 >
+      au < doNotProcess ; The Arabidopsis Book Volume 29 ; 29 >
+      au < doNotProcess ; The Arabidopsis Book Volume 30 ; 30 >
+      au < doNotProcess ; The Arabidopsis Book Volume 31 ; 31 >
+      au < doNotProcess ; The Arabidopsis Book Volume 32 ; 32 >
+      au < doNotProcess ; The Arabidopsis Book Volume 33 ; 33 >
+      au < doNotProcess ; The Arabidopsis Book Volume 34 ; 34 >
+      au < doNotProcess ; The Arabidopsis Book Volume 35 ; 35 >
+      au < doNotProcess ; The Arabidopsis Book Volume 36 ; 36 >
+      au < doNotProcess ; The Arabidopsis Book Volume 37 ; 37 >
+      au < doNotProcess ; The Arabidopsis Book Volume 38 ; 38 >
+      au < doNotProcess ; The Arabidopsis Book Volume 39 ; 39 >
+      au < doNotProcess ; The Arabidopsis Book Volume 40 ; 40 >
+      au < doNotProcess ; The Arabidopsis Book Volume 41 ; 41 >
+      au < doNotProcess ; The Arabidopsis Book Volume 42 ; 42 >
+      au < doNotProcess ; The Arabidopsis Book Volume 43 ; 43 >
+      au < doNotProcess ; The Arabidopsis Book Volume 44 ; 44 >
+      au < doNotProcess ; The Arabidopsis Book Volume 45 ; 45 >
+      au < doNotProcess ; The Arabidopsis Book Volume 46 ; 46 >
+      au < doNotProcess ; The Arabidopsis Book Volume 47 ; 47 >
+      au < doNotProcess ; The Arabidopsis Book Volume 48 ; 48 >
+      au < doNotProcess ; The Arabidopsis Book Volume 49 ; 49 >
+      au < doNotProcess ; The Arabidopsis Book Volume 50 ; 50 >
+      au < doNotProcess ; The Arabidopsis Book Volume 51 ; 51 >
+      au < doNotProcess ; The Arabidopsis Book Volume 52 ; 52 >
+      au < doNotProcess ; The Arabidopsis Book Volume 53 ; 53 >
+      au < doNotProcess ; The Arabidopsis Book Volume 54 ; 54 >
+      au < doNotProcess ; The Arabidopsis Book Volume 55 ; 55 >
+      au < doNotProcess ; The Arabidopsis Book Volume 56 ; 56 >
+      au < doNotProcess ; The Arabidopsis Book Volume 57 ; 57 >
+      au < doNotProcess ; The Arabidopsis Book Volume 58 ; 58 >
     }
 
   }

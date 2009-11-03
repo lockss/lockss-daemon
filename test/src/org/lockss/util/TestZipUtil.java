@@ -1,5 +1,5 @@
 /*
- * $Id: TestZipUtil.java,v 1.3 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestZipUtil.java,v 1.3.68.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -52,10 +52,10 @@ public class TestZipUtil extends LockssTestCase {
       String entname = (String)iter.next();
       z.putNextEntry(new ZipEntry(entname));
       if (!entname.endsWith("/")) {
-	String cont = (String)map.get(entname);
-	InputStream in = new StringInputStream(cont);
-	StreamUtil.copy(in, z);
-	IOUtil.safeClose(in);
+        String cont = (String)map.get(entname);
+        InputStream in = new StringInputStream(cont);
+        StreamUtil.copy(in, z);
+        IOUtil.safeClose(in);
       }
       z.closeEntry();
     }
@@ -125,13 +125,13 @@ public class TestZipUtil extends LockssTestCase {
     File dir = getTempDir();
     ZipUtil.unzip(zip, dir);
     assertSameElements(ListUtil.list("foo", "a"),
-		       ListUtil.fromArray(dir.list()));
+                       ListUtil.fromArray(dir.list()));
     assertFileMatchesString("bar", new File(dir, "foo"));
     assertTrue(new File(dir, "a").isDirectory());
     assertTrue(new File(dir, "a/b").isDirectory());
     assertFalse(new File(dir, "a/b/foo").isDirectory());
     assertSameElements(ListUtil.list("foo", "bar"),
-		       ListUtil.fromArray(new File(dir, "a/b").list()));
+                       ListUtil.fromArray(new File(dir, "a/b").list()));
     assertFileMatchesString("xxx", new File(dir, "a/b/foo"));
     assertFileMatchesString("yyy", new File(dir, "a/b/bar"));
   }
@@ -161,6 +161,37 @@ public class TestZipUtil extends LockssTestCase {
       assertMatchesRE("path traversal", e.getMessage());
     }
   }
+
+  void writeFile(File dir, String relPath, String content) throws IOException {
+    File file = new File(dir, relPath);
+    File parent = new File(file.getParent());
+    parent.mkdirs();
+    FileTestUtil.writeFile(file, content);
+  }
+
+  public void testAddDirToZip() throws IOException {
+    File zipFile = new File(getTempDir(), "testzip.zip");
+    File dir = getTempDir();
+    writeFile(dir, "one", "one");
+    writeFile(dir, "two", "aaaaaaaaaaaaa");
+    writeFile(dir, "d1/1", "d1.1");
+    writeFile(dir, "d1/2", "d1.2");
+    writeFile(dir, "d1/d2/1", "d1.d2.1");
+    writeFile(dir, "d1/d2/2", "d1.d2.2");
+    writeFile(dir, "d1/d2/2", "d1.d2.2");
+    writeFile(dir, "d1/d2/d3/d4/1", "d1.d2.d3.d4.1");
+
+    OutputStream out = new BufferedOutputStream(new FileOutputStream(zipFile));
+    ZipOutputStream z = new ZipOutputStream(out);
+    ZipUtil.addDirToZip(z, dir, "");
+    z.close();
+
+    File todir = getTempDir();
+    ZipUtil.unzip(zipFile, todir);
+
+    assertTrue(FileUtil.equalTrees(dir, todir));
+  }
+
 
 
   class MyBufferedInputStream extends BufferedInputStream {

@@ -1,5 +1,5 @@
 /*
- * $Id: JcrRepositoryHelper.java,v 1.1.2.5 2009-10-09 22:06:49 edwardsb1 Exp $
+ * $Id: JcrRepositoryHelper.java,v 1.1.2.6 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -38,7 +38,6 @@ import org.apache.jackrabbit.core.data.*;
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssThread;
-import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryException;
 import org.lockss.repository.v2.RepositoryNode;
 import org.lockss.util.*;
@@ -64,7 +63,7 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   static private final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
 
   // Static variables
-  static private Logger logger = Logger.getLogger("JcrRepositoryHelper.java");
+  static Logger logger = Logger.getLogger("JcrRepositoryHelper.java");
   
   // Class Variables
   private File m_directory;
@@ -73,7 +72,7 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   private RepositoryConfig m_repconfig;
   private RepositoryImpl m_repos;
   private Session m_session;
-  private float m_sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
+  float m_sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
   protected Set<RepositoryNode> m_sizeCalcQueue = new HashSet<RepositoryNode>();
   private BinarySemaphore m_sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread m_sizeCalcThread;
@@ -168,7 +167,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
   // 
   
   public RepositoryNode getRepositoryNode(String key) throws LockssRepositoryException {
-    JcrRepositoryHelperFactory jrhf;
     RepositoryNode rnReturn;
     
     rnReturn = (RepositoryNode) m_mapstrrnCache.get(key);
@@ -179,8 +177,6 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
 
     // Get it from the repository (which will construct the node
     // if necessary.
-    
-    jrhf = JcrRepositoryHelperFactory.getSingleton();
     
     rnReturn = RepositoryNodeImpl.constructor(m_session, m_nodeRoot);
     
@@ -209,6 +205,20 @@ public class JcrRepositoryHelper extends BaseLockssDaemonManager {
     } else {  // rn == null
       logger.error("moveRepository: The requested repository does not exist.");
       logger.error("Throwing the exception into the bit-bucket.");
+    }
+  }
+  
+  /* Calls queueSizeCalc on all repository nodes under this helper. */
+  protected void queueSizeCalc() {
+    Collection<RepositoryNode> collRepositoryNodes;
+    
+    synchronized(m_sizeCalcQueue) {
+      collRepositoryNodes = m_mapstrrnCache.values();
+      for (RepositoryNode rn : collRepositoryNodes) {
+        m_sizeCalcQueue.add(rn);
+      }
+      
+      startOrKickThread();
     }
   }
   

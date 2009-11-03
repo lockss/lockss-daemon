@@ -1,10 +1,10 @@
 /*
- * $Id: ListObjects.java,v 1.1 2008-02-19 01:44:23 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.1.22.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +35,10 @@ package org.lockss.servlet;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
+
 import org.mortbay.html.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /** Output a plain list of the URLs in an AU
@@ -82,10 +84,34 @@ public class ListObjects extends LockssServlet {
       auid = getParameter("auid");
       au = pluginMgr.getAuFromId(auid);
       if (au == null) {
-	displayError("No such AU: " + auid);
-	return;
+        displayError("No such AU: " + auid);
+        return;
       }
       listUrls();
+    } else if (type.equalsIgnoreCase("dois")) {
+      auid = getParameter("auid");
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+        displayError("No such AU: " + auid);
+        return;
+      }
+      listDOIs();
+    } else if (type.equalsIgnoreCase("files")) {
+      auid = getParameter("auid");
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+        displayError("No such AU: " + auid);
+        return;
+      }
+      listFiles();
+    } else if (type.equalsIgnoreCase("articles")) {
+      auid = getParameter("auid");
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+        displayError("No such AU: " + auid);
+        return;
+      }
+      listArticles();
     } else if (type.equalsIgnoreCase("aus")) {
       listAUs();
     } else if (type.equalsIgnoreCase("auids")) {
@@ -102,10 +128,95 @@ public class ListObjects extends LockssServlet {
     wrtr.println("# URLs in " + au.getName());
     wrtr.println();
     for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
-	 iter.hasNext(); ) {
+         iter.hasNext(); ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
       if (cusn.hasContent()) {
-	wrtr.println(cusn.getUrl());
+        wrtr.println(cusn.getUrl());
+      }
+    }
+  }
+
+  void listDOIs() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+    wrtr.println("# DOIs in " + au.getName());
+    wrtr.println();
+    for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
+      CachedUrl cu = (CachedUrl)iter.next();
+      try {
+        if (cu.hasContent()) {
+          Metadata md = cu.getMetadataExtractor().extract(cu);
+          if (md != null) {
+            String doi = md.getDOI();
+            if (doi != null) {
+              wrtr.println(doi);
+            }
+          }          
+        }
+      } catch (IOException e) {
+        log.warning("listDOIs() threw " + e);
+      } catch (PluginException e) {
+        log.warning("listDOIs() threw " + e);
+      } finally {
+        AuUtil.safeRelease(cu);
+      }
+    }
+  }
+
+  void listFiles() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+    wrtr.println("# Files in " + au.getName());
+    wrtr.println("# URL\tContentType\tsize");
+    wrtr.println();
+    for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
+         iter.hasNext(); ) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
+      if (cusn.isLeaf()) {
+        CachedUrl cu = (CachedUrl)cusn;
+        if (cu.hasContent()) {
+          String url = cu.getUrl();
+          String contentType = cu.getContentType();
+          long bytes = cu.getContentSize();
+          if (contentType == null) {
+            contentType = "unknown";
+          }
+          wrtr.println(url + "\t" + contentType + "\t" + bytes);
+        }
+        AuUtil.safeRelease(cu);
+      }
+    }
+  }
+
+  void listArticles() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+    wrtr.println("# Articles in " + au.getName());
+    wrtr.println();
+    for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
+      CachedUrl cu = (CachedUrl)iter.next();
+      try {
+        if (cu.hasContent()) {
+          Metadata md = cu.getMetadataExtractor().extract(cu);
+          if (md == null) {
+            wrtr.println(cu.getUrl() + "\t");
+          }
+          else {
+            String doi = md.getDOI();
+            if (doi != null) {
+              wrtr.println(cu.getUrl() + "\t" + doi);
+            }
+            else {
+              wrtr.println(cu.getUrl() + "\t");
+            }
+          }
+        }
+      } catch (IOException e) {
+        log.warning("listArticles() threw " + e);
+      } catch (PluginException e) {
+        log.warning("listArticles() threw " + e);
+      } finally {
+        AuUtil.safeRelease(cu);       
       }
     }
   }
@@ -116,7 +227,7 @@ public class ListObjects extends LockssServlet {
     boolean includeInternalAus = isDebugUser();
     for (ArchivalUnit au : pluginMgr.getAllAus()) {
       if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	continue;
+        continue;
       }
       wrtr.println(au.getName());
     }
@@ -128,7 +239,7 @@ public class ListObjects extends LockssServlet {
     boolean includeInternalAus = isDebugUser();
     for (ArchivalUnit au : pluginMgr.getAllAus()) {
       if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	continue;
+        continue;
       }
       wrtr.println(au.getAuId());
     }
@@ -168,13 +279,13 @@ public class ListObjects extends LockssServlet {
 //     setTabOrder(ausel);
 
 //     Input v3Poll = new Input(Input.Submit, KEY_ACTION,
-// 			     ( showForcePoll
-// 			       ? ACTION_FORCE_START_V3_POLL
-// 			       : ACTION_START_V3_POLL));
+//                           ( showForcePoll
+//                             ? ACTION_FORCE_START_V3_POLL
+//                             : ACTION_START_V3_POLL));
 //     Input crawl = new Input(Input.Submit, KEY_ACTION,
-// 			    ( showForceCrawl
-// 			      ? ACTION_FORCE_START_CRAWL
-// 			      : ACTION_START_CRAWL));
+//                          ( showForceCrawl
+//                            ? ACTION_FORCE_START_CRAWL
+//                            : ACTION_START_CRAWL));
 //     frm.add("<br><center>" + v3Poll + "</center>");
 //     frm.add("<br><center>" + crawl + "</center>");
 //     comp.add(frm);

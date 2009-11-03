@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.10 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.10.36.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -45,6 +46,7 @@ class PluginStatus {
   static Logger log = Logger.getLogger("PluginStatus");
   final static String PLUGIN_TABLE = "Plugins";
   final static String PLUGIN_DETAIL = "PluginDetail";
+  final static String ALL_AUIDS = "AllAuids";
 
   /** If true the definition of definable plugins will be displayed along
    * with its details. */
@@ -58,15 +60,18 @@ class PluginStatus {
   static void register(LockssDaemon daemon, PluginManager mgr) {
     StatusService statusServ = daemon.getStatusService();
     statusServ.registerStatusAccessor(PLUGIN_TABLE,
-				      new Plugins(daemon, mgr));
+                                      new Plugins(daemon, mgr));
     statusServ.registerStatusAccessor(PLUGIN_DETAIL,
-				      new PluginDetail(daemon, mgr));
+                                      new PluginDetail(daemon, mgr));
+    statusServ.registerStatusAccessor(ALL_AUIDS,
+                                      new AllAuids(daemon, mgr));
   }
 
   static void unregister(LockssDaemon daemon) {
     StatusService statusServ = daemon.getStatusService();
     statusServ.unregisterStatusAccessor(PLUGIN_TABLE);
     statusServ.unregisterStatusAccessor(PLUGIN_DETAIL);
+    statusServ.unregisterStatusAccessor(ALL_AUIDS);
   }
 
   PluginStatus(LockssDaemon daemon, PluginManager mgr) {
@@ -74,15 +79,6 @@ class PluginStatus {
     this.mgr = mgr;
   }
 
-  String getPluginType(Plugin plugin) {
-    if (mgr.isLoadablePlugin(plugin)) {
-      return "Loadable";
-    } else if (mgr.isInternalPlugin(plugin)) {
-      return "Internal";
-    } else {
-      return "Builtin";
-    }
-  }
 }
 
 /**
@@ -93,23 +89,23 @@ class Plugins extends PluginStatus implements StatusAccessor {
 
   private final List sortRules =
     ListUtil.list(new StatusTable.SortRule("plugin",
-					   CatalogueOrderComparator.SINGLETON));
+                                           CatalogueOrderComparator.SINGLETON));
 
   private final List colDescs =
     ListUtil.list(
-		  new ColumnDescriptor("plugin", "Name",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("version", "Version",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("type", "Type",
-				       ColumnDescriptor.TYPE_STRING),
-// 		  new ColumnDescriptor("id", "Plugin ID",
-// 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("registry", "Registry",
-				       ColumnDescriptor.TYPE_STRING)
-// 		  new ColumnDescriptor("cu", "Loaded From",
-// 				       ColumnDescriptor.TYPE_STRING)
-		  );
+                  new ColumnDescriptor("plugin", "Name",
+                                       ColumnDescriptor.TYPE_STRING),
+                  new ColumnDescriptor("version", "Version",
+                                       ColumnDescriptor.TYPE_STRING),
+                  new ColumnDescriptor("type", "Type",
+                                       ColumnDescriptor.TYPE_STRING),
+//                new ColumnDescriptor("id", "Plugin ID",
+//                                     ColumnDescriptor.TYPE_STRING),
+                  new ColumnDescriptor("registry", "Registry",
+                                       ColumnDescriptor.TYPE_STRING)
+//                new ColumnDescriptor("cu", "Loaded From",
+//                                     ColumnDescriptor.TYPE_STRING)
+                  );
 
   Plugins(LockssDaemon daemon, PluginManager mgr) {
     super(daemon, mgr);
@@ -135,27 +131,27 @@ class Plugins extends PluginStatus implements StatusAccessor {
     Collection plugins = mgr.getRegisteredPlugins();
     synchronized (plugins) {
       for (Iterator iter = plugins.iterator(); iter.hasNext(); ) {
-	Plugin plugin = (Plugin)iter.next();
-	if (!includeInternalAus && mgr.isInternalPlugin(plugin)) {
-	  continue;
-	}
-	Map row = new HashMap();
-	row.put("plugin", PluginDetail.makePlugRef(plugin.getPluginName(),
-						   plugin));
-	row.put("version", plugin.getVersion());
-	row.put("id", plugin.getPluginId());
-	row.put("type", getPluginType(plugin));
-	if (mgr.isLoadablePlugin(plugin)) {
-	  PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin);
-	  if (info != null) {
-// 	    row.put("cu", info.getCuUrl());
-	    ArchivalUnit au = info.getRegistryAu();
-	    if (au != null) {
-	      row.put("registry", au.getName());
-	    }
-	  }
-	}
-	rows.add(row);
+        Plugin plugin = (Plugin)iter.next();
+        if (!includeInternalAus && mgr.isInternalPlugin(plugin)) {
+          continue;
+        }
+        Map row = new HashMap();
+        row.put("plugin", PluginDetail.makePlugRef(plugin.getPluginName(),
+                                                   plugin));
+        row.put("version", plugin.getVersion());
+        row.put("id", plugin.getPluginId());
+        row.put("type", mgr.getPluginType(plugin));
+        if (mgr.isLoadablePlugin(plugin)) {
+          PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin);
+          if (info != null) {
+//          row.put("cu", info.getCuUrl());
+            ArchivalUnit au = info.getRegistryAu();
+            if (au != null) {
+              row.put("registry", au.getName());
+            }
+          }
+        }
+        rows.add(row);
       }
     }
     return rows;
@@ -172,11 +168,11 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 
   private final List colDescs =
     ListUtil.list(
-		  new ColumnDescriptor("key", "Key",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("val", "Val",
-				       ColumnDescriptor.TYPE_STRING)
-		  );
+                  new ColumnDescriptor("key", "Key",
+                                       ColumnDescriptor.TYPE_STRING),
+                  new ColumnDescriptor("val", "Val",
+                                       ColumnDescriptor.TYPE_STRING)
+                  );
 
   PluginDetail(LockssDaemon daemon, PluginManager mgr) {
     super(daemon, mgr);
@@ -214,14 +210,14 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
       plugDef = dplug.getDefinitionMap();
       Properties tprops = table.getProperties();
       if ((tprops != null &&
-	  !StringUtil.isNullString(tprops.getProperty("showdef")))) {
-	table.setColumnDescriptors(colDescs);
-	table.setRows(getRows(dplug, plugDef));
+          !StringUtil.isNullString(tprops.getProperty("showdef")))) {
+        table.setColumnDescriptors(colDescs);
+        table.setRows(getRows(dplug, plugDef));
       } else {
-	enableShowdef =
-	  table.getOptions().get(StatusTable.OPTION_DEBUG_USER) ||
-	  CurrentConfig.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
-					DEFAULT_PLUGIN_DHOWDEF);
+        enableShowdef =
+          table.getOptions().get(StatusTable.OPTION_DEBUG_USER) ||
+          CurrentConfig.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
+                                        DEFAULT_PLUGIN_DHOWDEF);
       }
     }
     table.setSummaryInfo(getSummaryInfo(plug, plugDef, enableShowdef));
@@ -242,69 +238,115 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
   }
 
   private List getSummaryInfo(Plugin plug, ExternalizableMap plugDef,
-			      boolean showDefLink) {
+                              boolean showDefLink) {
     List res = new ArrayList();
     res.add(new StatusTable.SummaryInfo("Name",
-					ColumnDescriptor.TYPE_STRING,
-					plug.getPluginName()));
+                                        ColumnDescriptor.TYPE_STRING,
+                                        plug.getPluginName()));
 
     res.add(new StatusTable.SummaryInfo("Id",
-					ColumnDescriptor.TYPE_STRING,
-					plug.getPluginId()));
+                                        ColumnDescriptor.TYPE_STRING,
+                                        plug.getPluginId()));
 
     res.add(new StatusTable.SummaryInfo("Version",
-					ColumnDescriptor.TYPE_STRING,
-					plug.getVersion()));
+                                        ColumnDescriptor.TYPE_STRING,
+                                        plug.getVersion()));
 
     if (plugDef != null) {
       String notes = plugDef.getString(DefinablePlugin.KEY_PLUGIN_NOTES, null);
       if (notes != null) {
-	res.add(new StatusTable.SummaryInfo("Notes",
-					    ColumnDescriptor.TYPE_STRING,
-					    HtmlUtil.htmlEncode(notes)));
+        res.add(new StatusTable.SummaryInfo("Notes",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            HtmlUtil.htmlEncode(notes)));
       }
     }
     res.add(new StatusTable.SummaryInfo("Type",
-					ColumnDescriptor.TYPE_STRING,
-					getPluginType(plug)));
+                                        ColumnDescriptor.TYPE_STRING,
+                                        mgr.getPluginType(plug)));
     res.add(new StatusTable.SummaryInfo("# AUs",
-					ColumnDescriptor.TYPE_STRING,
-					plug.getAllAus().size()));
+                                        ColumnDescriptor.TYPE_STRING,
+                                        plug.getAllAus().size()));
     if (mgr.isLoadablePlugin(plug)) {
       PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plug);
       if (info != null) {
-	String url = info.getCuUrl();
-	if (url != null) {
-	  ArchivalUnit au = info.getRegistryAu();
-	  res.add(new StatusTable.SummaryInfo("Plugin Registry",
-					      ColumnDescriptor.TYPE_STRING,
-					      au.getName()));
-	  res.add(new StatusTable.SummaryInfo("URL",
-					      ColumnDescriptor.TYPE_STRING,
-					      url));
-// 	  res.add(new StatusTable.SummaryInfo("Loaded from",
-// 					      ColumnDescriptor.TYPE_STRING,
-// 					      info.getJarUrl()));
-	}
+        String url = info.getCuUrl();
+        if (url != null) {
+          ArchivalUnit au = info.getRegistryAu();
+          res.add(new StatusTable.SummaryInfo("Plugin Registry",
+                                              ColumnDescriptor.TYPE_STRING,
+                                              au.getName()));
+          res.add(new StatusTable.SummaryInfo("URL",
+                                              ColumnDescriptor.TYPE_STRING,
+                                              url));
+//        res.add(new StatusTable.SummaryInfo("Loaded from",
+//                                            ColumnDescriptor.TYPE_STRING,
+//                                            info.getJarUrl()));
+        }
       }
     }
     if (showDefLink && plugDef != null) {
       StatusTable.Reference link = makePlugRef("Definition", plug);
       link.setProperty("showdef", "1");
       res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  link));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          link));
     }
     return res;
   }
 
   // utility method for making a Reference
   public static StatusTable.Reference makePlugRef(Object value,
-						  Plugin plug) {
+                                                  Plugin plug) {
     String key = PluginManager.pluginKeyFromId(plug.getPluginId());
     return new StatusTable.Reference(value, PLUGIN_DETAIL, key);
   }
 }
 
+/**
+ * List of AUID of all currently defined titles.
+ */
+class AllAuids extends PluginStatus implements StatusAccessor.DebugOnly {
 
+  private final List colDescs =
+    ListUtil.list(
+                  new ColumnDescriptor("name", "Name",
+                                       ColumnDescriptor.TYPE_STRING),
+                  new ColumnDescriptor("auid", "AUID",
+                                       ColumnDescriptor.TYPE_STRING)
+                  );
 
+  private final List sortRules =
+    ListUtil.list(new StatusTable.SortRule("name",
+                                           CatalogueOrderComparator.SINGLETON));
+
+  AllAuids(LockssDaemon daemon, PluginManager mgr) {
+    super(daemon, mgr);
+  }
+
+  public String getDisplayName() {
+    return "All Title AUIDs";
+  }
+
+  public boolean requiresKey() {
+    return false;
+  }
+
+  public void populateTable(StatusTable table) {
+    table.setColumnDescriptors(colDescs);
+    table.setDefaultSortRules(sortRules);
+    table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
+  }
+
+  public List getRows(boolean isDebug) {
+    PluginManager pmgr = daemon.getPluginManager();
+    List<TitleConfig> tcs = pmgr.findAllTitleConfigs();
+    List rows = new ArrayList();
+    for (TitleConfig tc : tcs) {
+      Map row = new HashMap();
+      row.put("auid", tc.getAuId(pmgr));
+      row.put("name", tc.getDisplayName());
+      rows.add(row);
+    }
+    return rows;
+  }
+}

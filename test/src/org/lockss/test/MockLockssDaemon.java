@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.63.20.1 2009-08-12 18:46:42 edwardsb1 Exp $
+ * $Id: MockLockssDaemon.java,v 1.63.20.2 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.List;
 import org.apache.commons.collections.map.LinkedMap;
 
 import org.lockss.alert.AlertManager;
+import org.lockss.account.AccountManager;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.CrawlManager;
@@ -65,6 +66,9 @@ public class MockLockssDaemon extends LockssDaemon {
   WatchdogService wdogService = null;
   MailService mailService = null;
   AlertManager alertManager = null;
+  AccountManager accountManager = null;
+  RandomManager randomManager = null;
+  LockssKeyStoreManager keystoreManager = null;
   HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
@@ -221,6 +225,42 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
     }
     return alertManager;
+  }
+
+  /**
+   * return the account manager instance
+   * @return the AccountManager
+   */
+  public AccountManager getAccountManager() {
+    if (accountManager == null) {
+      accountManager = (AccountManager)newManager(ACCOUNT_MANAGER);
+      managerMap.put(LockssDaemon.ACCOUNT_MANAGER, accountManager);
+    }
+    return accountManager;
+  }
+
+  /**
+   * return the random manager instance
+   * @return the RandomManager
+   */
+  public RandomManager getRandomManager() {
+    if (randomManager == null) {
+      randomManager = (RandomManager)newManager(RANDOM_MANAGER);
+      managerMap.put(LockssDaemon.RANDOM_MANAGER, randomManager);
+    }
+    return randomManager;
+  }
+
+  /**
+   * return the keystore manager instance
+   * @return the KeystoreManager
+   */
+  public LockssKeyStoreManager getKeystoreManager() {
+    if (keystoreManager == null) {
+      keystoreManager = (LockssKeyStoreManager)newManager(KEYSTORE_MANAGER);
+      managerMap.put(LockssDaemon.KEYSTORE_MANAGER, keystoreManager);
+    }
+    return keystoreManager;
   }
 
   /**
@@ -554,6 +594,33 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setAlertManager(AlertManager alertMan) {
     alertManager = alertMan;
     managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
+  }
+
+  /**
+   * Set the AccountManager
+   * @param accountMan the new manager
+   */
+  public void setAccountManager(AccountManager accountMan) {
+    accountManager = accountMan;
+    managerMap.put(LockssDaemon.ACCOUNT_MANAGER, accountManager);
+  }
+
+  /**
+   * Set the RandomManager
+   * @param randomMan the new manager
+   */
+  public void setRandomManager(RandomManager randomMan) {
+    randomManager = randomMan;
+    managerMap.put(LockssDaemon.RANDOM_MANAGER, randomManager);
+  }
+
+  /**
+   * Set the KeystoreManager
+   * @param keystoreMan the new manager
+   */
+  public void setKeystoreManager(LockssKeyStoreManager keystoreMan) {
+    keystoreManager = keystoreMan;
+    managerMap.put(LockssDaemon.KEYSTORE_MANAGER, keystoreManager);
   }
 
   /**

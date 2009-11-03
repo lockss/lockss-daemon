@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManager.java,v 1.1.2.5 2009-10-19 23:04:57 edwardsb1 Exp $
+ * $Id: RepositoryManagerManager.java,v 1.1.2.6 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -40,17 +40,15 @@ import org.lockss.util.PlatformUtil.DF;
  */
 public interface RepositoryManagerManager extends ConfigurableManager {
   // RepositorySpec is "jcr://path" or "local://path".
-  public void addToAUIDtoCoar(String AUID, String RepositorySpec) throws URISyntaxException, LockssRepositoryException, IOException;
+  public void addAuidToCoar(String AUID, String coarSpec) throws URISyntaxException, LockssRepositoryException, IOException;
   public List<String /* CoarSpec */> getRepositoryList();
-  public DF getRepositoryDf();
-  public Map<String, DF> getRepositoryMap();
-  public String /* CoarSpec */ findLeastFullRepository();
-  public LockssAuRepository getRepository(String nameRepository, ArchivalUnit au);
+  public Map<String, DF> getRepositoryMap() throws LockssRepositoryException;
+  public String /* CoarSpec */ findLeastFullCoar();
   public List<String /* CoarSpec */> getExistingCoarSpecsForAuid(String auid);
-  public LockssAuRepository getAuRepository(String coarSpec, ArchivalUnit au);
+  public LockssAuRepository getAuRepository(String coarSpec, ArchivalUnit au) throws LockssRepositoryException;
   public DF getDiskWarnThreshold();
   public DF getDiskFullThreshold();
   public UniqueRefLruCache getGlobalNodeCache();  // Just used by the old repository.
-  public void queueSizeCale(ArchivalUnit au, RepositoryNode node);
+  public void queueSizeCalc(ArchivalUnit au, RepositoryNode node);
   public void doSizeCalc(RepositoryNode node);
 }

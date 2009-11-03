@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.13 2008-08-17 08:48:00 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.13.14.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import org.lockss.app.*;
+
 public class ServletDescr {
 
   /** Marker for servlets whose class can't be found */
@@ -41,9 +43,9 @@ public class ServletDescr {
 
   public Class cls;
 
-  public String heading;	// display name
+  public String heading;        // display name
 
-  public String path;		// url path component to invoke servlet
+  public String path;           // url path component to invoke servlet
 
   public String expl;
 
@@ -65,16 +67,23 @@ public class ServletDescr {
    * links */
   public static final int PATH_IS_URL = 0x20;
 
-  /** User role: Debug user only */
-  public static final int DEBUG_ONLY = 0x1000;
+  /** Suppress the usual nav table when displaying this servlet */
+  public static final int NO_NAV_TABLE = 0x40;
 
-  /** User role: Admin (read/write) user only */
-  public static final int ADMIN_ONLY = 0x2000;
+  /** Needs debug role */
+  public static final int NEED_ROLE_DEBUG = 0x1000;
 
+  /** Needs user admin role */
+  public static final int NEED_ROLE_USER_ADMIN = 0x2000;
 
+  /** Needs content access admin role */
+  public static final int NEED_ROLE_CONTENT_ADMIN = 0x4000;
+
+  /** Needs AU admin role */
+  public static final int NEED_ROLE_AU_ADMIN = 0x8000;
 
   public ServletDescr(String servletName,
-		      Class cls,
+                      Class cls,
                       String heading,
                       String path,
                       int flags) {
@@ -86,13 +95,13 @@ public class ServletDescr {
   }
 
   public ServletDescr(String servletName,
-		      Class cls,
+                      Class cls,
                       String heading,
                       String path,
                       int flags,
                       String expl) {
     this(servletName,
-	 cls,
+         cls,
          heading,
          path,
          flags);
@@ -100,23 +109,23 @@ public class ServletDescr {
   }
 
   public ServletDescr(String servletName,
-		      Class cls,
+                      Class cls,
                       String heading,
                       int flags) {
     this(servletName,
-	 cls,
+         cls,
          heading,
          cls.getName().substring(cls.getName().lastIndexOf('.') + 1),
          flags);
   }
 
   public ServletDescr(String servletName,
-		      Class cls,
+                      Class cls,
                       String heading,
                       int flags,
                       String expl) {
     this(servletName,
-	 cls,
+         cls,
          heading,
          flags);
     setExplanation(expl);
@@ -124,42 +133,42 @@ public class ServletDescr {
 
 
   public ServletDescr(String servletName,
-		      String className,
+                      String className,
                       String heading,
                       int flags) {
     this(servletName,
-	 classForName(className),
+         classForName(className),
          heading,
          flags);
   }
 
   public ServletDescr(String servletName,
-		      String className,
+                      String className,
                       String heading,
                       int flags,
                       String expl) {
     this(servletName,
-	 className,
+         className,
          heading,
          flags);
     setExplanation(expl);
   }
 
   public ServletDescr(String servletName,
-		      Class cls,
+                      Class cls,
                       String heading) {
     this(servletName,
-	 cls,
+         cls,
          heading,
          0);
   }
 
   public ServletDescr(String servletName,
-		      Class cls,
+                      Class cls,
                       String heading,
                       String expl) {
     this(servletName,
-	 cls,
+         cls,
          heading);
     setExplanation(expl);
   }
@@ -193,12 +202,24 @@ public class ServletDescr {
     expl = s;
   }
 
-  boolean isDebugOnly() {
-    return (flags & DEBUG_ONLY) != 0;
+  public String getNavHeading(LockssServlet servlet) {
+    return heading;
   }
 
-  boolean isAdminOnly() {
-    return (flags & ADMIN_ONLY) != 0;
+  boolean needsUserAdminRole() {
+    return (flags & NEED_ROLE_USER_ADMIN) != 0;
+  }
+
+  boolean needsContentAdminRole() {
+    return (flags & NEED_ROLE_CONTENT_ADMIN) != 0;
+  }
+
+  boolean needsAuAdminRole() {
+    return (flags & NEED_ROLE_AU_ADMIN) != 0;
+  }
+
+  boolean needsDebugRole() {
+    return (flags & NEED_ROLE_DEBUG) != 0;
   }
 
   boolean isLargeLogo() {
@@ -209,6 +230,11 @@ public class ServletDescr {
     return (flags & PATH_IS_URL) != 0;
   }
 
+  /** return true if servlet should be enabled */
+  public boolean isEnabled(LockssDaemon daemon) {
+    return true;
+  }
+
   /** return true if servlet should be in the nav table of ofServlet */
   public boolean isInNav(LockssServlet ofServlet) {
     return isFlagSet(IN_NAV);
@@ -217,6 +243,11 @@ public class ServletDescr {
   /** return true if servlet should be in UI home page */
   public boolean isInUiHome(LockssServlet uiHomeServlet) {
     return isFlagSet(IN_UIHOME);
+  }
+
+  /** return true if servlet should not have a nav table */
+  public boolean hasNoNavTable() {
+    return isFlagSet(NO_NAV_TABLE);
   }
 
   boolean isFlagSet(int flag) {

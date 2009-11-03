@@ -1,6 +1,6 @@
 /*
 
- * $Id: TestCollectionOfAuRepositoriesImpl.java,v 1.1.2.1 2009-10-19 23:04:57 edwardsb1 Exp $
+ * $Id: TestCollectionOfAuRepositoriesImpl.java,v 1.1.2.2 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -49,12 +49,11 @@ import junit.framework.TestCase;
  */
 public class TestCollectionOfAuRepositoriesImpl extends LockssTestCase {
   // Constants...
-  private static final String k_auid1 = "AUID1";
   private static final String k_dirNonexistent = "/ueato7au/htsdt/tsthndfeu/tsthsnheaou/tstuoehautsha/sseuthanseu/tsateuhons/teusateuhas/";  // This directory should not exist!
   private static final String k_dirSubdirectory = "subdirectory/";
   private static final long k_sizeWarcMax = 10000;
   private static final String k_stemFile = "stem";
-  private static final String k_strAuId = "AUID";
+  private static final String k_strAuid = "AUID";
   private static final String k_strDirectory = "TestCollectionOfAuRepositoriesImpl/";
   private static final String k_strPeerID = "TCP:[192.168.0.1]:9723";
   private static final String k_url = "http://www.example.com/";
@@ -69,7 +68,7 @@ public class TestCollectionOfAuRepositoriesImpl extends LockssTestCase {
    */
   protected void setUp() throws Exception {
     super.setUp();
-    
+  
     JcrRepositoryHelperFactory jhrf;
 
     if (!JcrRepositoryHelperFactory.isPreconstructed()) {
@@ -103,7 +102,7 @@ public class TestCollectionOfAuRepositoriesImpl extends LockssTestCase {
     }
     
     jhrf.createRepositoryHelper("TestCollectionOfAuRepositoriesImpl", new File("TestCollectionOfAuRepositoriesImpl"));
-    m_au1 = new MockArchivalUnit(k_auid1);
+    m_au1 = new MockArchivalUnit(k_strAuid);
 
   }
 
@@ -168,7 +167,7 @@ public class TestCollectionOfAuRepositoriesImpl extends LockssTestCase {
     
     dirTest = FileUtil.createTempDir("test", "generateAuRepository");
     
-    au = new MockArchivalUnit(k_strAuId);
+    au = new MockArchivalUnit(k_strAuid);
     jcTest = new CollectionOfAuRepositoriesImpl(dirTest);
     jcTest.generateAuRepository(au, dirTest);
     
@@ -286,9 +285,8 @@ public class TestCollectionOfAuRepositoriesImpl extends LockssTestCase {
     dirTest = FileUtil.createTempDir("test", "OpenAuRepository");
     coarTest = new CollectionOfAuRepositoriesImpl(dirTest);
     
-    auGood = createAu(dirTest);
-    
-    larTest = coarTest.openAuRepository(auGood, dirTest);
+    auGood = createAu(dirTest);    
+    larTest = coarTest.openAuRepository(auGood);
     
     // TODO: Test the larTest.  I'm not sure what to do here.
 

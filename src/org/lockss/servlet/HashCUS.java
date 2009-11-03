@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.42 2009-04-07 20:21:41 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.42.2.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -35,23 +35,28 @@ package org.lockss.servlet;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-//import java.util.List;
 import java.text.*;
 import java.security.*;
 import org.mortbay.html.*;
 import org.mortbay.util.B64Code;
+
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
-import org.lockss.daemon.*;
 
 /** Hash a CUS on demand, display the results and filtered input stream
  */
 public class HashCUS extends LockssServlet {
-  static int MAX_RECORD = 100 * 1024;
+  /** If set to a positive number, the record of each filtered stream is
+   * truncated to that many bytes.  -1 means no limit */
+  static final String PARAM_TRUNCATE_FILETERD_STREAM = 
+    Configuration.PREFIX + "hashcus.truncateFilteredStream";
+  static final long DEFAULT_TRUNCATE_FILETERD_STREAM = 100 * 1024;
 
   static final String KEY_AUID = "auid";
   static final String KEY_URL = "url";
@@ -175,13 +180,13 @@ public class HashCUS extends LockssServlet {
 
     if (ACTION_STREAM.equals(action)) {
       if (sendStream()) {
-	return;
+        return;
       }
     } else
       if (ACTION_HASH.equals(action)) {
-	if (checkParams()) {
-	  doit();
-	}
+        if (checkParams()) {
+          doit();
+        }
       }
     displayPage();
   }
@@ -200,7 +205,7 @@ public class HashCUS extends LockssServlet {
     String mime = getParameter(KEY_MIME);
     try {
       if (mime != null) {
-	resp.setContentType(mime);
+        resp.setContentType(mime);
       }
       InputStream in = new BufferedInputStream(new FileInputStream(file));
       OutputStream out = resp.getOutputStream();
@@ -262,27 +267,27 @@ public class HashCUS extends LockssServlet {
     try {
       switch (hashType) {
       case HASH_TYPE_SNCUSS:
-	if (upper != null ||
-	    (lower != null && !lower.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-	  errMsg = "Upper/Lower ignored";
-	}
-	ps = new PollSpec(auid,
-			  url,
-			  PollSpec.SINGLE_NODE_LWRBOUND,
-			  null,
-			  Poll.V1_CONTENT_POLL);
-	break;
+        if (upper != null ||
+            (lower != null && !lower.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+          errMsg = "Upper/Lower ignored";
+        }
+        ps = new PollSpec(auid,
+                          url,
+                          PollSpec.SINGLE_NODE_LWRBOUND,
+                          null,
+                          Poll.V1_CONTENT_POLL);
+        break;
       case HASH_TYPE_V3_TREE:
 
-	ps = new PollSpec(auid, url, lower, upper, Poll.V3_POLL);
-	break;
+        ps = new PollSpec(auid, url, lower, upper, Poll.V3_POLL);
+        break;
       case HASH_TYPE_V3_SNCUSS:
 
-	ps = new PollSpec(auid, url, PollSpec.SINGLE_NODE_LWRBOUND, null,
-			  Poll.V3_POLL);
-	break;
+        ps = new PollSpec(auid, url, PollSpec.SINGLE_NODE_LWRBOUND, null,
+                          Poll.V3_POLL);
+        break;
       default:
-	ps = new PollSpec(auid, url, lower, upper, Poll.V1_CONTENT_POLL);
+        ps = new PollSpec(auid, url, lower, upper, Poll.V1_CONTENT_POLL);
       }
     } catch (Exception e) {
       errMsg = "Error making PollSpec: " + e.toString();
@@ -311,7 +316,7 @@ public class HashCUS extends LockssServlet {
     Page page = newPage();
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "Hash a CachedUrlSet" +
-	addFootnote(FOOT_EXPLANATION));
+        addFootnote(FOOT_EXPLANATION));
     page.add(makeForm());
     page.add("<br>");
     if (showResult) {
@@ -319,12 +324,12 @@ public class HashCUS extends LockssServlet {
       case HASH_TYPE_CONTENT:
       case HASH_TYPE_SNCUSS:
       case HASH_TYPE_NAME:
-	page.add(makeV1Result());
-	break;
+        page.add(makeV1Result());
+        break;
       case HASH_TYPE_V3_TREE:
       case HASH_TYPE_V3_SNCUSS:
-	page.add(makeV3Result());
-	break;
+        page.add(makeV3Result());
+        break;
       }
 
     }
@@ -361,7 +366,7 @@ public class HashCUS extends LockssServlet {
       tbl.newCell();
       tbl.add("Stream:");
       if (recordFile.length() < bytesHashed) {
-	tbl.add(addFootnote("First " + recordFile.length() + " bytes only."));
+        tbl.add(addFootnote("First " + recordFile.length() + " bytes only."));
       }
       tbl.add(":");
       tbl.newCell();
@@ -449,39 +454,39 @@ public class HashCUS extends LockssServlet {
     addInputRow(tbl, "Lower", KEY_LOWER, 50, lower);
     addInputRow(tbl, "Upper", KEY_UPPER, 50, upper);
     addInputRow(tbl, "Challenge", KEY_CHALLENGE, 50,
-		getParameter(KEY_CHALLENGE));
+                getParameter(KEY_CHALLENGE));
     addInputRow(tbl, "Verifier", KEY_VERIFIER, 50, getParameter(KEY_VERIFIER));
     tbl.newRow();
     tbl.addHeading("V1:", "align=right");
     tbl.newCell();
     tbl.add("&nbsp;&nbsp;");
     tbl.add(radioButton(HASH_STRING_CONTENT,
-			Integer.toString(HASH_TYPE_CONTENT),
-			KEY_HASH_TYPE,
-			hashType == HASH_TYPE_CONTENT));
+                        Integer.toString(HASH_TYPE_CONTENT),
+                        KEY_HASH_TYPE,
+                        hashType == HASH_TYPE_CONTENT));
     tbl.add("&nbsp;&nbsp;");
     tbl.add(radioButton(HASH_STRING_NAME,
-			Integer.toString(HASH_TYPE_NAME),
-			KEY_HASH_TYPE,
-			hashType == HASH_TYPE_NAME));
+                        Integer.toString(HASH_TYPE_NAME),
+                        KEY_HASH_TYPE,
+                        hashType == HASH_TYPE_NAME));
     tbl.add("&nbsp;&nbsp;");
     tbl.add(radioButton(HASH_STRING_SNCUSS,
-			Integer.toString(HASH_TYPE_SNCUSS),
-			KEY_HASH_TYPE,
-			hashType == HASH_TYPE_SNCUSS));
+                        Integer.toString(HASH_TYPE_SNCUSS),
+                        KEY_HASH_TYPE,
+                        hashType == HASH_TYPE_SNCUSS));
     tbl.newRow();
     tbl.addHeading("V3:", "align=right");
     tbl.newCell();
     tbl.add("&nbsp;&nbsp;");
     tbl.add(radioButton(HASH_STRING_V3_TREE,
-			Integer.toString(HASH_TYPE_V3_TREE),
-			KEY_HASH_TYPE,
-			hashType == HASH_TYPE_V3_TREE));
+                        Integer.toString(HASH_TYPE_V3_TREE),
+                        KEY_HASH_TYPE,
+                        hashType == HASH_TYPE_V3_TREE));
     tbl.add("&nbsp;&nbsp;");
     tbl.add(radioButton(HASH_STRING_V3_SNCUSS,
-			Integer.toString(HASH_TYPE_V3_SNCUSS),
-			KEY_HASH_TYPE,
-			hashType == HASH_TYPE_V3_SNCUSS));
+                        Integer.toString(HASH_TYPE_V3_SNCUSS),
+                        KEY_HASH_TYPE,
+                        hashType == HASH_TYPE_V3_SNCUSS));
 
     tbl.newRow();
     tbl.newCell(COL2CENTER);
@@ -497,7 +502,7 @@ public class HashCUS extends LockssServlet {
   }
 
   void addInputRow(Table tbl, String label, String key,
-		   int size, String initVal) {
+                   int size, String initVal) {
     tbl.newRow();
     //     tbl.newCell();
     tbl.addHeading(label + ":", "align=right");
@@ -511,36 +516,39 @@ public class HashCUS extends LockssServlet {
   private void doit() {
     try {
       if (isHash) {
-	digest = LcapMessage.getDefaultMessageDigest();
-	if (digest == null) {
-	  errMsg = "Can't get default MessageDigest";
-	  return;
-	}
-	if (isRecord) {
-	  recordFile = File.createTempFile("HashCUS", ".tmp");
-	  recordStream =
-	    new BufferedOutputStream(new FileOutputStream(recordFile));
-	  digest = new RecordingMessageDigest(digest, recordStream,
-					      MAX_RECORD);
-// 	  recordFile.deleteOnExit();
-	}
+        digest = LcapMessage.getDefaultMessageDigest();
+        if (digest == null) {
+          errMsg = "Can't get default MessageDigest";
+          return;
+        }
+        if (isRecord) {
+          recordFile = File.createTempFile("HashCUS", ".tmp");
+          recordStream =
+            new BufferedOutputStream(new FileOutputStream(recordFile));
+          long truncateTo =
+            CurrentConfig.getLongParam(PARAM_TRUNCATE_FILETERD_STREAM,
+                                       DEFAULT_TRUNCATE_FILETERD_STREAM);
+          digest = new RecordingMessageDigest(digest, recordStream,
+                                              truncateTo);
+//        recordFile.deleteOnExit();
+        }
 
-	switch (hashType) {
-	case HASH_TYPE_CONTENT:
-	case HASH_TYPE_SNCUSS:
-	  doV1(cus.getContentHasher(digest));
-	  break;
-	case HASH_TYPE_NAME:
-	  doV1(cus.getNameHasher(digest));
-	  break;
-	case HASH_TYPE_V3_TREE:
-	case HASH_TYPE_V3_SNCUSS:
-	  doV3();
-	  break;
-	}
-	bytesHashed = hasher.getBytesHashed();
-	filesHashed = hasher.getFilesHashed();
-	elapsedTime = hasher.getElapsedTime();
+        switch (hashType) {
+        case HASH_TYPE_CONTENT:
+        case HASH_TYPE_SNCUSS:
+          doV1(cus.getContentHasher(digest));
+          break;
+        case HASH_TYPE_NAME:
+          doV1(cus.getNameHasher(digest));
+          break;
+        case HASH_TYPE_V3_TREE:
+        case HASH_TYPE_V3_SNCUSS:
+          doV3();
+          break;
+        }
+        bytesHashed = hasher.getBytesHashed();
+        filesHashed = hasher.getFilesHashed();
+        elapsedTime = hasher.getElapsedTime();
       } else {
       }
     } catch (Exception e) {
@@ -560,7 +568,7 @@ public class HashCUS extends LockssServlet {
   private void doV3() throws IOException {
     StringBuilder sb = new StringBuilder();
     sb.append("# Block hashes from " + getMachineName() + ", " +
-		      ServletUtil.headerDf.format(new Date()) + "\n");
+                      ServletUtil.headerDf.format(new Date()) + "\n");
     sb.append("# AU: " + au.getName() + "\n");
     if (challenge != null) {
       sb.append("# " + "Poller nonce: " + byteString(challenge) + "\n");

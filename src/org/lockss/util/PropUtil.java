@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.17 2006-11-02 04:20:02 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.17.38.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 /*
 
@@ -46,7 +46,7 @@ public class PropUtil {
   public static Properties copy(Properties props) {
     Properties copy = new Properties();
     for (Enumeration en = props.propertyNames();
-	 en.hasMoreElements(); ) {
+         en.hasMoreElements(); ) {
       String key = (String)en.nextElement();
       copy.setProperty(key, props.getProperty(key));
     }
@@ -84,6 +84,7 @@ public class PropUtil {
     return props;
   }
 
+  /** Load Properties from a file */
   public static Properties fromFile(File file) throws IOException {
     Properties res = new Properties();
     InputStream in = null;
@@ -94,6 +95,16 @@ public class PropUtil {
       IOUtil.safeClose(in);
     }
     return res;
+  }
+
+  /** Store the Properties in the file */
+  public static void toFile(File file, Properties props) throws IOException {
+    OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
+    try {
+      props.store(os, "test");
+    } finally {
+      IOUtil.safeClose(os);
+    }
   }
 
   private static boolean isKeySame(String key, Properties p1, Properties p2) {
@@ -120,7 +131,7 @@ public class PropUtil {
     while (en.hasMoreElements()) {
       String k1 = (String)en.nextElement();
       if (! isKeySame(k1, p1, p2)) {
-	return false;
+        return false;
       }
     }
     return true;
@@ -137,9 +148,9 @@ public class PropUtil {
   public static Set differentKeys(Properties p1, Properties p2) {
     if (p1 == null) {
       if (p2 == null) {
-	return null;
+        return null;
       } else {
-	return p2.keySet();
+        return p2.keySet();
       }
     } else if (p2 == null) {
       return p1.keySet();
@@ -149,7 +160,7 @@ public class PropUtil {
     for (Iterator iter = keys1.iterator(); iter.hasNext();) {
       String k1 = (String)iter.next();
       if (! isKeySame(k1, p1, p2)) {
-	res.add(k1);
+        res.add(k1);
       }
     }
     // add all the keys in p2 that don't appear in p1
@@ -176,13 +187,13 @@ public class PropUtil {
    * @throws NullPointerException if either PropertyTree is null
    */
   public static Set differentKeysAndPrefixes(PropertyTree p1,
-					     PropertyTree p2) {
+                                             PropertyTree p2) {
     Set res = new HashSet();
     Set keys1 = p1.keySet();
     for (Iterator iter = keys1.iterator(); iter.hasNext();) {
       String k1 = (String)iter.next();
       if (! isKeySame(k1, p1, p2)) {
-	addKeyAndPrefixes(res, k1);
+        addKeyAndPrefixes(res, k1);
       }
     }
     // add all the keys in p2 that don't appear in p1
@@ -191,7 +202,7 @@ public class PropUtil {
     for (Iterator iter = p2.keySet().iterator(); iter.hasNext();) {
       String k2 = (String)iter.next();
       if (!p1.containsKey(k2)) {
-	addKeyAndPrefixes(res, k2);
+        addKeyAndPrefixes(res, k2);
       }
     }
     return res;
@@ -205,10 +216,10 @@ public class PropUtil {
       int len = key.length();
       int pos = len;
       while ((pos = key.lastIndexOf(".", pos - 1)) > 0) {
-	if (!(((pos+1 == len) || set.add(key.substring(0, pos + 1))) &&
-	      set.add(key.substring(0, pos)))) {
-	  break;
-	}
+        if (!(((pos+1 == len) || set.add(key.substring(0, pos + 1))) &&
+              set.add(key.substring(0, pos)))) {
+          break;
+        }
       }
     }
   }
@@ -231,7 +242,7 @@ public class PropUtil {
       sb.append("~");
       sb.append(PropKeyEncoder.encode(props.getProperty(key)));
       if (it.hasNext()) {
-	sb.append("&");
+        sb.append("&");
       }
     }
     return sb.toString();
@@ -253,27 +264,27 @@ public class PropUtil {
       String key = tk.nextToken();
       String tok;
       try {
-	tok = tk.nextToken();
+        tok = tk.nextToken();
       } catch (NoSuchElementException e) {
-	throw new IllegalArgumentException("No delimiter after prop: " + key);
+        throw new IllegalArgumentException("No delimiter after prop: " + key);
       }
       if (!tok.equals("~")) {
-	throw new IllegalArgumentException("Delimiter not \"~\": " + tok);
+        throw new IllegalArgumentException("Delimiter not \"~\": " + tok);
       }
       String val;
       try {
-	val = tk.nextToken();
+        val = tk.nextToken();
       } catch (NoSuchElementException e) {
-	throw new IllegalArgumentException("No value for prop: " + key);
+        throw new IllegalArgumentException("No value for prop: " + key);
       }
       res.setProperty(PropKeyEncoder.decode(key),
-		      PropKeyEncoder.decode(val));
+                      PropKeyEncoder.decode(val));
 
       if (tk.hasMoreElements()) {
-	tok = tk.nextToken();
-	if (!tok.equals("&")) {
-	  throw new IllegalArgumentException("Delimiter not \"&\": " + tok);
-	}
+        tok = tk.nextToken();
+        if (!tok.equals("&")) {
+          throw new IllegalArgumentException("Delimiter not \"&\": " + tok);
+        }
       }
     }
     return res;

@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1043-4534
   
-      au < do_not_process ; Harvard Papers in Botany Volume 10 ; 10 >
-      au < do_not_process ; Harvard Papers in Botany Volume 11 ; 11 >
-      au < do_not_process ; Harvard Papers in Botany Volume 12 ; 12 >
+      au < doNotProcess ; Harvard Papers in Botany Volume 10 ; 10 >
+      au < doNotProcess ; Harvard Papers in Botany Volume 11 ; 11 >
+      au < doNotProcess ; Harvard Papers in Botany Volume 12 ; 12 >
     }
 
     {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.67 2009-03-05 05:42:00 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.67.4.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -108,6 +108,15 @@ public class V3Voter extends BasePoll {
     PREFIX + "allowV3Repairs";
   public static final boolean DEFAULT_ALLOW_V3_REPAIRS = true;
   
+  /**
+   * If true, serve repairs to any trusted peer.  (A peer is trusted iff we
+   * are communicating with it securely, and its identity has been verified
+   * to match one of the public certs in our LCAP keystore.
+   */
+  public static final String PARAM_REPAIR_ANY_TRUSTED_PEER =
+    PREFIX + "repairAnyTrustedPeer";
+  public static final boolean DEFAULT_REPAIR_ANY_TRUSTED_PEER = false;
+
   /**
    * If true, use per-URL agreement to determine whether it's OK to serve
    * a repair.  If false, rely on partial agreement level for serving
@@ -222,6 +231,7 @@ public class V3Voter extends BasePoll {
   private LockssDaemon theDaemon;
   private V3VoterSerializer pollSerializer;
   private PollManager pollManager;
+  private LcapStreamComm scomm;
   private IdentityManager idManager;
   private boolean continuedPoll = false;
   private int nomineeCount;
@@ -280,6 +290,7 @@ public class V3Voter extends BasePoll {
     this.idManager = theDaemon.getIdentityManager();
 
     this.pollManager = daemon.getPollManager();
+    this.scomm = daemon.getStreamCommManager();
     isAsynch = pollManager.isAsynch();
 
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
@@ -319,6 +330,7 @@ public class V3Voter extends BasePoll {
     this.pollSerializer = new V3VoterSerializer(theDaemon, pollDir);
     this.voterUserData = pollSerializer.loadVoterUserData();
     this.pollManager = daemon.getPollManager();
+    this.scomm = daemon.getStreamCommManager();
     isAsynch = pollManager.isAsynch();
     this.continuedPoll = true;
     // Restore transient state.
@@ -434,7 +446,7 @@ public class V3Voter extends BasePoll {
     boolean suc = theDaemon.getSchedService().scheduleTask(task);
     if (!suc) {
       voterUserData.setErrorDetail("No time for hash: " + task +
-				   " at " + TimeBase.nowDate());
+                                   " at " + TimeBase.nowDate());
       log.warning("No time for hash: " + task);
     }
     return suc;
@@ -446,7 +458,7 @@ public class V3Voter extends BasePoll {
     Configuration config = ConfigManager.getCurrentConfig();
     double overheadLoad =
       config.getPercentage(SortScheduler.PARAM_OVERHEAD_LOAD,
-			   SortScheduler.DEFAULT_OVERHEAD_LOAD);
+                           SortScheduler.DEFAULT_OVERHEAD_LOAD);
     return (long)(voteDuration / (1.0 - overheadLoad));
   }
 
@@ -456,18 +468,18 @@ public class V3Voter extends BasePoll {
   private long calculateMessageSendPadding(long hashEst) {
     double mult =
       CurrentConfig.getDoubleParam(PARAM_VOTE_SEND_HASH_MULTIPLIER,
-				   DEFAULT_VOTE_SEND_HASH_MULTIPLIER);
+                                   DEFAULT_VOTE_SEND_HASH_MULTIPLIER);
     return (long)(hashEst * mult)
       + CurrentConfig.getTimeIntervalParam(PARAM_VOTE_SEND_PADDING,
-					   DEFAULT_VOTE_SEND_PADDING);
+                                           DEFAULT_VOTE_SEND_PADDING);
   }
 
   PsmInterp.ErrorHandler ehAbortPoll(final String msg) {
     return new PsmInterp.ErrorHandler() {
-	public void handleError(PsmException e) {
-	  log.warning(msg, e);
-	  abortPoll();
-	}
+        public void handleError(PsmException e) {
+          log.warning(msg, e);
+          abortPoll();
+        }
       };
   }
 
@@ -486,7 +498,7 @@ public class V3Voter extends BasePoll {
   void recalcHashEstimate(long voteDuration) {
     RecalcHashTime rht =
       new RecalcHashTime(theDaemon, getAu(), 2,
-			 getHashAlgorithm(), voteDuration);
+                         getHashAlgorithm(), voteDuration);
     rht.recalcHashTime();
     return;
   }
@@ -523,7 +535,7 @@ public class V3Voter extends BasePoll {
         log.warning("Voting deadline (" + voteDeadline + ") is later than " +
                     "the poll deadline (" + pollDeadline.getExpirationTime() + 
                     ").  Can't participate in poll " + getKey());
-	// CR: s.b. poller error, not expired
+        // CR: s.b. poller error, not expired
         stopPoll(STATUS_EXPIRED);
         return;
       }
@@ -562,38 +574,38 @@ public class V3Voter extends BasePoll {
     // Resume or start the state machine running.
     if (isAsynch) {
       if (continuedPoll) {
-	String msg = "Error resuming poll";
-	try {
-	  stateMachine.enqueueResume(voterUserData.getPsmState(),
-				     ehAbortPoll(msg));
-	} catch (PsmException e) {
-	  log.warning(msg, e);
-	  abortPoll();
-	}
+        String msg = "Error resuming poll";
+        try {
+          stateMachine.enqueueResume(voterUserData.getPsmState(),
+                                     ehAbortPoll(msg));
+        } catch (PsmException e) {
+          log.warning(msg, e);
+          abortPoll();
+        }
       } else {
-	String msg = "Error starting poll";
-	try {
-	  stateMachine.enqueueStart(ehAbortPoll(msg));
-	} catch (PsmException e) {
-	  log.warning(msg, e);
-	  abortPoll();
-	}
+        String msg = "Error starting poll";
+        try {
+          stateMachine.enqueueStart(ehAbortPoll(msg));
+        } catch (PsmException e) {
+          log.warning(msg, e);
+          abortPoll();
+        }
       }
     } else {
       if (continuedPoll) {
-	try {
-	  stateMachine.resume(voterUserData.getPsmState());
-	} catch (PsmException e) {
-	  log.warning("Error resuming poll", e);
-	  abortPoll();
-	}
+        try {
+          stateMachine.resume(voterUserData.getPsmState());
+        } catch (PsmException e) {
+          log.warning("Error resuming poll", e);
+          abortPoll();
+        }
       } else {
-	try {
-	  stateMachine.start();
-	} catch (PsmException e) {
-	  log.warning("Error starting poll", e);
-	  abortPoll();
-	}
+        try {
+          stateMachine.start();
+        } catch (PsmException e) {
+          log.warning("Error starting poll", e);
+          abortPoll();
+        }
       }
     }
   }
@@ -666,17 +678,17 @@ public class V3Voter extends BasePoll {
     String errmsg = "State machine error";
     if (isAsynch) {
       stateMachine.enqueueEvent(evt, ehAbortPoll(errmsg),
-				new PsmInterp.Action() {
-				  public void eval() {
-				    msg.delete();
-				  }
-				});
+                                new PsmInterp.Action() {
+                                  public void eval() {
+                                    msg.delete();
+                                  }
+                                });
     } else {
       try {
-	stateMachine.handleEvent(evt);
+        stateMachine.handleEvent(evt);
       } catch (PsmException e) {
-	log.warning(errmsg, e);
-	abortPoll();
+        log.warning(errmsg, e);
+        abortPoll();
       }
     }
     // Finally, clean up after the V3LcapMessage
@@ -699,34 +711,34 @@ public class V3Voter extends BasePoll {
     DatedPeerIdSet noAuSet = pollManager.getNoAuPeerSet(getAu());
     synchronized (noAuSet) {
       try {
-	try {
-	  noAuSet.load();
-	  pollManager.ageNoAuSet(getAu(), noAuSet);
-	} catch (IOException e) {
-	  log.error("Failed to load no AU set", e);
-	  noAuSet.release();
-	  noAuSet = null;
-	}
-	nominees = idManager.getTcpPeerIdentities(new NominationPred(noAuSet));
+        try {
+          noAuSet.load();
+          pollManager.ageNoAuSet(getAu(), noAuSet);
+        } catch (IOException e) {
+          log.error("Failed to load no AU set", e);
+          noAuSet.release();
+          noAuSet = null;
+        }
+        nominees = idManager.getTcpPeerIdentities(new NominationPred(noAuSet));
       } finally {
-	if (noAuSet != null) {
-	  noAuSet.release();
-	}
+        if (noAuSet != null) {
+          noAuSet.release();
+        }
       }
     }
     if (nomineeCount <= nominees.size()) {
       Map availablePeers = new HashMap();
       for (PeerIdentity id : nominees) {
-	availablePeers.put(id, nominateWeight(id));
+        availablePeers.put(id, nominateWeight(id));
       }
       nominees = CollectionUtil.weightedRandomSelection(availablePeers,
-							nomineeCount);
+                                                        nomineeCount);
     }
     if (!nominees.isEmpty()) {
       // VoterUserData expects the collection to be KEYS, not PeerIdentities.
       ArrayList nomineeStrings = new ArrayList(nominees.size());
       for (PeerIdentity id : nominees) {
-	nomineeStrings.add(id.getIdString());
+        nomineeStrings.add(id.getIdString());
       }
       voterUserData.setNominees(nomineeStrings);
       log.debug2("Nominating the following peers: " + nomineeStrings);
@@ -747,31 +759,31 @@ public class V3Voter extends BasePoll {
 
     public boolean evaluate(Object obj) {
       if (obj instanceof PeerIdentity) {
-	PeerIdentity pid = (PeerIdentity)obj;
-	// Never nominate the poller
-	if (pid == voterUserData.getPollerId()) {
-	  return false;
-	}
-	try {
-	  if (noAuSet != null && noAuSet.contains(pid)) {
-	    return false;
-	  }
-	} catch (IOException e) {
-	  log.warning("Couldn't chech NoAUSet", e);
-	}
-	PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
-	if (status == null) {
-	  return false;
-	}
-	List hisGroups = status.getGroups();
-	if (hisGroups == null || hisGroups.isEmpty()) {
-	  return false;
-	}
-	List myGroups = ConfigManager.getPlatformGroupList();
-	if (!CollectionUtils.containsAny(hisGroups, myGroups)) {
-	  return false;
-	}
-	return true;
+        PeerIdentity pid = (PeerIdentity)obj;
+        // Never nominate the poller
+        if (pid == voterUserData.getPollerId()) {
+          return false;
+        }
+        try {
+          if (noAuSet != null && noAuSet.contains(pid)) {
+            return false;
+          }
+        } catch (IOException e) {
+          log.warning("Couldn't chech NoAUSet", e);
+        }
+        PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
+        if (status == null) {
+          return false;
+        }
+        List hisGroups = status.getGroups();
+        if (hisGroups == null || hisGroups.isEmpty()) {
+          return false;
+        }
+        List myGroups = ConfigManager.getPlatformGroupList();
+        if (!CollectionUtils.containsAny(hisGroups, myGroups)) {
+          return false;
+        }
+        return true;
       }
       return false;
     }
@@ -840,9 +852,9 @@ public class V3Voter extends BasePoll {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
     CachedUrlSetHasher hasher =
       new BlockHasher(voterUserData.getCachedUrlSet(),
-		      initHasherDigests(),
-		      initHasherByteArrays(),
-		      new BlockEventHandler());
+                      initHasherDigests(),
+                      initHasherByteArrays(),
+                      new BlockEventHandler());
     HashService hashService = theDaemon.getHashService();
     Deadline hashDeadline = task.getLatestFinish();
 
@@ -853,14 +865,14 @@ public class V3Voter extends BasePoll {
     try {
       // Schedule the hash using the old task's latest finish as the deadline.
       scheduled =
-	hashService.scheduleHash(hasher, hashDeadline,
-				 new HashingCompleteCallback(), null);
+        hashService.scheduleHash(hasher, hashDeadline,
+                                 new HashingCompleteCallback(), null);
     } catch (IllegalArgumentException e) {
       log.error("Error scheduling hash time", e);
     }
     if (scheduled) {
       log.debug("Successfully scheduled time for vote in poll " +
-		getKey());
+                getKey());
     } else {
       log.debug("Unable to schedule time for vote.  Dropping " +
                 "out of poll " + getKey());
@@ -878,7 +890,7 @@ public class V3Voter extends BasePoll {
     // is null, the poll has ended and its resources have been released.
     if (stateMachine == null) {
       log.debug("HashService callback called hashComplete() on a poll " +
-      		"that was over.  Poll key = " + getKey());
+                "that was over.  Poll key = " + getKey());
       return;
     }
     
@@ -888,13 +900,13 @@ public class V3Voter extends BasePoll {
     String errmsg = "State machine error";
     if (isAsynch) {
       stateMachine.enqueueEvent(V3Events.evtHashingDone,
-				ehAbortPoll(errmsg));
+                                ehAbortPoll(errmsg));
     } else {
       try {
-	stateMachine.handleEvent(V3Events.evtHashingDone);
+        stateMachine.handleEvent(V3Events.evtHashingDone);
       } catch (PsmException e) {
-	log.warning(errmsg, e);
-	abortPoll();
+        log.warning(errmsg, e);
+        abortPoll();
       }
     }
   }
@@ -1029,20 +1041,20 @@ public class V3Voter extends BasePoll {
     public void hashingFinished(CachedUrlSet cus, long timeUsed, Object cookie,
                                 CachedUrlSetHasher hasher, Exception e) {
       if (!isPollActive()) {
-	log.warning("Hash finished after poll closed: " + getKey());
-	return;
+        log.warning("Hash finished after poll closed: " + getKey());
+        return;
       }
       if (e == null) {
         hashComplete();
       } else {
         if (e instanceof SchedService.Timeout) {
           log.warning("Hash deadline passed before the hash was finished.");
-	  sendNak(V3LcapMessage.PollNak.NAK_HASH_TIMEOUT);
+          sendNak(V3LcapMessage.PollNak.NAK_HASH_TIMEOUT);
           stopPoll(STATUS_EXPIRED);
         } else {
           log.warning("Hash failed : " + e.getMessage(), e);
           voterUserData.setErrorDetail(e.getMessage());
-	  sendNak(V3LcapMessage.PollNak.NAK_HASH_ERROR);
+          sendNak(V3LcapMessage.PollNak.NAK_HASH_ERROR);
           abortPoll();
         }
       }
@@ -1125,11 +1137,16 @@ public class V3Voter extends BasePoll {
     if (!allowRepairs) return false;
     
     if (!CurrentConfig.getBooleanParam(PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
-				       DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT)) {
+                                       DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT)) {
       AuState aus = AuUtil.getAuState(au);
       if (aus.isOpenAccess()) {
-	return true;
+        return true;
       }
+    }
+    if (scomm.isTrustedNetwork() &&
+        CurrentConfig.getBooleanParam(PARAM_REPAIR_ANY_TRUSTED_PEER,
+                                      DEFAULT_REPAIR_ANY_TRUSTED_PEER)) {
+      return true;
     }
     return serveRepairs(pid, au, url, 10);
   }
@@ -1138,22 +1155,22 @@ public class V3Voter extends BasePoll {
    * another peer's reputation has been extended to pid; if so check that
    * one. */
   private boolean serveRepairs(PeerIdentity pid, ArchivalUnit au,
-			       String url, int depth) {
+                               String url, int depth) {
     if (serveRepairsTo(pid, au, url)) {
       return true;
     }
     if (depth > 0) {
       PeerIdentity reputationPid =
-	pollManager.getReputationTransferredFrom(pid);
+        pollManager.getReputationTransferredFrom(pid);
       if (reputationPid != null) {
-	return serveRepairs(reputationPid, au, url, depth - 1);
+        return serveRepairs(reputationPid, au, url, depth - 1);
       }
     }
     return false;
   }
 
   private boolean serveRepairsTo(PeerIdentity pid, ArchivalUnit au,
-				 String url) {
+                                 String url) {
     boolean perUrlAgreement =
       CurrentConfig.getBooleanParam(PARAM_ENABLE_PER_URL_AGREEMENT,
                                     DEFAULT_ENABLE_PER_URL_AGREEMENT);

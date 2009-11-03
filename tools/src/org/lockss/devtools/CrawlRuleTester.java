@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.26 2008-09-18 02:10:23 dshr Exp $
+ * $Id: CrawlRuleTester.java,v 1.26.10.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -70,8 +70,6 @@ public class CrawlRuleTester extends Thread {
   public static final int URL_SUMMARY_MESSAGE = 3;
   public static final int TEST_SUMMARY_MESSAGE = 4;
 
-  public static long MIN_DELAY = BaseArchivalUnit.MIN_FETCH_DELAY;
-
   private String m_baseUrl;
   private CrawlSpec m_crawlSpec;
   private int m_crawlDepth;
@@ -98,7 +96,10 @@ public class CrawlRuleTester extends Thread {
                          CrawlSpec crawlSpec) {
     super("crawlrule tester");
     m_crawlDepth = crawlDepth;
-    m_crawlDelay = Math.max(crawlDelay, MIN_DELAY);
+    long minFetchDelay =
+      CurrentConfig.getLongParam(BaseArchivalUnit.PARAM_MIN_FETCH_DELAY,
+                                 BaseArchivalUnit.DEFAULT_MIN_FETCH_DELAY);
+    m_crawlDelay = Math.max(crawlDelay, minFetchDelay);
     m_baseUrl = baseUrl;
     m_crawlSpec = crawlSpec;
 
@@ -239,9 +240,9 @@ public class CrawlRuleTester extends Thread {
       if (isInterrupted()) { return; }
       m_curDepth = depth;
       if (crawlList.isEmpty() && depth <= m_crawlDepth) {
-	outputMessage("\nNothing left to crawl, exiting after depth " +
-		      (depth - 1), PLAIN_MESSAGE);
-	break;
+        outputMessage("\nNothing left to crawl, exiting after depth " +
+                      (depth - 1), PLAIN_MESSAGE);
+        break;
       }
       String[] urls = (String[]) crawlList.toArray(new String[0]);
       crawlList.clear();
@@ -279,41 +280,41 @@ public class CrawlRuleTester extends Thread {
 
       LockssUrlConnection conn = UrlUtil.openConnection(url, connectionPool);
       if (proxyHost != null) {
-	conn.setProxy(proxyHost, proxyPort);
+        conn.setProxy(proxyHost, proxyPort);
       }
       if (userAgent != null) {
-	conn.setRequestProperty("user-agent", userAgent);
+        conn.setRequestProperty("user-agent", userAgent);
       }
       try {
-	conn.execute();
-	int resp = conn.getResponseCode();
-	if (resp != 200) {
-	  outputMessage("Resp: " + resp + ": " + conn.getResponseMessage(),
-			TEST_SUMMARY_MESSAGE);
-	  return;
-	}
-	depth_fetched[m_curDepth - 1]++;
-	String cookies = conn.getResponseHeaderValue("Set-Cookie");
-	if (cookies != null) {
-	  outputMessage("Cookies: " + cookies, PLAIN_MESSAGE);
-	}
-	String type = conn.getResponseContentType();
-	if (type == null || !type.toLowerCase().startsWith("text/html")) {
-	  outputMessage("Type: " + type + ", not parsing",URL_SUMMARY_MESSAGE);
-	  return;
-	}
-	outputMessage("Type: " + type + ", extracting Urls",
-		      URL_SUMMARY_MESSAGE);
-	InputStream istr = conn.getResponseInputStream();
-	InputStreamReader reader = new InputStreamReader(istr);
-	//       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
-	GoslingHtmlLinkExtractor extractor = new GoslingHtmlLinkExtractor();
-	extractor.extractUrls(null, istr, null, srcUrl.toString(),
-			      new MyLinkExtractorCallback());
-	istr.close();
-	depth_parsed[m_curDepth - 1]++;
+        conn.execute();
+        int resp = conn.getResponseCode();
+        if (resp != 200) {
+          outputMessage("Resp: " + resp + ": " + conn.getResponseMessage(),
+                        TEST_SUMMARY_MESSAGE);
+          return;
+        }
+        depth_fetched[m_curDepth - 1]++;
+        String cookies = conn.getResponseHeaderValue("Set-Cookie");
+        if (cookies != null) {
+          outputMessage("Cookies: " + cookies, PLAIN_MESSAGE);
+        }
+        String type = conn.getResponseContentType();
+        if (type == null || !type.toLowerCase().startsWith("text/html")) {
+          outputMessage("Type: " + type + ", not parsing",URL_SUMMARY_MESSAGE);
+          return;
+        }
+        outputMessage("Type: " + type + ", extracting Urls",
+                      URL_SUMMARY_MESSAGE);
+        InputStream istr = conn.getResponseInputStream();
+        InputStreamReader reader = new InputStreamReader(istr);
+        //       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
+        GoslingHtmlLinkExtractor extractor = new GoslingHtmlLinkExtractor();
+        extractor.extractUrls(null, istr, null, srcUrl.toString(),
+                              new MyLinkExtractorCallback());
+        istr.close();
+        depth_parsed[m_curDepth - 1]++;
       } finally {
-	conn.release();
+        conn.release();
       }
     }
     catch (MalformedURLException murle) {
@@ -367,8 +368,8 @@ public class CrawlRuleTester extends Thread {
       new TreeSet(CollectionUtils.subtract(m_exclset, m_reported));
     if (!m_inclset.isEmpty()) {
       outputMessage("\nIncluded Urls: (" + new_incls.size() + " new, " +
-		    (m_inclset.size() - new_incls.size()) + " old)",
-		    URL_SUMMARY_MESSAGE);
+                    (m_inclset.size() - new_incls.size()) + " old)",
+                    URL_SUMMARY_MESSAGE);
       depth_incl[m_curDepth - 1] += new_incls.size();
     }
     for (Iterator it = new_incls.iterator(); it.hasNext(); ) {
@@ -377,8 +378,8 @@ public class CrawlRuleTester extends Thread {
 
     if (!m_exclset.isEmpty()) {
       outputMessage("\nExcluded Urls: (" + new_excls.size() + " new, " +
-		    (m_exclset.size() - new_excls.size()) + " old)",
-		    URL_SUMMARY_MESSAGE);
+                    (m_exclset.size() - new_excls.size()) + " old)",
+                    URL_SUMMARY_MESSAGE);
     }
     for (Iterator it = new_excls.iterator(); it.hasNext(); ) {
       outputMessage(it.next().toString(), PLAIN_MESSAGE);
@@ -397,7 +398,7 @@ public class CrawlRuleTester extends Thread {
   }
 
   private void outputSummary(String baseUrl, Set fetched, Set toCrawl,
-			     long elapsedTime) {
+                             long elapsedTime) {
     int fetchCount = fetched.size();
     outputMessage("\n\nSummary for starting Url: " + baseUrl +
                   " and depth: " + m_crawlDepth, TEST_SUMMARY_MESSAGE);
@@ -408,10 +409,10 @@ public class CrawlRuleTester extends Thread {
     for (int depth = 1; depth <= m_crawlDepth; depth++) {
       PrintfFormat pf = new PrintfFormat("%5d  %7d  %6d  %8d");
       Integer[] args = new Integer[]{
-	new Integer(depth),
-	new Integer(depth_fetched[depth - 1]),
-	new Integer(depth_parsed[depth - 1]),
-	new Integer(depth_incl[depth - 1]),
+        new Integer(depth),
+        new Integer(depth_fetched[depth - 1]),
+        new Integer(depth_parsed[depth - 1]),
+        new Integer(depth_incl[depth - 1]),
       };
       String s = pf.sprintf(args);
       outputMessage(s, PLAIN_MESSAGE);
@@ -420,8 +421,8 @@ public class CrawlRuleTester extends Thread {
     outputMessage("\nRemaining unfetched: " + toCrawl.size(), PLAIN_MESSAGE);
     if (false) {
       for (Iterator iter = toCrawl.iterator(); iter.hasNext(); ) {
-	String url = (String)iter.next();
-	outputMessage(url, PLAIN_MESSAGE);
+        String url = (String)iter.next();
+        outputMessage(url, PLAIN_MESSAGE);
       }
     }
     long secs = elapsedTime / Constants.SECOND;
@@ -448,16 +449,16 @@ public class CrawlRuleTester extends Thread {
 
       m_extracted.add(url);
       try {
-	String normUrl = UrlUtil.normalizeUrl(url);
-	if (BaseCrawler.isSupportedUrlProtocol(normUrl) &&
-	    m_crawlSpec.isIncluded(normUrl)) {
-	  m_incls.add(normUrl);
-	}
-	else {
-	  m_excls.add(normUrl);
-	}
+        String normUrl = UrlUtil.normalizeUrl(url);
+        if (BaseCrawler.isSupportedUrlProtocol(normUrl) &&
+            m_crawlSpec.isIncluded(normUrl)) {
+          m_incls.add(normUrl);
+        }
+        else {
+          m_excls.add(normUrl);
+        }
       } catch (MalformedURLException e) {
-	m_excls.add(url);
+        m_excls.add(url);
       }
 
     }
@@ -470,7 +471,8 @@ public class CrawlRuleTester extends Thread {
 
     public MyMockCachedUrl(String url, Reader reader) {
       this.url = url;
-      this.reader = reader;
+  
+    this.reader = reader;
     }
 
     public ArchivalUnit getArchivalUnit() {
@@ -566,6 +568,8 @@ public class CrawlRuleTester extends Thread {
       sb.append("]");
       return sb.toString();
     }
+    public MetadataExtractor getMetadataExtractor() {
+      return null;
+    }
   }
-
 }

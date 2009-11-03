@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.42 2009-03-24 20:35:33 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.42.2.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -34,9 +34,7 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.net.*;
-import java.text.*;
 import java.security.*;
-import java.security.cert.*;
 import javax.net.ssl.*;
 import java.util.*;
 
@@ -69,23 +67,17 @@ public class BlockingStreamComm
   public static final boolean DEFAULT_USE_V3_OVER_SSL = false;
 
   /** Use client authentication for SSL **/
-  public static final String PARAM_USE_SSL_CLIENT_AUTH = PREFIX + "SslClientAuth";
+  public static final String PARAM_USE_SSL_CLIENT_AUTH =
+    PREFIX + "sslClientAuth";
   public static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
 
-  /** Use temporary SSL keystore**/
-  public static final String PARAM_SSL_TEMP_KEYSTORE = PREFIX + "SslTempKeystore";
-  public static final boolean DEFAULT_SSL_TEMP_KEYSTORE = true;
-
-  /** File name for SSL key store **/
-  public static final String PARAM_SSL_KEYSTORE = PREFIX + "SslKeyStore";
-  public static final String DEFAULT_SSL_KEYSTORE = ".keystore";
-
-  /** File name for SSL key store password **/
-  public static final String PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE = PREFIX + "SslPrivateKeyPasswordFile";
-  public static final String DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE = ".password";
+  /** Name of managed keystore to use (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name) */
+  public static final String PARAM_SSL_KEYSTORE_NAME =
+    PREFIX + "sslKeystoreName";
 
   /** SSL protocol to use **/
-  public static final String PARAM_SSL_PROTOCOL = PREFIX + "SslProtocol";
+  public static final String PARAM_SSL_PROTOCOL = PREFIX + "sslProtocol";
   public static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
 
   /** Max peer channels.  Only affects outgoing messages; incoming
@@ -123,6 +115,15 @@ public class BlockingStreamComm
   public static final String PARAM_DATA_TIMEOUT =
     PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 0;
+
+  /** Enable SO_KEEPALIVE if true */
+  public static final String PARAM_SOCKET_KEEPALIVE =
+    PREFIX + "socketKeepAlive";
+  public static final boolean DEFAULT_SOCKET_KEEPALIVE = true;
+
+  /** Enable TCP_NODELAY if true */
+  public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNoDelay";
+  public static final boolean DEFAULT_TCP_NODELAY = true;
 
   /** Time after which idle channel will be closed */
   public static final String PARAM_CHANNEL_IDLE_TIME =
@@ -174,6 +175,12 @@ public class BlockingStreamComm
     PREFIX + "maxMessageSize";
   public static final long DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024 * 1024;
 
+  /** Rough transmission speed will be measured for messages at least this
+   * large, reported at debug level */
+  public static final String PARAM_MIN_MEASURED_MESSAGE_SIZE =
+    PREFIX + "minMeasuredMessageSize";
+  public static final long DEFAULT_MIN_MEASURED_MESSAGE_SIZE = 5 * 1024 * 1024;
+
   /** Dir for PeerMessage data storage */
   public static final String PARAM_DATA_DIR = PREFIX + "messageDataDir";
   /** Default is PlatformInfo.getSystemTempDir() */
@@ -182,10 +189,6 @@ public class BlockingStreamComm
   /** Wrap Socket OutputStream in BufferedOutputStream? */
   public static final String PARAM_IS_BUFFERED_SEND = PREFIX + "bufferedSend";
   public static final boolean DEFAULT_IS_BUFFERED_SEND = true;
-
-  /** TCP_NODELAY */
-  public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNodelay";
-  public static final boolean DEFAULT_TCP_NODELAY = true;
 
   /** Amount of time BlockingStreamComm.stopService() should wait for
    * worker threads to exit.  Zero disables wait.  */
@@ -234,13 +237,13 @@ public class BlockingStreamComm
 
   private boolean paramUseV3OverSsl = DEFAULT_USE_V3_OVER_SSL;
   private boolean paramSslClientAuth = DEFAULT_USE_SSL_CLIENT_AUTH;
-  private boolean paramSslTempKeystore = DEFAULT_SSL_TEMP_KEYSTORE;
-  private String paramSslKeyStore = DEFAULT_SSL_KEYSTORE;
-  private String paramSslPrivateKeyPasswordFile =
-    DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE;
+  private String paramSslKeyStoreName;
+  private String paramSslKeyStorePassword = null;
   private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private long paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
+  private long paramMinMeasuredMessageSize =
+    DEFAULT_MIN_MEASURED_MESSAGE_SIZE;
   private File dataDir = null;
   private int paramBacklog = DEFAULT_LISTEN_BACKLOG;
   private int paramMaxChannels = DEFAULT_MAX_CHANNELS;
@@ -249,6 +252,8 @@ public class BlockingStreamComm
   private long paramPoolKeepaliveTime = DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE;
   private long paramConnectTimeout = DEFAULT_CONNECT_TIMEOUT;
   private long paramSoTimeout = DEFAULT_DATA_TIMEOUT;
+  private boolean paramSoKeepAlive = DEFAULT_SOCKET_KEEPALIVE;
+  private boolean paramIsTcpNoDelay = DEFAULT_TCP_NODELAY;
   private long paramSendWakeupTime = DEFAULT_SEND_WAKEUP_TIME;
   private long paramRetryBeforeExpiration = DEFAULT_RETRY_BEFORE_EXPIRATION;
   private long paramMaxPeerRetryInterval = DEFAULT_MAX_PEER_RETRY_INTERVAL;
@@ -257,14 +262,12 @@ public class BlockingStreamComm
   protected long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
   private long paramDrainInputTime = DEFAULT_DRAIN_INPUT_TIME;
   private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
-  private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
   private long paramWaitExit = DEFAULT_WAIT_EXIT;
   private boolean paramAbortOnUnknownOp = DEFAULT_ABORT_ON_UNKNOWN_OP;
   private long lastHungCheckTime = 0;
   private PooledExecutor pool;
   protected SSLSocketFactory sslSocketFactory = null;
   protected SSLServerSocketFactory sslServerSocketFactory = null;
-  private String paramSslKeyStorePassword = null;
   private boolean paramDissociateOnNoSend = DEFAULT_DISSOCIATE_ON_NO_SEND;
   private boolean paramDissociateOnEveryStop =
     DEFAULT_DISSOCIATE_ON_EVERY_STOP;
@@ -278,6 +281,8 @@ public class BlockingStreamComm
   private PeerAddress.Tcp myPeerAddr;
 
   private IdentityManager idMgr;
+  protected LockssKeyStoreManager keystoreMgr;
+
   private OneShot configShot = new OneShot();
 
   private FifoQueue rcvQueue;	     // PeerMessages received from channels
@@ -777,6 +782,7 @@ public class BlockingStreamComm
     super.startService();
     LockssDaemon daemon = getDaemon();
     idMgr = daemon.getIdentityManager();
+    keystoreMgr = daemon.getKeystoreManager();
     resetConfig();
     try {
       myPeerId = getLocalPeerIdentity();
@@ -830,24 +836,28 @@ public class BlockingStreamComm
   public void setConfig(Configuration config,
 			Configuration prevConfig,
 			Configuration.Differences changedKeys) {
-    if (getDaemon().isDaemonInited()) {
+    // Instances of this manager are started incrementally in testing,
+    // after the daemon is running, so isDaemonInited() won't work here
+    if (isInited()) {
       // one-time only init
       if (configShot.once()) {
 	configure(config, prevConfig, changedKeys);
       }
-      // these params can be changed on the fly
-      paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
-					      DEFAULT_MIN_FILE_MESSAGE_SIZE);
-      paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
-					   DEFAULT_MAX_MESSAGE_SIZE);
-      paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
-					      DEFAULT_IS_BUFFERED_SEND);
-      paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
-					    DEFAULT_TCP_NODELAY);
-      paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
-					     DEFAULT_WAIT_EXIT);
-
+      // the following params can be changed on the fly
       if (changedKeys.contains(PREFIX)) {
+	paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
+						DEFAULT_MIN_FILE_MESSAGE_SIZE);
+	paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
+					     DEFAULT_MAX_MESSAGE_SIZE);
+	paramMinMeasuredMessageSize =
+	  config.getLong(PARAM_MIN_MEASURED_MESSAGE_SIZE,
+			 DEFAULT_MIN_MEASURED_MESSAGE_SIZE);
+	paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
+						DEFAULT_IS_BUFFERED_SEND);
+	paramIsTcpNoDelay = config.getBoolean(PARAM_TCP_NODELAY,
+					      DEFAULT_TCP_NODELAY);
+	paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
+					       DEFAULT_WAIT_EXIT);
 	String paramDataDir = config.get(PARAM_DATA_DIR,
 					 PlatformUtil.getSystemTempDir());
 	File dir = new File(paramDataDir);
@@ -867,6 +877,8 @@ public class BlockingStreamComm
 						     DEFAULT_CONNECT_TIMEOUT);
 	paramSoTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
 						DEFAULT_DATA_TIMEOUT);
+	paramSoKeepAlive = config.getBoolean(PARAM_SOCKET_KEEPALIVE,
+					     DEFAULT_SOCKET_KEEPALIVE);
 	paramSendWakeupTime = config.getTimeInterval(PARAM_SEND_WAKEUP_TIME,
 						     DEFAULT_SEND_WAKEUP_TIME);
 
@@ -901,10 +913,10 @@ public class BlockingStreamComm
     }
   }
 
-  /** Internal config, so can invoke from test constructor  */
-  void configure(Configuration config,
-		 Configuration prevConfig,
-		 Configuration.Differences changedKeys) {
+  /** One-time startup configuration  */
+  private void configure(Configuration config,
+			 Configuration prevConfig,
+			 Configuration.Differences changedKeys) {
     enabled = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
     if (!enabled) {
       return;
@@ -926,151 +938,56 @@ public class BlockingStreamComm
     }
     if (!paramUseV3OverSsl)
 	return;
+    log.info("Using SSL");
     // We're trying to use SSL
     if (changedKeys.contains(PARAM_USE_SSL_CLIENT_AUTH)) {
       paramSslClientAuth = config.getBoolean(PARAM_USE_SSL_CLIENT_AUTH,
 					     DEFAULT_USE_SSL_CLIENT_AUTH);
       sockFact = null;
     }
-    if (changedKeys.contains(PARAM_SSL_TEMP_KEYSTORE)) {
-      paramSslTempKeystore = config.getBoolean(PARAM_SSL_TEMP_KEYSTORE,
-					     DEFAULT_SSL_TEMP_KEYSTORE);
-      sockFact = null;
-    }
     if (sslServerSocketFactory != null && sslSocketFactory != null) {
       // already initialized
       return;
     }
-    if (paramSslTempKeystore) {
-      // We're using the temporary keystore
-      paramSslKeyStore = System.getProperty("javax.net.ssl.keyStore", null);
-      paramSslKeyStorePassword =
-	System.getProperty("javax.net.ssl.keyStorePassword", null);
-      log.debug("Using temporary keystore from " + paramSslKeyStore);
-      // Now create the SSL socket factories from the context
-      sslServerSocketFactory =
-	(SSLServerSocketFactory)SSLServerSocketFactory.getDefault();
-      sslSocketFactory =
-	(SSLSocketFactory)SSLSocketFactory.getDefault();
-      return;
-    }
-    // We're using the real keystore
-    if (changedKeys.contains(PARAM_SSL_KEYSTORE)) {
-	paramSslKeyStore = config.get(PARAM_SSL_KEYSTORE,
-				      DEFAULT_SSL_KEYSTORE);
-	// The password for the keystore is the machine's FQDN.
-	paramSslKeyStorePassword = config.get("org.lockss.platform.fqdn", "");
-	log.debug("Using permanent keystore from " + paramSslKeyStore);
-	sockFact = null;
-    }
-    byte[] sslPrivateKeyPassword = null;
-    if (changedKeys.contains(PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE)) {
-      paramSslPrivateKeyPasswordFile = config.get(PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE,
-						  DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE);
+    if (changedKeys.contains(PARAM_SSL_KEYSTORE_NAME)) {
+      paramSslKeyStoreName = config.get(PARAM_SSL_KEYSTORE_NAME);
+      // The password for the keystore is the machine's FQDN.
+      paramSslKeyStorePassword = config.get("org.lockss.platform.fqdn", "");
+      log.debug("Using keystore " + paramSslKeyStoreName);
       sockFact = null;
     }
     if (changedKeys.contains(PARAM_SSL_PROTOCOL)) {
-      paramSslProtocol = config.get(PARAM_SSL_PROTOCOL,
-				    DEFAULT_SSL_PROTOCOL);
+      paramSslProtocol = config.get(PARAM_SSL_PROTOCOL, DEFAULT_SSL_PROTOCOL);
       sockFact = null;
     }
-    try {
-      File keyStorePasswordFile = new File(paramSslPrivateKeyPasswordFile);
-      if (keyStorePasswordFile.exists()) {
-	FileInputStream fis = new FileInputStream(keyStorePasswordFile);
-	sslPrivateKeyPassword = new byte[(int)keyStorePasswordFile.length()];
-	if (fis.read(sslPrivateKeyPassword) != sslPrivateKeyPassword.length) {
-	  throw new IOException("short read");
-	}
-	fis.close();
-	FileOutputStream fos = new FileOutputStream(keyStorePasswordFile);
-	byte[] junk = new byte[(int)keyStorePasswordFile.length()];
-	for (int i = 0; i < junk.length; i++)
-	  junk[i] = 0;
-	fos.write(junk);
-	fos.close();
-	keyStorePasswordFile.delete();
-      } else {
-        log.debug("SSL password file " + paramSslPrivateKeyPasswordFile + " missing");
-	return;
-      }
-    } catch (IOException ex) {
-      log.error(paramSslPrivateKeyPasswordFile + " threw " + ex);
-      return;
+    KeyManagerFactory kmf =
+      keystoreMgr.getKeyManagerFactory(paramSslKeyStoreName);
+    if (kmf == null) {
+      throw new IllegalArgumentException("Keystore not found: "
+					 + paramSslKeyStoreName);
     }
-    // We now have a password to decrypt the private key in the
-    // SSL keystore.  Next create the keystore from the file.
-    KeyStore keyStore = null;
-    InputStream fis = null;
-    try {
-      keyStore = KeyStore.getInstance("JCEKS");
-      fis = new FileInputStream(paramSslKeyStore);
-      keyStore.load(fis, paramSslKeyStorePassword.toCharArray());
-    } catch (KeyStoreException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } catch (IOException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } catch (CertificateException ex) {
-      log.error("loading SSL key store threw " + ex);
-      return;
-    } finally {
-      IOUtil.safeClose(fis);
-    }
-    {
-      String temp = new String(sslPrivateKeyPassword);
-      logKeyStore(keyStore, temp.toCharArray());
-    }
-    // Now create a KeyManager from the keystore using the password.
-    KeyManager[] kma = null;
-    try {
-      KeyManagerFactory kmf =
-	KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-      kmf.init(keyStore, new String(sslPrivateKeyPassword).toCharArray());
-      kma = kmf.getKeyManagers();
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("creating SSL key manager threw " + ex);
-      return;
-    } catch (KeyStoreException ex) {
-      log.error("creating SSL key manager threw " + ex);
-      return;
-    } catch (UnrecoverableKeyException ex) {
-      log.error("creating SSL key manager threw " + ex);
-      return;
-    }
-    // Now create a TrustManager from the keystore using the password
-    TrustManager[] tma = null;
-    try {
-      TrustManagerFactory tmf = 
-	TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
-      tmf.init(keyStore);
-      tma = tmf.getTrustManagers();
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("creating SSL trust manager threw " + ex);
-      return;
-    } catch (KeyStoreException ex) {
-      log.error("creating SSL trust manager threw " + ex);
-      return;
-    } finally {
-      // Now forget the password
-      for (int i = 0; i < sslPrivateKeyPassword.length; i++) {
-	sslPrivateKeyPassword[i] = 0;
-      }
-      sslPrivateKeyPassword = null;
-    }
+    KeyManager[] kma = kmf.getKeyManagers();
+
+    TrustManagerFactory tmf =
+      keystoreMgr.getTrustManagerFactory(paramSslKeyStoreName);
+    TrustManager[] tma = tmf.getTrustManagers();
+
     // Now create an SSLContext from the KeyManager
     SSLContext sslContext = null;
     try {
+      RandomManager rmgr = getDaemon().getRandomManager();
+      SecureRandom rng = rmgr.getSecureRandom();
+
       sslContext = SSLContext.getInstance(paramSslProtocol);
-      sslContext.init(kma, tma, null);
+      sslContext.init(kma, tma, rng);
       // Now create the SSL socket factories from the context
       sslServerSocketFactory = sslContext.getServerSocketFactory();
       sslSocketFactory = sslContext.getSocketFactory();
+      log.info("SSL init successful");
     } catch (NoSuchAlgorithmException ex) {
+      log.error("Creating SSL context threw " + ex);
+      sslContext = null;
+    } catch (NoSuchProviderException ex) {
       log.error("Creating SSL context threw " + ex);
       sslContext = null;
     } catch (KeyManagementException ex) {
@@ -1106,6 +1023,12 @@ public class BlockingStreamComm
     } catch (Exception ex) {
       log.error("logKeyStore() threw " + ex);
     }
+  }
+
+  /** Return true iff all connections are authenticated; <i>ie</i>, we only
+   * talk to known peers */
+  public boolean isTrustedNetwork() {
+    return paramUseV3OverSsl && paramSslClientAuth;
   }
 
   // overridable for testing
@@ -1164,12 +1087,16 @@ public class BlockingStreamComm
     return paramMaxMessageSize;
   }
 
+  long getMinMeasuredMessageSize() {
+    return paramMinMeasuredMessageSize;
+  }
+
   boolean isBufferedSend() {
     return paramIsBufferedSend;
   }
 
-  boolean isTcpNodelay() {
-    return paramIsTcpNodelay;
+  boolean isTcpNoDelay() {
+    return paramIsTcpNoDelay;
   }
 
   boolean getAbortOnUnknownOp() {
@@ -1369,11 +1296,31 @@ public class BlockingStreamComm
     pool.execute(run);
   }
 
+  /** Setup all socket options.  Should be called before any read/write
+   * calls */
+  void setupOpenSocket(Socket sock) throws SocketException {
+    if (log.isDebug3()) {
+      log.debug3(sock + "SO_TIMEOUT: " + getSoTimeout()
+		 + ", TcpNoDelay: " + isTcpNoDelay()
+		 + ", KeepAlive: " + paramSoKeepAlive);
+    }
+    sock.setSoTimeout((int)getSoTimeout());
+    sock.setTcpNoDelay(isTcpNoDelay());
+    sock.setKeepAlive(paramSoKeepAlive);
+  }
+
   // process a socket returned by accept()
   // overridable for testing
   void processIncomingConnection(Socket sock) throws IOException {
     if (sock.isClosed()) {
-      throw new SocketException("socket closed during handshake");
+      // This should no longer happen
+      throw new SocketException("processIncomingConnection got closed socket");
+    }
+    // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
+    setupOpenSocket(sock);
+    if (sock instanceof SSLSocket && paramSslClientAuth) {
+      // Ensure handshake is complete before doing anything else
+      handShake((SSLSocket)sock);
     }
     log.debug2("Accepted connection from " +
 	       new IPAddr(sock.getInetAddress()));
@@ -1463,7 +1410,7 @@ public class BlockingStreamComm
     }
   }
 
-  protected void handShake(SSLSocket s) {
+  protected void handShake(SSLSocket s) throws SSLPeerUnverifiedException {
     SSLSession session = s.getSession();
     try {
       java.security.cert.Certificate[] certs = session.getPeerCertificates();
@@ -1475,6 +1422,7 @@ public class BlockingStreamComm
       } catch (IOException ex2) {
 	log.error("Socket close threw " + ex2);
       }
+      throw ex;
     }
   }
 
@@ -1619,7 +1567,8 @@ public class BlockingStreamComm
       triggerWDogOnExit(true);
 //       startWDog(WDOG_PARAM_SLISTEN, WDOG_DEFAULT_SLISTEN);
       nowRunning();
-
+      String sockmsg =
+	(listenSock instanceof SSLServerSocket) ? "SSL Listener" : "Listener";
       while (goOn) {
 // 	pokeWDog();
 	log.debug3("accept()");
@@ -1628,21 +1577,13 @@ public class BlockingStreamComm
 	  if (!goOn) {
 	    break;
 	  }
-	  if (sock instanceof SSLSocket && paramSslClientAuth) {
-	    // Ensure handshake is complete before doing anything else
-	    handShake((SSLSocket)sock);
-	  }
 	  processIncomingConnection(sock);
 	} catch (SocketException e) {
 	  if (goOn) {
-	    log.warning("Listener", e);
+	    log.warning(sockmsg, e);
 	  }
 	} catch (Exception e) {
-	  if (listenSock instanceof SSLServerSocket) {
-	    log.debug("SSL Listener ", e);
-	  } else {
-	    log.warning("Listener", e);
-          }
+	  log.warning(sockmsg, e);
 	}
       }
       listenThread = null;
@@ -1753,17 +1694,23 @@ public class BlockingStreamComm
     }
   }
 
-  /** SocketFactory interface allows test code to use instrumented or mock
+  /** SocketFactory interface allows encapsulation of socket type details
+      (normal, SSL, etc.) and allows test code to use instrumented or mock
       sockets and peer channels */
   interface SocketFactory {
+    /** Return a listen socket of the appropriate type */
     ServerSocket newServerSocket(int port, int backlog) throws IOException;
 
+    /** Return a socket of the appropriate type connected to the remote
+     * address, with its options set */
     Socket newSocket(IPAddr addr, int port) throws IOException;
 
+    /** Overridable for testing */
     BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
 				       Socket sock)
 	throws IOException;
 
+    /** Overridable for testing */
     BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
 				       PeerIdentity peer)
 	throws IOException;
@@ -1777,7 +1724,9 @@ public class BlockingStreamComm
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
-      return new Socket(addr.getInetAddr(), port);
+      Socket sock = new Socket(addr.getInetAddr(), port);
+      setupOpenSocket(sock);
+      return sock;
     }
 
     public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
@@ -1832,6 +1781,8 @@ public class BlockingStreamComm
       SSLSocket s = (SSLSocket)
 	  sslSocketFactory.createSocket(addr.getInetAddr(), port);
       log.debug2("New SSL client socket: " + port + "@" + addr.toString());
+      // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
+      setupOpenSocket(s);
       if (paramSslClientAuth) {
 	handShake(s);
       }

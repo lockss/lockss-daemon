@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0038-3872
   
-      au < do_not_process ; Bulletin, Southern California Academy of Sciences Volume 104 ; 104 >
-      au < do_not_process ; Bulletin, Southern California Academy of Sciences Volume 105 ; 105 >
-      au < do_not_process ; Bulletin, Southern California Academy of Sciences Volume 106 ; 106 >
+      au < doNotProcess ; Bulletin, Southern California Academy of Sciences Volume 104 ; 104 >
+      au < doNotProcess ; Bulletin, Southern California Academy of Sciences Volume 105 ; 105 >
+      au < doNotProcess ; Bulletin, Southern California Academy of Sciences Volume 106 ; 106 >
     }
 
     {

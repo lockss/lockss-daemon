@@ -1,5 +1,5 @@
 /*
- * $Id: MDHashUserRealm.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
+ * $Id: MDHashUserRealm.java,v 1.3.68.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ in this Software without prior written authorization from Stanford University.
 // are private
 
 // ========================================================================
-// $Id: MDHashUserRealm.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
+// $Id: MDHashUserRealm.java,v 1.3.68.1 2009-11-03 23:44:51 edwardsb1 Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ public class MDHashUserRealm extends HashMap
   /* ------------------------------------------------------------ */
   private String _realmName;
   private String _config;
-  protected HashMap _roles=new HashMap(7);
+  protected Map<String,Set> _roles=new HashMap<String,Set>(7);
   private SSORealm _ssoRealm;
 
 
@@ -133,29 +133,29 @@ public class MDHashUserRealm extends HashMap
     Iterator iter = properties.entrySet().iterator();
     while(iter.hasNext())
       {
-	Map.Entry entry = (Map.Entry)iter.next();
+        Map.Entry entry = (Map.Entry)iter.next();
 
-	String username=entry.getKey().toString().trim();
-	String credentials=entry.getValue().toString().trim();
-	String roles=null;
-	int c=credentials.indexOf(',');
-	if (c>0)
-	  {
-	    roles=credentials.substring(c+1).trim();
-	    credentials=credentials.substring(0,c).trim();
-	  }
+        String username=entry.getKey().toString().trim();
+        String credentials=entry.getValue().toString().trim();
+        String roles=null;
+        int c=credentials.indexOf(',');
+        if (c>0)
+          {
+            roles=credentials.substring(c+1).trim();
+            credentials=credentials.substring(0,c).trim();
+          }
 
-	if (username!=null && username.length()>0 &&
-	    credentials!=null && credentials.length()>0)
-	  {
-	    put(username,credentials);
-	    if(roles!=null && roles.length()>0)
-	      {
-		StringTokenizer tok = new StringTokenizer(roles,", ");
-		while (tok.hasMoreTokens())
-		  addUserToRole(username,tok.nextToken());
-	      }
-	  }
+        if (username!=null && username.length()>0 &&
+            credentials!=null && credentials.length()>0)
+          {
+            put(username,credentials);
+            if(roles!=null && roles.length()>0)
+              {
+                StringTokenizer tok = new StringTokenizer(roles,", ");
+                while (tok.hasMoreTokens())
+                  addUserToRole(username,tok.nextToken());
+              }
+          }
       }
   }
 
@@ -185,13 +185,16 @@ public class MDHashUserRealm extends HashMap
 
   /* ------------------------------------------------------------ */
   public Principal authenticate(String username,
-				Object credentials,
-				HttpRequest request)
+                                Object credentials,
+                                HttpRequest request)
   {
+    if (log.isDebug2()) {
+      log.debug2("authenticate("+username+", "+credentials+")");
+    }
     KnownUser user;
     synchronized (this)
       {
-	user = (KnownUser)super.get(username);
+        user = (KnownUser)super.get(username);
       }
     if (user==null)
       return null;
@@ -237,17 +240,17 @@ public class MDHashUserRealm extends HashMap
   {
     if (credentials instanceof Principal)
       return super.put(name.toString(),
-		       credentials);
+                       credentials);
 
     if (credentials != null) {
       try {
-	Credential cred =
-	  MDCredential.makeCredential(credentials.toString());
-	return super.put(name, new KnownUser(name.toString(), cred));
+        Credential cred =
+          MDCredential.makeCredential(credentials.toString());
+        return super.put(name, new KnownUser(name.toString(), cred));
       } catch (Exception e) {
-	log.warning("Disabling user " + name +
-		    ", can't create credential " + credentials, e);
-	return super.remove(name);
+        log.warning("Disabling user " + name +
+                    ", can't create credential " + credentials, e);
+        return super.remove(name);
       }
     }
     return null;
@@ -260,11 +263,11 @@ public class MDHashUserRealm extends HashMap
    */
   public synchronized void addUserToRole(String userName, String roleName)
   {
-    HashSet userSet = (HashSet)_roles.get(roleName);
+    Set userSet = _roles.get(roleName);
     if (userSet==null)
       {
-	userSet=new HashSet(11);
-	_roles.put(roleName,userSet);
+        userSet=new HashSet(11);
+        _roles.put(roleName,userSet);
       }
     userSet.add(userName);
   }
@@ -289,7 +292,7 @@ public class MDHashUserRealm extends HashMap
     if (user==null || ((User)user).getUserRealm()!=this)
       return false;
 
-    HashSet userSet = (HashSet)_roles.get(roleName);
+    Set userSet = _roles.get(roleName);
     return userSet!=null && userSet.contains(user.getName());
   }
 
@@ -332,7 +335,7 @@ public class MDHashUserRealm extends HashMap
 
   /* ------------------------------------------------------------ */
   public Credential getSingleSignOn(HttpRequest request,
-				    HttpResponse response)
+                                    HttpResponse response)
   {
     if (_ssoRealm!=null)
       return _ssoRealm.getSingleSignOn(request,response);
@@ -342,9 +345,9 @@ public class MDHashUserRealm extends HashMap
 
   /* ------------------------------------------------------------ */
   public void setSingleSignOn(HttpRequest request,
-			      HttpResponse response,
-			      Principal principal,
-			      Credential credential)
+                              HttpResponse response,
+                              Principal principal,
+                              Credential credential)
   {
     if (_ssoRealm!=null)
       _ssoRealm.setSingleSignOn(request,response,principal,credential);

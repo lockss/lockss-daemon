@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterUtil.java,v 1.3 2007-02-06 00:52:27 tlipkis Exp $
+ * $Id: TestFilterUtil.java,v 1.3.36.1 2009-11-03 23:44:55 edwardsb1 Exp $
  */
 
 /*
@@ -35,8 +35,11 @@ package org.lockss.filter;
 import java.io.*;
 import java.nio.charset.*;
 import java.util.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 /**
  * Test class for org.lockss.filter.FilterUtil
@@ -65,4 +68,54 @@ public class TestFilterUtil extends LockssTestCase {
     assertSame(rdr, r2);
     assertReaderMatchesString("foo", r2);
   }
+
+  public void testGetCrawlFilteredStream() {
+    String mime = "text/html";
+    MyMockArchivalUnit mau = new MyMockArchivalUnit();
+    InputStream in = new MockInputStream();
+    assertSame(in, FilterUtil.getCrawlFilteredStream(mau, in, null, mime));
+    MyFiltFact fact = new MyFiltFact();
+    mau.setCrawlFilterFactory(fact);
+    MyFilterInputStream filtIn =
+      (MyFilterInputStream)FilterUtil.getCrawlFilteredStream(mau, in,
+							     null, mime);
+    assertEquals(mau, fact.au);
+    assertEquals(mime, mau.crawlFiltMime);
+    assertNotSame(filtIn, in);
+    assertSame(in, filtIn.in);
+  }
+
+  private static class MyFiltFact implements FilterFactory {
+    ArchivalUnit au;
+    String encoding;
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding)
+	throws PluginException {
+      this.au = au;
+      this.encoding = encoding;
+      return new MyFilterInputStream(in);
+    }
+  }
+
+  private static class MyFilterInputStream extends FilterInputStream {
+    InputStream in;
+    MyFilterInputStream(InputStream in) {
+      super(in);
+      this.in = in;
+    }
+    InputStream getWrappedStream() {
+      return in;
+    }
+  }
+
+  private static class MyMockArchivalUnit extends MockArchivalUnit {
+    String crawlFiltMime = null;
+
+    public FilterFactory getCrawlFilterFactory(String contentType) {
+      crawlFiltMime = contentType;
+      return super.getCrawlFilterFactory(contentType);
+    }
+  }
+
 }

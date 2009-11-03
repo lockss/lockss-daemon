@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.4 2007-11-08 00:56:33 thib_gc Exp $
+ * $Id: SpringerExploderHelper.java,v 1.4.24.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -99,6 +99,9 @@ public class SpringerExploderHelper implements ExploderHelper {
       logger.warning("Path " + ae.getName() + " too short");
       return;
     }
+    for (int i = 0; i < pathElements.length; i++) {
+      logger.debug3("pathElements[" + i + "] = " + pathElements[i]);
+    }
     for (int i = 0; i <= endOfBase; i++) {
       if (pathElements[i].startsWith(tags[i])) {
 	baseUrl += pathElements[i] + "/";
@@ -150,6 +153,8 @@ public class SpringerExploderHelper implements ExploderHelper {
 	      pathElements[PUB_INDEX].substring(4));
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX].substring(4));
+    props.put(ConfigParamDescr.YEAR.getKey(),
+	      pathElements[ART_INDEX].substring(4,8));
     ae.setAuProps(props);
   }
 }

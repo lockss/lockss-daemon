@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.11 2008-05-27 04:30:37 dshr Exp $
+ * $Id: Exploder.java,v 1.11.16.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -62,6 +62,9 @@ public abstract class Exploder {
     Configuration.PREFIX + "crawler.exploder.explodedPluginName";
   public static final String DEFAULT_EXPLODED_PLUGIN_NAME =
     ExplodedPlugin.class.getName();
+  public static final String PARAM_EXPLODED_AU_YEAR =
+    Configuration.PREFIX + "crawler.exploder.explodedAuYear";
+  public static final String DEFAULT_EXPLODED_AU_YEAR = "none";
   public static final String PARAM_EXPLODER_ENTRIES_PER_PAUSE =
     Configuration.PREFIX + "crawler.exploder.entriesPerPause";
   public static final long DEFAULT_EXPLODER_ENTRIES_PER_PAUSE = 200;
@@ -69,7 +72,7 @@ public abstract class Exploder {
     Configuration.PREFIX + "crawler.exploder.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 3*Constants.SECOND;
   public static final String PARAM_EXPLODED_AU_BASE_URL =
-    Configuration.PREFIX + "crawler.exploder.PARAM_EXPLODED_AU_BASE_URL";
+    Configuration.PREFIX + "crawler.exploder.explodedAuBaseUrl";
   public static final String DEFAULT_EXPLODED_AU_BASE_URL = "none";
 
 
@@ -104,7 +107,7 @@ public abstract class Exploder {
    * @param store true to store the archive as well
    */
   protected Exploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
-		     BaseCrawler crawler, boolean explode, boolean store) {
+                     BaseCrawler crawler, boolean explode, boolean store) {
     urlCacher = uc;
     this.maxRetries = maxRetries;
     this.crawlSpec = crawlSpec;
@@ -116,12 +119,8 @@ public abstract class Exploder {
     pluginMgr = daemon.getPluginManager();
     sleepAfter =
       CurrentConfig.getLongParam(PARAM_EXPLODER_ENTRIES_PER_PAUSE,
-				 DEFAULT_EXPLODER_ENTRIES_PER_PAUSE);
-    explodedAUBaseUrl = 
-      CurrentConfig.getParam(PARAM_EXPLODED_AU_BASE_URL,
-			     DEFAULT_EXPLODED_AU_BASE_URL);
-    multipleStemsPerAu =
-      ! DEFAULT_EXPLODED_AU_BASE_URL.equals(explodedAUBaseUrl);
+                                 DEFAULT_EXPLODER_ENTRIES_PER_PAUSE);
+    multipleStemsPerAu = false; // XXX
   }
 
   /**
@@ -149,24 +148,23 @@ public abstract class Exploder {
     }
     if (au == null) {
       if (multipleStemsPerAu) {
-	logger.debug3("New single AU for base url " + baseUrl + " exploded " +
-		      explodedAUBaseUrl);
-	if (singleAU == null) {
-	  singleAU = createAu(ae, explodedAUBaseUrl);
-	  singleAU.addUrlStemToAU(explodedAUBaseUrl);
-	}
-	// Add this baseUrl to the stem set for the AU we're making
-	singleAU.addUrlStemToAU(baseUrl);
-	pluginMgr.addHostAus(singleAU);
-	au = singleAU;
+        logger.debug3("New single AU for base url " + baseUrl);
+        if (singleAU == null) {
+          singleAU = createAu(ae);
+          singleAU.addUrlStemToAU(ae.getBaseUrl());
+        }
+        // Add this baseUrl to the stem set for the AU we're making
+        singleAU.addUrlStemToAU(ae.getBaseUrl());
+        pluginMgr.addHostAus(singleAU);
+        au = singleAU;
       } else {
-	logger.debug3("New AU for " + baseUrl);
-	// There's no AU for this baseUrl,  so create one
-	au = createAu(ae, baseUrl);
+        logger.debug3("New AU for " + ae.getBaseUrl());
+        // There's no AU for this baseUrl,  so create one
+        au = createAu(ae);
       }
     }
     if (au == null) {
-      IOException ex = new IOException("No new AU for " + baseUrl);
+      IOException ex = new IOException("No new AU for " + ae.getBaseUrl());
       logger.error(ex.toString() + new Throwable());
       throw ex;
     }
@@ -192,17 +190,23 @@ public abstract class Exploder {
     // XXX other stats to update?
   }
 
-  protected ExplodedArchivalUnit createAu(ArchiveEntry ae, String baseUrl)
+  protected ExplodedArchivalUnit createAu(ArchiveEntry ae)
       throws IOException {
     CIProperties props = ae.getAuProps();
     if (props == null) {
       props = new CIProperties();
-      props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+      props.put(ConfigParamDescr.BASE_URL.getKey(), ae.getBaseUrl());
     }
     props.put(ConfigParamDescr.PUB_NEVER.getKey(), "true");
     addRepoProp(props);
+    if (props.get(ConfigParamDescr.YEAR.getKey()) == null) {
+      String year = CurrentConfig.getParam(PARAM_EXPLODED_AU_YEAR,
+                                           DEFAULT_EXPLODED_AU_YEAR);
+      props.put(ConfigParamDescr.YEAR.getKey(), year);
+    }
+
     String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,
-					       DEFAULT_EXPLODED_PLUGIN_NAME);
+                                               DEFAULT_EXPLODED_PLUGIN_NAME);
     String key = PluginManager.pluginKeyFromName(pluginName);
     logger.debug3(pluginName + " has key: " + key);
     Plugin plugin = pluginMgr.getPlugin(key);
@@ -212,19 +216,19 @@ public abstract class Exploder {
     }
     if (logger.isDebug3()) {
       logger.debug3("Create AU, plugin: " + pluginName +
-		    ": " + plugin.toString());
+                    ": " + plugin.toString());
       logger.debug3("props: " + props);
     }
     try {
       ArchivalUnit au = pluginMgr.createAndSaveAuConfiguration(plugin, props);
       if (au == null) {
-	logger.error("Failed to create new AU", new Throwable());
-	throw new IOException("Can't create au for " + baseUrl);
+        logger.error("Failed to create new AU", new Throwable());
+        throw new IOException("Can't create au for " + ae.getBaseUrl());
       }
       return (ExplodedArchivalUnit)au;
     } catch (ArchivalUnit.ConfigurationException ex) {
       logger.error("createAndSaveAuConfiguration() threw " + ex.toString());
-      throw new IOException(pluginName + " not initialized for " + baseUrl);
+      throw new IOException(pluginName + " not initialized for " + ae.getBaseUrl());
     }
   }
 
@@ -241,23 +245,23 @@ public abstract class Exploder {
     String addBaseUrl = ae.getBaseUrl();
     if (stringsToAdd != null) {
       if (addTextTo == null) {
-	addTextTo = new Hashtable();
+        addTextTo = new Hashtable();
       }
       for (Enumeration en = stringsToAdd.keys(); en.hasMoreElements(); ) {
-	String addToUrl = (String)en.nextElement();
-	String oldText = "";
-	if (addTextTo.containsKey(addToUrl)) {
-	  oldText = (String)addTextTo.get(addToUrl);
-	}
-	String addition = (String)stringsToAdd.get(addToUrl);
-	if (oldText.indexOf(addition) < 0) {
-	  oldText += addition;
-	  addTextTo.put(addToUrl, oldText);
-	  logger.debug3("stringsToAdd for " + addToUrl +
-			" now " + oldText);
-	} else {
-	  logger.debug3(oldText + " contains " + addition);
-	}
+        String addToUrl = (String)en.nextElement();
+        String oldText = "";
+        if (addTextTo.containsKey(addToUrl)) {
+          oldText = (String)addTextTo.get(addToUrl);
+        }
+        String addition = (String)stringsToAdd.get(addToUrl);
+        if (oldText.indexOf(addition) < 0) {
+          oldText += addition;
+          addTextTo.put(addToUrl, oldText);
+          logger.debug3("stringsToAdd for " + addToUrl +
+                        " now " + oldText);
+        } else {
+          logger.debug3(oldText + " contains " + addition);
+        }
       }
     }
   }
@@ -265,20 +269,20 @@ public abstract class Exploder {
   protected void addText() {
     if (addTextTo != null) {
       for (Enumeration en = addTextTo.keys(); en.hasMoreElements(); ) {
-	String url = (String) en.nextElement();
-	String text = (String) addTextTo.get(url);
+        String url = (String) en.nextElement();
+        String text = (String) addTextTo.get(url);
 
-	CachedUrl cu = pluginMgr.findCachedUrl(url, false);
-	if (cu == null) {
-	  logger.error("Trying to update page outside AU" +
-		       url);
-	} else try {
-	  addTextToPage(cu, url, text);
-	} catch (IOException e) {
-	  logger.error("addTextToPage(" + url + ") threw " + e.toString());
-	} finally {
-	  cu.release();
-	}	  
+        CachedUrl cu = pluginMgr.findCachedUrl(url, false);
+        if (cu == null) {
+          logger.error("Trying to update page outside AU" +
+                       url);
+        } else try {
+          addTextToPage(cu, url, text);
+        } catch (IOException e) {
+          logger.error("addTextToPage(" + url + ") threw " + e.toString());
+        } finally {
+          cu.release();
+        }         
       }
     }
   }
@@ -294,21 +298,22 @@ public abstract class Exploder {
       logger.debug3("Create new page " + url + " in " + au.getAuId());
       List manifestPages = crawlSpec.getPermissionPages();
       if (manifestPages.isEmpty()) {
-	throw new IOException("Permission page list empty for " + url);
+        throw new IOException("Permission page list empty for " + url);
       }
       CachedUrl manifestCu =
-	pluginMgr.findCachedUrl((String)manifestPages.get(0));
+        pluginMgr.findCachedUrl((String)manifestPages.get(0));
       if (manifestCu == null) {
-	throw new IOException("Can't get CachedUrl for " +
-			      (String)manifestPages.get(0));
+        throw new IOException("Can't get CachedUrl for " +
+                              (String)manifestPages.get(0));
       }
       oldPage = new StringFilter(manifestCu.openForReading(),
-				 manifestPageTag, manifestPageAdd);
+                                 manifestPageTag, manifestPageAdd);
       props = manifestCu.getProperties();
       props.setProperty("x-lockss-node-url", UrlUtil.minimallyEncodeUrl(url));
+      manifestCu.release();
     } else {
       logger.debug3("Adding text " + newText + " to page " + url +
-		    " in " + au.getAuId());
+                    " in " + au.getAuId());
       oldPage = indexCu.openForReading();
       props = indexCu.getProperties();
     }
@@ -372,7 +377,7 @@ public abstract class Exploder {
     if (mimeMap == null) {
       mimeMap = new HashMap();
       for (int i = 0; i < extension.length; i++) {
-	mimeMap.put(extension[i], contentType[i]);
+        mimeMap.put(extension[i], contentType[i]);
       }
     }
 
@@ -381,7 +386,7 @@ public abstract class Exploder {
     if (ix > 0) {
       String mt = (String)mimeMap.get(url.substring(ix));
       if (mt !=null) {
-	mimeType = mt;
+        mimeType = mt;
       }
     }
     logger.debug3(url + " mime-type " + mimeType);
@@ -402,7 +407,7 @@ public abstract class Exploder {
     private LockssDaemon theDaemon;
 
     DefaultExploderHelper(UrlCacher uc, CrawlSpec crawlSpec,
-			  BaseCrawler crawler) {
+                          BaseCrawler crawler) {
       this.uc = uc;
       this.crawlSpec = crawlSpec;
       this.crawler = crawler;

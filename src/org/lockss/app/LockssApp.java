@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.17 2008-02-21 01:08:21 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.17.20.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -131,7 +131,7 @@ public abstract class LockssApp {
   // need to be synchronized.
   protected LinkedMap managerMap = new LinkedMap();
 
-  private static LockssApp theApp;
+  protected static LockssApp theApp;
 
   protected LockssApp() {
     theApp = this;

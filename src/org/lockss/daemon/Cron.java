@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.9 2008-07-16 00:11:15 tlipkis Exp $
+ * $Id: Cron.java,v 1.9.14.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.util.SerializationException.FileNotFound;
 import org.lockss.remote.*;
+import org.lockss.account.*;
 
 /** A rudimentary cron facility.  Tasks are added programmatically, checked
  * at discreet interval (default one hour) to see if time to run.  Last run
@@ -85,8 +86,8 @@ public class Cron
   }
 
   public synchronized void setConfig(Configuration config,
-				     Configuration prevConfig,
-				     Configuration.Differences changedKeys) {
+                                     Configuration prevConfig,
+                                     Configuration.Differences changedKeys) {
 
     if (!getDaemon().isDaemonInited()) {
       return;
@@ -98,9 +99,9 @@ public class Cron
     }
     if (doEnable != enabled) {
       if (doEnable) {
-	enable();
+        enable();
       } else {
-	disable();
+        disable();
       }
       enabled = doEnable;
     }
@@ -109,6 +110,7 @@ public class Cron
   /** Install standard tasks */
   void installTasks() {
     addTask(new MailBackupFile(getDaemon()));
+    addTask(new SendPasswordReminder(getDaemon()));
   }
 
   /** Add a task */
@@ -151,7 +153,7 @@ public class Cron
   }
 
   private synchronized void enable() {
-    stopRunning();		      // First, ensure no current timer req
+    stopRunning();                    // First, ensure no current timer req
     enabled = true;
     log.info("Enabling");
     schedNext();
@@ -180,10 +182,10 @@ public class Cron
   private TimerQueue.Callback timerCallback =
     new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
-	checkTasks();
+        checkTasks();
       }
       public String toString() {
-	return "Cron";
+        return "Cron";
       }
     };
 
@@ -196,16 +198,16 @@ public class Cron
       long now = TimeBase.nowMs();
       boolean needStore = false;
       for (Iterator iter = tasks.iterator(); iter.hasNext(); ) {
-	Cron.Task task = (Cron.Task)iter.next();
-	if (task.nextTime(state.getLastTime(task.getId())) <= now) {
-	  if (executeTask(task)) {
-	    state.setLastTime(task.getId(), now);
-	    needStore = true;
-	  }
-	}
+        Cron.Task task = (Cron.Task)iter.next();
+        if (task.nextTime(state.getLastTime(task.getId())) <= now) {
+          if (executeTask(task)) {
+            state.setLastTime(task.getId(), now);
+            needStore = true;
+          }
+        }
       }
       if (needStore) {
-	storeState(cronStateFile);
+        storeState(cronStateFile);
       }
     }
     if (enabled) {
@@ -218,14 +220,67 @@ public class Cron
       return task.execute();
     } catch (Exception e) {
       try {
-	log.error("Error executing task " + task, e);
+        log.error("Error executing task " + task, e);
       } catch (Exception e2) {
-	// in case task.toString() throws
-	log.error("Error executing task", e);
+        // in case task.toString() throws
+        log.error("Error executing task", e);
       }
     }
     return true;
   }
+
+  // return top of next hour
+  public static long nextHour(long lastTime) {
+    return ((lastTime + Constants.HOUR) / Constants.HOUR) * Constants.HOUR;
+  }
+
+  // return midnight the next day
+  public static long nextDay(long lastTime) {
+    Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
+                                        Locale.US);
+    cal.setTimeInMillis(lastTime);
+    cal.add(Calendar.DAY_OF_WEEK, 1);
+    cal.set(Calendar.HOUR, 0);
+    cal.set(Calendar.MINUTE, 0);
+    cal.set(Calendar.SECOND, 0);
+    return cal.getTimeInMillis();
+  }
+
+  // return the first day of the next week
+  public static long nextWeek(long lastTime) {
+    int day = Calendar.MONDAY;
+    // calculations below are dependent on calendar's firstDayOfWeek,
+    // etc. values, which vary in different locales.  Ensure we're using
+    // expected Locale
+    Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
+                                        Locale.US);
+    cal.setTimeInMillis(lastTime);
+    if (cal.get(Calendar.DAY_OF_WEEK) >= day) {
+      cal.add(Calendar.WEEK_OF_MONTH, 1);
+    }
+    cal.set(Calendar.DAY_OF_WEEK, day);
+    cal.set(Calendar.HOUR, 0);
+    cal.set(Calendar.MINUTE, 0);
+    cal.set(Calendar.SECOND, 0);
+    return cal.getTimeInMillis();
+  }
+
+  // return the first day of the next month
+  public static long nextMonth(long lastTime) {
+    int day = 1;
+    Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
+                                        Locale.US);
+    cal.setTimeInMillis(lastTime);
+    if (cal.get(Calendar.DAY_OF_MONTH) >= day) {
+      cal.add(Calendar.MONTH, 1);
+    }
+    cal.set(Calendar.DAY_OF_MONTH, day);
+    cal.set(Calendar.HOUR, 0);
+    cal.set(Calendar.MINUTE, 0);
+    cal.set(Calendar.SECOND, 0);
+    return cal.getTimeInMillis();
+  }
+
 
   /** Interface that cron tasks must implement */
   public interface Task {
@@ -242,7 +297,7 @@ public class Cron
     long getLastTime(String id) {
       Long l = (Long)times.get(id);
       if (l == null) {
-	return 0;
+        return 0;
       }
       return l.longValue();
     }
@@ -252,13 +307,33 @@ public class Cron
     }
   }
 
+  /** Task base */
+  abstract static class BaseTask implements Cron.Task {
+    protected LockssDaemon daemon;
+
+    BaseTask(LockssDaemon daemon) {
+      this.daemon = daemon;
+    }
+
+    public long nextTime(long lastTime, String freq) {
+      if ("hourly".equalsIgnoreCase(freq)) {
+        return nextHour(lastTime);
+      } else if ("daily".equalsIgnoreCase(freq)) {
+        return nextDay(lastTime);
+      } else if ("weekly".equalsIgnoreCase(freq)) {
+        return nextWeek(lastTime);
+      } else {
+        return nextMonth(lastTime);
+      }
+    }
+  }
+
   /** Cron.Task to periodically mail back file to cache admin.  Doesn't
    * belong here. */
-  static class MailBackupFile implements Cron.Task {
-    LockssDaemon daemon;
+  static class MailBackupFile extends BaseTask {
 
     MailBackupFile(LockssDaemon daemon) {
-      this.daemon = daemon;
+      super(daemon);
     }
 
     public String getId() {
@@ -266,59 +341,44 @@ public class Cron
     }
 
     public long nextTime(long lastTime) {
-      String freq =
-        CurrentConfig.getParam(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
-			       RemoteApi.DEFAULT_BACKUP_EMAIL_FREQ);
-      if ("weekly".equalsIgnoreCase(freq)) {
-	return nextWeek(lastTime);
-      } else {
-	return nextMonth(lastTime);
-      }
-    }
-
-    // return the first day of the next week
-    public long nextWeek(long lastTime) {
-      int day = Calendar.MONDAY;
-      // calculations below are dependent on calendar's firstDayOfWeek,
-      // etc. values, which vary in different locales.  Ensure we're using
-      // expected Locale
-      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
-					  Locale.US);
-      cal.setTimeInMillis(lastTime);
-      if (cal.get(Calendar.DAY_OF_WEEK) >= day) {
-	cal.add(Calendar.WEEK_OF_MONTH, 1);
-      }
-      cal.set(Calendar.DAY_OF_WEEK, day);
-      cal.set(Calendar.HOUR, 0);
-      cal.set(Calendar.MINUTE, 0);
-      cal.set(Calendar.SECOND, 0);
-      return cal.getTimeInMillis();
-    }
-
-    // return the first day of the next month
-    public long nextMonth(long lastTime) {
-      int day = 1;
-      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
-					  Locale.US);
-      cal.setTimeInMillis(lastTime);
-      if (cal.get(Calendar.DAY_OF_MONTH) >= day) {
-	cal.add(Calendar.MONTH, 1);
-      }
-      cal.set(Calendar.DAY_OF_MONTH, day);
-      cal.set(Calendar.HOUR, 0);
-      cal.set(Calendar.MINUTE, 0);
-      cal.set(Calendar.SECOND, 0);
-      return cal.getTimeInMillis();
+      return nextTime(lastTime,
+                      CurrentConfig.getParam(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+                                             RemoteApi.DEFAULT_BACKUP_EMAIL_FREQ));
     }
 
     public boolean execute() {
       RemoteApi rmtApi = daemon.getRemoteApi();
       try {
-	return rmtApi.sendMailBackup(false);
+        return rmtApi.sendMailBackup(false);
       } catch (IOException e) {
-	log.warning("Failed to mail backup file", e);
+        log.warning("Failed to mail backup file", e);
       }
       return true;
+    }
+  }
+
+  /** Cron.Task to periodically send password change reminders to users.
+   * Doesn't belong here. */
+  static class SendPasswordReminder extends BaseTask {
+
+    SendPasswordReminder(LockssDaemon daemon) {
+      super(daemon);
+    }
+
+    public String getId() {
+      return "SendPasswordReminder";
+    }
+
+    public long nextTime(long lastTime) {
+      String freq = 
+        CurrentConfig.getParam(AccountManager.PARAM_PASSWORD_CHECK_FREQ,
+                               AccountManager.DEFAULT_PASSWORD_CHECK_FREQ);
+      return nextTime(lastTime, freq);
+    }
+
+    public boolean execute() {
+      AccountManager mgr = daemon.getAccountManager();
+      return mgr.checkPasswordReminders();
     }
   }
 }

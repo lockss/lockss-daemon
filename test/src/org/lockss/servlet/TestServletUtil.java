@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.7 2008-08-11 23:37:05 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.7.14.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -49,16 +49,16 @@ public class TestServletUtil extends LockssTestCase {
 
   public void testBackupFileUrl() throws Exception {
     assertEquals("http://host.edu:8081/BatchAuConfig?lockssAction=Backup",
-		 ServletUtil.backupFileUrl("host.edu"));
+                 ServletUtil.backupFileUrl("host.edu"));
 
     ConfigurationUtil.setFromArgs(AdminServletManager.PARAM_PORT, "1234");
     assertEquals("http://lib.edu:1234/BatchAuConfig?lockssAction=Backup",
-		 ServletUtil.backupFileUrl("lib.edu"));
+                 ServletUtil.backupFileUrl("lib.edu"));
 
   }
 
   private MockArchivalUnit setUpAu(String name, String manifest,
-				   long lastCrawlTime) {
+                                   long lastCrawlTime) {
     MockLockssDaemon daemon = getMockLockssDaemon();
     Plugin pl = new MockPlugin(daemon);
     MockArchivalUnit mau = new MockArchivalUnit();
@@ -106,13 +106,13 @@ public class TestServletUtil extends LockssTestCase {
       "<font size=\"\\+2\"><b>Volume Manifests on host.edu</b></font>" +
       "</td></tr>" +
       (!started ? ("<tr><td align=\"center\" colspan=\"3\"><center>" +
-		     "<font color=red size=\\+1>" +
-		     "This LOCKSS box is still starting.  " +
-		     "Table contents may be incomplete.</font></center>" +
-		     "<br></td></tr>")
+                     "<font color=red size=\\+1>" +
+                     "This LOCKSS box is still starting.  " +
+                     "Table contents may be incomplete.</font></center>" +
+                     "<br></td></tr>")
        : "") +
-      "<tr><th>Archival Unit</th>" + spacer +
-      "<th>Manifest</th></tr>" +
+      "<tr><th align=left>Archival Unit</th>" + spacer +
+      "<th align=left>Manifest</th></tr>" +
       "<tr><td align=\"left\">" + au1 + "</td.*>" + spacer +
       "<td align=\"left\">" +
       "<a href=\"" + m1 + "\">" + m1 + "</a></td></tr>" +

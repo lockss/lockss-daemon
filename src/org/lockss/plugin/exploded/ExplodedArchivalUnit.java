@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.7 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.7.14.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.state.AuState;
 
 /**
@@ -47,14 +48,14 @@ import org.lockss.state.AuState;
  * @version 1.0
  */
 
-public class ExplodedArchivalUnit extends BaseArchivalUnit {
+public class ExplodedArchivalUnit extends DefinableArchivalUnit {
   private String m_explodedBaseUrl = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
   private ArrayList permissionPageUrls = new ArrayList();
   private ArrayList urlStems = new ArrayList();
 
-  public ExplodedArchivalUnit(ExplodedPlugin plugin) {
-    super(plugin);
+  public ExplodedArchivalUnit(ExplodedPlugin plugin, ExternalizableMap defMap) {
+    super(plugin, defMap);
   }
 
   public void loadAuConfigDescrs(Configuration config)
@@ -67,26 +68,18 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
       // We have some config info to work with
       String journalId = config.get(ConfigParamDescr.JOURNAL_ISSN.getKey());
       if (journalId == null) {
-	journalId = config.get(ConfigParamDescr.JOURNAL_ABBR.getKey());
-	if (journalId == null) {
-	  journalId = config.get(ConfigParamDescr.JOURNAL_DIR.getKey());
-	}
+        journalId = config.get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+        if (journalId == null) {
+          journalId = config.get(ConfigParamDescr.JOURNAL_DIR.getKey());
+        }
       }
       if (journalId != null) {
-	auName += " " + journalId;
+        auName += " " + journalId;
       }
     }
     addUrlStemToAU(m_explodedBaseUrl);
   }
 
-
-  // Called by RegistryPlugin iff any config below RegistryPlugin.PREFIX
-  // has changed
-  protected void setConfig(Configuration config,
-			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
-    // XXX
-  }
 
   /**
    * return a string that represents the plugin registry.  This is
@@ -116,7 +109,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
       String stem = (String)it.next();
       logger.debug3("shouldBeCached(" + url + ") stem " + stem);
       if (url.startsWith(stem)) {
-	return true;
+        return true;
       }
     }
     return false;
@@ -140,11 +133,11 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
 
     public int match(String url) {
       for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-	String stem = (String)it.next();
-	logger.debug3("match(" + url + ") stem " + stem);
-	if (url.startsWith(stem)) {
-	  return INCLUDE;
-	}
+        String stem = (String)it.next();
+        logger.debug3("match(" + url + ") stem " + stem);
+        if (url.startsWith(stem)) {
+          return INCLUDE;
+        }
       }
       return EXCLUDE;
     }
@@ -177,7 +170,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
       String stem = UrlUtil.getUrlPrefix(url);
       permissionPageUrls.add(url);
       if (urlStems.indexOf(stem) < 0) {
-	urlStems.add(stem);
+        urlStems.add(stem);
       }
     } catch (MalformedURLException ex) {
       logger.debug3("addUrlStemToAU(" + url + ") threw " + ex);
@@ -193,5 +186,4 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
       super(startUrls, null, null, null);
     }
   }
-    
 }

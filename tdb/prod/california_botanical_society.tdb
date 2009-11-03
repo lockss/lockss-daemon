@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0024-9637
   
-      au < do_not_process ; Madroño Volume 52 ; 52 >
-      au < do_not_process ; Madroño Volume 53 ; 53 >
-      au < do_not_process ; Madroño Volume 54 ; 54 >
+      au < doNotProcess ; Madroño Volume 52 ; 52 >
+      au < doNotProcess ; Madroño Volume 53 ; 53 >
+      au < doNotProcess ; Madroño Volume 54 ; 54 >
     }
 
     {

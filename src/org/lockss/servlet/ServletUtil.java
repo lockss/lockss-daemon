@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.58 2009-03-05 05:40:46 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.58.4.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -119,6 +119,14 @@ public class ServletUtil {
   static final String PARAM_DISABLED_SERVLETS =
     Configuration.PREFIX + "ui.disabledServlets";
   static final List DEFAULT_DISABLED_SERVLETS = Collections.EMPTY_LIST;
+
+  /** URL of third party logo image */
+  static final String PARAM_THIRD_PARTY_LOGO_IMAGE =
+    Configuration.PREFIX + "ui.logo.img";
+
+  /** URL of third party logo link */
+  static final String PARAM_THIRD_PARTY_LOGO_LINK =
+    Configuration.PREFIX + "ui.logo.link";
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -337,28 +345,35 @@ public class ServletUtil {
   private static final String SUBMIT_BEFORE =
     "<br><center>";
 
+  private static String thirdPartyLogo;
+  private static String thirdPartyLogoLink;
+
   private static Map<String,String> disabledServlets = new HashMap();
 
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
-			       Configuration oldConfig,
-			       Configuration.Differences diffs) {
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);
     }
+    thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
+    if (thirdPartyLogo != null) {
+      thirdPartyLogoLink = config.get(PARAM_THIRD_PARTY_LOGO_LINK);
+    }
     if (diffs.contains(PARAM_DISABLED_SERVLETS)) {
       List<String> dis = config.getList(PARAM_DISABLED_SERVLETS,
-				DEFAULT_DISABLED_SERVLETS);
+                                DEFAULT_DISABLED_SERVLETS);
       disabledServlets.clear();
       for (String s : dis) {
-	String exp = "";
-	int pos = s.indexOf(':');
-	if (pos > 0) {
-	  exp = s.substring(pos + 1);
-	  s = s.substring(0, pos);
-	}
-	disabledServlets.put(s, exp);
+        String exp = "";
+        int pos = s.indexOf(':');
+        if (pos > 0) {
+          exp = s.substring(pos + 1);
+          s = s.substring(0, pos);
+        }
+        disabledServlets.put(s, exp);
       }
     }
   }
@@ -373,7 +388,7 @@ public class ServletUtil {
   public static String backupFileUrl(String hostname) {
     ServletDescr backupServlet = AdminServletManager.SERVLET_BATCH_AU_CONFIG;
     int port = CurrentConfig.getIntParam(AdminServletManager.PARAM_PORT,
-					 AdminServletManager.DEFAULT_PORT);
+                                         AdminServletManager.DEFAULT_PORT);
     StringBuffer sb = new StringBuffer();
     sb.append("http://");
     sb.append(hostname);
@@ -452,8 +467,8 @@ public class ServletUtil {
                             int border,
                             String tooltip) {
     Image img = image(file, width, height, border);
-    img.alt(tooltip);			// some browsers (IE) use alt tag
-    img.attribute("title", tooltip);	// some (Mozilla) use title tag
+    img.alt(tooltip);                   // some browsers (IE) use alt tag
+    img.attribute("title", tooltip);    // some (Mozilla) use title tag
     return img;
   }
 
@@ -540,8 +555,8 @@ public class ServletUtil {
   }
 
   public static void layoutAuStatus(LockssServlet servlet,
-				    Page page,
-				    List<BatchAuStatus.Entry> auStatusList) {
+                                    Page page,
+                                    List<BatchAuStatus.Entry> auStatusList) {
     Set userMessages = new HashSet();
     Table tbl = new Table(AUSTATUS_TABLE_BORDER, AUSTATUS_TABLE_ATTRIBUTES);
     tbl.addHeading("Status");
@@ -558,26 +573,26 @@ public class ServletUtil {
       String exp = stat.getExplanation();
       String umsg = stat.getUserMessage();
       if (exp != null || umsg != null) {
-	StringBuilder sb = new StringBuilder();
-	if (exp != null) {
-	  sb.append(exp);
-	}
-	if (umsg != null) {
-	  sb.append("See note");
-	  sb.append(servlet.addFootnote(umsg));
-	}
+        StringBuilder sb = new StringBuilder();
+        if (exp != null) {
+          sb.append(exp);
+        }
+        if (umsg != null) {
+          sb.append("See note");
+          sb.append(servlet.addFootnote(umsg));
+        }
         tbl.newCell();
         tbl.add(sb.toString());
       }
       if (stat.getUserMessage() != null) {
-	userMessages.add(stat.getUserMessage());
+        userMessages.add(stat.getUserMessage());
       }
     }
     if (!userMessages.isEmpty()) {
       layoutExplanationBlock(page,
-			     "<font color=\"red\" size=\"+1\">" +
-			     "Some of the titles you just configured may require additional action.  Please see the notes at the bottom of this page." +
-			     "</font>");
+                             "<font color=\"red\" size=\"+1\">" +
+                             "Some of the titles you just configured may require additional action.  Please see the notes at the bottom of this page." +
+                             "</font>");
     }
     page.add(tbl);
   }
@@ -695,7 +710,7 @@ public class ServletUtil {
     }
     String portFieldId = "id_" + portFieldName;
     enaElem.attribute("onchange",
-		      "selectEnable(this,'" + portFieldId + "')");
+                      "selectEnable(this,'" + portFieldId + "')");
     servlet.setTabOrder(enaElem);
     table.add(enaElem);
     table.add("Enable " + enableDescription);
@@ -763,7 +778,7 @@ public class ServletUtil {
 
   static boolean shouldDisplayGroups(List groups) {
     List dontGroups = CurrentConfig.getList(PARAM_DONT_DISPLAY_GROUPS,
-					    DEFAULT_DONT_DISPLAY_GROUPS);
+                                            DEFAULT_DONT_DISPLAY_GROUPS);
     return groups != null && !CollectionUtils.containsAny(groups, dontGroups);
   }
 
@@ -777,12 +792,18 @@ public class ServletUtil {
                                   Iterator descrIterator) {
     Composite comp = new Composite();
     Table table = new Table(HEADER_TABLE_BORDER, HEADER_TABLE_ATTRIBUTES);
-    Image logo = isLargeLogo ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
-
+    Image logo = ((isLargeLogo && thirdPartyLogo == null)
+                  ? IMAGE_LOGO_LARGE
+                  : IMAGE_LOGO_SMALL);
     table.newRow();
     table.newCell("valign=\"top\" align=\"center\" width=\"20%\"");
     table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
     table.add(IMAGE_TM);
+    if (thirdPartyLogo != null) {
+      Image img = new Image(thirdPartyLogo);
+      img.border(0);
+      table.add(new Link(thirdPartyLogoLink, img));
+    }
 
     table.newCell("valign=\"top\" align=\"center\" width=\"60%\"");
     table.add("<br>");
@@ -796,12 +817,12 @@ public class ServletUtil {
     if (shouldDisplayGroups(groups)) {
       table.add("&nbsp;&nbsp;(");
       if (groups.size() == 1) {
-	addBold(table, groups.get(0));
-	table.add(" group");
+        addBold(table, groups.get(0));
+        table.add(" group");
       } else {
-	table.add(StringUtil.separatedDelimitedString(groups, ", ",
-						      "<b>", "</b>"));
-	table.add(" groups");
+        table.add(StringUtil.separatedDelimitedString(groups, ", ",
+                                                      "<b>", "</b>"));
+        table.add(" groups");
       }
       table.add(")");
     }
@@ -931,9 +952,9 @@ public class ServletUtil {
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT); // "Repository"
       if (isChoice) {
-	tbl.add(radioButton(servlet, repoTag, repo, repo == mostFree));
+        tbl.add(radioButton(servlet, repoTag, repo, repo == mostFree));
       } else {
-	tbl.add(repo);
+        tbl.add(repo);
       }
       addDfToRow(repoMgr, df, tbl);
     }
@@ -942,7 +963,7 @@ public class ServletUtil {
   }
 
   static void addDfToRow(RepositoryManager repoMgr,
-			 PlatformUtil.DF df, Table tbl) {
+                         PlatformUtil.DF df, Table tbl) {
     if (df != null) {
       tbl.newCell(ALIGN_RIGHT); // "Size"
       tbl.add(SPACE);
@@ -950,7 +971,7 @@ public class ServletUtil {
       tbl.newCell(ALIGN_RIGHT); // "Free"
       tbl.add(SPACE);
       tbl.add(diskSpaceColor(repoMgr, df,
-			     StringUtil.sizeKBToString(df.getAvail())));
+                             StringUtil.sizeKBToString(df.getAvail())));
       tbl.newCell(ALIGN_RIGHT); // "%Full"
       tbl.add(SPACE);
       tbl.add(diskSpaceColor(repoMgr, df, df.getPercentString()));
@@ -991,7 +1012,7 @@ public class ServletUtil {
 
   public static void layoutSubmitButton(LockssServlet servlet,
                                         Composite composite,
-					String key,
+                                        String key,
                                         String value) {
     Input submit = new Input(Input.Submit, key, value);
     servlet.setTabOrder(submit);
@@ -1024,8 +1045,8 @@ public class ServletUtil {
     }
 
     tbl.newRow();
-    tbl.newCell();
-    tbl.add(layoutSelectAllButton(servlet));
+    tbl.newCell(ALIGN_LEFT + " colspan=\"99\"");
+    Block selAllBlock1 = tbl.cell();
 
     tbl.newRow();
     tbl.addHeading(verb.cap + "?", ALIGN_RIGHT + " rowspan=\"2\"");
@@ -1044,6 +1065,7 @@ public class ServletUtil {
     }
 
     boolean isAnyAssignedRepo = false;
+    boolean isAnyNotAssignedRepo = false;
     while (basEntryIter.hasNext()) {
       // Get next entry
       BatchAuStatus.Entry rs = (BatchAuStatus.Entry)basEntryIter.next();
@@ -1057,14 +1079,15 @@ public class ServletUtil {
         cb.attribute("onClick", "if (this.checked) selectRepo(this, this.form);");
         tbl.add(cb);
 
+        List existingRepoNames = rs.getRepoNames();
+        String firstRepo = null;
+        if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
+          firstRepo = (String)existingRepoNames.get(0);
+          isAnyAssignedRepo = true;
+        } else {
+          isAnyNotAssignedRepo = true;
+        }
         if (repoFlg) {
-          List existingRepoNames = rs.getRepoNames();
-          String firstRepo = null;
-          if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
-            firstRepo = (String)existingRepoNames.get(0);
-            isAnyAssignedRepo = true;
-          }
-
           int ix = 1;
           for (Iterator riter = repos.iterator(); riter.hasNext(); ++ix) {
             String repo = (String)riter.next();
@@ -1082,8 +1105,14 @@ public class ServletUtil {
             }
           }
         }
-        else if (reposSize > 0) {
-          tbl.newCell("colspan=\"" + reposSize + "\"");
+        else if (firstRepo != null) {
+          // The Select On Disk button looks for entries with a
+          // defaultChecked radio button.  If no repo choice, add a hidden
+          // button just for that.
+          Block div = new Block(Block.Div, "style=\"display:none\"");
+          div.add(radioButton(servlet, keyRepo + "_" + auid,
+                              "1", null, true));
+          tbl.add(div);
         }
 
         tbl.newCell();
@@ -1098,10 +1127,13 @@ public class ServletUtil {
       }
     }
 
+    boolean includeOnDiskButton = isAnyAssignedRepo && isAnyNotAssignedRepo;
+    selAllBlock1.add(layoutSelectAllButton(servlet, includeOnDiskButton));
+
     if (isLong) {
       tbl.newRow();
-      tbl.newCell();
-      tbl.add(layoutSelectAllButton(servlet));
+      tbl.newCell(ALIGN_LEFT + " colspan=\"99\"");
+      tbl.add(layoutSelectAllButton(servlet, includeOnDiskButton));
     }
 
     if (repoFootElement != null && isAnyAssignedRepo) {
@@ -1204,7 +1236,7 @@ public class ServletUtil {
   }
 
   public static Element makeRepoTable(LockssServlet servlet,
-				      RemoteApi remoteApi,
+                                      RemoteApi remoteApi,
                                       Map repoMap,
                                       String keyDefaultRepo) {
     RepositoryManager repoMgr =
@@ -1241,11 +1273,11 @@ public class ServletUtil {
       // Populate row for entry
       tbl.newRow(REPOTABLE_ROW_ATTRIBUTES);
       if (isChoice) {
-	tbl.newCell(ALIGN_CENTER); // "Default"
-	tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
-			    null, repo == mostFree));
-	tbl.newCell(ALIGN_RIGHT); // "Disk"
-	tbl.add(Integer.toString(ix) + "." + SPACE);
+        tbl.newCell(ALIGN_CENTER); // "Default"
+        tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
+                            null, repo == mostFree));
+        tbl.newCell(ALIGN_RIGHT); // "Disk"
+        tbl.add(Integer.toString(ix) + "." + SPACE);
       }
       tbl.newCell(ALIGN_LEFT); // "Location"
       tbl.add(repo);
@@ -1259,7 +1291,7 @@ public class ServletUtil {
   }
 
   static String diskSpaceColor(RepositoryManager repoMgr,
-			       PlatformUtil.DF df, String s) {
+                               PlatformUtil.DF df, String s) {
     String color = null;
     if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
       color = Constants.COLOR_RED;
@@ -1517,7 +1549,8 @@ public class ServletUtil {
       } else {
         navTable.add("<font size=\"-1\">");
       }
-      navTable.add(servlet.conditionalSrvLink(d, d.heading, servlet.isServletLinkInNav(d)));
+      navTable.add(servlet.conditionalSrvLink(d, d.getNavHeading(servlet),
+                                              servlet.isServletLinkInNav(d)));
       navTable.add("</font>");
     }
     navTable.add("</font>");
@@ -1535,19 +1568,25 @@ public class ServletUtil {
                    + "--> </style>");
   }
 
-  private static Composite layoutSelectAllButton(LockssServlet servlet) {
+  private static Composite layoutSelectAllButton(LockssServlet servlet,
+                                                 boolean includeOnDiskButton) {
     Table tbl = new Table(SELECTALL_BORDER, SELECTALL_ATTRIBUTES);
     tbl.newRow();
-    tbl.newCell(ALIGN_RIGHT);
-    tbl.add(javascriptButton(servlet, "Select All", "selectAll(this.form, 0);"));
-    tbl.newRow();
-    tbl.newCell(ALIGN_RIGHT);
-    tbl.add(javascriptButton(servlet, "Clear All", "selectAll(this.form, 1);"));
+    tbl.newCell();
+    tbl.add(javascriptButton(servlet, "Select All", "selectAll(this.form, 'all');"));
+//     tbl.newRow();
+//     tbl.newCell(ALIGN_RIGHT);
+    tbl.add(javascriptButton(servlet, "Clear All", "selectAll(this.form, 'clear');"));
+    if (includeOnDiskButton) {
+//       tbl.newRow();
+//       tbl.newCell(ALIGN_RIGHT);
+      tbl.add(javascriptButton(servlet, "On Disk", "selectAll(this.form, 'inRepo');"));
+    }
     return tbl;
   }
 
   public static Composite layoutSelectAu(LockssServlet servlet, String key,
-					 String preselId) {
+                                         String preselId) {
     Select sel = new Select(key, false);
     sel.add("", preselId == null, "");
     PluginManager pluginMgr = servlet.getLockssDaemon().getPluginManager();
@@ -1564,17 +1603,17 @@ public class ServletUtil {
   }
 
   public static Element radioButton(LockssServlet servlet,
-				    String key,
-				    String value,
-				    boolean checked) {
+                                    String key,
+                                    String value,
+                                    boolean checked) {
     return radioButton(servlet, key, value, value, checked);
   }
 
   public static Element radioButton(LockssServlet servlet,
-				    String key,
-				    String value,
-				    String text,
-				    boolean checked) {
+                                    String key,
+                                    String value,
+                                    String text,
+                                    boolean checked) {
     Composite c = new Composite();
     Input in = new Input(Input.Radio, key, value);
     if (checked) { in.check(); }
@@ -1647,13 +1686,15 @@ public class ServletUtil {
   }
 
   /** Return an index of manifest pages for the given AUs. */
-  public static Element manifestIndex(LockssDaemon daemon, Collection aus) {
+  public static Element manifestIndex(LockssDaemon daemon,
+                                      Collection<ArchivalUnit> aus) {
     return manifestIndex(daemon.getPluginManager(), aus, null);
   }
 
   /** Return an index of manifest pages for the given AUs. */
   public static Element manifestIndex(LockssDaemon daemon,
-				      Collection aus, String header) {
+                                      Collection<ArchivalUnit> aus,
+                                      String header) {
     return manifestIndex(daemon.getPluginManager(), aus, header);
   }
 
@@ -1663,23 +1704,38 @@ public class ServletUtil {
 
   /** Return an index of manifest pages for the given AUs. */
   public static Element manifestIndex(PluginManager pluginMgr,
-				      Collection aus, String header) {
+                                      Collection<ArchivalUnit> aus,
+                                      String header) {
     return manifestIndex(pluginMgr,
-			 aus,
-			 header,
-			 new ManifestUrlTransform(){
-			   public Object transformUrl(String url) {
-			     return new Link(url, url);
-			   }},
-			 true);
+                         aus,
+                         header,
+                         new ManifestUrlTransform(){
+                           public Object transformUrl(String url) {
+                             return new Link(url, url);
+                           }},
+                         true);
   }
 
   public static Element manifestIndex(PluginManager pluginMgr,
-				      Collection aus, String header,
-				      ManifestUrlTransform xform,
-				      boolean checkCollected) {
+                                      Collection<ArchivalUnit> aus,
+                                      String header,
+                                      ManifestUrlTransform xform,
+                                      boolean checkCollected) {
+    return manifestIndex(pluginMgr,
+                         aus, null,
+                         header,
+                         xform,
+                         checkCollected);
+  }
+
+  public static Element manifestIndex(PluginManager pluginMgr,
+                                      Collection<ArchivalUnit> aus,
+                                      Predicate pred,
+                                      String header,
+                                      ManifestUrlTransform xform,
+                                      boolean checkCollected) {
     Table tbl = new Table(AUSUMMARY_TABLE_BORDER,
-			  "cellspacing=\"4\" cellpadding=\"0\"");
+                          "cellspacing=\"4\" cellpadding=\"0\"");
     if (header != null) {
       tbl.newRow();
       tbl.newCell("align=\"center\" colspan=\"3\"");
@@ -1691,12 +1747,14 @@ public class ServletUtil {
       tbl.add(ServletUtil.notStartedWarning());
     }
     tbl.newRow();
-    tbl.addHeading("Archival Unit");
+    tbl.addHeading("Archival Unit", "align=left");
     tbl.newCell("width=8");
     tbl.add("&nbsp;");
-    tbl.addHeading("Manifest");
-    for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
+    tbl.addHeading("Manifest", "align=left");
+    for (ArchivalUnit au : aus) {
+      if (pred != null && !pred.evaluate(au)) {
+        continue;
+      }
       CrawlSpec spec = au.getCrawlSpec();
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT);
@@ -1705,21 +1763,21 @@ public class ServletUtil {
       tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
       if (spec instanceof SpiderCrawlSpec) {
-	List urls = ((SpiderCrawlSpec)spec).getStartingUrls();
-	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
-	  String url = (String)uiter.next();
-	  tbl.add(xform.transformUrl(url));
-	  if (checkCollected && AuUtil.getAuState(au).getLastCrawlTime() < 0) {
-	    tbl.add(" (not fully collected)");
-	  }
-	  if (uiter.hasNext()) {
-	    tbl.add("<br>");
-	  }
-	}
+        List urls = ((SpiderCrawlSpec)spec).getStartingUrls();
+        for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
+          String url = (String)uiter.next();
+          tbl.add(xform.transformUrl(url));
+          if (checkCollected && AuUtil.getAuState(au).getLastCrawlTime() < 0) {
+            tbl.add(" (not fully collected)");
+          }
+          if (uiter.hasNext()) {
+            tbl.add("<br>");
+          }
+        }
       } else if (spec instanceof OaiCrawlSpec) {
-	tbl.add("(OAI)");
+        tbl.add("(OAI)");
       } else {
-	tbl.add("(Unknown CrawlSpec type)");
+        tbl.add("(Unknown CrawlSpec type)");
       }
     }
     return tbl;

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.35 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: IcpManager.java,v 1.35.34.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -421,6 +421,7 @@ public class IcpManager
             logger.debug2("processMessage: MISS_NOFETCH");
             response = message.makeMissNoFetch();
           }
+          AuUtil.safeRelease(cu);
         }
       }
       catch (IcpException ipe) {
@@ -471,7 +472,7 @@ public class IcpManager
     if (getDaemon().isDetectClockssSubscription()) {
       ArchivalUnit au = cu.getArchivalUnit();
       return AuUtil.getAuState(au).getClockssSubscriptionStatus()
-	         != AuState.CLOCKSS_SUB_YES;
+                 != AuState.CLOCKSS_SUB_YES;
     }
     return false;
   }      

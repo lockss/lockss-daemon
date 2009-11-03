@@ -1,9 +1,9 @@
 /*
- * $Id: BasePlugin.java,v 1.53 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.53.12.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
- Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -36,6 +36,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.rewriter.*;
 import org.lockss.plugin.wrapper.*;
+import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 
 /**
@@ -47,6 +48,7 @@ public abstract class BasePlugin
   static Logger log = Logger.getLogger("BasePlugin");
 
   static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
+  public static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
 
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
@@ -55,10 +57,10 @@ public abstract class BasePlugin
   static final String TITLE_PARAM_PLUGIN_VERSION = "pluginVersion";
   static final String TITLE_PARAM_EST_SIZE = "estSize";
   static final String TITLE_PARAM_ATTRIBUTES = "attributes";
-  static final String TITLE_PARAM_PARAM = "param";
+  public static final String TITLE_PARAM_PARAM = "param";
   // Below org.lockss.title.xxx.param.n.
-  static final String TITLE_PARAM_PARAM_KEY = "key";
-  static final String TITLE_PARAM_PARAM_VALUE = "value";
+  public static final String TITLE_PARAM_PARAM_KEY = "key";
+  public static final String TITLE_PARAM_PARAM_VALUE = "value";
   static final String TITLE_PARAM_PARAM_EDITABLE = "editable";
 
   protected LockssDaemon theDaemon;
@@ -77,12 +79,12 @@ public abstract class BasePlugin
 
   Configuration.Callback configCb = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
-				       Configuration prevConfig,
-				       Configuration.Differences changedKeys) {
-	setConfig(newConfig, prevConfig, changedKeys);
+                                       Configuration prevConfig,
+                                       Configuration.Differences changedKeys) {
+        setConfig(newConfig, prevConfig, changedKeys);
       }
       public String toString() {
-	return getPluginId();
+        return getPluginId();
       }
     };
 
@@ -163,8 +165,8 @@ public abstract class BasePlugin
    * create these property files.
    */
   protected void setConfig(Configuration newConfig,
-			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
+                           Configuration prevConfig,
+                           Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_TITLE_DB)) {
       setTitleConfig(newConfig);
     }
@@ -176,20 +178,24 @@ public abstract class BasePlugin
     Collection myTitles = config.getTitleConfigs(myName);
     if (myTitles != null) {
       for (Iterator iter = myTitles.iterator(); iter.hasNext(); ) {
-	Configuration titleConfig = (Configuration)iter.next();
-	String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
-	if (myName.equals(pluginName)) {
-	  if (log.isDebug2()) {
-	    log.debug2("my titleConfig: " + titleConfig);
-	  }
-	  String title = titleConfig.get(TITLE_PARAM_TITLE);
-	  TitleConfig tc = initOneTitle(titleConfig);
-	  titleMap.put(title, tc);
-	} else {
-	  if (log.isDebug3()) {
-	    log.debug3("titleConfig: " + titleConfig);
-	  }
-	}
+        Configuration titleConfig = (Configuration)iter.next();
+        String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
+        if (myName.equals(pluginName)) {
+          if (log.isDebug2()) {
+            log.debug2("my titleConfig: " + titleConfig);
+          }
+          String title = titleConfig.get(TITLE_PARAM_TITLE);
+          TitleConfig tc = initOneTitle(titleConfig);
+          if (titleMap.containsKey(title)) {
+            log.warning("Duplicate title: " + tc);
+            log.warning("Previous def   : " + tc);
+          }
+          titleMap.put(title, tc);
+        } else {
+          if (log.isDebug3()) {
+            log.debug3("titleConfig: " + titleConfig);
+          }
+        }
       }
     }
     //TODO: decide on how to support plug-ins which do not use the title registry
@@ -212,9 +218,9 @@ public abstract class BasePlugin
     if (!attrs.isEmpty()) {
       Map attrMap = new HashMap();
       for (Iterator iter = attrs.nodeIterator(); iter.hasNext(); ) {
-	String attr = (String)iter.next();
-	String val = attrs.get(attr);
-	attrMap.put(attr, val);
+        String attr = (String)iter.next();
+        String val = attrs.get(attr);
+        attrMap.put(attr, val);
       }
       tc.setAttributes(attrMap);
     }
@@ -226,15 +232,15 @@ public abstract class BasePlugin
       String val = oneParam.get(TITLE_PARAM_PARAM_VALUE);
       ConfigParamDescr descr = findAuConfigDescr(key);
       if (descr != null) {
-	ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
-	if (oneParam.containsKey(TITLE_PARAM_PARAM_EDITABLE)) {
-	  cpa.setEditable(oneParam.getBoolean(TITLE_PARAM_PARAM_EDITABLE,
-					      cpa.isEditable()));
-	}
-	params.add(cpa);
+        ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
+        if (oneParam.containsKey(TITLE_PARAM_PARAM_EDITABLE)) {
+          cpa.setEditable(oneParam.getBoolean(TITLE_PARAM_PARAM_EDITABLE,
+                                              cpa.isEditable()));
+        }
+        params.add(cpa);
       } else {
-	log.warning("Unknown parameter key: " + key + " in title: " + title);
-	log.debug("   title config: " + titleConfig);
+        log.warning("Unknown parameter key: " + key + " in title: " + title);
+        log.debug("   title config: " + titleConfig);
       }
     }
     // This list is kept permanently, so trim array to size
@@ -254,10 +260,10 @@ public abstract class BasePlugin
     for (Iterator iter = getAllAus().iterator(); iter.hasNext(); ) {
       //  They should all be BaseArchivalUnits, but just in case...
       try {
-	BaseArchivalUnit au = (BaseArchivalUnit)iter.next();
-	au.titleDbChanged();
+        BaseArchivalUnit au = (BaseArchivalUnit)iter.next();
+        au.titleDbChanged();
       } catch (ClassCastException e) {
-	log.warning("notifyAusTitleDbChanged: " + this, e);
+        log.warning("notifyAusTitleDbChanged: " + this, e);
       }
     }
   }
@@ -267,36 +273,37 @@ public abstract class BasePlugin
       List<ConfigParamDescr> local = getLocalAuConfigDescrs();
       ArrayList<ConfigParamDescr> res = new ArrayList(local);
       for (ConfigParamDescr descr : local) {
-	switch (descr.getType()) {
-	case ConfigParamDescr.TYPE_YEAR:
-	  res.add(descr.getDerivedDescr(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR
-					+ descr.getKey()));
-	  break;
-	case ConfigParamDescr.TYPE_URL:
-	  ConfigParamDescr derived;
-	  derived = descr.getDerivedDescr(descr.getKey()
-					  + BaseArchivalUnit.SUFFIX_AU_HOST);
-	  derived.setType(ConfigParamDescr.TYPE_STRING);
-	  res.add(derived);
-	  derived = descr.getDerivedDescr(descr.getKey()
-					  + BaseArchivalUnit.SUFFIX_AU_PATH);
-	  derived.setType(ConfigParamDescr.TYPE_STRING);
-	  res.add(derived);
-	  break;
-	}
+        switch (descr.getType()) {
+        case ConfigParamDescr.TYPE_YEAR:
+          res.add(descr.getDerivedDescr(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR
+                                        + descr.getKey()));
+          break;
+        case ConfigParamDescr.TYPE_URL:
+          ConfigParamDescr derived;
+          derived = descr.getDerivedDescr(descr.getKey()
+                                          + BaseArchivalUnit.SUFFIX_AU_HOST);
+          derived.setType(ConfigParamDescr.TYPE_STRING);
+          res.add(derived);
+          derived = descr.getDerivedDescr(descr.getKey()
+                                          + BaseArchivalUnit.SUFFIX_AU_PATH);
+          derived.setType(ConfigParamDescr.TYPE_STRING);
+          res.add(derived);
+          break;
+        }
       }
 
       if (!res.isEmpty()) {
-	// Don't add internal params if plugin has no params.  (testing)
-	res.add(ConfigParamDescr.AU_CLOSED);
-	res.add(ConfigParamDescr.PUB_DOWN);
-	res.add(ConfigParamDescr.PUB_NEVER);
-	res.add(ConfigParamDescr.PROTOCOL_VERSION);
+        // Don't add internal params if plugin has no params.  (testing)
+        res.add(ConfigParamDescr.AU_CLOSED);
+        res.add(ConfigParamDescr.PUB_DOWN);
+        res.add(ConfigParamDescr.PUB_NEVER);
+        res.add(ConfigParamDescr.PROTOCOL_VERSION);
+        res.add(ConfigParamDescr.CRAWL_PROXY);
       }
       res.trimToSize();
       Map<String,ConfigParamDescr> map = new HashMap();
       for (ConfigParamDescr descr : res) {
-	map.put(descr.getKey(), descr);
+        map.put(descr.getKey(), descr);
       }
       paramDescrMap = map;
       allParamDescrs = res;
@@ -399,9 +406,9 @@ public abstract class BasePlugin
     LinkExtractorFactory fact = mti.getLinkExtractorFactory();
     if (fact != null) {
       try {
-	return fact.createLinkExtractor(contentType);
+        return fact.createLinkExtractor(contentType);
       } catch (PluginException e) {
-	throw new RuntimeException(e);
+        throw new RuntimeException(e);
       }
     }
     return null;
@@ -436,7 +443,11 @@ public abstract class BasePlugin
   protected ExploderHelper getExploderHelper() {
     return null;
   }
-  protected ExploderHelper exploderHelper = null;
+
+  protected Comparator<CrawlUrl> getCrawlUrlComparator(ArchivalUnit au)
+      throws PluginException.LinkageError {
+    return null;
+  }
 
   /**
    * Returns a filter rule from the cache if found, otherwise calls
@@ -452,13 +463,13 @@ public abstract class BasePlugin
       if (obj==null) {
         rule = constructFilterRule(contentType);
         if (rule != null) {
-	  if (log.isDebug3()) log.debug3(contentType + " filter: " + rule);
+          if (log.isDebug3()) log.debug3(contentType + " filter: " + rule);
           filterMap.put(contentType, rule);
         } else {
-	  if (log.isDebug3()) log.debug3("No filter for "+contentType);
-	}
+          if (log.isDebug3()) log.debug3("No filter for "+contentType);
+        }
       } else if (obj instanceof FilterRule) {
-	rule = (FilterRule)obj;
+        rule = (FilterRule)obj;
       }
       return rule;
     }
@@ -477,18 +488,33 @@ public abstract class BasePlugin
   }
 
   /**
-   * Returns the filter factory for the mime type, if any
+   * Returns the hash filter factory for the mime type, if any
    * @param contentType the content type
    * @return the FilterFactory
    */
-  public FilterFactory getFilterFactory(String contentType) {
+  public FilterFactory getHashFilterFactory(String contentType) {
     MimeTypeInfo mti = getMimeTypeInfo(contentType);
     if (mti == null) {
       return null;
     }
     if (log.isDebug3())
-      log.debug3(contentType + " filter: " + mti.getFilterFactory());
-    return mti.getFilterFactory();
+      log.debug3(contentType + " filter: " + mti.getHashFilterFactory());
+    return mti.getHashFilterFactory();
+  }
+
+  /**
+   * Returns the crawl filter factory for the mime type, if any
+   * @param contentType the content type
+   * @return the FilterFactory
+   */
+  public FilterFactory getCrawlFilterFactory(String contentType) {
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    if (mti == null) {
+      return null;
+    }
+    if (log.isDebug3())
+      log.debug3(contentType + " crawl filter: " + mti.getCrawlFilterFactory());
+    return mti.getCrawlFilterFactory();
   }
 
   /**
@@ -502,8 +528,31 @@ public abstract class BasePlugin
       return null;
     }
     if (log.isDebug3())
-      log.debug3(contentType + " filter: " + mti.getLinkRewriterFactory());
+      log.debug3(contentType + " rewriter: " + mti.getLinkRewriterFactory());
     return mti.getLinkRewriterFactory();
+  }
+
+  /**
+   * Returns the article iterator factory for the content type, if any
+   * @param contentType the content type
+   * @return the ArticleIteratorFactory
+   */
+    public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+    ArticleIteratorFactory ret = null;
+    if (contentType == null) {
+      contentType = getDefaultArticleMimeType();
+    }
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    if (mti == null) {
+      if (log.isDebug3())
+          log.debug3("null return for " +
+                     (contentType== null ? "null" : contentType));
+      return ret;
+    }
+    ret = mti.getArticleIteratorFactory();
+    if (log.isDebug3())
+      log.debug3(contentType + " iterator: " + ret);
+    return ret;
   }
 
   /**
@@ -519,6 +568,36 @@ public abstract class BasePlugin
     if (log.isDebug3())
       log.debug3(contentType + " rate limiter: " + mti.getFetchRateLimiter());
     return mti.getFetchRateLimiter();
+  }
+
+  /**
+   * Return a {@link MetadataExtractor} that knows how to extract metadata from
+   * content of the given content type
+   * @param contentType content type to get a metadata extractor for
+   * @param au the AU in question
+   * @return A MetadataExtractor or null
+   */
+    public MetadataExtractor getMetadataExtractor(String contentType,
+                                                  ArchivalUnit au) {
+    if (contentType == null) {
+      return null;
+    }
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    MetadataExtractorFactory fact = mti.getMetadataExtractorFactory();
+    if (fact != null) {
+      try {
+        return fact.createMetadataExtractor(contentType);
+      } catch (PluginException e) {
+        throw new RuntimeException(e);
+      }
+    }
+    return null;
+  }
+
+
+  public String getDefaultArticleMimeType() {
+    log.debug3("getDefaultArticleMimeType: " + DEFAULT_ARTICLE_MIME_TYPE);
+    return DEFAULT_ARTICLE_MIME_TYPE;
   }
 
   // ---------------------------------------------------------------------
@@ -544,32 +623,32 @@ public abstract class BasePlugin
     Object obj = null;
     try {
       if (classLoader != null) {
-	obj = Class.forName(className, true, classLoader).newInstance();
+        obj = Class.forName(className, true, classLoader).newInstance();
       } else {
-	obj = Class.forName(className).newInstance();
+        obj = Class.forName(className).newInstance();
       }
     } catch (ExceptionInInitializerError e) {
       throw auxErr("Initializer error in dynamically loaded class "
-		   + className,
-		   e);
+                   + className,
+                   e);
     } catch (LinkageError e) {
       throw auxErr("Linkage error in dynamically loaded class " + className,
-		   e);
+                   e);
     } catch (ClassNotFoundException e) {
       throw auxErr("Dynamically loadable class not found " + className,
-		   e);
+                   e);
     } catch (IllegalAccessException e) {
       throw auxErr("Class " + className
-		   + " (or its no-argument constructor) is not public",
-		   e);
+                   + " (or its no-argument constructor) is not public",
+                   e);
     } catch (InstantiationException e) {
       throw auxErr("Error instantiating dynamically loaded class " + className,
-		   e);
+                   e);
     } catch (ClassCastException e) {
       // can't happen
       throw auxErr("Class " + className + " is not of type "
-		   + expectedType.getName(),
-		   e);
+                   + expectedType.getName(),
+                   e);
     } catch (Exception e) {
       throw auxErr("Error loading class " + className, e);
     }
@@ -578,4 +657,6 @@ public abstract class BasePlugin
     }
     return WrapperUtil.wrap(obj, expectedType);      
   }
+
+
 }

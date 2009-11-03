@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.2 2008-11-08 08:16:32 tlipkis Exp $
+ * $Id: TestAdminServletManager.java,v 1.2.8.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -51,42 +51,83 @@ public class TestAdminServletManager extends LockssTestCase {
   }
 
   ServletDescr readOnlyDescrs[] = {
-     SERVLET_HOME,
-     SERVLET_PROXY_INFO,
-     SERVLET_DAEMON_STATUS,
-     SERVLET_DISPLAY_CONTENT,
-     SERVLET_SERVE_CONTENT,
-     SERVLET_LIST_OBJECTS,
-     SERVLET_HASH_CUS,			// ???
-     LINK_LOGS,
-     SERVLET_THREAD_DUMP,
-     LINK_CONTACT,
-     LINK_HELP,
+    SERVLET_HOME,
+    SERVLET_PROXY_INFO,
+    SERVLET_DAEMON_STATUS,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_SERVE_CONTENT,
+    SERVLET_LIST_OBJECTS,
+    SERVLET_HASH_CUS,
+    LINK_LOGS,
+    SERVLET_THREAD_DUMP,
+    LINK_CONTACT,
+    LINK_HELP,
+    LOGIN_FORM,
+    LINK_LOGOUT,
+    SERVLET_EDIT_ACCOUNT,
+  };
+
+  ServletDescr userAdminDescrs[] = {
+    SERVLET_ADMIN_ACCESS_CONTROL,
+    LINK_ISOS,
+    SERVLET_RAISE_ALERT,
+    SERVLET_EDIT_ACCOUNTS,
+    SERVLET_EXPERT_CONFIG,
+  };
+
+  ServletDescr auAdminDescrs[] = {
+    SERVLET_BATCH_AU_CONFIG,
+    SERVLET_AU_CONFIG,
+    SERVLET_PLUGIN_CONFIG,
+    SERVLET_DEBUG_PANEL,
+};
+
+  ServletDescr contentAdminDescrs[] = {
+    SERVLET_PROXY_ACCESS_CONTROL,
+    SERVLET_PROXY_AND_CONTENT,
   };
 
   ServletDescr debugDescrs[] = {
-     SERVLET_HASH_CUS,
-     SERVLET_DEBUG_PANEL,
-     LINK_LOGS,
-     SERVLET_THREAD_DUMP,
-     SERVLET_RAISE_ALERT,
+    SERVLET_HASH_CUS,
+    SERVLET_DEBUG_PANEL,
+    LINK_LOGS,
+    SERVLET_THREAD_DUMP,
+    SERVLET_RAISE_ALERT,
   };
 
 
   // Ensure only the expected servlets are available to non-admin users
   public void testAdminOnlyDescrs() throws Exception {
 
+    Set userAdminOnly = new HashSet();
+    Set auAdminOnly = new HashSet();
+    Set contentAdminOnly = new HashSet();
     Set readOnly = new HashSet();
     Set debugOnly = new HashSet();
     for (ServletDescr descr : mgr.getServletDescrs()) {
-      if (!descr.isAdminOnly()) {
-	readOnly.add(descr);
+      if (descr.needsUserAdminRole()) {
+        userAdminOnly.add(descr);
       }
-      if (descr.isDebugOnly()) {
-	debugOnly.add(descr);
+      if (descr.needsAuAdminRole()) {
+        auAdminOnly.add(descr);
       }
+      if (descr.needsContentAdminRole()) {
+        contentAdminOnly.add(descr);
+      }
+      if (descr.needsDebugRole()) {
+        debugOnly.add(descr);
+      }
+      if (!descr.needsUserAdminRole()
+          && !descr.needsAuAdminRole()
+          && !descr.needsContentAdminRole()) {
+        readOnly.add(descr);
+      }
+
     }
-    assertEquals(SetUtil.fromArray(readOnlyDescrs), readOnly);
+    assertEquals(SetUtil.fromArray(userAdminDescrs), userAdminOnly);
+    assertEquals(SetUtil.fromArray(auAdminDescrs), auAdminOnly);
+    assertEquals(SetUtil.fromArray(contentAdminDescrs), contentAdminOnly);
     assertEquals(SetUtil.fromArray(debugDescrs), debugOnly);
+    assertEquals(SetUtil.fromArray(readOnlyDescrs), readOnly);
   }
 }

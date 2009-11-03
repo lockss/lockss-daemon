@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.32 2007-12-19 05:14:18 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.32.20.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -45,21 +45,21 @@ public class TestUrlUtil extends LockssTestCase {
     switch (1) {
     case 1:
       try {
-	return UrlUtil.normalizePath(path,
-				     UrlUtil.PATH_TRAVERSAL_ACTION_ALLOW);
+        return UrlUtil.normalizePath(path,
+                                     UrlUtil.PATH_TRAVERSAL_ACTION_ALLOW);
       } catch (MalformedURLException e) {
-	throw new RuntimeException(e.toString());
+        throw new RuntimeException(e.toString());
       }
     case 2:
       try {
-	Object urin =
-	  PrivilegedAccessor.invokeConstructor("JavaUriNormalizer");
-	return (String)PrivilegedAccessor.invokeMethod(urin,
-						       "normalizePath",
-						       ListUtil.list(path).toArray());
+        Object urin =
+          PrivilegedAccessor.invokeConstructor("JavaUriNormalizer");
+        return (String)PrivilegedAccessor.invokeMethod(urin,
+                                                       "normalizePath",
+                                                       ListUtil.list(path).toArray());
       } catch (Exception e) {
-	log.warning("Couldn't invoke JavaUriNormalizer", e);
-	return null;
+        log.warning("Couldn't invoke JavaUriNormalizer", e);
+        return null;
       }
     }
     throw new RuntimeException();
@@ -79,7 +79,7 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("foobar%3D", UrlUtil.normalizeUrlEncodingCase("foobar%3d"));
     assertEquals("%3Dfoobar", UrlUtil.normalizeUrlEncodingCase("%3dfoobar"));
     assertEquals("%3Dfoobar%3D",
-		 UrlUtil.normalizeUrlEncodingCase("%3dfoobar%3d"));
+                 UrlUtil.normalizeUrlEncodingCase("%3dfoobar%3d"));
     assertEquals("foo%3Dbar", UrlUtil.normalizeUrlEncodingCase("foo%3Dbar"));
     assertEquals("foo%3Dbar", UrlUtil.normalizeUrlEncodingCase("foo%3dbar"));
   }
@@ -149,7 +149,7 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testNormalizePathTraversalAccept() throws Exception {
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
-				  "1");
+                                  "1");
     assertEquals("..", UrlUtil.normalizePath(".."));
     assertEquals("../", UrlUtil.normalizePath("../"));
     assertEquals("/..", UrlUtil.normalizePath("/.."));
@@ -178,7 +178,7 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testNormalizePathTraversalRemove() throws Exception {
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
-				  "2");
+                                  "2");
     assertEquals("", UrlUtil.normalizePath(".."));
     assertEquals("/", UrlUtil.normalizePath("../"));
     assertEquals("/", UrlUtil.normalizePath("/.."));
@@ -209,14 +209,14 @@ public class TestUrlUtil extends LockssTestCase {
     try {
       UrlUtil.normalizePath(path);
       fail("normalizePath("+path+") should throw, returned " +
-	   UrlUtil.normalizePath(path));
+           UrlUtil.normalizePath(path));
     } catch (MalformedURLException e) {
     }
   }
 
   public void testNormalizePathTraversalThrow() throws Exception {
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
-				  "3");
+                                  "3");
     assertNormalizePathThrows("..");
     assertNormalizePathThrows("../");
     assertNormalizePathThrows("/..");
@@ -258,61 +258,61 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://a.com/xy", UrlUtil.normalizeUrl("http://a.com/xy"));
     assertEquals("http://a.com/xy/", UrlUtil.normalizeUrl("http://a.com/xy/"));
     assertEquals("http://a.com/xy/",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/.."));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/.."));
     assertEquals("http://a.com/xy/",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../"));
     assertEquals("http://a.com/",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../"));
     // port
     assertEquals("http://a.com/b",
-		 UrlUtil.normalizeUrl("HTTP://A.COM:80/b"));
+                 UrlUtil.normalizeUrl("HTTP://A.COM:80/b"));
     assertEquals("http://a.com:8000/b",
-		 UrlUtil.normalizeUrl("HTTP://A.COM:8000/b"));
+                 UrlUtil.normalizeUrl("HTTP://A.COM:8000/b"));
     assertEquals("ftp://example.com/",
-		 UrlUtil.normalizeUrl("ftp://example.com:21/"));
+                 UrlUtil.normalizeUrl("ftp://example.com:21/"));
     // query not removed
     assertEquals("http://a.com/dd?foo=bar",
-		 UrlUtil.normalizeUrl("http://a.com/dd?foo=bar"));
+                 UrlUtil.normalizeUrl("http://a.com/dd?foo=bar"));
 
     // no path normalization of query string
     assertEquals("http://a.b/foo/bar?foo//bar",
-		 UrlUtil.normalizeUrl("http://a.b/foo//bar?foo//bar"));
+                 UrlUtil.normalizeUrl("http://a.b/foo//bar?foo//bar"));
     assertEquals("http://a.b/bar?foo/../bar",
-		 UrlUtil.normalizeUrl("http://a.b/foo/../bar?foo/../bar"));
+                 UrlUtil.normalizeUrl("http://a.b/foo/../bar?foo/../bar"));
 
     // remove newlines and leading whitespace
     assertEquals("http://a.b/foo/bar?foo//bar",
-		 UrlUtil.normalizeUrl("ht\ntp://a.b/foo//bar?foo//bar"));
+                 UrlUtil.normalizeUrl("ht\ntp://a.b/foo//bar?foo//bar"));
     assertEquals("http://a .b/bar?foo/../bar",
-		 UrlUtil.normalizeUrl("  ht\n   tp://a .b/foo/../bar?foo/../bar"));
+                 UrlUtil.normalizeUrl("  ht\n   tp://a .b/foo/../bar?foo/../bar"));
 
     assertEquals("http://a.b/bar%4Ffoo",
-		 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo"));
+                 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo"));
     assertEquals("http://a.b/bar%4Ffoo",
-		 UrlUtil.normalizeUrl("http://a.b/bar%4Ffoo"));
+                 UrlUtil.normalizeUrl("http://a.b/bar%4Ffoo"));
     assertEquals("http://a.b/bar%4Ffoo?x=y%5Bz%5D",
-		 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo?x=y%5bz%5d"));
+                 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo?x=y%5bz%5d"));
     assertEquals("http://a.b/bar%4Ffoo?x=y%5Bz%5D",
-		 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo?x=y%5Bz%5D"));
+                 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo?x=y%5Bz%5D"));
 
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
-				  "1");
+                                  "1");
     assertMode1();
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
-				  "2");
+                                  "2");
     assertMode2();
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
-				  "3");
+                                  "3");
     assertMode3();
 
     // Empty query removal
 
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_EMPTY_QUERY,
-				  "false");
+                                  "false");
     assertEquals("http://a.b/bar?", UrlUtil.normalizeUrl("http://a.b/bar?"));
     assertEquals("http://a.b/ba?r", UrlUtil.normalizeUrl("http://a.b/ba?r"));
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_EMPTY_QUERY,
-				  "true");
+                                  "true");
     assertEquals("http://a.b/bar", UrlUtil.normalizeUrl("http://a.b/bar?"));
     assertEquals("http://a.b/ba?r", UrlUtil.normalizeUrl("http://a.b/ba?r"));
   }
@@ -320,23 +320,23 @@ public class TestUrlUtil extends LockssTestCase {
   // mode 1 leaves extra ".."s alone.
   void assertMode1() throws MalformedURLException {
     assertEquals("http://a.com/../",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../"));
     assertEquals("http://a.com/../../xxx",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../../xxx"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../../xxx"));
     assertEquals("http://a.com/../a/b/c/d",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d"));
     assertEquals("http://a.com/../a/b/c/d/",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d/"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d/"));
   }
 
   // mode 2 removes extra ".."s.
   void assertMode2() throws MalformedURLException {
     assertEquals("http://a.com/",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../"));
     assertEquals("http://a.com/a/b/c/d",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d"));
     assertEquals("http://a.com/a/b/c/d/",
-		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d/"));
+                 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d/"));
 
   }
 
@@ -358,36 +358,66 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testNormalizeUrlQueryString() throws MalformedURLException {
     assertEquals("http://a.com/dd?foo=bar",
-		 UrlUtil.normalizeUrl("http://A.com/dd?foo=bar"));
+                 UrlUtil.normalizeUrl("http://A.com/dd?foo=bar"));
   }
 
   public void testNormalizeUrlRemovesHash() throws MalformedURLException {
     assertEquals("http://a.com/xy",
-		 UrlUtil.normalizeUrl("http://a.com/xy#blah"));
+                 UrlUtil.normalizeUrl("http://a.com/xy#blah"));
 
     assertEquals("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033",
-		 UrlUtil.normalizeUrl("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033#content"));
+                 UrlUtil.normalizeUrl("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033#content"));
+  }
+
+  public void testNormalizeAkamai() throws MalformedURLException {
+    String a1 =
+      "http://a123.g.akamai.net/f/123/4567/1d/www.pubsite.com/images/blip.ico";
+    String u1 = "http://www.pubsite.com/images/blip.ico";
+    String a2 =
+      "http://a123.akamai.net/f/123/4567/1d/www.pubsite.com/images/blip.ico";
+    String u2 = u1;
+    String a3 =
+      "http://a123.g.akamai.net/f/123/odd/4/1d/www.pubsite.com/images/blip.ico";
+    String u3 = "http://1d/www.pubsite.com/images/blip.ico";
+    String a4 =
+      "http://a123.g.akamai.net/f/123/4/1d/www.PUBSITE.com/foo/../images/blip.ico";
+    String u4 = u2;
+    String a5 = "http://a.com/xy";
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_AKAMAI_URL, "false");
+    assertSame(a1, UrlUtil.normalizeUrl(a1));
+    assertSame(a2, UrlUtil.normalizeUrl(a2));
+    assertSame(a3, UrlUtil.normalizeUrl(a3));
+    assertNotEquals(a4, UrlUtil.normalizeUrl(a4));
+    assertSame(a5, UrlUtil.normalizeUrl(a5));
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_AKAMAI_URL, "true");
+    assertEquals(u1, UrlUtil.normalizeUrl(a1));
+    assertEquals(u2, UrlUtil.normalizeUrl(a2));
+    assertEquals(u3, UrlUtil.normalizeUrl(a3));
+    assertEquals(u4, UrlUtil.normalizeUrl(a4));
+    assertSame(a5, UrlUtil.normalizeUrl(a5));
   }
 
   public void testEqualUrls() throws MalformedURLException {
     assertTrue(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				 new URL("http://foo.bar/xyz#tag")));
+                                 new URL("http://foo.bar/xyz#tag")));
     assertTrue(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				 new URL("HTTP://FOO.bar/xyz#tag")));
+                                 new URL("HTTP://FOO.bar/xyz#tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				  new URL("ftp://foo.bar/xyz#tag")));
+                                  new URL("ftp://foo.bar/xyz#tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				  new URL("http://foo.baz/xyz#tag")));
+                                  new URL("http://foo.baz/xyz#tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				  new URL("http://foo.bar/xyzz#tag")));
+                                  new URL("http://foo.bar/xyzz#tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				  new URL("http://foo.bar/xYz#tag")));
+                                  new URL("http://foo.bar/xYz#tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				  new URL("http://foo.bar/xyz#tag2")));
+                                  new URL("http://foo.bar/xyz#tag2")));
     assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
-				  new URL("http://foo.bar/xyz#Tag")));
+                                  new URL("http://foo.bar/xyz#Tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http:80//foo.bar/xyz#tag"),
-				  new URL("http:81//foo.bar/xyz#tag")));
+                                  new URL("http:81//foo.bar/xyz#tag")));
   }
 
   public void testIsHttpUrl() {
@@ -493,48 +523,48 @@ public class TestUrlUtil extends LockssTestCase {
   public void testResolveUrl() throws Exception {
     // base ends with filename
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("ftp://gorp.org/xxx.jpg",
-				    "http://test.com/foo/bar/a.html"));
+                 UrlUtil.resolveUri("ftp://gorp.org/xxx.jpg",
+                                    "http://test.com/foo/bar/a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
-				    "a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
+                                    "a.html"));
     assertEquals("http://test.com/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
-				    "/a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
+                                    "/a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
-				    "../a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
+                                    "../a.html"));
     assertEquals("http://test.com/foo/bar/baz/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
-				    "./a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
+                                    "./a.html"));
 
     // According to RFC 1808, Firefox, IE, Opera, last component of base
     // path (following final slash) is *not* removed if relative URL has
     // null path.  RFC 2396 disagrees, but we follow the browsers
     assertEquals("http://test.com/foo/bar/xxx.html?a=b",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
-				    "?a=b"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
+                                    "?a=b"));
 
     // base ends with slash
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("ftp://gorp.org/",
-				    "http://test.com/foo/bar/a.html"));
+                 UrlUtil.resolveUri("ftp://gorp.org/",
+                                    "http://test.com/foo/bar/a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "a.html"));
     assertEquals("http://test.com/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "/a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "/a.html"));
     assertEquals("http://test.com/foo/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "../a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "../a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "./a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "./a.html"));
 
     assertEquals("http://test.com/foo/bar/?a=b",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "?a=b"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "?a=b"));
 
 
     // truncated base (no slash after hostname)
@@ -542,7 +572,7 @@ public class TestUrlUtil extends LockssTestCase {
     // First, note how resolution relative to base with no path differs
     // between java.net.URL:
     assertEquals("http://test.com/a.html",
-		 new URL(new URL("http://test.com"), "a.html").toString());
+                 new URL(new URL("http://test.com"), "a.html").toString());
     // and java.net.URI:
     URI u1 = new URI("http://test.com");
     URI u2 = u1.resolve("a.html");
@@ -550,27 +580,27 @@ public class TestUrlUtil extends LockssTestCase {
 
     // make sure we add the missing slash
     assertEquals("http://test.com/a.html",
-		 UrlUtil.resolveUri("http://test.com",
-				    "a.html"));
+                 UrlUtil.resolveUri("http://test.com",
+                                    "a.html"));
     // ensure query string preserved
     assertEquals("http://test.com/foo/bar/a.html?foo=bar",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "a.html?foo=bar"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "a.html?foo=bar"));
     // relative query string
     assertEquals("http://test.com/prog.php?foo=bar",
-		 UrlUtil.resolveUri("http://test.com/prog.php",
-				    "?foo=bar"));
+                 UrlUtil.resolveUri("http://test.com/prog.php",
+                                    "?foo=bar"));
     assertEquals("http://test.com/prog.php?foo=bar",
-		 UrlUtil.resolveUri("http://test.com/prog.php?fff=xxx",
-				    "?foo=bar"));
+                 UrlUtil.resolveUri("http://test.com/prog.php?fff=xxx",
+                                    "?foo=bar"));
     // With URL implementation this threw, URI version doesn't object.
     // Don't think anyone should count on this behavior.
     if (uri) {
       assertEquals("bar", UrlUtil.resolveUri("foo", "bar"));
     } else {
       try {
-	UrlUtil.resolveUri("foo", "bar");
-	fail("Should throw MalformedURLException");
+        UrlUtil.resolveUri("foo", "bar");
+        fail("Should throw MalformedURLException");
       } catch (MalformedURLException e) {}
     }
   }
@@ -579,26 +609,26 @@ public class TestUrlUtil extends LockssTestCase {
   public void testResolveUrlTrimsLeadingAndTrailingWhiteSpace()
       throws MalformedURLException {
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/", " a.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/", " a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html "));
     assertEquals("http://test.com/foo/bar/a.html",
- 		 UrlUtil.resolveUri("http://test.com/foo/bar/", "\ta.html "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/", "\ta.html "));
     assertEquals("http://test.com/foo/bar/a.html",
- 		 UrlUtil.resolveUri("http://test.com/foo/bar/", "\na.html "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/", "\na.html "));
     assertEquals("http://test.com/foo/bar/a.html",
- 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "\n\t\ta.html "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "\n\t\ta.html "));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "a.h\n\t\ttml "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "a.h\n\t\ttml "));
     assertEquals("http://test.com/foo/bar/a.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "a.h\n\n\n\t\t\t\t\ttml "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "a.h\n\n\n\t\t\t\t\ttml "));
     assertEquals("http://test.com/foo/bar/a.html",
- 		 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\n "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\n "));
     assertEquals("http://test.com/foo/bar/a.html",
- 		 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\r "));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\r "));
   }
 
   String enc(int i, boolean upper) {
@@ -621,12 +651,12 @@ public class TestUrlUtil extends LockssTestCase {
   public void testResolveUrlEncodingOld() throws MalformedURLException {
     // Embedded space should be escaped
     assertEquals("http://test.com/foo/bar/a%20test.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "a test.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "a test.html"));
     // Percents should not be escaped, or risk double escapement
     assertEquals("http://test.com/foo/bar/a%20.html",
-		 UrlUtil.resolveUri("http://test.com/foo/bar/",
-				    "a%20.html"));
+                 UrlUtil.resolveUri("http://test.com/foo/bar/",
+                                    "a%20.html"));
   }
 
   public void assertResolveUrl(String exp, String base, String rel)
@@ -635,14 +665,14 @@ public class TestUrlUtil extends LockssTestCase {
   }
 
   public void testResolveUrlEncodingPat(int substChar, String expPat,
-					String basePat, String relPat)
+                                        String basePat, String relPat)
       throws MalformedURLException {
     testResolveUrlEncodingPat(enc(substChar, false), expPat, basePat, relPat);
     testResolveUrlEncodingPat(enc(substChar, true), expPat, basePat, relPat);
   }
 
   public void testResolveUrlEncodingPat(String subst, String expPat,
-					String basePat, String relPat)
+                                        String basePat, String relPat)
       throws MalformedURLException {
     String pat = "##";
     String exp = StringUtil.replaceString(expPat, pat, subst);
@@ -653,51 +683,51 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testResolveUrlEncoding() throws MalformedURLException {
 //     assertResolveUrl("http://carcin.oxfordjournals.org/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F26%2F1%2F11",
-// 		     "http://carcin.oxfordjournals.org/",
-// 		     "/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F26%2F1%2F11");
+//                   "http://carcin.oxfordjournals.org/",
+//                   "/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F26%2F1%2F11");
 
     for (int ix = 1; ix <= 254; ix++) {
       testResolveUrlEncodingPat(ix,
-				"http://test.com/foo/bar/a##.html",
-				"http://test.com/foo/bar/",
-				"a##.html");
+                                "http://test.com/foo/bar/a##.html",
+                                "http://test.com/foo/bar/",
+                                "a##.html");
       testResolveUrlEncodingPat(ix,
-				"http://test.com/foo/xx?a##b=c",
-				"http://test.com/foo/bar",
-				"xx?a##b=c");
+                                "http://test.com/foo/xx?a##b=c",
+                                "http://test.com/foo/bar",
+                                "xx?a##b=c");
       testResolveUrlEncodingPat(ix,
-				"http://test.com/foo/xx?ab=##c",
-				"http://test.com/foo/bar",
-				"xx?ab=##c");
+                                "http://test.com/foo/xx?ab=##c",
+                                "http://test.com/foo/bar",
+                                "xx?ab=##c");
       testResolveUrlEncodingPat(ix,
-				"http://test.com/cgi/xx?ab=##c",
-				"http://test.com/foo/bar",
-				"/cgi/xx?ab=##c");
+                                "http://test.com/cgi/xx?ab=##c",
+                                "http://test.com/foo/bar",
+                                "/cgi/xx?ab=##c");
     }
   }
 
   public void testIsDirectoryRedirection() {
     assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
-					      "http://xx.com/foo/"));
+                                              "http://xx.com/foo/"));
     assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
-					      "Http://xx.com/foo/"));
+                                              "Http://xx.com/foo/"));
     assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
-					      "Http://Xx.COM/foo/"));
+                                              "Http://Xx.COM/foo/"));
     assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
-					       "http://xx.com/FOO/"));
+                                               "http://xx.com/FOO/"));
     assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
-					       "http://xx.com/foo"));
+                                               "http://xx.com/foo"));
     assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
-					       "http://zz.com/foo/"));
+                                               "http://zz.com/foo/"));
 
     assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo?a=b",
-					      "http://xx.com/foo/?a=b"));
+                                              "http://xx.com/foo/?a=b"));
     // slash appended to query string isn't
     assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo?a=b",
-					      "http://xx.com/foo?a=b/"));
+                                              "http://xx.com/foo?a=b/"));
     // ensure doesn't totally ignore query
     assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo?a=b",
-					      "http://xx.com/foo/"));
+                                              "http://xx.com/foo/"));
     // not legal URLs, so returns false
     assertFalse(UrlUtil.isDirectoryRedirection("foo", "foo/"));
   }
@@ -725,7 +755,7 @@ public class TestUrlUtil extends LockssTestCase {
     conn.setHeaderFields(ListUtil.list("field1", "field2"));
 
     assertEquals(ListUtil.list("key1;field1", "key2;field2"),
-		 UrlUtil.getHeaders(conn));
+                 UrlUtil.getHeaders(conn));
   }
 
   public void testGetHeadersNullHeaders() throws MalformedURLException {
@@ -735,7 +765,7 @@ public class TestUrlUtil extends LockssTestCase {
     conn.setHeaderFields(ListUtil.list("field1", null));
 
     assertEquals(ListUtil.list("null;field1", "key2;null"),
-		 UrlUtil.getHeaders(conn));
+                 UrlUtil.getHeaders(conn));
   }
 
   public void testIsAbsoluteUrl() {
@@ -750,53 +780,53 @@ public class TestUrlUtil extends LockssTestCase {
   public void testIsSameHost() {
     assertFalse(UrlUtil.isSameHost(null, null));
     assertTrue(UrlUtil.isSameHost("http://www.example.com/foo/bar",
-				  "http://www.example.com/bar/bar/bar"));
+                                  "http://www.example.com/bar/bar/bar"));
     assertFalse(UrlUtil.isSameHost("http://www.example.com/foo/bar",
-				   "http://www2.example.com/foo/bar"));
+                                   "http://www2.example.com/foo/bar"));
   }
 
   public void testStripsParams() throws MalformedURLException {
     assertNull(UrlUtil.stripQuery(null));
     assertEquals(null, UrlUtil.stripQuery(""));
     assertEquals("http://www.example.com/",
-		 UrlUtil.stripQuery("http://www.example.com/"));
+                 UrlUtil.stripQuery("http://www.example.com/"));
     assertEquals("http://www.example.com/blah",
-		 UrlUtil.stripQuery("http://www.example.com/blah?param1=blah"));
+                 UrlUtil.stripQuery("http://www.example.com/blah?param1=blah"));
     assertEquals("rtsp://www.example.com/blah",
-		 UrlUtil.stripQuery("rtsp://www.example.com/blah?param1=blah"));
+                 UrlUtil.stripQuery("rtsp://www.example.com/blah?param1=blah"));
   }
 
   public void testStripProtocol() {
     assertNull(UrlUtil.stripProtocol(null));
     assertEquals("", UrlUtil.stripProtocol(""));
     assertEquals("www.example.com/",
-		 UrlUtil.stripProtocol("http://www.example.com/"));
+                 UrlUtil.stripProtocol("http://www.example.com/"));
     assertEquals("www.example.com/",
-		 UrlUtil.stripProtocol("http://www.example.com/"));
+                 UrlUtil.stripProtocol("http://www.example.com/"));
     assertEquals("www.example.com:8080/",
-		 UrlUtil.stripProtocol("rtsp://www.example.com:8080/"));
+                 UrlUtil.stripProtocol("rtsp://www.example.com:8080/"));
   }
 
 
 
   public void testResolveJavascriptUrl() {
     assertEquals("http://www.example.com/link2.html",
-		 UrlUtil.parseJavascriptUrl("javascript:popup(http://www.example.com/link2.html)"));
+                 UrlUtil.parseJavascriptUrl("javascript:popup(http://www.example.com/link2.html)"));
 
     assertEquals("http://www.example.com/link2.html",
-		 UrlUtil.parseJavascriptUrl("javascript:newWindow(http://www.example.com/link2.html)"));
+                 UrlUtil.parseJavascriptUrl("javascript:newWindow(http://www.example.com/link2.html)"));
 
     assertEquals("http://www.example.com/link2.html",
-		 UrlUtil.parseJavascriptUrl("javascript:popup('http://www.example.com/link2.html')"));
+                 UrlUtil.parseJavascriptUrl("javascript:popup('http://www.example.com/link2.html')"));
 
     assertEquals("http://www.example.com/link2.html",
-		 UrlUtil.parseJavascriptUrl("javascript:newWindow('http://www.example.com/link2.html')"));
+                 UrlUtil.parseJavascriptUrl("javascript:newWindow('http://www.example.com/link2.html')"));
 
     assertEquals("link2.html",
-		 UrlUtil.parseJavascriptUrl("javascript:popup(link2.html)"));
+                 UrlUtil.parseJavascriptUrl("javascript:popup(link2.html)"));
 
     assertEquals("link2.html",
-		 UrlUtil.parseJavascriptUrl("javascript:newWindow(link2.html)"));
+                 UrlUtil.parseJavascriptUrl("javascript:newWindow(link2.html)"));
 
   }
 
@@ -823,7 +853,7 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testMakeJarFileUrl() {
     assertEquals("jar:file:///dir/2!/file.txt",
-		 UrlUtil.makeJarFileUrl("/dir/2", "file.txt"));
+                 UrlUtil.makeJarFileUrl("/dir/2", "file.txt"));
   }
 
   public static String makeJarFileUrl(String jarPath, String entryName) {

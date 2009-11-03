@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.69 2009-02-05 05:09:00 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.69.4.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -84,10 +84,23 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
     "_link_extractor_factory";
   public static final String SUFFIX_FILTER_RULE = "_filter";
-  public static final String SUFFIX_FILTER_FACTORY = "_filter_factory";
+  // XXX _filter_factory should be changed to _hash_filter_factory but
+  // plugins will have to be changed.  Note that this symbol is also used
+  // in PdfUtil to refer to the PDF filter factory hint in the title DB;
+  // either that will need to change or the title DB will.
+  public static final String SUFFIX_HASH_FILTER_FACTORY = "_filter_factory";
+  public static final String SUFFIX_CRAWL_FILTER_FACTORY =
+    "_crawl_filter_factory";
   public static final String SUFFIX_LINK_REWRITER_FACTORY =
     "_link_rewriter_factory";
-  public static final String SUFFIX_FETCH_RATE_LIMITER = "_fetch_rate_limiter";
+  public static final String SUFFIX_ARTICLE_ITERATOR_FACTORY =
+    "_article_iterator_factory";
+  public static final String SUFFIX_ARTICLE_MIME_TYPE =
+    "_article_mime_type";
+  public static final String SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP =
+    "_metadata_extractor_factory_map"; 
+
+ public static final String SUFFIX_FETCH_RATE_LIMITER = "_fetch_rate_limiter";
 
   public static final String KEY_AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";
@@ -155,13 +168,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     ArrayList<String> res = new ArrayList(patternList.size());
     for (String pattern : patternList) {
       if (StringUtil.isNullString(pattern)) {
-	log.warning("Null pattern string in " + key);
-	continue;
+        log.warning("Null pattern string in " + key);
+        continue;
       }
       List<String> lst = convertUrlList(pattern);
       if (lst == null) {
-	log.warning("Null converted string in " + key + ", from " + pattern);
-	continue;
+        log.warning("Null converted string in " + key + ", from " + pattern);
+        continue;
       }
       res.addAll(lst);
     }
@@ -181,12 +194,25 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return (String)definitionMap.getMapElement(DefinablePlugin.KEY_PER_HOST_PERMISSION_PATH);
   }
 
+  /** Use rate limiter source specified in AU, if any, then in plugin, then
+   * default */
+  @Override
+  protected String getFetchRateLimiterSource() {
+    String defaultSource =
+      CurrentConfig.getParam(PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
+                             DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
+    String pluginSrc = 
+      definitionMap.getString(DefinablePlugin.KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE,
+                              defaultSource);
+    return paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, pluginSrc);
+  }
+
   @Override
   protected List<String> makeStartUrls() throws ConfigurationException {
     List res = convertPatternList(KEY_AU_START_URL);
     if (res == null) {
       String msg = "Bad start url pattern: "
-	+ getElementList(KEY_AU_START_URL);
+        + getElementList(KEY_AU_START_URL);
       log.error(msg);
       throw new ConfigurationException(msg);
     }
@@ -221,7 +247,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     super.addImpliedConfigParams();
     String umsg =
       definitionMap.getString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG,
-			      null);
+                              null);
     if (umsg != null) {
       paramMap.putString(KEY_AU_CONFIG_USER_MSG, umsg);
     }
@@ -229,7 +255,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
     if (urlPat != null) {
       paramMap.setMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
-			     makeLoginUrlPattern(urlPat));
+                             makeLoginUrlPattern(urlPat));
     }
   }
 
@@ -244,7 +270,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     try {
       return
-	RegexpUtil.getCompiler().compile(patStr, Perl5Compiler.READ_ONLY_MASK);
+        RegexpUtil.getCompiler().compile(patStr, Perl5Compiler.READ_ONLY_MASK);
     } catch (MalformedPatternException e) {
       String msg = "Can't compile URL pattern: " + patStr;
       log.error(msg + ": " + e.toString());
@@ -273,33 +299,33 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
     boolean defaultIgnoreCase =
       CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_IGNORE_CASE,
-				    DEFAULT_CRAWL_RULES_IGNORE_CASE);
+                                    DEFAULT_CRAWL_RULES_IGNORE_CASE);
     boolean ignoreCase =
       definitionMap.getBoolean(KEY_AU_CRAWL_RULES_IGNORE_CASE,
-			       defaultIgnoreCase);
+                               defaultIgnoreCase);
 
     if (rule instanceof String) {
-	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
+        CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
             newAuxClass((String) rule, CrawlRuleFromAuFactory.class);
-	return fact.createCrawlRule(this);
+        return fact.createCrawlRule(this);
     }
     ArrayList rules = null;
     if (rule instanceof List) {
       List<String> templates = (List<String>)rule;
       rules = new ArrayList(templates.size());
       for (String rule_template : templates) {
-	CrawlRule cr = convertRule(rule_template, ignoreCase);
-	if (cr != null) {
-	  rules.add(cr);
-	}
+        CrawlRule cr = convertRule(rule_template, ignoreCase);
+        if (cr != null) {
+          rules.add(cr);
+        }
       }
       rules.trimToSize();
 
       if (rules.size() > 0) {
-	return new CrawlRules.FirstMatch(rules);
+        return new CrawlRules.FirstMatch(rules);
       } else {
-	log.error("No crawl rules found for plugin: " + makeName());
-	return null;
+        log.error("No crawl rules found for plugin: " + makeName());
+        return null;
       }
     }
     return null;
@@ -317,7 +343,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       log.debug("No oai_spec for this plugin.");
     }
     log.debug3("Creating OaiRequestData with oaiRequestUrlStr" +
-	       oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
+               oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
     return new OaiRequestData(oaiRequestUrlStr,
                       "http://purl.org/dc/elements/1.1/",
                       "identifier",
@@ -343,13 +369,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     } else { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
       String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
-						  DEFAULT_AU_EXPLODER_PATTERN);
+                                                  DEFAULT_AU_EXPLODER_PATTERN);
       ExploderHelper eh = getDefinablePlugin().getExploderHelper();
 
       return new SpiderCrawlSpec(getNewContentCrawlUrls(),
-				 getPermissionPages(), rule, depth,
-				 makePermissionChecker(),
-				 makeLoginPageChecker(), exploderPattern, eh);
+                                 getPermissionPages(), rule, depth,
+                                 makePermissionChecker(),
+                                 makeLoginPageChecker(), exploderPattern, eh);
     }
   }
 
@@ -361,7 +387,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     LoginPageChecker checker =
       (LoginPageChecker)newAuxClass(loginPageCheckerClass,
-				    LoginPageChecker.class);
+                                    LoginPageChecker.class);
     return checker;
   }
 
@@ -372,17 +398,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return null;
     }
     log.debug3("Found PermissionCheckerFactory class: " +
-	       permissionCheckerFactoryClass);
+               permissionCheckerFactoryClass);
 
     PermissionCheckerFactory fact =
       (PermissionCheckerFactory)newAuxClass(permissionCheckerFactoryClass,
-					    PermissionCheckerFactory.class);
+                                            PermissionCheckerFactory.class);
     log.debug("Loaded PermissionCheckerFactory: " + fact);
     try {
       List permissionCheckers = fact.createPermissionCheckers(this);
       if (permissionCheckers.size() > 1) {
         log.error("Plugin specifies multiple permission checkers, but we " +
-		  "only support one: " + this);
+                  "only support one: " + this);
 
       }
       return (PermissionChecker)permissionCheckers.get(0);
@@ -446,19 +472,19 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       ConfigParamDescr descr = mp.matchArgDescrs.get(0);
       switch (descr.getType()) {
       case ConfigParamDescr.TYPE_RANGE:
-	return new CrawlRules.REMatchRange(mp.regexp,
-					   ignoreCase,
-					   action,
-					   (String)argPair.get(0),
-					   (String)argPair.get(1));
+        return new CrawlRules.REMatchRange(mp.regexp,
+                                           ignoreCase,
+                                           action,
+                                           (String)argPair.get(0),
+                                           (String)argPair.get(1));
       case ConfigParamDescr.TYPE_NUM_RANGE:
-	return new CrawlRules.REMatchRange(mp.regexp,
-					   ignoreCase,
-					   action,
-					   ((Long)argPair.get(0)).longValue(),
-					   ((Long)argPair.get(1)).longValue());
+        return new CrawlRules.REMatchRange(mp.regexp,
+                                           ignoreCase,
+                                           action,
+                                           ((Long)argPair.get(0)).longValue(),
+                                           ((Long)argPair.get(1)).longValue());
       default:
-	throw new RuntimeException("Shouldn't happen.  Unknown REMatchRange arg type: " + descr);
+        throw new RuntimeException("Shouldn't happen.  Unknown REMatchRange arg type: " + descr);
       }
 
     default:
@@ -482,44 +508,44 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       substitute_args = new ArrayList(p_args.size());
 
       for (String key : p_args) {
-	Object val = paramMap.getMapElement(key);
-	ConfigParamDescr descr = plugin.findAuConfigDescr(key);
-	if (val != null) {
-	  interpArg(key, val, descr);
-	} else {
-	  missingArgs = true;
-	  log.warning("missing argument for : " + key);
-	  interpNullArg(key, val, descr);
-	}
+        Object val = paramMap.getMapElement(key);
+        ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+        if (val != null) {
+          interpArg(key, val, descr);
+        } else {
+          missingArgs = true;
+          log.warning("missing argument for : " + key);
+          interpNullArg(key, val, descr);
+        }
       }
     }
 
     void interpArg(String key, Object val, ConfigParamDescr descr) {
       switch (descr != null ? descr.getType()
-	      : ConfigParamDescr.TYPE_STRING) {
+              : ConfigParamDescr.TYPE_STRING) {
       case ConfigParamDescr.TYPE_SET:
-	interpSetArg(key, val, descr);
-	break;
+        interpSetArg(key, val, descr);
+        break;
       case ConfigParamDescr.TYPE_RANGE:
-	interpRangeArg(key, val, descr);
-	break;
+        interpRangeArg(key, val, descr);
+        break;
       case ConfigParamDescr.TYPE_NUM_RANGE:
-	interpNumRangeArg(key, val, descr);
-	break;
+        interpNumRangeArg(key, val, descr);
+        break;
       default:
-	interpPlainArg(key, val, descr);
-	break;
+        interpPlainArg(key, val, descr);
+        break;
       }
     }
 
     abstract void interpSetArg(String key, Object val,
-			       ConfigParamDescr descr);
+                               ConfigParamDescr descr);
     abstract void interpRangeArg(String key, Object val,
-				 ConfigParamDescr descr);
+                                 ConfigParamDescr descr);
     abstract void interpNumRangeArg(String key, Object val,
-				    ConfigParamDescr descr);
+                                    ConfigParamDescr descr);
     abstract void interpPlainArg(String key, Object val,
-				 ConfigParamDescr descr);
+                                 ConfigParamDescr descr);
     void interpNullArg(String key, Object val, ConfigParamDescr descr) {
     }
   }
@@ -533,7 +559,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       List<String> vec = (List<String>)val;
       List tmplst = new ArrayList(vec.size());
       for (String ele : vec) {
-	tmplst.add(Perl5Compiler.quotemeta(ele));
+        tmplst.add(Perl5Compiler.quotemeta(ele));
       }
       substitute_args.add(StringUtil.separatedString(tmplst, "(?:", "|", ")"));
     }
@@ -552,7 +578,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
       if (val instanceof String) {
-	val = Perl5Compiler.quotemeta((String)val);
+        val = Perl5Compiler.quotemeta((String)val);
       }
       substitute_args.add(val);
     }
@@ -560,14 +586,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     MatchPattern getMatchPattern(String printfString) {
       convert(printfString);
       if (missingArgs) {
-	log.warning("Missing variable arguments: " + p_data);
-	return new MatchPattern();
+        log.warning("Missing variable arguments: " + p_data);
+        return new MatchPattern();
       }
       if (log.isDebug3()) {
-	log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
+        log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
       }
       return new MatchPattern(pf.sprintf(substitute_args.toArray()),
-			      matchArgs, matchArgDescrs);
+                              matchArgs, matchArgDescrs);
     }
 
   }
@@ -577,13 +603,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     void haveSets() {
       if (!haveSets) {
-	// if this is first set seen, replace all values so far with
-	// singleton list of value
-	for (int ix = 0; ix < substitute_args.size(); ix++) {
-	  substitute_args.set(ix,
-			      Collections.singletonList(substitute_args.get(ix)));
-	}
-	haveSets = true;
+        // if this is first set seen, replace all values so far with
+        // singleton list of value
+        for (int ix = 0; ix < substitute_args.size(); ix++) {
+          substitute_args.set(ix,
+                              Collections.singletonList(substitute_args.get(ix)));
+        }
+        haveSets = true;
       }
     }
 
@@ -606,51 +632,51 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       long max = vec.get(1).longValue();
       long size = max - min + 1;
       if (size > MAX_NUM_RANGE_SIZE) {
-	log.error("Excessively large numeric range: " + min + "-" + max
-		  + ", truncating");
-	max = min + MAX_NUM_RANGE_SIZE;
-	size = max - min + 1;
+        log.error("Excessively large numeric range: " + min + "-" + max
+                  + ", truncating");
+        max = min + MAX_NUM_RANGE_SIZE;
+        size = max - min + 1;
       }
       List lst = new ArrayList((int)size);
       for (long x = min; x <= max; x++) {
-	lst.add(x);
+        lst.add(x);
       }
       substitute_args.add(lst);
     }
 
     void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
       if (haveSets) {
-	substitute_args.add(Collections.singletonList(val));
+        substitute_args.add(Collections.singletonList(val));
       } else {
-	substitute_args.add(val);
+        substitute_args.add(val);
       }
     }
 
     List getUrlList(String printfString) {
       convert(printfString);
       if (missingArgs) {
-	log.warning("Missing variable arguments: " + p_data);
-	return null;
+        log.warning("Missing variable arguments: " + p_data);
+        return null;
       }
       if (!substitute_args.isEmpty() && haveSets) {
-	ArrayList res = new ArrayList();
-	for (CartesianProductIterator iter =
-	       new CartesianProductIterator(substitute_args);
-	     iter.hasNext(); ) {
-	  Object[] oneCombo = (Object[])iter.next();
-	  if (log.isDebug3()) {
-	    log.debug3("sprintf(\""+format+"\", "+oneCombo+")");
-	  }
-	  res.add(pf.sprintf(oneCombo));
-	}
-	res.trimToSize();
-	return res;
+        ArrayList res = new ArrayList();
+        for (CartesianProductIterator iter =
+               new CartesianProductIterator(substitute_args);
+             iter.hasNext(); ) {
+          Object[] oneCombo = (Object[])iter.next();
+          if (log.isDebug3()) {
+            log.debug3("sprintf(\""+format+"\", "+oneCombo+")");
+          }
+          res.add(pf.sprintf(oneCombo));
+        }
+        res.trimToSize();
+        return res;
       } else {
-	if (log.isDebug3()) {
-	  log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
-	}
-	return
-	  Collections.singletonList(pf.sprintf(substitute_args.toArray()));
+        if (log.isDebug3()) {
+          log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
+        }
+        return
+          Collections.singletonList(pf.sprintf(substitute_args.toArray()));
       }
     }
   }
@@ -684,10 +710,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String getName(String printfString) {
       convert(printfString);
       if (missingArgs) {
-	log.warning("Missing variable arguments: " + p_data);
+        log.warning("Missing variable arguments: " + p_data);
       }
       if (log.isDebug3()) {
-	log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
+        log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
       }
       return pf.sprintf(substitute_args.toArray());
     }
@@ -703,8 +729,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
 
     MatchPattern(String regexp,
-		 List<List> matchArgs,
-		 List<ConfigParamDescr> matchArgDescrs) {
+                 List<List> matchArgs,
+                 List<ConfigParamDescr> matchArgDescrs) {
       this.regexp = regexp;
       this.matchArgs = matchArgs;
       this.matchArgDescrs = matchArgDescrs;
@@ -713,7 +739,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow()
-	throws PluginException;
+        throws PluginException;
   }
 
 }

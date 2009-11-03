@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.17 2006-11-02 04:20:02 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.17.38.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -137,6 +137,18 @@ public class TestPropUtil extends LockssTestCase {
     assertEquals(exp, props);
   }
 
+  public void testToFile() throws IOException {
+    Properties props = new Properties();
+    props.setProperty("k1", "1v");
+    props.setProperty("k3", "3v");
+    File tmp = FileTestUtil.writeTempFile("test", "foo=bar\nx.y=z\n");
+    PropUtil.toFile(tmp, props);
+    Properties p2 = PropUtil.fromFile(tmp);
+    assertEquals("1v", p2.get("k1"));
+    assertEquals("3v", p2.get("k3"));
+    assertEquals(props, p2);
+  }
+
   public void testDifferentKeys() {
     assertEquals(p1.keySet(), PropUtil.differentKeys(p1, null));
     assertEquals(p1.keySet(), PropUtil.differentKeys(null, p1));
@@ -180,8 +192,8 @@ public class TestPropUtil extends LockssTestCase {
     PropertyTree pt2 = new PropertyTree();
     pt1.put("one.two.three", "123");
     assertEquals(SetUtil.set("one.two.three", "one.two.", "one.two",
-			     "one.", "one"),
-		 PropUtil.differentKeysAndPrefixes(pt1, pt2));
+                             "one.", "one"),
+                 PropUtil.differentKeysAndPrefixes(pt1, pt2));
   }
 
   public void testDifferentKeysAndPrefixes2() {
@@ -189,7 +201,7 @@ public class TestPropUtil extends LockssTestCase {
     PropertyTree pt2 = new PropertyTree();
     pt1.put("x.y.", "123");
     assertEquals(SetUtil.set("x.y.", "x.y", "x.", "x"),
-		 PropUtil.differentKeysAndPrefixes(pt1, pt2));
+                 PropUtil.differentKeysAndPrefixes(pt1, pt2));
   }
 
   public void testDifferentKeysAndPrefixesCombination() {
@@ -211,9 +223,9 @@ public class TestPropUtil extends LockssTestCase {
     pt2.put("foo.bar.blah", "124");
     pt2.put("bar.foo.blah", "124");
     String expa[] = {"foo.bar.blecch", "foo.bar.", "foo.bar", "foo.", "foo",
-		    "foo.bar.gorp", "foo.bar.blah",
-		     "bar.foo.blah", "bar.foo.", "bar.foo", "bar.", "bar",
-		     "x.y", "x.", "x"};
+                    "foo.bar.gorp", "foo.bar.blah",
+                     "bar.foo.blah", "bar.foo.", "bar.foo", "bar.", "bar",
+                     "x.y", "x.", "x"};
     Set exp = SetUtil.fromArray(expa);
     assertEquals(exp, PropUtil.differentKeysAndPrefixes(pt1, pt2));
     assertEquals(exp, PropUtil.differentKeysAndPrefixes(pt2, pt1));

@@ -1,5 +1,5 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
+ * $Id: WileyExploderHelper.java,v 1.3.24.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -151,6 +151,8 @@ public class WileyExploderHelper implements ExploderHelper {
 	      "Wiley");
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX]);
+    props.put(ConfigParamDescr.YEAR.getKey(),
+	      pathElements[YER_INDEX]);
     logger.debug3(baseUrl + restOfUrl + " AU props " + props);
     ae.setAuProps(props);
   }

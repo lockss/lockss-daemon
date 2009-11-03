@@ -70,15 +70,25 @@ function selectEnable(elem, id1, id2) {
  }
 }
 
-function selectAll(form, clear) {
+function selectAll(form, op) {
+ initRepoMap(form);
  for (var i=0;i < form.length;i++) {
   elem = form.elements[i];
   if (elem.type == 'checkbox') { 
-   if (clear) {
+   if (op == 'clear') {
     elem.checked = false;
-   } else if (!elem.checked) {
-//    elem.checked = true; 
-    elem.click();
+   } else if (op == 'all') {
+    if (!elem.checked) {
+     elem.click();   // elem.checked = true   doesn't run onclick fn
+    }
+   } else if (op == 'inRepo') {
+    repobuttons = buttonMap[elem.value];
+    if (repobuttons != null && repobuttons.length == 1) {
+     var button = repobuttons[0];
+     if (button.defaultChecked && !elem.checked) {
+      elem.click();
+     }
+    }
    }
   }
  }

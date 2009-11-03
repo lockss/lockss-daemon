@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.98.14.1 2009-08-12 18:46:39 edwardsb1 Exp $
+ * $Id: LockssDaemon.java,v 1.98.14.2 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.apache.commons.lang.SystemUtils;
 import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
+import org.lockss.account.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
 import org.lockss.plugin.*;
@@ -92,6 +93,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     20 * Constants.WEEK;
 
   // Parameter keys for daemon managers
+  public static final String RANDOM_MANAGER = "RandomManager";
+  public static final String ACCOUNT_MANAGER = "AccountManager";
+  public static final String KEYSTORE_MANAGER = "KeystoreManager";
   public static final String ACTIVITY_REGULATOR = "ActivityRegulator";
   public static final String ALERT_MANAGER = "AlertManager";
   public static final String HASH_SERVICE = "HashService";
@@ -129,6 +133,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   protected final ManagerDesc[] managerDescs = {
+    new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
@@ -138,7 +143,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
     new ManagerDesc(HASH_SERVICE, "org.lockss.hasher.HashSvcQueueImpl"),
     new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
-    new ManagerDesc(IDENTITY_MANAGER, "org.lockss.protocol.IdentityManagerImpl"),
+    // keystore manager must be started before any others that need to
+    // access managed keystores
+    new ManagerDesc(KEYSTORE_MANAGER,
+		    "org.lockss.daemon.LockssKeyStoreManager"),
+    new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
+    new ManagerDesc(IDENTITY_MANAGER,
+		    "org.lockss.protocol.IdentityManagerImpl"),
     new ManagerDesc(PSM_MANAGER, "org.lockss.protocol.psm.PsmManager"),
     new ManagerDesc(POLL_MANAGER, "org.lockss.poller.PollManager"),
     new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
@@ -165,7 +176,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 		    "org.lockss.protocol.LcapDatagramRouter"),
     new ManagerDesc(ROUTER_MANAGER,
 		    "org.lockss.protocol.LcapRouter"),
-    new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
+    new ManagerDesc(NODE_MANAGER_MANAGER,
+		    "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ICP_MANAGER,
 		    "org.lockss.proxy.icp.IcpManager"),
     new ManagerDesc(PLATFORM_CONFIG_STATUS,
@@ -240,6 +252,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return true iff all managers have been started */
   public boolean isDaemonRunning() {
     return isAppRunning();
+  }
+
+  /**
+   * Return the LockssDaemon instance
+   */
+  public static LockssDaemon getLockssDaemon() {
+    return (LockssDaemon)theApp;
   }
 
   /** Return the LOCKSS user-agent string.
@@ -394,6 +413,36 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public PluginManager getPluginManager() {
     return (PluginManager) getManager(PLUGIN_MANAGER);
+  }
+
+  /**
+   * return the Account Manager
+   * @return AccountManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+
+  public AccountManager getAccountManager() {
+    return (AccountManager) getManager(ACCOUNT_MANAGER);
+  }
+
+  /**
+   * return the Random Manager
+   * @return RandomManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+
+  public RandomManager getRandomManager() {
+    return (RandomManager) getManager(RANDOM_MANAGER);
+  }
+
+  /**
+   * return the Keystore Manager
+   * @return KeystoreManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+
+  public LockssKeyStoreManager getKeystoreManager() {
+    return (LockssKeyStoreManager) getManager(KEYSTORE_MANAGER);
   }
 
   /**

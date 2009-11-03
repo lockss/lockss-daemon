@@ -1,5 +1,5 @@
 /*
- * $Id: AlertFilter.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: AlertFilter.java,v 1.3.66.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -73,6 +73,14 @@ public class AlertFilter implements LockssSerializable {
 //     return false;
 //   }
 
+  public boolean equals(Object o) {
+    if (o instanceof AlertFilter) {
+      AlertFilter filt = (AlertFilter)o;
+      return pattern.equals(filt.pattern)
+	&& action.equals(filt.action);
+    }
+    return false;
+  }
   public String toString() {
     return "[AlertFilter: " + pattern + "," + action + "]";
   }

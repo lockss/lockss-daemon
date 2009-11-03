@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbconst.py,v 1.7 2009-01-25 01:34:35 thib_gc Exp $
+# $Id: tdbconst.py,v 1.7.4.1 2009-11-03 23:44:55 edwardsb1 Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -30,34 +30,36 @@ from tdb import *
 
 TDB_OPTION_LEVEL                   = 'level'
 TDB_LEVEL_CONTENT_TESTING          = 'contentTesting'
-TDB_LEVEL_CONTENT_TESTING_STATUSES = (AU.STATUS_EXISTS,
-                                      AU.STATUS_MANIFEST,
-                                      AU.STATUS_TESTING,
-                                      AU.STATUS_NOT_READY,
-                                      AU.STATUS_READY,
-                                      AU.STATUS_PRE_RELEASING,
-                                      AU.STATUS_PRE_RELEASED,
-                                      AU.STATUS_RELEASING,
-                                      AU.STATUS_RELEASED,
-                                      AU.STATUS_DOWN)
+TDB_LEVEL_CONTENT_TESTING_STATUSES = [ AU.STATUS_EXISTS,
+                                       AU.STATUS_MANIFEST,
+                                       AU.STATUS_WANTED,
+                                       AU.STATUS_TESTING,
+                                       AU.STATUS_TESTED,
+                                       AU.STATUS_NOT_READY,
+                                       AU.STATUS_READY,
+                                       AU.STATUS_PRE_RELEASING,
+                                       AU.STATUS_PRE_RELEASED,
+                                       AU.STATUS_RELEASING,
+                                       AU.STATUS_RELEASED,
+                                       AU.STATUS_DOWN ]
 TDB_LEVEL_EVERYTHING               = 'everything'
-TDB_LEVEL_EVERYTHING_STATUSES      = tuple(AU.STATUSES)
+TDB_LEVEL_EVERYTHING_STATUSES      = AU.STATUSES[:]
 TDB_LEVEL_PRODUCTION               = 'production'
-TDB_LEVEL_PRODUCTION_STATUSES      = (AU.STATUS_RELEASED,
-                                      AU.STATUS_DOWN,
-                                      AU.STATUS_SUPERSEDED)
-TDB_LEVEL_DEFAULT                  = [TDB_LEVEL_PRODUCTION]
-TDB_LEVELS                         = AU.STATUSES + (TDB_LEVEL_CONTENT_TESTING,
-                                                    TDB_LEVEL_EVERYTHING,
-                                                    TDB_LEVEL_PRODUCTION)
+TDB_LEVEL_PRODUCTION_STATUSES      = [ AU.STATUS_RELEASED,
+                                       AU.STATUS_DOWN,
+                                       AU.STATUS_SUPERSEDED ]
+TDB_LEVEL_DEFAULT                  = [ TDB_LEVEL_PRODUCTION ]
+TDB_LEVELS                         = AU.STATUSES[:] + [ TDB_LEVEL_CONTENT_TESTING,
+                                                        TDB_LEVEL_EVERYTHING,
+                                                        TDB_LEVEL_PRODUCTION ]
 
 TDB_OPTION_STYLE      = 'style'
 TDB_STYLE_NONE        = 'none'
 TDB_STYLE_XML         = 'xml'
 TDB_STYLE_XML_ENTRIES = 'xmlEntries'
 TDB_STYLE_XML_LEGACY  = 'xmlLegacy'
-TDB_STYLES            = [TDB_STYLE_NONE,
-                         TDB_STYLE_XML,
-                         TDB_STYLE_XML_ENTRIES,
-                         TDB_STYLE_XML_LEGACY]
+TDB_STYLES            = [ TDB_STYLE_NONE,
+                          TDB_STYLE_XML,
+                          TDB_STYLE_XML_ENTRIES,
+                          TDB_STYLE_XML_LEGACY ]
 TDB_STYLE_DEFAULT     = TDB_STYLE_NONE

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.87.4.2 2009-08-12 18:46:41 edwardsb1 Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.87.4.3 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -245,7 +245,7 @@ public class HistoryRepositoryImpl
   /**
    * <p>Loads the state of an AU using the given deserializer.</p>
    * @param deserializer A deserializer instance.
-   * @return An unw instance loaded from file.
+   * @return An AuState instance loaded from file.
    * @throws RepositoryStateException if an error condition arises
    *                                  that is neither a file not found
    *                                  exception nor a serialization

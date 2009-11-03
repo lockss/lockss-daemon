@@ -1,5 +1,5 @@
 /*
- * $Id: EasySSLProtocolSocketFactory.java,v 1.1 2008-05-19 07:38:58 tlipkis Exp $
+ * $Id: EasySSLProtocolSocketFactory.java,v 1.1.18.1 2009-11-03 23:44:53 edwardsb1 Exp $
  */
 /*
 
@@ -62,6 +62,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.security.*;
 
 import org.apache.commons.httpclient.ConnectTimeoutException;
 import org.apache.commons.httpclient.HttpClientError;
@@ -74,6 +75,9 @@ import org.apache.commons.logging.LogFactory;
 
 import com.sun.net.ssl.SSLContext;
 import com.sun.net.ssl.TrustManager;
+
+import org.lockss.app.*;
+import org.lockss.daemon.*;
 
 /**
  * <p>
@@ -136,11 +140,14 @@ public class EasySSLProtocolSocketFactory implements SecureProtocolSocketFactory
 
     private static SSLContext createEasySSLContext() {
         try {
+            RandomManager rmgr =
+              LockssDaemon.getLockssDaemon().getRandomManager();
+            SecureRandom rng = rmgr.getSecureRandom();
             SSLContext context = SSLContext.getInstance("SSL");
             context.init(
               null, 
               new TrustManager[] {new EasyX509TrustManager(null)}, 
-              null);
+              rng);
             return context;
         } catch (Exception e) {
             LOG.error(e.getMessage(), e);

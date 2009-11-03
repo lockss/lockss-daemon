@@ -46,9 +46,13 @@
 ------------------------------------------------------------------------
 2. Configuration
 
-  Typically, no configuration is necessary, the default values are
-  safe.  However, certain parameters can be overridden using the
-  config file "testsuite.props", located in this directory.
+  Typically, no configuration is necessary, the default values are safe.
+  However, certain parameters can be overridden, either by editing the
+  config file "testsuite.props", located in this directory.  (Developers
+  working with the live source repository may prefer to make local
+  changes in the file "testsuite.opt", which is not under source
+  control, to avoiding accidentally sharing with all users changes that
+  were meant to be local.)
 
   Parameter            Default     Meaning
   ---------            -------     ----------------------------------
@@ -108,10 +112,10 @@
   hostname            'localhost'  The hostname to use when talking to
 		                   the servlet UI.
 
-  username            'testuser'   The username to use when talking to
+  username            'lockss-u'   The username to use when talking to
                                    the servlet UI.
 
-  password            'testpass'   The password to use when talking to
+  password            'lockss-u'   The password to use when talking to
                                    the servlet UI.
 
 
@@ -130,8 +134,6 @@
 
   Where <testsuite> is one of the following:
 
-      all           - Run all of the included tests.
-
       tinyUiTests   - Run the tiny UI tests.
 
       simpleV3Tests - Run only the simple damage, simple delete, and
@@ -140,6 +142,8 @@
       randomV3Tests - Run the randomized stress tests.
 
       v3Tests       - Run both simpleV3Tests and randomV3Tests
+
+      postTagTests  - Run the release-candidate tests
 
 
   'simpleV3Tests' currently runs three tests on very small simulated

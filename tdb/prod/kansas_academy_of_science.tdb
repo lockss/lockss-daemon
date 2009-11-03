@@ -16,13 +16,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-8443
   
-      au < do_not_process ; Transactions of the Kansas Academy of Science Volume 104 ; 104 >
-      au < do_not_process ; Transactions of the Kansas Academy of Science Volume 105 ; 105 >
-      au < do_not_process ; Transactions of the Kansas Academy of Science Volume 106 ; 106 >
+      au < doNotProcess ; Transactions of the Kansas Academy of Science Volume 104 ; 104 >
+      au < doNotProcess ; Transactions of the Kansas Academy of Science Volume 105 ; 105 >
+      au < doNotProcess ; Transactions of the Kansas Academy of Science Volume 106 ; 106 >
       au < superseded ; Transactions of the Kansas Academy of Science Volume 107 ; 107 >
-      au < do_not_process ; Transactions of the Kansas Academy of Science Volume 108 ; 108 >
-      au < do_not_process ; Transactions of the Kansas Academy of Science Volume 109 ; 109 >
-      au < do_not_process ; Transactions of the Kansas Academy of Science Volume 110 ; 110 >
+      au < doNotProcess ; Transactions of the Kansas Academy of Science Volume 108 ; 108 >
+      au < doNotProcess ; Transactions of the Kansas Academy of Science Volume 109 ; 109 >
+      au < doNotProcess ; Transactions of the Kansas Academy of Science Volume 110 ; 110 >
     }
 
     {

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCrawlWindow.java,v 1.1 2007-12-06 23:47:45 thib_gc Exp $
+ * $Id: HighWireCrawlWindow.java,v 1.1.22.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -40,6 +40,10 @@ import org.lockss.plugin.definable.*;
 
 public class HighWireCrawlWindow
     implements DefinableArchivalUnit.ConfigurableCrawlWindow {
+
+  public static final String DESCRIPTION =
+    "All times except 5:00AM - 11:00AM weekdays, US/Pacific";
+
   public HighWireCrawlWindow() {}
 
   public CrawlWindow makeCrawlWindow() {
@@ -66,8 +70,12 @@ public class HighWireCrawlWindow
       new CrawlWindows.Interval(sday, eday,
 				CrawlWindows.DAY_OF_WEEK,
 				TimeZone.getTimeZone("America/Los_Angeles"));
-    // Assemble OR(sat-sun, 12pm - 12am)
-    return new CrawlWindows.Or(SetUtil.set(timeInterval, dayInterval));
+    // Assemble OR(not 5am - 11pm, sat-sun)
+    return new CrawlWindows.Or(SetUtil.set(timeInterval, dayInterval)) {
+      public String toString() {
+	return DESCRIPTION;
+      }
+    };
 
   }
 

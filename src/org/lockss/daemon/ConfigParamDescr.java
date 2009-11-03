@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.43 2008-11-02 21:11:19 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.43.8.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -237,17 +237,29 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setDescription("The polling protocol version for the AU to use ('1' "
                     + "for V1 polling, or '3' for V3 polling)");
 
+  public static final ConfigParamDescr CRAWL_PROXY =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setDefaultOnly(true)
+    .setKey("crawl_proxy")
+    .setDisplayName("Crawl Proxy")
+    .setType(TYPE_STRING)
+    .setSize(40)
+    .setDescription("If set to host:port, crawls of this AU will be proxied." +
+                    " If set to DIRECT, crawls will not be proxied," +
+                    " even if a global crawl proxy has been set.");
+
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
       OAI_SPEC, BASE_URL2, USER_CREDENTIALS,
   };
 
-  private String key;			// param (prop) key
-  private String displayName;		// human readable name
-  private String description;		// explanatory test
+  private String key;                   // param (prop) key
+  private String displayName;           // human readable name
+  private String description;           // explanatory test
   private int type = TYPE_STRING;
-  private int size = -1;		// size of input field
+  private int size = -1;                // size of input field
 
   // A parameter is definitional if its value is integral to the identity
   // of the AU.  (I.e., if changing it results in a different AU.)
@@ -526,14 +538,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         break;
       case TYPE_USER_PASSWD:
         if (!StringUtil.isNullString(val)) {
-	  List<String> lst = StringUtil.breakAt(val, ':', -1, true, false);
-	  if (lst.size() != 2) {
-	    throw new InvalidFormatException("User:Passwd must consist of two" +
-					     "strings separated by a colon: " +
-					     val);
-	  }
-	  ret_val = val;
-	}
+          List<String> lst = StringUtil.breakAt(val, ':', -1, true, false);
+          if (lst.size() != 2) {
+            throw new InvalidFormatException("User:Passwd must consist of two" +
+                                             "strings separated by a colon: " +
+                                             val);
+          }
+          ret_val = val;
+        }
         else {
           throw new InvalidFormatException("Invalid String: " + val);
         }

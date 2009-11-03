@@ -21,6 +21,8 @@
     }
 
   }
+  
+  {
 
     title <
       name = Proceedings of the Biological Society of Washington ;
@@ -28,14 +30,16 @@
     >
 
     {
+    
       implicit < status ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-324X
   
-      au < do_not_process ; Proceedings of the Biological Society of Washington Volume 118 ; 118 >
-      au < do_not_process ; Proceedings of the Biological Society of Washington Volume 119 ; 119 >
-      au < do_not_process ; Proceedings of the Biological Society of Washington Volume 120 ; 120 >
+      au < doNotProcess ; Proceedings of the Biological Society of Washington Volume 118 ; 118 >
+      au < doNotProcess ; Proceedings of the Biological Society of Washington Volume 119 ; 119 >
+      au < doNotProcess ; Proceedings of the Biological Society of Washington Volume 120 ; 120 >
+    
     }
 
     {

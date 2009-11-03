@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.3 2009-02-26 05:14:39 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.3.4.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class ContentServletManager
   static {
     COMPRESSOR_DEFAULTS.put("compressionThreshold", "4096");
     COMPRESSOR_DEFAULTS.put("includeContentTypes",
-			    "text/html,text/xml,text/plain");
+                            "text/html,text/xml,text/plain");
   }
 
 
@@ -123,16 +123,16 @@ public class ContentServletManager
 
   public static final ServletDescr SERVLET_SERVE_CONTENT =
     new ServletDescr("ServeContent",
-		     ServeContent.class,
+                     ServeContent.class,
                      "Serve Content",
                      ServletDescr.IN_NAV);
   public static final ServletDescr SERVLET_LIST_OBJECTS =
     new ServletDescr("ListObjects",
-		     ListObjects.class,
+                     ListObjects.class,
                      "List Objests");
   protected static final ServletDescr LINK_HELP =
     new ServletDescr(null,
-		     null,
+                     null,
                      "Help", DEFAULT_HELP_URL,
                      ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Online help, FAQs, credits");
@@ -166,31 +166,31 @@ public class ContentServletManager
   }
 
   public void setConfig(Configuration config, Configuration prevConfig,
-			Configuration.Differences changedKeys) {
+                        Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(PREFIX)) {
       if (changedKeys.contains(PARAM_REDIRECT_ROOT)) {
-	redirectRootTo = config.get(PARAM_REDIRECT_ROOT,
-				    DEFAULT_REDIRECT_ROOT);
-	if (rootResourceHandler != null) {
-	  setRedirectRootTo(rootResourceHandler,
-			    (StringUtil.isNullString(redirectRootTo)
-			     ? null : redirectRootTo));
-	}
+        redirectRootTo = config.get(PARAM_REDIRECT_ROOT,
+                                    DEFAULT_REDIRECT_ROOT);
+        if (rootResourceHandler != null) {
+          setRedirectRootTo(rootResourceHandler,
+                            (StringUtil.isNullString(redirectRootTo)
+                             ? null : redirectRootTo));
+        }
       }
       setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
       compressorEnabled = config.getBoolean(PARAM_COMPRESSOR_ENABLED,
-					    DEFAULT_COMPRESSOR_ENABLED);
+                                            DEFAULT_COMPRESSOR_ENABLED);
       startOrStop();
     }
   }
 
   private void setRedirectRootTo(LockssResourceHandler rh, String redTo) {
     rootResourceHandler.setRedirectRootTo(StringUtil.isNullString(redTo)
-					  ? null : redTo);
+                                          ? null : redTo);
   }
 
-  protected void installUsers(MDHashUserRealm realm) {
+  protected void installUsers() {
   }
 
   protected void configureContexts(HttpServer server) {
@@ -244,20 +244,20 @@ public class ContentServletManager
     if (compressorEnabled) {
       String filterName = "CompressingFilter";
       FilterHolder holder =
-	handler.defineFilter(filterName, CompressingFilter.class.getName());
+        handler.defineFilter(filterName, CompressingFilter.class.getName());
       // Set default compressor params unless in config
       Configuration compressorConfig = config.getConfigTree(COMPRESSOR_PREFIX);
       for (Map.Entry<String,String> ent : COMPRESSOR_DEFAULTS.entrySet()) {
-	String key = ent.getKey();
-	if (compressorConfig.get(key) == null) {
-	  holder.put(key, ent.getValue());
-	}
+        String key = ent.getKey();
+        if (compressorConfig.get(key) == null) {
+          holder.put(key, ent.getValue());
+        }
       }
       // Set compressor params from config
       for (Iterator iter = compressorConfig.nodeIterator(); iter.hasNext(); ) {
-	String key = (String)iter.next();
-	String val = compressorConfig.get(key);
-	holder.put(key, val);
+        String key = (String)iter.next();
+        String val = compressorConfig.get(key);
+        holder.put(key, val);
       }
       handler.addFilterPathMapping("/*", filterName, Dispatcher.__DEFAULT);
     }

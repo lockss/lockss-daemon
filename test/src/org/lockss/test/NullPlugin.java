@@ -1,10 +1,10 @@
 /*
- * $Id: NullPlugin.java,v 1.95 2009-03-05 05:40:02 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.95.4.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -112,13 +113,13 @@ public class NullPlugin {
     }
 
     public org.lockss.plugin.ArchivalUnit configureAu(Configuration config,
-						      org.lockss.plugin.ArchivalUnit au)
-	throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
+                                                      org.lockss.plugin.ArchivalUnit au)
+        throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
       return null;
     }
 
     public org.lockss.plugin.ArchivalUnit createAu(Configuration auConfig)
-	throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
+        throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
       return null;
     }
 
@@ -127,6 +128,20 @@ public class NullPlugin {
     }
 
     public Object newAuxClass(String className, Class expectedType) {
+      return null;
+    }
+
+    public org.lockss.extractor.MetadataExtractor
+        getMetadataExtractor(String contentType,
+                             org.lockss.plugin.ArchivalUnit au) {
+      return null;
+    }
+
+    public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+      return null;
+    }
+
+    public String getDefaultArticleMimeType() {
       return null;
     }
   }
@@ -208,6 +223,10 @@ public class NullPlugin {
       return null;
     }
 
+    public MetadataExtractor getMetadataExtractor() {
+      return null;
+    }
+
     public CIProperties getProperties() {
       return new CIProperties();
     }
@@ -276,7 +295,7 @@ public class NullPlugin {
     }
 
     public void storeContent(InputStream input,
-			     CIProperties headers) throws IOException {
+                             CIProperties headers) throws IOException {
     }
 
     public InputStream getUncachedInputStream() {
@@ -490,7 +509,11 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public FilterFactory getFilterFactory(String mimeType) {
+    public FilterFactory getHashFilterFactory(String mimeType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public FilterFactory getCrawlFilterFactory(String mimeType) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
@@ -498,7 +521,19 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
+    public Iterator getArticleIterator() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public Iterator getArticleIterator(String contentType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     public TypedEntryMap getProperties() {
+      return null;
+    }
+
+    public Comparator<CrawlUrl> getCrawlUrlComparator() {
       return null;
     }
 

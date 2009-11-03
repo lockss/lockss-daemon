@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.218.20.1 2009-08-12 18:46:41 edwardsb1 Exp $
+ * $Id: NodeManagerImpl.java,v 1.218.20.2 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -379,7 +379,13 @@ public class NodeManagerImpl
   // Callers should call AuState directly when NodeManager goes.
   public void newContentCrawlFinished(int result, String msg) {
     // notify and checkpoint the austate (it writes through)
-    getAuState().newCrawlFinished(result, msg);
+    AuState aus = getAuState();
+    if (aus == null) {
+      // Can happen in testing
+      logger.warning("newContentCrawlFinished with null AU state");
+      return;
+    }
+    aus.newCrawlFinished(result, msg);
 
     if (result == Crawler.STATUS_SUCCESSFUL) {
       // checkpoint the top-level nodestate

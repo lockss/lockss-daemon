@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.12 2009-03-05 05:41:57 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.12.4.1 2009-11-03 23:44:55 edwardsb1 Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TestV3Voter extends LockssTestCase {
   
   V3Voter voter;
   MockLockssDaemon lockssDaemon;
+  MyBlockingStreamComm scomm;
   PeerIdentity repairRequestor;
   ArchivalUnit au;
   MockAuState aus;
@@ -80,10 +81,12 @@ public class TestV3Voter extends LockssTestCase {
     
     lockssDaemon = getMockLockssDaemon();
     IdentityManager idmgr = lockssDaemon.getIdentityManager();
+    scomm = new MyBlockingStreamComm();
+    lockssDaemon.setStreamCommManager(scomm);
+    scomm.initService(lockssDaemon);
+
     idmgr.startService();
     lockssDaemon.getSchedService().startService();
-    lockssDaemon.getDatagramRouterManager().startService();
-    lockssDaemon.getRouterManager().startService();
     lockssDaemon.getSystemMetrics().startService();
     lockssDaemon.getPluginManager().startService();
     lockssDaemon.getPollManager().startService();
@@ -139,27 +142,27 @@ public class TestV3Voter extends LockssTestCase {
    */
   
   public void testServeRepairsWithNoAgreementAndFalseProperty() {
-    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "false");
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "false",
+				  V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
   
   public void testServeRepairsWithNoAgreementAndTrueProperty() {
-    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true",
+				  V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
   
   public void testServeRepairsWithAgreementAndFalseProperty() {
-    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "false");
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "false",
+				  V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(repairRequestor));
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
 
   public void testServeRepairsWithAgreementAndTrueProperty() {
-    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true",
+				  V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(repairRequestor));
     assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
@@ -169,8 +172,8 @@ public class TestV3Voter extends LockssTestCase {
     PeerIdentity pid2 = findPid("TCP:[192.168.2.100]:9723");
     PeerIdentity pid3 = findPid("TCP:[192.168.3.100]:9723");
 
-    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true",
+				  V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(pid1));
     assertTrue(voter.serveRepairs(pid1, au, repairUrl));
     assertFalse(voter.serveRepairs(pid2, au, repairUrl));
@@ -207,13 +210,25 @@ public class TestV3Voter extends LockssTestCase {
   }
 
   public void testServeOpenAccessRepairs() {
-    ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true",
+				  V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
     aus.setAccessType(AuState.AccessType.OpenAccess);
     assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
     ConfigurationUtil.addFromArgs(V3Voter.PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
 				  "true");
+    assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
+  }
+
+  public void testServeTrustedRepairs() {
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
+    assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
+    scomm.setTrusted(true);
+    assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_REPAIR_ANY_TRUSTED_PEER,
+				  "true");
+    assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
+    scomm.setTrusted(false);
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
 
@@ -257,4 +272,16 @@ public class TestV3Voter extends LockssTestCase {
     assertEquals(500, voter.getSchedDuration(300));
   }
 
+  class MyBlockingStreamComm extends BlockingStreamComm {
+
+    boolean isTrusted = false;
+
+    public boolean isTrustedNetwork() {
+      return isTrusted;
+    }
+
+    void setTrusted(boolean val) {
+      isTrusted = val;
+    }
+  }
 }

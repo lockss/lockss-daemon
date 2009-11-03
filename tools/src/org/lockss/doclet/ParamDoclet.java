@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.7 2006-07-11 17:42:24 thib_gc Exp $
+ * $Id: ParamDoclet.java,v 1.7.52.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -67,44 +67,44 @@ public class ParamDoclet {
       FieldDoc[] fields = classDoc.fields();
 
       for (int j = 0; j < fields.length; j++) {
-	FieldDoc field = fields[j];
+        FieldDoc field = fields[j];
 
-	String name = field.name();
+        String name = field.name();
 
-	if (isParam(name)) {
+        if (isParam(name)) {
 
-	  String key = getParamKey(classDoc, name);
-	  ParamInfo info = (ParamInfo)params.get(key);
+          String key = getParamKey(classDoc, name);
+          ParamInfo info = (ParamInfo)params.get(key);
 
-	  if (info == null) {
-	    info = new ParamInfo();
-	    params.put(key, info);
-	  }
+          if (info == null) {
+            info = new ParamInfo();
+            params.put(key, info);
+          }
 
-	  if (name.startsWith("PARAM_")) {
-	    // This is a PARAM, not a DEFAULT
-	    if (info.usedIn.size() == 0) {
-	      // This is the first occurance we've encountered.
-	      Object value = field.constantValue();
+          if (name.startsWith("PARAM_")) {
+            // This is a PARAM, not a DEFAULT
+            if (info.usedIn.size() == 0) {
+              // This is the first occurance we've encountered.
+              Object value = field.constantValue();
 
-	      if (value instanceof String) {
-		String paramName = escapeName((String)value);
-		String comment = field.getRawCommentText();
-		info.paramName = paramName;
-		info.comment = comment;
-		info.usedIn.add(className);
-		// Add to the sorted map we'll use for printing.
-		sortedParams.put(paramName, info);
-	      }
-	    } else {
-	      // We've already visited this parameter before, this is
-	      // just another use.
-	      info.usedIn.add(className);
-	    }
-	  } else if (name.startsWith("DEFAULT_")) {
-	    info.defaultValue = getDefaultValue(field, root);
-	  }
-	}
+              if (value instanceof String) {
+                String paramName = escapeName((String)value);
+                String comment = field.getRawCommentText();
+                info.paramName = paramName;
+                info.comment = comment;
+                info.usedIn.add(className);
+                // Add to the sorted map we'll use for printing.
+                sortedParams.put(paramName, info);
+              }
+            } else {
+              // We've already visited this parameter before, this is
+              // just another use.
+              info.usedIn.add(className);
+            }
+          } else if (name.startsWith("DEFAULT_")) {
+            info.defaultValue = getDefaultValue(field, root);
+          }
+        }
       }
     }
 
@@ -169,12 +169,13 @@ public class ParamDoclet {
   }
 
   private static void printParamInfo(ParamInfo info) {
+    String pname = info.paramName.trim();
     out.println("<tr>\n  <td colspan=\"2\" class=\"paramHeader\">");
-    out.print("    <span class=\"paramName\">" +
-		info.paramName.trim() + "</span> &nbsp; ");
+    out.print("    <span class=\"paramName\" id=\"" + pname + "\">" + 
+              pname + "</span> &nbsp; ");
     out.print("<span class=\"defaultValue\">[");
     out.print(info.defaultValue == null ?
-	      "" : info.defaultValue.toString());
+              "" : info.defaultValue.toString());
     out.println("]</span>\n  </td>");
     out.println("</tr>");
     out.println("<tr>");
@@ -236,22 +237,26 @@ public class ParamDoclet {
       fld.setAccessible(true);
       Class cls = fld.getType();
       if (int.class == cls) {
-	defaultVal = (new Integer(fld.getInt(null))).toString();
+        defaultVal = (new Integer(fld.getInt(null))).toString();
       } else if (long.class == cls) {
-	long timeVal = fld.getLong(null);
-	defaultVal = timeVal + " (" +
-	  StringUtil.timeIntervalToString(timeVal) + ")";
+        long timeVal = fld.getLong(null);
+        if (timeVal > 0) {
+          defaultVal = timeVal + " (" +
+            StringUtil.timeIntervalToString(timeVal) + ")";
+        } else {
+          defaultVal = Long.toString(timeVal);
+        }
       } else if (boolean.class == cls) {
-	defaultVal = (new Boolean(fld.getBoolean(null))).toString();
+        defaultVal = (new Boolean(fld.getBoolean(null))).toString();
       } else {
-	try {
-	  // This will throw NPE if the field isn't static; don't know how
-	  // to get initial value in that case
-	  Object dval = fld.get(null);
-	  defaultVal = (dval != null) ? dval.toString() : "(null)";
-	} catch (NullPointerException e) {
-	  defaultVal = "(unknown: non-static default)";
-	}
+        try {
+          // This will throw NPE if the field isn't static; don't know how
+          // to get initial value in that case
+          Object dval = fld.get(null);
+          defaultVal = (dval != null) ? dval.toString() : "(null)";
+        } catch (NullPointerException e) {
+          defaultVal = "(unknown: non-static default)";
+        }
       }
     } catch (Exception e) {
       root.printError(field.position(), field.name() + ": " + e);
@@ -274,7 +279,7 @@ public class ParamDoclet {
   }
 
   public static boolean validOptions(String[][] options,
-				     DocErrorReporter reporter) {
+                                     DocErrorReporter reporter) {
     return true;
   }
 
@@ -285,23 +290,23 @@ public class ParamDoclet {
 
     for (int i = 0 ; i < options.length; i++) {
       if (options[i][0].equals("-d")) {
-	outDir = options[i][1];
+        outDir = options[i][1];
       } else if (options[i][0].equals("-o")) {
-	String outFile = options[i][1];
-	try {
-	  File f = null;
-	  if (outDir != null) {
-	    f = new File(outDir, outFile);
-	  } else {
-	    f = new File(outFile);
-	  }
+        String outFile = options[i][1];
+        try {
+          File f = null;
+          if (outDir != null) {
+            f = new File(outDir, outFile);
+          } else {
+            f = new File(outFile);
+          }
 
-	  out = new PrintStream(new BufferedOutputStream(new FileOutputStream(f)));
-	  closeOut = true;
-	  return true;
-	} catch (IOException ex) {
-	  root.printError("Unable to open output file: " + outFile);
-	}
+          out = new PrintStream(new BufferedOutputStream(new FileOutputStream(f)));
+          closeOut = true;
+          return true;
+        } catch (IOException ex) {
+          root.printError("Unable to open output file: " + outFile);
+        }
       }
     }
     return false;

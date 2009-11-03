@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1095-5674
   
-      au < do_not_process ; The Journal of the Torrey Botanical Society Volume 132 ; 132 >
-      au < do_not_process ; The Journal of the Torrey Botanical Society Volume 133 ; 133 >
-      au < do_not_process ; The Journal of the Torrey Botanical Society Volume 134 ; 134 >
+      au < doNotProcess ; The Journal of the Torrey Botanical Society Volume 132 ; 132 >
+      au < doNotProcess ; The Journal of the Torrey Botanical Society Volume 133 ; 133 >
+      au < doNotProcess ; The Journal of the Torrey Botanical Society Volume 134 ; 134 >
     }
 
     {

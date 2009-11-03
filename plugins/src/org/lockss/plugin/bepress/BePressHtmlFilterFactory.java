@@ -1,10 +1,10 @@
 /*
- * $Id: BePressHtmlFilterFactory.java,v 1.1 2007-09-21 17:01:16 thib_gc Exp $
+ * $Id: BePressHtmlFilterFactory.java,v 1.1.26.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,12 +44,35 @@ public class BePressHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    // Filter out <select name="url">...</select>
+    HtmlTransform[] transforms = new HtmlTransform[] {
+        
+        /*
+         * The top-right corner of all pages of a journal may contain
+         * a news item.
+         * 
+         * Remove <div id="news">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "news")),
+        
+        /*
+         * In the right-hand column of every page, there is a drop-
+         * down box with a list of issues in this journal. This list
+         * changes forever as long as the journal is being published.
+         * It should be removed.
+         * 
+         * Remove <div id="url">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("select",
+                                                                         "name",
+                                                                         "url")),
+
+    };
+    
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("select",
-                                                                                                      "name",
-                                                                                                      "url")));
+                                     new HtmlCompoundTransform(transforms));
   }
 
 }

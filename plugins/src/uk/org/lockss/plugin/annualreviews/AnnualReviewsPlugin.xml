@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Annual Reviews Plugin, Base URL %s, Journal ID %s (%s), Volume %d&quot;, base_url, journal_id, short_journal_id, volume</string>
+    <string>&quot;Annual Reviews Plugin, Base URL %s, Journal ID %s, Short Journal ID %s, Volume %d&quot;, base_url, journal_id, short_journal_id, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -30,14 +30,13 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%slockss/%s/%d/index.html&quot;, base_url, journal_id, volume</string>
       <string>2,&quot;^%s(action|loi|search|feedback|edcom)&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(js|css|ico|gif|jpe?g|png)$&quot;, base_url</string>
       <string>1,&quot;^%stoc/%s/%d/&quot;, base_url, journal_id, volume</string>
-      <string>2,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.%s\.0?%d\..*\?prevSearch=\${resultBean\.text}&quot;, base_url, short_journal_id, volume</string>
-      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.%s\.0?%d\.&quot;, base_url, short_journal_id, volume</string>
-      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.%s\.0?%d\.&quot;, base_url, journal_id, volume</string>
+      <string>2,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev[.-](%s|%s)[.-].*\?prevSearch=\${resultBean\.text}&quot;, base_url, journal_id, short_journal_id, volume</string>
+      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev[.-](%s|%s)[.-]&quot;, base_url, journal_id, short_journal_id, volume</string>
     </list>
   </entry>
   <entry>

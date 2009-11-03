@@ -1,10 +1,10 @@
 /*
- * $Id: ArchivalUnit.java,v 1.45 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.45.10.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,15 @@ public interface ArchivalUnit {
 
   static final String KEY_AU_BASE_URL  = "au_base_url";
   static final String KEY_AU_FETCH_DELAY = "au_fetch_delay";
-  static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE = "au_fetch_rate_limiter_source";
+  /** One of:<br>
+   * au<br>
+   * plugin<br>
+   * key:&lt;key&gt;<br>
+   * host:&lt;param&gt;<br>
+   * title_attr:&lt;attr&gt;
+   */
+  static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE =
+    "au_fetch_rate_limiter_source";
   static final String KEY_AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
   static final String KEY_AU_NEW_CONTENT_CRAWL_INTERVAL = "au_new_crawl_interval";
   static final String KEY_AU_CRAWL_SPEC = "au_crawl_spec";
@@ -221,6 +229,14 @@ public interface ArchivalUnit {
   public boolean shouldCallTopLevelPoll(AuState aus);
 
   /**
+   * Returns a Comparator<CrawlUrl> used to stermine the order in which URLs
+   * are fetched during a crawl.
+   * @return the Comparator<CrawlUrl>, or null if none
+   */
+  public Comparator<CrawlUrl> getCrawlUrlComparator()
+      throws PluginException.LinkageError;
+  
+  /**
    * Return a {@link LinkExtractor} that knows how to extract URLs from
    * content of the given MIME type
    * @param contentType content type to get a content parser for
@@ -238,13 +254,22 @@ public interface ArchivalUnit {
   public FilterRule getFilterRule(String contentType);
 
   /**
-   * Return the {@link FilterFactory} for the given contentType or null if
-   * there is none
+   * Return the {@link FilterFactory} to be used before hashing the given
+   * contentType, or null if there is none
    * @param contentType content type of the content we are going to filter
-   * @return {@link FilterFactory} for the given contentType or null if
-   * there is none
+   * @return hash {@link FilterFactory} for the given contentType or null
+   * if there is none
    */
-  public FilterFactory getFilterFactory(String contentType);
+  public FilterFactory getHashFilterFactory(String contentType);
+
+  /**
+   * Return the {@link FilterFactory} to be used before extracting links
+   * from the given contentType, or null if there is none
+   * @param contentType content type of the content we are going to filter
+   * @return crawl {@link FilterFactory} for the given contentType or null
+   * if there is none
+   */
+  public FilterFactory getCrawlFilterFactory(String contentType);
 
   /**
    * Return the {@link LinkRewriterFactory} for the given contentType or
@@ -255,6 +280,21 @@ public interface ArchivalUnit {
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType);
 
+  /**
+   * Returns an Iterator for articles from the AU's plugin. If there isn't
+   * one, an empty iterator will be returned.
+   * @return the ArticleIterator
+   */
+  public Iterator getArticleIterator();
+  
+  /**
+   * Returns an Iterator for articles from the AU's plugin. If there isn't
+   * one, an empty iterator will be returned.
+   * @param contentType the content type of the articles
+   * @return the ArticleIterator
+   */
+  public Iterator getArticleIterator(String contentType);
+  
   /**
    * Create a {@link CachedUrlSet}representing the content
    * with a specific {@link CachedUrlSetSpec}.

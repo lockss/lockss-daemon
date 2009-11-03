@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.18 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.18.36.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -82,33 +82,36 @@ public class EDPInspectorTableModel extends AbstractTableModel
     new InspectorEntry(EditableDefinablePlugin.KEY_PLUGIN_IDENTIFIER,
                        "Plugin ID"),
     new InspectorEntry(DefinablePlugin.KEY_PLUGIN_VERSION,
-		       "Plugin Version"),
+                       "Plugin Version"),
     new InspectorEntry(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
-		       "Configuration Parameters",
+                       "Configuration Parameters",
                        inspectorCellEditor),
     new InspectorEntry(DefinablePlugin.KEY_PLUGIN_NOTES,
                        "Plugin Notes",
-		       inspectorCellEditor),
+                       inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_START_URL,
-		       "Start URL Template",
+                       "Start URL Template",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_NAME,
                        "AU Name Template",
-		       inspectorCellEditor),
+                       inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
                        "Crawl Rules",
-		       inspectorCellEditor),
+                       inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME,
-		       "Pause Time Between Fetches",
+                       "Pause Time Between Fetches",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
                        "New Content Crawl Interval",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-		       "Filter Rules",
+                       "Hash Filter Rules (obs.)",
                        inspectorCellEditor), 
-    new InspectorEntry(DefinableArchivalUnit.SUFFIX_FILTER_RULE,
-                       "Filter Factories",
+    new InspectorEntry(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY,
+                       "Hash Filter Factories",
+                       inspectorCellEditor),
+    new InspectorEntry(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
+                       "Crawl Filter Factories",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
                        "Default Crawl Depth"),
@@ -118,9 +121,9 @@ public class EDPInspectorTableModel extends AbstractTableModel
                        "Crawl Window",
                        inspectorCellEditor),
     new InspectorEntry(DefinablePlugin.KEY_EXCEPTION_HANDLER,
-		       "Crawl Exception Class"),
+                       "Crawl Exception Class"),
     new InspectorEntry(DefinablePlugin.KEY_EXCEPTION_LIST,
-		       "Cache Exception Map",
+                       "Cache Exception Map",
                        inspectorCellEditor),
     new InspectorEntry(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION,
                        "Required Daemon Version"),
@@ -135,24 +138,24 @@ public class EDPInspectorTableModel extends AbstractTableModel
     new InspectorEntry(EditableDefinablePlugin.KEY_PLUGIN_IDENTIFIER,
                        "Plugin ID"),
     new InspectorEntry(DefinablePlugin.KEY_PLUGIN_VERSION,
-		       "Plugin Version"),
+                       "Plugin Version"),
     new InspectorEntry(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
-		       "Configuration Parameters",
+                       "Configuration Parameters",
                        inspectorCellEditor),
     new InspectorEntry(DefinablePlugin.KEY_PLUGIN_NOTES,
                        "Plugin Notes",
-		       inspectorCellEditor),
+                       inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_START_URL,
-		       "Start URL Template",
+                       "Start URL Template",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_NAME,
                        "AU Name Template",
-		       inspectorCellEditor),
+                       inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
                        "Crawl Rules",
-		       inspectorCellEditor),
+                       inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME,
-		       "Pause Time Between Fetches",
+                       "Pause Time Between Fetches",
                        inspectorCellEditor),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
                        "New Content Crawl Interval",
@@ -216,7 +219,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
       EDPCellData cell_data = (EDPCellData) obj;
       Object value = cell_data.getData();
       if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
-	return value;
+        return value;
       }
       return cell_data;
     }
@@ -261,7 +264,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
       else if (cause instanceof ClassNotFoundException) {
         errorMessage = "The class you have specified does not seem to be loadable under the current class path.";
       }
-      else if (cause instanceof InstantiationError) {
+      else if (cause instanceof InstantiationException) {
         errorMessage = "The class you have specified seems to have caused an instantiation error.";
       }
       else if (cause instanceof IllegalAccessException) {
@@ -303,7 +306,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
     m_plugin = edp;
     for (int row = 0; row < inspectorEntries.length; row++) {
       EDPCellData cell_data = new EDPCellData(edp,
-					      inspectorEntries[row].m_pluginKey);
+                                              inspectorEntries[row].m_pluginKey);
       cell_data.addChangeListener(this);
       data[row][1] = cell_data;
     }
@@ -322,7 +325,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
     for (int row = 0; row < inspectorEntries.length; row++) {
       curString = data[row][col].toString();
       if (curString.length() > longestStr.length()) {
-	longestStr = curString;
+        longestStr = curString;
       }
     }
     TableCellRenderer headerRenderer =
@@ -332,7 +335,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
 
     comp = headerRenderer.getTableCellRendererComponent(null,
                                                         column.getHeaderValue(),
-							false,
+                                                        false,
                                                         false,
                                                         0,
                                                         0);
@@ -352,7 +355,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
   public void setCellEditor(CellEditorJTable.CellEditorModel editorModel) {
     for (int row = 0; row < inspectorEntries.length; row++) {
       if (inspectorEntries[row].m_editor != null) {
-	editorModel.addEditorForCell(row, 1, inspectorEntries[row].m_editor);
+        editorModel.addEditorForCell(row, 1, inspectorEntries[row].m_editor);
       }
     }
   }

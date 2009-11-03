@@ -16,7 +16,7 @@ org.lockss.proxy.start=no
 org.lockss.comm.enabled=false
 
 # Identity
-org.lockss.localV3Identity=TCP:[127.0.0.1]:9720
+org.lockss.platform.v3.identity=TCP:[127.0.0.1]:9720
 
 # Comm settings
 org.lockss.scomm.maxMessageSize=33554430

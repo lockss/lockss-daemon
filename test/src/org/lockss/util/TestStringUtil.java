@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringUtil.java,v 1.68 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.68.24.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,46 +61,58 @@ public class TestStringUtil extends LockssTestCase {
   public void testTruncateAtAnyNullChars() {
     String testStr = "test";
     assertEquals(testStr,
-		 StringUtil.truncateAtAny(testStr, null));
+                 StringUtil.truncateAtAny(testStr, null));
   }
 
   public void testTruncateAtAnyNoMatch() {
     String testStr = "test!blah";
     assertEquals("test!blah",
-		 StringUtil.truncateAtAny(testStr, " "));
+                 StringUtil.truncateAtAny(testStr, " "));
   }
 
   public void testTruncateAtAnySingleChar() {
     String testStr = "test!blah";
     assertEquals("test",
-		 StringUtil.truncateAtAny(testStr, "!"));
+                 StringUtil.truncateAtAny(testStr, "!"));
   }
 
   public void testTruncateAtAnyMultiChars() {
     assertEquals("test",
-		 StringUtil.truncateAtAny("test!blah", "! \""));
+                 StringUtil.truncateAtAny("test!blah", "! \""));
     assertEquals("test",
-		 StringUtil.truncateAtAny("test blah", "! \""));
+                 StringUtil.truncateAtAny("test blah", "! \""));
     assertEquals("test",
-		 StringUtil.truncateAtAny("test\"blah", "! \""));
+                 StringUtil.truncateAtAny("test\"blah", "! \""));
     // ensure finds the first occurrence of *any* of the chars
     assertEquals("test",
-		 StringUtil.truncateAtAny("test !blah", "! \""));
+                 StringUtil.truncateAtAny("test !blah", "! \""));
 
   }
 
   public void testTruncateAt() {
     assertNull(StringUtil.truncateAt(null, 'a'));
     assertEquals("test",
-		 StringUtil.truncateAt("test!blah", '!'));
+                 StringUtil.truncateAt("test!blah", '!'));
     assertEquals("",
-		 StringUtil.truncateAt("!blah", '!'));
+                 StringUtil.truncateAt("!blah", '!'));
     assertEquals("test",
-		 StringUtil.truncateAt("test|", '|'));
+                 StringUtil.truncateAt("test|", '|'));
     assertEquals("test",
-		 StringUtil.truncateAt("test|foo|bar", '|'));
+                 StringUtil.truncateAt("test|foo|bar", '|'));
     assertEquals("test|blah",
-		 StringUtil.truncateAt("test|blah", '0'));
+                 StringUtil.truncateAt("test|blah", '0'));
+  }
+
+  public void testElideMiddleToMaxLen() {
+    assertNull(StringUtil.elideMiddleToMaxLen(null, 10));
+    assertEquals("test",
+                 StringUtil.elideMiddleToMaxLen("test", 10));
+    assertEquals("test123456",
+                 StringUtil.elideMiddleToMaxLen("test123456", 10));
+    assertEquals("test...3456",
+                 StringUtil.elideMiddleToMaxLen("test123456", 9));
+    assertEquals("foo...bar",
+                 StringUtil.elideMiddleToMaxLen("foonlyrebar", 6));
   }
 
   public void testIndexOfIgnoreCase() {
@@ -120,17 +132,17 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testSeparatedString() {
     assertEquals("1, 2, 3",
-		 StringUtil.separatedString(ListUtil.list("1","2","3")));
+                 StringUtil.separatedString(ListUtil.list("1","2","3")));
     assertEquals("1,2,3",
-		 StringUtil.separatedString(ListUtil.list("1","2","3"), ","));
+                 StringUtil.separatedString(ListUtil.list("1","2","3"), ","));
     assertEquals("'1','2','3'",
-		 StringUtil.separatedDelimitedString(ListUtil.list("1","2",
-								   "3"),
-						     ",", "'"));
+                 StringUtil.separatedDelimitedString(ListUtil.list("1","2",
+                                                                   "3"),
+                                                     ",", "'"));
     assertEquals("[1],[2],[3]",
-		 StringUtil.separatedDelimitedString(ListUtil.list("1","2",
-								   "3"),
-						     ",", "[", "]"));
+                 StringUtil.separatedDelimitedString(ListUtil.list("1","2",
+                                                                   "3"),
+                                                     ",", "[", "]"));
     String a[] = {"a", "b", "c"};
     assertEquals("a,b,c", StringUtil.separatedString(a, ","));
     assertEquals("2,6,3", StringUtil.separatedString(new int[]{2,6,3}, ","));
@@ -158,7 +170,7 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("\"foo,bar\"", StringUtil.csvEncode("foo,bar"));
     assertEquals("\"quote\"\"me\"\"\"", StringUtil.csvEncode("quote\"me\""));
     assertEquals("\"quote \"\"me\"\" now\"",
-		 StringUtil.csvEncode("quote \"me\" now"));
+                 StringUtil.csvEncode("quote \"me\" now"));
   }
 
   public void testCountOccurences() {
@@ -180,33 +192,33 @@ public class TestStringUtil extends LockssTestCase {
     String testStr = "blahTestblah";
     // same length
     assertEquals("blah1234blah",
-		 StringUtil.replaceString(testStr, "Test", "1234"));
+                 StringUtil.replaceString(testStr, "Test", "1234"));
     // shorter
     assertEquals("blahabcblah",
-		 StringUtil.replaceString(testStr, "Test", "abc"));
+                 StringUtil.replaceString(testStr, "Test", "abc"));
     // longer
     assertEquals("blahCheeseblah",
-		 StringUtil.replaceString(testStr, "Test", "Cheese"));
+                 StringUtil.replaceString(testStr, "Test", "Cheese"));
   }
 
   public void testReplaceStringMultiExistingSubstring(){
     String testStr = "blahTestblah";
     // same length
     assertEquals("BrieTestBrie",
-		 StringUtil.replaceString(testStr, "blah", "Brie"));
+                 StringUtil.replaceString(testStr, "blah", "Brie"));
     // shorter
     assertEquals("blahabcblah",
-		 StringUtil.replaceString(testStr, "Test", "abc"));
+                 StringUtil.replaceString(testStr, "Test", "abc"));
     // longer
     assertEquals("splungeTestsplunge",
-		 StringUtil.replaceString(testStr, "blah", "splunge"));
+                 StringUtil.replaceString(testStr, "blah", "splunge"));
   }
 
   public void testReplacementStringContainsReplacedString(){
     assertEquals("1234456",
-  		 StringUtil.replaceString("123456", "4", "44"));
+                 StringUtil.replaceString("123456", "4", "44"));
     assertEquals("123444456",
-  		 StringUtil.replaceString("1234456", "4", "44"));
+                 StringUtil.replaceString("1234456", "4", "44"));
   }
 
   public void testReplaceFirst() {
@@ -224,7 +236,7 @@ public class TestStringUtil extends LockssTestCase {
   public void testOverlap(){
     String testStr = "xxx1xxx2xxx3xxx";
     assertEquals("ddx1ddx2ddx3ddx",
-		 StringUtil.replaceString(testStr, "xx", "dd"));
+                 StringUtil.replaceString(testStr, "xx", "dd"));
   }
 
   public void testReplaceEqualStrings(){
@@ -239,38 +251,38 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals(v, StringUtil.breakAt("", ' '));
     assertIsomorphic(ListUtil.list("foo"), StringUtil.breakAt("foo", ' '));
     assertIsomorphic(ListUtil.list("foo", "bar"),
-		     StringUtil.breakAt("foo bar", ' '));
+                     StringUtil.breakAt("foo bar", ' '));
     assertIsomorphic(ListUtil.list("foo", "", "bar"),
-		     StringUtil.breakAt("foo  bar", ' '));
+                     StringUtil.breakAt("foo  bar", ' '));
     assertIsomorphic(ListUtil.list("foo", ""),
-		     StringUtil.breakAt("foo ", ' '));
+                     StringUtil.breakAt("foo ", ' '));
     assertIsomorphic(ListUtil.list("", "foo"),
-		     StringUtil.breakAt(" foo", ' '));
+                     StringUtil.breakAt(" foo", ' '));
     assertIsomorphic(ListUtil.list("foo", "bar"),
-		     StringUtil.breakAt("foo bar ddd", ' ', 2));
+                     StringUtil.breakAt("foo bar ddd", ' ', 2));
     assertIsomorphic(ListUtil.list("foo", "bar"),
-		     StringUtil.breakAt("foo bar ddd eee fff", ' ', 2));
+                     StringUtil.breakAt("foo bar ddd eee fff", ' ', 2));
 
     assertIsomorphic(ListUtil.list("", ""),
-		     StringUtil.breakAt("+", '+', -1, false));
+                     StringUtil.breakAt("+", '+', -1, false));
     assertIsomorphic(ListUtil.list(),
-		     StringUtil.breakAt("+", '+', -1, true));
+                     StringUtil.breakAt("+", '+', -1, true));
     assertIsomorphic(ListUtil.list("", "foo"),
-		     StringUtil.breakAt("+foo", '+', -1, false));
+                     StringUtil.breakAt("+foo", '+', -1, false));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("+foo", '+', -1, true));
+                     StringUtil.breakAt("+foo", '+', -1, true));
     assertIsomorphic(ListUtil.list("foo", ""),
-		     StringUtil.breakAt("foo+", '+', -1, false));
+                     StringUtil.breakAt("foo+", '+', -1, false));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("foo+", '+', -1, true));
+                     StringUtil.breakAt("foo+", '+', -1, true));
     assertIsomorphic(ListUtil.list("foo "),
-		     StringUtil.breakAt("foo +", '+', -1, true, false));
+                     StringUtil.breakAt("foo +", '+', -1, true, false));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("foo +", '+', -1, true, true));
+                     StringUtil.breakAt("foo +", '+', -1, true, true));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("foo + ", '+', -1, true, true));
+                     StringUtil.breakAt("foo + ", '+', -1, true, true));
     assertIsomorphic(ListUtil.list("foo ", " "),
-		     StringUtil.breakAt("foo + ", '+', -1, true, false));
+                     StringUtil.breakAt("foo + ", '+', -1, true, false));
 
   }
 
@@ -283,40 +295,40 @@ public class TestStringUtil extends LockssTestCase {
     assertIsomorphic(ListUtil.list("foo"), StringUtil.breakAt("foo", " "));
     assertIsomorphic(ListUtil.list("foo"), StringUtil.breakAt("foo", "  "));
     assertIsomorphic(ListUtil.list("foo", "bar"),
-		     StringUtil.breakAt("foo bar", " "));
+                     StringUtil.breakAt("foo bar", " "));
     assertIsomorphic(ListUtil.list("foo", "bar"),
-		     StringUtil.breakAt("fooXYbar", "XY"));
+                     StringUtil.breakAt("fooXYbar", "XY"));
     assertIsomorphic(ListUtil.list("foo", "", "bar"),
-		     StringUtil.breakAt("fooXYXYbar", "XY"));
+                     StringUtil.breakAt("fooXYXYbar", "XY"));
     assertIsomorphic(ListUtil.list("foo", ""),
-		     StringUtil.breakAt("foo  ", "  "));
+                     StringUtil.breakAt("foo  ", "  "));
     assertIsomorphic(ListUtil.list("", "foo"),
-		     StringUtil.breakAt(" foo", " "));
+                     StringUtil.breakAt(" foo", " "));
     assertIsomorphic(ListUtil.list("", "foo"),
-		     StringUtil.breakAt("  foo", "  "));
+                     StringUtil.breakAt("  foo", "  "));
     assertIsomorphic(ListUtil.list("foo", "bar"),
-		     StringUtil.breakAt("fooZZbarZZddd", "ZZ", 2));
+                     StringUtil.breakAt("fooZZbarZZddd", "ZZ", 2));
 
     assertIsomorphic(ListUtil.list("", ""),
-		     StringUtil.breakAt("XX", "XX", -1, false));
+                     StringUtil.breakAt("XX", "XX", -1, false));
     assertIsomorphic(ListUtil.list(),
-		     StringUtil.breakAt("+", "+", -1, true));
+                     StringUtil.breakAt("+", "+", -1, true));
     assertIsomorphic(ListUtil.list("", "foo"),
-		     StringUtil.breakAt("+foo", "+", -1, false));
+                     StringUtil.breakAt("+foo", "+", -1, false));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("+foo", "+", -1, true));
+                     StringUtil.breakAt("+foo", "+", -1, true));
     assertIsomorphic(ListUtil.list("foo", ""),
-		     StringUtil.breakAt("foo+", "+", -1, false));
+                     StringUtil.breakAt("foo+", "+", -1, false));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("foo+", "+", -1, true));
+                     StringUtil.breakAt("foo+", "+", -1, true));
     assertIsomorphic(ListUtil.list("foo "),
-		     StringUtil.breakAt("foo +", "+", -1, true, false));
+                     StringUtil.breakAt("foo +", "+", -1, true, false));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("foo +", "+", -1, true, true));
+                     StringUtil.breakAt("foo +", "+", -1, true, true));
     assertIsomorphic(ListUtil.list("foo"),
-		     StringUtil.breakAt("foo + ", "+", -1, true, true));
+                     StringUtil.breakAt("foo + ", "+", -1, true, true));
     assertIsomorphic(ListUtil.list("foo ", " "),
-		     StringUtil.breakAt("foo + ", "+", -1, true, false));
+                     StringUtil.breakAt("foo + ", "+", -1, true, false));
 
   }
 
@@ -410,9 +422,9 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testShortNameMethod() throws NoSuchMethodException {
     Method meth = this.getClass().getDeclaredMethod("testShortNameMethod",
-						    new Class[0]);
+                                                    new Class[0]);
     assertEquals("TestStringUtil.testShortNameMethod",
-		 StringUtil.shortName(meth));
+                 StringUtil.shortName(meth));
   }
 
   public void testStackTraceString() {
@@ -432,27 +444,27 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testTrimLeadingWhitespace() {
     assertSame("foo",
-	       StringUtil.trimNewlinesAndLeadingWhitespace("foo"));
+               StringUtil.trimNewlinesAndLeadingWhitespace("foo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\noo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\noo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\roo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\roo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\r\noo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\r\noo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n oo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n oo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\r oo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\r oo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n   oo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n   oo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\too"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\too"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\t \too"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\t \too"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n \t \t oo"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n \t \t oo"));
     assertEquals("foo",
-		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\n\t\too"));
+                 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\n\t\too"));
   }
 
   public void testTrimHostName() {
@@ -492,15 +504,15 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals(DAY, StringUtil.parseTimeInterval("1d"));
     assertEquals(WEEK, StringUtil.parseTimeInterval("1w"));
     assertEquals(StringUtil.parseTimeInterval("60s"),
-		 StringUtil.parseTimeInterval("1m"));
+                 StringUtil.parseTimeInterval("1m"));
     assertEquals(StringUtil.parseTimeInterval("120m"),
-		 StringUtil.parseTimeInterval("2h"));
+                 StringUtil.parseTimeInterval("2h"));
     assertEquals(StringUtil.parseTimeInterval("72h"),
-		 StringUtil.parseTimeInterval("3d"));
+                 StringUtil.parseTimeInterval("3d"));
     assertEquals(StringUtil.parseTimeInterval("14d"),
-		 StringUtil.parseTimeInterval("2w"));
+                 StringUtil.parseTimeInterval("2w"));
     assertEquals(StringUtil.parseTimeInterval((365 * 3) + "d"),
-		 StringUtil.parseTimeInterval("3y"));
+                 StringUtil.parseTimeInterval("3y"));
     try {
       StringUtil.parseTimeInterval("2x");
       fail("should have thrown NumberFormatException");
@@ -513,7 +525,7 @@ public class TestStringUtil extends LockssTestCase {
     }
   }
 
-  public void testTimeInterval() throws Exception {
+  public void testTimeIntervalToString() throws Exception {
     assertEquals("0ms", StringUtil.timeIntervalToString(0));
     assertEquals("1000ms", StringUtil.timeIntervalToString(SECOND));
     assertEquals("-1000ms", StringUtil.timeIntervalToString(- SECOND));
@@ -523,12 +535,34 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("1m0s", StringUtil.timeIntervalToString(MINUTE));
     assertEquals("1h0m0s", StringUtil.timeIntervalToString(HOUR));
     assertEquals("2d3h0m",
-		 StringUtil.timeIntervalToString(DAY * 2 + HOUR * 3));
+                 StringUtil.timeIntervalToString(DAY * 2 + HOUR * 3));
     assertEquals("20d23h0m",
-		 StringUtil.timeIntervalToString(WEEK * 3 - (HOUR * 1)));
+                 StringUtil.timeIntervalToString(WEEK * 3 - (HOUR * 1)));
     assertEquals("-20d23h0m",
-		 StringUtil.timeIntervalToString(- (WEEK * 3 - (HOUR * 1))));
+                 StringUtil.timeIntervalToString(- (WEEK * 3 - (HOUR * 1))));
     assertEquals("3w0d0h", StringUtil.timeIntervalToString(WEEK * 3));
+  }
+
+  public void testTimeIntervalToLong() throws Exception {
+    assertEquals("0 seconds", StringUtil.timeIntervalToLongString(0));
+    assertEquals("1 second", StringUtil.timeIntervalToLongString(SECOND));
+    assertEquals("-1 second", StringUtil.timeIntervalToLongString(- SECOND));
+    assertEquals("9 seconds", StringUtil.timeIntervalToLongString(SECOND * 9));
+    assertEquals("-9 seconds",
+                 StringUtil.timeIntervalToLongString(- SECOND * 9));
+    assertEquals("10 seconds",
+                 StringUtil.timeIntervalToLongString(SECOND * 10));
+    assertEquals("1 minute", StringUtil.timeIntervalToLongString(MINUTE));
+    assertEquals("1 hour", StringUtil.timeIntervalToLongString(HOUR));
+    assertEquals("2 days, 3 hours",
+                 StringUtil.timeIntervalToLongString(DAY * 2 + HOUR * 3));
+    assertEquals("20 days, 23 hours, 45 minutes",
+                 StringUtil.timeIntervalToLongString(WEEK * 3 - (HOUR * 1)
+                                                     + MINUTE * 45));
+    assertEquals("12 days, 13 minutes, 1 second",
+                 StringUtil.timeIntervalToLongString(DAY * 12 + MINUTE * 13
+                                                     + SECOND));
+    assertEquals("21 days", StringUtil.timeIntervalToLongString(WEEK * 3));
   }
 
   public void testParseSize() throws Exception {
@@ -587,7 +621,7 @@ public class TestStringUtil extends LockssTestCase {
     String s1 = "Exception string: Nested error: java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
     String s2 = "java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
     String s2a = s2 + "junk";
-    String s3 = "	at java.io.FileInputStream.open(Native Method)";
+    String s3 = "       at java.io.FileInputStream.open(Native Method)";
     String st1 = s2 + "\n" + s3;
     assertEquals(s3, StringUtil.trimStackTrace(s1, st1));
     String st2 = s2a + "\n" + s3;
@@ -614,6 +648,21 @@ public class TestStringUtil extends LockssTestCase {
     assertFalse(StringUtil.startsWithIgnoreCase("1", "2"));
     assertFalse(StringUtil.startsWithIgnoreCase("12", "2"));
     assertFalse(StringUtil.startsWithIgnoreCase("foo.opt", "foox"));
+  }
+
+  public void testHasRepeatedChar() {
+    assertFalse(StringUtil.hasRepeatedChar(""));
+    assertFalse(StringUtil.hasRepeatedChar("a"));
+    assertFalse(StringUtil.hasRepeatedChar("ab"));
+    assertFalse(StringUtil.hasRepeatedChar("aba"));
+    assertFalse(StringUtil.hasRepeatedChar("abab"));
+    assertTrue(StringUtil.hasRepeatedChar("aa"));
+    assertTrue(StringUtil.hasRepeatedChar("aab"));
+    assertTrue(StringUtil.hasRepeatedChar("baa"));
+    assertTrue(StringUtil.hasRepeatedChar("baab"));
+    assertTrue(StringUtil.hasRepeatedChar("aaa"));
+    assertFalse(StringUtil.hasRepeatedChar("Fran\u00E7ais"));
+    assertTrue(StringUtil.hasRepeatedChar("Fran\u00E7\u00E7ais"));
   }
 
   public void testTitleCase() {
@@ -654,6 +703,13 @@ public class TestStringUtil extends LockssTestCase {
     catch (IOException e) {
       fail(e.getMessage());
     }
+  }
+
+  public void testToFile() throws Exception {
+    String txt = "Here is some weird text.\nIt has !@#$%^&*()214 in it.";
+    File file = new File(getTempDir(), "foo.txt");
+    StringUtil.toFile(file, txt);
+    assertReaderMatchesString(txt, new FileReader(file));
   }
 
   public void testUpToFinal() {
@@ -718,24 +774,24 @@ public class TestStringUtil extends LockssTestCase {
     String stringToFind = "special string";
     String readerStr = "Blah blah blah "+stringToFind+"blah blah";
     assertTrue("Didn't find string when it should",
-	       StringUtil.containsString(new StringReader(readerStr),
-					 stringToFind));
+               StringUtil.containsString(new StringReader(readerStr),
+                                         stringToFind));
   }
 
   public void testFindStringBeginning() throws IOException {
     String stringToFind = "special string";
     String readerStr = stringToFind + "Blah blah blah blah blah";
     assertTrue("Didn't find string when it should",
-	       StringUtil.containsString(new StringReader(readerStr),
-					 stringToFind));
+               StringUtil.containsString(new StringReader(readerStr),
+                                         stringToFind));
   }
 
   public void testFindStringEndShort() throws IOException {
     String stringToFind = "special string";
     String readerStr = "Blah blah blah "+stringToFind;
     assertTrue("Didn't find string when it should",
-	       StringUtil.containsString(new StringReader(readerStr),
-					 stringToFind));
+               StringUtil.containsString(new StringReader(readerStr),
+                                         stringToFind));
   }
 
   public void testFindStringEndLong() throws IOException {
@@ -743,8 +799,8 @@ public class TestStringUtil extends LockssTestCase {
     String stringToFind = "This permision string is longer than 20 characters";
     String readerStr = padding + stringToFind;
     assertTrue("Didn't find string when it should",
-	       StringUtil.containsString(new StringReader(readerStr),
-					 stringToFind, false, 100));
+               StringUtil.containsString(new StringReader(readerStr),
+                                         stringToFind, false, 100));
   }
 
   //To make sure searching for an empty string throws
@@ -775,42 +831,42 @@ public class TestStringUtil extends LockssTestCase {
   //To make sure searching and empty reader fails, but doesn't throw
   public void testFindStringEmptyReader() throws IOException {
     assertFalse("Search of empty reader should always fail",
-		StringUtil.containsString(new StringReader(""), "blah blah"));
+                StringUtil.containsString(new StringReader(""), "blah blah"));
   }
 
   public void testContainsStringDefaultCaseSensitive() throws IOException {
     assertFalse("Incorrectly matched string ignoring case by default",
-		StringUtil.containsString(new StringReader("Test BlaH test"),
-					  "blah"));
+                StringUtil.containsString(new StringReader("Test BlaH test"),
+                                          "blah"));
     assertFalse("Incorrectly matched string ignoring case by default",
-		StringUtil.containsString(new StringReader("Test BlaH test"),
-					  "BLAH"));
+                StringUtil.containsString(new StringReader("Test BlaH test"),
+                                          "BLAH"));
   }
 
   public void testContainsStringParamCaseSensitive() throws IOException {
     assertFalse("Incorrectly matched string ignoring case",
-		StringUtil.containsString(new StringReader("Test BlaH test"),
-					  "blah", false));
+                StringUtil.containsString(new StringReader("Test BlaH test"),
+                                          "blah", false));
 
     assertFalse("Incorrectly matched string ignoring case",
-		StringUtil.containsString(new StringReader("Test BlaH test"),
-					  "BLAH", false));
+                StringUtil.containsString(new StringReader("Test BlaH test"),
+                                          "BLAH", false));
   }
   public void testContainsStringParamCaseInsensitive() throws IOException {
     assertTrue("Didn't matched string ignoring case",
-	       StringUtil.containsString(new StringReader("Test BlaH test"),
-					 "blah", true));
+               StringUtil.containsString(new StringReader("Test BlaH test"),
+                                         "blah", true));
     assertTrue("Didn't matched string ignoring case",
-	       StringUtil.containsString(new StringReader("Test BlaH test"),
-					 "BLAH", true));
+               StringUtil.containsString(new StringReader("Test BlaH test"),
+                                         "BLAH", true));
   }
 
   public void testContainsStringPartialMatchPartialBuffer() throws IOException {
     String testStr = "123456abcdefghi1234";
     String searchStr = "abcdefghi";
     assertTrue("Didn't find string when it should",
-	       StringUtil.containsString(new StringReader(testStr),
-					 searchStr, 10));
+               StringUtil.containsString(new StringReader(testStr),
+                                         searchStr, 10));
 
   }
 
@@ -818,8 +874,8 @@ public class TestStringUtil extends LockssTestCase {
     String testStr = "123456abcdefghi1234567890";
     String searchStr = "abcdefGHI";
     assertTrue("Didn't find string when it should",
-	       StringUtil.containsString(new StringReader(testStr),
-					 searchStr, 10));
+               StringUtil.containsString(new StringReader(testStr),
+                                         searchStr, 10));
 
   }
 
@@ -828,8 +884,8 @@ public class TestStringUtil extends LockssTestCase {
     String testStr = "123456aaaaa";
     String searchStr = "aaaaaaaaa";
     assertFalse("Found string when it shouldn't",
-		StringUtil.containsString(new StringReader(testStr),
-					  searchStr, 10));
+                StringUtil.containsString(new StringReader(testStr),
+                                          searchStr, 10));
 }
 
   public void testFindStringRequiresBackup() throws IOException {

@@ -16,13 +16,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-541X
   
-      au < do_not_process ; Journal of Wildlife Management Volume 68 ; 68 >
-      au < do_not_process ; Journal of Wildlife Management Volume 69 ; 69 >
-      au < do_not_process ; Journal of Wildlife Management Volume 70 ; 70 >
-      au < do_not_process ; Journal of Wildlife Management Volume 71 ; 71 >
+      au < doNotProcess ; Journal of Wildlife Management Volume 68 ; 68 >
+      au < doNotProcess ; Journal of Wildlife Management Volume 69 ; 69 >
+      au < doNotProcess ; Journal of Wildlife Management Volume 70 ; 70 >
+      au < doNotProcess ; Journal of Wildlife Management Volume 71 ; 71 >
     }
 
   }
+  
+  {
 
     title <
       name = Wildlife Monographs ;
@@ -46,6 +48,8 @@
     }
 
   }
+  
+  {
 
     title <
       name = Wildlife Society Bulletin ;

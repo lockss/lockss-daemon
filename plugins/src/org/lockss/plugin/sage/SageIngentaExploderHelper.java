@@ -1,5 +1,5 @@
 /*
- * $Id: SageIngentaExploderHelper.java,v 1.4 2008-06-16 23:07:11 thib_gc Exp $
+ * $Id: SageIngentaExploderHelper.java,v 1.4.16.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -84,6 +84,7 @@ public class SageIngentaExploderHelper implements ExploderHelper {
    */
 
   public void process(ArchiveEntry ae) {
+    String baseUrlStem = BASE_URL_STEM;
     /*
      * First parse the archiveUrl to get the year/volume/issue
      * the URL ends with something like aub_2005_13_2.zip
@@ -109,7 +110,7 @@ public class SageIngentaExploderHelper implements ExploderHelper {
     String issn = entryElements[1].substring(0,8);
     // String doi = entryName.substring(0,entryName.lastIndexOf(".")-1);
     // Set baseUrl
-    String baseUrl = BASE_URL_STEM + issn + "/";
+    String baseUrl = baseUrlStem + issn + "/";
     // Set restOfUrl
     String restOfUrl = year + "/" + entryName;
     // Synthesize header fields
@@ -128,6 +129,8 @@ public class SageIngentaExploderHelper implements ExploderHelper {
 	      "SAGE Publications");
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      issn);
+    props.put(ConfigParamDescr.YEAR.getKey(),
+	      year);
     ae.setAuProps(props);
   }
 }

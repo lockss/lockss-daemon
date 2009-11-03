@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0012-8317
   
-      au < do_not_process ; Journal of East African Natural History Volume 94 ; 94 >
-      au < do_not_process ; Journal of East African Natural History Volume 95 ; 95 >
-      au < do_not_process ; Journal of East African Natural History Volume 96 ; 96 >
+      au < doNotProcess ; Journal of East African Natural History Volume 94 ; 94 >
+      au < doNotProcess ; Journal of East African Natural History Volume 95 ; 95 >
+      au < doNotProcess ; Journal of East African Natural History Volume 96 ; 96 >
     }
 
     {

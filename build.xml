@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.245.2.1 2009-07-01 03:05:16 edwardsb1 Exp $
+ $Id: build.xml,v 1.245.2.2 2009-11-03 23:44:50 edwardsb1 Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -235,9 +235,8 @@ Args:
   <!-- Needed by Flute: -->
   <property name="sac.jar" value="${lib}/sac-1.3.jar" />
   <!-- Needed by ArcExploder: -->
-<!--  <property name="heritrix.jar" value="${lib}/heritrix-1.10.2.jar" /> -->
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
-  <!-- Needed by JCR extensions: -->
+ <!-- Needed by JCR extensions: -->
   <property name="commons-pool.jar" value="${lib}/commons-pool-1.3.jar" />
   <property name="derby.jar" value="${lib}/derby.jar" />
   <property name="heritrix.jar" value="${lib}/heritrix-1.14.0.jar" />
@@ -260,7 +259,6 @@ Args:
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
-  
 
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -295,6 +293,7 @@ Args:
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
+  <property name="javac.deprecation"       value="false" />
 
   <!-- jikes is too strict if deprecations and warnings are turned on -->
   <condition property="nowarn"  value="true">
@@ -302,11 +301,6 @@ Args:
   </condition>
   <condition property="javac.deprecation"  value="false">
    <equals arg1="${build.compiler}" arg2="jikes" />
-  </condition>
-  <condition property="javac.deprecation"  value="true">
-   <not>
-    <equals arg1="${build.compiler}" arg2="jikes" />
-   </not>
   </condition>
 
 
@@ -351,7 +345,7 @@ Args:
     <!-- jars needed by the ArcCrawler -->
     <pathelement path="${heritrix.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
-    <!-- jars needed by JCR extensions -->
+     <!-- jars needed by JCR extensions -->
     <pathelement path="${commons-pool.jar}" />
     <pathelement path="${derby.jar}" />
     <pathelement path="${heritrix.jar}" />
@@ -993,7 +987,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
       <fileset dir="${plugins.classes}">
 	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
-	<include name="${plugin-path}/${plugin-file}" />
+	<include name="${plugin-path}/*.xml" />
       </fileset>
       <manifest>
 	<section name="${plugin-path}/${plugin-file}">
@@ -1342,7 +1336,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2009 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
 <!-- disabled until javadoc back online -->
 <!--        <link href="${ext.javadoc}/commons-collections-3.2/docs/apidocs" /> -->
@@ -1630,7 +1624,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
    description="Run a tools class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
-    <java classname="${class}" fork="true">
+    <java classname="${class}" fork="true" failonerror="yes">
        <classpath refid="tools.test.run.classpath" />
        <arg line="${args}" />
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>

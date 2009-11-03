@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedPlugin.java,v 1.4 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: ExplodedPlugin.java,v 1.4.14.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.plugin.base.BasePlugin;
+import org.lockss.plugin.definable.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 
@@ -47,18 +47,11 @@ import org.lockss.util.*;
  * @author David Rosenthal
  */
 
-public class ExplodedPlugin extends BasePlugin {
+public class ExplodedPlugin extends DefinablePlugin {
   protected static final Logger log = Logger.getLogger("ExplodedPlugin");
-
-  private static String PLUGIN_NAME = "Exploded Plugin";
-  private static String CURRENT_VERSION = "1";
 
   public static final String PREFIX =
     Configuration.PREFIX + "plugin.exploded.";
-
-  // List of defining properties (only base_url for Exploded plugins)
-  private static final List m_auConfigDescrs =
-    Collections.singletonList(ConfigParamDescr.BASE_URL);
 
   public ExplodedPlugin() {
   }
@@ -66,34 +59,11 @@ public class ExplodedPlugin extends BasePlugin {
   protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
-    ArchivalUnit au = new ExplodedArchivalUnit(this);
+    ArchivalUnit au = new ExplodedArchivalUnit(this, definitionMap);
 
     // Now configure it.
     au.setConfiguration(auConfig);
 
     return au;
-  }
-
-  /**
-   * ExplodedPlugin does not have a configuration.  This is overridden
-   * to force no implementation.
-   */
-  protected void setTitleConfigFromConfig(Configuration allTitles) {
-    // No implementation.
-  }
-
-  public String getVersion() {
-    return CURRENT_VERSION;
-  }
-
-  public String getPluginName() {
-    return PLUGIN_NAME;
-  }
-
-  /**
-   * We only have one defining attribute, a base URL.
-   */
-  public List getLocalAuConfigDescrs() {
-    return m_auConfigDescrs;
   }
 }

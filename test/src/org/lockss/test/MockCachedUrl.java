@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.43 2009-03-05 05:40:04 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.43.4.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
+import org.lockss.extractor.*;
 
 /**
  * This is a mock version of <code>CachedUrl</code> used for testing
@@ -66,6 +67,7 @@ public class MockCachedUrl implements CachedUrl {
   private boolean isResource;
   private int version = 0;
   private LinkRewriterFactory lrf = null;
+  private MetadataExtractor metadataExtractor = null;
 
   public MockCachedUrl(String url) {
     this.versions = new ArrayList();
@@ -192,12 +194,12 @@ public class MockCachedUrl implements CachedUrl {
   public InputStream getUnfilteredInputStream() {
     try {
       if (cachedFile != null) {
-	if (isResource) {
-	  return ClassLoader.getSystemClassLoader().
-	    getResourceAsStream(cachedFile);
-	} else {
-	  return new FileInputStream(cachedFile);
-	}
+        if (isResource) {
+          return ClassLoader.getSystemClassLoader().
+            getResourceAsStream(cachedFile);
+        } else {
+          return new FileInputStream(cachedFile);
+        }
       }
     } catch (IOException ex) {
       return null;
@@ -213,19 +215,19 @@ public class MockCachedUrl implements CachedUrl {
     InputStream is = null;
     // look for a FilterFactory
     if (au != null) {
-      FilterFactory fact = au.getFilterFactory(contentType);
+      FilterFactory fact = au.getHashFilterFactory(contentType);
       if (fact != null) {
-	InputStream unfis = getUnfilteredInputStream();
-	if (log.isDebug3()) {
-	  log.debug3("Filtering " + contentType +
-		     " with " + fact.getClass().getName());
-	}
-	try {
-	  return fact.createFilteredInputStream(au, unfis, getEncoding());
-	} catch (PluginException e) {
-	  IOUtil.safeClose(unfis);
-	  throw new RuntimeException(e);
-	}
+        InputStream unfis = getUnfilteredInputStream();
+        if (log.isDebug3()) {
+          log.debug3("Filtering " + contentType +
+                     " with " + fact.getClass().getName());
+        }
+        try {
+          return fact.createFilteredInputStream(au, unfis, getEncoding());
+        } catch (PluginException e) {
+          IOUtil.safeClose(unfis);
+          throw new RuntimeException(e);
+        }
       }
     }
     return getUnfilteredInputStream();
@@ -237,17 +239,17 @@ public class MockCachedUrl implements CachedUrl {
     }
     if (cachedFile != null) {
       if (isResource) {
-	InputStream in =
-	  ClassLoader.getSystemClassLoader(). getResourceAsStream(cachedFile);
-	try {
-	  return in.skip(Long.MAX_VALUE);
-	} catch (IOException e) {
-	  return 100;
-	} finally {
-	  IOUtil.safeClose(in);
-	}
+        InputStream in =
+          ClassLoader.getSystemClassLoader(). getResourceAsStream(cachedFile);
+        try {
+          return in.skip(Long.MAX_VALUE);
+        } catch (IOException e) {
+          return 100;
+        } finally {
+          IOUtil.safeClose(in);
+        }
       } else {
-	return new File(cachedFile).length();
+        return new File(cachedFile).length();
       }
     }
 
@@ -275,6 +277,10 @@ public class MockCachedUrl implements CachedUrl {
     cachedProp = headers;
   }
 
+  public MetadataExtractor getMetadataExtractor() {
+    return metadataExtractor;
+  }
+
   //mock specific acessors
 
   public void setInputStream(InputStream is){
@@ -300,6 +306,10 @@ public class MockCachedUrl implements CachedUrl {
   public void setProperty(String key, String val) {
     if (cachedProp == null) cachedProp = new CIProperties();
     cachedProp.put(key, val);
+  }
+
+  public void setMetadataExtractor(MetadataExtractor me) {
+    metadataExtractor = me;
   }
 
   public void release() {

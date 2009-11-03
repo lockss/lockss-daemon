@@ -1,10 +1,10 @@
 /*
- * $Id: ClassPathUtil.java,v 1.3 2006-07-13 22:16:18 smorabito Exp $
+ * $Id: ClassPathUtil.java,v 1.3.52.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,7 @@ public class ClassPathUtil {
 
   private static List m_classpath;
 
-  /** Search for a resourse with the given name */
+  /** Find a resourse with the given name */
   public static void whichResource(String resourceName, String msg) {
     URL resUrl = findResource(resourceName);
 
@@ -60,13 +60,13 @@ public class ClassPathUtil {
     }
   }
 
-  /** Search for a resourse with the given name */
+  /** Find a resourse with the given name */
   public static void whichResource(String resourceName) {
     resourceName = fixResourceName(resourceName);
     whichResource(resourceName, "Resource " + resourceName);
   }
 
-  /** Search for a class with the given name */
+  /** Find a class with the given name */
   public static void whichClass(String className) {
     String resourceName = asResourceName(className);
     whichResource(resourceName, "Class " + className);
@@ -108,14 +108,14 @@ public class ClassPathUtil {
     try {
       JarFile jf = new JarFile(file);
       for (Enumeration en = jf.entries(); en.hasMoreElements(); ) {
-	ZipEntry ent = (ZipEntry)en.nextElement();
-	if (ent.isDirectory()) {
-	  continue;
-	}
-	m_map.put(ent.getName(), file);
+        ZipEntry ent = (ZipEntry)en.nextElement();
+        if (ent.isDirectory()) {
+          continue;
+        }
+        m_map.put(ent.getName(), file);
       }
     } catch (IOException e) {
-      log.warning("reading jar", e);
+      log.warning("reading jar " + file, e);
     }
   }
 
@@ -123,12 +123,35 @@ public class ClassPathUtil {
    * the classpath.  Only works on jars currently */
   public static void showConflicts() {
     buildMap();
-    for (Iterator iter = m_map.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry ent = (Map.Entry)iter.next();
+    for (Map.Entry ent : (Collection<Map.Entry>)m_map.entrySet()) {
       List jars = (List)ent.getValue();
       if (jars.size() > 1) {
-	String key = (String)ent.getKey();
-	System.out.println(key + ": " + jars);
+        String key = (String)ent.getKey();
+        System.out.println(key + ": " + jars);
+      }
+    }
+  }
+
+  /** Search for all occurrances of a class given name in any
+   * package.  Only works on jars currently */
+  public static void searchClass(String className) {
+    String resource = className + ".class";
+    searchResource(resource);
+  }
+
+  /** Search for all occurrances of a resurce with the given name in any
+   * package.  Only works on jars currently */
+
+
+  public static void searchResource(String resourceName) {
+    buildMap();
+    for (Map.Entry ent : (Collection<Map.Entry>)m_map.entrySet()) {
+      String key = (String)ent.getKey();
+      File resFile = new File(key);
+      String name = resFile.getName();
+      if (resourceName.equals(name)) {
+        List jars = (List)ent.getValue();
+        System.out.println(key + ": " + jars);
       }
     }
   }
@@ -146,13 +169,13 @@ public class ClassPathUtil {
       File f = new File(element);
 
       if (!f.exists()) {
-	System.out.println("Classpath element " + element +
-			   " does not exist.");
+        System.out.println("Classpath element " + element +
+                           " does not exist.");
       } else if ( (!f.isDirectory()) &&
-		  (!StringUtil.endsWithIgnoreCase(element, ".jar")) &&
-		  (!StringUtil.endsWithIgnoreCase(element, ".zip")) ) {
-	System.out.println("Classpath element " + element +
-			   "is not a directory, .jar file, or .zip file.");
+                  (!StringUtil.endsWithIgnoreCase(element, ".jar")) &&
+                  (!StringUtil.endsWithIgnoreCase(element, ".zip")) ) {
+        System.out.println("Classpath element " + element +
+                           "is not a directory, .jar file, or .zip file.");
       }
     }
   }
@@ -186,6 +209,8 @@ public class ClassPathUtil {
     System.out.println("   -ap <classpath       Append to classpath");
     System.out.println("   -c  <className>      Locate class on classpath");
     System.out.println("   -r  <resourceName>   Locate resource on classpath");
+    System.out.println("   -sc <unqualifiedClassName> Search for all occurrences of class on classpath");
+    System.out.println("   -sr <unqualifiedResourceName> Ditto for resource");
     System.out.println("   -p                   Print classpath");
     System.out.println("   -x                   Show duplicate resources on classpath");
     System.out.println("   -v                   Validate classpath (check that all jars exist)");
@@ -199,36 +224,44 @@ public class ClassPathUtil {
 
     try {
       for (int ix = 0; ix < args.length; ix++) {
-	String a = args[ix];
-	if ("-cp".equals(a) || "-classpath".equals(a)) {
-	  setClasspath(args[++ix]);
-	  continue;
-	}
-	if ("-ap".equals(a) || "-addpath".equals(a)) {
-	  addClasspath(args[++ix]);
-	  continue;
-	}
-	if ("-r".equals(a)) {
-	  whichResource(args[++ix]);
-	  continue;
-	}
-	if ("-c".equals(a)) {
-	  whichClass(args[++ix]);
-	  continue;
-	}
-	if ("-p".equals(a)) {
-	  printClasspath();
-	  continue;
-	}
-	if ("-x".equals(a)) {
-	  showConflicts();
-	  continue;
-	}
-	if ("-v".equals(a)) {
-	  validate();
-	  continue;
-	}
-	usage();
+        String a = args[ix];
+        if ("-cp".equals(a) || "-classpath".equals(a)) {
+          setClasspath(args[++ix]);
+          continue;
+        }
+        if ("-ap".equals(a) || "-addpath".equals(a)) {
+          addClasspath(args[++ix]);
+          continue;
+        }
+        if ("-r".equals(a)) {
+          whichResource(args[++ix]);
+          continue;
+        }
+        if ("-c".equals(a)) {
+          whichClass(args[++ix]);
+          continue;
+        }
+        if ("-sc".equals(a)) {
+          searchClass(args[++ix]);
+          continue;
+        }
+        if ("-sr".equals(a)) {
+          searchResource(args[++ix]);
+          continue;
+        }
+        if ("-p".equals(a)) {
+          printClasspath();
+          continue;
+        }
+        if ("-x".equals(a)) {
+          showConflicts();
+          continue;
+        }
+        if ("-v".equals(a)) {
+          validate();
+          continue;
+        }
+        usage();
       }
     } catch (Exception e) {
       usage();

@@ -1,5 +1,13 @@
 <map>
   <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>ca.sfu.lib.plugin.cartoons.SFUCartoonsPlugin</string>
   </entry>

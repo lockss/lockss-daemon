@@ -16,12 +16,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-1511
   
-      au < do_not_process ; Journal of Herpetology Volume 36 ; 36 >
-      au < do_not_process ; Journal of Herpetology Volume 37 ; 37 >
+      au < doNotProcess ; Journal of Herpetology Volume 36 ; 36 >
+      au < doNotProcess ; Journal of Herpetology Volume 37 ; 37 >
       au < superseded ; Journal of Herpetology Volume 38 ; 38 >
-      au < do_not_process ; Journal of Herpetology Volume 39 ; 39 >
-      au < do_not_process ; Journal of Herpetology Volume 40 ; 40 >
-      au < do_not_process ; Journal of Herpetology Volume 41 ; 41 >
+      au < doNotProcess ; Journal of Herpetology Volume 39 ; 39 >
+      au < doNotProcess ; Journal of Herpetology Volume 40 ; 40 >
+      au < doNotProcess ; Journal of Herpetology Volume 41 ; 41 >
     }
 
     {

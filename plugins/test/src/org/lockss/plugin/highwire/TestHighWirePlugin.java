@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.6 2007-10-31 19:04:49 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.6.24.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -40,8 +40,10 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.plugin.wrapper.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.util.urlconn.CacheException.RetryDeadLinkException;
 
@@ -117,7 +119,7 @@ public class TestHighWirePlugin extends LockssTestCase {
 //     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (Legacy), Base URL http://www.example.com/, Volume 322", au.getName());
+    assertEquals("HighWire Press Plugin (H10a), Base URL http://www.example.com/, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {
@@ -126,8 +128,8 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.VOLUME_NUMBER,
-			       ConfigParamDescr.BASE_URL),
+    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
+                               ConfigParamDescr.VOLUME_NUMBER),
 //                                ConfigParamDescr.YEAR),
 		 plugin.getLocalAuConfigDescrs());
   }
@@ -138,5 +140,38 @@ public class TestHighWirePlugin extends LockssTestCase {
     Class found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
     assertEquals(expected, found);
 
+  }
+
+  public void testGetMetadataExtractor() {
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(VOL_KEY, "32");
+//     props.setProperty(YEAR_KEY, "2004");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    assertNull(plugin.getMetadataExtractor("BogusExtractor", au));
+    assertNotNull(plugin.getMetadataExtractor("text/html", au));
+    assertTrue(plugin.getMetadataExtractor("text/html", au) instanceof
+	       org.lockss.extractor.SimpleMetaTagMetadataExtractor);
+  }
+  public void testGetHashFilterFactory() {
+    assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
+    assertNotNull(plugin.getHashFilterFactory("application/pdf"));
+    assertTrue(WrapperUtil.unwrap(plugin.getHashFilterFactory("application/pdf"))
+	       instanceof org.lockss.plugin.highwire.HighWirePdfFilterFactory);
+  }
+  public void testGetArticleIteratorFactory() {
+    assertNull(plugin.getArticleIteratorFactory("BogusArticleIterator"));
+    assertNotNull(plugin.getArticleIteratorFactory("text/html"));
+    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory("text/html"))
+	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
+  }
+  public void testGetDefaultArticleMimeType() {
+    assertNotNull(plugin.getDefaultArticleMimeType());
+    assertEquals("text/html", plugin.getDefaultArticleMimeType());
   }
 }

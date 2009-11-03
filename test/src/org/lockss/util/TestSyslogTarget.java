@@ -1,5 +1,5 @@
 /*
- * $Id: TestSyslogTarget.java,v 1.7 2003-09-16 23:28:36 eaalto Exp $
+ * $Id: TestSyslogTarget.java,v 1.7.104.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -56,16 +56,20 @@ public class TestSyslogTarget extends LockssTestCase {
   }
 
   public void testSeverityToFacility(){
-    assertEquals(10,
-		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_CRITICAL));
-    assertEquals(11,
-		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR));
-    assertEquals(12,
-		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_WARNING));
-    assertEquals(14,
-		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_INFO));
-    assertEquals(15,
-		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG));
+    assertEquals(8+0,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_CRITICAL));
+    assertEquals(8+2,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR));
+    assertEquals(8+4,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_WARNING));
+    assertEquals(8+5,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_INFO));
+    assertEquals(8+6,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG));
+    assertEquals(8+7,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG2));
+    assertEquals(8+7,
+                 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG3));
   }
 
   private void setConfig(String host, int port) throws Exception {

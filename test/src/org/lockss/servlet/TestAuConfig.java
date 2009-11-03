@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.12 2009-03-24 04:32:37 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.12.2.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class TestAuConfig extends LockssServletTestCase {
     super.initServletRunner();
     sRunner.registerServlet("/AuConfig", AuConfig.class.getName() );
     sRunner.setServletContextAttribute(LockssServlet.ATTR_ALLOW_ROLES,
-				       ListUtil.list(LockssServlet.ROLE_ADMIN));
+                                       ListUtil.list(LockssServlet.ROLE_AU_ADMIN));
   }
 
 
@@ -94,9 +94,9 @@ public class TestAuConfig extends LockssServletTestCase {
     WebForm auForm = resp1.getFormWithID("AuSummaryForm");
     WebTable auTable = resp1.getTableWithID("AuSummaryTable");
     assertNull("Form named AuSummaryForm should not appear " +
-	       "until PluginManager has started all AUs", auForm);
+               "until PluginManager has started all AUs", auForm);
     assertNull("Table named AuSummaryTable should not appear " +
-	       "until PluginManager has started all AUs", auTable);
+               "until PluginManager has started all AUs", auTable);
     assertNull(resp1.getHeaderField("X-Lockss-Result"));
   }
 
@@ -207,7 +207,7 @@ public class TestAuConfig extends LockssServletTestCase {
 
     WebForm addForm = resp2.getFormWithID("AddAuForm");
     addForm.setParameter("PluginClass",
-			 "org.lockss.plugin.simulated.SimulatedPlugin");
+                         "org.lockss.plugin.simulated.SimulatedPlugin");
     WebRequest contReq = addForm.getRequest("button", "Continue");
     assertNotNull("No submit button", contReq);
     contReq.setHeaderField("X-Lockss-Result", "please");

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.9 2005-12-01 23:28:01 troberts Exp $
+ * $Id: AlertActionMail.java,v 1.9.62.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -56,23 +56,27 @@ public class AlertActionMail extends AbstractAlertAction {
 
   /** printf string applied to cache-name, email-sender */
   static final String PARAM_EMAIL_FROM = PREFIX + "mail.from";
-  static final String DEFAULT_EMAIL_FROM = "LOCKSS cache %s <%s>";
+  static final String DEFAULT_EMAIL_FROM = "LOCKSS box %s <%s>";
 
-  static final String PARAM_ENABLED = PREFIX + "mail.enabled";
+  public static final String PARAM_ENABLED = PREFIX + "mail.enabled";
   static final boolean DEFAULT_ENABLED = false;
 
-  DateFormat headerDf = new SimpleDateFormat("EEE dd MMM yyyy HH:mm:ss zzz"
+  static DateFormat headerDf =
+    new SimpleDateFormat("EEE dd MMM yyyy HH:mm:ss zzz"
 					     /*, Locale.US */);
 //   headerDf.setTimeZone(TimeZone.getTimeZone("GMT"));
 
   private String recipients;
 
-  public AlertActionMail() {
-  }
-
-  /** Create an action that mails to a single addresse */
+  /** Create an action that mails to a single recipient */
   public AlertActionMail(String to) {
     this.recipients = to;
+  }
+
+  /** Create an action that mails to the recipient in the Alert.  If the
+   * Alert has no ATTR_EMAIL_TO, no mail is sent */
+  public AlertActionMail() {
+    this.recipients = null;
   }
 
 //   /** Create an action that mails to a list of recipients */
@@ -81,8 +85,11 @@ public class AlertActionMail extends AbstractAlertAction {
 //   }
 
   /** Return the recipients */
-  public String getRecipients() {
-    return recipients;
+  public String getRecipients(Alert alert) {
+    if (recipients != null) {
+      return recipients;
+    }
+    return alert.getString(Alert.ATTR_EMAIL_TO);
   }
 
   /** Set the recipients */
@@ -121,15 +128,19 @@ public class AlertActionMail extends AbstractAlertAction {
 		    String subjSuff, String body) {
     Configuration config = CurrentConfig.getCurrentConfig();
     if (config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
+      String recip = getRecipients(oneAlert);
+      if (recipients == null) {
+	log.warning("Alert has no email recipient, not sending: " + oneAlert);
+      }
       MailService mailSvc = daemon.getMailService();
       TextMessage msg = new TextMessage();
       msg.addHeader("From", getFrom(oneAlert, config));
-      msg.addHeader("To", recipients);
+      msg.addHeader("To", recip);
       msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
       msg.addHeader("Subject", oneAlert.getMailSubject() + subjSuff);
       msg.addHeader("X-Mailer", getXMailer());
       msg.setText(body);
-      mailSvc.sendMail(getSender(config), recipients, msg);
+      mailSvc.sendMail(getSender(config), recip, msg);
     }
   }
 
@@ -145,7 +156,7 @@ public class AlertActionMail extends AbstractAlertAction {
     return true;
   }
 
-  /** Return the maximum time an alert should remain pending before it it
+  /** Return the maximum time an alert should remain pending before it's
    * reported in a group */
   public long getMaxPendTime() {
     return Constants.DAY;
@@ -172,12 +183,14 @@ public class AlertActionMail extends AbstractAlertAction {
 
   public boolean equals(Object obj) {
     if (obj instanceof AlertActionMail ) {
-      return recipients.equals(((AlertActionMail)obj).recipients);
+      return StringUtil.equalStrings(recipients,
+				     ((AlertActionMail)obj).recipients);
     }
     return false;
   }
 
   public int hashCode() {
+    if (recipients == null) return 17;
     return recipients.hashCode();
   }
 

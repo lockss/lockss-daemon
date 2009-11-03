@@ -14,9 +14,10 @@
     param[base_url] = http://content.lib.auburn.edu/   
     implicit < status ; name ; param[volume_name] >
   
-    au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
     au < released ; Auburn University Alabama Cooperative Extension Service Photographs ; autest >
+    au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
     au < released ; Auburn University Football Program ; football >
+    au < manifest ; Auburn University Photographs Collection ; aunumphoto >
   
   }
       
@@ -80,7 +81,7 @@
   {
 
     plugin = edu.auburn.adpn.sesquicentennial.SesquicentennialLectureSeriesPlugin
-    param[base_url] = http://fortissimo.lib.auburn.edu:82/sesq/    
+    param[base_url] = http://fortissimo.lib.auburn.edu:82/sesq/
     implicit < status ; name ; param[volume_name] >
   
     {
@@ -113,6 +114,7 @@
     implicit < status ; name >
   
     {
+
       title <
         name = Auburn University Eugene B. Sledge Papers 
       >
@@ -121,6 +123,26 @@
  
     }
   
-  }  
+  }
+  
+  {
+  
+    plugin = edu.auburn.adpn.discoverauburn.DiscoverAuburnPlugin
+    param[base_url] = http://fortissimo.lib.auburn.edu:82/da/
+    implicit < status ; name ; param[year] >
+
+   {
+   
+     title <
+       name = Auburn University Discover Auburn Lecture Series
+     >
+     
+     au < released ; Auburn University Discover Auburn Lecture Series 2007 ; 2007 >
+     au < released ; Auburn University Discover Auburn Lecture Series 2008 ; 2008 >
+     au < released ; Auburn University Discover Auburn Lecture Series 2009 ; 2009 >
+   
+   }
+  
+  }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.5 2009-04-07 20:21:41 tlipkis Exp $
+ * $Id: SimpleHasher.java,v 1.5.2.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class SimpleHasher {
   private byte[] verifier;
   private boolean isFiltered = false;
   private boolean isIncludeUrl = false;
+  private boolean isBase64 = false;
 
   private int nbytes = 1000;
   private long bytesHashed = 0;
@@ -97,6 +98,14 @@ public class SimpleHasher {
     isIncludeUrl = val;
   }
 
+  /**
+   * If true, result is a Base64 string; if false (the default), result is
+   * a hex string
+   */
+  public void setBase64Result(boolean val) {
+    isBase64 = val;
+  }
+
   /** Do a V1 hash of the CUSH */
   public byte[] doV1Hash(CachedUrlSetHasher cush) throws IOException {
     initDigest(digest);
@@ -119,9 +128,9 @@ public class SimpleHasher {
       blockOuts.println(comments);
     }
     BlockHasher hasher = new BlockHasher(cus, 1,
-					 initHasherDigests(),
-					 initHasherByteArrays(),
-					 new BlockEventHandler(blockOuts));
+                                         initHasherDigests(),
+                                         initHasherByteArrays(),
+                                         new BlockEventHandler(blockOuts));
 
     hasher.setIncludeUrl(isIncludeUrl);
     doHash(hasher);
@@ -140,10 +149,10 @@ public class SimpleHasher {
   private byte[][] initHasherByteArrays() {
     byte[][] initBytes = new byte[1][];
     initBytes[0] = ((challenge != null)
-		    ? ( (verifier != null)
-			? ByteArray.concat(challenge, verifier)
-			: challenge)
-		    : (verifier != null) ? verifier : new byte[0]);
+                    ? ( (verifier != null)
+                        ? ByteArray.concat(challenge, verifier)
+                        : challenge)
+                    : (verifier != null) ? verifier : new byte[0]);
     return initBytes;
   }
 
@@ -165,7 +174,11 @@ public class SimpleHasher {
   }
 
   String byteString(byte[] a) {
-    return String.valueOf(B64Code.encode(a));
+    if (isBase64) {
+      return String.valueOf(B64Code.encode(a));
+    } else {
+      return ByteArray.toHexString(a);
+    }
   }
 
   private class BlockEventHandler implements BlockHasher.EventHandler {
@@ -178,9 +191,9 @@ public class SimpleHasher {
       filesHashed++;
       HashBlock.Version ver = block.currentVersion();
       if (ver.getHashError() != null) {
-	outs.println("Hash error (see log)        " + block.getUrl());
+        outs.println("Hash error (see log)        " + block.getUrl());
       } else {
-	outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+        outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.13 2008-11-25 04:03:24 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.13.6.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -82,6 +82,12 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // "data",     // object
   };
 
+  // Legal start to relative path (in relative URL).  Maybe this should be
+  // (not "^/")?
+  static String relChar = "[-a-zA-Z0-9$_@.&+!*\"\'(),%?]";
+
+
+
   public Reader createLinkRewriterReader(String mimeType,
 					 ArchivalUnit au,
 					 Reader in,
@@ -131,24 +137,21 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       }
       String urlPrefix = "http://" + urlSub.substring(0, p);
       logger.debug3("urlPrefix: " + urlPrefix);
-      String [] linkRegex2 = {
-	"^http://",
+
+      String[] linkRegex2 = {
 	"^http://",
 	"^http://",
       };
       boolean[] ignCase2 = {
 	true,
 	true,
-	true,
       };
       String[] rwRegex2 = {
 	"^/",
-	"^([a-zA-Z_?])",
-	"^(\\.\\./)",
+	"^(" + relChar + ")",
       };
       String[] rwTarget2 = {
 	targetStem + defUrlStem,
-	targetStem + urlPrefix + "/$1",
 	targetStem + urlPrefix + "/$1",
       };
 
@@ -180,24 +183,20 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       NodeFilter absImportXform =
 	HtmlNodeFilters.styleRegexYesXforms(linkRegex3, ignCase3,
 					    rwRegex3, rwTarget3);
-      String [] linkRegex4 = {
-	"url\\(http://",
+      String[] linkRegex4 = {
 	"url\\(http://",
 	"url\\(http://",
       };
       boolean[] ignCase4 = {
 	true,
 	true,
-	true,
       };
       String[] rwRegex4 = {
 	"url\\(/",
-	"url\\(([a-zA-Z])",
-	"url\\((\\.\\./)",
+	"url\\((" + relChar + ")",
       };
       String[] rwTarget4 = {
 	"url(" + targetStem + defUrlStem,
-	"url(" + targetStem + urlPrefix + "/$1",
 	"url(" + targetStem + urlPrefix + "/$1",
       };
       NodeFilter relImportXform =
@@ -227,24 +226,20 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       NodeFilter absRefreshXform =
 	HtmlNodeFilters.refreshRegexYesXforms(linkRegex5, ignCase5,
 					    rwRegex5, rwTarget5);
-      String [] linkRegex6 = {
-	";[ \\t\\n\\f\\r\\x0b]*url=http://",
+      String[] linkRegex6 = {
 	";[ \\t\\n\\f\\r\\x0b]*url=http://",
 	";[ \\t\\n\\f\\r\\x0b]*url=http://",
       };
       boolean[] ignCase6 = {
 	true,
 	true,
-	true,
       };
       String[] rwRegex6 = {
 	"url=/",
-	"url=([a-zA-Z_?])",
-	"url=(\\.\\./)",
+	"url=(" + relChar + ")",
       };
       String[] rwTarget6 = {
 	"url=" + targetStem + defUrlStem,
-	"url=" + targetStem + urlPrefix + "/$1",
 	"url=" + targetStem + urlPrefix + "/$1",
       };
 

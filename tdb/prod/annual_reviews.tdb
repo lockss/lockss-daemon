@@ -51,6 +51,9 @@
     au < released ; Annual Review of Anthropology Volume 33 ; 33 >
     au < released ; Annual Review of Anthropology Volume 34 ; 34 >
     au < released ; Annual Review of Anthropology Volume 35 ; 35 >
+    au < ready ; Annual Review of Anthropology Volume 36 ; 36 >
+    au < ready ; Annual Review of Anthropology Volume 37 ; 37 >
+
   }
 
 
@@ -107,6 +110,10 @@
     au < released ; Annual Review of Astronomy and Astrophysics Volume 42 ; 42 >
     au < released ; Annual Review of Astronomy and Astrophysics Volume 43 ; 43 >
     au < released ; Annual Review of Astronomy and Astrophysics Volume 44 ; 44 >
+    au < ready ; Annual Review of Astronomy and Astrophysics Volume 45 ; 45 >
+    au < ready ; Annual Review of Astronomy and Astrophysics Volume 46 ; 46 >
+    au < ready ; Annual Review of Astronomy and Astrophysics Volume 47 ; 47 >
+
   }
 
 
@@ -195,6 +202,8 @@
     au < released ; Annual Review of Biochemistry Volume 74 ; 74 >
     au < released ; Annual Review of Biochemistry Volume 75 ; 75 >
     au < released ; Annual Review of Biochemistry Volume 76 ; 76 >
+    au < ready ; Annual Review of Biochemistry Volume 77 ; 77 >
+    au < ready ; Annual Review of Biochemistry Volume 78 ; 78 >
   }
 
 
@@ -216,6 +225,9 @@
     au < released ; Annual Review of Biomedical Engineering Volume 7 ; 7 >
     au < released ; Annual Review of Biomedical Engineering Volume 8 ; 8 >
     au < released ; Annual Review of Biomedical Engineering Volume 9 ; 9 >
+    au < ready ; Annual Review of Biomedical Engineering Volume 10 ; 10 >
+    au < ready ; Annual Review of Biomedical Engineering Volume 11 ; 11 >
+    au < ready ; Annual Review of Biomedical Engineering Volume 12 ; 12 >
   }
 
 
@@ -225,10 +237,13 @@
       name = Annual Review of Biophysics and Bioengineering 
     >
 
+comment[bb1a] = next 3 title entries are continuation of the same journal
+comment[bb1b] = pdf filter issues
+
     param[journal_id] = biophys
     param[short_journal_id] = bb
 
-    au < ready ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
+    au < notReady ; Annual Review of Biophysics and Bioengineering Volume 1 ; 1 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 2 ; 2 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 3 ; 3 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 4 ; 4 >
@@ -240,15 +255,38 @@
     au < ready ; Annual Review of Biophysics and Bioengineering Volume 10 ; 10 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 11 ; 11 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 12 ; 12 >
-    au < released ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
+    au < testing ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
+
   }
 
+
+  {
+    title <
+      name = Annual Review of Biophysics and Biophysical Chemistry 
+    >
+
+comment[bb2] = continued from previous title entry
+comment[bb19_17] = pdf filter issues
+
+    param[journal_id] = biophys
+    param[short_journal_id] = bb
+
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
+    au < notReady ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
+    au < notReady ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
+    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
+  }
 
 
   {
     title <
       name = Annual Review of Biophysics and Biomolecular Structure 
     >
+
+comment[bb3] = continued from previous title entry
 
     param[journal_id] = biophys
     param[short_journal_id] = bb
@@ -269,33 +307,42 @@
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 34 ; 34 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 35 ; 35 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 36 ; 36 >
+    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
+    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
+    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 39 ; 39 >
   }
-
 
 
   {
     title <
-      name = Annual Review of Biophysics and Biophysical Chemistry 
+      name = Annual Review of Cell Biology 
     >
 
-    param[journal_id] = biophys
-    param[short_journal_id] = bb
+comment[cb1] = next title entry is a continuation of this journal
 
-    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
-    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
-    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
-    au < ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 17 ; 17 >
-    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
-    au < ready ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
-    au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
+    param[journal_id] = cellbio
+    param[short_journal_id] = cb
+
+    au < released ; Annual Review of Cell Biology Volume 1 ; 1 >
+    au < released ; Annual Review of Cell Biology Volume 2 ; 2 >
+    au < released ; Annual Review of Cell Biology Volume 3 ; 3 >
+    au < released ; Annual Review of Cell Biology Volume 4 ; 4 >
+    au < released ; Annual Review of Cell Biology Volume 5 ; 5 >
+    au < released ; Annual Review of Cell Biology Volume 6 ; 6 >
+    au < released ; Annual Review of Cell Biology Volume 7 ; 7 >
+    au < released ; Annual Review of Cell Biology Volume 8 ; 8 >
+    au < released ; Annual Review of Cell Biology Volume 9 ; 9 >
+    au < released ; Annual Review of Cell Biology Volume 10 ; 10 >
   }
-
-
-
+  
+  
   {
     title <
       name = Annual Review of Cell and Developmental Biology 
     >
+
+comment[cb2] = continued from previous title entry
+comment[cb24] = times out due to 500 errors (see relevant email)
 
     param[journal_id] = cellbio
     param[short_journal_id] = cb
@@ -312,43 +359,38 @@
     au < released ; Annual Review of Cell and Developmental Biology Volume 20 ; 20 >
     au < released ; Annual Review of Cell and Developmental Biology Volume 21 ; 21 >
     au < released ; Annual Review of Cell and Developmental Biology Volume 22 ; 22 >
+    au < ready ; Annual Review of Cell and Developmental Biology Volume 23 ; 23 >
+    au < notReady ; Annual Review of Cell and Developmental Biology Volume 24 ; 24 >
+    au < ready ; Annual Review of Cell and Developmental Biology Volume 25 ; 25 >
   }
-
-
-
-  {
-    title <
-      name = Annual Review of Cell Biology 
-    >
-
-    param[journal_id] = cellbio
-    param[short_journal_id] = cb
-
-    au < released ; Annual Review of Cell Biology Volume 1 ; 1 >
-    au < released ; Annual Review of Cell Biology Volume 2 ; 2 >
-    au < released ; Annual Review of Cell Biology Volume 3 ; 3 >
-    au < released ; Annual Review of Cell Biology Volume 4 ; 4 >
-    au < released ; Annual Review of Cell Biology Volume 5 ; 5 >
-    au < released ; Annual Review of Cell Biology Volume 6 ; 6 >
-    au < released ; Annual Review of Cell Biology Volume 7 ; 7 >
-    au < released ; Annual Review of Cell Biology Volume 8 ; 8 >
-    au < released ; Annual Review of Cell Biology Volume 9 ; 9 >
-    au < released ; Annual Review of Cell Biology Volume 10 ; 10 >
-  }
-
 
 
   {
     title <
       name = Annual Review of Clinical Psychology 
     >
+    
+    {  
+    
+      param[journal_id] = clinpsy
+      param[short_journal_id] = none
 
-    param[journal_id] = clinpsy
-    param[short_journal_id] = none
+      au < released ; Annual Review of Clinical Psychology Volume 1 ; 1 >
+      au < released ; Annual Review of Clinical Psychology Volume 2 ; 2 >
+      au < released ; Annual Review of Clinical Psychology Volume 3 ; 3 >
+      
+    }
+    
+    { 
 
-    au < released ; Annual Review of Clinical Psychology Volume 1 ; 1 >
-    au < released ; Annual Review of Clinical Psychology Volume 2 ; 2 >
-    au < released ; Annual Review of Clinical Psychology Volume 3 ; 3 >
+      param[journal_id] = clinpsy
+      param[short_journal_id] = cp
+      
+      au < ready ; Annual Review of Clinical Psychology Volume 4 ; 4 >
+      au < ready ; Annual Review of Clinical Psychology Volume 5 ; 5 >
+      au < ready ; Annual Review of Clinical Psychology Volume 6 ; 6 >
+      
+    }
   }
 
 
@@ -396,6 +438,9 @@
     au < released ; Annual Review of Earth and Planetary Sciences Volume 33 ; 33 >
     au < released ; Annual Review of Earth and Planetary Sciences Volume 34 ; 34 >
     au < released ; Annual Review of Earth and Planetary Sciences Volume 35 ; 35 >
+    au < ready ; Annual Review of Earth and Planetary Sciences Volume 36 ; 36 >
+    au < ready ; Annual Review of Earth and Planetary Sciences Volume 37 ; 37 >
+    au < ready ; Annual Review of Earth and Planetary Sciences Volume 38 ; 38 >
   }
 
 
@@ -457,6 +502,9 @@
     au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 35 ; 35 >
     au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 36 ; 36 >
     au < released ; Annual Review of Ecology, Evolution, and Systematics Volume 37 ; 37 >
+    au < ready ; Annual Review of Ecology, Evolution, and Systematics Volume 38 ; 38 >
+    au < ready ; Annual Review of Ecology, Evolution, and Systematics Volume 39 ; 39 >
+    au < ready ; Annual Review of Ecology, Evolution, and Systematics Volume 40 ; 40 >
   }
 
 
@@ -465,6 +513,8 @@
     title <
       name = Annual Review of Energy 
     >
+
+comment[eg1] = next 3 title entries are continuation of the same journal
 
     param[journal_id] = energy
     param[short_journal_id] = eg
@@ -493,6 +543,8 @@
       name = Annual Review of Energy and the Environment 
     >
 
+comment[eg2] = continued from previous title entry
+
     param[journal_id] = energy
     param[short_journal_id] = eg
 
@@ -516,6 +568,8 @@
     title <
       name = Annual Review of Environment and Resources 
     >
+    
+comment[eg3] = continued from previous title entry
 
     param[journal_id] = energy
     param[short_journal_id] = eg
@@ -524,6 +578,9 @@
     au < released ; Annual Review of Environment and Resources Volume 29 ; 29 >
     au < released ; Annual Review of Environment and Resources Volume 30 ; 30 >
     au < released ; Annual Review of Environment and Resources Volume 31 ; 31 >
+    au < ready ; Annual Review of Environment and Resources Volume 32 ; 32 >
+    au < ready ; Annual Review of Environment and Resources Volume 33 ; 33 >
+    au < ready ; Annual Review of Environment and Resources Volume 34 ; 34 >
   }
 
 
@@ -588,6 +645,9 @@
     au < released ; Annual Review of Entomology Volume 50 ; 50 >
     au < released ; Annual Review of Entomology Volume 51 ; 51 >
     au < released ; Annual Review of Entomology Volume 52 ; 52 >
+    au < ready ; Annual Review of Entomology Volume 53 ; 53 >
+    au < ready ; Annual Review of Entomology Volume 54 ; 54 >
+    au < ready ; Annual Review of Entomology Volume 55 ; 55 >
   }
 
 
@@ -639,6 +699,9 @@
     au < released ; Annual Review of Fluid Mechanics Volume 37 ; 37 >
     au < released ; Annual Review of Fluid Mechanics Volume 38 ; 38 >
     au < released ; Annual Review of Fluid Mechanics Volume 39 ; 39 >
+    au < ready ; Annual Review of Fluid Mechanics Volume 40 ; 40 >
+    au < ready ; Annual Review of Fluid Mechanics Volume 41 ; 41 >
+    au < ready ; Annual Review of Fluid Mechanics Volume 42 ; 42 >
   }
 
 
@@ -691,6 +754,9 @@
     au < released ; Annual Review of Genetics Volume 38 ; 38 >
     au < released ; Annual Review of Genetics Volume 39 ; 39 >
     au < released ; Annual Review of Genetics Volume 40 ; 40 >
+    au < ready ; Annual Review of Genetics Volume 41 ; 41 >
+    au < ready ; Annual Review of Genetics Volume 42 ; 42 >
+    au < ready ; Annual Review of Genetics Volume 43 ; 43 >
   }
 
 
@@ -710,6 +776,9 @@
     au < released ; Annual Review of Genomics and Human Genetics Volume 5 ; 5 >
     au < released ; Annual Review of Genomics and Human Genetics Volume 6 ; 6 >
     au < released ; Annual Review of Genomics and Human Genetics Volume 7 ; 7 >
+    au < ready ; Annual Review of Genomics and Human Genetics Volume 8 ; 8 >
+    au < ready ; Annual Review of Genomics and Human Genetics Volume 9 ; 9 >
+    au < ready ; Annual Review of Genomics and Human Genetics Volume 10 ; 10 >
   }
 
 
@@ -747,6 +816,9 @@
     au < released ; Annual Review of Immunology Volume 23 ; 23 >
     au < released ; Annual Review of Immunology Volume 24 ; 24 >
     au < released ; Annual Review of Immunology Volume 25 ; 25 >
+    au < ready ; Annual Review of Immunology Volume 26 ; 26 >
+    au < ready ; Annual Review of Immunology Volume 27 ; 27 >
+    au < ready ; Annual Review of Immunology Volume 28 ; 28 >
   }
 
 
@@ -761,32 +833,18 @@
 
     au < released ; Annual Review of Law and Social Science Volume 1 ; 1 >
     au < released ; Annual Review of Law and Social Science Volume 2 ; 2 >
+    au < ready ; Annual Review of Law and Social Science Volume 3 ; 3 >
+    au < ready ; Annual Review of Law and Social Science Volume 4 ; 4 >
+    au < ready ; Annual Review of Law and Social Science Volume 5 ; 5 >
   }
-
-
-
-  {
-    title <
-      name = Annual Review of Materials Research 
-    >
-
-    param[journal_id] = matsci
-    param[short_journal_id] = ms
-
-    au < released ; Annual Review of Materials Research Volume 31 ; 31 >
-    au < released ; Annual Review of Materials Research Volume 32 ; 32 >
-    au < released ; Annual Review of Materials Research Volume 33 ; 33 >
-    au < released ; Annual Review of Materials Research Volume 34 ; 34 >
-    au < released ; Annual Review of Materials Research Volume 35 ; 35 >
-    au < released ; Annual Review of Materials Research Volume 36 ; 36 >
-  }
-
 
 
   {
     title <
       name = Annual Review of Materials Science 
     >
+
+comment[ms1] = next title entry is a continuation of this journal
 
     param[journal_id] = matsci
     param[short_journal_id] = ms
@@ -822,6 +880,30 @@
     au < released ; Annual Review of Materials Science Volume 29 ; 29 >
     au < released ; Annual Review of Materials Science Volume 30 ; 30 >
   }
+
+
+  {
+    title <
+      name = Annual Review of Materials Research 
+    >
+
+comment[ms2] = continued from previous title entry
+
+    param[journal_id] = matsci
+    param[short_journal_id] = ms
+
+    au < released ; Annual Review of Materials Research Volume 31 ; 31 >
+    au < released ; Annual Review of Materials Research Volume 32 ; 32 >
+    au < released ; Annual Review of Materials Research Volume 33 ; 33 >
+    au < released ; Annual Review of Materials Research Volume 34 ; 34 >
+    au < released ; Annual Review of Materials Research Volume 35 ; 35 >
+    au < released ; Annual Review of Materials Research Volume 36 ; 36 >
+    au < ready ; Annual Review of Materials Research Volume 37 ; 37 >
+    au < ready ; Annual Review of Materials Research Volume 38 ; 38 >
+    au < ready ; Annual Review of Materials Research Volume 39 ; 39 >
+  }
+
+
 
 
 
@@ -891,6 +973,9 @@
     au < released ; Annual Review of Medicine Volume 56 ; 56 >
     au < released ; Annual Review of Medicine Volume 57 ; 57 >
     au < released ; Annual Review of Medicine Volume 58 ; 58 >
+    au < ready ; Annual Review of Medicine Volume 59 ; 59 >
+    au < ready ; Annual Review of Medicine Volume 60 ; 60 >
+    au < ready ; Annual Review of Medicine Volume 61 ; 61 >
   }
 
 
@@ -963,6 +1048,9 @@
     au < released ; Annual Review of Microbiology Volume 58 ; 58 >
     au < released ; Annual Review of Microbiology Volume 59 ; 59 >
     au < released ; Annual Review of Microbiology Volume 60 ; 60 >
+    au < ready ; Annual Review of Microbiology Volume 61 ; 61 >
+    au < ready ; Annual Review of Microbiology Volume 62 ; 62 >
+    au < ready ; Annual Review of Microbiology Volume 63 ; 63 >
   }
 
 
@@ -1005,14 +1093,58 @@
     au < released ; Annual Review of Neuroscience Volume 28 ; 28 >
     au < released ; Annual Review of Neuroscience Volume 29 ; 29 >
     au < released ; Annual Review of Neuroscience Volume 30 ; 30 >
+    au < ready ; Annual Review of Neuroscience Volume 31 ; 31 >
+    au < ready ; Annual Review of Neuroscience Volume 32 ; 32 >
+    au < ready ; Annual Review of Neuroscience Volume 33 ; 33 >
   }
 
 
+  {
+    title <
+      name = Annual Review of Nuclear Science 
+    >
+
+comment[ns1] = next title entry is a continuation of this journal
+
+    param[journal_id] = nucl
+    param[short_journal_id] = ns
+
+    au < released ; Annual Review of Nuclear Science Volume 1 ; 1 >
+    au < released ; Annual Review of Nuclear Science Volume 2 ; 2 >
+    au < released ; Annual Review of Nuclear Science Volume 3 ; 3 >
+    au < released ; Annual Review of Nuclear Science Volume 4 ; 4 >
+    au < released ; Annual Review of Nuclear Science Volume 5 ; 5 >
+    au < released ; Annual Review of Nuclear Science Volume 6 ; 6 >
+    au < released ; Annual Review of Nuclear Science Volume 7 ; 7 >
+    au < released ; Annual Review of Nuclear Science Volume 8 ; 8 >
+    au < released ; Annual Review of Nuclear Science Volume 9 ; 9 >
+    au < released ; Annual Review of Nuclear Science Volume 10 ; 10 >
+    au < released ; Annual Review of Nuclear Science Volume 11 ; 11 >
+    au < released ; Annual Review of Nuclear Science Volume 12 ; 12 >
+    au < released ; Annual Review of Nuclear Science Volume 13 ; 13 >
+    au < released ; Annual Review of Nuclear Science Volume 14 ; 14 >
+    au < released ; Annual Review of Nuclear Science Volume 15 ; 15 >
+    au < released ; Annual Review of Nuclear Science Volume 16 ; 16 >
+    au < released ; Annual Review of Nuclear Science Volume 17 ; 17 >
+    au < released ; Annual Review of Nuclear Science Volume 18 ; 18 >
+    au < released ; Annual Review of Nuclear Science Volume 19 ; 19 >
+    au < released ; Annual Review of Nuclear Science Volume 20 ; 20 >
+    au < released ; Annual Review of Nuclear Science Volume 21 ; 21 >
+    au < released ; Annual Review of Nuclear Science Volume 22 ; 22 >
+    au < released ; Annual Review of Nuclear Science Volume 23 ; 23 >
+    au < released ; Annual Review of Nuclear Science Volume 24 ; 24 >
+    au < released ; Annual Review of Nuclear Science Volume 25 ; 25 >
+    au < released ; Annual Review of Nuclear Science Volume 26 ; 26 >
+    au < released ; Annual Review of Nuclear Science Volume 27 ; 27 >
+  }
+  
 
   {
     title <
       name = Annual Review of Nuclear and Particle Science 
     >
+
+comment[ns2] = continued from previous title entry
 
     param[journal_id] = nucl
     param[short_journal_id] = ns
@@ -1046,46 +1178,12 @@
     au < released ; Annual Review of Nuclear and Particle Science Volume 54 ; 54 >
     au < released ; Annual Review of Nuclear and Particle Science Volume 55 ; 55 >
     au < released ; Annual Review of Nuclear and Particle Science Volume 56 ; 56 >
+    au < ready ; Annual Review of Nuclear and Particle Science Volume 57 ; 57 >
+    au < ready ; Annual Review of Nuclear and Particle Science Volume 58 ; 58 >
+    au < ready ; Annual Review of Nuclear and Particle Science Volume 59 ; 59 >
   }
 
 
-
-  {
-    title <
-      name = Annual Review of Nuclear Science 
-    >
-
-    param[journal_id] = nucl
-    param[short_journal_id] = ns
-
-    au < released ; Annual Review of Nuclear Science Volume 1 ; 1 >
-    au < released ; Annual Review of Nuclear Science Volume 2 ; 2 >
-    au < released ; Annual Review of Nuclear Science Volume 3 ; 3 >
-    au < released ; Annual Review of Nuclear Science Volume 4 ; 4 >
-    au < released ; Annual Review of Nuclear Science Volume 5 ; 5 >
-    au < released ; Annual Review of Nuclear Science Volume 6 ; 6 >
-    au < released ; Annual Review of Nuclear Science Volume 7 ; 7 >
-    au < released ; Annual Review of Nuclear Science Volume 8 ; 8 >
-    au < released ; Annual Review of Nuclear Science Volume 9 ; 9 >
-    au < released ; Annual Review of Nuclear Science Volume 10 ; 10 >
-    au < released ; Annual Review of Nuclear Science Volume 11 ; 11 >
-    au < released ; Annual Review of Nuclear Science Volume 12 ; 12 >
-    au < released ; Annual Review of Nuclear Science Volume 13 ; 13 >
-    au < released ; Annual Review of Nuclear Science Volume 14 ; 14 >
-    au < released ; Annual Review of Nuclear Science Volume 15 ; 15 >
-    au < released ; Annual Review of Nuclear Science Volume 16 ; 16 >
-    au < released ; Annual Review of Nuclear Science Volume 17 ; 17 >
-    au < released ; Annual Review of Nuclear Science Volume 18 ; 18 >
-    au < released ; Annual Review of Nuclear Science Volume 19 ; 19 >
-    au < released ; Annual Review of Nuclear Science Volume 20 ; 20 >
-    au < released ; Annual Review of Nuclear Science Volume 21 ; 21 >
-    au < released ; Annual Review of Nuclear Science Volume 22 ; 22 >
-    au < released ; Annual Review of Nuclear Science Volume 23 ; 23 >
-    au < released ; Annual Review of Nuclear Science Volume 24 ; 24 >
-    au < released ; Annual Review of Nuclear Science Volume 25 ; 25 >
-    au < released ; Annual Review of Nuclear Science Volume 26 ; 26 >
-    au < released ; Annual Review of Nuclear Science Volume 27 ; 27 >
-  }
 
 
 
@@ -1123,6 +1221,10 @@
     au < released ; Annual Review of Nutrition Volume 24 ; 24 >
     au < released ; Annual Review of Nutrition Volume 25 ; 25 >
     au < released ; Annual Review of Nutrition Volume 26 ; 26 >
+    au < ready ; Annual Review of Nutrition Volume 27 ; 27 >
+    au < ready ; Annual Review of Nutrition Volume 28 ; 28 >
+    au < ready ; Annual Review of Nutrition Volume 29 ; 29 >
+    au < ready ; Annual Review of Nutrition Volume 30 ; 30 >
   }
 
 
@@ -1137,6 +1239,9 @@
 
     au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 1 ; 1 >
     au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 2 ; 2 >
+    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 3 ; 3 >
+    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 4 ; 4 >
+    au < ready ; Annual Review of Pathology: Mechanisms of Disease Volume 5 ; 5 >
   }
 
 
@@ -1145,6 +1250,8 @@
     title <
       name = Annual Review of Pharmacology 
     >
+
+comment[pa1] = next title entry is a continuation of this journal
 
     param[journal_id] = pharmtox
     param[short_journal_id] = pa
@@ -1172,6 +1279,8 @@
     title <
       name = Annual Review of Pharmacology and Toxicology 
     >
+
+comment[pa2] = continued from previous title entry
 
     param[journal_id] = pharmtox
     param[short_journal_id] = pa
@@ -1208,6 +1317,9 @@
     au < released ; Annual Review of Pharmacology and Toxicology Volume 45 ; 45 >
     au < released ; Annual Review of Pharmacology and Toxicology Volume 46 ; 46 >
     au < released ; Annual Review of Pharmacology and Toxicology Volume 47 ; 47 >
+    au < ready ; Annual Review of Pharmacology and Toxicology Volume 48 ; 48 >
+    au < ready ; Annual Review of Pharmacology and Toxicology Volume 49 ; 49 >
+    au < ready ; Annual Review of Pharmacology and Toxicology Volume 50 ; 50 >
   }
 
 
@@ -1251,21 +1363,21 @@
     au < released ; Annual Review of Physical Chemistry Volume 29 ; 29 >
     au < released ; Annual Review of Physical Chemistry Volume 30 ; 30 >
     au < released ; Annual Review of Physical Chemistry Volume 31 ; 31 >
-    au < ready ; Annual Review of Physical Chemistry Volume 32 ; 32 >
-    au < ready ; Annual Review of Physical Chemistry Volume 33 ; 33 >
+    au < testing ; Annual Review of Physical Chemistry Volume 32 ; 32 >
+    au < testing ; Annual Review of Physical Chemistry Volume 33 ; 33 >
     au < released ; Annual Review of Physical Chemistry Volume 34 ; 34 >
     au < released ; Annual Review of Physical Chemistry Volume 35 ; 35 >
     au < released ; Annual Review of Physical Chemistry Volume 36 ; 36 >
-    au < ready ; Annual Review of Physical Chemistry Volume 37 ; 37 >
-    au < ready ; Annual Review of Physical Chemistry Volume 38 ; 38 >
-    au < ready ; Annual Review of Physical Chemistry Volume 39 ; 39 >
-    au < ready ; Annual Review of Physical Chemistry Volume 40 ; 40 >
-    au < ready ; Annual Review of Physical Chemistry Volume 41 ; 41 >
-    au < ready ; Annual Review of Physical Chemistry Volume 42 ; 42 >
-    au < ready ; Annual Review of Physical Chemistry Volume 43 ; 43 >
-    au < ready ; Annual Review of Physical Chemistry Volume 44 ; 44 >
-    au < ready ; Annual Review of Physical Chemistry Volume 45 ; 45 >
-    au < ready ; Annual Review of Physical Chemistry Volume 46 ; 46 >
+    au < testing ; Annual Review of Physical Chemistry Volume 37 ; 37 >
+    au < testing ; Annual Review of Physical Chemistry Volume 38 ; 38 >
+    au < testing ; Annual Review of Physical Chemistry Volume 39 ; 39 >
+    au < testing ; Annual Review of Physical Chemistry Volume 40 ; 40 >
+    au < testing ; Annual Review of Physical Chemistry Volume 41 ; 41 >
+    au < testing ; Annual Review of Physical Chemistry Volume 42 ; 42 >
+    au < testing ; Annual Review of Physical Chemistry Volume 43 ; 43 >
+    au < testing ; Annual Review of Physical Chemistry Volume 44 ; 44 >
+    au < testing ; Annual Review of Physical Chemistry Volume 45 ; 45 >
+    au < testing ; Annual Review of Physical Chemistry Volume 46 ; 46 >
     au < ready ; Annual Review of Physical Chemistry Volume 47 ; 47 >
     au < released ; Annual Review of Physical Chemistry Volume 48 ; 48 >
     au < released ; Annual Review of Physical Chemistry Volume 49 ; 49 >
@@ -1278,6 +1390,9 @@
     au < released ; Annual Review of Physical Chemistry Volume 56 ; 56 >
     au < released ; Annual Review of Physical Chemistry Volume 57 ; 57 >
     au < ready ; Annual Review of Physical Chemistry Volume 58 ; 58 >
+    au < ready ; Annual Review of Physical Chemistry Volume 59 ; 59 >
+    au < ready ; Annual Review of Physical Chemistry Volume 60 ; 60 >
+    au < ready ; Annual Review of Physical Chemistry Volume 61 ; 61 >
   }
 
 
@@ -1359,6 +1474,9 @@
     au < released ; Annual Review of Physiology Volume 67 ; 67 >
     au < released ; Annual Review of Physiology Volume 68 ; 68 >
     au < released ; Annual Review of Physiology Volume 69 ; 69 >
+    au < ready ; Annual Review of Physiology Volume 70 ; 70 >
+    au < ready ; Annual Review of Physiology Volume 71 ; 71 >
+    au < ready ; Annual Review of Physiology Volume 72 ; 72 >
   }
 
 
@@ -1415,6 +1533,9 @@
     au < released ; Annual Review of Phytopathology Volume 42 ; 42 >
     au < released ; Annual Review of Phytopathology Volume 43 ; 43 >
     au < released ; Annual Review of Phytopathology Volume 44 ; 44 >
+    au < ready ; Annual Review of Phytopathology Volume 45 ; 45 >
+    au < ready ; Annual Review of Phytopathology Volume 46 ; 46 >
+    au < ready ; Annual Review of Phytopathology Volume 47 ; 47 >
   }
 
 
@@ -1485,6 +1606,8 @@
     au < released ; Annual Review of Plant Biology Volume 56 ; 56 >
     au < released ; Annual Review of Plant Biology Volume 57 ; 57 >
     au < released ; Annual Review of Plant Biology Volume 58 ; 58 >
+    au < ready ; Annual Review of Plant Biology Volume 59 ; 59 >
+    au < ready ; Annual Review of Plant Biology Volume 60 ; 60 >
   }
 
 
@@ -1507,6 +1630,9 @@
     au < released ; Annual Review of Political Science Volume 8 ; 8 >
     au < released ; Annual Review of Political Science Volume 9 ; 9 >
     au < ready ; Annual Review of Political Science Volume 10 ; 10 >
+    au < ready ; Annual Review of Political Science Volume 11 ; 11 >
+    au < ready ; Annual Review of Political Science Volume 12 ; 12 >
+    au < ready ; Annual Review of Political Science Volume 13 ; 13 >
   }
 
 
@@ -1577,6 +1703,9 @@
     au < released ; Annual Review of Psychology Volume 56 ; 56 >
     au < released ; Annual Review of Psychology Volume 57 ; 57 >
     au < released ; Annual Review of Psychology Volume 58 ; 58 >
+    au < ready ; Annual Review of Psychology Volume 59 ; 59 >
+    au < ready ; Annual Review of Psychology Volume 60 ; 60 >
+    au < ready ; Annual Review of Psychology Volume 61 ; 61 >
   }
 
 
@@ -1617,6 +1746,9 @@
     au < released ; Annual Review of Public Health Volume 26 ; 26 >
     au < released ; Annual Review of Public Health Volume 27 ; 27 >
     au < released ; Annual Review of Public Health Volume 28 ; 28 >
+    au < ready ; Annual Review of Public Health Volume 29 ; 29 >
+    au < ready ; Annual Review of Public Health Volume 30 ; 30 >
+    au < ready ; Annual Review of Public Health Volume 31 ; 31 >
   }
 
 
@@ -1661,5 +1793,9 @@
     au < released ; Annual Review of Sociology Volume 30 ; 30 >
     au < released ; Annual Review of Sociology Volume 31 ; 31 >
     au < released ; Annual Review of Sociology Volume 32 ; 32 >
+    au < ready ; Annual Review of Sociology Volume 33 ; 33 >
+    au < ready ; Annual Review of Sociology Volume 34 ; 34 >
+    au < ready ; Annual Review of Sociology Volume 35 ; 35 >
+    au < ready ; Annual Review of Sociology Volume 36 ; 36 >
   }  
 }

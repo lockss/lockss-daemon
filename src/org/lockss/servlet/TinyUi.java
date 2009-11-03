@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.19 2009-01-21 23:15:46 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.19.6.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class TinyUi extends BaseServletManager {
     log.debug("Starting");
     Configuration config = ConfigManager.getCurrentConfig();
     setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
-	      Configuration.DIFFERENCES_ALL);
+              Configuration.DIFFERENCES_ALL);
     startServlets();
   }
 
@@ -113,10 +113,50 @@ public class TinyUi extends BaseServletManager {
     return null;
   }
 
-  protected void installUsers(MDHashUserRealm realm) {
-    installDebugUser(realm);
-    installPlatformUser(realm);
-//     installLocalUsers(realm);
+  @Override
+  protected UserRealm newUserRealm() {
+    return new MDHashUserRealm(mi.authRealm);
+  }
+
+  private MDHashUserRealm getRealm() {
+    return (MDHashUserRealm)realm;
+  }
+
+  protected void installUsers() {
+    installDebugUser();
+    installPlatformUser();
+//     installLocalUsers();
+  }
+
+  @Override
+  protected void installDebugUser() {
+    if (enableDebugUser) {
+      try {
+        log.debug("passwd props file: " + mi.debugUserFile);
+        URL propsUrl = this.getClass().getResource(mi.debugUserFile);
+        if (propsUrl != null) {
+          log.debug("passwd props file: " + propsUrl);
+          getRealm().load(propsUrl.toString());
+        }
+       } catch (IOException e) {
+        log.warning("Error loading " + mi.debugUserFile, e);
+      }
+    }
+  }
+
+  @Override
+  // Manually install password set by platform config.
+  protected void installPlatformUser() {
+    // Use platform config as real config hasn't been loaded yet
+    Configuration platConfig = ConfigManager.getPlatformConfig();
+    String platUser = platConfig.get(PARAM_PLATFORM_USERNAME);
+    String platPass = platConfig.get(PARAM_PLATFORM_PASSWORD);
+
+    if (!StringUtil.isNullString(platUser) &&
+        !StringUtil.isNullString(platPass)) {
+      getRealm().put(platUser, platPass);
+      getRealm().addUserToRole(platUser, LockssServlet.ROLE_USER_ADMIN);
+    }
   }
 
   protected void configureContexts(HttpServer server) {
@@ -187,8 +227,8 @@ public class TinyUi extends BaseServletManager {
     }
 
     public void doGet(HttpServletRequest request,
-		      HttpServletResponse response)
-	throws ServletException, IOException {
+                      HttpServletResponse response)
+        throws ServletException, IOException {
       Page page= new Page();
       page.title("LOCKSS box");
       page.addHeader("");
@@ -197,21 +237,21 @@ public class TinyUi extends BaseServletManager {
       table.newRow();
       table.newCell("valign=top align=center");
       table.add(new Link(Constants.LOCKSS_HOME_URL,
-			 ServletUtil.IMAGE_LOGO_LARGE));
+                         ServletUtil.IMAGE_LOGO_LARGE));
       table.add(ServletUtil.IMAGE_TM);
 
       Composite b = new Font(1, true);
       b.add("<br>This LOCKSS box");
       String name = PlatformUtil.getLocalHostname();
       if (name != null) {
-	b.add(" (");
-	b.add(name);
-	b.add(")");
+        b.add(" (");
+        b.add(name);
+        b.add(")");
       }
       b.add(" has not started because ");
       b.add("it is unable to load configuration data.<br>");
       if (tinyData[0] != null) {
-	b.add(tinyData[0]);
+        b.add(tinyData[0]);
       }
       table.newRow();
       table.newCell("valign=top align=left");

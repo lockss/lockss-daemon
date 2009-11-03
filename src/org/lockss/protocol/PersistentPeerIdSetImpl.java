@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8.6.1 2009-04-30 20:11:02 edwardsb1 Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.6.2 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -313,8 +313,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 //    return result;
 //  }
 
-      
-
+   
   // ---- Internal methods
 
   /**

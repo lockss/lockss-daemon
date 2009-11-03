@@ -16,17 +16,19 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1543-706X
   
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 36 ; 36 >
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 37 ; 37 >
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 38 ; 38 >
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 39 ; 39 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 36 ; 36 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 37 ; 37 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 38 ; 38 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 39 ; 39 >
       au < superseded ; In Vitro Cellular & Developmental Biology - Animal Volume 40 ; 40 >
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 41 ; 41 >
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 42 ; 42 >
-      au < do_not_process ; In Vitro Cellular & Developmental Biology - Animal Volume 43 ; 43 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 41 ; 41 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 42 ; 42 >
+      au < doNotProcess ; In Vitro Cellular & Developmental Biology - Animal Volume 43 ; 43 >
     }
 
   }
+  
+  {
 
     title <
       name = In Vitro Cellular and Developmental Biology - Plant ;
@@ -39,11 +41,11 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1054-5476
   
-      au < do_not_process ; In Vitro Cellular and Developmental Biology - Plant Volume 39 ; 39 >
+      au < doNotProcess ; In Vitro Cellular and Developmental Biology - Plant Volume 39 ; 39 >
       au < superseded ; In Vitro Cellular and Developmental Biology - Plant Volume 40 ; 40 >
-      au < do_not_process ; In Vitro Cellular and Developmental Biology - Plant Volume 41 ; 41 >
-      au < do_not_process ; In Vitro Cellular and Developmental Biology - Plant Volume 42 ; 42 >
-      au < do_not_process ; In Vitro Cellular and Developmental Biology - Plant Volume 43 ; 43 >
+      au < doNotProcess ; In Vitro Cellular and Developmental Biology - Plant Volume 41 ; 41 >
+      au < doNotProcess ; In Vitro Cellular and Developmental Biology - Plant Volume 42 ; 42 >
+      au < doNotProcess ; In Vitro Cellular and Developmental Biology - Plant Volume 43 ; 43 >
     }
 
     {

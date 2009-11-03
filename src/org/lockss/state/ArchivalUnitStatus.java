@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.78 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.78.4.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -134,13 +134,13 @@ public class ArchivalUnitStatus
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
-			Configuration.Differences changedKeys) {
+                        Configuration.Differences changedKeys) {
     defaultNumRows = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
     isContentIsLink = config.getBoolean(PARAM_CONTENT_IS_LINK,
-					DEFAULT_CONTENT_IS_LINK);
+                                        DEFAULT_CONTENT_IS_LINK);
     includeNeedsRecrawl = config.getBoolean(PARAM_INCLUDE_NEEDS_RECRAWL,
-					    DEFAULT_INCLUDE_NEEDS_RECRAWL);
+                                            DEFAULT_INCLUDE_NEEDS_RECRAWL);
   }
 
   static CrawlManagerStatus getCMStatus(LockssDaemon daemon) {
@@ -161,15 +161,15 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuSize", "Content Size",
-			   ColumnDescriptor.TYPE_INT, FOOT_SIZE),
+                           ColumnDescriptor.TYPE_INT, FOOT_SIZE),
       new ColumnDescriptor("DiskUsage", "Disk Usage (MB)",
-			   ColumnDescriptor.TYPE_FLOAT, FOOT_SIZE),
+                           ColumnDescriptor.TYPE_FLOAT, FOOT_SIZE),
       new ColumnDescriptor("Peers", "Peers", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuPolls", "Recent Polls",
                            ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("Damaged", "Status",
                            ColumnDescriptor.TYPE_STRING,
-			   FOOT_STATUS),
+                           FOOT_STATUS),
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor("AuLastCrawlAttempt", "Last Crawl Start",
@@ -182,8 +182,8 @@ public class ArchivalUnitStatus
 
     private static final List sortRules =
       ListUtil.list(new
-		    StatusTable.SortRule("AuName",
-					 CatalogueOrderComparator.SINGLETON));
+                    StatusTable.SortRule("AuName",
+                                         CatalogueOrderComparator.SINGLETON));
 
     private LockssDaemon theDaemon;
     private RepositoryManager repoMgr;
@@ -203,10 +203,10 @@ public class ArchivalUnitStatus
         throws StatusService.NoSuchTableException {
       List cols = columnDescriptors;
       if (theDaemon.isDetectClockssSubscription()) {
-	cols = new ArrayList(cols);
-	cols.remove(cols.size() - 1);
-	cols.add(new ColumnDescriptor("Subscribed", "Subscribed",
-				      ColumnDescriptor.TYPE_STRING));
+        cols = new ArrayList(cols);
+        cols.remove(cols.size() - 1);
+        cols.add(new ColumnDescriptor("Subscribed", "Subscribed",
+                                      ColumnDescriptor.TYPE_STRING));
       }
       table.setColumnDescriptors(cols);
       table.setDefaultSortRules(sortRules);
@@ -227,21 +227,21 @@ public class ArchivalUnitStatus
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       boolean includeInternalAus =
-	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+        table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rowL = new ArrayList();
       for (Iterator iter = pluginMgr.getAllAus().iterator();
-	   iter.hasNext(); ) {
+           iter.hasNext(); ) {
         ArchivalUnit au = (ArchivalUnit)iter.next();
-	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	  continue;
-	}
-	try {
-	  NodeManager nodeMan = theDaemon.getNodeManager(au);
-	  rowL.add(makeRow(au, nodeMan));
-	  stats.aus++;
-	} catch (Exception e) {
-	  logger.warning("Unexpected expection building row", e);
-	}
+        if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
+          continue;
+        }
+        try {
+          NodeManager nodeMan = theDaemon.getNodeManager(au);
+          rowL.add(makeRow(au, nodeMan));
+          stats.aus++;
+        } catch (Exception e) {
+          logger.warning("Unexpected expection building row", e);
+        }
       }
       return rowL;
     }
@@ -260,11 +260,11 @@ public class ArchivalUnitStatus
 //       rowMap.put("AuNodeCount", new Integer(-1));
       long contentSize = AuUtil.getAuContentSize(au, false);
       if (contentSize != -1) {
-	rowMap.put("AuSize", new Long(contentSize));
+        rowMap.put("AuSize", new Long(contentSize));
       }
       long du = AuUtil.getAuDiskUsage(au, false);
       if (du != -1) {
-	rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
+        rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
       }
       long lastCrawl = auState.getLastCrawlTime();
       long lastAttempt = auState.getLastCrawlAttempt();
@@ -275,15 +275,15 @@ public class ArchivalUnitStatus
       // have uninitialized lastXxx fields.  Display time and status of
       // last successful instead
       if (lastCrawl > 0 && lastAttempt <= 0) {
-	lastAttempt = lastCrawl;
-	lastResultCode = Crawler.STATUS_SUCCESSFUL;
-	lastResult = "Successful";
+        lastAttempt = lastCrawl;
+        lastResultCode = Crawler.STATUS_SUCCESSFUL;
+        lastResult = "Successful";
       }
       rowMap.put("AuLastCrawlAttempt", new Long(lastAttempt));
       String lastCrawlStatus =
-	lastCrawlStatus(au, lastCrawl, lastResultCode, lastResult);
+        lastCrawlStatus(au, lastCrawl, lastResultCode, lastResult);
       if (lastCrawlStatus != null) {
-	rowMap.put("AuLastCrawlResultMsg", lastCrawlStatus);
+        rowMap.put("AuLastCrawlResultMsg", lastCrawlStatus);
       }
 
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
@@ -291,23 +291,23 @@ public class ArchivalUnitStatus
       
       Object stat;
       if (isV3) {
-	int numPolls = v3status.getNumPolls(au.getAuId());
-	rowMap.put("AuPolls", pollsRef(new Integer(numPolls), au));
+        int numPolls = v3status.getNumPolls(au.getAuId());
+        rowMap.put("AuPolls", pollsRef(new Integer(numPolls), au));
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
         //
         if (auState.getHighestV3Agreement() < 0 ||
-	    auState.getLastTopLevelPollTime() <= 0) {
-	  if (cmStatus.isRunningNCCrawl(au)) {
-	    stat = new OrderedObject("Crawling", STATUS_ORDER_CRAWLING);
-	  } else {
-	    if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
-	      stat = new OrderedObject("Waiting for Poll",
-				       STATUS_ORDER_WAIT_POLL);
-	    } else {
-	      stat = new OrderedObject("Waiting for Crawl",
-				       STATUS_ORDER_WAIT_CRAWL);
-	    }
+            auState.getLastTopLevelPollTime() <= 0) {
+          if (cmStatus.isRunningNCCrawl(au)) {
+            stat = new OrderedObject("Crawling", STATUS_ORDER_CRAWLING);
+          } else {
+            if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
+              stat = new OrderedObject("Waiting for Poll",
+                                       STATUS_ORDER_WAIT_POLL);
+            } else {
+              stat = new OrderedObject("Waiting for Crawl",
+                                       STATUS_ORDER_WAIT_CRAWL);
+            }
           }
         } else {
           stat = agreeStatus(auState.getHighestV3Agreement());
@@ -317,71 +317,71 @@ public class ArchivalUnitStatus
                    theDaemon.getStatusService().
                    getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                 au));
-	CachedUrlSet auCus = au.getAuCachedUrlSet();
-	NodeState topNodeState = nodeMan.getNodeState(auCus);
-	stat = topNodeState.hasDamage()
-	  ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
+        CachedUrlSet auCus = au.getAuCachedUrlSet();
+        NodeState topNodeState = nodeMan.getNodeState(auCus);
+        stat = topNodeState.hasDamage()
+          ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
       }
 
       boolean isPubDown = AuUtil.isPubDown(au);
       boolean isClosed = AuUtil.isClosed(au);
         
       if (isPubDown || isClosed) {
-	List val = ListUtil.list(stat, " (");
-	if (isClosed) {
-	  val.add("C");
-	}
-	if (isPubDown) {
-	  val.add("D");
-	}
-	val.add(")");
-	stat = val;
+        List val = ListUtil.list(stat, " (");
+        if (isClosed) {
+          val.add("C");
+        }
+        if (isPubDown) {
+          val.add("D");
+        }
+        val.add(")");
+        stat = val;
       }
 
       rowMap.put("Damaged", stat);
 
       if (theDaemon.isDetectClockssSubscription()) {
-	rowMap.put("Subscribed",
-		   AuUtil.getAuState(au).getClockssSubscriptionStatusString());
+        rowMap.put("Subscribed",
+                   AuUtil.getAuState(au).getClockssSubscriptionStatusString());
       }
 
       return rowMap;
     }
 
     String lastCrawlStatus(ArchivalUnit au, long lastCrawl,
-			   int lastResultCode, String lastResult) {
+                           int lastResultCode, String lastResult) {
       if (AuUtil.isPubDown(au)) {
-	if (lastCrawl > 0) {
-	  return "No longer crawled";
-	} else {
-	  return "Never crawled";
-	}
+        if (lastCrawl > 0) {
+          return "No longer crawled";
+        } else {
+          return "Never crawled";
+        }
       } else {
-	if (lastResultCode > 0) {
-	  return lastResult;
-	}
+        if (lastResultCode > 0) {
+          return lastResult;
+        }
       }
       return null;
     }
 
     Object pollsRef(Object val, ArchivalUnit au) {
       return new StatusTable.Reference(val,
-				       V3PollStatus.POLLER_STATUS_TABLE_NAME,
-				       au.getAuId());
+                                       V3PollStatus.POLLER_STATUS_TABLE_NAME,
+                                       au.getAuId());
     }
 
     private List getSummaryInfo(Stats stats) {
       List res = new ArrayList();
       String numaus = StringUtil.numberOfUnits(stats.aus, "Archival Unit",
-					       "Archival Units");
+                                               "Archival Units");
       res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  numaus));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          numaus));
       int n = repoMgr.sizeCalcQueueLen();
       if (n != 0) {
-	res.add(new StatusTable.SummaryInfo(null,
-					    ColumnDescriptor.TYPE_STRING,
-					    n + " awaiting recalc"));
+        res.add(new StatusTable.SummaryInfo(null,
+                                            ColumnDescriptor.TYPE_STRING,
+                                            n + " awaiting recalc"));
       }
       return res;
     }
@@ -397,8 +397,8 @@ public class ArchivalUnitStatus
 
     private static final List sortRules =
       ListUtil.list(new
-		    StatusTable.SortRule("AuName",
-					 CatalogueOrderComparator.SINGLETON));
+                    StatusTable.SortRule("AuName",
+                                         CatalogueOrderComparator.SINGLETON));
 
     private LockssDaemon theDaemon;
 
@@ -431,20 +431,20 @@ public class ArchivalUnitStatus
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       boolean includeInternalAus =
-	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+        table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rowL = new ArrayList();
       for (Iterator iter = pluginMgr.getAllAus().iterator();
-	   iter.hasNext(); ) {
+           iter.hasNext(); ) {
         ArchivalUnit au = (ArchivalUnit)iter.next();
-	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	  continue;
-	}
-	try {
-	  rowL.add(makeRow(au));
-	  stats.aus++;
-	} catch (Exception e) {
-	  logger.warning("Unexpected expection building row", e);
-	}
+        if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
+          continue;
+        }
+        try {
+          rowL.add(makeRow(au));
+          stats.aus++;
+        } catch (Exception e) {
+          logger.warning("Unexpected expection building row", e);
+        }
       }
       return rowL;
     }
@@ -458,11 +458,11 @@ public class ArchivalUnitStatus
 
     private List getSummaryInfo(Stats stats) {
       String numaus = StringUtil.numberOfUnits(stats.aus, "Archival Unit",
-					       "Archival Units");
+                                               "Archival Units");
       return
-	ListUtil.list(new StatusTable.SummaryInfo(null,
-						  ColumnDescriptor.TYPE_STRING,
-						  numaus));
+        ListUtil.list(new StatusTable.SummaryInfo(null,
+                                                  ColumnDescriptor.TYPE_STRING,
+                                                  numaus));
     }
   }
 
@@ -495,20 +495,20 @@ public class ArchivalUnitStatus
     }
 
     public void populateTable(StatusTable table)
-	throws StatusService.NoSuchTableException {
+        throws StatusService.NoSuchTableException {
       String key = table.getKey();
       try {
-	ArchivalUnit au = theDaemon.getPluginManager().getAuFromId(key);
-	if (au == null) {
-	  throw new StatusService.NoSuchTableException("Unknown auid: " + key);
-	}
-	populateTable(table, au);
+        ArchivalUnit au = theDaemon.getPluginManager().getAuFromId(key);
+        if (au == null) {
+          throw new StatusService.NoSuchTableException("Unknown auid: " + key);
+        }
+        populateTable(table, au);
       } catch (StatusService.NoSuchTableException e) {
-	throw e;
+        throw e;
       } catch (Exception e) {
-	logger.warning("Error building table", e);
-	throw new StatusService.
-	  NoSuchTableException("Error building table for auid: " + key);
+        logger.warning("Error building table", e);
+        throw new StatusService.
+          NoSuchTableException("Error building table for auid: " + key);
       }
     }
 
@@ -552,9 +552,9 @@ public class ArchivalUnitStatus
       NodeState topNode = nodeMan.getNodeState(auCus);
       table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState(), topNode));
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
-	table.setColumnDescriptors(columnDescriptors);
-	table.setDefaultSortRules(sortRules);
-	table.setRows(getRows(table, au, repo, nodeMan));
+        table.setColumnDescriptors(columnDescriptors);
+        table.setDefaultSortRules(sortRules);
+        table.setRows(getRows(table, au, repo, nodeMan));
       }
     }
 
@@ -565,26 +565,26 @@ public class ArchivalUnitStatus
       String s = props.getProperty(name);
       if (StringUtil.isNullString(s)) return -1;
       try {
-	return Integer.parseInt(s);
+        return Integer.parseInt(s);
       } catch (Exception e) {
-	return -1;
+        return -1;
       }
     }
 
     private List getRows(StatusTable table, ArchivalUnit au,
-			 LockssRepository repo, NodeManager nodeMan) {
+                         LockssRepository repo, NodeManager nodeMan) {
       int startRow = Math.max(0, getIntProp(table, "skiprows"));
       int numRows = getIntProp(table, "numrows");
       if (numRows <= 0) {
-	numRows = defaultNumRows;
+        numRows = defaultNumRows;
       }
 
       CrawlSpec spec = au.getCrawlSpec();
       List startUrls;
       if (spec instanceof SpiderCrawlSpec) {
-	startUrls = ((SpiderCrawlSpec)spec).getStartingUrls();
+        startUrls = ((SpiderCrawlSpec)spec).getStartingUrls();
       } else {
-	startUrls = Collections.EMPTY_LIST;
+        startUrls = Collections.EMPTY_LIST;
       }
 
       List rowL = new ArrayList();
@@ -612,12 +612,12 @@ public class ArchivalUnitStatus
           CachedUrlSetSpec cuss = new RangeCachedUrlSetSpec(cusn.getUrl());
           cus = au.makeCachedUrlSet(cuss);
         }
-	String url = cus.getUrl();
+        String url = cus.getUrl();
         try {
-	  Map row = makeRow(au, repo.getNode(url),
-			    nodeMan.getNodeState(cus),
-			    startUrls.contains(url));
-	  row.put("sort", new Integer(curRow));
+          Map row = makeRow(au, repo.getNode(url),
+                            nodeMan.getNodeState(cus),
+                            startUrls.contains(url));
+          row.put("sort", new Integer(curRow));
           rowL.add(row);
         } catch (MalformedURLException ignore) { }
       }
@@ -630,24 +630,24 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			NodeState state, boolean isStartUrl) {
+                        NodeState state, boolean isStartUrl) {
       String url = node.getNodeUrl();
       boolean hasContent = node.hasContent();
       Object val = url;
       if (isStartUrl) {
-	val = new StatusTable.DisplayedValue(val).setBold(true);
+        val = new StatusTable.DisplayedValue(val).setBold(true);
       }
       HashMap rowMap = new HashMap();
       if (hasContent && isContentIsLink) {
-	Properties args = new Properties();
-	args.setProperty("auid", au.getAuId());
-	args.setProperty("url", url);
-	val =
-	  new StatusTable.SrvLink(val,
-				  AdminServletManager.SERVLET_DISPLAY_CONTENT,
-				  args);
+        Properties args = new Properties();
+        args.setProperty("auid", au.getAuId());
+        args.setProperty("url", url);
+        val =
+          new StatusTable.SrvLink(val,
+                                  AdminServletManager.SERVLET_DISPLAY_CONTENT,
+                                  args);
       } else {
-	val = url;
+        val = url;
       }
       rowMap.put("NodeName", val);
 
@@ -662,7 +662,7 @@ public class ArchivalUnitStatus
 //         status = "Active";
       }
       if (status != null) {
-	rowMap.put("NodeStatus", status);
+        rowMap.put("NodeStatus", status);
       }
       Object versionObj = DASH;
       Object sizeObj = DASH;
@@ -674,15 +674,15 @@ public class ArchivalUnitStatus
       rowMap.put("NodeVersion", versionObj);
       rowMap.put("NodeContentSize", sizeObj);
       if (!node.isLeaf()) {
-	rowMap.put("NodeChildCount",
-		   new OrderedObject(new Long(node.getChildCount())));
-	long treeSize = node.getTreeContentSize(null, false);
-	if (treeSize != -1) {
-	  rowMap.put("NodeTreeSize", new OrderedObject(new Long(treeSize)));
-	}
+        rowMap.put("NodeChildCount",
+                   new OrderedObject(new Long(node.getChildCount())));
+        long treeSize = node.getTreeContentSize(null, false);
+        if (treeSize != -1) {
+          rowMap.put("NodeTreeSize", new OrderedObject(new Long(treeSize)));
+        }
       } else {
-	rowMap.put("NodeChildCount", DASH);
-	rowMap.put("NodeTreeSize", DASH);
+        rowMap.put("NodeChildCount", DASH);
+        rowMap.put("NodeTreeSize", DASH);
       }
       return rowMap;
     }
@@ -690,7 +690,7 @@ public class ArchivalUnitStatus
     private Map makeOtherRowsLink(boolean isNext, int startRow, String auKey) {
       HashMap rowMap = new HashMap();
       String label = (isNext ? "Next" : "Previous") + " (" +
-	(startRow + 1) + "-" + (startRow + defaultNumRows) + ")";
+        (startRow + 1) + "-" + (startRow + defaultNumRows) + ")";
       StatusTable.Reference link =
           new StatusTable.Reference(label, AU_STATUS_TABLE_NAME, auKey);
       link.setProperty("skiprows", Integer.toString(startRow));
@@ -720,9 +720,9 @@ public class ArchivalUnitStatus
           }
         } else {
           stat = agreeStatus(state.getHighestV3Agreement());
-	  if (state.getHighestV3Agreement() != state.getV3Agreement()) {
-	    recentPollStat = agreeStatus(state.getV3Agreement());
-	  }
+          if (state.getHighestV3Agreement() != state.getV3Agreement()) {
+            recentPollStat = agreeStatus(state.getV3Agreement());
+          }
         }
       } else {
         stat = topNode.hasDamage() ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
@@ -732,101 +732,141 @@ public class ArchivalUnitStatus
       long du = AuUtil.getAuDiskUsage(au, false);
 
       StatusTable.SrvLink urlListLink =
-	new StatusTable.SrvLink("URL list",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "urls",
-						  "auid", au.getAuId()));
+        new StatusTable.SrvLink("URL list",
+                                AdminServletManager.SERVLET_LIST_OBJECTS,
+                                PropUtil.fromArgs("type", "urls",
+                                                  "auid", au.getAuId()));
+
+      StatusTable.SrvLink doiListLink =
+        new StatusTable.SrvLink("DOI list",
+                                AdminServletManager.SERVLET_LIST_OBJECTS,
+                                PropUtil.fromArgs("type", "dois",
+                                                  "auid", au.getAuId()));
+
+      StatusTable.SrvLink articleListLink =
+        new StatusTable.SrvLink("Article list",
+                                AdminServletManager.SERVLET_LIST_OBJECTS,
+                                PropUtil.fromArgs("type", "articles",
+                                                  "auid", au.getAuId()));
+
+      StatusTable.SrvLink fileListLink =
+        new StatusTable.SrvLink("File list",
+                                AdminServletManager.SERVLET_LIST_OBJECTS,
+                                PropUtil.fromArgs("type", "files",
+                                                  "auid", au.getAuId()));
 
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Volume",
-					  ColumnDescriptor.TYPE_STRING,
-					  au.getName()));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          au.getName()));
+      res.add(new StatusTable.SummaryInfo("Plugin",
+                                          ColumnDescriptor.TYPE_STRING,
+                                          au.getPlugin().getPluginName()));
+      String yearStr = AuUtil.getTitleAttribute(au, "year");
+      if (yearStr != null) {
+        res.add(new StatusTable.SummaryInfo("Year",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            yearStr));
+      }
       AuState.AccessType atype = state.getAccessType();
       if (atype != null) {
-	res.add(new StatusTable.SummaryInfo("Access Type",
-					    ColumnDescriptor.TYPE_STRING,
-					    atype.toString()));
+        res.add(new StatusTable.SummaryInfo("Access Type",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            atype.toString()));
       }
       if (contentSize != -1) {
-	res.add(new StatusTable.SummaryInfo("Content Size",
-					    ColumnDescriptor.TYPE_INT,
-					    new Long(contentSize)));
+        res.add(new StatusTable.SummaryInfo("Content Size",
+                                            ColumnDescriptor.TYPE_INT,
+                                            new Long(contentSize)));
       } else {
-	res.add(new StatusTable.SummaryInfo("Content Size",
-					    ColumnDescriptor.TYPE_STRING,
-					    "Awaiting recalc"));
+        res.add(new StatusTable.SummaryInfo("Content Size",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            "Awaiting recalc"));
       }
       if (du != -1) {
-	 res.add(new StatusTable.SummaryInfo("Disk Usage (MB)",
-					ColumnDescriptor.TYPE_FLOAT,
+         res.add(new StatusTable.SummaryInfo("Disk Usage (MB)",
+                                        ColumnDescriptor.TYPE_FLOAT,
                                         new Float(du / (float)(1024 * 1024))));
       } else {
-	res.add(new StatusTable.SummaryInfo("Disk Usage",
-					    ColumnDescriptor.TYPE_STRING,
-					    "Awaiting recalc"));
+        res.add(new StatusTable.SummaryInfo("Disk Usage",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            "Awaiting recalc"));
       }
       AuNodeImpl auNode = AuUtil.getAuRepoNode(au);
       String spec = LockssRepositoryImpl.getRepositorySpec(au);
       String repo = LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(spec), au);
 
       res.add(new StatusTable.SummaryInfo("Repository",
-					  ColumnDescriptor.TYPE_STRING,
-					  repo));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          repo));
       res.add(new StatusTable.SummaryInfo("Status",
-					  ColumnDescriptor.TYPE_STRING,
-					  stat));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          stat));
       if (recentPollStat != null) {
-	res.add(new StatusTable.SummaryInfo("Most recent poll",
-					    ColumnDescriptor.TYPE_STRING,
-					    recentPollStat));
+        res.add(new StatusTable.SummaryInfo("Most recent poll",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            recentPollStat));
       }
       String plat = au.getPlugin().getPublishingPlatform();
       if (plat != null) {
-	res.add(new StatusTable.SummaryInfo("Publishing Platform",
-					    ColumnDescriptor.TYPE_STRING,
-					    plat));
+        res.add(new StatusTable.SummaryInfo("Publishing Platform",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            plat));
       }
       res.add(new StatusTable.SummaryInfo("Available From Publisher",
-					  ColumnDescriptor.TYPE_STRING,
-					  (AuUtil.isPubDown(au)
-					   ? "No" : "Yes")));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          (AuUtil.isPubDown(au)
+                                           ? "No" : "Yes")));
 //             res.add(new StatusTable.SummaryInfo("Volume Complete",
-// 						ColumnDescriptor.TYPE_STRING,
-// 						(AuUtil.isClosed(au)
-// 						 ? "Yes" : "No")));
-// 	    res.add(new StatusTable.SummaryInfo("Polling Protocol Version",
-// 						ColumnDescriptor.TYPE_INT,
-// 						new Integer(AuUtil.getProtocolVersion(au))));
+//                                              ColumnDescriptor.TYPE_STRING,
+//                                              (AuUtil.isClosed(au)
+//                                               ? "Yes" : "No")));
+//          res.add(new StatusTable.SummaryInfo("Polling Protocol Version",
+//                                              ColumnDescriptor.TYPE_INT,
+//                                              new Integer(AuUtil.getProtocolVersion(au))));
 
       res.add(new StatusTable.SummaryInfo("Created",
-					  ColumnDescriptor.TYPE_DATE,
-					  new Long(state.getAuCreationTime())));
+                                          ColumnDescriptor.TYPE_DATE,
+                                          new Long(state.getAuCreationTime())));
+      CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+      if (window != null) {
+        String wmsg = window.toString();
+        if (wmsg.length() > 140) {
+          wmsg = "(not displayable)";
+        }
+        if (!window.canCrawl()) {
+          wmsg = "Currently closed: " + wmsg;
+        }
+        res.add(new StatusTable.SummaryInfo("Crawl Window",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            wmsg));
+      }
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
-					  ColumnDescriptor.TYPE_DATE,
-					  new Long(state.getLastCrawlTime())));
+                                          ColumnDescriptor.TYPE_DATE,
+                                          new Long(state.getLastCrawlTime())));
       if (lastCrawlAttempt > 0) {
-	res.add(new StatusTable.SummaryInfo("Last Crawl",
-					    ColumnDescriptor.TYPE_DATE,
-					    new Long(lastCrawlAttempt)));
-	res.add(new StatusTable.SummaryInfo("Last Crawl Result",
-					    ColumnDescriptor.TYPE_STRING,
-					    state.getLastCrawlResultMsg()));
+        res.add(new StatusTable.SummaryInfo("Last Crawl",
+                                            ColumnDescriptor.TYPE_DATE,
+                                            new Long(lastCrawlAttempt)));
+        res.add(new StatusTable.SummaryInfo("Last Crawl Result",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            state.getLastCrawlResultMsg()));
       }
       long lastPollStart = state.getLastPollStart();
       res.add(new StatusTable.SummaryInfo("Last Completed Poll",
-					  ColumnDescriptor.TYPE_DATE,
-					  new Long(state.getLastTopLevelPollTime())));
+                                          ColumnDescriptor.TYPE_DATE,
+                                          new Long(state.getLastTopLevelPollTime())));
       if (lastPollStart > 0) {
-	res.add(new StatusTable.SummaryInfo("Last Poll",
-					    ColumnDescriptor.TYPE_DATE,
-					    new Long(lastPollStart)));
-	String pollResult = state.getLastPollResultMsg();
-	if (!StringUtil.isNullString(pollResult)) {
-	  res.add(new StatusTable.SummaryInfo("Last Poll Result",
-					      ColumnDescriptor.TYPE_STRING,
-					      pollResult));
-	}
+        res.add(new StatusTable.SummaryInfo("Last Poll",
+                                            ColumnDescriptor.TYPE_DATE,
+                                            new Long(lastPollStart)));
+        String pollResult = state.getLastPollResultMsg();
+        if (!StringUtil.isNullString(pollResult)) {
+          res.add(new StatusTable.SummaryInfo("Last Poll Result",
+                                              ColumnDescriptor.TYPE_STRING,
+                                              pollResult));
+        }
       }
 
       PollManager pm = theDaemon.getPollManager();
@@ -834,33 +874,44 @@ public class ArchivalUnitStatus
       boolean isPolling = pm.isPollRunning(au);
       List lst = new ArrayList();
       if (isCrawling) {
-	lst.add(makeCrawlRef("Crawling", au));
+        lst.add(makeCrawlRef("Crawling", au));
       }
       if (isPolling) {
-	lst.add(makePollRef("Polling", au));
+        lst.add(makePollRef("Polling", au));
       }
       if (!lst.isEmpty()) {
-	res.add(new StatusTable.SummaryInfo("Current Activity",
-					    ColumnDescriptor.TYPE_STRING,
-					    lst));
+        res.add(new StatusTable.SummaryInfo("Current Activity",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            lst));
       }
       if (theDaemon.isDetectClockssSubscription()) {
-	String subStatus =
-	  AuUtil.getAuState(au).getClockssSubscriptionStatusString();
-	res.add(clockssPos,
-		new StatusTable.SummaryInfo("Subscribed",
-					    ColumnDescriptor.TYPE_STRING,
-					    subStatus));
+        String subStatus =
+          AuUtil.getAuState(au).getClockssSubscriptionStatusString();
+        res.add(clockssPos,
+                new StatusTable.SummaryInfo("Subscribed",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            subStatus));
       }
       Object peers = PeerRepair.makeAuRef("Repair candidates",
-					      au.getAuId());
+                                              au.getAuId());
       res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  peers));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          peers));
 
       res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  urlListLink));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          urlListLink));
+      if (!(au.getArticleIterator() == CollectionUtil.EMPTY_ITERATOR)) {
+        res.add(new StatusTable.SummaryInfo(null,
+                                            ColumnDescriptor.TYPE_STRING,
+                                            doiListLink));
+        res.add(new StatusTable.SummaryInfo(null,
+                                            ColumnDescriptor.TYPE_STRING,
+                                            articleListLink));
+      }
+      res.add(new StatusTable.SummaryInfo(null,
+                                          ColumnDescriptor.TYPE_STRING,
+                                          fileListLink));
       return res;
     }
 
@@ -868,7 +919,7 @@ public class ArchivalUnitStatus
     public static StatusTable.Reference makeAuRef(Object value,
                                                   String key) {
       StatusTable.Reference ref =
-	new StatusTable.Reference(value, AU_STATUS_TABLE_NAME, key);
+        new StatusTable.Reference(value, AU_STATUS_TABLE_NAME, key);
 //       ref.setProperty("numrows", Integer.toString(defaultNumRows));
       return ref;
     }
@@ -892,34 +943,34 @@ public class ArchivalUnitStatus
       table.setTitle("Peers not holding " + au.getName());
       DatedPeerIdSet noAuSet = theDaemon.getPollManager().getNoAuPeerSet(au);
       synchronized (noAuSet) {
-	try {
-	  noAuSet.load();
-	  table.setSummaryInfo(getSummaryInfo(au, noAuSet));
-	  table.setColumnDescriptors(columnDescriptors);
-	  table.setRows(getRows(table, au, noAuSet));
-	} catch (IOException e) {
-	  String msg = "Couldn't load NoAuSet";
-	  logger.warning(msg, e);
-	  throw new StatusService.NoSuchTableException(msg, e);
-	} finally {
-	  noAuSet.release();
-	}
+        try {
+          noAuSet.load();
+          table.setSummaryInfo(getSummaryInfo(au, noAuSet));
+          table.setColumnDescriptors(columnDescriptors);
+          table.setRows(getRows(table, au, noAuSet));
+        } catch (IOException e) {
+          String msg = "Couldn't load NoAuSet";
+          logger.warning(msg, e);
+          throw new StatusService.NoSuchTableException(msg, e);
+        } finally {
+          noAuSet.release();
+        }
       }
     }
 
 
     private List getRows(StatusTable table, ArchivalUnit au,
-			 DatedPeerIdSet noAuSet) {
+                         DatedPeerIdSet noAuSet) {
       List rows = new ArrayList();
       try {
-	logger.info("noAuSet.size(): " + noAuSet.size());
+        logger.info("noAuSet.size(): " + noAuSet.size());
       } catch (IOException e) {
-	logger.error("noAuSet.size()", e);
+        logger.error("noAuSet.size()", e);
       }
       for (PeerIdentity pid : noAuSet) {
-	logger.info("pid: " + pid);
-	Map row = new HashMap();
-	row.put("Peer", pid.getIdString());
+        logger.info("pid: " + pid);
+        Map row = new HashMap();
+        row.put("Peer", pid.getIdString());
         rows.add(row);
       }
       return rows;
@@ -927,11 +978,11 @@ public class ArchivalUnitStatus
     private List getSummaryInfo(ArchivalUnit au, DatedPeerIdSet noAuSet) {
       List res = new ArrayList();
       try {
-	res.add(new StatusTable.SummaryInfo("Last cleared",
-					    ColumnDescriptor.TYPE_DATE,
-					    noAuSet.getDate()));
+        res.add(new StatusTable.SummaryInfo("Last cleared",
+                                            ColumnDescriptor.TYPE_DATE,
+                                            noAuSet.getDate()));
       } catch (IOException e) {
-	logger.warning("Couldn't get date", e);
+        logger.warning("Couldn't get date", e);
       }
       return res;
     }
@@ -951,10 +1002,10 @@ public class ArchivalUnitStatus
       PeerIdentity peer = stats.peer;
       Object id = peer.getIdString();
       if (peer.isLocalIdentity()) {
-	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(id);
-	val.setBold(true);
-	id = val;
+        StatusTable.DisplayedValue val =
+          new StatusTable.DisplayedValue(id);
+        val.setBold(true);
+        id = val;
       }
       rowMap.put("Box", id);
       return rowMap;
@@ -975,16 +1026,16 @@ public class ArchivalUnitStatus
       float lastAgreementHint = -1.0f;
 
       CacheStats(PeerIdentity peer) {
-	this.peer = peer;
+        this.peer = peer;
       }
       boolean isLastAgree() {
-	return (lastAgreeTime != 0  &&
-		(lastDisagreeTime == 0 || lastAgreeTime >= lastDisagreeTime));
+        return (lastAgreeTime != 0  &&
+                (lastDisagreeTime == 0 || lastAgreeTime >= lastDisagreeTime));
       }
 
       boolean isV3Agree() {
-	PollManager pollmgr = theDaemon.getPollManager();
-	return highestAgreement >= pollmgr.getMinPercentForRepair();
+        PollManager pollmgr = theDaemon.getPollManager();
+        return highestAgreement >= pollmgr.getMinPercentForRepair();
       }
     }
   }
@@ -1020,24 +1071,24 @@ public class ArchivalUnitStatus
       int totalPeers = 0;
       int totalAgreement = 0;
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
-	table.setColumnDescriptors(columnDescriptors);
-	table.setDefaultSortRules(sortRules);
-	Map statsMap = buildCacheStats(au, nodeMan);
-	List rowL = new ArrayList();
-	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
-	  Map.Entry entry = (Map.Entry)iter.next();
-	  PeerIdentity peer = (PeerIdentity)entry.getKey();
-	  CacheStats stats = (CacheStats)entry.getValue();
-	  if (! peer.isLocalIdentity()) {
-	    totalPeers++;
-	    if (stats.isLastAgree()) {
-	      totalAgreement++;
-	    }
-	  }
-	  Map row = makeRow(stats);
-	  rowL.add(row);
-	}
-	table.setRows(rowL);
+        table.setColumnDescriptors(columnDescriptors);
+        table.setDefaultSortRules(sortRules);
+        Map statsMap = buildCacheStats(au, nodeMan);
+        List rowL = new ArrayList();
+        for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
+          Map.Entry entry = (Map.Entry)iter.next();
+          PeerIdentity peer = (PeerIdentity)entry.getKey();
+          CacheStats stats = (CacheStats)entry.getValue();
+          if (! peer.isLocalIdentity()) {
+            totalPeers++;
+            if (stats.isLastAgree()) {
+              totalAgreement++;
+            }
+          }
+          Map row = makeRow(stats);
+          rowL.add(row);
+        }
+        table.setRows(rowL);
       }
       table.setSummaryInfo(getSummaryInfo(au, totalPeers, totalAgreement));
     }
@@ -1046,33 +1097,33 @@ public class ArchivalUnitStatus
       Map statsMap = new HashMap();
       NodeState node = nodeMan.getNodeState(au.getAuCachedUrlSet());
       for (Iterator history_it = node.getPollHistories();
-	   history_it.hasNext(); ) {
-	PollHistory history = (PollHistory)history_it.next();
-	long histTime = history.getStartTime();
-	for (Iterator votes_it = history.getVotes(); votes_it.hasNext(); ) {
-	  Vote vote = (Vote)votes_it.next();
-	  PeerIdentity peer = vote.getVoterIdentity();
-	  CacheStats stats = (CacheStats)statsMap.get(peer);
-	  if (stats == null) {
-	    stats = new CacheStats(peer);
-	    statsMap.put(peer, stats);
-	  }
-	  stats.totalPolls++;
-	  if (vote.isAgreeVote()) {
-	    stats.agreePolls++;
-	    if (stats.lastAgree == null ||
-		histTime > stats.lastAgreeTime) {
-	      stats.lastAgree = vote;
-	      stats.lastAgreeTime = histTime;
-	    }
-	  } else {
-	    if (stats.lastDisagree == null ||
-		histTime > stats.lastDisagreeTime) {
-	      stats.lastDisagree = vote;
-	      stats.lastDisagreeTime = histTime;
-	    }
-	  }
-	}
+           history_it.hasNext(); ) {
+        PollHistory history = (PollHistory)history_it.next();
+        long histTime = history.getStartTime();
+        for (Iterator votes_it = history.getVotes(); votes_it.hasNext(); ) {
+          Vote vote = (Vote)votes_it.next();
+          PeerIdentity peer = vote.getVoterIdentity();
+          CacheStats stats = (CacheStats)statsMap.get(peer);
+          if (stats == null) {
+            stats = new CacheStats(peer);
+            statsMap.put(peer, stats);
+          }
+          stats.totalPolls++;
+          if (vote.isAgreeVote()) {
+            stats.agreePolls++;
+            if (stats.lastAgree == null ||
+                histTime > stats.lastAgreeTime) {
+              stats.lastAgree = vote;
+              stats.lastAgreeTime = histTime;
+            }
+          } else {
+            if (stats.lastDisagree == null ||
+                histTime > stats.lastDisagreeTime) {
+              stats.lastDisagree = vote;
+              stats.lastDisagreeTime = histTime;
+            }
+          }
+        }
       }
       return statsMap;
     }
@@ -1080,7 +1131,7 @@ public class ArchivalUnitStatus
     protected Map makeRow(CacheStats stats) {
       Map rowMap = super.makeRow(stats);
       rowMap.put("Last",
-		 stats.isLastAgree() ? "Agree" : "Disagree");
+                 stats.isLastAgree() ? "Agree" : "Disagree");
       rowMap.put("Polls", new Long(stats.totalPolls));
       rowMap.put("Agree", new Long(stats.agreePolls));
       rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
@@ -1089,13 +1140,13 @@ public class ArchivalUnitStatus
     }
 
     protected List getSummaryInfo(ArchivalUnit au,
-				  int totalPeers, int totalAgreement) {
+                                  int totalPeers, int totalAgreement) {
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Peers voting on AU",
-					ColumnDescriptor.TYPE_INT,
+                                        ColumnDescriptor.TYPE_INT,
                                         new Integer(totalPeers)),
             new StatusTable.SummaryInfo("Agreeing peers",
-					ColumnDescriptor.TYPE_INT,
+                                        ColumnDescriptor.TYPE_INT,
                                         new Integer(totalAgreement))
             );
       return summaryList;
@@ -1120,12 +1171,12 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("LastPercentAgreement", "Last Agreement",
                            ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("HighestPercentAgreementHint",
-			   "Highest Agreement Hint",
+                           "Highest Agreement Hint",
                            ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("LastPercentAgreementHint", "Last Agreement Hint",
                            ColumnDescriptor.TYPE_PERCENT),
       new ColumnDescriptor("LastAgree",
-			   "Last Consensus",
+                           "Last Consensus",
                            ColumnDescriptor.TYPE_DATE)
       );
 
@@ -1151,21 +1202,21 @@ public class ArchivalUnitStatus
       table.setTitleFootnote(FOOT_TITLE);
       int totalPeers = 0;
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
-	table.setColumnDescriptors(columnDescriptors);
-	table.setDefaultSortRules(sortRules);
-	Map statsMap = buildCacheStats(au, idMgr);
-	List rowL = new ArrayList();
-	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
-	  Map.Entry entry = (Map.Entry)iter.next();
-	  PeerIdentity peer = (PeerIdentity)entry.getKey();
-	  CacheStats stats = (CacheStats)entry.getValue();
-	  if (! peer.isLocalIdentity()) {
-	    totalPeers++;
-	  }
-	  Map row = makeRow(stats);
-	  rowL.add(row);
-	}
-	table.setRows(rowL);
+        table.setColumnDescriptors(columnDescriptors);
+        table.setDefaultSortRules(sortRules);
+        Map statsMap = buildCacheStats(au, idMgr);
+        List rowL = new ArrayList();
+        for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
+          Map.Entry entry = (Map.Entry)iter.next();
+          PeerIdentity peer = (PeerIdentity)entry.getKey();
+          CacheStats stats = (CacheStats)entry.getValue();
+          if (! peer.isLocalIdentity()) {
+            totalPeers++;
+          }
+          Map row = makeRow(stats);
+          rowL.add(row);
+        }
+        table.setRows(rowL);
       }
       table.setSummaryInfo(getSummaryInfo(au, totalPeers));
     }
@@ -1173,26 +1224,26 @@ public class ArchivalUnitStatus
     public Map buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
       Map statsMap = new HashMap();
       for (Iterator iter = idMgr.getIdentityAgreements(au).iterator();
-	   iter.hasNext(); ) {
-	IdentityManager.IdentityAgreement ida =
-	  (IdentityManager.IdentityAgreement)iter.next();
-	try {
-	  PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
-	  if (ida.getHighestPercentAgreement() >= 0.0 ||
-	      ida.getHighestPercentAgreementHint() >= 0.0) {
-	    CacheStats stats = new CacheStats(pid);
-	    statsMap.put(pid, stats);
-	    stats.lastAgreeTime = ida.getLastAgree();
-	    stats.lastDisagreeTime = ida.getLastDisagree();
-	    stats.highestAgreement = ida.getHighestPercentAgreement();
-	    stats.lastAgreement = ida.getPercentAgreement();
-	    stats.highestAgreementHint = ida.getHighestPercentAgreementHint();
-	    stats.lastAgreementHint = ida.getPercentAgreementHint();
-	  }
-	} catch (IdentityManager.MalformedIdentityKeyException e) {
-	  logger.warning("Malformed id key in IdentityAgreement", e);
-	  continue;
-	}
+           iter.hasNext(); ) {
+        IdentityManager.IdentityAgreement ida =
+          (IdentityManager.IdentityAgreement)iter.next();
+        try {
+          PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
+          if (ida.getHighestPercentAgreement() >= 0.0 ||
+              ida.getHighestPercentAgreementHint() >= 0.0) {
+            CacheStats stats = new CacheStats(pid);
+            statsMap.put(pid, stats);
+            stats.lastAgreeTime = ida.getLastAgree();
+            stats.lastDisagreeTime = ida.getLastDisagree();
+            stats.highestAgreement = ida.getHighestPercentAgreement();
+            stats.lastAgreement = ida.getPercentAgreement();
+            stats.highestAgreementHint = ida.getHighestPercentAgreementHint();
+            stats.lastAgreementHint = ida.getPercentAgreementHint();
+          }
+        } catch (IdentityManager.MalformedIdentityKeyException e) {
+          logger.warning("Malformed id key in IdentityAgreement", e);
+          continue;
+        }
       }
       return statsMap;
     }
@@ -1201,16 +1252,16 @@ public class ArchivalUnitStatus
       Map rowMap = super.makeRow(stats);
       rowMap.put("Last", stats.isLastAgree() ? "Yes" : "No");
       if (stats.highestAgreement >= 0.0f) {
-	rowMap.put("LastPercentAgreement",
-		   new Float(stats.lastAgreement));
-	rowMap.put("HighestPercentAgreement",
-		   new Float(stats.highestAgreement));
+        rowMap.put("LastPercentAgreement",
+                   new Float(stats.lastAgreement));
+        rowMap.put("HighestPercentAgreement",
+                   new Float(stats.highestAgreement));
       }
       if (stats.highestAgreementHint >= 0.0f) {
-	rowMap.put("LastPercentAgreementHint",
-		   new Float(stats.lastAgreementHint));
-	rowMap.put("HighestPercentAgreementHint",
-		   new Float(stats.highestAgreementHint));
+        rowMap.put("LastPercentAgreementHint",
+                   new Float(stats.lastAgreementHint));
+        rowMap.put("HighestPercentAgreementHint",
+                   new Float(stats.highestAgreementHint));
       }
       rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
       rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
@@ -1218,19 +1269,19 @@ public class ArchivalUnitStatus
     }
 
     protected List getSummaryInfo(ArchivalUnit au,
-				  int totalPeers) {
+                                  int totalPeers) {
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Peers holding AU",
-					ColumnDescriptor.TYPE_INT,
+                                        ColumnDescriptor.TYPE_INT,
                                         new Integer(totalPeers)));
       return summaryList;
     }
 
     // utility method for making a Reference
     public static StatusTable.Reference makeAuRef(Object value,
-						  String key) {
+                                                  String key) {
       return new StatusTable.Reference(value, PEERS_REPAIR_TABLE_NAME,
-				       key);
+                                       key);
     }
   }
 
@@ -1252,43 +1303,43 @@ public class ArchivalUnitStatus
       int neverCrawled = 0;
       int needsRecrawl = 0;
       for (ArchivalUnit au : pluginMgr.getAllAus()) {
-	if (pluginMgr.isInternalAu(au)) {
-	  internal++;
-	  if (!isDebug) {
-	    continue;
-	  }
-	}
-	total++;
-	AuState aus = AuUtil.getAuState(au);
-	if (AuUtil.isPubDown(au)) {
-	} else {
-	  if (aus.getLastCrawlTime() <= 0) {
-	    neverCrawled++;
-	  } else if (au.shouldCrawlForNewContent(aus)) {
-	    needsRecrawl++;
-	  }
-	}
+        if (pluginMgr.isInternalAu(au)) {
+          internal++;
+          if (!isDebug) {
+            continue;
+          }
+        }
+        total++;
+        AuState aus = AuUtil.getAuState(au);
+        if (AuUtil.isPubDown(au)) {
+        } else {
+          if (aus.getLastCrawlTime() <= 0) {
+            neverCrawled++;
+          } else if (au.shouldCrawlForNewContent(aus)) {
+            needsRecrawl++;
+          }
+        }
       }
       StringBuilder sb = new StringBuilder();
       sb.append(StringUtil.numberOfUnits(total, "Archival Unit",
-					 "Archival Units"));
+                                         "Archival Units"));
       if (internal != 0 && isDebug) {
-	sb.append(" (");
-	sb.append(internal);
-	sb.append(" internal)");
+        sb.append(" (");
+        sb.append(internal);
+        sb.append(" internal)");
       }
       if (neverCrawled != 0) {
-	sb.append(", ");
-	sb.append(neverCrawled);
-	sb.append(" not collected");
+        sb.append(", ");
+        sb.append(neverCrawled);
+        sb.append(" not collected");
       }
       if (includeNeedsRecrawl && needsRecrawl != 0) {
-	sb.append(", ");
-	sb.append(StringUtil.numberOfUnits(needsRecrawl,
-					   " needs recrawl", " need recrawl"));
+        sb.append(", ");
+        sb.append(StringUtil.numberOfUnits(needsRecrawl,
+                                           " needs recrawl", " need recrawl"));
       }
       return new StatusTable.Reference(sb.toString(),
-				       SERVICE_STATUS_TABLE_NAME);
+                                       SERVICE_STATUS_TABLE_NAME);
     }
   }
 
@@ -1299,22 +1350,22 @@ public class ArchivalUnitStatus
 
   static OrderedObject agreeStatus(double agreement) {
     return new OrderedObject(doubleToPercent(agreement) + "% Agreement",
-			     STATUS_ORDER_AGREE_BASE - agreement);
+                             STATUS_ORDER_AGREE_BASE - agreement);
   }
 
 
   public static StatusTable.Reference makeCrawlRef(Object value,
-						   ArchivalUnit au) {
+                                                   ArchivalUnit au) {
     return new StatusTable.Reference(value,
-				     CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
-				     au.getAuId());
+                                     CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
+                                     au.getAuId());
   }
 
   public static StatusTable.Reference makePollRef(Object value,
-						   ArchivalUnit au) {
+                                                   ArchivalUnit au) {
     return new StatusTable.Reference(value,
-				     V3PollStatus.POLLER_STATUS_TABLE_NAME,
-				     au.getAuId());
+                                     V3PollStatus.POLLER_STATUS_TABLE_NAME,
+                                     au.getAuId());
   }
 
 }

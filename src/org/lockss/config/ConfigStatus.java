@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigStatus.java,v 1.2 2008-10-24 07:08:38 tlipkis Exp $
+ * $Id: ConfigStatus.java,v 1.2.8.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,11 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 
   final static String CONFIG_STATUS_TABLE = "ConfigStatus";
 
-  final static String PARAM_AU_TREE_DOT = PluginManager.PARAM_AU_TREE + ".";
+  public static final String PREFIX = Configuration.PREFIX + "configStatus.";
+
+  /** Truncate displayed values to this length */
+  static final String PARAM_MAX_DISPLAY_VAL_LEN = PREFIX + "maxDisplayValLen";
+  static final int DEFAULT_MAX_DISPLAY_VAL_LEN = 1000;
 
   public ConfigStatus() {
   }
@@ -65,10 +69,10 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("name", "Name",
-					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("value", "Value",
-					 ColumnDescriptor.TYPE_STRING)
-		    );
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("value", "Value",
+                                         ColumnDescriptor.TYPE_STRING)
+                    );
 
     public String getDisplayName() {
       return "Configuration";
@@ -87,23 +91,21 @@ public class ConfigStatus extends BaseLockssDaemonManager {
       List rows = new ArrayList();
 
       Configuration config = ConfigManager.getCurrentConfig();
+      int maxLen = config.getInt(PARAM_MAX_DISPLAY_VAL_LEN,
+                                 DEFAULT_MAX_DISPLAY_VAL_LEN);
       for (Iterator iter = config.keySet().iterator(); iter.hasNext(); ) {
-	String key = (String)iter.next();
-	if (!excludeKey(key)) {
-	  Map row = new HashMap();
-	  row.put("name", key);
-	  row.put("value", config.get(key));
-	  rows.add(row);
-	}
+        String key = (String)iter.next();
+        if (ConfigManager.shouldParamBeLogged(key)) {
+          Map row = new HashMap();
+          row.put("name", key);
+          row.put("value",
+                  StringUtil.elideMiddleToMaxLen(config.get(key), maxLen));
+          rows.add(row);
+        }
       }
       return rows;
     }
-
-    boolean excludeKey(String key) {
-      return key.startsWith(ConfigManager.PARAM_TITLE_DB)
-	|| key.startsWith(PARAM_AU_TREE_DOT)
-	|| key.indexOf(".password") >= 0;
-    }
+    
   }
 }
 

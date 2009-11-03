@@ -16,14 +16,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0883-1351
   
-      au < do_not_process ; PALAIOS Volume 15 ; 15 >
-      au < do_not_process ; PALAIOS Volume 16 ; 16 >
-      au < do_not_process ; PALAIOS Volume 17 ; 17 >
-      au < do_not_process ; PALAIOS Volume 18 ; 18 >
-      au < do_not_process ; PALAIOS Volume 19 ; 19 >
+      au < doNotProcess ; PALAIOS Volume 15 ; 15 >
+      au < doNotProcess ; PALAIOS Volume 16 ; 16 >
+      au < doNotProcess ; PALAIOS Volume 17 ; 17 >
+      au < doNotProcess ; PALAIOS Volume 18 ; 18 >
+      au < doNotProcess ; PALAIOS Volume 19 ; 19 >
       au < superseded ; PALAIOS Volume 20 ; 20 >
-      au < do_not_process ; PALAIOS Volume 21 ; 21 >
-      au < do_not_process ; PALAIOS Volume 22 ; 22 >
+      au < doNotProcess ; PALAIOS Volume 21 ; 21 >
+      au < doNotProcess ; PALAIOS Volume 22 ; 22 >
     }
 
     {

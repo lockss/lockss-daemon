@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.2 2008-08-26 22:33:14 tlipkis Exp $
+ * $Id: PluginUtil.java,v 1.2.12.1 2009-11-03 23:44:55 edwardsb1 Exp $
  */
 
 /*
@@ -54,23 +54,32 @@ public class PluginUtil {
 
   public static void main(String argv[]) throws Exception {
     List<String> names = new ArrayList();
+    List<String> attributes = new ArrayList();
     String outputFile = null;
+    String configFile = null;
+    Configuration auConfig = null;
 
     if (argv.length == 0) {
       usage();
     }
     try {
       for (int ix = 0; ix < argv.length; ix++) {
-	String arg = argv[ix];
-	if (arg.startsWith("-o")) {
-	  outputFile = argv[++ix];
-	} else if (arg.startsWith("-q")) {
-	  quiet = true;
-	} else if (arg.startsWith("-v")) {
-	  verbose = true;
-	} else {
-	  names.add(arg);
-	}
+        String arg = argv[ix];
+        if (arg.startsWith("-o")) {
+          outputFile = argv[++ix];
+        } else if (arg.startsWith("-q")) {
+          quiet = true;
+        } else if (arg.startsWith("-v")) {
+          verbose = true;
+        } else if (arg.startsWith("-c")) {
+          configFile = argv[++ix];
+        } else if (arg.startsWith("-a")) {
+          attributes.add(argv[++ix]);
+        } else if (arg.startsWith("-")) {
+          usage();
+        } else {
+          names.add(arg);
+        }
       }
     } catch (ArrayIndexOutOfBoundsException e) {
       usage();
@@ -86,29 +95,67 @@ public class PluginUtil {
       pout = new PrintStream(fos);
     }
 
+    if (configFile != null) {
+      auConfig = ConfigurationUtil.fromFile(configFile);
+    }
+
     for (String pname : names) {
-      dump(pname);
+      Plugin plug;
+      File file = new File(pname);
+      if (file.exists() && file.isFile()) {
+        plug = load(file);
+      } else {
+        plug = load(pname);
+      }
+      if (plug != null) {
+        if (!quiet) {
+          pout.println(pname + " loaded");
+        }
+        if (verbose) {
+          dump(plug);
+        }
+        if (auConfig != null) {
+          ArchivalUnit au = plug.createAu(auConfig);
+          if (!attributes.isEmpty()) {
+            for (String attr : attributes) {
+              if ("start-url".equals(attr)) {
+                CrawlSpec spec = au.getCrawlSpec();
+                if (!(spec instanceof SpiderCrawlSpec)) {
+                  System.err.println("Error: plugin pname doesn't have a start URL");
+                  continue;
+                }
+                SpiderCrawlSpec sspec = (SpiderCrawlSpec)spec;
+                pout.println("Start urls: " + sspec.getStartingUrls());
+                
+              }
+            }
+          }
+        }
+      }
     }
     if (err) {
       System.exit(1);
     }
   }
 
-  static void dump(String pname) {
+  static Plugin load(File file) {
+    try {
+      DefinablePlugin plug = new DefinablePlugin();
+      plug.initPlugin(daemon, file);
+      return plug;
+    } catch (Exception e) {
+      System.err.println("Error: can't load plugin: " + file + ": "
+                         + e.toString());
+    }
+    err = true;
+    return null;
+  }
+
+  static Plugin load(String pname) {
     String key = PluginManager.pluginKeyFromId(pname);
     try {
-      pmgr.loadPlugin(key, null);
-      Plugin plug = pmgr.getPlugin(key);
-      if (!quiet) {
-	pout.println(pname + " OK");
-	if (verbose) {
-	  if (plug instanceof DefinablePlugin) {
-	    DefinablePlugin dplug = (DefinablePlugin)plug;
-	    pout.println(dplug.getDefinitionMap());
-	  }
-	}
-      }
-      return;
+      PluginManager.PluginInfo pi = pmgr.loadPlugin(key, null);
+      return pi.getPlugin();
     } catch (PluginException.PluginNotFound e) {
       System.err.println("Error: plugin not found: " + pname);
     } catch (PluginException.LinkageError e) {
@@ -117,15 +164,32 @@ public class PluginUtil {
       System.err.println("Error: incompatible Plugin: " + e.getMessage());
     } catch (Exception e) {
       System.err.println("Error: can't load plugin: " + pname + ": "
-			 + e.toString());
+                         + e.toString());
     }
     err = true;
+    return null;
+  }
+
+  static void dump(Plugin plug) {
+    if (plug instanceof DefinablePlugin) {
+      DefinablePlugin dplug = (DefinablePlugin)plug;
+      pout.println(dplug.getDefinitionMap());
+    }
   }
 
   static void usage() {
-    System.err.println("Usage: PluginUtil [-q] [-o outfile] <plugin-names ...>");
-    System.err.println("     -o outfile   write to outfile, else stdout");
-    System.err.println("     -q           verbose (print plugin def)");
+    PrintStream p = System.err;
+    p.println("Usage: PluginUtil [-q] [-o outfile] <plugin-names ...>");
+    p.println("     -o outfile   write to outfile, else stdout");
+    p.println("     -q           quiet");
+    p.println("     -v           verbose (print plugin def)");
+    p.println("     -c <file>    load AU config from file");
+    p.println("     -a <attr>    print AU attribute");
+    p.println("                    start-url  list of start URLs");
+    p.println();
+    p.println("  Plugin names may be filenames or fully-qualified names to be");
+    p.println("  loaded from the classpath");
+
     System.exit(1);
   }
 

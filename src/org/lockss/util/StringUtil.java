@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.81.12.1 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: StringUtil.java,v 1.81.12.2 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -477,6 +477,14 @@ public class StringUtil {
     return str.substring(0, pos);
   }
 
+  public static String elideMiddleToMaxLen(String s, int len) {
+    if (s == null || s.length() <= len) {
+      return s;
+    }
+    int split = len / 2;
+    return s.substring(0, split) + "..." + s.substring(s.length() - split);
+  }
+
   /** Like indexOf except is case-independent */
   public static int indexOfIgnoreCase(String str, String substr) {
     return indexOfIgnoreCase(str, substr, 0);
@@ -507,6 +515,19 @@ public class StringUtil {
   /** Like startsWith except is case-independent */
   public static boolean startsWithIgnoreCase(String str, String start) {
     return str.regionMatches(true, 0, start, 0, start.length());
+  }
+
+  /** Return true if the string has any consecutive repeated characters */
+  public static boolean hasRepeatedChar(String str) {
+    if (str.length() < 2) {
+      return false;
+    }
+    for (int ix = str.length() - 2; ix >= 0; ix--) {
+      if (str.charAt(ix) == str.charAt(ix+1)) {
+	return true;
+      }
+    }
+    return false;
   }
 
   /** Remove the substring beginning with the final occurrence of the
@@ -686,6 +707,16 @@ public class StringUtil {
   /** Reads in the entire contents of a file into a string */
   public static String fromFile(File file) throws IOException {
     return fromReader(new FileReader(file));
+  }
+
+  /** Write a string to a file */
+  public static void toFile(File file, String s) throws IOException {
+    OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
+    try {
+      StringUtil.toOutputStream(os, s);
+    } finally {
+      IOUtil.safeClose(os);
+    }
   }
 
   /* Write the string to the OutputStream */
@@ -970,6 +1001,57 @@ public class StringUtil {
     return sb.toString();
   }
 
+  /** Generate a more verbose string representing the time interval.
+   * @param millis the time interval in milliseconds
+   * @return a string in the form "<d> days, <h> hours, <m> minutes, <s>
+   * seconds"
+   */
+  public static String timeIntervalToLongString(long millis) {
+    StringBuilder sb = new StringBuilder();
+    long temp = 0;
+    if (millis < 0) {
+      sb.append("-");
+      millis = -millis;
+    }
+    if (millis >= Constants.SECOND) {
+      temp = millis / Constants.DAY;
+      if (temp > 0) {
+	sb.append(numberOfUnits(temp, "day"));
+	millis -= temp * Constants.DAY;
+	if (millis >= Constants.MINUTE) {
+	  sb.append(", ");
+	}
+      }
+      temp = millis / Constants.HOUR;
+      if (temp > 0) {
+	sb.append(numberOfUnits(temp, "hour"));
+	millis -= temp * Constants.HOUR;
+	if (millis >= Constants.MINUTE) {
+	  sb.append(", ");
+	}
+      }
+      temp = millis / Constants.MINUTE;
+      if (temp > 0) {
+	sb.append(numberOfUnits(temp, "minute"));
+	millis -= temp * Constants.MINUTE;
+
+	if(millis >= Constants.SECOND) {
+	  sb.append(", ");
+	}
+      }
+      temp = millis / Constants.SECOND;
+      if (temp > 0) {
+	sb.append(numberOfUnits(temp, "second"));
+      }
+      return sb.toString();
+    }
+    else {
+      return "0 seconds";
+    }
+  }
+
+
+
   private static final NumberFormat fmt_1dec = new DecimalFormat("0.0");
   private static final NumberFormat fmt_0dec = new DecimalFormat("0");
 
@@ -1157,7 +1239,9 @@ public class StringUtil {
     for (int ix=0; ix<(str.length()); ix++) {
       if (Character.toLowerCase(str.charAt(ix))
 	  != Character.toLowerCase(buffer[ix])) {
-	if (log.isDebug3()) {log.debug3(str.charAt(ix)+" didn't match "+ buffer[ix]);}
+	if (log.isDebug3()) {
+	  log.debug3(str.charAt(ix)+" didn't match "+ buffer[ix]);
+	}
 	return false;
       }
     }
@@ -1166,10 +1250,18 @@ public class StringUtil {
 
   /** Return a string like "0 units", "1 unit", "n units"
    * @param number the number of whatever units
+   * @param unit Single form of unit, plural formed by adding "s"
+   */
+  public static String numberOfUnits(long number, String unit) {
+    return numberOfUnits(number, unit, unit + "s");
+  }
+
+  /** Return a string like "0 units", "1 unit", "n units"
+   * @param number the number of whatever units
    * @param unit Single form of unit
    * @param pluralUnit plural form of unit
    */
-  public static String numberOfUnits(int number, String unit,
+  public static String numberOfUnits(long number, String unit,
 				     String pluralUnit) {
     if (number == 1) {
       return number + " " + unit;

@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.10 2008-11-02 21:15:24 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.10.8.1 2009-11-03 23:44:52 edwardsb1 Exp $
  *
 
 Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.*;
 import org.apache.oro.text.regex.*;
 
 /** Utilities for Files
@@ -79,34 +79,34 @@ public class FileUtil {
   public static boolean isLegalPath(String path) {
     int len = path.length();
     int depth = 0;
-    int index = -1;			// Points to char before start of next
-					// path component.  (Normally a slash)
+    int index = -1;                     // Points to char before start of next
+                                        // path component.  (Normally a slash)
     while (index<len-2) {
-      depth++;				// assume it's a real path component
+      depth++;                          // assume it's a real path component
 
       // index+1 points at start of path component.  Check first char
       switch (path.charAt(index+1)) {
       case '/':
-	depth--;			// empty path component ("//") doesn't
-	break;				// count. (Equivalent to single slash)
+        depth--;                        // empty path component ("//") doesn't
+        break;                          // count. (Equivalent to single slash)
       case '.':
-	// component starts with "."
-	switch (path.charAt(index+2)) {
-	case '/':
-	  depth--;			// './' doesn't count
-	  break;
-	case '.':
-	  // component starts with '..'; is next char '/' or end of string?
-	  if (((index+3)==len) || (path.charAt(index+3)=='/')) {
-	    depth-=2;	   // '../' doesn't count, and reduces depth by one
-	  }
-	  break;
-	}
-	break;
+        // component starts with "."
+        switch (path.charAt(index+2)) {
+        case '/':
+          depth--;                      // './' doesn't count
+          break;
+        case '.':
+          // component starts with '..'; is next char '/' or end of string?
+          if (((index+3)==len) || (path.charAt(index+3)=='/')) {
+            depth-=2;      // '../' doesn't count, and reduces depth by one
+          }
+          break;
+        }
+        break;
       }
       // if depth is negative, path has too many '..'s
       if (depth < 0) {
-	return false;
+        return false;
       }
       index = path.indexOf("/", index+1);
       if (index < 0) break;
@@ -201,7 +201,7 @@ public class FileUtil {
 
   static Pattern resourceErrorPat =
     RegexpUtil.uncheckedCompile("Too many open files",
-				Perl5Compiler.READ_ONLY_MASK);
+                                Perl5Compiler.READ_ONLY_MASK);
 
   /** Return true if the exception was caused by a temporary resource
    * problem (e.g., running out of file descriptors), not a problem with
@@ -241,7 +241,7 @@ public class FileUtil {
    * @return The newly created directory
    */
   public static File createTempDir(String prefix, String suffix,
-				   File directory)
+                                   File directory)
       throws IOException {
     if (prefix == null) throw new NullPointerException();
     if (prefix.length() < 3)
@@ -253,10 +253,10 @@ public class FileUtil {
     synchronized (tmpFileLock) {
       File f = null;
       for (int ix = 0; ix < 1000; ix++) {
-	f = generateFile(prefix, s, directory);
-	if (f.mkdir()) {
-	  return f;
-	}
+        f = generateFile(prefix, s, directory);
+        if (f.mkdir()) {
+          return f;
+        }
       }
       throw new IOException("Couldn't create temp dir " + f.getPath());
     }
@@ -285,14 +285,14 @@ public class FileUtil {
     }
     for (int cnt = 3; cnt > 0; cnt--) {
       if (dir.mkdirs()) {
-	return true;
+        return true;
       }
       if (dir.exists()) {
-	return true;
+        return true;
       }
       log.error("Failed to mkdirs(" + dir + "), retrying");
       try {
-	Deadline.in(100).sleep();
+        Deadline.in(100).sleep();
       } catch (InterruptedException e) {
       }
     }
@@ -303,22 +303,114 @@ public class FileUtil {
     return dir.exists();
   }
 
+  public static String relativeName(String name, String relativeTo) {
+    if (relativeTo == null) {
+      return name;
+    }
+    if (!relativeTo.endsWith(File.pathSeparator)) {
+      relativeTo = relativeTo + File.separator;
+    }
+    if (name.startsWith(relativeTo)) {
+      return name.substring(relativeTo.length());
+    }
+    return name;
+  }
+
+  public static File relativeFile(File file, String relativeTo) {
+    return new File(relativeName(file.getPath(), relativeTo));
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(File root, boolean includeDirs) {
+    return listTree(root, (String)null, includeDirs);
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(String root, String relativeTo,
+                                    boolean includeDirs) {
+    return listTree(new File(root), relativeTo, includeDirs);
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(File root, File relativeTo,
+                                      boolean includeDirs) {
+    return listTree(root, relativeTo.toString(), includeDirs);
+  }
+
+  /**
+   * Return list of all files in tree below root
+   */
+  public static List<String> listTree(File root, String relativeTo,
+                                    boolean includeDirs) {
+    List<String> res = new ArrayList();
+    listTree0(res, root, relativeTo, includeDirs);
+    Collections.sort(res);
+    return res;
+  }
+
+  private static List<String> listTree0(List<String> res, File root,
+                                      String relativeTo,
+                                      boolean includeDirs) {
+    for (File file : root.listFiles()) {
+      if (file.isDirectory()) {
+        if (includeDirs) {
+          res.add(relativeName(file.getPath(), relativeTo));
+        }
+        listTree0(res, file, relativeTo, includeDirs);
+      } else {
+        res.add(relativeName(file.getPath(), relativeTo));
+      }
+    }
+    return res;
+  }
+
+  /** Compare two trees, return true if identical files and contents */
+  public static boolean equalTrees(File dir1, File dir2) throws IOException {
+    List<String> lst1 = listTree(dir1, dir1, true);
+    List<String> lst2 = listTree(dir2, dir2, true);
+    Collections.sort(lst1);
+    Collections.sort(lst2);
+    if (!lst1.equals(lst2)) {
+      return false;
+    }
+    for (String file : lst1) {
+      File f1 = new File(dir1, file);
+      File f2 = new File(dir2, file);
+      if (f1.isDirectory() != f2.isDirectory()) {
+        return false;
+      }
+      if (!f1.isDirectory()) {
+        if (!isContentEqual(f1, f2)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+
   /** Delete the contents of a directory, leaving the empty directory.
    * @return true iff successful */
   public static boolean emptyDir(File dir) {
     String files[] = dir.list();
     if (files == null) {
-      return false;		  // true would imply there's an empty
-				  // dir, which there doesn't seem to be
+      return false;               // true would imply there's an empty
+                                  // dir, which there doesn't seem to be
     }
     boolean ret = true;
     for (int i = 0; i < files.length; i++) {
       File f = new File(dir, files[i]);
       if (f.isDirectory()) {
-	ret = ret && emptyDir(f);
+        ret = ret && emptyDir(f);
       }
       if (!f.delete()) {
-	ret = false;
+        ret = false;
       }
     }
     return ret;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.10 2008-08-20 05:50:49 tlipkis Exp $
+ * $Id: TestFileUtil.java,v 1.10.10.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.util.*;
+import org.apache.commons.collections.*;
 import org.lockss.test.*;
 
 /**
@@ -165,6 +167,92 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(subDir.isDirectory());
     FileUtil.delTree(parentDir);
 
+  }
+
+  void writeFile(File dir, String relPath) throws IOException {
+    File file = new File(dir, relPath);
+    File parent = new File(file.getParent());
+    parent.mkdirs();
+    FileTestUtil.writeFile(file, relPath);
+  }
+
+  String apath = "d1/d2/1";
+
+  String[] relPaths = {
+    "one",
+    "two",
+    "d1/1",
+    "d1/2",
+    apath,
+    "d1/d2/2",
+    "d1/d2/d3/d4/1",
+  };
+
+  String[] dirNames = {
+    "d1",
+    "d1/d2",
+    "d1/d2/d3",
+    "d1/d2/d3/d4",
+  };
+
+  public void buildTree(File dir) throws IOException {
+    for (String rel : relPaths) {
+      writeFile(dir, rel);
+    }
+  }
+
+  List<File> listOfFiles(List lst) {
+    return (List<File>)
+      CollectionUtils.collect(lst,
+                              new Transformer() {
+                                public Object transform(Object o) {
+                                  return new File(o.toString());
+                                }});
+  }
+
+  List<String> prepend(final String prefix, List lst) {
+    return (List<String>)
+      CollectionUtils.collect(lst,
+                              new Transformer() {
+                                public Object transform(Object o) {
+                                  return prefix + o.toString();
+                                }});
+  }
+
+  public void testListTree() throws IOException {
+    File dir = getTempDir();
+    buildTree(dir);
+    List exp = ListUtil.fromArray(relPaths);
+    Collections.sort(exp);
+    assertEquals(exp, FileUtil.listTree(dir, dir.getPath(), false));
+    assertEquals(prepend(dir.getPath() + File.separator, exp),
+                 FileUtil.listTree(dir, false));
+    exp.addAll(ListUtil.fromArray(dirNames));
+    Collections.sort(exp);
+    assertEquals(exp, FileUtil.listTree(dir, dir.getPath(), true));
+    assertEquals(prepend(dir.getPath() + File.separator, exp),
+                 FileUtil.listTree(dir, true));
+  }
+
+  public void testEqualTrees() throws IOException {
+    File dir1 = getTempDir();
+    File dir2 = getTempDir();
+    buildTree(dir1);
+    buildTree(dir2);
+    assertTrue(FileUtil.equalTrees(dir1, dir2));
+    writeFile(dir1, "afile");
+    File f1 = new File(dir1, "afile");
+    assertTrue(f1.exists());
+    assertFalse(FileUtil.equalTrees(dir1, dir2));
+    f1.delete();
+    assertFalse(f1.exists());
+    assertTrue(FileUtil.equalTrees(dir1, dir2));
+    File f2 = new File(dir1, apath);
+    assertTrue(f2.exists());
+    FileTestUtil.writeFile(f2, "foobar");
+    assertEquals(FileUtil.listTree(dir1, dir1.getPath(), true),
+                 FileUtil.listTree(dir2, dir2.getPath(), true));
+    assertFalse(FileUtil.equalTrees(dir1, dir2));
   }
 
   public void testDelTree() throws IOException {

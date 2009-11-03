@@ -1,10 +1,10 @@
 /*
- * $Id: DefinablePlugin.java,v 1.37 2009-04-07 19:09:01 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.37.2.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,20 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.definable;
 
+import java.util.*;
+import java.io.*;
+import java.net.*;
+
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
-
-import java.util.*;
-import java.io.FileNotFoundException;
-import java.net.*;
 
 /**
  * <p>DefinablePlugin: a plugin which uses the data stored in an
@@ -56,6 +57,7 @@ import java.net.*;
 
 public class DefinablePlugin extends BasePlugin {
   // configuration map keys
+  public static final String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
   public static final String KEY_PLUGIN_NAME = "plugin_name";
   public static final String KEY_PLUGIN_VERSION = "plugin_version";
   public static final String KEY_REQUIRED_DAEMON_VERSION =
@@ -78,9 +80,17 @@ public class DefinablePlugin extends BasePlugin {
     "plugin_per_host_permission_path";
   public static final String KEY_PLUGIN_PARENT = "plugin_parent";
   public static final String KEY_PLUGIN_PARENT_VERSION = "plugin_parent_version";
+  public static final String KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY =
+    "plugin_crawl_url_comparator_factory";
+  public static final String KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE =
+    "plugin_fetch_rate_limiter_source";
+
+  public static final String KEY_DEFAULT_ARTICLE_MIME_TYPE =
+    "plugin_default_article_mime_type";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
+
   public static final String MAP_SUFFIX = ".xml";
 
   public static final String CRAWL_TYPE_HTML_LINKS = "HTML Links";
@@ -105,18 +115,25 @@ public class DefinablePlugin extends BasePlugin {
     initPlugin(daemon, extMapName, this.getClass().getClassLoader());
   }
 
-  // Used by tests
-  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap) {
-    initPlugin(daemon, defMap, this.getClass().getClassLoader());
-  }
-
   public void initPlugin(LockssDaemon daemon, String extMapName,
-			 ClassLoader loader)
+                         ClassLoader loader)
       throws FileNotFoundException {
     // convert the plugin class name to an xml file name
     // load the configuration map from jar file
     ExternalizableMap defMap = loadMap(extMapName, loader);
     this.initPlugin(daemon, extMapName, defMap, loader);
+  }
+
+  public void initPlugin(LockssDaemon daemon, String extMapName,
+                         ExternalizableMap defMap,
+                         ClassLoader loader) {
+    mapName = extMapName;
+    this.classLoader = loader;
+    this.definitionMap = defMap;
+    // then call the overridden initializaton.
+    super.initPlugin(daemon);
+    initMimeMap();
+    checkParamAgreement();
   }
 
   private ExternalizableMap loadMap(String extMapName, ClassLoader loader)
@@ -130,28 +147,28 @@ public class DefinablePlugin extends BasePlugin {
       String mapFile = next.replace('.', '/') + MAP_SUFFIX;
       URL url = loader.getResource(mapFile);
       if (url != null && urls.contains(url.toString())) {
-	throw new PluginException.InvalidDefinition("Plugin inheritance loop: "
-						    + next);
+        throw new PluginException.InvalidDefinition("Plugin inheritance loop: "
+                                                    + next);
       }
       // load into map
       ExternalizableMap oneMap = new ExternalizableMap();
       oneMap.loadMapFromResource(mapFile, loader);
       urls.add(url.toString());
       if (res == null) {
-	res = oneMap;
+        res = oneMap;
       } else {
-	for (Map.Entry ent : oneMap.entrySet()) {
-	  String key = (String)ent.getKey();
-	  Object val = ent.getValue();
-	  if (!res.containsKey(key)) {
-	    res.setMapElement(key, val);
-	  }
-	}
+        for (Map.Entry ent : oneMap.entrySet()) {
+          String key = (String)ent.getKey();
+          Object val = ent.getValue();
+          if (!res.containsKey(key)) {
+            res.setMapElement(key, val);
+          }
+        }
       }
       if (oneMap.containsKey(KEY_PLUGIN_PARENT)) {
-	next = oneMap.getString(KEY_PLUGIN_PARENT);
+        next = oneMap.getString(KEY_PLUGIN_PARENT);
       } else {
-	next = null;
+        next = null;
       }
     }
     loadedFromUrls = urls;
@@ -159,23 +176,28 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   // Used by tests
+
+  public void initPlugin(LockssDaemon daemon, File file)
+      throws PluginException {
+    ExternalizableMap oneMap = new ExternalizableMap();
+    oneMap.loadMap(file);
+    if (oneMap.getErrorString() != null) {
+      throw new PluginException(oneMap.getErrorString());
+    }
+    initPlugin(daemon, file.getPath(), oneMap, null);
+  }
+
+  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap) {
+    initPlugin(daemon, defMap, this.getClass().getClassLoader());
+  }
+
   void initPlugin(LockssDaemon daemon,
-			 ExternalizableMap defMap,
-			 ClassLoader loader) {
+                         ExternalizableMap defMap,
+                         ClassLoader loader) {
     initPlugin(daemon, "Internal", defMap, loader);
   }
 
-  public void initPlugin(LockssDaemon daemon, String extMapName,
-			 ExternalizableMap defMap,
-			 ClassLoader loader) {
-    mapName = extMapName;
-    this.classLoader = loader;
-    this.definitionMap = defMap;
-    // then call the overridden initializaton.
-    super.initPlugin(daemon);
-    initMimeMap();
-    checkParamAgreement();
-  }
+
 
   void checkParamAgreement() {
     for (String key : DefinableArchivalUnit.printfUrlListKeys) {
@@ -196,29 +218,29 @@ public class DefinablePlugin extends BasePlugin {
     }
     for (String printf : printfList) {
       if (StringUtil.isNullString(printf)) {
-	log.warning("Null printf string in " + key);
-	continue;
+        log.warning("Null printf string in " + key);
+        continue;
       }
       PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printf);
       Collection<String> p_args = p_data.getArguments();
       for (String arg : p_args) {
-	ConfigParamDescr descr = findAuConfigDescr(arg);
-	if (descr == null) {
-	  throw new
-	    PluginException.InvalidDefinition("Not a declared parameter: " +
-					      arg + " in " + printf + " in " +
-					      getPluginName());
-	}
-	// ensure range params used only in REs
-	if (!isRE) {
-	  switch (descr.getType()) {
-	  case ConfigParamDescr.TYPE_RANGE:
-	  throw new
-	    PluginException.InvalidDefinition("Range parameter (" + arg +
-					      ") used in non-regexp in " +
-					      getPluginName() + ": " + printf);
-	  }
-	}
+        ConfigParamDescr descr = findAuConfigDescr(arg);
+        if (descr == null) {
+          throw new
+            PluginException.InvalidDefinition("Not a declared parameter: " +
+                                              arg + " in " + printf + " in " +
+                                              getPluginName());
+        }
+        // ensure range params used only in REs
+        if (!isRE) {
+          switch (descr.getType()) {
+          case ConfigParamDescr.TYPE_RANGE:
+          throw new
+            PluginException.InvalidDefinition("Range parameter (" + arg +
+                                              ") used in non-regexp in " +
+                                              getPluginName() + ": " + printf);
+          }
+        }
       }
     }
   }
@@ -245,7 +267,7 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getRequiredDaemonVersion() {
     return definitionMap.getString(KEY_REQUIRED_DAEMON_VERSION,
-				   DEFAULT_REQUIRED_DAEMON_VERSION);
+                                   DEFAULT_REQUIRED_DAEMON_VERSION);
   }
 
   public String getPublishingPlatform() {
@@ -254,6 +276,18 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getPluginNotes() {
     return definitionMap.getString(KEY_PLUGIN_NOTES, null);
+  }
+
+  public String getDefaultArticleMimeType() {
+    String ret = definitionMap.getString(KEY_DEFAULT_ARTICLE_MIME_TYPE,
+                                         DEFAULT_ARTICLE_MIME_TYPE);
+    log.debug3("DefaultArticleMimeType " + ret);
+    if (ret == null) {
+      ret = super.getDefaultArticleMimeType();
+      log.debug3("DefaultArticleMimeType from super " + ret);
+      
+    }
+    return ret;
   }
 
   public List<String> getElementList(String key) {
@@ -275,8 +309,8 @@ public class DefinablePlugin extends BasePlugin {
       (List) definitionMap.getCollection(KEY_PLUGIN_CONFIG_PROPS, null);
     if (auConfigDescrs == null) {
       throw
-	new PluginException.InvalidDefinition(mapName +
-					      " missing ConfigParamDescrs");
+        new PluginException.InvalidDefinition(mapName +
+                                              " missing ConfigParamDescrs");
     }
     return auConfigDescrs;
   }
@@ -307,52 +341,93 @@ public class DefinablePlugin extends BasePlugin {
       String key = (String)ent.getKey();
       Object val = ent.getValue();
       if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY);
-	if (val instanceof String) {
-	  String factName = (String)val;
-	  log.debug(mime + " link extractor: " + factName);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	  LinkExtractorFactory fact =
-	    (LinkExtractorFactory)newAuxClass(factName,
-					      LinkExtractorFactory.class);
-	  mti.setLinkExtractorFactory(fact);
-	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
-	String mime = stripSuffix(key,
-				  DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
-	if (val instanceof String) {
-	  String factName = (String)val;
-	  log.debug(mime + " filter: " + factName);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	  FilterFactory fact =
-	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
-	  mti.setFilterFactory(fact);
-	}
+        String mime =
+          stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY);
+        if (val instanceof String) {
+          String factName = (String)val;
+          log.debug(mime + " link extractor: " + factName);
+          MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+          LinkExtractorFactory fact =
+            (LinkExtractorFactory)newAuxClass(factName,
+                                              LinkExtractorFactory.class);
+          mti.setLinkExtractorFactory(fact);
+        }
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+        // XXX This clause must precede the one for SUFFIX_HASH_FILTER_FACTORY
+        // XXX unless/until that key is changed to not be a terminal substring
+        // XXX of this one
+        String mime = stripSuffix(key,
+                                  DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY);
+        if (val instanceof String) {
+          String factName = (String)val;
+          log.debug(mime + " crawl filter: " + factName);
+          MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+          FilterFactory fact =
+            (FilterFactory)newAuxClass(factName, FilterFactory.class);
+          mti.setCrawlFilterFactory(fact);
+        }
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)) {
+        String mime = stripSuffix(key,
+                                  DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
+        if (val instanceof String) {
+          String factName = (String)val;
+          log.debug(mime + " filter: " + factName);
+          MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+          FilterFactory fact =
+            (FilterFactory)newAuxClass(factName, FilterFactory.class);
+          mti.setHashFilterFactory(fact);
+        }
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER);
-	if (val instanceof String) {
-	  String rate = (String)val;
-	  log.debug(mime + " fetch rate: " + rate);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	  RateLimiter limit = mti.getFetchRateLimiter();
-	  if (limit != null) {
-	    limit.setRate(rate);
-	  } else {
-	    mti.setFetchRateLimiter(new RateLimiter(rate));
-	  }
-	}
+        String mime =
+          stripSuffix(key, DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER);
+        if (val instanceof String) {
+          String rate = (String)val;
+          log.debug(mime + " fetch rate: " + rate);
+          MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+          RateLimiter limit = mti.getFetchRateLimiter();
+          if (limit != null) {
+            limit.setRate(rate);
+          } else {
+            mti.setFetchRateLimiter(new RateLimiter(rate));
+          }
+        }
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY);
-	String factName = (String)val;
-	log.debug(mime + " link rewriter: " + factName);
-	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	LinkRewriterFactory fact =
-	  (LinkRewriterFactory)newAuxClass(factName,
-					   LinkRewriterFactory.class);
-	mti.setLinkRewriterFactory(fact);
+        String mime =
+          stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY);
+        String factName = (String)val;
+        log.debug(mime + " link rewriter: " + factName);
+        MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+        LinkRewriterFactory fact =
+          (LinkRewriterFactory)newAuxClass(factName,
+                                           LinkRewriterFactory.class);
+        mti.setLinkRewriterFactory(fact);
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY)) {
+        String mime =
+          stripSuffix(key, DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY);
+        String factName = (String)val;
+        log.debug(mime + " article iterator: " + factName);
+        MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+        ArticleIteratorFactory fact =
+          (ArticleIteratorFactory)newAuxClass(factName,
+                                              ArticleIteratorFactory.class);
+        mti.setArticleIteratorFactory(fact);
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP)) {
+        String mime =
+          stripSuffix(key, DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP);
+        Map factNameMap = (Map)val;
+        log.debug3(mime + " metadata extractor map: ");
+        Map factClassMap = new HashMap();
+        MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+        for (Iterator it = factNameMap.keySet().iterator(); it.hasNext(); ) {
+          String mdType = (String)it.next();
+          String factName = (String)factNameMap.get(mdType);
+          log.debug3("Metadata type: " + mdType + " factory " + factName);
+          MetadataExtractorFactory fact =
+            (MetadataExtractorFactory)newAuxClass(factName,
+                                                  MetadataExtractorFactory.class);
+          factClassMap.put(mdType, fact);
+        }
+        mti.setMetadataExtractorFactoryMap(factClassMap);
       }
     }
   }
@@ -370,7 +445,7 @@ public class DefinablePlugin extends BasePlugin {
       try {
         resultHandler =
             (CacheResultHandler)newAuxClass(handler_class,
-					    CacheResultHandler.class);
+                                            CacheResultHandler.class);
         resultHandler.init(hResultMap);
       }
       catch (Exception ex) {
@@ -380,69 +455,69 @@ public class DefinablePlugin extends BasePlugin {
       catch (LinkageError le) {
         throw new PluginException.InvalidDefinition(
             mapName + " has invalid Exception handler: " + handler_class,
-	    le);
+            le);
 
       }
     } else {
       // Expect a list of mappings from either result code or exception
       // name to CacheException name
       Collection<String> mappings =
-	definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
+        definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
       if (mappings != null) {
         // add each entry
         for (String entry : mappings) {
-	  String first;
-	  String ceName;
-	  Class ceClass;
+          String first;
+          String ceName;
+          Class ceClass;
           try {
             List<String> pair = StringUtil.breakAt(entry, '=', 2, true, true);
             first = pair.get(0);
             ceName = pair.get(1);
           } catch (Exception ex) {
             throw new PluginException.InvalidDefinition("Invalid syntax: " +
-						    entry + "in " + mapName);
-	  }
+                                                    entry + "in " + mapName);
+          }
           try {
-	    ceClass = Class.forName(ceName);
+            ceClass = Class.forName(ceName);
           } catch (Exception ex) {
             throw new
-	      PluginException.InvalidDefinition("Second arg not a " +
-						"CacheException class: " +
-						entry + ", in " + mapName);
-	  } catch (LinkageError le) {
-	    throw new PluginException.InvalidDefinition("Can't load " + ceName,
-							le);
-	  }
-	  try {
-	    int code = Integer.parseInt(first);
-	    // If parseable as an integer, it's a result code.
-	    // Might need to make this load from plugin classpath
-	    hResultMap.storeMapEntry(code, ceClass);
-	  } catch (NumberFormatException e) {
-	    try {
-	      Class eClass = Class.forName(first);
-	      // If a class name, it should be an exception class
-	      // Might need to make this load ceName from plugin classpath
-	      if (Exception.class.isAssignableFrom(eClass)) {
-		hResultMap.storeMapEntry(eClass, ceClass);
-	      } else {
-		throw new
-		  PluginException.InvalidDefinition("First arg not an " +
-						    "Exception class: " +
-						    entry + ", in " + mapName);
-	      }		  
-	    } catch (Exception ex) {
-	      throw new
-		PluginException.InvalidDefinition("First arg not a " +
-						  "number or class: " +
-						  entry + ", in " + mapName);
-	    } catch (LinkageError le) {
-	      throw new PluginException.InvalidDefinition("Can't load " +
-							  first,
-							  le);
-	    }
-	  }
-	}
+              PluginException.InvalidDefinition("Second arg not a " +
+                                                "CacheException class: " +
+                                                entry + ", in " + mapName);
+          } catch (LinkageError le) {
+            throw new PluginException.InvalidDefinition("Can't load " + ceName,
+                                                        le);
+          }
+          try {
+            int code = Integer.parseInt(first);
+            // If parseable as an integer, it's a result code.
+            // Might need to make this load from plugin classpath
+            hResultMap.storeMapEntry(code, ceClass);
+          } catch (NumberFormatException e) {
+            try {
+              Class eClass = Class.forName(first);
+              // If a class name, it should be an exception class
+              // Might need to make this load ceName from plugin classpath
+              if (Exception.class.isAssignableFrom(eClass)) {
+                hResultMap.storeMapEntry(eClass, ceClass);
+              } else {
+                throw new
+                  PluginException.InvalidDefinition("First arg not an " +
+                                                    "Exception class: " +
+                                                    entry + ", in " + mapName);
+              }           
+            } catch (Exception ex) {
+              throw new
+                PluginException.InvalidDefinition("First arg not a " +
+                                                  "number or class: " +
+                                                  entry + ", in " + mapName);
+            } catch (LinkageError le) {
+              throw new PluginException.InvalidDefinition("Can't load " +
+                                                          first,
+                                                          le);
+            }
+          }
+        }
       }
     }
     resultMap = hResultMap;
@@ -458,17 +533,17 @@ public class DefinablePlugin extends BasePlugin {
       (CrawlWindow)definitionMap.getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER);
     if (window == null) {
       String window_class =
-	definitionMap.getString(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW,
-				null);
+        definitionMap.getString(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW,
+                                null);
       if (window_class != null) {
-	ConfigurableCrawlWindow ccw =
-	  (ConfigurableCrawlWindow) newAuxClass(window_class,
-						ConfigurableCrawlWindow.class);
-	try {
-	  window = ccw.makeCrawlWindow();
-	} catch (PluginException e) {
-	  throw new RuntimeException(e);
-	}
+        ConfigurableCrawlWindow ccw =
+          (ConfigurableCrawlWindow) newAuxClass(window_class,
+                                                ConfigurableCrawlWindow.class);
+        try {
+          window = ccw.makeCrawlWindow();
+        } catch (PluginException e) {
+          throw new RuntimeException(e);
+        }
       }
     }
     crawlWindow = window;
@@ -478,29 +553,56 @@ public class DefinablePlugin extends BasePlugin {
   protected UrlNormalizer getUrlNormalizer() {
     if (urlNorm == null) {
       String normalizerClass =
-	definitionMap.getString(DefinableArchivalUnit.KEY_AU_URL_NORMALIZER,
-				null);
+        definitionMap.getString(DefinableArchivalUnit.KEY_AU_URL_NORMALIZER,
+                                null);
       if (normalizerClass != null) {
-	urlNorm =
-	  (UrlNormalizer)newAuxClass(normalizerClass, UrlNormalizer.class);
+        urlNorm =
+          (UrlNormalizer)newAuxClass(normalizerClass, UrlNormalizer.class);
       } else {
-	urlNorm = NullUrlNormalizer.INSTANCE;
+        urlNorm = NullUrlNormalizer.INSTANCE;
       }
     }
     return urlNorm;
   }
 
+  protected ExploderHelper exploderHelper = null;
+
   protected ExploderHelper getExploderHelper() {
     if (exploderHelper == null) {
       String helperClass =
-	definitionMap.getString(DefinableArchivalUnit.KEY_AU_EXPLODER_HELPER,
-				null);
+        definitionMap.getString(DefinableArchivalUnit.KEY_AU_EXPLODER_HELPER,
+                                null);
       if (helperClass != null) {
-	exploderHelper =
-	  (ExploderHelper)newAuxClass(helperClass, ExploderHelper.class);
+        exploderHelper =
+          (ExploderHelper)newAuxClass(helperClass, ExploderHelper.class);
       }
     }
     return exploderHelper;
+  }
+
+  protected CrawlUrlComparatorFactory crawlUrlComparatorFactory = null;
+
+  protected CrawlUrlComparatorFactory getCrawlUrlComparatorFactory() {
+    if (crawlUrlComparatorFactory == null) {
+      String factClass =
+        definitionMap.getString(DefinablePlugin.KEY_PLUGIN_CRAWL_URL_COMPARATOR_FACTORY,
+                                null);
+      if (factClass != null) {
+        crawlUrlComparatorFactory =
+          (CrawlUrlComparatorFactory)newAuxClass(factClass,
+                                                 CrawlUrlComparatorFactory.class);
+      }
+    }
+    return crawlUrlComparatorFactory;
+  }
+
+  protected Comparator<CrawlUrl> getCrawlUrlComparator(ArchivalUnit au)
+      throws PluginException.LinkageError {
+    CrawlUrlComparatorFactory fact = getCrawlUrlComparatorFactory();
+    if (fact == null) {
+      return null;
+    }
+    return fact.createCrawlUrlComparator(au);
   }
 
   protected FilterRule constructFilterRule(String contentType) {
@@ -508,7 +610,7 @@ public class DefinablePlugin extends BasePlugin {
 
     Object filter_el =
       definitionMap.getMapElement(mimeType +
-				  DefinableArchivalUnit.SUFFIX_FILTER_RULE);
+                                  DefinableArchivalUnit.SUFFIX_FILTER_RULE);
 
     if (filter_el instanceof String) {
       log.debug("Loading filter "+filter_el);

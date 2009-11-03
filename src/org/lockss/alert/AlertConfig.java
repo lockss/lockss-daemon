@@ -1,5 +1,5 @@
 /*
- * $Id: AlertConfig.java,v 1.4 2005-09-06 23:24:52 thib_gc Exp $
+ * $Id: AlertConfig.java,v 1.4.68.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -38,17 +38,16 @@ import org.lockss.util.LockssSerializable;
 
 /** AlertConfig stores the state of the alert notification config */
 public class AlertConfig implements LockssSerializable {
-  protected List filters;
+  protected List<AlertFilter> filters;
 
   /**
    * Simple constructor to allow bean creation during unmarshalling.
    */
   public AlertConfig() {
-//     filters = new ArrayList();
-    filters = new Vector();
+    filters = new ArrayList<AlertFilter>();
   }
 
-  public AlertConfig(List filters) {
+  public AlertConfig(List<AlertFilter> filters) {
     this.filters = filters;
   }
 
@@ -56,7 +55,7 @@ public class AlertConfig implements LockssSerializable {
     filters = config.getFilters();
   }
 
-  public List getFilters() {
+  public List<AlertFilter> getFilters() {
     if (filters == null) {
       return Collections.EMPTY_LIST;
     }
@@ -67,21 +66,13 @@ public class AlertConfig implements LockssSerializable {
    * Sets the filters
    * @param filters list of {@link AlertFilter}s
    */
-  public void setFilters(List filters) {
+  public void setFilters(List<AlertFilter> filters) {
     this.filters = filters;
   }
 
-//   public void addFilters(AlertFilter filter) {
-//     this.filters.add(filter);
-//   }
-
-//   public AlertFilter getFilter() {
-//     return (AlertFilter)filters.get(0);
-//   }
-
-//   public void setFilter(AlertFilter filter) {
-//     this.filters = ListUtil.list(filter);
-//   }
+  public void addFilter(AlertFilter filter) {
+    this.filters.add(filter);
+  }
 
   public boolean equals(Object obj) {
     if (obj instanceof AlertConfig) {

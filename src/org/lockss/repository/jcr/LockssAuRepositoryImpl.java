@@ -72,6 +72,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   
   // Variables
   private ArchivalUnit m_au;
+  private String m_auid;   // This code can be given either a string or an AUID.
   private CollectionOfAuRepositories m_coar;
   private DatedPeerIdSet m_dpisNoAu;
   private JcrRepositoryHelper m_jrh;
@@ -81,7 +82,9 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * before you call any constructor.
    * 
    * It is currently an error to not specify the CollectionOfAuRepositories.
-   * 
+   *
+   *  This set of constructors allows the user to choose whether to set the AU or the AUID.
+   *  I understand that there will be times we only have the AUID, not the AU.
    * @param au
    * @throws LockssRepositoryException
    */
@@ -92,7 +95,14 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     throw new LockssRepositoryException("It is currently an error to not specify the COAR.");
     // this(au, null, null);    
   }
-   
+  
+  public LockssAuRepositoryImpl(String auid) 
+    throws LockssRepositoryException {
+    logger.warning("It is currently an error to not specify the COAR.");
+    throw new LockssRepositoryException("It is currently an error to not specify the COAR.");
+    // this(auid, null, null);        
+  }
+  
   public LockssAuRepositoryImpl(
       ArchivalUnit au, JcrRepositoryHelper jrh) 
       throws LockssRepositoryException {
@@ -100,11 +110,38 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     throw new LockssRepositoryException("It is currently an error to not specify the COAR.");
     // this(au, jrh, null);
   }
+    
+  public LockssAuRepositoryImpl(
+      String auid, JcrRepositoryHelper jrh) 
+      throws LockssRepositoryException {
+    logger.warning("It is currently an error to not specify the COAR.");
+    throw new LockssRepositoryException("It is currently an error to not specify the COAR.");
+    // this(auid, jrh, null);
+  }
+
   
   public LockssAuRepositoryImpl(
       ArchivalUnit au, CollectionOfAuRepositories coar)
     throws LockssRepositoryException {
-    this(au, null, coar);
+    this(au, null, null, coar);
+  }
+
+  public LockssAuRepositoryImpl(
+      String auid, CollectionOfAuRepositories coar)
+    throws LockssRepositoryException {
+    this(null, auid, null, coar);
+  }
+  
+  public LockssAuRepositoryImpl(
+      ArchivalUnit au, JcrRepositoryHelper jrh, CollectionOfAuRepositories coar) 
+    throws LockssRepositoryException {
+    this(au, null, jrh, coar);
+  }
+  
+  public LockssAuRepositoryImpl(
+      String auid, JcrRepositoryHelper jrh, CollectionOfAuRepositories coar) 
+    throws LockssRepositoryException {
+    this(null, auid, jrh, coar);
   }
   
   /**
@@ -119,7 +156,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
    * @throws LockssRepositoryException
    */
   public LockssAuRepositoryImpl(
-      ArchivalUnit au, JcrRepositoryHelper jrh, CollectionOfAuRepositories coar) 
+      ArchivalUnit au, String auid, JcrRepositoryHelper jrh, CollectionOfAuRepositories coar) 
       throws LockssRepositoryException {
     JcrRepositoryHelperFactory jrhf;
     Node node;    
@@ -132,11 +169,12 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     
     jrhf = JcrRepositoryHelperFactory.getSingleton();
 
-    if (au == null) {
+    if (au == null && auid == null) {
       logger.error("No AU was specified.");
       throw new LockssRepositoryException("No AU was specified.");
     }
     m_au = au;
+    m_auid = auid;
     
     try {
       // Put this LockssAuRepositoryImpl into an appropriate helper repository.
@@ -220,7 +258,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     String strAuId;
 
     try {
-      strAuId = m_au.getAuId();
+      strAuId = getAuId();
       node = m_jrh.getRootNode();
       
       if (node.hasProperty(k_propCreationTime)) {
@@ -492,7 +530,7 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     sbUrlConstructed = new StringBuilder();
     
     // Construct the base node. 
-    rniNode = (RepositoryNodeImpl) m_jrh.getRepositoryNode(m_au.getAuId()); 
+    rniNode = (RepositoryNodeImpl) m_jrh.getRepositoryNode(getAuId()); 
     
     if (rniNode == null) {
       if (create) {
@@ -589,15 +627,19 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   /**
    * Slightly misnamed: This method returns the current AU State.
    * 
+   * Note: {@link HistoryRepository#loadAuState()} does not have an exception;
+   * I did not want to change the interface.  Therefore, this method returns
+   * null if there's an error.
+   * 
    * @see org.lockss.repository.v2.LockssAuRepository#loadAuState()
+   * @see org.lockss.state.HistoryRepository#loadAuState()
    * @return AuState
    */
   public AuState loadAuState() {
     AuState auState;
     InputStream istrAu;
-    String strError = "Could not load AU state for AU '" + m_au.getName() + "' :"; 
-
-    logger.debug3("Loading state for AU '" + m_au.getName() + "'");
+    String strError = "Could not load AU state for AU '" + getAuId() + "' :"; 
+    logger.debug3("Loading state for AU '" + getAuId() + "'");
 
     // Get all the text in the AU state file.
     try {
@@ -605,16 +647,28 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
       auState = (AuState) sm_xssTransformer.deserialize(istrAu);
     } catch (LockssRepositoryException e) {
       logger.error(strError, e);
-      return new AuState(m_au, this);
+      if (m_au != null) {
+        return new AuState(m_au, this);
+      }  // m_au == null
+      return null;
     } catch (SerializationException.FileNotFound e) {
       logger.error(strError, e);
-      return new AuState(m_au, this);
+      if (m_au != null) {
+        return new AuState(m_au, this);
+      } // m_au == null
+      return null;
     } catch (SerializationException e) {
       logger.error(strError, e);
-      return new AuState(m_au, this);      
+      if (m_au != null) {
+        return new AuState(m_au, this);
+      } // m_au == null
+      return null;
     } catch (InterruptedIOException e) {
       logger.error(strError, e);
-      return new AuState(m_au, this);      
+      if (m_au != null) {
+        return new AuState(m_au, this);
+      } // m_au == null
+      return null;
     } 
 
     return auState;
@@ -711,6 +765,14 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
 
+  /**
+   * Run the queue size calculation on the JcrRepositoryHelper (which contains all nodes.)
+   */
+  protected void queueSizeCalc() {
+      m_jrh.queueSizeCalc();
+  }
+  
+  
   /**
    * This method is now a stub.
    * 
@@ -869,10 +931,10 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
   public long getRepoDiskUsage(boolean calcIfUnknown) throws LockssRepositoryException {
     RepositoryNode rn;
     
-    rn = m_jrh.getRepositoryNode(m_au.getAuId());
+    rn = m_jrh.getRepositoryNode(getAuId());
     
     if (rn == null) {
-      rn = createRepositoryNode(m_au.getAuId());
+      rn = createRepositoryNode(getAuId());
     }
     
     return rn.getTreeContentSize(null, calcIfUnknown);
@@ -1190,8 +1252,16 @@ public class LockssAuRepositoryImpl extends BaseLockssManager
     }
   }
 
-
-
+  // There are two ways to get an AUID.  This method returns the most correct
+  // one.
+  private String getAuId() {
+    if (m_au != null) {
+      return m_au.getAuId();
+    }
+    
+      return m_auid;
+  }
+  
   // --- Other classes ---
   
 

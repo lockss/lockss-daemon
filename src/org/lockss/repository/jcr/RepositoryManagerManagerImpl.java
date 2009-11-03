@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManagerManagerImpl.java,v 1.1.2.3 2009-10-19 23:04:57 edwardsb1 Exp $
+ * $Id: RepositoryManagerManagerImpl.java,v 1.1.2.4 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -28,14 +28,17 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import org.lockss.app.BaseLockssDaemonManager;
+import org.apache.commons.collections.*;
+
+import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.repository.LockssRepositoryException;
+import org.lockss.repository.*;
 import org.lockss.repository.v2.*;
+import org.lockss.repository.v2.RepositoryNode;
 import org.lockss.util.*;
-import org.lockss.util.PlatformUtil.DF;
+import org.lockss.util.PlatformUtil.*;
 
 /**
  * @author edwardsb
@@ -45,15 +48,53 @@ public class RepositoryManagerManagerImpl extends BaseLockssDaemonManager
 implements RepositoryManagerManager {
   // Constants
   private static final String k_schemeJcr = "jcr";
+
+  // Constants taken from RepositoryManager
+  public static final String PREFIX = Configuration.PREFIX + "repository.";
+  static final String DISK_PREFIX = PREFIX + "diskSpace.";
+  static final String PARAM_DISK_WARN_FREE_MB = DISK_PREFIX + "warn.freeMB";
+  static final int DEFAULT_DISK_WARN_FREE_MB = 5000;
+  static final String PARAM_DISK_FULL_FREE_MB = DISK_PREFIX + "full.freeMB";
+  static final int DEFAULT_DISK_FULL_FREE_MB = 100;
+  static final String PARAM_DISK_WARN_FREE_PERCENT =
+    DISK_PREFIX + "warn.freePercent";
+  static final double DEFAULT_DISK_WARN_FREE_PERCENT = .02;
+  static final String PARAM_DISK_FULL_FREE_PERCENT =
+    DISK_PREFIX + "full.freePercent";
+  static final double DEFAULT_DISK_FULL_FREE_PERCENT = .01;
+
+  static final String GLOBAL_CACHE_PREFIX = PREFIX + "globalNodeCache.";
+  public static final String PARAM_MAX_GLOBAL_CACHE_SIZE =
+    GLOBAL_CACHE_PREFIX + "size";
+  public static final int DEFAULT_MAX_GLOBAL_CACHE_SIZE = 500;
+
+  public static final String PARAM_GLOBAL_CACHE_ENABLED =
+    GLOBAL_CACHE_PREFIX + "enabled";
+  public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
+
   
   // Static variables
   private static Logger logger = Logger.getLogger("JcrRepositoryHelperFactory");
   
   // Class Variables
-  Map<String, CollectionOfAuRepositories> m_mapAuidToCoar;
+  private UniqueRefLruCache m_globalNodeCache = new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);;
+  private MultiMap m_mmapAuidToCoarSpec;
+  private Map<String, CollectionOfAuRepositories> m_mapCoarSpecToCoar;
+  int m_paramGlobalNodeCacheSize = DEFAULT_MAX_GLOBAL_CACHE_SIZE;
+  private boolean m_paramIsGlobalNodeCache = DEFAULT_GLOBAL_CACHE_ENABLED;
+
+
+  PlatformUtil.DF paramDFWarn =
+    PlatformUtil.DF.makeThreshold(DEFAULT_DISK_WARN_FREE_MB,
+                                  DEFAULT_DISK_WARN_FREE_PERCENT);
+  PlatformUtil.DF paramDFFull =
+    PlatformUtil.DF.makeThreshold(DEFAULT_DISK_FULL_FREE_MB,
+                                  DEFAULT_DISK_FULL_FREE_PERCENT);
+
   
+
   public RepositoryManagerManagerImpl() {
-    // TODO
+    // Empty for now.
   }
 
   // Initialization code ---
@@ -61,10 +102,12 @@ implements RepositoryManagerManager {
   /**
    * Called at the start of the RepositoryManagerManagerImpl.
    */
-  public void startService() {
+  public void startService() throws LockssAppException {
     super.startService();
     
-    m_mapAuidToCoar = new HashMap<String, CollectionOfAuRepositories>();
+    m_mapCoarSpecToCoar = new HashMap<String, CollectionOfAuRepositories>();
+    
+    // TODO: initialize m_mapCoarSpecToCoar.
   }
 
   // Routines.
@@ -75,128 +118,186 @@ implements RepositoryManagerManager {
    * 
    * @param AUID  The name of the AUID
    * @param RepositorySpec  The specification for the files of the repository.
-   * @see org.lockss.repository.v2.RepositoryManagerManager#addToAUIDtoCoar(java.lang.String, java.lang.String)
+   * @see org.lockss.repository.v2.RepositoryManagerManager#addAuidToCoar(java.lang.String, java.lang.String)
    * @throws LockssRepositoryException
    * @throws URISyntaxException
    * @throws IOException
    */
-  public void addToAUIDtoCoar(String AUID, String repositorySpec) 
+  public void addAuidToCoar(String AUID, String coarSpec) 
   throws LockssRepositoryException, URISyntaxException, IOException {
-    CollectionOfAuRepositories coar;
     File path;
     String strPath;
     String strScheme;
     URI uriRepositorySpec;
     
     // The RepositorySpec is a URI.  
-    uriRepositorySpec = new URI(repositorySpec);
+    uriRepositorySpec = new URI(coarSpec);
     strScheme = uriRepositorySpec.getScheme();
     
     if (strScheme.equalsIgnoreCase(k_schemeJcr)) {
-      strPath = uriRepositorySpec.getSchemeSpecificPart();
-      path = new File(strPath);
-      coar = new CollectionOfAuRepositoriesImpl(path);
-      m_mapAuidToCoar.put(AUID, coar);
+      if (m_mmapAuidToCoarSpec.containsKey(AUID)) {
+        logger.info("AUID " + AUID + " already exists in the map of AUID to CoarSpec.  Aren't you glad that it's a multimap?");
+      }
+      
+      m_mmapAuidToCoarSpec.put(AUID, coarSpec);      
     } else {
       logger.error("Unknown scheme.  Please use jcr: as your scheme.");
       throw new LockssRepositoryException("Unknown scheme.");
     }
-        
   }
 
-  /* (non-Javadoc)
+  /**
    * @see org.lockss.repository.v2.RepositoryManagerManager#doSizeCalc(org.lockss.repository.v2.RepositoryNode)
    */
   public void doSizeCalc(RepositoryNode node) {
-    // TODO
+    try {
+      node.getTreeContentSize(null, true);
+      if (node instanceof AuNodeImpl) {
+        ((AuNodeImpl)node).getDiskUsage(true);
+      }
+    } catch (LockssRepositoryException e) {
+      logger.debug("doSizeCalc: LockssRepositoryException: ", e);
+    }
   }
 
+  
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#findLeastFullRepository()
    */
-  public String findLeastFullRepository() {
-    // TODO Auto-generated method stub
-    return null;
+  public String /* coarSpec */ findLeastFullCoar() {
+    String coarSpecLeastFull = null;
+    DF dfBest;
+    DF dfCurrent;
+    
+    dfBest = null;
+    for (String coarSpecCurrent : m_mapCoarSpecToCoar.keySet()) {
+      try {
+        dfCurrent = m_mapCoarSpecToCoar.get(coarSpecCurrent).getDF();
+      
+        if (dfBest == null || dfBest.isFullerThan(dfCurrent)) {
+          coarSpecLeastFull = coarSpecCurrent;
+          dfBest = dfCurrent;
+        }
+      } catch (UnsupportedException e) {
+        logger.error("Unsupported Exception ", e);
+        return null;
+      }
+    } // end for coarSpecCurrent...
+    
+    return coarSpecLeastFull;
   }
 
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#getAuRepository(java.lang.String, org.lockss.plugin.ArchivalUnit)
    */
-  public LockssAuRepository getAuRepository(String coarSpec, ArchivalUnit au) {
-    // TODO Auto-generated method stub
-    return null;
+  public LockssAuRepository getAuRepository(String coarSpec, ArchivalUnit au) throws LockssRepositoryException {
+    CollectionOfAuRepositoriesImpl coar;
+    
+    coar = (CollectionOfAuRepositoriesImpl) m_mapCoarSpecToCoar.get(coarSpec);
+    if (coar == null) {
+      return null;
+    }
+    
+    try {
+      return coar.openAuRepository(au);
+    } catch (FileNotFoundException e) {
+      logger.error("File not found exception: ", e);
+      return null;
+    }
   }
 
-  /* (non-Javadoc)
+  /**
    * @see org.lockss.repository.v2.RepositoryManagerManager#getDiskFullThreshold()
+   * @see org.lockss.repository.RepositoryManager.getDiskFullThreshold()
    */
   public DF getDiskFullThreshold() {
-    // TODO Auto-generated method stub
-    return null;
+    return paramDFFull;
   }
 
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#getDiskWarnThreshold()
+   * @see org.lockss.repository.RepositoryManager.getDiskFullThreshold()
    */
   public DF getDiskWarnThreshold() {
-    // TODO Auto-generated method stub
-    return null;
+    return paramDFWarn;
   }
 
-  /* (non-Javadoc)
+  /**
+   * I assume that this class wants to know all COARs that contain a particular AUID.
+   * 
    * @see org.lockss.repository.v2.RepositoryManagerManager#getExistingCoarSpecsForAuid(java.lang.String)
    */
   public List<String> getExistingCoarSpecsForAuid(String auid) {
-    // TODO Auto-generated method stub
-    return null;
+    Collection<String> collstrCoarSpecs;
+    List<String> listrCoarSpecs;
+    
+    collstrCoarSpecs = (Collection<String>) m_mmapAuidToCoarSpec.get(auid);
+    
+    listrCoarSpecs = new ArrayList<String>();
+    listrCoarSpecs.addAll(collstrCoarSpecs);
+    
+    return listrCoarSpecs;
   }
 
+  
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#getGlobalNodeCache()
    */
   public UniqueRefLruCache getGlobalNodeCache() {
-    // TODO Auto-generated method stub
-    return null;
+    return m_globalNodeCache;
   }
 
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.RepositoryManagerManager#getRepository(java.lang.String, org.lockss.plugin.ArchivalUnit)
-   */
-  public LockssAuRepository getRepository(String nameRepository, ArchivalUnit au) {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-Javadoc)
-   * @see org.lockss.repository.v2.RepositoryManagerManager#getRepositoryDf()
-   */
-  public DF getRepositoryDf() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-Javadoc)
+   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#getRepositoryList()
    */
   public List<String> getRepositoryList() {
-    // TODO Auto-generated method stub
-    return null;
+    List<String> listrCoarSpec;
+    Set<String> sestrCoarSpec;
+
+    sestrCoarSpec = m_mapCoarSpecToCoar.keySet();
+    
+    listrCoarSpec = new ArrayList<String>();
+    listrCoarSpec.addAll(sestrCoarSpec);
+    
+    return listrCoarSpec;
   }
 
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#getRepositoryMap()
    */
-  public Map<String, DF> getRepositoryMap() {
-    // TODO Auto-generated method stub
-    return null;
+  public Map<String /* CoarSpec */, DF> getRepositoryMap() throws LockssRepositoryException {
+    CollectionOfAuRepositories coar;
+    DF df;
+    Map<String /* CoarSpec */, DF> mapCoarSpecDF;
+    
+    mapCoarSpecDF = new HashMap<String, DF>();
+    
+    try {
+      for (String strCoarSpec : m_mapCoarSpecToCoar.keySet()) {
+        coar = m_mapCoarSpecToCoar.get(strCoarSpec);  
+        df = coar.getDF();
+        
+        mapCoarSpecDF.put(strCoarSpec, df);
+      }
+      
+      return mapCoarSpecDF;
+    } catch (PlatformUtil.UnsupportedException e) {
+      throw new LockssRepositoryException(e);
+    }
   }
 
   /* (non-Javadoc)
    * @see org.lockss.repository.v2.RepositoryManagerManager#queueSizeCale(org.lockss.plugin.ArchivalUnit, org.lockss.repository.v2.RepositoryNode)
    */
-  public void queueSizeCale(ArchivalUnit au, RepositoryNode node) {
-    // TODO Auto-generated method stub
-
+  public void queueSizeCalc(ArchivalUnit au, RepositoryNode node) {
+    LockssAuRepository lar;
+    
+    try {
+      lar = getAuRepository(node.getNodeUrl(), au);
+      lar.queueSizeCalc(node);
+    } catch (LockssRepositoryException e) {
+      logger.error("queueSizeCalc caused a Lockss Repository Exception.  Dropping into the bit bucket.", e);      
+    }
   }
 
   /* (non-Javadoc)
@@ -204,8 +305,17 @@ implements RepositoryManagerManager {
    */
   public void setConfig(Configuration newConfig, Configuration prevConfig,
       Differences changedKeys) {
-    // TODO Auto-generated method stub
-
+    
+    // Taken from RepositoryManager.
+    if (changedKeys.contains(GLOBAL_CACHE_PREFIX)) {
+      m_paramIsGlobalNodeCache = newConfig.getBoolean(PARAM_GLOBAL_CACHE_ENABLED,
+                                                 DEFAULT_GLOBAL_CACHE_ENABLED);
+      if (m_paramIsGlobalNodeCache) {
+        m_paramGlobalNodeCacheSize = newConfig.getInt(PARAM_MAX_GLOBAL_CACHE_SIZE,
+                                                 DEFAULT_MAX_GLOBAL_CACHE_SIZE);
+        logger.debug("global node cache size: " + m_paramGlobalNodeCacheSize);
+        m_globalNodeCache.setMaxSize(m_paramGlobalNodeCacheSize);
+      }
+    }
   }
-
 }

@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1551-3793
   
-      au < do_not_process ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
-      au < do_not_process ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
-      au < do_not_process ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
+      au < doNotProcess ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
+      au < doNotProcess ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
+      au < doNotProcess ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
     }
 
     {

@@ -1,125 +1,132 @@
 {
+
   publisher <
     name = National Academy of Sciences
   >
 
-  implicit < status ; name ; param[volume_name] >
-  plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+  {
   
- {
-   title <
-     name = Proceedings of the National Academy of Sciences
-   >
-   
-   param[base_url] = http://www.pnas.org/
+    title <
+      name = Proceedings of the National Academy of Sciences
+    >
 
-   au < exists ; Proceedings of the National Academy of Sciences Volume 1 ; 1 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 2 ; 2 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 3 ; 3 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 4 ; 4 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 5 ; 5 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 6 ; 6 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 7 ; 7 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 8 ; 8 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 9 ; 9 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 10 ; 10 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 11 ; 11 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 12 ; 12 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 13 ; 13 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 14 ; 14 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 15 ; 15 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 16 ; 16 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 17 ; 17 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 18 ; 18 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 19 ; 19 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 20 ; 20 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 21 ; 21 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 22 ; 22 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 23 ; 23 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 24 ; 24 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 25 ; 25 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 26 ; 26 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 27 ; 27 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 28 ; 28 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 29 ; 29 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 30 ; 30 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 31 ; 31 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 32 ; 32 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 33 ; 33 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 34 ; 34 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 35 ; 35 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 36 ; 36 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 37 ; 37 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 38 ; 38 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 39 ; 39 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 40 ; 40 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 41 ; 41 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 42 ; 42 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 43 ; 43 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 44 ; 44 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 45 ; 45 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 46 ; 46 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 47 ; 47 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 48 ; 48 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 49 ; 49 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 50 ; 50 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 51 ; 51 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 52 ; 52 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 53 ; 53 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 54 ; 54 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 55 ; 55 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 56 ; 56 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 57 ; 57 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 58 ; 58 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 59 ; 59 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 60 ; 60 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 61 ; 61 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 62 ; 62 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 63 ; 63 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 64 ; 64 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 65 ; 65 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 66 ; 66 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 67 ; 67 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 68 ; 68 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 69 ; 69 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 70 ; 70 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 71 ; 71 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 72 ; 72 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 73 ; 73 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 74 ; 74 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 75 ; 75 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 76 ; 76 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 77 ; 77 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 78 ; 78 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 79 ; 79 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 80 ; 80 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 81 ; 81 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 82 ; 82 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 83 ; 83 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 84 ; 84 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 85 ; 85 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 86 ; 86 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 87 ; 87 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 88 ; 88 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 89 ; 89 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 90 ; 90 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 91 ; 91 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 92 ; 92 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 93 ; 93 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 94 ; 94 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 95 ; 95 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 96 ; 96 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 97 ; 97 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 98 ; 98 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 99 ; 99 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 100 ; 100 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 101 ; 101 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 102 ; 102 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 103 ; 103 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 104 ; 104 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 105 ; 105 >
-   au < exists ; Proceedings of the National Academy of Sciences Volume 106 ; 106 >
-   
+    comment[h20] = H20 title
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.pnas.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Proceedings of the National Academy of Sciences Volume 1 ; 1 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 2 ; 2 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 3 ; 3 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 4 ; 4 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 5 ; 5 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 6 ; 6 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 7 ; 7 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 8 ; 8 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 9 ; 9 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 10 ; 10 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 11 ; 11 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 12 ; 12 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 13 ; 13 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 14 ; 14 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 15 ; 15 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 16 ; 16 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 17 ; 17 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 18 ; 18 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 19 ; 19 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 20 ; 20 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 21 ; 21 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 22 ; 22 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 23 ; 23 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 24 ; 24 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 25 ; 25 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 26 ; 26 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 27 ; 27 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 28 ; 28 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 29 ; 29 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 30 ; 30 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 31 ; 31 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 32 ; 32 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 33 ; 33 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 34 ; 34 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 35 ; 35 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 36 ; 36 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 37 ; 37 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 38 ; 38 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 39 ; 39 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 40 ; 40 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 41 ; 41 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 42 ; 42 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 43 ; 43 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 44 ; 44 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 45 ; 45 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 46 ; 46 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 47 ; 47 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 48 ; 48 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 49 ; 49 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 50 ; 50 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 51 ; 51 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 52 ; 52 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 53 ; 53 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 54 ; 54 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 55 ; 55 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 56 ; 56 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 57 ; 57 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 58 ; 58 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 59 ; 59 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 60 ; 60 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 61 ; 61 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 62 ; 62 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 63 ; 63 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 64 ; 64 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 65 ; 65 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 66 ; 66 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 67 ; 67 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 68 ; 68 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 69 ; 69 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 70 ; 70 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 71 ; 71 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 72 ; 72 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 73 ; 73 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 74 ; 74 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 75 ; 75 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 76 ; 76 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 77 ; 77 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 78 ; 78 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 79 ; 79 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 80 ; 80 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 81 ; 81 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 82 ; 82 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 83 ; 83 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 84 ; 84 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 85 ; 85 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 86 ; 86 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 87 ; 87 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 88 ; 88 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 89 ; 89 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 90 ; 90 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 91 ; 91 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 92 ; 92 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 93 ; 93 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 94 ; 94 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 95 ; 95 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 96 ; 96 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 97 ; 97 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 98 ; 98 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 99 ; 99 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 100 ; 100 >
+      au < exists ; Proceedings of the National Academy of Sciences Volume 101 ; 101 >
+      au < manifest ; Proceedings of the National Academy of Sciences Volume 102 ; 102 >
+      au < manifest ; Proceedings of the National Academy of Sciences Volume 103 ; 103 >
+      au < manifest ; Proceedings of the National Academy of Sciences Volume 104 ; 104 >
+      au < manifest ; Proceedings of the National Academy of Sciences Volume 105 ; 105 >
+      au < manifest ; Proceedings of the National Academy of Sciences Volume 106 ; 106 >
+
+    }
+
   }
- 
+
 }

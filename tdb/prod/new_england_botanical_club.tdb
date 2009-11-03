@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0035-4902
   
-      au < do_not_process ; Rhodora Volume 107 ; 107 >
-      au < do_not_process ; Rhodora Volume 108 ; 108 >
-      au < do_not_process ; Rhodora Volume 109 ; 109 >
+      au < doNotProcess ; Rhodora Volume 107 ; 107 >
+      au < doNotProcess ; Rhodora Volume 108 ; 108 >
+      au < doNotProcess ; Rhodora Volume 109 ; 109 >
     }
 
     {

@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.68.10.1 2009-04-30 20:11:03 edwardsb1 Exp $
+ * $Id: RemoteApi.java,v 1.68.10.2 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.zip.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.account.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
@@ -115,6 +116,7 @@ public class RemoteApi
   private ConfigManager configMgr;
   private IdentityManager idMgr;
   private RepositoryManager repoMgr;
+  private AccountManager acctMgr;
 
   private String paramBackupFileVer = DEFAULT_BACKUP_FILE_VERSION;
   private int paramBackupStreamMarkSize = DEFAULT_BACKUP_STREAM_MARK_SIZE;
@@ -135,6 +137,7 @@ public class RemoteApi
     configMgr = getDaemon().getConfigManager();
     idMgr = getDaemon().getIdentityManager();
     repoMgr = getDaemon().getRepositoryManager();
+    acctMgr = getDaemon().getAccountManager();
   }
 
   public void setConfig(Configuration config,
@@ -515,9 +518,8 @@ public class RemoteApi
 		    machineName);
 
       // add all the cache config files
-      for (Iterator iter = configMgr.getCacheConfigFiles().iterator();
-	   iter.hasNext(); ) {
-	File cfgfile = (File)iter.next();
+      for (ConfigManager.LocalFileDescr lfd : configMgr.getLocalFileDescrs()) {
+	File cfgfile = lfd.getFile();
 	if (cfgfile.getName().equals(ConfigManager.CONFIG_FILE_AU_CONFIG)) {
 	  addCfgFileToZip(zip, getAuConfigBackupStreamV1(machineName),
 			  ConfigManager.CONFIG_FILE_AU_CONFIG);
@@ -533,6 +535,10 @@ public class RemoteApi
 	log.debug2("Couldn't write iddb", e);
       }
       zip.closeEntry();
+      if (acctMgr.isEnabled()) {
+	File acctDir = acctMgr.getAcctDir();
+	ZipUtil.addDirToZip(zip, acctDir, "accts");
+      }
       List aus = pluginMgr.getAllAus();
       // add a directory for each AU
       if (aus != null) {

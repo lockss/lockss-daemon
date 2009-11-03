@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.22 2008-01-30 00:48:43 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.22.22.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class AuUtil {
    * @return the AU's total content size.
    */
   public static long getAuContentSize(ArchivalUnit au,
-				      boolean calcIfUnknown) {
+                                      boolean calcIfUnknown) {
     LockssDaemon daemon = getDaemon(au);
     RepositoryNode repoNode = getAuRepoNode(au);
     return repoNode.getTreeContentSize(null, calcIfUnknown);
@@ -141,22 +141,22 @@ public class AuUtil {
    * the plugin.  Checks only that all required (definitional) parameters
    * have values. */
   public static boolean isConfigCompatibleWithPlugin(Configuration config,
-						     Plugin plugin) {
+                                                     Plugin plugin) {
     for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	 iter.hasNext();) {
+         iter.hasNext();) {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       String key = descr.getKey();
       String val = config.get(key);
       if (val == null) {
-	if (descr.isDefinitional()) {
-	  log.debug(descr + " is definitional, absent from " + config);
-	  return false;
-	}
+        if (descr.isDefinitional()) {
+          log.debug(descr + " is definitional, absent from " + config);
+          return false;
+        }
       } else {
-	if (!descr.isValidValueOfType(val)) {
-	  log.debug(val + " is not a valid value of type " + descr);
-	  return false;
-	}
+        if (!descr.isValidValueOfType(val)) {
+          log.debug(val + " is not a valid value of type " + descr);
+          return false;
+        }
       }
     }
     return true;
@@ -170,16 +170,16 @@ public class AuUtil {
    */
   // Unit test for this is in TestBaseArchivalUnit
   public static TitleConfig findTitleConfig(Configuration config,
-					    Plugin plugin) {
+                                            Plugin plugin) {
     if (plugin.getSupportedTitles() == null)  {
       return null;
     }
     for (Iterator iter = plugin.getSupportedTitles().iterator();
-	 iter.hasNext(); ) {
+         iter.hasNext(); ) {
       String title = (String)iter.next();
       TitleConfig tc = plugin.getTitleConfig(title);
       if (tc != null && tc.matchesConfig(config) && tc.isSingleAu(plugin)) {
-	return tc;
+        return tc;
       }
     }
     return null;
@@ -187,14 +187,14 @@ public class AuUtil {
 
   public static boolean isClosed(ArchivalUnit au) {
     return getBoolValue(getAuParamOrTitleDefault(au,
-						 ConfigParamDescr.AU_CLOSED),
-			false);
+                                                 ConfigParamDescr.AU_CLOSED),
+                        false);
   }
 
   public static boolean isPubDown(ArchivalUnit au) {
     return isPubNever(au) ||
       getBoolValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN),
-		   false);
+                   false);
   }
 
   public static boolean okDeleteExtraFiles(ArchivalUnit au) {
@@ -203,19 +203,19 @@ public class AuUtil {
 
   public static boolean isPubNever(ArchivalUnit au) {
     return getBoolValue(getAuParamOrTitleDefault(au,
-						 ConfigParamDescr.PUB_NEVER),
-			false);
+                                                 ConfigParamDescr.PUB_NEVER),
+                        false);
   }
 
   public static boolean isPubDown(TitleConfig tc) {
     return isPubNever(tc) ||
       getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_DOWN),
-		   false);
+                   false);
   }
 
   public static boolean isPubNever(TitleConfig tc) {
     return getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_NEVER),
-			false);
+                        false);
   }
 
   public static int getProtocolVersion(ArchivalUnit au) {
@@ -230,7 +230,7 @@ public class AuUtil {
     if (tc != null) {
       Map attrs = tc.getAttributes();
       if (attrs != null) {
-	return (String)attrs.get(key);
+        return (String)attrs.get(key);
       }
     }
     return null;
@@ -238,7 +238,7 @@ public class AuUtil {
 
   /** Return an attribute value from the AU's title DB entry, if any */
   public static String getTitleAttribute(ArchivalUnit au, String key,
-					 String dfault) {
+                                         String dfault) {
     String res = getTitleAttribute(au, key);
     return (res != null) ? res : dfault;
   }
@@ -257,8 +257,15 @@ public class AuUtil {
     return dfault;
   }
 
+  public static String getStringValue(Object value, String dfault) {
+    if (value instanceof String) {
+      return (String)value;
+    }
+    return dfault;
+  }
+
   public static Object getAuParamOrTitleDefault(ArchivalUnit au,
-						ConfigParamDescr cpd) {
+                                                ConfigParamDescr cpd) {
     String key = cpd.getKey();
     String val = null;
     Configuration auConfig = au.getConfiguration();

@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositories.java,v 1.1.2.5 2009-10-19 23:04:57 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositories.java,v 1.1.2.6 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public interface CollectionOfAuRepositories {
   /**
    * This method opens an AU repository in a given directory.
    */
-  public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation) throws IOException, LockssRepositoryException;
+  public LockssAuRepository openAuRepository(ArchivalUnit au) throws IOException, LockssRepositoryException;
   
   
   /**

@@ -1,10 +1,10 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.3 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.3.20.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,12 +43,15 @@ import org.lockss.util.*;
 public class SagePublicationsPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
-
+  
+  protected static Logger logger = Logger.getLogger("SagePublicationsPdfTransform");
+  
   public static class RecognizeSyntheticPage implements PageTransform {
 
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Initially, assume the recognition fails
       boolean ret = false;
+      logger.debug3("RecognizeSyntheticPage invoked");
 
       // Get the tokens for the entire page
       List tokens = pdfPage.getStreamTokens();
@@ -65,9 +68,9 @@ public class SagePublicationsPdfTransform
             break;
 
           case 1:
-          case 7:
-            // Text: http://<something>.sagepub.com
-            if (PdfUtil.matchShowTextMatches(tokens, tok, "http://[-0-9A-Za-z]+\\.sagepub\\.com")) { ++progress; }
+          case 6:
+            // Text: a URL (no longer necessarily under sagepub.com)
+            if (PdfUtil.matchShowTextMatches(tokens, tok, "http://[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
             break;
 
           case 2:
@@ -76,8 +79,8 @@ public class SagePublicationsPdfTransform
             break;
 
           case 3:
-            // Text: "Published by:"
-            if (PdfUtil.matchShowText(tokens, tok, "Published by:")) { ++progress; }
+            // Text: "Published by:" or "Published on behalf of"
+            if (PdfUtil.matchShowTextMatches(tokens, tok, "Published (?:by:|on behalf of)")) { ++progress; }
             break;
 
           case 4:
@@ -86,18 +89,13 @@ public class SagePublicationsPdfTransform
             break;
 
           case 5:
-            // Text: "can be found at:"
-            if (PdfUtil.matchShowText(tokens, tok, "can be found at:")) { ++progress; }
-            break;
-
-          case 6:
             // Text: "Additional services and information for "
             if (PdfUtil.matchShowText(tokens, tok, "Additional services and information for ")) { ++progress; }
             break;
 
-          // case 7: see case 2
+          // case 6: see case 1
 
-          case 8:
+          case 7:
             // Text: "Downloaded from "
             if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ret = true; break iteration; }
             break;
@@ -111,6 +109,7 @@ public class SagePublicationsPdfTransform
       }
 
       // Return true if only if all the steps were visited successfully
+      if (logger.isDebug3()) { logger.debug3("RecognizeSyntheticPage returning " + ret); }
       return ret;
     }
 
@@ -147,8 +146,10 @@ public class SagePublicationsPdfTransform
                                                 new TransformFirstPage(// ...is removed,
                                                                        new RemovePage()),
                                                 // ...and on all the pages now that the first is gone...
-                                                new TransformEachPage(// ...collapse "Downloaded from"
-                                                                      new CollapseDownloadedFrom(au))
+                                                new TransformEachPage(// ...collapse "Downloaded from",
+                                                                      new CollapseDownloadedFrom(au)),
+//                                              // ...and normalize the metadata
+                                                new HighWirePdfFilterFactory.NormalizeMetadata(),
                                               });
     }
 

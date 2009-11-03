@@ -1,10 +1,10 @@
 /*
- * $Id: WrapperUtil.java,v 1.5 2008-06-19 20:20:45 dshr Exp $
+ * $Id: WrapperUtil.java,v 1.5.16.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,27 +50,35 @@ public class WrapperUtil {
   /** Register factories for all interfaces that should be wrapped. */
   static void registerFactories() {
     registerWrapperFactory(FilterFactory.class,
-			   new FilterFactoryWrapper.Factory());
+                           new FilterFactoryWrapper.Factory());
     registerWrapperFactory(FilterRule.class,
-			   new FilterRuleWrapper.Factory());
+                           new FilterRuleWrapper.Factory());
     registerWrapperFactory(UrlNormalizer.class,
-			   new UrlNormalizerWrapper.Factory());
+                           new UrlNormalizerWrapper.Factory());
     registerWrapperFactory(org.lockss.extractor.LinkExtractor.class,
-			   new LinkExtractorWrapper.Factory());
+                           new LinkExtractorWrapper.Factory());
     registerWrapperFactory(org.lockss.extractor.LinkExtractorFactory.class,
-			   new LinkExtractorFactoryWrapper.Factory());
+                           new LinkExtractorFactoryWrapper.Factory());
     registerWrapperFactory(org.lockss.rewriter.LinkRewriterFactory.class,
-			   new LinkRewriterFactoryWrapper.Factory());
+                           new LinkRewriterFactoryWrapper.Factory());
+    registerWrapperFactory(org.lockss.plugin.ArticleIteratorFactory.class,
+                           new ArticleIteratorFactoryWrapper.Factory());
+    registerWrapperFactory(org.lockss.extractor.MetadataExtractorFactory.class,
+                           new MetadataExtractorFactoryWrapper.Factory());
+    registerWrapperFactory(org.lockss.extractor.MetadataExtractor.class,
+                           new MetadataExtractorWrapper.Factory());
     registerWrapperFactory(LoginPageChecker.class,
-			   new LoginPageCheckerWrapper.Factory());
+                           new LoginPageCheckerWrapper.Factory());
     registerWrapperFactory(PermissionCheckerFactory.class,
-			   new PermissionCheckerFactoryWrapper.Factory());
+                           new PermissionCheckerFactoryWrapper.Factory());
     registerWrapperFactory(DefinableArchivalUnit.ConfigurableCrawlWindow.class,
-			   new ConfigurableCrawlWindowWrapper.Factory());
+                           new ConfigurableCrawlWindowWrapper.Factory());
     registerWrapperFactory(org.lockss.util.urlconn.CacheResultHandler.class,
-			   new CacheResultHandlerWrapper.Factory());
+                           new CacheResultHandlerWrapper.Factory());
     registerWrapperFactory(ExploderHelper.class,
-			   new ExploderHelperWrapper.Factory());
+                           new ExploderHelperWrapper.Factory());
+    registerWrapperFactory(CrawlUrlComparatorFactory.class,
+                           new CrawlUrlComparatorFactoryWrapper.Factory());
   }
 
   /** Register a wrapper factory for instances of the interface */
@@ -97,8 +105,8 @@ public class WrapperUtil {
     String name = obj.getClass().getName();
     synchronized (missingWrappers) {
       if (!missingWrappers.contains(name)) {
-	missingWrappers.add(name);
-	log.warning("No wrapper for " + name);
+        missingWrappers.add(name);
+        log.warning("No wrapper for " + name);
       }
     }
   }

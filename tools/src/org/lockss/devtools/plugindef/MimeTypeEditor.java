@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeEditor.java,v 1.2 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: MimeTypeEditor.java,v 1.2.38.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -65,10 +65,15 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
     
     void put(EditableDefinablePlugin plugin,
              String mimeType,
-             String mimeTypeValue,
-             boolean tryDynamic)
+             String mimeTypeValue)
         throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition;
     
+    void checkValue(EditableDefinablePlugin plugin,
+                    String mimeType,
+                    String mimeTypeValue)
+        throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition;
+    
+    void clear(EditableDefinablePlugin plugin);
   }
   
   public static class FilterRuleEditorBuilder implements MimeTypeEditorBuilder {
@@ -82,41 +87,97 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
     }
     
     public Map getMap(EditableDefinablePlugin plugin) {
-      return Collections.unmodifiableMap(plugin.getAuFilters());
+      return Collections.unmodifiableMap(plugin.getHashFilterRules());
     }
     
     public void put(EditableDefinablePlugin plugin,
                     String mimeType,
-                    String mimeTypeValue,
-                    boolean tryDynamic)
+                    String mimeTypeValue)
         throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
-      plugin.setAuFilter(mimeType, mimeTypeValue, tryDynamic);
+      plugin.setHashFilterRule(mimeType, mimeTypeValue);
     }
     
+    public void checkValue(EditableDefinablePlugin plugin,
+                           String mimeType,
+                           String mimeTypeValue)
+        throws DynamicallyLoadedComponentException, 
+               PluginException.InvalidDefinition {
+      plugin.checkHashFilterRule(mimeType, mimeTypeValue);
+    }
+    
+    public void clear(EditableDefinablePlugin plugin) {
+      plugin.clearHashFilterRules();
+    }
   }
   
-  public static class FilterFactoryEditorBuilder implements MimeTypeEditorBuilder {
+  public static class HashFilterFactoryEditorBuilder
+    implements MimeTypeEditorBuilder {
     
     public String getValueName() {
-      return "filter factory";
+      return "hash filter factory";
     }
     
     public String getValueClassName() {
-      return "FilterFactory";
+      return "HashFilterFactory";
     }
     
     public Map getMap(EditableDefinablePlugin plugin) {
-      return Collections.unmodifiableMap(plugin.getAuFilterFactories());
+      return Collections.unmodifiableMap(plugin.getHashFilterFactories());
     }
     
     public void put(EditableDefinablePlugin plugin,
                     String mimeType,
-                    String mimeTypeValue,
-                    boolean tryDynamic)
+                    String mimeTypeValue)
         throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
-      plugin.setAuFilterFactory(mimeType, mimeTypeValue, tryDynamic);
+      plugin.setHashFilterFactory(mimeType, mimeTypeValue);
     }
 
+    public void checkValue(EditableDefinablePlugin plugin,
+                           String mimeType,
+                           String mimeTypeValue)
+        throws DynamicallyLoadedComponentException, 
+               PluginException.InvalidDefinition {
+      plugin.checkHashFilterFactory(mimeType, mimeTypeValue);
+    }
+    
+    public void clear(EditableDefinablePlugin plugin) {
+      plugin.clearHashFilterFactories();
+    }
+  }
+  
+  public static class CrawlFilterFactoryEditorBuilder
+    implements MimeTypeEditorBuilder {
+    
+    public String getValueName() {
+      return "crawl filter factory";
+    }
+    
+    public String getValueClassName() {
+      return "CrawlFilterFactory";
+    }
+    
+    public Map getMap(EditableDefinablePlugin plugin) {
+      return Collections.unmodifiableMap(plugin.getCrawlFilterFactories());
+    }
+    
+    public void put(EditableDefinablePlugin plugin,
+                    String mimeType,
+                    String mimeTypeValue)
+        throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
+      plugin.setCrawlFilterFactory(mimeType, mimeTypeValue);
+    }
+
+    public void checkValue(EditableDefinablePlugin plugin,
+                           String mimeType,
+                           String mimeTypeValue)
+        throws DynamicallyLoadedComponentException, 
+               PluginException.InvalidDefinition {
+      plugin.checkCrawlFilterFactory(mimeType, mimeTypeValue);
+    }
+    
+    public void clear(EditableDefinablePlugin plugin) {
+      plugin.clearCrawlFilterFactories();
+    }
   }
   
   protected MimeTypeEditorBuilder mimeTypeEditorBuilder;
@@ -224,16 +285,31 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
       String mimeTypeValue = (String)filtersTable.getValueAt(row, 1);
 
       try {
-        mimeTypeEditorBuilder.put(edp, mimeType, mimeTypeValue, true);
+        mimeTypeEditorBuilder.checkValue(edp, mimeType, mimeTypeValue);
       }
       catch (DynamicallyLoadedComponentException dlce) {
         String logMessage = "Failed to set the " + mimeTypeEditorBuilder.getValueName()
                             + " for MIME type " + mimeType + " to " + mimeTypeValue;
         logger.error(logMessage, dlce);
-        if (EDPInspectorTableModel.handleDynamicallyLoadedComponentException(this, dlce)) {
-          logger.debug(logMessage + ": overruled by user");
-          mimeTypeEditorBuilder.put(edp, mimeType, mimeTypeValue, false);
+        if (!EDPInspectorTableModel.handleDynamicallyLoadedComponentException(this, dlce)) {
+          return;
+        } else {
+          logger.debug("User override; allow " + mimeTypeValue);
         }
+      }
+    }
+    mimeTypeEditorBuilder.clear(edp);
+    for (int row = 0 ; row < num_rows ; row++) {
+      String mimeType = (String)filtersTable.getValueAt(row, 0);
+      String mimeTypeValue = (String)filtersTable.getValueAt(row, 1);
+
+      try {
+        mimeTypeEditorBuilder.put(edp, mimeType, mimeTypeValue);
+      }
+      catch (DynamicallyLoadedComponentException dlce) {
+        String logMessage = "Internal error; MIME type " + mimeType
+          + " not set to " + mimeTypeValue;
+        logger.error(logMessage, dlce);
       }
       catch (PluginException.InvalidDefinition ex) {
         JOptionPane.showMessageDialog(this,

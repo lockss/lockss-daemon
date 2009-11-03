@@ -1,5 +1,5 @@
 /*
- * $Id: ZipUtil.java,v 1.4 2006-03-27 08:50:28 tlipkis Exp $
+ * $Id: ZipUtil.java,v 1.4.58.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class ZipUtil {
   static Logger log = Logger.getLogger("ZipUtil");
 
   /** Magic number of ZIP file.  (Why isn't this public in ZipConstants?) */
-  public static final long ZIP_MAGIC = 0x504b0304L;	// "PK\003\004"
+  public static final long ZIP_MAGIC = 0x504b0304L;     // "PK\003\004"
 
   /**
    * Return true if the file looks like a zip file.  Checks only the magic
@@ -117,30 +117,105 @@ public class ZipUtil {
       ZipEntry entry;
 
       while ((entry = zip.getNextEntry()) != null) {
-	if (entry.isDirectory()) {
-	  continue;
-	}
-	String relpath = entry.getName();
-	if (relpath.startsWith("/")) {
-	  throw new IOException("Absolute paths in zip not allowed");
-	}
-	File file = new File(toDir, relpath);
-	if (!file.getCanonicalPath().startsWith(toDir.getCanonicalPath())) {
-	  throw new IOException("Illegal path traversal");
-	}
-	File parent = file.getParentFile();
-	if (parent != null) {
-	  if (!parent.exists()) {
-	    parent.mkdirs();
-	  }
-	}
+        if (entry.isDirectory()) {
+          continue;
+        }
+        String relpath = entry.getName();
+        if (relpath.startsWith("/")) {
+          throw new IOException("Absolute paths in zip not allowed:" + relpath);
+        }
+        File file = new File(toDir, relpath);
+        if (!file.getCanonicalPath().startsWith(toDir.getCanonicalPath())) {
+          throw new IOException("Illegal path traversal");
+        }
+        File parent = file.getParentFile();
+        if (parent != null) {
+          if (!parent.exists()) {
+            parent.mkdirs();
+          }
+        }
         OutputStream out = new FileOutputStream(file);
-	long n = StreamUtil.copy(zip, out);
-	IOUtil.safeClose(out);
-	if (log.isDebug3()) log.debug3("Write " + n + " bytes to " + file);
+        long n = StreamUtil.copy(zip, out);
+        IOUtil.safeClose(out);
+        if (log.isDebug3()) log.debug3("Write " + n + " bytes to " + file);
       }
     } finally {
       IOUtil.safeClose(zip);
+    }
+  }
+
+  public static void addFileToZip(ZipOutputStream z,
+                                  File file) throws IOException {
+    addFileToZip(z, file, null);
+  }
+
+  public static void addFileToZip(ZipOutputStream z,
+                                  File file,
+                                  String entryName) throws IOException {
+    InputStream in = null;
+    try {
+      in = new BufferedInputStream(new FileInputStream(file));
+      if (entryName == null) {
+        entryName = file.getName();
+      }
+      addFileToZip(z, in, entryName);
+    } finally {
+      IOUtil.safeClose(in);
+    }
+  }
+
+  public static void addFileToZip(ZipOutputStream z,
+                                  InputStream in,
+                                  String entryName) throws IOException {
+    try {
+      z.putNextEntry(new ZipEntry(entryName));
+      StreamUtil.copy(in, z);
+    } finally {
+      z.closeEntry();
+    }
+  }
+
+  public static void addDirToZip(ZipOutputStream z, String dirname,
+                                 String addPrefix) {
+    addDirToZip(z, new File(dirname), addPrefix);
+  }
+
+  public static void addDirToZip(ZipOutputStream z,
+                                 File dir,
+                                 String addPrefix) {
+    addDirToZip(z, dir, addPrefix, dir.getPath());
+  }
+
+  public static void addDirToZip(ZipOutputStream z,
+                                 String filename,
+                                 String addPrefix,
+                                 String removePrefix) {
+    addDirToZip(z, new File(filename), removePrefix);
+  }
+
+  public static void addDirToZip(ZipOutputStream z,
+                                 File file,
+                                 String addPrefix,
+                                 String removePrefix) {
+    try {
+      if (file.isDirectory()) {
+        for (String name : file.list()) {
+          addDirToZip(z, new File(file, name), addPrefix, removePrefix);
+        }
+      } else {
+        // regular file
+        String entName = file.getPath();
+        if (removePrefix != null && file.getPath().startsWith(removePrefix)) {
+          entName =  entName.substring(removePrefix.length() + 1);
+        }
+        if (!StringUtil.isNullString(addPrefix)) {
+          entName =  new File(addPrefix, entName).getPath();
+        }
+        ZipEntry anEntry = new ZipEntry(entName);
+        addFileToZip(z, file, entName);
+      }
+    } catch(Exception e) {
+      //handle exception 
     }
   }
 }

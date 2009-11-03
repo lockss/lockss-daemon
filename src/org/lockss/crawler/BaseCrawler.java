@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.32 2008-09-15 08:10:44 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.32.12.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -208,30 +208,57 @@ public abstract class BaseCrawler
     connectionPool.setDataTimeout(dataTimeout);
 
     boolean proxyEnabled = config.getBoolean(PARAM_PROXY_ENABLED,
-					     DEFAULT_PROXY_ENABLED);
+                                             DEFAULT_PROXY_ENABLED);
     if (proxyEnabled) {
       proxyHost = config.get(PARAM_PROXY_HOST);
       proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
       if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
-	proxyHost = null;
-      } else {
-	if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
-					   + ":" + proxyPort);
+        proxyHost = null;
       }
-    } else {
+    }
+    String auProxySpec =
+      AuUtil.getStringValue(AuUtil.getAuParamOrTitleDefault(au, ConfigParamDescr.CRAWL_PROXY), null);
+    if ("DIRECT".equalsIgnoreCase(auProxySpec)) {
+      if (proxyHost != null) {
+        logger.info("AU overrides crawl proxy with DIRECT");
+      }
       proxyHost = null;
+    } else if (auProxySpec != null) {
+      List<String> lst = StringUtil.breakAt(auProxySpec, ':', 3, false, true);
+      if (lst.size() == 2) {
+        try {
+          String host = lst.get(0);
+          int port = Integer.parseInt(lst.get(1));
+          if (!StringUtil.isNullString(host) && port > 0) {
+            proxyHost = host;
+            proxyPort = port;
+            proxyEnabled = true;
+            logger.info("Using AU crawl_proxy: " + proxyHost + ":" + proxyPort);
+          } else {
+            logger.warning("Illegal AU crawl_proxy: " + auProxySpec);
+          }
+        } catch (NumberFormatException e) {
+          logger.warning("Illegal AU crawl_proxy: " + auProxySpec);
+        }
+      } else {
+        logger.warning("Illegal AU crawl_proxy: " + auProxySpec);
+      }
+    }
+    if (proxyHost != null) {
+      if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
+                                         + ":" + proxyPort);
     }
     mimeTypePauseAfter304 =
       config.getBoolean(PARAM_MIME_TYPE_PAUSE_AFTER_304,
-			DEFAULT_MIME_TYPE_PAUSE_AFTER_304);
+                        DEFAULT_MIME_TYPE_PAUSE_AFTER_304);
   }
 
   List getDaemonPermissionCheckers() {
     if (daemonPermissionCheckers == null) {
       if (getDaemon().isClockss()) {
-	daemonPermissionCheckers = new ClockssPermission().getCheckers();
+        daemonPermissionCheckers = new ClockssPermission().getCheckers();
       } else {
-	daemonPermissionCheckers = new LockssPermission().getCheckers();
+        daemonPermissionCheckers = new LockssPermission().getCheckers();
       }
     }
     return daemonPermissionCheckers;
@@ -264,49 +291,49 @@ public abstract class BaseCrawler
     crawlStatus.signalCrawlStarted();
     try {
       if (crawlAborted) {
-	//don't start an aborted crawl
-	return aborted();
+        //don't start an aborted crawl
+        return aborted();
       }
       logger.info("Beginning crawl of "+au);
       boolean res = doCrawl0();
       if (!res && !crawlStatus.isCrawlError()) {
-	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
+        crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
       }
       if (crawlStatus.isCrawlError()) {
-	alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
-			    getTypeString() + " Crawl failed: " +
-			    crawlStatus.getCrawlErrorMsg());
+        alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
+                            getTypeString() + " Crawl failed: " +
+                            crawlStatus.getCrawlErrorMsg());
       }
       if (isWholeAU()) {
-	NodeManager nodeManager = getDaemon().getNodeManager(au);
-	if (res) {
-	  nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
-	  } else {
-	    nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
-					      crawlStatus.getCrawlErrorMsg());
-	}	  
+        NodeManager nodeManager = getDaemon().getNodeManager(au);
+        if (res) {
+          nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
+          } else {
+            nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
+                                              crawlStatus.getCrawlErrorMsg());
+        }         
       }
       return res;
     } catch (RuntimeException e) {
       logger.error("doCrawl0()", e);
       alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
-			  "Crawl of " + au.getName() +
-			  "threw " + e.getMessage());
+                          "Crawl of " + au.getName() +
+                          "threw " + e.getMessage());
       if (isWholeAU()) {
-	NodeManager nodeManager = getDaemon().getNodeManager(au);
-	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
-					    e.getMessage());
+        NodeManager nodeManager = getDaemon().getNodeManager(au);
+        nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
+                                            e.getMessage());
       }
       throw e;
     } finally {
       crawlStatus.signalCrawlEnded();
       if (connectionPool != null) {
-	try {
-	  connectionPool.closeIdleConnections(0);
-	  connectionPool = null;
-	} catch (RuntimeException e) {
-	  logger.warning("closeIdleConnections", e);
-	}
+        try {
+          connectionPool.closeIdleConnections(0);
+          connectionPool = null;
+        } catch (RuntimeException e) {
+          logger.warning("closeIdleConnections", e);
+        }
       }
     }
   }
@@ -314,13 +341,13 @@ public abstract class BaseCrawler
   protected boolean populatePermissionMap() {
       // get the permission list from crawl spec
     permissionMap = new PermissionMap(au, this, getDaemonPermissionCheckers(),
-				      pluginPermissionChecker);
+                                      pluginPermissionChecker);
     String perHost = au.getPerHostPermissionPath();
     if (perHost != null) {
       try {
-	permissionMap.setPerHostPermissionPath(perHost);
+        permissionMap.setPerHostPermissionPath(perHost);
       } catch (MalformedURLException e) {
-	logger.error("Plugin error", e);
+        logger.error("Plugin error", e);
       }
     }
     return permissionMap.init();
@@ -331,7 +358,7 @@ public abstract class BaseCrawler
    * new input stream for the given url
    */
   public BufferedInputStream resetInputStream(BufferedInputStream is,
-					      String url) throws IOException {
+                                              String url) throws IOException {
     try {
       is.reset();
     } catch (IOException e) {
@@ -361,23 +388,23 @@ public abstract class BaseCrawler
       // XXX add getCachedProperties() to UrlCacher so don't have to create
       // CachedUrl (read props, open InputStream)
       {
-	CachedUrl cu = uc.getCachedUrl();
-	updateStatusMimeType(cu);
-	if (cu.hasContent()) {
-	  crawlStatus.addContentBytesFetched(cu.getContentSize());
-	  previousContentType = cu.getContentType();
-	}
-	cu.release();
+        CachedUrl cu = uc.getCachedUrl();
+        updateStatusMimeType(cu);
+        if (cu.hasContent()) {
+          crawlStatus.addContentBytesFetched(cu.getContentSize());
+          previousContentType = cu.getContentType();
+        }
+        cu.release();
       }
       break;
     case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
       crawlStatus.signalUrlNotModified(uc.getUrl());
       if (mimeTypePauseAfter304) {
-	CachedUrl cu = uc.getCachedUrl();
-	if (cu.hasContent()) {
-	  previousContentType = cu.getContentType();
-	}
-	cu.release();
+        CachedUrl cu = uc.getCachedUrl();
+        if (cu.hasContent()) {
+          previousContentType = cu.getContentType();
+        }
+        cu.release();
       }
       break;
     }

@@ -16,9 +16,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0909-6396
   
-      au < do_not_process ; Wildlife Biology Volume 11 ; 11 >
-      au < do_not_process ; Wildlife Biology Volume 12 ; 12 >
-      au < do_not_process ; Wildlife Biology Volume 13 ; 13 >
+      au < doNotProcess ; Wildlife Biology Volume 11 ; 11 >
+      au < doNotProcess ; Wildlife Biology Volume 12 ; 12 >
+      au < doNotProcess ; Wildlife Biology Volume 13 ; 13 >
     }
 
     {

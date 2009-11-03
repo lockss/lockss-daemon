@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.6 2009-10-19 23:04:57 edwardsb1 Exp $
+ * $Id: CollectionOfAuRepositoriesImpl.java,v 1.1.2.7 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -66,6 +66,11 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
     }
     
     m_dirSource = dirSource;
+  }
+  
+  
+  protected File getSource() {
+    return m_dirSource;
   }
   
    /**
@@ -165,13 +170,12 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
 
   
   /**
-   * This method opens an AU in a given directory.
+   * This method opens a Lockss AU Repository from an ArchivalUnit. 
    * 
    * @param au The archival unit to open
-   * @param dirLocation Where the AU holds its data
    * @throws FileNotFoundException 
    */
-  public LockssAuRepository openAuRepository(ArchivalUnit au, File dirLocation)
+  public LockssAuRepository openAuRepository(ArchivalUnit au)
       throws LockssRepositoryException, FileNotFoundException {
     LockssAuRepository lar;
     
@@ -189,5 +193,5 @@ public class CollectionOfAuRepositoriesImpl implements CollectionOfAuRepositorie
     PlatformUtil pu = PlatformUtil.getInstance();
     
     return pu.getDF(m_dirSource.getAbsolutePath());
-  }
+  }  
 }

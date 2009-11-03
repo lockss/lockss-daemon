@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.6 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.6.26.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -55,15 +55,15 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
    
   private static List colDescsFetched =
     ListUtil.list(new ColumnDescriptor(URL, "URL Fetched",
-				       ColumnDescriptor.TYPE_STRING));
+                                       ColumnDescriptor.TYPE_STRING));
 
   private static List colDescsNotModified =
     ListUtil.list(new ColumnDescriptor(URL, "URL Not-Modified",
-				       ColumnDescriptor.TYPE_STRING));
+                                       ColumnDescriptor.TYPE_STRING));
 
   private static List colDescsParsed =
     ListUtil.list(new ColumnDescriptor(URL, "URL Parsed",
-				       ColumnDescriptor.TYPE_STRING));
+                                       ColumnDescriptor.TYPE_STRING));
  
   private static List colDescsPending =
     ListUtil.list(new ColumnDescriptor(URL, "URL Pending",
@@ -71,13 +71,13 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
 
   private static List colDescsError =
     ListUtil.list(new ColumnDescriptor(URL, "URL",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(CRAWL_ERROR, "Error",
-				       ColumnDescriptor.TYPE_STRING));
+                                       ColumnDescriptor.TYPE_STRING),
+                  new ColumnDescriptor(CRAWL_ERROR, "Error",
+                                       ColumnDescriptor.TYPE_STRING));
 
   private static List colDescsExcluded =
     ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
-				       ColumnDescriptor.TYPE_STRING));
+                                       ColumnDescriptor.TYPE_STRING));
 
   private List colDescsMimeTypeUrls; 
 
@@ -163,9 +163,9 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       return colDescsExcluded;
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {    
       colDescsMimeTypeUrls =
-	ListUtil.list(new ColumnDescriptor(URL, 
-					   getMimeTypeStr(tableStr),
-					   ColumnDescriptor.TYPE_STRING));
+        ListUtil.list(new ColumnDescriptor(URL, 
+                                           getMimeTypeStr(tableStr),
+                                           ColumnDescriptor.TYPE_STRING));
       return colDescsMimeTypeUrls;
     }
     return null;
@@ -190,8 +190,8 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       rows = new ArrayList(errorUrls.size());
       int ix = 1;
       for (Iterator it = errorUrls.iterator(); it.hasNext();) {
-	String url = (String)it.next();
- 	rows.add(makeRow(url, ix++, (String)errorMap.get(url)));
+        String url = (String)it.next();
+        rows.add(makeRow(url, ix++, (String)errorMap.get(url)));
       }
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
       rows = urlSetToRows( status.getUrlsOfMimeType(getMimeTypeStr(tableStr)) );
@@ -236,13 +236,13 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       Collection excl = status.getUrlsExcluded();
       if (status.getNumExcludedExcludes() > 0) {
-	List summary = new ArrayList();
-	String str = status.getNumExcludedExcludes() +
-	  " or fewer additional off-site URLS were excluded but not listed";
-	summary.add(new StatusTable.SummaryInfo(null,
-						ColumnDescriptor.TYPE_STRING,
-						str));
-	return summary;
+        List summary = new ArrayList();
+        String str = status.getNumExcludedExcludes() +
+          " or fewer additional off-site URLs were excluded but not listed";
+        summary.add(new StatusTable.SummaryInfo(null,
+                                                ColumnDescriptor.TYPE_STRING,
+                                                str));
+        return summary;
       }
     }
     return null;

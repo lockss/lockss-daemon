@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.7 2008-02-06 20:37:20 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.7.22.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -39,15 +39,24 @@ import org.lockss.plugin.*;
 import org.lockss.crawler.Exploder;
 
 /**
+ * Documentation of the Elsevier format is at:
+ * http://info.sciencedirect.com/techsupport/sdos/effect41.pdf
+ * http://info.sciencedirect.com/techsupport/sdos/sdos30.pdf
+ *
  * This ExploderHelper encapsulates knowledge about the way
  * Elsevier delivers source files.  They come as TAR
  * archives containing additions to a directory tree whose
  * layers are:
  *
  * 1. <code>${JOURNAL_ID}</code> JOURNAL_ID is the ISSN (or an
- *    ISSN-like string) without the dash.
+ *    ISSN-like string) without the dash. The tar file is named
+ *    ${JOURNAL_ID}.tar
  *
- * 2. <code>${ARTICLE_ID}</code> ARTICLE_ID is a similar string
+ * 2. <code>${ISSUE_ID}</code> ISSUE_ID is string unique name for the
+ *    issue within the journal.
+ *
+ * 3. <code>${ARTICLE_ID}</code> ARTICLE_ID is a similar string naming
+ *    the article.
  * This directory contains files called
  * - *.pdf PDF
  * - *.raw ASCII
@@ -71,21 +80,29 @@ import org.lockss.crawler.Exploder;
  * they are left null.
  */
 public class ElsevierExploderHelper implements ExploderHelper {
-  private static final int JOU_INDEX = 0;
+  private static final int ISS_INDEX = 0;
   private static final int ART_INDEX = 1;
   private static final String BASE_URL = "http://elsevier.clockss.org/";
-  static final int endOfBase = 1;
+  static final int endOfBase = 0;
   static final int minimumPathLength = 3;
   static Logger logger = Logger.getLogger("ElsevierExploderHelper");
   private static final String[] ignoreMe = {
     "checkmd5.fil",
   };
+    private static final String extension = ".tar";
 
   public ElsevierExploderHelper() {
   }
 
   public void process(ArchiveEntry ae) {
-    String baseUrl = BASE_URL;
+    String issn = archiveNameToISSN(ae);
+    if (issn == null) {
+      ae.setRestOfUrl(null);
+      return;
+    }
+    // The base URL contains the ISSN from the archive name
+    String baseUrlStem = BASE_URL;
+    String baseUrl = baseUrlStem + issn + "/";
     // Parse the name
     String fullName = ae.getName();
     String[] pathElements = fullName.split("/");
@@ -102,16 +119,6 @@ public class ElsevierExploderHelper implements ExploderHelper {
       return;
     }
     for (int i = 0; i < endOfBase; i++) {
-      if (false) {
-	// XXX should do a parse check of an ISSN
-	try {
-	  int journal = Integer.parseInt(pathElements[i]);
-	} catch (NumberFormatException e) {
-	  logger.warning("Element " + i + " of " + ae.getName() +
-			 " should be an integer");
-	  return;
-	}
-      }
       baseUrl += pathElements[i] + "/";
     }
     String restOfUrl = "";
@@ -135,7 +142,8 @@ public class ElsevierExploderHelper implements ExploderHelper {
       Hashtable addText = new Hashtable();
       String journalTOC = baseUrl + "index.html";
       String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
-	"art #" + pathElements[ART_INDEX] + "</a></li>\n";
+        "issue #" + pathElements[ISS_INDEX] +
+	" art #" + pathElements[ART_INDEX] + "</a></li>\n";
       logger.debug3("journalTOC " + journalTOC + " link " + link);
       ae.addTextTo(journalTOC, link);
     } else if (restOfUrl.endsWith(".xml")) {
@@ -147,8 +155,69 @@ public class ElsevierExploderHelper implements ExploderHelper {
     props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
 	      "Elsevier");
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
-	      pathElements[JOU_INDEX]);
+	      issn);
     ae.setAuProps(props);
   }
 
+  private boolean checkISSN(String s) {
+    char[] c = s.toCharArray();
+    // The ISSN is 7 digits followed by either a digit or X
+    // The last digit is a check digit as described here:
+    // http://en.wikipedia.org/wiki/ISSN
+    if (c.length != 8) {
+      return false;
+    }
+    int checksum = 0;
+    for (int i = 0; i < c.length-1; i++) {
+      if (!Character.isDigit(c[i])) {
+	return false;
+      }
+      try {
+	int j = Integer.parseInt(Character.toString(c[i]));
+	checksum += j * (c.length - i);
+      } catch (NumberFormatException ex) {
+	return false;
+      }
+    }
+    if (Character.isDigit(c[c.length-1])) {
+      try {
+	int j = Integer.parseInt(Character.toString(c[c.length-1]));
+	checksum += j;
+      } catch (NumberFormatException ex) {
+	return false;
+      }
+    } else if (c[c.length-1] == 'X') {
+      checksum += 10;
+    } else {
+      return false;
+    }
+    if ((checksum % 11) != 0) {
+      return false;
+    }
+    return true;
+  }
+
+  private String archiveNameToISSN(ArchiveEntry ae) {
+    String ret = null;
+    String an = ae.getArchiveName();
+    if (an != null) {
+      // The ISSN is the part of an from the last / to the .tar
+	int slash = an.lastIndexOf("/");
+      int dot = an.lastIndexOf(extension);
+      if (slash > 0 && dot > slash) {
+	String maybe = an.substring(slash + 1, dot);
+	if (checkISSN(maybe)) {
+	  ret = maybe;
+	  logger.debug3("ISSN: " + ret);
+	} else {
+          logger.warning("Bad ISSN in archive name " + an);
+	}
+      } else {
+	logger.warning("Malformed archive name " + an);
+      }
+    } else {
+      logger.error("Null archive name");
+    }
+    return ret;
+  }
 }

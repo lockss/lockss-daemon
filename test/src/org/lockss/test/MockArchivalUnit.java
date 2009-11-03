@@ -1,10 +1,10 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.80 2008-09-15 08:10:43 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.80.10.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,14 +69,17 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Hashtable cuHash = new Hashtable();
 
   private FilterRule filterRule = null;
-  private FilterFactory filterFactory = null;
+  private FilterFactory hashFilterFactory = null;
+  private FilterFactory crawlFilterFactory = null;
   private LinkRewriterFactory rewriterFactory = null;
+  private Iterator articleIterator = null;
   private Map extractors = new HashMap();
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
   private String fetchRateLimiterKey;
   private String perHostPermissionPath;
+  private Comparator<CrawlUrl> crawlUrlCmp;
 
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
 
@@ -200,6 +203,9 @@ public class MockArchivalUnit implements ArchivalUnit {
     return uc;
   }
 
+  /**
+   * @deprecated
+   */
   public void addContent(String url, String content) {
     MockCachedUrl cu = (MockCachedUrl)makeCachedUrl(url);
     if (cu != null) {
@@ -233,7 +239,7 @@ public class MockArchivalUnit implements ArchivalUnit {
    * @param props CIProperties to be associated with this url
    */
   public MockCachedUrl addUrl(String url, boolean exists,
-			      boolean shouldCache, CIProperties props) {
+                              boolean shouldCache, CIProperties props) {
     return addUrl(url, exists, shouldCache, props, null, 0);
   }
   /**
@@ -243,9 +249,9 @@ public class MockArchivalUnit implements ArchivalUnit {
    * @param timesToThrow number of times to throw the exception
    */
   public MockCachedUrl addUrl(String url,
-			      Exception cacheException, int timesToThrow) {
+                              Exception cacheException, int timesToThrow) {
     return addUrl(url, false, true, new CIProperties(),
-		  cacheException, timesToThrow);
+                  cacheException, timesToThrow);
   }
 
   /**
@@ -269,7 +275,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public MockCachedUrl addUrl(String url,
-			      boolean exists, boolean shouldCache) {
+                              boolean exists, boolean shouldCache) {
     CIProperties props = new CIProperties();
     props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     return addUrl(url, exists, shouldCache, props);
@@ -287,9 +293,9 @@ public class MockArchivalUnit implements ArchivalUnit {
   
   
   private MockCachedUrl addUrl(String url,
-			       boolean exists, boolean shouldCache,
-			       CIProperties props,
-			       Exception cacheException, int timesToThrow) {
+                               boolean exists, boolean shouldCache,
+                               CIProperties props,
+                               Exception cacheException, int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url, this);
     cu.setProperties(props);
     cu.setExists(exists);
@@ -373,16 +379,16 @@ public class MockArchivalUnit implements ArchivalUnit {
     }
     Properties props = new Properties();
     for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	 iter.hasNext();) {
+         iter.hasNext();) {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       if (descr.isDefinitional()) {
-	String key = descr.getKey();
-	String val = config.get(key);
-	// during testing, don't allow missing config values to cause
-	// NullPointerException in setProperty()
-	if (val != null) {
-	  props.setProperty(key, config.get(key));
-	}
+        String key = descr.getKey();
+        String val = config.get(key);
+        // during testing, don't allow missing config values to cause
+        // NullPointerException in setProperty()
+        if (val != null) {
+          props.setProperty(key, config.get(key));
+        }
       }
     }
     return PluginManager.generateAuId(getPluginId(), props);
@@ -450,20 +456,40 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.filterRule = filterRule;
   }
 
-  public FilterFactory getFilterFactory(String contentType) {
-    return filterFactory;
+  public FilterFactory getHashFilterFactory(String contentType) {
+    return hashFilterFactory;
   }
 
-  public void setFilterFactory(FilterFactory filterFactory) {
-    this.filterFactory = filterFactory;
+  public void setHashFilterFactory(FilterFactory filterFactory) {
+    this.hashFilterFactory = filterFactory;
+  }
+
+  public FilterFactory getCrawlFilterFactory(String contentType) {
+    return crawlFilterFactory;
+  }
+
+  public void setCrawlFilterFactory(FilterFactory filterFactory) {
+    this.crawlFilterFactory = filterFactory;
   }
 
   public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
     return rewriterFactory;
   }
 
-  public void setLinkRewriterFactory(LinkRewriterFactory filterFactory) {
-    this.rewriterFactory = filterFactory;
+  public void setLinkRewriterFactory(LinkRewriterFactory rewriterFactory) {
+    this.rewriterFactory = rewriterFactory;
+  }
+
+  public Iterator getArticleIterator() {
+    return articleIterator;
+  }
+
+  public Iterator getArticleIterator(String contentType) {
+    return articleIterator;
+  }
+
+  public void setArticleIterator(Iterator iter) {
+    this.articleIterator = iter;
   }
 
   public LinkExtractor getLinkExtractor(String contentType) {
@@ -477,6 +503,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setLinkExtractor(String mimeType, LinkExtractor extractor) {
     extractors.put(mimeType, extractor);
+  }
+
+  public Comparator<CrawlUrl> getCrawlUrlComparator() {
+    return crawlUrlCmp;
+  }
+
+  public void setCrawlUrlComparator(Comparator<CrawlUrl> cmprtr) {
+    crawlUrlCmp = cmprtr;
   }
 
   public String toString() {

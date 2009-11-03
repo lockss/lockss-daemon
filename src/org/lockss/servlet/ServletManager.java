@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.38 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.38.14.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
+import org.mortbay.http.Authenticator;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
 
@@ -55,17 +56,25 @@ public interface ServletManager extends LockssManager {
   /** Username established during platform config */
   public static final String PARAM_PLATFORM_USERNAME =
     Configuration.PLATFORM + "ui.username";
+
   /** Password established during platform config */
   public static final String PARAM_PLATFORM_PASSWORD =
     Configuration.PLATFORM + "ui.password";
 
   /** HttpContext attribute holding LockssApp (daemon) instance */
   public static final String CONTEXT_ATTR_LOCKSS_APP = "LockssApp";
+
   /** HttpContext attribute holding ServletManager instance that started
    * context */
   public static final String CONTEXT_ATTR_SERVLET_MGR = "ServletMgr";
 
+  /** HttpContext attribute holding ServletHandler instance in context */
+  public static final String CONTEXT_ATTR_SERVLET_HANDLER = "ServletHandler";
+
+  /** HttpContext attribute holding resource handler redirect map in context */
+  public static final String CONTEXT_ATTR_RESOURCE_REDIRECT_MAP = "RedirectMap";
+
   public ServletDescr[] getServletDescrs();
   public ServletDescr findServletDescr(Object o);
-
+  public Authenticator getAuthenticator();
 }

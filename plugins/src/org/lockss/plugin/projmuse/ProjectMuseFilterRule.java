@@ -1,10 +1,10 @@
 /*
- * $Id: ProjectMuseFilterRule.java,v 1.2 2007-09-22 23:08:46 thib_gc Exp $
+ * $Id: ProjectMuseFilterRule.java,v 1.2.26.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.plugin.projmuse;
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
 
@@ -47,7 +48,7 @@ public class ProjectMuseFilterRule implements FilterRule {
   static final String MENU_END =
       "<!-- =================== END JUMP MENU =================== -->";
 
-  public Reader createFilteredReader(Reader reader) {
+  public static Reader makeFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
         new HtmlTagFilter.TagPair(MENU_START, MENU_END, true),
         new HtmlTagFilter.TagPair("<!--", "-->", true),
@@ -57,4 +58,9 @@ public class ProjectMuseFilterRule implements FilterRule {
     Reader filteredReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(filteredReader);
   }
+  
+  public Reader createFilteredReader(Reader reader) throws PluginException {
+    return makeFilteredReader(reader);
+  }
+  
 }

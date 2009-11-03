@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellCrawlWindow.java,v 1.1 2006-08-01 05:21:51 tlipkis Exp $
+ * $Id: BlackwellCrawlWindow.java,v 1.1.50.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -39,7 +39,12 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.definable.*;
 
 public class BlackwellCrawlWindow
+
     implements DefinableArchivalUnit.ConfigurableCrawlWindow {
+
+  public static final String DESCRIPTION =
+    "Noon - midnight weekdays and all weekend, US/Pacific";
+
   public BlackwellCrawlWindow() {}
 
   /** Return a CrawlWindow that disallows crawls from 12am - 12pm
@@ -68,7 +73,11 @@ public class BlackwellCrawlWindow
 				CrawlWindows.DAY_OF_WEEK,
 				TimeZone.getTimeZone("America/Los_Angeles"));
     // Assemble OR(sat-sun, 12pm - 12am)
-    return new CrawlWindows.Or(SetUtil.set(timeInterval, dayInterval));
+    return new CrawlWindows.Or(SetUtil.set(timeInterval, dayInterval)) {
+      public String toString() {
+	return DESCRIPTION;
+      }
+    };
   }
 
 }

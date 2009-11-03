@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.13 2008-11-25 04:03:24 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.13.6.1 2009-11-03 23:44:56 edwardsb1 Exp $
  */
 
 /*
@@ -48,7 +48,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   private static final String urlStem = "http://www.example.com/";
   private static final String urlSuffix = "content/index.html";
   private static final String url = urlStem + urlSuffix;
-  private static final String page =
+
+  private static final String orig =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -56,69 +57,135 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<meta http-equiv=\"content-type\" " +
     "content=\"text/html; charset=ISO-8859-1\">\n" +
     "<meta http-equiv=\"refresh\" " +
-    "content=\"1;url=" + urlStem + "page2.html" + "\">\n" +
+    "content=\"1;url=http://www.example.com/page2.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
-    "content=\"1; url=" + urlStem + "page3.html" + "\">\n" +
+    "content=\"1; url=http://www.example.com/page3.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
-    "content=\"1; \turl=" + urlStem + "page4.html" + "\">\n" +
+    "content=\"1; \turl=http://www.example.com/page4.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
-    "content=\"1;url=" + "page5.html" + "\">\n" +
+    "content=\"1;url=page5.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
-    "content=\"1;url=" + "../page6.html" + "\">\n" +
+    "content=\"1;url=../page6.html\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
     "<br>\n" +
-    "<a href=\"" + url + "\">an absolute link to rewrite</a>\n" +
+    "<a href=\"http://www.example.com/content/index.html\">abs link</a>\n" +
     "<br>\n" +
-    "<a href=\"" + urlSuffix + "\">a relative link to rewrite</a>\n" +
+    "<a href=\"path/index.html\">rel link</a>\n" +
     "<br>\n" +
-    "<a href=\"" + "/more/" + urlSuffix + "\">a relative link to rewrite</a>\n" +
+    "<a href=\"4path/index.html\">rel link</a>\n" +
     "<br>\n" +
-    "<A HREF=\"" + "../more/" + urlSuffix + "\">a relative link to rewrite</A>\n" +
+    "<a href=\"%2fpath/index.html\">rel link</a>\n" +
     "<br>\n" +
-    "<a href=\"" + "?issn=123456789X" + "\">a relative query to rewrite</a>\n" +
+    "<a href=\"(content)/index.html\">rel link</a>\n" +
     "<br>\n" +
-    "<a href=\"http://www.content.org/index.html\">an absolute link not to rewrite</a>\n" +
+    "<a href=\"/more/path/index.html\">rel link</a>\n" +
     "<br>\n" +
-    "A relative script" +
+    "<A HREF=\"../more/path/index.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<A HREF=\"./more/path/index.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<a href=\"?issn=123456789X\">rel query</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://www.content.org/index.html\">abs link no rewrite</a>\n" +
+    "<br>\n" +
+    "Rel script" +
     "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>\n" +
     "<br>\n" +
-    "An absolute script" +
-    "<script type=\"text/javascript\" src=\"" + urlStem + "javascript/utility.js\"></script>\n" +
+    "Abs script" +
+    "<script type=\"text/javascript\" src=\"http://www.example.com/javascript/utility.js\"></script>\n" +
     "<br>\n" +
-    "A relative stylesheet" +
+    "Rel stylesheet" +
     "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
-    "Another relative stylesheet" +
+    "Rel stylesheet" +
     "<link rel=\"stylesheet\" href=\"Basic.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
-    "An absolute stylesheet" +
-    "<link rel=\"stylesheet\" href=\"" + urlStem + "css/extra.css\" type=\"text/css\" media=\"all\">\n" +
+    "Abs stylesheet" +
+    "<link rel=\"stylesheet\" href=\"http://www.example.com/css/extra.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
-    "A relative img" +
+    "Rel img" +
     "<img src=\"/icons/logo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
     "<br>\n" +
-    "An absolute img" +
-    "<img src=\"" + urlStem + "icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "Abs img" +
+    "<img src=\"http://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
-    "A relative CSS import" +
+    "Rel path CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(css/common.css) @import url(common2.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import" +
     "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
     "<br>\n" +
-    "An absolute CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra.css) @import url(" + urlStem + "css/extra2.css);</style>\n" +
+    "Abs CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra.css) @import url(http://www.example.com/css/extra2.css);</style>\n" +
     "<br>\n" +
-    "A mixed CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(" + urlStem + "css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
+    "Mixed CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
     "<br>\n" +
     "</body>\n" +
     "</HTML>\n";
 
-  // XXX need a better way to determine that the rewrite is correct than
-  // XXX counting tag instances
-  private static final int linkCount = 17;
-  private static final int importCount = 7;
-  private Reader in;
+  static String xformed =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "<title>example.com website</title>\n" +
+    "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\">\n" +
+    "<meta http-equiv=\"refresh\" content=\"1;url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fpage2.html\">\n" +
+    "<meta http-equiv=\"refresh\" content=\"1; url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fpage3.html\">\n" +
+    "<meta http-equiv=\"refresh\" content=\"1; 	url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fpage4.html\">\n" +
+    "<meta http-equiv=\"refresh\" content=\"1;url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fpage5.html\">\n" +
+    "<meta http-equiv=\"refresh\" content=\"1;url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fpage6.html\">\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<h1 align=\"center\">example.com website</h1>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Findex.html\">abs link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F4path%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F%252fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F%28content%29%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fmore%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<A HREF=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fmore%2Fpath%2Findex.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<A HREF=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F.%2Fmore%2Fpath%2Findex.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F%3Fissn%3D123456789X\">rel query</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://www.content.org/index.html\">abs link no rewrite</a>\n" +
+    "<br>\n" +
+    "Rel script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Fajax%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Abs script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fbasic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2FBasic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Abs stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel img<img src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ficons%2Flogo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
+    "<br>\n" +
+    "Abs img<img src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcommon2.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon2.css);</style>\n" +
+    "<br>\n" +
+    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra2.css);</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2FEXTRA4.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fextra5.css);</style>\n" +
+    "<br>\n" +
+    "</body>\n" +
+    "</HTML>\n";
+
   private ServletUtil.LinkTransform xform = null;
   private String testPort = "9524";
 
@@ -127,8 +194,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     au = new MockArchivalUnit();
     xform = new ServletUtil.LinkTransform() {
 	public String rewrite(String url) {
-	  return "http://" + PlatformUtil.getLocalHostname() +
-	    ":" + testPort + "/ServeContent?url=" + url;
+	  return "http://lockss.box:" + testPort + "/ServeContent?url=" + url;
 	}
       };
     List l = new ArrayList();
@@ -138,7 +204,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotHtml() {
-    in = new StringReader(page);
+    Reader in = new StringReader(orig);
     try {
       Reader r = nfhlrf.createLinkRewriterReader("application/pdf", au, in,
 						  encoding, url, xform);
@@ -152,61 +218,15 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  public void testRewriting() {
-    in = new StringReader(page);
-    try {
-      Reader r = nfhlrf.createLinkRewriterReader("text/html", au, in,
-						 encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, make String
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
-      log.debug3(out);
-      String rewriteTag = "ServeContent?url=";
-      // Now check the rewriting
-      int ix = 0;
-      for (i = 0; i < linkCount; i++) {
-	int nix = out.indexOf(rewriteTag, ix);
-	assertTrue("Start of rewritten url not found", nix > ix);
-	int endix = out.indexOf("\"", nix);
-	assertTrue("End of rewritten url not found", endix > nix);
-	String rewritten = out.substring(nix, endix);
-	log.debug3("Link " + i + " rewritten: " + rewritten);
-	// Make sure no double rewrites
-	assertEquals("Multiple rewrite " + rewritten,
-		     rewritten.indexOf(rewriteTag),
-		     rewritten.lastIndexOf(rewriteTag));
-	ix = endix;
-      }
-      log.debug3("End of links at " + out.substring(ix, ix+32));
-      for (i = 0; i < importCount; i++) {
-	int nix = out.indexOf(rewriteTag, ix);
-	assertTrue("Start of rewritten import not found", nix > ix);
-	int endix = out.indexOf(")", nix);
-	assertTrue("End of rewritten import not found", endix > nix);
-	String rewritten = out.substring(nix, endix);
-	log.debug3("Import rewritten " + i + " : " + rewritten);
-	// Make sure no double rewrites
-	assertEquals("Multiple rewrite " + rewritten,
-		     rewritten.indexOf(rewriteTag),
-		     rewritten.lastIndexOf(rewriteTag));
-	ix = endix;
-      }
-      ix = out.indexOf(rewriteTag + urlStem, ix);
-      if (ix >= 0) {
-	log.error(out.substring(ix));
-      }
-      assertTrue("wrong url rewritten", ix < 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on html mime type");
-    }
+  public void testRewriting() throws Exception {
+    Reader r = nfhlrf.createLinkRewriterReader("text/html",
+					       au,
+					       new StringReader(orig),
+					       encoding, url, xform);
+    String out = StringUtil.fromReader(r);
+    log.debug3("Original:\n" + orig);
+    log.debug3("Transformed:\n" + out);
+    assertEquals(xformed, out);
   }
 
   public static void main(String[] argv) {

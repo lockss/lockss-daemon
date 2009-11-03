@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.10 2005-10-11 05:48:47 tlipkis Exp $
+ * $Id: ParamDoc.java,v 1.10.66.1 2009-11-03 23:44:55 edwardsb1 Exp $
  */
 
 /*
@@ -62,16 +62,16 @@ public class ParamDoc {
     String ofile = null;
     try {
       for (int ix=0; ix<argv.length; ix++) {
-	String arg = argv[ix];
-	if (arg.startsWith("-")) {
-	  if (arg.startsWith("-o")) {
-	    ofile = argv[++ix];
-	  } else {
-	    usage();
-	  }
-	} else {
-	  jars.add(arg);
-	}
+        String arg = argv[ix];
+        if (arg.startsWith("-")) {
+          if (arg.startsWith("-o")) {
+            ofile = argv[++ix];
+          } else {
+            usage();
+          }
+        } else {
+          jars.add(arg);
+        }
       }
     } catch (ArrayIndexOutOfBoundsException e) {
       usage();
@@ -89,20 +89,20 @@ public class ParamDoc {
       String jarname = (String)iter.next();
       File jarfile = find_jar(jarname);
       if (jarfile == null) {
-	System.err.println("Couldn't find " + jarname);
+        System.err.println("Couldn't find " + jarname);
       } else {
-	JarFile jar;
-	try {
-	  jar = new JarFile(jarfile);
-	} catch (IOException e) {
-	  log.error("Couldn't open jar " + jarfile, e);
-	  return;
-	}
-	for (Enumeration en = jar.entries();
-	     en.hasMoreElements(); ) {
-	  JarEntry ent = (JarEntry)en.nextElement();
-	  doClass(ent);
-	}
+        JarFile jar;
+        try {
+          jar = new JarFile(jarfile);
+        } catch (IOException e) {
+          log.error("Couldn't open jar " + jarfile, e);
+          return;
+        }
+        for (Enumeration en = jar.entries();
+             en.hasMoreElements(); ) {
+          JarEntry ent = (JarEntry)en.nextElement();
+          doClass(ent);
+        }
       }
     }
     pout.println("Parameters and default values");
@@ -122,27 +122,27 @@ public class ParamDoc {
 
   static void printMap(Map map) {
     for (Iterator keyIter = map.keySet().iterator();
-	 keyIter.hasNext(); ) {
+         keyIter.hasNext(); ) {
       String key = (String)keyIter.next();
       List list = (List)map.get(key);
       pout.print(key);
       Collections.sort(list);
       int len = key.length();
       for (Iterator iter = list.iterator(); iter.hasNext(); ) {
-	if (len >= COL) {
-	  pout.println();
-	  len = 0;
-	}
-	pout.print(nblanks(COL - len));
-	pout.println((String)iter.next());
-	len = 0;
+        if (len >= COL) {
+          pout.println();
+          len = 0;
+        }
+        pout.print(nblanks(COL - len));
+        pout.println((String)iter.next());
+        len = 0;
       }
     }
   }
 
   static void printDefaults() {
     for (Iterator paramNameIter = defaultMap.keySet().iterator();
-	 paramNameIter.hasNext(); ) {
+         paramNameIter.hasNext(); ) {
       String paramName = (String)paramNameIter.next();
       Object defaultVal;
 
@@ -151,18 +151,19 @@ public class ParamDoc {
       pout.print(paramName);
       int len = paramName.length();
       if (len >= COL) {
-	pout.println();
-	len = 0;
+        pout.println();
+        len = 0;
       }
       pout.print(nblanks(COL - len));
       pout.print(defaultVal);
+      String timeStr = "";
       if (defaultVal instanceof Long) {
-	String timeStr =
-	  StringUtil.timeIntervalToString(((Long)defaultVal).longValue());
-	pout.println(" ("+timeStr+")");
-      } else {
-	pout.println();
+        long val = ((Long)defaultVal).longValue();
+        if (val > 0) {
+          timeStr = " (" + StringUtil.timeIntervalToString(val) + ")";
+        }         
       }
+      pout.println(timeStr);
     }
   }
 
@@ -170,8 +171,8 @@ public class ParamDoc {
     String entname = ent.getName();
     if (entname.endsWith(".class") && (-1 == entname.indexOf("$"))) {
       String cname =
-	StringUtil.replaceString(entname.substring(0, entname.length() - 6),
-				 File.separator, ".");
+        StringUtil.replaceString(entname.substring(0, entname.length() - 6),
+                                 File.separator, ".");
       return cname;
     }
     return null;
@@ -203,12 +204,12 @@ public class ParamDoc {
       Object defaultVal = defaultSymToDefVal.get(defaultSym);
 
 //       if (defaultVal != null) {
-// 	putIfNotDifferent(defaultMap, paramName, defaultVal,
-// 			  "Conflicting defaults");
+//      putIfNotDifferent(defaultMap, paramName, defaultVal,
+//                        "Conflicting defaults");
 //       }
       putIfNotDifferent(defaultMap, paramName,
-			defaultVal != null ? defaultVal : "(none)",
-			"Conflicting defaults");
+                        defaultVal != null ? defaultVal : "(none)",
+                        "Conflicting defaults");
     }
   }
 
@@ -216,70 +217,70 @@ public class ParamDoc {
     String fname = fld.getName();
 
     if (Modifier.isStatic(fld.getModifiers()) &&
-	String.class == fld.getType()) {
+        String.class == fld.getType()) {
       String paramName = null;
       if (fname.startsWith("PARAM_")) {
-	paramName = getParamString(cls, fld, fname);
-	paramSymToDefaultSym.put(fname, "DEFAULT"+fname.substring(5));
+        paramName = getParamString(cls, fld, fname);
+        paramSymToDefaultSym.put(fname, "DEFAULT"+fname.substring(5));
       } else if (fname.startsWith("WDOG_PARAM_")) {
-	paramName = getParamString(cls, fld, fname);
-	paramSymToDefaultSym.put(fname,
-				 StringUtil.replaceString(fname,
-							  "_PARAM_",
-							  "_DEFAULT_"));
-	if (paramName != null) {
-	  paramName =
-	    StringUtil.replaceString(WDOG_PATTERN, "<name>", paramName);
-	  wdogSymbolToName.put(fname, paramName);
-	}
+        paramName = getParamString(cls, fld, fname);
+        paramSymToDefaultSym.put(fname,
+                                 StringUtil.replaceString(fname,
+                                                          "_PARAM_",
+                                                          "_DEFAULT_"));
+        if (paramName != null) {
+          paramName =
+            StringUtil.replaceString(WDOG_PATTERN, "<name>", paramName);
+          wdogSymbolToName.put(fname, paramName);
+        }
       } else if (fname.startsWith("PRIORITY_PARAM_")) {
-	paramName = getParamString(cls, fld, fname);
-	paramSymToDefaultSym.put(fname,
-				 StringUtil.replaceString(fname,
-							  "_PARAM_",
-							  "_DEFAULT_"));
-	if (paramName != null) {
-	  paramName =
-	    StringUtil.replaceString(PRIORITY_PATTERN, "<name>", paramName);
-	  wdogSymbolToName.put(fname, paramName);
-	}
+        paramName = getParamString(cls, fld, fname);
+        paramSymToDefaultSym.put(fname,
+                                 StringUtil.replaceString(fname,
+                                                          "_PARAM_",
+                                                          "_DEFAULT_"));
+        if (paramName != null) {
+          paramName =
+            StringUtil.replaceString(PRIORITY_PATTERN, "<name>", paramName);
+          wdogSymbolToName.put(fname, paramName);
+        }
       }
       if (paramName != null) {
-	addParam(paramMap, paramName, cls.getName());
-	addParam(classMap, cls.getName(), paramName);
-	putIfNotDifferent(paramToSymbol, paramName, fname,
-			  "Multiple symbols used to define parameter name ");
+        addParam(paramMap, paramName, cls.getName());
+        addParam(classMap, cls.getName(), paramName);
+        putIfNotDifferent(paramToSymbol, paramName, fname,
+                          "Multiple symbols used to define parameter name ");
       }
     }
   }
 
   static void doFieldDefault(Class enclosingClass, Field fld,
-			     Map defaultSymToDefVal) {
+                             Map defaultSymToDefVal) {
     String fname = fld.getName();
 
     if (Modifier.isStatic(fld.getModifiers())) {
       if (fname.startsWith("DEFAULT_") ||
-	  fname.startsWith("WDOG_DEFAULT") ||
-	  fname.startsWith("PRIORITY_DEFAULT")) {
-	Object defaultVal;
-	try {
-	  fld.setAccessible(true);
-	  Class cls = fld.getType();
-	  if (int.class == cls) {
-	    defaultVal = new Integer(fld.getInt(null));
-	  } else if (long.class == cls) {
-	    defaultVal = new Long(fld.getLong(null));
-	  } else if (boolean.class == cls) {
-	    defaultVal = new Boolean(fld.getBoolean(null));
-	  } else {
-	    defaultVal = fld.get(null);
-	  }
-	} catch (IllegalAccessException e) {
-	  log.error(fld.toString(), e);
-	  return;
-	}
+          fname.startsWith("WDOG_DEFAULT") ||
+          fname.startsWith("PRIORITY_DEFAULT")) {
+        Object defaultVal;
+        try {
+          fld.setAccessible(true);
+          Class cls = fld.getType();
+          if (int.class == cls) {
+            defaultVal = new Integer(fld.getInt(null));
+          } else if (long.class == cls) {
+            defaultVal = new Long(fld.getLong(null));
+          } else if (boolean.class == cls) {
+            defaultVal = new Boolean(fld.getBoolean(null));
+          } else {
+            defaultVal = fld.get(null);
+          }
+        } catch (IllegalAccessException e) {
+          log.error(fld.toString(), e);
+          return;
+        }
 
-	defaultSymToDefVal.put(fname, defaultVal);
+        defaultSymToDefVal.put(fname, defaultVal);
       }
     }
   }

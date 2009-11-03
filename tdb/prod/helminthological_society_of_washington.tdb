@@ -16,12 +16,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1525-2647
   
-      au < do_not_process ; Comparative Parasitology Volume 69 ; 69 >
-      au < do_not_process ; Comparative Parasitology Volume 70 ; 70 >
-      au < do_not_process ; Comparative Parasitology Volume 71 ; 71 >
+      au < doNotProcess ; Comparative Parasitology Volume 69 ; 69 >
+      au < doNotProcess ; Comparative Parasitology Volume 70 ; 70 >
+      au < doNotProcess ; Comparative Parasitology Volume 71 ; 71 >
       au < superseded ; Comparative Parasitology Volume 72 ; 72 >
-      au < do_not_process ; Comparative Parasitology Volume 73 ; 73 >
-      au < do_not_process ; Comparative Parasitology Volume 74 ; 74 >
+      au < doNotProcess ; Comparative Parasitology Volume 73 ; 73 >
+      au < doNotProcess ; Comparative Parasitology Volume 74 ; 74 >
     }
 
     {

@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineCrawlWindow.java,v 1.2 2009-03-04 21:29:40 thib_gc Exp $
+ * $Id: PsychiatryOnlineCrawlWindow.java,v 1.2.4.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
@@ -34,12 +34,15 @@ package org.lockss.plugin.psychiatryonline;
 
 import java.util.*;
 
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
 
 public class PsychiatryOnlineCrawlWindow implements ConfigurableCrawlWindow {
+  private static Logger log = Logger.getLogger("PsychiatryOnlineCrawlWindow");
 
   public static final String CRAWL_WINDOW_TIME_ZONE = "US/Eastern";
+  public static final String DESCRIPTION = "Midnight to 7:00AM US/Eastern";
 
   public CrawlWindow makeCrawlWindow() throws PluginException {
     /*
@@ -66,9 +69,13 @@ public class PsychiatryOnlineCrawlWindow implements ConfigurableCrawlWindow {
     end.set(Calendar.HOUR_OF_DAY, 7);
     end.set(Calendar.MINUTE, 0);
     return new CrawlWindows.Interval(start,
-                                     end,
-                                     CrawlWindows.TIME,
-                                     eastern);
+				     end,
+				     CrawlWindows.TIME,
+				     eastern) {
+      public String toString() {
+	return DESCRIPTION;
+      }
+    };
   }
 
 }

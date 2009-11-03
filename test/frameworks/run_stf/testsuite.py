@@ -13,20 +13,19 @@ import urllib2
 
 sys.path.append( os.path.normpath( os.path.join( os.path.dirname( sys.argv[ 0 ] ), '../lib' ) ) )
 from lockss_util import *
+from lockss_daemon import *
+
 
 ##
 ## Load configuration.
 ##
-loadConfig('testsuite.props')
-if os.path.isfile('testsuite.opt'):
-    loadConfig('testsuite.opt')
-
-from lockss_daemon import *
+config.load( 'testsuite.props' )
+if os.path.isfile( 'testsuite.opt' ):
+    config.load( 'testsuite.opt' )
 
 ##
 ## module globals
 ##
-log = Logger()
 frameworkList = []
 deleteAfterSuccess = config.getBoolean('deleteAfterSuccess', True)
 
@@ -48,8 +47,7 @@ class LockssTestCase(unittest.TestCase):
         self.workDir = config.get('workDir', './')
         if not (os.path.isdir(self.workDir) and \
                 os.access(self.workDir, os.W_OK)):
-            raise LockssError("Work dir %s does not exist or is not writable." \
-                              % self.workDir)
+            raise LockssError("Work dir %s does not exist or is not writable." % self.workDir)
 
     def getConfigUrls(self):
         return None
@@ -131,24 +129,24 @@ class LockssAutoStartTestCase(LockssTestCase):
 ##
 
 class SucceedingTestTestCase(LockssAutoStartTestCase):
-    " Test case that succeeds immediately after daemons start. "
+    "Test case that succeeds immediately after daemons start."
     def runTest(self):
         log.info("Succeeding immediately.")
         return
 
 class FailingTestTestCase(LockssAutoStartTestCase):
-    " Test case that fails immediately after daemons start. "
+    "Test case that fails immediately after daemons start."
     def runTest(self):
         log.info("Failing immediately.")
         self.fail("Failed on purpose.")
 
 class ImmediateSucceedingTestTestCase(unittest.TestCase):
-    " Test case that succeeds immediately, without starting the daemons. "
+    "Test case that succeeds immediately, without starting the daemons."
     def runTest(self):
         return
 
 class ImmediateFailingTestTestCase(unittest.TestCase):
-    " Test case that fails immediately, without starting the daemons. "
+    "Test case that fails immediately, without starting the daemons."
     def runTest(self):
         log.info("Failing immediately.")
         self.fail("Failed on purpose.")
@@ -171,7 +169,7 @@ class TinyUiTests(LockssTestCase):
         assert self.framework.isRunning, 'Framework failed to start.'
 
         # Block return until all clients are ready to go.
-        log.info("Waiting for framework to come ready.")
+        log.info("Waiting for framework to become ready.")
         self.tinyUiClient = self.clients[0]
         time.sleep(2)
         self.tinyUiClient.waitForCanConnectToHost(sleep=2)
@@ -199,12 +197,10 @@ class TinyUiTests(LockssTestCase):
         log.info('Found "%s"' % p.pattern)
 
     def assertMatch(self, pat, string):
-        msg = 'No match for "%s" in\n%s' % (pat.pattern, string)
-        assert pat.search(string), msg
+        self.assert_( pat.search( string ), 'No match for "%s" in\n%s' % ( pat.pattern, string ) )
 
     def assertNoMatch(self, pat, string):
-        msg = 'Unexpected match for "%s"' % (pat.pattern)
-        assert not pat.search(string), msg
+        self.assertFalse( pat.search( string ), 'Unexpected match for "%s"' % pat.pattern )
 
 
 class TinyUiUnknownHostTestCase(TinyUiTests):
@@ -282,7 +278,7 @@ class V3TestCase(LockssTestCase):
         assert self.framework.isRunning, 'Framework failed to start.'
 
         # Block return until all clients are ready to go.
-        log.info("Waiting for framework to come ready.")
+        log.info("Waiting for framework to become ready.")
         self.framework.waitForFrameworkReady()
 
     def getDaemonCount(self):
@@ -308,8 +304,7 @@ class V3TestCase(LockssTestCase):
     def crawlAus(self, au):
         log.info("Waiting for simulated AUs to crawl.")
         for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(au)):
-                self.fail("AUs never completed initial crawl.")
+            self.assert_( c.waitForSuccessfulNewCrawl( au ), 'AUs never completed initial crawl' )
         log.info("AUs completed initial crawl.")
 
     def compareNode(self, node, au, victim, nonVictim):
@@ -329,8 +324,7 @@ class SimpleDamageV3TestCase(V3TestCase):
     """Test a basic V3 Poll."""
     def runTest(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=0, branch=0,
-                            numFiles=15,
+        simAu = SimulatedAU('simContent', depth=0, branch=0, numFiles=15,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
 
@@ -351,19 +345,18 @@ class SimpleDamageV3TestCase(V3TestCase):
         ##
         node = victim.randomDamageSingleNode(simAu)
 
-        assert not self.compareNode(node, simAu, victim, self.nonVictim), "Failed to damage AU."
+        self.assertFalse( self.compareNode( node, simAu, victim, self.nonVictim ), "Failed to damage AU" )
         log.info("Damaged node %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
-        assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
+        self.assert_( victim.waitForV3Repair( simAu, [ node ], timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
+        self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -371,8 +364,7 @@ class RandomDamageV3TestCase(V3TestCase):
     """Test a V3 Poll with a random size and number of damaged AUs"""
     def runTest(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            numFiles=30,
+        simAu = SimulatedAU('simContent', depth=1, branch=1, numFiles=30,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=2024, protocolVersion=3)
 
@@ -396,17 +388,15 @@ class RandomDamageV3TestCase(V3TestCase):
             (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
         for node in nodeList:
-            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
-
+            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -418,8 +408,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         
     def runTest(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            numFiles=10,
+        simAu = SimulatedAU('simContent', depth=1, branch=1, numFiles=10,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
 
@@ -443,21 +432,17 @@ class RepairFromPublisherV3TestCase(V3TestCase):
             (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
-
+        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
         ## Verify that all repairs came from peers.
         for node in nodeList:
-            if not (victim.isNodeRepairedFromPublisherByV3(simAu, node)):
-                self.fail("Node %s was not repaired from the publisher!" % node)
-            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
-
+            self.assert_( victim.isNodeRepairedFromPublisherByV3( simAu, node ), 'Node %s was not repaired from the publisher!' % node )
+            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -482,8 +467,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
 
     def getSimAu(self):
         # Reasonably complex AU for testing.
-        return SimulatedAu('simContent', depth=1, branch=1,
-                           numFiles=10,
+        return SimulatedAU('simContent', depth=1, branch=1, numFiles=10,
                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                            binFileSize=1024, protocolVersion=3)
 
@@ -524,63 +508,58 @@ class RepairFromPeerV3TestCase(V3TestCase):
         # expect to see a top level content poll called by all peers.
         log.info("Waiting for a V3 poll by all simulated caches")
         for c in self.clients:
-            assert c.waitForV3Poller(simAu), "Never called V3 poll."
+            self.assert_( c.waitForV3Poller( simAu ), 'Never called V3 poll' )
             log.info("Client on port %s called V3 poll..." % c.port)
 
         # expect that each client will have won a top-level v3 poll
         log.info("Waiting for all peers to win their polls")
         for c in self.clients:
-            assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
-                ("Client on port %s never won V3 poll" % c.port)
+            self.assert_( c.waitForWonV3Poll( simAu, timeout = self.timeout ), 'Client on port %s never won V3 poll' % c.port )
             log.info("Client on port %s won V3 poll..." % c.port)
 
         firstVictimPoll = victim.getV3PollKey(simAu)
         log.debug("firstVictimPoll: %s" % firstVictimPoll)
         invitees = victim.getV3PollInvitedPeers(firstVictimPoll, simAu)
         log.debug("invitedPeers: %s" % invitees)
-        assert not victim.getPeerId() in invitees, "Victim invited itself"
-        assert noAuClient.getPeerId() in invitees, "NoAUPeer not invited in 1st poll"
+        self.assertFalse( victim.getPeerId() in invitees, "Victim invited itself" )
+        self.assert_( noAuClient.getPeerId() in invitees, "NoAUPeer not invited in 1st poll" )
 
         log.debug("victim.getNoAuPeers(simAu): %s" % victim.getNoAuPeers(simAu))
-        assert victim.getNoAuPeers(simAu) == [ noAuClient.getPeerId() ], "NoAUPeer not recorded."
+        self.assertEqual( victim.getNoAuPeers( simAu ), [ noAuClient.getPeerId() ], 'NoAUPeer not recorded' )
 
         ##
         ## Damage the AU.
         ##
         nodeList = self.doDamage(simAu)
 
-        self.framework.appendLocalConfig({"org.lockss.poll.v3.toplevelPollInterval":"10"},
-                                         victim)
+        self.framework.appendLocalConfig( { "org.lockss.poll.v3.toplevelPollInterval" : "10" }, victim )
         victim.reloadConfiguration()
 
         self.maybeDeactivateReactivateAu(victim, simAu)
 
         log.debug("victim.getNoAuPeers(simAu): %s" % victim.getNoAuPeers(simAu))
-        assert victim.getNoAuPeers(simAu) == [ noAuClient.getPeerId() ], "NoAUPeer disappeared!."
+        self.assertEqual( victim.getNoAuPeers( simAu ), [ noAuClient.getPeerId() ], 'NoAUPeer disappeared!' )
 
         ## XXX - this sees first poll, doesn't wait for second
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu, [ firstVictimPoll ])
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu, [ firstVictimPoll ] ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         pollKey2 = victim.getV3PollKey(simAu, firstVictimPoll)
         log.debug("pollKey2: %s" % pollKey2)
         invitees = victim.getV3PollInvitedPeers(pollKey2, simAu)
         log.debug("invitedPeers: %s" % invitees)
-        assert not noAuClient.getPeerId() in invitees, "NoAUPeer invited in 2nd poll"
+        self.assertFalse( noAuClient.getPeerId() in invitees, "NoAUPeer invited in 2nd poll." )
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
-        
+        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
         ## Verify that all repairs came from peers.
         for node in nodeList:
             if not (victim.isNodeRepairedFromPeerByV3(simAu, node)):
                 self.fail("Node %s was not repaired from a peer!" % node)
-            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
-
+            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -610,8 +589,7 @@ class RepairHugeFromPeerV3TestCase(RepairFromPeerV3TestCase):
 
     def getSimAu(self):
         # Reasonably complex AU for testing.
-        return SimulatedAu('simContent', depth=0, branch=0,
-                           numFiles=1,
+        return SimulatedAU('simContent', depth=0, branch=0, numFiles=1,
                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                            binFileSize=3*1024*1024*1024-1, protocolVersion=3)
 
@@ -626,8 +604,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
     """Test repair of a missing file."""
     def runTest(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=0, branch=0,
-                            numFiles=15,
+        simAu = SimulatedAU('simContent', depth=0, branch=0, numFiles=15,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         ##
@@ -649,15 +626,14 @@ class SimpleDeleteV3TestCase(V3TestCase):
         log.info("Deleted node %s on client %s" % (node.url, victim))
         
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
-        assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
+        self.assert_( victim.waitForV3Repair( simAu, [ node ], timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
+        self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -665,8 +641,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
     " Ensure that the deletion of the last (alphabetically) file in the AU can be repaired. "
     def runTest(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=0, branch=0,
-                            numFiles=15,
+        simAu = SimulatedAU('simContent', depth=0, branch=0, numFiles=15,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         ##
@@ -689,15 +664,14 @@ class LastFileDeleteV3TestCase(V3TestCase):
         log.info("Deleted node %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
-        assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
+        self.assert_( victim.waitForV3Repair( simAu, [ node ], timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
+        self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -705,8 +679,7 @@ class RandomDeleteV3TestCase(V3TestCase):
     "Test recovery by V3 from randomly deleted nodes in our cache."
     def runTest(self):
         # Reasonably complex AU for testing.
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            numFiles=15,
+        simAu = SimulatedAU('simContent', depth=1, branch=1, numFiles=15,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         ##
@@ -726,20 +699,19 @@ class RandomDeleteV3TestCase(V3TestCase):
         ##
         nodeList = victim.randomDeleteRandomNodes(simAu, 5, 15)
         for node in nodeList:
-            assert not self.nodeHasContent(node, victim), "Failed to delete: %s % node.url"
+            self.assertFalse( self.nodeHasContent( node, victim ), 'Failed to delete: %s' % node.url )
         log.info("Damaged the following nodes on client %s:\n        %s" %
             (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
         for node in nodeList:
-            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
+            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -747,10 +719,9 @@ class SimpleExtraFileV3TestCase(V3TestCase):
     "Test recovery by V3 from an extra node in our cache"
     def runTest(self):
         # Reasonably complex AU for testing
-        simAu = SimulatedAu('simContent', depth=0, branch=0,
+        simAu = SimulatedAU('simContent', depth=0, branch=0,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024,
-                            numFiles=20, protocolVersion=3)
+                            binFileSize=1024, numFiles=20, protocolVersion=3)
         ##
         ## Create simulated AUs
         ##
@@ -770,15 +741,14 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         log.info("Created file %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
-        assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
+        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
+        self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -786,10 +756,9 @@ class LastFileExtraV3TestCase(V3TestCase):
     "Test recovery by V3 from an extra last-file node in our cache"
     def runTest(self):
         # Reasonably complex AU for testing
-        simAu = SimulatedAu('simContent', depth=0, branch=0,
+        simAu = SimulatedAU('simContent', depth=0, branch=0,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024,
-                            numFiles=20, protocolVersion=3)
+                            binFileSize=1024, numFiles=20, protocolVersion=3)
         ##
         ## Create simulated AUs
         ##
@@ -810,15 +779,14 @@ class LastFileExtraV3TestCase(V3TestCase):
         log.info("Created file %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
-        assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
+        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
+        self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -826,10 +794,9 @@ class RandomExtraFileV3TestCase(V3TestCase):
     "Test recovery by V3 from a random number of extra nodes in our cache"
     def runTest(self):
         # Reasonably complex AU for testing
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
+        simAu = SimulatedAU('simContent', depth=1, branch=1,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024,
-                            numFiles=20, protocolVersion=3)
+                            binFileSize=1024, numFiles=20, protocolVersion=3)
 
         ##
         ## Create simulated AUs
@@ -852,16 +819,15 @@ class RandomExtraFileV3TestCase(V3TestCase):
                  (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
         for node in nodeList:
-            assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
+            self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
         log.info("AU successfully repaired.")
 
 
@@ -879,10 +845,9 @@ class VotersDontParticipateV3TestCase(V3TestCase):
 
     def runTest(self):
         # Reasonably complex AU for testing
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
+        simAu = SimulatedAU('simContent', depth=1, branch=1,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024,
-                            numFiles=20, protocolVersion=3)
+                            binFileSize=1024, numFiles=20, protocolVersion=3)
 
         ##
         ## Create simulated AUs
@@ -905,16 +870,15 @@ class VotersDontParticipateV3TestCase(V3TestCase):
                  (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
         for node in nodeList:
-            assert not self.nodeHasContent(node, victim), "File wasn't deleted: %s % node.url"
+            self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
         log.info("AU successfully repaired.")
     
 
@@ -932,10 +896,9 @@ class NoQuorumV3TestCase(V3TestCase):
 
     def runTest(self):
         # Reasonably complex AU for testing
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
+        simAu = SimulatedAU('simContent', depth=1, branch=1,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024,
-                            numFiles=20, protocolVersion=3)
+                            binFileSize=1024, numFiles=20, protocolVersion=3)
 
         ##
         ## Create simulated AUs
@@ -958,20 +921,20 @@ class NoQuorumV3TestCase(V3TestCase):
                  (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        victim.waitForV3Poller(simAu)
-
-        log.info("Successfully called a V3 poll.")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
+        log.info("Successfully called a V3 poll")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 poll to report no quorum...")
-        victim.waitForV3NoQuorum(simAu)
+        self.assert_( victim.waitForV3NoQuorum( simAu ), 'Timed out while waiting for no quorum' )
         log.info("AU successfully reported No Quorum.")
+
         peerDict = victim.getAuRepairerInfo(simAu)
         log.debug2("peerDict: " + str(peerDict))
         for c in self.clients:
             if c != victim:
                 agree = peerDict[c.getPeerId()]
-                assert agree['highestAgree'] > 60, "No agreement recorded for %s % c"
+                self.assert_( agree[ 'highestAgree' ] > 60, 'No agreement recorded for %s' % c )
     
 
 class TotalLossRecoveryV3TestCase(V3TestCase):
@@ -983,10 +946,9 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
     def runTest(self):
         
         ## Define a simulated AU
-        simAu = SimulatedAu('simContent', depth=1, branch=1,
+        simAu = SimulatedAU('simContent', depth=1, branch=1,
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024,
-                            numFiles=30, protocolVersion=3)
+                            binFileSize=1024, numFiles=30, protocolVersion=3)
 
         victim = self.victim
         
@@ -1001,14 +963,13 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         # expect to see a top level content poll called by all peers.
         log.info("Waiting for a V3 poll by all simulated caches")
         for c in self.clients:
-            assert c.waitForV3Poller(simAu), "Never called V3 poll."
+            self.assert_( c.waitForV3Poller( simAu ), 'Never called V3 poll' )
             log.info("Client on port %s called V3 poll..." % c.port)
 
         # expect that each client will have wone a top-level v3 poll
         log.info("Waiting for all peers to win their polls")
         for c in self.clients:
-            assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
-                   ("Client on port %s never won V3 poll" % c.port)
+            self.assert_( c.waitForWonV3Poll( simAu, timeout = self.timeout ), 'Client on port %s never won V3 poll' % c.port )
             log.info("Client on port %s won V3 poll..." % c.port)
 
         log.info("Backing up cache configuration on victim cache...")
@@ -1016,7 +977,7 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         log.info("Backed up successfully.")
 
         # All daemons should have recorded their agreeing peers at this
-        # point, so stop the client we're going to damage.
+        # point, so stop the client that we are going to damage.
         victim.daemon.stop()
         log.info("Stopped daemon running on UI port %s" % victim.port)
 
@@ -1052,10 +1013,10 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         victim.daemon.start()
 
         # Wait for the client to come up
-        assert victim.waitForDaemonReady(), "Daemon never became ready"
+        self.assert_( victim.waitForDaemonReady(), "Daemon never became ready" )
         log.info("Started daemon running on UI port %s" % victim.port)
 
-        assert not victim.hasAu(simAu)
+        self.assertFalse( victim.hasAu( simAu ), 'AU still intact' )
 
         # Now restore the backup file
         log.info("Restoring cache configuration...")
@@ -1063,21 +1024,19 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         log.info("Restored successfully.")
 
         # These should be equal AU IDs, so both should return true
-        assert victim.hasAu(simAu)
-        assert victim.isPublisherDown(simAu)
+        self.assert_( victim.hasAu( simAu ) )
+        self.assert_( victim.isPublisherDown( simAu ) )
         
         # expect to see a V3 poll called
-        log.info("Waiting for a V3 poll.")
-        assert victim.waitForV3Poller(simAu),\
-            "Never called V3 poll."
-        log.info("Called V3 poll.")
+        log.info("Waiting for a V3 poll")
+        self.assert_( victim.waitForV3Poller( simAu ), 'Never called V3 poll' )
+        log.info("Called V3 poll")
 
         # expect to see the AU successfully repaired
         log.info("Waiting for successful V3 repair of AU.")
-        assert victim.waitForCompleteV3Repair(simAu, timeout=self.timeout),\
-               "AU never repaired by V3."
+        self.assert_( victim.waitForCompleteV3Repair( simAu, timeout = self.timeout ), 'AU never repaired by V3' )
         for node in nodeList:
-            assert self.compareNode(node, simAu, victim, self.nonVictim), "File wasn't repaired: %s % node.url"
+            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
         log.info("AU successfully repaired by V3.")
 
         # End of test.
@@ -1164,7 +1123,7 @@ def postTagTests():
 
 if __name__ == "__main__":
     try:
-        unittest.main()
+        unittest.main( argv = sys.argv[ 0 : 1 ] + [ '-q' ] + sys.argv[ 1 : ] )
     except SystemExit, e:
         # unittest.main() is very unfortunate here.  It does a
         # sys.exit (which raises SystemExit), instead of letting you
@@ -1176,12 +1135,9 @@ if __name__ == "__main__":
             if fw.isRunning:
                 fw.stop()
 
-        if e.code:
-            sys.exit(1)
-        else:
-            if deleteAfterSuccess:
-                for fw in frameworkList:
-                    fw.clean()
+        if not e.code and deleteAfterSuccess:
+            for fw in frameworkList:
+                fw.clean()
 
     except KeyboardInterrupt:
         for fw in frameworkList:

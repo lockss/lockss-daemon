@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.193 2009-04-07 04:52:05 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.193.2.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class PluginManager
   public static final List NON_USER_SETTABLE_AU_PARAMS =
     Collections.unmodifiableList(new ArrayList());
 
-  static final String CONFIGURABLE_PLUGIN_NAME =
+  static final String DEFAULT_CONFIGURABLE_PLUGIN_NAME =
     DefinablePlugin.class.getName();
 
   private static Logger log = Logger.getLogger("PluginMgr");
@@ -215,10 +215,10 @@ public class PluginManager
   private static class HostAuMap extends MultiValueMap {
     HostAuMap() {
       super(new HashMap(),
-	    new org.apache.commons.collections.Factory() {
-	      public Object create() {
-		return new ArrayList(3);
-	      }});
+            new org.apache.commons.collections.Factory() {
+              public Object create() {
+                return new ArrayList(3);
+              }});
     }
   }
 
@@ -246,9 +246,11 @@ public class PluginManager
   private Map titleSetMap;
   private TreeSet titleSets;
 
-  private boolean explodedPluginLoaded = false;
-  private Plugin explodedPlugin = null;
-
+  private static Map<String,String> configurablePluginNameMap = new HashMap();
+  static {
+    configurablePluginNameMap.put(".*ExplodedPlugin$",
+                                  "org.lockss.plugin.exploded.ExplodedPlugin");
+  }
   public static final int PREFER_XML_PLUGIN = 0;
   public static final int PREFER_CLASS_PLUGIN = 1;
 
@@ -298,19 +300,6 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     initPluginRegistry(config);
-    Class explodedPluginClass = null;
-    String name = "org.lockss.plugin.exploded.ExplodedPlugin";
-    if (!explodedPluginLoaded) {
-      explodedPluginLoaded = true;
-      try {
-	explodedPluginClass = Class.forName(name);
-      } catch (ClassNotFoundException ex) {
-	log.warning("No class " + name);
-      }
-      if (explodedPluginClass != null) {
-	explodedPlugin = loadBuiltinPlugin(explodedPluginClass);
-      }
-    }
     configureAllPlugins(config);
     loadablePluginsReady = true;
   }
@@ -322,7 +311,7 @@ public class PluginManager
   List getPluginRegistryUrls(Configuration config) {
     if (useDefaultPluginRegistries) {
       return ListUtil.append(config.getList(PARAM_PLUGIN_REGISTRIES),
-			     config.getList(PARAM_USER_PLUGIN_REGISTRIES));
+                             config.getList(PARAM_USER_PLUGIN_REGISTRIES));
     } else {
       return config.getList(PARAM_USER_PLUGIN_REGISTRIES);
     }
@@ -335,35 +324,35 @@ public class PluginManager
   Configuration currentAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
 
   public void setConfig(Configuration config, Configuration oldConfig,
-			Configuration.Differences changedKeys) {
+                        Configuration.Differences changedKeys) {
 
     if (changedKeys.contains(PREFIX)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
-					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
+                                               DEFAULT_PLUGIN_LOAD_TIMEOUT);
 
       preferLoadablePlugin = config.getBoolean(PARAM_PREFER_LOADABLE_PLUGIN,
-					       DEFAULT_PREFER_LOADABLE_PLUGIN);
+                                               DEFAULT_PREFER_LOADABLE_PLUGIN);
 
       acceptExpiredCertificates =
-	config.getBoolean(PARAM_ACCEPT_EXPIRED_CERTS,
-			  DEFAULT_ACCEPT_EXPIRED_CERTS);
+        config.getBoolean(PARAM_ACCEPT_EXPIRED_CERTS,
+                          DEFAULT_ACCEPT_EXPIRED_CERTS);
 
       // must set retract before loadablePluginsReady is true as
       // retrievePlugin() may be called before that
       if (changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
-	retract = config.getList(PARAM_PLUGIN_RETRACT);
+        retract = config.getList(PARAM_PLUGIN_RETRACT);
       }
 
       // If the keystore or password has changed, update.
       if (changedKeys.contains(KEYSTORE_PREFIX) ||
-	  changedKeys.contains(USER_KEYSTORE_PREFIX)) {
-	keystoreInited = false;
-	initKeystore(configMgr.getCurrentConfig());
+          changedKeys.contains(USER_KEYSTORE_PREFIX)) {
+        keystoreInited = false;
+        initKeystore(configMgr.getCurrentConfig());
       }
 
       useDefaultPluginRegistries =
-	config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
-			  DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
+        config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
+                          DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
 
     }
 
@@ -376,20 +365,20 @@ public class PluginManager
     if (loadablePluginsReady) {
       // Process loadable plugin registries.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRIES) ||
-	  changedKeys.contains(PARAM_USER_PLUGIN_REGISTRIES) ||
-	  changedKeys.contains(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES)) {
-	initLoadablePluginRegistries(getPluginRegistryUrls(config));
+          changedKeys.contains(PARAM_USER_PLUGIN_REGISTRIES) ||
+          changedKeys.contains(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES)) {
+        initLoadablePluginRegistries(getPluginRegistryUrls(config));
       }
 
       // Process the built-in plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY) ||
-	  changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
-	initPluginRegistry(config);
+          changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
+        initPluginRegistry(config);
       }
 
       // Process any changed AU config
       if (changedKeys.contains(PARAM_AU_TREE)) {
-	configureAllPlugins(config);
+        configureAllPlugins(config);
       }
     }
   }
@@ -400,13 +389,13 @@ public class PluginManager
       List plugList = ListUtil.fromIterator(allPlugs.nodeIterator());
       plugList = CollectionUtil.randomPermutation(plugList);
       for (Iterator iter = plugList.iterator(); iter.hasNext(); ) {
-	String pluginKey = (String)iter.next();
-	log.debug2("Configuring plugin key: " + pluginKey);
-	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
-	Configuration prevPluginConf =
-	  currentAllPlugs.getConfigTree(pluginKey);
+        String pluginKey = (String)iter.next();
+        log.debug2("Configuring plugin key: " + pluginKey);
+        Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+        Configuration prevPluginConf =
+          currentAllPlugs.getConfigTree(pluginKey);
 
-	configurePlugin(pluginKey, pluginConf, prevPluginConf);
+        configurePlugin(pluginKey, pluginConf, prevPluginConf);
       }
       currentAllPlugs = allPlugs;
     }
@@ -420,17 +409,17 @@ public class PluginManager
       String id = (String)iter.next();
       Configuration setDef = allSets.getConfigTree(id);
       try {
-	TitleSet ts = createTitleSet(setDef);
-	if (ts != null) {
-	  if (log.isDebug2()) {
-	    log.debug2("Adding TitleSet: " + ts);
-	  }
-	  list.add(ts);
-	} else {
-	  log.warning("Null TitleSet created from: " + setDef);
-	}
+        TitleSet ts = createTitleSet(setDef);
+        if (ts != null) {
+          if (log.isDebug2()) {
+            log.debug2("Adding TitleSet: " + ts);
+          }
+          list.add(ts);
+        } else {
+          log.warning("Null TitleSet created from: " + setDef);
+        }
       } catch (RuntimeException e) {
-	log.warning("Error creating TitleSet from: " + setDef, e);
+        log.warning("Error creating TitleSet from: " + setDef, e);
       }
     }
     for (Iterator iter = list.iterator(); iter.hasNext(); ) {
@@ -444,22 +433,18 @@ public class PluginManager
   private TitleSet createTitleSet(Configuration config) {
     String cls = config.get(TITLE_SET_PARAM_CLASS);
     String name = config.get(TITLE_SET_PARAM_NAME);
-    try {
-      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_XPATH)) {
-	return new TitleSetXpath(getDaemon(), name,
-				 config.get(TITLE_SET_XPATH_XPATH));
-      }
-      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_TITLES)) {
-	return new TitleSetAllTitles(getDaemon());
-      }
-      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ACTIVE_AUS)) {
-	return new TitleSetActiveAus(getDaemon());
-      }
-      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_INACTIVE_AUS)) {
-	return new TitleSetInactiveAus(getDaemon());
-      }
-    } catch (Exception e) {
-      log.error("Error creating TitleSet", e);
+    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_XPATH)) {
+      return new TitleSetXpath(getDaemon(), name,
+                               config.get(TITLE_SET_XPATH_XPATH));
+    }
+    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_TITLES)) {
+      return new TitleSetAllTitles(getDaemon());
+    }
+    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ACTIVE_AUS)) {
+      return new TitleSetActiveAus(getDaemon());
+    }
+    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_INACTIVE_AUS)) {
+      return new TitleSetInactiveAus(getDaemon());
     }
     return null;
   }
@@ -522,21 +507,21 @@ public class PluginManager
    */
   public static String generateAuId(String pluginId, Properties auDefProps) {
     return generateAuId(pluginId,
-			PropUtil.propsToCanonicalEncodedString(auDefProps));
+                        PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
   public static String generateAuId(Plugin plugin, Configuration auConfig) {
     Properties props = new Properties();
     for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	 iter.hasNext();) {
+         iter.hasNext();) {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       if (descr.isDefinitional()) {
-	String key = descr.getKey();
-	String val = auConfig.get(key);
-	if (val == null) {
-	  throw new NullPointerException(key + " is null in: " + auConfig);
-	}
-	props.setProperty(key, val);
+        String key = descr.getKey();
+        String val = auConfig.get(key);
+        if (val == null) {
+          throw new NullPointerException(key + " is null in: " + auConfig);
+        }
+        props.setProperty(key, val);
       }
     }
     return generateAuId(plugin.getPluginId(), props);
@@ -580,7 +565,7 @@ public class PluginManager
   }
 
   private void configurePlugin(String pluginKey, Configuration pluginConf,
-			       Configuration oldPluginConf) {
+                               Configuration oldPluginConf) {
     List auList = ListUtil.fromIterator(pluginConf.nodeIterator());
     auList = CollectionUtil.randomPermutation(auList);
     nextAU:
@@ -588,46 +573,46 @@ public class PluginManager
       String auKey = (String)iter.next();
       String auId = generateAuId(pluginKey, auKey);
       try {
-	Configuration auConf = pluginConf.getConfigTree(auKey);
-	Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
-	if (auConf.getBoolean(AU_PARAM_DISABLED, false)) {
-	  // tk should actually remove AU?
-	  if (log.isDebug2())
-	    log.debug("Not configuring disabled AU id: " + auKey);
-	  if (auMap.get(auId) == null) {
-	    // don't add to inactive if it's still running
-	    inactiveAuIds.add(auId);
-	  }
-	} else if (auConf.equals(oldAuConf)) {
-	  if (log.isDebug3())
-	    log.debug3("AU already configured, not reconfiguring: " + auKey);
-	} else {
-	  log.debug("Configuring AU id: " + auKey);
-	  boolean pluginOk = ensurePluginLoaded(pluginKey);
-	  if (pluginOk) {
-	    Plugin plugin = getPlugin(pluginKey);
-	    try {
-	      String genAuid = generateAuId(plugin, auConf);
-	      if (!auId.equals(genAuid)) {
-		log.warning("Generated AUID " + genAuid +
-			    " does not match stored AUID " + auId +
-			    ". Proceeding anyway.");
-	      }
-	    } catch (RuntimeException e) {
-	      log.warning("Not configuring probable non-AU.  " +
-			  "Can't generate AUID from config: " + auConf);
-	      continue nextAU;
-	    }
-	    configureAu(plugin, auConf, auId);
-	    inactiveAuIds.remove(generateAuId(pluginKey, auKey));
-	  } else {
-	    log.warning("Not configuring AU " + auKey);
-	  }
-	}
+        Configuration auConf = pluginConf.getConfigTree(auKey);
+        Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
+        if (auConf.getBoolean(AU_PARAM_DISABLED, false)) {
+          // tk should actually remove AU?
+          if (log.isDebug2())
+            log.debug("Not configuring disabled AU id: " + auKey);
+          if (auMap.get(auId) == null) {
+            // don't add to inactive if it's still running
+            inactiveAuIds.add(auId);
+          }
+        } else if (auConf.equals(oldAuConf)) {
+          if (log.isDebug3())
+            log.debug3("AU already configured, not reconfiguring: " + auKey);
+        } else {
+          log.debug("Configuring AU id: " + auKey);
+          boolean pluginOk = ensurePluginLoaded(pluginKey);
+          if (pluginOk) {
+            Plugin plugin = getPlugin(pluginKey);
+            try {
+              String genAuid = generateAuId(plugin, auConf);
+              if (!auId.equals(genAuid)) {
+                log.warning("Generated AUID " + genAuid +
+                            " does not match stored AUID " + auId +
+                            ". Proceeding anyway.");
+              }
+            } catch (RuntimeException e) {
+              log.warning("Not configuring probable non-AU.  " +
+                          "Can't generate AUID from config: " + auConf);
+              continue nextAU;
+            }
+            configureAu(plugin, auConf, auId);
+            inactiveAuIds.remove(generateAuId(pluginKey, auKey));
+          } else {
+            log.warning("Not configuring AU " + auKey);
+          }
+        }
       } catch (ArchivalUnit.ConfigurationException e) {
-	log.error("Failed to configure AU " + auKey, e);
+        log.error("Failed to configure AU " + auKey, e);
       } catch (Exception e) {
-	log.error("Unexpected exception configuring AU " + auKey, e);
+        log.error("Unexpected exception configuring AU " + auKey, e);
       }
     }
   }
@@ -638,45 +623,45 @@ public class PluginManager
     try {
       ArchivalUnit oldAu = (ArchivalUnit)auMap.get(auId);
       if (oldAu != null) {
-	oldConfig = oldAu.getConfiguration();
-	if (auConf.equals(oldConfig)) {
-	  // Don't bother if the config is the same.  (This happens the
-	  // first time config is loaded after AU created via UI.)
-	  return;
-	}
+        oldConfig = oldAu.getConfiguration();
+        if (auConf.equals(oldConfig)) {
+          // Don't bother if the config is the same.  (This happens the
+          // first time config is loaded after AU created via UI.)
+          return;
+        }
       }
       ArchivalUnit au = plugin.configureAu(auConf, oldAu);
       if (oldAu != null && oldAu != au) {
-	String msg = "Plugin created new AU: " + au +
-	  ", should have reconfigured old AU: " + oldAu;
-	throw new ArchivalUnit.ConfigurationException(msg);
+        String msg = "Plugin created new AU: " + au +
+          ", should have reconfigured old AU: " + oldAu;
+        throw new ArchivalUnit.ConfigurationException(msg);
       }
       if (!auId.equals(au.getAuId())) {
-	String msg = "Configured AU has unexpected AUID: " + au.getAuId() +
-	  ", expected: "+ auId;
-	throw new ArchivalUnit.ConfigurationException(msg);
+        String msg = "Configured AU has unexpected AUID: " + au.getAuId() +
+          ", expected: "+ auId;
+        throw new ArchivalUnit.ConfigurationException(msg);
       }
       try {
-	getDaemon().startOrReconfigureAuManagers(au, auConf);
+        getDaemon().startOrReconfigureAuManagers(au, auConf);
       } catch (Exception e) {
-	throw new
-	  ArchivalUnit.ConfigurationException("Couldn't configure AU managers",
-					      e);
+        throw new
+          ArchivalUnit.ConfigurationException("Couldn't configure AU managers",
+                                              e);
       }
       if (oldAu != null) {
-	log.debug("Reconfigured AU " + au);
-	signalAuEvent(au, AU_CHANGE_RECONFIG, oldConfig);
+        log.debug("Reconfigured AU " + au);
+        signalAuEvent(au, AU_CHANGE_RECONFIG, oldConfig);
       } else {
-	log.debug("Configured AU " + au);
-	putAuInMap(au);
-	signalAuEvent(au, AU_CHANGE_CREATED, null);
+        log.debug("Configured AU " + au);
+        putAuInMap(au);
+        signalAuEvent(au, AU_CHANGE_CREATED, null);
       }
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
     } catch (Exception e) {
       log.error("Error configuring AU", e);
       throw new
-	ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
+        ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
     }
   }
 
@@ -701,12 +686,12 @@ public class PluginManager
       inactiveAuIds.remove(au.getAuId());
       log.debug("Created AU " + au);
       try {
-	getDaemon().startOrReconfigureAuManagers(au, auConf);
+        getDaemon().startOrReconfigureAuManagers(au, auConf);
       } catch (Exception e) {
-	log.error("Couldn't start AU processes", e);
-	throw new
-	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
-					      e);
+        log.error("Couldn't start AU processes", e);
+        throw new
+          ArchivalUnit.ConfigurationException("Couldn't start AU processes",
+                                              e);
       }
       putAuInMap(au);
       signalAuEvent(au, AU_CHANGE_CREATED, null);
@@ -716,7 +701,7 @@ public class PluginManager
     } catch (Exception e) {
       log.error("Error creating AU", e);
       throw new
-	ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
+        ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
     }
   }
 
@@ -791,20 +776,20 @@ public class PluginManager
     List handlers = new ArrayList(auEventHandlers);
     for (Iterator iter = handlers.iterator(); iter.hasNext();) {
       try {
-	AuEventHandler hand = (AuEventHandler)iter.next();
-	switch (how) {
-	case AU_CHANGE_CREATED:
-	  hand.auCreated(au);
-	  break;
-	case AU_CHANGE_DELETED:
-	  hand.auDeleted(au);
-	  break;
-	case AU_CHANGE_RECONFIG:
-	  hand.auReconfigured(au, oldAuConfig);
-	  break;
-	}
+        AuEventHandler hand = (AuEventHandler)iter.next();
+        switch (how) {
+        case AU_CHANGE_CREATED:
+          hand.auCreated(au);
+          break;
+        case AU_CHANGE_DELETED:
+          hand.auDeleted(au);
+          break;
+        case AU_CHANGE_RECONFIG:
+          hand.auReconfigured(au, oldAuConfig);
+          break;
+        }
       } catch (Exception e) {
-	log.error("AuEventHandler threw", e);
+        log.error("AuEventHandler threw", e);
       }
     }
   }
@@ -829,14 +814,14 @@ public class PluginManager
     try {
       Collection stems = au.getUrlStems();
       if (stems != null) {
-	synchronized (hostAus) {
-	  for (Iterator iter = stems.iterator(); iter.hasNext();) {
-	    String stem = (String)iter.next();
-	    stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
-	    log.debug2("Adding stem: " + stem + ", " + au);
-	    hostAus.put(stem, au);
-	  }
-	}
+        synchronized (hostAus) {
+          for (Iterator iter = stems.iterator(); iter.hasNext();) {
+            String stem = (String)iter.next();
+            stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
+            log.debug2("Adding stem: " + stem + ", " + au);
+            hostAus.put(stem, au);
+          }
+        }
       }
     } catch (Exception e) {
       log.warning("addHostAus()", e);
@@ -847,14 +832,14 @@ public class PluginManager
     try {
       Collection stems = au.getUrlStems();
       if (stems != null) {
-	synchronized (hostAus) {
-	  for (Iterator iter = stems.iterator(); iter.hasNext();) {
-	    String stem = (String)iter.next();
-	    stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
-	    log.debug2("Removing stem: " + stem + ", " + au);
-	    hostAus.remove(stem, au);
-	  }
-	}
+        synchronized (hostAus) {
+          for (Iterator iter = stems.iterator(); iter.hasNext();) {
+            String stem = (String)iter.next();
+            stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
+            log.debug2("Removing stem: " + stem + ", " + au);
+            hostAus.remove(stem, au);
+          }
+        }
       }
     } catch (Exception e) {
       log.warning("delHostAus()", e);
@@ -873,10 +858,10 @@ public class PluginManager
    * @throws IOException
    */
   public void setAndSaveAuConfiguration(ArchivalUnit au,
-					Properties auProps)
+                                        Properties auProps)
       throws ArchivalUnit.ConfigurationException, IOException {
     setAndSaveAuConfiguration(au,
-			      ConfigManager.fromPropertiesUnsealed(auProps));
+                              ConfigManager.fromPropertiesUnsealed(auProps));
   }
 
   /**
@@ -889,7 +874,7 @@ public class PluginManager
    * @throws IOException
    */
   public void setAndSaveAuConfiguration(ArchivalUnit au,
-					Configuration auConf)
+                                        Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
     log.debug("Reconfiguring AU " + au);
     au.setConfiguration(auConf);
@@ -900,10 +885,10 @@ public class PluginManager
       throws IOException {
     if (!auConf.isEmpty()) {
       if (!auConf.isSealed()) {
-	auConf.put(AU_PARAM_DISPLAY_NAME, au.getName());
+        auConf.put(AU_PARAM_DISPLAY_NAME, au.getName());
       } else if (StringUtil.isNullString(auConf.get(AU_PARAM_DISPLAY_NAME))) {
-	log.debug("Can't add name to sealed AU config: " + auConf,
-		  new Throwable());
+        log.debug("Can't add name to sealed AU config: " + auConf,
+                  new Throwable());
       }
     }
     updateAuConfigFile(au.getAuId(), auConf);
@@ -928,10 +913,10 @@ public class PluginManager
    * @throws IOException
    */
   public ArchivalUnit createAndSaveAuConfiguration(Plugin plugin,
-						   Properties auProps)
+                                                   Properties auProps)
       throws ArchivalUnit.ConfigurationException, IOException {
     return createAndSaveAuConfiguration(plugin,
-					ConfigManager.fromPropertiesUnsealed(auProps));
+                                        ConfigManager.fromPropertiesUnsealed(auProps));
   }
 
   /**
@@ -945,7 +930,7 @@ public class PluginManager
    * @throws IOException
    */
   public ArchivalUnit createAndSaveAuConfiguration(Plugin plugin,
-						   Configuration auConf)
+                                                   Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
     auConf.put(AU_PARAM_DISABLED, "false");
     ArchivalUnit au = createAu(plugin, auConf);
@@ -1020,7 +1005,7 @@ public class PluginManager
 
   public boolean isRemoveStoppedAus() {
     return CurrentConfig.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
-					 DEFAULT_REMOVE_STOPPED_AUS);
+                                         DEFAULT_REMOVE_STOPPED_AUS);
   }
 
   /**
@@ -1055,6 +1040,20 @@ public class PluginManager
       return false;
     }
     return info.isOnLoadablePath();
+  }
+
+  /**
+   * Return a String identifying the type of plugin {Loadable, Internally,
+   * Builtin}
+   */
+  public String getPluginType(Plugin plugin) {
+    if (isLoadablePlugin(plugin)) {
+      return "Loadable";
+    } else if (isInternalPlugin(plugin)) {
+      return "Internal";
+    } else {
+      return "Builtin";
+    }
   }
 
   /**
@@ -1109,9 +1108,9 @@ public class PluginManager
     String pluginName = pluginNameFromKey(pluginKey);
     if (retract != null && !retract.isEmpty()) {
       if (retract.contains(pluginName)) {
-	log.debug3("Not loading " + pluginName +
-		   " because it's on the retract list");
-	return null;
+        log.debug3("Not loading " + pluginName +
+                   " because it's on the retract list");
+        return null;
       }
     }
     if (loader == null) {
@@ -1147,19 +1146,21 @@ public class PluginManager
     // First look for a loadable plugin definition.
     try {
       log.debug3(pluginName + ": Looking for XML definition.");
-      Class c = Class.forName(getConfigurablePluginName(), true, loader);
+      Class c = Class.forName(getConfigurablePluginName(pluginName),
+                              true, loader);
+      log.debug3("Class is " + c.getName());
       DefinablePlugin xmlPlugin = (DefinablePlugin)c.newInstance();
       xmlPlugin.initPlugin(getDaemon(), pluginName, loader);
       if (isCompatible(xmlPlugin)) {
-	// found a compatible plugin, return it
-	List<String> urls = xmlPlugin.getLoadedFromUrls();
-	PluginInfo info = new PluginInfo(xmlPlugin, loader, urls.get(0));
-	return info;
+        // found a compatible plugin, return it
+        List<String> urls = xmlPlugin.getLoadedFromUrls();
+        PluginInfo info = new PluginInfo(xmlPlugin, loader, urls.get(0));
+        return info;
       } else {
-	xmlPlugin.stopPlugin();
-	log.warning("Plugin " + pluginName +
-		    " not started because it requires daemon version " +
-		    xmlPlugin.getRequiredDaemonVersion());
+        xmlPlugin.stopPlugin();
+        log.warning("Plugin " + pluginName +
+                    " not started because it requires daemon version " +
+                    xmlPlugin.getRequiredDaemonVersion());
       }
     } catch (FileNotFoundException ex) {
       log.debug2("No XML plugin: " + pluginName + ": " + ex);
@@ -1173,23 +1174,23 @@ public class PluginManager
       Plugin classPlugin = (Plugin)c.newInstance();
       classPlugin.initPlugin(getDaemon());
       if (isCompatible(classPlugin)) {
-	String path = pluginName.replace('.', '/').concat(".class");
-	URL url = loader.getResource(path);
-	PluginInfo info = new PluginInfo(classPlugin, loader, url.toString());
-	return info;
+        String path = pluginName.replace('.', '/').concat(".class");
+        URL url = loader.getResource(path);
+        PluginInfo info = new PluginInfo(classPlugin, loader, url.toString());
+        return info;
       } else {
-	classPlugin.stopPlugin();
-	String req = " requires daemon version "
-	  + classPlugin.getRequiredDaemonVersion();
-	throw new PluginException.IncompatibleDaemonVersion("Plugin " +
-							    pluginName + req);
+        classPlugin.stopPlugin();
+        String req = " requires daemon version "
+          + classPlugin.getRequiredDaemonVersion();
+        throw new PluginException.IncompatibleDaemonVersion("Plugin " +
+                                                            pluginName + req);
       }
     } catch (ClassNotFoundException ex) {
       throw new PluginException.PluginNotFound("Plugin " + pluginName
-					       + " could not be found");
+                                               + " could not be found");
     } catch (LinkageError e) {
       throw new PluginException.LinkageError("Plugin " + pluginName
-					       + " could not be loaded", e);
+                                               + " could not be loaded", e);
     }
   }
 
@@ -1204,7 +1205,7 @@ public class PluginManager
     }
     if (log.isDebug3())
       log.debug3("Plugin is " + (res ? "" : "not ") +
-		 "compatible with daemon " + dver);
+                 "compatible with daemon " + dver);
     return res;
   }
 
@@ -1237,6 +1238,7 @@ public class PluginManager
    * @return true if loaded
    */
   public boolean ensurePluginLoaded(String pluginKey) {
+    log.debug3("ensurePluginLoaded(" + pluginKey + ")");
     if (pluginMap.containsKey(pluginKey)) {
       return true;
     }
@@ -1256,12 +1258,12 @@ public class PluginManager
       log.debug3("Trying to retrieve "+pluginKey);
       info = retrievePlugin(pluginKey, loader);
       if (info != null) {
-	setPlugin(pluginKey, info.getPlugin());
-	pluginfoMap.put(pluginKey, info);
-	return true;
+        setPlugin(pluginKey, info.getPlugin());
+        pluginfoMap.put(pluginKey, info);
+        return true;
       } else {
-	log.debug("Couldn't retrieve "+pluginKey);
-	return false;
+        log.debug("Couldn't retrieve "+pluginKey);
+        return false;
       }
     } catch (Exception e) {
       log.error("Error instantiating " + pluginName, e);
@@ -1285,7 +1287,7 @@ public class PluginManager
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
-		 plugin.getPluginName() + ")");
+                 plugin.getPluginName() + ")");
     }
     pluginMap.put(pluginKey, plugin);
     resetTitles();
@@ -1297,8 +1299,24 @@ public class PluginManager
     pluginfoMap.remove(key);
   }
 
-  protected String getConfigurablePluginName() {
-    return CONFIGURABLE_PLUGIN_NAME;
+  /**
+   * Return the class name (of possibly a subclass) of DefinablePlugin
+   * that can be configured by an XML file.
+   * @param pluginName -  the class name of the plugin wanted
+   * @return - the class name of the configurable class that will implement
+   * the named plugin
+   */
+  protected String getConfigurablePluginName(String pluginName) {
+    String ret = DEFAULT_CONFIGURABLE_PLUGIN_NAME;
+    for (Iterator it = configurablePluginNameMap.keySet().iterator();
+         it.hasNext(); ) {
+      String regex = (String)it.next();
+      if (pluginName.matches(regex)) {
+        ret = configurablePluginNameMap.get(regex);
+        break;
+      }
+    }
+    return ret;
   }
 
   /**
@@ -1318,11 +1336,11 @@ public class PluginManager
     if (AuUrl.isAuUrl(url)) {
       cus = au.getAuCachedUrlSet();
     } else if ((spec.getLwrBound() != null) &&
-	       (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+               (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
       cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     } else {
       RangeCachedUrlSetSpec rcuss =
-	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
+        new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
       cus = au.makeCachedUrlSet(rcuss);
     }
     if (log.isDebug3()) log.debug3("ret cus: " + cus);
@@ -1377,9 +1395,9 @@ public class PluginManager
     synchronized (hostAus) {
       Collection cand = (Collection)hostAus.get(normStem);
       if (cand != null) {
-	Set res = new TreeSet(new AuOrderComparator());
-	res.addAll(cand);
-	cand = res;
+        Set res = new TreeSet(new AuOrderComparator());
+        res.addAll(cand);
+        cand = res;
       }
       return cand;
     }
@@ -1417,16 +1435,16 @@ public class PluginManager
     CachedUrl res = (CachedUrl)recentCuMap.get(url);
     if (log.isDebug3()) {
       if (res != null) {
-	log.debug3("cache hit " + res.toString() +
-		   (res.hasContent() ? "with" : "without") + " content.");
+        log.debug3("cache hit " + res.toString() +
+                   (res.hasContent() ? "with" : "without") + " content.");
       } else {
-	log.debug3("cache miss for " + url);
+        log.debug3("cache miss for " + url);
       }
     }
     if (res == null || (withContent && !res.hasContent())) {
       res = findTheCachedUrl0(url, withContent);
       if (res != null) {
-	recentCuMap.put(url, res);
+        recentCuMap.put(url, res);
       }
     }
     return res;
@@ -1459,46 +1477,46 @@ public class PluginManager
     synchronized (hostAus) {
       ArrayList candidateAus = (ArrayList)hostAus.get(normStem);
       if (candidateAus == null) {
-	log.debug3("findTheCachedUrl: No AUs for " + normStem);
-	return null;
+        log.debug3("findTheCachedUrl: No AUs for " + normStem);
+        return null;
       }
       CachedUrl bestCu = null;
       int bestAuIx = -1;
       int bestScore = 8;
       int auIx = 0;
       for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
-	ArchivalUnit au = (ArchivalUnit)iter.next();
-	log.debug3("findTheCachedUrl: " + normUrl + " check " + au.toString());
-	if (au.shouldBeCached(normUrl)) {
-	  log.debug3("findTheCachedUrl: " + normUrl + " should be in "
-		     + au.getAuId());
-	  try {
-	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	    CachedUrl cu = au.makeCachedUrl(siteUrl);
-	    log.debug3("findTheCachedUrl: " + siteUrl + " got " +
-		       (cu == null ? "no cu" : cu.toString()));
-	    if (cu != null && (!withContent || cu.hasContent())) {
-	      int score = score(au, cu);
-	      if (score == 0) {
-		makeFirstCandidate(candidateAus, auIx);
-		log.debug3("findTheCachedUrl: " + siteUrl + " is it");
-		return cu;
-	      }
-	      if (score < bestScore) {
-		AuUtil.safeRelease(bestCu);
-		bestCu = cu;
-		bestAuIx = auIx;
-		bestScore = score;
-	      } else {
-		cu.release();
-	      }
-	    }
-	  } catch (MalformedURLException ignore) {
-	    // ignored
-	  } catch (PluginBehaviorException ignore) {
-	    // ignored
-	  }
-	}
+        ArchivalUnit au = (ArchivalUnit)iter.next();
+        log.debug3("findTheCachedUrl: " + normUrl + " check " + au.toString());
+        if (au.shouldBeCached(normUrl)) {
+          log.debug3("findTheCachedUrl: " + normUrl + " should be in "
+                     + au.getAuId());
+          try {
+            String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
+            CachedUrl cu = au.makeCachedUrl(siteUrl);
+            log.debug3("findTheCachedUrl: " + siteUrl + " got " +
+                       (cu == null ? "no cu" : cu.toString()));
+            if (cu != null && (!withContent || cu.hasContent())) {
+              int score = score(au, cu);
+              if (score == 0) {
+                makeFirstCandidate(candidateAus, auIx);
+                log.debug3("findTheCachedUrl: " + siteUrl + " is it");
+                return cu;
+              }
+              if (score < bestScore) {
+                AuUtil.safeRelease(bestCu);
+                bestCu = cu;
+                bestAuIx = auIx;
+                bestScore = score;
+              } else {
+                cu.release();
+              }
+            }
+          } catch (MalformedURLException ignore) {
+            // ignored
+          } catch (PluginBehaviorException ignore) {
+            // ignored
+          }
+        }
       }
       makeFirstCandidate(candidateAus, bestAuIx);
       log.debug3("bestCu was " + (bestCu == null ? "null" : bestCu.toString()));
@@ -1511,7 +1529,7 @@ public class PluginManager
   private void makeFirstCandidate(List lst, int ix) {
     if (ix > 0) {
       synchronized (hostAus) {
-	Collections.swap(lst, ix, 0);
+        Collections.swap(lst, ix, 0);
       }
     }
   }
@@ -1528,8 +1546,8 @@ public class PluginManager
 
   private boolean isUnsubscribed(ArchivalUnit au) {
     return (getDaemon().isDetectClockssSubscription() &&
-	    (AuUtil.getAuState(au).getClockssSubscriptionStatus() !=
-	     AuState.CLOCKSS_SUB_YES));
+            (AuUtil.getAuState(au).getClockssSubscriptionStatus() !=
+             AuState.CLOCKSS_SUB_YES));
   }
 
   // XXX
@@ -1557,7 +1575,7 @@ public class PluginManager
   public List<ArchivalUnit> getAllAus() {
     synchronized (auSet) {
       if (auList == null) {
-	auList = new ArrayList<ArchivalUnit>(auSet);
+        auList = new ArrayList<ArchivalUnit>(auSet);
       }
       return auList;
     }
@@ -1590,8 +1608,8 @@ public class PluginManager
   public List findAllTitles() {
     synchronized (titleMonitor) {
       if (allTitles == null) {
-	allTitles = new ArrayList(getTitleMap().keySet());
-	Collections.sort(allTitles, CatalogueOrderComparator.SINGLETON);
+        allTitles = new ArrayList(getTitleMap().keySet());
+        Collections.sort(allTitles, CatalogueOrderComparator.SINGLETON);
       }
       return allTitles;
     }
@@ -1610,22 +1628,22 @@ public class PluginManager
   public List findAllTitleConfigs() {
     synchronized (titleMonitor) {
       if (allTitleConfigs == null) {
-	List titles = findAllTitles();
-	List res = new ArrayList(titles.size());
-	for (Iterator titer = titles.iterator(); titer.hasNext();) {
-	  String title = (String)titer.next();
-	  for (Iterator piter = getTitlePlugins(title).iterator();
-	       piter.hasNext();) {
-	    Plugin plugin = (Plugin)piter.next();
-	    TitleConfig tc = plugin.getTitleConfig(title);
-	    if (tc != null) {
-	      res.add(tc);
-	    } else {
-	      log.warning("getTitleConfig(" + plugin + ", " + title + ") = null");
-	    }
-	  }
-	}
-	allTitleConfigs = res;
+        List titles = findAllTitles();
+        List res = new ArrayList(titles.size());
+        for (Iterator titer = titles.iterator(); titer.hasNext();) {
+          String title = (String)titer.next();
+          for (Iterator piter = getTitlePlugins(title).iterator();
+               piter.hasNext();) {
+            Plugin plugin = (Plugin)piter.next();
+            TitleConfig tc = plugin.getTitleConfig(title);
+            if (tc != null) {
+              res.add(tc);
+            } else {
+              log.warning("getTitleConfig(" + plugin + ", " + title + ") = null");
+            }
+          }
+        }
+        allTitleConfigs = res;
       }
       return allTitleConfigs;
     }
@@ -1642,7 +1660,7 @@ public class PluginManager
   public Map getTitleMap() {
     synchronized (titleMonitor) {
       if (titleMap == null) {
-	titleMap = buildTitleMap();
+        titleMap = buildTitleMap();
       }
       return titleMap;
     }
@@ -1652,15 +1670,15 @@ public class PluginManager
     Map map = new MultiValueMap();
     synchronized (pluginMap) {
       for (Iterator iter = getRegisteredPlugins().iterator();
-	   iter.hasNext();) {
-	Plugin p = (Plugin)iter.next();
-	Collection titles = p.getSupportedTitles();
-	for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
-	  String title = (String)iter2.next();
-	  if (title != null) {
-	    map.put(title, p);
-	  }
-	}
+           iter.hasNext();) {
+        Plugin p = (Plugin)iter.next();
+        Collection titles = p.getSupportedTitles();
+        for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
+          String title = (String)iter2.next();
+          if (title != null) {
+            map.put(title, p);
+          }
+        }
       }
     }
     return map;
@@ -1672,9 +1690,9 @@ public class PluginManager
     SortedMap pMap = new TreeMap();
     synchronized (pluginMap) {
       for (Iterator iter = getRegisteredPlugins().iterator();
-	   iter.hasNext(); ) {
-	Plugin p = (Plugin)iter.next();
-	pMap.put(p.getPluginName(), p);
+           iter.hasNext(); ) {
+        Plugin p = (Plugin)iter.next();
+        pMap.put(p.getPluginName(), p);
       }
     }
     return pMap;
@@ -1720,23 +1738,23 @@ public class PluginManager
       // Only process this registry if it is new.
       if (!auMap.containsKey(auId)) {
 
-	try {
-	  configureAu(getRegistryPlugin(), auConf, auId);
-	} catch (ArchivalUnit.ConfigurationException ex) {
-	  log.error("Failed to configure AU " + auKey, ex);
-	  regCallback.crawlCompleted(url);
-	  continue;
-	}
+        try {
+          configureAu(getRegistryPlugin(), auConf, auId);
+        } catch (ArchivalUnit.ConfigurationException ex) {
+          log.error("Failed to configure AU " + auKey, ex);
+          regCallback.crawlCompleted(url);
+          continue;
+        }
 
-	ArchivalUnit registryAu = getAuFromId(auId);
+        ArchivalUnit registryAu = getAuFromId(auId);
 
-	loadAus.add(registryAu);
+        loadAus.add(registryAu);
 
-	// Trigger a new content crawl if required.
-	possiblyStartRegistryAuCrawl(registryAu, url, regCallback);
+        // Trigger a new content crawl if required.
+        possiblyStartRegistryAuCrawl(registryAu, url, regCallback);
       } else {
-	log.debug2("We already have this AU configured, notifying callback.");
-	regCallback.crawlCompleted(url);
+        log.debug2("We already have this AU configured, notifying callback.");
+        regCallback.crawlCompleted(url);
       }
     }
 
@@ -1745,12 +1763,12 @@ public class PluginManager
     log.debug("Waiting for loadable plugins to finish loading...");
     try {
       if (!bs.take(Deadline.in(registryTimeout))) {
-	log.warning("Timed out while waiting for registries to finish loading. " +
-		    "Remaining registry URL list: " + regCallback.getRegistryUrls());
+        log.warning("Timed out while waiting for registries to finish loading. " +
+                    "Remaining registry URL list: " + regCallback.getRegistryUrls());
       }
     } catch (InterruptedException ex) {
       log.warning("Binary semaphore threw InterruptedException while waiting." +
-		  "Remaining registry URL list: " + regCallback.getRegistryUrls());
+                  "Remaining registry URL list: " + regCallback.getRegistryUrls());
     }
 
     processRegistryAus(loadAus);
@@ -1768,12 +1786,12 @@ public class PluginManager
 
   // Trigger a new content crawl on the registry AU if required.
   protected void possiblyStartRegistryAuCrawl(ArchivalUnit registryAu,
-					      String url,
-					      InitialRegistryCallback cb) {
+                                              String url,
+                                              InitialRegistryCallback cb) {
     if (registryAu.shouldCrawlForNewContent(AuUtil.getAuState(registryAu))) {
       if (log.isDebug2()) log.debug2("Starting new crawl:: " + registryAu);
       getDaemon().getCrawlManager().startNewContentCrawl(registryAu, cb,
-							 url, null);
+                                                         url, null);
     } else {
       if (log.isDebug2()) log.debug2("No crawl needed: " + registryAu);
 
@@ -1797,17 +1815,17 @@ public class PluginManager
     // configured AUs
     synchronized (pluginMap) {
       if (retract != null) {
-	for (Iterator iter = retract.iterator(); iter.hasNext(); ) {
-	  String name = (String)iter.next();
-	  String key = pluginKeyFromName(name);
-	  Plugin plug = getPlugin(key);
-	  if (plug != null && !isInternalPlugin(plug)) {
-	    Configuration tree = currentAllPlugs.getConfigTree(key);
-	    if (tree == null || tree.isEmpty()) {
-	      removePlugin(key);
-	    }
-	  }
-	}
+        for (Iterator iter = retract.iterator(); iter.hasNext(); ) {
+          String name = (String)iter.next();
+          String key = pluginKeyFromName(name);
+          Plugin plug = getPlugin(key);
+          if (plug != null && !isInternalPlugin(plug)) {
+            Configuration tree = currentAllPlugs.getConfigTree(key);
+            if (tree == null || tree.isEmpty()) {
+              removePlugin(key);
+            }
+          }
+        }
       }
     }
   }
@@ -1824,11 +1842,11 @@ public class PluginManager
       ConfigManager.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
     String relPluginPath =
       ConfigManager.getCurrentConfig().get(PARAM_PLUGIN_LOCATION,
-					   DEFAULT_PLUGIN_LOCATION);
+                                           DEFAULT_PLUGIN_LOCATION);
 
     if (dSpaceList == null || dSpaceList.size() == 0) {
       log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
-		" not specified, not configuring plugin dir");
+                " not specified, not configuring plugin dir");
       return;
     }
 
@@ -1840,26 +1858,26 @@ public class PluginManager
       // This should (hopefully) never ever happen.  Log an error and
       // return for now.
       log.error("Plugin directory " + dir + " cannot be created.  A file " +
-		"already exists with that name!");
+                "already exists with that name!");
       return;
     }
 
     if (dir.exists() && dir.isDirectory()) {
       log.debug("Plugin directory " + dir +
-		" already exists.  Cleaning up...");
+                " already exists.  Cleaning up...");
 
       File[] dirList = dir.listFiles();
       for (int ix = 0; ix < dirList.length; ix++) {
-	if (!dirList[ix].delete()) {
-	  log.error("Unable to clean up plugin directory " + dir +
-		    ".  Could not delete " + dirList[ix]);
-	  return;
-	}
+        if (!dirList[ix].delete()) {
+          log.error("Unable to clean up plugin directory " + dir +
+                    ".  Could not delete " + dirList[ix]);
+          return;
+        }
       }
     } else {
       if (!dir.mkdirs()) {
-	log.error("Unable to create plugin directory " + dir);
-	return;
+        log.error("Unable to create plugin directory " + dir);
+        return;
       }
     }
 
@@ -1878,31 +1896,31 @@ public class PluginManager
     KeyStore ks = null;
     try {
       if (keystoreLoc == null || keystorePass == null) {
-	log.error("Unable to load keystore!  Loadable plugins will " +
-		  "not be available.");
+        log.error("Unable to load keystore!  Loadable plugins will " +
+                  "not be available.");
       } else {
-	log.debug("Loading keystore: " + keystoreLoc);
+        log.debug("Loading keystore: " + keystoreLoc);
         ks = KeyStore.getInstance("JKS", "SUN");
-	if (keystoreLoc.startsWith(File.separator)) {
-	  InputStream kin = new FileInputStream(new File(keystoreLoc));
-	  try {
-	    ks.load(kin, keystorePass.toCharArray());
-	  } finally {
-	    IOUtil.safeClose(kin);
-	  }
-	} else if (UrlUtil.isHttpUrl(keystoreLoc) ||
+        if (keystoreLoc.startsWith(File.separator)) {
+          InputStream kin = new FileInputStream(new File(keystoreLoc));
+          try {
+            ks.load(kin, keystorePass.toCharArray());
+          } finally {
+            IOUtil.safeClose(kin);
+          }
+        } else if (UrlUtil.isHttpUrl(keystoreLoc) ||
                    UrlUtil.isFileUrl(keystoreLoc)) {
-	  URL keystoreUrl = new URL(keystoreLoc);
+          URL keystoreUrl = new URL(keystoreLoc);
           ks.load(keystoreUrl.openStream(), keystorePass.toCharArray());
         } else {
-	  InputStream kin =
-	    getClass().getClassLoader().getResourceAsStream(keystoreLoc);
-	  if (kin == null) {
-	    throw new IOException("Keystore reousrce not found: " +
-				  keystoreLoc);
-	  }
-	  ks.load(kin, keystorePass.toCharArray());
-	}
+          InputStream kin =
+            getClass().getClassLoader().getResourceAsStream(keystoreLoc);
+          if (kin == null) {
+            throw new IOException("Keystore reousrce not found: " +
+                                  keystoreLoc);
+          }
+          ks.load(kin, keystorePass.toCharArray());
+        }
       }
 
     } catch (Exception ex) {
@@ -1926,13 +1944,13 @@ public class PluginManager
     if (!isKeystoreInited()) {
       keystoreLoc = config.get(PARAM_USER_KEYSTORE_LOCATION);
       if (!StringUtil.isNullString(keystoreLoc)) {
-	keystorePass = config.get(PARAM_USER_KEYSTORE_PASSWORD,
-				  DEFAULT_KEYSTORE_PASSWORD);
+        keystorePass = config.get(PARAM_USER_KEYSTORE_PASSWORD,
+                                  DEFAULT_KEYSTORE_PASSWORD);
       } else {
-	keystoreLoc = config.get(PARAM_KEYSTORE_LOCATION,
-				 DEFAULT_KEYSTORE_LOCATION);
-	keystorePass = config.get(PARAM_KEYSTORE_PASSWORD,
-				  DEFAULT_KEYSTORE_PASSWORD);
+        keystoreLoc = config.get(PARAM_KEYSTORE_LOCATION,
+                                 DEFAULT_KEYSTORE_LOCATION);
+        keystorePass = config.get(PARAM_KEYSTORE_PASSWORD,
+                                  DEFAULT_KEYSTORE_PASSWORD);
       }
       keystore = initKeystore(keystoreLoc, keystorePass);
       if (keystore != null) {
@@ -1962,19 +1980,19 @@ public class PluginManager
       Attributes attrs = manifest.getAttributes(key);
 
       if (attrs.containsKey(LOADABLE_PLUGIN_ATTR)) {
-	String s = StringUtil.replaceString(key, "/", ".");
+        String s = StringUtil.replaceString(key, "/", ".");
 
-	String pluginName = null;
+        String pluginName = null;
 
-	if (StringUtil.endsWithIgnoreCase(key, ".class")) {
-	  pluginName = StringUtil.replaceString(s, ".class", "");
-	  log.debug2("Adding '" + pluginName + "' to plugin load list.");
-	  plugins.add(pluginName);
-	} else if (StringUtil.endsWithIgnoreCase(key, ".xml")) {
-	  pluginName = StringUtil.replaceString(s, ".xml", "");
-	  log.debug2("Adding '" + pluginName + "' to plugin load list.");
-	  plugins.add(pluginName);
-	}
+        if (StringUtil.endsWithIgnoreCase(key, ".class")) {
+          pluginName = StringUtil.replaceString(s, ".class", "");
+          log.debug2("Adding '" + pluginName + "' to plugin load list.");
+          plugins.add(pluginName);
+        } else if (StringUtil.endsWithIgnoreCase(key, ".xml")) {
+          pluginName = StringUtil.replaceString(s, ".xml", "");
+          log.debug2("Adding '" + pluginName + "' to plugin load list.");
+          plugins.add(pluginName);
+        }
       }
 
     }
@@ -2001,9 +2019,9 @@ public class PluginManager
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       try {
-	processOneRegistryAu(au, tmpMap);
+        processOneRegistryAu(au, tmpMap);
       } catch (RuntimeException e) {
-	log.error("Error processing plugin registry AU: " + au, e);
+        log.error("Error processing plugin registry AU: " + au, e);
       }
     }
 
@@ -2011,7 +2029,7 @@ public class PluginManager
     // the global maps.
     List classloaders = new ArrayList();
     for (Iterator pluginIter = tmpMap.entrySet().iterator();
-	 pluginIter.hasNext(); ) {
+         pluginIter.hasNext(); ) {
       Map.Entry entry = (Map.Entry)pluginIter.next();
       String key = (String)entry.getKey();
       log.debug2("Adding to plugin map: " + key);
@@ -2042,24 +2060,24 @@ public class PluginManager
       // CachedUrlSet.
 
       String url = cusn.getUrl();
-	if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
-	    cusn.isLeaf()) {
+        if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
+            cusn.isLeaf()) {
 
-	// This CachedUrl represents a plugin JAR, validate it and
-	// process the plugins it contains.
+        // This CachedUrl represents a plugin JAR, validate it and
+        // process the plugins it contains.
 
-	CachedUrl cu = (CachedUrl)cusn;
-	try {
-	  processOneRegistryJar(cu, url, au, tmpMap);
-	} catch (RuntimeException e) {
-	  log.error("Error processing plugin jar: " + cu, e);
-	}
+        CachedUrl cu = (CachedUrl)cusn;
+        try {
+          processOneRegistryJar(cu, url, au, tmpMap);
+        } catch (RuntimeException e) {
+          log.error("Error processing plugin jar: " + cu, e);
+        }
       }
     }
   }
 
   protected void processOneRegistryJar(CachedUrl cu, String url,
-				       ArchivalUnit au, Map tmpMap) {
+                                       ArchivalUnit au, Map tmpMap) {
     Integer curVersion = new Integer(cu.getVersion());
 
     if (cuNodeVersionMap.get(url) == null) {
@@ -2081,15 +2099,15 @@ public class PluginManager
       return;
     } else {
       try {
-	// Validate and bless the JAR file from the CU.
-	blessedJar = jarValidator.getBlessedJar(cu);
-	log.debug2("Plugin jar: " + cu.getUrl() + " -> " + blessedJar);
+        // Validate and bless the JAR file from the CU.
+        blessedJar = jarValidator.getBlessedJar(cu);
+        log.debug2("Plugin jar: " + cu.getUrl() + " -> " + blessedJar);
       } catch (IOException ex) {
-	log.error("Error processing jar file: " + url, ex);
-	return;
+        log.error("Error processing jar file: " + url, ex);
+        return;
       } catch (JarValidator.JarValidationException ex) {
-	log.error("CachedUrl did not validate: " + cu, ex);
-	return;
+        log.error("CachedUrl did not validate: " + cu, ex);
+        return;
       }
     }
 
@@ -2100,120 +2118,120 @@ public class PluginManager
       // Get the list of plugins to load from this jar.
       List loadPlugins = null;
       try {
-	loadPlugins = getJarPluginClasses(blessedJar);
+        loadPlugins = getJarPluginClasses(blessedJar);
       } catch (IOException ex) {
-	log.error("Error while getting list of plugins for " +
-		  blessedJar);
-	return; // skip this CU.
+        log.error("Error while getting list of plugins for " +
+                  blessedJar);
+        return; // skip this CU.
 
       }
       log.debug2("Blessed jar: " + blessedJar + ", plugins: " + loadPlugins);
 
       // Although this -should- never happen, it's possible.
       if (loadPlugins.size() == 0) {
-	log.warning("Jar " + blessedJar +
-		    " does not contain any plugins.  Skipping...");
-	return; // skip this CU.
+        log.warning("Jar " + blessedJar +
+                    " does not contain any plugins.  Skipping...");
+        return; // skip this CU.
       }
 
       // Load the plugin classes
       ClassLoader pluginLoader = null;
       URL blessedUrl;
       try {
-	blessedUrl = blessedJar.toURL();
-	URL[] urls = new URL[] { blessedUrl };
-	pluginLoader =
-	  preferLoadablePlugin
-	  ? new LoadablePluginClassLoader(urls)
-	  : new URLClassLoader(urls);
+        blessedUrl = blessedJar.toURL();
+        URL[] urls = new URL[] { blessedUrl };
+        pluginLoader =
+          preferLoadablePlugin
+          ? new LoadablePluginClassLoader(urls)
+          : new URLClassLoader(urls);
       } catch (MalformedURLException ex) {
-	log.error("Malformed URL exception attempting to create " +
-		  "classloader for plugin JAR " + blessedJar);
-	return; // skip this CU.
+        log.error("Malformed URL exception attempting to create " +
+                  "classloader for plugin JAR " + blessedJar);
+        return; // skip this CU.
       }
 
       String pluginName = null;
 
       for (Iterator pluginIter = loadPlugins.iterator();
-	   pluginIter.hasNext();) {
-	pluginName = (String)pluginIter.next();
-	String key = pluginKeyFromName(pluginName);
+           pluginIter.hasNext();) {
+        pluginName = (String)pluginIter.next();
+        String key = pluginKeyFromName(pluginName);
 
-	Plugin plugin;
-	PluginInfo info;
-	try {
-	  info = retrievePlugin(pluginName, pluginLoader);
-	  info.setCuUrl(url);
-	  info.setRegistryAu(au);
-	  String jar = info.getJarUrl();
-	  if (jar != null) {
-	    // If the blessed jar path is a substring of the jar:
-	    // url from which the actual plugin resource or class
-	    // was loaded, then it is a loadable plugin.
-	    boolean isLoadable =
-	      jar.indexOf(blessedUrl.getFile()) > 0;
-	    info.setIsOnLoadablePath(isLoadable);
-	  }
-	  plugin = info.getPlugin();
-	} catch (Exception ex) {
-	  log.error("Unable to load plugin " + pluginName +
-		    ", skipping: " + ex.getMessage());
-	  return;
-	}
+        Plugin plugin;
+        PluginInfo info;
+        try {
+          info = retrievePlugin(pluginName, pluginLoader);
+          info.setCuUrl(url);
+          info.setRegistryAu(au);
+          String jar = info.getJarUrl();
+          if (jar != null) {
+            // If the blessed jar path is a substring of the jar:
+            // url from which the actual plugin resource or class
+            // was loaded, then it is a loadable plugin.
+            boolean isLoadable =
+              jar.indexOf(blessedUrl.getFile()) > 0;
+            info.setIsOnLoadablePath(isLoadable);
+          }
+          plugin = info.getPlugin();
+        } catch (Exception ex) {
+          log.error("Unable to load plugin " + pluginName +
+                    ", skipping: " + ex.getMessage());
+          return;
+        }
 
-	PluginVersion version = null;
+        PluginVersion version = null;
 
-	try {
-	  version = new PluginVersion(plugin.getVersion());
-	  info.setVersion(version);
-	} catch (IllegalArgumentException ex) {
-	  // Don't let this runtime exception stop the daemon.  Skip the plugin.
-	  log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
-	  return;
-	}
+        try {
+          version = new PluginVersion(plugin.getVersion());
+          info.setVersion(version);
+        } catch (IllegalArgumentException ex) {
+          // Don't let this runtime exception stop the daemon.  Skip the plugin.
+          log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
+          return;
+        }
 
-	if (pluginMap.containsKey(key)) {
-	  // Plugin already exists in the global plugin map.
-	  // Replace it with a new version if one is available.
-	  log.debug2("Plugin " + key + " is already in global pluginMap.");
-	  Plugin otherPlugin = getPlugin(key);
-	  PluginVersion otherVer =
-	    new PluginVersion(otherPlugin.getVersion());
-	  if (version.toLong() > otherVer.toLong()) {
-	    if (log.isDebug2()) {
-	      log.debug2("Existing plugin " + plugin.getPluginId() +
-			 ": Newer version " + version + " found.");
-	    }
-	    tmpMap.put(key, info);
-	  } else {
-	    if (log.isDebug2()) {
-	      log.debug2("Existing plugin " + plugin.getPluginId() +
-			 ": No newer version found.");
-	    }
-	  }
-	} else if (!tmpMap.containsKey(key)) {
-	  // Plugin doesn't yet exist in the temporary map, add it.
-	  tmpMap.put(key, info);
+        if (pluginMap.containsKey(key)) {
+          // Plugin already exists in the global plugin map.
+          // Replace it with a new version if one is available.
+          log.debug2("Plugin " + key + " is already in global pluginMap.");
+          Plugin otherPlugin = getPlugin(key);
+          PluginVersion otherVer =
+            new PluginVersion(otherPlugin.getVersion());
+          if (version.toLong() > otherVer.toLong()) {
+            if (log.isDebug2()) {
+              log.debug2("Existing plugin " + plugin.getPluginId() +
+                         ": Newer version " + version + " found.");
+            }
+            tmpMap.put(key, info);
+          } else {
+            if (log.isDebug2()) {
+              log.debug2("Existing plugin " + plugin.getPluginId() +
+                         ": No newer version found.");
+            }
+          }
+        } else if (!tmpMap.containsKey(key)) {
+          // Plugin doesn't yet exist in the temporary map, add it.
+          tmpMap.put(key, info);
 
-	  if (log.isDebug2()) {
-	    log.debug2("Plugin " + plugin.getPluginId() +
-		       ": No previous version in temp map.");
-	  }
-	} else {
-	  // Plugin already exists in the temporary map, use whichever
-	  // version is higher.
-	  PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
+          if (log.isDebug2()) {
+            log.debug2("Plugin " + plugin.getPluginId() +
+                       ": No previous version in temp map.");
+          }
+        } else {
+          // Plugin already exists in the temporary map, use whichever
+          // version is higher.
+          PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
 
-	  if (version.toLong() > otherVer.toLong()) {
-	    if (log.isDebug2()) {
-	      log.debug2("Plugin " + plugin.getPluginId() + ": version " +
-			 version + " is newer than version " + otherVer +
-			 " already in temp map, overwriting.");
-	    }
-	    // Overwrite old key in temp map
-	    tmpMap.put(key, info);
-	  }
-	}
+          if (version.toLong() > otherVer.toLong()) {
+            if (log.isDebug2()) {
+              log.debug2("Plugin " + plugin.getPluginId() + ": version " +
+                         version + " is newer than version " + otherVer +
+                         " already in temp map, overwriting.");
+            }
+            // Overwrite old key in temp map
+            tmpMap.put(key, info);
+          }
+        }
       }
     }
   }
@@ -2232,18 +2250,18 @@ public class PluginManager
      */
     public InitialRegistryCallback(List registryUrls, BinarySemaphore bs) {
       this.registryUrls =
-	Collections.synchronizedList(new ArrayList(registryUrls));
+        Collections.synchronizedList(new ArrayList(registryUrls));
       this.bs = bs;
       if (log.isDebug2()) log.debug2("InitialRegistryCallback: " +
-				     registryUrls);
+                                     registryUrls);
       if (registryUrls.isEmpty()) {
-	bs.give();
+        bs.give();
       }
     }
 
     public void signalCrawlAttemptCompleted(boolean success,
-					    Object cookie,
-					    CrawlerStatus status) {
+                                            Object cookie,
+                                            CrawlerStatus status) {
       String url = (String)cookie;
 
       crawlCompleted(url);
@@ -2257,10 +2275,10 @@ public class PluginManager
       // and we can load the plugin classes.
       registryUrls.remove(url);
       if (log.isDebug2()) log.debug2("Registry crawl complete: " + url +
-				     ", " + registryUrls.size() + " left");
+                                     ", " + registryUrls.size() + " left");
       if (registryUrls.isEmpty()) {
-	if (log.isDebug2()) log.debug2("Registry crawls complete");
-	bs.give();
+        if (log.isDebug2()) log.debug2("Registry crawls complete");
+        bs.give();
       }
     }
 
@@ -2287,11 +2305,11 @@ public class PluginManager
     }
 
     public void signalCrawlAttemptCompleted(boolean success,
-					    Object cookie,
-					    CrawlerStatus status) {
+                                            Object cookie,
+                                            CrawlerStatus status) {
       if (success) {
-	log.debug2("Registry crawl completed successfully, checking for new plugins");
-	pluginMgr.processRegistryAus(ListUtil.list(registryAu));
+        log.debug2("Registry crawl completed successfully, checking for new plugins");
+        pluginMgr.processRegistryAus(ListUtil.list(registryAu));
       }
     }
   }
@@ -2300,7 +2318,7 @@ public class PluginManager
    * A simple class that wraps information about a loadable plugin,
    * used during the loading process.
    */
-  static class PluginInfo {
+  public static class PluginInfo {
     private Plugin plugin;
     private ArchivalUnit registryAu;
     private PluginVersion version;

@@ -16,12 +16,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1536-2442
   
-      au < do_not_process ; Journal of Insect Science Volume 1 ; 1 >
-      au < do_not_process ; Journal of Insect Science Volume 2 ; 2 >
-      au < do_not_process ; Journal of Insect Science Volume 3 ; 3 >
+      au < doNotProcess ; Journal of Insect Science Volume 1 ; 1 >
+      au < doNotProcess ; Journal of Insect Science Volume 2 ; 2 >
+      au < doNotProcess ; Journal of Insect Science Volume 3 ; 3 >
       au < superseded ; Journal of Insect Science Volume 4 ; 4 >
-      au < do_not_process ; Journal of Insect Science Volume 5 ; 5 >
-      au < do_not_process ; Journal of Insect Science Volume 6 ; 6 >
+      au < doNotProcess ; Journal of Insect Science Volume 5 ; 5 >
+      au < doNotProcess ; Journal of Insect Science Volume 6 ; 6 >
     }
 
     {

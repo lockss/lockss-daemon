@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.1 2006-09-16 23:04:48 tlipkis Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.1.44.1 2009-11-03 23:44:50 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,11 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
-import java.util.List;
+
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 
 public class HighWireHtmlFilterFactory implements FilterFactory {
   // Use the logic in HighWireFilterRule.  That class should be retired in
@@ -46,8 +48,60 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
 					       InputStream in,
 					       String encoding) {
-    Reader reader = FilterUtil.getReader(in, encoding);
+    NodeFilter[] filters = new NodeFilter[] {
+        // Contains variable ad-generating code
+        new TagNameFilter("script"),
+        // Contains variable ad-generating code
+        new TagNameFilter("noscript"),
+        // Typically contains ads (e.g. American Academy of Pediatrics)
+        new TagNameFilter("object"),
+        // Typically contains ads 
+        new TagNameFilter("iframe"),
+        // Contains ads (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "advertisement"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring"),
+        // Contains institution name (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea"),
+        // Contains institution name (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "inst_logo"),
+        // Contains institution name (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("p", "id", "UserToolbar"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav"),
+        HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table"),
+        HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav"),
+        HtmlNodeFilters.tagWithText("strong", "related", true),
+        HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
+        // Contains the current year (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "copyright"),
+        // Contains the current year (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains the current date and time (e.g. American Medical Association)
+        HtmlNodeFilters.tagWithAttribute("a", "target", "help"),
+        // Contains the name and date of the current issue (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue"),
+        // Contains ads or variable banners (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "oas_top"),
+        // Contains ads or variable banners (e.g. Oxford University Press)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "oas_bottom"),
+        // Optional institution-specific citation resolver (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
+        // Contains ad-dependent URLs (e.g. American Academy of Pediatrics)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
+    };
+
+
+    // First filter with HtmlParser
+    OrFilter orFilter = new OrFilter(filters);
+    InputStream filtered = new HtmlFilterInputStream(in,
+                                                     encoding,
+                                                     HtmlNodeFilterTransform.exclude(orFilter));
+
+    // Then filter with HighWireFilterRule
+    Reader reader = FilterUtil.getReader(filtered, encoding);
     Reader filtReader = HighWireFilterRule.makeFilteredReader(reader);
     return new ReaderInputStream(filtReader);
   }
+
 }
+

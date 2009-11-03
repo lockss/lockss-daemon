@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.13 2009-01-01 12:26:40 thib_gc Exp $
+# $Id: tdbparse.py,v 1.13.6.1 2009-11-03 23:44:55 edwardsb1 Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -51,21 +51,21 @@ TOKENS_WITH_VALUES = [ TOKEN_STRING, TOKEN_IDENTIFIER ]
 def _translate_token(tok):
     return {
         TOKEN_NONE: 'NONE',
-        TOKEN_KEYWORD_PUBLISHER: 'KEYWORD_PUBLISHER',
-        TOKEN_KEYWORD_TITLE: 'KEYWORD_TITLE',
-        TOKEN_KEYWORD_AU: 'KEYWORD_AU',
-        TOKEN_KEYWORD_IMPLICIT: 'KEYWORD_IMPLICIT',
-        TOKEN_CURLY_OPEN: 'CURLY_OPEN',
-        TOKEN_CURLY_CLOSE: 'CURLY_CLOSE',
-        TOKEN_ANGLE_OPEN: 'ANGLE_OPEN',
-        TOKEN_ANGLE_CLOSE: 'ANGLE_CLOSE',
-        TOKEN_SQUARE_OPEN: 'SQUARE_OPEN',
-        TOKEN_SQUARE_CLOSE: 'SQUARE_CLOSE',
-        TOKEN_SEMICOLON: 'SEMICOLON',
-        TOKEN_EQUAL: 'EQUAL',
-        TOKEN_STRING: 'STRING',
-        TOKEN_IDENTIFIER: 'IDENTIFIER',
-        TOKEN_EOF: 'EOF'
+        TOKEN_KEYWORD_PUBLISHER: 'publisher',
+        TOKEN_KEYWORD_TITLE: 'title',
+        TOKEN_KEYWORD_AU: 'au',
+        TOKEN_KEYWORD_IMPLICIT: 'implicit',
+        TOKEN_CURLY_OPEN: '{',
+        TOKEN_CURLY_CLOSE: '}',
+        TOKEN_ANGLE_OPEN: '<',
+        TOKEN_ANGLE_CLOSE: '>',
+        TOKEN_SQUARE_OPEN: '[',
+        TOKEN_SQUARE_CLOSE: ']',
+        TOKEN_SEMICOLON: ';',
+        TOKEN_EQUAL: '=',
+        TOKEN_STRING: 'string',
+        TOKEN_IDENTIFIER: 'identifier',
+        TOKEN_EOF: 'end of file'
     }.get(tok)
 
 class TdbScanner(object):
@@ -156,7 +156,7 @@ class TdbScanner(object):
             self.__options['_expect_string'] = TOKEN_EQUAL
             return self.__single(TOKEN_EQUAL)
         # Identifiers
-        match = re.match(r'\w+', self.__line)
+        match = re.match(r'[a-zA-Z0-9_./]+', self.__line)
         if match:
             self.__value = match.group()
             self.__advance(match.end())
@@ -402,9 +402,9 @@ class TdbParser(object):
             self.__current_au.append(AU(self.__current_au[-1]))
             self.__au_container()
         else:
-            raise RuntimeError, 'expected %s or %s, got %s' % (_translate_token(TOKEN_KEYWORD_AU),
-                                                               _translate_token(TOKEN_CURLY_OPEN),
-                                                               _translate_token(self.__token[0]))
+            raise RuntimeError, 'expected %s or %s but got %s' % (_translate_token(TOKEN_KEYWORD_AU),
+                                                                  _translate_token(TOKEN_CURLY_OPEN),
+                                                                  _translate_token(self.__token[0]))
 
     def __au_container(self):
         '''au_container :
@@ -435,9 +435,9 @@ class TdbParser(object):
         elif self.__token[0] == TOKEN_KEYWORD_IMPLICIT:
             self.__implicit()
         else:
-            raise RuntimeError, 'expected %s or %s, got %s' % (_translate_token(TOKEN_IDENTIFIER),
-                                                               _translate_token(TOKEN_KEYWORD_IMPLICIT),
-                                                               _translate_token(self.__token[0]))
+            raise RuntimeError, 'expected %s or %s but got %s' % (_translate_token(TOKEN_IDENTIFIER),
+                                                                  _translate_token(TOKEN_KEYWORD_IMPLICIT),
+                                                                  _translate_token(self.__token[0]))
 
     def __identifier(self):
         '''identifier :
@@ -605,8 +605,8 @@ class TdbParser(object):
         '''If the given token is next, consumes it, otherwise raises
         a runtime error.'''
         if not self.__accept(token):
-            raise RuntimeError, 'expected %s, got %s' % (_translate_token(token),
-                                                         _translate_token(self.__token[0]))
+            raise RuntimeError, 'expected %s but got %s' % (_translate_token(token),
+                                                            _translate_token(self.__token[0]))
 
     def __initialize_data(self):
         self.__tdb = Tdb()

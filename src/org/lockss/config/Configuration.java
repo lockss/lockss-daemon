@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.23.22.1 2009-07-01 03:05:16 edwardsb1 Exp $
+ * $Id: Configuration.java,v 1.23.22.2 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -79,12 +79,12 @@ public abstract class Configuration {
 
   public String getPlatformGroups() {
     return get(ConfigManager.PARAM_DAEMON_GROUPS,
-	       ConfigManager.DEFAULT_DAEMON_GROUP);
+               ConfigManager.DEFAULT_DAEMON_GROUP);
   }
 
   public List getPlatformGroupList() {
     return getList(ConfigManager.PARAM_DAEMON_GROUPS,
-		   ConfigManager.DEFAULT_DAEMON_GROUP_LIST);
+                   ConfigManager.DEFAULT_DAEMON_GROUP_LIST);
   }
 
   public static String getPlatformHostname() {
@@ -116,12 +116,15 @@ public abstract class Configuration {
   void setTitleConfig(Configuration tc) {
     if (tc == null) return;
     MultiValueMap titleMap = new MultiValueMap();
+    int cnt = 0;
     for (Iterator iter = tc.nodeIterator(); iter.hasNext(); ) {
       String titleKey = (String)iter.next();
       Configuration titleConfig = tc.getConfigTree(titleKey);
       String pluginName = titleConfig.get(BasePlugin.TITLE_PARAM_PLUGIN);
       titleMap.put(pluginName, titleConfig);
+      cnt++;
     }
+    log.info(cnt + " title db entries");
     this.titleMap = titleMap;
   }
 
@@ -174,7 +177,7 @@ public abstract class Configuration {
     for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (!containsKey(key)) {
-	put(key, other.get(key));
+        put(key, other.get(key));
       }
     }
   }
@@ -198,11 +201,11 @@ public abstract class Configuration {
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
       if (StringUtil.endsWithIgnoreCase(url, ".opt")) {
-	continue;
+        continue;
       }
       ConfigFile cf = configCache.get(url);
       if (cf != null && !cf.isLoaded()) {
-	return cf;
+        return cf;
       }
     }
     return null;
@@ -322,14 +325,44 @@ public abstract class Configuration {
     }
   }
 
+  /** Return the config value as an enum.
+   * @throws Configuration.InvalidParam if the value is missing or
+   * not parsable as an enum.
+   */
+  public Enum getEnum(Class enumType, String key) throws InvalidParam {
+    String name = get(key);
+    try {
+      return Enum.valueOf(enumType, name);
+    } catch (IllegalArgumentException e) {
+      throw newInvalid("Not an enum of type: " + enumType, key, name);
+    }
+  }
+
+  /** Return the config value as an enum.  If it's missing, return the
+   * default value.  If it's present but not parsable as an enum, log a
+   * warning and return the default value
+   */
+  public Enum getEnum(Class enumType, String key, Enum dfault) {
+    String name = get(key);
+    if (name == null) {
+      return dfault;
+    }
+    try {
+      return Enum.valueOf(enumType, name);
+    } catch (IllegalArgumentException e) {
+      log.warning("getEnum(\'" + key + "\") illegal val: \"" + name + "\"");
+      return dfault;
+    }
+  }
+
   /**
    * Return a list of values for the specified key.
    */
-  public abstract List<String> getList(String key);
+  public abstract List getList(String key);
 
-  public List<String> getList(String key, List<String> dfault) {
+  public List getList(String key, List dfault) {
     if (get(key) != null) {
-      return (List<String>) getList(key);
+      return getList(key);
     } else {
       return dfault;
     }
@@ -645,8 +678,8 @@ public abstract class Configuration {
      * @param changes  the set of keys whose value has changed.
      */
     public void configurationChanged(Configuration newConfig,
-				     Configuration oldConfig,
-				     Configuration.Differences changes);
+                                     Configuration oldConfig,
+                                     Configuration.Differences changes);
   }
 
   /** Differences represents the changes in a Configuration from the

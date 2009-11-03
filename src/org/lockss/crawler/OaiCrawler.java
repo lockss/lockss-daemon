@@ -1,10 +1,10 @@
 /*
- * $Id: OaiCrawler.java,v 1.19 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.19.26.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
 
- Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,7 +63,7 @@ public class OaiCrawler extends FollowLinkCrawler {
     spec = (OaiCrawlSpec) crawlSpec;
     String oaiHandlerUrl = spec.getOaiRequestData().getOaiRequestHandlerUrl();
     crawlStatus = new CrawlerStatus(au, ListUtil.list(oaiHandlerUrl),
-				    getTypeString());
+                                    getTypeString());
   }
 
   protected void setCrawlConfig(Configuration config) {
@@ -83,6 +83,10 @@ public class OaiCrawler extends FollowLinkCrawler {
 
   public boolean isWholeAU() {
     return true;
+  }
+
+  protected int getRefetchDepth() {
+    return 0;
   }
 
   /**
@@ -109,8 +113,8 @@ public class OaiCrawler extends FollowLinkCrawler {
     } catch (RuntimeException ex) {
       logger.error("Error while trying to process the OAI request", ex);
       crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
-				 "Error processing Oai Request: " +
-				 ex.toString());
+                                 "Error processing Oai Request: " +
+                                 ex.toString());
       return Collections.EMPTY_SET;
     }
     
@@ -119,7 +123,7 @@ public class OaiCrawler extends FollowLinkCrawler {
     List errList = oaiHandler.getErrors();
     if ( !errList.isEmpty() ){
       crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
-				 "Error processing Oai Request: " + errList);
+                                 "Error processing Oai Request: " + errList);
       //XXX need to think how to reflect errors occurs in OaiHandler back to UI or daemon
 //    logger.error("Error in processing Oai Records, here is the stack of error(s):\n");
 //    Iterator errIt = errList.iterator();
@@ -140,8 +144,7 @@ public class OaiCrawler extends FollowLinkCrawler {
         logger.debug2("Trying to process " +url);
 
         if (spec.isIncluded(url)) {
-	  crawlStatus.addPendingUrl(url);
-	  oaiStartUrls.add(url);
+          oaiStartUrls.add(url);
         } else {
           logger.debug("OAI response url not in crawl spec: " + url);
         }

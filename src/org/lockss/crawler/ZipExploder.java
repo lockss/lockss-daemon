@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.10 2008-05-27 04:30:37 dshr Exp $
+ * $Id: ZipExploder.java,v 1.10.16.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class ZipExploder extends Exploder {
    * @param store true to store the archive as well
    */
   protected ZipExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
-		     BaseCrawler crawler, boolean explode, boolean store) {
+                     BaseCrawler crawler, boolean explode, boolean store) {
     super(uc, maxRetries, crawlSpec, crawler, explode, store);
     helper = crawlSpec.getExploderHelper();
     if (helper == null) {
@@ -90,112 +90,113 @@ public class ZipExploder extends Exploder {
     int entriesBetweenSleep = 0;
     String zipArchiveUrl = archiveUrl;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
-		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
+                archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
     while (++reTry < maxRetries) try {
       goodEntries = 0;
       badEntries = 0;
       if (storeArchive) {
-	crawler.cacheWithRetries(urlCacher);
-	// Get a stream from which the ZIP data can be read
-	logger.debug3("About to get ZIP stream from " + urlCacher.toString());
-	cachedUrl = urlCacher.getCachedUrl();
-	arcStream = cachedUrl.getUnfilteredInputStream();
+        crawler.cacheWithRetries(urlCacher);
+        // Get a stream from which the ZIP data can be read
+        logger.debug3("About to get ZIP stream from " + urlCacher.toString());
+        cachedUrl = urlCacher.getCachedUrl();
+        arcStream = cachedUrl.getUnfilteredInputStream();
       } else {
-	arcStream = urlCacher.getUncachedInputStream();
-	arcProps = urlCacher.getUncachedProperties();
+        arcStream = urlCacher.getUncachedInputStream();
+        arcProps = urlCacher.getUncachedProperties();
       }
       zis = new ZipInputStream(arcStream);
       ZipEntry ze;
       while ((ze = zis.getNextEntry()) != null) {
-	// XXX probably not necessary
-	if (crawler.wdog != null) {
-	  crawler.wdog.pokeWDog();
-	}
-	if ((++entriesBetweenSleep % sleepAfter) == 0) {
-	  long pauseTime =
+        // XXX probably not necessary
+        if (crawler.wdog != null) {
+          crawler.wdog.pokeWDog();
+        }
+        if ((++entriesBetweenSleep % sleepAfter) == 0) {
+          long pauseTime =
             CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
                                                DEFAULT_RETRY_PAUSE);
-	  Deadline pause = Deadline.in(pauseTime);
-	  logger.debug3("Sleeping for " +
-			StringUtil.timeIntervalToString(pauseTime));
-	  while (!pause.expired()) {
-	    try {
-	      pause.sleep();
-	    } catch (InterruptedException ie) {
-	      // no action
-	    }
-	  }
-	}
-	if (!ze.isDirectory()) {
-	  ArchiveEntry ae = new ArchiveEntry(ze.getName(),
-					     ze.getSize(),
-					     ze.getTime(),
-					     zis,
-					     crawlSpec,
-					     this);
-	  long bytesStored = ae.getSize();
-	  logger.debug3("ArchiveEntry: " + ae.getName()
-			+ " bytes "  + bytesStored);
-          try {
-	    helper.process(ae);
-          } catch (PluginException ex) {
-	    throw new CacheException.ExploderException("helper.process() threw " +
-						   ex);
+          Deadline pause = Deadline.in(pauseTime);
+          logger.debug3("Sleeping for " +
+                        StringUtil.timeIntervalToString(pauseTime));
+          while (!pause.expired()) {
+            try {
+              pause.sleep();
+            } catch (InterruptedException ie) {
+              // no action
+            }
           }
-	  if (ae.getBaseUrl() != null &&
-	      ae.getRestOfUrl() != null &&
-	      ae.getHeaderFields() != null) {
-	    storeEntry(ae);
-	    handleAddText(ae);
-	    goodEntries++;
-	    crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
-	  } else {
-	    badEntries++;
-	    logger.debug2("Can't map " + ze.getName() + " from " + archiveUrl);
-	  }
-	} else {
-	  logger.debug2("Directory " + ze.getName() + " in " + archiveUrl);
-	}
+        }
+        if (!ze.isDirectory()) {
+          ArchiveEntry ae = new ArchiveEntry(ze.getName(),
+                                             ze.getSize(),
+                                             ze.getTime(),
+                                             zis,
+                                             crawlSpec,
+                                             this,
+                                             urlCacher.getUrl());
+          long bytesStored = ae.getSize();
+          logger.debug3("ArchiveEntry: " + ae.getName()
+                        + " bytes "  + bytesStored);
+          try {
+            helper.process(ae);
+          } catch (PluginException ex) {
+            throw new CacheException.ExploderException("helper.process() threw " +
+                                                   ex);
+          }
+          if (ae.getBaseUrl() != null &&
+              ae.getRestOfUrl() != null &&
+              ae.getHeaderFields() != null) {
+            storeEntry(ae);
+            handleAddText(ae);
+            goodEntries++;
+            crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
+          } else {
+            badEntries++;
+            logger.debug2("Can't map " + ze.getName() + " from " + archiveUrl);
+          }
+        } else {
+          logger.debug2("Directory " + ze.getName() + " in " + archiveUrl);
+        }
       }
       // Success
       addText();
       if (badEntries > 0) {
-	String msg = archiveUrl + " had " + badEntries + "/" +
-	  (goodEntries + badEntries) + " bad entries";
-	throw new CacheException.ExploderException(msg);
+        String msg = archiveUrl + " had " + badEntries + "/" +
+          (goodEntries + badEntries) + " bad entries";
+        throw new CacheException.ExploderException(msg);
       } else {
-	logger.info(archiveUrl + " had " + goodEntries + " entries");
-	if (!storeArchive) {
-	  // Leave stub archive behind to prevent re-fetch
-	  byte[] dummy = { 0, };
-	  urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
-	  // XXX update stats
-	}
-	reTry = maxRetries+1;
+        logger.info(archiveUrl + " had " + goodEntries + " entries");
+        if (!storeArchive) {
+          // Leave stub archive behind to prevent re-fetch
+          byte[] dummy = { 0, };
+          urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
+          // XXX update stats
+        }
+        reTry = maxRetries+1;
       }
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {
       if (cachedUrl != null) {
-	cachedUrl.release();
+        cachedUrl.release();
       }
       IOUtil.safeClose(zis);
       IOUtil.safeClose(arcStream);
     }
     if (badEntries == 0) {
       if (reTry >= maxRetries && goodEntries > 0) {
-	// Make it look like a new crawl finished on each AU to which
-	// URLs were added.
-	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
-	  ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
-	  logger.debug3(archiveUrl + " touching " + eau.toString());
-	  crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
-	}
+        // Make it look like a new crawl finished on each AU to which
+        // URLs were added.
+        for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
+          ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
+          logger.debug3(archiveUrl + " touching " + eau.toString());
+          crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+        }
       }
     } else {
       ArchivalUnit au = crawler.getAu();
       String msg = archiveUrl + ": " + badEntries + "/" +
-	goodEntries + " bad entries";
+        goodEntries + " bad entries";
       throw new CacheException.UnretryableException(msg);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: FilteredDirFileResource.java,v 1.3 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: FilteredDirFileResource.java,v 1.3.40.1 2009-11-03 23:44:51 edwardsb1 Exp $
  */
 
 /*
@@ -61,12 +61,12 @@ import org.mortbay.log.LogFactory;
  * If alias checking is turned on, then aliased resources are
  * treated as if they do not exist, nor can they be created.
  *
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.3.40.1 $
  * @author Greg Wilkins (gregw)
  */
 public class FilteredDirFileResource extends URLResource
 {
-	private static Log log = LogFactory.getLog(Credential.class);
+    private static Log log = LogFactory.getLog(FilteredDirFileResource.class);
     private static boolean __checkAliases;
     static
     {
@@ -107,8 +107,8 @@ public class FilteredDirFileResource extends URLResource
         throws IOException, URISyntaxException
     {
         super(url,null);
-	_filter = filter;
-	
+        _filter = filter;
+        
         try
         {
             // Try standard API to convert URL to file.
@@ -139,11 +139,11 @@ public class FilteredDirFileResource extends URLResource
     
     /* -------------------------------------------------------- */
     FilteredDirFileResource(URL url, URLConnection connection, File file,
-			    FilenameFilter filter)
+                            FilenameFilter filter)
     {
         super(url,connection);
         _file=file;
-	_filter = filter;
+        _filter = filter;
     }
     
     /* -------------------------------------------------------- */
@@ -167,7 +167,7 @@ public class FilteredDirFileResource extends URLResource
             File newFile = new File(_file,path);
             
             r=new FilteredDirFileResource(newFile.toURI().toURL(),null,newFile,
-					  _filter);
+                                          _filter);
         }
                                   
         return r;

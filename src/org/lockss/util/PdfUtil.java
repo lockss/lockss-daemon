@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.28 2007-08-27 06:50:55 tlipkis Exp $
+ * $Id: PdfUtil.java,v 1.28.26.1 2009-11-03 23:44:52 edwardsb1 Exp $
  */
 
 /*
@@ -732,7 +732,7 @@ return success;
     DeferredTempFileOutputStream outputStream = null;
     Configuration config = CurrentConfig.getCurrentConfig();
     int tempStreamThreshold = config.getInt(PARAM_TEMP_STREAM_THRESHOLD,
-					    DEFAULT_TEMP_STREAM_THRESHOLD);
+                                            DEFAULT_TEMP_STREAM_THRESHOLD);
     try {
       // Parse the PDF file
       pdfDocument = new PdfDocument(inputStream);
@@ -741,33 +741,33 @@ return success;
       outputStream = new DeferredTempFileOutputStream(tempStreamThreshold);
       // Apply the output document transform into the output stream
       if (documentTransform.transform(pdfDocument, outputStream)) {
-	outputStream.close();
-	logger.debug2("Transform from input stream succeeded");
+        outputStream.close();
+        logger.debug2("Transform from input stream succeeded");
       }
       else {
-	deleteTempFile(outputStream);
-	logger.debug2("Transform from input stream did not succeed; using PDF document as is");
-	outputStream = new DeferredTempFileOutputStream(tempStreamThreshold);
-	pdfDocument.save(outputStream);
-	outputStream.close();
+        deleteTempFile(outputStream);
+        logger.debug2("Transform from input stream did not succeed; using PDF document as is");
+        outputStream = new DeferredTempFileOutputStream(tempStreamThreshold);
+        pdfDocument.save(outputStream);
+        outputStream.close();
       }
 
       // Return the transformed PDF file as an input stream
       if (outputStream.isInMemory()) {
-	return new ByteArrayInputStream(outputStream.getData());
+        return new ByteArrayInputStream(outputStream.getData());
       }
       else {
-	// If temp file was created, arrange for it to be deleted when
-	// the input stream is closed.
-	File tempFile = outputStream.getFile();
-	InputStream fileStream =
-	  new BufferedInputStream(new FileInputStream(tempFile));
-	CloseCallbackInputStream.Callback cb =
-	  new CloseCallbackInputStream.Callback() {
-	    public void streamClosed(Object file) {
-	      ((File)file).delete();
-	    }};
-	return new CloseCallbackInputStream(fileStream, cb, tempFile);
+        // If temp file was created, arrange for it to be deleted when
+        // the input stream is closed.
+        File tempFile = outputStream.getFile();
+        InputStream fileStream =
+          new BufferedInputStream(new FileInputStream(tempFile));
+        CloseCallbackInputStream.Callback cb =
+          new CloseCallbackInputStream.Callback() {
+            public void streamClosed(Object file) {
+              ((File)file).delete();
+            }};
+        return new CloseCallbackInputStream(fileStream, cb, tempFile);
       }
     }
     catch (OutOfMemoryError oome) {
@@ -777,7 +777,7 @@ return success;
     catch (IOException ioe) {
       logger.error("Transform from input stream failed", ioe);
       if (outputStream != null) {
-	deleteTempFile(outputStream);
+        deleteTempFile(outputStream);
       }
       return null;
     }
@@ -795,7 +795,7 @@ return success;
   }
 
   public static OutputDocumentTransform getOutputDocumentTransform(ArchivalUnit au) {
-    String key = PREFIX_PDF_FILTER_FACTORY_HINT + PDF_MIME_TYPE + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY;
+    String key = PREFIX_PDF_FILTER_FACTORY_HINT + PDF_MIME_TYPE + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY;
     String className = AuUtil.getTitleAttribute(au, key);
     if (className == null) {
       logger.debug2("No PDF filter factory hint");
@@ -803,7 +803,7 @@ return success;
     }
     try {
       OutputDocumentTransform ret =
-	(OutputDocumentTransform)au.getPlugin().newAuxClass(className, OutputDocumentTransform.class);
+        (OutputDocumentTransform)au.getPlugin().newAuxClass(className, OutputDocumentTransform.class);
       logger.debug2("Successfully loaded and instantiated " + ret.getClass().getName());
       return ret;
     } catch (org.lockss.daemon.PluginException.InvalidDefinition e) {

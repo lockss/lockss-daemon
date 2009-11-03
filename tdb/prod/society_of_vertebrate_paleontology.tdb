@@ -16,14 +16,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0272-4634
   
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 20 ; 20 >
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 21 ; 21 >
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 22 ; 22 >
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 23 ; 23 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 20 ; 20 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 21 ; 21 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 22 ; 22 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 23 ; 23 >
       au < superseded ; Journal of Vertebrate Paleontology Volume 24 ; 24 >
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 25 ; 25 >
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 26 ; 26 >
-      au < do_not_process ; Journal of Vertebrate Paleontology Volume 27 ; 27 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 25 ; 25 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 26 ; 26 >
+      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 27 ; 27 >
     }
 
     {

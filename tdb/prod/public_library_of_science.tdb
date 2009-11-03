@@ -31,10 +31,10 @@
     param[base_url] = http://www.ploscompbiol.org/    
     param[journal_id] = compbiol
 
-    au < ready ; PLoS Computational Biology Volume 1 ; 2005 >
-    au < ready ; PLoS Computational Biology Volume 2 ; 2006 >
-    au < ready ; PLoS Computational Biology Volume 3 ; 2007 >
-    au < ready ; PLoS Computational Biology Volume 4 ; 2008 >
+    au < released ; PLoS Computational Biology Volume 1 ; 2005 >
+    au < released ; PLoS Computational Biology Volume 2 ; 2006 >
+    au < released ; PLoS Computational Biology Volume 3 ; 2007 >
+    au < released ; PLoS Computational Biology Volume 4 ; 2008 >
 
   }
 
@@ -49,9 +49,9 @@
     param[base_url] = http://www.plosone.org/    
     param[journal_id] = plosone
 
-    au < not_ready ; PLoS One Volume 1 ; 2006 >
-    au < not_ready ; PLoS One Volume 2 ; 2007 >
-    au < not_ready ; PLoS One Volume 3 ; 2008 >
+    au < notReady ; PLoS One Volume 1 ; 2006 >
+    au < notReady ; PLoS One Volume 2 ; 2007 >
+    au < notReady ; PLoS One Volume 3 ; 2008 >
 
   }
   
@@ -78,11 +78,11 @@
     param[base_url] = http://www.plospathogens.org/    
     param[journal_id] = pathogens
 
-    au < ready ; PLoS Pathogens Volume 1 ; 2005 >
-    au < ready ; PLoS Pathogens Volume 2 ; 2006 >
-    au < ready ; PLoS Pathogens Volume 3 ; 2007 >
-    au < ready ; PLoS Pathogens Volume 4 ; 2008 >
-    au < ready ; PLoS Pathogens Volume 4 ; 2009 >
+    au < released ; PLoS Pathogens Volume 1 ; 2005 >
+    au < released ; PLoS Pathogens Volume 2 ; 2006 >
+    au < released ; PLoS Pathogens Volume 3 ; 2007 >
+    au < released ; PLoS Pathogens Volume 4 ; 2008 >
+    au < released ; PLoS Pathogens Volume 5 ; 2009 >
 
   }
   
@@ -92,7 +92,7 @@
       name = PLoS Hub Clinical Trials
     >
 
-comment[plos0] = no manifest
+    comment[plos0] = no manifest
 
     param[base_url] = http://clinicaltrials.ploshubs.org/    
     param[journal_id] = clinicalTrials
