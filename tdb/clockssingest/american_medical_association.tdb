@@ -28,10 +28,10 @@
     au < manifest ; 1993 ; Archives of Dermatology Volume 129 ; 129 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Dermatology Volume 130 ; 130 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Dermatology Volume 131 ; 131 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Dermatology Volume 132 ; 132 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Dermatology Volume 133 ; 133 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Dermatology Volume 134 ; 134 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Dermatology Volume 135 ; 135 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Dermatology Volume 132 ; 132 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Dermatology Volume 133 ; 133 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Dermatology Volume 134 ; 134 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Dermatology Volume 135 ; 135 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Dermatology Volume 136 ; 136 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Dermatology Volume 137 ; 137 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Dermatology Volume 138 ; 138 ; reingest3.clockss.org:8083 >
@@ -73,7 +73,7 @@
     
     param[base_url] = http://archfaci.ama-assn.org/
     
-    au < ready ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < released ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -107,10 +107,10 @@
     au < manifest ; 1993 ; Archives of General Psychiatry Volume 50 ; 50 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of General Psychiatry Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of General Psychiatry Volume 52 ; 52 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of General Psychiatry Volume 53 ; 53 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of General Psychiatry Volume 54 ; 54 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of General Psychiatry Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of General Psychiatry Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of General Psychiatry Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of General Psychiatry Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of General Psychiatry Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of General Psychiatry Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of General Psychiatry Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of General Psychiatry Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of General Psychiatry Volume 59 ; 59 ; reingest3.clockss.org:8083 >
@@ -144,10 +144,10 @@
     au < manifest ; 1993 ; Archives of Internal Medicine Volume 153 ; 153 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Internal Medicine Volume 154 ; 154 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Internal Medicine Volume 155 ; 155 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Internal Medicine Volume 156 ; 156 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Internal Medicine Volume 157 ; 157 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Internal Medicine Volume 158 ; 158 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Internal Medicine Volume 159 ; 159 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Internal Medicine Volume 156 ; 156 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Internal Medicine Volume 157 ; 157 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Internal Medicine Volume 158 ; 158 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Internal Medicine Volume 159 ; 159 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Internal Medicine Volume 160 ; 160 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Internal Medicine Volume 161 ; 161 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Internal Medicine Volume 162 ; 162 ; reingest3.clockss.org:8083 >
@@ -181,10 +181,10 @@
     au < manifest ; 1993 ; Archives of Neurology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Neurology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Neurology Volume 52 ; 52 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Neurology Volume 53 ; 53 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Neurology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Neurology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Neurology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Neurology Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Neurology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Neurology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Neurology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Neurology Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Neurology Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Neurology Volume 59 ; 59 ; reingest3.clockss.org:8083 >
@@ -218,10 +218,10 @@
     au < manifest ; 1993 ; Archives of Ophthalmology Volume 111 ; 111 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Ophthalmology Volume 112 ; 112 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Ophthalmology Volume 113 ; 113 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Ophthalmology Volume 114 ; 114 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Ophthalmology Volume 115 ; 115 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Ophthalmology Volume 116 ; 116 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Ophthalmology Volume 117 ; 117 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Ophthalmology Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Ophthalmology Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Ophthalmology Volume 116 ; 116 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Ophthalmology Volume 117 ; 117 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Ophthalmology Volume 118 ; 118 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Ophthalmology Volume 119 ; 119 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Ophthalmology Volume 120 ; 120 ; reingest3.clockss.org:8083 >
@@ -255,10 +255,10 @@
     au < manifest ; 1993 ; Archives of Otolaryngology - Head & Neck Surgery Volume 119 ; 119 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Otolaryngology - Head & Neck Surgery Volume 120 ; 120 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Otolaryngology - Head & Neck Surgery Volume 121 ; 121 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Otolaryngology - Head & Neck Surgery Volume 122 ; 122 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Otolaryngology - Head & Neck Surgery Volume 123 ; 123 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Otolaryngology - Head & Neck Surgery Volume 124 ; 124 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Otolaryngology - Head & Neck Surgery Volume 125 ; 125 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Otolaryngology - Head & Neck Surgery Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Otolaryngology - Head & Neck Surgery Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Otolaryngology - Head & Neck Surgery Volume 124 ; 124 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Otolaryngology - Head & Neck Surgery Volume 125 ; 125 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Otolaryngology - Head & Neck Surgery Volume 126 ; 126 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Otolaryngology - Head & Neck Surgery Volume 127 ; 127 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Otolaryngology - Head & Neck Surgery Volume 128 ; 128 ; reingest3.clockss.org:8083 >
@@ -292,10 +292,10 @@
     au < manifest ; 1993 ; American Journal of Diseases of Children Volume 147 ; 147 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Pediatrics & Adolescent Medicine Volume 148 ; 148 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Pediatrics & Adolescent Medicine Volume 149 ; 149 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Pediatrics & Adolescent Medicine Volume 150 ; 150 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Pediatrics & Adolescent Medicine Volume 151 ; 151 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Pediatrics & Adolescent Medicine Volume 152 ; 152 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Pediatrics & Adolescent Medicine Volume 153 ; 153 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Pediatrics & Adolescent Medicine Volume 150 ; 150 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Pediatrics & Adolescent Medicine Volume 151 ; 151 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Pediatrics & Adolescent Medicine Volume 152 ; 152 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Pediatrics & Adolescent Medicine Volume 153 ; 153 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Pediatrics & Adolescent Medicine Volume 154 ; 154 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Pediatrics & Adolescent Medicine Volume 155 ; 155 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Pediatrics & Adolescent Medicine Volume 156 ; 156 ; reingest3.clockss.org:8083 >
@@ -329,10 +329,10 @@
     au < manifest ; 1993 ; Archives of Surgery Volume 128 ; 128 ; reingest2.clockss.org:8085 >
     au < manifest ; 1994 ; Archives of Surgery Volume 129 ; 129 ; reingest3.clockss.org:8083 >
     au < manifest ; 1995 ; Archives of Surgery Volume 130 ; 130 ; reingest4.clockss.org:8082 >
-    au < ready ; 1996 ; Archives of Surgery Volume 131 ; 131 ; reingest1.clockss.org:8082 >
-    au < ready ; 1997 ; Archives of Surgery Volume 132 ; 132 ; reingest2.clockss.org:8085 >
-    au < ready ; 1998 ; Archives of Surgery Volume 133 ; 133 ; reingest3.clockss.org:8083 >
-    au < ready ; 1999 ; Archives of Surgery Volume 134 ; 134 ; reingest4.clockss.org:8082 >
+    au < released ; 1996 ; Archives of Surgery Volume 131 ; 131 ; reingest1.clockss.org:8082 >
+    au < released ; 1997 ; Archives of Surgery Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    au < released ; 1998 ; Archives of Surgery Volume 133 ; 133 ; reingest3.clockss.org:8083 >
+    au < released ; 1999 ; Archives of Surgery Volume 134 ; 134 ; reingest4.clockss.org:8082 >
     au < released ; 2000 ; Archives of Surgery Volume 135 ; 135 ; reingest1.clockss.org:8082 >
     au < released ; 2001 ; Archives of Surgery Volume 136 ; 136 ; reingest2.clockss.org:8085 >
     au < released ; 2002 ; Archives of Surgery Volume 137 ; 137 ; reingest3.clockss.org:8083 >
@@ -378,8 +378,8 @@
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 202 ; 202 ; >
     au < manifest ; 2008 ; JAMA: The Journal of the American Medical Association Volume 299 ; 299 ; >
     au < manifest ; 2008 ; JAMA: The Journal of the American Medical Association Volume 300 ; 300 ; >
-    au < ready ; 2009 ; JAMA: The Journal of the American Medical Association Volume 301 ; 301 ; >
-    au < ready ; 2009 ; JAMA: The Journal of the American Medical Association Volume 302 ; 302 ; >
+    au < released ; 2009 ; JAMA: The Journal of the American Medical Association Volume 301 ; 301 ; >
+    au < released ; 2009 ; JAMA: The Journal of the American Medical Association Volume 302 ; 302 ; >
     
   }
 

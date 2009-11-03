@@ -210,7 +210,7 @@
     
     param[journal_code] = ib
     
-    au < ready ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
+    au < released ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
   
   }
 
@@ -222,7 +222,7 @@
     
     param[journal_code] = ja
     
-    au < ready ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
+    au < released ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
     au < released ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
   
   }
@@ -268,7 +268,7 @@
     
     param[journal_code] = em
     
-    au < ready ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
+    au < released ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
     au < released ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
   
   }
@@ -281,7 +281,7 @@
     
     param[journal_code] = jm
     
-    au < ready ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
+    au < released ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
     au < released ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
   
   }
@@ -294,7 +294,7 @@
     
     param[journal_code] = lc
     
-    au < ready ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
+    au < released ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
     au < released ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
   
   }
@@ -319,7 +319,7 @@
     
     param[journal_code] = mb
     
-    au < ready ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
+    au < released ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
     au < released ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
   
   }
@@ -344,7 +344,7 @@
     
     param[journal_code] = np
     
-    au < ready ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
+    au < released ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
     au < released ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
   
   }
@@ -357,7 +357,7 @@
     
     param[journal_code] = nj
     
-    au < ready ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < released ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
     au < released ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
   
   }
@@ -370,7 +370,7 @@
     
     param[journal_code] = ob
     
-    au < ready ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < released ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
     au < released ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
   
   }

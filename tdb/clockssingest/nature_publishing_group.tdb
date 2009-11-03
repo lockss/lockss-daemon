@@ -372,7 +372,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = jhg
 
     au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
-    au < ready ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
+    au < released ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
 
   }
 
@@ -385,7 +385,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = jhh
 
     au < manifest ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
-    au < ready ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
+    au < released ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -398,7 +398,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = jid
 
     au < manifest ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
-    au < ready ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
+    au < released ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
 
   }
 
@@ -661,7 +661,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = nmeth
 
-    au < ready ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
+    au < released ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
 
   }
@@ -675,7 +675,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nnano
 
     au < manifest ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
-    au < ready ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
+    au < released ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
 
   }
 
@@ -688,7 +688,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = neuro
 
     au < manifest ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
-    au < ready ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
+    au < released ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
 
   }
 
@@ -701,7 +701,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nphoton
 
     au < manifest ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
-    au < ready ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
+    au < released ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
 
   }
 
@@ -714,7 +714,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nphys
 
     au < manifest ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
-    au < ready ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
+    au < released ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
 
   }
 
