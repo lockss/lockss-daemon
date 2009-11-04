@@ -1,5 +1,5 @@
 /*
- * $Id: TestLCUserAccount.java,v 1.4 2009-06-15 07:51:09 tlipkis Exp $
+ * $Id: TestLCUserAccount.java,v 1.5 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ public class TestLCUserAccount extends LockssTestCase {
     super.setUp();
     acctMgr = new MyAccountManager();
     getMockLockssDaemon().setAccountManager(acctMgr);
+    acctMgr.initService(getMockLockssDaemon());
+    acctMgr.startService();
     acct1 = (LCUserAccount)new LCUserAccount.Factory().newUser(NAME1, acctMgr);
   }
   

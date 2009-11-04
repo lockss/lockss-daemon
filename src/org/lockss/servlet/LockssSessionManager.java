@@ -1,5 +1,5 @@
 /*
- * $Id: LockssSessionManager.java,v 1.2 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id: LockssSessionManager.java,v 1.3 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -95,6 +95,21 @@ public class LockssSessionManager extends AbstractSessionManager {
 	  }
 	  res.add(usess);
 	}
+      }
+    }
+    return res;
+  }
+
+  /** Collect info about user sessions that are idle too long */
+  public Collection<HttpSession> getZombieSessions() {
+    List<HttpSession> res = new ArrayList<HttpSession>();
+    for (Map.Entry ent : (Set<Map.Entry>)_sessions.entrySet()) {
+      HttpSession sess = (HttpSession)ent.getValue();
+      // Process only authenticated sessions that will be logged out due
+      // to inactivity on their next use
+      if (sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null
+	  && isInactiveTimeout(sess)) {
+	res.add(sess);
       }
     }
     return res;

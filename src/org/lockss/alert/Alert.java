@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.12 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: Alert.java,v 1.13 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class Alert {
   public static final String ATTR_SEVERITY = "severity";
   public static final String ATTR_RPT_ACTION = "foo";
   public static final String ATTR_EMAIL_TO = "email_to";
+  public static final String ATTR_AUDITABLE_EVENT = "auditable_event";
 
   // Severities
   /** Conditions that require immediate attention from a human. */
@@ -171,6 +172,11 @@ public class Alert {
 
   public static final Alert ACCOUNT_DISABLED =
     new Alert("AccountDisabled").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
+
+  public static final Alert AUDITABLE_EVENT =
+    new Alert("AuditableEvent").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 

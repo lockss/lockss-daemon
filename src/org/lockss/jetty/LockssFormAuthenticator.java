@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.5 2009-06-19 08:28:39 tlipkis Exp $
+ * $Id: LockssFormAuthenticator.java,v 1.6 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -162,13 +162,17 @@ public class LockssFormAuthenticator implements Authenticator {
     }
   }
 
-  public void logout(HttpSession session) {
+  public static void logout(HttpSession session) {
     logout(session, null);
   }
 
-  public void logout(HttpSession session, String message) {
+  public static void logout(HttpSession session, String message) {
+    UserAccount acc = (UserAccount) session.getAttribute(__J_LOCKSS_USER);
+    if (acc != null) {
+      acc.loggedOut(session);
+    }
     if (log.isDebug2()) {
-      log.debug2("logout " + session.getAttribute(__J_LOCKSS_USER));
+      log.debug2("logout " + acc);
     }
     session.setAttribute(__J_LOCKSS_AUTH_ERROR_MSG, message);
     session.setAttribute(__J_AUTHENTICATED, null);
@@ -374,6 +378,7 @@ public class LockssFormAuthenticator implements Authenticator {
       if (acc != null) {
 	session.setAttribute(__J_LOCKSS_USER, acc);
 	maxInact = acc.getInactivityLogout();
+	acc.loggedIn(session);
       }
     }
     if (maxInact < 0) {

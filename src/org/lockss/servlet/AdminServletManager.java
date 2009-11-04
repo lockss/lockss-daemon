@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.12 2009-07-22 06:37:20 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.13 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
 import com.planetj.servlet.filter.compression.*;
+import javax.servlet.http.*;
 
 /**
  * Local UI servlet starter
@@ -652,6 +653,13 @@ public class AdminServletManager extends BaseServletManager {
   public Collection<UserSession> getUserSessions() {
     if (sessionMgr != null) {
       return sessionMgr.getUserSessions();
+    }
+    return null;
+  }
+
+  public Collection<HttpSession> getZombieSessions() {
+    if (sessionMgr != null) {
+      return sessionMgr.getZombieSessions();
     }
     return null;
   }

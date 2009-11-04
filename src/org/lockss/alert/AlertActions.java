@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActions.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: AlertActions.java,v 1.4 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -44,6 +44,10 @@ public class AlertActions {
 
   public static AlertAction Mail(String to) {
     return new AlertActionMail(to);
+  }
+
+  public static AlertAction Syslog(int level) {
+    return new AlertActionSyslog(level);
   }
 
 //   public static AlertAction Mail(List addressees) {

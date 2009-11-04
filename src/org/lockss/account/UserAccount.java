@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.6 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.7 2009-11-04 03:13:19 dshr Exp $
  */
 
 /*
@@ -40,9 +40,14 @@ import org.apache.commons.lang.*;
 import org.apache.commons.lang.time.*;
 import org.mortbay.util.Credential;
 
+import javax.servlet.http.*;
+
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
+import org.lockss.alert.*;
+import org.lockss.app.*;
+import org.lockss.servlet.*;
 import org.lockss.alert.*;
 
 /** User account data.
@@ -50,9 +55,13 @@ import org.lockss.alert.*;
 public abstract class UserAccount implements LockssSerializable, Comparable {
   static Logger log = Logger.getLogger("UserAccount");
 
+  // XXX enhance test/src/org/lockss/account/TestLCUserAccount.java
+
   private static FastDateFormat expireDf =
     FastDateFormat.getInstance("EEE dd MMM, HH:mm zzz");
 
+  private static Set<UserAccount> active = new HashSet();
+  private static TimerQueue.Request alerter = null;
   protected final String userName;
   protected String email;
   protected String currentPassword;
@@ -69,6 +78,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected long lastPasswordReminderTime;
   protected boolean isDisabled;
   protected String disableReason;
+
+  protected static final long ALERTER_INTERVAL = 60000;
 
   protected transient AccountManager acctMgr;
   protected transient String fileName;
@@ -98,6 +109,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     hashAlg = getDefaultHashAlgorithm();
     lastPasswordChange = -1;
     lastUserPasswordChange = -1;
+    auditableEvent("initialized");
   }
 
   /** Setup configuration before first use.  Called by factory. */
@@ -263,6 +275,65 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     enable();
     setChanged(true);
     clearCaches();
+    auditableEvent("password changed");
+  }
+
+  /** Account has logged in */
+  public void loggedIn(HttpSession session) {
+    if (alerter == null) {
+      if (active.size() != 0) {
+	log.error("alerter null but " + active.size() + " active");
+      }
+      LockssDaemon daemon = acctMgr.getDaemon();
+      AdminServletManager adminMgr = null;
+      try {
+	adminMgr =
+	  (AdminServletManager)daemon.getManager(LockssDaemon.SERVLET_MANAGER);
+      } catch (IllegalArgumentException e) {
+	log.warning("No AdminServletManager, not installing Alerter task");
+	return;
+      }
+      // Start alerting task
+      alerter = TimerQueue.schedule(Deadline.in(ALERTER_INTERVAL),
+				    ALERTER_INTERVAL, new Alerter(), adminMgr);
+    }
+    if (!active.contains(this)) {
+      active.add(this);
+      auditableEvent("logged in");
+    } else {
+      log.debug("Redundant nowAuthenticated()");
+    }
+  }
+
+  /** Account has logged out */
+  public void loggedOut(HttpSession session) {
+    if (active.contains(this)) {
+      active.remove(this);
+      auditableEvent("logged out");
+      if (alerter != null) {
+	if (active.size() == 0) {
+	  TimerQueue.cancel(alerter);
+	  alerter = null;
+	}
+      } else {
+	log.error("loggedOut but alerter null");
+      }
+    } else {
+      log.error("loggedOut() but not active: " + this);
+    }
+  }
+
+  public void auditableEvent(String text) {
+    if (acctMgr != null) {
+      AlertManager alertMgr = acctMgr.getDaemon().getAlertManager();
+      String msg = userName + ": " + text;
+      if (alertMgr != null) {
+	Alert alert = Alert.cacheAlert(Alert.AUDITABLE_EVENT);
+	alertMgr.raiseAlert(alert, msg);
+      } else {
+	log.warning(msg);
+      }
+    }
   }
 
   void shiftArrayUp(String[] array) {
@@ -475,6 +546,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   public void disable(String reason) {
     setChanged(!isDisabled || !StringUtil.equalStrings(disableReason, reason));
     log.debug("Disabled account " + getName() + ": " + reason);
+    auditableEvent("user disabled because: " + reason);
     isDisabled = true;
     disableReason = reason;
   }
@@ -588,6 +660,29 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 					Configuration config);
     public UserAccount newUser(String name, AccountManager acctMgr) {
       return newUser(name, acctMgr, ConfigManager.getCurrentConfig());
+    }
+  }
+
+  public class Alerter implements TimerQueue.Callback {
+
+    public void timerExpired(Object cookie) {
+      AdminServletManager adminMgr = (AdminServletManager)cookie;
+      if (adminMgr == null) {
+	log.error("Null AdminServletManager cookie");
+	return;
+      }
+      Collection zombies = adminMgr.getZombieSessions();
+      for (Iterator it = zombies.iterator(); it.hasNext(); ) {
+	HttpSession sess = (HttpSession)it.next();
+	if (sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null
+	    && !LockssSessionManager.isInactiveTimeout(sess)) {
+	  UserAccount acct =
+	    (UserAccount)sess.getAttribute(LockssFormAuthenticator.__J_LOCKSS_USER);
+	  if (acct != null) {
+	    LockssFormAuthenticator.logout(sess, "Logged out for inactivity");
+	  }
+	}
+      }
     }
   }
 }
