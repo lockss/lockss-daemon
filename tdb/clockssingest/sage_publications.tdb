@@ -17,7 +17,7 @@
     param[base_url] = http://ach.sagepub.com/
 
     au < manifest ; 2008 ; Accounting History Volume 13 ; 13 ; >
-    au < manifest ; 2009 ; Accounting History Volume 14 ; 14 ; >
+    au < testing ; 2009 ; Accounting History Volume 14 ; 14 ; >
 
   }
 
@@ -30,7 +30,7 @@
     param[base_url] = http://asj.sagepub.com/
 
     au < manifest ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
-    au < manifest ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
+    au < testing ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
 
   }
 
@@ -43,7 +43,7 @@
     param[base_url] = http://arj.sagepub.com/
 
     au < manifest ; 2008 ; Action Research Volume 6 ; 6 ; >
-    au < manifest ; 2009 ; Action Research Volume 7 ; 7 ; >
+    au < testing ; 2009 ; Action Research Volume 7 ; 7 ; >
 
   }
 
@@ -56,7 +56,7 @@
     param[base_url] = http://alh.sagepub.com/
 
     au < manifest ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
-    au < manifest ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
+    au < testing ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
 
   }
 
@@ -69,7 +69,7 @@
     param[base_url] = http://adb.sagepub.com/
 
     au < manifest ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
-    au < manifest ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
+    au < testing ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
 
   }
 
@@ -82,7 +82,7 @@
     param[base_url] = http://aas.sagepub.com/
 
     au < manifest ; 2008 ; Administration & Society Volume 40 ; 40 ; >
-    au < manifest ; 2009 ; Administration & Society Volume 41 ; 41 ; >
+    au < testing ; 2009 ; Administration & Society Volume 41 ; 41 ; >
 
   }
 
@@ -95,7 +95,7 @@
     param[base_url] = http://aeq.sagepub.com/
 
     au < manifest ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 ; >
-    au < manifest ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
+    au < testing ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
     au < manifest ; 2009-2010 ; Adult Education Quarterly Volume 60 ; 60 ; >
 
   }
@@ -109,7 +109,7 @@
     param[base_url] = http://adr.sagepub.com/
 
     au < manifest ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
-    au < manifest ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
+    au < testing ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
 
   }
 
@@ -122,7 +122,7 @@
     param[base_url] = http://adh.sagepub.com/
 
     au < manifest ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
-    au < manifest ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
+    au < testing ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
 
   }
 
@@ -135,7 +135,7 @@
     param[base_url] = http://aff.sagepub.com/
 
     au < manifest ; 2008 ; Affilia Volume 23 ; 23 ; >
-    au < manifest ; 2009 ; Affilia Volume 24 ; 24 ; >
+    au < testing ; 2009 ; Affilia Volume 24 ; 24 ; >
 
   }
 
@@ -148,7 +148,7 @@
     param[base_url] = http://abs.sagepub.com/
 
     au < manifest ; 2008 ; American Behavioral Scientist Volume 52 ; 52 ; >
-    au < manifest ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
+    au < testing ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
 
   }
 
@@ -161,7 +161,7 @@
     param[base_url] = http://aer.sagepub.com/
 
     au < manifest ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
-    au < manifest ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
+    au < testing ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
 
   }
 
@@ -174,7 +174,7 @@
     param[base_url] = http://aja.sagepub.com/
 
     au < manifest ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
-    au < manifest ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
+    au < testing ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
 
   }
 
@@ -187,7 +187,7 @@
     param[base_url] = http://aje.sagepub.com/
 
     au < manifest ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
-    au < manifest ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
+    au < testing ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
 
   }
 
@@ -200,7 +200,7 @@
     param[base_url] = http://ajh.sagepub.com/
 
     au < manifest ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
-    au < manifest ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
+    au < testing ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
 
   }
 
@@ -6735,7 +6735,7 @@
     param[base_url] = http://wes.sagepub.com/
 
     au < manifest ; 2008 ; Work, Employment & Society Volume 22 ; 22 ; >
-    au < testing ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
 
   }
 
@@ -6748,7 +6748,7 @@
     param[base_url] = http://wcx.sagepub.com/
 
     au < manifest ; 2008 ; Written Communication Volume 25 ; 25 ; >
-    au < testing ; 2009 ; Written Communication Volume 26 ; 26 ; >
+    au < tested ; 2009 ; Written Communication Volume 26 ; 26 ; >
 
   }
 
@@ -6761,7 +6761,7 @@
     param[base_url] = http://you.sagepub.com/
 
     au < manifest ; 2008 ; Young Volume 16 ; 16 ; >
-    au < testing ; 2009 ; Young Volume 17 ; 17 ; >
+    au < tested ; 2009 ; Young Volume 17 ; 17 ; >
 
   }
 
@@ -6786,7 +6786,7 @@
     param[base_url] = http://yas.sagepub.com/
 
     au < manifest ; 2008 ; Youth & Society Volume 40 ; 40 ; >
-    au < testing ; 2009 ; Youth & Society Volume 41 ; 41 ; >
+    au < tested ; 2009 ; Youth & Society Volume 41 ; 41 ; >
 
   }
 
@@ -6799,7 +6799,7 @@
     param[base_url] = http://yjj.sagepub.com/
 
     au < manifest ; 2008 ; Youth Justice Volume 8 ; 8 ; >
-    au < testing ; 2009 ; Youth Justice Volume 9 ; 9 ; >
+    au < tested ; 2009 ; Youth Justice Volume 9 ; 9 ; >
 
   }
 
@@ -6812,7 +6812,7 @@
     param[base_url] = http://yvj.sagepub.com/
 
     au < manifest ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
-    au < testing ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
+    au < tested ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
 
   }
 
