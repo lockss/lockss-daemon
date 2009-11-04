@@ -64,8 +64,8 @@
     param[base_url] = http://www.plosntds.org/    
     param[journal_id] = ntd
 
-    au < ready ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
-    au < ready ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
+    au < releasing ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
+    au < releasing ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
 
   }
   
