@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressHtmlFilterFactory.java,v 1.4 2009-08-13 00:20:38 thib_gc Exp $
+ * $Id: PortlandPressHtmlFilterFactory.java,v 1.5 2009-11-04 23:25:17 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.portlandpress;
 
-import java.io.InputStream;
+import java.io.*;
+import java.util.List;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.*;
 
 public class PortlandPressHtmlFilterFactory implements FilterFactory {
 
@@ -44,24 +49,44 @@ public class PortlandPressHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <div class="courtesy_box">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "courtesy_box")),
-        // Filter out <div class="RHAdsBox">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "RHAdsBox")),
-        // Filter out <div class="RHAdvert">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "RHAdvert")),         
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(transforms));
-  }
 
+    NodeFilter[] filters = new NodeFilter[] {
+        // Contains the institution name
+        HtmlNodeFilters.tagWithAttribute("div", "class", "courtesy_box"),
+        // Contains the institution name (e.g. Biochemical Journal)
+        HtmlNodeFilters.tagWithAttribute("td", "class", "BJnameLogo"),
+        // Contains ads
+        HtmlNodeFilters.tagWithAttribute("div", "class", "RHAdsBox"),
+        // Contains ads
+        HtmlNodeFilters.tagWithAttribute("div", "class", "RHAdvert"),
+        // Contains the editorial board which may change over time (e.g. Biochemical Journal)
+        HtmlNodeFilters.tagWithAttribute("td", "id", "LeftPanel"),
+        // Contains variable links to recent issues (e.g. Biochemical Journal)
+        HtmlNodeFilters.tagWithAttribute("td", "id", "RightPanel"),
+    };
+
+    OrFilter combinedFilter = new OrFilter(filters);
+    HtmlNodeFilterTransform transform = HtmlNodeFilterTransform.exclude(combinedFilter);
+    InputStream prefilteredStream = new HtmlFilterInputStream(in, encoding, transform);
+    
+    try {
+      
+      List pairs = ListUtil.list(
+          // Contains variable links to recent issues (e.g. Clinical Science)
+          new HtmlTagFilter.TagPair("<!--- MID TEMPLATE --->", "<!--- END MID TEMPLATE --->"),
+          // Contains variable links to recent issues (e.g. Clinical Science)
+          new HtmlTagFilter.TagPair(">Immediate Publications<", ">Browse archive<")
+      );
+      
+      Reader prefilteredReader = new InputStreamReader(prefilteredStream, encoding);
+      Reader filteredReader = HtmlTagFilter.makeNestedFilter(prefilteredReader, pairs);
+      return new ReaderInputStream(filteredReader);
+    }
+    catch (UnsupportedEncodingException uee) {
+      throw new PluginException(uee);
+    }
+
+  }
+  
 }
 
