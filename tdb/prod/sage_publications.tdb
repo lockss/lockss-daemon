@@ -35,7 +35,7 @@
         au < HighWireStrVolPlugin ; released ; Accounting History Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; released ; Accounting History Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; ready ; Accounting History Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; ready ; Accounting History Volume 14 ; 14 >
+        au < HighWirePressPlugin ; ready ; Accounting History Volume 14 ; 14 >
 
       }
 
@@ -66,7 +66,7 @@
         au < HighWireStrVolPlugin ; released ; Acta Sociologica Volume 49 ; 49 >
         au < HighWireStrVolPlugin ; released ; Acta Sociologica Volume 50 ; 50 >
         au < HighWireStrVolPlugin ; ready ; Acta Sociologica Volume 51 ; 51 >
-        au < HighWireStrVolPlugin ; ready ; Acta Sociologica Volume 52 ; 52 >
+        au < HighWirePressPlugin ; ready ; Acta Sociologica Volume 52 ; 52 >
 
       }
 
@@ -97,7 +97,7 @@
         au < HighWireStrVolPlugin ; released ; Action Research Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; released ; Action Research Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Action Research Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; ready ; Action Research Volume 7 ; 7 >
+        au < HighWirePressPlugin ; ready ; Action Research Volume 7 ; 7 >
 
       }
 
@@ -128,7 +128,7 @@
         au < HighWireStrVolPlugin ; released ; Active Learning in Higher Education Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; released ; Active Learning in Higher Education Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; ready ; Active Learning in Higher Education Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; ready ; Active Learning in Higher Education Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Active Learning in Higher Education Volume 10 ; 10 >
 
       }
 
@@ -159,7 +159,7 @@
         au < HighWireStrVolPlugin ; released ; Adaptive Behavior Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Adaptive Behavior Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; ready ; Adaptive Behavior Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; ready ; Adaptive Behavior Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; Adaptive Behavior Volume 17 ; 17 >
 
       }
 
@@ -190,11 +190,29 @@
         au < HighWireStrVolPlugin ; released ; Administration & Society Volume 38 ; 38 >
         au < HighWireStrVolPlugin ; released ; Administration & Society Volume 39 ; 39 >
         au < HighWireStrVolPlugin ; ready ; Administration & Society Volume 40 ; 40 >
-        au < HighWireStrVolPlugin ; ready ; Administration & Society Volume 41 ; 41 >
+        au < HighWirePressPlugin ; ready ; Administration & Society Volume 41 ; 41 >
 
       }
 
     }
+
+    {
+
+      title <
+        name = Advances in Dental Research
+      >
+
+      {
+
+        param[base_url] = http://adr.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Advances in Dental Research Volume 20 ; 20 ; >
+        au < HighWirePressPlugin ; ready ; Advances in Dental Research Volume 21 ; 21 ; >
+
+      }
+
+  }
 
     {
 
@@ -221,7 +239,7 @@
         au < HighWireStrVolPlugin ; doNotProcess ; Adult Education Quarterly Volume 56 ; 56 >
         au < HighWireStrVolPlugin ; released ; Adult Education Quarterly Volume 57 ; 57 >
         au < HighWireStrVolPlugin ; released ; Adult Education Quarterly Volume 58 ; 58 >
-        au < HighWireStrVolPlugin ; ready ; Adult Education Quarterly Volume 59 ; 59 >
+        au < HighWirePressPlugin ; ready ; Adult Education Quarterly Volume 59 ; 59 >
 
       }
 
@@ -9484,7 +9502,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Public Policy and Administration Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; Public Policy and Administration Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; Public Policy and Administration Volume 23 ; 23 >
-        au < HighWirePressPlugin ; manifest ; Public Policy and Administration Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Public Policy and Administration Volume 24 ; 24 >
 
       }
 
@@ -9505,7 +9523,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Public Understanding of Science Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; ready ; Public Understanding of Science Volume 16 ; 16 >
         au < HighWirePressPlugin ; manifest ; Public Understanding of Science Volume 17 ; 17 >
-        au < HighWirePressPlugin ; manifest ; Public Understanding of Science Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Public Understanding of Science Volume 18 ; 18 >
 
       }
 
@@ -9527,6 +9545,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Public Works Management & Policy Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; ready ; Public Works Management & Policy Volume 12 ; 12 >
         au < HighWirePressPlugin ; manifest ; Public Works Management & Policy Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Public Works Management & Policy Volume 14 ; 14 >
 
       }
 
@@ -9547,7 +9566,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Punishment & Society Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; ready ; Punishment & Society Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; ready ; Punishment & Society Volume 10 ; 10 >
-        au < HighWirePressPlugin ; manifest ; Punishment & Society Volume 11 ; 11 >
+        au < HighWirePressPlugin ; ready ; Punishment & Society Volume 11 ; 11 >
 
       }
 
@@ -9568,7 +9587,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Qualitative Health Research Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; ready ; Qualitative Health Research Volume 17 ; 17 >
         au < HighWirePressPlugin ; manifest ; Qualitative Health Research Volume 18 ; 18 >
-        au < HighWirePressPlugin ; manifest ; Qualitative Health Research Volume 19 ; 19 >
+        au < HighWirePressPlugin ; ready ; Qualitative Health Research Volume 19 ; 19 >
 
       }
 
@@ -9589,7 +9608,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; ready ; Qualitative Inquiry Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; ready ; Qualitative Inquiry Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; ready ; Qualitative Inquiry Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; Qualitative Inquiry Volume 15 ; 15 >
+        au < HighWirePressPlugin ; ready ; Qualitative Inquiry Volume 15 ; 15 >
 
       }
 

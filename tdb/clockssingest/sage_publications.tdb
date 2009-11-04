@@ -43,7 +43,7 @@
     param[base_url] = http://arj.sagepub.com/
 
     au < manifest ; 2008 ; Action Research Volume 6 ; 6 ; >
-    au < testing ; 2009 ; Action Research Volume 7 ; 7 ; >
+    au < tested ; 2009 ; Action Research Volume 7 ; 7 ; >
 
   }
 
@@ -56,7 +56,7 @@
     param[base_url] = http://alh.sagepub.com/
 
     au < manifest ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
-    au < testing ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
+    au < tested ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
 
   }
 
@@ -69,7 +69,7 @@
     param[base_url] = http://adb.sagepub.com/
 
     au < manifest ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
-    au < testing ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
+    au < tested ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
 
   }
 
@@ -82,7 +82,7 @@
     param[base_url] = http://aas.sagepub.com/
 
     au < manifest ; 2008 ; Administration & Society Volume 40 ; 40 ; >
-    au < testing ; 2009 ; Administration & Society Volume 41 ; 41 ; >
+    au < tested ; 2009 ; Administration & Society Volume 41 ; 41 ; >
 
   }
 
@@ -95,7 +95,7 @@
     param[base_url] = http://aeq.sagepub.com/
 
     au < manifest ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 ; >
-    au < testing ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
+    au < tested ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
     au < manifest ; 2009-2010 ; Adult Education Quarterly Volume 60 ; 60 ; >
 
   }
@@ -109,7 +109,7 @@
     param[base_url] = http://adr.sagepub.com/
 
     au < manifest ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
-    au < testing ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
+    au < tested ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
 
   }
 
@@ -213,7 +213,7 @@
     param[base_url] = http://ajl.sagepub.com/
 
     au < manifest ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; >
-    au < manifest ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
+    au < testing ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
 
   }
 
@@ -226,7 +226,7 @@
     param[base_url] = http://ajm.sagepub.com/
 
     au < manifest ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 ; >
-    au < manifest ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
+    au < testing ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
 
   }
 
@@ -239,7 +239,7 @@
     param[base_url] = http://jmh.sagepub.com/
 
     au < manifest ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; >
-    au < manifest ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
+    au < testing ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
 
   }
 
@@ -264,7 +264,7 @@
     param[base_url] = http://apr.sagepub.com/
 
     au < manifest ; 2008 ; American Politics Research Volume 36 ; 36 ; >
-    au < manifest ; 2009 ; American Politics Research Volume 37 ; 37 ; >
+    au < testing ; 2009 ; American Politics Research Volume 37 ; 37 ; >
 
   }
 
@@ -277,7 +277,7 @@
     param[base_url] = http://arp.sagepub.com/
 
     au < manifest ; 2008 ; The American Review of Public Administration Volume 38 ; 38 ; >
-    au < manifest ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
+    au < testing ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
 
   }
 
@@ -290,7 +290,7 @@
     param[base_url] = http://ang.sagepub.com/
 
     au < manifest ; 2008 ; Angiology Volume 59 ; 59 ; >
-    au < manifest ; 2009 ; Angiology Volume 60 ; 60 ; >
+    au < testing ; 2009 ; Angiology Volume 60 ; 60 ; >
 
   }
 
@@ -303,7 +303,7 @@
     param[base_url] = http://anm.sagepub.com/
 
     au < manifest ; 2008 ; Animation Volume 3 ; 3 ; >
-    au < manifest ; 2009 ; Animation Volume 4 ; 4 ; >
+    au < testing ; 2009 ; Animation Volume 4 ; 4 ; >
 
   }
 
@@ -321,11 +321,11 @@
     au < manifest ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 ; >
     au < manifest ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 ; >
     au < manifest ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 ; >
-    au < manifest ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 ; >
-    au < manifest ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 ; >
-    au < manifest ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 ; >
-    au < manifest ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
-    au < manifest ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
+    au < testing ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 ; >
+    au < testing ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 ; >
+    au < testing ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 ; >
+    au < testing ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
+    au < testing ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
 
   }
 
@@ -338,7 +338,7 @@
     param[base_url] = http://ant.sagepub.com/
 
     au < manifest ; 2008 ; Anthropological Theory Volume 8 ; 8 ; >
-    au < manifest ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
+    au < testing ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
 
   }
 
@@ -351,7 +351,7 @@
     param[base_url] = http://apm.sagepub.com/
 
     au < manifest ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 ; >
-    au < manifest ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
+    au < testing ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
 
   }
 
@@ -5523,7 +5523,7 @@
     param[base_url] = http://ppa.sagepub.com/
 
     au < manifest ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
-    au < testing ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
+    au < tested ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
 
   }
 
@@ -5536,7 +5536,7 @@
     param[base_url] = http://pus.sagepub.com/
 
     au < manifest ; 2008 ; Public Understanding of Science Volume 17 ; 17 ; >
-    au < testing ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
+    au < tested ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
 
   }
 
@@ -5549,7 +5549,7 @@
     param[base_url] = http://pwm.sagepub.com/
 
     au < manifest ; 2008 ; Public Works Management & Policy Volume 13 ; 13 ; >
-    au < testing ; 2009 ; Public Works Management & Policy Volume 14 ; 14 ; >
+    au < tested ; 2009 ; Public Works Management & Policy Volume 14 ; 14 ; >
 
   }
 
@@ -5562,7 +5562,7 @@
     param[base_url] = http://pun.sagepub.com/
 
     au < manifest ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
-    au < testing ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
+    au < tested ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
 
   }
 
@@ -5575,7 +5575,7 @@
     param[base_url] = http://qhr.sagepub.com/
 
     au < manifest ; 2008 ; Qualitative Health Research Volume 18 ; 18 ; >
-    au < testing ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
+    au < tested ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
 
   }
 
@@ -5588,7 +5588,7 @@
     param[base_url] = http://qix.sagepub.com/
 
     au < manifest ; 2008 ; Qualitative Inquiry Volume 14 ; 14 ; >
-    au < testing ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
+    au < tested ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
 
   }
 

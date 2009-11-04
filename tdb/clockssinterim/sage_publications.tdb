@@ -8,6 +8,103 @@
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
   implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
 
+
+  {
+
+    title <
+      name = Accounting History
+    >
+
+    param[base_url] = http://ach.sagepub.com/
+
+    au < testing ; 2009 ; Accounting History Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Acta Sociologica
+    >
+
+    param[base_url] = http://asj.sagepub.com/
+
+    au < testing ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
+
+  }
+
+  {
+
+    title <
+      name = Action Research
+    >
+
+    param[base_url] = http://arj.sagepub.com/
+
+    au < tested ; 2009 ; Action Research Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Active Learning in Higher Education
+    >
+
+    param[base_url] = http://alh.sagepub.com/
+
+    au < tested ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Adaptive Behavior
+    >
+
+    param[base_url] = http://adb.sagepub.com/
+
+    au < tested ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
+      name = Administration & Society
+    >
+
+    param[base_url] = http://aas.sagepub.com/
+
+    au < tested ; 2009 ; Administration & Society Volume 41 ; 41 ; >
+
+  }
+
+  {
+
+    title <
+      name = Adult Education Quarterly
+    >
+
+    param[base_url] = http://aeq.sagepub.com/
+
+    au < tested ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Dental Research
+    >
+
+    param[base_url] = http://adr.sagepub.com/
+
+    au < tested ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
+
+  }
+
   {
 
     title <
@@ -1462,6 +1559,78 @@
     param[base_url] = http://tpj.sagepub.com/
 
     au < tested ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
+
+  }
+
+  {
+
+    title <
+      name = Public Policy and Administration
+    >
+
+    param[base_url] = http://ppa.sagepub.com/
+
+    au < tested ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
+      name = Public Understanding of Science
+    >
+
+    param[base_url] = http://pus.sagepub.com/
+
+    au < tested ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
+
+  }
+
+  {
+
+    title <
+      name = Public Works Management & Policy
+    >
+
+    param[base_url] = http://pwm.sagepub.com/
+
+    au < tested ; 2009 ; Public Works Management & Policy Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Punishment & Society
+    >
+
+    param[base_url] = http://pun.sagepub.com/
+
+    au < tested ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Qualitative Health Research
+    >
+
+    param[base_url] = http://qhr.sagepub.com/
+
+    au < tested ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+    title <
+      name = Qualitative Inquiry
+    >
+
+    param[base_url] = http://qix.sagepub.com/
+
+    au < tested ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
 
   }
   
