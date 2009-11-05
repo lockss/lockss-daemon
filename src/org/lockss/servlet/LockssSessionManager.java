@@ -1,5 +1,5 @@
 /*
- * $Id: LockssSessionManager.java,v 1.3 2009-11-04 03:13:19 dshr Exp $
+ * $Id: LockssSessionManager.java,v 1.4 2009-11-05 23:38:39 dshr Exp $
  */
 
 /*
@@ -63,6 +63,15 @@ public class LockssSessionManager extends AbstractSessionManager {
     return res;
   }
 
+  public static boolean isAuthenticated(HttpSession sess) {
+    return sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null;
+  }
+
+  public static UserAccount getUserAccount(HttpSession sess) {
+    Object ret = sess.getAttribute(LockssFormAuthenticator.__J_LOCKSS_USER);
+    return (UserAccount)ret;
+  }
+
   protected AbstractSessionManager.Session newSession(HttpServletRequest request) {
     return new Session(request);
   }
@@ -74,10 +83,8 @@ public class LockssSessionManager extends AbstractSessionManager {
       HttpSession sess = (HttpSession)ent.getValue();
       // Process only authenticated sessions that won't be logged out due
       // to inactivity on their next use
-      if (sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null
-	  && !isInactiveTimeout(sess)) {
-	UserAccount acct =
-	  (UserAccount)sess.getAttribute(LockssFormAuthenticator.__J_LOCKSS_USER);
+      if (isAuthenticated(sess) && !isInactiveTimeout(sess)) {
+	UserAccount acct = getUserAccount(sess);
 	if (acct != null) {
 	  UserSession usess = new UserSession(acct.getName());
 	  usess.setLoginTime((Long)sess.getAttribute(LockssFormAuthenticator.__J_LOGIN_TIME));
@@ -107,8 +114,7 @@ public class LockssSessionManager extends AbstractSessionManager {
       HttpSession sess = (HttpSession)ent.getValue();
       // Process only authenticated sessions that will be logged out due
       // to inactivity on their next use
-      if (sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null
-	  && isInactiveTimeout(sess)) {
+      if (isAuthenticated(sess) && isInactiveTimeout(sess)) {
 	res.add(sess);
       }
     }

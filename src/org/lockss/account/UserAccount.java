@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.8 2009-11-05 16:19:23 dshr Exp $
+ * $Id: UserAccount.java,v 1.9 2009-11-05 23:38:39 dshr Exp $
  */
 
 /*
@@ -672,14 +672,13 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 	log.error("Null AdminServletManager cookie");
 	return;
       }
-      Collection zombies = adminMgr.getZombieSessions();  // Can be null XXX
+      Collection zombies = adminMgr.getZombieSessions();
       log.debug3("Zombies: " + zombies.size());
       for (Iterator it = zombies.iterator(); it.hasNext(); ) {
 	HttpSession sess = (HttpSession)it.next();
-	if (sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null
-	    && LockssSessionManager.isInactiveTimeout(sess)) {
-	  UserAccount acct =
-	    (UserAccount)sess.getAttribute(LockssFormAuthenticator.__J_LOCKSS_USER);
+	boolean auth = LockssSessionManager.isAuthenticated(sess);
+	if (auth && LockssSessionManager.isInactiveTimeout(sess)) {
+	  UserAccount acct = LockssSessionManager.getUserAccount(sess);
 	  if (acct != null) {
 	    log.debug3("About to log out zombie: " + sess);
 	    LockssFormAuthenticator.logout(sess, "Logged out for inactivity");
@@ -687,10 +686,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 	    log.debug3("Zombie with null acct: " + sess);
 	  }
 	} else {
-	  Object auth =
-	    sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED);
-	  log.debug3("Inactive zombie: " + sess + " auth " + auth +
-		     " timeout " + LockssSessionManager.isInactiveTimeout(sess));
+	  log.error("Inactive zombie: " + sess + " auth " + auth +
+		    " timeout " + LockssSessionManager.isInactiveTimeout(sess));
 	}
       }
     }

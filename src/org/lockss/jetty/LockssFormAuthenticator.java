@@ -1,5 +1,5 @@
 /*
- * $Id: LockssFormAuthenticator.java,v 1.6 2009-11-04 03:13:19 dshr Exp $
+ * $Id: LockssFormAuthenticator.java,v 1.7 2009-11-05 23:38:39 dshr Exp $
  */
 
 /*
@@ -179,6 +179,65 @@ public class LockssFormAuthenticator implements Authenticator {
     session.setAttribute(__J_LOCKSS_USER, null);
     session.setAttribute(__J_AUTH_MAX_INACTIVITY, null);
 //     session.invalidate();
+// There are several semi-related concerns:
+
+// - logging out inactive users
+// - invalidating inactive sessions
+// - how to treat active requests
+
+// All inter-request context is held in the session (which is keyed to a
+// cookie).  Sessions need to timeout eventually, so the storage can be
+// freed, but a short timeout is annoying.  If I issue req1 (which stores
+// some context in the session), take a break, then issue req2 (which
+// depends on that context), it will fail if the session timeout is shorter
+// than my break.
+
+// (Requests that take a long time to process make it more likely that I'll
+// turn my attention elsewhere or take a break, but that isn't directly
+// relevant here, except to explain why our session timeout is quite long.
+// If I issue a HashCUS request that will take an hour to complete, it's
+// unrealistic to require me to click on the "fetch filtered stream" link
+// within 15 minutes of it completing.  Our session timeout defaults to 2
+// days.)
+
+// Clearing the login info but otherwise keeping the session active allows
+// us to ask for login (when the user issues req2, and we notice he's been
+// inactive too long) then proceed to process req2 when he logs in.
+
+
+// The less obvious question is how timeouts should interact with long
+// requests.  If "activity" was defined as issuing a request, then by the
+// time a long request finished, the user might already be logged out and
+// forced to reauthenticate even if he quickly follows the response with
+// another request.  So I decided to consider a session active while a
+// request is processed.  The LAST_ACTIVE time is updated when a request is
+// received (which turns out to be unnecessary) *and* when the response is
+// sent, and the isInactiveTimeout() method returns false if the session is
+// currently processing a request.
+
+// This may be controversial.  The inactivity timer doesn't start until the
+// request completes, so it's possible for someone who walks up to a
+// browser that's been unattended for longer than the inactivity timeout to
+// gain access.  The only real alternative leads to the scenario above,
+// which seems onerous.  A hybrid approach, where the timer is started both
+// when the request starts and finishes, but current processing is ignored,
+// would reduce the window of vulnerability, but I think is even worse.
+// The user would effectively be logged in for the first 15 minutes of the
+// request, then not logged in (if he made another request before the first
+// finished), then automagically logged in again for another 15 minutes
+// when it finished.  This would be hard to explain and would look
+// especially odd in the logs.
+
+
+// (If a *session* times out and is invalidated during a request, the
+// behavior depends on the servlet.  All that happens is that the session
+// object is removed from a map while the servlet is running - nothing
+// stops it from completing.  If the servlet accesses the session when it's
+// done, as most do, a new session will be created and the user will get a
+// new cookie.  If the next request relies only on context newly stored in
+// the session everything will work; if it relies on previous context,
+// which disappeared with the old session, it won't.  I mention this only
+// because you brought it up.)
   }
 
   /* ------------------------------------------------------------ */
