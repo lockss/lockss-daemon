@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.28 2008-11-25 04:03:49 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.29 2009-11-05 16:19:24 dshr Exp $
  */
 
 /*
@@ -144,12 +144,15 @@ public abstract class JettyManager
 	log.warning(serverName + " not started; port " + port + " is in use");
 	return false;
       }
+      log.debug("Trying to start Jetty on port " + port + " name " +
+                serverName);
       ownedPort = port;
       setListenerParams(server);
       for (int ix = 0; ix < delayTime.length; ix++) {
 	try {
 	  server.start();
 	  runningServer = server;
+          log.debug("Jetty started on port " + port);
 	  return true;
 	} catch (org.mortbay.util.MultiException e) {
 	  log.debug("multi", e);

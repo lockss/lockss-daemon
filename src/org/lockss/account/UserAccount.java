@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.7 2009-11-04 03:13:19 dshr Exp $
+ * $Id: UserAccount.java,v 1.8 2009-11-05 16:19:23 dshr Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   private static FastDateFormat expireDf =
     FastDateFormat.getInstance("EEE dd MMM, HH:mm zzz");
 
-  private static Set<UserAccount> active = new HashSet();
+  private static Map<HttpSession,UserAccount> active = new HashMap();
   private static TimerQueue.Request alerter = null;
   protected final String userName;
   protected String email;
@@ -79,7 +79,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected boolean isDisabled;
   protected String disableReason;
 
-  protected static final long ALERTER_INTERVAL = 60000;
+  protected static final long ALERTER_INTERVAL = Constants.MINUTE;
 
   protected transient AccountManager acctMgr;
   protected transient String fileName;
@@ -297,8 +297,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       alerter = TimerQueue.schedule(Deadline.in(ALERTER_INTERVAL),
 				    ALERTER_INTERVAL, new Alerter(), adminMgr);
     }
-    if (!active.contains(this)) {
-      active.add(this);
+    if (!active.containsKey(session)) {
+      active.put(session, this);
       auditableEvent("logged in");
     } else {
       log.debug("Redundant nowAuthenticated()");
@@ -307,8 +307,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   /** Account has logged out */
   public void loggedOut(HttpSession session) {
-    if (active.contains(this)) {
-      active.remove(this);
+    if (active.containsKey(session)) {
+      active.remove(session);
       auditableEvent("logged out");
       if (alerter != null) {
 	if (active.size() == 0) {
@@ -667,20 +667,30 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
     public void timerExpired(Object cookie) {
       AdminServletManager adminMgr = (AdminServletManager)cookie;
+      log.debug3("timerExpierd");
       if (adminMgr == null) {
 	log.error("Null AdminServletManager cookie");
 	return;
       }
-      Collection zombies = adminMgr.getZombieSessions();
+      Collection zombies = adminMgr.getZombieSessions();  // Can be null XXX
+      log.debug3("Zombies: " + zombies.size());
       for (Iterator it = zombies.iterator(); it.hasNext(); ) {
 	HttpSession sess = (HttpSession)it.next();
 	if (sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED) != null
-	    && !LockssSessionManager.isInactiveTimeout(sess)) {
+	    && LockssSessionManager.isInactiveTimeout(sess)) {
 	  UserAccount acct =
 	    (UserAccount)sess.getAttribute(LockssFormAuthenticator.__J_LOCKSS_USER);
 	  if (acct != null) {
+	    log.debug3("About to log out zombie: " + sess);
 	    LockssFormAuthenticator.logout(sess, "Logged out for inactivity");
+	  } else {
+	    log.debug3("Zombie with null acct: " + sess);
 	  }
+	} else {
+	  Object auth =
+	    sess.getAttribute(LockssFormAuthenticator.__J_AUTHENTICATED);
+	  log.debug3("Inactive zombie: " + sess + " auth " + auth +
+		     " timeout " + LockssSessionManager.isInactiveTimeout(sess));
 	}
       }
     }
