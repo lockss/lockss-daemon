@@ -263,6 +263,18 @@
   {
 
     title <
+      name = Journal of Perinatology
+    >
+
+    param[journal_id] = jp
+
+    au < ready ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
+
+  }
+  
+  {
+
+    title <
       name = Nature
     >
 

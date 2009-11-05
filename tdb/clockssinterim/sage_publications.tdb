@@ -9,27 +9,128 @@
   implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
 
 
+
   {
 
     title <
-      name = Accounting History
+      name = American Journal of Lifestyle Medicine
     >
 
-    param[base_url] = http://ach.sagepub.com/
+    param[base_url] = http://ajl.sagepub.com/
 
-    au < testing ; 2009 ; Accounting History Volume 14 ; 14 ; >
+    au < tested ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
 
   }
 
   {
 
     title <
-      name = Acta Sociologica
+      name = American Journal of Medical Quality
     >
 
-    param[base_url] = http://asj.sagepub.com/
+    param[base_url] = http://ajm.sagepub.com/
 
-    au < testing ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
+    au < tested ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Men's Health
+    >
+
+    param[base_url] = http://jmh.sagepub.com/
+
+    au < tested ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Politics Research
+    >
+
+    param[base_url] = http://apr.sagepub.com/
+
+    au < tested ; 2009 ; American Politics Research Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+    title <
+      name = The American Review of Public Administration
+    >
+
+    param[base_url] = http://arp.sagepub.com/
+
+    au < tested ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
+
+  }
+
+  {
+
+    title <
+      name = Angiology
+    >
+
+    param[base_url] = http://ang.sagepub.com/
+
+    au < tested ; 2009 ; Angiology Volume 60 ; 60 ; >
+
+  }
+
+  {
+
+    title <
+      name = Animation
+    >
+
+    param[base_url] = http://anm.sagepub.com/
+
+    au < tested ; 2009 ; Animation Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Annals of the American Academy of Political and Social Science
+    >
+
+    param[base_url] = http://ann.sagepub.com/
+
+    au < tested ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 ; >
+    au < tested ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 ; >
+    au < tested ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 ; >
+    au < tested ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
+    au < tested ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
+
+  }
+
+  {
+
+    title <
+      name = Anthropological Theory
+    >
+
+    param[base_url] = http://ant.sagepub.com/
+
+    au < tested ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Applied Psychological Measurement
+    >
+
+    param[base_url] = http://apm.sagepub.com/
+
+    au < tested ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
 
   }
 
@@ -102,6 +203,90 @@
     param[base_url] = http://adr.sagepub.com/
 
     au < tested ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Developing Human Resources
+    >
+
+    param[base_url] = http://adh.sagepub.com/
+
+    au < tested ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Affilia
+    >
+
+    param[base_url] = http://aff.sagepub.com/
+
+    au < tested ; 2009 ; Affilia Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Behavioral Scientist
+    >
+
+    param[base_url] = http://abs.sagepub.com/
+
+    au < tested ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Educational Research Journal
+    >
+
+    param[base_url] = http://aer.sagepub.com/
+
+    au < testing ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Alzheimer's Disease and Other Dementias
+    >
+
+    param[base_url] = http://aja.sagepub.com/
+
+    au < testing ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Evaluation
+    >
+
+    param[base_url] = http://aje.sagepub.com/
+
+    au < tested ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Hospice and Palliative Medicine
+    >
+
+    param[base_url] = http://ajh.sagepub.com/
+
+    au < tested ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
 
   }
 

@@ -17,16 +17,16 @@
 comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted
 
 
-    au < notReady ; Biochemical Journal Volume 1 ; 001 >
+    au < testing ; Biochemical Journal Volume 1 ; 001 >
     au < ready ; Biochemical Journal Volume 2 ; 002 >
     au < ready ; Biochemical Journal Volume 3 ; 003 >
     au < ready ; Biochemical Journal Volume 4 ; 004 >
-    au < notReady ; Biochemical Journal Volume 5 ; 005 >
+    au < testing ; Biochemical Journal Volume 5 ; 005 >
     au < ready ; Biochemical Journal Volume 6 ; 006 >
-    au < notReady ; Biochemical Journal Volume 7 ; 007 >
-    au < notReady ; Biochemical Journal Volume 8 ; 008 >
-    au < notReady ; Biochemical Journal Volume 9 ; 009 >
-    au < notReady ; Biochemical Journal Volume 10 ; 010 >
+    au < testing ; Biochemical Journal Volume 7 ; 007 >
+    au < testing ; Biochemical Journal Volume 8 ; 008 >
+    au < testing ; Biochemical Journal Volume 9 ; 009 >
+    au < testing ; Biochemical Journal Volume 10 ; 010 >
     au < ready ; Biochemical Journal Volume 11 ; 011 >
     au < ready ; Biochemical Journal Volume 12 ; 012 >
     au < notReady ; Biochemical Journal Volume 13 ; 013 >
@@ -217,12 +217,12 @@ comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted
     au < ready ; Biochemical Journal Volume 198 ; 198 >
     au < ready ; Biochemical Journal Volume 199 ; 199 >
     au < ready ; Biochemical Journal Volume 200 ; 200 >
-    au < testing ; Biochemical Journal Volume 201 ; 201 >
-    au < testing ; Biochemical Journal Volume 202 ; 202 >
-    au < testing ; Biochemical Journal Volume 203 ; 203 >
-    au < testing ; Biochemical Journal Volume 204 ; 204 >
-    au < testing ; Biochemical Journal Volume 205 ; 205 >
-    au < testing ; Biochemical Journal Volume 206 ; 206 >
+    au < ready ; Biochemical Journal Volume 201 ; 201 >
+    au < ready ; Biochemical Journal Volume 202 ; 202 >
+    au < ready ; Biochemical Journal Volume 203 ; 203 >
+    au < ready ; Biochemical Journal Volume 204 ; 204 >
+    au < ready ; Biochemical Journal Volume 205 ; 205 >
+    au < ready ; Biochemical Journal Volume 206 ; 206 >
     au < manifest ; Biochemical Journal Volume 207 ; 207 >
     au < manifest ; Biochemical Journal Volume 208 ; 208 >
     au < manifest ; Biochemical Journal Volume 209 ; 209 >

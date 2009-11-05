@@ -411,7 +411,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = jp
 
     au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
-    au < testing ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
+    au < ready ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
 
   }
 
@@ -444,7 +444,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = leu
 
     au < manifest ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
-    au < testing ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
+    au < notReady ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
 
   }
 
@@ -636,7 +636,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nmat
 
     au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
-    au < manifest ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
+    au < testing ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
 
   }
 
@@ -753,7 +753,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nrcardio
 
     au < manifest ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
+    au < testing ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -766,7 +766,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nrclinonc
 
     au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
+    au < testing ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -968,7 +968,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = onc
 
     au < manifest ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
-    au < testing ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
+    au < notReady ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
 
   }
 
@@ -981,7 +981,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = tpj
 
     au < manifest ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
-    au < testing ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
+    au < notReady ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
 
   }
 
