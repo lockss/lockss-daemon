@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressHtmlFilterFactory.java,v 1.5 2009-11-04 23:25:17 thib_gc Exp $
+ * $Id: PortlandPressHtmlFilterFactory.java,v 1.6 2009-11-06 23:24:06 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.List;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.html.*;
@@ -61,6 +61,8 @@ public class PortlandPressHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "RHAdvert"),
         // Contains the editorial board which may change over time (e.g. Biochemical Journal)
         HtmlNodeFilters.tagWithAttribute("td", "id", "LeftPanel"),
+        // Contains the editorial board which may change over time (e.g. Biochemical Journal)
+        new TagNameFilter("script"),
         // Contains variable links to recent issues (e.g. Biochemical Journal)
         HtmlNodeFilters.tagWithAttribute("td", "id", "RightPanel"),
     };
