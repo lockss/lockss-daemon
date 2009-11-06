@@ -1416,7 +1416,7 @@
     param[base_url] = http://jjco.oxfordjournals.org/
 
     au < manifest ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
-    au < testing ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
+    au < tested ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
 
   }
 
@@ -1575,7 +1575,7 @@
     param[base_url] = http://jel.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
-    au < manifest ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
+    au < testing ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
 
   }
 
@@ -1588,7 +1588,7 @@
     param[base_url] = http://jxb.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
-    au < manifest ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
+    au < testing ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
 
   }
 
@@ -1601,7 +1601,7 @@
     param[base_url] = http://jfec.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
-    au < manifest ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
+    au < testing ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
 
   }
 
@@ -1613,7 +1613,7 @@
 
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
 
-    au < manifest ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
+    au < notReady ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
 
   }
 
@@ -1625,7 +1625,7 @@
 
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
 
-    au < manifest ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
+    au < testing ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
 
   }
 
@@ -1638,7 +1638,7 @@
     param[base_url] = http://jhered.oxfordjournals.org/
 
     au < manifest ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
-    au < manifest ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
+    au < testing ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
 
   }
 
@@ -1650,7 +1650,7 @@
 
     param[base_url] = http://jhs.oxfordjournals.org/
 
-    au < manifest ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
+    au < testing ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
 
   }
 
@@ -2411,7 +2411,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://philmat.oxfordjournals.org/
 
     au < manifest ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
-    au < manifest ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
+    au < testing ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
 
   }
 
@@ -2424,7 +2424,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://pcp.oxfordjournals.org/
 
     au < manifest ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
-    au < manifest ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
+    au < testing ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
 
   }
 
@@ -2437,7 +2437,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://policing.oxfordjournals.org/
 
     au < manifest ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
-    au < manifest ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+    au < testing ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
 
   }
 
@@ -2450,7 +2450,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://pan.oxfordjournals.org/
 
     au < manifest ; 2008 ; Political Analysis Volume 16 ; 16 ; >
-    au < manifest ; 2009 ; Political Analysis Volume 17 ; 17 ; >
+    au < testing ; 2009 ; Political Analysis Volume 17 ; 17 ; >
 
   }
 
@@ -2464,8 +2464,8 @@ comment[mplant] = no manifest page
 
     au < manifest ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
     au < manifest ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
-    au < manifest ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
-    au < manifest ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
+    au < testing ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
+    au < testing ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
 
   }
 

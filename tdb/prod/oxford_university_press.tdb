@@ -2768,6 +2768,8 @@
         au < HighWireStrVolPlugin ; released ; Japanese Journal of Clinical Oncology Volume 35 ; 35 >
         au < HighWirePressPlugin ; doNotProcess ; Japanese Journal of Clinical Oncology Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; released ; Japanese Journal of Clinical Oncology Volume 37 ; 37 >
+        au < HighWirePressPlugin ; manifest ; Japanese Journal of Clinical Oncology Volume 38 ; 38 >
+        au < HighWirePressPlugin ; ready ; Japanese Journal of Clinical Oncology Volume 39 ; 39 >
 
       }
 
@@ -2816,6 +2818,8 @@
         au < HighWireStrVolPlugin ; released ; Journal of African Economies Volume 14 ; 14 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of African Economies Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Journal of African Economies Volume 16 ; 16 >
+        au < HighWirePressPlugin ; manifest ; Journal of African Economies Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; Journal of African Economies Volume 18 ; 18 >
 
       }
 
@@ -2847,6 +2851,11 @@
         au < HighWirePressPlugin ; doNotProcess ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 >
         au < HighWireStrVolPlugin ; released ; Journal of Antimicrobial Chemotherapy Volume 58 ; 58 >
         au < HighWireStrVolPlugin ; released ; Journal of Antimicrobial Chemotherapy Volume 59 ; 59 >
+        au < HighWirePressPlugin ; manifest ; Journal of Antimicrobial Chemotherapy Volume 60 ; 60 >
+        au < HighWirePressPlugin ; manifest ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 >
+        au < HighWirePressPlugin ; manifest ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 >
+        au < HighWirePressPlugin ; ready ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 >
+        au < HighWirePressPlugin ; ready ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 >
 
       }
 
@@ -2875,6 +2884,12 @@
 
         au < HighWirePressPlugin ; doNotProcess ; The Journal of Biochemistry Volume 139 ; 139 >
         au < HighWireStrVolPlugin ; ready ; The Journal of Biochemistry Volume 140 ; 140 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 141 ; 141 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 142 ; 142 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 143 ; 143 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 144 ; 144 >
+        au < HighWirePressPlugin ; ready ; The Journal of Biochemistry Volume 145 ; 145 >
+        au < HighWirePressPlugin ; ready ; The Journal of Biochemistry Volume 146 ; 146 >
 
       }
 
@@ -3666,6 +3681,8 @@
         au < HighWireStrVolPlugin ; released ; Journal of the American Academy of Religion Volume 73 ; 73 >
         au < HighWireStrVolPlugin ; released ; Journal of the American Academy of Religion Volume 74 ; 74 >
         au < HighWireStrVolPlugin ; ready ; Journal of the American Academy of Religion Volume 75 ; 75 >
+        au < HighWirePressPlugin ; manifest ; Journal of the American Academy of Religion Volume 76 ; 76 >
+        au < HighWirePressPlugin ; ready ; Journal of the American Academy of Religion Volume 77 ; 77 >
 
       }
 

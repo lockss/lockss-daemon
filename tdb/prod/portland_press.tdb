@@ -15,9 +15,9 @@
     param[journal_id] = bj
     
 comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted
+comment[bj1] = not permission from publisher
 
-
-    au < testing ; Biochemical Journal Volume 1 ; 001 >
+    au < notReady ; Biochemical Journal Volume 1 ; 001 >
     au < ready ; Biochemical Journal Volume 2 ; 002 >
     au < ready ; Biochemical Journal Volume 3 ; 003 >
     au < ready ; Biochemical Journal Volume 4 ; 004 >

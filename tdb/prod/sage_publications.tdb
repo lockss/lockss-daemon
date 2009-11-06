@@ -756,7 +756,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Arts and Humanities in Higher Education Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Arts and Humanities in Higher Education Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Arts and Humanities in Higher Education Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; ready ; Arts and Humanities in Higher Education Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Arts and Humanities in Higher Education Volume 8 ; 8 >
 
       }
 
@@ -777,7 +777,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; released ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; ready ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
-        au < HighWireStrVolPlugin ; ready ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
+        au < HighWirePressPlugin ; ready ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
 
       }
 
@@ -796,7 +796,7 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < HighWireStrVolPlugin ; released ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; ready ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; ready ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
+        au < HighWirePressPlugin ; ready ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
 
@@ -817,7 +817,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Asian Journal of Management Cases Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; released ; Asian Journal of Management Cases Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; ready ; Asian Journal of Management Cases Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; ready ; Asian Journal of Management Cases Volume 6 ; 6 >
+        au < HighWirePressPlugin ; ready ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
 
@@ -838,10 +838,28 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Assessment Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; Assessment Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; ready ; Assessment Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; ready ; Assessment Volume 16 ; 16 >
+        au < HighWirePressPlugin ; ready ; Assessment Volume 16 ; 16 >
 
       }
 
+    }
+
+    {
+
+      title <
+        name = Assessment for Effective Intervention
+      >
+      
+      {
+      
+        param[base_url] = http://aei.sagepub.com/
+
+        au < HighWirePressPlugin ; manifest ; Assessment for Effective Intervention Volume 33 ; 33 ; >
+        au < HighWirePressPlugin ; ready ; Assessment for Effective Intervention Volume 34 ; 34 ; >
+        au < HighWirePressPlugin ; ready ; Assessment for Effective Intervention Volume 35 ; 35 ; >
+     
+      }
+     
     }
 
     {
@@ -859,7 +877,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Autism Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; released ; Autism Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; ready ; Autism Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; ready ; Autism Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Autism Volume 13 ; 13 >
 
       }
 
@@ -890,7 +908,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; doNotProcess ; Behavior Modification Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; released ; Behavior Modification Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; ready ; Behavior Modification Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; ready ; Behavior Modification Volume 33 ; 33 >
+        au < HighWirePressPlugin ; ready ; Behavior Modification Volume 33 ; 33 >
 
       }
 
@@ -909,6 +927,24 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < HighWireStrVolPlugin ; released ; Behavioral and Cognitive Neuroscience Reviews Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; released ; Behavioral and Cognitive Neuroscience Reviews Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Biblical Theology Bulletin: A Journal of Bible and Theology
+      >
+
+      {
+
+        param[base_url] = http://btb.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 ; >
+        au < HighWirePressPlugin ; ready ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 ; >
 
       }
 
@@ -940,6 +976,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Biological Research For Nursing Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; released ; Biological Research For Nursing Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; ready ; Biological Research For Nursing Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Biological Research For Nursing Volume 11 ; 11 >
 
       }
 
@@ -970,7 +1007,25 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; doNotProcess ; Body & Society Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; released ; Body & Society Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; ready ; Body & Society Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; ready ; Body & Society Volume 15 ; 15 >
+        au < HighWirePressPlugin ; ready ; Body & Society Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The British Journal of Diabetes & Vascular Disease
+      >
+
+      {
+
+        param[base_url] = http://dvd.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; The British Journal of Diabetes & Vascular Disease Volume 8 ; 8 ; >
+        au < HighWirePressPlugin ; ready ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 ; >
 
       }
 
@@ -1010,7 +1065,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; British Journal of Visual Impairment Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; released ; British Journal of Visual Impairment Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; ready ; British Journal of Visual Impairment Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; ready ; British Journal of Visual Impairment Volume 27 ; 27 >
+        au < HighWirePressPlugin ; ready ; British Journal of Visual Impairment Volume 27 ; 27 >
 
       }
 
@@ -1051,7 +1106,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Building Service Engineering Research and Technology Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; released ; Building Service Engineering Research and Technology Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; ready ; Building Service Engineering Research and Technology Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; ready ; Building Service Engineering Research and Technology Volume 30 ; 30 >
+        au < HighWirePressPlugin ; ready ; Building Service Engineering Research and Technology Volume 30 ; 30 >
 
       }
 
