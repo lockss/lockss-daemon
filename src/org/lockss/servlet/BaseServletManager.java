@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.28 2009-07-13 06:52:06 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.29 2009-11-08 01:29:11 tlipkis Exp $
  */
 
 /*
@@ -374,7 +374,7 @@ public abstract class BaseServletManager
 	  keystoreMgr.getKeyManagerFactory(sslKeystoreName);
 	if (kmf == null) {
 	  log.critical("Keystore " + sslKeystoreName +
-		       " not found, not starting");
+		       " not found, not starting " + mi.serverName + " server");
 	  return;
 	}
  	lsl.setKeyManagerFactory(kmf);
