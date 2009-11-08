@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.197 2009-09-04 03:52:19 dshr Exp $
+ * $Id: PluginManager.java,v 1.198 2009-11-08 01:29:30 tlipkis Exp $
  */
 
 /*
@@ -2060,8 +2060,8 @@ public class PluginManager
       // CachedUrlSet.
 
       String url = cusn.getUrl();
-	if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
-	    cusn.isLeaf()) {
+      if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
+	  cusn.isLeaf()) {
 
 	// This CachedUrl represents a plugin JAR, validate it and
 	// process the plugins it contains.
