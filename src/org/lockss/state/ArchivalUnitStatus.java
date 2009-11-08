@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.85 2009-10-13 22:14:34 thib_gc Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.86 2009-11-08 01:30:37 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,8 @@ public class ArchivalUnitStatus
   public static final String NO_AU_PEERS_TABLE_NAME = "NoAuPeers";
   public static final String PEERS_VOTE_TABLE_NAME = "PeerVoteSummary";
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
+  public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
+
 
   static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
@@ -117,6 +119,8 @@ public class ArchivalUnitStatus
                                       new PeerVoteSummary(theDaemon));
     statusServ.registerStatusAccessor(PEERS_REPAIR_TABLE_NAME,
                                       new PeerRepair(theDaemon));
+    statusServ.registerStatusAccessor(FILE_VERSIONS_TABLE_NAME,
+                                      new FileVersions(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -129,6 +133,7 @@ public class ArchivalUnitStatus
     statusServ.unregisterStatusAccessor(AU_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PEERS_VOTE_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PEERS_REPAIR_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(FILE_VERSIONS_TABLE_NAME);
     logger.debug2("Status accessors unregistered.");
     super.stopService();
   }
@@ -530,9 +535,7 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("NodeTreeSize", "Tree Size",
                            ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("NodeChildCount", "Children",
-                           ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("NodeStatus", "Status",
-                           ColumnDescriptor.TYPE_STRING)
+                           ColumnDescriptor.TYPE_INT)
       );
 
     private static final List sortRules =
@@ -558,18 +561,6 @@ public class ArchivalUnitStatus
       }
     }
 
-
-    int getIntProp(StatusTable table, String name) {
-      Properties props = table.getProperties();
-      if (props == null) return -1;
-      String s = props.getProperty(name);
-      if (StringUtil.isNullString(s)) return -1;
-      try {
-	return Integer.parseInt(s);
-      } catch (Exception e) {
-	return -1;
-      }
-    }
 
     private List getRows(StatusTable table, ArchivalUnit au,
 			 LockssRepository repo, NodeManager nodeMan) {
@@ -613,9 +604,10 @@ public class ArchivalUnitStatus
           cus = au.makeCachedUrlSet(cuss);
         }
 	String url = cus.getUrl();
+
+	CachedUrl cu = au.makeCachedUrl(url);
         try {
-	  Map row = makeRow(au, repo.getNode(url),
-			    nodeMan.getNodeState(cus),
+	  Map row = makeRow(au, repo.getNode(url), cu,
 			    startUrls.contains(url));
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
@@ -630,7 +622,7 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			NodeState state, boolean isStartUrl) {
+			CachedUrl cu, boolean isStartUrl) {
       String url = node.getNodeUrl();
       boolean hasContent = node.hasContent();
       Object val = url;
@@ -656,8 +648,6 @@ public class ArchivalUnitStatus
         status = "Deleted";
       } else if (node.isContentInactive()) {
         status = "Inactive";
-      } else if (state.hasDamage()) {
-        status = "Damaged";
       } else {
 //         status = "Active";
       }
@@ -667,7 +657,18 @@ public class ArchivalUnitStatus
       Object versionObj = DASH;
       Object sizeObj = DASH;
       if (hasContent) {
-        versionObj = new OrderedObject(new Long(node.getCurrentVersion()));
+	int version = node.getCurrentVersion();
+        versionObj = new OrderedObject(new Long(version));
+	if (version > 1) {
+	  CachedUrl[] cuVersions = cu.getCuVersions(2);
+	  if (cuVersions.length > 1) {
+	    StatusTable.Reference verLink =
+	      new StatusTable.Reference(versionObj,
+					FILE_VERSIONS_TABLE_NAME, au.getAuId());
+	    verLink.setProperty("url", url);
+	    versionObj = verLink;
+	  }
+	}
         sizeObj = new OrderedObject(new Long(node.getContentSize()));
       }
       rowMap.put("NodeHasContent", (hasContent ? "yes" : "no"));
@@ -923,6 +924,114 @@ public class ArchivalUnitStatus
 //       ref.setProperty("numrows", Integer.toString(defaultNumRows));
       return ref;
     }
+  }
+
+  static class FileVersions extends PerAuTable {
+
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("Version", "Version", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("Size", "Size", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("DateCollected", "Date Collected",
+                           ColumnDescriptor.TYPE_DATE)
+      );
+
+    private static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("sort", true));
+
+    FileVersions(LockssDaemon theDaemon) {
+      super(theDaemon);
+    }
+
+    protected void populateTable(StatusTable table, ArchivalUnit au)
+        throws StatusService.NoSuchTableException {
+      String url = getStringProp(table, "url");
+      table.setTitle("Versions of " + url + " in " + au.getName());
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(table, au, url));
+    }
+
+    private List getRows(StatusTable table, ArchivalUnit au, String url)
+	throws StatusService.NoSuchTableException {
+      int startRow = Math.max(0, getIntProp(table, "skiprows"));
+      int numRows = getIntProp(table, "numrows");
+      if (numRows <= 0) {
+	numRows = defaultNumRows;
+      }
+      CachedUrl curCu = au.makeCachedUrl(url);
+      if (curCu == null) {
+	throw new StatusService.NoSuchTableException("URL " + url +
+						     " not found in AU: " +
+						     au.getName());
+      }
+      // Get array of versions.  One more than we need just to determine
+      // whether to add a Next link
+      CachedUrl[] cuVersions = curCu.getCuVersions(startRow + numRows + 1);
+
+      List rowL = new ArrayList();
+      if (startRow > 0) {
+        // add 'previous'
+        int start = startRow - defaultNumRows;
+        if (start < 0) {
+          start = 0;
+        }
+        rowL.add(makeOtherRowsLink(false, start, au.getAuId(), url));
+      }
+      int endRow1 = startRow + numRows; // end row + 1
+      int curRow = -1;
+      int curVer = curCu.getVersion() + 1;
+      for (CachedUrl cu : cuVersions) {
+	curRow++;
+	curVer--;
+        if (curRow < startRow) {
+          continue;
+        }
+	if (curRow >= numRows) {
+	  // add 'next'
+	  rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
+	  break;
+	}
+	Map row = makeRow(au, cu, curVer);
+	row.put("sort", curRow);
+	rowL.add(row);
+      }
+      return rowL;
+    }
+
+    private Map makeRow(ArchivalUnit au, CachedUrl cu, int ver) {
+      String url = cu.getUrl();
+      HashMap rowMap = new HashMap();
+      Properties args = new Properties();
+      args.setProperty("auid", au.getAuId());
+      args.setProperty("url", url);
+      args.setProperty("version", Integer.toString(ver));
+      Object val =
+	new StatusTable.SrvLink(Integer.toString(ver),
+				AdminServletManager.SERVLET_DISPLAY_CONTENT,
+				args);
+      rowMap.put("Version", val);
+      rowMap.put("Size", cu.getContentSize());
+      Properties cuProps = cu.getProperties();
+      long collected =
+	Long.parseLong(cuProps.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+      rowMap.put("DateCollected", collected);
+      return rowMap;
+    }
+
+    private Map makeOtherRowsLink(boolean isNext, int startRow,
+				  String auKey, String url) {
+      HashMap rowMap = new HashMap();
+      String label = (isNext ? "Next" : "Previous");
+      StatusTable.Reference link =
+          new StatusTable.Reference(label, FILE_VERSIONS_TABLE_NAME, auKey);
+      link.setProperty("skiprows", Integer.toString(startRow));
+      link.setProperty("numrows", Integer.toString(defaultNumRows));
+      link.setProperty("url", url);
+      rowMap.put("Version", link);
+      rowMap.put("sort", new Integer(isNext ? Integer.MAX_VALUE : -1));
+      return rowMap;
+    }
+
   }
 
   /** list of peers that have said they don't have the AU.  Primarily for
@@ -1367,5 +1476,24 @@ public class ArchivalUnitStatus
 				     V3PollStatus.POLLER_STATUS_TABLE_NAME,
 				     au.getAuId());
   }
+
+  static int getIntProp(StatusTable table, String name) {
+    Properties props = table.getProperties();
+    if (props == null) return -1;
+    String s = props.getProperty(name);
+    if (StringUtil.isNullString(s)) return -1;
+    try {
+      return Integer.parseInt(s);
+    } catch (Exception e) {
+      return -1;
+    }
+  }
+
+  static String getStringProp(StatusTable table, String name) {
+    Properties props = table.getProperties();
+    if (props == null) return null;
+    return props.getProperty(name);
+  }
+
 
 }
