@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.14 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.15 2009-11-08 01:30:07 tlipkis Exp $
  */
 
 /*
@@ -112,8 +112,42 @@ public class ViewContent extends LockssServlet {
       return;
     }
     cu = au.makeCachedUrl(url);
-    if (cu == null || !cu.hasContent()) {
+    if (cu == null) {
       displayError("URL " + url + " not found in AU: " + au.getName());
+      return;
+    }
+    String versionStr = getParameter("version");
+    if (versionStr != null) {
+      try {
+	int version = Integer.parseInt(versionStr);
+	int curVer = cu.getVersion();
+	if (version != curVer) {
+	  CachedUrl verCu = cu.getCuVersion(version);
+	  if (verCu != null && verCu.hasContent()) {
+	    cu = verCu;
+	  } else {
+	    errMsg = "Couldn't find version " + versionStr
+	      + ", displaying current version";
+	  }
+	}
+      } catch (NumberFormatException e) {
+	log.error("Couldn't parse version string: " + versionStr);
+	errMsg = "Illegal version: " + versionStr
+	  + ", displaying current version";
+      } catch (RuntimeException e) {
+	log.error("Couldn't get file version", e);
+	errMsg = "Couldn't find version " + versionStr
+	  + ", displaying current version";
+      }
+    }
+
+    if (!cu.hasContent()) {
+      if (versionStr != null) {
+	displayError("Version " + versionStr + " of URL " + url
+		     + " has no content in AU: " + au.getName());
+      } else {
+	displayError("URL " + url + " not found in AU: " + au.getName());
+      }
       return;
     }
     clen = cu.getContentSize();
@@ -166,6 +200,7 @@ public class ViewContent extends LockssServlet {
 
   void displaySummary(boolean contentInOtherFrame) throws IOException {
     Page page = newPage();
+    layoutErrorBlock(page);
 
     Table tbl = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
     tbl.newRow();
