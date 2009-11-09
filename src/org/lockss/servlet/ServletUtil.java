@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.62 2009-10-27 02:09:25 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.63 2009-11-09 05:19:43 tlipkis Exp $
  */
 
 /*
@@ -925,7 +925,8 @@ public class ServletUtil {
     RepositoryManager repoMgr =
       servlet.getLockssDaemon().getRepositoryManager();
 
-    Table tbl = new Table(REPOCHOICE_TABLE_BORDER, REPOCHOICE_TABLE_ATTRIBUTES);    List repos = remoteApi.getRepositoryList();
+    Table tbl = new Table(REPOCHOICE_TABLE_BORDER, REPOCHOICE_TABLE_ATTRIBUTES);
+    List repos = remoteApi.getRepositoryList();
     boolean isChoice = repos.size() > 1;
 
     tbl.newRow();
@@ -1077,6 +1078,7 @@ public class ServletUtil {
         auConfs.put(auid, rs.getConfig());
         Element cb = checkbox(servlet, keyAuid, auid, false);
         cb.attribute("onClick", "if (this.checked) selectRepo(this, this.form);");
+        cb.attribute("class", "doall");
         tbl.add(cb);
 
 	List existingRepoNames = rs.getRepoNames();
@@ -1092,17 +1094,13 @@ public class ServletUtil {
           for (Iterator riter = repos.iterator(); riter.hasNext(); ++ix) {
             String repo = (String)riter.next();
             tbl.newCell(ALIGN_CENTER);
-            if (firstRepo == null) {
-              tbl.add(radioButton(servlet, keyRepo + "_" + auid,
-                  Integer.toString(ix), null, false));
-            }
-            else if (repo.equals(firstRepo)) {
-              tbl.add(radioButton(servlet, keyRepo + "_" + auid,
-                  Integer.toString(ix), null, true));
-            }
-            else {
-              // nothing
-            }
+            if (firstRepo == null || repo.equals(firstRepo)) {
+	      Element rb = radioButton(servlet, keyRepo + "_" + auid,
+				       Integer.toString(ix), null,
+				       firstRepo != null,
+				       PropUtil.fromArgs("class", "doall"));
+	      tbl.add(rb);
+	    }
           }
         }
         else if (firstRepo != null) {
@@ -1237,7 +1235,7 @@ public class ServletUtil {
 
   public static Element makeRepoTable(LockssServlet servlet,
 				      RemoteApi remoteApi,
-                                      Map repoMap,
+                                      Map<String,PlatformUtil.DF> repoMap,
                                       String keyDefaultRepo) {
     RepositoryManager repoMgr =
       servlet.getLockssDaemon().getRepositoryManager();
@@ -1252,7 +1250,7 @@ public class ServletUtil {
     }
     tbl.newRow();
     if (isChoice) {
-      tbl.addHeading("Default");
+      tbl.addHeading("Use");
       tbl.addHeading("Disk");
     }
     tbl.addHeading("Location");
@@ -1264,18 +1262,19 @@ public class ServletUtil {
       isChoice ? remoteApi.findLeastFullRepository(repoMap) : null;
     int ix = 0;
     // Populate repo key table
-    for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
+    for (Map.Entry<String,PlatformUtil.DF> entry : repoMap.entrySet()) {
       ix++;
-      Map.Entry entry = (Map.Entry)iter.next();
-      String repo = (String)entry.getKey();
-      PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
+      String repo = entry.getKey();
+      PlatformUtil.DF df = entry.getValue();
 
       // Populate row for entry
       tbl.newRow(REPOTABLE_ROW_ATTRIBUTES);
       if (isChoice) {
 	tbl.newCell(ALIGN_CENTER); // "Default"
-	tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
-			    null, repo == mostFree));
+	Element cb = checkbox(servlet, keyDefaultRepo, Integer.toString(ix),
+			      repo == mostFree);
+        cb.attribute("onChange", "resetRepoSelections();");
+	tbl.add(cb);
 	tbl.newCell(ALIGN_RIGHT); // "Disk"
 	tbl.add(Integer.toString(ix) + "." + SPACE);
       }
@@ -1614,12 +1613,32 @@ public class ServletUtil {
 				    String value,
 				    String text,
 				    boolean checked) {
+    return radioButton(servlet, key, value, text, checked, null);
+  }
+
+  public static Element radioButton(LockssServlet servlet,
+				    String key,
+				    String value,
+				    String text,
+				    boolean checked,
+				    Properties attrs) {
     Composite c = new Composite();
     Input in = new Input(Input.Radio, key, value);
     if (checked) { in.check(); }
     servlet.setTabOrder(in);
+    addAttrs(in, attrs);
     c.add(in); c.add(" "); c.add(text);
     return c;
+  }
+
+  static void addAttrs(Element elem, Properties attrs) {
+    if (attrs != null) {
+      for (Iterator iter = attrs.keySet().iterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	String val = attrs.getProperty(key);
+	elem.attribute(key, val);
+      }
+    }
   }
 
   /** Return a button that invokes the javascript submit routine with the

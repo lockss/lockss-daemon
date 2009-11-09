@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.41 2008-07-11 08:21:23 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.42 2009-11-09 05:19:43 tlipkis Exp $
  */
 
 /*
@@ -398,7 +398,7 @@ public class BatchAuConfig extends LockssServlet {
     // Explanation block
     String expl;
     if (repoFlg) {
-      String s = "There are multiple disks on this box. First, select the disk on which you want to place most AUs, then select the AUs you wish to "
+      String s = "Select the disk(s) on which you want to place AUs, then select the AUs you wish to "
         + verb.word + " (or use \"Select All\"). Then click \""
         + buttonText + "\".";
       Composite c = new Font(1, true); // how to avoid HTML here?
@@ -418,7 +418,7 @@ public class BatchAuConfig extends LockssServlet {
 
     if (verb.isAdd) {
       // display df for Add even if only one repo
-      Map repoMap = remoteApi.getRepositoryMap();
+      Map<String,PlatformUtil.DF> repoMap = remoteApi.getRepositoryMap();
       frm.add(ServletUtil.makeRepoTable(this, remoteApi,
 					repoMap, KEY_DEFAULT_REPO));
       if (repoFlg) {

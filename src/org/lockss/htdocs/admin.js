@@ -1,5 +1,5 @@
 function lockssSetElem(form, name, value) {
- elem = findNamedElem(form, name);
+ var elem = findNamedElem(form, name);
  if (elem != null) elem.value = value;
 }
 
@@ -33,8 +33,8 @@ function findNamedElems(form, name) {
 
 function removeElementId(id)	{
  var node = document.getElementById(id);
- var parent=node.parentNode
- parent.removeChild(node)
+ var parent=node.parentNode;
+ parent.removeChild(node);
 }
 
 function radioButtonValue(name) {
@@ -73,16 +73,16 @@ function selectEnable(elem, id1, id2) {
 function selectAll(form, op) {
  initRepoMap(form);
  for (var i=0;i < form.length;i++) {
-  elem = form.elements[i];
-  if (elem.type == 'checkbox') { 
-   if (op == 'clear') {
+  var elem = form.elements[i];
+  if (elem.className == 'doall') {
+   if (op == 'clear' && (elem.type == 'checkbox' || elem.type == 'radio')) { 
     elem.checked = false;
-   } else if (op == 'all') {
+   } else if (op == 'all' && elem.type == 'checkbox') { 
     if (!elem.checked) {
-     elem.click();   // elem.checked = true   doesn't run onclick fn
+     elem.click();	       // click() runs onclick fn, which we rely on
     }
-   } else if (op == 'inRepo') {
-    repobuttons = buttonMap[elem.value];
+   } else if (op == 'inRepo' && elem.type == 'checkbox') {
+    var repobuttons = buttonMap[elem.value];
     if (repobuttons != null && repobuttons.length == 1) {
      var button = repobuttons[0];
      if (button.defaultChecked && !elem.checked) {
@@ -96,19 +96,35 @@ function selectAll(form, op) {
 
 function selectRepo(checkbox, form) {
  initRepoMap(form);
- repobuttons = buttonMap[checkbox.value];
+ var repobuttons = buttonMap[checkbox.value];
  if (repobuttons == null || repobuttons.length < 2) return;
- var defval = radioButtonValue("DefaultRepository");
- var defrb = null;
  for (var ix = 0; ix < repobuttons.length; ix++) {
   var rb = repobuttons[ix];
   if (rb.checked) return;
-  if (rb.value == defval) defrb = rb;
  }
- if (defrb != null) defrb.checked = true;
+ var nextrepo = nextDefault();
+ for (var ix = 0; ix < repobuttons.length; ix++) {
+  var rb = repobuttons[ix];
+  if (rb.value == nextrepo) {
+   rb.checked = true;
+   return;
+  }
+ }
+}
+
+function nextDefault() {
+ if (repoSelections == null) {
+  return "1";
+ }
+ if (nextDefaultIx >= repoSelections.length) {
+  nextDefaultIx = 0;
+ }
+ var next = repoSelections[nextDefaultIx++];
+ return next;
 }
 
 buttonMap = null;
+repoSelections = null;
 
 function addToMapVal(key, val) {
  var arr = buttonMap[key];
@@ -119,14 +135,21 @@ function addToMapVal(key, val) {
  arr[arr.length] = val;
 } 
 
+function resetRepoSelections(){
+ buttonMap = null;
+}
+
 function initRepoMap(form) {
  if (buttonMap != null) return;
+ nextDefaultIx = 0;
  buttonMap = new Array();
  var pattern = /^Repository_(.+)$/;
  for (var ix = 0; ix < form.elements.length; ix++) {
   var elem = form.elements[ix];
   if (elem.name == "DefaultRepository") {
-   addToMapVal(elem.name, elem);
+   if (elem.checked) {
+    addToMapVal("DefaultRepository", elem.value);
+   }
   } else {
    var result = elem.name.match(pattern);
    if (result != null) {
@@ -134,5 +157,6 @@ function initRepoMap(form) {
    }
   }
  }
+ repoSelections = buttonMap["DefaultRepository"];
 }
 
