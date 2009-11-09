@@ -1137,7 +1137,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; doNotProcess ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; released ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; ready ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
-        au < HighWireStrVolPlugin ; ready ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
+        au < HighWirePressPlugin ; ready ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
 
       }
 
@@ -1168,7 +1168,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; doNotProcess ; Business & Society Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; released ; Business & Society Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; ready ; Business & Society Volume 47 ; 47 >
-        au < HighWireStrVolPlugin ; ready ; Business & Society Volume 48 ; 48 >
+        au < HighWirePressPlugin ; ready ; Business & Society Volume 48 ; 48 >
 
       }
 
@@ -1189,7 +1189,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Business Communication Quarterly Volume 69 ; 69 >
         au < HighWireStrVolPlugin ; released ; Business Communication Quarterly Volume 70 ; 70 >
         au < HighWireStrVolPlugin ; ready ; Business Communication Quarterly Volume 71 ; 71 >
-        au < HighWireStrVolPlugin ; ready ; Business Communication Quarterly Volume 72 ; 72 >
+        au < HighWirePressPlugin ; ready ; Business Communication Quarterly Volume 72 ; 72 >
 
       }
 
@@ -1210,7 +1210,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Business Information Review Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; released ; Business Information Review Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; ready ; Business Information Review Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; ready ; Business Information Review Volume 26 ; 26 >
+        au < HighWirePressPlugin ; ready ; Business Information Review Volume 26 ; 26 >
 
       }
 
@@ -1232,7 +1232,25 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Canadian Journal of School Psychology Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; released ; Canadian Journal of School Psychology Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; ready ; Canadian Journal of School Psychology Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; ready ; Canadian Journal of School Psychology Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Canadian Journal of School Psychology Volume 24 ; 24 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Career Development for Exceptional Individuals
+      >
+
+      {
+
+        param[base_url] = http://cde.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Career Development for Exceptional Individuals Volume 31 ; 31 ; >
+        au < HighWirePressPlugin ; ready ; Career Development for Exceptional Individuals Volume 32 ; 32 ; >
 
       }
 
@@ -1408,7 +1426,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Clin-Alert Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; released ; Clin-Alert Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; ready ; Clin-Alert Volume 46 ; 46 >
-        au < HighWireStrVolPlugin ; ready ; Clin-Alert Volume 47 ; 47 >
+        au < HighWirePressPlugin ; ready ; Clin-Alert Volume 47 ; 47 >
 
       }
 
@@ -1429,7 +1447,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Clinical and Applied Thrombosis/Hemostasis Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; released ; Clinical and Applied Thrombosis/Hemostasis Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; ready ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; ready ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 >
+        au < HighWirePressPlugin ; ready ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 >
 
       }
 
@@ -1450,7 +1468,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Clinical Case Studies Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Clinical Case Studies Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Clinical Case Studies Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; ready ; Clinical Case Studies Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Clinical Case Studies Volume 8 ; 8 >
 
       }
 
@@ -1481,7 +1499,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; doNotProcess ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; released ; Clinical Child Psychology and Psychiatry Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; ready ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; ready ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
+        au < HighWirePressPlugin ; ready ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
 
       }
 
@@ -1512,7 +1530,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; doNotProcess ; Clinical Nursing Research Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Clinical Nursing Research Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; ready ; Clinical Nursing Research Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; ready ; Clinical Nursing Research Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Clinical Nursing Research Volume 18 ; 18 >
 
       }
 
@@ -1533,7 +1551,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Clinical Pediatrics Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; released ; Clinical Pediatrics Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; ready ; Clinical Pediatrics Volume 47 ; 47 >
-        au < HighWireStrVolPlugin ; ready ; Clinical Pediatrics Volume 48 ; 48 >
+        au < HighWirePressPlugin ; ready ; Clinical Pediatrics Volume 48 ; 48 >
 
       }
 

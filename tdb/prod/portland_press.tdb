@@ -15,25 +15,25 @@
     param[journal_id] = bj
     
 comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted
-comment[bj1] = not permission from publisher
+comment[bj1] = no permission from publisher
 
-    au < notReady ; Biochemical Journal Volume 1 ; 001 >
+    au < exists ; Biochemical Journal Volume 1 ; 001 >
     au < ready ; Biochemical Journal Volume 2 ; 002 >
     au < ready ; Biochemical Journal Volume 3 ; 003 >
     au < ready ; Biochemical Journal Volume 4 ; 004 >
-    au < testing ; Biochemical Journal Volume 5 ; 005 >
+    au < ready ; Biochemical Journal Volume 5 ; 005 >
     au < ready ; Biochemical Journal Volume 6 ; 006 >
-    au < testing ; Biochemical Journal Volume 7 ; 007 >
-    au < testing ; Biochemical Journal Volume 8 ; 008 >
-    au < testing ; Biochemical Journal Volume 9 ; 009 >
-    au < testing ; Biochemical Journal Volume 10 ; 010 >
+    au < ready ; Biochemical Journal Volume 7 ; 007 >
+    au < ready ; Biochemical Journal Volume 8 ; 008 >
+    au < ready ; Biochemical Journal Volume 9 ; 009 >
+    au < ready ; Biochemical Journal Volume 10 ; 010 >
     au < ready ; Biochemical Journal Volume 11 ; 011 >
     au < ready ; Biochemical Journal Volume 12 ; 012 >
-    au < notReady ; Biochemical Journal Volume 13 ; 013 >
-    au < notReady ; Biochemical Journal Volume 14 ; 014 >
-    au < notReady ; Biochemical Journal Volume 15 ; 015 >
-    au < notReady ; Biochemical Journal Volume 16 ; 016 >
-    au < notReady ; Biochemical Journal Volume 17 ; 017 >
+    au < testing ; Biochemical Journal Volume 13 ; 013 >
+    au < testing ; Biochemical Journal Volume 14 ; 014 >
+    au < testing ; Biochemical Journal Volume 15 ; 015 >
+    au < testing ; Biochemical Journal Volume 16 ; 016 >
+    au < testing ; Biochemical Journal Volume 17 ; 017 >
     au < ready ; Biochemical Journal Volume 18 ; 018 >
     au < notReady ; Biochemical Journal Volume 19 ; 019 >
     au < notReady ; Biochemical Journal Volume 20 ; 020 >

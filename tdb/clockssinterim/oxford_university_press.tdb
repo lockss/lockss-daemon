@@ -1491,6 +1491,67 @@ comment[j17] = no subscription
     au < tested ; 2009 ; Past & Present Volume 203 ; 203 ; >
 
   }
+
+  {
+
+    title <
+      name = Philosophia Mathematica
+    >
+
+    param[base_url] = http://philmat.oxfordjournals.org/
+
+    au < tested ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
+      name = Plant and Cell Physiology
+    >
+
+    param[base_url] = http://pcp.oxfordjournals.org/
+
+    au < tested ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
+
+  }
+
+  {
+
+    title <
+      name = Policing: A Journal of Policy and Practice
+    >
+
+    param[base_url] = http://policing.oxfordjournals.org/
+
+    au < tested ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Political Analysis
+    >
+
+    param[base_url] = http://pan.oxfordjournals.org/
+
+    au < tested ; 2009 ; Political Analysis Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
+      name = Proceedings of the London Mathematical Society
+    >
+
+    param[base_url] = http://plms.oxfordjournals.org/
+
+    au < tested ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
+    au < tested ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
+
+  }
   
   {
 

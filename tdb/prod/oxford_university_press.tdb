@@ -4901,7 +4901,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Philosophia Mathematica Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Philosophia Mathematica Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; ready ; Philosophia Mathematica Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; ready ; Philosophia Mathematica Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; Philosophia Mathematica Volume 17 ; 17 >
 
       }
 
@@ -4931,11 +4931,29 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Plant and Cell Physiology Volume 47 ; 47 >
         au < HighWireStrVolPlugin ; released ; Plant and Cell Physiology Volume 48 ; 48 >
         au < HighWireStrVolPlugin ; ready ; Plant and Cell Physiology Volume 49 ; 49 >
-        au < HighWireStrVolPlugin ; ready ; Plant and Cell Physiology Volume 50 ; 50 >
+        au < HighWirePressPlugin ; ready ; Plant and Cell Physiology Volume 50 ; 50 >
 
       }
 
     }
+
+    {
+
+      title <
+        name = Policing: A Journal of Policy and Practice
+      >
+
+      {
+
+        param[base_url] = http://policing.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
+        au < HighWirePressPlugin ; ready ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+
+      }
+
+  }
 
     {
 
@@ -4962,7 +4980,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Political Analysis Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; ready ; Political Analysis Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; ready ; Political Analysis Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; Political Analysis Volume 17 ; 17 >
 
       }
 
@@ -4983,8 +5001,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 95 ; 95 >
         au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
         au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
-        au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
-        au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
+        au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
+        au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
 
       }
 
