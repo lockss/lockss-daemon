@@ -514,14 +514,14 @@
         param[base_url] = http://brief-treatment.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; releasing ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; releasing ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; releasing ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; releasing ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
+        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
+        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
         au < HighWirePressPlugin ; doNotProcess ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; releasing ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
 
       }
 
