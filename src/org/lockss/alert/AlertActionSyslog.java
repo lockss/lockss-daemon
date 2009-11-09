@@ -1,10 +1,10 @@
 /*
- * $Id: AlertActionSyslog.java,v 1.1 2009-11-04 03:13:19 dshr Exp $
+ * $Id: AlertActionSyslog.java,v 1.2 2009-11-09 05:19:53 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,16 +41,17 @@ import java.net.*;
 /** An AlertAction that records the Alert by sending it to syslog */
 public class AlertActionSyslog extends AbstractAlertAction {
   private static Logger log = Logger.getLogger("AlertActionSyslog");
-  /** If specified, the sender address on alert emails.  If not specified,
-   * uses the admin email adress */
+  /** Hostname or IP addess of syslog server */
   static final String PARAM_HOST = PREFIX + "syslog.host";
+  /** Syslog server port */
+  private static final String DEFAULT_HOST = "127.0.0.1";
+
   static final String PARAM_PORT = PREFIX + "syslog.port";
+  private static final int DEFAULT_PORT = 514;
 
   public static final String PARAM_ENABLED = PREFIX + "syslog.enabled";
   static final boolean DEFAULT_ENABLED = false;
 
-  private static final String DEFAULT_HOST = "127.0.0.1";
-  private static final int DEFAULT_PORT = 514;
 
   static final int SYSLOG_EMERG = 0;	// system is unusable
   static final int SYSLOG_ALERT = 1;	// action must be taken immediately
@@ -61,11 +62,15 @@ public class AlertActionSyslog extends AbstractAlertAction {
   static final int SYSLOG_INFO = 6;	// informational
   static final int SYSLOG_DEBUG = 7;	// debug-level messages
 
+  /** Default syslog level at which to log alerts */
   public static final String PARAM_LEVEL = PREFIX + "syslog.level";
   static final int DEFAULT_LEVEL = SYSLOG_NOTICE;
-  int fixedLevel = -1;
+
+  /** Syslog facility for alerts */
   public static final String PARAM_FACILITY = PREFIX + "syslog.facility";
   static final int DEFAULT_FACILITY = 8;
+
+  int fixedLevel = -1;
 
   // XXX need test/src/org/lockss/alert/TestAlertActionSyslog.java
 
