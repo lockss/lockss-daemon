@@ -1073,19 +1073,6 @@
   {
 
     title <
-      name = Criminology and Criminal Justice
-    >
-
-    param[base_url] = http://crj.sagepub.com/
-
-    au < manifest ; 2008 ; Criminology and Criminal Justice Volume 8 ; 8 ; >
-    au < testing ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-
-  }
-
-  {
-
-    title <
       name = Criminal Justice and Behavior
     >
 
@@ -1119,6 +1106,19 @@
 
     au < manifest ; 2008 ; Criminal Justice Review Volume 33 ; 33 ; >
     au < testing ; 2009 ; Criminal Justice Review Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Criminology and Criminal Justice
+    >
+
+    param[base_url] = http://crj.sagepub.com/
+
+    au < manifest ; 2008 ; Criminology and Criminal Justice Volume 8 ; 8 ; >
+    au < testing ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ; reingest2.clockss.org:8085 >
 
   }
 
