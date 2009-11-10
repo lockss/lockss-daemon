@@ -1259,6 +1259,23 @@ comment[ajs] = this journal has been moved to H20 platform
     {
 
       title <
+        name = Cartilage
+      >
+      
+      {
+      
+        param[base_url] = http://car.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; ready ; Cartilage Volume 1 ; 1 ; >
+
+      }
+
+  }
+
+    {
+
+      title <
         name = Child Language Teaching and Therapy 
       >
 
@@ -1274,7 +1291,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; exists ; Child Language Teaching and Therapy Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; released ; Child Language Teaching and Therapy Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; ready ; Child Language Teaching and Therapy Volume 24 ; 24 >
-        au < HighWireStrVolPlugin ; ready ; Child Language Teaching and Therapy Volume 25 ; 25 >
+        au < HighWirePressPlugin ; ready ; Child Language Teaching and Therapy Volume 25 ; 25 >
 
       }
 
@@ -1295,7 +1312,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Child Maltreatment Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; released ; Child Maltreatment Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; ready ; Child Maltreatment Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; ready ; Child Maltreatment Volume 14 ; 14 >
+        au < HighWirePressPlugin ; ready ; Child Maltreatment Volume 14 ; 14 >
 
       }
 
@@ -1316,7 +1333,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Childhood Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; Childhood Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; ready ; Childhood Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; ready ; Childhood Volume 16 ; 16 >
+        au < HighWirePressPlugin ; ready ; Childhood Volume 16 ; 16 >
 
       }
 
@@ -1347,7 +1364,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; China Information Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; released ; China Information Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; China Information Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; ready ; China Information Volume 23 ; 23 >
+        au < HighWirePressPlugin ; ready ; China Information Volume 23 ; 23 >
 
       }
 
@@ -1386,6 +1403,8 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < HighWireStrVolPlugin ; released ; Chronic Illness Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; released ; Chronic Illness Volume 3 ; 3 >
+        au < HighWirePressPlugin ; manifest ; Chronic Illness Volume 4 ; 4 >
+        au < HighWirePressPlugin ; ready ; Chronic Illness Volume 5 ; 5 >
 
       }
 
@@ -1405,6 +1424,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Chronic Respiratory Disease Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; released ; Chronic Respiratory Disease Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; ready ; Chronic Respiratory Disease Volume 5 ; 5 >
+        au < HighWirePressPlugin ; ready ; Chronic Respiratory Disease Volume 6 ; 6 >
 
       }
 
