@@ -1,5 +1,5 @@
 /*
- * $Id: DrogoResearchHtmlFilterFactory.java,v 1.2 2009-11-03 10:56:58 thib_gc Exp $
+ * $Id: DrogoResearchHtmlFilterFactory.java,v 1.3 2009-11-10 22:39:38 thib_gc Exp $
  */
 
 /*
@@ -40,23 +40,13 @@ import org.lockss.plugin.*;
 
 public class DrogoResearchHtmlFilterFactory implements FilterFactory {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-
-        /*
-         * Contains the current date.
-         * 
-         * Exclude <div id="date">
-         */
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div", "id", "date")),
-        
-    };
-    
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(transforms));
+                                     HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div", "id", "date")));
   }
 
 }
